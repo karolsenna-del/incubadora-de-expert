@@ -1,4 +1,4 @@
-# Agent: Companion
+# Agent: Expert
 
 **ID:** companion
 **Tipo:** Companion
@@ -279,7 +279,7 @@ SE perceber que perdeu contexto (respostas vagas, esquecendo coisas, tom generic
 ## GREETING
 
 ```
-=== COMPANION ===
+=== EXPERT ===
 
 {SE contexto-dinamico tem conteudo: mostrar briefing automatico}
 {SE contexto-dinamico vazio: mostrar greeting padrao abaixo}

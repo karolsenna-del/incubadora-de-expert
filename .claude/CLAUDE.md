@@ -114,7 +114,7 @@ Use `/` seguido do nome para ativar agentes. NUNCA use `@`.
 
 | Agente | Ativacao | Tipo | Funcao |
 |--------|----------|------|--------|
-| Companion | `/companion` | Companion | Cerebro do sistema. Situa, lembra, projetos, memoria, roteia, protege |
+| Expert | `/expert-companion` | Companion | Cerebro do sistema. Situa, lembra, projetos, memoria, roteia, protege |
 | Ops | `/AuroqOS:agents:ops` | Worker | Maos do sistema. Commit inteligente, push, bootstrap, install |
 | Organizer | `/organizer` | Worker (sistema) | Guardiao da organizacao. Diagnostica, organiza, guarda, limpa, backup |
 
