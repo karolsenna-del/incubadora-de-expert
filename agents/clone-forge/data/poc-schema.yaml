@@ -1,0 +1,320 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# POC v1.1 — Ontologia de Conhecimento (Schema)
+# ═══════════════════════════════════════════════════════════════════════════════
+# Define a estrutura dos 6 modulos contextuais + 4 camadas de profundidade.
+# Cada modulo tem campos obrigatorios, opcionais e regras de completude.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+version: "1.1"
+name: "Perfil Ontologico Completo"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 4 CAMADAS DE PROFUNDIDADE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+layers:
+  - id: L1
+    name: "Observable"
+    description: "Comportamentos visiveis, padroes de comunicacao, habitos"
+    weight: 0.8
+    modules: [identity, operational]
+
+  - id: L2
+    name: "Cognitive"
+    description: "Frameworks mentais, modelos de decisao, heuristicas"
+    weight: 1.0
+    modules: [mental-model, repertoire]
+
+  - id: L3
+    name: "Deep Identity"
+    description: "Valores, obsessoes, contradicoes produtivas"
+    weight: 1.0
+    modules: [identity, visual-framework]
+
+  - id: L4
+    name: "Ecosystem"
+    description: "Rede de influencias, publico, posicionamento"
+    weight: 0.7
+    modules: [ecosystem]
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 6 MODULOS CONTEXTUAIS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+modules:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # MODULO 1: IDENTIDADE
+  # ─────────────────────────────────────────────────────────────────────────────
+  identity:
+    output_file: "06-profile/identity.yaml"
+    layer: [L1, L3]
+    completeness_threshold: 80
+
+    required:
+      name:
+        type: string
+        description: "Nome completo"
+      core_identity:
+        type: text
+        description: "Quem e essa pessoa em 2-3 frases"
+      turning_points:
+        type: list
+        min_items: 2
+        description: "Momentos decisivos que moldaram a pessoa"
+      values:
+        type: list
+        min_items: 3
+        description: "Valores inegociaveis com ranking"
+      rejections:
+        type: list
+        min_items: 2
+        description: "O que rejeita visceralmente"
+      mission:
+        type: text
+        description: "Missao de vida articulada"
+
+    optional:
+      origin_story:
+        type: text
+        description: "Historia de origem profissional"
+      faith_integration:
+        type: text
+        description: "Como fe/espiritualidade se integra ao trabalho"
+      family_context:
+        type: text
+        description: "Contexto familiar relevante"
+      age:
+        type: number
+      location:
+        type: string
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # MODULO 2: MODELO MENTAL
+  # ─────────────────────────────────────────────────────────────────────────────
+  mental-model:
+    output_file: "06-profile/mental-model.yaml"
+    layer: [L2]
+    completeness_threshold: 80
+
+    required:
+      primary_framework:
+        type: object
+        description: "Framework principal (nome, steps, quando usar)"
+        fields: [name, purpose, steps, when_to_use, when_not_to_use]
+      heuristics:
+        type: list
+        min_items: 5
+        description: "Regras de bolso para decisao rapida"
+      decision_pipeline:
+        type: list
+        min_items: 3
+        description: "Como toma decisoes passo a passo"
+      mental_models:
+        type: list
+        min_items: 3
+        description: "Modelos mentais que usa (alem do framework principal)"
+      cognitive_biases:
+        type: list
+        min_items: 2
+        description: "Vieses intencionais (sabe que tem e usa a favor)"
+
+    optional:
+      secondary_frameworks:
+        type: list
+        description: "Frameworks complementares"
+      anti_patterns:
+        type: list
+        description: "Erros que detecta imediatamente"
+      thinking_style:
+        type: text
+        description: "Estilo geral de pensamento"
+
+    # Extensao psicometrica (preenchida pelo @cognitive-motor)
+    psychometric_extension:
+      mbti_functions:
+        type: object
+        description: "Funcoes cognitivas MBTI ordenadas"
+      enneagram_center:
+        type: string
+        description: "Centro dominante (cabeca/coracao/corpo)"
+      big_five_openness:
+        type: number
+        description: "Score de abertura a experiencia"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # MODULO 3: OPERACIONAL
+  # ─────────────────────────────────────────────────────────────────────────────
+  operational:
+    output_file: "06-profile/operational.yaml"
+    layer: [L1]
+    completeness_threshold: 70
+
+    required:
+      communication_style:
+        type: object
+        description: "Voice DNA resumido"
+        fields: [tom, estilo, vocabulario_preferido, vocabulario_proibido]
+      teaching_style:
+        type: text
+        description: "Como ensina/transmite conhecimento"
+      conflict_style:
+        type: text
+        description: "Como lida com conflito e discordancia"
+      energy_patterns:
+        type: object
+        description: "O que drena vs energiza"
+        fields: [drains, energizes]
+
+    optional:
+      daily_routines:
+        type: list
+        description: "Rotinas relevantes"
+      tools_used:
+        type: list
+        description: "Ferramentas e tecnologias preferidas"
+      delegation_style:
+        type: text
+        description: "Como e quando delega"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # MODULO 4: REPERTORIO
+  # ─────────────────────────────────────────────────────────────────────────────
+  repertoire:
+    output_file: "06-profile/repertoire.yaml"
+    layer: [L2]
+    completeness_threshold: 70
+
+    required:
+      domain_expertise:
+        type: list
+        min_items: 2
+        description: "Areas de expertise com nivel (expert/avancado/intermediario)"
+      key_concepts:
+        type: list
+        min_items: 5
+        description: "Conceitos-chave que ensina/aplica"
+      methodologies:
+        type: list
+        min_items: 2
+        description: "Metodologias proprias ou adaptadas"
+      case_studies:
+        type: list
+        min_items: 2
+        description: "Casos de sucesso com detalhes"
+
+    optional:
+      influences:
+        type: list
+        description: "Quem influenciou e como"
+      books_recommended:
+        type: list
+        description: "Livros que recomenda com frequencia"
+      certifications:
+        type: list
+        description: "Formacoes e certificacoes relevantes"
+      unique_terminology:
+        type: list
+        description: "Termos proprios que criou ou redefiniu"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # MODULO 5: FRAMEWORK VISUAL
+  # ─────────────────────────────────────────────────────────────────────────────
+  visual-framework:
+    output_file: "06-profile/visual-framework.yaml"
+    layer: [L3]
+    completeness_threshold: 60
+
+    required:
+      core_thesis:
+        type: text
+        description: "Tese central em 1-2 frases"
+      signature_framework:
+        type: object
+        description: "Framework visual principal (nome, componentes, fluxo)"
+        fields: [name, components, flow, visual_description]
+      recurring_metaphors:
+        type: list
+        min_items: 3
+        description: "Metaforas e analogias recorrentes"
+
+    optional:
+      visual_models:
+        type: list
+        description: "Modelos visuais que usa (matrizes, quadrantes, piramides)"
+      storytelling_structures:
+        type: list
+        description: "Estruturas narrativas preferidas"
+      brand_elements:
+        type: list
+        description: "Elementos de marca pessoal"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # MODULO 6: ECOSSISTEMA
+  # ─────────────────────────────────────────────────────────────────────────────
+  ecosystem:
+    output_file: "06-profile/ecosystem.yaml"
+    layer: [L4]
+    completeness_threshold: 60
+
+    required:
+      target_audience:
+        type: object
+        description: "Publico-alvo detalhado"
+        fields: [demographics, psychographics, pain_points, desires]
+      value_proposition:
+        type: text
+        description: "Proposta de valor articulada"
+      business_model:
+        type: text
+        description: "Modelo de negocio simplificado"
+
+    optional:
+      competitors:
+        type: list
+        description: "Concorrentes e como se diferencia"
+      partnerships:
+        type: list
+        description: "Parcerias e colaboracoes"
+      channels:
+        type: list
+        description: "Canais de distribuicao ativos"
+      revenue_streams:
+        type: list
+        description: "Fontes de receita"
+      market_positioning:
+        type: text
+        description: "Posicionamento no mercado"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# EXTRAS (nao sao modulos POC, mas complementam o perfil)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+extras:
+  contradictions:
+    output_file: "06-profile/contradictions.yaml"
+    description: "Paradoxos produtivos — onde a pessoa se contradiz de forma autêntica"
+    required:
+      items:
+        type: list
+        min_items: 2
+        item_fields: [tension, pole_a, pole_b, resolution, evidence]
+
+  obsessions:
+    output_file: "06-profile/obsessions.yaml"
+    description: "Temas recorrentes — assuntos que voltam em todo conteudo"
+    required:
+      items:
+        type: list
+        min_items: 3
+        item_fields: [theme, frequency, intensity, evidence_sources]
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# COMPLETUDE GLOBAL
+# ═══════════════════════════════════════════════════════════════════════════════
+
+completeness:
+  minimum_overall: 80
+  calculation: "media ponderada dos modulos (weight do layer)"
+  blocking_gate: true
+  action_if_below: "Triggerar gap-analysis-questionnaire.md"

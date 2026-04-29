@@ -1,0 +1,128 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# MIU TYPES — Classificacao de Unidades de Conhecimento
+# ═══════════════════════════════════════════════════════════════════════════════
+
+version: "1.0.0"
+
+miu_types:
+  # ─── L1: Conceitual ───
+  CONCEPT:
+    description: "Conceito ou ideia fundamental do dominio"
+    lens: L1
+    poc_default_layer: factual
+    poc_default_sublayer: "1.1"
+    example: "Growth hacking e uma abordagem de marketing orientada a experimentos rapidos"
+
+  DEFINITION:
+    description: "Definicao precisa de um termo"
+    lens: L1
+    poc_default_layer: factual
+    poc_default_sublayer: "1.1"
+    example: "CTR (Click-Through Rate) e a porcentagem de pessoas que clicam num anuncio apos ve-lo"
+
+  # ─── L2: Metodologica ───
+  FRAMEWORK:
+    description: "Modelo ou estrutura organizadora com componentes"
+    lens: L2
+    poc_default_layer: conceptual
+    poc_default_sublayer: "2.3"
+    example: "O Metodo AIDA: Atencao, Interesse, Desejo, Acao"
+
+  METHOD:
+    description: "Metodo ou sistema com etapas definidas"
+    lens: L2
+    poc_default_layer: procedural
+    poc_default_sublayer: "3.1"
+    example: "Metodo dos 3 Pilares de Escala: Criativo, Publico, Oferta"
+
+  # ─── L3: Pratica ───
+  TECHNIQUE:
+    description: "Tecnica ou tatica especifica e executavel"
+    lens: L3
+    poc_default_layer: procedural
+    poc_default_sublayer: "3.4"
+    example: "Tecnica do gancho de 3 segundos: iniciar video com pergunta provocativa"
+
+  PROCEDURE:
+    description: "Passo-a-passo ou receita executavel"
+    lens: L3
+    poc_default_layer: procedural
+    poc_default_sublayer: "3.2"
+    example: "Para criar um lookalike: 1) Exportar lista de compradores, 2) Subir no Ads Manager, 3) Criar publico similar 1%"
+
+  # ─── L4: Relacional ───
+  RELATION:
+    description: "Relacao causa-efeito entre elementos"
+    lens: L4
+    poc_default_layer: conceptual
+    poc_default_sublayer: "2.4"
+    example: "Aumento de frequencia acima de 3x causa fadiga de anuncio e queda de CTR"
+
+  DEPENDENCY:
+    description: "Dependencia ou pre-requisito entre elementos"
+    lens: L4
+    poc_default_layer: factual
+    poc_default_sublayer: "1.5"
+    example: "Escala vertical depende de margem saudavel — sem margem, escala mata o negocio"
+
+  # ─── L5: Contextual ───
+  CONTEXT:
+    description: "Condicao de uso, escopo ou cenario de aplicacao"
+    lens: L5
+    poc_default_layer: condicional
+    poc_default_sublayer: "4.1"
+    example: "Funciona melhor para produtos acima de R$497 — abaixo disso a margem nao sustenta"
+
+  CONSTRAINT:
+    description: "Limitacao, restricao ou pre-requisito"
+    lens: L5
+    poc_default_layer: condicional
+    poc_default_sublayer: "4.1"
+    example: "Requer audiencia minima de 2K seguidores para funcionar"
+
+  # ─── L6: Principios ───
+  PRINCIPLE:
+    description: "Regra fundamental e universal do dominio"
+    lens: L6
+    poc_default_layer: conceptual
+    poc_default_sublayer: "2.2"
+    example: "Principio da Escada de Valor: o ingresso custa entre 1% e 5% do produto principal"
+
+  RULE:
+    description: "Regra operacional ou prescricao"
+    lens: L6
+    poc_default_layer: condicional
+    poc_default_sublayer: "4.2"
+    example: "Nunca escalar um anuncio que nao teve pelo menos 50 conversoes no conjunto original"
+
+  # ─── L7: Exemplos ───
+  EXAMPLE:
+    description: "Exemplo pratico ou ilustracao"
+    lens: L7
+    poc_default_layer: procedural
+    poc_default_sublayer: "3.4"
+    poc_default_module: repertorio
+    example: "Caso da campanha X que converteu 12% usando gancho emocional no criativo"
+
+  CASE:
+    description: "Case study completo com contexto e resultado"
+    lens: L7
+    poc_default_layer: procedural
+    poc_default_sublayer: "3.4"
+    poc_default_module: repertorio
+    example: "Lancamento pago da expert Y: 3.000 ingressos a R$47, faturamento de R$450K no backend"
+
+  # ─── L8: Contraintuitiva ───
+  ANTIPATTERN:
+    description: "Erro comum, pratica que parece certa mas nao e"
+    lens: L8
+    poc_default_layer: condicional
+    poc_default_sublayer: "4.3"
+    example: "Anti-padrao: aumentar orcamento de anuncio em mais de 20% por dia — resetar a otimizacao"
+
+  MYTH:
+    description: "Crenca popular que e falsa ou parcialmente falsa"
+    lens: L8
+    poc_default_layer: condicional
+    poc_default_sublayer: "4.3"
+    example: "Mito: 'quanto mais segmentado o publico, melhor'. Realidade: publicos muito pequenos nao dao dado suficiente pro algoritmo"

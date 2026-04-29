@@ -1,0 +1,168 @@
+# ===============================================================================
+# WORKFLOW: Mind Forge Pipeline
+# ===============================================================================
+# Pipeline completo de criacao de mentes sinteticas e consultores.
+# 6 fases, 5 quality gates, 3 agentes.
+# ===============================================================================
+
+name: wf-mind-forge
+title: "Mind Forge Pipeline"
+version: "1.0.0"
+description: >
+  Pipeline completo para criar mentes sinteticas (fusao N experts) ou
+  consultores (deep-dive 1 assunto) a partir de documentacao existente.
+
+# -------------------------------------------------------------------------------
+# PARTICIPANTS
+# -------------------------------------------------------------------------------
+participants:
+  orchestrator: forge-chief
+  tier_1:
+    - knowledge-miner
+    - mind-smith
+
+# -------------------------------------------------------------------------------
+# MODES
+# -------------------------------------------------------------------------------
+modes:
+  synthetic:
+    name: "Mente Sintetica"
+    description: "Fusao de N experts/frameworks num unico agente"
+    min_sources: 2
+    min_kfs: 20
+  consultant:
+    name: "Consultor"
+    description: "Deep-dive tecnico em 1 metodologia/assunto"
+    min_sources: 1
+    min_kfs: 15
+
+# -------------------------------------------------------------------------------
+# PHASES
+# -------------------------------------------------------------------------------
+phases:
+  - id: phase_0
+    name: "Setup"
+    agent: forge-chief
+    task: start
+    duration: "3-5min"
+    blocking: false
+    inputs:
+      - "Nome da mente"
+      - "Modo (synthetic/consultant)"
+      - "Paths das fontes"
+    outputs:
+      - ".state.json"
+      - "Diretorios criados"
+
+  - id: phase_1
+    name: "Ingestao"
+    agent: knowledge-miner
+    task: ingest-sources
+    duration: "10-30min"
+    blocking: true
+    gate: QG-MF-001
+    inputs:
+      - "Fontes (paths)"
+    outputs:
+      - "01-ingestion/source-manifest.yaml"
+
+  - id: phase_2
+    name: "Analise"
+    agent: knowledge-miner
+    task: analyze-knowledge
+    duration: "30-60min"
+    blocking: true
+    gate: QG-MF-002
+    inputs:
+      - "source-manifest.yaml"
+      - "Fontes originais"
+    outputs:
+      - "02-analysis/knowledge-facets.yaml"
+      - "02-analysis/domain-map.yaml"
+      - "02-analysis/voice-profile.yaml"
+      - "02-analysis/analysis-metrics.yaml"
+
+  - id: phase_3
+    name: "Playback Validation"
+    agent: forge-chief
+    task: playback-validate
+    duration: "10-20min"
+    blocking: true
+    gate: QG-MF-003
+    inputs:
+      - "Todos os artefatos de 02-analysis/"
+    outputs:
+      - "03-playback/playback-report.md"
+      - "KFs atualizados com correcoes"
+
+  - id: phase_4
+    name: "Forja"
+    agent: mind-smith
+    task: forge-mind
+    duration: "30-60min"
+    blocking: true
+    gate: QG-MF-004
+    inputs:
+      - "KFs validados"
+      - "domain-map.yaml"
+      - "voice-profile.yaml"
+    outputs:
+      - "04-forged/ (mente completa)"
+
+  - id: phase_5
+    name: "Validacao"
+    agent: forge-chief
+    task: validate-mind
+    duration: "30-60min"
+    blocking: true
+    gate: QG-MF-005
+    inputs:
+      - "04-forged/ (mente)"
+    outputs:
+      - "05-validation/validation-report.yaml"
+      - "Mente instalada em agents/{slug}/"
+      - "Comando em .claude/commands/"
+
+# -------------------------------------------------------------------------------
+# QUALITY GATES
+# -------------------------------------------------------------------------------
+quality_gates:
+  QG-MF-001:
+    name: "Ingestion Validity"
+    transition: "phase_1 -> phase_2"
+    blocking: true
+    checklist: null  # Inline validation
+  QG-MF-002:
+    name: "Analysis Completeness"
+    transition: "phase_2 -> phase_3"
+    blocking: true
+    checklist: "checklists/analysis-completeness.md"
+  QG-MF-003:
+    name: "User Validation"
+    transition: "phase_3 -> phase_4"
+    blocking: true
+    checklist: null  # User confirmation
+  QG-MF-004:
+    name: "Mind Quality"
+    transition: "phase_4 -> phase_5"
+    blocking: true
+    checklist: "checklists/mind-quality.md"
+  QG-MF-005:
+    name: "Operational Readiness"
+    transition: "phase_5 -> production"
+    blocking: true
+    checklist: null  # 4 smoke tests (incl. Context Death Test) + user approval
+
+# -------------------------------------------------------------------------------
+# STATE MANAGEMENT
+# -------------------------------------------------------------------------------
+state:
+  file: ".state.json"
+  resumable: true
+  pause_command: "*pause"
+  resume_command: "*resume"
+
+# -------------------------------------------------------------------------------
+# ESTIMATED TOTAL
+# -------------------------------------------------------------------------------
+estimated_time: "1-4 horas (depende do volume de fontes)"

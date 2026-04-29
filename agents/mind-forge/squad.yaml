@@ -1,0 +1,167 @@
+# ===============================================================================
+# SQUAD: Mind Forge
+# Cria mentes sinteticas (fusao N experts) e consultores (deep-dive 1 assunto)
+# ===============================================================================
+
+name: mind-forge
+title: "Mind Forge"
+version: "1.0.0"
+author: "Euriler Jube"
+description: >
+  Meta-squad que transforma documentacao de conhecimento existente (KBs, livros,
+  transcricoes, cursos) em mentes sinteticas ou consultores operacionais.
+  Dois modos: Mente Sintetica (fusao de N experts num unico agente) e
+  Consultor (deep-dive tecnico em 1 metodologia/assunto).
+  Output: single-mind agent pronto pra usar (agent.md + KB + tasks + skill).
+
+slash_prefix: "mindForge"
+pattern_prefix: "MF"
+target_user: "Quem tem documentacao de conhecimento e quer transforma-la numa mente operacional (consultor ou mente sintetica)"
+
+# -------------------------------------------------------------------------------
+# USE CASES
+# -------------------------------------------------------------------------------
+use_cases:
+  - id: UC1
+    name: "Mente Sintetica"
+    description: "Fundir N experts/frameworks numa unica mente coerente organizada por dominio (ex: 10 mestres de processos fundidos)"
+  - id: UC2
+    name: "Consultor"
+    description: "Criar expert profundo em 1 metodologia/assunto pra dar conselho, conteudo ou julgamento (ex: Consultor de OKRs)"
+
+# -------------------------------------------------------------------------------
+# TIER SYSTEM
+# -------------------------------------------------------------------------------
+tiers:
+  orchestrator:
+    - forge-chief
+  tier_1:
+    - knowledge-miner
+    - mind-smith
+
+# -------------------------------------------------------------------------------
+# TASKS
+# -------------------------------------------------------------------------------
+tasks:
+  - start
+  - ingest-sources
+  - analyze-knowledge
+  - playback-validate
+  - forge-mind
+  - validate-mind
+
+# -------------------------------------------------------------------------------
+# WORKFLOWS
+# -------------------------------------------------------------------------------
+workflows:
+  - wf-mind-forge
+
+# -------------------------------------------------------------------------------
+# QUALITY GATES
+# -------------------------------------------------------------------------------
+quality_gates:
+  - id: QG-MF-001
+    name: "Ingestion Validity"
+    phase: 1
+    transition: "Ingestao -> Analise"
+    blocking: true
+    criteria: "Todas as fontes legiveis, >=500 palavras totais, tipo e estrutura identificados"
+    veto: "Fonte ilegivel ou conteudo total <200 palavras"
+
+  - id: QG-MF-002
+    name: "Analysis Completeness"
+    phase: 2
+    transition: "Analise -> Playback"
+    blocking: true
+    criteria: ">=20 KFs (sintetica) ou >=15 KFs (consultor), >=2 FRAMEWORKs, >=3 HEURISTICs, confianca media >=0.7"
+    veto: "<10 KFs ou 0 FRAMEWORKs ou >40% inferred"
+
+  - id: QG-MF-003
+    name: "User Validation"
+    phase: 3
+    transition: "Playback -> Forja"
+    blocking: true
+    criteria: "Usuario confirma mapa de conhecimento, correcoes integradas, contradicoes resolvidas"
+    veto: "Usuario rejeita mapa"
+
+  - id: QG-MF-004
+    name: "Mind Quality"
+    phase: 4
+    transition: "Forja -> Validacao"
+    blocking: true
+    criteria: "Agent com todas secoes, KB >=300 linhas por dominio, immune system >=3 triggers, output examples, SE/ENTAO"
+    veto: "Agent incompleto ou KB <100 linhas"
+
+  - id: QG-MF-005
+    name: "Operational Readiness"
+    phase: 5
+    transition: "Validacao -> Producao"
+    blocking: true
+    criteria: "3/4 smoke tests OK (incl. Context Death Test), usuario aprova mente gerada"
+    veto: "Usuario rejeita ou 0/4 smoke tests"
+
+# -------------------------------------------------------------------------------
+# PIPELINE
+# -------------------------------------------------------------------------------
+pipeline:
+  estimated_time: "1-4 horas (depende do volume de fontes)"
+  resumable: true
+  state_file: ".state.json"
+
+  phases:
+    - phase: 0
+      name: "Setup"
+      task: start
+      agent: forge-chief
+      blocking: false
+      duration: "3-5min"
+    - phase: 1
+      name: "Ingestao de Fontes"
+      task: ingest-sources
+      agent: knowledge-miner
+      blocking: true
+      duration: "10-30min"
+    - phase: 2
+      name: "Analise de Conhecimento"
+      task: analyze-knowledge
+      agent: knowledge-miner
+      blocking: true
+      duration: "30-60min"
+    - phase: 3
+      name: "Playback Validation"
+      task: playback-validate
+      agent: forge-chief
+      blocking: true
+      duration: "10-20min"
+    - phase: 4
+      name: "Forja da Mente"
+      task: forge-mind
+      agent: mind-smith
+      blocking: true
+      duration: "30-60min"
+    - phase: 5
+      name: "Validacao Final"
+      task: validate-mind
+      agent: forge-chief
+      blocking: true
+      duration: "30-60min"
+
+# -------------------------------------------------------------------------------
+# OUTPUT STRUCTURE
+# -------------------------------------------------------------------------------
+output:
+  base_path: "agents/mind-forge/minds/{mind_slug}/"
+  directories:
+    - "01-ingestion/"
+    - "02-analysis/"
+    - "03-playback/"
+    - "04-forged/"
+    - "05-validation/"
+
+# -------------------------------------------------------------------------------
+# DEPENDENCIES
+# -------------------------------------------------------------------------------
+dependencies:
+  required: []
+  optional:
+    - squad-creator  # Para squad-validator.js (validacao estrutural)

@@ -1,0 +1,101 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# SQUAD: Worker Forge
+# Fabrica de funcionarios digitais. Transforma descricoes de cargo em
+# workers AIOS operacionais com KB viva que cresce a cada missao.
+# ═══════════════════════════════════════════════════════════════════════════
+
+name: "worker-forge"
+title: "Worker Forge"
+version: "1.0.0"
+author: "euriler"
+description: >
+  Meta-squad que fabrica funcionarios digitais (workers). Diferente de
+  consultores (pensam) e processos fixos (seguem fluxo rigido), workers
+  recebem missoes, executam, documentam e melhoram com o tempo. KB viva.
+
+slash_prefix: "workerForge"
+pattern_prefix: "WF"
+target_user: "Euriler (dono do negocio)"
+
+tiers:
+  orchestrator:
+    - "worker-chief"
+  tier_1:
+    - "role-designer"
+    - "knowledge-curator"
+    - "worker-smith"
+
+tasks:
+  - start
+  - discover-needs
+  - research-domain
+  - propose-worker
+  - playback-validate
+  - assemble-worker
+  - validate-worker
+
+workflows:
+  - "wf-worker-forge"
+
+quality_gates:
+  - id: "QG-WF-001"
+    name: "Discovery Complete"
+    transition: "phase_0 -> phase_1"
+    blocking: true
+    criteria: "Necessidades captadas, dominio claro, ferramentas listadas, gaps resolvidos"
+
+  - id: "QG-WF-002"
+    name: "Research Adequate"
+    transition: "phase_1 -> phase_2"
+    blocking: true
+    criteria: "Ferramentas core pesquisadas, docs internos coletados, KB rascunho >=300 linhas"
+
+  - id: "QG-WF-003"
+    name: "User Validated Proposal"
+    transition: "phase_3 -> phase_4"
+    blocking: true
+    criteria: "Usuario aprovou proposta completa do worker"
+
+  - id: "QG-WF-004"
+    name: "AIOS Structure Valid"
+    transition: "phase_4 -> phase_5"
+    blocking: true
+    criteria: "Validator pass, 0 errors"
+
+  - id: "QG-WF-005"
+    name: "Operational Readiness"
+    transition: "phase_5 -> done"
+    blocking: true
+    criteria: "Smoke test com missao real + usuario aprova"
+
+use_cases:
+  - "Criar worker de infraestrutura digital (Hotmart, ActiveCampaign, ManyChat, etc.)"
+  - "Criar worker de atendimento ao cliente"
+  - "Criar worker de operacoes financeiras"
+  - "Criar worker de producao de conteudo"
+  - "Qualquer funcao recorrente que precisa de dono, nao so executor"
+
+pipeline:
+  phases: 6
+  flow: "Discovery -> Research -> Proposal -> Playback -> Assembly -> Validation"
+  gates: 5
+  all_blocking: true
+
+output:
+  intermediate: "agents/worker-forge/output/{worker-slug}/"
+  final: "agents/{worker-slug}/"
+  artifacts:
+    - "agents/{worker-slug}.md"
+    - "tasks/ (5 padrao + especificas)"
+    - "data/{worker-slug}-kb.md (Foundation KB)"
+    - "data/{worker-slug}-playbook.md (SOPs)"
+    - "data/{worker-slug}-missions.md (Mission Log)"
+    - "squad.yaml"
+    - "skill.md"
+
+dependencies:
+  required:
+    - "WebSearch (pesquisa externa de ferramentas/plataformas)"
+  optional:
+    - "WebFetch (documentacao de APIs)"
+    - "Playwright (explorar plataformas web)"

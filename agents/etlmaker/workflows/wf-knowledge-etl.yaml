@@ -1,0 +1,371 @@
+# ===============================================================================
+# WORKFLOW: Knowledge ETL Pipeline v3.0
+# ===============================================================================
+# Pipeline de 4 fases (+setup) para transformar fontes brutas em Knowledge Bases
+# ricas. Foco em mapeamento territorial profundo, composicao blocada com
+# checkpoints, validacao em 3 camadas, e persistencia entre sessoes.
+# ===============================================================================
+
+workflow:
+  id: wf-knowledge-etl
+  name: "Knowledge ETL Pipeline"
+  version: "3.0.0"
+  description: "Transforma fontes brutas de conhecimento em documentacao rica, completa e fiel"
+  type: "pipeline"
+  purpose: >
+    Pipeline que recebe qualquer fonte de conhecimento (cursos, livros, transcricoes,
+    conversas, PDFs), faz mapeamento territorial profundo (dominios, backbone, autores,
+    frameworks, regras, glossario), compoe volumes ricos em ciclo blocado com spot-check
+    por volume, integra pacote completo com docs transversais, e valida em 3 camadas
+    (spot-check + auditoria exaustiva + validacao estatistica 6-passes).
+  orchestrator: "@etl-chief"
+
+  sequence:
+    - phase: "setup"
+      agent: "etl-chief"
+      action: "Coletar escopo, selecionar modo, criar estrutura, PLANO-ETL.md"
+      creates: "kbs/{slug}/.state.json, kbs/{slug}/PLANO-ETL.md"
+
+    - phase: "ingestion"
+      agent: "extractor"
+      action: "Ingerir fontes, normalizar formato, gerar manifesto"
+      requires: "kbs/{slug}/.state.json"
+      creates: "kbs/{slug}/00-pipeline/sources/"
+      checkpoint:
+        id: QG-ETL-000
+        blocking: true
+
+    - phase: "territorial_mapping"
+      agent: "analyst"
+      action: "Mapeamento territorial profundo: dominios, backbone, autores, frameworks, regras, glossario, plano de volumes"
+      requires: "kbs/{slug}/00-pipeline/sources/"
+      creates: "kbs/{slug}/00-pipeline/MAPA-TERRITORIAL.md"
+      checkpoint:
+        id: QG-ETL-001
+        blocking: true
+      user_approval:
+        id: QG-ETL-002
+        blocking: true
+        description: "Usuario aprova plano de volumes"
+
+    - phase: "blocked_composition"
+      agent: "composer + auditor"
+      action: "Compor volumes em ciclo blocado (1 volume = ler + compor + spot-check + checkpoint)"
+      requires: "kbs/{slug}/00-pipeline/MAPA-TERRITORIAL.md"
+      creates: "kbs/{slug}/VOL-*.md"
+      checkpoint:
+        id: QG-ETL-003
+        blocking: true
+        applied_per: "volume"
+      persistence:
+        protocol: "checkpoint_per_volume"
+        survives: ["PLANO-ETL.md", "MAPA-TERRITORIAL.md", "volumes compostos"]
+
+    - phase: "integration"
+      agent: "architect"
+      action: "Gerar README, REGRAS-CARDINAIS, REPERTORIO, GLOSSARIO, completeness-report, cross-refs"
+      requires: "kbs/{slug}/VOL-*.md"
+      creates: "kbs/{slug}/README.md, REGRAS-CARDINAIS.md, REPERTORIO.md, GLOSSARIO.md, completeness-report.yaml"
+      checkpoint:
+        id: QG-ETL-004
+        blocking: true
+
+    - phase: "final_validation"
+      agent: "auditor"
+      action: "Camada 2 (auditoria exaustiva de itens criticos) + Camada 3 (validacao estatistica 6-passes)"
+      requires: "kbs/{slug}/ (pacote completo)"
+      creates: "kbs/{slug}/00-pipeline/critical-audit-report.yaml, kbs/{slug}/00-pipeline/validation-report.yaml"
+      checkpoint:
+        id: QG-ETL-005
+        blocking: true
+
+trigger: "/etlmaker"
+estimated_time: "2-10 horas (depende do volume e numero de fontes)"
+resumable: true
+state_file: ".state.json"
+persistence_docs: ["PLANO-ETL.md", "MAPA-TERRITORIAL.md"]
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PARTICIPANTS
+# ─────────────────────────────────────────────────────────────────────────────
+participants:
+  - agent: etl-chief
+    role: "Pipeline orchestration, mode selection, quality gate enforcement, checkpoint management"
+    phases: [setup, integration]
+  - agent: extractor
+    role: "Source ingestion, normalization"
+    phases: [ingestion]
+  - agent: analyst
+    role: "Territorial mapping, backbone discovery, volume planning, voice profiling"
+    phases: [territorial_mapping]
+  - agent: architect
+    role: "Package integration, cross-references, transversal docs"
+    phases: [integration]
+  - agent: composer
+    role: "Rich document composition in blocked cycles from original sources"
+    phases: [blocked_composition]
+  - agent: auditor
+    role: "Spot-check per volume (Camada 1), exhaustive audit (Camada 2), 6-pass validation (Camada 3)"
+    phases: [blocked_composition, final_validation]
+  - role: user
+    involvement: "Provides sources, approves volume plan (QG-002), reviews final KB"
+    phases: [setup, territorial_mapping]
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PHASES
+# ─────────────────────────────────────────────────────────────────────────────
+phases:
+  - phase: 0
+    name: "Setup"
+    agent: etl-chief
+    task: start
+    duration: "3-5 min"
+    blocking: false
+    description: >
+      Ativar Chief, coletar escopo, selecionar modo de operacao,
+      criar estrutura de diretorios, inicializar state, criar PLANO-ETL.md.
+    inputs:
+      - "Nome da KB (do usuario)"
+      - "Fontes disponiveis (do usuario)"
+    outputs:
+      - "Diretorio kbs/{slug}/ criado"
+      - "PLANO-ETL.md criado"
+      - ".state.json inicializado"
+
+  - phase: 1
+    name: "Ingestao de Fontes"
+    agent: extractor
+    task: ingest-sources
+    duration: "5-15 min"
+    blocking: true
+    description: >
+      Receber fontes brutas, normalizar formato, preservar estrutura,
+      gerar metadados e manifesto de ingestao.
+    inputs:
+      - "Fontes brutas (arquivos, texto colado)"
+    outputs:
+      - "00-pipeline/sources/{source}-normalized.md"
+      - "00-pipeline/sources/{source}-metadata.yaml"
+      - "00-pipeline/sources/ingestion-manifest.yaml"
+    quality_gate:
+      id: QG-ETL-000
+      name: "Ingestion Validity"
+      criteria:
+        - "Fonte >= 100 palavras"
+        - "Encoding UTF-8 valido"
+        - "Metadados completos"
+        - "Estrutura preservada"
+      blocking: true
+
+  - phase: 2
+    name: "Mapeamento Territorial"
+    agent: analyst
+    task: map-territory
+    duration: "30-120 min"
+    blocking: true
+    description: >
+      Mapeamento territorial profundo: dominios, backbone, autores,
+      frameworks, regras cardinais, glossario, classificacao de fontes,
+      plano de volumes, catalogo de artefatos, voice profile.
+      Produz MAPA-TERRITORIAL.md integrado.
+    inputs:
+      - "00-pipeline/sources/ (fontes normalizadas)"
+    outputs:
+      - "00-pipeline/MAPA-TERRITORIAL.md"
+    quality_gate:
+      id: QG-ETL-001
+      name: "Territorial Comprehension"
+      criteria:
+        - "Todas as fontes lidas"
+        - ">= 3 dominios identificados"
+        - "Backbone identificado ou justificado"
+        - "Autores mapeados com hierarquia"
+        - "Fontes classificadas (primaria vs suporte)"
+        - "Regras cardinais >= 1"
+        - "Voice profile completo"
+        - "MAPA-TERRITORIAL.md salvo"
+      blocking: true
+    user_approval:
+      id: QG-ETL-002
+      name: "Architecture Approval"
+      criteria:
+        - "Plano de volumes apresentado ao usuario"
+        - "Aprovacao explicita recebida"
+        - ">= 2 volumes definidos"
+        - "100% dominios core cobertos"
+      requires_user_approval: true
+      blocking: true
+
+  - phase: 3
+    name: "Composicao Blocada"
+    agent: composer
+    task: compose-volume
+    duration: "60-240 min"
+    blocking: true
+    description: >
+      Compor cada volume em ciclo blocado: carregar contexto →
+      ler primarias → ler enriquecimento → compor → spot-check → checkpoint.
+      1 volume por vez, profundidade total.
+    inputs:
+      - "00-pipeline/MAPA-TERRITORIAL.md"
+      - "00-pipeline/sources/ (fontes originais)"
+    outputs:
+      - "VOL-01-{topico}.md"
+      - "VOL-02-{topico}.md"
+      - "..."
+    quality_gate:
+      id: QG-ETL-003
+      name: "Composition Richness"
+      applied_per: "volume"
+      criteria:
+        - ">= 300 linhas por volume"
+        - ">= 2 tabelas por volume"
+        - ">= 3 exemplos por volume"
+        - ">= 10 proveniencia [Fonte:] por volume"
+        - "Formatacao rica (headers, listas, blocos)"
+        - "Spot-check: 10 claims verificados (>= 8 corretos, 0 inventados)"
+        - "Checkpoint salvo"
+      blocking: true
+    checkpoint_protocol:
+      per_volume: true
+      save: "VOL-{N}.md como arquivo"
+      update: "PLANO-ETL.md com progresso"
+      persistence: "PLANO-ETL.md + MAPA-TERRITORIAL.md sobrevivem autocompact"
+
+  - phase: 4
+    name: "Integracao"
+    agent: architect
+    task: integrate-package
+    duration: "15-30 min"
+    blocking: true
+    description: >
+      Gerar docs transversais: README, REGRAS-CARDINAIS (por dominio),
+      REPERTORIO (11 secoes por tipo), GLOSSARIO, completeness-report.
+      Verificar cross-references.
+    inputs:
+      - "VOL-*.md (todos os volumes)"
+      - "00-pipeline/MAPA-TERRITORIAL.md"
+    outputs:
+      - "README.md"
+      - "REGRAS-CARDINAIS.md"
+      - "REPERTORIO.md"
+      - "GLOSSARIO.md"
+      - "completeness-report.yaml"
+    quality_gate:
+      id: QG-ETL-004
+      name: "Package Integration"
+      criteria:
+        - "README presente e completo"
+        - "REGRAS-CARDINAIS presente"
+        - "REPERTORIO presente com 11 secoes"
+        - "GLOSSARIO presente"
+        - "Todos volumes presentes conforme plano"
+        - "Cross-references consistentes"
+        - "completeness-report gerado"
+      blocking: true
+
+  - phase: 5
+    name: "Validacao Final"
+    agent: auditor
+    task: validate-final
+    duration: "30-60 min"
+    blocking: true
+    description: >
+      Camada 2: auditoria exaustiva de itens criticos (frameworks, regras,
+      termos, artefatos — 100% verificados contra MAPA).
+      Camada 3: validacao estatistica 6-passes (coverage, fidelity, richness,
+      voice, consistency, integrity) com score agregado.
+    inputs:
+      - "kbs/{slug}/ (pacote completo)"
+      - "00-pipeline/MAPA-TERRITORIAL.md"
+      - "00-pipeline/sources/ (fontes originais)"
+    outputs:
+      - "00-pipeline/critical-audit-report.yaml"
+      - "00-pipeline/validation-report.yaml"
+    quality_gate:
+      id: QG-ETL-005
+      name: "Final Validation"
+      criteria:
+        - "Camada 2: PASS (100% frameworks, regras, termos)"
+        - "Coverage >= 95%"
+        - "Fidelity >= 90%, 0 invented, <= 3 distorted"
+        - "Voice >= 80%"
+        - "Consistency: 0 contradicoes"
+        - "Integrity: 100%"
+        - "Aggregate >= 90%"
+        - "Verdict = APPROVED"
+      blocking: true
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OPERATION MODES
+# ─────────────────────────────────────────────────────────────────────────────
+modes:
+  full_pipeline:
+    description: "Criar KB do zero a partir de fontes"
+    phases: [0, 1, 2, 3, 4, 5]
+    estimated_time: "2-10 horas"
+  quick_extract:
+    description: "So mapear territorialmente (sem compor volumes)"
+    phases: [0, 1, 2]
+    estimated_time: "30-120 min"
+  merge:
+    description: "Adicionar nova fonte a KB existente"
+    phases: [1, 2, 3, 4, 5]
+    estimated_time: "1-5 horas"
+    note: "Pula fase 0 (usa KB existente). Re-mapeia e re-compoe volumes afetados"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FLOW RULES
+# ─────────────────────────────────────────────────────────────────────────────
+flow_rules:
+  - "Pipeline e UNIDIRECIONAL: fases nao voltam"
+  - "Quality gates sao BLOQUEANTES: se nao passa, nao avanca"
+  - "Pipeline e PAUSAVEL entre fases: .state.json persiste estado"
+  - "RESUMIR: *resume retoma da ultima fase incompleta"
+  - "Fase 2 REQUER aprovacao explicita do usuario antes de avancar (QG-002)"
+  - "Fase 3 opera em ciclo blocado: 1 volume = ler + compor + spot-check + salvar"
+  - "Fase 5 pode gerar ciclo de revisao (max 3): auditor → composer → re-validacao"
+  - "Composer le FONTES ORIGINAIS, nao resumos ou metadados"
+  - "Proveniencia inline [Fonte:] e obrigatoria em cada bloco de conteudo"
+  - "Zero invencoes: se nao ta na fonte, nao entra no output"
+  - "PLANO-ETL.md e MAPA-TERRITORIAL.md SEMPRE sobrevivem autocompact"
+  - "Reler PLANO-ETL.md a cada retomada de sessao"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CHECKPOINT PROTOCOL
+# ─────────────────────────────────────────────────────────────────────────────
+checkpoint_protocol:
+  per_volume:
+    save: "Volume como arquivo .md"
+    update_plan: "PLANO-ETL.md com progresso e metricas"
+    update_state: ".state.json com volumes_composed"
+  per_phase:
+    update_plan: "PLANO-ETL.md com status da fase"
+    update_state: ".state.json com current_phase"
+  on_autocompact:
+    reread: ["PLANO-ETL.md", "MAPA-TERRITORIAL.md"]
+    resume_from: "ultimo volume nao composto"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OUTPUT STRUCTURE
+# ─────────────────────────────────────────────────────────────────────────────
+output:
+  base_path: "agents/etlmaker/kbs/{kb_slug}/"
+  directories:
+    - "00-pipeline/"
+    - "00-pipeline/sources/"
+  consumer_facing:
+    - "README.md"
+    - "REGRAS-CARDINAIS.md"
+    - "REPERTORIO.md"
+    - "GLOSSARIO.md"
+    - "VOL-*.md"
+    - "completeness-report.yaml"
+  internal:
+    - "00-pipeline/MAPA-TERRITORIAL.md"
+    - "00-pipeline/critical-audit-report.yaml"
+    - "00-pipeline/validation-report.yaml"
+    - "00-pipeline/sources/"
+  persistence:
+    - "PLANO-ETL.md"
+    - ".state.json"

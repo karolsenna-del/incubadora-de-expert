@@ -1,0 +1,2595 @@
+# =============================================================================
+# Clone Forge — Driver Catalog
+# =============================================================================
+# Catalogo de drivers psicologicos para clonagem cognitiva de experts.
+# Baseado no pipeline de Alan Nicolas (951 drivers / 31 tabelas / 42k mentes),
+# adaptado e curado para o contexto Clone Forge.
+#
+# Cada driver representa um traco mensuravel que compoe o perfil cognitivo,
+# emocional, motivacional, social, comportamental ou meta-cognitivo de um expert.
+#
+# Fontes: Big Five (OCEAN 30 facets), MBTI (8 funcoes cognitivas),
+#         Enneagram (27 subtipos), DISC, vieses cognitivos, padroes de
+#         comunicacao, estilos de decisao, hierarquia de valores,
+#         padroes comportamentais.
+# =============================================================================
+
+version: "1.0.0"
+total_drivers: 251
+
+categories:
+  cognitive: "Padroes de pensamento, processamento de informacao, tomada de decisao"
+  emotional: "Padroes emocionais, regulacao, reatividade"
+  motivational: "O que impulsiona acao, valores, metas"
+  social: "Interacao, influencia, comunicacao"
+  behavioral: "Habitos, rotinas, padroes de acao"
+  meta: "Auto-percepcao, metacognicao, auto-regulacao"
+
+drivers:
+
+  # ===========================================================================
+  # COGNITIVE — Padroes de pensamento, processamento, decisao
+  # ===========================================================================
+  cognitive:
+
+    # ---- Big Five: Openness facets ----
+    - id: COG-001
+      name: "Analytical Thinking"
+      description: "Tendency to break down complex problems into components before acting"
+      indicators:
+        - "Uses structured frameworks to organize information"
+        - "Asks 'why' before 'how'"
+        - "Creates categories and taxonomies naturally"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Intellect", "MBTI: Ti/Te"]
+
+    - id: COG-002
+      name: "Imaginative Ideation"
+      description: "Capacity to generate novel ideas and envision possibilities that don't yet exist"
+      indicators:
+        - "Frequently proposes unconventional solutions"
+        - "Uses metaphors and analogies to explain concepts"
+        - "Daydreams productively about future scenarios"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Fantasy", "MBTI: Ne"]
+
+    - id: COG-003
+      name: "Aesthetic Sensitivity"
+      description: "Awareness and appreciation of beauty, design, and sensory experience"
+      indicators:
+        - "Notices visual details others miss"
+        - "Values elegance in solutions and presentations"
+        - "Responds strongly to art, music, or design quality"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Aesthetics", "MBTI: Se/Fi"]
+
+    - id: COG-004
+      name: "Intellectual Curiosity"
+      description: "Intrinsic drive to learn, explore ideas, and understand how things work"
+      indicators:
+        - "Reads widely across multiple domains"
+        - "Asks deep follow-up questions"
+        - "Pursues knowledge for its own sake"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Ideas", "MBTI: Ne/Ti"]
+
+    - id: COG-005
+      name: "Experiential Openness"
+      description: "Willingness to try new activities, foods, cultures, and ways of living"
+      indicators:
+        - "Seeks novel experiences deliberately"
+        - "Adapts quickly to unfamiliar environments"
+        - "Embraces change rather than resisting it"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Actions", "MBTI: Se/Ne"]
+
+    - id: COG-006
+      name: "Values Flexibility"
+      description: "Openness to reexamining personal values and considering alternative worldviews"
+      indicators:
+        - "Engages with opposing viewpoints without defensiveness"
+        - "Updates beliefs when presented with compelling evidence"
+        - "Tolerates ambiguity in moral questions"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Values", "MBTI: Ne/Fi"]
+
+    # ---- MBTI Cognitive Functions ----
+    - id: COG-007
+      name: "Introverted Thinking (Ti)"
+      description: "Internal logical framework for categorizing and understanding how things work"
+      indicators:
+        - "Builds internal models of systems"
+        - "Values logical consistency over external validation"
+        - "Deconstructs arguments to find flaws"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ti", "Big Five: Openness-Intellect"]
+
+    - id: COG-008
+      name: "Extraverted Thinking (Te)"
+      description: "Drive to organize the external world through systems, plans, and measurable outcomes"
+      indicators:
+        - "Creates processes and SOPs naturally"
+        - "Focuses on efficiency and measurable results"
+        - "Makes decisions based on objective data"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Te", "Big Five: Conscientiousness-Order"]
+
+    - id: COG-009
+      name: "Introverted Intuition (Ni)"
+      description: "Ability to perceive deep patterns and converge on singular future visions"
+      indicators:
+        - "Has strong hunches that prove accurate"
+        - "Sees the endpoint before the path"
+        - "Thinks in symbols and archetypes"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ni", "Big Five: Openness-Ideas"]
+
+    - id: COG-010
+      name: "Extraverted Intuition (Ne)"
+      description: "Capacity to see multiple possibilities, connections, and divergent paths simultaneously"
+      indicators:
+        - "Brainstorms rapidly and prolifically"
+        - "Connects disparate ideas across domains"
+        - "Gets excited by 'what if' questions"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ne", "Big Five: Openness-Ideas"]
+
+    - id: COG-011
+      name: "Introverted Sensing (Si)"
+      description: "Rich internal library of past experiences used as reference for present decisions"
+      indicators:
+        - "References past experiences to guide decisions"
+        - "Notices when something deviates from established patterns"
+        - "Values tradition and proven methods"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Si", "Big Five: Conscientiousness-Dutifulness"]
+
+    - id: COG-012
+      name: "Extraverted Sensing (Se)"
+      description: "Acute awareness of the present moment and concrete physical environment"
+      indicators:
+        - "Responds quickly to real-time changes"
+        - "Engages fully with sensory details"
+        - "Prefers hands-on experience over theory"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Se", "Big Five: Extraversion-Excitement Seeking"]
+
+    # ---- Cognitive Biases ----
+    - id: COG-013
+      name: "Confirmation Bias Tendency"
+      description: "Degree to which one seeks information that confirms existing beliefs"
+      indicators:
+        - "Gravitates toward sources that agree with current views"
+        - "Dismisses contradictory evidence quickly"
+        - "Interprets ambiguous data in favor of existing hypothesis"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Big Five: Openness (inverse)"]
+
+    - id: COG-014
+      name: "Anchoring Effect Sensitivity"
+      description: "Tendency to rely heavily on the first piece of information encountered"
+      indicators:
+        - "Initial numbers strongly influence final estimates"
+        - "Negotiation positions anchor around first offer"
+        - "First impressions of people persist despite new data"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Decision Style: Intuitive"]
+
+    - id: COG-015
+      name: "Availability Heuristic Reliance"
+      description: "Tendency to judge frequency or probability by how easily examples come to mind"
+      indicators:
+        - "Recent events disproportionately influence risk assessment"
+        - "Vivid stories outweigh statistical evidence"
+        - "Overestimates probability of dramatic outcomes"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "MBTI: Se/Si"]
+
+    - id: COG-016
+      name: "Dunning-Kruger Awareness"
+      description: "Ability to accurately calibrate own competence relative to actual skill level"
+      indicators:
+        - "Acknowledges knowledge gaps openly"
+        - "Seeks feedback on blind spots"
+        - "Adjusts confidence based on domain expertise"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Meta: Self-Assessment Accuracy"]
+
+    - id: COG-017
+      name: "Sunk Cost Susceptibility"
+      description: "Tendency to continue investing in something because of past investment rather than future value"
+      indicators:
+        - "Finishes books even when not enjoying them"
+        - "Stays in projects past the point of diminishing returns"
+        - "Difficulty abandoning strategies that aren't working"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Behavioral: Loss Aversion"]
+
+    - id: COG-018
+      name: "Framing Effect Sensitivity"
+      description: "Degree to which the presentation of information influences decisions"
+      indicators:
+        - "Reacts differently to gains vs losses framing"
+        - "Marketing language significantly shifts preferences"
+        - "Context of presentation changes perceived value"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Social: Persuasion Susceptibility"]
+
+    - id: COG-019
+      name: "Hindsight Bias Tendency"
+      description: "Tendency to see past events as having been predictable after they occur"
+      indicators:
+        - "Often says 'I knew that would happen'"
+        - "Revises memory of predictions to match outcomes"
+        - "Underestimates uncertainty in retrospect"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Meta: Self-Narrative Construction"]
+
+    - id: COG-020
+      name: "Bandwagon Effect Susceptibility"
+      description: "Tendency to adopt beliefs or behaviors because many others do"
+      indicators:
+        - "Popularity of an idea increases its appeal"
+        - "Social proof heavily influences purchasing decisions"
+        - "Aligns opinions with perceived majority"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Social: Conformity Drive"]
+
+    - id: COG-021
+      name: "Status Quo Bias"
+      description: "Preference for the current state of affairs over change"
+      indicators:
+        - "Defaults to existing options even when better alternatives exist"
+        - "Requires strong justification before switching tools or methods"
+        - "Perceives change as loss rather than opportunity"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Behavioral: Routine Preference"]
+
+    - id: COG-022
+      name: "Overconfidence Bias"
+      description: "Systematic overestimation of own knowledge, abilities, or prediction accuracy"
+      indicators:
+        - "Sets overly tight confidence intervals"
+        - "Underestimates task completion time consistently"
+        - "Rarely hedges predictions with uncertainty"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Meta: Self-Assessment Accuracy"]
+
+    - id: COG-023
+      name: "Negativity Bias"
+      description: "Tendency to give more weight to negative experiences than positive ones"
+      indicators:
+        - "One negative review outweighs ten positive ones"
+        - "Dwells on criticism longer than praise"
+        - "Threat detection dominates opportunity scanning"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Emotional: Emotional Reactivity"]
+
+    - id: COG-024
+      name: "Peak-End Rule Sensitivity"
+      description: "Tendency to judge experiences based on peak moments and endings rather than totality"
+      indicators:
+        - "Remembers highlights and conclusions vividly"
+        - "Rates experiences primarily by their best/worst moments"
+        - "Endings disproportionately color overall assessment"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Emotional: Emotional Memory"]
+
+    - id: COG-025
+      name: "Recency Bias"
+      description: "Tendency to overweight recent events relative to historical data"
+      indicators:
+        - "Latest results dominate forecasting"
+        - "Recent feedback overrides long-term track record"
+        - "Current mood colors assessment of long-term trends"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "MBTI: Se"]
+
+    - id: COG-026
+      name: "Halo Effect Tendency"
+      description: "Tendency to let positive impressions in one area influence judgments in other areas"
+      indicators:
+        - "Attractive people are assumed to be more competent"
+        - "Success in one domain creates assumed expertise in others"
+        - "Brand reputation colors product quality perception"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Social: First Impression Weight"]
+
+    - id: COG-027
+      name: "Survivorship Bias Awareness"
+      description: "Ability to account for hidden failures when analyzing success patterns"
+      indicators:
+        - "Asks about failure rates, not just success stories"
+        - "Seeks disconfirming evidence in case studies"
+        - "Questions selection bias in presented data"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "COG-001: Analytical Thinking"]
+
+    - id: COG-028
+      name: "Fundamental Attribution Error"
+      description: "Tendency to attribute others' behavior to character rather than circumstances"
+      indicators:
+        - "Judges others' failures as character flaws"
+        - "Attributes own failures to circumstances"
+        - "Underestimates situational factors in others' behavior"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Social: Empathy Level"]
+
+    - id: COG-029
+      name: "Planning Fallacy Susceptibility"
+      description: "Tendency to underestimate time, costs, and risks of future actions"
+      indicators:
+        - "Consistently delivers projects late"
+        - "Budgets are regularly exceeded"
+        - "Best-case scenarios treated as likely outcomes"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "COG-022: Overconfidence Bias"]
+
+    - id: COG-030
+      name: "Choice Overload Sensitivity"
+      description: "Degree to which excessive options lead to decision paralysis or dissatisfaction"
+      indicators:
+        - "Struggles to decide when too many options are present"
+        - "Feels regret after choosing from large sets"
+        - "Prefers curated recommendations over open catalogs"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Decision Style: Analytical"]
+
+    - id: COG-031
+      name: "Zero-Risk Bias"
+      description: "Preference for eliminating one risk entirely over a greater overall risk reduction"
+      indicators:
+        - "Chooses 100% safe option over probabilistically superior alternative"
+        - "Overpays for certainty"
+        - "Focuses on eliminating visible risks over invisible larger ones"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "Behavioral: Risk Tolerance"]
+
+    - id: COG-032
+      name: "Narrative Fallacy Tendency"
+      description: "Tendency to construct coherent stories from random or unrelated events"
+      indicators:
+        - "Sees patterns in noise"
+        - "Creates causal explanations for coincidences"
+        - "Prefers stories over statistics for understanding"
+      strength_scale: "0-100"
+      related_systems: ["Cognitive Bias", "MBTI: Ni"]
+
+    # ---- Decision Styles ----
+    - id: COG-033
+      name: "Analytical Decision Style"
+      description: "Preference for thorough data analysis and systematic evaluation before deciding"
+      indicators:
+        - "Creates pros/cons lists or decision matrices"
+        - "Gathers extensive data before committing"
+        - "Delays decision until sufficient information is available"
+      strength_scale: "0-100"
+      related_systems: ["Decision Style: Analytical", "MBTI: Ti/Te"]
+
+    - id: COG-034
+      name: "Intuitive Decision Style"
+      description: "Preference for gut feeling, pattern recognition, and rapid judgment based on experience"
+      indicators:
+        - "Makes quick decisions that feel right"
+        - "Trusts instinct over spreadsheets"
+        - "Can't always articulate reasoning but outcomes are often good"
+      strength_scale: "0-100"
+      related_systems: ["Decision Style: Intuitive", "MBTI: Ni/Ne"]
+
+    - id: COG-035
+      name: "Directive Decision Style"
+      description: "Preference for fast, decisive action with minimal deliberation"
+      indicators:
+        - "Decides quickly and moves on"
+        - "Values speed over perfection in decisions"
+        - "Comfortable deciding with incomplete information"
+      strength_scale: "0-100"
+      related_systems: ["Decision Style: Directive", "DISC: Dominance"]
+
+    - id: COG-036
+      name: "Conceptual Decision Style"
+      description: "Preference for big-picture thinking and creative problem-solving in decisions"
+      indicators:
+        - "Considers long-term implications and multiple scenarios"
+        - "Generates creative alternatives before deciding"
+        - "Values innovation and vision in solutions"
+      strength_scale: "0-100"
+      related_systems: ["Decision Style: Conceptual", "MBTI: Ne/Ni"]
+
+    - id: COG-037
+      name: "Collaborative Decision Style"
+      description: "Preference for involving others and building consensus before deciding"
+      indicators:
+        - "Seeks input from stakeholders before committing"
+        - "Values buy-in over speed"
+        - "Facilitative approach to group decisions"
+      strength_scale: "0-100"
+      related_systems: ["Decision Style: Collaborative", "DISC: Steadiness"]
+
+    # ---- Pattern Recognition and Processing ----
+    - id: COG-038
+      name: "Systems Thinking"
+      description: "Ability to see interconnections, feedback loops, and emergent properties in complex systems"
+      indicators:
+        - "Maps cause-and-effect chains across multiple domains"
+        - "Identifies leverage points in systems"
+        - "Considers second and third-order effects"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ni/Te", "Big Five: Openness-Ideas"]
+
+    - id: COG-039
+      name: "Linear Sequential Processing"
+      description: "Preference for step-by-step, ordered thinking and execution"
+      indicators:
+        - "Works through tasks in logical sequence"
+        - "Uncomfortable jumping between unrelated topics"
+        - "Values clear beginning-middle-end structure"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Si/Te", "Big Five: Conscientiousness-Order"]
+
+    - id: COG-040
+      name: "Parallel Processing Capacity"
+      description: "Ability to hold and work with multiple threads of thought simultaneously"
+      indicators:
+        - "Manages several projects without confusion"
+        - "Switches between contexts with minimal ramp-up"
+        - "Keeps multiple variables active in working memory"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ne", "Big Five: Openness-Ideas"]
+
+    - id: COG-041
+      name: "Abstract Reasoning"
+      description: "Ability to think in concepts, principles, and theoretical frameworks"
+      indicators:
+        - "Extracts principles from specific cases"
+        - "Comfortable with ambiguity and theoretical discussion"
+        - "Creates mental models and conceptual frameworks"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ni/Ti", "Big Five: Openness-Intellect"]
+
+    - id: COG-042
+      name: "Concrete Practical Reasoning"
+      description: "Preference for tangible, real-world, hands-on thinking and problem-solving"
+      indicators:
+        - "Asks for specific examples and use cases"
+        - "Evaluates ideas by practical applicability"
+        - "Prefers 'show me' over 'explain to me'"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Se/Si", "Big Five: Openness (inverse)"]
+
+    - id: COG-043
+      name: "Divergent Thinking"
+      description: "Capacity to generate many different ideas and explore multiple solution paths"
+      indicators:
+        - "Produces large quantity of ideas in brainstorming"
+        - "Makes unusual associations between concepts"
+        - "Resists premature convergence on solutions"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ne", "Big Five: Openness-Ideas"]
+
+    - id: COG-044
+      name: "Convergent Thinking"
+      description: "Ability to evaluate options and narrow down to the single best solution"
+      indicators:
+        - "Efficiently eliminates inferior options"
+        - "Comfortable making final selection from alternatives"
+        - "Values decisiveness and closure"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ni/Te", "Big Five: Conscientiousness-Deliberation"]
+
+    - id: COG-045
+      name: "First Principles Thinking"
+      description: "Tendency to reason from fundamental truths rather than by analogy or convention"
+      indicators:
+        - "Questions assumptions that others take for granted"
+        - "Rebuilds understanding from foundational concepts"
+        - "Challenges 'that's how it's always been done'"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ti/Ni", "Big Five: Openness-Ideas"]
+
+    - id: COG-046
+      name: "Analogical Reasoning"
+      description: "Tendency to understand new situations by mapping them to familiar ones"
+      indicators:
+        - "Uses analogies and metaphors frequently"
+        - "Transfers solutions from one domain to another"
+        - "Recognizes structural similarities across different contexts"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ne/Si", "Big Five: Openness-Ideas"]
+
+    - id: COG-047
+      name: "Probabilistic Thinking"
+      description: "Ability to think in probabilities, ranges, and degrees of confidence rather than certainties"
+      indicators:
+        - "Assigns likelihood estimates to outcomes"
+        - "Thinks in ranges rather than point estimates"
+        - "Updates probabilities when new evidence appears"
+      strength_scale: "0-100"
+      related_systems: ["Decision Style: Analytical", "COG-016: Dunning-Kruger Awareness"]
+
+    - id: COG-048
+      name: "Counterfactual Thinking"
+      description: "Tendency to consider alternative outcomes and 'what if' scenarios retrospectively"
+      indicators:
+        - "Reflects on how things could have gone differently"
+        - "Learns from near-misses and close calls"
+        - "Runs mental simulations of alternative decisions"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ne/Ni", "Big Five: Openness-Fantasy"]
+
+    # ---- Information Processing ----
+    - id: COG-049
+      name: "Detail Orientation"
+      description: "Degree of attention to fine details, precision, and accuracy in information"
+      indicators:
+        - "Catches typos and inconsistencies others miss"
+        - "Reads fine print and footnotes"
+        - "Values precision in language and numbers"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Order", "MBTI: Si"]
+
+    - id: COG-050
+      name: "Big Picture Focus"
+      description: "Tendency to prioritize overall patterns, themes, and strategic direction over details"
+      indicators:
+        - "Sees the forest, not the trees"
+        - "Focuses on strategic direction over tactical execution"
+        - "Summarizes complex situations into key themes"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ni/Ne", "Big Five: Openness-Ideas"]
+
+    - id: COG-051
+      name: "Information Synthesis"
+      description: "Ability to combine information from multiple sources into coherent understanding"
+      indicators:
+        - "Integrates contradictory data into nuanced views"
+        - "Creates unified frameworks from diverse inputs"
+        - "Identifies common threads across different sources"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ni", "Big Five: Openness-Intellect"]
+
+    - id: COG-052
+      name: "Critical Evaluation"
+      description: "Tendency to question, test, and validate information before accepting it"
+      indicators:
+        - "Checks sources and methodology"
+        - "Looks for logical fallacies in arguments"
+        - "Asks 'what evidence supports this?'"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ti/Te", "Big Five: Openness-Intellect"]
+
+  # ===========================================================================
+  # EMOTIONAL — Padroes emocionais, regulacao, reatividade
+  # ===========================================================================
+  emotional:
+
+    # ---- Big Five: Neuroticism facets ----
+    - id: EMO-001
+      name: "Anxiety Proneness"
+      description: "Tendency to experience worry, nervousness, and apprehension about the future"
+      indicators:
+        - "Frequently worries about potential problems"
+        - "Physical tension in uncertain situations"
+        - "Difficulty relaxing when outcomes are unclear"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Neuroticism-Anxiety", "Enneagram: 6"]
+
+    - id: EMO-002
+      name: "Anger Threshold"
+      description: "Ease with which frustration and irritation are triggered"
+      indicators:
+        - "Quick to express dissatisfaction"
+        - "Low tolerance for perceived incompetence"
+        - "Impatience visible under pressure"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Neuroticism-Angry Hostility", "Enneagram: 8"]
+
+    - id: EMO-003
+      name: "Depressive Tendency"
+      description: "Susceptibility to feelings of sadness, hopelessness, and low energy"
+      indicators:
+        - "Prolonged recovery from setbacks"
+        - "Pessimistic outlook during difficult periods"
+        - "Withdrawal from social interaction when stressed"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Neuroticism-Depression", "Enneagram: 4"]
+
+    - id: EMO-004
+      name: "Self-Consciousness Level"
+      description: "Degree of sensitivity to how one is perceived by others"
+      indicators:
+        - "Uncomfortable being the center of attention"
+        - "Replays social interactions looking for mistakes"
+        - "Avoids situations with high social evaluation"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Neuroticism-Self-Consciousness", "Enneagram: 4/6"]
+
+    - id: EMO-005
+      name: "Impulsive Reactivity"
+      description: "Tendency to act on emotions before thinking them through"
+      indicators:
+        - "Makes decisions in the heat of the moment"
+        - "Emotional spending or commitments"
+        - "Says things later regretted during emotional peaks"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Neuroticism-Impulsiveness", "MBTI: Se/Fe"]
+
+    - id: EMO-006
+      name: "Stress Vulnerability"
+      description: "Degree to which stressors overwhelm coping capacity"
+      indicators:
+        - "Performance degrades significantly under pressure"
+        - "Difficulty maintaining perspective during crises"
+        - "Physical symptoms appear under sustained stress"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Neuroticism-Vulnerability", "Enneagram: 6"]
+
+    # ---- Big Five: Agreeableness facets (emotional dimension) ----
+    - id: EMO-007
+      name: "Trust Default"
+      description: "Baseline level of trust extended to others before evidence"
+      indicators:
+        - "Gives people the benefit of the doubt"
+        - "Takes people at their word initially"
+        - "Assumes good intentions in ambiguous situations"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Agreeableness-Trust", "Enneagram: 9"]
+
+    - id: EMO-008
+      name: "Straightforward Honesty"
+      description: "Degree to which one communicates directly and transparently"
+      indicators:
+        - "Says what they think without sugar-coating"
+        - "Avoids manipulation or hidden agendas"
+        - "Values directness over diplomacy"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Agreeableness-Straightforwardness", "DISC: Dominance"]
+
+    - id: EMO-009
+      name: "Altruistic Drive"
+      description: "Genuine concern for the welfare of others and willingness to help"
+      indicators:
+        - "Volunteers time and resources for others"
+        - "Puts others' needs above personal convenience"
+        - "Derives satisfaction from helping others succeed"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Agreeableness-Altruism", "Enneagram: 2"]
+
+    - id: EMO-010
+      name: "Compliance Tendency"
+      description: "Tendency to defer to others and avoid confrontation"
+      indicators:
+        - "Yields in disagreements to maintain harmony"
+        - "Difficulty saying no to requests"
+        - "Avoids expressing dissenting opinions"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Agreeableness-Compliance", "Enneagram: 9"]
+
+    - id: EMO-011
+      name: "Modesty Level"
+      description: "Degree to which one downplays own achievements and abilities"
+      indicators:
+        - "Deflects compliments"
+        - "Attributes success to team or luck"
+        - "Uncomfortable with public recognition"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Agreeableness-Modesty", "Enneagram: 9"]
+
+    - id: EMO-012
+      name: "Tender-Mindedness"
+      description: "Sensitivity to the suffering of others and emotional responsiveness to human need"
+      indicators:
+        - "Moved by stories of hardship"
+        - "Considers emotional impact of decisions on others"
+        - "Advocates for vulnerable populations"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Agreeableness-Tender-Mindedness", "MBTI: Fe/Fi"]
+
+    # ---- MBTI Feeling Functions ----
+    - id: EMO-013
+      name: "Introverted Feeling (Fi)"
+      description: "Deep internal value system that guides decisions based on personal authenticity"
+      indicators:
+        - "Strong sense of personal values and ethics"
+        - "Decisions feel 'right' or 'wrong' in the gut"
+        - "Prioritizes authenticity over social approval"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Fi", "Big Five: Agreeableness", "Enneagram: 4"]
+
+    - id: EMO-014
+      name: "Extraverted Feeling (Fe)"
+      description: "Awareness of and responsiveness to the emotional needs and harmony of groups"
+      indicators:
+        - "Reads the room instantly"
+        - "Adjusts behavior to maintain group harmony"
+        - "Feels responsible for others' emotional states"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Fe", "Big Five: Agreeableness-Altruism", "Enneagram: 2"]
+
+    # ---- Emotional Intelligence Components ----
+    - id: EMO-015
+      name: "Emotional Self-Awareness"
+      description: "Ability to recognize and name one's own emotions in real time"
+      indicators:
+        - "Can articulate current emotional state accurately"
+        - "Recognizes emotional triggers before they escalate"
+        - "Distinguishes between similar emotions (frustration vs disappointment)"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Self-Awareness", "MBTI: Fi"]
+
+    - id: EMO-016
+      name: "Emotional Regulation"
+      description: "Ability to manage and modulate emotional responses appropriately"
+      indicators:
+        - "Maintains composure under provocation"
+        - "Recovers quickly from emotional disruptions"
+        - "Chooses response rather than reacting automatically"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Self-Management", "Big Five: Neuroticism (inverse)"]
+
+    - id: EMO-017
+      name: "Emotional Resilience"
+      description: "Capacity to bounce back from adversity, failure, and disappointment"
+      indicators:
+        - "Treats setbacks as learning opportunities"
+        - "Maintains motivation after failures"
+        - "Returns to baseline emotional state quickly after disruption"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Self-Management", "Big Five: Neuroticism (inverse)"]
+
+    - id: EMO-018
+      name: "Empathic Accuracy"
+      description: "Ability to correctly identify what others are feeling"
+      indicators:
+        - "Accurately reads non-verbal emotional cues"
+        - "Anticipates others' emotional reactions"
+        - "Understands emotional subtext in communication"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Social Awareness", "MBTI: Fe/Fi"]
+
+    - id: EMO-019
+      name: "Emotional Expressiveness"
+      description: "Degree to which internal emotions are communicated outwardly"
+      indicators:
+        - "Facial expressions clearly reflect feelings"
+        - "Uses emotional language naturally"
+        - "Others can easily read their emotional state"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Extraversion-Warmth", "MBTI: Fe"]
+
+    - id: EMO-020
+      name: "Emotional Granularity"
+      description: "Ability to make fine distinctions between similar emotional states"
+      indicators:
+        - "Uses precise emotional vocabulary (irritated vs angry vs furious)"
+        - "Distinguishes blended emotions in complex situations"
+        - "Communicates emotional nuance effectively"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Self-Awareness", "MBTI: Fi"]
+
+    # ---- Enneagram Emotional Patterns ----
+    - id: EMO-021
+      name: "Perfectionist Anxiety (Type 1)"
+      description: "Internal tension from the gap between how things are and how they should be"
+      indicators:
+        - "Inner critic is highly active and vocal"
+        - "Frustration when standards are not met"
+        - "Difficulty accepting 'good enough'"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 1", "Big Five: Conscientiousness-Achievement Striving"]
+
+    - id: EMO-022
+      name: "Helper's Pride (Type 2)"
+      description: "Emotional need to be needed and valued through giving to others"
+      indicators:
+        - "Feels valued primarily through helping others"
+        - "Difficulty receiving help or asking for it"
+        - "Resentment when help is not acknowledged"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 2", "Big Five: Agreeableness-Altruism"]
+
+    - id: EMO-023
+      name: "Achievement Image Focus (Type 3)"
+      description: "Emotional investment in appearing successful and competent to others"
+      indicators:
+        - "Adjusts self-presentation to match audience expectations"
+        - "Discomfort with failure being visible"
+        - "Derives self-worth from accomplishments and recognition"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 3", "Big Five: Conscientiousness-Achievement Striving"]
+
+    - id: EMO-024
+      name: "Melancholic Depth (Type 4)"
+      description: "Emotional intensity and longing for what is missing or unique"
+      indicators:
+        - "Deep emotional highs and lows"
+        - "Sense of being fundamentally different from others"
+        - "Attraction to beauty, depth, and authentic expression"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 4", "Big Five: Neuroticism-Depression", "MBTI: Fi"]
+
+    - id: EMO-025
+      name: "Detached Observation (Type 5)"
+      description: "Emotional withdrawal as a strategy to conserve energy and maintain autonomy"
+      indicators:
+        - "Needs time alone to recharge after social interaction"
+        - "Observes emotions rather than being swept by them"
+        - "Minimizes emotional needs and dependencies"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 5", "Big Five: Extraversion (inverse)", "MBTI: Ti"]
+
+    - id: EMO-026
+      name: "Loyalty-Based Anxiety (Type 6)"
+      description: "Emotional pattern of vigilance, doubt, and worst-case scenario planning"
+      indicators:
+        - "Constantly scans for potential threats"
+        - "Tests loyalty of people and institutions"
+        - "Oscillates between trust and suspicion"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 6", "Big Five: Neuroticism-Anxiety"]
+
+    - id: EMO-027
+      name: "Enthusiastic Avoidance (Type 7)"
+      description: "Emotional pattern of seeking pleasure and avoiding pain through constant stimulation"
+      indicators:
+        - "Reframes negatives into positives quickly"
+        - "Difficulty sitting with uncomfortable emotions"
+        - "Multiple plans and options to avoid feeling trapped"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 7", "Big Five: Extraversion-Positive Emotions"]
+
+    - id: EMO-028
+      name: "Protective Intensity (Type 8)"
+      description: "Emotional pattern of strength, control, and protecting vulnerability"
+      indicators:
+        - "Shows anger more easily than vulnerability"
+        - "Takes charge in uncertain situations"
+        - "Strong protective instinct toward those in their circle"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 8", "Big Five: Neuroticism-Angry Hostility (inverse)"]
+
+    - id: EMO-029
+      name: "Peaceful Numbing (Type 9)"
+      description: "Emotional pattern of merging with others and numbing personal desires"
+      indicators:
+        - "Goes along to get along"
+        - "Difficulty identifying own preferences and priorities"
+        - "Avoids conflict even at personal cost"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 9", "Big Five: Agreeableness-Compliance"]
+
+    # ---- Additional Emotional Drivers ----
+    - id: EMO-030
+      name: "Frustration Tolerance"
+      description: "Capacity to endure obstacles, delays, and setbacks without losing composure"
+      indicators:
+        - "Stays focused when progress is slow"
+        - "Maintains effort despite repeated obstacles"
+        - "Does not give up or lash out when blocked"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Self-Management", "Big Five: Neuroticism (inverse)"]
+
+    - id: EMO-031
+      name: "Joy Capacity"
+      description: "Ability to experience and express genuine positive emotion and enthusiasm"
+      indicators:
+        - "Celebrates wins visibly"
+        - "Expresses gratitude naturally"
+        - "Positive affect is contagious to others"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Extraversion-Positive Emotions", "Enneagram: 7"]
+
+    - id: EMO-032
+      name: "Guilt Sensitivity"
+      description: "Tendency to feel responsible and guilty for negative outcomes"
+      indicators:
+        - "Takes excessive responsibility for others' problems"
+        - "Replays mistakes with self-blame"
+        - "Difficulty forgiving self even after making amends"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Agreeableness-Compliance", "Enneagram: 1/2"]
+
+    - id: EMO-033
+      name: "Shame Sensitivity"
+      description: "Degree to which perceived failure triggers deep feelings of unworthiness"
+      indicators:
+        - "Failure feels like a reflection of core self"
+        - "Hides mistakes rather than addressing them"
+        - "Strong need to appear competent at all times"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 3/4", "Big Five: Neuroticism-Self-Consciousness"]
+
+    - id: EMO-034
+      name: "Emotional Memory Intensity"
+      description: "Strength and persistence of emotional associations with past experiences"
+      indicators:
+        - "Vivid recall of how past events felt emotionally"
+        - "Emotional responses triggered by sensory associations"
+        - "Past emotional wounds influence current reactions"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Si/Fi", "Big Five: Neuroticism"]
+
+    - id: EMO-035
+      name: "Compassion Fatigue Susceptibility"
+      description: "Vulnerability to emotional exhaustion from sustained empathic engagement"
+      indicators:
+        - "Feels drained after extended emotional support"
+        - "Begins to detach after prolonged exposure to others' suffering"
+        - "Needs deliberate emotional recovery time"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Social Awareness", "Enneagram: 2"]
+
+    - id: EMO-036
+      name: "Gratitude Orientation"
+      description: "Natural tendency to notice and appreciate positive aspects of life"
+      indicators:
+        - "Regularly expresses thanks unprompted"
+        - "Focuses on what went right alongside what went wrong"
+        - "Acknowledges others' contributions sincerely"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Agreeableness", "Enneagram: 9"]
+
+    - id: EMO-037
+      name: "Emotional Contagion Susceptibility"
+      description: "Degree to which one absorbs and mirrors the emotions of those around them"
+      indicators:
+        - "Mood shifts to match the room's emotional tone"
+        - "Feels others' stress physically"
+        - "Difficulty separating own emotions from others'"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Fe", "Big Five: Agreeableness-Tender-Mindedness"]
+
+  # ===========================================================================
+  # MOTIVATIONAL — O que impulsiona acao, valores, metas
+  # ===========================================================================
+  motivational:
+
+    # ---- Core Motivational Drivers ----
+    - id: MOT-001
+      name: "Achievement Drive"
+      description: "Internal need to accomplish challenging goals and demonstrate competence"
+      indicators:
+        - "Sets ambitious targets voluntarily"
+        - "Tracks progress with metrics"
+        - "Dissatisfied with mediocre results"
+      strength_scale: "0-100"
+      related_systems: ["McClelland: Achievement", "Enneagram: 3", "Big Five: Conscientiousness-Achievement Striving"]
+
+    - id: MOT-002
+      name: "Affiliation Need"
+      description: "Drive to form and maintain close, meaningful relationships with others"
+      indicators:
+        - "Prioritizes relationship building in professional contexts"
+        - "Prefers collaborative over solo work"
+        - "Values belonging to a community"
+      strength_scale: "0-100"
+      related_systems: ["McClelland: Affiliation", "Enneagram: 2/9", "Big Five: Extraversion-Warmth"]
+
+    - id: MOT-003
+      name: "Power and Influence Drive"
+      description: "Need to impact, control, or influence the behavior and direction of others"
+      indicators:
+        - "Seeks leadership positions naturally"
+        - "Enjoys persuading and directing others"
+        - "Uncomfortable in powerless positions"
+      strength_scale: "0-100"
+      related_systems: ["McClelland: Power", "Enneagram: 8", "DISC: Dominance"]
+
+    - id: MOT-004
+      name: "Autonomy Need"
+      description: "Drive to control own schedule, methods, and direction of work"
+      indicators:
+        - "Resists micromanagement and external control"
+        - "Prefers self-directed work over assigned tasks"
+        - "Values freedom to choose how and when to work"
+      strength_scale: "0-100"
+      related_systems: ["SDT: Autonomy", "Enneagram: 5/8", "Big Five: Extraversion (varies)"]
+
+    - id: MOT-005
+      name: "Mastery Orientation"
+      description: "Intrinsic drive to develop deep expertise and continuously improve skills"
+      indicators:
+        - "Practices deliberately to improve"
+        - "Seeks increasingly difficult challenges"
+        - "Values skill development over external rewards"
+      strength_scale: "0-100"
+      related_systems: ["SDT: Competence", "Enneagram: 5", "Big Five: Openness-Ideas"]
+
+    - id: MOT-006
+      name: "Purpose Alignment"
+      description: "Need for work to connect to a larger meaning, mission, or contribution"
+      indicators:
+        - "Asks 'why does this matter?' before committing"
+        - "Energized by mission-driven work"
+        - "Loses motivation when purpose is unclear"
+      strength_scale: "0-100"
+      related_systems: ["SDT: Relatedness", "Enneagram: 1", "Values: Impact"]
+
+    # ---- Values Hierarchy ----
+    - id: MOT-007
+      name: "Security Value"
+      description: "Prioritization of safety, stability, predictability, and risk avoidance"
+      indicators:
+        - "Prefers steady income over high-risk high-reward"
+        - "Builds safety nets and contingencies"
+        - "Values stability in career and relationships"
+      strength_scale: "0-100"
+      related_systems: ["Values: Security", "Enneagram: 6", "Big Five: Neuroticism-Anxiety"]
+
+    - id: MOT-008
+      name: "Freedom Value"
+      description: "Prioritization of independence, flexibility, and self-determination"
+      indicators:
+        - "Chooses flexibility over higher compensation"
+        - "Resistant to rigid structures and hierarchies"
+        - "Values options and the ability to change course"
+      strength_scale: "0-100"
+      related_systems: ["Values: Freedom", "Enneagram: 7", "MOT-004: Autonomy Need"]
+
+    - id: MOT-009
+      name: "Recognition Value"
+      description: "Prioritization of being seen, acknowledged, and respected by others"
+      indicators:
+        - "Motivated by public praise and awards"
+        - "Invests in personal brand and visibility"
+        - "Demotivated when contributions go unnoticed"
+      strength_scale: "0-100"
+      related_systems: ["Values: Recognition", "Enneagram: 3", "Big Five: Extraversion-Assertiveness"]
+
+    - id: MOT-010
+      name: "Growth Value"
+      description: "Prioritization of personal development, learning, and self-actualization"
+      indicators:
+        - "Invests consistently in education and skills"
+        - "Chooses growth opportunities over comfort"
+        - "Views challenges as development opportunities"
+      strength_scale: "0-100"
+      related_systems: ["Values: Growth", "Enneagram: 4/5", "Big Five: Openness-Ideas"]
+
+    - id: MOT-011
+      name: "Impact Value"
+      description: "Prioritization of making a difference and leaving a lasting contribution"
+      indicators:
+        - "Measures success by lives changed"
+        - "Drawn to work that creates tangible positive outcomes"
+        - "Legacy-minded in decision-making"
+      strength_scale: "0-100"
+      related_systems: ["Values: Impact", "Enneagram: 1/8", "MOT-006: Purpose Alignment"]
+
+    - id: MOT-012
+      name: "Connection Value"
+      description: "Prioritization of deep relationships, community, and belonging"
+      indicators:
+        - "Invests heavily in maintaining relationships"
+        - "Values depth over breadth in social connections"
+        - "Makes decisions considering relational impact"
+      strength_scale: "0-100"
+      related_systems: ["Values: Connection", "Enneagram: 2/9", "MOT-002: Affiliation Need"]
+
+    - id: MOT-013
+      name: "Wealth Value"
+      description: "Prioritization of financial abundance and material prosperity"
+      indicators:
+        - "Tracks financial metrics actively"
+        - "Makes decisions with financial ROI as primary criterion"
+        - "Motivated by increasing income and net worth"
+      strength_scale: "0-100"
+      related_systems: ["Values: Wealth", "Enneagram: 3", "MOT-001: Achievement Drive"]
+
+    - id: MOT-014
+      name: "Justice Value"
+      description: "Prioritization of fairness, equity, and ethical treatment of all people"
+      indicators:
+        - "Speaks up against perceived injustice"
+        - "Advocates for fair processes and policies"
+        - "Willing to sacrifice personal gain for fairness"
+      strength_scale: "0-100"
+      related_systems: ["Values: Justice", "Enneagram: 1", "MBTI: Fi/Fe"]
+
+    - id: MOT-015
+      name: "Adventure Value"
+      description: "Prioritization of novelty, excitement, and new experiences"
+      indicators:
+        - "Bored by routine and predictability"
+        - "Seeks new challenges and environments regularly"
+        - "Energized by the unknown and unexplored"
+      strength_scale: "0-100"
+      related_systems: ["Values: Adventure", "Enneagram: 7", "Big Five: Openness-Actions"]
+
+    # ---- Enneagram Instinctual Variants (Motivational) ----
+    - id: MOT-016
+      name: "Self-Preservation Instinct"
+      description: "Primary drive toward personal safety, comfort, health, and material security"
+      indicators:
+        - "Prioritizes physical wellbeing and comfort"
+        - "Strong focus on financial security"
+        - "Attentive to health, food, and environmental safety"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: SP instinct", "MOT-007: Security Value"]
+
+    - id: MOT-017
+      name: "Sexual/Attraction Instinct"
+      description: "Primary drive toward intense one-on-one connection, chemistry, and merging"
+      indicators:
+        - "Seeks deep, intense relationships"
+        - "Drawn to passionate, all-or-nothing engagement"
+        - "Energy is focused on key relationships"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: SX instinct", "MOT-012: Connection Value"]
+
+    - id: MOT-018
+      name: "Social Instinct"
+      description: "Primary drive toward belonging, social position, and group contribution"
+      indicators:
+        - "Aware of social dynamics and hierarchies"
+        - "Invests energy in community and group membership"
+        - "Values social role and contribution to collective"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: SO instinct", "MOT-002: Affiliation Need"]
+
+    # ---- Enneagram Type + Instinct Subtypes (selected key subtypes) ----
+    - id: MOT-019
+      name: "SP-1 Worry/Anxiety Subtype"
+      description: "Self-preservation One — channels perfectionism into anxiety about material security"
+      indicators:
+        - "Worries about doing everything right for survival"
+        - "Highly self-critical about practical competence"
+        - "Perfectionism focused on daily life management"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 1-SP", "MOT-016: Self-Preservation"]
+
+    - id: MOT-020
+      name: "SX-1 Zeal Subtype"
+      description: "Sexual One — channels perfectionism into reforming others and the world"
+      indicators:
+        - "Passionate about correcting wrongs in relationships"
+        - "Intense reformer energy directed at close others"
+        - "Righteous anger in service of ideals"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 1-SX", "MOT-017: Sexual/Attraction"]
+
+    - id: MOT-021
+      name: "SO-1 Non-Adaptability Subtype"
+      description: "Social One — channels perfectionism into being the moral example for groups"
+      indicators:
+        - "Models correct behavior for the group"
+        - "Teaches and preaches standards publicly"
+        - "Rigid adherence to social norms and rules"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 1-SO", "MOT-018: Social Instinct"]
+
+    - id: MOT-022
+      name: "SP-2 Privilege Subtype"
+      description: "Self-preservation Two — earns love through being indispensable caretaker"
+      indicators:
+        - "Makes themselves essential through practical help"
+        - "Nurtures others' physical needs"
+        - "Expects reciprocal care without asking"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 2-SP", "MOT-016: Self-Preservation"]
+
+    - id: MOT-023
+      name: "SX-2 Seduction Subtype"
+      description: "Sexual Two — wins love through personal attractiveness and emotional intensity"
+      indicators:
+        - "Focuses on being irresistible to specific individuals"
+        - "Uses charm and emotional attunement to connect"
+        - "Seeks to be the most important person to someone"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 2-SX", "MOT-017: Sexual/Attraction"]
+
+    - id: MOT-024
+      name: "SO-2 Ambition Subtype"
+      description: "Social Two — earns love through influence, status, and powerful connections"
+      indicators:
+        - "Networks strategically to help others and gain influence"
+        - "Positions self as connector and facilitator"
+        - "Gains social capital through generosity"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 2-SO", "MOT-018: Social Instinct"]
+
+    - id: MOT-025
+      name: "SP-3 Security/Efficiency Subtype"
+      description: "Self-preservation Three — achieves through efficient, reliable work and material success"
+      indicators:
+        - "Workaholic tendencies driven by security needs"
+        - "Measures success in tangible material outcomes"
+        - "Most modest of the Threes — lets work speak for itself"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 3-SP", "MOT-016: Self-Preservation"]
+
+    - id: MOT-026
+      name: "SX-3 Charisma Subtype"
+      description: "Sexual Three — achieves through personal magnetism and supporting partner's success"
+      indicators:
+        - "Promotes others' achievements as pathway to own value"
+        - "Charismatic and attractive in one-on-one contexts"
+        - "Image-conscious about desirability"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 3-SX", "MOT-017: Sexual/Attraction"]
+
+    - id: MOT-027
+      name: "SO-3 Prestige Subtype"
+      description: "Social Three — achieves through social status, credentials, and public image"
+      indicators:
+        - "Highly aware of social ladder and positioning"
+        - "Invests in status symbols and credentials"
+        - "Adapts persona to match admired group"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 3-SO", "MOT-018: Social Instinct"]
+
+    - id: MOT-028
+      name: "SP-4 Tenacity Subtype"
+      description: "Self-preservation Four — endures suffering stoically without complaining"
+      indicators:
+        - "Internalizes pain rather than expressing it"
+        - "Reckless or masochistic relationship with comfort"
+        - "Proves worth through enduring hardship"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 4-SP", "MOT-016: Self-Preservation"]
+
+    - id: MOT-029
+      name: "SX-4 Competition Subtype"
+      description: "Sexual Four — expresses envy through competitive intensity and demanding more"
+      indicators:
+        - "Openly compares self to others"
+        - "Demands to be seen as special and unique"
+        - "Anger and intensity in pursuit of what's missing"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 4-SX", "MOT-017: Sexual/Attraction"]
+
+    - id: MOT-030
+      name: "SO-4 Shame Subtype"
+      description: "Social Four — suffers from chronic comparison and feeling inferior in groups"
+      indicators:
+        - "Focuses on what others have that they lack"
+        - "Feels like an outsider in social groups"
+        - "Shame about not measuring up socially"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 4-SO", "MOT-018: Social Instinct"]
+
+    - id: MOT-031
+      name: "SP-5 Castle Subtype"
+      description: "Self-preservation Five — creates rigid boundaries to protect personal space and resources"
+      indicators:
+        - "Minimizes needs and consumption"
+        - "Strong physical and emotional boundaries"
+        - "Values solitude and personal sanctuary"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 5-SP", "MOT-016: Self-Preservation"]
+
+    - id: MOT-032
+      name: "SX-5 Confidence Subtype"
+      description: "Sexual Five — seeks ultimate connection with one ideal person or idea"
+      indicators:
+        - "Shares deeply with one trusted person"
+        - "Intense focused interest in a single domain"
+        - "Counter-Five: more emotionally expressive in intimate context"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 5-SX", "MOT-017: Sexual/Attraction"]
+
+    - id: MOT-033
+      name: "SO-5 Totem Subtype"
+      description: "Social Five — connects through shared intellectual interests and specialized knowledge"
+      indicators:
+        - "Bonds through ideas rather than emotions"
+        - "Values intellectual community and expert groups"
+        - "Shares knowledge as primary social currency"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 5-SO", "MOT-018: Social Instinct"]
+
+    - id: MOT-034
+      name: "SP-6 Warmth Subtype"
+      description: "Self-preservation Six — manages anxiety through alliance-building and being likeable"
+      indicators:
+        - "Seeks protection through strong relationships"
+        - "Warm and friendly to disarm potential threats"
+        - "Phobic response: avoids confrontation"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 6-SP", "MOT-016: Self-Preservation"]
+
+    - id: MOT-035
+      name: "SX-6 Strength/Beauty Subtype"
+      description: "Sexual Six — counterphobic response to fear through intimidation and boldness"
+      indicators:
+        - "Confronts fear by moving toward danger"
+        - "Projects strength to mask vulnerability"
+        - "Contrarian and rebellious under pressure"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 6-SX", "MOT-017: Sexual/Attraction"]
+
+    - id: MOT-036
+      name: "SO-6 Duty Subtype"
+      description: "Social Six — manages anxiety through obedience to group rules and authority"
+      indicators:
+        - "Follows rules and protocols precisely"
+        - "Values clear hierarchy and chain of command"
+        - "Finds safety in institutional belonging"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 6-SO", "MOT-018: Social Instinct"]
+
+    - id: MOT-037
+      name: "SP-7 Family/Keeper Subtype"
+      description: "Self-preservation Seven — creates security through networks and resource optimization"
+      indicators:
+        - "Builds alliances and mutually beneficial relationships"
+        - "Opportunistic about practical advantages"
+        - "Most grounded and least scattered Seven"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 7-SP", "MOT-016: Self-Preservation"]
+
+    - id: MOT-038
+      name: "SX-7 Fascination Subtype"
+      description: "Sexual Seven — seeks ultimate experience through idealization and dreaming"
+      indicators:
+        - "Lives in an idealized world of possibility"
+        - "Romanticizes experiences and people"
+        - "Most enthusiastic and imaginative Seven"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 7-SX", "MOT-017: Sexual/Attraction"]
+
+    - id: MOT-039
+      name: "SO-7 Sacrifice Subtype"
+      description: "Social Seven — channels gluttony into service and idealistic group mission"
+      indicators:
+        - "Serves the group with enthusiasm"
+        - "Postpones personal pleasure for collective good"
+        - "Counter-Seven: most altruistic and least selfish"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 7-SO", "MOT-018: Social Instinct"]
+
+    - id: MOT-040
+      name: "SP-8 Satisfaction Subtype"
+      description: "Self-preservation Eight — asserts power through controlling material resources"
+      indicators:
+        - "Focuses on tangible power and territory"
+        - "Direct and practical in pursuing what they want"
+        - "Most survivalist and self-reliant Eight"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 8-SP", "MOT-016: Self-Preservation"]
+
+    - id: MOT-041
+      name: "SX-8 Possession Subtype"
+      description: "Sexual Eight — asserts power through intensity and possessiveness in relationships"
+      indicators:
+        - "Intense and consuming in close relationships"
+        - "Provocative and challenging toward intimates"
+        - "Most emotionally intense Eight"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 8-SX", "MOT-017: Sexual/Attraction"]
+
+    - id: MOT-042
+      name: "SO-8 Solidarity Subtype"
+      description: "Social Eight — asserts power in service of protecting the group and fighting injustice"
+      indicators:
+        - "Champions the underdog and fights for the group"
+        - "Takes on powerful opponents for the sake of others"
+        - "Most altruistic and least self-serving Eight"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 8-SO", "MOT-018: Social Instinct"]
+
+    - id: MOT-043
+      name: "SP-9 Appetite Subtype"
+      description: "Self-preservation Nine — numbs through physical comfort and routine pleasures"
+      indicators:
+        - "Uses food, comfort, and routine to self-soothe"
+        - "Merges with familiar physical environment"
+        - "Most stubborn and grounded Nine"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 9-SP", "MOT-016: Self-Preservation"]
+
+    - id: MOT-044
+      name: "SX-9 Fusion Subtype"
+      description: "Sexual Nine — merges identity with partner or significant other"
+      indicators:
+        - "Adopts partner's interests and preferences"
+        - "Difficulty distinguishing own desires from partner's"
+        - "Most relationship-focused Nine"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 9-SX", "MOT-017: Sexual/Attraction"]
+
+    - id: MOT-045
+      name: "SO-9 Participation Subtype"
+      description: "Social Nine — merges with group identity and works tirelessly for collective"
+      indicators:
+        - "Takes on group's goals as personal mission"
+        - "Works hard for the community but neglects own needs"
+        - "Most externally active and busy Nine"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 9-SO", "MOT-018: Social Instinct"]
+
+    # ---- Additional Motivational Drivers ----
+    - id: MOT-046
+      name: "Intrinsic Motivation Dominance"
+      description: "Degree to which internal satisfaction drives behavior over external rewards"
+      indicators:
+        - "Works on projects without pay because they're interesting"
+        - "External rewards can actually decrease engagement"
+        - "Motivated by the work itself, not the compensation"
+      strength_scale: "0-100"
+      related_systems: ["SDT: Intrinsic Motivation", "Big Five: Openness"]
+
+    - id: MOT-047
+      name: "Extrinsic Motivation Sensitivity"
+      description: "Degree to which external rewards, status, and recognition drive behavior"
+      indicators:
+        - "Responds strongly to bonuses and incentives"
+        - "Motivated by titles, rankings, and visible achievements"
+        - "Performance increases with external accountability"
+      strength_scale: "0-100"
+      related_systems: ["SDT: Extrinsic Motivation", "Enneagram: 3"]
+
+    - id: MOT-048
+      name: "Fear of Failure"
+      description: "Degree to which anticipated failure inhibits risk-taking and action"
+      indicators:
+        - "Avoids situations where failure is possible"
+        - "Procrastinates on high-stakes tasks"
+        - "Perfectionism as a defense against perceived failure"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 3/6", "Big Five: Neuroticism-Anxiety"]
+
+    - id: MOT-049
+      name: "Fear of Success"
+      description: "Unconscious self-sabotage when approaching significant achievement"
+      indicators:
+        - "Pulls back just before breakthrough moments"
+        - "Creates obstacles when things are going well"
+        - "Uncomfortable with visibility that comes with success"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 4/9", "Meta: Self-Sabotage Pattern"]
+
+    - id: MOT-050
+      name: "Legacy Motivation"
+      description: "Drive to create something that endures beyond one's own lifetime"
+      indicators:
+        - "Thinks in generational timescales"
+        - "Builds institutions, not just products"
+        - "Concerned with what they'll be remembered for"
+      strength_scale: "0-100"
+      related_systems: ["Values: Impact", "Enneagram: 1/8"]
+
+    - id: MOT-051
+      name: "Competition Drive"
+      description: "Degree to which the desire to outperform others fuels effort and engagement"
+      indicators:
+        - "Tracks performance relative to peers"
+        - "Energized by rivalry and ranking"
+        - "Winning matters as much as or more than the goal itself"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 3/8", "DISC: Dominance"]
+
+    - id: MOT-052
+      name: "Creative Expression Drive"
+      description: "Need to produce original work that reflects personal vision and identity"
+      indicators:
+        - "Restless when unable to create"
+        - "Values originality over efficiency"
+        - "Expresses self through work product"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 4", "Big Five: Openness-Aesthetics"]
+
+  # ===========================================================================
+  # SOCIAL — Interacao, influencia, comunicacao
+  # ===========================================================================
+  social:
+
+    # ---- Big Five: Extraversion facets ----
+    - id: SOC-001
+      name: "Interpersonal Warmth"
+      description: "Degree of genuine friendliness and personal connection in interactions"
+      indicators:
+        - "Puts people at ease quickly"
+        - "Remembers personal details about others"
+        - "Expresses genuine interest in others' lives"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Extraversion-Warmth", "MBTI: Fe"]
+
+    - id: SOC-002
+      name: "Social Gregariousness"
+      description: "Preference for and energy gained from being around other people"
+      indicators:
+        - "Seeks out social gatherings actively"
+        - "Energized by group interactions"
+        - "Feels lonely or bored when alone for extended periods"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Extraversion-Gregariousness", "Enneagram: 7"]
+
+    - id: SOC-003
+      name: "Social Assertiveness"
+      description: "Tendency to take charge, speak up, and direct group activities"
+      indicators:
+        - "Speaks first in meetings"
+        - "Comfortable giving directives"
+        - "Fills leadership vacuum naturally"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Extraversion-Assertiveness", "DISC: Dominance"]
+
+    - id: SOC-004
+      name: "Social Activity Level"
+      description: "Pace and intensity of social engagement and social calendar"
+      indicators:
+        - "Maintains a busy social calendar"
+        - "Initiates plans and invitations"
+        - "Restless with quiet, uneventful days"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Extraversion-Activity", "Enneagram: 7"]
+
+    - id: SOC-005
+      name: "Excitement Seeking"
+      description: "Need for stimulation, novelty, and thrill in social contexts"
+      indicators:
+        - "Seeks new social experiences and environments"
+        - "Bored by routine social interactions"
+        - "Drawn to high-energy events and experiences"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Extraversion-Excitement Seeking", "MBTI: Se"]
+
+    - id: SOC-006
+      name: "Positive Emotional Expression"
+      description: "Tendency to openly express joy, enthusiasm, and optimism in social settings"
+      indicators:
+        - "Laughs and smiles frequently"
+        - "Brings energy and enthusiasm to groups"
+        - "Infectious positive attitude"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Extraversion-Positive Emotions", "Enneagram: 7"]
+
+    # ---- DISC Dimensions ----
+    - id: SOC-007
+      name: "Dominance Orientation (DISC-D)"
+      description: "Preference for control, challenge, and direct action in social contexts"
+      indicators:
+        - "Takes charge in unstructured situations"
+        - "Comfortable with conflict and confrontation"
+        - "Results-focused in interactions"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Dominance", "Enneagram: 8", "MBTI: Te"]
+
+    - id: SOC-008
+      name: "Influence Orientation (DISC-I)"
+      description: "Preference for persuasion, enthusiasm, and social recognition"
+      indicators:
+        - "Persuades through enthusiasm and storytelling"
+        - "Values social approval and popularity"
+        - "Optimistic and collaborative in interactions"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Influence", "Enneagram: 7/3", "MBTI: Fe/Ne"]
+
+    - id: SOC-009
+      name: "Steadiness Orientation (DISC-S)"
+      description: "Preference for consistency, support, and cooperative relationships"
+      indicators:
+        - "Reliable and patient in relationships"
+        - "Prefers gradual change over sudden shifts"
+        - "Supportive listener who values harmony"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Steadiness", "Enneagram: 9", "MBTI: Si/Fe"]
+
+    - id: SOC-010
+      name: "Conscientiousness Orientation (DISC-C)"
+      description: "Preference for accuracy, standards, and careful analysis in social contexts"
+      indicators:
+        - "Values precision and correctness in communication"
+        - "Follows rules and procedures in interactions"
+        - "Asks detailed questions before committing"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Conscientiousness", "Enneagram: 1/5", "MBTI: Ti/Si"]
+
+    # ---- DISC Combinations ----
+    - id: SOC-011
+      name: "DI Blend — Inspirational Commander"
+      description: "Combined dominance and influence creating charismatic leadership"
+      indicators:
+        - "Leads with vision and energy"
+        - "Persuasive and action-oriented simultaneously"
+        - "Inspires while directing"
+      strength_scale: "0-100"
+      related_systems: ["DISC: DI", "Enneagram: 3/8"]
+
+    - id: SOC-012
+      name: "DS Blend — Persistent Driver"
+      description: "Combined dominance and steadiness creating determined, patient leadership"
+      indicators:
+        - "Drives toward goals with patient persistence"
+        - "Firm but fair in interactions"
+        - "Values both results and team stability"
+      strength_scale: "0-100"
+      related_systems: ["DISC: DS", "Enneagram: 1/8"]
+
+    - id: SOC-013
+      name: "DC Blend — Analytical Director"
+      description: "Combined dominance and conscientiousness creating fact-driven leadership"
+      indicators:
+        - "Leads with data and analysis"
+        - "High standards for both self and others"
+        - "Decisive but thorough"
+      strength_scale: "0-100"
+      related_systems: ["DISC: DC", "Enneagram: 1/3"]
+
+    - id: SOC-014
+      name: "IS Blend — Supportive Influencer"
+      description: "Combined influence and steadiness creating warm, supportive communication"
+      indicators:
+        - "Builds relationships through warmth and reliability"
+        - "Persuades through empathy and care"
+        - "Creates inclusive, comfortable environments"
+      strength_scale: "0-100"
+      related_systems: ["DISC: IS", "Enneagram: 2/9"]
+
+    - id: SOC-015
+      name: "IC Blend — Precise Communicator"
+      description: "Combined influence and conscientiousness creating articulate, detailed communication"
+      indicators:
+        - "Communicates persuasively with supporting data"
+        - "Enthusiastic but fact-checked"
+        - "Values both connection and accuracy"
+      strength_scale: "0-100"
+      related_systems: ["DISC: IC", "Enneagram: 3/5"]
+
+    - id: SOC-016
+      name: "SC Blend — Methodical Supporter"
+      description: "Combined steadiness and conscientiousness creating reliable, thorough support"
+      indicators:
+        - "Supportive with attention to detail"
+        - "Follows through on commitments precisely"
+        - "Quiet effectiveness behind the scenes"
+      strength_scale: "0-100"
+      related_systems: ["DISC: SC", "Enneagram: 6/9"]
+
+    # ---- Communication Patterns ----
+    - id: SOC-017
+      name: "Communication Directness"
+      description: "Degree to which communication is straightforward versus indirect"
+      indicators:
+        - "States opinions and requests clearly"
+        - "Says no without excessive softening"
+        - "Gets to the point quickly"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Dominance", "Enneagram: 8", "Big Five: Agreeableness (inverse)"]
+
+    - id: SOC-018
+      name: "Communication Formality"
+      description: "Degree to which communication follows formal conventions versus casual style"
+      indicators:
+        - "Adjusts register to context appropriately"
+        - "Uses proper titles and formal structure"
+        - "Or: breaks formality to create closeness"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Conscientiousness", "Big Five: Conscientiousness-Order"]
+
+    - id: SOC-019
+      name: "Storytelling Orientation"
+      description: "Tendency to communicate through narratives, examples, and personal stories"
+      indicators:
+        - "Explains concepts through stories and anecdotes"
+        - "Remembers and shares relevant examples"
+        - "Makes abstract ideas concrete through narrative"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Influence", "MBTI: Ne/Si", "Big Five: Openness-Fantasy"]
+
+    - id: SOC-020
+      name: "Questioning Style"
+      description: "Tendency to communicate by asking questions rather than making statements"
+      indicators:
+        - "Uses Socratic method to guide understanding"
+        - "Explores topics through inquiry"
+        - "Prefers to discover answers collaboratively"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ne/Ti", "Enneagram: 5/6"]
+
+    - id: SOC-021
+      name: "Active Listening"
+      description: "Degree to which one fully attends to and processes others' communication"
+      indicators:
+        - "Paraphrases and reflects back what was heard"
+        - "Asks clarifying questions before responding"
+        - "Does not interrupt or plan response while others speak"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Social Awareness", "DISC: Steadiness"]
+
+    - id: SOC-022
+      name: "Persuasion Skill"
+      description: "Ability to influence others' beliefs, attitudes, and behaviors through communication"
+      indicators:
+        - "Frames arguments in terms of audience's values"
+        - "Builds logical and emotional cases effectively"
+        - "Anticipates and addresses objections proactively"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Influence/Dominance", "MBTI: Fe/Te"]
+
+    - id: SOC-023
+      name: "Conflict Engagement Style"
+      description: "Approach to disagreement and interpersonal tension"
+      indicators:
+        - "Confronts issues directly (high) or avoids them (low)"
+        - "Stays focused on issues rather than attacking people"
+        - "Seeks resolution rather than winning"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Dominance", "Enneagram: 8/9 (poles)", "Big Five: Agreeableness (inverse)"]
+
+    - id: SOC-024
+      name: "Humor Usage"
+      description: "Tendency to use humor as a social tool for connection, deflection, or influence"
+      indicators:
+        - "Uses humor to lighten tense situations"
+        - "Connects with others through shared laughter"
+        - "Self-deprecating or observational humor style"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Extraversion", "Enneagram: 7"]
+
+    - id: SOC-025
+      name: "Vulnerability Willingness"
+      description: "Degree to which one is willing to show weakness and ask for help"
+      indicators:
+        - "Admits mistakes and limitations openly"
+        - "Asks for help without shame"
+        - "Shares personal struggles to build connection"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 8 (inverse)", "Big Five: Agreeableness-Straightforwardness"]
+
+    - id: SOC-026
+      name: "Networking Capacity"
+      description: "Ability and inclination to build and maintain a wide professional network"
+      indicators:
+        - "Maintains contact with diverse professional connections"
+        - "Introduces people to each other strategically"
+        - "Leverages network for mutual benefit"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Influence", "Enneagram: 3/7", "Big Five: Extraversion-Gregariousness"]
+
+    - id: SOC-027
+      name: "Teaching Orientation"
+      description: "Natural inclination to explain, instruct, and help others learn"
+      indicators:
+        - "Breaks down complex ideas for others"
+        - "Patient when others don't understand immediately"
+        - "Derives satisfaction from others' learning breakthroughs"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Fe/Te", "Enneagram: 1/2"]
+
+    - id: SOC-028
+      name: "Social Perceptiveness"
+      description: "Ability to read social dynamics, power structures, and unspoken rules"
+      indicators:
+        - "Notices who holds real influence in groups"
+        - "Reads between the lines in conversations"
+        - "Understands unwritten social codes quickly"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Fe/Ni", "Enneagram: 3/6"]
+
+    - id: SOC-029
+      name: "Boundary Setting"
+      description: "Ability to establish and maintain clear interpersonal boundaries"
+      indicators:
+        - "Says no clearly and without guilt"
+        - "Protects personal time and energy"
+        - "Communicates limits early in relationships"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 5/8", "Big Five: Agreeableness (inverse)"]
+
+    - id: SOC-030
+      name: "Group Facilitation"
+      description: "Ability to guide group discussions and ensure productive, inclusive interactions"
+      indicators:
+        - "Ensures all voices are heard in meetings"
+        - "Manages dominating personalities diplomatically"
+        - "Keeps discussions on track toward goals"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Influence/Steadiness", "MBTI: Fe"]
+
+    - id: SOC-031
+      name: "Mentoring Capacity"
+      description: "Ability and willingness to guide others' long-term development"
+      indicators:
+        - "Invests in others' growth beyond immediate needs"
+        - "Asks coaching questions rather than giving answers"
+        - "Follows up on mentees' progress"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 2/1", "MBTI: Fe/Te"]
+
+    - id: SOC-032
+      name: "Cultural Adaptability"
+      description: "Ability to adjust communication and behavior across different cultural contexts"
+      indicators:
+        - "Recognizes and respects cultural differences"
+        - "Adapts communication style to cultural norms"
+        - "Avoids assumptions based on own cultural lens"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Values", "Big Five: Agreeableness"]
+
+    - id: SOC-033
+      name: "Negotiation Skill"
+      description: "Ability to reach mutually beneficial agreements through strategic communication"
+      indicators:
+        - "Finds win-win solutions in conflicts"
+        - "Separates positions from interests"
+        - "Creates value rather than just claiming it"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Dominance/Influence", "MBTI: Te/Fe"]
+
+    - id: SOC-034
+      name: "Social Conformity Drive"
+      description: "Tendency to align behavior with group norms and expectations"
+      indicators:
+        - "Adjusts opinions to match group consensus"
+        - "Follows social conventions without questioning"
+        - "Uncomfortable standing out or deviating from norm"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Agreeableness-Compliance", "Enneagram: 6-SO"]
+
+    - id: SOC-035
+      name: "Social Independence"
+      description: "Tendency to maintain personal stance regardless of social pressure"
+      indicators:
+        - "Holds unpopular opinions comfortably"
+        - "Acts according to personal values despite group pressure"
+        - "Comfortable being the contrarian"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Agreeableness (inverse)", "Enneagram: 5/8"]
+
+    - id: SOC-036
+      name: "Feedback Delivery Skill"
+      description: "Ability to provide constructive criticism that is received well"
+      indicators:
+        - "Balances honesty with sensitivity"
+        - "Focuses on behavior rather than character"
+        - "Provides specific, actionable suggestions"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Relationship Management", "MBTI: Fe/Te"]
+
+    - id: SOC-037
+      name: "Feedback Reception Openness"
+      description: "Ability to receive criticism without defensiveness and use it constructively"
+      indicators:
+        - "Listens to feedback without interrupting or justifying"
+        - "Asks clarifying questions about feedback"
+        - "Implements feedback demonstrably"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Values", "EQ: Self-Management"]
+
+  # ===========================================================================
+  # BEHAVIORAL — Habitos, rotinas, padroes de acao
+  # ===========================================================================
+  behavioral:
+
+    # ---- Big Five: Conscientiousness facets ----
+    - id: BEH-001
+      name: "Competence Self-Efficacy"
+      description: "Belief in one's own ability to handle challenges and produce quality work"
+      indicators:
+        - "Takes on difficult tasks with confidence"
+        - "Recovers quickly from mistakes"
+        - "Expects to succeed in new endeavors"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Competence", "Enneagram: 3"]
+
+    - id: BEH-002
+      name: "Orderliness"
+      description: "Need for organization, structure, and systematic arrangement in environment and work"
+      indicators:
+        - "Maintains organized physical and digital spaces"
+        - "Creates systems and processes for recurring tasks"
+        - "Uncomfortable with clutter and disorganization"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Order", "MBTI: Si/Te"]
+
+    - id: BEH-003
+      name: "Dutifulness"
+      description: "Degree to which obligations and commitments are honored reliably"
+      indicators:
+        - "Follows through on promises without reminders"
+        - "Feels uncomfortable breaking commitments"
+        - "Prioritizes obligations over personal preferences"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Dutifulness", "Enneagram: 1/6"]
+
+    - id: BEH-004
+      name: "Achievement Striving"
+      description: "Consistent effort toward accomplishing goals and maintaining high standards"
+      indicators:
+        - "Works beyond minimum requirements"
+        - "Sets challenging personal goals"
+        - "Persistent in face of obstacles"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Achievement Striving", "Enneagram: 3"]
+
+    - id: BEH-005
+      name: "Self-Discipline"
+      description: "Ability to stay focused and resist distractions while working toward goals"
+      indicators:
+        - "Completes tasks before moving to new ones"
+        - "Resists temptation and short-term gratification"
+        - "Maintains consistent work habits"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Self-Discipline", "Enneagram: 1"]
+
+    - id: BEH-006
+      name: "Deliberation"
+      description: "Tendency to think carefully before acting and plan ahead"
+      indicators:
+        - "Considers consequences before making decisions"
+        - "Plans projects thoroughly before starting"
+        - "Rarely acts impulsively"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Deliberation", "MBTI: Ni/Si"]
+
+    # ---- Risk and Change Patterns ----
+    - id: BEH-007
+      name: "Risk Tolerance"
+      description: "Willingness to accept uncertainty and potential losses for potential gains"
+      indicators:
+        - "Makes bets with significant upside and downside"
+        - "Comfortable with calculated uncertainty"
+        - "Doesn't need guarantees before acting"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Actions", "Enneagram: 7/8"]
+
+    - id: BEH-008
+      name: "Perfectionism Tendency"
+      description: "Drive to achieve flawless results and difficulty accepting imperfection"
+      indicators:
+        - "Revises work multiple times before sharing"
+        - "Spends disproportionate time on final 5% of quality"
+        - "Difficulty shipping 'good enough' work"
+      strength_scale: "0-100"
+      related_systems: ["Enneagram: 1", "Big Five: Conscientiousness-Achievement Striving"]
+
+    - id: BEH-009
+      name: "Novelty Seeking"
+      description: "Tendency to seek new experiences, ideas, and approaches"
+      indicators:
+        - "Regularly explores new tools and methods"
+        - "Gets bored with routine quickly"
+        - "Early adopter of trends and technologies"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Actions", "Enneagram: 7", "MBTI: Ne"]
+
+    - id: BEH-010
+      name: "Routine Preference"
+      description: "Tendency to create and adhere to established patterns and habits"
+      indicators:
+        - "Has consistent daily routines"
+        - "Prefers familiar methods over new ones"
+        - "Finds comfort and efficiency in repetition"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness (inverse)", "MBTI: Si"]
+
+    - id: BEH-011
+      name: "Adaptability"
+      description: "Speed and ease of adjusting behavior when circumstances change"
+      indicators:
+        - "Pivots strategy quickly when plans change"
+        - "Maintains effectiveness in unfamiliar situations"
+        - "Doesn't cling to original plan when context shifts"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Actions", "MBTI: Ne/Se"]
+
+    # ---- Work and Productivity Patterns ----
+    - id: BEH-012
+      name: "Proactive Initiative"
+      description: "Tendency to act before being asked and anticipate needs before they arise"
+      indicators:
+        - "Identifies and addresses problems before they're assigned"
+        - "Suggests improvements without being prompted"
+        - "Starts projects independently"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Dominance", "Big Five: Conscientiousness-Achievement Striving"]
+
+    - id: BEH-013
+      name: "Procrastination Tendency"
+      description: "Pattern of delaying tasks despite knowing the delay is counterproductive"
+      indicators:
+        - "Leaves tasks until deadline pressure builds"
+        - "Chooses easier tasks over important ones"
+        - "Starts but doesn't finish projects"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness (inverse)", "Enneagram: 7/9"]
+
+    - id: BEH-014
+      name: "Deep Work Capacity"
+      description: "Ability to sustain focused, uninterrupted concentration on cognitively demanding tasks"
+      indicators:
+        - "Can work for 2+ hours without checking phone/email"
+        - "Produces highest-quality work in sustained focus sessions"
+        - "Actively protects focus time from interruptions"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ni/Ti", "Big Five: Conscientiousness-Self-Discipline"]
+
+    - id: BEH-015
+      name: "Multitasking Preference"
+      description: "Tendency to juggle multiple tasks simultaneously versus sequential processing"
+      indicators:
+        - "Switches between tasks frequently"
+        - "Keeps multiple projects open simultaneously"
+        - "Prefers variety over deep focus"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ne/Se", "Big Five: Extraversion-Activity"]
+
+    - id: BEH-016
+      name: "Deadline Responsiveness"
+      description: "Degree to which external deadlines drive action and productivity"
+      indicators:
+        - "Productivity spikes as deadlines approach"
+        - "External accountability improves output"
+        - "Without deadlines, tasks drift indefinitely"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Self-Discipline (inverse)", "Enneagram: 7"]
+
+    - id: BEH-017
+      name: "Delegation Willingness"
+      description: "Readiness to entrust tasks to others rather than doing everything personally"
+      indicators:
+        - "Assigns tasks based on others' strengths"
+        - "Doesn't redo others' work unless necessary"
+        - "Trusts team members to deliver"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Dominance/Steadiness", "Enneagram: 8/1 (inverse)"]
+
+    - id: BEH-018
+      name: "Decision Speed"
+      description: "Pace at which decisions are made from identification to commitment"
+      indicators:
+        - "Makes most decisions quickly"
+        - "Avoids analysis paralysis"
+        - "Comfortable with 80/20 information threshold"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Dominance", "Decision Style: Directive"]
+
+    - id: BEH-019
+      name: "Follow-Through Consistency"
+      description: "Reliability of completing what was started and delivering on commitments"
+      indicators:
+        - "Rarely abandons projects midway"
+        - "Tracks open commitments actively"
+        - "Others trust their word completely"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Dutifulness", "Enneagram: 1"]
+
+    - id: BEH-020
+      name: "Energy Management"
+      description: "Awareness and strategic management of personal energy levels throughout the day"
+      indicators:
+        - "Schedules demanding tasks during peak energy"
+        - "Takes strategic breaks to maintain productivity"
+        - "Recognizes burnout signals early"
+      strength_scale: "0-100"
+      related_systems: ["Meta: Self-Awareness", "Big Five: Conscientiousness-Self-Discipline"]
+
+    - id: BEH-021
+      name: "Scope Management"
+      description: "Ability to define and maintain appropriate boundaries for projects and commitments"
+      indicators:
+        - "Resists scope creep effectively"
+        - "Says no to requests outside defined boundaries"
+        - "Delivers on original scope before expanding"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Deliberation", "Enneagram: 1/3"]
+
+    - id: BEH-022
+      name: "Iteration Preference"
+      description: "Tendency to ship quickly and improve through cycles versus perfect before shipping"
+      indicators:
+        - "Prefers MVP over comprehensive first release"
+        - "Values feedback loops over upfront planning"
+        - "Comfortable showing rough drafts"
+      strength_scale: "0-100"
+      related_systems: ["Agile Mindset", "Enneagram: 7", "MBTI: Ne"]
+
+    - id: BEH-023
+      name: "Documentation Habit"
+      description: "Tendency to record decisions, processes, and knowledge in written form"
+      indicators:
+        - "Creates written records of meetings and decisions"
+        - "Maintains personal knowledge management systems"
+        - "Writes things down before they're forgotten"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Order", "MBTI: Si"]
+
+    - id: BEH-024
+      name: "Physical Activity Integration"
+      description: "Degree to which movement and physical activity are part of daily routine"
+      indicators:
+        - "Exercises regularly as part of routine"
+        - "Uses movement to process thinking"
+        - "Notices decline in performance without physical activity"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Se", "Big Five: Conscientiousness-Self-Discipline"]
+
+    - id: BEH-025
+      name: "Morning Routine Structure"
+      description: "Degree to which the start of day follows a deliberate, structured pattern"
+      indicators:
+        - "Has a consistent morning routine"
+        - "Front-loads important activities in the morning"
+        - "Morning habits set the tone for the entire day"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Order", "BEH-010: Routine Preference"]
+
+    - id: BEH-026
+      name: "Digital Minimalism"
+      description: "Intentional reduction of digital consumption and distraction"
+      indicators:
+        - "Limits social media and notification usage"
+        - "Uses technology purposefully rather than habitually"
+        - "Chooses analog alternatives when appropriate"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Self-Discipline", "Meta: Attention Management"]
+
+    - id: BEH-027
+      name: "Financial Discipline"
+      description: "Consistency in managing money according to plan rather than impulse"
+      indicators:
+        - "Follows a budget or financial plan"
+        - "Saves and invests regularly"
+        - "Delays gratification for financial goals"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Self-Discipline", "MOT-007: Security Value"]
+
+    - id: BEH-028
+      name: "Learning by Doing Preference"
+      description: "Tendency to learn through action and experimentation rather than study"
+      indicators:
+        - "Starts building before finishing the tutorial"
+        - "Learns from mistakes more than from instruction"
+        - "Prefers hands-on workshops over lectures"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Se", "Big Five: Openness-Actions"]
+
+    - id: BEH-029
+      name: "Learning by Study Preference"
+      description: "Tendency to learn through reading, research, and theoretical understanding"
+      indicators:
+        - "Reads extensively before attempting something new"
+        - "Prefers understanding theory before practice"
+        - "Takes courses and reads books as primary learning mode"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ni/Ti", "Big Five: Openness-Ideas"]
+
+    - id: BEH-030
+      name: "Batch Processing Tendency"
+      description: "Preference for grouping similar tasks together rather than handling them individually"
+      indicators:
+        - "Handles all emails at set times rather than as they arrive"
+        - "Groups similar tasks into dedicated time blocks"
+        - "Reduces context-switching by clustering activities"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Order", "BEH-014: Deep Work Capacity"]
+
+    - id: BEH-031
+      name: "Simplification Drive"
+      description: "Tendency to reduce complexity and find the simplest effective solution"
+      indicators:
+        - "Eliminates unnecessary steps and features"
+        - "Asks 'what can we remove?' rather than 'what can we add?'"
+        - "Values elegance and minimalism in solutions"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ni/Te", "Enneagram: 5"]
+
+    - id: BEH-032
+      name: "Automation Inclination"
+      description: "Tendency to automate repetitive tasks rather than doing them manually"
+      indicators:
+        - "Creates templates and scripts for recurring work"
+        - "Invests time upfront to save time later"
+        - "Seeks tools and systems to reduce manual effort"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Te/Ti", "Big Five: Openness-Ideas"]
+
+    - id: BEH-033
+      name: "Crisis Response Pattern"
+      description: "Behavioral pattern when facing urgent, high-stakes situations"
+      indicators:
+        - "Stays calm or becomes energized under pressure"
+        - "Prioritizes effectively during emergencies"
+        - "Makes clear decisions quickly in crisis"
+      strength_scale: "0-100"
+      related_systems: ["DISC: Dominance", "Enneagram: 8", "Big Five: Neuroticism (inverse)"]
+
+    - id: BEH-034
+      name: "Habit Formation Speed"
+      description: "Speed and reliability of establishing new behavioral patterns"
+      indicators:
+        - "New routines become automatic quickly"
+        - "Maintains new habits beyond initial motivation"
+        - "Uses systems to support habit formation"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Self-Discipline", "MBTI: Si"]
+
+    - id: BEH-035
+      name: "Gratification Delay Capacity"
+      description: "Ability to forego immediate reward in favor of larger future benefit"
+      indicators:
+        - "Saves money rather than spending impulsively"
+        - "Invests time in long-term projects with no short-term payoff"
+        - "Chooses difficult-but-rewarding over easy-but-shallow"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Deliberation", "Enneagram: 1"]
+
+    - id: BEH-036
+      name: "Context Switching Cost"
+      description: "Impact on productivity and energy when shifting between different types of work"
+      indicators:
+        - "Needs ramp-up time after switching tasks"
+        - "Quality drops when juggling too many contexts"
+        - "Prefers dedicated focus blocks over fragmented days"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ni/Ti (high cost)", "MBTI: Ne/Se (low cost)"]
+
+    - id: BEH-037
+      name: "Tool Adoption Pattern"
+      description: "Approach to adopting new tools, systems, and technologies"
+      indicators:
+        - "Early adopter who tries new tools eagerly"
+        - "Or: waits until tools are proven before adopting"
+        - "Evaluates tools against current workflow needs"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Actions", "BEH-009: Novelty Seeking"]
+
+    - id: BEH-038
+      name: "Rest and Recovery Pattern"
+      description: "Approach to rest, recovery, and work-life balance"
+      indicators:
+        - "Takes breaks proactively before burnout"
+        - "Has clear boundaries between work and rest"
+        - "Quality of rest actually restores energy"
+      strength_scale: "0-100"
+      related_systems: ["Meta: Self-Awareness", "BEH-020: Energy Management"]
+
+  # ===========================================================================
+  # META — Auto-percepcao, metacognicao, auto-regulacao
+  # ===========================================================================
+  meta:
+
+    # ---- Self-Awareness ----
+    - id: MET-001
+      name: "Self-Assessment Accuracy"
+      description: "Ability to accurately evaluate own strengths, weaknesses, and current state"
+      indicators:
+        - "Self-ratings match external assessments"
+        - "Identifies own blind spots proactively"
+        - "Knows where personal competence ends"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Self-Awareness", "COG-016: Dunning-Kruger Awareness"]
+
+    - id: MET-002
+      name: "Identity Coherence"
+      description: "Degree to which one has a stable, integrated sense of self across contexts"
+      indicators:
+        - "Consistent values and behavior across different settings"
+        - "Clear sense of who they are and what they stand for"
+        - "Not easily destabilized by external pressure or criticism"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Fi", "Enneagram: 4 (high)", "Enneagram: 3 (variable)"]
+
+    - id: MET-003
+      name: "Self-Narrative Awareness"
+      description: "Consciousness of the stories one tells about oneself and their accuracy"
+      indicators:
+        - "Recognizes when telling a self-serving story"
+        - "Questions own narratives about past events"
+        - "Distinguishes between memory and constructed narrative"
+      strength_scale: "0-100"
+      related_systems: ["Meta: Self-Assessment", "COG-019: Hindsight Bias"]
+
+    - id: MET-004
+      name: "Values Clarity"
+      description: "Degree to which personal values are explicitly known and consciously prioritized"
+      indicators:
+        - "Can articulate top 5 values without hesitation"
+        - "Decisions consistently align with stated values"
+        - "Notices when actions conflict with values"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Fi", "Enneagram: 1", "MOT-006: Purpose Alignment"]
+
+    - id: MET-005
+      name: "Strengths Awareness"
+      description: "Knowledge of personal natural strengths and how to leverage them"
+      indicators:
+        - "Can name specific strengths with examples"
+        - "Positions self in roles that use strengths"
+        - "Delegates weaknesses rather than trying to fix all of them"
+      strength_scale: "0-100"
+      related_systems: ["Meta: Self-Assessment", "BEH-001: Competence Self-Efficacy"]
+
+    - id: MET-006
+      name: "Shadow Awareness"
+      description: "Recognition of one's own dark side, defense mechanisms, and unconscious patterns"
+      indicators:
+        - "Acknowledges less admirable motivations in self"
+        - "Recognizes projection and transference patterns"
+        - "Integrates rather than represses difficult truths about self"
+      strength_scale: "0-100"
+      related_systems: ["Jungian: Shadow", "Enneagram: Integration/Disintegration"]
+
+    # ---- Metacognition ----
+    - id: MET-007
+      name: "Thinking About Thinking"
+      description: "Awareness of own thought processes and ability to observe them objectively"
+      indicators:
+        - "Notices when using a mental shortcut or heuristic"
+        - "Can describe own reasoning process step by step"
+        - "Catches cognitive biases in real time"
+      strength_scale: "0-100"
+      related_systems: ["Metacognition", "MBTI: Ti/Ni"]
+
+    - id: MET-008
+      name: "Learning Style Awareness"
+      description: "Knowledge of how one learns best and ability to optimize learning accordingly"
+      indicators:
+        - "Knows whether visual, auditory, or kinesthetic works best"
+        - "Adjusts study methods based on material type"
+        - "Recognizes when a learning approach isn't working"
+      strength_scale: "0-100"
+      related_systems: ["Metacognition", "BEH-028/BEH-029: Learning Preferences"]
+
+    - id: MET-009
+      name: "Cognitive Load Monitoring"
+      description: "Awareness of current mental capacity and ability to manage it"
+      indicators:
+        - "Recognizes when mental capacity is depleted"
+        - "Simplifies tasks when cognitive load is high"
+        - "Schedules demanding work during peak mental capacity"
+      strength_scale: "0-100"
+      related_systems: ["Metacognition", "BEH-020: Energy Management"]
+
+    - id: MET-010
+      name: "Belief Updating Speed"
+      description: "Speed and willingness to update beliefs when confronted with new evidence"
+      indicators:
+        - "Changes mind visibly when presented with good evidence"
+        - "Doesn't defend positions for ego reasons"
+        - "Actively seeks disconfirming information"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Values", "COG-006: Values Flexibility"]
+
+    - id: MET-011
+      name: "Pattern Recognition in Self"
+      description: "Ability to identify recurring patterns in own behavior, thought, and emotion"
+      indicators:
+        - "Notices when repeating past mistakes"
+        - "Identifies personal triggers and cycles"
+        - "Tracks behavioral patterns over time"
+      strength_scale: "0-100"
+      related_systems: ["Metacognition", "MBTI: Ni/Si"]
+
+    # ---- Self-Regulation ----
+    - id: MET-012
+      name: "Attention Management"
+      description: "Ability to direct and sustain attention where intended despite distractions"
+      indicators:
+        - "Controls what receives attention deliberately"
+        - "Redirects attention when it wanders"
+        - "Resists notification and distraction pull"
+      strength_scale: "0-100"
+      related_systems: ["BEH-014: Deep Work Capacity", "Big Five: Conscientiousness-Self-Discipline"]
+
+    - id: MET-013
+      name: "Impulse Control"
+      description: "Ability to pause between stimulus and response and choose deliberately"
+      indicators:
+        - "Thinks before speaking in heated moments"
+        - "Resists urge to react immediately to provocation"
+        - "Creates space between feeling and action"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Self-Management", "Big Five: Neuroticism-Impulsiveness (inverse)"]
+
+    - id: MET-014
+      name: "Goal Setting Effectiveness"
+      description: "Ability to set clear, motivating, achievable goals and maintain focus on them"
+      indicators:
+        - "Sets specific, measurable goals"
+        - "Breaks large goals into actionable milestones"
+        - "Regularly reviews and adjusts goals"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Achievement Striving", "MOT-001: Achievement Drive"]
+
+    - id: MET-015
+      name: "Self-Compassion"
+      description: "Ability to treat oneself with kindness during failure and difficulty"
+      indicators:
+        - "Speaks to self as they would to a friend"
+        - "Doesn't catastrophize personal mistakes"
+        - "Maintains self-worth during performance dips"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Self-Management", "Enneagram: 1 (inverse when low)"]
+
+    - id: MET-016
+      name: "Growth Mindset Orientation"
+      description: "Belief that abilities can be developed through dedication and hard work"
+      indicators:
+        - "Views challenges as opportunities to grow"
+        - "Persists in face of initial failure"
+        - "Believes effort leads to mastery"
+      strength_scale: "0-100"
+      related_systems: ["Dweck: Growth Mindset", "MOT-005: Mastery Orientation"]
+
+    - id: MET-017
+      name: "Fixed Mindset Triggers"
+      description: "Situations that activate a belief that abilities are innate and unchangeable"
+      indicators:
+        - "Avoids challenges that might reveal incompetence"
+        - "Sees effort as sign of lack of talent"
+        - "Threatened by others' success in same domain"
+      strength_scale: "0-100"
+      related_systems: ["Dweck: Fixed Mindset", "Enneagram: 3/4"]
+
+    - id: MET-018
+      name: "Self-Sabotage Pattern Recognition"
+      description: "Awareness of ways one unconsciously undermines own success"
+      indicators:
+        - "Identifies self-sabotaging behaviors before or as they happen"
+        - "Recognizes patterns of creating obstacles for self"
+        - "Takes corrective action when self-sabotage is detected"
+      strength_scale: "0-100"
+      related_systems: ["Meta: Shadow Awareness", "MOT-049: Fear of Success"]
+
+    - id: MET-019
+      name: "Emotional Trigger Mapping"
+      description: "Knowledge of specific situations, words, or behaviors that trigger emotional reactions"
+      indicators:
+        - "Can name specific triggers and their origins"
+        - "Anticipates triggering situations and prepares"
+        - "Responds to triggers with decreasing reactivity over time"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Self-Awareness", "EMO-015: Emotional Self-Awareness"]
+
+    - id: MET-020
+      name: "Personal Operating System Awareness"
+      description: "Understanding of own peak performance conditions and how to create them"
+      indicators:
+        - "Knows optimal sleep, exercise, and nutrition requirements"
+        - "Understands personal energy rhythms"
+        - "Creates environments that support best performance"
+      strength_scale: "0-100"
+      related_systems: ["Meta: Self-Awareness", "BEH-020: Energy Management"]
+
+    - id: MET-021
+      name: "Bias Monitoring Habit"
+      description: "Ongoing practice of checking decisions for cognitive bias influence"
+      indicators:
+        - "Routinely asks 'what bias might be at play here?'"
+        - "Uses checklists or prompts to check for common biases"
+        - "Invites others to challenge potential blind spots"
+      strength_scale: "0-100"
+      related_systems: ["Metacognition", "COG-027: Survivorship Bias Awareness"]
+
+    - id: MET-022
+      name: "Perspective Taking"
+      description: "Ability to see situations from multiple viewpoints simultaneously"
+      indicators:
+        - "Considers how different stakeholders would view a situation"
+        - "Argues against own position as an exercise"
+        - "Understands without necessarily agreeing"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Fe/Ne", "Big Five: Agreeableness", "EQ: Social Awareness"]
+
+    - id: MET-023
+      name: "Meaning-Making Capacity"
+      description: "Ability to derive meaning and purpose from experiences, including difficult ones"
+      indicators:
+        - "Finds growth lessons in adversity"
+        - "Constructs coherent life narrative that includes setbacks"
+        - "Transforms suffering into wisdom"
+      strength_scale: "0-100"
+      related_systems: ["Frankl: Logotherapy", "Enneagram: 4/1", "MOT-006: Purpose Alignment"]
+
+    - id: MET-024
+      name: "Calibration Skill"
+      description: "Accuracy of predicting own future performance, time estimates, and outcomes"
+      indicators:
+        - "Time estimates are typically within 20% of actual"
+        - "Confidence levels match actual success rates"
+        - "Improves predictions over time through tracking"
+      strength_scale: "0-100"
+      related_systems: ["Metacognition", "COG-029: Planning Fallacy (inverse)"]
+
+    - id: MET-025
+      name: "Internal Locus of Control"
+      description: "Belief that outcomes are primarily determined by one's own actions and decisions"
+      indicators:
+        - "Takes responsibility for outcomes rather than blaming circumstances"
+        - "Focuses on what can be controlled"
+        - "Sees self as primary agent of change in own life"
+      strength_scale: "0-100"
+      related_systems: ["Rotter: Locus of Control", "Enneagram: 8/3"]
+
+    - id: MET-026
+      name: "External Locus Sensitivity"
+      description: "Degree to which external factors are perceived as controlling outcomes"
+      indicators:
+        - "Attributes success and failure to luck or circumstances"
+        - "Feels powerless to change unfavorable situations"
+        - "Waits for conditions to change rather than acting"
+      strength_scale: "0-100"
+      related_systems: ["Rotter: Locus of Control (external)", "Enneagram: 6/9"]
+
+    - id: MET-027
+      name: "Mindfulness Practice"
+      description: "Degree of present-moment awareness and non-judgmental observation"
+      indicators:
+        - "Notices thoughts without automatically acting on them"
+        - "Stays present rather than dwelling on past or future"
+        - "Observes emotions without being consumed by them"
+      strength_scale: "0-100"
+      related_systems: ["Mindfulness", "MBTI: Ni/Se"]
+
+    - id: MET-028
+      name: "Self-Monitoring Accuracy"
+      description: "Precision of tracking own behavior, mood, and performance in real time"
+      indicators:
+        - "Notices subtle shifts in own energy and mood"
+        - "Tracks habits and performance metrics"
+        - "Adjusts behavior based on self-monitoring data"
+      strength_scale: "0-100"
+      related_systems: ["Metacognition", "BEH-020: Energy Management"]
+
+    - id: MET-029
+      name: "Intentionality Level"
+      description: "Degree to which actions are deliberate and aligned with conscious purpose"
+      indicators:
+        - "Can explain the 'why' behind most daily actions"
+        - "Rarely operates on autopilot"
+        - "Aligns calendar and resources with stated priorities"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Conscientiousness-Deliberation", "MOT-006: Purpose Alignment"]
+
+    - id: MET-030
+      name: "Intellectual Humility"
+      description: "Recognition that one's knowledge is limited and may contain errors"
+      indicators:
+        - "Says 'I don't know' without discomfort"
+        - "Changes position when better evidence emerges"
+        - "Values being correct over appearing correct"
+      strength_scale: "0-100"
+      related_systems: ["Big Five: Openness-Values", "COG-016: Dunning-Kruger Awareness"]
+
+    - id: MET-031
+      name: "Temporal Self-Awareness"
+      description: "Ability to connect with future self and make decisions accordingly"
+      indicators:
+        - "Makes choices that benefit future self over present comfort"
+        - "Vivid sense of who they are becoming"
+        - "Plans with long-term self in mind"
+      strength_scale: "0-100"
+      related_systems: ["BEH-035: Gratification Delay", "MBTI: Ni"]
+
+    - id: MET-032
+      name: "Adaptive Perfectionism"
+      description: "Ability to calibrate quality standards appropriately to context"
+      indicators:
+        - "Applies high standards where they matter most"
+        - "Deliberately accepts 'good enough' for low-stakes tasks"
+        - "Distinguishes between essential and optional quality"
+      strength_scale: "0-100"
+      related_systems: ["BEH-008: Perfectionism (modulated)", "BEH-021: Scope Management"]
+
+    - id: MET-033
+      name: "Psychological Flexibility"
+      description: "Ability to adapt thoughts and behavior to serve values and goals in changing contexts"
+      indicators:
+        - "Holds thoughts lightly rather than as absolute truths"
+        - "Adjusts approach while maintaining core values"
+        - "Tolerates discomfort in service of valued direction"
+      strength_scale: "0-100"
+      related_systems: ["ACT: Psychological Flexibility", "Big Five: Openness"]
+
+    - id: MET-034
+      name: "Emotional Intelligence Integration"
+      description: "Unified application of all EQ components in real-world situations"
+      indicators:
+        - "Seamlessly reads, manages, and leverages emotions in context"
+        - "Emotional responses serve rather than undermine goals"
+        - "Others experience them as emotionally mature and balanced"
+      strength_scale: "0-100"
+      related_systems: ["EQ: Overall", "MBTI: Fe/Fi", "Big Five: Agreeableness"]
+
+    - id: MET-035
+      name: "Personal Philosophy Articulation"
+      description: "Ability to articulate a coherent personal philosophy or worldview"
+      indicators:
+        - "Can explain own core beliefs and principles clearly"
+        - "Philosophy guides decision-making consistently"
+        - "Philosophy evolves thoughtfully with new experience"
+      strength_scale: "0-100"
+      related_systems: ["MBTI: Ni/Fi", "Enneagram: 1/5"]

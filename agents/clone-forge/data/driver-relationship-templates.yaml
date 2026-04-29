@@ -1,0 +1,242 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Driver Relationship Templates
+# ═══════════════════════════════════════════════════════════════════════════════
+# Define os tipos de relacoes entre drivers psicologicos e templates
+# para deteccao automatica de padroes relacionais.
+# Baseado no pipeline do Alan: 669 relacoes catalogadas.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+version: "1.0.0"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# TIPOS DE RELACAO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+relationship_types:
+
+  AMPLIFIES:
+    description: "Driver A aumenta a forca do Driver B"
+    direction: unidirectional
+    symbol: "→+"
+    example: "Achievement Drive AMPLIFIES Perfectionism"
+    detection_rule: >
+      Se driver A e driver B coexistem com forca >= 60 E
+      os MIUs de evidencia se sobrepoem, A provavelmente amplifica B.
+
+  CONFLICTS:
+    description: "Driver A e Driver B criam tensao interna"
+    direction: bidirectional
+    symbol: "↔!"
+    example: "Need for Control CONFLICTS Need for Freedom"
+    detection_rule: >
+      Se os MIUs de evidencia de A e B se contradizem OU
+      a pessoa expressa frustracão quando ambos sao ativados.
+    note: "Conflitos sao FEATURES, nao bugs — geram paradoxos produtivos"
+
+  CONDITIONAL:
+    description: "Driver A so ativa quando condicao C e verdadeira"
+    direction: conditional
+    symbol: "→?"
+    example: "Empathy activates ONLY in 1-on-1 contexts (not public)"
+    detection_rule: >
+      Se driver A aparece em MIUs de contextos especificos mas
+      esta AUSENTE em outros contextos similares.
+
+  COMPENSATES:
+    description: "Driver A compensa uma fraqueza criada por Driver B"
+    direction: unidirectional
+    symbol: "→~"
+    example: "Systems Thinking COMPENSATES Impulsivity"
+    detection_rule: >
+      Se driver A e forte E driver B e forte E os efeitos
+      negativos esperados de B nao se manifestam.
+
+  SYNERGIZES:
+    description: "Drivers A e B juntos criam efeito maior que a soma"
+    direction: bidirectional
+    symbol: "↔*"
+    example: "Storytelling + Empathy = Magnetic Communication"
+    detection_rule: >
+      Se a combinacao A+B produz um comportamento emergente
+      nao explicado por nenhum dos dois isoladamente.
+
+  MASKS:
+    description: "Driver A esconde a manifestacao do Driver B"
+    direction: unidirectional
+    symbol: "→/"
+    example: "Confidence MASKS Insecurity"
+    detection_rule: >
+      Se driver B aparece em fontes Tier 0 (entrevista profunda)
+      mas NAO em fontes publicas, A pode estar mascarando B.
+
+  TRIGGERS:
+    description: "Driver A ativa Driver B em situacoes especificas"
+    direction: unidirectional
+    symbol: "→!"
+    example: "Perceived Injustice TRIGGERS Assertiveness"
+    detection_rule: >
+      Se driver B so aparece APOS mencao de situacoes
+      associadas ao driver A.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# TEMPLATES DE PADROES COMUNS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+common_patterns:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PARADOXOS PRODUTIVOS (mais importantes para clonagem)
+  # ─────────────────────────────────────────────────────────────────────────────
+
+  productive_paradoxes:
+    description: >
+      Tensoes internas que a pessoa NAO resolve — usa como feature.
+      Essenciais para autenticidade do clone.
+
+    templates:
+      - name: "Direto mas Empatico"
+        driver_a: "Directness"
+        driver_b: "Empathy"
+        relationship: CONFLICTS
+        resolution: "Contextual — direto no diagnostico, empatico no acolhimento"
+        frequency: "Muito comum em lideranca"
+
+      - name: "Confiante mas Humilde"
+        driver_a: "Self-Confidence"
+        driver_b: "Intellectual Humility"
+        relationship: CONFLICTS
+        resolution: "Confiante nas convicoes, humilde diante de evidencia contraria"
+        frequency: "Comum em experts maduros"
+
+      - name: "Estruturado mas Flexivel"
+        driver_a: "Need for Structure"
+        driver_b: "Adaptability"
+        relationship: CONFLICTS
+        resolution: "Estrutura como base, flexibilidade na execucao"
+        frequency: "Comum em empreendedores"
+
+      - name: "Ambicioso mas Presente"
+        driver_a: "Achievement Drive"
+        driver_b: "Mindfulness"
+        relationship: CONFLICTS
+        resolution: "Trabalha com intensidade mas nao sacrifica o momento"
+        frequency: "Raro — indica maturidade"
+
+      - name: "Independente mas Colaborativo"
+        driver_a: "Autonomy Need"
+        driver_b: "Collaboration Preference"
+        relationship: CONFLICTS
+        resolution: "Decide sozinho, implementa com outros"
+        frequency: "Comum em OPB (One Person Business)"
+
+      - name: "Perfeccionista mas Pragmatico"
+        driver_a: "Perfectionism"
+        driver_b: "Pragmatism"
+        relationship: CONFLICTS
+        resolution: "Perfeccionista no core, pragmatico no resto"
+        frequency: "Comum em criadores de conteudo"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # CLUSTERS DE AMPLIFICACAO
+  # ─────────────────────────────────────────────────────────────────────────────
+
+  amplification_clusters:
+    description: "Grupos de drivers que se amplificam mutuamente"
+
+    templates:
+      - name: "Motor de Impacto"
+        drivers: ["Purpose Drive", "Achievement Motivation", "Teaching Instinct"]
+        pattern: "SYNERGIZES"
+        emergent_behavior: "Pessoa que ensina com paixao e produz resultados tangiveis"
+
+      - name: "Motor Analitico"
+        drivers: ["Analytical Thinking", "Pattern Recognition", "Systems Thinking"]
+        pattern: "AMPLIFIES (chain)"
+        emergent_behavior: "Capacidade de ver o todo e os detalhes simultaneamente"
+
+      - name: "Motor de Influencia"
+        drivers: ["Storytelling Instinct", "Empathy", "Charisma"]
+        pattern: "SYNERGIZES"
+        emergent_behavior: "Comunicacao magnetica que move pessoas"
+
+      - name: "Motor de Execucao"
+        drivers: ["Action Orientation", "Discipline", "Risk Tolerance"]
+        pattern: "AMPLIFIES (chain)"
+        emergent_behavior: "Executa rapido sem paralisia por analise"
+
+      - name: "Motor de Inovacao"
+        drivers: ["Curiosity", "Divergent Thinking", "Comfort with Ambiguity"]
+        pattern: "SYNERGIZES"
+        emergent_behavior: "Gera ideias originais em cenarios incertos"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PADROES DE COMPENSACAO
+  # ─────────────────────────────────────────────────────────────────────────────
+
+  compensation_patterns:
+    description: "Drivers que compensam fraquezas sistematicamente"
+
+    templates:
+      - name: "Frameworks compensam Impulsividade"
+        weak: "Low Impulse Control"
+        compensator: "Systems Thinking"
+        mechanism: "Cria frameworks que forcam pausa antes de agir"
+
+      - name: "Delegacao compensa Perfeccionismo"
+        weak: "Perfectionism (excessive)"
+        compensator: "Trust in Others"
+        mechanism: "Aceita 80% de outros em areas nao-core"
+
+      - name: "Humor compensa Intensidade"
+        weak: "Emotional Intensity"
+        compensator: "Humor as Release Valve"
+        mechanism: "Usa humor pra aliviar tensao sem perder profundidade"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS DE DETECCAO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+detection_rules:
+
+  minimum_evidence:
+    description: "Minimo de MIUs para estabelecer uma relacao"
+    for_amplifies: 3
+    for_conflicts: 2
+    for_conditional: 2
+    for_compensates: 3
+    for_synergizes: 4
+    for_masks: 2
+    for_triggers: 2
+
+  confidence_levels:
+    high:
+      range: [0.8, 1.0]
+      requirement: "Pessoa articula a relacao explicitamente"
+    medium:
+      range: [0.5, 0.79]
+      requirement: "Padrao claro nos MIUs mas nao articulado"
+    low:
+      range: [0.3, 0.49]
+      requirement: "Inferencia baseada em comportamento — precisa validacao"
+
+  max_relationships_per_driver: 8
+  max_total_relationships: 100
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# OUTPUT FORMAT
+# ═══════════════════════════════════════════════════════════════════════════════
+
+output_format:
+  file: "04-drivers/driver-relationships.yaml"
+  structure:
+    relationships:
+      - id: "REL-{seq:3}"
+        type: "AMPLIFIES|CONFLICTS|CONDITIONAL|COMPENSATES|SYNERGIZES|MASKS|TRIGGERS"
+        driver_a: "{driver_id}"
+        driver_b: "{driver_id}"
+        direction: "A→B | A↔B | A→B if C"
+        condition: "null | contexto especifico"
+        strength: 0.0-1.0
+        confidence: 0.0-1.0
+        evidence_mius: ["MIU-XXXX", "MIU-XXXX"]
+        note: "Observacao do analista"

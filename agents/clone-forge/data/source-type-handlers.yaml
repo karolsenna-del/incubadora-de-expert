@@ -1,0 +1,282 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Source Type Handlers
+# ═══════════════════════════════════════════════════════════════════════════════
+# Define como lidar com cada tipo de fonte de conteudo.
+# Usado pela Fase 0 (Ingestao) e Fase 1 (Coleta).
+# ═══════════════════════════════════════════════════════════════════════════════
+
+version: "1.0.0"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# HANDLERS POR TIPO DE FONTE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+handlers:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # VIDEO
+  # ─────────────────────────────────────────────────────────────────────────────
+  video:
+    extensions: [mp4, mov, avi, mkv, webm]
+    processing:
+      step_1: "Extrair audio do video"
+      step_2: "Transcrever audio via Whisper (ou servico equivalente)"
+      step_3: "Normalizar transcricao para markdown"
+      step_4: "Salvar em 01-sources/transcripts/{source_id}.md"
+    tools:
+      preferred: "whisper (local ou API)"
+      fallback: "Pedir ao usuario para transcrever manualmente"
+    metadata_to_extract:
+      - duration_seconds
+      - language
+      - speakers (se detectaveis)
+      - title
+    tier_default: 2
+    tier_upgrade_if: "Entrevista longa ou Q&A espontaneo → Tier 1"
+    notes: "Video pesado — avisar usuario sobre tempo de processamento"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # AUDIO
+  # ─────────────────────────────────────────────────────────────────────────────
+  audio:
+    extensions: [mp3, wav, m4a, ogg, flac, aac]
+    processing:
+      step_1: "Transcrever audio via Whisper"
+      step_2: "Normalizar transcricao para markdown"
+      step_3: "Salvar em 01-sources/transcripts/{source_id}.md"
+    tools:
+      preferred: "whisper (local ou API)"
+      fallback: "Pedir ao usuario para transcrever ou colar"
+    metadata_to_extract:
+      - duration_seconds
+      - language
+      - speakers
+    tier_default: 2
+    tier_upgrade_if: "Podcast como convidado ou mentoria gravada → Tier 1"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PDF
+  # ─────────────────────────────────────────────────────────────────────────────
+  pdf:
+    extensions: [pdf]
+    processing:
+      step_1: "Extrair texto do PDF"
+      step_2: "Preservar estrutura (headings, paragrafos, listas)"
+      step_3: "Normalizar para markdown"
+      step_4: "Salvar em 01-sources/raw/{source_id}.md"
+    tools:
+      preferred: "Read tool (Claude Code le PDFs nativamente)"
+      fallback: "pdftotext via bash"
+    metadata_to_extract:
+      - page_count
+      - title
+      - author
+    tier_default: 1
+    tier_upgrade_if: "Livro proprio ou material de curso → Tier 1"
+    notes: "PDFs grandes — processar por pagina, nao tudo de uma vez"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # DOCUMENTOS
+  # ─────────────────────────────────────────────────────────────────────────────
+  document:
+    extensions: [doc, docx, odt, rtf]
+    processing:
+      step_1: "Converter para texto puro"
+      step_2: "Normalizar para markdown"
+      step_3: "Salvar em 01-sources/raw/{source_id}.md"
+    tools:
+      preferred: "textutil (nativo macOS) ou pandoc"
+      fallback: "Pedir ao usuario para salvar como PDF ou TXT"
+    tier_default: 2
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # TEXTO PURO / MARKDOWN
+  # ─────────────────────────────────────────────────────────────────────────────
+  text:
+    extensions: [txt, md, markdown]
+    processing:
+      step_1: "Ler conteudo direto"
+      step_2: "Normalizar formatacao"
+      step_3: "Salvar em 01-sources/raw/{source_id}.md"
+    tools:
+      preferred: "Read tool"
+    tier_default: 2
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # YAML / JSON (dados estruturados)
+  # ─────────────────────────────────────────────────────────────────────────────
+  structured_data:
+    extensions: [yaml, yml, json]
+    processing:
+      step_1: "Ler conteudo direto"
+      step_2: "Extrair campos relevantes"
+      step_3: "Converter para formato narrativo se necessario"
+      step_4: "Salvar em 01-sources/raw/{source_id}.md"
+    tools:
+      preferred: "Read tool"
+    tier_default: 1
+    notes: "Assessments e profiles ja estruturados sao alta qualidade"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # YOUTUBE
+  # ─────────────────────────────────────────────────────────────────────────────
+  youtube:
+    input_format: "URL (https://youtube.com/... ou https://youtu.be/...)"
+    processing:
+      step_1: "Extrair transcript via MCP youtube-transcript ou API"
+      step_2: "Normalizar timestamps"
+      step_3: "Salvar em 01-sources/transcripts/{source_id}.md"
+    tools:
+      preferred: "mcp-youtube-transcript"
+      fallback_1: "yt-dlp para baixar + whisper para transcrever"
+      fallback_2: "Pedir ao usuario para colar a transcricao"
+    metadata_to_extract:
+      - title
+      - channel
+      - duration_seconds
+      - publish_date
+      - view_count
+    tier_default: 2
+    tier_upgrade_if: "Entrevista ou Q&A → Tier 1"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # REDES SOCIAIS
+  # ─────────────────────────────────────────────────────────────────────────────
+  social_media:
+    platforms: [instagram, twitter, linkedin, facebook, tiktok, threads]
+    processing:
+      step_1: "Coletar posts/stories/reels relevantes"
+      step_2: "Transcrever conteudo visual/audio se necessario"
+      step_3: "Normalizar para markdown"
+      step_4: "Salvar em 01-sources/raw/{source_id}.md"
+    tools:
+      preferred: "Apify actors (via MCP)"
+      fallback: "Usuario cola/captura manualmente"
+    metadata_to_extract:
+      - platform
+      - date
+      - engagement (likes, comments)
+      - content_type (post, story, reel, thread)
+    tier_default: 2
+    tier_upgrade_if: "Resposta a comentario/Q&A → Tier 1, Stories espontaneos → Tier 1"
+    notes: "Posts polidos sao Tier 2-3, respostas espontaneas sao Tier 1"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # EMAIL / MENSAGENS
+  # ─────────────────────────────────────────────────────────────────────────────
+  messages:
+    formats: [email, whatsapp, telegram, slack]
+    processing:
+      step_1: "Copiar/colar texto das mensagens"
+      step_2: "Anonimizar informacoes de terceiros"
+      step_3: "Normalizar para markdown"
+      step_4: "Salvar em 01-sources/raw/{source_id}.md"
+    tier_default: 1
+    notes: "Mensagens espontaneas sao excelentes fontes — voz real sem filtro"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # TEXTO COLADO (clipboard)
+  # ─────────────────────────────────────────────────────────────────────────────
+  pasted_text:
+    input_format: "Texto colado direto no chat"
+    processing:
+      step_1: "Receber texto do usuario"
+      step_2: "Identificar tipo de conteudo"
+      step_3: "Normalizar para markdown"
+      step_4: "Salvar em 01-sources/raw/{source_id}.md"
+    tier_default: 2
+    notes: "Pedir contexto: de onde veio, quando, por que"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # SKILL AIOS (formato especifico)
+  # ─────────────────────────────────────────────────────────────────────────────
+  aios_skill:
+    input_format: "Diretorio de skill AIOS (~/Downloads/minhas-skills/{skill}/)"
+    processing:
+      step_1: "Ler todos os arquivos da skill"
+      step_2: "Extrair persona, voice_dna, thinking_dna, commands"
+      step_3: "Classificar como Tier 1 (curado por humano)"
+      step_4: "Salvar em 01-sources/raw/{source_id}.md"
+    tier_default: 1
+    notes: "Skills AIOS ja sao pre-processadas — alta qualidade"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # ASSESSMENT RESULTS
+  # ─────────────────────────────────────────────────────────────────────────────
+  assessment:
+    input_format: "YAML de resultado de assessment (ex: Zona Genialidade)"
+    processing:
+      step_1: "Ler YAML de assessment"
+      step_2: "Extrair scores, perfis, recomendacoes"
+      step_3: "Marcar como 'aferido' (nao estimado)"
+      step_4: "Integrar direto no mapeamento psicometrico"
+    tier_default: 0
+    notes: "Assessment formal supera estimativa — prioridade maxima"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # ENTREVISTA PROFUNDA (gerada pela Fase 1.5)
+  # ─────────────────────────────────────────────────────────────────────────────
+  deep_interview:
+    input_format: "Respostas interativas do questionario de 6 blocos"
+    processing:
+      step_1: "Capturar respostas bloco a bloco"
+      step_2: "Salvar cada bloco em 01-sources/interview/bloco-N-{nome}.md"
+      step_3: "Classificar como Tier 0 (OURO MAXIMO)"
+    tier_default: 0
+    notes: "Voz direta da pessoa sem filtro — melhor fonte possivel"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# NORMALIZACAO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+normalization:
+  output_format: markdown
+  encoding: utf-8
+  max_file_size_mb: 10
+
+  header_template: |
+    ---
+    source_id: "{source_id}"
+    type: "{source_type}"
+    tier: {tier}
+    original_format: "{extension}"
+    ingestion_date: "{date}"
+    word_count: {count}
+    language: "{lang}"
+    metadata:
+      title: "{title}"
+      author: "{author}"
+      date: "{original_date}"
+    ---
+
+  naming_convention: "SRC-{seq:3}-{slug}.md"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# INVENTARIO DE FONTES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+inventory:
+  output_file: "01-sources/sources-inventory.yaml"
+  fields_per_source:
+    - source_id
+    - title
+    - type
+    - tier
+    - format_original
+    - path_normalized
+    - word_count
+    - language
+    - date_original
+    - date_ingested
+    - quality_score  # Curadoria 5 dimensoes
+    - notes
+
+  local_index:
+    output_file: "01-sources/local-sources-index.yaml"
+    description: "Indice de conteudo local transcrito/normalizado"
+    fields:
+      - source_id
+      - original_path
+      - normalized_path
+      - processing_method
+      - processing_status  # pending, completed, failed

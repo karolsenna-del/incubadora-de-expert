@@ -1,0 +1,21 @@
+# SYNAPSE Constitution Domain (L0)
+# Auto-generated from .auroq-core/constitution.md
+# DO NOT EDIT MANUALLY — re-run generate-constitution.js
+
+# Article I: Claude Code e o Centro de Comando (NON-NEGOTIABLE)
+CONSTITUTION_RULE_ART1_0=Claude Code e o Centro de Comando (NON-NEGOTIABLE)
+
+# Article II: Cada um faz o seu (NON-NEGOTIABLE)
+CONSTITUTION_RULE_ART2_0=Cada um faz o seu (NON-NEGOTIABLE)
+
+# Article III: Documentar = Investir (MUST)
+CONSTITUTION_RULE_ART3_0=Documentar = Investir (MUST)
+
+# Article IV: Nao inventar (MUST)
+CONSTITUTION_RULE_ART4_0=Nao inventar (MUST)
+
+# Article V: Qualidade com julgamento (MUST)
+CONSTITUTION_RULE_ART5_0=Qualidade com julgamento (MUST)
+
+# Article VI: Evolucao incremental (SHOULD)
+CONSTITUTION_RULE_ART6_0=Evolucao incremental (SHOULD)

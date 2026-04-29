@@ -1,0 +1,7 @@
+{
+  "squad": "clone-forge",
+  "version": "1.0.0",
+  "active_clones": {},
+  "last_updated": null,
+  "note": "Este arquivo rastreia o estado do pipeline por clone. Cada clone ativo tem uma entrada em active_clones com fase atual, timestamp e status."
+}

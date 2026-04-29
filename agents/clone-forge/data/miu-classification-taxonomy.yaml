@@ -1,0 +1,273 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# MIU Classification Taxonomy
+# ═══════════════════════════════════════════════════════════════════════════════
+# Define os tipos de MIU (Minimum Inference Unit), regras de classificacao,
+# criterios de validacao e rejeicao. Baseado no InnerLens do Alan.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+version: "1.0.0"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# O QUE E UM MIU
+# ═══════════════════════════════════════════════════════════════════════════════
+
+definition: >
+  MIU (Minimum Inference Unit) e a menor unidade semantica que carrega
+  significado autonomo sobre o pensamento, comportamento ou metodo de uma pessoa.
+  Cada MIU deve ser auto-contido, rastreavel a uma fonte e classificavel em
+  exatamente uma categoria primaria.
+
+principles:
+  - "Zero-inference: extrai o que ESTA la, nao infere o que PODERIA estar"
+  - "Auto-contido: cada MIU faz sentido sozinho, sem contexto externo"
+  - "Rastreavel: toda MIU tem fonte, localizacao e confianca"
+  - "Atomico: nao pode ser dividido sem perder significado"
+  - "Classificavel: encaixa em exatamente 1 categoria primaria"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CATEGORIAS PRIMARIAS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+categories:
+
+  BEHAVIORAL:
+    description: "Padroes de comportamento observaveis e recorrentes"
+    examples:
+      - "Sempre responde perguntas com outra pergunta antes de dar a resposta"
+      - "Rejeita reunioes sem pauta definida"
+      - "Usa humor auto-depreciativo para criar conexao"
+    feeds_into:
+      - "04-drivers/mind-drivers.yaml"
+      - "06-profile/operational.yaml"
+    weight_for_drivers: 0.9
+    weight_for_profile: 0.8
+
+  METHODOLOGICAL:
+    description: "Frameworks, processos, metodologias e formas estruturadas de resolver problemas"
+    examples:
+      - "Usa o metodo PMI: Proposito + Marketing + IA"
+      - "Sempre valida com 3 fontes antes de afirmar"
+      - "Sequencia: diagnostico → estrategia → execucao → medicao"
+    feeds_into:
+      - "03-dna/thinking-dna.yaml"
+      - "06-profile/mental-model.yaml"
+      - "06-profile/repertoire.yaml"
+    weight_for_drivers: 0.7
+    weight_for_profile: 1.0
+
+  STORYTELLING:
+    description: "Historias pessoais, anedotas, casos de uso, exemplos concretos"
+    examples:
+      - "Quando comecou o negocio, nao tinha nem site"
+      - "O caso da Lisiane: de R$3k pra R$30k em 6 meses"
+      - "A historia do dia que quase desistiu"
+    feeds_into:
+      - "03-dna/voice-dna.yaml"
+      - "06-profile/identity.yaml"
+      - "06-profile/repertoire.yaml"
+    weight_for_drivers: 0.6
+    weight_for_profile: 0.9
+
+  OPINION:
+    description: "Posicionamentos, crenças, valores, rejeicoes explicitas"
+    examples:
+      - "Infoproduto generico e o cancer do mercado digital"
+      - "IA sem proposito e so automacao — nao transforma"
+      - "Prefiro verdade a validacao vazia"
+    feeds_into:
+      - "04-drivers/mind-drivers.yaml"
+      - "06-profile/identity.yaml"
+      - "06-profile/contradictions.yaml"
+    weight_for_drivers: 1.0
+    weight_for_profile: 0.9
+
+  TECHNICAL:
+    description: "Conhecimento tecnico especifico, dados, metricas, ferramentas"
+    examples:
+      - "Taxa de conversao de webinar acima de 8% e excelente"
+      - "Usa Claude Max porque API no Claude Code e dinheiro jogado fora"
+      - "Estrutura de funil: conteudo → lead magnet → oferta low ticket → high ticket"
+    feeds_into:
+      - "06-profile/repertoire.yaml"
+      - "06-profile/operational.yaml"
+    weight_for_drivers: 0.4
+    weight_for_profile: 0.7
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SUB-CATEGORIAS (TAGS)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+tags:
+  # Identidade
+  - id: IDENTITY
+    applies_to: [BEHAVIORAL, OPINION, STORYTELLING]
+    description: "Relacionado a quem a pessoa E"
+
+  - id: VALUES
+    applies_to: [OPINION, BEHAVIORAL]
+    description: "Valores explicitos ou implicitos"
+
+  - id: REJECTION
+    applies_to: [OPINION, BEHAVIORAL]
+    description: "O que a pessoa rejeita/evita"
+
+  # Comunicacao
+  - id: VOICE
+    applies_to: [BEHAVIORAL, STORYTELLING]
+    description: "Padroes de comunicacao e linguagem"
+
+  - id: METAPHOR
+    applies_to: [STORYTELLING, OPINION]
+    description: "Metaforas e analogias usadas"
+
+  - id: HUMOR
+    applies_to: [BEHAVIORAL, STORYTELLING]
+    description: "Uso de humor (tipo, frequencia, contexto)"
+
+  # Pensamento
+  - id: HEURISTIC
+    applies_to: [METHODOLOGICAL, BEHAVIORAL]
+    description: "Regra de bolso para decisao rapida"
+
+  - id: FRAMEWORK
+    applies_to: [METHODOLOGICAL, TECHNICAL]
+    description: "Framework ou modelo estruturado"
+
+  - id: DECISION
+    applies_to: [METHODOLOGICAL, BEHAVIORAL]
+    description: "Como decide ou prioriza"
+
+  # Profundidade
+  - id: TACIT
+    applies_to: [BEHAVIORAL, METHODOLOGICAL, OPINION]
+    description: "Conhecimento tacito (faz mas nao articula)"
+
+  - id: CONTRADICTION
+    applies_to: [OPINION, BEHAVIORAL]
+    description: "Contradiz algo dito em outro contexto"
+
+  - id: OBSESSION
+    applies_to: [OPINION, BEHAVIORAL, STORYTELLING]
+    description: "Tema que aparece repetidamente"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS DE VALIDACAO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+validation:
+  # Um MIU valido DEVE ter todos estes campos
+  required_fields:
+    - id            # MIU-{seq:4} (ex: MIU-0001)
+    - content       # Texto extraido (20-300 palavras)
+    - category      # Uma das 5 categorias primarias
+    - source_id     # Referencia a fonte no sources-inventory
+    - location      # Pagina, minuto:segundo, paragrafo
+    - confidence    # 0.0-1.0
+
+  optional_fields:
+    - tags          # Lista de sub-categorias
+    - fragments     # Sub-unidades do MIU
+    - related_mius  # MIUs relacionados (reforco, contradicao)
+    - note          # Observacao do extrator
+
+  # Ranges de confianca
+  confidence_levels:
+    high:
+      range: [0.8, 1.0]
+      description: "Citacao direta ou comportamento explicito"
+      source_requirement: "Tier 0 ou Tier 1"
+    medium:
+      range: [0.5, 0.79]
+      description: "Inferencia minima baseada em padrao claro"
+      source_requirement: "Qualquer tier"
+    low:
+      range: [0.3, 0.49]
+      description: "Inferencia moderada, precisa triangulacao"
+      source_requirement: "Minimo 2 fontes concordantes"
+    reject:
+      range: [0.0, 0.29]
+      description: "Especulacao — vai pra mius-rejected.yaml"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS DE REJEICAO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+rejection_rules:
+  - rule: "GENERIC"
+    description: "Conteudo generico que qualquer pessoa diria"
+    example: "E importante ter foco"
+    action: "Rejeitar — nao captura unicidade"
+
+  - rule: "INFERENCE_HEAVY"
+    description: "Mais inferencia do que extracao"
+    example: "Provavelmente ele valoriza X porque disse Y"
+    action: "Rejeitar — viola principio zero-inference"
+
+  - rule: "DUPLICATE"
+    description: "Mesmo conteudo de MIU ja extraido"
+    action: "Rejeitar — marcar related_miu no original"
+
+  - rule: "CONTEXT_DEPENDENT"
+    description: "So faz sentido com contexto externo"
+    example: "Ele concordou com isso" (com o que?)
+    action: "Rejeitar ou expandir pra incluir contexto"
+
+  - rule: "TOO_BROAD"
+    description: "Cobre multiplos conceitos — precisa ser dividido"
+    action: "Dividir em 2+ MIUs atomicos"
+
+  - rule: "OUTDATED"
+    description: "Conteudo que a pessoa ja contradisse/atualizou"
+    action: "Rejeitar — marcar como superseded"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FRAGMENTOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+fragments:
+  definition: >
+    Fragmentos sao sub-unidades de um MIU. Um MIU METHODOLOGICAL sobre um
+    framework de 5 passos pode ter 5 fragmentos (um por passo). Fragmentos
+    herdam source_id e category do MIU pai.
+
+  required_fields:
+    - id           # FRAG-{miu_id}-{seq:2} (ex: FRAG-MIU-0001-01)
+    - parent_miu   # MIU pai
+    - content      # Texto do fragmento
+    - position     # Ordem no MIU pai
+
+  optional_fields:
+    - tags
+    - note
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# METRICAS DE QUALIDADE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+quality_metrics:
+  extraction_rate:
+    description: "MIUs validos / total extraido"
+    minimum: 0.6
+    target: 0.8
+
+  category_distribution:
+    description: "Distribuicao equilibrada entre categorias"
+    minimum_per_category: 5
+    ideal_distribution:
+      BEHAVIORAL: "20-30%"
+      METHODOLOGICAL: "20-30%"
+      STORYTELLING: "15-25%"
+      OPINION: "15-25%"
+      TECHNICAL: "10-20%"
+
+  confidence_distribution:
+    description: "Maioria high/medium, poucos low"
+    target:
+      high: ">= 40%"
+      medium: "30-40%"
+      low: "<= 20%"
+
+  provenance_coverage:
+    description: "% de MIUs com source_id + location completos"
+    minimum: 0.9
+    target: 1.0

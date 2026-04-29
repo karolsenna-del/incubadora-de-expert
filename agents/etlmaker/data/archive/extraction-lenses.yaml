@@ -1,0 +1,178 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# 8 LENTES DE EXTRACAO DE CONHECIMENTO — Knowledge ETL
+# ═══════════════════════════════════════════════════════════════════════════════
+# Cada fonte de conhecimento e processada por 8 angulos complementares.
+# Diferente do Squad Forge (iterativo por entrevista), aqui as lentes sao
+# aplicadas sequencialmente sobre texto ja existente.
+#
+# Principios:
+# - Zero-inference: extrair fielmente, nao interpretar
+# - Atomicidade: 1 ideia = 1 MIU
+# - Proveniencia: cada MIU rastreavel ate a fonte
+# - Cobertura: 6/8 lentes e o minimo aceitavel
+# ═══════════════════════════════════════════════════════════════════════════════
+
+version: "1.0.0"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# LENTES
+# ─────────────────────────────────────────────────────────────────────────────
+lenses:
+  L1:
+    name: "Conceitual"
+    icon: "📖"
+    objective: "Extrair definicoes, termos, conceitos-chave do dominio"
+    miu_types: [CONCEPT, DEFINITION]
+    what_to_look_for:
+      - "Termos definidos explicitamente ('X e...')"
+      - "Conceitos novos ou especificos do autor"
+      - "Distincoes entre termos similares"
+      - "Vocabulario tecnico ou jargao do dominio"
+      - "Taxonomias e classificacoes"
+    rules:
+      - "Preservar a definicao EXATA do autor, nao simplificar"
+      - "Se o autor usa um termo diferente do padrao, registrar o termo dele"
+      - "Registrar distincoes explicitas ('X nao e Y')"
+
+  L2:
+    name: "Metodologica"
+    icon: "🔧"
+    objective: "Extrair frameworks, modelos, sistemas e metodos descritos"
+    miu_types: [FRAMEWORK, METHOD]
+    what_to_look_for:
+      - "Modelos com nome ('Metodo X', 'Framework Y')"
+      - "Sistemas com etapas numeradas"
+      - "Representacoes visuais (piramides, ciclos, matrizes)"
+      - "Analogias e metaforas organizadoras"
+      - "Comparacoes entre abordagens"
+    rules:
+      - "Capturar a ESTRUTURA do framework, nao so o nome"
+      - "Se tem componentes, listar todos"
+      - "Se tem sequencia, preservar a ordem"
+      - "Registrar QUEM criou o framework (se mencionado)"
+
+  L3:
+    name: "Pratica"
+    icon: "⚡"
+    objective: "Extrair tecnicas, taticas, receitas, passo-a-passo"
+    miu_types: [TECHNIQUE, PROCEDURE]
+    what_to_look_for:
+      - "'Faca X' — instrucoes diretas"
+      - "Passo-a-passo numerado"
+      - "Templates e formulas"
+      - "Dicas praticas ('um truque e...')"
+      - "Ferramentas recomendadas"
+    rules:
+      - "Preservar a SEQUENCIA se existir"
+      - "Registrar pre-requisitos mencionados"
+      - "Incluir ferramentas/recursos mencionados"
+      - "Se o autor da uma 'receita', capturar completa"
+
+  L4:
+    name: "Relacional"
+    icon: "🔗"
+    objective: "Extrair conexoes, dependencias, relacoes causa-efeito"
+    miu_types: [RELATION, DEPENDENCY]
+    what_to_look_for:
+      - "'X causa Y' — causalidade"
+      - "'X depende de Y' — dependencia"
+      - "'X potencializa Y' — amplificacao"
+      - "'X contradiz Y' — conflito"
+      - "'Sem X, Y nao funciona' — pre-requisito"
+    rules:
+      - "Capturar AMBOS os lados da relacao"
+      - "Especificar o TIPO da relacao (causa, depende, amplifica, contradiz)"
+      - "Se a relacao e condicional ('X causa Y quando Z'), registrar a condicao"
+
+  L5:
+    name: "Contextual"
+    icon: "🎯"
+    objective: "Extrair escopos, pre-requisitos, limitacoes, condicoes de uso"
+    miu_types: [CONTEXT, CONSTRAINT]
+    what_to_look_for:
+      - "'Funciona quando...' — escopo"
+      - "'Nao funciona se...' — limitacao"
+      - "'Voce precisa ter X antes' — pre-requisito"
+      - "'Para publico Y' — segmentacao"
+      - "'Em mercados Z' — contexto"
+    rules:
+      - "Contexto e CRITICO — e o que separa teoria de pratica"
+      - "Registrar TODOS os limitadores mencionados"
+      - "Se o autor assume contexto implicito, registrar o que for explicito"
+
+  L6:
+    name: "Principios"
+    icon: "⚖️"
+    objective: "Extrair regras, leis, fundamentos universais do dominio"
+    miu_types: [PRINCIPLE, RULE]
+    what_to_look_for:
+      - "'A regra e...' — regras explicitas"
+      - "'Sempre faca X' — prescricoes universais"
+      - "'O principio fundamental e...' — fundamentos"
+      - "'Lei de X' — leis nomeadas"
+      - "Hierarquias de prioridade ('X antes de Y, sempre')"
+    rules:
+      - "Principios sao UNIVERSAIS dentro do dominio (nao contextuais)"
+      - "Se o autor atribui o principio a alguem, registrar a atribuicao"
+      - "Se ha hierarquia entre principios, capturar"
+
+  L7:
+    name: "Exemplos"
+    icon: "📌"
+    objective: "Extrair cases, historias, ilustracoes, evidencias praticas"
+    miu_types: [EXAMPLE, CASE]
+    what_to_look_for:
+      - "'Por exemplo...' — exemplos diretos"
+      - "Historias e narrativas ilustrativas"
+      - "Cases de sucesso ou fracasso"
+      - "Dados reais citados"
+      - "Antes/depois — transformacoes"
+    rules:
+      - "Exemplos sao EVIDENCIA — preservar detalhes"
+      - "Registrar contexto do exemplo (quem, quando, resultado)"
+      - "Se o exemplo ilustra um principio, registrar a conexao"
+      - "Exemplos de fracasso sao tao valiosos quanto os de sucesso"
+
+  L8:
+    name: "Contraintuitiva"
+    icon: "🚫"
+    objective: "Extrair anti-padroes, mitos, erros comuns, o que NAO fazer"
+    miu_types: [ANTIPATTERN, MYTH]
+    what_to_look_for:
+      - "'O erro mais comum e...' — anti-padroes"
+      - "'Muita gente acha que X, mas...' — mitos"
+      - "'NUNCA faca X' — proibicoes"
+      - "'O que parece funcionar mas nao funciona' — armadilhas"
+      - "'Contraintuitivamente...' — inversoes de expectativa"
+    rules:
+      - "Anti-padroes sao OURO — frequentemente o conhecimento mais valioso"
+      - "Registrar POR QUE e anti-padrao (a explicacao causal)"
+      - "Se o autor explica o que fazer NO LUGAR, registrar tambem"
+      - "Mitos devem ter a verdade correspondente registrada"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# REGRAS GLOBAIS
+# ─────────────────────────────────────────────────────────────────────────────
+global_rules:
+  zero_inference:
+    - "Extrair o que a fonte DIZ, nao o que IMPLICA"
+    - "Se parece faltar algo, registrar como gap — nao preencher"
+    - "Se precisar especular, marcar como inferred com confidence < 0.5"
+    - "Vocabulario da fonte e sagrado — usar os termos do autor"
+
+  atomicity:
+    - "1 MIU = 1 ideia completa"
+    - "Se um trecho tem 'e' ou 'alem disso' ligando ideias diferentes, quebrar"
+    - "MIU deve fazer sentido sozinho (autocontido)"
+    - "Se MIU precisa de outro pra fazer sentido, adicionar contexto minimo"
+
+  provenance:
+    - "Todo MIU tem source, location, quote"
+    - "Sem proveniencia = MIU invalido"
+    - "Quote e o trecho ORIGINAL que sustenta o MIU"
+
+  coverage:
+    minimum_lens_coverage: 6
+    minimum_total_mius: 20
+    minimum_confidence_avg: 0.7
+    maximum_inferred_pct: 30

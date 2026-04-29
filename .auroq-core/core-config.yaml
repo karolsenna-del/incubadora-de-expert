@@ -1,0 +1,80 @@
+project:
+  name: "Auroq OS"
+  type: greenfield
+  version: 1.0.0
+  installedAt: '2026-03-16'
+
+ide:
+  selected:
+    - claude-code
+  configs:
+    claude-code: true
+
+mcp:
+  enabled: false
+  configLocation: .claude/mcp.json
+  servers: []
+
+# Paths do framework
+businessLocation: business
+knowledgeLocation: docs/knowledge
+agentsLocation: agents
+slashPrefix: AuroqOS
+
+# Lazy loading
+lazyLoading:
+  enabled: true
+  heavySections:
+    - squads
+
+# Git
+git:
+  showConfigWarning: true
+  cacheTimeSeconds: 300
+
+# Decision logging
+decisionLogging:
+  enabled: true
+  async: true
+  location: .auroq/
+  indexFile: decision-logs-index.md
+  format: adr
+  performance:
+    maxOverhead: 50
+
+# Project status
+projectStatus:
+  enabled: true
+  autoLoadOnAgentActivation: true
+  showInGreeting: true
+  cacheTimeSeconds: 60
+  components:
+    gitBranch: true
+    gitStatus: true
+    recentWork: true
+  statusFile: .auroq/project-status.yaml
+  maxModifiedFiles: 5
+  maxRecentCommits: 2
+
+# Framework boundary (L1-L4)
+boundary:
+  frameworkProtection: true
+  protected:
+    - .auroq-core/core/**
+    - .auroq-core/development/tasks/**
+    - .auroq-core/development/templates/**
+    - .auroq-core/development/checklists/**
+    - .auroq-core/development/workflows/**
+    - .auroq-core/infrastructure/**
+    - .auroq-core/constitution.md
+  exceptions:
+    - .auroq-core/development/agents/*/MEMORY.md
+
+# Agent identity
+agentIdentity:
+  greeting:
+    contextDetection: true
+    sessionDetection: hybrid
+    performance:
+      gitCheckCache: true
+      gitCheckTTL: 300

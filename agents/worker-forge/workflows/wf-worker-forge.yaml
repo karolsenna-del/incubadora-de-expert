@@ -1,0 +1,96 @@
+name: "wf-worker-forge"
+version: "1.0.0"
+description: >
+  Pipeline de 6 fases para criar funcionarios digitais (workers) com KB viva.
+  Discovery profundo -> Research externo/interno -> Proposta -> Playback -> Assembly -> Validacao.
+trigger: "/workerForge ou *start"
+
+phases:
+  - phase: 0
+    name: "Discovery"
+    description: "Captar tudo que a pessoa pensa/precisa do worker"
+    tasks:
+      - "start"
+      - "discover-needs"
+    agent: "@worker-chief"
+    blocking: true
+    quality_gate: "QG-WF-001"
+
+  - phase: 1
+    name: "Research"
+    description: "Pesquisar ferramentas externas + coletar docs internos + montar KB rascunho"
+    tasks:
+      - "research-domain"
+    agent: "@knowledge-curator"
+    blocking: true
+    quality_gate: "QG-WF-002"
+
+  - phase: 2
+    name: "Proposal"
+    description: "Montar proposta completa do worker (Role + KB + Modos + Tasks)"
+    tasks:
+      - "propose-worker"
+    agent: "@worker-chief"
+    delegates_to:
+      - "@role-designer"
+      - "@knowledge-curator"
+    blocking: true
+    # Sem QG proprio — output validado pelo usuario no Playback (Phase 3, QG-WF-003)
+
+  - phase: 3
+    name: "Playback"
+    description: "Apresentar proposta ao usuario e coletar aprovacao"
+    tasks:
+      - "playback-validate"
+    agent: "@worker-chief"
+    blocking: true
+    quality_gate: "QG-WF-003"
+
+  - phase: 4
+    name: "Assembly"
+    description: "Construir worker AIOS completo"
+    tasks:
+      - "assemble-worker"
+    agent: "@worker-smith"
+    blocking: true
+    quality_gate: "QG-WF-004"
+
+  - phase: 5
+    name: "Validation"
+    description: "Smoke tests + aprovacao do usuario"
+    tasks:
+      - "validate-worker"
+    agent: "@worker-chief"
+    blocking: true
+    quality_gate: "QG-WF-005"
+
+quality_gates:
+  - id: "QG-WF-001"
+    name: "Discovery Complete"
+    transition: "phase_0 -> phase_1"
+    blocking: true
+    criteria: "Proposito claro, >=3 duties, >=1 ferramenta, autonomia definida, >=1 criterio de sucesso"
+
+  - id: "QG-WF-002"
+    name: "Research Adequate"
+    transition: "phase_1 -> phase_2"
+    blocking: true
+    criteria: "Cada ferramenta core pesquisada, integracoes mapeadas, KB rascunho >=300 linhas"
+
+  - id: "QG-WF-003"
+    name: "User Validated"
+    transition: "phase_3 -> phase_4"
+    blocking: true
+    criteria: "Usuario aprovou proposta completa"
+
+  - id: "QG-WF-004"
+    name: "Structure Valid"
+    transition: "phase_4 -> phase_5"
+    blocking: true
+    criteria: "Self-check + validator pass, 0 errors"
+
+  - id: "QG-WF-005"
+    name: "Operational Readiness"
+    transition: "phase_5 -> done"
+    blocking: true
+    criteria: ">=3/4 smoke tests + usuario aprova"

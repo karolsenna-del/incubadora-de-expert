@@ -1,0 +1,259 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# POC Module Template — Clone Forge
+# ═══════════════════════════════════════════════════════════════════════════════
+# Template generico para cada modulo do Perfil Ontologico Completo.
+# Usado pelo @clone-forge-chief durante agregacao (Fase 6).
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Cada modulo segue esta estrutura base.
+# Schema completo: data/poc-schema.yaml
+
+module_template:
+  metadata:
+    module: "{identity|mental-model|operational|repertoire|visual-framework|ecosystem}"
+    mind_name: "{mind_name}"
+    mind_slug: "{mind_slug}"
+    generated_at: "{iso_date}"
+    agent: "clone-forge-chief"
+    completeness: 0.0     # 0.0-1.0
+
+  # Proveniencia por campo
+  # Cada campo do modulo tem rastreabilidade de onde veio
+  provenance:
+    field_name:
+      value: "{valor}"
+      sources:
+        - type: "miu"
+          id: "MIU-XXXX"
+          confidence: 0.0
+        - type: "interview"
+          block: "bloco-1-identidade"
+          confidence: 1.0
+        - type: "assessment"
+          system: "assessment-formal"
+          confidence: 1.0
+      aggregated_confidence: 0.0
+      last_updated: "{iso_date}"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# TEMPLATES POR MODULO
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# --- IDENTITY ---
+identity_template:
+  module: "identity"
+  name: ""
+  core_identity: ""
+  turning_points: []
+  values:
+    - value: ""
+      rank: 1
+      evidence: ""
+  rejections: []
+  mission: ""
+  origin_story: ""
+  faith_integration: ""
+  family_context: ""
+
+# --- MENTAL MODEL ---
+mental_model_template:
+  module: "mental-model"
+  primary_framework:
+    name: ""
+    purpose: ""
+    steps: []
+    when_to_use: ""
+    when_not_to_use: ""
+  secondary_frameworks: []
+  heuristics: []
+  decision_pipeline: []
+  mental_models: []
+  cognitive_biases: []
+  # Extensao psicometrica (preenchida se Fase 5 completa)
+  psychometric_extension:
+    mbti_functions: null
+    enneagram_center: null
+    big_five_openness: null
+
+# --- OPERATIONAL ---
+operational_template:
+  module: "operational"
+  communication_style:
+    tom: ""
+    estilo: ""
+    vocabulario_preferido: []
+    vocabulario_proibido: []
+  teaching_style: ""
+  conflict_style: ""
+  energy_patterns:
+    drains: []
+    energizes: []
+  daily_routines: []
+  tools_used: []
+  delegation_style: ""
+
+# --- REPERTOIRE ---
+repertoire_template:
+  module: "repertoire"
+  domain_expertise: []
+  key_concepts: []
+  methodologies: []
+  case_studies: []
+  influences: []
+  books_recommended: []
+  unique_terminology: []
+
+# --- VISUAL FRAMEWORK ---
+visual_framework_template:
+  module: "visual-framework"
+  core_thesis: ""
+  signature_framework:
+    name: ""
+    components: []
+    flow: ""
+    visual_description: ""
+  recurring_metaphors: []
+  visual_models: []
+  storytelling_structures: []
+
+# --- ECOSYSTEM ---
+ecosystem_template:
+  module: "ecosystem"
+  target_audience:
+    demographics: ""
+    psychographics: ""
+    pain_points: []
+    desires: []
+  value_proposition: ""
+  business_model: ""
+  competitors: []
+  channels: []
+  revenue_streams: []
+  market_positioning: ""
+
+# --- EXTRAS ---
+contradictions_template:
+  items:
+    - tension: ""
+      pole_a: ""
+      pole_b: ""
+      resolution: ""
+      evidence: []
+
+obsessions_template:
+  items:
+    - theme: ""
+      frequency: ""       # alta | media | baixa
+      intensity: ""       # obsessivo | recorrente | ocasional
+      evidence_sources: []
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# UNIFIED PROFILE — 06-profile/unified-profile.md
+# ═══════════════════════════════════════════════════════════════════════════════
+
+unified_profile_template: |
+  # Unified Profile — {mind_name}
+
+  **Data:** {date}
+  **Completude:** {completeness}%
+  **Fidelidade estimada:** {fidelity}%
+
+  ---
+
+  ## 1. Quem e {mind_name}
+
+  {core_identity — 2-3 paragrafos}
+
+  ### Turning Points
+  {lista de momentos decisivos}
+
+  ### Valores Inegociaveis
+  {lista rankeada}
+
+  ### O que Rejeita
+  {lista de rejeicoes}
+
+  ---
+
+  ## 2. Como Pensa
+
+  ### Framework Principal: {framework_name}
+  {descricao + steps}
+
+  ### Heuristicas de Decisao
+  {lista de regras de bolso}
+
+  ### Modelos Mentais
+  {lista com descricoes}
+
+  ---
+
+  ## 3. Como Opera
+
+  ### Estilo de Comunicacao
+  {voice DNA resumido}
+
+  ### Como Ensina
+  {descricao}
+
+  ### Energia
+  - **Drena:** {lista}
+  - **Energiza:** {lista}
+
+  ---
+
+  ## 4. Repertorio
+
+  ### Areas de Expertise
+  {lista com niveis}
+
+  ### Metodologias
+  {lista}
+
+  ### Casos de Sucesso
+  {resumos}
+
+  ---
+
+  ## 5. Framework Visual
+
+  ### Tese Central
+  {core_thesis}
+
+  ### {signature_framework_name}
+  {descricao visual}
+
+  ---
+
+  ## 6. Ecossistema
+
+  ### Publico-Alvo
+  {descricao}
+
+  ### Proposta de Valor
+  {value_proposition}
+
+  ---
+
+  ## 7. Paradoxos Produtivos
+
+  {lista de contradicoes com resolucao}
+
+  ---
+
+  ## 8. Obsessoes
+
+  {temas recorrentes com intensidade}
+
+  ---
+
+  ## 9. DNA Psicometrico (Estimado)
+
+  | Sistema | Resultado | Confianca |
+  |---------|-----------|-----------|
+  | MBTI | {type} | {conf} |
+  | Enneagram | {type} | {conf} |
+  | DISC | {profile} | {conf} |
+  | Big Five | {scores} | {conf} |
+  | IQ/EQ | {estimate} | {conf} |
+  | Spiral Dynamics | {level} | {conf} |

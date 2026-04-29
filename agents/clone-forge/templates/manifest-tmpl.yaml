@@ -1,0 +1,161 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# MANIFEST TEMPLATE — Clone Forge
+# ═══════════════════════════════════════════════════════════════════════════════
+# Estado do pipeline para um clone especifico.
+# Criado na Fase 0, atualizado a cada fase concluida.
+# Permite resume de qualquer ponto.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+manifest:
+  version: "1.0.0"
+  mind_name: "{mind_name}"
+  mind_slug: "{mind_slug}"
+  domain: "{domain}"
+  created_at: "{iso_date}"
+  updated_at: "{iso_date}"
+  created_by: "clone-forge-chief"
+
+  # Estado atual
+  status: "in_progress"  # in_progress | completed | paused | failed
+  current_phase: 0
+  current_phase_name: "Ingestao de Conteudo"
+
+  # Configuracao
+  config:
+    mode: "full"  # full | quick
+    subject_present: false  # pessoa sendo clonada esta disponivel?
+    auto_acquire_sources: true
+    formal_assessments: []  # squads de assessment formais (se instalados)
+
+  # Progresso por fase
+  phases:
+    - phase: 0
+      name: "Ingestao de Conteudo"
+      status: "pending"  # pending | in_progress | completed | skipped | failed
+      started_at: null
+      completed_at: null
+      agent: "clone-forge-chief"
+      outputs: []
+      notes: ""
+
+    - phase: 1
+      name: "Coleta e Validacao de Fontes"
+      status: "pending"
+      started_at: null
+      completed_at: null
+      agent: "@oalanicolas"
+      gate: "QG-001"
+      gate_result: null  # GO | CONDITIONAL | NO_GO
+      outputs: []
+      notes: ""
+
+    - phase: 1.5
+      name: "Entrevista Profunda"
+      status: "pending"
+      started_at: null
+      completed_at: null
+      agent: "clone-forge-chief"
+      condition: "subject_present AND source_coverage < 0.8"
+      skipped_reason: null
+      outputs: []
+      notes: ""
+
+    - phase: 2
+      name: "Extracao de MIUs"
+      status: "pending"
+      started_at: null
+      completed_at: null
+      agent: "innerlens"
+      gate: "QG-002"
+      gate_result: null
+      outputs: []
+      notes: ""
+
+    - phase: 3
+      name: "Extracao de DNA"
+      status: "pending"
+      started_at: null
+      completed_at: null
+      agent: "@oalanicolas"
+      gate: "QG-003"
+      gate_result: null
+      outputs: []
+      notes: ""
+
+    - phase: 4
+      name: "Inferencia de Drivers"
+      status: "pending"
+      started_at: null
+      completed_at: null
+      agent: "cognitive-motor"
+      outputs: []
+      notes: ""
+
+    - phase: 5
+      name: "Mapeamento Psicometrico"
+      status: "pending"
+      started_at: null
+      completed_at: null
+      agent: "cognitive-motor"
+      outputs: []
+      notes: ""
+
+    - phase: 6
+      name: "Agregacao de Perfil"
+      status: "pending"
+      started_at: null
+      completed_at: null
+      agent: "clone-forge-chief"
+      gate: "QG-004"
+      gate_result: null
+      outputs: []
+      notes: ""
+
+    - phase: 6.5
+      name: "Gap Analysis + Questionario"
+      status: "pending"
+      started_at: null
+      completed_at: null
+      agent: "clone-forge-chief"
+      condition: "completeness < 0.8 AND subject_present"
+      skipped_reason: null
+      outputs: []
+      notes: ""
+
+    - phase: 7
+      name: "Validacao"
+      status: "pending"
+      started_at: null
+      completed_at: null
+      agent: "@oalanicolas + @pedro-valerio"
+      gate: "QG-005"
+      gate_result: null
+      outputs: []
+      notes: ""
+
+    - phase: 8
+      name: "Geracao de Agente"
+      status: "pending"
+      started_at: null
+      completed_at: null
+      agent: "clone-forge-chief"
+      outputs: []
+      notes: ""
+
+  # Metricas acumuladas
+  metrics:
+    sources_count: 0
+    sources_tier_0: 0
+    sources_tier_1: 0
+    mius_total: 0
+    mius_valid: 0
+    mius_rejected: 0
+    drivers_count: 0
+    relationships_count: 0
+    profile_completeness: 0.0
+    fidelity_score: 0.0
+    smoke_test_result: null  # "3/3" | "2/3" | etc
+
+  # Erros e avisos
+  warnings: []
+  errors: []

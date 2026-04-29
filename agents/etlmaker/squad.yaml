@@ -1,0 +1,182 @@
+# ===============================================================================
+# SQUAD: ETLmaker v3.0
+# Transforma fontes brutas em Knowledge Bases ricas, completas e fieis
+# ===============================================================================
+
+name: etlmaker
+title: "ETLmaker"
+version: "3.0.0"
+author: "Euriler Jube"
+description: >
+  Squad de Knowledge ETL v3.0 — transforma qualquer fonte de conhecimento
+  (cursos, livros, transcricoes, conversas, PDFs) em documentacao rica,
+  completa e fiel ao original. Pipeline de 4 fases com mapeamento territorial
+  profundo, composicao blocada com checkpoints, e validacao em 3 camadas
+  (spot-check + auditoria exaustiva + 6-passes estatisticos).
+
+slash_prefix: "etlmaker"
+pattern_prefix: "ETL"
+target_user: "Qualquer pessoa que precise sistematizar conhecimento disperso em documentacao organizada, completa e confiavel"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# USE CASES
+# ─────────────────────────────────────────────────────────────────────────────
+use_cases:
+  - id: UC1
+    name: "Full Pipeline"
+    description: "Pipeline completo: ingestao → mapeamento territorial → composicao blocada → integracao → validacao 3 camadas"
+  - id: UC2
+    name: "Quick Extract"
+    description: "Mapeamento territorial de fontes sem compor volumes"
+  - id: UC3
+    name: "Merge"
+    description: "Adicionar nova fonte a KB existente (re-mapeia e re-compoe volumes afetados)"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TIER SYSTEM
+# ─────────────────────────────────────────────────────────────────────────────
+tiers:
+  orchestrator:
+    - etl-chief
+  tier_1:
+    - extractor
+    - analyst
+    - architect
+    - composer
+    - auditor
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TASKS
+# ─────────────────────────────────────────────────────────────────────────────
+tasks:
+  - start
+  - ingest-sources
+  - map-territory
+  - compose-volume
+  - integrate-package
+  - validate-final
+
+# ─────────────────────────────────────────────────────────────────────────────
+# WORKFLOWS
+# ─────────────────────────────────────────────────────────────────────────────
+workflows:
+  - wf-knowledge-etl
+
+# ─────────────────────────────────────────────────────────────────────────────
+# QUALITY GATES
+# ─────────────────────────────────────────────────────────────────────────────
+quality_gates:
+  - id: QG-ETL-000
+    name: "Ingestion Validity"
+    phase: 1
+    transition: "Ingestao → Mapeamento Territorial"
+    blocking: true
+    criteria: "Fonte >= 100 palavras, encoding UTF-8, metadados completos, estrutura preservada"
+
+  - id: QG-ETL-001
+    name: "Territorial Comprehension"
+    phase: 2
+    transition: "Mapeamento Territorial → Aprovacao"
+    blocking: true
+    criteria: ">= 3 dominios, backbone identificado, autores mapeados, fontes classificadas, voz perfilada, MAPA gerado"
+
+  - id: QG-ETL-002
+    name: "Architecture Approval"
+    phase: 2
+    transition: "Aprovacao → Composicao Blocada"
+    blocking: true
+    requires_user_approval: true
+    criteria: "Usuario aprovou plano de volumes, >= 2 volumes, 100% dominios core cobertos"
+
+  - id: QG-ETL-003
+    name: "Composition Richness"
+    phase: 3
+    transition: "Volume N → Volume N+1 (ou Integracao)"
+    blocking: true
+    applied_per: "volume"
+    criteria: ">= 300 linhas, >= 2 tabelas, >= 3 exemplos, >= 10 [Fonte:], spot-check 10 claims, checkpoint salvo"
+
+  - id: QG-ETL-004
+    name: "Package Integration"
+    phase: 4
+    transition: "Integracao → Validacao Final"
+    blocking: true
+    criteria: "README + REGRAS-CARDINAIS + REPERTORIO (11 secoes) + GLOSSARIO + todos volumes + cross-refs + completeness-report"
+
+  - id: QG-ETL-005
+    name: "Final Validation"
+    phase: 5
+    transition: "Validacao Final → Producao"
+    blocking: true
+    criteria: "Camada 2 PASS + Coverage >= 95% + Fidelity >= 90% + 0 invencoes + Voice >= 80% + Consistency + Integrity + Aggregate >= 90%"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PIPELINE
+# ─────────────────────────────────────────────────────────────────────────────
+pipeline:
+  estimated_time: "2-10 horas (depende do volume e numero de fontes)"
+  resumable: true
+  state_file: ".state.json"
+  persistence_docs: ["PLANO-ETL.md", "MAPA-TERRITORIAL.md"]
+
+  phases:
+    - phase: 0
+      name: "Setup"
+      task: start
+      agent: etl-chief
+      blocking: false
+      duration: "3-5min"
+    - phase: 1
+      name: "Ingestao + Mapeamento Territorial"
+      task: "ingest-sources + map-territory"
+      agent: "extractor + analyst"
+      blocking: true
+      duration: "30-120min"
+    - phase: 2
+      name: "Composicao Blocada"
+      task: compose-volume
+      agent: "composer + auditor"
+      blocking: true
+      duration: "60-240min"
+      checkpoint_per_volume: true
+    - phase: 3
+      name: "Integracao"
+      task: integrate-package
+      agent: architect
+      blocking: true
+      duration: "15-30min"
+    - phase: 4
+      name: "Validacao Final"
+      task: validate-final
+      agent: auditor
+      blocking: true
+      duration: "30-60min"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OUTPUT STRUCTURE
+# ─────────────────────────────────────────────────────────────────────────────
+output:
+  base_path: "agents/etlmaker/kbs/{kb_slug}/"
+  directories:
+    - "00-pipeline/"
+    - "00-pipeline/sources/"
+  consumer_facing:
+    - "README.md"
+    - "REGRAS-CARDINAIS.md"
+    - "REPERTORIO.md"
+    - "GLOSSARIO.md"
+    - "VOL-*.md"
+    - "completeness-report.yaml"
+  internal:
+    - "00-pipeline/"
+  persistence:
+    - "PLANO-ETL.md"
+    - ".state.json"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEPENDENCIES
+# ─────────────────────────────────────────────────────────────────────────────
+dependencies:
+  required: []
+  optional:
+    - squad-forge

@@ -1,0 +1,17 @@
+name: {{mind_slug}}
+slash_prefix: {{slash_prefix}}
+version: 1.0.0
+description: "{{description}}"
+type: single-mind
+
+agents:
+  - {{mind_slug}}
+
+tasks:
+  - start
+  # {{mode_tasks}}
+
+knowledge_base: agents/{{mind_slug}}/data/
+
+memory:
+  kb: agents/{{mind_slug}}/data/{{mind_slug}}-kb.md

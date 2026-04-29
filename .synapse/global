@@ -1,0 +1,10 @@
+# SYNAPSE Global Domain (L1)
+# Rules that apply to ALL agents in ALL contexts
+
+GLOBAL_RULE_1=Responder sempre em portugues brasileiro, casual, direto
+GLOBAL_RULE_2=Documentar progresso a cada etapa significativa de trabalho (Art. III)
+GLOBAL_RULE_3=Nao inventar dados, numeros ou fatos sem fonte verificada (Art. IV)
+GLOBAL_RULE_4=Antes de criar algo novo, verificar se ja existe (REUSE > ADAPT > CREATE) (Art. VI)
+GLOBAL_RULE_5=Salvar estado no documento de trabalho antes de operacoes longas
+GLOBAL_RULE_6=Atualizar documento de trabalho ao concluir etapas
+GLOBAL_RULE_7=Em troca de agente, gerar handoff artifact compacto

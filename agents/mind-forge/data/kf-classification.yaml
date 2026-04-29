@@ -1,0 +1,307 @@
+# ===============================================================================
+# KNOWLEDGE FACETS (KFs) — Classification & Validation Rules
+# ===============================================================================
+# Equivalente dos PUs do Squad Forge, mas desenhado para CONHECIMENTO.
+# Cada KF e uma unidade atomica de saber extraida de documentacao existente.
+# ===============================================================================
+
+version: "1.0.0"
+
+# -------------------------------------------------------------------------------
+# TIPOS DE KF
+# -------------------------------------------------------------------------------
+types:
+  PRINCIPLE:
+    description: "Crenca central, verdade, axioma — algo que o expert defende como fundamento"
+    required_fields:
+      - content        # A afirmacao em si
+      - domain         # Dominio a que pertence
+      - source_expert  # Quem disse (sintetica) ou "metodologia" (consultor)
+    optional_fields:
+      - evidence       # Dados ou argumentos que sustentam
+      - related_to     # KFs relacionados
+    validation:
+      - "Deve ser afirmacao, nao descricao vaga"
+      - "Deve ser especifica o suficiente pra discordar (se todo mundo concorda, e obvio demais)"
+      - "Deve rastrear ate a fonte — nunca inventar principio"
+    example:
+      kf_id: "KF-example-001"
+      type: PRINCIPLE
+      content: "O sistema produz exatamente o que foi desenhado pra produzir. Se o resultado e ruim, o design e ruim."
+      domain: "Pensamento Sistemico"
+      source_expert: "Deming"
+
+  FRAMEWORK:
+    description: "Metodologia estruturada com passos ou componentes definidos"
+    required_fields:
+      - content           # Nome e descricao do framework
+      - domain            # Dominio a que pertence
+      - source_expert     # Quem criou
+      - steps_or_components  # Passos sequenciais ou componentes do modelo
+    optional_fields:
+      - when_to_use      # Quando aplicar
+      - when_not_to_use  # Quando NAO aplicar
+    validation:
+      - "Deve ter nome proprio (GTD, 5 Focusing Steps, Value Equation, etc)"
+      - "Deve ter pelo menos 3 passos/componentes"
+      - "Descricao deve ser operacional, nao teorica"
+    example:
+      kf_id: "KF-example-008"
+      type: FRAMEWORK
+      content: "5 Focusing Steps — metodo para encontrar e explorar o constraint do sistema"
+      domain: "Otimizacao"
+      source_expert: "Goldratt"
+      steps_or_components:
+        - "1. IDENTIFY the constraint"
+        - "2. EXPLOIT the constraint"
+        - "3. SUBORDINATE everything else"
+        - "4. ELEVATE the constraint"
+        - "5. Prevent INERTIA — go back to step 1"
+
+  HEURISTIC:
+    description: "Regra de decisao SE/ENTAO — regra de bolso acionavel"
+    required_fields:
+      - content        # Descricao da heuristica
+      - domain         # Dominio a que pertence
+      - source_expert  # Quem formulou
+      - condition      # SE {condicao}
+      - action         # ENTAO {acao}
+    optional_fields:
+      - exception      # EXCETO quando...
+    validation:
+      - "Deve ser acionavel — SE isso, ENTAO aquilo"
+      - "Condition deve ser observavel (nao subjetiva)"
+      - "Action deve ser concreta (verbo + objeto)"
+    example:
+      kf_id: "KF-example-015"
+      type: HEURISTIC
+      content: "Regra do constraint"
+      domain: "Otimizacao"
+      source_expert: "Goldratt"
+      condition: "SE vai otimizar algo"
+      action: "ENTAO encontre o constraint PRIMEIRO — otimizar outra coisa e desperdicio"
+
+  EXAMPLE:
+    description: "Caso concreto, historia, ilustracao — ancora o conhecimento na pratica"
+    required_fields:
+      - content        # A historia/caso
+      - domain         # Dominio que ilustra
+      - source_expert  # Quem contou
+      - illustrates    # Qual principio/framework/heuristica exemplifica
+    optional_fields:
+      - context        # Contexto onde aconteceu
+    validation:
+      - "Deve ser caso especifico, nao generico"
+      - "Deve ilustrar pelo menos 1 outro KF (principio, framework ou heuristica)"
+    example:
+      kf_id: "KF-example-022"
+      type: EXAMPLE
+      content: "Toyota parou linha inteira porque 1 operario viu defeito. Custo: 1h de producao. Beneficio: zero defeitos pro cliente."
+      domain: "Qualidade"
+      source_expert: "Ohno"
+      illustrates: "KF-example-005"
+
+  ANTI_PATTERN:
+    description: "O que NUNCA fazer — com consequencia explicita"
+    required_fields:
+      - content        # O anti-padrao
+      - domain         # Dominio
+      - source_expert  # Quem alerta
+      - consequence    # O que acontece se fizer
+    optional_fields:
+      - alternative    # O que fazer em vez disso
+    validation:
+      - "Deve ter consequencia concreta (nao 'e ruim')"
+      - "Deve ser especifica o suficiente pra reconhecer na pratica"
+    example:
+      kf_id: "KF-example-030"
+      type: ANTI_PATTERN
+      content: "Otimizar partes sem entender o todo"
+      domain: "Otimizacao"
+      source_expert: "Goldratt"
+      consequence: "Melhoria local pode piorar o sistema global. Investir energia no lugar errado."
+      alternative: "Sempre mapear o sistema inteiro e encontrar o constraint antes de otimizar."
+
+  VOCABULARY:
+    description: "Termo tecnico com a definicao especifica do expert"
+    required_fields:
+      - term           # O termo
+      - definition     # Definicao do expert
+      - source_expert  # Quem define assim
+    optional_fields:
+      - domain         # Dominio
+      - usage_context  # Como usar no contexto da mente
+    validation:
+      - "Definicao deve ser do EXPERT, nao de dicionario"
+      - "Se varios experts definem diferente, registrar cada um"
+    example:
+      kf_id: "KF-example-040"
+      type: VOCABULARY
+      term: "Muda"
+      definition: "Qualquer atividade que consome recursos mas nao cria valor para o cliente. 7 tipos: transporte, inventario, movimento, espera, superprocesamento, superproducao, defeitos."
+      source_expert: "Ohno"
+
+  OUTPUT_FORMAT:
+    description: "Como o expert estrutura suas entregas ou respostas"
+    required_fields:
+      - content          # Descricao do formato
+      - domain           # Dominio
+      - source_expert    # Quem usa esse formato
+      - format_template  # Template do formato
+    optional_fields:
+      - when_to_use      # Quando aplicar esse formato
+    validation:
+      - "Template deve ser concreto, nao abstrato"
+      - "Deve ser replicavel por quem segue o template"
+    example:
+      kf_id: "KF-example-045"
+      type: OUTPUT_FORMAT
+      content: "Formato de diagnostico do Goldratt"
+      domain: "Diagnostico"
+      source_expert: "Goldratt"
+      format_template: "CONSTRAINT → EVIDENCIA → IMPACTO → ACAO IMEDIATA → SUBORDINACAO"
+
+# -------------------------------------------------------------------------------
+# CAMPOS UNIVERSAIS (presentes em todo KF)
+# -------------------------------------------------------------------------------
+universal_fields:
+  required:
+    - kf_id          # "KF-{mind_slug}-{sequence:3d}" (ex: KF-example-003)
+    - type           # Um dos 7 tipos acima
+    - content        # Descricao atomica
+    - domain         # Dominio a que pertence
+    - source_expert  # Quem disse/criou
+    - source_doc     # Qual documento-fonte
+    - source_lens    # L1-L7 (qual lente extraiu)
+    - source_tier    # ouro|prata|bronze (tier da fonte)
+    - confidence     # 0.0-1.0 (base_confidence * source_tier_weight)
+    - inferred       # boolean — se true, precisa confirmacao
+
+  optional:
+    - related_to       # Lista de KF-IDs relacionados (cross-reference)
+    - user_confirmed   # boolean — usuario validou no playback
+    - source_ref       # Citacao granular "[SOURCE: pagina/minuto/timestamp]" — localizacao exata na fonte
+    - pareto_zone      # crown_jewel | excellence | impact | filler (classificacao Pareto ao Cubo)
+    - notes            # Observacoes do knowledge-miner
+
+# -------------------------------------------------------------------------------
+# REGRAS DE VALIDACAO GLOBAL
+# -------------------------------------------------------------------------------
+validation_rules:
+  id_format: "^KF-[a-z0-9-]+-\\d{3}$"
+  confidence_range: [0.0, 1.0]
+  inferred_threshold: 0.4  # Se >40% dos KFs sao inferred, analise precisa de revisao
+
+  synthetic_mind:
+    minimum_kfs: 20
+    minimum_frameworks: 2
+    minimum_heuristics: 3
+    minimum_domains: 3
+    minimum_sources: 2
+
+  consultant:
+    minimum_kfs: 15
+    minimum_frameworks: 2
+    minimum_heuristics: 3
+    minimum_domains: 3     # subtopicos
+    minimum_sources: 1
+
+# -------------------------------------------------------------------------------
+# REGRAS DE REJEICAO
+# -------------------------------------------------------------------------------
+rejection_rules:
+  - rule: "KF generico"
+    description: "Conteudo que qualquer pessoa diria ('ser organizado e importante')"
+    action: "Rejeitar — KF deve ser insight especifico do expert"
+  - rule: "KF sem proveniencia"
+    description: "KF que nao rastreia ate uma fonte"
+    action: "Rejeitar — todo KF precisa de source_doc e source_lens"
+  - rule: "KF duplicado"
+    description: "Mesmo conteudo ja existe em outro KF"
+    action: "Merge com existente, preservar o de maior confidence"
+  - rule: "KF composto"
+    description: "KF com 'e tambem' ou 'alem disso' ligando dois insights distintos"
+    action: "Quebrar em 2+ KFs atomicos"
+  - rule: "HEURISTIC sem condition"
+    description: "Heuristica sem SE explicito"
+    action: "Reformular com SE/ENTAO ou reclassificar como PRINCIPLE"
+  - rule: "FRAMEWORK sem steps"
+    description: "Framework nomeado mas sem passos/componentes"
+    action: "Marcar como incompleto, buscar na fonte os passos"
+
+# -------------------------------------------------------------------------------
+# CONFIDENCE BASELINE (tabela de referencia)
+# -------------------------------------------------------------------------------
+# O knowledge-miner usa esta tabela como GUIA para atribuir base_confidence.
+# Valor final: confidence = base_confidence * source_tier_weight.
+# Tabela e referencia, nao hard-coded — miner pode ajustar com justificativa.
+confidence_baseline:
+  description: "Base confidence por tipo de KF e clareza de extracao"
+  table:
+    #                    | Direto (claro) | Com interpretacao | L7 Implicito |
+    PRINCIPLE:           [0.95,            0.75,               0.60]
+    FRAMEWORK:           [0.90,            0.70,               0.50]
+    HEURISTIC:           [0.85,            0.65,               0.55]
+    EXAMPLE:             [0.90,            0.80,               null]  # Exemplos nao sao implicitos
+    ANTI_PATTERN:        [0.85,            0.65,               0.50]
+    VOCABULARY:          [0.90,            0.70,               null]  # Vocabulario nao e implicito
+    OUTPUT_FORMAT:       [0.85,            0.65,               null]  # Formatos nao sao implicitos
+  extraction_clarity:
+    direto: "Expert disse/escreveu explicitamente. Citacao direta possivel."
+    com_interpretacao: "Expert demonstrou mas nao formalizou. Inferencia leve."
+    implicito: "Extraido via L7 — premissa, heuristica oculta ou omissao."
+
+# -------------------------------------------------------------------------------
+# PARETO ZONE (classificacao de valor do KF)
+# -------------------------------------------------------------------------------
+# Nem todo KF vale o mesmo. Apos extracao, classificar cada KF numa zona.
+# Mind-smith usa essa classificacao pra priorizar Crown Jewels na KB.
+pareto_zone:
+  description: "Classificacao Pareto ao Cubo (inspirado por Alan Nicolas)"
+  zones:
+    crown_jewel:
+      label: "Crown Jewel (0.8%)"
+      description: "Insight que muda tudo — axioma central, framework definitivo, heuristica-mestra"
+      criteria:
+        - "Aparece como convergencia entre 3+ experts (sintetica)"
+        - "E o framework/principio que DEFINE a metodologia (consultor)"
+        - "Remove-lo faria a mente perder identidade"
+      treatment: "Posicao de destaque na KB. Aparece em Principios Universais e Heuristicas Mestras."
+    excellence:
+      label: "Excelencia (4%)"
+      description: "Frameworks e heuristicas de alta aplicacao — pilares operacionais"
+      criteria:
+        - "Framework completo com steps ou heuristica com alta aplicabilidade"
+        - "Convergencia entre 2 experts (sintetica)"
+        - "Cobre um dominio inteiro"
+      treatment: "Secao dedicada no dominio. Detalhado com exemplos."
+    impact:
+      label: "Impacto (20%)"
+      description: "KFs uteis e aplicaveis, mas nao unicos — suporte operacional"
+      criteria:
+        - "KF valido de 1 expert sem convergencia"
+        - "Vocabulario especifico, anti-padrao relevante"
+      treatment: "Incluso no dominio. Formato padrao."
+    filler:
+      label: "Filler (80%)"
+      description: "Principios genericos, vocabulario obvio, exemplos fracos"
+      criteria:
+        - "KF que qualquer expert diria (generico)"
+        - "Exemplo sem ancora pratica"
+        - "Vocabulario de uso comum"
+      treatment: "Avaliar se vale incluir. Se sim, formato compacto. Se nao, descartar."
+  rule: "Classificar APOS extracao completa (Step 6 do analyze-knowledge). Crown Jewels devem ser <5% do total."
+
+# -------------------------------------------------------------------------------
+# CITACAO GRANULAR (rastreabilidade)
+# -------------------------------------------------------------------------------
+source_ref_format:
+  description: "Formato de citacao granular para localizacao exata na fonte"
+  format: "[SOURCE: {localizador}]"
+  examples:
+    - "[SOURCE: p.47]"           # Livro, pagina 47
+    - "[SOURCE: 01:23:45]"       # Video/audio, timestamp
+    - "[SOURCE: secao 3.2]"      # Documento, secao especifica
+    - "[SOURCE: slide 15]"       # Apresentacao
+    - "[SOURCE: comentario #42]" # Post/comentario
+  rule: "knowledge-miner DEVE registrar source_ref sempre que possivel. Se fonte nao tem localizador granular, usar source_doc como fallback."

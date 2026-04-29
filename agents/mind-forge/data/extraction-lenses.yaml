@@ -1,0 +1,229 @@
+# ===============================================================================
+# 6 LENTES DE ANALISE — Knowledge Mining
+# ===============================================================================
+# Cada fonte de conhecimento e analisada por 6 angulos complementares.
+# Diferente do Squad Forge (8 lentes iterativas com entrevista), estas lentes
+# sao aplicadas sobre DOCUMENTACAO EXISTENTE — o knowledge-miner le e extrai.
+#
+# Inspiracao:
+# - Bloom (taxonomia): do factual ao criativo
+# - Adler (leitura analitica): ler pra entender, nao pra concordar
+# - Referencia: KB organizada por dominio, nao por fonte
+# ===============================================================================
+
+version: "1.0.0"
+
+# -------------------------------------------------------------------------------
+# ROUND STRUCTURE
+# -------------------------------------------------------------------------------
+# Lentes sao agrupadas em 3 passes de leitura:
+#
+# Passe 1 (Mapeamento):   L1 + L2  → Territorio + Frameworks (~50%)
+# Passe 2 (Extracao):     L3 + L4  → Heuristicas + Voz (~80%)
+# Passe 3 (Fronteiras):   L5 + L6  → Exemplos + Limites (~95%)
+
+passes:
+  P1:
+    name: "Mapeamento"
+    lenses: [L1, L2]
+    goal: "Entender o territorio e extrair frameworks estruturados (~50%)"
+    strategy: "Leitura analitica: o que essa fonte cobre? Quais modelos propoe?"
+  P2:
+    name: "Extracao"
+    lenses: [L3, L4]
+    goal: "Extrair regras de decisao e capturar a voz do expert (~80%)"
+    strategy: "Leitura profunda: quais regras SE/ENTAO? Como o expert comunica?"
+  P3:
+    name: "Fronteiras"
+    lenses: [L5, L6]
+    goal: "Ancorar com exemplos e mapear limites (~95%)"
+    strategy: "Leitura critica: onde funciona? Onde nao funciona? Quais casos concretos?"
+
+# -------------------------------------------------------------------------------
+# LENTES
+# -------------------------------------------------------------------------------
+lenses:
+  L1:
+    name: "Territory Mapping"
+    objective: "Identificar todos os dominios, topicos e subtopicos cobertos"
+    pass: P1
+    kf_types_generated: [PRINCIPLE, VOCABULARY]
+    questions:
+      - "Quais sao as grandes areas que esta fonte cobre?"
+      - "Qual e a tese central ou promessa do expert?"
+      - "Como o conteudo esta organizado? Quais sao as divisoes naturais?"
+      - "Quais termos tecnicos o expert define de forma propria?"
+      - "Quais principios fundamentais sao afirmados como base de tudo?"
+    rules:
+      - "Registrar o vocabulario especifico do expert (termos que ele define diferente do senso comum)"
+      - "Mapear a hierarquia: tema > subtema > conceito"
+      - "Identificar a promessa central: o que o expert garante que resolve?"
+      - "Se a fonte cobre multiplos experts, mapear quem contribui o que"
+
+  L2:
+    name: "Framework Extraction"
+    objective: "Extrair metodologias nomeadas, modelos com passos, sistemas estruturados"
+    pass: P1
+    kf_types_generated: [FRAMEWORK]
+    questions:
+      - "Essa fonte tem alguma metodologia nomeada (com nome proprio)?"
+      - "Quais sao os passos/componentes do modelo?"
+      - "Como os componentes se relacionam entre si?"
+      - "O framework e linear (passo a passo) ou ciclico (loop)?"
+      - "Existe diagrama, matriz ou modelo visual que represente o framework?"
+    rules:
+      - "Todo framework DEVE ter nome + passos/componentes + relacao entre eles"
+      - "Se o expert descreve um processo sem nomear, registrar como framework com nome descritivo"
+      - "Registrar quando usar E quando NAO usar cada framework"
+      - "Frameworks sao os KFs mais valiosos — investir tempo neles"
+
+  L3:
+    name: "Heuristic Mining"
+    objective: "Extrair regras de decisao SE/ENTAO, regras de bolso, criterios de julgamento"
+    pass: P2
+    kf_types_generated: [HEURISTIC]
+    questions:
+      - "Quando o expert diz pra fazer X em vez de Y? Qual criterio?"
+      - "Quais 'regras de bolso' o expert ensina?"
+      - "Que frases do tipo 'sempre que...', 'nunca...', 'se... entao...' aparecem?"
+      - "Como o expert toma decisoes? Quais criterios usa?"
+      - "Quais sao as prioridades: o que fazer PRIMEIRO?"
+    rules:
+      - "Cada regra deve ter formato SE/ENTAO explicito"
+      - "Se o expert da conselho sem condicao, formular a condicao implicita"
+      - "Priorizar heuristicas acionaveis sobre reflexoes abstratas"
+      - "Heuristicas formam a 'inteligencia operacional' da mente — sao as mais usadas no dia a dia"
+
+  L4:
+    name: "Voice & Personality"
+    objective: "Capturar COMO o expert comunica, nao so O QUE diz"
+    pass: P2
+    kf_types_generated: [OUTPUT_FORMAT, VOCABULARY]
+    questions:
+      - "Quais frases de assinatura o expert repete?"
+      - "Qual e o tom: formal/casual, analitico/intuitivo, confrontador/acolhedor?"
+      - "Como o expert estrutura suas respostas/entregas?"
+      - "O que o expert NUNCA diria? Quais palavras/frases evita?"
+      - "Quais metaforas ou analogias o expert usa com frequencia?"
+    rules:
+      - "Registrar frases EXATAS do expert (nao parafrasear)"
+      - "Identificar vocabulario proibido (o que o expert nunca usa)"
+      - "Capturar padrao de entrega: como o expert formata outputs"
+      - "Em modo sintetica: registrar voz de cada expert separadamente pra fusao posterior"
+
+  L5:
+    name: "Cases & Illustrations"
+    objective: "Extrair exemplos concretos, casos, historias, analogias"
+    pass: P3
+    kf_types_generated: [EXAMPLE]
+    questions:
+      - "Quais exemplos concretos o expert usa pra ilustrar?"
+      - "Tem case studies ou historias de antes/depois?"
+      - "Quais analogias o expert usa pra explicar conceitos complexos?"
+      - "Os exemplos sao do mundo do expert ou adaptados pra audiencia?"
+    rules:
+      - "Cada exemplo deve referenciar qual principio/framework/heuristica ilustra"
+      - "Exemplos ancoram conhecimento abstrato — sao essenciais pro output"
+      - "Priorizar exemplos que mostram APLICACAO (nao so historia)"
+      - "Se a fonte tem poucos exemplos, marcar gap — mente com poucos exemplos e fraca"
+
+  L6:
+    name: "Boundaries & Anti-patterns"
+    objective: "Mapear onde o conhecimento NAO se aplica, o que nunca fazer, limites"
+    pass: P3
+    kf_types_generated: [ANTI_PATTERN]
+    questions:
+      - "O que o expert explicitamente avisa pra NAO fazer?"
+      - "Onde essa metodologia FALHA ou nao se aplica?"
+      - "Quais erros comuns o expert identifica no publico dele?"
+      - "Quais premissas precisam ser verdade pro conhecimento funcionar?"
+      - "Quais sao os riscos de aplicar mal esse conhecimento?"
+    rules:
+      - "Anti-padroes viram immune system da mente gerada"
+      - "Limites de aplicabilidade sao informacao critica — sem eles a mente 'acha que sabe tudo'"
+      - "Se o expert nao menciona limites, registrar gap — nenhum framework e universal"
+      - "Consequencias concretas sao obrigatorias — 'e ruim' nao e suficiente"
+
+  # -------------------------------------------------------------------------------
+  # LENTE 7: IMPLICITO E TACITO
+  # -------------------------------------------------------------------------------
+  L7:
+    name: "Implicit & Tacit"
+    objective: "Extrair o que o expert assume como obvio mas nao escreveu — premissas, heuristicas ocultas, decisoes por omissao"
+    pass: P4
+    kf_types_generated: [HEURISTIC, PRINCIPLE, ANTI_PATTERN]
+    questions:
+      premissas:
+        - "O que o expert assume como verdade sem justificar? Quais premissas sustentam o framework?"
+        - "Que conceitos sao usados sem definicao — como se fossem obvios?"
+        - "Que publico-alvo ou contexto o expert assume sem explicitar?"
+      heuristicas_ocultas:
+        - "Que padroes SE/ENTAO existem nas entrelinhas mas nao foram formalizados?"
+        - "Quando o expert muda de abordagem entre exemplos — qual regra implicita governa isso?"
+        - "O que o expert faz consistentemente nos exemplos mas nao menciona como principio?"
+      omissoes:
+        - "O que NAO foi discutido que deveria? Quais topicos adjacentes foram ignorados?"
+        - "Que decisoes de design do framework foram feitas por omissao (alternativas nao mencionadas)?"
+        - "Que limitacoes existem mas nao foram declaradas?"
+      entrelinhas:
+        - "Que contradicoes sutis existem entre diferentes partes do conteudo?"
+        - "Quando o expert e mais enfatico — que inseguranca ou experiencia ruim esta por tras?"
+    rules:
+      - "Conhecimento implicito e o MAIS VALIOSO porque e o menos copiavel"
+      - "Marcar TODOS os KFs desta lente com nota: '[extraido de implicito]'"
+      - "Confidence de KFs implicitos: max 0.7 (precisa confirmacao no playback)"
+      - "Se nao consegue justificar a inferencia com evidencia textual, marcar inferred: true"
+      - "Premissas nao declaradas viram PRINCIPLE com nota explicativa"
+      - "Heuristicas ocultas viram HEURISTIC com SE/ENTAO explicito"
+      - "Omissoes viram ANTI_PATTERN ou gap documentado"
+      - "Base teorica: Nonaka (SECI), Polanyi (Tacit Dimension)"
+
+# -------------------------------------------------------------------------------
+# PASSE 4: IMPLICITO
+# -------------------------------------------------------------------------------
+# Passe extra apos os 3 principais. Aplicado sobre os KFs ja extraidos,
+# nao sobre as fontes diretamente. Le os KFs e pergunta: "o que falta?"
+
+  P4:
+    name: "Implicito"
+    lenses: [L7]
+    goal: "Capturar premissas, heuristicas ocultas e omissoes (~98%)"
+    strategy: "Meta-leitura: analisar os KFs extraidos e perguntar 'o que o expert assumiu sem dizer?'"
+
+# -------------------------------------------------------------------------------
+# REGRAS GLOBAIS DE ANALISE
+# -------------------------------------------------------------------------------
+global_rules:
+  reading_strategy:
+    - "Ler a fonte INTEIRA antes de comecar a extrair"
+    - "Na segunda leitura, aplicar lentes P1 (L1+L2)"
+    - "Na terceira leitura, aplicar lentes P2 (L3+L4)"
+    - "Na quarta leitura, aplicar lentes P3 (L5+L6)"
+    - "Na quinta leitura, aplicar lente P4 (L7) — meta-analise sobre os KFs ja extraidos"
+    - "Cada leitura enriquece as anteriores — voltar e complementar KFs"
+
+  zero_inference:
+    - "NAO inferir conhecimento que a fonte nao contem"
+    - "Se algo parece faltar, marcar como gap — nao preencher"
+    - "Se precisar deduzir, marcar inferred: true com confidence < 0.5"
+    - "Tudo que nao veio explicitamente da fonte precisa de flag"
+
+  cross_source:
+    - "Em modo sintetica: analisar cada fonte separadamente, depois cruzar"
+    - "Convergencias (experts concordam) viram PRINCIPLE de alta confianca"
+    - "Divergencias (experts discordam) sao preservadas, nao eliminadas"
+    - "Atribuicao de expert e obrigatoria em cada KF — rastreabilidade"
+
+  domain_organization:
+    - "KFs sao organizados por DOMINIO, nunca por fonte/expert"
+    - "Dominios emergem da analise — nao sao pre-definidos"
+    - "Cada dominio deve ter mix de tipos (principio + framework + heuristica + exemplo)"
+    - "Dominios com poucos KFs podem ser mergeados com outros"
+
+  completeness:
+    minimum_kfs_synthetic: 20
+    minimum_kfs_consultant: 15
+    minimum_lens_coverage: 6  # de 7
+    minimum_confidence: 0.7   # media
+    minimum_frameworks: 2
+    minimum_heuristics: 3

@@ -1,0 +1,109 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# MIU Template — Clone Forge
+# ═══════════════════════════════════════════════════════════════════════════════
+# Template para um MIU (Minimum Inference Unit) individual.
+# Usado pelo @innerlens durante extracao (Fase 2).
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Arquivo de saida: 02-extraction/mius.yaml
+# Formato: lista de MIUs neste formato
+
+miu_template:
+  id: "MIU-{seq:4}"           # Ex: MIU-0001
+  content: |
+    {texto extraido — 20-300 palavras, auto-contido}
+
+  # Classificacao
+  category: "{BEHAVIORAL|METHODOLOGICAL|STORYTELLING|OPINION|TECHNICAL}"
+  tags: []                     # Ex: [IDENTITY, VALUES, HEURISTIC, TACIT]
+
+  # Proveniencia
+  source_id: "SRC-{seq:3}"    # Referencia ao sources-inventory.yaml
+  location: "{pagina X | minuto MM:SS | paragrafo N}"
+  confidence: 0.0              # 0.0-1.0
+
+  # Fragmentos (opcional — sub-unidades do MIU)
+  fragments: []
+  # fragments:
+  #   - id: "FRAG-MIU-0001-01"
+  #     content: "{sub-unidade}"
+  #     position: 1
+
+  # Relacoes (opcional — preenchido apos analise cruzada)
+  related_mius: []
+  # related_mius:
+  #   - miu_id: "MIU-0042"
+  #     relationship: "reinforces|contradicts|extends"
+
+  # Notas do extrator
+  note: ""
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# MIU Rejeitado — vai para 02-extraction/mius-rejected.yaml
+# ═══════════════════════════════════════════════════════════════════════════════
+
+rejected_miu_template:
+  id: "MIU-R-{seq:4}"
+  content: "{texto rejeitado}"
+  original_source_id: "SRC-{seq:3}"
+  rejection_reason: "{GENERIC|INFERENCE_HEAVY|DUPLICATE|CONTEXT_DEPENDENT|TOO_BROAD|OUTDATED}"
+  rejection_note: "{explicacao de por que foi rejeitado}"
+  duplicate_of: null           # MIU-XXXX se DUPLICATE
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Extraction Report — 02-extraction/extraction-report.md
+# ═══════════════════════════════════════════════════════════════════════════════
+
+report_template: |
+  # Extraction Report — {mind_name}
+
+  **Data:** {date}
+  **Agente:** @innerlens
+  **Fontes processadas:** {sources_count}
+
+  ## Metricas
+
+  | Metrica | Valor | Target | Status |
+  |---------|-------|--------|--------|
+  | MIUs extraidos | {total} | — | — |
+  | MIUs validos | {valid} | — | — |
+  | MIUs rejeitados | {rejected} | — | — |
+  | Taxa de extracao | {rate}% | >= 60% | {PASS/FAIL} |
+  | Proveniencia completa | {provenance}% | >= 90% | {PASS/FAIL} |
+
+  ## Distribuicao por Categoria
+
+  | Categoria | Count | % | Target | Status |
+  |-----------|-------|---|--------|--------|
+  | BEHAVIORAL | {n} | {%} | 20-30% | {OK/LOW/HIGH} |
+  | METHODOLOGICAL | {n} | {%} | 20-30% | {OK/LOW/HIGH} |
+  | STORYTELLING | {n} | {%} | 15-25% | {OK/LOW/HIGH} |
+  | OPINION | {n} | {%} | 15-25% | {OK/LOW/HIGH} |
+  | TECHNICAL | {n} | {%} | 10-20% | {OK/LOW/HIGH} |
+
+  ## Distribuicao por Confianca
+
+  | Nivel | Count | % | Target |
+  |-------|-------|---|--------|
+  | High (0.8-1.0) | {n} | {%} | >= 40% |
+  | Medium (0.5-0.79) | {n} | {%} | 30-40% |
+  | Low (0.3-0.49) | {n} | {%} | <= 20% |
+
+  ## Motivos de Rejeicao
+
+  | Motivo | Count |
+  |--------|-------|
+  | GENERIC | {n} |
+  | INFERENCE_HEAVY | {n} |
+  | DUPLICATE | {n} |
+  | CONTEXT_DEPENDENT | {n} |
+  | TOO_BROAD | {n} |
+  | OUTDATED | {n} |
+
+  ## Gaps Identificados
+
+  {lista de gaps — categorias com poucos MIUs, fontes nao processadas, etc}
+
+  ## Recomendacoes
+
+  {acoes sugeridas para melhorar a extracao}

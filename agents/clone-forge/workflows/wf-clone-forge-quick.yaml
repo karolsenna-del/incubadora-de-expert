@@ -1,0 +1,323 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# WORKFLOW: Clone Forge — Quick Mode
+# Version: 1.0.0
+# Purpose: Pipeline simplificado pulando MIU/drivers/psicometria
+# ═══════════════════════════════════════════════════════════════════════════════
+
+workflow-id: wf-clone-forge-quick
+name: "Clone Forge — Quick Mode"
+version: "1.0.0"
+estimated-time: "2-4 horas"
+complexity: medium
+resumable: true
+
+description: |
+  Pipeline simplificado que pula as fases de MIU extraction, driver inference
+  e psychometric mapping. Usa diretamente o Squad Creator para Voice + Thinking DNA
+  e agrega num perfil mais enxuto.
+
+  Ideal para:
+  - Primeiro clone rapido (MVP)
+  - Pessoas com pouco conteudo disponivel
+  - Quando o Squad Creator Premium ja e suficiente
+  - Validacao rapida antes de investir no pipeline completo
+
+  O que PULA: Fases 2 (MIUs), 4 (Drivers), 5 (Psicometria)
+  O que MANTEM: Ingestao, Coleta, Entrevista, DNA, Perfil, Gap Analysis, Validacao, Agente
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# AGENTS (subset do full pipeline)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+specialists:
+  orchestrator:
+    agent: "@clone-forge-chief"
+    role: "Pipeline Orchestrator"
+
+  external_knowledge_architect:
+    agent: "@oalanicolas"
+    role: "Knowledge Architect (Squad Creator)"
+    squad: "squad-creator"
+
+  external_process_validator:
+    agent: "@pedro-valerio"
+    role: "Process Absolutist (Squad Creator)"
+    squad: "squad-creator"
+
+  # @innerlens e @cognitive-motor NAO sao invocados no modo quick
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# INPUTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+inputs:
+  required:
+    - mind_name: "Nome da pessoa a clonar"
+    - domain: "Area de expertise principal"
+  optional:
+    - sources_path: "Caminho para conteudo local"
+    - subject_present: "true|false (default: false)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASES (5 fases — subset do pipeline completo)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+phases:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 0: INGESTAO DE CONTEUDO (identica ao full)
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 0
+    name: "Ingestao de Conteudo"
+    duration: "30-60 min"
+    task: "ingest-local-content.md"
+    agent: "@clone-forge-chief"
+    blocking: false
+    skip_if: "Nenhum conteudo local"
+
+    output:
+      files:
+        - "01-sources/raw/*.md"
+        - "01-sources/transcripts/*.md"
+        - "01-sources/local-sources-index.yaml"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 1: COLETA E VALIDACAO (identica ao full)
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 1
+    name: "Coleta e Validacao de Fontes"
+    duration: "30-60 min"
+    task: "collect-and-merge-sources.md"
+    agent: "@oalanicolas"
+    blocking: true
+
+    checkpoint:
+      gate: "QG-001 SOURCE_QUALITY"
+      blocking: true
+      # Criterios relaxados para quick mode
+      criteria:
+        - "5+ fontes totais (relaxado de 10)"
+        - "3+ fontes Tier 1 (relaxado de 5)"
+        - "2+ tipos diferentes (relaxado de 3)"
+
+    output:
+      file: "01-sources/sources-inventory.yaml"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 1.5: ENTREVISTA PROFUNDA (identica ao full)
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 1.5
+    name: "Entrevista Profunda"
+    duration: "30-90 min"
+    task: "deep-interview.md"
+    agent: "@clone-forge-chief"
+    conditional: true
+    condition: "subject_present == true"
+    # No quick mode, entrevista roda se sujeito esta presente (sem threshold de coverage)
+
+    output:
+      files:
+        - "01-sources/interview/bloco-1-identidade.md"
+        - "01-sources/interview/bloco-2-voz.md"
+        - "01-sources/interview/bloco-3-pensamento.md"
+        - "01-sources/interview/bloco-4-metodo.md"
+        - "01-sources/interview/bloco-5-contradicoes.md"
+        - "01-sources/interview/bloco-6-tacito.md"
+
+  # ─── FASES PULADAS NO QUICK MODE ───────────────────────────────────────────
+  # Phase 2: MIU Extraction — SKIPPED (usa DNA direto sem MIUs)
+  # Phase 4: Driver Inference — SKIPPED
+  # Phase 5: Psychometric Mapping — SKIPPED
+  # ────────────────────────────────────────────────────────────────────────────
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 3: EXTRACAO DE DNA (simplificada — sem MIU enrichment)
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 3
+    name: "Extracao de DNA"
+    duration: "2-3 horas"
+    task: "extract-dna-enriched.md"
+    agent: "@oalanicolas"
+    blocking: true
+    quick_mode_note: "Executa sem MIU enrichment — usa fontes diretas como no Squad Creator original"
+
+    checkpoint:
+      gate: "QG-003 DNA_QUALITY"
+      blocking: true
+      criteria:
+        - "Voice DNA score >= 7/10 (relaxado de 8)"
+        - "Thinking DNA score >= 6/9 (relaxado de 7)"
+
+    output:
+      files:
+        - "03-dna/voice-dna.yaml"
+        - "03-dna/thinking-dna.yaml"
+        - "03-dna/dna-synthesis.yaml"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 6: AGREGACAO DE PERFIL (simplificada)
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 6
+    name: "Agregacao de Perfil"
+    duration: "30-60 min"
+    task: "aggregate-profile.md"
+    agent: "@clone-forge-chief"
+    blocking: true
+    quick_mode_note: |
+      Agrega sem dados de drivers e psicometria.
+      Modulos preenchidos a partir de DNA + fontes + entrevista.
+      Completude esperada menor (60-80%).
+
+    checkpoint:
+      gate: "QG-004 PROFILE_COMPLETENESS"
+      blocking: true
+      criteria:
+        - "Identidade >= 70% (relaxado de 80%)"
+        - "Modelo Mental >= 70%"
+        - "Operacional >= 60%"
+        - "Media geral >= 65%"
+
+    output:
+      files:
+        - "06-profile/identity.yaml"
+        - "06-profile/mental-model.yaml"
+        - "06-profile/operational.yaml"
+        - "06-profile/repertoire.yaml"
+        - "06-profile/unified-profile.md"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 6.5: GAP ANALYSIS (identica ao full)
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 6.5
+    name: "Gap Analysis + Questionario"
+    duration: "15-30 min"
+    task: "gap-analysis-questionnaire.md"
+    agent: "@clone-forge-chief"
+    conditional: true
+    condition: "completeness < 0.65 in any module AND subject_present"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 7: VALIDACAO (simplificada)
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 7
+    name: "Validacao"
+    duration: "15 min"
+    task: "validate-clone-forge.md"
+    agent: "@oalanicolas + @pedro-valerio"
+    blocking: true
+
+    checkpoint:
+      gate: "QG-005 CLONE_VALIDATION"
+      blocking: true
+      criteria:
+        - "Traceability Audit Layer 2 PASS (relaxed: MIUs >= 80%)"
+        - "Smoke tests 3/3 PASS"
+        - "Fidelidade >= 65% (relaxado de 80%)"
+      note: "Quick mode aceita fidelidade e MIU traceability menores — resultado e v1.0-v2.0"
+
+    output:
+      files:
+        - "07-validation/traceability-audit.yaml"
+        - "07-validation/smoke-test-results.yaml"
+        - "07-validation/fidelity-score.yaml"
+        - "07-validation/quality-dashboard.md"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 8: GERACAO DE AGENTE (identica ao full)
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 8
+    name: "Geracao de Agente"
+    duration: "15 min"
+    task: "generate-agent-from-profile.md"
+    agent: "@clone-forge-chief"
+    blocking: false
+
+    output:
+      files:
+        - "08-agent/agent-config.yaml"
+        - "08-agent/system-prompt.md"
+        - "08-agent/deployment-notes.md"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# EXECUTION
+# ═══════════════════════════════════════════════════════════════════════════════
+
+execution:
+  mode: sequential
+  command: "*clone-forge {name} --domain \"{domain}\" --quick"
+
+  skipped_phases:
+    - phase: 2
+      name: "MIU Extraction"
+      reason: "Quick mode usa DNA direto sem semantic chunking"
+    - phase: 4
+      name: "Driver Inference"
+      reason: "Sem MIUs nao ha base para inferir drivers"
+    - phase: 5
+      name: "Psychometric Mapping"
+      reason: "Sem drivers nao ha base para mapeamento psicometrico"
+
+  skipped_outputs:
+    - "02-extraction/ (inteira)"
+    - "04-drivers/ (inteira)"
+    - "05-psychometric/ (inteira)"
+    - "06-profile/visual-framework.yaml"
+    - "06-profile/ecosystem.yaml"
+    - "06-profile/contradictions.yaml"
+    - "06-profile/obsessions.yaml"
+
+  expected_fidelity: "60-80% (v1.0-v2.0)"
+  upgrade_path: |
+    Para subir de tier, re-executar como full:
+    *clone-forge {name} --domain "{domain}" (sem --quick)
+    O pipeline detecta o clone existente (brownfield) e completa as fases faltantes.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# QUALITY GATES (relaxados)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+quality_gates:
+  - gate: QG-001
+    name: SOURCE_QUALITY
+    phase: 1
+    blocking: true
+    relaxed: true
+
+  - gate: QG-003
+    name: DNA_QUALITY
+    phase: 3
+    blocking: true
+    relaxed: true
+
+  - gate: QG-004
+    name: PROFILE_COMPLETENESS
+    phase: 6
+    blocking: true
+    relaxed: true
+
+  - gate: QG-005
+    name: CLONE_VALIDATION
+    phase: 7
+    blocking: true
+    relaxed: true
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# COMPARISON: FULL vs QUICK
+# ═══════════════════════════════════════════════════════════════════════════════
+
+comparison:
+  full:
+    phases: 11
+    time: "8-14h"
+    fidelity: "80-97%"
+    outputs: "30+ arquivos em 8 pastas"
+    tier: "v2.0-v3.0+"
+    use_case: "Clone de producao"
+
+  quick:
+    phases: 7
+    time: "2-4h"
+    fidelity: "60-80%"
+    outputs: "15-20 arquivos em 5 pastas"
+    tier: "v1.0-v2.0"
+    use_case: "MVP, validacao rapida, pouco conteudo"

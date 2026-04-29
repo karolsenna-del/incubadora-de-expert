@@ -1,0 +1,59 @@
+# SYNAPSE Manifest — Auroq OS
+# KEY=VALUE format (CARL-compatible)
+# Defines which domain files are active and their attributes
+
+# Constitution (L0) — always loaded, non-negotiable
+CONSTITUTION_STATE=active
+CONSTITUTION_ALWAYS_ON=true
+CONSTITUTION_NON_NEGOTIABLE=true
+
+# Global rules (L1) — always loaded
+GLOBAL_RULES_STATE=active
+GLOBAL_RULES_ALWAYS_ON=true
+
+# Global context (L1) — always loaded
+GLOBAL_CONTEXT_STATE=active
+GLOBAL_CONTEXT_ALWAYS_ON=true
+
+# Agent: Companion
+AGENT_COMPANION_STATE=active
+AGENT_COMPANION_AGENT_TRIGGER=companion
+
+# Agent: Aurora (auroq-master)
+AGENT_AUROQ_MASTER_STATE=active
+AGENT_AUROQ_MASTER_AGENT_TRIGGER=auroq-master
+
+# Agent: Ops
+AGENT_OPS_STATE=active
+AGENT_OPS_AGENT_TRIGGER=ops
+
+# Agent: Atlas (analyst)
+AGENT_ANALYST_STATE=active
+AGENT_ANALYST_AGENT_TRIGGER=analyst
+
+# Agent: Organizer
+AGENT_ORGANIZER_STATE=active
+AGENT_ORGANIZER_AGENT_TRIGGER=organizer
+
+# Meta Squad: Squad Forge
+SQUAD_SQUAD_FORGE_STATE=active
+SQUAD_SQUAD_FORGE_AGENT_TRIGGER=squad-forge
+
+# Meta Squad: Mind Forge
+SQUAD_MIND_FORGE_STATE=active
+SQUAD_MIND_FORGE_AGENT_TRIGGER=mind-forge
+
+# Meta Squad: Worker Forge
+SQUAD_WORKER_FORGE_STATE=active
+SQUAD_WORKER_FORGE_AGENT_TRIGGER=worker-forge
+
+# Meta Squad: Clone Forge
+SQUAD_CLONE_FORGE_STATE=active
+SQUAD_CLONE_FORGE_AGENT_TRIGGER=clone-forge
+
+# Meta Squad: ETLmaker
+SQUAD_ETLMAKER_STATE=active
+SQUAD_ETLMAKER_AGENT_TRIGGER=etlmaker
+
+# Global exclusions
+GLOBAL_EXCLUDE=node_modules,.git,.playwright-mcp

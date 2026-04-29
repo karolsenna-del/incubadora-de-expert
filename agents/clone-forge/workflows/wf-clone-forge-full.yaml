@@ -1,0 +1,711 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# WORKFLOW: Clone Forge — Full Pipeline
+# Version: 1.0.0
+# Purpose: Pipeline completo de clonagem cognitiva 360 graus (11 fases)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+workflow-id: wf-clone-forge-full
+name: "Clone Forge — Full Pipeline"
+version: "1.0.0"
+estimated-time: "8-14 horas (pausavel por fase)"
+complexity: high
+resumable: true
+
+description: |
+  Pipeline completo de clonagem cognitiva que combina 3 abordagens:
+  (1) Squad Creator Premium — Voice DNA + Thinking DNA + Smoke Tests
+  (2) POC v1.1 — Ontologia de Conhecimento em 4 camadas + 6 modulos contextuais
+  (3) Pipeline do Alan — MIU semantic chunking + drivers psicologicos + mapeamento psicometrico
+
+  Produz clone multi-arquivo em minds/{slug}/ com 30+ arquivos organizados em 8 pastas.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SPECIALIST AGENTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+specialists:
+
+  orchestrator:
+    agent: "@clone-forge-chief"
+    role: "Pipeline Orchestrator"
+    responsibilities:
+      - "Gerenciar pipeline de 11 fases"
+      - "Conduzir entrevista profunda (Fase 1.5)"
+      - "Agregar perfil POC (Fase 6)"
+      - "Gap analysis e questionario (Fase 6.5)"
+      - "Gerar agente final (Fase 8)"
+    invoke_for:
+      - "Phase 0: Ingestao"
+      - "Phase 1.5: Entrevista"
+      - "Phase 6: Agregacao"
+      - "Phase 6.5: Gap Analysis"
+      - "Phase 8: Geracao"
+
+  semantic_extractor:
+    agent: "@innerlens"
+    role: "Semantic Extractor"
+    responsibilities:
+      - "Extracao de MIUs zero-inference"
+      - "Classificacao e validacao"
+      - "Proveniencia por item"
+    invoke_for:
+      - "Phase 2: MIU Extraction"
+
+  psychological_motor:
+    agent: "@cognitive-motor"
+    role: "Psychological Motor"
+    responsibilities:
+      - "Inferencia de drivers psicologicos"
+      - "Mapeamento psicometrico"
+      - "Deteccao de relacoes entre drivers"
+    invoke_for:
+      - "Phase 4: Driver Inference"
+      - "Phase 5: Psychometric Mapping"
+
+  external_knowledge_architect:
+    agent: "@oalanicolas"
+    role: "Knowledge Architect (Squad Creator)"
+    squad: "squad-creator"
+    responsibilities:
+      - "Curadoria de fontes (ouro vs bronze)"
+      - "Extracao de Voice DNA + Thinking DNA"
+      - "Validacao de fidelidade"
+    invoke_for:
+      - "Phase 1: Source Collection"
+      - "Phase 3: DNA Extraction"
+      - "Phase 7: Validation (smoke tests)"
+
+  external_process_validator:
+    agent: "@pedro-valerio"
+    role: "Process Absolutist (Squad Creator)"
+    squad: "squad-creator"
+    responsibilities:
+      - "Validacao de processos"
+      - "Blind test design"
+      - "Quality gate enforcement"
+    invoke_for:
+      - "Phase 7: Validation (blind test, fidelity)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# INPUTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+inputs:
+  required:
+    - mind_name: "Nome da pessoa a clonar"
+    - domain: "Area de expertise principal"
+  optional:
+    - sources_path: "Caminho para conteudo local ja existente"
+    - subject_present: "true|false — pessoa esta disponivel para entrevista? (default: false)"
+    - formal_assessments: "Lista de assessments formais disponiveis (se instalados)"
+    - mode: "full|quick (default: full)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+phases:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 0: INGESTAO DE CONTEUDO
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 0
+    name: "Ingestao de Conteudo"
+    duration: "30-60 min"
+    task: "ingest-local-content.md"
+    agent: "@clone-forge-chief"
+    blocking: false
+    skip_if: "Nenhum conteudo local disponivel"
+
+    purpose: |
+      Aceita qualquer formato: video, audio, PDF, docs, texto, YouTube,
+      redes sociais, AIOS skills, assessments. Normaliza tudo para markdown.
+
+    steps:
+      - step: 1
+        action: "Criar diretorio minds/{slug}/ com todas as subpastas"
+      - step: 2
+        action: "Inicializar manifest.yaml"
+      - step: 3
+        action: "Perguntar ao usuario que conteudo tem disponivel"
+        elicit: true
+      - step: 4
+        action: "Processar cada input conforme source-type-handlers.yaml"
+      - step: 5
+        action: "Salvar conteudo normalizado em 01-sources/"
+      - step: 6
+        action: "Criar local-sources-index.yaml"
+
+    output:
+      files:
+        - "01-sources/raw/*.md"
+        - "01-sources/transcripts/*.md"
+        - "01-sources/local-sources-index.yaml"
+      location: "minds/{mind_slug}/"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 1: COLETA E VALIDACAO DE FONTES
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 1
+    name: "Coleta e Validacao de Fontes"
+    duration: "30-60 min"
+    task: "collect-and-merge-sources.md"
+    agent: "@oalanicolas"
+    blocking: true
+
+    purpose: |
+      Wrapper do Squad Creator collect-sources.md. Merge fontes locais
+      (Fase 0) com fontes web. Classifica tudo por tier.
+
+    steps:
+      - step: 1
+        action: "Carregar fontes locais de Phase 0 (se existirem)"
+      - step: 2
+        action: "Executar source discovery via @oalanicolas"
+        specialist: "@oalanicolas"
+      - step: 3
+        action: "Merge local + web em inventario unificado"
+      - step: 4
+        action: "Classificar por tier (0-3)"
+        specialist: "@oalanicolas"
+      - step: 5
+        action: "Validar cobertura"
+
+    checkpoint:
+      gate: "QG-001 SOURCE_QUALITY"
+      blocking: true
+      criteria:
+        - "10+ fontes totais"
+        - "5+ fontes Tier 1 (primarias)"
+        - "3+ tipos diferentes de fonte"
+        - "5+ horas OU 200+ paginas de conteudo"
+        - "Framework principal triangulado (3+ fontes)"
+      decision_matrix:
+        GO: "5/5 blocking checks → prosseguir"
+        CONDITIONAL: "4/5 + plano de aquisicao → prosseguir com flag"
+        NO_GO: "<4/5 → PARAR, pesquisar mais"
+      action_if_fail: "Expandir busca ou pedir materiais ao usuario"
+
+    rework:
+      retry_max: 2
+      on_retry_fail: "Escalar ao usuario com gap analysis"
+
+    output:
+      file: "01-sources/sources-inventory.yaml"
+      location: "minds/{mind_slug}/"
+      required_for: ["Phase 1.5", "Phase 2", "Phase 3"]
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 1.5: ENTREVISTA PROFUNDA
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 1.5
+    name: "Entrevista Profunda"
+    duration: "30-90 min"
+    task: "deep-interview.md"
+    agent: "@clone-forge-chief"
+    blocking: false
+    conditional: true
+    condition: "subject_present == true AND source_coverage < 0.8"
+
+    purpose: |
+      Extrair conhecimento tacito via questionario interativo de 6 blocos.
+      So roda se a pessoa esta presente E fontes sao insuficientes.
+      Respostas viram Tier 0 (OURO MAXIMO).
+
+    blocks:
+      - block: 1
+        name: "Identidade"
+        topics: "historia, turning points, valores, rejeicoes"
+      - block: 2
+        name: "Voz"
+        topics: "como fala, expressoes, tom por contexto"
+      - block: 3
+        name: "Pensamento"
+        topics: "como decide, heuristicas, prioridades, vieses"
+      - block: 4
+        name: "Metodo"
+        topics: "frameworks proprios, como ensina, o que funciona"
+      - block: 5
+        name: "Contradicoes"
+        topics: "onde se contradiz, tensoes internas, pontos cegos"
+      - block: 6
+        name: "Tacito"
+        topics: "o que faz diferente do que ensina, quando quebra regras"
+
+    output:
+      files:
+        - "01-sources/interview/bloco-1-identidade.md"
+        - "01-sources/interview/bloco-2-voz.md"
+        - "01-sources/interview/bloco-3-pensamento.md"
+        - "01-sources/interview/bloco-4-metodo.md"
+        - "01-sources/interview/bloco-5-contradicoes.md"
+        - "01-sources/interview/bloco-6-tacito.md"
+      tier: 0
+      location: "minds/{mind_slug}/"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 2: EXTRACAO DE MIUs
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 2
+    name: "Extracao de MIUs"
+    duration: "1-2 horas"
+    task: "extract-mius.md"
+    agent: "@innerlens"
+    blocking: true
+
+    purpose: |
+      Chunking semantico zero-inference. Extrai MIUs de todas as fontes,
+      classifica em 5 categorias, valida e rastreia proveniencia.
+
+    steps:
+      - step: 1
+        action: "Carregar fontes normalizadas"
+      - step: 2
+        action: "Processar em batches (evitar limite de contexto)"
+      - step: 3
+        action: "Extrair candidatos a MIU"
+      - step: 4
+        action: "Classificar: BEHAVIORAL, METHODOLOGICAL, STORYTELLING, OPINION, TECHNICAL"
+      - step: 5
+        action: "Atribuir confianca baseada em tier da fonte"
+      - step: 6
+        action: "Validar contra regras de rejeicao"
+      - step: 7
+        action: "Gerar fragmentos para MIUs complexos"
+      - step: 8
+        action: "Gerar extraction-report.md"
+
+    checkpoint:
+      gate: "QG-002 MIU_QUALITY"
+      blocking: true
+      checklist: "checklists/miu-quality-gate.md"
+      criteria:
+        - "30+ MIUs validos"
+        - "5+ por categoria"
+        - "Taxa extracao >= 60%"
+        - "Proveniencia >= 90%"
+        - "Zero MIUs genericos no set valido"
+
+    output:
+      files:
+        - "02-extraction/mius.yaml"
+        - "02-extraction/mius-rejected.yaml"
+        - "02-extraction/fragments.yaml"
+        - "02-extraction/extraction-report.md"
+      location: "minds/{mind_slug}/"
+      required_for: ["Phase 3", "Phase 4"]
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 3: EXTRACAO DE DNA (ENRICHED)
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 3
+    name: "Extracao de DNA Enriched"
+    duration: "2-4 horas"
+    task: "extract-dna-enriched.md"
+    agent: "@oalanicolas"
+    blocking: true
+
+    purpose: |
+      Wrapper do Squad Creator Voice DNA + Thinking DNA, enriquecido com MIUs.
+      Tambem extrai conhecimento implicito.
+
+    steps:
+      - step: 1
+        action: "Carregar MIUs como contexto adicional"
+      - step: 2
+        action: "Extrair Voice DNA via @oalanicolas"
+        specialist: "@oalanicolas"
+      - step: 3
+        action: "Extrair Thinking DNA via @oalanicolas"
+        specialist: "@oalanicolas"
+      - step: 4
+        action: "Extrair conhecimento implicito"
+      - step: 5
+        action: "Sintetizar DNA combinado"
+
+    checkpoint:
+      gate: "QG-003 DNA_QUALITY"
+      blocking: true
+      criteria:
+        - "Voice DNA score >= 8/10"
+        - "Thinking DNA score >= 7/9"
+        - "10+ power words"
+        - "5+ signature phrases"
+        - "5+ heuristicas documentadas"
+        - "Pipeline de decisao mapeado"
+
+    rework:
+      max_iterations: 3
+      on_iteration_fail: "Escalar com gaps documentados"
+
+    output:
+      files:
+        - "03-dna/voice-dna.yaml"
+        - "03-dna/thinking-dna.yaml"
+        - "03-dna/implicit-knowledge.yaml"
+        - "03-dna/dna-synthesis.yaml"
+      location: "minds/{mind_slug}/"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 4: INFERENCIA DE DRIVERS
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 4
+    name: "Inferencia de Drivers"
+    duration: "1-2 horas"
+    task: "infer-drivers.md"
+    agent: "@cognitive-motor"
+    blocking: true
+
+    purpose: |
+      Infere drivers psicologicos a partir dos MIUs.
+      Registra cadeia de evidencia MIU → driver.
+      Detecta relacoes entre drivers.
+
+    steps:
+      - step: 1
+        action: "Carregar MIUs + driver catalog"
+      - step: 2
+        action: "Match MIUs contra indicadores de drivers"
+      - step: 3
+        action: "Calcular forca: weighted(count x confidence x tier_weight)"
+      - step: 4
+        action: "Filtrar: min 2 MIUs, min strength 20"
+      - step: 5
+        action: "Detectar relacoes usando templates"
+      - step: 6
+        action: "Identificar paradoxos produtivos"
+      - step: 7
+        action: "Gerar driver-report.md"
+
+    checkpoint:
+      checklist: "checklists/driver-quality-gate.md"
+      criteria:
+        - "20+ drivers inferidos"
+        - "Top 5 com forca >= 60"
+        - "Todo driver com 2+ MIUs de evidencia"
+        - "5+ relacoes detectadas"
+        - "1+ paradoxo produtivo"
+
+    output:
+      files:
+        - "04-drivers/mind-drivers.yaml"
+        - "04-drivers/driver-evidence.yaml"
+        - "04-drivers/driver-relationships.yaml"
+        - "04-drivers/driver-report.md"
+      location: "minds/{mind_slug}/"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 5: MAPEAMENTO PSICOMETRICO
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 5
+    name: "Mapeamento Psicometrico"
+    duration: "30-60 min"
+    task: "map-psychometrics.md"
+    agent: "@cognitive-motor"
+    blocking: false
+
+    purpose: |
+      Mapeia drivers para 6 sistemas psicometricos.
+      Integra assessments formais quando disponiveis.
+      Marca tudo como "estimado" vs "aferido".
+
+    systems:
+      - "MBTI (16 tipos + 8 funcoes)"
+      - "Enneagram (9 tipos + asas + instintos + trifix)"
+      - "DISC (4 dimensoes 0-100)"
+      - "Big Five / OCEAN (5 dimensoes + facetas)"
+      - "IQ/EQ (estimativas com evidencia)"
+      - "Spiral Dynamics (nivel predominante)"
+
+    checkpoint:
+      checklist: "checklists/psychometric-quality-gate.md"
+      blocking: false
+
+    output:
+      files:
+        - "05-psychometric/mbti.yaml"
+        - "05-psychometric/enneagram.yaml"
+        - "05-psychometric/disc.yaml"
+        - "05-psychometric/big-five.yaml"
+        - "05-psychometric/iq-eq-estimate.yaml"
+        - "05-psychometric/psychometric-synthesis.md"
+      location: "minds/{mind_slug}/"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 6: AGREGACAO DE PERFIL (POC)
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 6
+    name: "Agregacao de Perfil"
+    duration: "1-2 horas"
+    task: "aggregate-profile.md"
+    agent: "@clone-forge-chief"
+    blocking: true
+
+    purpose: |
+      Agrega tudo em 6 modulos POC + extras.
+      Proveniencia por campo. Calcula completude.
+
+    modules:
+      - "identity.yaml"
+      - "mental-model.yaml"
+      - "operational.yaml"
+      - "repertoire.yaml"
+      - "visual-framework.yaml"
+      - "ecosystem.yaml"
+      - "contradictions.yaml"
+      - "obsessions.yaml"
+      - "unified-profile.md"
+
+    checkpoint:
+      gate: "QG-004 PROFILE_COMPLETENESS"
+      blocking: true
+      criteria:
+        - "Identidade >= 80%"
+        - "Modelo Mental >= 80%"
+        - "Operacional >= 70%"
+        - "Repertorio >= 70%"
+        - "Framework Visual >= 60%"
+        - "Ecossistema >= 60%"
+        - "Media geral >= 80%"
+      action_if_fail: "Trigger Phase 6.5 se subject_present, senao documentar gaps"
+
+    output:
+      files:
+        - "06-profile/identity.yaml"
+        - "06-profile/mental-model.yaml"
+        - "06-profile/operational.yaml"
+        - "06-profile/repertoire.yaml"
+        - "06-profile/visual-framework.yaml"
+        - "06-profile/ecosystem.yaml"
+        - "06-profile/contradictions.yaml"
+        - "06-profile/obsessions.yaml"
+        - "06-profile/unified-profile.md"
+      location: "minds/{mind_slug}/"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 6.5: GAP ANALYSIS + QUESTIONARIO
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 6.5
+    name: "Gap Analysis + Questionario"
+    duration: "15-60 min"
+    task: "gap-analysis-questionnaire.md"
+    agent: "@clone-forge-chief"
+    blocking: false
+    conditional: true
+    condition: "completeness < 0.8 in any module AND subject_present == true"
+
+    purpose: |
+      Auto-diagnostico de gaps. Gera questionario cirurgico.
+      Nao repete o que ja sabe. Alimenta re-extracao parcial.
+
+    steps:
+      - step: 1
+        action: "Identificar modulos abaixo do threshold"
+      - step: 2
+        action: "Analisar que dados especificos faltam"
+      - step: 3
+        action: "Gerar perguntas cirurgicas (3-10)"
+      - step: 4
+        action: "Apresentar ao sujeito"
+        elicit: true
+      - step: 5
+        action: "Capturar respostas → 01-sources/gap-responses/"
+      - step: 6
+        action: "Re-extrair MIUs parciais"
+      - step: 7
+        action: "Re-agregar modulos afetados"
+      - step: 8
+        action: "Re-checar completude"
+
+    output:
+      files:
+        - "01-sources/gap-responses/*.md"
+      updates:
+        - "06-profile/ (modulos afetados)"
+        - "02-extraction/mius.yaml (novos MIUs)"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 7: VALIDACAO
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 7
+    name: "Validacao"
+    duration: "30 min"
+    task: "validate-clone-forge.md"
+    agent: "@oalanicolas + @pedro-valerio"
+    blocking: true
+
+    purpose: |
+      Validacao final: auditoria exhaustiva de rastreabilidade (Layer 2),
+      smoke tests, blind test, fidelidade 8 camadas.
+      Gate final antes da geracao do agente.
+
+    tests:
+      traceability_audit:
+        name: "Layer 2 — Exhaustive Traceability Audit"
+        blocking: true  # smoke tests so rodam se Layer 2 PASS
+        checks:
+          - "Voice DNA: 100% power_words + signature_phrases + never_use no draft prompt"
+          - "Thinking DNA: 100% heuristics + decision_pipeline + non_negotiables"
+          - "POC Critical: 100% values + rejections + mission"
+          - "Contradictions: 100% paradoxos preservados"
+          - "Obsessions: 100% obsessoes referenciadas"
+          - "High-Confidence MIUs: >= 90% dos top 20 rastreaveis em DNA/POC"
+
+      smoke_tests:
+        - test: 1
+          name: "Conhecimento do Dominio"
+          pass: "4/5"
+        - test: 2
+          name: "Tomada de Decisao"
+          pass: "4/5"
+        - test: 3
+          name: "Resposta a Objecao"
+          pass: "4/5"
+
+      blind_test:
+        participants: ">= 5"
+        threshold: ">= 70% atribuicao correta"
+        status: "optional (recomendado)"
+
+      fidelity:
+        layers: 8
+        observable_weight: 0.8
+        cognitive_weight: 1.0
+        deep_identity_weight: 1.0
+        minimum: "80%"
+
+    checkpoint:
+      gate: "QG-005 CLONE_VALIDATION"
+      blocking: true
+      checklist: "checklists/clone-forge-validation.md"
+      criteria:
+        - "Traceability Audit Layer 2 PASS"
+        - "Smoke tests 3/3 PASS"
+        - "Fidelidade >= 80%"
+        - "Squad Creator intocado (git diff vazio)"
+
+    rework:
+      max_iterations: 3
+      on_fail: "Identificar camada fraca, re-executar fase correspondente"
+
+    output:
+      files:
+        - "07-validation/traceability-audit.yaml"
+        - "07-validation/smoke-test-results.yaml"
+        - "07-validation/blind-test-results.yaml"
+        - "07-validation/fidelity-score.yaml"
+        - "07-validation/quality-dashboard.md"
+      location: "minds/{mind_slug}/"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PHASE 8: GERACAO DE AGENTE
+  # ─────────────────────────────────────────────────────────────────────────────
+  - phase: 8
+    name: "Geracao de Agente"
+    duration: "15 min"
+    task: "generate-agent-from-profile.md"
+    agent: "@clone-forge-chief"
+    blocking: false
+
+    purpose: |
+      Gera configuracao do agente, system prompt e notas de deployment.
+      Output pronto para uso.
+
+    steps:
+      - step: 1
+        action: "Carregar perfil unificado + DNA + drivers + psicometria"
+      - step: 2
+        action: "Gerar agent-config.yaml"
+      - step: 3
+        action: "Gerar system-prompt.md"
+      - step: 4
+        action: "Gerar deployment-notes.md"
+      - step: 5
+        action: "Atualizar manifest.yaml com status final"
+
+    output:
+      files:
+        - "08-agent/agent-config.yaml"
+        - "08-agent/system-prompt.md"
+        - "08-agent/deployment-notes.md"
+      location: "minds/{mind_slug}/"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# EXECUTION
+# ═══════════════════════════════════════════════════════════════════════════════
+
+execution:
+  mode: sequential
+  parallel_phases: []  # Nenhuma fase roda em paralelo (pipeline linear)
+
+  commands:
+    full: "*clone-forge {name} --domain \"{domain}\""
+    with_subject: "*clone-forge {name} --domain \"{domain}\" --subject-present"
+    with_sources: "*clone-forge {name} --domain \"{domain}\" --sources {path}"
+    resume: "*resume"
+    status: "*status"
+
+  state:
+    file: "manifest.yaml"
+    location: "minds/{mind_slug}/"
+    resume_from: "any phase"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# QUALITY GATES SUMMARY
+# ═══════════════════════════════════════════════════════════════════════════════
+
+quality_gates:
+  - gate: QG-001
+    name: SOURCE_QUALITY
+    phase: 1
+    blocking: true
+
+  - gate: QG-002
+    name: MIU_QUALITY
+    phase: 2
+    blocking: true
+
+  - gate: QG-003
+    name: DNA_QUALITY
+    phase: 3
+    blocking: true
+
+  - gate: QG-004
+    name: PROFILE_COMPLETENESS
+    phase: 6
+    blocking: true
+
+  - gate: QG-005
+    name: CLONE_VALIDATION
+    phase: 7
+    blocking: true
+
+overall_pass: |
+  QG-001 GO + QG-002 PASS + QG-003 PASS +
+  QG-004 PASS + QG-005 PASS (Layer 2 PASS + smoke 3/3 + fidelity >= 80%)
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DEPENDENCIES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dependencies:
+  required:
+    - squad: "squad-creator"
+      agents: ["@oalanicolas", "@pedro-valerio"]
+      tasks: ["collect-sources.md", "extract-voice-dna.md", "extract-thinking-dna.md"]
+      constraint: "NEVER modify squad-creator files"
+  optional:
+    - squad: "{assessment-squad}" # se instalado
+      usage: "Formal psychometric assessments"
+      integration: "Phase 5 — merge estimated with assessed data"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# INTEGRITY CHECK
+# ═══════════════════════════════════════════════════════════════════════════════
+
+integrity:
+  squad_creator_protection:
+    check: "git diff agents/squad-creator/"
+    expected: "empty"
+    enforcement: "Run at Phase 7 validation"
+    action_if_violated: "BLOCK — revert changes immediately"

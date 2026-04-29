@@ -1,0 +1,9 @@
+{
+  "name": "meu-negocio",
+  "version": "1.0.0",
+  "description": "Meu negocio com Auroq OS",
+  "private": true,
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

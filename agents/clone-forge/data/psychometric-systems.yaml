@@ -1,0 +1,1514 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Psychometric Systems Registry
+# ═══════════════════════════════════════════════════════════════════════════════
+# Define todos os sistemas psicometricos usados no mapeamento da pipeline
+# Clone Forge. Cada sistema tem componentes completos, regras de mapeamento,
+# requisitos de confianca e formato de output.
+#
+# IMPORTANTE: Todos os mapeamentos sao ESTIMADOS a partir de drivers e MIUs
+# extraidos, NAO sao assessments formais — a menos que resultado formal exista.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+version: "1.0.0"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DISCLAIMER GLOBAL
+# ═══════════════════════════════════════════════════════════════════════════════
+
+disclaimer: >
+  Os resultados psicometricos produzidos por este sistema sao ESTIMATIVAS
+  baseadas em analise de conteudo e inferencia de drivers psicologicos.
+  Nao substituem assessments formais aplicados por profissionais certificados.
+  Quando um assessment formal existe (ex: Zona Genialidade), ele tem precedencia
+  absoluta sobre qualquer estimativa inferida.
+
+estimation_vs_formal:
+  estimated:
+    label: "Estimado"
+    description: "Inferido a partir de drivers e MIUs sem assessment formal"
+    confidence_cap: 0.75
+    requires_disclaimer: true
+  formal:
+    label: "Aferido"
+    description: "Resultado de assessment formal aplicado por profissional"
+    confidence_cap: 1.0
+    requires_disclaimer: false
+  hybrid:
+    label: "Hibrido"
+    description: "Assessment formal existe para parte do sistema, estimativa para o resto"
+    confidence_cap: 0.85
+    requires_disclaimer: true
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SISTEMA 1: MBTI (Myers-Briggs Type Indicator)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+systems:
+
+  mbti:
+    name: "Myers-Briggs Type Indicator"
+    description: >
+      Sistema de tipologia baseado na teoria de tipos psicologicos de Carl Jung.
+      Classifica preferencias em 4 dimensoes dicotomicas e 8 funcoes cognitivas
+      organizadas em stack de 4 posicoes. A analise de funcoes cognitivas e mais
+      profunda e util que a simples tipologia de 4 letras.
+
+    components:
+      dimensions:
+        - id: EI
+          name: "Extraversion-Introversion"
+          poles: [E, I]
+          pole_descriptions:
+            E: "Extraversao — energia direcionada ao mundo externo, pessoas, acao. Processa externalizando."
+            I: "Introversao — energia direcionada ao mundo interno, reflexao, profundidade. Processa internalizando."
+
+        - id: SN
+          name: "Sensing-Intuition"
+          poles: [S, N]
+          pole_descriptions:
+            S: "Sensacao — foco em dados concretos, experiencia direta, detalhes praticos, presente."
+            N: "Intuicao — foco em padroes, possibilidades, conexoes abstratas, futuro."
+
+        - id: TF
+          name: "Thinking-Feeling"
+          poles: [T, F]
+          pole_descriptions:
+            T: "Pensamento — decisoes por logica, analise objetiva, consistencia, principios."
+            F: "Sentimento — decisoes por valores, impacto nas pessoas, harmonia, empatia."
+
+        - id: JP
+          name: "Judging-Perceiving"
+          poles: [J, P]
+          pole_descriptions:
+            J: "Julgamento — preferencia por estrutura, planejamento, conclusao, organizacao."
+            P: "Percepcao — preferencia por flexibilidade, adaptacao, opcoes abertas, espontaneidade."
+
+      cognitive_functions:
+        - id: Se
+          name: "Extraverted Sensing"
+          description: "Percepcao sensorial do momento presente. Foco em experiencia concreta, estimulos fisicos, detalhes do ambiente. Responde ao que esta acontecendo AGORA."
+          stack_positions: [dom, aux, tert, inf]
+          indicators:
+            - "Descreve experiencias com riqueza sensorial"
+            - "Reage rapidamente a estimulos do ambiente"
+            - "Valoriza acao e experiencia pratica"
+            - "Foco no aqui e agora"
+
+        - id: Si
+          name: "Introverted Sensing"
+          description: "Memoria interna detalhada e comparacao com experiencias passadas. Preserva o que funciona, cria procedimentos, valoriza estabilidade e consistencia."
+          stack_positions: [dom, aux, tert, inf]
+          indicators:
+            - "Referencia frequente a experiencias passadas"
+            - "Valoriza tradicao e metodos comprovados"
+            - "Memoria detalhada de eventos e sensacoes"
+            - "Prefere consistencia e previsibilidade"
+
+        - id: Ne
+          name: "Extraverted Intuition"
+          description: "Geracao de possibilidades e conexoes no mundo externo. Ve padroes entre coisas aparentemente nao-relacionadas. Brainstorming natural, explora multiplas opcoes."
+          stack_positions: [dom, aux, tert, inf]
+          indicators:
+            - "Gera multiplas ideias e possibilidades"
+            - "Faz conexoes entre conceitos distintos"
+            - "Muda de assunto rapidamente seguindo associacoes"
+            - "Entusiasma-se com novas oportunidades"
+
+        - id: Ni
+          name: "Introverted Intuition"
+          description: "Sintese interna de padroes em visao convergente. Enxerga para onde as coisas estao indo, insights profundos, visao de futuro. Sabe sem saber como sabe."
+          stack_positions: [dom, aux, tert, inf]
+          indicators:
+            - "Tem insights que nao sabe explicar racionalmente"
+            - "Ve tendencias e direcoes futuras"
+            - "Converge multiplas informacoes em uma unica visao"
+            - "Pensa em termos de significado profundo e simbolismo"
+
+        - id: Te
+          name: "Extraverted Thinking"
+          description: "Organizacao logica do mundo externo. Sistematiza, planeja, mede resultados, cria processos eficientes. Foco em produtividade e eficacia."
+          stack_positions: [dom, aux, tert, inf]
+          indicators:
+            - "Organiza ambientes e processos"
+            - "Toma decisoes baseadas em dados e metricas"
+            - "Valoriza eficiencia e produtividade"
+            - "Cria sistemas e frameworks de organizacao"
+
+        - id: Ti
+          name: "Introverted Thinking"
+          description: "Analise logica interna e construcao de modelos mentais. Busca entender como as coisas funcionam, precisao conceitual, consistencia logica interna."
+          stack_positions: [dom, aux, tert, inf]
+          indicators:
+            - "Analisa profundamente antes de concluir"
+            - "Busca precisao nos conceitos e definicoes"
+            - "Constroi modelos mentais complexos"
+            - "Questiona premissas e logica subjacente"
+
+        - id: Fe
+          name: "Extraverted Feeling"
+          description: "Harmonizacao do ambiente social. Le e influencia dinamicas de grupo, cria consenso, expressa valores compartilhados. Foco na harmonia interpessoal."
+          stack_positions: [dom, aux, tert, inf]
+          indicators:
+            - "Le atmosfera emocional de grupos"
+            - "Busca harmonia e consenso"
+            - "Expressa emocoes abertamente"
+            - "Adapta comunicacao ao interlocutor"
+
+        - id: Fi
+          name: "Introverted Feeling"
+          description: "Sistema de valores interno profundo. Autenticidade, convicoes pessoais, senso forte do que e certo/errado baseado em valores proprios, nao coletivos."
+          stack_positions: [dom, aux, tert, inf]
+          indicators:
+            - "Toma decisoes por convicoes pessoais profundas"
+            - "Valoriza autenticidade acima de tudo"
+            - "Rejeita fortemente o que contraria seus valores"
+            - "Expressa valores de forma individual, nao grupal"
+
+      types:
+        - INTJ
+        - INTP
+        - ENTJ
+        - ENTP
+        - INFJ
+        - INFP
+        - ENFJ
+        - ENFP
+        - ISTJ
+        - ISFJ
+        - ESTJ
+        - ESFJ
+        - ISTP
+        - ISFP
+        - ESTP
+        - ESFP
+
+      type_function_stacks:
+        INTJ: { dom: Ni, aux: Te, tert: Fi, inf: Se }
+        INTP: { dom: Ti, aux: Ne, tert: Si, inf: Fe }
+        ENTJ: { dom: Te, aux: Ni, tert: Se, inf: Fi }
+        ENTP: { dom: Ne, aux: Ti, tert: Fe, inf: Si }
+        INFJ: { dom: Ni, aux: Fe, tert: Ti, inf: Se }
+        INFP: { dom: Fi, aux: Ne, tert: Si, inf: Te }
+        ENFJ: { dom: Fe, aux: Ni, tert: Se, inf: Ti }
+        ENFP: { dom: Ne, aux: Fi, tert: Te, inf: Si }
+        ISTJ: { dom: Si, aux: Te, tert: Fi, inf: Ne }
+        ISFJ: { dom: Si, aux: Fe, tert: Ti, inf: Ne }
+        ESTJ: { dom: Te, aux: Si, tert: Ne, inf: Fi }
+        ESFJ: { dom: Fe, aux: Si, tert: Ne, inf: Ti }
+        ISTP: { dom: Ti, aux: Se, tert: Ni, inf: Fe }
+        ISFP: { dom: Fi, aux: Se, tert: Ni, inf: Te }
+        ESTP: { dom: Se, aux: Ti, tert: Fe, inf: Ni }
+        ESFP: { dom: Se, aux: Fi, tert: Te, inf: Ni }
+
+    mapping_rules:
+      from_drivers:
+        - cognitive
+        - behavioral
+        - social
+      from_miu_categories:
+        - BEHAVIORAL
+        - METHODOLOGICAL
+        - OPINION
+      confidence_threshold: 0.6
+      minimum_evidence:
+        mius: 15
+        drivers: 5
+      estimation_notes: >
+        MBTI e inferido a partir de padroes de comunicacao (EI), tipo de informacao
+        priorizada (SN), base de decisao (TF) e estilo de organizacao (JP).
+        Funcoes cognitivas sao mapeadas por analise de padroes de pensamento
+        recorrentes nos MIUs e drivers cognitivos/comportamentais.
+
+    output_format:
+      primary_type: "XXXX"
+      dominant_function: "Xx"
+      auxiliary_function: "Xx"
+      tertiary_function: "Xx"
+      inferior_function: "Xx"
+      dimension_scores:
+        E_I: 0.0  # -1.0 (full I) to +1.0 (full E)
+        S_N: 0.0
+        T_F: 0.0
+        J_P: 0.0
+      confidence: 0.0  # 0.0-1.0
+      assessment_type: "estimated"  # estimated | formal | hybrid
+      evidence_summary: "Lista de MIUs e drivers que suportam a classificacao"
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # SISTEMA 2: ENNEAGRAM
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  enneagram:
+    name: "Enneagram"
+    description: >
+      Sistema de personalidade baseado em 9 tipos fundamentais, cada um com
+      motivacao central, medo basico, desejo basico e padrao de comportamento.
+      Inclui asas, instintos (sp/sx/so), trifix, centros de inteligencia e
+      niveis de saude/integracao. Rico em profundidade para mapeamento de
+      motivacoes e sombras.
+
+    components:
+      centers:
+        - id: body
+          name: "Centro do Corpo (Instintivo)"
+          types: [8, 9, 1]
+          core_emotion: "Raiva"
+          description: "Tipos centrados na acao, controle e autonomia. Processam o mundo pelo corpo e instinto. A raiva e a emocao central — expressa (8), adormecida (9) ou reprimida (1)."
+
+        - id: heart
+          name: "Centro do Coracao (Emocional)"
+          types: [2, 3, 4]
+          core_emotion: "Vergonha"
+          description: "Tipos centrados na imagem, identidade e conexao. Processam o mundo pelas emocoes. A vergonha e a emocao central — projetada (2), mascarada (3) ou internalizada (4)."
+
+        - id: head
+          name: "Centro da Cabeca (Mental)"
+          types: [5, 6, 7]
+          core_emotion: "Medo"
+          description: "Tipos centrados na seguranca, planejamento e compreensao. Processam o mundo pelo pensamento. O medo e a emocao central — recolhimento (5), antecipacao (6) ou evitacao (7)."
+
+      types:
+        - id: 1
+          name: "O Perfeccionista"
+          center: body
+          core_motivation: "Ser bom, integro, ter razao"
+          basic_fear: "Ser corrupto, defeituoso, mau"
+          basic_desire: "Integridade e correcao"
+          key_traits:
+            - "Auto-disciplina rigida"
+            - "Senso de certo/errado muito definido"
+            - "Critico interno forte"
+            - "Busca melhoria constante"
+            - "Responsabilidade e etica"
+          growth_direction: 7
+          stress_direction: 4
+          description: "Principled, purposeful, self-controlled. Strives for integrity and fears being flawed. Internal critic is loud. When healthy, becomes wise and accepting."
+
+        - id: 2
+          name: "O Ajudante"
+          center: heart
+          core_motivation: "Ser amado, necessario"
+          basic_fear: "Ser indesejado, dispensavel"
+          basic_desire: "Ser amado incondicionalmente"
+          key_traits:
+            - "Generosidade e cuidado com outros"
+            - "Antecipa necessidades alheias"
+            - "Dificuldade em reconhecer proprias necessidades"
+            - "Busca aprovacao e validacao"
+            - "Conexao emocional profunda"
+          growth_direction: 4
+          stress_direction: 8
+          description: "Caring, interpersonal, generous. Wants to be loved and fears being unwanted. When healthy, becomes genuinely altruistic without strings attached."
+
+        - id: 3
+          name: "O Realizador"
+          center: heart
+          core_motivation: "Ser valioso, bem-sucedido"
+          basic_fear: "Ser sem valor, irrelevante"
+          basic_desire: "Ser admirado e valorizado"
+          key_traits:
+            - "Orientado a resultados e metas"
+            - "Adapta imagem ao contexto"
+            - "Competitivo e eficiente"
+            - "Dificuldade em acessar emocoes genuinas"
+            - "Foco em performance e status"
+          growth_direction: 6
+          stress_direction: 9
+          description: "Success-oriented, adaptive, driven. Fears being worthless and masks emotions behind achievement. When healthy, becomes authentic and inspiring without performing."
+
+        - id: 4
+          name: "O Individualista"
+          center: heart
+          core_motivation: "Ser unico, autentico, ter identidade propria"
+          basic_fear: "Nao ter identidade, ser insignificante"
+          basic_desire: "Ser verdadeiramente si mesmo"
+          key_traits:
+            - "Intensidade emocional"
+            - "Busca de autenticidade e significado"
+            - "Senso de ser diferente dos outros"
+            - "Tendencia a melancolia e nostalgia"
+            - "Expressao criativa como necessidade"
+          growth_direction: 1
+          stress_direction: 2
+          description: "Sensitive, expressive, dramatic. Fears being without identity and yearns for significance. When healthy, becomes creative and emotionally balanced."
+
+        - id: 5
+          name: "O Investigador"
+          center: head
+          core_motivation: "Ser competente, entender o mundo"
+          basic_fear: "Ser incompetente, invadido, sem recursos"
+          basic_desire: "Ser capaz e competente"
+          key_traits:
+            - "Observador e analitico"
+            - "Necessidade de privacidade e autonomia"
+            - "Acumula conhecimento como recurso"
+            - "Minimiza necessidades emocionais"
+            - "Pensamento profundo e independente"
+          growth_direction: 8
+          stress_direction: 7
+          description: "Perceptive, cerebral, isolated. Fears being helpless and hoards knowledge and energy. When healthy, becomes visionary and generous with knowledge."
+
+        - id: 6
+          name: "O Lealista"
+          center: head
+          core_motivation: "Ter seguranca e suporte"
+          basic_fear: "Ficar sem suporte, sem orientacao"
+          basic_desire: "Seguranca e pertencimento"
+          key_traits:
+            - "Antecipa riscos e problemas"
+            - "Leal a grupos e ideias"
+            - "Questiona autoridade (ou busca)"
+            - "Pensamento cenario-pior-caso"
+            - "Confiavel e responsavel"
+          growth_direction: 9
+          stress_direction: 3
+          description: "Committed, security-oriented, anxious. Fears being without support and scans for threats. When healthy, becomes courageous and self-reliant."
+
+        - id: 7
+          name: "O Entusiasta"
+          center: head
+          core_motivation: "Estar satisfeito, ter liberdade"
+          basic_fear: "Ficar preso em dor ou privacao"
+          basic_desire: "Estar satisfeito e contente"
+          key_traits:
+            - "Otimismo e entusiasmo natural"
+            - "Mente rapida e multitarefa"
+            - "Dificuldade com dor e limitacao"
+            - "Busca constante de experiencias novas"
+            - "Reframing positivo automatico"
+          growth_direction: 5
+          stress_direction: 1
+          description: "Spontaneous, versatile, scattered. Fears being deprived and chases stimulation. When healthy, becomes focused and deeply grateful."
+
+        - id: 8
+          name: "O Desafiador"
+          center: body
+          core_motivation: "Proteger a si e aos seus, ter controle"
+          basic_fear: "Ser controlado, vulneravel"
+          basic_desire: "Auto-protecao e controle do ambiente"
+          key_traits:
+            - "Intensidade e presenca forte"
+            - "Confronta diretamente"
+            - "Protege os mais fracos"
+            - "Dificuldade com vulnerabilidade"
+            - "Decisao rapida e assertiva"
+          growth_direction: 2
+          stress_direction: 5
+          description: "Powerful, dominating, self-confident. Fears being controlled and builds protective walls. When healthy, becomes magnanimous and uses power to uplift."
+
+        - id: 9
+          name: "O Pacificador"
+          center: body
+          core_motivation: "Ter paz interior e harmonia"
+          basic_fear: "Perda e fragmentacao"
+          basic_desire: "Paz interior e estabilidade"
+          key_traits:
+            - "Mediador natural"
+            - "Ve todos os lados de uma questao"
+            - "Tende a minimizar proprias prioridades"
+            - "Resistencia passiva a conflito"
+            - "Ritmo calmo e acolhedor"
+          growth_direction: 3
+          stress_direction: 6
+          description: "Receptive, reassuring, complacent. Fears conflict and merges with others' agendas. When healthy, becomes action-oriented and self-aware."
+
+      instincts:
+        - id: sp
+          name: "Self-Preservation"
+          description: "Foco em seguranca fisica, recursos, conforto, saude, financas. Instinto de sobrevivencia e auto-suficiencia."
+          indicators:
+            - "Preocupacao com recursos e seguranca financeira"
+            - "Atencao a saude e bem-estar fisico"
+            - "Valoriza estabilidade e conforto"
+            - "Foco em sustentabilidade e independencia"
+
+        - id: sx
+          name: "Sexual (One-to-One)"
+          description: "Foco em intensidade, conexao profunda 1:1, quimica, magnetismo. Busca fusao e transformacao via relacionamentos intensos."
+          indicators:
+            - "Intensidade nas relacoes interpessoais"
+            - "Busca de conexoes profundas e transformadoras"
+            - "Presenca magnetica e intensa"
+            - "Tendencia a relacoes polarizantes"
+
+        - id: so
+          name: "Social"
+          description: "Foco em pertencimento, status social, contribuicao ao grupo, hierarquia, impacto coletivo."
+          indicators:
+            - "Consciencia de dinamicas de grupo"
+            - "Preocupacao com impacto social"
+            - "Busca de pertencimento e comunidade"
+            - "Atencao a hierarquia e posicionamento"
+
+      instinct_stacking:
+        description: "Os 3 instintos sao ordenados por predominancia. A combinacao tipo + instinto dominante cria subtipos distintos."
+        possible_stackings:
+          - "sp/sx"
+          - "sp/so"
+          - "sx/sp"
+          - "sx/so"
+          - "so/sp"
+          - "so/sx"
+
+      wings:
+        description: "Cada tipo pode ter influencia de um dos tipos adjacentes. A asa modifica a expressao do tipo core."
+        examples:
+          - "1w2 — Perfeccionista com tendencia a ajudar"
+          - "1w9 — Perfeccionista com tendencia a paz"
+          - "2w1 — Ajudante com tendencia a perfeccao"
+          - "2w3 — Ajudante com tendencia a realizacao"
+          - "3w2 — Realizador com tendencia a ajudar"
+          - "3w4 — Realizador com tendencia a individualidade"
+          - "4w3 — Individualista com tendencia a realizacao"
+          - "4w5 — Individualista com tendencia a investigacao"
+          - "5w4 — Investigador com tendencia a individualidade"
+          - "5w6 — Investigador com tendencia a lealdade"
+          - "6w5 — Lealista com tendencia a investigacao"
+          - "6w7 — Lealista com tendencia a entusiasmo"
+          - "7w6 — Entusiasta com tendencia a lealdade"
+          - "7w8 — Entusiasta com tendencia a desafio"
+          - "8w7 — Desafiador com tendencia a entusiasmo"
+          - "8w9 — Desafiador com tendencia a paz"
+          - "9w8 — Pacificador com tendencia a desafio"
+          - "9w1 — Pacificador com tendencia a perfeccao"
+
+      trifix:
+        description: >
+          Combinacao de 3 tipos, um de cada centro de inteligencia
+          (body/heart/head). Captura a complexidade da pessoa melhor
+          que tipo unico. Ex: 8-3-5 = Desafiador + Realizador + Investigador.
+        structure:
+          body_center: "Um tipo de [8, 9, 1]"
+          heart_center: "Um tipo de [2, 3, 4]"
+          head_center: "Um tipo de [5, 6, 7]"
+
+      levels_of_health:
+        description: "Cada tipo pode operar em 9 niveis de saude, agrupados em 3 faixas."
+        levels:
+          healthy:
+            range: [1, 2, 3]
+            description: "Integracao — o tipo expressa suas melhores qualidades, liberto do padrao compulsivo"
+            level_1: "Nivel de Liberacao — transcende limitacoes do tipo"
+            level_2: "Nivel de Capacidade Psicologica — virtudes mais altas ativas"
+            level_3: "Nivel de Valor Social — contribuicao genuina e saudavel"
+          average:
+            range: [4, 5, 6]
+            description: "Fixacao — o tipo opera no automatico, preso em padroes previsíveis"
+            level_4: "Nivel de Desequilibrio — fixacao começa a dominar"
+            level_5: "Nivel de Controle Interpessoal — manipulacao inconsciente"
+            level_6: "Nivel de Compensacao — overcompensacao dos medos"
+          unhealthy:
+            range: [7, 8, 9]
+            description: "Desintegracao — o tipo se torna destrutivo para si e outros"
+            level_7: "Nivel de Violacao — violacao de direitos proprios e alheios"
+            level_8: "Nivel de Delusion — desconexao da realidade"
+            level_9: "Nivel de Patologico — colapso psicologico"
+
+    mapping_rules:
+      from_drivers:
+        - motivational
+        - emotional
+        - behavioral
+        - social
+      from_miu_categories:
+        - OPINION
+        - BEHAVIORAL
+        - STORYTELLING
+      confidence_threshold: 0.55
+      minimum_evidence:
+        mius: 20
+        drivers: 8
+      estimation_notes: >
+        Enneagram e inferido a partir de motivacoes centrais (motivational drivers),
+        padroes emocionais recorrentes (emotional drivers), rejeicoes viscerais
+        (OPINION MIUs) e padroes de comportamento em stress/conforto (BEHAVIORAL MIUs).
+        O centro dominante e triangulado pela emocao central mais presente.
+        Instintos sao mapeados pelo foco predominante (seguranca, intensidade, grupo).
+
+    output_format:
+      core_type: 0  # 1-9
+      wing: "Xw0"  # ex: "4w5"
+      instinct_stack: "xx/xx"  # ex: "sp/sx"
+      trifix: "X-X-X"  # ex: "8-3-5"
+      center_dominance:
+        body: 0.0  # 0.0-1.0
+        heart: 0.0
+        head: 0.0
+      level_of_health: 0  # 1-9
+      health_band: ""  # healthy | average | unhealthy
+      growth_direction: 0
+      stress_direction: 0
+      confidence: 0.0
+      assessment_type: "estimated"
+      evidence_summary: ""
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # SISTEMA 3: DISC
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  disc:
+    name: "DISC"
+    description: >
+      Modelo comportamental que mede 4 dimensoes de estilo de comunicacao e
+      trabalho: Dominancia, Influencia, Estabilidade e Conformidade. Util para
+      mapeamento de estilo operacional, comunicacao e interacao com equipes.
+      Mais comportamental que psicologico — captura COMO a pessoa age, nao POR QUE.
+
+    components:
+      dimensions:
+        - id: D
+          name: "Dominance (Dominancia)"
+          description: "Como a pessoa lida com problemas e desafios. Alto D e direto, assertivo, competitivo, focado em resultados. Baixo D e cauteloso, deliberado, conservador."
+          high_traits:
+            - "Direto e decidido"
+            - "Competitivo e ambicioso"
+            - "Assume riscos"
+            - "Orientado a resultados"
+            - "Impaciente com detalhes"
+          low_traits:
+            - "Cauteloso e deliberado"
+            - "Cooperativo em vez de competitivo"
+            - "Avesso a risco"
+            - "Prefere consenso"
+            - "Paciente com processos"
+          score_range: [0, 100]
+
+        - id: I
+          name: "Influence (Influencia)"
+          description: "Como a pessoa lida com pessoas e influencia os outros. Alto I e entusiasta, persuasivo, otimista, sociavel. Baixo I e reservado, fatico, cetico."
+          high_traits:
+            - "Entusiasta e otimista"
+            - "Persuasivo e carismatico"
+            - "Sociavel e colaborativo"
+            - "Expressivo e comunicativo"
+            - "Pode ser impulsivo"
+          low_traits:
+            - "Reservado e reflexivo"
+            - "Cetico e analitico"
+            - "Prefere dados a emocao"
+            - "Controlado na expressao"
+            - "Independente socialmente"
+          score_range: [0, 100]
+
+        - id: S
+          name: "Steadiness (Estabilidade)"
+          description: "Como a pessoa lida com ritmo e consistencia. Alto S e paciente, estavel, previsivel, leal. Baixo S e inquieto, flexivel, gosta de mudanca."
+          high_traits:
+            - "Paciente e calmo"
+            - "Leal e consistente"
+            - "Bom ouvinte"
+            - "Resistente a mudancas bruscas"
+            - "Trabalho em equipe natural"
+          low_traits:
+            - "Inquieto e dinamico"
+            - "Flexivel e adaptavel"
+            - "Gosta de variedade"
+            - "Multitarefa natural"
+            - "Impaciente com rotina"
+          score_range: [0, 100]
+
+        - id: C
+          name: "Conscientiousness (Conformidade)"
+          description: "Como a pessoa lida com regras e procedimentos. Alto C e preciso, analitico, sistematico, atento a qualidade. Baixo C e independente, flexivel com regras, focado em visao geral."
+          high_traits:
+            - "Preciso e atento a detalhes"
+            - "Analitico e sistematico"
+            - "Segue padroes e regras"
+            - "Alto padrao de qualidade"
+            - "Pode ser perfeccionista"
+          low_traits:
+            - "Independente e flexivel"
+            - "Focado em visao geral"
+            - "Delegante com detalhes"
+            - "Pragmatico sobre regras"
+            - "Tolerante com imperfeicao"
+          score_range: [0, 100]
+
+      patterns:
+        - id: D_dominant
+          name: "Dominante Puro"
+          profile: "Alto D, baixo I/S/C"
+          description: "Direto, focado em resultados, impaciente, toma decisoes rapido."
+
+        - id: I_dominant
+          name: "Influente Puro"
+          profile: "Alto I, baixo D/S/C"
+          description: "Entusiasta, persuasivo, otimista, pode faltar followthrough."
+
+        - id: S_dominant
+          name: "Estavel Puro"
+          profile: "Alto S, baixo D/I/C"
+          description: "Calmo, paciente, leal, resistente a mudanca."
+
+        - id: C_dominant
+          name: "Conformista Puro"
+          profile: "Alto C, baixo D/I/S"
+          description: "Preciso, analitico, sistematico, pode ser rigido."
+
+        - id: DI
+          name: "Inspirador"
+          profile: "Alto D + Alto I"
+          description: "Lider carismatico que combina assertividade com influencia social."
+
+        - id: DS
+          name: "Condutor"
+          profile: "Alto D + Alto S"
+          description: "Determinado e persistente, combina forca com paciencia."
+
+        - id: DC
+          name: "Criador"
+          profile: "Alto D + Alto C"
+          description: "Orientado a resultados com alta precisao e qualidade."
+
+        - id: IS
+          name: "Conselheiro"
+          profile: "Alto I + Alto S"
+          description: "Sociavel e paciente, bom em relacionamentos de longo prazo."
+
+        - id: IC
+          name: "Avaliador"
+          profile: "Alto I + Alto C"
+          description: "Comunicativo mas analitico, persuade com dados."
+
+        - id: SC
+          name: "Especialista"
+          profile: "Alto S + Alto C"
+          description: "Estavel e preciso, excelente em funcoes que exigem consistencia e qualidade."
+
+        - id: DIS
+          name: "Motivador"
+          profile: "Alto D + I + S"
+          description: "Lider que inspira, mantem o time e entrega resultados."
+
+        - id: DIC
+          name: "Estrategista"
+          profile: "Alto D + I + C"
+          description: "Assertivo, influente e analitico — raro e versatil."
+
+        - id: DSC
+          name: "Implementador"
+          profile: "Alto D + S + C"
+          description: "Faz acontecer com paciencia e precisao."
+
+        - id: ISC
+          name: "Harmonizador"
+          profile: "Alto I + S + C"
+          description: "Sociavel, estavel e preciso — foco em processo e pessoas."
+
+        - id: DISC_balanced
+          name: "Equilibrado"
+          profile: "Todos proximos do centro"
+          description: "Adaptavel a contextos, sem tendencia dominante clara."
+
+    mapping_rules:
+      from_drivers:
+        - behavioral
+        - social
+        - motivational
+      from_miu_categories:
+        - BEHAVIORAL
+        - OPINION
+        - METHODOLOGICAL
+      confidence_threshold: 0.6
+      minimum_evidence:
+        mius: 12
+        drivers: 4
+      estimation_notes: >
+        DISC e inferido a partir de padroes de comunicacao (velocidade, diretividade),
+        estilo de resolucao de problemas (assertivo vs consultivo), tolerancia
+        a mudanca (estabilidade), e atencao a detalhes vs visao geral (conformidade).
+        E o sistema mais observavel — pode ser mapeado com menos evidencia.
+
+    output_format:
+      scores:
+        D: 0  # 0-100
+        I: 0
+        S: 0
+        C: 0
+      primary_dimension: ""  # D, I, S, ou C
+      secondary_dimension: ""
+      pattern: ""  # ID do pattern
+      natural_style: ""  # descricao do estilo natural
+      adapted_style: ""  # estilo adaptado ao contexto atual (se detectavel)
+      confidence: 0.0
+      assessment_type: "estimated"
+      evidence_summary: ""
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # SISTEMA 4: BIG FIVE / OCEAN
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  big_five:
+    name: "Big Five / OCEAN"
+    description: >
+      O modelo mais validado cientificamente para personalidade. Mede 5 dimensoes
+      amplas (OCEAN), cada uma com 6 facetas, totalizando 30 sub-dimensoes.
+      Diferente dos outros sistemas, usa espectro continuo (0-100) em vez de
+      tipos discretos. Alta granularidade e validade preditiva.
+
+    components:
+      dimensions:
+        - id: O
+          name: "Openness to Experience (Abertura a Experiencia)"
+          description: "Tendencia a curiosidade intelectual, criatividade, apreciacao por novidade, arte e experiencias nao-convencionais. Alto O busca novidade; baixo O prefere o familiar."
+          score_range: [0, 100]
+          high_label: "Aberto, curioso, imaginativo"
+          low_label: "Convencional, pratico, concreto"
+          facets:
+            - id: O1
+              name: "Imaginacao"
+              description: "Tendencia a fantasia e imaginacao vivida. Alto: mente criativa e abstrata. Baixo: foco no concreto e real."
+            - id: O2
+              name: "Interesses Artisticos"
+              description: "Apreciacao por arte, estetica e beleza. Alto: sensivel a forma e expressao. Baixo: indiferente a arte."
+            - id: O3
+              name: "Emotividade"
+              description: "Abertura a experiencias emocionais internas. Alto: rica vida emocional. Baixo: emocionalmente plano."
+            - id: O4
+              name: "Espirito de Aventura"
+              description: "Disposicao para tentar coisas novas. Alto: busca novidade. Baixo: prefere rotina."
+            - id: O5
+              name: "Intelecto"
+              description: "Curiosidade intelectual e apreciacao por ideias. Alto: ama debater ideias. Baixo: foco pratico."
+            - id: O6
+              name: "Liberalismo"
+              description: "Abertura a questionar valores e convencoes. Alto: questionador. Baixo: tradicionalista."
+
+        - id: C
+          name: "Conscientiousness (Conscienciosidade)"
+          description: "Tendencia a organizacao, autodisciplina, planejamento e orientacao a metas. Alto C e organizado e metodico; baixo C e flexivel e espontaneo."
+          score_range: [0, 100]
+          high_label: "Organizado, disciplinado, focado"
+          low_label: "Flexivel, espontaneo, desestruturado"
+          facets:
+            - id: C1
+              name: "Auto-Eficacia"
+              description: "Confianca na propria capacidade de realizar. Alto: acredita que pode. Baixo: duvida de si."
+            - id: C2
+              name: "Organizacao"
+              description: "Tendencia a ordem e organizacao. Alto: tudo no lugar. Baixo: caos criativo."
+            - id: C3
+              name: "Senso de Dever"
+              description: "Comprometimento com obrigacoes e promessas. Alto: confiavel. Baixo: flexivel com compromissos."
+            - id: C4
+              name: "Orientacao a Realizacao"
+              description: "Motivacao para excelencia e resultados. Alto: ambicioso. Baixo: satisfeito com suficiente."
+            - id: C5
+              name: "Autodisciplina"
+              description: "Capacidade de comecar e terminar tarefas. Alto: persistente. Baixo: procrastinador."
+            - id: C6
+              name: "Cautela"
+              description: "Tendencia a pensar antes de agir. Alto: deliberado. Baixo: impulsivo."
+
+        - id: E
+          name: "Extraversion (Extroversao)"
+          description: "Tendencia a buscar estimulacao no mundo externo, pessoas, atividade. Alto E e energetico e sociavel; baixo E e reservado e independente."
+          score_range: [0, 100]
+          high_label: "Sociavel, energetico, assertivo"
+          low_label: "Reservado, independente, calmo"
+          facets:
+            - id: E1
+              name: "Cordialidade"
+              description: "Calor genuino com pessoas. Alto: amigavel e aberto. Baixo: distante e formal."
+            - id: E2
+              name: "Gregarismo"
+              description: "Preferencia por companhia de outros. Alto: gosta de multidoes. Baixo: prefere solidao."
+            - id: E3
+              name: "Assertividade"
+              description: "Tendencia a assumir lideranca e falar. Alto: dominante. Baixo: retraido."
+            - id: E4
+              name: "Nivel de Atividade"
+              description: "Ritmo de vida e energia fisica. Alto: agitado e rapido. Baixo: calmo e deliberado."
+            - id: E5
+              name: "Busca por Excitacao"
+              description: "Necessidade de estimulacao. Alto: busca adrenalina. Baixo: prefere calma."
+            - id: E6
+              name: "Emocoes Positivas"
+              description: "Tendencia a sentir alegria e entusiasmo. Alto: otimista. Baixo: sóbrio."
+
+        - id: A
+          name: "Agreeableness (Amabilidade)"
+          description: "Tendencia a cooperacao, confianca e preocupacao com outros. Alto A e empático e cooperativo; baixo A e competitivo e cetico."
+          score_range: [0, 100]
+          high_label: "Cooperativo, empático, confiante"
+          low_label: "Competitivo, cetico, desafiador"
+          facets:
+            - id: A1
+              name: "Confianca"
+              description: "Tendencia a acreditar nas boas intencoes dos outros. Alto: confiante. Baixo: desconfiado."
+            - id: A2
+              name: "Moralidade"
+              description: "Tendencia a sinceridade e transparencia. Alto: franco. Baixo: calculista."
+            - id: A3
+              name: "Altruismo"
+              description: "Disposicao genuina para ajudar. Alto: prestativo. Baixo: centrado em si."
+            - id: A4
+              name: "Cooperacao"
+              description: "Tendencia a evitar conflito e buscar acordo. Alto: conciliador. Baixo: confrontador."
+            - id: A5
+              name: "Modestia"
+              description: "Tendencia a subestimar a si mesmo. Alto: humilde. Baixo: auto-confiante."
+            - id: A6
+              name: "Simpatia"
+              description: "Sensibilidade ao sofrimento alheio. Alto: compassivo. Baixo: duro."
+
+        - id: N
+          name: "Neuroticism (Neuroticismo)"
+          description: "Tendencia a emocoes negativas, instabilidade emocional e reatividade ao stress. Alto N e sensivel e reativo; baixo N e calmo e resiliente."
+          score_range: [0, 100]
+          high_label: "Sensivel, reativo, preocupado"
+          low_label: "Calmo, resiliente, estavel"
+          facets:
+            - id: N1
+              name: "Ansiedade"
+              description: "Tendencia a preocupacao e apreensao. Alto: ansioso. Baixo: tranquilo."
+            - id: N2
+              name: "Raiva"
+              description: "Tendencia a irritabilidade e frustracao. Alto: irritavel. Baixo: paciente."
+            - id: N3
+              name: "Depressao"
+              description: "Tendencia a sentimentos de tristeza e desesperanca. Alto: melancolico. Baixo: contente."
+            - id: N4
+              name: "Autoconsciencia"
+              description: "Tendencia a sentir vergonha e constrangimento. Alto: auto-consciente. Baixo: despreocupado."
+            - id: N5
+              name: "Impulsividade"
+              description: "Dificuldade em resistir a impulsos. Alto: cede a tentacoes. Baixo: auto-controlado."
+            - id: N6
+              name: "Vulnerabilidade"
+              description: "Sensibilidade ao stress. Alto: vulneravel sob pressao. Baixo: resiliente."
+
+    mapping_rules:
+      from_drivers:
+        - cognitive
+        - emotional
+        - behavioral
+        - motivational
+        - social
+      from_miu_categories:
+        - BEHAVIORAL
+        - METHODOLOGICAL
+        - OPINION
+        - STORYTELLING
+        - TECHNICAL
+      confidence_threshold: 0.5
+      minimum_evidence:
+        mius: 25
+        drivers: 10
+      estimation_notes: >
+        Big Five e o sistema com melhor base cientifica e maior necessidade de
+        evidencia para mapeamento preciso. Cada dimensao requer MIUs de multiplas
+        categorias para triangulacao. Facetas sao mapeadas quando ha evidencia
+        especifica; caso contrario, recebem score do pai com confianca reduzida.
+        A dimensao N (Neuroticismo) e a mais dificil de inferir por conteudo
+        publico — requer fontes Tier 0 ou Tier 1 com momentos de vulnerabilidade.
+
+    output_format:
+      scores:
+        O: 0  # 0-100
+        C: 0
+        E: 0
+        A: 0
+        N: 0
+      facet_scores:
+        O1: 0
+        O2: 0
+        O3: 0
+        O4: 0
+        O5: 0
+        O6: 0
+        C1: 0
+        C2: 0
+        C3: 0
+        C4: 0
+        C5: 0
+        C6: 0
+        E1: 0
+        E2: 0
+        E3: 0
+        E4: 0
+        E5: 0
+        E6: 0
+        A1: 0
+        A2: 0
+        A3: 0
+        A4: 0
+        A5: 0
+        A6: 0
+        N1: 0
+        N2: 0
+        N3: 0
+        N4: 0
+        N5: 0
+        N6: 0
+      facet_confidence:
+        description: "Confianca por faceta (pode variar — nem todas tem evidencia direta)"
+        default: 0.0  # 0.0-1.0 per facet
+      profile_label: ""  # descricao textual do perfil geral
+      confidence: 0.0
+      assessment_type: "estimated"
+      evidence_summary: ""
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # SISTEMA 5: IQ/EQ ESTIMATE
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  iq_eq:
+    name: "IQ/EQ Estimate"
+    description: >
+      Estimativa de inteligencia cognitiva (IQ) e emocional (EQ) baseada em
+      indicadores observaveis no conteudo. NAO e um teste formal — e uma
+      estimativa qualitativa com categorias em vez de numeros exatos.
+      A evidencia deve ser explicita e rastreavel.
+
+    components:
+      cognitive_intelligence:
+        description: "Indicadores de capacidade cognitiva observaveis em conteudo"
+        indicators:
+          - id: CI1
+            name: "Complexidade de Raciocinio"
+            description: "Capacidade de lidar com multiplas variaveis e abstrair padroes complexos"
+            evidence_sources:
+              - "Frameworks criados com multiplas dimensoes"
+              - "Analogias que conectam dominios distantes"
+              - "Capacidade de explicar conceitos complexos de forma simples"
+            weight: 0.2
+
+          - id: CI2
+            name: "Velocidade de Processamento"
+            description: "Rapidez em processar informacao e chegar a conclusoes"
+            evidence_sources:
+              - "Respostas rapidas e articuladas em entrevistas ao vivo"
+              - "Capacidade de improviso com profundidade"
+              - "Mudanca rapida entre topicos sem perder fio condutor"
+            weight: 0.15
+
+          - id: CI3
+            name: "Pensamento Critico"
+            description: "Capacidade de questionar premissas e avaliar evidencias"
+            evidence_sources:
+              - "Questionamento de verdades aceitas no mercado"
+              - "Analise de contra-argumentos"
+              - "Rejeicao de falácias logicas"
+            weight: 0.2
+
+          - id: CI4
+            name: "Criatividade e Originalidade"
+            description: "Capacidade de gerar solucoes novas e conexoes ineditas"
+            evidence_sources:
+              - "Frameworks e conceitos originais criados"
+              - "Metaforas unicas e nao-obvias"
+              - "Solucoes que quebram padrao do mercado"
+            weight: 0.15
+
+          - id: CI5
+            name: "Aprendizado e Adaptacao"
+            description: "Velocidade e profundidade de aprendizado em novos dominios"
+            evidence_sources:
+              - "Dominio de areas fora da formacao original"
+              - "Evolucao visivel de pensamento ao longo do tempo"
+              - "Capacidade de integrar conhecimento novo rapidamente"
+            weight: 0.15
+
+          - id: CI6
+            name: "Articulacao Verbal"
+            description: "Capacidade de expressar ideias com precisao e clareza"
+            evidence_sources:
+              - "Vocabulario preciso e adequado ao contexto"
+              - "Estruturacao logica do discurso"
+              - "Capacidade de adaptar linguagem ao interlocutor"
+            weight: 0.15
+
+        scoring:
+          categories:
+            - id: exceptional
+              label: "Excepcional"
+              iq_range_equivalent: "130+"
+              description: "Evidencia clara de capacidade cognitiva muito acima da media em multiplos indicadores"
+            - id: above_average
+              label: "Acima da Media"
+              iq_range_equivalent: "115-129"
+              description: "Indicadores consistentes de capacidade cognitiva superior"
+            - id: average
+              label: "Media"
+              iq_range_equivalent: "85-114"
+              description: "Indicadores dentro da faixa esperada"
+            - id: below_average
+              label: "Abaixo da Media"
+              iq_range_equivalent: "70-84"
+              description: "Indicadores sugerem limitacoes em areas cognitivas"
+            - id: insufficient_data
+              label: "Dados Insuficientes"
+              iq_range_equivalent: "N/A"
+              description: "Nao ha evidencia suficiente para categorizar"
+
+      emotional_intelligence:
+        description: "Indicadores de inteligencia emocional observaveis em conteudo"
+        indicators:
+          - id: EI1
+            name: "Autoconsciencia Emocional"
+            description: "Capacidade de reconhecer e nomear proprias emocoes"
+            evidence_sources:
+              - "Fala abertamente sobre sentimentos"
+              - "Reconhece quando esta errado ou enviesado"
+              - "Identifica gatilhos emocionais proprios"
+            weight: 0.2
+
+          - id: EI2
+            name: "Autoregulacao"
+            description: "Capacidade de gerenciar emocoes e impulsos"
+            evidence_sources:
+              - "Mantem compostura sob pressao"
+              - "Nao reage impulsivamente a provocacoes"
+              - "Demonstra paciencia com processos longos"
+            weight: 0.2
+
+          - id: EI3
+            name: "Empatia"
+            description: "Capacidade de perceber e entender emocoes dos outros"
+            evidence_sources:
+              - "Adapta abordagem ao estado emocional do outro"
+              - "Demonstra compreensao de perspectivas diferentes"
+              - "Reconhece dor e frustracao alheia"
+            weight: 0.2
+
+          - id: EI4
+            name: "Habilidade Social"
+            description: "Capacidade de navegar relacoes e influenciar positivamente"
+            evidence_sources:
+              - "Cria rapport rapidamente"
+              - "Resolve conflitos de forma construtiva"
+              - "Inspira e motiva outros"
+            weight: 0.2
+
+          - id: EI5
+            name: "Motivacao Intrinseca"
+            description: "Motivacao que vem de dentro, nao de recompensas externas"
+            evidence_sources:
+              - "Persiste em projetos sem retorno financeiro imediato"
+              - "Movido por proposito e significado"
+              - "Resiliencia apos fracassos"
+            weight: 0.2
+
+        scoring:
+          categories:
+            - id: exceptional
+              label: "Excepcional"
+              description: "Evidencia clara de inteligencia emocional muito acima da media em multiplos indicadores"
+            - id: above_average
+              label: "Acima da Media"
+              description: "Indicadores consistentes de capacidade emocional superior"
+            - id: average
+              label: "Media"
+              description: "Indicadores dentro da faixa esperada"
+            - id: below_average
+              label: "Abaixo da Media"
+              description: "Indicadores sugerem limitacoes em areas emocionais"
+            - id: insufficient_data
+              label: "Dados Insuficientes"
+              description: "Nao ha evidencia suficiente para categorizar"
+
+    mapping_rules:
+      from_drivers:
+        - cognitive
+        - emotional
+        - social
+        - motivational
+      from_miu_categories:
+        - BEHAVIORAL
+        - METHODOLOGICAL
+        - OPINION
+        - STORYTELLING
+        - TECHNICAL
+      confidence_threshold: 0.5
+      minimum_evidence:
+        mius: 20
+        drivers: 8
+      estimation_notes: >
+        IQ e estimado por indicadores indiretos — nunca um numero preciso.
+        A categoria e mais confiavel que um score numerico. EQ e mais mapeavel
+        por conteudo porque envolve comportamento observavel. Ambos requerem
+        MIUs de alta confianca (Tier 0/1) para estimativas acima de "average".
+        Conteudo Tier 2/3 so permite categorizacao "insufficient_data" ou "average".
+
+    output_format:
+      cognitive_intelligence:
+        category: ""  # exceptional | above_average | average | below_average | insufficient_data
+        indicator_scores:
+          CI1: 0.0  # 0.0-1.0
+          CI2: 0.0
+          CI3: 0.0
+          CI4: 0.0
+          CI5: 0.0
+          CI6: 0.0
+        strongest_indicators: []  # top 2-3 indicators
+        evidence_count: 0
+      emotional_intelligence:
+        category: ""
+        indicator_scores:
+          EI1: 0.0
+          EI2: 0.0
+          EI3: 0.0
+          EI4: 0.0
+          EI5: 0.0
+        strongest_indicators: []
+        evidence_count: 0
+      overall_confidence: 0.0
+      assessment_type: "estimated"
+      evidence_summary: ""
+
+  # ═══════════════════════════════════════════════════════════════════════════════
+  # SISTEMA 6: SPIRAL DYNAMICS
+  # ═══════════════════════════════════════════════════════════════════════════════
+
+  spiral_dynamics:
+    name: "Spiral Dynamics"
+    description: >
+      Modelo de desenvolvimento de valores e consciencia criado por Clare Graves,
+      popularizado por Don Beck e Chris Cowan. Descreve 8 "value memes" (vMemes)
+      que representam sistemas de valores que emergem sequencialmente, cada um
+      como resposta a condicoes de vida. Pessoas e organizacoes podem operar em
+      multiplos niveis simultaneamente, com um ou dois predominantes.
+
+    components:
+      value_memes:
+        - id: beige
+          name: "Beige — Sobrevivencia"
+          code: "AN"
+          tier: "first"
+          description: "Nivel mais basico — foco em sobrevivencia biologica, necessidades fisiologicas imediatas. Funciona no piloto automatico instintivo. Raro em adultos funcionais exceto em situacoes extremas."
+          core_values:
+            - "Sobrevivencia"
+            - "Comida, agua, abrigo"
+            - "Seguranca fisica"
+          worldview: "O mundo e um lugar de necessidades imediatas"
+          decision_making: "Instintivo, reativo"
+          indicators:
+            - "Foco exclusivo em necessidades basicas"
+            - "Reacao instintiva sem reflexao"
+            - "Ausencia de planejamento futuro"
+
+        - id: purple
+          name: "Purple — Tribalismo"
+          code: "BO"
+          tier: "first"
+          description: "Pensamento magico e tribal. Lealdade ao grupo, rituais, tradicoes ancestrais, superstição. O mundo e misterioso e governado por forcas sobrenaturais. Seguranca via pertencimento."
+          core_values:
+            - "Tradicao e ritual"
+            - "Lealdade ao cla/tribo"
+            - "Respeito aos ancestrais"
+            - "Seguranca pelo pertencimento"
+          worldview: "O mundo e misterioso e controlado por espiritos e forcas invisiveis"
+          decision_making: "Baseado em tradicao, rituais e sinais"
+          indicators:
+            - "Forte senso de pertencimento a grupo/comunidade"
+            - "Respeito a tradicoes e rituais"
+            - "Pensamento de grupo sobre pensamento individual"
+            - "Lealdade acima de logica"
+
+        - id: red
+          name: "Red — Poder"
+          code: "CP"
+          tier: "first"
+          description: "Egocentrico, impulsivo, busca poder e dominio. O mundo e uma selva onde o mais forte sobrevive. Gratificacao imediata, sem culpa. Herois, warlords, rockstars."
+          core_values:
+            - "Poder e dominacao"
+            - "Respeito e reputacao"
+            - "Gratificacao imediata"
+            - "Autonomia total"
+          worldview: "O mundo e uma selva — come ou e comido"
+          decision_making: "Impulso, poder, o que EU quero"
+          indicators:
+            - "Foco em controle e dominacao"
+            - "Impaciencia com processos e regras"
+            - "Assertividade extrema"
+            - "Pensamento de curto prazo"
+            - "Valoriza forca e coragem"
+
+        - id: blue
+          name: "Blue — Ordem"
+          code: "DQ"
+          tier: "first"
+          description: "Ordem, disciplina, proposito transcendente. O mundo tem sentido, ha certo e errado absolutos. Autoridade, hierarquia, sacrificio pelo grupo/causa maior. Religioes organizadas, patriotismo."
+          core_values:
+            - "Ordem e disciplina"
+            - "Verdade absoluta"
+            - "Sacrificio por causa maior"
+            - "Hierarquia e autoridade"
+            - "Dever e obediencia"
+          worldview: "O mundo e controlado por uma Verdade que define certo e errado"
+          decision_making: "Baseado em regras, escrituras, autoridade reconhecida"
+          indicators:
+            - "Forte senso de certo/errado"
+            - "Valoriza disciplina e ordem"
+            - "Respeita autoridade e hierarquia"
+            - "Sacrifica prazer por dever"
+            - "Busca significado e proposito transcendente"
+
+        - id: orange
+          name: "Orange — Realizacao"
+          code: "ER"
+          tier: "first"
+          description: "Racional, estrategico, orientado a resultados. O mundo e uma maquina que pode ser entendida e otimizada. Sucesso individual, ciencia, empreendedorismo, meritocracia."
+          core_values:
+            - "Sucesso e realizacao"
+            - "Estrategia e planejamento"
+            - "Inovacao e progresso"
+            - "Autonomia individual"
+            - "Resultados mensuráveis"
+          worldview: "O mundo e uma maquina — quem entende as regras vence"
+          decision_making: "Racional, baseado em dados, custo-beneficio"
+          indicators:
+            - "Foco em metas e resultados"
+            - "Pensamento estrategico"
+            - "Valoriza inovacao e eficiencia"
+            - "Mede sucesso por metricas"
+            - "Competitivo e empreendedor"
+            - "Busca otimizacao constante"
+
+        - id: green
+          name: "Green — Comunidade"
+          code: "FS"
+          tier: "first"
+          description: "Igualitario, comunitario, sensivel. O mundo e uma comunidade onde todos importam. Consenso, diversidade, sustentabilidade, relativismo. Anti-hierarquia."
+          core_values:
+            - "Igualdade e justica social"
+            - "Consenso e inclusao"
+            - "Sustentabilidade"
+            - "Empatia e cuidado"
+            - "Diversidade e pluralismo"
+          worldview: "O mundo e uma comunidade — todos merecem voz e respeito"
+          decision_making: "Consenso, sentimentos do grupo, impacto social"
+          indicators:
+            - "Valoriza igualdade e inclusao"
+            - "Rejeita hierarquias rigidas"
+            - "Foco em sustentabilidade e impacto social"
+            - "Sensibilidade a emocoes do grupo"
+            - "Busca consenso ao inves de decisao top-down"
+            - "Questiona meritocracia pura"
+
+        - id: yellow
+          name: "Yellow — Integracao"
+          code: "GT"
+          tier: "second"
+          description: >
+            Primeiro nivel do segundo tier. Pensamento sistemico, integra todos
+            os niveis anteriores sem rejeitar nenhum. Ve o mundo como sistema
+            complexo adaptativo. Flexibilidade, competencia, funcionalidade
+            sobre forma. Aceita paradoxo e complexidade.
+          core_values:
+            - "Pensamento sistemico"
+            - "Integracao de perspectivas"
+            - "Competencia e funcionalidade"
+            - "Flexibilidade e adaptacao"
+            - "Aceitacao de complexidade"
+          worldview: "O mundo e um sistema complexo — cada nivel tem seu valor e lugar"
+          decision_making: "Sistemico, contextual, integrativo"
+          indicators:
+            - "Integra perspectivas aparentemente contraditórias"
+            - "Pensa em sistemas e conexoes"
+            - "Confortavel com ambiguidade e paradoxo"
+            - "Adapta abordagem ao contexto"
+            - "Valoriza competencia independente de forma"
+            - "Nao dogmatico — usa o que funciona"
+            - "Ve valor em todos os niveis anteriores"
+
+        - id: turquoise
+          name: "Turquoise — Holístico"
+          code: "HU"
+          tier: "second"
+          description: >
+            Consciencia holística e global. Ve o mundo como organismo vivo e
+            interconectado. Intuicao + logica, espiritualidade + ciencia,
+            individual + coletivo em harmonia. Rarissimo como nivel predominante.
+          core_values:
+            - "Consciencia global"
+            - "Interconexao de tudo"
+            - "Harmonia macro-sistemica"
+            - "Integracao espirito + materia"
+            - "Bem coletivo em escala planetaria"
+          worldview: "O mundo e um organismo vivo interconectado onde tudo afeta tudo"
+          decision_making: "Holístico, intuitivo-racional, considerando impacto em multiplos sistemas"
+          indicators:
+            - "Pensa em termos de sistemas globais"
+            - "Integra ciencia e espiritualidade naturalmente"
+            - "Foco em sustentabilidade em larga escala"
+            - "Consciencia de interconexao entre tudo"
+            - "Opera com intuicao e racionalidade simultaneamente"
+            - "Preocupacao genuina com humanidade como um todo"
+
+      tiers:
+        first_tier:
+          levels: [beige, purple, red, blue, orange, green]
+          description: >
+            Cada nivel do primeiro tier acredita que SUA visao de mundo e a correta
+            e rejeita as outras. Opera em subsistencia — resolvendo problemas de
+            um nivel para avancar ao proximo.
+
+        second_tier:
+          levels: [yellow, turquoise]
+          description: >
+            O segundo tier integra TODOS os niveis do primeiro tier, reconhecendo
+            que cada um tem valor em seu contexto. Diferenca qualitativa:
+            nao rejeita nenhum nivel — usa cada um quando apropriado.
+
+      transition_indicators:
+        description: "Sinais de que a pessoa esta em transicao entre niveis"
+        patterns:
+          - from: "blue"
+            to: "orange"
+            indicators:
+              - "Comeca a questionar autoridade e tradicao"
+              - "Busca sucesso individual alem do grupo"
+              - "Valoriza resultados alem de obediencia"
+          - from: "orange"
+            to: "green"
+            indicators:
+              - "Sucesso material nao traz satisfacao"
+              - "Comeca a se preocupar com impacto social"
+              - "Questiona meritocracia pura"
+              - "Busca significado alem de resultados"
+          - from: "green"
+            to: "yellow"
+            indicators:
+              - "Frustracao com consenso interminavel"
+              - "Reconhece que hierarquia tem funcao"
+              - "Aceita que nem todas as perspectivas sao igualmente validas"
+              - "Busca eficacia alem de inclusão"
+          - from: "yellow"
+            to: "turquoise"
+            indicators:
+              - "Ve interconexao profunda entre sistemas"
+              - "Integra espiritualidade e racionalidade"
+              - "Preocupacao genuina com escala planetaria"
+
+    mapping_rules:
+      from_drivers:
+        - motivational
+        - cognitive
+        - social
+        - emotional
+      from_miu_categories:
+        - OPINION
+        - BEHAVIORAL
+        - METHODOLOGICAL
+        - STORYTELLING
+      confidence_threshold: 0.55
+      minimum_evidence:
+        mius: 20
+        drivers: 8
+      estimation_notes: >
+        Spiral Dynamics e mapeado primariamente por valores expressos (OPINION MIUs),
+        estilo de tomada de decisao (METHODOLOGICAL), e relacao com autoridade/grupo
+        (BEHAVIORAL). A maioria dos experts opera entre orange e yellow, com elementos
+        de blue (fe/proposito) e green (comunidade/impacto). A pessoa pode expressar
+        diferentes niveis em diferentes contextos — o predominante e o que aparece
+        sob pressao ou em decisoes importantes.
+
+    output_format:
+      primary_level: ""  # beige | purple | red | blue | orange | green | yellow | turquoise
+      secondary_level: ""  # segundo nivel mais forte
+      tier: ""  # first | second
+      level_scores:
+        beige: 0.0  # 0.0-1.0 presenca deste nivel
+        purple: 0.0
+        red: 0.0
+        blue: 0.0
+        orange: 0.0
+        green: 0.0
+        yellow: 0.0
+        turquoise: 0.0
+      in_transition: false
+      transition_from: ""
+      transition_to: ""
+      transition_indicators_observed: []
+      confidence: 0.0
+      assessment_type: "estimated"
+      evidence_summary: ""
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REGRAS DE AGREGACAO ENTRE SISTEMAS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+cross_system_validation:
+  description: >
+    Validacoes cruzadas entre sistemas para aumentar confianca e detectar
+    inconsistencias. Se dois sistemas concordam, a confianca sobe. Se
+    contradizem, requer investigacao.
+
+  correlations:
+    - systems: [mbti, big_five]
+      rules:
+        - "E correlaciona com Big Five Extraversion (E)"
+        - "S/N correlaciona com Big Five Openness (O)"
+        - "T/F correlaciona inversamente com Big Five Agreeableness (A)"
+        - "J/P correlaciona com Big Five Conscientiousness (C)"
+      conflict_action: "Revisar evidencia — geralmente Big Five e mais granular"
+
+    - systems: [mbti, disc]
+      rules:
+        - "Te/Se dominante correlaciona com alto D"
+        - "Fe dominante correlaciona com alto I"
+        - "Si dominante correlaciona com alto S"
+        - "Ti dominante correlaciona com alto C"
+      conflict_action: "DISC captura comportamento observavel; MBTI captura preferencia interna"
+
+    - systems: [enneagram, big_five]
+      rules:
+        - "Tipo 3 correlaciona com alto C (Conscientiousness) e baixo A"
+        - "Tipo 4 correlaciona com alto N e alto O"
+        - "Tipo 5 correlaciona com baixo E e alto O"
+        - "Tipo 7 correlaciona com alto E e alto O"
+        - "Tipo 8 correlaciona com baixo A e alto E"
+      conflict_action: "Enneagram captura motivacao; Big Five captura comportamento"
+
+    - systems: [enneagram, spiral_dynamics]
+      rules:
+        - "Tipo 1 frequentemente correlaciona com Blue forte"
+        - "Tipo 3 frequentemente correlaciona com Orange dominante"
+        - "Tipo 8 pode ser Red ou Yellow (depende do nivel de saude)"
+        - "Tipo 5 frequentemente correlaciona com Orange ou Yellow"
+      conflict_action: "Nivel de saude do Enneagram muda a correlacao — verificar"
+
+    - systems: [disc, big_five]
+      rules:
+        - "Alto D correlaciona com baixo A (Agreeableness) e alto E3 (Assertividade)"
+        - "Alto I correlaciona com alto E (Extraversion)"
+        - "Alto S correlaciona com alto A e baixo N"
+        - "Alto C correlaciona com alto C (Conscientiousness)"
+      conflict_action: "DISC e mais superficial — Big Five detalha mais"
+
+    - systems: [iq_eq, big_five]
+      rules:
+        - "IQ cognitive correlaciona com Big Five O5 (Intelecto)"
+        - "EQ empatia correlaciona com Big Five A (Agreeableness)"
+        - "EQ autoregulacao correlaciona com baixo N (Neuroticismo)"
+      conflict_action: "IQ/EQ e categorico; Big Five e dimensional — complementam"
+
+  consistency_check:
+    description: "Apos mapear todos os sistemas, rodar check de consistencia"
+    severity_levels:
+      minor: "Correlacao esperada nao confirmada — registrar mas nao bloquear"
+      moderate: "Contradicao entre 2 sistemas — investigar evidencia e ajustar confianca"
+      critical: "Contradicao entre 3+ sistemas no mesmo aspecto — reanalisar drivers"
+    action_on_critical: "Reduzir confianca dos sistemas conflitantes para max 0.5 e flaggar para revisao manual"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# OUTPUT GLOBAL — ARQUIVO DE SAIDA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+output:
+  file_path: "05-psychometric/psychometric-profile.yaml"
+  includes_all_systems: true
+  includes_cross_validation: true
+  includes_evidence_trail: true
+  overall_confidence:
+    description: "Media ponderada da confianca de todos os sistemas"
+    formula: "sum(system.confidence * system.weight) / sum(system.weight)"
+  system_weights:
+    mbti: 0.15
+    enneagram: 0.25
+    disc: 0.10
+    big_five: 0.25
+    iq_eq: 0.10
+    spiral_dynamics: 0.15

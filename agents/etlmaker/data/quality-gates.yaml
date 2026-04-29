@@ -1,0 +1,208 @@
+# ===============================================================================
+# QUALITY GATES — ETLmaker Pipeline v3.0
+# ===============================================================================
+# 6 quality gates entre as fases do pipeline.
+# Todos sao blocking — se nao passa, nao avanca.
+# v3.0: mapeamento territorial, composicao blocada com spot-check,
+# integracao expandida, validacao em 3 camadas (exaustiva + 6-passes).
+# ===============================================================================
+
+version: "3.0.0"
+
+quality_gates:
+  QG-ETL-000:
+    name: "Ingestion Validity"
+    phase_transition: "Ingestao → Mapeamento Territorial"
+    blocking: true
+    description: "Verifica se as fontes foram ingeridas corretamente"
+    criteria:
+      - metric: "normalized_word_count"
+        threshold: ">= 100"
+        description: "Fonte normalizada deve ter pelo menos 100 palavras"
+      - metric: "encoding_valid"
+        threshold: "true"
+        description: "Encoding UTF-8 validado"
+      - metric: "metadata_complete"
+        threshold: "true"
+        description: "Metadados da fonte (id, formato, titulo) preenchidos"
+      - metric: "structure_preserved"
+        threshold: "true"
+        description: "Estrutura do documento preservada na normalizacao"
+    veto_conditions:
+      - "Fonte normalizada < 50 palavras"
+      - "Encoding invalido"
+      - "Sem metadados de proveniencia"
+    on_failure: "Rejeitar fonte e informar usuario com motivo especifico"
+
+  QG-ETL-001:
+    name: "Territorial Comprehension"
+    phase_transition: "Mapeamento Territorial → Aprovacao do Usuario"
+    blocking: true
+    description: "Verifica se o mapeamento territorial esta completo e profundo"
+    criteria:
+      - metric: "all_sources_read"
+        threshold: "true"
+        description: "Todas as fontes lidas — cada SRC-* no manifest tem dominio mapeado"
+      - metric: "domains_identified"
+        threshold: ">= 3"
+        description: "Pelo menos 3 dominios de conhecimento identificados"
+      - metric: "backbone_identified"
+        threshold: "true"
+        description: "Backbone identificado ou justificativa de por que nao existe"
+      - metric: "authors_mapped"
+        threshold: "true"
+        description: "Autores mapeados com hierarquia de peso"
+      - metric: "sources_classified"
+        threshold: "true"
+        description: "Fontes classificadas como primaria vs suporte por volume"
+      - metric: "cardinal_rules_identified"
+        threshold: ">= 1"
+        description: "Pelo menos 1 regra cardinal identificada"
+      - metric: "voice_profile_complete"
+        threshold: "true"
+        description: "Voice profile com tom + catchphrases + terminologia"
+      - metric: "mapa_territorial_saved"
+        threshold: "true"
+        description: "MAPA-TERRITORIAL.md salvo em 00-pipeline/"
+    veto_conditions:
+      - "Menos de 3 dominios"
+      - "Sem backbone e sem justificativa"
+      - "Voice Profile vazio"
+      - "MAPA-TERRITORIAL.md nao gerado"
+    on_failure: "Analyst completa secoes faltantes do MAPA-TERRITORIAL"
+
+  QG-ETL-002:
+    name: "Architecture Approval"
+    phase_transition: "Mapeamento Territorial → Composicao Blocada"
+    blocking: true
+    requires_user_approval: true
+    description: "Verifica se o usuario aprovou o plano de volumes do MAPA-TERRITORIAL"
+    criteria:
+      - metric: "user_approved"
+        threshold: "true"
+        description: "Usuario aprovou o plano de volumes explicitamente"
+      - metric: "volumes_defined"
+        threshold: ">= 2"
+        description: "Pelo menos 2 volumes definidos"
+      - metric: "core_domains_covered"
+        threshold: "100%"
+        description: "Todos os dominios core cobertos em algum volume"
+    veto_conditions:
+      - "Usuario NAO aprovou"
+      - "Menos de 2 volumes"
+      - "Dominio core sem volume"
+    on_failure: "Reapresentar plano ajustado ao usuario"
+
+  QG-ETL-003:
+    name: "Composition Richness"
+    phase_transition: "Composicao → Proximo Volume (ou Integracao)"
+    blocking: true
+    applied_per: "volume"
+    description: "Verifica se cada volume atende criterios minimos de riqueza + spot-check"
+    criteria:
+      - metric: "lines_per_volume"
+        threshold: ">= 300"
+        description: "Cada volume deve ter pelo menos 300 linhas"
+      - metric: "tables_per_volume"
+        threshold: ">= 2"
+        description: "Pelo menos 2 tabelas por volume"
+      - metric: "examples_per_volume"
+        threshold: ">= 3"
+        description: "Pelo menos 3 exemplos preservados por volume"
+      - metric: "provenance_per_volume"
+        threshold: ">= 10"
+        description: "Pelo menos 10 referencias [Fonte:] por volume"
+      - metric: "formatting_rich"
+        threshold: "true"
+        description: "Headers, listas, blocos de destaque presentes"
+      - metric: "spot_check_pass"
+        threshold: "true"
+        description: "10 claims verificados: >= 8 corretos, 0 inventados"
+      - metric: "checkpoint_saved"
+        threshold: "true"
+        description: "Volume salvo como arquivo + PLANO-ETL.md atualizado"
+    veto_conditions:
+      - "Volume com < 150 linhas"
+      - "Volume sem nenhuma tabela"
+      - "Volume sem nenhum exemplo"
+      - "Volume sem proveniencia"
+      - "Spot-check com invencao"
+    on_failure: "Composer re-compoe volume. Se spot-check falhou, corrigir claims (max 2 ciclos)"
+
+  QG-ETL-004:
+    name: "Package Integration"
+    phase_transition: "Integracao → Validacao Final"
+    blocking: true
+    description: "Verifica se o pacote integrado esta completo com docs transversais e cross-refs"
+    criteria:
+      - metric: "readme_present"
+        threshold: "true"
+        description: "README.md presente com indice, navegacao, fontes, autores"
+      - metric: "regras_cardinais_present"
+        threshold: "true"
+        description: "REGRAS-CARDINAIS.md presente com regras organizadas por dominio"
+      - metric: "repertorio_present"
+        threshold: "true"
+        description: "REPERTORIO.md presente com 11 secoes por tipo de artefato"
+      - metric: "glossario_present"
+        threshold: "true"
+        description: "GLOSSARIO.md presente com termos do MAPA + emergentes"
+      - metric: "all_volumes_present"
+        threshold: "100%"
+        description: "Todos os volumes do plano presentes como arquivos"
+      - metric: "cross_refs_valid"
+        threshold: "true"
+        description: "Cross-references entre volumes e docs apontam pra arquivos existentes"
+      - metric: "completeness_report_present"
+        threshold: "true"
+        description: "completeness-report.yaml gerado com metricas"
+    veto_conditions:
+      - "README ausente"
+      - "REPERTORIO ausente"
+      - "Volume do plano ausente"
+      - "Cross-reference quebrada"
+    on_failure: "Architect completa docs faltantes e re-verifica cross-refs"
+
+  QG-ETL-005:
+    name: "Final Validation"
+    phase_transition: "Validacao Final → Producao"
+    blocking: true
+    description: "Validacao em 2 etapas: Camada 2 (auditoria exaustiva) + Camada 3 (6-passes estatisticos)"
+    criteria:
+      - metric: "layer_2_pass"
+        threshold: "true"
+        description: "Camada 2 PASS: 100% frameworks, regras cardinais, termos, artefatos verificados"
+      - metric: "coverage_pct"
+        threshold: ">= 95%"
+        description: "95%+ dos dominios e subtopicos cobertos no output"
+      - metric: "fidelity_pct"
+        threshold: ">= 90%"
+        description: "90%+ dos spot-checks corretos"
+      - metric: "invented_count"
+        threshold: "= 0"
+        description: "Zero invencoes"
+      - metric: "distorted_count"
+        threshold: "<= 3"
+        description: "No maximo 3 distorcoes"
+      - metric: "voice_consistency"
+        threshold: ">= 80%"
+        description: "Voz do autor preservada em >= 80%"
+      - metric: "consistency"
+        threshold: "0 contradicoes"
+        description: "Zero contradicoes internas, 100% cross-refs validas"
+      - metric: "integrity"
+        threshold: "100%"
+        description: "Tudo planejado existe como arquivo"
+      - metric: "aggregate_score"
+        threshold: ">= 90%"
+        description: "Score ponderado (Cov*0.20 + Fid*0.30 + Rich*0.10 + Voz*0.10 + Cons*0.15 + Int*0.15)"
+      - metric: "verdict"
+        threshold: "APPROVED"
+        description: "Verdict final APPROVED"
+    veto_conditions:
+      - "Invencoes > 0"
+      - "Camada 2 FAIL nao resolvida"
+      - "Cobertura < 85%"
+      - "Fidelidade < 80%"
+      - "Score agregado < 75%"
+    on_failure: "NEEDS_REVISION → Composer/Architect corrige, Auditor re-valida (max 3 ciclos)"
