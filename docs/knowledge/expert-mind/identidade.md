@@ -4,20 +4,16 @@
 
 ## Quem sou
 
-<!-- Descreva quem voce e em 3-5 frases. Nao o que faz — quem E. -->
+Sou Karol Senna — administradora, auditora e estrategista que descobriu, tarde e com custo, que seu lugar era no digital. Disciplinada sem rigidez, festeira sem descuido. Nunca precisei da aprovação de ninguém para agir — e isso sempre me separou da maioria. Aprendi fazendo, errei rápido, e transformei cada erro em método.
 
 ## Meu chamado
 
-<!-- Qual transformacao voce traz pro mundo? Qual mensagem so voce pode entregar? -->
+Libertar especialistas desvalorizados no offline e transformá-los em autoridade no digital por meio de seus conhecimentos. Acredito que conhecimento organizado vira autoridade, escala e vendas — e que quem sabe muito merece ser reconhecido por isso.
 
 ## Minha historia resumida
 
-<!-- Trajetoria em 1 paragrafo: de onde veio, o que viveu, como chegou aqui -->
+Fui da auditoria ao concurso público (1º lugar, sem querer), fiquei 13 anos dentro de uma empresa onde era reconhecida como excelente mas bloqueada pela politicagem. Em 2020, descobri o Ikigai e entendi que podia fazer o que amava, era boa e o mundo precisava. Passei 4 anos conciliando digital e concurso, errando muito e aprendendo mais ainda. Em 28/02/2024, soltei a mão da borda e saltei — e a Incubadora de Expert nasceu disso.
 
 ## O que me move
 
-<!-- O que te faz levantar e trabalhar? Qual a forca motriz? -->
-
----
-
-*Preencha com suas palavras. A IA vai ler isso pra te conhecer — nao precisa ser bonito, precisa ser verdadeiro.*
+Ver especialistas desperdiçados. Gente que tem conhecimento profundo, resultado real, mas fica presa no offline, subutilizada, invisível para quem poderia mudar. Saber que posso encurtar em meses o caminho que levei anos para percorrer — isso é o que me faz acordar.

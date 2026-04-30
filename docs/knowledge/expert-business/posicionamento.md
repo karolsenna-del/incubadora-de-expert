@@ -4,24 +4,23 @@
 
 ## O que eu faco
 
-<!-- Em 1-2 frases: qual e o seu negocio? -->
+Transformo conhecimento profissional em métodos autorais validados, capazes de gerar vendas no digital em até 4 meses — com clareza, segurança e profissionalismo, sem exposição amadora.
 
 ## Pra quem
 
-<!-- Quem e seu publico-alvo? Descreva a pessoa, nao a demografia. -->
+Especialistas reconhecidos no offline que nunca estruturaram seu conhecimento como método digital. Dois perfis:
+
+- **Laura** (escala): mulher 35+, experiente na área, insegura no digital, quer transição segura
+- **Ricardo** (high ticket): especialista sênior 38–55, consolidado financeiramente, enxerga o digital como oportunidade estratégica, não quer lançamento barulhento
 
 ## Qual problema eu resolvo
 
-<!-- Qual dor principal do seu publico? -->
+O especialista sabe muito — mas não sabe estruturar esse conhecimento como método, produto e oferta digital. Resultado: fica preso no offline, invisível, subutilizado. Ou entra no digital e comete os erros clássicos: persona vaga, não vive o que vende, método genérico, sem provas reais.
 
 ## Minha promessa
 
-<!-- O que a pessoa ganha ao trabalhar comigo? -->
+Método autoral validado, persona definida, oferta estruturada e primeiro lançamento planejado — em até 4 meses. Com validação secreta (sessão estratégica 1:1) antes de qualquer exposição pública.
 
 ## Meu diferencial
 
-<!-- Por que EU e nao outro? O que so eu trago? -->
-
----
-
-*Posicionamento claro = IA que comunica certo.*
+Sou a rainha do método. Vejo método como modelo de negócio — resultado de 15 anos em gestão, auditoria e planejamento estratégico. Não ensino lançamento: ensino a construir a base que faz o lançamento funcionar. Vivi cada erro que hoje ensino a evitar — isso é skin in the game real, não teoria de quem nunca errou.
