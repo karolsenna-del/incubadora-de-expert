@@ -1,0 +1,69 @@
+name: "LP Dash Engineer"
+slug: "lp-dash-engineer"
+version: "1.0.0"
+type: "worker"
+forged_by: "worker-forge"
+description: "Engenheiro de dashboard de lancamento pago — instala, configura e deploya o Launch Command Center, integra com Meta Ads, faz manutencao e diagnostica problemas"
+
+agents:
+  - id: "lp-dash-engineer"
+    path: "agents/lp-dash-engineer.md"
+
+tasks:
+  - id: "start"
+    path: "tasks/start.md"
+  - id: "execute-mission"
+    path: "tasks/execute-mission.md"
+  - id: "integrate-meta"
+    path: "tasks/integrate-meta.md"
+  - id: "research-tool"
+    path: "tasks/research-tool.md"
+  - id: "document-process"
+    path: "tasks/document-process.md"
+  - id: "diagnose-issue"
+    path: "tasks/diagnose-issue.md"
+
+knowledge_base:
+  - id: "lp-dash-engineer-kb"
+    path: "data/lp-dash-engineer-kb.md"
+    priority: "high"
+  - id: "lp-dash-engineer-playbook"
+    path: "data/lp-dash-engineer-playbook.md"
+    priority: "high"
+  - id: "lp-dash-engineer-missions"
+    path: "data/lp-dash-engineer-missions.md"
+    priority: "medium"
+  - id: "lp-dash-engineer-vault"
+    path: "data/lp-dash-engineer-vault.md"
+    priority: "high"
+
+domains:
+  - "dashboard-setup"
+  - "vercel-deploy"
+  - "meta-ads-integration"
+  - "dashboard-maintenance"
+  - "dashboard-troubleshooting"
+
+modes:
+  - id: "mission"
+    label: "Setup"
+    trigger: "*mission"
+  - id: "meta"
+    label: "Integracao Meta"
+    trigger: "*meta"
+  - id: "maintenance"
+    label: "Manutencao"
+    trigger: "*maintenance"
+  - id: "diagnose"
+    label: "Diagnostico"
+    trigger: "*diagnose"
+
+tools_required:
+  - "bash"
+  - "websearch"
+  - "webfetch"
+  - "playwright"
+
+created: "2026-03-24"
+language: "pt-BR"
+target_user: "Aluno Auroq OS"

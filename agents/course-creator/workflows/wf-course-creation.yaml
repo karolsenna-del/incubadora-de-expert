@@ -1,0 +1,207 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# WORKFLOW: Course Creation Pipeline v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+# Pipeline de criacao de curso. 10 fases sequenciais com quality gates bloqueantes.
+# Pre-producao (benchmarking, metodologia), producao (estrutura, modulos, aulas),
+# pos-producao (branding, empacotamento, review, checklist).
+# 4 agentes: course-chief, course-creator, brand-architect, product-packager.
+# Ciclo fractal em cada nivel: co-desenvolver teoria -> estruturar -> refinar -> validar.
+# Protocolo QG universal: APRESENTAR -> PERGUNTAR -> DEBATER -> APROVAR -> HANDOFF.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+workflow:
+  id: wf-course-creation
+  name: "Course Creation Pipeline"
+  version: "2.0.0"
+  description: "Da ideia ao produto empacotado + checklist de producao"
+  type: "pipeline"
+  purpose: >
+    Pipeline que recebe a ideia de um curso, pesquisa o mercado, gera PRD,
+    ingere a metodologia do expert, co-desenvolve teoria em ciclo fractal
+    (curso, modulo, aula), gera roteiros com refinamento iterativo,
+    trabalha branding e empacotamento do produto, e entrega produto
+    estruturado pronto pra vender + checklist de tudo que falta produzir.
+  orchestrator: "@course-chief"
+  trigger: "Usuario ativa /courseCreator"
+
+  sequence:
+    # --- PRE-PRODUCAO ---
+    - phase: "setup"
+      agent: "course-chief"
+      action: "Coletar info do curso: nome, objetivo, publico, transformacao"
+      creates: ".state.json"
+      quality_gate: QG-CC-001
+
+    - phase: "benchmarking"
+      agent: "course-creator"
+      action: "Pesquisar mercado BR + gringo, debater com expert, gerar PRD"
+      creates: "PRD v1"
+      quality_gate: QG-CC-002
+
+    - phase: "methodology"
+      agent: "course-creator"
+      action: "Ler docs do expert, mapear metodologia, enriquecer PRD"
+      creates: "PRD v2"
+      quality_gate: QG-CC-003
+
+    # --- PRODUCAO (curso) ---
+    - phase: "macro"
+      agent: "course-creator"
+      action: "Co-desenvolver teoria, definir modulos, sequenciar. Contra PRD"
+      quality_gate: QG-CC-004
+
+    - phase: "modules"
+      agent: "course-creator"
+      action: "Co-desenvolver teoria do modulo, definir objetivo, listar aulas. Contra PRD"
+      repeatable: true
+      quality_gate: QG-CC-005
+
+    - phase: "lessons"
+      agent: "course-creator"
+      action: "Co-desenvolver teoria da aula, gerar roteiro, refinar ate fechou. Contra PRD"
+      repeatable: true
+      quality_gate: QG-CC-006
+
+    # --- POS-PRODUCAO ---
+    - phase: "branding"
+      agent: "brand-architect"
+      action: "Naming, posicionamento (Onlyness), identidade verbal, Charismatic Brand Test"
+      quality_gate: QG-CC-007
+
+    - phase: "packaging"
+      agent: "product-packager"
+      action: "Proposta de valor, matriz beneficios, pricing, cartao de identidade"
+      quality_gate: QG-CC-008
+
+    - phase: "review"
+      agent: "course-chief"
+      action: "Review autonomo contra PRD + review humano + aval final"
+      quality_gate: QG-CC-009
+
+    - phase: "checklist"
+      agent: "course-chief"
+      action: "Gerar checklist completo de tudo que falta produzir pra lancar"
+      quality_gate: QG-CC-010
+
+  quality_gates:
+    - id: QG-CC-001
+      name: "Setup Completo"
+      transition: "setup -> benchmarking"
+      criteria: "Curso definido: nome, objetivo, publico-alvo, transformacao"
+      blocking: true
+
+    - id: QG-CC-002
+      name: "PRD Aprovado"
+      transition: "benchmarking -> methodology"
+      criteria: "Mercado pesquisado, PRD gerado e aprovado pelo expert"
+      blocking: true
+
+    - id: QG-CC-003
+      name: "Metodologia Mapeada"
+      transition: "methodology -> macro"
+      criteria: "Metodologia mapeada dos docs, PRD enriquecido, expert validou"
+      blocking: true
+
+    - id: QG-CC-004
+      name: "Estrutura Macro Validada"
+      transition: "macro -> modules"
+      criteria: "Expert validou: modulos nomeados, sequenciados, coerentes com PRD"
+      blocking: true
+
+    - id: QG-CC-005
+      name: "Estrutura do Modulo Validada"
+      transition: "modules -> lessons (por modulo)"
+      criteria: "Objetivo do modulo + aulas com objetivo e essencia + coerente com PRD"
+      blocking: true
+
+    - id: QG-CC-006
+      name: "Aula Fechou"
+      transition: "aula -> proxima aula (por aula)"
+      criteria: "8 criterios de fechou + 0 antipadroes + consistencia + coerente com PRD"
+      blocking: true
+
+    - id: QG-CC-007
+      name: "Branding Aprovado"
+      transition: "branding -> packaging"
+      criteria: "Naming testado (7 criterios), Onlyness Statement, identidade verbal, Charismatic Brand Test"
+      blocking: true
+
+    - id: QG-CC-008
+      name: "Empacotamento Aprovado"
+      transition: "packaging -> review"
+      criteria: "Proposta de valor (3 perguntas), matriz beneficios, pricing, cartao de identidade"
+      blocking: true
+
+    - id: QG-CC-009
+      name: "Review Final Aprovado"
+      transition: "review -> checklist"
+      criteria: "Review autonomo contra PRD OK + expert deu aval final"
+      blocking: true
+
+    - id: QG-CC-010
+      name: "Checklist Confirmado"
+      transition: "checklist -> done"
+      criteria: "Checklist completo, categorizado, priorizado, expert confirmou que cobre tudo"
+      blocking: true
+
+  # Protocolo universal de quality gate (aplica a TODOS os 10 gates)
+  gate_protocol:
+    steps:
+      - "APRESENTAR output em formato legivel (nunca YAML bruto)"
+      - "PERGUNTAR 'Isso bate? O que ajustaria?'"
+      - "LOOP DE DEBATE — ajustar ate satisfeito (sem limite de rounds)"
+      - "APROVACAO EXPLICITA — expert diz 'fechou'/'aprovado'"
+      - "HANDOFF — so agora passa pra proxima fase com contexto completo"
+    rules:
+      - "Nenhuma fase avanca sem aprovacao explicita"
+      - "Nenhum 'vou assumir que ta ok'"
+      - "Debate pode ter quantos rounds forem necessarios"
+      - "Squad nunca apressoa o expert"
+
+  bottleneck:
+    phase: "lessons"
+    task: "develop-lesson"
+    reason: >
+      Co-desenvolvimento de teoria e o gargalo do processo.
+      Cada aula exige debate profundo + roteirizacao + refinamento iterativo.
+      E onde mais tempo e investido. Benchmarking tambem pode ser demorado.
+
+  state:
+    file: ".state.json"
+    resumable: true
+    tracks:
+      - current_phase
+      - current_module
+      - current_lesson
+      - modules_completed
+      - lessons_completed_per_module
+      - quality_gates_passed
+      - prd_version
+      - branding_status
+      - packaging_status
+      - active_agent
+
+  exceptions:
+    - name: "Aula longa demais"
+      action: "Sugerir divisao em multiplas aulas. Decisao do expert."
+
+    - name: "Conteudo no lugar errado"
+      action: "Sugerir mover. Decisao do expert."
+
+    - name: "Mudanca de direcao"
+      action: "Normal, faz parte. Ajustar e seguir. Atualizar PRD se necessario."
+
+    - name: "Trava por falta de conteudo"
+      action: "IA pesquisa fontes, traz referencias, volta ao debate."
+
+    - name: "Modulo/aula em standby"
+      action: "Marcar como pendente. Pode voltar depois."
+
+    - name: "WebSearch indisponivel no benchmarking"
+      action: "Coletar todo conhecimento do expert. PRD com disclaimer."
+
+    - name: "Expert nao tem docs de metodologia"
+      action: "Extrair da cabeca usando protocolo de co-desenvolvimento."
+
+    - name: "Estrutura contradiz PRD"
+      action: "Sinalizar. Debater: ajustar estrutura ou ajustar PRD."

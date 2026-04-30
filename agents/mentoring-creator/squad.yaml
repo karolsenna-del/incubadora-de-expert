@@ -1,0 +1,170 @@
+name: "Mentoring Creator"
+slug: mentoring-creator
+version: "1.0.0"
+description: "Cria programas de mentoria estruturados (individual, grupo ou consultoria) prontos pra vender e entregar. Pipeline de 10 fases com benchmarking, PRD, branding e empacotamento."
+activation: "/mentoringCreator"
+status: production
+
+agents:
+  - id: mentoring-chief
+    tier: orchestrator
+    file: agents/mentoring-chief.md
+    phases: [0, 8, 9]
+    description: "Orquestra pipeline, state management, quality gates, review final, checklist de producao"
+
+  - id: mentoring-creator
+    tier: 1
+    file: agents/mentoring-creator.md
+    phases: [1, 2, 3, 4, 5]
+    description: "Benchmarking, ingestao de metodologia, estrutura do programa, design de sessoes e entregaveis"
+
+  - id: brand-architect
+    tier: 1
+    file: agents/brand-architect.md
+    phases: [6]
+    description: "Naming, posicionamento, identidade verbal do produto"
+
+  - id: product-packager
+    tier: 1
+    file: agents/product-packager.md
+    phases: [7]
+    description: "Empacotamento final — proposta de valor, beneficios, precificacao, cartao de identidade"
+
+modes:
+  - id: individual
+    name: "Mentoria Individual (1:1)"
+    description: "Programa de mentoria personalizada 1:1"
+  - id: grupo
+    name: "Mentoria em Grupo / Mastermind"
+    description: "Programa de mentoria em grupo com cohort ou ongoing"
+  - id: consultoria
+    name: "Consultoria Premium"
+    description: "Programa de consultoria com implementacao (DWY/DFY)"
+
+pipeline:
+  phases:
+    - id: 0
+      name: "Setup"
+      agent: mentoring-chief
+      task: start
+      gate: QG-MC-001
+    - id: 1
+      name: "Benchmarking + PRD"
+      agent: mentoring-creator
+      task: benchmark-market
+      gate: QG-MC-002
+    - id: 2
+      name: "Ingestao da Metodologia"
+      agent: mentoring-creator
+      task: ingest-methodology
+      gate: QG-MC-003
+    - id: 3
+      name: "Estrutura do Programa"
+      agent: mentoring-creator
+      task: structure-program
+      gate: QG-MC-004
+    - id: 4
+      name: "Design de Sessoes"
+      agent: mentoring-creator
+      task: design-sessions
+      gate: QG-MC-005
+    - id: 5
+      name: "Design de Entregaveis"
+      agent: mentoring-creator
+      task: design-deliverables
+      gate: QG-MC-006
+    - id: 6
+      name: "Branding do Produto"
+      agent: brand-architect
+      task: brand-product
+      gate: QG-MC-007
+    - id: 7
+      name: "Empacotamento"
+      agent: product-packager
+      task: package-product
+      gate: QG-MC-008
+    - id: 8
+      name: "Revisao Final"
+      agent: mentoring-chief
+      task: review-finalize
+      gate: QG-MC-009
+    - id: 9
+      name: "Checklist de Producao"
+      agent: mentoring-chief
+      task: generate-checklist
+      gate: QG-MC-010
+
+quality_gates:
+  - id: QG-MC-001
+    phase: 0
+    name: "Setup Completo"
+    criteria: "Nome, publico, transformacao, modalidade definidos"
+    approval: "Usuario aprovou escopo"
+  - id: QG-MC-002
+    phase: 1
+    name: "PRD Aprovado"
+    criteria: "Mercado pesquisado, PRD completo com parametros"
+    approval: "Usuario aprovou PRD"
+  - id: QG-MC-003
+    phase: 2
+    name: "Metodologia Mapeada"
+    criteria: "Metodologia lida dos docs, mapeada, PRD enriquecido"
+    approval: "Usuario validou: 'e isso mesmo'"
+  - id: QG-MC-004
+    phase: 3
+    name: "Estrutura Validada"
+    criteria: "Fases, timeline, sessoes mapeadas, coerente com PRD"
+    approval: "Usuario aprovou estrutura"
+  - id: QG-MC-005
+    phase: 4
+    name: "Sessoes Desenhadas"
+    criteria: "Cada sessao com objetivo, formato, framework"
+    approval: "Usuario aprovou sessoes"
+  - id: QG-MC-006
+    phase: 5
+    name: "Entregaveis Desenhados"
+    criteria: "Onboarding, offboarding, assessments, ferramentas, suporte desenhados"
+    approval: "Usuario aprovou entregaveis"
+  - id: QG-MC-007
+    phase: 6
+    name: "Branding Aprovado"
+    criteria: "Naming, posicionamento, identidade verbal definidos"
+    approval: "Usuario aprovou branding"
+  - id: QG-MC-008
+    phase: 7
+    name: "Produto Empacotado"
+    criteria: "Proposta de valor, matriz beneficios, preco, comercial, cartao de identidade"
+    approval: "Usuario aprovou produto final"
+  - id: QG-MC-009
+    phase: 8
+    name: "Review Final"
+    criteria: "Review autonomo contra PRD sem gaps + aval humano"
+    approval: "ZERO gaps + usuario deu aval final"
+  - id: QG-MC-010
+    phase: 9
+    name: "Checklist Entregue"
+    criteria: "Checklist completo, categorizado, priorizado"
+    approval: "Usuario confirmou que cobre tudo"
+
+quality_gate_protocol:
+  steps:
+    - "APRESENTAR: mostrar output da fase em formato legivel"
+    - "PERGUNTAR: 'Isso bate? O que ajustaria?'"
+    - "LOOP DE DEBATE + AJUSTE: sem limite de rounds"
+    - "APROVACAO EXPLICITA: usuario diz 'fechou'"
+    - "HANDOFF: passa pra proxima fase"
+  rules:
+    - "NENHUMA fase avanca sem aprovacao explicita"
+    - "NENHUM 'vou assumir que ta ok'"
+    - "Squad NUNCA apressa o usuario"
+
+knowledge:
+  - file: data/mentoring-kb.md
+    description: "Patterns de programas de mentoria/consultoria (pesquisa global)"
+  # branding KB esta inline em agents/brand-architect.md (secao KB: PRINCIPIOS DE BRANDING)
+  # product packaging KB esta inline em agents/product-packager.md (protocolo 5 passos)
+
+dependencies:
+  required:
+    - WebSearch
+  optional: []

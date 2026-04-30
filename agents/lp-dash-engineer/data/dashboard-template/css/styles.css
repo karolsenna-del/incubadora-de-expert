@@ -1,0 +1,80 @@
+/* Launch Command Center — Custom Styles */
+
+body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth hover on table rows */
+.hover\:bg-gray-750:hover {
+  background-color: rgba(55, 65, 81, 0.5);
+}
+
+/* Pulse animation for refresh */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.refreshing .bg-gray-800 {
+  animation: pulse-subtle 1.5s ease-in-out infinite;
+}
+
+/* Skeleton loading animation */
+.animate-pulse {
+  animation: pulse-subtle 1.5s ease-in-out infinite;
+}
+
+/* Tab underline transition */
+[data-tab] {
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Spend form toggle */
+#spend-form-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+#spend-form-wrapper.open {
+  max-height: 200px;
+}
+
+/* KPI card number sizing */
+.kpi-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Responsive table */
+@media (max-width: 640px) {
+  table {
+    font-size: 0.8rem;
+  }
+
+  td, th {
+    padding: 0.5rem 0.35rem;
+  }
+}

@@ -1,0 +1,92 @@
+name: "Mentoring Creation Pipeline"
+version: "1.0.0"
+description: "Pipeline de 10 fases para criar programa de mentoria estruturado"
+
+phases:
+  - id: 0
+    name: "Setup"
+    agent: mentoring-chief
+    task: start
+    gate: QG-MC-001
+    duration: "5-10 min"
+    output: "Nome, publico, transformacao, modalidade definidos"
+
+  - id: 1
+    name: "Benchmarking + PRD"
+    agent: mentoring-creator
+    task: benchmark-market
+    gate: QG-MC-002
+    duration: "1-2 sessoes"
+    output: "PRD completo e aprovado"
+    requires_tool: WebSearch
+
+  - id: 2
+    name: "Ingestao da Metodologia"
+    agent: mentoring-creator
+    task: ingest-methodology
+    gate: QG-MC-003
+    duration: "30-60 min"
+    output: "Metodologia mapeada, PRD enriquecido"
+
+  - id: 3
+    name: "Estrutura do Programa"
+    agent: mentoring-creator
+    task: structure-program
+    gate: QG-MC-004
+    duration: "1-2 sessoes"
+    output: "Fases, timeline, sessoes mapeadas"
+
+  - id: 4
+    name: "Design de Sessoes"
+    agent: mentoring-creator
+    task: design-sessions
+    gate: QG-MC-005
+    duration: "1-3 sessoes"
+    output: "Todas as sessoes desenhadas"
+
+  - id: 5
+    name: "Design de Entregaveis"
+    agent: mentoring-creator
+    task: design-deliverables
+    gate: QG-MC-006
+    duration: "1-2 sessoes"
+    output: "Onboarding, offboarding, assessments, ferramentas, suporte"
+
+  - id: 6
+    name: "Branding"
+    agent: brand-architect
+    task: brand-product
+    gate: QG-MC-007
+    duration: "30-60 min"
+    output: "Naming, posicionamento, identidade verbal"
+
+  - id: 7
+    name: "Empacotamento"
+    agent: product-packager
+    task: package-product
+    gate: QG-MC-008
+    duration: "1-2 sessoes"
+    output: "Produto estruturado com cartao de identidade"
+
+  - id: 8
+    name: "Revisao Final"
+    agent: mentoring-chief
+    task: review-finalize
+    gate: QG-MC-009
+    duration: "30-60 min"
+    output: "Review autonomo + aval humano"
+
+  - id: 9
+    name: "Checklist de Producao"
+    agent: mentoring-chief
+    task: generate-checklist
+    gate: QG-MC-010
+    duration: "15-30 min"
+    output: "Checklist completo, categorizado, priorizado"
+
+bottleneck: "Fase 4 (design de sessoes) — co-desenvolvimento de cada sessao e onde mais tempo/profundidade e investido"
+
+state_management:
+  file: ".state.json"
+  resumable: true
+  pause_resume: true

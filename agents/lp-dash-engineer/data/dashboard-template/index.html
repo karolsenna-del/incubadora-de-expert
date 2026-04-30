@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launch Command Center — NDF 03/26</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gray: {
+              750: 'rgba(55, 65, 81, 0.5)',
+              850: '#1a2332',
+              950: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Supabase JS Client (UMD bundle for browser) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen bg-gray-950">
+
+  <!-- Header -->
+  <header class="border-b border-gray-800 bg-gray-900/80 backdrop-blur-sm sticky top-0 z-10">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div>
+        <h1 class="text-xl font-bold text-white flex items-center gap-2">
+          <i data-lucide="rocket" class="w-5 h-5 text-indigo-400"></i>
+          Launch Command Center
+        </h1>
+        <p class="text-sm text-gray-400 mt-0.5">NDF 03/26</p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <!-- Manual Spend Toggle -->
+        <button onclick="toggleSpendForm()" class="p-2 text-gray-400 hover:text-white transition-colors" title="Adicionar gasto manual">
+          <i data-lucide="plus-circle" class="w-5 h-5"></i>
+        </button>
+
+        <!-- Manual Refresh -->
+        <button id="refresh-btn" onclick="handleManualRefresh()" class="p-2 text-gray-400 hover:text-white transition-colors" title="Atualizar">
+          <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Spend Form (collapsible) -->
+    <div id="spend-form-wrapper" class="max-w-6xl mx-auto px-4">
+      <form id="spend-form" class="flex items-end gap-3 pb-4">
+        <div>
+          <label class="text-xs text-gray-400 block mb-1">Data</label>
+          <input type="date" name="spend-date" class="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-indigo-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="text-xs text-gray-400 block mb-1">Gasto (R$)</label>
+          <input type="number" name="spend-value" step="0.01" min="0" placeholder="0.00" class="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white w-32 focus:border-indigo-500 focus:outline-none">
+        </div>
+        <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">
+          Salvar
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-6">
+
+    <!-- Tabs -->
+    <nav class="flex border-b border-gray-800 mb-6">
+      <button data-tab="campaign" class="px-4 py-3 text-sm font-medium border-b-2 border-indigo-500 text-indigo-400 transition-colors">
+        Campanha
+      </button>
+      <button data-tab="recovery" class="px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-400 hover:text-gray-300 transition-colors">
+        Recuperacao
+      </button>
+      <button data-tab="criativos" class="px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-400 hover:text-gray-300 transition-colors">
+        Criativos
+      </button>
+      <button data-tab="lab" class="px-4 py-3 text-sm font-medium border-b-2 border-transparent text-gray-400 hover:text-gray-300 transition-colors">
+        Lab
+      </button>
+    </nav>
+
+    <!-- Campaign Panel -->
+    <div data-panel="campaign">
+
+      <!-- KPI Cards -->
+      <div id="kpi-cards" class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Metrics Table -->
+      <div class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden">
+        <table class="w-full">
+          <thead>
+            <tr class="border-b border-gray-700 bg-gray-850">
+              <th class="py-3 px-4 text-left text-gray-400 text-sm font-medium">Metrica</th>
+              <th class="py-3 px-4 text-right text-gray-400 text-sm font-medium">Total</th>
+              <th class="py-3 px-4 text-right text-gray-400 text-sm font-medium">Ontem</th>
+              <th class="py-3 px-4 text-right text-gray-400 text-sm font-medium">Hoje</th>
+            </tr>
+          </thead>
+          <tbody id="metrics-tbody">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Criativos Panel -->
+    <div data-panel="criativos" class="hidden">
+      <div id="criativos-content"></div>
+    </div>
+
+    <!-- Lab Panel (Price Lab + Page Lab) -->
+    <div data-panel="lab" class="hidden">
+      <div id="lab-subtabs"></div>
+      <div id="lab-content"></div>
+      <div id="lab-history"></div>
+    </div>
+
+    <!-- Recovery Panel -->
+    <div data-panel="recovery" class="hidden">
+
+      <!-- Bia Sales KPIs -->
+      <h3 class="text-sm font-medium text-gray-400 uppercase tracking-wider mb-3">Vendas da Bia</h3>
+      <div id="bia-sales-cards" class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Recovery Lead Tracking KPIs -->
+      <h3 class="text-sm font-medium text-gray-400 uppercase tracking-wider mb-3">Tracking de Leads</h3>
+      <div id="recovery-kpi-cards" class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Recovery Leads List -->
+      <div class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden">
+        <div class="px-4 py-3 border-b border-gray-700 bg-gray-850">
+          <h3 class="text-sm font-medium text-gray-300">Leads para Recuperar</h3>
+        </div>
+        <div id="recovery-list" class="p-0">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 mt-8">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between text-sm text-gray-500">
+      <span>Ultima atualizacao: <span id="last-update">--:--</span></span>
+      <span>Auto-refresh: 5min</span>
+    </div>
+  </footer>
+
+  <!-- Scripts (order matters) -->
+  <script src="js/config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/metrics.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/criativos.js"></script>
+  <script src="js/testing.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    // Spend form toggle
+    function toggleSpendForm() {
+      const wrapper = document.getElementById('spend-form-wrapper');
+      wrapper.classList.toggle('open');
+    }
+
+    // Initialize icons
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>
