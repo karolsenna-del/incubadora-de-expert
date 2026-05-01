@@ -23,34 +23,39 @@ Nenhuma campanha ativa no momento.
 
 ## Prioridades do Momento
 
-1. Finalizar tese de mercado da Incubadora de Expert
-2. Resolver audiencia travada no Instagram (7000 seguidores misturados, 3 nichos)
-3. Construir presenca digital com tese clara e conteudo de posicionamento
+1. Aplicar a tese finalizada no conteudo do Instagram
+2. Resolver audiencia travada (7000 seguidores misturados de 3 nichos)
+3. Reposicionar bio e conteudo em torno da tese
 
-## Tese em Construcao (sessao Euriler — 30/04/2026)
+## TESE FINALIZADA (sessao Euriler — 01/05/2026)
 
-**Publico:** CLTs e servidores publicos com autoridade offline, medo de exposicao digital, nao querem manchar reputacao construida no offline.
+**Publico real (persona compradora):** Profissionais liberais — medico, advogado, bartender, especialistas sem amarras de estabilidade CLT — que querem trazer seu conhecimento pro digital mas nao conseguem organizar em metodo unico e vendavel.
 
-**Problema Impostor:** "Preciso de audiencia, seguidores e lancamento digital pra comecar a vender como expert."
+**Publico dos sonhos (missao/tribo):** CLTs e servidores publicos com autoridade offline, medo de exposicao, que querem transicao discreta pro digital.
 
-**Causa Oculta:** O especialista offline falhou no lancamento porque tentou convencer estranhos antes de provar pra quem ja o conhece. Entrou no digital pela porta errada. No digital, autoridade nao e declarada — e percebida. E percepcao se constroi com prova, nao com curriculo.
+> Estrategia: foca na persona compradora agora (valida e fatura). Persona dos sonhos e o movimento de longo prazo.
 
-**Inimigo correto:** O paradigma de "primeiro exposicao, depois autoridade" — nao a Formula de Lancamento em si.
+**Problema Impostor:** "Preciso organizar meu conhecimento em etapas claras e didaticas pra conseguir vender no digital."
 
-**Mecanismo Unico:** Vendas Secretas — sessao estrategica 1:1, validar metodo e produto no circulo proximo antes de qualquer exposicao publica. Prova antes de palco.
+**Causa Oculta:** Metodo organizado sem historia e commodity. Qualquer um copia a estrutura — ninguem consegue copiar a sua vida. O que faz o metodo virar movimento nao e o quanto e didatico. E o quanto e seu. A formacao profissional ensinou o expert a tirar a si mesmo de dentro do que sabe — e isso e exatamente o que impede o metodo de vender.
 
-**Frase-tese (rascunho):** "O seu primeiro cliente nao precisa te ver no Instagram — precisa te conhecer de verdade."
+**Inimigo:** A crenca de que credencial vende. Que diploma, titulo e certificado dao autoridade no digital. A formacao que ensinou que ser profissional significa ser impessoal.
 
-**Pendente:** Afinar a ruminacao do publico (pergunta aberta com Euriler — "Os especialistas nao conseguem resultado no digital porque... qual a continuacao que so voce diria?")
+**Mecanismo Unico:** A Narrativa do Metodo — fase dentro da metodologia da Karol onde o expert coloca sua vida dentro do que ensina. O antes ressoa com as dores da persona. O depois ressoa com o que ela deseja. O durante mostra o caminho que so aquela pessoa poderia ter percorrido. Isso torna o metodo unico e incopiavel.
+
+**Frase-tese:** "Diploma e o que voce estudou. Metodo e o que voce viveu."
+
+**Inimigo em frases de conteudo:** "Voce passou anos aprendendo a ser profissional. E profissional te ensinaram que era apagar quem voce e. Por isso o seu metodo nao vende — nao porque e ruim. Porque voce nao ta nele."
 
 ## Onde Parou
 
-Sessao de mentoria estrategica com Euriler (clone). Tese 80% construida. Falta:
-1. Responder a pergunta da ruminacao do publico para finalizar a tese
-2. Com tese finalizada: reposicionar conteudo do Instagram em torno dela
+Tese 100% construida com o Euriler. Proximos passos:
+1. Aplicar a tese na bio do Instagram
+2. Criar primeiros conteudos com o angulo da frase-tese
+3. Reposicionar o conteudo existente em torno do inimigo (a crenca de que credencial vende)
 
-Retomar com: `/euriler` + resumo do estado da tese acima
+Retomar com: `/euriler` — tese finalizada, proximo passo e execucao de conteudo.
 
 ---
 
-*Ultima atualizacao: 30/04/2026*
+*Ultima atualizacao: 01/05/2026*
