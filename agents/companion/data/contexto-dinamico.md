@@ -47,15 +47,45 @@ Nenhuma campanha ativa no momento.
 
 **Inimigo em frases de conteudo:** "Voce passou anos aprendendo a ser profissional. E profissional te ensinaram que era apagar quem voce e. Por isso o seu metodo nao vende — nao porque e ruim. Porque voce nao ta nele."
 
+## FERRAMENTA DE PROPOSITO (08/05/2026)
+
+Ferramenta de proposito Arcane concluida. Documento completo em `docs/knowledge/expert-mind/proposito/ferramenta-de-proposito-arcane-maio-2026.md`.
+
+Sintese:
+- Proposito: Libertar o potencial aprisionado
+- Missao: Transformar profissionais aprisionados em empreendedores livres, confiantes e bem remunerados
+- Essencia: Arquiteta de Libertacao
+- Dom principal: Visao sistemica que enxerga modelo de negocio onde outros veem caos
+- Ferida → medicina: 13 anos servico publico + 8 fracassos → autoridade visceral sobre a dor da persona
+
+## DIAGNOSTICO DO METODO (08/05/2026) — sessao Euriler
+
+Trabalho de revisao estrutural do metodo da Incubadora de Expert. Decisoes tomadas:
+
+1. **Falta o passo 0 de desbloqueio de crenca** — antes de qualquer tecnica, o aluno precisa sair da crenca "credencial = autoridade". Euriler sugeriu usar o Ikigai aqui, reposicionado como revelador de autoridade (nao como definidor de nicho).
+
+2. **Narrativa do Metodo esta no lugar errado** — atualmente e passo 4, precisa vir antes de Persona e Promessa. Promessa sem narrativa e marketing vazio.
+
+3. **Sequencia nova proposta:**
+   Desbloqueio de crenca (Ikigai reposicionado) → Nicho (se necessario) → Narrativa → Persona → Promessa → Ferramentas → Oferta → Posicionamento
+
+4. **Insight central:** Karol ja faz o metodo certo nos bastidores (pergunta a historia primeiro nos encontros da Arcane). O produto perdeu o calor porque perdeu esse elemento. O onboarding individual que ela faz E o passo 0 real — precisa ser formalizado no metodo.
+
+5. **Mentalidade e Identidade:** nao sao modulos separados — sao desbloqueios nos pontos de friccao. Ela tem autoridade vivida em todos os bloqueios especificos do territorio (criar metodo e ir ao mercado).
+
+6. **Ikigai:** nao e "descoberta de nicho" pra quem ja tem nicho. E revelacao de que o conhecimento existe na intersecao da vida inteira — nao so da formacao. Ela veio pro digital por causa do Ikigai. Isso e a prova de conceito do proprio metodo.
+
 ## Onde Parou
 
-Tese 100% construida com o Euriler. Proximos passos:
-1. Aplicar a tese na bio do Instagram
-2. Criar primeiros conteudos com o angulo da frase-tese
-3. Reposicionar o conteudo existente em torno do inimigo (a crenca de que credencial vende)
+Tese finalizada (01/05). Proposito concluido (08/05). Estrutura do metodo diagnosticada (08/05).
 
-Retomar com: `/euriler` — tese finalizada, proximo passo e execucao de conteudo.
+Proximos passos:
+1. Reestruturar o metodo com a nova sequencia (quando retomar — nao vai mexer hoje, e dia das maes)
+2. Aplicar a tese na bio do Instagram
+3. Criar primeiros conteudos com o angulo da frase-tese
+
+Retomar com: `/euriler` — metodo em reestruturacao, tese pronta pra execucao de conteudo.
 
 ---
 
-*Ultima atualizacao: 01/05/2026*
+*Ultima atualizacao: 08/05/2026*
