@@ -12,8 +12,8 @@
 
 ## Backlog (quando tiver tempo)
 
-<!-- Ideias e tarefas pra futuro -->
+- **Gancho de conteúdo: "Expert em fracassar no digital"** — Karol se reconheceu como especialista nos erros que ensina a evitar. Trabalhar como ângulo de conteúdo: autoridade que vem dos fracassos, não dos acertos. Diferencial raro no mercado.
 
 ---
 
-*Ultima atualizacao: [data]*
+*Ultima atualizacao: 11/05/2026*
