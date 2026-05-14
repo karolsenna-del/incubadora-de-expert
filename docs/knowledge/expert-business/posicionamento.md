@@ -1,6 +1,6 @@
 # Posicionamento — Incubadora de Expert
 
-> Atualizado em 14/05/2026 — consolidado dos exercícios de Posicionamento da Arcane + adições do PDF (valores da persona, variante CLT, background da criadora, Q&As da tese).
+> Atualizado em 14/05/2026 — consolidado dos exercícios de Posicionamento da Arcane + ferramenta completa (depoimentos, sequência corrigida, versões da promessa).
 
 ---
 
@@ -127,10 +127,23 @@ Levar os leads para salas reservadas do Zoom. Ambiente controlado, sem julgament
 
 ## Promessa
 
-**Tangível:** método validado, primeiras vendas feitas
-**Intangível:** sem se sentir amadora ou insegura
+**Tangível:** método autoral estruturado, primeiras vendas feitas, posicionamento definido
+**Intangível:** sair da dúvida sobre si mesma, orgulho privado, autoridade que sente por dentro
 
-**Frase completa:** Ensino profissionais especializados a estruturarem seu conhecimento em um método validado, por meio das vendas secretas, sem se sentir amadora ou insegura.
+**Versão completa:**
+> "Transforme seu conhecimento em um método autoral validado e faça as primeiras vendas no digital — sem lançamentos, sem exposição amadora — e sinta, pela primeira vez, que o espaço que você sempre soube que era seu finalmente tem o seu nome."
+
+**Versão média (declaração de posicionamento):**
+> "Eu ajudo especialistas experientes a estruturarem seu método autoral e fazerem as primeiras vendas no digital — sem lançamento e sem exposição amadora."
+
+**Versão curta:**
+> "Transformo conhecimento invisível em método que vende."
+
+**Conexão com os valores da Laura:**
+- **Autonomia com dignidade** — método permite escolher com quem trabalha, quando, por quanto
+- **Reconhecimento intelectual** — posicionamento faz com que pessoas cheguem já sabendo que ela é referência
+- **Seriedade da imagem** — Vendas Secretas protegem a reputação durante a validação
+- **Legado** — método documentado vai além dela
 
 ---
 
@@ -166,8 +179,34 @@ Porque conhecimento e método são coisas diferentes. Você passou anos acumulan
 
 ## 5 Pontos de Conteúdo da Tese
 
-1. **O erro de sequência** — a ordem certa é inversa: método → validação → venda → presença
+1. **O erro de sequência** — a ordem certa é: método → venda → validação → presença → escala
 2. **Conhecimento não é método** — método é seleção e sequência, não tudo que você sabe
 3. **História autoral como diferencial competitivo** — o que posiciona não é o currículo, é a narrativa
 4. **Autoridade não se constrói com audiência — se constrói com clareza**
 5. **Validação secreta como proteção de autoridade** — vender antes de se expor não é gambiarra, é inteligência estratégica
+
+---
+
+## Depoimentos Reais
+
+> Arquivo completo: `docs/knowledge/expert-business/depoimentos.md`
+
+**Anália (médica):**
+> "Fiquei conversando com teu agente e estou sentindo o esclarecimento que desejava há 9 anos."
+
+**Hilda:**
+> "Até chorei emocionada aqui depois de escrever o formulário. Tem 4 anos que estudo para conseguir desenvolver um produto e não acredito que consegui — com um método que tem nome da minha empresa e consegui colocar nele módulos de como eu penso."
+
+**Hilda (em grupo):**
+> "Não tenho palavras para descrever a sessão estratégica dela. O olhar sobre meu produto e o diagnóstico impecável que recebi."
+
+**Evelyn:**
+> "Cada conversa com ela me gera muitos insights. Ajuda em tudo — estrutura, copy e até precificação."
+
+**Dalvelyn:**
+> "Você não apenas fala sobre evolução, mas realmente vive isso. Sua jornada me prova que não se trata mais de 'se' você vai emplacar, mas sim 'quando'."
+
+**Rosiani:**
+> "Estratégia, profundidade humana e visão de negócio. Direta, prática e ao mesmo tempo acolhedora."
+
+> "A clareza, a firmeza e a eficiência do método. Realmente capaz de transformar minha autoridade em um negócio sólido, escalável e profissional."
