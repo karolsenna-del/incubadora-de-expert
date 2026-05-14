@@ -77,21 +77,40 @@ Trabalho de revisao estrutural do metodo da Incubadora de Expert. Decisoes tomad
 
 ## Onde Parou
 
-Ferramenta de posicionamento da Arcane concluída (14/05). 32 questões respondidas com Companion.
+Sessão longa (14/05) — módulo de metodologia da plataforma Arcane + documentação completa do Expert360º.
 
-O que foi consolidado hoje:
-- Sequência correta do método: **método → venda → validação → presença → escala**
-- Promessa principal confirmada: "Transforme seu conhecimento em um método validado e faça as primeiras vendas, sem lançamentos ou se expor de forma amadora."
-- Decisão: "sem lançamentos" fica na promessa — calibrada para Laura 2 (persona compradora hoje)
-- Depoimentos reais documentados: Anália, Hilda, Dalvelyn, Rosiani, Evelyn
-- Slogan confirmado: "Diploma é o que você estudou. Método é o que você viveu."
+**O que foi feito:**
+- Posicionamento.md atualizado (sequência corrigida, versões da promessa, depoimentos)
+- Depoimentos salvos em arquivo próprio com guia de uso
+- Metodologia Expert360º documentada completamente em 5 arquivos:
+  - `expert360-framework-completo.md` — arquitetura, frase de posicionamento, validação lógica
+  - `fases-detalhadas.md` — 5 fases com aprendizado, entregáveis e marcos de passagem
+  - `metafora-expert-no-palco.md` — metáfora do palco refinada
+  - `persona-obstaculos-jornada.md` — análise da persona, obstáculos, cadeia A→B
+  - `ferramenta-metodologia-arcane-respostas.md` — respostas Q1-Q11 da ferramenta
 
-Proximos passos:
-1. Incorporar conteúdo novo da ferramenta no posicionamento.md (depoimentos, sequência corrigida, versões da promessa)
-2. Salvar depoimentos em arquivo próprio em docs/knowledge/expert-business/
-3. Aplicar a tese na bio do Instagram
-4. Criar primeiros conteúdos com o ângulo da frase-tese
-5. Reestruturar o método com a nova sequência
+**Decisões tomadas:**
+- Nome das fases atualizadas: Fase 3 = "Do Caos ao Método Autoral", Fase 4 = "Da Promessa à Venda Secreta"
+- Metodologia: Expert360º (não Método da Partitura — Expert360º já estabelecido)
+- Metáfora da ópera: fica como abertura de vendas, não como estrutura do framework
+
+**Ferramenta de metodologia Arcane:** 11/30 questões respondidas
+- Q1: bagagem e formações
+- Q2: mecanismo único e fases
+- Q3: pilares
+- Q4: persona e Ponto A
+- Q5: Ponto B
+- Q6: causa oculta
+- Q7: mecanismo único
+- Q8: o que não sabe
+- Q9: crenças limitantes
+- Q10: o que não faz
+- Q11: o que precisa parar de fazer
+
+**Próximos passos:**
+1. Continuar ferramenta de metodologia da Arcane (questão 12/30)
+2. Aplicar a tese na bio do Instagram
+3. Criar primeiros conteúdos com o ângulo da frase-tese
 
 Retomar com: `/expert-companion`
 
