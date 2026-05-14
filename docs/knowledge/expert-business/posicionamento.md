@@ -1,6 +1,6 @@
 # Posicionamento — Incubadora de Expert
 
-> Atualizado em 11/05/2026 — consolidado dos exercícios de Posicionamento da Arcane.
+> Atualizado em 14/05/2026 — consolidado dos exercícios de Posicionamento da Arcane + adições do PDF (valores da persona, variante CLT, background da criadora, Q&As da tese).
 
 ---
 
@@ -41,6 +41,12 @@ Ela não quer fama. Quer reconhecimento proporcional à sua competência.
 - **Profissional:** ser citada como referência por colegas da área
 - **Identitária:** orgulho privado de ter estruturado algo que vai além dela, que ensina, que permanece
 
+### Valores Reais (não os declarados)
+
+- **Autonomia com dignidade** — não quer liberdade de mochileira. Quer liberdade de adulta consolidada: poder escolher com quem trabalha, quando trabalha, o quanto cobra. Sem abrir mão da seriedade que construiu.
+- **Propósito com impacto concreto** — entrou na profissão para ajudar pessoas. Expandir para o digital não é vaidade — é extensão natural do propósito.
+- **Reconhecimento intelectual** — não likes. Respeito. Que o que ela diz seja levado a sério.
+
 ### O Que Tira o Sono
 Não é fracassar publicamente. É chegar daqui a 5 anos exatamente onde está hoje — e perceber que ficou parada por medo. A estagnação disfarçada de prudência. A palavra que ela tem para isso, mesmo sem usar em voz alta: desperdício.
 
@@ -59,6 +65,8 @@ O dilema central não é técnico: o custo do risco visível parece maior do que
 
 **Ponto A — onde está hoje:**
 Especialista reconhecida no offline, agenda cheia, financeiramente estável, mas operacionalmente presa. Renda vinculada ao tempo. Projeto digital existe só na cabeça. Ciclo de intenção → postergação → culpa → nova intenção.
+
+*Variante CLT/concursada:* Ganha bem, sabe que é boa tecnicamente, mas sente um vazio interno por não trabalhar com seu propósito. Sente que vai se arrepender se ficar onde está até se aposentar.
 
 **Ponto B — onde quer chegar:**
 Método autoral estruturado e funcionando. Primeiras vendas no digital feitas com confiança. Presença digital que reflita quem ela é profissionalmente — sem força, sem hype, sem desconforto.
@@ -133,6 +141,26 @@ Levar os leads para salas reservadas do Zoom. Ambiente controlado, sem julgament
 **Por que o mercado não resolve:** lançamentos, imersões e eventos demandam exposição que especialistas experientes não estão prontos para fazer — e não deveriam fazer antes de ter o método estruturado. Quem tenta escalar antes de validar repete o ciclo de frustração.
 
 **A criadora é a persona transformada:** 8 lançamentos fracassados não por falta de capacidade, mas por falta de preparo estruturado antes da exposição. A virada veio ao validar o método em condições controladas (vendas 1:1) antes de se expor em escala.
+
+Background da criadora como espelho da persona: administradora, contadora, auditora contábil, 2 pós-graduações (administração e gestão financeira). Sempre foi boa aluna, a melhor entre amigas e irmãos. Essa carga de ser "a melhor" se tornou uma máscara que a distanciava da audiência — não se permitia errar, perder ou fracassar, o que a tornava fria e distante. As vendas não aconteciam porque venda é relação, é conexão. Profissionais menos qualificados mas mais próximos eram escolhidos no lugar dela.
+
+---
+
+## 3 Perguntas que o Público Faria
+
+**P1: "Mas eu não preciso ter audiência antes de vender?"**
+Não. Audiência é consequência de método validado, não pré-requisito para ele. O mercado inverteu essa lógica e criou um gargalo: especialistas passam meses construindo presença digital sem ter clareza do que estão vendendo, para quem e por quê. As primeiras vendas acontecem no 1:1, com círculo próximo ou indicações diretas. Você não precisa de 10 mil seguidores para vender para 3 pessoas certas. Essas 3 geram provas, ajustes e confiança para escalar depois.
+
+**P2: "Eu preciso me expor nas redes sociais para que isso funcione?"**
+Não da forma que você está imaginando. Exposição amadora paralisa especialistas experientes — e com razão. Aparecer sem método estruturado, sem clareza de posicionamento, tentando imitar influenciadores mais jovens prejudica a autoridade construída offline. O que você precisa não é de exposição — é de *presença estratégica*. E presença estratégica só é possível depois que você sabe exatamente quem é sua persona, qual é sua promessa e o que seu método entrega. Antes disso, qualquer exposição é ruído.
+
+**P3: "Por que eu não consigo estruturar meu método mesmo sabendo tanto?"**
+Porque conhecimento e método são coisas diferentes. Você passou anos acumulando formações e casos. Mas tudo isso está organizado na sua cabeça como trajetória — não como transformação para outra pessoa. Método não é tudo que você sabe. É o caminho mais curto entre o problema da sua persona e o resultado que ela quer — contado com a sua história como prova de que funciona. O erro mais comum: tentar colocar tudo dentro do produto. Isso gera cursos imensos e confusos que não vendem, porque a persona não enxerga a transformação dela dentro de tanto conteúdo.
+
+**Síntese das evidências:**
+- Quem tenta escalar antes de validar repete o ciclo de frustração — independente de quanto sabe
+- Exposição sem método estruturado prejudica autoridade, não constrói
+- O que diferencia um método que vende não é o volume de conteúdo — é a história autoral que o ancora
 
 ---
 
