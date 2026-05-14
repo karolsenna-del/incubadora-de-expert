@@ -77,15 +77,24 @@ Trabalho de revisao estrutural do metodo da Incubadora de Expert. Decisoes tomad
 
 ## Onde Parou
 
-Tese finalizada (01/05). Proposito concluido (08/05). Estrutura do metodo diagnosticada (08/05).
+Ferramenta de posicionamento da Arcane concluída (14/05). 32 questões respondidas com Companion.
+
+O que foi consolidado hoje:
+- Sequência correta do método: **método → venda → validação → presença → escala**
+- Promessa principal confirmada: "Transforme seu conhecimento em um método validado e faça as primeiras vendas, sem lançamentos ou se expor de forma amadora."
+- Decisão: "sem lançamentos" fica na promessa — calibrada para Laura 2 (persona compradora hoje)
+- Depoimentos reais documentados: Anália, Hilda, Dalvelyn, Rosiani, Evelyn
+- Slogan confirmado: "Diploma é o que você estudou. Método é o que você viveu."
 
 Proximos passos:
-1. Reestruturar o metodo com a nova sequencia (quando retomar — nao vai mexer hoje, e dia das maes)
-2. Aplicar a tese na bio do Instagram
-3. Criar primeiros conteudos com o angulo da frase-tese
+1. Incorporar conteúdo novo da ferramenta no posicionamento.md (depoimentos, sequência corrigida, versões da promessa)
+2. Salvar depoimentos em arquivo próprio em docs/knowledge/expert-business/
+3. Aplicar a tese na bio do Instagram
+4. Criar primeiros conteúdos com o ângulo da frase-tese
+5. Reestruturar o método com a nova sequência
 
-Retomar com: `/euriler` — metodo em reestruturacao, tese pronta pra execucao de conteudo.
+Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 08/05/2026*
+*Ultima atualizacao: 14/05/2026*
