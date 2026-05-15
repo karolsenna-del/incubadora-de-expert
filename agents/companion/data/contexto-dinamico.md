@@ -77,38 +77,25 @@ Trabalho de revisao estrutural do metodo da Incubadora de Expert. Decisoes tomad
 
 ## Onde Parou
 
-Sessão longa (14/05) — módulo de metodologia da plataforma Arcane + documentação completa do Expert360º.
+Sessão longa (15/05) — ferramenta de metodologia da Arcane: Q9 a Q29 respondidas.
 
 **O que foi feito:**
-- Posicionamento.md atualizado (sequência corrigida, versões da promessa, depoimentos)
-- Depoimentos salvos em arquivo próprio com guia de uso
-- Metodologia Expert360º documentada completamente em 5 arquivos:
-  - `expert360-framework-completo.md` — arquitetura, frase de posicionamento, validação lógica
-  - `fases-detalhadas.md` — 5 fases com aprendizado, entregáveis e marcos de passagem
-  - `metafora-expert-no-palco.md` — metáfora do palco refinada
-  - `persona-obstaculos-jornada.md` — análise da persona, obstáculos, cadeia A→B
-  - `ferramenta-metodologia-arcane-respostas.md` — respostas Q1-Q11 da ferramenta
+- Ferramenta de metodologia Arcane: 29/30 questões respondidas
+  - Q9: medos da persona
+  - Q10-Q12: sequência do Ponto A ao Ponto B
+  - Q13: ordem dos obstáculos (ACREDITAR → SABER → PARAR/FAZER)
+  - Q14-Q18: bagagem, formações, referências, insights do campo, insights genuínos
+  - Q19-Q26: dimensões paralelas, pés da mesa, pilares, mecanismo, fases, forma visual
+  - Q27-Q29: nomes, frase-síntese, teste de validação
+- PDF da plataforma Arcane lido e arquivado (exercícios de metodologia 14/05)
+- Marcos de passagem por fase salvos
+- Frase da metodologia (versão completa e curta) salva
+- Histórias de Hilda e Anália documentadas
 
-**Decisões tomadas:**
-- Nome das fases atualizadas: Fase 3 = "Do Caos ao Método Autoral", Fase 4 = "Da Promessa à Venda Secreta"
-- Metodologia: Expert360º (não Método da Partitura — Expert360º já estabelecido)
-- Metáfora da ópera: fica como abertura de vendas, não como estrutura do framework
-
-**Ferramenta de metodologia Arcane:** 11/30 questões respondidas
-- Q1: bagagem e formações
-- Q2: mecanismo único e fases
-- Q3: pilares
-- Q4: persona e Ponto A
-- Q5: Ponto B
-- Q6: causa oculta
-- Q7: mecanismo único
-- Q8: o que não sabe
-- Q9: crenças limitantes
-- Q10: o que não faz
-- Q11: o que precisa parar de fazer
+**Ferramenta de metodologia Arcane:** 29/30 questões respondidas
 
 **Próximos passos:**
-1. Continuar ferramenta de metodologia da Arcane (questão 12/30)
+1. Finalizar Q30 (última questão da ferramenta)
 2. Aplicar a tese na bio do Instagram
 3. Criar primeiros conteúdos com o ângulo da frase-tese
 
@@ -116,4 +103,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 14/05/2026*
+*Ultima atualizacao: 15/05/2026*
