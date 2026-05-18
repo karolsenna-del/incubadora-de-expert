@@ -1,5 +1,6 @@
 # Expert360º — Mecanismo Único
 **Fonte:** Ferramenta de Posicionamento Arcane, 14/05/2026
+**Revisado:** Sessão de revisão estratégica com Euriler — 18/05/2026
 
 ---
 
@@ -16,7 +17,7 @@ O Expert360º inverte a ordem que o mercado ensina:
 
 ---
 
-## Os 2 Mecanismos Proprietários
+## Os 3 Mecanismos Proprietários
 
 ### Mecanismo 1 — Narrativa do Método
 
@@ -45,6 +46,20 @@ Isso protege a autoridade construída offline enquanto constrói a confiança qu
 
 ---
 
+### Mecanismo 3 — Autoridade Tríplice
+
+O Agente da Autoridade Tríplice gera posicionamento em três camadas simultâneas antes de qualquer exposição pública:
+
+- **Posicionamento do Expert:** tom de voz, arquétipo, valores, forma de comunicar
+- **Posicionamento da Persona:** o que ela acredita, como se inter-relaciona com o expert, rapport e conexão
+- **Posicionamento do Produto:** mostrando que é a melhor solução para a dor específica (marketing de premissas)
+
+A partir dessa tríplice, gera narrativa por nível de consciência (topo, meio e fundo de funil) e plano de conteúdo de 30 dias.
+
+**O que diferencia:** o mercado ensina posicionamento de marca ou posicionamento de produto. Raramente os dois juntos. Nunca os três — Expert + Persona + Produto — com a narrativa da tese embutida. A aluna que passa pelo Agente da Autoridade Tríplice não aparece no digital com bio genérica. Aparece com arquitetura de autoridade completa.
+
+---
+
 ## Por que funciona quando outros falham
 
 **Razão 1 — Resolve o problema certo, na ordem certa**  
@@ -60,7 +75,7 @@ A persona experiente tem medo de parecer amadora. O mercado ignora esse medo e e
 
 ## Como comunicar o mecanismo
 
-> *"O Expert360º funciona por dois mecanismos: a Narrativa do Método — que coloca sua história dentro do que você ensina para torná-lo incopiável — e as Vendas Secretas — que validam seu método no 1:1 antes de qualquer exposição pública."*
+> *"O Expert360º funciona por três mecanismos: a Narrativa do Método — que coloca sua história dentro do que você ensina para torná-lo incopiável —, as Vendas Secretas — que validam seu método no 1:1 antes de qualquer exposição pública — e a Autoridade Tríplice — que posiciona você, sua persona e seu produto em três camadas simultâneas antes de você aparecer no digital."*
 
 ---
 
