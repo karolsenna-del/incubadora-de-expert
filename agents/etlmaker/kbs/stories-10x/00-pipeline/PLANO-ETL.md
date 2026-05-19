@@ -11,8 +11,12 @@
 ## Status
 - [x] Fase 0: Setup
 - [x] Fase 1: Ingestão de fontes ✅ (19/19 aulas extraídas — 19/05/2026)
-- [ ] Fase 2: Composição Blocada (0/N volumes)
-- [ ] Fase 3: Integração
+- [x] Fase 2: Composição Blocada ✅ (4/4 volumes — 19/05/2026)
+  - [x] VOL-01: Filosofia e Fundamentos (~350 linhas, spot-check 10/10 PASS)
+  - [x] VOL-02: Temas, Sequências e App (~500 linhas, spot-check 10/10 PASS)
+  - [x] VOL-03: Os 37 Dispositivos (~900 linhas, spot-check 10/10 PASS)
+  - [x] VOL-04: Execução, Crescimento e Vendas (~400 linhas, spot-check 10/10 PASS)
+- [x] Fase 3: Integração ✅ (README, REGRAS-CARDINAIS, REPERTÓRIO, GLOSSÁRIO — 19/05/2026)
 - [ ] Fase 4: Validação Final
 
 ## ⚠️ Bloqueio: CDN Rate Limiting — DIAGNÓSTICO COMPLETO
