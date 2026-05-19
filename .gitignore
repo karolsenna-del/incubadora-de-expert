@@ -19,3 +19,9 @@ Thumbs.db
 *.tmp
 *.log
 .playwright-mcp/
+
+# Arquivos de mídia (binários pesados — ficam local, nao no git)
+*.mp3
+*.mp4
+*.wav
+*.m4a
