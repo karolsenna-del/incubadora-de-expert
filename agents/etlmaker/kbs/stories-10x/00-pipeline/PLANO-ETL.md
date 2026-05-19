@@ -15,17 +15,30 @@
 - [ ] Fase 3: Integração
 - [ ] Fase 4: Validação Final
 
-## ⚠️ Bloqueio: CDN Rate Limiting
-**Problema:** Requisição paralela acidental na sessão de 19/05/2026 acionou rate limit do CDN Akamai da Hotmart. Requests JS subsequentes bloqueados por período indeterminado (estimado 30-60min).
+## ⚠️ Bloqueio: CDN Rate Limiting — DIAGNÓSTICO COMPLETO
 
-**Impacto:** Aulas com mais de ~3 minutos ficaram com transcrição parcial (apenas segmentos já cacheados pelo player, ~18 segs = ~1:48 de conteúdo).
+**Sessão 19/05/2026 — tentativa 1 (falhou):**
+- Fetch paralelo acionou rate limit. Aulas 03 e 04 ficaram parciais.
 
-**Solução para próxima sessão:**
-1. Abrir NOVA sessão (CDN rate limit resetado)
-2. Navegar para cada aula
-3. Esperar player pre-fetch os VTTs (auto, com subtítulo PT-BR ativo)
-4. Usar `force-cache` fetch — NÃO usar fetch paralelo
-5. Máx 1 request a cada 100ms (rate limit seguro)
+**Sessão 19/05/2026 — tentativa 2 (diagnóstico):**
+- Player pré-carrega: segs 1–6 (início) e 172–214 (fim) da aula 03
+- Total aula 03: 214 segmentos. Em cache: 49. Faltando: segs 7–171 (165 segs)
+- JS fetch a 150ms acionou 403 no seg 7. Player parou de carregar segs 10–171 após interferência
+- `force-cache` só lê o que está no cache — funciona sem rate limit, mas pega apenas o que o player já buscou
+- O player NÃO busca os segmentos intermediários automaticamente (só início + fim)
+
+**Causa raiz:** O player Hotmart pré-carrega início+fim para navegação, mas carrega o meio apenas ao REPRODUZIR o vídeo.
+
+**Plano corrigido para próxima sessão:**
+1. Navegar para a aula (player carrega 1–6 e final automaticamente)
+2. **Fazer o vídeo reproduzir** via JS: `document.querySelector('video').play()`
+3. Aguardar buffering completo (~duração da aula em tempo real, ou acelerar com `video.playbackRate = 16`)
+4. Após todos os segmentos carregados → usar `force-cache` sem network requests
+5. Repetir para cada aula
+
+**Alternativa (mais rápida):** Fetch sequencial com delay 1000ms por segmento
+- 165 segs faltando × 1000ms = ~2min 45s (aceitável)
+- Implementar retry com backoff exponencial em caso de 403
 
 ## Mapa de Aulas — Trilha Principal
 
@@ -66,9 +79,11 @@
 
 ## Decisões Chave
 - Extração via browser automation (Playwright) — legendas PT-BR do player Hotmart
-- Token hdntl: exp=1779242101 (válido por toda a sessão)
-- Deduplicação por timestamp (ms) + remoção de consecutivos idênticos
+- Token hdntl gerado por sessão (expira ~24h). Novo token a cada nova sessão logada
+- Deduplicação por texto consecutivo idêntico (não por timestamp)
 - Transcrições salvas em: 00-pipeline/sources/transcricoes/
+- Aula 03 tem 214 segmentos VTT (confirmado). URL padrão: `QZPb3n9xqw-1748522396000-textstream_pt_br=1000-{N}.webvtt`
+- Video ID por Content ID: V4VdxZg972 → QZPb3n9xqw | ROxkvbzb7D → DZmw8Vjyqz
 
 ## Regras de Operação
 - RELER ESTE PLANO a cada autocompact
@@ -78,6 +93,7 @@
 - Após extrair todas as transcrições → iniciar mapeamento territorial
 
 ## Progresso de Extração
-- 19/05/2026: Aulas 01 e 02 extraídas 100% (legendas PT-BR via browser automation)
-- 19/05/2026: Aulas 03 e 04 parciais (54% e 35%) — rate limit CDN acionado por fetch paralelo
-- 19/05/2026: 15 aulas restantes aguardam nova sessão sem rate limit
+- 19/05/2026 (sessão 1): Aulas 01 e 02 extraídas 100% (legendas PT-BR via browser automation)
+- 19/05/2026 (sessão 1): Aulas 03 e 04 parciais (54% e 35%) — rate limit CDN acionado por fetch paralelo
+- 19/05/2026 (sessão 2): Diagnóstico completo do rate limit. Plano corrigido. 15 aulas pendentes
+- **Próxima sessão:** Completar aulas 03 e 04 + extrair aulas 05–19 usando playback JS ou fetch 1000ms
