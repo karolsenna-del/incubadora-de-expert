@@ -9,14 +9,16 @@
     "phase_1": "completed",
     "phase_2": "completed",
     "phase_3": "completed",
-    "phase_4": "pending"
+    "phase_4": "completed"
   },
+  "validation_score": 98.64,
+  "validation_verdict": "APPROVED",
   "source": "hotmart_video_subtitles",
   "total_lessons": 19,
   "lessons_extracted": 19,
   "volumes_composed": 4,
   "validation_score": 0,
-  "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002"],
+  "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003", "QG-ETL-004", "QG-ETL-005"],
   "started_at": "2026-05-19T02:00:00Z",
   "phase1_completed_at": "2026-05-19T12:00:00Z",
   "extraction_method": "playwright_iframe_16x_dedup",

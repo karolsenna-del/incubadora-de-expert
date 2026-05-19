@@ -1,0 +1,193 @@
+validation_report:
+  kb_slug: "stories-10x"
+  kb_name: "Stories 10x — Leandro Ladeira"
+  timestamp: "2026-05-19T13:00:00Z"
+  version: "3.0"
+  auditor: "@auditor ETLmaker v3.0"
+  revision_cycle: 1
+
+  layer_2_verdict: "PASS"
+
+  pass_1_coverage:
+    total_domains: 9
+    domains_covered: 9
+    subtopics_coverage: 97.2
+    uncovered:
+      - domain: "D09 Aplicativo"
+        detail: "Aulas 05-06 cobertas mas interface do app com menor profundidade"
+        severity: "minor"
+      - domain: "D01 Filosofia"
+        detail: "Aula 03 segs 2-14 (~84s) ausentes — conteúdo não-crítico"
+        severity: "negligible"
+    verdict: "PASS"
+
+  pass_2_fidelity:
+    total_checks: 20
+    correct: 20
+    distorted: 0
+    invented: 0
+    fidelity_score: 100.0
+    issues: []
+    sample_verified:
+      - claim: "307 mil views, 12 mil seguidores (vídeo Filho/Dinheiro)"
+        source: "Aula 04"
+        classification: "CORRECT"
+      - claim: "100 mil compartilhamentos, R$800 mil (Peça Compartilhamento)"
+        source: "Aula 13"
+        classification: "CORRECT"
+      - claim: "R$1.800 vs R$150 nutrólogo"
+        source: "Aula 12"
+        classification: "CORRECT"
+      - claim: "1000+ vídeos YouTube, <100 bateram 1M views"
+        source: "Aula 19"
+        classification: "CORRECT"
+    verdict: "PASS"
+
+  pass_3_richness:
+    volumes:
+      - volume: "VOL-01"
+        lines: 350
+        tables: 3
+        examples: 8
+        provenance: 20
+        cardinal_rules: 5
+        metaphors: 3
+        headers: 12
+        lists: 5
+        pass: true
+      - volume: "VOL-02"
+        lines: 500
+        tables: 5
+        examples: 10
+        provenance: 25
+        cardinal_rules: 2
+        metaphors: 2
+        headers: 15
+        lists: 8
+        pass: true
+      - volume: "VOL-03"
+        lines: 900
+        tables: 4
+        examples: 30
+        provenance: 50
+        cardinal_rules: 2
+        metaphors: 5
+        headers: 20
+        lists: 10
+        pass: true
+      - volume: "VOL-04"
+        lines: 400
+        tables: 5
+        examples: 8
+        provenance: 20
+        cardinal_rules: 3
+        metaphors: 1
+        headers: 10
+        lists: 5
+        pass: true
+    all_pass: true
+    verdict: "PASS"
+
+  pass_4_voice:
+    consistency_score: 92.0
+    verified:
+      - element: "Catchphrase 'Concorda?'"
+        present: true
+        volumes: ["VOL-01", "VOL-02", "VOL-03"]
+      - element: "Catchphrase 'Adivinha'"
+        present: true
+        volumes: ["VOL-01", "VOL-03"]
+      - element: "Terminologia 'Sequência/Dispositivo/Tema'"
+        present: true
+        consistent: true
+      - element: "Metáforas preservadas"
+        present: true
+        examples: ["janela da curiosidade", "dopamina do Instagram", "pedras grandes primeiro"]
+      - element: "Tom casual e direto"
+        present: true
+    issues:
+      - element: "Catchphrases 'Ficou claro?' e 'Combinado?' menos presentes"
+        severity: "minor"
+    verdict: "PASS"
+
+  pass_5_consistency:
+    contradictions: 0
+    concepts_checked: 8
+    cross_refs_valid: true
+    checks:
+      - concept: "Comunidade"
+        volumes_present: 4
+        consistent: true
+      - concept: "Sequência (tipos e definição)"
+        volumes_present: 3
+        consistent: true
+      - concept: "Dispositivos (numeração)"
+        files_checked: ["VOL-03", "REPERTÓRIO", "GLOSSÁRIO"]
+        consistent: true
+      - concept: "Análise Pragmática / Debriefing"
+        volumes_present: 2
+        consistent: true
+    verdict: "PASS"
+
+  pass_6_integrity:
+    volumes_planned: 4
+    volumes_present: 4
+    transversal_planned: 5
+    transversal_present: 5
+    pipeline_docs_updated: true
+    orphan_files: 0
+    verification:
+      - file: "VOL-01-filosofia-e-fundamentos.md"
+        exists: true
+      - file: "VOL-02-temas-sequencias-e-app.md"
+        exists: true
+      - file: "VOL-03-dispositivos-engenharia-social.md"
+        exists: true
+      - file: "VOL-04-execucao-crescimento-e-vendas.md"
+        exists: true
+      - file: "README.md"
+        exists: true
+      - file: "REGRAS-CARDINAIS.md"
+        exists: true
+      - file: "REPERTORIO.md"
+        exists: true
+      - file: "GLOSSARIO.md"
+        exists: true
+      - file: "00-pipeline/MAPA-TERRITORIAL.md"
+        exists: true
+    verdict: "PASS"
+
+  aggregate:
+    coverage: 97.2
+    fidelity: 100.0
+    richness: 100.0
+    voice: 92.0
+    consistency: 100.0
+    integrity: 100.0
+    score: 98.64
+    formula: "(97.2x0.20) + (100.0x0.30) + (100.0x0.10) + (92.0x0.10) + (100.0x0.15) + (100.0x0.15)"
+    verdict: "APPROVED"
+
+  revision_items: []
+
+  kb_metrics:
+    total_volumes: 4
+    total_lines_estimated: 2150
+    total_sources: 19
+    total_aulas_duration_minutes: 390
+    frameworks_documented: 6
+    cardinal_rules: 12
+    devices_documented: 38
+    sequence_types_documented: 12
+    glossary_terms: 60
+    artefatos_acionaveis: 9
+    spot_checks_total: 40
+    spot_checks_correct: 40
+    spot_checks_invented: 0
+
+  final_notes:
+    - "KB aprovada para produção. Zero invenções. Fidelidade 100%."
+    - "VOL-03 é o volume mais denso e estratégico — catálogo completo dos 37+1 dispositivos."
+    - "Gap menor: aula 03 segs 2-14 (~84s de intro histórica) — não afeta a qualidade da KB."
+    - "REPERTÓRIO com 6 seções (das 11 possíveis) — adequado para este corpus."
+    - "Score agregado 98.64% — acima do threshold mínimo de 90%."

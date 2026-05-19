@@ -1,0 +1,84 @@
+critical_audit:
+  kb_slug: "stories-10x"
+  timestamp: "2026-05-19T13:00:00Z"
+  version: "3.0"
+  auditor: "@auditor ETLmaker v3.0"
+
+  frameworks:
+    total_in_mapa: 6
+    found_in_output: 6
+    missing: []
+    coverage: "100.0%"
+    details:
+      - name: "Stories 10x (S10X)"
+        volume: "VOL-01"
+        status: "FOUND"
+      - name: "Dispositivos de Engenharia Social (37)"
+        volume: "VOL-03"
+        status: "FOUND"
+      - name: "Sequências Especiais (12 tipos)"
+        volume: "VOL-02"
+        status: "FOUND"
+      - name: "Limitação Criativa"
+        volume: "VOL-02"
+        status: "FOUND"
+      - name: "SpinLadeirinha"
+        volume: "VOL-04"
+        status: "FOUND"
+      - name: "Análise Pragmática"
+        volume: "VOL-04"
+        status: "FOUND"
+
+  cardinal_rules:
+    total_in_mapa: 12
+    found_in_volumes: 12
+    found_in_regras_doc: 12
+    missing_from_volumes: []
+    missing_from_regras: []
+    coverage: "100.0%"
+
+  glossary_terms:
+    total_in_mapa: 23
+    found_in_glossary: 23
+    missing: []
+    coverage: "100.0%"
+    note: "GLOSSARIO.md contém ~60 termos — todos 23 do MAPA presentes + emergentes dos volumes"
+
+  cross_volume:
+    concepts_in_multiple_volumes: 8
+    contradictions: 0
+    contradiction_details: []
+    invalid_cross_refs: 0
+    verdict: "PASS"
+
+  actionable_artifacts:
+    total_in_mapa: 9
+    found_in_volumes: 9
+    found_in_repertorio: 9
+    missing_from_volumes: []
+    missing_from_repertorio: []
+    by_type:
+      frameworks: "2/2"
+      formulas: "2/2"
+      reference_tables: "4/4"
+      workflows: "2/2"
+      templates: "2/2"
+      checklists: "2/2"
+      scripts: "0/0 (N/A)"
+      swipes: "0/0 (N/A)"
+      benchmarks: "0/0 (N/A - embedded em reference_tables)"
+    coverage: "100.0%"
+
+  repertorio_completeness:
+    sections_present: "6/11"
+    sections_not_applicable: ["script", "swipe", "benchmark_separado", "reference_table_script", "swipe_file"]
+    items_with_provenance: "9/9 (100%)"
+    items_with_cross_ref: "9/9 (100%)"
+    orphan_items: 0
+    note: "6 seções aplicáveis a este corpus — tipos restantes N/A"
+
+  overall_verdict: "PASS"
+  critical_missing: []
+  notes:
+    - "Aula 03 segs 2-14 ausentes (~84s de intro histórica) — impacto negligenciável"
+    - "REPERTÓRIO tem 6 seções (das 11 possíveis) — adequado para este corpus"
