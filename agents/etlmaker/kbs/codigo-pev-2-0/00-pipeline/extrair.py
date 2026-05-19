@@ -132,11 +132,11 @@ def transcrever(audio_path, titulo):
     cmd = [
         "whisper", str(audio_path),
         "--language", "pt",
-        "--model", "medium",
+        "--model", "tiny",
         "--output_format", "txt",
         "--output_dir", str(TRANS_DIR),
     ]
-    result = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=3600)
     if result.returncode != 0:
         log(f"  [ERRO] Whisper: {result.stderr[-500:]}")
         return None
@@ -206,6 +206,14 @@ def main():
 
             except Exception as e:
                 log(f"  [ERRO] {e}")
+                # Se áudio já existe mas transcrição falhou, tentar transcrever mesmo assim
+                audio_existente = AUDIO_DIR / f"{titulo}.mp3"
+                if audio_existente.exists() and not ja_transcrito(titulo):
+                    log(f"  [RETRY-WHISPER] Tentando transcrever áudio existente...")
+                    transcrever(audio_existente, titulo)
+
+            except Exception as e2:
+                log(f"  [ERRO-FINAL] {e2}")
                 continue
 
         browser.close()

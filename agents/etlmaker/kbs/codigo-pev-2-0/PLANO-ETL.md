@@ -17,9 +17,9 @@
 
 ## Status
 - [x] Fase 0: Setup
-- [ ] Fase 1: Mapeamento Territorial (extração + transcrição em andamento)
-- [ ] Fase 2: Composição Blocada (0/5 volumes)
-- [ ] Fase 3: Integração
+- [x] Fase 1: Mapeamento Territorial (20 aulas transcritas via Whisper tiny)
+- [x] Fase 2: Composição Blocada (5/5 volumes compostos)
+- [x] Fase 3: Integração (README.md criado)
 - [ ] Fase 4: Validação Final
 
 ## Pipeline Técnico
