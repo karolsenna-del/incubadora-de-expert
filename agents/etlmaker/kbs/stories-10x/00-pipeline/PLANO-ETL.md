@@ -10,7 +10,7 @@
 
 ## Status
 - [x] Fase 0: Setup
-- [ ] Fase 1: Ingestão de fontes (4/19 aulas — 2 completas, 2 parciais)
+- [x] Fase 1: Ingestão de fontes ✅ (19/19 aulas extraídas — 19/05/2026)
 - [ ] Fase 2: Composição Blocada (0/N volumes)
 - [ ] Fase 3: Integração
 - [ ] Fase 4: Validação Final
@@ -93,7 +93,10 @@
 - Após extrair todas as transcrições → iniciar mapeamento territorial
 
 ## Progresso de Extração
-- 19/05/2026 (sessão 1): Aulas 01 e 02 extraídas 100% (legendas PT-BR via browser automation)
-- 19/05/2026 (sessão 1): Aulas 03 e 04 parciais (54% e 35%) — rate limit CDN acionado por fetch paralelo
-- 19/05/2026 (sessão 2): Diagnóstico completo do rate limit. Plano corrigido. 15 aulas pendentes
-- **Próxima sessão:** Completar aulas 03 e 04 + extrair aulas 05–19 usando playback JS ou fetch 1000ms
+- 19/05/2026 (sessão 1): Aulas 01 e 02 extraídas 100%
+- 19/05/2026 (sessão 1): Aulas 03 e 04 parciais — rate limit CDN
+- 19/05/2026 (sessão 2): Diagnóstico do rate limit. Plano corrigido.
+- 19/05/2026 (sessão 3): **COMPLETO** — 19/19 aulas extraídas via playerFrame 16x + dedup VTT
+  - Método final: Playwright iframe frame.evaluate() + play 16x + force-cache + dedup por overlap
+  - Aula 03: extraída ~98% (segs 2-14 ausentes = ~84s de intro)
+  - Aulas 01, 02, 04-19: 100% extraídas

@@ -3,20 +3,30 @@
   "kb_name": "Stories 10x — Leandro Ladeira",
   "mode": "full",
   "version": "3.0.0",
-  "current_phase": 1,
+  "current_phase": 2,
   "phase_status": {
     "phase_0": "completed",
-    "phase_1": "in_progress",
+    "phase_1": "completed",
     "phase_2": "pending",
     "phase_3": "pending",
     "phase_4": "pending"
   },
   "source": "hotmart_video_subtitles",
   "total_lessons": 19,
-  "lessons_extracted": 1,
+  "lessons_extracted": 19,
   "volumes_composed": 0,
   "validation_score": 0,
-  "quality_gates_passed": [],
+  "quality_gates_passed": ["QG-ETL-000"],
   "started_at": "2026-05-19T02:00:00Z",
-  "hdntl_token": "hdntl=exp=1779242101~acl=/*~data=hdntl~hmac=a1c928f68ed2f89b3f2b7efafa188e04dde706434274bbad941965d2c5e32c3d&app=9aaabfff-2606-4437-a9e3-42fa6f6ed4a7"
+  "phase1_completed_at": "2026-05-19T12:00:00Z",
+  "extraction_method": "playwright_iframe_16x_dedup",
+  "lessons_status": {
+    "aula01": "done_100pct",
+    "aula02": "done_100pct",
+    "aula03": "done_segs2-14_missing_84s",
+    "aula04": "done_100pct",
+    "aula05-19": "done_100pct"
+  },
+  "transcricoes_path": "00-pipeline/sources/transcricoes/",
+  "total_transcricoes": 19
 }

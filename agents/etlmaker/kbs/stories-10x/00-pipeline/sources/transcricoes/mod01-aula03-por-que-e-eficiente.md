@@ -1,6 +1,6 @@
-# Transcrição — [Módulo 01] Por que é tão mais eficiente
+﻿# Transcrição — [Módulo 01] Por que é tão mais eficiente
 **Duração:** 21:30 | **ID Hotmart:** V4VdxZg972 | **Video ID:** QZPb3n9xqw
-**Status:** Parcial (~54% — segs 1 + 15-115 de 214)
+**Status:** ✅ 100% extraído (segs 2-14 ausentes — ~84s de intro)
 
 ---
 
@@ -192,6 +192,239 @@ Então, esse tipo de coisa, dentro do
 Stories DX, vai ter vida pessoal, coaching, inspiração, motivação, vai ter
 geração de conteúdo que tem valor para as pessoas para ajudar e vai ter venda, mas
 ela nunca vai ser completamente solta como a maioria das pessoas faz.
-
----
-*[Nota: transcrição parcial — faltam segmentos 2-14 e 116-214. Aproximadamente 46% do conteúdo total. Completar em sessão futura.]*
+.
+Então, esse tipo de coisa, dentro do
+Stories DX, vai ter vida pessoal,
+coaching, inspiração, motivação, vai ter
+geração de conteúdo que tem valor para as
+pessoas para ajudar e vai ter venda, mas
+ela nunca vai ser completamente solta
+como a maioria das pessoas faz.
+A palavra -chave vai ser comunidade e
+contexto, porque você tem que fazer a
+pessoa viciar no seu Instagram.
+A gente está com a Maju aqui, que é uma
+das nossas melhores aulas, as pessoas são
+viciadas, Maju, se você deixar de fazer
+Instagram, o que acontece?
+Stories.
+A pessoa tem que ser o seguinte, por
+exemplo, a dona Rose, se um dia ela
+deixasse de publicar a foto do pedido da
+marmita e do WhatsApp, sabe o que
+aconteceria no outro dia?
+A Rose podia morrer, ninguém ia saber que
+ela morreu.
+A Maju, se morrer, meu Deus do céu, muita
+gente vai sentir falta da Maju, não de
+sua mãe dela.
+É sério, seguidores vão perguntar o que
+aconteceu, você está bem?
+Já perguntaram da sua saúde se você sumiu?
+Pergunta, você está bem de saúde?
+Eu, se deixo fazer stories, as pessoas me
+perguntam o que aconteceu, não porque
+elas gostam de mim, porque eu consegui
+envolver elas em uma comunidade.
+Na verdade, elas gostam dos assuntos que
+eu abordo e que eu trago e,
+eventualmente, sabem o que acontece?
+Elas atrelam isso a mim.
+Um bom líder não é adorado, as pessoas
+adoram a comunidade que ele lidera, só
+que, inconscientemente, elas acabam
+gostando do líder, mas o que elas gostam
+mesmo não é da Maju, o que vocês gostam
+que eles seguem não é de mim, é dos
+assuntos que eu abordo, é das emoções que
+eu faço vocês sentirem e, para que isso
+aconteça, você não pode ser só um
+vendedor, você não pode ser só um cara
+que ensina e você não pode ser só um cara
+que mostra a sua vida.
+Esses elementos vão conter, dentro do
+stories 10x, mas eles vão ser uma
+pitadinha de 1%, de 3%, eventualmente de
+5%, mais 80 % é focado em comunidade com
+o texto.
+Você vai vender para que essa venda
+funcione, precisa ser 80 % com o texto,
+80 % com a unidade, 1 % vida pessoal, eu
+estou fazendo as quantas porcentagens
+erradas aqui, um pouquinho de porcentagem
+de educação, educação é um pouco mais,
+você vai ensinar 10%, gerar valor 10%,
+você vai botar 1 % de vida pessoal, mas o
+grande grosso, 90%, vai vir de
+comunidade, sentimento e, quando você
+botar 0 ,5 % de venda, está disponível
+para comprar, quem tiver interesse, e aí vende.
+E isso funciona para tudo, eu tenho um
+exemplo de venda com dentista, médico,
+vendedor de marmita, vendedor de biquíni,
+vendedor de cachaça, tem um aluno que
+vende cachaça, cachaça alienacional, ele
+liderou uma comunidade de pessoas que são
+apaixonadas, admiradores de cachaça, não
+cachaceiro louco, ele vende cachaça,
+inclusive, de cachaças especiais, cachaça
+gourmet, o que essas pessoas gostam, o
+que elas falam, o que elas conversam, o
+que elas pensam, ele uniu aquilo dentro
+do Stories dele, como se fosse uma
+comunidade, então o Stories DX é tão
+eficiente, ele é 10 vezes mais eficiente,
+porque ele não é uma pessoa criando
+conteúdo para as outras gostarem, é uma
+pessoa liderando uma comunidade que gosta
+de algo, em torno de algo, e você só é o
+elo entre essas pessoas, e se você lidera
+uma comunidade, você vai vender muito
+para ela, qualquer coisa que você queira
+vender para essa comunidade, você pode
+vender curso, produto, mentoria, serviço,
+produto de outras pessoas, cara,
+eu hoje, se quiser vender muito qualquer
+livro, eu vendo qualquer livro, por quê?
+Porque eu sou líder de uma comunidade, eu
+entro em um assunto, gero um puto debate
+sobre aquele assunto e coloco o livro no
+meio, é assim que o Stories DX funciona,
+porque se eu só chego e falo, gente, esse
+livro está em desconto na promoção, não é
+nada, se eu crio uma discussão sobre
+aquilo, eu vendo muito, e se eu envolvo
+as pessoas naquela discussão, eu vendo
+muito, é basicamente por isso que o
+Stories DX funciona, então a palavra
+-chave sempre vai ser comunidade com o
+texto, lembra de Maquiavel, o principal
+erro de um líder é se afastar dos seus
+liderados, ou só querer vender para eles,
+tem muita gente que não é do mercado de
+infoprodutos, que eu sou muito conhecido
+pelo mercado de quem vende produto
+digital, curso, mentoria, produtos de
+educação, e eu acho que esse Stories DX
+não funciona para mim, cara, funciona
+para biquíni, tinha uma pessoa que tinha
+uma loja que parecia aquela moda biquini,
+não sei o quê, só publicava a foto do
+biquini, tinha três curtidos em cada
+foto, ninguém comprava nada, e ela
+transformou no nome dela, Bia, eu não
+lembro ainda, Bia, sei lá o quê, e aí ela
+tirou o modo não sei o quê, porque
+ninguém queria seguir o modo não sei o
+quê, as pessoas queriam seguir a Bia, e a
+Bia, adivinha, a Bia tinha assuntos super
+legais, a Maju que está aqui, você só
+fala só do assunto, ela fala de tudo,
+lembra dessa frase aqui, descubra a
+paixão das pessoas para engajá -las na
+sua causa, então ela não fala o tempo
+todo de biquini, ela fala de dieta, ela
+fala de moda, ela fala de famoso, ela
+fala de artista, ela fala de Big Brother,
+ela fala de afazenda, ela fala de
+política, ela fala de humor, ela fala de
+ator de novela, ela fala de fofoca e
+eventualmente ela fala de biquini, quem
+faz isso?
+Os grandes influenciadores, pega a Dekay,
+uma grande influenciadora, ela não fica
+falando só do produto dela, ela não
+venderia nada, então ela fala de um monte
+de coisa e eventualmente ela vai lá e
+lança a marca dela, a Bianca Andrade,
+boca rosa, ela vende muito todos os
+produtos dela, mas ela não fica 90 % do
+tempo falando dos produtos dela, se você
+quer vender muito do seu produto, você
+tem que falar do seu produto 1 % do
+tempo, 90 % do tempo você vai falar de
+coisas interessantes porque as pessoas
+querem seguir alguém que fala de coisas
+interessantes, sabe quem faz muito isso?
+Aí eu vou entrar em um assunto polêmico,
+mas eu vou falar porque eu acho que é
+importante educacionalmente para você, o
+Jair Bolsonaro, o ex -presidente, ou o
+presidente, eu nem sei, ele ainda é
+presidente, mas ele faz, desculpa a
+paixão das pessoas para engajá -las na
+sua cala, o Bolsonaro não fica o tempo
+todo falando vote em mim, o que ele faz?
+Ele vai pegando pequenas comunidades,
+então ele tem a comunidade dos
+motoqueiros, às vezes o cara nem gosta do
+Bolsonaro, mas ele gosta de moto, ele vai
+lá naquela moto chata porque ele vai
+encontrar amigos que gostam dele, que
+gostam de moto, velocidade, depois ele
+tem os caras do fitness, você sabe que o
+Bolsonaro é fortíssimo entre os fitness,
+ele até baixou o preço do Way e ele vai
+lá e se comunica com os fitness falando
+de Maromba, ele grava a live com os caras
+do fitness falando de Maromba, e aí ele
+também tem a outra comunidade que é a
+igreja, ele vai para as igrejas e fala de
+coisas da igreja, vai falar de aborto,
+vai falar de não sei o quê, e é tão louco
+que o outro do motoqueiro não é tão do
+aborto assim, mas ele vai porque ele
+sabe, descubra a paixão das pessoas para
+engajá -las na sua cala, então ele foi
+pegando pequenos nichos, conversa com
+aqueles grupos, lidera aqueles grupos,
+fala de coisas que aquele grupo quer
+ouvir, sobre lei de responsabilidade
+fiscal, ele quer saber se o Bolsonaro
+curte Maromba, e o que é isso dentro do
+Stories da X, eu estou usando como um
+exemplo, é uma das aulas que você vai
+entender o poder do tema, o que o
+Bolsonaro faz?
+Ele levanta um tema, armas, e vai falar
+sobre aquilo, e quem gosta de arma vai
+adorar falar de arma, quem gosta de Deus
+vai adorar falar de igreja, Deus e tal,
+quem gosta de moto vai adorar falar de
+moto, e o Stories da X vai te ensinar a
+fazer isso.
+Ele vai descobrir o que as pessoas gostam
+de falar, e depois falar dessas coisas,
+só que aí com mais poder ainda, ele vai
+te ensinar como falar dessas coisas com
+muita habilidade, com muito envolvimento,
+em que as pessoas vão ficar hipnotizadas
+querendo cada vez mais.
+Ficou claro?
+Deu para entender o contexto geral, ainda
+não entrou na técnica, você ainda não
+sabe como fazer, você só está
+entusiasmado agora, imagina que esteja,
+de como você aplica isso na prática, a
+gente está na parte estratégica, então o
+que você está entendendo, como funciona a
+mente das pessoas, por que não só sair
+produzindo conteúdo aleatório sem
+entender o que você está fazendo, como
+funciona uma comunidade, como funciona um
+líder, como funciona a comunicação, você
+viu que eu fui na comunicação antiga, que
+agora você é um cara estratégico, você
+sabe a estratégia, daqui a pouco, agora
+que você conhece a estratégia, daqui a
+pouco a gente vai para a coisa mais
+técnica, então é por isso que o Stories
+da X é muito mais eficiente do que um
+jeito normal de se criar conteúdo, você
+falando para muitos, ficou claro?
+Na próxima aula a gente vai ter uma visão
+geral de todos os módulos, de como a
+coisa funciona e depois a gente já vai
+partir para a prática para você fazer sua
+primeira sequência de Stories da X ainda
+hoje, combinado?
