@@ -77,30 +77,32 @@ Trabalho de revisao estrutural do metodo da Incubadora de Expert. Decisoes tomad
 
 ## Onde Parou
 
-Sessão longa (15/05) — ferramenta de metodologia da Arcane: Q9 a Q29 respondidas.
+Sessão 20/05 — módulo de criação de produtos da Arcane. Expert360º definido.
 
-**O que foi feito:**
-- Ferramenta de metodologia Arcane: 29/30 questões respondidas
-  - Q9: medos da persona
-  - Q10-Q12: sequência do Ponto A ao Ponto B
-  - Q13: ordem dos obstáculos (ACREDITAR → SABER → PARAR/FAZER)
-  - Q14-Q18: bagagem, formações, referências, insights do campo, insights genuínos
-  - Q19-Q26: dimensões paralelas, pés da mesa, pilares, mecanismo, fases, forma visual
-  - Q27-Q29: nomes, frase-síntese, teste de validação
-- PDF da plataforma Arcane lido e arquivado (exercícios de metodologia 14/05)
-- Marcos de passagem por fase salvos
-- Frase da metodologia (versão completa e curta) salva
-- Histórias de Hilda e Anália documentadas
-
-**Ferramenta de metodologia Arcane:** 29/30 questões respondidas
+**O que foi feito (19-20/05):**
+- Ferramenta de metodologia Arcane: Q30 finalizada. Metodologia validada com Euriler.
+- Expert360º — framework completo revisado e gaps resolvidos (sessão 18/05 com Euriler)
+- Módulo de criação de produtos Arcane — em andamento:
+  - Q1: O que o produto É — formato, nome, proposta em uma frase ✓
+  - Q2: O que o produto FAZ — promessa, persona, importância na jornada ✓
+  - Q3: COMO o produto faz — estrutura, jornada, entregáveis ✓
+  - Entregáveis finais definidos: 6 agentes, 6 módulos, templates, leads, encontro mensal ✓
+  - Preço: R$697 plataforma / R$497 funis ✓
+  - Modelo de entrega: online, gravado, acesso total D1, encontro mensal ✓
+  - 5 entregáveis com benefício real (E daí?) ✓
+  - Proposta de valor completa (por que vale, funciona, é diferente) ✓
+  - Análise de 3 concorrentes (FL, FHT, FXD) ✓
+  - Faixa de preço justificada (clínica de entrada) ✓
+  - Preço final com checagem ego/insegurança ✓
+  - Q: declaração de posicionamento — em andamento
 
 **Próximos passos:**
-1. Finalizar Q30 (última questão da ferramenta)
-2. Aplicar a tese na bio do Instagram
+1. Continuar as 40 questões da ferramenta de produto (Arcane)
+2. Após produto definido: aplicar tese na bio do Instagram
 3. Criar primeiros conteúdos com o ângulo da frase-tese
 
 Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 15/05/2026*
+*Ultima atualizacao: 20/05/2026*

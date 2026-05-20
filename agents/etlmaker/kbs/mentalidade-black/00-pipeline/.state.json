@@ -1,0 +1,32 @@
+{
+  "kb_slug": "mentalidade-black",
+  "kb_name": "Mentalidade Black",
+  "mode": "full",
+  "version": "3.0.0",
+  "current_phase": 1,
+  "phase_status": {
+    "phase_0": "completed",
+    "phase_1": "in_progress",
+    "phase_2": "pending",
+    "phase_3": "pending",
+    "phase_4": "pending"
+  },
+  "sources": [
+    "mod01-ebook",
+    "mod01-introducao",
+    "mod02-regra-dos-5-anos",
+    "mod03-segue-a-receita",
+    "mod04-ambiente",
+    "mod05-criar-habitos",
+    "mod06-resiliencia",
+    "mod07-como-eu-lido-com-a-saude",
+    "mod08-queimar-ponte",
+    "mod09-fechamento",
+    "mod10-gravacao-mentoria-black"
+  ],
+  "sources_ingested": 1,
+  "volumes_composed": 0,
+  "validation_score": 0,
+  "quality_gates_passed": ["QG-ETL-000"],
+  "started_at": "2026-05-19T19:30:00Z"
+}
