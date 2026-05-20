@@ -165,7 +165,7 @@ Método validado com prova real. A dúvida "será que funciona?" some por evidê
 
 ---
 
-## FASE 5 — Da Invisibilidade à Referência
+## FASE 5 — Da Invisibilidade à Autoridade
 *Jornada psicológica: aparece no digital como referência — a autoridade que construiu offline finalmente tem endereço no mundo digital.*
 
 ### Obstáculos que essa fase resolve
@@ -211,7 +211,7 @@ Fase 1 → passa quando: fala da trajetória sem se desculpar
 Fase 2 → passa quando: descreve a persona em 1ª pessoa + tem mapa narrativo
 Fase 3 → passa quando: método tem nome + cabe em uma frase + seleção feita
 Fase 4 → passa quando: 3 vendas reais no 1:1 + 1 depoimento real
-Fase 5 → chegou quando: perfil claro + conteúdo com ponto de vista + sabe o que vem depois
+Fase 5 (Da Invisibilidade à Autoridade) → chegou quando: perfil claro + conteúdo com ponto de vista + sabe o que vem depois
 ```
 
 ---

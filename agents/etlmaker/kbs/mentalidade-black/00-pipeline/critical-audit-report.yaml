@@ -1,0 +1,177 @@
+audit:
+  kb_slug: mentalidade-black
+  auditor: etl-chief (auditor role)
+  date: 2026-05-20
+  layer: Camada 2 — Auditoria Exaustiva
+  reference: 00-pipeline/MAPA-TERRITORIAL.md
+
+checks:
+
+  # CHECK 1: Frameworks (15 mapeados)
+  frameworks:
+    status: PASS
+    total_mapped: 15
+    total_found: 15
+    coverage: "100%"
+    items:
+      - name: Mentalidade Black
+        expected_in: VOL-01
+        found: true
+        location: "VOL-01 seção 2 e 5"
+      - name: Regra dos 5 Anos
+        expected_in: VOL-02
+        found: true
+        location: "VOL-02 inteiro"
+      - name: Campeonato vs. Jogo
+        expected_in: VOL-02
+        found: true
+        location: "VOL-02 seção 2"
+      - name: Segue a Receita
+        expected_in: VOL-03
+        found: true
+        location: "VOL-03 inteiro"
+      - name: 80/20 de Execução
+        expected_in: VOL-03
+        found: true
+        location: "VOL-03 seção 4 + REPERTORIO A-04"
+      - name: Transforme o Ambiente
+        expected_in: VOL-04
+        found: true
+        location: "VOL-04 seção 1 e 9"
+      - name: Empilhamento de Hábitos
+        expected_in: VOL-05
+        found: true
+        location: "VOL-05 seção 3 + REPERTORIO A-07"
+      - name: Protocolo de Hábitos (100/21 dias)
+        expected_in: VOL-05
+        found: true
+        location: "VOL-05 seção 6 + REPERTORIO A-08"
+      - name: 3 Pilares da Saúde
+        expected_in: VOL-05
+        found: true
+        location: "VOL-05 seção 8 + REPERTORIO A-10"
+      - name: Gestão de Dívida de Sono
+        expected_in: VOL-05
+        found: true
+        location: "VOL-05 seção 9 + REPERTORIO A-09"
+      - name: Investir em Derrota
+        expected_in: VOL-06
+        found: true
+        location: "VOL-06 seção 2"
+      - name: Os Dois Éricos
+        expected_in: VOL-06
+        found: true
+        location: "VOL-06 seção 9 + REPERTORIO A-11"
+      - name: Queimar Ponte
+        expected_in: VOL-06
+        found: true
+        location: "VOL-06 seção 7"
+      - name: Plat 10+
+        expected_in: VOL-04
+        found: true
+        location: "VOL-04 seção 5"
+      - name: "747"
+        expected_in: VOL-06
+        found: true
+        location: "VOL-06 seção 1 + GLOSSARIO"
+
+  # CHECK 2: Regras Cardinais (14 mapeadas)
+  regras_cardinais:
+    status: PASS
+    total_mapped: 14
+    total_in_regras_cardinais_md: 14
+    total_referenced_in_volumes: 14
+    coverage: "100%"
+    items:
+      - {rc: RC-01, in_doc: true, in_volume: "VOL-02"}
+      - {rc: RC-02, in_doc: true, in_volume: "VOL-04"}
+      - {rc: RC-03, in_doc: true, in_volume: "VOL-03"}
+      - {rc: RC-04, in_doc: true, in_volume: "VOL-05"}
+      - {rc: RC-05, in_doc: true, in_volume: "VOL-02"}
+      - {rc: RC-06, in_doc: true, in_volume: "VOL-02"}
+      - {rc: RC-07, in_doc: true, in_volume: "VOL-06"}
+      - {rc: RC-08, in_doc: true, in_volume: "VOL-06"}
+      - {rc: RC-09, in_doc: true, in_volume: "VOL-03"}
+      - {rc: RC-10, in_doc: true, in_volume: "VOL-05"}
+      - {rc: RC-11, in_doc: true, in_volume: "VOL-05"}
+      - {rc: RC-12, in_doc: true, in_volume: "VOL-03"}
+      - {rc: RC-13, in_doc: true, in_volume: "VOL-06"}
+      - {rc: RC-14, in_doc: true, in_volume: "VOL-01 + VOL-02"}
+
+  # CHECK 3: Glossário (19 termos mapeados)
+  glossario:
+    status: PASS
+    total_mapped: 19
+    total_in_glossario_md: 19
+    coverage: "100%"
+    all_terms_present:
+      - Faixa Preta
+      - Faixa Marrom
+      - 6 em 7
+      - 10+
+      - Insider
+      - Plat 10+
+      - Receita
+      - Campeonato
+      - Queimar Ponte
+      - Investir em Derrota
+      - Dívida de Sono
+      - Empilhamento de Hábitos
+      - Os Dois Éricos
+      - Mastermind
+      - Massa Crítica
+      - Prática Intencional
+      - PR (Personal Record)
+      - "747"
+      - Segredo do Antidepressivo
+
+  # CHECK 4: Consistência Cross-Volume
+  cross_volume_consistency:
+    status: PASS
+    contradictions_found: 0
+    apparent_conflicts_resolved:
+      - conflict: "Segue a Receita (conservador) vs. Investir em Derrota (audacioso)"
+        resolution: "Abordado explicitamente como complementares — VOL-03 e VOL-06"
+        status: RESOLVED
+      - conflict: "Regra dos 5 Anos (não julgue curto prazo) vs. Queimar Ponte (crie urgência)"
+        resolution: "Abordado como ferramentas sequenciais — VOL-02 e VOL-06"
+        status: RESOLVED
+      - conflict: "Feito>Perfeito vs. Segue Receita 100%"
+        resolution: "Abordado em VOL-03: execute o máximo e audite depois"
+        status: RESOLVED
+    cross_refs_intact: true
+
+  # CHECK 5: Artefatos (13 mapeados)
+  artefatos:
+    status: PASS
+    total_mapped: 13
+    total_in_repertorio: 13
+    coverage: "100%"
+    all_artefatos_present:
+      - {id: A-01, name: "7 Princípios (Checklist)", in_volume: "VOL-01 referência", in_repertorio: true}
+      - {id: A-02, name: "Template Critério 5 Anos", in_volume: "VOL-02", in_repertorio: true}
+      - {id: A-03, name: "Escala Campeonato vs. Jogo", in_volume: "VOL-02", in_repertorio: true}
+      - {id: A-04, name: "Fórmula 80/20", in_volume: "VOL-03", in_repertorio: true}
+      - {id: A-05, name: "Mapeamento de Comunidades", in_volume: "VOL-04", in_repertorio: true}
+      - {id: A-06, name: "Cálculo Massa Crítica", in_volume: "VOL-04", in_repertorio: true}
+      - {id: A-07, name: "Empilhamento de Hábitos", in_volume: "VOL-05", in_repertorio: true}
+      - {id: A-08, name: "Benchmark 100/21 dias", in_volume: "VOL-05", in_repertorio: true}
+      - {id: A-09, name: "Gestão Dívida de Sono", in_volume: "VOL-05", in_repertorio: true}
+      - {id: A-10, name: "3 Pilares da Saúde", in_volume: "VOL-05", in_repertorio: true}
+      - {id: A-11, name: "Os Dois Éricos", in_volume: "VOL-06", in_repertorio: true}
+      - {id: A-12, name: "Escala Anti-Procrastinação", in_volume: "VOL-06", in_repertorio: true}
+      - {id: A-13, name: "Protocolo Queimar Ponte", in_volume: "VOL-06", in_repertorio: true}
+
+  # CHECK 6: Estrutura do Repertório
+  repertorio_structure:
+    status: PASS
+    artefatos_com_proveniencia: 13
+    artefatos_com_cross_ref_volume: 13
+    orfaos_encontrados: 0
+    nota: "Todos os artefatos referenciam volume de origem + tipo + descrição de uso"
+
+camada_2_result:
+  verdict: PASS
+  critical_items_missing: 0
+  blocking_issues: 0
+  notes: "Todos os 15 frameworks, 14 regras cardinais, 19 termos, 13 artefatos presentes. Zero contradições não resolvidas."

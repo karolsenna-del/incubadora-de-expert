@@ -42,23 +42,35 @@
 
 ## Status
 - [x] Fase 0: Setup
-- [ ] Fase 1: Mapeamento Territorial
-- [ ] Fase 2: Composição Blocada (0/N volumes)
-- [ ] Fase 3: Integração
-- [ ] Fase 4: Validação Final
+- [x] Fase 1: Ingestão COMPLETA — 17 transcrições, ~1.2 MB
+- [ ] Fase 2: Mapeamento Territorial
+- [x] Fase 3: Composição Blocada — 6 volumes + 4 docs transversais
+- [x] Fase 4: Integração — README, REGRAS-CARDINAIS, REPERTORIO, GLOSSARIO
+- [ ] Fase 5: Validação Final
 
-## Progresso de Ingestão
-- [x] mod01-ebook (PDF — sem transcrição)
-- [x] mod01-introducao ✓
-- [ ] mod02-regra-dos-5-anos
-- [ ] mod03-segue-a-receita
-- [ ] mod04-ambiente
-- [ ] mod05-criar-habitos
-- [ ] mod06-resiliencia
-- [ ] mod07-como-eu-lido-com-a-saude
-- [ ] mod08-queimar-ponte
-- [ ] mod09-fechamento
-- [ ] mod10-gravacao-mentoria-black (8 aulas — expandir)
+## Progresso de Ingestão (17/18 conteúdos)
+- [~] mod01-ebook (PDF — não extraído, disponível para download manual)
+- [x] mod01-introducao ✓ (5:53)
+- [x] mod02-regra-dos-5-anos ✓
+- [x] mod03-segue-a-receita ✓
+- [x] mod04-ambiente ✓
+- [x] mod05-criar-habitos ✓
+- [x] mod06-resiliencia ✓
+- [x] mod07-como-eu-lido-com-a-saude ✓
+- [x] mod08-queimar-ponte ✓
+- [x] mod09-fechamento ✓
+- [x] mod10-abertura ✓ (81 min)
+- [x] mod10-dia01-high-ticket-lourival ✓ (2h05)
+- [x] mod10-dia01-perpetuo-ladeira ✓ (2h15)
+- [x] mod10-dia01-trafego-ruy ✓ (1h40)
+- [x] mod10-dia02-perpetuo-ladeira ✓ (1h57)
+- [x] mod10-dia02-high-ticket-lourival ✓ (2h02)
+- [x] mod10-dia02-automacoes-vitor ✓ (1h00)
+- [x] mod10-dia02-lancamento-erico ✓ (2h26)
+
+## QG-ETL-000: APROVADO
+- Fontes legíveis: ✓
+- Volume suficiente: ✓ (~1.2 MB de texto)
 
 ## Decisões Chave
 - Método de extração: VTT via player frame (Playwright)

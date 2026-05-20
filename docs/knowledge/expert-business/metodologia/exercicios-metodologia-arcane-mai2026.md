@@ -247,7 +247,7 @@ Obstáculos: não sabe que as primeiras vendas acontecem sem exposição, crenç
 Transformação: faz as primeiras 3 vendas no 1:1 em ambiente controlado. A prova real elimina a dúvida que nenhuma motivação conseguia eliminar.
 Virada: a primeira venda. A dúvida "será que sou tão especial quanto penso?" some por evidência.
 
-**FASE 5 — "Da Invisibilidade à Referência"**
+**FASE 5 — "Da Invisibilidade à Autoridade"**
 Obstáculos: crença "exposição vai contaminar a autoridade", "aparecer amadora na frente dos colegas", não aparece ou aparece sem estrutura.
 Transformação: aparece no digital sabendo o que comunica, para quem e com prova real. A presença deixa de ser risco e vira extensão da autoridade que já existe.
 Virada: quando percebe que a exposição que temia era a exposição sem fundação — não a exposição depois de ter método validado.

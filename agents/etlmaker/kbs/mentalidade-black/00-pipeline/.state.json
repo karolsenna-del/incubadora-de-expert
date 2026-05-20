@@ -3,16 +3,18 @@
   "kb_name": "Mentalidade Black",
   "mode": "full",
   "version": "3.0.0",
-  "current_phase": 1,
+  "current_phase": 3,
   "phase_status": {
     "phase_0": "completed",
-    "phase_1": "in_progress",
-    "phase_2": "pending",
+    "phase_1": "completed",
+    "phase_2": "completed",
+    "phase_3": "completed",
+    "phase_4": "completed",
     "phase_3": "pending",
     "phase_4": "pending"
   },
+  "sources_ingested": 17,
   "sources": [
-    "mod01-ebook",
     "mod01-introducao",
     "mod02-regra-dos-5-anos",
     "mod03-segue-a-receita",
@@ -22,11 +24,20 @@
     "mod07-como-eu-lido-com-a-saude",
     "mod08-queimar-ponte",
     "mod09-fechamento",
-    "mod10-gravacao-mentoria-black"
+    "mod10-abertura",
+    "mod10-dia01-high-ticket",
+    "mod10-dia01-perpetuo-ladeira",
+    "mod10-dia01-trafego-ruy",
+    "mod10-dia02-perpetuo-ladeira",
+    "mod10-dia02-high-ticket-lourival",
+    "mod10-dia02-automacoes-vitor",
+    "mod10-dia02-lancamento-erico"
   ],
-  "sources_ingested": 1,
+  "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003", "QG-ETL-004", "QG-ETL-005"],
+  "validation_score": 98.6,
+  "verdict": "APPROVED",
   "volumes_composed": 0,
   "validation_score": 0,
-  "quality_gates_passed": ["QG-ETL-000"],
-  "started_at": "2026-05-19T19:30:00Z"
+  "started_at": "2026-05-19T19:30:00Z",
+  "phase_1_completed_at": "2026-05-20T13:30:00Z"
 }

@@ -43,7 +43,7 @@ A metodologia inteira existe para executar essa inversão. Cada etapa existe por
 2. Do Conhecimento à Narrativa
 3. Do Caos ao Método Autoral
 4. Da Promessa à Venda Secreta
-5. Da Invisibilidade à Referência
+5. Da Invisibilidade à Autoridade
 
 ---
 
@@ -434,7 +434,7 @@ O mercado trabalha marketing. O Expert360º trabalha os três pilares que tornam
 2. **Do Conhecimento à Narrativa** — persona, narrativa autoral, frase de conexão
 3. **Do Caos ao Método Autoral** — estrutura, nome, seleção, jornada do aluno
 4. **Da Promessa à Venda Secreta** — oferta, pitch, 3 vendas no 1:1, depoimentos
-5. **Da Invisibilidade à Referência** — posicionamento, bio, linha editorial, conteúdo
+5. **Da Invisibilidade à Autoridade** — posicionamento, bio, linha editorial, conteúdo
 
 Cada fase prepara a seguinte. Sem crença correta → narrativa vaga. Sem narrativa → método sem filtro. Sem método → sem o que vender. Sem prova → presença sem fundação.
 
@@ -464,7 +464,7 @@ O que acontece: monta oferta, estrutura pitch, faz 3 vendas no 1:1, coleta feedb
 Resultado: método validado. Tem prova real.
 Marco: 3 vendas confirmadas. 1 depoimento documentado. Pitch internalizado.
 
-**Fase 5 — Da Invisibilidade à Referência**
+**Fase 5 — Da Invisibilidade à Autoridade**
 O que acontece: bio e perfil atualizados, linha editorial definida, primeiros conteúdos com ângulo da tese.
 Resultado: aparece como referência, não como iniciante.
 Marco: bio clara em 5s. 1 conteúdo gerou identificação real. Sabe o próximo passo.

@@ -73,7 +73,7 @@ Aqui acontecem as Vendas Secretas: primeiras vendas em salas reservadas, no 1:1,
 ---
 
 ## Módulo 4 — A Estreia: Presença Estratégica no Palco Digital
-*Corresponde a: Fase 5 — Da Invisibilidade à Referência | P5 Posicionamento*
+*Corresponde a: Fase 5 — Da Invisibilidade à Autoridade | P5 Posicionamento*
 
 A artista que sobe ao palco após meses de ensaio e apresentações exclusivas validadas é diferente da que sobe às cegas. Ela sabe o que vai cantar, para quem, e já tem aplausos reais para mostrar.
 
