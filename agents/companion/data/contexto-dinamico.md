@@ -77,28 +77,36 @@ Trabalho de revisao estrutural do metodo da Incubadora de Expert. Decisoes tomad
 
 ## Onde Parou
 
-Sessão 20/05 — módulo de criação de produtos da Arcane. Expert360º definido.
+Sessão 20/05 — ferramenta de produto da Arcane concluída. Expert360º totalmente definido.
 
-**O que foi feito (19-20/05):**
-- Ferramenta de metodologia Arcane: Q30 finalizada. Metodologia validada com Euriler.
-- Expert360º — framework completo revisado e gaps resolvidos (sessão 18/05 com Euriler)
-- Módulo de criação de produtos Arcane — em andamento:
-  - Q1: O que o produto É — formato, nome, proposta em uma frase ✓
-  - Q2: O que o produto FAZ — promessa, persona, importância na jornada ✓
-  - Q3: COMO o produto faz — estrutura, jornada, entregáveis ✓
-  - Entregáveis finais definidos: 6 agentes, 6 módulos, templates, leads, encontro mensal ✓
-  - Preço: R$697 plataforma / R$497 funis ✓
-  - Modelo de entrega: online, gravado, acesso total D1, encontro mensal ✓
-  - 5 entregáveis com benefício real (E daí?) ✓
-  - Proposta de valor completa (por que vale, funciona, é diferente) ✓
-  - Análise de 3 concorrentes (FL, FHT, FXD) ✓
-  - Faixa de preço justificada (clínica de entrada) ✓
-  - Preço final com checagem ego/insegurança ✓
-  - Q: declaração de posicionamento — em andamento
+**O que foi feito (20/05 — sessão produto Arcane):**
+- Ferramenta de produto Arcane preenchida do início ao fim:
+  - Declaração de posicionamento ✓
+  - Promessa (tangível + emocional) ✓
+  - Metodologia Expert360º com 5 fases ✓ (Fase 5 renomeada: Da Invisibilidade à Autoridade)
+  - Persona Laura — Ponto A e Ponto B ✓
+  - Histórico de produtos (6 itens) ✓
+  - Maturidade como expert: Intermediário ✓
+  - Proposta em uma frase ✓
+  - Resultado específico ao final do curso ✓
+  - Importância na jornada da persona ✓
+  - Recorte de persona (Laura 2 — já tentou, conhece o mercado) ✓
+  - Organização e jornada do aluno ✓
+  - Entregáveis com lógica/benefício ✓
+  - Temperatura do produto: Morno ✓
+  - Proximidade com a expert: Baixa ✓
+  - Temperatura como expert: Causa quente, entrega fria ✓
+  - Preço e racional: R$697 / R$497 ✓
+  - Diferencial competitivo ✓
+  - Transformação única conectada à tese ✓
+  - Garantia: devolução 7 dias, sem garantia de resultado ✓
+  - Pitch de 30 segundos (ajustado para vocabulário da Laura) ✓
+
+**Decisão de conteúdo:** inserir a tese ("Diploma é o que você estudou. Método é o que você viveu.") em tudo — módulos, conteúdo, abertura de vendas, comunicação geral.
 
 **Próximos passos:**
-1. Continuar as 40 questões da ferramenta de produto (Arcane)
-2. Após produto definido: aplicar tese na bio do Instagram
+1. Aguardar análise da ferramenta de produto pela Arcane
+2. Aplicar tese na bio do Instagram
 3. Criar primeiros conteúdos com o ângulo da frase-tese
 
 Retomar com: `/expert-companion`
