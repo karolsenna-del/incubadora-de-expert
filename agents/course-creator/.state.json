@@ -1,0 +1,33 @@
+{
+  "fase_atual": 2,
+  "fase_nome": "Ingestão de Metodologia",
+  "agente_ativo": "course-creator",
+  "task_ativa": "ingest-methodology",
+  "gate_anterior": "QG-CC-002",
+  "gate_anterior_status": "PASS",
+  "setup": {
+    "nome": "Expert360º",
+    "objetivo": "Transformar especialistas experientes em donas de um método autoral validado — com as primeiras vendas feitas antes de precisar aparecer no digital",
+    "publico": "Laura — especialista mulher, 35-45 anos, 10+ anos de carreira consolidada no offline (psicóloga, advogada, nutricionista, consultora). Já tentou entrar no digital, se frustrou. Renda acima de R$5.000. Não quer ser famosa — quer autonomia com dignidade.",
+    "ponto_a": "Especialista reconhecida no offline, mas invisível no digital. Sabe muito, mas não consegue transformar em método. Ciclo crônico de intenção → postergação → culpa → nova intenção.",
+    "ponto_b": "Método autoral com nome próprio e história dentro (incopiável). 3 vendas reais feitas no 1:1 antes de qualquer exposição pública. Posicionamento claro com bio, linha editorial e primeiros conteúdos publicados. Os 5Ps completos — construídos com a ajuda dos 6 agentes de IA que acompanham cada módulo do curso durante a execução.",
+    "correcao_agentes": "Os 6 agentes de IA são o mecanismo de entrega do curso — cada um ativo dentro do módulo correspondente, guiando a aluna na construção do entregável daquela fase. Não são bônus pós-curso, são o coração da experiência."
+  },
+  "modulos_completos": [],
+  "aulas_completas": {},
+  "branding_aprovado": false,
+  "empacotamento_aprovado": false,
+  "prd_criado": true,
+  "prd_path": "business/campanhas/expert360-curso/prd.md",
+  "prd_enriquecido": false,
+  "ultima_sessao": "2026-05-22",
+  "decisoes_sessao": [
+    "Promessa (P2) fica junto com Persona (P1) no Módulo 1",
+    "Processo Autoral (P3) tem módulo próprio — core da entrega",
+    "Módulo 3 abre com identidade de vendas antes dos táticos",
+    "Alertas de pré-requisito são checklist da aluna, não função do agente",
+    "Mentalidade Black mapeada por módulo — conteúdo incorporado",
+    "Frase autoral 'Só fracassa quem desiste' entra no Módulo 0 e Módulo 3",
+    "Gaps 1 e 2 a resolver na próxima sessão"
+  ]
+}
