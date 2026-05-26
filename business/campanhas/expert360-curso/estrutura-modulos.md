@@ -9,9 +9,8 @@ Versão: 1.0 | Data: 26/05/2026 | Status: Em construção (Fase 4)
 |--------|------|------------|-----------|
 | 0 | Desbloqueio | História real + Ikigai | Exercício em Docs |
 | 1 | Persona + Promessa | P1 + P2 | 2 agentes separados |
-| 2 | Processo Autoral | P3 | Agente do Processo Autoral |
-| Transição | Portfólio + Leads | Ferramentas + leads | Agente do Portfólio + template |
-| 3 | Vendas Secretas | P4 | Agente da Proposta Validada |
+| 2 | Processo Autoral + Ecossistema | P3 + Portfólio de ferramentas | Agente do Processo Autoral + Agente do Portfólio |
+| 3 | Vendas Secretas | P4 + Rastreador de Leads | Agente da Proposta Validada + template |
 | 4 | Autoridade | P5 | Agente da Autoridade Tríplice |
 
 ---
@@ -99,13 +98,39 @@ A persona EMERGE da história real — não é um molde que a aluna tenta encaix
 
 ---
 
-## Módulo 2 — Processo Autoral
-*A estruturar*
+## Módulo 2 — Processo Autoral + Ecossistema
+**Fase:** Do Caos ao Método Autoral
+**Objetivo:** A aluna sai com P3 completo (método com nome, estrutura e narrativa autoral) + portfólio de ferramentas mapeado.
+**Input obrigatório:** história real + Ikigai (M0) + P1 + P2 (M1)
+**Mecanismos:** Agente do Processo Autoral + Agente do Portfólio Estratégico
+**Nota:** Módulo core — maior do curso. Normal e intencional.
+**Duração das aulas:** 10–15 min cada
+
+### Bloco de Mentalidade
+
+| # | Aula | Objetivo | Fonte | Com o que sai |
+|---|------|----------|-------|---------------|
+| 1 | Você não precisa saber tudo para ensinar | Quebrar "preciso de mais um curso antes". Os 2 tipos de insegurança: paralisante vs. inteligente. Procrastinação disfarçada de prudência. "Você já ajudou alguém? Então seu conhecimento já provou valor." Você não precisa saber tudo — precisa saber mais do que sua aluna precisa agora. | Live 1 + Live 13 | Permissão real para construir agora com o que já tem |
+| 2 | Seu método já existe. Está na sua história. | Método ≠ currículo acumulado. Método = vivência organizada. Metáfora da pulga (Live 13): internalizou limites que não existem mais. "Diploma é o que você estudou. Método é o que você viveu." A história do M0 é a matéria-prima — ela já fez o trabalho mais difícil. O M2 não inventa: revela. | Live 1 + Live 13 + frase-tese | Clareza de que não vai criar do zero — vai organizar o que já viveu |
+
+### Bloco do Método (P3)
+
+| # | Aula | Objetivo | Com o que sai |
+|---|------|----------|---------------|
+| 3 | O que é um método autoral | Método ≠ técnica genérica ≠ lista de conteúdos. O que torna incopiável: narrativa de origem. Os 5 tipos de narrativa (Tesouro Escondido / Olhar Sagaz / Grande Obstáculo / Resolvedor / Fora da Curva) — ela identifica o dela antes de abrir o agente. | Sabe qual é o seu tipo de narrativa |
+| 4 | Exercício: Construindo seu Método com o Agente do Processo Autoral | Vídeo (10–15 min): contextualização + como usar o agente + o que levar (história + Ikigai + P1 + P2). Depois do vídeo: aluna abre o agente e ele conduz tudo — narrativa → tipo → diferencial → blueprint → estrutura → nome. | P3 completo: método com nome, subtítulo, módulos/pilares e narrativa autoral |
+
+### Bloco do Portfólio (Ecossistema)
+
+| # | Aula | Objetivo | Com o que sai |
+|---|------|----------|---------------|
+| 5 | Por que ferramentas vendem mais do que copy | O portfólio não é bônus — é a proposta irresistível. Ferramenta quebra objeção antes e durante a venda. Você não vai para o campo só com o método — vai com um arsenal. | Entende o que vai construir e por que muda o jogo |
+| 6 | Exercício: Construindo seu Portfólio com o Agente do Portfólio Estratégico | Vídeo: o que levar (P1 + P2 + P3) e o que o agente conduz. Depois: agente mapeia objeções da persona → ferramentas, travas dos alunos no método → ferramentas, brainstorm premium → planilha final com portfólio completo. | Planilha com portfólio de ferramentas mapeado (formato, objetivo, relação com método/dor/promessa, potencial de venda) |
 
 ---
 
-## Transição — Portfólio + Leads
-*A estruturar*
+## Transição — *(absorvida pelo M2)*
+Portfólio de ferramentas foi movido para o M2 (Bloco do Ecossistema). Rastreador de Leads foi movido para o M3 (abertura do módulo de vendas).
 
 ---
 
