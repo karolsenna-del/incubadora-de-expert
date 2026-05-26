@@ -1,9 +1,9 @@
 {
-  "fase_atual": 2,
-  "fase_nome": "Ingestão de Metodologia",
+  "fase_atual": 4,
+  "fase_nome": "Estruturação de Módulos",
   "agente_ativo": "course-creator",
-  "task_ativa": "ingest-methodology",
-  "gate_anterior": "QG-CC-002",
+  "task_ativa": "structure-module",
+  "gate_anterior": "QG-CC-004",
   "gate_anterior_status": "PASS",
   "setup": {
     "nome": "Expert360º",
@@ -13,14 +13,14 @@
     "ponto_b": "Método autoral com nome próprio e história dentro (incopiável). 3 vendas reais feitas no 1:1 antes de qualquer exposição pública. Posicionamento claro com bio, linha editorial e primeiros conteúdos publicados. Os 5Ps completos — construídos com a ajuda dos 6 agentes de IA que acompanham cada módulo do curso durante a execução.",
     "correcao_agentes": "Os 6 agentes de IA são o mecanismo de entrega do curso — cada um ativo dentro do módulo correspondente, guiando a aluna na construção do entregável daquela fase. Não são bônus pós-curso, são o coração da experiência."
   },
-  "modulos_completos": [],
+  "modulos_completos": ["M0", "M1"],
   "aulas_completas": {},
   "branding_aprovado": false,
   "empacotamento_aprovado": false,
   "prd_criado": true,
   "prd_path": "business/campanhas/expert360-curso/prd.md",
-  "prd_enriquecido": false,
-  "ultima_sessao": "2026-05-22",
+  "prd_enriquecido": true,
+  "ultima_sessao": "2026-05-26",
   "decisoes_sessao": [
     "Promessa (P2) fica junto com Persona (P1) no Módulo 1",
     "Processo Autoral (P3) tem módulo próprio — core da entrega",
@@ -28,6 +28,9 @@
     "Alertas de pré-requisito são checklist da aluna, não função do agente",
     "Mentalidade Black mapeada por módulo — conteúdo incorporado",
     "Frase autoral 'Só fracassa quem desiste' entra no Módulo 0 e Módulo 3",
-    "Gaps 1 e 2 a resolver na próxima sessão"
+    "Rastreador de Leads = template em branco + aula (modelo doTERRA adaptado, critérios da persona do Módulo 1)",
+    "Rastreador: score de fit separado de prioridade de abordagem",
+    "Loop M3→M4: pitch + depoimento + objeções alimentam o Módulo 4",
+    "Agente do Portfólio Estratégico e Rastreador são entregáveis separados na Transição"
   ]
 }

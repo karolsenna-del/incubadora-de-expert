@@ -1,5 +1,5 @@
 # PRD — Expert360º (Curso)
-Versão: 1.1 | Data: 22/05/2026 | Status: Aprovado (QG-CC-002) | Fase atual: Fase 2 — Ingestão de Metodologia
+Versão: 1.2 | Data: 25/05/2026 | Status: Aprovado (QG-CC-003) | Fase atual: Fase 3 — Estrutura Macro
 
 ---
 
@@ -48,7 +48,7 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 |----------|-----------|
 | Formato | 100% online, gravado |
 | Módulos | 6 (Módulo 0 ao 4 + Transição entre 2 e 3) |
-| Mecanismo central | 6 agentes de IA — um por módulo, usados DURANTE o curso |
+| Mecanismo central | 6 agentes de IA usados DURANTE o curso (Módulo 0 = exercício em Docs, sem agente) |
 | Componente ao vivo | Encontro mensal em grupo (Q&A) |
 | Acesso | Total no primeiro dia — sem liberação gradual |
 | Duração | 1 ano de acesso (conteúdo + agentes + encontros) |
@@ -68,13 +68,14 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 - [ ] Roteiro vinculado com todos os arquivos e atividades
 
 **Agentes de IA (mecanismo central — usados DURANTE o curso):**
-- [ ] Agente de Narrativa (Módulo 0)
-- [ ] Agente da Persona Compradora (Módulo 1)
-- [ ] Agente da Promessa Transformadora (Módulo 2)
-- [ ] Agente do Processo Autoral (Módulo 2)
-- [ ] Agente do Portfólio Estratégico + Rastreador de Leads (Transição)
+- [ ] Agente da Persona Compradora (Módulo 1) — usa história real da aluna como input
+- [ ] Agente da Promessa Transformadora (Módulo 1) — 2 agentes separados, mesmo módulo
+- [ ] Agente do Processo Autoral (Módulo 2) — usa história real da aluna como input
+- [ ] Agente do Portfólio Estratégico (Transição)
 - [ ] Agente da Proposta Validada (Módulo 3)
 - [ ] Agente da Autoridade Tríplice (Módulo 4)
+
+**Nota:** Módulo 0 não tem agente — é exercício em Docs (história real da aluna). Sem agente de narrativa.
 
 **Ferramentas:**
 - [ ] Biblioteca de templates (8–10 modelos: Canva/Notion/Google Sheets)
@@ -89,8 +90,8 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 - [ ] P1: Persona Compradora documentada
 - [ ] P2: Promessa Transformadora definida
 - [ ] P3: Método com nome + estrutura + narrativa autoral
-- [ ] P4: Oferta + pitch + 3 vendas reais + 1 depoimento
-- [ ] P5: Bio + linha editorial + conteúdos + plano 30 dias
+- [ ] P4: Oferta + pitch + script de abordagem (convite para sessão 1:1) + roteiro da sessão 1:1 + 3 vendas reais + 1 depoimento
+- [ ] P5: Bio + linha editorial + plano 30 dias (modelos de stories, formatos de conteúdo, roteiros de reels)
 
 ---
 
@@ -101,14 +102,14 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 
 ### 5 Fases Sequenciais
 
-| Fase | Nome | Módulo | Entregável |
-|------|------|--------|------------|
-| Passo 0 | Do Currículo à Autoridade | Módulo 0 — Desbloqueio | Narrativa de origem + trajetória mapeada |
-| Fase 2 | Do Conhecimento à Narrativa | Módulo 1 — Persona + Promessa | P1 + P2 |
-| Fase 3 | Do Caos ao Método Autoral | Módulo 2 — Processo Autoral (sozinho — o core) | P3 |
-| Transição | Portfólio + Leads | Transição | Ferramentas + lista de leads |
-| Fase 4 | Da Promessa à Venda Secreta | Módulo 3 — Vendas | P4 |
-| Fase 5 | Da Invisibilidade à Autoridade | Módulo 4 — Autoridade | P5 |
+| Fase | Nome | Módulo | Entregável | Mecanismo |
+|------|------|--------|------------|-----------|
+| Passo 0 | Do Currículo à Autoridade | Módulo 0 — Desbloqueio | História real documentada (antes / durante / depois) | Exercício em Docs — sem agente |
+| Fase 2 | Do Conhecimento à Narrativa | Módulo 1 — Persona + Promessa | P1 + P2 | 2 agentes separados (usa história do M0 como input) |
+| Fase 3 | Do Caos ao Método Autoral | Módulo 2 — Processo Autoral | P3 | Agente do Processo Autoral (usa história do M0 como input) |
+| Transição | Portfólio + Leads | Transição | Ferramentas + lista de leads | Agente do Portfólio + template Rastreador + aula |
+| Fase 4 | Da Promessa à Venda Secreta | Módulo 3 — Vendas | P4 | Agente da Proposta Validada |
+| Fase 5 | Da Invisibilidade à Autoridade | Módulo 4 — Autoridade | P5 | Agente da Autoridade Tríplice |
 
 ### 3 Pilares (em paralelo em todas as fases)
 - Identidade Autoral | Método Estruturado | Estratégia de Mercado
@@ -150,15 +151,46 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 - Agente constrói com a aluna — não valida nem confere
 - Exemplo: "Antes de começar este módulo, confirme que você tem X, Y e Z do módulo anterior"
 
+### Rastreador de Leads Quentes
+
+**Formato de entrega:** template em branco + aula (sem agente)
+**Modelo:** adaptado do doTERRA — grupos de contatos + matriz de fit + prioridade de abordagem
+**Como funciona no curso:** a aluna preenche os critérios com base na Persona Compradora construída no Módulo 1 — o template é universal, os critérios são dela
+**Grupos de contatos:** Família | Amigos | Colegas de profissão | Comunidades online | Ex-clientes
+**Critérios de pontuação (1 pt cada):** especialista offline, frustração com digital, método inexistente, quer renda própria, não quer fama, renda acima R$5k, mulher 35–45 anos
+**Prioridade de abordagem:** coluna separada (quente / morno / frio) — não entra no score de fit
+**Score 6–7:** abordagem direta | **Score 3–5:** nutrir antes | **Score 0–2:** não é lead agora
+
+### Loop Módulo 3 → Módulo 4
+
+As 3 vendas reais do Módulo 3 não são só resultado — são matéria-prima para o Módulo 4:
+- O que funcionou no pitch → vira linha editorial
+- O depoimento conquistado → vira prova social
+- As objeções que apareceram → viram conteúdo
+
+O Módulo 4 começa com material real de campo, não com blank page.
+
+### Princípio História-Primeiro
+
+A aluna escreve sua história real ANTES de definir persona ou método. Isso garante que:
+- A persona EMERGE da história real — não é um molde que a aluna tenta encaixar
+- O método tem narrativa rica, não filtrada pelo ângulo da persona
+- A história é mais morna quando escrita depois da persona (enviesada) vs. mais autêntica quando escrita antes
+
+**Fluxo de inputs da história:**
+- Módulo 0 → história real documentada (exercício em Docs, livre, sem filtro)
+- Módulo 1 → Agente da Persona usa a história como base (persona = quem a aluna era antes)
+- Módulo 2 → Agente do Processo Autoral usa a história + P1 + P2 para estruturar o método
+
 ### Decisões Estruturais
+- Módulo 0 = exercício em Docs, sem agente — aluna escreve história completa (antes/durante/depois do que trabalha hoje)
+- Módulo 1 tem 2 agentes separados entregues no mesmo módulo (Persona + Promessa)
 - Promessa (P2) fica junto com Persona (P1) no Módulo 1 — nascem da mesma fonte
 - Processo Autoral (P3) tem módulo próprio — é o core da entrega, merece espaço exclusivo
 - Módulo 3 abre com identidade de vendas (crenças, medo de cobrar) antes de qualquer tático
 - Contato com leads na Transição = call, WhatsApp, mensagem — não necessariamente ligação
-
-### Gaps a Resolver (próximas sessões)
-- Gap 1: estrutura da ferramenta de mapeamento de leads quentes (Karoline tem ideia)
-- Gap 2: loop de consolidação entre Módulo 3 e Módulo 4 (solução em aberto)
+- Rastreador de Leads = template + aula (critérios personalizados pela aluna com base no Módulo 1)
+- Loop M3→M4: pitch + depoimento + objeções das vendas alimentam diretamente o Módulo 4
 
 ---
 
