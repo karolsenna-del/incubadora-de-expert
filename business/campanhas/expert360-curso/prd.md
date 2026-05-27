@@ -78,9 +78,12 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 **Nota:** Módulo 0 não tem agente — é exercício em Docs (história real da aluna). Sem agente de narrativa.
 
 **Ferramentas:**
-- [ ] Biblioteca de templates (8–10 modelos: Canva/Notion/Google Sheets)
+- [ ] Biblioteca de templates (8–10 modelos: Canva/Notion/Google Sheets) — entregue na aula 7 do M2, usada para transformar ideias do portfólio em produtos reais
 - [ ] Rastreador de Leads Quentes
 - [ ] Plano de Conteúdo 30 dias
+
+**Agentes planejados (a criar via Worker Forge):**
+- [ ] Agente de Construção de Ferramentas — transforma uma ideia da planilha do Portfólio em produto real. Input: nome + objetivo + formato da ferramenta. Reutilizável por ferramenta, pós-curso e em módulos futuros. Separado do Agente do Portfólio por design (ideação ≠ execução).
 
 **Experiência:**
 - [ ] Encontro mensal ao vivo (Q&A coletivo)
@@ -221,6 +224,7 @@ A aluna escreve sua história real ANTES de definir persona ou método. Isso gar
 | Decisão | Justificativa |
 |---------|---------------|
 | Agentes usados DURANTE o curso, não após | São o mecanismo de entrega, não bônus pós-curso |
+| Agente do Portfólio ≠ Agente de Construção | Ideação e execução são jobs distintos. Portfolio agent identifica O QUÊ construir. Agente de Construção (futuro) transforma a ideia em produto real. Dois agentes, dois momentos, reutilizável separadamente. |
 | Agentes criam com a aluna, não validam | Parceiros de criação em cada fase do método |
 | Templates suficientes para gap de execução | Produção completa não gera transformação — validado por Euriler + Companion |
 | Módulo 1 abre com camada de mentalidade | Transição especialista→empreendedor, risco de desfoco, renda imprevisível — prepara antes de entrar na tática |
