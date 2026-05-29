@@ -1,0 +1,39 @@
+Maravilha! Bom que você sobreviveu. Chegou aqui até o final dessa nossa
+sequência de aulas aqui recapitulando o que a gente fez. Então o que a gente fez
+aqui foi o processo de integração do seu vídeo de vendas da VTURB com o
+GreatPage. Muito importante eu te lembrar que essa integração ela só é dessa
+forma como eu te mostrei. Ela só é válida para VTURB com o GreatPage.
+Ah Bruno, mas eu quero integrar o VTURB com o Elementor. É outra coisa.
+Ah VTURB com a minha forma que eu faço lá. É outro esquema. Essa solução ela foi
+muito pensada justamente para atender as limitações do GreatPage.
+Então aqui a gente consegue resolver os problemas. A gente já fez testes
+incansáveis aqui e funcionou muito bem. Escórdico e uma coisa muito importante.
+Ah Bruno, beleza. Eu peguei aqui, eu coloquei e parou de funcionar.
+A gente está trabalhando aqui com informações que são de responsabilidade
+do VTURB e são de responsabilidade do GreatPage. A qualquer momento essas
+empresas podem mudar a forma como elas estão trabalhando com essas informações.
+Ah, o jeito que um código é passada de um jeito ou de outro. Isso pode mudar.
+Essa estrutura que eu te passei, ela funciona para a gente hoje.
+Sim, em qualquer momento isso mudar, o GreatPage, o VTURB mudar a forma do
+funcionamento, da identificação dos vídeos e tudo o que a gente fez ali.
+A gente vai gravar a aula de atualização para você obviamente e elas vão estar
+disponíveis aqui junto com essas aulas. Mas isso é importante.
+Se você seguir até aqui, ah Bruno, o seguir não funcionou.
+Verifica se tem algum módulo adicional aqui de atualizações porque isso vai
+ser muito importante para você. Mas eu acredito que a forma que está ali vai ser
+bem difícil porque essa estrutura funciona dessa forma há bastante tempo.
+Pode ser que mude no futuro, mas hoje não. Beleza? Então eu agradeço muito pelo seu tempo,
+pela sua paciência, porque vou te falar que isso não é a coisa mais legal do mundo.
+Mas é muito eficiente a gente estar falando aqui do seu negócio.
+Então você ter isso aqui estruturado, ter isso aqui configurado é uma das coisas
+mais importantes que você pode ter no seu negócio e isso que a gente está
+entregando aqui para você na Alcatéia. Com toda a certeza do planeta, se você
+fosse contratar um programador, alguém para fazer isso aqui para você,
+eles vão cobrar uma verdadeira fortuna. Então programadores aí, desculpe, viu?
+Mas a gente consegue ter bastante agilidade com isso aqui. Então parabéns pelo
+seu empenho de ter dedicado esse tempo, ter chegado até aqui.
+Faça as configurações. Faça as configurações, lembra de fazer todos os
+testes. Segue os materiais de apoio que estão aqui, os códigos estão aqui para
+você e outras orientações que você venha a precisar. E é isso, eu espero que a
+gente se encontre em outras aulas e outros momentos aqui dentro da Alcatéia.
+Beleza? Um abraço. Até mais.

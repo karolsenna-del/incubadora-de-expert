@@ -1,0 +1,112 @@
+Vamos lá então, a gente dando continuidade aqui para a gente poder finalizar essa sequência de
+aula de configuração, a gente vai ver agora como que vai, você faz essa configuração do vídeo AB,
+onde eu quero que em metade dos acessos ele mostre um vídeo A, em metade dos acessos mostre um vídeo B,
+não é da minha metade de acesse, né, 50% das vezes ele vai mostrar um vídeo ou ele vai mostrar outro.
+Lembra do que eu te falei no final da última aula, tudo que eu te expliquei até agora serve pra gente ter
+o entendimento do que a gente vai usar aqui agora pra fazer essa configuração do AB, então eu não
+preciso te explicar tudo de novo, porque, porque o processo é exatamente a mesma coisa, a gente vai
+colocar aqui, uma página diferente aqui do, do, do great pages, tá, até pra ficar visualmente
+diferente aqui pra você, o que a gente vai fazer? A mesma coisa, lembra lá que eu te falei, precisa
+vir aqui no great pages, a gente precisa pegar o código de todos os elementos, salva, não foi a
+primeira coisa que a gente fez, nosso passo um aqui, tá até aqui, os que a gente tinha usado,
+esses aqui a gente não vai usar mais, ó, isso aqui a gente não vai usar mais, isso aqui a gente
+não vai usar mais, então eu tenho aqui, vamos colocar na ordem até aqui, eu tenho que fazer, então
+passo um, códigos do great pages, o que eu preciso fazer? Eu preciso vir aqui copiar o código de
+todos os elementos, essa aqui é uma das páginas da alcateia que a gente tem rodando, então colocar
+aqui, todos elementos, todos elementos, e copiar, eu não vou copiar aqui de todos, porque se não
+essa aula ficaria muito grande, não faz sentido você ficar me vendo copiar coisas, porque é a mesma
+que a gente já fez, tá, eu vou copiar só um elemento aqui para poder esconder que ele é
+suficiente aqui para a gente, só vou copiar aqui dessa primeira linha aqui, não é preguiça, é só
+por otimização do seu tempo, tá, aqui eu só vou copiar esse daqui, mas eu teria que copiar um por
+um, eu vou te fazer uma observação importante, vão ter alguns lugares, se a sua página ela é
+utilizada aqui com a página da alcateia, que vão ter algumas situações, deixa eu ver se vai
+estar aparecendo aqui, não, nessa aqui não vai estar aparecendo, mas por exemplo, tem alguns cenários,
+esse aqui, que essa imagem, repare que ela está pegando uma parte aqui, que às vezes você vai,
+ah Bruno, vou clicar na imagem, eu estou clicando fora, não, você está clicando na imagem, porque
+essa imagem é grandona, essa imagem ela vem até aqui em cima, então se eu clico aqui, eu estou pegando
+na imagem, lembra sempre, quando você for esconder a linha, você vai clicar aqui, ele vai aparecer
+aqui do ladinho, e aparece esse adicionar bloco, adicionar bloco, se você clicou e não apareceu
+desse jeito, é porque você está clicando em algum elemento, e aí você precisa se atentar para isso,
+mas como eu falei, não vou ficar copiando tudo aqui, outra informação importante, a questão dos
+botões que eu te falei, a gente vai fazer a configuração dos botões lá no VTube, mas aqui você
+vai vir colocar o link da sua oferta também, do check-out ou do que você estiver colocando,
+beleza? O restante é exatamente a mesma coisa de tudo o que eu já te expliquei, então vim aqui,
+copei os elementos aqui do great pages, agora lá no VTube, que a coisa vai ficar diferente para a
+gente, deixa eu já escrever aqui, VTube, bora lá, lá no VTube, o que que muda aqui agora? Muda o
+link, aqui eu tinha um vídeo simples, que foi o que a gente viu até agora, agora que quando eu vou
+fazer essa configuração ab, eu tenho dois vídeos, os vídeos eles já estão aqui, e aí você coloca
+aqui a identificação para você saber qual é um dos vídeos, coloca aqui a ver a, a versão a,
+a versão b, você coloca da forma como você quiser, mas sempre é interessante você ter
+identificação do vídeo, que ele está assim para a gente, porque a gente sabe quais são os vídeos,
+mas é interessante você nomear os vídeos para que você consiga saber o que está acontecendo
+ali nessa parada, beleza? Esses dois vídeos eles estão aqui, eles são vídeos independentes,
+eles estão separados, é como se eu tivesse dois vídeos aqui numa pasta, só que para fazer esse
+teste ab aqui na VTube, eu preciso fazer uma configuração, aqui eu tenho essa opção de teste ab,
+eu vou clicar aqui, aí inclusive vai abrir para a gente aqui uma série de testes que a gente está
+fazendo atualmente nessa conta, tá? Eu vou até criar uma pastinha aqui, ó, colocar aqui aulas,
+alcatel, criei aqui uma pastinha, organização importante, e aqui que dentro dessa pastinha não
+tem nenhum teste, tá? O que que você vai fazer? Você vai clicar aqui nesse botão de novo teste,
+tá? Novo teste, aí você vai dar um nome para ele, aí é o teste, teste vsl1, aí você vai organizar
+da forma como você quiser, aqui para o nosso caso eu vou colocar aqui, demonstração,
+tração, aula, alcatel, esse aqui que vai ser o nome do teste, vou colocar criar,
+repara que agora ele vai migando, selecione os vídeos que deseja adicionar ao teste ab,
+eu vou vir aqui, a importância da organização, das pastinhas aqui, para aulas, está aqui dentro,
+teste ab, eu vou selecionar esses dois vídeos, selecionei o primeiro, selecionei o segundo,
+abro, não posso colocar mais vídeo? Pode, só não faz sentido você fazer um teste ab com mais de
+um vídeo, tá? Não recomendo e eu só vou te mostrar com dois vídeos, tá? Mas tem senso,
+pode colocar, sei lá, em vídeos, e vou dar aqui, selecionar, então selecionei, repara que ele
+fica um marcadinho, azulzinho aqui, selecionei, vou vir aqui, selecionar, é porque o botão não está
+para você, você vai selecionar aqui embaixo, cliquei, repara que eu tenho aqui, nos meus vídeos,
+eu tenho aqui a pastinha de aulas, onde eu tenho esses dois vídeos que estão aqui dentro,
+e se eu venho aqui no teste ab, tenho aqui aulas alcatéia, o vídeo que a gente acabou de criar,
+está inclusive em rascunho, o teste que a gente acabou de criar, e ele está aqui, eu tenho aqui
+dois, esses dois vídeos, aquele me dá opções de eu fazer edições com esses vídeos, aqui você só
+vai precisar trocar um nome, você não vai precisar mexer em outra coisa aqui nesses vídeos, tá?
+Você fazer alguma edição mais complexa nele, não vai precisar fazer nada, porque se você clicar
+ele mostra, aquele te dá a opção de você fazer configurar a porcentagem, só que você não vai
+seguir nisso aqui, porque o que vai fazer isso é o nosso código, se você mexer aqui vai quebrar,
+beleza? Seja avisado aí, então está aqui, aqui é para você colocar o nome dos vídeos, eu vim aqui,
+criar teste ab, deixa eu só ver aqui, o A é o camisa marrom, beleza, criar teste ab, você precisa
+clicar naquele botão de criar teste ab, certo? Aí aqui ele vai me dar as informações do teste,
+porque na hora que eu rodar, a análise gráfica aqui não é o objetivo agora de explicar sobre
+essa parte de analíticas aqui do VTube, mas você repara que saiu aqui o rascunho da frente, até
+esse nome desse negócio, becker, acho que é becker, ficou azulzinho aqui, e aqui eu tenho as
+informações aqui de resumo, retenção do vídeo, então isso aqui é muito interessante essa parte
+de analíticas, mas para gente que agora não faz muito sentido, então vamos deixar aqui quietinho
+por enquanto, o que que a gente vai precisar fazer? Lembra que eu te falei que é a mesma coisa?
+Então eu vou precisar vim aqui nos vídeos, o que que eu fiz aquela hora no VTube? Eu não peguei
+o código dos vídeos, eu vou precisar pegar o código dos vídeos aqui agora, eles estão separados
+teste ab, o camisa marrom aqui é a versão A, o que que eu vou fazer? Eu vou vim aqui no
+meu bloco de notas e eu vou colocar aqui vídeo A, para você saber qual é qual, e vou vim aqui
+vídeo B, beleza? Só para eu saber qual é qual, voltei lá no VTube, vou vim no meu vídeo A,
+como é que a gente pega o código do vídeo? Aqui, aqui em cima, abro no meu deus, quando você mostrou
+tinha um edit aqui depois, é porque eu não estou editando o vídeo, eu só vim aqui direto, se eu
+vim aqui editar vai ter um barra edit depois, é só por isso, mas eu vim aqui ó, vou copiar esse código
+aqui do vídeo, importante, caso você duplique, assim como lá nas páginas do GreatPace que eu te
+falei que muda os códigos, se você duplica um vídeo no VTube, ele também troca o código de
+identificação do vídeo, cada vídeo é único, é um arquivo único, então copiei aqui o número de
+identificação do vídeo A, vou vim aqui, coloquei aqui, vou copiar agora o número de identificação
+do vídeo B, abro aqui o vídeo B, está aqui em cima, esquema bonitinho, show, maravilha, vou vim
+aqui, colega, tá? Vou copiar agora, já estou aqui no vídeo B, vou pegar a informação dele, a
+configuração de botão, de tudo que a gente vê, é a mesma como banho, absolutamente nada, absolutamente
+nada, eu vou vim aqui, vou pegar o tempo desse botão aqui, são 31 minutos, vou vim aqui do vídeo B,
+abri aqui 31 minutos, o botão já está configurado, botãozinho que está aqui embaixo, 31 minutos,
+aqui é o vídeo B, vou copiar aqui 31, com o tempo dele, minutos, vou pegar agora do vídeo A,
+o tempo dele em minutos, você quer copiar e colar a coisa? Já está com molezinha, vim aqui ó,
+botão de ação, vou copiar aqui o tempo do vídeo, 33 minutos e 30 segundos, e vou salvar aqui, o
+pronto, então já tenho aqui o código do vídeo, eu já tenho aqui o tempo dele em minutos em segundos
+e eu vou colocar agora o tempo em segundos, como? É mesmo jeito que a gente fez ali, 31 minutos
+em segundos, ó, 1.860, vou vim aqui, é o 31 aqui, 1.860 segundos, e vou colocar aqui,
+vou copiar aqui esse tempo, vou vim aqui, colei aqui, ele vai me dar aqui, 33 minutos e 30 segundos
+em segundos, ó, 2010, vou vim aqui embaixo aqui, 2010, pronto, agora eu tenho o que eu preciso das
+informações dos vídeos, maravilha, vamos voltar aqui no vtube, vamos voltar aqui, aqui show de bola,
+botão é a mesma coisa, muda nada, muda, mas eu vou te explicar daqui a pouco, tem um detalhezinho
+importante pra gente, ó, aqui no teste AB, eu vou vim aqui no meu teste e repare que ele tem aqui
+em cima esse código de embed, ele tem isso daqui, que é lembrar lá que a gente fez o outro, que a gente
+copiou esse mesmo código, a gente colou lá, eu vou te mostrar como que vai funcionar isso aqui pra
+gente agora, essa parte aqui do embed, mas por enquanto, segura aí, salva as informações, pega
+as informações do great pages, lembra que eu peguei uma só por questão de agilidade pra gente,
+pega as informações do vídeo e salva, agora a gente vai pra parte do código, onde eu vou te
+mostrar as adaptações que a gente precisa fazer ali, porque o código ele é diferente, um pouquinho
+diferente do primeiro código que a gente trabalhou e tem alguns detalhes ali que são importantes pra
+gente, mas passo um, separa essas informações, beleza? Vamos seguir, valeu, até mais!

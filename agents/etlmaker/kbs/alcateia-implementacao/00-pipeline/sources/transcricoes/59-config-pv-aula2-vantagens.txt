@@ -1,0 +1,37 @@
+Então, vamos lá! Agora que você já tem as suas contas criadas e configuradas, vamos para a parte que interessa, mas antes disso, vou te fazer algumas observações aqui.
+Por que que essa estrutura que a gente montou é tão legal? Primeiro, porque o Great Pages, apesar de ser uma plataforma incrível e é a plataforma que a gente usa internamente aqui, como eu já falei,
+ela tem algumas questões em relação à parte técnica dela, à parte de construção.
+O Great Pages, muitas vezes, não funciona muito bem com algumas plataformas e, teoricamente, isso que a gente faz aqui, que a gente conseguiu desenvolver, não era para funcionar muito bem,
+mas a gente conseguiu essa forma de funcionar perfeitamente aqui entre essas duas plataformas, uma observação importante para você.
+E a outra coisa é justamente essa vinculação entre o tempo que, tanto o botão de vendas como os elementos da página ali, você vai ver depois o que está acontecendo,
+dependendo do momento em que você chegou aqui na Alcatéia, muito provavelmente você passou por uma página que tem essa funcionalidade,
+mas é justamente ter essa integração com o vídeo, não só com o tempo, porque eu vou te mostrar que é isso.
+Quando a pessoa assistir a 30 segundos do vídeo, os elementos da página vão ser mostrados, normalmente essa configuração é feita com o tempo de acesso da pessoa na página,
+então a pessoa entrou numa página, meio que liga o timer lá, aperta o botãozinho, quando dá 30 segundos mostra isso aqui,
+no nosso caso não, isso está integrado com o vídeo, então, por exemplo, uma pessoa começou a assistir o seu vídeo de vendas,
+e você quer que o botão de inscrição, ele seja mostrado ali, eu estou falando tempos curtinhos aqui, só como exemplo,
+você quer que seja mostrado com um minuto, quando dá um minuto, então o botão é mostrado.
+Enquanto essa pessoa não chegar ali nos 60 segundos do vídeo, que seria um minuto, esse botão ele não é mostrado,
+então se ela assistir os 55 segundos do vídeo e pausou, vai ficar ali pausado, quando ela voltar para a página de novo,
+vai tá-la nesse 55 segundos o botão, toda hora eu estou falando do botão, porque eu estou juntando o botão com o mostrar,
+e está virando o botão, o botão não vai ser mostrado ali na página, ele só vai aparecer quando ela chegar no minuto,
+ali, exato que você colocou do vídeo, e isso dá pra gente uma ferramenta fantástica, porque você consegue realmente controlar
+quando esses elementos estão sendo mostrados ou não pra sua audiência, então essa observação ela é muito importante.
+E uma última observação para esse momento aqui agora, que também é importante, é que eu vou te mostrar dois cenários diferentes de configuração,
+o primeiro cenário é onde você vai ter um vídeo único na página, que que é isso Bruna, mas eu vou ter dois vídeos, não,
+onde você tem um vídeo único, você tem um vídeo estático, então eu tenho um vídeo que eu gravei, um vídeo de vendas,
+e 100% das vezes é esse vídeo que vai ser mostrado quando a pessoa acessar a minha página de vendas, esse é o primeiro cenário.
+O segundo cenário é quando você quer fazer um tipo de teste, que caso você não esteja familiarizado com a nomenclatura,
+é o teste AB, o que é isso? É quando eu quero pegar dois elementos isolados ali da página, colocar eles expostos as mesmas condições
+pra poder verificar qual que funciona melhor. No nosso caso, eu vou te dar um exemplo, onde a gente usa dois vídeos de venda,
+então quando a pessoa acessa uma página, ela vai receber o vídeo A, e quando uma outra pessoa acessar,
+uma página ela vai receber o vídeo B, na verdade ela pode receber o vídeo B, então esses vídeos vão sendo distribuídos,
+em 50% pra cada um, dessa forma eu consigo saber ao mesmo tempo qual vídeo que está performando melhor,
+e eu consigo fazer esse teste na verdade não só com o vídeo, no nosso exemplo aqui, aqui eu vou te mostrar com o vídeo,
+mas ah Bruno, eu quero testar se eu colocar um botão da cor verde ou da cor amarela com o que converte melhor,
+você também vai usar o teste AB pra poder fazer isso, no nosso caso aqui eu vou te mostrar dois vídeos totalmente diferentes,
+mas nada de possibilita de testar elementos diferentes ali também dentro dessa mesma página. Então são esses dois cenários,
+a gente vai começar pelo cenário do vídeo único, que ele é mais simples, e depois eu vou te mostrar o cenário do teste AB,
+onde são mais configurações pra serem feitas, tem alguma camada mais de complexidade, beleza? Mas vamos começar então,
+já vou te mostrar tudo que você vai precisar fazer e como é que a gente faz a configuração da página ali com o vídeo único, beleza? Valeu, um abraço.
+E aí

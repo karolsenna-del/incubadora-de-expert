@@ -1,0 +1,146 @@
+Show! Vamos lá! Dando continuidade aqui, então, a gente tem aqui o GradePagesMessim,
+mas nada, só copiei os códigos e coloquei aqui, Códigos GradePages, tá? Agora, eu já
+vou criar aqui, vou colocar assim, só aqui, ver tudo. Organização ajuda o meu povo na
+hora de fazer isso, porque se você vem aqui, e você faz isso aqui, é isso, pode ser isso,
+já era, já cagou tudo, já não, isso aqui já não vai funcionar. Então, organização
+importante aqui para isso. Vamos lá no Vtube. No Vtube, o que que você vai precisar? Obviamente,
+como eu disse, você vai precisar do seu vídeo aqui, tá? Vamos acessar o vídeo aqui. Eu tô aqui
+com esse, o vídeo aparecendo aqui para a gente. Aqui, caso você não conheça a plataforma aqui
+do Vtube, dê uma fuçada. Você, quando você clica aqui na parte de edição de vídeo, ele abre
+uma série de coisas aqui para você, uma série de configurações. Aqui você, a parte de estilo
+aqui do vídeo, você vai colocar do jeito que você quer, dá uma fuçada aqui, não tem nada que você
+vai fazer aqui que vai quebrar nada. Aqui você tem essa parte que é onde você configura os elementos
+que vão ser mostrados ali no vídeo, o que você quer, que a pessoa veja. No nosso caso aqui, por
+exemplo, a única coisa que a gente quer é o botão de play, né? A gente não quer que seja mostrado
+o tempo do vídeo, a gente não quer que a pessoa tenha opção de voltar no vídeo, nada disso, a
+gente só quer que fique ali o botão, mas aí você vai configurar como você quer, como eu me disse,
+é ótimo. Como eu disse, eu não vou me apegar aqui em questões de design, tá? Aí aqui é com você.
+Há uma parte que a gente vai precisar mexer nessa parte dos botões de ação aqui, mas nem isso a
+gente vai ver agora, tá? O que a gente vai precisar ver? Eu vou diminuir aqui, porque a gente vai precisar
+pegar uma coisa. Assim como a gente pegou aqui os códigos dos elementos do Great Pages, a gente vai
+precisar pegar aqui o código de identificação desse vídeo aqui do Beturbe. Cada vídeo tem o seu
+código individual, tá? De identificação dentro do sistema. Como que a gente pega? Muito simples,
+eu vou diminuir aqui porque tá cortando aqui pra você. Ele tá aqui, ó. Repare que eu tô aqui
+na página e aqui em cima, ó, na URL eu tenho aqui, ó, App, Beturbe, Player e eu tenho esse número
+aqui, barra edit. Você vai pegar esse número inteiro que está entre as barras, não pega as
+barras, tá? É que o Player barra, você pega o número aqui, começa no seis, parará, parará,
+parará, oito e não pega outra barra, porque esse é o código de identificação do vídeo. O que
+que a gente vai fazer? Eu vou vir aqui no Beturbe, eu vou colocar aqui. Pronto. Eu já tenho aqui o
+código de identificação do vídeo, que é uma das coisas que a gente vai precisar. Qual é a outra
+coisa que a gente vai precisar aqui no Beturbe? Se eu venho aqui, e aqui eu ainda não vou entrar
+na parte das configurações que a gente vai fazer do lado de cá, beleza? Eu vou pegar só o que a
+gente precisa aqui por enquanto. Aqui em cima você tem esse botão de embed. O que é esse embed, né?
+Ele é justamente quando você, ao invés de você pegar o link do vídeo, lembra que eu te falei que
+no Facebook, a gente tem a opção de colocar esse bloco de vídeo. Quando eu adicione esse bloco,
+e eu vou mexer aqui nele, eu vou configurar, aqui eu coloco o link do vídeo para ele poder
+funcionar. Quando eu vou colocar algum tipo de embed, eu estou pegando um código e eu estou
+inserindo esse vídeo em uma página através de código, tá? Então isso é muito importante. Aqui
+existem algumas configurações que elas vão variar muito da sua usabilidade. Se o seu vídeo é vertical,
+se o seu vídeo é horizontal, depende aí da forma como ele é. Aqui para o nosso caso, como é que a
+gente vai trabalhar? Eu tenho aqui, esse código que está aqui embaixo que a gente já vai copiar
+ele, e eu tenho aqui embaixo esse outro código. Os dois são importantes para você copiar. Aqui,
+eu não recomendo que você pegue eles e coloque lá no seu bloco de texto, porque eles já estão aqui.
+Você não vai precisar ficar mexendo em muita coisa, porque se eu pego ele e coloco lá no bloco de
+texto, deixa eu colocar aqui, olha como que é aqui no texto seco, fica esse negócio assim, você pode
+se embananar um pouco na hora de trabalhar. Então você não vai precisar copiar esse código, colocar
+aqui o item, a identificação do vídeo, ela já é suficiente para a gente, porém você já sabe
+que onde está, porque você vai precisar pegar esses dois códigos. Importante. Aqui, copia o código
+embed do vídeo, repara que ele tem essas duas opções, iframe e javascript, tem até um recomendado
+escrito aqui em cima. Não pega o iframe, você vai pegar o javascript, você não precisa saber
+a diferença entre eles, tá? Você só precisa saber que o que funciona é o javascript, e é esse
+código aqui, repara que ele muda na hora que eu coloco, o que está aqui embaixo ele muda, você vai
+precisar pegar só esse código, beleza? Isso aqui para a gente já é suficiente. Show, isso. Mas
+depois a gente volta aqui para essa parte do código. Aqui do lado, o que que você vai precisar
+configurar, que é interessante para o seu cenário. A parte de estilo, como eu já falei, aí é com você.
+Essa parte do progresso inteligente, ela é legal de você deixar ativa, porque é um recurso aqui do
+do vTurbe, testa com, testa sem, mas basicamente ela é aquela barrinha, quando a gente dá play no vídeo,
+que é aquela barrinha que vai aparecendo embaixo do vídeo, mostrando o progresso dele.
+Aí depende muito do seu gosto. A gente aqui gosta de usar e recomendo que use inclusive.
+Essa parte do Smart Autoplay depende, você pode fazer um teste com, você pode fazer um teste
+sem, ela basicamente tem a explicação aqui do que que o vTurbe faz em relação a isso, você pode
+vir aqui ao vTurbe, ele tem uma documentação muito grande, então qualquer dúvida que você tem
+também, aprenda sobre Smart Autoplay, ele vai abrir uma página aqui da documentação, você pode
+dar uma lida, eu não vou ficar me pegando a esses detalhes, não porque para a gente isso não vai
+fazer tanta diferença, mas você pode, pode usar ou não, tá? Essa parte turbo aqui a gente não tá
+usando, a parte de red lines aqui também não, porque isso aqui você consegue colocar até a própria
+red line da sua página, ao invés de estar na página você consegue colocar no texto, enfim,
+aqui tem uma cacetada de coisa. Essa parte do continuar assistindo aqui, ela é muito interessante,
+o que que é essa função? Essa função é o seguinte, imagina que a pessoa está na sua página,
+essa pessoa ela assistiu uma parte do vídeo, ela saiu, quando ela volta para a página, se você tem
+essa função aqui ativada, vai aparecer essa tela aqui, para pessoa pode ser que você já tenha visto
+algo do tipo, que dá a opção para você continuar assistindo ou voltar do início do vídeo, tá? Então
+isso aqui é muito interessante para você, para pessoa continuar de onde ela parou, então eu
+normalmente recomendo que você use, certo? O restante aqui a gente não vai usar e eu não vou
+entrar nele, porque a parte que é realmente importante aqui para a gente é o botão de ação,
+botão de ação, porque? Porque aqui no botão de ação é onde você vai configurar o botão da sua
+oferta, onde você vai colocar ali o link de pagamento da sua oferta, como que ele vai acontecer, o que
+vai acontecer com ele, tá? Então é isso aqui que eu vou te mostrar agora essa configuração do
+botão de ação, vamos lá, quando você chegar ele vai estar desativado aqui, vai estar off, tá? Você
+liga, só que não vai ter nenhum botão configurado, aqui no nosso caso específico você vai reparar e é
+até interessante caso você já queira usar essa função para você saber como ela funciona, você
+vai falar, cada um desses aqui é um botão, esse vídeo ele tem dois botões, por que? Porque esse
+vídeo aqui ele é o vídeo que a gente usa hoje na página de Excel para a Alcatéia e a gente dá a
+opção da pessoa comprar e não comprar, então o primeiro botão aqui ele é um botão verde,
+clicar aqui para poder te mostrar esse botão que a pessoa tem a opção de comprar e eu tenho esse
+segundo botão, esse segundo botão que é o botão da pessoa não comprar, então caso você vai usar
+esses dois botões, você vai precisar configurar os dois botões, eles são mostrados ao mesmo tempo,
+tá? Ao mesmo tempo, um e baixo do outro, por isso até que lá na nossa página do GridPace a gente tem um
+espaço considerável aqui embaixo do vídeo que é para poder caber esses dois botões, tá? Mas
+então só para você saber se você for fazer, você vai ter que fazer a configuração de cada um dele
+dependente, você pode colocar, eu não sei se tem o limite, mas você pode colocar vários botões
+ali embaixo, não sei por que você faria isso. Para o nosso caso aqui didático, a gente vai usar um
+botão só, então eu vou até tirar esse aqui, eu deixei de propósito para poder explicar esse cenário,
+mas a gente não vai usar ele, tá? A gente vai usar um botão só, eu vou trabalhar com esse que
+está configurado aqui já, mas você vai clicar aqui, adicionar novo botão e ele vai abrir uma
+configuração aqui para você, tá? Onde você vai colocar as configurações específicas ali que
+você quiser. No nosso caso, só para uma questão de agilidade, eu vou usar o botão que já está e
+aí todas as mudanças que você vai fazendo ele vai mostrando aqui do lado, então eu posso vir aqui,
+finalizar, quero que o texto do botão seja, finalizar minha inscrição, ele vai trocando
+para trocar cor, aquele é o lugar onde você vai configurar para ele aparecer, ele tem como
+aparecer abaixo do vídeo, dentro do vídeo, tem como colocar esse botão aqui e aqui é um HTML,
+no nosso caso é abaixo do vídeo, tá? Aqui esse vai abrir uma nova aba ou não, usar uma imagem no
+botão, isso aqui eu não recomendo que você faça, não faz sentido nenhum isso daqui, tá? E
+aumenta, né? O peso ali da página, uma imagem é mais para poder estar ali, então não recomendo
+que você faça. Aqui é onde você vai colocar o link do seu checkout ou de onde você tiver
+direcionado a pessoa, se for para um WhatsApp, por exemplo, você vai colocar aqui o link, tá? O início
+aqui é o tempo exato do vídeo onde esse, onde o botão precisa ser mostrado e essa configuração
+que para a gente, ela vai ser bem importante daqui a pouco, a gente vai levá-la lá para o nosso
+bloco de notas, tá? O término aqui também, se você quer abrir, eu quero que o botão comece no
+5 e termine no minuto 7, você vai colocar aqui, no nosso caso, não faz muito sentido, você quer que
+o botão seja mostrado e que ele fique até o final do vídeo, então não faz sentido a gente colocar
+aqui. O auto-scroll para o botão, se eu deixo isso aqui ativado, ele vai rolar a página até a altura
+do botão, você não vai precisar disso aqui, tá? É manter a exibição em visitas futuras, você não
+vai precisar disso aqui também, porque o nosso código já está fazendo isso e aqui embaixo são
+as configurações estéticas, tá? De fonte, peso da fonte, tamanho, tal, aqui você vai colocar, tá?
+Fazer o botão pulsar, você gosta, né? Tem gente que gosta de deixar o botão assim, mas aqui são
+configurações estéticas, porque para a gente é importante essa parte de início aqui, porque eu vou,
+como eu te falei, vou te mostrar com o nosso botão que já está configurado aqui, beleza? Então,
+o que você vai precisar fazer? Aqui é o texto do botão, aqui é o link que você vai colocar,
+que no nosso caso é um dos exemplos de link que a gente tem aqui colocado e aqui, para esse exemplo,
+a gente usa, nesse caso aqui, a gente está usando o upsell de um clique da ubla, então quando a
+gente clica no botão, ela faz a compra imediata, tá? Clicando ali direto no botão, se o seu caso é
+mandar a pessoa para o checkout, você vai colocar, só estou colocando aqui como um exemplo, porque dá
+para fazer essa configuração também, dependendo da plataforma de pagamento, do gateway de pagamento
+ali que você usa, tá? Mas dá para colocar aqui também, beleza? E aqui, o início do, do, do pitch,
+é muito importante. No nosso caso, nesse vídeo aqui, o pitch, ele é feito em 5 minutos e 20.
+Abruno, como que eu descubro isso? Ou é, você gravou seu vídeo, você vai precisar saber onde
+é que o pitch ele é feito. Abruno, não lembro, assiste o vídeo e pega, tá? É simples assim,
+não tem muito o que fazer, mas você precisa colocar, exato aqui, onde é que você quer que esse
+que é o tempo aqui, em minutos e em segundos aqui no nosso caso. Como eu te falei, as outras
+configurações aqui, a gente quer que seja mantida até o final, aqui são as configurações estéticas,
+isso aqui você vai no olho, tá? No nosso caso aqui, por exemplo, eu quero e realmente é interessante
+que esse botão enxame a atenção da pessoa, então é um botão grande, o botão ele tem a largura do
+vídeo ali, o botão é até mais largo do que o vídeo aqui, dependendo da onde ele estiver sendo
+colocado, é um botão verde, né? De positividade legal, tá? Então é isso, essa parte pulsar que a
+gente não usa é isso, então você prepara a configuração aqui, na real ela é bem simples, não tem
+muito o que fazer aqui, mas tá configurado, o botão tá configurado, isso aqui é importante,
+você sempre configurar, se ele está ligado aqui, mas tá ligado, tá tudo direitinho, tudo bonito
+tinha uma parte, ah não, eles trocaram isso aqui do botão que ele é, que tinha uma outra coisa
+que era diferente do botão, mas tá feito, aqui o botão tá configurado, tá tudo certo, a gente
+tem agora tudo o que a gente precisa pra começar a trabalhar, fazer a configuração do código pra
+poder usar ali na página, agora a gente vai pegar os códigos aqui e tal, isso aqui a gente vai começar
+a usar, mas antes disso agora, repara, a gente preparou a casa, a gente pegou aqui os elementos do
+código, você entendeu como isso aqui funciona, a gente pegou aqui o código de identificação do
+vídeo aqui do vtube, já tá tudo certinho, agora vou te mostrar este camarada aqui que é o código do
+nosso vídeo, aqui agora vai ser trabalho de copiar e colar, simples assim, não tem muito mistério,
+tá? Então vamos lá agora que a gente vai começar a configuração oficial aqui do código do nosso

@@ -8,12 +8,13 @@
 
 ## Importante (proximo foco)
 
-<!-- O que vem depois do urgente -->
+- **Bio Instagram com tese** — aplicar "Diploma e o que voce estudou. Metodo e o que voce viveu." na bio. Operacao continua, nao projeto.
+- **Primeiros conteudos com angulo da frase-tese** — usar posicionamento "expert em fracassar no digital" como estrutura dos primeiros posts.
 
 ## Backlog (quando tiver tempo)
 
-- **Gancho de conteúdo: "Expert em fracassar no digital"** — Karol se reconheceu como especialista nos erros que ensina a evitar. Trabalhar como ângulo de conteúdo: autoridade que vem dos fracassos, não dos acertos. Diferencial raro no mercado.
+<!-- Gancho "Expert em fracassar no digital" — elevado para posicionamento central em 28/05. Ver log-decisoes.md. -->
 
 ---
 
-*Ultima atualizacao: 11/05/2026*
+*Ultima atualizacao: 28/05/2026*

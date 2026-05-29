@@ -1,0 +1,139 @@
+Vamos lá então, a gente dando continuidade aqui agora, lembra que eu te falei que a gente precisa
+fazer as configurações dos botões relacionados a parte do teste AB lá dentro da Vtube. A gente
+pegou as informações, já está tudo certo, já está tudo configurado. Do que a gente fez até agora,
+a gente não precisa mexer mais em nada, tá? A gente só precisa ir lá no Vtube, porque eu vou te
+colocar os detalhes. Aqui eu tenho os dois vídeos que eu estou usando. Eu vou abrir primeiro aqui o
+vídeo A e eu vou lá na edição, botões de ação, vou editar o botão. Botão está configurado aqui
+embaixo e tal. Onde que é a parte que a gente precisa se atentar? Primeiro, eu vou vir aqui na
+parte do tempo, como a gente está fazendo o teste, eu vou colocar ele aqui com os 10 segundos que a
+gente colocou, mesmo no tempo que a gente colocou lá na testagem para poder fazer. E a parte que a
+gente precisa se atentar aqui agora é no link. Por quê? O link que você vai usar aqui é, eu acho
+interessante você mandar informações para a plataforma, para o checkout, para onde você estiver
+enviando, para você saber se essa informação veio do vídeo A ou do vídeo B e tal. Até para você
+que a integração do teste AB, dessas informações, vai depender muito do gateway de pagamento que você
+usa. E aí você vai precisar entrar em contato com o suporte da Vtube ou procurar no Google, procurar
+na documentação, vai lá, como integrar Vtube com a Hotmart. Vai ter lá uma orientação, com a
+hubla, sei lá, com a TikTok, qualquer plataforma que você use, ele vai ter uma explicação. Mas o que
+eu vou mostrar aqui? Duas coisas. Eu vou copiar aqui esse link que está aqui no checkout. Lembrando
+que se for para o WhatsApp, isso aqui não vai sentido, que eu vou te mostrar agora, tá? Vou colocar
+aqui em cima. Esse aqui é o link do nosso checkout, tá? Até não é um link que a gente vai usar, mas é a
+demonstração aqui para você. Repare que aqui no final ele tem esse e comercial, o TM content e tem
+esse LB. Essa aqui nem é a B, essa aqui é a A para esse exemplo que a gente está usando. Para quem
+conhece, se você conhece, isso aqui você sabe que isso aqui é um parâmetro de o TM. Isso aqui é
+interessante de você enviar, porque na hora que você manda isso lá para sua plataforma de vendas,
+vai ficar registrado se a pessoa veio do vídeo A ou se ela veio do vídeo B, tá? Então isso aqui é
+interessante de você colocar. Eu recomendo que você coloque. Então o que você vai precisar fazer?
+No nosso caso, como a gente está mandando para o Google, o nosso link aqui ele vai ficar assim,
+Google.com. Aí eu tenho aqui esse e, aqui no nosso caso, não vai ser um e comercial, vai ser uma
+integração aqui. Isso aqui, para você fazer, isso aqui eu preciso te explicar de forma muito simples.
+Para você fazer essas configurações de o TM, eu tenho aqui o link do meu site, que vai ser o
+link do meu checkout, que está lá bonitinho. Tudo que eu quiser colocar depois aqui como
+parâmetros, eu preciso iniciar com essa interrogação. E se eu for colocar mais de um parâmetro, eu
+coloco um e comercial entre elas. Aí eu não vou entrar na explicação a fundo disso aqui,
+mas é só você dar uma procurada no YouTube, no Google, sobre o TM, como usar o TM, que é bem de
+bom. Mas aqui, para o nosso caso, eu vou falar para você fazer duas coisas e elas vão facilitar com
+a nossa testagem aqui. Você vai fazer o seguinte, eu vou colocar aqui primeiro, esse o TM Content,
+que é a WSLA. E aí, eu vou colocar outra coisa aqui, um e comercial, o TM. Isso aqui vai estar
+junto com você, nos seus arquivos para você usar. Vou colocar aqui um Term, que é um outro
+de TM. E o que eu vou colocar? Eu vou colocar, por mais que já tenha o A, que eu gosto de colocar
+os dois para testar o código do vídeo. Certo? Peguei isso daqui. Então, esse aqui é o link do
+meu checkout para o vídeo A. Certo? Eu vou fazer a mesma coisa para o B. Isso que eu vou trocar,
+vai ser a WSLA, vai ser WSLB e o Term aqui, legal falar no Term, ao invés de ser o código do A,
+vai ser o código do B. Vou copiar aqui, copiei com ele. Você vai ver a mão na roda que isso aqui é
+para você saber se o que você montou ali funcionou para a Valei mesmo. Vou lá e coloquei aqui o B.
+Agora eu vou pegar isso aqui e vou colocar na vertúria. Fiz aqui a edição, copiei aqui o link,
+vou vim aqui no botão e vou colocar aqui o meu botão de checkout. Beleza? Está aqui, salvei, bonitão.
+Vou fazer a mesma coisa no B. Vim aqui, aqui o player aqui, é o vídeo B. Mesma coisa, já criei o link,
+só vou vim aqui, vou copiar ele e vou vim aqui e vou colar. Depois que eu terminar de colar aqui,
+vou te explicar por que a gente está fazendo isso. Lembrar de alterar aqui o tempo do vídeo,
+no nosso caso que é a nossa testagem. Então vou colocar aqui os 10 segundos e vou salvar.
+Por que que eu coloquei esses parâmetros e esses links dessa forma aqui? Primeiro para ele mandar
+essa forma, num cenário oficial, não faz sentido você mandar esses dois aqui, porque eles são a
+mesma coisa, a não ser que você queira realmente ter registrado lá na sua plataforma de vendas,
+qual é o código do vídeo de vendas que a pessoa veio do VTube, aí você coloca. Aqui isso aqui vai
+funcionar para o nosso teste, depois vou tirar. Você vai entender por que. Nesse caso aqui, nesse
+exemplo que a gente está usando, as V... Deixa eu ficar mais pertinho de você aqui para poder
+explicar isso. Nesse exemplo que agora que eu estou usando aqui desse vídeo com você, as VSLs que a
+gente está usando, elas são diferentes. Tanto que em uma das VSLs, o Vini ele está com uma camisa
+preta, na outra ele está com uma camisa marrom. Então na hora que eu acessar aqui a página para fazer
+o teste, eu já vou saber qual o vídeo que está sendo mostrado. Só que vamos supor que a VSL que
+você está usando é a mesma e você fez um teste dentro do próprio vídeo. Você, por exemplo,
+testou garantia, você quer testar uma garantia, você quer ver se a garantia de sete dias funciona
+melhor que de quinze, ou você está fazendo testagem de preço, é o mesmo vídeo, mas um você está
+fazendo um preço e o outro você está falando com outro preço, e assim por diante. Mas o esqueleto
+do vídeo, o cor do vídeo é a mesma coisa. Como que você vai saber se está sendo mostrado um vídeo
+ou outro? Isso aqui que a gente fez agora ajuda exatamente com isso. Porque a gente tem como saber,
+se eu olho no código interno ali da página, ele vai me mostrar qual é o vídeo que está sendo
+mostrado na página. Mas para a imensa maioria das pessoas, isso é bem difícil de fazer. Se você
+sabe, você já sabe como fazer. Você vai inspecionar ali o código do vídeo, você vai lá e ele vai
+mostrar qual é o vídeo que está sendo mostrado. Mas eu nem vou fazer isso, nem vou fazer isso. Porque
+para a imensa maioria das pessoas, isso vai ser inútil, porque não é uma coisa tão simples
+de fazer, beleza? Então vamos lá. Abra um, você mexeu nos botões agora, você tem que voltar lá
+no great pages e tem que trocar alguma coisa, mexer em alguma coisa, tem que mexer em nada, mexer em
+nada, mexer em nada, tá? A gente já está prontinho aqui para poder fazer o nosso teste. Vamos lá então.
+Vou copiar aqui o link aqui da página, vou abrir uma aba anônima,
+vou abrir aqui uma aba anônima e vou acessar a parte.
+Ó, aqui para mim ele mostrou agora, lembra que só tem um elemento que está escondido,
+por isso que os outros estão mostrados aqui. Achou que você ia me pegar, né jovem?
+Aqui, como eu te falei, a VSN é diferente, então aqui é a VSN marrom, a marrom qualquer, a camisa marrom,
+é a A, então aqui eu sei que é o vídeo A. Mas se eu não tenho esse parâmetro, assim, como eu já expliquei,
+a gente vai explicar, vai descobrir com a configuração que a gente fez lá no botão, vou dar o play,
+com 10 segundos tem que apre... pausei aqui, não pode acontecer nada, mas na hora em que o vídeo
+chegarem 10 segundos tem que mostrar essa linha que está escondida e o botão. Bora lá.
+Vamos lá, vai aparecer agora, pronto, 10 segundos apareceu, viu? Era o único elemento que estava
+escondido, ele apareceu aqui e eu tenho o botão. Vamos clicar no botão? Ó, vou clicar. Olha só,
+o que que ele fez aqui para mim, deixa eu copiar esse link aqui porque é importante você entender
+isso daqui, não a fundo obviamente, mas só para você ver o que que acontece. Deixa eu apagar isso aqui,
+deixa eu colocar aqui o link. Eu cliquei no botão e ele me mandou para esse, esse aqui é o URL
+inteiro que estava aparecendo lá no meu vídeo. Repare o seguinte, lembra que a gente fez a configuração
+lá do content aqui do termo, olha eles aqui, content, termo e tem essa parte aqui no final,
+vti, tiririt, isso aqui é um parâmetro de identificação que é inserido automaticamente
+pela vtube, não vou entrar na explicação disso aqui porque não nem precisa para a gente agora,
+mas isso aqui é a vtube que manda de forma automática ali, tá? Mas o que a gente precisa
+isso aqui, eu sei então que foi a DSL-A, legal? Vamos trocar, vamos acessar de novo aqui a página,
+aqui agora não faz sentido, o que que eu tenho que fazer? Se eu acessar de novo aqui ele vai
+mostrar a mesma, porque? Porque está no meu cache, eu tenho que fechar a página, vou vir aqui, abrir
+o botão aqui, anônima, vim aqui com a lença e tranhe, vamos ver? Ó, mostrou a outra, como que eu sei?
+Aqui no caso, porque eu sei que o Vini está com a camisa preta aqui nessa DSL, vamos dar o play,
+ó, vamos esperar aqui 10 segundos, não pode aparecer nada, nadinha, nadinha, show de bola,
+nada aconteceu, nada acontece, feijoada, ó, daí aqui o play, vamos lá, esperar 10 segundos, tem que
+aparecer a linha e o botão, show, apareceu ali um botão, maravilha, funcionando perfeitamente,
+vamos clicar no botão? Cliquei no botão, vou copiar o link inteiro aqui, aquele link gigantesco
+aqui, vou apagar isso daqui, show, ó, ele já mostrou aqui o endereço aqui, agora eu sei que ele
+está na VSLB e o termo aqui pra gente, então dessa forma, quando você configura o link desse jeito nos
+botões do vtube, fica muito fácil de você fazer essa testagem pra saber se a parada está funcionando,
+né, porque? Porque de novo, se as VSLs forem iguais, o início delas, você não vai saber qual
+é a informação mostrada e assim é uma forma fácil de você descobrir, tá? Só que agora você
+precisa ajustar, porque você não precisa mandar essas informações aqui, elas são duplicadas,
+você queira, aí é problema seu, mas você não precisa mandar essas informações duplicadas pra
+sua plataforma de vendas, o que que eu preciso fazer agora? Vou lá ajustar os botões, botão do vídeo
+porque agora eu vou pro oficial mesmo, né, vou pro oficial, o que que eu vou fazer? Eu vou vir aqui,
+vou tirar, só vou deixar o VSLB aqui, vou tirar no final e o tempo aqui do vídeo B, qual que é o tempo
+do vídeo B? 31, 31, vim aqui, 31, salva criatura, não esquece de salvar, show, maravilha, vídeo A,
+editar, botão de ação, editar, botão de ação, vou fazer a mesma coisa, tudo que tá aqui depois do
+vídeo B, aqui eu só quero essa VSLA que vou tirar, tá? Vai ficar dessa forma, tempo do vídeo A,
+tempo do vídeo A, 33 e 30, vou vir aqui e vou copiar, 33 e 30, aqui lembra de salvar criatura,
+salvei, pronto, agora eu tenho que ir lá no Great Pages, porque? Porque tá com o nosso tempo de teste,
+vou pegar aqui, tempo em segundos do vídeo A, vou vir aqui, vou colocar, tempo em segundos do vídeo A,
+tempo em segundos do vídeo B, 100, não, 100, 1.860 segundos, vou vir aqui, 1.860 segundos,
+o restante, não preciso mexer em absolutamente nada, pronto, ele vai dar aqui, às vezes o botão
+demora um pouquinho pra aparecer, atualizar, cliquei no atualizar, ele vai atualizar a página pra
+lembra daquele esquema que às vezes o Great Pages ele leva um tempinho pra poder atualizar a página,
+então é interessante depois que você fez essa última atualização que você vai fazer um teste
+oficial com o tempo real do vídeo, simular exatamente o mesmo comportamento que o seu
+usuário teria ali, é importante você dar esse tempinho, aguardar ali uns minutinhos pra 5 a 10
+minutos pra página do Great Pages internamente ser atualizada e pra tudo funcionar, então fazendo
+meu check list final, VTURB, botões estão configurados com o link tempo estão, Great Pages, código tá
+configurado, com o tempo certinho do vídeo, sim, código de velocidade aqui tá ligado,
+tá ligado, tá ligado meu, e é isso, e tá feito, então agora vamos voltar aqui pra eu falar de mais
+perto aqui com você, então fizemos aqui agora essa essa configuração, não é possível, nessa parte
+AB, por incrível que pareça que temos detalhezinhos a mais ali, mas a parte mais complicada é
+entender a logística ali do início de pegar as informações, mas depois que a gente faz a
+configuração ali, ela tá toda certinho, beleza, e agora é importante você fazer um teste oficial,
+não vou fazer aqui porque o pitch do vídeo seria longo, mas eu recomendo, quando você fizer, assiste
+o vídeo, marca, vê se o tempo vai tá certinho, testa no celular, porque isso pode impactar em vendas,
+então é importante você ter esse teste aí pra pra ver se essa configuração que você fez que
+agora você acredita em mim, você viu que não é difícil, só é chato, mas é copiar coisa de um
+lugar e colar em outro, você não precisa entender de código, nada disso, coloquei da forma mais
+machigada aqui pra você, beleza, então agora faz o seu teste oficial e vamos pro encerramento aqui
+com a sequência de alvos, até mais.

@@ -1,0 +1,102 @@
+Então vamos lá dando continuidade aqui agora a gente já vai para a tela aqui do computador
+onde vou te mostrar como é que a gente vai fazer a configuração da página quando a
+gente for ter um vídeo único ou seja você tem lá o seu vídeo de vendas você não
+quer testar você não quer fazer nada você só quer o vídeo lá configurado e funcionando
+direitinho ali na sua na sua página beleza vamos lá então deixa eu compartilhar minha
+tela aqui com você vamos lá aqui aqui isso olha lá magia do cinema quanto é
+sinal vivo aí na sua tela minha senhora me adora indicar isso aqui né para qualquer
+um não rapaz tem tecnologia aqui nesse trem vamos lá então pessoal o que que você vai
+precisar deixa eu ajustar aqui é porque o meu monitor ele é um cavalo de gigante e muitas
+vezes ele corta aqui alguns elementos na hora que eu estou compartilhando até isso
+eu estou mostrando aqui bonitinho para você tá o que que você vai precisar para poder
+fazer esse esse teste aqui para poder fazer as configurações aqui da forma correta você vai
+precisar obviamente da sua página de vendas lá do great page que no caso que inclusive né
+você sabe que a gente gosta realmente de mostrar aquilo que a gente está fazendo isso aqui é uma
+das páginas de upsell que a gente tá usando nesse momento aqui da gravação da aula para
+colocar até a gente tem dezenas de outras páginas aqui rodando tá mas essa aqui é uma
+delas inclusive eu peguei de de exemplo por isso mesmo que você pode talvez até ter visto essa
+página você vai precisar da página você vai precisar do seu vídeo de vendas lá no no vtube tá o
+vídeo tá aqui tá colocado esse inclusive no momento da gravação dessa aula é um dos vídeos
+oficiais também que a gente está usando aqui pode ser que você tenha assistido esse vídeo eu vou
+dar um exemplo mas isso pouco importa só para você saber é um bloco de notas tá um bloco de notas
+um bloquinho de notas ali vai fazer sentido para você porque que você vai precisar porque que você
+vai precisar dele tá e a gente vai precisar né de um código aqui para fazer isso funcionar
+eu não vou nem entrar na parte do código que agora tá para não não configurar só não
+configurar ótimo para não dar um nó na sua cabeça daqui a pouco a gente vai chegar nele porque a
+gente precisa fazer algumas coisas aqui antes mesmo de chegar e no código para a gente poder
+mexer beleza vamos lá então vamos começar pela página primeiro o que você precisa entender o
+que que esse código e essa integração que a gente vai fazer aqui ele faz na verdade ele mostra na
+página tanto o botão de compra como diversos elementos da página só no momento em que a
+pessoa chegar na hora do pitch de vendas ali do vídeo né na hora que você apresenta a oferta se
+você reparar ó essa página aqui ela tá com todos os elementos sendo mostrados tá todos os
+elementos aqui sendo mostrados na página só que na hora que a pessoa acessa a única coisa que ela
+tem é até essa primeira dobra preta aqui o restante ela não vê todo esse restante ele
+é escondido e você não vai precisar esconder ele aqui pelo great pages a gente tem um código que
+vai fazer isso pra gente beleza então isso é o primeiro ponto o outro ponto é o seguinte na hora
+de você adicionar o vídeo na página aqui no great pages você sabe que existe uma opção aqui de
+adicionar vídeo onde ele coloca aqui um bloco de vídeo né você vai configurar aqui o tamanho dele
+e tal pra você poder usar só que nós não vamos usar esse bloco de vídeo tá nós não vamos usar
+isso aqui porque aqui é pra você colocar realmente o link aqui de um vídeo aqui no caso do do
+youtube tá do vim do panda só que como a gente tá trabalhando com funções que elas necessitam
+esse código pra funcionar a gente vai precisar usar esse bloco aqui de html que caso você não
+conheça é esse último aqui ó esse último elemento aqui do great pages que se adicionar html ele
+vai adicionar esse bloco aqui pra você quando você abre ele pra editar ele não tem nada aqui tá e
+ele o que que ele te dá ele te dá aqui deixa eu abrir do lado de cá uma janelinha de texto aqui o
+local já na linha de texto é o local né justamente o local que você vai configurar né não vou
+me ater a questões de design aqui tá mas aqui é o local onde você vai inserir o código que você
+vai usar que é justamente o código que a gente vai disponibilizar pra você que tá em anexo aqui
+na aula pra você poder baixar beleza então você vai inserir esse bloco html eu aqui a gente já tem
+inserido aqui que é o que a gente vai usar então não vou não vou modificar nada nele mas é a
+mesma coisa a única diferença é que ele já tá com o código aqui inserido dentro dele é
+obviamente essa página que não é oficial então assim posso mexer em sua vontade tá não vou abrir
+aqui agora pra ainda não é encher sua cabeça aí com esses códigos bom então essa é a primeira
+coisa é a segunda coisa seguinte se você reparar aqui embaixo do vídeo tem esse espaço um pouco
+maior porque que esse espaço aqui ele é importante e aí isso aqui é uma parte meio chatinha mas
+você vai precisar na hora que você tiver construindo a sua página você vai precisar meio que fazer
+um ajuste acessar a página ver se ficou do seu agrado tá é uma uma parte meio chatinha de design
+você vai precisar fazer isso porque porque se você reparar ó aqui embaixo a gente tem um botão
+e aqui a gente não tem porque porque o botão de compra que é sincronizado com o vídeo ele é o
+botão da vtube é o vídeo da vtube tem uma função que a gente configura esse botão lá que ele é
+inserido junto com o vídeo então o vídeo é o botão são como se fosse um elemento só então ele
+não é um elemento que tá na página ele é um elemento que tá no vídeo e ele vai ser inserido
+dentro da página esse espaço aqui ele é importante porque se eu não deixo esse espaço aqui na hora
+que o vídeo for inserido ele ele iria ficar por exemplo em cima que desse texto porque ele não
+tem as coisas pra baixo ele é um é um elemento que ele tá aí por cima da página então se eu não
+deixo esse espaço aqui ele né ele ficaria sendo mostrado em cima dos outros elementos isso não é
+interessante então o que que você vai precisar fazer isso é depois tá já deixa o espaçozinho aqui
+a mais embaixo do seu do seu vídeo mas na hora que você terminar tudo que a gente vai fazer aqui
+agora aí você vai precisar acessa tal vê ali o tamanho e vê se ficou do seu agrado até porque
+você quer um espaçamento maior espaçamento menor aí vai muito do seu gosto pessoal também do
+design que você tá tá usando ali na sua página beleza então essa é outra a outra informação
+e aqui é o seguinte a próxima informação seguinte você vai precisar definir agora quais são os
+elementos que você quer que estejam escondidos na sua página e que vão ser mostrados só quando
+a gente de vendas for feito só quando o botão de compra ele for disponibilizado porque que a
+gente vai precisar fazer isso porque cada um dos elementos que a gente tem aqui na página todos
+elementos aqui na página do great pages cada elemento desse dentro do sistema e dentro dos
+códigos ele tem um código de identificação e a gente vai precisar pegar esse código de
+identificação pra poder falar tô falando pro código assim ó pega esse elemento aqui né por
+que eu tenho uma uma linha vermelha o computador ele não sabe o que que é linha vermelha ele sabe
+um código de identificação que esse elemento tem então que eu vou colocar ali no código que
+eu vou falar assim sabe que ele pega esse elemento aqui que é uma linha vermelha deixa ela escondida
+e só mostra na hora que eu falar o preço da pessoa só que eu não tenho como escrever coloca a
+linha vermelha eu vou precisar passar um código pra ele isso é mega simples tá mega simples aqui
+eu vou te mostrar tá então você vai precisar de definir quais são os elementos a Bruno eu quero
+esconder só esse texto beleza você vai precisar pegar o elemento dele no nosso caso pra usabilidade
+que a gente tem hoje a gente deixa é aqui no great pages né você tem isso aqui que são as linhas
+então a gente deixa todas essas linhas escondidas né e elas são mostradas isso aqui essa esse
+esteja do aqui ele faz a separação entre uma linha e outra e a gente deixa cada uma dessas
+linhas escondidas a não Bruno tem só um texto embaixo que eu quero que ele fique escondido
+então você vai precisar esconder só o texto o texto é um elemento linha é um elemento imagem
+é um elemento qual que é o barato se eu escondo a linha o sistema ele já esconde todos os
+elementos que estejam na linha não vou precisar pegar texto por texto ele já esconde tudo agora
+se eu quero só um elemento específico eu preciso pegar ele beleza a forma como eu vou te mostrar
+aqui é a gente fazendo a escondendo todos esses elementos beleza no nosso caso aqui como já
+expliquei 100% da página da parte preta aqui pra baixo ela fica escondida então a gente vai pegar
+os elementos de tudo isso daqui exceto o roda pé né o roda pé também ele é mostrado então ele
+a gente não precisa mas o restante a gente vai pegar beleza deixa eu ver são essas as
+observações importantes então aqui o bloco de código que a gente vai usar o espaçamento
+pro botão e você entender essa dinâmica dos códigos aqui agora sim a gente vai começar a pegar
+esses elementos pra deixar separado já a listinha de coisas que a gente vai usar pra aí sim a gente
+vai pegar o código copiar e colar aqui você não vai precisar fazer mais nada tá mas essa você
+entender o raciocínio por trás da coisa é a parte mais importante beleza vamos lá então vamos
+seguindo aqui pra nossa configuração valeu

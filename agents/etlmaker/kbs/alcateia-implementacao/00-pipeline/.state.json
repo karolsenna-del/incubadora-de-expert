@@ -1,0 +1,21 @@
+{
+  "kb_slug": "alcateia-implementacao",
+  "kb_name": "Alcateia Implementação - Vini Grevy",
+  "mode": "full",
+  "version": "3.0.0",
+  "current_phase": 2,
+  "phase_status": {
+    "phase_0": "completed",
+    "phase_1": "completed",
+    "phase_2": "pending",
+    "phase_3": "pending",
+    "phase_4": "pending"
+  },
+  "sources": [
+    {"type": "transcricoes", "count": 92, "path": "sources/transcricoes/"}
+  ],
+  "volumes_composed": 0,
+  "validation_score": 0,
+  "quality_gates_passed": [],
+  "started_at": "2026-05-26T13:00:00Z"
+}

@@ -10,6 +10,16 @@
 **Impacto:** [o que muda]
 -->
 
+## 28/05/2026 — "Expert em fracassar no digital" como pilar de posicionamento
+
+**Contexto:** Weekly review. Gancho levantado em 11/05 foi revisitado e elevado de ideia de conteudo para decisao de posicionamento.
+
+**Decisao:** Nao e so angulo de conteudo — e pilar central de posicionamento. O metodo da Karol nasceu dos seus fracassos. A autoridade nao vem dos acertos — vem de ter falhado, entendido o porque, e transformado em metodo.
+
+**Racional:** Conecta diretamente a tese ("Diploma e o que voce estudou. Metodo e o que voce viveu."), ao M0 do Expert360 ("Fracasso como Prova"), e a ferida→medicina do diagnostico de proposito (13 anos servico publico + 8 fracassos). A maioria dos players fala de sucesso. Karol fala de autoridade construida na derrota — diferencial raro.
+
+**Impacto:** Usar "expert em fracassar no digital" como angulo estruturante do posicionamento no Instagram. Permeia bio, conteudo e abertura dos modulos do curso.
+
 ## 14/05/2026 — Persona compradora vs persona de propósito: manter "sem lançamentos" na promessa
 
 **Contexto:** Durante o preenchimento da ferramenta de posicionamento, surgiu dúvida sobre manter "sem lançamentos" na promessa principal. A questão era se a persona conhece o termo — já que o propósito da Karol é libertar CLTs e servidores públicos que ainda não entraram no digital.

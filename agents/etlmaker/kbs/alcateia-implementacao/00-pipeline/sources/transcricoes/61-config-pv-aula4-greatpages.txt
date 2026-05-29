@@ -1,0 +1,101 @@
+Bora lá então, retomando aqui a nossa aula agora a gente vai separar quais são os códigos
+desses elementos que a gente vai precisar esconder ali na página que a gente quer que
+seja mostrado só no momento do pitch de vendas, tá?
+Que que a gente vai precisar?
+Nosso bom e velho amigo, bloquinho de texto aqui, tá bom?
+Inclusive eu tô usando um online aqui, eu uso bastante isso aqui no meu dia a dia, até
+é um dos que eu tenho aqui, o link dele é isso aqui ó, blankslate.io, ele abre uma
+página branca de texto aqui pra você poder trabalhar, online tá, sempre precisa ficar
+abrindo ali um bloco de texto, tem vários outros, coloca lá, página em branco, bloco
+de texto, procura ali no Google que você vai achar um monte dessas aplicações assim,
+isso é bem útil ali no dia a dia, vamos lá.
+Te voltando aqui então, o que a gente vai fazer?
+A gente vai começar a pegar os elementos das linhas no nosso caso aqui pra poder esconder,
+tá?
+E eu recomendo no seu caso, é certem raríssimas exceções que você também trabalha com esse
+escondimento, gostou?
+Ah, jovem, com essa camuflagem ali das linhas, como que a gente pega o código dessa linha
+aqui?
+Muito simples, ó.
+Para que quando eu clico aqui na linha, ó, eu não posso clicar num elemento, quando
+eu coloco o mouse aqui em cima da imagem, você repara que ele fica azulzinho, porque
+se eu clico aqui, ele vai me dar as opções dessa imagem, e eu não quero, eu quero a
+opção da linha, então eu tenho que clicar fora de tudo, se eu venho aqui e clico em
+cima do texto, ele me dá as opções do texto, e eu não quero, eu quero da linha, tá?
+Então vou clicar aqui nessa linha vermelha, para que ele abriu pra mim.
+Quando eu vou aqui nesse editar, ele vai abrir aqui do lado pra meu sistema abre, as configurações
+que eu tenho pra essa linha, no caso aqui é cor de fundo, né, que a gente tá usando,
+mas qualquer parte que é importante pra gente, é isso aqui, ó, esse ID CSS do bloco, é
+isso que a gente precisa, aí Bruno, o que que é esse nome ID CSS, ID é identificação,
+é identificador, CSS não é uma linguagem de programação, é uma linguagem de personalização
+que a gente usa nas páginas, então tudo que você vai fazer de, de, ah, mudar uma cor,
+uma página, mudar um texto, mudar o posicionamento de uns elementos, o que faz isso é uma, um,
+um, é porque não é uma linguagem, eu esqueci a fóbitis a mais se trem, mas é uma forma
+de estilizar a página que é o CSS, tá bom?
+Mas enfim, só tô explicando aqui pra você saber o que que é, o que que você vai precisar
+fazer?
+Só uma coisa, tem esse código aqui, aqui na frente você tá vendo que tem esses dois
+quadradinhos, isso aqui é pra você poder copiar ele, vai clicar aqui em cima, ele aparece
+ali, aqui é porque o meu monitor tá cortando, mas apareceu ali embaixo uma mensagemzinha
+do BlitFace falando, seleitor copiado pra área de transferência, copiou, na dúvida,
+clica mais de uma, eu tô clicando, é porque ele não faz nada mesmo, tá, aqui, e o que
+que você vai fazer?
+Você vai lá no seu bloco de texto e você vai colar esse elemento aqui, tá vendo?
+É esse código aqui, então quando eu vou falar pro sistema esconde essa linha vermelha,
+o que eu tenho que falar pra ele é esconde aqui, o red tag, B underline, 34, 73, um,
+três, um, é isso aqui que eu tenho que falar pra ele, tá?
+Peguei aqui já, vou pegar o próximo, ah Bruno, como que eu sei que é a diferença
+de uma linha pra outra, através do trasejado aqui, então trocou aqui o trasejado, cliquei
+fora, ah Bruno, mas você clicou aqui, ó, você tava aqui editando, você clicou aqui,
+ele ficou lá em cima, sim, é porque ele só fechou a barra de edição, é muito importante
+você ficar atento, isso aqui tem que ser mostrado aqui nessa linha agora, aqui eu não tô pegando,
+se eu for pegar aqui é da linha vermelha ainda, cliquei fora e cliquei aqui, viu o que
+ele aparece aqui, show, editar, mesma coisa, copiei, vim aqui, enter, cola, para que é
+muito parecido, só que ele muda aqui no finalzinho, esse aqui no caso é só o finalzinho
+aqui, esse aqui é 27, esse aqui é 29, então é isso que muda, abre um, mas é uma sequência,
+eu já vou pegar, não, abre um por um e copia, não tem nada de sequência aqui, tá?
+Vamos lá pro próximo, agora vou pegar essa aqui, essa linha aqui, onde eu tenho essas
+imagens, não clica na imagem, clica aqui fora, cliquei fora, editei, copiei, inclusive eu
+tô fazendo isso aqui junto com você, para você ver o processo real, como que ele é
+feito, repara que aqui eu já muda, um F, a minha umbrinha próxima essa é 30, aí você
+vai quebrar a cara aqui, porque não é assim que funciona não, vamos pro próximo, cliquei
+aqui nesse, editar, copiar, cuidado aqui para não fazer cagar, eu já repaga o F ali, coloca
+aqui, maravilha, vamos pro próximo, show, copia aqui, isso aqui é um processo chato
+e é chato, ah não Bruno, eu adoro fazer isso, é mentira sua, me motive por favor, não
+isso é chato para cacete, só que é um negócio que você vai fazer uma vez na página, inclusive
+bom eu ter falado isso, porque eu vou fazer uma observação com você, olha, copiei aqui
+agora, nessa parte pretinha, que é o seguinte, esses elementos, esses códigos, eles são
+únicos de cada página, então se você, ah Bruno, eu tava mexendo aqui nessa página,
+eu configurei ela, eu dupliquei essa página para fazer uma coisa ABC, o código de todos
+esses elementos vai mudar, tá, então você precisa se atentar para isso, eles são únicos
+por página, então deixa eu até trocar aqui, deixa eu até colocar aqui para você ver
+minha cara linda maravilhosa aqui, se atenta para isso, pelo amor de Deus, porque se você
+colocar os códigos, ah Bruno, configurei aqui, só dupliquei a página e parou de funcionar,
+se você duplicou a página, você vai precisar fazer esse processo de novo, de pegar elemento
+por elemento, código por código e trocar depois no código principal que a gente vai
+ver aqui para que ele fique certinho, porque senão ele não vai funcionar, porque ele vai
+tentar, aqui a linha vermelha, ela é, lá que a gente colocou, é o 6427, na outra página
+vai ser outro número, aí você vai estar falando para o sistema assim, vai lá e esconde
+aquele elemento 6427 para mim, o que que ele vai falar, isso não existe aqui, eu não
+estou vendo isso aqui, então não tem o que esconder, beleza, então muito importante, duplicou
+a página, você precisa fazer isso aqui de novo, é chato, é, ah Bruno, mas não tem
+uma forma de fazer isso, aí é automatizado, não tem, isso aqui é na mão mesmo, na munheca,
+ah Bruno, minha página é gigante, eu tenho 26 mil linhas aí, você vai precisar copiar
+o código de 26 mil linhas e colocar aqui, beleza, vamos lá, aqui, fez aqui, vamos pegar
+aqui a parte agora da garantia, ah Bruno, como que eu vou saber se eu peguei todos,
+eu, eu, eu sou um velho chato, então quando eu faço isso aqui, para eu evitar de ter
+retrabalho depois, eu prefiro voltar e conferir um por um, mas, ah Bruno, não quero conferir,
+conta quantos tem aqui e conta quantas linhas são, se você pegou, se tiver, beleza, tá,
+e na hora que você for acessar a página também, você vai saber, se algum elemento
+estiver sendo mostrado, é porque o código não está aqui, tá bom, também uma forma
+prática de você ver isso, e como eu falei, o roda pé para a gente aqui também, a gente
+não precisa pegar, porque ele também não vai ser escondido, tá, então, o que que nós
+fizemos aqui, a gente pegou os códigos de todas as linhas que a gente vai usar aqui,
+nessa, para poder fazer a nossa configuração, tá, então eu posso vir aqui para deixar
+organizadinho, aqui coloca aqui, ó, códigos, great, great pages, beleza, então é isso
+aqui que a gente precisa, por enquanto, e essa é a parte aqui do great page, repare
+que até agora, não te mostrei código mesmo, que a gente vai usar ali, não te mostrei
+nada no vtube, agora a gente vai para a parte onde eu vou te mostrar as informações do
+vtube que você vai precisar, beleza, aqui no great pages, porque a gente precisa por
+enquanto isso, depois tem alguns outros detalhes, mas por enquanto é isso, beleza, bora lá
+agora então pegar as informações do vtube.

@@ -1,0 +1,96 @@
+Bora lá galera, então vou gravar para vocês aqui como funciona o fluxo de
+validação do seguidor. Primeira etapa que você precisa entender, você vai ter que
+utilizar isso aqui para dar um bônus, uma isca digital e eu uso isso basicamente
+para a estratégia de mini treinamento, tá bom? Eu vou criar essa estrutura do zero
+da maneira mais simples possível para você e depois eu vou mostrar o meu fluxo.
+Por que o meu fluxo é mais complexo? Porque eu tenho alguns randomizadores que
+você vê como eu rodo muito tráfego, eu não gosto de mandar a mesma mensagem para a pessoa, tá bom?
+Então, bora lá, você vai abrir seu mini chat aqui, isso aqui nessa tela inicial,
+vai clicar aqui em automações, depois eu vim aqui em nova automação.
+Esse vídeo pode ficar longo, se der errado, vou mostrar da derrada, vou mostrar a consertando,
+porque a intenção aqui é para te mostrar um negócio bonitinho, te mostrar que pode
+dar errado durante o processo de configuração também, tá bom? Então vai abrir essa tela,
+modelos prontos, começar um fluxo do zero, beleza, abriu a tela aqui.
+O novo gatilho que eu vou colocar aqui, deixar um comentário de publicação, ou reels, tá bom?
+Eu coloco todas as publicações, o mini chat mudou aqui, todas as publicações, porque eu uso
+pro, continuar, eu vou colocar a palavra de teste para você testar esse fluxo depois lá, tá?
+Contei a palavra chave específico, vou colocar teste seguidor alcatéia, então é essa palavra
+chave, beleza? Continuar, que eu posso colocar, enviei o link para você.
+Vou voltar para a edição, salvar.
+Beleza? Continuar, então aqui tá configurado, tudo certinho.
+Continuar, qual que é a primeira, você vai apagar, qual que é a primeira coisa que você vai fazer aqui?
+Ó, vem aqui, seleciona aqui, lixo, confirmar. O que que é isso aqui? É um processo de validação,
+o que é o próximo passo? Então você vai colocar aqui, clicar com este botão, selecionar aqui vai colocar
+ações, ações vai colocar aqui, configurar um, deixa eu procurar aqui.
+Definir opt-in do Instagram, daqui você vai colocar uma mensagem, a mensagem que eu vou
+colocar aqui, essa aqui. E aí, vou te enviar o link do meu entrenamento, já está seguindo
+o perfil e vai ter um botão que é o que? Já te sigo, vini, concluído, tá bom? Então, beleza, após
+isso daqui, o que que vai acontecer? Você vai colocar o próximo passo para a pessoa que
+clicou nesse botão, uma condição. Então, clicou aqui no botãozinho, aqui colocou, condição. Qual
+que é a condição? Você vai adicionar a condição. Aqui dentro de condição, você vai digitar aqui
+a com, ó, acompanhar negócios no Instagram. O que que é esse acompanhar negócio do Instagram?
+Ele só vai liberar o próximo etapa do Meninchet, é a pessoa de seguir no Instagram. Então,
+clicou aqui, ó, acompanhar negócios no Instagram. Se a pessoa te acompanha o negócio no Instagram,
+você vai dar fluxo do meu entrenamento, vai continuar com fluxo. Qual que é o fluxo do
+meu entrenamento normal? Só colocar aqui, ó, link liberado, link liberado, eu dou mais um atraso
+de uns três segundinhos, coloco mais um texto aqui embaixo, coloco aqui, ó, esse vídeo não fica
+disponível por mais uma vez. O próximo passo vem aqui, coloco atraso inteligente, uns 15 minutos
+depois eu faço o seguinte, ó, minutos, venho aqui e coloco mais um texto. Deu certo o vídeo?
+Então, copie, colo o link no navegador. Depois disso aqui, eu venho aqui, coloco mais um atraso
+inteligente, esse atraso inteligente aqui eu coloco normalmente por volta de 23 horas depois.
+E aqui eu posso, normalmente o que eu estou fazendo? Eu coloco um randomizador aqui, eu coloco,
+ó, coloco três ou quatro, gravo quatro áudios aqui ou coloco quatro mensagens diferentes,
+que eu venho pro Instagram e falo. E aí, é isso que você procura hoje? Outra mensagem aqui.
+O que achou do seu modelo, do meu modelo de negócio?
+Outra opção aqui, me conte um pouco mais sobre você e o que você procura para ver se consigo
+te ajudar. E o meu entrenamento, normalmente tem um botãozinho que vai lá para o WhatsApp,
+eu vou colocar o último aqui, oi, deixa isso, foi errado aqui. Venho aqui, aqui, Instagram, pode
+colocar. E aí, deu certo, me chamar logo o WhatsApp. Isso que você pode fazer também,
+com o texto, com o áudio, tá? Eu faço com o áudio isso daqui. Lembrando que esse processo aqui,
+para você que já tem um conhecimento mais avançado, você vai ficar quebrando a cabeça.
+Para você não quebrar a cabeça, vai lá e faz o básico bem feito que funciona bem.
+O que que aconteceu? O que que está feito nesse fluxo aqui? A pessoa deixou um comentário,
+ela vai apertar no botão, já te sigo vini. Ela vai ter uma condição. Se a pessoa já me segue
+no Instagram, comparando a negócio na verdadeira, ele vai seguir o fluxo normal, pode ser o seu fluxo
+de infoproducto, de mentoria, qualquer fluxo. Se por um acaso ela não te segue, você vai fazer
+vai clicar aqui, colocar um Instagram e vai colocar essa mensagem que é que eu
+coloco aqui, deixa eu pegar aqui na outra tela.
+Olha, essa mensagem aqui. O Instagram me diz que você ainda não me segue,
+confirme se está me seguindo e aperte o botão para, deixa eu ter arrumado aqui,
+tentar novamente. Aqui se vai colocar aqui um botãozinho de
+tentar novamente.
+E a pessoa clicando no botão, ela vai voltar para essa condição. Vou repetir o que eu fiz aqui agora.
+Clicando no botão, ela vai fazer o que? Medir a condição da pessoa.
+Então, o que vai acontecer aqui nesse processo? A pessoa vai entrar em looping.
+Então, vamos lá, ela veio aqui e pediu lá, comentou para ter acesso ao meu
+entrenamento, colocou já te sigo. Se ela não te segue, ela vai vir para cá.
+Daqui, ela volta para, ela vai começar a te seguir e colocar tentar novamente. Se ela
+tentou novamente e não te segue, ele vai começar a repetir essa mensagem um milhão de
+vezes para o pessoa. Até ela começar a te seguir, e ela começou a te seguir apertando
+tentar novamente, o Instagram vai checar que ela te segue, e ela vai liberar esse segundo
+fluxo aqui. Tá bom? Para que isso aconteça? Leandro, prefiro Instagram.
+Então, esse é o processo super simples para você colocar e fazer a verificação se a
+pessoa te segue ou não. Beleza? Eu vou mostrar para você agora o meu fluxo. Eu não quero que você
+desespere. Por que? Porque o meu fluxo, como eu tenho muito tráfego, ele é muito diferente
+desse. Muito diferente por que? Porque eu coloco vários randomizadores. O que é um randomizador?
+Eu mando mensagens aleatórias para o pessoal receber sempre a mesma mensagem. Porque meu volume
+de tráfego é muito maior. Então, esse aqui é o meu fluxo. Como que funciona o meu fluxo?
+Ele vem aqui e comenta, tá? E aqui eu já tenho três opções de mensagem diferente.
+Mensagem 1, mensagem 2, mensagem 3. Por que? Porque essa pessoa comentou,
+mesmo poxa, mesmo palavra chave, eu quero distribuir coisas diferentes para essa pessoa.
+Depois disso, o que eu faço? Eu venho aqui para o processo do OPTIM. A pessoa não me segue
+o que que acontece aqui. Eu tenho três mensagens diferentes. Uma mensagem, duas mensagens, três
+mensagens. Então, ela vai voltar para cá. A partir do momento que ela já me segue, eu vou distribuir.
+Eu tenho hoje quatro mini treinamentos diferentes. Por isso, eu tenho mais um randomizador aqui.
+Por último, eu consolido isso aqui dentro de um processo aqui que segue o fluxo. E aqui,
+no final, eu vou mostrar para vocês o que, em vez de você utilizar as quatro mensagens, eu utilizo
+quatro áudios. Tenho uma mensagem e tenho os áudios também aqui para me intercalar,
+tentar humanizar esse chat, tá bom? Então, esse aqui é o meu fluxo, mas o que você vai ter que
+utilizar é isso aqui. Você pode colocar randomizador para variar mensagens dentro desse processo.
+Mas a parte mais importante aqui desse fluxo é até essa condição. A pessoa tem um verdinho,
+ela segue o fluxo normal que eu já ensino no meu treinamento, senão, puxa para cá e daqui você
+vai ligar que ela vai ficar em looping até ela começar a desseguir, para começar a ter mais,
+é, para começar até acesso a que você está oferecendo para ela. Beleza? Isso aumenta muito a
+retenção de seguidores e esse fluxo está pronto. Eu vou ver se eu consigo deixar aqui embaixo também.
+É o link desse modelo aqui para você, para que você consiga utilizar isso no superfílio
+de Instagram. Tamo junto e até a próxima.

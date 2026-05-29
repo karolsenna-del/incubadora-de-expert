@@ -1,0 +1,35 @@
+Fala meu povo! Seja muito bem-vindo, muito bem-vinda a mais essa aula aqui da Alcatéia. Meu nome é
+Bruno Vilela, eu sou o diretor de tecnologia aqui do Vim e Grevy, aqui da Alcatéia. Eu sou o nerd que
+está por trás da estrutura que você vê acontecendo aqui e nessa aula, nessa sequência de aulas aqui,
+vai depender do tamanho que elas vão ficar, eu vou te mostrar uma solução que a gente desenvolveu aqui
+internamente para poder fazer a integração entre o VTURB e o GREAT PAGES. O VTURB é a plataforma que
+a gente usa para poder hospedar todas as VSLs que são usadas aqui pelo VINI e o GREAT PAGES é
+onde a gente faz a construção das páginas, das landing pages, das páginas de vendas, o que
+provavelmente você já está familiarizado aí de alguma forma. Ah Bruno, mas por que essas soluções?
+Porque hoje são as soluções que a gente usa internamente e que elas atendem de forma muito
+otimizada aquilo que a gente precisa. O VTURB, pelo fato de ser uma plataforma que é 100%
+focada para VSLs, para vídeo de vendas, então ela é muito otimizada para isso. E o GREAT PAGES
+pela simplicidade, pela velocidade de carregamento das páginas e vocês sabem que a gente sempre
+usa aquilo que a gente está testando e usando internamente. Então são esses recursos que a
+gente vai trabalhar aqui hoje. O que você vai precisar para poder fazer essa integração? Eu sei
+que são coisas relativamente óbvias, mas é o que você vai precisar de ter sua conta no VTURB
+criado. Caso você não tenha ainda, a gente vai deixar um link aqui embaixo para você fazer a
+criação da sua conta. Você vai precisar de ter obviamente o seu vídeo de vendas lá dentro ou
+o vídeo de vendas lá dentro. Você também vai precisar da sua conta do GREAT PAGES também já com
+a sua página de vendas. Obviamente, a gente vai fazer a integração de uma página com o VTURB
+e você vai precisar da página do vídeo. Mas é só que você precisa, você não vai precisar nada mais
+além do que isso. O restante eu vou te mostrando aqui conforme a gente for seguindo. A gente vai
+precisar de alguns códigos simples aqui para poder fazer essa integração. Não se assusta, já vou
+precisar. Não morde, não é nem um bicho de sete cabeças e todo o material que você precisar vai
+estar aqui em anexo na aula também para você poder baixar, para você poder usar sem problemas nenhum.
+Beleza? Então de imediato já providencie isso. Caso você não tenha as suas contas criadas ainda,
+nem segue. Pausa aqui essa aula, cria a sua conta no VTURB, coloca lá o seu vídeo de vendas,
+configurado direitinho, cria sua conta no GREAT PAGES, coloca ali a sua página de vendas,
+tem algum template, alguma coisa que você está usando aqui da alcatesse, pode usar ela sem
+problema nenhum e aí você dá sequência aqui ao nosso encontro. Beleza? Por quê? Porque essa
+estrutura, além dessa integração, ela ficar perfeita ali da forma como a gente fez até agora,
+ela vai te dar um recurso muito interessante, que é justamente você ter a ação de disponibilizar
+o botão de compra para pessoa do vídeo vinculado ao tempo que a pessoa está assistindo o vídeo de
+vendas. Então por isso que essas duas plataformas precisam estar configuradas ali, que elas vão
+conversar entre si, mas eu vou te explicar mais aqui ao longo das próximas aulas. Beleza? Então caso
+você ainda não tenha as suas contas criadas lá, vai lá cria depois você volta aqui. Beleza? Valeu!

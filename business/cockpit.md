@@ -4,8 +4,8 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** {data}
-**Proximo review:** {data}
+**Ultima atualizacao:** 28/05/2026
+**Proximo review:** 04/06/2026
 
 ---
 
@@ -13,9 +13,7 @@
 
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
-| 1 | | | | | | |
-| 2 | | | | | | |
-| 3 | | | | | | |
+| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Estruturar M3 — Vendas Secretas via Course Creator | Karol | Em construcao — M0/M1/M2 prontos | [tracker](campanhas/expert360-curso/tracker.md) |
 
 ---
 
@@ -23,7 +21,7 @@
 
 | # | Projeto | Objetivo | Depende de | Prioridade |
 |---|---------|----------|------------|------------|
-| 1 | | | | |
+| 1 | ETL Alcateia Implementacao | Processar KB para uso futuro nos agentes | Expert360 liberar tempo | Background |
 
 ---
 
@@ -49,7 +47,7 @@
 
 | Operacao | Responsavel | Status | Onde acompanhar |
 |----------|-------------|--------|-----------------|
-| | | | |
+| Instagram / Conteudo | Karol | Ativa | contexto-dinamico.md — prioridades do momento |
 
 ---
 
@@ -57,7 +55,7 @@
 
 | Projeto | Concluido em | Resultado |
 |---------|-------------|-----------|
-| | | |
+| Ferramenta de Produto Arcane | 20/05/2026 | Expert360 totalmente definido — PRD v1.2 aprovado |
 
 ---
 

@@ -1,0 +1,119 @@
+Vamos lá então, meu povo, dando continuidade aqui, a gente vai fazer a adaptação agora
+do código AB, a gente falei que tem algumas diferenças ali que a gente vai precisar.
+Então aqui eu tenho as informações que eu peguei, lembrando, eu só coloquei um elemento
+do Great Pays aqui só por questão de agilidade, mas eu pego todos os elementos da página,
+tenho aqui os elementos do vídeo A, tenho aqui os elementos do vídeo B, tem mais uma
+informação que eu vou precisar pegar ali na VTURB, que ela vai ser importante pra gente,
+tá? É o seguinte, lembra que vim aqui, estou aqui no teste AB naquele que a gente criou,
+tá? E aí eu vou vim aqui nesse no embed e eu vou copiar esse código aqui, tá? Lembra que na
+constração anterior eu copiei esse código de embed do vídeo, lá do vídeo, aqui eu tenho que
+copiar esse código aqui do embed, tá? Mas não tem, mas é só pra pra pra você entender aqui o
+funcionamento da parada, tá? Então eu vou copiar aqui. Diferente da outra vez, você não vai
+pegar esse código inteiro e colar ele lá no nosso código, por quê? Lembra que eu te falei no
+início aqui dessa nossa série de aulas que tem algumas funcionalidades do Great Pays que elas
+não funcionam bem com algumas plataformas? Essa é uma delas. Se você entrar em contato hoje na data
+da gravação desse vídeo, você entrar em contato com o suporte do VTURB, ele vai te falar que o teste
+não funciona no Great Pays. E é isso, inativamente ele não funciona mesmo. Esse código que eu
+desenvolvi que ele faz justamente essa funcionalidade trabalhar ali no Great Pays. Se você usa, por
+exemplo, o elemento, né? Você usa ali o WordPress, a lógica é outra. Lembra que tudo que eu tô te
+mostrando aqui vale para Great Pays mais VTURB, só, tá? O cenário ali seria outro. Mas aqui a gente vai
+pegar esse código. Aqui nesse código a gente só vai precisar de uma informaçãozinha, que a gente
+conseguiria pegar ela de outro lugar, mas aqui pra gente ela fica assim. Ó, copiei aqui o código,
+vou lá naquele editor que a gente tá usando, vou apagar tudo aqui, que esse aqui é o código anterior,
+que a gente tinha trabalhado. Vou colar aqui esse código que eu peguei aqui inteiro da Lada VTURB.
+Ele vem aqui colado aqui nessa linha, né? Todo aqui ele não separa, mas não tem problema. O que
+que a gente vai precisar aqui? Qual é a informação que a gente precisa pegar aqui dentro desse código?
+A gente precisa pegar, ó, cliquei sem querer, a gente precisa pegar o número de identificação
+da sua conta. Calma, lembra que eu te falei que cada vídeo tem um código de identificação,
+que é aqui esse númerozão aqui, os elementos lá, a sua conta dentro do VTURB também tem um
+código único de identificação. E é isso que a gente vai precisar pegar. Vou vim aqui, vou apagar
+esses elementos. Onde que tá esse código? Vou apagar isso tudo que tá aqui. Por quê? Você repara que
+dentro desse código tem esse site aqui, httpscripts.convertainete parará parará parará essa
+doideira toda aqui? É isso aqui que a gente precisa, tá? Aqui eu só copiei e colei lá, ele tá aqui, ó,
+aqui ó, https, era scripts, convert, piriripiriripororó, é só isso aqui que a gente vai precisar. Então
+eu vou pegar o resto do código ali, vou vim aqui, vou apagar tudo que tiver antes aqui pra gente,
+porque a informação que a gente precisa tá ali, ó, apaguei, ficou só esse site. Qual que é o
+código da sua conta? Ó, aquele te dá essa informação, esse aqui é de controle interno do
+VTURB. Então esse código aqui, esse F parará o seu, da sua conta vai ser diferente do que esse
+aqui. Esse aqui é o código de identificação da sua conta e nem a de Abron aí tá a código da
+conta do VIN. Você não consegue fazer nada com isso, tá? Você não vai precisar fazer absolutamente
+nada. Isso aqui é o código da conta e aqui eu repara que ele tem barra ab teste barra
+em um outro código. Esse outro código aqui é o código interno do teste ab na VTURB.
+Repara que aqui eu tenho que ab barra e tem esse códigozão aqui, isso aqui é o código do teste
+ab, né? Só que pra gente ele não faz sentido pra forma como a gente vai trabalhar aqui. Então
+o que que você vai fazer? Você pode apagar isso aqui tudo, ó, vou apagar tudo aqui, eu só preciso
+pegar esse código aqui da conta, barra sem barra, é só isso aqui que eu preciso. E você vai lá
+no seu boquinho de notas, aqui na VTURB e cola aqui. Então eu tenho aqui o código da minha conta,
+eu tenho aqui o vídeo A, vídeo B e todas as informações. Pronto, eu já tenho tudo que eu
+preciso pra fazer a adaptação do meu código e colocar lá na página do Great Pages. Vamos lá,
+ó. Voltamos pra matrix, né? Voltamos aqui pra nossa matrix. Abron não é o mesmo código? Não é,
+ele tem algumas diferenças aqui que são sutis, mas ele tem, ele tem diferenças sim, tá? O que que
+você vai, coisas que você vai precisar alterar são muito parecidas com as coisas que você alterou
+no outro código, tá? Eu tenho que, por exemplo, os elementos, inclusive vou até alterar já,
+vou até alterar já. Como aqui a gente, eu vou usar um só pra poder te mostrar, vou copiar aqui
+o código desse elemento, se fosse, você ia fazer a alteração exatamente do mesmo jeito que a
+gente fez o outro, muda nada, muda nada, tá? Eu vim aqui, só vou apagar todos esses aqui,
+porque nós vamos usar um só, beleza? Eu vou vim aqui e vou colocar esse que a gente vai usar aqui.
+Pronto, lembra que eu tenho que fazer a alteração lá embaixo também no amarelinho, né? No caso aqui
+ele fica aparecendo de forma amarela aqui, nesse editor que eu tô usando, né? Vou apagar todos aqui,
+porque eu tô usando um só, lembra disso do porquê que eu tô apagando e vou colar ele aqui, tá? Beleza?
+Então, essa é a primeira alteração, fiz a alteração aqui dos elementos,
+elementos que você quer esconder, já coloquei aqui os elementos que eu quero esconder, coloquei
+tanto aqui, como coloquei aqui embaixo também, tá? Aqui embaixo. Daqui pra baixo você não precisa
+mexer em nada, tá? Você não vai precisar mexer em nada daqui pra baixo, isso aqui tá de boa, tá?
+Inclusive, essa aqui é até a versão nova desse código pra ela ficou ainda mais simples pra você.
+Então, aqui você não vai precisar fazer nada. Qual que são as próximas alterações que você vai
+precisar fazer? Lembra que lá no primeiro código que ele tá até aqui, a gente não colocou esse
+blocão de código aqui em cima, tal, que a gente copiou direto da vTurbe? Aqui a coisa é um pouquinho
+importante. Eu não tenho dois vídeos que eu tô usando, então eu vou precisar inserir aqui nesse
+código e falar pra ele quais são esses dois vídeos que eu tô usando, e que é muito simples,
+vai fazendo em ordem aqui, colocou os elementos, beleza, aqui você não mexe em nada e eu tenho
+aqui nessa parte de configuração, essa parte de configuração ela tá aqui porque é justamente,
+são justamente as adaptações que você vai precisar fazer, tá? Aqui eu tenho variantes,
+A e B. O que que eu vou colocar aqui? Eu vou colocar aqui o código de identificação do vídeo A
+e eu vou colocar aqui o tempo exato do pitch onde eu quero que os elementos sejam mostrados ali
+do vídeo A. Simples assim, vamos lá então, vamos copiar aqui, vou lá no vídeo A, vou copiar o
+código dele, copiei, vim aqui, colei, pronto. O tempo, o delay aqui do vídeo A, qual é? 210,
+vou vim aqui, copiei, no caso aqui vai ser o mesmo porque esse código que era dos vídeos que a
+gente já estava usando, mas vem aqui ó, apago, colo aqui, 210, maravilha, vou fazer a mesma coisa
+com o vídeo B, vou vim aqui no vídeo B, vou copiar o código aqui do vídeo B, vim aqui ó,
+pra não confundir, apaga e cola, entre aspas simples, tá aqui ó, a ID do vídeo B, e aqui
+no caso delei, vou lá, vou copiar em segundos só o número, tá, e vou vim aqui de novo, por um
+acaso é o mesmo, mas eu apago e colo aqui, pronto, fiz a configuração dos vídeos, agora eu tenho
+o vídeo A com o tempo do vídeo A e o vídeo B com o vídeo do tempo B, ah Bruno, mas e se o tempo
+dos dois vídeos for o mesmo, você coloca o mesmo tempo, os dois, simples assim, mas tem
+colocar as duas configurações, show, isso aqui foi, próxima configuração que a gente precisa fazer
+é isso aqui, ID da conta, tá, aqui isso aqui é justamente o código de identificação aqui da
+que a gente copiou, deve ver tube, vou vim aqui, vou copiar, copiei esse código, vou vim aqui no seu
+caso, né, no caso quando você for usar aqui não vai ter nada aqui, mas apaga e coloquei, pronto,
+aqui embaixo são os elementos que eu quero esconder né, que estão aqui, aquela configuração
+que a gente já fez, não preciso colocar nada aqui pra baixo, não precisa alterar nada, não
+preciso mexer em nada, não preciso fazer nada, com nada, com nada, com de jeito, com nada,
+qualquer coisinha que você mexer aqui, o vídeo não vai, o código não vai funcionar, alterou os
+elementos, colocou as identificações aqui do vídeo e colocou aqui o número de identificação da
+conta, já tá com tudo configurado pra ele funcionar perfeitamente, lembrando que o funcionamento
+desse código é, ele vai, a pessoa chegou na página, ele vai jogar 50% pro vídeo A, 50% pro
+vídeo B, então em 50% é uma moeda, isso aqui é uma moeda, tá, é isso aqui que ele tá fazendo,
+beleza? Então, código tá configurado, o que que eu vou fazer? Copio o código,
+vou lá na minha página do Great Pages, edito, no caso aqui tá assim, porque esse vídeo é um vídeo
+verticalizado, tá, vocês viram que já é um vídeo verticalizado, vou apagar isso que tá aqui dentro
+e colei o vídeo, exatamente do jeito que tá aqui, só copiei, colei, pronto, importante, pronto,
+lembra do código de carregamento do vídeo? Mesma coisa, vou vir aqui, vou copiar ele, isso aqui é
+importante sim, no caso do VTURB, vou vir aqui nos códigos, já expliquei isso daqui, vou apagar isso
+aqui, adicionar código, funcionamento, colo o código aqui, VTURB, otimizar velocidade do vídeo,
+salvei, fechei aqui e vou publicar, no nosso caso, como a gente tá fazendo o nosso esquema de
+testagem, o que que eu vou fazer aqui? Eu vou colocar, eu já tenho tempo salvo ali dos vídeos, eu vou
+colocar aqui 10 segundos pra ser rapidinho pra gente poder testar, tá, vou colocar o mesmo tempo aqui
+dos dois, só por uma questão de otimização pra gente, lembrando que eu só coloquei um elemento
+escondido, então aqui na página única coisa que vai estar escondida é essa linha aqui, clique no
+botão acima, parará, é só isso aqui, o resto, tudo vai estar mostrado, já te expliquei aqui os
+motivos, vou explicar aqui, vou publicar a página, vou colocar aqui, ingrevi, aí vou colocar, não
+lembro como é que eu coloquei o nome da outra, não lembro agora, mas vou colocar aqui a aula,
+alcatéia, vtube, vídeo a ver, tá, vai estar aqui dessa forma pra gente, vou dar um aqui um
+publicar, e foi, e tá publicado, só que ainda tem um detalhe, lembra que lá no vtube eu só fui,
+só peguei as informações e coloquei aqui pra gente fazer a configuração do código, só que eu não
+fiz os ajustes dos botões lá dentro do vtube, e lá tem alguns detalhezinhos que eles vão ser
+importantes pra eu poder explicar aqui, beleza, deixa eu, só vou pegar aqui o link da página, vou
+pegar aqui o link da página, só vou salvar, a gente ainda não vai testar ele, que ainda não vai
+vou salvar ele aqui embaixo, beleza, e agora vamos lá, porque agora a gente vai voltar lá pra
+o vtube, vamos lá, valeu!

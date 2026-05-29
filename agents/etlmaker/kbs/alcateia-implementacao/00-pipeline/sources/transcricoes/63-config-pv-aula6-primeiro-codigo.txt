@@ -1,0 +1,248 @@
+Vamos lá, então, meu povo, agora a gente vai chegar, a gente está quase nos finalmentes aqui,
+onde agora a gente vai entender e a gente vai configurar o código do nosso vídeo,
+que é este camaradinha aqui.
+Meu Deus, Bruno! A Matrix! Estou vendo a Matrix! Eu não sou programador, eu sou de humanas,
+eu não entendo nada do que você está me mostrando aí nesse trem, pelo amor de Deus.
+Calma, jovem, vai dar tudo certo.
+Primeiro que você não precisa entender absolutamente nada de programação para fazer adaptação aqui nesse código.
+Justamente porque quando eu desenvolvi esse código aqui, eu fiz pensando em você,
+eu fiz pensando para que ele fosse simples e que ele fosse usual.
+Então aqui são pouquíssimas coisas que você vai precisar alterar para fazer o seu código funcionar.
+Então fica absolutamente tranquilo em relação a isso, fica sossegado,
+tanto que eu não vou ficar te explicando tintim por tintim que desse código.
+Isso aqui é um código JavaScript, JavaScript é o nome da linguagem de programação.
+Para quem conhece, se você conhece JavaScript, conhece um pouquinho,
+ele não é um código tão difícil, ele é um código relativamente simples aqui.
+Mas aquele negócio, né? Isso é óbvio, é óbvio para quem sabe, é simples para quem sabe,
+mas você não precisa se preocupar com isso.
+Eu não vou ficar entrando nos pormenores aqui desse código,
+eu vou te explicar aquilo que você precisa saber.
+Ah, Bruno, mas eu queria entender os detalhes, o que que cada coisinha dessa aqui está fazendo e tal.
+Pega ele, copia, joga no manhã, joga no DM&I, no GPT da vida que você usa, pede para ele.
+Eu não sei programação, me explica de forma simples o que que esse código está fazendo,
+ele vai te explicar belezinha, melhor do que eu.
+Então é melhor a gente não entrar aqui nesses detalhes, eu vou te explicar aqui
+o que é que você vai precisar alterar e o que que você precisa fazer.
+Ah, Bruno, mas por que que esse negócio está aparecendo colorido assim?
+Ele está dessa forma bonita e desse jeito que você está usando.
+Porque eu estou usando aqui um software que é um software para a edição de código.
+Porque quando a gente vai trabalhar com esse tipo de arquivo, é interessante que você use algum tipo de programa de edição de código,
+o que não é nada demais, porque ele dá esse real-se nas cores e é muito melhor, vamos lá,
+você vai ser ad concordar comigo, que é muito melhor.
+Eu vei isso aqui visualmente, que é bonito, eu sei onde estão as coisas, tem esse coloridinho.
+É muito melhor editar assim do que eu tentar editar a mongonga desse código assim, é muito melhor.
+Então eu coloquei aqui de forma proposital, ah, Bruno, mas eu não tenho um programa de edição de código com você, seu bobo, não precisa.
+Você vai no Google e vai procurar aqui o editor, tanto é que eu pesquisei aqui ao vivo com você, editor HTML Online, tá?
+Só isso, você pode abrir aqui, deixa eu ver, acho que esse primeiro aqui já vai funcionar para a gente.
+Já vai funcionar, esse aqui já funciona bem, mas eu vou te recomendar um, que eu gosto de usar ele online aqui,
+que ele dá um pouquinho mais de facilidade para a gente, que inclusive ele nem está aparecendo aqui.
+Não tem problema não, deixa eu ver, esse aqui, real-time, também não, esse aqui ele não realça as cores.
+Mas você entra aqui, dá uma fuçada, tá?
+O importante é a gente ter essa informação, esse aqui já vai dar, essa informação visual, tá?
+O que que é isso aqui? É uma editação de bloco aqui?
+Eu vou vir aqui e vou apagar esse texto que está aqui, colei aqui, ó, ele vai mostrar para mim os elementos destacados, é só para isso.
+Tem nenhum outro motivo, ah, Bruno, mas eu entendi já a parada, eu entendi, tanto que isso aqui, eu vou até tirar aqui.
+Eu só quero as cores, é só isso, ah, Bruno, entendi como é que eu vou fazer no bloco de texto, sem problema, tá?
+Vai lá, jovem, se joga aí na vida que dá tudo certo, beleza?
+Mas aqui, ó, você só precisa disso aqui para poder ter essas cores de real-time, tá?
+Eu vou te mostrar explicando aqui pelo meu, porque para mim fica mais fácil, vou até dar um zoom aqui para facilitar aqui na hora de eu te mostrar.
+Nesse código, como eu disse, são poucas as coisas que você vai precisar fazer.
+Em resumo, o que é que esse código está fazendo?
+Ele pega todos aqueles elementos que a gente tem lá na página, que a gente selecionou os códigos lá do Great Pages,
+ele deixa todos eles escondidos até o tempo que a gente definir,
+e ele só vai mostrar esses elementos na hora que a pessoa chegar naquele momento do vídeo, é isso que ele faz, tá?
+Ele sincroniza o vídeo com os elementos da página e mostra tudo ali no momento que a gente quer, tá?
+O que que você vai precisar alterar aqui nesse código?
+Muito simples, ó, essa parte aqui de cima, essa parte aqui de cima, vamos voltá-la no V-Turbe?
+Deixa eu voltar lá.
+Quando a gente volta aqui no V-Turbe, você lembra que eu te falei desses códigos aqui que você ia precisar,
+desses códigos aqui de embed, né, que estava aqui, esse JavaScript?
+Você vai clicar aqui e você vai copiar ele, porque agora é o momento que a gente vai usar esse código aqui de verdade, tá?
+Você vai copiar aqui essa parte aqui do código, que é isso aqui, ó.
+Deixa eu dar um monte de Enter aqui, pra eu esconder essa parte aqui de baixo, pra eu te mostrar.
+Ó, eu copiei o código lá da V-Turbe e eu vou colar ele aqui embaixo.
+Ele vem desse jeito aqui, mas você repara que ele é a mesma coisa, só que o de cima ali, ele tá formatado, ele tá bonitinho.
+Se eu venho aqui e eu vou dar aqui um Enter, ele vai colocar aqui, esse, ele tá aqui no Script.
+Ó, eu vou fazer ele ficar igual de cima ali, só pra ficar fácil aqui pro seu entendimento, mas isso aqui é só pra eu te explicar, tá?
+Isso aqui relaxa em relação a isso, tá?
+E aqui ele tem uma diferença aqui, o appendixade tá embaixo, não vou ficar me prendendo isso aqui, não.
+O importante é só você entender o que é essa parada, e aqui embaixo o Script que tá aqui embaixo.
+Ó, ficou igual de cima lá, tá?
+Então é a mesma coisa, ele tá copiado aqui, porque ele vai trazer aqui os elementos que são nativos lá do Great Pages, do V-Turbe, perdão, tá?
+Ele vai trazer aqui o código interno lá de identificação do vídeo, ele já traz aqui, isso aqui é o código do vídeo.
+Aqui, pra quem conhece um pouquinho de formatação, isso aqui é formatação do vídeo, de largura, de altura, que aí você vai colocar da forma como você quiser.
+Aqui são dois elementos que você vai precisar mexer, aqui é da margem dele do vídeo e aqui é da largura dele.
+Você pode colocar, deixar no padrão do jeito que ele vem que ele vai funcionar.
+Você não precisa mexer nisso daqui a não ser que você queira.
+Eu tô te falando que tem a opção, mas eu não recomendo que você mexe, que você altere.
+Você pode copiar ele exatamente do jeito que ele veio lá do V-Turbe, tá?
+Você pode copiar ele do jeito que veio lá e você pode colar aqui que ele vai funcionar, que é uma beleza.
+Os elementos estão todos aqui certinhos, da mesma forma como a gente tá trabalhando ali,
+então você pode ficar sossegado aqui em relação a isso, beleza?
+Vamos só copiar ele aqui, deixa eu pegar ele aqui.
+Eu vou fazer o seguinte, até pra não embanar aqui, eu vou copiar, opa, fiz cagada aqui.
+Deixa eu copiar ele exatamente do jeito que ele veio lá da V-Turbe e eu vou colar aqui nesse bloquinho de texto aqui como se a gente tivesse editando por aqui, tá?
+Eu vou pegar ele e vou colar aqui.
+Eu vou colar aqui, maravilho, primeira alteração que eu fiz, show de bola.
+Qual que é a próxima alteração que eu preciso fazer?
+Deixa eu voltar o texto aqui todo pra cima, então o que que eu fiz aqui?
+Lembra que eu te falei que era copiar e colar?
+Eu copiei esse códigozinho aqui do V-Turbe, eu vim aqui, apaguei essa parte inicial aqui, até esse barra script aqui e colei.
+Foi isso que eu fiz, tá?
+Foi isso que eu fiz.
+Agora, qual que é a próxima parte que a gente vai precisar fazer?
+E aqui você precisa ter muita atenção, muita atenção.
+Aqui, tá vendo essa lista de elementos aqui que tá em verdinho?
+Isso tudo aqui que tá em verdinho.
+Isso aqui são justamente os códigos dos elementos lá da página do V-Turbe que a gente, do Great Pages que a gente copiou.
+Isso aqui são os códigos de uma página antiga.
+Eu preciso vir aqui agora e substituir todos esses códigos aqui por, né, pelos números de identificação do Great Pages aqui que a gente copiou.
+Isso aqui é muito simples de fazer, tá?
+Eles aparecem só em dois lugares desse código.
+Aqui e aqui embaixo são, é a mesma coisa.
+Eles estão em amarelinho, aqui tem uma diferenças que eu vou te mostrar depois, tá?
+Eles estão aqui, mas é o mesmo esquema.
+Então você precisa substituir nesses dois lugares.
+Aqui pra baixo você não precisa mexer em absolutamente nada, nada, nada, nada.
+Você vai precisar alterar só esses elementos aqui do código, tá?
+E uma outra coisa que a gente vai chegar daqui a pouco.
+Como que você faz, ah Bruno, mas é muita coisa, é muito código?
+Então você tem uma forma de fazer isso aqui, que é o seguinte, você pode copiar esse código inteiro aqui.
+Você pode abrir um chat e pt, eu não vou fazer isso agora, tá?
+Você vai lá no chat e pt, cola ele lá.
+Ah, chat e pt, eu vou pedir que você faça uma coisa aqui com esse código.
+Você pega aqui os elementos do Great Pages, cola lá no prompt que você tá mandando lá pra ir,
+aí fala, eu quero que você pega os elementos que estão aqui nesse código
+e troca por esses novos que eu te enviei aqui agora, que ele vai alterar pra você.
+A minha recomendação de início é pra que pelo menos uma vez você faça isso aqui
+da forma como eu vou te mostrar aqui agora na mão, pra que você entenda o processo acontecendo.
+Porque sim, em algum momento isso aqui parar de funcionar, pelo menos você entende onde que tá.
+Fala cara, não, aqui é porque o código que era pra tá aqui, o código de identificação do elemento do Great Pages,
+não tá, por isso que o negócio não tá funcionando, é basicamente isso.
+E até você explicar isso pro GPT, ele não sabe como que é a sua página do Great Pages,
+ele não sabe quais são os elementos, aí foi embora.
+Então se você entende aquele elemento, depois pega aqui, bate o olho, você consegue achar a identificação.
+E fazer essa mudança aqui é muito simples, muito simples, por quê?
+Repare aqui, o que que eu tenho aqui? Eu tenho o código de identificação de um elemento,
+vírgula, do Enter, coloca o próximo vírgula, o próximo vírgula, o próximo vírgula, o próximo.
+A única coisa que você precisa se atentar aqui é que precisa ter essa vírgula entre eles, essa é uma coisa.
+E a outra coisa é que nesse último elemento aqui você não mexe nele,
+ele precisa estar aqui, inclusive eu vou colocar aqui uma observação aqui na frente, que é não mexe nesse bicho.
+Eu vou colocar aqui uma observação aqui, que é o seguinte,
+vou colocar aqui, não mexer nesse sujeito, porque senão quebra o olho, então ele precisa estar aqui.
+Mas agora como que a gente vai fazer essa alteração? Você pode vir um por um, copiando e colando aqui,
+e isso aqui quando eu enviar para você vai estar, eu vou deixar só um elemento aqui, só para você ter referência da linha,
+mas não vai estar com isso aqui tudo. Mas como é que você faz essa alteração? Muito simples,
+bem aqui você copiou tudo, só verifica se não tem espaços extras aqui, nem nada do tipo,
+copiei, voltei aqui, eu vou pegar aqui, vou até deixar essa vírgula aqui, vou pegar aqui dessa última vírgula,
+até aqui em cima, então peguei aqui do asterisco, até o último número ali, apaguei.
+E agora o que que eu faço? Colo, ele vai, se ele desce esse passamento aqui fica mais feinho assim,
+só venho aqui, ajusto aqui para ficar organizado direitinho, porque depois se você precisar mexer em alguma coisa,
+fica mais fácil de você achar, só venho aqui, ajusto aqui cada um deles, vim aqui bonitinho, ajustei cada um deles,
+e repara que como eu colei eles aqui agora, eles, opa, tem que dar mais um espaço aqui,
+eles estão sem as vírgulas no final, precisa ter as vírgulas, é obrigatório de ter as vírgulas,
+então o que que eu venho? Final vírgula, final vírgula, final vírgula, final vírgula, final vírgula,
+vírgula, vírgula, vírgula, e o último que já estava com a vírgula, mas se não tivesse, colocaria vírgula, pronto.
+Fiz essa parte aqui da atualização, copiei, coloquei aqui os elementos, está tudo certo, deixa eu colocar fazer a alteração
+no editor que a gente está usando aqui, no editor online, vim aqui, só vou apagar isso aqui tudo,
+e vou colocar o que a gente acabou de ajustar, beleza? Então peguei aqui, coloquei, agora lembra que eu te falei que são
+dois lugares, eu preciso fazer essa alteração aqui, e eu preciso fazer essa alteração aqui também nessa
+parte amarelinha, qual é a diferença? Repare que aqui eu tenho só o código de identificação,
+hashtag e o número, aqui repare que eles estão entre aspas simples, é a única mudança que eu vou
+precisar fazer, e a mesma coisa, deixo até colocar aqui a mesma observação, a mesma observação aqui,
+não, e tem que colocar, a gente precisa observar a sua importância, não mexe aqui,
+isso aqui você não vai precisar alterar, o que que eu vou fazer? Simplão, vou copiar tudo,
+ah Bruno, mas isso é um saco, é mesmo, é mesmo, é chatinho mesmo, tá, mas é, é o que tem que ser feito,
+ah, bom, quero fazer na IA, já te falei, você pode fazer, a minha recomendação é pra que pelo
+menos uma vez você faça aqui na mão, vim aqui, vou apagar todos eles, peguei lá da vírgula, apaguei,
+eu vou colar os que eu ajustei antes, repare que esse cara até branco, eles ficam diferentes,
+vou colocar aqui, isso aqui é importante porque ajuda na hora de você achar os elementos,
+o nome disso aqui é identação, o que que eu vou precisar fazer? Eu vou colocar
+todos esses elementos entre aspas simples, vou vim aqui, coloquei aqui, deixe aí, eu antes da vírgula,
+coloquei aqui, mesma coisa com o outro, vou colocar aqui todos de um lado, depois eu coloco do outro,
+vou abrir aqui, depois eu fecho todos, coloquei, a IA faz isso aqui pra você, eu te confesso que eu não
+faço isso aqui na mão, porque se der algum problema, eu sei onde tá, eu tô familiarizado,
+então eu já uso aqui pra poder acelerar, mas se você nunca fez o processo, é importante você
+ter essa adaptação aqui, porque é uma configuração relativamente simples, só que pra quem não tá
+familiarizado com programação, não tá familiarizado com código, não sabe a importância disso, e as
+vezes em um código de um sistema inteiro, uma vírgula quebra, se eu venho aqui e eu tiro isso,
+tanto que esse meu sistema aqui, que eu uso de edição aqui de código, aqui é porque você não tá
+mas ele aponta aqui, tem um erro no código, porque se eu coloco assim, não vai funcionar,
+então a vírgula é importante, coloquei aqui o erro sumiu pra mim, então fiz, coloquei aqui
+todos os elementos da página que eu vou trabalhar, coloquei aqui todos os outros elementos, coloquei
+aqui o código que eu peguei lá do vTurbe, tá aqui direitinho, tá aqui direitinho, não mexe em nada,
+o código veio do jeito que ele trouxe lá pra mim, tá, belezinha, o restante aqui, como eu falei,
+você não vai precisar mexer em mais nada aqui do código, e nem é bom mexer, porque se mexer vai
+quebrar, se você vem aqui, ah Bruno, eu não gostei disso aqui, você vem aqui e tira, vai quebrar
+tudo, tá, então você não deve mexer em nada, qualquer, você só tem mais uma coisa que você vai
+fazer, lembra que eu falei com você aqui que é importante você saber o tempo em minutos ali, o
+tempo exato onde o pitch do seu vídeo acontece, no nosso caso aqui, é no minuto cinco minutos e
+vinte segundos, tá, porque, porque eu vou precisar colocar essa informação também aqui no código,
+eu já deixei sinalizado pra você aqui onde é, configuração é aqui, variável, coloque o tempo
+do delay aqui em segundos, então o que é aqui no caso, esse número que tá aqui, trezentos e vinte
+segundos que eu vou trocar aqui agora pro nosso oficial, mas onde eu trocar esse, o tempo que eu
+colocar ali é o tempo que os elementos vão ser mostrados na página, e aí uma, só tô trocando
+que eu não tinha feito essa alteração aqui, e aí uma coisa muito importante, o tempo que você vai
+colocar aqui, ele precisa ser exatamente o mesmo tempo lá do V-Turbe, porque ele tá vinculado,
+só que lá o tempo é em minutos e segundos, aqui só em segundos, então agora eu preciso saber quanto
+cinco minutos e vinte segundos em segundos, aqui cinco minutos e vinte segundos em segundos,
+coloquei, ele vai me dar aqui, trezentos e vinte segundos, já tava ali porque é o mesmo vídeo que a
+gente tá usando, então eu já sei que copia essa informação, porque ela é importante, vai lá no
+clínio de notas e cola aqui, coloquei aqui, show, show, porém com um detalhe, aqui pro nosso
+critério aqui de explicação de demonstração, eu não vou deixar esse tempo todo, porque eu quero que
+você veja a parada acontecendo, então aqui eu não vou deixar, porque senão, vamos acessar a página,
+eu teria que esperar cinco minutos e vinte segundos pro negócio aparecer, eu vou colocar aqui,
+trinta segundos, não vai dar, eu vou colocar vinte e três segundos, então esse código aqui e tudo que
+a gente fez aqui até agora vai ser ativado, os elementos vão ser mostrados em vinte e três
+segundos, vou trocar aqui, colocar aqui, vinte e três segundos, tá, e tudo aqui tá bonitinho,
+tudo legal, tudo chuchu beleza, pronto, você terminou de fazer a configuração, então aqui no
+código você só precisa mexer em três coisas, pegar aquele elemento lá do vtube e colar aqui,
+copiar e colar, fazer a adaptação dos elementos de identificação da página do great pages aqui,
+lembrando do detalhe, aqui eles são sem as aspas e aqui embaixo eles são com aspas simples, tá,
+todos eles, você fazer essa verificação aqui é importante e o tempo em segundos, só, você não
+vai trocar mais nada, beleza, pronto, o nosso código agora ele tá pronto pra ser usado lá na página,
+o que que a gente vai fazer? Eu vou selecionar esse código inteiro aqui, selecionei o código inteiro,
+vou ouvir aqui na minha página aqui do great pages, lembra que falei do elemento html, eu vou vim aqui
+agora em editar, aqui dentro até já tem um código que é o código que a gente tava usando, eu vou
+apagar esse código e vou colocar aqui o código que eu acabei de colar, pronto, abre onde precisa,
+não precisa nada, se não precisa fazer absolutamente nada aqui, tá, pronto, tá feita a nossa configuração,
+só tem um detalhezinho, uma coisa que falta, que ela não é obrigatória, mas eu recomendo que você
+use, a vtube ela tem um uso interno ali, vários mecanismos de otimização de velocidade ali
+de carregamento, esse é um dos grandes diferenciais dela, e ela já te dá esse código aqui que é um
+código pra otimizar a velocidade de carregamento ali do vídeo, eu recomendo que você use ele,
+o que que você vai fazer? Ah, Bruno, mais um código, meu Deus do céu, a minha cabeça tá doente,
+você vai copiar e colar, joga, copiar e colar, calma, você faz isso na escola, relaxa, ó, eu tenho
+o código aqui embaixo, ó, quadradinho aqui de copiar, cliquei, ele me avisou aqui, ó, código
+aqui pra área de transferência, você vai lá na página do VGPages, não é aqui, você vai vir aqui
+nessa engrenagem de configuração aqui em cima, você vai clicar nela, vai vir aqui, ó, JavaScript
+e CSS, abriu, tem aqui até um que que a gente já tava usando, eu vou apagar ele, porque muito
+importante o seu vai estar assim, você vai vir aqui, adicionar código, aquele que dá essas
+opções, ó, funcionamento, estatística e marketing, é porque você tem como colocar um monte de
+código aqui dentro, eu vou colocar aqui, ó, funcionamento e eu vou colar esse código aqui, só,
+e aí você dá um nome de identificação pra ele, coloque VTURB, organização pra você saber o que
+eu do futuro, lembrar o que que é isso aqui, otimizar velocidade de carregamento, eu venho aqui,
+ajude seu eu do futuro, otimizar velocidade do vídeo, salvei, verifica se ele tá ativo, porque eu
+tenho como vir aqui desativar esse código, no nosso caso eu vou deixar ele aqui ativo, tá, fechei, pronto,
+tá feito a nossa configuração, tá feita a página do vídeo, já tá tudo integrado,
+teoricamente, tudo precisa funcionar agora, ah não, não, não, não, eu não vou nem gravar
+porque não, lembra que eu te falei que eu coloquei 23 segundos aqui no vídeo pra gente
+fazer o teste, ó, vamos olhar lá no nosso código, qual é o tempo que tá aqui, 23 segundos, eu vou,
+aqui na VTURB não tá esse tempo, eu preciso ir lá na VTURB no botão de ação aqui e editar esse
+botão, ó, aqui tá 5 minutos e 20 segundos, eu vou colocar aqui também, 23 segundos,
+23 segundos, beleza, vou tirar esse aqui, define como tempo do pitch, tá, porque não precisa,
+e aqui, e tá, tudo certo, o link aqui, eu vou deixar, deixa eu vou trocar esse link,
+porque se não esse aqui vai dar erro, colocar o link do Google aqui, tá, salvei aqui,
+show de bola maravilha, abre ou não vai preciso trocar alguma coisa, se alterou o tempo do botão,
+não tem que fazer nada, tem que fazer nada, vocês delas já fazem de forma dinâmica,
+vocês já fazem nada, tá, tudo certo, que agora, tempo da VTURB, check, tempo do vídeo, check
+elementos, check, código de carregamento ali da página, tudo certo, agora eu vou publicar a minha
+página, vamos lá, colocar aqui, o, o, deixa eu colocar aqui, vim e grevi, vou colocar aqui,
+ó, aula, alcateia, vídeo, VTURB, vou publicar aqui essa página, show de bola,
+tá publicada aqui, aguardar ela publicar aqui direitinho, e agora o que que a gente vai fazer?
+Agora depois a gente ter feito todo esse processo, e foi, eu sei que é cansativo, tá, porque é
+muita coisa mesmo, mas a gente fez todo o processo de pegar os dados do grid pages, pegar os dados
+do VTURB, fazer a configuração do código e tá tudo pronto, é um processo chato, como eu falei,
+mas a gente só precisa fazer ele uma vez, fez ali, tá tudo certo, tá tudo bonito, agora a gente vai
+testar, a gente vai acessar a página pra conferir se tá tudo funcionando direitinho conforme a
+gente fez, beleza, eu vou te mostrar como é que você testa pra poder verificar isso daí, show,
+bora lá então, valeu!

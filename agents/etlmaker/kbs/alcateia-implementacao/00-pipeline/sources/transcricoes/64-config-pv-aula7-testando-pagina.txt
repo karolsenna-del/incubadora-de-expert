@@ -1,0 +1,137 @@
+Vamos lá então. Agora chegou a hora de a gente testar. A gente vê se o trabalho que a gente executou
+aqui, se ele foi bem feito, as coisas tem que estar funcionando. Então, essa é a parte importante
+e a parte que a gente treme as pernas. Mas vai dar tudo certo. Vamos lá. Deixa eu compartilhar aqui.
+Você, o monitor aqui. Publiquei a página, tá? Publiquei a página. Agora eu vou acessar para
+ver se a página está funcionando. Eu vou clicar aqui no visitar página, ele vai abrir direto,
+mas eu vou te falar que essa não é a melhor forma de você testar, tá? Eu vou clicar aqui,
+ele carregou a página direitinho, o vídeo. Isso aqui, deixa eu até pausar aqui, isso aqui é o
+primeiro critério, mas eu vou fechar, vou fechar isso daqui e depois, porque aqui não é o melhor
+Qual que é a melhor forma de você testar se essa página está funcionando? Em uma aba anônima
+do seu navegador, tá? É a melhor forma. Por quê? Porque de repente você estava mexendo na página,
+você já acessou e sempre quando a gente está na página tem uma informação que talvez você
+já conheça, mas para muitas pessoas é novidade, que é uma coisa chamada cache. O que que é esse cache?
+Esse cache é um armazenamento de informações que vai ficando salvo ali no seu navegador e esse
+código que a gente fez, ele trabalha baseado em cache, tá? Então quando você abre uma aba anônima
+ali do seu navegador, você meio que burla essa parte do cache, porque ele não faz esse armazenamento,
+tá? Então é com isso aqui que a gente vai trabalhar. Então eu copiei ali a página do o link da
+página, eu vou acessá-la aqui pelo navegador, a mesma página que a gente criou e eu vou acessar.
+Vamos lá, porque aqui a gente já tem alguns elementos que mostram para a gente se o trabalho até
+funcionou ou não. Primeira coisa ó, o vídeo está aparecendo. Isso é um primeiro indicativo,
+porque se o código tivesse quebrado lá do vídeo, ele não ia aparecer. Então ele está aparecendo,
+essa é a primeira coisa. Segunda coisa, se eu olho aqui na página eu vejo que todos os elementos
+que eu queria que eles tivessem escondidos, eles estão escondidos. Isso é muito importante,
+sem fazer nada eu já tenho essas informações aqui. Uma outra coisa, lembra que eu fiz a
+configuração lá para os elementos serem mostrados com 23 segundos de vídeo assistido. A gente já
+está aqui na página há mais de 23 segundos e esses elementos não foram mostrados. Quando você for
+fazer, pode colocar ali 10 segundos, 11 segundos, trepando um tempo, assim, só para você ver a
+informação. Depois você lembra de voltar para o tempo oficial. E eles não foram mostrados.
+Ah Bruno, mas aqui o vídeo está tocando no fundo. Isso aqui é o player interno ali da
+virtude disso aqui. Eu não dei play no vídeo. Se o vídeo já começou, clique para ouvir. Eu não dei
+play no vídeo. Ele está tocando ali de fundo, mas não foi com a minha ação. Agora vamos lá. Eu vou
+dar o play aqui no vídeo e eu vou pausar. Vou deixar ele tocar por uns 5 segundos e vou pausar.
+Vamos lá, vou dar o play para que ele volta para o início. Está aqui o vini. Nada aconteceu.
+Deixei ele a alguns segundos rolando e não vou me disser porque não tem necessidade. Mas o que
+eu vou fazer? O que eu quero te mostrar? Pausei o vídeo. Ainda não deu 23 segundos. Vamos aguardar
+o vini aqui. Mas os 10, 15 segundos, por que isso é importante? Porque lembra que eu te falei e
+essa cara, isso é a grande sacada que a gente desenvolveu aqui, que a galera não sabe fazer
+isso. Que é justamente fazer integração com o tempo, com o comportamento do usuário no vídeo.
+Não é na página. Normalmente a galera faz na página. Está ali há 30 segundos. O nosso está no
+vídeo. Repara que agora depois que eu pausei o vídeo já deu mais que 23 segundos e os elementos
+não apareceram. Isso é fantástico. Isso é uma baita de uma inovação que a gente está entregando
+para vocês aqui. Eu vou te falar que eu nunca vi isso aqui no mercado da forma como a gente está
+fazendo. Então parabéns para você. Vou dar o play para continuar. Quando ele chegar nos 23
+segundos, já deve estar chegando. Quando ele chegar nos 23 segundos, opa, olha, apareceram. Se você
+quiser cronometrar esse tempo, você pode cronometrar para garantir que está certo, mas dificilmente
+vai dar algum problema aqui. Beleza, uma vez que apareceu, agora eu vou conferir se o resto está
+funcionando. Repara que, lembra que eu te falei do espaço embaixo do vídeo? Aqui,
+esse espaço não foi alterado ao mesmo espaço, só que apareceu esse botão aqui. Então, se eu não
+tivesse esse espaço de respiro aqui embaixo do vídeo, esse botão iria estar embaixo dos
+outros elementos. Abram, mas esse espaço não está muito grande, tá? Porque você lembra que eu te
+falei que aqui, quando eu comecei a explicação que a gente tinha dois botões, essa página é uma
+página de Excel e aqui a gente tem um outro botão para a pessoa não comprar. Então ele tem aqui
+um espaço e tem um outro botão aqui embaixo e aí ele tinha esse espaço de respiro. Aqui entra na
+parte de design que eu te falei que você vai ter que fazer na mão. Aqui, abro, coloquei,
+testei, apareceu aqui. Aqui tem esse espaço grande que eu quero tirar. O que você vai
+precisar fazer? Você vai voltá-la na sua página do VTube e você vai trocar aqui esse espaço.
+Arrastar isso aqui para sempre tirar um pouco e ficaria aqui, assim, mais ou menos. Isso é no olho, tá?
+Aí não tem uma medida certa, não dá para fazer, porque depende das configurações que você fez do botão.
+Então, tá? Isso aqui vai ser diferente por conta disso. Mas eu já sei, o botão apareceu. Se eu clicar nele,
+eu não vou clicar aqui porque embaixo ele já está mostrando para mim que está o link do Google.
+Vou clicar aqui depois, porque eu quero ver o resto. O resto da página precisa aparecer. Tá aqui,
+todos os elementos, tudo bonitinho, tudo certinho aqui, tudo ok, tudo sendo mostrado. Funcionou
+perfeitamente. O que eu quero te mostrar? Eu pausei o vídeo. Se eu der o play, os elementos estão ali,
+os elementos continuam aqui sem problema nenhum e está tudo aqui sendo mostrado, tá? Vou clicar aqui na página,
+deixa eu só copiar aqui de novo. Eu vou clicar aqui no botão. Se fosse o meu check out, eu estaria aqui no check out.
+Eu estaria aqui no check out. Então, isso aqui é bem interessante para a gente. Então, está tudo funcionando direitinho.
+Tem um detalhe que eu preciso te falar aqui, que acabou passando desapercebido por mim, que ele é importante.
+Lembra que o nosso botão, ele está configurado no veturbe, certo? Então, caso você tenha mais de um botão na sua
+página, aqui a gente tem um botão que está no vídeo. Mas repara que aqui nessa página, aqui embaixo,
+eu tenho esse outro botão que ele não está no vídeo. Eu preciso pegar o meu link, o mesmo link de pagamento,
+se você quiser usar outro link para poder traquear o botão. Eu preciso pegar esse mesmo link do meu check out,
+do meu WhatsApp, do meu, sei lá, o que você está usando. E eu preciso vir aqui e colocar aqui nesse botão também.
+E em todos os outros botões que você tiver, porque se não, não vai rolar, tá bom? Aqui eu tenho um outro botão.
+Eu preciso vir aqui e editar esse botão, eu venho aqui na configuração e vou colocar aqui para ele abrir.
+Dessa forma, agora está tudo certinho, porque eu tenho a configuração do botão do vídeo na veturbe e eu tenho a
+configuração dos botões que estão aqui na página, que são coisas diferentes. São coisas diferentes.
+Uma coisa é a configuração do great pages, outra coisa é a configuração do veturbe. Beleza?
+Eu tinha esquecido dessa parte aqui, agora está tudo certinho. Ah Bruno, quero... Opa, que que sem querer.
+Quero continuar fazendo esse teste aí, quero ver de novo. Como que eu posso otimizar para garantir mesmo que a parada
+está funcionando? Primeiro que não recomendo que você atualize a página que eu vou atualizar,
+para você ver o que é que acontece. Os elementos já estão sendo mostrados por causa do cache, que eu te falei.
+Fecho aqui, abre uma outra guia anônima, abri aqui uma outra guia anônima e vim aqui e colo.
+Qual que é um teste interessante que eu gosto de fazer para garantir assim, cara? Está funcionando mesmo.
+Troca o tempo. Vem aqui no código, a gente colocou 23 segundos. Troca, ponha aqui agora, 42 segundos.
+Vai lá no veturbe também, no botão. Troca por 42 segundos, acessa a página, dá o play no vídeo e vê.
+Ele precisa sempre respeitar o tempo do vídeo que está acontecendo ali. Isso é sempre muito importante.
+Aqui no caso como eu não fiz nenhuma alteração, quando der os 23 segundos, vai aparecer tudo de novo aqui bonitinho.
+Aqui ele já vai aparecer. Show. Pronto, apareceu.
+Então esse teste de você fazer essa variação de tempo é um teste importante e um outro teste importante.
+Abre no celular, vai, pegue o seu celular, abre uma guia anônima ali também no seu navegador e acessa a página no celular para ver se está tudo certinho ele também,
+porque isso é importante de você ter essa variação.
+O código da forma como eu construí ele para você, ele já foi pensado para lidar com todas as situações possíveis que a gente consiga lidar.
+Então dificilmente vai ter algum problema ali, alguma coisa que não vai funcionar, ele já vai estar certinho ele funcionando para você.
+Mas é importante de você fazer esses testes, beleza?
+Testou. Funcionou Bruno, show de bola, o tempo carregando, o tempo da página, o tempo do vídeo, deu o play, está tudo certo.
+Qual que é a coisa criatura? Deixa eu trocar aqui, deixa o tio falar pertinho com você aqui agora.
+Lembra que uma coisa é a gente está trabalhando em ambiente de teste, deixa eu até tomar um cafézinho aqui, porque isso me dá tremedeira.
+Outra coisa é botar esse trem na rua, porque tempo do vídeo, eu não coloquei aqui agora o tempo do vídeo de 23 segundos,
+não esqueça de colocar o tempo oficial do pitch do seu vídeo, porque se você deixar com o tempo de teste que você está usando,
+quando você colocar essa página que para as pessoas acessarem, se colocar no seu tráfego do jeito que ela estiver rolando aí, ele vai mostrar em 23 segundos.
+Então terminou, o que você vai precisar fazer? Vou vir aqui, está no código aqui dentro, muito simples.
+Aqui onde estava os 23 segundos, o que é que eu preciso fazer? Aí a organização que eu te falei lá do início, eu já tenho aqui,
+eu sei que esse tempo aqui é 320 segundos, eu vou copiar só o 3, não é, você não precisa copiar o segundo, está só o número,
+pela moda dos deuses, eu vou vir aqui, um único lugar, 23 aqui, eu apago e coloco 320, pronto, salvei aqui, dei ok e lembra sempre de atualizar a página,
+atualizei a página e tudo certo, e eu também preciso fazer essa alteração na Vtube, então eu sei que são 5 minutos e 20 segundos,
+eu vou lá no meu botão, vou vir aqui, vou pegar o tempo do vídeo e vou colocar, 5 minutos e 20 segundos, salva, salva, salva aqui,
+e foi, agora o vídeo está com o tempo certo, o tempo oficial dele ali, o tempo real mesmo, a página está pronta para poder rodar,
+o código de velocidade ali está implementado, o código aqui está tudo certo, para você garantir, como eu te disse, eu sou um velho chato,
+então eu gosto de conferir, dependendo do que foi isso, que é uma coisa que precisa ser conferida algumas vezes, acessa a página,
+depois que você atualizou que você colocou o tempo oficial e dá o play, eu tinha configurado 23 segundos,
+os elementos aqui agora, quando dá 23 segundos, eles não podem aparecer, por isso que a aba anônima é importante,
+porque se você abrir numa aba normal, ele vai provavelmente aparecer quando dá os 23 segundos, porque vai ficar armazenado lá no cache,
+aqui já deu mais de 23 segundos, então eu sei que está tudo certo, a Bruno, isso aqui, ter acontecido isso aqui é ótimo,
+ah Bruno, mas você colocou aqui e o negócio apareceu mesmo assim, fantástico isso aqui ter acontecido,
+repare que não apareceu o botão, mas os elementos da página apareceram, ah Bruno, você está mentindo tudo que você me ensinou,
+uma mentira, isso tudo está errado, né não jovem, é porque quando você faz a atualização de uma página aqui no great pages,
+ela pode levar, ó, vamos conferir se está certinho que o nosso código, está certinho, 320, tá, 320,
+quando você faz a atualização da página aqui no great pages, ela pode levar, isso está lá na documentação deles,
+pode levar alguns minutos para que ela seja atualizada, normalmente isso é bem rápido,
+mas às vezes pode levar uns 5 minutos, 10 minutos, 15 minutos, por isso que você faz esse processo que eu fiz aqui agora,
+ele é importante, porque se não, ah Bruno, fui ali, cliquei em atualizar, copiei a página que coloquei para rodar,
+pode ser que ela não tenha sido atualizada ainda, então é importante, coloquei aqui de novo, não pode aparecer,
+os elementos não podem aparecer quando há 23 segundos, aqui ele falou aqui, mais ou menos aqui ele iria aparecer com 23,
+não apareceu, já deu mais de 23 segundos, agora certamente ele não apareceu, agora quer dizer que o great pages
+atualizou internamente essa página, já tem quase um minuto aqui e não apareceu,
+então isso aqui é muito importante de você fazer esse processo, não pula etapas, não pula etapas,
+porque se você pular qualquer uma dessas etapas que eu te falei, que ah Bruno, fiz o teste, já confio nesse trem,
+nunca confia, nunca confia em nenhum sistema, você precisa fazer esse processo de testagem, porque senão você pode acontecer,
+ainda bem que aconteceu aqui comigo, porque isso é aleatório, coloca ali, é comum da página levar uns 5 minutinhos
+para poder atualizar, então isso é importante de você se atentar, mas é isso, eu sei que é um processo chatinho,
+copiar, coisa, colar, mas não é difícil, você deve só, é chato mesmo fazer, vou colocar perfume para você não,
+mas está feito, você entendeu o processo, a próxima vez se você precisar fazer de novo, quando você precisar,
+você já está ligado agora, já fica mais ágil para você executar isso daí, e agora, e repare que a gente viu a parte do vídeo único,
+agora a gente vai ver a parte de dois vídeos, do AB da versão A e da versão B,
+só que qual que é a vantagem, tudo que eu expliquei até agora, eu não vou precisar explicar de novo,
+então aqui agora, são poucas coisas que a gente vai fazer ali dentro da VTURB, e são poucas coisas que a gente vai fazer no Great Pages,
+para poder ter a adaptação disso aí certinho, é basicamente copiar e colocar, mas não preciso explicar tudo que eu expliquei até agora,
+beleza? Mas vamos lá agora para a gente ver o nosso AB, que é uma cereja do bolo para você aqui, dessa nossa sequência de aulas, beleza? Valeu!
