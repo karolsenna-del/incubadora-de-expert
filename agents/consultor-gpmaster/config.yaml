@@ -1,0 +1,19 @@
+name: consultor-gpmaster
+slash_prefix: consultorGpmaster
+version: 1.0.0
+description: "Mente sintetica de gestao de processos, projetos e organizacao — 10 mestres fundidos num unico agente"
+type: single-mind
+
+agents:
+  - consultor-gpmaster
+
+tasks:
+  - start
+  - judge-process
+  - create-process
+  - optimize-process
+
+knowledge_base: agents/consultor-gpmaster/data/
+
+memory:
+  kb: agents/consultor-gpmaster/data/consultor-gpmaster-kb.md

@@ -1,0 +1,137 @@
+# ===============================================================================
+# CONFIG: Squad Conteudo Arcane
+# Configurações operacionais do squad
+# ===============================================================================
+
+squad_id: "squad-conteudo-arcane"
+version: "1.0.0"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEFAULTS
+# ─────────────────────────────────────────────────────────────────────────────
+defaults:
+  language: "pt-BR"
+  tone: "casual-direto"
+  output_layout: "docs/producao-conteudo/{expert-slug}/"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# THRESHOLDS (Método Audience)
+# ─────────────────────────────────────────────────────────────────────────────
+metrics_thresholds:
+  taxa_apos_3s:
+    min: 50  # %
+    descricao: "Abaixo disso = problema no GANCHO"
+  tempo_medio:
+    min: 25  # % da duração total
+    max: 30
+    descricao: "Abaixo de 25% = problema na ESTRUTURA/CONTEÚDO"
+  interacao_por_view:
+    min: 10  # %
+    descricao: "Abaixo de 10% = problema no CTA ou NOTABILIDADE"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# POOL DE TEMAS
+# ─────────────────────────────────────────────────────────────────────────────
+temas_pool:
+  min_size: 15
+  max_size: 30
+  ideal_size: 25
+  distribuicao_recomendada:
+    fortes: 10  # top — alta dor + alto alcance
+    medios: 10-15
+    quentes_emergentes: 5  # sinalizados — pega antes de saturar
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FORMATOS
+# ─────────────────────────────────────────────────────────────────────────────
+formatos:
+  min_focados: 1
+  max_focados: 3
+  recomendado: "1-3 inicialmente"
+  lapidacao:
+    validados: 80  # % dos posts
+    testando_novos: 20  # %
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ROTEIRO
+# ─────────────────────────────────────────────────────────────────────────────
+roteiro:
+  estrutura_macro:
+    - "Hook (3s)"
+    - "Intro Forte (5-8s)"
+    - "Conteúdo (corpo)"
+    - "CTA + Posicionamento"
+
+  hook_camadas: ["verbal", "visual", "textual"]
+  hook_gatilhos_min: 1
+  hook_gatilhos_max: 3
+
+  elementos_notaveis_min: 3
+  elementos_notaveis_max: 5
+
+  loopings_min: 2
+  loopings_ideal: 3
+
+  duracao_reels_ideal:
+    min: 30  # segundos
+    max: 90
+
+  carrossel_slides:
+    min: 8
+    max: 15
+    ideal: 10
+
+  loop_refinamento:
+    max_iteracoes_antes_de_pausar: 5
+    criterio_pronto: "expert aprova explicitamente"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PRODUÇÃO
+# ─────────────────────────────────────────────────────────────────────────────
+producao:
+  carrossel:
+    ferramenta_recomendada: "Canva"
+    fonte_imagem_recomendada: "ChatGPT (imagem)"
+    formato: "1080x1350"
+
+  reels:
+    setup_ideal:
+      camera: "iPhone Pro 13+"
+      lente: "câmera de trás"
+      modo: "cinematográfico"
+      zoom: "2x"
+      luz: "natural, contra a luz"
+      microfones:
+        premium: "Hollyland M2 (R$ 800-1.000)"
+        custo_beneficio: "Boya BY-M1 ou BY-WM3 (R$ 200)"
+    fallback: "começa com o que tem — equipamento é otimização"
+    edicao: "CapCut (gratuito, mobile)"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ANÁLISE
+# ─────────────────────────────────────────────────────────────────────────────
+analise:
+  cadencia_default: "sob demanda"
+  cadencia_opcional: "semanal"
+
+  inputs_aceitos:
+    - "print/screenshot"
+    - "verbalizado"
+    - "Apify JSON"
+    - "dump de comentários"
+
+  amostra_minima:
+    individual: 1
+    batch: 3
+    qualitativa_comentarios: 30
+
+# ─────────────────────────────────────────────────────────────────────────────
+# REGRA AUTOCONTIDO
+# ─────────────────────────────────────────────────────────────────────────────
+autocontido:
+  enforced: true
+  rules:
+    - "Zero referências a paths externos do repo do criador (NDF, PMI, Auroq, business/, docs/knowledge/)"
+    - "KB embarcada em knowledge/"
+    - "Squad portável pra qualquer aluno Arcane"
+    - "Templates e swipe-files vazios por design — expert popula"

@@ -135,7 +135,45 @@ Portfólio de ferramentas foi movido para o M2 (Bloco do Ecossistema). Rastreado
 ---
 
 ## Módulo 3 — Vendas Secretas
-*A estruturar*
+**Fase:** Da Promessa à Venda Secreta
+**Objetivo:** A aluna sai com P4 completo — oferta definida, pitch de 3 frases, 3 vendas reais documentadas, 1 depoimento.
+**Input obrigatório:** P1 + P2 + P3 + portfólio (M2)
+**Mecanismo principal:** Agente da Proposta Validada + template Rastreador de Leads
+**KB de suporte:** ETL do curso de social selling
+**Gate:** QG-CC-005 PASS (29/05/2026)
+
+### Bloco de Mentalidade — Identidade de Vendas
+
+| # | Aula | Objetivo | Com o que sai |
+|---|------|----------|---------------|
+| 1 | Identidade de vendas antes da técnica | Medo de cobrar como crença, não como fato. Vender é servir quem já tem o problema. "Só fracassa quem desiste." As 3 vendas são campo — não teste final. RC-07, RC-08, RC-13, VOL-06 | Nova identidade antes de tocar em qualquer tático |
+
+### Bloco da Oferta
+
+| # | Aula | Objetivo | Com o que sai |
+|---|------|----------|---------------|
+| 2 | O que você está vendendo — e por que começa pelo 1:1 | O que é uma oferta de validação. Por que começar pela sessão 1:1 antes de escalar. Formato, o que inclui, como apresentar preço. Conceito antes de abrir o agente. | Clareza sobre o que está vendendo |
+| 3 | Exercício: Construindo sua oferta com o Agente da Proposta Validada | Agente usa P1 + P2 + P3 como base. Conduz: promessa específica da sessão, o que está incluído, como apresentar o preço, pitch de 3 frases. | P4 (oferta) documentada |
+
+### Bloco dos Leads
+
+| # | Aula | Objetivo | Com o que sai |
+|---|------|----------|---------------|
+| 4 | Rastreador de Leads Quentes — e se minha lista for pequena? | Template + como preencher com critérios da persona (P1). Os 5 grupos. Segunda parte: se a lista for insuficiente — DM com novos seguidores, quem interage nos stories, grupos de nicho. Honesto: social selling é pipeline de médio prazo, não garantia de vendas agora. Ação imediata: 1-2 interações genuínas por dia. | Lista de leads priorizada + estratégia de expansão ativa |
+
+### Bloco da Abordagem
+
+| # | Aula | Objetivo | Com o que sai |
+|---|------|----------|---------------|
+| 5 | Lendo seu lead antes do primeiro contato | Versão simplificada de leitura comportamental: bio + tipo de post + linguagem + energia. 3 perfis básicos (relacional / analítico / diretivo) e como adaptar abertura e tom pra cada um. *(Futuro: agente fará isso automaticamente)* | Lead "lido" antes de qualquer mensagem |
+| 6 | O script de abordagem e a cadência pré-sessão | Como abordar por DM e WhatsApp. Sequência: abertura genuína → aquecimento → convite. O que fazer se não respondeu. Follow-up até a sessão acontecer. KB: ETL social selling. | Script de abordagem + cadência pré-sessão |
+
+### Bloco da Sessão e Pós-Venda
+
+| # | Aula | Objetivo | Com o que sai |
+|---|------|----------|---------------|
+| 7 | O roteiro da sessão de vendas secretas | Estrutura da conversa: abertura (conexão) → diagnóstico → apresentação da oferta → resposta a objeções → fechamento. Como conduzir sem parecer vendedora. | Roteiro da sessão 1:1 |
+| 8 | Pós-sessão: follow-up e o depoimento | Fechou / não fechou bem / não fechou frio — cadência diferente pra cada caso. Como pedir e documentar o depoimento. O depoimento + pitch que funcionou + objeções que apareceram são matéria-prima para o M4. | Cadência pós-sessão + depoimento coletado |
 
 ---
 

@@ -1,0 +1,164 @@
+# ===============================================================================
+# AGENT ROUTING: Squad Conteudo Arcane
+# Mapeamento de intenções → agentes
+# ===============================================================================
+
+# Vox (chief) usa esse mapeamento pra roteamento
+
+intencoes_para_agentes:
+
+  # IRIS (Pesquisadora de Formatos + Temas)
+  iris:
+    keywords:
+      - "pesquisar formato"
+      - "qual formato uso"
+      - "tipos de video"
+      - "cardapio de formatos"
+      - "pesquisar tema"
+      - "ideias de post"
+      - "assunto viral"
+      - "tema do momento"
+      - "garimpar"
+      - "qual tema produzir"
+      - "escolher post"
+      - "decidir tema"
+    expertise:
+      - "16 formatos da biblioteca embarcada"
+      - "16 categorias temas Audience"
+      - "Método de pesquisa de virais (YT/IG/TikTok/inglês)"
+      - "Detecção de tema quente emergente"
+
+  # SAGE (Teórico / Pesquisador profundo)
+  sage:
+    keywords:
+      - "criar teoria"
+      - "aprofundar tema"
+      - "pesquisar a fundo"
+      - "linha de raciocinio"
+      - "tese"
+      - "pesquisa interna"
+      - "pesquisa externa"
+      - "engenharia reversa de viral"
+    expertise:
+      - "3 sub-passos (interna → externa → amarração)"
+      - "6 lentes de comunicação"
+      - "Engenharia reversa de virais"
+      - "Leque de 5-7 hooks com diversidade"
+
+  # RICO (Roteirista)
+  rico:
+    keywords:
+      - "roteiro"
+      - "hook"
+      - "escrever"
+      - "headline"
+      - "texto do post"
+      - "copy do reels"
+      - "captar tom"
+      - "qual meu tom"
+      - "voz"
+    expertise:
+      - "Estrutura macro Hook → Intro → Conteúdo → CTA"
+      - "7 gatilhos de atenção"
+      - "8 elementos notáveis"
+      - "Loopings em cadeia"
+      - "CTA contextual de reconhecimento"
+      - "Captura tom de voz do expert"
+      - "Loop iterativo até expert aprovar"
+
+  # MACK (Produtor / Orientador)
+  mack:
+    keywords:
+      - "como gravar"
+      - "como produzir"
+      - "carrossel"
+      - "Canva"
+      - "iPhone"
+      - "microfone"
+      - "laminas"
+      - "reels"
+      - "setup"
+    expertise:
+      - "Lâminas de carrossel com texto + sugestão visual + prompt GPT"
+      - "Setup ideal de reels (iPhone Pro 13+, modo cinema, mic)"
+      - "Fallback (começa com o que tem)"
+      - "Direção de gravação"
+      - "Edição CapCut"
+
+  # ARIA (Analista)
+  aria:
+    keywords:
+      - "analisar post"
+      - "metricas"
+      - "porque flopou"
+      - "porque viralizou"
+      - "comentarios"
+      - "Apify"
+      - "performance"
+      - "diagnostico"
+    expertise:
+      - "3 métricas-chave do Audience"
+      - "Diagnóstico cirúrgico"
+      - "Identificação de tema/hook/formato/elementos usados"
+      - "Análise qualitativa de comentários"
+      - "Sugestões de escala (formato vs assunto)"
+      - "Reaproveitamento (carrossel → reels → ad)"
+      - "Processar JSON Apify"
+
+intencoes_para_workflows:
+
+  setup-inicial:
+    keywords:
+      - "comecar do zero"
+      - "setup inicial"
+      - "primeira vez"
+      - "nao tenho formatos"
+      - "nao tenho pool"
+    descricao: "Iris faz formatos + temas → base-inicial.md"
+
+  produzir-post:
+    keywords:
+      - "produzir 1 post"
+      - "criar um conteudo"
+      - "novo post"
+      - "fazer um reels"
+      - "fazer um carrossel"
+    descricao: "Pipeline completo 1 post (Passo 3 → 4 → 5 → 6)"
+
+  produzir-batch:
+    keywords:
+      - "produzir varios"
+      - "batelada"
+      - "5 posts da semana"
+      - "produzir em lote"
+    descricao: "Pipeline batelada (N posts)"
+
+  analisar-performance:
+    keywords:
+      - "analisar performance"
+      - "diagnostic posts"
+      - "ver como ta indo"
+    descricao: "Análise pós-publicação"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FALLBACK
+# ─────────────────────────────────────────────────────────────────────────────
+fallback:
+  intent_unknown: "Vox pergunta diretamente onde expert está (zerado, com base, produzindo, analisando) e roteia conforme."
+
+  conflict_keyword:
+    - "Quando keyword bate em 2+ agentes (ex: 'reels' bate em mack e rico):"
+    - "Vox pergunta o que expert quer fazer especificamente"
+    - "Ex: 'roteiro do reels' → Rico / 'como gravar reels' → Mack"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# INVOCAÇÃO LIVRE
+# ─────────────────────────────────────────────────────────────────────────────
+invocacao_livre:
+  enabled: true
+  exemplos:
+    - "chamar sage"
+    - "quero a iris"
+    - "rico, vamos roteirizar"
+    - "manda pra aria"
+  comportamento: "Vox aceita chamada direta pelo nome sem questionar — faz handoff direto"

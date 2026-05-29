@@ -1,0 +1,246 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# WORKFLOW: Squad Posicionamento Arcane
+# ═══════════════════════════════════════════════════════════════════════════════
+# Squad da Mentoria Arcane. 4 fases sequenciais com quality gates.
+# Pre-producao (onboarding, diagnostico), construcao (nucleo, vitrine),
+# entrega (compilacao final). 3 agentes: chief, nucleo-strategist, vitrine-strategist.
+# Loop linear por item na vitrine — sugiro → feedback → refaz → check.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+workflow:
+  id: wf-posicionamento-digital
+  name: "Squad Posicionamento Arcane — Vitrine Completa"
+  version: "1.0.0"
+  description: "Conduz o aluno do nucleo de influencia ate o schema completo da vitrine Instagram pronto pra postar"
+  type: "pipeline"
+  purpose: >
+    Pipeline que recebe aluno da Mentoria Arcane com materiais Fase 1,
+    constroi nucleo de influencia segundo metodo audience, e monta
+    vitrine completa do Instagram (display name, bio, link bio, 3 destaques,
+    3 pinned posts) com copy pronta e capas-conceito. Zero design.
+  orchestrator: "@posicionamento-chief"
+  trigger: "Usuario ativa /squad-posicionamento-arcane"
+
+  sequence:
+
+    # ============================================
+    # FASE 1: ONBOARDING + DIAGNOSTICO
+    # ============================================
+
+    - phase: "onboarding"
+      agent: "posicionamento-chief"
+      task: "start"
+      action: "Greeting + apresenta squad e equipe (chief + 2 specialists)"
+      creates: ".state.json"
+
+    - phase: "diagnostico"
+      agent: "posicionamento-chief"
+      task: "diagnose-state"
+      action: "3 perguntas-chave (Fase 1 / nucleo / vitrine parcial) + define rota"
+      creates: "estado-aluno-mapeado"
+      quality_gate: "QG-PD-001"
+
+    # ============================================
+    # FASE 2: NUCLEO DE INFLUENCIA
+    # ============================================
+
+    - phase: "coleta"
+      agent: "nucleo-strategist"
+      task: "gather-fase1-materials"
+      action: "Absorve materiais Fase 1 + clarea via 5 Whys + resolve conflitos"
+      creates: "materiais-sintetizados + vocabulario-do-aluno"
+      skip_condition: "aluno_ja_tem_nucleo_fechado"
+
+    - phase: "construcao-nucleo"
+      agent: "nucleo-strategist"
+      task: "build-nucleo-influencia"
+      action: "Constroi proposta v1: 11 pontos + crencas centrais (8 perguntas + Lider Autoritario) + apresentacao magnetica em 3-4 versoes"
+      creates: "nucleo-v1 + checklist-tecnico-validado-internamente"
+      skip_condition: "aluno_ja_tem_nucleo_fechado"
+
+    - phase: "loop-nucleo"
+      agent: "nucleo-strategist"
+      task: "loop-feedback-nucleo"
+      action: "Loop sugiro → feedback → debate → refaz → check ate aluno aprovar com 'check, perfeito'"
+      creates: "nucleo-final-validado"
+      quality_gate: "QG-PD-002"
+      bottleneck: true
+      bottleneck_reason: "Nucleo medio = vitrine medio. Sem nucleo bom, vitrine sai fraco."
+      skip_condition: "aluno_ja_tem_nucleo_fechado"
+
+    # ============================================
+    # FASE 3: VITRINE (9 itens em loop linear)
+    # ============================================
+
+    - phase: "display-name"
+      agent: "vitrine-strategist"
+      task: "build-display-name"
+      action: "Item 1: Display Name padrao 'Nome Sobrenome | Credencial' com 2-3 variacoes de credencial"
+      creates: "display-name-final"
+      internal_loop: "sugiro → feedback → refaz → check"
+
+    - phase: "bio"
+      agent: "vitrine-strategist"
+      task: "build-bio"
+      action: "Item 2: Bio adaptativa (GROWTH/SALES/DM/LOCAL) com CTA final acima do link. Oferta de producao apos check"
+      creates: "bio-final + char-count + cta"
+      internal_loop: "sugiro → feedback → refaz → check → 'quer produzir?'"
+
+    - phase: "link-bio"
+      agent: "vitrine-strategist"
+      task: "build-link-bio"
+      action: "Item 3: Link bio (3 opcoes: Linktree / LP direta / Pagina sob medida) com primeiro link = funil principal"
+      creates: "estrutura-link-bio + ordem-links + labels"
+      internal_loop: "sugiro → feedback → refaz → check"
+
+    - phase: "destaques"
+      agent: "vitrine-strategist"
+      task: "build-destaques"
+      action: "Items 4-6: 3 destaques fixos (Sobre Mim / Produto / Depoimentos) com conteudo + capa-conceito. Placeholders se aluno nao tem ativo"
+      creates: "3-destaques-com-capa + stories-produzidos-se-aceito"
+      internal_loop: "1 por destaque, com oferta de producao apos cada"
+
+    - phase: "pinned-posts"
+      agent: "vitrine-strategist"
+      task: "build-pinned-posts"
+      action: "Items 7-9: 3 pinned fixos (Sobre / Tese-Crenca / Oferta com ruminacao→solucao→produto→CTA) com capa-conceito"
+      creates: "3-pinned-com-capa + copy-produzida-se-aceito + estrutura-ruminacao-solucao-produto-cta-no-pinned-3"
+      internal_loop: "1 por pinned, com oferta de producao apos cada"
+      quality_gate: "QG-PD-003"
+
+    # ============================================
+    # FASE 4: COMPILACAO + ENTREGA
+    # ============================================
+
+    - phase: "compilacao-final"
+      agent: "posicionamento-chief"
+      task: "compile-final-output"
+      action: "Compila schema final consolidado em markdown copiavel + lista de pendencias acionaveis + checklist de implementacao"
+      creates: "output-final-entregavel + pendencias-acionaveis"
+      quality_gate: "QG-PD-004"
+
+  # ============================================
+  # QUALITY GATES (referencia)
+  # ============================================
+
+  quality_gates:
+    QG-PD-001:
+      name: "Onboarding completo"
+      blocking: false
+      criteria: "Aluno trouxe materiais Fase 1 OU aceitou seguir sem (com ciencia do tradeoff)"
+
+    QG-PD-002:
+      name: "Nucleo validado pelo aluno"
+      blocking: true
+      criteria: "Aluno confirmou 'check, perfeito' apos loop. Checklist tecnico do metodo audience valida internamente"
+
+    QG-PD-003:
+      name: "Vitrine — 9 itens com check"
+      blocking: true
+      criteria: "Todos os 9 itens com check explicito do aluno. Placeholders OK pra itens sem ativo, mas precisam de instrucao acionavel"
+
+    QG-PD-004:
+      name: "Output final consolidado"
+      blocking: true
+      criteria: "Schema completo + lista de pendencias entregue. Aluno tem TUDO pronto pra postar"
+
+  # ============================================
+  # HUMAN TOUCHPOINTS
+  # ============================================
+
+  human_touchpoints:
+    - phase: "diagnostico"
+      action: "Aluno anexa/cola materiais Fase 1, responde 3 perguntas"
+    - phase: "loop-nucleo"
+      action: "Aluno aprova/refusa cada iteracao do nucleo"
+    - phase: "display-name até pinned-posts"
+      action: "Aluno aprova cada item da vitrine (9 checks no total)"
+    - phase: "vitrine items"
+      action: "Aluno decide se quer copy/stories produzidos (opcional por item)"
+    - phase: "compilacao-final"
+      action: "Aluno recebe e confirma output final"
+
+  # ============================================
+  # STATE PERSISTENCE
+  # ============================================
+
+  state_persistence:
+    enabled: true
+    file: ".state.json"
+    can_resume: true
+    persists_per_phase:
+      onboarding: ["estado_aluno", "materiais_recebidos"]
+      diagnostico: ["rota_definida", "improviso_flag"]
+      construcao-nucleo: ["proposta_nucleo_v1", "iteracoes_loop", "nucleo_final"]
+      destaques: ["itens_completos", "copies_produzidas"]
+      compilacao-final: ["output_compilado", "completed_at"]
+
+  # ============================================
+  # HANDOFF PROMPTS (entre agentes)
+  # ============================================
+
+  handoff_prompts:
+    chief_to_nucleo: |
+      Handoff do @posicionamento-chief pro @nucleo-strategist.
+
+      Aluno: [nome se conhecido]
+      Materiais Fase 1: [anexados ou texto / sem materiais com flag improviso]
+      Vocabulario inicial capturado: [palavras-chave]
+      Estado: precisa construir nucleo do zero / precisa validar nucleo existente
+
+      Sua missao: construir/validar o Nucleo de Influencia segundo metodo audience.
+      Pipeline: gather-fase1-materials → build-nucleo-influencia → loop-feedback-nucleo.
+      Quando aluno disser "check, perfeito", marca QG-PD-002 e devolve pro chief.
+
+    nucleo_to_chief: |
+      Handoff do @nucleo-strategist pro @posicionamento-chief.
+
+      Nucleo finalizado:
+      - 11 pontos preenchidos: [resumo]
+      - Crencas centrais extraidas: [N crencas]
+      - Apresentacao magnetica: [N versoes geradas]
+      - QG-PD-002 PASS
+
+      Voce agora roteia pro @vitrine-strategist com o nucleo completo em maos.
+
+    chief_to_vitrine: |
+      Handoff do @posicionamento-chief pro @vitrine-strategist.
+
+      Nucleo completo:
+      [yaml com todos os 11 pontos + crencas + apresentacoes magneticas]
+
+      Sua missao: construir vitrine inteira (9 itens) usando o nucleo como input.
+      Loop linear: 1 item por vez (sugiro → feedback → refaz → check → 'quer produzir?').
+      Sequencia: display-name → bio → link-bio → 3 destaques → 3 pinned.
+      Quando os 9 itens estiverem com check, marca QG-PD-003 e devolve pro chief.
+
+    vitrine_to_chief: |
+      Handoff do @vitrine-strategist pro @posicionamento-chief.
+
+      Vitrine finalizada (9 itens):
+      - Display Name: [final]
+      - Bio: [final]
+      - Link bio: [estrutura]
+      - 3 Destaques: [resumo + capas]
+      - 3 Pinned posts: [resumo + capas + copies se produzidas]
+      - Pendencias acionaveis: [lista]
+      - QG-PD-003 PASS
+
+      Voce agora roda compile-final-output pra entregar schema consolidado pro aluno.
+
+  # ============================================
+  # ERROR HANDLING
+  # ============================================
+
+  error_handling:
+    - cenario: "Aluno trava em loop de feedback (>5 iteracoes)"
+      acao: "Agent sinaliza: 'o que ta te impedindo de aprovar?' — revela bloqueio nao mencionado"
+
+    - cenario: "Aluno desiste no meio (sai sem terminar)"
+      acao: "Estado salvo em .state.json. Aluno pode usar /squad-posicionamento-arcane + retomar"
+
+    - cenario: "Aluno chega sem materiais E sem disposicao pra entrevista profunda"
+      acao: "Chief encerra com instrucao pra voltar pra Fase 1 da mentoria"
+
+    - cenario: "Specialist nao consegue produzir copy boa por falta de info"
+      acao: "Volta pro chief que volta pro aluno pedindo mais info"

@@ -1,0 +1,128 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# SQUAD: Slide Forge
+# Pipeline de produção de conteúdo de apresentação (workshop, palestra, aula,
+# treinamento). Da definição do tema ao briefing pro Manus produzir.
+# ═══════════════════════════════════════════════════════════════════════════
+
+name: "slide-forge-v2"
+title: "Slide Forge v2"
+version: "2.0.0"
+display_name: "Slide Forge v2"  # nome exibido na ativacao — alunos sabem qual versao estao usando
+author: "Euriler Jubé"
+description: >
+  Pipeline em 7 fases que transforma despejo bruto + fontes existentes em
+  conteúdo de apresentação completo: teoria robusta validada cabo a rabo,
+  slides enxutos aprovados bloco a bloco, e briefing visual cinemático pronto
+  pra colar no Manus + Nano Banana Pro produzir.
+
+slash_prefix: "slideForgeV2"  # ativacao explicita de v2
+slash_prefix_legacy: "slideForge"  # alias backward-compat — aponta pro mesmo squad v2
+pattern_prefix: "SF"
+target_user: "Apresentador de workshop, palestra, aula ou treinamento"
+target_audience: "distributed"  # distribuído pra alunos da Mentoria Arcane — REGRA AUTOCONTIDO ativa
+last_rebuilt: "2026-05-08"  # via squad-forge `*rebuild` — profundidade obrigatória + autocontido
+
+# ═══════════════════════════════════════════════════════════════════════════
+# AGENTS
+# ═══════════════════════════════════════════════════════════════════════════
+
+tiers:
+  orchestrator:
+    - "slide-forge-chief"
+  tier_1:
+    - "visual-briefer"
+
+# ═══════════════════════════════════════════════════════════════════════════
+# TASKS
+# ═══════════════════════════════════════════════════════════════════════════
+
+tasks:
+  # Chief tasks (Fases 0-6)
+  - start
+  - define-event
+  - map-sources
+  - capture-dump
+  - define-skeleton
+  - develop-block-theory
+  - validate-full-theory
+  - produce-block-slides
+  # Visual-briefer tasks (Ponte 6→7 + Fase 7)
+  - define-visual-direction
+  - build-style-prefix
+  - write-manus-briefing
+  - save-and-deliver
+
+# ═══════════════════════════════════════════════════════════════════════════
+# WORKFLOW
+# ═══════════════════════════════════════════════════════════════════════════
+
+workflows:
+  - "wf-slide-forge"
+
+# ═══════════════════════════════════════════════════════════════════════════
+# QUALITY GATES
+# ═══════════════════════════════════════════════════════════════════════════
+
+quality_gates:
+  - id: "QG-SF-01"
+    name: "Esqueleto Macro Aprovado"
+    transition: "phase_2.5 -> phase_3"
+    blocking: true
+    criteria: "Lista de blocos definida, cada um com posição/tempo/função, usuário aprovou explicitamente"
+
+  - id: "QG-SF-02"
+    name: "Teoria Inteira Validada (CRÍTICO)"
+    transition: "phase_4 -> phase_5"
+    blocking: true
+    critical: true
+    criteria: "Todos os blocos com teoria fechada, usuário validou coerência cabo a rabo, bridges definidos, arcos emocionais marcados"
+    note: "Sem QG-02, NÃO passa pra produção de slides. Gate destrava Fase 5-6."
+
+  - id: "QG-SF-03"
+    name: "Slides do Bloco N Aprovados"
+    transition: "instanced per block"
+    blocking: true
+    criteria: "Slides transpostos com fidelidade à teoria, densidade respeitada (~5-6 linhas), estilo aula/apresentação, usuário aprovou bloco completo"
+
+  - id: "QG-SF-04"
+    name: "Todos Blocos de Slides Aprovados"
+    transition: "phase_5_6 -> phase_6_7"
+    blocking: true
+    criteria: "Todos os blocos com slides aprovados, doc de slides completo, numeração correta"
+
+  - id: "QG-SF-05"
+    name: "Direção Visual Capturada"
+    transition: "phase_6_7 -> phase_7"
+    blocking: true
+    criteria: "Documento direcao-visual-{evento}.md criado com vibe + refs + design system + negativos preenchidos, usuário confirmou"
+
+  - id: "QG-SF-06"
+    name: "Briefing Entregue"
+    transition: "phase_7 -> end"
+    blocking: true
+    criteria: "Briefing salvo no workspace path + cópia em local fácil acesso, style prefix idêntico em todas as partes, visual rhymes e sequências evolutivas marcados"
+
+# ═══════════════════════════════════════════════════════════════════════════
+# DEPENDENCIES
+# ═══════════════════════════════════════════════════════════════════════════
+
+dependencies:
+  required:
+    - "Manus + Nano Banana Pro (modelo de geração de imagens — externo ao squad, mas o briefing é desenhado pra ele)"
+  optional:
+    - "Doc de design system do usuário (se houver)"
+    - "Material de referência do usuário (Obsidian, KB, palestras, transcrições, etc — usuário aponta paths)"
+
+# ═══════════════════════════════════════════════════════════════════════════
+# KNOWLEDGE BASE
+# ═══════════════════════════════════════════════════════════════════════════
+
+knowledge_base:
+  - "data/cardinal-rules.md"
+  - "data/debate-protocol.md"
+  - "data/synthesis-template.md"
+  - "data/visual-direction-template.md"
+  - "data/enxutar-rules.md"
+  - "data/slides-content-reference.md"
+  - "data/manus-rules.md"
+  - "data/briefing-examples/"

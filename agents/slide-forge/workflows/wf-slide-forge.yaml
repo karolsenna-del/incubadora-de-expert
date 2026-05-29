@@ -1,0 +1,237 @@
+workflow:
+  id: wf-slide-forge
+  name: "wf-slide-forge"
+  version: "2.0.0"
+  type: "pipeline"
+  description: "Pipeline de produção de conteúdo de apresentação em 7 fases. Da definição do tema → teoria robusta validada → slides aprovados bloco a bloco → briefing visual cinemático pronto pro Manus."
+  trigger: "Usuário aciona /slideForge"
+  unidirectional: true
+  orchestrator: "@slide-forge-chief"
+
+  handoff_prompts:
+    slide-forge-chief_to_visual-briefer:
+      when: "QG-SF-04 PASS — todos os blocos com slides aprovados"
+      context: "Doc de slides aprovado, doc de construção como referência da teoria, lista de blocos com função/posição"
+      instruction: "Iniciar Ponte 6→7 — capturar direção visual com 4 perguntas (vibe, refs, design system, negativos). Sem direção, briefing fica genérico."
+
+  sequence:
+    - phase: setup
+      agent: "slide-forge-chief"
+      action: "Inicializar pipeline, coletar contexto inicial"
+    - phase: define-event
+      agent: "slide-forge-chief"
+      action: "Definir tipo de evento, tema, contexto, função"
+    - phase: map-sources
+      agent: "slide-forge-chief"
+      action: "Mapear fontes ou ativar despejo bruto"
+    - phase: define-skeleton
+      agent: "slide-forge-chief"
+      action: "Esqueleto macro do evento"
+      checkpoint: { id: QG-SF-01, blocking: true }
+    - phase: develop-block-theory
+      agent: "slide-forge-chief"
+      action: "Loop: aprofundar teoria por bloco"
+    - phase: validate-full-theory
+      agent: "slide-forge-chief"
+      action: "Validação cabo a rabo (CRÍTICA)"
+      checkpoint: { id: QG-SF-02, blocking: true }
+    - phase: produce-block-slides
+      agent: "slide-forge-chief"
+      action: "Loop: produzir slides com aprovação por bloco"
+      checkpoint: { id: QG-SF-04, blocking: true }
+    - phase: define-visual-direction
+      agent: "visual-briefer"
+      action: "Capturar vibe, refs, design system"
+      checkpoint: { id: QG-SF-05, blocking: true }
+    - phase: write-manus-briefing
+      agent: "visual-briefer"
+      action: "Briefing Manus + style prefix + delivery"
+      checkpoint: { id: QG-SF-06, blocking: true }
+
+phases:
+
+  - phase: 0
+    name: "Setup"
+    tasks: [start]
+    agent: "@slide-forge-chief"
+    blocking: false
+    duration: "2-3 min"
+
+  - phase: 1
+    name: "Definição do Evento"
+    tasks: [define-event]
+    agent: "@slide-forge-chief"
+    blocking: true
+    duration: "5-10 min"
+
+  - phase: 2
+    name: "Mapeamento de Fontes + Despejo"
+    tasks: [map-sources, capture-dump]
+    agent: "@slide-forge-chief"
+    blocking: true
+    duration: "10-30 min"
+    notes: "capture-dump é transversal — pode ser ativado em qualquer fase posterior"
+
+  - phase: 2.5
+    name: "Esqueleto Macro do Evento"
+    tasks: [define-skeleton]
+    agent: "@slide-forge-chief"
+    blocking: true
+    duration: "10-20 min"
+    quality_gate: "QG-SF-01"
+
+  - phase: 3
+    name: "Aprofundar Teoria por Bloco (loop)"
+    tasks: [develop-block-theory]
+    agent: "@slide-forge-chief"
+    blocking: true
+    loop: true
+    loop_iterator: "para cada bloco do esqueleto"
+    duration: "20-90 min por bloco"
+
+  - phase: 4
+    name: "Validação Teoria Cabo a Rabo (CRÍTICO)"
+    tasks: [validate-full-theory]
+    agent: "@slide-forge-chief"
+    blocking: true
+    critical: true
+    duration: "15-30 min"
+    quality_gate: "QG-SF-02"
+
+  - phase: "5-6"
+    name: "Produção de Slides por Bloco (loop com aprovação)"
+    tasks: [produce-block-slides]
+    agent: "@slide-forge-chief"
+    blocking: true
+    loop: true
+    loop_iterator: "para cada bloco da teoria validada"
+    duration: "20-60 min por bloco"
+    quality_gates: ["QG-SF-03", "QG-SF-04"]
+
+  - phase: "6→7"
+    name: "Direção Visual (ponte)"
+    tasks: [define-visual-direction]
+    agent: "@visual-briefer"
+    blocking: true
+    duration: "10-30 min"
+    quality_gate: "QG-SF-05"
+
+  - phase: 7
+    name: "Briefing Manus"
+    tasks: [build-style-prefix, write-manus-briefing, save-and-deliver]
+    agent: "@visual-briefer"
+    blocking: true
+    duration: "30-60 min por bloco"
+    quality_gate: "QG-SF-06"
+
+# ═══════════════════════════════════════════════════════════════════════════
+# QUALITY GATES (resumo — definição completa em squad.yaml)
+# ═══════════════════════════════════════════════════════════════════════════
+
+quality_gates:
+  - id: "QG-SF-01"
+    transition: "phase_2.5 -> phase_3"
+    criteria: "Esqueleto macro aprovado explicitamente pelo usuário"
+    blocking: true
+
+  - id: "QG-SF-02"
+    transition: "phase_4 -> phase_5"
+    criteria: "Teoria inteira validada cabo a rabo (todos os blocos coerentes, bridges fluem, arcos marcados)"
+    blocking: true
+    critical: true
+    note: "Sem QG-SF-02, NÃO passa pra produção de slides."
+
+  - id: "QG-SF-03"
+    transition: "instanced per block (per loop iteration)"
+    criteria: "Slides do bloco N aprovados pelo usuário"
+    blocking: true
+
+  - id: "QG-SF-04"
+    transition: "phase_5_6 -> phase_6_7"
+    criteria: "Todos os blocos com slides aprovados"
+    blocking: true
+
+  - id: "QG-SF-05"
+    transition: "phase_6_7 -> phase_7"
+    criteria: "Direção visual capturada (vibe + refs + design system + negativos)"
+    blocking: true
+
+  - id: "QG-SF-06"
+    transition: "phase_7 -> end"
+    criteria: "Briefings salvos nos 2 paths, style prefix consistente, entregue ao usuário"
+    blocking: true
+
+# ═══════════════════════════════════════════════════════════════════════════
+# DEPENDENCY GRAPH
+# ═══════════════════════════════════════════════════════════════════════════
+
+dependency_graph:
+  start:
+    next: [define-event]
+  define-event:
+    next: [map-sources]
+  map-sources:
+    next: [define-skeleton]
+    can_invoke: [capture-dump]
+  capture-dump:
+    next: [parent_task_resumes]
+  define-skeleton:
+    next: [develop-block-theory]
+    gate: "QG-SF-01"
+  develop-block-theory:
+    next: [validate-full-theory]
+    can_invoke: [capture-dump]
+    loop_until: "todos os blocos fechados"
+  validate-full-theory:
+    next: [produce-block-slides]
+    gate: "QG-SF-02"
+    can_loop_back_to: [develop-block-theory, "se usuário pedir revisão profunda"]
+  produce-block-slides:
+    next: [define-visual-direction]
+    loop_until: "todos os blocos com slides aprovados"
+    gates: ["QG-SF-03", "QG-SF-04"]
+  define-visual-direction:
+    next: [build-style-prefix]
+    gate: "QG-SF-05"
+  build-style-prefix:
+    next: [write-manus-briefing]
+  write-manus-briefing:
+    next: [save-and-deliver]
+    loop_until: "todos os blocos com briefing escrito"
+  save-and-deliver:
+    next: [end]
+    gate: "QG-SF-06"
+
+# ═══════════════════════════════════════════════════════════════════════════
+# HUMAN TOUCHPOINTS
+# ═══════════════════════════════════════════════════════════════════════════
+
+human_touchpoints:
+  - phase: 1
+    description: "Define tipo de evento, tema, contexto, função"
+    blocking: true
+  - phase: 2
+    description: "Aponta fontes ou ativa modo despejo"
+    blocking: true
+  - phase: "2-3 (transversal)"
+    description: "Despejo bruto (ativável a qualquer momento)"
+    blocking: false
+  - phase: 2.5
+    description: "Aprova esqueleto macro"
+    blocking: true
+  - phase: 3
+    description: "Debate profundo + decisões A/B/C + aprovação por bloco"
+    blocking: true
+  - phase: 4
+    description: "Valida teoria inteira cabo a rabo"
+    blocking: true
+    critical: true
+  - phase: "5-6"
+    description: "Aprova slides por bloco (com possível iteração)"
+    blocking: true
+  - phase: "6→7"
+    description: "Define direção visual (vibe, refs, design system)"
+    blocking: true
+  - phase: 7
+    description: "Confirma paths de salvamento (primeira vez do evento)"
+    blocking: false

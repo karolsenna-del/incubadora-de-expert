@@ -1,0 +1,183 @@
+# ===============================================================================
+# SQUAD: Low Ticket Arcane
+# Squad end-to-end pra aluno Arcane fazer perpetuo Low Ticket — Metodo Maxxima
+# ===============================================================================
+
+name: squad-low-ticket-arcane
+title: "Low Ticket Arcane"
+version: "1.7.0"
+author: "Euriler Jube (Arka / Mentoria Arcane)"
+description: >
+  Squad de 7 agentes (1 chief + 6 specialists) que ajuda aluno Arcane a fazer
+  perpetuo Low Ticket end-to-end seguindo o Metodo Maxxima (Imperio Low Ticket).
+  Cobre desde pensar/planejar produto ate escalar com lateralidade — passando
+  por oferta, ruminacao, pagina, criativos, copy fina, trafego e diagnostico.
+  KB embarcada (~1.2MB com regras-criativo-mestre + swipe roteiros expandido) — squad 100% autocontido.
+
+slash_prefix: "squad-low-ticket-arcane"
+pattern_prefix: "LT"
+target_user: "Aluno da Mentoria Arcane operando perpetuo Low Ticket"
+based_on: "Metodo Imperio Low Ticket (Ricardo Maxxima)"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# USE CASES
+# ─────────────────────────────────────────────────────────────────────────────
+use_cases:
+  - id: UC1
+    name: "Workflow Guiado"
+    description: "Aluno e conduzido pelas 5 fases do `wf-perpetuo-completo` (criar → azul → laranja → verde → lateralidade)"
+  - id: UC2
+    name: "Convocacao Livre"
+    description: "Aluno chama agente especifico quando precisa (estrategista, page-master, criativo, copy, trafego, diagnostico)"
+  - id: UC3
+    name: "SOS Diagnostico"
+    description: "Aluno em problema chama diagnostician direto via chief — Funil 3X + 26 problemas catalogados"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TIER SYSTEM
+# ─────────────────────────────────────────────────────────────────────────────
+tiers:
+  orchestrator:
+    - lt-chief
+  tier_1:
+    - lt-strategist
+    - lt-page-master
+    - lt-creative-director
+    - lt-copywriter
+    - lt-traffic-ops
+    - lt-diagnostician
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AGENTS — mapeamento KB-fonte e persona-ancora
+# ─────────────────────────────────────────────────────────────────────────────
+agents:
+  - id: lt-chief
+    persona_anchor: "Maxxima conduzindo Imersao"
+    kb_sources: ["README.md", "REGRAS-CARDINAIS.md", "GLOSSARIO.md", "data/core/frases-lei.md"]
+    role: "Orquestrador — onboarding, roteamento, diagnostico inicial Funil 3X"
+
+  - id: lt-strategist
+    persona_anchor: "Ricardo Atlas (estrategista)"
+    kb_sources: ["VOL-01-modelo-de-negocio-e-oferta.md", "VOL-02-funil-3x-e-diagnostico.md", "VOL-07-copywriting.md (parte estrutural)"]
+    role: "Pensa produto/oferta/Funil 3X projetivo/lateralidade/Planilha do Norte"
+
+  - id: lt-page-master
+    persona_anchor: "Cole (Page Designer)"
+    kb_sources: ["VOL-03-pagina-de-vendas.md"]
+    role: "Materializa oferta em pagina de 14 blocos com Copy Dinamica + UX/Neurodesign"
+
+  - id: lt-creative-director
+    persona_anchor: "Jett estrategista de criativos"
+    kb_sources: ["VOL-05-criativos.md", "VOL-07-copywriting.md (PRSA copy)"]
+    role: "Produz criativos PRSA/Hulk/Lego — 18+ formatos, Teste Bifasico, ressurreicao"
+
+  - id: lt-copywriter
+    persona_anchor: "Quinn copywriter oficial Maxxima"
+    kb_sources: ["VOL-07-copywriting.md", "VOL-01 (EDI/ruminacao)", "VOL-03 (costura na pagina)"]
+    role: "Copy fina — EDI, Score 0-5, headline 3 partes, costura, Food Porn, recuperador"
+
+  - id: lt-traffic-ops
+    persona_anchor: "Nova gestora de trafego (modo trader)"
+    kb_sources: ["VOL-04-escala-lateralidade-planilha.md", "VOL-06-trafego-pago.md"]
+    role: "Setup BM/pixel + ABO Testadora 1-1-1 + 8 estruturas de escala + kill rules"
+
+  - id: lt-diagnostician
+    persona_anchor: "Doc (diagnosticador) (Mod 07)"
+    kb_sources: ["VOL-08-troubleshooting-e-diagnostico.md", "VOL-02-funil-3x-e-diagnostico.md"]
+    role: "Diagnostico clinico — 26 problemas catalogados, 10 anti-padroes, 13 fix patterns"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TASKS
+# ─────────────────────────────────────────────────────────────────────────────
+tasks:
+  - start                       # Entry point (chief)
+  - new-offer                   # Workflow nova oferta 16d (strategist)
+  - edi-completo                # EDI guiado (copywriter)
+  - headline-3-partes           # Construir headline costurada (copywriter)
+  - nova-pagina                 # 14 blocos (page-master)
+  - prsa-criativo               # Gerar copy PRSA (creative + copywriter)
+  - hulk-lego                   # Criativo modular 10x5x3 (creative)
+  - teste-bifasico              # F1 variedade + F2 variacoes (creative)
+  - setup-trafego               # BM + pixel + API Conversoes (traffic-ops)
+  - fase-3D                     # Primeiros 3 dias (traffic-ops)
+  - kit-escala                  # Testar 8 estruturas (traffic-ops)
+  - sos-diagnostico             # Entrada principal diagnostician
+  - arvore-diagnostico          # Walk pelos thresholds (diagnostician)
+  - verba-do-roi                # Descoberta empirica do teto (strategist + traffic)
+  - lateralidade                # Proxima oferta paralela (strategist)
+  - planilha-norte              # Simulacao empilhamento (strategist)
+  - playback-onde-estou         # Situa aluno na jornada (chief)
+
+# ─────────────────────────────────────────────────────────────────────────────
+# WORKFLOWS
+# ─────────────────────────────────────────────────────────────────────────────
+workflows:
+  - wf-perpetuo-completo        # 5 fases: criar → azul → laranja → verde → lateralidade
+
+# ─────────────────────────────────────────────────────────────────────────────
+# QUALITY GATES (operacionais, do metodo Maxxima)
+# ─────────────────────────────────────────────────────────────────────────────
+quality_gates:
+  - id: QG-LT-001
+    name: "Oferta validada estruturalmente"
+    transition: "Fase 0 → Fase Azul"
+    blocking: true
+    criteria: "Mecanismo unico definido + 1 ruminacao Score 4-5 + headline 3 partes costurada + 4+3 entregaveis + preco R$67-87"
+
+  - id: QG-LT-002
+    name: "Funil 3X dentro"
+    transition: "Fase 3D → escala"
+    blocking: true
+    criteria: "CVP < 4% / Finalizacao < 23% / CPA < 45% do valor do produto"
+
+  - id: QG-LT-003
+    name: "Fase Azul validada"
+    transition: "Azul → Laranja"
+    blocking: true
+    criteria: "ROI 2+ SEM esteira em max 30 dias"
+
+  - id: QG-LT-004
+    name: "Criativos suficientes pra escalar"
+    transition: "Otimizacao → Escala"
+    blocking: true
+    criteria: "Minimo 4 criativos validados (ROI >= 2.5, 5-10 vendas)"
+
+  - id: QG-LT-005
+    name: "Verba do ROI descoberta"
+    transition: "Escala → Lateralidade"
+    blocking: true
+    criteria: "Teto empirico do produto encontrado, ROI estabilizado"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEPENDENCIES (SQUAD AUTOCONTIDO)
+# ─────────────────────────────────────────────────────────────────────────────
+dependencies:
+  required: []
+  optional: []
+
+# REGRA AUTOCONTIDO:
+# - KB completa embarcada em data/kb/ (~390KB)
+# - Zero referencias a paths externos do repo Euriler
+# - Squad portavel pra qualquer aluno Arcane
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OUTPUT STRUCTURE
+# ─────────────────────────────────────────────────────────────────────────────
+output:
+  consumer_facing:
+    - "README.md"
+    - "agents/*.md"
+    - "tasks/*.md"
+    - "workflows/*.md"
+    - "data/core/*.md"
+    - "data/kb/*.md"
+    - "data/kb/swipe-file/*.md"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# METADATA
+# ─────────────────────────────────────────────────────────────────────────────
+metadata:
+  source_kb: "Imperio Low Ticket (Maxxima) — 8 vols + 3 transversais, 6833 linhas, ~390KB"
+  composed_by: "Squad Forge (UC3 — KB-driven)"
+  composed_at: "2026-05-08"
+  target_audience: "distributed (alunos Mentoria Arcane)"

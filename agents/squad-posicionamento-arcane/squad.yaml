@@ -1,0 +1,256 @@
+# Squad Manifest: Squad Posicionamento Arcane
+# Squad da Mentoria Arcane | Criado por Euriler Jube
+
+name: "squad-posicionamento-arcane"
+title: "Squad Posicionamento Arcane"
+version: "1.0.0"
+author: "Euriler Jube"
+description: |
+  Squad da Mentoria Arcane que organiza a vitrine completa do Instagram
+  do aluno expert — do nucleo de influencia (segundo metodo audience)
+  ate o schema da vitrine: display name, bio, link bio, 3 destaques
+  fixos (Sobre/Produto/Depoimentos) e 3 posts fixados (Sobre/Tese/Oferta).
+  Entrega copy pronta + capas-conceito. Zero design.
+
+slash_prefix: "squad-posicionamento-arcane"
+pattern_prefix: "PD"
+target_user: |
+  Aluno da Mentoria Arcane que ja passou pela Fase 1 (proposito +
+  posicionamento + metodologia + primeiro produto) e quer organizar
+  a vitrine do Instagram. Pode rodar sem Fase 1 fechada, mas saida
+  fica mais pobre.
+
+target_audience: "distributed"  # Distribuido pra alunos — AUTOCONTIDO
+
+# ==========================================
+# TIERS / ARQUITETURA
+# ==========================================
+
+tiers:
+  orchestrator:
+    - posicionamento-chief
+  tier_1:
+    - nucleo-strategist
+    - vitrine-strategist
+
+# ==========================================
+# AGENTES
+# ==========================================
+
+agents:
+  - id: posicionamento-chief
+    file: "agents/posicionamento-chief.md"
+    role: "Orquestrador. Onboarding, diagnostico, roteamento, handoffs, compilacao final"
+    tier: "orchestrator"
+    executor_type: "agent"
+
+  - id: nucleo-strategist
+    file: "agents/nucleo-strategist.md"
+    role: "Especialista em Nucleo de Influencia (metodo audience completo)"
+    tier: "tier_1"
+    executor_type: "agent"
+    kb_files:
+      - "data/metodo-audience-completo.md"
+
+  - id: vitrine-strategist
+    file: "agents/vitrine-strategist.md"
+    role: "Especialista em vitrine Instagram (display name, bio, link, destaques, pinned posts + copy)"
+    tier: "tier_1"
+    executor_type: "agent"
+    kb_files:
+      - "data/vitrine-instagram-2026.md"
+      - "data/copy-de-oferta.md"
+      - "data/metodo-audience-completo.md"  # referencia ao nucleo + apresentacao magnetica
+
+# ==========================================
+# TASKS
+# ==========================================
+
+tasks:
+  # Chief tasks
+  - id: start
+    file: "tasks/start.md"
+    responsavel: "@posicionamento-chief"
+    responsavel_type: "agent"
+
+  - id: diagnose-state
+    file: "tasks/diagnose-state.md"
+    responsavel: "@posicionamento-chief"
+    responsavel_type: "agent"
+
+  - id: compile-final-output
+    file: "tasks/compile-final-output.md"
+    responsavel: "@posicionamento-chief"
+    responsavel_type: "agent"
+
+  # Nucleo Strategist tasks
+  - id: gather-fase1-materials
+    file: "tasks/gather-fase1-materials.md"
+    responsavel: "@nucleo-strategist"
+    responsavel_type: "agent"
+
+  - id: build-nucleo-influencia
+    file: "tasks/build-nucleo-influencia.md"
+    responsavel: "@nucleo-strategist"
+    responsavel_type: "agent"
+
+  - id: loop-feedback-nucleo
+    file: "tasks/loop-feedback-nucleo.md"
+    responsavel: "@nucleo-strategist"
+    responsavel_type: "hybrid"
+
+  # Vitrine Strategist tasks
+  - id: build-display-name
+    file: "tasks/build-display-name.md"
+    responsavel: "@vitrine-strategist"
+    responsavel_type: "hybrid"
+
+  - id: build-bio
+    file: "tasks/build-bio.md"
+    responsavel: "@vitrine-strategist"
+    responsavel_type: "hybrid"
+
+  - id: build-link-bio
+    file: "tasks/build-link-bio.md"
+    responsavel: "@vitrine-strategist"
+    responsavel_type: "hybrid"
+
+  - id: build-destaques
+    file: "tasks/build-destaques.md"
+    responsavel: "@vitrine-strategist"
+    responsavel_type: "hybrid"
+
+  - id: build-pinned-posts
+    file: "tasks/build-pinned-posts.md"
+    responsavel: "@vitrine-strategist"
+    responsavel_type: "hybrid"
+
+  - id: produce-copy
+    file: "tasks/produce-copy.md"
+    responsavel: "@vitrine-strategist"
+    responsavel_type: "agent"
+
+# ==========================================
+# WORKFLOWS
+# ==========================================
+
+workflows:
+  - id: wf-posicionamento-digital
+    file: "workflows/wf-posicionamento-digital.yaml"
+    description: "Workflow principal — 4 fases (onboarding/nucleo/vitrine/output)"
+
+# ==========================================
+# QUALITY GATES
+# ==========================================
+
+quality_gates:
+  - id: "QG-PD-001"
+    name: "Onboarding completo"
+    transition: "phase_1 -> phase_2"
+    blocking: false
+    criteria: |
+      Aluno trouxe materiais Fase 1 OU aceitou seguir sem
+      (com ciencia do tradeoff).
+
+  - id: "QG-PD-002"
+    name: "Nucleo validado pelo aluno"
+    transition: "phase_2 -> phase_3"
+    blocking: true
+    criteria: |
+      Aluno confirmou "check, perfeito" apos loop de refinamento.
+      Checklist tecnico do metodo audience valida internamente
+      (ver checklists/nucleo-quality-checklist.md).
+
+  - id: "QG-PD-003"
+    name: "Vitrine — 9 itens com check"
+    transition: "phase_3 -> phase_4"
+    blocking: true
+    criteria: |
+      Todos os 9 itens com check explicito do aluno. Placeholders
+      OK pra itens sem ativo, mas precisam de instrucao acionavel
+      (ver checklists/vitrine-quality-checklist.md).
+
+  - id: "QG-PD-004"
+    name: "Output final consolidado"
+    transition: "phase_4 -> end"
+    blocking: true
+    criteria: |
+      Schema completo + lista de pendencias acionaveis entregue.
+      Aluno tem TUDO pronto pra postar (ver
+      checklists/output-final-checklist.md).
+
+# ==========================================
+# CHECKLISTS
+# ==========================================
+
+checklists:
+  - id: nucleo-quality
+    file: "checklists/nucleo-quality-checklist.md"
+    used_by: "@nucleo-strategist"
+    when: "Antes de mostrar v1 + antes de QG-PD-002 PASS"
+
+  - id: vitrine-quality
+    file: "checklists/vitrine-quality-checklist.md"
+    used_by: "@vitrine-strategist"
+    when: "Em cada item antes de marcar check + antes de QG-PD-003 PASS"
+
+  - id: output-final
+    file: "checklists/output-final-checklist.md"
+    used_by: "@posicionamento-chief"
+    when: "Antes de QG-PD-004 PASS"
+
+# ==========================================
+# KB / DATA (AUTOCONTIDO)
+# ==========================================
+
+data:
+  - id: metodo-audience-completo
+    file: "data/metodo-audience-completo.md"
+    description: "KB autocontida do metodo audience pra construcao do nucleo (adaptada em build-time)"
+
+  - id: vitrine-instagram-2026
+    file: "data/vitrine-instagram-2026.md"
+    description: "KB autocontida de best practices Instagram 2026 + decisoes Mentoria Arcane"
+
+  - id: copy-de-oferta
+    file: "data/copy-de-oferta.md"
+    description: "KB autocontida da estrutura ruminacao→solucao→produto→CTA pra Pinned 3 e copy de conversao"
+
+# ==========================================
+# DEPENDENCIES
+# ==========================================
+
+dependencies:
+  required:
+    - "Aluno completou Fase 1 da Mentoria Arcane (proposito + posicionamento + metodologia + primeiro produto) — OU aceitou seguir sem"
+  optional:
+    - "Aluno tem produto lancado (sem isso: Pinned 3 e Destaque Produto viram placeholders)"
+    - "Aluno tem depoimentos coletados (sem isso: Destaque 3 vira placeholder)"
+    - "Aluno tem funil/LP/lead magnet (sem isso: Link bio vira placeholder)"
+
+# ==========================================
+# BOTTLENECK
+# ==========================================
+
+bottleneck:
+  task: "loop-feedback-nucleo"
+  reason: "Nucleo medio = vitrine medio. Loop pode durar varias iteracoes. Sem nucleo bom, vitrine sai fraco."
+
+# ==========================================
+# HUMAN TOUCHPOINTS
+# ==========================================
+
+human_touchpoints:
+  - "diagnose-state: aluno anexa/cola materiais Fase 1"
+  - "loop-feedback-nucleo: aluno aprova/refusa cada iteracao"
+  - "build-* (9 items): aluno aprova cada item da vitrine"
+  - "produce-copy (opcional): aluno decide se quer copy produzida em cada item"
+
+# ==========================================
+# ACTIVATION
+# ==========================================
+
+activation:
+  command: "/squad-posicionamento-arcane"
+  entry_task: "start"
+  state_file: ".state.json"  # Gerenciado pelo chief

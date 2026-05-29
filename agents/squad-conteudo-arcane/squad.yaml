@@ -1,0 +1,250 @@
+# ===============================================================================
+# SQUAD: Conteudo Arcane
+# Squad criativo end-to-end pra expert produzir conteudo que viraliza, conecta
+# e vende — Metodo Audience (Elias Maman) + Formato Criativo (Hannah Franklin)
+# + principios de comunicacao autorais. KB embarcada. 100% autocontido.
+# ===============================================================================
+
+name: squad-conteudo-arcane
+title: "Conteudo Arcane"
+version: "1.0.1"
+author: "Euriler Jube (Arka / Mentoria Arcane)"
+description: >
+  Squad de 6 agentes (1 chief + 5 specialists) que ajuda expert da Mentoria Arcane
+  a produzir conteudo (Reels + Carrossel) que viraliza, conecta e vende.
+  Cobre desde definicao de formatos e pool de temas estrategicos, ate roteiro
+  pronto pra gravar/diagramar, com analise pos-publicacao cirurgica.
+  Metodo Audience consolidado + Formato Criativo (Hannah) + principios autorais.
+  KB embarcada — squad 100% autocontido, portavel pra qualquer aluno Arcane.
+
+slash_prefix: "squad-conteudo-arcane"
+pattern_prefix: "SCA"
+target_user: "Expert da Mentoria Arcane que quer produzir conteudo organico que viraliza, conecta e vende"
+based_on: "Metodo Audience (Elias Maman) + Formato Criativo (Hannah Franklin) + Filosofia/Funil (Euriler)"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ESCOPO
+# ─────────────────────────────────────────────────────────────────────────────
+# IN-scope:
+#   - Definir formatos (1-3 iniciais + lapidacao 80/20)
+#   - Pesquisa profunda de temas virais (16 categorias Audience)
+#   - Selecao de tema do post (debate com expert, expert bate o martelo)
+#   - Criar teoria do post (pesquisa interna -> externa -> amarracao 6 lentes)
+#   - Roteirizar (hook + intro + conteudo + CTA + posicionamento)
+#   - Orientar producao (laminas carrossel + setup reels)
+#   - Analisar pos-publicacao (cirurgico no Audience + qualitativa comentarios)
+#
+# OUT-of-scope (delegar pra outros squads):
+#   - Definir Nucleo de Influencia (futuro squad-posicionamento-digital)
+#   - Postar / agendar (operacional — outro squad se quiser automatizar)
+#   - Design final do carrossel (squad de design proprio do expert se tiver)
+
+# ─────────────────────────────────────────────────────────────────────────────
+# USE CASES
+# ─────────────────────────────────────────────────────────────────────────────
+use_cases:
+  - id: UC1
+    name: "Setup Inicial"
+    description: "Expert chega zerado — squad conduz definicao de formatos + montagem do pool de 15-30 temas. Workflow setup-inicial."
+
+  - id: UC2
+    name: "Produzir 1 Post"
+    description: "Expert ja tem base (formatos + pool). Squad executa rotina: escolher tema -> criar teoria -> roteiro -> orientacao producao. Workflow produzir-post."
+
+  - id: UC3
+    name: "Produzir Batch"
+    description: "Expert quer N posts de uma vez (batelada). Workflow produzir-batch — escolhe N temas e roda rotina pra cada."
+
+  - id: UC4
+    name: "Analisar Performance"
+    description: "Posts ja postados — expert traz numeros (print, verbalizado, Apify JSON) + comentarios. Aria gera relatorio cirurgico. Workflow analisar-performance."
+
+  - id: UC5
+    name: "Convocacao Livre"
+    description: "Expert chama agente especifico (chamar sage / quero o rico / iris). Chief encaminha sem workflow."
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TIER SYSTEM
+# ─────────────────────────────────────────────────────────────────────────────
+tiers:
+  orchestrator:
+    - vox-chief
+  tier_1:
+    - iris-pesquisador
+    - sage-teorico
+    - rico-roteirista
+    - mack-produtor
+    - aria-analista
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AGENTS — papel + KB-fonte + persona
+# ─────────────────────────────────────────────────────────────────────────────
+agents:
+  - id: vox-chief
+    persona_anchor: "Vox — recepcao calorosa, direto, conhece o time inteiro"
+    kb_sources:
+      - "knowledge/fluxo-do-squad/visao-geral.md"
+      - "knowledge/fluxo-do-squad/quando-revisita-base.md"
+    role: "Orquestrador — recepciona expert, descobre estagio (zerado / com base / com posts), roteia pro caminho/agente certo"
+
+  - id: iris-pesquisador
+    persona_anchor: "Iris — pesquisadora cirurgica, garimpadora de virais"
+    kb_sources:
+      - "knowledge/metodo-audience/16-categorias-temas.md"
+      - "knowledge/metodo-audience/metodo-pesquisa-virais.md"
+      - "knowledge/formato-criativo/conceito-hannah.md"
+      - "knowledge/formato-criativo/biblioteca-formatos.md"
+    role: "Pesquisador duplo — (1) formatos (biblioteca embarcada + garimpo IG/TikTok/YT) (2) temas (16 categorias + virais no nicho + detecta tema quente)"
+
+  - id: sage-teorico
+    persona_anchor: "Sage — pesquisador profundo, estrategista de conteudo"
+    kb_sources:
+      - "knowledge/metodo-audience/8-elementos-conteudo-notavel.md"
+      - "knowledge/metodo-audience/7-gatilhos-atencao.md"
+      - "knowledge/formato-criativo/tema-vs-moral-historia.md"
+      - "knowledge/formato-criativo/interseccao-criativa-a-b.md"
+    role: "Criador de teoria — 3 sub-passos (pesquisa interna do expert -> pesquisa externa densa + engenharia reversa de virais -> amarracao com 6 lentes de comunicacao). Entrega tese + leque de hooks"
+
+  - id: rico-roteirista
+    persona_anchor: "Rico — escritor de punch, dominador de hook"
+    kb_sources:
+      - "knowledge/estrutura-roteiro/macro-hook-intro-conteudo-cta.md"
+      - "knowledge/estrutura-roteiro/principios-nao-negociaveis.md"
+      - "knowledge/estrutura-roteiro/como-construir-looping.md"
+      - "knowledge/estrutura-roteiro/variacao-emocional.md"
+      - "knowledge/metodo-audience/7-gatilhos-atencao.md"
+      - "knowledge/41-templates-audience.md"
+    role: "Roteirista — captura tom de voz do expert + escreve roteiro (hook + intro + conteudo notavel + CTA + posicionamento) + loop iterativo ate aprovacao"
+
+  - id: mack-produtor
+    persona_anchor: "Mack — orientador de execucao, direto, pe no chao"
+    kb_sources:
+      - "knowledge/fluxo-do-squad/visao-geral.md"
+    role: "Orientador de producao — pra carrossel: gera laminas (texto + ideia imagem GPT) + orienta Canva. Pra reels: orienta setup ideal (iPhone Pro 13+, modo cinema, mic Hollyland/Boya, contra luz). Nao produz — orienta expert a executar"
+
+  - id: aria-analista
+    persona_anchor: "Aria — estrategista pos-publicacao, cirurgica nos numeros"
+    kb_sources:
+      - "knowledge/metodo-audience/metricas-diagnostico.md"
+      - "knowledge/analise/diagnostico-cirurgico.md"
+      - "knowledge/analise/escalar-formato-vs-assunto.md"
+      - "knowledge/analise/reaproveitamento.md"
+      - "knowledge/analise/analise-comentarios.md"
+      - "knowledge/analise/processar-apify.md"
+    role: "Analista estrategica — diagnostica posts (3 metricas-chave Audience + identifica tema/hook/formato/elementos usados) + le comentarios qualitativamente + gera relatorio com insights + sugestoes de escala (formato vs assunto) + reaproveitamento. NAO dispara acao — expert decide"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TASKS
+# ─────────────────────────────────────────────────────────────────────────────
+tasks:
+  # Entry
+  - start                          # Entry point (vox)
+
+  # Fase Inicial (base pontual)
+  - pesquisar-formatos             # Passo 1 (iris)
+  - pesquisar-temas                # Passo 2 (iris)
+  - ensinar-pesquisa-manual        # Iris ensina expert a pesquisar sozinho
+
+  # Rotina por post
+  - escolher-tema-post             # Passo 3 (iris + expert decide)
+  - sugerir-tema-do-momento        # Apoio passo 3 — oportunidades emergentes (iris)
+  - criar-teoria                   # Passo 4 master (sage)
+  - pesquisa-interna               # Passo 4.1 — expert despeja (sage)
+  - pesquisa-externa               # Passo 4.2 — sage caca densa + engenharia reversa virais
+  - amarracao-lentes               # Passo 4.3 — sage estrutura com 6 lentes
+  - capturar-tom                   # Pre-roteiro — rico captura tom de voz
+  - roteirizar                     # Passo 5 master (rico)
+  - refinar-roteiro                # Loop de feedback ate aprovacao (rico)
+
+  # Producao
+  - gerar-laminas-carrossel        # Passo 6 carrossel (mack)
+  - orientar-reels                 # Passo 6 reels (mack)
+
+  # Analise
+  - analisar-post                  # Analise individual (aria)
+  - analisar-batch                 # Analise comparativa N posts (aria)
+  - analisar-comentarios           # Analise qualitativa (aria)
+  - ler-apify                      # Processar JSON Apify (aria)
+
+# ─────────────────────────────────────────────────────────────────────────────
+# WORKFLOWS
+# ─────────────────────────────────────────────────────────────────────────────
+workflows:
+  - setup-inicial                  # Passo 1 + Passo 2 → base-inicial.md
+  - produzir-post                  # Passo 3 → 4 → 5 → 6 (1 post)
+  - produzir-batch                 # Passo 3 (N temas) → loop 4-6 (batelada)
+  - analisar-performance           # Analise pos-publicacao
+
+# ─────────────────────────────────────────────────────────────────────────────
+# QUALITY GATES
+# ─────────────────────────────────────────────────────────────────────────────
+quality_gates:
+  - id: QG-SCA-001
+    name: "Base inicial completa"
+    transition: "Setup → Produzir"
+    blocking: true
+    criteria: "1-3 formatos definidos + pool de 15-30 temas categorizados em base-inicial.md"
+
+  - id: QG-SCA-002
+    name: "Tema do post cravado"
+    transition: "Passo 3 → Passo 4"
+    blocking: true
+    criteria: "Expert bateu o martelo em 1 tema explicito. Sem ambiguidade."
+
+  - id: QG-SCA-003
+    name: "Teoria pronta"
+    transition: "Passo 4 → Passo 5"
+    blocking: true
+    criteria: "teoria.md completo: tese central + linha raciocinio + provas + moral + leque 5-7 hooks sugeridos"
+
+  - id: QG-SCA-004
+    name: "Roteiro aprovado pelo expert"
+    transition: "Passo 5 → Passo 6"
+    blocking: true
+    criteria: "Roteiro passou em loop de feedback. Expert disse explicitamente: pode produzir."
+
+  - id: QG-SCA-005
+    name: "Analise cirurgica entregue"
+    transition: "Pos-post → proxima rodada"
+    blocking: false
+    criteria: "Relatorio com diagnostico por metrica + analise qualitativa comentarios + recomendacoes estrategicas"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEPENDENCIES (SQUAD AUTOCONTIDO)
+# ─────────────────────────────────────────────────────────────────────────────
+dependencies:
+  required: []
+  optional: []
+
+# REGRA AUTOCONTIDO:
+# - KB completa embarcada em knowledge/
+# - Zero referencias a paths externos (NDF, PMI, Auroq, business/, docs/knowledge/)
+# - Squad portavel pra qualquer aluno Arcane
+# - Templates/swipe-files vazios por design — expert popula com referencias proprias
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OUTPUT STRUCTURE (gerado na pasta do expert)
+# ─────────────────────────────────────────────────────────────────────────────
+output_layout:
+  expert_workspace: "docs/producao-conteudo/{expert-slug}/"
+  files:
+    - "base-inicial.md"                                # output Fase Inicial
+    - "perfil-tom-de-voz.md"                            # captado no Passo 5 (1x)
+    - "posts/{slug-post}/teoria.md"                    # output Passo 4
+    - "posts/{slug-post}/roteiro.md"                   # output Passo 5
+    - "posts/{slug-post}/laminas-carrossel.md"         # output Passo 6 (se carrossel)
+    - "posts/{slug-post}/direcao-reels.md"             # output Passo 6 (se reels)
+    - "analises/{YYYY-MM-DD}/relatorio.md"             # output Aria
+
+# ─────────────────────────────────────────────────────────────────────────────
+# METADATA
+# ─────────────────────────────────────────────────────────────────────────────
+metadata:
+  source_kb:
+    - "Metodo Audience — 5 pilares (Elias Maman)"
+    - "Formato Criativo (Hannah Franklin) — palestra Genios"
+    - "Crescimento Organico no Instagram (Euriler) — palestra Genios"
+    - "Squad anterior metodo-audience (templates 41 + 16 categorias)"
+  composed_by: "Squad Forge (UC1 — extracao guiada)"
+  composed_at: "2026-05-11"
+  target_audience: "distributed (alunos Mentoria Arcane)"
