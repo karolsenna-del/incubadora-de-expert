@@ -3,19 +3,39 @@
   "kb_name": "Alcateia Implementação - Vini Grevy",
   "mode": "full",
   "version": "3.0.0",
-  "current_phase": 2,
+  "current_phase": 5,
   "phase_status": {
     "phase_0": "completed",
     "phase_1": "completed",
-    "phase_2": "pending",
-    "phase_3": "pending",
-    "phase_4": "pending"
+    "phase_2": "completed",
+    "phase_3": "completed",
+    "phase_4": "completed",
+    "phase_5": "pending"
   },
   "sources": [
     {"type": "transcricoes", "count": 92, "path": "sources/transcricoes/"}
   ],
-  "volumes_composed": 0,
+  "volumes_composed": 7,
+  "volumes_planned": 7,
+  "volumes_delivered": [
+    "VOL-fundamentos",
+    "VOL-posicionamento",
+    "VOL-oferta",
+    "VOL-conteudo",
+    "VOL-funil-vendas",
+    "VOL-social-selling",
+    "VOL-vendas-trafego"
+  ],
+  "integration_artifacts": [
+    "README.md",
+    "REGRAS-CARDINAIS.md",
+    "REPERTORIO.md",
+    "GLOSSARIO.md"
+  ],
+  "mapa_territorial": "MAPA-TERRITORIAL.md",
   "validation_score": 0,
-  "quality_gates_passed": [],
-  "started_at": "2026-05-26T13:00:00Z"
+  "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003", "QG-ETL-004"],
+  "started_at": "2026-05-26T13:00:00Z",
+  "phase_2_completed_at": "2026-05-29T00:00:00Z",
+  "phase_4_completed_at": "2026-05-29T00:00:00Z"
 }
