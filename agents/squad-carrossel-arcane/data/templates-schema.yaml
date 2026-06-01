@@ -1,0 +1,60 @@
+# Schema de meta.yaml de cada template salvo
+# Local: ~/.carrossel-arcane/templates/{slug}/meta.yaml
+
+# Schema:
+
+name: "Capa Minimalista"            # nome legivel
+slug: "capa-minimalista"            # slug usado como ID e nome de pasta
+type: "capa"                        # capa | conteudo | cta | lista | quote | stats | antes-depois | custom
+dimensions: "1080x1350"             # 1080x1350 (4:5) | 1080x1080 (1:1) | 1080x1920 (9:16)
+font: "Open Sans"                   # fonte principal usada
+created_at: "2026-05-21T00:00:00Z"
+
+slots:
+  - id: "headline"
+    type: "text"                    # text | image-ai | image-manual | image-none
+    placeholder: "Texto da capa"
+    bold_strategy: "auto"           # auto | manual | none
+
+  - id: "subtext"
+    type: "text"
+    placeholder: "Subtexto opcional"
+    bold_strategy: "none"
+
+  - id: "hero-image"
+    type: "image-ai"
+    fallback: "image-manual"        # se API nao configurada, vira manual
+    prompt_template: "editorial photography, {context}, professional, 1080x1080"
+    aspect_ratio: "1:1"
+
+  - id: "logo"
+    type: "image-none"              # imagem fixa do template
+    asset: "assets/logo.png"        # referencia interna
+
+# Exemplos por tipo:
+
+# === CAPA ===
+# slots: headline (text) + hero-image (image-ai ou image-manual)
+# Geralmente NAO tem texto longo
+
+# === CONTEUDO ===
+# slots: headline (text) + body (text) + optional image (image-*)
+
+# === CTA ===
+# slots: question (text) + cta (text) + assinatura (image-none ou text)
+# Sem imagem grande
+
+# === LISTA ===
+# slots: title (text) + items[1..N] (text)
+# Sem imagem geralmente
+
+# === QUOTE ===
+# slots: quote (text) + author (text)
+# Sem imagem ou imagem fundo blur
+
+# === STATS ===
+# slots: number (text gigante) + label (text) + context (text)
+# Sem imagem
+
+# === ANTES/DEPOIS ===
+# slots: label-before (text) + image-before (image-*) + label-after (text) + image-after (image-*)

@@ -1,0 +1,99 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# SQUAD: HeyGen Arcane
+# Producao de video com clone real do usuario via MCP HeyGen.
+# Avatar V (audio-driven) + voz clonada + scripts otimizados por look e formato.
+# ═══════════════════════════════════════════════════════════════════════════
+
+name: "squad-heygen-arcane"
+title: "HeyGen Arcane"
+version: "1.0.0"
+author: "Euriler Jube"
+description: >
+  Squad de producao de videos com clone real do usuario via MCP do HeyGen.
+  Avatar V audio-driven + voz clonada + scripts otimizados. Cobre ad curto,
+  conteudo organico e long-form ate 3 min. Voz real via upload de audio
+  (audioUrl bypassa TTS); gesto vem da entonacao automaticamente.
+
+slash_prefix: "squad-heygen-arcane"
+pattern_prefix: "HGN"
+target_user: "Criador que ja tem Avatar V treinado no HeyGen e MCP HeyGen autenticado no Claude Code"
+
+# ─────────────────────────────────────────────────────────────────
+# USE CASES
+# ─────────────────────────────────────────────────────────────────
+use_cases:
+  - id: UC1
+    name: "Ad Curto"
+    description: "Reels/Shorts 10-30s com hook forte (lancador, diagnostico, confronto)"
+  - id: UC2
+    name: "Conteudo Organico"
+    description: "Reels 30-90s mais reflexivo, story-driven, sem CTA agressivo"
+  - id: UC3
+    name: "Long-form"
+    description: "Video de treinamento, explainer, headline de curso ate ~3 min"
+  - id: UC4
+    name: "A/B de Look"
+    description: "Mesmo audio renderizado em 2+ avatar looks pra testar qual converte"
+
+# ─────────────────────────────────────────────────────────────────
+# TIER SYSTEM
+# ─────────────────────────────────────────────────────────────────
+tiers:
+  orchestrator:
+    - heygen-chief
+  tier_1:
+    - estrategista-copy-ads
+    - diretor-look
+    - operador-heygen-mcp
+
+# ─────────────────────────────────────────────────────────────────
+# TASKS
+# ─────────────────────────────────────────────────────────────────
+tasks:
+  - start
+  - setup-perfil
+  - processar-input
+  - gerar-scripts
+  - validar-scripts
+  - orientar-gravacao
+  - produzir-videos
+  - polling-status
+  - entregar
+
+# ─────────────────────────────────────────────────────────────────
+# WORKFLOWS
+# ─────────────────────────────────────────────────────────────────
+workflows:
+  - wf-squad-heygen-arcane
+
+# ─────────────────────────────────────────────────────────────────
+# QUALITY GATES
+# ─────────────────────────────────────────────────────────────────
+quality_gates:
+  - id: "QG-HGN-01"
+    name: "Perfil registrado"
+    transition: "Setup -> Producao"
+    blocking: true
+    criteria: "Avatar look_id(s) e voice_id do usuario registrados em data/perfil-usuario.md"
+  - id: "QG-HGN-02"
+    name: "Scripts validados"
+    transition: "Geracao -> Gravacao"
+    blocking: true
+    criteria: "Usuario confirmou ao menos 1 script (ou ajustou e aprovou)"
+  - id: "QG-HGN-03"
+    name: "Audios em URL publica"
+    transition: "Gravacao -> Producao MCP"
+    blocking: true
+    criteria: "Audio uploadado, URL publica acessivel, mapeado para script + look correto"
+
+# ─────────────────────────────────────────────────────────────────
+# DEPENDENCIES
+# ─────────────────────────────────────────────────────────────────
+dependencies:
+  required:
+    - "Claude Code com MCP HeyGen autenticado na conta do usuario"
+    - "Avatar V treinado na UI HeyGen (Clone a Real Person)"
+    - "Plano HeyGen pago (Creator+) — Avatar V requer credits premium"
+  optional:
+    - "Voice clone na conta HeyGen (sem, usa default voice do avatar)"
+    - "catbox.moe ou outro hosting de audio com URL publica"

@@ -1,0 +1,157 @@
+{
+  "campaign": "120247935624610286",
+  "adsets": {
+    "ADV_Puro": "120247935624940286",
+    "ADV_Int-mkt-digital": "120247935625910286",
+    "ADV_Int-ia": "120247935626400286"
+  },
+  "creatives": {
+    "NORMAL_mcp-meta_C1_H01": "1102709772427874",
+    "NORMAL_visao-futuro_C1_H02": "1703820741068256",
+    "NORMAL_imaginecta_C2_H01": "959916423575288",
+    "UGC_segredo_C1_H01": "1475216307229616",
+    "SELF_anuncios-solo_C1_H02": "3615572618592109",
+    "LOFI_metodo-obsoleto_C1_H01": "2057543905639506",
+    "EST_prova-numeros_C3_H01": "26854090370927641",
+    "EST_roi-50x_C3_H01": "2105628853332532",
+    "EST_sem-lancador-sem-socio_C2_H01": "1185804146972250"
+  },
+  "ads": [
+    {
+      "name": "NORMAL_mcp-meta_C1_H01",
+      "adset": "ADV_Puro",
+      "id": "120247935640700286"
+    },
+    {
+      "name": "NORMAL_visao-futuro_C1_H02",
+      "adset": "ADV_Puro",
+      "id": "120247935641300286"
+    },
+    {
+      "name": "NORMAL_imaginecta_C2_H01",
+      "adset": "ADV_Puro",
+      "id": "120247935641900286"
+    },
+    {
+      "name": "UGC_segredo_C1_H01",
+      "adset": "ADV_Puro",
+      "id": "120247935642940286"
+    },
+    {
+      "name": "SELF_anuncios-solo_C1_H02",
+      "adset": "ADV_Puro",
+      "id": "120247935643520286"
+    },
+    {
+      "name": "LOFI_metodo-obsoleto_C1_H01",
+      "adset": "ADV_Puro",
+      "id": "120247935644050286"
+    },
+    {
+      "name": "EST_prova-numeros_C3_H01",
+      "adset": "ADV_Puro",
+      "id": "120247935645100286"
+    },
+    {
+      "name": "EST_roi-50x_C3_H01",
+      "adset": "ADV_Puro",
+      "id": "120247935646050286"
+    },
+    {
+      "name": "EST_sem-lancador-sem-socio_C2_H01",
+      "adset": "ADV_Puro",
+      "id": "120247935646610286"
+    },
+    {
+      "name": "NORMAL_mcp-meta_C1_H01",
+      "adset": "ADV_Int-mkt-digital",
+      "id": "120247935647860286"
+    },
+    {
+      "name": "NORMAL_visao-futuro_C1_H02",
+      "adset": "ADV_Int-mkt-digital",
+      "id": "120247935649120286"
+    },
+    {
+      "name": "NORMAL_imaginecta_C2_H01",
+      "adset": "ADV_Int-mkt-digital",
+      "id": "120247935649770286"
+    },
+    {
+      "name": "UGC_segredo_C1_H01",
+      "adset": "ADV_Int-mkt-digital",
+      "id": "120247935650930286"
+    },
+    {
+      "name": "SELF_anuncios-solo_C1_H02",
+      "adset": "ADV_Int-mkt-digital",
+      "id": "120247935651770286"
+    },
+    {
+      "name": "LOFI_metodo-obsoleto_C1_H01",
+      "adset": "ADV_Int-mkt-digital",
+      "id": "120247935652610286"
+    },
+    {
+      "name": "EST_prova-numeros_C3_H01",
+      "adset": "ADV_Int-mkt-digital",
+      "id": "120247935653800286"
+    },
+    {
+      "name": "EST_roi-50x_C3_H01",
+      "adset": "ADV_Int-mkt-digital",
+      "id": "120247935657320286"
+    },
+    {
+      "name": "EST_sem-lancador-sem-socio_C2_H01",
+      "adset": "ADV_Int-mkt-digital",
+      "id": "120247935658380286"
+    },
+    {
+      "name": "NORMAL_mcp-meta_C1_H01",
+      "adset": "ADV_Int-ia",
+      "id": "120247935659960286"
+    },
+    {
+      "name": "NORMAL_visao-futuro_C1_H02",
+      "adset": "ADV_Int-ia",
+      "id": "120247935661560286"
+    },
+    {
+      "name": "NORMAL_imaginecta_C2_H01",
+      "adset": "ADV_Int-ia",
+      "id": "120247935662490286"
+    },
+    {
+      "name": "UGC_segredo_C1_H01",
+      "adset": "ADV_Int-ia",
+      "id": "120247935663670286"
+    },
+    {
+      "name": "SELF_anuncios-solo_C1_H02",
+      "adset": "ADV_Int-ia",
+      "id": "120247935664830286"
+    },
+    {
+      "name": "LOFI_metodo-obsoleto_C1_H01",
+      "adset": "ADV_Int-ia",
+      "id": "120247935665940286"
+    },
+    {
+      "name": "EST_prova-numeros_C3_H01",
+      "adset": "ADV_Int-ia",
+      "id": "120247935667020286"
+    },
+    {
+      "name": "EST_roi-50x_C3_H01",
+      "adset": "ADV_Int-ia",
+      "id": "120247935668210286"
+    },
+    {
+      "name": "EST_sem-lancador-sem-socio_C2_H01",
+      "adset": "ADV_Int-ia",
+      "id": "120247935669330286"
+    }
+  ],
+  "errors": []
+}

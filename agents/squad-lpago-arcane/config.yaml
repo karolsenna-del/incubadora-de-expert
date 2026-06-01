@@ -1,0 +1,122 @@
+name: squad-lpago-arcane
+title: Squad de Lancamento Pago (Arcane)
+version: 1.1.5
+author: Euriler Jube
+slash_prefix: squadLPagoArcane
+pattern_prefix: LP
+target_user: "Neutro — Euriler (proprio lancamento) ou aluno Mentoria Arcane"
+type: multi-agent
+mode: production
+description: |
+  Squad operacional pra planejar, construir, executar e monitorar lancamento pago end-to-end.
+
+  V1 = squad autocontido com KB embarcada (Metodo LP completo + referencias reais NDF).
+  V2+ = refinamento proprietario Euriler injetado nas KBs internas.
+
+agents:
+  orchestrator:
+    - id: estrategista-chief
+      path: agents/estrategista-chief.md
+      tier: orchestrator
+  tier_1:
+    - id: copy-pagina
+      path: agents/copy-pagina.md
+      tier: tier-1
+    - id: anuncios
+      path: agents/anuncios.md
+      tier: tier-1
+    - id: copywriter-mensagens
+      path: agents/copywriter-mensagens.md
+      tier: tier-1
+    - id: analista-dados
+      path: agents/analista-dados.md
+      tier: tier-1
+
+tasks:
+  - id: start
+    path: tasks/start.md
+    trigger: activation
+    owner: estrategista-chief
+  - id: construir-documento-mestre
+    path: tasks/construir-documento-mestre.md
+    owner: estrategista-chief
+  - id: consultar-estrategia
+    path: tasks/consultar-estrategia.md
+    owner: estrategista-chief
+  - id: revisar-plano
+    path: tasks/revisar-plano.md
+    owner: estrategista-chief
+  - id: construir-briefing-pagina
+    path: tasks/construir-briefing-pagina.md
+    owner: copy-pagina
+  - id: construir-roteiros-anuncios
+    path: tasks/construir-roteiros-anuncios.md
+    owner: anuncios
+  - id: construir-sequencia-antecipacao
+    path: tasks/construir-sequencia-antecipacao.md
+    owner: copywriter-mensagens
+  - id: construir-mensagens-evento
+    path: tasks/construir-mensagens-evento.md
+    owner: copywriter-mensagens
+  - id: construir-recuperacao-ingresso
+    path: tasks/construir-recuperacao-ingresso.md
+    owner: copywriter-mensagens
+  - id: construir-downsell-pos-evento
+    path: tasks/construir-downsell-pos-evento.md
+    owner: copywriter-mensagens
+  - id: construir-mensagem-pontual
+    path: tasks/construir-mensagem-pontual.md
+    owner: copywriter-mensagens
+  - id: diagnosticar-lancamento
+    path: tasks/diagnosticar-lancamento.md
+    owner: analista-dados
+  - id: retrospectiva-pos-evento
+    path: tasks/retrospectiva-pos-evento.md
+    owner: analista-dados
+
+workflows:
+  - id: wf-squad-lpago-arcane
+    path: workflows/wf-squad-lpago-arcane.yaml
+
+quality_gates:
+  - id: QG-LP-01
+    name: Documento Mestre Validado
+    transition: "1 -> 2"
+    blocking: true
+  - id: QG-LP-02
+    name: Pagina com Copy Redigida
+    transition: "2 -> 3"
+    blocking: true
+    notes: "Bottleneck explicito do pipeline. Trava forte pra Anuncios."
+  - id: QG-LP-03
+    name: Roteiros e Mensagens Antecipacao Prontas
+    transition: "3 + 3b -> 4"
+    blocking: false
+  - id: QG-LP-04
+    name: Diagnostico Acionavel
+    transition: "intra-Fase 4"
+    blocking: true
+  - id: QG-LP-05
+    name: Pos-Evento Encerrado
+    transition: "fim Fase 5"
+    blocking: false
+
+knowledge_base:
+  strategy: autocontida
+  root: data/
+  total_files: 30
+  total_lines_estimate: "~7500-9000"
+  structure:
+    - data/00-INDICE.md
+    - data/metodo/ (11 arquivos)
+    - data/templates/ (5 arquivos)
+    - data/playbooks/ (3 arquivos)
+    - data/exemplos/ (7 arquivos)
+
+dependencies:
+  required: []
+  optional:
+    - external: "Calculadora de Lancamento Pago (Plataforma Arcane > Ferramentas)"
+      handoff: "instrucao em texto + paste do resultado"
+    - external: "Templates Meta API (vivem na Meta/ManyChat)"
+      handoff: "estrutura no squad + Euriler exporta bodies quando aprovados"

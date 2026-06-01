@@ -1,0 +1,19 @@
+# Estilo VIRAL — Bebas Neue com palavra-chave em amarelo
+# 2 linhas: top branco (60% das palavras) + bot amarelo (40% finais).
+# Estilo MrBeast / TikTok pop. Usar pra hook, CTA, conteúdo de ataque.
+
+nome: "viral"
+descricao: "Bebas Neue 2 linhas: branco em cima + amarelo na palavra-chave. Estilo pop viral."
+font: "Bebas Neue"
+fontsize: 100
+fontcolor: "white"
+borderw: 5
+bordercolor: "black"
+y_pos: 0.60
+mode: "split_60_40_color"
+linha_2_color: "yellow"
+shadow: false
+max_chars: 26
+max_chars_per_line: 24      # quebra visual: max chars por linha renderizada (Bebas 100 cabe 24 em 1080px)
+max_words: 5
+max_dur: 2.4

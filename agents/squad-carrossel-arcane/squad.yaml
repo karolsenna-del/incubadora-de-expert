@@ -1,0 +1,114 @@
+# ===============================================================================
+# SQUAD: Carrossel Arcane
+# Squad de producao de carrosseis e posts estaticos pra Instagram
+# ===============================================================================
+
+name: squad-carrossel-arcane
+title: "Carrossel Arcane"
+version: "1.0.0"
+author: "Euriler Jube (Arka / Mentoria Arcane)"
+description: >
+  Squad de 3 agentes (1 chief + 2 specialists) que produz carrosseis e posts
+  estaticos pra Instagram a partir de copy pronta. Identity Designer cria os
+  templates visuais do aluno na primeira vez (3-5 templates ideais). Producer
+  usa os templates pra montar PNGs prontos pra postar.
+  KB embarcada — squad 100% autocontido pra alunos Arcane.
+
+slash_prefix: "squad-carrossel-arcane"
+pattern_prefix: "CA"
+target_user: "Aluno da Mentoria Arcane que quer produzir carrosseis Instagram com identidade visual propria"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# USE CASES
+# ─────────────────────────────────────────────────────────────────────────────
+use_cases:
+  - id: UC1
+    name: "Primeiro Uso — Setup de Identidade"
+    description: "Aluno chega sem templates. Identity Designer conduz criacao iterativa de 3-5 templates baseados em referencias visuais e identidade do aluno."
+  - id: UC2
+    name: "Producao Normal"
+    description: "Aluno ja tem templates. Cola copy + escolhe template + Producer monta PNGs em ~/Downloads/."
+  - id: UC3
+    name: "Adicionar Templates"
+    description: "Aluno volta no Identity Designer pra criar templates adicionais sem refazer os existentes."
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TIER SYSTEM
+# ─────────────────────────────────────────────────────────────────────────────
+tiers:
+  orchestrator:
+    - carrossel-chief
+  tier_1:
+    - identity-designer
+    - producer
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AGENTS
+# ─────────────────────────────────────────────────────────────────────────────
+agents:
+  - id: carrossel-chief
+    file: agents/carrossel-chief.md
+    role: orchestrator
+    description: "Roteia pra Identity Designer (setup) ou Producer (producao)"
+
+  - id: identity-designer
+    file: agents/identity-designer.md
+    role: tier_1
+    description: "Cria templates visuais do aluno em loop iterativo"
+
+  - id: producer
+    file: agents/producer.md
+    role: tier_1
+    description: "Monta carrossel/post usando templates salvos"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TASKS
+# ─────────────────────────────────────────────────────────────────────────────
+tasks:
+  - file: tasks/start.md
+  - file: tasks/setup-identity.md
+  - file: tasks/add-template.md
+  - file: tasks/produce-carousel.md
+  - file: tasks/produce-static-post.md
+  - file: tasks/list-templates.md
+
+# ─────────────────────────────────────────────────────────────────────────────
+# WORKFLOWS
+# ─────────────────────────────────────────────────────────────────────────────
+workflows:
+  - file: workflows/wf-production.md
+
+# ─────────────────────────────────────────────────────────────────────────────
+# KNOWLEDGE BASE (embarcada — autocontido)
+# ─────────────────────────────────────────────────────────────────────────────
+knowledge:
+  - file: knowledge/design-principles.md
+  - file: knowledge/instagram-specs.md
+  - file: knowledge/apis-imagem.md
+  - file: knowledge/infer-slides.md
+  - file: knowledge/render-html-png.md
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DATA
+# ─────────────────────────────────────────────────────────────────────────────
+data:
+  - file: data/templates-schema.yaml
+  - file: data/api-providers.yaml
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OUTPUT
+# ─────────────────────────────────────────────────────────────────────────────
+output:
+  templates_dir: "~/.carrossel-arcane/templates/"
+  config_dir: "~/.carrossel-arcane/config/"
+  output_dir: "~/Downloads/{nome-do-carrossel}/"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEPENDENCIES
+# ─────────────────────────────────────────────────────────────────────────────
+dependencies:
+  required:
+    - "Chromium ou Chrome (pra renderizar HTML → PNG)"
+    - "Python 3.x (pra manipulacao de imagens via PIL)"
+  optional:
+    - "Chave de API de geracao de imagem (OpenAI gpt-image, Google Gemini, ou Nano Banana) — so se for usar placeholders AI"

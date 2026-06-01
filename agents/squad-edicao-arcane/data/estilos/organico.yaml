@@ -1,0 +1,20 @@
+# Estilo ORGANICO — Poppins Bold
+# Fonte arredondada, branco com sombra suave (sem contorno).
+# Vibe CapCut auto-caption / casual.
+
+nome: "organico"
+descricao: "Poppins Bold branco com sombra suave. Vibe casual/cotidiano."
+font: "Poppins"
+fontsize: 64
+fontcolor: "white"
+borderw: 0
+shadow: true
+shadowx: 3
+shadowy: 3
+shadowcolor: "black@0.85"
+y_pos: 0.76
+mode: "single"
+max_chars: 32
+max_chars_per_line: 32      # quebra visual: max chars por linha (fonte menos condensed cabe 32 em 1080px)
+max_words: 6
+max_dur: 2.4

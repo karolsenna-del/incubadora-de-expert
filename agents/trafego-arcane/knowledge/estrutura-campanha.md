@@ -68,7 +68,9 @@ O Meta pontua de 0 a 100 o quanto sua campanha segue as recomendacoes do algorit
 
 ### 2.2 ABO vs CBO
 
-| Aspecto | ABO (Padrao Escala) | CBO (Conta de Teste) |
+> **A base de TODA campanha Andromeda é ABO — escala E teste.** CBO **não** é "o modo da conta de teste". É apenas **uma das 10 variáveis testáveis** (Teste 2, Seção 5.2 — ver `RC-05` em `andromeda-rules.md`): você sobe a base ABO normal e troca **só** o campo de orçamento pra CBO, pra comparar os resultados. Se a hipótese do teste for outra (criativos, CPA Máximo, público segmentado…), a campanha de teste **continua ABO**. Os rótulos "escala/teste" da tabela abaixo indicam **onde cada modo é usado** — não que toda campanha de teste seja CBO.
+
+| Aspecto | ABO (padrão em escala E teste) | CBO (só como variável de teste — Teste 2) |
 |---------|---------------------|----------------------|
 | Orcamento definido em | Conjunto de anuncios | Campanha |
 | Controle do gestor | Alto — define quanto cada conjunto recebe | Baixo — algoritmo distribui |
@@ -419,7 +421,7 @@ LOTE 3, 4, 5... → repete indefinidamente
 | Nunca mexer nos anuncios | Otimizar so orcamento de conjunto. Pausar conjunto inteiro se ruim |
 | Campanhas performando ficam vivas | Sobe orcamento (escala vertical), mantem rodando ate morrer |
 | Criativos novos = lote novo | NUNCA subir criativos novos em campanha existente que performa |
-| Nomenclatura com lote | `[OBJETIVO]_[PRODUTO]_[LOTE]` — ex: `VENDAS_MEUPRODUTO_L03` |
+| Nomenclatura com lote | `[OBJETIVO]_[PRODUTO]_[LOTE]` — ex: `VENDAS_ARKA_L03` |
 
 **Fluxo para a escala:**
 

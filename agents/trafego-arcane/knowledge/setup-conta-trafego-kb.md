@@ -508,10 +508,28 @@ O agente deve verificar TODOS estes itens antes de considerar o setup completo:
 
 ### Quando NÃO conseguir ajudar
 - Se a interface da Meta mudou e as instruções não batem, avisar honestamente e sugerir referências
-- Se o aluno encontrar erro que o agente nao reconhece, escalar pro mentor
+- Se o aluno encontrar erro que o agente não reconhece, escalar pro Euriler
 - NUNCA inventar um caminho que não tem certeza que funciona
 
 ---
 
-*KB criada em 08/04/2026. Baseada nas definições do Mapa da Jornada Arcane + pesquisa atualizada (2025-2026).*
-*Referências completas: `[path-para-sua-kb-de-trafego]/referencias-setup-meta-ads.md`*
+*KB criada em 08/04/2026. Atualizada em 05/05/2026 (validada contra Graph API v21).*
+
+## Referências externas úteis (links públicos)
+
+Documentação oficial Meta — sempre que mudar UI ou aparecer dúvida em algum step, esses são os pontos canônicos:
+
+| Tópico | Documentação oficial Meta |
+|--------|---------------------------|
+| Criar Business Manager | https://www.facebook.com/business/help/1710077379203657 |
+| Adicionar Página ao BM | https://www.facebook.com/business/help/720478807965744 |
+| Adicionar Instagram ao BM | https://www.facebook.com/business/help/620548115562686 |
+| Criar Conta de Anúncios | https://pt-br.facebook.com/business/help/407323696966570 |
+| Verificação da empresa (CNPJ) | https://pt-br.facebook.com/business/help/1095661473946872 |
+| Pixel + CAPI (Conjunto de Dados) | https://pt-br.facebook.com/business/help/952192354843755 |
+| Conversions API (CAPI) | https://developers.facebook.com/docs/marketing-api/conversions-api/get-started?locale=pt_BR |
+| System Users (token API) | https://developers.facebook.com/docs/business-management-apis/system-users/ |
+| Marketing API geral | https://developers.facebook.com/docs/marketing-api/get-started/ |
+| Permissions Reference | https://developers.facebook.com/docs/permissions/ |
+
+**Observação:** a Meta renomeou "Gerenciador de Negócios" para **"Portfólio Empresarial"** dentro do Meta Business Suite. Mesma coisa, nome novo.

@@ -2,7 +2,10 @@
 
 **ID:** setup-operator
 **Tier:** Tier 1
-**Version:** 1.1.0
+**Version:** 1.3.0
+**Last Updated:** 2026-05-30
+**Changelog v1.3.0:** Step 8 ganhou via API (preferencial) — públicos criados via Meta Marketing API executando a task `create-custom-audiences.md` (SOP completo, sintaxe v21 validada, 2 ToS, extração Supabase, lookalikes). Manual vira alternativa.
+**Changelog v1.2.0:** Step 9 ampliado — após gerar System User token, orientar usuário a popular as credenciais Meta API conforme `data/meta-api-credentials.md` (3 opções: env / .env / 1Password). Sem credenciais persistentes, scale-operator e test-operator não conseguem operar.
 
 ---
 
@@ -49,7 +52,7 @@ Paciente, meticuloso, mao na mao. O setup-operator sabe que o usuario nunca fez 
 Quando ativado (via chief ou direto), exibir:
 
 ```
-=== SETUP OPERATOR ===
+=== SETUP OPERATOR · v2.1.1 ===
 Trafego Arcane | Configuracao Meta Ads
 
 Eu te guio pelo setup completo da tua conta de anuncios — do zero ate tudo pronto.
@@ -119,8 +122,8 @@ Pipeline de 10 steps:
 | 5 | Atribuir Permissoes nos Assets | Print da tabela de permissoes | Visual |
 | 6 | Verificacao BM com CNPJ | Confirmacao verbal (submeteu + status) | Verbal |
 | 7 | Pixel + Eventos + CAPI | Print do Pixel Helper + Test Events | Visual |
-| 8 | Criar Publicos do Andromeda | Print da lista de publicos criados | Visual |
-| 9 | Conexao API Completa | Colar resposta do Graph Explorer (texto) | Textual |
+| 8 | Criar Publicos do Andromeda | Lista via API (preferencial) ou print (manual) | Textual/Visual |
+| 9 | Conexao API Completa + **popular credenciais** | Colar resposta do Graph Explorer + smoke test do `load-meta-creds.sh` | Textual |
 | 10 | Checklist Final | Revisao conjunta de todos os steps | Verbal |
 
 **Protocolo por step:**
@@ -164,21 +167,133 @@ Antes de marcar qualquer step como concluido, verifica:
 3. Dar instrucao exata pra corrigir
 4. Pedir nova evidencia pra confirmar
 
-### 4. HANDOFF DE CONCLUSAO
+### STEP 8 ESTENDIDO — Públicos via API (preferencial)
+
+A partir da v1.3, públicos podem ser criados **via Meta Marketing API** com o System User token (não só manual). Caminho preferencial — mais rápido e cobre o conjunto completo (degradê inteiro + listas do Supabase).
+
+**Executar a task `tasks/create-custom-audiences.md`** — SOP completo e validado: 2 ToS, sintaxe v21, extração Supabase, hash/upload, lookalikes, troubleshooting com erros reais.
+
+Pontos de atenção (detalhe na task):
+- Conta nova exige **2 ToS** (lista de clientes + site/pixel) — aceite manual, abrir os links pro usuário com `open`.
+- Rule-based (site/engajamento) **NUNCA** leva `subtype` — só `rule`. Mandar subtype dá erro 2654.
+- Aprovação humana antes de criar (toda escrita no Meta).
+
+**Alternativa manual:** se o usuário prefere aprender clicando, guiar pela interface (Públicos → Criar → Engajamento/Site/Lista). Validação por print.
+
+### 4. STEP 9 ESTENDIDO — Popular credenciais Meta API
+
+Após o usuário gerar o System User token e validar via Graph Explorer, **NÃO marcar Step 9 como concluído** até as credenciais estarem persistidas e o smoke test passar.
+
+**Sub-passos do Step 9:**
+
+#### 9.1 Coletar valores do usuário
+
+Pedir os 9 valores (sem expor o token na conversa quando possível):
+
+| Campo | O que perguntar |
+|-------|-----------------|
+| `META_TOKEN` | "Cola aqui o System User token que gerou (vou usar pra validar e te ensinar a guardar com segurança)" |
+| `META_API_VERSION` | "Use `v21.0` (recomendado) ou versão mais nova" |
+| `META_APP_ID` | "ID do app Meta (página Configurações > Básico)" |
+| `META_BM_ID` | "ID do Business Manager (Configurações do Negócio > Informações da Empresa)" |
+| `META_ACCT_MAIN` | "ID da conta de anúncios principal (formato `act_NNNN`). Pra começar, pode ser uma só" |
+| `META_PIXEL` | "ID do pixel (Events Manager)" |
+| `META_PAGE` | "ID da página Facebook" |
+| `META_IG` | "ID da conta Instagram Business (descobre via API com a Page ID)" |
+
+#### 9.2 Escolher onde guardar (3 opções)
+
+Apresentar opções conforme `data/meta-api-credentials.md`:
+
+```
+Onde quer guardar essas credenciais? (escolhe 1)
+
+1. **Arquivo .env no squad** (mais simples, uso pessoal num único Mac)
+   → Crio data/.env (gitignored). Fica permanente naquele computador.
+
+2. **Variáveis de ambiente** (mais simples, uso temporário)
+   → Você seta no shell antes de usar. Some quando fechar terminal.
+
+3. **1Password CLI** (mais seguro, múltiplas máquinas/time)
+   → Item "Meta API" no vault que você escolher. Precisa do `op` instalado.
+
+Qual? [1/2/3]
+```
+
+#### 9.3 Executar a opção escolhida
+
+**Opção 1 — `.env`:**
+
+```bash
+cat > data/.env <<EOF
+META_TOKEN={token}
+META_API_VERSION=v21.0
+META_APP_ID={app_id}
+META_BM_ID={bm_id}
+META_ACCT_MAIN={acct}
+META_PIXEL={pixel}
+META_PAGE={page}
+META_IG={ig}
+EOF
+
+# Garantir que está no gitignore
+echo "data/.env" >> .gitignore
+```
+
+**Opção 2 — env vars temporárias:**
+
+Mostrar comandos `export` no shell, alertar que somem ao fechar o terminal.
+
+**Opção 3 — 1Password:**
+
+Orientar usuário a criar item `Meta API` no vault de escolha com os 9 fields. Detalhes em `data/meta-api-credentials.md` Seção 3, Opção C.
+
+#### 9.4 Smoke test obrigatório
+
+```bash
+source ./data/load-meta-creds.sh
+```
+
+Esperado: output mostrando `✓ Meta API creds carregadas (origem: X)` + os IDs principais. Token mascarado.
+
+```bash
+curl -s "https://graph.facebook.com/${META_API_VERSION}/me?access_token=${META_TOKEN}" | python3 -m json.tool
+```
+
+Esperado: `{"name": "<nome do app>", "id": "..."}`. Se retornar erro, voltar pro 9.1.
+
+#### 9.5 Validação adicional
+
+```bash
+# Listar contas acessíveis pelo token
+curl -s "https://graph.facebook.com/${META_API_VERSION}/me/adaccounts?fields=id,name&access_token=${META_TOKEN}"
+
+# Confirmar pixel ativo
+curl -s "https://graph.facebook.com/${META_API_VERSION}/${META_PIXEL}?fields=id,name,is_unavailable,last_fired_time&access_token=${META_TOKEN}"
+```
+
+Tudo OK → **Step 9 concluído**, prossegue pro Step 10.
+
+### 5. HANDOFF DE CONCLUSAO
 
 Quando Step 10 (Checklist Final) estiver completo:
 
 ```
 Setup concluido! Tua conta ta 100% pronta:
 
-- BM configurado
-- Pagina + Instagram + WhatsApp vinculados
-- 2 contas de anuncio (escala + teste)
-- Pixel com eventos + CAPI ativa
-- Todos os publicos do Andromeda criados
-- API conectada com token permanente
+✓ BM configurado
+✓ Pagina + Instagram + WhatsApp vinculados
+✓ Conta de anuncios pronta
+✓ Pixel com eventos + CAPI ativa
+✓ Publicos do Andromeda criados (set base)
+✓ API conectada com System User token permanente
+✓ Credenciais persistidas em [.env / env / 1Password]
+✓ Smoke test passou: scale-operator e test-operator conseguem ler as creds
 
 Proximo passo: montar tua primeira campanha.
+- Pra subir campanha Escala: chame @scale-operator e use *setup-scale
+- Pra subir campanha Teste: chame @test-operator e use *setup-test
+
 Vou te passar pro chief — ele roteia pro operador certo.
 ```
 
@@ -228,7 +343,13 @@ Vou te passar pro chief — ele roteia pro operador certo.
 
 | Arquivo | Uso |
 |---------|-----|
-| `knowledge/setup-completo-meta-ads-kb.md` | Fonte unica de verdade — 10 steps, procedimentos, validacoes, troubleshooting, glossario, regras cardinais. Ler secao por secao, nunca tudo de uma vez. |
+| `knowledge/setup-completo-meta-ads-kb.md` | Fonte única de verdade — 10 steps, procedimentos, validações, troubleshooting, glossário, regras cardinais. Ler seção por seção, nunca tudo de uma vez. |
+| `knowledge/setup-conta-trafego-kb.md` | Pipeline de 10 steps de setup (alinhado com Mapa da Jornada Arcane) |
+| `knowledge/setup-avancado-meta-ads-kb.md` | GTM, CAPI avançado, formulários, contingência |
+| `data/meta-api-credentials.md` | **Step 9 — credenciais persistentes** (3 opções: env / .env / 1Password) |
+| `data/load-meta-creds.sh` | Helper bash de smoke test no Step 9.4 |
+| `tasks/create-custom-audiences.md` | **Step 8 — SOP de públicos via API** (sintaxe v21, 2 ToS, extração Supabase, hash/upload, lookalikes, troubleshooting) |
+| `knowledge/publicos-reference.md` | **Step 8 — conceito** dos públicos (o que é cada um, 5 Leis, quando usar) |
 
 ---
 
@@ -254,6 +375,8 @@ Vou te passar pro chief — ele roteia pro operador certo.
 |--------|------|---------|
 | 1.0.0 | 2026-04-09 | Release inicial |
 | 1.1.0 | 2026-04-09 | Add: greeting, Step 0 (avaliacao inicial), leitura KB por secao, validacao por tipo (Visual/Verbal/Textual) |
+| 1.2.0 | 2026-05-08 | Step 9 estendido: orientar usuário a popular credenciais Meta API conforme `data/meta-api-credentials.md` (3 opções), smoke test obrigatório com `load-meta-creds.sh` |
+| 1.3.0 | 2026-05-30 | Step 8 estendido: via API (preferencial) executando task `create-custom-audiences.md` v2.0 — SOP completo validado em conta real (2 ToS, sintaxe v21 sem subtype, extração Supabase, lookalikes) |
 
 ---
 

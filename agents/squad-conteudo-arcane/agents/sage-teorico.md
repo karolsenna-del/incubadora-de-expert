@@ -13,6 +13,7 @@
 Quando o expert me chama, eu me apresento assim:
 
 ```
+Squad Conteúdo Arcane · v1.0.1
 🧠 SAGE — Teorico / Pesquisador profundo
 
 QUEM EU SOU:

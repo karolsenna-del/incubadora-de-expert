@@ -1,0 +1,102 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# SQUAD: IA Videos Arcane
+# Transforma roteiros e ideias em criativos de anuncio em video via Higgsfield.
+# Propoe formatos, produz lotes de teste, pontua com Virality Predictor,
+# roda feedback loop ate acertar e escala em variacoes.
+# ═══════════════════════════════════════════════════════════════════════════
+
+name: "squad-iavideos-arcane"
+title: "IA Videos Arcane"
+version: "1.0.0"
+author: "Euriler Jube"
+description: >
+  Squad de producao de criativos de anuncio em video via Higgsfield. Recebe
+  roteiros ou ideias, propoe formatos e angulos, produz lotes de teste, pontua
+  cada peca com o Virality Predictor, roda feedback loop ate o usuario aprovar
+  e escala em variacoes de avatar, copy ou formato.
+
+slash_prefix: "squad-iavideos-arcane"
+pattern_prefix: "IAV"
+target_user: "Criador de anuncios — Euriler ou aluno da Mentoria Arcane"
+
+# ─────────────────────────────────────────────────────────────────
+# USE CASES
+# ─────────────────────────────────────────────────────────────────
+use_cases:
+  - id: UC1
+    name: "Pipeline Completo"
+    description: "Roteiro ou ideia -> conceito -> producao -> feedback -> escala"
+  - id: UC2
+    name: "Ideia Crua"
+    description: "So uma ideia — o squad roteiriza antes de produzir"
+  - id: UC3
+    name: "Variacao de Formato"
+    description: "Transformar um criativo existente em outro formato (ex: talking head -> voiceover)"
+  - id: UC4
+    name: "Reavivar Campeao"
+    description: "Pegar um criativo antigo de bom desempenho e refazer com nova cara"
+
+# ─────────────────────────────────────────────────────────────────
+# TIER SYSTEM
+# ─────────────────────────────────────────────────────────────────
+tiers:
+  orchestrator:
+    - iavideos-chief
+  tier_1:
+    - estrategista-criativo
+    - diretor-persona
+    - operador-higgsfield
+
+# ─────────────────────────────────────────────────────────────────
+# TASKS
+# ─────────────────────────────────────────────────────────────────
+tasks:
+  - start
+  - setup-ambiente
+  - processar-input
+  - propor-conceito
+  - validar-conceito
+  - definir-avatar
+  - criar-persona
+  - produzir-pecas
+  - avaliar-viralidade
+  - apresentar-pecas
+  - feedback-loop
+  - escalar-variacoes
+  - entregar-pacote
+
+# ─────────────────────────────────────────────────────────────────
+# WORKFLOWS
+# ─────────────────────────────────────────────────────────────────
+workflows:
+  - wf-squad-iavideos-arcane
+
+# ─────────────────────────────────────────────────────────────────
+# QUALITY GATES
+# ─────────────────────────────────────────────────────────────────
+quality_gates:
+  - id: "QG-IAV-01"
+    name: "Conceito validado"
+    transition: "Validacao -> Avatar"
+    blocking: true
+    criteria: "Usuario confirmou os formatos e ideias antes de produzir"
+  - id: "QG-IAV-02"
+    name: "Pecas pontuadas"
+    transition: "Producao -> Avaliacao"
+    blocking: true
+    criteria: "Virality Predictor rodado em cada peca; regra dos 3 segundos aplicada"
+  - id: "QG-IAV-03"
+    name: "Pecas aprovadas"
+    transition: "Avaliacao -> Escala"
+    blocking: true
+    criteria: "Usuario aprovou ao menos uma peca no feedback loop"
+
+# ─────────────────────────────────────────────────────────────────
+# DEPENDENCIES
+# ─────────────────────────────────────────────────────────────────
+dependencies:
+  required:
+    - "Higgsfield CLI instalado e autenticado"
+    - "Skills higgsfield-* disponiveis no ambiente"
+  optional:
+    - "Biblioteca de avatares custom previamente criada"

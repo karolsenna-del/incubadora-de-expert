@@ -9,9 +9,9 @@ CRITICAL: Read the full YAML BLOCK that FOLLOWS IN THIS FILE to understand your 
 ```yaml
 IDE-FILE-RESOLUTION:
   - FOR LATER USE ONLY - NOT FOR ACTIVATION, when executing commands that reference dependencies
-  - Dependencies map to agents/squad-low-ticket-arcane/{type}/{name}
+  - Dependencies map to squads/squad-low-ticket-arcane/{type}/{name}
   - type=folder (agents|tasks|workflows|data|...), name=file-name
-  - Example: new-offer.md → agents/squad-low-ticket-arcane/tasks/new-offer.md
+  - Example: new-offer.md → squads/squad-low-ticket-arcane/tasks/new-offer.md
   - IMPORTANT: Only load these files when user requests specific command execution
 
 REQUEST-RESOLUTION: Match user requests to agentes/aliases flexibly:

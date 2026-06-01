@@ -1,0 +1,18 @@
+# Estilo NEUTRO — default do squad
+# Bebas Neue puro branco, stroke grosso preto, sem amarelo.
+# Funciona em qualquer talking-head, qualquer fundo, qualquer tom.
+
+nome: "neutro"
+descricao: "Bebas Neue branco com contorno preto grosso, sem cor de destaque. Default."
+font: "Bebas Neue"
+fontsize: 100
+fontcolor: "white"
+borderw: 5
+bordercolor: "black"
+y_pos: 0.60          # 60% da altura — abaixo da metade, fora da UI
+mode: "single"       # tudo na mesma linha/cor (sem split de cor)
+shadow: false
+max_chars: 26
+max_chars_per_line: 24      # quebra visual: max chars por linha renderizada (Bebas 100 cabe 24 em 1080px)
+max_words: 5
+max_dur: 2.4

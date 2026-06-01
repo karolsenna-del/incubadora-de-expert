@@ -1,0 +1,454 @@
+# =============================================================================
+# WORKFLOW: Squad LPago Arcane Pipeline
+# =============================================================================
+# Pipeline end-to-end de um lancamento pago: do plano (documento mestre) ao
+# pos-evento (retrospectiva + recuperacao). 5 fases sequenciais com
+# paralelismo opcional (Fase 1/2) e Fase 3b paralela (Anuncios + Comunicacao).
+# Feedback loops da Fase 4 (Monitoramento) pra todos os outros agentes.
+# =============================================================================
+
+workflow:
+  id: wf-squad-lpago-arcane
+  name: "Squad LPago Arcane Pipeline"
+  version: "1.0.0"
+  description: "Pipeline end-to-end de lancamento pago, da concepcao ao pos-evento, incluindo comunicacao multi-canal e diagnostico continuo."
+  type: "pipeline"
+  unidirectional_with_feedback_loop: true
+  purpose: >
+    Pipeline operacional que conduz o usuario (Euriler ou aluno Mentoria
+    Arcane) a planejar, construir, executar, comunicar e monitorar um
+    lancamento pago end-to-end. 5 fases (Plano + Pagina + Anuncios +
+    Comunicacao + Monitoramento + Pos-Evento), 5 quality gates, 9 human
+    touchpoints, 4 feedback loops.
+  orchestrator: "@estrategista-chief"
+  trigger: "Usuario ativa /squadLPagoArcane"
+
+  # =========================================================================
+  # SEQUENCE — FASES DO PIPELINE
+  # =========================================================================
+  sequence:
+
+    - phase: 1
+      name: "Plano"
+      agent: "estrategista-chief"
+      tasks:
+        - "start"
+        - "construir-documento-mestre"
+      blocking_for_next: "parcial"
+      quality_gate: QG-LP-01
+      observacao: |
+        Bloqueia Anuncios totalmente. Pode liberar Copy/Pagina parcialmente
+        SE proposta + estrategia de copy ja estiverem fechadas (PU-LP-006).
+        Pode liberar Copywriter de Mensagens parcialmente assim que
+        cronograma de disparos estiver fechado (mesmo que pagina ainda nao
+        tenha copy).
+
+    - phase: 2
+      name: "Pagina"
+      agent: "copy-pagina"
+      tasks:
+        - "construir-briefing-pagina"
+      paralelismo_com_fase_1: "OPCIONAL — se proposta + estrategia copy fechadas no documento mestre"
+      blocking_for_next: "TOTAL"
+      quality_gate: QG-LP-02
+      trava: "Pagina precisa ter COPY REDIGIDA antes de Fase 3 comecar (PU-LP-007)"
+      bottleneck: true
+
+    - phase: 3
+      name: "Anuncios"
+      agent: "anuncios"
+      tasks:
+        - "construir-roteiros-anuncios"
+      pre_condicao: "Pagina com copy redigida + documento mestre"
+      blocking_for_next: false
+      quality_gate: QG-LP-03
+      observacao: "Anuncios podem rodar e ser otimizados em paralelo com Fase 4 e Fase 3b"
+
+    - phase: "3b"
+      name: "Comunicacao (Antecipacao + Evento)"
+      agent: "copywriter-mensagens"
+      tasks:
+        - "construir-sequencia-antecipacao"
+        - "construir-mensagens-evento"
+      pre_condicao: "Cronograma de disparos definido no documento mestre + briefing-pagina.md (pra coerencia de promessa)"
+      paralelismo_com_fase_3: "PARALELA — pode rodar ao mesmo tempo que Anuncios. Cronograma do plano destrava antes da pagina estar 100% pronta — mas coerencia narrativa exige briefing pelo menos rascunhado"
+      blocking_for_next: false
+      quality_gate: QG-LP-03
+      observacao: "Sequencia de antecipacao precisa estar pronta antes do disparo #1 (T-7d). Mensagens de evento podem ser refinadas ate vespera do evento."
+
+    - phase: 4
+      name: "Monitoramento"
+      agent: "analista-dados"
+      tasks:
+        - "diagnosticar-lancamento"
+      triggers:
+        - tipo: "proativo"
+          quando: "primeiros dados de anuncio rodando (24-72h apos campanha lancada)"
+        - tipo: "reativo"
+          quando: "usuario reporta problema (CPA alto, CTR baixo, Hook Rate ruim, conversao pagina baixa, comparecimento baixo, etc.)"
+        - tipo: "agendado"
+          quando: "checkpoints definidos no documento mestre (ex: dia 3, dia 7, vespera evento)"
+      quality_gate: QG-LP-04
+      feedback_loops:
+        - destino: "estrategista-chief"
+          task: "revisar-plano"
+          gatilho: "diagnostico identifica que problema esta no plano (publico errado, proposta fraca, meta irreal)"
+        - destino: "copy-pagina"
+          task: "construir-briefing-pagina (refinamento)"
+          gatilho: "diagnostico aponta conversao de pagina baixa com anuncio ok (problema na copy/UX)"
+        - destino: "anuncios"
+          task: "construir-roteiros-anuncios (novas pecas)"
+          gatilho: "Hook Rate <20% ou CTR baixo (RC-011: mata no ninho, cria novo)"
+        - destino: "copywriter-mensagens"
+          task: "construir-mensagem-pontual"
+          gatilho: "diagnostico aponta comparecimento baixo / engajamento de grupo fraco / recovery api ineficaz — usuario pede msg ad-hoc pra ajustar comunicacao"
+
+    - phase: 5
+      name: "Pos-Evento"
+      agent_principal: "analista-dados"
+      agent_secundario: "copywriter-mensagens"
+      tasks:
+        - "retrospectiva-pos-evento"
+        - "construir-downsell-pos-evento"
+      quality_gate: QG-LP-05
+      observacao: |
+        Inicia apos final do evento. Analista produz retrospectiva (aguarda
+        D+7 minimo). Copywriter produz downsell-pos-evento/Meteorico
+        (PLACEHOLDER ate Euriler/aluno definir oferta de continuidade —
+        disparos #13-#16 ficam disabled no dispatcher se placeholder).
+        Encerra o ciclo.
+
+  # =========================================================================
+  # QUALITY GATES
+  # =========================================================================
+  quality_gates:
+
+    - id: QG-LP-01
+      name: "Documento Mestre Validado"
+      transition: "1 -> 2"
+      blocking: true
+      criteria:
+        - "Proposta definida com recorte especifico (3 dimensoes: conteudo + publico + dor)"
+        - "Publico-alvo + fatia + DOR/DESEJO/MEDO/RUMINACOES mapeados"
+        - "Orcamento via Calculadora Arcane integrado"
+        - "Cronograma com data evento + data inicio vendas + deadlines"
+        - "Cronograma de disparos de comunicacao (intencao + canal + timing) presente"
+        - "Metas (ingressos + produto principal + exposicao caixa)"
+        - "Validado contra RC-001, RC-002, RC-003, RC-015, RC-018 (quando aplicavel)"
+        - "Aprovado explicitamente pelo usuario"
+      veto: "Volta pra task construir-documento-mestre, fixar gap"
+
+    - id: QG-LP-02
+      name: "Pagina com Copy Redigida"
+      transition: "2 -> 3"
+      blocking: true
+      bottleneck: true
+      criteria:
+        - "Briefing completo (12 secoes ou variante justificada)"
+        - "COPY REDIGIDA secao por secao (texto final, nao esqueleto) — gate critico (PU-LP-007)"
+        - "Headline aplicando formula Tempo + Resultado + Mecanismo"
+        - "Mobile-first verificado (primeira dobra resolve)"
+        - "Validado contra RC-002, RC-003, RC-005, RC-015"
+        - "Aprovado pelo usuario"
+      veto: "Volta pra task construir-briefing-pagina"
+      observacao: "Bottleneck explicito do pipeline. Trava forte pra Fase 3 (Anuncios) e referencia pra Fase 3b (Mensagens)."
+
+    - id: QG-LP-03
+      name: "Roteiros e Mensagens Antecipacao Prontas"
+      transition: "3 + 3b -> 4"
+      blocking: false
+      criteria:
+        - "Roteiros: 3-6 pecas com copy + direcao criativa + direcao de edicao"
+        - "Roteiros: cada peca aplica Hook -> Interesse -> Oportunidade -> CTA"
+        - "Roteiros: Hook desenhado pra Hook Rate >30%"
+        - "Roteiros: promessa coerente com headline da pagina"
+        - "Roteiros: validado contra RC-004, RC-006, RC-008, RC-009, RC-010, RC-011"
+        - "Mensagens antecipacao: cronograma completo do plano com copies redigidas (grupo + api placeholder + email)"
+        - "Mensagens antecipacao: gramatica de canal aplicada (grupo coletivo, api template Meta, email longo+P.S.)"
+        - "Mensagens antecipacao: variaveis declaradas + coerencia com promessa da pagina"
+      observacao: "NAO blocking — anuncios e mensagens podem ser refinados em paralelo com Fase 4. Fase 4 (diagnostico) pode comecar assim que primeiros dados surgirem."
+
+    - id: QG-LP-04
+      name: "Diagnostico Acionavel"
+      transition: "intra-Fase 4"
+      blocking: true
+      criteria:
+        - "4 secoes presentes (snapshot + semaforo + narrativo + acao)"
+        - "Acao priorizada 1-3 com responsavel e prazo"
+        - "Cruzamento com plano original feito"
+        - "Cruzamento com benchmarks feito"
+        - "Feedback loop indicado se aplicavel"
+      veto: "Diagnostico volta pra refinamento — sem acao priorizada nao serve"
+
+    - id: QG-LP-05
+      name: "Pos-Evento Encerrado"
+      transition: "fim Fase 5 -> ciclo encerrado"
+      blocking: false
+      criteria:
+        - "retrospectiva-final.md completo (faturamento total, conversao, ROAS, comparacao com plano, lista de aprendizados)"
+        - "downsell-pos-evento.md entregue (placeholder ou copies finais conforme oferta de continuidade)"
+        - "RC-014 verificado (40-60% das vendas sao pos-evento)"
+      observacao: "Quality gate de FECHAMENTO — encerra ciclo e prepara proximo lancamento"
+
+  # =========================================================================
+  # ALTERNATIVE FLOWS — pontos de consulta continuos
+  # =========================================================================
+  alternative_flows:
+
+    - name: "Consulta Estrategica Pontual"
+      description: "Usuario tem duvida estrategica e quer resposta direta sem entrar em modo producao"
+      tasks: ["consultar-estrategia"]
+      agent: "estrategista-chief"
+      condition: "Usuario invoca durante qualquer fase do pipeline (PU-LP-016 — duplo papel)"
+      pre_condition:
+        check: "Sempre disponivel — duplo papel do Estrategista"
+        veto: "nenhum"
+
+    - name: "Mensagem Pontual Ad-Hoc"
+      description: "Usuario pede mensagem fora do cronograma planejado"
+      tasks: ["construir-mensagem-pontual"]
+      agent: "copywriter-mensagens"
+      condition: "Usuario tem necessidade especifica (problema operacional, comunicacao especifica) durante o lancamento"
+      pre_condition:
+        check: "Contexto minimo coletado (canal, momento do funil, tom desejado, parametros)"
+        veto: "Sem contexto minimo, nao redige — coleta antes"
+
+    - name: "Revisar Plano em Andamento"
+      description: "Documento mestre e VIVO — usuario volta pra revisar durante o lancamento"
+      tasks: ["revisar-plano"]
+      agent: "estrategista-chief"
+      condition: "Trigger de revisao (feedback do Analista, mudanca de contexto, percepcao do usuario)"
+      pre_condition:
+        check: "documento-mestre.md existente"
+        veto: "Sem doc mestre, vai pro construir-documento-mestre"
+
+  # =========================================================================
+  # HUMAN TOUCHPOINTS
+  # =========================================================================
+  human_touchpoints:
+
+    - id: HT-01
+      descricao: "Aprovacao explicita do documento mestre antes de avancar pra Fase 2"
+      fase: 1
+      blocking: true
+
+    - id: HT-02
+      descricao: "Calculadora Arcane — usuario sai do squad, abre plataforma Arcane > Ferramentas, baixa resultado em .md/.pdf, volta e cola pro Estrategista"
+      fase: 1
+      blocking: true
+      integration: "external_tool_with_paste"
+
+    - id: HT-03
+      descricao: "Aprovacao do briefing/copy redigida antes de Fase 3"
+      fase: 2
+      blocking: true
+
+    - id: HT-04
+      descricao: "Aprovacao dos roteiros de anuncio antes da producao real"
+      fase: 3
+      blocking: true
+
+    - id: HT-05
+      descricao: "Aprovacao das sequencias de antecipacao + mensagens de evento antes do dispatcher rodar"
+      fase: "3b"
+      blocking: true
+      observacao: "Disparo #1 (T-7d) inicia automacao — sem aprovacao, dispatcher fica desligado"
+
+    - id: HT-06
+      descricao: "Aprovacao/preenchimento de templates Meta API — Euriler/aluno exporta bodies do ManyChat e atualiza placeholder na KB ou aprova templates novos na Meta"
+      fase: "3b"
+      blocking: false
+      integration: "external_tool_with_paste"
+      observacao: "Squad gera estrutura + parametros. Body real do template aprovado vive na Meta — Euriler/aluno atualiza quando exportar."
+
+    - id: HT-07
+      descricao: "Decisoes de pivot (mudanca de proposta, publico, meta) durante lancamento — usuario decide se aceita feedback do Analista"
+      fase: 4
+      blocking: false
+
+    - id: HT-08
+      descricao: "Coleta de indicadores reais — usuario traz dados manualmente do Meta Ads / pagina / checkout (V1 nao tem integracao automatica)"
+      fase: 4
+      blocking: true
+      integration: "external_data_paste"
+
+    - id: HT-09
+      descricao: "Definicao de oferta de continuidade pos-evento — Euriler/aluno decide oferta antes do copywriter-mensagens redigir copies finais de downsell-pos-evento"
+      fase: 5
+      blocking: false
+      observacao: "Sem oferta definida, downsell-pos-evento fica como placeholder com estrutura preservada."
+
+  # =========================================================================
+  # HANDOFF PROTOCOL
+  # =========================================================================
+  handoffs:
+
+    - id: HO-LP-001
+      transition: "Fase 1 -> Fase 2"
+      from: "estrategista-chief"
+      to: "copy-pagina"
+      trigger: "QG-LP-01 PASS"
+      context_passed:
+        - documento_mestre_path: "documento-mestre.md aprovado"
+        - bloco_1_proposta: "{tese + recorte + mecanismo nomeado}"
+        - bloco_2_publico: "{DOR + DESEJO + MEDO + RUMINACOES literais}"
+      instruction: "Construir briefing + COPY REDIGIDA da pagina de vendas. 12 secoes ou variante justificada. Aplicar formula Tempo+Resultado+Mecanismo na headline."
+
+    - id: HO-LP-002
+      transition: "Fase 2 -> Fase 3"
+      from: "copy-pagina"
+      to: "anuncios"
+      trigger: "QG-LP-02 PASS"
+      context_passed:
+        - briefing_pagina_path: "briefing-pagina.md com COPY REDIGIDA"
+        - documento_mestre_path: "documento-mestre.md"
+        - headline_da_pagina: "{copy redigida da Hero}"
+      instruction: "Construir mix de 3-6 roteiros de anuncio. Verificar trava PU-LP-007 (pagina TEM copy redigida). Promessa do anuncio bate com headline da pagina (RC-006)."
+
+    - id: HO-LP-003
+      transition: "Fase 1 -> Fase 3b"
+      from: "estrategista-chief"
+      to: "copywriter-mensagens"
+      trigger: "Bloco 5 do doc mestre fechado (cronograma de disparos)"
+      context_passed:
+        - documento_mestre_path: "documento-mestre.md"
+        - cronograma_disparos: "{tabela # / quando / canal / tipo / intencao}"
+        - briefing_pagina_path: "briefing-pagina.md (pra coerencia narrativa)"
+      instruction: "Construir sequencia de antecipacao + mensagens do dia do evento. Aplicar gramatica de canal. NAO redefinir cronograma."
+
+    - id: HO-LP-004
+      transition: "Fase 3 + 3b -> Fase 4"
+      from: "anuncios + copywriter-mensagens"
+      to: "analista-dados"
+      trigger: "QG-LP-03 PASS + primeiros dados de anuncio rodando (24-72h)"
+      context_passed:
+        - documento_mestre_path: "documento-mestre.md"
+        - roteiros_anuncios_path: "roteiros-anuncios.md"
+        - sequencia_antecipacao_path: "sequencia-antecipacao.md"
+      instruction: "Diagnosticar em modo proativo. Coletar indicadores. Cruzar com plano + benchmarks. Output em 4 secoes."
+
+    - id: HO-LP-005
+      transition: "Fase 4 -> Fase 1 (revisao)"
+      from: "analista-dados"
+      to: "estrategista-chief"
+      trigger: "Diagnostico identifica problema no plano"
+      context_passed:
+        - diagnostico_path: "diagnostico-{data}.md"
+        - gargalo_identificado: "{publico / proposta / meta / cronograma}"
+        - acao_priorizada: "{detalhe}"
+      instruction: "Revisar plano via task `revisar-plano`. Versionar v1 -> v2. Listar propagacoes pros outros agentes."
+
+    - id: HO-LP-006
+      transition: "Fase 4 -> Fase 2 (refinamento pagina)"
+      from: "analista-dados"
+      to: "copy-pagina"
+      trigger: "Conversao pagina baixa com anuncio OK"
+      context_passed:
+        - diagnostico_path: "diagnostico-{data}.md"
+        - conversao_atual: "{X%}"
+        - hipotese_principal: "{primeira dobra mobile / headline / mecanismo intangivel / etc.}"
+      instruction: "Refinar pagina focado na hipotese principal. Manter o que funciona (RC-009)."
+
+    - id: HO-LP-007
+      transition: "Fase 4 -> Fase 3 (novas pecas)"
+      from: "analista-dados"
+      to: "anuncios"
+      trigger: "Hook Rate < 30% ou CTR baixo"
+      context_passed:
+        - diagnostico_path: "diagnostico-{data}.md"
+        - pecas_pra_matar: "{lista de pecas com Hook Rate < 30%}"
+        - hipotese_hook: "{angulo a explorar nas novas variantes}"
+      instruction: "RC-011: mata no ninho. Criar 2-3 hooks novos mantendo resto da peca vencedora. Nao reanima pecas mortas."
+
+    - id: HO-LP-008
+      transition: "Fase 4 -> Fase 3b (ajuste mensagem)"
+      from: "analista-dados"
+      to: "copywriter-mensagens"
+      trigger: "Comparecimento baixo / engajamento grupo fraco / recovery api ineficaz"
+      context_passed:
+        - diagnostico_path: "diagnostico-{data}.md"
+        - mensagem_problemas: "{disparo X com low engagement}"
+        - hipotese_ajuste: "{tom / timing / variavel}"
+      instruction: "Ajustar mensagem ou criar pontual ad-hoc. Tom transparente. Sem culpar a audiencia."
+
+    - id: HO-LP-009
+      transition: "Fase 4 + 3b -> Fase 5 (pos-evento)"
+      from: "Fase 4 + 3b"
+      to: "analista-dados + copywriter-mensagens"
+      trigger: "Evento encerrou"
+      context_passed:
+        - diagnosticos_acumulados: "{lista}"
+        - dados_finais: "{vendas + custos + comparecimento}"
+        - oferta_continuidade: "{definida / nao definida}"
+      instruction: "Analista produz retrospectiva-pos-evento (aguarda D+7). Copywriter produz downsell-pos-evento (final ou placeholder)."
+
+  # =========================================================================
+  # BOTTLENECK
+  # =========================================================================
+  bottleneck:
+    fase: 2
+    name: "Pagina com Copy Redigida"
+    task: "construir-briefing-pagina"
+    quality_gate: QG-LP-02
+    reason: >
+      Pagina com COPY REDIGIDA (nao apenas briefing) e a trava forte do
+      pipeline (PU-LP-007). Tambem e a fase mais subjetiva e demorada.
+      Sem copy redigida, Anuncios nao tem promessa coerente pra derivar
+      e Mensagens nao tem promessa pra sustentar. Conversao quebra na
+      cadeia inteira.
+    abordagem:
+      - "Task construir-briefing-pagina tem checklist explicito de 16 itens incluindo 'COPY REDIGIDA'"
+      - "Quality Gate QG-LP-02 valida explicitamente que copy esta redigida (nao apenas briefing)"
+      - "Paralelismo opcional Fase 1/Fase 2 pode aliviar se proposta + estrategia copy fechadas cedo"
+      - "Fase 3b (Mensagens) pode rodar paralela apos cronograma do plano fechar — alivia carga na transicao 2->3"
+      - "NDF Workshop tratado como exemplo concreto na KB (data/exemplos/briefing-pagina-ndf.md) reduz tempo de partida"
+
+  # =========================================================================
+  # STATE MANAGEMENT
+  # =========================================================================
+  state:
+    file: ".state.json"
+    resumable: true
+    tracks:
+      - current_phase
+      - perfil_usuario  # euriler ou aluno
+      - nicho
+      - maturidade
+      - documento_mestre_path
+      - documento_mestre_versao  # v1, v2, ...
+      - briefing_pagina_path
+      - roteiros_anuncios_path
+      - sequencia_antecipacao_path
+      - mensagens_evento_path
+      - recuperacao_venda_path  # placeholder ou final
+      - diagnosticos_paths  # array
+      - retrospectiva_final_path
+      - quality_gates_passed  # array
+      - feedback_loops_active  # array
+      - todos_pendentes  # ex: templates Meta a aprovar
+
+  # =========================================================================
+  # EXCEPTIONS
+  # =========================================================================
+  exceptions:
+
+    - name: "Calculadora Arcane indisponivel"
+      action: "Estrategista usa benchmarks da KB (`data/playbooks/benchmarks-por-nicho.md`) e marca lacuna no doc mestre. Volta a integrar quando Calculadora voltar."
+
+    - name: "Templates Meta API nao aprovados a tempo"
+      action: "Copywriter entrega body redigido como referencia + TODO claro. Comunicacao individual migra pra grupo + email no curto prazo. Aprendizado pro proximo ciclo."
+
+    - name: "Oferta de continuidade nao definida"
+      action: "Recuperacao-venda fica como placeholder com estrutura preservada. RC-14 marcada como em risco. Disparos #13-#16 ficam disabled no dispatcher se houver."
+
+    - name: "Indicadores incompletos pro Analista diagnosticar"
+      action: "Analista pede dados minimos antes de diagnosticar. Sem CPA + Spend + Vendas + Conv pagina, recusa diagnostico — vira chute."
+
+    - name: "Hook Rate < 30% em mais de 50% das pecas"
+      action: "RC-011 sistematica: mata todas, refaz mix do zero com hipoteses diferentes. Volta pro anuncios pra novo round."
+
+    - name: "Plano superdimensionado (real <= 50% do esperado)"
+      action: "Diagnostico marca como gargalo critico. Se ja em meio do funil: revisao radical do plano via revisar-plano. Se proximo de fim: aprendizado pro proximo ciclo na retrospectiva."
+
+    - name: "Evento adiado / cancelado"
+      action: "Copywriter constroi mensagens-pontuais (3 canais: grupo + api + email) com tom transparente. Estrategista revisa cronograma. Analista marca evento original e novo no diagnostico."

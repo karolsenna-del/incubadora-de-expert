@@ -37,7 +37,7 @@ Macros dinamicas do Meta:
 | NDF | Negocio Digital do Futuro |
 | ARC | Arca |
 | ULTRA | Ultra |
-| MEU | MeuProduto |
+| ARK | Arka |
 
 ### Lotes
 L01, L02, L03... (cada batch = novo lote)

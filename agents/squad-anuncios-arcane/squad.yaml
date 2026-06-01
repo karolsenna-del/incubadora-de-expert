@@ -1,0 +1,225 @@
+# ===============================================================================
+# SQUAD: Anuncios Arcane
+# Squad de inteligencia competitiva de anuncios pago — espiona os anuncios dos
+# concorrentes no Meta Ad Library, monta banco de dados e gera um playbook
+# estrategico de o que criar. Pipeline de 3 skills (curso). KB embarcada.
+# 100% autocontido.
+# ===============================================================================
+
+name: squad-anuncios-arcane
+title: "Anuncios Arcane"
+version: "1.0.0"
+author: "Euriler Jube (Arka / Mentoria Arcane)"
+description: >
+  Squad de 4 agentes (1 chief recepcao + 1 setup + 1 analista de inteligencia
+  + 1 criativo) que conduz o expert da Mentoria Arcane por um pipeline de
+  inteligencia competitiva de anuncios: achar concorrentes, scrapear todos os
+  anuncios ativos deles no Meta Ad Library, gerar um relatorio estrategico
+  (playbook), e — o clímax — gerar um lote de 20+ anuncios sugeridos
+  (angulo + formato + hook + roteiro) prontos pra produzir.
+  Tese central: longevidade = lucratividade (anuncio rodando 30+ dias e um
+  vencedor validado).
+  As 3 skills do pipeline (competitor-research, scrape-ads, ad-brief) vem
+  embarcadas. KB embarcada (incl. KB de criativos de 6 docs) — squad 100%
+  autocontido, portavel pra qualquer aluno Arcane (cada aluno usa as proprias
+  contas de Airtable + Apify).
+
+slash_prefix: "squad-anuncios-arcane"
+pattern_prefix: "SAA"
+target_user: "Expert da Mentoria Arcane que quer saber exatamente que anuncio criar, baseado em dados reais dos concorrentes"
+based_on: "Pipeline de 3 skills de Ad Intelligence (competitor-research / scrape-ads / ad-brief)"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ESCOPO
+# ─────────────────────────────────────────────────────────────────────────────
+# IN-scope:
+#   - Guiar o setup das ferramentas (Airtable + Apify + MCP + Whisper opcional)
+#   - Fase 1: achar 10+ concorrentes e montar banco no Airtable (competitor-research)
+#   - Fase 2: scrapear todos os anuncios ativos deles no Meta Ad Library (scrape-ads)
+#   - Fase 3: gerar o playbook estrategico de 8 secoes (ad-brief)
+#   - Cuidar da "cola" entre as fases (atualizar table IDs e niche tiers no CLAUDE.md)
+#   - Leitura estrategica do brief final pro contexto do expert
+#
+# OUT-of-scope (delegar pra outros squads / fora do squad):
+#   - Criar o anuncio em si (copy + criativo) — squad de criativos / trafego
+#   - Subir campanha no Meta — operacional de trafego
+#   - Gerenciar a conta de anuncios do proprio expert — outro fluxo
+
+# ─────────────────────────────────────────────────────────────────────────────
+# USE CASES
+# ─────────────────────────────────────────────────────────────────────────────
+use_cases:
+  - id: UC1
+    name: "Setup das Ferramentas"
+    description: "Expert chega zerado — Nina conduz a configuracao de Airtable + Apify + MCP + Whisper + CLAUDE.md. Roda 1x. Task setup-ferramentas."
+
+  - id: UC2
+    name: "Rodar o Pipeline Completo"
+    description: "Setup pronto — Argus orquestra as 3 fases em sequencia (achar concorrentes -> scrapear anuncios -> gerar playbook). Cuida da cola entre as fases."
+
+  - id: UC3
+    name: "Rodar uma Fase Isolada"
+    description: "Expert ja tem dados e quer rodar so uma fase (ex: re-scrapear pra atualizar, ou so re-gerar o brief). Argus dispara a skill certa."
+
+  - id: UC4
+    name: "Refresh Mensal"
+    description: "Pipeline ja rodou antes — expert quer atualizar. Argus roda scrape-ads (pega anuncios novos, marca os mortos) + ad-brief (relatorio fresco). Comparacao com brief anterior."
+
+  - id: UC5
+    name: "Leitura Estrategica do Brief"
+    description: "Brief ja gerado — expert quer ajuda pra interpretar e decidir o que fazer. Argus le o brief e conecta com o contexto do expert."
+
+  - id: UC6
+    name: "Gerar Lote de Anuncios"
+    description: "Brief pronto — Teo le a inteligencia e gera 20+ anuncios sugeridos (angulo + formato + hook + roteiro completo), cobrindo C1/C2/C3, cada um ancorado em dado. Clímax do squad. Task gerar-anuncios."
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TIER SYSTEM
+# ─────────────────────────────────────────────────────────────────────────────
+tiers:
+  orchestrator:
+    - argus-chief
+  tier_1:
+    - nina-setup
+    - vera-pesquisa
+    - teo-criativo
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AGENTS — papel + KB-fonte + persona
+# ─────────────────────────────────────────────────────────────────────────────
+agents:
+  - id: argus-chief
+    persona_anchor: "Argus — recepcao do squad. Recebe, apresenta o time, encaminha, le o brief"
+    kb_sources:
+      - "knowledge/pipeline-visao-geral.md"
+      - "knowledge/conceito-longevidade.md"
+    role: "Recepcao — recepciona o expert, descobre o estagio (zerado / configurado / com dados), apresenta o time, encaminha pro agente certo, e faz a leitura estrategica do brief. Nao executa o pipeline nem configura nem escreve anuncios — so recepciona, roteia e le o brief"
+
+  - id: nina-setup
+    persona_anchor: "Nina — preparadora de terreno, pe no chao, paciente com o lado tecnico"
+    kb_sources:
+      - "knowledge/guia-setup-ferramentas.md"
+      - "knowledge/troubleshooting.md"
+    role: "Agente de setup — guia o expert na configuracao das ferramentas: conta Airtable + PAT com scopes + base, conta Apify + token, MCPs via claude mcp add, instalacao das 3 skills do pipeline (install-skills.mjs), Whisper opcional, secao Ad Research Config no CLAUDE.md. Verifica cada passo e conhece os erros comuns"
+
+  - id: vera-pesquisa
+    persona_anchor: "Vera — analista de inteligencia competitiva, metodica, gosta de dado"
+    kb_sources:
+      - "knowledge/pipeline-visao-geral.md"
+      - "knowledge/conceito-longevidade.md"
+      - "knowledge/troubleshooting.md"
+    role: "Analista de inteligencia (executa o pipeline) — roda as 3 skills (competitor-research, scrape-ads, ad-brief) na ordem, confirma os quality gates, faz a cola entre as fases (table IDs + niche tiers no CLAUDE.md), entrega o brief. Ao terminar, devolve pro Argus"
+
+  - id: teo-criativo
+    persona_anchor: "Téo — diretor de criacao, inquieto, transforma dado em anuncio pronto"
+    kb_sources:
+      - "knowledge/criativos/00-fundamentos-e-regras.md"
+      - "knowledge/criativos/01-angulos.md"
+      - "knowledge/criativos/02-formatos.md"
+      - "knowledge/criativos/03-hooks-e-headlines.md"
+      - "knowledge/criativos/04-estruturas-e-copy.md"
+      - "knowledge/criativos/05-best-practices-mundiais.md"
+      - "knowledge/criativos/06-swipe-file.md"
+    role: "Agente criativo (final do pipeline) — le o brief de inteligencia + banco de anuncios e gera um lote de 20+ anuncios sugeridos (angulo + formato + nivel de consciencia + hook + roteiro completo), cada um ancorado em dado. Opera em 2 modos que o expert escolhe: Freestyle (clonagem/engenharia reversa dos vencedores — o dado vence) ou Seguro (pelos frameworks da KB — o metodo vence). Entrega roteiro e direcao — nao produz o video"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SKILLS EMBARCADAS (o pipeline)
+# ─────────────────────────────────────────────────────────────────────────────
+# As 3 skills vivem em skills/ dentro do squad (portabilidade). Na instalacao
+# elas sao copiadas pra .claude/skills/ do projeto do expert pra funcionarem
+# como slash command e ficarem acessiveis pela ferramenta Skill.
+skills:
+  - id: competitor-research
+    fase: 1
+    path: "skills/competitor-research/SKILL.md"
+    output: "Tabela Competitors no Airtable (10+ concorrentes)"
+    descricao: "Acha 10+ concorrentes no nicho, pega os IDs corretos do Facebook via Apify, monta o banco no Airtable"
+
+  - id: scrape-ads
+    fase: 2
+    path: "skills/scrape-ads/SKILL.md"
+    output: "Tabela Ad Research no Airtable (todos os anuncios)"
+    descricao: "Scrapeia todos os anuncios ativos dos concorrentes no Meta Ad Library, baixa e transcreve videos, classifica angulo e formato"
+
+  - id: ad-brief
+    fase: 3
+    path: "skills/ad-brief/SKILL.md"
+    output: "research/briefs/ad-brief-{YYYY-MM-DD}.md"
+    descricao: "Le todo o banco de anuncios e gera um relatorio estrategico de 8 secoes com o playbook de o que criar"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TASKS
+# ─────────────────────────────────────────────────────────────────────────────
+tasks:
+  - start                    # Entry point (argus)
+  - setup-ferramentas        # Onboarding tecnico (nina)
+  - rodar-pipeline           # Orquestra as 3 fases em sequencia (vera)
+  - atualizar-config         # Cola entre fases — table IDs + niche tiers no CLAUDE.md (vera)
+  - ler-brief                # Leitura estrategica do brief gerado (argus)
+  - gerar-anuncios           # Gera o lote de 20+ anuncios sugeridos (teo)
+  - consolidar-entregavel    # Empacota o entregavel final em md/html/pdf (argus)
+
+# ─────────────────────────────────────────────────────────────────────────────
+# QUALITY GATES
+# ─────────────────────────────────────────────────────────────────────────────
+quality_gates:
+  - id: QG-SAA-001
+    name: "Setup completo"
+    transition: "Setup → Pipeline"
+    blocking: true
+    criteria: "MCPs airtable + apify conectados, base ID no CLAUDE.md, token Airtable com os 4 scopes. Sem isso o pipeline falha."
+
+  - id: QG-SAA-002
+    name: "Competitors table populada"
+    transition: "Fase 1 → Fase 2"
+    blocking: true
+    criteria: "Tabela Competitors existe com 1+ concorrente com Facebook Page ID. Competitors Table ID anotado no CLAUDE.md."
+
+  - id: QG-SAA-003
+    name: "Ad Research table populada"
+    transition: "Fase 2 → Fase 3"
+    blocking: true
+    criteria: "Tabela Ad Research existe com anuncios scrapeados. Ad Research Table ID anotado no CLAUDE.md."
+
+  - id: QG-SAA-004
+    name: "Brief gerado"
+    transition: "Fase 3 → Leitura estrategica"
+    blocking: false
+    criteria: "Brief de 8 secoes salvo em research/briefs/. Toda afirmacao com numero, todo hook citado e quote exata."
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEPENDENCIES (SQUAD AUTOCONTIDO — mas depende de contas externas do expert)
+# ─────────────────────────────────────────────────────────────────────────────
+dependencies:
+  required:
+    - "Conta Airtable (free tier) — cada expert cria a sua"
+    - "Conta Apify (free tier) — cada expert cria a sua"
+  optional:
+    - "whisper.cpp + ffmpeg — pra transcricao de video dos anuncios (pipeline funciona sem)"
+
+# REGRA AUTOCONTIDO:
+# - As 3 skills do pipeline embarcadas em skills/
+# - KB completa embarcada em knowledge/
+# - Zero referencias a paths externos do criador do squad
+# - Squad portavel pra qualquer aluno Arcane
+# - Tokens/credenciais NAO viajam — cada aluno configura as proprias contas (Nina guia)
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OUTPUT STRUCTURE
+# ─────────────────────────────────────────────────────────────────────────────
+output_layout:
+  airtable: "Base do expert — tabelas Competitors e Ad Research"
+  brief: "research/briefs/ad-brief-{YYYY-MM-DD}.md"
+  anuncios: "research/anuncios/anuncios-sugeridos-{YYYY-MM-DD}.md"
+  config: "CLAUDE.md do projeto — secao Ad Research Config (base ID, table IDs, niche tiers, whisper)"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# METADATA
+# ─────────────────────────────────────────────────────────────────────────────
+metadata:
+  source_kb:
+    - "Pipeline de Ad Intelligence — 3 skills (competitor-research / scrape-ads / ad-brief)"
+    - "Tese: longevidade = lucratividade (anuncio 30+ dias = vencedor validado)"
+  composed_by: "Construido manualmente seguindo o padrao dos squads Arcane"
+  composed_at: "2026-05-19"
+  target_audience: "distributed (alunos Mentoria Arcane)"

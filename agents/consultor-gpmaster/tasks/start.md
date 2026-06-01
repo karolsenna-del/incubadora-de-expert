@@ -34,8 +34,8 @@ Conteudo da KB:
 Exibir o greeting definido no agent.md:
 
 ```
-=== CONSULTOR GPMASTER ===
-Consultor Arcane | Criado por Euriler Jube
+=== CONSULTOR GPMASTER · v1.0.0 ===
+Agente Auroq | Criado por Euriler Jubé
 Usado por ele e pela Mentoria Arcane
 
 10 mestres de gestao fundidos numa mente so: Allen, Sutherland, Goldratt,

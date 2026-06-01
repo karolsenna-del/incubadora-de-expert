@@ -57,10 +57,9 @@ Carregar agente `lt-chief` (`agents/lt-chief.md`).
 ## Step 2: Greeting (apresenta TIME em linguagem do aluno + 3 CAMINHOS)
 
 ```
-═══════════════════════════════════════════════════════════════
-  SQUAD LOW TICKET ARCANE
-  Mentoria Arcane
-═══════════════════════════════════════════════════════════════
+=== SQUAD LOW TICKET ARCANE · v1.7.0 ===
+Agente Auroq | Criado por Euriler Jubé
+Usado por ele e pela Mentoria Arcane
 
 Salve, gafanhoto! 👊  Aqui é o Finn, recepção do squad.
 

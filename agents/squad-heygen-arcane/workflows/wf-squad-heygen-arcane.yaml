@@ -1,0 +1,98 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# WORKFLOW: HeyGen Arcane Pipeline
+# ═══════════════════════════════════════════════════════════════════════════════
+# Pipeline de produção de vídeo com clone real via MCP HeyGen.
+# 8 fases sequenciais. O ponto de fricção é a gravação — o pipeline
+# espera o áudio do usuário antes de seguir pra produção.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+workflow:
+  id: wf-squad-heygen-arcane
+  name: "HeyGen Arcane Pipeline"
+  version: "1.0.0"
+  description: "Ideia -> script -> gravação -> produção MCP -> entrega de vídeo com clone"
+  type: "pipeline"
+  purpose: >
+    Pipeline que recebe uma intenção de vídeo e produz vídeo do clone real do
+    usuário via MCP do HeyGen. Gera scripts otimizados, valida com o usuário,
+    conduz a gravação do áudio, dispara a produção com engine avatar_v, faz
+    polling até completar e entrega os vídeos baixados.
+  orchestrator: "@heygen-chief"
+  trigger: "Usuário ativa /squad-heygen-arcane com uma ideia ou intenção de vídeo"
+  unidirectional: true
+
+  sequence:
+    - phase: "setup"
+      agent: "heygen-chief"
+      action: "Verificar/registrar perfil do usuário (avatar look_ids, voice_id)"
+      creates: "data/perfil-usuario.md preenchido"
+      quality_gate: QG-HGN-01
+      one_time: true
+
+    - phase: "processar_input"
+      agent: "estrategista-copy-ads"
+      action: "Classificar a intenção, identificar use case, objetivo, público e ação"
+      creates: "use case + briefing confirmados"
+
+    - phase: "gerar_scripts"
+      agent: "estrategista-copy-ads"
+      action: "Gerar 3 ângulos de script por look elegível, com justificativa"
+      creates: "scripts propostos (3 ângulos)"
+
+    - phase: "validar_scripts"
+      agent: "heygen-chief"
+      action: "Apresentar scripts ao usuário e coletar aprovação explícita"
+      quality_gate: QG-HGN-02
+
+    - phase: "escolher_look"
+      agent: "diretor-look"
+      action: "Recomendar qual look usar pra cada script aprovado"
+      creates: "mapeamento script <-> look (avatarId)"
+
+    - phase: "gravacao"
+      agent: "heygen-chief"
+      action: "Entregar script limpo, instruir gravação, receber áudio, confirmar mapeamento"
+      creates: "áudio(s) gravado(s) + mapeamento áudio <-> script <-> look"
+      quality_gate: QG-HGN-03
+
+    - phase: "producao"
+      agent: "operador-heygen-mcp"
+      action: "Subir áudios pra URL pública, disparar create_video_from_avatar com engine avatar_v"
+      creates: "vídeos disparados (video_ids)"
+
+    - phase: "polling"
+      agent: "operador-heygen-mcp"
+      action: "get_video até completed; ler failure_message em caso de failed"
+      creates: "vídeos completed (video_urls)"
+
+    - phase: "entrega"
+      agent: "operador-heygen-mcp"
+      action: "Baixar MP4s em ~/Downloads/, abrir no player, entregar resumo"
+      creates: "vídeos em ~/Downloads/ + resumo com próximo passo"
+
+  quality_gates:
+    - id: QG-HGN-01
+      name: "Perfil Registrado"
+      transition: "setup -> processar_input"
+      criteria: "Avatar look_ids e voice_id do usuário registrados em data/perfil-usuario.md"
+      blocking: true
+      veto: "Sem perfil, o operador não tem o que passar pro MCP"
+
+    - id: QG-HGN-02
+      name: "Scripts Validados"
+      transition: "validar_scripts -> escolher_look"
+      criteria: "Usuário confirmou explicitamente ao menos 1 script (escolhido e/ou ajustado)"
+      blocking: true
+      veto: "Sem aval, não vai pra gravação — gravar script ruim é retrabalho do usuário"
+
+    - id: QG-HGN-03
+      name: "Áudios em URL Pública"
+      transition: "gravacao -> producao"
+      criteria: "Áudio uploadado, URL pública acessível, mapeado pra script + look correto"
+      blocking: true
+      veto: "create_video_from_avatar exige audioUrl público; caminho local não funciona"
+
+  notes:
+    - "UC4 (A/B de look) pula gerar_scripts/validar_scripts se o áudio já existe — entra direto em escolher_look."
+    - "A fase de gravação é o gargalo: o pipeline espera o usuário gravar antes de seguir."
+    - "Avatar V é audio-driven — o gesto vem da entonação do áudio, sem motion prompt."

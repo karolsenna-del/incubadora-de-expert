@@ -1,0 +1,49 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# nomes-proprios.yaml
+# ─────────────────────────────────────────────────────────────────────────────
+# Configuravel por cada expert. O squad usa esse arquivo em DOIS lugares:
+#
+# 1. video-transcribe.sh: alimenta o whisper com `--prompt` (whisper transcreve
+#    melhor nomes proprios quando recebe contexto)
+#
+# 2. revisao do @scribe na main thread: o agente conhece os nomes corretos e
+#    corrige variantes erradas conforme o dicionario abaixo
+#
+# Preencha com os nomes do SEU mundo: seu nome, equipe, produtos, marca,
+# termos tecnicos do nicho, palavras incomuns. Quanto mais completo, melhor
+# a transcricao.
+#
+# CRITICO: NAO deixe esse arquivo com exemplos de outras pessoas. O whisper
+# vai tentar transcrever esses nomes na fala de QUALQUER video que voce
+# editar — se ficar "Euriler" aqui, sua transcricao vai ter "Euriler" no
+# meio dela mesmo voce nao tendo dito isso.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Lista plana de nomes corretos — vai pro --prompt do whisper
+# APAGUE OS EXEMPLOS ABAIXO E COLOQUE OS SEUS antes de editar o 1o video.
+nomes_corretos:
+  # - "Seu Nome Aqui"
+  # - "Sua Marca"
+  # - "Seu Produto Principal"
+  # - "termo tecnico do seu nicho"
+
+# Correcoes automaticas aplicadas pelo @scribe quando le o transcript bruto.
+# Formato: errado (como whisper transcreveu) -> correto (como deveria ser)
+# Case-insensitive na busca, exato na substituicao.
+#
+# Voce vai descobrir as suas com o tempo: edite o primeiro video, veja como
+# o whisper transcreveu seu nome / sua marca, e adicione aqui as variacoes
+# erradas que aparecerem.
+correcoes_automaticas:
+  # - errado: "Sue Nome"     # como whisper transcreveu errado
+  #   correto: "Seu Nome"
+
+# Correcoes de acentuacao recorrentes (whisper as vezes esquece acento em pt-BR).
+# O @scribe varre o transcript e aplica essas. As 2 abaixo sao quase universais
+# em portugues brasileiro — deixe ou ajuste conforme seu vocabulario.
+correcoes_ortografia:
+  - errado: "Negocio"
+    correto: "Negócio"
+  - errado: "voce "          # com espaco pra evitar afetar "vocês"
+    correto: "você "
+  # Adicione conforme aparecer erro recorrente nos seus videos

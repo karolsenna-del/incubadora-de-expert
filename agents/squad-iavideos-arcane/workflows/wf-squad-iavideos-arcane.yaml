@@ -1,0 +1,107 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# WORKFLOW: IA Videos Arcane Pipeline
+# ═══════════════════════════════════════════════════════════════════════════════
+# Workflow unidirecional de produção de criativos de anúncio via Higgsfield.
+# 8 fases sequenciais. Loops internos (criação de persona, feedback) ficam
+# dentro das fases; o pipeline em si nunca volta.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+workflow:
+  id: wf-squad-iavideos-arcane
+  name: "IA Videos Arcane Pipeline"
+  version: "1.0.0"
+  description: "Roteiro/ideia -> conceito -> produção -> feedback -> escala -> entrega de criativos"
+  type: "pipeline"
+  purpose: >
+    Pipeline que recebe roteiros ou ideias e produz criativos de anúncio em vídeo
+    via Higgsfield. Classifica o input, propõe formatos, valida com o usuário,
+    produz lote enxuto de teste, roda Virality Predictor, conduz feedback loop
+    até aprovação e escala em variações conforme a escolha do usuário.
+  orchestrator: "@iavideos-chief"
+  trigger: "Usuário ativa /squad-iavideos-arcane com roteiro, ideia ou pedido de variação"
+  unidirectional: true
+
+  sequence:
+    - phase: "setup"
+      agent: "iavideos-chief"
+      action: "Verificar CLI instalado e autenticado; conduzir setup se 1ª vez"
+      creates: ""
+      one_time: true
+
+    - phase: "conceito"
+      agent: "estrategista-criativo"
+      action: "Classificar input, roteirizar se necessário, propor leque de formatos e hooks"
+      creates: "conceito proposto (formatos + ângulos + hooks com justificativa)"
+
+    - phase: "validacao_conceito"
+      agent: "iavideos-chief"
+      action: "Apresentar o conceito ao usuário e coletar confirmação explícita"
+      quality_gate: QG-IAV-01
+
+    - phase: "avatar"
+      agent: "diretor-persona"
+      action: "Decidir reutilizar biblioteca ou criar persona nova (sub-loop até aprovação)"
+      creates: "avatares definidos (custom registrados se criados)"
+      conditional: "conceito inclui formato UGC"
+
+    - phase: "producao"
+      agent: "operador-higgsfield"
+      action: "Produzir lote enxuto de teste no Higgsfield e rodar Virality Predictor"
+      creates: "peças produzidas + notas de viralidade"
+      quality_gate: QG-IAV-02
+
+    - phase: "avaliacao"
+      agent: "iavideos-chief"
+      action: "Apresentar peças+notas ao usuário, conduzir feedback loop até aprovação"
+      quality_gate: QG-IAV-03
+
+    - phase: "escala"
+      agent: "operador-higgsfield"
+      action: "Escalar variações da peça aprovada conforme escolha do usuário (avatar/copy/formato)"
+      creates: "variações produzidas com notas de viralidade"
+
+    - phase: "entrega"
+      agent: "operador-higgsfield"
+      action: "Baixar pacote final em ~/Downloads/ organizado por formato, com manifesto"
+      creates: "pasta ~/Downloads/{campanha}/ com todos os vídeos"
+
+  quality_gates:
+    - id: QG-IAV-01
+      name: "Conceito Validado"
+      transition: "validacao_conceito -> avatar/producao"
+      criteria: "Usuário confirmou explicitamente os formatos e ideias antes da produção"
+      blocking: true
+      veto: "Sem confirmação explícita, não passa pra produção"
+
+    - id: QG-IAV-02
+      name: "Peças Pontuadas"
+      transition: "producao -> avaliacao"
+      criteria: "Virality Predictor rodado em cada peça; peças com hook fora dos 3s sinalizadas"
+      blocking: true
+      veto: "Nenhuma peça apresentada sem nota de viralidade"
+
+    - id: QG-IAV-03
+      name: "Peças Aprovadas"
+      transition: "avaliacao -> escala"
+      criteria: "Usuário aprovou explicitamente ao menos uma peça no feedback loop"
+      blocking: true
+      veto: "Nenhuma peça aprovada (peça com hook fora dos 3s não conta como aprovada)"
+
+  human_touchpoints:
+    - phase: "setup"
+      description: "Usuário instala o CLI Higgsfield e autentica"
+    - phase: "validacao_conceito"
+      description: "Usuário confirma formatos e ideias antes da produção"
+    - phase: "avatar"
+      description: "Usuário decide reutilizar avatar ou criar; aprova personas no sub-loop"
+    - phase: "avaliacao"
+      description: "Usuário avalia peças, dá feedback, aprova"
+    - phase: "escala"
+      description: "Usuário define quantas variações e qual eixo (copy/formato/ambos)"
+
+  bottleneck:
+    phase: "avaliacao"
+    task: "feedback-loop"
+    mitigation: >
+      Virality Predictor entrega sinal objetivo antes da avaliação subjetiva,
+      reduzindo iterações. Produção em lote permite avaliar várias peças por rodada.

@@ -1,0 +1,256 @@
+# ===============================================================================
+# SQUAD: Edicao Arcane
+# Pipeline de edicao de video Reels/Shorts pra expert da Mentoria Arcane.
+# Corte por fala (Silero VAD) -> aceleracao 1.2x -> legenda estilo viral.
+# KB embarcada, scripts embutidos, install automatizado. 100% autocontido.
+# ===============================================================================
+
+name: squad-edicao-arcane
+title: "Edicao Arcane"
+version: "1.0.0"
+author: "Euriler Jube (Arka / Mentoria Arcane)"
+description: >
+  Squad de 5 agentes (1 chief + 4 specialists) que edita videos talking-head
+  pra Reels/Shorts/TikTok no estilo viral validado.
+  Pipeline: corte por fala humana (Silero VAD agressivo) -> aceleracao 1.2x
+  com pitch mantido -> legenda estilo B (Bebas Neue, 2 linhas branco+amarelo).
+  Inclui instalacao automatizada de dependencias (ffmpeg, whisper, venv silero,
+  fontes) e quality gates no output (8-bit, profile Main, abre em qualquer player).
+  100% autocontido — scripts e KB embarcados.
+
+slash_prefix: "squad-edicao-arcane"
+pattern_prefix: "SEA"
+target_user: "Expert da Mentoria Arcane que grava video bruto e quer Reels prontos sem editor humano"
+based_on: "Pipeline validado iterativamente (Silero VAD + ffmpeg + whisper.cpp + estilo legenda viral)"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ESCOPO
+# ─────────────────────────────────────────────────────────────────────────────
+# IN-scope:
+#   - Instalar dependencias no Mac (ffmpeg, whisper-cpp + modelo medium, venv silero/torch, fontes)
+#   - Validar ambiente antes de cada rodada (doctor)
+#   - Cortar buracos sem fala (Silero VAD agressivo — respiracao minima)
+#   - Acelerar 1.2x mantendo pitch
+#   - Transcrever (whisper com prompt de nomes proprios)
+#   - Revisar transcript em portugues (acentos, nomes do expert)
+#   - Queimar legenda estilo B (Bebas Neue, 2 linhas branco+amarelo)
+#   - Quality gates no output (formato, codec, legenda, audio)
+#
+# OUT-of-scope:
+#   - Zoom dinamico no rosto (existe como opcional via /produce-zoom global se o expert tiver)
+#   - Color grade
+#   - Master audio broadcast
+#   - Trilha musical (existe como opcional via /add-music global)
+#   - B-roll insert
+#   - Multi-camera
+
+# ─────────────────────────────────────────────────────────────────────────────
+# USE CASES
+# ─────────────────────────────────────────────────────────────────────────────
+use_cases:
+  - id: UC1
+    name: "Setup Inicial"
+    description: "Expert acabou de receber o squad. Squad instala todas as dependencias automaticamente no Mac dele. Workflow instalar."
+
+  - id: UC2
+    name: "Editar 1 Video"
+    description: "Expert tem um video bruto talking-head. Squad roda pipeline completo: corte -> speed -> legenda. Workflow editar-video."
+
+  - id: UC3
+    name: "Apenas Cortar"
+    description: "Expert quer so o corte por fala (sem speed, sem legenda) pra usar em outro editor. Chama runner com flag."
+
+  - id: UC4
+    name: "Diagnosticar Problema"
+    description: "Squad nao roda ou da erro. Doctor diagnostica e aponta o que falta."
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TIER SYSTEM
+# ─────────────────────────────────────────────────────────────────────────────
+tiers:
+  orchestrator:
+    - chief
+  tier_1:
+    - installer
+    - cutter
+    - scribe
+    - zoomer
+    - finisher
+    - stylist
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AGENTS — cada specialist orquestra 1-2 skills + roda seu quality gate
+# ─────────────────────────────────────────────────────────────────────────────
+agents:
+  - id: chief
+    persona_anchor: "Vector — recepcao curta, sabe quem chama pra cada coisa"
+    kb_sources:
+      - "knowledge/01-pipeline-arquitetura.md"
+    skills_orchestrated: []
+    role: "Recepcao — saudacao, explica em 3 linhas o que o squad faz, identifica intencao (instalar / editar / diagnosticar), roteia. Nao executa skills."
+
+  - id: installer
+    persona_anchor: "Forge — engenheiro de ambiente, instala sem drama"
+    kb_sources:
+      - "knowledge/04-troubleshooting.md"
+    skills_orchestrated:
+      - "install (scripts/install.sh — provisiona ffmpeg, whisper-cpp+modelo, venv, fontes)"
+      - "doctor (scripts/doctor.sh — health check)"
+    role: "Engineer. Setup inicial (1a vez) + check antes de cada rodada. Detecta o que falta, corrige ou orienta. Quality gate: QG-SEA-001 (ambiente passa em todas checagens)"
+    quality_gate: "QG-SEA-001"
+
+  - id: cutter
+    persona_anchor: "Tesoura — executa o corte e mede o resultado"
+    kb_sources:
+      - "knowledge/02-defaults-validados.md"
+    skills_orchestrated:
+      - "speech-cut (scripts/video-speech-cut.py — Silero VAD com defaults agressivos)"
+    role: "Roda o corte por fala. Aplica threshold=0.6, min_silence=80ms, pad=30ms (defaults validados). Quality gate: QG-SEA-002 (reducao entre 30-70%, output 8-bit)"
+    quality_gate: "QG-SEA-002"
+
+  - id: scribe
+    persona_anchor: "Letra — leitor cuidadoso de portugues, unico agent pensante"
+    kb_sources:
+      - "knowledge/03-dicionario-correcoes.md"
+    skills_orchestrated:
+      - "transcribe (scripts/video-transcribe.sh — whisper-cli com --prompt de nomes proprios do expert)"
+      - "revisar-pt (revisao humana inteligente na main thread — acentos, nomes, dicionario)"
+    role: "Roda whisper -> le transcript bruto -> aplica dicionario do expert (data/nomes-proprios.yaml) -> revisa acentos manualmente -> salva transcript_revisado. Quality gate: QG-SEA-003"
+    quality_gate: "QG-SEA-003"
+
+  - id: zoomer
+    persona_anchor: "Lente — aplica zoom dinamico baseado em sections classificadas pelo Claude"
+    kb_sources: []
+    skills_orchestrated:
+      - "classificar-sections (Claude/Opus na main thread le transcript e classifica normal/emphasis/critical)"
+      - "produce-zoom (scripts/video-produce-zoom.py — OpenCV face detection + crop por section)"
+    role: "Zoom dinamico no rosto. Classificacao retorica feita pelo proprio Claude (nao heuristica — squad sempre roda em Claude Code). Cria respiracao visual: zoom 1.0/1.18/1.43. Quality gate: QG-SEA-006 (rosto detectado, distribuicao ok)"
+    quality_gate: "QG-SEA-006"
+
+  - id: finisher
+    persona_anchor: "Finalizador — acelera, queima legenda e entrega"
+    kb_sources:
+      - "knowledge/02-defaults-validados.md"
+      - "knowledge/04-troubleshooting.md"
+    skills_orchestrated:
+      - "speed-up (scripts/video-speed-up.sh — 1.2x mantendo pitch)"
+      - "queimar-legenda (scripts/video-captions.py — le estilo de data/estilo-ativo.yaml)"
+      - "add-music (scripts/video-add-music.sh — trilha de fundo com ducking. Default: data/trilhas/default.mp3 ambient uplifting baixinha)"
+    role: "Pega o video cortado + transcript revisado. Acelera 1.2x -> queima legenda no estilo ativo. Forca 8-bit yuv420p profile Main + faststart + AAC 192k. Quality gates: QG-SEA-004 (output abre) + QG-SEA-005 (legenda renderiza)"
+    quality_gate: "QG-SEA-004, QG-SEA-005"
+
+  - id: stylist
+    persona_anchor: "Curador — apresenta opcoes visuais, captura preferencia, salva como padrao"
+    kb_sources: []
+    skills_orchestrated:
+      - "gerar-mockup (ffmpeg drawtext num frame do video + estilo YAML)"
+      - "pesquisar-referencias-web (WebSearch trending TikTok/Reels)"
+      - "analisar-referencia-do-expert (URL/print -> config YAML)"
+      - "salvar-estilo-ativo (Write em data/estilo-ativo.yaml)"
+      - "criar-estilo-custom (Write em data/estilos/custom-<nome>.yaml)"
+    role: "Curador do estilo de legenda. 3 caminhos: catalogo embarcado (4 presets) | referencia do expert | pesquisa web. Gera mockups no frame real do expert. Salva como padrao se aprovado. Unico agent que toma decisao estetica."
+    quality_gate: "—"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TASKS
+# ─────────────────────────────────────────────────────────────────────────────
+tasks:
+  - start                            # Entry point (chief)
+  - instalar                         # Setup inicial (installer)
+  - diagnosticar                     # Doctor — health check (installer)
+  - escolher-estilo                  # Trocar/customizar estilo de legenda (stylist)
+  - editar-video                     # Master task — orquestra a esteira (chief)
+  - cortar-fala                      # Corte por fala (runner)
+  - acelerar                         # Speed 1.2x (runner)
+  - transcrever                      # Whisper + prompt (scribe)
+  - revisar-transcricao              # Revisao pt na main thread (scribe)
+  - queimar-legenda                  # Drawtext estilo B (runner)
+  - validar-output                   # Quality gates (qa)
+
+# ─────────────────────────────────────────────────────────────────────────────
+# WORKFLOWS
+# ─────────────────────────────────────────────────────────────────────────────
+workflows:
+  - pipeline-edicao                  # Workflow master: corte -> speed -> transcribe -> revisar -> legenda -> qa
+
+# ─────────────────────────────────────────────────────────────────────────────
+# QUALITY GATES
+# ─────────────────────────────────────────────────────────────────────────────
+quality_gates:
+  - id: QG-SEA-001
+    name: "Ambiente instalado"
+    transition: "Setup -> Editar"
+    blocking: true
+    criteria: "ffmpeg + whisper-cli + modelo medium + venv com silero/torch + fontes Bebas Neue todos presentes (doctor PASS)"
+
+  - id: QG-SEA-002
+    name: "Corte aprovado"
+    transition: "Corte -> Speed"
+    blocking: false
+    criteria: "Reducao entre 30% e 70% da duracao original. Se fora, alerta mas nao bloqueia (expert decide)"
+
+  - id: QG-SEA-003
+    name: "Transcricao revisada"
+    transition: "Transcrever -> Queimar"
+    blocking: true
+    criteria: "transcript_revisado.txt existe + correcoes do dicionario aplicadas + nomes proprios do expert validados"
+
+  - id: QG-SEA-004
+    name: "Output abre em qualquer player"
+    transition: "Queimar -> Entregar"
+    blocking: true
+    criteria: "pix_fmt=yuv420p + profile=Main + faststart presente + ffmpeg decode passa sem erro + open no Preview retorna sucesso"
+
+  - id: QG-SEA-006
+    name: "Zoom plausivel"
+    transition: "Zoom -> Finisher"
+    blocking: false
+    criteria: "Rosto detectado em >=5/10 frames sampled, distribuicao nao dominada por 1 label, output 8-bit Main. Alerta se >70% num unico nivel."
+
+  - id: QG-SEA-005
+    name: "Legenda renderizada corretamente"
+    transition: "Queimar -> Entregar"
+    blocking: true
+    criteria: "Pelo menos 80% das legendas tem palavras inteiras (sem corte tipo MENS) + acentos portugueses renderizam + fonte resolvida (nao caiu pra Verdana)"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEPENDENCIES (SQUAD AUTOCONTIDO)
+# ─────────────────────────────────────────────────────────────────────────────
+dependencies:
+  required:
+    - "ffmpeg (Homebrew, com drawtext + sidechaincompress + libfontconfig)"
+    - "whisper-cpp + modelo ggml-medium.bin (1,5GB)"
+    - "Python 3.10+ (Homebrew)"
+    - "venv local com: silero-vad, torch, torchaudio, scipy, numpy, fonttools"
+    - "Fonte Bebas Neue Regular (embarcada em data/fontes/)"
+  optional: []
+
+# REGRA AUTOCONTIDO:
+# - Todos os scripts embarcados em scripts/
+# - Fonte Bebas Neue embarcada em data/fontes/ (60KB)
+# - Modelo whisper baixado pelo install.sh (1.5GB — nao embarca no ZIP)
+# - venv criado em squads/squad-edicao-arcane/.venv pelo install.sh
+# - Zero referencias a paths externos (~/.claude/, business/, docs/knowledge/)
+# - Dicionario de nomes proprios e CONFIGURAVEL (cada expert preenche o seu em data/nomes-proprios.yaml)
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OUTPUT STRUCTURE (gerado na pasta do expert)
+# ─────────────────────────────────────────────────────────────────────────────
+output_layout:
+  expert_workspace: "videos-editados/"
+  files:
+    - "{video-name}_speechcut.mp4"        # corte intermediario (limpado depois)
+    - "{video-name}_speed.mp4"            # acelerado 1.2x (limpado depois)
+    - "{video-name}_transcript_raw.txt"   # transcricao bruta (limpado)
+    - "{video-name}_transcript_revisado.txt" # transcricao corrigida (mantido)
+    - "{video-name}_final.mp4"            # ENTREGA FINAL
+
+# ─────────────────────────────────────────────────────────────────────────────
+# METADATA
+# ─────────────────────────────────────────────────────────────────────────────
+metadata:
+  source_pipeline: "Validado iterativamente em 19/05/2026 (Euriler) — base inicial em chrislema/videoeditor, refatorado pra Silero VAD + estilo B + 8-bit forcado"
+  composed_by: "Squad Forge (UC1 acelerado — extracao via conversa de validacao)"
+  composed_at: "2026-05-19"
+  target_audience: "distributed (alunos Mentoria Arcane)"
+  validated_videos: 1   # IMG_6894 talking-head do Euriler — pipeline completo aprovado

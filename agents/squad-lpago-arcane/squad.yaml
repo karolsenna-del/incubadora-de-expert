@@ -1,0 +1,77 @@
+# ============================================================================
+# Squad Manifest — squad-lpago-arcane (alias canonico AIOS)
+# ============================================================================
+# Este arquivo espelha config.yaml em formato AIOS canonico (squad.yaml).
+# Single source of truth: config.yaml. Mudancas aqui devem replicar la.
+# ============================================================================
+
+name: squad-lpago-arcane
+title: Squad de Lancamento Pago (Arcane)
+version: 1.1.5
+author: Euriler Jube
+description: |
+  Squad operacional de 5 agentes pra planejar, construir, executar e monitorar
+  lancamento pago end-to-end. KB autocontida (Metodo LP + referencias reais NDF).
+slash_prefix: squadLPagoArcane
+pattern_prefix: LP
+target_user: "Euriler (proprio lancamento) ou aluno Mentoria Arcane"
+
+tiers:
+  orchestrator:
+    - estrategista-chief
+  tier_1:
+    - copy-pagina
+    - anuncios
+    - copywriter-mensagens
+    - analista-dados
+
+tasks:
+  - start
+  - construir-documento-mestre
+  - consultar-estrategia
+  - revisar-plano
+  - construir-briefing-pagina
+  - construir-roteiros-anuncios
+  - construir-sequencia-antecipacao
+  - construir-mensagens-evento
+  - construir-recuperacao-ingresso
+  - construir-downsell-pos-evento
+  - construir-mensagem-pontual
+  - diagnosticar-lancamento
+  - retrospectiva-pos-evento
+
+workflows:
+  - wf-squad-lpago-arcane
+
+quality_gates:
+  - id: QG-LP-01
+    name: "Documento Mestre Validado"
+    transition: "1 -> 2"
+    blocking: true
+    criteria: "Proposta + publico + orcamento + cronograma + cronograma de disparos + metas + RCs validadas + aprovacao do usuario"
+  - id: QG-LP-02
+    name: "Pagina com Copy Redigida"
+    transition: "2 -> 3"
+    blocking: true
+    criteria: "Briefing 12 secoes + COPY REDIGIDA (texto final, nao esqueleto) + headline com formula + mobile-first + RCs"
+  - id: QG-LP-03
+    name: "Roteiros e Mensagens Antecipacao Prontas"
+    transition: "3 + 3b -> 4"
+    blocking: false
+    criteria: "3-6 roteiros validados + sequencia antecipacao com copies + variaveis declaradas"
+  - id: QG-LP-04
+    name: "Diagnostico Acionavel"
+    transition: "intra-Fase 4"
+    blocking: true
+    criteria: "4 secoes (snapshot + semaforo + narrativo + acao) + cruzamento plano + benchmarks + acao priorizada 1-3"
+  - id: QG-LP-05
+    name: "Pos-Evento Encerrado"
+    transition: "fim Fase 5 -> ciclo encerrado"
+    blocking: false
+    criteria: "Retrospectiva + downsell-pos-evento (placeholder ou final) + RC-014 verificada"
+
+dependencies:
+  required: []
+  optional:
+    - "Calculadora Arcane (plataforma Arcane > Ferramentas)"
+    - "Templates Meta API aprovados (Meta/ManyChat)"

@@ -9,7 +9,7 @@ CRITICAL: Read the full YAML BLOCK that FOLLOWS IN THIS FILE to understand your 
 ```yaml
 IDE-FILE-RESOLUTION:
   - FOR LATER USE ONLY - NOT FOR ACTIVATION, when executing commands that reference dependencies
-  - Dependencies map to agents/squad-conteudo-arcane/{type}/{name}
+  - Dependencies map to squads/squad-conteudo-arcane/{type}/{name}
   - type=folder (agents|tasks|workflows|knowledge|data|...), name=file-name
   - Example: roteirizar.md → squads/squad-conteudo-arcane/tasks/roteirizar.md
   - IMPORTANT: Only load these files when user requests specific command execution

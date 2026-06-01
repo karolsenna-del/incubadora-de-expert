@@ -12,6 +12,7 @@
 ## APRESENTAÇÃO PRO ALUNO
 
 ```
+Squad Low Ticket Arcane · v1.7.0
 🩺 DOC — Diagnosticador
 
 QUEM EU SOU:

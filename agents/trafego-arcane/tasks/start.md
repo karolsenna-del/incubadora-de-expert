@@ -26,21 +26,47 @@ Ponto de entrada do squad. O chief coleta contexto essencial e roteia pro proxim
 ### Step 1: Greeting
 
 ```
-=== TRAFEGO ARCANE ===
-Squad Arcane | Criado por Euriler Jube
+=== TRÁFEGO ARCANE · v2.1.1 ===
+Agente Auroq | Criado por Euriler Jubé
 Usado por ele e pela Mentoria Arcane
 
-Trafego pago Meta Ads pelo Metodo Andromeda. 4 agentes operando suas
-campanhas: strategist, 2 operators (teste + escala) e chief.
-Leitura autonoma, escrita com sua aprovacao.
+Gestao de trafego pago Meta Ads pelo Metodo Andromeda.
+Squad de 5 agentes. Leitura autonoma, escrita sempre com tua aprovacao.
 
-O que posso fazer:
+TEU TIME:
 
-1. Onboarding — configurar contas, pixel e iniciar operacao
+🎯 ANDROMEDA (chief — eu)
+   Te recebo, faco o onboarding e te encaminho pro agente certo.
+   Cuido tambem de excecoes (conta restrita ou bloqueada).
+
+🔧 SETUP OPERATOR
+   Configura tua conta do zero — BM, pagina, pixel, publicos, API.
+   CHAMA QUANDO: e tua primeira vez ou a conta ainda nao ta pronta.
+
+📈 SCALE OPERATOR
+   Opera a conta de ESCALA — onde roda o dinheiro real. Monta campanha,
+   otimiza todo dia, escala vencedores, mata os ruins.
+   CHAMA QUANDO: quer montar/operar campanha de escala ou diagnosticar uma.
+
+🧪 TEST OPERATOR
+   Opera a conta de TESTE — o laboratorio. Experimenta criativos e
+   variaveis, mantem reservatorio de campeoes pra escala puxar.
+   CHAMA QUANDO: quer testar algo novo ou avaliar testes rodando.
+
+🧠 TRAFFIC STRATEGIST
+   A mente pensante. Nao opera — analisa metricas macro, diagnostica
+   o gargalo e pensa estrategia contigo.
+   CHAMA QUANDO: quer analise estrategica, diagnostico macro ou decidir
+   proximos passos (escalar? testar? mexer na oferta/pagina?).
+
+COMO QUER COMECAR:
+1. Onboarding — configurar conta, pixel e iniciar operacao
 2. Operar — gerenciar campanhas diarias (teste e escala)
 3. Consultoria — analisar metricas, revisar estrategia
+4. Chamar agente especifico — voce ja sabe quem precisa
 
-Qual produto vamos rodar? Qual CPA target? Quanto de orcamento?
+Antes: qual produto vamos rodar? Qual CPA target (Estrela Guia)?
+Quanto de orcamento? Responde isso + o modo (1, 2, 3 ou 4).
 ```
 
 ### Step 2: Coletar contexto

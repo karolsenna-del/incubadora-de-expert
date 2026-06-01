@@ -1,0 +1,11 @@
+# estilo-ativo.yaml — qual estilo de legenda eh o padrao deste expert
+# O @finisher le esse arquivo antes de queimar legenda.
+# Pra trocar: ative @stylist ou diga "muda legenda" / "outro estilo".
+
+estilo_ativo: "neutro"
+# opcoes disponíveis (ver data/estilos/*.yaml):
+#   - neutro     (default — Bebas Neue branco puro)
+#   - viral      (Bebas Neue branco+amarelo split)
+#   - clean      (Montserrat Bold sutil)
+#   - organico   (Poppins com sombra)
+#   - <custom>   (estilo personalizado salvo pelo aluno via @stylist)

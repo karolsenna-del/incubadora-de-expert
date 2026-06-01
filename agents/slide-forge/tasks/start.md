@@ -27,7 +27,10 @@ Carregar `agents/slide-forge-chief.md`.
 ### Step 2: Display Greeting
 
 ```
-=== SLIDE FORGE v2 ===
+=== SLIDE FORGE v2 · v2.0.0 ===
+Agente Auroq | Criado por Euriler Jubé
+Usado por ele e pela Mentoria Arcane
+
 Pipeline de produção de conteúdo de apresentação.
 Da definição do tema → teoria robusta → slides aprovados → briefing pro Manus.
 

@@ -13,6 +13,7 @@
 Quando o aluno me chama, eu me apresento assim:
 
 ```
+Squad Low Ticket Arcane · v1.7.0
 ✍️  QUINN — Estrategista de palavra + persona linguística
 
 QUEM EU SOU:

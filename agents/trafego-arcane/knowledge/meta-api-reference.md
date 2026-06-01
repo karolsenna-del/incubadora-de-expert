@@ -30,22 +30,31 @@ Criar ANUNCIOS (ads) e CRIATIVOS (adcreatives) EXIGE app em modo LIVE/PUBLICO.**
 - Ads e AdCreatives com `object_story_spec`: BLOQUEADOS em dev mode (criam dark posts na Page)
 - Erro exato: "O post do criativo dos anuncios foi criado por um app que esta em modo de desenvolvimento"
 
-### App atual
+### App (template — preencha com seu app)
 
-| Campo | Valor |
-|-------|-------|
-| App Name | Dashboard Lancamento Pago |
-| App ID | [SEU_APP_ID] |
-| Dashboard | https://developers.facebook.com/apps/[SEU_APP_ID]/settings/basic/ |
+| Campo | Valor (exemplo / placeholder) |
+|-------|-------------------------------|
+| App Name | `<Nome do seu App Meta>` |
+| App ID | `<SEU_APP_ID>` (15 a 16 dígitos) |
+| Dashboard | `https://developers.facebook.com/apps/<SEU_APP_ID>/settings/basic/` |
 | Status necessario | **LIVE/PUBLICO** |
 
-## Ad Accounts
+> Pra descobrir seu App ID: Meta for Developers → My Apps → seu app → Settings → Basic.
 
-| ID | Nome | Status |
-|----|------|--------|
-| `act_[SUA_CONTA_ESCALA]` | CA01 - Conta Escala | Ativa |
-| `act_[SUA_CONTA_TESTE]` | CA02 - Conta Teste | Ativa |
-| `act_[SUA_CONTA_3]` | CA03 - Conta Reserva | Ativa |
+## Ad Accounts (template — preencha com suas contas)
+
+Liste aqui as contas que você usa. Estrutura sugerida:
+
+| ID (formato `act_NNN`) | Nome interno | Função | Status |
+|------------------------|--------------|--------|--------|
+| `act_<SEU_ACCT_ESCALA>` | `<Nome da conta de Escala>` | Conta Escala (via principal Andromeda) | Ativa |
+| `act_<SEU_ACCT_TESTE>` | `<Nome da conta de Teste>` | Conta Teste (laboratório) | Ativa |
+| `act_<OUTRA_CONTA>` | `<Outra conta — ex: Imersão, Internacional>` | Função adicional | Ativa |
+
+Pra listar suas contas via API:
+```bash
+curl -s "https://graph.facebook.com/${META_API_VERSION}/me/adaccounts?fields=id,name,account_status,currency&access_token=${META_TOKEN}"
+```
 
 ## Campaigns
 
@@ -238,6 +247,17 @@ POST /act_{ad_account_id}/customaudiences
 - Requer `bid_strategy=LOWEST_COST_WITHOUT_CAP` junto (senao erro de "estrategia de lance")
 
 ### Page ID e Instagram ID
-- Page: `[SEU_PAGE_ID]` ([SUA_PAGINA])
-- Instagram: `[SEU_INSTAGRAM_ID]`
-- Ambos obrigatorios no `object_story_spec` pra veicular em FB + IG
+
+Cada aluno tem seus próprios. Estrutura no `data/.env` ou 1Password:
+
+```
+META_PAGE=<SEU_PAGE_ID>
+META_IG=<SEU_IG_BUSINESS_ID>
+```
+
+Pra descobrir o IG ID a partir do Page ID:
+```bash
+curl -s "https://graph.facebook.com/${META_API_VERSION}/${META_PAGE}?fields=instagram_business_account&access_token=${META_TOKEN}"
+```
+
+Ambos são obrigatórios no `object_story_spec` pra veicular em FB + IG.

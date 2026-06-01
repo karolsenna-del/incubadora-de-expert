@@ -13,7 +13,7 @@ tasks:
   - create-process
   - optimize-process
 
-knowledge_base: agents/consultor-gpmaster/data/
+knowledge_base: squads/consultor-gpmaster/data/
 
 memory:
-  kb: agents/consultor-gpmaster/data/consultor-gpmaster-kb.md
+  kb: squads/consultor-gpmaster/data/consultor-gpmaster-kb.md

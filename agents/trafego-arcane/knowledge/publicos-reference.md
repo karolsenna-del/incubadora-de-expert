@@ -3,6 +3,8 @@
 Referencia de publicos para diagnostico, criacao e manutencao de audiencias no Meta Ads.
 Para como os publicos se encaixam na estrutura de campanha (conjuntos, clusters, AP), ver `estrutura-campanha.md`.
 
+> **Este doc = CONCEITO** (o que é cada público, as 5 Leis, quando usar). Para **CRIAR via Meta API** (sintaxe v21 validada, 2 ToS, extração Supabase, hash/upload, lookalikes), ver o SOP em `tasks/create-custom-audiences.md`. As tabelas de "caminho" abaixo descrevem a interface manual — a via API é a preferencial.
+
 ---
 
 ## 1. Piramide Frio / Quente / Comprador

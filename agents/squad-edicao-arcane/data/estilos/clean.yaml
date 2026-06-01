@@ -1,0 +1,18 @@
+# Estilo CLEAN — Montserrat Bold
+# Fonte fina-média, branco com contorno preto sutil.
+# Vibe "Apple / profissional / educativo".
+
+nome: "clean"
+descricao: "Montserrat Bold branco com contorno preto fino. Profissional/educativo."
+font: "Montserrat"
+fontsize: 70
+fontcolor: "white"
+borderw: 3
+bordercolor: "black"
+y_pos: 0.74
+mode: "single"
+shadow: false
+max_chars: 32
+max_chars_per_line: 32      # quebra visual: max chars por linha (fonte menos condensed cabe 32 em 1080px)
+max_words: 6
+max_dur: 2.4

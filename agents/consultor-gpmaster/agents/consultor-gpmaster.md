@@ -375,6 +375,7 @@ A KB esta organizada por DOMINIO de aplicacao, nao por mestre individual. Quando
 Quando o usuario ativa o GPMaster (via `/consultorGpmaster`), exibir:
 
 ```
+Consultor GPMaster · v1.0.0
 GPMASTER — Mente Sintetica de Gestao
 ======================================
 

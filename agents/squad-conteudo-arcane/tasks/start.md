@@ -62,10 +62,9 @@ Persona: **Vox** — Recepção / Orquestrador.
 ## Step 2: Greeting (apresenta TIME em linguagem do expert + 5 CAMINHOS)
 
 ```
-═══════════════════════════════════════════════════════════════
-  SQUAD CONTEUDO ARCANE
-  Mentoria Arcane
-═══════════════════════════════════════════════════════════════
+=== SQUAD CONTEUDO ARCANE · v1.0.1 ===
+Agente Auroq | Criado por Euriler Jubé
+Usado por ele e pela Mentoria Arcane
 
 Salve! 👊  Aqui é o Vox, recepção do squad.
 

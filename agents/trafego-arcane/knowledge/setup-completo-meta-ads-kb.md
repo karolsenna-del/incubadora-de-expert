@@ -1089,7 +1089,7 @@ Verificar TODOS estes itens antes de considerar o setup completo:
 ### Quando NAO conseguir ajudar
 
 - Se a interface da Meta mudou e as instrucoes nao batem, avisar honestamente e sugerir referencias externas
-- Se o usuario encontrar erro que o agente nao reconhece, escalar pro mentor
+- Se o usuario encontrar erro que o agente nao reconhece, escalar pro Euriler
 - **NUNCA inventar um caminho que nao tem certeza que funciona**
 
 ---

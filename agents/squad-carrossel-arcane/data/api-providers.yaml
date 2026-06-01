@@ -1,0 +1,45 @@
+# Providers de Geracao de Imagem AI Suportados
+# Squad usa qualquer 1 destes (escolhido no setup)
+
+providers:
+  - id: openai
+    name: "OpenAI gpt-image-2"
+    endpoint: "https://api.openai.com/v1/images/generations"
+    models:
+      - gpt-image-2          # default, mais novo
+      - gpt-image-1.5
+      - gpt-image-1
+      - dall-e-3
+    auth_method: "bearer_token"
+    cost_per_image_usd: "0.04-0.20"
+    setup_url: "https://platform.openai.com/api-keys"
+    notes: "Default — melhor qualidade pra colagens"
+
+  - id: gemini
+    name: "Google Gemini"
+    endpoint: "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    models:
+      - gemini-2.0-flash-image
+      - gemini-2.5-flash-image
+    auth_method: "query_param_key"
+    cost_per_image_usd: "free-tier (com limite mensal)"
+    setup_url: "https://aistudio.google.com/apikey"
+    notes: "Bom pra alunos sem orcamento pra OpenAI"
+
+  - id: nano_banana
+    name: "Nano Banana (Higgsfield)"
+    endpoint: "via higgsfield-generate skill"
+    models:
+      - nano_banana_2
+      - nano_banana_pro
+    auth_method: "higgsfield_account"
+    cost_per_image_usd: "variavel (plano Higgsfield)"
+    setup_url: "https://higgsfield.ai"
+    notes: "Bom pra trabalhos com character/reference"
+
+config_path: "~/.carrossel-arcane/config/api.yaml"
+
+config_schema: |
+  provider: openai          # openai | gemini | nano_banana
+  api_key: sk-XXXXXXXXX
+  model: gpt-image-2        # opcional, default por provider

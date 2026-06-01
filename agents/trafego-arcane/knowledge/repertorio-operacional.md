@@ -297,4 +297,272 @@ Estrutura para mercado hispanico (Colombia, Mexico, Chile, etc.) com 5 conjuntos
 
 ---
 
-*Compilado a partir do ETLmaker KB Metodo Andromeda (REPERTORIO + GLOSSARIO). Zero invencao.*
+## 8. Frameworks & Modelos
+
+### Framework C1/C2/C3 — Funil de Consciência
+
+| Nivel | Consciencia | 3 Subtipos |
+|-------|------------|------------|
+| **C1** | Baixa (topo) | Conteudo de Valor, Quebra de Padrao, Dor/Sintoma |
+| **C2** | Media (meio) | Hard Sell (7 elem), Demonstrativo, Comparativo |
+| **C3** | Alta (fundo) | Prova (social + mecanismo), Quebra Objecao, Urgencia |
+
+Detalhes: ver `knowledge/criativos-avaliacao.md`.
+
+### Santo Graal — Teste vs Escala
+
+| Aspecto | Conta Teste | Conta Escala |
+|---------|------------|-------------|
+| Mentalidade | Transgressor | Caxias |
+| Pontuacao | Ignorar | Buscar ~100 |
+| Publicos | Manuais OK | Advantage Plus |
+| Escala | Qualquer | Vertical |
+
+### 3 Pilares do Metodo
+
+1. **Estrutura** — mapa (contas, campanhas, publicos, anuncios)
+2. **Criativos** — combustivel (C1/C2/C3, diversidade)
+3. **Otimizacao** — decisoes (metricas, escala, pacing)
+
+### 5 Leis dos Publicos
+
+| Lei | Enunciado | Severidade |
+|-----|-----------|------------|
+| 1 | Quanto maior o publico, mais barato | INEGOCIAVEL |
+| 2 | Muitos interesses no mesmo conjunto encarece (max 5) | INEGOCIAVEL |
+| 3 | Qualidade da base do Lookalike > quantidade | IMPORTANTE |
+| 4 | Conjuntos com mesmo publico competem entre si | FLEXIVEL |
+| 5 | Exclusao deve ser estrategica (so compradores e leads) | IMPORTANTE |
+
+### Hard Sell — 7 Elementos
+
+1. **Gancho** — chama atencao, direciona publico
+2. **Dor/Beneficio** — pincela a dor (sem bater forte)
+3. **Motivo** — por que agir agora
+4. **Prova** — credencial ou resultado (1 frase)
+5. **Oferta** — o que e, como funciona
+6. **Urgencia** — limitacao real + razao
+7. **CTA** — como comprar (1 acao clara)
+
+Deve ser pelo menos 50% de todos os criativos.
+
+### 5 Objecoes Universais
+
+| # | Objecao | Tecnicas |
+|---|---------|----------|
+| 1 | Preco | Perda financeira, perda de energia, comparacao com alternativas, merecimento |
+| 2 | Tempo | Escala temporal: "ha quanto tempo voce quer fazer isso?" |
+| 3 | Confianca | Prova social, prova de mecanismo, trial/degustacao, ilustracao |
+| 4 | "E pra mim?" | Cases com realidade similar; formula "Mesmo..." |
+| 5 | "Preciso agora?" | Janela de oportunidade real |
+
+Detalhes: ver `knowledge/criativos-avaliacao.md` Seções 8 e 9.
+
+### Estrela Guia (Metrica Proprietaria)
+
+Custo do passo ANTERIOR ao CPA. Diagnostica:
+- Estrela alta + CPA ruim = problema na **pagina**
+- Estrela baixa + CPA ruim = problema no **anuncio**
+
+### Hipersegmentacao — Triplice
+
+3 camadas alinhadas: (1) Publico especifico, (2) Criativo dedicado, (3) Landing Page com headline personalizada. Usar 5-10% da verba. Compativel com Advantage Plus.
+
+### Escada WhatsApp
+
+Escalar em fases: Trafego (volume) → Engajamento (qualificacao) → Vendas/Conversao (otimizacao por compra).
+
+### Tiro de Misericordia
+
+Oferta final na 4a semana do mes. Estrategia de 4 semanas para verba pequena.
+
+### 4 Direcoes de Reciclagem + Frankenstein
+
+| Tecnica | Quando usar |
+|---------|------------|
+| Reciclagem de formato | Anuncio bom que esgotou (estatico→video ou vice-versa) |
+| Reciclagem de medio | Ja reciclou formato (real→IA ou vice-versa) |
+| Frankenstein | 2+ anuncios com partes boas: cabeca de um + corpo de outro + rabo de terceiro |
+| Combo | Cliente nao grava mais: reciclar antigos + Frankenstein |
+
+---
+
+## 9. Fluxos & Automações
+
+### Fluxo de Diagnostico (CPA Ruim)
+
+```
+CTR bom?
+  ├─ Não → problema no anuncio (criativo / hook)
+  └─ Sim → Connect Rate bom?
+            ├─ Não → site lento / mobile ruim
+            └─ Sim → Conversão da página boa?
+                      ├─ Não → problema na pagina (oferta / copy / preco)
+                      └─ Sim → CPM estourou?
+                                ├─ Sim → problema sazonal de leilão
+                                └─ Não → Frequencia anuncio alta?
+                                          ├─ Sim → fadiga criativa, troca criativos
+                                          └─ Não → problema NÃO é tráfego
+                                                   (rever produto, preco, funil, comercial)
+```
+
+### Fluxo Subir Campanha Andromeda (resumido)
+
+1. Criar/validar Custom Audiences (audiência quente + exclusões)
+2. Criar Campanha (Escala) — ABO, partilha 20% ON, sem orçamento na campanha
+3. Criar 6 Adsets (1 Adv+ Puro + 4 Adv+ Sugestões + 1 Quente)
+4. Em cada Adset: pixel + evento + Advantage+ Audience ON + posicionamentos automáticos
+5. Criar 9 Creatives (3 C1 + 3 C2 + 3 C3) — referenciaveis em todos adsets
+6. Criar 9 Ads × 6 conjuntos = 54 ads (ou só 9 num adset único, dependendo da estratégia)
+7. Tudo PAUSED → Preview → Confirmar → ACTIVE
+
+Detalhes: ver `knowledge/sop-campanha-ui.md` e `knowledge/sop-campanha-api.md`.
+
+### Fluxo de Otimização Pós-Subida
+
+| Janela | Ação |
+|--------|------|
+| 24h | Pausar anúncios que não gastaram nada |
+| 3 dias | Pausar anúncios com CPA muito acima do alvo |
+| 7 dias | Identificar categoria vencedora (dor? hard sell? prova?) |
+| Semanal | Replicar categoria vencedora com ângulos/formatos novos |
+| Quando cai | Sequência: trocar criativos → CPA Máx → reduzir orçamento → nova campanha |
+
+### Fluxo de Aumento de Orçamento
+
+| Trigger | Ação |
+|---------|------|
+| CPA bom + investimento ainda baixo | +20% a +50% por dia (escala vertical) |
+| CPA estável | Mantém orçamento |
+| CPA piorou | Reduz orçamento OU pausa anúncios ruins |
+
+NUNCA escalar horizontalmente (criar campanhas duplicadas).
+
+---
+
+## 10. Fórmulas & Scripts
+
+### Connect Rate (coluna personalizada no Gerenciador)
+
+```
+Visualizações da página de destino / Cliques no link × 100
+```
+
+Benchmark: 70-80%. Abaixo = site lento ou mal otimizado pra mobile.
+
+### Pesquisa Preenchida (coluna personalizada)
+
+```
+Evento "Enviou Pesquisa" / Evento "Lead" × 100
+```
+
+Benchmark: 60-80%.
+
+### Discrepância Gerenciador vs CRM
+
+```
+(Leads CRM - Leads Gerenciador) / Leads Gerenciador × 100
+```
+
+Até 15% = normal. Acima = problema de pixel/API (deduplicação ou eventos faltando).
+
+### Aumento de Orçamento (limite diário)
+
+```
+Novo orçamento = Orçamento atual × (1 + percentual)
+```
+
+Onde percentual ∈ [0.20, 0.50] por dia. Ex: R$100 → R$120 (+20%) ou R$150 (+50%).
+
+### Headline Dinâmica (WordPress) — pseudo-código
+
+```php
+// Trocar headline da landing page com base em parâmetro na URL
+// URL: site.com/?h=profissionais-da-saude → headline personalizada
+
+$h_param = isset($_GET['h']) ? sanitize($_GET['h']) : 'default';
+$headline_map = [
+  'profissionais-da-saude' => 'Como profissionais da saúde estão crescendo 10 mil seguidores',
+  'social-media' => 'Como social media está crescendo 10 mil seguidores',
+  'default' => 'Como crescer 10 mil seguidores'
+];
+echo $headline_map[$h_param] ?? $headline_map['default'];
+```
+
+Permite hipersegmentação sem precisar duplicar landing pages.
+
+---
+
+## 11. Ferramentas Recomendadas
+
+### Tráfego & Infraestrutura
+
+| Ferramenta | Pra que |
+|-----------|--------|
+| Meta Ads Manager (Gerenciador) | Campanhas de tráfego pago |
+| Meta Business Suite | Gestão de ativos (contas, páginas, pixels) |
+| Pixel Your Site (WP) | Instalação de pixel no WordPress |
+| Google Tag Manager | Centralizador de tags |
+| Facebook Pixel Helper | Validação de pixel no navegador |
+
+### CRM & Automação
+
+| Ferramenta | Pra que |
+|-----------|--------|
+| ActiveCampaign | E-mail marketing, automações, tags |
+| ManyChat | Automação WhatsApp (API oficial) e Instagram |
+| Make (ex-Integromat) / n8n | Integrações entre plataformas |
+| UniChat | API oficial WhatsApp, CTWA, IA |
+
+### Checkout
+
+| Ferramenta | Pra que |
+|-----------|--------|
+| Hotmart | Checkout, pagamentos, afiliados |
+| Kiwify / Eduzz / Monetizze | Alternativas de checkout |
+| UTMify | Rastreamento UTM |
+
+### Dados & Relatórios
+
+| Ferramenta | Pra que |
+|-----------|--------|
+| Google Sheets | BD de métricas + scripts (AppScript) |
+| Looker Studio | Dashboards visuais |
+| Google Analytics 4 | Rastreamento de tráfego no site |
+
+### IA pra Criativos (referência — squad NÃO produz)
+
+| Ferramenta | Pra que |
+|-----------|--------|
+| ChatGPT / Gemini | Roteiros e copies |
+| VO3 (Google) | Geração de vídeo (8s por cena) |
+| Nano Banana (Gemini) | Geração de imagem com consistência de personagem |
+| Top View | Vídeo UGC rápido (avatar + produto) |
+| HeyGen | Avatar de vídeo falante |
+| Suno IA | Trilhas (sem copyright) |
+| CapCut | Edição e montagem |
+
+### Site
+
+| Ferramenta | Pra que |
+|-----------|--------|
+| WordPress | CMS base |
+| Astra (tema) + Spectra (blocos) | Construção de páginas leves |
+| JoinChat | Botão WhatsApp no site |
+
+---
+
+## 12. Diagramas & Mapas (descrições)
+
+| Diagrama | Descrição | Onde aprofundar |
+|----------|-----------|-----------------|
+| **Funil C1/C2/C3** | Estrutura dos 9 criativos por nível de consciência | `criativos-avaliacao.md` Seção 6 |
+| **Estrutura 6 Conjuntos da Escala** | 1 Adv+ Puro + 4 Adv+ Sugestões + 1 Quente | `sop-campanha-ui.md` Nível 2 |
+| **Árvore de Decisão (anúncio vs conjunto)** | Anúncio = binário (CPA bom/ruim). Conjunto = complexo (24h → matar OU iterar) | `daily-ops-protocol.md` |
+| **Fluxo Diagnóstico CPA Ruim** | Cascata de verificações | Seção 9 deste documento |
+| **Pirâmide Frio/Quente/Comprador** | Estratificação de públicos em 3 camadas | `publicos-reference.md` |
+| **5 Camadas de Infraestrutura** | Contas Meta → Pagamento → Site → Rastreamento → Contingência | `setup-conta-trafego-kb.md` |
+
+---
+
+*Repertório operacional do squad de tráfego Arcane. Auto-suficiente, derivado do método Andromeda (Bárbara Bruna). Zero invenção, zero referência externa.*

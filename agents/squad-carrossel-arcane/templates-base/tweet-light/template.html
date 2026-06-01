@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Slide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    width: 1080px;
+    height: 1350px;
+    background: #FFFFFF;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #0F1419;
+    overflow: hidden;
+  }
+
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    padding: 60px 70px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+  }
+
+  /* HEADER (tweet card) */
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 50px;
+  }
+
+  .avatar {
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+    min-height: 140px;
+    max-width: 140px;
+    max-height: 140px;
+    background-image: url('avatar.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .name-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .name {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.1;
+    color: #0F1419;
+    letter-spacing: -0.5px;
+  }
+
+  .verified {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+
+  .username {
+    font-weight: 400;
+    font-size: 38px;
+    color: #536471;
+    margin-top: 6px;
+  }
+
+  /* TEXTO PRINCIPAL */
+  .text {
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 1.35;
+    color: #0F1419;
+    margin-bottom: 50px;
+    letter-spacing: -0.3px;
+  }
+
+  .text strong, .text b {
+    font-weight: 700;
+  }
+
+  /* IMAGEM */
+  .image {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    background: #f5f5f5;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* LAYOUT TEXT-ONLY (CTA / fechamento) */
+  .slide.text-only {
+    justify-content: center;
+  }
+
+  .slide.text-only .header {
+    margin-bottom: 60px;
+  }
+
+  .slide.text-only .image {
+    display: none;
+  }
+
+  /* LAYOUT CAPA — texto maior, mas bold so via <strong> (estrategico) */
+  .slide.capa .text {
+    font-size: 52px;
+    font-weight: 400;
+  }
+
+  /* LAYOUT SEM IMAGEM (passo a passo, lista, etc) */
+  .slide.no-image .image {
+    display: none;
+  }
+
+  .slide.no-image .text {
+    font-size: 44px;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="header">
+    <div class="avatar"></div>
+    <div class="author">
+      <div class="name-row">
+        <div class="name">{{NOME_USUARIO}}</div>
+        <svg class="verified" viewBox="0 0 22 22" fill="none">
+          <path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.751-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.275.213-1.816.568s-.972.854-1.245 1.44c-.608-.223-1.264-.27-1.898-.14-.633.131-1.218.437-1.687.882-.445.47-.751 1.053-.882 1.687-.13.633-.083 1.29.14 1.897-.586.274-1.084.705-1.439 1.246-.354.541-.55 1.17-.568 1.816.018.647.214 1.276.568 1.817.355.54.853.972 1.44 1.245-.224.608-.27 1.264-.14 1.898.13.633.436 1.218.881 1.687.47.445 1.054.751 1.687.882.634.13 1.29.083 1.898-.14.273.587.704 1.086 1.245 1.44s1.17.551 1.816.569c.647-.018 1.276-.214 1.817-.569.54-.354.972-.853 1.245-1.44.608.223 1.264.27 1.898.14.633-.131 1.217-.437 1.687-.882.445-.47.751-1.053.882-1.687.13-.634.083-1.29-.14-1.898.586-.273 1.084-.704 1.439-1.245.354-.541.55-1.17.568-1.817zM9.7 14.62l-3.39-3.42 1.41-1.41 1.98 1.98 4.85-4.86 1.42 1.42-6.27 6.29z" fill="#1D9BF0"/>
+        </svg>
+      </div>
+      <div class="username">@{{USERNAME}}</div>
+    </div>
+  </div>
+
+  <div class="text">
+    <!-- TEXTO DO SLIDE AQUI. Use <strong> nas palavras-chave -->
+    {{TEXTO_DO_SLIDE}}
+  </div>
+
+  <div class="image">
+    <!-- COLAGEM/IMAGEM AQUI. Substitua o src abaixo -->
+    <img src="image.png" alt="">
+  </div>
+
+</div>
+</body>
+</html>

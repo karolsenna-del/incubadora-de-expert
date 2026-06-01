@@ -5,8 +5,8 @@
 
 name: trafego-arcane
 title: "Trafego Arcane"
-version: "2.0.0"
-author: "Mentoria Arcane"
+version: "2.1.1"
+author: "Euriler Jube"
 description: >
   Squad Trafego Arcane — gestao de trafego pago usando Metodo Andromeda.
   Opera 2 contas de anuncio (teste + escala) via Meta Marketing API.
@@ -15,7 +15,7 @@ description: >
 
 slash_prefix: "trafegoArcane"
 pattern_prefix: "TA"
-target_user: "Alunos Mentoria Arcane — gestao de trafego Meta Ads para produtos digitais"
+target_user: "Euriler (Arka) — gestao de trafego Meta Ads para produtos digitais"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # USE CASES
@@ -110,8 +110,9 @@ dependencies:
 # KNOWLEDGE BASE
 # ─────────────────────────────────────────────────────────────────────────────
 knowledge:
-  primary: "[path-para-sua-kb-de-trafego]"
-  etl_source: "agents/etlmaker/kbs/metodo-andromeda/"
+  # Squad é autossuficiente. Toda KB necessária está dentro deste diretório.
+  # Sem dependências de paths externos.
+  base_dir: "knowledge/"
   squad_specific:
     # Setup (INTOCAVEL)
     - "knowledge/setup-completo-meta-ads-kb.md"
@@ -132,6 +133,7 @@ knowledge:
     - "knowledge/repertorio-operacional.md"
     # Tecnico
     - "knowledge/meta-api-reference.md"
+    - "knowledge/supabase-data-access.md"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # HUMAN APPROVAL GATE

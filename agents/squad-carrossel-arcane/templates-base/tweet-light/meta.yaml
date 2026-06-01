@@ -1,0 +1,37 @@
+name: "Tweet Light (Base)"
+slug: "tweet-light"
+type: "conteudo"
+dimensions: "1080x1350"
+font: "Open Sans"
+description: "Template seed estilo tweet com fundo claro. Identity Designer pode usar como base e adaptar paleta/fonte/layout pra identidade do aluno."
+
+slots:
+  - id: "nome_usuario"
+    type: "config"
+    placeholder: "{{NOME_USUARIO}}"
+    description: "Nome do aluno (substituido no setup)"
+
+  - id: "username"
+    type: "config"
+    placeholder: "{{USERNAME}}"
+    description: "Handle @ do aluno (substituido no setup)"
+
+  - id: "texto_slide"
+    type: "text"
+    placeholder: "{{TEXTO_DO_SLIDE}}"
+    bold_strategy: "auto"
+
+  - id: "imagem"
+    type: "image-manual"
+    fallback: "image-none"
+    description: "Imagem do slide (manual ou skipa se sem imagem)"
+
+  - id: "avatar"
+    type: "image-asset"
+    asset: "assets/avatar.png"
+    description: "Avatar circular do aluno"
+
+modifiers:
+  - "capa"          # versao capa com texto maior
+  - "no-image"      # esconde imagem
+  - "text-only"     # so tweet card centralizado
