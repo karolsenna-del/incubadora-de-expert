@@ -13,7 +13,7 @@
 
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
-| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Estruturar M3 — Vendas Secretas via Course Creator | Karol | Em construcao — M0/M1/M2 prontos | [tracker](campanhas/expert360-curso/tracker.md) |
+| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Roteirizar M1 — Persona + Promessa via Course Creator | Karol | Roteirizando — M0 completo (5 aulas), M1-M4 pendentes | [tracker](campanhas/expert360-curso/tracker.md) |
 
 ---
 

@@ -3,7 +3,7 @@
   "fase_nome": "Desenvolvimento de Aulas",
   "agente_ativo": "course-creator",
   "task_ativa": "develop-lesson",
-  "gate_anterior": "QG-CC-005",
+  "gate_anterior": "QG-CC-006",
   "gate_anterior_status": "PASS",
   "setup": {
     "nome": "Expert360º",
@@ -14,13 +14,26 @@
     "correcao_agentes": "Os 6 agentes de IA são o mecanismo de entrega do curso — cada um ativo dentro do módulo correspondente, guiando a aluna na construção do entregável daquela fase. Não são bônus pós-curso, são o coração da experiência."
   },
   "modulos_completos": ["M0", "M1", "M2", "Transição (absorvida no M2)", "M3", "M4"],
-  "aulas_completas": {},
+  "aulas_completas": {
+    "M0": [
+      "Aula Introdução",
+      "Aula 1 — Fracasso como Prova",
+      "Aula 2 — Exercício: Sua História Real",
+      "Aula 3 — Exercício: Ikigai"
+    ]
+  },
+  "modulo_atual": "M0",
+  "aula_atual": "Aula Encerramento M0",
+  "formato_roteiro": "script completo + estrutura com tópicos e pontos-chave ao final",
   "branding_aprovado": false,
   "empacotamento_aprovado": false,
   "prd_criado": true,
   "prd_path": "business/campanhas/expert360-curso/prd.md",
   "prd_enriquecido": true,
-  "ultima_sessao": "2026-05-26",
+  "decisao_drive": "Todos os exercícios têm arquivo no Drive do aluno. Em vez de 'abra um doc em branco', usar 'abra o arquivo [nome] no seu Drive'. Vale para exercícios, templates e resultados de agentes.",
+  "decisao_estrutura_modulos": "Cada módulo tem Aula de Introdução + aulas de conteúdo + Aula de Encerramento. +2 aulas por módulo, total ~42 aulas.",
+  "aulas_completas_atualizacao": "Aula 2 M0: ajuste retroativo — instrução do Drive aplicada (uma linha).",
+  "ultima_sessao": "2026-06-01",
   "decisoes_sessao": [
     "Portfólio de Ferramentas absorvido no M2 como Bloco do Ecossistema (aulas 5 e 6) — nasce do método, faz sentido no mesmo módulo",
     "Transição eliminada como módulo separado — nome ruim para Hotmart, sem identidade própria",
@@ -39,6 +52,8 @@
     "Rastreador de Leads = template em branco + aula (modelo doTERRA adaptado, critérios da persona do Módulo 1)",
     "Rastreador: score de fit separado de prioridade de abordagem",
     "Loop M3→M4: pitch + depoimento + objeções alimentam o Módulo 4",
-    "Agente do Portfólio Estratégico e Rastreador são entregáveis separados na Transição"
+    "Agente do Portfólio Estratégico e Rastreador são entregáveis separados na Transição",
+    "Formato de roteiro definido: script completo + estrutura com tópicos e pontos-chave ao final (vale para todas as aulas)",
+    "Aula 1 M0 aprovada (QG-CC-006 PASS)"
   ]
 }
