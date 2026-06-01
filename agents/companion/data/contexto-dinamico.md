@@ -83,6 +83,26 @@ Desbloqueio de crenca (Ikigai reposicionado) → Nicho (se necessario) → Narra
 
 Insight central: Karol ja faz o metodo certo nos bastidores. O onboarding individual que ela faz E o passo 0 real — formalizado no Expert360 como M0.
 
+## Infraestrutura de Trafego (concluida em 01/06/2026)
+
+Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanhas quando chegar a hora.
+
+**O que foi configurado:**
+- BM: Karol Senna - Matriz (`142763364716071`) ✓
+- Conta de anuncio: `1402246064553518` ✓
+- Dominio `incubadoradeexpert.com.br` verificado no BM ✓
+- Pixel "Incubadora de Expert" criado e instalado (ID: `4188654601446070`) ✓
+- Evento PageView: ativo e disparando ✓
+- Evento Contact (clique no WhatsApp): ativo e disparando ✓
+- LP: `incubadoradeexpert.com.br/minitreinamento2` (VSL → WhatsApp)
+
+**Pendente (pra quando for lancar):**
+- Segunda conta de anuncio (conta de teste — Metodo Andromeda)
+- Aggregated Event Measurement
+- Estrela Guia (CPA target)
+- Estrutura de campanhas (escala + teste)
+- Criativos
+
 ## Onde Parou
 
 Sessao 28/05 — weekly review concluido. Cockpit criado + tracker Expert360 criado.
@@ -104,4 +124,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 28/05/2026*
+*Ultima atualizacao: 01/06/2026*
