@@ -1,9 +1,9 @@
 {
-  "fase_atual": 4,
-  "fase_nome": "Estruturação de Módulos",
+  "fase_atual": 5,
+  "fase_nome": "Desenvolvimento de Aulas",
   "agente_ativo": "course-creator",
-  "task_ativa": "structure-module",
-  "gate_anterior": "QG-CC-004",
+  "task_ativa": "develop-lesson",
+  "gate_anterior": "QG-CC-005",
   "gate_anterior_status": "PASS",
   "setup": {
     "nome": "Expert360º",
@@ -13,7 +13,7 @@
     "ponto_b": "Método autoral com nome próprio e história dentro (incopiável). 3 vendas reais feitas no 1:1 antes de qualquer exposição pública. Posicionamento claro com bio, linha editorial e primeiros conteúdos publicados. Os 5Ps completos — construídos com a ajuda dos 6 agentes de IA que acompanham cada módulo do curso durante a execução.",
     "correcao_agentes": "Os 6 agentes de IA são o mecanismo de entrega do curso — cada um ativo dentro do módulo correspondente, guiando a aluna na construção do entregável daquela fase. Não são bônus pós-curso, são o coração da experiência."
   },
-  "modulos_completos": ["M0", "M1", "M2", "Transição (absorvida no M2)", "M3"],
+  "modulos_completos": ["M0", "M1", "M2", "Transição (absorvida no M2)", "M3", "M4"],
   "aulas_completas": {},
   "branding_aprovado": false,
   "empacotamento_aprovado": false,

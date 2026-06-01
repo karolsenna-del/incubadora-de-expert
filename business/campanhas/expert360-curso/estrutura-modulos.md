@@ -178,4 +178,42 @@ Portfólio de ferramentas foi movido para o M2 (Bloco do Ecossistema). Rastreado
 ---
 
 ## Módulo 4 — Autoridade
-*A estruturar*
+**Fase:** Da Invisibilidade à Autoridade
+**Objetivo:** A aluna sai com P5 completo — bio publicável, linha editorial, plano 30 dias, prompts de reels e carrosséis, primeiro anúncio de posicionamento feito.
+**Input obrigatório:** P1 + P2 + P3
+**Input opcional (enriquece se existir):** depoimento, pitch que funcionou, objeções coletadas no M3
+**Mecanismo:** Agente da Autoridade Tríplice
+**Fontes:** Lives 3 e 10, VOL-06, RC-02
+**Gate:** QG-CC-005 PASS (01/06/2026)
+
+### Bloco de Mentalidade
+
+| # | Aula | Objetivo | Com o que sai |
+|---|------|----------|---------------|
+| 1 | Autoridade digital não é influência | Vir pro digital não é virar blogueira ou influencer. Autoridade serena vs. presença forçada. RC-02: curar o ambiente que você consome molda o que você acredita ser possível pra você. Fonte: Live 3 | Clareza de que o jogo é diferente do que ela temia |
+| 2 | Funil de consciência — onde sua persona está | Os 5 níveis de consciência. Onde a Laura está: consciente do problema, inconsciente do método certo. Como estruturar conteúdo que fala com quem já sente a dor mas ainda não sabe que você existe. Fonte: Live 10 | Framework para criar conteúdo com intenção |
+
+### Bloco da Tríplice
+
+| # | Aula | Objetivo | Com o que sai |
+|---|------|----------|---------------|
+| 3 | Exercício: Agente da Autoridade Tríplice | Input obrigatório: P1 + P2 + P3. Input opcional: depoimento + pitch + objeções do M3 (se tiver, usa; se não tiver, o agente entrega o relatório completo do mesmo jeito). Agente conduz: posicionamento do expert, da persona, do produto. | Relatório completo da Autoridade Tríplice |
+
+### Bloco da Presença Digital
+
+| # | Aula | Objetivo | Com o que sai |
+|---|------|----------|---------------|
+| 4 | Da tríplice para o perfil: bio, tese e narrativa | Bio em 3 linhas. Frase-tese autoral. Narrativa de posicionamento — pode partir da história dela e do método (M0 + M2), não precisa de prova de aluno. O processo documentado já é autoridade. | Bio publicável + tese autoral + narrativa base |
+
+### Bloco de Conteúdo
+
+| # | Aula | Objetivo | Com o que sai |
+|---|------|----------|---------------|
+| 5 | Linha editorial + plano 30 dias | Pilares extraídos da tríplice. Funil de consciência aplicado por pilar. Frequência + formatos + plano 30 dias em tabela. | Linha editorial + plano 30 dias |
+| 6 | Roteiros: prompts de reels e carrosséis | Prompt de carrossel (já existe). Prompt de reels: criado com o módulo — 2 formatos (narrativo com metáfora / didático direto). Como adaptar por pilar. | Prompts funcionais pra criar sem travar |
+
+### Bloco Final
+
+| # | Aula | Objetivo | Com o que sai |
+|---|------|----------|---------------|
+| 7 | Queimar ponte — o anúncio de posicionamento | Como anunciar publicamente. VOL-06: comprometimento público acelera. Primeiro post real de posicionamento como entregável final do módulo. | P5 completo + primeiro post publicado |
