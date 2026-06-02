@@ -19,11 +19,22 @@
       "Aula Introdução",
       "Aula 1 — Fracasso como Prova",
       "Aula 2 — Exercício: Sua História Real",
-      "Aula 3 — Exercício: Ikigai"
+      "Aula 3 — Exercício: Ikigai",
+      "Aula Encerramento M0"
+    ],
+    "M1": [
+      "Aula Introdução",
+      "Aula 1 — Empreendedora mede por ano, não por mês",
+      "Aula 2 — O Custo Invisível do Sim",
+      "Aula 3 — O que é Persona Compradora",
+      "Aula 4 — Exercício: Construindo sua Persona",
+      "Aula 5 — O que é Promessa Transformadora",
+      "Aula 6 — Exercício: Construindo sua Promessa",
+      "Aula Encerramento M1"
     ]
   },
-  "modulo_atual": "M0",
-  "aula_atual": "Aula Encerramento M0",
+  "modulo_atual": "M2",
+  "aula_atual": "Aguardando aprovação QG-CC-006 (M2 completo)",
   "formato_roteiro": "script completo + estrutura com tópicos e pontos-chave ao final",
   "branding_aprovado": false,
   "empacotamento_aprovado": false,
@@ -33,8 +44,12 @@
   "decisao_drive": "Todos os exercícios têm arquivo no Drive do aluno. Em vez de 'abra um doc em branco', usar 'abra o arquivo [nome] no seu Drive'. Vale para exercícios, templates e resultados de agentes.",
   "decisao_estrutura_modulos": "Cada módulo tem Aula de Introdução + aulas de conteúdo + Aula de Encerramento. +2 aulas por módulo, total ~42 aulas.",
   "aulas_completas_atualizacao": "Aula 2 M0: ajuste retroativo — instrução do Drive aplicada (uma linha).",
-  "ultima_sessao": "2026-06-01",
+  "ultima_sessao": "2026-06-02",
   "decisoes_sessao": [
+    "Feito é melhor que perfeito movida de M1 para M3 — no M3 a aluna vai ao campo e precisa da permissão ativa para agir antes de estar 100% pronta, contexto mais real",
+    "M2 tem 8 aulas (não 9 como estava no tracker) — corrigido",
+    "Lives Expert360 em C:\\Users\\karol\\Downloads\\Lives Expert360 (1).md — fonte principal de todas as aulas com histórias reais da Karol",
+    "Mentalidade Black VOL-02 = fonte da Aula 1 do M1 (campeonato vs. jogo, RC-14)",
     "Portfólio de Ferramentas absorvido no M2 como Bloco do Ecossistema (aulas 5 e 6) — nasce do método, faz sentido no mesmo módulo",
     "Transição eliminada como módulo separado — nome ruim para Hotmart, sem identidade própria",
     "Rastreador de Leads movido para M3 — é o passo zero da venda, pertence ao módulo de vendas",

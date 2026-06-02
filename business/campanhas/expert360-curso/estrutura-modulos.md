@@ -71,7 +71,6 @@ A persona EMERGE da história real — não é um molde que a aluna tenta encaix
 |---|------|----------|---------------|
 | 1 | Empreendedora mede por ano, não por mês | Virada de chave: especialista → empreendedora. Muda o que é urgente e o que é relevante. | Nova unidade de tempo para medir progresso |
 | 2 | O Custo Invisível do Sim | Revelar o custo real de projetos de terceiros: tempo, energia, desalinhamento, custo composto. 3 tipos de sim que desviam. 3 perguntas filtro. | Critério claro para proteger o próprio projeto |
-| 3 | Feito é melhor que perfeito | Quebrar a crença "preciso me sentir pronta antes de começar". | Permissão para agir antes de estar pronta |
 
 **Fontes:** VOL-02, RC-14, RC-01, RC-03, Live 15 (Custo Invisível do Sim)
 
@@ -147,6 +146,7 @@ Portfólio de ferramentas foi movido para o M2 (Bloco do Ecossistema). Rastreado
 | # | Aula | Objetivo | Com o que sai |
 |---|------|----------|---------------|
 | 1 | Identidade de vendas antes da técnica | Medo de cobrar como crença, não como fato. Vender é servir quem já tem o problema. "Só fracassa quem desiste." As 3 vendas são campo — não teste final. RC-07, RC-08, RC-13, VOL-06 | Nova identidade antes de tocar em qualquer tático |
+| 2 | Feito é melhor que perfeito | Quebrar a crença "preciso me sentir pronta antes de começar". No M3 isso é real: a aluna vai ter que sair antes de estar pronta e fazer a venda. Permissão ativa para agir. | Permissão para ir ao campo antes de estar 100% pronta |
 
 ### Bloco da Oferta
 
