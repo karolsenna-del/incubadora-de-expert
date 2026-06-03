@@ -12,7 +12,8 @@
 | Display Name | ✅ APROVADO | `Karol | Arquiteta do Método` |
 | Bio | ✅ APROVADA | Ver abaixo |
 | Link da Bio | ✅ APROVADO | Estrutura definida — ver abaixo |
-| Destaques | ⏳ Pendente | Não iniciado |
+| Linktree | ✅ IMPLEMENTADO | linktr.ee/karolsenna._ — 3 links no ar |
+| Destaques | 🔄 Em progresso | D1 aprovado (stories produzidos) — D2 iniciado, pausado |
 | Posts Fixados | ⏳ Pendente | Não iniciado |
 
 ---
@@ -136,12 +137,27 @@ Aula ao vivo toda quarta — grátis ↓
 
 ---
 
-## Próximo — Destaques (Item 4)
+## Destaque 1 — Sobre Mim ✅ APROVADO
 
-3 destaques fixos a construir:
-1. **Sobre Mim** — quem é a Karol, sua história, o método
-2. **Produto** — Incubadora de Expert (grupo e individual)
-3. **Depoimentos** — resultados de alunos
+**Stories produzidos (fundo preto + letra branca, exceto Story 1 que usa foto):**
+
+- Story 1: Apresentação + foto ("Oi, eu sou a Karol Senna. Arquiteta do Método...")
+- Story 2: O que faz / pra quem ("Ajudo especialistas experientes a transformar...")
+- Story 3: Missão + inimigo ("Minha missão é libertar especialistas...")
+- Story 4: Por que eu sei disso ("Eu sei porque fui eu. 8 lançamentos...")
+- Story 5: CTA ("Quer estruturar o que você já sabe? Link na bio. ↓")
+
+---
+
+## Próximo — Destaque 2: Produto (Incubadora de Expert)
+
+**Pausado aqui em 03/06/2026. Para retomar, responder:**
+1. Formato da Incubadora (sessões individuais, grupo, duração)
+2. Transformação principal (resultado que o aluno sai)
+3. Preço exposto nos stories ou direciona pro forms?
+4. Prova disponível (resultado de aluno, print, antes/depois)
+
+Depois: Destaque 3 (Depoimentos) e Posts Fixados (3).
 
 ---
 

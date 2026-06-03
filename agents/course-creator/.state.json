@@ -31,10 +31,21 @@
       "Aula 5 — O que é Promessa Transformadora",
       "Aula 6 — Exercício: Construindo sua Promessa",
       "Aula Encerramento M1"
+    ],
+    "M2": [
+      "Aula Introdução",
+      "Aula 1 — Você Não Precisa Saber Tudo para Ensinar",
+      "Aula 2 — Seu Método Já Existe. Está na Sua História.",
+      "Aula 3 — O que é um Método Autoral",
+      "Aula 4 — As 3 Jornadas: Como Você Projeta (e Define) a Transformação do Seu Aluno",
+      "Aula 5 — Exercício: Construindo Seu Método com o Agente do Processo Autoral",
+      "Aula 6 — Por que Ferramentas Vendem Mais do que Copy",
+      "Aula 7 — Exercício: Construindo Seu Portfólio com o Agente do Portfólio Estratégico",
+      "Aula Encerramento M2"
     ]
   },
-  "modulo_atual": "M2",
-  "aula_atual": "Aguardando aprovação QG-CC-006 (M2 completo)",
+  "modulo_atual": "M3",
+  "aula_atual": "M3 — Aula 3 escrita, aguardando aprovação. Próxima: Aula 4 (Agente da Proposta Validada)",
   "formato_roteiro": "script completo + estrutura com tópicos e pontos-chave ao final",
   "branding_aprovado": false,
   "empacotamento_aprovado": false,
@@ -44,7 +55,7 @@
   "decisao_drive": "Todos os exercícios têm arquivo no Drive do aluno. Em vez de 'abra um doc em branco', usar 'abra o arquivo [nome] no seu Drive'. Vale para exercícios, templates e resultados de agentes.",
   "decisao_estrutura_modulos": "Cada módulo tem Aula de Introdução + aulas de conteúdo + Aula de Encerramento. +2 aulas por módulo, total ~42 aulas.",
   "aulas_completas_atualizacao": "Aula 2 M0: ajuste retroativo — instrução do Drive aplicada (uma linha).",
-  "ultima_sessao": "2026-06-02",
+  "ultima_sessao": "2026-06-03 (pausa)",
   "decisoes_sessao": [
     "Feito é melhor que perfeito movida de M1 para M3 — no M3 a aluna vai ao campo e precisa da permissão ativa para agir antes de estar 100% pronta, contexto mais real",
     "M2 tem 8 aulas (não 9 como estava no tracker) — corrigido",

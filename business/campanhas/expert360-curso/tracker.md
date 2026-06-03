@@ -37,8 +37,8 @@
 | Definir templates (8-10 modelos Canva/Notion/Sheets) | Karol | Nao iniciado | M2 | entregavel do M2 |
 | Roteirizar M0 — Desbloqueio (5 aulas) | Course Creator | Done 01/06 | M0 estruturado | Intro + A1 + A2 + A3 + Encerramento |
 | Roteirizar M1 — Persona + Promessa (8 aulas) | Course Creator | Done 02/06 | M0 roteirizado | m1-roteiros.md |
-| Roteirizar M2 — Processo Autoral (8 aulas) | Course Creator | Aguardando aprovação | M1 roteirizado | m2-roteiros.md |
-| Roteirizar M3 — Vendas Secretas (11 aulas) | Course Creator | Nao iniciado | M2 roteirizado | — |
+| Roteirizar M2 — Processo Autoral (9 aulas) | Course Creator | Done 03/06 | M1 roteirizado | m2-roteiros.md |
+| Roteirizar M3 — Vendas Secretas (12 aulas) | Course Creator | Em andamento | M2 roteirizado | m3-roteiros.md |
 | Roteirizar M4 — Autoridade (9 aulas) | Course Creator | Nao iniciado | M3 roteirizado | — |
 
 ---
@@ -55,6 +55,8 @@
 
 > Mais recente primeiro.
 
+- 03/06 — @course-creator: M3 iniciado — Intro + Aulas 1, 2 e 3 escritas (4 de 12). Aula 3 aguardando aprovação. Pausa na sessão.
+- 03/06 — @course-creator: M2 aprovado (QG-CC-006 PASS) — 9 aulas. Aula 4 "As 3 Jornadas" adicionada (framework + exercício guiado + duplo uso design/venda). Total: 31 aulas aprovadas (M0+M1+M2).
 - 02/06 — @course-creator: M2 roteirizado — 8 aulas. Mentalidade: Live 1 (insegurança inteligente) + Live 13 (pulga + dois medos). Método: 5 tipos de narrativa. Portfólio: ferramentas como proposta irresistível. Aguardando aprovação QG-CC-006.
 - 02/06 — @course-creator: M1 roteirizado e aprovado (QG-CC-006 PASS) — 8 aulas. Aula 1 enriquecida com campeonato vs. jogo (Mentalidade Black VOL-02). Aula 2 reescrita com histórias reais das duas parcerias (Live 15).
 - 02/06 — @course-chief: "Feito e melhor que perfeito" movida de M1 para M3. M1 passa de 9 para 8 aulas, M3 de 10 para 11.
@@ -74,7 +76,7 @@
 |---------|----------|------|-------|
 | Modulos estruturados | 0 | 5 (M0-M4) | 5 (todos) |
 | Agentes criados | 0 | 6 | 0 |
-| Aulas roteirizadas | 0 | ~42 | 21 (M0 + M1 aprovados, M2 aguardando aprovação) |
+| Aulas roteirizadas | 0 | ~43 | 31 (M0 + M1 + M2 aprovados) |
 
 ---
 
