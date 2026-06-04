@@ -42,10 +42,18 @@
       "Aula 6 — Por que Ferramentas Vendem Mais do que Copy",
       "Aula 7 — Exercício: Construindo Seu Portfólio com o Agente do Portfólio Estratégico",
       "Aula Encerramento M2"
+    ],
+    "M3": [
+      "Aula Introdução",
+      "Aula 1 — Identidade de Vendas antes da Técnica",
+      "Aula 2 — Feito é Melhor que Perfeito",
+      "Aula 3 — O que Você Está Vendendo — e por que começa pelo 1:1",
+      "Aula 4 — Exercício: Construindo sua oferta com o Agente da Proposta Validada",
+      "Aula 5 — Rastreador de Leads Quentes"
     ]
   },
   "modulo_atual": "M3",
-  "aula_atual": "M3 — Aula 3 escrita, aguardando aprovação. Próxima: Aula 4 (Agente da Proposta Validada)",
+  "aula_atual": "M3 — Aula 5 aprovada. Próxima: Aula 6 (Social selling)",
   "formato_roteiro": "script completo + estrutura com tópicos e pontos-chave ao final",
   "branding_aprovado": false,
   "empacotamento_aprovado": false,
@@ -55,7 +63,7 @@
   "decisao_drive": "Todos os exercícios têm arquivo no Drive do aluno. Em vez de 'abra um doc em branco', usar 'abra o arquivo [nome] no seu Drive'. Vale para exercícios, templates e resultados de agentes.",
   "decisao_estrutura_modulos": "Cada módulo tem Aula de Introdução + aulas de conteúdo + Aula de Encerramento. +2 aulas por módulo, total ~42 aulas.",
   "aulas_completas_atualizacao": "Aula 2 M0: ajuste retroativo — instrução do Drive aplicada (uma linha).",
-  "ultima_sessao": "2026-06-03 (pausa)",
+  "ultima_sessao": "2026-06-04",
   "decisoes_sessao": [
     "Feito é melhor que perfeito movida de M1 para M3 — no M3 a aluna vai ao campo e precisa da permissão ativa para agir antes de estar 100% pronta, contexto mais real",
     "M2 tem 8 aulas (não 9 como estava no tracker) — corrigido",

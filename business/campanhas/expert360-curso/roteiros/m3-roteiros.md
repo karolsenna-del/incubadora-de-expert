@@ -299,6 +299,110 @@ Chegue sabendo o que você quer entregar — mesmo que em rascunho. O agente vai
 ---
 ---
 
+## AULA 4 — EXERCÍCIO: CONSTRUINDO SUA OFERTA COM O AGENTE DA PROPOSTA VALIDADA
+*Estimativa: 8–10 minutos (vídeo) + tempo com o agente*
+*Mecanismo: Agente da Proposta Validada*
+
+---
+
+**[ABERTURA]**
+
+Você entendeu o que é uma oferta de validação. Por que começa pelo 1:1. O que a Proposta Validada tem — e o que ela não é.
+
+Agora você constrói a sua.
+
+O Agente da Proposta Validada vai usar P1, P2 e P3 como base — o que você sabe sobre a sua persona, a transformação que promete e o método que vai entregar — para construir com você os componentes que fazem uma oferta funcionar numa conversa real.
+
+---
+
+**[COMO FICA O RESULTADO]**
+
+Antes de abrir o agente, deixa eu te mostrar o que você vai ter ao sair.
+
+O agente não te dá respostas isoladas. Ele produz um documento estruturado — a sua Proposta Validada — com seções que cobrem cada parte da oferta. Ele vai te perguntar, questionar, refinar, até que tudo faça sentido junto.
+
+Fica assim:
+
+**Promessa específica da sessão.** Não é P2 — que é a promessa geral do seu método. É o que esta pessoa específica vai alcançar neste formato específico, neste período. Concreta, urgente, pessoal.
+
+**Mecanismo.** O método autoral que entrega essa promessa — P3 aplicado à sessão 1:1. O que torna a sua entrega diferente de qualquer outra coisa que a pessoa já tentou.
+
+**O que está incluído.** Número de sessões, duração, formato, entregáveis concretos de cada encontro. Estrutura que você consegue sustentar — sem overhead operacional que você ainda não tem estrutura para manter.
+
+**Como apresentar o preço.** Não é o número. É o enquadramento — quando falar, como apresentar depois de mostrar o valor, qual sequência faz o preço parecer razoável diante do que está sendo oferecido.
+
+**Pitch de 3 frases.** A síntese de tudo. O que você faz, para quem, e com qual resultado esperado — em 3 frases que cabem numa conversa casual, numa mensagem de DM, ou na resposta para "o que você faz?".
+
+Eu usei o agente para construir a Proposta da Incubadora — e o documento que saiu tinha nome, mecanismo, entregáveis detalhados, precificação e garantia. A sua versão de validação vai ser mais enxuta do que a da Incubadora, porque é para o 1:1 — não uma mentoria de 12 meses. Mas a lógica é a mesma: você vai sair com uma oferta que qualquer pessoa consegue entender em 30 segundos.
+
+---
+
+**[O QUE LEVAR]**
+
+Três documentos do Drive:
+
+**Minha Persona Compradora (P1)** — Módulo 1, Aula 4.
+
+**Minha Promessa Transformadora (P2)** — Módulo 1, Aula 6.
+
+**Meu Método Autoral (P3)** — Módulo 2, Aula 5.
+
+E um rascunho do que você quer oferecer — mesmo que seja uma linha: "quero oferecer três sessões de uma hora". O agente parte daí e refina. Quanto mais claro o rascunho, mais preciso o resultado.
+
+---
+
+**[INSTRUÇÃO DE POSTURA]**
+
+Três coisas que vão fazer o processo funcionar bem:
+
+**Primeira: traga rascunho, não resposta.** Você não precisa saber o que vai oferecer antes de abrir o agente. Precisa ter uma direção — mesmo vaga. O agente existe para refinar, não para inventar no lugar da sua ausência.
+
+**Segunda: seja honesta sobre o preço.** Não existe número certo. Existe número que você consegue defender com convicção numa conversa. Se o agente sugerir um enquadramento que você não se sente capaz de usar, diga. O pitch de preço só funciona se você acredita no que está dizendo.
+
+**Terceira: o pitch precisa parecer você.** Se as 3 frases soarem muito formais, muito comerciais ou muito distantes do seu jeito de falar — diga. O agente vai ajustar. O critério não é o pitch mais elaborado. É o mais verdadeiro que você consegue dizer com naturalidade.
+
+---
+
+**[INSTRUÇÃO]**
+
+Abra o arquivo **Minha Proposta Validada (P4)** no seu Drive.
+
+Depois, abra o **Agente da Proposta Validada** no seu painel de agentes.
+
+Leve os três documentos e o rascunho do que você quer oferecer. Deixa o agente conduzir.
+
+---
+
+**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
+
+**Seção 1: Bridge**
+- Aula anterior: entendeu o que é Proposta Validada, por que 1:1, o que inclui
+- Agora constrói — agente usa P1 + P2 + P3 como base
+
+**Seção 2: Como fica o resultado — documento estruturado (não respostas isoladas)**
+1. Promessa específica: P2 geral → promessa da sessão concreta, urgente, pessoal
+2. Mecanismo: P3 aplicado ao 1:1 — o que torna diferente do que ela já tentou
+3. O que inclui: sessões, duração, formato, entregáveis — estrutura sustentável
+4. Como apresentar o preço: enquadramento + sequência + quando falar
+5. Pitch de 3 frases: síntese de tudo em linguagem de conversa real
+- Exemplo: "Eu usei o agente pra construir a Proposta da Incubadora — saiu documento completo com mecanismo, entregáveis e precificação. Sua versão é mais enxuta porque é 1:1, mas a lógica é a mesma."
+
+**Seção 3: O que levar**
+- P1 + P2 + P3 (documentos do Drive)
+- Rascunho do que quer entregar: mesmo uma linha já ajuda
+
+**Seção 4: Instrução de postura**
+- Traga rascunho, não resposta — o agente refina, não inventa
+- Honesta sobre o preço — só funciona o que você consegue defender
+- Pitch precisa parecer você — verdadeiro > elaborado
+
+**Seção 5: Instrução**
+- Abra "Minha Proposta Validada (P4)" no Drive + Agente da Proposta Validada no painel
+- Leve os três documentos + rascunho. Deixa o agente conduzir.
+
+---
+---
+
 ## AULA INTRODUÇÃO — MÓDULO 3: VENDAS SECRETAS
 *Estimativa: 5–7 minutos*
 
