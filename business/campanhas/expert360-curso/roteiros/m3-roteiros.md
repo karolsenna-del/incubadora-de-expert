@@ -403,6 +403,300 @@ Leve os três documentos e o rascunho do que você quer oferecer. Deixa o agente
 ---
 ---
 
+## AULA 5 — RASTREADOR DE LEADS QUENTES
+*Estimativa: 10–12 minutos*
+*Fonte: modelo doTERRA adaptado + critérios P1*
+
+---
+
+**[ABERTURA]**
+
+Você tem a oferta. Sabe o que vai entregar, como entregar e como apresentar o preço.
+
+Agora vem a pergunta real: com quem você vai falar?
+
+Não "onde vou encontrar clientes" — esse é o caminho longo. A pergunta do Módulo 3 é mais direta: quem, dentro do círculo que você já tem, se encaixa no perfil da sua persona? E dessas pessoas, quem você aborda primeiro?
+
+O Rastreador de Leads Quentes existe para responder essas duas perguntas com clareza — antes da primeira mensagem.
+
+---
+
+**[O QUE É O RASTREADOR]**
+
+O Rastreador não é uma lista de contatos. É uma ferramenta de priorização.
+
+Qualquer uma consegue listar pessoas que conhece. O que a maioria não faz — e que transforma uma lista em pipeline — é qualificar cada pessoa antes de abordar. Quem tem o perfil? Quem está num momento de vida em que isso faz sentido? Quem tem histórico de investir em desenvolvimento? Quem você aborda essa semana, versus quem entra num acompanhamento de médio prazo?
+
+Sem rastreador, você aborda por impulso — quem aparece na cabeça na hora. Com rastreador, você aborda com estratégia — quem tem maior probabilidade de se converter e está mais acessível agora.
+
+---
+
+**[OS 5 GRUPOS]**
+
+O Rastreador organiza sua rede em 5 grupos, baseados em grau de relacionamento e potencial de fit com a persona que você construiu no Módulo 1.
+
+**Grupo 1 — Círculo íntimo.** Amigas próximas, família, pessoas com quem você tem contato regular e intimidade real. O fit pode ser variável, mas o relacionamento é o mais quente possível. Se alguém desse grupo tem o perfil da Laura — ela entra na sua lista de prioridade máxima.
+
+**Grupo 2 — Colegas e ex-colegas de área.** Pessoas com quem você trabalhou, estudou, ou convive profissionalmente. Alto potencial de fit — especialistas que, como você, têm expertise sólida e podem estar no mesmo ponto de transição.
+
+**Grupo 3 — Clientes e ex-clientes.** Quem já pagou por algo seu — uma sessão, uma consulta, um serviço. O mais importante nesse grupo: eles já validaram que confiam no seu trabalho e estão dispostos a investir. Se tiverem o perfil, são leads quentes de primeira linha.
+
+**Grupo 4 — Seguidores engajados.** Quem comenta, responde stories, mandou DM, reagiu a conteúdo com consistência. O relacionamento é digital, mas é real — você já existe na cabeça dessas pessoas. O fit precisa ser qualificado, mas o aquecimento já aconteceu.
+
+**Grupo 5 — Conexões frias qualificadas.** Quem você conhece vagamente — de eventos, grupos de WhatsApp, masterminds, comunidades online — mas cujo perfil se encaixa claramente na persona. Mais esforço para aquecer, mas potencial alto.
+
+---
+
+**[COMO PREENCHER — FIT E PRIORIDADE]**
+
+O Rastreador tem duas colunas que trabalham juntas mas medem coisas diferentes:
+
+**Score de fit.** Baseado nos critérios de P1 — o documento que você construiu no Módulo 1. A pessoa é especialista com experiência consolidada? Está tentando entrar no digital? Tem renda que permite investir? Não quer aparecer de forma amadora? Cada critério que bate soma ao score.
+
+**Prioridade de abordagem.** Combina o score de fit com o grupo — o quão aquecida está a relação. Uma pessoa com fit médio no Grupo 1 pode ter prioridade maior do que uma com fit alto no Grupo 5. Não é só sobre quem encaixa na persona — é sobre quem você consegue abordar de forma natural agora.
+
+O resultado: uma lista ordenada. Você não começa pela primeira pessoa que vier na cabeça. Começa pelo topo da lista — quem combina alto fit com relação aquecida.
+
+Abra o arquivo **Rastreador de Leads Quentes** no seu Drive. Ele já vem com os 5 grupos, as colunas de score e um guia de critérios baseado em P1. Seu trabalho é preencher — não criar do zero.
+
+---
+
+**[FECHAMENTO]**
+
+Preencha o Rastreador antes da próxima aula. O objetivo é ter uma lista visível, priorizada — não precisa ser perfeita.
+
+*[pausa]*
+
+Mas aqui já consigo imaginar uma pergunta que vai surgir pra muita gente quando abrir esse documento:
+
+*"Karol, e se a minha lista for pequena e não conseguir preencher o Rastreador de Leads?"*
+
+Boa pergunta. Tem estratégia pra isso — e é o que a gente vai ver na próxima aula.
+
+---
+
+**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
+
+**Seção 1: Setup**
+- Você tem a oferta. Agora: com quem falar?
+- Não "onde encontrar clientes" (longo prazo) — quem no seu círculo, quem primeiro
+- Rastreador = ferramenta de priorização, não lista de contatos
+
+**Seção 2: O que é o Rastreador**
+- Lista qualquer um. Pipeline = qualificar antes de abordar
+- Sem rastreador: abordar por impulso. Com rastreador: abordar com estratégia
+- Quem tem maior fit + relação mais quente = prioridade
+
+**Seção 3: Os 5 grupos**
+1. Círculo íntimo — máximo relacionamento, fit variável
+2. Colegas e ex-colegas de área — alto fit potencial (mesma transição)
+3. Clientes e ex-clientes — já pagaram, já confiam: primeira linha se tiverem perfil
+4. Seguidores engajados — relacionamento digital real, fit a qualificar
+5. Conexões frias qualificadas — esforço maior pra aquecer, fit alto
+
+**Seção 4: Como preencher — 2 colunas distintas**
+- Score de fit: critérios de P1 (especialista? tentou digital? pode investir? não quer aparecer amadora?)
+- Prioridade: fit + aquecimento da relação — não só quem encaixa, quem você aborda agora
+- Output: abrir "Rastreador de Leads Quentes" no Drive — template pré-preenchido
+
+**Seção 5: Fechamento com a pergunta**
+- "Preencha antes da próxima aula. Não precisa ser perfeito."
+- Pergunta plantada: "Karol, e se a minha lista for pequena e não conseguir preencher o Rastreador?"
+- Teaser: tem estratégia pra isso — próxima aula
+
+---
+---
+
+## AULA 6 — SOCIAL SELLING: A ESTRATÉGIA DE QUEM NÃO PRECISA DE AUDIÊNCIA
+*Estimativa: 12–13 minutos*
+*Fontes: Live 16 (O Segredo do Networking que Vende) + ETL social selling — Alcateia*
+
+---
+
+**[ABERTURA — respondendo a pergunta da aula anterior]**
+
+Você tentou preencher o Rastreador e chegou a poucos nomes com fit real.
+
+Isso não é o fim. É o início de uma segunda estratégia — que vai expandir seu pipeline enquanto você trabalha com quem já tem no radar.
+
+Essa estratégia tem nome: social selling.
+
+Mas antes de entrar na tática, preciso te contar o que aprendi num evento de networking — porque é de lá que vem o fundamento de tudo.
+
+---
+
+**[A VIRADA]**
+
+Eu sempre tive dificuldade com networking.
+
+Não é timidez, exatamente. É uma mistura de coisas: o medo de parecer interesseira, a dificuldade de iniciar conversa sem um motivo claro, a sensação de estar interrompendo alguém que não me convidou.
+
+Fui a um evento porque sabia que era uma habilidade que precisava desenvolver. O primeiro dia foi mediano — fiquei no meu canto, com quem já conhecia, conversas superficiais. O erro clássico.
+
+No segundo dia, algo mudou do lado de dentro.
+
+*"Eu parei de pensar em mim e comecei a pensar nas pessoas."*
+
+Parece simples. Mas é uma virada enorme.
+
+Quando você entra numa conversa pensando em você — no que tem para oferecer, em como se apresentar, em como não parecer estranha — você fica presa na própria cabeça. E quem está na própria cabeça não consegue estar presente na conversa.
+
+Mas quando você entra pensando nas pessoas — em quem elas são, o que estão construindo, o que estão carregando — algo relaxa. Você para de se monitorar e começa a se conectar.
+
+---
+
+**[A HISTÓRIA QUE MUDOU MINHA VISÃO SOBRE VENDAS]**
+
+Com essa chave virada, me apresentaram a um senhor que trabalhava com uma casa de abrigo — um lugar que acolhe crianças abandonadas.
+
+Não tinha nada de estratégico nessa conversa. Eu me interessei pelo trabalho dele de verdade. Perguntei sobre a casa, sobre as crianças, sobre os desafios que enfrentavam.
+
+Quando ele mencionou que tinham dificuldade de se comunicar nas redes sociais, me ofereci para ajudar. Voluntariamente. Sem esperar nada em troca.
+
+Minutos depois, chegaram outras pessoas ligadas à casa. Uma delas era psicanalista.
+
+E ela foi descrevendo a própria trajetória — a sensação de ter muito conhecimento mas não saber como transformar em negócio digital, o medo de se expor, a dificuldade de se posicionar sem virar influencer.
+
+Eu estava ouvindo a minha persona falar.
+
+E o senhor que eu estava ajudando de graça me apresentou para ela dizendo: *"Ela está me ajudando com o marketing da casa de abrigo. Você precisa conversar com ela."*
+
+Saí dali com o contato dela para uma sessão.
+
+*[pausa]*
+
+Esse episódio me ensinou o primeiro segredo: quando você serve sem calcular o retorno, você cria algo que nenhuma técnica de networking consegue criar artificialmente — confiança instantânea. Você nunca sabe quem está do lado de quem você está ajudando.
+
+No mesmo evento, reconheci minha persona numa funcionária pública que odiava a própria estabilidade — e saí com mais um contato. Num terceiro episódio, aprendi que ouvir completamente antes de oferecer qualquer coisa transforma uma conversa educada em oportunidade real.
+
+Três histórias. Três princípios. Todos nascidos da mesma virada: parar de pensar em mim e começar a pensar nas pessoas.
+
+---
+
+**[POR QUE FUNCIONA — AS NECESSIDADES HUMANAS]**
+
+Há um framework que explica por que essa abordagem converte.
+
+Toda pessoa percorre uma jornada antes de confiar em alguém — e por consequência, antes de comprar.
+
+**Ser notada.** Toda pessoa quer ter sua presença reconhecida. Quando você para e se interessa genuinamente por alguém — você a nota. Esse é o primeiro degrau da confiança.
+
+**Ser ouvida.** Ter espaço para expressar ideias e sentimentos sem julgamento. Uma pessoa que não se sente ouvida não se abre o suficiente para confiar.
+
+**Ser reconhecida.** Sentir que a outra pessoa a entende porque já esteve no mesmo lugar. Identificação cria confiança imediata — mais do que qualquer argumento de venda.
+
+**Pertencimento.** Só depois de ser notada, ouvida e reconhecida a pessoa está pronta para o pertencimento. Para comprar. Para se comprometer com uma transformação.
+
+*[pausa]*
+
+É por isso que a venda que pula os três primeiros degraus e vai direto para a oferta quase nunca funciona. A pessoa ainda não percorreu a jornada que a deixa pronta para dizer sim.
+
+A ferramenta que conduz essa jornada: **perguntas abertas.** Não "você tem um negócio?" — mas "o que você está construindo agora?" Perguntas abertas conduzem a pessoa pela jornada sem que ela perceba que está sendo conduzida. Ao final, ela já confia em você antes de você ter oferecido qualquer coisa.
+
+---
+
+**[DO EVENTO PARA O DIGITAL]**
+
+Tudo que aconteceu naquele evento acontece no digital todos os dias.
+
+O Instagram está cheio de sinais de quem está pronta para uma conversa. A hierarquia é simples:
+
+**Quente:** quem respondeu Story sobre o que você faz, quem perguntou como trabalha com você. Essas pessoas levantaram a mão — aborde.
+
+**Morno:** quem respondeu enquetes, quem visualiza seus Stories com consistência, quem comenta com engajamento real. Não estão prontas para oferta — estão prontas para conexão. A pergunta certa: *"qual sua maior dificuldade com [tema]?"*
+
+**Frio:** quem começou a seguir recentemente. Deixa o conteúdo trabalhar.
+
+E a regra que sustenta o pipeline: **proximidade constante.** Aparecer com frequência, nos momentos que importam para a pessoa — não só quando você precisa de algo. Uma resposta de Story que demonstra que você leu de verdade. Um comentário que mostra atenção. Uma mensagem para alguém que mencionou uma transição profissional. Pequenas interações consistentes constroem mais vínculo do que grandes gestos isolados.
+
+---
+
+**[O VOLUME CERTO PARA VOCÊ]**
+
+Nos modelos de social selling de alto volume, fala-se em 10 a 20 conversas por dia. Esse não é o seu modelo — e provavelmente nunca vai ser, porque não é o tipo de negócio que você está construindo.
+
+Você está fazendo as primeiras 3 vendas com qualidade, com relação, com cuidado. Isso não se constrói em volume. Se constrói em profundidade.
+
+O seu ritmo: **1 a 2 interações genuínas por dia.**
+
+"Genuína" tem um critério claro: a interação tem que fazer sentido para quem vai receber — não só para você. Não é pitch. Não é check-in vazio. É presença com intenção.
+
+---
+
+**[A CONVERSA HONESTA SOBRE PRAZO]**
+
+Preciso ser direta aqui, porque se eu não for, você vai se frustrar.
+
+Social selling não produz resultado em 7 dias. É pipeline de médio prazo — você planta hoje para colher em 4, 6, 8 semanas.
+
+As suas primeiras 3 vendas vão vir, na maior parte das vezes, de pessoas que já te conhecem. Do Rastreador. Não de pessoas que você acabou de conectar no Instagram essa semana.
+
+O social selling que você começa agora está construindo a **quarta, quinta, décima venda**. Está aquecendo as pessoas que vão estar prontas quando você aparecer com prova — com o depoimento das primeiras clientes, com o método refinado, com a segurança de quem já entregou.
+
+*[pausa]*
+
+Isso não é má notícia. É a ordem certa.
+
+Você valida com quem já confia em você. Enquanto faz isso, planta nas pessoas certas. Quando terminar o M3 com as 3 vendas feitas, você não vai aparecer no M4 tentando provar que funciona. Vai aparecer mostrando o que já está provado.
+
+O pipeline de hoje é a audiência qualificada do M4. Cada interação genuína que você faz agora é um tijolo dessa fundação.
+
+---
+
+**[FECHAMENTO]**
+
+Social selling não é sobre vender para estranhos. É sobre ser genuinamente útil para as pessoas certas — e confiar que quem você ajuda hoje vai, no momento certo, querer o que você tem.
+
+Sua persona não está só no Instagram. Você aprendeu a reconhecê-la no Módulo 1. Agora você tem os olhos para vê-la em qualquer lugar.
+
+Na próxima aula, a gente entra na abordagem — como ler um lead antes de mandar a primeira mensagem, e o que isso muda no resultado.
+
+---
+
+**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
+
+**Seção 1: Abertura**
+- Lista pequena: ponto de partida, não obstáculo
+- Social selling = segunda estratégia em paralelo
+
+**Seção 2: A virada**
+- Networking sempre foi difícil pra Karol
+- Virada: parar de pensar em mim → pensar nas pessoas
+
+**Seção 3: A história da psicanalista**
+- Servir sem calcular (casa de abrigo → ajuda voluntária) → apresentação inesperada → sessão
+- "Você nunca sabe quem está do lado de quem você está ajudando"
+- Referência rápida: outras 2 histórias (persona em todo lugar + ouvir antes de oferecer) = 3 princípios do mesmo evento
+
+**Seção 4: As necessidades humanas**
+- Notada → ouvida → reconhecida → pertencimento
+- Pular os 3 primeiros degraus = venda que não fecha
+- Ferramenta: perguntas abertas
+
+**Seção 5: Do evento para o digital**
+- 🔥 Quente: levantou a mão → abordar
+- 🌡️ Morno: engajou → conexão com a dor, sem pitch
+- ❄️ Frio: seguiu → conteúdo trabalha
+- Proximidade constante: pequenas interações > grandes gestos isolados
+
+**Seção 6: O volume certo para a Laura**
+- 10-20/dia = alto volume, não é o modelo
+- 1-2 interações genuínas/dia: faz sentido pra quem recebe
+- Presença com intenção, não pitch
+
+**Seção 7: A conversa honesta sobre prazo**
+- Pipeline médio prazo (4-8 semanas)
+- Primeiras 3 vendas: do Rastreador, não de conexões novas
+- Social selling constrói a 4ª, 5ª, 10ª venda + audiência qualificada do M4
+- Ordem certa: valida com quem confia → aparece no M4 com prova
+
+**Seção 8: Fechamento**
+- "Sua persona não está só no Instagram"
+- Teaser: próxima aula — como ler um lead antes da primeira mensagem
+
+---
+---
+
 ## AULA INTRODUÇÃO — MÓDULO 3: VENDAS SECRETAS
 *Estimativa: 5–7 minutos*
 
