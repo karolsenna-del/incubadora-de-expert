@@ -940,6 +940,293 @@ Na próxima aula, a gente entra no script de abordagem e na cadência pré-sess�
 ---
 ---
 
+## AULA 8 — O SCRIPT DE ABORDAGEM E A CADÊNCIA PRÉ-SESSÃO
+*Estimativa: 10–12 minutos*
+*Fontes: VOL — Social Selling (Alcateia) + contexto Expert360*
+
+---
+
+**[ABERTURA — você já tem o perfil]**
+
+Na aula anterior, você passou 5 minutos lendo um lead.
+
+Bio. Posts. Linguagem. Energia. Uma palavra registrada no Rastreador — Conectora, Analista ou Diretiva.
+
+Agora vem a parte que a maioria acha que é a mais difícil: escrever a primeira mensagem.
+
+Mas antes de entrar no roteiro, quero te falar uma coisa que vai mudar o tom de tudo que você escrever a partir daqui.
+
+A maior parte da dificuldade que você vai sentir não vem de não saber o que escrever. Vem de não saber **o que você está buscando** com a mensagem.
+
+---
+
+**[O QUE VOCÊ ESTÁ BUSCANDO — A SESSÃO, NÃO A VENDA]**
+
+O objetivo da abordagem não é vender.
+
+É marcar a sessão.
+
+Isso muda tudo.
+
+Quando o objetivo é vender, você chega com argumento, com pitch, com a oferta na cabeça — e tudo que você escreve carrega esse peso. A pessoa sente. E fecha.
+
+Quando o objetivo é marcar a sessão — uma conversa de 30 a 40 minutos para você entender a situação dela e ver se tem como ajudar — você chega de outro lugar. Com curiosidade. Com intenção genuína. Sem pitch.
+
+A venda acontece na sessão. O que você está buscando agora é a conversa.
+
+*[pausa]*
+
+Guarda isso. Porque é o que vai separar a mensagem que gera resposta da mensagem que gera silêncio.
+
+---
+
+**[ROTEIRO, NÃO SCRIPT]**
+
+Uma coisa importante antes de entrar nas etapas.
+
+Um script é rígido. Você decora, repete igual, e quem recebe sente que está sendo processado — não falado. Dá pra sentir quando uma mensagem é um template. É a sensação de abrir um e-mail de vendas que começa com o seu nome mas claramente foi disparado pra mil pessoas.
+
+Um roteiro é diferente. É um guia com etapas claras e pontos que não podem faltar — mas o como você chega em cada ponto é seu. Com a sua voz. Adaptado à pessoa na sua frente.
+
+O que você vai ter aqui é um roteiro. Com exemplos de apoio para cada perfil — não para copiar, mas para ter referência de tom e intenção enquanto encontra a sua versão.
+
+---
+
+**[O ROTEIRO EM 3 ETAPAS]**
+
+O roteiro de abordagem tem três etapas. Elas podem acontecer na mesma mensagem ou em mensagens curtas em sequência — depende do canal e do grau de relacionamento com a pessoa.
+
+**Etapa 1 — Abertura genuína.** Começa com ela, não com você. Algo específico que você notou no trabalho dela, que você sabe sobre o momento dela, ou que você viveu junto com ela — baseado no perfil que você leu.
+
+**Etapa 2 — Conexão ao problema.** Uma ponte entre o que você notou nela e o que você faz. Sem pitch. Sem "tenho a solução perfeita para você." Uma frase que mostra que você entende de onde ela está — antes de oferecer qualquer coisa.
+
+**Etapa 3 — O convite.** O pedido da sessão. Direto, simples, sem pressão. Uma pergunta que ela pode responder com facilidade.
+
+Três etapas. Vou entrar em cada uma.
+
+---
+
+**[ETAPA 1 — ABERTURA POR PERFIL]**
+
+A leitura que você fez na aula anterior agora determina como você começa.
+
+**Para a Conectora:**
+
+Ela não abre para quem começa com proposta. Ela abre para quem vê o trabalho dela de verdade.
+
+Sua abertura começa com algo específico que você genuinamente notou. Não um elogio genérico — algo real. O projeto que ela mencionou. A causa que ela carrega. O que ela está construindo que te chamou atenção de um jeito concreto.
+
+Exemplo de tom:
+
+*"[Nome], tenho acompanhado o que você está construindo. Tem uma coisa específica no seu trabalho que me chamou atenção — a forma como você [algo que você de verdade notou]. Tenho uma pergunta pra te fazer. Você topa uma conversa de 30 minutos essa semana?"*
+
+Não começa com "tenho algo pra te oferecer." Começa com ela.
+
+**Para a Analista:**
+
+Ela não abre para quem chega com entusiasmo vago. Ela abre para quem chega com substância.
+
+Sua abertura traz algo concreto — sobre o que você faz, sobre o que você está vendo acontecer com profissionais com trajetória parecida com a dela, sobre uma observação específica.
+
+Exemplo de tom:
+
+*"[Nome], estou trabalhando com especialistas que têm trajetória parecida com a sua — [detalhe específico que você observou]. Tenho visto algo acontecer nesse perfil que pode ser relevante pra você. Faria sentido a gente trocar 30 minutos?"*
+
+Não começa com "como você está?" Começa com substância.
+
+**Para a Diretiva:**
+
+Ela não abre para quem enrola. Ela abre para quem respeita o tempo dela.
+
+Sua abertura vai direto ao ponto — o que você tem e por que é relevante para ela. Uma frase. Nada antes.
+
+Exemplo de tom:
+
+*"[Nome], vi que você está em [contexto específico que você observou]. Tenho algo que pode ser relevante para a sua situação. Consigo te mostrar em 30 minutos?"*
+
+Não começa com contexto. Começa com o valor.
+
+---
+
+**[ETAPA 2 — A CONEXÃO AO PROBLEMA]**
+
+Depois da abertura, antes do convite, existe uma etapa que muita gente pula — e que faz toda a diferença.
+
+A conexão ao problema.
+
+Não é você apresentando a solução. É você mostrando que entende de onde ela está. Uma frase — às vezes duas — que espelha de volta pra ela algo do que você sabe sobre a dor que ela carrega.
+
+Não precisa ser longo. Precisa ser verdadeiro.
+
+Para a Conectora: *"Eu sei que pra quem tem tanto a contribuir mas ainda não encontrou o formato certo, a invisibilidade pesa de um jeito que vai além do financeiro."*
+
+Para a Analista: *"O que eu vejo com frequência em especialistas com trajetória sólida é o gap entre o que já provou no offline e como isso aparece — ou não aparece — no digital."*
+
+Para a Diretiva: *"Especialistas no seu nível costumam já ter o método. O que falta é a estrutura que faz ele se transformar em oferta real."*
+
+Uma frase que mostra que você entende antes de oferecer qualquer coisa.
+
+---
+
+**[ETAPA 3 — O CONVITE]**
+
+A terceira etapa é o pedido. E ele tem que ser simples.
+
+Não "quero te apresentar minha metodologia exclusiva." Não "tenho a solução ideal para o seu perfil."
+
+É uma pergunta que ela pode responder com uma palavra:
+
+*"Consigo te pegar 30 minutos essa semana?"*
+
+*"Faria sentido a gente trocar uma ideia sobre isso?"*
+
+*"Você topa uma conversa rápida pra eu entender melhor a sua situação?"*
+
+A sessão é o que você está pedindo. Uma conversa. Sem comprometimento, sem pressão de comprar nada. Ela não está decidindo se vai investir no seu método — está decidindo se tem 30 minutos disponíveis.
+
+Quando o convite é simples assim, a barreira de entrada cai inteiro.
+
+---
+
+**[A CADÊNCIA — O QUE ACONTECE DEPOIS DA PRIMEIRA MENSAGEM]**
+
+Você enviou a primeira mensagem. O Rastreador está atualizado com a data do contato.
+
+Agora existem dois caminhos.
+
+**Caminho A — ela respondeu.**
+
+Ótimo. Confirme a sessão. Data, horário, canal. E antes de encerrar essa conversa curta, dê a ela contexto do que vai acontecer:
+
+*"Perfeito. Nos encontramos [data/hora]. Vou chegar com algumas perguntas sobre o que você está construindo — para aproveitar bem o tempo juntas. Qualquer coisa, estou aqui."*
+
+Isso faz duas coisas: confirma que a conversa tem direção e cria expectativa positiva sem revelar que é uma sessão de vendas.
+
+Logo depois, envie o link do formulário de pré-diagnóstico. Ele chega antes da sessão, e você entra na conversa já sabendo onde ela está — sem precisar gastar os primeiros 10 minutos só para entender o contexto básico.
+
+**Caminho B — ela não respondeu.**
+
+Depois de 24 a 48 horas, você manda o segundo toque.
+
+O segundo toque não é repetição da primeira mensagem. É um ângulo diferente. Uma pergunta curta que retoma sem parecer que você está cobrando:
+
+*"[Nome], minha mensagem pode ter se perdido. Pergunta direta: você está passando por [conexão ao problema]? Pergunto porque acho que tenho algo relevante pra te contar."*
+
+Se depois de mais 24 horas ainda não houve resposta, o terceiro toque é o encerramento gracioso:
+
+*"Tudo bem, [Nome]. Entendo que o momento pode não ser agora. Se em algum ponto você quiser trocar uma ideia, é só me chamar."*
+
+E arquiva no Rastreador. Não como descarte — como lead fora do momento certo. Lead frio não é lead perdido. É lead que vai entrar no lançamento quando você aparecer com prova no M4.
+
+---
+
+**[O QUE FAZ A ABORDAGEM FUNCIONAR DE VERDADE]**
+
+Tem uma coisa que vai determinar se o seu roteiro funciona — e ela não está escrita no roteiro.
+
+É a intenção por trás de cada palavra.
+
+Na aula de Social Selling, a gente falou sobre a virada que aconteceu no evento: parar de pensar em mim e começar a pensar nas pessoas. Isso não é técnica de networking — é o fundamento de toda abordagem que gera resultado.
+
+Quando você escreve pensando "preciso marcar essa sessão", a mensagem fica tensa. As palavras ficam calculadas. O cuidado parece forçado. E a pessoa sente — não conscientemente, mas sente.
+
+Quando você escreve pensando "essa pessoa está carregando algo que eu já vi e que eu sei como resolver — e ela pode nem saber que existe um caminho", algo muda. A mensagem fica mais natural. O convite fica mais leve. A genuinidade aparece porque ela é real.
+
+Você leu o perfil dessa pessoa. Você sabe que ela tem anos de experiência e ainda não encontrou o formato. Você sabe que ela tentou e se frustrou. Você sabe que tem algo que pode mudar isso.
+
+A abordagem que funciona começa no lugar de quem tem algo que a outra pessoa precisa — não de quem precisa de algo da outra pessoa.
+
+---
+
+**[FECHAMENTO]**
+
+O Rastreador está preenchido. O perfil de cada lead está lido. O roteiro está na sua cabeça — não decorado, mas internalizado.
+
+Agora é campo.
+
+Antes da próxima aula, aborde pelo menos um lead do seu Rastreador. Um. Não precisa ser o mais difícil, não precisa ser o que você mais quer fechar. Precisa ser o primeiro.
+
+Porque a primeira mensagem não precisa ser a mais bem escrita.
+
+Precisa ser a que saiu.
+
+*[pausa]*
+
+Na próxima aula, a gente entra na sessão em si — o que acontece quando ela aceita e você tem 30 a 40 minutos com ela. A estrutura da conversa: como abrir, como fazer o diagnóstico, como apresentar a oferta sem parecer que você está vendendo, e como chegar no fechamento de um jeito que a decisão pareça dela.
+
+Te vejo lá.
+
+---
+
+**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
+
+**Seção 1: Abertura**
+- Bridge da Aula 7: perfil lido, Rastreador com coluna Perfil preenchida
+- Dificuldade real: não saber o que se busca com a mensagem — não saber o que escrever
+
+**Seção 2: O que você está buscando — sessão, não venda**
+- Objetivo = marcar a sessão (não vender)
+- Objetivo = vender → peso, pitch, a pessoa fecha
+- Objetivo = conversa → curiosidade, intenção genuína, sem pitch
+- A venda acontece na sessão
+
+**Seção 3: Roteiro, não script**
+- Script: rígido, a pessoa sente que está sendo processada
+- Roteiro: guia flexível — etapas claras, tom é seu
+- Exemplos de apoio por perfil: referência de tom, não pra copiar
+
+**Seção 4: O roteiro em 3 etapas**
+- Etapa 1 — Abertura genuína: começa com ela, baseado no perfil
+- Etapa 2 — Conexão ao problema: ponte sem pitch, espelha a dor antes de oferecer
+- Etapa 3 — O convite: pedido da sessão, simples, sem pressão
+
+**Seção 5: Abertura por perfil**
+- Conectora: algo específico e genuíno sobre o trabalho/impacto dela. Não elogio genérico.
+  - Tom: "tem uma coisa específica no seu trabalho que me chamou atenção..."
+  - Não começa com: proposta. Começa com: ela.
+- Analista: substância na abertura — trajetória, observação concreta
+  - Tom: "estou trabalhando com especialistas com trajetória parecida..."
+  - Não começa com: "como você está?". Começa com: o que você está vendo.
+- Diretiva: valor em uma linha — o que você tem e por que é relevante
+  - Tom: "tenho algo que pode ser relevante para a sua situação"
+  - Não começa com: contexto ou história. Começa com: o valor.
+
+**Seção 6: Conexão ao problema**
+- Entre abertura e convite: não pular essa etapa
+- Uma frase que espelha a dor antes de qualquer oferta
+- Exemplos por perfil:
+  - Conectora: invisibilidade que vai além do financeiro
+  - Analista: gap entre trajetória sólida e presença digital
+  - Diretiva: método que existe mas precisa de estrutura pra virar oferta
+
+**Seção 7: O convite**
+- Pergunta que ela responde com uma palavra
+- "Consigo te pegar 30 minutos essa semana?" — barreira mínima
+- Ela decide sobre o tempo disponível, não sobre comprar
+
+**Seção 8: A cadência**
+- Caminho A — respondeu: confirmar sessão + contexto + enviar formulário de pré-diagnóstico
+  - "Vou chegar com algumas perguntas..." = profissionalidade + expectativa positiva
+  - Formulário chega antes da sessão: você entra sabendo o contexto
+- Caminho B — não respondeu (24-48h): segundo toque com ângulo diferente, não repetição
+- Terceiro toque (mais 24h): encerramento gracioso
+  - Arquiva: lead frio ≠ lead perdido → entra no lançamento do M4 com prova
+
+**Seção 9: O que faz funcionar de verdade**
+- A intenção por trás das palavras — não está no roteiro
+- Bridge da Aula 6: parar de pensar em mim, pensar nela
+- "Preciso marcar essa sessão" → tom tenso, cuidado forçado, a pessoa sente
+- "Ela está carregando algo que eu sei como resolver" → mensagem natural, convite leve
+- Abordagem começa no lugar de quem tem algo que ela precisa
+
+**Seção 10: Fechamento**
+- Campo: abordar pelo menos um lead antes da próxima aula
+- "A primeira mensagem não precisa ser a mais bem escrita — precisa ser a que saiu"
+- Teaser: próxima aula — roteiro da sessão (abertura → diagnóstico → oferta → objeções → fechamento)
+
+---
+---
+
 ## AULA INTRODUÇÃO — MÓDULO 3: VENDAS SECRETAS
 *Estimativa: 5–7 minutos*
 

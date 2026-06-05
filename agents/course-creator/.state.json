@@ -51,11 +51,16 @@
       "Aula 4 — Exercício: Construindo sua oferta com o Agente da Proposta Validada",
       "Aula 5 — Rastreador de Leads Quentes",
       "Aula 6 — Social Selling: A Estratégia de Quem Não Precisa de Audiência",
-      "Aula 7 — Lendo seu lead antes do primeiro contato"
+      "Aula 7 — Lendo seu lead antes do primeiro contato",
+      "Aula 8 — O script de abordagem e a cadência pré-sessão"
     ]
   },
+  "materiais_criados": [
+    "business/campanhas/expert360-curso/materiais/roteiro-abordagem.md — template Drive da aluna (Aula 8)",
+    "business/campanhas/expert360-curso/materiais/formulario-pre-diagnostico.md — modelo Google Forms pré-diagnóstico (Aula 8)"
+  ],
   "modulo_atual": "M3",
-  "aula_atual": "M3 — Aula 7 aprovada. Próxima: Aula 8 (O script de abordagem e a cadência pré-sessão)",
+  "aula_atual": "M3 — Aula 8 aprovada. Próxima: Aula 9 (O roteiro da sessão de vendas secretas)",
   "formato_roteiro": "script completo + estrutura com tópicos e pontos-chave ao final",
   "branding_aprovado": false,
   "empacotamento_aprovado": false,
@@ -64,6 +69,7 @@
   "prd_enriquecido": true,
   "decisao_drive": "Todos os exercícios têm arquivo no Drive do aluno. Em vez de 'abra um doc em branco', usar 'abra o arquivo [nome] no seu Drive'. Vale para exercícios, templates e resultados de agentes.",
   "decisao_estrutura_modulos": "Cada módulo tem Aula de Introdução + aulas de conteúdo + Aula de Encerramento. +2 aulas por módulo, total ~42 aulas.",
+  "decisao_formulario_pre_diagnostico": "Quando a sessão é agendada, a aluna envia o link do Formulário de Pré-Diagnóstico (Google Forms). 12 perguntas: perfil (nome, profissão, experiência, modo de atuação), situação atual (descrição, histórico digital, desafio), contexto econômico (faixa de renda, histórico de investimento), contexto da sessão (motivação, resultado esperado, dúvidas). A aluna lê as respostas antes da sessão — poupa 10 minutos de aquecimento.",
   "aulas_completas_atualizacao": "Aula 2 M0: ajuste retroativo — instrução do Drive aplicada (uma linha).",
   "ultima_sessao": "2026-06-05",
   "decisoes_sessao": [
@@ -90,6 +96,7 @@
     "Loop M3→M4: pitch + depoimento + objeções alimentam o Módulo 4",
     "Agente do Portfólio Estratégico e Rastreador são entregáveis separados na Transição",
     "Formato de roteiro definido: script completo + estrutura com tópicos e pontos-chave ao final (vale para todas as aulas)",
-    "Aula 1 M0 aprovada (QG-CC-006 PASS)"
+    "Aula 1 M0 aprovada (QG-CC-006 PASS)",
+    "Formulário de Pré-Diagnóstico: enviado após confirmação da sessão. 12 perguntas cobrindo perfil, situação atual, contexto econômico e contexto da sessão. Modelo em business/campanhas/expert360-curso/materiais/formulario-pre-diagnostico.md"
   ]
 }

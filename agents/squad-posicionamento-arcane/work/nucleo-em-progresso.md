@@ -1,6 +1,6 @@
 # Vitrine de Posicionamento — Karol Senna
-**Status:** ✅ COMPLETO — QG-PD-003 PASS
-**Última sessão:** 04/06/2026
+**Status:** 🔄 EM EXECUÇÃO — produção no Canva
+**Última sessão:** 05/06/2026
 
 ---
 
@@ -12,12 +12,12 @@
 | Display Name | ✅ APROVADO | `Karol | Arquiteta do Método` |
 | Bio | ✅ APROVADA | Ver abaixo |
 | Link da Bio | ✅ APROVADO | linktr.ee/karolsenna._ — 3 links no ar |
-| Destaque 1 — Sobre Mim | ✅ APROVADO | 5 stories produzidos |
-| Destaque 2 — Produto | ✅ APROVADO | 7 stories + placeholder |
-| Destaque 3 — Depoimentos | ✅ APROVADO | 8 stories + placeholder |
-| Pinned 1 — Sobre a Karol | ✅ APROVADO | Carrossel 8 slides — copy completa |
-| Pinned 2 — Tese | ✅ APROVADO | Carrossel 7 slides — copy completa |
-| Pinned 3 — Oferta | ✅ APROVADO | Carrossel 8 slides — copy completa |
+| Destaque 1 — Sobre Mim | 🔄 MONTANDO | Copy aprovada — 8 stories no Canva (ajuste slide 4 feito) |
+| Destaque 2 — Produto | 🔄 MONTANDO | Copy aprovada — em produção no Canva |
+| Destaque 3 — Depoimentos | ⏳ AGUARDANDO | Estrutura pronta — pendente vídeos WhatsApp alunas |
+| Pinned 1 — Sobre a Karol | ✅ COPY PRONTA | Copy + briefing Canva entregues |
+| Pinned 2 — Tese | ✅ COPY PRONTA | Copy + briefing Canva entregues |
+| Pinned 3 — Oferta | ✅ COPY PRONTA | Copy + briefing Canva entregues |
 
 ---
 
@@ -89,13 +89,16 @@ Aula ao vivo toda quarta — grátis ↓
 
 ## Destaque 1 — Sobre Mim ✅ APROVADO
 
-**Stories (fundo preto + letra branca, exceto Story 1 com foto):**
+**8 stories | fundo preto + letra branca, exceto Story 1 e Story 8 com foto:**
 
-- Story 1: Apresentação + foto
-- Story 2: O que faz / pra quem
-- Story 3: Missão + inimigo
-- Story 4: Por que eu sei disso (8 lançamentos)
-- Story 5: CTA — Link na bio ↓
+- Story 1 (capa): "ARQUITETA DO MÉTODO / Karol Senna" — foto da Karol
+- Story 2: "Arquiteta do Método é quem pega anos de experiência solta na cabeça e transforma em estrutura que vende. Não é coach. Não é mentora de marketing. É quem faz o passo que vem antes de tudo isso."
+- Story 3: "Poderia me chamar de Expert em Fracassos. 8 lançamentos fracassados. 3 nichos diferentes. R$200k investidos em mentorias de outros. É uma coleção de tentativas que não foram a lugar nenhum."
+- Story 4: "Investi R$50k na melhor mentoria do país. Fiz tudo que me pediram. Tentei aprender copy, tráfego, lançamento tudo de uma vez. Na hora do pitch: travei. Zero vendas. Mesmo na melhor mentoria. Com os melhores professores."
+- Story 5: "Por um bom tempo pensei que o problema fosse eu. Que faltava coragem. Ou talento pra vender. Não era. Era que eu cheguei no lançamento sem método pronto."
+- Story 6: "O problema não era a mentoria. Era a ordem. Mentoria ensina a lançar. Ninguém ensina a construir o método antes de lançar. Esse gap virou o meu Método Expert360."
+- Story 7: "A Incubadora de Expert não é mentoria de marketing. É pré-marketing. A gente prepara o expert antes de ele aparecer. Método autoral. Narrativa com história. Primeira venda no privado. Depois o digital."
+- Story 8 (CTA): "Se você se sente insegura ou amadora no digital — seu lugar é aqui. ↓ Me segue." — foto da Karol
 
 ---
 
@@ -104,7 +107,14 @@ Aula ao vivo toda quarta — grátis ↓
 **7 stories | fundo preto + letra branca:**
 
 - Story 1: Capa — "INCUBADORA DE EXPERT / Do conhecimento travado ao método que vende."
-- Story 2: Hook — "não é preguiça. é ordem errada."
+- Story 2: Hook —
+  "Especialista com anos de bagagem.
+  Tenta criar conteúdo. Para.
+  Tenta montar oferta. Trava.
+  Começa. Larga.
+  'Falta disciplina. Deve ser preguiça.'
+  Não é preguiça.
+  É ordem errada."
 - Story 3: O ciclo que prende (loop: curso → YouTube → trava → para)
 - Story 4: A causa real — "o passo antes do marketing é método"
 - Story 5: As 5 fases do Expert360:
