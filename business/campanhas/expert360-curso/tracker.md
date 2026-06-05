@@ -55,6 +55,7 @@
 
 > Mais recente primeiro.
 
+- 05/06 — @course-creator: Aula 7 aprovada (QG-CC-006 PASS) — Lendo seu lead antes do primeiro contato. Coluna Perfil adicionada ao Rastreador. M3: 8 de 11 aulas concluídas.
 - 04/06 — @course-creator: Aulas 5 e 6 aprovadas (QG-CC-006 PASS) — Rastreador de Leads + Social Selling. M3: 7 de 11 aulas concluídas. Pausa na sessão.
 - 04/06 — @course-creator: Aula 3 aprovada (QG-CC-006 PASS). Aula 4 escrita e aprovada (QG-CC-006 PASS) — Exercício com Agente da Proposta Validada. M3: 5 de 11 aulas concluídas.
 - 03/06 — @course-creator: M3 iniciado — Intro + Aulas 1, 2 e 3 escritas (4 de 12). Aula 3 aguardando aprovação. Pausa na sessão.
@@ -78,7 +79,7 @@
 |---------|----------|------|-------|
 | Modulos estruturados | 0 | 5 (M0-M4) | 5 (todos) |
 | Agentes criados | 0 | 6 | 0 |
-| Aulas roteirizadas | 0 | ~43 | 38 (M0+M1+M2 completos + 7 de M3) |
+| Aulas roteirizadas | 0 | ~43 | 39 (M0+M1+M2 completos + 8 de M3) |
 
 ---
 

@@ -447,15 +447,17 @@ O Rastreador organiza sua rede em 5 grupos, baseados em grau de relacionamento e
 
 ---
 
-**[COMO PREENCHER — FIT E PRIORIDADE]**
+**[COMO PREENCHER — FIT, PRIORIDADE E PERFIL]**
 
-O Rastreador tem duas colunas que trabalham juntas mas medem coisas diferentes:
+O Rastreador tem três colunas que trabalham juntas mas medem coisas diferentes:
 
 **Score de fit.** Baseado nos critérios de P1 — o documento que você construiu no Módulo 1. A pessoa é especialista com experiência consolidada? Está tentando entrar no digital? Tem renda que permite investir? Não quer aparecer de forma amadora? Cada critério que bate soma ao score.
 
 **Prioridade de abordagem.** Combina o score de fit com o grupo — o quão aquecida está a relação. Uma pessoa com fit médio no Grupo 1 pode ter prioridade maior do que uma com fit alto no Grupo 5. Não é só sobre quem encaixa na persona — é sobre quem você consegue abordar de forma natural agora.
 
-O resultado: uma lista ordenada. Você não começa pela primeira pessoa que vier na cabeça. Começa pelo topo da lista — quem combina alto fit com relação aquecida.
+**Perfil.** Uma palavra — Conectora, Analista ou Diretiva — registrada depois de você ler o perfil da pessoa (bio, posts, linguagem, energia). Essa coluna informa diretamente como você vai escrever a mensagem de abordagem. A Aula 7 ensina como chegar nesse perfil.
+
+O resultado: uma lista ordenada — com o tom de abordagem já definido antes de você abrir o teclado.
 
 Abra o arquivo **Rastreador de Leads Quentes** no seu Drive. Ele já vem com os 5 grupos, as colunas de score e um guia de critérios baseado em P1. Seu trabalho é preencher — não criar do zero.
 
@@ -494,9 +496,10 @@ Boa pergunta. Tem estratégia pra isso — e é o que a gente vai ver na próxim
 4. Seguidores engajados — relacionamento digital real, fit a qualificar
 5. Conexões frias qualificadas — esforço maior pra aquecer, fit alto
 
-**Seção 4: Como preencher — 2 colunas distintas**
+**Seção 4: Como preencher — 3 colunas distintas**
 - Score de fit: critérios de P1 (especialista? tentou digital? pode investir? não quer aparecer amadora?)
 - Prioridade: fit + aquecimento da relação — não só quem encaixa, quem você aborda agora
+- Perfil: Conectora / Analista / Diretiva — lido na Aula 7, registrado aqui, informa o tom da abordagem
 - Output: abrir "Rastreador de Leads Quentes" no Drive — template pré-preenchido
 
 **Seção 5: Fechamento com a pergunta**
@@ -693,6 +696,246 @@ Na próxima aula, a gente entra na abordagem — como ler um lead antes de manda
 **Seção 8: Fechamento**
 - "Sua persona não está só no Instagram"
 - Teaser: próxima aula — como ler um lead antes da primeira mensagem
+
+---
+---
+
+## AULA 7 — LENDO SEU LEAD ANTES DO PRIMEIRO CONTATO
+*Estimativa: 10–12 minutos*
+*Fonte: Relatório Triangulação 3D (referência de abertura) + observação de padrões de perfis*
+
+---
+
+**[ABERTURA — quando alguém te lê antes de você falar]**
+
+Semanas atrás, recebi um relatório sobre mim.
+
+Alguém analisou meu perfil do Instagram. As fotos, os textos, a bio, o volume de posts, a forma como respondo comentários. E em 8 páginas, descreveu como eu tomo decisões, o que me faz abrir, o que me faz fechar — e como abordar alguém como eu para ter a maior chance de um sim.
+
+Era a Triangulação 3D, feita pelo Júlio Azevedo.
+
+Ler aquilo foi uma das sensações mais estranhas que já tive. Não porque estava errado. Porque estava certo.
+
+O relatório disse que sou Influente — A Conectora. Que eu tomo decisões a partir de conexão, impacto, comunidade. Que antes de qualquer proposta, preciso sentir que a pessoa se importa de verdade, que o método dela é real, que o que ela faz vai gerar impacto nas pessoas que importam pra mim. Que se alguém me abordar de forma fria, transacional, pitch sem relação — eu fecho. Mas se vier com calor, reconhecendo o trabalho que eu construí, com substância para sustentar — eu abro.
+
+*[pausa]*
+
+Era exatamente o que acontece dentro de mim — e eu nunca tinha falado isso pra ninguém.
+
+Aquilo me fez pensar: e se você soubesse algo assim sobre o seu lead antes de mandar a primeira mensagem?
+
+Não um relatório de 8 páginas. Uma leitura. "Antes de escrever essa mensagem, preciso entender como essa pessoa processa informação, o que importa pra ela, que tipo de abertura a faz abrir — e que tipo a faz fechar."
+
+É isso que essa aula ensina.
+
+---
+
+**[O QUE VOCÊ JÁ FAZ — SÓ QUE SEM SABER]**
+
+Deixa eu te fazer uma pergunta.
+
+Você já escreveu uma mensagem para uma pessoa e reescreveu antes de enviar — porque "pra essa aqui não funciona assim"? Já sentiu que com certas pessoas você vai mais devagar, enquanto com outras vai direto ao ponto porque sabe que elas preferem isso?
+
+Você já lê perfis antes do primeiro contato. Só faz isso de forma inconsciente.
+
+Essa aula torna esse instinto explícito — com um framework que você aplica em 5 minutos antes de qualquer abordagem. E que você registra no Rastreador, na coluna de Perfil, para ter o tom de cada lead já definido antes de escrever.
+
+---
+
+**[OS 3 PERFIS — O FRAMEWORK PRÁTICO]**
+
+Você não precisa de metodologia especializada para ler um lead. Precisa de atenção aos sinais que as pessoas já colocam publicamente — e de um critério para interpretá-los.
+
+O perfil de alguém aparece em 4 camadas: **bio, tipo de conteúdo, linguagem e energia do perfil.** Lendo essas 4 camadas, você identifica como essa pessoa toma decisões — especialmente a decisão de abrir ou fechar para uma conversa.
+
+Para os fins do primeiro contato, simplifiquei isso em 3 perfis que cobrem a maior parte dos casos que você vai encontrar.
+
+---
+
+**[PERFIL 1 — A CONECTORA (Relacional)]**
+
+Você conhece esse perfil. Pode ser que você mesma seja ele.
+
+**Na bio:** palavras como impacto, comunidade, transformação, missão. Ela fala de pessoas, não de números. Usa "a gente", "juntas", "o que construímos". Bio que parece quase uma declaração de valores.
+
+**Nos posts:** histórias pessoais, rostos, bastidores, eventos. Textos longos com emoção. Posta com frequência. Responde comentários. Aparece em múltiplos formatos.
+
+**Na linguagem:** calorosa, aberta. Usa exclamações. Faz perguntas. Quando comenta no post de alguém, não é um emoji — é uma frase de verdade.
+
+**Na energia:** alta, expressiva, presente. Perfil de quem gosta de estar lá.
+
+**Como abordar:**
+
+Ela não compra método antes de comprar você. Precisa sentir conexão antes de ouvir proposta.
+
+Abrir com algo específico sobre o impacto do trabalho dela funciona. "Acompanho seu trabalho e o que me chamou atenção foi [algo concreto que você genuinamente notou]."
+
+Não começa com "tenho uma metodologia." Não começa com "posso te ajudar a." Começa com ela — com o que ela está construindo e com o que você de verdade notou naquilo.
+
+**O que fecha esse perfil:** abordagem fria, elogio genérico ("adorei seu conteúdo"), pitch antes de qualquer conexão. Ela percebe imediatamente quando a mensagem é um template.
+
+---
+
+**[PERFIL 2 — A ANALISTA (Analítico)]**
+
+**Na bio:** números, resultados, certificações, metodologia. "Baseada em evidências", "X alunos", "X anos de experiência". Específica. Não deixa ambiguidade sobre o que faz.
+
+**Nos posts:** carrosséis detalhados, dados, frameworks, passo a passo. Textos longos, informativos, bem estruturados. Posta menos que a Conectora, mas o que posta é denso.
+
+**Na linguagem:** precisa, lógica. Quando ela pergunta algo, é uma pergunta real — não conversa. "Qual foi a amostra?" "Tem referência para isso?" "Como você chegou nesse número?"
+
+**Na energia:** constante, moderada, focada. Perfil de quem sabe onde está indo e não precisa de barulho para provar isso.
+
+**Como abordar:**
+
+Ela não compra conexão antes de comprar substância. Precisa ver que você tem algo real antes de confiar que vale o tempo dela.
+
+Abrir com algo concreto e específico sobre o trabalho dela funciona. "Vejo que você trabalha com [tema específico]. Tenho algo que complementa isso — com resultados reais que posso mostrar."
+
+Não começa com "como você está?". Não começa com "que trabalho incrível você faz." Começa com o que você tem — e com evidência de que é real.
+
+**O que fecha esse perfil:** entusiasmo vago, elogio sem substância, abertura que parece que você não fez o dever de casa antes de escrever. Se ela sentir que você mandou a mesma mensagem para 50 pessoas, ela fecha.
+
+---
+
+**[PERFIL 3 — A DIRETIVA (Diretivo)]**
+
+**Na bio:** títulos, conquistas, resultados objetivos. "Fundadora de", "construiu", "lidera". Cargos, posições claras. Ela não está tentando convencer ninguém — está declarando o que é.
+
+**Nos posts:** casos de sucesso, liderança, posicionamentos claros. Posta menos. Quando posta, é para dizer algo — não para engajar. Textos curtos, diretos, sem firulas.
+
+**Na linguagem:** objetiva, vai ao ponto, sem circunlóquios. Quando ela responde, é curto. Quando ela pergunta, é cirúrgico.
+
+**Na energia:** focada, decidida. Perfil de quem está sempre resolvendo algo.
+
+**Como abordar:**
+
+Ela não compra narrativa longa. Precisa entender o valor na primeira frase — ou fecha antes de chegar na segunda.
+
+Abrir com o impacto em uma linha funciona. "Tenho algo específico para o seu caso — [resultado em uma linha]. Consigo te mostrar em 15 minutos?"
+
+Não começa com contexto. Não começa com história. Começa com o que ela ganha.
+
+**O que fecha esse perfil:** circunlóquio, qualquer mensagem que demora a chegar ao ponto, abordagem emocional que ela lê como falta de objetividade. Ela respeita quem respeita o tempo dela.
+
+---
+
+**[AS 4 CAMADAS — COMO LER (5 MINUTOS POR LEAD)]**
+
+Antes de escrever a próxima mensagem do seu Rastreador, abra o perfil e passe por aqui:
+
+**Camada 1 — Bio:**
+Impacto + pessoas + missão? → Conectora.
+Números + método + certificação? → Analista.
+Títulos + conquistas + autoridade? → Diretiva.
+
+**Camada 2 — Tipo de post:**
+Histórias pessoais + rostos + emoção + frequência? → Conectora.
+Carrosséis + dados + frameworks + densidade? → Analista.
+Poucos posts + alto impacto + posicionamento? → Diretiva.
+
+**Camada 3 — Linguagem (legendas, comentários, stories):**
+Calorosa + exclamações + perguntas abertas? → Conectora.
+Precisa + pede referência + questiona detalhe? → Analista.
+Direta + curta + objetiva + sem enrolação? → Diretiva.
+
+**Camada 4 — Energia do perfil:**
+Alta + expressiva + múltiplos formatos? → Conectora.
+Moderada + constante + focada? → Analista.
+Focada + decidida + propositiva? → Diretiva.
+
+*[pausa]*
+
+A maioria dos perfis é mista. Duas camadas apontam numa direção, duas em outra.
+
+Quando isso acontecer: **bio e linguagem são os dois sinais mais decisivos.** O que ela escolheu escrever sobre si mesma e como ela fala com as pessoas — são as camadas que mais revelam como ela toma decisões.
+
+---
+
+**[UM ESCLARECIMENTO IMPORTANTE]**
+
+Quero ser honesta sobre o que você está aprendendo aqui.
+
+O que eu ensinei é uma leitura simplificada — suficiente para que seus primeiros contatos sejam mais calibrados, mais naturais, e muito mais prováveis de gerar resposta.
+
+Existe gente que desenvolveu metodologias completas para esse tipo de leitura comportamental — com validação acadêmica, anos de refinamento, análise de centenas de perfis. O relatório que recebi foi feito por alguém que dedicou anos a construir exatamente isso. O que eu ensinei aqui não é essa metodologia.
+
+É a intuição prática que vem de observar muitos perfis e notar padrões. Você já faz isso — essa aula só torna o processo consciente e aplicável.
+
+Com o tempo, à medida que você fizer mais contatos e observar as respostas, sua leitura vai ficando mais precisa. Você aprende lendo de verdade — não memorizando os 3 perfis.
+
+---
+
+**[FECHAMENTO]**
+
+Antes de escrever a próxima mensagem do seu Rastreador: 5 minutos lendo o perfil.
+
+Bio. Posts. Linguagem. Energia.
+
+Qual perfil predomina? Registre na coluna Perfil do Rastreador — Conectora, Analista ou Diretiva. Uma palavra que vai calibrar tudo o que você escrever para essa pessoa.
+
+Conectora: começa com conexão, não com proposta. Analista: chega com substância, não com entusiasmo. Diretiva: chega com impacto na primeira frase, sem rodeios.
+
+Uma mensagem calibrada vale mais do que dez enviadas sem leitura.
+
+Na próxima aula, a gente entra no script de abordagem e na cadência pré-sessão — como ir da primeira mensagem até a sessão confirmada.
+
+---
+
+**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
+
+**Seção 1: Abertura — quando alguém te lê antes de você falar**
+- Relatório Triangulação 3D (Júlio Azevedo): análise de 8 páginas a partir do perfil público
+- Sensação: estava certo, não estava errado
+- Influente/Conectora: decide por conexão + impacto. Fria → fecha. Com calor e substância → abre.
+- A pergunta que nasce: e se você pudesse ler seu lead antes da primeira mensagem?
+
+**Seção 2: O que você já faz — só que sem saber**
+- Você já reescreve mensagens dependendo da pessoa
+- Instinto já existe — essa aula torna explícito e aplicável
+- Resultado registrado na coluna Perfil do Rastreador
+
+**Seção 3: Os 3 perfis — o framework prático**
+- 4 camadas públicas: bio + tipo de post + linguagem + energia
+- 3 perfis: Conectora (relacional) / Analista (analítico) / Diretiva (diretivo)
+
+**Seção 4: Perfil 1 — A Conectora (Relacional)**
+- Bio: impacto, comunidade, missão, "a gente"
+- Posts: histórias, rostos, emoção, frequência
+- Linguagem: calorosa, exclamações, perguntas genuínas
+- Como abrir: conexão antes de proposta → algo específico que você notou no trabalho dela
+- Fecha com: pitch imediato, elogio genérico, template
+
+**Seção 5: Perfil 2 — A Analista (Analítico)**
+- Bio: números, certificações, método, específica
+- Posts: carrosséis, dados, frameworks, densos
+- Linguagem: precisa, questiona referências, lógica
+- Como abrir: substância na primeira frase → algo concreto + resultados reais
+- Fecha com: entusiasmo vago, abertura sem preparo, mensagem genérica
+
+**Seção 6: Perfil 3 — A Diretiva (Diretivo)**
+- Bio: títulos, conquistas, autoridade declarada
+- Posts: poucos, alto impacto, posicionamento claro
+- Linguagem: direta, curta, objetiva, sem circunlóquio
+- Como abrir: valor em uma linha → "tenho algo específico: [resultado]. 15 min?"
+- Fecha com: contexto longo, abordagem emocional, enrolação
+
+**Seção 7: As 4 camadas — como ler (5 minutos por lead)**
+- Bio: missão/pessoas (C) | números/método (A) | títulos/conquistas (D)
+- Posts: histórias/rostos (C) | carrosséis/dados (A) | poucos/impacto (D)
+- Linguagem: calorosa/aberta (C) | precisa/referências (A) | direta/objetiva (D)
+- Energia: alta/expressiva (C) | moderada/focada (A) | decidida/propositiva (D)
+- Perfil misto: bio + linguagem = sinais mais decisivos
+
+**Seção 8: Um esclarecimento importante**
+- Leitura simplificada — não é metodologia completa (referência honesta à Triangulação 3D)
+- Intuição prática que se refina com prática real
+
+**Seção 9: Fechamento**
+- 5 minutos por lead antes de escrever + registrar na coluna Perfil do Rastreador
+- Conectora: conexão primeiro. Analista: substância primeiro. Diretiva: impacto na primeira frase.
+- Uma mensagem calibrada > dez sem leitura
+- Teaser: próxima aula — script de abordagem + cadência pré-sessão
 
 ---
 ---

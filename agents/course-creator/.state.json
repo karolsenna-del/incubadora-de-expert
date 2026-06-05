@@ -50,11 +50,12 @@
       "Aula 3 — O que Você Está Vendendo — e por que começa pelo 1:1",
       "Aula 4 — Exercício: Construindo sua oferta com o Agente da Proposta Validada",
       "Aula 5 — Rastreador de Leads Quentes",
-      "Aula 6 — Social Selling: A Estratégia de Quem Não Precisa de Audiência"
+      "Aula 6 — Social Selling: A Estratégia de Quem Não Precisa de Audiência",
+      "Aula 7 — Lendo seu lead antes do primeiro contato"
     ]
   },
   "modulo_atual": "M3",
-  "aula_atual": "M3 — Aula 6 aprovada. Próxima: Aula 7 (Lendo seu lead antes do primeiro contato)",
+  "aula_atual": "M3 — Aula 7 aprovada. Próxima: Aula 8 (O script de abordagem e a cadência pré-sessão)",
   "formato_roteiro": "script completo + estrutura com tópicos e pontos-chave ao final",
   "branding_aprovado": false,
   "empacotamento_aprovado": false,
@@ -64,7 +65,7 @@
   "decisao_drive": "Todos os exercícios têm arquivo no Drive do aluno. Em vez de 'abra um doc em branco', usar 'abra o arquivo [nome] no seu Drive'. Vale para exercícios, templates e resultados de agentes.",
   "decisao_estrutura_modulos": "Cada módulo tem Aula de Introdução + aulas de conteúdo + Aula de Encerramento. +2 aulas por módulo, total ~42 aulas.",
   "aulas_completas_atualizacao": "Aula 2 M0: ajuste retroativo — instrução do Drive aplicada (uma linha).",
-  "ultima_sessao": "2026-06-04",
+  "ultima_sessao": "2026-06-05",
   "decisoes_sessao": [
     "Feito é melhor que perfeito movida de M1 para M3 — no M3 a aluna vai ao campo e precisa da permissão ativa para agir antes de estar 100% pronta, contexto mais real",
     "M2 tem 8 aulas (não 9 como estava no tracker) — corrigido",
