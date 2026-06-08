@@ -719,7 +719,7 @@ O Módulo 0 está quase completo. Na próxima aula, a gente encerra — e eu que
 ---
 ---
 
-## AULA ENCERRAMENTO — MÓDULO 0: DESBLOQUEIO
+## QUEM VOCÊ SE TORNOU — ENCERRAMENTO MÓDULO 0: DESBLOQUEIO
 *Estimativa: 5–7 minutos*
 
 ---

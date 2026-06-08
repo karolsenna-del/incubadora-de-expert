@@ -54,3 +54,13 @@
 **Racional:** Encontro mensal resolve objeção de compra ("não estou sozinha"), mantém engajamento e serve como upsell natural para mentoria — quem quer mais acompanhamento já conhece e confia, a venda é continuidade, não pitch.
 
 **Impacto:** Produto limpo, escalável, com touchpoint mensal de upsell para mentoria integrado à experiência do aluno.
+
+## 08/06/2026 — Renomear aulas de "Encerramento" em todos os módulos do Expert360º
+
+**Contexto:** Durante a roteirização do Encerramento M3, Karol observou que o nome "Encerramento" soa institucional/genérico — do tipo que aluna pula — mas essas aulas carregam a virada psicológica de identidade de cada módulo (consolidação de quem ela se tornou).
+
+**Decisão:** Renomear todas as aulas de Encerramento (M0, M1, M2, M3 — e futuramente M4) para **"Quem Você Se Tornou — Encerramento Módulo X: [tema]"**. Mantém a referência ao módulo para navegação interna do roteiro, mas o nome que a aluna vê passa a comunicar o real valor da aula: reconhecimento da transformação, não aviso de fim de conteúdo.
+
+**Racional:** "Encerramento" é nome operacional (perspectiva de produção), não persuasivo (perspectiva de quem assiste). Aulas que carregam a virada de identidade — o momento mais importante da jornada psicológica — não podem ter nome que convide a pular.
+
+**Impacto:** Aplicado em `m0-roteiros.md`, `m1-roteiros.md`, `m2-roteiros.md` e `m3-roteiros.md`. M4, quando roteirizado, deve seguir a mesma convenção.

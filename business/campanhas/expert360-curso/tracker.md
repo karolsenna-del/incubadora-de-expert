@@ -54,6 +54,7 @@
 ## LOG
 
 > Mais recente primeiro.
+- 08/06 — @course-creator: M3 — Aula 10 (Pós-sessão: follow-up + depoimento, com sequência de 5 toques pra ticket alto) escrita e aprovada. Encerramento M3 ("Quem Você Se Tornou") escrito — aguardando aprovação final da Karol sobre tom/ordem. Seção "grave suas sessões + oferta de análise" movida da Encerramento pra Aula 9 (encaixe mais natural — momento de ir a campo). Aulas de Encerramento de M0, M1, M2 e M3 renomeadas pra "Quem Você Se Tornou" — nome mais atrativo pra evitar que sejam puladas (são estratégicas pra jornada psicológica da aluna). M3: 10 de 12 aulas roteirizadas.
 
 - 05/06 — @course-creator: Aula 7 aprovada (QG-CC-006 PASS) — Lendo seu lead antes do primeiro contato. Coluna Perfil adicionada ao Rastreador. M3: 8 de 11 aulas concluídas.
 - 04/06 — @course-creator: Aulas 5 e 6 aprovadas (QG-CC-006 PASS) — Rastreador de Leads + Social Selling. M3: 7 de 11 aulas concluídas. Pausa na sessão.
@@ -79,7 +80,7 @@
 |---------|----------|------|-------|
 | Modulos estruturados | 0 | 5 (M0-M4) | 5 (todos) |
 | Agentes criados | 0 | 6 | 0 |
-| Aulas roteirizadas | 0 | ~43 | 39 (M0+M1+M2 completos + 8 de M3) |
+| Aulas roteirizadas | 0 | ~43 | 41 (M0+M1+M2 completos + 10 de M3 — Encerramento M3 escrito, aguardando aprovação final) |
 
 ---
 

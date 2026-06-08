@@ -1011,7 +1011,7 @@ Leve P1, P2 e P3. Deixa o agente conduzir os três movimentos.
 ---
 ---
 
-## AULA ENCERRAMENTO — MÓDULO 2: PROCESSO AUTORAL + ECOSSISTEMA
+## QUEM VOCÊ SE TORNOU — ENCERRAMENTO MÓDULO 2: PROCESSO AUTORAL + ECOSSISTEMA
 *Estimativa: 5–7 minutos*
 
 ---

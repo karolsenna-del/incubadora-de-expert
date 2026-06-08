@@ -911,7 +911,7 @@ Salve P2 no Drive quando terminar. E guarda bem — você vai usar ela em todos 
 ---
 ---
 
-## AULA ENCERRAMENTO — MÓDULO 1: PERSONA + PROMESSA
+## QUEM VOCÊ SE TORNOU — ENCERRAMENTO MÓDULO 1: PERSONA + PROMESSA
 *Estimativa: 5–7 minutos*
 
 ---

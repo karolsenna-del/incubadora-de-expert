@@ -52,15 +52,17 @@
       "Aula 5 — Rastreador de Leads Quentes",
       "Aula 6 — Social Selling: A Estratégia de Quem Não Precisa de Audiência",
       "Aula 7 — Lendo seu lead antes do primeiro contato",
-      "Aula 8 — O script de abordagem e a cadência pré-sessão"
+      "Aula 8 — O script de abordagem e a cadência pré-sessão",
+      "Aula 9 — O roteiro da sessão de vendas secretas"
     ]
   },
   "materiais_criados": [
     "business/campanhas/expert360-curso/materiais/roteiro-abordagem.md — template Drive da aluna (Aula 8)",
-    "business/campanhas/expert360-curso/materiais/formulario-pre-diagnostico.md — modelo Google Forms pré-diagnóstico (Aula 8)"
+    "business/campanhas/expert360-curso/materiais/formulario-pre-diagnostico.md — modelo Google Forms pré-diagnóstico (Aula 8)",
+    "business/campanhas/expert360-curso/materiais/roteiro-sessao-1a1.md — roteiro editável da sessão 1:1 com seção em branco para diagnóstico baseado no método da aluna (Aula 9)"
   ],
   "modulo_atual": "M3",
-  "aula_atual": "M3 — Aula 8 aprovada. Próxima: Aula 9 (O roteiro da sessão de vendas secretas)",
+  "aula_atual": "M3 — Aula 9 aprovada. Próxima: Aula 10 (Pós-sessão: o follow-up e o depoimento)",
   "formato_roteiro": "script completo + estrutura com tópicos e pontos-chave ao final",
   "branding_aprovado": false,
   "empacotamento_aprovado": false,
