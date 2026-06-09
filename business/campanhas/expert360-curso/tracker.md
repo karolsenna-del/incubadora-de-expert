@@ -38,7 +38,7 @@
 | Roteirizar M0 — Desbloqueio (5 aulas) | Course Creator | Done 01/06 | M0 estruturado | Intro + A1 + A2 + A3 + Encerramento |
 | Roteirizar M1 — Persona + Promessa (8 aulas) | Course Creator | Done 02/06 | M0 roteirizado | m1-roteiros.md |
 | Roteirizar M2 — Processo Autoral (9 aulas) | Course Creator | Done 03/06 | M1 roteirizado | m2-roteiros.md |
-| Roteirizar M3 — Vendas Secretas (12 aulas) | Course Creator | Em andamento | M2 roteirizado | m3-roteiros.md |
+| Roteirizar M3 — Vendas Secretas (12 aulas) | Course Creator | Done 09/06 | M2 roteirizado | m3-roteiros.md |
 | Roteirizar M4 — Autoridade (9 aulas) | Course Creator | Nao iniciado | M3 roteirizado | — |
 
 ---
@@ -54,6 +54,7 @@
 ## LOG
 
 > Mais recente primeiro.
+- 09/06 — @companion: M3 fechado e aprovado pela Karol — 12 aulas completas. Próximo: M4 — Autoridade (9 aulas).
 - 08/06 — @course-creator: M3 — Aula 10 (Pós-sessão: follow-up + depoimento, com sequência de 5 toques pra ticket alto) escrita e aprovada. Encerramento M3 ("Quem Você Se Tornou") escrito — aguardando aprovação final da Karol sobre tom/ordem. Seção "grave suas sessões + oferta de análise" movida da Encerramento pra Aula 9 (encaixe mais natural — momento de ir a campo). Aulas de Encerramento de M0, M1, M2 e M3 renomeadas pra "Quem Você Se Tornou" — nome mais atrativo pra evitar que sejam puladas (são estratégicas pra jornada psicológica da aluna). M3: 10 de 12 aulas roteirizadas.
 
 - 05/06 — @course-creator: Aula 7 aprovada (QG-CC-006 PASS) — Lendo seu lead antes do primeiro contato. Coluna Perfil adicionada ao Rastreador. M3: 8 de 11 aulas concluídas.
@@ -80,7 +81,7 @@
 |---------|----------|------|-------|
 | Modulos estruturados | 0 | 5 (M0-M4) | 5 (todos) |
 | Agentes criados | 0 | 6 | 0 |
-| Aulas roteirizadas | 0 | ~43 | 41 (M0+M1+M2 completos + 10 de M3 — Encerramento M3 escrito, aguardando aprovação final) |
+| Aulas roteirizadas | 0 | ~43 | 43 (M0+M1+M2+M3 completos) |
 
 ---
 
