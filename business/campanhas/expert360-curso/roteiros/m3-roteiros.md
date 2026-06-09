@@ -1777,6 +1777,143 @@ Nos encontramos no Encerramento.
 ---
 ---
 
+## QUEM VOCÊ SE TORNOU — ENCERRAMENTO MÓDULO 3: VENDAS SECRETAS
+*Estimativa: 6–8 minutos*
+
+---
+
+**[ABERTURA]**
+
+Você chegou no fim do Módulo 3.
+
+E esse é diferente dos outros. Porque até aqui, você estava construindo — persona, processo, oferta, roteiro. Coisas que ficam dentro de você, ou no papel.
+
+Esse módulo te tirou do papel. Te colocou numa sala — virtual ou não — na frente de uma pessoa real, com uma proposta real, e um "sim" ou um "não" real esperando do outro lado.
+
+Para um segundo. Porque o que você atravessou aqui não tem volta.
+
+---
+
+**[VOCÊ FOI A CAMPO]**
+
+Até o Módulo 2, você podia, no fundo, continuar sendo "alguém que está se preparando para vender". Uma identidade segura. Ninguém te testa enquanto você só se prepara.
+
+Esse módulo tirou essa segurança — de propósito.
+
+Você estruturou uma oferta. Foi atrás de leads de verdade. Abordou pessoas que conhece. Marcou sessões. Sentou — ao vivo — com alguém que podia dizer sim ou não pro que você construiu.
+
+Isso muda alguma coisa em você que nenhuma aula sozinha muda. Porque conhecimento sobre vender e ter vendido são duas pessoas diferentes. E a segunda só existe depois que a primeira se arrisca.
+
+---
+
+**[SOBRE O NÚMERO 3 — É SEU, NÃO É UNIVERSAL]**
+
+Antes de eu te contar o que vem a seguir, preciso te dizer uma coisa com todas as letras: **se você não fechou as 3 vendas ainda, isso não te trava.**
+
+Não é critério de aprovação. Não é "se não vendeu 3, não pode seguir". É o oposto: o importante é você continuar em movimento — seguir aplicando o conteúdo, ajustando a abordagem, marcando a próxima sessão.
+
+E aqui vai uma verdade que ninguém costuma falar: **3 é o número de referência do curso — não é o seu número.**
+
+Existem nichos mais difíceis de converter do que outros. Existe a sua experiência prévia de venda — quem já vendeu antes converte diferente de quem está vendendo pela primeira vez. Existem os resultados anteriores que você consegue mostrar pra convencer o lead. E existe o poder aquisitivo de quem você está abordando — vender mentoria de R$3.000 pra alguém que fatura R$5.000/mês é uma conversa diferente de vender pra alguém que fatura R$30.000/mês.
+
+Tudo isso muda a conta. Talvez você feche 3 em 5 conversas. Talvez precise de 10, 20, 30 sessões até bater as 3 vendas. **Cada negócio tem o seu número** — e não existe um número "errado". Existe o seu, que só aparece quando você está em campo, fazendo.
+
+E essa informação não é só consolo — é dado. Quando, lá na frente, você for investir em tráfego para gerar mais leads, vai ser muito mais fácil decidir quanto investir e o que esperar de retorno se você já souber: "no meu negócio, de cada X conversas, eu fecho 1." Isso é clareza que vale dinheiro.
+
+Por enquanto, o que importa é: você esteve em campo. Você testou. Cada sessão — fechando ou não — te ensinou algo que nenhuma aula teórica ensinaria.
+
+---
+
+**[O QUE VOCÊ CONSTRUIU NESTE MÓDULO]**
+
+Olha rápido pra trás:
+
+Você estruturou sua **Proposta Validada (P4)** — uma oferta com nome, formato, promessa e preço definidos, pronta pra ser apresentada sem gaguejar.
+
+Você montou o **Rastreador de Leads Quentes** — não uma lista qualquer, mas um mapa de quem tem mais propensão de comprar de você agora, organizado por grupo, prioridade e perfil de leitura.
+
+Você aprendeu a abordar sem parecer vendedora — usando o que aprendeu sobre social selling e leitura de perfil pra cada conversa soar natural, não roteirizada.
+
+Você recebeu o **roteiro completo da sessão de vendas** — estrutura testada, com a narrativa ECROI guiando a apresentação da oferta como resposta, não como pitch.
+
+E você aprendeu o que fazer depois — como conduzir o pós-sessão, como transformar um "sim" em compromisso e depoimento, como transformar um "vou pensar" numa sequência de follow-up que respeita o tempo de decisão de quem está prestes a investir alto.
+
+Isso não é um módulo de teoria. É o módulo onde você aprendeu — na prática — a vender o que construiu.
+
+---
+
+**[O QUE ESSAS CONVERSAS SIGNIFICAM DE VERDADE]**
+
+Aqui está o que eu quero que você carregue daqui pra frente:
+
+Você não é mais alguém que "tem um método e queria vender". Você é alguém que **apresentou esse método pra pessoas reais, ouviu objeções reais, e descobriu, na prática, o que faz sentido pra quem está do outro lado.**
+
+Esse é o tipo de identidade que não se constrói lendo. Se constrói fazendo — com o coração na mão, na frente de alguém que pode dizer não.
+
+E se você já fechou alguma venda: parabéns. Você tem prova. Tem um depoimento em construção. Tem a primeira peça real do seu ecossistema de autoridade.
+
+E se ainda não fechou: você tem campo, tem dados, tem ajustes a fazer — e tem o conteúdo do curso pra te acompanhar nessa próxima rodada. Continue.
+
+---
+
+**[O QUE MUDA NO M4]**
+
+Tudo que você viveu aqui — as conversas, as objeções que ouviu, o "sim" ou o "vou pensar" que recebeu, a gravação da sua sessão — vira matéria-prima pro próximo módulo.
+
+No M4, a gente pega tudo isso e transforma em **prova pública**: depoimento, posicionamento, conteúdo que mostra você no ato de fazer o que diz que faz.
+
+Você não vai precisar inventar nada. Vai precisar só organizar o que você já viveu — e mostrar.
+
+---
+
+**[FECHAMENTO]**
+
+Você foi a campo. Testou sua oferta com gente de verdade. E saiu desse módulo sendo alguém diferente de quem entrou.
+
+Agora é hora de pegar tudo isso — as conversas, os "sins", os "vou pensar", as gravações — e transformar em prova que abre portas.
+
+Vejo você no Módulo 4.
+
+---
+
+**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
+
+**Seção 1: Abertura**
+- Bridge: diferença deste módulo — saiu da construção e foi para o campo
+- Convite a parar e reconhecer a virada
+
+**Seção 2: Você foi a campo**
+- Identidade anterior: "alguém se preparando para vender" (segura, não testada)
+- Identidade pós-M3: estruturou oferta, abordou leads reais, sentou em sessões reais
+- Distinção: conhecimento sobre vender ≠ ter vendido
+
+**Seção 3: Sobre o número 3 — é seu, não é universal**
+- Reforço: não fechar as 3 vendas não trava a jornada — o importante é continuar em movimento
+- 3 é número de referência do curso, não da aluna
+- Fatores que mudam a conta: dificuldade do nicho / experiência prévia de venda / resultados anteriores como prova / poder aquisitivo da persona
+- Pode precisar de 10, 20, 30 sessões — cada negócio tem o seu número
+- Valor estratégico: conhecer o próprio número ajuda a decidir investimento em tráfego no futuro
+
+**Seção 4: O que você construiu neste módulo**
+- Recapitulação: P4 (proposta validada) / Rastreador de Leads Quentes / abordagem sem parecer vendedora / roteiro de sessão com ECROI / pós-sessão e follow-up
+
+**Seção 5: O que essas conversas significam de verdade**
+- Mudança de identidade: de "tem um método" para "apresentou, ouviu, ajustou"
+- Reconhecimento de quem já fechou (prova, depoimento, primeira peça do ecossistema)
+- Reconhecimento de quem ainda não fechou (campo, dados, ajustes, continuar)
+
+**Seção 6: O que muda no M4**
+- Tudo vivido no M3 (conversas, objeções, gravações, resultado das sessões) vira matéria-prima
+- M4 transforma isso em prova pública — depoimento, posicionamento, conteúdo de autoridade em movimento
+
+**Seção 7: Fechamento**
+- Reconhecimento da virada de identidade
+- Convite para organizar o que já viveu e transformar em prova
+- Bridge para o M4
+
+---
+---
+
 ## AULA INTRODUÇÃO — MÓDULO 3: VENDAS SECRETAS
 *Estimativa: 5–7 minutos*
 
