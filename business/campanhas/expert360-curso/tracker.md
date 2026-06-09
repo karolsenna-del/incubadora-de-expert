@@ -54,6 +54,7 @@
 ## LOG
 
 > Mais recente primeiro.
+- 09/06 — @companion: Logomarca do Expert360 definida — briefing visual criado (`materiais/briefing-visual-logo.md`), conceito gerado via ChatGPT (EXPERT em preto + 360 em laranja + arco circular partido), refinado e exportado via Canva.
 - 09/06 — @companion: M3 fechado e aprovado pela Karol — 12 aulas completas. Próximo: M4 — Autoridade (9 aulas).
 - 08/06 — @course-creator: M3 — Aula 10 (Pós-sessão: follow-up + depoimento, com sequência de 5 toques pra ticket alto) escrita e aprovada. Encerramento M3 ("Quem Você Se Tornou") escrito — aguardando aprovação final da Karol sobre tom/ordem. Seção "grave suas sessões + oferta de análise" movida da Encerramento pra Aula 9 (encaixe mais natural — momento de ir a campo). Aulas de Encerramento de M0, M1, M2 e M3 renomeadas pra "Quem Você Se Tornou" — nome mais atrativo pra evitar que sejam puladas (são estratégicas pra jornada psicológica da aluna). M3: 10 de 12 aulas roteirizadas.
 
