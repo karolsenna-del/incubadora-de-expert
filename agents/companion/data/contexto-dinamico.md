@@ -105,23 +105,22 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
-Sessao 28/05 — weekly review concluido. Cockpit criado + tracker Expert360 criado.
+Sessao 09/06 — weekly review concluido.
 
-**O que foi feito (28/05 — weekly review):**
-- Cockpit preenchido pela primeira vez ✓
-- Tracker Expert360 criado ✓
-- "Expert em fracassar" elevado para posicionamento central ✓
-- ETL Alcateia marcado como background ✓
-- Analise Arcane: concluida (nao e mais blocker) ✓
-- Proximo review: 04/06/2026
+**O que foi feito (desde 01/06):**
+- M3 — Vendas Secretas: 12 aulas roteirizadas e aprovadas ✓
+- M4 — Autoridade: proximo passo
+- Aulas de Encerramento renomeadas pra "Quem Voce Se Tornou" em M0, M1, M2 e M3 ✓
+- Vitrine Instagram: Destaques 1 e 2 postados ✓
+- Infraestrutura de trafego (Meta Ads) configurada pelo Trafego Arcane ✓
+- Proximo review: 16/06/2026
 
 **Proximo foco:**
-1. Estruturar M3 — Vendas Secretas (via Course Creator)
-2. Bio Instagram com tese
-3. Primeiros conteudos com angulo "expert em fracassar no digital"
+1. Roteirizar M4 — Autoridade (9 aulas) via Course Creator
+2. Destaque 3 + primeiros posts feed com angulo "expert em fracassar no digital" (em paralelo com M4)
 
 Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 01/06/2026*
+*Ultima atualizacao: 09/06/2026*

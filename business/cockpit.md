@@ -4,8 +4,8 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 28/05/2026
-**Proximo review:** 04/06/2026
+**Ultima atualizacao:** 09/06/2026
+**Proximo review:** 16/06/2026
 
 ---
 
@@ -13,7 +13,7 @@
 
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
-| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Roteirizar M1 — Persona + Promessa via Course Creator | Karol | Roteirizando — M0 completo (5 aulas), M1-M4 pendentes | [tracker](campanhas/expert360-curso/tracker.md) |
+| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Roteirizar M4 — Autoridade (9 aulas) via Course Creator | Karol | Roteirizando — M0+M1+M2+M3 completos (43 aulas), M4 pendente | [tracker](campanhas/expert360-curso/tracker.md) |
 
 ---
 
@@ -47,7 +47,7 @@
 
 | Operacao | Responsavel | Status | Onde acompanhar |
 |----------|-------------|--------|-----------------|
-| Instagram / Conteudo | Karol | Ativa | contexto-dinamico.md — prioridades do momento |
+| Instagram / Conteudo | Karol | Ativa — Destaques 1 e 2 postados, Destaque 3 + posts feed em andamento | contexto-dinamico.md — prioridades do momento |
 
 ---
 
