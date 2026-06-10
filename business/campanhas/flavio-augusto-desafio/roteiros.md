@@ -355,6 +355,295 @@ Flávio — se você ler isso — eu sou uma das 8. 🤝
 
 ---
 
+## DIA 5 — Reels Lo-fi
+
+**Ângulo:** O que tornava a WiseUp incopiável — Promessa Transformadora
+**Formato:** Reels lo-fi
+
+### Roteiro
+
+**HOOK:**
+"A WiseUp tinha concorrentes maiores, mais baratos
+e mais antigos.
+Por que só ela cresceu assim?"
+
+**CONTEÚDO:**
+"Porque o @flavioaugustoficial não vendia inglês.
+
+Vendia o que o inglês representa:
+uma promoção de emprego.
+Uma viagem sem depender de tradutor.
+Uma versão de você que se sente capaz.
+
+A concorrência copiava a metodologia.
+Não conseguia copiar a promessa.
+
+E é exatamente isso que separa especialista de comodity.
+
+Tenho uma aluna que aplica a NR-01 nas empresas.
+Você sabe quantos consultores fazem isso hoje?
+Milhares.
+
+Só que ela não vende implementação de norma.
+
+Ela transforma as diferenças dos neurodivergentes
+em genialidade aplicada ao trabalho.
+
+Em vez de mais uma empresa que cumpriu a lei —
+ela entrega um time onde quem sempre foi
+visto como problema
+vira o ativo mais valioso do negócio.
+
+Incopiável.
+
+Não pelo que ela faz.
+Pelo que o cliente se torna."
+
+**CTA:**
+"O que você entrega de verdade?
+Não o serviço — a transformação."
+
+### Textos na Tela (CapCut)
+- 0-3s: "Inglês era o produto. Confiança era a promessa."
+- ~18s: "A concorrência copia o formato."
+- ~19s: "Não copia a promessa."
+- ~32s: "NR-01 = milhares de consultores"
+- ~38s: "Neurodivergente que era problema → ativo mais valioso"
+- Final: "Qual é a sua promessa real?"
+
+### Direção
+Tom mais reflexivo que os anteriores. Pausa após "Não conseguia copiar a promessa." Deixa o silêncio trabalhar. "Incopiável." — fala sozinha, pausada, com peso.
+
+### Caption
+```
+A WiseUp tinha concorrentes maiores, mais baratos e mais antigos.
+Por que só ela cresceu assim?
+
+Porque o @flavioaugustoficial não vendia inglês.
+Vendia o que o inglês representa: confiança, empregabilidade, uma versão melhor de você.
+
+A concorrência copiava a metodologia.
+Não conseguia copiar a promessa.
+
+Tenho uma aluna que aplica NR-01 nas empresas.
+Você sabe quantos consultores fazem isso? Milhares.
+
+Só que ela não vende implementação de norma.
+Ela transforma as diferenças dos neurodivergentes
+em genialidade aplicada ao trabalho.
+
+Em vez de mais uma empresa que cumpriu a lei —
+ela entrega um time onde quem sempre foi visto como problema
+vira o ativo mais valioso do negócio.
+
+Incopiável.
+Não pelo que ela faz. Pelo que o cliente se torna.
+
+O que você entrega de verdade?
+Não o serviço — a transformação.
+
+#flavioaugustoficial #wiseup #promessatransformadora #expertdigital
+#neurodiversidade #NR01 #incubadoradeexpert #expert360
+```
+
+---
+
+## DIA 6 — Reels Lo-fi
+
+**Ângulo:** Vender é servir — história pessoal de preconceito com vendas
+**Formato:** Reels lo-fi
+
+### Roteiro
+
+**HOOK:**
+"Eu tinha preconceito com vendas.
+Achava que meu currículo chegava antes de mim
+e vendia por mim."
+
+**CONTEÚDO:**
+"Concurso público. Primeiro lugar.
+Especialista com anos de carreira.
+
+Eu acreditava que credencial era suficiente.
+Que quem é bom não precisa vender —
+as pessoas aparecem.
+
+Aí eu fui pro digital.
+
+E descobri que ninguém se importa com diploma.
+A gente vê todo dia pessoas com ensino médio
+construindo patrimônio que médico não vai ter
+em 30 anos de consultório.
+
+Isso me incomodou. Me confundiu. E me libertou.
+
+Mas quem quebrou essa crença dentro de mim de vez
+foi o @flavioaugustoficial.
+
+Ele é direto:
+a única forma de enriquecer licitamente
+é vendendo.
+
+Médico, advogado, psicólogo —
+qualquer profissional muito valorizado
+só se torna realmente rico
+se empreender.
+
+E empreender é vender.
+
+Isso mudou tudo pra mim.
+Porque eu parei de achar que vender era coisa de vendedor.
+E entendi que era a única saída real."
+
+**CTA:**
+"Você também tem esse preconceito com vendas?
+Comenta aqui."
+
+### Textos na Tela (CapCut)
+- 0-3s: "Meu currículo vende por mim." ← eu acreditava nisso
+- ~18s: "Ensino médio. Milionário."
+- ~20s: "Diploma. Endividado."
+- ~30s: "A única forma de enriquecer licitamente é vendendo."
+- ~38s: "— Flávio Augusto"
+- Final: "Você também tem esse preconceito?"
+
+### Direção
+Tom honesto, sem vergonha de admitir que errou. Não é vitimismo — é virada. "Isso me incomodou. Me confundiu. E me libertou." — fala as três partes com pausas entre elas. "E empreender é vender." — devagar, com convicção.
+
+### Caption
+```
+Eu tinha preconceito com vendas.
+
+Achava que meu currículo chegava antes de mim e vendia por mim.
+Concurso público. Primeiro lugar. Especialista com anos de carreira.
+
+Acreditava que credencial era suficiente.
+Que quem é bom não precisa vender — as pessoas aparecem.
+
+Aí eu fui pro digital.
+
+E descobri que ninguém se importa com diploma.
+A gente vê todo dia pessoas com ensino médio
+construindo patrimônio que médico não vai ter em 30 anos de consultório.
+
+Isso me incomodou. Me confundiu. E me libertou.
+
+Mas quem quebrou essa crença dentro de mim de vez
+foi o @flavioaugustoficial.
+
+Ele é direto:
+a única forma de enriquecer licitamente é vendendo.
+
+Médico, advogado, psicólogo —
+qualquer profissional muito valorizado
+só se torna realmente rico se empreender.
+
+E empreender é vender.
+
+Você também tem esse preconceito com vendas?
+Comenta aqui.
+
+#flavioaugustoficial #vendas #empreendedorismo #expertdigital
+#mentalidadefinanceira #incubadoradeexpert #expert360
+```
+
+---
+
+## DIA 7 — Reels Lo-fi
+
+**Ângulo:** Vendas Secretas — o palco vem depois dos resultados
+**Formato:** Reels lo-fi
+
+### Roteiro
+
+**HOOK:**
+"Você está esperando ter 10 mil seguidores
+pra começar a vender.
+O @flavioaugustoficial não esperou."
+
+**CONTEÚDO:**
+"Antes da WiseUp ser um império —
+antes do livro, do podcast, do estádio —
+o Flávio vendia inglês de porta em porta.
+
+Sem palco. Sem audiência. Sem seguidores.
+
+Pessoa por pessoa.
+Olho no olho.
+Até o resultado falar mais alto que qualquer anúncio.
+
+O palco veio depois dos resultados.
+Não antes.
+
+E a sua persona está fazendo o caminho inverso.
+
+Esperando o palco antes de vender.
+Esperando seguidores antes de ter clientes.
+Esperando estar pronta antes de começar.
+
+No Expert360º, um dos mecanismos que ensino
+chama Vendas Secretas.
+
+Antes de qualquer post, qualquer Reels, qualquer lançamento —
+você vai vender.
+
+Em privado. Pra quem já te conhece.
+Pra quem já confia em você.
+
+Sem precisar de palco.
+Sem precisar de audiência.
+Só você e a pessoa certa do outro lado."
+
+**CTA:**
+"O palco vem depois.
+A venda começa agora."
+
+### Textos na Tela (CapCut)
+- 0-3s: "Sem palco. Sem audiência. Vendendo."
+- ~12s: "WiseUp começou de porta em porta."
+- ~25s: "Palco DEPOIS dos resultados. Não antes."
+- ~38s: "Vendas Secretas — Expert360º"
+- Final: "A venda começa agora."
+
+### Direção
+Tom: urgência suave — não é cobrança, é convite. "O palco veio depois dos resultados. Não antes." — pausa entre as duas frases, deixa assentar. CTA final: fala devagar, com certeza.
+
+### Caption
+```
+Você está esperando ter 10 mil seguidores pra começar a vender.
+O @flavioaugustoficial não esperou.
+
+Antes da WiseUp ser um império — antes do livro, do podcast, do estádio —
+ele vendia inglês de porta em porta.
+
+Sem palco. Sem audiência. Sem seguidores.
+Pessoa por pessoa, até o resultado falar mais alto que qualquer anúncio.
+
+O palco veio depois dos resultados. Não antes.
+
+E muita especialista está fazendo o caminho inverso:
+esperando o palco antes de vender,
+esperando seguidores antes de ter clientes,
+esperando estar pronta antes de começar.
+
+No Expert360º, um dos mecanismos que ensino chama Vendas Secretas.
+
+Antes de qualquer post, qualquer Reels, qualquer lançamento —
+você vende em privado. Pra quem já te conhece.
+Pra quem já confia em você.
+
+Sem precisar de palco. Sem precisar de audiência.
+Só você e a pessoa certa do outro lado.
+
+O palco vem depois.
+A venda começa agora.
+
+#flavioaugustoficial #wiseup #vendassecretas #expertdigital
+#empreendedorismo #incubadoradeexpert #expert360
+```
+
+---
+
 ## Status
 
 | Dia | Formato | Ângulo | Status |
@@ -363,11 +652,11 @@ Flávio — se você ler isso — eu sou uma das 8. 🤝
 | 2 | Reels lo-fi | Passarinho/gaiola — exoneração | ✅ Aprovado |
 | 3 | Reels lo-fi | WiseUp + Rastreador de Leads | ✅ Aprovado |
 | 4 | Reels lo-fi | Timing + "eu sou uma das 8" | ✅ Aprovado |
-| 5-30 | — | A definir | ⏳ Pendente |
+| 5 | Reels lo-fi | Promessa Transformadora — incopiável | ✅ Aprovado |
+| 6 | Reels lo-fi | Vender é servir — preconceito pessoal | ✅ Aprovado |
+| 7 | Reels lo-fi | Vendas Secretas — palco depois | ✅ Aprovado |
+| 8-30 | — | A definir | ⏳ Pendente |
 
 ## Pool de Temas Restantes (pré-aprovados pela Karol)
-- Dia 5: O que tornava a WiseUp incopiável (produto que vai além do produto)
-- Dia 6: Cultura de vendas que o Flávio implantou (vender é servir)
-- Dia 7: Por que especialista não precisa de palco (Vendas Secretas)
 - Dia 8: A persona que o Flávio não consegue salvar (e o Expert360º tenta)
 - Dias 9-30: A definir nas próximas sessões
