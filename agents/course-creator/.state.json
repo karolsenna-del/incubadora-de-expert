@@ -62,7 +62,8 @@
       "Aula 1 — Autoridade digital não é influência",
       "Aula 2 — Funil de consciência: onde sua persona está",
       "Aula 3 — Exercício: Agente da Autoridade Tríplice",
-      "Aula 4 — Montando sua Vitrine: Perfil, Bio, Destaques e Posts Fixados"
+      "Aula 4 — Montando sua Vitrine: Perfil, Bio, Destaques e Posts Fixados",
+      "Aula 5 — Linha editorial + plano de 30 dias"
     ]
   },
   "materiais_criados": [
@@ -72,10 +73,11 @@
     "business/campanhas/expert360-curso/materiais/minha-frase-tese.md — prompt de IA embutido para gerar frase-tese autoral a partir do relatório da Autoridade Tríplice (M4 Aula 4)",
     "business/campanhas/expert360-curso/materiais/minha-narrativa-posicionamento.md — prompt de IA embutido para gerar narrativa em 4 movimentos a partir de Minha História Real + relatório da Tríplice (M4 Aula 4)",
     "business/campanhas/expert360-curso/materiais/meus-destaques.md — 3 prompts (Sobre Mim, Método, Depoimentos) com placeholders para quem ainda não tem produto/depoimento (M4 Aula 4)",
-    "business/campanhas/expert360-curso/materiais/meus-posts-fixados.md — 3 prompts (Pinned 1/2/3) com placeholder para Pinned 3 sem oferta pronta (M4 Aula 4)"
+    "business/campanhas/expert360-curso/materiais/meus-posts-fixados.md — 3 prompts (Pinned 1/2/3) com placeholder para Pinned 3 sem oferta pronta (M4 Aula 4)",
+    "business/campanhas/expert360-curso/materiais/minha-linha-editorial.md — prompt de IA (chat geral) gera 3 pilares nomeados + banco de ~30 temas a partir do relatório da Tríplice; grade semanal fixa (pilar x tom x formato x stories); calendário de 4 semanas pra preencher semana a semana (M4 Aula 5)"
   ],
   "modulo_atual": "M4",
-  "aula_atual": "M4 — Aula 4 aprovada (QG-CC-006 PASS). Próxima: Aula 5 (Linha editorial + plano 30 dias)",
+  "aula_atual": "M4 — Aula 5 aprovada (QG-CC-006 PASS). Próxima: Aula 6 (Roteiros: prompts de reels e carrosséis)",
   "formato_roteiro": "script completo + estrutura com tópicos e pontos-chave ao final",
   "branding_aprovado": false,
   "empacotamento_aprovado": false,
@@ -86,7 +88,7 @@
   "decisao_estrutura_modulos": "Cada módulo tem Aula de Introdução + aulas de conteúdo + Aula de Encerramento. +2 aulas por módulo, total ~42 aulas.",
   "decisao_formulario_pre_diagnostico": "Quando a sessão é agendada, a aluna envia o link do Formulário de Pré-Diagnóstico (Google Forms). 12 perguntas: perfil (nome, profissão, experiência, modo de atuação), situação atual (descrição, histórico digital, desafio), contexto econômico (faixa de renda, histórico de investimento), contexto da sessão (motivação, resultado esperado, dúvidas). A aluna lê as respostas antes da sessão — poupa 10 minutos de aquecimento.",
   "aulas_completas_atualizacao": "Aula 2 M0: ajuste retroativo — instrução do Drive aplicada (uma linha).",
-  "ultima_sessao": "2026-06-09",
+  "ultima_sessao": "2026-06-10",
   "decisoes_sessao": [
     "Feito é melhor que perfeito movida de M1 para M3 — no M3 a aluna vai ao campo e precisa da permissão ativa para agir antes de estar 100% pronta, contexto mais real",
     "M2 tem 8 aulas (não 9 como estava no tracker) — corrigido",
@@ -118,6 +120,8 @@
     "Mapeamento Frase-Tese → Post Fixado 2 (Carrossel, tese/crença) e Narrativa de Posicionamento → Destaque 1 'Sobre Mim' + Post Fixado 1 (Reels, sobre+trabalho) — torna o material já produzido na Aula 4 a base direta dos novos elementos.",
     "squad-posicionamento-arcane (KB vitrine-instagram-2026.md) é ferramenta da Arcane/Auroq, NÃO acessível à aluna do Expert360º — sua metodologia (estrutura de Bio, Destaques, Pinned Posts) foi reusada como conhecimento (Constitution Art. VI) para escrever conteúdo original do Expert360º, sem referenciar o squad/ferramenta para a aluna.",
     "'Relatório da Aula 3' = output do Agente da Autoridade Tríplice (gerado durante/após a conversa da aluna com o agente no Drive dela), não um documento pré-pronto — wording corrigido em todos os materiais novos para deixar isso claro.",
-    "Bio (Parte 2 da Aula 4) não tem arquivo próprio no Drive — exercício curto, feito direto no campo de bio do Instagram."
+    "Bio (Parte 2 da Aula 4) não tem arquivo próprio no Drive — exercício curto, feito direto no campo de bio do Instagram.",
+    "M4 Aula 5 aprovada — 'Linha editorial + plano de 30 dias'. Calendário de 30 dias reframed como grade semanal repetível de 4 semanas (não 30 posts pré-escritos) — resolve tensão com a regra cardinal da Alcateia 'nunca criar 30 dias de conteúdo de uma vez'. Aprovado pela Karol.",
+    "Wording corrigido: prompts de IA vão pra um 'chat de IA (Claude, ChatGPT, Gemini ou outro)', não 'agente de IA' — a pedido explícito da Karol na aprovação da Aula 5. Aplicado em minha-linha-editorial.md, no roteiro da Aula 5, e retroativamente nos 4 materiais da Aula 4 (minha-frase-tese.md, minha-narrativa-posicionamento.md, meus-destaques.md, meus-posts-fixados.md). Mantidos intactos os nomes próprios dos agentes específicos do curso (Agente da Autoridade Tríplice, Agente da Persona Compradora, etc.) — a correção vale só pra onde o termo 'agente' se referia genericamente ao chat de IA. Padrão pra futuras aulas: 'chat de IA (Claude, ChatGPT, Gemini ou outro)'."
   ]
 }

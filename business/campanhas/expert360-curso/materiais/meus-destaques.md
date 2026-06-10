@@ -1,6 +1,6 @@
 # Meus Destaques
 **Expert360º | Material do Módulo 4 — Aula 4**
-*Documento para usar com agente de IA*
+*Documento para usar com chat de IA (Claude, ChatGPT, Gemini ou outro)*
 
 ---
 
@@ -10,7 +10,7 @@
 2. Pra Destaque 1, tenha em mãos sua **Minha Narrativa de Posicionamento** (Aula 4)
 3. Pra Destaque 2, tenha em mãos seu método autoral (Módulo 2 — nome, estrutura, promessa)
 4. Pra Destaque 3, tenha em mãos o(s) depoimento(s) coletado(s) no Módulo 3 (se já tiver)
-5. Para cada destaque, copie o prompt correspondente, cole o material indicado, e rode num agente de IA
+5. Para cada destaque, copie o prompt correspondente, cole o material indicado, e rode num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
 6. O resultado é o roteiro de stories — vira sua pauta de gravação
 
 > **Lembrete técnico:** cada destaque pode ter até 100 stories, mas 4-7 por destaque é o ideal. A capa de cada destaque você configura depois de gravar — o conceito de cada capa está indicado abaixo.
@@ -43,7 +43,7 @@ curtas — formato story, não legenda de post.
 
 **Meu roteiro:**
 
-*(escreva aqui ou cole o resultado do agente)*
+*(escreva aqui ou cole o resultado do chat de IA)*
 
 ---
 
@@ -78,7 +78,7 @@ curtas — formato story, não legenda de post.
 
 **Meu roteiro:**
 
-*(escreva aqui ou cole o resultado do agente)*
+*(escreva aqui ou cole o resultado do chat de IA)*
 
 **Ainda não tem nada pra mostrar?**
 
@@ -121,7 +121,7 @@ buscar nos próximos.
 
 **Meu roteiro:**
 
-*(escreva aqui ou cole o resultado do agente)*
+*(escreva aqui ou cole o resultado do chat de IA)*
 
 **Ainda não tem depoimento?**
 

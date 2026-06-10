@@ -1,6 +1,6 @@
 # Minha Frase-Tese Autoral
 **Expert360º | Material do Módulo 4 — Aula 4**
-*Documento para usar com agente de IA*
+*Documento para usar com chat de IA (Claude, ChatGPT, Gemini ou outro)*
 
 ---
 
@@ -9,15 +9,15 @@
 1. Crie uma cópia deste documento no seu Google Drive (ou crie um Doc novo com este título)
 2. Tenha em mãos o relatório que o **Agente da Autoridade Tríplice** te entregou na Aula 3
 3. Cole esse relatório no espaço indicado dentro do prompt abaixo
-4. Copie o prompt inteiro (já com o relatório colado) e cole num agente de IA — pode ser o próprio Agente da Autoridade Tríplice, ou Claude/ChatGPT direto
-5. O agente vai te devolver 5 opções de frase-tese, cada uma com a explicação de onde ela vem e por que é polarizadora
+4. Copie o prompt inteiro (já com o relatório colado) e cole num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
+5. O chat vai te devolver 5 opções de frase-tese, cada uma com a explicação de onde ela vem e por que é polarizadora
 6. Escolha 1 (ou peça pra combinar duas que você gostou) e registre no espaço final deste documento
 
 ---
 
 ## O Prompt
 
-*(copie tudo dentro do bloco abaixo, cole o seu relatório onde indicado, e envie pro agente)*
+*(copie tudo dentro do bloco abaixo, cole o seu relatório onde indicado, e envie pro chat de IA)*
 
 ```
 Aqui está meu Relatório da Tríplice de Autoridade (Persona + Expert + Método):

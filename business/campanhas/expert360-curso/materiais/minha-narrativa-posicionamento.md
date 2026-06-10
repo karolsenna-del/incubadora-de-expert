@@ -1,6 +1,6 @@
 # Minha Narrativa de Posicionamento
 **Expert360º | Material do Módulo 4 — Aula 4**
-*Documento para usar com agente de IA*
+*Documento para usar com chat de IA (Claude, ChatGPT, Gemini ou outro)*
 
 ---
 
@@ -11,15 +11,15 @@
    - O documento **Minha História Real** (Módulo 0)
    - O relatório que o **Agente da Autoridade Tríplice** te entregou (Aula 3)
 3. Cole os dois materiais nos espaços indicados dentro do prompt abaixo
-4. Copie o prompt inteiro (já com os dois materiais colados) e cole num agente de IA
-5. O agente vai te devolver a narrativa em 4 movimentos
+4. Copie o prompt inteiro (já com os dois materiais colados) e cole num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
+5. O chat vai te devolver a narrativa em 4 movimentos
 6. Leia, ajuste o tom se precisar, e registre a versão final no espaço deste documento
 
 ---
 
 ## O Prompt
 
-*(copie tudo dentro do bloco abaixo, cole os dois materiais onde indicado, e envie pro agente)*
+*(copie tudo dentro do bloco abaixo, cole os dois materiais onde indicado, e envie pro chat de IA)*
 
 ```
 Aqui está minha História Real (respostas do Módulo 0):

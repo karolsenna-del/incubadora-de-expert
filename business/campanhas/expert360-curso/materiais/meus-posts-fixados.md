@@ -1,6 +1,6 @@
 # Meus Posts Fixados
 **Expert360º | Material do Módulo 4 — Aula 4**
-*Documento para usar com agente de IA*
+*Documento para usar com chat de IA (Claude, ChatGPT, Gemini ou outro)*
 
 ---
 
@@ -10,7 +10,7 @@
 2. Pra Pinned 1, tenha em mãos sua **Minha Narrativa de Posicionamento**
 3. Pra Pinned 2, tenha em mãos sua **Minha Frase-Tese**
 4. Pra Pinned 3, tenha em mãos seu método autoral (Módulo 2) + o relatório que o Agente da Autoridade Tríplice te entregou (Aula 3)
-5. Para cada pinned, copie o prompt correspondente, cole o material indicado, e rode num agente de IA
+5. Para cada pinned, copie o prompt correspondente, cole o material indicado, e rode num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
 6. O resultado é o roteiro do post — vira a pauta de produção (gravação ou design do carrossel)
 
 > **Lembrete:** o Instagram permite fixar até 3 posts no topo do seu grid — são os 3 primeiros que qualquer visitante vê depois da bio. A ordem de produção sugerida abaixo (1, 2, 3) é a mesma ordem de prioridade.
@@ -45,7 +45,7 @@ do post.
 
 **Meu roteiro:**
 
-*(escreva aqui ou cole o resultado do agente)*
+*(escreva aqui ou cole o resultado do chat de IA)*
 
 ---
 
@@ -80,14 +80,14 @@ por slide.
 
 **Meu roteiro:**
 
-*(escreva aqui ou cole o resultado do agente)*
+*(escreva aqui ou cole o resultado do chat de IA)*
 
 ---
 
 ## Pinned 3 — Produto e Oferta
 
 **Função:** conversão. Apresenta seu método/oferta com chamada pra ação.
-**Formato sugerido:** Carrossel ou Reels (o agente sugere o melhor pro seu caso)
+**Formato sugerido:** Carrossel ou Reels (o chat de IA sugere o melhor pro seu caso)
 **Capa (conceito):** nome do seu método/oferta + 1 benefício chave + CTA visual
 
 > **Estrutura obrigatória — não pule a ruminação.** Visitante sem a dor ativada não se interessa pela solução.
@@ -116,7 +116,7 @@ Escreva o texto de cada etapa/frame.
 
 **Meu roteiro:**
 
-*(escreva aqui ou cole o resultado do agente)*
+*(escreva aqui ou cole o resultado do chat de IA)*
 
 **Ainda não tem oferta pronta?**
 
