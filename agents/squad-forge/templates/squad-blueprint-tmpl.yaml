@@ -2,7 +2,7 @@
 # TEMPLATE: Squad Blueprint
 # ═══════════════════════════════════════════════════════════════════════════════
 # Gerado pelo @forge-smith na Fase 3 (Arquitetura do Squad).
-# Transforma o process map validado em arquitetura de squad AIOS.
+# Transforma o process map validado em arquitetura de squad Auroq.
 # ═══════════════════════════════════════════════════════════════════════════════
 
 # --- METADATA ---
@@ -37,7 +37,7 @@ agent_decomposition:
       estimated_effort: "{% do processo total}"
 
 # --- TASK MAPPING ---
-# Como PUs viram tasks AIOS
+# Como PUs viram tasks Auroq
 task_mapping:
   total_tasks: 0
 

@@ -70,7 +70,7 @@ Documentacao: {link da doc oficial}
 
 ### 2. COLETA INTERNA
 
-Buscar no AIOS:
+Buscar no Auroq:
 
 ```bash
 # Processos documentados

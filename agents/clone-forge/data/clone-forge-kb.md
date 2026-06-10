@@ -2,25 +2,25 @@
 
 ## Fundamentos
 
-O Clone Forge combina 3 abordagens de clonagem cognitiva numa unica pipeline:
+O Clone Forge e self-contained. Combina 3 dimensoes de clonagem cognitiva numa unica pipeline:
 
-### 1. Squad Creator Premium (Alan + Pedro)
+### 1. Linguistica (Voice DNA)
 
-Base confiavel que produz `mind_dna_complete.yaml` com Voice DNA + Thinking DNA. Smoke tests validam comportamento. Limitacao: output unico e monolitico.
+Captura a destilacao linguistica do expert: vocabulario unico, sintaxe, registro, ritmo, marcadores de oralidade, metaforas recorrentes, frases-assinatura. Extraido pelo @innerlens (Fase 3a) com base em MIUs categorizados como BEHAVIORAL e STORYTELLING.
 
-**Fontes:** `agents/squad-creator/data/squad-kb.md`, workflows `wf-clone-mind.yaml`
+**Output:** `03-dna/voice-dna.yaml`
 
-### 2. POC v1.1 — Ontologia de Conhecimento
+### 2. Cognitiva (Thinking DNA + Drivers + Psicometria)
 
-Organiza o perfil em 4 camadas de profundidade (Observable → Cognitive → Deep Identity → Ecosystem) e 6 modulos contextuais (Identidade, Modelo Mental, Operacional, Repertorio, Framework Visual, Ecossistema). Adiciona proveniencia por campo.
+Captura a estrutura de pensamento do expert: modelos mentais dominantes, raciocinio, heuristicas de decisao, padroes de priorizacao. Extraido pelo @cognitive-motor (Fase 3b) e enriquecido com drivers psicologicos (Fase 4) e mapeamento psicometrico em 6 sistemas (Fase 5: MBTI, Enneagram, DISC, Big Five, IQ/EQ, Spiral Dynamics).
+
+**Outputs:** `03-dna/thinking-dna.yaml`, `04-drivers/`, `05-psychometric/`
+
+### 3. Ontologica (POC v1.1 — Ontologia de Conhecimento)
+
+Organiza o perfil em 4 camadas de profundidade (Observable → Cognitive → Deep Identity → Ecosystem) e 6 modulos contextuais (Identidade, Modelo Mental, Operacional, Repertorio, Framework Visual, Ecossistema). Adiciona proveniencia por campo. Agregada pelo @clone-forge-chief (Fase 6).
 
 **Schema:** `data/poc-schema.yaml`
-
-### 3. Pipeline do Alan (reverse-engineered)
-
-31 tabelas, 951 drivers psicologicos, 134 sistemas de assessment. Fases: Coleta → Extracao (MIUs) → Inferencia (drivers) → Mapeamento (psicometria) → Perfil → Recomendacao.
-
-**Referencia:** `docs/knowledge/aios-study/AIOS-clonagem-reverse-engineering.md`
 
 ## Principios de Extracao
 

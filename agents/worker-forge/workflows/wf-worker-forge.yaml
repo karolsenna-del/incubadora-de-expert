@@ -48,7 +48,7 @@ phases:
 
   - phase: 4
     name: "Assembly"
-    description: "Construir worker AIOS completo"
+    description: "Construir worker Auroq completo"
     tasks:
       - "assemble-worker"
     agent: "@worker-smith"

@@ -188,17 +188,17 @@ handlers:
     notes: "Pedir contexto: de onde veio, quando, por que"
 
   # ─────────────────────────────────────────────────────────────────────────────
-  # SKILL AIOS (formato especifico)
+  # SKILL Auroq (formato especifico)
   # ─────────────────────────────────────────────────────────────────────────────
-  aios_skill:
-    input_format: "Diretorio de skill AIOS (~/Downloads/minhas-skills/{skill}/)"
+  auroq_skill:
+    input_format: "Diretorio de skill Auroq (~/Downloads/minhas-skills/{skill}/)"
     processing:
       step_1: "Ler todos os arquivos da skill"
       step_2: "Extrair persona, voice_dna, thinking_dna, commands"
       step_3: "Classificar como Tier 1 (curado por humano)"
       step_4: "Salvar em 01-sources/raw/{source_id}.md"
     tier_default: 1
-    notes: "Skills AIOS ja sao pre-processadas — alta qualidade"
+    notes: "Skills Auroq ja sao pre-processadas — alta qualidade"
 
   # ─────────────────────────────────────────────────────────────────────────────
   # ASSESSMENT RESULTS

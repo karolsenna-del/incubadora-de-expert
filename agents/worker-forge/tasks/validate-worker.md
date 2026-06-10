@@ -3,7 +3,7 @@ task: "Validate Worker"
 responsavel: "@worker-chief"
 responsavel_type: "agent"
 atomic_layer: "task"
-Entrada: "Worker AIOS montado"
+Entrada: "Worker Auroq montado"
 Saida: "Worker validado e operacional (ou lista de correcoes)"
 Checklist:
   - "Smoke test 1: missao simples executada"

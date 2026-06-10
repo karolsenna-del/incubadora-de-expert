@@ -9,6 +9,11 @@ Checklist:
   - "Validacao estrutural PASS (config + agents + tasks + workflow)"
   - "2/3 smoke tests OK"
   - "Usuario aprova squad"
+  - "Squad copiado para squads/{name}/ (backup do anterior se existia)"
+  - "Skill registrada em .claude/commands/{slashPrefix}.md"
+  - "MEMORY.md atualizado com nova linha em Squads Instalados"
+  - "Tracker do squad atualizado com LOG de instalacao"
+  - "Validacao pos-instalacao PASS"
 execution_type: "interactive"
 ---
 
@@ -25,7 +30,7 @@ execution_type: "interactive"
 
 ## Executive Summary
 
-Fase 5 do pipeline Squad Forge. Validacao final antes de marcar o squad como pronto. Combina validacao estrutural (AIOS compliance), smoke tests (cenarios reais), e aprovacao do usuario.
+Fase 5 do pipeline Squad Forge. Validacao final antes de marcar o squad como pronto. Combina validacao estrutural (Auroq compliance), smoke tests (cenarios reais), e aprovacao do usuario.
 
 **Posicao no Workflow:** Fase 5 — Apos Montagem (Fase 4). Ultima fase.
 **Definicao de Sucesso:** Squad validado + usuario aprova
@@ -112,20 +117,7 @@ prompt: |
 type: "confirmation"
 ```
 
-**Exemplo concreto** (se o processo fosse "montar oferta"):
-```
-Imagina que alguem ativa esse squad e diz:
-"Preciso montar uma oferta pro meu curso de R$997"
-
-O squad faria isso:
-1. @pesquisador executa pesquisa-dores: lista 10 dores do publico a partir do briefing
-2. @copywriter executa escrever-headline: headline usando PAS com as dores pesquisadas
-3. Quality gate: validar que headline tem os 4 elementos da Value Equation
-4. @copywriter executa montar-pagina: pagina de vendas completa com headline + bullets + CTA
-5. Output final: pagina de vendas pronta pra revisao do dono
-
-Isso e o que deveria acontecer? Ta correto?
-```
+> **Como construir este exemplo concreto:** pegar o trigger do PU-STEP que inicia o processo, listar 3-5 passos do happy path com agentes/tasks reais do blueprint, citar PU-QUALITY_GATE como criterio de checkpoint, e o entregavel do PU-OUTPUT final. NAO inventar cenarios externos ao processo extraido.
 
 **Cenario 2: Decisao**
 
@@ -146,16 +138,7 @@ prompt: |
 type: "confirmation"
 ```
 
-**Exemplo concreto:**
-```
-E se durante o processo, o ticket da oferta for acima de R$500?
-
-O squad faria:
-→ Garantia de 30 dias com reembolso total (risco percebido alto)
-→ Se fosse abaixo de R$500: garantia padrao de 7 dias
-
-Esse e o caminho certo?
-```
+> **Como construir:** escolher 1 PU-DECISION especifico do processo. Citar a condicao real (vocabulario do usuario), os 2 branches do PU-DECISION, e perguntar se o squad faria isso conforme o usuario descreveu.
 
 **Cenario 3: Excecao**
 
@@ -176,16 +159,7 @@ prompt: |
 type: "confirmation"
 ```
 
-**Exemplo concreto:**
-```
-E se o cliente reclama que a promessa da headline e exagerada?
-
-O squad faria:
-→ @copywriter reescreve headline adicionando proof elements e disclaimer
-→ Severity: degraded (processo continua mas com retrabalho)
-
-E isso que deveria acontecer?
-```
+> **Como construir:** escolher 1 PU-EXCEPTION com severity declarada no processo extraido. Citar o trigger real do usuario, a response que ele descreveu, e a severity classificada (blocker/degraded/cosmetic).
 
 **Criterio:** 2 de 3 cenarios PASS
 
@@ -207,7 +181,7 @@ prompt: |
   Pra usar: /{slashPrefix}
 
   O squad ta no diretorio: minds/{slug}/04-squad/
-  Pra ativar, copie pra agents/{squad-name}/
+  Pra ativar, copie pra squads/{squad-name}/
 
   Voce aprova esse squad? Algo que gostaria de ajustar?
 type: "free_text"
@@ -272,10 +246,96 @@ Atualizar `.state.json`:
 }
 ```
 
-Mensagem final:
+### Step 6: Auto-Install (OBRIGATORIO apos QG-SF-005 PASS)
+
+> Antes de Fase 5 do plano de correcao (05/05/2026), o squad ficava em `minds/{slug}/04-squad/` e o usuario tinha que copiar manualmente. Hoje, instalacao e automatica.
+
+**Sub-step 6.1 — Backup se squad ja existe:**
+
+```bash
+if [ -d "squads/{squad-name}/" ]; then
+  mkdir -p squads/_archive
+  cp -r squads/{squad-name}/ squads/_archive/{squad-name}-{ISO_timestamp}/
+  echo "Backup do squad existente em squads/_archive/{squad-name}-{ISO_timestamp}/"
+fi
+```
+
+**Sub-step 6.2 — Cópia:**
+
+```bash
+cp -r minds/{slug}/04-squad/ squads/{squad-name}/
+```
+
+**Sub-step 6.3 — Registrar skill em `.claude/commands/{slashPrefix}.md`:**
+
+Criar arquivo com formato padrao do Auroq:
+
+```markdown
+# {slashPrefix}
+
+{Descricao do squad em 1 linha}
+
+CRITICAL: First, read and adopt the persona defined in `squads/{squad-name}/agents/{chief-agent}.md`.
+Then, read and execute the task defined in `squads/{squad-name}/tasks/start.md`.
+Follow ALL instructions exactly as written. Those files are your single source of truth.
+```
+
+> Mesmo formato dos squads existentes (ver `.claude/commands/squadForge.md`, `clone-forge.md`, etc.)
+
+**Sub-step 6.4 — Atualizar MEMORY.md do projeto:**
+
+Adicionar linha em `MEMORY.md` (na raiz do projeto Auroq) na secao "Squads Instalados". Se o arquivo ou secao nao existir, criar:
+
+```markdown
+## Squads Instalados
+
+| **{Squad Title}** | `squads/{squad-name}/` | {N} ({chief + tier_1 list}) | `/{slashPrefix}` |
+```
+
+**Sub-step 6.5 — Atualizar tracker do squad:**
+
+Em `business/campanhas/squad-{slug}/tracker.md`:
+
+```markdown
+- [x] Fase 5: Validacao + Instalacao
+
+## LOG
+- {ISO} — @forge-chief: Squad instalado em squads/{squad-name}/, skill registrada em .claude/commands/{slashPrefix}.md, MEMORY.md atualizado
+```
+
+**Sub-step 6.6 — Validar instalacao:**
+
+```bash
+# Verificar arquivos
+test -f squads/{squad-name}/squad.yaml || { echo "FAIL: squad.yaml ausente"; exit 1; }
+test -f .claude/commands/{slashPrefix}.md || { echo "FAIL: skill nao registrada"; exit 1; }
+
+# Tentar carregar squad.yaml (sintaxe valida)
+node -e "require('js-yaml').load(require('fs').readFileSync('squads/{squad-name}/squad.yaml', 'utf8'))" \
+  || { echo "FAIL: squad.yaml invalido"; exit 1; }
+```
+
+**Se qualquer sub-step falha:** rollback completo
+- Apagar `squads/{squad-name}/` recem-criado
+- Apagar `.claude/commands/{slashPrefix}.md` recem-criado
+- Reverter linha do MEMORY.md
+- Restaurar backup se existia
+- Reportar erro ao usuario
+
+**Sub-step 6.7 — Atualizar `.state.json`:**
+
+```json
+{
+  "installed_to": "squads/{squad-name}/",
+  "skill_registered": ".claude/commands/{slashPrefix}.md",
+  "completed_at": "{ISO}"
+}
+```
+
+### Step 7: Mensagem Final
 
 ```
-=== PROCESS FORGE — COMPLETO ===
+=== SQUAD FORGE — COMPLETO ===
 
 Processo "{process_name}" → Squad "{squad_name}"
 
@@ -283,15 +343,17 @@ Pipeline:
 ✅ Fase 0: Setup
 ✅ Fase 1: Extracao ({N} PUs, {N} rounds)
 ✅ Fase 2: Playback (validado pelo usuario)
-✅ Fase 3: Arquitetura ({N} agentes, {N} tasks)
-✅ Fase 4: Montagem (AIOS compliant)
-✅ Fase 5: Validacao (smoke tests + aprovacao)
+✅ Fase 3: Arquitetura + PRD + Stories ({N} agentes, {N} tasks)
+✅ Fase 4: Montagem (Auroq compliant + profundidade)
+✅ Fase 5: Validacao + Instalacao Automatica
 
-Squad pronto em: minds/{slug}/04-squad/
+Squad instalado em: squads/{squad-name}/
+Skill registrada em: .claude/commands/{slashPrefix}.md
+PRD: docs/prd/squad-{slug}.md
+Stories: docs/stories/squad-forge/{slug}/
+Tracker: business/campanhas/squad-{slug}/tracker.md
 
-Pra ativar:
-1. Copie minds/{slug}/04-squad/ pra agents/{squad-name}/
-2. Use /{slashPrefix}
+Ja ta ativo. Usa: /{slashPrefix}
 
 Seu processo agora e um squad. Nao esta mais so na sua cabeca.
 ```
@@ -303,7 +365,12 @@ Seu processo agora e um squad. Nao esta mais so na sua cabeca.
 | Arquivo | Conteudo |
 |---------|----------|
 | `05-validation/validation-report.yaml` | Relatorio completo |
-| `.state.json` | Estado final (completed) |
+| `.state.json` | Estado final (completed + installed_to + skill_registered) |
+| `squads/{squad-name}/` | Squad instalado |
+| `.claude/commands/{slashPrefix}.md` | Skill registrada |
+| `MEMORY.md` (raiz do projeto) | Atualizado em "Squads Instalados" |
+| `business/campanhas/squad-{slug}/tracker.md` | LOG de instalacao adicionado |
+| `squads/_archive/{squad-name}-{timestamp}/` | Backup (se squad ja existia antes) |
 
 ---
 

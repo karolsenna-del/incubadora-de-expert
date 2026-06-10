@@ -233,7 +233,7 @@ Processo validado. {process_name} agora existe fora da sua cabeca.
 {N} PUs confirmados.
 Process map salvo em minds/{slug}/02-process-map/.
 
-Proximo passo: @forge-smith vai transformar isso em squad AIOS.
+Proximo passo: @forge-smith vai transformar isso em squad Auroq.
 ```
 
 ---

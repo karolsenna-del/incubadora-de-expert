@@ -12,14 +12,13 @@ complexity: medium
 resumable: true
 
 description: |
-  Pipeline simplificado que pula as fases de MIU extraction, driver inference
-  e psychometric mapping. Usa diretamente o Squad Creator para Voice + Thinking DNA
-  e agrega num perfil mais enxuto.
+  Pipeline simplificado self-contained que pula as fases de MIU extraction,
+  driver inference e psychometric mapping. Voice DNA pelo @innerlens e Thinking DNA
+  pelo @cognitive-motor extraidos direto sobre fontes (sem MIU enrichment).
 
   Ideal para:
   - Primeiro clone rapido (MVP)
   - Pessoas com pouco conteudo disponivel
-  - Quando o Squad Creator Premium ja e suficiente
   - Validacao rapida antes de investir no pipeline completo
 
   O que PULA: Fases 2 (MIUs), 4 (Drivers), 5 (Psicometria)
@@ -32,19 +31,17 @@ description: |
 specialists:
   orchestrator:
     agent: "@clone-forge-chief"
-    role: "Pipeline Orchestrator"
+    role: "Pipeline Orchestrator + Source Curator + Validator"
 
-  external_knowledge_architect:
-    agent: "@oalanicolas"
-    role: "Knowledge Architect (Squad Creator)"
-    squad: "squad-creator"
+  voice_extractor:
+    agent: "@innerlens"
+    role: "Voice DNA Extractor"
+    note: "Quick mode: extrai Voice DNA direto sobre fontes (sem MIU enrichment)"
 
-  external_process_validator:
-    agent: "@pedro-valerio"
-    role: "Process Absolutist (Squad Creator)"
-    squad: "squad-creator"
-
-  # @innerlens e @cognitive-motor NAO sao invocados no modo quick
+  thinking_extractor:
+    agent: "@cognitive-motor"
+    role: "Thinking DNA Extractor"
+    note: "Quick mode: extrai Thinking DNA direto sobre fontes (sem driver inference)"
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # INPUTS
@@ -88,7 +85,7 @@ phases:
     name: "Coleta e Validacao de Fontes"
     duration: "30-60 min"
     task: "collect-and-merge-sources.md"
-    agent: "@oalanicolas"
+    agent: "@clone-forge-chief"
     blocking: true
 
     checkpoint:
@@ -137,9 +134,9 @@ phases:
     name: "Extracao de DNA"
     duration: "2-3 horas"
     task: "extract-dna-enriched.md"
-    agent: "@oalanicolas"
+    agent: "@innerlens + @cognitive-motor"
     blocking: true
-    quick_mode_note: "Executa sem MIU enrichment — usa fontes diretas como no Squad Creator original"
+    quick_mode_note: "Executa sem MIU enrichment — usa fontes diretas. Voice por @innerlens, Thinking por @cognitive-motor"
 
     checkpoint:
       gate: "QG-003 DNA_QUALITY"
@@ -203,17 +200,17 @@ phases:
     name: "Validacao"
     duration: "15 min"
     task: "validate-clone-forge.md"
-    agent: "@oalanicolas + @pedro-valerio"
+    agent: "@clone-forge-chief"
     blocking: true
 
     checkpoint:
       gate: "QG-005 CLONE_VALIDATION"
       blocking: true
       criteria:
-        - "Traceability Audit Layer 2 PASS (relaxed: MIUs >= 80%)"
+        - "Traceability Audit Layer 2 PASS (Voice DNA + Thinking DNA + POC + Contradictions + Obsessions — sem MIU coverage pois Fase 2 e skipped no quick mode)"
         - "Smoke tests 3/3 PASS"
         - "Fidelidade >= 65% (relaxado de 80%)"
-      note: "Quick mode aceita fidelidade e MIU traceability menores — resultado e v1.0-v2.0"
+      note: "Quick mode aceita fidelidade menor — resultado e v1.0-v2.0. MIU traceability NAO se aplica (Fase 2 pulada)."
 
     output:
       files:

@@ -471,7 +471,7 @@ pesos:
 | Fase | Agente | Dados |
 |------|--------|-------|
 | Phase 2 | @innerlens | MIUs (`02-extraction/mius.yaml`) |
-| Phase 3 | @oalanicolas | DNA (`03-dna/`) |
+| Phase 3 | @innerlens + @cognitive-motor | DNA (`03-dna/`) |
 | Phase 4 | @cognitive-motor | Drivers (`04-drivers/`) |
 | Phase 5 | @cognitive-motor | Psicometria (`05-psychometric/`) |
 | Phase 1.5 | @clone-forge-chief (self) | Entrevista (`01-sources/interview/`) |
@@ -481,7 +481,7 @@ pesos:
 | Fase | Agente | Dados |
 |------|--------|-------|
 | Phase 6.5 | @clone-forge-chief (self) | Gaps para questionario cirurgico |
-| Phase 7 | @oalanicolas + @pedro-valerio | Perfil completo para validacao |
+| Phase 7 | @clone-forge-chief | Perfil completo para validacao |
 | Phase 8 | @clone-forge-chief (self) | Perfil para geracao de agente |
 
 ### Handoff Protocol
@@ -489,7 +489,7 @@ pesos:
 ```yaml
 handoff_to_phase_7:
   from: "@clone-forge-chief"
-  to: "@oalanicolas + @pedro-valerio"
+  to: "@clone-forge-chief"
   gate: "QG-004 PASS"
   package:
     - minds/{slug}/06-profile/identity.yaml

@@ -4,7 +4,7 @@ responsavel: "@worker-smith"
 responsavel_type: "agent"
 atomic_layer: "task"
 Entrada: "Proposta validada + KB rascunho"
-Saida: "Worker AIOS completo (agent, tasks, KB 4 camadas, config, skill)"
+Saida: "Worker Auroq completo (agent, tasks, KB 4 camadas, config, skill)"
 Checklist:
   - "agent.md completo com 4 modos + Role Card + Delegation Map"
   - "5 tasks padrao geradas"
@@ -19,11 +19,11 @@ Checklist:
 execution_type: "semantic"
 ---
 
-# Task: Assemble Worker — Montar Worker AIOS
+# Task: Assemble Worker — Montar Worker Auroq
 
 ## Objetivo
 
-Construir a estrutura AIOS completa do worker a partir da proposta validada.
+Construir a estrutura Auroq completa do worker a partir da proposta validada.
 
 ## Posicao no Workflow
 

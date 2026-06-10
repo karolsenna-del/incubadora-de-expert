@@ -83,7 +83,7 @@ Processos existentes: {quais ja estao documentados}
 Stakeholders: {com quem o worker interage}
 ```
 
-Carrega automaticamente do contexto AIOS quando disponivel (docs/knowledge/expert-business/).
+Carrega automaticamente do contexto Auroq quando disponivel (docs/knowledge/expert-business/).
 
 ### 3. DELEGATION MAP
 

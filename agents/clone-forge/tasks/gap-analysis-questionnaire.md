@@ -170,7 +170,7 @@ generate_questions:
 
     contradiction:
       pattern: "Em {fonte_A} voce diz {X}, mas em {fonte_B} voce diz {Y}. Qual e a verdade? Ou as duas coisas sao verdade em contextos diferentes?"
-      example: "No video sobre lancamento voce diz que 'todo expert precisa de audiencia grande', mas no podcast com o Alan voce diz que 'audiencia e vaidade, conversao e o que importa'. Qual e a verdade? Ou as duas coisas sao verdade em contextos diferentes?"
+      example: "No video sobre lancamento voce diz que 'todo expert precisa de audiencia grande', mas em outra entrevista voce diz que 'audiencia e vaidade, conversao e o que importa'. Qual e a verdade? Ou as duas coisas sao verdade em contextos diferentes?"
 
     surface_only:
       pattern: "Voce menciona {conceito} varias vezes mas nunca explica em profundidade. Pode detalhar: {pergunta_especifica}?"

@@ -393,7 +393,7 @@ Executar `checklists/driver-quality-gate.md`:
 | Fase | Agente | Dados |
 |------|--------|-------|
 | Phase 2 | @innerlens | MIUs validados (`02-extraction/mius.yaml`) |
-| Phase 3 | @oalanicolas | DNA synthesis (`03-dna/dna-synthesis.yaml`) -- contexto opcional |
+| Phase 3 | @innerlens + @cognitive-motor | DNA synthesis (`03-dna/dna-synthesis.yaml`) -- contexto opcional |
 
 ### Entrega para
 
@@ -401,7 +401,7 @@ Executar `checklists/driver-quality-gate.md`:
 |------|--------|-------|
 | Phase 5 | @cognitive-motor (self) | Drivers para mapeamento psicometrico |
 | Phase 6 | @clone-forge-chief | Drivers para agregacao de perfil |
-| Phase 7 | @oalanicolas | Drivers para smoke tests de decisao |
+| Phase 7 | @clone-forge-chief | Drivers para smoke tests de decisao |
 
 ### Handoff Protocol
 

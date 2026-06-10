@@ -76,7 +76,7 @@ Tarefa → Raciocinio → Gap detectado → Help request →
 
 ### Mapeamento pro Worker
 
-Valida diretamente o approach AIOS de tasks em markdown. A industria convergiu pro mesmo padrao.
+Valida diretamente o approach Auroq de tasks em markdown. A industria convergiu pro mesmo padrao.
 
 ---
 

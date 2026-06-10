@@ -425,7 +425,7 @@ Executar `checklists/psychometric-quality-gate.md`:
 | Fase | Agente | Dados |
 |------|--------|-------|
 | Phase 6 | @clone-forge-chief | Perfil psicometrico para agregacao |
-| Phase 7 | @oalanicolas | Psicometria para validacao de consistencia |
+| Phase 7 | @clone-forge-chief | Psicometria para validacao de consistencia |
 | Phase 8 | @clone-forge-chief | Perfil para calibracao do agente final |
 
 ### Handoff Protocol

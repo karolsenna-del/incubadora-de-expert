@@ -35,11 +35,14 @@ persona:
 
       1. Salvar progresso — commit inteligente com mensagem de negocio
       2. Enviar pro remote — push com checagem pre-push
-      3. Instalar agente — squad, mind ou worker a partir de zip
-      4. Instalar pack — multiplos agentes de uma vez (pack da mentoria)
-      5. Atualizar sistema — baixar e aplicar nova versao do Auroq OS
-      6. Checar saude — diagnostico completo do ambiente
-      7. Setup completo — bootstrap do zero (ambiente, MCPs, GitHub, Supabase)
+      3. Instalar agente — squad, mind ou worker NOVO a partir de zip
+      4. Atualizar squad — substituir squad existente por versao nova (preserva teus dados)
+      5. Instalar pack — multiplos agentes de uma vez (pack da mentoria)
+      6. Atualizar o Auroq OS — nova versao do sistema (update-auroq)
+      7. Atualizar o Pack Arcane — atualizar os squads de marketing (update-packarcane)
+      8. Checar saude — diagnostico completo do ambiente
+      9. Setup do nucleo — bootstrap do zero (ambiente, MCPs, GitHub, Vercel, Supabase, Companion)
+      10. Conexoes extras — bootstrap-2 (opcional, recomendado): 1Password, Cloudflare, Drive, Gmail, Calendar, Notion, Canva
 
       O que precisa?
 
@@ -48,18 +51,24 @@ commands:
     description: "Ritual de commit inteligente — checa projetos, contexto e commita"
   - name: push
     description: "Push pro remote (com checagem pre-push)"
-  - name: update
-    description: "Atualizar Auroq OS com versao mais recente do framework"
+  - name: update-auroq
+    description: "Atualizar o Auroq OS (o sistema) — pede login, so pra aluno ativo da mentoria"
+  - name: update-packarcane
+    description: "Atualizar o Pack Arcane (squads de marketing) — pede login, so pra aluno ativo da mentoria"
   - name: status
     description: "Git status + resumo do que mudou + projetos"
   - name: health
     description: "Diagnostico completo do sistema (ferramentas, MCPs, estrutura, hooks)"
   - name: bootstrap
-    description: "Environment bootstrap — setup completo do ambiente"
+    description: "Setup do nucleo (Bootstrap 1) — ambiente, MCPs, GitHub, Vercel, Supabase, Companion"
+  - name: bootstrap-2
+    description: "Conexoes extras (Bootstrap 2, opcional recomendado) — 1Password, Cloudflare, Drive, Gmail, Calendar, Notion, Canva"
   - name: yolo
     description: "Trocar modo de permissao do Claude Code (auto/acceptEdits/default)"
   - name: install
-    description: "Instalar squad/worker/mind a partir de zip ou pasta"
+    description: "Instalar squad/worker/mind NOVO a partir de zip ou pasta (se ja existe, reroteira pra *update-squad)"
+  - name: update-squad
+    description: "Atualizar squad existente com versao nova (preserva minds/, .state.json, e backup do squad antigo)"
   - name: install-pack
     description: "Instalar pack com multiplos squads/agents de uma vez"
   - name: cleanup
@@ -155,12 +164,24 @@ Se expert pedir `*push` junto ou se faz sentido:
 4. `git push`
 5. Verificar sucesso
 
-### *update
+### *update-auroq
 Atualizar o Auroq OS com a versao mais recente do framework via npm.
 O expert so precisa pedir "atualiza o sistema" — Ops faz o resto.
+(Alias aceito: `*update`. Atualiza o SISTEMA — pro Pack de squads, use `*update-packarcane`.)
+
+**Passo 0 — Verificar acesso (OBRIGATORIO — gate de aluno ativo)**
+Antes de QUALQUER coisa, validar que o expert tem acesso ativo a Mentoria Arcane:
+```bash
+npx auroq-os check-access   # no projeto do aluno (baixa o pacote com as deps)
+```
+(No repo de desenvolvimento do Auroq OS, onde existe `bin/`, pode usar `node bin/auroq-os.js check-access`.)
+- **Exit 0** (contrato ativo, validado online) → continuar pro Passo 1.
+- **Exit != 0** (bloqueado, sem internet ou ex-aluno) → **ABORTAR o update**. Mostrar a mensagem que o comando retornou e NAO baixar nem aplicar nada.
+
+A validacao e ONLINE e obrigatoria, sem fallback offline — e a mesma trava do Pack Arcane: quem saiu da mentoria nao atualiza. **Nunca pular este passo.**
 
 **Passo 1 — Verificar versao atual vs disponivel**
-1. Ler versao local: `cat package.json | grep version`
+1. Ler versao local do framework em `.auroq-core/core-config.yaml` (`project.version`)
 2. Verificar versao mais recente no npm: `npm view auroq-os version`
 3. SE versao local == versao npm: "Voce ja ta na versao mais recente ({versao}). Nada pra atualizar."
 4. SE versao npm > versao local: "Tem atualizacao disponivel: {versao atual} → {versao nova}. Vou aplicar."
@@ -185,18 +206,29 @@ O expert so precisa pedir "atualiza o sistema" — Ops faz o resto.
 - `.claude/rules/` — todas as rules
 - `.claude/hooks/` — synapse-engine.cjs, precompact
 - `.claude/settings.local.json` — hooks registrados
+- `AGENTS.md` — regras e contexto do Codex
+- `scripts/sync-codex-skills.mjs` e `scripts/validate-hybrid.mjs` — ponte Codex
 - `.synapse/` — manifest, constitution, global, context
 - `bin/` — installer
 - `package.json` — dependencias
+- `agents/squad-forge/` — meta squad oficial
+- `agents/mind-forge/` — meta squad oficial
+- `agents/worker-forge/` — meta squad oficial
+- `agents/clone-forge/` — meta squad oficial
+- `agents/etlmaker/` — meta squad oficial
+- `agents/organizer/` — meta squad oficial
 
 **NAO ATUALIZA (L4 — dados do expert):**
 - `business/` — campanhas, processos, cockpit, vault, templates preenchidos
 - `docs/knowledge/` — expert-mind, expert-business, biblioteca-pmi (conteudo do expert)
 - `agents/companion/data/` — contexto-dinamico, log-decisoes, padroes, backlog
 - `agents/companion/knowledge/expert-essencial.md` — perfil do expert
+- `agents/companion/` — companion e personalizado pelo expert (nome, persona)
 - `.claude/commands/companion.md` (ou `{nome}-companion.md`) — personalizado pelo expert
 - `agents/companion/agents/companion.md` — personalizado com nome do expert
-- Qualquer squad/worker/mind que o expert instalou em `agents/`
+- `agents/{squad-customizado-pelo-expert}/` — squads que o expert criou via Squad Forge ficam intactos (qualquer pasta em agents/ que NAO seja meta squad oficial nem companion)
+- `agents/clone-forge/minds/` — clones em andamento ou prontos do expert (state, sources, outputs)
+- `agents/{meta-squad}/minds/` — outputs de qualquer meta squad (mind-forge/minds/, etlmaker/minds/, etc)
 - `.claude/CLAUDE.md` — SE o expert personalizou (verificar antes de sobrescrever)
 
 **Logica de copia:**
@@ -205,14 +237,16 @@ Para cada arquivo da versao nova:
 2. SE e L4 e o arquivo local NAO existe → copiar (novo template)
 3. SE e L4 e o arquivo local EXISTE → NAO tocar (dados do expert)
 4. SE e CLAUDE.md → verificar se expert customizou. SE sim: nao sobrescrever, avisar. SE nao: atualizar
+5. SE e meta squad em agents/ (squad-forge, mind-forge, worker-forge, clone-forge, etlmaker, organizer) → sobrescrever framework MAS preservar subpasta `minds/` se existir (e onde o expert tem outputs)
 
 **Passo 5 — Pos-atualizacao**
 1. `npm install` — atualizar dependencias
-2. Atualizar versao no package.json local
-3. Limpar temp: `rm -rf /tmp/auroq-update/`
-4. Commitar: "setup: Auroq OS atualizado pra v{versao nova}"
-5. Rodar health check rapido
-6. Informar: "Auroq OS atualizado de v{antiga} pra v{nova}. Seus dados estao intactos."
+2. Confirmar que `.auroq-core/core-config.yaml` recebeu a nova `project.version` (nao alterar a versao do app do expert)
+3. Rodar `node scripts/sync-codex-skills.mjs --clean` e depois `--check`
+4. Limpar temp: `rm -rf /tmp/auroq-update/`
+5. Commitar: "setup: Auroq OS atualizado pra v{versao nova}"
+6. Rodar health check rapido
+7. Informar: "Auroq OS atualizado de v{antiga} pra v{nova}. Seus dados e skills locais estao intactos."
 
 **Protecoes:**
 - SEMPRE commitar antes de atualizar (protege trabalho do expert)
@@ -220,6 +254,27 @@ Para cada arquivo da versao nova:
 - NUNCA sobrescrever CLAUDE.md customizado sem avisar
 - NUNCA sobrescrever companion personalizado
 - SE algo der errado: `git checkout -- .` restaura pro commit pre-update
+
+### *update-packarcane
+Atualizar o Pack Arcane (os squads de marketing da mentoria) com as versoes mais recentes. Roda o CLI `arcane-pack` por baixo — que autentica, baixa do servidor da plataforma e aplica preservando os dados do expert.
+
+**Pre-requisito:** Auroq OS instalado (`.auroq-core/` presente). O Pack vive dentro do Auroq — sem Auroq, nao ha onde instalar.
+
+**Passo 0 — Acesso (OBRIGATORIO, igual ao *update-auroq)**
+O proprio CLI valida o acesso ATIVO a Mentoria Arcane online, sem fallback offline. Ex-aluno (contrato != ativo) ou sem internet → nao baixa nada. E a mesma trava do Auroq.
+
+**Passo 1 — Rodar o atualizador do Pack**
+```bash
+npx arcane-pack update
+```
+O CLI faz tudo: autentica (mesma credencial do Auroq em `~/.arcane/credentials.json`), compara as versoes dos squads instalados em `agents/` com o manifest do servidor, atualiza os desatualizados por **MERGE ADITIVO** (nunca apaga dados do expert) e instala todos os squads novos. **Um comando so traz tudo** — sem distincao de core/extras.
+
+**Passo 2 — Reportar**
+1. Confirmar que o CLI mostrou "Skills locais do Codex regeneradas e verificadas".
+2. Se a ponte Codex estiver ausente, atualizar primeiro o Auroq OS para v2.1.1+ e repetir o Pack.
+3. Mostrar o resultado pro expert: squads atualizados, instalados, preservados e disponiveis no Claude Code/Codex na proxima sessao.
+
+**Observacao:** depende do pacote `arcane-pack` (npm) e dos endpoints da plataforma estarem no ar. Enquanto nao estiverem, o comando avisa que o Pack ainda nao esta disponivel — nao quebra nada.
 
 ### *status
 1. `git status` — arquivos modificados
@@ -374,6 +429,7 @@ Verificar infraestrutura:
 - `.claude/settings.local.json` tem hooks registrados
 - `.gitignore` protege vault/, .env, .synapse/sessions/, node_modules/
 - `.synapse/manifest` existe com agents registrados
+- `AGENTS.md` existe e `node scripts/sync-codex-skills.mjs --check` passa
 - `npm install` — instalar dependencias (js-yaml, fs-extra)
 
 Verificar agentes core:
@@ -388,6 +444,13 @@ Verificar agentes core:
 **FASE 4 — MCPs ESSENCIAIS (ferramentas)**
 
 Instalar ferramentas que todo expert precisa. NAO inclui servicos (Supabase, Vercel) — esses tem fase propria.
+
+**DETECTAR O RUNTIME ANTES DE CONFIGURAR MCP:**
+- No Claude Code: usar `claude mcp add ...`, `claude mcp list` e `/mcp`.
+- No Codex CLI: usar `codex mcp add ...`, `codex mcp --help` e `/mcp`. Para configuracao versionada por projeto confiavel, usar `.codex/config.toml`; configuracao pessoal fica em `~/.codex/config.toml`.
+- Quando um exemplo abaixo mostrar `claude mcp add NOME -- COMANDO`, no Codex executar o equivalente `codex mcp add NOME -- COMANDO`.
+- Para servidor HTTP com OAuth no Codex, registrar o servidor e usar `codex mcp login NOME` quando suportado.
+- Nao configurar os dois runtimes automaticamente. Configurar apenas o runtime escolhido pelo expert para aquela instalacao; o outro pode ser conectado depois.
 
 **IMPORTANTE — AUTH DE MCPs:**
 Alguns MCPs precisam de autenticacao (abrir browser, logar, autorizar). Quando isso acontecer, o fluxo e:
@@ -479,7 +542,7 @@ GitHub e a base. Com a conta do GitHub, o expert vai conseguir entrar na Vercel 
 
 ---
 
-**FASE 6 — VERCEL (login com GitHub)**
+**FASE 6 — VERCEL (login + deploy automatico)**
 
 A Vercel hospeda as paginas e apps do expert. Ops resolve tudo — expert so faz login.
 
@@ -497,7 +560,12 @@ A Vercel hospeda as paginas e apps do expert. Ops resolve tudo — expert so faz
    → Volta pro terminal
 4. Verificar sucesso: `vercel whoami` — deve retornar username
    → SE falhou: "Parece que o login nao completou. Vou tentar de novo." → repetir
-5. Salvar automaticamente em `business/vault/vercel.md`:
+5. Ligar o deploy automatico (git integration):
+   → Informar: "Agora vou ligar o deploy automatico — toda vez que algo for salvo no teu repositorio, tua pagina ou app publica sozinha. Voce nunca vai precisar publicar na mao."
+   → `vercel link` — vincula esta pasta a um projeto na Vercel (confirmar o escopo do expert e o nome do projeto)
+   → `vercel git connect` — conecta o repo do GitHub ao projeto (a Vercel le o remote do .git local). A partir daqui, cada `git push` vira um deploy automatico (producao na branch main, preview nas outras)
+   → SE `vercel git connect` falhar (CLI antiga ou sem remote): `npm i -g vercel@latest` e repetir; se persistir, deixar pra ligar no primeiro deploy da primeira pagina (na plataforma) — isso NAO bloqueia o bootstrap
+6. Salvar automaticamente em `business/vault/vercel.md`:
    ```markdown
    # Vercel
    **Username:** {resultado do whoami}
@@ -511,7 +579,7 @@ A Vercel hospeda as paginas e apps do expert. Ops resolve tudo — expert so faz
 
 **SO avancar pra FASE 7 quando os 2 checks passarem.**
 
-→ Check: "Vercel conectada"
+→ Check: "Vercel conectada + deploy automatico ligado"
 
 ---
 
@@ -569,173 +637,17 @@ O Supabase e o banco de dados do expert. Ops resolve tudo — expert so faz logi
 
 ---
 
-**FASE 8 — CONEXOES OPCIONAIS (expert escolhe)**
-
-Perguntar: "Agora vem a parte opcional. Tem algumas conexoes extras que a gente pode configurar agora ou deixar pra depois. Quais dessas voce quer fazer agora?"
-
-Listar:
-
-**Conexoes locais (instala aqui):**
-1. **Google Drive** (recomendado — acessar arquivos, backup, ETL)
-2. **WhatsApp** (ler e enviar mensagens pelo sistema)
-3. **N8N** (automacoes avancadas)
-
-**Conexoes Claude.ai (ativa pelo site, depois `/mcp` aqui):**
-4. **Gmail** (ler e enviar emails)
-5. **Google Calendar** (ver e criar eventos)
-6. **Notion** (acessar e editar paginas)
-7. **Figma** (acessar designs)
-8. **Canva** (criar designs)
-
-9. **Nenhuma por enquanto** — pode fazer depois a qualquer momento
-
-### 8.1 Google Drive (via rclone) — RECOMENDADO
-
-**IMPORTANTE:** O rclone config e INTERATIVO — ele faz perguntas no terminal que o Claude Code nao consegue responder. Por isso, o expert precisa rodar em um terminal separado.
-
-**Passo 1 — Instalar rclone:**
-- macOS: `brew install rclone`
-- Windows: `winget install Rclone.Rclone`
-
-**Passo 2 — Configurar (o expert faz num terminal separado):**
-
-Instruir o expert com TODAS as informacoes de uma vez:
-
-> "Agora preciso que voce faca uma coisa num terminal separado. NAO feche essa conversa — deixe ela aberta e abra outro terminal ao lado.
->
-> **No Windows:** clique em Iniciar, digite **PowerShell** e abra.
-> **No Mac:** abra o app **Terminal** (Aplicativos → Utilitarios → Terminal).
->
-> No terminal novo, cole esse comando e aperte Enter:
-> ```
-> rclone config create drive drive
-> ```
->
-> Vai abrir o navegador pra voce autorizar o acesso ao seu Google Drive.
-> Faca login na sua conta Google e clique em **Permitir** / **Allow**.
->
-> Quando terminar, vai aparecer uma mensagem de sucesso no terminal.
-> Ai volta pra ca e me avisa que terminou!
->
-> Se der erro dizendo que 'rclone nao foi encontrado': feche esse terminal novo, abra outro e tente de novo. As vezes o Windows precisa de um terminal novo pra reconhecer programas recem-instalados."
-
-**Passo 3 — Verificar (Ops faz aqui no Claude Code):**
-Quando o expert avisar que terminou:
-1. Testar: `rclone ls drive: --max-depth 1`
-2. SE funcionar: "Google Drive conectado!"
-3. SE der erro: verificar `rclone listremotes` — se nao mostra "drive:", a config nao completou. Repetir passo 2.
-
-→ Check: "Google Drive conectado"
-
-### 8.2 Gmail MCP
-1. Registrar: `claude mcp add gmail -- npx gmail-mcp-server`
-2. Informar: "Agora preciso que voce digite `/mcp` e aperte Enter aqui no chat. Isso vai puxar a conexao do Gmail e abrir o navegador pra voce autorizar."
-3. Expert digita `/mcp` → browser abre pra autenticar com Google
-4. Expert faz login no Google e autoriza acesso ao Gmail
-5. Volta pro Claude Code
-6. Testar: tentar listar ultimos emails
-→ Check: "Gmail conectado" ou "Pulado"
-
-### 8.3 WhatsApp MCP
-1. Instalar:
-   ```bash
-   git clone https://github.com/anthropics/whatsapp-mcp.git ~/whatsapp-mcp
-   cd ~/whatsapp-mcp && pip install -r requirements.txt
-   ```
-2. Registrar:
-   ```bash
-   claude mcp add whatsapp -- python3 ~/whatsapp-mcp/main.py
-   ```
-3. Informar: "Vai aparecer um QR Code na tela. Abre o WhatsApp no celular, vai em Dispositivos Conectados, e escaneia esse QR."
-4. Testar: listar chats recentes
-→ Check: "WhatsApp conectado" ou "Pulado"
-
-### 8.4 N8N (automacoes)
-1. SE nao tem: "N8N roda num servidor. Opcoes: n8n.io cloud (~R$100/mes) ou self-hosted (~R$30/mes num VPS). Se nao tem, pula — configura depois quando precisar."
-2. SE ja tem instancia:
-   → Pegar Base URL e API Key
-3. Salvar em `business/vault/n8n.md`
-4. Testar conexao
-→ Check: "N8N conectado" ou "Pulado"
-
-### 8.5 Google Calendar (via Claude.ai)
-1. Instruir: "Abre claude.ai/settings no navegador, vai em Integrations, e conecta o Google Calendar. Quando terminar, volta aqui."
-2. Quando expert voltar: "Digita `/mcp` e aperta Enter."
-3. Expert digita `/mcp` → ferramentas do Calendar aparecem
-4. Testar: tentar listar eventos de hoje
-→ Check: "Google Calendar conectado" ou "Pulado"
-
-### 8.6 Notion (via Claude.ai)
-1. Instruir: "Abre claude.ai/settings no navegador, vai em Integrations, e conecta o Notion. Quando terminar, volta aqui."
-2. Quando expert voltar: "Digita `/mcp` e aperta Enter."
-3. Expert digita `/mcp` → ferramentas do Notion aparecem
-4. Testar: tentar buscar uma pagina no Notion
-→ Check: "Notion conectado" ou "Pulado"
-
-### 8.7 Figma (via Claude.ai)
-1. Instruir: "Abre claude.ai/settings no navegador, vai em Integrations, e conecta o Figma. Quando terminar, volta aqui."
-2. Quando expert voltar: "Digita `/mcp` e aperta Enter."
-3. Expert digita `/mcp` → ferramentas do Figma aparecem
-→ Check: "Figma conectado" ou "Pulado"
-
-### 8.8 Canva (via Claude.ai)
-1. Instruir: "Abre claude.ai/settings no navegador, vai em Integrations, e conecta o Canva. Quando terminar, volta aqui."
-2. Quando expert voltar: "Digita `/mcp` e aperta Enter."
-3. Expert digita `/mcp` → ferramentas do Canva aparecem
-→ Check: "Canva conectado" ou "Pulado"
-
-**NOTA PARA TODAS AS CONEXOES CLAUDE.AI:**
-O fluxo e sempre o mesmo:
-1. Expert abre claude.ai/settings → Integrations → conecta o servico
-2. Volta pro Claude Code
-3. Digita `/mcp` → puxa as ferramentas
-4. Ops testa se funciona
-Se o expert quiser conectar outros servicos que aparecem nas Integrations do claude.ai no futuro, o fluxo e esse mesmo.
-
----
-
-**FASE 9 — PERSONALIZAR COMPANION**
-
-O Companion e o cerebro do sistema — parceiro cognitivo do expert. Vem com nome generico "Companion" mas o expert escolhe o nome.
-
-1. Perguntar: "Agora a parte mais legal. Voce vai dar um nome pro seu parceiro cognitivo — e ele que vai te situar todo dia, lembrar o que importa, pensar junto com voce e proteger seu foco. Qual nome voce quer dar pra ele? (pode ser qualquer coisa: Jarvis, Atlas, Nova, o que fizer sentido pra voce)"
-
-2. Expert escolhe o nome. Salvar em variavel {NOME}.
-
-3. Gerar slug: {NOME} em lowercase, sem acento, espacos viram hifen + "-companion"
-   Ex: "Jarvis" → `jarvis-companion`, "Atlas" → `atlas-companion`
-
-4. Renomear slash command:
-   - Copiar `.claude/commands/companion.md` → `.claude/commands/{slug}.md`
-   - Atualizar conteudo: descricao com o nome, paths mantidos pra `agents/companion/`
-   - Remover `.claude/commands/companion.md` (antigo)
-   - Agora ativa com `/{slug}` (ex: `/jarvis-companion`)
-
-5. Aplicar o nome em todos os arquivos de conteudo:
-   - `agents/companion/agents/companion.md` — trocar "Companion" por {NOME} no greeting, titulo, identidade
-   - `agents/companion/tasks/start.md` — trocar referencias
-   - `agents/companion/knowledge/companion-foundation.md` — trocar referencias
-   - `agents/companion/knowledge/modus-operandi.md` — trocar referencias
-   - `.claude/CLAUDE.md` — trocar "Companion" por {NOME} e ativacao de `/companion` pra `/{slug}`
-   - `.claude/rules/` — trocar referencias ao "Companion" pelo {NOME} onde aparecer
-
-6. Confirmar: "Pronto! Seu parceiro agora se chama {NOME}. Pra ativar ele, e so digitar /{slug}"
-
-→ Check: "Companion personalizado: {NOME} — ativacao: /{slug}"
-
----
-
-**FASE 10 — SETUP DO EXPERT (se primeira vez)**
+**FASE 8 — PERFIL DO EXPERT (semente)**
 
 1. Verificar se `docs/knowledge/expert-mind/identidade.md` tem conteudo
-   → SE vazio: "Voce ainda nao preencheu seu perfil. O {NOME} te ajuda com isso — quando voce ativar ele, so pede 'me ajuda a preencher meu perfil'."
+   → SE vazio: "Voce ainda nao preencheu seu perfil. Seu parceiro cognitivo te ajuda com isso na plataforma, com calma."
 2. Verificar se `business/cockpit.md` tem projetos
-   → SE vazio: "Voce nao tem projetos ainda. Quando ativar o {NOME}, ele ajuda a criar o primeiro."
-→ Check: "Perfil preenchido" ou "Pendente ({NOME} guia depois)"
+   → SE vazio: "Voce nao tem projetos ainda. Voce cria o primeiro na plataforma, guiado pelo teu parceiro."
+→ Check: "Perfil preenchido" ou "semente verificada (preenchimento na plataforma)"
 
 ---
 
-**FASE 11 — HEALTH REPORT FINAL (VERIFICACAO REAL)**
+**FASE 9 — HEALTH REPORT (VERIFICACAO REAL)**
 
 **CRITICAL: NAO imprimir [✓] sem rodar o comando de verificacao. Cada item DEVE ser verificado com o comando listado. Se o comando falhar = [✗]. Sem excecao.**
 
@@ -817,6 +729,82 @@ Salvar report em `.auroq/bootstrap-report.md` pra referencia futura.
 
 ---
 
+**FASE 10 — NOMEAR O COMPANION (sem ativar)**
+
+O Companion e o cerebro do sistema — parceiro cognitivo do expert. Vem com nome generico "Companion" mas o expert escolhe o nome.
+
+1. Perguntar: "Agora a parte mais legal. Voce vai dar um nome pro seu parceiro cognitivo — e ele que vai te situar todo dia, lembrar o que importa, pensar junto com voce e proteger seu foco. Qual nome voce quer dar pra ele? (pode ser qualquer coisa: Jarvis, Atlas, Nova, o que fizer sentido pra voce)"
+
+2. Expert escolhe o nome. Salvar em variavel {NOME}.
+
+3. Gerar slug: {NOME} em lowercase, sem acento, espacos viram hifen + "-companion"
+   Ex: "Jarvis" → `jarvis-companion`, "Atlas" → `atlas-companion`
+
+4. Renomear slash command:
+   - Copiar `.claude/commands/companion.md` → `.claude/commands/{slug}.md`
+   - Atualizar conteudo: descricao com o nome, paths mantidos pra `agents/companion/`
+   - Remover `.claude/commands/companion.md` (antigo)
+   - Agora ativa com `/{slug}` (ex: `/jarvis-companion`)
+
+5. Aplicar o nome em todos os arquivos de conteudo:
+   - `agents/companion/agents/companion.md` — trocar "Companion" por {NOME} no greeting, titulo, identidade
+   - `agents/companion/tasks/start.md` — trocar referencias
+   - `agents/companion/knowledge/companion-foundation.md` — trocar referencias
+   - `agents/companion/knowledge/modus-operandi.md` — trocar referencias
+   - `.claude/CLAUDE.md` — trocar "Companion" por {NOME} e ativacao de `/companion` pra `/{slug}`
+   - `.claude/rules/` — trocar referencias ao "Companion" pelo {NOME} onde aparecer
+
+6. Confirmar SEM revelar o comando de ativacao:
+   "Configurei teu parceiro — ele se chama {NOME}. NAO ativa ele agora: a gente termina aqui e voce conhece ele direito na plataforma, no proximo passo."
+
+   → CRITICO: NAO dizer o comando `/{slug}` aqui. NAO convidar a ativar. Se o expert ativar o Companion agora, abandona o setup pela metade. A PRIMEIRA conversa com o Companion acontece na plataforma (First Win), nunca aqui.
+
+→ Check: "Companion configurado: {NOME} (comando de ativacao revelado so na plataforma)"
+
+---
+
+**FECHO — BEM-VINDO A BORDO**
+
+Ultima coisa do bootstrap. Com o health report limpo e o Companion nomeado, fechar com este momento — o expert acabou de aguentar o setup, agora vem a recompensa e a direcao. Pode sair do tom seco: este e o momento epico.
+
+Apresentar assim (preencher {NOME} com o nome que o expert deu ao Companion):
+
+```
+=== NAVE EMBARCADA ===
+
+Voce acaba de montar uma nave espacial pessoal.
+
+A partir de agora, num chat novo, teu Auroq ja e capaz de:
+- Criar e publicar paginas e sites no ar
+- Salvar e versionar todo o teu trabalho — nunca mais perde nada
+- Guardar tuas chaves com seguranca e usar elas sozinho
+- Ter um banco de dados proprio pronto pra crescer
+- Transcrever audio e video, baixar videos, navegar e operar a web por voce
+- E o principal: um parceiro cognitivo que vai te conhecer
+
+JA CONFIGURADO E FUNCIONANDO:
+- Claude Code + Auroq OS
+- GitHub (repositorio privado, backup automatico)
+- Vercel (publicacao automatica — cada save vira pagina no ar)
+- Supabase (banco de dados)
+- Cofre de credenciais (protegido)
+- Companion: {NOME}  (teu parceiro, ja configurado)
+
+PROXIMO PASSO:
+Volta pra plataforma da mentoria e veja os proximos passos.
+La voce conhece o {NOME} de verdade e publica tua primeira pagina no ar.
+
+Bem-vindo a bordo.
+```
+
+REGRAS DO FECHO:
+- NAO revelar o comando de ativacao do Companion aqui. A plataforma faz isso no momento certo (First Win).
+- Dizer "num chat novo" — as configuracoes (MCPs, comandos, CLAUDE.md) so carregam na abertura de um chat novo.
+- Direcionar SEMPRE de volta pra plataforma. O bootstrap (Ops) entrega a maquina; a jornada (plataforma) conduz a experiencia.
+- As conexoes extras (1Password, Cloudflare, Drive, Gmail, Calendar, Notion, Canva) NAO entram aqui — sao o `*bootstrap-2` (opcional, recomendado), que o expert roda quando precisar. A plataforma chama na hora certa.
+
+---
+
 **TROUBLESHOOTING (se algo falhar durante o bootstrap)**
 
 | Problema | Causa provavel | Solucao |
@@ -844,6 +832,189 @@ SE o bootstrap corrompeu a estrutura:
    npx auroq-os init
    ```
    → ATENCAO: so fazer isso se nao tinha dados importantes. Se tinha, fazer backup antes.
+
+### *bootstrap-2
+
+Conexoes extras — OPCIONAL, RECOMENDADO. Roda depois do bootstrap principal, quando o expert precisar. NAO e sequencia obrigatoria: pode fazer tudo de uma vez ou um servico por vez (a plataforma chama no ponto certo da jornada).
+
+**Como acionar:**
+- Tudo de uma vez: o expert pede "conecta as extras" → listar o menu e perguntar quais quer agora.
+- Um servico so: o expert ou a plataforma pede "conecta o {servico}" (ex: `*bootstrap-2 cloudflare`) → ir direto naquele.
+
+**Mesmas regras do bootstrap principal:** uma coisa por vez, linguagem de leigo (nunca assumir que ele sabe termo tecnico), Ops FAZ / expert aprova, detectar Mac vs Windows, e GATE DE VERIFICACAO — nunca dizer "conectado" sem rodar o teste real.
+
+**Menu:**
+1. **1Password** — cofre cifrado (RECOMENDADO)
+2. **Cloudflare** — dominio proprio
+3. **Google Drive** — arquivos e backup
+4. **Gmail** — ler e enviar emails
+5. **Google Calendar** — eventos
+6. **Notion** — paginas
+7. **Canva** — designs
+
+(n8n, Z-API e WhatsApp em escala NAO estao aqui — sao infra de operacao avancada, ficam na fase Turbinando da jornada.)
+
+---
+
+#### 1. 1Password — cofre cifrado (RECOMENDADO)
+
+**O que e:** hoje tuas chaves ficam num cofre local (`business/vault/`, fora do git). Funciona pra comecar. O 1Password sobe isso pra um cofre CIFRADO — mesmo que vaze, a chave fica inutil sem a senha mestra.
+
+**Quando vale:** quando o expert ja tem credencial sensivel em uso (Service Key do Supabase, token de pagamento, Meta).
+
+**OPCIONAL — a escolha do expert:** ele pode **(a) configurar o 1Password** (a sequencia abaixo) ou **(b) continuar so no cofre local** (`business/vault/`, que ja funciona e protege). **O Ops PERGUNTA antes de comecar** — so segue se o expert topar. E e tudo-ou-nada: faz a sequencia completa ou fica no cofre local; meio-1Password nao serve.
+
+**🔒 REGRA DE OURO — INEGOCIAVEL (se for configurar):**
+- **NUNCA pedir, ver, ecoar ou colar um token/credencial no chat.** Token que aparece no chat = COMPROMETIDO (vai pro historico). Tem que ser revogado.
+- O token vai **DIRETO no arquivo, pelo PROPRIO expert**. O Ops **prepara a linha**; o expert **cola o valor**. O Ops **nunca ve** o token.
+- Na migracao das chaves, o Ops **NAO le os valores** do `business/vault/` pra recriar (isso jogaria a credencial no contexto). Quem move os valores e o expert.
+
+---
+
+**PROCESSO PADRAO (a sequencia ideal):**
+
+1. **App desktop** — instalar o app do 1Password (1password.com/downloads — o programa, nao a extensao do navegador) e logar na conta.
+2. **CLI `op`** — instalar (e o programa que usa a credencial no terminal): macOS `brew install 1password-cli` · Windows `winget install AgileBits.1Password.CLI` · verificar `op --version`.
+3. **Conectar o `op` ao app** — no app: **Settings → Developer → "Integrate with 1Password CLI"** + ligar Touch ID (Mac) / Windows Hello (Win). Testar: `op vault list` (pede biometria) — listou = CLI conectado.
+4. **Vault "Claude"** — garantir que existe o vault **Claude** (so o que o Auroq vai acessar). Criar no app se ainda nao tiver.
+5. **Gerar o token (Service Account)** — my.1password.com → Developer → Service Accounts → Criar → dar acesso **Read + Write ao vault "Claude"** → gerar o token (`ops_...`, aparece UMA vez so, copiar na hora). **NAO precisa de plano Business.**
+6. **Colar o token no shell SEM expor na conversa.** O Ops prepara a linha (`# export OP_SERVICE_ACCOUNT_TOKEN="COLE_AQUI"`) e o expert cola o valor de um jeito que NAO ecoa (rodar no terminal dele):
+   `read -s TOKEN && echo "export OP_SERVICE_ACCOUNT_TOKEN=\"$TOKEN\"" >> ~/.zshenv && unset TOKEN`
+   Recarregar: terminal novo ou `source ~/.zshenv`. **O Ops NUNCA ve o valor.**
+7. **Pronto** — o Auroq usa o token (headless, so o vault Claude); o expert gerencia tudo pelo app. Testar: `op read "op://Claude/<item>/<campo>"` retorna o valor.
+
+(Por que app + CLI **e** token: o app+CLI deixa voce gerenciar o cofre por biometria; o token Service Account e o que o agente usa pra operar sozinho, sem precisar de Touch ID a cada vez.)
+
+---
+
+**MIGRAR AS CHAVES (sem o Ops tocar nos valores):**
+1. Criar o vault **"Claude"** no 1Password (so o que o Auroq pode acessar; o resto fica privado).
+2. **O EXPERT** copia cada credencial do `business/vault/*.md` e cria o item no vault "Claude" (pelo app). O Ops diz QUAIS itens criar (ex: "Supabase — Service Key", "Vercel"), mas **NAO le nem digita os valores**.
+3. Migrado e testado → **esvaziar** `business/vault/` (deixar so um `README.md` dizendo que as chaves vivem no 1Password).
+
+**GATE DE VERIFICACAO (BLOCKING):**
+1. `op --version` retorna versao (CLI instalado)
+2. `op vault list` funciona (CLI conectado ao app)
+3. `op read "op://Claude/<item>/<campo>"` retorna o valor (token no env funcionando)
+4. `business/vault/` sem chave em texto plano (so o README)
+→ SE qualquer um falhar: resolver antes de dizer "conectado".
+
+**Nota honesta:** mesmo cifrado, na hora que o agente USA a chave ela passa pelo terminal. O 1Password resolve o ARMAZENAMENTO (nao ficar em texto plano no disco/nuvem) — que e o grosso do risco.
+
+→ Check: "1Password conectado (A: shell / B: desktop), chaves migradas, vault local esvaziado" ou "Pulado (segue no cofre local)"
+
+---
+
+#### 2. Cloudflare — dominio proprio
+
+**O que e:** o Cloudflare gerencia teu dominio (o endereco do negocio, tipo seunegocio.com). Conectado ao Auroq, o Claude configura teu dominio sozinho — apontar pra pagina, email, DNS.
+
+**Pre-requisito (diferente das outras):** TER um dominio (ou comprar um). So faz sentido com um dominio em maos. Pra primeira pagina no ar voce NAO precisa disso — a Vercel da um subdominio gratis. O Cloudflare entra quando o expert quer o endereco proprio.
+
+**Passo a passo:**
+1. Confirmar: "Voce ja tem um dominio, ou quer comprar um agora?" SE nao tem e nao quer: pular (faz quando tiver).
+2. Criar conta no Cloudflare (cloudflare.com).
+   - SE for comprar: comprar o dominio direto la (preco de custo, sem marcacao na renovacao).
+   - SE ja tem em outro lugar (GoDaddy, Registro.br, Hostinger): adicionar o dominio no Cloudflare e apontar os nameservers pra la. Pra `.com.br`, o registro fica no Registro.br mas a gestao centraliza no Cloudflare.
+3. Conectar ao Claude Code via MCP do Cloudflare:
+   - Registrar com `claude mcp add` apontando pro servidor MCP oficial do Cloudflare (endpoint atual em developers.cloudflare.com — secao Agents/MCP). NUNCA editar o JSON de config na mao; sempre `claude mcp add`.
+   - Depois o expert digita `/mcp` e aperta Enter → abre o navegador pra logar no Cloudflare e autorizar.
+4. Salvar o status em `business/vault/cloudflare.md`.
+
+**GATE DE VERIFICACAO (BLOCKING):**
+1. `claude mcp list` mostra o cloudflare
+2. O Claude consegue listar as zonas/dominios da conta (teste real)
+→ SE falhar: re-autenticar via `/mcp`; se persistir, conferir o endpoint do MCP nas docs do Cloudflare.
+
+→ Check: "Cloudflare conectado" ou "Pulado (sem dominio ainda)"
+
+---
+
+#### 3. Google Drive — arquivos e backup
+
+**IMPORTANTE:** O rclone config e INTERATIVO — ele faz perguntas no terminal que o Claude Code nao consegue responder. Por isso, o expert precisa rodar em um terminal separado.
+
+**Passo 1 — Instalar rclone:**
+- macOS: `brew install rclone`
+- Windows: `winget install Rclone.Rclone`
+
+**Passo 2 — Configurar (o expert faz num terminal separado):**
+
+Instruir o expert com TODAS as informacoes de uma vez:
+
+> "Agora preciso que voce faca uma coisa num terminal separado. NAO feche essa conversa — deixe ela aberta e abra outro terminal ao lado.
+>
+> **No Windows:** clique em Iniciar, digite **PowerShell** e abra.
+> **No Mac:** abra o app **Terminal** (Aplicativos → Utilitarios → Terminal).
+>
+> No terminal novo, cole esse comando e aperte Enter:
+> ```
+> rclone config create drive drive
+> ```
+>
+> Vai abrir o navegador pra voce autorizar o acesso ao seu Google Drive.
+> Faca login na sua conta Google e clique em **Permitir** / **Allow**.
+>
+> Quando terminar, vai aparecer uma mensagem de sucesso no terminal.
+> Ai volta pra ca e me avisa que terminou!
+>
+> Se der erro dizendo que 'rclone nao foi encontrado': feche esse terminal novo, abra outro e tente de novo. As vezes o Windows precisa de um terminal novo pra reconhecer programas recem-instalados."
+
+**Passo 3 — Verificar (Ops faz aqui no Claude Code):**
+Quando o expert avisar que terminou:
+1. Testar: `rclone ls drive: --max-depth 1`
+2. SE funcionar: "Google Drive conectado!"
+3. SE der erro: verificar `rclone listremotes` — se nao mostra "drive:", a config nao completou. Repetir passo 2.
+
+→ Check: "Google Drive conectado"
+
+---
+
+#### 4. Gmail
+1. Registrar: `claude mcp add gmail -- npx gmail-mcp-server`
+2. Informar: "Agora preciso que voce digite `/mcp` e aperte Enter aqui no chat. Isso vai puxar a conexao do Gmail e abrir o navegador pra voce autorizar."
+3. Expert digita `/mcp` → browser abre pra autenticar com Google
+4. Expert faz login no Google e autoriza acesso ao Gmail
+5. Volta pro Claude Code
+6. Testar: tentar listar ultimos emails
+→ Check: "Gmail conectado" ou "Pulado"
+
+---
+
+#### 5. Google Calendar
+1. Instruir: "Abre claude.ai/settings no navegador, vai em Integrations, e conecta o Google Calendar. Quando terminar, volta aqui."
+2. Quando expert voltar: "Digita `/mcp` e aperta Enter."
+3. Expert digita `/mcp` → ferramentas do Calendar aparecem
+4. Testar: tentar listar eventos de hoje
+→ Check: "Google Calendar conectado" ou "Pulado"
+
+---
+
+#### 6. Notion
+1. Instruir: "Abre claude.ai/settings no navegador, vai em Integrations, e conecta o Notion. Quando terminar, volta aqui."
+2. Quando expert voltar: "Digita `/mcp` e aperta Enter."
+3. Expert digita `/mcp` → ferramentas do Notion aparecem
+4. Testar: tentar buscar uma pagina no Notion
+→ Check: "Notion conectado" ou "Pulado"
+
+---
+
+#### 7. Canva
+1. Instruir: "Abre claude.ai/settings no navegador, vai em Integrations, e conecta o Canva. Quando terminar, volta aqui."
+2. Quando expert voltar: "Digita `/mcp` e aperta Enter."
+3. Expert digita `/mcp` → ferramentas do Canva aparecem
+→ Check: "Canva conectado" ou "Pulado"
+
+---
+
+**NOTA PARA TODAS AS CONEXOES CLAUDE.AI:**
+O fluxo e sempre o mesmo:
+1. Expert abre claude.ai/settings → Integrations → conecta o servico
+2. Volta pro Claude Code
+3. Digita `/mcp` → puxa as ferramentas
+4. Ops testa se funciona
+Se o expert quiser conectar outros servicos que aparecem nas Integrations do claude.ai no futuro, o fluxo e esse mesmo.
+
 
 ### *pr
 1. Verificar branch atual
@@ -918,9 +1089,11 @@ Trocar modo de permissao do Claude Code.
 4. Sempre informar: "Reinicia o Claude Code pra aplicar o novo modo."
 
 ### *install
-Instalar squad, worker, mind ou agente a partir de arquivo zip ou pasta.
+Instalar squad, worker, mind ou agente NOVO a partir de arquivo zip ou pasta.
 
 O expert arrasta o zip pro chat ou informa o path. Ops faz o resto.
+
+> **Importante:** se o squad/agente JA existe instalado, este comando NAO atualiza — reroteia pro `*update-squad` (que preserva dados do expert). `*install` e exclusivo pra instalacao limpa de algo novo.
 
 **Passo 1 — Receber e identificar**
 1. Expert arrasta zip pro chat OU informa path do arquivo/pasta
@@ -930,62 +1103,372 @@ O expert arrasta o zip pro chat ou informa o path. Ops faz o resto.
    - Tem `agents/{nome}.md` + `tasks/`? → Worker ou Mind
    - Tem `agents/` com multiplos .md + `workflows/`? → Squad multi-agente
 4. Detectar nome (slug) do squad/agent
-5. Mostrar: "Detectei: {tipo} chamado {nome}. {N} arquivos. Instalo?"
+5. Detectar versao (do `squad.yaml`/`config.yaml` campo `version:`)
+6. Mostrar: "Detectei: {tipo} chamado {nome} v{versao}. {N} arquivos. Instalo?"
 
-**Passo 2 — Verificar integridade**
+**Passo 2 — Detectar conflito com squad existente (NOVO — Smart Detection)**
+
+Antes de tentar instalar, checar se ja existe:
+
+```bash
+# Squad ja instalado?
+ls agents/{slug}/squad.yaml 2>/dev/null || ls agents/{slug}/config.yaml 2>/dev/null
+```
+
+**SE squad ja existe (conflito):**
+
+Ler versao atual do squad instalado e comparar com a versao do zip:
+
+```
+=== CONFLITO DETECTADO ===
+
+Voce ja tem {nome} instalado:
+  Versao atual: v{old_version}
+  Versao do zip: v{new_version}
+
+Tres opcoes:
+
+1. **Atualizar** (recomendado) — usa `*update-squad`
+   - Substitui arquivos framework pela versao nova
+   - PRESERVA teus dados: minds/, .state.json, outputs do expert
+   - Cria backup do squad antigo em agents/_archive/
+   - Se voce modificou arquivos do framework, faz backup das tuas
+     modificacoes em _backup-tuas-mods/ antes de sobrescrever
+
+2. **Reinstalar do zero** — apaga TUDO e instala do zip
+   - Apaga agents/{slug}/ inteiro (incluindo minds/, .state.json)
+   - Instala como se fosse novo
+   - Use SO se quiser comecar do zero (raro)
+
+3. **Cancelar**
+
+Qual? (1 / 2 / 3)
+```
+
+- **Resposta 1:** "Beleza, vou rerotear pra `*update-squad`." → executar `*update-squad` com mesmo zip
+- **Resposta 2:** continuar com `*install` original (Passo 3 em diante), mas confirmar AGAIN: "Tem certeza que quer apagar minds/ e tudo mais? (sim/nao)"
+- **Resposta 3:** abortar, limpar temp
+
+**SE squad NAO existe (sem conflito):** continuar normalmente com Passo 3.
+
+**Passo 3 — Verificar integridade**
 1. Arquivo principal do agente existe? (agents/{nome}.md)
 2. Task start.md existe?
 3. SE squad: workflow existe? Quality gates existem?
 4. Nao tem arquivos suspeitos? (executaveis, scripts desconhecidos)
-5. Nao conflita com agente existente? (mesmo nome ja instalado)
-   → SE conflita: "Ja existe {nome} instalado. Quer sobrescrever?"
 
-**Passo 3 — Instalar**
-1. Copiar pra `agents/{slug}/`
-2. Criar slash command em `.claude/commands/{slug}.md`:
+**Passo 4 — Instalar**
+
+1. Copiar pra `agents/{slug}/` (slug = nome da pasta, derivado de `name:` do `squad.yaml` em kebab-case ou nome da pasta no zip)
+
+2. **Determinar nome da slash command (CRITICO):**
+
+   Ler do `squad.yaml` ou `config.yaml`:
+   - SE existe campo `slash_prefix:` → usar esse valor (ex: `slideForgeV2`)
+   - SE NAO existe `slash_prefix:` → usar `{slug}` como fallback (kebab-case)
+
+   ```bash
+   # Pseudo-codigo
+   slash_command=$(yaml_read agents/{slug}/squad.yaml slash_prefix)
+   if [ -z "$slash_command" ]; then
+     slash_command="{slug}"  # fallback
+   fi
+   ```
+
+   **Exemplo concreto:**
+   - Slide Forge v2: pasta `slide-forge`, mas `slash_prefix: "slideForgeV2"` → command file = `.claude/commands/slideForgeV2.md` → ativa com `/slideForgeV2`
+   - Squad Forge: pasta `squad-forge`, `slash_prefix: "squadForge"` → `.claude/commands/squadForge.md` → ativa com `/squadForge`
+   - Squad sem slash_prefix definido: pasta `meu-squad` → `.claude/commands/meu-squad.md` → ativa com `/meu-squad`
+
+3. **SE existe `slash_prefix_legacy:` no squad.yaml:** criar TAMBEM o alias (backward-compat). Ex: Slide Forge v2 tem `slash_prefix_legacy: "slideForge"` → criar `.claude/commands/slideForge.md` apontando pro mesmo squad.
+
+4. **Conteudo do slash command:**
+
    ```markdown
-   # {slug}
+   # {slash_command}
 
-   {descricao do agente}
+   {descricao do squad — pegar de `description:` ou `title:` do squad.yaml}
 
-   CRITICAL: First, read and adopt the persona defined in `agents/{slug}/agents/{nome}.md`.
+   CRITICAL: First, read and adopt the persona defined in `agents/{slug}/agents/{nome-do-chief}.md`.
    Then, read and execute the task defined in `agents/{slug}/tasks/start.md`.
    Follow ALL instructions exactly as written. Those files are your single source of truth.
    ```
-3. SE tem skill.md: registrar skill tambem
-4. SE tem dependencias (package.json dentro do squad): `npm install`
 
-**Passo 4 — Testar**
-1. Verificar que slash command aparece: "/{slug} esta disponivel"
-2. Verificar que agente carrega (ler persona, confirmar greeting)
-3. SE squad com workflow: verificar que fases referenciam tasks existentes
-4. Mostrar resultado:
+   `{nome-do-chief}` vem do `tiers.orchestrator[0]` do squad.yaml (o agente principal). Se squad tem 1 só agente, usa esse.
+
+5. SE tem `skill.md` na raiz do squad: registrar skill tambem
+6. SE tem `dependencies` no squad.yaml com pacotes externos: avisar expert + perguntar antes de qualquer install
+
+**Passo 5 — Testar**
+1. Verificar que slash command aparece: "/{slash_command} esta disponivel"
+2. Verificar que `.claude/commands/{slash_command}.md` foi criado
+3. Verificar que agente carrega (ler persona, confirmar greeting)
+4. SE squad com workflow: verificar que fases referenciam tasks existentes
+5. Mostrar resultado:
 
 ```
 === INSTALACAO COMPLETA ===
 
 Tipo: {Worker/Mind/Squad}
-Nome: {nome}
-Ativacao: /{slug}
-Arquivos: {N} instalados em agents/{slug}/
-Command: .claude/commands/{slug}.md criado
+Nome: {title ou name} v{versao}
+Pasta: agents/{slug}/
+Ativacao: /{slash_command}
+{SE houver slash_prefix_legacy:} Alias: /{slash_prefix_legacy} (backward-compat)
+Arquivos: {N} instalados
+Command file: .claude/commands/{slash_command}.md criado
 
 {SE squad: Agentes: {lista}}
 {SE squad: Workflow: {fases}}
 
-Pronto pra usar. Ative com /{slug}
+Pronto pra usar. Ative com /{slash_command}
 ```
 
-**Passo 5 — Limpar**
+**Passo 6 — Limpar**
 1. Remover arquivos temporarios (zip extraido)
 2. SE expert quer: commitar instalacao
    → `setup: instalou {tipo} {nome}`
 
 **Protecoes:**
 - NUNCA instalar sem mostrar o que vai ser instalado primeiro
-- NUNCA sobrescrever agente existente sem confirmar
+- NUNCA sobrescrever agente existente sem oferecer roteamento pro `*update-squad`
 - NUNCA executar scripts do zip automaticamente (verificar antes)
 - SE arquivo parecer suspeito: ALERTAR e pedir confirmacao
+- SE squad ja existe: ALWAYS oferecer `*update-squad` antes de sobrescrever (Passo 2)
+
+---
+
+### *update-squad
+Atualizar squad existente com versao nova a partir de zip ou pasta. **Preserva dados do expert** (minds/, .state.json) e cria backup do squad antigo.
+
+**Quando usar:** voce ja tem um squad instalado e baixou da plataforma a versao nova (zip nomeado tipo `slide-forge-v2.0.0.zip`). Use `*update-squad` pra atualizar sem perder seu trabalho.
+
+**Diferenca pra `*install`:**
+
+| Operacao | `*install` | `*update-squad` |
+|----------|-----------|-----------------|
+| Squad ja existe? | Reroteia pra `*update-squad` (ou apaga tudo se confirmar) | Espera que ja exista |
+| Squad nao existe? | Instala normal | Reroteia pra `*install` |
+| `agents/{slug}/minds/` (outputs do expert) | Apaga (instalacao limpa) | **Preserva sempre** |
+| `agents/{slug}/.state.json` (estado) | Apaga | **Preserva sempre** |
+| Arquivos framework | Cria do zip | Substitui pelos do zip |
+| Modificacoes locais do expert no framework | N/A | **Backup em `_backup-tuas-mods/`** + sobrescreve |
+| Backup do squad antigo | N/A | **Sempre** em `agents/_archive/{slug}-v{old}-{timestamp}/` |
+
+**Passo 1 — Receber zip e identificar**
+
+1. Expert arrasta zip pro chat OU informa path do arquivo/pasta
+2. SE zip: extrair pra pasta temporaria (`/tmp/squad-update-{slug}-{timestamp}/`)
+3. Identificar tipo (squad/worker/mind) — mesma logica do `*install`
+4. Detectar nome (slug) e versao (campo `version:` do `squad.yaml`/`config.yaml`)
+5. Confirmar: "Detectei: {tipo} {nome} v{new_version} no zip. {N} arquivos."
+
+**Passo 2 — Verificar squad atual**
+
+1. Squad existe em `agents/{slug}/`?
+   - **NAO existe:** "Voce ainda nao tem `{slug}` instalado. Vou pra `*install` instalar como novo. OK?" → reroteia
+   - **EXISTE:** continuar
+2. Ler `version:` do squad atual (`agents/{slug}/squad.yaml` ou `config.yaml`)
+3. Comparar:
+
+```
+=== UPDATE DETECTADO ===
+
+Squad: {slug}
+Versao instalada: v{old_version}
+Versao do zip:    v{new_version}
+
+{Se old < new:} Update normal: v{old} -> v{new}
+{Se old == new:} Mesma versao. Reinstalacao limpa do framework (preserva teus dados).
+{Se old > new:} ATENCAO: voce tem versao mais nova ({old}) que o zip ({new}). Downgrade?
+
+Continuar?
+```
+
+**Passo 3 — Detectar modificacoes locais do expert (NOVO)**
+
+A principio o expert NAO deve modificar arquivos do framework. Mas se modificou, precisa backupar antes de sobrescrever.
+
+Comparar conteudo de cada arquivo do squad atual com o do zip:
+
+```bash
+# Para cada arquivo do framework no squad atual (excluindo runtime preservado)
+for file in agents/{slug}/agents/* agents/{slug}/tasks/* agents/{slug}/data/* agents/{slug}/workflows/* agents/{slug}/checklists/* agents/{slug}/templates/* agents/{slug}/squad.yaml agents/{slug}/config.yaml agents/{slug}/README.md; do
+  # Comparar com correspondente no zip
+  zip_file="/tmp/squad-update-{slug}-{timestamp}/{equivalente}"
+  if [ -f "$file" ] && [ -f "$zip_file" ]; then
+    if ! diff -q "$file" "$zip_file" >/dev/null; then
+      # Arquivo modificado localmente — pode ser:
+      # a) Nova versao traz arquivo diferente (esperado)
+      # b) Expert modificou localmente (NAO esperado)
+
+      # Heuristica: se versao do squad mudou, assume que e (a)
+      # Senao, e (b) — modificacao local
+      echo "POSSIVEL MOD LOCAL: $file"
+    fi
+  fi
+done
+```
+
+**Heuristica refinada (precisa de signal):**
+Se o squad guardar um manifesto com hashes dos arquivos originais (`.manifest.json` por exemplo), comparar com isso. Senao, qualquer arquivo modificado E que tambem mudou na versao nova fica ambiguo.
+
+**Comportamento conservador (sem manifesto):** mostrar TODOS os arquivos cujo conteudo difere entre squad atual e zip, classificar:
+
+```
+=== ANALISE DE MODIFICACOES ===
+
+Comparei o squad atual com o zip. Os arquivos abaixo divergem:
+
+Arquivos do framework (esperado mudarem com update v{old} -> v{new}):
+- agents/{slug}/agents/chief.md
+- agents/{slug}/tasks/start.md
+- agents/{slug}/data/cardinal-rules.md
+- ... ({N} arquivos)
+
+Arquivos suspeitos (parecem modificacao local — mtime > {data do install antigo}):
+- agents/{slug}/agents/foo.md (modificado em DD/MM HH:MM)
+- agents/{slug}/data/custom-bar.md (NAO existe no zip — adicionado pelo expert?)
+
+A principio voce nao deveria ter modificado arquivos do framework.
+Mas se modificou, vou criar backup das tuas modificacoes em:
+  _backup-tuas-mods/{slug}-v{old}-{timestamp}/
+
+Confirma o backup das modificacoes locais antes de eu sobrescrever?
+(sim / nao / mostrar diff de cada arquivo)
+```
+
+Se expert confirmar: criar `_backup-tuas-mods/{slug}-v{old}-{timestamp}/` copiando arquivos suspeitos.
+Se expert pedir diff: mostrar `diff` arquivo por arquivo, expert decide caso a caso.
+Se expert disser que nao modificou nada (e mtimes dao falso positivo): proceder sem backup-tuas-mods.
+
+**Passo 4 — Backup completo do squad atual (sempre)**
+
+```bash
+TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+mkdir -p agents/_archive
+cp -r agents/{slug} agents/_archive/{slug}-v{old_version}-$TIMESTAMP
+echo "Backup do squad antigo em: agents/_archive/{slug}-v{old_version}-$TIMESTAMP/"
+```
+
+**Retencao:** 30 dias. Apos isso, expert pode deletar manualmente.
+
+**Passo 5 — Preservacao e AUTOMATICA (merge aditivo — sem whitelist)**
+
+Nao ha mais whitelist nem staging. O update e ADITIVO: so sobrescreve os arquivos que vem no zip e NUNCA apaga o que nao vem. Logo, TUDO que o expert gerou dentro do squad e preservado automaticamente, sem precisar listar:
+- `minds/`, `.state.json`, `*-state.json`, `.local/` (runtime)
+- dados preenchidos a partir de templates (ex: `accounts.yaml` gerado de `accounts.example.yaml`)
+- `output/`, `historico-acoes.md` e qualquer arquivo que o expert criou
+
+> **Por que mudou:** a versao anterior fazia `rm -rf agents/{slug}/*` e restaurava so uma whitelist (`minds/`, `.state.json`) — isso APAGAVA dados do aluno fora da lista (`accounts.yaml`, `output/`, `historico-acoes.md`). O merge aditivo elimina o `rm -rf` e nunca toca no que o expert criou.
+
+**Passo 6 — Aplicar update (MERGE ADITIVO)**
+
+1. Copiar o conteudo do zip POR CIMA do squad atual, sobrescrevendo apenas o que vem no zip:
+   ```bash
+   cp -R /tmp/squad-update-{slug}-{timestamp}/{slug}/. agents/{slug}/
+   ```
+   (`cp -R origem/.` copia o conteudo sobrescrevendo arquivos iguais e **sem apagar** os que ja existem e nao vem no zip.)
+2. **NAO rodar `rm -rf`.** O que o expert criou e que nao vem no zip permanece intacto (ver Passo 5).
+3. **Orfaos de framework (raro):** se a versao nova REMOVEU um arquivo de framework que existia na antiga, ele continua na pasta (o merge nunca apaga). Nao quebra nada. Comparar com o backup do Passo 4 e, havendo orfaos obvios, AVISAR o expert no relatorio (Passo 9) — sem apagar automaticamente.
+
+**Passo 7 — Atualizar slash command(s)**
+
+1. **Ler `slash_prefix:` (e `slash_prefix_legacy:` se houver) do squad.yaml NOVO** (do zip):
+   - Pode ter mudado entre versoes (ex: v1 era `slash_prefix: "slideForge"`, v2 e `slash_prefix: "slideForgeV2"` + `slash_prefix_legacy: "slideForge"`)
+
+2. **Comparar com slash command atual** em `.claude/commands/`:
+   - Se `slash_prefix` da v_new e DIFERENTE do nome de arquivo atual → criar o novo command file (mantem o antigo se for declarado como `slash_prefix_legacy`)
+   - Se o conteudo mudou (descricao, agente chief renomeado, etc) → atualizar conteudo
+
+3. **Atualizar conteudo do command file** com novo formato:
+
+   ```markdown
+   # {slash_prefix novo}
+
+   {description ou title novo do squad}
+
+   CRITICAL: First, read and adopt the persona defined in `agents/{slug}/agents/{novo-nome-do-chief}.md`.
+   Then, read and execute the task defined in `agents/{slug}/tasks/start.md`.
+   Follow ALL instructions exactly as written. Those files are your single source of truth.
+   ```
+
+4. **SE slash_prefix mudou de v_old pra v_new (ex: slideForge → slideForgeV2):**
+   - Criar command file novo
+   - SE v_new declara `slash_prefix_legacy` apontando pro nome antigo: deixar antigo como alias com aviso de versao
+   - SE v_new NAO declara legacy: opcional remover command antigo (perguntar pro expert: "v_new mudou ativacao de /slideForge pra /slideForgeV2. Remover o comando /slideForge antigo? Senao fica como alias.")
+
+5. **SE squad-forge ou Slide Forge ou outro squad com greeting versionado:** lembrar expert que ao ativar, greeting deve mostrar a versao nova como confirmacao visual de que update funcionou.
+
+**Passo 8 — Validar pos-update**
+
+1. `agents/{slug}/squad.yaml` (ou `config.yaml`) parsea sem erro?
+2. `agents/{slug}/tasks/start.md` existe?
+3. **`.claude/commands/{slash_prefix_novo}.md` existe e aponta pra arquivos existentes?**
+4. **SE houver `slash_prefix_legacy`:** alias correspondente existe e aponta pro mesmo squad?
+5. Versao no `squad.yaml` agora bate com a do zip?
+6. Runtime preservado intacto? (`agents/{slug}/minds/` se existia, `.state.json` se existia)
+
+**SE algum check falhar:** rollback completo:
+```bash
+rm -rf agents/{slug}/
+cp -r agents/_archive/{slug}-v{old_version}-{timestamp}/ agents/{slug}/
+```
+Reportar erro ao expert.
+
+**Passo 9 — Reportar**
+
+```
+=== UPDATE COMPLETO ===
+
+Squad: {title ou name}
+Pasta: agents/{slug}/
+Versao: v{old} -> v{new}
+
+Ativacao:
+- /{slash_prefix novo}
+{SE houver slash_prefix_legacy:} - /{slash_prefix_legacy} (alias backward-compat)
+
+Arquivos:
+- {N} arquivos framework atualizados (sobrescritos pelo zip)
+- Teus dados foram preservados (merge aditivo nao apaga nada fora do zip): minds/, .state.json, accounts.yaml, output/ e tudo que voce criou
+{SE houver orfaos de framework (arquivos que sumiram na versao nova):}
+- {K} arquivo(s) que nao fazem mais parte do squad ficaram na pasta — pode apagar se quiser: {lista}
+
+Backups criados:
+- agents/_archive/{slug}-v{old}-{timestamp}/ (squad antigo completo, 30 dias retencao)
+{SE houve modificacoes locais do expert:}
+- _backup-tuas-mods/{slug}-v{old}-{timestamp}/ (tuas modificacoes preservadas)
+
+Pra confirmar que esta v{new}: ative com /{slash_prefix novo} e olhe o greeting.
+
+Tudo certo. Pode usar normalmente.
+```
+
+**Passo 10 — Limpar**
+1. Remover `/tmp/squad-update-{slug}-{timestamp}/`
+2. SE expert quer: commitar update
+   → `setup: atualizou {slug} v{old} -> v{new}`
+
+**Protecoes:**
+- NUNCA aplicar update sem mostrar diff de versao primeiro
+- NUNCA sobrescrever `minds/` (outputs do expert)
+- NUNCA sobrescrever `.state.json` (estado em andamento)
+- NUNCA aplicar update sem backup completo do squad atual
+- SE detectar modificacoes locais do expert: ALWAYS oferecer backup-tuas-mods antes de sobrescrever
+- SE qualquer validacao pos-update falhar: ROLLBACK automatico do backup
+
+**Cenarios de erro:**
+
+| Cenario | Acao |
+|---------|------|
+| Zip corrompido / nao parseavel | Abortar antes de tocar squad atual. Reportar erro. |
+| Squad atual sem `version:` no squad.yaml | Tratar como v0.0.0. Continuar update. |
+| Expert tem versao MAIS NOVA que o zip | Confirmar duas vezes ("downgrade?"). Permitir se ele insistir. |
+| Mesma versao (v{old} == v{new}) | Tratar como reinstalacao limpa do framework, preservando dados. Util pra recuperar de modificacao acidental. |
+| Diff de modificacoes locais com 50+ arquivos | Provavelmente nao e modificacao real — e normal apos updates intermediarios. Sugerir "skip backup-tuas-mods". |
+| Rollback automatico ativado por validacao falha | Reportar exatamente qual check falhou. Squad volta intacto pro estado anterior. |
+
+---
 
 ### *install-pack
 Instalar um pack contendo multiplos squads, minds, workers e/ou agents de uma vez.
@@ -1031,9 +1514,13 @@ SE problemas: listar e perguntar se continua sem eles
 **Passo 3 — Instalar (batch)**
 Pra cada agente aprovado:
 1. Copiar pra `agents/{slug}/`
-2. Criar slash command em `.claude/commands/{slug}.md`:
+2. **Determinar slash command (mesma logica do `*install` Passo 4):**
+   - Ler `slash_prefix:` do squad.yaml/config.yaml
+   - Fallback: usar `{slug}` (nome da pasta) se nao houver `slash_prefix`
+   - SE houver `slash_prefix_legacy:` declarado: criar tambem o alias
+3. Criar slash command em `.claude/commands/{slash_command}.md`:
    ```markdown
-   # {slug}
+   # {slash_command}
 
    {descricao extraida do squad.yaml, config.yaml ou README}
 
@@ -1041,16 +1528,16 @@ Pra cada agente aprovado:
    Then, read and execute the task defined in `agents/{slug}/tasks/start.md`.
    Follow ALL instructions exactly as written. Those files are your single source of truth.
    ```
-3. Detectar o chief agent automaticamente:
-   - Ler squad.yaml/config.yaml pra achar o agent principal
+4. Detectar o chief agent automaticamente:
+   - Ler `tiers.orchestrator[0]` do squad.yaml/config.yaml
    - SE nao tem yaml: usar primeiro .md em agents/ que contenha "chief" ou "forge-chief"
    - SE ambiguo: perguntar ao expert
-4. SE tem skill.md: registrar skill
-5. SE tem dependencias: `npm install`
+5. SE tem skill.md: registrar skill
+6. SE tem dependencias: avisar expert antes de instalar
 
 **Passo 4 — Validar (batch)**
 Pra cada agente instalado:
-1. Verificar slash command existe
+1. Verificar `.claude/commands/{slash_command}.md` existe (e o alias legacy se houver)
 2. Verificar agent file carrega (ler persona, confirmar existe)
 3. SE squad com workflow: verificar tasks referenciadas existem
 

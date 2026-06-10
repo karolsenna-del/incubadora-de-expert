@@ -2,7 +2,7 @@
 
 ## O que e o Squad Forge
 
-Squad especialista em extracao profunda de processos e metodologias proprietarias do usuario. Transforma conhecimento tacito (que so existe na cabeca do dono) em squads AIOS funcionais.
+Squad especialista em extracao profunda de processos e metodologias proprietarias do usuario. Transforma conhecimento tacito (que so existe na cabeca do dono) em squads Auroq funcionais.
 
 ## Quando Usar
 
@@ -37,7 +37,7 @@ Fase 3: Arquitetura (15-30 min)
   → Gate: QG-SF-003
 
 Fase 4: Montagem (30-60 min)
-  → Gerar artefatos AIOS completos
+  → Gerar artefatos Auroq completos
   → Gate: QG-SF-004
 
 Fase 5: Validacao (10-20 min)
@@ -116,17 +116,28 @@ Cada PU alimenta DOIS destinos no squad. O erro historico era mandar tudo so pra
 
 **Regra:** STEP operacional = step que contem COMO fazer algo (protocolo, tecnica, estrategia). Vai pra task E pra KB. STEP estrutural = step mecanico (abrir tela, clicar botao). So vai pra task.
 
-## Integracao com ETL Existente
+## Integracao com ETL Existente (build-time only — REGRA AUTOCONTIDO)
 
-Quando o dominio ja tem output do ETLmaker (volumes em `docs/knowledge/expert-business/` ou `agents/etlmaker/kbs/`), o Squad Forge DEVE incorporar esse conhecimento na KB do squad.
+> **REGRA AUTOCONTIDO ativa.** ETL e fonte externa em build-time. Squad gerado runtime NAO referencia caminhos `docs/knowledge/...` ou `squads/etlmaker/kbs/...`. Conteudo e LIDO em build-time, ADAPTADO ao contexto dos agentes do squad, e ESCRITO como conteudo proprio em `squads/{name}/data/`.
 
-**Fluxo:**
-1. Na Fase 3 (architect-squad), checar se ETL existe pro dominio
-2. Mapear quais volumes/secoes sao relevantes pro escopo do squad
-3. Na Fase 4 (assemble-squad, Step 6b), ler os volumes e extrair conteudo operacional
-4. A KB do squad e subconjunto RICO do ETL — nao resumo raso
+Quando o dominio ja tem output do ETLmaker (volumes em paths externos do repo Euriler), o Squad Forge DEVE **internalizar** esse conhecimento na KB do squad — NAO referenciar.
 
-**Anti-padrao detectado:** ETL produz 3.000+ linhas de conhecimento rico. Squad building comprime pra 150 linhas de skeleton. Resultado: squad nao sabe operar. A KB do squad deve preservar profundidade, exemplos, tabelas e decision trees do ETL.
+**Fluxo (build-time):**
+1. Na Fase 3 (architect-squad Step 5a), checar se ETL existe pro dominio (`ls docs/knowledge/...`, `ls squads/etlmaker/kbs/...` — comandos rodam na maquina do Euriler em build-time)
+2. Mapear quais volumes/secoes sao relevantes pro escopo do squad em `kb_plan.internalize_from`
+3. Na Fase 4 (assemble-squad Step 6b), LER os volumes em build-time e EXTRAIR conteudo operacional
+4. ADAPTAR ao contexto dos agentes do squad — nao copiar literal, ressintetizar
+5. ESCREVER em `squads/{name}/data/{nome-tematico}.md` como conteudo proprio
+6. Citar proveniencia opcional em comentario HTML (build-time only): `<!-- Adaptado de X em build-time -->`
+7. **NUNCA** deixar refs runtime apontando pra fonte externa
+
+**Anti-padrao detectado (Andromeda, Audience):**
+- ETL produz 3.000+ linhas de conhecimento rico
+- Squad building cria skeleton de 150 linhas que **referencia** o ETL externo
+- Aluno recebe squad — nao tem o ETL — squad nao sabe operar
+- Confronto Euriler 06/05/2026: "É a maior burrice que ja vi."
+
+A KB do squad deve PRESERVAR profundidade, exemplos, tabelas e decision trees do ETL — internalizando, nao linkando.
 
 ## Classificacao de Squads por Tipo de KB
 
@@ -151,7 +162,7 @@ Na Fase 4 (assemble-squad, Step 6d), ANTES de prosseguir pro validator:
 
 **Cobertura < 80% = HALT.** Nao avanca ate completar.
 
-## Estrutura Nuclear AIOS (do Craft)
+## Estrutura Nuclear Auroq (do Craft)
 
 Todo squad gerado DEVE ter:
 - `squad.yaml` com name (kebab-case) + version (semver) — **NAO config.yaml** (deprecated)

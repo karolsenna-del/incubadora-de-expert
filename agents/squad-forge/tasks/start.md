@@ -64,6 +64,32 @@ STEP 5: HANDOFF TO EXTRACTION
 
 ## Step-by-Step Execution
 
+### Step 0: Continuous Validation (Pre-flight check)
+
+> Antes de gerar squad novo, garantir que squad-forge ele mesmo esta saudavel.
+
+Executar check rapido:
+
+```bash
+# Sanity check — arquivos chave existem
+test -f squads/squad-forge/agents/forge-chief.md \
+  && test -f squads/squad-forge/agents/process-archaeologist.md \
+  && test -f squads/squad-forge/agents/forge-smith.md \
+  && test -f squads/squad-forge/data/quality-thresholds.yaml \
+  || { echo "Squad-forge inconsistente. Rode *self-test antes."; exit 1; }
+```
+
+**Se inconsistencia detectada:** avisar usuario:
+
+```
+Squad-forge esta com arquivos faltando. Antes de gerar squad novo,
+recomendo rodar *self-test pra diagnosticar e corrigir.
+
+Continuar mesmo assim? Pode gerar squad com qualidade abaixo do esperado.
+```
+
+(Se usuario optar por continuar, prosseguir mas registrar warning no `.state.json`.)
+
 ### Step 1: Activate Chief
 
 Carregar o agente `forge-chief`.
@@ -109,29 +135,54 @@ type: "numbered_choice"
 default: 1
 ```
 
-**Se opcao 1 (Criar):**
-Coletar nome e descricao do processo, gerar slug, seguir pipeline normal (Steps 4-5).
+**Roteamento real (cada opcao tem task dedicada):**
 
-**Se opcao 2 (Atualizar):**
-Listar squads instalados em `agents/` e perguntar qual quer modificar.
-Depois perguntar O QUE quer mudar: agents, tasks, KB, workflow, estrutura.
-Executar as alteracoes diretamente nos arquivos do squad.
+**Opcao 1 — Criar squad novo:**
+- Coletar nome e descricao do processo, gerar slug
+- **Perguntar `target_audience`** (CRITICO pra REGRA AUTOCONTIDO):
 
-**Se opcao 3 (Consertar):**
-Listar squads instalados em `agents/` e perguntar qual quer analisar.
-Ler agent files, start.md, tasks, KB do squad escolhido.
-Diagnosticar problemas e corrigir.
+  ```yaml
+  elicit: true
+  prompt: |
+    Esse squad vai ser usado SO por voce (Euriler), ou tambem distribuido pra alunos/clientes?
 
-**Se opcao 4 (Refazer):**
-Listar squads instalados em `agents/` e perguntar qual quer reconstruir.
-Fazer backup do squad atual, reconstruir do zero mantendo o que funciona.
+    1. Interno — so eu (pode usar refs a business/cockpit.md, business/campanhas/, etc)
+    2. Distribuido — pra alunos/clientes (REGRA AUTOCONTIDO ativa: zero refs a paths privados)
+
+    Default: 2 (mais seguro)
+  type: numbered_choice
+  default: 2
+  ```
+
+- Salvar em `.state.json` como `target_audience: "internal" | "distributed"`
+- Seguir pipeline normal (Steps 4-5 desta task → handoff `extract-process`)
+
+**Opcao 2 — Atualizar squad:**
+- Listar squads instalados (`ls -1 squads/ | grep -v '^_'`)
+- Perguntar qual squad
+- Executar `tasks/update-squad.md` (modificacao cirurgica preservando profundidade)
+- Comando equivalente: `*update {squad-name}`
+
+**Opcao 3 — Consertar squad:**
+- Listar squads instalados
+- Perguntar qual squad
+- Executar `tasks/fix-squad.md` (audit + auto-fix + lista manual)
+- Comando equivalente: `*fix {squad-name}`
+
+**Opcao 4 — Refazer squad:**
+- Listar squads instalados
+- Perguntar qual squad
+- Executar `tasks/rebuild-squad.md` (reverse-extract + reconstruir com profundidade nova)
+- Comando equivalente: `*rebuild {squad-name}`
+
+> Cada modo tem task dedicada com checklist proprio. Nao improvisar — sempre delegar pra task.
 
 ### Step 4: Create Structure
 
 Criar diretorios:
 
 ```
-agents/squad-forge/minds/{slug}/
+squads/squad-forge/minds/{slug}/
   01-extraction/
   02-process-map/
   03-blueprint/
@@ -189,7 +240,7 @@ Executar handoff para @process-archaeologist via extract-process task.
 | Processo ja tem documentacao | Oferecer UC3: "Ja tem doc? Posso pular extracao e ir direto pra construcao." |
 | Usuario quer extrair multiplos processos | Fazer 1 por vez: "Vamos comecar com o mais importante. Qual?" |
 | Usuario quer atualizar squad que nao existe | Listar squads disponiveis: "Esses sao os squads instalados: {lista}. Qual?" |
-| Usuario quer atualizar algo que nao e squad (ex: agente AIOS) | Redirecionar: "Isso e um agente core, nao squad. Posso ajudar de outra forma." |
+| Usuario quer atualizar algo que nao e squad (ex: agente Auroq) | Redirecionar: "Isso e um agente core, nao squad. Posso ajudar de outra forma." |
 
 ---
 

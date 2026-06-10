@@ -114,7 +114,7 @@ reclassification_signals:
     - "Passo e de baixo risco"
 
 # ─────────────────────────────────────────────────────────────────────────────
-# MAPPING PARA TASK ANATOMY AIOS
+# MAPPING PARA TASK ANATOMY Auroq
 # ─────────────────────────────────────────────────────────────────────────────
 task_anatomy_mapping:
   agent:

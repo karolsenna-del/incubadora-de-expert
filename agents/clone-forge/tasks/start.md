@@ -19,7 +19,7 @@ Entry point do pipeline Clone Forge. Recebe o comando do usuario, cria a estrutu
 
 O pipeline Clone Forge tem 11 fases, 5 quality gates e 4 agentes. Sem um entry point bem definido, o usuario teria que entender toda essa complexidade para comecar. Esta task abstrai tudo: o usuario diz "quero clonar o fulano" e o pipeline cuida do resto. Tambem garante que a estrutura de dados existe antes de qualquer fase comecar, e que o manifest rastreia tudo desde o inicio.
 
-A task tambem valida que o Squad Creator Premium esta instalado como dependencia obrigatoria. Sem ele, Fases 1, 3 e 7 nao podem executar.
+O squad e self-contained — nao requer outros squads instalados. A task valida apenas dependencias internas (templates, schemas, taxonomias do proprio Clone Forge).
 
 ---
 
@@ -42,7 +42,7 @@ mind_name:
   field: "Nome completo da pessoa a ser clonada"
   format: "string"
   required: true
-  example: "Euriler Jube"
+  example: "Roberto Carvalho"
   notes: "Nome real, nao apelido. Usado para gerar slug e preencher manifest."
 
 domain:
@@ -81,7 +81,7 @@ formal_assessments:
   field: "Lista de assessments formais disponiveis"
   format: "list of strings"
   required: false
-  example: ["assessment-formal"]
+  example: ["zona-genialidade"]
   notes: "Integrados na Fase 5 (mapeamento psicometrico). Sobrescreve estimativas."
 ```
 
@@ -94,8 +94,8 @@ formal_assessments:
 **Natural Language:**
 
 ```
-"Quero clonar o Euriler na area de marketing digital"
-"Clona o Alan Nicolas, dominio automacao com IA, modo rapido"
+"Quero clonar o Roberto Carvalho na area de marketing digital"
+"Clona o expert Joao Silva, dominio automacao com IA, modo rapido"
 "Preciso de um clone da Lisiane, ela ta aqui pra entrevista"
 ```
 
@@ -103,10 +103,10 @@ formal_assessments:
 
 ## Precondicoes
 
-- [ ] Squad Creator Premium instalado em `agents/squad-creator/` (dependencia obrigatoria)
 - [ ] `agents/clone-forge/templates/manifest-tmpl.yaml` acessivel e valido
 - [ ] `agents/clone-forge/workflows/wf-clone-forge-full.yaml` acessivel
 - [ ] `agents/clone-forge/workflows/wf-clone-forge-quick.yaml` acessivel
+- [ ] `agents/clone-forge/data/` com poc-schema.yaml, miu-classification-taxonomy.yaml, source-type-handlers.yaml, driver-catalog.yaml
 - [ ] Diretorio `agents/clone-forge/minds/` existe (ou sera criado)
 
 ---
@@ -159,10 +159,10 @@ parse_command:
 
   from_natural_language:
     examples:
-      - input: "Quero clonar o Euriler na area de marketing digital"
-        parsed: { name: "Euriler", domain: "marketing digital", quick: false, subject_present: false }
-      - input: "Clone rapido do Alan, dominio automacao com IA"
-        parsed: { name: "Alan", domain: "automacao com IA", quick: true, subject_present: false }
+      - input: "Quero clonar o Roberto na area de marketing digital"
+        parsed: { name: "Roberto", domain: "marketing digital", quick: false, subject_present: false }
+      - input: "Clone rapido do Joao Silva, dominio automacao com IA"
+        parsed: { name: "Joao Silva", domain: "automacao com IA", quick: true, subject_present: false }
       - input: "Clona a Lisiane, ela ta aqui, area de coaching"
         parsed: { name: "Lisiane", domain: "coaching", subject_present: true }
 
@@ -195,10 +195,10 @@ generate_slug:
     - trim
 
   examples:
-    - "Maria Silva" -> "maria_silva"
-    - "Alan Nicolas" -> "alan_nicolas"
+    - "Roberto Carvalho" -> "roberto_carvalho"
     - "Maria Jose da Silva" -> "maria_jose_silva"
     - "Dr. Joao Pedro" -> "dr_joao_pedro"
+    - "Ana Beatriz Lima" -> "ana_beatriz_lima"
 
   confirm_with_user:
     prompt: |
@@ -495,29 +495,15 @@ register_subject:
 
 ---
 
-### Step 9: Validar Dependencias
+### Step 9: Validar Dependencias Internas
 
-**Action:** Verificar que o Squad Creator Premium e dependencias internas estao instalados.
+**Action:** Verificar que os arquivos internos do Clone Forge estao todos presentes. O squad e self-contained — nao depende de outros squads.
 
 ```yaml
 dependency_validation:
-  required:
-    - name: "Squad Creator Premium"
-      check_path: "agents/squad-creator/"
-      check_files:
-        - "agents/squad-creator/config.yaml"
-        - "agents/squad-creator/agents/oalanicolas.md"
-        - "agents/squad-creator/agents/pedro-valerio.md"
-      on_missing: |
-        ERRO: Squad Creator Premium nao encontrado.
-        O Clone Forge depende do Squad Creator para Fases 1, 3 e 7.
-        Instale com: *install squad-creator-premium
-        Pipeline nao pode continuar sem esta dependencia.
-      severity: "blocking"
-
   optional:
     - name: "Zona Genialidade"
-      check_path: "agents/{assessment-squad}/" # opcional
+      check_path: "agents/zona-genialidade/"
       on_missing: |
         AVISO: Squad Zona Genialidade nao encontrado.
         Sem ele, Fase 5 (psicometria) usara apenas estimativas.
@@ -537,13 +523,16 @@ dependency_validation:
     - name: "poc schema"
       check_path: "agents/clone-forge/data/poc-schema.yaml"
       severity: "blocking"
+    - name: "driver catalog"
+      check_path: "agents/clone-forge/data/driver-catalog.yaml"
+      severity: "blocking"
 
   if_blocking_missing:
     action: |
       Pipeline BLOQUEADO.
-      Dependencia faltando: {nome}
+      Arquivo interno faltando: {nome}
       Caminho esperado: {path}
-      Instale a dependencia e tente novamente.
+      Reinstale o squad Clone Forge — pode ter havido corrupcao na copia.
     status: "failed"
 ```
 
@@ -621,9 +610,9 @@ start_pipeline:
     example_full: |
       CLONE 360 — Pipeline Iniciado
       ===============================
-      Expert: Euriler Jube
-      Dominio: Marketing Digital + IA + Proposito
-      Slug: maria_silva
+      Expert: Roberto Carvalho
+      Dominio: Estrategia de Negocio + Lideranca
+      Slug: roberto_carvalho
       Modo: Completo (11 fases)
       Pessoa disponivel: Sim
 
@@ -672,8 +661,7 @@ start_pipeline:
 - [ ] Brownfield detection executada (clone existente ou novo)
 - [ ] 12 subdiretorios criados em `minds/{slug}/` (se clone novo)
 - [ ] manifest.yaml criado e valido (YAML parseavel, campos obrigatorios)
-- [ ] Squad Creator Premium validado como presente
-- [ ] Dependencias internas validadas (templates, schemas, taxonomias)
+- [ ] Dependencias internas validadas (templates, schemas, taxonomias, driver catalog)
 - [ ] Modo (full/quick) definido e registrado
 - [ ] Disponibilidade do expert registrada
 - [ ] Fases condicionais marcadas corretamente no manifest
@@ -681,7 +669,7 @@ start_pipeline:
 - [ ] Pipeline overview exibido ao usuario
 - [ ] Primeira fase operacional iniciada
 
-**Threshold:** 12/14 para PASS
+**Threshold:** 11/13 para PASS
 
 ---
 
@@ -705,12 +693,11 @@ error_handling:
     action: "Pedir override manual"
     severity: "warning"
 
-  squad_creator_missing:
-    symptom: "Squad Creator Premium nao encontrado"
+  internal_file_missing:
+    symptom: "Algum arquivo interno do Clone Forge nao foi encontrado"
     action: |
-      Informar: "Clone Forge precisa do Squad Creator Premium pra funcionar.
-      Fases 1 (coleta), 3 (DNA) e 7 (validacao) dependem dele.
-      Instale e tente de novo."
+      Informar: "Arquivo interno faltando: {path}.
+      O squad pode estar corrompido. Reinstale o Clone Forge."
     severity: "blocking"
 
   directory_creation_failed:
@@ -776,12 +763,12 @@ error_handling:
 |----------|------|---------|
 | Manifest template | `agents/clone-forge/templates/manifest-tmpl.yaml` | Estrutura inicial do manifest |
 
-### Dependencias Externas
+### Dependencias
 
-| Dependencia | Obrigatoria | Verificada |
-|-------------|-------------|------------|
-| Squad Creator Premium | Sim | Step 9 |
-| Zona Genialidade | Nao | Step 9 |
+| Dependencia | Tipo | Obrigatoria | Verificada |
+|-------------|------|-------------|------------|
+| Templates internos (`agents/clone-forge/templates/`, `data/`) | Interna | Sim | Step 9 |
+| Zona Genialidade | Externa | Nao (enriquece Fase 5) | Step 9 |
 
 ### Fluxo no Pipeline
 

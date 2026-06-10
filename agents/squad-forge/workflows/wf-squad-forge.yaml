@@ -1,7 +1,7 @@
 # ═══════════════════════════════════════════════════════════════════════════════
 # WORKFLOW: Squad Forge Pipeline
 # ═══════════════════════════════════════════════════════════════════════════════
-# Pipeline completo de extracao de processo e criacao de squad AIOS.
+# Pipeline completo de extracao de processo e criacao de squad Auroq.
 # 6 fases (0-5), 5 quality gates, 3 agentes.
 # Pausavel e resumivel entre fases.
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -10,12 +10,12 @@ workflow:
   id: wf-squad-forge
   name: "Squad Forge Pipeline"
   version: "1.0.0"
-  description: "Extrai processos complexos da cabeca do usuario e transforma em squads AIOS"
+  description: "Extrai processos complexos da cabeca do usuario e transforma em squads Auroq"
   type: "pipeline"
   purpose: >
     Pipeline que extrai processos complexos da cabeca do usuario e transforma
-    em squads AIOS funcionais. Combina arqueologia de processos (8 lentes de
-    extracao iterativa) com construcao AIOS (estrutura nuclear de squads).
+    em squads Auroq funcionais. Combina arqueologia de processos (8 lentes de
+    extracao iterativa) com construcao Auroq (estrutura nuclear de squads).
   orchestrator: "@forge-chief"
 
   sequence:
@@ -53,7 +53,7 @@ workflow:
 
     - phase: "assembly"
       agent: "forge-smith"
-      action: "Gerar todos os artefatos AIOS: config, agents, tasks, workflows"
+      action: "Gerar todos os artefatos Auroq: config, agents, tasks, workflows"
       requires: "minds/{slug}/03-blueprint/squad-blueprint.yaml"
       creates: "minds/{slug}/04-squad/"
       checkpoint:
@@ -85,7 +85,7 @@ participants:
     role: "Process extraction via iterative interviews (8 lenses)"
     phases: [1]
   - agent: forge-smith
-    role: "Squad architecture and AIOS artifact generation"
+    role: "Squad architecture and Auroq artifact generation"
     phases: [3, 4, 5]
   - role: user
     involvement: "Source of process knowledge, validates at phases 2 and 5"
@@ -220,12 +220,12 @@ phases:
     duration: "30-60 min"
     blocking: true
     description: >
-      Gerar todos os artefatos AIOS: squad.yaml, agents/*.md, tasks/*.md,
+      Gerar todos os artefatos Auroq: squad.yaml, agents/*.md, tasks/*.md,
       workflows/*.yaml, checklists, knowledge base. Validar contra estrutura nuclear.
     inputs:
       - "03-blueprint/squad-blueprint.yaml"
     outputs:
-      - "04-squad/ (diretorio completo do squad AIOS)"
+      - "04-squad/ (diretorio completo do squad Auroq)"
     quality_gate:
       id: QG-SF-004
       name: "Nuclear Structure"

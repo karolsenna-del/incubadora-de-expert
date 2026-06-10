@@ -11,7 +11,7 @@
 
 ## Executive Summary
 
-Executa a validacao final do clone antes da geracao do agente. Combina auditoria exhaustiva de rastreabilidade (Layer 2 — verifica CADA elemento critico no draft prompt), 3 smoke tests autonomos (Conhecimento do Dominio, Tomada de Decisao, Resposta a Objecao), scoring de fidelidade em 8 camadas (observable, cognitive, deep identity), blind test opcional (requer pessoas externas), e integrity check do Squad Creator. E o ultimo quality gate bloqueante (QG-005) antes da Fase 8.
+Executa a validacao final do clone antes da geracao do agente. Combina auditoria exhaustiva de rastreabilidade (Layer 2 — verifica CADA elemento critico no draft prompt), 3 smoke tests autonomos (Conhecimento do Dominio, Tomada de Decisao, Resposta a Objecao), scoring de fidelidade em 8 camadas (observable, cognitive, deep identity) e blind test opcional (requer pessoas externas). E o ultimo quality gate bloqueante (QG-005) antes da Fase 8. Tarefa 100% interna ao squad — orquestrada pelo @clone-forge-chief com suporte de @innerlens (consistencia de voz) e @cognitive-motor (consistencia de raciocinio).
 
 ---
 
@@ -27,8 +27,8 @@ Um clone que nao foi validado pode parecer bom no papel mas falhar na pratica. E
 
 - **Autonomo:** Steps 1-3 (dados, draft prompt, auditoria de rastreabilidade)
 - **Autonomo:** Steps 4-8 (smoke tests, scoring, relatorios)
-- **Externo:** Step 9 (blind test — requer coordenacao com pessoas que conhecem o expert)
-- **Autonomo:** Steps 10-11 (resultados finais, integrity check)
+- **Externo (humanos):** Step 9 (blind test — requer coordenacao com pessoas que conhecem o expert)
+- **Autonomo:** Step 10 (resultados finais)
 
 ---
 
@@ -247,12 +247,13 @@ traceability_audit:
 
 ### Step 4: Smoke Test 1 — Conhecimento do Dominio
 
-**Action:** Testar se o clone domina o assunto do expert e se expressa com a voz correta.
+**Action:** Testar se o clone domina o assunto do expert e se expressa com a voz correta. Protocolo detalhado em `agents/clone-forge/checklists/smoke-test-clone.md` (3 cenarios padronizados).
 
 ```yaml
 smoke_test_1:
   name: "Conhecimento do Dominio"
-  agent: "@oalanicolas (external) ou self"
+  reference_checklist: "agents/clone-forge/checklists/smoke-test-clone.md"
+  agent: "@clone-forge-chief (orquestra) + @innerlens (avalia voz)"
 
   prompt_template: |
     Usando o system prompt draft como persona, responder:
@@ -300,7 +301,7 @@ smoke_test_1:
 ```yaml
 smoke_test_2:
   name: "Tomada de Decisao"
-  agent: "@oalanicolas (external) ou self"
+  agent: "@clone-forge-chief (orquestra) + @cognitive-motor (avalia raciocinio)"
 
   prompt_template: |
     Usando o system prompt draft como persona, responder:
@@ -353,7 +354,7 @@ smoke_test_2:
 ```yaml
 smoke_test_3:
   name: "Resposta a Objecao"
-  agent: "@oalanicolas (external) ou self"
+  agent: "@clone-forge-chief (orquestra) + @innerlens (voz) + @cognitive-motor (conviccao)"
 
   prompt_template: |
     Usando o system prompt draft como persona, responder:
@@ -400,11 +401,13 @@ smoke_test_3:
 
 ### Step 7: Score de Fidelidade (8 Camadas)
 
-**Action:** Avaliar cada uma das 8 camadas de fidelidade com scores de 1 a 5, usando pesos diferentes por categoria.
+**Action:** Avaliar cada uma das 8 camadas de fidelidade com scores de 1 a 5, usando pesos diferentes por categoria. Delega execucao detalhada para `tasks/fidelity-score.md` (carrega criterios maduros de `data/clone-validation.yaml`).
 
 ```yaml
 fidelity_scoring:
-  reference: "agents/clone-forge/checklists/clone-forge-validation.md"
+  delegate_to: "agents/clone-forge/tasks/fidelity-score.md"
+  loads_data: "agents/clone-forge/data/clone-validation.yaml"
+  reference_checklist: "agents/clone-forge/checklists/clone-forge-validation.md"
 
   layers:
     observable_layers:
@@ -603,33 +606,6 @@ final_results:
 
 ---
 
-### Step 11: Squad Creator Integrity Check
-
-**Action:** Verificar que o Clone Forge NAO modificou nenhum arquivo do Squad Creator Premium.
-
-```yaml
-integrity_check:
-  command: "git diff agents/squad-creator/"
-  expected: "Saida vazia (sem modificacoes)"
-
-  if_clean:
-    action: "Integrity check PASSED"
-
-  if_dirty:
-    action: "ALERTA CRITICO — Clone Forge modificou Squad Creator"
-    severity: "BLOCKING"
-    remediation:
-      - "Reverter mudancas imediatamente: git checkout -- agents/squad-creator/"
-      - "Investigar como a modificacao aconteceu"
-      - "Documentar no manifest como incidente"
-
-  log: "Resultado do integrity check registrado em validation-summary.yaml"
-```
-
-**Output:** Integrity check PASSED ou ALERTA com remediacao.
-
----
-
 ## Outputs
 
 | Output | Path | Description |
@@ -655,7 +631,6 @@ integrity_check:
 | Fidelidade score | >= 80% global | Identificar dimensoes fracas e iterar |
 | Blind test | >= 70% atribuicao correta (se executado) | Refinar voice DNA e heuristicas |
 | Consistencia interna | Clone nao se contradiz de forma nao-documentada | Reconciliar com contradictions.yaml |
-| Integrity check | `git diff agents/squad-creator/` vazio | Reverter e investigar |
 
 ### Checklist Formal
 
@@ -707,13 +682,6 @@ error_handling:
       - "Falta de exemplos pessoais (adicionar mais storytelling)"
     note: "Blind test fail nao bloqueia se smoke tests + fidelidade passam"
 
-  integrity_violation:
-    symptom: "git diff agents/squad-creator/ retorna modificacoes"
-    severity: "CRITICAL"
-    action: "REVERTER IMEDIATAMENTE"
-    investigation: "Como o pipeline modificou arquivos do Squad Creator?"
-    prevention: "Clone Forge NUNCA escreve em agents/squad-creator/"
-
   missing_profile_data:
     symptom: "Arquivos de perfil ou DNA nao encontrados"
     action: "Verificar se Fase 6 realmente completou"
@@ -728,15 +696,22 @@ error_handling:
 
 | Agente | Papel | Steps |
 |--------|-------|-------|
-| @oalanicolas (external) | Smoke tests + fidelidade scoring | Steps 3-6 |
-| @pedro-valerio (external) | Blind test | Step 8 |
-| @clone-forge-chief | Orquestracao, geracao de prompts, consolidacao | Steps 1-2, 7, 9-10 |
+| @clone-forge-chief | Orquestracao, geracao de prompts, smoke tests, consolidacao | Todos |
+| @innerlens | Avaliacao de consistencia de voz nos smoke tests | 4, 6 |
+| @cognitive-motor | Avaliacao de consistencia de raciocinio nos smoke tests | 5, 6 |
+| Humanos externos (opcional) | Blind test | 9 |
 
 ### Dependencias
 
 | Artefato | Path | Obrigatorio |
 |----------|------|-------------|
 | Validation checklist | `agents/clone-forge/checklists/clone-forge-validation.md` | Sim |
+| Smoke test checklist | `agents/clone-forge/checklists/smoke-test-clone.md` | Sim |
+| Fidelity score task | `agents/clone-forge/tasks/fidelity-score.md` | Sim |
+| Validate clone task | `agents/clone-forge/tasks/validate-clone.md` | Sim |
+| Clone validation criteria | `agents/clone-forge/data/clone-validation.yaml` | Sim |
+| Clone anti-patterns | `agents/clone-forge/data/clone-anti-patterns.yaml` | Sim |
+| Output examples (referencia) | `agents/clone-forge/data/output-examples.yaml` | Sim |
 | Quality dashboard template | `agents/clone-forge/templates/quality-dashboard-360-tmpl.md` | Sim |
 | Voice DNA | `minds/{slug}/03-dna/voice-dna.yaml` | Sim |
 | Thinking DNA | `minds/{slug}/03-dna/thinking-dna.yaml` | Sim |
@@ -762,7 +737,7 @@ Fase 6/6.5 (Perfil completo) -> Fase 7 (esta task) -> QG-005
 
 ---
 
-_Task: clone-forge/validate-clone-forge v1.0.0_
+_Task: clone-forge/validate-clone-forge v2.0.0_
 _Phase: 7 — Validacao Enhanced_
-_Agents: @oalanicolas + @pedro-valerio (external)_
+_Agents: @clone-forge-chief + @innerlens + @cognitive-motor_
 _Execution: Hybrid_

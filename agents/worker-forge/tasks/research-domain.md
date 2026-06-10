@@ -62,7 +62,7 @@ Capturar: problemas frequentes, solucoes conhecidas, workarounds.
 
 ### Step 3: Coleta Interna
 
-Buscar no AIOS:
+Buscar no Auroq:
 
 ```
 # KBs existentes relevantes

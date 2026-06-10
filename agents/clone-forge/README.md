@@ -1,6 +1,6 @@
 # Clone Forge
 
-Pipeline de clonagem cognitiva que transforma qualquer expert em um agente AIOS de alta fidelidade — voz, heuristicas, estilo de decisao preservados.
+Pipeline de clonagem cognitiva que transforma qualquer expert em um agente Auroq de alta fidelidade — voz, heuristicas, estilo de decisao preservados.
 
 ## Ativacao
 
@@ -65,5 +65,17 @@ Automatica no final do pipeline (Fase 8):
 
 ## Dependencias
 
-- **Squad Creator Premium** (obrigatorio) — base de Voice/Thinking DNA
-- **Zona Genialidade** (opcional) — assessments psicometricos formais
+Squad **self-contained** — nao requer outros squads instalados.
+
+- **Zona Genialidade** (opcional) — enriquece a Fase 5 com assessments psicometricos formais quando disponiveis
+
+## Referencias internas
+
+- `data/clone-forge-kb.md` — Knowledge base do squad (fundamentos, principios, classificacao de fontes, drivers, anti-patterns)
+- `data/source-tiers.yaml` — Taxonomia detalhada de tier de fontes
+- `data/clone-validation.yaml` — 8 dimensoes de fidelidade + score guides
+- `data/clone-anti-patterns.yaml` — Anti-patterns conhecidos a evitar
+- `data/output-examples.yaml` — Exemplos Q&A de qualidade (referencia)
+- `data/poc-schema.yaml` — Schema dos 6 modulos POC
+- `data/miu-classification-taxonomy.yaml` — Taxonomia MIU
+- `data/driver-catalog.yaml` + `driver-relationship-templates.yaml` — Catalogo de drivers psicologicos

@@ -1,6 +1,6 @@
 # Checklist: Nuclear Structure Validation (QG-SF-004)
 
-Validacao da Fase 4 — Montagem do Squad AIOS.
+Validacao da Fase 4 — Montagem do Squad Auroq.
 
 **Metodo primario:** Rodar `node .auroq-core/development/scripts/squad/squad-validator.js {squad_path}`
 **Este checklist manual:** Usado como FALLBACK se o script nao estiver disponivel.

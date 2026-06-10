@@ -11,7 +11,7 @@
 
 ## Executive Summary
 
-Fase 1 do pipeline Clone Forge. Wrapper que combina duas operacoes: (1) coleta de fontes web via Squad Creator (@oalanicolas) e (2) merge com fontes locais ja ingeridas na Fase 0. Classifica todas as fontes por tier (0-3), valida cobertura minima e emite decisao GO/NO-GO no quality gate QG-001 SOURCE_QUALITY. Esta e a fase que garante materia-prima suficiente antes de iniciar extracao.
+Fase 1 do pipeline Clone Forge. Task self-contained de classificacao e validacao de fontes. Combina (1) fontes locais ja ingeridas na Fase 0 e (2) fontes web fornecidas pelo usuario (URLs e transcripts). Classifica todas as fontes por tier (0-3) usando 5 dimensoes de curadoria, valida cobertura minima e emite decisao GO/NO-GO no quality gate QG-001 SOURCE_QUALITY. Esta e a fase que garante materia-prima suficiente antes de iniciar extracao.
 
 **Posicao no Workflow:** Fase 1 — Coleta e Validacao de Fontes
 **Definicao de Sucesso:** Inventario unificado com 10+ fontes, 5+ Tier 1, 3+ tipos, 5+ horas de conteudo
@@ -25,9 +25,11 @@ O clone so e tao bom quanto suas fontes. Fontes ruins = clone generico. Esta tas
 
 A task combina duas fontes de conteudo:
 1. **Fontes locais** (Fase 0) — conteudo que o expert ja tem no computador. Alta qualidade, alta confianca.
-2. **Fontes web** (Squad Creator) — conteudo publicado online. Descoberto automaticamente pelo @oalanicolas.
+2. **Fontes web fornecidas** — URLs, transcripts ou textos extraidos manualmente pelo usuario (videos, posts, entrevistas publicas).
 
 O merge e necessario porque nenhuma das duas fontes sozinha e suficiente. Fontes locais tem profundidade mas podem ter gaps. Fontes web tem breadth mas podem ser superficiais. A unificacao com classificacao por tier e curadoria por 5 dimensoes garante o mix ideal.
+
+**Por que nao automatizar web discovery?** Descoberta automatizada (scraping de YouTube/Instagram, busca em redes) exige infra adicional (MCPs, APIs de transcricao) que nem todo usuario tem. O squad e portable: usuario fornece o que tem, chief classifica.
 
 ---
 
@@ -35,8 +37,8 @@ O merge e necessario porque nenhuma das duas fontes sozinha e suficiente. Fontes
 
 **Hybrid (40% Human, 60% Agent)**
 
-- **Papel do Human:** Validar fontes descobertas, confirmar tiers, aprovar GO/NO-GO
-- **Papel do Agent (@oalanicolas):** Descoberta web. **Agent (@clone-forge-chief):** Merge, classificacao, validacao
+- **Papel do Human:** Fornecer URLs/transcripts adicionais, confirmar tiers, aprovar GO/NO-GO
+- **Papel do Agent (@clone-forge-chief):** Merge, classificacao por tier, score de curadoria, validacao de cobertura
 - **Runtime Estimado:** 30-60 minutos
 
 ---
@@ -67,7 +69,7 @@ subject_context:
   field: "Contexto profissional do sujeito para guiar busca"
   format: "text"
   required: true
-  example: "Profissional de saude, especialista em nutricao funcional"
+  example: "Empreendedor digital, fundador da Arka, marketing digital + mentorias para experts"
   notes: "Quanto mais especifico, melhor a qualidade da descoberta web"
 ```
 
@@ -81,14 +83,14 @@ local_sources_index:
   location: "agents/clone-forge/minds/{mind_slug}/01-sources/local-sources-index.yaml"
   notes: "Se Fase 0 foi pulada, este input nao existe. Pipeline continua normalmente."
 
-known_urls:
-  field: "URLs ja conhecidas do sujeito (site, redes sociais, canal YouTube)"
-  format: "list of URLs"
+user_provided_urls:
+  field: "URLs e transcripts fornecidos pelo usuario (site, redes, posts, videos)"
+  format: "list of URLs ou paths para transcripts/textos colados"
   required: false
-  notes: "Acelera a descoberta web — @oalanicolas comecar por aqui"
+  notes: "Usuario fornece o que tem. Sem coleta automatizada — usuario controla qualidade do material."
 
-skip_web_discovery:
-  field: "Pular coleta web e usar apenas fontes locais"
+skip_web_sources:
+  field: "Trabalhar apenas com fontes locais (Fase 0)"
   format: "boolean"
   required: false
   default: false
@@ -104,7 +106,6 @@ Antes de iniciar esta task:
 - [ ] Mind slug definido e diretorio `minds/{slug}/` criado
 - [ ] manifest.yaml existe com metadados basicos
 - [ ] Nome e contexto do sujeito disponiveis
-- [ ] Squad Creator instalado e @oalanicolas acessivel (se web discovery ativada)
 - [ ] Fase 0 completada OU explicitamente pulada
 
 ---
@@ -146,54 +147,63 @@ local_baseline:
 
 ---
 
-### Step 2: Coleta de Fontes Web via Squad Creator (15-30 min)
+### Step 2: Ingestao de Fontes Web Fornecidas pelo Usuario (10-20 min)
 
-**Atividade do Agent (@oalanicolas, via Squad Creator):**
+**Atividade do Agent (@clone-forge-chief):**
 
-> **Nota:** Este step delega para o agente @oalanicolas do Squad Creator Premium que possui o workflow `collect-sources`. O @clone-forge-chief invoca e monitora.
+> **Nota:** Sem descoberta automatizada. O usuario fornece URLs, transcripts ja extraidos ou textos colados. Chief organiza e classifica.
 
-1. **Se `skip_web_discovery: true`:** Pular este step inteiro
-2. **Se web discovery ativa:**
-   - Invocar @oalanicolas com contexto:
-     - Nome do sujeito
-     - Contexto profissional
-     - URLs conhecidas (se fornecidas)
-     - Areas de interesse para busca
-   - @oalanicolas executa discovery:
-     - Busca em redes sociais (LinkedIn, Instagram, YouTube, Twitter)
-     - Busca de entrevistas e participacoes em podcasts
-     - Busca de artigos e publicacoes
-     - Busca de aparicoes em midia
-   - Para cada fonte descoberta:
-     - Titulo, URL, tipo, data estimada
-     - Preview do conteudo
-     - Relevancia estimada
+1. **Se `skip_web_sources: true`:** Pular este step inteiro
+2. **Se ha fontes a adicionar:**
+   - Perguntar ao usuario:
+     ```
+     Tem mais fontes alem das locais? Pode fornecer:
+     - URLs de videos do YouTube (com link)
+     - Transcricoes ja extraidas (cole o texto ou indique caminho)
+     - Posts de redes (cole o texto)
+     - Artigos/entrevistas (cole o texto ou link)
 
-3. Receber resultados do @oalanicolas
-4. Normalizar fontes web para formato unificado:
+     Cola tudo aqui ou diz "nao tenho mais".
+     ```
+   - Para cada item fornecido:
+     - Se URL pura sem texto: registrar URL com nota "transcricao pendente — usuario deve fornecer"
+     - Se texto colado: salvar em `01-sources/raw/SRC-XXX-{slug}.md` com cabecalho de metadados
+     - Se path local fornecido: copiar arquivo para `01-sources/raw/`
+   - Tipo da fonte e inferido pelo dominio da URL ou conteudo:
+     - youtube.com / youtu.be → `youtube` (transcricao)
+     - linkedin.com / instagram.com / x.com / twitter.com → `social_media`
+     - podcast / spotify → `podcast`
+     - dominio de blog → `article`
+     - outros → `text` (default)
+
+3. Normalizar para formato unificado:
 
 ```yaml
 web_sources:
-  discovered_at: "{timestamp}"
-  agent: "@oalanicolas"
-  total_discovered: N
+  ingested_at: "{timestamp}"
+  agent: "@clone-forge-chief"
+  total_ingested: N
   sources:
     - source_id: "WEB-001"
       title: "Entrevista no Podcast X"
       url: "https://..."
-      type: "youtube"
+      type: "podcast"
       estimated_tier: 1
-      relevance: 0.9
+      content_status: "transcript_provided"
       notes: "Entrevista longa, espontanea"
     - source_id: "WEB-002"
       title: "Post no LinkedIn"
       url: "https://..."
       type: "social_media"
       estimated_tier: 2
-      relevance: 0.7
+      content_status: "text_provided"
 ```
 
-**Checkpoint:** Fontes web coletadas e catalogadas.
+4. Se ha URLs sem transcricao: avisar usuario e oferecer 2 opcoes:
+   - "Posso seguir sem essa fonte" (mais rapido)
+   - "Voce extrai a transcricao e me passa depois" (melhor qualidade)
+
+**Checkpoint:** Fontes web fornecidas pelo usuario catalogadas.
 
 ---
 
@@ -227,6 +237,8 @@ merge_rules:
 ### Step 4: Classificacao por Tier e Curadoria (5-10 min)
 
 **Atividade do Agent (@clone-forge-chief):**
+
+> **Carregar:** `agents/clone-forge/data/source-tiers.yaml` — taxonomia detalhada de classificacao com pesos, exemplos e decision pipeline.
 
 1. Para cada fonte no inventario unificado, atribuir tier final baseado em 5 dimensoes de curadoria:
 
@@ -307,7 +319,7 @@ tier_classification:
 3. Excepcoes automaticas de tier:
    - Assessment formal → sempre Tier 0
    - Entrevista profunda (Fase 1.5) → sempre Tier 0
-   - Skill AIOS → sempre Tier 1
+   - Skill Auroq → sempre Tier 1
    - Texto de terceiros sobre a pessoa → maximo Tier 3
 
 **Checkpoint:** Todos os fontes classificados por tier com score de curadoria.
@@ -514,7 +526,7 @@ Conteudo: Inventario unificado de todas as fontes (locais + web) com metadados, 
 ### Checklist
 
 - [ ] Fontes locais (Fase 0) verificadas e contabilizadas
-- [ ] Coleta web executada via @oalanicolas (ou explicitamente pulada)
+- [ ] Fontes web fornecidas pelo usuario ingeridas (ou explicitamente puladas)
 - [ ] Merge realizado sem duplicatas
 - [ ] Todas as fontes classificadas por tier (0-3) com score de curadoria
 - [ ] Metricas de cobertura calculadas
@@ -543,10 +555,10 @@ Conteudo: Inventario unificado de todas as fontes (locais + web) com metadados, 
 
 ```yaml
 errors:
-  oalanicolas_unavailable:
-    description: "Squad Creator ou @oalanicolas nao acessivel"
-    action: "Prosseguir apenas com fontes locais. Marcar web discovery como skipped."
-    fallback: "Sugerir busca manual: usuario fornece URLs"
+  url_without_transcript:
+    description: "Usuario forneceu URL mas sem transcricao/texto"
+    action: "Pedir ao usuario que extraia o texto OU pular essa fonte. Sem texto, MIU extraction nao funciona."
+    fallback: "Marcar fonte como skipped com nota e remover do inventario"
     severity: "warning"
 
   insufficient_sources:
@@ -582,7 +594,7 @@ errors:
 
 - **Task:** `start` — Cria diretorio e manifest
 - **Task:** `ingest-local-content` (Fase 0) — Fornece fontes locais (opcional)
-- **External:** Squad Creator / @oalanicolas — Fornece coleta web
+- **Input do usuario:** URLs/transcripts adicionais (opcional)
 
 ### Alimenta
 

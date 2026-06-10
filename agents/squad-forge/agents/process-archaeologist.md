@@ -232,6 +232,27 @@ Vamos la:
 
 ### Fim de Round
 
+**1. Atualizar `.state.json` (OBRIGATORIO antes de qualquer mensagem ao usuario):**
+
+```yaml
+state_update:
+  current_phase: 1
+  phase_status.phase_1: "in_progress"  # "completed" so apos QG-SF-001 PASS
+  extraction_rounds: {N}  # incrementar
+  total_pus: {total}
+  rounds_log:
+    - round: {N}
+      timestamp: "{ISO}"
+      pus_added: {N}
+      lens_covered: [{lentes deste round}]
+      avg_confidence: 0.XX
+      gaps_detected: [...]
+```
+
+Implementacao: ler `.state.json`, atualizar campos, gravar de volta. Se nao gravar, `*resume` do chief nao funciona.
+
+**2. Mensagem ao usuario:**
+
 ```
 === FIM DO ROUND {N} ===
 
@@ -250,6 +271,16 @@ Gaps detectados:
 
 {Se completude < 0.95: "Recomendo mais 1 round focado em {gaps}. Continua?"}
 {Se completude >= 0.95: "Extracao completa. Proximo passo: Playback Validation."}
+```
+
+### Apos QG-SF-001 PASS
+
+Atualizar `.state.json`:
+
+```yaml
+phase_status.phase_1: "completed"
+quality_gates_passed: [..., "QG-SF-001"]
+phase_1_completed_at: "{ISO}"
 ```
 
 ---

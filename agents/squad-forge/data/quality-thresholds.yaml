@@ -1,0 +1,259 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# QUALITY THRESHOLDS — Squad Forge
+# ═══════════════════════════════════════════════════════════════════════════════
+# Single source of truth pros checks quantitativos do squad-forge.
+# Tasks (assemble-squad, fix-squad, self-test) leem dessa fonte.
+# Mudancas aqui propagam pra todos os gates.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+version: "1.0.0"
+last_updated: "2026-05-05"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# EXTRACTION (Fase 1)
+# ─────────────────────────────────────────────────────────────────────────────
+extraction:
+  min_pus: 15
+  ideal_pus: 25
+  min_lens_coverage: 6  # de 8
+  ideal_lens_coverage: 8
+  min_avg_confidence: 0.7
+  ideal_avg_confidence: 0.85
+  min_pu_steps: 5
+  min_pu_decisions: 2
+  min_pu_quality_gates: 1
+  min_pu_dependencies: 1
+  max_inferred_pct: 0.30  # 30% max de PUs inferred
+  veto:
+    - "PUs total < 5"
+    - "Zero PU-DECISIONs"
+    - "Zero PU-QUALITY_GATEs"
+    - "Zero PU-DEPENDENCYs"
+    - "> 50% PUs inferred"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AGENT DEPTH (Fase 4 — assemble-squad)
+# ─────────────────────────────────────────────────────────────────────────────
+agent_depth:
+  min_lines_per_agent: 250
+  min_output_examples: 3       # secao OUTPUT EXAMPLES
+  min_immune_triggers: 3       # secao IMMUNE SYSTEM
+  min_frases_chave: 5          # secao Frases-Chave (Voice DNA)
+  min_estilo_bullets: 3        # secao Estilo de Comunicacao
+  min_strict_rules_nunca: 5    # bullets em "O agent NUNCA"
+  min_strict_rules_sempre: 5   # bullets em "O agent SEMPRE"
+  min_responsabilidades_core: 2
+
+  veto:
+    - "Agente < 250 linhas"
+    - "Agente sem secao OUTPUT EXAMPLES"
+    - "Agente com < 3 OUTPUT EXAMPLES"
+    - "Agente sem secao IMMUNE SYSTEM"
+    - "Agente com < 3 IMMUNE triggers"
+    - "Agente com < 5 Frases-Chave"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# KB DEPTH (Fase 4 — Step 6 do assemble-squad)
+# ─────────────────────────────────────────────────────────────────────────────
+kb_depth:
+  by_squad_type:
+    operacional:           # trafego, conteudo, vendas, atendimento
+      min_total_lines: 800
+    analitico:             # pesquisa, diagnostico, auditoria
+      min_total_lines: 600
+    criativo:              # roteiros, design, copy
+      min_total_lines: 600
+    dev_tecnico:           # CI/CD, code review, testes
+      min_total_lines: 400
+
+  required_components:
+    min_reference_tables: 1       # formato `| cenario | acao |`
+    min_decision_trees: 1         # se processo tem PU-DECISION com 2+ branches
+    min_cardinal_rules: 3         # com enunciado + contexto + exemplo + anti-padrao
+
+  veto:
+    - "KB total < min pelo tipo do squad"
+    - "Zero tabelas de referencia"
+    - "Zero decision trees (quando processo tem PU-DECISION com 2+ branches)"
+    - "< 3 Regras Cardinais com formato completo"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TASK STRUCTURE (Fase 4)
+# ─────────────────────────────────────────────────────────────────────────────
+task_structure:
+  required_fields:
+    - task
+    - responsavel
+    - responsavel_type
+    - atomic_layer
+    - Entrada
+    - Saida
+    - Checklist
+    - execution_type
+  responsavel_type_valid: ["agent", "human", "hybrid", "worker"]
+  execution_type_valid: ["deterministic", "semantic", "interactive"]
+  min_checklist_items: 3
+
+  veto:
+    - "Task com menos de 8 campos"
+    - "responsavel_type invalido"
+    - "execution_type invalido"
+    - "Checklist com < 3 items"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# WORKFLOW (Fase 3)
+# ─────────────────────────────────────────────────────────────────────────────
+workflow:
+  min_phases: 1
+  max_phases: 12
+  min_quality_gates: 1
+  unidirectional: true  # Pedro Valerio principle — fases nao voltam
+  veto:
+    - "Dependencia circular detectada"
+    - "PU-STEP orfao (nao mapeado pra task)"
+    - "0 tasks geradas"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SQUAD COMPOSITION (Fase 3)
+# ─────────────────────────────────────────────────────────────────────────────
+squad:
+  min_agents: 1
+  max_agents: 7  # se >7, decomposicao em sub-squads
+  min_tasks: 2  # start + 1
+  max_hybrid_tasks_pct: 0.50  # se >50%, decomposicao confusa
+  required_orchestrator: 1  # 1 chief obrigatorio
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AUTOCONTIDO (NON-NEGOTIABLE — Squad runtime sem refs externas)
+# ─────────────────────────────────────────────────────────────────────────────
+# Squads sao distribuidos pra alunos. Aluno NAO tem o repo do Euriler.
+# Refs externas em runtime quebram o squad fora do ambiente original.
+# Fontes externas sao build-time inputs apenas.
+autocontido:
+  enabled: true
+  scope: "squads/{name}/"  # tudo dentro deste path e runtime, deve ser self-contained
+
+  forbidden_runtime_paths:
+    - "docs/knowledge/euriler-business"
+    - "docs/knowledge/euriler-mind"
+    - "docs/prd"                    # PRD vive em docs/prd/, nao deve ser referenciado em runtime do squad gerado
+    - "docs/stories"                # idem
+    - "squads/etlmaker/kbs"
+    - "squads/squad-forge/minds"
+    - "business/cockpit.md"         # cockpit Arka — privado do Euriler
+    - "business/campanhas"
+    - "business/financeiro"
+    - "business/processos"
+    - "~/euriler-brain"
+    - "/Users/euriler"             # absolute path
+
+  forbidden_runtime_paths_distributed_only:
+    # Refs aceitaveis em squad com target_audience=internal, MAS proibidas em distributed
+    - "business/cockpit.md"
+    - "business/campanhas/*/tracker.md"
+
+  forbidden_unresolved_markers:
+    # Marcadores condicionais que devem ser resolvidos na geracao final
+    - "{IF "
+    - "{ELSE"
+    - "{END}"
+    - "{target_audience}"
+    - "{agent_name}"               # placeholder do template — deve ser substituido
+
+  forbidden_phrases:
+    - "ver KB completa em"
+    - "consultar arquivo em docs/"
+    - "ver volume em squads/etlmaker"
+    - "fonte original em business/"
+
+  allowed_runtime_refs:
+    - "squads/{this-squad}/"        # refs internas do proprio squad
+    - ".auroq-core/"                 # framework Auroq — todo aluno tem
+    - "https://"                    # APIs/URLs externas (auth do aluno)
+    - "http://localhost"            # dev local
+
+  build_time_provenance:
+    allowed: true
+    format: "<!-- Adaptado de {fonte} em build-time -->"
+    must_be_in_html_comment: true
+
+  veto:
+    - "Ref a forbidden_runtime_paths em qualquer .md ou .yaml dentro de squads/{name}/"
+    - "Frase de forbidden_phrases em runtime"
+    - "Absolute path /Users/* em runtime"
+    - "Symlink/import apontando pra fora de squads/{name}/"
+
+  test_command: |
+    # Heuristica de validacao — se zipar e mandar pro aluno, funciona?
+    cd /tmp && cp -r {squad_path} squad-test/ && cd squad-test/
+    grep -rn -E "docs/knowledge|squads/etlmaker|business/|/Users/" . \
+      --include="*.md" --include="*.yaml" \
+      | grep -v "<!--" || echo "OK: nenhuma ref externa runtime"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# STORY-DRIVEN (Article III — Constitution Auroq)
+# ─────────────────────────────────────────────────────────────────────────────
+story_driven:
+  prd_required: true
+  stories_required: true
+  tracker_required: true
+  prd_path: "docs/prd/squad-{slug}.md"
+  stories_path: "docs/stories/squad-forge/{slug}/"
+  tracker_path: "business/campanhas/squad-{slug}/tracker.md"
+
+  prd_required_sections:
+    - "Visao"
+    - "Escopo"
+    - "Personas"
+    - "Functional Requirements"
+    - "Non-Functional Requirements"
+    - "Constraints"
+    - "Success Criteria"
+    - "Trace Matrix"
+
+  stories_required:
+    - "0.0.epic.story.md"  # com 5 ACs = 5 QGs
+    - "1.story.md"          # 1+ phase stories
+
+  veto:
+    - "PRD ausente"
+    - "Stories ausentes"
+    - "Tracker ausente"
+    - "Story epic sem 5 ACs mapeados aos QGs"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# INSTALLATION (Fase 5)
+# ─────────────────────────────────────────────────────────────────────────────
+installation:
+  install_path_template: "squads/{name}/"
+  skill_path_template: ".claude/commands/{slashPrefix}.md"
+  memory_md_section: "Squads Instalados"
+  backup_required_if_exists: true
+  backup_retention_days: 30
+  rollback_on_failure: true
+
+  required_files_post_install:
+    - "squads/{name}/squad.yaml"
+    - "squads/{name}/agents/{chief}.md"
+    - ".claude/commands/{slashPrefix}.md"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OBSERVATIONS
+# ─────────────────────────────────────────────────────────────────────────────
+notes:
+  rationale: |
+    Thresholds vieram do diagnostico de 05/05/2026 do proprio squad-forge:
+    - gestor-andromeda gerou agentes 91-136 linhas (deveriam ser >=250)
+    - Sem OUTPUT EXAMPLES nem IMMUNE SYSTEM apesar da spec exigir
+    - KB total 679 linhas (no limite, e era operacional — deveria ser >=800)
+    - Squad-forge ele mesmo: 259+367+446 linhas (referencia de profundidade ok)
+
+    Razao do rigor: sem hard gates, regride. Hard gates = nunca mais.
+
+  inheritance: |
+    Tasks que consomem este arquivo:
+    - tasks/assemble-squad.md (Step 8 self-audit, Step 11 QG-SF-004)
+    - tasks/fix-squad.md (Step 3 depth audit)
+    - tasks/update-squad.md (Step 5 self-audit pos-edicao)
+    - tasks/rebuild-squad.md (Step 5 assembly com profundidade nova)
+    - tasks/self-test.md (todos os checks)

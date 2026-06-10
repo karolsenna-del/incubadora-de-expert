@@ -97,7 +97,7 @@ O que ajustaria?
 ```
 Worker aprovado. Vou montar agora.
 
-Proximo passo: Assembly — construir a estrutura AIOS completa.
+Proximo passo: Assembly — construir a estrutura Auroq completa.
 Isso inclui: agent.md, tasks, KB, workflow, config, skill.
 
 Quando terminar, te chamo pra testar com uma missao real.

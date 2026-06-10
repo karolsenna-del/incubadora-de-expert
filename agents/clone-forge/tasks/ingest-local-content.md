@@ -11,7 +11,7 @@
 
 ## Executive Summary
 
-Fase 0 do pipeline Clone Forge. Recebe QUALQUER formato de conteudo do usuario (video, audio, PDF, docs, texto puro, URLs do YouTube, redes sociais, texto colado, skills AIOS, assessments) e normaliza tudo para markdown. Tudo que entra passa por um handler de tipo, e transcrito/extraido/normalizado e salvo em `01-sources/`. Esta fase e opcional — se o usuario nao tem conteudo local, pode pular direto para Fase 1 (coleta web).
+Fase 0 do pipeline Clone Forge. Recebe QUALQUER formato de conteudo do usuario (video, audio, PDF, docs, texto puro, URLs do YouTube, redes sociais, texto colado, skills Auroq, assessments) e normaliza tudo para markdown. Tudo que entra passa por um handler de tipo, e transcrito/extraido/normalizado e salvo em `01-sources/`. Esta fase e opcional — se o usuario nao tem conteudo local, pode pular direto para Fase 1 (coleta web).
 
 **Posicao no Workflow:** Fase 0 — Entry point do pipeline Clone Forge
 **Definicao de Sucesso:** Todo conteudo do usuario normalizado em markdown e indexado
@@ -48,7 +48,7 @@ mind_slug:
   field: "Identificador unico da mente sendo clonada"
   format: "string (snake_case)"
   required: true
-  example: "nome_da_pessoa"
+  example: "joao_silva"
   notes: "Usado para criar o diretorio de output em minds/{slug}/"
 
 manifest_path:
@@ -86,12 +86,12 @@ pasted_content:
   required: false
   notes: "Pedir contexto: de onde veio, quando foi escrito, para quem"
 
-aios_skill_path:
-  field: "Diretorio de uma skill AIOS ja existente"
+auroq_skill_path:
+  field: "Diretorio de uma skill Auroq ja existente"
   format: "path"
   required: false
-  example: "~/Downloads/material-fonte/"
-  notes: "Skills AIOS sao pre-processadas — alta qualidade, Tier 1"
+  example: "~/Downloads/skills/expert-content/"
+  notes: "Skills Auroq sao pre-processadas — alta qualidade, Tier 1"
 
 assessment_path:
   field: "YAML de resultado de assessment (ex: Zona Genialidade)"
@@ -133,7 +133,7 @@ prompt: |
   1. Arquivos locais (video, audio, PDF, docs, markdown)
   2. URLs do YouTube (videos seus ou entrevistas)
   3. Texto pra colar (posts, emails, mensagens, rascunhos)
-  4. Skill AIOS ja pronta (diretorio de skill)
+  4. Skill Auroq ja pronta (diretorio de skill)
   5. Assessment formal (Zona Genialidade, DISC, etc)
   6. Varios dos acima (vou perguntar um por um)
   7. Nenhum / pular esta fase
@@ -202,13 +202,13 @@ prompt: |
 type: "free_text"
 ```
 
-**Para skill AIOS:**
+**Para skill Auroq:**
 
 ```yaml
 elicit: true
 prompt: |
   Me passa o caminho do diretorio da skill.
-  Exemplo: ~/Downloads/material-fonte/
+  Exemplo: ~/Downloads/skills/expert-content/
 type: "free_text"
 validation: "Verificar se diretorio existe e contem arquivos de skill."
 ```
@@ -219,7 +219,7 @@ validation: "Verificar se diretorio existe e contem arquivos de skill."
 elicit: true
 prompt: |
   Me passa o caminho do arquivo de assessment.
-  Exemplo: agents/{squad}/data/{pessoa}/assessment-result.yaml
+  Exemplo: agents/zona-genialidade/data/{mind_slug}/assessment-result.yaml
 type: "free_text"
 validation: "Verificar se YAML e valido e contem dados de assessment."
 ```
@@ -240,7 +240,7 @@ type_identification:
   rules:
     - extension_match: "Verificar extensao do arquivo contra handlers"
     - url_match: "Se contem youtube.com ou youtu.be → handler youtube"
-    - directory_match: "Se contem arquivos de skill AIOS → handler aios_skill"
+    - directory_match: "Se contem arquivos de skill Auroq → handler auroq_skill"
     - yaml_content: "Se YAML com campos de assessment → handler assessment"
     - fallback: "Se nao bate em nenhum → handler pasted_text"
 ```
@@ -303,7 +303,7 @@ Processar cada item seguindo o handler definido em `source-type-handlers.yaml`.
    - **YouTube:** Extrair transcript via MCP youtube-transcript, ou fallback yt-dlp + whisper
    - **Social Media:** Coletar via Apify ou pedir colagem manual
    - **Pasted Text:** Salvar com metadados de contexto
-   - **AIOS Skill:** Ler todos os arquivos, extrair persona/voice/thinking
+   - **Auroq Skill:** Ler todos os arquivos, extrair persona/voice/thinking
    - **Assessment:** Ler YAML, extrair scores/perfis/recomendacoes
 
 2. **Normalizar para markdown com frontmatter:**

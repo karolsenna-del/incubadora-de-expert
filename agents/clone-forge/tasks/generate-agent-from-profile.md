@@ -499,15 +499,15 @@ structure:
 
     - name: "Instrucoes de Uso"
       content: |
-        Como ativar o agente (integracao com AIOS ou standalone).
+        Como ativar o agente (integracao com Auroq ou standalone).
         Como configurar como system prompt em outro LLM.
         Parametros recomendados (temperature, top_p, max_tokens).
         Recomendacao de modelo: qual LLM performa melhor com este prompt.
       details:
-        aios_integration: |
+        auroq_integration: |
           1. Copiar agent-config.yaml para agents/{slug}.yaml
           2. Registrar no config.yaml do squad
-          3. Ativar via @{slug} ou /AIOS:agents:{slug}
+          3. Ativar via @{slug} ou /Auroq:agents:{slug}
         standalone: |
           1. Copiar conteudo de system-prompt.md
           2. Colar como system message no LLM de escolha
@@ -665,7 +665,7 @@ AVISOS:
 {/se}
 
 O agente esta pronto. Use o system-prompt.md como prompt de sistema
-em qualquer LLM compativel, ou integre o agent-config.yaml no AIOS.
+em qualquer LLM compativel, ou integre o agent-config.yaml no Auroq.
 ```
 
 ---
@@ -699,7 +699,7 @@ em qualquer LLM compativel, ou integre o agent-config.yaml no AIOS.
 - [ ] system-prompt.md inclui contradicoes como features (nao tenta resolver)
 - [ ] deployment-notes.md gerado com todas as 7 secoes
 - [ ] deployment-notes.md documenta limitacoes reais (nao boilerplate)
-- [ ] deployment-notes.md inclui instrucoes de uso (AIOS + standalone + API)
+- [ ] deployment-notes.md inclui instrucoes de uso (Auroq + standalone + API)
 - [ ] deployment-notes.md inclui recomendacoes de melhoria priorizadas
 - [ ] NEVER rules derivadas de voice-dna.never_use + contradictions + obsessions
 - [ ] ALWAYS rules derivadas de non_negotiables + obsessions + valores_core
@@ -814,8 +814,8 @@ em qualquer LLM compativel, ou integre o agent-config.yaml no AIOS.
 | Fase | Agente | Dados |
 |------|--------|-------|
 | Phase 6 | @clone-forge-chief (self) | Perfil POC completo (`06-profile/`) |
-| Phase 3 | @oalanicolas | Voice DNA + Thinking DNA (`03-dna/`) |
-| Phase 7 | @oalanicolas + @pedro-valerio | Validacao (`07-validation/`) |
+| Phase 3 | @innerlens + @cognitive-motor | Voice DNA + Thinking DNA (`03-dna/`) |
+| Phase 7 | @clone-forge-chief | Validacao (`07-validation/`) |
 | Phase 4 | @cognitive-motor (opcional) | Drivers (`04-drivers/`) |
 | Phase 5 | @cognitive-motor (opcional) | Psicometria (`05-psychometric/`) |
 
@@ -824,7 +824,7 @@ em qualquer LLM compativel, ou integre o agent-config.yaml no AIOS.
 | Destino | Dados | Formato |
 |---------|-------|---------|
 | Usuario final | Agente pronto para uso | 3 artefatos em `08-agent/` |
-| AIOS integration (futuro) | agent-config.yaml | Compativel com formato de agents AIOS |
+| Auroq integration (futuro) | agent-config.yaml | Compativel com formato de agents Auroq |
 | LLM externo (standalone) | system-prompt.md | System message texto puro |
 | Integracao via API | agent-config.yaml | YAML parseavel programaticamente |
 
@@ -843,7 +843,7 @@ delivery_package:
     - minds/{slug}/08-agent/system-prompt.md
     - minds/{slug}/08-agent/deployment-notes.md
   instrucoes: |
-    1. Para usar no AIOS: copiar agent-config.yaml para agents/{slug}.yaml
+    1. Para usar no Auroq: copiar agent-config.yaml para agents/{slug}.yaml
     2. Para usar standalone: copiar conteudo de system-prompt.md como system message
     3. Parametros recomendados: temperature 0.7, top_p 0.9
     4. Modelo recomendado: Claude Sonnet 3.5+ ou GPT-4o+ (modelos com bom instruction following)

@@ -11,7 +11,7 @@
 
 ## Executive Summary
 
-Wrapper em torno do Squad Creator Premium (Voice DNA + Thinking DNA) que enriquece a extracao com dados de MIUs. Em vez de extrair DNA apenas das fontes brutas, alimenta MIUs categorizados como contexto suplementar -- BEHAVIORAL e STORYTELLING para Voice DNA, METHODOLOGICAL e OPINION para Thinking DNA. Tambem extrai conhecimento implicito (crencas assumidas, regras inconscientes, gaps de autoconhecimento). Resultado: DNA de maior fidelidade porque a IA ja "entende" os padroes semanticos antes de extrair.
+Extracao nativa de Voice DNA + Thinking DNA enriquecida com dados de MIUs. Voice DNA e responsabilidade do @innerlens (extrator linguistico); Thinking DNA e responsabilidade do @cognitive-motor (extrator cognitivo). Em vez de extrair DNA apenas das fontes brutas, alimenta MIUs categorizados como contexto suplementar -- BEHAVIORAL e STORYTELLING para Voice DNA, METHODOLOGICAL e OPINION para Thinking DNA. Tambem extrai conhecimento implicito (crencas assumidas, regras inconscientes, gaps de autoconhecimento). Resultado: DNA de maior fidelidade porque os agentes ja "entendem" os padroes semanticos antes de sintetizar.
 
 **Pipeline Position:** Phase 3 (apos MIU extraction, antes de Driver inference)
 **Success Definition:** Voice DNA >= 8/10, Thinking DNA >= 7/9, conhecimento implicito documentado
@@ -21,7 +21,7 @@ Wrapper em torno do Squad Creator Premium (Voice DNA + Thinking DNA) que enrique
 
 ## Purpose
 
-A extracao de DNA padrao do Squad Creator Premium opera diretamente sobre fontes brutas. Isso funciona, mas perde nuances que so emergem quando os MIUs ja foram extraidos e categorizados. O enriquecimento com MIUs resolve 3 problemas:
+Extracao de DNA direto sobre fontes brutas funciona, mas perde nuances que so emergem quando os MIUs ja foram extraidos e categorizados. O enriquecimento com MIUs resolve 3 problemas:
 
 1. **Voice DNA mais preciso** -- MIUs BEHAVIORAL e STORYTELLING revelam padroes de comunicacao que nao aparecem em fontes individuais isoladas
 2. **Thinking DNA mais profundo** -- MIUs METHODOLOGICAL e OPINION mapeiam frameworks e posicionamentos que o expert repete across fontes
@@ -35,7 +35,11 @@ Sem enriquecimento, o DNA captura a SUPERFICIE. Com enriquecimento, captura a ES
 
 **Autonomous** -- executa sem intervencao humana apos receber os inputs.
 
-O agente @oalanicolas (via Squad Creator Premium) recebe o pacote de handoff com MIUs categorizados como contexto suplementar e executa a extracao enriquecida. O @clone-forge-chief monitora e valida o resultado via QG-003.
+Dois agentes trabalham em paralelo:
+- **@innerlens** recebe o pacote de handoff com MIUs categorizados como BEHAVIORAL + STORYTELLING e executa a extracao de Voice DNA enriquecida (`*extract-voice-dna`)
+- **@cognitive-motor** recebe o pacote com MIUs METHODOLOGICAL + OPINION (e drivers ja inferidos, se disponivel) e executa a extracao de Thinking DNA enriquecida (`*extract-thinking-dna`)
+
+O @clone-forge-chief orquestra o paralelismo, sintetiza o conhecimento implicito a partir dos 2 outputs e valida o resultado via QG-003.
 
 ---
 
@@ -73,7 +77,7 @@ O agente @oalanicolas (via Squad Creator Premium) recebe o pacote de handoff com
 - [ ] Minimo 5 MIUs METHODOLOGICAL
 - [ ] Minimo 5 MIUs OPINION
 - [ ] Fontes normalizadas em `01-sources/` com inventario
-- [ ] Squad Creator Premium disponivel (`agents/squad-creator/`)
+- [ ] @innerlens e @cognitive-motor ativos no squad
 
 ---
 
@@ -113,8 +117,11 @@ extract:
 
 ```yaml
 action: call_agent
-agent: "@oalanicolas"
-task: extract-voice-dna
+agent: "@innerlens"
+command: "*extract-voice-dna"
+task_file: "agents/clone-forge/tasks/extract-voice-dna.md"
+loads_data:
+  - "agents/clone-forge/data/source-tiers.yaml"
 enrichment:
   supplementary_data: voice_context (BEHAVIORAL + STORYTELLING MIUs)
   instruction: |
@@ -137,8 +144,11 @@ output: minds/{slug}/03-dna/voice-dna.yaml
 
 ```yaml
 action: call_agent
-agent: "@oalanicolas"
-task: extract-thinking-dna
+agent: "@cognitive-motor"
+command: "*extract-thinking-dna"
+task_file: "agents/clone-forge/tasks/extract-thinking-dna.md"
+loads_data:
+  - "agents/clone-forge/data/source-tiers.yaml"
 enrichment:
   supplementary_data: thinking_context (METHODOLOGICAL + OPINION MIUs)
   instruction: |
@@ -282,7 +292,6 @@ Executar quality gate conforme criterios:
 - [ ] implicit-knowledge.yaml contem min 1 gap de autoconhecimento
 - [ ] dna-synthesis.yaml gerado com cross_references preenchidas
 - [ ] enrichment_stats documentam quantos MIUs foram usados
-- [ ] Nenhum arquivo do Squad Creator foi modificado (`git diff agents/squad-creator/` vazio)
 - [ ] Todos os 4 outputs existem em `minds/{slug}/03-dna/`
 
 ---
@@ -304,7 +313,7 @@ Executar quality gate conforme criterios:
 **Acao:**
 1. Comparar Voice DNA com MIUs BEHAVIORAL de alta confianca
 2. Identificar quais power_words/signature_phrases estao ausentes
-3. Alimentar @oalanicolas com MIUs especificos como exemplos
+3. Alimentar @innerlens com MIUs especificos como exemplos
 4. Re-extrair com instrucao explicita: "Foque nestes padroes: {lista}"
 
 ### Erro: Thinking DNA incompleto
@@ -313,15 +322,7 @@ Executar quality gate conforme criterios:
 **Acao:**
 1. Verificar se MIUs METHODOLOGICAL cobrem os frameworks principais
 2. Se nao: solicitar entrevista complementar (Bloco 2: Metodo e Framework)
-3. Se sim: re-extrair com MIUs como exemplos explicitros de frameworks
-
-### Erro: Squad Creator indisponivel
-
-**Sintoma:** @oalanicolas nao responde ou Squad Creator nao esta instalado.
-**Acao:**
-1. Verificar `agents/squad-creator/` existe
-2. Se nao: HALT — "Squad Creator Premium e obrigatorio. Instalar antes."
-3. Se sim mas agente indisponivel: aguardar e retry (max 3x)
+3. Se sim: solicitar re-extracao ao @cognitive-motor com MIUs como exemplos explicitos de frameworks
 
 ---
 
@@ -332,7 +333,7 @@ Executar quality gate conforme criterios:
 | Fase | Agente | Dados |
 |------|--------|-------|
 | Phase 2 | @innerlens | MIUs validados (`02-extraction/mius.yaml`) |
-| Phase 1 | @oalanicolas | Fontes classificadas (`01-sources/`) |
+| Phase 1 | @clone-forge-chief | Fontes classificadas (`01-sources/`) |
 
 ### Entrega para
 
@@ -340,13 +341,13 @@ Executar quality gate conforme criterios:
 |------|--------|-------|
 | Phase 4 | @cognitive-motor | DNA completo (`03-dna/`) — necessario para contexto de drivers |
 | Phase 6 | @clone-forge-chief | DNA sintetizado para agregacao de perfil |
-| Phase 7 | @oalanicolas | Voice DNA para smoke tests de fidelidade |
+| Phase 7 | @clone-forge-chief | Voice DNA + Thinking DNA para smoke tests de fidelidade |
 
 ### Handoff Protocol
 
 ```yaml
 handoff_to_phase_4:
-  from: "@oalanicolas (via clone-forge-chief)"
+  from: "@clone-forge-chief (orchestrator)"
   to: "@cognitive-motor"
   gate: "QG-003 PASS"
   package:

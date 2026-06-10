@@ -1,6 +1,6 @@
 # Mind Forge
 
-Funde o conhecimento de N experts em uma unica mente sintetica ou consultor de dominio. Output: agente AIOS pronto com KB rica e modos de operacao.
+Funde o conhecimento de N experts em uma unica mente sintetica ou consultor de dominio. Output: agente Auroq pronto com KB rica e modos de operacao.
 
 ## Ativacao
 

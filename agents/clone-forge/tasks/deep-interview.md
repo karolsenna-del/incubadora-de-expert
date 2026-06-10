@@ -714,7 +714,7 @@ Isto NAO e um formulario. E uma CONVERSA. A diferenca:
 
 ### Quando o Sujeito e o Proprio Operador
 
-Na maioria dos casos no Clone Forge, a pessoa sendo clonada e a mesma pessoa operando o AIOS. Isso muda a dinamica:
+Na maioria dos casos no Clone Forge, a pessoa sendo clonada e a mesma pessoa operando o Auroq. Isso muda a dinamica:
 - Nao precisa explicar conceitos tecnicos
 - Pode ser mais direto nas perguntas
 - As respostas tendem a ser mais reflexivas

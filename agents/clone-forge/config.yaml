@@ -1,20 +1,21 @@
 # ═══════════════════════════════════════════════════════════════════════════════
 # CLONE 360 SQUAD - Configuration
 # ═══════════════════════════════════════════════════════════════════════════════
-# Pipeline de clonagem cognitiva 360 graus: integra Squad Creator Premium,
-# POC v1.1 (Ontologia de Conhecimento) e Pipeline do Alan (reverse-engineered)
-# para produzir clones multi-arquivo com fidelidade maxima.
+# Pipeline de clonagem cognitiva 360 graus self-contained: integra extracao
+# linguistica (Voice DNA), extracao cognitiva (Thinking DNA + drivers + psicometria)
+# e ontologia de conhecimento (POC 4 camadas + 6 modulos) para produzir clones
+# multi-arquivo com fidelidade maxima. Sem dependencias de squads externos.
 # ═══════════════════════════════════════════════════════════════════════════════
 
 name: clone-forge
 title: "Clone Forge"
-version: "1.0.0"
+version: "2.0.0"
 author: "Euriler Jube"
 description: >
-  Squad de clonagem cognitiva que combina 3 abordagens complementares:
-  (1) Squad Creator Premium — Voice DNA + Thinking DNA + Smoke Tests,
-  (2) POC v1.1 — Ontologia de Conhecimento em 4 camadas + 6 modulos contextuais,
-  (3) Pipeline do Alan — MIU semantic chunking + drivers psicologicos + mapeamento psicometrico.
+  Squad de clonagem cognitiva self-contained que combina 3 dimensoes complementares:
+  (1) Linguistica — Voice DNA (vocabulario, sintaxe, registro, ritmo, frases-assinatura),
+  (2) Cognitiva — Thinking DNA + drivers psicologicos + mapeamento psicometrico,
+  (3) Ontologica — POC v1.1 com 4 camadas + 6 modulos contextuais.
   Produz clones complexos com multiplos arquivos em minds/{slug}/.
 
 slash_prefix: "CloneForge"
@@ -50,9 +51,6 @@ tiers:
   tier_1:
     - innerlens
     - cognitive-motor
-  external:
-    - squad-creator/oalanicolas
-    - squad-creator/pedro-valerio
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # TASKS (ordered by pipeline phase)
@@ -64,12 +62,17 @@ tasks:
   - collect-and-merge-sources
   - deep-interview
   - extract-mius
-  - extract-dna-enriched
+  - extract-voice-dna       # Fase 3a — executada por @innerlens
+  - extract-thinking-dna    # Fase 3b — executada por @cognitive-motor
+  - extract-dna-enriched    # Fase 3 orquestracao (chama as 2 acima)
   - infer-drivers
   - map-psychometrics
   - aggregate-profile
   - gap-analysis-questionnaire
-  - validate-clone-forge
+  - validate-clone-forge    # Fase 7 orquestracao
+  - fidelity-score          # Fase 7 sub-task: scoring detalhado 8 camadas
+  - validate-clone          # Fase 7 sub-task: blind test + hackability + authenticity
+  - clone-review            # Audit completo de clone existente
   - generate-agent-from-profile
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -116,10 +119,9 @@ quality_gates:
 # ═══════════════════════════════════════════════════════════════════════════════
 
 dependencies:
-  required:
-    - squad-creator  # Voice DNA, Thinking DNA, Smoke Tests
+  required: []  # Squad self-contained — nenhuma dependencia obrigatoria
   optional:
-    - # assessments formais (se squad de assessment instalado)
+    - zona-genialidade  # Assessments psicometricos formais (enriquece Fase 5)
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # PIPELINE OVERVIEW (11 PHASES)
@@ -140,7 +142,7 @@ pipeline:
     - phase: 1
       name: "Coleta e Validacao de Fontes"
       task: collect-and-merge-sources
-      agent: "@oalanicolas (external)"
+      agent: clone-forge-chief
       blocking: true
       duration: "30-60min"
     - phase: 1.5
@@ -158,7 +160,7 @@ pipeline:
     - phase: 3
       name: "Extracao de DNA"
       task: extract-dna-enriched
-      agent: "@oalanicolas (external)"
+      agent: "innerlens + cognitive-motor"
       blocking: true
       duration: "2-4h"
     - phase: 4
@@ -188,7 +190,7 @@ pipeline:
     - phase: 7
       name: "Validacao"
       task: validate-clone-forge
-      agent: "@oalanicolas + @pedro-valerio (external)"
+      agent: clone-forge-chief
       blocking: true
       duration: "30min"
     - phase: 8

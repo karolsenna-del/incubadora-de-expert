@@ -1,7 +1,7 @@
 /**
  * Squad Migrator Utility
  *
- * Migrates legacy squad formats to AIOS 2.1 standard.
+ * Migrates legacy squad formats to Auroq 2.1 standard.
  * Handles manifest, structure, and task format migrations.
  *
  * Used by: squad-creator agent (*migrate-squad task)
@@ -228,32 +228,32 @@ class SquadMigrator {
       const content = await fs.readFile(manifestPath, 'utf-8');
       const manifest = yaml.load(content);
 
-      // Check for missing aios.type
-      if (!manifest.aios?.type) {
+      // Check for missing auroq.type
+      if (!manifest.auroq?.type) {
         analysis.needsMigration = true;
         analysis.issues.push({
-          type: 'MISSING_AIOS_TYPE',
-          message: 'Missing required field: aios.type',
+          type: 'MISSING_AUROQ_TYPE',
+          message: 'Missing required field: auroq.type',
           severity: 'error',
         });
         analysis.actions.push({
           type: 'ADD_FIELD',
-          path: 'aios.type',
+          path: 'auroq.type',
           value: 'squad',
         });
       }
 
-      // Check for missing aios.minVersion
-      if (!manifest.aios?.minVersion) {
+      // Check for missing auroq.minVersion
+      if (!manifest.auroq?.minVersion) {
         analysis.needsMigration = true;
         analysis.issues.push({
           type: 'MISSING_MIN_VERSION',
-          message: 'Missing required field: aios.minVersion',
+          message: 'Missing required field: auroq.minVersion',
           severity: 'error',
         });
         analysis.actions.push({
           type: 'ADD_FIELD',
-          path: 'aios.minVersion',
+          path: 'auroq.minVersion',
           value: '2.1.0',
         });
       }

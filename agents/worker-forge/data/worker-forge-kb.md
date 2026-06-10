@@ -1,6 +1,6 @@
 # Worker Forge — Knowledge Base
 
-> Fabrica de funcionarios digitais. Transforma descricoes de cargo em workers AIOS operacionais com KB viva.
+> Fabrica de funcionarios digitais. Transforma descricoes de cargo em workers Auroq operacionais com KB viva.
 
 ---
 
@@ -130,7 +130,7 @@ Isso e literalmente o que o Worker Forge faz — cada funcao vira um worker com 
 
 ### Work the System (Sam Carpenter)
 3 documentos: Strategic Objective (system prompt), Operating Principles (rules), Working Procedures (tasks).
-Mapeamento direto pro AIOS: context pack, strict rules, tasks.
+Mapeamento direto pro Auroq: context pack, strict rules, tasks.
 
 ### EOS/Traction (Gino Wickman)
 Accountability Chart + Rocks + Scorecard.
@@ -156,7 +156,7 @@ Learning-by-doing: comeca com minimo, constroi tools + KB conforme encontra gaps
 
 ### Strands SOPs (AWS)
 Workflows em markdown com linguagem natural + keywords RFC 2119.
-Validacao do formato AIOS de tasks.
+Validacao do formato Auroq de tasks.
 
 ### Letta/MemGPT
 Agente que gerencia propria memoria — decide o que lembrar/esquecer.
@@ -249,7 +249,7 @@ Na task `discover-needs`, APOS consolidar o discovery_summary e ANTES da confirm
 | 4. Autonomia | Delegation map resumido (Appelo levels) | Discovery lens D4 |
 | 5. Metricas | Criterios de sucesso mensuráveis | Discovery lens D5 |
 | 6. Restricoes | O que NAO faz, boundaries explicitas | Discovery consolidacao |
-| 7. Fontes Internas | Paths de processos/docs existentes no AIOS | Coleta interna |
+| 7. Fontes Internas | Paths de processos/docs existentes no Auroq | Coleta interna |
 | 8. Gaps Conhecidos | Duvidas nao resolvidas, informacao faltante | Gap analysis |
 
 ### Quem referencia

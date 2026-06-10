@@ -3,13 +3,19 @@ business/vault/
 .env
 .env.local
 .env.*.local
+.npmrc
 
 # Node
 node_modules/
 npm-debug.log*
 
-# Sessoes do Synapse (efemeras)
+# Auroq runtime
+.auroq/
 .synapse/sessions/
+.tmp/
+
+# Codex CLI skills geradas (regeneradas no init / por "auroq-os sync-codex")
+.agents/skills/
 
 # Sistema operacional
 .DS_Store
@@ -18,7 +24,11 @@ Thumbs.db
 # Temporários
 *.tmp
 *.log
+*-snapshot.md
 .playwright-mcp/
+
+# Backups locais pré-sync (não vão pro npm/git)
+_backup-pre-sync/
 
 # Arquivos de mídia (binários pesados — ficam local, nao no git)
 *.mp3

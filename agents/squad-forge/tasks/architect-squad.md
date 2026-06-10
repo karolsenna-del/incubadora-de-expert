@@ -6,6 +6,9 @@ atomic_layer: "task"
 Entrada: "02-process-map/process-map.yaml, 01-extraction/process-units.yaml"
 Saida: "03-blueprint/squad-blueprint.yaml, agent-decomposition.md, task-mapping.md"
 Checklist:
+  - "PRD gerado em docs/prd/squad-{slug}.md (Article III Constitution)"
+  - "Stories geradas em docs/stories/squad-forge/{slug}/"
+  - "Tracker criado em business/campanhas/squad-{slug}/tracker.md (Project Tracker Protocol)"
   - "1-7 agentes definidos com rationale"
   - "Cada PU-STEP mapeado para exatamente 1 task"
   - "Cada PU-DECISION mapeado para decision point ou gate"
@@ -28,7 +31,7 @@ execution_type: "semantic"
 
 ## Executive Summary
 
-Fase 3 do pipeline Squad Forge. O @forge-smith recebe o process map validado e transforma em arquitetura de squad AIOS: decompoe em agentes, mapeia PUs para tasks, desenha workflow e quality gates. Output: squad blueprint pronto pra montagem.
+Fase 3 do pipeline Squad Forge. O @forge-smith recebe o process map validado e transforma em arquitetura de squad Auroq: decompoe em agentes, mapeia PUs para tasks, desenha workflow e quality gates. Output: squad blueprint pronto pra montagem.
 
 **Posicao no Workflow:** Fase 3 — Apos Playback (Fase 2), antes de Montagem (Fase 4)
 **Definicao de Sucesso:** Blueprint coerente com cada PU mapeado, sem dependencia circular
@@ -48,35 +51,41 @@ Ter um processo extraido e validado nao e o mesmo que ter um squad. Alguem preci
 architect-squad
   |
   v
+STEP 0: GENERATE PRD (sub-task)
+  docs/prd/squad-{slug}.md (FRs, NFRs, CONs, SCs)
+  |
+  v
 STEP 1: ANALYZE PROCESS MAP
-  Ler PUs, dependencias, complexidade
   |
   v
 STEP 2: IDENTIFY CLUSTERS
-  Agrupar PUs por area de responsabilidade
   |
   v
 STEP 3: DEFINE AGENTS
-  1-7 agentes com roles claros
   |
   v
-STEP 4: MAP PUs TO TASKS + KB (dual mapping)
-  PU-STEPs -> tasks + KB, DECISIONs -> decision points + decision trees
+STEP 4: MAP PUs TO TASKS AND KB (dual mapping)
   |
   v
 STEP 5: PLANEJAR KNOWLEDGE BASE
-  Checar ETL existente, mapear PUs operacionais pra KB
   |
   v
 STEP 6: DESIGN WORKFLOW
-  Fases, quality gates, human touchpoints
   |
   v
 STEP 7: GENERATE BLUEPRINT
   squad-blueprint.yaml + kb-plan.md
   |
   v
-QUALITY GATE: QG-SF-003
+STEP 8: GENERATE STORIES (sub-task)
+  docs/stories/squad-forge/{slug}/*.story.md
+  |
+  v
+STEP 9: CREATE PROJECT TRACKER
+  business/campanhas/squad-{slug}/tracker.md
+  |
+  v
+QUALITY GATE: QG-SF-003 (inclui PRD + Stories + Tracker)
   |
   v
 HANDOFF -> assemble-squad
@@ -85,6 +94,19 @@ HANDOFF -> assemble-squad
 ---
 
 ## Step-by-Step Execution
+
+### Step 0: Generate PRD (delegacao para sub-task)
+
+> **Story-Driven Development — Article III da Constitution Auroq.**
+>
+> ANTES de decompor em agentes, gerar PRD do squad. Sem PRD, decisoes arquiteturais ficam implicitas.
+
+Executar sub-task: `tasks/generate-prd.md`
+
+**Inputs:** `02-process-map/process-map.yaml`, `01-extraction/process-units.yaml`
+**Output:** `docs/prd/squad-{slug}.md` com FRs/NFRs/CONs/SCs rastreaveis aos PUs
+
+**Bloqueante:** se PRD nao for gerado, QG-SF-003 falha.
 
 ### Step 1: Analyze Process Map
 
@@ -150,7 +172,9 @@ agent:
 - Criar agente separado pros agent-only
 - Human touchpoints ficam como tasks interativas no orchestrator
 
-### Step 4: Map PUs to Tasks
+### Step 4: Map PUs to Tasks and KB (dual mapping)
+
+> O titulo deste step bate com o Pipeline Visual: cada PU tem destino DUPLO — estrutura do squad (tasks/workflow) E knowledge base. Aqui voce decide a tabela de mapeamento. No Step 5 voce planeja o conteudo concreto da KB.
 
 **Regra de mapeamento (DUAL — Tasks + KB):**
 
@@ -190,20 +214,26 @@ Cada PU alimenta DOIS destinos: a estrutura do squad (tasks/workflow) E a knowle
 
 **ANTES de desenhar o workflow, planejar a KB do squad.**
 
-**5a: Checar ETL existente**
+**5a: Checar fontes externas (build-time inputs)**
+
+> **REGRA AUTOCONTIDO ativa.** Fontes externas detectadas aqui sao **build-time inputs** — Smith vai LER em build-time e ESCREVER conteudo novo dentro de `squads/{name}/data/`. Squad runtime NAO referencia esses paths. Ver REGRA AUTOCONTIDO no `agents/forge-smith.md`.
 
 ```bash
-# Checar se ja existe knowledge produzido pelo ETLmaker
-ls docs/knowledge/expert-business/*{slug}*/ 2>/dev/null
-ls agents/etlmaker/kbs/*{slug}*/ 2>/dev/null
+# Checar fontes externas relevantes
+ls docs/knowledge/euriler-business/*{slug}*/ 2>/dev/null
+ls docs/knowledge/euriler-mind/*{slug}*/ 2>/dev/null
+ls squads/etlmaker/kbs/*{slug}*/ 2>/dev/null
+# Outras: business/, ~/euriler-brain/, etc
 ```
 
-Se existir:
-- Mapear quais volumes/secoes do ETL sao relevantes pro escopo do squad
-- Marcar como "incorporar na KB" no blueprint
-- A KB do squad sera subconjunto RICO do ETL (nao resumo raso)
+Se fonte existir, planejar **incorporacao** (NAO referencia):
 
-Se nao existir:
+- Mapear quais volumes/secoes/arquivos sao relevantes pro escopo do squad
+- Marcar como "internalizar em build-time" no blueprint (`kb_plan.internalize_from`)
+- Definir como conteudo sera **sintetizado e adaptado** ao contexto dos agentes
+- Output: arquivos novos em `squads/{name}/data/{nome-tematico}.md`, NAO links
+
+Se fonte nao existir:
 - KB sera composta a partir dos PUs (Step 6c do assemble-squad)
 
 **5b: Identificar PUs que alimentam a KB**
@@ -226,9 +256,13 @@ kb_plan:
   troubleshooting:
     - pu_id: "PU-EXCEPTION-xxx"
       content: "{diagnostico}"
-  etl_volumes:
-    - path: "{caminho do volume ETL}"
+  internalize_from:
+    # Build-time inputs — fontes externas que serao LIDAS, ADAPTADAS e ESCRITAS dentro de squads/{name}/data/
+    # Squad runtime NAO referencia esses paths. REGRA AUTOCONTIDO.
+    - source_path: "{caminho da fonte externa em build-time}"
       sections: ["{secoes relevantes}"]
+      target_file: "squads/{name}/data/{nome-tematico}.md"
+      adaptation: "{Como esse conteudo sera sintetizado pra os agentes do squad}"
 ```
 
 Incluir `kb_plan` no blueprint (Step 7).
@@ -265,12 +299,64 @@ Tambem gerar:
 - `03-blueprint/task-mapping.md` — tabela PU → task (estrutura)
 - `03-blueprint/kb-plan.md` — plano de KB: PUs que alimentam a KB + volumes ETL a incorporar
 
-### Step 8: Quality Gate — QG-SF-003
+### Step 8: Generate Stories (delegacao para sub-task)
+
+> **Story-Driven Development continuacao do Step 0.**
+>
+> Apos Blueprint, gerar stories de implementacao que servirao como tracker durante a Fase 4 (Assembly).
+
+Executar sub-task: `tasks/generate-stories.md`
+
+**Inputs:** `docs/prd/squad-{slug}.md`, `03-blueprint/squad-blueprint.yaml`
+**Output:** `docs/stories/squad-forge/{slug}/0.0.epic.story.md` + 1 story por fase do squad gerado
+
+**Bloqueante:** se stories nao forem geradas, QG-SF-003 falha. Fase 4 vai usar essas stories como tracker.
+
+### Step 9: Create Project Tracker (Project Tracker Protocol)
+
+> **Cumprir `.claude/rules/project-tracker-protocol.md`.**
+
+Criar tracker em `business/campanhas/squad-{slug}/tracker.md`:
+
+```markdown
+# Tracker: Squad {Title}
+
+**Projeto:** Criacao do squad {title}
+**Iniciado:** {ISO}
+**Status:** Em andamento
+**PRD:** docs/prd/squad-{slug}.md
+**Stories:** docs/stories/squad-forge/{slug}/
+**Squad em construcao:** minds/{slug}/04-squad/ (Fase 4 ainda nao executada)
+
+## Fases
+
+- [x] Fase 0: Setup
+- [x] Fase 1: Extracao ({total_pus} PUs)
+- [x] Fase 2: Playback validado
+- [x] Fase 3: Arquitetura + PRD + Stories
+- [ ] Fase 4: Assembly
+- [ ] Fase 5: Validacao + Instalacao
+
+## BLOCKERS
+
+(nenhum no momento)
+
+## LOG
+
+- {data} — @forge-smith: PRD gerado, blueprint salvo, stories criadas
+```
+
+**Avisar Euriler** que squad-{slug} foi adicionado como projeto — manualmente entrar no cockpit ou aguardar review.
+
+### Step 10: Quality Gate — QG-SF-003
 
 **Criterios:**
 
 | Criterio | Obrigatorio |
 |----------|-------------|
+| PRD gerado em docs/prd/squad-{slug}.md | Sim (Story-Driven) |
+| Stories geradas em docs/stories/squad-forge/{slug}/ | Sim (Story-Driven) |
+| Tracker criado em business/campanhas/squad-{slug}/tracker.md | Sim (Project Tracker Protocol) |
 | 1-7 agentes definidos | Sim |
 | Cada PU-STEP mapeado para exatamente 1 task | Sim |
 | Cada PU-DECISION mapeado para decision point ou gate | Sim |
@@ -283,6 +369,9 @@ Tambem gerar:
 | ETL existente identificado e marcado pra incorporacao | Sim (se existir) |
 
 **Veto conditions:**
+- PRD ausente (`docs/prd/squad-{slug}.md` nao existe)
+- Stories ausentes (`docs/stories/squad-forge/{slug}/` vazio)
+- Tracker ausente (`business/campanhas/squad-{slug}/tracker.md` nao existe)
 - 0 tasks geradas
 - Dependencia circular detectada
 - >50% das tasks sao Hybrid (sugere decomposicao confusa)
@@ -295,9 +384,14 @@ Tambem gerar:
 
 | Arquivo | Conteudo |
 |---------|----------|
+| `docs/prd/squad-{slug}.md` | PRD do squad (FRs/NFRs/CONs/SCs) |
+| `docs/stories/squad-forge/{slug}/0.0.epic.story.md` | Story principal (5 ACs = 5 QGs) |
+| `docs/stories/squad-forge/{slug}/{N}.story.md` | 1 story por fase do squad gerado |
+| `business/campanhas/squad-{slug}/tracker.md` | Tracker do projeto |
 | `03-blueprint/squad-blueprint.yaml` | Arquitetura completa |
 | `03-blueprint/agent-decomposition.md` | Rationale dos agentes |
 | `03-blueprint/task-mapping.md` | Mapeamento PU → task |
+| `03-blueprint/kb-plan.md` | Plano da knowledge base |
 
 ---
 

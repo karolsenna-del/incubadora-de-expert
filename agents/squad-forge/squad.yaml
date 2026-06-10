@@ -1,6 +1,6 @@
 # ═══════════════════════════════════════════════════════════════════════════════
 # SQUAD: Squad Forge
-# Extrai processos complexos da cabeca do dono e transforma em squads AIOS
+# Extrai processos complexos da cabeca do dono e transforma em squads Auroq
 # ═══════════════════════════════════════════════════════════════════════════════
 
 name: squad-forge
@@ -10,12 +10,12 @@ author: "Euriler Jube"
 description: >
   Squad especialista em extracao profunda de processos e metodologias
   proprietarias do usuario. Combina arqueologia de processos (8 lentes
-  de extracao iterativa) com construcao AIOS (estrutura nuclear de squads).
+  de extracao iterativa) com construcao Auroq (estrutura nuclear de squads).
   Transforma conhecimento tacito em squads funcionais e validados.
 
 slash_prefix: "squadForge"
 pattern_prefix: "PF"
-target_user: "Empreendedores e experts que tem processos complexos na cabeca e querem transforma-los em squads AIOS"
+target_user: "Empreendedores e experts que tem processos complexos na cabeca e querem transforma-los em squads Auroq"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # USE CASES
@@ -49,8 +49,14 @@ tasks:
   - extract-process
   - playback-validate
   - architect-squad
+  - generate-prd          # sub-task da Fase 3 (Article III Constitution)
+  - generate-stories      # sub-task da Fase 3 (Story-Driven)
   - assemble-squad
   - validate-squad
+  - update-squad          # modo *update (Fase 4 do plano de correcao)
+  - fix-squad             # modo *fix
+  - rebuild-squad         # modo *rebuild
+  - self-test             # *self-test (Fase 6 do plano de correcao)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # WORKFLOWS
@@ -152,7 +158,7 @@ pipeline:
 # OUTPUT STRUCTURE
 # ─────────────────────────────────────────────────────────────────────────────
 output:
-  base_path: "agents/squad-forge/minds/{process_slug}/"
+  base_path: "squads/squad-forge/minds/{process_slug}/"
   directories:
     - "01-extraction/"
     - "02-process-map/"

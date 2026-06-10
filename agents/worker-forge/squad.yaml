@@ -1,7 +1,7 @@
 # ═══════════════════════════════════════════════════════════════════════════
 # SQUAD: Worker Forge
 # Fabrica de funcionarios digitais. Transforma descricoes de cargo em
-# workers AIOS operacionais com KB viva que cresce a cada missao.
+# workers Auroq operacionais com KB viva que cresce a cada missao.
 # ═══════════════════════════════════════════════════════════════════════════
 
 name: "worker-forge"
@@ -57,7 +57,7 @@ quality_gates:
     criteria: "Usuario aprovou proposta completa do worker"
 
   - id: "QG-WF-004"
-    name: "AIOS Structure Valid"
+    name: "Auroq Structure Valid"
     transition: "phase_4 -> phase_5"
     blocking: true
     criteria: "Validator pass, 0 errors"

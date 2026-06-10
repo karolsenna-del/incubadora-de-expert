@@ -2,7 +2,7 @@
 # MIU Classification Taxonomy
 # ═══════════════════════════════════════════════════════════════════════════════
 # Define os tipos de MIU (Minimum Inference Unit), regras de classificacao,
-# criterios de validacao e rejeicao. Baseado no InnerLens do Alan.
+# criterios de validacao e rejeicao.
 # ═══════════════════════════════════════════════════════════════════════════════
 
 version: "1.0.0"
@@ -58,7 +58,7 @@ categories:
   STORYTELLING:
     description: "Historias pessoais, anedotas, casos de uso, exemplos concretos"
     examples:
-      - "Quando comecou o negocio, nao tinha nem site"
+      - "Quando comecou a Arka, nao tinha nem site"
       - "O caso da Lisiane: de R$3k pra R$30k em 6 meses"
       - "A historia do dia que quase desistiu"
     feeds_into:

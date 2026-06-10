@@ -3,8 +3,8 @@
 **Gate ID:** QG-005
 **Phase:** 7 (Validacao)
 **Blocking:** YES
-**Agents:** @oalanicolas + @pedro-valerio (external)
-**Checklist:** 21 items
+**Agents:** @clone-forge-chief (orquestra) + @innerlens + @cognitive-motor
+**Checklist:** 20 items
 
 ---
 
@@ -31,7 +31,7 @@
 
 ---
 
-## B. Smoke Tests (3 obrigatorios) — @oalanicolas
+## B. Smoke Tests (3 obrigatorios) — @clone-forge-chief (orquestra) + @innerlens (voz) + @cognitive-motor (raciocinio)
 
 ### Teste 1: Conhecimento do Dominio
 
@@ -71,7 +71,7 @@
 
 ---
 
-## C. Blind Test — @pedro-valerio
+## C. Blind Test — @clone-forge-chief (com humanos externos)
 
 - [ ] **Preparar 3 respostas do clone + 3 respostas reais do expert**
   - Misturar sem identificar qual e qual
@@ -89,7 +89,7 @@
 
 ---
 
-## D. Fidelidade (8 Camadas) — @oalanicolas
+## D. Fidelidade (8 Camadas) — @clone-forge-chief
 
 Avaliar cada camada de 1 a 5:
 
@@ -158,10 +158,3 @@ Fidelidade = (Observable + Cognitive + Deep) / 3 * 20  # Escala 0-100
 4. Re-validar
 5. Max 3 tentativas totais antes de escalar ao usuario
 
----
-
-## Squad Creator Integrity Check
-
-- [ ] **`git diff agents/squad-creator/` retorna vazio**
-  - Clone Forge NUNCA modifica o Squad Creator Premium
-  - Se houver diff, reverter IMEDIATAMENTE

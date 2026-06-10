@@ -2,24 +2,25 @@
 
 > Principios inegociaveis do framework. Governam o comportamento de todos os agentes, squads, workers e minds dentro do Auroq OS.
 
-**Version:** 1.0.0
+**Version:** 2.0.0
 **Status:** Active
-**Effective Date:** 2026-03-16
+**Effective Date:** 2026-06-09
 
 ---
 
-## Artigo I — Claude Code e o Centro de Comando
+## Artigo I — O Terminal e o Centro de Comando
 
 **Severity:** NON-NEGOTIABLE
 **Gate:** WARN
 
-Toda operacao do negocio passa pelo Claude Code no terminal. Claude Code e o centro de comando — o SO de IA materializado. Ferramentas externas (ManyChat, Hotmart, Meta Ads, N8N, etc.) sao **bracos e pernas**, nao centros alternativos.
+Toda operacao do negocio passa pelo Auroq OS no terminal. Claude Code e Codex CLI sao runtimes oficiais e equivalentes para acessar o sistema. O centro de comando e o projeto Auroq — seus documentos, agentes, regras e memoria — nao um fornecedor especifico. Ferramentas externas (ManyChat, Hotmart, Meta Ads, N8N, etc.) sao **bracos e pernas**, nao centros alternativos.
 
 **Implicacoes:**
-- Decisoes estrategicas: dentro do Claude Code com o Companion
-- Planejamento: dentro do Claude Code com documentos .md
-- Execucao operacional: Claude Code coordena, ferramentas executam
+- Decisoes estrategicas: dentro do Auroq OS com o Companion, via Claude Code ou Codex
+- Planejamento: dentro do projeto com documentos .md
+- Execucao operacional: o runtime escolhido coordena, ferramentas executam
 - Memoria e contexto: persistem no Exocortex (pastas e documentos locais)
+- Uma sessao usa um runtime por vez; a troca de runtime nao muda as fontes de verdade
 
 **Violacao:** Operar o negocio exclusivamente em ferramentas externas sem documentar no sistema.
 

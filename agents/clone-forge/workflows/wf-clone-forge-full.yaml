@@ -12,12 +12,13 @@ complexity: high
 resumable: true
 
 description: |
-  Pipeline completo de clonagem cognitiva que combina 3 abordagens:
-  (1) Squad Creator Premium — Voice DNA + Thinking DNA + Smoke Tests
-  (2) POC v1.1 — Ontologia de Conhecimento em 4 camadas + 6 modulos contextuais
-  (3) Pipeline do Alan — MIU semantic chunking + drivers psicologicos + mapeamento psicometrico
+  Pipeline completo de clonagem cognitiva self-contained que combina 3 dimensoes:
+  (1) Linguistica — Voice DNA (vocabulario, sintaxe, registro, ritmo, frases-assinatura)
+  (2) Cognitiva — Thinking DNA + drivers psicologicos + mapeamento psicometrico
+  (3) Ontologica — POC v1.1 com 4 camadas + 6 modulos contextuais
 
   Produz clone multi-arquivo em minds/{slug}/ com 30+ arquivos organizados em 8 pastas.
+  Sem dependencias de squads externos.
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # SPECIALIST AGENTS
@@ -43,48 +44,28 @@ specialists:
 
   semantic_extractor:
     agent: "@innerlens"
-    role: "Semantic Extractor"
+    role: "Semantic Extractor + Voice DNA"
     responsibilities:
       - "Extracao de MIUs zero-inference"
       - "Classificacao e validacao"
       - "Proveniencia por item"
+      - "Extracao de Voice DNA (vocabulario, sintaxe, registro, ritmo, frases-assinatura)"
     invoke_for:
       - "Phase 2: MIU Extraction"
+      - "Phase 3a: Voice DNA Extraction"
 
   psychological_motor:
     agent: "@cognitive-motor"
-    role: "Psychological Motor"
+    role: "Psychological Motor + Thinking DNA"
     responsibilities:
       - "Inferencia de drivers psicologicos"
       - "Mapeamento psicometrico"
       - "Deteccao de relacoes entre drivers"
+      - "Extracao de Thinking DNA (modelos mentais, raciocinio, heuristicas)"
     invoke_for:
+      - "Phase 3b: Thinking DNA Extraction"
       - "Phase 4: Driver Inference"
       - "Phase 5: Psychometric Mapping"
-
-  external_knowledge_architect:
-    agent: "@oalanicolas"
-    role: "Knowledge Architect (Squad Creator)"
-    squad: "squad-creator"
-    responsibilities:
-      - "Curadoria de fontes (ouro vs bronze)"
-      - "Extracao de Voice DNA + Thinking DNA"
-      - "Validacao de fidelidade"
-    invoke_for:
-      - "Phase 1: Source Collection"
-      - "Phase 3: DNA Extraction"
-      - "Phase 7: Validation (smoke tests)"
-
-  external_process_validator:
-    agent: "@pedro-valerio"
-    role: "Process Absolutist (Squad Creator)"
-    squad: "squad-creator"
-    responsibilities:
-      - "Validacao de processos"
-      - "Blind test design"
-      - "Quality gate enforcement"
-    invoke_for:
-      - "Phase 7: Validation (blind test, fidelity)"
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # INPUTS
@@ -97,7 +78,7 @@ inputs:
   optional:
     - sources_path: "Caminho para conteudo local ja existente"
     - subject_present: "true|false — pessoa esta disponivel para entrevista? (default: false)"
-    - formal_assessments: "Lista de assessments formais disponiveis (se instalados)"
+    - formal_assessments: "Lista de assessments formais disponiveis (ex: zona-genialidade)"
     - mode: "full|quick (default: full)"
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -119,7 +100,7 @@ phases:
 
     purpose: |
       Aceita qualquer formato: video, audio, PDF, docs, texto, YouTube,
-      redes sociais, AIOS skills, assessments. Normaliza tudo para markdown.
+      redes sociais, Auroq skills, assessments. Normaliza tudo para markdown.
 
     steps:
       - step: 1
@@ -150,26 +131,26 @@ phases:
     name: "Coleta e Validacao de Fontes"
     duration: "30-60 min"
     task: "collect-and-merge-sources.md"
-    agent: "@oalanicolas"
+    agent: "@clone-forge-chief"
     blocking: true
 
     purpose: |
-      Wrapper do Squad Creator collect-sources.md. Merge fontes locais
-      (Fase 0) com fontes web. Classifica tudo por tier.
+      Classifica fontes locais (Fase 0) e fontes web fornecidas pelo usuario
+      (URLs, transcripts colados) por tier. Sem coleta web automatizada —
+      usuario fornece o que tem, chief classifica.
 
     steps:
       - step: 1
         action: "Carregar fontes locais de Phase 0 (se existirem)"
       - step: 2
-        action: "Executar source discovery via @oalanicolas"
-        specialist: "@oalanicolas"
+        action: "Pedir ao usuario URLs/transcripts adicionais (opcional)"
+        elicit: true
       - step: 3
-        action: "Merge local + web em inventario unificado"
+        action: "Merge local + web fornecidas em inventario unificado"
       - step: 4
-        action: "Classificar por tier (0-3)"
-        specialist: "@oalanicolas"
+        action: "Classificar por tier (0-3) usando 5 dimensoes de curadoria"
       - step: 5
-        action: "Validar cobertura"
+        action: "Validar cobertura (10+ fontes, 5+ Tier 1, 3+ tipos)"
 
     checkpoint:
       gate: "QG-001 SOURCE_QUALITY"
@@ -302,26 +283,28 @@ phases:
     name: "Extracao de DNA Enriched"
     duration: "2-4 horas"
     task: "extract-dna-enriched.md"
-    agent: "@oalanicolas"
+    agent: "@innerlens + @cognitive-motor"
     blocking: true
 
     purpose: |
-      Wrapper do Squad Creator Voice DNA + Thinking DNA, enriquecido com MIUs.
-      Tambem extrai conhecimento implicito.
+      Voice DNA pelo @innerlens + Thinking DNA pelo @cognitive-motor,
+      enriquecidos com MIUs categorizados. Tambem extrai conhecimento implicito.
 
     steps:
       - step: 1
         action: "Carregar MIUs como contexto adicional"
       - step: 2
-        action: "Extrair Voice DNA via @oalanicolas"
-        specialist: "@oalanicolas"
+        action: "Extrair Voice DNA"
+        specialist: "@innerlens"
       - step: 3
-        action: "Extrair Thinking DNA via @oalanicolas"
-        specialist: "@oalanicolas"
+        action: "Extrair Thinking DNA"
+        specialist: "@cognitive-motor"
       - step: 4
         action: "Extrair conhecimento implicito"
+        specialist: "@clone-forge-chief"
       - step: 5
         action: "Sintetizar DNA combinado"
+        specialist: "@clone-forge-chief"
 
     checkpoint:
       gate: "QG-003 DNA_QUALITY"
@@ -531,7 +514,7 @@ phases:
     name: "Validacao"
     duration: "30 min"
     task: "validate-clone-forge.md"
-    agent: "@oalanicolas + @pedro-valerio"
+    agent: "@clone-forge-chief"
     blocking: true
 
     purpose: |
@@ -582,7 +565,6 @@ phases:
         - "Traceability Audit Layer 2 PASS"
         - "Smoke tests 3/3 PASS"
         - "Fidelidade >= 80%"
-        - "Squad Creator intocado (git diff vazio)"
 
     rework:
       max_iterations: 3
@@ -689,23 +671,8 @@ overall_pass: |
 # ═══════════════════════════════════════════════════════════════════════════════
 
 dependencies:
-  required:
-    - squad: "squad-creator"
-      agents: ["@oalanicolas", "@pedro-valerio"]
-      tasks: ["collect-sources.md", "extract-voice-dna.md", "extract-thinking-dna.md"]
-      constraint: "NEVER modify squad-creator files"
+  required: []  # Squad self-contained — sem dependencias obrigatorias
   optional:
-    - squad: "{assessment-squad}" # se instalado
+    - squad: "zona-genialidade"
       usage: "Formal psychometric assessments"
       integration: "Phase 5 — merge estimated with assessed data"
-
-# ═══════════════════════════════════════════════════════════════════════════════
-# INTEGRITY CHECK
-# ═══════════════════════════════════════════════════════════════════════════════
-
-integrity:
-  squad_creator_protection:
-    check: "git diff agents/squad-creator/"
-    expected: "empty"
-    enforcement: "Run at Phase 7 validation"
-    action_if_violated: "BLOCK — revert changes immediately"

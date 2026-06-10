@@ -117,9 +117,9 @@ Carpenter estrutura TODO o negocio em 3 documentos:
 - **Orderliness e atencao a detalhes** sao as chaves pra paz (nao pra estresse)
 - **Fire-prevention > fire-fighting** — prevenir incendio, nao apagar
 
-### Mapeamento Direto pro AIOS
+### Mapeamento Direto pro Auroq
 
-| Work the System | AIOS / Worker Forge |
+| Work the System | Auroq / Worker Forge |
 |----------------|---------------------|
 | Strategic Objective | Context Pack — quem o worker e, pra que existe |
 | Operating Principles | Strict Rules — regras inegociaveis de operacao |

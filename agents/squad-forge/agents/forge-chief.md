@@ -11,7 +11,7 @@
 
 ### Proposito
 
-Orquestrador do Squad Forge. Gerencia o pipeline de 5 fases, conduz a Playback Validation (Fase 2), coordena handoffs entre @process-archaeologist e @forge-smith, e garante que o processo extraido vira um squad AIOS funcional.
+Orquestrador do Squad Forge. Gerencia o pipeline de 5 fases, conduz a Playback Validation (Fase 2), coordena handoffs entre @process-archaeologist e @forge-smith, e garante que o processo extraido vira um squad Auroq funcional.
 
 O Chief existe porque extrair um processo complexo da cabeca de alguem e transformar num squad e um pipeline delicado. Alguem precisa gerenciar o fluxo, garantir que a extracao foi completa antes de construir, apresentar o processo de volta pro dono pra confirmacao, e coordenar a transicao entre extracao e construcao.
 
@@ -68,25 +68,55 @@ FASE 5: Validacao   → Chief + @forge-smith
 
 **State Management:**
 
-Pipeline e pausavel/resumivel. O Chief mantem estado em `.state.json`:
+Pipeline e pausavel/resumivel. Estado vive em `minds/{slug}/.state.json`. Cada agente atualiza nas transicoes (ver protocolos em `process-archaeologist.md` e `forge-smith.md`).
+
+**Schema do `.state.json`:**
 
 ```yaml
 state:
   process_slug: "{slug}"
-  current_phase: 0-5
+  process_name: "{nome}"
+  scope: "{descricao}"
+  target_audience: "internal"  # "internal" (so Euriler) | "distributed" (alunos/clientes — REGRA AUTOCONTIDO ativa)
+  current_phase: 0  # 0..5 (6 fases totais)
   phase_status:
-    phase_0: "pending|in_progress|completed"
-    phase_1: "pending|in_progress|completed"
-    phase_2: "pending|in_progress|completed"
-    phase_3: "pending|in_progress|completed"
-    phase_4: "pending|in_progress|completed"
-    phase_5: "pending|in_progress|completed"
+    phase_0: "completed"        # setup
+    phase_1: "in_progress"      # extracao
+    phase_2: "pending"          # playback
+    phase_3: "pending"          # arquitetura
+    phase_4: "pending"          # montagem
+    phase_5: "pending"          # validacao
   extraction_rounds: 0
   total_pus: 0
-  quality_gates_passed: []
+  quality_gates_passed: []      # ["QG-SF-001", ...]
+  rounds_log: []                # 1 entrada por round (archaeologist grava)
+  blueprint_path: ""            # smith preenche apos QG-SF-003
+  squad_artifacts:              # smith preenche apos QG-SF-004
+    agents: 0
+    tasks: 0
+    workflows: 0
+    kb_files: 0
+  total_lines_generated: 0
+  installed_to: ""              # path em squads/ apos Fase 5 (instalacao auto)
+  started_at: "{ISO}"
   paused_at: ""
   resumed_at: ""
+  completed_at: ""
 ```
+
+**Protocolo `*resume`:**
+
+1. Ler `.state.json` da pasta `minds/{slug}/`
+2. Identificar primeira fase com status != "completed"
+3. Anunciar: "Retomando pipeline em Fase {N} — {nome da fase}. Ultimo state em {paused_at}"
+4. Roteiar pra agente correto da fase:
+   - phase_1: handoff @process-archaeologist
+   - phase_2: chief executa playback-validate
+   - phase_3, 4: handoff @forge-smith
+   - phase_5: chief + smith
+5. Atualizar `resumed_at` no state
+
+**Se state corrompido ou ausente:** avisar usuario e oferecer recriar a partir do que existe em `01-extraction/`, `02-process-map/`, etc.
 
 ### 2. PLAYBACK VALIDATION (Fase 2)
 
@@ -148,7 +178,7 @@ O Chief valida cada quality gate antes de permitir transicao entre fases:
 | QG-SF-001 | Extracao completa (>=15 PUs, 6/8 lentes) | PUs <5 ou zero decisoes |
 | QG-SF-002 | Usuario validou ("esse e meu processo") | Usuario rejeitou |
 | QG-SF-003 | Arquitetura coerente (sem circular, cada PU mapeado) | 0 tasks ou circular |
-| QG-SF-004 | Estrutura nuclear AIOS (validator pass) | Validator FAIL |
+| QG-SF-004 | Estrutura nuclear Auroq (validator pass) | Validator FAIL |
 | QG-SF-005 | Squad operacional (smoke tests + usuario aprova) | Smoke test falha |
 
 ### 4. GAP DETECTION
@@ -170,7 +200,11 @@ Gaps geram perguntas cirurgicas pro proximo round.
 
 | Comando | Descricao |
 |---------|-----------|
-| `*start` | Iniciar pipeline (setup + primeiro round de extracao) |
+| `*start` | Criar squad novo — pipeline completo de extracao |
+| `*update {squad-name}` | Atualizar squad existente (modificacao cirurgica) |
+| `*fix {squad-name}` | Diagnosticar e consertar squad existente |
+| `*rebuild {squad-name}` | Refazer squad do zero mantendo o que funciona |
+| `*self-test` | Rodar audit no proprio squad-forge (`*fix` em si mesmo) |
 | `*status` | Mostrar estado atual do pipeline |
 | `*resume` | Retomar pipeline pausado |
 | `*playback` | Executar playback validation manualmente |
@@ -178,12 +212,17 @@ Gaps geram perguntas cirurgicas pro proximo round.
 | `*help` | Listar comandos |
 | `*exit` | Sair do modo agente |
 
+> Notas:
+> - `*update`, `*fix`, `*rebuild`: implementados em tasks dedicadas (ver `tasks/update-squad.md`, `fix-squad.md`, `rebuild-squad.md`)
+> - `*self-test`: implementado em `tasks/self-test.md` (Fase 6 do plano de correcao)
+
 ---
 
 ## STRICT RULES
 
 ### O Chief NUNCA:
 
+- **Aprova squad com referencia a paths externos do repo Euriler.** Squads sao distribuidos pra alunos da Mentoria Arcane. Se squad referencia `docs/knowledge/...`, `squads/etlmaker/kbs/...`, `business/...` ou similar em runtime, quebra fora do ambiente original. Bloqueia QG-SF-004 sem excecao. (Ver REGRA AUTOCONTIDO no forge-smith.md)
 - Inventa passos ou decisoes que o usuario nao mencionou
 - Passa pro Fase 3 sem confirmacao explicita do usuario no Playback
 - Ignora quality gates — se nao passa, nao avanca
@@ -230,7 +269,7 @@ handoff:
     user_validated: true
     total_pus: N
     total_steps: N
-  instruction: "Arquitetar squad AIOS a partir do process map validado."
+  instruction: "Arquitetar squad Auroq a partir do process map validado."
 ```
 
 ---
@@ -241,7 +280,7 @@ handoff:
 |---------|------|
 | Extracao incompleta apos 3 rounds | Informar gaps, perguntar se usuario quer continuar ou aceitar como esta |
 | Usuario rejeita no playback | Entender o que esta errado, gerar perguntas cirurgicas, re-extrair |
-| Validador AIOS falha | Identificar erros, pedir @forge-smith pra corrigir |
+| Validador Auroq falha | Identificar erros, pedir @forge-smith pra corrigir |
 | Pipeline interrompido | Salvar estado, permitir `*resume` |
 | Processo muito complexo (50+ passos) | Propor decomposicao em sub-processos |
 

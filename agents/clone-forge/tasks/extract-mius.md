@@ -221,7 +221,7 @@ Para cada chunk identificado no Step 2:
 
 | Correto (extracao) | Errado (inferencia) |
 |---------------------|---------------------|
-| "Euriler diz que prefere verdade a validacao vazia" | "Euriler provavelmente valoriza honestidade porque teve experiencias ruins" |
+| "O expert diz que prefere verdade a validacao vazia" | "O expert provavelmente valoriza honestidade porque teve experiencias ruins" |
 | "Usa metodo PMI: Proposito + Marketing + IA" | "Provavelmente criou o PMI por influencia de frameworks ageis" |
 | "Rejeita reunioes sem pauta definida" | "Deve ter trauma de reunioes improdutivas" |
 
@@ -464,7 +464,7 @@ metadata:
 items:
   - id: "MIU-0001"
     content: |
-      Euriler diz que prefere verdade a validacao vazia.
+      O expert diz que prefere verdade a validacao vazia.
       Confronta quando necessario, mesmo que desconfortavel.
     category: "OPINION"
     tags: [VALUES, REJECTION]
@@ -892,17 +892,17 @@ qg_002_results:
 
 | Fase | Agente | Dados |
 |------|--------|-------|
-| Phase 3 | @oalanicolas | MIUs validados para DNA Extraction (Voice DNA + Thinking DNA) |
+| Phase 3 | @innerlens + @cognitive-motor | MIUs validados para DNA Extraction (Voice DNA + Thinking DNA) |
 | Phase 4 | @cognitive-motor | MIUs validados como evidencia para Driver Inference |
 | Phase 6 | @clone-forge-chief | extraction-report.md para metricas de agregacao |
-| Phase 7 | @oalanicolas | MIUs validados para smoke tests de consistencia |
+| Phase 7 | @clone-forge-chief | MIUs validados para smoke tests de consistencia |
 
 ### Handoff Protocol
 
 ```yaml
 handoff_to_phase_3:
   from: "@innerlens"
-  to: "@oalanicolas"
+  to: "@clone-forge-chief"
   gate: "QG-002 MIU_QUALITY PASS"
   condition: "QG-002 PASS or CONDITIONAL"
   veto: "QG-002 FAIL em qualquer check bloqueante"
@@ -921,7 +921,7 @@ chain:
   next: extract-dna-enriched
   blocking_gate: QG-002
   on_fail: "BLOQUEAR. Resolver gaps antes de prosseguir."
-  handoff_to: "@oalanicolas"
+  handoff_to: "@clone-forge-chief"
   handoff_condition: "QG-002 PASS or CONDITIONAL"
   handoff_artifacts:
     - "02-extraction/mius.yaml"
@@ -954,7 +954,7 @@ A regra e simples mas a tentacao e grande:
 
 | Correto (extracao) | Errado (inferencia) |
 |---------------------|---------------------|
-| "Euriler diz que prefere verdade a validacao vazia" | "Euriler provavelmente valoriza honestidade porque teve experiencias negativas" |
+| "O expert diz que prefere verdade a validacao vazia" | "O expert provavelmente valoriza honestidade porque teve experiencias negativas" |
 | "Usa metodo PMI: Proposito + Marketing + IA" | "Provavelmente criou o PMI por influencia de frameworks ageis" |
 | "Rejeita reunioes sem pauta definida" | "Deve ter trauma de reunioes improdutivas" |
 

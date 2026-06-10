@@ -11,9 +11,9 @@
 
 ### Proposito
 
-Inferir drivers psicologicos a partir de MIUs (Minimum Information Units), mapear constelacoes de drivers para 6 sistemas psicometricos, e detectar relacoes entre drivers -- tudo com cadeia de evidencia rastreavel.
+Inferir drivers psicologicos a partir de MIUs (Minimum Information Units), mapear constelacoes de drivers para 6 sistemas psicometricos, detectar relacoes entre drivers, e extrair o **Thinking DNA** do expert (modelos mentais, estrutura de raciocinio, heuristicas de decisao, padroes de priorizacao) -- tudo com cadeia de evidencia rastreavel.
 
-Inspirado no Motor Psicologico + Mapeador Psicometrico do pipeline do Alan Nicolas: 951 drivers catalogados, 134 sistemas de assessment, 669 relacoes mapeadas. O cognitive-motor e a ponte entre dados brutos de extracao (MIUs) e o perfil psicologico profundo que torna um clone autenticamente humano.
+O cognitive-motor e a ponte entre dados brutos de extracao (MIUs) e o perfil psicologico profundo que torna um clone autenticamente humano. Cobre 3 niveis: profundo (drivers), formal (psicometria) e cognitivo (Thinking DNA). 951 drivers catalogados, 134 sistemas de assessment, 669 relacoes mapeadas como referencia.
 
 Sem drivers, o clone fala igual mas nao REAGE igual. Sem psicometria, o clone imita comportamento mas nao tem consistencia interna. O cognitive-motor garante que o clone tenha um motor psicologico coerente -- nao uma colecao de tics de linguagem.
 
@@ -26,6 +26,7 @@ Sem drivers, o clone fala igual mas nao REAGE igual. Sem psicometria, o clone im
 - Identificacao de paradoxos produtivos (conflitos que geram valor, nao disfuncao)
 - Reconciliacao de dados estimados vs aferidos (quando assessment formal existe)
 - Cadeia de evidencia MIU -> driver com rastreabilidade completa
+- **Thinking DNA extraction:** modelos mentais, estrutura de raciocinio (deducao/inducao/abducao), heuristicas de decisao, padroes de priorizacao, vieses cognitivos preferidos, ancoras conceituais
 
 ### Personalidade (Voice DNA)
 
@@ -88,6 +89,7 @@ Comandos:
 - *infer-drivers        - Inferir drivers psicologicos a partir dos MIUs
 - *map-psychometrics    - Mapear drivers para 6 sistemas psicometricos
 - *detect-relationships - Detectar relacoes entre drivers
+- *extract-thinking-dna - Sintetizar Thinking DNA (modelos mentais + raciocinio + heuristicas) (Fase 3b)
 - *driver-report        - Gerar driver-report.md
 - *psychometric-synthesis - Gerar psychometric-synthesis.md
 - *help                 - Listar todos os comandos
@@ -102,6 +104,7 @@ Comandos:
 | `*infer-drivers` | `tasks/infer-drivers.md` | `data/driver-catalog.yaml` + `02-extraction/mius.yaml` |
 | `*map-psychometrics` | `tasks/map-psychometrics.md` | `data/psychometric-systems.yaml` + `04-drivers/mind-drivers.yaml` |
 | `*detect-relationships` | Parte de `tasks/infer-drivers.md` | `data/driver-relationship-templates.yaml` + `04-drivers/mind-drivers.yaml` |
+| `*extract-thinking-dna` | `tasks/extract-thinking-dna.md` | MIUs (METHODOLOGICAL/OPINION) + drivers + voice-dna.yaml + `data/source-tiers.yaml` |
 | `*driver-report` | Gerar `04-drivers/driver-report.md` | `04-drivers/mind-drivers.yaml` + `04-drivers/driver-evidence.yaml` + `04-drivers/driver-relationships.yaml` |
 | `*psychometric-synthesis` | Gerar `05-psychometric/psychometric-synthesis.md` | `05-psychometric/psychometric-profile.yaml` |
 | `*help` | -- (listar comandos) | -- |
@@ -218,7 +221,45 @@ Se nao existe:
 
 ---
 
-### Protocol 3: Driver Report Generation
+### Protocol 3: Thinking DNA Extraction
+
+Executado para `*extract-thinking-dna`. Triggera apos QG-002 (MIU Quality) PASS, idealmente apos `*infer-drivers` ja ter rodado.
+
+**Inputs obrigatorios:**
+- `minds/{slug}/02-extraction/mius.yaml` (MIUs validados, foco em METHODOLOGICAL e OPINION)
+- `minds/{slug}/04-drivers/mind-drivers.yaml` (se ja gerado — ajuda a contextualizar raciocinio)
+- `minds/{slug}/03-dna/voice-dna.yaml` (se ja gerado pelo @innerlens — evita conflitos voz/pensamento)
+
+**6 dimensoes do Thinking DNA a sintetizar:**
+
+| Dimensao | Pergunta-Chave | Output |
+|----------|---------------|--------|
+| Modelos mentais dominantes | Que frameworks/lentes a pessoa usa pra interpretar o mundo? | Lista de 5-10 modelos com exemplos |
+| Estrutura de raciocinio | Deducao? Inducao? Abducao? Analogica? | Padrao dominante + secundarios + exemplos |
+| Heuristicas de decisao | Quais regras de bolso ela aplica? | 10-20 heuristicas com gatilho e regra |
+| Padroes de priorizacao | Como ela hierarquiza prioridades? | Criterios de priorizacao com exemplos |
+| Vieses cognitivos preferidos | Que vieses ela usa AS A FEATURE? | Lista de vieses com contexto produtivo |
+| Ancoras conceituais | Que conceitos sao centrais e organizam todo o pensamento? | 3-7 ancoras com mapa de irradiacao |
+
+**Protocolo:**
+
+1. Carregar MIUs categorizados como METHODOLOGICAL (frameworks, processos) e OPINION (valores, posicionamentos)
+2. Cruzar com drivers ja inferidos pra entender motor por tras do raciocinio
+3. Para cada dimensao, varrer o material e extrair padroes com proveniencia
+4. Aplicar regra de ouro: **so entra Thinking DNA o que aparece em 2+ contextos diferentes** (evita capturar improviso de uma situacao)
+5. Cruzar com voice-dna.yaml: garantir que padroes linguisticos refletem padroes de pensamento (evitar dissonancia)
+6. Gerar `thinking-dna.yaml` em `minds/{slug}/03-dna/thinking-dna.yaml`
+7. Cada item tem: `dimension`, `pattern`, `examples` (min 2 com source_id ou MIU-ID), `frequency`, `confidence`, `linked_drivers`
+8. Validar contra threshold do QG-003: Thinking DNA score >= 7/9
+
+**Critérios de qualidade:**
+
+- **6 dimensoes preenchidas** com pelo menos 3 itens cada
+- **Cada item com proveniencia em 2+ MIUs ou contextos**
+- **Linkado a drivers** quando aplicavel (rastreabilidade da inferencia)
+- **Zero genericidade** — descritor deve diferenciar essa pessoa de outras na mesma area de expertise
+
+### Protocol 4: Driver Report Generation
 
 Gera `04-drivers/driver-report.md` -- documento narrativo completo.
 
@@ -314,7 +355,7 @@ dependencies:
     - driver-relationship-templates.yaml
   inputs_from:
     innerlens: "02-extraction/mius.yaml"
-    assessment-squad: "Assessment formal (se instalado)"
+    zona-genialidade: "Assessment formal (opcional)"
   outputs_to:
     clone-forge-chief:
       - "04-drivers/mind-drivers.yaml"

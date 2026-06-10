@@ -168,7 +168,7 @@ Isso bate com o worker que voce precisa? O que ajustaria?
 | QG-WF-001 | Discovery completo | Dominio vago, ferramentas nao listadas |
 | QG-WF-002 | Research adequado | KB rascunho <300 linhas, ferramenta core nao pesquisada |
 | QG-WF-003 | Usuario validou proposta | Usuario rejeitou |
-| QG-WF-004 | Estrutura AIOS valida | Validator FAIL |
+| QG-WF-004 | Estrutura Auroq valida | Validator FAIL |
 | QG-WF-005 | Smoke test + aprovacao | Falha ou rejeicao |
 
 ---
@@ -253,7 +253,7 @@ handoff:
     proposal_path: "{path da proposta validada}"
     kb_path: "{path da KB}"
     user_validated: true
-  instruction: "Montar worker AIOS completo a partir da proposta validada."
+  instruction: "Montar worker Auroq completo a partir da proposta validada."
 ```
 
 ---

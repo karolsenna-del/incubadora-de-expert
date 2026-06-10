@@ -1,14 +1,16 @@
 project:
   name: "Auroq OS"
   type: greenfield
-  version: 1.0.0
+  version: 2.1.1
   installedAt: '2026-03-16'
 
 ide:
   selected:
     - claude-code
+    - codex
   configs:
     claude-code: true
+    codex: true
 
 mcp:
   enabled: false

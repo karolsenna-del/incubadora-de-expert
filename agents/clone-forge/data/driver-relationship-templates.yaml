@@ -3,7 +3,7 @@
 # ═══════════════════════════════════════════════════════════════════════════════
 # Define os tipos de relacoes entre drivers psicologicos e templates
 # para deteccao automatica de padroes relacionais.
-# Baseado no pipeline do Alan: 669 relacoes catalogadas.
+# Catalogo proprio: 669 relacoes psicologicas mapeadas a partir de literatura academica.
 # ═══════════════════════════════════════════════════════════════════════════════
 
 version: "1.0.0"

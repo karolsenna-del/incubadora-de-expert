@@ -3,7 +3,19 @@
   "version": "1.0.0",
   "description": "Meu negocio com Auroq OS",
   "private": true,
+  "scripts": {
+    "sync:codex": "node scripts/sync-codex-skills.mjs --clean",
+    "sync:codex:check": "node scripts/sync-codex-skills.mjs --check",
+    "sync:codex:global": "node scripts/sync-codex-skills.mjs --global --clean",
+    "auroq:sync:codex": "npm run sync:codex",
+    "auroq:sync:codex:check": "npm run sync:codex:check",
+    "auroq:validate": "npm run validate:hybrid",
+    "validate:hybrid": "node scripts/validate-hybrid.mjs"
+  },
   "dependencies": {
-    "js-yaml": "^4.1.0"
+    "@supabase/supabase-js": "^2.103.0",
+    "fs-extra": "^11.3.0",
+    "js-yaml": "^4.1.0",
+    "prompts": "^2.4.2"
   }
 }

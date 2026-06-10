@@ -25,7 +25,7 @@ manifest:
     mode: "full"  # full | quick
     subject_present: false  # pessoa sendo clonada esta disponivel?
     auto_acquire_sources: true
-    formal_assessments: []  # squads de assessment formais (se instalados)
+    formal_assessments: []  # ex: ["zona-genialidade"]
 
   # Progresso por fase
   phases:
@@ -43,7 +43,7 @@ manifest:
       status: "pending"
       started_at: null
       completed_at: null
-      agent: "@oalanicolas"
+      agent: "clone-forge-chief"
       gate: "QG-001"
       gate_result: null  # GO | CONDITIONAL | NO_GO
       outputs: []
@@ -76,7 +76,7 @@ manifest:
       status: "pending"
       started_at: null
       completed_at: null
-      agent: "@oalanicolas"
+      agent: "innerlens + cognitive-motor"
       gate: "QG-003"
       gate_result: null
       outputs: []
@@ -127,7 +127,7 @@ manifest:
       status: "pending"
       started_at: null
       completed_at: null
-      agent: "@oalanicolas + @pedro-valerio"
+      agent: "clone-forge-chief"
       gate: "QG-005"
       gate_result: null
       outputs: []
