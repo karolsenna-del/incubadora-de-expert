@@ -527,9 +527,17 @@ for AD_ID in ads[]; do
 done
 ```
 
-Confirmar mudança de status:
+Confirmar mudança de status — e **registrar no histórico (QG-LOG-001):**
+```bash
+bash data/log-action.sh --agent scale-operator --account {alias} \
+  --action "Subida campanha {nome}" \
+  --summary "{estrutura: N conjuntos × M criativos = K ads, budget/dia, pixel, IDs}" \
+  --result "{K/K ACTIVE}" --ref {produto}
+```
+
 ```
 ✅ Campanha ATIVA. Algoritmo Meta vai começar a impressionar nos próximos minutos.
+✅ registrado no histórico.
 
 Próximas 24h: Bárbara recomenda observar quais criativos NÃO gastam nada
 (IA já julgou ruins). Esses devem ser pausados.

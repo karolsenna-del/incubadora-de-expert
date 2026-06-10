@@ -19,6 +19,21 @@ import sys, subprocess, os, re, argparse, yaml
 
 SQUAD_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+
+def _bin(name):
+    """Resolve ffmpeg/ffprobe do Homebrew (bottle JA traz drawtext). Evita pegar
+    um ffmpeg de conda/Anaconda ou build estatico no PATH que nao tenha drawtext
+    — causa #1 da legenda nao renderizar. Cai pro PATH so se nao houver brew."""
+    for base in ("/opt/homebrew/bin", "/usr/local/bin"):
+        cand = os.path.join(base, name)
+        if os.path.exists(cand):
+            return cand
+    return name
+
+
+FFMPEG = _bin("ffmpeg")
+FFPROBE = _bin("ffprobe")
+
 p = argparse.ArgumentParser()
 p.add_argument("video")
 p.add_argument("transcript")
@@ -49,7 +64,7 @@ video = args.video
 base = os.path.splitext(video)[0]
 output = args.output or f"{base}_final.mp4"
 
-probe = subprocess.run(["ffprobe","-v","error","-select_streams","v:0",
+probe = subprocess.run([FFPROBE,"-v","error","-select_streams","v:0",
     "-show_entries","stream=width,height","-of","csv=p=0",video],
     capture_output=True, text=True).stdout.strip()
 TW, TH = map(int, probe.split(","))
@@ -178,7 +193,7 @@ for st, en, tx in events:
 graph = "[0:v]" + ",".join(filters) + "[outv]"
 ff = f"/tmp/cap_filter_{os.getpid()}.txt"
 open(ff,"w").write(graph)
-subprocess.run(["ffmpeg","-y","-i",video,"-filter_complex_script",ff,
+subprocess.run([FFMPEG,"-y","-i",video,"-filter_complex_script",ff,
     "-map","[outv]","-map","0:a",
     "-c:v","libx264","-preset","fast","-crf","18",
     "-pix_fmt","yuv420p","-profile:v","main","-level","4.0",

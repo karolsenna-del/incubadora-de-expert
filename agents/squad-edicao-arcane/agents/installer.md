@@ -41,6 +41,39 @@ Se algum FALHA: roda `install.sh` automaticamente OU avisa o expert do bloqueio.
 
 ---
 
+## Casos conhecidos no setup do aluno
+
+O aluno raramente roda comandos crus — ele ativa o squad e EU (ops) faço o setup.
+Por isso preciso reconhecer os sintomas e responder certo, sem mandar o aluno
+pra caminhos errados. Detalhe completo em `knowledge/04-troubleshooting.md`.
+
+### Legenda não renderiza + "precisa compilar o ffmpeg" / "tem custo" (Bug 11)
+
+O caso mais comum e o que mais confunde. Sintoma: corte/speed/zoom/trilha rodam,
+mas a **legenda queimada não vai**. A legenda é a ÚNICA etapa que usa `drawtext`.
+
+**Diagnóstico:** o aluno tem outro ffmpeg na frente do PATH **sem drawtext** —
+quase sempre o ffmpeg do **conda/Anaconda** ou um build estático. O `doctor.sh`
+detecta (`ffmpeg drawtext (legenda) ❌`).
+
+**Como EU resolvo (não o aluno na unha):**
+1. `brew install ffmpeg` (bottle do Homebrew JÁ traz drawtext). Se já existe mas
+   está quebrado: `brew reinstall ffmpeg`.
+2. Os scripts deste squad já usam o ffmpeg do Homebrew direto (`/opt/homebrew/bin/ffmpeg`,
+   ou `/usr/local/bin` no Intel), então o ffmpeg do conda no PATH **não atrapalha mais**.
+3. `bash scripts/doctor.sh` pra confirmar `ffmpeg drawtext (legenda) ✓`.
+
+**NUNCA mandar compilar ffmpeg do source.** A premissa "o Homebrew não entrega
+mais ffmpeg com drawtext" é FALSA — o bottle pré-compilado já vem com drawtext.
+Compilar do source leva ~30min de CPU à toa.
+
+**Se o aluno perguntar do "custo":** "Não tem custo nenhum e não precisa compilar
+nada. Isso era um assistente sugerindo compilar o ffmpeg do zero (uns 30min de
+processamento, só esquenta o Mac). O ffmpeg do Homebrew já vem com legenda pronta —
+`brew install ffmpeg` e o squad resolve o resto."
+
+---
+
 ## Handoff
 
 - **Recebe de:** @chief (sempre, antes de qualquer pipeline novo)

@@ -10,6 +10,13 @@ SQUAD_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 VENV_DIR="$SQUAD_DIR/.venv"
 MODEL_PATH="/opt/homebrew/share/whisper-cpp/models/ggml-medium.bin"
 
+# binarios do Homebrew (MESMO criterio dos scripts do squad): o pipeline usa o
+# ffmpeg do Homebrew (bottle tem drawtext), nao o que estiver na frente do PATH.
+# Checar aqui o que NAO eh usado em runtime daria falso negativo (ex: aluno com
+# conda ffmpeg no PATH, mas o squad rodando com o ffmpeg do brew).
+_bin(){ for b in /opt/homebrew/bin /usr/local/bin; do [ -x "$b/$1" ] && { echo "$b/$1"; return; }; done; command -v "$1" 2>/dev/null || echo "$1"; }
+FFMPEG="$(_bin ffmpeg)"; FFPROBE="$(_bin ffprobe)"; WHISPER="$(_bin whisper-cli)"
+
 ERRORS=0
 WARNINGS=0
 
@@ -36,15 +43,15 @@ warn() {
 echo "=== Squad Edicao Arcane — Doctor ==="
 echo ""
 
-# ─── Binarios ────────────────────────────────────────────
-check "ffmpeg"                "command -v ffmpeg"
-check "ffprobe"               "command -v ffprobe"
-check "whisper-cli"           "command -v whisper-cli"
+# ─── Binarios (os mesmos que o pipeline usa: Homebrew) ───
+check "ffmpeg ($FFMPEG)"      "test -x '$FFMPEG'"
+check "ffprobe"               "test -x '$FFPROBE'"
+check "whisper-cli"           "test -x '$WHISPER'"
 
-# ─── Filtros ffmpeg ──────────────────────────────────────
-check "ffmpeg drawtext"       "ffmpeg -filters 2>/dev/null | grep -q drawtext"
-check "ffmpeg sidechaincompress" "ffmpeg -filters 2>/dev/null | grep -q sidechaincompress"
-check "ffmpeg libfontconfig"  "ffmpeg -version 2>&1 | grep -q libfontconfig"
+# ─── Filtros ffmpeg (no ffmpeg que o squad realmente usa) ─
+check "ffmpeg drawtext (legenda)"         "'$FFMPEG' -filters 2>/dev/null | grep -q drawtext"
+check "ffmpeg sidechaincompress (trilha)" "'$FFMPEG' -filters 2>/dev/null | grep -q sidechaincompress"
+check "ffmpeg libfontconfig"              "'$FFMPEG' -version 2>&1 | grep -q libfontconfig"
 
 # ─── Modelo whisper ──────────────────────────────────────
 check "modelo ggml-medium.bin" "test -f '$MODEL_PATH'"
@@ -79,6 +86,20 @@ check "video-add-music.sh"    "test -f '$SQUAD_DIR/scripts/video-add-music.sh'"
 check "data/estilo-ativo.yaml"     "test -f '$SQUAD_DIR/data/estilo-ativo.yaml'"
 check "data/estilos/neutro.yaml"   "test -f '$SQUAD_DIR/data/estilos/neutro.yaml'"
 check "data/trilhas/default.mp3"   "test -f '$SQUAD_DIR/data/trilhas/default.mp3'"
+
+# ─── Diagnostico especifico: drawtext (causa #1 da legenda nao ir) ───
+if ! "$FFMPEG" -filters 2>/dev/null | grep -q drawtext; then
+  echo ""
+  echo "⚠️  O ffmpeg usado ($FFMPEG) NAO tem 'drawtext' — a legenda queimada nao renderiza."
+  echo "   NAO precisa compilar ffmpeg (gasta ~30min de CPU a toa, e nao e necessario)."
+  echo "   O bottle do Homebrew JA vem com drawtext. Pra resolver:"
+  echo "     brew install ffmpeg     # (ou: brew reinstall ffmpeg)"
+  PATH_FF="$(command -v ffmpeg 2>/dev/null || true)"
+  if [ -n "$PATH_FF" ] && [ "$PATH_FF" != "$FFMPEG" ]; then
+    echo "   Obs: teu PATH resolve outro ffmpeg ($PATH_FF) — provavel conda/Anaconda."
+    echo "        Os scripts do squad ja usam o do Homebrew, entao isso nao atrapalha."
+  fi
+fi
 
 echo ""
 echo "─────────────────────────────────────"

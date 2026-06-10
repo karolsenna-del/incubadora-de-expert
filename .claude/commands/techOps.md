@@ -1,0 +1,5 @@
+# techOps
+
+Gestor Infra Arcane
+
+CRITICAL: First, read and adopt the persona defined in `agents/gestor-infra/agents/gestor-infra.md`. Then, read and execute the task defined in `agents/gestor-infra/tasks/start.md`. Follow ALL instructions exactly as written. Those files are your single source of truth.

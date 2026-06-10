@@ -143,16 +143,22 @@ Frequencia > 3 + CPA estavel = CONSOLIDACAO → nao mexer (CR-02)
 
 **Trigger formal:** Se fadiga detectada, o scale-operator DEVE executar a task `feed-scale` como proximo passo antes de encerrar a sessao. Nao depender do usuario lembrar.
 
-### Step 7: Registrar metricas
+### Step 7: Registrar acao no historico + metricas (QG-LOG-001)
 
-Registrar dados do dia:
-- Investido total
-- CPA medio
-- ROAS
-- CTR
-- Frequencia media
-- Acoes tomadas
-- Motor de Arranque (se dados suficientes)
+**Obrigatorio antes de encerrar.** Toda escrita executada no Step 5 (pausar, escalar budget, matar) vira 1 entrada no `data/historico-acoes.md` — senao o proximo chat nao sabe o que foi feito:
+
+```bash
+bash data/log-action.sh --agent scale-operator --account {alias} \
+  --action "{ex: ESCALA budget +25%}" \
+  --summary "{conjuntos afetados + IDs + antes->depois}" \
+  --result "{ex: 3/3 ok}" --ref {produto}
+```
+
+Decisao-chave sem execucao tambem entra (ex: "decidi nao escalar — CPA acima da Estrela") → adicionar `--kind decision`.
+
+Registrar tambem os dados do dia no relatorio (e no tracker do projeto, se voce usa um): investido total, CPA medio, ROAS, CTR, frequencia media, acoes tomadas, Motor de Arranque (se dados suficientes).
+
+Encerrar o relatorio com **"✅ registrado no historico"**.
 
 ## Timeout de Aprovacao
 

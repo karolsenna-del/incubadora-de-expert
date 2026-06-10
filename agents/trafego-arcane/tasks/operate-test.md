@@ -133,7 +133,13 @@ Criativos NOVOS entram AQUI primeiro. Nunca direto na escala.
 2. Checar CPA vs Estrela Guia
 3. Identificar campeoes vs falhas
 4. Decisao: manter campeoes, matar falhas, subir novos testes
-5. Registrar metricas + aprendizados
+5. Registrar metricas + aprendizados — **e cada escrita/decisao no `data/historico-acoes.md` (QG-LOG-001):**
+   ```bash
+   bash data/log-action.sh --agent test-operator --account {alias} \
+     --action "{ex: matei 3 criativos falha / subi lote teste X}" \
+     --summary "{IDs + por que}" --result "{ok}" --ref {produto} [--kind decision]
+   ```
+   Encerrar com "✅ registrado no historico".
 
 ## Error Handling
 

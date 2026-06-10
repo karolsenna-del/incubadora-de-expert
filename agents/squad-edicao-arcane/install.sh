@@ -86,12 +86,42 @@ if ! command -v brew >/dev/null 2>&1; then
 fi
 echo "✓ Homebrew presente ($(brew --version | head -1))"
 
-# ─── 4. ffmpeg ───────────────────────────────────────────
-if ! command -v ffmpeg >/dev/null 2>&1; then
-  echo "⏳ Instalando ffmpeg via Homebrew..."
+# ─── 4. ffmpeg (com drawtext — obrigatorio pra legenda queimada) ─
+# Nao basta o binario existir: a legenda usa o filtro `drawtext`, que depende de
+# libfreetype/libfontconfig compilados no ffmpeg. O bottle oficial do Homebrew JA
+# inclui drawtext — nao precisa compilar nada. O problema comum: ter OUTRO ffmpeg
+# na frente do PATH (conda/Anaconda, build estatico) SEM drawtext. Por isso aqui
+# checamos a CAPACIDADE (drawtext), nao so a presenca do binario.
+tem_drawtext() {
+  local out
+  out="$("$1" -hide_banner -filters 2>/dev/null)" || true
+  [[ "$out" == *drawtext* ]]
+}
+
+BREW_PREFIX="$(brew --prefix 2>/dev/null || echo /opt/homebrew)"
+BREW_FFMPEG="$BREW_PREFIX/bin/ffmpeg"
+
+if [[ ! -x "$BREW_FFMPEG" ]]; then
+  echo "⏳ Instalando ffmpeg via Homebrew (bottle pre-compilado, ja vem com drawtext)..."
   brew install ffmpeg
+fi
+
+if [[ -x "$BREW_FFMPEG" ]] && ! tem_drawtext "$BREW_FFMPEG"; then
+  echo "⏳ ffmpeg do Homebrew sem drawtext (raro) — reinstalando o bottle..."
+  brew reinstall ffmpeg
+fi
+
+if [[ -x "$BREW_FFMPEG" ]] && tem_drawtext "$BREW_FFMPEG"; then
+  echo "✓ ffmpeg com drawtext OK ($BREW_FFMPEG)"
+  PATH_FFMPEG="$(command -v ffmpeg || true)"
+  if [[ -n "$PATH_FFMPEG" && "$PATH_FFMPEG" != "$BREW_FFMPEG" ]] && ! tem_drawtext "$PATH_FFMPEG"; then
+    echo "  ⚠️  Teu PATH resolve outro ffmpeg SEM drawtext ($PATH_FFMPEG) —"
+    echo "      provavel conda/Anaconda ou build estatico na frente do PATH."
+    echo "      Tudo bem: os scripts deste squad usam o ffmpeg do Homebrew direto,"
+    echo "      nao dependem do PATH. Nao precisa mexer em nada nem compilar ffmpeg."
+  fi
 else
-  echo "✓ ffmpeg ja instalado"
+  echo "❌ Nao consegui um ffmpeg com drawtext. Rode manualmente: brew reinstall ffmpeg"
 fi
 
 # ─── 5. whisper-cpp ──────────────────────────────────────

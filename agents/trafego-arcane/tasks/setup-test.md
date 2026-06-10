@@ -282,7 +282,16 @@ Confirmar e subir PAUSED? [s/N]
 
 (aprovação, execução, resultado, ativar?). Ver `tasks/setup-scale.md` Steps 7-10.
 
-Após ativar, registrar no log de testes:
+Após ativar, registrar **no histórico de ações (QG-LOG-001)** — a memória que sobrevive entre chats:
+
+```bash
+bash data/log-action.sh --agent test-operator --account {alias} \
+  --action "Subida teste {variavel}" \
+  --summary "campanha {id}, hipótese {...}, critério {...}, janela {N}d" \
+  --result "ATIVA, running" --ref {produto}
+```
+
+E o detalhe do teste pra avaliação posterior:
 
 ```yaml
 test_log:

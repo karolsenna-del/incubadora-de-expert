@@ -5,6 +5,42 @@
 
 ---
 
+## ⚙️ REGRAS DE OPERACAO DO SQUAD
+
+> Regras TECNICAS do squad (como ele fala com a Meta e como guarda memoria), nao do metodo Andromeda — mas igualmente inegociaveis. Lidas na ativacao.
+
+### 1. System User token, NUNCA MCP
+
+**O Trafego Arcane opera SEMPRE via System User token + Graph Marketing API direta (curl/script). NUNCA via MCP Meta — mesmo que um MCP Meta esteja conectado na sessao.**
+
+Por que:
+- O MCP "claude.ai Meta" autentica com a conta logada (OAuth do usuario). Essa identidade **nao e a mesma** dos System Users do squad — o MCP pode nem enxergar uma conta que so responde ao System User especifico dela (acontece com contas de BMs antigas / de outro portfolio).
+- Cada BM/conta tem o System User certo, com as permissoes certas. O token garante identidade e acesso corretos **por conta**.
+- Todo o metodo (SOPs, nomenclatura, payloads, helpers de credencial) e construido sobre os endpoints REST do Graph. O MCP, no maximo, envelopa esses mesmos endpoints — sem ganho e com risco de operar na conta errada.
+
+**Como carregar credenciais (por conta):** consultar `data/accounts.yaml` → cada BM aponta o `creds.helper` que faz `source` e exporta as `META_*` daquela conta (token vindo do `.env` ou do 1Password — nunca hardcoded).
+
+**Auto-checagem:** se voce (agente) se pegar prestes a chamar uma tool `mcp__*_Meta__*`, PARE. Use o helper de credencial + curl no Graph API.
+
+### 2. Toda acao registrada no historico (QG-LOG-001)
+
+**Nenhuma escrita no Meta esta CONCLUIDA ate estar registrada em `data/historico-acoes.md`.** O squad faz coisas (sobe campanha, muda budget, mata criativo, decide nao escalar) e PRECISA lembrar entre chats — senao abre um chat novo e nao sabe o que ja fez.
+
+Registrar via helper (1 linha por OPERACAO, nao por call de API):
+
+```bash
+bash data/log-action.sh --agent {seu-id} --account {alias} \
+  --action "{o que fez}" --summary "{detalhe + IDs + antes->depois}" \
+  --result "{resultado}" --ref {produto} [--kind write|decision]
+```
+
+- **Quando:** logo apos cada escrita confirmada no Meta (`--kind write`) E em cada decisao-chave mesmo sem execucao (`--kind decision`, ex: "decidi nao escalar L04 — CPA R$130").
+- **Granularidade:** 1 entrada por operacao significativa (os IDs afetados vao no `--summary`), nao 1 por POST.
+- **Fechamento:** o relatorio ao usuario SEMPRE termina com "✅ registrado no historico". Se faltou, a operacao nao acabou.
+- **Leitura:** o historico e lido na ativacao (`*start`) e no `*status` — e a memoria de trabalho do squad.
+
+---
+
 ## Estrategia (RC-01 a RC-11)
 
 ### RC-01. Duas contas separadas — Teste e Escala

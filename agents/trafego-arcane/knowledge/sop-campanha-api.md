@@ -8,15 +8,14 @@
 
 ---
 
-## ⚠️ Aviso Importante — MCP Meta Oficial
+## ⚠️ Regra — Este squad NÃO usa MCP Meta (opera por System User token)
 
-No momento desta extração, **NÃO existe MCP oficial Meta instalado no Auroq** (verificado via `claude mcp list` e `.mcp.json`). Por isso este SOP usa endpoints REST diretos do **Graph Marketing API** como contrato base.
+**O Tráfego Arcane opera SEMPRE via System User token + Graph Marketing API direta (curl/script). NUNCA via MCP Meta — mesmo que um MCP Meta esteja conectado na sessão.**
 
-**Quando o MCP Meta oficial for instalado**, qualquer ferramenta dele vai envelopar exatamente esses endpoints. Mapeamento: nome da tool MCP → endpoint REST aqui descrito.
+Pode existir um MCP "claude.ai Meta" disponível na sessão. **Ignore-o.** Ele autentica com a conta logada (OAuth), que **não é** o System User certo de cada BM — pode nem enxergar uma conta que só responde ao System User dela. Operar pelo MCP = risco de mexer na conta errada ou sem permissão. As credenciais certas, por conta, estão em `data/accounts.yaml` (cada BM aponta o `creds.helper`). Ver regra completa em `andromeda-rules.md` (⚙️ Regra de Operação do Squad).
 
 **Como usar esse documento:**
-- Como referência pra integração programática direta (Python SDK `facebook_business`, JS `facebook-nodejs-business-sdk`, ou HTTP cru)
-- Como contrato de testes pra validar que um MCP Meta cumpre o método
+- Como contrato dos endpoints REST do Graph Marketing API que o squad chama (HTTP cru via curl, ou SDK `facebook_business` / `facebook-nodejs-business-sdk`)
 - Como base pra escrever workers que sobem campanhas via n8n / scripts
 
 **Companion docs:**

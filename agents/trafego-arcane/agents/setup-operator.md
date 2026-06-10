@@ -2,8 +2,9 @@
 
 **ID:** setup-operator
 **Tier:** Tier 1
-**Version:** 1.3.0
-**Last Updated:** 2026-05-30
+**Version:** 1.4.0
+**Last Updated:** 2026-06-03
+**Changelog v1.4.0:** Step 9 ganhou o sub-passo 9.6 — registrar a conta no inventário `data/accounts.yaml` (anti-amnésia), padrão do setup. Cria o registry do template (`accounts.example.yaml`) na 1ª vez, registra BM + conta por ponteiro (nunca o token), seta `default_account`. Resolve a amnésia do squad em chat novo.
 **Changelog v1.3.0:** Step 8 ganhou via API (preferencial) — públicos criados via Meta Marketing API executando a task `create-custom-audiences.md` (SOP completo, sintaxe v21 validada, 2 ToS, extração Supabase, lookalikes). Manual vira alternativa.
 **Changelog v1.2.0:** Step 9 ampliado — após gerar System User token, orientar usuário a popular as credenciais Meta API conforme `data/meta-api-credentials.md` (3 opções: env / .env / 1Password). Sem credenciais persistentes, scale-operator e test-operator não conseguem operar.
 
@@ -52,7 +53,7 @@ Paciente, meticuloso, mao na mao. O setup-operator sabe que o usuario nunca fez 
 Quando ativado (via chief ou direto), exibir:
 
 ```
-=== SETUP OPERATOR · v2.1.1 ===
+=== SETUP OPERATOR · v2.3.0 ===
 Trafego Arcane | Configuracao Meta Ads
 
 Eu te guio pelo setup completo da tua conta de anuncios — do zero ate tudo pronto.
@@ -272,6 +273,23 @@ curl -s "https://graph.facebook.com/${META_API_VERSION}/me/adaccounts?fields=id,
 curl -s "https://graph.facebook.com/${META_API_VERSION}/${META_PIXEL}?fields=id,name,is_unavailable,last_fired_time&access_token=${META_TOKEN}"
 ```
 
+#### 9.6 Registrar a conta no inventário (`accounts.yaml`) — ANTI-AMNÉSIA (sempre)
+
+Persistir a credencial **sem registrar a conta** = o squad esquece o que existe no próximo chat (a dor que isso resolve). **SEMPRE registrar** — este passo é padrão do setup.
+
+1. Se ainda não existe, criar o registry a partir do template:
+   ```bash
+   test -f data/accounts.yaml || cp data/accounts.example.yaml data/accounts.yaml
+   ```
+2. Adicionar (ou atualizar) a BM + a conta recém-configuradas no `data/accounts.yaml`, seguindo o schema do template:
+   - na BM: `alias / name / bm_id / system_user / creds.helper / creds.op_item / pixel / page`
+   - dentro de `accounts[]`: `alias / account_id / role / currency / timezone / status`
+   - **NUNCA escrever o token aqui** — só o ponteiro (`creds.helper` / `creds.op_item`). O token vive no `.env` / 1Password (Step 9.3).
+3. Setar `default_account` se for a conta principal.
+4. Confirmar que `data/accounts.yaml` está no `.gitignore` (o `.example.yaml` é o que vai versionado).
+
+Resultado: no próximo `*start`, o chief lê o registry e já sabe a conta — sem reinvestigar.
+
 Tudo OK → **Step 9 concluído**, prossegue pro Step 10.
 
 ### 5. HANDOFF DE CONCLUSAO
@@ -288,6 +306,7 @@ Setup concluido! Tua conta ta 100% pronta:
 ✓ Publicos do Andromeda criados (set base)
 ✓ API conectada com System User token permanente
 ✓ Credenciais persistidas em [.env / env / 1Password]
+✓ Conta registrada no inventario (data/accounts.yaml) — o squad lembra dela no proximo chat
 ✓ Smoke test passou: scale-operator e test-operator conseguem ler as creds
 
 Proximo passo: montar tua primeira campanha.

@@ -15,6 +15,19 @@ Executar com: {SQUAD_DIR}/.venv/bin/python3 video-produce-zoom.py ...
 """
 import sys, subprocess, os, json, cv2, statistics, argparse
 
+
+def _bin(name):
+    """ffmpeg do Homebrew (bottle completo). Evita um ffmpeg de conda/build
+    estatico no PATH que possa faltar filtros."""
+    for base in ("/opt/homebrew/bin", "/usr/local/bin"):
+        cand = os.path.join(base, name)
+        if os.path.exists(cand):
+            return cand
+    return name
+
+
+FFMPEG = _bin("ffmpeg")
+
 ap = argparse.ArgumentParser()
 ap.add_argument("video")
 ap.add_argument("sections")
@@ -96,7 +109,7 @@ parts.append("".join(f"[v{i}]" for i in range(len(sections)))
 
 ff = f"/tmp/zoom_filter_{os.getpid()}.txt"
 open(ff,"w").write("\n".join(parts))
-subprocess.run(["ffmpeg","-y","-i",video,"-filter_complex_script",ff,
+subprocess.run([FFMPEG,"-y","-i",video,"-filter_complex_script",ff,
     "-map","[outv]","-map","0:a",
     "-c:v","libx264","-preset","fast","-crf","18",
     "-pix_fmt","yuv420p","-profile:v","main","-level","4.0",

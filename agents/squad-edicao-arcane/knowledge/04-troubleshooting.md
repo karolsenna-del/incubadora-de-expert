@@ -132,3 +132,28 @@ Ou rodar `install.sh` do squad — ele baixa automaticamente.
 1. `fc-cache -fv ~/Library/Fonts/`
 2. Verificar suporte: `ffmpeg -version | grep libfontconfig` — deve aparecer
 3. Se não tiver: `brew reinstall ffmpeg`
+
+## Bug 11: Legenda não renderiza — "precisa compilar o ffmpeg" / "tem custo"
+
+**Sintoma:** Todo o resto do pipeline roda (corte, speed, zoom, trilha), mas a **legenda queimada não vai**. Um assistente de IA sugere "compilar o ffmpeg" e fala em "custo".
+
+**Causa raiz:** A legenda é a ÚNICA etapa que usa o filtro `drawtext` do ffmpeg (`video-captions.py`). `drawtext` depende de `libfreetype`/`libfontconfig` compilados no binário. Se o aluno tem **outro ffmpeg na frente do PATH sem drawtext** — tipicamente o ffmpeg do **conda/Anaconda/miniconda** (não traz drawtext) ou um build estático antigo — os scripts pegavam esse ffmpeg cego e o `drawtext` falhava. As outras etapas funcionavam porque usam filtros presentes em qualquer ffmpeg.
+
+**Premissa ERRADA que circula:** "o Homebrew não entrega mais ffmpeg com drawtext". **Falso.** O bottle oficial do Homebrew JÁ inclui drawtext (`enable-libfreetype`, `enable-libfontconfig`, `enable-libharfbuzz`); `fontconfig` e `freetype` são dependências *Required* da fórmula. **Não precisa compilar nada.**
+
+**O "custo":** o assistente do aluno sugeriu *compilar o ffmpeg do source* (`brew install --build-from-source` ou compilação manual) — isso leva ~30 min de CPU e esquenta o Mac. Esse é o "custo" (tempo/processamento), **não dinheiro**. E é totalmente desnecessário.
+
+**Diagnóstico:**
+```bash
+which ffmpeg                                   # se apontar pra ~/miniconda3/... ou /opt/anaconda → é o culpado
+ffmpeg -filters 2>/dev/null | grep drawtext    # vazio = ffmpeg do PATH não tem drawtext
+/opt/homebrew/bin/ffmpeg -filters | grep drawtext   # o do Homebrew TEM (em Intel: /usr/local/bin/ffmpeg)
+```
+
+**Fix (a partir desta versão do squad):** os scripts já usam o ffmpeg do Homebrew direto (`/opt/homebrew/bin/ffmpeg`, ou `/usr/local/bin` no Intel), ignorando o PATH. Basta garantir que o ffmpeg do Homebrew esteja instalado:
+```bash
+brew install ffmpeg     # (ou: brew reinstall ffmpeg). NÃO use --build-from-source.
+bash scripts/doctor.sh  # confirma "ffmpeg drawtext (legenda) ✓"
+```
+
+**Resposta pronta pro aluno que perguntou do "custo":** "Não precisa compilar nada nem tem custo nenhum. O ffmpeg do Homebrew já vem com legenda pronta. Roda `brew install ffmpeg` e depois o `doctor.sh` do squad — resolve."

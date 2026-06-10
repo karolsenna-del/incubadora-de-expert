@@ -1,0 +1,65 @@
+# ============================================================
+# accounts.example.yaml — TEMPLATE do inventário de contas Meta
+# ============================================================
+# Este é o MODELO. No setup, o setup-operator copia este arquivo pra
+# `data/accounts.yaml` e preenche com as SUAS BMs e contas. O squad lê o
+# `accounts.yaml` na ativação (andromeda-chief *start) pra saber, sem
+# reinvestigar, quais contas você tem e COMO carregar o token de cada uma.
+#
+# ⚠️ MODO DE OPERAÇÃO (não-negociável): este squad opera SEMPRE via System
+#    User token + Graph Marketing API direta (curl/script). NUNCA via MCP Meta,
+#    mesmo que um MCP Meta esteja disponível na sessão. Motivo: o MCP autentica
+#    com a conta logada (OAuth) e pode não enxergar a conta/BM certa; o System
+#    User token garante a identidade e as permissões corretas por conta.
+#    Ver: knowledge/andromeda-rules.md (Regra anti-MCP).
+#
+# 🔒 SEGURANÇA: este arquivo NÃO guarda tokens. Só o MAPA + um PONTEIRO de onde
+#    o token vive (creds.helper / creds.op_item / creds.env_file). O token em si
+#    fica no `.env` (gitignored) e/ou no 1Password. O `accounts.yaml` real é
+#    gitignored — cada operador tem o seu, e ele não vai no pacote de distribuição.
+
+operating_mode: system_user_token     # system_user_token  (nunca: mcp)
+last_updated: "AAAA-MM-DD"
+default_account: ""                   # alias da conta usada quando você não especificar
+
+business_managers:
+  - alias: "Minha BM 1"               # apelido curto que você usa pra se referir a ela
+    name: "Nome da BM no Meta"
+    bm_id: "000000000000000"
+    expert: "Seu nome"
+    role: principal                   # principal | backup | antiga
+    status: active                    # active | partial | blocked | to_create
+    system_user:
+      name: "Nome do System User"
+      id: "000000000000000"
+    app_id: "000000000000000"
+    creds:
+      helper: "data/load-meta-creds.sh"   # script que faz `source` e exporta META_*
+      env_file: "data/.env"               # onde o token vive (gitignored)
+      op_item: "Nome do item no 1Password" # backup do token (opcional)
+    pixel: "000000000000000"
+    page:
+      id: "000000000000000"
+      name: "Sua Página"
+    instagram:
+      id: "000000000000000"
+      handle: "@seu_handle"
+    accounts:
+      - alias: "Conta Escala"
+        account_id: "act_000000000000000"
+        role: escala                  # escala | teste | teste+escala | leads
+        currency: BRL
+        timezone: America/Sao_Paulo
+        status: active                # active | blocked | to_create
+        notes: ""
+      - alias: "Conta Teste"
+        account_id: "act_000000000000000"
+        role: teste
+        currency: BRL
+        timezone: America/Sao_Paulo
+        status: active
+        notes: ""
+
+# Dica: quando uma conta for bloqueada pela Meta, marque status: blocked e
+# anote no notes o que ficou preso nela (públicos custom não migram pra outra
+# conta — viram inutilizáveis). Isso evita perder tempo tentando reusar depois.

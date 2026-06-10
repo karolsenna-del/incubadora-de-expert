@@ -9,6 +9,11 @@
 set -euo pipefail
 export LC_NUMERIC=C
 
+# ffmpeg/ffprobe do Homebrew (bottle completo, com sidechaincompress) — evita um
+# ffmpeg de conda/build estatico no PATH que possa faltar filtros.
+_bin(){ for b in /opt/homebrew/bin /usr/local/bin; do [ -x "$b/$1" ] && { echo "$b/$1"; return; }; done; command -v "$1" 2>/dev/null || echo "$1"; }
+FFMPEG="$(_bin ffmpeg)"; FFPROBE="$(_bin ffprobe)"
+
 SQUAD_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 VIDEO="${1:?uso: video-add-music.sh <video> [<trilha>] [<output>] [<volume>]}"
@@ -23,7 +28,7 @@ if [[ ! -f "$TRILHA" ]]; then
   exit 1
 fi
 
-DUR=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$VIDEO")
+DUR=$("$FFPROBE" -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$VIDEO")
 FADE_OUT=$(awk "BEGIN{printf \"%.3f\", $DUR-2.5}")
 
 FF="/tmp/music_filter_$$.txt"
@@ -34,7 +39,7 @@ cat > "$FF" <<EOF
 [voice][ducked]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[aout]
 EOF
 
-ffmpeg -y -i "$VIDEO" -stream_loop -1 -i "$TRILHA" \
+"$FFMPEG" -y -i "$VIDEO" -stream_loop -1 -i "$TRILHA" \
   -filter_complex_script "$FF" \
   -map 0:v -map "[aout]" -c:v copy -c:a aac -b:a 192k -t "$DUR" \
   "$OUTPUT" 2>&1 | tail -2

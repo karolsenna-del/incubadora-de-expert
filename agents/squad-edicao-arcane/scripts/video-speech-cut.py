@@ -10,6 +10,20 @@ import sys, subprocess, os, argparse, torch
 from scipy.io import wavfile
 from silero_vad import load_silero_vad, get_speech_timestamps
 
+
+def _bin(name):
+    """ffmpeg/ffprobe do Homebrew (bottle completo). Evita um ffmpeg de
+    conda/build estatico no PATH que possa faltar filtros."""
+    for base in ("/opt/homebrew/bin", "/usr/local/bin"):
+        cand = os.path.join(base, name)
+        if os.path.exists(cand):
+            return cand
+    return name
+
+
+FFMPEG = _bin("ffmpeg")
+FFPROBE = _bin("ffprobe")
+
 p = argparse.ArgumentParser()
 p.add_argument("video")
 p.add_argument("output", nargs="?", default=None)
@@ -31,7 +45,7 @@ output = args.output or f"{base}_speechcut.mp4"
 scale = args.scale.replace("x", ":")
 
 wav = f"/tmp/sv_{os.getpid()}.wav"
-subprocess.run(["ffmpeg","-y","-i",video,"-ar","16000","-ac","1","-f","wav",wav],
+subprocess.run([FFMPEG,"-y","-i",video,"-ar","16000","-ac","1","-f","wav",wav],
     capture_output=True, check=True)
 
 model = load_silero_vad()
@@ -46,7 +60,7 @@ ts = get_speech_timestamps(audio, model, sampling_rate=16000,
     speech_pad_ms=args.pad_ms,
     return_seconds=True)
 
-duration = float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration",
+duration = float(subprocess.run([FFPROBE,"-v","error","-show_entries","format=duration",
     "-of","default=noprint_wrappers=1:nokey=1",video],capture_output=True,text=True).stdout.strip())
 segs = [[max(0.0,t['start']), min(duration,t['end'])] for t in ts]
 
@@ -61,7 +75,7 @@ parts.append("".join(f"[v{i}][a{i}]" for i in range(len(segs)))
     + f"concat=n={len(segs)}:v=1:a=1[outv][outa]")
 ff = f"/tmp/sv_filter_{os.getpid()}.txt"
 open(ff,"w").write("\n".join(parts))
-subprocess.run(["ffmpeg","-y","-i",video,"-filter_complex_script",ff,
+subprocess.run([FFMPEG,"-y","-i",video,"-filter_complex_script",ff,
     "-map","[outv]","-map","[outa]",
     "-c:v","libx264","-preset","fast","-crf","18",
     "-pix_fmt","yuv420p","-profile:v","main","-level","4.0",
