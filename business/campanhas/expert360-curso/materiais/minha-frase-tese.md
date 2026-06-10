@@ -60,6 +60,7 @@ Essa frase vai aparecer — repetida, em formatos diferentes — no seu conteúd
 
 - **Aula 5:** sua frase-tese entra como um dos pilares da sua linha editorial.
 - **Aula 6:** os prompts de reels e carrosséis vão usar essa frase como ponto de partida.
+- **Mais adiante nesta aula:** essa frase vira a base do seu **Post Fixado 2** — o post que mostra sua tese pro mundo.
 
 Guarde este arquivo — você vai voltar a ele.
 

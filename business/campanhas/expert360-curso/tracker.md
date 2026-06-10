@@ -39,7 +39,7 @@
 | Roteirizar M1 — Persona + Promessa (8 aulas) | Course Creator | Done 02/06 | M0 roteirizado | m1-roteiros.md |
 | Roteirizar M2 — Processo Autoral (9 aulas) | Course Creator | Done 03/06 | M1 roteirizado | m2-roteiros.md |
 | Roteirizar M3 — Vendas Secretas (12 aulas) | Course Creator | Done 09/06 | M2 roteirizado | m3-roteiros.md |
-| Roteirizar M4 — Autoridade (9 aulas) | Course Creator | Nao iniciado | M3 roteirizado | — |
+| Roteirizar M4 — Autoridade (9 aulas) | Course Creator | Em andamento — 5 de 9 (Intro+A1+A2+A3+A4) | M3 roteirizado | — |
 
 ---
 
@@ -54,6 +54,7 @@
 ## LOG
 
 > Mais recente primeiro.
+- 09/06 — @course-creator: Aula 4 do M4 aprovada (QG-CC-006 PASS) — reestruturada de "Da tríplice para o perfil" para "Montando sua Vitrine: Perfil, Bio, Destaques e Posts Fixados" (6 partes: foto de perfil, bio, frase-tese, narrativa, os 3 destaques, os 3 posts fixados). Mapeamento: frase-tese → Post Fixado 2, narrativa → Destaque 1 + Post Fixado 1. Estrutura de Destaques/Pinned adaptada da metodologia do squad-posicionamento-arcane (reuso de KB, sem referenciar o squad pra aluna — ela não tem acesso). 4 materiais de apoio criados no Drive da aluna: minha-frase-tese.md, minha-narrativa-posicionamento.md, meus-destaques.md, meus-posts-fixados.md (todos com prompt de IA embutido). estrutura-modulos.md atualizado com novo título/escopo da Aula 4. M4: 5 de 9 aulas roteirizadas (Intro+A1+A2+A3+A4).
 - 09/06 — @companion: Logomarca do Expert360 definida — briefing visual criado (`materiais/briefing-visual-logo.md`), conceito gerado via ChatGPT (EXPERT em preto + 360 em laranja + arco circular partido), refinado e exportado via Canva.
 - 09/06 — @companion: M3 fechado e aprovado pela Karol — 12 aulas completas. Próximo: M4 — Autoridade (9 aulas).
 - 08/06 — @course-creator: M3 — Aula 10 (Pós-sessão: follow-up + depoimento, com sequência de 5 toques pra ticket alto) escrita e aprovada. Encerramento M3 ("Quem Você Se Tornou") escrito — aguardando aprovação final da Karol sobre tom/ordem. Seção "grave suas sessões + oferta de análise" movida da Encerramento pra Aula 9 (encaixe mais natural — momento de ir a campo). Aulas de Encerramento de M0, M1, M2 e M3 renomeadas pra "Quem Você Se Tornou" — nome mais atrativo pra evitar que sejam puladas (são estratégicas pra jornada psicológica da aluna). M3: 10 de 12 aulas roteirizadas.

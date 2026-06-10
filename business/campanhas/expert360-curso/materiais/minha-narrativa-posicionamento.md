@@ -63,6 +63,7 @@ Esse texto vira a base de tudo que você precisar contar sobre a sua trajetória
 - **Aula 6:** roteiros de reels de bastidor partem dessa narrativa.
 - O "sobre" do seu site ou página de vendas.
 - A legenda de um post de apresentação.
+- **Mais adiante nesta aula:** essa narrativa vira a base do seu **Destaque "Sobre Mim"** e do seu **Post Fixado 1**.
 
 Guarde este arquivo — você vai voltar a ele sempre que precisar se apresentar.
 
