@@ -63,7 +63,8 @@
       "Aula 2 — Funil de consciência: onde sua persona está",
       "Aula 3 — Exercício: Agente da Autoridade Tríplice",
       "Aula 4 — Montando sua Vitrine: Perfil, Bio, Destaques e Posts Fixados",
-      "Aula 5 — Linha editorial + plano de 30 dias"
+      "Aula 5 — Linha editorial + plano de 30 dias",
+      "Aula 6 — Roteiros: prompts de reels e carrosséis"
     ]
   },
   "materiais_criados": [
@@ -74,10 +75,12 @@
     "business/campanhas/expert360-curso/materiais/minha-narrativa-posicionamento.md — prompt de IA embutido para gerar narrativa em 4 movimentos a partir de Minha História Real + relatório da Tríplice (M4 Aula 4)",
     "business/campanhas/expert360-curso/materiais/meus-destaques.md — 3 prompts (Sobre Mim, Método, Depoimentos) com placeholders para quem ainda não tem produto/depoimento (M4 Aula 4)",
     "business/campanhas/expert360-curso/materiais/meus-posts-fixados.md — 3 prompts (Pinned 1/2/3) com placeholder para Pinned 3 sem oferta pronta (M4 Aula 4)",
-    "business/campanhas/expert360-curso/materiais/minha-linha-editorial.md — prompt de IA (chat geral) gera 3 pilares nomeados + banco de ~30 temas a partir do relatório da Tríplice; grade semanal fixa (pilar x tom x formato x stories); calendário de 4 semanas pra preencher semana a semana (M4 Aula 5)"
+    "business/campanhas/expert360-curso/materiais/minha-linha-editorial.md — prompt de IA (chat geral) gera 3 pilares nomeados + banco de ~30 temas a partir do relatório da Tríplice; grade semanal fixa (pilar x tom x formato x stories); calendário de 4 semanas pra preencher semana a semana (M4 Aula 5)",
+    "business/campanhas/expert360-curso/materiais/meus-roteiros.md — 4 prompts interativos reutilizáveis (chat pede Persona+Posicionamento+Método, sugere 5 opções, aluna escolhe, chat monta o roteiro): 2 de Carrossel (História de Alcance / Situação de Identificação) + 2 de Reels (Narrativo com Metáfora / Didático Direto) (M4 Aula 6)",
+    "business/campanhas/expert360-curso/materiais/minha-lista-de-fracassos.md — tabela pra listar tentativas que não funcionaram + o que aprendeu com cada uma; aquecimento pra Aula 2 (Minha História Real) (M0 Aula 1)"
   ],
   "modulo_atual": "M4",
-  "aula_atual": "M4 — Aula 5 aprovada (QG-CC-006 PASS). Próxima: Aula 6 (Roteiros: prompts de reels e carrosséis)",
+  "aula_atual": "M4 — Aula 6 aprovada (QG-CC-006 PASS). Próxima: Aula 7 — Bloco Final (Queimar a ponte: o anúncio de posicionamento)",
   "formato_roteiro": "script completo + estrutura com tópicos e pontos-chave ao final",
   "branding_aprovado": false,
   "empacotamento_aprovado": false,
@@ -122,6 +125,8 @@
     "'Relatório da Aula 3' = output do Agente da Autoridade Tríplice (gerado durante/após a conversa da aluna com o agente no Drive dela), não um documento pré-pronto — wording corrigido em todos os materiais novos para deixar isso claro.",
     "Bio (Parte 2 da Aula 4) não tem arquivo próprio no Drive — exercício curto, feito direto no campo de bio do Instagram.",
     "M4 Aula 5 aprovada — 'Linha editorial + plano de 30 dias'. Calendário de 30 dias reframed como grade semanal repetível de 4 semanas (não 30 posts pré-escritos) — resolve tensão com a regra cardinal da Alcateia 'nunca criar 30 dias de conteúdo de uma vez'. Aprovado pela Karol.",
-    "Wording corrigido: prompts de IA vão pra um 'chat de IA (Claude, ChatGPT, Gemini ou outro)', não 'agente de IA' — a pedido explícito da Karol na aprovação da Aula 5. Aplicado em minha-linha-editorial.md, no roteiro da Aula 5, e retroativamente nos 4 materiais da Aula 4 (minha-frase-tese.md, minha-narrativa-posicionamento.md, meus-destaques.md, meus-posts-fixados.md). Mantidos intactos os nomes próprios dos agentes específicos do curso (Agente da Autoridade Tríplice, Agente da Persona Compradora, etc.) — a correção vale só pra onde o termo 'agente' se referia genericamente ao chat de IA. Padrão pra futuras aulas: 'chat de IA (Claude, ChatGPT, Gemini ou outro)'."
+    "Wording corrigido: prompts de IA vão pra um 'chat de IA (Claude, ChatGPT, Gemini ou outro)', não 'agente de IA' — a pedido explícito da Karol na aprovação da Aula 5. Aplicado em minha-linha-editorial.md, no roteiro da Aula 5, e retroativamente nos 4 materiais da Aula 4 (minha-frase-tese.md, minha-narrativa-posicionamento.md, meus-destaques.md, meus-posts-fixados.md). Mantidos intactos os nomes próprios dos agentes específicos do curso (Agente da Autoridade Tríplice, Agente da Persona Compradora, etc.) — a correção vale só pra onde o termo 'agente' se referia genericamente ao chat de IA. Padrão pra futuras aulas: 'chat de IA (Claude, ChatGPT, Gemini ou outro)'.",
+    "M4 Aula 6 aprovada — 'Roteiros: prompts de reels e carrosséis'. Carrossel: 2 prompts interativos do acervo da Karol (chat pede Persona+Posicionamento+Método, sugere 5 opções — histórias de alcance ou situações de identificação/vergonha relacionadas ao tema do dia —, aluna escolhe, chat monta o roteiro). Reels: 2 prompts NOVOS criados no mesmo estilo interativo (Narrativo com Metáfora = roteiro-base de 5 passos da Aula 5 + gancho + metáfora do método; Didático Direto = estrutura gancho/início/desenvolvimento/final/CTA do Código PEV). Os 4 prompts injetam o tema do dia (calendário da Aula 5) na etapa de coleta. Material novo: meus-roteiros.md. REGRA: nunca citar 'Alcateia' como fonte em nenhum material ou roteiro — usar 'acervo da Karol' / 'prompts já validados'.",
+    "M0 Aula 1 (Fracasso como Prova) — exercício 'EXERCÍCIO RÁPIDO — tornar pessoal' reescrito a pedido da Karol: de 'pensa em uma coisa que não funcionou + uma frase de aprendizado' para 'liste TODOS os fracassos da jornada (não só do que pretende ensinar) + o que aprendeu com cada um, quanto mais melhor'. Novo material: minha-lista-de-fracassos.md (tabela Fracasso x Aprendizado) — aquecimento pra Aula 2 (Minha História Real), não é um terceiro arquivo carregado pra M1/M2 como História Real e Ikigai."
   ]
 }

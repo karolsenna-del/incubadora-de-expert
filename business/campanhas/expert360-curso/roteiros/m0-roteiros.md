@@ -168,13 +168,11 @@ Mas em todas elas, o que não funcionou é dado. Em todas elas, o que você vive
 
 **[EXERCÍCIO RÁPIDO — tornar pessoal]**
 
-Antes de avançar, pensa em uma coisa que você tentou que não funcionou. Uma coisa específica.
+Abra o arquivo **Minha Lista de Fracassos** no seu Drive.
 
-E agora me responde — pode ser no papel, pode ser em voz alta só pra você:
+Antes de avançar, quero que você liste o que tentou que não funcionou. É hora de valorizar seus fracassos ao longo da jornada. Não precisa se ater somente ao que pretende ensinar. Tudo que você acredita que falhou, que te fez aprender algo, te preparou para ser a pessoa que é hoje. Sua força, sua resiliência para chegar até aqui, para ter coragem de se expor por um bem maior que é compartilhar seu conhecimento.
 
-*O que eu aprendi com isso que eu nunca saberia se não tivesse tentado?*
-
-Não precisa ser uma resposta elaborada. Uma frase é suficiente. O importante é que você comece a traduzir essa experiência de evidência de incapacidade para dado de aprendizado.
+Quero que coloque o fracasso e o que aprendeu com ele. Quanto mais conseguir, melhor.
 
 Porque é com esses dados que a próxima aula começa.
 
@@ -220,8 +218,10 @@ O Módulo 0 começa aqui. Não na técnica — na disposição de escrever sem f
 - Vale para todas as narrativas de método (Grande Obstáculo, Tesouro Escondido, Fora da Curva…)
 
 **Seção 4: Exercício rápido**
-- Pergunta: "O que aprendi que nunca saberia se não tivesse tentado?"
-- Objetivo: traduzir experiência de evidência para dado
+- Arquivo: **Minha Lista de Fracassos** no Drive
+- Listar o que tentou e não funcionou — fracassos ao longo da jornada, não só do que pretende ensinar
+- Pra cada um: o que aprendeu com ele. Quanto mais, melhor
+- Objetivo: valorizar a força/resiliência da trajetória e gerar os dados que alimentam a próxima aula
 
 **Seção 5: Fechamento e teaser**
 - Próxima aula: escrever a história real sem filtro
