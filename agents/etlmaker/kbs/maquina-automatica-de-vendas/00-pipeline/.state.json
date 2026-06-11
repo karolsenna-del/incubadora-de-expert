@@ -1,0 +1,255 @@
+{
+  "kb_slug": "maquina-automatica-de-vendas",
+  "kb_name": "Máquina Automática de Vendas — Ícaro de Carvalho",
+  "mode": "full",
+  "version": "3.0.0",
+  "current_phase": 0,
+  "phase_status": {
+    "phase_0": "completed",
+    "phase_1": "pending",
+    "phase_2": "pending",
+    "phase_3": "pending",
+    "phase_4": "pending"
+  },
+  "source": "hotmart_club_video_subtitles",
+  "platform_url": "https://alunos-mav.onovomercado.com/pt-br/club/maquina-automatica-de-vendas/products/5080945",
+  "course_map_verified": true,
+  "total_modules": 15,
+  "total_lessons": 94,
+  "lessons_extracted": 31,
+  "scope_current_round": {
+    "modules": [6, 4, 5, 7],
+    "total_items": 31,
+    "processing_order": ["modulo_06", "modulo_04", "modulo_05", "modulo_07"],
+    "decided_at": "2026-06-10",
+    "test_video_content_id": "b4KdEqdDeX",
+    "test_video_title": "Introdução aos VSLs",
+    "extraction_method_validated": "playwright_iframe_m3u8_cuedup (webvtt textstream_pt_br via .m3u8 playlist, sem playback, dedup por cue de borda de segmento)",
+    "extraction_method_legacy": "playwright_iframe_16x_dedup (usado so na aula 1, antes de descobrir o atalho via m3u8)",
+    "yt_dlp_viable": false
+  },
+  "lessons_status": [
+    {
+      "content_id": "b4KdEqdDeX",
+      "title": "Introdução aos VSLs",
+      "module": 6,
+      "status": "done",
+      "file": "sources/transcricoes/mod06-aula01-introducao-aos-vsls.md"
+    },
+    {
+      "content_id": "b4KdEq9DeX",
+      "title": "Componentes de um VSL eficaz",
+      "module": 6,
+      "status": "done",
+      "file": "sources/transcricoes/mod06-aula02-componentes-de-um-vsl-eficaz.md"
+    },
+    {
+      "content_id": "E4zDrWzQ7l",
+      "title": "O papel da narrativa em um VSL",
+      "module": 6,
+      "status": "done",
+      "file": "sources/transcricoes/mod06-aula03-o-papel-da-narrativa-em-um-vsl.md"
+    },
+    {
+      "content_id": "0Ovq9JPN7j",
+      "title": "Criando um Gancho Forte",
+      "module": 6,
+      "status": "done",
+      "file": "sources/transcricoes/mod06-aula04-criando-um-gancho-forte.md"
+    },
+    {
+      "content_id": "M7GnV6W8ew",
+      "title": "Desenvolvimento do seu VSL",
+      "module": 6,
+      "status": "done",
+      "file": "sources/transcricoes/mod06-aula05-desenvolvimento-do-seu-vsl.md"
+    },
+    {
+      "content_id": "0Ovq9Jld7j",
+      "title": "A Importância do Headline",
+      "module": 6,
+      "status": "done",
+      "file": "sources/transcricoes/mod06-aula06-a-importancia-do-headline.md"
+    },
+    {
+      "content_id": "EOgYQgnqe6",
+      "title": "O poder na narrativa no VSL",
+      "module": 6,
+      "status": "done",
+      "file": "sources/transcricoes/mod06-aula07-o-poder-na-narrativa-no-vsl.md"
+    },
+    {
+      "content_id": "NOwBwYyE7m",
+      "title": "Prova Social, Credibilidade e encerramento eficaz",
+      "module": 6,
+      "status": "done",
+      "file": "sources/transcricoes/mod06-aula08-prova-social-credibilidade-e-encerramento-eficaz.md"
+    },
+    {
+      "content_id": "97BEv06Aep",
+      "title": "Storytelling e Soft copy",
+      "module": 4,
+      "status": "done",
+      "file": "sources/transcricoes/mod04-aula01-storytelling-e-soft-copy.md"
+    },
+    {
+      "content_id": "14oRgkv5Op",
+      "title": "Os 3 pilares de uma boa Big Idea",
+      "module": 4,
+      "status": "done",
+      "file": "sources/transcricoes/mod04-aula02-os-3-pilares-de-uma-boa-big-idea.md"
+    },
+    {
+      "content_id": "NOwBwopM7m",
+      "title": "Causa futura e o poder de criar movimentos",
+      "module": 4,
+      "status": "done",
+      "file": "sources/transcricoes/mod04-aula03-causa-futura-e-o-poder-de-criar-movimentos.md"
+    },
+    {
+      "content_id": "M7GnV2lBew",
+      "title": "O que compõe uma boa história",
+      "module": 4,
+      "status": "done",
+      "file": "sources/transcricoes/mod04-aula04-o-que-compoe-uma-boa-historia.md"
+    },
+    {
+      "content_id": "oODd6jpbOP",
+      "title": "Porque criamos tantas histórias?",
+      "module": 4,
+      "status": "done",
+      "file": "sources/transcricoes/mod04-aula05-porque-criamos-tantas-historias.md"
+    },
+    {
+      "content_id": "V73RpNGpe3",
+      "title": "A nova oportunidade",
+      "module": 4,
+      "status": "done",
+      "file": "sources/transcricoes/mod04-aula06-a-nova-oportunidade.md"
+    },
+    {
+      "content_id": "97BEvvJAep",
+      "title": "O que você precisa saber sobre Hard Copy",
+      "module": 5,
+      "status": "done",
+      "file": "sources/transcricoes/mod05-aula01-o-que-voce-precisa-saber-sobre-hard-copy.md"
+    },
+    {
+      "content_id": "Z72v11xY7N",
+      "title": "O segredo para uma copy que converte",
+      "module": 5,
+      "status": "done",
+      "file": "sources/transcricoes/mod05-aula02-o-segredo-para-uma-copy-que-converte.md"
+    },
+    {
+      "content_id": "M7qazD9n7x",
+      "title": "Copy de Mecanismo",
+      "module": 5,
+      "status": "done",
+      "file": "sources/transcricoes/mod05-aula03-copy-de-mecanismo.md"
+    },
+    {
+      "content_id": "RON1ljEY7P",
+      "title": "As duas alavancas que vão potencializar seus resultados",
+      "module": 5,
+      "status": "done",
+      "file": "sources/transcricoes/mod05-aula04-as-duas-alavancas-que-vao-potencializar-seus-resultados.md"
+    },
+    {
+      "content_id": "14oRgvk2Op",
+      "title": "Os 4 níveis de resistência à compra",
+      "module": 5,
+      "status": "done",
+      "file": "sources/transcricoes/mod05-aula05-os-4-niveis-de-resistencia-a-compra.md"
+    },
+    {
+      "content_id": "BeZylkG54w",
+      "title": "O momento da grande apoteose",
+      "module": 5,
+      "status": "done",
+      "file": "sources/transcricoes/mod05-aula06-o-momento-da-grande-apoteose.md"
+    },
+    {
+      "content_id": "BOnv1BDoOR",
+      "title": "Introdução aos Webinários",
+      "module": 7,
+      "status": "done",
+      "file": "sources/transcricoes/mod07-aula01-introducao-aos-webinarios.md"
+    },
+    {
+      "content_id": "gOpDPRQrOJ",
+      "title": "Webinário ao Vivo vs. Webinário Gravado",
+      "module": 7,
+      "status": "done",
+      "file": "sources/transcricoes/mod07-aula02-webinario-ao-vivo-vs-webinario-gravado.md"
+    },
+    {
+      "content_id": "M7qaz6Rm7x",
+      "title": "Como escolher o tema certo para seu Webinário",
+      "module": 7,
+      "status": "done",
+      "file": "sources/transcricoes/mod07-aula03-como-escolher-o-tema-certo-para-seu-webinario.md"
+    },
+    {
+      "content_id": "64lNkKXX7j",
+      "title": "Definição de Objetivos",
+      "module": 7,
+      "status": "done",
+      "file": "sources/transcricoes/mod07-aula04-definicao-de-objetivos.md"
+    },
+    {
+      "content_id": "37dL1YV67L",
+      "title": "Escolhendo o melhor formato para seu Webinário",
+      "module": 7,
+      "status": "done",
+      "file": "sources/transcricoes/mod07-aula05-escolhendo-o-melhor-formato-para-seu-webinario.md"
+    },
+    {
+      "content_id": "94JA3lldOg",
+      "title": "Ferramentas essenciais para realizar um Webinário",
+      "module": 7,
+      "status": "done",
+      "file": "sources/transcricoes/mod07-aula06-ferramentas-essenciais-para-realizar-um-webinario.md"
+    },
+    {
+      "content_id": "BOnv1kwkOR",
+      "title": "Como fazer a audiência participar",
+      "module": 7,
+      "status": "done",
+      "file": "sources/transcricoes/mod07-aula07-como-fazer-a-audiencia-participar.md"
+    },
+    {
+      "content_id": "BOnv1kMoOR",
+      "title": "A psicologia da apresentação da oferta",
+      "module": 7,
+      "status": "done",
+      "file": "sources/transcricoes/mod07-aula08-a-psicologia-da-apresentacao-da-oferta.md"
+    },
+    {
+      "content_id": "37dL1LyK7L",
+      "title": "Q&A e Chat",
+      "module": 7,
+      "status": "done",
+      "file": "sources/transcricoes/mod07-aula09-qa-e-chat.md"
+    },
+    {
+      "content_id": "NOwBwBxA7m",
+      "title": "Como fazer o follow-up no webinário",
+      "module": 7,
+      "status": "done",
+      "file": "sources/transcricoes/mod07-aula10-como-fazer-o-follow-up-no-webinario.md"
+    },
+    {
+      "content_id": "Z72v1vKL7N",
+      "title": "Sequência de Emails",
+      "module": 7,
+      "status": "done",
+      "file": "sources/transcricoes/mod07-aula11-sequencia-de-emails.md"
+    }
+  ],
+  "sources": [],
+  "volumes_composed": 0,
+  "validation_score": 0,
+  "quality_gates_passed": [],
+  "started_at": "2026-06-10T18:00:00Z"
+}
