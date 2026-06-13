@@ -6,12 +6,11 @@
 
 ## Como usar
 
-1. Crie uma cópia deste documento no seu Google Drive
-2. Pra Destaque 1, tenha em mãos sua **Minha Narrativa de Posicionamento** (Aula 4)
-3. Pra Destaque 2, tenha em mãos seu método autoral (Módulo 2 — nome, estrutura, promessa)
-4. Pra Destaque 3, tenha em mãos o(s) depoimento(s) coletado(s) no Módulo 3 (se já tiver)
-5. Para cada destaque, copie o prompt correspondente, cole o material indicado, e rode num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
-6. O resultado é o roteiro de stories — vira sua pauta de gravação
+1. Pra Destaque 1, tenha em mãos sua **Minha Narrativa de Posicionamento** (Aula 4)
+2. Pra Destaque 2, tenha em mãos seu método autoral (Módulo 2 — nome, estrutura, promessa)
+3. Pra Destaque 3, tenha em mãos o(s) depoimento(s) coletado(s) no Módulo 3 (se já tiver)
+4. Para cada destaque, copie o prompt correspondente, cole o material indicado, e rode num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
+5. O resultado é o roteiro de stories — vira sua pauta de gravação
 
 > **Lembrete técnico:** cada destaque pode ter até 100 stories, mas 4-7 por destaque é o ideal. A capa de cada destaque você configura depois de gravar — o conceito de cada capa está indicado abaixo.
 

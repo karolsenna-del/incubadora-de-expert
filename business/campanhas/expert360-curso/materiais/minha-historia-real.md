@@ -1,16 +1,14 @@
 # Minha História Real
 **Expert360º | Exercício do Módulo 0 — Aula 2**
-*Documento para preenchimento no Google Docs*
 
 ---
 
 ## Como usar
 
-1. Crie uma cópia deste documento no seu Google Drive (ou crie um Doc novo com este título)
-2. Responda cada pergunta abaixo sem editar enquanto escreve
-3. Escreva livre — sem filtro, sem preocupação com o que vai fazer com o texto depois
-4. Não tem tamanho mínimo nem máximo. Tem o tamanho do que é verdadeiro
-5. Guarde este arquivo: você vai abri-lo no Módulo 1 e no Módulo 2
+1. Responda cada pergunta abaixo sem editar enquanto escreve
+2. Escreva livre — sem filtro, sem preocupação com o que vai fazer com o texto depois
+3. Não tem tamanho mínimo nem máximo. Tem o tamanho do que é verdadeiro
+4. Guarde este arquivo: você vai abri-lo no Módulo 1 e no Módulo 2
 
 > **Regra de ouro:** autenticidade > perfeição. Escreva o que é real, não o que fica bonito.
 

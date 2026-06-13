@@ -213,7 +213,7 @@ Pinned 3 → PRODUTO   a solução
 
 ### Para os Pins
 - [ ] Tirar foto de perfil se necessário (face em foco, fundo neutro)
-- [ ] Produzir/montar os 3 carrosséis (Canva, designer ou IA visual) com as capas-conceito acima
+- [ ] Produzir/montar os 3 carrosséis com as capas-conceito acima — handoff pro Squad Carrossel Arcane (13/06/2026): primeiro uso, Identity Designer cria templates do estilo "Arquiteta do Método", Producer monta os 3 a partir da copy expandida (Bloco de Notas)
 
 ---
 
@@ -230,6 +230,14 @@ Pinned 3 → PRODUTO   a solução
 | Pinned 1 | Logo "Seu 1º curso começa aqui" | Sobre a Karol — Expert em Fracassos |
 | Pinned 2 | "O que eu faço por aqui!" | Tese — Diploma × Método |
 | Pinned 3 | Foto no INSIDER | Oferta — Incubadora pré-marketing |
+
+---
+
+## Copy Expandida — Pronta pra Produção (13/06/2026)
+
+Os 3 pinned acima foram expandidos slide a slide (texto completo de cada slide + legenda sugerida) e entregues no Bloco de Notas pra Karol iniciar a montagem no Canva.
+
+Arquivo de referência: `agents/squad-posicionamento-arcane/work/nucleo-em-progresso.md` (este documento — copy resumida acima) + entrega pontual no Bloco de Notas (não persistida como arquivo separado).
 
 ---
 

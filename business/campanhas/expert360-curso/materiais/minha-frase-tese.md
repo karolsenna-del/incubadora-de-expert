@@ -6,12 +6,11 @@
 
 ## Como usar
 
-1. Crie uma cópia deste documento no seu Google Drive (ou crie um Doc novo com este título)
-2. Tenha em mãos o relatório que o **Agente da Autoridade Tríplice** te entregou na Aula 3
-3. Cole esse relatório no espaço indicado dentro do prompt abaixo
-4. Copie o prompt inteiro (já com o relatório colado) e cole num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
-5. O chat vai te devolver 5 opções de frase-tese, cada uma com a explicação de onde ela vem e por que é polarizadora
-6. Escolha 1 (ou peça pra combinar duas que você gostou) e registre no espaço final deste documento
+1. Tenha em mãos o relatório que o **Agente da Autoridade Tríplice** te entregou na Aula 3
+2. Cole esse relatório no espaço indicado dentro do prompt abaixo
+3. Copie o prompt inteiro (já com o relatório colado) e cole num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
+4. O chat vai te devolver 5 opções de frase-tese, cada uma com a explicação de onde ela vem e por que é polarizadora
+5. Escolha 1 (ou peça pra combinar duas que você gostou) e registre no espaço final deste documento
 
 ---
 

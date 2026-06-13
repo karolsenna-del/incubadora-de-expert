@@ -6,14 +6,13 @@
 
 ## Como usar
 
-1. Crie uma cópia deste documento no seu Google Drive (ou crie um Doc novo com este título)
-2. Tenha em mãos dois materiais:
+1. Tenha em mãos dois materiais:
    - O documento **Minha História Real** (Módulo 0)
    - O relatório que o **Agente da Autoridade Tríplice** te entregou (Aula 3)
-3. Cole os dois materiais nos espaços indicados dentro do prompt abaixo
-4. Copie o prompt inteiro (já com os dois materiais colados) e cole num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
-5. O chat vai te devolver a narrativa em 4 movimentos
-6. Leia, ajuste o tom se precisar, e registre a versão final no espaço deste documento
+2. Cole os dois materiais nos espaços indicados dentro do prompt abaixo
+3. Copie o prompt inteiro (já com os dois materiais colados) e cole num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
+4. O chat vai te devolver a narrativa em 4 movimentos
+5. Leia, ajuste o tom se precisar, e registre a versão final no espaço deste documento
 
 ---
 

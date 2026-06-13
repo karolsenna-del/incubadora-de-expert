@@ -1,16 +1,14 @@
 # Meu Ikigai
 **Expert360º | Exercício do Módulo 0 — Aula 3**
-*Documento para preenchimento no Google Docs*
 
 ---
 
 ## Como usar
 
-1. Crie uma cópia deste documento no seu Google Drive (ou crie um Doc novo com este título)
-2. Tenha o documento **Minha História Real** aberto ao lado — você vai consultá-lo
-3. Escreva sem filtro. A resposta que vem primeiro costuma ser mais honesta do que a que você vai polir depois
-4. Se travar em alguma pergunta, avance e volte depois — nenhuma pergunta é bloqueante
-5. Guarde este arquivo: você vai abri-lo no Módulo 1 e no Módulo 2
+1. Tenha o documento **Minha História Real** aberto ao lado — você vai consultá-lo
+2. Escreva sem filtro. A resposta que vem primeiro costuma ser mais honesta do que a que você vai polir depois
+3. Se travar em alguma pergunta, avance e volte depois — nenhuma pergunta é bloqueante
+4. Guarde este arquivo: você vai abri-lo no Módulo 1 e no Módulo 2
 
 > **O que é Ikigai:** conceito japonês — "razão de ser". No Expert360, funciona como um filtro: a história que você escreveu é a matéria-prima rica e densa. O Ikigai destila o que importa e encontra a interseção entre o que você ama, o que sabe fazer e o que o mundo precisa de você.
 

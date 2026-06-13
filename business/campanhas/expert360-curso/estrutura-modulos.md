@@ -179,11 +179,11 @@ Portfólio de ferramentas foi movido para o M2 (Bloco do Ecossistema). Rastreado
 
 ## Módulo 4 — Autoridade
 **Fase:** Da Invisibilidade à Autoridade
-**Objetivo:** A aluna sai com P5 completo — bio publicável, linha editorial, plano 30 dias, prompts de reels e carrosséis, primeiro anúncio de posicionamento feito.
+**Objetivo:** A aluna sai com P5 completo — bio publicável, linha editorial, plano 30 dias, prompts de reels e carrosséis, primeiro anúncio de posicionamento feito e turbinado (primeiro passo de escala).
 **Input obrigatório:** P1 + P2 + P3
 **Input opcional (enriquece se existir):** depoimento, pitch que funcionou, objeções coletadas no M3
 **Mecanismo:** Agente da Autoridade Tríplice
-**Fontes:** Lives 3 e 10, VOL-06, RC-02
+**Fontes:** Lives 3 e 10, VOL-06, RC-02, VOL-vendas-trafego (ETL Alcateia, Seções 5-6)
 **Gate:** QG-CC-005 PASS (01/06/2026)
 
 ### Bloco de Mentalidade
@@ -217,3 +217,4 @@ Portfólio de ferramentas foi movido para o M2 (Bloco do Ecossistema). Rastreado
 | # | Aula | Objetivo | Com o que sai |
 |---|------|----------|---------------|
 | 7 | Queimar ponte — o anúncio de posicionamento | Como anunciar publicamente. VOL-06: comprometimento público acelera. Primeiro post real de posicionamento como entregável final do módulo. | P5 completo + primeiro post publicado |
+| 8 | Escalando seu posicionamento — turbinar | M3 já validou o método com vendas reais — hora de escalar. Recurso "Turbinar" do Instagram, sempre pelo notebook (regra dos 30% da Apple). Passo a passo: objetivo Visitas ao perfil + público por interesse/idade/local. Ciclo semanal de validação (R$10/2 dias, custo/seguidor e custo/comentário). Fonte: VOL-vendas-trafego (ETL Alcateia), Seções 5-6. | Primeiro post turbinado + rotina semanal de validação iniciada |

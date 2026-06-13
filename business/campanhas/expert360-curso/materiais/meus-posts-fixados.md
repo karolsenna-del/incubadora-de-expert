@@ -6,12 +6,11 @@
 
 ## Como usar
 
-1. Crie uma cópia deste documento no seu Google Drive
-2. Pra Pinned 1, tenha em mãos sua **Minha Narrativa de Posicionamento**
-3. Pra Pinned 2, tenha em mãos sua **Minha Frase-Tese**
-4. Pra Pinned 3, tenha em mãos seu método autoral (Módulo 2) + o relatório que o Agente da Autoridade Tríplice te entregou (Aula 3)
-5. Para cada pinned, copie o prompt correspondente, cole o material indicado, e rode num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
-6. O resultado é o roteiro do post — vira a pauta de produção (gravação ou design do carrossel)
+1. Pra Pinned 1, tenha em mãos sua **Minha Narrativa de Posicionamento**
+2. Pra Pinned 2, tenha em mãos sua **Minha Frase-Tese**
+3. Pra Pinned 3, tenha em mãos seu método autoral (Módulo 2) + o relatório que o Agente da Autoridade Tríplice te entregou (Aula 3)
+4. Para cada pinned, copie o prompt correspondente, cole o material indicado, e rode num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
+5. O resultado é o roteiro do post — vira a pauta de produção (gravação ou design do carrossel)
 
 > **Lembrete:** o Instagram permite fixar até 3 posts no topo do seu grid — são os 3 primeiros que qualquer visitante vê depois da bio. A ordem de produção sugerida abaixo (1, 2, 3) é a mesma ordem de prioridade.
 

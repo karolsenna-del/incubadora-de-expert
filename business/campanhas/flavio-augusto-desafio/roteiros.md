@@ -655,8 +655,56 @@ A venda começa agora.
 | 5 | Reels lo-fi | Promessa Transformadora — incopiável | ✅ Aprovado |
 | 6 | Reels lo-fi | Vender é servir — preconceito pessoal | ✅ Aprovado |
 | 7 | Reels lo-fi | Vendas Secretas — palco depois | ✅ Aprovado |
-| 8-30 | — | A definir | ⏳ Pendente |
+| 8 | — | A persona que o Flávio não consegue salvar (e o Expert360º tenta) | ⏳ Tema cravado |
+| 9 | — | Eu ganhava 20k e ainda estava na gaiola | ⏳ Tema cravado |
+| 10 | — | Ele apareceu já posicionado (Autoridade Tríplice) | ⏳ Tema cravado |
+| 11 | — | Quase perdeu o próprio nome (erro WiseUp) | ⏳ Tema cravado |
+| 12 | — | Você não precisa estar pronta, precisa estar em movimento | ⏳ Tema cravado |
+| 13 | — | Seu valor não é o resultado de hoje | ⏳ Tema cravado |
+| 14 | — | Posicionamento é repetição | ⏳ Tema cravado |
+| 15-30 | — | A definir | ⏳ Pendente |
 
-## Pool de Temas Restantes (pré-aprovados pela Karol)
-- Dia 8: A persona que o Flávio não consegue salvar (e o Expert360º tenta)
-- Dias 9-30: A definir nas próximas sessões
+## Pool de Temas — Dias 9-14 (cravados pela Karol, prontos pra teoria/roteiro)
+
+### Dia 9 — "Eu ganhava 20k e ainda estava na gaiola"
+**Categoria Audience:** Crenças + Inimigo Comum (Governo/Sistema)
+**Fato/crença Flávio:** Categórico — não vende pro governo, não negocia com eles, segue toda lei pra não dever nada a eles. *Geração de Valor 3* fala em "vencer a barreira da insegurança" e não aceitar "imposições de um sistema que desencoraja a inovação" — autorresponsabilidade sem dependência.
+**História pessoal Karol:** Mesmo "ranço". Saiu do serviço público ganhando R$20k — não foi sobre dinheiro, foi sobre ver de dentro como o alto escalão funcionava. Quanto mais conhecia, mais queria sair.
+**Conexão Expert360º:** Liberdade financeira real não é sobre quanto você ganha — é sobre de quem você depende.
+**Moral:** "Liberdade não é salário. É não dever nada a ninguém."
+**Diferenciação do Dia 2:** Dia 2 foi sobre SAIR (a decisão, o momento). Esse é sobre O PORQUÊ — autonomia vs dependência.
+
+### Dia 10 — "Ele não 'apareceu' no digital. Ele apareceu já posicionado"
+**Categoria Audience:** Crenças + Famosos (ele mesmo)
+**Fato/crença Flávio:** "Cada dia, quero me posicionar como idealizador e mentor dos meus próprios projetos, com foco em incentivar novos empreendedores a construir sua própria história."
+**Conexão Expert360º:** Mecanismo 3 — Autoridade Tríplice (posicionamento Expert + Persona + Produto em 3 camadas simultâneas, antes de qualquer exposição pública). Primeiro tema do desafio a introduzir esse mecanismo.
+**Moral:** "Posicionamento não é sorte. É arquitetura."
+
+### Dia 11 — "O cara que vendeu a empresa por R$877 milhões quase perdeu o próprio nome"
+**Categoria Audience:** Momentos de vida + Inimigos (próprio erro)
+**Fato Flávio:** Não registrou a marca "WiseUp" no início — recebeu notificação extrajudicial de quem já tinha registrado.
+**Conexão Expert360º:** Mecanismo 1 — Narrativa do Método (a história inclui os erros). Conecta com a "Lista de Fracassos" reescrita no M0.
+**Moral:** "Erro feio não te invalida. Te dá história — e história incopiável vende."
+
+### Dia 12 — "Você não precisa estar pronta. Precisa estar em movimento"
+**Categoria Audience:** Crenças
+**Fato/frase Flávio:** "Uma boa ideia não vale nada, o que vale é a execução!" + "Não espere a condição ideal para agir, pois ela nunca virá."
+**Conexão Expert360º:** Fase 1 — "a sensação de não estar pronta não some com mais formação, some com ação". Reforça também o princípio do squad: produzir > planejar perfeito.
+**Moral:** "Condição ideal é ilusão. Quem espera ela, espera pra sempre."
+
+### Dia 13 — "Seu valor não é o resultado de hoje. É a trajetória que ninguém pode copiar"
+**Categoria Audience:** Crenças
+**Fato/frase Flávio:** "Manter a essência é entender que tanto o sucesso quanto o fracasso não mudam quem você é." Foi do zero a R$877M, teve perdas também — a pessoa por trás é a mesma.
+**Conexão Expert360º:** Mecanismo 1 — Narrativa do Método (antes/durante/depois compõem a história incopiável).
+**Moral:** "Você não precisa esperar 'chegar lá' pra ter uma história que vale ser contada."
+
+### Dia 14 — "Posicionamento é repetição"
+**Categoria Audience:** Crenças + Comportamentos+
+**Fato Flávio:** Fala dos mesmos pilares (vendas, execução, liberdade financeira, autorresponsabilidade) há ~20 anos. Não varia de pauta.
+**Crença pessoal Karol (1ª pessoa — hook direto):** "Eu falo sempre: posicionamento é repetição. As pessoas veem centenas de conteúdos rolando o feed — se não repetirmos sempre, não vão lembrar da gente nem do que fazemos. Repetição é necessária."
+**Conexão Expert360º:** Fase 5 — linha editorial definida (temas, ângulo único, frequência). Reforça o princípio do squad "Formato definido > variação caótica". Conecta com `minha-linha-editorial.md` (M4).
+**Moral:** "Repetir o mesmo tema não é falta de criatividade. É linha editorial — e linha editorial é o que te faz ser lembrada."
+**Nota pro Rico:** Dupla voz — fato do Flávio + crença própria da Karol em 1ª pessoa. Pode abrir o hook direto com a frase dela ("Eu falo sempre: posicionamento é repetição...").
+
+## Pool de Temas Restantes (a definir)
+- Dias 15-30: A definir nas próximas sessões

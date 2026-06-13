@@ -6,13 +6,12 @@
 
 ## Como usar
 
-1. Crie uma cópia deste documento no seu Google Drive
-2. Tenha em mãos o relatório que o **Agente da Autoridade Tríplice** te entregou na Aula 3
-3. Cole esse relatório no espaço indicado dentro do prompt da Seção 1
-4. Copie o prompt inteiro (já com o relatório colado) e cole num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
-5. O chat vai te devolver os 3 pilares nomeados + um banco de cerca de 30 temas (10 por pilar)
-6. A Seção 2 é a sua grade semanal — referência fixa, não muda
-7. Toda semana, antes de começar, abra a Seção 3 e escolha (do seu banco de temas) qual tema entra em cada dia
+1. Tenha em mãos o relatório que o **Agente da Autoridade Tríplice** te entregou na Aula 3
+2. Cole esse relatório no espaço indicado dentro do prompt da Seção 1
+3. Copie o prompt inteiro (já com o relatório colado) e cole num chat de IA — Claude, ChatGPT, Gemini ou outro de sua preferência
+4. O chat vai te devolver os 3 pilares nomeados + um banco de cerca de 30 temas (10 por pilar)
+5. A Seção 2 é a sua grade semanal — referência fixa, não muda
+6. Toda semana, antes de começar, abra a Seção 3 e escolha (do seu banco de temas) qual tema entra em cada dia
 
 ---
 

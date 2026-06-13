@@ -16,6 +16,7 @@ Diferente dos materiais anteriores, esses prompts não são de uso único — s�
 6. Quando o chat pedir sua Persona, Posicionamento e/ou Método, cole o material indicado logo abaixo do prompt
 7. O chat vai sugerir 5 opções (situações ou histórias) — escolha uma
 8. O chat monta o roteiro completo — ajuste até soar com a sua voz, e use como pauta de gravação ou design
+9. Com o roteiro pronto, abra o prompt da **Seção 3 (Legenda + Capa)**, cole o roteiro e a palavra-chave do dia — o chat devolve a legenda com SEO/GEO e a headline da capa
 
 > **Dica:** seus materiais de base — Persona (relatório da Aula 3), Posicionamento (Frase-Tese + Narrativa, Aula 4) e Método (Módulo 2) — são praticamente fixos. Deixe-os prontos num bloco de notas à parte, pra colar rapidinho quando o chat pedir. Só o **tema** muda a cada dia.
 
@@ -231,13 +232,68 @@ Take a deep breath and work on this problem step-by-step.
 
 ---
 
+## Seção 3 — Legenda + Capa (pra qualquer roteiro)
+
+### Legenda com SEO/GEO + headline da capa
+
+```
+Atue como um especialista em copywriting, SEO e GEO (Generative
+Engine Optimization) para Instagram. Você tem 20 anos de
+experiência escrevendo legendas que rankeiam na busca do
+Instagram e do Google, sem nunca perder a voz natural de quem
+escreve.
+
+A palavra-chave de hoje (o Tema do meu Calendário) é:
+[PALAVRA-CHAVE / TEMA DE HOJE]
+
+Aqui está o roteiro que já criei para este conteúdo:
+[COLE AQUI O ROTEIRO PRONTO — CARROSSEL OU REELS]
+
+TAREFA 1 — Legenda com SEO e GEO
+Escreva a legenda deste post seguindo estas regras:
+1. Otimizada pra busca do Instagram e do Google: use a
+   palavra-chave de forma natural, repetindo-a (ou uma variação
+   dela) pelo menos uma vez no meio do texto, sem forçar.
+2. Escreva como uma pessoa influente do meu nicho escreveria —
+   natural, conversacional, na minha voz.
+3. NÃO repita o conteúdo do roteiro. A legenda complementa o
+   roteiro — acrescenta uma camada nova que reforça meu
+   argumento, não resume o que já foi dito.
+4. Termine com a CTA padrão: "Concorda ou não? Me conta nos
+   comentários, compartilha e me segue."
+5. Formatação: só a primeira letra de cada frase em maiúscula —
+   sem caixa alta, sem markdown — pra eu copiar e colar direto
+   no Instagram.
+
+TAREFA 2 — Headline para a capa
+Crie 1 headline curta pra capa deste post (thumbnail do Reels ou
+primeiro slide do carrossel):
+- No máximo 8-10 palavras
+- Fala diretamente com a minha persona, ou usa a palavra-chave de
+  hoje
+- Funciona como gancho visual — a primeira coisa que a pessoa lê
+  antes de decidir parar de rolar
+
+Take a deep breath and work on this problem step-by-step.
+```
+
+**Minha legenda:**
+
+*(escreva aqui ou cole o resultado do chat de IA)*
+
+**Minha headline de capa:**
+
+*(escreva aqui ou cole o resultado do chat de IA)*
+
+---
+
 ## Lembretes (valem pra qualquer roteiro)
 
 **Gancho** — a primeira frase, imagem ou som que prende atenção. Os prompts acima já geram o gancho de frase. De vez em quando, varie com:
 - **Gancho Visual** — mostre algo fora do comum antes de falar (até uma rotina "comum" tem um ângulo)
 - **Gancho de Áudio** — um som que chama atenção antes da fala (alarme, barulho de cozinha, etc.)
 
-**CTA** — todo roteiro termina com: "Concorda ou não? Me conta nos comentários, compartilha e me segue." No prompt 1B (Carrossel — Situação de Identificação), você adiciona essa CTA manualmente no último slide. Coloque também na legenda do post.
+**CTA** — todo roteiro termina com: "Concorda ou não? Me conta nos comentários, compartilha e me segue." No prompt 1B (Carrossel — Situação de Identificação), você adiciona essa CTA manualmente no último slide. O prompt de Legenda + Capa (Seção 3) já encerra a legenda com essa CTA.
 
 ---
 
@@ -245,7 +301,7 @@ Take a deep breath and work on this problem step-by-step.
 
 Esse arquivo é seu kit permanente de produção. Toda semana, ao consultar o Calendário (Minha Linha Editorial, Seção 3), volte aqui pra gerar o roteiro dos dias marcados como "Roteiro completo".
 
-Os formatos rápidos (Frase com Posicionamento, Bastidor/Rotina, Reagindo a um Conteúdo — da Aula 5) não precisam de prompt — são pra fazer na hora.
+Os formatos rápidos (Frase com Posicionamento, Bastidor/Rotina, Reagindo a um Conteúdo — da Aula 5) não precisam de prompt — são pra fazer na hora. Mas o prompt de Legenda + Capa (Seção 3) vale pra eles também: é só colar o que você gravou/escreveu no lugar do roteiro.
 
 ---
 
