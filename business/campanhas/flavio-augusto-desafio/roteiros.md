@@ -656,12 +656,12 @@ A venda começa agora.
 | 6 | Reels lo-fi | Vender é servir — preconceito pessoal | ✅ Aprovado |
 | 7 | Reels lo-fi | Vendas Secretas — palco depois | ✅ Aprovado |
 | 8 | — | A persona que o Flávio não consegue salvar (e o Expert360º tenta) | ⏳ Tema cravado |
-| 9 | — | Eu ganhava 20k e ainda estava na gaiola | ⏳ Tema cravado |
-| 10 | — | Ele apareceu já posicionado (Autoridade Tríplice) | ⏳ Tema cravado |
-| 11 | — | Quase perdeu o próprio nome (erro WiseUp) | ⏳ Tema cravado |
-| 12 | — | Você não precisa estar pronta, precisa estar em movimento | ⏳ Tema cravado |
-| 13 | — | Seu valor não é o resultado de hoje | ⏳ Tema cravado |
-| 14 | — | Posicionamento é repetição | ⏳ Tema cravado |
+| 9 | — | Eu ganhava 20k e ainda estava na gaiola | ✅ Teoria pronta (Sage) — falta roteiro |
+| 10 | — | Ele apareceu já posicionado (Autoridade Tríplice) | ✅ Teoria pronta (Sage) — falta roteiro |
+| 11 | — | Quase perdeu o próprio nome (erro WiseUp) | ✅ Teoria pronta (Sage) — falta roteiro |
+| 12 | — | Você não precisa estar pronta, precisa estar em movimento | ✅ Teoria pronta (Sage) — falta roteiro |
+| 13 | — | Seu valor não é o resultado de hoje | ✅ Teoria pronta (Sage) — falta roteiro |
+| 14 | — | Posicionamento é repetição | ✅ Teoria pronta (Sage) — falta roteiro |
 | 15-30 | — | A definir | ⏳ Pendente |
 
 ## Pool de Temas — Dias 9-14 (cravados pela Karol, prontos pra teoria/roteiro)
