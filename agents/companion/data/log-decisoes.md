@@ -10,6 +10,16 @@
 **Impacto:** [o que muda]
 -->
 
+## 15/06/2026 — Criar especialista "Expert em Lives" para roteiros de live semanal
+
+**Contexto:** Karol faz lives semanais pro grupo fechado (Google Meet) hoje sem agente especializado — produzidas no "Claude normal", cada sessão do zero. Testamos um outline em tópicos pra Live 19, adaptando o modelo "Funil de Zoom" (Conversão Imediata) do ETL Vinizoom: Narrativa → Execução (com spoiler do pitch) → Prática (reusa o exercício "Lista de Fracassos" do M0) → Prova Racional + Pitch Estendido.
+
+**Decisão:** Criar um Worker "Expert em Lives", especializado em roteiros de live semanal no modelo Funil de Zoom, usando o outline da Live 19 como seed/referência.
+
+**Racional:** Lives semanais são operação contínua e recorrente — repertório hoje não persiste entre sessões. O teste da Live 19 validou o formato tópicos + Funil de Zoom; precisa virar competência fixa no sistema (REUSE > recriar do zero a cada semana).
+
+**Impacto:** Próximo passo: ativar `/worker-forge` pra criar o Expert em Lives, com `business/campanhas/lives-semanais/live-19-outline.md` como referência inicial.
+
 ## 28/05/2026 — "Expert em fracassar no digital" como pilar de posicionamento
 
 **Contexto:** Weekly review. Gancho levantado em 11/05 foi revisitado e elevado de ideia de conteudo para decisao de posicionamento.

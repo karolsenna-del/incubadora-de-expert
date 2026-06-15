@@ -43,6 +43,15 @@ Prioridades imediatas:
 1. Bio com tese aplicada
 2. Primeiros conteudos com angulo "expert em fracassar no digital"
 
+## Operacao Continua: Lives Semanais
+
+Karol faz lives semanais pro grupo fechado (Google Meet), hoje sem agente especializado.
+
+- Teste validado (15/06): outline em topicos pra Live 19, modelo Funil de Zoom (Vinizoom) — Narrativa -> Execucao+spoiler -> Pratica (reusa "Lista de Fracassos" do M0) -> Prova Racional + Pitch Estendido (Mentoria Incubadora de Expert).
+- Capa Live 19: "Preciso esconder meus fracassos" / "A Lista de Fracassos que vira Autoridade" (formato Live 18).
+- Outline: `business/campanhas/lives-semanais/live-19-outline.md`
+- Decisao (15/06): criar especialista "Expert em Lives" via Worker Forge, usando o outline da Live 19 como seed. Ver log-decisoes.md e demandas-backlog.md.
+
 ## Desafio Flavio Augusto — Squad Conteudo Arcane (14/06/2026)
 
 Pipeline: Iris (temas) -> Sage (teoria) -> Rico (roteiro) -> Mack (producao).
