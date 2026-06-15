@@ -1,0 +1,34 @@
+# docs/producao-conteudo/karol/posts/diploma-vs-vivencia/context.yaml
+
+slug: "diploma-vs-vivencia"
+tema: "Diploma é o que você estudou. Vivência é o que te tornou autoridade."
+categoria_audience: "Crenças + Inimigos (sistema que exige diploma/certificado)"
+formato_escolhido: "Carrossel de Dor — CTA 'Comente AULA'"
+tipo_midia: "Carrossel (copy de carrossel, não reels)"
+moral_da_historia: "Sua experiência real vale mais que qualquer diploma — e é isso que vira método."
+
+virais_referencia:
+  - tipo: "tendência (artigo, não viral de criador com métricas)"
+    titulo: "15 tendências para Reels em 2026 — autoridade não é certificado, é ser lembrado por algo específico"
+    fonte: "Rafael Terra"
+    url: "https://rafaelterra.com.br/como-viralizar-reels-em-2026/"
+  - tipo: "tendência (artigo, não viral de criador com métricas)"
+    titulo: "Como aumentar sua autoridade profissional em 2026"
+    fonte: "Azzura Agency"
+    url: "https://azzuraagency.com/como-aumentar-minha-autoridade-profissional/"
+
+nota_pra_sage: >
+  Essas 2 são referências de tendência (artigos), não virais de criador com
+  métricas. Recomendo pesquisa externa própria pra achar 2-3 virais de
+  criadores específicos batendo nesse ângulo (autoridade sem credencial /
+  diploma vs vivência).
+
+angulo_sugerido_iris: >
+  Post de assinatura — pode virar série. É a frase-tese da Incubadora,
+  então tem peso de marca além do alcance. Como é copy de carrossel
+  (não reels), o hook do slide 1 carrega o peso todo — é onde a frase-tese
+  precisa bater mais forte.
+
+fonte_interna: "docs/knowledge/expert-business/posicionamento.md — Frase-Tese"
+cravado_em: "2026-06-15"
+proximo_passo: "criar-teoria (sage)"

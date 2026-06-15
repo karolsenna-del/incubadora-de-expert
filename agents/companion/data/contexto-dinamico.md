@@ -43,15 +43,15 @@ Prioridades imediatas:
 1. Bio com tese aplicada
 2. Primeiros conteudos com angulo "expert em fracassar no digital"
 
-## Desafio Flavio Augusto — Squad Conteudo Arcane (13/06/2026)
+## Desafio Flavio Augusto — Squad Conteudo Arcane (14/06/2026)
 
 Pipeline: Iris (temas) -> Sage (teoria) -> Rico (roteiro) -> Mack (producao).
 - Dias 1-7: aprovados (roteiros.md).
 - Dia 8: tema cravado, falta teoria/roteiro.
-- Dias 9-14: temas cravados E teorias prontas (Sage) em `business/campanhas/flavio-augusto-desafio/teorias.md`. Falta roteirizacao (Rico).
+- Dias 9-14: roteirizados pelo Rico, todos em formato Reels lo-fi (decisao da Karol: Flavio vai assistir aos reels). Aguardando aprovacao da Karol em `business/campanhas/flavio-augusto-desafio/roteiros.md`.
 - Dias 15-30: a definir.
 
-Proximo passo (retomar): apresentar resumo das teorias 10-14 pra Karol validar, depois handoff pro Rico (roteirizacao em lote, dias 9-14) -- Rico primeiro captura tom de voz da Karol (1x, reusado nos 6 roteiros).
+Proximo passo (retomar): Karol revisa/aprova os 6 roteiros (9-14). Apos aprovacao, handoff pro Mack (producao).
 
 ## Background (nao urgente)
 

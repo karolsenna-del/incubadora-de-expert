@@ -644,6 +644,700 @@ A venda começa agora.
 
 ---
 
+## DIA 9 — Reels Lo-fi
+
+**Ângulo:** Eu ganhava 20k e ainda estava na gaiola — liberdade não é salário
+**Formato:** Reels lo-fi, 1 take, câmera traseira 2x zoom, luz natural
+
+### Roteiro
+
+**HOOK:**
+"Eu ganhava R$20 mil por mês no serviço público.
+E foi exatamente isso que me fez querer sair."
+
+**CONTEÚDO:**
+"Não foi o salário.
+Salário tava ótimo.
+
+Foi o que eu vi de dentro.
+
+Cheguei no alto escalão.
+E quanto mais eu via como aquilo funcionava por dentro —
+mais eu queria sair.
+
+Não era sobre dinheiro.
+Era sobre depender de gente que eu não confiava.
+
+Tem um vídeo do @flavioaugustoficial chamado
+'Eu nunca vou estar naquela fila.'
+
+Fila da aposentadoria estatal.
+
+Quando vi, pensei: ele tá falando de mim também.
+
+Ele não vende pro governo.
+Não negocia com eles.
+Segue toda lei — só pra não dever nada a eles.
+
+Liberdade, pra ele, é isso: não depender de quem você não confia.
+
+Tem uma pesquisa de Birmingham que mostra:
+quase metade das pessoas trocaria 20% de aumento de salário
+por mais autonomia sobre como trabalham.
+
+Eu troquei 100% do salário.
+
+Porque você pode estar numa cadeira de R$20 mil,
+com estabilidade, plano de saúde, 13º —
+e ainda estar numa gaiola.
+
+Liberdade não se mede em salário.
+Se mede em dependência."
+
+**CTA:**
+"Você ganha bem, mas sente que não é dona
+do seu tempo, da sua agenda, da sua vida?
+Você já sabe de que eu tô falando."
+
+### Textos na Tela (CapCut)
+- 0-3s: "Eu ganhava R$20 mil. E quis sair por isso."
+- ~15s: "'Eu nunca vou estar naquela fila' — Flávio Augusto"
+- ~25s: "Ele não depende do governo. Eu também não quero."
+- ~35s: "Birmingham: autonomia > 20% de aumento"
+- Final: "Liberdade não é salário. É não dever nada a ninguém."
+
+### Direção
+Tom mais grave, confessional — sem indignação, sem drama. Pausa depois de "Não foi o salário." Pausa maior depois de "Liberdade não se mede em salário. Se mede em dependência." — deixa essa frase ficar no ar.
+
+### Caption
+```
+Eu ganhava R$20 mil por mês no serviço público.
+E foi exatamente isso que me fez querer sair.
+
+Não foi o salário. Salário tava ótimo.
+
+Foi o que eu vi de dentro — quanto mais eu via como o alto escalão
+funcionava, mais eu queria sair.
+
+Tem um vídeo do @flavioaugustoficial chamado
+"Eu nunca vou estar naquela fila" — sobre a armadilha
+da aposentadoria estatal.
+
+Quando vi, pensei: ele tá falando de mim também.
+
+Ele não vende pro governo. Não negocia com eles.
+Segue toda lei — só pra não dever nada a eles.
+
+Tem uma pesquisa de Birmingham: quase metade das pessoas
+trocaria 20% de aumento de salário por mais autonomia.
+
+Eu troquei 100% do salário.
+
+Você pode estar numa cadeira de R$20 mil, com estabilidade,
+plano de saúde, 13º — e ainda estar numa gaiola.
+
+Liberdade não se mede em salário. Se mede em dependência.
+
+#flavioaugustoficial #liberdadefinanceira #servicopublico
+#exoneracao #expertdigital #incubadoradeexpert #expert360
+```
+
+### Análise Técnica
+- **Gatilhos do hook:** Contra-intuitivo + Reconhecimento
+- **Elementos notáveis:** Contra-intuitivo, Prova (Birmingham), Identificação, Autoridade (Flávio)
+- **Loopings:** Abre em "foi exatamente isso que me fez querer sair" (por quê?) → fecha em "era sobre depender de gente que eu não confiava"
+- **Fechamento/posicionamento:** "Liberdade não é salário. É não dever nada a ninguém." — ecoa a crença compartilhada com o Flávio sem soar didático.
+
+---
+
+## DIA 10 — Reels Lo-fi
+
+**Ângulo:** Ele não "apareceu" no digital. Apareceu já posicionado (Autoridade Tríplice)
+**Formato:** Reels lo-fi
+
+### Roteiro
+
+**HOOK:**
+"O @flavioaugustoficial não 'apareceu' nas redes.
+Ele apareceu já posicionado —
+como mentor, como inspirador, como dono de projeto.
+As 3 coisas, juntas, de propósito."
+
+**CONTEÚDO:**
+"Isso tem nome.
+E tem método.
+
+Tem uma frase que ele repete sempre:
+'Quero me posicionar como idealizador e mentor
+dos meus próprios projetos,
+com foco em incentivar novos empreendedores
+a construir sua própria história.'
+
+Reparou as 3 camadas?
+
+Mentor — ele.
+'Novos empreendedores' — a persona que ele fala com.
+'Meus próprios projetos' — o produto.
+
+3 coisas, ao mesmo tempo, de propósito.
+
+E ele não inventou isso depois de famoso.
+Definiu antes.
+
+Não foi sorte.
+
+Existe até um dado sobre isso:
+você tem 50 milissegundos
+pra formar uma primeira impressão sobre alguém —
+e 94% dela vem de como essa pessoa se apresenta,
+não do que ela fala.
+
+Isso vale pro perfil dele.
+E vale pro seu também.
+
+Eu levei tempo pra entender isso.
+
+Achava que posicionamento era uma coisa que
+'se constrói com o tempo, postando'.
+
+Não é.
+
+Posicionamento vem ANTES.
+É ele que te faz crescer mais rápido — não o contrário.
+
+Se você é especialista em alguma coisa há anos
+mas ainda se sente 'sem nicho definido' nas redes,
+o problema não é o que você sabe.
+
+É como isso foi — ou não foi — posicionado."
+
+**CTA:**
+"Você sabe responder, em uma frase:
+quem você é aqui, o que você representa,
+e o que você entrega?"
+
+### Textos na Tela (CapCut)
+- 0-3s: "Flávio Augusto não apareceu. Apareceu já posicionado."
+- ~10s: "3 camadas: mentor, persona, produto — de propósito"
+- ~20s: "Ele definiu isso ANTES de ficar famoso. Não foi sorte."
+- ~30s: "50ms, 94% é como você se apresenta"
+- ~42s: "Posicionamento vem ANTES, não depois"
+- Final: "Quem você é. O que representa. O que entrega."
+
+### Direção
+Abre afirmativo, quase provocador — sem soar fofoca, soa observação aguda. Pausa depois de "As 3 coisas, juntas, de propósito." (deixa a curiosidade respirar). Pausa antes de "É como isso foi — ou não foi — posicionado." CTA fala devagar, como pergunta de verdade, não retórica.
+
+### Caption
+```
+O @flavioaugustoficial não "apareceu" nas redes.
+Ele apareceu já posicionado — como mentor, como
+inspirador, como dono de projeto. As 3 coisas, juntas,
+de propósito.
+
+Isso tem nome. E tem método.
+
+Tem uma frase que ele repete sempre:
+"Quero me posicionar como idealizador e mentor dos
+meus próprios projetos, com foco em incentivar novos
+empreendedores a construir sua própria história."
+
+Reparou as 3 camadas? Mentor — ele. "Novos
+empreendedores" — a persona que ele fala com. "Meus
+próprios projetos" — o produto. 3 coisas, ao mesmo
+tempo, de propósito.
+
+E ele não inventou isso depois de famoso. Definiu antes.
+Não foi sorte.
+
+Existe até um dado sobre isso: você tem 50 milissegundos
+pra formar uma primeira impressão sobre alguém — e 94%
+dela vem de como essa pessoa se apresenta, não do que
+ela fala. Isso vale pro perfil dele. E vale pro seu também.
+
+Eu achava que posicionamento era algo que "se constrói
+com o tempo, postando". Não é. Posicionamento vem ANTES —
+é ele que te faz crescer mais rápido, não o contrário.
+
+Se você é especialista em algo há anos mas ainda se sente
+"sem nicho definido" nas redes, o problema não é o que
+você sabe. É como isso foi — ou não foi — posicionado.
+
+Quem você é. O que você representa. O que você entrega.
+Nessa ordem.
+
+#flavioaugustoficial #posicionamento #personalbranding
+#autoridadedigital #expertdigital #incubadoradeexpert #expert360
+```
+
+### Análise Técnica
+- **Gatilhos do hook:** Contra-intuitivo + Reconhecimento/Autoridade (Flávio nomeado direto no hook)
+- **Elementos notáveis:** Contra-intuitivo, Autoridade, Informação nova (50ms/94% como prova, não como abertura), Identificação
+- **Loopings:** Abre com "as 3 coisas, juntas, de propósito" (quais 3 coisas?) → fecha explicando as 3 camadas (mentor/persona/produto) → reabre com o dado dos 50ms como prova externa → fecha conectando ao próprio perfil de quem assiste
+- **Fechamento/posicionamento:** Mecanismo 3 (Autoridade Tríplice) sem nomear o mecanismo — fica implícito na pergunta final.
+
+---
+
+## DIA 11 — Reels Lo-fi
+
+**Ângulo:** O cara que vendeu a empresa por R$877 milhões quase perdeu o próprio nome (erro WiseUp)
+**Formato:** Reels lo-fi
+
+### Roteiro
+
+**HOOK:**
+"Você sabe o que significa 'Wise Up'?
+'Acorda'.
+
+E o nome nasceu porque o @flavioaugustoficial
+quase perdeu o direito de usar
+o nome que ele tinha escolhido antes."
+
+**CONTEÚDO:**
+"Aos 23 anos, ele abriu a empresa com outro nome:
+'Winners'.
+
+Registrou na Junta Comercial.
+Investiu tudo em material, contrato, marketing.
+
+Só que não registrou no INPI.
+
+E o nome já era de outra pessoa.
+
+Recebeu uma notificação extrajudicial.
+Precisou recomeçar a identidade do zero —
+num momento em que o dinheiro já era curto.
+
+O novo nome precisava começar com 'W',
+pra reaproveitar o material que já tinha.
+
+Fizeram um concurso entre os próprios professores.
+
+'Wise Up' venceu.
+
+O erro mais caro da carreira dele
+virou o nome que depois valeu R$877 milhões.
+
+E olha — não foi só com ele.
+
+A Apple ficou anos sem poder vender
+como 'Apple' no Brasil, por causa da Gradiente.
+
+Erro de registro de marca
+não escolhe tamanho de empresa.
+
+Eu também tenho uma lista de erros assim.
+Coisa básica, que eu poderia ter evitado.
+
+Mas é exatamente isso que vira história.
+Erro feio não te invalida.
+Te dá história — e história incopiável vende."
+
+**CTA:**
+"Tem algum erro na sua trajetória
+que você esconde, achando que ele te diminui?
+Talvez ele seja a parte mais valiosa da sua história."
+
+### Textos na Tela (CapCut)
+- 0-3s: "'Wise Up' significa 'Acorda'. E tem uma história por trás."
+- ~12s: "Aos 23 anos: 'Winners'. Registrado errado."
+- ~22s: "Notificação extrajudicial. Recomeço do zero."
+- ~30s: "Concurso entre professores → nasce 'Wise Up'"
+- ~40s: "Erro mais caro virou o nome que valeu R$877 milhões"
+- Final: "Erro feio não te invalida. Te dá história."
+
+### Direção
+Tom de quem está contando uma história real, com um pouco de suspense — ritmo mais rápido na parte da revelação ("E o nome já era de outra pessoa."), pausa antes de "'Wise Up' venceu." CTA final mais lento, reflexivo.
+
+### Caption
+```
+Você sabe o que significa "Wise Up"? "Acorda".
+
+E o nome nasceu porque o @flavioaugustoficial quase perdeu
+o direito de usar o nome que ele tinha escolhido antes.
+
+Aos 23 anos, ele abriu a empresa com outro nome: "Winners".
+Registrou na Junta Comercial. Investiu tudo em material,
+contrato, marketing.
+
+Só que não registrou no INPI. E o nome já era de outra pessoa.
+
+Recebeu uma notificação extrajudicial. Precisou recomeçar
+a identidade do zero — num momento em que o dinheiro já
+era curto.
+
+O novo nome precisava começar com "W", pra reaproveitar
+o material que já tinha. Fizeram um concurso entre os
+próprios professores. "Wise Up" venceu.
+
+O erro mais caro da carreira dele virou o nome que depois
+valeu R$877 milhões.
+
+E não foi só com ele — a Apple ficou anos sem poder vender
+como "Apple" no Brasil, por causa da Gradiente. Erro de
+registro de marca não escolhe tamanho de empresa.
+
+Eu também tenho uma lista de erros assim. Coisa básica,
+que eu poderia ter evitado.
+
+Mas é exatamente isso que vira história.
+Erro feio não te invalida. Te dá história — e história
+incopiável vende.
+
+#flavioaugustoficial #wiseup #empreendedorismo
+#historiadeerros #expertdigital #incubadoradeexpert #expert360
+```
+
+### Análise Técnica
+- **Gatilhos do hook:** Mistério + Fato curioso/revelação
+- **Elementos notáveis:** Fato curioso, História magnética, Prova (caso Apple/Gradiente), Identificação
+- **Loopings:** Abre com "Wise Up = Acorda, por quê?" → fecha com a revelação do concurso/nome → reabre breve com "não foi só com ele" → fecha com a moral
+- **Fechamento/posicionamento:** Conecta direto com a "Lista de Fracassos" da Karol (M0) — Mecanismo 1, Narrativa do Método, sem nomear o mecanismo.
+
+---
+
+## DIA 12 — Reels Lo-fi
+
+**Ângulo:** Você não precisa estar pronta. Precisa estar em movimento
+**Formato:** Reels lo-fi
+
+### Roteiro
+
+**HOOK:**
+"Você não vai se sentir 'pronta' antes de agir.
+Vai se sentir pronta DEPOIS de agir.
+E só assim."
+
+**CONTEÚDO:**
+"Ninguém te conta isso porque parece óbvio.
+Mas ninguém age como se soubesse.
+
+'Uma boa ideia não vale nada,
+o que vale é a execução' —
+frase do @flavioaugustoficial.
+
+E ela devia estar colada
+na tela de quem trava antes de postar.
+
+Inclusive na sua, agora.
+
+Há quanto tempo você fala
+'vou postar quando estiver melhor'?
+
+Esse 'melhor' tem data?
+Ou é só um jeito educado de não fazer?
+
+Pesquisas sobre perfeccionismo mostram a mesma coisa:
+quanto mais você adia esperando perfeição,
+menor a chance de fazer.
+
+Perfeccionismo não é cuidado.
+Às vezes é só medo disfarçado de padrão alto.
+
+E medo disfarçado não te protege.
+Só te atrasa.
+
+Esse squad que eu uso pra criar conteúdo
+segue uma regra:
+produzir vale mais que planejar perfeito.
+
+Pesquisar viral existente vale mais
+que inventar do zero.
+
+Porque tem uma diferença entre
+quem publica 100 posts imperfeitos
+e quem planeja 1 post perfeito que nunca sai.
+
+Só uma dessas pessoas aprende de verdade."
+
+**CTA:**
+"Se seu rascunho tá há semanas 'quase pronto' —
+'quase pronto' às vezes é só
+'ainda não postado'."
+
+### Textos na Tela (CapCut)
+- 0-3s: "Você não vai se sentir 'pronta' antes de agir."
+- ~10s: "'Boa ideia não vale nada, vale execução' — Flávio Augusto"
+- ~20s: "Esse 'melhor' tem data ou é desculpa?"
+- ~30s: "Perfeccionismo = medo disfarçado de padrão alto"
+- Final: "'Quase pronto' às vezes é só 'ainda não postado'."
+
+### Direção
+Ritmo ágil, quase confrontador — mas sem agressividade, tom de quem fala isso pra si mesma também. Pausa antes de "E só assim." e antes do CTA final.
+
+### Caption
+```
+Você não vai se sentir "pronta" antes de agir.
+Vai se sentir pronta DEPOIS de agir. E só assim.
+
+Ninguém te conta isso porque parece óbvio. Mas ninguém
+age como se soubesse.
+
+"Uma boa ideia não vale nada, o que vale é a execução"
+— frase do @flavioaugustoficial. E ela devia estar colada
+na tela de quem trava antes de postar. Inclusive na sua,
+agora.
+
+Há quanto tempo você fala "vou postar quando estiver
+melhor"? Esse "melhor" tem data ou é só um jeito educado
+de não fazer?
+
+Pesquisas sobre perfeccionismo mostram a mesma coisa:
+quanto mais você adia esperando perfeição, menor a chance
+de fazer.
+
+Perfeccionismo não é cuidado. Às vezes é só medo
+disfarçado de padrão alto. E medo disfarçado não te
+protege — só te atrasa.
+
+Esse squad que eu uso pra criar conteúdo segue uma regra:
+produzir vale mais que planejar perfeito.
+
+Tem uma diferença entre quem publica 100 posts imperfeitos
+e quem planeja 1 post perfeito que nunca sai. Só uma
+dessas pessoas aprende de verdade.
+
+Se seu rascunho tá há semanas "quase pronto" — "quase
+pronto" às vezes é só "ainda não postado".
+
+#flavioaugustoficial #execucao #perfeccionismo
+#produtividade #expertdigital #incubadoradeexpert #expert360
+```
+
+### Análise Técnica
+- **Gatilhos do hook:** Contra-intuitivo
+- **Elementos notáveis:** Contra-intuitivo, Identificação, Prova (pesquisa perfeccionismo), Polêmica ("medo disfarçado de padrão alto")
+- **Loopings:** Abre invertendo a ordem esperada (pronta vem depois de agir) → fecha com aplicação prática (rascunho "quase pronto")
+- **Fechamento/posicionamento:** Espelha o próprio squad de conteúdo + Fase 1 do Expert360º, sem nomear — fica como vivência pessoal.
+
+---
+
+## DIA 13 — Reels Lo-fi
+
+**Ângulo:** Seu valor não é o resultado de hoje. É a trajetória que ninguém pode copiar
+**Formato:** Reels lo-fi
+
+### Roteiro
+
+**HOOK:**
+"2013: o @flavioaugustoficial vendeu a WiseUp
+por R$877 milhões.
+
+2015: ele recomprou por R$398 milhões.
+
+Mesma pessoa, mesma empresa,
+dois números muito diferentes."
+
+**CONTEÚDO:**
+"De fora, parece que ele 'perdeu valor'.
+
+Por dentro, foi a jogada
+que multiplicou o negócio depois.
+
+Ele reestruturou tudo,
+junto com o Carlos Wizard,
+e formou um conglomerado ainda maior.
+
+A pessoa que vendeu por 877 milhões
+e a pessoa que recomprou por 398
+são a mesma pessoa.
+
+Só em momentos diferentes,
+com leituras diferentes do próprio negócio.
+
+Você já recomeçou alguma coisa
+que você tinha construído,
+achando que tinha 'errado'?
+
+Talvez não tenha errado.
+Talvez tenha sido o meio do caminho.
+
+Se o seu currículo tem uma 'queda'
+que você evita contar —
+spoiler: a queda pode ser
+a parte mais valiosa.
+
+Porque você não precisa esperar 'chegar lá'
+pra ter uma história que vale ser contada.
+
+A trajetória já vale agora.
+Incluindo as voltas."
+
+**CTA:**
+"Você mede seu valor pelo resultado de hoje,
+ou pela trajetória inteira —
+com os altos e os baixos dela?"
+
+### Textos na Tela (CapCut)
+- 0-3s: "2013: vendeu por R$877M. 2015: recomprou por R$398M."
+- ~12s: "De fora parece prejuízo. Por dentro, foi a virada."
+- ~22s: "Mesma pessoa. Momentos diferentes."
+- ~32s: "A queda pode ser a parte mais valiosa."
+- Final: "A trajetória já vale agora. Incluindo as voltas."
+
+### Direção
+Tom mais sereno, quase de conclusão — ritmo quebrado pelos dois números (deixa o contraste assentar antes de continuar). CTA fala como pergunta genuína, sem pressa.
+
+### Caption
+```
+2013: o @flavioaugustoficial vendeu a WiseUp por
+R$877 milhões. 2015: ele recomprou por R$398 milhões.
+
+Mesma pessoa, mesma empresa, dois números muito
+diferentes.
+
+De fora, parece que ele "perdeu valor". Por dentro, foi
+a jogada que multiplicou o negócio depois — ele
+reestruturou tudo, junto com o Carlos Wizard, e formou
+um conglomerado ainda maior.
+
+A pessoa que vendeu por 877 milhões e a pessoa que
+recomprou por 398 são a mesma pessoa. Só em momentos
+diferentes, com leituras diferentes do próprio negócio.
+
+Você já recomeçou alguma coisa que tinha construído,
+achando que tinha "errado"? Talvez não tenha errado.
+Talvez tenha sido o meio do caminho.
+
+Se o seu currículo tem uma "queda" que você evita
+contar — spoiler: a queda pode ser a parte mais valiosa.
+
+Você não precisa esperar "chegar lá" pra ter uma história
+que vale ser contada. A trajetória já vale agora.
+Incluindo as voltas.
+
+#flavioaugustoficial #wiseup #trajetoria
+#empreendedorismo #expertdigital #incubadoradeexpert #expert360
+```
+
+### Análise Técnica
+- **Gatilhos do hook:** Fato curioso/Dado
+- **Elementos notáveis:** Informação nova (números reais), Contra-intuitivo, Identificação, Prova
+- **Loopings:** Abre com o contraste numérico (como assim recomprou mais barato?) → fecha reframing como estratégia → reabre com pergunta pessoal sobre a própria trajetória
+- **Fechamento/posicionamento:** Mecanismo 1 (Narrativa do Método) — "antes, durante e depois", sem nomear.
+
+---
+
+## DIA 14 — Reels Lo-fi
+
+**Ângulo:** Posicionamento é repetição
+**Formato:** Reels lo-fi
+
+### Roteiro
+
+**HOOK:**
+"Eu falo sempre: posicionamento é repetição.
+
+As pessoas veem centenas de conteúdos
+rolando o feed —
+
+se a gente não repete sempre,
+ninguém lembra da gente
+nem do que a gente faz."
+
+**CONTEÚDO:**
+"E hoje eu vou te mostrar
+que isso não é só opinião minha.
+
+Existe uma regra de marketing
+chamada 'Regra dos 7':
+você precisa ver a mesma mensagem
+de 5 a 7 vezes
+antes de começar a confiar nela.
+
+Achou que repetir era exagero?
+Repetição não é falha.
+É o mínimo.
+
+O @flavioaugustoficial fala
+dos mesmos 4 assuntos
+há quase 20 anos.
+
+Vendas. Execução.
+Liberdade financeira. Autorresponsabilidade.
+
+E continua sendo
+uma das maiores referências do Brasil nisso.
+
+Coincidência? Não.
+
+Repetição não cansou o público dele.
+Construiu ele.
+
+Variar de tema toda semana
+não é criatividade.
+É amnésia coletiva —
+a sua e a do seu público.
+
+Se você se sente 'repetitiva'
+falando sempre dos mesmos 3-4 temas —
+parabéns.
+
+Você descobriu sua linha editorial
+antes da maioria."
+
+**CTA:**
+"Pensa em alguém que você segue
+e lembra exatamente do que ela fala.
+
+Aposto que não foi num post só
+que você decorou isso.
+
+Foi repetição.
+E é isso que eu vou fazer aqui também."
+
+### Textos na Tela (CapCut)
+- 0-3s: "Posicionamento é repetição."
+- ~10s: "Regra dos 7: 5-7 exposições pra confiar numa mensagem"
+- ~20s: "Flávio repete os mesmos 4 temas há 20 anos"
+- ~30s: "Variar demais = amnésia coletiva"
+- Final: "Você descobriu sua linha editorial antes da maioria."
+
+### Direção
+Abertura forte, em tom de convicção pessoal — fala como quem já bateu nesse martelo várias vezes. Pausa antes de "Repetição não é falha. É o mínimo." Fechamento com leveza, quase sorrindo.
+
+### Caption
+```
+Eu falo sempre: posicionamento é repetição.
+
+As pessoas veem centenas de conteúdos rolando o feed —
+se a gente não repete sempre, ninguém lembra da gente
+nem do que a gente faz.
+
+E isso não é só opinião minha. Existe uma regra de
+marketing chamada "Regra dos 7": você precisa ver a
+mesma mensagem de 5 a 7 vezes antes de começar a
+confiar nela. Repetição não é falha. É o mínimo.
+
+O @flavioaugustoficial fala dos mesmos 4 assuntos há
+quase 20 anos — vendas, execução, liberdade financeira,
+autorresponsabilidade. E continua sendo uma das maiores
+referências do Brasil nisso. Coincidência? Não.
+Repetição não cansou o público dele. Construiu ele.
+
+Variar de tema toda semana não é criatividade. É amnésia
+coletiva — a sua e a do seu público.
+
+Se você se sente "repetitiva" falando sempre dos mesmos
+3-4 temas — parabéns. Você descobriu sua linha editorial
+antes da maioria.
+
+Pensa em alguém que você segue e lembra exatamente do
+que ela fala. Aposto que não foi num post só que você
+decorou isso. Foi repetição. E é isso que eu vou fazer
+aqui também.
+
+#flavioaugustoficial #linhaeditorial #posicionamento
+#marketingdeconteudo #expertdigital #incubadoradeexpert #expert360
+```
+
+### Análise Técnica
+- **Gatilhos do hook:** Crença pessoal/Reconhecimento
+- **Elementos notáveis:** Crença/visão de mundo, Prova (Regra dos 7), Autoridade (Flávio), Polêmica, Reconhecimento
+- **Loopings:** Abre com a crença pessoal → fecha validando com dado externo → reabre com Flávio como prova viva → fecha reconectando com quem assiste
+- **Fechamento/posicionamento:** Fase 5 (linha editorial), `minha-linha-editorial.md` — sem nomear, fica implícito no "é isso que eu vou fazer aqui também" (meta, sobre o próprio conteúdo que ela está fazendo agora).
+
+---
+
 ## Status
 
 | Dia | Formato | Ângulo | Status |
@@ -656,12 +1350,12 @@ A venda começa agora.
 | 6 | Reels lo-fi | Vender é servir — preconceito pessoal | ✅ Aprovado |
 | 7 | Reels lo-fi | Vendas Secretas — palco depois | ✅ Aprovado |
 | 8 | — | A persona que o Flávio não consegue salvar (e o Expert360º tenta) | ⏳ Tema cravado |
-| 9 | — | Eu ganhava 20k e ainda estava na gaiola | ✅ Teoria pronta (Sage) — falta roteiro |
-| 10 | — | Ele apareceu já posicionado (Autoridade Tríplice) | ✅ Teoria pronta (Sage) — falta roteiro |
-| 11 | — | Quase perdeu o próprio nome (erro WiseUp) | ✅ Teoria pronta (Sage) — falta roteiro |
-| 12 | — | Você não precisa estar pronta, precisa estar em movimento | ✅ Teoria pronta (Sage) — falta roteiro |
-| 13 | — | Seu valor não é o resultado de hoje | ✅ Teoria pronta (Sage) — falta roteiro |
-| 14 | — | Posicionamento é repetição | ✅ Teoria pronta (Sage) — falta roteiro |
+| 9 | Reels lo-fi | Eu ganhava 20k e ainda estava na gaiola | ⏳ Roteiro pronto (Rico) — aguardando aprovação |
+| 10 | Reels lo-fi | Ele apareceu já posicionado (Autoridade Tríplice) | ⏳ Roteiro pronto (Rico) — aguardando aprovação |
+| 11 | Reels lo-fi | Quase perdeu o próprio nome (erro WiseUp) | ⏳ Roteiro pronto (Rico) — aguardando aprovação |
+| 12 | Reels lo-fi | Você não precisa estar pronta, precisa estar em movimento | ⏳ Roteiro pronto (Rico) — aguardando aprovação |
+| 13 | Reels lo-fi | Seu valor não é o resultado de hoje | ⏳ Roteiro pronto (Rico) — aguardando aprovação |
+| 14 | Reels lo-fi | Posicionamento é repetição | ⏳ Roteiro pronto (Rico) — aguardando aprovação |
 | 15-30 | — | A definir | ⏳ Pendente |
 
 ## Pool de Temas — Dias 9-14 (cravados pela Karol, prontos pra teoria/roteiro)
