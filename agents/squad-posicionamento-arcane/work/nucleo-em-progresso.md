@@ -12,7 +12,7 @@
 | Display Name | ✅ APROVADO | `Karol | Arquiteta do Método` |
 | Bio | ✅ APROVADA | Ver abaixo |
 | Link da Bio | ✅ APROVADO | linktr.ee/karolsenna._ — 3 links no ar |
-| Destaque 1 — Sobre Mim | 🔄 MONTANDO | Copy aprovada — 8 stories no Canva (ajuste slide 4 feito) |
+| Destaque 1 — Sobre Mim | 🔄 MONTANDO | Copy corrigida (14/06/2026) — Stories 3, 4 e 5 reescritas (narrativa lançadora→especialista). Pendente: ajustar essas 3 no Canva |
 | Destaque 2 — Produto | 🔄 MONTANDO | Copy aprovada — em produção no Canva |
 | Destaque 3 — Depoimentos | ⏳ AGUARDANDO | Estrutura pronta — pendente vídeos WhatsApp alunas |
 | Pinned 1 — Sobre a Karol | ✅ COPY PRONTA | Copy + briefing Canva entregues |
@@ -93,9 +93,9 @@ Aula ao vivo toda quarta — grátis ↓
 
 - Story 1 (capa): "ARQUITETA DO MÉTODO / Karol Senna" — foto da Karol
 - Story 2: "Arquiteta do Método é quem pega anos de experiência solta na cabeça e transforma em estrutura que vende. Não é coach. Não é mentora de marketing. É quem faz o passo que vem antes de tudo isso."
-- Story 3: "Poderia me chamar de Expert em Fracassos. 8 lançamentos fracassados. 3 nichos diferentes. R$200k investidos em mentorias de outros. É uma coleção de tentativas que não foram a lugar nenhum."
-- Story 4: "Investi R$50k na melhor mentoria do país. Fiz tudo que me pediram. Tentei aprender copy, tráfego, lançamento tudo de uma vez. Na hora do pitch: travei. Zero vendas. Mesmo na melhor mentoria. Com os melhores professores."
-- Story 5: "Por um bom tempo pensei que o problema fosse eu. Que faltava coragem. Ou talento pra vender. Não era. Era que eu cheguei no lançamento sem método pronto."
+- Story 3: "Poderia me chamar de Expert em Fracassos. Paguei R$50k na melhor mentoria do país pra entrar no digital. Fiz tudo que me pediram — copy, tráfego, lançamento, tudo de uma vez. 8 lançamentos fracassados. 2 nichos diferentes."
+- Story 4: "Na hora do pitch: travei. Zero vendas. Mesmo na melhor mentoria, com os melhores professores. O problema não era o método — era que eu não estava pronta."
+- Story 5: "Virei lançadora. Faturei R$200k pra outra expert que tirou férias e me deixou na mão. Foi aí que decidi: a próxima expert seria eu — mas no meu 3º nicho: criação de método. Foi aqui que me encontrei."
 - Story 6: "O problema não era a mentoria. Era a ordem. Mentoria ensina a lançar. Ninguém ensina a construir o método antes de lançar. Esse gap virou o meu Método Expert360."
 - Story 7: "A Incubadora de Expert não é mentoria de marketing. É pré-marketing. A gente prepara o expert antes de ele aparecer. Método autoral. Narrativa com história. Primeira venda no privado. Depois o digital."
 - Story 8 (CTA): "Se você se sente insegura ou amadora no digital — seu lugar é aqui. ↓ Me segue." — foto da Karol
@@ -150,9 +150,9 @@ Aula ao vivo toda quarta — grátis ↓
 
 - Capa: foto da Karol + "ARQUITETA DO MÉTODO / Karol Senna"
 - Slide 2: O que é Arquiteta do Método
-- Slide 3: "Poderia me chamar de Expert em Fracassos" — 8 lançamentos, 3 nichos, R$200k pra outros
-- Slide 4: "Investi R$50k na melhor mentoria do país e fracassei" — não estava pronta, sem método, sem venda
-- Slide 5: Na hora do pitch: forçado. Zero vendas. Mesmo na melhor mentoria.
+- Slide 3: "Poderia me chamar de Expert em Fracassos" — paguei R$50k pra entrar no digital, 8 lançamentos, 2 nichos
+- Slide 4: Na hora do pitch: travei. Zero vendas. O problema não era o método — eu não estava pronta
+- Slide 5: Virei lançadora, faturei R$200k pra outra expert que me deixou na mão — decidi: a próxima expert seria eu
 - Slide 6: A descoberta — o problema era a ordem, não a mentoria → nasceu o Expert360
 - Slide 7: A Incubadora é pré-marketing — prepara o expert, não ensina a lançar
 - Slide 8: CTA — "Se você se sente inseguro ou amador no digital, seu lugar é aqui. ↓ Me segue."
@@ -200,6 +200,57 @@ Pinned 3 → PRODUTO   a solução
 
 ---
 
+## Legendas dos 3 Pinned — Produzidas (15/06/2026)
+
+### Pinned 1 — Sobre a Karol
+
+```
+Já fui chamada de "Expert em Fracassos".
+
+8 lançamentos fracassados. 2 nichos diferentes. R$50k investidos numa mentoria pra entrar no digital — e mesmo assim, travei. Zero vendas.
+
+Virei lançadora. Faturei R$200k... pra outra expert, que tirou férias e me deixou na mão.
+
+Foi aí que decidi: a próxima expert seria eu.
+
+Hoje sou Arquiteta do Método: ajudo especialistas a transformar anos de experiência solta na cabeça em estrutura que vende — antes de aparecer.
+
+Se isso te lembra você, me segue. ↓
+```
+
+### Pinned 2 — Tese
+
+```
+Diploma é o que você estudou. Método é o que você viveu.
+
+Diploma dá credencial. Credencial dá permissão. Mas no digital, ninguém paga por permissão — paga por transformação.
+
+Método tem assinatura: nenhuma IA copia, nenhum concorrente replica, porque tem a sua história dentro. Sem ela, é commodity — e commodity, ninguém escolhe por você.
+
+Se você tem autoridade no offline e ainda é invisível no digital, ainda não transformou o que viveu em método.
+
+Concorda? Comenta CONCORDO.
+Pronta pra construir o seu? Me segue.
+```
+
+### Pinned 3 — Oferta
+
+```
+Você não trava por falta de marketing.
+
+Trava porque tem anos de experiência — mas seu conhecimento ainda tá solto na cabeça. Sem estrutura. Sem método.
+
+Curso depois de curso, vídeo depois de vídeo... e a trava continua no mesmo lugar. Não é preguiça. É ordem errada.
+
+A ordem certa: primeiro o método (com nome, etapas e a sua história dentro), depois a validação — com vendas reais, no privado, sem precisar de audiência. Isso é Venda Secreta.
+
+Essa é a Incubadora de Expert: pré-marketing. A gente te prepara antes de você aparecer.
+
+Quer saber se é pra você? Link na bio — pré-diagnóstico 1x1.
+```
+
+---
+
 ## Pendências Acionáveis
 
 ### Imediatas
@@ -210,6 +261,7 @@ Pinned 3 → PRODUTO   a solução
 - [ ] Selecionar vídeos WhatsApp "por que escolheu" (mín. 2 alunas específicas sobre a dor)
 - [ ] Selecionar vídeos WhatsApp "já dentro" (mín. 2 alunas sobre segurança + clareza)
 - [ ] Quando tiver resultado (método validado + venda): substituir placeholder D2 story 7 e D3 story 7
+- [ ] Ajustar Stories 3, 4 e 5 do Destaque 1 no Canva — copy corrigida em 14/06/2026 (narrativa lançadora→especialista + 3º nicho/criação de método). Stories 6-8 ficam como estão
 
 ### Para os Pins
 - [ ] Tirar foto de perfil se necessário (face em foco, fundo neutro) — falta pra avatar do "Card Tweet" e fundo do "Foto + Frase" (capa/CTA do Carrossel 1)
