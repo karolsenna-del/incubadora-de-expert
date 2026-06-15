@@ -212,8 +212,9 @@ Pinned 3 → PRODUTO   a solução
 - [ ] Quando tiver resultado (método validado + venda): substituir placeholder D2 story 7 e D3 story 7
 
 ### Para os Pins
-- [ ] Tirar foto de perfil se necessário (face em foco, fundo neutro)
-- [ ] Produzir/montar os 3 carrosséis com as capas-conceito acima — handoff pro Squad Carrossel Arcane (13/06/2026): primeiro uso, Identity Designer cria templates do estilo "Arquiteta do Método", Producer monta os 3 a partir da copy expandida (Bloco de Notas)
+- [ ] Tirar foto de perfil se necessário (face em foco, fundo neutro) — falta pra avatar do "Card Tweet" e fundo do "Foto + Frase" (capa/CTA do Carrossel 1)
+- [x] Produzir/montar os 3 carrosséis com as capas-conceito acima — Squad Carrossel Arcane (13/06/2026): 3 templates criados e aprovados (Card Tweet, Foto + Frase, Capa Marca com logo real), 23 slides renderizados e entregues em `~/Downloads/carrossel-1-sobre-a-karol/`, `~/Downloads/carrossel-2-tese/`, `~/Downloads/carrossel-3-oferta/`. Pendente: substituir avatar/foto placeholder quando Karol tiver as imagens
+- [ ] Montar os 3 carrosséis no Instagram (Canva ou direto com os PNGs) e fixar no perfil (toque e segure → Fixar)
 
 ---
 
