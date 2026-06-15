@@ -24,6 +24,12 @@ O corpus cobre 7 domínios principais organizados em sequência de implantação
 - Rotinas de Stories (Teia de Aranha visual) — referenciadas em texto, sem artefato PDF extraído
 - Configuração técnica de plataformas (aulas 58–68: GreatPages, VTurb config) — operacional, sem conteúdo metodológico relevante
 
+### 1.1 Fonte Adicionada via Merge (13/06)
+
+| Fonte | Curso | Domínios afetados | Escopo |
+|-------|-------|-------------------|--------|
+| 95-funil-de-zoom-vinizoom | Funil Vinizoom (Imersão ViniZoom) | D5 (Funil de Vendas) + D4 (Conteúdo) | Estrutura completa do "Funil de Zoom" (funil de aula ao vivo) — captação, narrativa, estrutura da aula com técnica de pitch no meio do conteúdo, fluxo de vendas semanal, efeito bola de neve |
+
 ---
 
 ## 2. BACKBONE — TENSÕES E PRINCÍPIOS ESTRUTURANTES
@@ -65,6 +71,7 @@ O backbone são as ideias que organizam toda a visão de mundo do método. Confl
 - Vini fala em primeira pessoa sobre resultados pessoais (15M+ faturado, 6.500+ alunos, 400+ mentorados)
 - Carol apresenta os 3 princípios (não invasivo, humanizar, intencionar) e o protocolo WhatsApp completo
 - Aulas de configuração de plataforma (ManyChat, GreatPages, VTurb) são 100% Vini — operacionais, sem perspectiva Carol
+- Aula 95 (Funil de Zoom) é 100% Vini — aula ao vivo de imersão, inclui debrief em tempo real da própria estrutura que está sendo entregue
 
 ---
 
@@ -91,6 +98,8 @@ O backbone são as ideias que organizam toda a visão de mundo do método. Confl
 | **Escada de Tráfego** | R$10/dia→R$1.5k fat, R$20→5k, R$30→7k, R$80→10k, R$150→15k, R$200→20k | 82 | D7 |
 | **Escala Flutuante** | Aumentar 30% se lucrou, manter se empatou, reduzir 20% se perdeu. Jamais subir sem ROI | 82 | D7 |
 | **Remarketing em Camadas** | 5 conjuntos: 3/7/14/30/60 dias de engajamento. 80% verba aquisição, 20% remarketing. Mínimo: R$1k/mês | 87–89 | D7 |
+| **Funil de Zoom (Funil de Aula)** | Funil de captação + conversão via aula ao vivo semanal/quinzenal (Zoom, Meet ou similar). 4 etapas: Narrativa → Captação → Aula → Vendas. Roda orgânico ou pago. Efeito bola de neve acumula leads pra base evergreen | 95 | D5 |
+| **Aula de Conversão Imediata** | Estrutura de aula desenhada pra vender durante a própria aula: tema central objetivo → estrutura/narrativa → execução (com spoiler do pitch no meio, no pico de audiência) → prática → prova racional + pitch estendido. Contrasta com o modelo de mercado (aula → conteúdo → pitch só no final) | 95 | D4/D5 |
 
 ---
 
@@ -115,6 +124,8 @@ Regras que o corpus trata como inegociáveis — violá-las aparece associado a 
 | RC13 | **Remarketing só com ROI 2 e +R$1k/mês em tráfego** | Antes desse nível, foco total em aquisição |
 | RC14 | **Comentários ManyChat = dividir por 2** | A automação responde, duplicando o número bruto |
 | RC15 | **Produto deve resolver problema que é buscável no Instagram E segmentável em tráfego pago** | Critério de viabilidade de nicho (aula 11) |
+| RC16 | **Soltar o spoiler/pitch resumido no meio da aula — nunca esperar só o final** | No meio é o pico de audiência; o pitch do final pega quem já está saindo (aula 95) |
+| RC17 | **Página de obrigado do Funil de Zoom não pode ter nenhum link — link só chega via WhatsApp** | Autoqualifica o lead: quem cadastrou WhatsApp errado não recebe o link e não entra no grupo (aula 95) |
 
 ---
 
@@ -127,14 +138,19 @@ Regras que o corpus trata como inegociáveis — violá-las aparece associado a 
 | **Brilho Final** | Prova racional no final da etapa de conteúdo do VSL; prova que o mecanismo funciona |
 | **Caminho 30k** | Jornada em 3 fases para atingir R$30k/mês de faturamento recorrente |
 | **Cilindro de Vendas** | Modelo de universo de produtos ao redor de 1 core, com 2 funis de entrada |
+| **Conversão Imediata** | Modelo de aula desenhado pra vender durante a própria aula — não só no final. Contrapõe o modelo de mercado (aula → conteúdo → pitch) |
 | **Curva J** | Zona da morte (crescimento lento) antes da inflexão exponencial do negócio |
 | **Destino** | Resultado final que o cliente vai alcançar — anunciado no início do VSL |
 | **Downsell** | Oferta de produto mais acessível para lead que não fechou o principal (50% do valor) |
+| **Efeito Bola de Neve** | Acúmulo de leads aula a aula — quem não compareceu nos primeiros ciclos aparece em um ciclo futuro. Base de leads cresce continuamente, mesmo sem tráfego novo |
 | **Empurrãozinho** | Texto longo nos Stories com oferta embutida; usado quando audiência já está quente |
 | **Feeling de Vendas** | Capacidade intuitiva desenvolvida com volume de conversas; não se ensina, se pratica |
+| **Fluxo Completo** | Fluxo Padrão estendido: + replay na quarta, reunião de vendas/tira-dúvida na quinta, segunda oferta (quebra de objeção) na sexta |
+| **Fluxo Padrão** | Sequência de disparos via WhatsApp do Funil de Zoom: domingo (anuncia tema + lembrete), segunda (lembrete), terça (link + "começamos") |
 | **Follow-frio** | Lead que não respondeu à abordagem inicial |
 | **Follow-morto** | Lead que parou na etapa de mapeamento |
 | **Follow-quente** | Lead que parou na etapa de oferta (mais valioso, reativado na última semana do mês) |
+| **Funil de Zoom / Funil de Aula** | Funil de captação e venda via aula ao vivo semanal/quinzenal (Zoom, Meet ou qualquer plataforma de live) — alternativa ao funil de lançamento/VSL |
 | **GreatPages** | Construtor de páginas (LP, mini treinamento, VSL) com delay de botão configurável |
 | **Inimigo** | Elemento externo ou crença que bloqueia o cliente de chegar ao ponto B; revelado no VSL |
 | **Levantada de Mão** | Lead que responde proativamente Story pedindo info sobre produto/mentoria |
@@ -147,9 +163,13 @@ Regras que o corpus trata como inegociáveis — violá-las aparece associado a 
 | **Mini Treinamento** | Funil de entrada de 5–10 min que qualifica leads para produto R$1k+ |
 | **Oferta** | Etapa do protocolo WhatsApp: apresentação dos pilares, entregáveis e pergunta de fit |
 | **Perfil Matador** | Configuração de perfil Instagram com SEO, bio de promessa e stories permanentes |
+| **Pitch Estendido** | Oferta completa apresentada no final da aula (etapa de prova + pitch), geralmente tickets R$1k+ |
+| **Pitch Resumido / Spoiler do Pitch** | Prévia curta da oferta solta no MEIO da aula, no pico de audiência — planta a semente antes do pitch estendido no final |
 | **Play Open** | Técnica no intro do VSL: anunciar que haverá oferta ao final para preparar a mente do espectador |
 | **Produto de Entrada** | Produto ~R$200 para reativar leads que pararam no mapeamento (10% do produto principal) |
 | **Promessa Matadora** | Fórmula: público + problema de 90 dias + mecanismo = headline diferenciada |
+| **Prova Racional** | Demonstração via números/cálculo (não depoimento) de que o resultado prometido é alcançável — usada na etapa final da Aula de Conversão Imediata |
+| **Tema Central** | Assunto da aula. Quanto menos subjetivo (mais ligado a um resultado palpável), maior a tração e a conversão |
 | **Turbinar** | Recurso nativo do Instagram de impulsionar publicação (sempre: visitas ao perfil + notebook) |
 | **Universo de Produtos** | Ecossistema de produtos ao redor de 1 core, com diferentes níveis de acesso — não escada |
 | **Visita Sincera** | Pergunta genuína sobre como a pessoa está antes de qualquer pitch — primeira etapa do social selling |
@@ -172,6 +192,7 @@ Regras que o corpus trata como inegociáveis — violá-las aparece associado a 
 | **Motivacional/Princípios** | 78, 85 | Alta para voice profile, baixa para regras | Voice profile, introduções de volumes |
 | **Checklist/Wrapup** | 05–06, 09, 17, 27, 44, 57, 84 | Alta — síntese das etapas | Artefatos de checklist, Quality Gates |
 | **Workshop externo (Carol)** | 92, 94 | Alta — experiência prática validada | VOL-social-selling (já produzido) |
+| **Imersão externa (Merge)** | 95 | Alta — experiência direta de Vini, funil validado desde 2024 em 50+ nichos | VOL-funil-vendas (estrutura do Funil de Zoom) + VOL-conteudo (técnica de pitch no meio da aula) |
 
 ### 7.2 Fontes ausentes e impacto
 
@@ -180,6 +201,7 @@ Regras que o corpus trata como inegociáveis — violá-las aparece associado a 
 | Aulas 58–68 (config-pv) | Baixo — configuração de plataforma, sem metodologia | Ignorar nos volumes |
 | Aula 90 (PDF) | Desconhecido — possivelmente rotina de stories visual | Solicitar ao expert se crítico |
 | Aula 93 (PDF) | Desconhecido — possivelmente artefato complementar | Solicitar ao expert se crítico |
+| Aula 95 — trecho de venda (oferta de implementação R$6k do Vini) | Não é metodologia replicável — é o próprio "pitch estendido" de Vini em ação | Usado só como EXEMPLO ilustrativo da técnica (pitch estendido), não como conteúdo de oferta nos volumes |
 
 ---
 
@@ -304,5 +326,22 @@ Ferramentas, templates e recursos referenciados no corpus que devem constar como
   "gaps_identificados": 5,
   "contradicoes_identificadas": 3,
   "produzido_em": "2026-05-29"
+}
+```
+
+---
+
+## ATUALIZAÇÃO — MERGE 13/06 (fonte 95-funil-de-zoom-vinizoom)
+
+```json
+{
+  "fontes_merge": ["95-funil-de-zoom-vinizoom"],
+  "volumes_impactados": ["VOL-funil-vendas", "VOL-conteudo"],
+  "frameworks_adicionados": 2,
+  "regras_cardinais_adicionadas": 2,
+  "glossario_termos_adicionados": 9,
+  "frameworks_mapeados_total": 21,
+  "regras_cardinais_total": 17,
+  "atualizado_em": "2026-06-13"
 }
 ```

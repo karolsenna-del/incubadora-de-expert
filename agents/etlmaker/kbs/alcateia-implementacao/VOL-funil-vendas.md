@@ -1,7 +1,7 @@
 # VOL — Funil de Vendas
 **KB:** Alcateia Implementação — Vini Grevy  
-**Fontes:** aula-38 (cilindro de vendas), aula-39 (jornada do cliente), aula-40 (mini treinamento), aula-41 (ManyChat), aula-43 (GreatPages), aula-44 (checklist mini treinamento), aula-45 (métricas), aula-47 (aula milionária estrutura), aula-48 (intro VSL), aula-49 (conteúdo VSL), aula-50 (oferta VSL), aula-51 (VSL sem depoimentos), aula-52 (VSL com depoimentos), aula-53 (VTurb), aula-54 (GreatPages VSL), aula-55 (upsell), aula-56 (ManyChat VSL), aula-69 (funil seguidores — descontinuado), aula-70 (funil manual seguidores), aula-71 (estratégia canais), aula-72 (funis no perfil), aula-73 (aumento conversão 30%)  
-**Produzido em:** 2026-05-29
+**Fontes:** aula-38 (cilindro de vendas), aula-39 (jornada do cliente), aula-40 (mini treinamento), aula-41 (ManyChat), aula-43 (GreatPages), aula-44 (checklist mini treinamento), aula-45 (métricas), aula-47 (aula milionária estrutura), aula-48 (intro VSL), aula-49 (conteúdo VSL), aula-50 (oferta VSL), aula-51 (VSL sem depoimentos), aula-52 (VSL com depoimentos), aula-53 (VTurb), aula-54 (GreatPages VSL), aula-55 (upsell), aula-56 (ManyChat VSL), aula-69 (funil seguidores — descontinuado), aula-70 (funil manual seguidores), aula-71 (estratégia canais), aula-72 (funis no perfil), aula-73 (aumento conversão 30%), 95-funil-de-zoom-vinizoom (Funil de Zoom completo — Merge 13/06)  
+**Produzido em:** 2026-05-29 (atualizado 2026-06-13)
 
 ---
 
@@ -364,6 +364,8 @@ Usar 3–4 variações de mensagem no ManyChat evita que o Instagram identifique
 5. **Depoimentos dobram a conversão.** Prioridade alta após ter 2+ clientes com resultado.
 6. **Áudio de follow-up aumenta 30%.** Investimento de 1 hora de gravação recuperado na primeira semana.
 7. **Comentários ManyChat = dividir por 2.** A automação responde, duplicando o número bruto.
+8. **No Funil de Zoom, solte o spoiler do pitch no meio da aula — não espere o final.** No meio é o pico de audiência (ver seção 12 e VOL-conteudo, seção 11). [Fonte: 95-funil-de-zoom-vinizoom]
+9. **Página de obrigado do Funil de Zoom sem nenhum link.** O link do grupo só chega via WhatsApp — isso autoqualifica o lead. [Fonte: 95-funil-de-zoom-vinizoom]
 
 ---
 
@@ -384,3 +386,147 @@ Usar 3–4 variações de mensagem no ManyChat evita que o Instagram identifique
 | **Upsell** | Oferta complementar apresentada após a compra do VSL principal |
 | **Retenção** | % de espectadores que continuam assistindo no ponto medido (30s / 3min / pitch) |
 | **Randomizador** | Configuração ManyChat que varia mensagens para evitar padrão de spam |
+| **Funil de Zoom / Funil de Aula** | Funil de captação e venda via aula ao vivo semanal/quinzenal (Zoom, Meet ou WhatsApp) |
+| **Conversão Imediata** | Modelo de aula desenhado pra vender durante a própria aula — não só no final |
+| **Efeito Bola de Neve** | Acúmulo de leads aula a aula — quem não compareceu nos primeiros ciclos aparece num ciclo futuro |
+| **Fluxo Padrão** | Disparos via WhatsApp: domingo (anuncia tema), segunda (lembrete), terça (link + "começamos") |
+| **Fluxo Completo** | Fluxo Padrão + replay (quarta), reunião de vendas (quinta), segunda oferta (sexta) |
+| **Pitch Resumido / Spoiler do Pitch** | Prévia curta da oferta solta no meio da aula, no pico de audiência |
+| **Pitch Estendido** | Oferta completa apresentada no final da aula, após a prova racional |
+| **Tema Central** | Assunto da aula — quanto menos subjetivo, maior a tração e a conversão |
+| **Prova Racional** | Números/cálculo que demonstram que o resultado prometido é alcançável (vs. prova social/depoimento) |
+
+---
+
+## 12. FUNIL DE ZOOM (FUNIL DE AULA) — CONVERSÃO IMEDIATA
+
+> **Fonte:** 95-funil-de-zoom-vinizoom (Imersão ViniZoom). Adicionado via Merge em 13/06.
+
+### 12.1 O que é e por que Vini aposta nisso pra 2027
+
+O Funil de Zoom (ou Funil de Aula) é um funil de captação + conversão construído em torno de uma aula ao vivo semanal/quinzenal — pode rodar em Zoom, Google Meet, ou qualquer plataforma de live, incluindo grupo de WhatsApp.
+
+Validado por Vini desde 2024, em mais de 50 nichos. Tese: esse é o funil que vai dominar 2027 no Brasil, por 4 motivos:
+
+| Motivo | Descrição |
+|---|---|
+| Overdose de conteúdo | Mercado saturado — diferenciação fica mais difícil só com posts |
+| Era da desinformação / fake news | Audiência cada vez mais desconfiada de conteúdo estático |
+| Plataformas restringindo alcance | Instagram/TikTok aumentam controle de distribuição conforme mais gente produz conteúdo |
+| IA reduzindo tempo em redes sociais | Pessoas migrando tempo de redes sociais pra chats de IA → menos gente nas redes → tráfego mais caro |
+
+> "Existem coisas que são mais caras você não fazer." [Fonte: 95-funil-de-zoom-vinizoom]
+
+### 12.2 Pra Quem Funciona
+
+- Qualquer um que vende mentoria, infoproduto ou serviço
+- Validado para tickets a partir de R$1.000 (recomendado como mínimo)
+- Funciona com pouca audiência — o foco é captação + conversão rápida, não tamanho de audiência
+- Funciona pra quem já fatura mas está com a margem espremida (mais um funil rodando em paralelo)
+
+### 12.3 Por Que Funciona (3 motivos)
+
+1. **Aumenta o tempo de tela com o lead** — ~1h de presença ao vivo
+2. **Gera proximidade** — interação em tempo real, responde dúvidas no chat
+3. **Transforma frio em quente em 60 minutos**, com baixo risco de investimento
+
+### 12.4 As 4 Etapas do Funil
+
+| # | Etapa | O que acontece |
+|---|---|---|
+| 1 | **Narrativa** | Define grande motivo + grande promessa + única ação — embala todo o resto |
+| 2 | **Captação** | Capta o lead (orgânico ou pago) e leva pra página de captura |
+| 3 | **Aula** | Aula ao vivo de ~1h em modelo de Conversão Imediata (ver VOL-conteudo, seção 11) |
+| 4 | **Vendas** | Fluxo de disparos via WhatsApp ao longo da semana, fechando a venda |
+
+### 12.5 Etapa 1 — Narrativa
+
+3 elementos obrigatórios, que devem aparecer em TODO conteúdo de captação (stories, posts, anúncios):
+
+| Elemento | Função | Exemplo do Vini |
+|---|---|---|
+| **Grande Motivo** | Justifica por que a aula está sendo entregue de graça | "Essa aula faz parte da minha mentoria paga — você vai ter acesso de graça, ao vivo" |
+| **Grande Promessa** | O resultado final que a pessoa busca | "R$30k/mês com infoproduto/mentoria, trabalhando 14h/semana" |
+| **Única Ação** | O CTA — sempre 1 só | "Cadastre-se / entre no grupo de WhatsApp" |
+
+> "Se você errar a narrativa, você vai errar na estrutura do funil inteiro." [Fonte: 95-funil-de-zoom-vinizoom]
+
+### 12.6 Etapa 2 — Captação
+
+**Canais (todos levam pra mesma página de captura):**
+- Stories orgânicos (3x/semana) — "Comente [palavra-chave] pra se cadastrar"
+- Final de posts do feed — inclui data, horário e a grande promessa
+- Anúncios pagos — mesmos 3 elementos de narrativa, em formato de vídeo
+
+**Modelo de página de captura:**
+
+| Elemento | Posição |
+|---|---|
+| Data fixa do evento | Topo |
+| Os 3 elementos de narrativa | Corpo |
+| 1 vídeo | Centro |
+| CTA único ("Quero participar") | Botão |
+
+**Página de obrigado — mecanismo de qualificação:**
+
+A página de obrigado NÃO pode ter nenhum link. Mensagem: "Sua inscrição está quase concluída — o link será enviado no seu WhatsApp."
+
+Isso autoqualifica o lead: quem cadastrou WhatsApp errado não recebe o link e não entra no grupo — fica de fora do CRM. Quem recebe o link tem WhatsApp real e validado.
+
+**CRM e disparo:**
+- CRM (ex: Data Crazy) dispara automaticamente o link do grupo de WhatsApp quando o lead se cadastra — envio imediato
+- WhatsApp > e-mail: e-mail funciona como "mão de isca" (ninguém olha, só usa pra passar de etapa); WhatsApp é checado diariamente
+
+### 12.7 Etapa 3 — A Aula
+
+A estrutura completa da aula (Conversão Imediata + técnica do spoiler do pitch no meio) está documentada em **VOL-conteudo, seção 11**. Aqui o essencial:
+
+- Duração recomendada: ~1h (no máximo)
+- Modelo: Conversão Imediata — vende durante a própria aula, não só no final
+- 4 partes: Estrutura/Narrativa → Execução (+ spoiler do pitch) → Prática → Prova + Pitch Estendido
+
+### 12.8 Etapa 4 — Vendas / Fluxo Semanal de Disparos
+
+**Fluxo Padrão (mínimo):**
+
+| Dia | Disparo (via WhatsApp) |
+|---|---|
+| Domingo | Anuncia o tema da próxima aula + lembrete |
+| Segunda | Lembrete |
+| Terça | "Hoje é o link, começamos" — dia da aula |
+
+**Fluxo Completo (extensão validada nos últimos 30-60 dias):**
+
+| Dia | Ação adicional |
+|---|---|
+| Quarta | Replay da aula |
+| Quinta | Reunião de vendas / tira-dúvida — pitch de algo específico |
+| Sexta | Segunda oferta — downsell ou quebra de objeção (preço) pra quem não comprou |
+
+Roda tanto orgânico quanto pago — os disparos são sempre via grupo de WhatsApp (ou DM individual, se houver orçamento).
+
+### 12.9 Efeito Bola de Neve
+
+Cada ciclo semanal acumula leads. Quem não compareceu nos primeiros ciclos eventualmente aparece num ciclo futuro — a base cresce continuamente, mesmo sem tráfego novo.
+
+**Números de referência do Vini (não são garantia — variam por nicho):**
+
+| Métrica | Valor de referência |
+|---|---|
+| Leads acumulados desde 2024 | ~17.000–20.000 |
+| Meta declarada até fim de ano | 200.000 leads |
+| % de compradores que conheceram Vini há < 30 dias | 52% |
+| Faturamento mensal só com este funil (período relatado) | ~R$120.000+ |
+
+> Por que muda a métrica do negócio: de "crescer seguidores" para "crescer leads qualificados". Com 200k leads reais de WhatsApp, é possível rodar 1 ano inteiro sem investir em tráfego novo.
+
+### 12.10 Projeção de Números (referência de ordem de grandeza)
+
+| Variável | Exemplo do Vini |
+|---|---|
+| Investimento em tráfego | R$1.000 |
+| Custo por lead | R$3–10 (nicho de marketing digital — pode variar bastante por nicho) |
+| Leads que entram na aula | 10–30% dos leads captados |
+| Ticket mínimo recomendado | R$1.000 |
+
+> Os valores são do contexto/nicho do Vini. Use como referência de ordem de grandeza, não como garantia — o que importa é a proporção: captação barata + aula de conversão imediata + fluxo de vendas semanal.

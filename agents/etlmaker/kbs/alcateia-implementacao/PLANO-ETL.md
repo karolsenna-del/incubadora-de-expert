@@ -12,6 +12,9 @@
 2. **Social Selling** — 4 aulas, ~1h59m
 3. **Rotinas de Stories** — apenas PDFs (pendente estratégia de extração)
 
+### Merge — Fontes Adicionadas Posteriormente
+4. **Funil Vinizoom — Imersão ViniZoom** (categoria 285180-funil-vinizoom, mesmo parent "Mentoria Alcateia") — 1 aula "Funil de Zoom" (1h17m28s), adicionada via Merge em 13/06. Foco solicitado por Karol: técnica de Vini Grevy de inserir CTA no meio de uma live longa, pra aplicar nas lives de Zoom dela (não cobertas em VOL-conteudo, que trata de conteúdo em feed/stories).
+
 ## Módulos — Alcateia Implementação
 | Módulo | Aulas | Duração |
 |--------|-------|---------|
@@ -128,10 +131,14 @@
 - [ ] 93-pdf-e-docs-social-selling
 - [ ] 94-workshop-social-selling
 
+### Merge — Fontes Adicionadas
+- [x] 95-funil-de-zoom-vinizoom (áudio extraído, transcrição completa, mapeamento territorial concluído, VOL-conteudo e VOL-funil-vendas atualizados — Merge concluído 13/06)
+
 ## Decisões Chave
 - Método de extração: m3u8 via Playwright + ffmpeg + Whisper (mesmo padrão do Código PEV 2.0)
 - Rotinas de Stories: apenas PDFs — estratégia pendente (download manual ou selenium)
 - Páginas de vendas e PDF e DOCS: sem vídeo, serão pulados pelo script
+- **13/06 — Merge aprovado por Karol:** fonte 95-funil-de-zoom-vinizoom (curso Funil Vinizoom, módulo Imersão-ViniZoom) entra na KB Alcateia Implementação via modo Merge. Impacta VOL-funil-vendas (estrutura do funil de Zoom) e VOL-conteudo (formato de live longa + técnica de CTA no meio do conteúdo)
 
 ## Regras de Operação
 - RELER ESTE PLANO a cada autocompact

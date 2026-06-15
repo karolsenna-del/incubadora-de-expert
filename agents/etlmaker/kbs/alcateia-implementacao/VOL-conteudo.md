@@ -1,7 +1,7 @@
 # VOL — Conteúdo
 **KB:** Alcateia Implementação — Vini Grevy  
-**Fontes:** aula-10 (teia de aranha), aula-28 (agente IA — mentorados), aula-29 (estratégia conteúdo), aula-30 (conteúdo viral), aula-31 (dor e eventos), aula-32 (princípios e valores), aula-33 (frequência/linha editorial), aula-34 (ChatGPT viral), aula-35 (ChatGPT dor), aula-36 (agente carrossel venda), aula-37 (checklist conteúdo)  
-**Produzido em:** 2026-05-29
+**Fontes:** aula-10 (teia de aranha), aula-28 (agente IA — mentorados), aula-29 (estratégia conteúdo), aula-30 (conteúdo viral), aula-31 (dor e eventos), aula-32 (princípios e valores), aula-33 (frequência/linha editorial), aula-34 (ChatGPT viral), aula-35 (ChatGPT dor), aula-36 (agente carrossel venda), aula-37 (checklist conteúdo), 95-funil-de-zoom-vinizoom (formato de live longa + técnica de pitch no meio — Merge 13/06)  
+**Produzido em:** 2026-05-29 (atualizado 2026-06-13)
 
 ---
 
@@ -287,6 +287,7 @@ Antes de turbinar qualquer conteúdo:
 4. **Aguardar 48h antes de turbinar.** Engajamento orgânico primeiro — algoritmo recompensa.
 5. **Conteúdo de dor ativa o funil.** O CTA deve ser a palavra-chave do ManyChat — sem ele, o conteúdo não converte.
 6. **Nunca criar 30 dias de conteúdo de uma vez.** Voo de galinha paralisa depois.
+7. **Em lives longas, solte o spoiler do pitch no meio — nunca espere o final.** No meio é o pico de audiência; o pitch do final pega quem já está saindo. [Fonte: 95-funil-de-zoom-vinizoom]
 
 ---
 
@@ -305,3 +306,95 @@ Antes de turbinar qualquer conteúdo:
 | **3x1** | Cadência de 3 stories de valor para 1 story de oferta |
 | **Teia de Aranha** | Rotina sistemática de 31 dias de stories com 6 tipos de interação |
 | **Agente de Conteúdo** | IA treinada com 600+ carrosseis para produzir conteúdo viral e de dor (exclusivo mentorados L2/L3) |
+| **Conversão Imediata** | Modelo de live desenhado pra vender durante a própria live — não só no final |
+| **Tema Central** | Assunto da live. Quanto menos subjetivo (mais ligado a um resultado palpável), maior a tração e a conversão |
+| **Pitch Resumido / Spoiler do Pitch** | Prévia curta (1-2 frases) da oferta, solta no MEIO da live, no pico de audiência |
+| **Pitch Estendido** | Oferta completa apresentada no final da live, após a prova racional |
+| **Prova Racional** | Demonstração via números/cálculo (não depoimento) de que o resultado prometido é alcançável |
+| **Funil de Zoom / Funil de Aula** | Funil de captação e venda via live semanal/quinzenal (Zoom, Meet ou WhatsApp) — ver VOL-funil-vendas |
+
+---
+
+## 11. FORMATO DE LIVE LONGA — A TÉCNICA DO PITCH NO MEIO (Funil de Zoom)
+
+> **Fonte:** 95-funil-de-zoom-vinizoom (Imersão ViniZoom). Adicionado via Merge em 13/06 — foco solicitado: como inserir o CTA/pitch no meio de uma live longa, aplicável às lives semanais de Zoom/WhatsApp.
+
+### 11.1 O Modelo de Mercado vs. o Modelo de Conversão Imediata
+
+| Modelo de Mercado | Modelo de Conversão Imediata (Vini) |
+|---|---|
+| Aula → Conteúdo → Pitch | Tema Central → Estrutura/Narrativa → Execução (+ spoiler do pitch) → Prática → Prova + Pitch Estendido |
+| Pitch só no final | Pitch resumido NO MEIO + pitch estendido no final |
+| Quando chega o pitch, a galera já está saindo | No meio da live, "tem todo mundo" — pico de audiência |
+
+> "Normalmente quando você vai dar uma aula, ela começa assim: aula, conteúdo, pitch. Aqui no meio você faz o pitch — é quando a galera já tá indo embora. Por isso a gente dá um spoiler do pitch aqui no meio: aqui no meio já tem todo mundo. Você pega o pico pra fazer o pitch. Você faz o pitch pra mais gente. Quanto mais gente ouve, mais gente compra." [Fonte: 95-funil-de-zoom-vinizoom]
+
+### 11.2 Tema Central — Objetivo, Não Subjetivo
+
+Antes de desenhar a estrutura da live, definir o **tema central**. A regra:
+
+> "Quanto menos subjetivo o tema, maior a tração. Quanto menos subjetivo, mais gente você coloca na sala. Quanto mais gente, mais você vende — porque o resultado se torna palpável." [Fonte: 95-funil-de-zoom-vinizoom]
+
+| Tema subjetivo (evitar) | Tema objetivo (buscar) |
+|---|---|
+| "Como lidar com a ansiedade" | "Como aceitar a separação com seu ex em X dias" |
+| "Desenvolvimento pessoal" | "Como [resultado específico] em [prazo]" |
+| "Marketing digital" (genérico) | "Como dobrei meu faturamento mudando 1 coisa no funil" |
+
+**Mesmo em nichos subjetivos** (terapia, astrologia, desenvolvimento pessoal), o caminho é nichar a dor até virar algo palpável. Exemplo do Vini: um terapeuta genérico de "ansiedade" compete com 1 milhão de perfis; um terapeuta especialista em "aceitar a separação com o ex" vira referência — e dobra o ticket.
+
+### 11.3 A Estrutura de 4 Partes da Live
+
+| # | Parte | O que entra | CTA |
+|---|---|---|---|
+| 1 | **Estrutura / Narrativa** | O "porquê" — a lógica por trás do que vai ser entregue | — |
+| 2 | **Execução** | O "como" — passo a passo do raciocínio | **Spoiler do pitch / pitch resumido** (no final desta etapa) |
+| 3 | **Prática** | Mão na massa — aplicação real | — |
+| 4 | **Prova + Pitch Estendido** | Prova racional de que o resultado é possível + oferta completa | **Pitch estendido** |
+
+A live de ~1h (Vini recomenda no máximo 1h) percorre essas 4 partes em sequência. O spoiler do pitch acontece aproximadamente na metade — na transição entre "Execução" e "Prática".
+
+### 11.4 A Técnica — Spoiler do Pitch / Pitch Resumido
+
+**O que é:** uma prévia curta e direta da oferta — 1 a 2 frases — solta no MEIO da live. Não é a oferta completa, é uma semente.
+
+**Onde colocar:** no fim da etapa "Execução", antes de entrar na "Prática" — aproximadamente na metade da live.
+
+**Por que funciona:**
+- No meio da live ainda está todo mundo presente — é o pico de audiência
+- Quem ouve o spoiler entra "avisado" de que vai ter oferta no final, sem ser pego de surpresa (efeito parecido com o "Play Open" da Aula Milionária — ver VOL-funil-vendas — mas acontecendo no MEIO em vez do início)
+- Planta a semente da decisão antes da pessoa cogitar sair
+
+**Exemplo do Vini (textual):**
+```
+"Eu poderia falar aqui que, no final, eu vou te ajudar a implementar
+esse funil — vou colocar o meu time pra rodar isso pra você."
+```
+
+Isso é o spoiler. A oferta completa (preço, condições, bônus) só aparece na Parte 4.
+
+### 11.5 Etapa Final — Prova Racional + Pitch Estendido
+
+A etapa final não usa prova social (depoimentos) como prova principal — usa **prova racional**: números e cálculos que mostram que o resultado prometido no tema central é alcançável.
+
+```
+Exemplo de prova racional (aula 95):
+"Vamos colocar R$1.000 de tráfego nisso. Custo por lead de R$10.
+Isso te dá 20 leads. Desses, 10-30% entram na live.
+Se você fechar 1 venda de R$1.000, você já empatou o investimento
+e ainda fica com a base de leads pra próxima semana."
+```
+
+Só depois da prova racional vem o **pitch estendido**: a oferta completa, com preço, condições e CTA único.
+
+### 11.6 Adaptação para Lives Semanais de Zoom/WhatsApp
+
+Para aplicar essa estrutura numa live semanal de grupo de WhatsApp:
+
+1. **Defina o tema central da semana** — objetivo, ligado a um resultado palpável (seção 11.2)
+2. **Abra com Estrutura/Narrativa** — explique a lógica do que vai ser entregue naquela live
+3. **Vá para Execução** — ensine o "como fazer" — e, na transição pra prática, solte o **spoiler do pitch** (1-2 frases, sem detalhar a oferta)
+4. **Feche com Prática** — mão na massa, aplicação real
+5. **Termine com Prova Racional + Pitch Estendido** — mostre os números, depois apresente a oferta completa com CTA único
+
+> O conteúdo entregue precisa ser genuíno e completo — a conversão não vem de sonegar conteúdo (live "isca"), vem da estrutura: tema objetivo + spoiler no pico de audiência + prova racional no final. [Fonte: 95-funil-de-zoom-vinizoom]
