@@ -151,7 +151,7 @@ Aula ao vivo toda quarta — grátis ↓
 - Capa: foto da Karol + "ARQUITETA DO MÉTODO / Karol Senna"
 - Slide 2: O que é Arquiteta do Método
 - Slide 3: "Poderia me chamar de Expert em Fracassos" — paguei R$50k pra entrar no digital, 8 lançamentos, 2 nichos
-- Slide 4: Na hora do pitch: travei. Zero vendas. O problema não era o método — eu não estava pronta
+- Slide 4: Vendia 1, 2, 3 por lançamento — mas sempre no prejuízo. Não escalava. A conta nunca fechava. O problema não era o método — eu não estava pronta
 - Slide 5: Virei lançadora, faturei R$200k pra outra expert que me deixou na mão — decidi: a próxima expert seria eu
 - Slide 6: A descoberta — o problema era a ordem, não a mentoria → nasceu o Expert360
 - Slide 7: A Incubadora é pré-marketing — prepara o expert, não ensina a lançar
