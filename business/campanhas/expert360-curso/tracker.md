@@ -39,7 +39,7 @@
 | Roteirizar M1 — Persona + Promessa (8 aulas) | Course Creator | Done 02/06 | M0 roteirizado | m1-roteiros.md |
 | Roteirizar M2 — Processo Autoral (9 aulas) | Course Creator | Done 03/06 | M1 roteirizado | m2-roteiros.md |
 | Roteirizar M3 — Vendas Secretas (12 aulas) | Course Creator | Done 09/06 | M2 roteirizado | m3-roteiros.md |
-| Roteirizar M4 — Autoridade (10 aulas) | Course Creator | Done 13/06 — 9 de 10 (Intro+A1-A8, falta Encerramento) | M3 roteirizado | m4-roteiros.md v2.1 (Aula 8 "Escalando" adicionada, aguardando validação) |
+| Roteirizar M4 — Autoridade (10 aulas) | Course Creator | Done 15/06 | M3 roteirizado | m4-roteiros.md v2.1 — 10/10 aulas (Encerramento "Quem Você Se Tornou" adicionado 15/06) |
 
 ---
 

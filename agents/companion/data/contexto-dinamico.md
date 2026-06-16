@@ -124,22 +124,28 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
-Sessao 09/06 — weekly review concluido.
+Sessao 15/06 — retrofit v2.0 completo.
 
-**O que foi feito (desde 01/06):**
-- M3 — Vendas Secretas: 12 aulas roteirizadas e aprovadas ✓
-- M4 — Autoridade: proximo passo
-- Aulas de Encerramento renomeadas pra "Quem Voce Se Tornou" em M0, M1, M2 e M3 ✓
-- Vitrine Instagram: Destaques 1 e 2 postados ✓
-- Infraestrutura de trafego (Meta Ads) configurada pelo Trafego Arcane ✓
-- Proximo review: 16/06/2026
+**O que foi feito (15/06):**
+- RETROFIT COMPLETO: todos os 5 modulos no formato Live 12 (5 blocos) prontos pra gravacao ✓
+  - M0 (5 aulas): v2.0 — Karol revisou e ajustou diretamente (2020, "varios agentes de IA", abertura A3)
+  - M1 (8 aulas): v2.0 — formato 5 blocos aplicado
+  - M2 (9 aulas): v2.0 — A4-A7 + Encerramento adicionados (completo)
+  - M3 (12 aulas): v2.0 — reescrita completa a partir da v1.0
+  - M4 (10 aulas): v2.1 + Encerramento "Quem Voce Se Tornou" escrito do zero
+- Materiais reorganizados: 12 renomeados (M0.1-M4.7), 6 placeholders novos, briefing movido pra branding/
+- Decisao consolidada em todos os roteiros: "varios agentes de IA" (sem numero fixo — futuro-prova)
+- Tracker atualizado: LOG + task M4 Done 15/06
 
 **Proximo foco:**
-1. Roteirizar M4 — Autoridade (9 aulas) via Course Creator
-2. Destaque 3 + primeiros posts feed com angulo "expert em fracassar no digital" (em paralelo com M4)
+1. Karol grava os modulos (Fase 4 — Gravacao)
+2. Apos gravacao: Fase 3 (Criacao dos Agentes) e Fase 5 (Lancamento)
+3. Background: Destaque 3 + posts feed com angulo "expert em fracassar no digital"
+
+**Expert em Lives** (decisao 15/06): criar worker especializado via Worker Forge, usando live-19-outline.md como seed. Ver demandas-backlog.md.
 
 Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 09/06/2026*
+*Ultima atualizacao: 15/06/2026*
