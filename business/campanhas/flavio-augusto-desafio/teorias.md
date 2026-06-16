@@ -536,7 +536,7 @@ Dupla voz: o fato do Flávio (mesmos pilares há 20 anos) + a crença pessoal da
 - Sensação de "estagnação" ao ver que fala sempre dos mesmos temas — quando, na verdade, isso é o que constrói autoridade.
 
 ### Moral da História / Gancho do Produto
-"Repetir o mesmo tema não é falta de criatividade. É linha editorial — e linha editorial é o que te faz ser lembrada." Conecta com a Fase 5 do Expert360º e com `minha-linha-editorial.md` (M4). Reforça o princípio do squad: "Formato definido > variação caótica."
+"Repetir o mesmo tema não é falta de criatividade. É linha editorial — e linha editorial é o que te faz ser lembrada." Conecta com a Fase 5 do Expert360º e com `M4.6 - Minha Linha Editorial.md` (M4). Reforça o princípio do squad: "Formato definido > variação caótica."
 
 ### Leque de Hooks Sugeridos
 
@@ -579,7 +579,7 @@ Por que funciona: prova experiencial — o público confirma a tese na própria 
 
 ### Pesquisa Interna (da Karol)
 - Crença/frase própria da Karol: "posicionamento é repetição" — origem desta teoria.
-- Conecta com `minha-linha-editorial.md` (M4) e o princípio do squad "Formato definido > variação caótica".
+- Conecta com `M4.6 - Minha Linha Editorial.md` (M4) e o princípio do squad "Formato definido > variação caótica".
 
 ### Pesquisa Externa
 - Regra dos 7 / Regra dos 7 Impactos (Athex, Lifetree, Alfarth Digital, Fera, mLabs — recall de marca).

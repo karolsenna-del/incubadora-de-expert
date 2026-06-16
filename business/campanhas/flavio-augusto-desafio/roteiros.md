@@ -1334,7 +1334,7 @@ aqui também.
 - **Gatilhos do hook:** Crença pessoal/Reconhecimento
 - **Elementos notáveis:** Crença/visão de mundo, Prova (Regra dos 7), Autoridade (Flávio), Polêmica, Reconhecimento
 - **Loopings:** Abre com a crença pessoal → fecha validando com dado externo → reabre com Flávio como prova viva → fecha reconectando com quem assiste
-- **Fechamento/posicionamento:** Fase 5 (linha editorial), `minha-linha-editorial.md` — sem nomear, fica implícito no "é isso que eu vou fazer aqui também" (meta, sobre o próprio conteúdo que ela está fazendo agora).
+- **Fechamento/posicionamento:** Fase 5 (linha editorial), `M4.6 - Minha Linha Editorial.md` — sem nomear, fica implícito no "é isso que eu vou fazer aqui também" (meta, sobre o próprio conteúdo que ela está fazendo agora).
 
 ---
 
@@ -1396,7 +1396,7 @@ aqui também.
 **Categoria Audience:** Crenças + Comportamentos+
 **Fato Flávio:** Fala dos mesmos pilares (vendas, execução, liberdade financeira, autorresponsabilidade) há ~20 anos. Não varia de pauta.
 **Crença pessoal Karol (1ª pessoa — hook direto):** "Eu falo sempre: posicionamento é repetição. As pessoas veem centenas de conteúdos rolando o feed — se não repetirmos sempre, não vão lembrar da gente nem do que fazemos. Repetição é necessária."
-**Conexão Expert360º:** Fase 5 — linha editorial definida (temas, ângulo único, frequência). Reforça o princípio do squad "Formato definido > variação caótica". Conecta com `minha-linha-editorial.md` (M4).
+**Conexão Expert360º:** Fase 5 — linha editorial definida (temas, ângulo único, frequência). Reforça o princípio do squad "Formato definido > variação caótica". Conecta com `M4.6 - Minha Linha Editorial.md` (M4).
 **Moral:** "Repetir o mesmo tema não é falta de criatividade. É linha editorial — e linha editorial é o que te faz ser lembrada."
 **Nota pro Rico:** Dupla voz — fato do Flávio + crença própria da Karol em 1ª pessoa. Pode abrir o hook direto com a frase dela ("Eu falo sempre: posicionamento é repetição...").
 

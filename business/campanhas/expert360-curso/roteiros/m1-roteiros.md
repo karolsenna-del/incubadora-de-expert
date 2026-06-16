@@ -1,10 +1,17 @@
 # Expert360º — Roteiros Módulo 1: Persona + Promessa
-Versão: 1.0 | Data: 02/06/2026 | Status: Aprovado (QG-CC-006)
+Versão: 2.0 | Data: 15/06/2026 | Status: Retrofit pro formato Live 12 — pendente validação QG-CC-006
 
 **Aulas:** 8 (Introdução + 2 mentalidade + 2 P1 + 2 P2 + Encerramento)
-**Formato:** Script completo + estrutura com tópicos e pontos-chave ao final de cada aula
+**Formato:** 5 blocos — Abertura (gancho + ponte com a aula anterior) / O Que e Por Quê (tema da aula + urgência) / Como (até 3 pontos principais — Ideia → Exemplo → Aplicação) / Onde e Quando (aplicação prática — material e timing) / Transição (recap + CTA + gancho pra próxima). Cada aula termina com ESTRUTURA — TÓPICOS E PONTOS-CHAVE, espelhando os 5 blocos.
 **Nota:** Todos os exercícios usam arquivos pré-nomeados do Drive do aluno
 
+---
+
+## NOTA DE RETROFIT (v2.0)
+
+Esta versão retrofita o conteúdo do M1 v1.0 (aprovado em QG-CC-006) pro formato de 5 blocos adotado a partir do M4 ("Live 12") e já aplicado em m0-roteiros.md. O conteúdo aprovado foi preservado — a mudança é estrutural, não de substância. As Aulas 4 e 6 (exercícios com o Agente da Persona Compradora e o Agente da Promessa Transformadora) seguem o padrão de 3 Pontos "inputs / como rodar / output" usado em m4-roteiros.md (Aula 3).
+
+---
 ---
 
 ## AULA INTRODUÇÃO — MÓDULO 1: PERSONA + PROMESSA
@@ -26,76 +33,79 @@ Eles são a matéria-prima do que você vai construir aqui.
 
 ---
 
-**[O QUE VOCÊ VAI CONSTRUIR NESTE MÓDULO]**
+**[O QUE E POR QUÊ]**
 
-O Módulo 1 tem dois entregáveis.
+Este módulo entrega P1 e P2: a sua **Persona Compradora** e a sua **Promessa Transformadora**.
 
-O primeiro: a sua **Persona Compradora**.
+Por que isso importa agora? Porque a persona informa a promessa. Só quando você sabe exatamente com quem está falando — a dor real, o medo real, o que essa pessoa já tentou e por que não funcionou — é que a promessa pode ser específica o suficiente para atravessar o ruído. Promessa genérica é sinal de persona genérica.
 
-Não um perfil demográfico. Não um avatar genérico que você inventou. A pessoa real que mais precisa do que você tem — e que você já conhece melhor do que imagina, porque ela tem muito da sua própria história dentro dela.
-
-O segundo: a sua **Promessa Transformadora**.
-
-Não um slogan. Não uma descrição do que você faz. A frase que resume, com precisão, o que muda na vida de quem passa pelo seu método. Ponto A e ponto B. Sem rodeio.
-
-Esses dois entregáveis não são independentes.
-
-A persona informa a promessa. Só quando você sabe exatamente com quem está falando — a dor real, o medo real, o que essa pessoa já tentou e por que não funcionou — é que a promessa pode ser específica o suficiente para atravessar o ruído.
-
-Promessa genérica é sinal de persona genérica.
+E sem esses dois documentos fechados, tudo que vem depois fica sem destinatário: o método do Módulo 2, a oferta do Módulo 3, o conteúdo do Módulo 4.
 
 ---
 
-**[COMO O MÓDULO ESTÁ ORGANIZADO]**
+**[COMO]**
 
-Antes de abrir os agentes, o módulo passa por duas viradas de mentalidade.
+**Ponto 1 — Os dois entregáveis.**
 
-A primeira é sobre tempo: empreendedoras medem progresso por ano, não por mês. Esse reposicionamento muda o que parece urgente, o que parece lento, e o que você decide priorizar agora.
+Ideia: a sua **Persona Compradora** não é um perfil demográfico. Não é um avatar genérico que você inventou. É a pessoa real que mais precisa do que você tem — e que você já conhece melhor do que imagina, porque ela tem muito da sua própria história dentro dela.
 
-A segunda é sobre foco: existe um custo invisível em dizer sim para projetos de terceiros enquanto o seu projeto próprio espera. Antes de mergulhar na construção da sua persona e da sua promessa, você precisa entender o que está em jogo nessa escolha.
+Exemplo: a sua **Promessa Transformadora** não é um slogan. Não é uma descrição do que você faz. É a frase que resume, com precisão, o que muda na vida de quem passa pelo seu método. Ponto A e ponto B. Sem rodeio.
 
-Depois dessas duas aulas, você vai trabalhar com dois agentes.
+Aplicação: esses dois entregáveis não são independentes. A persona informa a promessa — e por isso o módulo constrói P1 antes de P2.
 
-O **Agente da Persona Compradora** vai usar a sua história real e o seu Ikigai como base para encontrar quem é a sua persona — de dentro para fora, não de um molde externo para dentro.
+**Ponto 2 — Como o módulo está organizado.**
 
-O **Agente da Promessa Transformadora** vai pegar o que você descobriu sobre a sua persona e construir a frase que resume a transformação que o seu método entrega.
+Ideia: antes de abrir os agentes, o módulo passa por duas viradas de mentalidade. A primeira é sobre tempo: empreendedoras medem progresso por ano, não por mês. A segunda é sobre foco: existe um custo invisível em dizer sim para projetos de terceiros enquanto o seu projeto próprio espera.
+
+Exemplo: depois dessas duas aulas, você vai trabalhar com dois agentes. O **Agente da Persona Compradora** vai usar a sua história real e o seu Ikigai como base para encontrar quem é a sua persona — de dentro para fora, não de um molde externo para dentro.
+
+Aplicação: o **Agente da Promessa Transformadora** vai pegar o que você descobriu sobre a sua persona e construir a frase que resume a transformação que o seu método entrega.
+
+**Ponto 3 — A transformação.**
+
+Ideia: você entra aqui como especialista com conhecimento acumulado e história documentada.
+
+Exemplo: você sai com clareza de para quem você está construindo e o que você está prometendo. Isso muda tudo que vem depois — o método que você vai estruturar no Módulo 2 vai ter um destinatário claro, a oferta do Módulo 3 vai nascer de uma promessa real, o conteúdo do Módulo 4 vai falar com uma pessoa específica, não para todo mundo.
+
+Aplicação: a persona e a promessa são a bússola do Expert360. Vamos construir.
 
 ---
 
-**[A TRANSFORMAÇÃO DESTE MÓDULO]**
+**[ONDE E QUANDO]**
 
-Você entra aqui como especialista com conhecimento acumulado e história documentada.
+Onde: os documentos de P1 e P2 são construídos com os agentes — Agente da Persona Compradora (Aula 4) e Agente da Promessa Transformadora (Aula 6) — a partir da sua história real e do seu Ikigai, do Módulo 0. Quando: ao longo das próximas 7 aulas, começando pelas duas viradas de mentalidade.
 
-Você sai com clareza de para quem você está construindo e o que você está prometendo.
+---
 
-Isso muda tudo que vem depois. O método que você vai estruturar no Módulo 2 vai ter um destinatário claro. A oferta que você vai construir no Módulo 3 vai nascer de uma promessa real. O conteúdo que você vai publicar no Módulo 4 vai falar com uma pessoa específica, não para todo mundo.
+**[TRANSIÇÃO]**
 
-A persona e a promessa são a bússola do Expert360.
+Antes de abrir qualquer agente, duas viradas de mentalidade.
 
-Vamos construir.
+Na próxima aula, a primeira: a relação certa com o tempo — porque ela vai determinar se você consegue sustentar esse trabalho até o resultado aparecer. Vem comigo.
 
 ---
 
 **ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
 
-**Seção 1: Bridge do M0**
-- M0 entregou: história real + Ikigai
-- Não eram aquecimento — são a matéria-prima do M1
+**Bloco 1 — Abertura**
+- Bridge do M0: história real + Ikigai não eram aquecimento — são matéria-prima do M1
 
-**Seção 2: Os dois entregáveis**
-- P1: Persona Compradora — emerge da história, não é inventada
-- P2: Promessa Transformadora — não é slogan, é o ponto A → ponto B com precisão
-- Relação entre os dois: persona informa promessa / promessa genérica = persona genérica
+**Bloco 2 — O que e por quê**
+- M1 entrega P1 (Persona Compradora) e P2 (Promessa Transformadora)
+- Persona informa promessa — promessa genérica = persona genérica
+- Sem P1+P2, M2/M3/M4 ficam sem destinatário
 
-**Seção 3: Estrutura do módulo**
-- 2 aulas de mentalidade antes dos agentes: tempo (ano vs. mês) + foco (custo do sim)
-- Agente da Persona Compradora: usa história real + Ikigai como base
-- Agente da Promessa Transformadora: usa P1 como base
+**Bloco 3 — Como (3 pontos)**
+- Ponto 1: P1 = pessoa real (não perfil demográfico) / P2 = frase de transformação (não slogan) — persona informa promessa
+- Ponto 2: 2 aulas de mentalidade (tempo + foco) → Agente da Persona Compradora (história real + Ikigai) → Agente da Promessa Transformadora (parte de P1)
+- Ponto 3: entra com história documentada, sai com direção — P1+P2 = bússola do Expert360
 
-**Seção 4: Transformação**
-- Entra: especialista com história documentada
-- Sai: persona compradora definida + promessa transformadora fechada
-- Impacto nos módulos seguintes: M2 tem destinatário, M3 tem promessa real, M4 tem pessoa específica para alcançar
+**Bloco 4 — Onde e quando**
+- P1 (Aula 4) e P2 (Aula 6), construídos a partir dos documentos do M0
+- 7 aulas, começando pelas viradas de mentalidade
+
+**Bloco 5 — Transição**
+- Gancho A1: a relação certa com o tempo
 
 ---
 ---
@@ -106,6 +116,8 @@ Vamos construir.
 ---
 
 **[ABERTURA]**
+
+Antes de abrir qualquer agente neste módulo, duas viradas de mentalidade. Essa é a primeira.
 
 Tem um padrão que eu vi se repetir em todas as especialistas que tentaram entrar no digital e desistiram.
 
@@ -121,141 +133,77 @@ O problema não era o resultado. Era o que elas usavam para medir o resultado.
 
 ---
 
-**[ESPECIALISTA VS. EMPREENDEDORA — A RELAÇÃO COM O TEMPO]**
+**[O QUE E POR QUÊ]**
 
-Você passou a vida inteira sendo especialista. E especialista tem uma relação específica com o tempo.
+O tema de hoje é a relação certa com o tempo: especialista x empreendedora, jogo x campeonato.
 
-Você entrega um projeto — recebe o pagamento. Você atende uma sessão — recebe o honorário. O ciclo é curto. O resultado é imediato. Você sabe, naquela semana, se o trabalho valeu.
-
-Empreendedora não funciona assim.
-
-Empreendedora joga um campeonato — não um jogo.
-
-*[pausa]*
-
-Deixa eu te explicar a diferença, porque ela muda tudo.
-
-**Jogo** é o resultado pontual. Uma postagem. Uma semana. Um lançamento. Um mês de engajamento baixo.
-
-**Campeonato** é a trajetória. A soma das escolhas. O que você construiu ao longo de um, dois, cinco anos.
-
-O que a maioria das especialistas faz quando entra no digital é definir sucesso e fracasso pelo jogo:
-
-*"Minha postagem performou bem? Estou no caminho certo."*
-*"Minha postagem não performou? Isso não é pra mim."*
-
-Ambos os julgamentos estão errados. Porque ambos estão sendo feitos no prazo errado.
+Isso importa agora porque, a partir desta aula, você começa a construir P1 e P2 — e nenhum dos dois vai te dar um resultado visível essa semana. Se você continuar medindo pelo mês, cada etapa deste módulo (e dos próximos) vai parecer que não está funcionando. E foi exatamente isso que fez tantas especialistas pararem antes de chegar até aqui.
 
 ---
 
-**[O PERIGO DOS DOIS LADOS]**
+**[COMO]**
 
-Aqui vem algo que parece óbvio sobre o fracasso, mas nem sempre parece óbvio sobre o sucesso.
+**Ponto 1 — Especialista x empreendedora: jogo x campeonato.**
 
-Deixar que um resultado ruim te defina é destrutivo — isso a maioria já sabe.
+Ideia: você passou a vida inteira sendo especialista. E especialista tem uma relação específica com o tempo — você entrega um projeto, recebe o pagamento; atende uma sessão, recebe o honorário. Ciclo curto, resultado imediato. Empreendedora não funciona assim: ela joga um campeonato, não um jogo.
 
-Mas deixar que um resultado bom te defina também tem um custo.
+Exemplo: **Jogo** é o resultado pontual — uma postagem, uma semana, um lançamento, um mês de engajamento baixo. **Campeonato** é a trajetória — a soma das escolhas ao longo de um, dois, cinco anos. A maioria das especialistas define sucesso e fracasso pelo jogo: *"minha postagem performou bem? Estou no caminho certo."* *"Não performou? Isso não é pra mim."*
 
-Quando você atribui sua identidade ao sucesso imediato — *"consegui seguidores essa semana, sou boa nisso"* — as expectativas sobem indefinidamente. Qualquer resultado abaixo vira catástrofe. Você começa a jogar conservador para proteger o que construiu. E devagar, sem perceber, você perde o drive.
+Aplicação: os dois julgamentos estão errados — porque ambos estão sendo feitos no prazo errado. O que você precisa é trocar a régua: do jogo para o campeonato.
 
-O resultado que veio não é quem você é. O resultado que não veio também não é.
+**Ponto 2 — O perigo dos dois lados + a pergunta que muda tudo.**
 
-O que você é — como empreendedora — é definido pelo campeonato. E o campeonato não acabou.
+Ideia: deixar que um resultado ruim te defina é destrutivo — isso a maioria já sabe. Mas deixar que um resultado bom te defina também tem custo: quando você atribui sua identidade ao sucesso imediato, as expectativas sobem indefinidamente, qualquer resultado abaixo vira catástrofe, e você começa a jogar conservador pra proteger o que construiu. Devagar, sem perceber, você perde o drive. O que você é — como empreendedora — é definido pelo campeonato. E o campeonato não acabou.
 
----
+Exemplo: existe uma pergunta que aprendi e que não consigo mais parar de usar: *o tempo vai passar de qualquer jeito. Como você quer estar lá?* Ela desloca o julgamento para o prazo certo. Não é "isso vai funcionar esse mês?" — é "daqui a um ano, dois anos, se eu continuar construindo o que estou construindo, onde eu estarei?".
 
-**[A PERGUNTA QUE MUDA TUDO]**
+Aplicação: com essa pergunta, a postagem que não performou ontem deixa de ser evidência de que "não está funcionando" e vira o que sempre foi — um dado. Uma informação sobre o que ajustar. A persona, a promessa, o processo, a oferta, o posicionamento que você vai construir neste curso não geram resultado essa semana — mas vão gerar resultado quando você tiver um perfil com persona clara, um pitch com promessa real, uma sessão sabendo exatamente pra quem fala e o que promete. Esse resultado vai ter vindo desta semana.
 
-Existe uma pergunta que aprendi e que não consigo mais parar de usar.
+**Ponto 3 — Ambição + compaixão.**
 
-*O tempo vai passar de qualquer jeito. Como você quer estar lá?*
+Ideia: existe uma equação que quero deixar com você antes de avançar — para cada colher de ambição, duas de compaixão. Alta performance exige sair da zona de conforto; sair da zona de conforto garante que você vai errar. Se você erra e se flagela, não tem como voltar.
 
-Ela parece simples. Mas ela desloca o julgamento para o lugar certo.
+Exemplo: ambição sem compaixão é o segredo do antidepressivo — as expectativas crescem, qualquer queda vira catástrofe, e o processo fica insustentável. Compaixão sem ambição é estagnação confortável — você se perdoa de tudo e não avança. A equação é as duas juntas: você pode ser exigente consigo mesma sem se destruir, porque o julgamento foi adiado para um prazo justo.
 
-Não é: "isso vai funcionar esse mês?" A resposta para essa pergunta vai quase sempre parecer incerta.
-
-É: "daqui a um ano, dois anos — se eu continuar construindo o que estou construindo — onde eu estarei?"
-
-Essa pergunta muda o que parece urgente. A postagem que não performou ontem deixa de ser uma evidência de que não está funcionando e vira o que sempre foi: um dado. Uma informação sobre o que ajustar.
-
-O método que você vai construir nesse curso — a persona, a promessa, o processo autoral, a oferta, o posicionamento — nada disso gera resultado essa semana.
-
-Vai gerar resultado quando você tiver um perfil com persona clara, quando fizer o primeiro pitch com promessa real, quando abrir a primeira sessão sabendo exatamente para quem está falando e o que está prometendo.
-
-Esse resultado vai chegar. E ele vai ter vindo desta semana — deste trabalho que parece abstrato agora.
+Aplicação: é por isso que este módulo começa com duas aulas de mentalidade antes de abrir qualquer agente. Não é acidental. Você vai construir sua persona, depois sua promessa, depois seu método, sua oferta, seu posicionamento — e cada um desses passos vai parecer que não está gerando resultado imediato. Está gerando. Só não no prazo que você está acostumada a medir. Joga o campeonato. Mede por ano.
 
 ---
 
-**[AMBIÇÃO + COMPAIXÃO]**
+**[ONDE E QUANDO]**
 
-Tem uma equação que quero deixar com você antes de avançar.
-
-Para cada colher de ambição, duas de compaixão.
-
-Alta performance exige sair da zona de conforto. Sair da zona de conforto garante que você vai errar. Se você erra e se flagela, não tem como voltar.
-
-Ambição sem compaixão é o segredo do antidepressivo: as expectativas crescem, qualquer queda vira catástrofe, e o processo fica insustentável.
-
-Compaixão sem ambição é estagnação confortável: você se perdoa de tudo e não avança.
-
-A equação é as duas juntas.
-
-Você pode ser exigente consigo mesma sem se destruir — porque o julgamento foi adiado para um prazo justo. O campeonato ainda não acabou. E o tempo vai passar de qualquer jeito.
+Onde: a pergunta *"o tempo vai passar de qualquer jeito — como você quer estar lá?"* acompanha você em cada aula deste curso, não só nesta. Quando: a partir de agora, toda vez que um resultado vier — bom ou ruim — pergunte: isso é o jogo ou o campeonato?
 
 ---
 
-**[APLICAÇÃO DIRETA]**
+**[TRANSIÇÃO]**
 
-Você está aqui construindo P1 e P2. Duas aulas de mentalidade antes de abrir qualquer agente.
+Você troca a régua: do mês para o ano, do jogo para o campeonato.
 
-Não é acidental.
-
-Você vai construir sua persona compradora hoje. Depois sua promessa. Depois seu método. Depois sua oferta. Depois seu posicionamento. Cada um desses passos vai parecer que não está gerando resultado imediato.
-
-Está gerando. Só não no prazo que você está acostumada a medir.
-
-Joga o campeonato. Mede por ano.
-
----
-
-**[FECHAMENTO]**
-
-Na próxima aula, a gente vai falar sobre o que está competindo com o seu projeto agora — e quanto isso está custando de um jeito que você provavelmente não calculou ainda.
+Na próxima aula, a gente vai falar sobre o que está competindo com o seu projeto agora — e quanto isso está custando de um jeito que você provavelmente não calculou ainda. Vem comigo.
 
 ---
 
 **ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
 
-**Seção 1: O padrão que faz especialistas desistirem**
-- Unidade de medida errada — não falta de conhecimento, vontade ou estratégia
-- "Isso não está funcionando" = conclusão errada no prazo errado
+**Bloco 1 — Abertura**
+- 1ª das 2 aulas de mentalidade antes dos agentes
+- O padrão que faz especialistas desistirem: unidade de medida errada (mês), não falta de conhecimento/vontade/estratégia
 
-**Seção 2: Especialista vs. empreendedora — relação com o tempo**
-- Especialista: ciclo curto, resultado imediato
-- Empreendedora: joga um campeonato, não um jogo
-- Jogo = resultado pontual (post, semana, lançamento)
-- Campeonato = trajetória, soma de escolhas, quem você está se tornando
+**Bloco 2 — O que e por quê**
+- Tema: especialista x empreendedora — jogo x campeonato
+- Urgência: P1/P2 (e os passos seguintes) não geram resultado visível na semana — medir por mês leva a desistir antes da hora
 
-**Seção 3: O perigo dos dois lados**
-- Fracasso imediato não define — isso a maioria sabe
-- Sucesso imediato também não define — expectativas sobem, jogo fica conservador, drive some
-- Resultados de curto prazo são informativos, não constitutivos
+**Bloco 3 — Como (3 pontos)**
+- Ponto 1: especialista = ciclo curto/resultado imediato; empreendedora = campeonato, não jogo. Jogo = resultado pontual; campeonato = trajetória/soma de escolhas
+- Ponto 2: perigo dos 2 lados (sucesso E fracasso imediatos definem errado) + pergunta "o tempo vai passar de qualquer jeito, como você quer estar lá?" — post que não performou = dado, não evidência
+- Ponto 3: ambição + compaixão (1 ambição : 2 compaixão) — aplicação direta: P1/P2/método/oferta/posicionamento geram resultado no prazo do campeonato. Joga o campeonato, mede por ano.
 
-**Seção 4: A pergunta que muda tudo**
-- *"O tempo vai passar de qualquer jeito. Como você quer estar lá?"*
-- Desloca o julgamento para o prazo certo
-- Post que não performou = dado, não evidência de fracasso
-- O trabalho de hoje (persona, promessa, método) gera resultado no prazo do campeonato
+**Bloco 4 — Onde e quando**
+- A pergunta do "tempo vai passar" acompanha todo o curso
+- A partir de agora: todo resultado (bom ou ruim) → "jogo ou campeonato?"
 
-**Seção 5: Ambição + compaixão**
-- Para cada colher de ambição, duas de compaixão
-- Ambição sem compaixão = insustentável
-- Compaixão sem ambição = estagnação
-- Julgamento adiado para prazo justo = motor sustentável
-
-**Seção 6: Aplicação direta**
-- P1 e P2 não geram resultado essa semana — geram no campeonato
-- *Instrução:* joga o campeonato. Mede por ano.
+**Bloco 5 — Transição**
+- Gancho A2: o que está competindo com seu projeto agora — e o custo disso
 
 ---
 ---
@@ -265,7 +213,9 @@ Na próxima aula, a gente vai falar sobre o que está competindo com o seu proje
 
 ---
 
-**[ABERTURA — contexto]**
+**[ABERTURA]**
+
+A segunda virada de mentalidade antes dos agentes.
 
 Vou falar sobre algo que ninguém fala abertamente.
 
@@ -273,184 +223,78 @@ Não porque seja segredo. Mas porque exige um nível de honestidade que a maiori
 
 ---
 
-**[A HISTÓRIA — as duas parcerias]**
+**[O QUE E POR QUÊ]**
 
-Quando eu decidi construir meu próprio negócio digital, eu já sabia que não seria linear. Já sabia que teria meses bons e meses difíceis. Já sabia que empreender é diferente de ter salário no quinto dia útil.
+O tema de hoje é o custo invisível do sim — o que acontece quando você diz sim pra projetos de terceiros enquanto o seu próprio negócio espera.
 
-Mas saber na cabeça é diferente de sentir no corpo.
-
-E quando a ansiedade financeira bateu — eu fiz o que a maioria faz. Eu disse sim para o que apareceu.
-
-*[pausa]*
-
-A primeira parceria era como controller de uma agência. Meio período, parecia encaixar. Eu fico com minha filha de manhã, então as tardes seriam para trabalhar. Parecia equilibrado.
-
-Mas logo ficou claro que aquilo não era só uma fonte de renda. Era um convite para eu me tornar Diretora da agência. Mais dinheiro, mais responsabilidade, mais crescimento.
-
-O problema: os principais clientes eram do governo do estado. Licitações. Politicagem. Exatamente o ambiente que eu tinha deixado para trás quando saí do emprego público.
-
-Eu tinha aberto mão da estabilidade para falar o que penso, trabalhar com quem eu quero, atender clientes alinhados comigo. E ali eu estava — de volta ao mesmo tipo de dinâmica que eu tinha escolhido abandonar.
-
-Eu sabia que não era meu lugar. Mas o dinheiro falava mais alto do que essa clareza.
-
-*[pausa]*
-
-A segunda parceria apareceu num momento ainda mais vulnerável. Eu tinha ficado dois meses sem faturar e tinha acabado de flopar num lançamento. Comecei a achar que não era pra mim ser expert. Fui pra missa e chorei muito lá. Meu marido só falava: vai dar certo, você é fera. Mas sabe quando você se sente perdida porque não faz sentido o que está acontecendo?
-
-No dia seguinte, apareceu um convite para eu ser parceira numa agência de lançamentos faixa preta.
-
-Eu seria estrategista de método — revisar métodos de experts, criar novos produtos. Isso eu entendia. Isso eu gostava. Tinha fixo e oportunidade de percentual. Bom demais pra ser verdade.
-
-E foi.
-
-O que era para ser uma função virou três: copy sênior, estrategista e gestora do projeto. Acompanhando demandas, revisando entregáveis, cuidando de prazos, gerenciando equipe.
-
-Foram semanas consumidas por aquele lançamento. A minha Incubadora ficou parada. Meus alunos receberam menos do que mereciam. E no final, o resultado financeiro nem foi proporcional ao que eu entreguei.
-
-*[pausa]*
-
-Foi ali que eu tive a certeza que já sabia, mas precisava sentir:
-
-Se eu tivesse dedicado as mesmas 10 a 12 horas por dia que eu dei àquele lançamento ao meu próprio negócio — os resultados seriam incomparavelmente maiores.
-
-Não porque eu seja melhor do que eles. Mas porque é o meu método. É a minha energia. É o meu propósito. Quando você trabalha para construir o seu, cada hora tem um retorno diferente.
-
-Então eu encerrei as duas parcerias.
+Isso importa agora porque a ansiedade financeira é real, e ela vai aparecer enquanto você constrói. E quando ela aparece, o instinto é aceitar o que surgir. Antes de você entrar de cabeça na construção de P1 e P2, você precisa entender o que está em jogo nessa escolha.
 
 ---
 
-**[O QUE VOCÊ ESTÁ REALMENTE EVITANDO]**
+**[COMO]**
 
-Quero te fazer uma pergunta que provavelmente ninguém fez ainda.
+**Ponto 1 — As duas parcerias: o que aconteceu de verdade.**
 
-Quando você diz sim para um projeto que no fundo você sabe que não é o seu caminho — o que exatamente você está evitando?
+Ideia: quando a ansiedade financeira bate, a maioria faz o que parece racional — diz sim para o que aparece. E é exatamente aí que o custo começa, de um jeito que você não calcula antecipadamente.
 
-A resposta mais honesta não é "preciso do dinheiro". Essa é a justificativa.
+Exemplo: a primeira parceria era como controller de uma agência — meio período, parecia equilibrado. Logo virou convite para Diretora: mais dinheiro, mais responsabilidade. O problema: os clientes eram do governo do estado, licitações, politicagem — exatamente o ambiente que eu tinha deixado para trás quando saí do emprego público. Eu sabia que não era meu lugar. Mas o dinheiro falava mais alto do que essa clareza. A segunda parceria apareceu num momento ainda mais vulnerável — dois meses sem faturar, um lançamento flopado, sentindo que talvez não fosse pra mim ser expert. Um convite para ser estrategista de método numa agência de lançamentos faixa preta: fixo e percentual. Bom demais pra ser verdade. E foi. O que era uma função virou três — copy sênior, estrategista, gestora do projeto. Semanas consumidas. A minha Incubadora ficou parada. Meus alunos receberam menos do que mereciam. E no final, o retorno financeiro nem foi proporcional ao que entreguei.
 
-A resposta real, na maioria dos casos, é: *estou evitando a incerteza de depender só do meu próprio negócio.*
+Aplicação: foi ali que eu tive a certeza que já sabia, mas precisava sentir — se eu tivesse dedicado as mesmas 10 a 12 horas por dia que dei àquele lançamento ao meu próprio negócio, os resultados seriam incomparavelmente maiores. Não porque eu seja melhor do que eles. Mas porque é o meu método, a minha energia, o meu propósito. Quando você trabalha pra construir o seu, cada hora tem um retorno diferente. Então eu encerrei as duas parcerias.
 
-E por baixo dessa incerteza, tem algo ainda mais específico. Você está evitando ter que vender. Ter que se expor. Ter que ouvir um não. Ter que provar que o seu método funciona — só com o seu método.
+**Ponto 2 — O que você está realmente evitando + os 3 tipos de sim.**
 
-O fixo não é só renda. É um escudo. Ele te livra de encarar o que mais assusta.
+Ideia: quando você diz sim pra um projeto que no fundo sabe que não é o seu caminho, a justificativa é "preciso do dinheiro". Mas a resposta real, na maioria dos casos, é: estou evitando a incerteza de depender só do meu próprio negócio. E por baixo dessa incerteza, tem algo ainda mais específico: você está evitando ter que vender, se expor, ouvir um não, provar que o seu método funciona — só com o seu método. O fixo não é só renda. É um escudo.
 
-Isso não é fraqueza. É completamente humano.
+Exemplo: existem três tipos de sim que aparecem com mais frequência. **O sim financeiro** — você aceita porque paga bem, com o argumento "é temporário, só até me estabilizar". O problema: "temporário" dura anos. Como aquele móvel da Casas Bahia que você comprou provisório — nunca mais saiu dali. **O sim da oportunidade** — alguém te convida para algo que parece uma porta. Mas toda porta que você entra é uma porta que você fecha. **O sim do ego** — uma função de liderança, um título, um reconhecimento. Mas reconhecimento no projeto errado não te aproxima do projeto certo. Os três têm algo em comum: parecem racionais, mas no fundo são formas de adiar o confronto com o que realmente precisa ser construído.
 
-Mas é importante nomear. Porque quando você sabe que o sim é um escudo emocional — e não uma decisão estratégica — você passa a fazer uma escolha consciente, não uma reação ao medo.
+Aplicação: isso vale quando você já sabe o que quer construir. Quando você ainda está procurando — quando não sabe seu propósito, ainda não encontrou seu caminho — aceitar esses projetos não é fuga. É busca. Quando você sabe onde quer chegar, aí o sim para o que desvia tem custo.
 
----
+**Ponto 3 — O paradoxo da segurança + as 3 perguntas filtro.**
 
-**[OS 3 TIPOS DE SIM QUE DESVIAM]**
+Ideia: o projeto que você aceita para ter segurança é exatamente o que impede você de construir a segurança real. Porque segurança real, pra quem escolheu o digital, não é um fixo de outra empresa — é um negócio próprio que funciona, um método validado, clientes recorrentes, um posicionamento que atrai. Enquanto você constrói a segurança falsa, o seu negócio não fica pausado. Ele regride. Esfria. Perde momentum. Reconstruir esse momentum custa mais do que teria custado manter.
 
-Existem três tipos de sim que aparecem com mais frequência para quem está construindo um negócio digital. Todos têm cara de oportunidade. Todos escondem um custo alto.
+Exemplo: antes de dizer sim pra qualquer oportunidade a partir de agora, três perguntas. **1. Isso me aproxima ou me afasta do meu negócio próprio?** Se a resposta for "me afasta" — mesmo que o dinheiro seja bom — você já tem sua resposta. Só falta coragem. **2. Se eu dedicar essas horas ao meu próprio projeto, qual seria o retorno possível?** Essa pergunta torna o custo concreto — você compara com o potencial real do que está construindo, não com a incerteza abstrata. **3. Estou dizendo sim porque é uma boa oportunidade — ou porque tenho medo de dizer não?** A mais difícil. Mas é ela que separa decisão estratégica de reação ao medo.
 
-**O sim financeiro.** Você aceita um projeto porque paga bem. Mesmo que consuma seu tempo. Mesmo que seja desalinhado com o que você quer construir. O argumento é: "É temporário. Só até eu me estabilizar."
-
-O problema é que "temporário" dura anos. Porque a estabilização nunca vem — ela sempre depende de mais um mês, mais um projeto, mais um contrato. É como aquele móvel da Casas Bahia que você comprou provisório, até poder comprar o que sonhava. Ele nunca mais saiu dali.
-
-**O sim da oportunidade.** Alguém te convida para algo que parece relevante — uma parceria, uma colaboração, um projeto conjunto. E você diz sim porque parece uma porta.
-
-Mas toda porta que você entra é uma porta que você fecha. E nem toda porta que parece oportunidade leva para onde você quer ir.
-
-**O sim do ego.** Você é convidada para algo que soa importante — uma função de liderança, um título, uma responsabilidade maior. E você aceita porque é reconhecimento. Porque prova que você é boa.
-
-Mas reconhecimento no projeto errado não te aproxima do projeto certo. Ele só te prende mais no lugar onde você não quer estar.
-
-*[pausa]*
-
-Os três têm algo em comum: eles parecem racionais. Parecem decisões inteligentes. Mas no fundo, todos são formas de adiar o confronto com o que realmente precisa ser construído.
-
-*[nota importante]*
-
-Isso vale quando você já sabe o que quer construir. Quando você ainda está procurando — quando não sabe o seu propósito, ainda não encontrou seu caminho — aceitar esses projetos não é fuga. É busca. Minhas tentativas com gestão de empresas e produtividade para mães de bebê, apesar de todos os erros que cometi, não foram fracassos. Foram busca. Havia um lugar certo pra mim no digital — eu ainda não sabia qual era.
-
-Quando você sabe onde quer chegar, aí o sim para o que desvia tem custo.
+Aplicação: a ansiedade financeira é real. E ela não some porque você decidiu focar. Mas você não resolve ansiedade financeira com projetos externos — você resolve construindo clareza e movimento no seu próprio negócio. Caminho claro gera ação. Ação gera resultado. Resultado gera confiança. Confiança é o oposto da ansiedade. É isso que você está construindo agora.
 
 ---
 
-**[O PARADOXO DA SEGURANÇA]**
+**[ONDE E QUANDO]**
 
-Aqui está o paradoxo que eu precisei entender na pele.
-
-O projeto que você aceita para ter segurança é exatamente o que impede você de construir a segurança real.
-
-Porque segurança real, para quem escolheu o digital, não é um fixo de outra empresa. É um negócio próprio que funciona. É um método validado. São clientes recorrentes. É um posicionamento que atrai.
-
-Enquanto você está construindo a segurança falsa — o fixo que alivia a ansiedade — você não está construindo a segurança verdadeira.
-
-E o seu negócio não fica pausado enquanto isso. Ele regride. Esfria. Perde momentum.
-
-Reconstruir esse momentum custa mais do que teria custado manter.
+Onde: as 3 perguntas filtro ficam com você pra sempre — não só durante o curso. Quando: toda vez que aparecer uma oportunidade externa enquanto você ainda está construindo o seu negócio, passe pelo filtro antes de responder.
 
 ---
 
-**[AS 3 PERGUNTAS FILTRO]**
+**[TRANSIÇÃO]**
 
-Antes de dizer sim para qualquer oportunidade a partir de agora, três perguntas:
+Você tem a régua certa (campeonato) e o filtro certo (as 3 perguntas). As duas viradas de mentalidade estão feitas.
 
-**1. Isso me aproxima ou me afasta do meu negócio próprio?**
-Não do dinheiro que vai entrar. Do negócio. Do método. Do posicionamento. Da autoridade que você está construindo. Se a resposta for "me afasta" — mesmo que o dinheiro seja bom — você já tem sua resposta. Só falta coragem.
-
-**2. Se eu dedicar essas horas ao meu próprio projeto, qual seria o retorno possível?**
-Essa pergunta torna o custo concreto. Você para de comparar o projeto externo com a incerteza abstrata do seu negócio — e passa a comparar com o potencial real do que você está construindo.
-
-**3. Estou dizendo sim porque é uma boa oportunidade — ou porque tenho medo de dizer não?**
-Essa é a mais difícil de responder com honestidade. Mas é ela que separa uma decisão estratégica de uma reação ao medo.
-
-*[pausa]*
-
-Dizer não não é fechar portas. É ter um critério claro para o que merece o seu sim. Cada não para o que desvia é um sim para o que importa.
-
----
-
-**[FECHAMENTO]**
-
-A ansiedade financeira é real. E ela não some porque você decidiu focar.
-
-Mas você não resolve ansiedade financeira com projetos externos. Você resolve construindo clareza e movimento no seu próprio negócio.
-
-Quando você sabe exatamente o que vende, para quem vende, qual é o seu método e qual é o seu próximo passo — a ansiedade diminui. Não porque o dinheiro chegou. Mas porque você tem um caminho.
-
-Caminho claro gera ação. Ação gera resultado. Resultado gera confiança.
-
-Confiança é o oposto da ansiedade.
-
-É isso que você está construindo agora.
+A partir da próxima aula, você começa a construir. Primeiro: entender o que é, de verdade, uma Persona Compradora — e por que a abordagem do Expert360 é diferente de tudo que você já viu. Vem comigo.
 
 ---
 
 **ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
 
-**Seção 1: As duas parcerias reais**
-- Ansiedade financeira → você diz sim para o que aparece
-- Parceria 1: controller → convite para Diretora → clientes do governo → mesmo ambiente que ela deixou. Sabia que não era seu lugar. O dinheiro falava mais alto.
-- Parceria 2: 2 meses sem faturar + lançamento flopado → agência faixa preta → 1 função virou 3 → semanas consumidas → Incubadora parada → alunos prejudicados → retorno desproporcional
-- *Virada:* "10-12h por dia naquele lançamento. Se tivesse dado ao meu próprio negócio..."
+**Bloco 1 — Abertura**
+- 2ª das 2 aulas de mentalidade antes dos agentes
+- O que ninguém fala abertamente: o custo do sim
 
-**Seção 2: O que você está realmente evitando**
-- Justificativa: "preciso do dinheiro"
-- Resposta real: evitando a incerteza de depender só do próprio negócio
-- Por baixo: evitando vender, se expor, ouvir um não, provar que funciona
-- *Conceito:* o fixo como escudo emocional, não decisão estratégica
+**Bloco 2 — O que e por quê**
+- Tema: o custo invisível de dizer sim pra projetos de terceiros
+- Urgência: ansiedade financeira aparece durante a construção — antes de entrar em P1/P2, você precisa entender o que está em jogo
 
-**Seção 3: Os 3 tipos de sim**
-- Financeiro: "temporário" que dura anos — móvel da Casas Bahia que nunca saiu
-- Da oportunidade: toda porta que entra = porta que fecha
-- Do ego: reconhecimento no projeto errado não aproxima do certo
-- *Nota:* quando ainda está buscando propósito, aceitar é busca, não fuga
+**Bloco 3 — Como (3 pontos)**
+- Ponto 1: as 2 parcerias reais (controller→Diretora→ambiente político / agência faixa preta→3 funções→Incubadora parada) → "10-12h no meu próprio negócio seria incomparavelmente maior"
+- Ponto 2: justificativa ("preciso do dinheiro") vs. resposta real (evitando incerteza de depender só do próprio) + 3 tipos de sim (financeiro/oportunidade/ego) — todos são escudo ou adiamento
+- Ponto 3: paradoxo da segurança (fixo que alivia ansiedade impede segurança real — negócio regride, esfria, perde momentum) + 3 perguntas filtro: aproxima ou afasta? retorno possível? estratégia ou medo?
 
-**Seção 4: O paradoxo da segurança**
-- O projeto aceito POR segurança impede a segurança REAL
-- Negócio próprio não pausa — regride, esfria, perde momentum
-- Reconstruir custa mais do que manter
+**Bloco 4 — Onde e quando**
+- As 3 perguntas filtro ficam pra sempre
+- Toda oportunidade externa → filtro antes de responder
 
-**Seção 5: 3 perguntas filtro**
-1. Isso me aproxima ou me afasta do meu negócio próprio?
-2. Se eu dedicar essas horas ao meu projeto, qual seria o retorno possível?
-3. Estou dizendo sim por estratégia ou por medo?
-
-**Seção 6: Fechamento**
-- Ansiedade não some com foco — resolve com clareza e movimento no próprio negócio
-- Caminho claro → ação → resultado → confiança = oposto da ansiedade
+**Bloco 5 — Transição**
+- Recap: régua certa + filtro certo — 2 viradas feitas
+- Gancho A3: o que é, de verdade, uma Persona Compradora
 
 ---
 ---
@@ -462,6 +306,8 @@ Confiança é o oposto da ansiedade.
 
 **[ABERTURA]**
 
+As duas viradas de mentalidade estão feitas.
+
 Existe uma palavra que aparece em todos os cursos de marketing digital que você já viu.
 
 Persona.
@@ -472,135 +318,77 @@ Essa diferença explica por que tantas especialistas definem a persona, publicam
 
 ---
 
-**[O QUE PERSONA NÃO É]**
+**[O QUE E POR QUÊ]**
 
-Público-alvo não é persona.
+O tema de hoje é o que é, de verdade, uma Persona Compradora — e de onde ela vem.
 
-"Mulheres de 35 a 45 anos, profissionais liberais, com ensino superior, renda acima de R$5.000, moram em capitais."
-
-Isso é público-alvo. É demográfico. É um recorte de quem pode comprar.
-
-Não é com quem você está falando.
-
-Porque duas mulheres de 40 anos, psicólogas, renda similar, mesma cidade — podem estar em lugares completamente diferentes. Uma está satisfeita com a carreira offline e não tem interesse nenhum em digital. A outra tentou entrar no digital duas vezes, se frustrou, e ainda sente um incômodo que não passou.
-
-A segunda é a sua persona. A primeira não é.
-
-O que as diferencia não é o demográfico. É o psicográfico — o que ela sente, o que ela teme, o que já tentou, por que não funcionou, o que ela precisa ouvir para acreditar que dessa vez é diferente.
-
-*[pausa]*
-
-Persona é a pessoa real por trás do perfil. É a dor específica, o desejo específico, o histórico específico que faz dela o destinatário certo do seu método.
+Isso importa agora porque na próxima aula você vai trabalhar com o Agente da Persona Compradora. Quanto melhor você entender o conceito antes de abrir o agente, mais rico vai ser o que sai do outro lado.
 
 ---
 
-**[O PARADOXO DO FOCO]**
+**[COMO]**
 
-Aqui vem a parte que mais assusta especialistas quando ouvem pela primeira vez.
+**Ponto 1 — Persona não é público-alvo.**
 
-Quanto mais específica a sua persona, mais pessoas se reconhecem nela.
+Ideia: público-alvo é demográfico — "mulheres de 35 a 45 anos, profissionais liberais, ensino superior, renda acima de R$5.000, moram em capitais." Isso é um recorte de quem pode comprar. Não é com quem você está falando. Persona é a pessoa real por trás do perfil — a dor específica, o desejo específico, o histórico específico que faz dela o destinatário certo do seu método.
 
-Parece contraditório. Se você focar em uma pessoa muito específica, não está limitando o alcance?
+Exemplo: duas mulheres de 40 anos, psicólogas, renda similar, mesma cidade — lugares completamente diferentes. Uma está satisfeita com a carreira offline e não tem interesse nenhum em digital. A outra tentou entrar no digital duas vezes, se frustrou, e ainda sente um incômodo que não passou. A segunda é a sua persona. A primeira não é. O que as diferencia não é o demográfico. É o psicográfico — o que ela sente, o que teme, o que já tentou, por que não funcionou, o que ela precisa ouvir para acreditar que dessa vez é diferente.
 
-Não.
+Aplicação: a sua persona não é um perfil pra arquivo. É um mapa pra cada decisão de conteúdo, copy e oferta que você vai tomar. A pergunta certa não é "quem pode comprar?" — é "com quem estou falando?"
 
-Uma mensagem para todo mundo não fala com ninguém. Uma mensagem que descreve com precisão a dor de uma pessoa específica faz todo mundo que tem aquela dor sentir que você está falando diretamente com ela.
+**Ponto 2 — O paradoxo do foco.**
 
-Pense na última vez que você leu um texto e pensou "como essa pessoa me conhece?". Esse texto não foi escrito para todo mundo. Foi escrito com tanta precisão sobre uma experiência específica que você se reconheceu completamente.
+Ideia: quanto mais específica a sua persona, mais pessoas se reconhecem nela. Parece contraditório — se você focar em uma pessoa muito específica, não está limitando o alcance? Não.
 
-É isso que a persona compradora faz pelo seu método.
+Exemplo: uma mensagem para todo mundo não fala com ninguém. Uma mensagem que descreve com precisão a dor de uma pessoa específica faz todo mundo que tem aquela dor sentir que você está falando diretamente com ela. Pense na última vez que você leu um texto e pensou "como essa pessoa me conhece?" — esse texto não foi escrito para todo mundo. Foi escrito com tanta precisão sobre uma experiência específica que você se reconheceu completamente.
 
-Quando você sabe exatamente com quem está falando, você para de escrever para ninguém e começa a escrever para alguém. E esse alguém lê e pensa: *isso foi feito para mim.*
+Aplicação: é isso que a persona compradora faz pelo seu método. Quando você sabe exatamente com quem está falando, você para de escrever para ninguém e começa a escrever para alguém. E esse alguém lê e pensa: *isso foi feito para mim.*
 
----
+**Ponto 3 — De onde a persona vem + as 7 dimensões.**
 
-**[DE ONDE A PERSONA VEM]**
+Ideia: o que faz a abordagem do Expert360 diferente é que a sua persona não é um molde externo que você tenta encaixar — ela emerge da sua história. A melhor persona compradora para o seu método é quem você era 2 ou 3 anos atrás. Antes de atravessar o que você atravessou. Antes de descobrir o que você descobriu. Você não precisa imaginar a dor dela — você a viveu.
 
-Aqui está o que faz a abordagem do Expert360 diferente de qualquer outro método de persona que você já viu.
+Exemplo: é por isso que você escreveu a sua história real no Módulo 0 e fez o Ikigai a seguir — não eram exercícios de autoconhecimento por si só, eram a preparação para esse momento. O Agente da Persona Compradora vai usar exatamente esses documentos para encontrar quem é a sua persona. De dentro para fora. Ele vai conduzir você por 7 dimensões: quem ela é (a pessoa, não o perfil) / situação atual (ponto A com precisão) / desejo profundo (o que ela realmente quer, por baixo do objetivo declarado) / dor principal (o incômodo que não passa) / medo e objeção (o que a paralisa) / o que já tentou e por que não funcionou / o que ela precisa ouvir (a mensagem que desbloqueie).
 
-A sua persona não é um molde externo que você tenta encaixar.
-
-Ela emerge da sua história.
-
-A melhor persona compradora para o seu método é quem você era 2 ou 3 anos atrás. Antes de atravessar o que você atravessou. Antes de descobrir o que você descobriu. Antes de construir o que você construiu.
-
-Por um motivo simples: você já foi ela. Você já sentiu o que ela sente. Já teve os medos que ela tem. Já tentou o que ela tentou. Você não precisa imaginar a dor dela — você a viveu.
-
-E quando você fala para essa pessoa com essa profundidade, ela sente. Porque você está falando de dentro, não de fora.
-
-*[pausa]*
-
-É por isso que você escreveu a sua história real no Módulo 0. É por isso que o Ikigai veio a seguir. Esses documentos não eram exercícios de autoconhecimento por si só — eram a preparação para esse momento.
-
-O Agente da Persona Compradora vai usar exatamente esses documentos para encontrar quem é a sua persona. De dentro para fora.
+Aplicação: essas 7 dimensões juntas formam uma persona que você consegue usar — não um perfil para arquivo, um mapa para cada decisão. Leve os dois documentos do Módulo 0 para a próxima aula: a sua história real e o seu Ikigai. Eles são o input. O agente vai partir deles.
 
 ---
 
-**[AS 7 DIMENSÕES DA PERSONA]**
+**[ONDE E QUANDO]**
 
-Quando você abrir o agente na próxima aula, ele vai conduzir você por 7 dimensões.
-
-Não são dados demográficos. São dimensões psicográficas:
-
-**Quem é ela** — não o perfil, a pessoa. Quem ela é de verdade.
-
-**Situação atual** — onde ela está agora. O ponto A com precisão.
-
-**Desejo profundo** — não o que ela diz querer. O que ela realmente quer, por baixo do objetivo declarado.
-
-**Dor principal** — o incômodo que não passa. O que está presente mesmo quando ela tenta não pensar.
-
-**Medo e objeção** — o que a paralisa. O que a faz hesitar antes de investir em qualquer solução.
-
-**O que já tentou** — e por que não funcionou. Esse histórico é ouro: você precisa entender por que as soluções anteriores falharam para oferecer algo que ela acredite que é diferente.
-
-**O que ela precisa ouvir** — a mensagem específica que desbloqueie. A frase que, quando ela lê, pensa: *isso foi feito para mim.*
-
-Essas sete dimensões juntas formam uma persona que você consegue usar. Não um perfil para arquivo — um mapa para cada decisão de conteúdo, copy e oferta que você vai tomar.
+Onde: o documento de P1 vai ser gerado na próxima aula, com o Agente da Persona Compradora — e guardado no seu Drive. Quando: assim que terminar esta aula, siga para a Aula 4 com os dois documentos do M0 em mãos.
 
 ---
 
-**[FECHAMENTO]**
+**[TRANSIÇÃO]**
 
-Na próxima aula, você vai construir a sua persona compradora com o agente.
+Você já entende o que é uma persona compradora de verdade — psicográfico, não demográfico — e sabe de onde ela vai vir: da sua história.
 
-Leve os dois documentos do Módulo 0: a sua história real e o seu Ikigai. Eles são o input. O agente vai partir deles, não de um template genérico.
-
-E quando você sair dessa aula com P1 documentada, você vai ter a bússola para tudo que vem depois.
+Na próxima aula, você vai construir a sua com o agente. Vem comigo.
 
 ---
 
 **ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
 
-**Seção 1: Público-alvo ≠ persona**
-- Demográfico vs. psicográfico
-- Duas mulheres com mesmo perfil, lugares completamente diferentes — o que as diferencia é o psicográfico
-- Persona: a pessoa real por trás do perfil
+**Bloco 1 — Abertura**
+- Bridge: 2 viradas de mentalidade feitas, agora começa a construção
+- A palavra "persona" aparece em todo curso — há uma diferença enorme entre o que a maioria ensina e o que funciona
 
-**Seção 2: O paradoxo do foco**
-- Quanto mais específica, mais pessoas se reconhecem
-- Mensagem para todo mundo = fala com ninguém
-- Precisão sobre uma experiência específica = "como ela me conhece?"
+**Bloco 2 — O que e por quê**
+- Tema: o que é, de verdade, uma Persona Compradora — e de onde ela vem
+- Urgência: aula de preparação para A4 (exercício com o agente) — quanto melhor o conceito, mais rico o output
 
-**Seção 3: De onde a persona vem**
-- Emerge da sua história — não é molde externo
-- Melhor persona = quem você era 2-3 anos atrás
-- Você já foi ela: não imagina a dor, viveu
-- Por isso o M0 veio primeiro — preparação para este momento
-- Agente usa história real + Ikigai: de dentro para fora
+**Bloco 3 — Como (3 pontos)**
+- Ponto 1: persona ≠ público-alvo (demográfico vs. psicográfico) — 2 psicólogas de 40 anos, mesmo perfil, lugares completamente diferentes. O que distingue é dor/medo/histórico/o que precisa ouvir
+- Ponto 2: paradoxo do foco — quanto mais específica, mais pessoas se reconhecem. Mensagem pra todo mundo = fala com ninguém. Precisão = "como ela me conhece?"
+- Ponto 3: persona emerge da história (quem você era 2-3 anos atrás) — M0 preparou esse momento. 7 dimensões: quem é / situação atual / desejo profundo / dor principal / medo e objeção / o que já tentou / o que precisa ouvir
 
-**Seção 4: As 7 dimensões**
-1. Quem é ela (a pessoa, não o perfil)
-2. Situação atual (ponto A com precisão)
-3. Desejo profundo (o que realmente quer, abaixo do objetivo declarado)
-4. Dor principal (o incômodo que não passa)
-5. Medo e objeção (o que paralisa)
-6. O que já tentou e por que não funcionou
-7. O que ela precisa ouvir (a mensagem que desbloqueie)
-
-**Seção 5: Setup para próxima aula**
+**Bloco 4 — Onde e quando**
+- P1 gerado na A4, guardado no Drive
 - Levar: história real + Ikigai do M0
-- Agente vai partir desses documentos
+
+**Bloco 5 — Transição**
+- Gancho A4: construir a persona com o agente
 
 ---
 ---
@@ -620,78 +408,77 @@ Antes de abrir o agente, quero te preparar para o que vai acontecer — porque q
 
 ---
 
-**[O QUE O AGENTE FAZ]**
+**[O QUE E POR QUÊ]**
 
-O Agente da Persona Compradora não usa um template. Ele usa você.
+O tema de hoje é um exercício: construir sua Persona Compradora com o **Agente da Persona Compradora**.
 
-O input não é "descreva o seu público-alvo". O input são os dois documentos que você produziu no Módulo 0: a sua história real e o seu Ikigai.
-
-A partir deles, o agente vai conduzir você pelas 7 dimensões da persona — quem ela é, onde está, o que quer, o que sente, o que teme, o que já tentou, o que precisa ouvir. E vai usar o que você escreveu sobre a sua própria trajetória como espelho para encontrar essa pessoa.
-
-Porque, como você viu na aula anterior, a sua melhor persona é quem você já foi.
-
-O agente vai fazer conexões que você não vai conseguir fazer sozinha no papel. Vai provocar, aprofundar, questionar. Às vezes vai propor uma persona e perguntar se ressoa — e você vai poder ajustar até o mapa bater.
-
-Quando o processo terminar, você vai ter um documento: a P1, a sua Persona Compradora, com as 7 dimensões preenchidas.
+Isso importa agora porque P1 é o input direto de P2 (a sua Promessa Transformadora, nas Aulas 5 e 6) — e vai aparecer como base em cada módulo que vem depois. Fazer esse exercício com atenção, uma vez, poupa retrabalho em tudo que segue.
 
 ---
 
-**[O QUE LEVAR]**
+**[COMO]**
 
-Dois arquivos do seu Drive:
+**Ponto 1 — O que entra (inputs).**
 
-**Minha História Real** — as 7 perguntas que você respondeu na Aula 2 do Módulo 0.
+Ideia: o Agente da Persona Compradora não usa um template — ele usa você. O input não é "descreva o seu público-alvo": são os dois documentos que você produziu no Módulo 0.
 
-**Meu Ikigai** — as 8 perguntas que você respondeu na Aula 3 do Módulo 0.
+Exemplo: **Minha História Real** — as 7 perguntas que você respondeu na Aula 2 do M0. **Meu Ikigai** — as 8 perguntas que você respondeu na Aula 3 do M0. Se você escreveu com pouco filtro — como a instrução pedia — esses documentos têm o que o agente precisa pra trabalhar bem. Se escreveu com mais cautela, tudo bem: o agente vai aprofundar. Mas quanto mais honesto o material de entrada, mais precisa vai ser a persona de saída.
 
-Se você escreveu com pouco filtro — como a instrução pedia — esses documentos têm o que o agente precisa para trabalhar bem. Se você escreveu com mais cautela, tudo bem: o agente vai tentar aprofundar. Mas quanto mais honesto o material de entrada, mais precisa vai ser a persona de saída.
+Aplicação: separe os dois arquivos no Drive antes de começar.
+
+**Ponto 2 — Como rodar.**
+
+Ideia: o agente não é um formulário — é uma conversa. Ele vai conduzir você pelas 7 dimensões da persona usando a sua trajetória como espelho. Vai provocar, aprofundar, questionar.
+
+Exemplo: às vezes vai propor uma persona e perguntar se ressoa — e você vai poder ajustar até o mapa bater. O critério não é "parece correto". É "ressoa como verdadeiro". Quando você ler a persona final e pensar *essa pessoa existe, eu a conheço, eu já fui ela* — aí fechou.
+
+Aplicação: não tente acertar na primeira rodada. Persona não é preenchimento de formulário — é processo de refinamento. A frase que "quase fecha" é muito mais útil do que o silêncio de tentar acertar antes de começar.
+
+**Ponto 3 — O que sai (output).**
+
+Ideia: ao final da conversa, você vai ter um documento — P1, a sua Persona Compradora, com as 7 dimensões preenchidas.
+
+Exemplo: esse documento vai ser o input direto da próxima etapa. Especialmente as dimensões de desejo profundo, dor principal, medo e objeção, e o que ela precisa ouvir — são essas que constroem a promessa.
+
+Aplicação: salve P1 no seu Drive ao terminar. Você vai usar esse documento na próxima aula — e em todos os módulos que vierem depois.
 
 ---
 
-**[UMA INSTRUÇÃO IMPORTANTE]**
+**[ONDE E QUANDO]**
 
-Enquanto você trabalha com o agente, não tente acertar na primeira rodada.
-
-Persona não é um preenchimento de formulário. É um processo de refinamento. O agente pode propor algo que chega perto mas não fecha — diga isso, e ajuste. Pode propor algo que surpreende positivamente — aceite, explore.
-
-O critério não é "parece correto". É "ressoa como verdadeiro".
-
-Quando você ler a persona final e pensar *essa pessoa existe, eu a conheço, eu já fui ela* — aí fechou.
+Onde: **Agente da Persona Compradora** no seu painel de agentes + arquivos **Minha História Real** e **Meu Ikigai** no Drive. Quando: agora — antes de seguir pra A5, porque ela parte de P1.
 
 ---
 
-**[INSTRUÇÃO]**
+**[TRANSIÇÃO]**
 
-Abra o **Agente da Persona Compradora** no seu painel de agentes.
+Com P1 documentada, você sabe exatamente com quem está falando — a dor real, o desejo real, o que essa pessoa precisa ouvir.
 
-Leve os dois arquivos. Deixa o agente conduzir.
-
-Quando terminar, salve o documento de P1 no seu Drive. Você vai usar ele na próxima aula — e em todos os módulos que vierem depois.
+A próxima aula usa tudo isso pra construir a resposta: a sua Promessa Transformadora. Vem comigo.
 
 ---
 
 **ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
 
-**Seção 1: O que o agente faz**
-- Input: história real + Ikigai (não template genérico)
-- Conduz pelas 7 dimensões
-- Usa trajetória da aluna como espelho para encontrar a persona
-- Provoca, aprofunda, questiona — não é formulário
+**Bloco 1 — Abertura**
+- Bridge: A3 deu o conceito, A4 é o exercício
+- Preparação pra entrar bem: quanto melhor a entrada, mais rico o output
 
-**Seção 2: O que levar**
-- Minha História Real (Aula 2 do M0)
-- Meu Ikigai (Aula 3 do M0)
-- Quanto mais honesto o material de entrada, mais precisa a persona de saída
+**Bloco 2 — O que e por quê**
+- Tema: exercício — construir P1 com o Agente da Persona Compradora
+- Urgência: P1 é input de P2 + base de todos os módulos seguintes — fazer bem 1x evita retrabalho
 
-**Seção 3: Instrução de postura**
-- Não tentar acertar na primeira rodada
-- Persona = processo de refinamento, não formulário
-- Critério: "ressoa como verdadeiro" — não "parece correto"
-- Quando fechar: "essa pessoa existe, eu a conheço, eu já fui ela"
+**Bloco 3 — Como (3 pontos)**
+- Ponto 1: inputs — Minha História Real (7 perguntas, M0 A2) + Meu Ikigai (8 perguntas, M0 A3). Quanto mais honesto o material de entrada, mais precisa a persona de saída
+- Ponto 2: como rodar — conversa, não formulário; 7 dimensões com trajetória como espelho; propõe persona → ajusta até "essa pessoa existe, eu a conheço, eu já fui ela"
+- Ponto 3: output — documento P1 com 7 dimensões. Base de P2 (especialmente: desejo profundo, dor, medo/objeção, o que precisa ouvir). Salvar no Drive.
 
-**Seção 4: Instrução prática**
-- Abrir o Agente da Persona Compradora
-- Salvar P1 no Drive ao terminar
+**Bloco 4 — Onde e quando**
+- Agente da Persona Compradora (painel) + Minha História Real + Meu Ikigai (Drive)
+- Agora — antes de seguir pra A5
+
+**Bloco 5 — Transição**
+- Gancho A5: com quem você fala está definido — agora, o que você promete
 
 ---
 ---
@@ -713,109 +500,77 @@ O que você promete a ela?
 
 ---
 
-**[O QUE PROMESSA NÃO É]**
+**[O QUE E POR QUÊ]**
 
-Antes de definir o que é, preciso desfazer quatro confusões que aparecem o tempo todo.
+O tema de hoje é a Promessa Transformadora — o que ela é, o que ela não é, e os quatro elementos que a constroem.
 
-**Não é slogan.**
-
-"Transforme sua vida." "Seja a melhor versão de você." "Viva com propósito."
-
-Lindo. Não diz nada. Qualquer especialista em qualquer nicho poderia escrever esse texto. Uma promessa que qualquer um pode fazer não diferencia ninguém.
-
-**Não é promessa de processo.**
-
-"Você vai aprender meu método de 5 passos." "Vou te ensinar a técnica que uso com meus clientes." "Você vai receber um passo a passo completo."
-
-Isso fala de você. A sua aluna não compra processo — compra resultado. O que muda na vida dela depois que ela aplica o método? Essa é a pergunta.
-
-**Não é grande demais.**
-
-"Você vai faturar R$100.000 em 3 meses." "Vai transformar completamente a sua vida em 30 dias."
-
-Além do problema de crença — ela acredita nisso? — existe o problema de especificidade. Grande demais costuma ser vago. E vago não converte.
-
-**Não fala de você.**
-
-"Com 20 anos de experiência, desenvolvemos um método exclusivo." "Especialista reconhecida no mercado internacional."
-
-Quem é o herói da história? Não é você. É ela. A promessa existe para falar sobre a transformação dela, não sobre o seu currículo.
+Isso importa agora porque a promessa não é só o texto da sua bio. Ela aparece em tudo — na abertura de cada conteúdo, no pitch de vendas, na copy do curso, na sua apresentação pessoal. Quando a promessa é vaga, tudo fica vago. Quando a promessa é precisa, ela serve como bússola para cada decisão que vem depois.
 
 ---
 
-**[O QUE É PROMESSA TRANSFORMADORA]**
+**[COMO]**
 
-Promessa transformadora é a frase que resume, com precisão, o que muda na vida de quem passa pelo seu método.
+**Ponto 1 — O que promessa não é.**
 
-Ela tem quatro elementos:
+Ideia: antes de definir o que é, preciso desfazer quatro confusões que aparecem o tempo todo. Promessa não é slogan — "transforme sua vida", "seja a melhor versão de você", lindo, não diz nada, qualquer especialista em qualquer nicho poderia escrever. Promessa não é promessa de processo — "você vai aprender meu método de 5 passos", isso fala de você, não dela; ela não compra processo, compra resultado. Promessa não é grande demais — "vai faturar R$100.000 em 3 meses", além do problema de crença, existe o problema de especificidade: grande demais costuma ser vago, e vago não converte. E promessa não fala de você — "com 20 anos de experiência, desenvolvemos um método exclusivo": quem é o herói da história? Não é você. É ela.
 
-**QUEM** — a persona compradora. Não "você", não "quem", não "especialistas". A pessoa específica. Quanto mais ela se reconhece no sujeito da frase, mais a promessa ressoa.
+Exemplo: uma promessa que qualquer um pode fazer não diferencia ninguém. Uma promessa de processo fala sobre você quando deveria falar sobre a transformação dela. Uma promessa grande demais gera descrença antes mesmo de ser lida. E uma promessa centrada em você não converte porque a aluna não se reconhece como personagem.
 
-**O QUÊ** — o resultado. Externo e interno. Externo: o que muda no mundo dela — o método documentado, a venda feita, o posicionamento publicado. Interno: o que muda em como ela se sente — de invisível para presente, de genérica para incopiável, de especialista para empreendedora.
+Aplicação: quando você olhar pra sua promessa, a primeira pergunta é: ela fala de mim ou dela? A segunda: ela fala de processo ou resultado? A terceira: ela é específica o suficiente pra que alguém avalie se é pra ela?
 
-**COMO** — o diferencial ou mecanismo. O que torna a sua abordagem única. Não precisa ser longo — uma frase que captura por que é diferente de qualquer outra solução que ela já tentou.
+**Ponto 2 — Os 4 elementos da Promessa Transformadora.**
 
-**OBJEÇÃO ELIMINADA** — a frase "sem" ou "mesmo se". O que ela teme que seja um impedimento para o resultado. Nomear essa objeção dentro da promessa é o que transforma uma boa frase numa frase que desbloqueie.
+Ideia: promessa transformadora é a frase que resume, com precisão, o que muda na vida de quem passa pelo seu método. Ela tem quatro elementos: **QUEM** (a persona compradora — quanto mais ela se reconhece no sujeito da frase, mais a promessa ressoa), **O QUÊ** (o resultado externo + interno — o que muda no mundo dela e o que muda em como ela se sente), **COMO** (o diferencial ou mecanismo — por que é diferente de qualquer outra solução que ela já tentou) e **OBJEÇÃO ELIMINADA** (o "sem" ou "mesmo se" — nomear o que ela teme que seja um impedimento).
 
-*[pausa]*
+Exemplo: **QUEM** — não "você", não "quem", não "especialistas". A pessoa específica que se reconhece na frase. **O QUÊ** — externo: o método documentado, a venda feita, o posicionamento publicado. Interno: de invisível para presente, de genérica para incopiável, de especialista para empreendedora. **COMO** — uma frase que captura por que é diferente. **OBJEÇÃO ELIMINADA** — nomear o medo dentro da promessa é o que transforma uma boa frase numa frase que desbloqueie.
 
-Esses quatro elementos juntos formam uma promessa que faz a pessoa certa ler e pensar: *isso é exatamente o que eu preciso.*
+Aplicação: esses quatro elementos juntos formam uma promessa que faz a pessoa certa ler e pensar: *isso é exatamente o que eu preciso.* É o que o agente vai construir com você na próxima aula.
 
----
+**Ponto 3 — Por que é o coração do negócio.**
 
-**[POR QUE É O CORAÇÃO DO NEGÓCIO]**
+Ideia: a promessa transformadora não é só o texto da sua bio. Ela aparece em tudo — na abertura de cada conteúdo (você está sempre lembrando a persona do que ela vai ganhar se continuar te acompanhando), no pitch de vendas (a primeira coisa que você diz é a transformação que oferece), na copy do curso (cada página parte dessa promessa), na sua apresentação pessoal (quando alguém pergunta "o que você faz?", a resposta é uma versão da sua promessa).
 
-A promessa transformadora não é só o texto da sua bio.
+Exemplo: quando a promessa é vaga, tudo fica vago. O conteúdo não converte porque não tem destino claro. O pitch não fecha porque não tem promessa específica que a aluna possa avaliar. A bio não prende porque não diz o que muda. Quando a promessa é precisa, ela serve como bússola: cada decisão de conteúdo passa pelo filtro "isso está na direção da promessa?", cada copy tem uma âncora "qual transformação estou ilustrando aqui?".
 
-Ela aparece em tudo.
-
-Na abertura de cada conteúdo — você está sempre lembrando a persona do que ela vai ganhar se continuar te acompanhando. No pitch de vendas — a primeira coisa que você diz é a transformação que oferece. Na copy do curso — cada página parte dessa promessa. Na sua apresentação pessoal — quando alguém pergunta "o que você faz?", a resposta é uma versão da sua promessa.
-
-Quando a promessa é vaga, tudo fica vago. O conteúdo não converte porque não tem destino claro. O pitch não fecha porque não tem promessa específica que a aluna possa avaliar. A bio não prende porque não diz o que muda.
-
-Quando a promessa é precisa, ela serve como bússola. Cada decisão de conteúdo passa pelo filtro: *isso está na direção da promessa?* Cada copy tem uma âncora: *qual transformação estou ilustrando aqui?*
-
-*[pausa]*
-
-Você tem a sua persona agora. Sabe quem ela é, o que ela quer, o que ela teme, o que ela precisa ouvir.
-
-A promessa é a resposta direta a essa persona.
+Aplicação: você tem a sua persona agora — sabe quem ela é, o que ela quer, o que ela teme, o que ela precisa ouvir. A promessa é a resposta direta a essa persona. É isso que a próxima aula vai construir.
 
 ---
 
-**[FECHAMENTO]**
+**[ONDE E QUANDO]**
 
-Na próxima aula, você vai construir a sua promessa com o Agente da Promessa Transformadora.
+Onde: o documento de P2 vai ser gerado na próxima aula, com o Agente da Promessa Transformadora, a partir de P1. Quando: assim que terminar esta aula, siga para a Aula 6 com o documento de P1 em mãos.
 
-O input é P1 — a persona que você acabou de documentar.
+---
 
-E a promessa que vai sair dessa aula vai ser a frase que ancora todo o Expert360.
+**[TRANSIÇÃO]**
+
+Você entende o que é uma Promessa Transformadora — os 4 elementos, por que ela é o coração do negócio, o que ela não é.
+
+Na próxima aula, você vai construir a sua com o agente. O input é P1 — a persona que você acabou de documentar. E a promessa que vai sair dessa aula vai ser a frase que ancora todo o Expert360. Vem comigo.
 
 ---
 
 **ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
 
-**Seção 1: O que promessa não é**
-- Slogan: bonito, não diz nada, qualquer um pode usar
-- Promessa de processo: fala de você, não dela — ela compra resultado
-- Grande demais: problema de crença + vagueza = não converte
-- Fala de você: herói da história é a aluna, não você
+**Bloco 1 — Abertura**
+- Bridge: P1 fechada — você sabe quem ela é, onde está, o que quer, o que teme, o que já tentou, o que precisa ouvir
+- A pergunta mais importante: "O que você promete a ela?"
 
-**Seção 2: O que é — 4 elementos**
-1. QUEM — persona específica (ela se reconhece no sujeito da frase)
-2. O QUÊ — resultado externo (o que muda no mundo) + interno (o que muda em como ela se sente)
-3. COMO — diferencial/mecanismo (por que é diferente do que já tentou)
-4. OBJEÇÃO ELIMINADA — "sem"/"mesmo se" (nomear o impedimento que ela teme)
+**Bloco 2 — O que e por quê**
+- Tema: Promessa Transformadora — o que é, o que não é, os 4 elementos
+- Urgência: a promessa aparece em tudo (conteúdo, pitch, copy, apresentação) — vaga = tudo fica vago; precisa = bússola de cada decisão
 
-**Seção 3: Por que é o coração do negócio**
-- Aparece em tudo: conteúdo, pitch, copy, apresentação pessoal
-- Promessa vaga = tudo fica vago
-- Promessa precisa = bússola para cada decisão
+**Bloco 3 — Como (3 pontos)**
+- Ponto 1: o que não é — slogan (não diz nada), promessa de processo (fala de você, não dela), grande demais (vago + descrença), fala de você (herói é ela, não você). Filtro: fala de mim ou dela? processo ou resultado? específica o suficiente?
+- Ponto 2: 4 elementos — QUEM (persona específica), O QUÊ (resultado externo + interno), COMO (diferencial/mecanismo), OBJEÇÃO ELIMINADA ("sem"/"mesmo se"). Juntos = "isso é exatamente o que eu preciso"
+- Ponto 3: coração do negócio — aparece em tudo (abertura de conteúdo, pitch, copy, apresentação). Promessa vaga = tudo fica vago. Promessa precisa = bússola. P1 é a base, P2 é a resposta direta
 
-**Seção 4: Setup para próxima aula**
-- Input: P1 documentada
-- Agente da Promessa Transformadora
-- Saída: a frase que ancora o Expert360
+**Bloco 4 — Onde e quando**
+- P2 gerado na A6, a partir de P1
+- Levar: documento de P1
+
+**Bloco 5 — Transição**
+- Gancho A6: construir a promessa com o agente — a frase que ancora o Expert360
 
 ---
 ---
@@ -833,80 +588,77 @@ Agora vai construir P2.
 
 ---
 
-**[O QUE O AGENTE FAZ]**
+**[O QUE E POR QUÊ]**
 
-O Agente da Promessa Transformadora parte da sua Persona Compradora e aplica os quatro elementos que você viu na aula anterior: QUEM, O QUÊ, COMO, OBJEÇÃO ELIMINADA.
+O tema de hoje é um exercício: construir sua Promessa Transformadora com o **Agente da Promessa Transformadora**.
 
-Ele não vai gerar uma frase e pedir aprovação. Vai conduzir o processo — camada por camada — até a promessa emergir de dentro, não de um template.
-
-Vai perguntar: o resultado externo que você entrega é qual, com precisão? O que muda internamente na sua aluna depois que ela passa pelo método? O que diferencia a sua abordagem das soluções que ela já tentou? Qual é o medo ou objeção que você pode eliminar dentro da frase?
-
-E vai refinar. Vai propor versões. Vai questionar o que está vago. Vai pressionar onde a frase for genérica demais.
-
-O processo termina quando a frase faz você pensar: *é essa*.
+Isso importa agora porque P2 é a frase do seu negócio — não de uma plataforma, do negócio. Ela vai aparecer na sua bio, na sua apresentação pessoal, na abertura de conteúdo, no pitch de vendas do Módulo 3 e na copy do Expert360.
 
 ---
 
-**[O QUE LEVAR]**
+**[COMO]**
 
-**Documento P1** — a Persona Compradora que você construiu na aula anterior.
+**Ponto 1 — O que entra (inputs).**
 
-Especialmente: as dimensões de desejo profundo, dor principal, medo e objeção, e o que ela precisa ouvir. São essas que vão alimentar a construção da promessa.
+Ideia: o Agente da Promessa Transformadora parte da sua Persona Compradora e aplica os quatro elementos — QUEM, O QUÊ, COMO, OBJEÇÃO ELIMINADA.
 
----
+Exemplo: o input principal é o **documento P1** — especialmente as dimensões de desejo profundo, dor principal, medo e objeção, e o que ela precisa ouvir. São essas que vão alimentar a construção da promessa.
 
-**[INSTRUÇÃO DE POSTURA]**
+Aplicação: separe P1 antes de começar. Não precisa de mais nada além desse documento.
 
-Duas coisas que vão fazer o processo funcionar melhor:
+**Ponto 2 — Como rodar.**
 
-**Primeira:** não tente chegar na frase final de uma vez. A promessa boa raramente aparece na primeira tentativa. Deixe o agente trabalhar, itere, ajuste. A frase que "quase fecha" é muito mais útil do que o silêncio de tentar acertar antes de começar.
+Ideia: o agente não vai gerar uma frase e pedir aprovação. Vai conduzir o processo — camada por camada — até a promessa emergir de dentro, não de um template.
 
-**Segunda:** teste em voz alta. Quando você tiver uma versão candidata, leia em voz alta. Se você travou, se você se envergonhou, se você achou grande demais ou pequena demais — são sinais. A promessa certa você consegue dizer com convicção. Não precisa ser perfeita no papel — precisa ser verdadeira na boca.
+Exemplo: vai perguntar o resultado externo que você entrega com precisão, o que muda internamente na sua aluna depois que ela passa pelo método, o que diferencia a sua abordagem das soluções que ela já tentou, qual é o medo ou objeção que você pode eliminar dentro da frase. Vai propor versões, questionar o que está vago, pressionar onde a frase for genérica demais.
 
----
+Aplicação: duas coisas que vão fazer o processo funcionar melhor. Primeiro: não tente chegar na frase final de uma vez — a promessa boa raramente aparece na primeira tentativa, deixe o agente trabalhar, itere, ajuste. Segundo: teste em voz alta. A promessa certa você consegue dizer com convicção. Se você travou, se se envergonhou, se achou grande demais ou pequena demais — são sinais.
 
-**[APLICAÇÕES DA P2]**
+**Ponto 3 — O que sai (output).**
 
-Quando você sair com P2 documentada, você vai ter uma frase que vai aparecer em vários lugares:
+Ideia: o processo termina quando a frase faz você pensar: *é essa*. Não quando "parece correto" — quando é verdadeira na boca.
 
-— Na sua bio: quem você ajuda e o que muda na vida delas.
-— Na sua apresentação pessoal: a resposta para "o que você faz?".
-— Na abertura de conteúdo: o que sua aluna vai ganhar acompanhando você.
-— No pitch de vendas do Módulo 3: a frase que abre a apresentação da oferta.
-— Na copy do Expert360: âncora de todas as páginas de venda.
+Exemplo: quando você sair com P2 documentada, você vai ter uma frase que vai aparecer em vários lugares — na sua bio (quem você ajuda e o que muda na vida delas), na sua apresentação pessoal (a resposta para "o que você faz?"), na abertura de conteúdo, no pitch de vendas do Módulo 3, na copy do Expert360.
 
-Não é uma frase para uma plataforma. É a frase do seu negócio.
+Aplicação: salve P2 no Drive quando terminar. É a frase do seu negócio — ela aparece em tudo que vem depois. Guarda bem.
 
 ---
 
-**[INSTRUÇÃO]**
+**[ONDE E QUANDO]**
 
-Abra o **Agente da Promessa Transformadora** no seu painel de agentes.
+Onde: **Agente da Promessa Transformadora** no seu painel de agentes + **documento P1** no Drive. Quando: agora — P2 fechada, você está pronta pra o Encerramento do Módulo 1.
 
-Leve o documento de P1. Deixa o agente conduzir.
+---
 
-Salve P2 no Drive quando terminar. E guarda bem — você vai usar ela em todos os módulos que vierem depois.
+**[TRANSIÇÃO]**
+
+Com P1 e P2 prontos, você tem a bússola do Expert360 calibrada.
+
+Na próxima aula, a gente para um segundo e vê o que aconteceu aqui — o que você construiu, a transformação que aconteceu, e o que vem depois. Vem comigo.
 
 ---
 
 **ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
 
-**Seção 1: O que o agente faz**
-- Parte da P1 e aplica os 4 elementos
-- Não gera frase para aprovar — conduz o processo camada por camada
-- Propõe versões, questiona o vago, pressiona onde é genérico
-- Termina quando: "é essa"
+**Bloco 1 — Abertura**
+- Bridge: P1 fechada → agora P2
 
-**Seção 2: O que levar**
-- Documento P1 — especialmente: desejo profundo, dor, medo/objeção, o que ela precisa ouvir
+**Bloco 2 — O que e por quê**
+- Tema: exercício — construir P2 com o Agente da Promessa Transformadora
+- Urgência: P2 é a frase do negócio — aparece em bio, apresentação, conteúdo, pitch, copy
 
-**Seção 3: Instrução de postura**
-- Não tentar acertar de uma vez — iterar é o processo
-- Testar em voz alta: promessa certa = consegue dizer com convicção
+**Bloco 3 — Como (3 pontos)**
+- Ponto 1: inputs — documento P1, especialmente desejo profundo/dor/medo-objeção/o que precisa ouvir. Só isso.
+- Ponto 2: como rodar — conduz camada por camada, propõe versões, questiona o vago. Não acertar de uma vez: iterar é o processo. Testar em voz alta: promessa certa = consegue dizer com convicção
+- Ponto 3: output — "é essa" (não "parece correto"). Onde vai aparecer: bio, apresentação, conteúdo, pitch M3, copy. Salvar no Drive.
 
-**Seção 4: Aplicações da P2**
-- Bio, apresentação pessoal, abertura de conteúdo, pitch M3, copy do curso
-- Não é frase para uma plataforma — é a frase do negócio
+**Bloco 4 — Onde e quando**
+- Agente da Promessa Transformadora (painel) + P1 (Drive)
+- Agora — P2 fechada, pronta pro Encerramento
+
+**Bloco 5 — Transição**
+- P1 + P2 = bússola calibrada
+- Gancho Encerramento: parar e ver o que aconteceu aqui
 
 ---
 ---
@@ -924,85 +676,74 @@ Antes de avançar, para um segundo e vê o que aconteceu aqui.
 
 ---
 
-**[O QUE VOCÊ CONSTRUIU]**
+**[O QUE E POR QUÊ]**
 
-Você entrou neste módulo com dois documentos do Módulo 0 — a sua história real e o seu Ikigai.
+Este encerramento existe por um motivo simples: a maioria das alunas subestima o que acabou de construir.
 
-Você sai com dois entregáveis.
-
-**P1 — Persona Compradora.**
-
-Uma pessoa específica com sete dimensões documentadas. Não um perfil demográfico — um mapa psicográfico. Você sabe quem ela é de verdade, onde está agora, o que quer no fundo, o que a paralisa, o que ela já tentou e por que não funcionou, o que ela precisa ouvir para acreditar que dessa vez é diferente.
-
-E você sabe de onde ela veio: da sua própria história.
-
-**P2 — Promessa Transformadora.**
-
-A frase que resume o que muda na vida de quem passa pelo seu método. Com precisão. Com o destinatário certo, o resultado certo, o diferencial certo e a objeção eliminada.
-
-A frase que você pode dizer em voz alta com convicção.
+Porque P1 e P2 não parecem grandes no momento em que você os faz — parecem um exercício, uma conversa com um agente, um documento salvo no Drive. Mas o que está documentado ali vai aparecer em cada módulo que vem depois. É importante parar e nomear isso antes de seguir.
 
 ---
 
-**[A TRANSFORMAÇÃO QUE ACONTECEU AQUI]**
+**[COMO]**
 
-Você entrou no Módulo 1 como especialista com conhecimento e história documentada.
+**Ponto 1 — O que você construiu.**
 
-Você sai com direção.
+Ideia: você entrou neste módulo com dois documentos do Módulo 0 — a sua história real e o seu Ikigai.
 
-Porque você agora sabe para quem está construindo e o que está prometendo. E isso muda o que você faz a partir de agora.
+Exemplo: você sai com dois entregáveis. **P1 — Persona Compradora:** uma pessoa específica com sete dimensões documentadas. Não um perfil demográfico — um mapa psicográfico. Você sabe quem ela é de verdade, onde está agora, o que quer no fundo, o que a paralisa, o que ela já tentou e por que não funcionou, o que ela precisa ouvir para acreditar que dessa vez é diferente. E você sabe de onde ela veio: da sua própria história. **P2 — Promessa Transformadora:** a frase que resume o que muda na vida de quem passa pelo seu método. Com precisão. Com o destinatário certo, o resultado certo, o diferencial certo e a objeção eliminada. A frase que você pode dizer em voz alta com convicção.
 
-O conteúdo que você vai publicar no Módulo 4 não vai ser mais genérico — vai ter um destinatário. O método que você vai estruturar no Módulo 2 não vai ser mais abstrato — vai ter uma persona que ele serve. A oferta que você vai construir no Módulo 3 não vai ser mais uma tentativa — vai ser a resposta direta à dor que você documentou aqui.
+Aplicação: dois dos cinco Ps construídos. P1 e P2 prontos.
 
-P1 e P2 são a bússola do Expert360.
+**Ponto 2 — A transformação que aconteceu aqui.**
 
-Você acabou de calibrá-la.
+Ideia: você entrou no Módulo 1 como especialista com conhecimento e história documentada. Você sai com direção.
+
+Exemplo: porque você agora sabe para quem está construindo e o que está prometendo. E isso muda o que você faz a partir de agora — o conteúdo que você vai publicar no Módulo 4 não vai ser mais genérico, vai ter um destinatário; o método que você vai estruturar no Módulo 2 não vai ser mais abstrato, vai ter uma persona que ele serve; a oferta que você vai construir no Módulo 3 não vai ser mais uma tentativa, vai ser a resposta direta à dor que você documentou aqui.
+
+Aplicação: P1 e P2 são a bússola do Expert360. Você acabou de calibrá-la.
+
+**Ponto 3 — Onde você está agora + o que vem a seguir.**
+
+Ideia: antes do Módulo 1 — especialista com conhecimento e trajetória, sem clareza de para quem e com o quê. Depois do Módulo 1 — persona compradora documentada, promessa transformadora definida, bússola calibrada para todos os módulos que vêm a seguir.
+
+Exemplo: no Módulo 2, você vai construir o P3: o seu **Método Autoral**. O método com nome próprio, estrutura, narrativa — e a camada que o torna incopiável.
+
+Aplicação: os dois documentos que você tem agora — P1 e P2 — vão ser input direto para o Agente do Processo Autoral. Porque o método serve a persona. E a narrativa do método precisa estar alinhada com a promessa que ele entrega. O trabalho que você fez aqui não fica nessa aula. Ele aparece em cada módulo que vem depois. Te vejo no Módulo 2.
 
 ---
 
-**[SENSO DE PROGRESSO — onde você está agora]**
+**[ONDE E QUANDO]**
 
-Antes do Módulo 1: especialista com conhecimento e trajetória — sem clareza de para quem e com o quê.
-
-Depois do Módulo 1: persona compradora documentada, promessa transformadora definida, bússola calibrada para todos os módulos que vêm a seguir.
-
-Dois dos cinco Ps construídos. P1 e P2 prontos.
+Onde: P1 e P2 ficam no seu Drive — guarda bem, são os documentos que acompanham você do Módulo 2 em diante. Quando: assim que terminar este encerramento, você está pronta pra começar o Módulo 2.
 
 ---
 
-**[O QUE VEM A SEGUIR]**
+**[TRANSIÇÃO]**
 
-No Módulo 2, você vai construir o P3: o seu **Método Autoral**.
+P1 e P2 construídos. Dois dos cinco Ps prontos.
 
-O método com nome próprio, estrutura, narrativa — e a camada que o torna incopiável.
-
-E os dois documentos que você tem agora — P1 e P2 — vão ser input direto para o Agente do Processo Autoral. Porque o método serve a persona. E a narrativa do método precisa estar alinhada com a promessa que ele entrega.
-
-O trabalho que você fez aqui não fica nessa aula.
-
-Ele aparece em cada módulo que vem depois.
-
-Te vejo no Módulo 2.
+No Módulo 2, você vai construir o P3 — seu Método Autoral. O método com nome próprio, estrutura e a camada que o torna incopiável. E tudo que você fez aqui vai alimentar o que vem depois. Te vejo lá.
 
 ---
 
 **ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
 
-**Seção 1: O que foi construído**
-- P1: Persona Compradora — 7 dimensões, mapa psicográfico, vem da história da aluna
-- P2: Promessa Transformadora — precisão, 4 elementos, diz em voz alta com convicção
+**Bloco 1 — Abertura**
+- Para um segundo antes de avançar — a maioria subestima o que acabou de construir
 
-**Seção 2: A transformação que aconteceu**
-- Entra: especialista com conhecimento e história
-- Sai: direção — sabe para quem e com o quê
-- Impacto: conteúdo com destinatário (M4), método com persona (M2), oferta como resposta direta (M3)
-- P1 e P2 = bússola do Expert360
+**Bloco 2 — O que e por quê**
+- P1+P2 não parecem grandes no momento (exercício, conversa com agente, documento salvo) — mas vão aparecer em cada módulo depois
+- Importante nomear antes de seguir
 
-**Seção 3: Senso de progresso (antes × depois)**
-- Antes: sem clareza de para quem e com o quê
-- Depois: P1 + P2 prontos. 2 dos 5 Ps construídos.
+**Bloco 3 — Como (3 pontos)**
+- Ponto 1: o que foi construído — P1 (7 dimensões, mapa psicográfico, vem da história) + P2 (precisão, 4 elementos, diz em voz alta com convicção). 2 dos 5 Ps prontos.
+- Ponto 2: a transformação — entra com conhecimento e história, sai com direção. Sabe pra quem e com o quê: M2 tem destinatário, M3 tem promessa real, M4 tem pessoa específica. P1+P2 = bússola calibrada.
+- Ponto 3: antes × depois — sem clareza de pra quem e com o quê → P1+P2 prontos. Teaser M2: Método Autoral (P3) — usa P1+P2 como input do Agente do Processo Autoral
 
-**Seção 4: Teaser M2**
-- Módulo 2: P3 — Método Autoral
-- Input do Agente do Processo Autoral: P1 + P2
-- O trabalho do M1 aparece em cada módulo que vem depois
+**Bloco 4 — Onde e quando**
+- P1 e P2 no Drive — acompanham do M2 em diante
+- Pronta pra começar o M2
+
+**Bloco 5 — Transição**
+- 2 dos 5 Ps prontos
+- Gancho M2: Método Autoral (P3) — nome próprio, estrutura, incopiável

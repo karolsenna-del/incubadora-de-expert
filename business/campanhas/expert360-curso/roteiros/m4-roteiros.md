@@ -344,6 +344,7 @@ Mas o mapa só funciona se você souber o que dizer em cada estágio — e isso 
 ## AULA 3 — EXERCÍCIO: AGENTE DA AUTORIDADE TRÍPLICE
 *Estimativa: 10–12 minutos (inclui execução do exercício)*
 *Input obrigatório: P1 + P2 + P3 | Input opcional: depoimento + pitch + objeções do M3*
+*Material: M4.1 - Relatório da Autoridade Tríplice.md*
 
 ---
 
@@ -381,7 +382,7 @@ Ideia: é uma conversa, não um formulário — abra o **Agente da Autoridade Tr
 
 Exemplo: o agente conduz a conversa — pergunta, aprofunda, ajusta. Ao final, ele devolve o Relatório da Autoridade Tríplice em 3 frentes.
 
-Aplicação: abra o arquivo **Relatório da Autoridade Tríplice** no seu Drive e salve o resultado ali. Ele é a base de tudo que vem nas próximas três aulas — vale o tempo de fazer essa conversa com atenção.
+Aplicação: abra o arquivo **M4.1 - Relatório da Autoridade Tríplice** no seu Drive e salve o resultado ali. Ele é a base de tudo que vem nas próximas três aulas — vale o tempo de fazer essa conversa com atenção.
 
 **Ponto 3 — O que sai (output).**
 
@@ -395,7 +396,7 @@ Aplicação: guarde o relatório à mão — você volta a ele nas próximas 4 a
 
 **[ONDE E QUANDO]**
 
-Onde: o arquivo **Relatório da Autoridade Tríplice** no seu Drive + o **Agente da Autoridade Tríplice** no seu painel de agentes. Quando: agora — antes de seguir pra próxima aula, porque ela já parte do relatório.
+Onde: o arquivo **M4.1 - Relatório da Autoridade Tríplice** no seu Drive + o **Agente da Autoridade Tríplice** no seu painel de agentes. Quando: agora — antes de seguir pra próxima aula, porque ela já parte do relatório.
 
 ---
 
@@ -422,7 +423,7 @@ Na próxima aula, esse relatório vira a sua vitrine — o que qualquer pessoa v
 - Opcionais: depoimento/pitch/objeções do M3 (enriquecem, não bloqueiam)
 
 **Seção 4: Como — Ponto 2 (como rodar)**
-- Abrir Agente da Autoridade Tríplice (painel de agentes) + arquivo Relatório da Autoridade Tríplice (Drive)
+- Abrir Agente da Autoridade Tríplice (painel de agentes) + arquivo M4.1 - Relatório da Autoridade Tríplice (Drive)
 - Leva P1+P2+P3 (+ opcionais) → agente conduz a conversa → salva o relatório no Drive
 
 **Seção 5: Como — Ponto 3 (output)**
@@ -430,7 +431,7 @@ Na próxima aula, esse relatório vira a sua vitrine — o que qualquer pessoa v
 - Base direta para A4, A5, A6
 
 **Seção 6: Onde e quando**
-- Onde: Relatório da Autoridade Tríplice (Drive) + Agente da Autoridade Tríplice (painel de agentes)
+- Onde: M4.1 - Relatório da Autoridade Tríplice (Drive) + Agente da Autoridade Tríplice (painel de agentes)
 - Quando: agora, antes da próxima aula
 
 **Seção 7: Transição**
@@ -440,7 +441,7 @@ Na próxima aula, esse relatório vira a sua vitrine — o que qualquer pessoa v
 
 ## AULA 4 — SUA VITRINE: PERFIL, BIO, DESTAQUES E POSTS FIXADOS
 *Estimativa: 20–25 minutos (aula prática — você abre o Instagram durante a aula)*
-*Materiais: minha-frase-tese.md, minha-narrativa-posicionamento.md, meus-destaques.md, meus-posts-fixados.md*
+*Materiais: M4.2 - Minha Frase-Tese Autoral.md, M4.3 - Minha Narrativa de Posicionamento.md, M4.4 - Meus Destaques.md, M4.5 - Meus Posts Fixados.md*
 
 ---
 
@@ -494,7 +495,7 @@ Aplicação: produza ou ajuste os 6, na ordem 1→2→3 em cada material — des
 
 **[ONDE E QUANDO]**
 
-Onde: minha-frase-tese.md → minha-narrativa-posicionamento.md → meus-destaques.md → meus-posts-fixados.md, nessa ordem — porque as duas primeiras alimentam as duas últimas. Quando: nesta aula, com o Instagram aberto — é aula prática.
+Onde: M4.2 - Minha Frase-Tese Autoral.md → M4.3 - Minha Narrativa de Posicionamento.md → M4.4 - Meus Destaques.md → M4.5 - Meus Posts Fixados.md, nessa ordem — porque as duas primeiras alimentam as duas últimas. Quando: nesta aula, com o Instagram aberto — é aula prática.
 
 ---
 
@@ -522,18 +523,18 @@ Na próxima aula, você transforma tudo isso numa linha editorial — pilares de
 - Bio em 3 linhas: quem sou+pra quem / como entrego / CTA — exercício direto no Instagram
 
 **Seção 4: Como — Ponto 2 (Sua voz: frase-tese e narrativa)**
-- Frase-tese (minha-frase-tese.md): prompt gera 5 opções a partir do Relatório
-- Narrativa (minha-narrativa-posicionamento.md): prompt usa História Real + Relatório → narrativa em 4 movimentos (150-250 palavras)
+- Frase-tese (M4.2 - Minha Frase-Tese Autoral.md): prompt gera 5 opções a partir do Relatório
+- Narrativa (M4.3 - Minha Narrativa de Posicionamento.md): prompt usa História Real + Relatório → narrativa em 4 movimentos (150-250 palavras)
 - Peças novas mesmo se perfil já existir — alimentam Ponto 3
 
 **Seção 5: Como — Ponto 3 (Vitrine em ação: destaques e posts fixados)**
-- 3 Destaques (meus-destaques.md): Sobre Mim ← narrativa / Produto ← método M2 / Depoimentos ← M3 (placeholder se faltar)
-- 3 Posts Fixados (meus-posts-fixados.md): Pinned 1 Reels ← narrativa / Pinned 2 Carrossel ← frase-tese / Pinned 3 ← método+relatório (placeholder se faltar oferta)
+- 3 Destaques (M4.4 - Meus Destaques.md): Sobre Mim ← narrativa / Produto ← método M2 / Depoimentos ← M3 (placeholder se faltar)
+- 3 Posts Fixados (M4.5 - Meus Posts Fixados.md): Pinned 1 Reels ← narrativa / Pinned 2 Carrossel ← frase-tese / Pinned 3 ← método+relatório (placeholder se faltar oferta)
 - Se já existem: revisão/ajuste, não recriação
 - Ordem: destaques → fixados, começando pelo Pinned 1 (Reels, mais rápido)
 
 **Seção 6: Onde e quando**
-- Onde: minha-frase-tese.md → minha-narrativa-posicionamento.md → meus-destaques.md → meus-posts-fixados.md
+- Onde: M4.2 - Minha Frase-Tese Autoral.md → M4.3 - Minha Narrativa de Posicionamento.md → M4.4 - Meus Destaques.md → M4.5 - Meus Posts Fixados.md
 - Quando: nesta aula, com Instagram aberto
 
 **Seção 7: Transição**
@@ -570,7 +571,7 @@ Ideia: a partir do Relatório da Tríplice (A3), você gera 3 pilares nomeados �
 
 Exemplo: pra cada pilar, o chat gera 10 temas, variando entre 4 jeitos: por categoria, por situação do dia a dia da sua persona, por urgência oculta (a dor real por trás do que ela diz que quer), e tema livre. No total, um banco de ~30 temas — seu estoque.
 
-Aplicação: abra minha-linha-editorial.md, Seção 1, e rode o prompt. Você roda essa seção 1 vez — e só repete quando o banco esgotar.
+Aplicação: abra M4.6 - Minha Linha Editorial.md, Seção 1, e rode o prompt. Você roda essa seção 1 vez — e só repete quando o banco esgotar.
 
 **Ponto 2 — Pra quem falar: os 3 tons.**
 
@@ -592,7 +593,7 @@ Aplicação: o "plano de 30 dias" é essa mesma grade repetida por 4 semanas —
 
 **[ONDE E QUANDO]**
 
-Onde: minha-linha-editorial.md — Seção 1 (pilares + banco de temas, roda 1 vez), Seção 2 (grade semanal fixa, referência), Seção 3 (calendário de 4 semanas — só o tema muda). Quando: Seção 1 agora; Seção 3, toda semana, antes de começar.
+Onde: M4.6 - Minha Linha Editorial.md — Seção 1 (pilares + banco de temas, roda 1 vez), Seção 2 (grade semanal fixa, referência), Seção 3 (calendário de 4 semanas — só o tema muda). Quando: Seção 1 agora; Seção 3, toda semana, antes de começar.
 
 ---
 
@@ -617,7 +618,7 @@ Falta uma coisa: quando chegar a hora de escrever o roteiro, como não travar na
 **Seção 3: Como — Ponto 1 (3 pilares + banco de temas)**
 - Pilar 1 (Persona) / Pilar 2 (Crença) / Pilar 3 (Método), a partir do Relatório da Tríplice (A3)
 - 10 temas/pilar via 4 métodos (categoria, situação do dia a dia, urgência oculta, tema livre) = banco de ~30
-- minha-linha-editorial.md Seção 1 — roda 1x
+- M4.6 - Minha Linha Editorial.md Seção 1 — roda 1x
 
 **Seção 4: Como — Ponto 2 (os 3 tons)**
 - Alcance=Topo / Identificação=Meio / Crença=Fundo (ponte com A2)
@@ -630,7 +631,7 @@ Falta uma coisa: quando chegar a hora de escrever o roteiro, como não travar na
 - Grade semanal fixa (Pilar+Tom+Formato+Stories) repetida 4 semanas = "plano de 30 dias" — só tema muda
 
 **Seção 6: Onde e quando**
-- minha-linha-editorial.md: Seção 1 (1x) / Seção 2 (fixa) / Seção 3 (semanal)
+- M4.6 - Minha Linha Editorial.md: Seção 1 (1x) / Seção 2 (fixa) / Seção 3 (semanal)
 
 **Seção 7: Transição**
 - Teaser A6: prompts prontos pra roteirizar
@@ -666,7 +667,7 @@ Ideia: o fluxo é sempre o mesmo, todo dia: veja Pilar+Tom+Formato+Tema no Calen
 
 Exemplo: cole num chat de IA. Quando ele pedir sua Persona, Posicionamento e/ou Método, cole o material indicado — Relatório da Tríplice (A3), Frase-Tese + Narrativa (A4), Método (M2). O chat sugere 5 opções, você escolhe uma, e ele monta o roteiro completo.
 
-Aplicação: deixe Persona, Posicionamento e Método prontos num bloco de notas separado — são praticamente fixos. Só o tema muda a cada dia. Com o roteiro pronto, role pra Seção 3 do mesmo documento: cole o roteiro + o tema do dia, e o chat devolve a legenda com SEO/GEO (a palavra-chave entra naturalmente no meio do texto) e a headline da capa. Material: meus-roteiros.md.
+Aplicação: deixe Persona, Posicionamento e Método prontos num bloco de notas separado — são praticamente fixos. Só o tema muda a cada dia. Com o roteiro pronto, role pra Seção 3 do mesmo documento: cole o roteiro + o tema do dia, e o chat devolve a legenda com SEO/GEO (a palavra-chave entra naturalmente no meio do texto) e a headline da capa. Material: M4.7 - Meus Roteiros.md.
 
 **Ponto 2 — Carrossel: 2 prompts.**
 
@@ -688,7 +689,7 @@ Aplicação: 2A pra tons Alcance/Identificação, 2B pra tom Crença. Em qualque
 
 **[ONDE E QUANDO]**
 
-Onde: meus-roteiros.md. Quando: toda vez que sua grade marcar "Roteiro completo" — os formatos de emergência (Aula 5) não precisam de prompt.
+Onde: M4.7 - Meus Roteiros.md. Quando: toda vez que sua grade marcar "Roteiro completo" — os formatos de emergência (Aula 5) não precisam de prompt.
 
 ---
 
@@ -713,7 +714,7 @@ Falta uma coisa — a mais importante. Todo esse trabalho, até agora, ainda est
 - Fluxo: calendário → escolhe prompt por formato+tom → troca [TEMA] → cola no chat → chat pede materiais → 5 opções → roteiro
 - Materiais-base fixos: Persona (A3), Posicionamento (A4), Método (M2)
 - Roteiro pronto → Seção 3 (mesmo doc): roteiro + tema → legenda SEO/GEO + headline de capa
-- Material: meus-roteiros.md
+- Material: M4.7 - Meus Roteiros.md
 
 **Seção 4: Como — Ponto 2 (Carrossel — 1A e 1B)**
 - 1A História de Alcance (tom Alcance): Capa Impactante→Contexto→Desenvolvimento→Grande Virada→Lição/Reflexão→CTA
@@ -725,7 +726,7 @@ Falta uma coisa — a mais importante. Todo esse trabalho, até agora, ainda est
 - Variações de gancho (Visual/Áudio) + CTA padrão
 
 **Seção 6: Onde e quando**
-- meus-roteiros.md, toda vez que a grade marcar "Roteiro completo"
+- M4.7 - Meus Roteiros.md, toda vez que a grade marcar "Roteiro completo"
 
 **Seção 7: Transição**
 - Teaser A7: bloco final — publicar
@@ -734,7 +735,7 @@ Falta uma coisa — a mais importante. Todo esse trabalho, até agora, ainda est
 
 ## AULA 7 — QUEIMAR A PONTE: O ANÚNCIO DE POSICIONAMENTO
 *Estimativa: 10–15 minutos (aula prática — você publica durante ou logo após a aula)*
-*Materiais: Posts Fixados (Aula 4), Frase-Tese (Aula 4), Prompt Legenda + Capa (Aula 6 / meus-roteiros.md)*
+*Materiais: Posts Fixados (Aula 4), Frase-Tese (Aula 4), Prompt Legenda + Capa (Aula 6 / M4.7 - Meus Roteiros.md)*
 
 ---
 
@@ -772,7 +773,7 @@ Aplicação: escolha 1 dos 2 — você publica o outro (e o Pinned 3) depois, co
 
 Ideia: o post em si já está roteirizado desde a Aula 4. O que falta é a legenda — e, se for o caso, fixar no perfil.
 
-Exemplo: gere a legenda com o mesmo prompt de Legenda + Capa da Aula 6 (Seção 3 do meus-roteiros.md) — cole o roteiro do post escolhido (Pinned 1 ou 2) e, no lugar do tema do dia, a palavra-chave central da sua Frase-Tese (Aula 4). O chat devolve a legenda com SEO/GEO, já fechada com a CTA padrão — "Concorda ou não? Me conta nos comentários, compartilha e me segue". Antes dela, acrescente uma frase de abertura que situe quem está chegando: pra perfil novo, algo como "Esse é meu primeiro post aqui — e é assim que eu trabalho". Pra perfil que já existe, algo como "Depois de [tempo] postando sem direção, decidi: é isso que eu faço, e é pra essas pessoas".
+Exemplo: gere a legenda com o mesmo prompt de Legenda + Capa da Aula 6 (Seção 3 do M4.7 - Meus Roteiros.md) — cole o roteiro do post escolhido (Pinned 1 ou 2) e, no lugar do tema do dia, a palavra-chave central da sua Frase-Tese (Aula 4). O chat devolve a legenda com SEO/GEO, já fechada com a CTA padrão — "Concorda ou não? Me conta nos comentários, compartilha e me segue". Antes dela, acrescente uma frase de abertura que situe quem está chegando: pra perfil novo, algo como "Esse é meu primeiro post aqui — e é assim que eu trabalho". Pra perfil que já existe, algo como "Depois de [tempo] postando sem direção, decidi: é isso que eu faço, e é pra essas pessoas".
 
 Aplicação: publique. Se for um dos posts fixados, fixe ele no topo do grid — é literalmente a vitrine (Aula 4) em ação.
 
@@ -935,4 +936,113 @@ Falta uma última aula — "Quem Você Se Tornou" — pra fechar não só este m
 
 **Seção 7: Transição**
 - Módulo 4 completo: 5 Ps + alcance pago iniciado como rotina
+
+---
+---
+
+## QUEM VOCÊ SE TORNOU — ENCERRAMENTO MÓDULO 4: AUTORIDADE
+*Estimativa: 6–8 minutos*
+
+---
+
+**[ABERTURA — o ponto de chegada]**
+
+Você chegou no fim do Módulo 4.
+
+E esse é diferente dos outros encerramentos. Porque nos módulos anteriores, o fim de cada módulo era o começo do próximo. Você terminava o M1 e entrava no M2. Terminava o M2 e ia pro M3. Cada encerramento era uma ponte.
+
+Este não. Este é o ponto de chegada.
+
+Para um segundo. Porque o que você atravessou aqui — do M0 ao M4, da história ao perfil publicado — não é pequeno. E vale nomear antes de seguir.
+
+---
+
+**[O QUE E POR QUÊ]**
+
+Este encerramento existe para nomear quem você se tornou — porque o ponto de chegada de uma jornada longa raramente parece grande no momento em que você chega. Parece normal. Mas não é.
+
+---
+
+**[COMO]**
+
+**Ponto 1 — O que você construiu neste módulo.**
+
+Ideia: olha rápido pra trás — só o M4.
+
+Exemplo: você entrou no Módulo 4 com P1, P2, P3 e P4 prontos. Prova em mãos. E construiu P5 — o quinto e último entregável do Expert360. **Sua Autoridade Tríplice**: as três frentes do que você sabe e prova (Expertise, Resultados, Narrativa de Origem) — documentadas no Relatório da Autoridade Tríplice. **Sua frase-tese e sua narrativa de posicionamento**: o que você diz sobre si mesma quando aparece publicamente — com clareza, sem desculpas, sem "mais ou menos". **Sua presença no Instagram posicionada**: foto, bio, destaques, posts fixados — cada elemento comunicando o que você faz, para quem, e por que é diferente. **Sua linha editorial com plano de 30 dias**: a estrutura do que você posta — sem travar diante de uma tela em branco. **Posts produzidos e publicados**: reels e carrosséis feitos com agente, gravados e publicados pela primeira vez com posicionamento real. **Alcance turbinado**: o seu posicionamento circulando além de quem te segue — R$6/dia, notebook, ciclo semanal de validação.
+
+Aplicação: isso é P5. Não é "ter um Instagram". É ter uma presença que trabalha por você enquanto você está offline — que diz quem você é, para quem, e o que prova, sem precisar de você lá o tempo inteiro.
+
+**Ponto 2 — A jornada completa: quem você se tornou.**
+
+Ideia: agora olha pra trás mais longe. Do M0 até aqui.
+
+Exemplo: cinco transformações de identidade — uma por módulo. **No M0**: você entrou como alguém com experiência que nunca tinha virado história. Saiu como alguém cuja trajetória virou dado — não vulnerabilidade. Sua história parou de ser algo que você carregava envergonhada e virou o que te torna incopiável. **No M1**: você entrou como especialista com conhecimento. Saiu com persona e promessa — com quem você serve e o que você promete, de forma que ressoa. Do conhecimento à narrativa. **No M2**: você entrou como especialista que sabia coisas. Saiu com método — organizado, replicável, com nome próprio. A caixa estava aberta faz tempo. No M2 você finalmente abriu. **No M3**: você entrou como alguém com método. Saiu como alguém com prova — que foi ao campo, sentou na frente de pessoas reais, apresentou o que construiu, e descobriu que funciona. **No M4**: você entrou como especialista com prova em mãos mas presença fechada. Saiu com autoridade — visível, posicionada, publicada. Com alcance.
+
+Aplicação: você não é mais quem entrou no Expert360. E essa distinção importa mais do que qualquer post, qualquer número de seguidores, qualquer métrica. Porque a versão que entrou no M0 era uma especialista esperando a hora certa. A versão que sai do M4 é uma referência que decidiu parar de esperar.
+
+**Ponto 3 — O que vem depois: o sistema continua operando.**
+
+Ideia: o Expert360 termina aqui. O negócio de autoridade não.
+
+Exemplo: o que você tem agora não é um curso concluído. É um sistema operando. P1 (persona) e P2 (promessa) continuam guiando com quem você fala e o que você diz. P3 (método) é o que você entrega — e vai refinar a cada aluna que passa por você. P4 (proposta validada) é o que você vende no 1:1 — e vai se transformar em oferta escalada quando você estiver pronta. P5 (autoridade) é o que atrai — e cresce enquanto você posta, valida, ajusta e turbina. Os 5 Ps não são marcos que você passa. São peças de um sistema que gira. E o sistema fica mais forte a cada semana que você opera com ele.
+
+Aplicação: três coisas que vão acelerar o que vem depois. **Continue vendendo no 1:1** — cada venda refina P3, gera depoimento novo, e alimenta P5 com prova real. **Continue postando com a linha editorial** — consistência é o que converte audiência em autoridade ao longo do tempo. **Continue turbinando os top performers** — o ciclo semanal que você criou no M4 é a fundação da escala. Não é o teto.
+
+---
+
+**[ONDE E QUANDO]**
+
+Onde: os 5 documentos no Drive — P1 (Minha Persona Compradora), P2 (Minha Promessa Transformadora), P3 (Meu Método Autoral), P4 (Minha Proposta Validada), P5 (Relatório da Autoridade Tríplice) — são o mapa do seu negócio de autoridade. E o Instagram posicionado é o canal por onde ele se expande. Quando: agora, a partir deste momento. O sistema está montado. O que vem a seguir não é mais aprendizado — é operação.
+
+---
+
+**[TRANSIÇÃO]**
+
+Você chegou onde você disse que queria chegar.
+
+Com persona. Com promessa. Com método. Com prova. Com autoridade.
+
+Não por sorte. Não por volume. Por ordem — pela ordem certa de construir um negócio de especialista no digital que funciona de verdade.
+
+O Expert360 termina aqui. O que você construiu não.
+
+---
+
+**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
+
+**Seção 1: Abertura**
+- Diferença deste encerramento: não é ponte para o próximo módulo — é o ponto de chegada
+- Convite a parar e reconhecer antes de seguir
+
+**Seção 2: O que e por quê**
+- Ponto de chegada de jornada longa raramente parece grande no momento
+- Vale nomear para que a transformação seja reconhecida, não passada em branco
+
+**Seção 3: Como — Ponto 1 (o que construiu no M4)**
+- P5 = Autoridade Tríplice + frase-tese + narrativa + presença posicionada + linha editorial + posts publicados + alcance turbinado
+- Não é "ter Instagram" — é presença que trabalha por você offline
+
+**Seção 4: Como — Ponto 2 (a jornada completa)**
+- 5 transformações de identidade — uma por módulo:
+  - M0: experiência → história (do carregado ao incopiável)
+  - M1: conhecimento → narrativa (persona + promessa que ressoa)
+  - M2: especialista com coisas → especialista com método (nome próprio, replicável)
+  - M3: método → prova (campo + vendas reais + depoimento)
+  - M4: prova fechada → autoridade visível (posicionada, publicada, com alcance)
+- "A versão que entrou no M0 esperava a hora certa. A que sai do M4 decidiu parar de esperar."
+
+**Seção 5: Como — Ponto 3 (o que vem depois)**
+- Sistema que gira: P1+P2+P3+P4+P5 são peças que operam — não marcos que se passa
+- Fica mais forte a cada semana de operação
+- 3 aceleradores: continue vendendo 1:1 (refina P3 + depoimento + prova) / continue postando na linha editorial (consistência converte audiência em autoridade) / continue turbinando top performers (ciclo semanal = fundação da escala, não o teto)
+
+**Seção 6: Onde e quando**
+- 5 documentos no Drive (P1–P5) = mapa do negócio
+- Instagram posicionado = canal de expansão
+- A partir de agora: não é mais aprendizado — é operação
+
+**Seção 7: Transição**
+- Chegou com P1+P2+P3+P4+P5 — pela ordem certa
+- Expert360 termina. O que você construiu não.
 - Gancho final: aula de Encerramento "Quem Você Se Tornou" (fecha módulo + curso)
