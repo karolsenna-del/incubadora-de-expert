@@ -808,104 +808,85 @@ O orgânico com frequência e consistência já traz seguidores novos — especi
 ---
 
 ## ESCALANDO SEU POSICIONAMENTO: TURBINAR
-*Estimativa: 10–12 minutos*
-*Materiais: post publicado (Aula 7)*
-*Fonte: VOL-vendas-trafego (ETL Alcateia), Seções 5-6*
+
+*Estimativa: 12–15 minutos*
 
 ---
 
-**[ABERTURA — o post está no ar. E agora?]**
+Você construiu um negócio. E negócio tem uma verdade que a maioria ignora na fase de começo: precisa de investimento.
 
-Na Aula 7, seu post de posicionamento foi ao ar. Publicado, fixado (se for o caso), fazendo o trabalho que devia fazer: contar pra quem chega quem você é, pra quem você fala, e como você entrega.
+O Instagram é uma empresa. A Meta construiu uma plataforma gratuita pra bilhões de usuários — e o modelo de negócio dela é vender alcance. Pra quem usa o app pra postar foto de viagem e falar com amigos, a plataforma entrega de graça. Mas você não é mais uma usuária comum. Você é uma empreendedora digital — e a empreendedora paga pra Meta entregar seu perfil pra mais pessoas. Não é favor. É o custo de fazer negócio.
 
-Mas tem uma pergunta que muda o jogo: **quem está vendo esse post, hoje?**
+Ninguém aqui está de brincadeira, e a Meta também não.
 
-Se a resposta for "só quem já me segue", ele está fazendo metade do trabalho.
+Se desceu pro play, tem que brincar.
 
----
+E tem outro motivo pra pagar: eu não acredito em crescimento baseado só em viralização. É demorado, depende de sorte — e quando o conteúdo viraliza sem direção, o lead que chega nem sempre é qualificado. Tráfego com público definido traz a persona certa, na velocidade certa. Você coloca dinheiro atrás do que já está funcionando — e o alcance sai do modo orgânico para o modo intencional.
 
-**[O QUE E POR QUÊ — turbinar, o primeiro passo de escala]**
-
-O tema de hoje é turbinar — o recurso nativo do Instagram pra impulsionar uma publicação, colocando ela na frente de gente que ainda não te segue.
-
-Isso importa agora porque, no Módulo 3, você validou seu método com vendas reais. Validado não é "testei uma vez" — é "funciona, e agora pode receber mais gente". Tráfego só orgânico tem teto: o algoritmo mostra seu conteúdo pra uma fração de quem já te segue, e só pra quem já te segue. Eu não acredito que orgânico, sozinho, seja suficiente — e a boa notícia é que turbinar pelo computador é simples e eficiente o bastante pra ser o seu primeiro passo, sem gerenciador de anúncios, sem agência, sem conhecimento técnico.
+E a boa notícia é que começar é mais simples do que parece — sem gerenciador de anúncios, sem agência, sem conhecimento técnico.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — A regra do notebook.**
 
-Ideia: antes de qualquer outra coisa, existe uma regra crítica: **nunca turbine pelo celular**. A Apple cobra uma taxa de 30% sobre o valor investido em compras dentro do app — e ela não cobra essa taxa à parte, ela reduz o seu alcance em 30%, sem avisar.
+Antes de qualquer outra coisa, existe uma regra crítica: nunca turbine pelo celular. A Apple cobra uma taxa de 30% sobre o valor investido em compras dentro do app — e ela não cobra essa taxa à parte. Ela simplesmente reduz o seu alcance em 30%, sem avisar.
 
-Exemplo: com R$6 por dia, turbinando pelo iPhone seu alcance estimado fica em torno de 700 pessoas. O mesmo R$6, pelo notebook, chega a cerca de 1.000 pessoas — 30% mais alcance, de graça, só por trocar o aparelho.
-
-Aplicação: sempre logue no Instagram pelo navegador (Chrome ou Firefox) no computador antes de turbinar qualquer post. Não precisa de Business Suite — é o Instagram normal, no navegador.
+Com R$6 por dia, turbinando pelo iPhone, seu alcance estimado fica em torno de 700 pessoas. O mesmo R$6, pelo notebook, chega a cerca de 1.000 pessoas — 30% mais alcance, de graça, só por trocar o aparelho. Sempre logue no Instagram pelo navegador no computador antes de turbinar qualquer post. Não precisa de Business Suite — é o Instagram normal, no navegador.
 
 **Ponto 2 — Como turbinar, passo a passo.**
 
-Ideia: com o post aberto (o da Aula 7, pra começar), clique em "Turbinar publicação". O Instagram vai pedir um objetivo e um público.
+Com o post aberto, clique em "Turbinar publicação". O Instagram vai pedir um objetivo e um público.
 
-Exemplo: objetivo = **Visitas ao perfil** — sempre esse, porque o que você quer é trazer gente pro seu perfil, não só engajamento no post. Público: localização (Brasil, ou sua região, se seu negócio for local), 3 a 5 interesses do seu nicho (ex: mentorias, marketing de conteúdo, empreendedorismo) e a faixa de idade da sua persona.
+Objetivo: sempre **Visitas ao perfil** — porque o que você quer é trazer gente pro seu perfil, não só engajamento no post. Público: localização (Brasil, ou sua região se seu negócio for local), 3 a 5 interesses do seu nicho e a faixa de idade da sua persona.
 
-Aplicação: salve esse público com um nome (ex: "público teste") — assim você reutiliza nas próximas vezes, sem reconfigurar tudo de novo. Defina o orçamento e a duração, e confirme.
+Salve esse público com um nome — assim você reutiliza nas próximas vezes, sem reconfigurar tudo de novo. Defina o orçamento e a duração, e confirme.
 
-**Ponto 3 — O ciclo semanal de validação.**
+**Ponto 3 — O ciclo semanal: testar, analisar e escalar.**
 
-Ideia: turbinar não é "liga e esquece" — é um teste, toda semana.
+O ciclo funciona assim: no domingo você posta e turbina cada conteúdo novo com R$10 por 2 dias. Na terça, com o tráfego encerrado, você abre os resultados e lê duas métricas.
 
-Exemplo: poste no domingo. Turbine cada conteúdo novo com R$10 por 2 dias. Na terça, com o tráfego encerrado, veja os resultados: os conteúdos com custo por seguidor até ~R$2,50 e custo por comentário até ~R$0,07 (um pouco mais tolerante se seu perfil é novo) ficam rodando a semana toda.
+**Custo por seguidor** — investimento dividido por novos seguidores. Meta: até R$2,50. Se o seu perfil for novo, até R$3,25 é aceitável — o algoritmo ainda está aprendendo, os custos normalizam com o tempo.
 
-Aplicação: regra dos 2 top performers — tenha sempre pelo menos 2 conteúdos dentro dessas métricas rodando continuamente, e continue testando conteúdos novos em paralelo, R$10/2 dias cada.
+**Custo por comentário** — investimento dividido pelos comentários. Meta: até R$0,07. Em perfil novo, até R$0,09.
+
+Ficou dentro das metas? Esse é um top performer — deixa rodando a semana toda. Ficou fora? Pausa e testa o próximo.
+
+Mas a análise não para em "dentro ou fora". O que você faz com o top performer na semana seguinte define o ritmo da escala. Se o conteúdo trouxe resultado positivo, aumenta o orçamento em 30%. Se empatou, mantém. Se entrou no negativo, reduz 20%. Esse ajuste se chama escala flutuante — e é a única forma de crescer sem queimar caixa.
+
+A curva de escala nunca é uma linha reta. É uma subida com oscilações. Quem espera resultado linear para de escalar cedo demais.
+
+A regra prática: tenha sempre pelo menos 2 conteúdos top performers rodando continuamente, e continue testando conteúdos novos em paralelo com R$10/2 dias cada. Com o tempo, você vai saber quais formatos e temas performam melhor — e investe mais onde já funciona.
 
 ---
 
-**[ONDE E QUANDO]**
+Com isso, o Módulo 4 está completo: posicionamento construído, vitrine no ar, conteúdo rodando com rotina, e alcance pago entrando como hábito semanal. Você não fica mais esperando o algoritmo decidir quem vê o que você publica.
 
-Onde: Instagram, pelo navegador no notebook — comece pelo post da Aula 7. Quando: agora, depois de publicar — e, depois disso, toda semana (domingo posta e turbina, terça analisa), como rotina.
-
----
-
-**[TRANSIÇÃO]**
-
-Com isso, o Módulo 4 está completo: os 5 Ps prontos, e o alcance pago entrando como rotina — você não fica mais só esperando o algoritmo decidir quem vê o que você publica.
-
-Falta uma última aula — "Quem Você Se Tornou" — pra fechar não só este módulo, mas a jornada toda do Expert360º. Te vejo lá.
+Tem uma última aula — pra fechar não só esse módulo, mas a jornada inteira do Expert360º. Te vejo lá.
 
 ---
 
 **ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
 
-**Seção 1: Abertura**
-- Ponte A7→A8: post no ar não é o fim — pergunta "quem está vendo isso, hoje?"
+**Bloco 1 — Abertura**
+- Você tem um negócio → negócio precisa de investimento
+- Meta = empresa; grátis pra usuária comum, mas ela é empreendedora digital
+- Empreendedora paga pra Meta entregar o perfil pra mais pessoas — custo de fazer negócio
+- "Ninguém aqui de brincadeira" + "se desceu pro play, tem que brincar"
+- Por que pagar além do orgânico: viralização = lenta + sorte + lead nem sempre qualificado; tráfego qualificado = persona certa na velocidade certa
 
-**Seção 2: O que e por quê**
-- Tema: turbinar — recurso nativo do Instagram pra impulsionar post pra quem não te segue
-- Por quê: M3 validou o método com vendas reais — validado = hora de receber mais gente; orgânico sozinho tem teto; turbinar pelo notebook é simples e eficiente pra começar
+**Bloco 2 — O que e por quê**
+- Tráfego = dinheiro atrás do que já funciona → alcance intencional
+- Sem gerenciador, sem agência, sem conhecimento técnico
 
-**Seção 3: Como — Ponto 1 (a regra do notebook)**
-- Nunca turbinar pelo celular — Apple cobra 30%, reduzindo o alcance sem avisar
-- R$6/dia: ~700 pessoas (iPhone) vs ~1.000 pessoas (notebook)
-- Sempre logar no Instagram via navegador no notebook (sem Business Suite)
+**Bloco 3 — Como (3 pontos)**
+- Ponto 1: nunca turbinar pelo celular (Apple 30%); R$6/dia = 700 pessoas (iPhone) vs 1.000 (notebook); logar via navegador no computador
+- Ponto 2: "Turbinar publicação" → objetivo Visitas ao perfil (sempre) → público (localização + interesses + faixa de idade) → salvar público → orçamento/duração → confirmar
+- Ponto 3: ciclo domingo/terça (R$10/2 dias por conteúdo); 2 métricas — custo/seguidor (meta R$2,50, até R$3,25 em perfil novo) + custo/comentário (meta R$0,07, até R$0,09 em perfil novo); decisão: dentro da meta = top performer (roda a semana toda); fora = pausa; escala flutuante: lucrou +30%, empatou mantém, negativo -20%; curva não é linear — sobe com oscilações; regra dos 2 top performers sempre rodando + novos em paralelo
 
-**Seção 4: Como — Ponto 2 (passo a passo)**
-- Abrir post → "Turbinar publicação" → objetivo: Visitas ao perfil (sempre)
-- Público: localização + 3-5 interesses do nicho + faixa de idade da persona
-- Salvar público pra reutilizar, definir orçamento/duração, confirmar
+**Bloco 4 — Transição**
+- M4 completo: posicionamento + vitrine + rotina de conteúdo + alcance pago semanal
+- Próxima: encerramento do M4 e da jornada do Expert360º
 
-**Seção 5: Como — Ponto 3 (ciclo semanal de validação)**
-- Domingo posta e turbina cada conteúdo (R$10/2 dias)
-- Terça analisa: custo/seguidor ~R$2,50, custo/comentário ~R$0,07 dentro da meta → fica rodando
-- Regra dos 2 top performers + testar novos conteúdos em paralelo
-
-**Seção 6: Onde e quando**
-- Onde: Instagram via notebook, começando pelo post da A7
-- Quando: agora + rotina semanal (domingo posta/turbina, terça analisa)
-
-**Seção 7: Transição**
-- Módulo 4 completo: 5 Ps + alcance pago iniciado como rotina
-
----
 ---
 
 ## QUEM VOCÊ SE TORNOU — ENCERRAMENTO MÓDULO 4: AUTORIDADE

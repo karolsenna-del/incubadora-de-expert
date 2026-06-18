@@ -169,8 +169,8 @@ Aula ao vivo toda quarta — grátis ↓
 - Slide 3: Método autoral tem assinatura. / Nenhuma IA copia. / Nenhum concorrente replica. / Porque tem a sua história dentro. / E num mercado onde a IA faz tudo, história é o que faz alguém te escolher. *(revisado 17/06/2026 — "autoral" adicionado + conclusão expandida com diferencial IA → escolha)*
 - Slide 4: A maioria tenta vender o diploma. "Tenho 15 anos de experiência." E fica sem vender. / Porque o mercado não compra o que você estudou. / Compra o caminho que você mostra. *(revisado 18/06/2026 — conclusão adicionada)*
 - Slide 5: Você sente que tem algo valioso pra oferecer. / Mas na hora de colocar pra fora — não sai. / Não é bloqueio. Não é falta de disciplina. / É que o que você viveu ainda não virou método. *(revisado 18/06/2026 — reescrito: era repetição do slide 3, agora faz a persona se reconhecer)*
-- Slide 6: Se tem autoridade offline e está invisível no digital — ainda não transformou o que viveu em método.
-- Slide 7: "Diploma é o que você estudou. Método é o que você viveu. ↓ Me segue se está pronta pra construir o segundo."
+- Slide 6: Se tem autoridade offline e ainda é invisível no digital — ainda não transformou o que viveu em método. / É ele que constrói a autoridade que aparece. *(revisado 18/06/2026 — conclusão de autoridade adicionada)*
+- Slide 7: Diploma é o que você estudou. Método é o que você viveu. / ↓ Me segue se está pronta pra construir o seu. *(revisado 18/06/2026 — "o segundo" → "o seu": mais pessoal e direto)*
 
 ---
 
@@ -221,17 +221,24 @@ Se isso te lembra você, me segue. ↓
 ### Pinned 2 — Tese
 
 ```
-Diploma é o que você estudou. Método é o que você viveu.
+Cheguei no digital com currículo impecável.
 
-Diploma dá credencial. Credencial dá permissão. Mas no digital, ninguém paga por permissão — paga por transformação.
+Administradora. Duas pós. Aprovada em 1º lugar no concurso. R$50k investidos na melhor mentoria do país. Fiz tudo que mandaram — copy, tráfego, lançamento, câmera no rosto.
 
-Método tem assinatura: nenhuma IA copia, nenhum concorrente replica, porque tem a sua história dentro. Sem ela, é commodity — e commodity, ninguém escolhe por você.
+8 lançamentos. Zero vendas.
 
-Se você tem autoridade no offline e ainda é invisível no digital, ainda não transformou o que viveu em método.
+O problema não era a mentoria. Era que eu tinha diploma — e não tinha método.
+
+Diploma diz que você pode ensinar. No digital, o que importa é: você consegue me levar de onde estou até onde quero chegar? Isso não é currículo. É método. Com nome, etapas e a sua história dentro.
+
+Aprendi da pior forma — virei lançadora, faturei R$200k pra outra expert, perdi tudo do dia pra noite. Foi aí que construí o meu método a partir do que vivi. E foi a única coisa que ninguém pôde me tirar.
+
+Se você tem autoridade no offline e ainda é invisível no digital — não está faltando credencial. Está faltando transformar o que viveu em método.
 
 Concorda? Comenta CONCORDO.
 Pronta pra construir o seu? Me segue.
 ```
+*(revisado 18/06/2026 — reescrita com história da Karol: mais pessoal, corrobora a tese, conecta com a persona)*
 
 ### Pinned 3 — Oferta
 

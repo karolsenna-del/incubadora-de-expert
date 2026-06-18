@@ -65,7 +65,8 @@
       "Aula 4 — Montando sua Vitrine: Perfil, Bio, Destaques e Posts Fixados",
       "Aula 5 — Linha editorial + plano de 30 dias",
       "Aula 6 — Roteiros: prompts de reels e carrosséis",
-      "Aula 7 — Queimar a Ponte"
+      "Aula 7 — Queimar a Ponte",
+      "Aula 8 — Escalando Seu Posicionamento: Turbinar"
     ]
   },
   "materiais_criados": [
@@ -89,7 +90,7 @@
     "business/campanhas/expert360-curso/materiais/M4.7 - Meus Roteiros.md — 4 prompts interativos reutilizáveis: 2 de Carrossel (História de Alcance / Situação de Identificação) + 2 de Reels (Narrativo com Metáfora / Didático Direto) (M4 Aula 6)"
   ],
   "modulo_atual": "M4",
-  "aula_atual": "M4 — Aula 7 (Queimar a Ponte) aprovada (QG-CC-006 PASS). Próxima: Aula 8 — Escalando Seu Posicionamento: Turbinar",
+  "aula_atual": "M4 — Aula 8 (Escalando Seu Posicionamento: Turbinar) aprovada (QG-CC-006 PASS). Próxima: Encerramento — Quem Você Se Tornou",
   "formato_roteiro": "script completo sem labels de seção visíveis + ESTRUTURA com tópicos e pontos-chave ao final. Títulos das aulas sem numeração — só o nome.",
   "branding_aprovado": false,
   "empacotamento_aprovado": false,
@@ -140,6 +141,7 @@
     "Wording corrigido: prompts de IA vão pra um 'chat de IA (Claude, ChatGPT, Gemini ou outro)', não 'agente de IA' — a pedido explícito da Karol na aprovação da Aula 5. Aplicado em minha-linha-editorial.md, no roteiro da Aula 5, e retroativamente nos 4 materiais da Aula 4 (minha-frase-tese.md, minha-narrativa-posicionamento.md, meus-destaques.md, meus-posts-fixados.md). Mantidos intactos os nomes próprios dos agentes específicos do curso (Agente da Autoridade Tríplice, Agente da Persona Compradora, etc.) — a correção vale só pra onde o termo 'agente' se referia genericamente ao chat de IA. Padrão pra futuras aulas: 'chat de IA (Claude, ChatGPT, Gemini ou outro)'.",
     "M4 Aula 6 aprovada — 'Roteiros: prompts de reels e carrosséis'. Carrossel: 2 prompts interativos do acervo da Karol (chat pede Persona+Posicionamento+Método, sugere 5 opções — histórias de alcance ou situações de identificação/vergonha relacionadas ao tema do dia —, aluna escolhe, chat monta o roteiro). Reels: 2 prompts NOVOS criados no mesmo estilo interativo (Narrativo com Metáfora = roteiro-base de 5 passos da Aula 5 + gancho + metáfora do método; Didático Direto = estrutura gancho/início/desenvolvimento/final/CTA do Código PEV). Os 4 prompts injetam o tema do dia (calendário da Aula 5) na etapa de coleta. Material novo: meus-roteiros.md. REGRA: nunca citar 'Alcateia' como fonte em nenhum material ou roteiro — usar 'acervo da Karol' / 'prompts já validados'.",
     "M0 Aula 1 (Fracasso como Prova) — exercício 'EXERCÍCIO RÁPIDO — tornar pessoal' reescrito a pedido da Karol: de 'pensa em uma coisa que não funcionou + uma frase de aprendizado' para 'liste TODOS os fracassos da jornada (não só do que pretende ensinar) + o que aprendeu com cada um, quanto mais melhor'. Novo material: minha-lista-de-fracassos.md (tabela Fracasso x Aprendizado) — aquecimento pra Aula 2 (Minha História Real), não é um terceiro arquivo carregado pra M1/M2 como História Real e Ikigai.",
-    "M4 Aula 7 (Queimar a Ponte) reescrita integralmente (QG-CC-006 PASS): premissa mudada (vitrine já publicada na A4 — feita junto com a aluna; A7 não é a aula que faz ela publicar). Foco: virada de mentalidade de quem testava para quem opera negócio digital de verdade. Conteúdo: volume + frequência (post diário +) + cortes das sessões do M3 como conteúdo de autoridade + rotina semanal de produção + modo teste do Instagram (entrega só pra não seguidores, Karol vai compartilhar tela) + contratar editor/social media como possibilidade (não obrigação) + viral com persona (não com audiência errada) + tráfego como acelerador (não como solução para teto orgânico — orgânico com frequência já cresce)."
+    "M4 Aula 7 (Queimar a Ponte) reescrita integralmente (QG-CC-006 PASS): premissa mudada (vitrine já publicada na A4 — feita junto com a aluna; A7 não é a aula que faz ela publicar). Foco: virada de mentalidade de quem testava para quem opera negócio digital de verdade. Conteúdo: volume + frequência (post diário +) + cortes das sessões do M3 como conteúdo de autoridade + rotina semanal de produção + modo teste do Instagram (entrega só pra não seguidores, Karol vai compartilhar tela) + contratar editor/social media como possibilidade (não obrigação) + viral com persona (não com audiência errada) + tráfego como acelerador (não como solução para teto orgânico — orgânico com frequência já cresce).",
+    "M4 Aula 8 (Escalando Seu Posicionamento: Turbinar) aprovada (QG-CC-006 PASS): abertura reframeada — empreendedora digital paga pra Meta entregar perfil pra mais pessoas, custo de fazer negócio; 'se desceu pro play, tem que brincar'; não acredita em crescimento só por viralização, tráfego qualificado traz persona certa na velocidade certa. Regra do notebook (Apple 30%: iPhone 700 pessoas vs. notebook 1.000 com R$6/dia). Passo a passo do turbinar (objetivo sempre Visitas ao perfil; público; salvar público). Ciclo semanal com métricas norteadoras do ETL Alcateia: custo/seguidor (meta R$2,50, até R$3,25 em perfil novo), custo/comentário (meta R$0,07, até R$0,09 em perfil novo); escala flutuante (+30% lucrou / mantém empatou / -20% negativo); 'curva de escala não é linha reta — oscilações'; regra dos 2 top performers rodando + novos em paralelo. Sem bloco 'Onde:' visível — folded na transição."
   ]
 }
