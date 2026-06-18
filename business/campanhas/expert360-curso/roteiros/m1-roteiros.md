@@ -722,6 +722,8 @@ Onde: P1 e P2 ficam no seu Drive — guarda bem, são os documentos que acompanh
 
 P1 e P2 construídos. Dois dos cinco Ps prontos.
 
+Antes de ir — se em algum momento desse módulo você ficou presa num ponto específico e seguiu em frente sem resolver, tem um jeito de destravar. A Mentoria Express é uma hora comigo focada exatamente no que está travando. Sem pauta ampla, sem volta ao zero — uma hora, um ponto, uma saída. O link pra entrar em contato com o suporte está na descrição dessa aula.
+
 No Módulo 2, você vai construir o P3 — seu Método Autoral. O método com nome próprio, estrutura e a camada que o torna incopiável. E tudo que você fez aqui vai alimentar o que vem depois. Te vejo lá.
 
 ---

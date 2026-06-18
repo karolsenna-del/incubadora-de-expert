@@ -70,6 +70,10 @@ Onde você está agora: P1, P2 e P3 documentados no Drive — arsenal pronto. Qu
 
 ---
 
+Antes de começar — esse módulo é onde mais alunas sentem mais resistência. Não por falta de método. Por falta de alguém ao lado enquanto vão ao campo pela primeira vez. Se você quer chegar nas sessões de vendas com suporte individual, existe a Mentoria VIP: três sessões comigo focadas no Módulo 3 — construção da oferta, abordagem e a sessão de vendas na prática. O link pra entrar em contato com o suporte está na descrição dessa aula.
+
+---
+
 **[TRANSIÇÃO]**
 
 A maior barreira para as suas primeiras vendas não é técnica. É a relação que você tem com o ato de cobrar.
@@ -1129,6 +1133,8 @@ Onde: P4, Rastreador, Roteiro da Sessão 1:1, depoimento em construção — tud
 Você foi a campo. Testou sua oferta com gente de verdade. E saiu desse módulo sendo alguém diferente de quem entrou.
 
 Agora é hora de pegar tudo isso — as conversas, os "sins", os "vou pensar", as gravações — e transformar em prova que abre portas.
+
+Antes de ir — se em algum momento desse módulo você ficou presa num ponto específico e seguiu em frente sem resolver, tem um jeito de destravar. A Mentoria Express é uma hora comigo focada exatamente no que está travando. Sem pauta ampla, sem volta ao zero — uma hora, um ponto, uma saída. O link pra entrar em contato com o suporte está na descrição dessa aula.
 
 Vejo você no Módulo 4.
 

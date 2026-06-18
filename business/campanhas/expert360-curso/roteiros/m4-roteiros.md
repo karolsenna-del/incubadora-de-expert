@@ -1,5 +1,5 @@
 # Expert360º — Roteiros Módulo 4: Autoridade
-Versão: 2.2 | Data: 18/06/2026 | Status: A1-A7 aprovadas (QG-CC-006 PASS) — A8 + Encerramento aguardando validação
+Versão: 2.3 | Data: 18/06/2026 | Status: A1-A8 + Encerramento aprovados (QG-CC-006 PASS) — M4 COMPLETO
 
 **Aulas:** 10 (Introdução + 2 mentalidade + 1 tríplice + 1 vitrine + 2 conteúdo + Bloco Final + Escala + Encerramento)
 **Formato:** cada aula segue 5 blocos — Abertura (gancho + ponte com a aula anterior) / O Que e Por Quê (tema da aula + urgência, com a audiência contextualizada) / Como (até 3 pontos principais, cada um em Ideia → Exemplo → Aplicação) / Onde e Quando (aplicação prática — material e timing) / Transição (recap + CTA da aula + gancho pra próxima). Adaptado da "Estrutura de Uma Aula Online" (Live 12), com a Transição entre aulas preservada e reforçada — Expert360º é um curso de aulas conectadas, não lives isoladas. Cada aula termina com ESTRUTURA — TÓPICOS E PONTOS-CHAVE, espelhando os 5 blocos.
@@ -81,6 +81,10 @@ Aplicação: você sai posicionada — com perfil, voz, conteúdo planejado e o 
 **[ONDE E QUANDO]**
 
 Onde: tudo entra no seu Drive, nos materiais desta seção do curso — cada aula te aponta pro material certo, no momento certo. Quando: ao longo das próximas 8 aulas, terminando com a publicação e o primeiro turbinar.
+
+---
+
+Antes de começar — posicionamento é onde mais alunas querem ir sozinhas e onde mais percebem depois que algo ficou torto. Se você quer construir sua autoridade com acompanhamento individual, a Mentoria VIP cobre o Módulo 4 inteiro: três sessões comigo para montar sua presença, sua linha editorial e colocar tudo no ar com clareza. O link pra entrar em contato com o suporte está na descrição dessa aula.
 
 ---
 
@@ -894,8 +898,6 @@ Tem uma última aula — pra fechar não só esse módulo, mas a jornada inteira
 
 ---
 
-**[ABERTURA — o ponto de chegada]**
-
 Você chegou no fim do Módulo 4.
 
 E esse é diferente dos outros encerramentos. Porque nos módulos anteriores, o fim de cada módulo era o começo do próximo. Você terminava o M1 e entrava no M2. Terminava o M2 e ia pro M3. Cada encerramento era uma ponte.
@@ -906,47 +908,57 @@ Para um segundo. Porque o que você atravessou aqui — do M0 ao M4, da históri
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 Este encerramento existe para nomear quem você se tornou — porque o ponto de chegada de uma jornada longa raramente parece grande no momento em que você chega. Parece normal. Mas não é.
 
 ---
 
-**[COMO]**
-
 **Ponto 1 — O que você construiu neste módulo.**
 
-Ideia: olha rápido pra trás — só o M4.
+Olha rápido pra trás — só o M4.
 
-Exemplo: você entrou no Módulo 4 com P1, P2, P3 e P4 prontos. Prova em mãos. E construiu P5 — o quinto e último entregável do Expert360. **Sua Autoridade Tríplice**: as três frentes do que você sabe e prova (Expertise, Resultados, Narrativa de Origem) — documentadas no Relatório da Autoridade Tríplice. **Sua frase-tese e sua narrativa de posicionamento**: o que você diz sobre si mesma quando aparece publicamente — com clareza, sem desculpas, sem "mais ou menos". **Sua presença no Instagram posicionada**: foto, bio, destaques, posts fixados — cada elemento comunicando o que você faz, para quem, e por que é diferente. **Sua linha editorial com plano de 30 dias**: a estrutura do que você posta — sem travar diante de uma tela em branco. **Posts produzidos e publicados**: reels e carrosséis feitos com agente, gravados e publicados pela primeira vez com posicionamento real. **Alcance turbinado**: o seu posicionamento circulando além de quem te segue — R$6/dia, notebook, ciclo semanal de validação.
+Você entrou no Módulo 4 com P1, P2, P3 e P4 prontos. Prova em mãos. E construiu P5 — o quinto e último entregável do Expert360.
 
-Aplicação: isso é P5. Não é "ter um Instagram". É ter uma presença que trabalha por você enquanto você está offline — que diz quem você é, para quem, e o que prova, sem precisar de você lá o tempo inteiro.
+**Sua Autoridade Tríplice**: as três frentes do que você sabe e prova (Expertise, Resultados, Narrativa de Origem) — documentadas no Relatório da Autoridade Tríplice. **Sua frase-tese e sua narrativa de posicionamento**: o que você diz sobre si mesma quando aparece publicamente — com clareza, sem desculpas, sem "mais ou menos". **Sua presença no Instagram posicionada**: foto, bio, destaques, posts fixados — cada elemento comunicando o que você faz, para quem, e por que é diferente. **Sua linha editorial com plano de 30 dias**: a estrutura do que você posta — sem travar diante de uma tela em branco. **Posts produzidos e publicados**: reels e carrosséis feitos com agente, gravados e publicados pela primeira vez com posicionamento real. **Alcance turbinado**: o seu posicionamento circulando além de quem te segue — R$6/dia, notebook, ciclo semanal de validação.
+
+Isso é P5. Não é "ter um Instagram". É ter uma presença que trabalha por você enquanto você está offline — que diz quem você é, para quem, e o que prova, sem precisar de você lá o tempo inteiro.
 
 **Ponto 2 — A jornada completa: quem você se tornou.**
 
-Ideia: agora olha pra trás mais longe. Do M0 até aqui.
+Agora olha pra trás mais longe. Do M0 até aqui.
 
-Exemplo: cinco transformações de identidade — uma por módulo. **No M0**: você entrou como alguém com experiência que nunca tinha virado história. Saiu como alguém cuja trajetória virou dado — não vulnerabilidade. Sua história parou de ser algo que você carregava envergonhada e virou o que te torna incopiável. **No M1**: você entrou como especialista com conhecimento. Saiu com persona e promessa — com quem você serve e o que você promete, de forma que ressoa. Do conhecimento à narrativa. **No M2**: você entrou como especialista que sabia coisas. Saiu com método — organizado, replicável, com nome próprio. A caixa estava aberta faz tempo. No M2 você finalmente abriu. **No M3**: você entrou como alguém com método. Saiu como alguém com prova — que foi ao campo, sentou na frente de pessoas reais, apresentou o que construiu, e descobriu que funciona. **No M4**: você entrou como especialista com prova em mãos mas presença fechada. Saiu com autoridade — visível, posicionada, publicada. Com alcance.
+Cinco transformações de identidade — uma por módulo.
 
-Aplicação: você não é mais quem entrou no Expert360. E essa distinção importa mais do que qualquer post, qualquer número de seguidores, qualquer métrica. Porque a versão que entrou no M0 era uma especialista esperando a hora certa. A versão que sai do M4 é uma referência que decidiu parar de esperar.
+**No M0**: você entrou como alguém com experiência que nunca tinha virado história. Saiu como alguém cuja trajetória virou dado — não vulnerabilidade. Sua história parou de ser algo que você carregava envergonhada e virou o que te torna incopiável.
+
+**No M1**: você entrou como especialista com conhecimento. Saiu com persona e promessa — com quem você serve e o que você promete, de forma que ressoa. Do conhecimento à narrativa.
+
+**No M2**: você entrou como especialista que sabia coisas. Saiu com método — organizado, replicável, com nome próprio. A caixa estava aberta faz tempo. No M2 você finalmente abriu.
+
+**No M3**: você entrou como alguém com método. Saiu como alguém com prova — que foi ao campo, sentou na frente de pessoas reais, apresentou o que construiu, e descobriu que funciona.
+
+**No M4**: você entrou como especialista com prova em mãos mas presença fechada. Saiu com autoridade — visível, posicionada, publicada. Com alcance.
+
+Você não é mais quem entrou no Expert360. E essa distinção importa mais do que qualquer post, qualquer número de seguidores, qualquer métrica. Porque a versão que entrou no M0 era uma especialista esperando a hora certa. A versão que sai do M4 é uma referência que decidiu parar de esperar.
 
 **Ponto 3 — O que vem depois: o sistema continua operando.**
 
-Ideia: o Expert360 termina aqui. O negócio de autoridade não.
+O Expert360 termina aqui. O negócio de autoridade não.
 
-Exemplo: o que você tem agora não é um curso concluído. É um sistema operando. P1 (persona) e P2 (promessa) continuam guiando com quem você fala e o que você diz. P3 (método) é o que você entrega — e vai refinar a cada aluna que passa por você. P4 (proposta validada) é o que você vende no 1:1 — e vai se transformar em oferta escalada quando você estiver pronta. P5 (autoridade) é o que atrai — e cresce enquanto você posta, valida, ajusta e turbina. Os 5 Ps não são marcos que você passa. São peças de um sistema que gira. E o sistema fica mais forte a cada semana que você opera com ele.
+O que você tem agora não é um curso concluído. É um sistema operando. P1 (persona) e P2 (promessa) continuam guiando com quem você fala e o que você diz. P3 (método) é o que você entrega — e vai refinar a cada aluna que passa por você. P4 (proposta validada) é o que você vende no 1:1 — e vai se transformar em oferta escalada quando você estiver pronta. P5 (autoridade) é o que atrai — e cresce enquanto você posta, valida, ajusta e turbina.
 
-Aplicação: três coisas que vão acelerar o que vem depois. **Continue vendendo no 1:1** — cada venda refina P3, gera depoimento novo, e alimenta P5 com prova real. **Continue postando com a linha editorial** — consistência é o que converte audiência em autoridade ao longo do tempo. **Continue turbinando os top performers** — o ciclo semanal que você criou no M4 é a fundação da escala. Não é o teto.
+Os 5 Ps não são marcos que você passa. São peças de um sistema que gira. E o sistema fica mais forte a cada semana que você opera com ele.
 
----
-
-**[ONDE E QUANDO]**
-
-Onde: os 5 documentos no Drive — P1 (Minha Persona Compradora), P2 (Minha Promessa Transformadora), P3 (Meu Método Autoral), P4 (Minha Proposta Validada), P5 (Relatório da Autoridade Tríplice) — são o mapa do seu negócio de autoridade. E o Instagram posicionado é o canal por onde ele se expande. Quando: agora, a partir deste momento. O sistema está montado. O que vem a seguir não é mais aprendizado — é operação.
+Três coisas que vão acelerar o que vem depois: **Continue vendendo no 1:1** — cada venda refina P3, gera depoimento novo, e alimenta P5 com prova real. **Continue postando com a linha editorial** — consistência é o que converte audiência em autoridade ao longo do tempo. **Continue turbinando os top performers** — o ciclo semanal que você criou no M4 é a fundação da escala. Não é o teto.
 
 ---
 
-**[TRANSIÇÃO]**
+Os 5 documentos no Drive — P1, P2, P3, P4, P5 — são o mapa do seu negócio de autoridade. E o Instagram posicionado é o canal por onde ele se expande. A partir de agora, o que vem a seguir não é mais aprendizado — é operação.
+
+---
+
+O curso termina aqui. Mas existe uma diferença entre ter o sistema montado e operar ele com consistência ao longo do tempo — e essa diferença quase sempre é acompanhamento. Se você quer continuar construindo com suporte contínuo, a Mentoria Incubadora de Expert é onde isso acontece: individual ou em grupo, focada em quem já tem o método e quer escalar a operação. O link pra entrar em contato com o suporte está na descrição dessa aula.
+
+---
 
 Você chegou onde você disse que queria chegar.
 
@@ -993,5 +1005,5 @@ O Expert360 termina aqui. O que você construiu não.
 
 **Seção 7: Transição**
 - Chegou com P1+P2+P3+P4+P5 — pela ordem certa
+- Incubadora: individual ou em grupo, pra quem quer continuar com suporte contínuo (CTA: link do suporte na descrição da aula)
 - Expert360 termina. O que você construiu não.
-- Gancho final: aula de Encerramento "Quem Você Se Tornou" (fecha módulo + curso)

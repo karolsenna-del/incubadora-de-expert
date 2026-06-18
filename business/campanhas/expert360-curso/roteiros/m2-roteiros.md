@@ -814,6 +814,8 @@ Onde: P3 e o Portfólio ficam no Drive — acompanham você do Módulo 3 em dian
 
 P1, P2, P3 e Portfólio prontos. Três dos cinco Ps construídos.
 
+Antes de ir — se em algum momento desse módulo você ficou presa num ponto específico e seguiu em frente sem resolver, tem um jeito de destravar. A Mentoria Express é uma hora comigo focada exatamente no que está travando. Sem pauta ampla, sem volta ao zero — uma hora, um ponto, uma saída. O link pra entrar em contato com o suporte está na descrição dessa aula.
+
 No Módulo 3, você vai vender o método — três vezes, no 1:1, antes de qualquer exposição pública. E tudo que você construiu aqui vai alimentar isso. Te vejo lá.
 
 ---
