@@ -165,10 +165,10 @@ Aula ao vivo toda quarta — grátis ↓
 **Bookend: abre e fecha com a frase tese. Capa: só tipografia, sem foto.**
 
 - Capa: "Diploma é o que você estudou. / Método é o que você viveu."
-- Slide 2: Diploma dá credencial. Credencial dá permissão. No digital, pagam por transformação.
-- Slide 3: Método tem assinatura. Nenhuma IA copia, nenhum concorrente replica.
-- Slide 4: A maioria tenta vender o diploma. "Tenho 15 anos de experiência." E fica sem vender.
-- Slide 5: Método com história dentro é commodity zero.
+- Slide 2: Você tem os diplomas. / Tem o reconhecimento dos colegas. / Posta. Aparece. Continua invisível. / Lá fora, currículo abre portas. / No digital, método abre carteiras. *(revisado 17/06/2026 — anterior era abstrato, sem reconhecimento da persona)*
+- Slide 3: Método autoral tem assinatura. / Nenhuma IA copia. / Nenhum concorrente replica. / Porque tem a sua história dentro. / E num mercado onde a IA faz tudo, história é o que faz alguém te escolher. *(revisado 17/06/2026 — "autoral" adicionado + conclusão expandida com diferencial IA → escolha)*
+- Slide 4: A maioria tenta vender o diploma. "Tenho 15 anos de experiência." E fica sem vender. / Porque o mercado não compra o que você estudou. / Compra o caminho que você mostra. *(revisado 18/06/2026 — conclusão adicionada)*
+- Slide 5: Você sente que tem algo valioso pra oferecer. / Mas na hora de colocar pra fora — não sai. / Não é bloqueio. Não é falta de disciplina. / É que o que você viveu ainda não virou método. *(revisado 18/06/2026 — reescrito: era repetição do slide 3, agora faz a persona se reconhecer)*
 - Slide 6: Se tem autoridade offline e está invisível no digital — ainda não transformou o que viveu em método.
 - Slide 7: "Diploma é o que você estudou. Método é o que você viveu. ↓ Me segue se está pronta pra construir o segundo."
 

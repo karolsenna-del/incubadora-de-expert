@@ -45,12 +45,12 @@ Prioridades imediatas:
 
 ## Operacao Continua: Lives Semanais
 
-Karol faz lives semanais pro grupo fechado (Google Meet), hoje sem agente especializado.
+Karol faz lives semanais pro grupo fechado (Google Meet). Worker especializado criado (17/06).
 
-- Teste validado (15/06): outline em topicos pra Live 19, modelo Funil de Zoom (Vinizoom) — Narrativa -> Execucao+spoiler -> Pratica (reusa "Lista de Fracassos" do M0) -> Prova Racional + Pitch Estendido (Mentoria Incubadora de Expert).
-- Capa Live 19: "Preciso esconder meus fracassos" / "A Lista de Fracassos que vira Autoridade" (formato Live 18).
-- Outline: `business/campanhas/lives-semanais/live-19-outline.md`
-- Decisao (15/06): criar especialista "Expert em Lives" via Worker Forge, usando o outline da Live 19 como seed. Ver log-decisoes.md e demandas-backlog.md.
+- Worker **Expert em Lives** instalado — roteiriza no modelo Funil de Zoom (Narrativa → Execucao+spoiler → Pratica → Prova Racional+Pitch). Ativar com `/expert-em-lives`.
+- KB carregada: 18 lives do histórico (lives-expert360-roteiros.md) + live-19-outline.md + ETL Vinizoom.
+- Live 19 feita (15/06): "A Lista de Fracassos que vira Autoridade". Outline: `business/campanhas/lives-semanais/live-19-outline.md`.
+- Próxima: Live 20 — pedir sugestão de tema pro Expert em Lives.
 
 ## Desafio Flavio Augusto — Squad Conteudo Arcane (14/06/2026)
 
@@ -124,28 +124,26 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
-Sessao 15/06 — retrofit v2.0 completo.
+Sessao 17/06 — weekly review + worker Expert em Lives criado.
 
-**O que foi feito (15/06):**
-- RETROFIT COMPLETO: todos os 5 modulos no formato Live 12 (5 blocos) prontos pra gravacao ✓
-  - M0 (5 aulas): v2.0 — Karol revisou e ajustou diretamente (2020, "varios agentes de IA", abertura A3)
-  - M1 (8 aulas): v2.0 — formato 5 blocos aplicado
-  - M2 (9 aulas): v2.0 — A4-A7 + Encerramento adicionados (completo)
-  - M3 (12 aulas): v2.0 — reescrita completa a partir da v1.0
-  - M4 (10 aulas): v2.1 + Encerramento "Quem Voce Se Tornou" escrito do zero
-- Materiais reorganizados: 12 renomeados (M0.1-M4.7), 6 placeholders novos, briefing movido pra branding/
-- Decisao consolidada em todos os roteiros: "varios agentes de IA" (sem numero fixo — futuro-prova)
-- Tracker atualizado: LOG + task M4 Done 15/06
+**O que foi feito (17/06):**
+- Weekly review completo. Proximo: 24/06/2026.
+- Stories "Inimigo Comum" criados (4 inimigos: monta metodo e lanca, curso + link na bio, metodo generico, muito conteudo antes de clareza).
+- Cockpit atualizado: Expert360 next action = resolver processo de edicao de video (gargalo).
+- Worker Expert em Lives criado via Worker Forge — 7 arquivos, instalado em `agents/expert-em-lives/`. Ativar com `/expert-em-lives`.
+- KB importada: 18 lives do historico (Lives Expert360) copiadas para `business/campanhas/lives-semanais/lives-expert360-roteiros.md`.
+
+**O que estava pendente antes:**
+- Retrofit v2.0 completo (feito em 15/06): todos os 5 modulos no formato Live 12 (5 blocos) prontos pra gravacao ✓
 
 **Proximo foco:**
-1. Karol grava os modulos (Fase 4 — Gravacao)
-2. Apos gravacao: Fase 3 (Criacao dos Agentes) e Fase 5 (Lancamento)
-3. Background: Destaque 3 + posts feed com angulo "expert em fracassar no digital"
-
-**Expert em Lives** (decisao 15/06): criar worker especializado via Worker Forge, usando live-19-outline.md como seed. Ver demandas-backlog.md.
+1. Karol grava os modulos (Fase 4 — Gravacao) — edição é o proximo gargalo
+2. Aprovar roteiros Desafio Flavio dias 9-14 (aguardando em `campanhas/flavio-augusto-desafio/roteiros.md`)
+3. Smoke test do worker Expert em Lives: `/expert-em-lives` → propor tema pra Live 20
+4. Background: Destaque 3 + posts feed com angulo "expert em fracassar no digital"
 
 Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 15/06/2026*
+*Ultima atualizacao: 17/06/2026*

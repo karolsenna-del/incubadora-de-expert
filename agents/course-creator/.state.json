@@ -13,7 +13,7 @@
     "ponto_b": "Método autoral com nome próprio e história dentro (incopiável). 3 vendas reais feitas no 1:1 antes de qualquer exposição pública. Posicionamento claro com bio, linha editorial e primeiros conteúdos publicados. Os 5Ps completos — construídos com a ajuda dos 6 agentes de IA que acompanham cada módulo do curso durante a execução.",
     "correcao_agentes": "Os 6 agentes de IA são o mecanismo de entrega do curso — cada um ativo dentro do módulo correspondente, guiando a aluna na construção do entregável daquela fase. Não são bônus pós-curso, são o coração da experiência."
   },
-  "modulos_completos": ["M0", "M1", "M2", "Transição (absorvida no M2)", "M3", "M4"],
+  "modulos_completos": ["M0", "M1", "M2", "Transição (absorvida no M2)", "M3"],
   "aulas_completas": {
     "M0": [
       "Aula Introdução",
@@ -64,7 +64,8 @@
       "Aula 3 — Exercício: Agente da Autoridade Tríplice",
       "Aula 4 — Montando sua Vitrine: Perfil, Bio, Destaques e Posts Fixados",
       "Aula 5 — Linha editorial + plano de 30 dias",
-      "Aula 6 — Roteiros: prompts de reels e carrosséis"
+      "Aula 6 — Roteiros: prompts de reels e carrosséis",
+      "Aula 7 — Queimar a Ponte"
     ]
   },
   "materiais_criados": [
@@ -88,8 +89,8 @@
     "business/campanhas/expert360-curso/materiais/M4.7 - Meus Roteiros.md — 4 prompts interativos reutilizáveis: 2 de Carrossel (História de Alcance / Situação de Identificação) + 2 de Reels (Narrativo com Metáfora / Didático Direto) (M4 Aula 6)"
   ],
   "modulo_atual": "M4",
-  "aula_atual": "M4 — Aula 6 aprovada (QG-CC-006 PASS). Próxima: Aula 7 — Bloco Final (Queimar a ponte: o anúncio de posicionamento)",
-  "formato_roteiro": "script completo + estrutura com tópicos e pontos-chave ao final",
+  "aula_atual": "M4 — Aula 7 (Queimar a Ponte) aprovada (QG-CC-006 PASS). Próxima: Aula 8 — Escalando Seu Posicionamento: Turbinar",
+  "formato_roteiro": "script completo sem labels de seção visíveis + ESTRUTURA com tópicos e pontos-chave ao final. Títulos das aulas sem numeração — só o nome.",
   "branding_aprovado": false,
   "empacotamento_aprovado": false,
   "prd_criado": true,
@@ -99,7 +100,7 @@
   "decisao_estrutura_modulos": "Cada módulo tem Aula de Introdução + aulas de conteúdo + Aula de Encerramento. +2 aulas por módulo, total ~42 aulas.",
   "decisao_formulario_pre_diagnostico": "Quando a sessão é agendada, a aluna envia o link do Formulário de Pré-Diagnóstico (Google Forms). 12 perguntas: perfil (nome, profissão, experiência, modo de atuação), situação atual (descrição, histórico digital, desafio), contexto econômico (faixa de renda, histórico de investimento), contexto da sessão (motivação, resultado esperado, dúvidas). A aluna lê as respostas antes da sessão — poupa 10 minutos de aquecimento.",
   "aulas_completas_atualizacao": "Aula 2 M0: ajuste retroativo — instrução do Drive aplicada (uma linha).",
-  "ultima_sessao": "2026-06-15",
+  "ultima_sessao": "2026-06-18",
   "decisoes_sessao": [
     "Padrão de wording atualizado: removida a instrução 'Crie uma cópia deste documento no seu Google Drive (...)' (item 1 de 'Como usar') de todos os 8 materiais que tinham essa linha (minha-lista-de-fracassos.md, minha-historia-real.md, meu-ikigai.md, minha-frase-tese.md, minha-narrativa-posicionamento.md, meus-destaques.md, meus-posts-fixados.md, minha-linha-editorial.md) — a aluna terá uma aula no Módulo de Orientações que ensina a baixar o Drive completo, então não precisa criar cópia individual de cada arquivo. Itens renumerados em todos os 8 arquivos. Subtítulo '*Documento para preenchimento no Google Docs*' removido de minha-historia-real.md, meu-ikigai.md e minha-lista-de-fracassos.md (M0). Subtítulo '*Documento para usar com chat de IA (Claude, ChatGPT, Gemini ou outro)*' MANTIDO nos 5 materiais do M4 — carrega informação diferente (indica que o documento é usado com chat de IA), não é redundante com o novo padrão de Drive. Padrão pra futuros materiais: sem instrução de 'criar cópia/abrir Doc novo'.",
     "Decisão: sem logo do Expert360º nos materiais (docs/templates do Drive da aluna) nem nas aulas gravadas — evita duplicar trabalho de branding com a Mentoria/Incubadora, que reusa os mesmos arquivos como base. Branding (Fase 6, ainda não rodada) decide depois se alguma peça precisa de identidade visual aplicada.",
@@ -126,7 +127,7 @@
     "Rastreador: score de fit separado de prioridade de abordagem",
     "Loop M3→M4: pitch + depoimento + objeções alimentam o Módulo 4",
     "Agente do Portfólio Estratégico e Rastreador são entregáveis separados na Transição",
-    "Formato de roteiro definido: script completo + estrutura com tópicos e pontos-chave ao final (vale para todas as aulas)",
+    "Formato de roteiro definido: script completo sem labels de seção visíveis ([ABERTURA] etc. ficam apenas na ESTRUTURA ao final). Títulos das aulas sem numeração — só o nome, porque a Karol pode adicionar, remover ou reordenar aulas.",
     "Aula 1 M0 aprovada (QG-CC-006 PASS)",
     "Formulário de Pré-Diagnóstico: enviado após confirmação da sessão. 12 perguntas cobrindo perfil, situação atual, contexto econômico e contexto da sessão. Modelo em business/campanhas/expert360-curso/materiais/M3.3 - Formulário de Pré-Diagnóstico.md",
     "M3 fechado — 12 aulas aprovadas (Intro + 10 aulas + Encerramento 'Quem Você Se Tornou'). Aulas de Encerramento de M0-M3 renomeadas para 'Quem Você Se Tornou'.",
@@ -138,6 +139,7 @@
     "M4 Aula 5 aprovada — 'Linha editorial + plano de 30 dias'. Calendário de 30 dias reframed como grade semanal repetível de 4 semanas (não 30 posts pré-escritos) — resolve tensão com a regra cardinal da Alcateia 'nunca criar 30 dias de conteúdo de uma vez'. Aprovado pela Karol.",
     "Wording corrigido: prompts de IA vão pra um 'chat de IA (Claude, ChatGPT, Gemini ou outro)', não 'agente de IA' — a pedido explícito da Karol na aprovação da Aula 5. Aplicado em minha-linha-editorial.md, no roteiro da Aula 5, e retroativamente nos 4 materiais da Aula 4 (minha-frase-tese.md, minha-narrativa-posicionamento.md, meus-destaques.md, meus-posts-fixados.md). Mantidos intactos os nomes próprios dos agentes específicos do curso (Agente da Autoridade Tríplice, Agente da Persona Compradora, etc.) — a correção vale só pra onde o termo 'agente' se referia genericamente ao chat de IA. Padrão pra futuras aulas: 'chat de IA (Claude, ChatGPT, Gemini ou outro)'.",
     "M4 Aula 6 aprovada — 'Roteiros: prompts de reels e carrosséis'. Carrossel: 2 prompts interativos do acervo da Karol (chat pede Persona+Posicionamento+Método, sugere 5 opções — histórias de alcance ou situações de identificação/vergonha relacionadas ao tema do dia —, aluna escolhe, chat monta o roteiro). Reels: 2 prompts NOVOS criados no mesmo estilo interativo (Narrativo com Metáfora = roteiro-base de 5 passos da Aula 5 + gancho + metáfora do método; Didático Direto = estrutura gancho/início/desenvolvimento/final/CTA do Código PEV). Os 4 prompts injetam o tema do dia (calendário da Aula 5) na etapa de coleta. Material novo: meus-roteiros.md. REGRA: nunca citar 'Alcateia' como fonte em nenhum material ou roteiro — usar 'acervo da Karol' / 'prompts já validados'.",
-    "M0 Aula 1 (Fracasso como Prova) — exercício 'EXERCÍCIO RÁPIDO — tornar pessoal' reescrito a pedido da Karol: de 'pensa em uma coisa que não funcionou + uma frase de aprendizado' para 'liste TODOS os fracassos da jornada (não só do que pretende ensinar) + o que aprendeu com cada um, quanto mais melhor'. Novo material: minha-lista-de-fracassos.md (tabela Fracasso x Aprendizado) — aquecimento pra Aula 2 (Minha História Real), não é um terceiro arquivo carregado pra M1/M2 como História Real e Ikigai."
+    "M0 Aula 1 (Fracasso como Prova) — exercício 'EXERCÍCIO RÁPIDO — tornar pessoal' reescrito a pedido da Karol: de 'pensa em uma coisa que não funcionou + uma frase de aprendizado' para 'liste TODOS os fracassos da jornada (não só do que pretende ensinar) + o que aprendeu com cada um, quanto mais melhor'. Novo material: minha-lista-de-fracassos.md (tabela Fracasso x Aprendizado) — aquecimento pra Aula 2 (Minha História Real), não é um terceiro arquivo carregado pra M1/M2 como História Real e Ikigai.",
+    "M4 Aula 7 (Queimar a Ponte) reescrita integralmente (QG-CC-006 PASS): premissa mudada (vitrine já publicada na A4 — feita junto com a aluna; A7 não é a aula que faz ela publicar). Foco: virada de mentalidade de quem testava para quem opera negócio digital de verdade. Conteúdo: volume + frequência (post diário +) + cortes das sessões do M3 como conteúdo de autoridade + rotina semanal de produção + modo teste do Instagram (entrega só pra não seguidores, Karol vai compartilhar tela) + contratar editor/social media como possibilidade (não obrigação) + viral com persona (não com audiência errada) + tráfego como acelerador (não como solução para teto orgânico — orgânico com frequência já cresce)."
   ]
 }

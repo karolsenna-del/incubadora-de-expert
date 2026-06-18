@@ -1,5 +1,5 @@
 # Expert360º — Roteiros Módulo 4: Autoridade
-Versão: 2.1 | Data: 13/06/2026 | Status: Reescrito no modelo de aula (Live 12) — Intro + A1-A8 completos — aguardando validação da Karol
+Versão: 2.2 | Data: 18/06/2026 | Status: A1-A7 aprovadas (QG-CC-006 PASS) — A8 + Encerramento aguardando validação
 
 **Aulas:** 10 (Introdução + 2 mentalidade + 1 tríplice + 1 vitrine + 2 conteúdo + Bloco Final + Escala + Encerramento)
 **Formato:** cada aula segue 5 blocos — Abertura (gancho + ponte com a aula anterior) / O Que e Por Quê (tema da aula + urgência, com a audiência contextualizada) / Como (até 3 pontos principais, cada um em Ideia → Exemplo → Aplicação) / Onde e Quando (aplicação prática — material e timing) / Transição (recap + CTA da aula + gancho pra próxima). Adaptado da "Estrutura de Uma Aula Online" (Live 12), com a Transição entre aulas preservada e reforçada — Expert360º é um curso de aulas conectadas, não lives isoladas. Cada aula termina com ESTRUTURA — TÓPICOS E PONTOS-CHAVE, espelhando os 5 blocos.
@@ -733,113 +733,81 @@ Falta uma coisa — a mais importante. Todo esse trabalho, até agora, ainda est
 
 ---
 
-## AULA 7 — QUEIMAR A PONTE: O ANÚNCIO DE POSICIONAMENTO
-*Estimativa: 10–15 minutos (aula prática — você publica durante ou logo após a aula)*
-*Materiais: Posts Fixados (Aula 4), Frase-Tese (Aula 4), Prompt Legenda + Capa (Aula 6 / M4.7 - Meus Roteiros.md)*
+## QUEIMAR A PONTE
+
+*Estimativa: 8–10 minutos*
 
 ---
 
-**[ABERTURA — o momento em que isso para de ser só seu]**
+Você chegou nesse ponto com tudo construído.
 
-Existe um momento, bem específico, em que tudo que você construiu nos últimos módulos para de ser só seu — e passa a ser de quem te vê.
+Tem persona. Tem promessa. Tem método com nome próprio e história dentro. Tem prova — as sessões do M3 existem, e você sabe que funciona. Tem vitrine posicionada: a bio já diz quem você é, os destaques já estão no ar, os posts fixados também.
 
-É o momento de publicar.
+O que muda daqui pra frente não é o que você tem. É o quanto você usa.
 
-Até aqui, sua persona, sua promessa, seu método, sua prova e agora sua vitrine inteira — tudo isso esteve só com você, ou no máximo com quem sentou numa sessão sua. A partir de agora, isso vai pro feed. Pro público. Pra quem você já sabe que serve, e pra quem ainda nem sabe que você existe.
+Queimar a ponte é isso: a virada de quem estava testando para quem vai operar um negócio digital de verdade — sem amadorismo, sem desculpa, sem reserva mental de "mas será que eu estou pronta?". Você está.
 
----
-
-**[O QUE E POR QUÊ — publicar seu post de posicionamento]**
-
-O tema de hoje — e o entregável final deste módulo — é publicar seu post de posicionamento.
-
-Isso importa agora porque conhecimento sem aplicação não muda nada. Você pode ter a melhor vitrine, a linha editorial mais clara, os prompts mais afiados — se nada disso for ao ar, pra quem te vê, nada mudou.
-
-E vale repetir o que abrimos na Introdução: talvez você já tenha um perfil ativo, com posts e seguidores. Publicar este post não é o seu primeiro post — é o primeiro post depois da tríplice organizada. É o post que marca a virada. Por isso esta aula se chama "queimar a ponte": depois que ele estiver no ar, não tem como fingir que você ainda não sabia quem é, pra quem fala, e como entrega.
+E operar de verdade tem um ritmo. A escala começa com consistência, quantidade e frequência.
 
 ---
 
-**[COMO]**
+**Ponto 1 — Post diário. Mais de um quando possível.**
 
-**Ponto 1 — Escolher o post.**
+Esse é o ritmo de quem quer crescer no orgânico. Não é sugestão — é o que o jogo exige de quem está começando.
 
-Ideia: você já tem 3 candidatos prontos, da Aula 4 — os 3 posts fixados. Pinned 1 (Sobre Ela + Trabalho, Reels, da sua narrativa) e Pinned 2 (Crença/Tese, Carrossel, da sua frase-tese) são os mais fortes pra esse momento — carregam, em poucos segundos ou slides, quem você é e o que você defende.
+E você tem material de sobra. Cada sessão secreta que você fez no M3 é fonte direta de conteúdo. Corte um momento de virada. Uma objeção que você respondeu de um jeito que fez clique. Um detalhe que a cliente percebeu e você nunca tinha nomeado assim. Esses cortes mostram autoridade sem esforço de roteiro — você já fez o trabalho, o conteúdo é consequência.
 
-Exemplo: se seu perfil é novo, comece pelo Pinned 1 — ele se apresenta. Se seu perfil já tem audiência, o Pinned 2 pode ter mais impacto — ele anuncia uma posição, e quem já te segue percebe a virada.
+Além dos cortes, crie uma rotina semanal de produção: um dia pra roteiros, um dia pra gravar, um dia pra editar. Não precisa ser sofisticado. Precisa ser previsível — porque rotina que funciona vale mais do que inspiração que não aparece quando você precisa.
 
-Aplicação: escolha 1 dos 2 — você publica o outro (e o Pinned 3) depois, com calma, não precisa ser hoje. Se nenhum dos dois estiver pronto ainda, volte na Aula 4 e termine o que faltou antes de seguir.
+E um recurso do Instagram que vale usar desde o início: o modo teste. Quando você publica um Reels, tem a opção de testá-lo primeiro — o Instagram entrega o conteúdo só pra não seguidores, avalia o desempenho, e você decide se publica de verdade ou descarta. *(vou compartilhar a tela pra você ver onde fica isso)* É uma forma de validar o conteúdo antes de comprometer o alcance do perfil — e de aumentar as chances de chegar em gente nova toda vez que postar.
 
-**Ponto 2 — Publicar com intenção.**
+**Ponto 2 — Volume, criação e, se quiser, ajuda.**
 
-Ideia: o post em si já está roteirizado desde a Aula 4. O que falta é a legenda — e, se for o caso, fixar no perfil.
+Se manter essa frequência sozinha for pesado demais, contratar um editor de vídeo ou social media é uma possibilidade — não uma obrigação. É uma decisão de negócio: o que você consegue sustentar sozinha, e o que valeria delegar pra não quebrar o ritmo.
 
-Exemplo: gere a legenda com o mesmo prompt de Legenda + Capa da Aula 6 (Seção 3 do M4.7 - Meus Roteiros.md) — cole o roteiro do post escolhido (Pinned 1 ou 2) e, no lugar do tema do dia, a palavra-chave central da sua Frase-Tese (Aula 4). O chat devolve a legenda com SEO/GEO, já fechada com a CTA padrão — "Concorda ou não? Me conta nos comentários, compartilha e me segue". Antes dela, acrescente uma frase de abertura que situe quem está chegando: pra perfil novo, algo como "Esse é meu primeiro post aqui — e é assim que eu trabalho". Pra perfil que já existe, algo como "Depois de [tempo] postando sem direção, decidi: é isso que eu faço, e é pra essas pessoas".
+E na frequência certa, o viral se torna possível. Não é tentar viralizar qualquer coisa — é aumentar o volume de conteúdo com interesse real da sua persona ou que coloque ela em contexto com ela mesma. Quanto mais conteúdo relevante em circulação, maior a chance de um acertar em cheio e se multiplicar com a audiência certa. Viral com audiência errada é vaidade. Viral com persona é agenda cheia.
 
-Aplicação: publique. Se for um dos posts fixados, fixe ele no topo do grid — é literalmente a vitrine (Aula 4) em ação.
+**Ponto 3 — A verdade que é difícil de ouvir.**
 
-**Ponto 3 — O anúncio, pra quem já tem audiência.**
+Se você tratar esse negócio como hobby, ele vai responder como hobby.
 
-Ideia: se você já posta há um tempo, seus seguidores notaram um padrão — mesmo que confuso. Publicar algo com posicionamento claro, sem marcar a mudança, pode passar desapercebido.
+Você tem os prompts. Tem a narrativa alinhada. Tem o plano de conteúdo. Tem as sessões gravadas. Não tem mais desculpa técnica — o que vai determinar o resultado daqui pra frente é simples: quanta energia você coloca. Quanto mais foco, mais rápido o negócio responde. Quanto mais consistência, mais o algoritmo empurra. Quanto mais você aparece, mais é vista.
 
-Exemplo: vale, opcionalmente, marcar essa virada de forma mais explícita — um story no mesmo dia, dizendo algo como "a partir de hoje, é sobre isso que eu vou falar aqui" — ou simplesmente deixar o post fixado fazer esse trabalho silenciosamente.
-
-Aplicação: não existe certo ou errado aqui — o que importa é que o post está no ar, fixado, e representa quem você é agora. Pra quem está abrindo o perfil agora pela primeira vez, esse ponto não se aplica — o próprio post já é a apresentação.
+A ponte queimou. A especialista que ainda não sabia se estava pronta ficou do outro lado. Aqui é o começo do negócio digital de verdade.
 
 ---
 
-**[ONDE E QUANDO]**
-
-Onde: seu Instagram, usando o post fixado escolhido (Aula 4) + a legenda com CTA (Aula 6) +, se aplicável, um story de anúncio. Quando: agora — antes de considerar este módulo concluído. Esse é o gate.
-
----
-
-**[TRANSIÇÃO]**
-
-Com esse post no ar, os 5 Ps estão completos: persona, promessa, método, prova e autoridade.
-
-Você entrou neste módulo validada, mas invisível — ou visível, sem direção clara. Sai posicionada: com perfil, voz, linha editorial e o primeiro post da nova fase, publicado.
-
-Mas publicado não é o fim da linha — é o começo de uma pergunta nova: quem está vendo esse post, hoje? Na próxima aula, a resposta: como turbinar esse post pelo notebook, e começar a escalar seu posicionamento. Te vejo lá.
+O orgânico com frequência e consistência já traz seguidores novos — especialmente com o modo teste e conteúdo de persona. O tráfego pago entra como acelerador: não pra substituir o que você está construindo, mas pra amplificar o que já está funcionando. Na próxima aula, como usar isso sem complicar. Vem comigo.
 
 ---
 
 **ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
 
-**Seção 1: Abertura**
-- Gancho: o momento de publicar = ponto sem volta, o construído passa a ser público
+**Bloco 1 — Abertura**
+- Bridge do M4: tudo construído e no ar — persona, método, prova, vitrine, posts fixados
+- O que muda: não é mais o que tem, é o quanto usa
+- "Queimar a ponte" = virada de quem testava para quem opera o negócio de verdade
 
-**Seção 2: O que e por quê**
-- Tema/entregável final: publicar o post de posicionamento (gate do módulo)
-- Urgência: conhecimento sem aplicação não muda nada
-- Reforço da nuance da Introdução: pode ser 1º post (perfil novo) ou post de virada (perfil já ativo) — "queimar a ponte" vale pros dois
+**Bloco 2 — O que e por quê**
+- Operar de verdade tem ritmo: consistência + quantidade + frequência
+- Sem amadorismo, sem reserva mental de "será que estou pronta?"
 
-**Seção 3: Como — Ponto 1 (escolher o post)**
-- Candidatos: Pinned 1 (Reels, narrativa) e Pinned 2 (Carrossel, frase-tese), da A4
-- Perfil novo → Pinned 1 / Perfil já ativo → Pinned 2 pode ter mais impacto
-- Escolher 1; os outros 2 publicam depois
+**Bloco 3 — Como (3 pontos)**
+- Ponto 1: post diário e mais; cortes das sessões secretas (M3) como conteúdo de autoridade; rotina semanal (scripts/gravar/editar); modo teste do Instagram — entrega só pra não seguidores, valida antes de publicar *(compartilhar tela pra mostrar onde fica)*
+- Ponto 2: frequência sustentável; contratar editor/social media como possibilidade, não obrigação; viral possível na frequência certa — só com conteúdo da persona (viral com audiência errada = vaidade)
+- Ponto 3: hobby responde como hobby; tem tudo que precisa; o que determina resultado é energia e decisão
 
-**Seção 4: Como — Ponto 2 (publicar com intenção)**
-- Legenda = prompt Legenda + Capa (A6, Seção 3) com roteiro do post escolhido + palavra-chave da Frase-Tese (A4) → já vem com CTA padrão
-- Antes da legenda gerada: frase de abertura que situa quem chega (perfil novo vs já ativo)
-- Publicar + fixar no grid
+**Bloco 4 — Onde e quando**
+- A partir de agora, como operação semanal contínua
 
-**Seção 5: Como — Ponto 3 (o anúncio, pra quem já tem audiência)**
-- Opcional: story marcando a virada explicitamente
-- Ou deixar o post fixado comunicar silenciosamente
-- Não se aplica a quem está abrindo o perfil agora
-
-**Seção 6: Onde e quando**
-- Onde: Instagram — post fixado (A4) + legenda CTA (A6) + story opcional
-- Quando: agora, antes de concluir o módulo — gate
-
-**Seção 7: Transição**
-- Recap dos 5 Ps completos (persona+promessa+método+prova+autoridade)
-- Entra invisível/sem direção → sai posicionada
-- Gancho: post publicado é o começo, não o fim — próxima aula = turbinar pra escalar (A8)
+**Bloco 5 — Transição**
+- Orgânico com frequência + modo teste já traz seguidores novos
+- Tráfego = acelerador do que já funciona, não substituto
+- Próxima aula: tráfego pago sem complicar
 
 ---
 
-## AULA 8 — ESCALANDO SEU POSICIONAMENTO: TURBINAR
+## ESCALANDO SEU POSICIONAMENTO: TURBINAR
 *Estimativa: 10–12 minutos*
 *Materiais: post publicado (Aula 7)*
 *Fonte: VOL-vendas-trafego (ETL Alcateia), Seções 5-6*

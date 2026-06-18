@@ -4,8 +4,8 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 09/06/2026
-**Proximo review:** 16/06/2026
+**Ultima atualizacao:** 17/06/2026
+**Proximo review:** 24/06/2026
 
 ---
 
@@ -13,7 +13,7 @@
 
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
-| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Roteirizar M4 — Autoridade (9 aulas) via Course Creator | Karol | Roteirizando — M0+M1+M2+M3 completos (43 aulas), M4 pendente | [tracker](campanhas/expert360-curso/tracker.md) |
+| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Resolver processo de edicao de video (gargalo antes do lancamento) | Karol | Gravando — Fase 2 concluida (43 roteiros prontos, retrofit v2.0). Edicao e proximo gargalo. | [tracker](campanhas/expert360-curso/tracker.md) |
 
 ---
 

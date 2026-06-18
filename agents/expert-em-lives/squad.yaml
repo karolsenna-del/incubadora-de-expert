@@ -1,0 +1,32 @@
+name: Expert em Lives
+slug: expert-em-lives
+type: worker
+version: 1.0.0
+created: 2026-06-18
+description: >
+  Worker especialista em roteiros de live semanal para a Mentoria Incubadora
+  de Expert. Cria roteiros completos no modelo Funil de Zoom — tema, estrutura,
+  exercício concreto e pitch integrado — no tom da Karol.
+
+activation: /expert-em-lives
+
+agents:
+  - id: expert-em-lives
+    file: agents/expert-em-lives.md
+    role: executor
+
+tasks:
+  - start
+  - create-script
+  - propose-theme
+
+knowledge:
+  always:
+    - data/expert-em-lives-rules.md
+  on_demand:
+    - business/campanhas/lives-semanais/lives-expert360-roteiros.md
+    - business/campanhas/lives-semanais/live-19-outline.md
+    - agents/etlmaker/kbs/alcateia-implementacao/00-pipeline/sources/transcricoes/95-funil-de-zoom-vinizoom.txt
+
+logs:
+  - data/expert-em-lives-missions.md
