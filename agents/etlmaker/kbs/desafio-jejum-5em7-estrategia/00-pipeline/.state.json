@@ -1,0 +1,29 @@
+{
+  "kb_slug": "desafio-jejum-5em7-estrategia",
+  "kb_name": "Estratégia de Lançamento — Desafio Jejum 5em7",
+  "mode": "full",
+  "version": "3.0.0",
+  "current_phase": 3,
+  "phase_status": {
+    "phase_0": "completed",
+    "phase_1": "completed",
+    "phase_2": "completed",
+    "phase_3": "completed",
+    "phase_4": "pending"
+  },
+  "sources": [
+    {"id": "bonus", "titulo": "O Que Vai Ser Diferente Dessa Vez", "url": "https://www.youtube.com/watch?v=NXqClQhe5QI"},
+    {"id": "aula1", "titulo": "A escada do emagrecimento definitivo", "url": "https://www.youtube.com/watch?v=N_LoasBoU7w"},
+    {"id": "aula2", "titulo": "Os Pilares do Sucesso do Emagrecimento Definitivo", "url": "https://www.youtube.com/watch?v=J4Cd7fwO0Js"},
+    {"id": "aula3", "titulo": "Base Hormonal Metabólica e a Tríade Secreta", "url": "https://www.youtube.com/watch?v=5SG2wes49bk"},
+    {"id": "aula4", "titulo": "Ciclagem de Dietas e os 2 Guardiões Metabólicos", "url": "https://www.youtube.com/watch?v=dGPJgYQPhzQ"},
+    {"id": "aula5", "titulo": "Detox Mental + O Plano Perfeito do Emagrecimento Definitivo", "url": "https://www.youtube.com/watch?v=YyDHvi39nHE"}
+  ],
+  "volumes_composed": 5,
+  "integration_artifacts": ["README", "REGRAS-CARDINAIS", "GLOSSARIO", "REPERTORIO"],
+  "validation_score": 0,
+  "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003"],
+  "pending": "Aulas 6 e 7 (releases 20-21/06/2026) — Merge mode",
+  "started_at": "2026-06-19T16:40:00",
+  "phases_completed_at": "2026-06-19T18:30:00"
+}
