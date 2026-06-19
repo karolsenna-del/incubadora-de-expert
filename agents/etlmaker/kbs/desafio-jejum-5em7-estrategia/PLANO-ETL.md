@@ -28,10 +28,23 @@ Extrair a estratégia de lançamento para alimentar lives de análise sobre:
 
 ## Status
 - [x] Fase 0: Setup
-- [ ] Fase 1: Mapeamento Territorial (ingestão das transcrições)
-- [ ] Fase 2: Composição Blocada (0/5 volumes)
-- [ ] Fase 3: Integração
+- [x] Fase 1: Mapeamento Territorial — MAPA-TERRITORIAL.md criado (Bônus + A1-A5)
+- [x] Fase 2: Composição Blocada — 5/5 volumes criados
+- [x] Fase 3: Integração — README, REGRAS-CARDINAIS, GLOSSARIO, REPERTORIO
 - [ ] Fase 4: Validação Final
+- [ ] Merge Mode — Aulas 6 e 7 (lives: 20/06 e 21/06 às 07h)
+  - Aula 6: "Exames, Vitaminas e Suplementos" | URL: https://www.youtube.com/watch?v=xa4DzTSiwSU
+  - Aula 7: "Grande Encerramento" | URL: https://www.youtube.com/watch?v=zn7ekwHyVKU
+  - Tentativa em 19/06 às 18h: "Live event begins in 15h / 39h" — não disponível ainda
+
+## Bônus Capturado (19/06 — via Playwright na área de membros)
+**Pílulas de Mindset** — 6 áudios de suporte emocional confirmados e documentados em VOL-05:
+1. "O grande dia está chegando"
+2. "O poder da decisão: Desistir ou Resistir, qual sua escolha?"
+3. "Libertação, soltando as amarras"
+4. "O Medo te paralisa mas o conhecimento te liberta"
+5. "Aceitação ou Revolução?"
+6. "Se Perdoa pois a culpa não é sua"
 
 ## Plano de Volumes (APROVADO)
 | Volume | Tema |

@@ -182,17 +182,43 @@ Dito em toda aula. É ritual de pertencimento que cria senso de chegada ao espa�
 
 ---
 
-## 8. OS ÁUDIOS DE MINDSET
+## 8. AS PÍLULAS DE MINDSET
 
-Mencionados como componente do sistema de engajamento (citados como característica do PEF 360 ou de envios durante o desafio, não claramente detalhados nas transcrições das aulas disponíveis).
+**Fonte confirmada:** Seção "Pílulas de Mindset" na área de membros do desafio (descoberta via Playwright na sessão de Merge Mode, 19/06/2026). São 6 pílulas — conteúdo independente das aulas, entregue como material de suporte emocional ao longo da semana.
 
-**Inferência baseada no contexto:**
-O "Detox Mental" (Aula 5) e as referências a padrões comportamentais e "amarras invisíveis" sugerem que áudios de mindset são enviados via WhatsApp ou Telegram como suporte de reforço mental ao longo do desafio. A função seria:
-- Reforçar a narrativa de absolvição ("não é sua culpa")
-- Trabalhar padrões de pensamento limitante
-- Criar ritual matinal de engajamento (ouvir o áudio antes de começar o jejum)
+### Os 6 títulos confirmados
 
-**Impacto estratégico:** Áudios no WhatsApp/Telegram chegam com notificação — têm taxa de abertura muito superior a email. Cada áudio é um ponto de contato que reconduz a atenção da persona ao desafio e ao expert.
+| # | Título | Momento emocional atendido |
+|---|--------|---------------------------|
+| 1 | "O grande dia está chegando" | Pré-desafio — antecipação e expectativa |
+| 2 | "O poder da decisão: Desistir ou Resistir, qual sua escolha?" | Crise de meio de semana (dias 3-4) |
+| 3 | "Libertação, soltando as amarras" | Eco do Detox Mental (Aula 5) — padrões e loopings |
+| 4 | "O Medo te paralisa mas o conhecimento te liberta" | Objeção de medo antes da oferta |
+| 5 | "Aceitação ou Revolução?" | Pré-decisão de compra — identidade |
+| 6 | "Se Perdoa pois a culpa não é sua" | A frase-âncora central do desafio como pílula final |
+
+### O arco emocional das pílulas
+
+As 6 pílulas constroem um arco emocional paralelo ao das aulas:
+
+```
+Pílula 1: Expectativa → "O grande momento chegou"
+Pílula 2: Comprometimento → "A decisão é sua"
+Pílula 3: Libertação → "Você pode soltar o que te prende"
+Pílula 4: Coragem → "O conhecimento derrota o medo"
+Pílula 5: Identidade → "Você aceita ou se recusa a ficar assim?"
+Pílula 6: Absolvição → "A culpa nunca foi sua"
+```
+
+**Observação estratégica:** A Pílula 6 ("Se Perdoa pois a culpa não é sua") é a frase-âncora central do desafio inteiro — repetida em todas as aulas — reapresentada como áudio independente. Isso reforça o maior produto emocional do método: a absolvição de culpa. A persona que recebe esse áudio no final da semana chega à abertura da oferta (Aula 5) com a absolvição já consolidada em múltiplos formatos (aulas + áudio).
+
+### Como as pílulas se encaixam no sistema
+
+- **Canal:** Área de membros (seção dedicada, acessível a qualquer momento)
+- **Função:** Suporte emocional assíncrono — a lead acessa quando precisar de reforço
+- **Diferencial vs. aulas:** As aulas são ao vivo e densas em conteúdo. As pílulas são curtas, emocionais, e disponíveis entre as aulas para manter a conexão emocional no intervalo
+
+**Impacto estratégico:** Cada pílula é um ponto de contato adicional que reforça a narrativa sem exigir presença na live. A lead que assiste a pílula entre as aulas já chega na próxima com o estado emocional preparado.
 
 ---
 

@@ -23,7 +23,8 @@
   "integration_artifacts": ["README", "REGRAS-CARDINAIS", "GLOSSARIO", "REPERTORIO"],
   "validation_score": 0,
   "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003"],
-  "pending": "Aulas 6 e 7 (releases 20-21/06/2026) — Merge mode",
+  "pending": "Merge mode — Aulas 6 (live 20/06 07h xa4DzTSiwSU) e 7 (live 21/06 07h zn7ekwHyVKU)",
+  "bonus_captured": "Pílulas de Mindset (6 títulos confirmados via área de membros — VOL-05 atualizado)",
   "started_at": "2026-06-19T16:40:00",
   "phases_completed_at": "2026-06-19T18:30:00"
 }
