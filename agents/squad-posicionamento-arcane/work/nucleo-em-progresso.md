@@ -273,6 +273,7 @@ Quer saber se é pra você? Link na bio — pré-diagnóstico 1x1.
 ### Para os Pins
 - [ ] Tirar foto de perfil se necessário (face em foco, fundo neutro) — falta pra avatar do "Card Tweet" e fundo do "Foto + Frase" (capa/CTA do Carrossel 1)
 - [x] Produzir/montar os 3 carrosséis com as capas-conceito acima — Squad Carrossel Arcane (13/06/2026): 3 templates criados e aprovados (Card Tweet, Foto + Frase, Capa Marca com logo real), 23 slides renderizados e entregues em `~/Downloads/carrossel-1-sobre-a-karol/`, `~/Downloads/carrossel-2-tese/`, `~/Downloads/carrossel-3-oferta/`. Pendente: substituir avatar/foto placeholder quando Karol tiver as imagens
+- [x] Re-renderizar carrossel-2-tese com conteúdo revisado (20/06/2026) — 7 slides atualizados: slides 2-6 reescritos (revisões 17-18/06), slide 7 "o segundo" → "o seu"
 - [ ] Montar os 3 carrosséis no Instagram (Canva ou direto com os PNGs) e fixar no perfil (toque e segure → Fixar)
 
 ---
