@@ -1,9 +1,9 @@
 {
-  "fase_atual": 5,
-  "fase_nome": "Desenvolvimento de Aulas",
-  "agente_ativo": "course-creator",
-  "task_ativa": "develop-lesson",
-  "gate_anterior": "QG-CC-006",
+  "fase_atual": 6,
+  "fase_nome": "Branding do Produto",
+  "agente_ativo": "brand-architect",
+  "task_ativa": "brand-product",
+  "gate_anterior": "QG-CC-007",
   "gate_anterior_status": "PASS",
   "setup": {
     "nome": "Expert360º",
@@ -93,7 +93,27 @@
   "modulo_atual": "M4",
   "aula_atual": "M4 COMPLETO — todas as aulas + Encerramento aprovados (QG-CC-006 PASS). Próxima fase: Fase 6 — Branding (/brand-architect)",
   "formato_roteiro": "script completo sem labels de seção visíveis + ESTRUTURA com tópicos e pontos-chave ao final. Títulos das aulas sem numeração — só o nome.",
-  "branding_aprovado": false,
+  "branding_aprovado": true,
+  "branding": {
+    "naming": "Expert360º — mantido (decisão da Karol). Score 7 critérios: 21/35, mantido por representar a completude (360 = método + validação + presença).",
+    "mecanismos_proprietarios": ["Narrativa do Método", "Vendas Secretas", "Autoridade Tríplice"],
+    "onlyness": "O Expert360º é o ÚNICO programa que prepara a especialista offline para o digital de forma completa — e resolve a insegurança antes da exposição: método construído, autoridade e preço validados em vendas reais 1:1, posicionamento no ar — antes de qualquer tráfego ou lançamento.",
+    "diferencial_real": "Não é que concorrentes não ensinam a criar produto (VTSD ensina). O diferencial é que nenhum resolve a insegurança da expert offline. As vendas secretas entregam prova real (método, autoridade, preço e demanda validados) antes de qualquer exposição pública.",
+    "identidade_verbal": {
+      "tom": "Próximo mas não íntimo. Temperatura morna, proximidade baixa. Direto, com história antes da técnica. Seguro, não empolgado.",
+      "vocabulario_usa": ["método autoral", "especialista", "vendas secretas", "fundação/base", "validação/prova", "conhecimento vivido", "pré-marketing", "autonomia com dignidade", "offline→online"],
+      "vocabulario_nao_usa": ["conteúdo", "infoproduto", "influencer", "funil", "tráfego", "escala", "hacks", "atalhos", "vocação", "viral", "audiência", "seguidores", "fama", "exposição"],
+      "nunca_diz": ["Promessa de resultado sem esforço", "Vire uma influencer", "Escale para X dígitos", "Segredos do marketing digital", "Método infalível"]
+    },
+    "hierarquia_produto": {
+      "nivel1": "Expert360º: o programa que prepara a especialista offline para o digital — método, validação e posicionamento — antes do marketing.",
+      "nivel2": "Expert360º é o único programa que resolve o que vem antes de copy, tráfego e lançamento. Em 4 meses, você constrói seu método autoral com nome próprio, valida autoridade e preço em vendas reais 1:1 — sem precisar aparecer publicamente — e monta seu posicionamento digital. Você sai com os 5Ps completos e a segurança de quem já provou que o mercado quer o que você tem.",
+      "nivel3_entregaveis": ["P1 — Persona Compradora", "P2 — Promessa Transformadora", "P3 — Método Autoral", "P4 — Vendas Secretas (3 vendas reais no 1:1)", "P5 — Presença Digital (bio, linha editorial, primeiros conteúdos)"],
+      "nivel3_como": "5 módulos + 6 agentes de IA que trabalham com você durante o curso. Acesso total no primeiro dia. 1 ano de acesso ao conteúdo, agentes e encontros mensais ao vivo."
+    },
+    "charismatic_brand_test": "25/25 — Marca carismática",
+    "gate": "QG-CC-007 PASS"
+  },
   "empacotamento_aprovado": false,
   "prd_criado": true,
   "prd_path": "business/campanhas/expert360-curso/prd.md",
@@ -102,7 +122,7 @@
   "decisao_estrutura_modulos": "Cada módulo tem Aula de Introdução + aulas de conteúdo + Aula de Encerramento. +2 aulas por módulo, total ~42 aulas.",
   "decisao_formulario_pre_diagnostico": "Quando a sessão é agendada, a aluna envia o link do Formulário de Pré-Diagnóstico (Google Forms). 12 perguntas: perfil (nome, profissão, experiência, modo de atuação), situação atual (descrição, histórico digital, desafio), contexto econômico (faixa de renda, histórico de investimento), contexto da sessão (motivação, resultado esperado, dúvidas). A aluna lê as respostas antes da sessão — poupa 10 minutos de aquecimento.",
   "aulas_completas_atualizacao": "Aula 2 M0: ajuste retroativo — instrução do Drive aplicada (uma linha).",
-  "ultima_sessao": "2026-06-18",
+  "ultima_sessao": "2026-06-20",
   "decisoes_sessao": [
     "Padrão de wording atualizado: removida a instrução 'Crie uma cópia deste documento no seu Google Drive (...)' (item 1 de 'Como usar') de todos os 8 materiais que tinham essa linha (minha-lista-de-fracassos.md, minha-historia-real.md, meu-ikigai.md, minha-frase-tese.md, minha-narrativa-posicionamento.md, meus-destaques.md, meus-posts-fixados.md, minha-linha-editorial.md) — a aluna terá uma aula no Módulo de Orientações que ensina a baixar o Drive completo, então não precisa criar cópia individual de cada arquivo. Itens renumerados em todos os 8 arquivos. Subtítulo '*Documento para preenchimento no Google Docs*' removido de minha-historia-real.md, meu-ikigai.md e minha-lista-de-fracassos.md (M0). Subtítulo '*Documento para usar com chat de IA (Claude, ChatGPT, Gemini ou outro)*' MANTIDO nos 5 materiais do M4 — carrega informação diferente (indica que o documento é usado com chat de IA), não é redundante com o novo padrão de Drive. Padrão pra futuros materiais: sem instrução de 'criar cópia/abrir Doc novo'.",
     "Decisão: sem logo do Expert360º nos materiais (docs/templates do Drive da aluna) nem nas aulas gravadas — evita duplicar trabalho de branding com a Mentoria/Incubadora, que reusa os mesmos arquivos como base. Branding (Fase 6, ainda não rodada) decide depois se alguma peça precisa de identidade visual aplicada.",

@@ -52,7 +52,7 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 | Componente ao vivo | Encontro mensal em grupo (Q&A) |
 | Acesso | Total no primeiro dia — sem liberação gradual |
 | Duração | 1 ano de acesso (conteúdo + agentes + encontros) |
-| Tempo de execução | 8–10 semanas |
+| Tempo de execução | 4 meses |
 | Suporte | Via agentes de IA — sem suporte humano direto |
 | Experiência de plataforma | Integrada: aula + roteiro + exercícios vinculados (referência: Arcane) |
 | Preço plataforma | R$697 (âncora, premium) |
