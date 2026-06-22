@@ -1,0 +1,11 @@
+# Course Publisher — Credenciais Hotmart
+# Copie este arquivo para vault.yaml e preencha os dados reais.
+# vault.yaml esta no .gitignore — nunca commite com dados reais.
+
+hotmart:
+  email: "SEU_EMAIL_AQUI"
+  password: "SUA_SENHA_AQUI"
+
+  # URL da página de conteúdo do curso na Hotmart.
+  # Formato: https://app.hotmart.com/products/{ID}/club/content/list
+  product_url: "https://app.hotmart.com/products/SEU_PRODUCT_ID/club/content/list"

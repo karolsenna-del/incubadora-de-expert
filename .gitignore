@@ -1,5 +1,6 @@
 # Dados sensíveis do expert
 business/vault/
+agents/*/data/vault.yaml
 .env
 .env.local
 .env.*.local
