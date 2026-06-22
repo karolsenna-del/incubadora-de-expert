@@ -33,13 +33,25 @@ Tese que deve permear o visual: **"Diploma é o que você estudou. Método é o 
 
 ## Paleta
 
+### Incubadora de Expert (cores oficiais da marca)
+
 | Papel | Cor | Hex |
 |-------|-----|-----|
-| Acento principal | Laranja (mesmo da Incubadora de Expert) | `#F05A28` |
-| Base | Preto profundo | `#111111` |
-| Neutro | Off-white | `#F7F7F5` |
+| Laranja | Cor principal da marca | `#f85627` |
+| Cinza claro | Neutro | `#ddddde` |
+| Quase preto | Base escura | `#090a0b` |
+| Branco | Fundo limpo | `#fcfcfc` |
 
-**Racional:** mesma família da Incubadora de Expert, mais escura e mais densa — premium.
+### Expert360º (variação — mesmo sistema, hierarquia diferente)
+
+| Papel | Cor | Hex |
+|-------|-----|-----|
+| Base dominante | Quase preto (mais denso que na mentoria) | `#090a0b` |
+| Acento | Laranja | `#f85627` |
+| Texto claro / fundo | Branco | `#fcfcfc` |
+| Neutro secundário | Cinza claro (uso mínimo) | `#ddddde` |
+
+**Racional:** mesma família da Incubadora de Expert — preto como cor dominante no Expert360 em vez de fundo claro. Resultado: mais premium, mais sério, mais autoridade. O laranja vira acento, não base.
 
 ---
 

@@ -40,6 +40,9 @@
 | Roteirizar M2 — Processo Autoral (9 aulas) | Course Creator | Done 03/06 | M1 roteirizado | m2-roteiros.md |
 | Roteirizar M3 — Vendas Secretas (12 aulas) | Course Creator | Done 09/06 | M2 roteirizado | m3-roteiros.md |
 | Roteirizar M4 — Autoridade (10 aulas) | Course Creator | Done 15/06 | M3 roteirizado | m4-roteiros.md v2.1 — 10/10 aulas (Encerramento "Quem Você Se Tornou" adicionado 15/06) |
+| Escrever descricoes das aulas (todas as 43 + Modulo de Orientacoes) | Course Creator | Nao iniciado | Roteiros prontos | Preencher `business/producao/expert360/descricoes-template.md` e renomear pra `descricoes.md`. Course Publisher consome esse arquivo no upload automatico na Hotmart. |
+| Gerar assets visuais da area de membros | Course Publisher | Done 22/06 | — | 6 capas + 47 thumbs + 2 banners + avatar + certificado em `business/producao/expert360/assets/` |
+| Subir curso na Hotmart (videos + capas + thumbs + descricoes) | Course Publisher | Nao iniciado | Videos na pasta + descricoes.md prontos | Ativar `/course-publisher`, missao de upload completo |
 
 ---
 
@@ -54,6 +57,8 @@
 ## LOG
 
 > Mais recente primeiro.
+- 22/06 — @course-publisher: design completo da area de membros — 6 capas de modulo (1920x1080), 47 thumbnails de aulas (1280x720), banner desktop (1920x800) + mobile (720x960), avatar do produto (600x600), certificado A4 (2480x3508). Scripts de geracao em `assets/`. Tese "Diploma e o que voce estudou. Metodo e o que voce viveu." usada no banner.
+- 21/06 — @companion: worker Course Publisher criado e instalado em `agents/course-publisher/`. Tarefa de descricoes adicionada para o Course Creator. Pasta `business/producao/expert360/` criada com estrutura de modulos e template de descricoes.
 - 20/06 — @course-chief: Pipeline Course Creator COMPLETO — todas as 10 fases (QG-CC-001 a QG-CC-010 PASS). Revisão final sem gaps críticos. Checklist de produção gerado em `checklist-producao.md`. Próximos passos: escrever/gravar Módulo de Orientações, gravar M2-M4, criar biblioteca de templates, configurar Hotmart, criar agente de suporte na plataforma. M0 e M1 já gravados e editados pela Karol.
 - 20/06 — @product-packager: Fase 7 concluída — Empacotamento aprovado (QG-CC-008 PASS). Cartão de Identidade do produto gerado em `cartao-de-identidade.md`. Decisões: sem encontros mensais ao vivo (substituídos por agente de suporte dentro da Hotmart); preço âncora R$697 / funis R$497 / 12x com juros; benchmark mantido como referência interna apenas (sem comparação direta com FL/VTSD em copy). Próxima fase: Fase 8 — Revisão Final (@course-chief).
 - 15/06 — @course-creator: RETROFIT COMPLETO — todos os 5 módulos no formato Live 12 (5 blocos) prontos pra gravação. M1 (8 aulas) + M2 (9 aulas) + M3 (12 aulas) retrofitados de v1.0 pra v2.0; M4 Encerramento ("Quem Você Se Tornou", 10ª aula) escrito do zero e adicionado ao m4-roteiros.md v2.1. Padrão: Abertura / O Que e Por Quê / Como (3 Pontos Ideia→Exemplo→Aplicação) / Onde e Quando / Transição + ESTRUTURA "Bloco 1-5" (M0-M3) ou "Seção" (M4, mantido pra consistência interna). Substância aprovada da v1.0 preservada — mudança estrutural. Decisão consolidada: "vários agentes de IA" em todos os roteiros (sem número fixo, futuro-prova). _retrofit-v2-plano.md atualizado: status geral COMPLETO.
