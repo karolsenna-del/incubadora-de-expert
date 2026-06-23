@@ -262,7 +262,12 @@ modules:
     hotmart_name: "Módulo de Orientações"
     capa: "MO-orientacoes.png"
     lessons:
-      - hotmart_name: "Como usar o Expert360"
+      - hotmart_name: "Boas-vindas ao Expert360"
         video: null
-        descricao_slug: "00-intro"
+        descricao_slug: "00-boas-vindas"
+        hotmart_lesson_url: ""
+
+      - hotmart_name: "Antes de Começar"
+        video: null
+        descricao_slug: "01-antes-de-comecar"
         hotmart_lesson_url: ""

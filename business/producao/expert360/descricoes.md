@@ -165,5 +165,8 @@ As 5 transformações de identidade — uma por módulo — e o que P5 significa
 
 ## modulo-orientacoes
 
-### 00-intro
-Como navegar o Expert360: a área de membros, os materiais do Drive organizados por módulo, os 6 agentes de IA que você vai usar ao longo do curso e como tirar o máximo de cada ferramenta. O seu ponto de partida antes de começar o M0.
+### 00-boas-vindas
+Bem-vinda ao Expert360. Aqui você vai descobrir o que esse programa é de verdade — não é um curso de marketing, é um sistema completo para você sair do zero digital e chegar ao seu primeiro cliente online usando o que você já sabe. Os 5 Ps, os 5 módulos, os 6 agentes de IA e o que significa o "360" no nome.
+
+### 01-antes-de-comecar
+Três passos antes de começar o M0: entre no grupo do WhatsApp pelo link na descrição desta aula, responda o questionário de pré-diagnóstico (obrigatório antes de avançar) e acesse o Drive pelo link na descrição — copie a pasta completa do Expert360 para o seu Drive pessoal.

@@ -7,7 +7,7 @@
 
 | # | Item | Status |
 |---|---|---|
-| C01 | Escrever roteiros do Módulo de Orientações (boas-vindas, grupo, pré-diagnóstico, Drive) | Pendente |
+| C01 | Escrever roteiros do Módulo de Orientações (boas-vindas, grupo, pré-diagnóstico, Drive) | ✅ Concluído (23/06/2026) — roteiros/modulo-orientacoes-roteiros.md |
 | C02 | Gravar Módulo de Orientações | Pendente — após C01 |
 | C03 | Gravar M0 — 5 aulas | ✅ Gravado e editado |
 | C04 | Gravar M1 — 8 aulas | ✅ Gravado e editado |
@@ -23,7 +23,7 @@
 |---|---|---|
 | A01 | 6 agentes de IA (Persona, Promessa, Processo, Portfólio, Proposta, Tríplice) | ✅ Prontos |
 | A02 | Renomear "Posicionamento de Autoridade" → "Agente da Autoridade Tríplice" no painel | Pendente (Karol) |
-| A03 | Criar agente de suporte dentro da Hotmart | Pendente |
+| A03 | Agente de suporte dentro da Hotmart | ✅ Nativo — sem ação necessária |
 
 ---
 
@@ -44,8 +44,9 @@
 | H01 | Configurar estrutura do curso na Hotmart (módulos, aulas, ordem) | Pendente |
 | H02 | Upload das aulas gravadas + edição | Pendente — após gravação |
 | H03 | Vincular materiais do Drive em cada aula | Pendente |
-| H04 | Configurar gates por entregável | Pendente |
-| H05 | Integrar agente de suporte na Hotmart | Pendente — após A03 |
+| H04 | Configurar bloqueio sequencial (Orientações → M0 → M1 → ...) | Pendente |
+| H09 | Criar questionário de pré-diagnóstico nativo no Hotmart (gate de avanço antes do M0) | Pendente — substituiu Google Forms externo |
+| H05 | Integrar agente de suporte na Hotmart | ✅ Nativo — sem ação necessária |
 | H06 | Configurar página de vendas | Pendente — usar cartão de identidade como base |
 | H07 | Configurar preços: R$697 âncora / R$497 funis / 12x com juros | Pendente |
 | H08 | Definir status do Alumni Group (confirmar ou descartar) | Em aberto |
@@ -56,7 +57,7 @@
 
 | # | Item | Status |
 |---|---|---|
-| R01 | Escrever roteiros do Módulo de Orientações | Pendente — ver C01 |
+| R01 | Escrever roteiros do Módulo de Orientações | ✅ Concluído — ver C01 |
 
 ---
 
@@ -82,6 +83,6 @@
 
 | Prioridade | Itens | Critério |
 |---|---|---|
-| **P1 — Bloqueia o lançamento** | C01–C07, A02–A03, M02–M03, H01–H08, R01 | Sem isso o curso não existe nem pode ser vendido |
+| **P1 — Bloqueia o lançamento** | C02–C07, A02, M02–M03, H01–H04, H06–H08, H09 | Sem isso o curso não existe nem pode ser vendido |
 | **P2 — Importante, pode vir em atualização** | M01 (biblioteca de templates) | Referenciada no curso mas não bloqueia |
 | **P3 — Housekeeping** | D01–D03 | PRD é documento interno |

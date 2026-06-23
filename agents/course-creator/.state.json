@@ -139,7 +139,16 @@
   "decisao_estrutura_modulos": "Cada módulo tem Aula de Introdução + aulas de conteúdo + Aula de Encerramento. +2 aulas por módulo, total ~42 aulas.",
   "decisao_formulario_pre_diagnostico": "Quando a sessão é agendada, a aluna envia o link do Formulário de Pré-Diagnóstico (Google Forms). 12 perguntas: perfil (nome, profissão, experiência, modo de atuação), situação atual (descrição, histórico digital, desafio), contexto econômico (faixa de renda, histórico de investimento), contexto da sessão (motivação, resultado esperado, dúvidas). A aluna lê as respostas antes da sessão — poupa 10 minutos de aquecimento.",
   "aulas_completas_atualizacao": "Aula 2 M0: ajuste retroativo — instrução do Drive aplicada (uma linha).",
-  "ultima_sessao": "2026-06-20",
+  "ultima_sessao": "2026-06-23",
+  "modulo_orientacoes": {
+    "status": "roteiros_completos",
+    "path": "business/campanhas/expert360-curso/roteiros/modulo-orientacoes-roteiros.md",
+    "aulas": ["Boas-vindas", "Antes de começar"],
+    "formato": "texto corrido sem rótulos de bloco visíveis + ESTRUTURA ao final",
+    "decisao_pre_diagnostico": "Questionário nativo do Hotmart (não Google Forms) — configurado como requisito de avanço antes do M0. Gera relatório de respostas por aluna exportável.",
+    "decisao_grupo": "WhatsApp — link na descrição da aula 'Antes de começar'",
+    "gate": "QG-CC-006 PASS"
+  },
   "decisoes_sessao": [
     "Padrão de wording atualizado: removida a instrução 'Crie uma cópia deste documento no seu Google Drive (...)' (item 1 de 'Como usar') de todos os 8 materiais que tinham essa linha (minha-lista-de-fracassos.md, minha-historia-real.md, meu-ikigai.md, minha-frase-tese.md, minha-narrativa-posicionamento.md, meus-destaques.md, meus-posts-fixados.md, minha-linha-editorial.md) — a aluna terá uma aula no Módulo de Orientações que ensina a baixar o Drive completo, então não precisa criar cópia individual de cada arquivo. Itens renumerados em todos os 8 arquivos. Subtítulo '*Documento para preenchimento no Google Docs*' removido de minha-historia-real.md, meu-ikigai.md e minha-lista-de-fracassos.md (M0). Subtítulo '*Documento para usar com chat de IA (Claude, ChatGPT, Gemini ou outro)*' MANTIDO nos 5 materiais do M4 — carrega informação diferente (indica que o documento é usado com chat de IA), não é redundante com o novo padrão de Drive. Padrão pra futuros materiais: sem instrução de 'criar cópia/abrir Doc novo'.",
     "Decisão: sem logo do Expert360º nos materiais (docs/templates do Drive da aluna) nem nas aulas gravadas — evita duplicar trabalho de branding com a Mentoria/Incubadora, que reusa os mesmos arquivos como base. Branding (Fase 6, ainda não rodada) decide depois se alguma peça precisa de identidade visual aplicada.",

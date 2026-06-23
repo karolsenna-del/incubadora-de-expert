@@ -6,10 +6,12 @@ Faz upload de vídeos, thumbnails e descrições para a área de membros da Hotm
 Roda em modo visível (headless=False) para suportar 2FA e intervenções manuais.
 
 Uso:
-    python course-publisher.py --dry-run          # ver plano sem abrir browser
-    python course-publisher.py --modulo M0        # só M0
-    python course-publisher.py                    # todos os módulos com vídeo pronto
-    python course-publisher.py --so-descricoes    # só descrições (sem upload de vídeo)
+    python course-publisher.py --dry-run                    # ver plano sem abrir browser
+    python course-publisher.py --modulo M0                  # só M0
+    python course-publisher.py                              # todos os módulos com vídeo pronto
+    python course-publisher.py --so-descricoes              # só descrições (sem upload de vídeo)
+    python course-publisher.py --criar-estrutura            # criar módulos e aulas na Hotmart
+    python course-publisher.py --criar-estrutura --modulo M0  # criar só o M0
 """
 
 import sys
@@ -60,17 +62,17 @@ def load_config() -> list:
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)["modules"]
 
+def load_config_raw() -> dict:
+    with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+def save_config_raw(data: dict):
+    with open(CONFIG_PATH, "w", encoding="utf-8") as f:
+        yaml.dump(data, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
+
 # ─── DESCRIÇÕES ────────────────────────────────────────────────────────────────
 
 def parse_descricoes() -> dict:
-    """
-    Retorna:
-    {
-      "M0": {"00-intro": "texto...", "01-fracasso-como-prova": "texto..."},
-      "M1": {...},
-      ...
-    }
-    """
     descricoes: dict = {}
     current_modulo = None
     current_slug   = None
@@ -81,7 +83,6 @@ def parse_descricoes() -> dict:
             line = raw_line.rstrip()
 
             if line.startswith("## "):
-                # Fecha slug anterior
                 if current_slug and current_modulo is not None:
                     descricoes[current_modulo][current_slug] = _clean_buffer(buffer)
                     buffer = []
@@ -98,7 +99,6 @@ def parse_descricoes() -> dict:
             elif current_slug is not None and line not in ("---", ""):
                 buffer.append(line)
 
-    # Fecha o último
     if current_slug and current_modulo is not None:
         descricoes[current_modulo][current_slug] = _clean_buffer(buffer)
 
@@ -111,13 +111,6 @@ def _clean_buffer(buf: list) -> str:
 # ─── PLANO ────────────────────────────────────────────────────────────────────
 
 def build_plan(modules: list, descricoes: dict) -> list:
-    """
-    Retorna lista de tarefas prontas para execução:
-    {
-      modulo_id, hotmart_name, video_path (Path|None),
-      thumb_path (Path|None), descricao (str), lesson_url (str)
-    }
-    """
     tasks = []
     for mod in modules:
         mod_id = mod["id"]
@@ -125,19 +118,16 @@ def build_plan(modules: list, descricoes: dict) -> list:
             slug = lesson["descricao_slug"]
             video_file = lesson.get("video")
 
-            # Vídeo
             video_path = None
             if video_file:
                 candidate = PRODUCAO_BASE / mod_id / video_file
                 if candidate.exists():
                     video_path = candidate
 
-            # Thumbnail
             thumb_path = THUMBS_DIR / f"{mod_id}-{slug}.png"
             if not thumb_path.exists():
                 thumb_path = None
 
-            # Descrição
             descricao = descricoes.get(mod_id, {}).get(slug, "")
 
             tasks.append({
@@ -187,67 +177,294 @@ def print_plan(tasks: list, so_descricoes: bool = False):
     urls_vazias = sum(1 for t in tasks if not t["lesson_url"])
     if urls_vazias:
         print(f"\n  ATENÇÃO: {urls_vazias} aulas sem hotmart_lesson_url no config.yaml.")
-        print(f"  Preencha os campos hotmart_lesson_url após criar as aulas na Hotmart,")
-        print(f"  ou o script vai tentar navegar por nome (menos confiável).\n")
+        print(f"  Use --criar-estrutura para criar os módulos e capturar as URLs automaticamente.\n")
 
-# ─── HOTMART AUTOMATION ────────────────────────────────────────────────────────
+# ─── HOTMART LOGIN / NAVEGAÇÃO ────────────────────────────────────────────────
 
 def hotmart_login(page: Page, vault: dict):
     print("\n  Abrindo Hotmart...")
     page.goto("https://app.hotmart.com/user/login")
     page.wait_for_load_state("domcontentloaded")
 
-    try:
-        page.get_by_label("E-mail").fill(vault["email"])
-    except Exception:
-        page.locator("input[type='email'], input[name='email']").first.fill(vault["email"])
-
-    try:
-        page.get_by_label("Senha").fill(vault["password"])
-    except Exception:
-        page.locator("input[type='password']").first.fill(vault["password"])
-
-    page.keyboard.press("Enter")
-
-    print("  Aguardando login... (resolva 2FA/captcha se aparecer)")
-    try:
-        page.wait_for_url("**hotmart.com/**", timeout=120_000)
-        page.wait_for_load_state("networkidle", timeout=30_000)
-    except Exception:
-        pass
-
-    if "login" in page.url:
-        print("\n  [PAUSA] Login não completou automaticamente.")
-        input("  Faça login manualmente e pressione Enter para continuar...")
+    print("\n  Faça login manualmente no browser:")
+    print(f"  Email: {vault['email']}")
+    print("  (preencha email, senha e 2FA no browser)")
+    input("\n  Pressione Enter aqui quando estiver logada e na tela principal do Hotmart...")
 
     print("  Login OK")
 
 
-def navigate_to_course(page: Page, vault: dict):
+def navigate_to_modules_page(page: Page, vault: dict):
     product_url = vault.get("product_url", "")
     if not product_url or "SEU_PRODUCT_ID" in product_url:
         print("\n  [AVISO] product_url não configurado no vault.yaml.")
-        input("  Navegue manualmente até a página de conteúdo do curso e pressione Enter...")
+        input("  Navegue manualmente até a página de módulos do curso e pressione Enter...")
         return
 
-    print(f"\n  Abrindo curso: {product_url}")
+    print(f"\n  Abrindo página de módulos: {product_url}")
     page.goto(product_url)
     page.wait_for_load_state("networkidle", timeout=30_000)
-    print("  Página do curso carregada")
+    print("  Página de módulos carregada")
+
+# ─── CRIAÇÃO DE ESTRUTURA ─────────────────────────────────────────────────────
+
+def _try_click(page: Page, strategies: list) -> bool:
+    """Tenta cada estratégia de clique em sequência. Retorna True se alguma funcionou."""
+    for fn in strategies:
+        try:
+            fn()
+            page.wait_for_timeout(1200)
+            return True
+        except Exception:
+            continue
+    return False
+
+
+def create_hotmart_module(page: Page, mod_name: str) -> bool:
+    """Cria um módulo na Hotmart. Retorna True se criado."""
+    print(f"\n  Criando módulo: {mod_name}")
+
+    clicked = _try_click(page, [
+        lambda: page.get_by_role("button", name="Adicionar módulo").click(),
+        lambda: page.get_by_role("button", name="Nova seção").click(),
+        lambda: page.get_by_role("button", name="Novo módulo").click(),
+        lambda: page.get_by_text("Adicionar módulo", exact=False).first.click(),
+        lambda: page.get_by_text("Nova seção", exact=False).first.click(),
+        lambda: page.get_by_text("Novo módulo", exact=False).first.click(),
+        lambda: page.locator("[data-testid*='add-module'], [data-testid*='new-module']").first.click(),
+        lambda: page.locator("button:has-text('módulo'), button:has-text('seção')").first.click(),
+    ])
+
+    if not clicked:
+        print(f"  [PAUSA] Não encontrei o botão 'Adicionar módulo'.")
+        input(f"  Clique em 'Adicionar módulo/seção' manualmente e pressione Enter...")
+
+    # Preencher nome
+    name_filled = False
+    try:
+        field = page.locator("input[type='text']:visible").first
+        field.wait_for(state="visible", timeout=5000)
+        field.click()
+        field.fill(mod_name)
+        page.wait_for_timeout(400)
+        name_filled = True
+    except Exception:
+        print(f"  [PAUSA] Preencha o nome '{mod_name}' manualmente.")
+        input("  Pressione Enter quando preencher...")
+        return True
+
+    if name_filled:
+        confirmed = _try_click(page, [
+            lambda: page.get_by_role("button", name="Salvar").click(),
+            lambda: page.get_by_role("button", name="Criar").click(),
+            lambda: page.get_by_role("button", name="Confirmar").click(),
+            lambda: page.get_by_role("button", name="Adicionar").click(),
+            lambda: page.keyboard.press("Enter"),
+        ])
+        if not confirmed:
+            print(f"  [PAUSA] Confirme a criação do módulo manualmente.")
+            input("  Pressione Enter após confirmar...")
+
+    page.wait_for_timeout(1500)
+    print(f"  Módulo '{mod_name}' criado")
+    return True
+
+
+def create_hotmart_lesson(page: Page, lesson_name: str, mod_name: str) -> str:
+    """Cria uma aula dentro do módulo e retorna a URL de edição."""
+    print(f"    Criando aula: {lesson_name}")
+
+    # Tentar clicar no botão de adicionar aula dentro do módulo correto
+    clicked = _try_click(page, [
+        # Estratégias específicas ao módulo: encontra o módulo e clica no "+" próximo
+        lambda: page.locator(f"[data-testid*='add-lesson'], [aria-label*='aula']").last.click(),
+        lambda: page.get_by_role("button", name="Adicionar aula").last.click(),
+        lambda: page.get_by_role("button", name="Nova aula").last.click(),
+        lambda: page.get_by_text("Adicionar aula", exact=False).last.click(),
+        lambda: page.get_by_text("Nova aula", exact=False).last.click(),
+        lambda: page.get_by_text("Adicionar conteúdo", exact=False).last.click(),
+        lambda: page.locator("button:has-text('aula')").last.click(),
+    ])
+
+    if not clicked:
+        print(f"    [PAUSA] Clique em 'Adicionar aula' dentro do módulo '{mod_name}'.")
+        input("    Pressione Enter quando clicar...")
+
+    # Selecionar tipo Vídeo se aparecer menu de tipo
+    page.wait_for_timeout(800)
+    _try_click(page, [
+        lambda: page.get_by_text("Vídeo", exact=True).first.click(),
+        lambda: page.get_by_role("option", name="Vídeo").click(),
+        lambda: page.locator("[data-type='video'], [value='video']").first.click(),
+    ])
+    page.wait_for_timeout(600)
+
+    # Preencher título
+    name_filled = False
+    try:
+        field = page.locator(
+            "input[type='text']:visible, input[placeholder*='ítulo']:visible, input[placeholder*='ome']:visible"
+        ).first
+        field.wait_for(state="visible", timeout=5000)
+        field.click()
+        field.fill(lesson_name)
+        page.wait_for_timeout(400)
+        name_filled = True
+    except Exception:
+        print(f"    [PAUSA] Preencha o título '{lesson_name}' manualmente.")
+        input("    Pressione Enter quando preencher...")
+
+    if name_filled:
+        _try_click(page, [
+            lambda: page.get_by_role("button", name="Salvar").click(),
+            lambda: page.get_by_role("button", name="Criar").click(),
+            lambda: page.get_by_role("button", name="Adicionar").click(),
+            lambda: page.get_by_role("button", name="Confirmar").click(),
+            lambda: page.keyboard.press("Enter"),
+        ])
+
+    page.wait_for_timeout(2000)
+
+    # Capturar URL de edição da aula
+    url = _capture_lesson_url(page, lesson_name)
+    return url
+
+
+def _capture_lesson_url(page: Page, lesson_name: str) -> str:
+    """Tenta capturar a URL de edição da aula. Fallback: input manual."""
+    page.wait_for_timeout(1000)
+
+    # Tenta navegar até a aula pelo nome para abrir edição
+    try:
+        lesson_el = page.get_by_text(lesson_name, exact=True).first
+        lesson_el.click()
+        page.wait_for_load_state("networkidle", timeout=10_000)
+        url = page.url
+        if url and ("edit" in url or "lesson" in url or "content" in url or "aula" in url):
+            print(f"      URL: {url}")
+            return url
+    except Exception:
+        pass
+
+    # Tentar ícone de edição (lápis) próximo ao nome da aula
+    try:
+        edit_btn = page.locator(
+            f"[title='Editar'], [aria-label='Editar'], button[data-testid*='edit']"
+        ).last
+        edit_btn.click()
+        page.wait_for_load_state("networkidle", timeout=10_000)
+        url = page.url
+        if url:
+            print(f"      URL: {url}")
+            return url
+    except Exception:
+        pass
+
+    # Fallback manual
+    print(f"      [PAUSA] Não consegui capturar URL de '{lesson_name}' automaticamente.")
+    print(f"      Clique na aula para abrir a edição e copie a URL do browser.")
+    url = input(f"      Cole aqui (ou Enter para pular): ").strip()
+    return url
+
+
+def save_lesson_urls_to_config(lesson_urls: dict):
+    """
+    Salva as URLs das aulas no config.yaml.
+    lesson_urls: {mod_id: {lesson_hotmart_name: url}}
+    """
+    raw = load_config_raw()
+    total = 0
+
+    for mod in raw["modules"]:
+        mod_id = mod["id"]
+        if mod_id not in lesson_urls:
+            continue
+        for lesson in mod["lessons"]:
+            aula_name = lesson["hotmart_name"]
+            url = lesson_urls[mod_id].get(aula_name, "")
+            if url:
+                lesson["hotmart_lesson_url"] = url
+                total += 1
+
+    save_config_raw(raw)
+    print(f"\n  config.yaml atualizado com {total} URLs de aula")
+
+
+def create_all_modules(page: Page, modules: list, vault: dict):
+    """Cria toda a estrutura de módulos e aulas na Hotmart."""
+
+    navigate_to_modules_page(page, vault)
+    product_url = vault.get("product_url", "")
+
+    lesson_urls: dict = {}
+
+    for mod in modules:
+        mod_id   = mod["id"]
+        mod_name = mod["hotmart_name"]
+
+        print(f"\n{'='*55}")
+        print(f"  MÓDULO {mod_id}: {mod_name}")
+        print(f"{'='*55}")
+
+        lesson_urls[mod_id] = {}
+
+        # Voltar para página de módulos antes de cada módulo novo
+        if product_url and "SEU_PRODUCT_ID" not in product_url:
+            page.goto(product_url)
+            page.wait_for_load_state("networkidle", timeout=20_000)
+
+        # Criar o módulo
+        create_hotmart_module(page, mod_name)
+
+        # Criar cada aula
+        for lesson in mod["lessons"]:
+            lesson_name = lesson["hotmart_name"]
+
+            # Garantir que estamos na página do módulo antes de cada aula
+            if product_url and "SEU_PRODUCT_ID" not in product_url:
+                page.goto(product_url)
+                page.wait_for_load_state("networkidle", timeout=15_000)
+
+            url = create_hotmart_lesson(page, lesson_name, mod_name)
+            lesson_urls[mod_id][lesson_name] = url
+
+    # Salvar no config.yaml
+    save_lesson_urls_to_config(lesson_urls)
+
+    # Relatório final
+    print(f"\n{'='*55}")
+    print(f"  ESTRUTURA CRIADA — RELATÓRIO")
+    print(f"{'='*55}")
+
+    sem_url = 0
+    for mod_id, lessons in lesson_urls.items():
+        print(f"\n  [{mod_id}]")
+        for name, url in lessons.items():
+            if url:
+                print(f"    ✓ {name}")
+            else:
+                print(f"    ✗ {name}  ← URL não capturada")
+                sem_url += 1
+
+    if sem_url:
+        print(f"\n  ATENÇÃO: {sem_url} aulas sem URL. Preencha hotmart_lesson_url no config.yaml.")
+    else:
+        print(f"\n  Tudo certo. Próximo passo: upload dos vídeos.")
+        print(f"  Execute: python course-publisher.py --modulo M0")
+
+# ─── UPLOAD DE CONTEÚDO ────────────────────────────────────────────────────────
+
+def navigate_to_course(page: Page, vault: dict):
+    navigate_to_modules_page(page, vault)
 
 
 def find_lesson_page(page: Page, task: dict) -> bool:
-    """
-    Navega até a página de edição da aula.
-    Retorna True se chegou, False se não encontrou.
-    """
     url = task["lesson_url"]
     if url:
         page.goto(url)
         page.wait_for_load_state("networkidle", timeout=30_000)
         return True
 
-    # Tenta encontrar pelo nome da aula na página atual
     try:
         link = page.get_by_text(task["aula_nome"], exact=False).first
         link.click()
@@ -258,16 +475,12 @@ def find_lesson_page(page: Page, task: dict) -> bool:
 
 
 def upload_video(page: Page, video_path: Path):
-    """Faz upload do arquivo de vídeo na página de edição da aula."""
     print(f"    Enviando vídeo: {video_path.name}")
     try:
-        # Hotmart geralmente tem um botão "Upload" ou input file
         with page.expect_file_chooser(timeout=10_000) as fc_info:
-            # Tenta botão de upload por texto
             try:
                 page.get_by_text("Upload", exact=False).first.click()
             except Exception:
-                # Fallback: clica no input file diretamente
                 page.locator("input[type='file']").first.click()
         fc_info.value.set_files(str(video_path))
         print(f"    Vídeo enviado (processamento pode demorar)")
@@ -278,10 +491,8 @@ def upload_video(page: Page, video_path: Path):
 
 
 def upload_thumbnail(page: Page, thumb_path: Path):
-    """Faz upload da thumbnail na página de edição da aula."""
     print(f"    Enviando thumbnail: {thumb_path.name}")
     try:
-        # Hotmart: botão de capa/thumbnail geralmente contém "Capa" ou "Imagem"
         with page.expect_file_chooser(timeout=10_000) as fc_info:
             try:
                 page.get_by_text("Capa", exact=False).first.click()
@@ -298,17 +509,14 @@ def upload_thumbnail(page: Page, thumb_path: Path):
 
 
 def set_descricao(page: Page, descricao: str):
-    """Preenche e salva a descrição da aula."""
     print(f"    Preenchendo descrição...")
     try:
-        # Tenta campo de texto editável (pode ser textarea ou contenteditable)
         field = page.locator(
             "textarea:visible, [contenteditable='true']:visible"
         ).first
         field.click()
         field.fill(descricao)
 
-        # Salvar
         try:
             page.get_by_role("button", name="Salvar").click()
             page.wait_for_timeout(1500)
@@ -327,21 +535,17 @@ def set_descricao(page: Page, descricao: str):
 def process_task(page: Page, task: dict, so_descricoes: bool):
     print(f"\n  >> {task['aula_nome']}")
 
-    # Navegar até a aula
     if not find_lesson_page(page, task):
         print(f"    [AVISO] Aula não encontrada na Hotmart — pulando")
         print(f"    Preencha hotmart_lesson_url no config.yaml para esta aula")
         return
 
-    # Upload de vídeo
     if not so_descricoes and task["video_path"]:
         upload_video(page, task["video_path"])
 
-    # Upload de thumbnail
     if not so_descricoes and task["thumb_path"]:
         upload_thumbnail(page, task["thumb_path"])
 
-    # Descrição
     if task["descricao"]:
         set_descricao(page, task["descricao"])
 
@@ -360,11 +564,13 @@ def main():
                         help="Só preencher descrições (sem upload de vídeo/thumbnail)")
     parser.add_argument("--so-com-video", action="store_true",
                         help="Processar só aulas que já têm vídeo pronto")
+    parser.add_argument("--criar-estrutura", action="store_true",
+                        help="Criar módulos e aulas na Hotmart (captura URLs e salva no config.yaml)")
     args = parser.parse_args()
 
     print("\n=== COURSE PUBLISHER — Expert360 ===")
 
-    modules   = load_config()
+    modules    = load_config()
     descricoes = parse_descricoes()
 
     # Filtrar módulo específico
@@ -374,9 +580,46 @@ def main():
             print(f"[ERRO] Módulo '{args.modulo}' não encontrado no config.yaml")
             sys.exit(1)
 
+    # ── MODO: CRIAR ESTRUTURA ─────────────────────────────────────────────────
+    if args.criar_estrutura:
+        modulos_str = args.modulo.upper() if args.modulo else "TODOS"
+        print(f"\n  Modo: CRIAR ESTRUTURA — {modulos_str}")
+        print(f"  Módulos a criar: {[m['hotmart_name'] for m in modules]}")
+
+        vault = load_vault()
+        confirmar = input("\n  Iniciar criação de módulos na Hotmart? (s/n): ").strip().lower()
+        if confirmar != "s":
+            print("  Cancelado.")
+            return
+
+        print("\n  IMPORTANTE: Feche o Chrome completamente antes de continuar.")
+        input("  Pressione Enter quando o Chrome estiver fechado...")
+
+        with sync_playwright() as p:
+            context = p.chromium.launch_persistent_context(
+                user_data_dir=r"C:\Users\karol\AppData\Local\Google\Chrome\User Data",
+                channel="chrome",
+                headless=False,
+                slow_mo=400,
+                args=["--start-maximized"],
+                no_viewport=True,
+            )
+            page = context.new_page()
+
+            try:
+                hotmart_login(page, vault)
+                create_all_modules(page, modules, vault)
+                print("\n\n  Estrutura criada.")
+                input("  Pressione Enter para fechar o browser...")
+            except KeyboardInterrupt:
+                print("\n\nInterrompido.")
+            finally:
+                context.close()
+        return
+
+    # ── MODO: UPLOAD ──────────────────────────────────────────────────────────
     tasks = build_plan(modules, descricoes)
 
-    # Filtrar só aulas com vídeo pronto
     if args.so_com_video:
         tasks = [t for t in tasks if t["video_path"]]
 
@@ -398,10 +641,19 @@ def main():
         print("Cancelado.")
         return
 
+    print("\n  IMPORTANTE: Feche o Chrome completamente antes de continuar.")
+    input("  Pressione Enter quando o Chrome estiver fechado...")
+
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, slow_mo=300)
-        context = browser.new_context(viewport={"width": 1440, "height": 900})
-        page    = context.new_page()
+        context = p.chromium.launch_persistent_context(
+            user_data_dir=r"C:\Users\karol\AppData\Local\Google\Chrome\User Data",
+            channel="chrome",
+            headless=False,
+            slow_mo=300,
+            args=["--start-maximized"],
+            no_viewport=True,
+        )
+        page = context.new_page()
 
         try:
             hotmart_login(page, vault)
@@ -423,7 +675,7 @@ def main():
         except KeyboardInterrupt:
             print("\n\nInterrompido.")
         finally:
-            browser.close()
+            context.close()
 
 
 if __name__ == "__main__":
