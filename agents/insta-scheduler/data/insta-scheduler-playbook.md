@@ -86,13 +86,12 @@ Mostrar últimas 10 linhas da tabela de log.
 
 **Checklist:**
 - [ ] Vault preenchido com Meta Token + IG User ID
-- [ ] Vault preenchido com Google Service Account JSON
-- [ ] Vault preenchido com Drive Folder ID
+- [ ] Vault preenchido com Cloudinary Cloud Name + API Key + API Secret
 - [ ] Pasta `business/instagram/fila/` existe
 - [ ] Pasta `business/instagram/agendados/` existe
 - [ ] Arquivo `business/instagram/agendamentos.md` existe
 - [ ] Token Meta válido (verificar via API)
-- [ ] Drive API acessível (test upload + delete)
+- [ ] Cloudinary acessível (test upload via API)
 
 ---
 

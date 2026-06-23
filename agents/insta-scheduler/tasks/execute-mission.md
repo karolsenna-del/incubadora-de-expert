@@ -7,7 +7,7 @@ Entrada: "Slug do carrossel a agendar (ou pasta identificada na fila)"
 Saida: "Carrossel agendado no Instagram + log atualizado + pasta movida"
 Checklist:
   - "Pasta validada (slides + legenda.txt)"
-  - "Slides carregados no Google Drive"
+  - "Slides enviados para o Cloudinary"
   - "URLs públicas obtidas"
   - "Próximo dia livre identificado na Meta API"
   - "Carrossel agendado"
@@ -29,7 +29,7 @@ Executar o pipeline completo de agendamento: validar → upload → consultar �
 
 ## Pré-condições
 
-- Vault carregado com token Meta e credenciais Google Drive
+- Vault carregado com token Meta e credenciais Cloudinary
 - Pasta `business/instagram/fila/{slug}/` existe
 
 ---
@@ -56,36 +56,40 @@ Vou agendar `{slug}`.
 Confirma?
 ```
 
-### Step 2: Upload dos Slides para Google Drive
+### Step 2: Upload dos Slides para o Cloudinary
 
-Usar credenciais do Vault (Service Account JSON ou OAuth token).
+Usar credenciais do Vault (`CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`).
 
 Para cada slide (em ordem: slide-01, slide-02, ...):
 
 ```python
-# Lógica de upload por slide
-POST https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart
-Headers:
-  Authorization: Bearer {drive_access_token}
-Body (multipart):
-  metadata: {"name": "{slug}-slide-0N.png", "parents": ["{DRIVE_FOLDER_ID}"]}
+import hashlib, time
+
+timestamp = int(time.time())
+public_id = f"{slug}-slide-{i+1:02d}"
+
+# Gerar assinatura (SHA1 do params + api_secret)
+signature_str = f"public_id={public_id}&timestamp={timestamp}{CLOUDINARY_API_SECRET}"
+signature = hashlib.sha1(signature_str.encode()).hexdigest()
+
+# Upload autenticado
+POST https://api.cloudinary.com/v1_1/{CLOUDINARY_CLOUD_NAME}/image/upload
+Body (multipart/form-data):
   file: <binary content do slide>
+  public_id: {public_id}
+  api_key: {CLOUDINARY_API_KEY}
+  timestamp: {timestamp}
+  signature: {signature}
 
-# Resposta: {"id": "fileId"}
-
-# Tornar público
-POST https://www.googleapis.com/drive/v3/files/{fileId}/permissions
-Body: {"role": "reader", "type": "anyone"}
-
-# URL pública
-url = f"https://drive.google.com/uc?export=view&id={fileId}"
+# Resposta: {"secure_url": "https://res.cloudinary.com/{cloud_name}/image/upload/{public_id}.png"}
+url = response["secure_url"]
 ```
 
 Coletar lista de URLs: `[url_slide01, url_slide02, ...]`
 
 **SE upload falhar:**
 - Tentar novamente 1x
-- SE falhar novamente: PARAR — "Falha no upload do slide {N} para o Drive. Erro: {mensagem}. Verifique as credenciais no vault e a conexão."
+- SE falhar novamente: PARAR — "Falha no upload do slide {N} para o Cloudinary. Erro: {mensagem}. Verifique as credenciais no vault."
 
 ### Step 3: Consultar Meta API — Próximo Dia Livre
 
@@ -181,8 +185,8 @@ business/instagram/fila/{slug}/ → business/instagram/agendados/{slug}/
 
 1. **Plan:** Agendar `{slug}` para {data} às 12h
 2. **Do:** Upload {N} slides + agendamento via Meta API
-3. **Study:** Bateu? Algo demorou mais que esperado? Erro de URL do Drive?
-4. **Act:** SE URL do Drive causou problema → atualizar Rules. SE processo novo → criar SOP.
+3. **Study:** Bateu? Algo demorou mais que esperado? Erro de URL do Cloudinary?
+4. **Act:** SE URL do Cloudinary causou problema → atualizar Rules. SE processo novo → criar SOP.
 
 ---
 
@@ -207,7 +211,7 @@ Atualizar token no Vault após renovação.
 | Cenário | Código Meta | Ação |
 |---------|------------|------|
 | Token expirado | 190 | Executar SOP-001 (renovar) e tentar novamente |
-| URL inválida (Drive) | 100 | Verificar se arquivo é público. Tentar URL alternativa. Se persistir, propor Cloudinary |
+| URL inválida (Cloudinary) | 100 | Verificar se upload completou com sucesso. Checar secure_url na resposta. Tentar re-upload do slide. |
 | Rate limit | 4 / 32 | Aguardar 60s e tentar novamente (máx 2x) |
 | Post já existe no dia | — | Pegar próximo dia disponível |
 | Carrossel > 10 slides | — | PARAR — "Carrossel `{slug}` tem {N} slides. Instagram aceita no máximo 10." |

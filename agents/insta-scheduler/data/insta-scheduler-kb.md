@@ -184,85 +184,70 @@ Resposta: `{"access_token": "novo_token", "token_type": "bearer", "expires_in": 
 
 ---
 
-## 3. GOOGLE DRIVE API
+## 3. CLOUDINARY API
 
 ### 3.1 Visão Geral
 
-**Documentação:** https://developers.google.com/drive/api/v3/reference
-**Base URL:** `https://www.googleapis.com/`
-**Autenticação:** Service Account (recomendado — sem OAuth interativo)
+**Documentação:** https://cloudinary.com/documentation/image_upload_api_reference
+**Base URL:** `https://api.cloudinary.com/v1_1/{cloud_name}/`
+**Autenticação:** Upload assinado com SHA1 (API Key + API Secret do Vault)
 
-### 3.2 Service Account Setup (feito uma vez pela Karol)
+**Vantagem sobre Drive:** URLs diretas sem redirect — Meta Graph API aceita sem erros.
 
-1. Criar projeto no Google Cloud Console
-2. Ativar Google Drive API
-3. Criar Service Account → baixar JSON key
-4. Criar pasta `instagram-staging` no Drive → compartilhar com email do Service Account (editor)
-5. Guardar ID da pasta no Vault (`DRIVE_FOLDER_ID`)
-6. Guardar JSON key no Vault (conteúdo do arquivo)
+### 3.2 Credenciais no Vault
 
-### 3.3 Autenticar com Service Account (Python)
-
-```python
-from google.oauth2 import service_account
-from googleapiclient.discovery import build
-
-credentials = service_account.Credentials.from_service_account_info(
-    vault['GOOGLE_SERVICE_ACCOUNT_JSON'],
-    scopes=['https://www.googleapis.com/auth/drive']
-)
-service = build('drive', 'v3', credentials=credentials)
+```
+CLOUDINARY_CLOUD_NAME=drvy4cz5x
+CLOUDINARY_API_KEY=667561448886123
+CLOUDINARY_API_SECRET=<pegar no vault>
 ```
 
-### 3.4 Upload de Arquivo
+### 3.3 Upload Autenticado (Python)
 
 ```python
-from googleapiclient.http import MediaFileUpload
+import hashlib, time, requests
 
-file_metadata = {
-    'name': f'{slug}-slide-{str(i).zfill(2)}.png',
-    'parents': [vault['DRIVE_FOLDER_ID']]
-}
-media = MediaFileUpload(local_path, mimetype='image/png')
-file = service.files().create(
-    body=file_metadata,
-    media_body=media,
-    fields='id'
-).execute()
-file_id = file.get('id')
+def upload_to_cloudinary(local_path, public_id, vault):
+    timestamp = int(time.time())
+    
+    # Gerar assinatura
+    signature_str = f"public_id={public_id}&timestamp={timestamp}{vault['CLOUDINARY_API_SECRET']}"
+    signature = hashlib.sha1(signature_str.encode('utf-8')).hexdigest()
+    
+    url = f"https://api.cloudinary.com/v1_1/{vault['CLOUDINARY_CLOUD_NAME']}/image/upload"
+    
+    with open(local_path, 'rb') as f:
+        response = requests.post(url, data={
+            'public_id': public_id,
+            'api_key': vault['CLOUDINARY_API_KEY'],
+            'timestamp': timestamp,
+            'signature': signature,
+        }, files={'file': f})
+    
+    response.raise_for_status()
+    return response.json()['secure_url']
 ```
 
-### 3.5 Tornar Arquivo Público
+### 3.4 Nomear public_id
 
 ```python
-service.permissions().create(
-    fileId=file_id,
-    body={'role': 'reader', 'type': 'anyone'}
-).execute()
+public_id = f"{slug}-slide-{str(i+1).zfill(2)}"
+# Resultado: "adiando-ha-anos-slide-01", "adiando-ha-anos-slide-02", etc.
 ```
 
-### 3.6 URL Pública
+### 3.5 URL Pública Resultante
 
-```python
-# Formato que funciona com a maioria das APIs externas:
-public_url = f"https://drive.google.com/uc?export=view&id={file_id}"
-
-# URL alternativa (se a acima falhar):
-alt_url = f"https://lh3.googleusercontent.com/d/{file_id}"
+```
+https://res.cloudinary.com/{cloud_name}/image/upload/{public_id}.png
 ```
 
-### 3.7 Risco: Compatibilidade Google Drive URL com Meta API
+Ou usar o `secure_url` direto da resposta — já é HTTPS e acessível publicamente.
 
-**Problema conhecido:** Meta pode não conseguir baixar imagens do Google Drive em alguns casos:
-- Redirects na URL
-- Rate limiting do Drive
-- Cache de permissão
+### 3.6 Boas Práticas
 
-**Mitigação:**
-1. Usar `export=view` (não `export=download`)
-2. Aguardar 5s após tornar público antes de passar URL pra Meta
-3. SE erro 100 na Meta API → tentar URL alternativa `lh3.googleusercontent.com`
-4. SE persistir → flaggar para Karol considerar Cloudinary
+- Nomear sempre com slug + número do slide para evitar sobrescrever uploads anteriores
+- Aguardar resposta de cada upload antes de prosseguir (upload é síncrono)
+- SE mesmo public_id for reenviado, Cloudinary sobrescreve — sem problema neste fluxo
 
 ---
 
@@ -313,12 +298,12 @@ mv business/instagram/fila/{slug} business/instagram/agendados/{slug}
 
 ### 5.1 "Error 100: Invalid image URL"
 
-**Causa:** Meta não consegue acessar a URL do Google Drive.
+**Causa:** Meta não consegue acessar a URL do Cloudinary (raro — URLs são diretas).
 **Fix:**
-1. Verificar se o arquivo é público: tentar abrir a URL em aba anônima
-2. Aguardar 10s após setar permissão pública
-3. Tentar URL alternativa: `https://lh3.googleusercontent.com/d/{file_id}`
-4. SE persiste: reportar pra Karol e sugerir Cloudinary
+1. Verificar se o upload completou com sucesso: checar `secure_url` na resposta
+2. Confirmar que a URL abre em aba anônima sem login
+3. Tentar re-upload do slide (mesmo public_id sobrescreve — tudo bem)
+4. SE persiste: reportar pra Karol com o `secure_url` que falhou
 
 ### 5.2 "Error 190: Invalid OAuth access token"
 
@@ -330,10 +315,10 @@ mv business/instagram/fila/{slug} business/instagram/agendados/{slug}
 **Causa:** Timestamp inválido (no passado, formato errado, ou menos de 10min no futuro).
 **Fix:** Verificar cálculo do timestamp — garantir UTC correto e que é futuro.
 
-### 5.4 Upload Drive falha com 403
+### 5.4 Upload Cloudinary falha com 401
 
-**Causa:** Service Account não tem permissão na pasta.
-**Fix:** Verificar se a pasta `instagram-staging` está compartilhada com o email da Service Account.
+**Causa:** Assinatura inválida — API Key, API Secret ou timestamp incorreto.
+**Fix:** Verificar credenciais no vault. Checar que a signature_str segue exatamente o formato `public_id=...&timestamp=...{api_secret}` sem espaços extras.
 
 ### 5.5 Carrossel aparece como "failed" no Meta
 
