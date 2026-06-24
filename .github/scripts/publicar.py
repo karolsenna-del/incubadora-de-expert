@@ -100,7 +100,25 @@ carousel_id = meta_post("media", {
 })
 print(f"ok ({carousel_id})")
 
-# 4. Publicar
+# 4. Aguardar container ficar FINISHED (Meta processa de forma assíncrona)
+print("Aguardando container ficar pronto...", end=" ", flush=True)
+for attempt in range(20):
+    r = requests.get(
+        f"https://graph.facebook.com/v21.0/{carousel_id}",
+        params={"fields": "status_code", "access_token": META_TOKEN},
+        timeout=30
+    )
+    status = r.json().get("status_code", "UNKNOWN")
+    if status == "FINISHED":
+        print(f"ok ({attempt+1} checks)")
+        break
+    if status == "ERROR":
+        raise RuntimeError(f"Container falhou com status ERROR")
+    time.sleep(5)
+else:
+    raise RuntimeError("Container não ficou FINISHED após 100s. Abortando.")
+
+# 5. Publicar
 print("Publicando...", end=" ", flush=True)
 media_id = meta_post("media_publish", {"creation_id": carousel_id})
 print(f"ok")
