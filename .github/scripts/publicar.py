@@ -17,12 +17,12 @@ META_BASE   = f"https://graph.facebook.com/v21.0/{IG_USER_ID}"
 
 # ── Calendário ────────────────────────────────────────────────────────────────
 SCHEDULE = {
-    "2026-06-25": "cansaco-palavra-do-ano",
-    "2026-06-26": "diploma-vs-vivencia",
-    "2026-06-27": "duas-pos-graduacoes",
-    "2026-06-28": "medo-parecer-amadora",
-    "2026-06-29": "nao-precisa-seguidores",
-    "2026-06-30": "sabe-demais-paralisando",
+    "2026-06-24": "cansaco-palavra-do-ano",
+    "2026-06-25": "diploma-vs-vivencia",
+    "2026-06-26": "duas-pos-graduacoes",
+    "2026-06-27": "medo-parecer-amadora",
+    "2026-06-28": "nao-precisa-seguidores",
+    "2026-06-29": "sabe-demais-paralisando",
 }
 
 # ── Paths ─────────────────────────────────────────────────────────────────────

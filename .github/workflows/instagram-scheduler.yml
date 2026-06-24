@@ -2,12 +2,11 @@ name: Instagram Scheduler
 
 on:
   schedule:
-    - cron: '0 15 25 6 *'   # 25/06 12h BRT — cansaco-palavra-do-ano
-    - cron: '0 15 26 6 *'   # 26/06 12h BRT — diploma-vs-vivencia
-    - cron: '0 15 27 6 *'   # 27/06 12h BRT — duas-pos-graduacoes
-    - cron: '0 15 28 6 *'   # 28/06 12h BRT — medo-parecer-amadora
-    - cron: '0 15 29 6 *'   # 29/06 12h BRT — nao-precisa-seguidores
-    - cron: '0 15 30 6 *'   # 30/06 12h BRT — sabe-demais-paralisando
+    - cron: '0 15 25 6 *'   # 25/06 12h BRT — diploma-vs-vivencia
+    - cron: '0 15 26 6 *'   # 26/06 12h BRT — duas-pos-graduacoes
+    - cron: '0 15 27 6 *'   # 27/06 12h BRT — medo-parecer-amadora
+    - cron: '0 15 28 6 *'   # 28/06 12h BRT — nao-precisa-seguidores
+    - cron: '0 15 29 6 *'   # 29/06 12h BRT — sabe-demais-paralisando
   workflow_dispatch:          # permite disparar manualmente para testar
 
 permissions:
