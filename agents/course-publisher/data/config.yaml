@@ -10,264 +10,313 @@ modules:
 
   - id: M0
     hotmart_name: "M0 — Desbloqueio"
+    voomp_module_id: "38787"
     capa: "M0-desbloqueio.png"
     lessons:
-      - hotmart_name: "Boas-vindas ao M0"
+      - hotmart_name: "Desbloqueia sua especialidade"
         video: "00-modulo-0-desbloqueio.mp4"
         descricao_slug: "00-intro"
-        hotmart_lesson_url: ""
+        hotmart_lesson_url: "https://app.hotmart.com/membership/incubadora-de-expert/products/edit/6325786/admin/beta/modules/PeABMkNV7W/content/1469YaExOd"
 
-      - hotmart_name: "A1 — Fracasso como Prova"
+      - hotmart_name: "Fracasso como prova"
         video: "01-fracasso-como-prova.mp4"
         descricao_slug: "01-fracasso-como-prova"
-        hotmart_lesson_url: ""
+        hotmart_lesson_url: "https://app.hotmart.com/membership/incubadora-de-expert/products/edit/6325786/admin/beta/modules/PeABMkNV7W/content/E4zN05JQ4l"
 
-      - hotmart_name: "A2 — Exercício: Sua História Real"
+      - hotmart_name: "Sua História Real"
         video: "02-exercicio-sua-historia-real.mp4"
         descricao_slug: "02-historia-real"
-        hotmart_lesson_url: ""
+        hotmart_lesson_url: "https://app.hotmart.com/membership/incubadora-de-expert/products/edit/6325786/admin/beta/modules/PeABMkNV7W/content/M7GE3lJa4w"
 
-      - hotmart_name: "A3 — Exercício: Ikigai"
+      - hotmart_name: "Ikigai - Onde seu conhecimento cabe no mundo"
         video: "03-exercicio-ikigai.mp4"
         descricao_slug: "03-ikigai"
-        hotmart_lesson_url: ""
+        hotmart_lesson_url: "https://app.hotmart.com/membership/incubadora-de-expert/products/edit/6325786/admin/beta/modules/PeABMkNV7W/content/oOD8MlGQOP"
 
-      - hotmart_name: "Quem Você se Tornou no M0"
+      - hotmart_name: "Quem você se tornou"
         video: "04-encerramento.mp4"
         descricao_slug: "04-encerramento"
-        hotmart_lesson_url: ""
+        hotmart_lesson_url: "https://app.hotmart.com/membership/incubadora-de-expert/products/edit/6325786/admin/beta/modules/PeABMkNV7W/content/ROxA3kDy4D"
 
   - id: M1
     hotmart_name: "M1 — Persona + Promessa"
+    voomp_module_id: "38816"
     capa: "M1-persona-promessa.png"
     lessons:
       - hotmart_name: "Boas-vindas ao M1"
         video: "00-persona-promessa.mp4"
         descricao_slug: "00-intro"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213973"
 
       - hotmart_name: "A1 — O que é Persona Compradora"
         video: "03-o-que-e-persona-compradora.mp4"
         descricao_slug: "01-persona-compradora"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213974"
 
       - hotmart_name: "A2 — Exercício: Agente da Persona"
         video: null   # ainda não gravado
         descricao_slug: "02-agente-persona"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213975"
 
       - hotmart_name: "A3 — O que é Promessa Transformadora"
         video: "05-o-que-e-promessa-transformadora.mp4"
         descricao_slug: "03-promessa-transformadora"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213976"
 
       - hotmart_name: "A4 — Exercício: Agente da Promessa"
         video: null   # ainda não gravado
         descricao_slug: "04-agente-promessa"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213977"
 
       - hotmart_name: "A5 — Posicionamento no Mercado"
         video: "01-empreendedora-mede-por-ano.mp4"
         descricao_slug: "05-posicionamento-no-mercado"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213978"
 
       - hotmart_name: "A6 — O Custo Invisível do Sim"
         video: "02-o-custo-invisivel-do-sim.mp4"
         descricao_slug: "06-objecoes"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213979"
 
       - hotmart_name: "Quem Você se Tornou no M1"
         video: null   # ainda não gravado
         descricao_slug: "07-quem-voce-se-tornou"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213980"
 
   - id: M2
     hotmart_name: "M2 — Método Autoral"
+    voomp_module_id: "38817"
     capa: "M2-metodo-autoral.png"
     lessons:
       - hotmart_name: "Boas-vindas ao M2"
         video: null
         descricao_slug: "00-intro"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213981"
 
       - hotmart_name: "A1 — O que é um Método Autoral"
         video: null
         descricao_slug: "01-metodo-autoral"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213982"
 
       - hotmart_name: "A2 — Insegurança Inteligente"
         video: null
         descricao_slug: "02-inseguranca-inteligente"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213983"
 
       - hotmart_name: "A3 — Mapeando seu Processo"
         video: null
         descricao_slug: "03-mapeando-seu-processo"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213984"
 
       - hotmart_name: "A4 — As 3 Jornadas"
         video: null
         descricao_slug: "04-as-3-jornadas"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213985"
 
       - hotmart_name: "A5 — Exercício: Agente do Processo Autoral"
         video: null
         descricao_slug: "05-agente-processo-autoral"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213986"
 
       - hotmart_name: "A6 — Portfólio Estratégico"
         video: null
         descricao_slug: "06-portfolio-estrategico"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213987"
 
       - hotmart_name: "A7 — Exercício: Agente do Portfólio"
         video: null
         descricao_slug: "07-agente-portfolio"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213988"
 
       - hotmart_name: "A8 — Ecossistema do Método"
         video: null
         descricao_slug: "08-ecosistema-do-metodo"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213989"
 
       - hotmart_name: "Quem Você se Tornou no M2"
         video: null
         descricao_slug: "09-quem-voce-se-tornou"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213990"
 
   - id: M3
     hotmart_name: "M3 — Vendas Secretas"
+    voomp_module_id: "38818"
     capa: "M3-vendas-secretas.png"
     lessons:
       - hotmart_name: "Boas-vindas ao M3"
         video: null
         descricao_slug: "00-intro"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213991"
 
       - hotmart_name: "A1 — Vendas Secretas: Conceito"
         video: null
         descricao_slug: "01-vendas-secretas-conceito"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213992"
 
       - hotmart_name: "A2 — Feito é Melhor que Perfeito"
         video: null
         descricao_slug: "02-feito-e-melhor-que-perfeito"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213993"
 
       - hotmart_name: "A3 — A Oferta de Lançamento"
         video: null
         descricao_slug: "03-oferta-de-lancamento"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213994"
 
       - hotmart_name: "A4 — Exercício: Agente da Proposta Validada"
         video: null
         descricao_slug: "04-agente-proposta-validada"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213995"
 
       - hotmart_name: "A5 — Rastreador de Leads Quentes"
         video: null
         descricao_slug: "05-rastreador-de-leads"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213996"
 
       - hotmart_name: "A6 — Social Selling"
         video: null
         descricao_slug: "06-social-selling"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213997"
 
       - hotmart_name: "A7 — Lendo seu Lead"
         video: null
         descricao_slug: "07-lendo-seu-lead"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213998"
 
       - hotmart_name: "A8 — Roteiro de Abordagem"
         video: null
         descricao_slug: "08-roteiro-de-abordagem"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213999"
 
       - hotmart_name: "A9 — Roteiro da Sessão"
         video: null
         descricao_slug: "09-roteiro-da-sessao"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214000"
 
       - hotmart_name: "A10 — Pós-Sessão"
         video: null
         descricao_slug: "10-pos-sessao"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214001"
 
       - hotmart_name: "A11 — A Escala Secreta"
         video: null
         descricao_slug: "11-escala-secreta"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214002"
 
       - hotmart_name: "Quem Você se Tornou no M3"
         video: null
         descricao_slug: "12-quem-voce-se-tornou"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214003"
 
   - id: M4
     hotmart_name: "M4 — Posicionamento de Autoridade"
+    voomp_module_id: "38819"
     capa: "M4-posicionamento-autoridade.png"
     lessons:
       - hotmart_name: "Boas-vindas ao M4"
         video: null
         descricao_slug: "00-intro"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214004"
 
       - hotmart_name: "A1 — A Tríplice da Autoridade"
         video: null
         descricao_slug: "01-autoridade-triplice"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214005"
 
       - hotmart_name: "A2 — Exercício: Agente da Autoridade Tríplice"
         video: null
         descricao_slug: "02-agente-autoridade-triplice"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214006"
 
       - hotmart_name: "A3 — Relatório de Autoridade"
         video: null
         descricao_slug: "03-relatorio-autoridade"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214007"
 
       - hotmart_name: "A4 — Montando sua Vitrine"
         video: null
         descricao_slug: "04-montando-sua-vitrine"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214008"
 
       - hotmart_name: "A5 — Linha Editorial"
         video: null
         descricao_slug: "05-linha-editorial"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214009"
 
       - hotmart_name: "A6 — Roteiros de Reels e Carrosséis"
         video: null
         descricao_slug: "06-roteiros-reels-carrosseis"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214010"
 
       - hotmart_name: "A7 — Queimar a Ponte"
         video: null
         descricao_slug: "07-queimar-a-ponte"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214011"
 
       - hotmart_name: "A8 — Escalando o Posicionamento"
         video: null
         descricao_slug: "08-escalando-posicionamento"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214012"
 
       - hotmart_name: "Quem Você se Tornou no M4"
         video: null
         descricao_slug: "09-quem-voce-se-tornou"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "214013"
 
   - id: modulo-orientacoes
     hotmart_name: "Módulo de Orientações"
+    voomp_module_id: "38815"
     capa: "MO-orientacoes.png"
     lessons:
       - hotmart_name: "Boas-vindas ao Expert360"
         video: null
         descricao_slug: "00-boas-vindas"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213971"
 
       - hotmart_name: "Antes de Começar"
         video: null
         descricao_slug: "01-antes-de-comecar"
         hotmart_lesson_url: ""
+        voomp_lesson_id: "213972"
