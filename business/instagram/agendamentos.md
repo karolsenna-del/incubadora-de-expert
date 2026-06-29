@@ -13,3 +13,4 @@
 | 26/06/2026 | duas-pos-graduacoes | 26/06/2026 12h | 17874851280527381 | publicado automaticamente |
 | 27/06/2026 | medo-parecer-amadora | 27/06/2026 12h | 18148714438509455 | publicado automaticamente |
 | 28/06/2026 | nao-precisa-seguidores | 28/06/2026 12h | 18093235502606659 | publicado automaticamente |
+| 29/06/2026 | sabe-demais-paralisando | 29/06/2026 12h | 18168547921442241 | publicado automaticamente |
