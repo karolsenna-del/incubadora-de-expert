@@ -11,8 +11,8 @@
 | Campo | Valor |
 |-------|-------|
 | URL | https://app.hotmart.com |
-| Email | [PREENCHER] |
-| Senha | [PREENCHER] |
+| Email | [karol.franzini@gmail.com] |
+| Senha | [FPate2026!] |
 | 2FA | [PREENCHER — se ativo] |
 
 ---

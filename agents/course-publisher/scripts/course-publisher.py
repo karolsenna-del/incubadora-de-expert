@@ -597,12 +597,11 @@ def main():
 
         with sync_playwright() as p:
             context = p.chromium.launch_persistent_context(
-                user_data_dir=r"C:\Users\karol\AppData\Local\Google\Chrome\User Data",
+                user_data_dir=r"C:\Users\karol\AppData\Local\hotmart-publisher-profile",
                 channel="chrome",
                 headless=False,
                 slow_mo=400,
-                args=["--start-maximized"],
-                no_viewport=True,
+                viewport={"width": 1440, "height": 900},
             )
             page = context.new_page()
 

@@ -50,7 +50,7 @@ Karol faz lives semanais pro grupo fechado (Google Meet). Worker especializado c
 - Worker **Expert em Lives** instalado — roteiriza no modelo Funil de Zoom (Narrativa → Execucao+spoiler → Pratica → Prova Racional+Pitch). Ativar com `/expert-em-lives`.
 - KB carregada: 18 lives do histórico (lives-expert360-roteiros.md) + live-19-outline.md + ETL Vinizoom.
 - Live 19 feita (15/06): "A Lista de Fracassos que vira Autoridade". Outline: `business/campanhas/lives-semanais/live-19-outline.md`.
-- Próxima: Live 20 — pedir sugestão de tema pro Expert em Lives.
+- Live 20 roteiro pronto (28/06): "Preciso de mais ideias de conteúdo" — mapa dor → pauta, pitch VIP (comenta VIP no chat). Roteiro: `business/campanhas/lives-semanais/live-20-roteiro.md`. Fonte: ETL Desafio Jejum 5em7 (VOL-03).
 
 ## Desafio Flavio Augusto — Squad Conteudo Arcane (14/06/2026)
 
