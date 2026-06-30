@@ -84,8 +84,8 @@ Precisa virar algo mais curto e mais visceral. Trabalhar na sessão.
 |--------|-----------|------------|--------|
 | Sem. 1 | Aula: Você não precisa saber tudo para ensinar | Permissão para construir agora | — |
 | Sem. 2 | Aula: Seu método já existe. Está na sua história. | Clareza de que vai revelar, não inventar | — |
-| Sem. 3 | Aula: O que é um método autoral (5 tipos de narrativa) | Identifica seu tipo — provavelmente Grande Obstáculo ou Resolvedor | — |
-| Sem. 4 | Exercício: Agente do Processo Autoral | P3: IAP com narrativa autoral, nome definitivo, estrutura, mecanismo único | ★ Sessão 5: Validar P3 |
+| Sem. 3 | Aula: O que é um método autoral (5 tipos de narrativa) | Identifica seu tipo | — |
+| Sem. 4 | Exercício: Agente do Processo Autoral | P3: IAP com narrativa autoral | ★ Sessão 5: Validar P3 |
 
 ---
 
@@ -93,7 +93,7 @@ Precisa virar algo mais curto e mais visceral. Trabalhar na sessão.
 
 A partir do Mês 5, a Milena segue o roteiro padrão (portfólio → oferta → campo → autoridade → escala).
 
-Ver: `mentoria/roteiro-12-meses.md` — Meses 5 a 12.
+Ver: `0.1- Roteiro da Jornada.md` — Meses 5 a 12.
 
 ---
 
@@ -106,4 +106,4 @@ Ver: `mentoria/roteiro-12-meses.md` — Meses 5 a 12.
 ## PRÓXIMA SESSÃO
 
 **Objetivo:** Fechar M0 — validar história real + Ikigai + esboçar frase-tese
-**O que preparar:** Ler `mentoria/alunas/milena-gehrke/perfil.md` + `negocio.md` antes da sessão
+**O que preparar:** Ler `_mentor/negocio.md` antes da sessão

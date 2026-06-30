@@ -7,8 +7,8 @@
 **Fase do método:** P1 concluído → entrando em P2/P3 (Narrativa + Persona)
 
 **O que foi concluído:**
-- M0.1 História Real — preenchida e rica
-- M0.2 Ikigai — preenchido e sintetizado
+- M0.2 História Real — preenchida e rica (arquivo no Drive)
+- M0.3 Ikigai — preenchido e sintetizado (arquivo no Drive)
 - Estrutura do método IAP definida (3 pilares: Emocional, Estratégico, Humano)
 - Nicho ampliado: qualquer profissional do agro que atende o produtor rural
 
@@ -38,19 +38,15 @@ Construir a narrativa autoral — a história da Milena dentro do método. Esse 
 
 ## Preparação da Karol (pré-sessão — 30/06/2026)
 
-**O que a Karol analisou:**
-- Materiais da Milena: apostila, estrutura da mentoria, história real, ikigai, portfólio
-- Diagnóstico completo do método
+**Objetivo da sessão:**
+Fechar M0 — validar história real + Ikigai + esboçar frase-tese
 
 **Propostas que a Karol vai levar para a Milena:**
 - Excluir pilar técnico do método IAP (não pertence à mentoria de performance)
 - Ampliar persona: de "técnico em regularização" para qualquer profissional do agro que atende o produtor rural
 
-**Próximo passo:**
-Sessão com a Milena para validar as propostas e avançar para a narrativa autoral.
-
 ## Histórico de sessões com a Milena
 
 | Data | O que foi feito | Output |
 |------|----------------|--------|
-| (a preencher) | | |
+| (a confirmar) | Onboarding / contratação com a Karol | |

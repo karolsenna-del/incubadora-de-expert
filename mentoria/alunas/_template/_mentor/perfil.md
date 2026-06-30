@@ -4,16 +4,17 @@
 
 ## Dados básicos
 
-- **Nome:** 
-- **Área de atuação:** 
-- **Cidade / Estado:** 
-- **Contato:** 
+- **Nome:**
+- **Área de atuação:**
+- **Cidade / Estado:**
+- **Contato:**
 
 ## Propósito e história
 
 **Por que ela entrou na mentoria:**
 
 **Experiência offline (o que ela já sabe fazer):**
+-
 
 **Ferida → medicina (o que a vida ensinou que virou método):**
 
@@ -25,12 +26,20 @@
 
 **Como ela se comunica (linguagem, expressões, jeito):**
 
+## Padrões identificados (M0.2 — História Real)
+
+-
+
+## Zona de alta performance
+
+(onde ela entra em flow — ao fazer o quê?)
+
 ## Diagnóstico 3D (se aplicado)
 
-- **Fase:** (Semente / Broto / Pré-operacional)
-- **Nível:** 
-- **Data:** 
+- **Fase:**
+- **Nível:**
+- **Data:**
 
 ## Notas da Karol
 
-> Observações sobre a aluna que informam como conduzir a mentoria.
+-

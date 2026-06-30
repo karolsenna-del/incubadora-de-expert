@@ -4,30 +4,33 @@
 
 ## Status atual
 
-**Fase do método:** (Desbloqueio / Nicho / Narrativa / Persona / Promessa / Ferramentas / Oferta / Posicionamento)
+**Fase do método:**
 
 **O que foi concluído:**
+-
 
 **Próximo passo:**
 
 **Blockers:**
+-
 
-## Última sessão
+## Diagnóstico (Karol — {data})
 
-**Data:**
+**O que está bom:**
+-
 
-**O que foi trabalhado:**
+**O que precisa trabalhar:**
+1.
 
-**Decisões tomadas:**
+## Preparação para próxima sessão
 
-**Output gerado:**
+**Objetivo da sessão:**
 
-**Combinado para a próxima:**
+**O que preparar:**
+-
 
 ## Histórico de sessões
 
-> Uma linha por sessão.
-
 | Data | O que foi feito | Output |
 |------|----------------|--------|
-| | | |
+| (a preencher) | | |

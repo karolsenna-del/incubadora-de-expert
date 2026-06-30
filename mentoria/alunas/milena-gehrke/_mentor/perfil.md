@@ -35,14 +35,14 @@ Responsabilidade, qualidade, autenticidade, impacto real, clareza.
 **Como ela se comunica (linguagem, expressões, jeito):**
 Fala com profundidade e exemplos reais do campo. Traz vivência prática, não só teoria. Tem naturalidade pra explicar o difícil de forma que o outro entende.
 
-## Padrões identificados (M0.1 — História Real)
+## Padrões identificados (M0.2 — História Real)
 
 - **Resolvedora:** assume quando os outros recuam, organiza quando está confuso, sustenta quando ninguém quer
 - **Perfeccionista com autocrítica:** exigência silenciosa de nunca falhar — impulsionou e ao mesmo tempo travou
 - **Medo do julgamento:** presente desde sempre, vem sendo lapidado
 - **Coragem prática:** age apesar do desconforto — não espera não ter medo para se mover
 
-## Zona de alta performance (M0.1)
+## Zona de alta performance
 
 Ao ensinar e mentorar — ao vivo, conduzindo pessoas. O tempo passa diferente. Combina técnica + leitura de pessoas + direcionamento estratégico. Sente "fiz bem e quero mais disso."
 
@@ -54,6 +54,6 @@ Ao ensinar e mentorar — ao vivo, conduzindo pessoas. O tempo passa diferente. 
 
 ## Notas da Karol
 
-- Análise do método convergiu: pilar técnico fora da mentoria (curso separado futuro, não o produto principal agora)
+- Análise do método convergiu: pilar técnico fora da mentoria (curso separado futuro)
 - História real e Ikigai muito ricos — matéria-prima da narrativa autoral está pronta
 - Tem clareza do propósito mas ainda não tem a narrativa consolidada como mecanismo único

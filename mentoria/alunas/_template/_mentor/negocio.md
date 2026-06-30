@@ -22,7 +22,7 @@
 
 **Mecanismo único:**
 
-**Etapas / fases:**
+**Pilares / Etapas:**
 
 ## Oferta
 
