@@ -77,9 +77,10 @@ roteiro:
     max: 90
 
   carrossel_slides:
-    min: 8
-    max: 15
-    ideal: 10
+    min: 7
+    max: 7
+    ideal: 7
+    max_caracteres: 1700  # limite total por carrossel (todos os slides somados)
 
   loop_refinamento:
     max_iteracoes_antes_de_pausar: 5
