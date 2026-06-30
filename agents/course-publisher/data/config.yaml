@@ -56,7 +56,7 @@ modules:
         voomp_lesson_id: "213974"
 
       - hotmart_name: "A2 — Exercício: Agente da Persona"
-        video: null   # ainda não gravado
+        video: "04-agente-da-persona.mp4"
         descricao_slug: "02-agente-persona"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213975"
@@ -68,7 +68,7 @@ modules:
         voomp_lesson_id: "213976"
 
       - hotmart_name: "A4 — Exercício: Agente da Promessa"
-        video: null   # ainda não gravado
+        video: "06-agente-da-promessa.mp4"
         descricao_slug: "04-agente-promessa"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213977"
@@ -86,7 +86,7 @@ modules:
         voomp_lesson_id: "213979"
 
       - hotmart_name: "Quem Você se Tornou no M1"
-        video: null   # ainda não gravado
+        video: "07-quem-voce-se-tornou.mp4"
         descricao_slug: "07-quem-voce-se-tornou"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213980"
@@ -97,7 +97,7 @@ modules:
     capa: "M2-metodo-autoral.png"
     lessons:
       - hotmart_name: "Boas-vindas ao M2"
-        video: null
+        video: "00-boas-vindas.mp4"
         descricao_slug: "00-intro"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213981"

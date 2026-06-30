@@ -124,26 +124,30 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
-Sessao 17/06 — weekly review + worker Expert em Lives criado.
+Sessao 30/06 — estrutura de mentoria criada + análise da aluna Milena Gehrke.
 
-**O que foi feito (17/06):**
-- Weekly review completo. Proximo: 24/06/2026.
-- Stories "Inimigo Comum" criados (4 inimigos: monta metodo e lanca, curso + link na bio, metodo generico, muito conteudo antes de clareza).
-- Cockpit atualizado: Expert360 next action = resolver processo de edicao de video (gargalo).
-- Worker Expert em Lives criado via Worker Forge — 7 arquivos, instalado em `agents/expert-em-lives/`. Ativar com `/expert-em-lives`.
-- KB importada: 18 lives do historico (Lives Expert360) copiadas para `business/campanhas/lives-semanais/lives-expert360-roteiros.md`.
+**O que foi feito (30/06):**
+- Estrutura `mentoria/alunas/` criada com template e pasta da Milena Gehrke.
+- Roteiro 12 meses da mentoria criado em `mentoria/roteiro-12-meses.md`.
+- Materiais da Milena analisados (apostila, estrutura, historia real, ikigai, portfolio).
+- Diagnostico do metodo IAP: pilar tecnico excluido, persona definida (profissional regularizacao agro inseguro diante do produtor rural), distincao central ("IAP nao ensina regularizacao — desenvolve quem ja sabe").
+- Roteiro adaptado para Milena: `mentoria/alunas/milena-gehrke/roteiro-milena.md`.
+- Live 20 confirmada para amanha (01/07) — roteiro pronto.
+- Desafio Flavio: encerrado, ele viu o video.
+- Weekly review atrasado: 13 dias sem review (previsto 24/06 — nao feito).
 
-**O que estava pendente antes:**
-- Retrofit v2.0 completo (feito em 15/06): todos os 5 modulos no formato Live 12 (5 blocos) prontos pra gravacao ✓
+**Pendencias abertas:**
+- Weekly review (atrasado 13 dias)
+- Expert360: descricoes das aulas + subir na plataforma
+- Proxima sessao com Milena: fechar M0 + esbocar frase-tese
 
 **Proximo foco:**
-1. Karol grava os modulos (Fase 4 — Gravacao) — edição é o proximo gargalo
-2. Aprovar roteiros Desafio Flavio dias 9-14 (aguardando em `campanhas/flavio-augusto-desafio/roteiros.md`)
-3. Smoke test do worker Expert em Lives: `/expert-em-lives` → propor tema pra Live 20
-4. Background: Destaque 3 + posts feed com angulo "expert em fracassar no digital"
+1. Live 20 amanha (01/07) — roteiro em `business/campanhas/lives-semanais/live-20-roteiro.md`
+2. Weekly review (urgente — 13 dias)
+3. Sessao com Milena (retomar com `mentoria/alunas/milena-gehrke/roteiro-milena.md`)
 
 Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 17/06/2026*
+*Ultima atualizacao: 30/06/2026*
