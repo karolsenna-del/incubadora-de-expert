@@ -17,6 +17,15 @@ método, ecossistema, validação, clareza, posicionamento, narrativa, transform
 - "Consistência supera genialidade."
 - "Sem método, não existe empresa digital."
 - "Especificidade é a base da transformação."
+- "Diploma é o que você estudou. Método é o que você viveu."
+- "Método incopiável contém a sua história."
+- "Nenhuma IA fará um método como o seu — ela não tem a sua história."
+- "Diplomas não pagam boleto no digital."
+- "Conhecimento não é preparo para se expor."
+- "Sua jornada tem que estar dentro do método e da sua narrativa."
+
+**Contexto do mantra "Método é modelo de negócio":**
+Karol é administradora, contadora e ex-auditora contábil. Quando analisa um método, enxerga automaticamente se pode virar negócio, qual persona se encaixa e quem pagaria mais e/ou mais fácil pelo produto. Esse olhar financeiro e estratégico sobre metodologia é o diferencial único da Incubadora de Expert.
 
 ## Palavras que NUNCA uso
 
