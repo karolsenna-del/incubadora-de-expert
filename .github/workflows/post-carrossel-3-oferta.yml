@@ -1,0 +1,81 @@
+name: Post carrossel-3-oferta
+
+on:
+  schedule:
+    - cron: '0 15 1 7 *'   # 01/07 às 15:00 UTC = 12h BRT
+  workflow_dispatch:         # permite acionar manualmente se necessário
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publicar carrossel via Meta Graph API
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: "17841437530973593"
+          CAPTION: |
+            Você não trava por falta de marketing.
+
+            Trava porque tem anos de experiência — mas seu conhecimento ainda tá solto na cabeça. Sem estrutura. Sem método.
+
+            Curso depois de curso, vídeo depois de vídeo... e a trava continua no mesmo lugar. Não é preguiça. É ordem errada.
+
+            A ordem certa: primeiro o método (com nome, etapas e a sua história dentro), depois a validação — com vendas reais, no privado, sem precisar de audiência. Isso é Venda Secreta.
+
+            Essa é a Incubadora de Expert: pré-marketing. A gente te prepara antes de você aparecer.
+
+            Quer saber se é pra você? Link na bio — pré-diagnóstico 1x1.
+
+            #incubadoradeexpert #expertdigital #metodoonline #posicionamentodigital #vendasonline #primeiravenda #infoproduto
+        run: |
+          python3 - <<'EOF'
+          import os, requests, urllib.parse as up
+
+          TOKEN     = os.environ["META_TOKEN"]
+          IG_ID     = os.environ["IG_USER_ID"]
+          CAPTION   = os.environ["CAPTION"].strip()
+          BASE      = f"https://graph.facebook.com/v21.0"
+
+          SLIDES = [
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782846061/instagram-carrosseis/carrossel-3-oferta/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782846063/instagram-carrosseis/carrossel-3-oferta/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782846066/instagram-carrosseis/carrossel-3-oferta/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782846068/instagram-carrosseis/carrossel-3-oferta/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782846070/instagram-carrosseis/carrossel-3-oferta/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782846072/instagram-carrosseis/carrossel-3-oferta/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782846074/instagram-carrosseis/carrossel-3-oferta/slide-07.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782846076/instagram-carrosseis/carrossel-3-oferta/slide-08.png",
+          ]
+
+          def meta_post(path, data):
+            r = requests.post(f"{BASE}/{path}", params={"access_token": TOKEN},
+                              data=up.urlencode(data).encode("utf-8"),
+                              headers={"Content-Type": "application/x-www-form-urlencoded"})
+            print(f"{path}: {r.status_code} {r.text[:200]}")
+            r.raise_for_status()
+            return r.json()
+
+          # 1. Item containers
+          print("Criando item containers...")
+          item_ids = []
+          for url in SLIDES:
+            resp = meta_post(f"{IG_ID}/media", {"image_url": url, "is_carousel_item": "true"})
+            item_ids.append(resp["id"])
+          print(f"{len(item_ids)} containers criados")
+
+          # 2. Carousel container
+          print("Criando carousel container...")
+          resp = meta_post(f"{IG_ID}/media", {
+            "media_type": "CAROUSEL",
+            "children":   ",".join(item_ids),
+            "caption":    CAPTION,
+            "published":  "false",
+          })
+          carousel_id = resp["id"]
+          print(f"carousel_id: {carousel_id}")
+
+          # 3. Publicar
+          print("Publicando...")
+          resp = meta_post(f"{IG_ID}/media_publish", {"creation_id": carousel_id})
+          print(f"PUBLICADO: {resp}")
+          EOF
