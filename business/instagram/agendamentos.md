@@ -16,3 +16,5 @@
 | 27/06/2026 | medo-parecer-amadora | 27/06/2026 12h | 18148714438509455 | publicado automaticamente |
 | 28/06/2026 | nao-precisa-seguidores | 28/06/2026 12h | 18093235502606659 | publicado automaticamente |
 | 29/06/2026 | sabe-demais-paralisando | 29/06/2026 12h | 18168547921442241 | publicado automaticamente |
+| 30/06/2026 | carrossel-3-oferta | 01/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-carrossel-3-oferta.yml) |
+| 30/06/2026 | julia-child | 02/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-julia-child.yml) |
