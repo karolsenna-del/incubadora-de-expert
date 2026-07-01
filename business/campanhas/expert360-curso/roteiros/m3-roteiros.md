@@ -16,8 +16,6 @@ Versão: 2.0 | Data: 15/06/2026 | Status: Retrofit pro formato Live 12 (5 blocos
 
 ---
 
-**[ABERTURA]**
-
 Você chegou no Módulo 3 com o arsenal completo.
 
 P1: você sabe exatamente com quem está falando. P2: você tem uma promessa que essa pessoa reconhece. P3: você tem um método com nome, estrutura e história dentro — incopiável. E um portfólio de ferramentas que transforma esse método em oferta.
@@ -28,15 +26,11 @@ Esse é o módulo onde a teoria vira evidência.
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema deste módulo é as Vendas Secretas — e o entregável é P4, a sua Proposta Validada.
 
 Isso importa agora porque existe uma crença que o mercado digital repete como lei: "Você precisa crescer primeiro. Construir audiência. Ganhar relevância. E depois — quando estiver pronta — você lança." Eu segui essa lógica por oito lançamentos. Zero, uma, quatro vendas. Sempre no prejuízo. O problema não era o tamanho da audiência — era que eu estava tentando escalar uma mensagem que nunca tinha sido validada.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que são as Vendas Secretas + a ordem certa.**
 
@@ -64,8 +58,6 @@ Aplicação: mas isso é depois. Agora, primeiro bloco.
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde você está agora: P1, P2 e P3 documentados no Drive — arsenal pronto. Quando começa: nesta aula, com o primeiro bloco de mentalidade. Não passa para os táticos antes.
 
 ---
@@ -73,8 +65,6 @@ Onde você está agora: P1, P2 e P3 documentados no Drive — arsenal pronto. Qu
 Antes de começar — esse módulo é onde mais alunas sentem mais resistência. Não por falta de método. Por falta de alguém ao lado enquanto vão ao campo pela primeira vez. Se você quer chegar nas sessões de vendas com suporte individual, existe a Mentoria VIP: três sessões comigo focadas no Módulo 3 — construção da oferta, abordagem e a sessão de vendas na prática. O link pra entrar em contato com o suporte está na descrição dessa aula.
 
 ---
-
-**[TRANSIÇÃO]**
 
 A maior barreira para as suas primeiras vendas não é técnica. É a relação que você tem com o ato de cobrar.
 
@@ -113,8 +103,6 @@ A maior barreira para as suas primeiras vendas não é técnica. É a relação 
 
 ---
 
-**[ABERTURA]**
-
 Este módulo tem muita técnica.
 
 Rastreador de leads. Script de abordagem. Roteiro de sessão. Cadência pós-venda. Tudo isso vai aparecer — e no momento certo.
@@ -129,15 +117,11 @@ A técnica sem identidade não executa. A identidade vem primeiro.
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é a identidade de quem vende — antes de qualquer tático.
 
 Isso importa agora porque o que vai determinar se você vai usar tudo que está neste módulo ou deixar guardado numa pasta não é o roteiro. É o que acontece dentro de você na hora de enviar a mensagem. Esta aula trata exatamente disso.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O medo de cobrar: crença, não fato.**
 
@@ -165,8 +149,6 @@ Aplicação: **Só fracassa quem desiste.** Não quem ouve não. Não quem condu
 
 ---
 
-**[ONDE E QUANDO]**
-
 Reflexão antes de avançar: escreva uma linha respondendo a cada uma das 3 perguntas abaixo. Uma linha, sem filtro.
 1. "Qual justificativa eu uso quando não ofereço o que poderia oferecer?"
 2. "Quando foi a última vez que o problema da Laura ficou sem solução porque eu não ofereci?"
@@ -175,8 +157,6 @@ Reflexão antes de avançar: escreva uma linha respondendo a cada uma das 3 perg
 Guarde as respostas — elas vão fazer mais sentido depois da próxima aula.
 
 ---
-
-**[TRANSIÇÃO]**
 
 A identidade está no lugar. Agora vem a segunda barreira — diferente da primeira, mais sutil, e tão eficiente quanto para manter você parada.
 
@@ -215,8 +195,6 @@ A espera pela prontidão. Próxima aula.
 
 ---
 
-**[ABERTURA]**
-
 Na aula anterior, tratamos da identidade. Quem você é quando vende. O medo de cobrar como crença, não como fato. Vender como serviço.
 
 Mas existe uma segunda barreira — diferente da primeira, mais sutil, e tão eficiente quanto para manter você parada.
@@ -231,15 +209,11 @@ Esta aula existe para desfazer essa espera. Não com motivação — com lógica
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é a lógica de quando "é hora de ir" — e por que mais preparo antes de sair para o campo atrasa, não acelera.
 
 Isso importa agora porque você está prestes a entrar nos táticos — oferta, rastreador, abordagem, sessão. Tudo isso só funciona se você for ao campo. Esta aula remove a última barreira interna antes de você sair.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que a escola ensinou e onde erra.**
 
@@ -267,13 +241,9 @@ Aplicação: privado. Controlado. Sem palco, sem pressão de audiência, sem pos
 
 ---
 
-**[ONDE E QUANDO]**
-
 Agora: abra a agenda e marque a data da primeira prospecção. Uma data real, nos próximos 7 dias. A partir dessa data, as aulas seguintes passam a ter prazo — não de estudo, de ação.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Você não precisa estar 100% pronta para marcar a primeira conversa. O que a pessoa do outro lado está avaliando não é se você decorou um roteiro. É se você entende o problema dela, se o que você oferece faz sentido, se ela confia em você.
 
@@ -314,8 +284,6 @@ Agora vem o bloco da oferta. O que você está vendendo. Vem comigo.
 
 ---
 
-**[ABERTURA]**
-
 Você terminou o bloco de mentalidade.
 
 Agora começa o bloco da oferta. E antes de abrir o Agente da Proposta Validada — que vai construir o P4 com você na próxima aula — você precisa entender o que está vendendo.
@@ -326,15 +294,11 @@ Esse entendimento vai determinar a qualidade do que você constrói com o agente
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é a Proposta Validada — o que é, por que começa pelo 1:1, e o que diferencia de oferta comum ou favor.
 
 Isso importa agora porque na próxima aula você vai abrir o agente. Quanto mais clareza você traz, mais preciso vai ser o P4 que sai. E esse entendimento vai determinar, depois, com quanta naturalidade você apresenta o que oferece.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — Dois caminhos + por que começa pelo 1:1.**
 
@@ -362,13 +326,9 @@ Aplicação: na próxima aula, o Agente da Proposta Validada vai usar P1, P2 e P
 
 ---
 
-**[ONDE E QUANDO]**
-
 Antes de abrir o agente: escreva uma linha no Drive ou no bloco de notas — "Quero oferecer..." — e complete com o que está na sua cabeça agora, mesmo que seja vago. "Quero oferecer três sessões de uma hora sobre [tema]." Esse rascunho é o ponto de partida do agente. Quanto mais claro o rascunho, mais preciso o P4 que sai.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Você sabe o que é uma oferta de validação. Por que começa pelo 1:1. O que inclui — e o que não é.
 
@@ -406,23 +366,17 @@ Próxima aula: você constrói a sua. Vem comigo.
 
 ---
 
-**[ABERTURA]**
-
 Você entendeu o que é uma oferta de validação. Por que começa pelo 1:1. O que a Proposta Validada tem — e o que ela não é.
 
 Agora você constrói a sua.
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é um exercício: construir sua Proposta Validada com o **Agente da Proposta Validada**.
 
 Isso importa agora porque P4 é o entregável central deste módulo — você não vai ao campo sem ele. E o P4 que sai do agente não são respostas isoladas: é um documento estruturado que cobre cada parte da oferta. Esse documento vai para o Rastreador, vai para a sessão de vendas, vai alimentar o M4.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que entra (inputs).**
 
@@ -452,13 +406,9 @@ Aplicação: salve P4 no arquivo **Minha Proposta Validada (P4)** no Drive.
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: **Agente da Proposta Validada** no seu painel de agentes + arquivos P1, P2 e P3 no Drive + rascunho do que você quer oferecer. Quando: agora — P4 precisa estar pronto antes de preencher o Rastreador (A5).
 
 ---
-
-**[TRANSIÇÃO]**
 
 P4 pronto. Você tem uma oferta com nome, formato, promessa e preço definidos — pronta para ser apresentada sem gaguejar.
 
@@ -498,8 +448,6 @@ Agora: com quem você vai falar? Próxima aula.
 
 ---
 
-**[ABERTURA]**
-
 Você tem a oferta. Sabe o que vai entregar, como entregar e como apresentar o preço.
 
 Agora vem a pergunta real: com quem você vai falar?
@@ -510,15 +458,11 @@ O Rastreador de Leads Quentes existe para responder essas duas perguntas com cla
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é o Rastreador de Leads Quentes — a ferramenta de priorização que transforma uma lista em pipeline.
 
 Isso importa agora porque sem rastreador você aborda por impulso — quem aparece na cabeça na hora. Com rastreador, você aborda com estratégia — quem tem maior probabilidade de se converter e está mais acessível agora. O perfil de cada lead que você lê aqui vai alimentar diretamente o roteiro de abordagem da A8.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que é o Rastreador (ferramenta de priorização, não lista).**
 
@@ -528,13 +472,13 @@ Exemplo: sem rastreador, você aborda quem aparece na cabeça na hora. Com rastr
 
 Aplicação: o resultado é uma lista ordenada — com o tom de abordagem já definido antes de você abrir o teclado.
 
-**Ponto 2 — Os 5 grupos.**
+**Ponto 2 — Os 6 grupos.**
 
-Ideia: o Rastreador organiza sua rede em 5 grupos, baseados em grau de relacionamento e potencial de fit com a persona (P1).
+Ideia: o Rastreador organiza sua rede em 6 grupos. Os 5 primeiros são baseados em grau de relacionamento e potencial de fit com a persona (P1) — pessoas que você vai abordar. O sexto é diferente: é pra quem chega até você sozinha.
 
-Exemplo: **Grupo 1 — Círculo íntimo.** Amigas próximas, família, pessoas com quem você tem contato regular e intimidade real. Fit pode ser variável, mas o relacionamento é o mais quente possível. **Grupo 2 — Colegas e ex-colegas de área.** Alto potencial de fit — especialistas que, como você, têm expertise sólida e podem estar no mesmo ponto de transição. **Grupo 3 — Clientes e ex-clientes.** Quem já pagou por algo seu. Já validaram que confiam no seu trabalho e estão dispostas a investir — primeira linha se tiverem o perfil. **Grupo 4 — Seguidores engajados.** Quem comenta, responde stories, mandou DM com consistência. Relacionamento digital, mas real — você já existe na cabeça dessas pessoas. **Grupo 5 — Conexões frias qualificadas.** Quem você conhece vagamente — de eventos, grupos, masterminds — cujo perfil se encaixa claramente na persona.
+Exemplo: **Grupo 1 — Círculo íntimo.** Amigas próximas, família, pessoas com quem você tem contato regular e intimidade real. Fit pode ser variável, mas o relacionamento é o mais quente possível. **Grupo 2 — Colegas e ex-colegas de área.** Alto potencial de fit — especialistas que, como você, têm expertise sólida e podem estar no mesmo ponto de transição. **Grupo 3 — Clientes e ex-clientes.** Quem já pagou por algo seu. Já validaram que confiam no seu trabalho e estão dispostas a investir — primeira linha se tiverem o perfil. **Grupo 4 — Seguidores engajados.** Quem comenta, responde stories, mandou DM com consistência. Relacionamento digital, mas real — você já existe na cabeça dessas pessoas. **Grupo 5 — Conexões frias qualificadas.** Quem você conhece vagamente — de eventos, grupos, masterminds — cujo perfil se encaixa claramente na persona. **Grupo 6 — Fui prospectada.** Sem relação prévia: alguém que entrou no seu grupo fechado de lives ou pegou uma isca digital sua e vem até você por conta própria. Você não escolhe abordar — só registra e cuida do que já chegou quente.
 
-Aplicação: comece pelo Grupo 1 e 3. São os relacionamentos mais quentes. Fit + calor da relação = prioridade.
+Aplicação: comece pelo Grupo 1 e 3. São os relacionamentos mais quentes. Fit + calor da relação = prioridade. O Grupo 6 entra direto na lista — quem vem até você já pulou a fila.
 
 **Ponto 3 — Como preencher: as 3 colunas + a pergunta que vai surgir.**
 
@@ -546,13 +490,9 @@ Aplicação: preencha o Rastreador antes da próxima aula. Objetivo: ter uma lis
 
 ---
 
-**[ONDE E QUANDO]**
-
-Onde: arquivo **Rastreador de Leads Quentes** no seu Drive — já vem com os 5 grupos, as colunas de score e um guia de critérios baseado em P1. Seu trabalho é preencher, não criar do zero. Quando: antes da A6 — o Rastreador completo é o input da A7 (leitura de lead) e da A8 (abordagem).
+Onde: arquivo **Meu Rastreador de Leads** no seu Drive — já vem com os 6 grupos, as colunas de score e um guia de critérios baseado em P1. Seu trabalho é preencher, não criar do zero. Quando: antes da A6 — o Rastreador completo é o input da A7 (leitura de lead) e da A8 (abordagem).
 
 ---
-
-**[TRANSIÇÃO]**
 
 Com o Rastreador preenchido, você vai saber com quem falar primeiro.
 
@@ -575,11 +515,11 @@ Mas e se a lista for pequena? Existe uma segunda estratégia que você começa a
 
 **Bloco 3 — Como (3 pontos)**
 - Ponto 1: o que é — qualificar antes de abordar. Output: lista ordenada com tom de abordagem definido antes de abrir o teclado.
-- Ponto 2: 5 grupos — G1 (círculo íntimo / rel. quente / fit variável) / G2 (colegas / alto fit potencial) / G3 (clientes / já confiam, já pagaram — 1ª linha) / G4 (seguidores / rel. digital real) / G5 (conexões frias / mais esforço, fit alto). Começa pelo G1 e G3.
+- Ponto 2: 6 grupos — G1 (círculo íntimo / rel. quente / fit variável) / G2 (colegas / alto fit potencial) / G3 (clientes / já confiam, já pagaram — 1ª linha) / G4 (seguidores / rel. digital real) / G5 (conexões frias / mais esforço, fit alto) / G6 (fui prospectada — sem relação prévia, vem do grupo fechado de lives ou de isca digital, entra direto na lista). Começa pelo G1 e G3.
 - Ponto 3: 3 colunas — Score de fit (critérios P1) / Prioridade (fit + calor da relação) / Perfil (Conectora/Analista/Diretiva — A7 ensina). Preencher antes da A6. Pergunta plantada: "e se a lista for pequena?" → resposta na A6.
 
 **Bloco 4 — Onde e quando**
-- Arquivo Rastreador de Leads Quentes (Drive) — pré-preenchido com 5 grupos + guia de critérios P1
+- Arquivo Meu Rastreador de Leads (Drive) — pré-preenchido com 6 grupos + guia de critérios P1
 - Antes da A6 — input da A7 e A8
 
 **Bloco 5 — Transição**
@@ -594,8 +534,6 @@ Mas e se a lista for pequena? Existe uma segunda estratégia que você começa a
 
 ---
 
-**[ABERTURA]**
-
 Você tentou preencher o Rastreador e chegou a poucos nomes com fit real.
 
 Isso não é o fim. É o início de uma segunda estratégia — que vai expandir seu pipeline enquanto você trabalha com quem já tem no radar.
@@ -606,15 +544,11 @@ Mas antes de entrar na tática, preciso te contar o que aprendi num evento de ne
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é social selling — e o fundamento que faz ele funcionar.
 
 Isso importa agora porque social selling não é uma tática para quem não tem leads. É uma prática diária que você começa agora e colhe no M4. O que você planta hoje é a audiência qualificada de quando você aparecer publicamente com prova.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — A virada: parar de pensar em mim, pensar nas pessoas.**
 
@@ -642,13 +576,9 @@ Aplicação: isso não é má notícia. É a ordem certa. Você valida com quem 
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: na prática diária — Instagram, WhatsApp, eventos, qualquer canal onde sua persona está. Quando: a partir de hoje, 1 a 2 interações genuínas por dia. Começa pelo perfil da lista 🔥 do seu Rastreador — quem já está quente está pronto para a conversa, não para o pitch.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Social selling não é sobre vender para estranhos. É sobre ser genuinamente útil para as pessoas certas — e confiar que quem você ajuda hoje vai, no momento certo, querer o que você tem.
 
@@ -689,8 +619,6 @@ Na próxima aula, antes da primeira mensagem: como ler um lead em 5 minutos — 
 
 ---
 
-**[ABERTURA]**
-
 Semanas atrás, recebi um relatório sobre mim.
 
 Alguém analisou meu perfil do Instagram — as fotos, os textos, a bio, o volume de posts, a forma como respondo comentários — e em 8 páginas descreveu como eu tomo decisões, o que me faz abrir, o que me faz fechar, e como abordar alguém como eu para ter a maior chance de um sim.
@@ -705,15 +633,11 @@ Aquilo me fez pensar: e se você soubesse algo assim sobre o seu lead antes de m
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é leitura de lead — como identificar o perfil da pessoa antes do primeiro contato e o que isso muda no resultado.
 
 Isso importa agora porque a leitura que você faz aqui vai para a coluna "Perfil" do Rastreador — e determina como você escreve cada mensagem de abordagem na A8. Uma mensagem calibrada vale mais do que dez enviadas sem leitura.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que você já faz sem saber + as 4 camadas de leitura.**
 
@@ -741,13 +665,9 @@ Aplicação: registre o perfil na coluna "Perfil" do Rastreador — Conectora, A
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: abra o Rastreador e a coluna "Perfil" — preencha um perfil por lead, a partir do ritual de 5 minutos acima. Quando: antes de escrever a primeira mensagem de abordagem de qualquer lead. Na prática: uma leitura antes de cada novo contato.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Uma mensagem calibrada vale mais do que dez enviadas sem leitura.
 
@@ -788,8 +708,6 @@ Você tem o perfil de cada lead. Agora vem a parte que a maioria acha que é a m
 
 ---
 
-**[ABERTURA]**
-
 Na aula anterior, você passou 5 minutos lendo um lead.
 
 Bio. Posts. Linguagem. Energia. Uma palavra registrada no Rastreador — Conectora, Analista ou Diretiva.
@@ -800,15 +718,11 @@ Mas antes de entrar no roteiro, uma coisa que vai mudar o tom de tudo que você 
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é o roteiro de abordagem — as 3 etapas, como adaptar por perfil, e o que acontece depois da primeira mensagem.
 
 Isso importa agora porque a abordagem determina se você consegue a sessão — e a sessão é onde a venda acontece. Ir ao campo com um roteiro claro é a diferença entre a mensagem que gera resposta e a que gera silêncio.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que você está buscando + roteiro vs script.**
 
@@ -836,13 +750,9 @@ Aplicação: antes da próxima aula, aborde pelo menos um lead do Rastreador. Um
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: Rastreador (coluna Perfil preenchida) + roteiro das 3 etapas + formulário de pré-diagnóstico (Drive) para enviar depois do sim. Quando: agora — antes da próxima aula, um lead abordado. Depois da sessão confirmada, formulário enviado.
 
 ---
-
-**[TRANSIÇÃO]**
 
 O Rastreador está preenchido. O perfil lido. O roteiro internalizado.
 
@@ -884,8 +794,6 @@ Na próxima aula, a gente entra na sessão em si — o que acontece quando ela a
 
 ---
 
-**[ABERTURA]**
-
 Você abordou. Você mandou a mensagem certa, no tom certo, para a pessoa certa.
 
 E ela disse sim.
@@ -896,15 +804,11 @@ Essa conversa tem estrutura. Não é improv, não é sorte, não é feeling — 
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é o roteiro completo da sessão de vendas — as 5 etapas, a lógica que sustenta a sequência, e o que determina se fecha.
 
 Isso importa agora porque a maior parte das pessoas que tenta vender numa conversa 1:1 comete um erro que nem percebe: chega com a oferta antes de ter entendido de verdade. O roteiro que você vai aprender inverte essa ordem — e quando a oferta aparece depois do diagnóstico, não é pitch. É resposta.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — A ordem que faz tudo funcionar + etapas 1 e 2.**
 
@@ -934,13 +838,9 @@ Aplicação: o roteiro completo está no arquivo **Roteiro da Sessão 1:1** no D
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: arquivo **Roteiro da Sessão 1:1** no Drive — preencher a seção de perguntas do diagnóstico com as perguntas do seu método (antes da primeira sessão). Quando: agora — antes de confirmar a sessão com o lead que aceitou.
 
 ---
-
-**[TRANSIÇÃO]**
 
 A sessão tem estrutura. O roteiro está na sua mão.
 
@@ -979,8 +879,6 @@ Na próxima aula, a gente entra no que acontece depois da chamada — seja ela u
 
 ---
 
-**[ABERTURA]**
-
 A chamada fechou.
 
 Você passou 30 a 40 minutos com ela. Diagnosticou. Contou sua história. Construiu a lógica. Apresentou a oferta. Convidou.
@@ -991,15 +889,11 @@ Mas antes de entrar em cada caminho, uma coisa que vale para os dois: **a sessã
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é o pós-sessão — o que fazer em cada um dos três resultados possíveis, como coletar o depoimento, e o que todo esse material vira no M4.
 
 Isso importa agora porque é aqui que as primeiras sessões se transformam em ativos — prova, pitch calibrado, objeções mapeadas — que vão determinar a qualidade do posicionamento público no M4.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — Ela disse sim: próximos passos + o depoimento.**
 
@@ -1027,13 +921,9 @@ Aplicação: tudo que você coletou no M3 vai para o M4 com você. **O depoiment
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: Rastreador (atualizar status depois de cada sessão) + Drive (registrar as 3 perguntas de aprendizado antes de dormir). Quando: imediatamente após cada sessão. Não depois de todas — após cada uma.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Você terminou o bloco de conteúdo do Módulo 3.
 
@@ -1076,8 +966,6 @@ Nos encontramos no Encerramento.
 
 ---
 
-**[ABERTURA]**
-
 Você chegou no fim do Módulo 3.
 
 E esse é diferente dos outros. Porque até aqui, você estava construindo — persona, processo, oferta, roteiro. Coisas que ficam dentro de você, ou no papel.
@@ -1088,13 +976,9 @@ Para um segundo. Porque o que você atravessou aqui não tem volta.
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 Este encerramento existe para nomear o que foi construído — porque P4 e as sessões não parecem grandes no momento em que acontecem. Parecem exercícios, conversas, documentos. Mas o que aconteceu aqui é o que separa especialista com método de especialista com prova.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — Você foi a campo + sobre o número 3.**
 
@@ -1122,13 +1006,9 @@ Aplicação: tudo que você viveu aqui — as conversas, as objeções, o "sim" 
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: P4, Rastreador, Roteiro da Sessão 1:1, depoimento em construção — tudo no Drive. Quando: tudo que está aqui acompanha você do M4 em diante como os inputs centrais do posicionamento público.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Você foi a campo. Testou sua oferta com gente de verdade. E saiu desse módulo sendo alguém diferente de quem entrou.
 

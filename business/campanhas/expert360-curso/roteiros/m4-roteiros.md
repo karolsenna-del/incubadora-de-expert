@@ -24,8 +24,6 @@ Versão: 2.3 | Data: 18/06/2026 | Status: A1-A8 + Encerramento aprovados (QG-CC-
 
 ---
 
-**[ABERTURA — o que ficou de portas fechadas]**
-
 Você chegou no Módulo 3 como especialista com método. Saiu como especialista com prova.
 
 Foi a campo. Apresentou sua proposta pra pessoas reais. Ouviu objeções reais. Recebeu um "sim" — ou um "vou pensar" — de alguém do outro lado de uma conversa real.
@@ -35,8 +33,6 @@ E tudo isso, até agora, ficou de portas fechadas. Entre você e quem sentou na 
 Chegou a hora de abrir essas portas.
 
 ---
-
-**[O QUE E POR QUÊ — sua presença, com posicionamento]**
 
 Este módulo entrega P5: sua **Autoridade** — sua presença no digital.
 
@@ -49,8 +45,6 @@ As duas situações têm a mesma causa: falta de posicionamento. E é por isso q
 Por que isso importa agora? Porque tudo que você construiu nos módulos anteriores — sua persona, sua promessa, seu método, sua prova — ainda está de portas fechadas. Sem presença posicionada, quem poderia ser sua cliente não tem como te encontrar, nem confiar em você quando encontra.
 
 ---
-
-**[COMO — o que este módulo entrega]**
 
 **Ponto 1 — O que você vai ter ao final.**
 
@@ -78,8 +72,6 @@ Aplicação: você sai posicionada — com perfil, voz, conteúdo planejado e o 
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: tudo entra no seu Drive, nos materiais desta seção do curso — cada aula te aponta pro material certo, no momento certo. Quando: ao longo das próximas 8 aulas, terminando com a publicação e o primeiro turbinar.
 
 ---
@@ -87,8 +79,6 @@ Onde: tudo entra no seu Drive, nos materiais desta seção do curso — cada aul
 Antes de começar — posicionamento é onde mais alunas querem ir sozinhas e onde mais percebem depois que algo ficou torto. Se você quer construir sua autoridade com acompanhamento individual, a Mentoria VIP cobre o Módulo 4 inteiro: três sessões comigo para montar sua presença, sua linha editorial e colocar tudo no ar com clareza. O link pra entrar em contato com o suporte está na descrição dessa aula.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Não é sobre virar influencer. É sobre parar de ser invisível pra quem você já sabe que serve — seja você abrindo essa porta pela primeira vez, seja reabrindo ela de um jeito diferente.
 
@@ -138,8 +128,6 @@ Na próxima aula, a gente começa por aí: o que é, de fato, ser autoridade —
 
 ---
 
-**[ABERTURA — o feed que te ensinou uma mentira]**
-
 Antes de falar de autoridade, eu quero falar do seu feed.
 
 Existe uma regra na Mentalidade Black que diz: **ou você transforma o ambiente, ou o ambiente te transforma.** E o ambiente não é só as pessoas com quem você convive. É o que você consome todo dia, sem perceber — inclusive o seu feed do Instagram.
@@ -156,15 +144,11 @@ Essa conclusão é uma mentira. E essa aula existe pra desmontar ela.
 
 ---
 
-**[O QUE E POR QUÊ — influência x autoridade]**
-
 O tema de hoje é uma distinção só: **influência x autoridade** — e por que, pra você, autoridade é o caminho.
 
 Isso importa agora porque, nas próximas aulas, você vai trabalhar — ajustar, ou criar, se ainda não tiver — sua presença no Instagram. Se você não fizer essa distinção antes, corre dois riscos: tentar virar uma pessoa que você não é (e desistir antes de ver resultado), ou — se já posta — continuar postando sem direção, achando que o problema é frequência, quando o problema é clareza. Essa aula existe pra você não cair em nenhum dos dois.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — Influência x Autoridade.**
 
@@ -192,13 +176,9 @@ Aplicação: esse módulo não é sobre criar do zero. É sobre traduzir pra for
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: a tríplice — persona, expert, método — vira um documento só na Aula 3, com o Agente da Autoridade Tríplice. Quando: a partir de agora, antes de criar ou ajustar qualquer peça da sua presença digital, pergunte: "isso reflete minha persona, minha história e meu método — os 3?"
 
 ---
-
-**[TRANSIÇÃO]**
 
 Você já sabe que não precisa virar influencer. Sabe que autoridade vem da tríplice — persona, expert, método — e que você já tem os três.
 
@@ -248,8 +228,6 @@ Falta uma peça: saber com quem, exatamente, sua persona está pronta pra ouvir 
 
 ---
 
-**[ABERTURA — duas pessoas, o mesmo post]**
-
 Imagina duas pessoas vendo o mesmo post seu.
 
 A primeira nunca parou pra pensar no problema que você resolve — pra ela, "tá tudo bem", mesmo não estando. A segunda já sabe que tem um problema, já procurou solução, já tentou umas coisas, e está quase decidindo o que fazer.
@@ -260,15 +238,11 @@ Se você fizer um post só — o mesmo post, pras duas — uma das duas vai sent
 
 ---
 
-**[O QUE E POR QUÊ — o funil de consciência]**
-
 O tema de hoje é o **funil de consciência** — um mapa com 3 estágios que mostra onde sua persona está, e que tipo de conteúdo fala com ela em cada estágio.
 
 Isso importa agora porque, sem esse mapa, todo conteúdo que você cria tende a virar a mesma coisa — focado em vender, direto. E isso só funciona pra quem já está pronta pra comprar, que é a minoria de quem te vê. O resto rola o feed, porque não se reconhece naquilo.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — Os 3 estágios.**
 
@@ -296,13 +270,9 @@ Aplicação: essa proporção não é aleatória — reflete onde está a maiori
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: esse mapa reaparece na Aula 5, quando você organizar sua linha editorial — lá ele recebe outro nome (tons: Alcance, Identificação, Crença), mas é a mesma lógica. Quando: a partir de agora, toda vez que for criar um conteúdo, primeiro pergunte em que estágio sua audiência está.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Agora você tem o mapa: 3 estágios, 3 tipos de conteúdo, uma cadência mínima.
 
@@ -352,8 +322,6 @@ Mas o mapa só funciona se você souber o que dizer em cada estágio — e isso 
 
 ---
 
-**[ABERTURA — três documentos que ainda não se falam]**
-
 Você sabe que precisa falar diferente com quem está no Topo, no Meio e no Fundo. Mas falar diferente sobre o quê, exatamente?
 
 A resposta não está em nenhum lugar novo. Ela está espalhada em 3 documentos que você já tem: sua persona e promessa (Módulo 1), sua história real (Módulo 0) e seu método (Módulo 2).
@@ -362,15 +330,11 @@ Esta aula é onde essas peças se juntam — e saem do outro lado como um relat�
 
 ---
 
-**[O QUE E POR QUÊ — rodar o Agente da Autoridade Tríplice]**
-
 O tema de hoje é um exercício: rodar o **Agente da Autoridade Tríplice**.
 
 Isso importa agora porque tudo que vem depois neste módulo — sua vitrine (A4), sua linha editorial (A5), seus roteiros (A6) — parte do relatório que esse agente devolve. Fazer esse exercício com calma, uma vez, evita repetir o trabalho de juntar suas peças manualmente em cada uma das próximas aulas.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que entra (inputs).**
 
@@ -398,13 +362,9 @@ Aplicação: guarde o relatório à mão — você volta a ele nas próximas 4 a
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: o arquivo **M4.1 - Relatório da Autoridade Tríplice** no seu Drive + o **Agente da Autoridade Tríplice** no seu painel de agentes. Quando: agora — antes de seguir pra próxima aula, porque ela já parte do relatório.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Com o relatório em mãos, você tem, organizado num documento só, quem você é, pra quem fala e como entrega.
 
@@ -449,8 +409,6 @@ Na próxima aula, esse relatório vira a sua vitrine — o que qualquer pessoa v
 
 ---
 
-**[ABERTURA — da teoria pra vitrine]**
-
 Você tem o Relatório da Autoridade Tríplice na mão. Agora ele vira algo visível.
 
 Talvez seu Instagram já exista — já tenha posts, seguidores, uma rotina de postar. Ou talvez ainda não exista, ou exista como perfil pessoal, nunca tratado como profissional.
@@ -459,8 +417,6 @@ De um jeito ou de outro, esta aula é a mesma — porque o que muda não é a ex
 
 ---
 
-**[O QUE E POR QUÊ — as 6 peças da sua vitrine]**
-
 O tema de hoje é a sua vitrine — as 6 peças que qualquer visitante vê quando chega no seu perfil: foto, bio, frase-tese, narrativa, destaques e posts fixados.
 
 Isso importa agora porque a vitrine é o que decide, em segundos, se quem chega fica ou sai. E "chegar" pode ser por indicação, por comentário, por um anúncio — não importa a origem, o destino é sempre o mesmo: seu perfil. Se ele não disser quem você é, pra quem, e como você entrega, a visita não vira nada — não importa se o perfil é novo ou tem 3 anos de posts.
@@ -468,8 +424,6 @@ Isso importa agora porque a vitrine é o que decide, em segundos, se quem chega 
 Tenha à mão: seu Relatório da Autoridade Tríplice (Aula 3), sua História Real (Módulo 0) e seu Método Autoral (Módulo 2) — e o Instagram aberto, porque esta é uma aula prática.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — Identidade: foto e bio.**
 
@@ -497,13 +451,9 @@ Aplicação: produza ou ajuste os 6, na ordem 1→2→3 em cada material — des
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: M4.2 - Minha Frase-Tese Autoral.md → M4.3 - Minha Narrativa de Posicionamento.md → M4.4 - Meus Destaques.md → M4.5 - Meus Posts Fixados.md, nessa ordem — porque as duas primeiras alimentam as duas últimas. Quando: nesta aula, com o Instagram aberto — é aula prática.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Sua vitrine existe — ajustada ou criada. Mas vitrine parada não atrai ninguém: o que mantém ela viva é o conteúdo que você posta com consistência.
 
@@ -551,23 +501,17 @@ Na próxima aula, você transforma tudo isso numa linha editorial — pilares de
 
 ---
 
-**[ABERTURA — o problema do "o que eu posto hoje?"]**
-
 Sua vitrine está pronta — ajustada ou criada. Mas vitrine parada não atrai ninguém.
 
 E aqui mora a armadilha mais comum: ou você não posta porque não sabe o que dizer, ou senta numa tarde, tenta planejar 30 dias de conteúdo de uma vez, e trava — ou abandona na segunda semana.
 
 ---
 
-**[O QUE E POR QUÊ — linha editorial e um "plano de 30 dias" diferente]**
-
 O tema de hoje é sua linha editorial — e um "plano de 30 dias" que não significa 30 posts prontos.
 
 Isso importa agora porque sua vitrine, sozinha, não gera movimento. É o conteúdo recorrente que traz gente nova, aprofunda quem já te segue, e prepara quem está quase decidindo. Sem um sistema pra isso, a tendência é parar de postar — e uma vitrine sem movimento volta a ficar invisível, exatamente o problema que este módulo resolve.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que falar: 3 pilares + banco de temas.**
 
@@ -595,13 +539,9 @@ Aplicação: o "plano de 30 dias" é essa mesma grade repetida por 4 semanas —
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: M4.6 - Minha Linha Editorial.md — Seção 1 (pilares + banco de temas, roda 1 vez), Seção 2 (grade semanal fixa, referência), Seção 3 (calendário de 4 semanas — só o tema muda). Quando: Seção 1 agora; Seção 3, toda semana, antes de começar.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Agora você tem um sistema: pilares pra saber sobre o que falar, tons pra saber com quem está falando, formatos pra nunca travar, stories pra manter presença, e uma grade que se repete sem te esgotar.
 
@@ -647,23 +587,17 @@ Falta uma coisa: quando chegar a hora de escrever o roteiro, como não travar na
 
 ---
 
-**[ABERTURA — do calendário pro roteiro]**
-
 Você já sabe o que vai postar hoje: abre o Calendário de 4 Semanas (Aula 5) e lá está — Pilar, Tom, Formato, Tema.
 
 Mas saber o tema não é a mesma coisa que ter o roteiro pronto. É exatamente aqui que a maioria trava.
 
 ---
 
-**[O QUE E POR QUÊ — 4 prompts reutilizáveis]**
-
 O tema de hoje são os prompts reutilizáveis que cobrem o ciclo completo do conteúdo: 4 prompts de roteiro — 2 de carrossel, 2 de reels — que cobrem os 3 tons (Alcance, Identificação, Crença) — e mais 1 prompt de legenda com SEO/GEO e headline de capa, que roda em seguida, com qualquer um dos 4.
 
 Isso importa agora porque, sem eles, o "roteiro completo" da sua grade semanal vira o dia mais difícil — e dia difícil é dia que não acontece. Com eles, vira conversa: o chat pede seus materiais, sugere 5 opções, você escolhe, ele monta — e fecha já com a legenda pronta pra postar.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — Como os prompts funcionam.**
 
@@ -691,13 +625,9 @@ Aplicação: 2A pra tons Alcance/Identificação, 2B pra tom Crença. Em qualque
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: M4.7 - Meus Roteiros.md. Quando: toda vez que sua grade marcar "Roteiro completo" — os formatos de emergência (Aula 5) não precisam de prompt.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Agora o kit está completo: vitrine ajustada ou criada, frase-tese e narrativa escritas, linha editorial com pilares e calendário, prompts prontos pra nunca travar.
 

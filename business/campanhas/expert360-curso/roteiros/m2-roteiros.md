@@ -19,8 +19,6 @@ Esta versão retrofita o conteúdo do M2 v1.1 (aprovado em QG-CC-006) pro format
 
 ---
 
-**[ABERTURA]**
-
 Bem-vinda ao Módulo 2.
 
 Você chegou aqui com P1 e P2. Sabe exatamente com quem está falando e o que está prometendo.
@@ -28,8 +26,6 @@ Você chegou aqui com P1 e P2. Sabe exatamente com quem está falando e o que es
 Agora vem o trabalho mais importante do curso.
 
 ---
-
-**[O QUE E POR QUÊ]**
 
 Este módulo entrega P3 e o Portfólio de Ferramentas — o coração do Expert360.
 
@@ -40,8 +36,6 @@ O Portfólio são as ferramentas que acompanham esse método — planilhas, temp
 Por que aqui? Porque todos os outros módulos orbitam este. No Módulo 0 você escreveu a história que vai entrar no método. No Módulo 1 você descobriu pra quem ele serve e o que promete. No Módulo 3 você vai vender esse método. No Módulo 4 você vai posicionar quem o criou. O método é o centro de tudo — e ele nasce aqui.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — Os dois entregáveis.**
 
@@ -69,13 +63,9 @@ Aplicação: essa distinção é uma mudança de como você se enxerga como espe
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: os documentos de P3 e do Portfólio são gerados com os agentes — Agente do Processo Autoral (A5) e Agente do Portfólio Estratégico (A7) — e guardados no Drive. Quando: ao longo das próximas 8 aulas, começando pelas duas viradas de mentalidade.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Dois entregáveis. Oito aulas. O coração do Expert360.
 
@@ -113,8 +103,6 @@ Na próxima aula, a primeira virada de mentalidade: você não precisa saber tud
 
 ---
 
-**[ABERTURA]**
-
 A primeira virada de mentalidade antes dos agentes.
 
 Eu fracassei em oito lançamentos.
@@ -129,15 +117,11 @@ Era o que eu acreditava sobre o que eu sabia.
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é o paradoxo da insegurança inteligente — e a diferença entre a insegurança que paralisa e a insegurança que move.
 
 Isso importa agora porque antes de criar qualquer método, essa crença vai aparecer: "preciso saber mais", "não estou pronta", "falta mais uma certificação." Nomear esse padrão antes de começar é o que te impede de deixar que ele decida por você.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O paradoxo: os melhores têm medo.**
 
@@ -165,13 +149,9 @@ Aplicação: você não precisa saber tudo para ensinar. Você precisa saber mai
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: essa percepção acompanha você a partir de agora — toda vez que a insegurança aparecer durante a construção do método, a pergunta é: tipo 1 ou tipo 2? Quando: antes de abrir qualquer agente, essa é a pergunta que garante que você vai até o fim.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Você não precisa saber tudo para ensinar. A insegurança que sente é inteligente — não paralisante.
 
@@ -210,8 +190,6 @@ Na próxima aula, a segunda virada: o método não precisa ser inventado. Ele j�
 
 ---
 
-**[ABERTURA]**
-
 A segunda virada de mentalidade.
 
 Você conhece a história da pulga no circo?
@@ -230,15 +208,11 @@ A caixa está aberta. Você nasceu para pular alto.
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é a distinção que muda tudo: método não é currículo acumulado — método é vivência organizada.
 
 Isso importa agora porque a segunda crença que paralisa especialistas antes de criar o método é a ideia de que precisam inventar algo novo. Não precisam. O método já existe. E esta aula mostra onde ele está.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — Método não é currículo.**
 
@@ -266,13 +240,9 @@ Aplicação: a única escolha é qual medo carregar: o medo de tentar, ou o medo
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: essa percepção fica. Toda vez que surgir a voz "ainda não estou pronta pra criar o método", a pergunta é: estou esperando o quê, exatamente? Quando: a partir da próxima aula, você começa a revelar o que já existe.
 
 ---
-
-**[TRANSIÇÃO]**
 
 O método já existe. Está na sua história. O M0 já extraiu o material.
 
@@ -310,8 +280,6 @@ Antes de abrir o agente, você vai entender o que é um método autoral de verda
 
 ---
 
-**[ABERTURA]**
-
 As duas viradas de mentalidade estão feitas. Você não precisa saber tudo. E o método já existe.
 
 Antes de abrir o agente, você precisa entender o que vai criar.
@@ -320,15 +288,11 @@ Não porque o agente não explique — ele explica. Mas porque existe uma decis�
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é o que torna um método autoral — e os 5 tipos de narrativa de origem.
 
 Isso importa agora porque você vai chegar ao Agente do Processo Autoral com uma hipótese. Não precisa ser certeza. Mas chegar com uma hipótese sobre o tipo de narrativa que está no coração do seu método vai acelerar o que o agente constrói com você.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que método não é.**
 
@@ -356,13 +320,9 @@ Aplicação: pensa na sua história. Qual dessas narrativas ressoa como verdadei
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: a hipótese do tipo de narrativa vai com você pra próxima aula (A4 — As 3 Jornadas) e pro Agente do Processo Autoral (A5). Quando: antes de fechar esta aula, escolha sua hipótese — Tesouro Escondido, Olhar Sagaz, Grande Obstáculo, Resolvedor ou Fora da Curva.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Você sabe o que é um método autoral e tem uma hipótese sobre o tipo de narrativa que está no coração do seu.
 
@@ -400,8 +360,6 @@ Na próxima aula, antes de abrir qualquer agente, você vai aprender como projet
 
 ---
 
-**[ABERTURA]**
-
 Você sabe o que é um método autoral. Sabe que ele tem estrutura, lógica e narrativa de origem. Sabe que a narrativa é o que o torna incopiável.
 
 Mas existe uma pergunta que a maioria das especialistas não faz quando começa a construir o método:
@@ -414,15 +372,11 @@ Essas são perguntas de design. E a maioria dos métodos não responde nenhuma d
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é o framework das 3 Jornadas — a Didática, a Cronológica e a Psicológica.
 
 Isso importa agora porque você vai sair desta aula com o rascunho das 3 jornadas do seu método — e esse rascunho vai ser o input que você leva para o Agente do Processo Autoral (A5) e para o Agente do Portfólio Estratégico (A7). Quanto mais claro o rascunho, mais preciso o que os agentes constroem com você.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O problema do método de uma dimensão + as 3 Jornadas.**
 
@@ -450,13 +404,9 @@ Aplicação: você não precisa apresentar as 3 jornadas usando esses nomes. O i
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: abra o arquivo **Meu Método Autoral (P3)** no Drive e responda os 3 blocos de perguntas. **Bloco 1 — Jornada Didática:** para cada fase/módulo do seu método: o que aprende / entregável concreto / ferramenta ou agente associado. **Bloco 2 — Jornada Cronológica:** por que o módulo 2 não pode vir antes do módulo 1? Qual é o gate de passagem? Se a aluna tentar pular, o que quebra? Escreva uma frase de razão para cada gate — essa frase é o que você usa na venda. **Bloco 3 — Jornada Psicológica:** para cada fase: "antes desta fase, a aluna é X. Depois, ela se torna Y." X e Y são como ela se vê e como se autoriza a agir — não o que ela sabe. Quando: agora, antes de seguir pra A5 (Agente do Processo Autoral) — o rascunho é o input para os próximos agentes.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Método projetado em 3 dimensões é método que entrega e que vende.
 
@@ -495,23 +445,17 @@ Com o rascunho das 3 jornadas em mãos, você está pronta para o Agente do Proc
 
 ---
 
-**[ABERTURA]**
-
 Você tem o contexto. Você tem o material. Você tem uma hipótese sobre o tipo de narrativa que está no coração do seu método. E agora você tem o rascunho das 3 jornadas.
 
 Agora vem a construção completa.
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é um exercício: construir seu Método Autoral completo com o **Agente do Processo Autoral**.
 
 Isso importa agora porque P3 é o entregável que alimenta todo o resto deste módulo e os módulos seguintes — o Portfólio (A7) parte do P3, a oferta do M3 parte do P3, o posicionamento do M4 parte do P3. Fazer esse exercício com atenção, uma vez, é o que garante que tudo que vem depois está ancorado em algo real e incopiável.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que entra (inputs).**
 
@@ -539,13 +483,9 @@ Aplicação: salve P3 no Drive no arquivo **Meu Método Autoral (P3)**, na seç�
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: **Agente do Processo Autoral** no seu painel de agentes + quatro documentos do Drive (História Real, Ikigai, P1, P2) + hipótese do tipo + rascunho das 3 jornadas. Quando: agora — antes de seguir pra A6, porque A7 parte de P3.
 
 ---
-
-**[TRANSIÇÃO]**
 
 P3 pronto. Você tem um método com nome, estrutura e história dentro — incopiável.
 
@@ -584,8 +524,6 @@ Na próxima aula, antes de mapear o portfólio, uma aula curta que explica por q
 
 ---
 
-**[ABERTURA]**
-
 Você acabou de construir o seu método.
 
 Ele tem nome, estrutura, narrativa. Está pronto para ser ensinado.
@@ -594,15 +532,11 @@ Mas existe uma diferença entre um método que é ensinado e uma oferta que é i
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é por que o portfólio de ferramentas — não a copy — é o que transforma um método numa oferta que converte.
 
 Isso importa agora porque na próxima aula você vai mapear o seu portfólio com o Agente do Portfólio Estratégico. Entender o papel das ferramentas antes de construir garante que você constrói as certas — não as que parecem impressionantes, as que removem as travas reais da sua aluna.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que a maioria acha + o que as ferramentas fazem.**
 
@@ -630,13 +564,9 @@ Aplicação: o portfólio não é o que você acrescenta no final para parecer q
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: o portfólio que você vai construir na próxima aula parte de P1 (travas da persona), P2 (resultado prometido) e P3 (estrutura do método e das 3 jornadas). Quando: antes de seguir pra A7, tenha esses três documentos abertos no Drive.
 
 ---
-
-**[TRANSIÇÃO]**
 
 Ferramentas não são bônus. São parte da entrega — e são o que transforma o método numa oferta irresistível.
 
@@ -674,23 +604,17 @@ Na próxima aula, você vai mapear o seu portfólio com o Agente do Portfólio E
 
 ---
 
-**[ABERTURA]**
-
 Você entende agora por que o portfólio importa.
 
 Agora vem a construção. E a construção começa de um lugar que a maioria não começa: das travas da sua aluna, não das suas ideias de ferramentas.
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 O tema de hoje é um exercício: mapear seu Portfólio de Ferramentas com o **Agente do Portfólio Estratégico**.
 
 Isso importa agora porque o portfólio mapeado é o guia de produção do curso — cada ferramenta é um item do checklist de produção que você vai gerar no final do Expert360. Fazer isso com o agente garante que você constrói o que realmente remove as travas da sua aluna, não o que parece sofisticado.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que entra (inputs).**
 
@@ -718,13 +642,9 @@ Aplicação: essa planilha é o guia de produção — cada ferramenta é um ite
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: **Agente do Portfólio Estratégico** no seu painel de agentes + **P1, P2 e P3** no Drive. Quando: agora — com P3 e o portfólio mapeados, você está pronta para o Encerramento do Módulo 2.
 
 ---
-
-**[TRANSIÇÃO]**
 
 P3 pronto. Portfólio mapeado.
 
@@ -762,21 +682,15 @@ Na próxima aula, a gente para um segundo e vê o que aconteceu neste módulo �
 
 ---
 
-**[ABERTURA]**
-
 Você chegou no fim do Módulo 2.
 
 Para um segundo. Porque o que aconteceu aqui é maior do que parece no momento em que termina.
 
 ---
 
-**[O QUE E POR QUÊ]**
-
 Este encerramento existe para nomear o que foi construído — porque P3 e o Portfólio não parecem grandes no momento em que você os faz. Parecem exercícios, conversas com agentes, documentos salvos no Drive. Mas o que está documentado ali é o coração do Expert360.
 
 ---
-
-**[COMO]**
 
 **Ponto 1 — O que você construiu.**
 
@@ -804,13 +718,9 @@ Aplicação: o que você vai levar para o Módulo 3 é tudo que está nos seus d
 
 ---
 
-**[ONDE E QUANDO]**
-
 Onde: P3 e o Portfólio ficam no Drive — acompanham você do Módulo 3 em diante como os inputs centrais da oferta e do posicionamento. Quando: assim que terminar este encerramento, você está pronta pra começar o Módulo 3.
 
 ---
-
-**[TRANSIÇÃO]**
 
 P1, P2, P3 e Portfólio prontos. Três dos cinco Ps construídos.
 
