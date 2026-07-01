@@ -1,0 +1,83 @@
+name: Post formula-lancamento-especialista
+
+on:
+  schedule:
+    - cron: '0 15 4 7 *'   # 04/07 às 15:00 UTC = 12h BRT
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publicar carrossel via Meta Graph API
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: "17841437530973593"
+          CAPTION: |
+            A fórmula de lançamento diz que você consegue lançar seu infoproduto em 1 fim de semana.
+
+            Ela não foi feita pra você.
+
+            Foi feita pra quem está começando do zero. Que não tem reputação a proteger. Que pode errar em público sem consequência real.
+
+            Você é diferente.
+
+            Tem anos de carreira. Uma reputação que levou décadas pra construir. E nunca vendeu nada no digital.
+
+            Lançar antes de estar pronta não é ousadia. É risco real.
+
+            O caminho para o especialista começa diferente: estrutura o método, valida em ambiente controlado, constrói confiança antes de se expor.
+
+            Tenho um mini treinamento mostrando como fazer isso em 90 dias.
+
+            Comente AULA que mando o link.
+
+            #incubadoradeexpert #expertdigital #lancamento #metodoonline #posicionamentodigital #autoridadedigital #cursoonline
+        run: |
+          python3 - <<'EOF'
+          import os, requests, urllib.parse as up
+
+          TOKEN   = os.environ["META_TOKEN"]
+          IG_ID   = os.environ["IG_USER_ID"]
+          CAPTION = os.environ["CAPTION"].strip()
+          BASE    = "https://graph.facebook.com/v21.0"
+
+          SLIDES = [
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782926900/instagram-carrosseis/formula-lancamento-especialista/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782926902/instagram-carrosseis/formula-lancamento-especialista/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782926904/instagram-carrosseis/formula-lancamento-especialista/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782926907/instagram-carrosseis/formula-lancamento-especialista/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782926909/instagram-carrosseis/formula-lancamento-especialista/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782926911/instagram-carrosseis/formula-lancamento-especialista/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1782926913/instagram-carrosseis/formula-lancamento-especialista/slide-07.png",
+          ]
+
+          def meta_post(path, data):
+            r = requests.post(f"{BASE}/{path}", params={"access_token": TOKEN},
+                              data=up.urlencode(data).encode("utf-8"),
+                              headers={"Content-Type": "application/x-www-form-urlencoded"})
+            print(f"{path}: {r.status_code} {r.text[:200]}")
+            r.raise_for_status()
+            return r.json()
+
+          print("Criando item containers...")
+          item_ids = []
+          for url in SLIDES:
+            resp = meta_post(f"{IG_ID}/media", {"image_url": url, "is_carousel_item": "true"})
+            item_ids.append(resp["id"])
+          print(f"{len(item_ids)} containers criados")
+
+          print("Criando carousel container...")
+          resp = meta_post(f"{IG_ID}/media", {
+            "media_type": "CAROUSEL",
+            "children":   ",".join(item_ids),
+            "caption":    CAPTION,
+            "published":  "false",
+          })
+          carousel_id = resp["id"]
+          print(f"carousel_id: {carousel_id}")
+
+          print("Publicando...")
+          resp = meta_post(f"{IG_ID}/media_publish", {"creation_id": carousel_id})
+          print(f"PUBLICADO: {resp}")
+          EOF

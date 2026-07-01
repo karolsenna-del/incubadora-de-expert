@@ -18,3 +18,6 @@
 | 29/06/2026 | sabe-demais-paralisando | 29/06/2026 12h | 18168547921442241 | publicado automaticamente |
 | 30/06/2026 | carrossel-3-oferta | 01/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-carrossel-3-oferta.yml) |
 | 30/06/2026 | julia-child | 02/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-julia-child.yml) |
+| 01/07/2026 | quanto-mais-estudou | 03/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-quanto-mais-estudou.yml) |
+| 01/07/2026 | formula-lancamento-especialista | 04/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-formula-lancamento-especialista.yml) |
+| 01/07/2026 | mais-concorrentes-metodo-unico | 05/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-mais-concorrentes-metodo-unico.yml) |
