@@ -37,3 +37,4 @@ _backup-pre-sync/
 *.mp4
 *.wav
 *.m4a
+.vercel

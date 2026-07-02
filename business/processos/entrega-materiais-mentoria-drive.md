@@ -58,6 +58,8 @@ Local usa `número - nome` (espaço-hífen-espaço). Drive usa `número) nome` (
 
 **Exceção importante — o Roteiro da Jornada (`0.1`) é sempre .xlsx, nunca .docx.** Ele tem uma coluna de Status por entregável que a aluna precisa marcar/atualizar conforme avança (Pendente / Em andamento / Concluído). Em .docx isso não é editável de forma prática — a aluna não consegue "marcar" status num Word. Em .xlsx vira dropdown clicável. Todos os outros documentos (Biblioteca de IAs, M0.1-M4.7) são conteúdo pra ler/preencher texto — .docx serve bem.
 
+**Exceção — o Anotações (`00-`) não sincroniza de volta pro repo.** Diferente dos outros, é um documento vivo: você registra os encontros (gravação/transcrição) e a aluna escreve ideias direto no Drive, sessão após sessão. Entrega uma vez (esqueleto vazio) e a partir daí o Drive é a fonte — você abre ele direto de lá antes de cada sessão, não precisa puxar de volta pro repo. Só valeria puxar de volta se algum agente precisasse ler esse histórico pra preparar sessão automaticamente.
+
 ---
 
 ## Passo a passo
