@@ -39,7 +39,7 @@ Construir a narrativa autoral — a história da Milena dentro do método. Esse 
 ## Preparação da Karol (pré-sessão — 30/06/2026)
 
 **Objetivo da sessão:**
-Fechar M0 — validar história real + Ikigai + esboçar frase-tese
+Fechar M0 — validar história real + Ikigai. Frase-tese NÃO fecha aqui — é entregável de P5 (M4), construído com P1+P2+P3 prontos + Agente da Autoridade Tríplice. Hoje só guarda a semente (ferida → medicina → mecanismo).
 
 **Propostas que a Karol vai levar para a Milena:**
 - Excluir pilar técnico do método IAP (não pertence à mentoria de performance)

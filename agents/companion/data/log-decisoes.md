@@ -10,6 +10,16 @@
 **Impacto:** [o que muda]
 -->
 
+## 01/07/2026 — Migração de plataforma: Hotmart bloqueou → curso migrado pra Voomp Play
+
+**Contexto:** Expert360º estava planejado pra rodar na Hotmart (estrutura, questionário de pré-diagnóstico, agente de suporte nativo). Hotmart bloqueou o acesso/uso pretendido.
+
+**Decisão:** Migrar o curso pra Voomp Play. O worker `course-publisher` (`agents/course-publisher/`) já estruturou os 5 módulos + Módulo de Orientações com as 43 aulas na nova plataforma (config.yaml).
+
+**Racional:** Sem alternativa viável na Hotmart, Voomp Play oferece a estrutura equivalente (módulos, aulas, agente de suporte nativo) sem o bloqueio.
+
+**Impacto:** PRD atualizado pra v1.4 refletindo a mudança. Itens do checklist de produção que citavam Hotmart (H01-H09) atualizados pra Voomp — parte já concluída (estrutura dos módulos), parte pendente (upload de vídeos, vínculo de materiais, questionário de pré-diagnóstico equivalente na Voomp).
+
 ## 15/06/2026 — Criar especialista "Expert em Lives" para roteiros de live semanal
 
 **Contexto:** Karol faz lives semanais pro grupo fechado (Google Meet) hoje sem agente especializado — produzidas no "Claude normal", cada sessão do zero. Testamos um outline em tópicos pra Live 19, adaptando o modelo "Funil de Zoom" (Conversão Imediata) do ETL Vinizoom: Narrativa → Execução (com spoiler do pitch) → Prática (reusa o exercício "Lista de Fracassos" do M0) → Prova Racional + Pitch Estendido.

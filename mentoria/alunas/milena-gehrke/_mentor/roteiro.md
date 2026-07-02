@@ -41,7 +41,7 @@
 **O que revisar na sessão:**
 - A história real está densa — extrair os 2-3 elementos que vão dentro do método (ferida → medicina → mecanismo)
 - O Ikigai sintetizou bem — confirmar a interseção que vai virar o diferencial do IAP
-- Começar a esboçar a frase-tese com o que emergiu
+- Guardar esses elementos como semente pra narrativa autoral (P3) e frase-tese (P5) — fechamento dos dois fica pra depois, quando P1+P2+P3 já existirem (segue a sequência do método Expert360, não faz sentido fechar frase-tese antes da persona/promessa/processo)
 
 ---
 
@@ -70,10 +70,6 @@
 | Sem. 3 | Execução: rascunho de bio com P1 + P2 | Bio rascunho | — |
 | Sem. 4 | Refinamento | P2 + frase-tese finalizada | ★ Sessão 4: Fechar M1 |
 
-**Frase-tese a construir:**
-A Milena chegou perto com: _"No agro, não basta saber fazer. É preciso saber enxergar, conduzir, posicionar e sustentar."_
-Precisa virar algo mais curto e mais visceral. Trabalhar na sessão.
-
 ---
 
 ### MÊS 4 — M2: PROCESSO AUTORAL (Narrativa do IAP)
@@ -93,6 +89,8 @@ Precisa virar algo mais curto e mais visceral. Trabalhar na sessão.
 
 A partir do Mês 5, a Milena segue o roteiro padrão (portfólio → oferta → campo → autoridade → escala).
 
+**Mês 9 — M4: Autoridade Tríplice + Frase-Tese (P5).** Retomar aqui a semente guardada no fechamento do M0 (ferida → medicina → mecanismo) e o rascunho que a Milena chegou perto de fazer: _"No agro, não basta saber fazer. É preciso saber enxergar, conduzir, posicionar e sustentar."_ Levar pro Agente da Autoridade Tríplice junto com P1+P2+P3 já prontos, pra virar frase-tese curta e visceral.
+
 Ver: `0.1- Roteiro da Jornada.md` — Meses 5 a 12.
 
 ---
@@ -105,5 +103,5 @@ Ver: `0.1- Roteiro da Jornada.md` — Meses 5 a 12.
 
 ## PRÓXIMA SESSÃO
 
-**Objetivo:** Fechar M0 — validar história real + Ikigai + esboçar frase-tese
+**Objetivo:** Fechar M0 — validar história real + Ikigai (guardar material bruto pra P3/P5, sem fechar frase-tese ainda — isso é M4)
 **O que preparar:** Ler `_mentor/negocio.md` antes da sessão

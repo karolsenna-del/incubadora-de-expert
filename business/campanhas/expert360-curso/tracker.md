@@ -57,6 +57,7 @@
 ## LOG
 
 > Mais recente primeiro.
+- 01/07 — @karol: PRD atualizado pra v1.4 (Fase 9 completa — curso estruturado e roteirizado, produção em andamento). Migração de plataforma: Hotmart bloqueou, curso migrado pra Voomp Play — course-publisher já estruturou os 5 módulos + Orientações com 43 aulas (config.yaml). Drive organizado em pastas por módulo (M0-M4). Alumni Group descartado para este lançamento. Template da Biblioteca de IAs corrigido — removida referência ao "Agente de Criação de Conteúdo (M4)" que nunca foi criado (estava gerando link quebrado pra aluna).
 - 22/06 — @course-publisher: design completo da area de membros — 6 capas de modulo (1920x1080), 47 thumbnails de aulas (1280x720), banner desktop (1920x800) + mobile (720x960), avatar do produto (600x600), certificado A4 (2480x3508). Scripts de geracao em `assets/`. Tese "Diploma e o que voce estudou. Metodo e o que voce viveu." usada no banner.
 - 21/06 — @companion: worker Course Publisher criado e instalado em `agents/course-publisher/`. Tarefa de descricoes adicionada para o Course Creator. Pasta `business/producao/expert360/` criada com estrutura de modulos e template de descricoes.
 - 20/06 — @course-chief: Pipeline Course Creator COMPLETO — todas as 10 fases (QG-CC-001 a QG-CC-010 PASS). Revisão final sem gaps críticos. Checklist de produção gerado em `checklist-producao.md`. Próximos passos: escrever/gravar Módulo de Orientações, gravar M2-M4, criar biblioteca de templates, configurar Hotmart, criar agente de suporte na plataforma. M0 e M1 já gravados e editados pela Karol.

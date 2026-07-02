@@ -33,23 +33,25 @@
 |---|---|---|
 | M01 | Criar biblioteca de templates (8–10 modelos Canva/Notion/Google Sheets) | Pendente — P2, pode vir em atualização pós-lançamento |
 | M02 | Revisar e finalizar materiais do Drive (M0.1 a M4.7) | Pendente — verificar prontidão para entrega |
-| M03 | Organizar Drive com estrutura de pastas por módulo | Pendente |
+| M03 | Organizar Drive com estrutura de pastas por módulo | ✅ Concluído (30/06/2026) — G:\Meu Drive\PRODUTOS\Curso Expert360\Materiais\ organizado em M0-M4 |
 
 ---
 
-## P4 — PLATAFORMA (Hotmart)
+## P4 — PLATAFORMA (Voomp)
+
+**Nota:** troca de plataforma — Hotmart bloqueou, curso migrado pra Voomp Play. Existe um agente dedicado, `course-publisher`, que já cuida da estrutura na Voomp (`agents/course-publisher/`) — os itens abaixo refletem o que ele já fez, não é trabalho do course-creator.
 
 | # | Item | Status |
 |---|---|---|
-| H01 | Configurar estrutura do curso na Hotmart (módulos, aulas, ordem) | Pendente |
-| H02 | Upload das aulas gravadas + edição | Pendente — após gravação |
-| H03 | Vincular materiais do Drive em cada aula | Pendente |
-| H04 | Configurar bloqueio sequencial (Orientações → M0 → M1 → ...) | Pendente |
-| H09 | Criar questionário de pré-diagnóstico nativo no Hotmart (gate de avanço antes do M0) | Pendente — substituiu Google Forms externo |
-| H05 | Integrar agente de suporte na Hotmart | ✅ Nativo — sem ação necessária |
+| H01 | Configurar estrutura do curso na Voomp (módulos, aulas, ordem) | ✅ Concluído via course-publisher — 5 módulos + Orientações criados, 43 aulas com slot na Voomp (config.yaml) |
+| H02 | Upload das aulas gravadas + edição | Pendente — só M0/M1 têm vídeo mapeado (gravados); M2-M4 aguardam gravação |
+| H03 | Vincular materiais do Drive em cada aula | Pendente — depende do upload dos vídeos |
+| H04 | Configurar bloqueio sequencial (Orientações → M0 → M1 → ...) | A confirmar com course-publisher — estrutura de módulos existe, não confirmei se o bloqueio sequencial já está ativo |
+| H09 | Criar questionário de pré-diagnóstico nativo (gate de avanço antes do M0) | Pendente — verificar equivalente na Voomp (substituiu Google Forms externo) |
+| H05 | Integrar agente de suporte na Voomp | ✅ Nativo — sem ação necessária |
 | H06 | Configurar página de vendas | Pendente — usar cartão de identidade como base |
 | H07 | Configurar preços: R$697 âncora / R$497 funis / 12x com juros | Pendente |
-| H08 | Definir status do Alumni Group (confirmar ou descartar) | Em aberto |
+| H08 | Definir status do Alumni Group (confirmar ou descartar) | ✅ Descartado para este lançamento (01/07/2026) — talvez no futuro |
 
 ---
 
@@ -65,9 +67,9 @@
 
 | # | Item | Status |
 |---|---|---|
-| D01 | Atualizar PRD: encontros mensais removidos → agente de suporte na Hotmart | Pendente |
-| D02 | Atualizar PRD: corrigir módulos (sem Transição, com Módulo de Orientações) | Pendente |
-| D03 | Atualizar PRD: Agente do Portfólio Estratégico → M2 Aula 7 | Pendente |
+| D01 | Atualizar PRD: encontros mensais removidos → agente de suporte na Hotmart | ✅ Concluído (01/07/2026) |
+| D02 | Atualizar PRD: corrigir módulos (sem Transição, com Módulo de Orientações) | ✅ Concluído (01/07/2026) |
+| D03 | Atualizar PRD: Agente do Portfólio Estratégico → M2 Aula 7 | ✅ Concluído (01/07/2026) |
 
 ---
 
@@ -76,6 +78,7 @@
 | Item | Nota |
 |---|---|
 | Agente de Construção de Ferramentas | Ideia válida — depende de solução de acesso do aluno ainda a definir. Não é item de lançamento. |
+| Agente de Criação de Conteúdo (M4) | Ainda não existe — estava listado no template da Biblioteca de IAs (mentoria/alunas/_template/) mas nunca foi criado. Removido do template (01/07/2026) pra não aparecer como link quebrado pra aluna. Não é item de lançamento. |
 
 ---
 

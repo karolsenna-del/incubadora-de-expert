@@ -1,5 +1,5 @@
 # PRD — Expert360º (Curso)
-Versão: 1.2 | Data: 25/05/2026 | Status: Aprovado (QG-CC-003) | Fase atual: Fase 3 — Estrutura Macro
+Versão: 1.4 | Data: 01/07/2026 | Status: Aprovado (QG-CC-003) | Fase atual: Fase 9 completa — curso estruturado e roteirizado, produção (gravação + Voomp) em andamento
 
 ---
 
@@ -47,13 +47,13 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 | Dimensão | Definição |
 |----------|-----------|
 | Formato | 100% online, gravado |
-| Módulos | 6 (Módulo 0 ao 4 + Transição entre 2 e 3) |
+| Módulos | Módulo de Orientações (operacional/onboarding) + 5 módulos de conteúdo (Módulo 0 ao 4) — sem módulo de Transição separado |
 | Mecanismo central | 6 agentes de IA usados DURANTE o curso (Módulo 0 = exercício em Docs, sem agente) |
-| Componente ao vivo | Encontro mensal em grupo (Q&A) |
+| Componente ao vivo | Nenhum — suporte via agente de IA nativo na Voomp, sem encontros mensais |
 | Acesso | Total no primeiro dia — sem liberação gradual |
-| Duração | 1 ano de acesso (conteúdo + agentes + encontros) |
+| Duração | 1 ano de acesso (conteúdo + agentes) |
 | Tempo de execução | 4 meses |
-| Suporte | Via agentes de IA — sem suporte humano direto |
+| Suporte | Via agente de IA nativo na Voomp — sem suporte humano direto, sem encontros ao vivo |
 | Experiência de plataforma | Integrada: aula + roteiro + exercícios vinculados (referência: Arcane) |
 | Preço plataforma | R$697 (âncora, premium) |
 | Preço funis | R$497 (escala, conversão) |
@@ -71,7 +71,7 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 - [ ] Agente da Persona Compradora (Módulo 1) — usa história real da aluna como input
 - [ ] Agente da Promessa Transformadora (Módulo 1) — 2 agentes separados, mesmo módulo
 - [ ] Agente do Processo Autoral (Módulo 2) — usa história real da aluna como input
-- [ ] Agente do Portfólio Estratégico (Transição)
+- [ ] Agente do Portfólio Estratégico (Módulo 2, Aula 7)
 - [ ] Agente da Proposta Validada (Módulo 3)
 - [ ] Agente da Autoridade Tríplice (Módulo 4)
 
@@ -79,15 +79,14 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 
 **Ferramentas:**
 - [ ] Biblioteca de templates (8–10 modelos: Canva/Notion/Google Sheets) — entregue na aula 7 do M2, usada para transformar ideias do portfólio em produtos reais
-- [ ] Rastreador de Leads Quentes
-- [ ] Plano de Conteúdo 30 dias
+- [x] Meu Rastreador de Leads (mini-CRM, Google Sheets) — M3, Aula 5
+- [x] Plano de Conteúdo 30 dias — entregue como grade semanal repetível em Minha Linha Editorial (M4, Aula 5)
 
 **Agentes planejados (a criar via Worker Forge):**
 - [ ] Agente de Construção de Ferramentas — transforma uma ideia da planilha do Portfólio em produto real. Input: nome + objetivo + formato da ferramenta. Reutilizável por ferramenta, pós-curso e em módulos futuros. Separado do Agente do Portfólio por design (ideação ≠ execução).
 
 **Experiência:**
-- [ ] Encontro mensal ao vivo (Q&A coletivo)
-- [ ] Alumni Group (acesso pós-conclusão dos 5Ps)
+- [x] Agente de suporte nativo na Voomp (sem encontros mensais ao vivo)
 
 **Resultados construídos (os 5Ps):**
 - [ ] P1: Persona Compradora documentada
@@ -109,10 +108,11 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 |------|------|--------|------------|-----------|
 | Passo 0 | Do Currículo à Autoridade | Módulo 0 — Desbloqueio | História real documentada (antes / durante / depois) | Exercício em Docs — sem agente |
 | Fase 2 | Do Conhecimento à Narrativa | Módulo 1 — Persona + Promessa | P1 + P2 | 2 agentes separados (usa história do M0 como input) |
-| Fase 3 | Do Caos ao Método Autoral | Módulo 2 — Processo Autoral | P3 | Agente do Processo Autoral (usa história do M0 como input) |
-| Transição | Portfólio + Leads | Transição | Ferramentas + lista de leads | Agente do Portfólio + template Rastreador + aula |
-| Fase 4 | Da Promessa à Venda Secreta | Módulo 3 — Vendas | P4 | Agente da Proposta Validada |
+| Fase 3 | Do Caos ao Método Autoral | Módulo 2 — Processo Autoral + Ecossistema | P3 + Portfólio de Ferramentas | Agente do Processo Autoral (A5) + Agente do Portfólio Estratégico (A7) |
+| Fase 4 | Da Promessa à Venda Secreta | Módulo 3 — Vendas Secretas | P4 + Rastreador de Leads preenchido + 3 vendas reais | Agente da Proposta Validada + template Rastreador de Leads (A5) |
 | Fase 5 | Da Invisibilidade à Autoridade | Módulo 4 — Autoridade | P5 | Agente da Autoridade Tríplice |
+
+**Nota:** a Transição não existe mais como módulo separado — absorvida no Módulo 2 (Portfólio, Aula 7). O Rastreador de Leads também não está mais na Transição — foi pra Módulo 3 (Aula 5), por ser o passo zero da venda.
 
 ### 3 Pilares (em paralelo em todas as fases)
 - Identidade Autoral | Método Estruturado | Estratégia de Mercado
@@ -154,15 +154,18 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 - Agente constrói com a aluna — não valida nem confere
 - Exemplo: "Antes de começar este módulo, confirme que você tem X, Y e Z do módulo anterior"
 
-### Rastreador de Leads Quentes
+### Meu Rastreador de Leads (mini-CRM)
 
-**Formato de entrega:** template em branco + aula (sem agente)
-**Modelo:** adaptado do doTERRA — grupos de contatos + matriz de fit + prioridade de abordagem
-**Como funciona no curso:** a aluna preenche os critérios com base na Persona Compradora construída no Módulo 1 — o template é universal, os critérios são dela
-**Grupos de contatos:** Família | Amigos | Colegas de profissão | Comunidades online | Ex-clientes
-**Critérios de pontuação (1 pt cada):** especialista offline, frustração com digital, método inexistente, quer renda própria, não quer fama, renda acima R$5k, mulher 35–45 anos
-**Prioridade de abordagem:** coluna separada (quente / morno / frio) — não entra no score de fit
-**Score 6–7:** abordagem direta | **Score 3–5:** nutrir antes | **Score 0–2:** não é lead agora
+**Formato de entrega:** template em Google Sheets (não Docs) + aula (M3, Aula 5, sem agente) — permite filtrar, ordenar e gerar gráfico
+**Modelo:** inspirado no Rastreador de Sucesso da doTERRA (pipeline com prospectos priorizados), adaptado — sem os estágios específicos de MLM
+**Como funciona no curso:** a aluna preenche os critérios de qualificação com base na Persona Compradora construída no Módulo 1 — o template é universal, os critérios são dela
+**Grupo (6 opções — cobre prospecção ativa E leads inbound):** Círculo íntimo | Colegas e ex-colegas de área | Clientes e ex-clientes | Seguidores engajados | Conexões frias qualificadas | Fui prospectada (sem relação prévia — vem do grupo fechado de lives ou de isca digital, uma ferramenta do Portfólio Estratégico)
+**Score de Fit:** critérios de P1 (especialista com experiência consolidada? tentando entrar no digital? renda que permite investir? não quer aparecer de forma amadora?) — cada critério que bate soma ao score
+**Prioridade de abordagem:** combina score de fit com o grupo (calor da relação)
+**Perfil:** Conectora / Analista / Diretiva — lido na Aula 7, calibra a abordagem da Aula 8
+**Pipeline (novo):** Status em 9 estágios (Não abordada → Abordada → Respondeu → Sessão agendada → Sessão realizada → Proposta enviada → Cliente → Vai pensar → Lead fria) + Data Última Interação + Próxima Ação/Data — motor do follow-up
+**Fechamento:** Fechou? (Sim/Não/Em aberto) + Valor + Data + Depoimento (Pendente/Solicitado/Recebido)
+**Observações:** campo livre — cobre amostras/iscas enviadas, contexto de conversa, motivo de "vai pensar"
 
 ### Loop Módulo 3 → Módulo 4
 
@@ -191,7 +194,7 @@ A aluna escreve sua história real ANTES de definir persona ou método. Isso gar
 - Promessa (P2) fica junto com Persona (P1) no Módulo 1 — nascem da mesma fonte
 - Processo Autoral (P3) tem módulo próprio — é o core da entrega, merece espaço exclusivo
 - Módulo 3 abre com identidade de vendas (crenças, medo de cobrar) antes de qualquer tático
-- Contato com leads na Transição = call, WhatsApp, mensagem — não necessariamente ligação
+- Contato com leads no Módulo 3 = call, WhatsApp, mensagem — não necessariamente ligação
 - Rastreador de Leads = template + aula (critérios personalizados pela aluna com base no Módulo 1)
 - Loop M3→M4: pitch + depoimento + objeções das vendas alimentam diretamente o Módulo 4
 
@@ -218,6 +221,7 @@ A aluna escreve sua história real ANTES de definir persona ou método. Isso gar
 - Suporte humano direto (substituído pelos agentes)
 - Produção completa de design/identidade visual para a aluna (templates são suficientes — decisão validada por Euriler + Companion)
 - Comunidade ativa/movimento coletivo (deliberado — respeita self-image da persona)
+- Alumni Group — cancelado para este lançamento (decisão da Karol, 01/07/2026). Pode ser criado futuramente como produto/experiência separada, fora do escopo do Expert360º atual.
 
 **Decisões tomadas:**
 

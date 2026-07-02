@@ -61,6 +61,7 @@
 | Data | Nota |
 |------|------|
 | 30/06/2026 | Análise prévia dos materiais — história real e Ikigai muito ricos. Pilar técnico excluído do método. Nicho ampliado. Propostas a validar na próxima sessão. |
+| 01/07/2026 | 20 arquivos aluna-facing (Biblioteca de IAs, Roteiro da Jornada, M0.1-M4.7) entregues na pasta dela no Drive (`Incubadora de Expert 2026`). Os 2 arquivos antigos já preenchidos (`M0.1) Minha história real.gdoc`, `M0.2) Meu Ikigai.gdoc`) foram mantidos em uso por decisão da Karol — não sobrescritos. Exercício "Lista de Fracassos" (M0.1 novo) não será usado com essa aluna. Roteiro da Jornada reconvertido de .docx pra .xlsx (status dos entregáveis precisa ser editável — dropdown Pendente/Em andamento/Concluído). |
 
 ---
 
