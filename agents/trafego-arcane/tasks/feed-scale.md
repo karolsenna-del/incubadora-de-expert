@@ -10,6 +10,7 @@ Checklist:
   - "Campeao validado no teste (CPA <= Estrela Guia)"
   - "Criativo subido na escala com nomenclatura"
   - "UTMs configurados"
+  - "Novos conjuntos criados com dsa_beneficiary + dsa_payor"
   - "NAO adicionado a conjuntos bons existentes (CR-05)"
 execution_type: "interactive"
 ---
@@ -87,7 +88,18 @@ POST /act_{scale_id}/adsets
   optimization_goal: "OFFSITE_CONVERSIONS"
   billing_event: "IMPRESSIONS"
   daily_budget: {budget}
+  dsa_beneficiary: "{ANUNCIANTE_LEGAL}"
+  dsa_payor: "{PAGADOR_LEGAL}"
   targeting: {audience_spec}
+```
+
+Default Euriler/NDF se anunciante e pagador forem a mesma empresa:
+
+```json
+{
+  "dsa_beneficiary": "EURILER MARKETING DIGITAL E TREINAMENTOS LTDA",
+  "dsa_payor": "EURILER MARKETING DIGITAL E TREINAMENTOS LTDA"
+}
 ```
 
 ### Step 5: Subir criativos na escala

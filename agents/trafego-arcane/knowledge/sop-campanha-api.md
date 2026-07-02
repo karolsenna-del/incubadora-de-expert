@@ -33,6 +33,8 @@ Pode existir um MCP "claude.ai Meta" disponível na sessão. **Ignore-o.** Ele a
 {pixel_id}         = ID do pixel
 {page_id}          = ID da página Facebook
 {ig_user_id}       = ID do perfil Instagram (Instagram User ID)
+{dsa_beneficiary}  = anunciante exibido publicamente na Biblioteca de Anúncios
+{dsa_payor}        = pagador exibido publicamente na Biblioteca de Anúncios
 ```
 
 **Endpoint base:**
@@ -134,7 +136,20 @@ Equivalente API do "partilhar até 20% do orçamento" (UI):
 }
 ```
 
-Quando trabalhando em ABO, a partilha é controlada por `is_budget_schedule_enabled` ou via configuração do Meta (campos exatos podem variar por versão).
+**Em ABO (orçamento no conjunto), o campo validado é `is_adset_budget_sharing_enabled` no nível da CAMPANHA — e é OBRIGATÓRIO:**
+
+```json
+{
+  "name": "TESTE_NDF_L0X",
+  "objective": "OUTCOME_SALES",
+  "special_ad_categories": [],
+  "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+  "is_adset_budget_sharing_enabled": true,   // ← obrigatório em ABO; true = partilha 20% ligada
+  "status": "PAUSED"
+}
+```
+
+> **Pegadinha validada (2026-06-29):** sem `is_adset_budget_sharing_enabled` ao criar campanha ABO, a Meta rejeita com `error_subcode 4834011` ("É necessário especificar True ou False... se você não estiver usando o orçamento da campanha"). Sempre incluir. `true` = padrão Andromeda (partilha de 20%).
 
 **Decisão Andromeda:**
 
@@ -176,6 +191,37 @@ Guardar `{campaign_id}` para os adsets.
 POST /{api_version}/act_{ad_account_id}/adsets
 ```
 
+### Transparência dos anúncios (DSA) — OBRIGATÓRIO
+
+A tela da Meta **"Transparência dos anúncios > Selecione o anunciante e o pagador"** é configurada no nível do **adset**, não na campanha nem no anúncio.
+
+Sempre incluir estes campos ao criar, atualizar ou duplicar conjuntos:
+
+```json
+{
+  "dsa_beneficiary": "{dsa_beneficiary}",
+  "dsa_payor": "{dsa_payor}"
+}
+```
+
+Mapeamento UI → API:
+
+| UI Meta | API |
+|---------|-----|
+| Anunciante | `dsa_beneficiary` |
+| Pagador | `dsa_payor` |
+
+Default operacional para campanhas Euriler/NDF quando anunciante e pagador são a mesma empresa:
+
+```json
+{
+  "dsa_beneficiary": "EURILER MARKETING DIGITAL E TREINAMENTOS LTDA",
+  "dsa_payor": "EURILER MARKETING DIGITAL E TREINAMENTOS LTDA"
+}
+```
+
+Se o anunciante e o pagador forem diferentes, ativar a opção equivalente na UI e preencher cada campo com o nome legal correto. Não deixar em branco: isso pode gerar bloqueio de publicação/revisão e erro API `3858634` / `compliance_section` / `anunciante ausente`.
+
 ### Payload Andromeda — [ESCALA] Conjunto 1 (Advantage+ Puro)
 
 ```json
@@ -187,6 +233,8 @@ POST /{api_version}/act_{ad_account_id}/adsets
   "billing_event": "IMPRESSIONS",
   "optimization_goal": "OFFSITE_CONVERSIONS",
   "destination_type": "WEBSITE",
+  "dsa_beneficiary": "{dsa_beneficiary}",
+  "dsa_payor": "{dsa_payor}",
   "promoted_object": {
     "pixel_id": "{pixel_id}",
     "custom_event_type": "LEAD"
@@ -217,6 +265,8 @@ POST /{api_version}/act_{ad_account_id}/adsets
   "billing_event": "IMPRESSIONS",
   "optimization_goal": "OFFSITE_CONVERSIONS",
   "destination_type": "WEBSITE",
+  "dsa_beneficiary": "{dsa_beneficiary}",
+  "dsa_payor": "{dsa_payor}",
   "promoted_object": {
     "pixel_id": "{pixel_id}",
     "custom_event_type": "LEAD"
@@ -254,6 +304,8 @@ POST /{api_version}/act_{ad_account_id}/adsets
   "billing_event": "IMPRESSIONS",
   "optimization_goal": "OFFSITE_CONVERSIONS",
   "destination_type": "WEBSITE",
+  "dsa_beneficiary": "{dsa_beneficiary}",
+  "dsa_payor": "{dsa_payor}",
   "promoted_object": {
     "pixel_id": "{pixel_id}",
     "custom_event_type": "LEAD"
@@ -927,6 +979,7 @@ Exemplo — pausar ad com CPA acima de R$5:
     [ ] daily_budget igual em todos (centavos)
     [ ] optimization_goal: OFFSITE_CONVERSIONS
     [ ] destination_type: WEBSITE (ou omitir se OUTCOME_SALES)
+    [ ] dsa_beneficiary + dsa_payor preenchidos (Anunciante/Pagador)
     [ ] promoted_object: pixel + custom_event_type
     [ ] targeting_automation.advantage_audience: 1
     [ ] sem bid_amount (CPA Máx)
@@ -1039,22 +1092,45 @@ custom_audiences = [{'id': a['id']} for a in source['custom_audiences']]
 - `execution_options` — não existe mais (HTTP 400)
 - `contextual_bundling_spec` — requer GK específico (`contextual_bundle_test_api_accounts`) — pular pra contas comuns
 
-### 5. `targeting.brand_safety_content_filter_levels`
+### 5. Transparência dos anúncios / `compliance_section` `3858634`
+
+Sintoma:
+
+```
+Transparência dos anúncios
+Selecione o anunciante e o pagador
+```
+
+Ou via API:
+
+```
+3858634 / compliance_section / anunciante ausente
+```
+
+**⚠️ CORREÇÃO REAL (validado 2026-06-29 — corrige o que estava errado aqui):** em contas onde a Meta passou a exigir **anunciante verificado**, esse erro **NÃO é resolvido preenchendo `dsa_beneficiary`/`dsa_payor`**. Foi testado: criar adset do zero (`POST /adsets`) trava com `3858634` **com a string, sem a string, com ou sem Advantage+, e mesmo com anunciante padrão definido nas Configurações da conta**. Definir o anunciante "padrão" ≠ anunciante "verificado".
+
+**A via que funciona é DUPLICAR um conjunto que JÁ ENTREGA** (`POST /{adset_id}/copies`, `deep_copy=false`): a cópia herda o vínculo de compliance da fonte e passa. Criar campanha NÃO trava (só criar *adset* do zero). Detalhe completo:
+
+→ **`knowledge/sop-subir-campanha-duplicacao.md`** (método canônico anti-`3858634`).
+
+> Preencher `dsa_beneficiary`/`dsa_payor` continua sendo boa prática e é o que aparece na Biblioteca de Anúncios — mas **não destrava** a criação do zero quando a conta exige verificado. Não confie nisso como fix.
+
+### 6. `targeting.brand_safety_content_filter_levels`
 
 Default Meta é `['FACEBOOK_FULL_INVENTORY']` (mais restritivo). Andromeda padrão usa `['FACEBOOK_RELAXED', 'AN_RELAXED']` (maior alcance). **Setar explícito** se quer match L01.
 
-### 6. `targeting.age_range` redundante
+### 7. `targeting.age_range` redundante
 
 L01 antigo tem `age_range: [18, 65]` E `age_min: 18`, `age_max: 65`. Em campanhas novas, basta `age_min/max` — `age_range` é redundante mas não atrapalha.
 
-### 7. Rate limit Meta — code 17
+### 8. Rate limit Meta — code 17
 
 Sintoma: `"User request limit reached"` — espera ~1h pra liberar. Conta típica aguenta ~200-400 calls/hora. Em pipelines de criação massiva (3 campanhas + 18 adsets + 144 ads), prepare:
 - Sleep 0.4-1s entre calls
 - Cache configs do template (L01) uma vez só
 - Use upload paralelo (5 workers) só pra uploads — adcreative/ads em sequência
 
-### 8. Ordem de criação importa
+### 9. Ordem de criação importa
 
 Criar adsets/ads **com `status: ACTIVE`** quando a campanha ainda está sem ads pode dar erro de orçamento. **Pattern seguro:**
 
@@ -1066,7 +1142,7 @@ Criar adsets/ads **com `status: ACTIVE`** quando a campanha ainda está sem ads 
 5. Ativar campanha (PATCH status: ACTIVE)
 ```
 
-### 9. URL UTMify do Euriler
+### 10. URL UTMify do Euriler
 
 URL canônica (não simplificar — `xcod` é hash da loja UTMify):
 
@@ -1074,14 +1150,22 @@ URL canônica (não simplificar — `xcod` é hash da loja UTMify):
 https://digitaldofuturo.ai/?utm_source=FB&utm_campaign={{campaign.name}}|{{campaign.id}}&utm_medium={{adset.name}}|{{adset.id}}&utm_content={{ad.name}}|{{ad.id}}&utm_term={{placement}}&xcod=FBhQwK21wXxR{{campaign.name}}|{{campaign.id}}hQwK21wXxR{{adset.name}}|{{adset.id}}hQwK21wXxR{{ad.name}}|{{ad.id}}hQwK21wXxR{{placement}}
 ```
 
-### 10. Endpoint `/copies` da campanha — quando NÃO usar
+### 11. Endpoint `/copies` — FALLBACK pra subir lote novo quando a conta trava (anti-`3858634`)
 
-`POST /campaigns/{id}/copies` clona campanha **incluindo todos os ads antigos**. Se objetivo é "campanha nova com criativos novos", uma das duas:
+**Atualizado 2026-06-29:** o método primário continua sendo criar do zero (Nível 2). Mas **quando a conta trava com `3858634`** (exige anunciante verificado — ver item 5), `/copies` é o fallback que funciona. **Faça o PROBE primeiro** (tentar 1 adset do zero): se passar, use o método normal; se travar, caia pra `/copies`.
 
-a) `/copies` + listar todos ads do clone + setar status DELETED neles + criar novos ads (mais calls)
-b) Criar campanha do zero replicando configs + criar adsets + criar ads (caminho usado nesta missão)
+**Padrão validado — duplicar no nível do CONJUNTO** (não da campanha):
 
-**Se voce quer fidelidade 100% pra L01 com mínimo esforço,** vai de (a). **Se quer estrutura customizada (mais adsets),** vai de (b).
+1. Criar a campanha nova do zero (campanha NÃO trava): `POST /campaigns` com `is_adset_budget_sharing_enabled`.
+2. Pra cada conjunto: `POST /{src_adset_id}/copies` com `campaign_id={nova}`, **`deep_copy=false`** (não arrasta os ads antigos), `status_option=PAUSED` → `copied_adset_id`.
+3. `POST /{copied_adset_id}` pra renomear + `daily_budget`. **Não editar targeting** (pode re-disparar 3858634).
+4. `POST /act/ads` pendurando os criativos NOVOS nas cópias.
+
+A cópia **herda o targeting da fonte** (interesses/públicos do tipo certo) **e o vínculo de compliance** — por isso passa. **Não modifica a fonte.**
+
+> Duplicar no nível da **campanha** (`POST /campaigns/{id}/copies`) arrasta os ads antigos; se for por aí, use `deep_copy=false` ou limpe os ads do clone. Preferir o nível do **conjunto** (acima) pra montar lote com criativos novos.
+
+**SOP completo:** `knowledge/sop-subir-campanha-duplicacao.md`.
 
 ### 11. Validação pós-criação obrigatória
 

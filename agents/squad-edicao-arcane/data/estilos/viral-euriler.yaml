@@ -1,0 +1,26 @@
+# Estilo VIRAL-EURILER — PADRAO do Euriler (aprovado 09/06/2026)
+# Bebas Neue: branco em cima + amarelo na palavra-chave (split). Fonte 84 calibrada
+# por ele (menor que o viral original 100 -> a maioria das frases cabe em 1 linha).
+#
+# AUTO-ESCALA POR RESOLUCAO: `ref_width: 1080` faz o video-captions.py escalar a
+# fonte e o stroke pela razao largura_real/1080. Assim a legenda tem o MESMO
+# tamanho VISUAL em qualquer resolucao automaticamente:
+#   720p  -> fonte ~56   |   1080p -> fonte 84   |   2160p/4K -> fonte 168
+# Nao precisa mais de presets separados por resolucao.
+
+nome: "viral-euriler"
+descricao: "Bebas Neue branco+amarelo (split), fonte 84 @1080p com auto-escala por resolucao. Padrao do Euriler."
+font: "Bebas Neue"
+fontsize: 84
+ref_width: 1080            # fonte/stroke escalam por largura_real/1080
+fontcolor: "white"
+borderw: 5
+bordercolor: "black"
+y_pos: 0.60
+mode: "split_60_40_color"
+linha_2_color: "yellow"
+shadow: false
+max_chars: 26
+max_chars_per_line: 28      # densidade constante: chars/linha nao muda com a resolucao
+max_words: 5
+max_dur: 2.4

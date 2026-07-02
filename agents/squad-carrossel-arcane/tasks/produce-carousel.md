@@ -12,174 +12,122 @@ execution_type: "interactive"
 
 ## Executive Summary
 
-Recebe copy → infere slides → aluno escolhe template → produz PNGs.
+Recebe copy → separa em blocos → mapeia imagens por número → monta `slides.json` → roda o motor `tools/build-carousel.mjs` → entrega PNGs 1080x1350.
+
+O motor cuida do visual padrão (header tweet + auto-fit do texto + imagem full-width com bordinha). O trabalho de inteligência do Producer é: **separar a copy, aplicar bold estratégico e mapear as imagens.**
+
+---
+
+## Padrão de Layout (validado 12/06/2026)
+
+Não reinventar o CSS. O motor já aplica:
+
+- **Header estilo tweet:** avatar circular + nome + selo verificado + @handle (vem do `meta.yaml` do template)
+- **Texto com bold manual** nas palavras de impacto (números, conceitos novos, comandos)
+- **Auto-fit:** a fonte do texto encolhe sozinha até o conjunto caber harmônico em 1350px. Texto longo → fonte menor; curto → fonte maior. Nunca estoura.
+- **Imagem full-width com bordinha lateral** (`image_side_margin`, default 38px), **sem borda arredondada** (`image_radius: 0`) — orgânico.
+- **Slide sem imagem** → text-only, centralizado verticalmente.
+
+Pra mudar o look (margem da imagem, cor, fonte, nome): editar o `meta.yaml` do template, **não** o motor.
+
+---
+
+## Convenção de Mapeamento (CRÍTICA)
+
+**`card{N}` na pasta de imagens = bloco {N} da copy.**
+
+- A copy é separada em blocos por linhas com `-` isolado (ou linha vazia dupla). O 1º bloco é o slide 1, e assim por diante.
+- Pra cada bloco N, procurar `card{N}-FINAL.png` (ou `card{N}.png`) na pasta de imagens do aluno.
+  - **Existe** → slide com imagem.
+  - **Não existe** → slide text-only (não inventar imagem).
+- Anotações de direção visual entre parênteses na copy (ex: "(Foto do Trump...)") **não são texto do post** — viram a imagem `card{N}`. Tirar do texto.
+
+---
 
 ## Steps
 
-### Step 1: Receber Copy
+### Step 1: Receber Copy + Pasta de Imagens
 
 ```
-Cola a copy do carrossel aqui.
-
-Se ja tens texto separado por slide (com linhas vazias ou numeracao),
-manda assim mesmo. Se for um texto corrido, eu separo.
+Cola a copy do carrossel.
+E me diz a pasta das imagens (ex: ~/Downloads/carrossel-x/), onde os arquivos
+seguem o padrão card1-FINAL.png, card2-FINAL.png... (card{N} = bloco {N}).
 ```
 
-### Step 2: Inferir Numero de Slides
+### Step 2: Separar em Blocos + Confirmar
 
-Aplicar logica de `knowledge/infer-slides.md`:
-- Conta blocos separados por linha vazia dupla
-- Identifica marcadores numericos (1., 2., 3...)
-- Identifica titulos vs corpo
-- Sugere quebra em N slides
-
-Confirmar:
+Aplicar `knowledge/infer-slides.md`. Confirmar com o aluno:
 
 ```
 Vai {N} slides:
-- Slide 1 (capa): "{primeiras palavras do slide 1}..."
-- Slide 2: "{primeiras palavras do slide 2}..."
+- Slide 1 (capa): "{primeiras palavras}..."  [imagem: card1 ✓ / sem card → texto]
 - ...
-- Slide N (CTA): "{ultimo slide}..."
-
-Ta certo ou quer ajustar?
+Ta certo ou ajustamos?
 ```
 
-Se aluno quiser ajustar, deixar ele dizer "junta slide 2 e 3" / "separa slide 5 em 2" e refazer.
+### Step 3: Montar o slides.json
 
-### Step 3: Escolher Template
+Pra cada bloco: aplicar bold (`<strong>`), limpar anotações de direção, resolver imagem.
 
-Listar templates salvos:
+```json
+{
+  "template": "euriler-tweet-light",
+  "name": "carrossel-mythos",
+  "slides": [
+    { "text": "<strong>Breaking News:</strong> ...", "image": "/Users/.../carrossel-mythos/card1-FINAL.png" },
+    { "text": "...", "image": null }
+  ]
+}
+```
+
+- `template`: slug da pasta em `~/.carrossel-arcane/templates/`
+- `name`: vira `~/Downloads/{name}/`
+- `image`: path absoluto do `card{N}` OU `null` (text-only)
+
+### Step 4: Rodar o Motor
 
 ```bash
-TEMPLATES_DIR="$HOME/.carrossel-arcane/templates"
-for tmpl in "$TEMPLATES_DIR"/*/; do
-  NAME=$(grep "^name:" "$tmpl/meta.yaml" | cut -d'"' -f2)
-  TYPE=$(grep "^type:" "$tmpl/meta.yaml" | cut -d'"' -f2)
-  echo "$NAME ($TYPE) — $tmpl/preview.png"
-done
+node squads/squad-carrossel-arcane/tools/build-carousel.mjs <slides.json>
 ```
 
-Abrir todos os `preview.png` lado a lado:
+Renderiza tudo em `~/Downloads/{name}/slide-NN.png` (1080x1350). Reporta quantos com imagem / text-only. Avisa se algum `card{N}` apontado não existe (vira text-only).
+
+### Step 5: Validar e Entregar
+
+- Conferir alguns slides (capa, um de texto denso, um com imagem que tenha texto nas bordas, o CTA).
+- Garantir: fonte carregou, sem texto cortado, imagem inteira (sem corte de elemento importante), nada de placeholder.
+- Sinalizar inconsistências imagem×texto pro aluno revisar (a copy é dele).
+
+```
+Pronto. {N} slides em ~/Downloads/{name}/. Abrir?
+```
 
 ```bash
-open $(find "$TEMPLATES_DIR" -name "preview.png")
+open "$HOME/Downloads/{name}"
 ```
 
-Mostrar pro aluno:
+## Re-render parcial
 
-```
-Tens {N} templates. Abri os previews no Finder.
-
-Pra capa: qual queres? (recomendo o tipo "capa")
-Pra slides de conteudo: qual? (recomendo "conteudo padrao")
-Pra CTA/fechamento: qual? (recomendo "cta")
-
-Podes usar 1 template pra tudo ou misturar.
-```
-
-Aluno escolhe. Se aluno escolher 1 so pra tudo, ok — pula essa pergunta.
-
-### Step 4: Validar Compatibilidade
-
-Pra cada slide + template escolhido:
-- Verifica slots do template (`meta.yaml`)
-- Se tem `image-ai` mas API nao configurada → avisa: "Slide {N} usa template com imagem AI mas API nao configurada. Tu envias imagem manual ou quer escolher outro template?"
-
-### Step 5: Producao Slide a Slide
-
-Pra cada slide (1 a N):
-
-#### 5.1 Preparar Pasta de Output
-
-```bash
-NOME="${NOME:-$(date +%Y-%m-%d-%H%M)}"  # ou aluno escolhe
-OUTPUT_DIR="$HOME/Downloads/$NOME"
-mkdir -p "$OUTPUT_DIR"
-```
-
-Perguntar nome (opcional):
-
-```
-Como queres nomear esse carrossel? (default: {data-hora}, vai pra ~/Downloads/{nome}/)
-```
-
-#### 5.2 Montar HTML do Slide
-
-1. Copia `template.html` pra pasta temporaria
-2. Injeta texto do slide nos slots `text`
-3. Aplica bold nas palavras-chave detectadas
-4. Resolve placeholders de imagem:
-
-**Se `image-ai`:**
-- Gera prompt baseado em contexto do slide (texto + tipo)
-- Chama API configurada (ver `knowledge/apis-imagem.md`)
-- Salva PNG da imagem em pasta temporaria
-- Mostra preview pro aluno:
-  ```
-  Slide {N}: imagem gerada via {provider}. Olha o preview.
-  1. Aprovar e usar
-  2. Regerar com prompt diferente
-  3. Skip e enviar manual
-  ```
-
-**Se `image-manual`:**
-- Pergunta: "Slide {N}: que imagem usar? Cola path do arquivo ou skip pra deixar vazio."
-- Aluno responde
-- Copia imagem pra pasta temporaria
-
-**Se `image-none`:**
-- Renderiza direto, sem pausa
-
-#### 5.3 Renderizar PNG
-
-```bash
-CHROME=$(find ~/Library/Caches/ms-playwright -name "Google Chrome for Testing" -type f 2>/dev/null | head -1)
-"$CHROME" --headless --disable-gpu --hide-scrollbars \
-  --window-size=1080,1350 \
-  --screenshot="$OUTPUT_DIR/slide-$(printf '%02d' $N).png" \
-  "file:///tmp/slide-$N.html"
-```
-
-Aspect ratio 1080x1350 pra carrossel.
-
-#### 5.4 Continuar pro Proximo Slide
-
-Sem mostrar preview de cada PNG renderizado (so o final). Pausa so quando precisa input.
-
-### Step 6: Entrega
-
-```
-Pronto. {N} slides em:
-
-~/Downloads/{nome-do-carrossel}/
-├── slide-01.png
-├── slide-02.png
-├── ...
-└── slide-{N}.png
-
-Abrir a pasta agora?
-```
-
-Se sim:
-
-```bash
-open "$OUTPUT_DIR"
-```
+Trocou 1 imagem (mesmo nome) ou 1 texto? Editar o `slides.json` e rodar o motor de novo — ele limpa e regenera. Pra um único slide, renderizar só o HTML afetado do build dir.
 
 ## Quality Gates
 
-- N PNGs no formato exato 1080x1350
-- Numeracao sequencial sem gaps (slide-01.png, slide-02.png...)
-- Pasta de output existe e e acessivel
-- Cada PNG renderizado sem erros (sem texto cortado, sem placeholder ainda visivel)
+- N PNGs em 1080x1350, numeração sequencial sem gaps
+- Cada PNG sem texto cortado, sem placeholder, imagem inteira
+- Pasta de output existe e acessível
 
 ## Veto Conditions
 
-| Cenario | Acao |
+| Cenário | Ação |
 |---------|------|
-| Aluno nao tem template salvo | Rotear pra `setup-identity` antes |
-| Copy vazia ou muito curta (< 50 chars) | Avisar: "Copy parece curta pra carrossel. Confirma que e isso mesmo?" |
-| Aluno escolheu template com IA mas API nao configurada | Oferecer 2 opcoes: configurar API agora ou trocar template |
-| Pasta de output ja existe | Perguntar: "Sobrescrever ou usar nome novo?" |
-| Renderizacao do PNG falha | Logar erro, mostrar HTML que falhou, pedir pra aluno avaliar |
+| Aluno não tem template salvo | Rotear pra `setup-identity` antes |
+| Copy < 50 chars | "Copy curta pra carrossel. Confirma?" |
+| `card{N}` apontado não existe | Motor vira text-only e avisa — confirmar com aluno se era pra ter imagem |
+| Pasta de output já existe | Motor sobrescreve só os `slide-*.png` — confirmar nome antes se houver dúvida |
+| Template sem campos de identidade no meta.yaml | Motor usa defaults ("Autor"/"usuario") — completar `author_name`/`author_handle` no template |
+
+## Nota de manutenção
+
+O motor lê a identidade do `meta.yaml` do template: `author_name`, `author_handle`, `verified`,
+`font`, `bg`, `text_color`, `image_side_margin`, `image_radius`, `text_size_image`, `text_size_textonly`.
+Templates criados pelo `identity-designer` devem gravar esses campos (senão caem nos defaults).

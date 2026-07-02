@@ -10,7 +10,7 @@
 
 1. **Humano-legível** — formato de cards/tabelas, sem JSON
 2. **Diff explícito** — quando duplicação ou ajuste, sempre mostra `Antes → Depois`
-3. **Fidelidade Andromeda** — mostra score `N/47` (QG-FA-001)
+3. **Fidelidade Andromeda** — mostra score `N/48` (QG-FA-001)
 4. **Gaps declarados** — qualquer divergência do método precisa estar visível
 5. **Decisão clara** — termina sempre com "Confirmar? [s/N]" ou "Ativar agora ou revisar antes?"
 6. **Citações da fonte quando relevante** — *"X coisa porque Y disse Z"*
@@ -67,6 +67,7 @@
   ├─ Pixel: {PIXEL_NAME} ({PIXEL_ID})
   ├─ Evento: {custom_event_type}
   ├─ Otimização: {optimization_goal}
+  ├─ Transparência: Anunciante {dsa_beneficiary} | Pagador {dsa_payor}
   ├─ Atribuição: {window_days}d click {(+ 1d view se default)}
   ├─ Sem CPA Máx, sem ROAS Mínimo, sem regras de valor
   └─ Excluindo: {compradores_180d / leads_180d}
@@ -97,9 +98,9 @@
     ✗ Image animation (3D)  — Bárbara: "deixa sem, vai que faz merda"
     ✗ Image uncrop          — idem
 
-✅ FIDELIDADE ANDROMEDA: {N}/47 checks passaram
+✅ FIDELIDADE ANDROMEDA: {N}/48 checks passaram
 
-{Se N < 47, listar gaps:}
+{Se N < 48, listar gaps:}
 ⚠️ GAPS DECLARADOS:
   ⚠ {ex: usuário só tem 7 criativos — faltam C2-DEMO e C3-OBJ}
   ⚠ {ex: lista de e-mail vazia — audiência quente vai contar com 3/4 públicos}
@@ -157,7 +158,7 @@ Variação do template anterior, com seção `🧪 HIPÓTESE` e `DIFF` no topo.
   • Se der bom (atende critério), levar pra Escala. Se não, descartar.
 
 QG-TEST-001: ✓ 1 variável isolada confirmada
-QG-FA-001:   ✓ {N}/47 (gaps são intencionais — variação testada)
+QG-FA-001:   ✓ {N}/48 (gaps são intencionais — variação testada)
 
 Confirmar e subir PAUSED? [s/N]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -191,6 +192,7 @@ Confirmar e subir PAUSED? [s/N]
   Objetivo           │ {objective}        │ {objective}       │ {sim/não}
   Verba/dia (total)  │ R$ {origem}        │ R$ {nova}         │ {sim/não}
   País target        │ {origem}           │ {destino}         │ {sim/não}
+  Anunciante/Pagador │ {dsa_origem}       │ {dsa_destino}     │ {mantém/preenche}
   Custom Audiences   │ {ids_origem}       │ {ids_destino}     │ {reaproveita/cria}
   Creatives (9)      │ originais          │ {mesmos/novos}    │ {sim/não}
 
@@ -198,7 +200,7 @@ Confirmar e subir PAUSED? [s/N]
 
 (seções idênticas ao template setup novo, com ✓ marcado nos itens iguais à origem)
 
-✅ FIDELIDADE ANDROMEDA: {N}/47 checks passaram
+✅ FIDELIDADE ANDROMEDA: {N}/48 checks passaram
 ✅ QG-DUP-001: duplicação coerente
 
 ⚠️ AVISOS
@@ -336,7 +338,7 @@ Quer que eu volte daqui a 24h pra rodar o triagem inicial?
 1. **Toda criação na Meta API tem que passar por preview confirmado** — sem exceção.
 2. **Resposta do usuário deve ser explícita** — "s", "sim", "ativar", "confirmo", "manda" — todas válidas. Resposta vaga ou ausente = abort.
 3. **Iteração permitida** — se usuário pedir ajuste, voltar pro Step de montagem do payload, NÃO criar parcial.
-4. **Score de fidelidade Andromeda** sempre visível (mesmo se for 47/47, mostrar o score).
+4. **Score de fidelidade Andromeda** sempre visível (mesmo se for 48/48, mostrar o score).
 5. **Gaps declarados explicitamente** — não esconder divergências.
 6. **Citação literal da Bárbara** quando uma decisão importante puder gerar dúvida (ex: "por que sem CPA Máx?").
 7. **NÃO mostrar token, IDs do Pixel sensíveis ou outros valores secretos no preview** — só o necessário pra usuário entender.

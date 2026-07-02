@@ -16,6 +16,7 @@ Gestao completa de trafego pago Meta Ads usando Metodo Andromeda. Squad executor
 | **traffic-strategist** | Tier 0 (Advisor) | Analise macro, briefing criativos, consultoria |
 | **scale-operator** | Tier 1 | Opera conta escala via Meta API |
 | **test-operator** | Tier 1 | Opera conta teste via Meta API |
+| **creative-prep-operator** | Tier 1 | Prepara lote de criativos pro upload (nomenclatura + transcricao + titulos/legendas) |
 
 ## Tasks
 
@@ -28,6 +29,7 @@ Gestao completa de trafego pago Meta Ads usando Metodo Andromeda. Squad executor
 | operate-scale | scale-operator | Operacao diaria da escala |
 | operate-test | test-operator | Operacao de testes + reservatorio |
 | feed-scale | scale-operator | Alimentar escala com campeoes |
+| prep-creatives | creative-prep-operator | Preparar lote de criativos pro upload (pasta + nomenclatura + titulos/legendas) |
 | strategic-review | traffic-strategist | Analise semanal macro |
 | consult | traffic-strategist | Pensar junto sobre estrategia |
 

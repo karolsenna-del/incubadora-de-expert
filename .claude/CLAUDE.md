@@ -114,7 +114,7 @@ Use `/` seguido do nome para ativar agentes. NUNCA use `@`.
 
 | Agente | Ativacao | Tipo | Funcao |
 |--------|----------|------|--------|
-| Expert | `/expert-companion` | Companion | Cerebro do sistema. Situa, lembra, projetos, memoria, roteia, protege |
+| Companion | `/companion` | Companion | Cerebro do sistema. Situa, lembra, projetos, memoria, roteia, protege |
 | Ops | `/AuroqOS:agents:ops` | Worker | Maos do sistema. Commit inteligente, push, bootstrap, install |
 | Organizer | `/organizer` | Worker (sistema) | Guardiao da organizacao. Diagnostica, organiza, guarda, limpa, backup |
 
@@ -258,6 +258,19 @@ O Auroq OS carrega regras de `.claude/rules/` automaticamente.
 | `commit-inteligente.md` | Ritual de checkpoint do negocio |
 | `tool-response-filtering.md` | Reducao de tokens em respostas MCP |
 | `natural-language-first.md` | Linguagem natural como interface primaria — nunca exigir comandos |
+| `custom-do-aluno.md` | **Suas regras** — sobrevive a updates, nunca e sobrescrito |
+
+### Onde customizar (sobrevive a updates)
+
+O update do Auroq OS atualiza o framework — `CLAUDE.md`, as rules acima, o companion.
+Se voce editar esses arquivos direto, sua mudanca e perdida no proximo update.
+
+Os UNICOS lugares de config que o update **preserva** sao:
+
+- **`.claude/rules/custom-do-aluno.md`** — regras de comportamento e overrides seus
+- **`.claude/settings.local.json`** — suas configuracoes locais
+
+Coloque suas customizacoes la. O Auroq carrega tudo de `.claude/rules/` automaticamente.
 
 ## Niveis de Sofisticacao (N0-N3)
 

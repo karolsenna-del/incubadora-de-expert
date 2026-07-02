@@ -1,0 +1,62 @@
+# Providers de Geracao de Imagem — usados pelo @image-director
+# O usuario escolhe qual usar (o que tem ou vai contratar). Avisar o trade-off de custo.
+
+providers:
+  - id: higgsfield_cli
+    name: "Higgsfield CLI"
+    auth_method: "higgsfield auth login (interativo)"
+    invoke: "higgsfield generate create <model> --prompt \"...\" --aspect_ratio 16:9 --resolution 2k --wait"
+    models:
+      - gpt_image_2        # default validado no estilo euriler
+      - nano_banana_2      # Nano Banana Pro (rosto/referencia, trava de identidade)
+    cost: "mais caro (plano Higgsfield)"
+    concurrency_limit: 8   # plano Plus ~8 jobs simultaneos — gerar em levas
+    notes: >
+      Versatil — varios modelos num lugar so. Foi o provider usado nos 2 carrosseis
+      que calibraram o estilo euriler (acerto de primeira). Default recomendado pela
+      versatilidade. Figuras publicas (Trump etc) nao foram barradas nos testes;
+      prompts com termos de exclusao/conflito podem dar nsfw — reformular mais neutro.
+
+  - id: openai_gpt_image
+    name: "GPT Image API (OpenAI direto)"
+    endpoint: "https://api.openai.com/v1/images/generations"
+    auth_method: "bearer_token (API key OpenAI)"
+    models:
+      - gpt-image-2
+    cost: "mais barato por imagem que o Higgsfield"
+    setup_url: "https://platform.openai.com/api-keys"
+    notes: >
+      Mesmo motor (GPT Image 2) que o Higgsfield usa por baixo. Se o usuario so quer
+      GPT Image, sai mais barato ir direto na API. Recomendar quando custo importa.
+
+  - id: nano_banana_pro
+    name: "Nano Banana Pro"
+    auth_method: "via Higgsfield (nano_banana_2) ou API key Gemini"
+    cost: "variavel"
+    notes: >
+      Forte em rosto/referencia — aceita ate 14 imagens de referencia com trava de
+      identidade ('keep facial features exactly the same as Image 1'). Caminho natural
+      pra rosto de famoso a partir de foto real.
+
+  - id: freepik
+    name: "Freepik API"
+    endpoint: "https://api.freepik.com/v1/ai/text-to-image"
+    auth_method: "API key Freepik"
+    cost: "variavel (plano Freepik)"
+    setup_url: "https://www.freepik.com/api"
+    notes: "Opcao adicional. Validar qualidade no estilo do usuario antes de adotar como default."
+
+# Recomendacao de escolha
+guidance: |
+  - So quer GPT Image e custo importa → openai_gpt_image (mais barato).
+  - Quer versatilidade (varios modelos, trocar facil) → higgsfield_cli.
+  - Precisa de fidelidade de rosto (famoso/usuario) → nano_banana_pro com foto-ref.
+  - Sempre deixar o usuario decidir. Avisar o trade-off de custo antes de gerar o lote.
+
+config_path: "~/.carrossel-arcane/config/image-api.yaml"
+
+config_schema: |
+  provider: higgsfield_cli      # higgsfield_cli | openai_gpt_image | nano_banana_pro | freepik
+  api_key: "..."                # quando aplicavel (openai/freepik/gemini)
+  model: gpt_image_2            # opcional, default por provider
+  aspect_ratio: "16:9"          # default do estilo (euriler = 16:9)

@@ -141,12 +141,11 @@ rule = {"inclusions":{"operator":"or","rules":[{
 rule = {"inclusions":{"operator":"or","rules":[{
   "event_sources":[{"type":"pixel","id":META_PIXEL}],
   "retention_seconds": dias*86400,
-  "filter":{"operator":"and","filters":[{"field":"url","operator":"i_contains","value":""}]},
-  "template":"ALL_VISITORS"
+  "filter":{"operator":"and","filters":[{"field":"event","operator":"eq","value":"PageView"}]}
 }]}}
-# POST name="[Q] Site Visitors {dias}D", rule=..., prefill=true  — SEM subtype
+# POST name="[Q] Site PageView {dias}D — Pixel NDF", rule=..., prefill=true  — SEM subtype
 ```
-> Site: `template:ALL_VISITORS` + filtro url vazio. **NÃO** usar `event=PageView` (erro 2654). Pixel novo → começa vazio, enche com tráfego.
+> Site: usar o evento `PageView` do pixel. Isso foi validado via Graph API em 13/06/2026 na Conta Teste (`act_962200836192921`) e é mais robusto que filtro por URL. **NUNCA** usar `url i_contains ""`: isso criou públicos 30D/180D travados em ~20 pessoas. Evitar regra por URL salvo necessidade específica de separar domínios/caminhos; se usar URL, validar tamanho após backfill.
 
 ---
 

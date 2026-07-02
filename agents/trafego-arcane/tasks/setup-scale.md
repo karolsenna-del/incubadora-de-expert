@@ -8,12 +8,13 @@ Saida: "Campanha Andromeda PAUSED na conta de Escala, fiel ao método, pronta pr
 Checklist:
   - "Custom Audiences validadas (Step 0 rodou)"
   - "Payload completo montado conforme SOP"
+  - "Transparência dos anúncios configurada (dsa_beneficiary + dsa_payor)"
   - "Quality Gate de fidelidade Andromeda passou"
   - "Preview apresentado e confirmado pelo usuário"
   - "Campanha + 6 conjuntos + 9 ads criados (PAUSED)"
   - "IDs e link do Gerenciador retornados ao usuário"
 execution_type: "interactive"
-quality_gate: "QG-FA-001 (47 checks de fidelidade Andromeda) + QG-PREV-001 (preview confirmado)"
+quality_gate: "QG-FA-001 (48 checks de fidelidade Andromeda) + QG-PREV-001 (preview confirmado)"
 ---
 
 # Task: Setup Scale Campaign — Subir Campanha Escala Andromeda
@@ -31,10 +32,13 @@ Cria a **campanha de Escala** seguindo estritamente o método Andromeda da Bárb
 **Fontes de verdade:**
 - `knowledge/sop-campanha-ui.md` — passo a passo conceitual
 - `knowledge/sop-campanha-api.md` — payloads REST
+- `knowledge/sop-subir-campanha-duplicacao.md` — **método de criação (duplicação) anti-`3858634`** ⚠️
 - `knowledge/sop-campanha-mapping.md` — paridade UI ↔ API
 - `knowledge/criativos-avaliacao.md` — distribuição C1/C2/C3 dos 9 ads
 
 **Toda escrita na Meta API requer aprovação humana via preview.**
+
+> ⚠️ **Método de criação dos conjuntos:** se a conta exigir anunciante verificado, `POST /adsets` (criar do zero) trava com `3858634`. Monte os 6 conjuntos por **duplicação** de uma campanha-referência que já entrega (`/copies`). Ver `knowledge/sop-subir-campanha-duplicacao.md`.
 
 ---
 
@@ -64,8 +68,8 @@ START
 4. Montar PAYLOAD completo (campanha + 6 adsets + 9 creatives + 9 ads × 6)
   |
   v
-5. Rodar QG-FA-001 (47 checks de fidelidade Andromeda)
-   ↳ Se score < 47: ajustar antes de mostrar
+5. Rodar QG-FA-001 (48 checks de fidelidade Andromeda)
+   ↳ Se score < 48: ajustar antes de mostrar
   |
   v
 6. PREVIEW HUMANO (legível, não JSON cru)
@@ -143,6 +147,12 @@ questions:
     field: tem_email_list
   - q: "Negócio é local (entrega só num raio geográfico)?"
     field: eh_local
+  - q: "Anunciante e pagador exibidos na Biblioteca de Anúncios?"
+    field: transparencia_anuncios
+    default:
+      dsa_beneficiary: "EURILER MARKETING DIGITAL E TREINAMENTOS LTDA"
+      dsa_payor: "EURILER MARKETING DIGITAL E TREINAMENTOS LTDA"
+    rule: "Obrigatório no nível adset. Se forem diferentes, preencher cada nome legal corretamente."
 ```
 
 ### Step 3: Mapear OBJECTIVE
@@ -192,6 +202,8 @@ budget_per_adset = (verba_diaria_total // 6) * 100  # em centavos
   "billing_event": "IMPRESSIONS",
   "optimization_goal": "OFFSITE_CONVERSIONS",
   "destination_type": "WEBSITE",
+  "dsa_beneficiary": "{dsa_beneficiary}",
+  "dsa_payor": "{dsa_payor}",
   "promoted_object": {
     "pixel_id": "{META_PIXEL}",
     "custom_event_type": "{custom_event_type}"
@@ -362,7 +374,7 @@ Default: Caminho A. Confirmar com usuário se diferente.
 
 ### Step 5: Quality Gate QG-FA-001 (Fidelidade Andromeda)
 
-Antes do preview, rodar 47 checks contra o payload montado. Lista completa em `data/qg-fidelidade-andromeda.yaml`.
+Antes do preview, rodar 48 checks contra o payload montado. Lista completa em `data/qg-fidelidade-andromeda.yaml`.
 
 Top 10 checks críticos:
 
@@ -377,9 +389,10 @@ Top 10 checks críticos:
 [ ] Sem publisher_platforms (Adv+ Placements)
 [ ] Sem bid_amount (CPA Máx vazio)
 [ ] Conjunto 6 com 4 custom_audiences quentes
+[ ] Todos os adsets com dsa_beneficiary + dsa_payor preenchidos
 ```
 
-Se algum check falhou: ajustar payload e re-rodar QG. Score deve ser **47/47** ou justificativa explícita do gap (ex: "menos de 9 criativos").
+Se algum check falhou: ajustar payload e re-rodar QG. Score deve ser **48/48** ou justificativa explícita do gap (ex: "menos de 9 criativos").
 
 ### Step 6: Preview Humano
 
@@ -405,6 +418,7 @@ CAMPANHA
   6. QUENTE_Audiencia-completa — 4 públicos personalizados
 
   Todos: Adv+ Audience ON, Adv+ Placements ON, sem CPA Máx
+  Transparência: Anunciante {dsa_beneficiary} | Pagador {dsa_payor}
   Excluindo: {compradores_180d / leads_180d}
   Pixel: {META_PIXEL} | Evento: {custom_event_type}
 
@@ -425,7 +439,7 @@ CAMPANHA
   CTA padrão: {cta_type}
   Link de destino: {landing_page}
 
-FIDELIDADE ANDROMEDA: ✓ {N}/47 checks passaram
+FIDELIDADE ANDROMEDA: ✓ {N}/48 checks passaram
 {lista de gaps se houver}
 
 GAPS DECLARADOS:
@@ -554,7 +568,7 @@ Quer que eu volte daqui a 24h pra rodar o triagem inicial?
 
 ### QG-FA-001 — Fidelidade Andromeda
 
-Definido em `data/qg-fidelidade-andromeda.yaml`. 47 checks, score mínimo 47/47 ou gaps declarados.
+Definido em `data/qg-fidelidade-andromeda.yaml`. 48 checks, score mínimo 48/48 ou gaps declarados.
 
 ### QG-PREV-001 — Preview confirmado
 

@@ -20,7 +20,7 @@ Pegar o usuario do **ZERO ABSOLUTO** — nunca anunciou na vida, nao sabe o que 
 - Pixel instalado com eventos configurados
 - CAPI (API de Conversoes) ativa e deduplicada
 - TODOS os publicos do Metodo Andromeda criados
-- Meta App criado e em modo Live
+- Meta App criado e **Publicado** (não-Development)
 - System User com token permanente gerado e salvo
 - **CONTA PRONTA PRA ANUNCIAR E CONECTADA AO CLAUDE CODE**
 
@@ -881,39 +881,50 @@ Tira print da tela e manda aqui. Vou te dizer exatamente onde clicar. Se o publi
 
 **Por que precisa:** Sem conexao API, o Squad de Trafego (Trafego Arcane) funciona so como consultor. Com API, ele se torna operador — pode criar campanhas, ler metricas e otimizar diretamente.
 
-### 9a: Criar Meta App
+### 9a: Criar Meta App (fluxo "Casos de uso")
+
+> **Interface atual (validada 06/2026):** a criação de app hoje NÃO pergunta "tipo Empresa/Business". Ela abre uma tela de **"Adicionar casos de uso"**. É por aí que se escolhe o que o app vai fazer.
 
 1. Acessar https://developers.facebook.com/
 2. Fazer login com a conta do Facebook (mesma do BM)
 3. Clicar em "Meus Apps" > "Criar App"
-4. Selecionar tipo: **"Empresa"** (Business)
-5. Dar nome ao app (ex: "Auroq" ou "Squad Trafego [Nome]")
-6. Selecionar o Business Manager associado
+4. Dar nome ao app (ex: "Auroq" ou "Squad Trafego [Nome]")
+5. Na tela **"Adicionar casos de uso"**, marcar **"Criar e gerenciar anúncios com a API de Marketing"** > **Avançar**
+6. Na etapa **"Empresa"**, vincular o **Business Manager** associado
 7. Criar app
 
-### 9b: Adicionar produto Marketing API
+> **A Marketing API entra sozinha.** Marcar esse caso de uso já adiciona a Marketing API ao app — não existe mais um passo separado de "Adicionar produto > Marketing API". Se o caminho marcou o caso de uso certo, pode ir direto pro 9c.
 
-1. No dashboard do app, ir em "Adicionar produto"
-2. Selecionar **"Marketing API"**
-3. Configurar
+### 9c: Configurar Privacy Policy e Publicar o app
 
-### 9c: Configurar Privacy Policy e Tornar Live
-
-O app nasce em **modo de desenvolvimento**. Nesse modo:
+O app nasce em **modo de desenvolvimento** (badge "Não publicado"). Nesse modo:
 - Campanhas e Ad Sets: funcionam (leitura e criacao)
 - Ads e AdCreatives com `object_story_spec`: **BLOQUEADOS** (criam dark posts na Page)
 - Erro exato: "O post do criativo dos anuncios foi criado por um app que esta em modo de desenvolvimento"
 
-**Para tornar Live/Publico:**
+**Para tornar Live/Publico (interface atual, validada 06/2026):**
 
-1. Ir em Configuracoes do app > Basico
-2. Adicionar **Privacy Policy URL** (obrigatorio): ex. `https://seusite.com/politica-de-privacidade`
+1. Ir em **Configurações do app > Básico**
+2. Adicionar **Privacy Policy URL** (obrigatório) — ver "Política de privacidade sem site" abaixo
 3. Adicionar **Terms of Service URL** (recomendado)
-4. Salvar
-5. No topo da pagina, alternar o toggle de **"Em desenvolvimento"** para **"Publico/Live"**
-6. Confirmar
+4. Preencher **Categoria** (**obrigatório** — sem ela não salva nem publica): escolher a mais próxima de **negócio/empresa**
+5. Salvar
+6. No **menu lateral**, clicar em **"Publicar"** (é onde fica hoje — **não existe mais** o toggle "Em desenvolvimento → Público" no topo da página)
+7. Confirmar
 
-> **SEM PRIVACY POLICY URL, O APP NAO PODE IR LIVE.** Pode ser uma pagina simples no site com texto basico de politica de privacidade.
+> **SEM PRIVACY POLICY URL E SEM CATEGORIA, O APP NAO PUBLICA.** A política pode ser uma página simples com texto básico de LGPD.
+
+#### Política de privacidade sem site — caminho Vercel (preferencial)
+
+Se o dono da operação **não tem site nem página de política**, não precisa de gerador externo (tipo freeprivacypolicy.com). Caminho validado ponta a ponta na prática, leva segundos:
+
+1. Gerar o HTML padrão a partir do template `templates/politica-privacidade-tmpl.html` — trocar os placeholders `{NOME_NEGOCIO}`, `{EMAIL}` e `{DATA}` pelos dados do **dono real** da operação (ver Step 0 do agente: "de quem é a operação")
+2. Checar login: `vercel whoami`. Se não estiver logado, o usuário roda `! vercel login` (interativo, device code)
+3. Publicar: `vercel deploy --prod --yes` → retorna um link `*.vercel.app` em segundos
+4. Validar antes de colar no app: `curl -sI <link>` (esperar **HTTP 200**) e conferir que a página abre com o título certo
+5. Colar esse link no campo **Privacy Policy URL** do Step 9c
+
+> Só mandar o link pro campo do app **depois** do curl confirmar HTTP 200 — evita publicar app com URL quebrada.
 
 ### 9d: Criar System User no BM
 
@@ -926,10 +937,15 @@ O app nasce em **modo de desenvolvimento**. Nesse modo:
 ### 9e: Atribuir Assets ao System User
 
 1. Selecionar o System User recem-criado
-2. Atribuir acesso:
+2. Atribuir acesso aos **4 ativos** (todos com **Controle total**):
    - Conta de anuncios → **Controle total**
    - Pixel → **Controle total**
    - Pagina → **Controle total**
+   - **App** (o criado no 9a) → **Controle total**
+
+> **O App é o 4º ativo e costuma ser esquecido — sem ele, o app NÃO aparece na hora de gerar o token (Step 9f) e você trava.**
+>
+> **Bônus (teste do vínculo certo):** a própria lista de Apps nessa janela de atribuição é o teste natural de que o app foi criado no BM certo. **Se o app não aparecer na categoria "Apps", ele está vinculado a OUTRO Business Manager** — corrigir isso antes de prosseguir (volta no 9a e confere a etapa "Empresa").
 
 ### 9f: Gerar Token com Permissoes
 
@@ -942,8 +958,11 @@ O app nasce em **modo de desenvolvimento**. Nesse modo:
 | `ads_management` | Criar, editar, deletar campanhas |
 | `ads_read` | Ler dados e metricas |
 | `business_management` | Acessar assets do BM |
-| `pages_manage_posts` | Criar posts na Pagina (necessario pra dark posts) |
+| `pages_manage_ads` | Gerenciar anúncios da Página (dark posts) |
+| `pages_manage_posts` | Criar posts na Página (dark posts) |
 | `pages_read_engagement` | Ler metricas da Pagina |
+
+> **Sobre `pages_manage_ads` vs `pages_manage_posts`:** os docs do squad já divergiram sobre qual é a necessária pra dark post. Por segurança, **marcar as duas** — não atrapalham. Na próxima criação de anúncio real (dark post) dá pra confirmar qual delas é de fato exigida e enxugar depois. Esta lista é a fonte única; o `data/meta-api-credentials.md` segue a mesma.
 
 4. Gerar token
 5. **COPIAR IMEDIATAMENTE** — token aparece UMA VEZ
@@ -977,16 +996,19 @@ O app nasce em **modo de desenvolvimento**. Nesse modo:
 
 ### Validacao
 
-- [ ] Meta App criado em developers.facebook.com
-- [ ] Marketing API adicionado como produto
-- [ ] Privacy Policy URL configurada
-- [ ] App em modo **Live/Publico** (nao Development)
+- [ ] Meta App criado via caso de uso **"Criar e gerenciar anúncios com a API de Marketing"** (Marketing API entra junto)
+- [ ] Privacy Policy URL configurada + **Categoria** preenchida
+- [ ] App **Publicado** (botão "Publicar" no menu lateral — não o toggle antigo)
 - [ ] System User criado (tipo Admin)
-- [ ] Assets atribuidos ao System User (conta, pixel, pagina)
-- [ ] Token gerado com permissoes corretas (ads_management, ads_read, business_management, pages_manage_posts, pages_read_engagement)
+- [ ] **4 ativos** atribuídos ao System User (conta, pixel, página **e app**)
+- [ ] Token gerado com permissoes corretas (ads_management, ads_read, business_management, pages_manage_ads, pages_manage_posts, pages_read_engagement)
 - [ ] Token salvo no 1Password
 - [ ] Token testado no Graph Explorer (GET /me funciona)
 - [ ] Token conectado ao Claude Code / n8n
+
+### Segurança do token
+
+> **Token que apareceu em chat = token a revogar.** Se o System User token foi colado/exibido em qualquer conversa (chat, log, screenshot), trate como vazado: gere um novo e revogue o antigo no System User ("Anular tokens"). Vale principalmente em setup feito como demonstração ao vivo. Ver a seção **Teardown / Demo** do `agents/setup-operator.md`.
 
 ### Se travou
 
@@ -1052,12 +1074,12 @@ Verificar TODOS estes itens antes de considerar o setup completo:
 
 ### API (Step 9)
 
-- [ ] Meta App criado e em modo Live
+- [ ] Meta App criado via caso de uso Marketing API e **Publicado**
 - [ ] System User criado (tipo Admin)
-- [ ] Assets atribuidos ao System User
+- [ ] **4 ativos** atribuídos ao System User (conta, pixel, página, app)
 - [ ] Token gerado com todas as permissoes
 - [ ] Token salvo no 1Password
-- [ ] Token testado e funcional
+- [ ] Token testado e funcional (GET /me + descoberta de IDs)
 - [ ] Token conectado ao Claude Code / n8n
 
 ### Status Geral

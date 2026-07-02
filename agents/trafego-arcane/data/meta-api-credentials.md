@@ -15,7 +15,7 @@ Antes de configurar credenciais, garanta que você tem:
 | **Conta Meta Business Manager** | https://business.facebook.com | A casa do seu negócio |
 | **App Meta** com Marketing API habilitada | https://developers.facebook.com/apps | Tipo "Business". Anote o `app_id` |
 | **System User** no Business Manager | BM → Configurações → Usuários do sistema | Cria usuário "Admin" do sistema |
-| **System User Token** (long-lived, não expira) | BM → System User → Gerar token | **Permissões mínimas a marcar:** `ads_management`, `ads_read`, `business_management`, `pages_manage_ads`, `pages_read_engagement` |
+| **System User Token** (long-lived, não expira) | BM → System User → Gerar token | **Permissões a marcar:** `ads_management`, `ads_read`, `business_management`, `pages_manage_ads`, `pages_manage_posts`, `pages_read_engagement`. (Marcar `pages_manage_ads` **e** `pages_manage_posts` — divergência antiga entre os docs; as duas não atrapalham, confirmar qual é exigida pra dark post na próxima criação real. Mesma lista da KB Step 9f.) |
 | **Conta de Anúncio** atribuída ao System User | BM → Contas de Anúncio → Atribuir pessoas → seu System User com função "Admin" | Sem isso o token não enxerga a conta |
 | **Página Facebook** atribuída ao System User | BM → Páginas → Atribuir pessoas → seu System User com função "Anunciante" | Pra publicar anúncios |
 | **Pixel** instalado no site + atribuído ao BM | Events Manager → Configurar pixel | Anote o `pixel_id` |
@@ -31,7 +31,7 @@ Independente de onde você guarde, são estes os 9 valores que o squad precisa:
 |-------|------|---------|------------|
 | `META_TOKEN` | secreto | `EAA...DZD` | System User Token (não expira) |
 | `META_API_VERSION` | texto | `v21.0` | Versão Graph API a usar |
-| `META_APP_ID` | texto | `1234567890123456` | ID do app Meta |
+| `META_APP_ID` | texto **(opcional)** | `1234567890123456` | ID do app Meta. **Não é usado em operação** (as chamadas usam token + IDs de conta) — só referência pra abrir o app no painel. Não precisa coletar no setup; se quiser registrar, sai de `GET /debug_token`. |
 | `META_BM_ID` | texto | `123456789012345` | Business Manager ID |
 | `META_ACCT_MAIN` | texto | `act_999888777666555` | Conta de anúncios principal (formato `act_NNNN`) |
 | `META_ACCT_ESCALA` | texto opcional | `act_NNNN` | Conta dedicada Escala (se separada) |
@@ -157,6 +157,8 @@ curl -s "https://graph.facebook.com/${META_API_VERSION}/me?access_token=${META_T
 ```
 
 Deve retornar `{"name":"NomeDoApp","id":"NNN..."}`. Se retornar erro, token está errado, expirado ou sem permissão.
+
+**Health-check (3 checagens reais):** depois do `source`, rode `meta_healthcheck` — confere `account_status` (1=ativa, 2=desabilitada, 3=pendência de pagamento), frescor do pixel (`last_fired_time`) e IG vinculado à página. Usado pelo `setup-operator` no Step 9.5.
 
 ---
 

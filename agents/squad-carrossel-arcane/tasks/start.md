@@ -33,7 +33,7 @@ fi
 **Se `first_use`:**
 
 ```
-=== SQUAD CARROSSEL ARCANE · v1.0.0 ===
+=== SQUAD CARROSSEL ARCANE · v1.1.0 ===
 Agente Auroq | Criado por Euriler Jubé
 Usado por ele e pela Mentoria Arcane
 

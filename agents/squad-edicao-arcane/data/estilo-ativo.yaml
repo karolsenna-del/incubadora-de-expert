@@ -2,7 +2,7 @@
 # O @finisher le esse arquivo antes de queimar legenda.
 # Pra trocar: ative @stylist ou diga "muda legenda" / "outro estilo".
 
-estilo_ativo: "neutro"
+estilo_ativo: "viral-euriler"
 # opcoes disponíveis (ver data/estilos/*.yaml):
 #   - neutro     (default — Bebas Neue branco puro)
 #   - viral      (Bebas Neue branco+amarelo split)

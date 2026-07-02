@@ -1,0 +1,83 @@
+# ===============================================================================
+# WORKFLOW: wf-bootstrap-3
+# Jornada Configuracoes Avancadas — 3 fases, unidirecional, gates bloqueantes.
+# Conduzido pelo b3-chief; cada fase executada pelo operador dono.
+# Multi-sessao: estado persistido no tracker do aluno (business/infra/).
+# ===============================================================================
+
+name: wf-bootstrap-3
+title: "Jornada Bootstrap 3 — Configuracoes Avancadas"
+version: "1.0.0"
+orchestrator: b3-chief
+description: >
+  Pipeline unidirecional do bootstrap 1 ate a maquina de operacao 24/7.
+  O Chief conduz, mantem o tracker e so libera a proxima fase quando o gate
+  da anterior fecha. Desenhado pra multi-sessao: o aluno pode parar no fim
+  de qualquer fase e retomar dias depois — o tracker guarda onde parou.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# GATE DE ENTRADA
+# ─────────────────────────────────────────────────────────────────────────────
+entry_gate:
+  id: QG-B3-000
+  owner: b3-chief
+  blocking: true
+  criteria: "Bootstrap 1 do Auroq concluido (Claude Code + Auroq, GitHub, Supabase, cofre). Dominio proprio recomendado."
+  on_fail: "Bloquear inicio. Mandar o aluno concluir o bootstrap do Ops (npx auroq-os) primeiro. Nao improvisar."
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SEQUENCIA DE FASES
+# ─────────────────────────────────────────────────────────────────────────────
+phases:
+  - id: fase-0
+    label: "FASE 0 — Servidor (Hetzner + Docker + n8n + SSL)"
+    station: operador-infra
+    task: fase-0-infra
+    produces: "Servidor Hetzner no ar, n8n queue mode em https, webhook respondendo, credenciais no cofre"
+    gate:
+      id: QG-B3-001
+      blocking: true
+      criteria: "n8n https com cadeado · admin criado · webhook HTTP 200 · credenciais no cofre · tracker atualizado"
+
+  - id: fase-1
+    label: "FASE 1 — Banco de dados unificado (Supabase core)"
+    station: operador-banco
+    task: fase-1-banco
+    depends_on: fase-0
+    produces: "Tabelas core (pessoas/capturas/compras) com a logica centralizada: hub de identidade por email, logs append-only"
+    gate:
+      id: QG-B3-002
+      blocking: true
+      criteria: "3 tabelas + indexes + RLS + triggers · upsert por email dedup OK · anon key bloqueada · tracker atualizado"
+
+  - id: fase-2
+    label: "FASE 2 — Automacoes essenciais (Z-API + compras + disparos + recovery)"
+    station: operador-automacoes
+    task: fase-2-automacoes
+    depends_on: fase-1
+    produces: "Z-API conectado, compras/onboarding automatico, dispatcher de disparos, recovery de vendas — tudo escrevendo/lendo o banco core"
+    gate:
+      id: QG-B3-003
+      blocking: true
+      criteria: "Z-API teste recebido · compras e2e OK · dispatcher dry-run · recovery dry-run · anti-ban configurado · tracker fechado"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# HANDOFFS
+# ─────────────────────────────────────────────────────────────────────────────
+# O aluno so fala com o b3-chief. Os operadores executam por baixo e reportam
+# o gate de volta ao Chief, que decide a transicao e atualiza o tracker.
+handoffs:
+  - "b3-chief → operador-infra (abre Fase 0 apos QG-B3-000)"
+  - "operador-infra → b3-chief (reporta QG-B3-001)"
+  - "b3-chief → operador-banco (apos QG-B3-001)"
+  - "operador-banco → b3-chief (reporta QG-B3-002)"
+  - "b3-chief → operador-automacoes (apos QG-B3-002)"
+  - "operador-automacoes → b3-chief (reporta QG-B3-003 → maquina ligada)"
+
+# Multi-sessao: ao ativar o squad, o chief SEMPRE le o tracker primeiro
+# (business/infra/bootstrap3-tracker.md no repo do aluno). Se existe, retoma
+# da fase registrada; se nao existe, e primeira vez (cria do template).
+resume_protocol: "tracker-first"
+bottleneck: "fase-0 — DNS + SSL e onde mais trava (propagacao, rate limit Let's Encrypt)"
+
+final_state: "Maquina 24/7: servidor proprio rodando n8n, banco unificado com identidade central, compras alimentando o banco, disparos e recovery operando via Z-API. Proximo passo da jornada: a Bia (/instalacaoBia) — que reusa este servidor."

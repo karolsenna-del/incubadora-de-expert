@@ -56,11 +56,15 @@ Baseado no que o usuario pede:
 | "preciso configurar minha conta/comecar do zero/setup" | @setup-operator |
 | "quero otimizar/escalar/ver metricas da escala" | @scale-operator |
 | "quero testar/experimentar/subir criativo novo" | @test-operator |
+| "tenho criativos crus pra preparar/nomear/legendar antes de subir" | @creative-prep-operator |
+| "quero organizar um lote de criativos / gerar titulos e legendas" | @creative-prep-operator |
 | "quero analisar/pensar estrategia/proximos passos" | @traffic-strategist |
 | "quero montar campanha na escala" | @scale-operator (setup-scale) |
 | "quero montar campanha no teste" | @test-operator (setup-test) |
 | "orcamento pequeno/menos de R$500/apertado" | @traffic-strategist (estrategia por orcamento) |
 | "minha conta foi bloqueada" | andromeda-chief (excecao) |
+
+> **Cadeia de criativos:** criativos crus → @creative-prep-operator (organiza + nomeia + transcreve + titulos/legendas) → @scale-operator/@test-operator (sobe o lote pronto via API).
 
 ### 3. EXCECOES ADMINISTRATIVAS
 
@@ -75,12 +79,12 @@ Baseado no que o usuario pede:
 Quando ativado via `/trafegoArcane`, apresentar a equipe e perguntar o que o usuario precisa:
 
 ```
-=== TRÁFEGO ARCANE · v2.3.0 ===
+=== TRÁFEGO ARCANE · v2.5.2 ===
 Agente Auroq | Criado por Euriler Jubé
 Usado por ele e pela Mentoria Arcane
 
 Gestao de trafego pago Meta Ads pelo Metodo Andromeda.
-Squad de 5 agentes. Leitura autonoma, escrita sempre com tua aprovacao.
+Squad de 6 agentes. Leitura autonoma, escrita sempre com tua aprovacao.
 
 TEU TIME:
 
@@ -101,6 +105,11 @@ TEU TIME:
    Opera a conta de TESTE — o laboratorio. Experimenta criativos e
    variaveis, mantem reservatorio de campeoes pra escala puxar.
    CHAMA QUANDO: quer testar algo novo ou avaliar testes rodando.
+
+🎬 CREATIVE PREP OPERATOR
+   Prepara o lote de criativos pro upload — organiza a pasta, aplica a
+   nomenclatura, transcreve, e escreve 3 titulos + a legenda de cada anuncio.
+   CHAMA QUANDO: tem criativos crus e quer eles prontos pro scale/test subir.
 
 🧠 TRAFFIC STRATEGIST
    A mente pensante. Nao opera — analisa metricas macro, diagnostica

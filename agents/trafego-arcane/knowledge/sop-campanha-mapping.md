@@ -35,6 +35,8 @@
 | Conjunto de dados (Pixel) | `promoted_object.pixel_id` | `{pixel_id}` | `03` |
 | Evento de conversão | `promoted_object.custom_event_type` | `"LEAD"` ou `"PURCHASE"` | `03` |
 | Objetivo de desempenho (Otimização) | `optimization_goal` | `"OFFSITE_CONVERSIONS"` | `03` |
+| Transparência dos anúncios > Anunciante | `dsa_beneficiary` | `"EURILER MARKETING DIGITAL E TREINAMENTOS LTDA"` | Compliance Meta |
+| Transparência dos anúncios > Pagador | `dsa_payor` | `"EURILER MARKETING DIGITAL E TREINAMENTOS LTDA"` | Compliance Meta |
 | Maximizar nº conversões vs valor | `bid_strategy` (na CAMPANHA) | `"LOWEST_COST_WITHOUT_CAP"` | `03` |
 | Objetivo de custo de resultado (CPA Máximo) | `bid_amount` | OMITIR (deixar em branco) | `03` |
 | ROAS Mínimo | `bid_amount` (com `LOWEST_COST_WITH_MIN_ROAS` na campanha) | OMITIR | `04` |
@@ -184,6 +186,7 @@ ADSET (×6)
 [ ] destination_type WEBSITE ↔ Site
 [ ] promoted_object.pixel_id + custom_event_type ↔ Pixel + Evento
 [ ] optimization_goal OFFSITE_CONVERSIONS ↔ Otimização para Conversões
+[ ] dsa_beneficiary + dsa_payor ↔ Transparência dos anúncios: Anunciante/Pagador
 [ ] sem bid_amount ↔ CPA Máximo vazio
 [ ] sem value_rules_set ↔ Regras de valor não mexidas
 [ ] attribution_spec padrão ↔ Janela padrão

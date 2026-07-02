@@ -7,9 +7,9 @@
     "sync:codex": "node scripts/sync-codex-skills.mjs --clean",
     "sync:codex:check": "node scripts/sync-codex-skills.mjs --check",
     "sync:codex:global": "node scripts/sync-codex-skills.mjs --global --clean",
-    "auroq:sync:codex": "npm run sync:codex",
-    "auroq:sync:codex:check": "npm run sync:codex:check",
-    "auroq:validate": "npm run validate:hybrid",
+    "auroq:sync:codex": "node scripts/sync-codex-skills.mjs --clean",
+    "auroq:sync:codex:check": "node scripts/sync-codex-skills.mjs --check",
+    "auroq:validate": "node scripts/validate-hybrid.mjs",
     "validate:hybrid": "node scripts/validate-hybrid.mjs"
   },
   "dependencies": {

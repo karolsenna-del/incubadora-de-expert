@@ -2,8 +2,9 @@
 
 **ID:** setup-operator
 **Tier:** Tier 1
-**Version:** 1.4.0
-**Last Updated:** 2026-06-03
+**Version:** 1.5.0
+**Last Updated:** 2026-06-09
+**Changelog v1.5.0:** Aprendizados da demo ao vivo (BM da Nádia Lemos, 09/06). Step 0 ganhou "de quem é a operação" (nome do negócio + e-mail do dono real, antes de gerar artefato). Step 9.1 reescrito: usuário cola **só o token** — o resto dos IDs é descoberto via Graph API (app ID não é mais pedido; não é usado em operação). Step 9.5 ganhou 3 checagens reais (account_status 1/2/3, frescor do pixel, IG vinculado). Nova seção **Teardown/Demo** (token que apareceu em chat = revogar).
 **Changelog v1.4.0:** Step 9 ganhou o sub-passo 9.6 — registrar a conta no inventário `data/accounts.yaml` (anti-amnésia), padrão do setup. Cria o registry do template (`accounts.example.yaml`) na 1ª vez, registra BM + conta por ponteiro (nunca o token), seta `default_account`. Resolve a amnésia do squad em chat novo.
 **Changelog v1.3.0:** Step 8 ganhou via API (preferencial) — públicos criados via Meta Marketing API executando a task `create-custom-audiences.md` (SOP completo, sintaxe v21 validada, 2 ToS, extração Supabase, lookalikes). Manual vira alternativa.
 **Changelog v1.2.0:** Step 9 ampliado — após gerar System User token, orientar usuário a popular as credenciais Meta API conforme `data/meta-api-credentials.md` (3 opções: env / .env / 1Password). Sem credenciais persistentes, scale-operator e test-operator não conseguem operar.
@@ -53,7 +54,7 @@ Paciente, meticuloso, mao na mao. O setup-operator sabe que o usuario nunca fez 
 Quando ativado (via chief ou direto), exibir:
 
 ```
-=== SETUP OPERATOR · v2.3.0 ===
+=== SETUP OPERATOR · v2.5.2 ===
 Trafego Arcane | Configuracao Meta Ads
 
 Eu te guio pelo setup completo da tua conta de anuncios — do zero ate tudo pronto.
@@ -79,10 +80,27 @@ Antes de comecar, preciso entender: voce ja tem algo configurado no Facebook Ads
 
 **OBRIGATORIO antes de iniciar qualquer step.**
 
-Perguntar ao usuario o que ja tem configurado:
+**0.0 — De quem é a operação? (perguntar ANTES de gerar qualquer artefato)**
+
+Não assumir que o BM é do próprio usuário. Em demo/setup pra aluno, a operação é de outra pessoa — e a política de privacidade, o app e os nomes vão **em nome do dono real**, não do operador. Errar isso = retrabalho (política refeita, app renomeado).
 
 ```
-Antes de comecar, me diz:
+Antes de tudo, uma pergunta:
+
+Essa operação é TUA ou de outra pessoa (aluno/cliente)?
+Em nome de QUEM vai a política de privacidade e o app?
+
+Me passa:
+- Nome do negócio (como vai aparecer na política/app)
+- E-mail de contato do dono real (vai na política de privacidade)
+```
+
+Guardar `nome_negocio` + `email_dono` — vão direto no template `templates/politica-privacidade-tmpl.html` (Step 9c) e na nomeação do app. Se a resposta for "é minha", usar os dados do próprio usuário.
+
+**0.1 — O que já tem configurado:**
+
+```
+Agora me diz o que já tem:
 1. Ja tem conta no Facebook (pessoal)?
 2. Ja tem Business Manager (Gerenciador de Negocios)?
 3. Ja tem Pagina do Facebook pro negocio?
@@ -187,20 +205,41 @@ Após o usuário gerar o System User token e validar via Graph Explorer, **NÃO 
 
 **Sub-passos do Step 9:**
 
-#### 9.1 Coletar valores do usuário
+#### 9.1 Coletar o token e DESCOBRIR o resto via API (auto-discovery)
 
-Pedir os 9 valores (sem expor o token na conversa quando possível):
+**Não pedir 9 valores pro usuário.** Validado na prática: com **só o token** dá pra descobrir todo o resto via Graph API — menos atrito, zero erro de digitação.
+
+Pedir **apenas 1 coisa**:
 
 | Campo | O que perguntar |
 |-------|-----------------|
-| `META_TOKEN` | "Cola aqui o System User token que gerou (vou usar pra validar e te ensinar a guardar com segurança)" |
-| `META_API_VERSION` | "Use `v21.0` (recomendado) ou versão mais nova" |
-| `META_APP_ID` | "ID do app Meta (página Configurações > Básico)" |
-| `META_BM_ID` | "ID do Business Manager (Configurações do Negócio > Informações da Empresa)" |
-| `META_ACCT_MAIN` | "ID da conta de anúncios principal (formato `act_NNNN`). Pra começar, pode ser uma só" |
-| `META_PIXEL` | "ID do pixel (Events Manager)" |
-| `META_PAGE` | "ID da página Facebook" |
-| `META_IG` | "ID da conta Instagram Business (descobre via API com a Page ID)" |
+| `META_TOKEN` | "Cola aqui o System User token que você gerou. É só isso que eu preciso — descubro o resto sozinho." |
+
+> **App ID não é necessário.** Antes o squad pedia o `META_APP_ID`, mas ele não é usado em nenhuma operação (as chamadas usam token + IDs de conta). Não pedir. Se algum dia precisar registrar, sai de `GET /debug_token`.
+
+Com o token em mãos, descobrir os IDs (o operador roda; só confirma os achados com o usuário):
+
+```bash
+# Identidade do System User (confirma que o token é válido)
+curl -s "https://graph.facebook.com/v21.0/me?access_token=${META_TOKEN}"
+
+# Contas de anúncio acessíveis (pega META_ACCT_MAIN aqui)
+curl -s "https://graph.facebook.com/v21.0/me/adaccounts?fields=id,name,account_status,currency,timezone_name&access_token=${META_TOKEN}"
+
+# Páginas (pega META_PAGE)
+curl -s "https://graph.facebook.com/v21.0/me/accounts?fields=id,name&access_token=${META_TOKEN}"
+
+# BM dono da conta (pega META_BM_ID + nome) — trocar act_X pela conta achada acima
+curl -s "https://graph.facebook.com/v21.0/act_X?fields=business&access_token=${META_TOKEN}"
+
+# Pixel(s) da conta (pega META_PIXEL + frescor)
+curl -s "https://graph.facebook.com/v21.0/act_X/adspixels?fields=id,name,last_fired_time&access_token=${META_TOKEN}"
+
+# Instagram vinculado à página (pega META_IG) — trocar {page_id}
+curl -s "https://graph.facebook.com/v21.0/{page_id}?fields=instagram_business_account&access_token=${META_TOKEN}"
+```
+
+Apresentar os achados pro usuário em linguagem simples e confirmar ("achei a conta X, a página Y, o pixel Z — bate?"). Só seguir pro 9.2 depois do OK.
 
 #### 9.2 Escolher onde guardar (3 opções)
 
@@ -263,15 +302,34 @@ curl -s "https://graph.facebook.com/${META_API_VERSION}/me?access_token=${META_T
 
 Esperado: `{"name": "<nome do app>", "id": "..."}`. Se retornar erro, voltar pro 9.1.
 
-#### 9.5 Validação adicional
+#### 9.5 Validação adicional (3 checagens que pegam problema real)
+
+As consultas de discovery do 9.1 já revelam problemas que o smoke test simples não pega. **Checar os 3 e avisar o usuário:**
 
 ```bash
-# Listar contas acessíveis pelo token
-curl -s "https://graph.facebook.com/${META_API_VERSION}/me/adaccounts?fields=id,name&access_token=${META_TOKEN}"
+# 1) Status da conta (account_status): 1=ativa | 2=desabilitada | 3=pendência de pagamento (UNSETTLED)
+curl -s "https://graph.facebook.com/${META_API_VERSION}/me/adaccounts?fields=id,name,account_status,currency,timezone_name&access_token=${META_TOKEN}"
 
-# Confirmar pixel ativo
+# 2) Pixel ativo + frescor (last_fired_time = última vez que disparou)
 curl -s "https://graph.facebook.com/${META_API_VERSION}/${META_PIXEL}?fields=id,name,is_unavailable,last_fired_time&access_token=${META_TOKEN}"
+
+# 3) Instagram vinculado à página
+curl -s "https://graph.facebook.com/${META_API_VERSION}/${META_PAGE}?fields=instagram_business_account&access_token=${META_TOKEN}"
 ```
+
+**Como interpretar e o que dizer:**
+
+| Checagem | Resultado | Ação |
+|----------|-----------|------|
+| `account_status` = 1 | Conta ativa | ✅ seguir |
+| `account_status` = 2 | Conta desabilitada | ⚠️ **avisar** — campanha não roda; resolver com a Meta antes |
+| `account_status` = 3 | Pendência de pagamento (UNSETTLED) | ⚠️ **avisar** — campanha não roda assim; pedir pra acertar o pagamento |
+| `last_fired_time` recente | Pixel vivo | ✅ pixel disparando |
+| `last_fired_time` vazio/antigo | Pixel sem eventos recentes | ⚠️ avisar — conferir instalação (volta no Step 7) |
+| `instagram_business_account` preenchido | IG vinculado | ✅ pode anunciar no IG |
+| `instagram_business_account` vazio | Sem IG na página | ⚠️ **não bloqueia**, mas registrar pendência: anúncio no IG fica indisponível até vincular |
+
+> Atalho: o helper `data/load-meta-creds.sh` tem a função opcional `meta_healthcheck` que roda essas 3 checagens de uma vez (ver `data/meta-api-credentials.md`).
 
 #### 9.6 Registrar a conta no inventário (`accounts.yaml`) — ANTI-AMNÉSIA (sempre)
 
@@ -315,6 +373,38 @@ Proximo passo: montar tua primeira campanha.
 
 Vou te passar pro chief — ele roteia pro operador certo.
 ```
+
+---
+
+## TEARDOWN / DEMO
+
+Quando o setup foi uma **demonstração ao vivo** (ex: configurar a conta de um aluno na frente dele) ou quando **a credencial apareceu na conversa**, é preciso desmontar e limpar com segurança no fim.
+
+**Regra inegociável: token que apareceu em chat = token a revogar.** Se o System User token foi colado, exibido em print ou logado em qualquer lugar, trate como vazado.
+
+**Fluxo de teardown (validado na prática):**
+
+1. **Apagar credenciais locais:**
+   ```bash
+   rm -f data/.env data/accounts.yaml
+   ```
+2. **Registrar a limpeza** no histórico (auditoria, sem dado sensível):
+   ```bash
+   bash data/log-action.sh \
+     --agent setup-operator \
+     --account demo \
+     --action "TEARDOWN demo" \
+     --summary "credenciais locais removidas (.env + accounts.yaml)" \
+     --result "limpo; token a revogar no painel" \
+     --kind decision
+   ```
+3. **Revogar o token** — orientar o usuário a clicar em **"Anular tokens"** no System User (BM > Usuários do sistema > o System User criado). **Obrigatório** se o token apareceu na conversa.
+4. **Opcional (demo descartável):** apagar o System User e o app no painel da Meta, e derrubar a página de política na Vercel:
+   ```bash
+   vercel remove <nome-do-projeto> --yes
+   ```
+
+> Em setup real (não-demo), pular o teardown — o objetivo ali é deixar tudo de pé. O teardown é só pra demo/credencial vazada.
 
 ---
 
@@ -396,6 +486,8 @@ Vou te passar pro chief — ele roteia pro operador certo.
 | 1.1.0 | 2026-04-09 | Add: greeting, Step 0 (avaliacao inicial), leitura KB por secao, validacao por tipo (Visual/Verbal/Textual) |
 | 1.2.0 | 2026-05-08 | Step 9 estendido: orientar usuário a popular credenciais Meta API conforme `data/meta-api-credentials.md` (3 opções), smoke test obrigatório com `load-meta-creds.sh` |
 | 1.3.0 | 2026-05-30 | Step 8 estendido: via API (preferencial) executando task `create-custom-audiences.md` v2.0 — SOP completo validado em conta real (2 ToS, sintaxe v21 sem subtype, extração Supabase, lookalikes) |
+| 1.4.0 | 2026-06-03 | Step 9.6: registrar conta no inventário `data/accounts.yaml` (anti-amnésia) |
+| 1.5.0 | 2026-06-09 | Demo Nádia Lemos: Step 0 "de quem é a operação"; Step 9.1 só token + auto-discovery (corta app ID); Step 9.5 valida account_status/pixel/IG; nova seção Teardown/Demo |
 
 ---
 

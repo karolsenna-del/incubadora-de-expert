@@ -42,12 +42,12 @@ tail -n 12 squads/trafego-arcane/data/historico-acoes.md 2>/dev/null || echo "SE
 ### Step 1: Greeting
 
 ```
-=== TRÁFEGO ARCANE · v2.3.0 ===
+=== TRÁFEGO ARCANE · v2.5.2 ===
 Agente Auroq | Criado por Euriler Jubé
 Usado por ele e pela Mentoria Arcane
 
 Gestao de trafego pago Meta Ads pelo Metodo Andromeda.
-Squad de 5 agentes. Leitura autonoma, escrita sempre com tua aprovacao.
+Squad de 6 agentes. Leitura autonoma, escrita sempre com tua aprovacao.
 
 TEU TIME:
 
@@ -68,6 +68,11 @@ TEU TIME:
    Opera a conta de TESTE — o laboratorio. Experimenta criativos e
    variaveis, mantem reservatorio de campeoes pra escala puxar.
    CHAMA QUANDO: quer testar algo novo ou avaliar testes rodando.
+
+🎬 CREATIVE PREP OPERATOR
+   Prepara o lote de criativos pro upload — organiza a pasta, aplica a
+   nomenclatura, transcreve, e escreve 3 titulos + a legenda de cada anuncio.
+   CHAMA QUANDO: tem criativos crus e quer eles prontos pro scale/test subir.
 
 🧠 TRAFFIC STRATEGIST
    A mente pensante. Nao opera — analisa metricas macro, diagnostica

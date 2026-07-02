@@ -5,13 +5,14 @@
 
 name: squad-carrossel-arcane
 title: "Carrossel Arcane"
-version: "1.0.0"
+version: "1.1.0"
 author: "Euriler Jube (Arka / Mentoria Arcane)"
 description: >
-  Squad de 3 agentes (1 chief + 2 specialists) que produz carrosseis e posts
-  estaticos pra Instagram a partir de copy pronta. Identity Designer cria os
-  templates visuais do aluno na primeira vez (3-5 templates ideais). Producer
-  usa os templates pra montar PNGs prontos pra postar.
+  Squad de 4 agentes (1 chief + 3 specialists) que produz carrosseis e posts
+  estaticos pra Instagram. Identity Designer cria os templates visuais (moldura).
+  Image Director cria as imagens de conteudo de alto nivel de cada card — as
+  ilustracoes cinematograficas que encenam a tese (card{N}-FINAL.png), com
+  templates de estilo reutilizaveis (ex.: euriler). Producer monta os PNGs finais.
   KB embarcada — squad 100% autocontido pra alunos Arcane.
 
 slash_prefix: "squad-carrossel-arcane"
@@ -31,6 +32,9 @@ use_cases:
   - id: UC3
     name: "Adicionar Templates"
     description: "Aluno volta no Identity Designer pra criar templates adicionais sem refazer os existentes."
+  - id: UC4
+    name: "Gerar Imagens de Conteudo"
+    description: "Image Director recebe o texto do carrossel, calibra o estilo (template salvo ou referencias), produz as imagens de alto nivel de cada card (batch ou incremental), cristaliza o template e entrega card{N}-FINAL.png pro Producer montar."
 
 # ─────────────────────────────────────────────────────────────────────────────
 # TIER SYSTEM
@@ -40,6 +44,7 @@ tiers:
     - carrossel-chief
   tier_1:
     - identity-designer
+    - image-director
     - producer
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -56,6 +61,11 @@ agents:
     role: tier_1
     description: "Cria templates visuais do aluno em loop iterativo"
 
+  - id: image-director
+    file: agents/image-director.md
+    role: tier_1
+    description: "Cria as imagens de conteudo de alto nivel de cada card (encena a tese); templates de estilo reutilizaveis; entrega card{N}-FINAL.png pro Producer"
+
   - id: producer
     file: agents/producer.md
     role: tier_1
@@ -68,6 +78,9 @@ tasks:
   - file: tasks/start.md
   - file: tasks/setup-identity.md
   - file: tasks/add-template.md
+  - file: tasks/calibrate-image-style.md
+  - file: tasks/produce-card-images.md
+  - file: tasks/save-image-style.md
   - file: tasks/produce-carousel.md
   - file: tasks/produce-static-post.md
   - file: tasks/list-templates.md
@@ -87,6 +100,14 @@ knowledge:
   - file: knowledge/apis-imagem.md
   - file: knowledge/infer-slides.md
   - file: knowledge/render-html-png.md
+  # Imagens de conteudo de alto nivel (Image Director)
+  - file: knowledge/imagens-padrao-euriler.md          # metodologia geral
+  - file: knowledge/prompts-reais-carrossel-mythos.md  # banco de prompts post 1
+  - file: knowledge/prompts-reais-fable2-bloqueio.md   # banco de prompts post 2
+  # Templates de estilo de imagem
+  - file: knowledge/image-styles/euriler/meta.yaml
+  - file: knowledge/image-styles/euriler/style.md
+  - file: knowledge/image-styles/euriler/examples.md
 
 # ─────────────────────────────────────────────────────────────────────────────
 # DATA
@@ -94,14 +115,16 @@ knowledge:
 data:
   - file: data/templates-schema.yaml
   - file: data/api-providers.yaml
+  - file: data/image-providers.yaml
 
 # ─────────────────────────────────────────────────────────────────────────────
 # OUTPUT
 # ─────────────────────────────────────────────────────────────────────────────
 output:
-  templates_dir: "~/.carrossel-arcane/templates/"
+  templates_dir: "~/.carrossel-arcane/templates/"          # templates visuais (moldura — Identity Designer)
+  image_styles_dir: "~/.carrossel-arcane/image-styles/"    # templates de estilo de imagem (Image Director)
   config_dir: "~/.carrossel-arcane/config/"
-  output_dir: "~/Downloads/{nome-do-carrossel}/"
+  output_dir: "~/Downloads/{nome-do-carrossel}/"           # card{N}-FINAL.png (Image Director) + slide-NN.png (Producer)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # DEPENDENCIES

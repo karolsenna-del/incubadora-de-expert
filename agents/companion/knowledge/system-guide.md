@@ -63,7 +63,7 @@ Nao. Voce me descreve o que precisa e EU te direciono pro agente certo. Se quise
 
 ## O que e o Auroq OS
 
-Sistema operacional de IA pro expert. Transforma o Claude Code num centro de comando inteligente pra operar um negocio digital. Nao e colecao de pastas — e sistema que gira.
+Sistema operacional de IA pro expert. Transforma Claude Code ou Codex CLI num centro de comando inteligente pra operar um negocio digital. Nao e colecao de pastas — e sistema que gira.
 
 3 capacidades:
 - **Pensar com IA** — decisoes, planos, estrategias
@@ -281,7 +281,7 @@ Quando o expert tiver duvidas sobre como usar o sistema no dia-a-dia, o Companio
 
 ### Como abrir o sistema
 
-Sempre abrir o terminal na pasta do projeto (a mesma que escolheu na instalacao) e depois digitar `claude`. Nunca rodar `claude` de outra pasta — ele precisa estar dentro do projeto pra acessar tudo.
+Sempre abrir o terminal na pasta do projeto (a mesma que escolheu na instalacao) e depois iniciar `claude` ou `codex`. Nunca iniciar o runtime fora do projeto — ele precisa estar dentro da pasta pra acessar tudo.
 
 Depois de entrar, ativar o agente que precisa: `/companion`, `/organizer`, `/squad-forge`, etc. Claude sem agente ativado = Claude generico, perde toda a especializacao.
 

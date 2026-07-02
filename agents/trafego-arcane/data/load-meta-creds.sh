@@ -75,3 +75,24 @@ echo "  - IG: ${META_IG:-?}"
 echo "  - Token: ${_META_TOKEN_MASKED}"
 
 unset _META_SCRIPT_DIR _META_SOURCE _META_VAULT _META_ITEM _META_TOKEN_MASKED
+
+# --- 7. Health-check opcional (setup-operator Step 9.5) ---
+# Roda 3 checagens que pegam problema real: status da conta, frescor do pixel, IG vinculado.
+# Uso (depois do source): meta_healthcheck
+meta_healthcheck() {
+  if [ -z "$META_TOKEN" ]; then
+    echo "meta_healthcheck: faça 'source ./data/load-meta-creds.sh' antes." >&2
+    return 1
+  fi
+  local v="${META_API_VERSION:-v21.0}"
+  echo "== Contas (account_status: 1=ativa · 2=desabilitada · 3=pendência de pagamento) =="
+  curl -s "https://graph.facebook.com/${v}/me/adaccounts?fields=id,name,account_status,currency,timezone_name&access_token=${META_TOKEN}"; echo
+  if [ -n "$META_PIXEL" ]; then
+    echo "== Pixel (last_fired_time = última vez que disparou) =="
+    curl -s "https://graph.facebook.com/${v}/${META_PIXEL}?fields=id,name,is_unavailable,last_fired_time&access_token=${META_TOKEN}"; echo
+  fi
+  if [ -n "$META_PAGE" ]; then
+    echo "== Instagram vinculado à página (vazio = sem IG, anúncio no IG indisponível) =="
+    curl -s "https://graph.facebook.com/${v}/${META_PAGE}?fields=instagram_business_account&access_token=${META_TOKEN}"; echo
+  fi
+}

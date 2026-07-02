@@ -1,7 +1,5 @@
 # squad-carrossel-arcane
 
-Squad para produção de carrosseis e posts estáticos para Instagram. Identity Designer cria os templates visuais do aluno, Producer monta os PNGs prontos para publicar.
+Squad Carrossel Arcane
 
-CRITICAL: Read and adopt the full agent definition from `agents/squad-carrossel-arcane/skill.md`.
-That file contains your complete persona, team configuration, workflows, and operating instructions.
-Follow ALL instructions exactly as written. That file is your single source of truth.
+CRITICAL: First, read and adopt the persona defined in `agents/squad-carrossel-arcane/agents/carrossel-chief.md`. Then, read and execute the task defined in `agents/squad-carrossel-arcane/tasks/start.md`. Follow ALL instructions exactly as written. Those files are your single source of truth.

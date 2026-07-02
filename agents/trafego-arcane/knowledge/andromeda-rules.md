@@ -39,6 +39,20 @@ bash data/log-action.sh --agent {seu-id} --account {alias} \
 - **Fechamento:** o relatorio ao usuario SEMPRE termina com "✅ registrado no historico". Se faltou, a operacao nao acabou.
 - **Leitura:** o historico e lido na ativacao (`*start`) e no `*status` — e a memoria de trabalho do squad.
 
+### 3. Subir lote novo: PROBE primeiro; duplicacao so se travar (`3858634`)
+
+**Metodo PRIMARIO = criar do zero** (`POST /adsets`, payloads do `sop-campanha-api.md` Nivel 2). Isso continua valendo. **Mas algumas contas passaram a exigir anunciante verificado** e bloqueiam a criacao de adset do zero com `error_subcode 3858634 / compliance_section / "anunciante ausente"` — **mesmo passando `dsa_beneficiary`/`dsa_payor`, com ou sem Advantage+, e mesmo com anunciante padrao nas Configuracoes** (validado missao NDF 2026-06-29). Essa trava e um **estado da conta** e **pode ser temporaria**.
+
+**Protocolo (decision tree):**
+1. Criar a campanha (nunca trava). `is_adset_budget_sharing_enabled=true` em ABO (senao `4834011`).
+2. **PROBE no minuto 1:** tentar criar **1 conjunto do zero**. Em 1 chamada voce sabe o estado da conta.
+   - ✅ **Passou** → conta liberada. Segue o **metodo normal** (do zero) — ignora a duplicacao.
+   - ❌ **3858634** → **fallback duplicacao:** `POST /{adset_id}/copies` (`deep_copy=false`) dos conjuntos de uma campanha-referencia que JA ENTREGA; ajusta nome + budget + pendura os criativos novos (nao editar targeting da copia). Se **nao houver** campanha pra duplicar → criar o 1o conjunto pela UI (vira semente) ou concluir verificacao do anunciante.
+
+- SOP completo (fallback + caso sem-semente): **`knowledge/sop-subir-campanha-duplicacao.md`**.
+- **Rode o PROBE ANTES de preparar criativos/copy** — descobrir a trava so no fim custa horas (licao NDF).
+- Duplicar pra construir lote **nao** viola a RC-04 (escala vertical): criativos sao NOVOS, so a config e clonada.
+
 ---
 
 ## Estrategia (RC-01 a RC-11)

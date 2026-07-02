@@ -1,0 +1,34 @@
+# Template de Estilo de Imagem — EURILER
+# Estilo validado em 2 carrosseis (jun/2026) + teste cego de reprodutibilidade (3/3 de primeira).
+
+id: euriler
+name: "Euriler Jube"
+author: "Euriler Jube (Arka / Mentoria Arcane)"
+version: "1.1.0"
+status: "validado (2 producoes + 1 teste cego de tema novo, 3/3 aprovadas de primeira)"
+
+# Direcao tecnica padrao
+provider_default: "openai_gpt_image"   # ou higgsfield_cli (mesmo motor GPT Image 2). higgsfield = mais versatil/caro
+model_default: "gpt_image_2"
+aspect_ratio: "16:9"
+register: "ultrarrealista cinematografico"   # nao pintura conceitual
+
+# Arquivos do template
+files:
+  style: "style.md"          # regras, direcao visual, vibe, Regra de Ouro, paleta emocional, simbolos, specs
+  examples: "examples.md"    # exemplos calibrados: texto do card -> prompt -> resultado
+
+# Metodologia geral (lida junto, no proprio squad)
+methodology: "../../imagens-padrao-euriler.md"
+example_banks:
+  - "../../prompts-reais-carrossel-mythos.md"   # post 1
+  - "../../prompts-reais-fable2-bloqueio.md"     # post 2
+
+# Resumo do estilo (1 linha)
+one_liner: >
+  A imagem ENCENA a tese do texto como frame de filme — ultrarrealista, sujeito emocional
+  dominante, simbolos pre-carregados, picancia no teto. Regra de Ouro: atacar no maximo
+  de ousadia desde a 1a versao.
+
+# Distribuicao
+distribution: "embarcado como exemplo pros alunos da Mentoria Arcane (autocontido)"

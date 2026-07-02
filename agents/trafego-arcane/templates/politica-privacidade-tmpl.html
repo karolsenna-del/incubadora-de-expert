@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+  TEMPLATE de Política de Privacidade — Trafego Arcane (setup-operator, Step 9c)
+  Uso: trocar os 3 placeholders e publicar na Vercel pra obter a URL exigida pelo app Meta.
+    {NOME_NEGOCIO} — nome do negócio (do DONO REAL da operação; ver Step 0 do agente)
+    {EMAIL}        — e-mail de contato do dono real
+    {DATA}         — data de vigência (ex: 09/06/2026)
+  Publicar:  vercel deploy --prod --yes
+  Validar:   curl -sI <link>   (esperar HTTP 200) antes de colar no campo Privacy Policy URL
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Política de Privacidade — {NOME_NEGOCIO}</title>
+  <style>
+    :root { --ink:#1a1a1a; --muted:#555; --line:#e5e5e5; --bg:#fafafa; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink); background: var(--bg); line-height: 1.65;
+      margin: 0; padding: 48px 20px;
+    }
+    main { max-width: 760px; margin: 0 auto; background: #fff; padding: 48px;
+           border: 1px solid var(--line); border-radius: 12px; }
+    h1 { font-size: 1.7rem; margin: 0 0 4px; }
+    .vigencia { color: var(--muted); font-size: .9rem; margin-bottom: 32px; }
+    h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+    p, li { color: #222; }
+    a { color: #1a5fff; }
+    ul { padding-left: 22px; }
+    footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line);
+             color: var(--muted); font-size: .85rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Política de Privacidade</h1>
+    <p class="vigencia">{NOME_NEGOCIO} — vigência a partir de {DATA}</p>
+
+    <p>
+      Esta Política de Privacidade descreve como <strong>{NOME_NEGOCIO}</strong> coleta, usa e protege
+      os dados pessoais dos visitantes, em conformidade com a Lei Geral de Proteção de Dados
+      (Lei nº 13.709/2018 — LGPD).
+    </p>
+
+    <h2>1. Dados que coletamos</h2>
+    <ul>
+      <li><strong>Dados fornecidos por você:</strong> nome, e-mail, telefone e demais informações
+          enviadas em formulários, cadastros ou contato direto.</li>
+      <li><strong>Dados de navegação:</strong> páginas visitadas, origem do acesso, dispositivo e
+          interações, coletados por cookies e tecnologias similares.</li>
+    </ul>
+
+    <h2>2. Pixel da Meta e ferramentas de publicidade</h2>
+    <p>
+      Utilizamos o <strong>Pixel da Meta (Facebook/Instagram)</strong> e a API de Conversões da Meta
+      para medir resultados de anúncios, entender o comportamento de navegação e exibir publicidade
+      mais relevante. Esses recursos podem coletar dados de navegação e associá-los a contas da Meta,
+      conforme a
+      <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Política de Dados da Meta</a>.
+      Você pode gerenciar suas preferências de anúncios nas configurações da sua conta Meta.
+    </p>
+
+    <h2>3. Como usamos os dados</h2>
+    <ul>
+      <li>Responder contatos e prestar atendimento;</li>
+      <li>Enviar comunicações, conteúdos e ofertas (quando autorizado);</li>
+      <li>Mensurar e otimizar campanhas de marketing e anúncios;</li>
+      <li>Cumprir obrigações legais e regulatórias.</li>
+    </ul>
+
+    <h2>4. Compartilhamento</h2>
+    <p>
+      Não vendemos seus dados. Podemos compartilhá-los com prestadores de serviço (ex.: plataformas
+      de anúncios, e-mail e hospedagem) estritamente para as finalidades acima, e com autoridades
+      quando exigido por lei.
+    </p>
+
+    <h2>5. Seus direitos (LGPD)</h2>
+    <p>
+      Você pode solicitar a qualquer momento a confirmação, o acesso, a correção, a anonimização, a
+      portabilidade ou a exclusão dos seus dados, bem como revogar consentimentos. Para exercer esses
+      direitos, entre em contato pelo e-mail abaixo.
+    </p>
+
+    <h2>6. Cookies</h2>
+    <p>
+      Usamos cookies para funcionamento do site, análise e publicidade. Você pode bloquear ou apagar
+      cookies nas configurações do seu navegador — algumas funcionalidades podem ser afetadas.
+    </p>
+
+    <h2>7. Contato</h2>
+    <p>
+      Dúvidas ou solicitações sobre seus dados: <a href="mailto:{EMAIL}">{EMAIL}</a>.
+    </p>
+
+    <footer>
+      © {NOME_NEGOCIO}. Esta política pode ser atualizada periodicamente; a data de vigência acima
+      indica a versão mais recente.
+    </footer>
+  </main>
+</body>
+</html>

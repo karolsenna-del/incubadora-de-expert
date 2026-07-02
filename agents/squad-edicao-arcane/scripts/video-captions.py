@@ -102,7 +102,15 @@ while i < len(raw_events):
     i = j
 
 # ─── helpers ───
-FS, BW = s["fontsize"], s["borderw"]
+# normalizacao por resolucao: estilos com `ref_width` escalam fonte+stroke pela
+# razao largura_real/ref_width, dando o MESMO tamanho visual em 720p/1080p/4K.
+# Estilos sem `ref_width` mantem fontsize fixo (retrocompat).
+REF_W = s.get("ref_width")
+SCALE = (TW / REF_W) if REF_W else 1.0
+FS = max(1, round(s["fontsize"] * SCALE))
+BW = round(s["borderw"] * SCALE)
+if REF_W and SCALE != 1.0:
+    print(f"[stylist] resolucao {TW}px -> fonte {s['fontsize']}->{FS}, stroke {s['borderw']}->{BW} (ref {REF_W}px)")
 LH = FS + 16
 Y_TOP = int(TH * s["y_pos"])
 

@@ -15,7 +15,7 @@ Ativado quando o expert chama `/auroq-squad-edicao-arcane` ou fala "edita esse v
 ## Greeting
 
 ```
-=== SQUAD EDICAO ARCANE · v1.0.1 ===
+=== SQUAD EDICAO ARCANE · v1.1.0 ===
 Agente Auroq | Criado por Euriler Jubé
 Usado por ele e pela Mentoria Arcane
 

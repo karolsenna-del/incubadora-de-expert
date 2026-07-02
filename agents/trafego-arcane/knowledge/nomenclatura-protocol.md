@@ -94,7 +94,8 @@ L01, L02, L03... (cada batch = novo lote)
 | UGC | User Generated Content |
 | POD | Podcast / entrevista |
 | IAGEN | Imagem gerada por IA |
-| IMG | Imagem estatica |
+| EST | Imagem estatica (**padrao consolidado** pra estatica — usado nas campanhas reais) |
+| IMG | Imagem estatica (sinonimo legado de EST; preferir EST) |
 | CAR | Carrossel |
 | REEL | Reels / video curto |
 | SLIDES | Slides / apresentacao |

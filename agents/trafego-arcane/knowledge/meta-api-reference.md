@@ -90,8 +90,19 @@ POST /act_{ad_account_id}/adsets
   optimization_goal: "OFFSITE_CONVERSIONS"
   billing_event: "IMPRESSIONS"
   daily_budget: {value_in_cents}
+  dsa_beneficiary: "{ANUNCIANTE_LEGAL}"
+  dsa_payor: "{PAGADOR_LEGAL}"
   targeting: {targeting_spec}
   status: "PAUSED"
+```
+
+`dsa_beneficiary` e `dsa_payor` são obrigatórios para a seção **Transparência dos anúncios**. Default Euriler/NDF quando anunciante e pagador são a mesma empresa:
+
+```json
+{
+  "dsa_beneficiary": "EURILER MARKETING DIGITAL E TREINAMENTOS LTDA",
+  "dsa_payor": "EURILER MARKETING DIGITAL E TREINAMENTOS LTDA"
+}
 ```
 
 ### Targeting — Advantage+ sem sugestoes (ADV_Puro)

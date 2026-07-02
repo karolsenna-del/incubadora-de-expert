@@ -1,0 +1,113 @@
+# ===============================================================================
+# SQUAD: Bootstrap 3 — Configuracoes Avancadas
+# Conduz o aluno da Mentoria Arcane a montar a infra avancada do negocio:
+# servidor proprio (Hetzner + n8n), banco de dados unificado (Supabase core)
+# e as automacoes essenciais (compras, disparos, recovery) via Z-API.
+# ===============================================================================
+
+name: bootstrap-3
+title: "Bootstrap 3 — Configuracoes Avancadas"
+version: "1.2.0"
+author: "Euriler Jube"
+description: >
+  Squad que conduz um aluno da Mentoria Arcane (expert, nao-dev) pela fase
+  Turbinando da jornada: FASE 0 provisiona o servidor proprio via API (Hetzner +
+  Docker + Traefik/SSL + n8n queue mode + DNS no Cloudflare, sem painel — o Claude
+  Code monta tudo a partir de 1 token), FASE 1 cria o banco de dados unificado no Supabase
+  (core: pessoas/capturas/compras, com a logica centralizada da Arka) e
+  FASE 2 liga as automacoes essenciais (Z-API + compras/onboarding + disparos
+  + recuperacao de vendas). 4 agentes: chief (guia + dono do tracker) + 3
+  operadores de fase. Pipeline unidirecional com quality gates bloqueantes.
+  Entrega: maquina de operacao 24/7 rodando no servidor do aluno — e o terreno
+  pronto pra Bia (que vem depois, via /instalacaoBia).
+
+slash_prefix: "bootstrap3"
+pattern_prefix: "B3"
+target_user: "Aluno da Mentoria Arcane — expert, nao-dev, com bootstrap 1 do Auroq concluido"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# USE CASES
+# ─────────────────────────────────────────────────────────────────────────────
+use_cases:
+  - id: UC1
+    name: "Setup guiado da infra avancada"
+    description: "Conduzir o aluno pelas 3 fases (servidor, banco unificado, automacoes) ate tudo conectado, validando cada gate"
+  - id: UC2
+    name: "Retomada multi-sessao"
+    description: "Aluno para no meio (ex: fim da Fase 0) e volta dias depois — o chief le o tracker e retoma exatamente de onde parou"
+  - id: UC3
+    name: "Consultoria de infra e dados"
+    description: "Tirar duvidas sobre a logica do banco unificado, o servidor, as automacoes — antes, durante e depois do setup"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TIER SYSTEM
+# ─────────────────────────────────────────────────────────────────────────────
+tiers:
+  orchestrator:
+    - b3-chief
+  tier_1:
+    - operador-infra
+    - operador-banco
+    - operador-automacoes
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TASKS
+# ─────────────────────────────────────────────────────────────────────────────
+tasks:
+  - start
+  - fase-0-infra
+  - fase-1-banco
+  - fase-2-automacoes
+
+# ─────────────────────────────────────────────────────────────────────────────
+# WORKFLOWS
+# ─────────────────────────────────────────────────────────────────────────────
+workflows:
+  - wf-bootstrap-3
+
+# ─────────────────────────────────────────────────────────────────────────────
+# KNOWLEDGE / REFERENCIAS
+# ─────────────────────────────────────────────────────────────────────────────
+# KBs embarcadas (consultoria + regras transversais) e o plano de correcao que
+# originou as regras operacionais a partir da 1a execucao real.
+knowledge:
+  - knowledge/banco-unificado-logica.md
+  - knowledge/principios-operacionais.md
+references:
+  - PLANO-CORRECAO-v1.1.md
+
+# ─────────────────────────────────────────────────────────────────────────────
+# QUALITY GATES
+# ─────────────────────────────────────────────────────────────────────────────
+quality_gates:
+  - id: QG-B3-000
+    name: "Nave embarcada"
+    transition: "entrada -> Fase 0"
+    blocking: true
+    criteria: "Bootstrap 1 do Auroq concluido: Claude Code + Auroq OS funcionando, GitHub conectado, Supabase conectado, cofre de credenciais existente (local ou 1Password). Dominio proprio e RECOMENDADO aqui (sem ele a Fase 0 nao emite SSL)"
+  - id: QG-B3-001
+    name: "Servidor vivo"
+    transition: "Fase 0 -> Fase 1"
+    blocking: true
+    criteria: "n8n editor abre em https com cadeado + conta admin criada + webhook de teste responde HTTP 200 + credenciais do servidor no cofre + tracker atualizado"
+  - id: QG-B3-002
+    name: "Banco unificado de pe"
+    transition: "Fase 1 -> Fase 2"
+    blocking: true
+    criteria: "3 tabelas core (pessoas/capturas/compras) criadas com indexes, RLS service-role e triggers + teste real de upsert por email (dedup funciona) + anon key bloqueada (teste negativo) + tracker atualizado"
+  - id: QG-B3-003
+    name: "Maquina ligada"
+    transition: "Fase 2 -> Done"
+    blocking: true
+    criteria: "Z-API conectado (mensagem de teste RECEBIDA no WhatsApp do aluno) + automacao de compras testada e2e (webhook simulado -> pessoa+compra no banco -> boas-vindas chega) + dispatcher com dry-run validado + recovery com dry-run validado + regras anti-ban configuradas + tracker fechado"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEPENDENCIES
+# ─────────────────────────────────────────────────────────────────────────────
+# O squad e autocontido: kit embarcado em data/kit/, KB em knowledge/.
+# Pre-requisito (bootstrap 1 do Auroq) e do ambiente do aluno, nao dep do squad.
+# A Bia NAO e dependencia — e o passo SEGUINTE da jornada (/instalacaoBia),
+# que reusa o servidor e o n8n montados aqui.
+dependencies:
+  required: []
+  optional: []

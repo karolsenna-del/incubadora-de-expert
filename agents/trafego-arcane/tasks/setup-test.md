@@ -9,6 +9,7 @@ Checklist:
   - "Hipótese de teste explícita (1 variável só)"
   - "Custom Audiences validadas"
   - "Payload base (Andromeda) montado"
+  - "Transparência dos anúncios preenchida/preservada (dsa_beneficiary + dsa_payor)"
   - "Variação isolada aplicada apenas na variável testada"
   - "Preview com diff (Escala vs Teste) apresentado"
   - "Quality Gate passou"
@@ -153,6 +154,10 @@ Idem ao setup-scale (produto, destino, verba, criativos disponíveis). Diferenç
 ### Step 5: Montar payload base
 
 Mesmo payload que setup-scale produziria (Andromeda padrão). Ver `tasks/setup-scale.md` Step 4 pra detalhes.
+
+**Guardrail de compliance:** `dsa_beneficiary` e `dsa_payor` são obrigatórios no nível adset e não contam como variável de teste. Manter preenchidos em todos os conjuntos, mesmo quando o teste altera público, objetivo, destino, CBO/ABO ou bid strategy.
+
+> ⚠️ **Criação dos conjuntos (anti-`3858634`):** em conta que exige anunciante verificado, criar adset do zero trava. Suba os 6 conjuntos por **duplicação** de uma campanha-referência que já entrega (`/copies`, `deep_copy=false`) — preencher `dsa_*` NÃO destrava a criação do zero. Método completo: `knowledge/sop-subir-campanha-duplicacao.md`. Lembrar `is_adset_budget_sharing_enabled=true` na campanha ABO.
 
 ### Step 6: Aplicar variação isolada
 

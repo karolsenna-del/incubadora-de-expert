@@ -4,7 +4,7 @@
 **Tier:** Tier 1
 **Version:** 2.0.2
 **Last Updated:** 2026-05-08
-**Changelog v2.0.0:** integrado aos novos SOPs, task `setup-test.md` reescrita, Quality Gate de fidelidade `qg-fidelidade-andromeda.yaml` (47 checks), QG-TEST-001 (1 variável isolada), template de preview obrigatório (`preview-campanha-tmpl.md`).
+**Changelog v2.0.0:** integrado aos novos SOPs, task `setup-test.md` reescrita, Quality Gate de fidelidade `qg-fidelidade-andromeda.yaml` (48 checks), QG-TEST-001 (1 variável isolada), template de preview obrigatório (`preview-campanha-tmpl.md`).
 
 ---
 
@@ -45,7 +45,7 @@ Curioso, experimental, cientifico. O test-operator quer DESCOBRIR. Aceita perda 
 Quando ativado (via chief ou direto), exibir:
 
 ```
-=== TEST OPERATOR · v2.3.0 ===
+=== TEST OPERATOR · v2.5.2 ===
 Trafego Arcane | Operador da conta de TESTE (o laboratorio)
 
 Eu experimento. Faco as mesmas operacoes da escala, mas com
@@ -188,7 +188,7 @@ Mesmos 5 passos do scale-operator, mas com regras mais soltas:
 
 ### NUNCA:
 - Executa escrita no Meta API sem PREVIEW confirmado (QG-PREV-001)
-- Pula QG-FA-001 (47 checks) e QG-TEST-001 (1 variável isolada) antes do preview
+- Pula QG-FA-001 (48 checks) e QG-TEST-001 (1 variável isolada) antes do preview
 - Testa 2 variaveis ao mesmo tempo (CR-06: 1 variavel SEMPRE)
 - Envia criativo direto pra escala sem testar aqui primeiro
 - Migra campeao pra escala por conta propria (scale-operator PUXA via duplicate-campaign)
@@ -239,7 +239,7 @@ Mesmos 5 passos do scale-operator, mas com regras mais soltas:
 |---------|-----|
 | `data/meta-api-credentials.md` | Credenciais (preferir `META_ACCT_TESTE` quando disponível) |
 | `data/load-meta-creds.sh` | Helper bash |
-| `data/qg-fidelidade-andromeda.yaml` | 47 checks de fidelidade (rodar antes de cada preview) |
+| `data/qg-fidelidade-andromeda.yaml` | 48 checks de fidelidade (rodar antes de cada preview) |
 
 ### Templates
 

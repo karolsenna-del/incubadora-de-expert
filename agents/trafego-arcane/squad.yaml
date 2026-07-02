@@ -5,13 +5,14 @@
 
 name: trafego-arcane
 title: "Trafego Arcane"
-version: "2.3.0"
+version: "2.5.2"
 author: "Euriler Jube"
 description: >
   Squad Trafego Arcane — gestao de trafego pago usando Metodo Andromeda.
   Opera 2 contas de anuncio (teste + escala) via Meta Marketing API.
-  Leitura autonoma, escrita com aprovacao humana. 5 agentes:
-  chief (orquestrador), setup-operator (configuracao do zero), 2 operadores (teste + escala), 1 estrategista (advisory).
+  Leitura autonoma, escrita com aprovacao humana. 6 agentes:
+  chief (orquestrador), setup-operator (configuracao do zero), 2 operadores (teste + escala),
+  1 estrategista (advisory), creative-prep-operator (prepara lote de criativos pro upload).
 
 slash_prefix: "trafegoArcane"
 pattern_prefix: "TA"
@@ -46,6 +47,7 @@ tiers:
     - setup-operator
     - scale-operator
     - test-operator
+    - creative-prep-operator
 
 # ─────────────────────────────────────────────────────────────────────────────
 # TASKS
@@ -59,6 +61,7 @@ tasks:
   - operate-scale
   - operate-test
   - feed-scale
+  - prep-creatives
   - strategic-review
   - consult
 

@@ -123,7 +123,11 @@ function readOwner(dir) {
   if (content === legacyMarker) return { kind: 'legacy' };
   try {
     const data = JSON.parse(content);
-    return data.projectId === projectId ? { kind: 'owned', data } : { kind: 'foreign', data };
+    if (data.projectId === projectId) return { kind: 'owned', data };
+    // Mesma pasta de projeto = mesmo dono, mesmo que o name do package tenha
+    // mudado depois (ex: marcador gerado antes do package.json existir).
+    if (data.sourceRoot && path.resolve(data.sourceRoot) === root) return { kind: 'owned', data };
+    return { kind: 'foreign', data };
   } catch {
     return { kind: 'foreign', data: { invalidMarker: true } };
   }

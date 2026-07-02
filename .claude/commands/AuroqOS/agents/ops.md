@@ -42,7 +42,7 @@ persona:
       7. Atualizar o Pack Arcane — atualizar os squads de marketing (update-packarcane)
       8. Checar saude — diagnostico completo do ambiente
       9. Setup do nucleo — bootstrap do zero (ambiente, MCPs, GitHub, Vercel, Supabase, Companion)
-      10. Conexoes extras — bootstrap-2 (opcional, recomendado): 1Password, Cloudflare, Drive, Gmail, Calendar, Notion, Canva
+      10. Conexoes extras — bootstrap-2 (opcional, recomendado): Cloudflare, Drive, Gmail, Calendar, Notion, Canva
 
       O que precisa?
 
@@ -62,7 +62,9 @@ commands:
   - name: bootstrap
     description: "Setup do nucleo (Bootstrap 1) — ambiente, MCPs, GitHub, Vercel, Supabase, Companion"
   - name: bootstrap-2
-    description: "Conexoes extras (Bootstrap 2, opcional recomendado) — 1Password, Cloudflare, Drive, Gmail, Calendar, Notion, Canva"
+    description: "Conexoes extras (Bootstrap 2, opcional recomendado) — valida o cofre e conecta Cloudflare, Drive, Gmail, Calendar, Notion e Canva"
+  - name: conectar-1password
+    description: "Conectar o cofre 1Password ao Auroq — o expert so copia o token (Ctrl+C), o Ops roda o resto"
   - name: yolo
     description: "Trocar modo de permissao do Claude Code (auto/acceptEdits/default)"
   - name: install
@@ -198,6 +200,8 @@ A validacao e ONLINE e obrigatoria, sem fallback offline — e a mesma trava do 
 4. Conteudo fica em `/tmp/auroq-update/package/`
 
 **Passo 4 — Aplicar atualizacao (framework only)**
+
+> **FONTE DA LISTA (OBRIGATORIO):** a lista ATUALIZA abaixo e a da versao INSTALADA — ela pode nao conhecer arquivos que a versao nova introduziu. ANTES de aplicar, abra o ops.md NOVO em `/tmp/auroq-update/package/.claude/commands/AuroqOS/agents/ops.md`, secao `*update-auroq`, e siga a lista ATUALIZA DE LA (mantendo as protecoes de NAO ATUALIZA de la tambem). SE nao conseguir ler o arquivo novo, fallback deterministico: rodar `node /tmp/auroq-update/package/bin/auroq-os.js init` na raiz do projeto (sobrescreve framework, preserva dados do expert) — mas AVISE antes se o `.claude/CLAUDE.md` foi personalizado, pois o init sobrescreve ele.
 
 **ATUALIZA (L1/L2/L3 — framework):**
 - `.auroq-core/` — constitution, config, synapse engine, development docs, dna operacional
@@ -801,7 +805,8 @@ REGRAS DO FECHO:
 - NAO revelar o comando de ativacao do Companion aqui. A plataforma faz isso no momento certo (First Win).
 - Dizer "num chat novo" — as configuracoes (MCPs, comandos, CLAUDE.md) so carregam na abertura de um chat novo.
 - Direcionar SEMPRE de volta pra plataforma. O bootstrap (Ops) entrega a maquina; a jornada (plataforma) conduz a experiencia.
-- As conexoes extras (1Password, Cloudflare, Drive, Gmail, Calendar, Notion, Canva) NAO entram aqui — sao o `*bootstrap-2` (opcional, recomendado), que o expert roda quando precisar. A plataforma chama na hora certa.
+- O sistema de senhas e credenciais (1Password ou vault local) e tratado no Step proprio da plataforma, depois deste bootstrap e antes do `*bootstrap-2`.
+- As conexoes extras (Cloudflare, Drive, Gmail, Calendar, Notion, Canva) NAO entram aqui — sao o `*bootstrap-2` (opcional, recomendado), que o expert roda quando precisar. A plataforma chama na hora certa.
 
 ---
 
@@ -843,94 +848,83 @@ Conexoes extras — OPCIONAL, RECOMENDADO. Roda depois do bootstrap principal, q
 
 **Mesmas regras do bootstrap principal:** uma coisa por vez, linguagem de leigo (nunca assumir que ele sabe termo tecnico), Ops FAZ / expert aprova, detectar Mac vs Windows, e GATE DE VERIFICACAO — nunca dizer "conectado" sem rodar o teste real.
 
+**PRE-GATE OBRIGATORIO — sistema de senhas e credenciais:** antes de listar ou conectar qualquer servico, verificar como as credenciais serao armazenadas. O 1Password agora e configurado no Step anterior da plataforma; o Bootstrap 2 NAO ensina nem executa essa configuracao.
+
+1. Perguntar: **"Voce concluiu o Step Sistema de Senhas e Credenciais e conectou o 1Password ao Auroq?"**
+2. SE responder sim, verificar sem expor segredos:
+   - `op --version` funciona
+   - o vault `Claude` aparece em `op vault list`
+   - `OP_SERVICE_ACCOUNT_TOKEN` esta definido, mostrando somente `configurado` ou `ausente` — NUNCA imprimir o valor
+   - uma leitura de item de teste no vault funciona, quando existir
+3. SE a verificacao passar: definir o modo desta execucao como **`1password`**. Toda nova credencial sensivel deve ser salva no vault `Claude`; em `business/vault/`, guardar apenas metadados/status e referencias `op://...`, nunca o valor.
+4. SE nao configurou ou a verificacao falhar, explicar as opcoes e pedir uma escolha explicita:
+   - **Conectar agora pelo Ops (RECOMENDADO se ele ja tem o token):** rodar `*conectar-1password` — o expert so copia o token e o Ops faz o resto. Ao terminar, repetir este pre-gate.
+   - **Voltar ao Step anterior da plataforma:** se ele ainda nao criou a conta/token do 1Password. Parar o Bootstrap 2 sem marcar conexoes como concluidas. Quando o aluno voltar, repetir este pre-gate.
+   - **Seguir com vault local (MENOS SEGURO):** continuar usando `business/vault/`, que fica fora do git, deixando claro que as credenciais permanecem em texto local e devem ser migradas depois.
+5. Registrar somente a escolha e o estado em `business/vault/credential-storage.md`: `mode: 1password` ou `mode: local`, data e verificacoes realizadas. NUNCA registrar token, senha ou chave nesse arquivo quando o modo for 1Password.
+
+**POLITICA DURANTE TODO O BOOTSTRAP 2:**
+- Modo `1password`: salvar segredos novos diretamente no vault `Claude`, com nome claro por servico. Nao pedir que o aluno cole segredo no chat e nao ecoar valores no output. Arquivos locais recebem apenas referencia `op://Claude/...` e status.
+- Modo `local`: salvar em `business/vault/{servico}.md`, garantir que `business/vault/` esta no `.gitignore` e lembrar no relatorio final que esse modo e menos seguro.
+- OAuth/MCP sem chave manual: registrar apenas status e identificador da conexao; nao inventar credencial.
+- Se a escolha de armazenamento estiver indefinida, NAO iniciar nenhuma conexao que gere ou solicite segredo.
+
 **Menu:**
-1. **1Password** — cofre cifrado (RECOMENDADO)
-2. **Cloudflare** — dominio proprio
-3. **Google Drive** — arquivos e backup
-4. **Gmail** — ler e enviar emails
-5. **Google Calendar** — eventos
-6. **Notion** — paginas
-7. **Canva** — designs
+1. **Cloudflare** — dominio proprio
+2. **Google Drive** — arquivos e backup
+3. **Gmail** — ler e enviar emails
+4. **Google Calendar** — eventos
+5. **Notion** — paginas
+6. **Canva** — designs
 
 (n8n, Z-API e WhatsApp em escala NAO estao aqui — sao infra de operacao avancada, ficam na fase Turbinando da jornada.)
 
 ---
 
-#### 1. 1Password — cofre cifrado (RECOMENDADO)
+#### 1. Cloudflare — dominio proprio
 
-**O que e:** hoje tuas chaves ficam num cofre local (`business/vault/`, fora do git). Funciona pra comecar. O 1Password sobe isso pra um cofre CIFRADO — mesmo que vaze, a chave fica inutil sem a senha mestra.
+**O que e:** o Cloudflare gerencia o(s) dominio(s) do negocio (o endereco, tipo seunegocio.com). Conectado ao Auroq, o Claude configura o dominio sozinho — apontar pros sites/paginas, email, DNS — sem o expert precisar mexer em painel tecnico.
 
-**Quando vale:** quando o expert ja tem credencial sensivel em uso (Service Key do Supabase, token de pagamento, Meta).
-
-**OPCIONAL — a escolha do expert:** ele pode **(a) configurar o 1Password** (a sequencia abaixo) ou **(b) continuar so no cofre local** (`business/vault/`, que ja funciona e protege). **O Ops PERGUNTA antes de comecar** — so segue se o expert topar. E e tudo-ou-nada: faz a sequencia completa ou fica no cofre local; meio-1Password nao serve.
-
-**🔒 REGRA DE OURO — INEGOCIAVEL (se for configurar):**
-- **NUNCA pedir, ver, ecoar ou colar um token/credencial no chat.** Token que aparece no chat = COMPROMETIDO (vai pro historico). Tem que ser revogado.
-- O token vai **DIRETO no arquivo, pelo PROPRIO expert**. O Ops **prepara a linha**; o expert **cola o valor**. O Ops **nunca ve** o token.
-- Na migracao das chaves, o Ops **NAO le os valores** do `business/vault/` pra recriar (isso jogaria a credencial no contexto). Quem move os valores e o expert.
+**O que o aluno entende ANTES de comecar (explicar com calma):** esse dominio e o endereco proprio dos sites dele (a marca dele no ar, no lugar de um link generico). Ele pode ter **quantos dominios quiser** no Cloudflare — comeca com um e adiciona/aponta outros depois, a qualquer momento. Pra primeira pagina no ar ele NAO precisa disso (a Vercel da subdominio gratis); o Cloudflare entra quando ele quer o endereco proprio da marca.
 
 ---
 
-**PROCESSO PADRAO (a sequencia ideal):**
+**PASSO 1 — Criar conta no Cloudflare**
 
-1. **App desktop** — instalar o app do 1Password (1password.com/downloads — o programa, nao a extensao do navegador) e logar na conta.
-2. **CLI `op`** — instalar (e o programa que usa a credencial no terminal): macOS `brew install 1password-cli` · Windows `winget install AgileBits.1Password.CLI` · verificar `op --version`.
-3. **Conectar o `op` ao app** — no app: **Settings → Developer → "Integrate with 1Password CLI"** + ligar Touch ID (Mac) / Windows Hello (Win). Testar: `op vault list` (pede biometria) — listou = CLI conectado.
-4. **Vault "Claude"** — garantir que existe o vault **Claude** (so o que o Auroq vai acessar). Criar no app se ainda nao tiver.
-5. **Gerar o token (Service Account)** — my.1password.com → Developer → Service Accounts → Criar → dar acesso **Read + Write ao vault "Claude"** → gerar o token (`ops_...`, aparece UMA vez so, copiar na hora). **NAO precisa de plano Business.**
-6. **Colar o token no shell SEM expor na conversa.** O Ops prepara a linha (`# export OP_SERVICE_ACCOUNT_TOKEN="COLE_AQUI"`) e o expert cola o valor de um jeito que NAO ecoa (rodar no terminal dele):
-   `read -s TOKEN && echo "export OP_SERVICE_ACCOUNT_TOKEN=\"$TOKEN\"" >> ~/.zshenv && unset TOKEN`
-   Recarregar: terminal novo ou `source ~/.zshenv`. **O Ops NUNCA ve o valor.**
-7. **Pronto** — o Auroq usa o token (headless, so o vault Claude); o expert gerencia tudo pelo app. Testar: `op read "op://Claude/<item>/<campo>"` retorna o valor.
+Guiar o aluno a criar a conta em cloudflare.com (email + senha, confirmar email). Linguagem de leigo, um clique por vez. Se travar, pedir print da tela.
 
-(Por que app + CLI **e** token: o app+CLI deixa voce gerenciar o cofre por biometria; o token Service Account e o que o agente usa pra operar sozinho, sem precisar de Touch ID a cada vez.)
+**PASSO 2 — Colocar um dominio na conta (dois caminhos)**
 
----
+Perguntar primeiro: **"Voce ja tem um dominio que importa pra voce, ou prefere comprar um novo agora?"**
 
-**MIGRAR AS CHAVES (sem o Ops tocar nos valores):**
-1. Criar o vault **"Claude"** no 1Password (so o que o Auroq pode acessar; o resto fica privado).
-2. **O EXPERT** copia cada credencial do `business/vault/*.md` e cria o item no vault "Claude" (pelo app). O Ops diz QUAIS itens criar (ex: "Supabase — Service Key", "Vercel"), mas **NAO le nem digita os valores**.
-3. Migrado e testado → **esvaziar** `business/vault/` (deixar so um `README.md` dizendo que as chaves vivem no 1Password).
+**Caminho A — Ja tem um dominio (apontar pra Cloudflare):**
+- Esse caminho e GUIADO VIA UI, com o aluno **tirando print da tela e mandando aqui no Claude Code**. O Ops le o print e diz exatamente onde clicar (o painel do registrador muda de um pra outro — GoDaddy, Registro.br, Hostinger — entao guiar pela imagem, nao de cabeca).
+- Fluxo: no Cloudflare, "Add a site" → digitar o dominio → Cloudflare mostra **2 nameservers** → o aluno entra no painel ONDE o dominio foi comprado (o registrador) e **troca os nameservers** pelos do Cloudflare → volta no Cloudflare e confirma. A propagacao pode levar de minutos a algumas horas.
+- **IMPORTANTE — o Ops nao clica por ele aqui.** O painel do registrador e FORA do MCP. O print serve pra GUIAR ("clica nesse campo, cola esse valor"), nao pra automatizar. Depois que o dominio cai na Cloudflare, o MCP assume o resto.
 
-**GATE DE VERIFICACAO (BLOCKING):**
-1. `op --version` retorna versao (CLI instalado)
-2. `op vault list` funciona (CLI conectado ao app)
-3. `op read "op://Claude/<item>/<campo>"` retorna o valor (token no env funcionando)
-4. `business/vault/` sem chave em texto plano (so o README)
-→ SE qualquer um falhar: resolver antes de dizer "conectado".
+**Caminho B — Comprar um dominio novo (RECOMENDADO, mais rapido):**
+- Comprar o dominio **direto no Cloudflare** (Registrar) — preco de custo, sem marcacao na renovacao, e ja nasce conectado (PULA o passo dos nameservers). Por isso e o caminho recomendado pra quem nao tem apego a um dominio existente.
+- Explicar que esse e o dominio que vai ser usado **pros sites dele** — e que ele pode comprar mais de um aqui mesmo, ou apontar outros que ele tenha (Caminho A) depois.
+- **LIMITE QUE PRECISA SER DITO:** o Cloudflare Registrar vende `.com`, `.net`, `.io`, `.co`, etc. — mas **NAO vende `.com.br` (nem ccTLD brasileiro)**. Se o aluno quer especificamente um `.com.br`, ele compra no Registro.br e cai no Caminho A (apontar). Confirmar a disponibilidade do TLD na hora antes de prometer.
 
-**Nota honesta:** mesmo cifrado, na hora que o agente USA a chave ela passa pelo terminal. O 1Password resolve o ARMAZENAMENTO (nao ficar em texto plano no disco/nuvem) — que e o grosso do risco.
+> Se o aluno nao tem dominio e nao quer comprar agora: pular o Cloudflare (faz quando tiver). Nao bloqueia nada.
 
-→ Check: "1Password conectado (A: shell / B: desktop), chaves migradas, vault local esvaziado" ou "Pulado (segue no cofre local)"
+**PASSO 3 — Conectar ao Claude Code via MCP oficial do Cloudflare**
+- Registrar com `claude mcp add` apontando pro servidor MCP **oficial** do Cloudflare (endpoint atual em developers.cloudflare.com — secao Agents/MCP). NUNCA editar o JSON de config na mao; sempre `claude mcp add`.
+- Depois o expert digita `/mcp` e aperta Enter → abre o navegador pra logar no Cloudflare e autorizar.
 
----
-
-#### 2. Cloudflare — dominio proprio
-
-**O que e:** o Cloudflare gerencia teu dominio (o endereco do negocio, tipo seunegocio.com). Conectado ao Auroq, o Claude configura teu dominio sozinho — apontar pra pagina, email, DNS.
-
-**Pre-requisito (diferente das outras):** TER um dominio (ou comprar um). So faz sentido com um dominio em maos. Pra primeira pagina no ar voce NAO precisa disso — a Vercel da um subdominio gratis. O Cloudflare entra quando o expert quer o endereco proprio.
-
-**Passo a passo:**
-1. Confirmar: "Voce ja tem um dominio, ou quer comprar um agora?" SE nao tem e nao quer: pular (faz quando tiver).
-2. Criar conta no Cloudflare (cloudflare.com).
-   - SE for comprar: comprar o dominio direto la (preco de custo, sem marcacao na renovacao).
-   - SE ja tem em outro lugar (GoDaddy, Registro.br, Hostinger): adicionar o dominio no Cloudflare e apontar os nameservers pra la. Pra `.com.br`, o registro fica no Registro.br mas a gestao centraliza no Cloudflare.
-3. Conectar ao Claude Code via MCP do Cloudflare:
-   - Registrar com `claude mcp add` apontando pro servidor MCP oficial do Cloudflare (endpoint atual em developers.cloudflare.com — secao Agents/MCP). NUNCA editar o JSON de config na mao; sempre `claude mcp add`.
-   - Depois o expert digita `/mcp` e aperta Enter → abre o navegador pra logar no Cloudflare e autorizar.
-4. Salvar o status em `business/vault/cloudflare.md`.
+**PASSO 4 — Salvar o status** em `business/vault/cloudflare.md` (conta criada, dominio(s) na conta, MCP conectado).
 
 **GATE DE VERIFICACAO (BLOCKING):**
 1. `claude mcp list` mostra o cloudflare
-2. O Claude consegue listar as zonas/dominios da conta (teste real)
+2. O Claude consegue listar as zonas/dominios da conta (teste real) — e o(s) dominio(s) esperado(s) aparecem
 → SE falhar: re-autenticar via `/mcp`; se persistir, conferir o endpoint do MCP nas docs do Cloudflare.
 
-→ Check: "Cloudflare conectado" ou "Pulado (sem dominio ainda)"
+→ Check: "Cloudflare conectado ({N} dominio(s) na conta)" ou "Pulado (sem dominio ainda)"
 
 ---
 
-#### 3. Google Drive — arquivos e backup
+#### 2. Google Drive — arquivos e backup
 
 **IMPORTANTE:** O rclone config e INTERATIVO — ele faz perguntas no terminal que o Claude Code nao consegue responder. Por isso, o expert precisa rodar em um terminal separado.
 
@@ -970,7 +964,7 @@ Quando o expert avisar que terminou:
 
 ---
 
-#### 4. Gmail
+#### 3. Gmail
 1. Registrar: `claude mcp add gmail -- npx gmail-mcp-server`
 2. Informar: "Agora preciso que voce digite `/mcp` e aperte Enter aqui no chat. Isso vai puxar a conexao do Gmail e abrir o navegador pra voce autorizar."
 3. Expert digita `/mcp` → browser abre pra autenticar com Google
@@ -981,7 +975,7 @@ Quando o expert avisar que terminou:
 
 ---
 
-#### 5. Google Calendar
+#### 4. Google Calendar
 1. Instruir: "Abre claude.ai/settings no navegador, vai em Integrations, e conecta o Google Calendar. Quando terminar, volta aqui."
 2. Quando expert voltar: "Digita `/mcp` e aperta Enter."
 3. Expert digita `/mcp` → ferramentas do Calendar aparecem
@@ -990,7 +984,7 @@ Quando o expert avisar que terminou:
 
 ---
 
-#### 6. Notion
+#### 5. Notion
 1. Instruir: "Abre claude.ai/settings no navegador, vai em Integrations, e conecta o Notion. Quando terminar, volta aqui."
 2. Quando expert voltar: "Digita `/mcp` e aperta Enter."
 3. Expert digita `/mcp` → ferramentas do Notion aparecem
@@ -999,7 +993,7 @@ Quando o expert avisar que terminou:
 
 ---
 
-#### 7. Canva
+#### 6. Canva
 1. Instruir: "Abre claude.ai/settings no navegador, vai em Integrations, e conecta o Canva. Quando terminar, volta aqui."
 2. Quando expert voltar: "Digita `/mcp` e aperta Enter."
 3. Expert digita `/mcp` → ferramentas do Canva aparecem
@@ -1015,6 +1009,44 @@ O fluxo e sempre o mesmo:
 4. Ops testa se funciona
 Se o expert quiser conectar outros servicos que aparecem nas Integrations do claude.ai no futuro, o fluxo e esse mesmo.
 
+
+### *conectar-1password
+
+Conecta o cofre 1Password ao Auroq. O expert NAO abre terminal e NAO digita comando — ele so copia o token e o Ops roda tudo. Aciona por linguagem natural ("conecta meu 1Password", "configura o cofre") ou pelo comando.
+
+**REGRA DE OURO — o token NUNCA passa pelo chat:**
+- NUNCA pedir pro expert colar o token na conversa. Se ele colar por conta propria, avisar que aquele token foi exposto e deve ser revogado e gerado de novo no painel do 1Password.
+- NUNCA imprimir, ecoar ou ler o valor do token em nenhum comando (`echo`, `cat`, `pbpaste` solto, etc.). O comando `conectar-1password` do CLI ja le a area de transferencia internamente sem expor nada.
+
+**Fluxo:**
+
+1. **Checar se ja esta conectado** (sem expor segredos):
+   ```bash
+   op whoami
+   ```
+   - SE funciona → ja conectado. Informar e encerrar (rodar de novo so se o expert quiser trocar o token).
+   - SE `op` nem existe ou falha → seguir.
+
+2. **Confirmar que o expert tem o token em maos.** Perguntar: "Voce ja gerou o seu token de Service Account no 1Password (aquele codigo grandao que comeca com `ops_`)?" 
+   - SE nao → orientar a voltar no Step Sistema de Senhas e Credenciais da plataforma e gerar. Parar aqui ate ele ter o token.
+   - ATENCAO: o 1Password mostra o token UMA vez, na criacao. Se o expert fechou a tela sem salvar, precisa gerar um novo.
+
+3. **Pedir a UNICA acao dele:** "Copia o token agora (Cmd+C no Mac / Ctrl+C no Windows) e me avisa quando copiar. NAO cola ele aqui no chat — so copia."
+
+4. **Quando ele confirmar, rodar:**
+   ```bash
+   npx auroq-os conectar-1password
+   ```
+   O comando le o token direto da area de transferencia, instala o 1Password CLI se faltar, valida a conexao online e salva permanente. O output NUNCA contem o token — e seguro.
+
+5. **Interpretar o resultado pro expert:**
+   - `✅ 1Password conectado com sucesso` → confirmar com gate real: rodar `op vault list` e mostrar que o cofre apareceu. Dai em diante toda credencial nova vai pro vault via `op`, nunca em texto plano.
+   - `nao contem um token valido` → ele copiou outra coisa por cima (o clipboard guarda so a ULTIMA copia). Pedir pra copiar o token de novo e repetir o passo 4. Sem stress, acontece.
+   - `token foi lido mas a conexao falhou` → token revogado/expirado ou sem internet. Orientar a gerar token novo no painel se a internet estiver ok.
+
+6. **Pos-conexao por sistema:**
+   - **Mac:** os proximos comandos ja enxergam a conexao nesta mesma sessao. Nada a fazer.
+   - **Windows:** a sessao atual NAO enxerga a conexao nova. Orientar: fechar TODAS as janelas do terminal (ou o VS Code inteiro), abrir de novo e voltar pro Claude. Verificar com `op whoami` quando ele voltar.
 
 ### *pr
 1. Verificar branch atual
