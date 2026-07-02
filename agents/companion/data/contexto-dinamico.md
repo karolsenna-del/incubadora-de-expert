@@ -124,30 +124,31 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
-Sessao 30/06 — estrutura de mentoria criada + análise da aluna Milena Gehrke.
+Sessao 01-02/07 — Live 20 feita, Expert360 corrigido pra plataforma VOOMP, sessao M0 com a Milena fechada + metodo realinhado.
 
-**O que foi feito (30/06):**
-- Estrutura `mentoria/alunas/` criada com template e pasta da Milena Gehrke.
-- Roteiro 12 meses da mentoria criado em `mentoria/roteiro-12-meses.md`.
-- Materiais da Milena analisados (apostila, estrutura, historia real, ikigai, portfolio).
-- Diagnostico do metodo IAP: pilar tecnico excluido, persona definida (profissional regularizacao agro inseguro diante do produtor rural), distincao central ("IAP nao ensina regularizacao — desenvolve quem ja sabe").
-- Roteiro adaptado para Milena: `mentoria/alunas/milena-gehrke/roteiro-milena.md`.
-- Live 20 confirmada para amanha (01/07) — roteiro pronto.
+**O que foi feito (01-02/07):**
+- Live 20 realizada (roteiro em `business/campanhas/lives-semanais/live-20-roteiro.md`).
+- Expert360: descricoes das aulas confirmadas como ja prontas (nao estavam pendentes como o tracker indicava). Plataforma de entrega corrigida de Hotmart pra **VOOMP** — `prd.md` e `checklist-producao.md` atualizados.
+- Sessao 2 com a Milena (Fechar M0): historia real + Ikigai validados. Correcao metodologica importante: a Karol identificou que a frase-tese estava sendo tratada como entregavel do M0/M1, quebrando a sequencia oficial do Expert360 (P1 Persona → P2 Promessa → P3 Processo Autoral → P4 Oferta → P5 Autoridade/Frase-Tese, Modulo 4). Corrigido em `_mentor/roteiro.md`, `_mentor/contexto.md` e `0.1- Roteiro da Jornada.md` — frase-tese volta pra ser fechada no Mes 9 (P5), com a semente (ferida→medicina→mecanismo) guardada desde o M0.
+- Novo tipo de arquivo criado pra mentoria: `00- Anotações.md` (template + 5 alunas atuais — Milena, Analia, Helio, Ricardo, Rodrigo). Espaco pra registro de encontros (gravacao/transcricao/conversa com agente) + ideias da aluna entre sessoes. Modelado a partir de um arquivo real ja usado com outra mentorada (Dalvelyn). Documento e vivo — sincroniza uma vez pro Drive, depois o Drive e a fonte (excecao registrada no SOP).
+- SOP `business/processos/entrega-materiais-mentoria-drive.md` criado/atualizado com essa excecao + scripts de conversao (`converter-md-para-docx.py`, `converter-roteiro-para-xlsx.py`).
+- Atualizacao do Auroq OS (framework) aplicada pela Karol em outra sessao — versao nova, comandos core renomeados com prefixo `auroq-`, squad Bootstrap 3 novo.
 - Desafio Flavio: encerrado, ele viu o video.
-- Weekly review atrasado: 13 dias sem review (previsto 24/06 — nao feito).
+- Weekly review continua atrasado (previsto 24/06 — ainda nao feito).
 
 **Pendencias abertas:**
-- Weekly review (atrasado 13 dias)
-- Expert360: descricoes das aulas + subir na plataforma
-- Proxima sessao com Milena: fechar M0 + esbocar frase-tese
+- Weekly review (atrasado, adiado de novo nesta sessao)
+- Expert360: subir curso na VOOMP (agora que a plataforma esta confirmada)
+- Screenshots do Cloudinary (12 arquivos soltos na raiz) — setup em andamento, sem processo documentado ainda
+- Proxima sessao com Milena: Modulo 1 — Persona Compradora (P1)
 
 **Proximo foco:**
-1. Live 20 amanha (01/07) — roteiro em `business/campanhas/lives-semanais/live-20-roteiro.md`
-2. Weekly review (urgente — 13 dias)
-3. Sessao com Milena (retomar com `mentoria/alunas/milena-gehrke/roteiro-milena.md`)
+1. Weekly review (bem atrasado — vale priorizar na proxima sessao)
+2. Expert360: preparar upload na VOOMP
+3. Entender o que fazer com o setup do Cloudinary
 
 Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 30/06/2026*
+*Ultima atualizacao: 02/07/2026*
