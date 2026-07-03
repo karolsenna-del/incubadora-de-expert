@@ -14,9 +14,9 @@
 ## FASE 0 — Servidor (gate QG-B3-001)
 
 - [x] 0.1a 1Password conectado (Service Account, vault "Claude" confirmado via `op vault list`) — 2026-07-02
-- [ ] 0.1b Cloudflare MCP registrado (`claude mcp add`) mas AINDA NAO AUTORIZADO — falta rodar `/mcp` numa sessao nova (reabrir Claude Code) e autorizar no navegador
-- [ ] 0.1c Conta Hetzner + cartao (ainda nao verificado)
-- [ ] 0.2 Token Hetzner Read&Write no cofre + validado na API (HTTP 200)
+- [x] 0.1b Cloudflare MCP autorizado e VALIDADO (listou zonas via API na conta karolsenna@incubadoradeexpert.com.br) — 2026-07-03. Obs: conta Cloudflare sem nenhuma zona — `karolsenna.com.br` precisa ser adicionado no passo 0.3
+- [x] 0.1c Conta Hetzner criada pela aluna — 2026-07-03
+- [x] 0.2 Token Hetzner Read&Write no cofre (`op://Claude/Hetzner/token`) + validado na API (HTTP 200) — 2026-07-03
 - [ ] 0.3 Dominio escolhido no Cloudflare (dominio: `karolsenna.com.br`) + DNS-only `n8n.`/`webhook.` → IP
 - [ ] 0.4 Servidor criado via API (tipo nao-deprecated ~2vCPU/4GB, ex: cx23; cloud-init: Docker no ar) — IP: `___`
 - [ ] 0.5 Stack subido (Traefik + n8n queue mode) + VALIDADO: https cadeado + owner n8n criado via API (cofre) + webhook responde via https (segredos no cofre)
@@ -45,10 +45,12 @@
 - 2026-07-02 — @b3-chief: tracker criado, jornada iniciada
 - 2026-07-02 — @ops: QG-B3-000 resolvido — projeto Supabase "incubadora-de-expert" criado (São Paulo), chaves salvas no cofre
 - 2026-07-02 — @ops: 1Password conectado (vault Claude confirmado). Cloudflare MCP registrado, autenticação pendente — precisa sessão nova do Claude Code pra completar via `/mcp`
+- 2026-07-03 — @b3-chief: Cloudflare MCP autorizado e validado (API respondeu). Conta Cloudflare está SEM zonas — `karolsenna.com.br` ainda não foi adicionado (vira parte do passo 0.3). Blocker do MCP resolvido.
+- 2026-07-03 — @b3-chief: conta Hetzner criada (0.1 completo). Domínio `karolsenna.com.br` confirmado no Registro.br — passo 0.3 vai exigir troca de nameservers lá.
 
 ## BLOCKERS ATIVOS
 
-- Cloudflare MCP registrado mas nao autenticado — sessao do Claude Code precisa ser reaberta pra `/mcp` reconhecer o servidor novo e permitir autorizar no navegador. Resolver assim que o aluno reabrir.
+- (nenhum)
 
 ## DECISOES DO ALUNO
 

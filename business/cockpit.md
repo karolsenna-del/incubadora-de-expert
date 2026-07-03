@@ -4,8 +4,8 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 17/06/2026
-**Proximo review:** 24/06/2026
+**Ultima atualizacao:** 03/07/2026
+**Proximo review:** 10/07/2026
 
 ---
 
@@ -13,7 +13,7 @@
 
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
-| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Resolver processo de edicao de video (gargalo antes do lancamento) | Karol | Gravando — Fase 2 concluida (43 roteiros prontos, retrofit v2.0). Edicao e proximo gargalo. | [tracker](campanhas/expert360-curso/tracker.md) |
+| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Subir curso na VOOMP (videos + descricoes + materiais) | Karol | Producao — 43 roteiros prontos, assets visuais feitos, descricoes prontas. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
 
 ---
 
@@ -48,6 +48,9 @@
 | Operacao | Responsavel | Status | Onde acompanhar |
 |----------|-------------|--------|-----------------|
 | Instagram / Conteudo | Karol | Ativa — Destaques 1 e 2 postados, Destaque 3 + posts feed em andamento | contexto-dinamico.md — prioridades do momento |
+| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 20 feita (28/06) | business/campanhas/lives-semanais/ |
+| Mentoria (5 alunos) | Karol | Ativa — Milena: P1 fechada, P2 semana que vem. Roteiro da jornada em rebalanceamento | mentoria/alunas/ |
+| Funil mini treinamento (LP → WhatsApp) | Karol | LP nova aprovada — publicacao em andamento pela Karol | business/campanhas/lp-minitreinamento/ |
 
 ---
 

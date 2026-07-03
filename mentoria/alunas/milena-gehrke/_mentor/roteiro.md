@@ -1,13 +1,13 @@
 # Roteiro — Milena Gehrke
 **Adaptado do Roteiro 12 Meses — Incubadora de Expert**
-Última atualização: 30/06/2026
+Última atualização: 03/07/2026
 
 ---
 
 ## ONDE ELA ESTÁ
 
-**Fase atual:** Final do M0 → entrando em M1
-**Mês equivalente:** Mês 1 concluído / Mês 2 iniciando
+**Fase atual:** M1 — Persona fechada (P1 ✅), Promessa Transformadora (P2) em andamento
+**Ritmo:** Acelerado em relação ao roteiro padrão — M0 e P1 fechados em sequência. Decisão da Karol (03/07): acelerar as fases iniciais (que o agente de IA conduz com a aluna) pra sobrar mais tempo pra proposta, validação de campo e posicionamento.
 
 ### O que já entregou (antes da mentoria com a Karol)
 
@@ -100,8 +100,10 @@ Ver: `0.1- Roteiro da Jornada.md` — Meses 5 a 12.
 | # | Data | O que foi feito |
 |---|------|----------------|
 | 1 | (a confirmar) | Onboarding / contratação com a Karol |
+| 2 | 01-02/07 | Fechar M0 — história real + Ikigai validados. Semente (ferida → medicina → mecanismo) guardada pra P3/P5 |
+| 3 | 03/07 | Persona Compradora (P1) fechada. Exclusão do pilar técnico confirmada (vira curso separado futuro) |
 
 ## PRÓXIMA SESSÃO
 
-**Objetivo:** Fechar M0 — validar história real + Ikigai (guardar material bruto pra P3/P5, sem fechar frase-tese ainda — isso é M4)
-**O que preparar:** Ler `_mentor/negocio.md` antes da sessão
+**Objetivo:** Fechar Promessa Transformadora (P2) — semana de 06-10/07
+**O que preparar:** P1 documentada + rascunho de promessa da Milena ("No agro, não basta saber fazer") como ponto de partida. Lembrete: promessa calibrada pra persona compradora (técnico de regularização), não pro produtor rural
