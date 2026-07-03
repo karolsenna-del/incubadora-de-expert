@@ -136,11 +136,20 @@ Sessao 01-02/07 — Live 20 feita, Expert360 corrigido pra plataforma VOOMP, ses
 - Desafio Flavio: encerrado, ele viu o video.
 - Weekly review continua atrasado (previsto 24/06 — ainda nao feito).
 
+**Sessao 02-03/07 — LP nova do mini treinamento:**
+- Pagina completa criada em `business/campanhas/lp-minitreinamento/` (index.html + copy.md + karol.jpg otimizada)
+- Copy reescrita no Metodo LP (estrutura 9 secoes adaptada pra funil VSL → WhatsApp), revisada e APROVADA pela Karol
+- Pixel Meta com PageView + Contact, CTA com delay de 120s (igual config GreatPages), VSL YouTube embutida
+- Decisao registrada: copy publica em masculino generico (40% alunos homens) — ver log-decisoes 03/07
+- Bootstrap 3 (outra sessao): Fase 0 iniciada — 1Password conectado, Cloudflare MCP pendente de autorizacao
+
 **Pendencias abertas:**
+- **Publicar a LP nova** (substituir /minitreinamento2 na GreatPages ou hospedar o HTML — decidir onde)
 - Weekly review (atrasado, adiado de novo nesta sessao)
 - Expert360: subir curso na VOOMP (agora que a plataforma esta confirmada)
 - Screenshots do Cloudinary (12 arquivos soltos na raiz) — setup em andamento, sem processo documentado ainda
 - Proxima sessao com Milena: Modulo 1 — Persona Compradora (P1)
+- Bootstrap 3: retomar Fase 0 (autorizar Cloudflare MCP, conta Hetzner)
 
 **Proximo foco:**
 1. Weekly review (bem atrasado — vale priorizar na proxima sessao)
@@ -151,4 +160,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 02/07/2026*
+*Ultima atualizacao: 03/07/2026*

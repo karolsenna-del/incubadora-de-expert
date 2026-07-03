@@ -84,3 +84,13 @@
 **Racional:** "Encerramento" é nome operacional (perspectiva de produção), não persuasivo (perspectiva de quem assiste). Aulas que carregam a virada de identidade — o momento mais importante da jornada psicológica — não podem ter nome que convide a pular.
 
 **Impacto:** Aplicado em `m0-roteiros.md`, `m1-roteiros.md`, `m2-roteiros.md` e `m3-roteiros.md`. M4, quando roteirizado, deve seguir a mesma convenção.
+
+## 03/07/2026 — Copy pública em masculino genérico
+
+**Contexto:** Durante a reescrita da LP do mini treinamento, surgiu a questão de gênero na copy — a persona (Laura) é feminina, mas 40% dos alunos da Karol são homens. Testou-se alternância de gênero na mesma frase ("psicóloga, advogado, médica...") e a Karol vetou: parece erro de concordância.
+
+**Decisão:** Toda copy pública (LPs, posts, anúncios) usa **masculino genérico como padrão**. Feminino só em contexto exclusivamente feminino (história da Karol, depoimentos de alunas). Nunca alternar gênero dentro da mesma frase ou lista. Perfis de público nomeados direto ("Profissional liberal", "Empregado CLT", "Servidor público"), sem rótulos criativos.
+
+**Racional:** Alienar 40% da audiência custa mais do que a especificidade de gênero agrega. A persona Laura segue como referência de dores e ruminações — muda só a marca gramatical.
+
+**Impacto:** Aplicado na LP nova (`business/campanhas/lp-minitreinamento/`). Vale pra toda produção de copy futura (registrado também na memória do sistema).
