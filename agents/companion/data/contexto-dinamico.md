@@ -143,21 +143,24 @@ Sessao 01-02/07 — Live 20 feita, Expert360 corrigido pra plataforma VOOMP, ses
 - Decisao registrada: copy publica em masculino generico (40% alunos homens) — ver log-decisoes 03/07
 - Bootstrap 3 (outra sessao): Fase 0 iniciada — 1Password conectado, Cloudflare MCP pendente de autorizacao
 
+**Sessao 03/07 — Weekly review feita:**
+- Weekly review realizada (estava 16 dias atrasada). Cockpit atualizado: next action do Expert360 corrigida pra "subir curso na VOOMP", operacoes continuas registradas (lives, mentoria, funil mini treinamento). Proximo review: 10/07.
+- Mentoria Milena: P1 (Persona Compradora) FECHADA + exclusao do pilar tecnico confirmada. Proxima sessao (semana 06-10/07): fechar P2 (Promessa Transformadora). Roteiro da Milena atualizado.
+- DECISAO registrada: rebalancear o Roteiro da Jornada (12 meses) — acelerar fases iniciais (M0-M2, agente-conduzidas) e dar mais tempo pra proposta (P4), validacao de campo e posicionamento (M4). Proposta de novo cronograma aguardando validacao da Karol; depois replicar pros 5 alunos.
+- LP mini treinamento: **PUBLICADA** — https://treinamento.incubadoradeexpert.com.br (Vercel, projeto `lp-minitreinamento`; DNS registro A no Registro.br → 76.76.21.21; HTTPS ativo, verificado com HTTP 200). LP antiga /minitreinamento2 (GreatPages) continua no ar — anuncios novos devem apontar pro endereco novo.
+
 **Pendencias abertas:**
-- **Publicar a LP nova** (substituir /minitreinamento2 na GreatPages ou hospedar o HTML — decidir onde)
-- Weekly review (atrasado, adiado de novo nesta sessao)
-- Expert360: subir curso na VOOMP (agora que a plataforma esta confirmada)
+- Validar novo cronograma do Roteiro da Jornada (proposta do Companion) e aplicar no template + roteiros dos alunos
+- Expert360: subir curso na VOOMP (ativar /course-publisher quando videos estiverem prontos)
 - Screenshots do Cloudinary (12 arquivos soltos na raiz) — setup em andamento, sem processo documentado ainda
-- Proxima sessao com Milena: Modulo 1 — Persona Compradora (P1)
 - Bootstrap 3: retomar Fase 0 (autorizar Cloudflare MCP, conta Hetzner)
 
 **Proximo foco:**
-1. Weekly review (bem atrasado — vale priorizar na proxima sessao)
+1. Fechar P2 da Milena (sessao semana 06-10/07) + cronograma novo da jornada
 2. Expert360: preparar upload na VOOMP
-3. Entender o que fazer com o setup do Cloudinary
 
 Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 03/07/2026*
+*Ultima atualizacao: 03/07/2026 (weekly review)*
