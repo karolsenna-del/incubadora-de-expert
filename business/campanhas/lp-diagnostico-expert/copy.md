@@ -33,7 +33,7 @@ sua experiência num método próprio, estruturado e vendável.
 **Bullets de benefício (3):**
 - O que **já funciona** no seu negócio — e você não está enxergando.
 - O que está **travando** você — método, promessa, persona ou posicionamento.
-- Seu **próximo passo**, na ordem certa — mesmo que a gente nunca mais se fale.
+- Seu **próximo passo**, na ordem certa — pra aplicar mesmo que você decida seguir sozinho.
 
 *Justificativa (fórmula da headline): TEMPO = "em 45 minutos" / RESULTADO = "saber o que está travando você de vender o que sabe" / MECANISMO = Diagnóstico do Expert (nomeado na sub). Primeira dobra mobile resolve: headline + sub + CTA sem rolar (sem vídeo ocupando espaço).*
 
@@ -134,9 +134,11 @@ Na sessão, vocês discutem o diagnóstico: o que já funciona,
 o que está travando, e o que precisa acontecer primeiro.
 
 **Passo 03 — Você sai com o próximo passo claro**
-Clareza do que focar primeiro — mesmo que a gente nunca mais
-se fale. E se fizer sentido pros dois lados, a Karol te apresenta
-a mentoria Incubadora de Expert.
+Clareza do que focar primeiro — sua, mesmo que você decida
+seguir sozinho. E se fizer sentido pros dois lados, a Karol
+te apresenta a mentoria Incubadora de Expert.
+
+*Nota de voz (04/07, apontado pela Karol): a página inteira fala DA Karol em 3ª pessoa (narrador te apresenta ela); o forms fala em 1ª pessoa (assinado por ela). Nunca misturar as duas na mesma frase — "mesmo que a gente nunca mais se fale" era deslize de 1ª pessoa e foi trocado por "mesmo que você decida seguir sozinho" (mesmo efeito de desarme, voz consistente).*
 
 **CTA secundário:**
 [ COMEÇAR MEU PRÉ-DIAGNÓSTICO ]
