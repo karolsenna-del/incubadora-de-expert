@@ -17,8 +17,8 @@
 - [x] 0.1b Cloudflare MCP autorizado e VALIDADO (listou zonas via API na conta karolsenna@incubadoradeexpert.com.br) — 2026-07-03. Obs: conta Cloudflare sem nenhuma zona — `karolsenna.com.br` precisa ser adicionado no passo 0.3
 - [x] 0.1c Conta Hetzner criada pela aluna — 2026-07-03
 - [x] 0.2 Token Hetzner Read&Write no cofre (`op://Claude/Hetzner/token`) + validado na API (HTTP 200) — 2026-07-03
-- [ ] 0.3 Dominio escolhido no Cloudflare (dominio: `karolsenna.com.br`) + DNS-only `n8n.`/`webhook.` → IP
-- [ ] 0.4 Servidor criado via API (tipo nao-deprecated ~2vCPU/4GB, ex: cx23; cloud-init: Docker no ar) — IP: `___`
+- [x] 0.3 Dominio `karolsenna.com.br` adicionado no Cloudflare (plano Free) + nameservers trocados no Registro.br + zona ATIVA — 2026-07-03. Wildcard morto do HostGator removido. (Registros `n8n.`/`webhook.` → IP entram no 0.4)
+- [x] 0.4 Servidor criado via API (cx23, Ubuntu 22.04, hel1, €6,49/mes confirmado; cloud-init: Docker) — IP: `204.168.240.18` · server id: `147715826` · ssh key: `~/.ssh/hetzner-n8n` — 2026-07-03. DNS `n8n.`/`webhook.karolsenna.com.br` → IP (DNS-only) ✅
 - [ ] 0.5 Stack subido (Traefik + n8n queue mode) + VALIDADO: https cadeado + owner n8n criado via API (cofre) + webhook responde via https (segredos no cofre)
 - [ ] **GATE QG-B3-001 fechado em:** `___`
 
@@ -47,6 +47,8 @@
 - 2026-07-02 — @ops: 1Password conectado (vault Claude confirmado). Cloudflare MCP registrado, autenticação pendente — precisa sessão nova do Claude Code pra completar via `/mcp`
 - 2026-07-03 — @b3-chief: Cloudflare MCP autorizado e validado (API respondeu). Conta Cloudflare está SEM zonas — `karolsenna.com.br` ainda não foi adicionado (vira parte do passo 0.3). Blocker do MCP resolvido.
 - 2026-07-03 — @b3-chief: conta Hetzner criada (0.1 completo). Domínio `karolsenna.com.br` confirmado no Registro.br — passo 0.3 vai exigir troca de nameservers lá.
+- 2026-07-03 — @operador-infra: token Hetzner no cofre e validado (HTTP 200). Zona `karolsenna.com.br` ativa no Cloudflare (NS trocados no Registro.br). MCP Cloudflare é read-only pra DNS → criado token API `Edit zone DNS` no cofre (`op://Claude/Cloudflare/token`). Wildcard morto do HostGator removido.
+- 2026-07-03 — @operador-infra: servidor `n8n-incubadora` criado via API (cx23 @ hel1, IP 204.168.240.18). Registros A `n8n.` e `webhook.` → IP, DNS-only. Aguardando cloud-init (Docker) pra subir o stack (passo 0.5).
 
 ## BLOCKERS ATIVOS
 
