@@ -156,13 +156,19 @@ Sessao 01-02/07 — Live 20 feita, Expert360 corrigido pra plataforma VOOMP, ses
 - Copy completa redigida (`copy.md`, 8 secoes) + pagina construida e DEPLOYADA: preview publico em https://lp-diagnostico-expert.vercel.app (pixel PageView + evento **Lead** validados no ar; foto ok; 4 CTAs → forms).
 - PENDENTE pra ir ao ar no dominio final: (1) Karol aprovar a copy (autorizou produzir tudo pra aprovar depois), (2) registro A `diagnostico` → 76.76.21.21 no Registro.br (dominio ja vinculado ao projeto Vercel), (3) trocar link da bio/bitly.
 
+**Sessao 03-04/07 (madrugada) — Bootstrap 3: Fases 0 e 1 FECHADAS:**
+- FASE 0 (servidor): Cloudflare MCP autorizado, conta Hetzner criada, servidor `n8n-incubadora` provisionado via API (cx23 @ hel1, IP 204.168.240.18, €6,49/mes). Dominio `karolsenna.com.br` conectado ao Cloudflare (NS trocados no Registro.br, zona ativa). Stack no ar: Traefik + Postgres + Redis + n8n queue mode. `https://n8n.karolsenna.com.br` com SSL valido, owner criado via API, webhook https ok. Gate QG-B3-001 fechado.
+- FASE 1 (banco unificado): 3 tabelas core (`pessoas`/`capturas`/`compras`) criadas no Supabase `incubadora-de-expert` via Management API, com indexes, RLS e trigger. Testes do gate todos verdes (dedup por email, FKs, id_transacao UNIQUE, RLS negativa dupla). Gate QG-B3-002 fechado.
+- Infra de cofre corrigida: conta de serviço 1Password era read-only → criada `Auroq-RW` (ler+escrever), antiga revogada. Segredos novos no vault Claude: tokens Hetzner/Cloudflare, senha Postgres, encryption key n8n, admin n8n.
+- Tracker: `business/infra/bootstrap3-tracker.md`. Retomar com `/bootstrap3` (entra direto na Fase 2).
+
 **Pendencias abertas:**
 - LP Diagnostico do Expert: aprovar copy (preview: https://lp-diagnostico-expert.vercel.app) + DNS `diagnostico` A 76.76.21.21 no Registro.br + trocar link da bio/bitly
 - Expert360: subir curso na VOOMP (ativar /course-publisher quando videos estiverem prontos)
 - LP versao B (teste A/B): **NO AR e validada** — https://treinamento2.incubadoradeexpert.com.br (HTTPS 200, pixel PageView+Contact ok, redirect HTTP→HTTPS ok). Clone fiel da pagina GreatPages, fonte em `business/campanhas/lp-minitreinamento-b/`, projeto Vercel `lp-minitreinamento-b`. GreatPages cancelado pela Karol (assinatura ate 27/07). Teste A/B: quando subir anuncios, dividir trafego (2 conjuntos, um pra cada URL) — Trafego Arcane. SOP-018 no playbook do TechOps.
 - Teste A/B das duas LPs: quando subir anuncios, dividir trafego no Meta (2 conjuntos identicos, um pra cada URL) — Trafego Arcane
 - Screenshots do Cloudinary (12 arquivos soltos na raiz) — setup em andamento, sem processo documentado ainda
-- Bootstrap 3: retomar Fase 0 (autorizar Cloudflare MCP, conta Hetzner)
+- Bootstrap 3: FASE 2 (automacoes — Z-API ~R$100/mes, compras, dispatcher, recovery; ~2-4h). Fases 0 e 1 concluidas em 04/07. Decisao pendente: numero de WhatsApp dedicado ou nao
 - **DNS raiz do dominio (decidir antes de 27/07):** GreatPages cancelado (assinatura vai ate 27/07). O apex `incubadoradeexpert.com.br` e o `www` (CNAME cname.greatpages.com.br) apontam pro GreatPages — dia 27 ambos morrem junto com a /minitreinamento2. Flag do TechOps (03/07): decidir o que a raiz mostra e reapontar DNS no Registro.br (sugestao: redirect pro treinamento. via Vercel, ~10 min)
 
 **Proximo foco:**
@@ -173,4 +179,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 03/07/2026 (weekly review)*
+*Ultima atualizacao: 04/07/2026 (Bootstrap 3 — Fases 0 e 1 fechadas)*
