@@ -15,9 +15,11 @@
 **Eyebrow:**
 MENTORIA INCUBADORA DE EXPERT · SESSÃO GRATUITA E INDIVIDUAL
 
-**Headline:**
-Em 45 minutos, você vai saber exatamente
-**o que está travando você de vender o que sabe.**
+**Headline** *(v2 — ajustada pela Karol em 04/07)*:
+Em 45 minutos, você vai descobrir o caminho pra transformar
+seu conhecimento **num método próprio — e vendável.**
+
+*Racional da v2: "estruturar conhecimento em método" é a dor declarada da Laura ("Eu sei muito, mas não sei como estruturar") — headline entra na conversa que já existe na cabeça dela. "Descobrir o caminho" > "saber": ela não sabe por onde começar, quer clareza. "Vendável" mantém a ponte com dinheiro sem ativar o medo de vender. Headline anterior ("o que está travando você de vender o que sabe") centrava no vender — resultado final, não a dor nomeada.*
 
 **Subheadline:**
 O Diagnóstico do Expert é uma sessão individual com a Karol Senna:
