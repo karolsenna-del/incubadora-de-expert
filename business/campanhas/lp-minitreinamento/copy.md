@@ -176,9 +176,15 @@ Por dentro: 13 anos presa num cargo que reconhecia a competência
 dela — e bloqueava o crescimento.
 
 No digital, ela fracassou com todas as credenciais certas.
-Investiu R$50 mil e cometeu os erros clássicos.
-Faturou mais de R$200 mil lançando para outros experts —
-e perdeu o contrato do dia pra noite.
+Investiu R$50 mil na melhor mentoria do país — e não escapou
+de fracassar. Estava no lugar certo, no momento errado:
+era a expert despreparada pra ser lançada, apesar de todo
+o conhecimento que tinha. Depois, faturou mais de R$200 mil
+lançando para outros experts — e perdeu o contrato do dia pra noite.
+
+*(v2 — 04/07, ajuste da Karol vindo da LP do Diagnóstico: "lugar certo,
+momento errado" tira a culpa da mentoria e localiza o problema no preparo.
+Replicado aqui pra consistência entre as páginas do funil.)*
 
 **Treze anos presa no serviço público. Oito fracassos no digital.**
 Até entender o que ninguém ensina:
