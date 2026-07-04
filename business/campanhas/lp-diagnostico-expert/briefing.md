@@ -103,6 +103,8 @@ A descrição atual do forms fala em "se preparar para o **lançamento** do seu 
 
 ## LOG
 
+- 04/07 (madrugada) — @quill (squad-lpago-arcane): copy completa redigida (`copy.md`, 8 seções + validação RCs) e página construída (`index.html`, design reusado da LP do treinamento). Deploy feito na Vercel (projeto `lp-diagnostico-expert`). Preview público pra aprovação: https://lp-diagnostico-expert.vercel.app — pixel PageView + Lead validados na página no ar. Domínio `diagnostico.incubadoradeexpert.com.br` vinculado ao projeto; FALTA: (1) aprovação da copy pela Karol, (2) registro A `diagnostico` → 76.76.21.21 no Registro.br (mesmo processo do `treinamento`).
+
 - 03/07 — @quill (squad-lpago-arcane): Karol atualizou a abertura do forms com a VERSÃO ALTERNATIVA (abre com a tese) — seção 11 (dissonância "lançamento") RESOLVIDA. Autorização da Karol: produzir tudo (copy completa + página) pra aprovação posterior ("faz tudo que aprovo depois").
 - 03/07 — @atlas (squad-lpago-arcane): briefing aprovado pela Karol. Domínio definido: diagnostico.incubadoradeexpert.com.br. Handoff pro Quill.
 - 03/07 — @atlas (squad-lpago-arcane): briefing enxuto montado a partir do Exocortex + respostas da Karol + forms real.

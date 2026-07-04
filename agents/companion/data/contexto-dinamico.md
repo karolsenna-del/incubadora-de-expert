@@ -149,7 +149,15 @@ Sessao 01-02/07 — Live 20 feita, Expert360 corrigido pra plataforma VOOMP, ses
 - DECISAO tomada e APLICADA: Roteiro da Jornada rebalanceado — Mes 1: M0+M1 | Meses 2-3: M2+campo | Meses 4-6: M3+campo | Meses 7-12: M4+escala. Cronograma validado pela Karol e replicado no template + roteiros dos 5 alunos (Milena ajustada pelo estagio dela). Ver log-decisoes 03/07.
 - LP mini treinamento: **PUBLICADA** — https://treinamento.incubadoradeexpert.com.br (Vercel, projeto `lp-minitreinamento`; DNS registro A no Registro.br → 76.76.21.21; HTTPS ativo, verificado com HTTP 200). LP antiga /minitreinamento2 (GreatPages) continua no ar — anuncios novos devem apontar pro endereco novo.
 
+**Sessao 03-04/07 (noite) — LP do Diagnostico do Expert (mentoria):**
+- Decisao da Karol: substituir bitly → Google Forms por pagina propria antes do forms (remarketing + aquecimento do lead). Squad LPago Arcane acionado (Atlas briefing + Quill copy).
+- Briefing enxuto aprovado (`business/campanhas/lp-diagnostico-expert/briefing.md`). Dominio escolhido: `diagnostico.incubadoradeexpert.com.br`.
+- Abertura do forms de pre-diagnostico reescrita (Karol aplicou a versao com a tese) — dissonancia "lancamento/infoproduto" eliminada.
+- Copy completa redigida (`copy.md`, 8 secoes) + pagina construida e DEPLOYADA: preview publico em https://lp-diagnostico-expert.vercel.app (pixel PageView + evento **Lead** validados no ar; foto ok; 4 CTAs → forms).
+- PENDENTE pra ir ao ar no dominio final: (1) Karol aprovar a copy (autorizou produzir tudo pra aprovar depois), (2) registro A `diagnostico` → 76.76.21.21 no Registro.br (dominio ja vinculado ao projeto Vercel), (3) trocar link da bio/bitly.
+
 **Pendencias abertas:**
+- LP Diagnostico do Expert: aprovar copy (preview: https://lp-diagnostico-expert.vercel.app) + DNS `diagnostico` A 76.76.21.21 no Registro.br + trocar link da bio/bitly
 - Expert360: subir curso na VOOMP (ativar /course-publisher quando videos estiverem prontos)
 - LP versao B (teste A/B): **NO AR e validada** — https://treinamento2.incubadoradeexpert.com.br (HTTPS 200, pixel PageView+Contact ok, redirect HTTP→HTTPS ok). Clone fiel da pagina GreatPages, fonte em `business/campanhas/lp-minitreinamento-b/`, projeto Vercel `lp-minitreinamento-b`. GreatPages cancelado pela Karol (assinatura ate 27/07). Teste A/B: quando subir anuncios, dividir trafego (2 conjuntos, um pra cada URL) — Trafego Arcane. SOP-018 no playbook do TechOps.
 - Teste A/B das duas LPs: quando subir anuncios, dividir trafego no Meta (2 conjuntos identicos, um pra cada URL) — Trafego Arcane
