@@ -1,9 +1,9 @@
 # Base Inicial — Karol (Incubadora de Expert / Mentoria Arcane)
 
-> Criado em: 15/06/2026
+> Criado em: 15/06/2026 · **Atualizado em: 04/07/2026** (formatos Reels + expansão do pool)
 > Squad: Conteúdo Arcane (Iris — pesquisadora)
 > Fontes internas: `docs/knowledge/expert-business/dossie-personas.md`, `docs/knowledge/expert-business/posicionamento.md`
-> Fontes externas: pesquisa de garimpo (links na seção FONTES EXTERNAS)
+> Fontes externas: pesquisa de garimpo (links na seção FONTES EXTERNAS) + Trello ReelsPro (18 modelos) + Arsenal Viral (47 formatos criativos, 134 referências) — análise completa em `formatos-virais-adaptados.md`
 
 ---
 
@@ -32,6 +32,36 @@ Dos próximos posts:
 - 20%: Carrossel-Diagnóstico (testando)
 
 Após 5-10 posts, revisar: formato-teste virou validado (entra no fixo) ou estagnou (troca por outro)?
+
+---
+
+## FORMATOS REELS (adicionados em 04/07/2026)
+
+> Braço de VÍDEO da base — complementa os carrosséis acima, não substitui.
+> Origem: adaptação de 2 fontes (Trello ReelsPro + Arsenal Viral) ao posicionamento da Karol.
+> Análise completa dos 18 modelos + 47 formatos criativos + swipe file: `formatos-virais-adaptados.md`
+
+### Trio principal de Reels (rodar 3-4 semanas antes de variar)
+
+**1. C.N.L. — Conteúdo na Legenda**
+Vídeo simples em loop (b-roll: café, caderno, notebook) + frase de curiosidade na tela + valor denso na legenda. Menor exposição com maior profundidade — o formato mais alinhado com "presença estratégica sem exposição amadora".
+
+**2. P.O.V. / Identificação**
+Cenas do dia típico da persona (notebook às 20h, 40 min no Canva, o grupo do WhatsApp, o 47º Reel salvo "pra depois"). Sem caricatura — a persona odeia exagero.
+
+**3. Gancho Negativo**
+"Nunca faça um lançamento antes disso" / "Pare de fazer mais uma pós" / "O erro que mantém especialistas invisíveis". Ataca o inimigo (credencial como muleta, método sem história, hype) — nunca a persona.
+
+### Temperos do Arsenal (aplicar nos 3)
+Queria ter descoberto antes · Nunca · Dualidade · Carta aberta · Sem aparecer/Sem falar · Autoridade condensada ("15 anos em 60 segundos").
+
+### Insight do garimpo (134 virais dos nichos adjacentes)
+O que domina os virais de vendas/empreendedorismo/infoprodutos NÃO é trend nem dancinha — é **autoridade condensada**: experiência comprimida em 60s, objeção encenada ("quando o cliente diz...") e verdade desconfortável dita com calma. Exatamente o que a imagem da Karol comporta.
+
+### Cadência combinada (proposta — Karol valida)
+- Carrosséis seguem o 80/20 já definido acima
+- Reels: 3/semana (1 C.N.L. + 1 P.O.V. + 1 Gancho Negativo)
+- Após 3-4 semanas: Aria mede (3s >50% / tempo médio 25-30% / interação >10%) e o trio se ajusta
 
 ---
 
@@ -119,13 +149,60 @@ Após 5-10 posts, revisar: formato-teste virou validado (entra no fixo) ou estag
     - Por que: validado externamente — formato pergunta gera save-rate alto, profissionais se reconhecem
     - Fonte: garimpo externo (Gillian Perkins — ver Fontes Externas)
 
-### 🌟 QUENTES / EMERGENTES (2 temas)
+### ⚡ MÉDIOS — NOVOS (adicionados 04/07/2026, validados no garimpo Arsenal)
+
+14. **"Quando o especialista diz..." (série de objeções encenadas)**
+    - Formato: Reels (P.O.V. / Gancho Negativo)
+    - Categoria: Comportamentos− + Crenças
+    - Por que: padrão DOMINANTE nos virais de vendas do garimpo. Versão Karol: encenar as desculpas da própria persona ("preciso estudar mais" / "vou esperar ter audiência" / "ano que vem eu começo") e responder com a tese. Rende série.
+    - Evidência: Arsenal — "When client says 'your price is too high'" (28M) · "'I can get it done cheaper'" (17M) · "Faça isso quando o cliente disser que 'vai pensar'" (1M)
+
+15. **"15 anos de profissão em 60 segundos" (autoridade condensada)**
+    - Formato: Reels (falado direto ou C.N.L.)
+    - Categoria: Demográficas + Desejos
+    - Por que: formato validadíssimo no garimpo; posiciona sem parecer vaidade — é generosidade de repertório
+    - Evidência: Arsenal — "10 years of sales experience in 60 seconds" (772K) · "5 years of entrepreneurship in 60 seconds" (2.1M) · "Eu levei 40 anos o que vou te ensinar em 5 segundos" (15M)
+
+16. **"Vendas Secretas: vender sem palco"**
+    - Formato: Carrossel de Dor ou Reels C.N.L.
+    - Categoria: Crenças + Desejos
+    - Por que: educa o lead pro mecanismo único (por que 1:1 protege autoridade, testar preço em ambiente controlado). Conteúdo de meio de funil que só a Karol pode fazer.
+    - Fonte: `posicionamento.md` → Diferencial / mecanismo único
+
+17. **"Liberal, CLT ou servidor: o caminho pro método muda?"**
+    - Formato: Carrossel ou Reels de comparação
+    - Categoria: Demográficas
+    - Por que: nomeia os 3 perfis reais da audiência direto (regra da casa); cada perfil rende post próprio + gera comentário de identificação ("sou CLT e...")
+
+18. **"O vazio de ganhar bem num trabalho sem propósito"**
+    - Formato: Carrossel de Alcance
+    - Categoria: Dores (variante CLT/concursado)
+    - Por que: dor documentada da variante CLT ("sente que vai se arrepender se ficar até se aposentar") — alcance puro, não fala de produto
+    - Fonte: `posicionamento.md` → Ponto A, variante CLT/concursada
+
+19. **"Renda presa ao tempo: agenda cheia é teto, não troféu"**
+    - Formato: Carrossel de Dor ou Reels Gancho Negativo
+    - Categoria: Dores + Desejos (autonomia com dignidade)
+    - Por que: reframe da falsa vitória da persona (agenda cheia = presa operacionalmente). Confronto com leveza.
+    - Fonte: `posicionamento.md` → Ponto A
+
+20. **"Carta aberta ao especialista invisível"**
+    - Formato: Reels (formato Carta Aberta do Arsenal) ou carrossel
+    - Categoria: Dores
+    - Por que: compartilhamento altíssimo do formato; versões: "carta aberta a quem vai adiar o método pro ano que vem. De novo." / "a quem assiste Reel de colega menos experiente e pensa 'eu sei mais'"
+    - Evidência: Arsenal — "Carta aberta altamente compartilhável" (7M)
+
+21. **"Metade de 2026 acabou. Teu método continua na tua cabeça."** ⏰
+    - Formato: qualquer um do trio Reels ou Carrossel de Dor
+    - Categoria: Eventos sazonais (julho = meio do ano)
+    - Por que: urgência de calendário real, sem inventar escassez. JANELA: usar nas próximas 3-4 semanas (julho).
+
+### 🌟 QUENTES / EMERGENTES (2 originais + 4 novos)
 
 1. **"Cansaço foi a palavra do ano" — o ponto de virada antes da reinvenção**
    - Formato: Carrossel de Alcance
    - STATUS: emergente — esgotamento profissional é o assunto #1 em matérias de carreira no Brasil (jan/fev 2026)
-   - Janela: tema "do momento" — vale priorizar nas próximas 2-4 semanas antes de saturar
-   - Por que pegar: não precisa falar de infoproduto — é sobre o instante de virada, "alcance" no sentido mais puro
+   - ⚠️ ATUALIZAÇÃO 04/07: janela original (2-4 semanas de 15/06) está no limite. Se for usar, usar JÁ — ou reposicionar como tema perene de "ponto de virada".
    - Fonte: garimpo externo (Pri Tescaro / Fast Company Brasil — ver Fontes Externas)
 
 2. **"O dia que ela percebeu que tinha 8 tentativas fracassadas — e nenhuma era sobre incapacidade"**
@@ -134,6 +211,32 @@ Após 5-10 posts, revisar: formato-teste virou validado (entra no fixo) ou estag
    - Janela: sem prazo de saturação (história própria), mas vale testar logo pra calibrar reação do público
    - Por que pegar: arco narrativo de queda → virada é um dos formatos de maior retenção/conexão
    - Fonte: `docs/knowledge/expert-business/metodologia/persona-obstaculos-jornada.md`
+
+3. **"IA como braço do expert" (estruturar método com chat de IA)** *(novo 04/07)*
+   - STATUS: emergente e acelerando. Tag "Feito com IA" já circula no Arsenal; quase todo mundo fala de IA pra PRODUZIR conteúdo — quase ninguém fala de IA pra ESTRUTURAR método.
+   - Janela: 3-6 meses antes de saturar no BR.
+   - Por que pegar: a Karol usa IA de verdade na operação (alunos preenchem forms com agente de IA — depoimento da Anália prova). Autoridade real, não surfada.
+
+4. **"O movimento anti-influencer: autoridade silenciosa"** *(novo 04/07)*
+   - STATUS: sinal gringo (deinfluencing, quiet authority) chegando ao mercado de negócios BR.
+   - Janela: 2-4 meses.
+   - Por que pegar: é literalmente o posicionamento da Incubadora — entrar como precursora do nome, não copiadora. Conecta com tema forte #6 ("séria e no digital").
+
+5. **"Venda no 1:1 tá voltando (DM > palco)"** *(novo 04/07)*
+   - STATUS: emergente — social selling e venda por conversa crescendo nos virais gringos de vendas.
+   - Janela: 3-6 meses.
+   - Por que pegar: valida Vendas Secretas com tendência de mercado. Ângulo: "o mercado tá descobrindo o que eu ensino há tempos."
+
+6. **"A geração de especialistas que o digital deixou pra trás"** *(novo 04/07)*
+   - STATUS: aposta autoral com sinal demográfico (35-50 anos é a faixa mais mal atendida pelos gurus de marketing).
+   - Por que pegar: cria pertencimento de grupo + inimigo comum legítimo (mercado que só fala com quem tem 25 anos e zero reputação a proteger). Se performar, vira tema-assinatura.
+
+---
+
+## LOG
+
+- 15/06 — @iris-pesquisador: Base criada — 3 formatos de carrossel + pool de 15 temas + insights 2026 + fontes externas.
+- 04/07 — @iris-pesquisador: Adicionado braço de Reels (trio C.N.L./P.O.V./Gancho Negativo, de 2 fontes: Trello ReelsPro + Arsenal Viral) + 8 temas médios novos validados no garimpo + 4 quentes novos. Pool total: 27 temas. Flag de janela no tema "cansaço". Análise completa de formatos: `formatos-virais-adaptados.md`.
 
 ---
 

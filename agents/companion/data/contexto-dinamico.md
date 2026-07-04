@@ -43,6 +43,12 @@ Prioridades imediatas:
 1. Bio com tese aplicada
 2. Primeiros conteudos com angulo "expert em fracassar no digital"
 
+**Base de producao completa (04/07/2026):** Iris (Squad Conteudo Arcane) integrou 2 fontes externas de formatos virais — Trello ReelsPro (18 modelos) e Arsenal Viral/Venda Todo Santo Dia (47 formatos criativos + 134 referencias garimpadas dos nichos adjacentes).
+- `docs/producao-conteudo/karol/formatos-virais-adaptados.md` — analise dos 18 modelos + taxonomia Arsenal + swipe file com 15 referencias adaptadas
+- `docs/producao-conteudo/karol/base-inicial.md` — atualizada: braco de Reels (trio C.N.L. + P.O.V. + Gancho Negativo) somado aos 3 carrosseis de 15/06; pool expandido de 15 pra 27 temas
+- Alertas de janela: tema sazonal "metade de 2026" (usar em julho) e "cansaco palavra do ano" (no limite)
+- Proximo passo: produzir primeiro post do pool (`/squad-conteudo-arcane` → *produzir — Iris apresenta candidatos, Karol crava, Sage teoria, Rico roteiro)
+
 ## Operacao Continua: Lives Semanais
 
 Karol faz lives semanais pro grupo fechado (Google Meet). Worker especializado criado (17/06).
