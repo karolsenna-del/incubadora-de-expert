@@ -22,6 +22,7 @@
 9. [SOP-016] Operar workflow n8n de dispatch (agendado ou webhook)
 10. [SOP-017] Manutencao de prompt de agente Bia (trocar data, link, texto)
 11. [SOP-003] Instalar Microsoft Clarity em pagina Lovable
+12. [SOP-018] Publicar LP estatica na Vercel + subdominio (Registro.br)
 
 > **Fora do escopo:** Setup inicial do pipeline (instalar n8n + Chatwoot, criar tabelas Supabase + RPCs, configurar Meta Business Manager, gerar System User Token, importar os workflows core WF-INBOUND/AGENT-CORE/OUTBOUND). Isso e responsabilidade do **agente de setup** — outro agente dedicado. Este squad so opera o pipeline ja instalado.
 
@@ -770,3 +771,31 @@ Resumo: Clarity (clarity.microsoft.com) > criar projeto > copiar snippet > Lovab
 
 **Troubleshooting:**
 - {problema}: {solucao}
+
+---
+
+### [SOP-018] Publicar LP estatica na Vercel + subdominio (Registro.br)
+
+**Quando usar:** publicar qualquer pagina estatica (LP, obrigado, VSL) num subdominio de incubadoradeexpert.com.br.
+
+**Pre-requisitos:**
+- Vercel CLI autenticado (`vercel whoami` → karolsenna-1721, team karol-sennas-projects)
+- Pasta do projeto em `business/campanhas/{nome}/` com `index.html` + assets locais
+- `.gitignore` com `.vercel` na pasta
+
+**Passos:**
+1. Criar pasta `business/campanhas/{nome}/` com index.html + assets (imagens LOCAIS, sem CDN de terceiros)
+2. Pixel Meta obrigatorio: init `4188654601446070` + PageView; evento Contact no clique de links WhatsApp
+3. Se a LP usa delay de CTA: `setTimeout(liberarCta, 120000)` + wrap com `visibility:hidden` e `min-height` (reserva espaco, evita layout shift)
+4. Validar local: `python -m http.server {porta}` + Playwright screenshot desktop (1366px) e mobile (390px)
+5. Deploy: `cd {pasta} && vercel deploy --prod --yes` (cria projeto com nome da pasta)
+6. Dominio: `vercel domains add {sub}.incubadoradeexpert.com.br` (de dentro da pasta linkada)
+7. DNS (Registro.br — manual pela Karol): nova entrada tipo **A**, nome `{sub}`, valor `76.76.21.21`
+8. Validar: `curl -sL https://{sub}.incubadoradeexpert.com.br -w "%{http_code}"` → 200 + grep do pixel
+
+**Output esperado:** LP no ar em https://{sub}.incubadoradeexpert.com.br com HTTPS automatico (Vercel emite o certificado apos DNS propagar).
+
+**Troubleshooting:**
+- Dominio HTTP 000: registro A ainda nao criado/propagado no Registro.br (propagacao: minutos ate ~1h)
+- Clonar pagina do GreatPages: HTML estatico vem sem estilo — o layout e montado por engine JS em runtime. Reconstruir a pagina limpa usando screenshots (desktop+mobile) + estilos computados extraidos via Playwright `getComputedStyle`. Atencao: no GreatPages, mobile pode inverter cores de secoes (conferir os dois screenshots)
+- Referencia real: `business/campanhas/lp-minitreinamento/` (treinamento) e `business/campanhas/lp-minitreinamento-b/` (treinamento2, clone GreatPages)

@@ -146,14 +146,16 @@ Sessao 01-02/07 — Live 20 feita, Expert360 corrigido pra plataforma VOOMP, ses
 **Sessao 03/07 — Weekly review feita:**
 - Weekly review realizada (estava 16 dias atrasada). Cockpit atualizado: next action do Expert360 corrigida pra "subir curso na VOOMP", operacoes continuas registradas (lives, mentoria, funil mini treinamento). Proximo review: 10/07.
 - Mentoria Milena: P1 (Persona Compradora) FECHADA + exclusao do pilar tecnico confirmada. Proxima sessao (semana 06-10/07): fechar P2 (Promessa Transformadora). Roteiro da Milena atualizado.
-- DECISAO registrada: rebalancear o Roteiro da Jornada (12 meses) — acelerar fases iniciais (M0-M2, agente-conduzidas) e dar mais tempo pra proposta (P4), validacao de campo e posicionamento (M4). Proposta de novo cronograma aguardando validacao da Karol; depois replicar pros 5 alunos.
+- DECISAO tomada e APLICADA: Roteiro da Jornada rebalanceado — Mes 1: M0+M1 | Meses 2-3: M2+campo | Meses 4-6: M3+campo | Meses 7-12: M4+escala. Cronograma validado pela Karol e replicado no template + roteiros dos 5 alunos (Milena ajustada pelo estagio dela). Ver log-decisoes 03/07.
 - LP mini treinamento: **PUBLICADA** — https://treinamento.incubadoradeexpert.com.br (Vercel, projeto `lp-minitreinamento`; DNS registro A no Registro.br → 76.76.21.21; HTTPS ativo, verificado com HTTP 200). LP antiga /minitreinamento2 (GreatPages) continua no ar — anuncios novos devem apontar pro endereco novo.
 
 **Pendencias abertas:**
-- Validar novo cronograma do Roteiro da Jornada (proposta do Companion) e aplicar no template + roteiros dos alunos
 - Expert360: subir curso na VOOMP (ativar /course-publisher quando videos estiverem prontos)
+- LP versao B (teste A/B): **NO AR e validada** — https://treinamento2.incubadoradeexpert.com.br (HTTPS 200, pixel PageView+Contact ok, redirect HTTP→HTTPS ok). Clone fiel da pagina GreatPages, fonte em `business/campanhas/lp-minitreinamento-b/`, projeto Vercel `lp-minitreinamento-b`. GreatPages cancelado pela Karol (assinatura ate 27/07). Teste A/B: quando subir anuncios, dividir trafego (2 conjuntos, um pra cada URL) — Trafego Arcane. SOP-018 no playbook do TechOps.
+- Teste A/B das duas LPs: quando subir anuncios, dividir trafego no Meta (2 conjuntos identicos, um pra cada URL) — Trafego Arcane
 - Screenshots do Cloudinary (12 arquivos soltos na raiz) — setup em andamento, sem processo documentado ainda
 - Bootstrap 3: retomar Fase 0 (autorizar Cloudflare MCP, conta Hetzner)
+- **DNS raiz do dominio (decidir antes de 27/07):** GreatPages cancelado (assinatura vai ate 27/07). O apex `incubadoradeexpert.com.br` e o `www` (CNAME cname.greatpages.com.br) apontam pro GreatPages — dia 27 ambos morrem junto com a /minitreinamento2. Flag do TechOps (03/07): decidir o que a raiz mostra e reapontar DNS no Registro.br (sugestao: redirect pro treinamento. via Vercel, ~10 min)
 
 **Proximo foco:**
 1. Fechar P2 da Milena (sessao semana 06-10/07) + cronograma novo da jornada

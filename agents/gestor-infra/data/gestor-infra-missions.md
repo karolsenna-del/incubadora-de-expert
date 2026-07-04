@@ -14,7 +14,7 @@
 
 | # | Data | Missao | Resultado | SOP Criado? | Observacoes |
 |---|------|--------|-----------|-------------|-------------|
-| — | — | — | — | — | Nenhuma missao registrada ainda |
+| 1 | 2026-07-03 | Clonar LP do GreatPages (/minitreinamento2) — reconstrucao limpa (copy/layout/design identicos, pixel Meta PageView+Contact, CTA delay 120s) e publicar na Vercel (projeto lp-minitreinamento-b) com dominio treinamento2.incubadoradeexpert.com.br | ok | sim ([SOP-018]) | CONCLUIDA: DNS criado pela Karol, HTTPS emitido, validado (200 + TLS + pixel init/PageView/Contact + redirect 308). GreatPages cancelado (assinatura ate 27/07). GAP FLAGADO: apex + www apontam pro GreatPages e morrem dia 27/07 — reapontar antes (registrado no contexto-dinamico) |
 
 ---
 

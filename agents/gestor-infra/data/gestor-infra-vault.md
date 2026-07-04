@@ -8,7 +8,15 @@
 
 ## Indice
 
-(Vazio — preencher conforme credenciais forem fornecidas)
+1. [Infra] Vercel
+
+---
+
+### [Infra] Vercel
+- **Login:** karolsenna-1721 (CLI ja autenticado nesta maquina — `vercel whoami`)
+- **Team:** karol-sennas-projects (`team_ZU8S84Vs7F9g8MNEJ7Ycv0tQ`)
+- **Projetos:** `lp-minitreinamento` (treinamento.incubadoradeexpert.com.br) | `lp-minitreinamento-b` (treinamento2.incubadoradeexpert.com.br)
+- **Notas:** DNS dos subdominios e gerenciado no Registro.br (nameservers a/b.sec.dns.br) — registro A pra `76.76.21.21`. Acesso Registro.br: manual pela Karol (sem credencial no vault)
 
 ---
 
