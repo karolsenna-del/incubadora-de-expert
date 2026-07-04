@@ -14,11 +14,15 @@
 
 **Contexto:** Na prática com a Milena, M0 e P1 (Persona Compradora) fecharam em sequência acelerada — as fases iniciais são conduzidas pelos agentes de IA com a aluna e andam muito mais rápido do que o roteiro de 12 meses previa (5 meses pra M0-M2). Já a parte que realmente demora é a criação e validação do produto no campo.
 
-**Decisão:** Atualizar o Roteiro da Jornada (template `mentoria/alunas/_template/0.1- Roteiro da Jornada.md` + roteiros das alunas) pra comprimir as fases iniciais (M0-M2, agente-conduzidas) e dar mais tempo pra proposta (M3/P4), validação de campo e posicionamento (M4).
+**Decisão (cronograma validado pela Karol em 03/07):**
+- Mês 1: M0 + M1 (desbloqueio + persona + promessa)
+- Meses 2-3: M2 + campo (processo autoral + portfólio + 3+ leads)
+- Meses 4-6: M3 + campo (proposta + 10+ conversas + validar 3x)
+- Meses 7-12: M4 + escala (autoridade, frase-tese, presença, conteúdo, escala)
 
-**Racional:** O gargalo real da jornada não é conceitual — é ir a campo, vender, validar 3x e construir posicionamento. O roteiro atual superestima o tempo da fundação e subestima o tempo de validação. A experiência real com aluna (Milena) é a evidência.
+**Racional:** O gargalo real da jornada não é conceitual — é ir a campo, vender, validar 3x e construir posicionamento. O roteiro antigo superestimava o tempo da fundação (5 meses pra M0-M2) e subestimava o tempo de validação. A experiência real com aluna (Milena) é a evidência.
 
-**Impacto:** Novo cronograma proposto pelo Companion aguardando validação da Karol. Depois de validado, replicar pros roteiros dos 5 alunos ativos. Ritmo da Milena já segue a lógica nova (P2 na semana de 06-10/07).
+**Impacto:** Aplicado em 03/07 no template (`mentoria/alunas/_template/0.1- Roteiro da Jornada.md`) e replicado pros 5 alunos ativos (Milena, Analia, Helio, Ricardo, Rodrigo). Milena já segue o ritmo novo: P1 fechada 03/07, P2 fecha na semana de 06-10/07 — dentro do Mês 1.
 
 ## 01/07/2026 — Migração de plataforma: Hotmart bloqueou → curso migrado pra Voomp Play
 

@@ -30,68 +30,49 @@
 
 ## PRÓXIMOS PASSOS (roteiro a partir de agora)
 
-### MÊS 1 REVISADO — Fechar M0 (1 sessão)
+> Cronograma rebalanceado em 03/07/2026 (decisão da Karol): Mês 1 = M0 + M1 · Meses 2-3 = M2 + campo · Meses 4-6 = M3 + campo · Meses 7-12 = M4 + escala. As fases iniciais são conduzidas pelos agentes de IA e andam rápido — o tempo fica onde o trabalho demora: proposta, validação e posicionamento.
 
-> M0 está quase pronto. Falta a sessão de validação com a Karol.
+### AGORA — Fechar M1: Promessa Transformadora (sessão semana 06-10/07)
 
-| Semana | Atividade | Entregável | Sessão |
-|--------|-----------|------------|--------|
-| Próxima | Revisão da história real + Ikigai com a Karol | Validar entregáveis do M0 | ★ Sessão 2: Fechar M0 — validar história + Ikigai |
-
-**O que revisar na sessão:**
-- A história real está densa — extrair os 2-3 elementos que vão dentro do método (ferida → medicina → mecanismo)
-- O Ikigai sintetizou bem — confirmar a interseção que vai virar o diferencial do IAP
-- Guardar esses elementos como semente pra narrativa autoral (P3) e frase-tese (P5) — fechamento dos dois fica pra depois, quando P1+P2+P3 já existirem (segue a sequência do método Expert360, não faz sentido fechar frase-tese antes da persona/promessa/processo)
+- Exercício com o Agente da Promessa antes da sessão (se possível)
+- Ponto de partida: o rascunho que ela chegou perto — _"No agro, não basta saber fazer"_
+- Promessa calibrada pra persona fechada em P1 (técnico de regularização de imóveis rurais), não pro produtor rural
+- Saída da sessão: P2 definida + rascunho de bio com P1 + P2
+- Lembrete: frase-tese NÃO fecha aqui — semente guardada pra P5 (Meses 7-12)
 
 ---
 
-### MÊS 2 — M1: PERSONA COMPRADORA
+### MESES 2-3 (ago-set) — M2 + CAMPO (o bloco mais crítico pra Milena)
 
-| Semana | Atividade | Entregável | Sessão |
-|--------|-----------|------------|--------|
-| Sem. 1 | Aula: Empreendedora mede por ano, não por mês | Virada de chave | — |
-| Sem. 2 | Aula: Custo Invisível do Sim | Critério para proteger o projeto | — |
-| Sem. 3 | Aula: O que é Persona Compradora | Clareza conceitual | — |
-| Sem. 4 | Exercício: Persona Compradora (Agente) | P1 documentada | ★ Sessão 3: Validar P1 |
+> O IAP existe como nome e sigla, mas ainda não tem narrativa autoral. É aqui que ele vira método incopiável.
 
-**Atenção da Karol para a sessão:**
-- Persona compradora inicial = técnico/profissional de regularização (não ampliar para todo o agro agora)
-- Puxar: qual profissional tem a dor mais urgente? Quem está mais pronto para pagar?
-- A persona de Milena é quem ela era 3-4 anos atrás — usar a história dela para espelhar
+- Aulas do método autoral (permissão pra construir + "seu método está na sua história" + 5 tipos de narrativa)
+- Exercício: Agente do Processo Autoral → P3 (narrativa do IAP)
+- Portfólio Estratégico
+- Campo: vender a promessa com a nova persona — 3+ leads qualificados
+- ★ Sessão: Validar P3
+- ★ Sessão: Fechar M2 + revisão do campo
 
 ---
 
-### MÊS 3 — M1: PROMESSA TRANSFORMADORA
+### MESES 4-6 (out-dez) — M3 + CAMPO
 
-| Semana | Atividade | Entregável | Sessão |
-|--------|-----------|------------|--------|
-| Sem. 1 | Aula: O que é Promessa Transformadora | Clareza conceitual | — |
-| Sem. 2 | Exercício: Promessa (Agente) | P2 definida | — |
-| Sem. 3 | Execução: rascunho de bio com P1 + P2 | Bio rascunho | — |
-| Sem. 4 | Refinamento | P2 + frase-tese finalizada | ★ Sessão 4: Fechar M1 |
-
----
-
-### MÊS 4 — M2: PROCESSO AUTORAL (Narrativa do IAP)
-
-> Este é o módulo mais crítico para a Milena — o IAP existe como nome e sigla, mas ainda não tem narrativa autoral. É aqui que ele vira método incopiável.
-
-| Semana | Atividade | Entregável | Sessão |
-|--------|-----------|------------|--------|
-| Sem. 1 | Aula: Você não precisa saber tudo para ensinar | Permissão para construir agora | — |
-| Sem. 2 | Aula: Seu método já existe. Está na sua história. | Clareza de que vai revelar, não inventar | — |
-| Sem. 3 | Aula: O que é um método autoral (5 tipos de narrativa) | Identifica seu tipo | — |
-| Sem. 4 | Exercício: Agente do Processo Autoral | P3: IAP com narrativa autoral | ★ Sessão 5: Validar P3 |
+- Agente da Proposta Validada → P4
+- Roteiro de Abordagem + Formulário de Pré-Diagnóstico + Roteiro da Sessão 1 a 1
+- Campo: 10+ conversas de vendas com o roteiro, rastreador preenchido
+- Validar 3x (primeiras vendas) antes de avançar pro posicionamento
+- ★ Sessão: Validar P4 + roteiros
+- ★ Sessões mensais: revisão do campo
 
 ---
 
-### MESES 5-12 — Seguir o roteiro geral
+### MESES 7-12 (jan-jun/2027) — M4 + ESCALA
 
-A partir do Mês 5, a Milena segue o roteiro padrão (portfólio → oferta → campo → autoridade → escala).
+**Autoridade Tríplice + Frase-Tese (P5).** Retomar aqui a semente guardada no fechamento do M0 (ferida → medicina → mecanismo) e o rascunho: _"No agro, não basta saber fazer. É preciso saber enxergar, conduzir, posicionar e sustentar."_ Levar pro Agente da Autoridade Tríplice junto com P1+P2+P3 já prontos, pra virar frase-tese curta e visceral.
 
-**Mês 9 — M4: Autoridade Tríplice + Frase-Tese (P5).** Retomar aqui a semente guardada no fechamento do M0 (ferida → medicina → mecanismo) e o rascunho que a Milena chegou perto de fazer: _"No agro, não basta saber fazer. É preciso saber enxergar, conduzir, posicionar e sustentar."_ Levar pro Agente da Autoridade Tríplice junto com P1+P2+P3 já prontos, pra virar frase-tese curta e visceral.
+Depois: presença digital (destaques, posts fixados, linha editorial, roteiros), conteúdo em rotina, revisão do ecossistema e escala.
 
-Ver: `0.1- Roteiro da Jornada.md` — Meses 5 a 12.
+Ver: `0.1- Roteiro da Jornada.md` — cronograma completo.
 
 ---
 
