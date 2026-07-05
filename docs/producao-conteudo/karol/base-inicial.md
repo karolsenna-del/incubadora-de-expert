@@ -237,6 +237,7 @@ O que domina os virais de vendas/empreendedorismo/infoprodutos NÃO é trend nem
 
 - 15/06 — @iris-pesquisador: Base criada — 3 formatos de carrossel + pool de 15 temas + insights 2026 + fontes externas.
 - 04/07 — @iris-pesquisador: Adicionado braço de Reels (trio C.N.L./P.O.V./Gancho Negativo, de 2 fontes: Trello ReelsPro + Arsenal Viral) + 8 temas médios novos validados no garimpo + 4 quentes novos. Pool total: 27 temas. Flag de janela no tema "cansaço". Análise completa de formatos: `formatos-virais-adaptados.md`.
+- 04/07 — @sage-teorico + @rico-roteirista: Batelada de estreia dos Reels (3 posts, temas sem overlap com os 6 carrosséis de 30/06): `metade-2026-metodo-na-cabeca` (C.N.L., janela julho), `oito-lancamentos-60-segundos` (falado, pilar "expert em fracassar"), `curso-nunca-sai-do-papel` (P.O.V.). Cada um com context.yaml + teoria.md + roteiro.md (roteiro já inclui orientação de gravação do Mack). Status: aguardando gravação pela Karol.
 
 ---
 
