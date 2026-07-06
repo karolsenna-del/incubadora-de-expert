@@ -160,7 +160,9 @@ Sessao 01-02/07 — Live 20 feita, Expert360 corrigido pra plataforma VOOMP, ses
 - Briefing enxuto aprovado (`business/campanhas/lp-diagnostico-expert/briefing.md`). Dominio escolhido: `diagnostico.incubadoradeexpert.com.br`.
 - Abertura do forms de pre-diagnostico reescrita (Karol aplicou a versao com a tese) — dissonancia "lancamento/infoproduto" eliminada.
 - Copy completa redigida (`copy.md`, 8 secoes) + pagina construida e DEPLOYADA: preview publico em https://lp-diagnostico-expert.vercel.app (pixel PageView + evento **Lead** validados no ar; foto ok; 4 CTAs → forms).
-- PENDENTE pra ir ao ar no dominio final: (1) Karol aprovar a copy (autorizou produzir tudo pra aprovar depois), (2) registro A `diagnostico` → 76.76.21.21 no Registro.br (dominio ja vinculado ao projeto Vercel), (3) trocar link da bio/bitly.
+- Copy revisada pela Karol (04/07): headline v2 ("descobrir o caminho... metodo proprio e vendavel" — dor declarada da Laura, nao "vender"), voz unificada em 3a pessoa (regra: pagina fala DA Karol, forms/WhatsApp em 1a — nunca misturar), historia "lugar certo, momento errado" (replicada tambem na LP do treinamento; versao B intocada pro teste A/B).
+- **PUBLICADA (06/07): https://diagnostico.incubadoradeexpert.com.br** — DNS feito pela Karol, cert SSL travado na Vercel (dominio adicionado antes do DNS) e emitido manualmente via `vercel certs issue`. Validado: HTTPS 200, headline v2 no ar, pixel PageView+Lead, redirect HTTP→HTTPS 308.
+- FALTA SO: trocar o destino do botao "diagnostico" no link-in-bio do Bitly (forms → pagina nova). Botao do grupo WhatsApp intocado. Direct daqui pra frente: mandar o dominio direto.
 
 **Sessao 03-04/07 (madrugada) — Bootstrap 3: Fases 0 e 1 FECHADAS:**
 - FASE 0 (servidor): Cloudflare MCP autorizado, conta Hetzner criada, servidor `n8n-incubadora` provisionado via API (cx23 @ hel1, IP 204.168.240.18, €6,49/mes). Dominio `karolsenna.com.br` conectado ao Cloudflare (NS trocados no Registro.br, zona ativa). Stack no ar: Traefik + Postgres + Redis + n8n queue mode. `https://n8n.karolsenna.com.br` com SSL valido, owner criado via API, webhook https ok. Gate QG-B3-001 fechado.
@@ -169,7 +171,7 @@ Sessao 01-02/07 — Live 20 feita, Expert360 corrigido pra plataforma VOOMP, ses
 - Tracker: `business/infra/bootstrap3-tracker.md`. Retomar com `/bootstrap3` (entra direto na Fase 2).
 
 **Pendencias abertas:**
-- LP Diagnostico do Expert: aprovar copy (preview: https://lp-diagnostico-expert.vercel.app) + DNS `diagnostico` A 76.76.21.21 no Registro.br + trocar link da bio/bitly
+- LP Diagnostico do Expert NO AR (https://diagnostico.incubadoradeexpert.com.br) — falta so a Karol trocar o destino do botao "diagnostico" no Bitly (forms → pagina)
 - Expert360: subir curso na VOOMP (ativar /course-publisher quando videos estiverem prontos)
 - LP versao B (teste A/B): **NO AR e validada** — https://treinamento2.incubadoradeexpert.com.br (HTTPS 200, pixel PageView+Contact ok, redirect HTTP→HTTPS ok). Clone fiel da pagina GreatPages, fonte em `business/campanhas/lp-minitreinamento-b/`, projeto Vercel `lp-minitreinamento-b`. GreatPages cancelado pela Karol (assinatura ate 27/07). Teste A/B: quando subir anuncios, dividir trafego (2 conjuntos, um pra cada URL) — Trafego Arcane. SOP-018 no playbook do TechOps.
 - Teste A/B das duas LPs: quando subir anuncios, dividir trafego no Meta (2 conjuntos identicos, um pra cada URL) — Trafego Arcane
