@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>As 3 Jornadas — Expert360º</title>
+<style>
+  :root{
+    --page-bg: #f2ede3;
+    --ink: #211c15;
+    --ink-dim: #6f6656;
+    --ink-faint: #9a917e;
+    --card-bg: #fffdf8;
+    --border: #e2d9c6;
+    --accent: #ff6a1f;
+
+    --m0: #96897236;
+    --m0-solid: #8c8069;
+    --m1-solid: #e0913c;
+    --m2-solid: #ff6a1f;
+    --m3-solid: #bf4c1c;
+    --m4-solid: #2a2015;
+
+    --m0-tint: #8c806914;
+    --m1-tint: #e0913c14;
+    --m2-tint: #ff6a1f14;
+    --m3-tint: #bf4c1c14;
+    --m4-tint: #2a201514;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: var(--page-bg); }
+  body {
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    display: flex; justify-content: center;
+    padding: 3.4vh 2.4vw 4vh;
+  }
+  .poster {
+    width: min(97vw, 1720px);
+    display: flex; flex-direction: column; gap: 26px;
+  }
+
+  /* ---------- HEADER ---------- */
+  .header { text-align: center; }
+  .eyebrow {
+    font-size: 12px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 700; margin-bottom: 10px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(26px, 2.7vw, 42px);
+    font-weight: 700; text-wrap: balance; line-height: 1.1;
+  }
+  h1 strong { color: var(--accent); font-weight: 700; }
+  .legenda {
+    margin-top: 14px; display: flex; justify-content: center; gap: 28px; flex-wrap: wrap;
+  }
+  .legenda-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12.5px; color: var(--ink-dim); font-weight: 600;
+  }
+  .legenda-marca { width: 11px; height: 11px; border-radius: 3px; flex: none; }
+  .legenda-marca.ordem { background: var(--m2-solid); }
+  .legenda-marca.entrega { background: var(--ink); border-radius: 50%; }
+  .legenda-marca.identidade { background: none; border: 2px solid var(--accent); border-radius: 50%; }
+
+  /* ---------- ROW 1: PONTOS + CHEVRONS ---------- */
+  .jornada-row { display: flex; align-items: stretch; height: 168px; }
+
+  .ponto {
+    flex: 0 0 178px; border-radius: 14px; padding: 16px 16px;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    justify-content: center; gap: 8px; position: relative; z-index: 1;
+  }
+  .ponto-a { background: #e3dbc7; border: 1px solid #d2c6a8; }
+  .ponto-b { background: var(--m4-solid); border: 1px solid #000; }
+  .ponto-icon { width: 34px; height: 34px; }
+  .ponto-tag {
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700;
+    color: var(--ink-faint);
+  }
+  .ponto-b .ponto-tag { color: #b99a7c; }
+  .ponto-nome { font-family: Georgia, serif; font-weight: 700; font-size: 16px; line-height: 1.15; }
+  .ponto-b .ponto-nome { color: #fff; }
+  .ponto-desc { font-size: 10.8px; line-height: 1.4; color: var(--ink-dim); }
+  .ponto-b .ponto-desc { color: #cbb9a3; }
+
+  .chevrons { flex: 1; display: flex; }
+  .chevron {
+    flex: 1; margin-left: -22px; padding: 18px 30px 18px 44px;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    justify-content: center; gap: 6px; color: #fff; position: relative;
+  }
+  .chevron:first-child { margin-left: 0; padding-left: 22px; }
+  .chevron.m0 { background: var(--m0-solid); clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%); z-index: 5; }
+  .chevron.m1 { background: var(--m1-solid); clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%, 26px 50%); z-index: 4; }
+  .chevron.m2 { background: var(--m2-solid); clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%, 26px 50%); z-index: 3; }
+  .chevron.m3 { background: var(--m3-solid); clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%, 26px 50%); z-index: 2; }
+  .chevron.m4 { background: var(--m4-solid); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 26px 50%); z-index: 1; padding-right: 20px; }
+
+  .chevron-icon { width: 30px; height: 30px; }
+  .chevron-tag { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; opacity: 0.75; }
+  .chevron-nome { font-family: Georgia, serif; font-weight: 700; font-size: 15px; line-height: 1.15; }
+  .chevron-entrega { font-size: 10.6px; line-height: 1.3; opacity: 0.92; }
+
+  /* ---------- ROW 2: MODULE CARDS ---------- */
+  .cards-row { display: flex; gap: 14px; }
+  .card {
+    flex: 1; background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px 16px 18px; border-top: 4px solid;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .card.m0 { border-top-color: var(--m0-solid); background: linear-gradient(var(--m0-tint), var(--m0-tint)), var(--card-bg); }
+  .card.m1 { border-top-color: var(--m1-solid); background: linear-gradient(var(--m1-tint), var(--m1-tint)), var(--card-bg); }
+  .card.m2 { border-top-color: var(--m2-solid); background: linear-gradient(var(--m2-tint), var(--m2-tint)), var(--card-bg); }
+  .card.m3 { border-top-color: var(--m3-solid); background: linear-gradient(var(--m3-tint), var(--m3-tint)), var(--card-bg); }
+  .card.m4 { border-top-color: var(--m4-solid); background: linear-gradient(var(--m4-tint), var(--m4-tint)), var(--card-bg); }
+
+  .card-titulo { font-weight: 700; font-size: 13.5px; }
+  .card-campo { display: flex; flex-direction: column; gap: 3px; }
+  .card-label {
+    font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700;
+    color: var(--ink-faint); display: flex; align-items: center; gap: 5px;
+  }
+  .card-label .dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+  .card-label .dot.identidade { background: none; border: 1.6px solid var(--accent); }
+  .card-label .dot.entrega { background: var(--ink); }
+  .card-valor { font-size: 11.6px; line-height: 1.42; color: var(--ink); }
+  .card-valor em { font-style: italic; color: var(--ink-dim); }
+  .card-identidade {
+    font-family: Georgia, serif; font-style: italic; font-weight: 700;
+    color: var(--accent); font-size: 12.6px; line-height: 1.3;
+  }
+
+  /* ---------- ROW 3: TRILHA DE GATES ---------- */
+  .trilha-box {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 30px 20px;
+  }
+  .trilha-titulo {
+    text-align: center; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    font-weight: 700; color: var(--ink-faint); margin-bottom: 16px;
+  }
+  .trilha-titulo strong { color: var(--ink); }
+  .trilha {
+    display: flex; align-items: center;
+  }
+  .no {
+    display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 0 0 auto;
+  }
+  .no-dot { width: 15px; height: 15px; border-radius: 50%; border: 3px solid var(--card-bg); box-shadow: 0 0 0 1.5px var(--border); }
+  .no.m0 .no-dot { background: var(--m0-solid); }
+  .no.m1 .no-dot { background: var(--m1-solid); }
+  .no.m2 .no-dot { background: var(--m2-solid); }
+  .no.m3 .no-dot { background: var(--m3-solid); }
+  .no.m4 .no-dot { background: var(--m4-solid); }
+  .no-label { font-size: 11px; font-weight: 700; }
+  .gate {
+    flex: 1; display: flex; flex-direction: column; align-items: center; gap: 5px;
+    padding: 0 10px; position: relative; top: -18px;
+  }
+  .gate-linha { width: 100%; height: 1px; background: repeating-linear-gradient(to right, var(--ink-faint) 0 5px, transparent 5px 10px); }
+  .gate-texto { font-size: 10.4px; font-style: italic; color: var(--ink-dim); text-align: center; max-width: 22ch; }
+
+  /* ---------- FOOTER ---------- */
+  .footer { text-align: center; padding-top: 4px; }
+  .footer-linha {
+    font-family: Georgia, serif; font-style: italic; font-weight: 700;
+    font-size: clamp(14px, 1.5vw, 19px); color: var(--ink);
+  }
+  .footer-linha strong { color: var(--accent); font-style: italic; }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <div class="header">
+    <div class="eyebrow">Expert360º &nbsp;·&nbsp; Módulo 2, Aula 4</div>
+    <h1>As <strong>3 Jornadas</strong>: o mapa de Ponto A a Ponto B do Expert360º</h1>
+    <div class="legenda">
+      <div class="legenda-item"><span class="legenda-marca ordem"></span>Ordem das setas = Jornada Cronológica</div>
+      <div class="legenda-item"><span class="legenda-marca entrega"></span>Entrega de cada módulo = Jornada Didática</div>
+      <div class="legenda-item"><span class="legenda-marca identidade"></span>Identidade = Jornada Psicológica</div>
+    </div>
+  </div>
+
+  <!-- ROW 1 -->
+  <div class="jornada-row">
+    <div class="ponto ponto-a">
+      <svg class="ponto-icon" viewBox="0 0 24 24" fill="none" stroke="#4a4436" stroke-width="1.6">
+        <ellipse cx="12" cy="12" rx="9" ry="5.5"/>
+        <circle cx="12" cy="12" r="2.4"/>
+        <line x1="4" y1="4" x2="20" y2="20"/>
+      </svg>
+      <div class="ponto-tag">Ponto A</div>
+      <div class="ponto-nome">Especialista Invisível</div>
+      <div class="ponto-desc">Reconhecida no offline. Trava no digital: sabe muito, não virou método. Ciclo intenção → adiamento → culpa.</div>
+    </div>
+
+    <div class="chevrons">
+      <div class="chevron m0">
+        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7">
+          <rect x="5" y="11" width="14" height="9" rx="1.5"/>
+          <path d="M8 11V8a4 4 0 0 1 7.8-1.2"/>
+        </svg>
+        <div class="chevron-tag">Módulo 0</div>
+        <div class="chevron-nome">Desbloqueio</div>
+        <div class="chevron-entrega">História real documentada</div>
+      </div>
+      <div class="chevron m1">
+        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7">
+          <circle cx="12" cy="12" r="8"/>
+          <circle cx="12" cy="12" r="4.5"/>
+          <circle cx="12" cy="12" r="1"/>
+        </svg>
+        <div class="chevron-tag">Módulo 1</div>
+        <div class="chevron-nome">Persona + Promessa</div>
+        <div class="chevron-entrega">P1 + P2</div>
+      </div>
+      <div class="chevron m2">
+        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7">
+          <polygon points="12,3 20,8 20,16 12,21 4,16 4,8"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+        <div class="chevron-tag">Módulo 2</div>
+        <div class="chevron-nome">Processo Autoral + Ecossistema</div>
+        <div class="chevron-entrega">P3 + Portfólio</div>
+      </div>
+      <div class="chevron m3">
+        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7">
+          <rect x="6" y="11" width="12" height="8" rx="1.5"/>
+          <path d="M8.5 11V8.2a3.5 3.5 0 0 1 7 0V11"/>
+          <path d="M9.5 15.2l1.7 1.7 3.3-3.3"/>
+        </svg>
+        <div class="chevron-tag">Módulo 3</div>
+        <div class="chevron-nome">Vendas Secretas</div>
+        <div class="chevron-entrega">P4 + 3 vendas reais</div>
+      </div>
+      <div class="chevron m4">
+        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7">
+          <circle cx="12" cy="12" r="2"/>
+          <path d="M12 12 A7 7 0 0 1 12 5"/>
+          <path d="M12 12 A10.5 10.5 0 0 1 12 1.5"/>
+          <path d="M12 12 A7 7 0 0 0 12 19"/>
+          <path d="M12 12 A10.5 10.5 0 0 0 12 22.5"/>
+        </svg>
+        <div class="chevron-tag">Módulo 4</div>
+        <div class="chevron-nome">Autoridade</div>
+        <div class="chevron-entrega">P5</div>
+      </div>
+    </div>
+
+    <div class="ponto ponto-b">
+      <svg class="ponto-icon" viewBox="0 0 24 24" fill="none" stroke="#f2ded0" stroke-width="1.6">
+        <circle cx="12" cy="12" r="2"/>
+        <path d="M12 12 L12 3"/>
+        <path d="M12 12 L18.4 6.4"/>
+        <path d="M12 12 L20 12"/>
+        <path d="M12 12 L18.4 17.6"/>
+        <path d="M12 12 L5.6 17.6"/>
+      </svg>
+      <div class="ponto-tag">Ponto B</div>
+      <div class="ponto-nome">Especialista Autoridade</div>
+      <div class="ponto-desc">Método autoral com nome próprio. 3 vendas reais no 1:1. Presença digital posicionada. Os 5Ps completos.</div>
+    </div>
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="cards-row">
+    <div class="card m0">
+      <div class="card-titulo">Módulo 0 — Desbloqueio</div>
+      <div class="card-campo">
+        <div class="card-label"><span class="dot identidade"></span>Identidade</div>
+        <div class="card-identidade">Do Currículo à Autoridade</div>
+        <div class="card-valor"><em>História = dado, não vulnerabilidade.</em></div>
+      </div>
+      <div class="card-campo">
+        <div class="card-label"><span class="dot entrega"></span>Entrega</div>
+        <div class="card-valor">História real documentada (antes / durante / depois) — exercício em Docs, sem agente.</div>
+      </div>
+    </div>
+
+    <div class="card m1">
+      <div class="card-titulo">Módulo 1 — Persona + Promessa</div>
+      <div class="card-campo">
+        <div class="card-label"><span class="dot identidade"></span>Identidade</div>
+        <div class="card-identidade">Do Conhecimento à Narrativa</div>
+        <div class="card-valor"><em>Sua história vira diferencial.</em></div>
+      </div>
+      <div class="card-campo">
+        <div class="card-label"><span class="dot entrega"></span>Entrega</div>
+        <div class="card-valor">P1 (Persona Compradora) + P2 (Promessa Transformadora) — 2 agentes.</div>
+      </div>
+    </div>
+
+    <div class="card m2">
+      <div class="card-titulo">Módulo 2 — Processo Autoral + Ecossistema</div>
+      <div class="card-campo">
+        <div class="card-label"><span class="dot identidade"></span>Identidade</div>
+        <div class="card-identidade">Do Caos ao Método Autoral</div>
+        <div class="card-valor"><em>Especialista com algo que pode ensinar e escalar.</em></div>
+      </div>
+      <div class="card-campo">
+        <div class="card-label"><span class="dot entrega"></span>Entrega</div>
+        <div class="card-valor">P3 (Método Autoral) + Portfólio de Ferramentas — Agente do Processo Autoral + Agente do Portfólio.</div>
+      </div>
+    </div>
+
+    <div class="card m3">
+      <div class="card-titulo">Módulo 3 — Vendas Secretas</div>
+      <div class="card-campo">
+        <div class="card-label"><span class="dot identidade"></span>Identidade</div>
+        <div class="card-identidade">Da Promessa à Venda Secreta</div>
+        <div class="card-valor"><em>"Sou especial o suficiente?" some com a prova.</em></div>
+      </div>
+      <div class="card-campo">
+        <div class="card-label"><span class="dot entrega"></span>Entrega</div>
+        <div class="card-valor">P4 + Rastreador de Leads + 3 vendas reais no 1:1 — Agente da Proposta Validada.</div>
+      </div>
+    </div>
+
+    <div class="card m4">
+      <div class="card-titulo">Módulo 4 — Autoridade</div>
+      <div class="card-campo">
+        <div class="card-label"><span class="dot identidade"></span>Identidade</div>
+        <div class="card-identidade">Da Invisibilidade à Autoridade</div>
+        <div class="card-valor"><em>Presença no digital com o que já está provado.</em></div>
+      </div>
+      <div class="card-campo">
+        <div class="card-label"><span class="dot entrega"></span>Entrega</div>
+        <div class="card-valor">P5 (Presença Digital) — Agente da Autoridade Tríplice.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 3 -->
+  <div class="trilha-box">
+    <div class="trilha-titulo">Por que essa ordem <strong>não é arbitrária</strong> — a Jornada Cronológica, gate a gate</div>
+    <div class="trilha">
+      <div class="no m0"><div class="no-dot"></div><div class="no-label">M0</div></div>
+      <div class="gate"><div class="gate-linha"></div><div class="gate-texto">Persona precisa ressoar com a história</div></div>
+      <div class="no m1"><div class="no-dot"></div><div class="no-label">M1</div></div>
+      <div class="gate"><div class="gate-linha"></div><div class="gate-texto">Não se constrói método sem saber pra quem</div></div>
+      <div class="no m2"><div class="no-dot"></div><div class="no-label">M2</div></div>
+      <div class="gate"><div class="gate-linha"></div><div class="gate-texto">Não se monta oferta sem método</div></div>
+      <div class="no m3"><div class="no-dot"></div><div class="no-label">M3</div></div>
+      <div class="gate"><div class="gate-linha"></div><div class="gate-texto">Não se aparece no digital sem prova</div></div>
+      <div class="no m4"><div class="no-dot"></div><div class="no-label">M4</div></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-linha">As 3 jornadas acontecem <strong>ao mesmo tempo</strong> — quem projeta só uma, deixa o lead sem resposta.</div>
+  </div>
+
+</div>
+</body>
+</html>
