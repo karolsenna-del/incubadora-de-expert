@@ -48,7 +48,7 @@
 | Operacao | Responsavel | Status | Onde acompanhar |
 |----------|-------------|--------|-----------------|
 | Instagram / Conteudo | Karol | Ativa — Destaques 1 e 2 postados, Destaque 3 + posts feed em andamento | contexto-dinamico.md — prioridades do momento |
-| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 20 feita (28/06) | business/campanhas/lives-semanais/ |
+| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 21 roteiro pronto (07/07), live marcada pra 08/07 | business/campanhas/lives-semanais/ |
 | Mentoria (5 alunos) | Karol | Ativa — Milena: P1 fechada, P2 semana 06-10/07. Roteiro da jornada rebalanceado (03/07) e replicado pros 5 alunos | mentoria/alunas/ |
 | Funil mini treinamento (LP → WhatsApp) | Karol | LP nova PUBLICADA — treinamento.incubadoradeexpert.com.br (Vercel) | business/campanhas/lp-minitreinamento/ |
 
