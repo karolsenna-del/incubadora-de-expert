@@ -10,11 +10,13 @@
 ## Slide 1 — CAPA
 
 **Texto:**
-5 perguntas rápidas.
+5 perguntas rápidas
+pra saber se o seu método
+tá travado.
 
 Se você respondeu SIM
 pra 2 ou mais —
-isso não é falta de competência.
+não é falta de competência.
 
 **Visual:** Fundo preto. Texto branco. "não é falta de competência" em laranja.
 
@@ -94,7 +96,7 @@ em método que vende.
 ## Análise Técnica
 
 - **Contagem:** ~750 caracteres (formato diagnóstico é enxuto por natureza — cada slide é 1 pergunta)
-- **Loopings:** aberto no Slide 1 (promessa "se 2+... isso não é...") → fechado no Slide 6 (resposta)
+- **Loopings:** aberto no Slide 1 (promessa "seu método tá travado... não é falta de competência") → fechado no Slide 6 (resposta)
 - **Elementos notáveis:** Autodiagnóstico (formato inteiro) · Identificação progressiva (S2-S6) · Virada/reframe (S6) · CTA estrutura, não motivação (S7)
 - **CTA tipo:** Comente AULA
 - **Nota de formato:** este é o formato-teste (20%) da base — primeira estreia. Save-rate é a métrica-chave a observar (pessoas salvam pra "responder depois" ou reler)
