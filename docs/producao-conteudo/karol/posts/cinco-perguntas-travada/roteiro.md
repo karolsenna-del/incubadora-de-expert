@@ -1,7 +1,7 @@
 # Roteiro — cinco-perguntas-travada (Carrossel-Diagnóstico)
 
 > Squad: Conteúdo Arcane (Rico — roteirista) | Data: 07/07/2026 · Desafio 10 Dias, Dia 4 · 12h
-> Formato: Carrossel-Diagnóstico (formato-teste dos 20%) · 7 slides · CTA "Comente AULA"
+> Formato: Carrossel-Diagnóstico (formato-teste dos 20%) · 8 slides · CTA "Comente AULA"
 > Tese: Travar não é falta de competência — é ausência de estrutura. As perguntas provam isso pra própria pessoa.
 > Dor: as 3 dores documentadas (Dor 1, 2, 3) + diálogo interno
 
@@ -14,7 +14,7 @@
 pra saber se o seu método
 tá travado.
 
-Se você respondeu SIM
+Se você responder SIM
 pra 2 ou mais —
 não é falta de competência.
 
@@ -48,7 +48,7 @@ menos experiência que você e pensou:
 
 **Texto:**
 3. Você tem mais de um curso ou formação
-guardado "pra quando eu estiver pronta"?
+guardado na sua cabeça "pra quando estiver pronta"?
 
 **Visual:** Fundo branco. Número "3" grande.
 
@@ -57,7 +57,7 @@ guardado "pra quando eu estiver pronta"?
 ## Slide 5 — Pergunta 4
 
 **Texto:**
-4. Sua vida profissional está bem —
+4. Sua vida profissional no off está bem —
 mas existe uma inquietação
 que não desaparece?
 
@@ -65,22 +65,29 @@ que não desaparece?
 
 ---
 
-## Slide 6 — Pergunta 5 + Resultado
+## Slide 6 — Pergunta 5
 
 **Texto:**
-5. Você já disse "ano que vem eu começo"
+5. Você já disse "em breve eu começo"
 mais de uma vez — pro mesmo projeto?
 
-Se 2+ respostas foram SIM:
-o problema nunca foi competência.
-Foi nunca ter estruturado
-o que você já sabe.
-
-**Visual:** Fundo preto. Últimas 3 linhas em laranja.
+**Visual:** Fundo branco. Número "5" grande.
 
 ---
 
-## Slide 7 — CTA + Posicionamento
+## Slide 7 — Resultado
+
+**Texto:**
+Se 2+ respostas foram SIM:
+o problema nunca foi competência.
+Foi nunca ter estruturado
+o que você já sabe em método.
+
+**Visual:** Fundo preto. Texto em laranja.
+
+---
+
+## Slide 8 — CTA + Posicionamento
 
 **Texto:**
 Comenta AULA que eu te envio
@@ -96,7 +103,7 @@ em método que vende.
 ## Análise Técnica
 
 - **Contagem:** ~750 caracteres (formato diagnóstico é enxuto por natureza — cada slide é 1 pergunta)
-- **Loopings:** aberto no Slide 1 (promessa "seu método tá travado... não é falta de competência") → fechado no Slide 6 (resposta)
-- **Elementos notáveis:** Autodiagnóstico (formato inteiro) · Identificação progressiva (S2-S6) · Virada/reframe (S6) · CTA estrutura, não motivação (S7)
+- **Loopings:** aberto no Slide 1 (promessa "seu método tá travado... não é falta de competência") → fechado no Slide 7 (resposta)
+- **Elementos notáveis:** Autodiagnóstico (formato inteiro) · Identificação progressiva (S2-S6) · Virada/reframe (S7) · CTA estrutura, não motivação (S8)
 - **CTA tipo:** Comente AULA
 - **Nota de formato:** este é o formato-teste (20%) da base — primeira estreia. Save-rate é a métrica-chave a observar (pessoas salvam pra "responder depois" ou reler)

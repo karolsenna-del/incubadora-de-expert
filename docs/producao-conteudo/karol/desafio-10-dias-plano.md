@@ -39,8 +39,8 @@
 
 | Dia | Data | Carrossel · 12h (linha Alcateia) | Reels · 19h30 (teste de gancho/formato) |
 |-----|------|---------------------------|--------------------------------|
-| 4 | Sáb 11/07 | **5 perguntas pra saber se você tá travada** (Diagnóstico · AULA · ativa C5) | **"Quando o especialista diz: 'vou esperar ter mais seguidores'"** (P.O.V. quebra de objeção · ativa C3) |
-| 5 | Dom 12/07 | **O vazio de ganhar bem num trabalho sem propósito** (Alcance · GRUPO · ativa C3) | **"15 anos de profissão em 60 segundos"** (falado, autoridade condensada · ativa C2+C5) |
+| 4 | Sáb 11/07 | ✅ **5 perguntas pra saber se você tá travada** (Diagnóstico · AULA · ativa C5) — criado no Canva, pronto pra postar | **"Quando o especialista diz: 'vou esperar ter mais seguidores'"** (P.O.V. quebra de objeção · ativa C3) |
+| 5 | Dom 12/07 | ✅ **O vazio de ganhar bem num trabalho sem propósito** (Alcance · GRUPO · ativa C3) — aprovado, pronto pra produzir | **"15 anos de profissão em 60 segundos"** (falado, autoridade condensada · ativa C2+C5) |
 | 6 | Seg 13/07 | **IA como braço do expert** (Dor/tese · AULA · ativa C5, tema quente) | **"Carta aberta ao especialista invisível"** (C.N.L. compartilhável · ativa C3) |
 | 7 | Ter 14/07 | **Renda presa ao tempo: agenda cheia é teto** (Dor · AULA) | **"Liberal, CLT ou servidor: o caminho muda?"** (comparação, fecha com pergunta aberta · ativa C4) |
 
@@ -100,3 +100,5 @@
 - 07/07 — @iris-pesquisador: Início adiado pra 08/07 (Dia 1 não foi gravado em 07/07). Cronograma inteiro deslocado +1 dia — Dia 10 agora cai em 17/07. Todos os posts já produzidos seguem válidos, só as datas de publicação mudaram.
 - 08/07 — @mack-produtor: Dia 2 ("O curso que nunca sai do papel") gravado, editado e agendado. Roteiro fechado com critério de trilha + efeito de áudio seletivo.
 - 08/07 — @mack-produtor: Dia 3 ("8 lançamentos fracassados em 60s") gravado, editado e agendado. Roteiro fechado sem música, tick discreto só na lista de erros. Fase 1 (dias 1-3, presença/silêncio) concluída.
+- 08/07 — @rico-roteirista: Dia 4 — carrossel "5 perguntas pra saber se você tá travada" ajustado (4 alterações de texto pedidas pela Karol) e criado no Canva. Falta o Reels do Dia 4 e a postagem de ambos.
+- 08/07 — @vox-chief: Dia 5 — carrossel "O vazio de ganhar bem num trabalho sem propósito" aprovado pela Karol, pronto pra produzir.

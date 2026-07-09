@@ -99,9 +99,9 @@ que minha vida estava passando —
 e eu só sobrevivendo,
 esperando bater ponto.
 
-Não foi coragem que me tirou de lá.
+Não foi coragem que me fez sair.
 Foi entender que o custo de ficar
-ficou maior que o custo de sair.
+seria maior que o custo de sair.
 
 **Visual:** Foto opcional. Fundo cinza.
 
@@ -120,6 +120,16 @@ Comenta GRUPO.
 Karol Senna · Incubadora de Expert
 Transformo conhecimento invisível
 em método que vende.
+
+---
+
+## LEGENDA
+
+13 anos no serviço público. Estabilidade total, salário garantido — e um vazio que ninguém em casa entendia.
+
+O problema nunca foi ingratidão. Foi desalinhamento: ter tudo que todo mundo quer não é o mesmo que ter o que VOCÊ quer.
+
+👉 Se esse vazio te atravessa, comenta GRUPO — toda semana eu falo sobre transição com estrutura, não com impulso.
 
 ---
 

@@ -67,7 +67,8 @@ Se você já tentou e flopou: o problema provavelmente não é você. É a ordem
 - **Áudio:** microfone de lapela se tiver; senão, grava em ambiente silencioso a 50-80cm do celular.
 - **Gravação por blocos:** grava cada seção separada (hook / intro / lista / moral). A lista de erros: UMA FRASE POR TAKE — os cortes secos entre frases dão o ritmo do formato.
 - **Tom:** calma de quem já digeriu. NADA de ênfase dramática no "fracassei" — a força tá na naturalidade.
-- **Edição:** cortes secos entre frases, texto na tela conforme marcação acima. Sem música ou música bem baixa (a voz é a protagonista). Legendas automáticas embutidas (muita gente assiste sem som).
+- **Edição:** cortes secos entre frases, texto na tela conforme marcação acima. SEM música — 100% na voz + corte seco + legendas automáticas embutidas (muita gente assiste sem som). Formato de autoridade/confissão retém melhor sem trilha competindo com a fala.
+- **Efeito de áudio:** só na lista de erros (12-45s) — um "tick" seco e baixo sincronizado com cada item subindo na tela (reforça a vibe de checklist/auditoria). Fora da lista (hook, intro, moral+CTA): nenhum efeito novo, só a voz carrega o peso.
 - **Duração final:** 50-70s. Se passar de 75s, cortar exemplos da lista — nunca a moral.
 - **Tempo total de produção estimado:** 40-60 min (gravação por blocos + edição simples).
 

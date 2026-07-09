@@ -1,7 +1,7 @@
 # Lâminas Carrossel — cinco-perguntas-travada
 
 **Tema:** Diagnóstico "travar não é falta de competência" — 5 perguntas de autodiagnóstico
-**Formato:** Carrossel-Diagnóstico (7 slides) · formato-teste (20%) da base
+**Formato:** Carrossel-Diagnóstico (8 slides) · formato-teste (20%) da base
 **Roteiro fonte:** `roteiro.md`
 
 ---
@@ -12,7 +12,7 @@ Esse carrossel não precisa de imagem gerada no GPT. A força é a tipografia: f
 
 **Paleta:** preto, branco, cinza + laranja como cor de destaque (nunca vermelho).
 
-**Sem logomarca em nenhuma lâmina** — inclusive no Slide 7, a assinatura é só texto ("Karol Senna · Incubadora de Expert"), sem ícone/logo colado. Mantém o carrossel 100% tipográfico, sem elemento de marca competindo com o texto.
+**Sem logomarca em nenhuma lâmina** — inclusive no Slide 8, a assinatura é só texto ("Karol Senna · Incubadora de Expert"), sem ícone/logo colado. Mantém o carrossel 100% tipográfico, sem elemento de marca competindo com o texto.
 
 ---
 
@@ -24,7 +24,7 @@ Esse carrossel não precisa de imagem gerada no GPT. A força é a tipografia: f
 pra saber se o seu método
 tá travado.
 
-Se você respondeu SIM
+Se você responder SIM
 pra 2 ou mais —
 não é falta de competência.
 ```
@@ -75,8 +75,8 @@ do que eu sei"?
 **TEXTO:**
 ```
 3. Você tem mais de um curso
-ou formação guardado
-"pra quando eu estiver pronta"?
+ou formação guardado na sua cabeça
+"pra quando estiver pronta"?
 ```
 
 **FUNDO:** branco.
@@ -90,7 +90,7 @@ ou formação guardado
 **TEXTO:**
 ```
 4. Sua vida profissional
-está bem — mas existe
+no off está bem — mas existe
 uma inquietação que
 não desaparece?
 ```
@@ -101,29 +101,40 @@ não desaparece?
 
 ---
 
-## Slide 6 — Pergunta 5 + Resultado
+## Slide 6 — Pergunta 5
 
 **TEXTO:**
 ```
 5. Você já disse
-"ano que vem eu começo"
+"em breve eu começo"
 mais de uma vez —
 pro mesmo projeto?
-
-Se 2+ respostas foram SIM:
-o problema nunca foi competência.
-Foi nunca ter estruturado
-o que você já sabe.
 ```
 
-**FORMATAÇÃO:** primeiras 4 linhas (pergunta 5) em branco. Últimas 3 linhas (o resultado) em **laranja** — é o fechamento do looping aberto no Slide 1.
-
-**FUNDO:** preto sólido (espelha o Slide 1 — fecha visualmente o ciclo aberto na capa).
-**ELEMENTO VISUAL:** sem número (esse slide já é a virada, não mais uma pergunta isolada).
+**FUNDO:** branco (continua a alternância branco/cinza das perguntas 1-4).
+**ELEMENTO VISUAL:** número "5" gigante em cinza claro atrás do texto (mesmo princípio dos slides 2-5).
+**TIPOGRAFIA:** preto.
 
 ---
 
-## Slide 7 — CTA + Assinatura
+## Slide 7 — Resultado / Virada
+
+**TEXTO:**
+```
+Se 2+ respostas foram SIM:
+o problema nunca foi competência.
+Foi nunca ter estruturado
+o que você já sabe em método.
+```
+
+**FORMATAÇÃO:** tudo em **laranja** — é o fechamento do looping aberto no Slide 1.
+
+**FUNDO:** preto sólido (espelha o Slide 1 — fecha visualmente o ciclo aberto na capa).
+**ELEMENTO VISUAL:** sem número (esse slide é a virada isolada, não mais uma pergunta).
+
+---
+
+## Slide 8 — CTA + Assinatura
 
 **TEXTO:**
 ```
@@ -139,7 +150,7 @@ em método que vende.
 ```
 
 **FORMATAÇÃO:** CTA em destaque (fonte maior, branco ou laranja); assinatura em fonte menor, abaixo, separada visualmente (linha divisória fina ou espaçamento maior).
-**FUNDO:** preto ou branco — usar o oposto do Slide 6 pra criar uma pausa visual antes de fechar o carrossel.
+**FUNDO:** preto ou branco — usar o oposto do Slide 7 pra criar uma pausa visual antes de fechar o carrossel.
 
 ---
 
@@ -150,23 +161,23 @@ em método que vende.
 ```
 PASSO 1: MONTAR NO CANVA (15-20 min)
   - Cria carrossel Instagram (1080x1350)
-  - 7 páginas — sem etapa de geração de imagem no GPT
+  - 8 páginas — sem etapa de geração de imagem no GPT
   - Slide a slide: aplica o fundo sólido indicado (preto/branco/cinza)
   - Escreve o texto de cada slide (copia direto daqui)
-  - Números grandes (slides 2-5): usa a própria ferramenta de texto do
+  - Números grandes (slides 2-6): usa a própria ferramenta de texto do
     Canva com opacidade reduzida (~15-20%) pra criar o efeito "atrás do texto"
   - Laranja: usa a cor de destaque da tua marca (Incubadora de Expert)
   - Testa legibilidade no celular antes de exportar
   - Exporta cada slide em PNG
 
 PASSO 2: PUBLICAR (manual)
-  - Instagram Carrossel — sobe os 7 slides na ordem
+  - Instagram Carrossel — sobe os 8 slides na ordem
   - Caption + hashtags: sugestão abaixo
 ```
 
 ### Caminho B — squad de design dedicado
 
-Se tiver squad de design próprio: manda essas 7 lâminas com a especificação de cor/texto — ele aplica a identidade visual final. Pra esse formato específico (tipográfico, sem imagem), o ganho de terceirizar é menor — é rápido o suficiente pra fazer direto no Canva.
+Se tiver squad de design próprio: manda essas 8 lâminas com a especificação de cor/texto — ele aplica a identidade visual final. Pra esse formato específico (tipográfico, sem imagem), o ganho de terceirizar é menor — é rápido o suficiente pra fazer direto no Canva.
 
 ---
 
@@ -174,9 +185,9 @@ Se tiver squad de design próprio: manda essas 7 lâminas com a especificação 
 
 ```
 ✓ MOBILE-FIRST: texto legível mesmo em tela pequena
-✓ ALTO CONTRASTE: branco/preto sobre fundo sólido, laranja só nos pontos de virada (S1, S6)
+✓ ALTO CONTRASTE: branco/preto sobre fundo sólido, laranja só nos pontos de virada (S1, S7)
 ✓ 1 IDEIA POR SLIDE: cada pergunta isolada, sem acúmulo
-✓ RITMO DE FUNDO: branco/cinza alternado (S2-S5) quebra visualmente pra preto no fechamento (S1 e S6) — reforça que S6 é a resposta de S1
+✓ RITMO DE FUNDO: branco/cinza alternado (S2-S6) quebra visualmente pra preto no fechamento (S1 e S7) — reforça que S7 é a resposta de S1
 ✓ ÚLTIMA LÂMINA: CTA + assinatura, sempre
 ✓ SEM LOGOMARCA: nenhuma lâmina leva ícone/logo — assinatura é só texto
 ```
@@ -186,8 +197,8 @@ Se tiver squad de design próprio: manda essas 7 lâminas com a especificação 
 ## Caption pro Instagram (sugestão)
 
 ```
-5 perguntas rápidas. Se você respondeu SIM pra 2 ou mais, o problema nunca foi
-falta de competência — foi nunca ter estruturado o que você já sabe.
+5 perguntas rápidas. Se você responder SIM pra 2 ou mais, o problema nunca foi
+falta de competência — foi nunca ter estruturado o que você já sabe em método.
 
 Comenta AULA que eu te envio o primeiro passo pra sair do ciclo de "quase comecei".
 ```
