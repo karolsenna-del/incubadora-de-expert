@@ -42,7 +42,7 @@
 | Roteirizar M4 — Autoridade (10 aulas) | Course Creator | Done 15/06 | M3 roteirizado | m4-roteiros.md v2.1 — 10/10 aulas (Encerramento "Quem Você Se Tornou" adicionado 15/06) |
 | Escrever descricoes das aulas (todas as 43 + Modulo de Orientacoes) | Course Creator | Done 01/07 | Roteiros prontos | Confirmado em 01/07: descricoes ja estavam prontas (tracker indicava pendente por engano). |
 | Gerar assets visuais da area de membros | Course Publisher | Done 22/06 | — | 6 capas + 47 thumbs + 2 banners + avatar + certificado em `business/producao/expert360/assets/` |
-| Subir curso na VOOMP (videos + capas + thumbs + descricoes) | Course Publisher | Nao iniciado | Videos na pasta + descricoes prontas | Plataforma migrada de Hotmart pra Voomp Play (01/07). Estrutura de modulos ja criada pelo course-publisher. Ativar `/course-publisher`, missao de upload completo |
+| Subir curso na VOOMP (videos + capas + thumbs + descricoes) | Course Publisher | Bloqueado — Karol gravando aulas | Videos na pasta + descricoes prontas | Plataforma migrada de Hotmart pra Voomp Play (01/07). Estrutura de modulos ja criada pelo course-publisher. Ativar `/course-publisher` quando as gravacoes estiverem prontas |
 
 ---
 
@@ -57,6 +57,7 @@
 ## LOG
 
 > Mais recente primeiro.
+- 08/07 — @companion: Karol gravando mais aulas. Upload na VOOMP fica bloqueado ate a gravacao terminar — next action do projeto atualizada no cockpit.
 - 03/07 — @companion: weekly review — tracker sincronizado com a migracao pra VOOMP (tarefa de upload renomeada), descricoes marcadas Done (ja estavam prontas). Next action do projeto: subir curso na VOOMP.
 - 01/07 — @karol: PRD atualizado pra v1.4 (Fase 9 completa — curso estruturado e roteirizado, produção em andamento). Migração de plataforma: Hotmart bloqueou, curso migrado pra Voomp Play — course-publisher já estruturou os 5 módulos + Orientações com 43 aulas (config.yaml). Drive organizado em pastas por módulo (M0-M4). Alumni Group descartado para este lançamento. Template da Biblioteca de IAs corrigido — removida referência ao "Agente de Criação de Conteúdo (M4)" que nunca foi criado (estava gerando link quebrado pra aluna).
 - 22/06 — @course-publisher: design completo da area de membros — 6 capas de modulo (1920x1080), 47 thumbnails de aulas (1280x720), banner desktop (1920x800) + mobile (720x960), avatar do produto (600x600), certificado A4 (2480x3508). Scripts de geracao em `assets/`. Tese "Diploma e o que voce estudou. Metodo e o que voce viveu." usada no banner.

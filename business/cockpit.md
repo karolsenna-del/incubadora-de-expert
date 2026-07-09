@@ -13,7 +13,7 @@
 
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
-| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Subir curso na VOOMP (videos + descricoes + materiais) | Karol | Producao — 43 roteiros prontos, assets visuais feitos, descricoes prontas. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
+| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Karol gravando as aulas — retomar upload na VOOMP quando gravacao terminar | Karol | Producao — 43 roteiros prontos, assets visuais feitos, descricoes prontas, gravacao em andamento. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
 
 ---
 
@@ -48,7 +48,7 @@
 | Operacao | Responsavel | Status | Onde acompanhar |
 |----------|-------------|--------|-----------------|
 | Instagram / Conteudo | Karol | Ativa — Destaques 1 e 2 postados, Destaque 3 + posts feed em andamento | contexto-dinamico.md — prioridades do momento |
-| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 21 roteiro pronto (07/07), live marcada pra 08/07 | business/campanhas/lives-semanais/ |
+| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 21 realizada (08/07), deu tudo certo | business/campanhas/lives-semanais/ |
 | Mentoria (5 alunos) | Karol | Ativa — Milena: P1 fechada, P2 semana 06-10/07. Roteiro da jornada rebalanceado (03/07) e replicado pros 5 alunos | mentoria/alunas/ |
 | Funil mini treinamento (LP → WhatsApp) | Karol | LP nova PUBLICADA — treinamento.incubadoradeexpert.com.br (Vercel) | business/campanhas/lp-minitreinamento/ |
 

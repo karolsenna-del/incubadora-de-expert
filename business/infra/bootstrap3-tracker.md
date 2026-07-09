@@ -6,7 +6,7 @@
 
 **Aluno:** Karol Senna
 **Iniciado em:** 2026-07-02
-**Status geral:** EM ANDAMENTO
+**Status geral:** EM ANDAMENTO (Fase 2 pausada — sem urgência, retomar quando a Karol priorizar)
 **Fase atual:** FASE 2 (Fases 0 e 1 concluídas em 2026-07-04)
 
 ---
@@ -52,6 +52,7 @@
 - 2026-07-04 — @operador-infra: conta de serviço 1Password era read-only → criada `Auroq-RW` (ler+escrever no vault Claude), token trocado na env var do Windows, antiga revogada pela aluna e item do token velho apagado do cofre.
 - 2026-07-04 — @operador-infra: stack no ar (Traefik v3.6.1 + Postgres 16 + Redis 7 + n8n queue mode). SSL emitido em 10s. Owner criado via API, login validado. Webhook https ok. Segredos no cofre. **GATE QG-B3-001 FECHADO** — Fase 0 concluída.
 - 2026-07-04 — @operador-banco: Fase 1 completa em ~20min. Sem MCP Supabase na sessão → migrations e testes via Management API (token SUPABASE_ACCESS_TOKEN + chaves em business/vault/supabase.md). 3 migrations aplicadas e persistidas, todos os testes do gate passaram (dedup, FK, unique de transacao, RLS negativa dupla), dados de teste limpos. **GATE QG-B3-002 FECHADO** — Fase 1 concluída.
+- 2026-07-08 — @companion: Karol decidiu adiar a Fase 2 (Z-API/automações) — sem urgência agora, foco no Expert360. Retomar quando ela priorizar.
 
 ## BLOCKERS ATIVOS
 

@@ -57,7 +57,7 @@ Karol faz lives semanais pro grupo fechado (Google Meet). Worker especializado c
 - KB carregada: 18 lives do histórico (lives-expert360-roteiros.md) + live-19-outline.md + ETL Vinizoom.
 - Live 19 feita (15/06): "A Lista de Fracassos que vira Autoridade". Outline: `business/campanhas/lives-semanais/live-19-outline.md`.
 - Live 20 roteiro pronto (28/06): "Preciso de mais ideias de conteúdo" — mapa dor → pauta, pitch VIP (comenta VIP no chat). Roteiro: `business/campanhas/lives-semanais/live-20-roteiro.md`. Fonte: ETL Desafio Jejum 5em7 (VOL-03).
-- Live 21 roteirizada (07/07), marcada para 08/07: "Meu método é bom, ninguém compra" — framework das 3 Jornadas (Didática/Cronológica/Psicológica) do Expert360 M2/A4. Formato ajustado a pedido da Karol: aula teórica pura (sem exercício ao vivo/chat), Parte 3 virou demonstração de prompt pro NotebookLM (infográfico gratuito, sem depender de Claude Code pago). Prova Racional sem número (sem dado de conversão disponível) — usou gatilho da razão (clareza vende) em vez de depoimento/estatística. CTA: comenta EXPRESS no chat → Mentoria Express (1h, monta o infográfico das 3 jornadas junto). Roteiro: `business/campanhas/lives-semanais/live-21-roteiro.md`. Registrar feedback pós-live (ajustes ao vivo, engajamento com EXPRESS, se o NotebookLM funcionou na demo) depois de 08/07.
+- Live 21 roteirizada (07/07) e **realizada (08/07): deu tudo certo.** "Meu método é bom, ninguém compra" — framework das 3 Jornadas (Didática/Cronológica/Psicológica) do Expert360 M2/A4. Formato ajustado a pedido da Karol: aula teórica pura (sem exercício ao vivo/chat), Parte 3 virou demonstração de prompt pro NotebookLM (infográfico gratuito, sem depender de Claude Code pago). Prova Racional sem número (sem dado de conversão disponível) — usou gatilho da razão (clareza vende) em vez de depoimento/estatística. CTA: comenta EXPRESS no chat → Mentoria Express (1h, monta o infográfico das 3 jornadas junto). Roteiro: `business/campanhas/lives-semanais/live-21-roteiro.md`.
 
 ## Desafio Flavio Augusto — Squad Conteudo Arcane (14/06/2026)
 
@@ -178,7 +178,7 @@ Sessao 01-02/07 — Live 20 feita, Expert360 corrigido pra plataforma VOOMP, ses
 - Teste A/B das duas LPs: quando subir anuncios, dividir trafego no Meta (2 conjuntos identicos, um pra cada URL) — Trafego Arcane
 - Screenshots do Cloudinary (12 arquivos soltos na raiz) — setup em andamento, sem processo documentado ainda
 - Bootstrap 3: FASE 2 (automacoes — Z-API ~R$100/mes, compras, dispatcher, recovery; ~2-4h). Fases 0 e 1 concluidas em 04/07. Decisao pendente: numero de WhatsApp dedicado ou nao
-- **DNS raiz do dominio (decidir antes de 27/07):** GreatPages cancelado (assinatura vai ate 27/07). O apex `incubadoradeexpert.com.br` e o `www` (CNAME cname.greatpages.com.br) apontam pro GreatPages — dia 27 ambos morrem junto com a /minitreinamento2. Flag do TechOps (03/07): decidir o que a raiz mostra e reapontar DNS no Registro.br (sugestao: redirect pro treinamento. via Vercel, ~10 min)
+- ~~DNS raiz do dominio~~ — **RESOLVIDO (08/07):** apontamento feito no Registro.br (raiz + www saem do GreatPages antes do cancelamento em 27/07).
 
 **Proximo foco:**
 1. Fechar P2 da Milena (sessao semana 06-10/07) + cronograma novo da jornada
