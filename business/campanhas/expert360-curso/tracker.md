@@ -57,6 +57,7 @@
 ## LOG
 
 > Mais recente primeiro.
+- 09/07 — @course-creator (via Ops): retrofit v3.0 dos roteiros de gravação — M2, M3, M4 e Módulo de Orientações convertidos de script-prosa pra bullets de fala livre (teleprompter), a pedido da Karol (gravou M0/M1 e sentiu que leu demais o roteiro). Cada bullet = conceito inteiro nos 5 blocos; âncoras ⚓ marcam o que precisa sair exato (números, frameworks, frases de impacto). Script em prosa aprovado (QG-CC-006) preservado no fim de cada arquivo sob "# SCRIPTS DE REFERÊNCIA". M0/M1 não convertidos (já gravados). Arquivos espelhados no Drive real (Roteiros/). Versões: m2 v3.0, m3 v3.0, m4 v3.0, orientações v2.0.
 - 08/07 — @companion: Karol gravando mais aulas. Upload na VOOMP fica bloqueado ate a gravacao terminar — next action do projeto atualizada no cockpit.
 - 03/07 — @companion: weekly review — tracker sincronizado com a migracao pra VOOMP (tarefa de upload renomeada), descricoes marcadas Done (ja estavam prontas). Next action do projeto: subir curso na VOOMP.
 - 01/07 — @karol: PRD atualizado pra v1.4 (Fase 9 completa — curso estruturado e roteirizado, produção em andamento). Migração de plataforma: Hotmart bloqueou, curso migrado pra Voomp Play — course-publisher já estruturou os 5 módulos + Orientações com 43 aulas (config.yaml). Drive organizado em pastas por módulo (M0-M4). Alumni Group descartado para este lançamento. Template da Biblioteca de IAs corrigido — removida referência ao "Agente de Criação de Conteúdo (M4)" que nunca foi criado (estava gerando link quebrado pra aluna).

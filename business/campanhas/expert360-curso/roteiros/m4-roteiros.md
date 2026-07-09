@@ -1,23 +1,395 @@
 # Expert360º — Roteiros Módulo 4: Autoridade
-Versão: 2.3 | Data: 18/06/2026 | Status: A1-A8 + Encerramento aprovados (QG-CC-006 PASS) — M4 COMPLETO
+Versão: 3.0 (teleprompter de fala livre) | Base: v2.3 aprovada (QG-CC-006) | Data: 09/07/2026
+Status: bullets pra gravar falando livre — o script em prosa completo foi movido pro fim do arquivo (SCRIPTS DE REFERÊNCIA), só como consulta.
 
-**Aulas:** 10 (Introdução + 2 mentalidade + 1 tríplice + 1 vitrine + 2 conteúdo + Bloco Final + Escala + Encerramento)
-**Formato:** cada aula segue 5 blocos — Abertura (gancho + ponte com a aula anterior) / O Que e Por Quê (tema da aula + urgência, com a audiência contextualizada) / Como (até 3 pontos principais, cada um em Ideia → Exemplo → Aplicação) / Onde e Quando (aplicação prática — material e timing) / Transição (recap + CTA da aula + gancho pra próxima). Adaptado da "Estrutura de Uma Aula Online" (Live 12), com a Transição entre aulas preservada e reforçada — Expert360º é um curso de aulas conectadas, não lives isoladas. Cada aula termina com ESTRUTURA — TÓPICOS E PONTOS-CHAVE, espelhando os 5 blocos.
+**Aulas:** 10 (Introdução + A1–A6 + Queimar a Ponte + Turbinar + Encerramento)
 
-**NOTA DE RECONSTRUÇÃO E REESTRUTURAÇÃO (v2.0):**
-> A v1.0 (12/06) reconstruiu a Introdução e as Aulas 1–6, aprovadas em sessões anteriores (01/06 a 11/06) mas nunca salvas em arquivo. Antes da validação, a Karol identificou uma incoerência: o curso ensina (Live 12 — "A Estrutura de Uma Aula Online") um modelo de aula em 6 elementos — O Quê / Para Quem / Por Quê / Como / Onde / Quando — que nunca tinha sido aplicado a nenhum roteiro, nem aos do próprio M4.
->
-> Esta v2.0 reescreve a Introdução e as Aulas 1–6 nesse modelo, fundido em 5 blocos (Para Quem absorvido em "O Que e Por Quê", porque a audiência do curso é fixa — não muda aula a aula) e escreve a Aula 7 do zero, já no novo modelo. A Transição entre aulas — recap + CTA da aula + gancho pra próxima — foi mantida e reforçada por pedido explícito da Karol: Expert360º é um curso de aulas conectadas, com começo-meio-fim entre elas, diferente de uma live isolada.
->
-> Esta versão também incorpora uma correção de conteúdo: nem toda aluna está abrindo o Instagram do zero. Muitas já têm perfil ativo — postam, têm seguidores, têm rotina — e ainda são invisíveis, porque o perfil não comunica posicionamento. A partir desta versão, a Introdução, a Aula 4 ("Sua Vitrine") e a Aula 7 ("Queimar a Ponte") tratam os dois cenários — criar do zero ou ajustar o que já existe — como igualmente válidos.
->
-> **Pontos em aberto da v1.0:**
-> 1. ~~**Aula 2 (Funil de consciência):**~~ **RESOLVIDO (12/06)** — confirmado pela Karol: os 3 estágios (Topo/Meio/Fundo, Live 10) são o Funil de Consciência, modelo correto e usado em A2. Os "5 níveis de consciência" citados em `estrutura-modulos.md` são um framework diferente, do ETL Alcateia — não se aplicam a esta aula. A2 mantém o modelo de 3 estágios sem alteração.
-> 2. ~~**Aula 3 (Agente da Autoridade Tríplice):**~~ **RESOLVIDO (13/06)** — o "Agente de Posicionamento de Autoridade" que a Karol enviou não era um modelo de prompt a recriar: é um dos 6 agentes que já existem no painel de agentes da aluna (os outros 5 já são referenciados em M1-M3 — Persona Compradora, Promessa Transformadora, Processo Autoral, Portfólio Estratégico, Proposta Validada). A3 foi corrigida pra seguir o mesmo padrão de M1-M3: "Abra o arquivo **Relatório da Autoridade Tríplice** no Drive + o **Agente da Autoridade Tríplice** no painel de agentes. Leve P1+P2+P3 (+ opcionais). Deixa o agente conduzir." Karol vai renomear o agente (hoje "Posicionamento de Autoridade") pra "Agente da Autoridade Tríplice", alinhado ao nome já usado em A1-A3. **Pendência separada (fora deste roteiro):** a pergunta 2.4 desse agente ("nível de consciência da persona") deve ser enriquecida com os 5 Níveis de Consciência de Eugene Schwartz (Inconsciente / Consciente do Problema / Consciente da Solução / Consciente do Produto / Totalmente Consciente) — ajuste a ser feito pela Karol na configuração do agente, com nota-ponte pro funil de 3 estágios de A2.
->
-> **Adendo (v2.1, 13/06):** adicionada a **Aula 8 — "Escalando Seu Posicionamento: Turbinar"**, a pedido da Karol. Racional: M3 valida o método com vendas reais; M4 entrega o posicionamento (P5); turbinar pelo notebook é o primeiro passo de escala — simples, sem gerenciador de anúncios, ideal pra quem está começando. Fonte: VOL-vendas-trafego (ETL Alcateia), Seções 5-6 ("Tráfego Pago — Métricas" e "Turbinar — O Método do Instagram"), já tratadas — sem ETL novo necessário. A Transição da Aula 7 foi ajustada pra apontar pra A8 em vez de ir direto pro Encerramento.
+## COMO LER OS BULLETS
+- **⚓ = fala EXATO** — número, nome de framework ou frase de impacto que não pode sair errada.
+- **▸ = os pontos do bloco COMO** (o miolo da aula).
+- **• = gatilho de raciocínio** — a linha é um conceito inteiro, mas você desenvolve com as SUAS palavras. Não é pra ler, é pra seguir.
+- Ordem dos blocos: Abertura → O Que e Por Quê → Como → Onde e Quando → Transição.
 
 ---
+---
+
+## AULA INTRODUÇÃO — MÓDULO 4: AUTORIDADE
+*Estimativa: 5–7 minutos*
+
+**ABERTURA**
+- Você chegou no M3 como especialista com método e saiu como especialista com prova: foi a campo, apresentou pra pessoas reais, ouviu objeções, recebeu um "sim" ou um "vou pensar".
+- Tudo isso, até agora, ficou de portas fechadas — entre você e quem sentou na sua sessão. Chegou a hora de abrir essas portas.
+
+**O QUE E POR QUÊ**
+- Este módulo entrega P5: sua Autoridade — sua presença no digital.
+- Pergunta de partida: como está seu Instagram hoje? Pode já existir (com posts e seguidores) e mesmo assim ninguém ali sabe o que você faz, pra quem e por quê; ou pode ainda não existir, ou existir como perfil pessoal.
+- As duas situações têm a mesma causa: falta de posicionamento. Por isso o módulo não é sobre "abrir uma conta" — é sobre o que a conta DIZ. Se não existe, você cria; se já existe, ajusta com cirurgia.
+- Importa agora porque tudo que você construiu ainda está de portas fechadas — sem presença posicionada, quem poderia ser sua cliente não te encontra nem confia quando encontra.
+
+**COMO**
+▸ Ponto 1 — o que você vai ter ao final
+   - Perfil ajustado ou criado (foto, bio, destaques, posts fixados), sua frase-tese e narrativa de posicionamento, linha editorial com plano de 30 dias, e prompts pra criar reels e carrosséis sem travar.
+   - E o entregável final: seu post de posicionamento, publicado e turbinado — circulando além de quem te segue.
+      ⚓ É o gate: você não sai do M4 sem esse post no ar — seja seu primeiro post de verdade, seja o post que marca a virada.
+▸ Ponto 2 — como o módulo está organizado
+   - Duas aulas de mentalidade: A1 desfaz a crença de que ser vista significa virar influencer; A2 dá o funil de consciência (onde sua persona está e o que precisa ouvir).
+   - Depois o Agente da Autoridade Tríplice (A3) junta persona, expert e método num relatório, que alimenta a vitrine (A4), a linha editorial (A5) e os roteiros (A6).
+   - O módulo termina com você publicando (A7) e turbinando o post pra começar a escalar (A8).
+▸ Ponto 3 — a transformação
+   - Você entra validada, mas invisível — ou visível sem clareza do que comunica.
+   - Cada peça da sua presença vai ganhar direção: o que diz, pra quem, por quê.
+   - Você sai posicionada — perfil, voz, conteúdo planejado e o primeiro post da nova fase no ar e turbinado.
+
+**ONDE E QUANDO**
+- Tudo entra no seu Drive, nos materiais desta seção — cada aula aponta o material certo no momento certo.
+- Ao longo das próximas 8 aulas, terminando com a publicação e o primeiro turbinar.
+
+**CTA — Mentoria VIP**
+- Posicionamento é onde mais alunas querem ir sozinhas e onde mais percebem depois que algo ficou torto. A Mentoria VIP cobre o M4 inteiro: três sessões pra montar sua presença, sua linha editorial e colocar tudo no ar com clareza. Link do suporte na descrição.
+
+**TRANSIÇÃO**
+- Não é sobre virar influencer — é parar de ser invisível pra quem você já sabe que serve, seja abrindo essa porta pela primeira vez, seja reabrindo de um jeito diferente.
+- Gancho A1: o que é, de fato, ser autoridade — e por que não tem nada a ver com influência.
+
+---
+---
+
+## AULA 1 — AUTORIDADE DIGITAL NÃO É INFLUÊNCIA
+*Estimativa: 8–10 minutos*
+
+**ABERTURA**
+- Antes de falar de autoridade, quero falar do seu feed.
+   ⚓ Regra da Mentalidade Black: ou você transforma o ambiente, ou o ambiente te transforma. E o ambiente inclui o que você consome todo dia — inclusive o feed.
+- O feed padrão é gente dançando, fazendo trend, postando três vezes por dia, se expondo — você olha e pensa "isso não é pra mim". Você está certa, não é.
+- O problema é o feed ir te convencendo de que esse é o único jeito de ser vista. Se é o único jeito e não é o seu, a conclusão pronta é "então o digital não é pra mim". Essa conclusão é mentira — e esta aula desmonta ela.
+
+**O QUE E POR QUÊ**
+- Tema: uma distinção só — influência × autoridade — e por que, pra você, autoridade é o caminho.
+- Importa agora porque nas próximas aulas você vai ajustar ou criar sua presença. Sem essa distinção, dois riscos: tentar virar quem você não é (e desistir), ou continuar postando sem direção achando que o problema é frequência, quando é clareza.
+
+**COMO**
+▸ Ponto 1 — influência × autoridade
+   - Influência é sobre atenção (muito seguidor, muito alcance, monetiza atenção); pede frequência, entretenimento, viralização.
+   - Autoridade é sobre confiança (pode ter poucos seguidores, mas quem conhece confia fundo, monetiza conhecimento); pede clareza, profundidade, consistência (não frequência) e validação (não viralização).
+      ⚓ Você não precisa de 100 mil seguidores pra faturar bem — precisa de algumas dezenas de pessoas que confiam em você.
+   - Influência te dá visibilidade; autoridade te dá dignidade profissional.
+▸ Ponto 2 — a Tríplice do Posicionamento de Autoridade
+   - Autoridade não é ser famosa — é alinhar 3 elementos: quem você serve (persona), quem você é (sua experiência e história) e como você entrega (método).
+   - As 3 peças já existem: persona no M1, história no M0, método no M2.
+   - Alinhados, você para de ser "mais uma" e vira "a única". Falta organizá-los numa narrativa única — é o que a A3, com o Agente da Autoridade Tríplice, faz.
+▸ Ponto 3 — validação antes de escala
+   - Erro comum: postar muito antes da tríplice clara → conteúdo genérico, curiosos em vez de clientes, engajamento vazio.
+   - A ordem certa é validar primeiro, escalar depois — e você já validou: foi o que o M3 inteiro fez.
+   - Este módulo não é criar do zero, é traduzir pra fora o que já existe e funciona por dentro. Se o perfil já existe, você não está recomeçando — está alinhando o que já está no ar com o que acabou de validar.
+
+**ONDE E QUANDO**
+- A tríplice (persona, expert, método) vira um documento só na A3, com o Agente da Autoridade Tríplice.
+- A partir de agora, antes de criar ou ajustar qualquer peça, pergunte: "isso reflete minha persona, minha história e meu método — os três?".
+
+**TRANSIÇÃO**
+- Você já sabe que não precisa virar influencer e que a autoridade vem da tríplice — que você já tem.
+- Gancho A2: falta saber com quem, exatamente, sua persona está pronta pra ouvir o quê — o funil de consciência.
+
+---
+---
+
+## AULA 2 — FUNIL DE CONSCIÊNCIA
+*Estimativa: 8–10 minutos*
+
+**ABERTURA**
+- Imagina duas pessoas vendo o mesmo post seu: uma nunca parou pra pensar no problema que você resolve; a outra já sabe que tem o problema, já tentou coisas e está quase decidindo.
+- Se você fizer um post só pras duas, uma vai sentir que não é pra ela e rola o feed. Esta aula é sobre falar com cada uma, no momento certo.
+
+**O QUE E POR QUÊ**
+- Tema: o funil de consciência — um mapa de 3 estágios que mostra onde sua persona está e que conteúdo fala com ela em cada um.
+- Importa agora porque, sem o mapa, todo conteúdo vira a mesma coisa: focado em vender direto, que só funciona pra minoria já pronta. O resto rola o feed porque não se reconhece.
+
+**COMO**
+▸ Ponto 1 — os 3 estágios
+   - Topo: ainda não percebeu o problema — sente que algo está errado mas não tem nome. Conteúdo nomeia ("você já percebeu que [sintoma], mas nunca explicou por quê?").
+   - Meio: já nomeou a dor, pesquisa e compara. Conteúdo educa sobre o caminho ("por que [abordagem comum] não resolve").
+   - Fundo: já sabe o que precisa, decide com quem. Conteúdo mostra prova e método.
+   - Antes de criar qualquer coisa: "essa pessoa já sabe que tem esse problema?" — a resposta define o estágio, e o estágio define o ângulo.
+▸ Ponto 2 — jeito errado × jeito certo
+   - Erro mais comum: conteúdo de Fundo (vender direto) pra audiência de Topo.
+   - Errado pra alguém no Topo: "você sabia que [técnica] muda [resultado]? Comenta pra saber mais" → silêncio, porque ela nem sabia do problema. Certo, mesmo tema: "você já parou pra notar que [sintoma]?" → nomeia, gera identificação.
+   - O mesmo tema vira Topo, Meio ou Fundo — o que muda é o ângulo, não a produção. É sintonia com onde a pessoa está.
+▸ Ponto 3 — calendário mínimo viável
+   - Cadência mínima pra cobrir os 3 estágios: 3 conteúdos de Topo por semana, 1 de Meio por semana, 1 de Fundo por mês (não por semana).
+   - Topo é frequente (amplia alcance, gente nova); Fundo é raro (pra quem já está quase pronta, audiência que não se renova toda semana).
+   - Essa proporção vira a base da sua linha editorial na A5.
+
+**ONDE E QUANDO**
+- Esse mapa reaparece na A5 com outro nome (tons: Alcance, Identificação, Crença) — mesma lógica.
+- A partir de agora, antes de criar um conteúdo, pergunte em que estágio sua audiência está.
+
+**TRANSIÇÃO**
+- Você tem o mapa — mas ele só funciona se você souber o que dizer em cada estágio, e isso depende de organizar persona, história e método numa narrativa só.
+- Gancho A3.
+
+---
+---
+
+## AULA 3 — EXERCÍCIO: AGENTE DA AUTORIDADE TRÍPLICE
+*Estimativa: 10–12 minutos (inclui execução do exercício)*
+
+**ABERTURA**
+- Você sabe que precisa falar diferente com Topo, Meio e Fundo. Mas falar diferente sobre o quê?
+- A resposta não está em lugar novo — está em 3 documentos que você já tem: persona e promessa (M1), história real (M0), método (M2). Esta aula é onde essas peças se juntam e saem como um relatório só: o seu posicionamento.
+
+**O QUE E POR QUÊ**
+- Tema: exercício — rodar o Agente da Autoridade Tríplice.
+- Importa agora porque tudo que vem depois (vitrine A4, linha editorial A5, roteiros A6) parte do relatório que esse agente devolve. Fazer com calma, uma vez, evita rejuntar suas peças manualmente em cada aula.
+
+**COMO**
+▸ Ponto 1 — o que entra (inputs)
+   - Obrigatórios: Persona (P1) e Promessa (P2) do M1, e Método Autoral (P3) do M2.
+   - Opcionais: depoimento, pitch ou objeções do M3 — se tiver, adicionam prova real à narrativa.
+   - Separe P1, P2 e P3 antes de começar; sem os opcionais, o agente entrega o relatório completo do mesmo jeito.
+▸ Ponto 2 — como rodar
+   - É conversa, não formulário: abra o Agente da Autoridade Tríplice no painel e leve P1, P2, P3 (e opcionais).
+   - O agente conduz — pergunta, aprofunda, ajusta — e ao final devolve o Relatório da Autoridade Tríplice em 3 frentes.
+   - Salve o resultado no arquivo M4.1 - Relatório da Autoridade Tríplice no Drive — é a base das próximas três aulas, vale fazer a conversa com atenção.
+▸ Ponto 3 — o que sai (output)
+   - O Relatório em 3 frentes: Posicionamento do Expert (quem você é), da Persona (pra quem fala) e do Produto/Método (como entrega, o que diferencia).
+   - Na sequência ele vira seu perfil (A4), depois a linha editorial (A5), depois os prompts de conteúdo (A6). Guarde à mão — você volta a ele nas próximas 4 aulas.
+
+**ONDE E QUANDO**
+- Arquivo M4.1 - Relatório da Autoridade Tríplice no Drive + Agente da Autoridade Tríplice no painel.
+- Agora — antes de seguir, porque a próxima aula já parte do relatório.
+
+**TRANSIÇÃO**
+- Com o relatório em mãos, você tem num documento só quem você é, pra quem fala e como entrega.
+- Gancho A4: esse relatório vira a sua vitrine — o que qualquer pessoa vê quando chega no seu perfil, novo ou existente.
+
+---
+---
+
+## AULA 4 — SUA VITRINE: PERFIL, BIO, DESTAQUES E POSTS FIXADOS
+*Estimativa: 20–25 minutos (aula prática — você abre o Instagram durante a aula)*
+
+**ABERTURA**
+- Você tem o Relatório da Autoridade Tríplice na mão. Agora ele vira algo visível.
+- Seu Instagram pode já existir (com posts e rotina) ou ainda não — de um jeito ou de outro, a aula é a mesma, porque o que muda não é a existência do perfil, é o que ele diz.
+- É aqui que o relatório vira texto, na tela do seu celular — aula prática, com o Instagram aberto.
+
+**O QUE E POR QUÊ**
+- Tema: sua vitrine — as 6 peças que qualquer visitante vê: foto, bio, frase-tese, narrativa, destaques e posts fixados.
+- Importa agora porque a vitrine decide em segundos se quem chega fica ou sai — não importa a origem (indicação, comentário, anúncio), o destino é sempre o perfil. Se ele não diz quem você é, pra quem e como entrega, a visita não vira nada — perfil novo ou com 3 anos de posts.
+- Tenha à mão: Relatório da Tríplice (A3), História Real (M0), Método Autoral (M2) e o Instagram aberto.
+
+**COMO**
+▸ Ponto 1 — identidade: foto e bio
+   - Foto de perfil: rosto visível, boa luz (natural resolve), olhando pra câmera, fundo neutro, expressão genuína.
+   - Bio em 3 linhas: quem você é + pra quem (linha 1), como entrega (linha 2), CTA (linha 3).
+   - Se já tem foto e bio, revise com os olhos de quem acabou de ler o Relatório. Foto inadequada vira pendência até a A7. Pra bio, dá pra pedir ajuda ao chat de IA a partir do relatório. Ajuste a bio agora, direto no Instagram — é exercício curto, sem material próprio.
+▸ Ponto 2 — sua voz: frase-tese e narrativa
+   - Frase-tese: uma frase curta, até 15 palavras, que só você poderia ter dito — vem de como você trabalha, não do que vende.
+   - Narrativa de posicionamento: sua história em 4 movimentos (quem eu era / o que mudou / o que construí / quem sirvo agora), 150–250 palavras.
+   - O material Minha Frase-Tese Autoral tem prompt que gera 5 opções a partir do Relatório; Minha Narrativa de Posicionamento usa História Real (M0) + Relatório (A3) — sem depoimento externo, o processo que você viveu é a prova.
+   - Mesmo com perfil existente, essas duas peças provavelmente nunca foram escritas com essa clareza. A frase-tese vira base do Post Fixado 2; a narrativa vira base do Destaque "Sobre Mim" e do Post Fixado 1.
+▸ Ponto 3 — a vitrine em ação: destaques e posts fixados
+   - 3 destaques (Sobre Mim, Produto Principal, Depoimentos) — as bolinhas fixas, a primeira navegação de quem visita.
+   - 3 posts fixados: Pinned 1 (Sobre Ela + Trabalho, Reels, da narrativa), Pinned 2 (Crença/Tese, Carrossel, da frase-tese), Pinned 3 (Produto e Oferta, da estrutura método + relatório, com ruminação da dor → solução → produto → CTA).
+   - Se já existem mas desalinhados do que você descobriu na A3, é revisão. Os materiais Meus Destaques e Meus Posts Fixados dão o prompt de cada um dos 6, com placeholder se faltar prova ou oferta.
+   - Ordem: destaques primeiro (dependem menos), depois fixados (Pinned 1 e 2 usam o que você escreveu no Ponto 2). Comece pelo Pinned 1 — é Reels, mais rápido de gravar.
+
+**ONDE E QUANDO**
+- M4.2 - Minha Frase-Tese → M4.3 - Minha Narrativa → M4.4 - Meus Destaques → M4.5 - Meus Posts Fixados, nessa ordem (as duas primeiras alimentam as duas últimas).
+- Nesta aula, com o Instagram aberto — é prática.
+
+**TRANSIÇÃO**
+- Sua vitrine existe, ajustada ou criada. Mas vitrine parada não atrai ninguém — o que a mantém viva é o conteúdo que você posta com consistência.
+- Gancho A5: transformar tudo isso numa linha editorial que você consegue sustentar.
+
+---
+---
+
+## AULA 5 — LINHA EDITORIAL: PILARES, TONS E PLANO DE 30 DIAS
+*Estimativa: 10–12 minutos*
+
+**ABERTURA**
+- Sua vitrine está pronta, mas vitrine parada não atrai ninguém.
+- E aqui mora a armadilha comum: ou você não posta porque não sabe o que dizer, ou senta numa tarde, tenta planejar 30 dias de uma vez e trava — ou abandona na segunda semana.
+
+**O QUE E POR QUÊ**
+- Tema: sua linha editorial — e um "plano de 30 dias" que não significa 30 posts prontos.
+- Importa agora porque a vitrine sozinha não gera movimento; é o conteúdo recorrente que traz gente nova, aprofunda quem já te segue e prepara quem está quase decidindo. Sem sistema, você para de postar — e vitrine sem movimento volta a ficar invisível.
+
+**COMO**
+▸ Ponto 1 — o que falar: 3 pilares + banco de temas
+   - A partir do Relatório da Tríplice, 3 pilares nomeados: Pilar 1 ligado à Persona (dor, desejo, situação), Pilar 2 à Crença (sua visão diferente do problema), Pilar 3 ao Método (como você resolve).
+   - Pra cada pilar o chat gera 10 temas, variando entre 4 jeitos (por categoria, por situação do dia a dia, por urgência oculta, tema livre) — um banco de ~30 temas, seu estoque.
+   - Abra M4.6 - Minha Linha Editorial, Seção 1, e rode o prompt. Roda 1 vez — só repete quando o banco esgotar.
+▸ Ponto 2 — pra quem falar: os 3 tons
+   - O funil da A2 reaparece como tons: Alcance (= Topo), Identificação (= Meio), Crença (= Fundo).
+   - Cada pilar pode ser trabalhado em qualquer tom — o mesmo tema, ângulos diferentes, dependendo de quem você quer alcançar no dia.
+   - Meta: pelo menos 1 post de cada tom por semana — igual ao calendário mínimo da A2.
+▸ Ponto 3 — como executar sem travar
+   - Pra dias de roteiro completo (carrossel ou reels), a base de 5 passos (Gancho → Início → Desenvolvimento → Final → CTA) que a A6 entrega em prompts.
+   - Pra dias sem tempo, 3 formatos de emergência sem prompt: Frase com Posicionamento (pilar Crença), Bastidor/Rotina (pilar Método), Reagindo a um Conteúdo. E rotina de stories: 3x1 (3 de valor + 1 CTA), Bastidor da manhã, Levantada de mão.
+   - Tudo se organiza numa grade semanal fixa — 7 dias, cada um com Pilar + Tom + Formato + Stories. Essa grade não muda, é sua referência.
+   - O "plano de 30 dias" é essa grade repetida por 4 semanas — só o tema muda, escolhido do banco em 5 minutos antes de começar. Se a cadência for demais, corte pela metade: importa repetir a estrutura, não a quantidade.
+
+**ONDE E QUANDO**
+- M4.6 - Minha Linha Editorial: Seção 1 (pilares + banco, roda 1x), Seção 2 (grade fixa, referência), Seção 3 (calendário de 4 semanas — só o tema muda). Seção 1 agora; Seção 3 toda semana, antes de começar.
+
+**TRANSIÇÃO**
+- Agora você tem um sistema: pilares, tons, formatos, stories e uma grade que se repete sem te esgotar.
+- Gancho A6: quando chegar a hora de escrever o roteiro, como não travar na tela em branco — os prompts prontos.
+
+---
+---
+
+## AULA 6 — ROTEIROS: PROMPTS DE REELS E CARROSSÉIS
+*Estimativa: 10–12 minutos*
+
+**ABERTURA**
+- Você já sabe o que vai postar hoje: abre o Calendário de 4 Semanas (A5) e lá está — Pilar, Tom, Formato, Tema.
+- Mas saber o tema não é ter o roteiro pronto. É exatamente aqui que a maioria trava.
+
+**O QUE E POR QUÊ**
+- Tema: os prompts reutilizáveis do ciclo completo — 4 de roteiro (2 carrossel, 2 reels) cobrindo os 3 tons + 1 de legenda com SEO/GEO e headline de capa, que roda em seguida.
+- Importa agora porque, sem eles, o "roteiro completo" da grade vira o dia mais difícil — e dia difícil é dia que não acontece. Com eles, vira conversa: o chat pede seus materiais, sugere 5 opções, você escolhe, ele monta e já fecha a legenda.
+
+**COMO**
+▸ Ponto 1 — como os prompts funcionam
+   - Fluxo, todo dia: veja Pilar+Tom+Formato+Tema no Calendário; escolha o prompt pelo formato (Carrossel Seção 1, ou Reels Seção 2); dentro, escolha pelo tom (Alcance = História; Identificação/Crença = Situação/Didático); copie e troque [TEMA ESCOLHIDO].
+   - Cole num chat de IA; quando pedir Persona, Posicionamento e/ou Método, cole o material indicado (Relatório da Tríplice A3, Frase-Tese + Narrativa A4, Método M2). O chat sugere 5 opções, você escolhe uma, ele monta o roteiro.
+   - Deixe Persona, Posicionamento e Método prontos num bloco de notas separado — são praticamente fixos, só o tema muda. Com o roteiro pronto, vá pra Seção 3 do mesmo doc: cole roteiro + tema, e o chat devolve a legenda com SEO/GEO e a headline de capa. Material: M4.7 - Meus Roteiros.
+▸ Ponto 2 — carrossel: 2 prompts
+   - 1A — História de Alcance (tom Alcance): o chat sugere 5 histórias/analogias ligadas ao tema e ao seu posicionamento; você escolhe e monta Capa Impactante → Contexto → Desenvolvimento → Grande Virada → Lição/Reflexão → CTA.
+   - 1B — Situação de Identificação (tom Identificação/Crença): o chat sugere 5 situações polêmicas ou vergonhosas que sua persona já viveu; monta Gancho Forte → Contextualização → Explicação Prática → Reflexão Pessoal → Lição e Moral (CTA manual no último slide).
+▸ Ponto 3 — reels: 2 prompts
+   - 2A — Narrativo com Metáfora (tom Alcance/Identificação): o chat sugere 5 histórias antes×depois (jeito errado × seu método); monta Gancho → Conflito → Jeito Errado → Processo de Virada → Jeito Certo (metáfora do método) → Mudança → CTA — expansão do roteiro-base da A5.
+   - 2B — Didático Direto (tom Crença): sem história, direto da frase-tese e método — Gancho → Início → Desenvolvimento → Final → CTA.
+   - Em qualquer roteiro, vale variar o gancho (Visual ou de Áudio) e fechar com a CTA padrão: "Concorda ou não? Me conta nos comentários, compartilha e me segue" — na legenda também.
+
+**ONDE E QUANDO**
+- M4.7 - Meus Roteiros. Toda vez que a grade marcar "Roteiro completo" — os formatos de emergência (A5) não precisam de prompt.
+
+**TRANSIÇÃO**
+- Agora o kit está completo: vitrine, frase-tese e narrativa, linha editorial, prompts pra nunca travar.
+- Gancho A7: falta a mais importante — todo esse trabalho ainda está guardado. O módulo chega ao entregável final.
+
+---
+---
+
+## QUEIMAR A PONTE
+*Estimativa: 8–10 minutos*
+
+**ABERTURA**
+- Você chegou aqui com tudo construído: persona, promessa, método com nome e história, prova (as sessões do M3), vitrine posicionada (bio, destaques, posts fixados no ar).
+- O que muda daqui pra frente não é o que você tem — é o quanto você usa.
+   ⚓ Queimar a ponte é a virada de quem estava testando pra quem vai operar um negócio digital de verdade — sem amadorismo, sem reserva mental de "será que estou pronta?". Você está.
+
+**O QUE E POR QUÊ**
+- Operar de verdade tem um ritmo — a escala começa com consistência, quantidade e frequência.
+
+**COMO**
+▸ Ponto 1 — post diário, mais de um quando possível
+   - Esse é o ritmo de quem quer crescer no orgânico — não é sugestão, é o que o jogo exige de quem está começando.
+   - E você tem material de sobra: cada sessão secreta do M3 é fonte direta de conteúdo — corte um momento de virada, uma objeção respondida com clique, um detalhe que a cliente percebeu. Mostram autoridade sem esforço de roteiro.
+   - Crie uma rotina semanal de produção: um dia pra roteiros, um pra gravar, um pra editar. Não precisa ser sofisticado, precisa ser previsível.
+   - Use o modo teste do Instagram: publica um Reels em teste, o Instagram entrega só pra não seguidores, avalia, e você decide se publica ou descarta.
+      ⚓ (compartilhar a tela pra mostrar onde fica o modo teste)
+▸ Ponto 2 — volume, criação e, se quiser, ajuda
+   - Se manter a frequência sozinha for pesado demais, contratar editor ou social media é possibilidade, não obrigação — decisão de negócio sobre o que você sustenta.
+   - Na frequência certa, o viral se torna possível — não é viralizar qualquer coisa, é aumentar o volume de conteúdo com interesse real da persona.
+      ⚓ Viral com audiência errada é vaidade. Viral com persona é agenda cheia.
+▸ Ponto 3 — a verdade difícil de ouvir
+   - Se você tratar o negócio como hobby, ele responde como hobby.
+   - Você tem os prompts, a narrativa, o plano, as sessões gravadas — não tem mais desculpa técnica. O que determina o resultado é quanta energia você coloca: mais foco, mais rápido responde; mais consistência, mais o algoritmo empurra; mais você aparece, mais é vista.
+   - A ponte queimou. A especialista que não sabia se estava pronta ficou do outro lado. Aqui é o começo do negócio digital de verdade.
+
+**ONDE E QUANDO**
+- A partir de agora, como operação semanal contínua.
+
+**TRANSIÇÃO**
+- Orgânico com frequência e o modo teste já trazem seguidores novos; o tráfego pago entra como acelerador do que já funciona, não substituto.
+- Gancho Turbinar: como usar isso sem complicar.
+
+---
+---
+
+## ESCALANDO SEU POSICIONAMENTO: TURBINAR
+*Estimativa: 12–15 minutos*
+
+**ABERTURA**
+- Você construiu um negócio — e negócio tem uma verdade que a maioria ignora no começo: precisa de investimento.
+- O Instagram é uma empresa; a Meta entrega de graça pra usuária comum, mas você é empreendedora digital, e a empreendedora paga pra Meta entregar seu perfil pra mais pessoas. Não é favor, é o custo de fazer negócio.
+   ⚓ Ninguém aqui está de brincadeira, e a Meta também não. Se desceu pro play, tem que brincar.
+- E outro motivo: eu não acredito em crescimento só por viralização — é demorado, depende de sorte, e o lead que chega nem sempre é qualificado. Tráfego com público definido traz a persona certa, na velocidade certa.
+
+**O QUE E POR QUÊ**
+- Tráfego é colocar dinheiro atrás do que já está funcionando — o alcance sai do modo orgânico pro intencional. E começar é mais simples do que parece: sem gerenciador de anúncios, sem agência, sem conhecimento técnico.
+
+**COMO**
+▸ Ponto 1 — a regra do notebook
+   - Nunca turbine pelo celular: a Apple cobra 30% sobre compras dentro do app, e ela simplesmente reduz seu alcance em 30%, sem avisar.
+      ⚓ Com R$6/dia, pelo iPhone o alcance fica em ~700 pessoas; o mesmo R$6 pelo notebook chega a ~1.000 — 30% a mais de graça, só trocando o aparelho.
+   - Sempre logue no Instagram pelo navegador do computador antes de turbinar. Não precisa de Business Suite — é o Instagram normal, no navegador.
+▸ Ponto 2 — como turbinar, passo a passo
+   - Com o post aberto, clique em "Turbinar publicação". O Instagram pede objetivo e público.
+   - Objetivo: sempre Visitas ao perfil (você quer trazer gente pro perfil, não só engajamento). Público: localização (Brasil, ou sua região se for local), 3 a 5 interesses do nicho, faixa de idade da persona.
+   - Salve esse público com um nome pra reutilizar. Defina orçamento e duração e confirme.
+▸ Ponto 3 — o ciclo semanal: testar, analisar, escalar
+   - Domingo você posta e turbina cada conteúdo novo com R$10 por 2 dias; terça, com o tráfego encerrado, abre os resultados e lê duas métricas.
+      ⚓ Custo por seguidor — meta até R$2,50 (perfil novo, até R$3,25). Custo por comentário — meta até R$0,07 (perfil novo, até R$0,09).
+   - Dentro das metas = top performer, deixa rodando a semana toda; fora = pausa e testa o próximo.
+   - Escala flutuante: resultado positivo → aumenta o orçamento 30%; empatou → mantém; negativo → reduz 20%. A curva de escala não é linha reta, é subida com oscilações — quem espera resultado linear para cedo demais.
+   - Regra prática: sempre pelo menos 2 top performers rodando continuamente, e novos conteúdos em teste em paralelo (R$10/2 dias cada).
+
+**ONDE E QUANDO**
+- A partir de agora, como hábito semanal contínuo.
+
+**TRANSIÇÃO**
+- Com isso o M4 está completo: posicionamento, vitrine no ar, conteúdo com rotina e alcance pago como hábito semanal.
+- Gancho Encerramento: fechar não só o módulo, mas a jornada inteira do Expert360º.
+
+---
+---
+
+## QUEM VOCÊ SE TORNOU — ENCERRAMENTO MÓDULO 4: AUTORIDADE
+*Estimativa: 6–8 minutos*
+
+**ABERTURA**
+- Você chegou no fim do M4 — e ele é diferente dos outros encerramentos. Nos anteriores, o fim de um módulo era o começo do próximo; cada encerramento era uma ponte. Este não: é o ponto de chegada.
+- Para um segundo — o que você atravessou, do M0 ao M4, da história ao perfil publicado, não é pequeno.
+
+**O QUE E POR QUÊ**
+- Este encerramento nomeia quem você se tornou — porque o ponto de chegada de uma jornada longa raramente parece grande no momento em que você chega. Parece normal, mas não é.
+
+**COMO**
+▸ Ponto 1 — o que você construiu neste módulo
+   - Você entrou no M4 com P1, P2, P3 e P4 e prova em mãos, e construiu P5 — o quinto e último entregável.
+   - Autoridade Tríplice (Expertise, Resultados, Narrativa de Origem, no Relatório); frase-tese e narrativa de posicionamento; presença no Instagram posicionada (foto, bio, destaques, posts fixados); linha editorial com plano de 30 dias; posts produzidos e publicados; e alcance turbinado (R$6/dia, notebook, ciclo semanal).
+      ⚓ Isso é P5 — não é "ter um Instagram", é ter uma presença que trabalha por você enquanto você está offline.
+▸ Ponto 2 — a jornada completa: quem você se tornou
+   - Cinco transformações de identidade, uma por módulo: M0 (experiência → história que te torna incopiável), M1 (conhecimento → persona e promessa que ressoam), M2 (saber coisas → método com nome próprio), M3 (método → prova, foi a campo), M4 (prova fechada → autoridade visível, posicionada, publicada, com alcance).
+      ⚓ A versão que entrou no M0 era uma especialista esperando a hora certa. A que sai do M4 é uma referência que decidiu parar de esperar.
+▸ Ponto 3 — o que vem depois: o sistema continua operando
+   - O Expert360 termina aqui; o negócio de autoridade não. Você não tem um curso concluído — tem um sistema operando: P1 e P2 guiam com quem fala e o que diz, P3 é o que entrega (refina a cada aluna), P4 é o que vende no 1:1, P5 é o que atrai (cresce enquanto você posta, valida e turbina).
+   - Os 5 Ps não são marcos que se passa — são peças de um sistema que gira, e fica mais forte a cada semana.
+   - 3 aceleradores: continue vendendo no 1:1 (refina P3, gera depoimento, alimenta P5); continue postando com a linha editorial (consistência converte audiência em autoridade); continue turbinando os top performers (o ciclo semanal é a fundação da escala, não o teto).
+
+**ONDE E QUANDO**
+- Os 5 documentos no Drive (P1–P5) são o mapa do seu negócio; o Instagram posicionado é o canal por onde ele se expande. A partir de agora não é mais aprendizado — é operação.
+
+**CTA — Mentoria Incubadora de Expert**
+- Existe diferença entre ter o sistema montado e operar ele com consistência ao longo do tempo — e essa diferença quase sempre é acompanhamento. A Mentoria Incubadora de Expert é onde isso acontece: individual ou em grupo, pra quem já tem o método e quer escalar a operação. Link do suporte na descrição.
+
+**TRANSIÇÃO**
+- Você chegou onde disse que queria: com persona, promessa, método, prova e autoridade. Não por sorte nem por volume — por ordem, pela ordem certa.
+   ⚓ O Expert360 termina aqui. O que você construiu não.
+
+---
+---
+
+# SCRIPTS DE REFERÊNCIA — PROSA COMPLETA (não ler na gravação)
+
+> Os roteiros palavra-por-palavra abaixo são a versão v2.3 aprovada (QG-CC-006). Ficam aqui só como consulta caso você queira conferir uma passagem exata. Na gravação, use os bullets acima.
+
 
 ## AULA INTRODUÇÃO — MÓDULO 4: AUTORIDADE
 *Estimativa: 5–7 minutos*
@@ -86,42 +458,6 @@ Na próxima aula, a gente começa por aí: o que é, de fato, ser autoridade —
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Seção 1: Abertura**
-- Bridge do M3: você validou em privado (proposta, objeções, "sim"/"vou pensar" reais), agora vai abrir isso pro público
-
-**Seção 2: O que e por quê**
-- P5 = Autoridade = presença digital
-- Contextualização: perfil pode já existir e estar ativo (invisível por falta de posicionamento) OU pode não existir ainda — os dois casos cabem neste módulo
-- Não é "abrir conta", é "o que a conta diz" — ajustar com cirurgia ou criar
-- Urgência: sem presença posicionada, o que foi construído nos módulos anteriores continua de portas fechadas
-
-**Seção 3: Como — Ponto 1 (entregáveis)**
-- Perfil ajustado/criado (foto, bio, destaques, posts fixados) + frase-tese + narrativa + linha editorial + plano de 30 dias + prompts de reels/carrosséis
-- Gate do módulo: post de posicionamento publicado (primeiro post OU post de virada)
-
-**Seção 4: Como — Ponto 2 (organização do módulo)**
-- Bloco Mentalidade (A1 autoridade vs influência | A2 funil de consciência)
-- Bloco Tríplice (A3 Agente da Autoridade Tríplice → relatório)
-- Bloco Presença (A4 vitrine)
-- Bloco Conteúdo (A5 linha editorial | A6 roteiros)
-- Bloco Final (A7 publicação | A8 turbinar pra escalar)
-
-**Seção 5: Como — Ponto 3 (transformação)**
-- Entra: validada, mas invisível / sem clareza de posicionamento
-- Sai: posicionada — perfil, voz, conteúdo planejado, post publicado e turbinado
-
-**Seção 6: Onde e quando**
-- Materiais no Drive, indicados aula a aula
-- 8 aulas, termina com publicação e primeiro turbinar
-
-**Seção 7: Transição**
-- Recapitula: não é virar influencer, é deixar de ser invisível pra quem já sabe que serve
-- Gancho A1: o que é autoridade x influência
-
----
-
 ## AULA 1 — AUTORIDADE DIGITAL NÃO É INFLUÊNCIA
 *Estimativa: 8–10 minutos*
 *Fontes: Live 3 (Como se tornar autoridade sem virar influencer) + RC-02 — Mentalidade Black VOL-04 (Lei do Ambiente)*
@@ -186,42 +522,6 @@ Falta uma peça: saber com quem, exatamente, sua persona está pronta pra ouvir 
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Seção 1: Abertura — o feed que te ensinou uma mentira**
-- RC-02 (Mentalidade Black): ou você transforma o ambiente, ou ele te transforma
-- O feed padrão do Instagram (influencer, trends, exposição) distorce o que parece "possível" pra você
-- Conclusão errada: "se não sou assim, o digital não é pra mim"
-
-**Seção 2: O que e por quê — influência x autoridade**
-- Tema: distinção influência x autoridade
-- Urgência: você vai ajustar/criar sua presença nas próximas aulas — sem essa distinção, risco de virar quem não é OU continuar postando sem direção
-
-**Seção 3: Como — Ponto 1 (Influência x Autoridade)**
-- Influência = atenção/alcance, monetiza atenção, exige frequência+entretenimento+viralização
-- Autoridade = confiança/profundidade, monetiza conhecimento, exige clareza+consistência+validação
-- "Não precisa de 100 mil seguidores. Precisa de algumas dezenas de pessoas que confiam em você"
-- Influência = visibilidade | Autoridade = dignidade profissional
-
-**Seção 4: Como — Ponto 2 (Tríplice do Posicionamento de Autoridade)**
-- 3 elementos: Persona (M1) + Expert/história (M0) + Método (M2) — já construídos
-- Alinhados = "a única", não "mais uma"
-- Ponte direta pra Aula 3
-
-**Seção 5: Como — Ponto 3 (Validação antes de escala)**
-- Erro comum: postar muito antes da tríplice clara → conteúdo genérico, engajamento vazio
-- M3 já foi a validação — M4 é tradução pra fora, não criação do zero
-- Se perfil já existe: é alinhamento, não recomeço
-
-**Seção 6: Onde e quando**
-- Onde: Aula 3 organiza a tríplice num relatório
-- Quando: a partir de agora, checar a tríplice antes de criar/ajustar qualquer peça
-
-**Seção 7: Transição**
-- Teaser Aula 2: funil de consciência — onde a persona está e o que está pronta para ouvir
-
----
-
 ## AULA 2 — FUNIL DE CONSCIÊNCIA
 *Estimativa: 8–10 minutos*
 *Fonte: Live 10 (O Mapa da Autoridade — de invisível a autoridade por meio da criação de conteúdo)*
@@ -280,41 +580,6 @@ Mas o mapa só funciona se você souber o que dizer em cada estágio — e isso 
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Seção 1: Abertura**
-- Exemplo de duas pessoas vendo o mesmo post, em estágios diferentes
-- Bridge: falar a mesma coisa pras duas faz uma delas rolar o feed
-
-**Seção 2: O que e por quê**
-- Tema: funil de consciência (3 estágios)
-- Urgência: sem o mapa, conteúdo vira "vender direto" — só funciona pra minoria já pronta
-
-**Seção 3: Como — Ponto 1 (Os 3 estágios)**
-- Topo: não percebeu o problema → conteúdo nomeia
-- Meio: sabe o problema, busca caminho → conteúdo educa sobre o caminho
-- Fundo: decidiu, escolhe quem → conteúdo mostra prova e método
-- Antes de criar: "ela já sabe que tem esse problema?"
-
-**Seção 4: Como — Ponto 2 (Jeito errado x certo)**
-- Erro comum: conteúdo de Fundo pra audiência de Topo
-- Exemplo comparativo (venda direta vs nomear o sintoma)
-- Mesmo tema, ângulo diferente por estágio
-
-**Seção 5: Como — Ponto 3 (Calendário mínimo viável)**
-- 3 Topo/semana + 1 Meio/semana + 1 Fundo/mês
-- Proporção reflete distribuição real da audiência
-- Base da linha editorial (A5)
-
-**Seção 6: Onde e quando**
-- Onde: reaparece na A5 como "tons" (Alcance/Identificação/Crença)
-- Quando: antes de criar qualquer conteúdo, identificar o estágio
-
-**Seção 7: Transição**
-- Teaser A3: falta organizar persona+história+método numa narrativa única
-
----
-
 ## AULA 3 — EXERCÍCIO: AGENTE DA AUTORIDADE TRÍPLICE
 *Estimativa: 10–12 minutos (inclui execução do exercício)*
 *Input obrigatório: P1 + P2 + P3 | Input opcional: depoimento + pitch + objeções do M3*
@@ -369,37 +634,6 @@ Onde: o arquivo **M4.1 - Relatório da Autoridade Tríplice** no seu Drive + o *
 Com o relatório em mãos, você tem, organizado num documento só, quem você é, pra quem fala e como entrega.
 
 Na próxima aula, esse relatório vira a sua vitrine — o que qualquer pessoa vê quando chega no seu perfil, seja ele novo ou já existente. Vem comigo.
-
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Seção 1: Abertura**
-- Bridge: A1 deu a tríplice, A2 deu o funil — falta organizar tudo num documento
-- Persona+promessa (M1) + história (M0) + método (M2) já existem, espalhados
-
-**Seção 2: O que e por quê**
-- Tema: exercício — rodar o Agente da Autoridade Tríplice
-- Urgência: A4, A5, A6 partem do relatório dele — fazer 1x agora evita retrabalho
-
-**Seção 3: Como — Ponto 1 (inputs)**
-- Obrigatórios: P1 (Persona) + P2 (Promessa, M1) + P3 (Método, M2)
-- Opcionais: depoimento/pitch/objeções do M3 (enriquecem, não bloqueiam)
-
-**Seção 4: Como — Ponto 2 (como rodar)**
-- Abrir Agente da Autoridade Tríplice (painel de agentes) + arquivo M4.1 - Relatório da Autoridade Tríplice (Drive)
-- Leva P1+P2+P3 (+ opcionais) → agente conduz a conversa → salva o relatório no Drive
-
-**Seção 5: Como — Ponto 3 (output)**
-- Relatório da Autoridade Tríplice: 3 frentes (Expert / Persona / Produto-Método)
-- Base direta para A4, A5, A6
-
-**Seção 6: Onde e quando**
-- Onde: M4.1 - Relatório da Autoridade Tríplice (Drive) + Agente da Autoridade Tríplice (painel de agentes)
-- Quando: agora, antes da próxima aula
-
-**Seção 7: Transição**
-- Teaser A4: relatório vira vitrine (perfil novo ou existente)
 
 ---
 
@@ -461,41 +695,6 @@ Na próxima aula, você transforma tudo isso numa linha editorial — pilares de
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Seção 1: Abertura**
-- Aula prática — aluna abre o Instagram
-- Perfil pode já existir (ativo, com rotina) ou não existir ainda — aula serve pros dois casos
-- Pré-requisitos: Relatório da Tríplice (A3), História Real (M0), Método Autoral (M2)
-
-**Seção 2: O que e por quê**
-- Tema: vitrine = 6 peças (foto, bio, frase-tese, narrativa, destaques, posts fixados)
-- Urgência: vitrine decide em segundos se a visita "vira algo" — vale pra perfil novo ou com histórico
-
-**Seção 3: Como — Ponto 1 (Identidade: foto e bio)**
-- Foto: rosto visível, luz natural, fundo neutro, expressão genuína — pendência até A7 se faltar
-- Bio em 3 linhas: quem sou+pra quem / como entrego / CTA — exercício direto no Instagram
-
-**Seção 4: Como — Ponto 2 (Sua voz: frase-tese e narrativa)**
-- Frase-tese (M4.2 - Minha Frase-Tese Autoral.md): prompt gera 5 opções a partir do Relatório
-- Narrativa (M4.3 - Minha Narrativa de Posicionamento.md): prompt usa História Real + Relatório → narrativa em 4 movimentos (150-250 palavras)
-- Peças novas mesmo se perfil já existir — alimentam Ponto 3
-
-**Seção 5: Como — Ponto 3 (Vitrine em ação: destaques e posts fixados)**
-- 3 Destaques (M4.4 - Meus Destaques.md): Sobre Mim ← narrativa / Produto ← método M2 / Depoimentos ← M3 (placeholder se faltar)
-- 3 Posts Fixados (M4.5 - Meus Posts Fixados.md): Pinned 1 Reels ← narrativa / Pinned 2 Carrossel ← frase-tese / Pinned 3 ← método+relatório (placeholder se faltar oferta)
-- Se já existem: revisão/ajuste, não recriação
-- Ordem: destaques → fixados, começando pelo Pinned 1 (Reels, mais rápido)
-
-**Seção 6: Onde e quando**
-- Onde: M4.2 - Minha Frase-Tese Autoral.md → M4.3 - Minha Narrativa de Posicionamento.md → M4.4 - Meus Destaques.md → M4.5 - Meus Posts Fixados.md
-- Quando: nesta aula, com Instagram aberto
-
-**Seção 7: Transição**
-- Teaser A5: linha editorial + plano de 30 dias
-
----
-
 ## AULA 5 — LINHA EDITORIAL: PILARES, TONS E PLANO DE 30 DIAS
 *Estimativa: 10–12 minutos*
 
@@ -546,39 +745,6 @@ Onde: M4.6 - Minha Linha Editorial.md — Seção 1 (pilares + banco de temas, r
 Agora você tem um sistema: pilares pra saber sobre o que falar, tons pra saber com quem está falando, formatos pra nunca travar, stories pra manter presença, e uma grade que se repete sem te esgotar.
 
 Falta uma coisa: quando chegar a hora de escrever o roteiro, como não travar na tela em branco? Na próxima aula, você recebe os prompts prontos. Vem comigo.
-
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Seção 1: Abertura**
-- Bridge A4→A5: vitrine pronta (ajustada ou criada) precisa de movimento
-- 2 armadilhas: não saber o que postar / tentar planejar 30 dias de uma vez e travar
-
-**Seção 2: O que e por quê**
-- Tema: linha editorial + "plano de 30 dias" reformulado
-- Urgência: sem sistema, volta a ficar invisível (o problema-raiz do módulo)
-
-**Seção 3: Como — Ponto 1 (3 pilares + banco de temas)**
-- Pilar 1 (Persona) / Pilar 2 (Crença) / Pilar 3 (Método), a partir do Relatório da Tríplice (A3)
-- 10 temas/pilar via 4 métodos (categoria, situação do dia a dia, urgência oculta, tema livre) = banco de ~30
-- M4.6 - Minha Linha Editorial.md Seção 1 — roda 1x
-
-**Seção 4: Como — Ponto 2 (os 3 tons)**
-- Alcance=Topo / Identificação=Meio / Crença=Fundo (ponte com A2)
-- Cada pilar em qualquer tom — meta: 1 post de cada tom/semana
-
-**Seção 5: Como — Ponto 3 (roteiro-base, emergência, stories, grade)**
-- Roteiro-base 5 passos (Gancho→Início→Desenvolvimento→Final→CTA) — base dos prompts da A6
-- 3 formatos de emergência: Frase com Posicionamento / Bastidor-Rotina / Reagindo a um Conteúdo
-- Rotina de stories: 3x1 / Bastidor da manhã / Levantada de mão
-- Grade semanal fixa (Pilar+Tom+Formato+Stories) repetida 4 semanas = "plano de 30 dias" — só tema muda
-
-**Seção 6: Onde e quando**
-- M4.6 - Minha Linha Editorial.md: Seção 1 (1x) / Seção 2 (fixa) / Seção 3 (semanal)
-
-**Seção 7: Transição**
-- Teaser A6: prompts prontos pra roteirizar
 
 ---
 
@@ -635,38 +801,6 @@ Falta uma coisa — a mais importante. Todo esse trabalho, até agora, ainda est
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Seção 1: Abertura**
-- Ponte A5→A6: calendário define tema, não roteiro — onde a maioria trava
-
-**Seção 2: O que e por quê**
-- Tema: prompts reutilizáveis pro ciclo completo — 4 de roteiro (2 carrossel + 2 reels, 3 tons) + 1 de legenda com SEO/GEO e capa
-- Urgência: sem eles, "roteiro completo" é o dia que não acontece
-
-**Seção 3: Como — Ponto 1 (como os prompts funcionam)**
-- Fluxo: calendário → escolhe prompt por formato+tom → troca [TEMA] → cola no chat → chat pede materiais → 5 opções → roteiro
-- Materiais-base fixos: Persona (A3), Posicionamento (A4), Método (M2)
-- Roteiro pronto → Seção 3 (mesmo doc): roteiro + tema → legenda SEO/GEO + headline de capa
-- Material: M4.7 - Meus Roteiros.md
-
-**Seção 4: Como — Ponto 2 (Carrossel — 1A e 1B)**
-- 1A História de Alcance (tom Alcance): Capa Impactante→Contexto→Desenvolvimento→Grande Virada→Lição/Reflexão→CTA
-- 1B Situação de Identificação (tom Identificação/Crença): Gancho Forte→Contextualização→Explicação Prática→Reflexão Pessoal→Lição e Moral→CTA manual
-
-**Seção 5: Como — Ponto 3 (Reels — 2A e 2B)**
-- 2A Narrativo com Metáfora (tom Alcance/Identificação): Gancho→Conflito→Jeito Errado→Processo de Virada→Jeito Certo (metáfora)→Mudança→CTA
-- 2B Didático Direto (tom Crença): Gancho→Início→Desenvolvimento→Final→CTA
-- Variações de gancho (Visual/Áudio) + CTA padrão
-
-**Seção 6: Onde e quando**
-- M4.7 - Meus Roteiros.md, toda vez que a grade marcar "Roteiro completo"
-
-**Seção 7: Transição**
-- Teaser A7: bloco final — publicar
-
----
-
 ## QUEIMAR A PONTE
 
 *Estimativa: 8–10 minutos*
@@ -712,32 +846,6 @@ A ponte queimou. A especialista que ainda não sabia se estava pronta ficou do o
 ---
 
 O orgânico com frequência e consistência já traz seguidores novos — especialmente com o modo teste e conteúdo de persona. O tráfego pago entra como acelerador: não pra substituir o que você está construindo, mas pra amplificar o que já está funcionando. Na próxima aula, como usar isso sem complicar. Vem comigo.
-
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge do M4: tudo construído e no ar — persona, método, prova, vitrine, posts fixados
-- O que muda: não é mais o que tem, é o quanto usa
-- "Queimar a ponte" = virada de quem testava para quem opera o negócio de verdade
-
-**Bloco 2 — O que e por quê**
-- Operar de verdade tem ritmo: consistência + quantidade + frequência
-- Sem amadorismo, sem reserva mental de "será que estou pronta?"
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: post diário e mais; cortes das sessões secretas (M3) como conteúdo de autoridade; rotina semanal (scripts/gravar/editar); modo teste do Instagram — entrega só pra não seguidores, valida antes de publicar *(compartilhar tela pra mostrar onde fica)*
-- Ponto 2: frequência sustentável; contratar editor/social media como possibilidade, não obrigação; viral possível na frequência certa — só com conteúdo da persona (viral com audiência errada = vaidade)
-- Ponto 3: hobby responde como hobby; tem tudo que precisa; o que determina resultado é energia e decisão
-
-**Bloco 4 — Onde e quando**
-- A partir de agora, como operação semanal contínua
-
-**Bloco 5 — Transição**
-- Orgânico com frequência + modo teste já traz seguidores novos
-- Tráfego = acelerador do que já funciona, não substituto
-- Próxima aula: tráfego pago sem complicar
 
 ---
 
@@ -796,30 +904,6 @@ A regra prática: tenha sempre pelo menos 2 conteúdos top performers rodando co
 Com isso, o Módulo 4 está completo: posicionamento construído, vitrine no ar, conteúdo rodando com rotina, e alcance pago entrando como hábito semanal. Você não fica mais esperando o algoritmo decidir quem vê o que você publica.
 
 Tem uma última aula — pra fechar não só esse módulo, mas a jornada inteira do Expert360º. Te vejo lá.
-
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Você tem um negócio → negócio precisa de investimento
-- Meta = empresa; grátis pra usuária comum, mas ela é empreendedora digital
-- Empreendedora paga pra Meta entregar o perfil pra mais pessoas — custo de fazer negócio
-- "Ninguém aqui de brincadeira" + "se desceu pro play, tem que brincar"
-- Por que pagar além do orgânico: viralização = lenta + sorte + lead nem sempre qualificado; tráfego qualificado = persona certa na velocidade certa
-
-**Bloco 2 — O que e por quê**
-- Tráfego = dinheiro atrás do que já funciona → alcance intencional
-- Sem gerenciador, sem agência, sem conhecimento técnico
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: nunca turbinar pelo celular (Apple 30%); R$6/dia = 700 pessoas (iPhone) vs 1.000 (notebook); logar via navegador no computador
-- Ponto 2: "Turbinar publicação" → objetivo Visitas ao perfil (sempre) → público (localização + interesses + faixa de idade) → salvar público → orçamento/duração → confirmar
-- Ponto 3: ciclo domingo/terça (R$10/2 dias por conteúdo); 2 métricas — custo/seguidor (meta R$2,50, até R$3,25 em perfil novo) + custo/comentário (meta R$0,07, até R$0,09 em perfil novo); decisão: dentro da meta = top performer (roda a semana toda); fora = pausa; escala flutuante: lucrou +30%, empatou mantém, negativo -20%; curva não é linear — sobe com oscilações; regra dos 2 top performers sempre rodando + novos em paralelo
-
-**Bloco 4 — Transição**
-- M4 completo: posicionamento + vitrine + rotina de conteúdo + alcance pago semanal
-- Próxima: encerramento do M4 e da jornada do Expert360º
 
 ---
 
@@ -897,43 +981,3 @@ Com persona. Com promessa. Com método. Com prova. Com autoridade.
 Não por sorte. Não por volume. Por ordem — pela ordem certa de construir um negócio de especialista no digital que funciona de verdade.
 
 O Expert360 termina aqui. O que você construiu não.
-
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Seção 1: Abertura**
-- Diferença deste encerramento: não é ponte para o próximo módulo — é o ponto de chegada
-- Convite a parar e reconhecer antes de seguir
-
-**Seção 2: O que e por quê**
-- Ponto de chegada de jornada longa raramente parece grande no momento
-- Vale nomear para que a transformação seja reconhecida, não passada em branco
-
-**Seção 3: Como — Ponto 1 (o que construiu no M4)**
-- P5 = Autoridade Tríplice + frase-tese + narrativa + presença posicionada + linha editorial + posts publicados + alcance turbinado
-- Não é "ter Instagram" — é presença que trabalha por você offline
-
-**Seção 4: Como — Ponto 2 (a jornada completa)**
-- 5 transformações de identidade — uma por módulo:
-  - M0: experiência → história (do carregado ao incopiável)
-  - M1: conhecimento → narrativa (persona + promessa que ressoa)
-  - M2: especialista com coisas → especialista com método (nome próprio, replicável)
-  - M3: método → prova (campo + vendas reais + depoimento)
-  - M4: prova fechada → autoridade visível (posicionada, publicada, com alcance)
-- "A versão que entrou no M0 esperava a hora certa. A que sai do M4 decidiu parar de esperar."
-
-**Seção 5: Como — Ponto 3 (o que vem depois)**
-- Sistema que gira: P1+P2+P3+P4+P5 são peças que operam — não marcos que se passa
-- Fica mais forte a cada semana de operação
-- 3 aceleradores: continue vendendo 1:1 (refina P3 + depoimento + prova) / continue postando na linha editorial (consistência converte audiência em autoridade) / continue turbinando top performers (ciclo semanal = fundação da escala, não o teto)
-
-**Seção 6: Onde e quando**
-- 5 documentos no Drive (P1–P5) = mapa do negócio
-- Instagram posicionado = canal de expansão
-- A partir de agora: não é mais aprendizado — é operação
-
-**Seção 7: Transição**
-- Chegou com P1+P2+P3+P4+P5 — pela ordem certa
-- Incubadora: individual ou em grupo, pra quem quer continuar com suporte contínuo (CTA: link do suporte na descrição da aula)
-- Expert360 termina. O que você construiu não.

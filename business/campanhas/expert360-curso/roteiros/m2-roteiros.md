@@ -1,18 +1,372 @@
 # Expert360º — Roteiros Módulo 2: Processo Autoral + Ecossistema
-Versão: 2.0 | Data: 15/06/2026 | Status: Retrofit pro formato Live 12 — pendente validação QG-CC-006
+Versão: 3.0 (teleprompter de fala livre) | Base: v2.0 aprovada (QG-CC-006) | Data: 09/07/2026
+Status: bullets pra gravar falando livre — o script em prosa completo foi movido pro fim do arquivo (SCRIPTS DE REFERÊNCIA), só como consulta.
 
 **Aulas:** 9 (Introdução + 2 mentalidade + 3 P3 + 2 portfólio + Encerramento)
-**Formato:** 5 blocos — Abertura (gancho + ponte com a aula anterior) / O Que e Por Quê (tema da aula + urgência) / Como (até 3 pontos principais — Ideia → Exemplo → Aplicação) / Onde e Quando (aplicação prática — material e timing) / Transição (recap + CTA + gancho pra próxima). Cada aula termina com ESTRUTURA — TÓPICOS E PONTOS-CHAVE, espelhando os 5 blocos.
-**Nota:** Módulo core do curso — maior e mais denso. Duração média das aulas: 10–15 min.
+
+## COMO LER OS BULLETS
+- **⚓ = fala EXATO** — número, nome de framework ou frase de impacto que não pode sair errada.
+- **▸ = os pontos do bloco COMO** (o miolo da aula).
+- **• = gatilho de raciocínio** — a linha é um conceito inteiro, mas você desenvolve com as SUAS palavras. Não é pra ler, é pra seguir.
+- Ordem dos blocos: Abertura → O Que e Por Quê → Como → Onde e Quando → Transição.
 
 ---
+---
 
-## NOTA DE RETROFIT (v2.0)
+## AULA INTRODUÇÃO — MÓDULO 2: PROCESSO AUTORAL + ECOSSISTEMA
+*Estimativa: 5–7 minutos*
 
-Esta versão retrofita o conteúdo do M2 v1.1 (aprovado em QG-CC-006) pro formato de 5 blocos adotado a partir do M4 ("Live 12") e já aplicado em m0-roteiros.md e m1-roteiros.md. O conteúdo aprovado foi preservado — a mudança é estrutural, não de substância. As Aulas 5 e 7 (exercícios com o Agente do Processo Autoral e o Agente do Portfólio Estratégico) seguem o padrão de 3 Pontos "inputs / como rodar / output". A Aula 4 (As 3 Jornadas) é uma aula de framework com exercício embutido — segue o padrão de 3 Pontos de conteúdo, com o exercício apontado no bloco [ONDE E QUANDO].
+**ABERTURA**
+- Você chegou aqui com P1 e P2 prontos: sabe exatamente com quem está falando e o que está prometendo.
+- Agora vem o trabalho mais importante do curso inteiro.
+
+**O QUE E POR QUÊ**
+- Este módulo entrega P3 — o seu Método Autoral — e o Portfólio de Ferramentas: o coração do Expert360.
+- P3 não é lista de conteúdo nem técnica genérica: é método com nome próprio, estrutura própria e narrativa de origem — incopiável porque a história que está dentro ninguém mais tem.
+- O Portfólio são as ferramentas que acompanham o método (planilhas, templates, modelos, roteiros) — não são bônus, são o que faz a oferta valer mais do que o método sozinho vale.
+- Por que aqui: todos os outros módulos orbitam este — o M0 deu a matéria-prima, o M1 deu o destinatário, o M3 vai vender, o M4 vai posicionar. O método é o centro de tudo.
+
+**COMO**
+▸ Ponto 1 — os dois entregáveis
+   - P3 é o método (nome, estrutura, narrativa de origem); o Portfólio é o arsenal que torna a oferta irresistível.
+   - Método sem narrativa é copiável; ferramenta sem método é genérica — juntos formam algo que só você tem.
+   - Você sai do módulo com P3 documentado e o Portfólio mapeado: os dois inputs diretos do M3.
+▸ Ponto 2 — como o módulo está organizado
+   - Antes dos agentes, duas viradas de mentalidade: "você não precisa saber tudo para começar" e "o método já existe, está na sua história".
+   - Depois: o que é método autoral (A3), as 3 Jornadas (A4), construção de P3 com o Agente do Processo Autoral (A5), por que ferramentas vendem mais que copy (A6), Portfólio com o Agente do Portfólio Estratégico (A7).
+   - São sete aulas de preparação e construção antes do M3.
+▸ Ponto 3 — a transformação
+   - Você entra com persona e promessa; sai com método nomeado e portfólio mapeado.
+   - Mais que os documentos, você sai com a certeza de que o método sempre existiu — que o M2 revelou, não inventou.
+   - Essa distinção muda como você se enxerga como especialista, e vai aparecer em tudo que você criar depois.
+
+**ONDE E QUANDO**
+- Os documentos de P3 e do Portfólio são gerados com os agentes (A5 e A7) e guardados no Drive.
+- Ao longo das próximas 8 aulas, começando pelas duas viradas de mentalidade.
+
+**TRANSIÇÃO**
+- Gancho A1: você não precisa saber tudo para ensinar — e eu vou te mostrar por quê.
 
 ---
 ---
+
+## AULA 1 — VOCÊ NÃO PRECISA SABER TUDO PARA ENSINAR
+*Estimativa: 10–12 minutos*
+
+**ABERTURA**
+- Abre pessoal, contando os lançamentos que fracassaram.
+   ⚓ Oito lançamentos. Com zero, uma ou quatro vendas. Sempre no prejuízo.
+- O pior não era o dinheiro perdido — era a narrativa que cada resultado ruim alimentava: "você não está pronta, precisa saber mais, mais um curso, mais uma certificação".
+- Você tinha conhecimento e experiência — o problema não era o que você sabia.
+   ⚓ "O problema não era o que eu sabia. Era o que eu acreditava sobre o que eu sabia."
+
+**O QUE E POR QUÊ**
+- Tema: o paradoxo da insegurança inteligente — a diferença entre a insegurança que paralisa e a que move.
+- Importa agora porque, antes de criar qualquer método, a crença "preciso saber mais / não estou pronta" vai aparecer — e nomear esse padrão antes é o que impede que ele decida por você.
+
+**COMO**
+▸ Ponto 1 — o paradoxo: os melhores têm medo
+   - Os melhores têm medo porque entendem o peso do que vão compartilhar: conhecimento é responsabilidade.
+   - Quem não sente insegurança nenhuma ou não sabe o valor do que tem, ou não se importa em parecer raso — e aí sim está em perigo.
+   - A insegurança não é sinal de que você não está pronta; é sinal de que está levando isso a sério. A questão não é se você tem — é qual tipo.
+▸ Ponto 2 — os dois tipos de insegurança
+   - Tipo 1, paralisante: "não sou boa o suficiente, nunca vou conseguir, preciso de mais um curso" — sem critério, é sensação se apresentando como argumento.
+   - Tipo 2, inteligente: "eu tenho conhecimento, mas preciso estruturar melhor antes de me expor" — tem objeto e caminho. É por isso que você está aqui.
+   - A maioria sente o Tipo 2 e interpreta como Tipo 1 — trata insegurança inteligente como prova de incapacidade.
+   - Isso vira procrastinação com roupagem intelectual: "vou começar quando terminar aquele curso".
+      ⚓ "A clareza não vem antes de começar. Ela vem durante."
+   - Você já tem o material pra organizar: história, Ikigai, P1, P2. Material organizado vira método.
+▸ Ponto 3 — a prova que você já tem
+   - Pergunta direta pra ela: você já ajudou alguém? já resolveu o problema de um cliente? já transformou o resultado de alguém com o que sabe?
+   - Se sim, seu conhecimento já provou valor — com uma pessoa real, um problema real. E o que mudou desde então? Nada: você é a mesma pessoa.
+   - A única diferença é que agora vai fazer de forma organizada, nomeada e replicável — um método, não mais a intuição do momento.
+      ⚓ "Você não precisa saber tudo para ensinar. Você precisa saber mais do que a sua aluna precisa agora. E você já sabe."
+
+**ONDE E QUANDO**
+- Daqui pra frente, toda vez que a insegurança aparecer durante a construção do método, a pergunta é: tipo 1 ou tipo 2?
+- É a pergunta que, antes de abrir qualquer agente, garante que você vai até o fim.
+
+**TRANSIÇÃO**
+- Gancho A2: o método não precisa ser inventado — ele já existe, e eu vou te mostrar onde.
+
+---
+---
+
+## AULA 2 — SEU MÉTODO JÁ EXISTE. ESTÁ NA SUA HISTÓRIA.
+*Estimativa: 10–12 minutos*
+
+**ABERTURA**
+- Abre com a metáfora da pulga no circo.
+   ⚓ A pulga nasce pra pular centenas de vezes a própria altura; colocada numa caixa com o teto baixando, aprende a pular só o suficiente pra não se machucar — e continua pulando baixo mesmo depois que tiram a tampa.
+- Ela internalizou o limite: o teto não existe mais, mas o comportamento continua.
+- A especialista que vem do offline faz o mesmo: o sistema (emprego, graduação, mercado) baixou o teto durante anos com "você precisa de mais formação, ainda não tem autoridade suficiente".
+   ⚓ "A caixa está aberta. Você nasceu para pular alto."
+
+**O QUE E POR QUÊ**
+- Tema: a distinção que muda tudo — método não é currículo acumulado, método é vivência organizada.
+- Importa agora porque a segunda crença que paralisa é achar que precisa inventar algo novo. Não precisa: o método já existe, e esta aula mostra onde.
+
+**COMO**
+▸ Ponto 1 — método não é currículo
+   - Currículo é o que você estudou (certificações, cursos, títulos) — tudo que veio de fora.
+   - Método é o que você viveu: as travessias, os erros que viraram aprendizado, as soluções que achou antes de existir nome pro problema.
+      ⚓ "Diploma é o que você estudou. Método é o que você viveu."
+   - O que você viveu ninguém mais viveu igual — é a narrativa de origem, não a estrutura de passos, que torna o método incopiável.
+   - Dá pra ter a melhor formação do mercado e um método fraco: o que fortalece é ter aplicado, errado e descoberto o que a teoria não dizia.
+▸ Ponto 2 — o M2 revela, não inventa
+   - Você não vai criar o método do zero: vai revelar o que já existe.
+   - Ele está na história real do M0, nas dores que viraram força, nos padrões da sua trajetória, no Ikigai.
+   - O M0 não era introdução — era extração. Agora o Agente do Processo Autoral pega esse material e ajuda a organizar, estruturar e nomear.
+   - Implicação direta: quem tem a história mais rica tem o método mais rico — não quem tem mais certificados. Se escreveu o M0 com cautela, ainda dá tempo de voltar e completar.
+▸ Ponto 3 — os dois cenários
+   - Cenário 1: continua adiando — daqui a cinco anos, mais formação, mais razões pra esperar, e nenhum método criado.
+   - Cenário 2: começa agora, com o que tem — o método sai imperfeito, mas existe, é entregue, gera resultado, e cada entrega refina.
+   - Você não vai escapar do medo de começar; ele vai estar lá de qualquer jeito.
+      ⚓ A única escolha é qual medo carregar: o medo de tentar ou o medo de nunca ter tentado.
+
+**ONDE E QUANDO**
+- Toda vez que surgir "ainda não estou pronta pra criar o método", a pergunta é: estou esperando o quê, exatamente?
+- A partir da próxima aula, você começa a revelar o que já existe.
+
+**TRANSIÇÃO**
+- Gancho A3: entender o que é um método autoral de verdade — e descobrir qual dos cinco tipos de narrativa é o seu.
+
+---
+---
+
+## AULA 3 — O QUE É UM MÉTODO AUTORAL
+*Estimativa: 10–12 minutos*
+
+**ABERTURA**
+- Bridge: as duas viradas estão feitas — você não precisa saber tudo, e o método já existe.
+- Antes de abrir o agente, você precisa entender o que vai criar — porque existe uma decisão que só você pode tomar, e tomá-la com consciência determina a qualidade do que vem.
+
+**O QUE E POR QUÊ**
+- Tema: o que torna um método autoral — e os 5 tipos de narrativa de origem.
+- Importa agora porque chegar ao Agente do Processo Autoral com uma hipótese (não precisa ser certeza) do tipo de narrativa acelera tudo que ele constrói com você.
+
+**COMO**
+▸ Ponto 1 — o que método NÃO é
+   - Não é técnica genérica: "método de 5 passos para X" é estrutura, não método — qualquer um cria passos.
+   - Não é lista de conteúdos: "você vai aprender posicionamento, copy e lançamento" é currículo, o quê sem o como e o porquê.
+   - Não é o que você estudou: a teoria acumulada não é o que fortalece.
+   - Teste: se outra pessoa com a mesma formação poderia ter criado o mesmo método, não é autoral. Autoral é o que só você poderia ter criado.
+▸ Ponto 2 — os 3 componentes
+   - Estrutura: os passos, as fases, os pilares — o esqueleto.
+   - Lógica: o porquê de cada passo estar onde está — a ordem que você descobriu que funciona.
+   - Narrativa de origem: a história que explica por que você, e não outra pessoa, criou esse método.
+   - Os dois primeiros são copiáveis; o terceiro não. Copiam a estrutura e fica uma cópia vazia, porque a história ninguém mais tem.
+▸ Ponto 3 — os 5 tipos de narrativa de origem
+   - Antes de abrir o agente, identifique a sua entre cinco:
+      ⚓ Tesouro Escondido — "encontrei algo que sempre esteve aqui, mas estava invisível".
+      ⚓ Olhar Sagaz — "vi o que todo mundo olhava, de um ângulo diferente".
+      ⚓ Grande Obstáculo — "tive que resolver isso porque não havia ninguém que resolvesse pra mim".
+      ⚓ Resolvedor — "vi esse problema acontecer repetidamente e precisava de uma solução que funcionasse toda vez".
+      ⚓ Fora da Curva — "fiz diferente, e funcionou melhor".
+   - Pode haver mais de um, mas geralmente existe um dominante — chegue com uma hipótese, não com certeza.
+
+**ONDE E QUANDO**
+- A hipótese do tipo de narrativa vai com você pra A4 (As 3 Jornadas) e pro Agente do Processo Autoral (A5).
+- Antes de fechar a aula, escolha a sua: Tesouro Escondido, Olhar Sagaz, Grande Obstáculo, Resolvedor ou Fora da Curva.
+
+**TRANSIÇÃO**
+- Gancho A4: projetar a transformação do seu aluno em 3 dimensões — e sair com o rascunho das 3 jornadas em mãos.
+
+---
+---
+
+## AULA 4 — AS 3 JORNADAS: COMO VOCÊ PROJETA (E DEFINE) A TRANSFORMAÇÃO DO SEU ALUNO
+*Estimativa: 15–18 minutos*
+
+**ABERTURA**
+- Bridge: você sabe o que é método autoral e tem a hipótese do tipo de narrativa.
+- A pergunta que a maioria não faz: como é que o aluno vai VIVER esse método? — não só o que aprende, mas quando, em que ordem, e o que ele se torna em cada etapa.
+- São perguntas de design, e a maioria dos métodos não responde nenhuma porque projeta numa dimensão só: o conteúdo.
+
+**O QUE E POR QUÊ**
+- Tema: o framework das 3 Jornadas — Didática, Cronológica e Psicológica.
+- Importa agora porque você sai com o rascunho das 3 jornadas, e ele é o input pro Agente do Processo Autoral (A5) e pro Agente do Portfólio (A7). Quanto mais claro, mais preciso o que os agentes constroem.
+
+**COMO**
+▸ Ponto 1 — o método de uma dimensão + as 3 jornadas
+   - Projetar só o conteúdo dá um método que parece completo no papel mas trava na entrega: o aluno aprende, mas não sabe o que está se tornando nem por que essa ordem.
+   - Na venda o problema é imediato: você descreve o conteúdo e o lead não compra, porque não respondeu o que ele pergunta por dentro — "o que vai mudar em mim?".
+      ⚓ Conteúdo não vende. Transformação vende. E transformação tem três dimensões.
+   - Jornada Didática — o quê ele aprende (módulos, ferramentas, entregáveis); é a que a maioria projeta.
+   - Jornada Cronológica — quando ele aprende cada coisa (a sequência com lógica, os gates que governam o avanço).
+   - Jornada Psicológica — quem ele se torna em cada fase (transformações de identidade); é a jornada que o lead compra.
+▸ Ponto 2 — Expert360 como exemplo completo
+   - Didática: 5 módulos, 5 entregáveis — M0 (história + Ikigai), M1 (P1+P2), M2 (P3+Portfólio), M3 (P4+3 vendas reais), M4 (P5+perfil posicionado).
+   - Cronológica: cada gate tem razão — M0 antes de M1 porque a persona tem que ressoar com sua história; M1 antes de M2 porque não se cria método sem saber pra quem; M2 antes de M3 porque não se monta oferta sem método; M3 antes de M4 porque não se aparece sem prova.
+   - Psicológica: 5 transformações de identidade — do currículo à autoridade, do conhecimento à narrativa, do caos ao método, da promessa à venda secreta, da invisibilidade à autoridade.
+   - Repara: enquanto eu descrevia a psicológica, você não pensava nos módulos — pensava nas transformações. É exatamente o que acontece com o seu lead.
+▸ Ponto 3 — o duplo uso: design e venda
+   - As 3 jornadas são ferramenta de design (garantem um método completo nas 3 dimensões) e ferramenta de venda.
+   - Respondem as 3 perguntas silenciosas do lead: "isso faz sentido?" (Cronológica), "o que vai mudar em mim?" (Psicológica), "o que vou ter no final?" (Didática).
+   - Não precisa apresentar com esses nomes — precisa que as três estejam presentes, senão alguma pergunta fica sem resposta e quem compraria sai sem comprar.
+
+**ONDE E QUANDO**
+- Abra o arquivo Meu Método Autoral (P3) no Drive e responda os 3 blocos:
+   - Bloco 1 — Didática: por fase, o que aprende / entregável concreto / ferramenta ou agente associado.
+   - Bloco 2 — Cronológica: por que o módulo 2 não pode vir antes do 1? qual o gate? o que quebra se pular? — uma frase de razão por gate (essa frase é o que você usa na venda).
+   - Bloco 3 — Psicológica: por fase, "antes a aluna é X, depois se torna Y" — X e Y são como ela se vê e se autoriza a agir, não o que sabe.
+- Agora, antes de seguir pra A5 — o rascunho é o input dos próximos agentes.
+- Bônus: dá pra virar infográfico em minutos, de graça, no NotebookLM — prompt pronto no arquivo Meu Infográfico das 3 Jornadas.
+
+**TRANSIÇÃO**
+- Gancho A5: com o rascunho das 3 jornadas, você está pronta pro Agente do Processo Autoral — a construção completa de P3.
+
+---
+---
+
+## AULA 5 — EXERCÍCIO: CONSTRUINDO SEU MÉTODO COM O AGENTE DO PROCESSO AUTORAL
+*Estimativa: 10–12 minutos (vídeo) + tempo com o agente*
+
+**ABERTURA**
+- Bridge: você tem contexto, material, a hipótese de narrativa e o rascunho das 3 jornadas.
+- Agora vem a construção completa de P3.
+
+**O QUE E POR QUÊ**
+- Tema: exercício — construir o Método Autoral completo com o Agente do Processo Autoral.
+- Importa agora porque P3 alimenta todo o resto: o Portfólio (A7) parte dele, a oferta do M3 parte dele, o posicionamento do M4 parte dele. Fazer bem uma vez ancora tudo que vem depois.
+
+**COMO**
+▸ Ponto 1 — o que entra (inputs)
+   - O agente conduz por seis etapas e precisa de material real pra trabalhar.
+   - Quatro documentos do Drive: Minha História Real (M0 A2), Meu Ikigai (M0 A3), Minha Persona Compradora P1 (M1 A4), Minha Promessa Transformadora P2 (M1 A6).
+   - Mais a hipótese do tipo de narrativa (A3) e o rascunho das 3 Jornadas (A4). Separe tudo antes de começar — mais input, output mais preciso.
+▸ Ponto 2 — como rodar (as 6 etapas + as 3 posturas)
+   - As 6 etapas em sequência: Narrativa → Tipo → Diferencial → Blueprint → Estrutura → Nome.
+   - Postura 1 — despejar antes de filtrar: quando pedir sua trajetória, fala tudo sem editar; a edição vem no processo, não na entrada.
+   - Postura 2 — questionar o que não ressoa: se algo não parece verdadeiro, diz "não é bem isso, falta algo, esse nome não tem a ver comigo".
+   - Postura 3 — o critério é reconhecimento, não perfeição: pronto quando você lê o nome e a estrutura e pensa "esse sou eu".
+      ⚓ Não precisa ser o nome mais bonito. Precisa ser o mais verdadeiro.
+▸ Ponto 3 — o que sai (output)
+   - Você termina com P3 completo: método com nome próprio, subtítulo, módulos ou pilares, e a narrativa de origem que o torna incopiável.
+   - P3 vai pro Agente do Portfólio (A7), pro M3 (oferta) e pro M4 (posicionamento).
+   - Salve no Drive em Meu Método Autoral (P3), na seção principal, junto do rascunho das 3 Jornadas.
+
+**ONDE E QUANDO**
+- Agente do Processo Autoral no painel + os 4 documentos + hipótese do tipo + rascunho das 3 jornadas.
+- Agora, antes de A6 — porque A7 parte de P3.
+
+**TRANSIÇÃO**
+- P3 pronto — método com nome, estrutura e história dentro, incopiável.
+- Gancho A6: por que as ferramentas vendem mais do que qualquer copy que você escrever sobre o método.
+
+---
+---
+
+## AULA 6 — POR QUE FERRAMENTAS VENDEM MAIS DO QUE COPY
+*Estimativa: 8–10 minutos*
+
+**ABERTURA**
+- Bridge: você acabou de construir o método — nome, estrutura, narrativa, pronto pra ser ensinado.
+- Mas existe diferença entre um método que é ensinado e uma oferta irresistível — e ela não está na copy, está no que acompanha o método.
+
+**O QUE E POR QUÊ**
+- Tema: por que o portfólio de ferramentas, não a copy, transforma um método numa oferta que converte.
+- Importa agora porque na próxima aula você mapeia o portfólio — e entender o papel das ferramentas antes garante que você constrói as certas: as que removem travas reais, não as que impressionam.
+
+**COMO**
+▸ Ponto 1 — o que a maioria acha × o que as ferramentas fazem
+   - A maioria acha que a venda acontece pelo método; mas na hora da compra a aluna pensa "será que funciona pra mim? consigo aplicar? é diferente do que já tentei?".
+   - Essas perguntas não são respondidas pela descrição do método — são respondidas pelas ferramentas, que materializam o caminho em vez de descrevê-lo.
+   - Ver uma planilha de Rastreador preenchida ou um template de Persona quebra a objeção antes e durante a venda, não depois.
+   - Muda a natureza da oferta: você não vende "método + bônus", vende um arsenal — o método é o mapa, as ferramentas são o equipamento.
+▸ Ponto 2 — portfólio não é bônus
+   - Bônus é o que você adiciona pra justificar o preço; portfólio é parte da entrega — cada ferramenta resolve uma trava específica da aluna.
+   - Sem a ferramenta certa a aluna trava num ponto e sente que o método não funcionou; com ela, a aplicação acontece.
+   - Por isso, ao mapear, a pergunta não é "que ferramentas eu poderia criar?" e sim "em qual ponto a minha aluna vai travar, e o que remove esse atrito?".
+▸ Ponto 3 — o que muda com um portfólio bem construído
+   - Valor percebido sobe — não por adicionar mais coisas, mas as coisas certas: a aluna sente que você pensou em cada detalhe da jornada dela.
+   - Conversão melhora — a objeção "será que consigo aplicar" é das mais difíceis de vencer com copy, e uma ferramenta resolve de forma concreta.
+   - Entrega fica mais forte — ferramenta na mão = aplica mais = resultado melhor = depoimento mais forte = próxima venda mais fácil.
+
+**ONDE E QUANDO**
+- O portfólio da próxima aula parte de P1 (travas da persona), P2 (resultado prometido) e P3 (estrutura e 3 jornadas).
+- Tenha os três abertos no Drive antes de A7.
+
+**TRANSIÇÃO**
+- Gancho A7: a construção começa de um lugar que a maioria não começa — das travas da sua aluna, não das suas ideias de ferramentas.
+
+---
+---
+
+## AULA 7 — EXERCÍCIO: CONSTRUINDO SEU PORTFÓLIO COM O AGENTE DO PORTFÓLIO ESTRATÉGICO
+*Estimativa: 8–10 minutos (vídeo) + tempo com o agente*
+
+**ABERTURA**
+- Bridge: você entende agora por que o portfólio importa.
+- Agora vem a construção — e ela começa das travas da sua aluna, não das suas ideias de ferramentas.
+
+**O QUE E POR QUÊ**
+- Tema: exercício — mapear o Portfólio de Ferramentas com o Agente do Portfólio Estratégico.
+- Importa agora porque o portfólio mapeado é o guia de produção do curso: cada ferramenta vira um item do checklist de produção. O agente garante que você constrói o que remove travas reais, não o que parece sofisticado.
+
+**COMO**
+▸ Ponto 1 — o que entra (inputs)
+   - Três documentos: P1 (medo, objeção, o que ela já tentou), P2 (o resultado prometido define quais travas remover), P3 (estrutura e 3 jornadas — especialmente a Cronológica, onde estão os gates, e a Psicológica, onde ela precisa de permissão pra continuar).
+   - Separe os três antes de começar.
+▸ Ponto 2 — como rodar (os 3 movimentos)
+   - Movimento 1 — mapeamento de objeções: a partir de P1, o agente identifica as objeções da compra ("não tenho tempo", "não sei se consigo aplicar", "já tentei algo parecido"); pra cada uma, uma ferramenta que responde de forma concreta.
+   - Movimento 2 — mapeamento de travas: a partir de P3, identifica onde a aluna trava na aplicação; pra cada trava, uma ferramenta que remove o atrito.
+   - Movimento 3 — brainstorm de portfólio premium: com objeções e travas mapeadas, as ferramentas de maior valor — não só as necessárias, as que tornam o portfólio memorável.
+   - Postura: deixa o agente propor antes de julgar; o critério não é "eu acharia valioso", é "a minha persona, com as travas que tem, acharia valioso".
+▸ Ponto 3 — o que sai (output)
+   - Uma planilha de portfólio: por ferramenta — nome, formato (planilha/template/checklist/roteiro), objetivo, relação com o método (em qual fase é usada), relação com a dor da persona (qual objeção ou trava resolve), e potencial de uso independente.
+   - Essa planilha é o guia de produção — cada ferramenta é um item do checklist de produção do curso. Salve no Drive.
+
+**ONDE E QUANDO**
+- Agente do Portfólio Estratégico no painel + P1, P2 e P3 no Drive.
+- Agora — com P3 e o portfólio mapeados, você está pronta pro Encerramento do Módulo 2.
+
+**TRANSIÇÃO**
+- Gancho Encerramento: parar um segundo e ver o que aconteceu no módulo — o que você construiu e quem você se tornou.
+
+---
+---
+
+## QUEM VOCÊ SE TORNOU — ENCERRAMENTO MÓDULO 2: PROCESSO AUTORAL + ECOSSISTEMA
+*Estimativa: 5–7 minutos*
+
+**ABERTURA**
+- Você chegou no fim do Módulo 2. Para um segundo — o que aconteceu aqui é maior do que parece no momento em que termina.
+
+**O QUE E POR QUÊ**
+- Este encerramento existe pra nomear o que foi construído: P3 e o Portfólio parecem exercícios e documentos no Drive, mas o que está ali é o coração do Expert360.
+
+**COMO**
+▸ Ponto 1 — o que você construiu
+   - P3 — Método Autoral: nome próprio, subtítulo, módulos ou pilares, narrativa de origem incopiável. Copiam a estrutura e continua sendo seu, porque a história ninguém mais tem.
+   - Portfólio de Ferramentas: mapeado a partir das objeções e dos pontos de atrito reais — um arsenal que transforma o método numa oferta irresistível.
+   - E algo que não está em documento: a certeza de que o método sempre existiu, que o M0 já tinha extraído o material, e que o M2 revelou — não inventou.
+▸ Ponto 2 — a transformação que aconteceu aqui
+   - Você entrou como especialista com persona e promessa; sai como especialista com método.
+   - Conhecimento é o que você sabe; método é o que você consegue ensinar — organizado, replicável, com começo, meio e fim.
+      ⚓ A caixa está aberta faz tempo. Agora você sabe disso.
+   - Três dos cinco Ps construídos. O coração do Expert360 está pronto.
+▸ Ponto 3 — onde você está + o que vem
+   - Antes do M2: P1 e P2. Depois: P1, P2, P3 e Portfólio — você sabe o que entrega e com quê.
+   - No M3 você constrói P4, a Oferta de Validação, e faz o que a maioria nunca fez antes de aparecer: vende. Três vendas reais, no 1:1, com o método que acabou de construir. Não é lançamento nem exposição — é validação.
+
+**ONDE E QUANDO**
+- P3 e o Portfólio ficam no Drive e acompanham você do M3 em diante como os inputs centrais da oferta e do posicionamento.
+- Assim que terminar este encerramento, você está pronta pra começar o M3.
+
+**CTA — Mentoria Express**
+- Se em algum ponto do módulo você ficou presa e seguiu sem resolver: a Mentoria Express é uma hora comigo focada exatamente no que está travando — sem pauta ampla, sem volta ao zero. O link pra falar com o suporte está na descrição da aula.
+
+**TRANSIÇÃO**
+- Três dos cinco Ps prontos. No M3, você vende o método — três vezes, no 1:1, antes de qualquer exposição pública. Te vejo lá.
+
+---
+---
+
+# SCRIPTS DE REFERÊNCIA — PROSA COMPLETA (não ler na gravação)
+
+> Os roteiros palavra-por-palavra abaixo são a versão v2.0 aprovada (QG-CC-006). Ficam aqui só como consulta caso você queira conferir uma passagem exata. Na gravação, use os bullets acima.
+
 
 ## AULA INTRODUÇÃO — MÓDULO 2: PROCESSO AUTORAL + ECOSSISTEMA
 *Estimativa: 5–7 minutos*
@@ -71,31 +425,6 @@ Dois entregáveis. Oito aulas. O coração do Expert360.
 
 Na próxima aula, a primeira virada de mentalidade: você não precisa saber tudo para ensinar — e eu vou te mostrar por quê. Vem comigo.
 
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge do M1: P1 + P2 prontos — sabe pra quem e o que promete
-- Agora: o trabalho mais importante do curso
-
-**Bloco 2 — O que e por quê**
-- M2 entrega P3 (Método Autoral) e Portfólio (ferramentas = proposta irresistível)
-- Módulo core: todos os outros orbitam este. M0 deu matéria-prima, M1 deu destinatário, M3 vai vender, M4 vai posicionar
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: P3 = método nomeado com narrativa incopiável + Portfólio = arsenal de ferramentas. Juntos = oferta que só você tem
-- Ponto 2: 2 mentalidade (não precisa saber tudo / método já existe) → A3 método autoral → A4 3 jornadas → A5 agente P3 → A6 ferramentas vendem → A7 agente portfólio
-- Ponto 3: entra com P1+P2, sai com P3+portfólio — mas principalmente: certeza de que revelou, não inventou
-
-**Bloco 4 — Onde e quando**
-- P3 (A5) e Portfólio (A7), guardados no Drive
-- 8 aulas, começando pelas viradas de mentalidade
-
-**Bloco 5 — Transição**
-- Gancho A1: você não precisa saber tudo para ensinar
-
----
 ---
 
 ## AULA 1 — VOCÊ NÃO PRECISA SABER TUDO PARA ENSINAR
@@ -157,32 +486,6 @@ Você não precisa saber tudo para ensinar. A insegurança que sente é intelige
 
 Na próxima aula, a segunda virada: o método não precisa ser inventado. Ele já existe. E eu vou mostrar onde. Vem comigo.
 
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- 1ª das 2 aulas de mentalidade antes dos agentes
-- 8 lançamentos fracassados → a narrativa que a insegurança alimenta: "precisa saber mais"
-- O problema não era o conhecimento — era o que acreditava sobre o que sabia
-
-**Bloco 2 — O que e por quê**
-- Tema: insegurança inteligente vs. insegurança paralisante
-- Urgência: a crença "não estou pronta" vai aparecer — nomear antes impede que decida por você
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: paradoxo — os melhores têm medo (entendem a responsabilidade). Quem não sente: não sabe o valor ou não se importa. Insegurança = inteligência, não fraqueza
-- Ponto 2: tipo 1 (paralisante — sem critério, sensação como argumento) vs tipo 2 (inteligente — tem objeto e caminho). Maioria interpreta tipo 2 como tipo 1. Procrastinação disfarçada de prudência: "mais um curso" — clareza vem durante, não antes
-- Ponto 3: a prova que já existe — você já ajudou alguém. Mesmo pessoa. Diferença: organizado, nomeado, replicável. Princípio: saber mais do que a aluna precisa agora — e você já sabe.
-
-**Bloco 4 — Onde e quando**
-- Pergunta pra qualquer insegurança que aparecer: tipo 1 ou tipo 2?
-- Antes de qualquer agente: a que garante que você vai até o fim
-
-**Bloco 5 — Transição**
-- Gancho A2: método não precisa ser inventado — já existe
-
----
 ---
 
 ## AULA 2 — SEU MÉTODO JÁ EXISTE. ESTÁ NA SUA HISTÓRIA.
@@ -250,31 +553,6 @@ Antes de abrir o agente, você vai entender o que é um método autoral de verda
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- 2ª das 2 aulas de mentalidade antes dos agentes
-- Metáfora da pulga: internalizou limites que não existem mais. Especialista no offline: sistema baixou o teto durante anos. A caixa está aberta.
-
-**Bloco 2 — O que e por quê**
-- Tema: método não é currículo — método é vivência organizada
-- Urgência: 2ª crença paralisante = "preciso inventar algo novo". Não precisa.
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: currículo = vem de fora; método = o que você viveu. "Diploma é o que você estudou. Método é o que você viveu." Incopiável = narrativa de origem, não estrutura de passos
-- Ponto 2: M2 revela, não inventa — método está no M0 (história, Ikigai). M0 não era introdução: era extração. Quanto mais honesto o M0, mais rico o método
-- Ponto 3: 2 cenários (adiar = mais formação, 0 método / começar = método imperfeito que existe, é entregue, é refinado). Medo de tentar vs medo de nunca ter tentado.
-
-**Bloco 4 — Onde e quando**
-- "Ainda não estou pronta" → perguntar: esperando o quê, exatamente?
-- A partir da A3: começa a revelar
-
-**Bloco 5 — Transição**
-- Gancho A3: o que é um método autoral + os 5 tipos de narrativa
-
----
----
-
 ## AULA 3 — O QUE É UM MÉTODO AUTORAL
 *Estimativa: 10–12 minutos*
 
@@ -328,31 +606,6 @@ Você sabe o que é um método autoral e tem uma hipótese sobre o tipo de narra
 
 Na próxima aula, antes de abrir qualquer agente, você vai aprender como projetar a transformação do seu aluno em 3 dimensões — e vai sair com o rascunho das 3 jornadas do seu método em mãos. Esse rascunho vai ser o input que você leva para o agente. Vem comigo.
 
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge: 2 viradas feitas → agora entender o que vai criar antes de abrir o agente
-- A decisão que só você pode tomar: qual narrativa está no coração do seu método
-
-**Bloco 2 — O que e por quê**
-- Tema: o que torna um método autoral + os 5 tipos de narrativa de origem
-- Urgência: chegar ao agente com hipótese acelera o processo
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: o que não é — técnica genérica (estrutura sem lógica), lista de conteúdos (currículo sem como/por quê), o que você estudou (teoria sem travessia). Teste: outra pessoa com mesma formação poderia criar? Se sim, não é autoral.
-- Ponto 2: 3 componentes — Estrutura (copiável), Lógica (copiável), Narrativa de origem (incopiável). A narrativa é o que diferencia.
-- Ponto 3: 5 tipos — Tesouro Escondido / Olhar Sagaz / Grande Obstáculo / Resolvedor / Fora da Curva. Pode ter mais de um — existe um dominante. Chegar com hipótese, não certeza.
-
-**Bloco 4 — Onde e quando**
-- Hipótese vai pra A4 e pro agente (A5)
-- Antes de fechar esta aula: escolher a hipótese
-
-**Bloco 5 — Transição**
-- Gancho A4: projetar a transformação do aluno em 3 dimensões — sair com rascunho das 3 jornadas
-
----
 ---
 
 ## AULA 4 — AS 3 JORNADAS: COMO VOCÊ PROJETA (E DEFINE) A TRANSFORMAÇÃO DO SEU ALUNO
@@ -416,33 +669,6 @@ Com o rascunho das 3 jornadas em mãos, você está pronta para o Agente do Proc
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge A3: sabe o que é método autoral e tem hipótese do tipo de narrativa
-- Pergunta que a maioria não faz: "como o aluno vai VIVER esse método?"
-
-**Bloco 2 — O que e por quê**
-- Tema: framework das 3 Jornadas (Didática / Cronológica / Psicológica)
-- Urgência: rascunho das 3 jornadas = input para A5 (Processo Autoral) e A7 (Portfólio) — quanto mais claro, mais preciso o que os agentes entregam
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: problema do método de 1 dimensão (trava na entrega, lead não compra) + as 3 jornadas: Didática (o quê), Cronológica (quando, com lógica e gates), Psicológica (quem se torna — o que o lead compra)
-- Ponto 2: Expert360 como exemplo completo — Didática (5 módulos/entregáveis), Cronológica (cada gate com razão), Psicológica (5 transformações de identidade, uma por módulo)
-- Ponto 3: duplo uso (design + venda). 3 perguntas silenciosas respondidas: "faz sentido?" (Cronológica), "o que muda em mim?" (Psicológica), "o que tenho no final?" (Didática)
-
-**Bloco 4 — Onde e quando**
-- Arquivo Meu Método Autoral (P3) no Drive
-- 3 blocos: Didática (módulos/entregáveis), Cronológica (gates com frase de razão), Psicológica ("antes X, depois Y" — identidade)
-- Agora, antes de seguir pra A5
-- Bônus: transformar o rascunho em infográfico visual — arquivo Meu Infográfico das 3 Jornadas (NotebookLM, prompt pronto)
-
-**Bloco 5 — Transição**
-- Gancho A5: com rascunho das 3 jornadas → Agente do Processo Autoral (construção completa de P3)
-
----
----
-
 ## AULA 5 — EXERCÍCIO: CONSTRUINDO SEU MÉTODO COM O AGENTE DO PROCESSO AUTORAL
 *Estimativa: 10–12 minutos (vídeo) + tempo com o agente*
 
@@ -494,32 +720,6 @@ P3 pronto. Você tem um método com nome, estrutura e história dentro — incop
 
 Na próxima aula, antes de mapear o portfólio, uma aula curta que explica por que as ferramentas vendem mais do que qualquer copy que você escrever sobre o método. Vem comigo.
 
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge A4: contexto, material, hipótese de narrativa e rascunho das 3 jornadas em mãos
-- Agora: construção completa de P3
-
-**Bloco 2 — O que e por quê**
-- Tema: exercício — construir P3 com o Agente do Processo Autoral
-- Urgência: P3 alimenta Portfólio (A7), oferta (M3) e posicionamento (M4) — fazer bem 1x ancora tudo que vem depois
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: inputs — 4 documentos (História Real + Ikigai + P1 + P2) + hipótese de narrativa + rascunho das 3 jornadas. Mais input = mais preciso o output
-- Ponto 2: 6 etapas (Narrativa→Tipo→Diferencial→Blueprint→Estrutura→Nome). 3 posturas: despejar antes de filtrar / questionar o que não ressoa / critério = reconhecimento ("esse sou eu"), não perfeição
-- Ponto 3: output — P3 completo (nome, subtítulo, módulos/pilares, narrativa de origem incopiável). Vai pra A7, M3 e M4. Salvar no Drive em Meu Método Autoral (P3).
-
-**Bloco 4 — Onde e quando**
-- Agente do Processo Autoral (painel) + 4 documentos + hipótese + rascunho 3 jornadas (Drive)
-- Agora — antes de seguir pra A6
-
-**Bloco 5 — Transição**
-- P3 pronto — método nomeado, incopiável
-- Gancho A6: por que ferramentas vendem mais do que copy
-
----
 ---
 
 ## AULA 6 — POR QUE FERRAMENTAS VENDEM MAIS DO QUE COPY
@@ -577,31 +777,6 @@ Na próxima aula, você vai mapear o seu portfólio com o Agente do Portfólio E
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge A5: P3 pronto (método nomeado)
-- A diferença entre método que é ensinado e oferta irresistível: não está na copy, está no que acompanha
-
-**Bloco 2 — O que e por quê**
-- Tema: portfólio de ferramentas como diferencial de conversão
-- Urgência: entender o papel antes de construir garante que você constrói as certas — as que removem travas reais, não as que impressionam
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: o que a maioria acha (método bom = venda) vs o que as ferramentas fazem (responde "consigo aplicar?" de forma concreta, mostra como fica, quebra objeção antes da venda). Arsenal = mapa + equipamento
-- Ponto 2: portfólio ≠ bônus. Portfólio = parte da entrega, resolve trava específica. Diferença entre aluna que completa e que desiste. Pergunta certa: "onde vai travar? O que remove esse atrito?"
-- Ponto 3: 3 coisas que mudam — valor percebido (certas > mais), conversão ("consigo aplicar?" respondido de forma concreta), entrega mais forte (aplica mais → resultado melhor → depoimento → venda mais fácil)
-
-**Bloco 4 — Onde e quando**
-- Portfólio parte de P1 + P2 + P3 — ter os 3 abertos no Drive antes de A7
-- Antes de seguir pra A7
-
-**Bloco 5 — Transição**
-- Gancho A7: construção começa das travas da aluna, não das suas ideias de ferramentas
-
----
----
-
 ## AULA 7 — EXERCÍCIO: CONSTRUINDO SEU PORTFÓLIO COM O AGENTE DO PORTFÓLIO ESTRATÉGICO
 *Estimativa: 8–10 minutos (vídeo) + tempo com o agente*
 
@@ -655,31 +830,6 @@ Na próxima aula, a gente para um segundo e vê o que aconteceu neste módulo �
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge A6: entende por que portfólio importa
-- A construção começa das travas da aluna, não das suas ideias
-
-**Bloco 2 — O que e por quê**
-- Tema: exercício — mapear portfólio com Agente do Portfólio Estratégico
-- Urgência: portfólio mapeado = guia de produção do curso — construir o que remove travas reais
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: inputs — P1 (medo/objeção/o que já tentou), P2 (resultado prometido = quais travas remover), P3 (estrutura + 3 jornadas, especialmente gates e pontos psicológicos)
-- Ponto 2: 3 movimentos — objeções (P1→ferramentas que respondem) / travas (P3→ferramentas que removem atrito) / brainstorm premium (necessárias + memoráveis). Postura: agente propõe antes de julgar. Critério: "minha persona acharia valioso"
-- Ponto 3: output — planilha com nome/formato/objetivo/relação método/relação dor/potencial independente. Guia de produção. Salvar no Drive.
-
-**Bloco 4 — Onde e quando**
-- Agente do Portfólio Estratégico (painel) + P1+P2+P3 (Drive)
-- Agora — pronta pro Encerramento com P3+Portfólio prontos
-
-**Bloco 5 — Transição**
-- Gancho Encerramento: parar e ver o que aconteceu — o que construiu e quem se tornou
-
----
----
-
 ## QUEM VOCÊ SE TORNOU — ENCERRAMENTO MÓDULO 2: PROCESSO AUTORAL + ECOSSISTEMA
 *Estimativa: 5–7 minutos*
 
@@ -730,27 +880,3 @@ P1, P2, P3 e Portfólio prontos. Três dos cinco Ps construídos.
 Antes de ir — se em algum momento desse módulo você ficou presa num ponto específico e seguiu em frente sem resolver, tem um jeito de destravar. A Mentoria Express é uma hora comigo focada exatamente no que está travando. Sem pauta ampla, sem volta ao zero — uma hora, um ponto, uma saída. O link pra entrar em contato com o suporte está na descrição dessa aula.
 
 No Módulo 3, você vai vender o método — três vezes, no 1:1, antes de qualquer exposição pública. E tudo que você construiu aqui vai alimentar isso. Te vejo lá.
-
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Para um segundo — o que aconteceu aqui é maior do que parece
-
-**Bloco 2 — O que e por quê**
-- P3 e Portfólio não parecem grandes no momento — mas são o coração do Expert360
-- Nomear antes de seguir
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: o que foi construído — P3 (nomeado, incopiável), Portfólio (travas reais, oferta irresistível), insight (método sempre existiu — M0 extraiu, M2 revelou, não inventou)
-- Ponto 2: transformação — especialista com conhecimento → especialista com método (organizado, replicável, ensinável). "A caixa está aberta faz tempo. Agora você sabe disso." 3 dos 5 Ps prontos.
-- Ponto 3: antes × depois (P1+P2 → P1+P2+P3+Portfólio). Teaser M3: P4 = Oferta de Validação — 3 vendas reais no 1:1 antes de qualquer exposição. Arsenal completo.
-
-**Bloco 4 — Onde e quando**
-- P3 e Portfólio no Drive — inputs centrais de M3 e M4
-- Pronta pra começar o M3
-
-**Bloco 5 — Transição**
-- 3 dos 5 Ps prontos
-- Gancho M3: vender o método — 3 vezes, 1:1, antes de qualquer exposição

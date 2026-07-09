@@ -1,15 +1,470 @@
 # Expert360º — Roteiros Módulo 3: Vendas Secretas
-Versão: 2.0 | Data: 15/06/2026 | Status: Retrofit pro formato Live 12 (5 blocos) — pronto pra gravação
+Versão: 3.0 (teleprompter de fala livre) | Base: v2.0 aprovada (QG-CC-006) | Data: 09/07/2026
+Status: bullets pra gravar falando livre — o script em prosa completo foi movido pro fim do arquivo (SCRIPTS DE REFERÊNCIA), só como consulta.
 
 **Aulas:** 12 (Introdução + A1–A10 + Encerramento)
-**Formato:** Script 5 blocos + ESTRUTURA com Blocos 1–5 ao final de cada aula
 
-> **NOTA DE RETROFIT v2.0:**
-> Conteúdo aprovado da v1.0 preservado — mudança estrutural (envelope 5 blocos), não de substância.
-> A1 e A2 (mentalidade): marcações [MB] (RC-07, RC-08, RC-13, VOL-06) mantidas pra Karol enriquecer.
-> Nomenclatura ESTRUTURA: "Bloco 1–5" (igual M0/M1/M2). Pontos do [COMO] como sub-itens do Bloco 3.
+## COMO LER OS BULLETS
+- **⚓ = fala EXATO** — número, nome de framework ou frase de impacto que não pode sair errada.
+- **▸ = os pontos do bloco COMO** (o miolo da aula).
+- **• = gatilho de raciocínio** — a linha é um conceito inteiro, mas você desenvolve com as SUAS palavras. Não é pra ler, é pra seguir.
+- Ordem dos blocos: Abertura → O Que e Por Quê → Como → Onde e Quando → Transição.
 
 ---
+---
+
+## INTRODUÇÃO — MÓDULO 3: VENDAS SECRETAS
+*Estimativa: 5–7 minutos*
+
+**ABERTURA**
+- Você chegou no M3 com o arsenal completo: P1 (com quem fala), P2 (promessa que ela reconhece), P3 (método incopiável) e o Portfólio.
+- Nos módulos anteriores você construiu. Agora você vai provar — é o módulo onde a teoria vira evidência.
+
+**O QUE E POR QUÊ**
+- Tema: as Vendas Secretas. Entregável: P4, a sua Proposta Validada.
+- Importa agora porque o mercado repete como lei "cresça primeiro, construa audiência, depois lance" — e essa ordem é a armadilha.
+   ⚓ Eu segui essa lógica por oito lançamentos. Zero, uma, quatro vendas. Sempre no prejuízo. O problema não era a audiência — era escalar uma mensagem que nunca foi validada.
+
+**COMO**
+▸ Ponto 1 — o que são as Vendas Secretas + a ordem certa
+   - Não é esconder nada — é a ordem certa. O mercado ensina crescer → validar → vender; o certo é validar → vender → crescer.
+   - Quando parei de crescer audiência e comecei a vender em silêncio (sem lançamento, sem seguidores), foi a primeira vez que o digital funcionou — não porque o método mudou, porque a ordem mudou.
+   - Pra validar você não precisa de audiência: precisa de clareza (já tem, com P1/P2/P3), coragem (este módulo constrói) e as pessoas certas.
+▸ Ponto 2 — o que você vai construir: P4
+   - Ao final: oferta estruturada (preço, formato, entrega), pitch de 30–60 min, 3 vendas reais feitas (pagamento confirmado, não "vai comprar") e 1 depoimento documentado.
+   - Esse é o gate do módulo — não é regra arbitrária: sem as 3 vendas, a transformação não aconteceu.
+   - A dúvida "será que funciona? serei boa o suficiente?" não some com formação nem motivação — some com evidência. Quando alguém paga, entra e diz "foi exatamente o que eu precisava", a dúvida vai embora porque você provou.
+▸ Ponto 3 — como o módulo está organizado + o que vem depois
+   - Quatro blocos: Mentalidade (antes de qualquer tático) → Oferta → Leads e Abordagem → Sessão e Pós-venda.
+   - As 3 vendas não são o destino, são o passaporte: o depoimento, o pitch que funcionou e as objeções viram input do M4.
+   - No M4 você não vai aparecer tentando provar nada — vai aparecer mostrando o que já está provado.
+
+**ONDE E QUANDO**
+- Onde você está: P1, P2 e P3 no Drive, arsenal pronto.
+- Começa agora, no primeiro bloco de mentalidade — não pula pros táticos antes.
+
+**CTA — Mentoria VIP**
+- Este é o módulo de maior resistência — não por falta de método, por falta de alguém ao lado na primeira ida a campo. A Mentoria VIP são três sessões comigo focadas no M3: oferta, abordagem e a sessão de vendas na prática. Link do suporte na descrição.
+
+**TRANSIÇÃO**
+- A maior barreira pras primeiras vendas não é técnica — é a relação que você tem com o ato de cobrar.
+- Gancho A1: é o que a gente trata agora.
+
+---
+---
+
+## AULA 1 — IDENTIDADE DE VENDAS ANTES DA TÉCNICA
+*Estimativa: 10–12 minutos*
+
+**ABERTURA**
+- Este módulo tem muita técnica (rastreador, script, roteiro, cadência) — tudo vai aparecer no momento certo.
+- Mas antes de qualquer técnica, algo mais fundamental precisa estar no lugar: quem você é quando vende.
+- De nada adianta o script perfeito se, na hora de enviar, o peso aparece no peito e o dedo não se move. A técnica sem identidade não executa.
+
+**O QUE E POR QUÊ**
+- Tema: a identidade de quem vende, antes de qualquer tático.
+- Importa agora porque o que decide se você vai usar tudo deste módulo ou deixar guardado numa pasta não é o roteiro — é o que acontece dentro de você na hora de enviar a mensagem.
+
+**COMO**
+▸ Ponto 1 — o medo de cobrar: crença, não fato
+   - Vejo em 9 de cada 10 especialistas: têm conhecimento, método, resultado — mas na hora de falar em dinheiro a voz fica pequena.
+   - O medo de cobrar não é fato (verificável), é crença (história repetida até parecer verdade).
+   - Duas histórias suas: em 2020, ensinando gestão, cobrava R$697 por um ano e R$97 nas consultorias — barato demais, e mesmo assim não vendia, porque preço baixo é falta de crença no próprio valor e o lead sente.
+   - Em 2022, produtividade pra mães, a cada lançamento que não vendia você baixava o preço — de R$797 pra R$497. O problema nunca foi o número, era a crença.
+      ⚓ O ciclo: quando não acredita no seu valor, cobra menos; cobra menos, trabalha mais; trabalha mais, frustra; frustra, cobra menos ainda.
+   - "Meu público não tem grana" — você testou? "Meu conhecimento não justifica o preço" — baseado em quê? O medo de cobrar é informação sobre como você se vê, não sobre o mercado.
+▸ Ponto 2 — vender é servir quem já tem o problema
+   - Você não empurra pra quem não quer — oferece solução pra quem já tem o problema e está procurando resposta.
+   - A Laura que você vai contatar já tentou o digital, já se frustrou, já se perguntou "por que pra mim é tão difícil?". Ela tem o problema, você tem a solução. Quando você recua por medo de parecer vendedora, quem paga o preço é ela.
+   - Cobrar bem não contradiz servir — confirma: quem paga bem respeita o processo e chega no resultado.
+▸ Ponto 3 — as 3 vendas são campo, não teste final
+   - Não são prova de valor nem teste da sua capacidade. São campo.
+   - Josh Waitzkin, campeão de xadrez ainda criança, subia de categoria antes da hora e perdia — mas via aquilo como investir em derrota, porque a derrota acelera o aprendizado mais que a vitória fácil.
+   - Suas primeiras conversas são isso: você vai ao campo antes de estar "pronta", vai travar, vai sair pensando "devia ter dito diferente" — isso não é fracasso, é o investimento que o campo exige.
+      ⚓ Só fracassa quem desiste. Não quem ouve não, não quem conduz uma sessão que não fecha. O único fracasso definitivo é parar antes de chegar.
+
+**ONDE E QUANDO**
+- Reflexão, uma linha sem filtro pra cada: (1) que justificativa uso quando não ofereço o que poderia? (2) quando foi a última vez que o problema da Laura ficou sem solução porque eu não ofereci? (3) qual campo eu preciso entrar antes de estar pronta?
+- Guarde as respostas — fazem mais sentido depois da próxima aula.
+
+**TRANSIÇÃO**
+- Identidade no lugar. Agora a segunda barreira, mais sutil e tão eficiente quanto: a espera pela prontidão.
+- Gancho A2.
+
+---
+---
+
+## AULA 2 — FEITO É MELHOR QUE PERFEITO
+*Estimativa: 8–10 minutos*
+
+**ABERTURA**
+- Na aula anterior: identidade, o medo de cobrar como crença, vender como serviço.
+- Agora a segunda barreira: a espera pela prontidão — "quando eu terminar de estudar o script, quando eu me sentir mais segura, quando eu estiver pronta de verdade".
+- Você já disse alguma dessas frases, ou vai dizer nos próximos dias. Esta aula desfaz a espera — não com motivação, com lógica.
+
+**O QUE E POR QUÊ**
+- Tema: a lógica de quando "é hora de ir" — e por que mais preparo antes do campo atrasa, não acelera.
+- Importa agora porque você está prestes a entrar nos táticos, e todos só funcionam se você for a campo. Esta aula remove a última barreira interna.
+
+**COMO**
+▸ Ponto 1 — o que a escola ensinou e onde erra
+   - A escola: estudo → conhecimento → resultado, 100% de preparo antes da ação.
+      ⚓ No empreendedorismo a proporção é outra: 80% fazendo, 20% estudando.
+   - Você pode estudar o roteiro cem vezes e só vai saber o que melhorar depois da primeira conversa real — mais estudo antes de ir adia, não acelera.
+   - O conhecimento que você já tem (P1, P2, P3, o roteiro) é suficiente pra ir. Não existe "um pouco mais de preparo" que te deixe pronta de um jeito que o campo não vai.
+▸ Ponto 2 — a inversão que muda tudo
+      ⚓ "Se eu estou pronta demais para fazer alguma coisa, eu errei — porque eu devia ter feito isso antes."
+   - Se você está totalmente confortável, sem nenhuma borboleta no estômago, esperou demais. O critério não é "estou pronta", é "tenho o mínimo pra que isso não me destrua".
+   - Prontidão não é estado que se alcança antes de começar — é estado que se constrói fazendo. Você não vai se sentir pronta antes da primeira conversa; vai se sentir mais pronta depois dela.
+▸ Ponto 3 — o que "feito > perfeito" significa aqui
+   - Não é "lança logo e vê o que acontece" — esse atalho você conhece, seguiu, fracassou oito vezes. É outra coisa: mais inteligente, mais segura, privada.
+   - 5 passos: (1) marque a data da primeira prospecção, uma data real; (2) prepare o máximo até lá, mas a data não muda; (3) faça a abordagem mesmo imperfeita — vai sair diferente do ensaio, e tudo bem; (4) audite depois, escreve uma linha; (5) na próxima, aplique o que aprendeu.
+   - Privado, controlado, sem palco, sem post no feed — só você, a pessoa certa e uma conversa honesta.
+
+**ONDE E QUANDO**
+- Abra a agenda e marque a data da primeira prospecção — uma data real, nos próximos 7 dias. A partir dela, as aulas seguintes passam a ter prazo de ação, não de estudo.
+
+**TRANSIÇÃO**
+- O que a pessoa avalia não é se você decorou um roteiro — é se você entende o problema dela e se ela confia em você. E isso você já tem.
+- Gancho A3: o bloco da oferta — o que você está vendendo.
+
+---
+---
+
+## AULA 3 — O QUE VOCÊ ESTÁ VENDENDO — E POR QUE COMEÇA PELO 1:1
+*Estimativa: 10–12 minutos*
+
+**ABERTURA**
+- Terminou o bloco de mentalidade. Agora começa o bloco da oferta.
+- Antes de abrir o Agente da Proposta Validada (que constrói P4 na próxima aula), você precisa entender o que está vendendo — não o conteúdo, o tipo de oferta, o formato, por que funciona e por que começa pelo 1:1.
+
+**O QUE E POR QUÊ**
+- Tema: a Proposta Validada — o que é, por que começa pelo 1:1, o que a diferencia de oferta comum ou favor.
+- Importa agora porque quanto mais clareza você traz, mais preciso o P4 que sai do agente — e mais natural você apresenta a oferta depois.
+
+**COMO**
+▸ Ponto 1 — dois caminhos + por que começa pelo 1:1
+   - Caminho A (sem validação): monta o produto, lança, se expõe, investe em tráfego — e descobre os buracos ao vivo, escalando uma mensagem que nunca foi testada.
+   - Caminho B (com validação): vende pras primeiras pessoas de forma discreta, entrega, observa, ajusta, coleta prova, e só então aparece publicamente. Começa pelo 1:1.
+   - Por que 1:1: você aprende no privado e não no palco; o feedback é imediato e específico (cada sessão é pesquisa de mercado); e a prova social mais genuína nasce de uma relação real, não de um lançamento em massa.
+▸ Ponto 2 — o que é uma Proposta Validada (3 componentes)
+   - Não é o produto final — é a versão de validação da entrega, com três objetivos ao mesmo tempo: resultado pra aluna, aprendizado pra você, prova pras próximas vendas.
+   - O que você entrega (método, ferramentas, acompanhamento — claro antes da sessão); como você entrega (sessões, duração, canal — simples, sem overhead que você ainda não sustenta); o preço (de validação, justo pra ela estar comprometida).
+      ⚓ Não ofereça de graça — grátis atrai quem está curioso, não quem está comprometida.
+▸ Ponto 3 — o que a Proposta Validada NÃO é
+   - Não é consultoria gratuita disfarçada: tem estrutura, começo-meio-fim e entregável — a aluna sai com algo concreto.
+   - Não é o produto final empacotado: tem margem pra ajuste, você refina com as primeiras entregas.
+   - Não é um favor: é serviço profissional — você cobra, entrega e documenta (tudo vai pro Rastreador e alimenta o M4).
+
+**ONDE E QUANDO**
+- Antes de abrir o agente, escreva uma linha: "Quero oferecer..." e completa com o que está na sua cabeça, mesmo vago ("três sessões de uma hora sobre [tema]"). Esse rascunho é o ponto de partida do agente.
+
+**TRANSIÇÃO**
+- Você sabe o que é a oferta de validação, por que 1:1, o que inclui e o que não é.
+- Gancho A4: você constrói a sua.
+
+---
+---
+
+## AULA 4 — EXERCÍCIO: CONSTRUINDO SUA OFERTA COM O AGENTE DA PROPOSTA VALIDADA
+*Estimativa: 8–10 minutos (vídeo) + tempo com o agente*
+
+**ABERTURA**
+- Você entendeu o que é a oferta de validação, por que 1:1, o que ela tem e o que não é.
+- Agora você constrói a sua.
+
+**O QUE E POR QUÊ**
+- Tema: exercício — construir a Proposta Validada com o Agente da Proposta Validada.
+- Importa agora porque P4 é o entregável central do módulo — você não vai a campo sem ele. E não são respostas isoladas: é um documento estruturado que vai pro Rastreador, pra sessão e pro M4.
+
+**COMO**
+▸ Ponto 1 — o que entra (inputs)
+   - Quatro bases: P1 (Persona, M1 A4), P2 (Promessa, M1 A6), P3 (Método, M2 A5) e um rascunho do que você quer oferecer, mesmo uma linha.
+   - Separe os três documentos antes de começar — quanto mais claro o rascunho, mais preciso o resultado.
+▸ Ponto 2 — como rodar (os 5 componentes)
+   - O agente produz um documento estruturado percorrendo 5 componentes: (1) promessa específica da sessão — não P2, o que ESTA pessoa alcança neste formato; (2) mecanismo — seu método aplicado ao 1:1; (3) o que está incluído — sessões, duração, entregáveis que você sustenta; (4) como apresentar o preço — o enquadramento, quando falar; (5) pitch de 3 frases — o que faz, pra quem, com qual resultado, que cabe numa DM ou num "o que você faz?".
+   - 3 posturas: traga rascunho, não resposta pronta; seja honesta sobre o preço (o pitch só funciona se você acredita); o pitch precisa parecer você — se soar formal demais, o agente ajusta.
+      ⚓ O critério não é o pitch mais elaborado — é o mais verdadeiro que você diz com naturalidade.
+▸ Ponto 3 — o que sai (output)
+   - P4 documentado: sua Proposta Validada com tudo pra apresentar numa conversa real.
+   - Vai direto pro Rastreador (A5), pro roteiro da sessão (A9) e alimenta o M4. Salve em Minha Proposta Validada (P4) no Drive.
+
+**ONDE E QUANDO**
+- Agente da Proposta Validada no painel + P1, P2 e P3 no Drive + rascunho do que quer oferecer.
+- Agora — P4 pronto antes de preencher o Rastreador (A5).
+
+**TRANSIÇÃO**
+- P4 pronto — oferta com nome, formato, promessa e preço, pronta pra apresentar sem gaguejar.
+- Gancho A5: com quem você vai falar?
+
+---
+---
+
+## AULA 5 — RASTREADOR DE LEADS QUENTES
+*Estimativa: 10–12 minutos*
+
+**ABERTURA**
+- Você tem a oferta. Agora a pergunta real: com quem você vai falar?
+- Não "onde encontro clientes" (caminho longo) — quem, dentro do círculo que você já tem, encaixa na sua persona? E dessas, quem você aborda primeiro?
+- O Rastreador de Leads existe pra responder isso com clareza, antes da primeira mensagem.
+
+**O QUE E POR QUÊ**
+- Tema: o Rastreador de Leads — a ferramenta de priorização que transforma uma lista em pipeline.
+- Importa agora porque sem rastreador você aborda por impulso; com ele, aborda por estratégia. E o perfil que você lê aqui alimenta o roteiro de abordagem da A8.
+
+**COMO**
+▸ Ponto 1 — o que é (priorização, não lista)
+   - Qualquer uma lista quem conhece; o que vira pipeline é qualificar cada pessoa antes de abordar.
+   - Com rastreador você sabe, antes da primeira mensagem: quem tem o perfil, quem está num momento que faz sentido, quem investe em desenvolvimento, quem abordar essa semana, quem entra num acompanhamento de médio prazo.
+   - Resultado: lista ordenada, com o tom de abordagem já definido antes de abrir o teclado.
+▸ Ponto 2 — os 6 grupos
+   - G1 Círculo íntimo — amigas próximas, família; fit variável, relação a mais quente possível.
+   - G2 Colegas e ex-colegas de área — alto potencial de fit, especialistas no mesmo ponto de transição.
+   - G3 Clientes e ex-clientes — já pagaram, já confiam; primeira linha se tiverem o perfil.
+   - G4 Seguidores engajados — relação digital mas real, você já existe na cabeça deles.
+   - G5 Conexões frias qualificadas — conhece vagamente, perfil claramente encaixa.
+   - G6 Fui prospectada — sem relação prévia: entrou no seu grupo fechado de lives ou pegou uma isca e veio sozinha; você não escolhe abordar, só registra e cuida do que já chegou quente.
+   - Comece por G1 e G3 (mais quentes). O G6 entra direto — quem vem até você já pulou a fila.
+▸ Ponto 3 — como preencher: as 3 colunas
+   - Score de fit — critérios de P1 (especialista consolidada? tentando o digital? renda pra investir? não quer aparecer amadora?); cada critério que bate soma.
+   - Prioridade de abordagem — combina o score com o grupo (calor da relação): fit médio no G1 pode ter prioridade maior que fit alto no G5.
+   - Perfil — uma palavra depois de ler a pessoa (Conectora, Analista ou Diretiva); informa como você escreve a mensagem. A A7 ensina a chegar nisso.
+
+**ONDE E QUANDO**
+- Arquivo Meu Rastreador de Leads no Drive — já vem com os 6 grupos, as colunas de score e um guia de critérios de P1. Seu trabalho é preencher, não criar do zero.
+- Antes da A6 — o Rastreador é input da A7 e da A8.
+
+**TRANSIÇÃO**
+- Com o Rastreador preenchido, você sabe com quem falar primeiro. Mas e se a lista for pequena? Existe uma segunda estratégia em paralelo.
+- Gancho A6.
+
+---
+---
+
+## AULA 6 — SOCIAL SELLING: A ESTRATÉGIA DE QUEM NÃO PRECISA DE AUDIÊNCIA
+*Estimativa: 12–13 minutos*
+
+**ABERTURA**
+- Você tentou preencher o Rastreador e chegou a poucos nomes com fit real. Não é o fim — é o início de uma segunda estratégia, que expande o pipeline enquanto você trabalha com quem já tem no radar.
+- Ela tem nome: social selling. Mas antes da tática, o que aprendi num evento de networking — porque é de lá que vem o fundamento.
+
+**O QUE E POR QUÊ**
+- Tema: social selling — e o fundamento que faz ele funcionar.
+- Importa agora porque social selling não é tática pra quem não tem leads; é prática diária que você começa agora e colhe no M4. O que você planta hoje é a audiência qualificada de quando você aparecer com prova.
+
+**COMO**
+▸ Ponto 1 — a virada: parar de pensar em mim, pensar nas pessoas
+   - Eu sempre tive dificuldade com networking — medo de parecer interesseira, de puxar conversa sem motivo. No segundo dia de um evento algo mudou: parei de pensar em mim e comecei a pensar nas pessoas.
+   - Me ofereci pra ajudar de graça um senhor de uma casa de abrigo; minutos depois chegou uma psicanalista descrevendo exatamente a minha persona — e o senhor me apresentou dizendo "você precisa conversar com ela". Saí com o contato pra uma sessão.
+      ⚓ Quando você serve sem calcular o retorno, cria confiança instantânea. Você nunca sabe quem está do lado de quem você está ajudando.
+   - Mais dois episódios no mesmo evento (a servidora que odiava a estabilidade; ouvir por completo antes de oferecer) — três histórias, três princípios, todos da mesma virada.
+▸ Ponto 2 — as necessidades humanas + do evento pro digital
+   - Toda pessoa percorre uma jornada antes de confiar (e de comprar): ser notada → ser ouvida → ser reconhecida → pertencimento. Só depois dos três primeiros ela está pronta pra comprar — por isso a venda que pula direto pra oferta quase nunca funciona.
+   - Ferramenta que conduz: perguntas abertas ("o que você está construindo agora?", não "você tem um negócio?").
+   - No Instagram, por temperatura: 🔥 quente (respondeu Story sobre o que você faz) → abordar; 🌡️ morno (engaja) → conexão com a dor, sem pitch; ❄️ frio (seguiu recente) → deixa o conteúdo trabalhar.
+   - Proximidade constante: pequenas interações consistentes constroem mais vínculo que grandes gestos isolados.
+▸ Ponto 3 — o volume certo + a conversa honesta sobre prazo
+   - Modelos de alto volume falam em 10–20 conversas/dia — não é o seu modelo. Você está fazendo as primeiras 3 vendas com qualidade e relação.
+      ⚓ Seu ritmo: 1 a 2 interações genuínas por dia — "genuína" = faz sentido pra quem recebe, não é pitch nem check-in vazio.
+   - Social selling não dá resultado em 7 dias — é pipeline de médio prazo (4, 6, 8 semanas). As primeiras 3 vendas vêm, na maioria, de quem já te conhece (do Rastreador); o social selling constrói a 4ª, 5ª, 10ª venda e aquece quem vai estar pronta quando você aparecer com prova.
+   - Não é má notícia, é a ordem certa: valida com quem confia, aparece no M4 com o que já está provado. O pipeline de hoje é a audiência qualificada do M4.
+
+**ONDE E QUANDO**
+- Na prática diária — Instagram, WhatsApp, eventos, onde a persona está. A partir de hoje, 1 a 2 interações genuínas por dia, começando pela lista 🔥 do Rastreador.
+
+**TRANSIÇÃO**
+- Sua persona não está só no Instagram — você aprendeu a reconhecê-la no M1, agora tem olhos pra vê-la em qualquer lugar.
+- Gancho A7: como ler um lead em 5 minutos, antes da primeira mensagem.
+
+---
+---
+
+## AULA 7 — LENDO SEU LEAD ANTES DO PRIMEIRO CONTATO
+*Estimativa: 10–12 minutos*
+
+**ABERTURA**
+- Semanas atrás recebi um relatório sobre mim: alguém analisou meu perfil (fotos, textos, bio, como respondo comentários) e em 8 páginas descreveu como eu decido, o que me faz abrir, o que me faz fechar.
+   ⚓ Era a Triangulação 3D, do Júlio Azevedo. Dizia que sou Influente — A Conectora: decido por conexão e impacto; abordagem fria e transacional me fecha, calor com substância me abre.
+- Era exatamente o que acontece dentro de mim — e me fez pensar: e se você soubesse isso do seu lead antes da primeira mensagem?
+
+**O QUE E POR QUÊ**
+- Tema: leitura de lead — identificar o perfil da pessoa antes do primeiro contato e o que isso muda.
+- Importa agora porque essa leitura vai pra coluna "Perfil" do Rastreador e determina como você escreve cada mensagem na A8. Uma mensagem calibrada vale mais que dez enviadas sem leitura.
+
+**COMO**
+▸ Ponto 1 — o que você já faz + as 4 camadas
+   - Você já lê perfis e já reescreve mensagens dependendo da pessoa — só faz isso inconscientemente. Esta aula torna o instinto explícito, em 5 minutos.
+   - O perfil aparece em 4 camadas: bio (o que ela escolheu escrever sobre si), tipo de conteúdo (o que posta), linguagem (como fala nas legendas e comentários), energia (a vibe geral).
+   - Quando o perfil for misto, bio e linguagem são os dois sinais mais decisivos.
+▸ Ponto 2 — os 3 perfis
+   - A Conectora (relacional): bio de impacto/comunidade/missão, posts de histórias e rostos, linguagem calorosa. Não compra método antes de comprar você — comece com algo específico que notou no trabalho dela; evite pitch imediato e elogio vago.
+   - A Analista (analítico): bio de números/certificações/metodologia, posts de dados e frameworks, linguagem precisa. Chegue com substância na primeira frase; evite entusiasmo vago.
+   - A Diretiva (diretivo): bio de títulos/conquistas, posts poucos e de alto impacto, linguagem objetiva. Valor em uma linha ("tenho algo específico pro seu caso: [resultado]. Te mostro em 15 min?"); evite contexto longo e abordagem emocional.
+   - Aprende lendo de verdade, não decorando. Isto é intuição prática, não a metodologia completa da Triangulação 3D — mas é suficiente pra calibrar seus primeiros contatos.
+▸ Ponto 3 — o ritual dos 5 minutos
+   - Antes de escrever, abra o perfil e leia as 4 camadas: bio, tipo de post, linguagem e energia — cada uma aponta pra Conectora, Analista ou Diretiva.
+   - Registre a palavra na coluna "Perfil" do Rastreador. Conectora: comece com conexão. Analista: com substância. Diretiva: com impacto na primeira frase.
+
+**ONDE E QUANDO**
+- Rastreador, coluna "Perfil" — um perfil por lead, a partir do ritual de 5 minutos. Na prática: uma leitura antes de cada novo contato.
+
+**TRANSIÇÃO**
+- Perfil lido. Agora a parte que a maioria acha mais difícil: escrever a primeira mensagem.
+- Gancho A8: o script de abordagem e a cadência pré-sessão.
+
+---
+---
+
+## AULA 8 — O SCRIPT DE ABORDAGEM E A CADÊNCIA PRÉ-SESSÃO
+*Estimativa: 10–12 minutos*
+
+**ABERTURA**
+- Na aula anterior você passou 5 minutos lendo um lead e registrou uma palavra no Rastreador: Conectora, Analista ou Diretiva.
+- Agora a primeira mensagem. Mas antes do roteiro, o que muda tudo: a maior parte da dificuldade não vem de não saber o que escrever — vem de não saber o que você está buscando com a mensagem.
+
+**O QUE E POR QUÊ**
+- Tema: o roteiro de abordagem — as 3 etapas, como adaptar por perfil, e o que acontece depois da primeira mensagem.
+- Importa agora porque a abordagem determina se você consegue a sessão — e a sessão é onde a venda acontece.
+
+**COMO**
+▸ Ponto 1 — o que você está buscando + roteiro vs script
+   - O objetivo da abordagem não é vender — é marcar a sessão. Quando o objetivo é vender, você chega com pitch e a pessoa sente; quando é marcar a sessão, chega com curiosidade genuína. A venda acontece na sessão.
+   - Script é rígido (a pessoa sente que está sendo processada); roteiro é guia com etapas e pontos que não podem faltar, mas o como é seu, na sua voz, adaptado à pessoa.
+▸ Ponto 2 — o roteiro em 3 etapas
+   - Etapa 1 — Abertura genuína: começa com ela, não com você. Conectora: algo específico que você notou no trabalho dela. Analista: substância, uma observação concreta. Diretiva: direto ao ponto, valor relevante pra situação dela.
+   - Etapa 2 — Conexão ao problema: uma frase que espelha a dor antes de qualquer oferta (adaptada ao perfil).
+   - Etapa 3 — O convite: pedido da sessão, direto e sem pressão ("consigo te pegar 30 minutos essa semana?"). Ela não está decidindo se investe — está decidindo se tem 30 minutos.
+      ⚓ A abordagem que funciona começa no lugar de quem tem algo que a outra pessoa precisa — não de quem precisa de algo dela.
+▸ Ponto 3 — a cadência pré-sessão
+   - Caminho A (respondeu): confirme sessão (data, horário, canal) + dê contexto ("vou chegar com algumas perguntas pra aproveitar bem o tempo") + envie o formulário de pré-diagnóstico, pra entrar já sabendo onde ela está.
+   - Caminho B (não respondeu): depois de 24–48h, segundo toque com ângulo diferente (não repetição). Mais 24h sem resposta, terceiro toque = encerramento gracioso, e arquiva no Rastreador — lead fria, não lead perdida.
+   - Campo: antes da próxima aula, aborde pelo menos um lead. Um. Não precisa ser o mais difícil.
+      ⚓ A primeira mensagem não precisa ser a mais bem escrita. Precisa ser a que saiu.
+
+**ONDE E QUANDO**
+- Rastreador (coluna Perfil preenchida) + roteiro das 3 etapas + formulário de pré-diagnóstico (Drive) pra enviar depois do sim.
+- Agora: um lead abordado antes da A9. Sessão confirmada → formulário enviado.
+
+**TRANSIÇÃO**
+- Rastreador preenchido, perfil lido, roteiro internalizado. Agora é campo.
+- Gancho A9: a sessão em si — como abrir, diagnosticar, apresentar a oferta e fechar.
+
+---
+---
+
+## AULA 9 — O ROTEIRO DA SESSÃO DE VENDAS SECRETAS
+*Estimativa: 12–15 minutos*
+
+**ABERTURA**
+- Você abordou, mandou a mensagem certa no tom certo pra pessoa certa. E ela disse sim.
+- Agora você tem 30 a 40 minutos com ela. Essa conversa tem estrutura — não é improv, é método. E a diferença entre fechar e "vou pensar" não está na técnica de fechamento; está no que acontece antes.
+
+**O QUE E POR QUÊ**
+- Tema: o roteiro completo da sessão — as 5 etapas, a lógica da sequência e o que determina se fecha.
+- Importa agora porque o erro que a maioria comete é chegar com a oferta antes de ter entendido de verdade. O roteiro inverte isso: quando a oferta aparece depois do diagnóstico, não é pitch, é resposta.
+
+**COMO**
+▸ Ponto 1 — a ordem que faz tudo funcionar + etapas 1 e 2
+   - A lógica: primeiro você ouve → depois faz a ponte → depois apresenta. A oferta aparece como solução natural do problema que ela mesma articulou.
+   - Etapa 1 — Boas-vindas (3–5 min): entra com presença, alinha o que vai acontecer ("vou fazer algumas perguntas, depois te apresento o que faço, pode ser?"). Remove a ambiguidade e ela relaxa.
+   - Etapa 2 — Diagnóstico (10–12 min): vai mais fundo que o formulário, nas perguntas do SEU método — cada fase tem uma pergunta que revela se ela passou ou travou. Anote as palavras que ela usa; voltam na apresentação como espelho. Você monta essas perguntas no arquivo Roteiro da Sessão 1:1 (seção em branco).
+▸ Ponto 2 — etapas 3 e 4: História + Oferta ECROI
+   - Etapa 3 — História (5 min): compartilhe o trecho da sua história que espelha o que ela descreveu — cria identificação ("eu já fui como você").
+   - Etapa 4 — Oferta com narrativa ECROI (12–15 min): não é pitch, é narrativa. C — Colapso (derruba a crença que a prende, com lógica, ataca a premissa não a pessoa); R — Reenquadramento (a causa real, revelação); O — Ordem (a sequência certa = seu método, o programa aparece como consequência lógica); I — Inevitabilidade (o resultado como conclusão natural).
+   - Depois da narrativa, concretiza: o que é / imagine / pra quem é / pra quem não é / entregáveis / duração / âncora de valor antes do preço ("quanto vale pra você chegar em [ponto B]?").
+      ⚓ Preço → para. O silêncio não precisa ser preenchido.
+▸ Ponto 3 — etapa 5: Fechamento + objeções
+   - O fechamento não é onde você convence — é onde você convida. CTA 1 (sinal de interesse: "faz sentido pra você?" → para, espera, não preenche o silêncio); escassez só se for real; CTA 2 emocional.
+   - Objeções: "vou pensar" → "o que especificamente você está considerando?"; "está caro" → "quanto está custando ficar no ponto A?"; "não tenho tempo" → "quantas horas por semana conseguiria?". Regra de ouro: nunca rebata direto, pergunta primeiro — objeção declarada ≠ objeção real.
+   - O que determina se fecha não é a técnica, é a sequência: ela fala → você entende o gargalo → cria identificação → constrói lógica → concretiza → convida.
+   - Grave todas as sessões (com permissão): matéria-prima pra revisão e pros cortes de autoridade no M4. Se precisar, peça análise de sessão pelo suporte.
+
+**ONDE E QUANDO**
+- Arquivo Roteiro da Sessão 1:1 no Drive — preencher a seção de perguntas do diagnóstico com as perguntas do seu método, antes da primeira sessão.
+- Agora — antes de confirmar a sessão com o lead que aceitou.
+
+**TRANSIÇÃO**
+- A sessão tem estrutura, o roteiro está na sua mão.
+- Gancho A10: o pós-sessão — "sim", "não" ou "vou pensar" + como transformar a conversa em prova pro M4.
+
+---
+---
+
+## AULA 10 — PÓS-SESSÃO: O FOLLOW-UP E O DEPOIMENTO
+*Estimativa: 10–12 minutos*
+
+**ABERTURA**
+- A chamada fechou: você diagnosticou, contou sua história, construiu a lógica, apresentou, convidou — e existe um resultado, sim ou não.
+- Antes de cada caminho, o que vale pros dois: a sessão não termina quando a chamada fecha. O que você faz nas próximas horas e dias decide se ela fica só nela ou alimenta todas as próximas.
+
+**O QUE E POR QUÊ**
+- Tema: o pós-sessão — o que fazer em cada um dos três resultados, como coletar o depoimento, e o que tudo isso vira no M4.
+- Importa agora porque é aqui que as primeiras sessões viram ativos: prova, pitch calibrado, objeções mapeadas — que determinam a qualidade do posicionamento no M4.
+
+**COMO**
+▸ Ponto 1 — ela disse sim: próximos passos + depoimento
+   - Não encerre sem o próximo passo concreto. Antes do tchau, feche três pontos ainda na chamada: forma de pagamento, próxima data, canal — porque entre o sim e o pagamento existe uma janela em que o entusiasmo esfria. Atualize o Rastreador (status → cliente).
+   - O depoimento não vem no dia seguinte ao sim — vem depois do resultado. Mas agora você pede a permissão pra documentar ("conforme a gente trabalha, quero documentar o que você está construindo; no final, se valer, adoraria o depoimento com as suas palavras. Topa?").
+   - Quando pedir de verdade: no encerramento do trabalho ou quando ela mencionar resultado. Três perguntas que produzem o depoimento certo: "como estava a sua situação antes?", "o que mudou?", "pra quem você indicaria?".
+▸ Ponto 2 — ela foi pensar: a cadência de 5 toques
+   - O resultado mais comum nas primeiras sessões: nem sim, nem não — "vou pensar". Pra ticket alto a decisão não acontece em 24h; você precisa de presença, não pressão.
+   - T1 (24–48h): personalizado, referência a algo que ela disse, sem pergunta de fechamento. T2 (4–5 dias): valor puro, sem mencionar a oferta. T3 (8–10 dias): pergunta aberta ("ficou alguma dúvida?"). T4 (12–14 dias): custo do status quo. T5 (18–21 dias): encerramento gracioso.
+   - Vai pro Rastreador como lead fria. Quando você aparecer no M4 com prova, algumas voltam — não porque você insistiu, porque a prova eliminou a objeção.
+▸ Ponto 3 — ela disse não + documentar sempre + o que vira no M4
+   - Um não não é veredicto — o campo produz resultados variados; fala sobre essa pessoa nesse momento, não sobre o seu método. Encerre com generosidade e arquive como lead fria (pausa, não descarte).
+   - Independente do resultado, antes de dormir: três perguntas, uma linha cada — o que funcionou? o que travou? o que eu diria diferente? (um ajuste, não dez). Sem registro, cada sessão começa do zero; com ele, começa mais avançada.
+   - Tudo vai pro M4: o depoimento (o ativo mais valioso), o pitch que funcionou na prática, e as objeções reais (você cria conteúdo que as responde antes da conversa). As sessões do M3 não são só vendas — são pesquisa de mercado que você recebeu pra fazer.
+
+**ONDE E QUANDO**
+- Rastreador (atualizar status depois de cada sessão) + Drive (as 3 perguntas de aprendizado antes de dormir). Após cada sessão — não depois de todas.
+
+**TRANSIÇÃO**
+- Você terminou o bloco de conteúdo do M3: mentalidade, oferta, leads e abordagem, sessão, pós-venda. O que falta não é mais informação — é a primeira conversa.
+- Gancho Encerramento.
+
+---
+---
+
+## QUEM VOCÊ SE TORNOU — ENCERRAMENTO MÓDULO 3: VENDAS SECRETAS
+*Estimativa: 6–8 minutos*
+
+**ABERTURA**
+- Você chegou no fim do M3 — e ele é diferente. Até aqui você construía coisas que ficam dentro de você ou no papel; este te tirou do papel e te colocou na frente de uma pessoa real, com uma proposta real e um sim ou não real do outro lado.
+- Para um segundo — o que você atravessou aqui não tem volta.
+
+**O QUE E POR QUÊ**
+- Este encerramento nomeia o que foi construído — porque P4 e as sessões não parecem grandes no momento, mas é o que separa especialista com método de especialista com prova.
+
+**COMO**
+▸ Ponto 1 — você foi a campo + sobre o número 3
+   - Até o M2 você podia ser "alguém se preparando pra vender" — identidade segura, ninguém te testa enquanto você só se prepara. Este módulo tirou essa segurança de propósito: você estruturou oferta, foi atrás de leads, abordou, marcou e sentou com alguém que podia dizer não.
+      ⚓ Conhecimento sobre vender e ter vendido são duas pessoas diferentes — e a segunda só existe depois que a primeira se arrisca.
+   - Sobre o número 3: se você ainda não fechou as 3, isso não te trava. 3 é o número de referência do curso, não o seu — cada negócio tem o seu número, e não existe número errado. E isso é dado: quando for investir em tráfego, é muito mais fácil decidir quanto sabendo "de cada X conversas, fecho 1".
+▸ Ponto 2 — o que você construiu neste módulo
+   - P4 (oferta com nome, formato, promessa e preço), Rastreador (mapa de quem tem mais propensão de comprar agora, por grupo/prioridade/perfil), abordagem calibrada (social selling + leitura de perfil), roteiro completo da sessão (narrativa ECROI, oferta como resposta) e pós-sessão (follow-up, "sim" em compromisso e depoimento, "vou pensar" numa sequência que respeita o tempo).
+   - Não é módulo de teoria — é onde você aprendeu, na prática, a vender o que construiu.
+▸ Ponto 3 — o que essas conversas significam + o que muda no M4
+   - Você não é mais alguém que "tem um método e queria vender" — é alguém que apresentou pra pessoas reais, ouviu objeções reais e descobriu na prática o que faz sentido pro outro lado. Esse tipo de identidade se constrói fazendo, não lendo.
+   - Se já fechou: tem prova, depoimento em construção, a primeira peça do ecossistema de autoridade. Se ainda não: tem campo, dados, ajustes — e o conteúdo do curso pra te acompanhar. Continue.
+   - Tudo que você viveu vira matéria-prima pro M4: a gente transforma em prova pública — depoimento, posicionamento, conteúdo que mostra você no ato de fazer o que diz. Você não vai inventar nada, vai organizar o que já viveu e mostrar.
+
+**ONDE E QUANDO**
+- P4, Rastreador, Roteiro da Sessão 1:1, depoimento em construção — tudo no Drive. Acompanha você no M4 como inputs centrais do posicionamento público.
+
+**CTA — Mentoria Express**
+- Se você ficou presa num ponto específico e seguiu sem resolver: a Mentoria Express é uma hora comigo focada exatamente no que trava — sem pauta ampla, sem volta ao zero. Link do suporte na descrição.
+
+**TRANSIÇÃO**
+- Você foi a campo, testou sua oferta com gente de verdade, e saiu diferente de quem entrou.
+- Gancho M4: transformar as conversas, os "sins", os "vou pensar" e as gravações em prova que abre portas.
+
+---
+---
+
+# SCRIPTS DE REFERÊNCIA — PROSA COMPLETA (não ler na gravação)
+
+> Os roteiros palavra-por-palavra abaixo são a versão v2.0 aprovada (QG-CC-006). Ficam aqui só como consulta caso você queira conferir uma passagem exata. Na gravação, use os bullets acima.
+
 
 ## INTRODUÇÃO — MÓDULO 3: VENDAS SECRETAS
 *Estimativa: 5–7 minutos*
@@ -70,31 +525,6 @@ A maior barreira para as suas primeiras vendas não é técnica. É a relação 
 
 É o que vamos tratar agora. Primeiro bloco. Vem comigo.
 
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge M2: P1+P2+P3+Portfólio prontos — arsenal completo
-- M3: teoria vira evidência
-
-**Bloco 2 — O que e por quê**
-- Crença derrubada: "crescer antes de vender" = armadilha
-- 8 lançamentos da Karol: mensagem não validada ≠ audiência pequena
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: Vendas Secretas = ordem certa (validar→vender→crescer). Para validar: clareza (já tem) + coragem (este módulo constrói)
-- Ponto 2: P4 — oferta estruturada + pitch + 3 vendas reais + 1 depoimento. Gate: sem as 3 vendas a transformação não aconteceu. Dúvida some por evidência, não por motivação.
-- Ponto 3: 4 blocos (Mentalidade / Oferta / Leads+Abordagem / Sessão+Pós-venda). 3 vendas = passaporte, não destino. M4 você mostra o que já está provado.
-
-**Bloco 4 — Onde e quando**
-- P1+P2+P3 no Drive — arsenal pronto
-- Começa agora, com o bloco de mentalidade
-
-**Bloco 5 — Transição**
-- Gancho A1: a relação com o ato de cobrar vem antes de qualquer tático
-
----
 ---
 
 ## AULA 1 — IDENTIDADE DE VENDAS ANTES DA TÉCNICA
@@ -164,31 +594,6 @@ A espera pela prontidão. Próxima aula.
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge Introdução: técnica vem depois — identidade vem primeiro
-- O peso que impede o dedo de se mover, a voz que baixa na hora do preço
-
-**Bloco 2 — O que e por quê**
-- Identidade de quem vende antes de qualquer tático
-- O que vai dentro de você na hora de enviar a mensagem determina se a técnica executa
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: medo de cobrar = crença, não fato. 3 justificativas clássicas. Distinção: fato (verificável) vs crença (história repetida). Histórias pessoais: 2020 (R$697/ano — barato não convence) + 2022 (R$797→R$497 — o problema não era o número). Ciclo vicioso: cobra menos→trabalha mais→frustra→cobra menos. [MB RC-07/RC-08]
-- Ponto 2: vender = servir quem já tem o problema. A Laura tem o problema, você tem a solução. Não oferecer = deixá-la com o problema. Cobrar bem = seleção de quem está comprometida, respeita o processo.
-- Ponto 3: 3 vendas = campo, não teste final. Josh Waitzkin: investir em derrota para acelerar (vai lá para perder de propósito). Campo = dados, não veredicto. "Só fracassa quem desiste" — fracasso real = parar. [MB RC-07: "quando desistir não é opção, sucesso é inevitável" / RC-08: Waitzkin enriquecido]
-
-**Bloco 4 — Onde e quando**
-- Reflexão: 3 perguntas escritas, uma linha cada — guardar para relembrar antes da 1ª sessão
-
-**Bloco 5 — Transição**
-- Identidade no lugar
-- Gancho A2: a segunda barreira — a espera pela prontidão
-
----
----
-
 ## AULA 2 — FEITO É MELHOR QUE PERFEITO
 *Estimativa: 8–10 minutos*
 *Fontes: Mentalidade Black VOL-03 (RC-03, RC-09) + VOL-06 (RC-13)*
@@ -253,31 +658,6 @@ Agora vem o bloco da oferta. O que você está vendendo. Vem comigo.
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge A1: identidade no lugar. Segunda barreira: a espera pela prontidão.
-- Frases da espera: "quando eu estiver pronta de verdade..."
-
-**Bloco 2 — O que e por quê**
-- A lógica de quando é hora de ir — mais preparo atrasa, não acelera
-- Remove a última barreira interna antes dos táticos
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: escola (estudo→resultado, 100% preparo) vs empreendedorismo (80% fazendo, 20% estudando) [RC-09]. Mais estudo antes de ir adia. Aprendizado real acontece no campo.
-- Ponto 2: A inversão — "se estou pronta demais, errei — devia ter feito antes" [RC-13]. Critério correto: "tenho o mínimo para não me destruir" — não "estou pronta". Prontidão = consequência de ação, não pré-requisito. Você já tem o mínimo.
-- Ponto 3: "feito > perfeito" nas VS = privado, controlado, sem exposição. NÃO é "lança logo" (quebra experts — os 8 fracassos). 5 passos: marcar data → preparar → fazer abordagem imperfeita → auditar → aplicar na próxima. [RC-03]
-
-**Bloco 4 — Onde e quando**
-- Abrir a agenda agora e marcar data real da 1ª prospecção (próximos 7 dias)
-
-**Bloco 5 — Transição**
-- Você já tem o que precisa (nos documentos)
-- Gancho A3: bloco da oferta — o que você está vendendo
-
----
----
-
 ## AULA 3 — O QUE VOCÊ ESTÁ VENDENDO — E POR QUE COMEÇA PELO 1:1
 *Estimativa: 10–12 minutos*
 *Fonte: Live 14 (Como Vender Sem Audiência)*
@@ -336,31 +716,6 @@ Próxima aula: você constrói a sua. Vem comigo.
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge A2: mentalidade no lugar — agora o bloco da oferta
-- Entender o que está vendendo antes de abrir o agente
-
-**Bloco 2 — O que e por quê**
-- Proposta Validada: o que é, por que 1:1, o que diferencia de favor
-- Quanto mais clareza traz, mais preciso o P4 que sai
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: 2 caminhos (A: sem validação = escalar mensagem não testada / B: com validação = Proposta Validada). 1:1: 3 razões (aprende no privado / feedback específico = pesquisa paga / prova social nasce da relação)
-- Ponto 2: 3 componentes (o que entrega / como entrega — simples, sem overhead / preço de validação — justo, não gratuito). Grátis ≠ comprometida → resultado fraco → percepção errada sobre o método.
-- Ponto 3: o que não é. Não é consultoria gratuita (tem estrutura + entregável). Não é produto final (tem margem para ajuste). Não é favor (cobra + entrega + documenta). Setup agente: P1+P2+P3+rascunho → promessa específica + o que inclui + preço + pitch de 3 frases.
-
-**Bloco 4 — Onde e quando**
-- Drive/bloco de notas: escrever "Quero oferecer..." — uma linha, mesmo vaga
-- Antes de abrir o agente na A4
-
-**Bloco 5 — Transição**
-- Gancho A4: construir a Proposta Validada com o agente
-
----
----
-
 ## AULA 4 — EXERCÍCIO: CONSTRUINDO SUA OFERTA COM O AGENTE DA PROPOSTA VALIDADA
 *Estimativa: 8–10 minutos (vídeo) + tempo com o agente*
 
@@ -414,32 +769,6 @@ P4 pronto. Você tem uma oferta com nome, formato, promessa e preço definidos �
 
 Agora: com quem você vai falar? Próxima aula.
 
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge A3: entendeu o que é PV, por que 1:1, o que inclui e não é
-- Agora constrói
-
-**Bloco 2 — O que e por quê**
-- Tema: exercício — construir P4 com o Agente da Proposta Validada
-- P4 = documento estruturado, não respostas isoladas. Alimenta: Rastreador + sessão + M4.
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: inputs — P1 + P2 + P3 (Drive) + rascunho "Quero oferecer..." Mais claro = mais preciso.
-- Ponto 2: 5 componentes (promessa específica / mecanismo / o que inclui / como apresentar preço / pitch de 3 frases). 3 posturas: traga rascunho / honesta sobre o preço / pitch que parece você. Exemplo: Proposta da Incubadora — saiu documento completo.
-- Ponto 3: output — P4 (Proposta Validada completa). Vai pra Rastreador (A5) + sessão (A9) + M4. Salvar no Drive.
-
-**Bloco 4 — Onde e quando**
-- Agente da Proposta Validada (painel) + P1/P2/P3 + rascunho
-- Agora — P4 pronto antes de preencher o Rastreador (A5)
-
-**Bloco 5 — Transição**
-- P4 pronto
-- Gancho A5: com quem você vai falar?
-
----
 ---
 
 ## AULA 5 — RASTREADOR DE LEADS QUENTES
@@ -502,32 +831,6 @@ Mas e se a lista for pequena? Existe uma segunda estratégia que você começa a
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge A4: P4 pronto. Agora: com quem falar?
-- Não "onde encontrar" (longo prazo) — quem no círculo, quem primeiro
-
-**Bloco 2 — O que e por quê**
-- Rastreador = ferramenta de priorização, não lista de contatos
-- Sem rastreador: impulso. Com rastreador: estratégia (fit + calor da relação).
-- Perfil registrado aqui alimenta o roteiro de abordagem da A8
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: o que é — qualificar antes de abordar. Output: lista ordenada com tom de abordagem definido antes de abrir o teclado.
-- Ponto 2: 6 grupos — G1 (círculo íntimo / rel. quente / fit variável) / G2 (colegas / alto fit potencial) / G3 (clientes / já confiam, já pagaram — 1ª linha) / G4 (seguidores / rel. digital real) / G5 (conexões frias / mais esforço, fit alto) / G6 (fui prospectada — sem relação prévia, vem do grupo fechado de lives ou de isca digital, entra direto na lista). Começa pelo G1 e G3.
-- Ponto 3: 3 colunas — Score de fit (critérios P1) / Prioridade (fit + calor da relação) / Perfil (Conectora/Analista/Diretiva — A7 ensina). Preencher antes da A6. Pergunta plantada: "e se a lista for pequena?" → resposta na A6.
-
-**Bloco 4 — Onde e quando**
-- Arquivo Meu Rastreador de Leads (Drive) — pré-preenchido com 6 grupos + guia de critérios P1
-- Antes da A6 — input da A7 e A8
-
-**Bloco 5 — Transição**
-- Gancho A6: lista pequena → segunda estratégia em paralelo (social selling)
-
----
----
-
 ## AULA 6 — SOCIAL SELLING: A ESTRATÉGIA DE QUEM NÃO PRECISA DE AUDIÊNCIA
 *Estimativa: 12–13 minutos*
 *Fontes: Live 16 (O Segredo do Networking que Vende) + ETL social selling — Alcateia*
@@ -586,32 +889,6 @@ Sua persona não está só no Instagram. Você aprendeu a reconhecê-la no Módu
 
 Na próxima aula, antes da primeira mensagem: como ler um lead em 5 minutos — e o que isso muda no resultado.
 
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge A5: lista pequena — não é obstáculo, é ponto de partida
-- Social selling = segunda estratégia em paralelo com o Rastreador
-
-**Bloco 2 — O que e por quê**
-- Social selling: prática diária que planta no M3, colhe no M4
-- O que você começa agora é a audiência qualificada de quando aparecer com prova
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: A virada — parar de pensar em mim, pensar nas pessoas. História: casa de abrigo → psicanalista → sessão. "Você nunca sabe quem está do lado de quem você está ajudando." + 2 outras histórias do evento = 3 princípios da mesma virada.
-- Ponto 2: 4 degraus (Notada→Ouvida→Reconhecida→Pertencimento). Pular 3 primeiros = venda que não fecha. Ferramenta: perguntas abertas. Do evento ao digital: 🔥 (levantou a mão → abordar) / 🌡️ (engajou → conexão com a dor) / ❄️ (seguiu → conteúdo trabalha). Proximidade constante: pequenas interações > grandes gestos.
-- Ponto 3: volume = 1-2 interações genuínas/dia. Social selling = pipeline 4-8 semanas. Primeiras 3 vendas: do Rastreador, não de conexões novas. Social selling constrói a 4ª-10ª venda + audiência qualificada do M4. Ordem certa: valida com quem confia → aparece no M4 com prova.
-
-**Bloco 4 — Onde e quando**
-- Prática diária — a partir de hoje. 1-2 interações genuínas/dia.
-- Começa pela lista 🔥 do Rastreador
-
-**Bloco 5 — Transição**
-- "Sua persona não está só no Instagram"
-- Gancho A7: como ler um lead antes da primeira mensagem — 5 minutos que mudam o resultado
-
----
 ---
 
 ## AULA 7 — LENDO SEU LEAD ANTES DO PRIMEIRO CONTATO
@@ -675,33 +952,6 @@ Você tem o perfil de cada lead. Agora vem a parte que a maioria acha que é a m
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Relatório Triangulação 3D (Júlio Azevedo): análise de 8 páginas a partir do perfil público
-- Influente/Conectora: decide por conexão. Fria → fecha. Com calor e substância → abre.
-- A pergunta: e se você pudesse ler seu lead antes da primeira mensagem?
-
-**Bloco 2 — O que e por quê**
-- Leitura de lead → coluna "Perfil" do Rastreador → calibra roteiro da A8
-- Uma mensagem calibrada > dez sem leitura
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: você já faz sem saber. 4 camadas: bio + tipo de post + linguagem + energia. Perfil misto: bio + linguagem = sinais mais decisivos.
-- Ponto 2: 3 perfis — Conectora (relacional: impacto/pessoas/emoção → conexão antes de proposta) / Analista (analítico: números/dados/método → substância antes de entusiasmo) / Diretiva (diretivo: títulos/conquistas/curto → valor em 1 linha). O que fecha cada um. Honestidade: isso é intuição prática, não metodologia completa (referência à Triangulação 3D).
-- Ponto 3: ritual dos 5 minutos. 4 camadas com chaves por perfil (C/A/D). Registrar na coluna Perfil do Rastreador. Conectora: conexão. Analista: substância. Diretiva: impacto 1ª frase.
-
-**Bloco 4 — Onde e quando**
-- Rastreador, coluna "Perfil" — preencher 1 por lead, antes de escrever
-- Prática: 1 leitura antes de cada novo contato
-
-**Bloco 5 — Transição**
-- Perfil lido
-- Gancho A8: escrever a primeira mensagem — roteiro de abordagem e cadência pré-sessão
-
----
----
-
 ## AULA 8 — O SCRIPT DE ABORDAGEM E A CADÊNCIA PRÉ-SESSÃO
 *Estimativa: 10–12 minutos*
 *Fontes: VOL — Social Selling (Alcateia) + contexto Expert360*
@@ -762,32 +1012,6 @@ Na próxima aula, a gente entra na sessão em si — o que acontece quando ela a
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge A7: perfil lido, Rastreador com coluna Perfil preenchida
-- Dificuldade real: não saber o que se busca com a mensagem
-
-**Bloco 2 — O que e por quê**
-- Roteiro de abordagem: 3 etapas + adaptação por perfil + cadência
-- A abordagem determina se consegue a sessão — e a sessão é onde a venda acontece
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: objetivo = sessão, não venda. "Objetivo = vender" → peso → a pessoa sente. "Objetivo = conversa" → curiosidade → intenção genuína. Script (rígido) vs Roteiro (guia flexível, tom é seu).
-- Ponto 2: 3 etapas. Etapa 1 (Abertura genuína por perfil: Conectora=algo específico notado / Analista=substância / Diretiva=valor em 1 linha). Etapa 2 (Conexão ao problema: espelha a dor antes de oferecer — 1 frase por perfil). Etapa 3 (Convite: pergunta que ela responde com 1 palavra — 30 min, sem pressão). Fundamento: "começa no lugar de quem tem algo que ela precisa".
-- Ponto 3: cadência. Caminho A (respondeu): confirmar sessão + contexto + formulário pré-diagnóstico. Caminho B (não respondeu 24-48h): 2º toque com ângulo diferente. Mais 24h: encerramento gracioso. Lead fria ≠ lead perdida → M4 com prova muda o jogo. Campo: abordar 1 lead antes da próxima aula. "A 1ª mensagem não precisa ser a mais bem escrita — precisa ser a que saiu."
-
-**Bloco 4 — Onde e quando**
-- Rastreador + roteiro + formulário pré-diagnóstico
-- Agora: 1 lead abordado antes da A9. Confirmação: formulário enviado.
-
-**Bloco 5 — Transição**
-- Campo: mensagem enviada
-- Gancho A9: a sessão em si — estrutura BOAS-VINDAS → DIAGNÓSTICO → HISTÓRIA → OFERTA → FECHAMENTO
-
----
----
-
 ## AULA 9 — O ROTEIRO DA SESSÃO DE VENDAS SECRETAS
 *Estimativa: 12–15 minutos*
 *Fontes: ECROI (framework autoral) + estrutura de sessão high ticket + VOL — Vendas com Tráfego (Alcateia)*
@@ -846,32 +1070,6 @@ A sessão tem estrutura. O roteiro está na sua mão.
 
 Na próxima aula, a gente entra no que acontece depois da chamada — seja ela um "sim", um "não", ou um "vou pensar". O pós-sessão, o follow-up, e como transformar a primeira conversa em prova para o M4.
 
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge A8: ela aceitou a sessão
-- Sessão tem estrutura — não é improv. Diferença entre "vou pensar" e fechamento: o que acontece antes.
-
-**Bloco 2 — O que e por quê**
-- Roteiro: 5 etapas (Boas-vindas / Diagnóstico / História / Oferta ECROI / Fechamento)
-- Erro clássico: oferta antes do diagnóstico. Lógica: ouve primeiro → espelha → apresenta. Oferta como resposta.
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: lógica (ouve→espelha→apresenta). E1: Boas-vindas (alinha o que acontece, remove ambiguidade, ela relaxa). E2: Diagnóstico (perguntas do SEU método — cada fase tem pergunta; encontra onde a jornada travou; anota as palavras dela).
-- Ponto 2: E3: História (espelhamento — "eu já fui como você" / ponto de virada: "não foi por falta de esforço, foi por falta de ordem"). E4: Oferta ECROI: C (derruba crença com lógica) → R (causa real = revelação) → O (ordem = seu método, aparece como consequência) → I (inevitabilidade = resultado como conclusão natural). Detalhes: o que é / imagine / para quem / para quem não / entregáveis / duração / âncora de valor / preço → silêncio.
-- Ponto 3: E5: Fechamento. CTA1 (sinal de interesse + para + espera). Escassez (só se real). CTA2 emocional (frustração anterior + certeza do caminho). Objeções: "vou pensar" / "caro" / "sem tempo" — pergunta antes de rebater, objeção declarada ≠ real. "O que determina se fecha: a sequência, não a técnica." Gravação de sessões: matéria-prima + autoridade em movimento no M4. Análise de sessão disponível no suporte.
-
-**Bloco 4 — Onde e quando**
-- Arquivo Roteiro da Sessão 1:1 (Drive): preencher seção de diagnóstico com perguntas do SEU método
-- Antes de confirmar a 1ª sessão
-
-**Bloco 5 — Transição**
-- Roteiro na mão
-- Gancho A10: pós-sessão — "sim", "não" ou "vou pensar" + como transformar em prova
-
----
 ---
 
 ## AULA 10 — PÓS-SESSÃO: O FOLLOW-UP E O DEPOIMENTO
@@ -935,32 +1133,6 @@ Nos encontramos no Encerramento.
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge A9: a chamada fechou — existe um resultado
-- Vale pros dois caminhos: sessão não termina quando a chamada fecha. O que vem depois determina o alcance.
-
-**Bloco 2 — O que e por quê**
-- 3 resultados possíveis + coleta de depoimento + material que vira ativo do M4
-- É aqui que as sessões se transformam em prova
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: Disse SIM. 3 pontos fechados na chamada (pagamento + data + canal) — fecha a janela de esfriamento. Rastreador: status→cliente. Depoimento: não agora — permissão para documentar agora. Script da permissão. Quando pedir de verdade (encerramento ou menção espontânea). 3 perguntas que produzem depoimento com transformação nas palavras dela.
-- Ponto 2: Foi PENSAR. Para ticket alto: decisão não em 24h. 5 toques: T1 (24-48h: personalizado, algo da conversa, sem pergunta de fechamento) / T2 (4-5d: valor puro, sem mencionar oferta) / T3 (8-10d: pergunta aberta — dúvida que ficou?) / T4 (12-14d: custo do status quo) / T5 (18-21d: encerramento gracioso). Rastreador: lead fria. M4 com prova muda o jogo.
-- Ponto 3: Disse NÃO. Não é veredicto — campo produz resultados variados. Encerrar com generosidade (script). Rastreador: lead fria, razão, data. Documentar independente do resultado: 3 perguntas (funcionou / travou / diria diferente) — 1 linha cada, antes de dormir. Sem registro: sessões do mesmo ponto. O que vira no M4: depoimento (ativo mais valioso) + pitch que funcionou + objeções reais → conteúdo que responde antes da conversa. M3 = pesquisa de mercado que você recebeu para fazer.
-
-**Bloco 4 — Onde e quando**
-- Rastreador (atualizar status após cada sessão) + Drive (3 perguntas de aprendizado antes de dormir)
-- Após cada sessão — não depois de todas
-
-**Bloco 5 — Transição**
-- Bloco de conteúdo M3 concluído
-- Gancho Encerramento: o que falta não é informação — é a primeira conversa
-
----
----
-
 ## QUEM VOCÊ SE TORNOU — ENCERRAMENTO MÓDULO 3: VENDAS SECRETAS
 *Estimativa: 6–8 minutos*
 
@@ -1017,28 +1189,3 @@ Agora é hora de pegar tudo isso — as conversas, os "sins", os "vou pensar", a
 Antes de ir — se em algum momento desse módulo você ficou presa num ponto específico e seguiu em frente sem resolver, tem um jeito de destravar. A Mentoria Express é uma hora comigo focada exatamente no que está travando. Sem pauta ampla, sem volta ao zero — uma hora, um ponto, uma saída. O link pra entrar em contato com o suporte está na descrição dessa aula.
 
 Vejo você no Módulo 4.
-
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Bloco 1 — Abertura**
-- Bridge: diferença deste módulo — saiu do papel, foi ao campo
-- Convite a parar e reconhecer a virada
-
-**Bloco 2 — O que e por quê**
-- Nomear o que foi construído — porque P4 e sessões parecem pequenos no momento
-- É o que separa especialista com método de especialista com prova
-
-**Bloco 3 — Como (3 pontos)**
-- Ponto 1: você foi ao campo — identidade anterior (se preparando = identidade segura) vs identidade pós-M3 (foi, testou, sentou com quem podia dizer não). Sobre o número 3: não é critério de aprovação. Cada negócio tem o seu número. Dado estratégico: "de cada X conversas, fecho 1" → calibra investimento em tráfego futuro.
-- Ponto 2: o que construiu — P4 (oferta completa) + Rastreador (mapa priorizado) + abordagem calibrada (perfil+social selling) + roteiro ECROI (resposta, não pitch) + pós-sessão (follow-up + depoimento + documentação de aprendizado).
-- Ponto 3: mudança de identidade — "tem método" → "apresentou, ouviu, ajustou". Se fechou: prova + depoimento em construção. Se não fechou: campo + dados + continue. O que vira no M4: conversas + objeções + gravação = matéria-prima para prova pública. No M4 você organiza o que já viveu — e mostra.
-
-**Bloco 4 — Onde e quando**
-- P4 + Rastreador + Roteiro da Sessão + depoimento em construção (Drive)
-- Inputs centrais do M4
-
-**Bloco 5 — Transição**
-- Você foi a campo — saiu diferente de quem entrou
-- Gancho M4: transformar as conversas em prova que abre portas

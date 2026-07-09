@@ -1,12 +1,81 @@
 # Expert360º — Roteiros Módulo de Orientações
-
-Versão: 1.0 | Data: 23/06/2026 | Status: Aprovado (QG-CC-006 PASS) — Módulo COMPLETO
+Versão: 2.0 (teleprompter de fala livre) | Base: v1.0 aprovada (QG-CC-006) | Data: 09/07/2026
+Status: bullets pra gravar falando livre — o script em prosa completo foi movido pro fim do arquivo (SCRIPTS DE REFERÊNCIA), só como consulta.
 
 **Aulas:** 2 (Boas-vindas + Antes de começar)
-**Formato:** texto corrido sem rótulos de bloco visíveis. Cada aula termina com ESTRUTURA — TÓPICOS E PONTOS-CHAVE, espelhando os blocos internos.
-**Decisão de plataforma:** pré-diagnóstico como questionário nativo do Hotmart, configurado como requisito de avanço antes do Módulo 0. Confirmado pela Karol em 23/06/2026.
+
+## COMO LER OS BULLETS
+- **⚓ = fala EXATO** — número, nome de framework ou frase de impacto que não pode sair errada.
+- **▸ = os pontos do bloco COMO** (o miolo da aula).
+- **• = gatilho de raciocínio** — a linha é um conceito inteiro, mas você desenvolve com as SUAS palavras. Não é pra ler, é pra seguir.
+- Ordem dos blocos: Abertura → O Que e Por Quê → Como → Onde e Quando → Transição.
 
 ---
+---
+
+## AULA BOAS-VINDAS — MÓDULO DE ORIENTAÇÕES
+*Estimativa: 5–7 minutos*
+
+**ABERTURA**
+- Bem-vinda ao Expert360º. Se você está aqui, é porque já tem o que a maioria passa anos tentando construir: carreira real, anos de trabalho, resultados reais com pessoas reais.
+- E também porque isso ainda não chegou onde poderia — o digital foi uma tentativa frustrada, uma ideia adiada, ou uma promessa que não se materializou. É exatamente onde o Expert360º começa.
+
+**O QUE E POR QUÊ**
+- O Expert360º não é curso de marketing digital nem sobre criar conteúdo todo dia ou construir audiência antes de vender — é um programa de construção de negócio.
+- O que diferencia é a sequência: primeiro a fundação (método autoral, validado em vendas reais), só depois o digital. Não o contrário.
+- Por quê: a maioria não se posiciona por falta de base, não de estratégia — chega no digital sem saber o que vende, pra quem e por que vale o preço, e aí qualquer estratégia fica em cima de areia.
+- Você sai daqui com os 5 Ps: Persona Compradora, Promessa Transformadora, Método Autoral, Vendas Secretas (3 vendas reais antes de qualquer exposição) e Presença Digital.
+
+**COMO**
+▸ Os 5 módulos
+   - Cinco módulos de conteúdo, cada um entrega um P. M0 começa pela sua história (a persona do M1 e o método do M2 nascem dali); M3 te leva ao campo (3 sessões reais de portas fechadas); M4 monta a vitrine (bio, linha editorial, primeiros conteúdos).
+   - A sequência não é aleatória — cada módulo alimenta o seguinte. Você não começa o M2 sem a persona do M1, porque o método precisa dela pra ter direção.
+▸ Os agentes de IA
+   - Dentro de cada módulo, um ou mais agentes de IA trabalham com você durante a construção do entregável — Persona Compradora (M1), Processo Autoral (M2), Autoridade Tríplice (M4), entre outros.
+      ⚓ Esses agentes não são bônus pós-curso — são o coração da experiência. Você não precisa saber o que fazer: o agente conduz, você aparece, responde e deixa o processo acontecer.
+▸ O que "360" significa
+   - Não é ver tudo ao redor — é completude: método, validação e presença, na ordem certa.
+   - Você não sai com um produto bonito que ainda não vendeu, e sim com método de nome próprio, histórias reais de clientes do 1:1 e presença digital estruturada — tudo antes de qualquer lançamento. É a fundação que torna a jornada possível, sem construir em cima de areia.
+
+**ONDE E QUANDO**
+- Tudo está dentro da plataforma; os materiais de cada aula estão no seu Drive, organizados por módulo, e cada aula aponta o arquivo certo no momento certo. No seu ritmo — o que existe é sequência, não prazo por aula.
+
+**TRANSIÇÃO**
+- Na próxima aula, três coisas práticas antes do M0: entrar no grupo, responder o pré-diagnóstico e baixar o Drive completo — dez minutos de setup que evitam uma hora de confusão lá na frente.
+
+---
+---
+
+## AULA ANTES DE COMEÇAR — MÓDULO DE ORIENTAÇÕES
+*Estimativa: 3–5 minutos*
+
+**ABERTURA**
+- Antes de entrar no M0, um setup inicial de menos de dez minutos. Não é burocracia — são três passos que colocam tudo no lugar e evitam você procurar "onde estava aquele arquivo?" no meio do curso.
+
+**O QUE E POR QUÊ**
+- Três passos: entrar no grupo, responder o pré-diagnóstico e baixar o Drive.
+- O grupo é onde você tira dúvidas, compartilha progresso e se conecta com outras alunas; o pré-diagnóstico captura onde você está começando e dá clareza de prioridades; o Drive é onde estão todos os materiais, organizados por módulo.
+- Por que agora: quando a A2 do M0 disser "abra o arquivo Minha História Real no seu Drive", você quer saber exatamente onde está, sem fricção.
+
+**COMO**
+▸ Os 3 passos
+   - Grupo: o link do WhatsApp está na descrição desta aula — entra e se apresenta quando quiser (nome e área). Não é obrigatório, mas quem mais avança usa o grupo pra registrar progresso, não só pra tirar dúvida.
+   - Pré-diagnóstico: o questionário está disponível nesta aula e precisa ser respondido antes de avançar pro M0 — perguntas sobre onde você está hoje (área, histórico no digital, o que já tentou). Não tem resposta certa; quanto mais honesta, mais útil.
+   - Drive: o link está na descrição — faça uma cópia da pasta completa pro seu Google Drive pessoal (você vai editar os arquivos ao longo do curso). A instrução de como copiar está no primeiro arquivo da pasta.
+
+**ONDE E QUANDO**
+- Links do grupo e do Drive na descrição desta aula; questionário aqui na página. Faça os três agora, antes de avançar — leva menos de dez minutos.
+
+**TRANSIÇÃO**
+- Setup feito: grupo, diagnóstico, Drive. O M0 começa agora — e começa por onde a maioria dos cursos não começa: pela sua história.
+
+---
+---
+
+# SCRIPTS DE REFERÊNCIA — PROSA COMPLETA (não ler na gravação)
+
+> Os roteiros palavra-por-palavra abaixo são a versão v1.0 aprovada (QG-CC-006). Ficam aqui só como consulta caso você queira conferir uma passagem exata. Na gravação, use os bullets acima.
+
 
 ## AULA BOAS-VINDAS — MÓDULO DE ORIENTAÇÕES
 
@@ -50,38 +119,6 @@ Na próxima aula, a gente faz três coisas práticas antes de você entrar no M�
 
 ---
 
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Seção 1: Abertura**
-- Reconhece onde a aluna está: especialista com carreira real, mas digital não funcionou como deveria
-- Ponto de partida do Expert360º: exatamente esse gap
-
-**Seção 2: O que e por quê**
-- Não é curso de marketing digital — é programa de construção de negócio
-- A sequência: fundação primeiro (método + validação), digital depois
-- Por quê: a maioria chega no digital sem base — qualquer estratégia fica em cima de areia
-- Os 5 Ps: Persona / Promessa / Método / Vendas Secretas (3 vendas reais) / Presença Digital
-
-**Seção 3: Como — módulos**
-- 5 módulos, cada um entrega um P
-- M0: história → M1: persona → M2: método → M3: vendas reais 1:1 → M4: vitrine digital
-- Sequência não aleatória — cada módulo alimenta o seguinte
-
-**Seção 4: Como — 6 agentes de IA**
-- Cada módulo tem agente(s) que conduzem o entregável daquele módulo
-- Exemplos: Persona Compradora (M1), Processo Autoral (M2), Autoridade Tríplice (M4)
-- Não são bônus — são o coração da experiência
-
-**Seção 5: Como — o que "360" significa**
-- Completude: método + validação + presença, na ordem certa
-- Saída: método com nome próprio + histórias reais do 1:1 + presença digital estruturada
-
-**Seção 6: Onde e Quando + Transição**
-- Materiais no Drive, organizados por módulo, ritmo da aluna
-- Próxima aula: setup prático (grupo + pré-diagnóstico + Drive)
-
----
-
 ## AULA ANTES DE COMEÇAR — MÓDULO DE ORIENTAÇÕES
 
 *Estimativa: 3–5 minutos*
@@ -113,25 +150,3 @@ O link do Drive está na descrição desta aula. Faça uma cópia da pasta compl
 O link do grupo e o link do Drive estão na descrição desta aula. O questionário está aqui na página. Faça os três agora, antes de avançar. Leva menos de dez minutos.
 
 Setup feito. Grupo, diagnóstico, Drive. O Módulo 0 começa agora — e começa por onde a maioria dos cursos não começa: pela sua história. Vamos lá.
-
----
-
-**ESTRUTURA — TÓPICOS E PONTOS-CHAVE**
-
-**Seção 1: Abertura**
-- 3 passos operacionais antes do M0, menos de 10 minutos
-- Não é burocracia — evita fricção no meio do curso
-
-**Seção 2: O que e por quê**
-- Grupo: dúvidas, progresso, conexão com outras alunas
-- Pré-diagnóstico: capturar ponto de partida, clareza de prioridades (questionário nativo Hotmart — gate de avanço)
-- Drive: todos os materiais por módulo, prontos quando a aula pedir
-- Por que agora: evitar busca de arquivo no meio do curso
-
-**Seção 3: Como — os 3 passos**
-- Grupo: link na descrição, apresentação opcional, usar pra registrar progresso
-- Pré-diagnóstico: questionário nativo na página desta aula, requerido antes de avançar
-- Drive: link na descrição, copiar pasta completa, instrução no primeiro arquivo
-
-**Seção 4: Transição**
-- M0 começa agora — pela história da aluna
