@@ -111,4 +111,5 @@ Reforçar tese: "Diploma é o que você estudou. Método é o que você viveu."
 - [ ] Linguagem em masculino genérico ("o aluno") — persona sem gênero definido (confirmado 07/07)
 - [ ] Ter o infográfico `M2.3 - As 3 Jornadas` aberto/compartilhável na tela durante a Parte 2, se quiser apoio visual
 - [ ] Testar o NotebookLM com o prompt da Parte 3 antes da live, pra garantir que a demonstração funciona
+- [ ] Demo ao vivo com dado real: usar `live-21-demo-notebooklm-expert360.md` (fonte + prompt já preenchidos com o Expert360º) em vez do prompt genérico com `[NOME DO MÉTODO]`
 - [ ] Confirmar duração real ~25-28min bate com o grupo

@@ -197,6 +197,17 @@ O que domina os virais de vendas/empreendedorismo/infoprodutos NÃO é trend nem
     - Categoria: Eventos sazonais (julho = meio do ano)
     - Por que: urgência de calendário real, sem inventar escassez. JANELA: usar nas próximas 3-4 semanas (julho).
 
+### 📣 PROVA SOCIAL (depoimentos reais — usar quando surgir)
+
+1. **"Ela mora no Canadá, trabalha no horário da live — e ainda assim participou pela primeira vez"** *(novo 08/07)*
+   - Formato: Carrossel de Alcance (contando a história) *ou* Reels-reação (corte real da live + reação da Karol)
+   - Categoria (Audience): Prova social + Desejo (pertencimento/comunidade)
+   - CTA: **GRUPO** (é lá que acontecem as lives semanais — CTA natural, sem forçar)
+   - O relato: seguidora do grupo gratuito do WhatsApp, mora no Canadá, trabalha no horário da live (gravações ficam só pra alunos) — estava de férias e aproveitou pra participar pela primeira vez. No final disse que adorou a aula, a didática e a clareza, e que sempre quis participar mas nunca pôde.
+   - Por que é forte: prova social real > depoimento genérico. Mostra (sem precisar dizer) que a live tem valor que faz alguém se organizar de outro fuso e da própria folga pra estar lá — e reforça a raridade de participar ao vivo (gravação é só pra aluna).
+   - Ação disponível: Karol tem o corte da live onde ela fala isso — dá pra fazer um Reels-reação (Karol reage ao próprio corte, comenta o que sentiu ouvindo aquilo). Perguntar pra Karol se quer que o Rico roteirize esse react quando o corte estiver em mãos.
+   - Fonte: relato direto da Karol, live semanal de 08/07/2026
+
 ### 🌟 QUENTES / EMERGENTES (2 originais + 4 novos)
 
 1. **"Cansaço foi a palavra do ano" — o ponto de virada antes da reinvenção**
@@ -238,8 +249,9 @@ O que domina os virais de vendas/empreendedorismo/infoprodutos NÃO é trend nem
 - 15/06 — @iris-pesquisador: Base criada — 3 formatos de carrossel + pool de 15 temas + insights 2026 + fontes externas.
 - 04/07 — @iris-pesquisador: Adicionado braço de Reels (trio C.N.L./P.O.V./Gancho Negativo, de 2 fontes: Trello ReelsPro + Arsenal Viral) + 8 temas médios novos validados no garimpo + 4 quentes novos. Pool total: 27 temas. Flag de janela no tema "cansaço". Análise completa de formatos: `formatos-virais-adaptados.md`.
 - 04/07 — @sage-teorico + @rico-roteirista: Batelada de estreia dos Reels (3 posts, temas sem overlap com os 6 carrosséis de 30/06): `metade-2026-metodo-na-cabeca` (C.N.L., janela julho), `oito-lancamentos-60-segundos` (falado, pilar "expert em fracassar"), `curso-nunca-sai-do-papel` (P.O.V.). Cada um com context.yaml + teoria.md + roteiro.md (roteiro já inclui orientação de gravação do Mack). Status: aguardando gravação pela Karol.
-- 07/07 — @iris-pesquisador: Desafio 10 Dias (protocolo ebook ReelsPro "Ativação do Algoritmo") integrado à base — plano completo em `desafio-10-dias-plano.md`. Início 07/07, horários fixos Carrossel 12h / Reels 19h30.
+- 07/07 — @iris-pesquisador: Desafio 10 Dias (protocolo ebook ReelsPro "Ativação do Algoritmo") integrado à base — plano completo em `desafio-10-dias-plano.md`. Início adiado pra 08/07 (Dia 1 não gravado em 07/07) — cronograma inteiro deslocado +1 dia. Horários fixos Carrossel 12h / Reels 19h30.
 - 07/07 — @sage-teorico + @rico-roteirista: Batelada dos dias 4-7 do desafio produzida (8 posts): carrosséis `cinco-perguntas-travada` (Diagnóstico, estreia do formato-teste), `vazio-ganhar-bem-sem-proposito` (Alcance), `ia-braco-do-expert` (Dor/tese, tema quente), `renda-presa-ao-tempo` (Dor); Reels `especialista-diz-vou-esperar-seguidores` (1º da série "Quando o especialista diz..."), `quinze-anos-profissao-60-segundos` (falado), `carta-aberta-especialista-invisivel` (C.N.L.), `liberal-clt-servidor-caminho` (comparação, pergunta aberta). Status: aguardando gravação/postagem pela Karol.
+- 08/07 — @iris-pesquisador: Depoimento real registrado no pool (seção PROVA SOCIAL) — seguidora do Canadá que participou da live pela 1ª vez de férias. CTA GRUPO. Karol tem o corte da live disponível — opção de Reels-reação em aberto, aguardando decisão.
 
 ---
 

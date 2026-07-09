@@ -53,7 +53,8 @@ Sem isso, toda tentativa às 21h termina do mesmo jeito: notebook fechado e a se
 - **Gravação:** 7 takes separados de 4-6s cada (corta pra 1,5-2,5s na edição). Total: ~20 min de gravação.
 - **Atenção na cena 5:** expressão NEUTRA e cansada. Nada de comédia física — a persona precisa se ver, não se sentir ridicularizada.
 - **Tela do notebook:** pode desfocar ou filmar de ângulo que não mostre conteúdo real.
-- **Edição:** cortes secos entre cenas, texto na tela cena a cena (CapCut ou editor do IG). Música: lo-fi suave ou trending calmo instrumental — baixo volume.
+- **Edição:** cortes secos entre cenas, texto na tela cena a cena (CapCut ou editor do IG). Música: lo-fi suave ou trending calmo instrumental — baixo volume. Buscar em Reels do IG (aba de áudio, filtro "Trending" + "lofi"/"chill night") ou repetir um áudio trending calmo já visto em Reels de identificação/rotina.
+- **Efeito de áudio no texto:** seletivo, não em todas as cenas. Clique seco/discreto tipo digitação só nos cortes de timestamp (cenas 2, 3, 4, 6 — reforça passagem de tempo). Cena 5 (close cansado) e cena 7 (punch final): SEM efeito novo — silêncio pesa mais aqui. Evitar whoosh/boing cartunesco — quebra o realismo e contradiz o tom de reconhecimento (zero caricatura).
 - **Paleta dos textos:** branco limpo; o punch final ("Amanhã eu começo. De novo.") pode ir em laranja da marca.
 - **Duração final:** 12-18s.
 - **Tempo total de produção estimado:** 45 min (gravação + edição).
