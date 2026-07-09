@@ -6,26 +6,29 @@
 <title>As 3 Jornadas — Expert360º</title>
 <style>
   :root{
-    --page-bg: #f2ede3;
-    --ink: #211c15;
-    --ink-dim: #6f6656;
-    --ink-faint: #9a917e;
-    --card-bg: #fffdf8;
-    --border: #e2d9c6;
-    --accent: #ff6a1f;
+    /* Paleta oficial Incubadora de Expert: preto, branco, cinza, laranja (briefing-visual-logo.md) */
+    --page-bg: #fcfcfc;
+    --ink: #090a0b;
+    --ink-dim: #4a4a4a;
+    --ink-faint: #6f6f6f;
+    --card-bg: #ffffff;
+    --border: #ddddde;
+    --accent: #f85627;
 
-    --m0: #96897236;
-    --m0-solid: #8c8069;
-    --m1-solid: #e0913c;
-    --m2-solid: #ff6a1f;
-    --m3-solid: #bf4c1c;
-    --m4-solid: #2a2015;
+    /* Rampa ordinal — um único matiz (família do laranja da marca), clara→escura,
+       validada com scripts/validate_palette.js --ordinal (dataviz skill): monotonia
+       de luminosidade, degraus >= 0.06, contraste do degrau claro >= 2:1 */
+    --m0-solid: #eea23e;
+    --m1-solid: #d78c07;
+    --m2-solid: #a15f0e;
+    --m3-solid: #7e4a01;
+    --m4-solid: #4c2903;
 
-    --m0-tint: #8c806914;
-    --m1-tint: #e0913c14;
-    --m2-tint: #ff6a1f14;
-    --m3-tint: #bf4c1c14;
-    --m4-tint: #2a201514;
+    --m0-tint: #eea23e20;
+    --m1-tint: #d78c0714;
+    --m2-tint: #a15f0e14;
+    --m3-tint: #7e4a0114;
+    --m4-tint: #4c290314;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { background: var(--page-bg); }
@@ -33,82 +36,82 @@
     color: var(--ink);
     font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
     display: flex; justify-content: center;
-    padding: 3.4vh 2.4vw 4vh;
+    padding: 2.2vh 2.4vw 2.6vh;
   }
   .poster {
     width: min(97vw, 1720px);
-    display: flex; flex-direction: column; gap: 26px;
+    display: flex; flex-direction: column; gap: 16px;
   }
 
   /* ---------- HEADER ---------- */
   .header { text-align: center; }
   .eyebrow {
     font-size: 12px; letter-spacing: 0.4em; text-transform: uppercase;
-    color: var(--ink-faint); font-weight: 700; margin-bottom: 10px;
+    color: var(--ink-faint); font-weight: 700; margin-bottom: 5px;
   }
   h1 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(26px, 2.7vw, 42px);
+    font-size: clamp(24px, 2.5vw, 38px);
     font-weight: 700; text-wrap: balance; line-height: 1.1;
   }
   h1 strong { color: var(--accent); font-weight: 700; }
   .legenda {
-    margin-top: 14px; display: flex; justify-content: center; gap: 28px; flex-wrap: wrap;
+    margin-top: 7px; display: flex; justify-content: center; gap: 28px; flex-wrap: wrap;
   }
   .legenda-item {
     display: flex; align-items: center; gap: 8px;
     font-size: 12.5px; color: var(--ink-dim); font-weight: 600;
   }
   .legenda-marca { width: 11px; height: 11px; border-radius: 3px; flex: none; }
-  .legenda-marca.ordem { background: var(--m2-solid); }
+  .legenda-marca.ordem { background: var(--accent); }
   .legenda-marca.entrega { background: var(--ink); border-radius: 50%; }
   .legenda-marca.identidade { background: none; border: 2px solid var(--accent); border-radius: 50%; }
 
   /* ---------- ROW 1: PONTOS + CHEVRONS ---------- */
-  .jornada-row { display: flex; align-items: stretch; height: 168px; }
+  .jornada-row { display: flex; align-items: stretch; height: 146px; }
 
   .ponto {
-    flex: 0 0 178px; border-radius: 14px; padding: 16px 16px;
+    flex: 0 0 172px; border-radius: 14px; padding: 12px 14px;
     display: flex; flex-direction: column; align-items: center; text-align: center;
-    justify-content: center; gap: 8px; position: relative; z-index: 1;
+    justify-content: center; gap: 6px; position: relative; z-index: 1;
   }
-  .ponto-a { background: #e3dbc7; border: 1px solid #d2c6a8; }
-  .ponto-b { background: var(--m4-solid); border: 1px solid #000; }
-  .ponto-icon { width: 34px; height: 34px; }
+  .ponto-a { background: #f1f1f0; border: 1px solid var(--border); }
+  .ponto-b { background: var(--accent); border: 1px solid var(--accent); }
+  .ponto-icon { width: 27px; height: 27px; }
   .ponto-tag {
     font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700;
     color: var(--ink-faint);
   }
-  .ponto-b .ponto-tag { color: #b99a7c; }
+  .ponto-b .ponto-tag { color: #5d2515; }
   .ponto-nome { font-family: Georgia, serif; font-weight: 700; font-size: 16px; line-height: 1.15; }
-  .ponto-b .ponto-nome { color: #fff; }
+  .ponto-b .ponto-nome { color: var(--ink); }
   .ponto-desc { font-size: 10.8px; line-height: 1.4; color: var(--ink-dim); }
-  .ponto-b .ponto-desc { color: #cbb9a3; }
+  .ponto-b .ponto-desc { color: #5d2515; }
 
   .chevrons { flex: 1; display: flex; }
   .chevron {
-    flex: 1; margin-left: -22px; padding: 18px 30px 18px 44px;
+    flex: 1; margin-left: -22px; padding: 12px 26px 12px 38px;
     display: flex; flex-direction: column; align-items: center; text-align: center;
-    justify-content: center; gap: 6px; color: #fff; position: relative;
+    justify-content: center; gap: 5px; color: #fff; position: relative;
   }
-  .chevron:first-child { margin-left: 0; padding-left: 22px; }
-  .chevron.m0 { background: var(--m0-solid); clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%); z-index: 5; }
-  .chevron.m1 { background: var(--m1-solid); clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%, 26px 50%); z-index: 4; }
+  .chevron:first-child { margin-left: 0; padding-left: 20px; }
+  .chevron.m0 { background: var(--m0-solid); color: var(--ink); clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%); z-index: 5; }
+  .chevron.m1 { background: var(--m1-solid); color: var(--ink); clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%, 26px 50%); z-index: 4; }
   .chevron.m2 { background: var(--m2-solid); clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%, 26px 50%); z-index: 3; }
   .chevron.m3 { background: var(--m3-solid); clip-path: polygon(0 0, calc(100% - 26px) 0, 100% 50%, calc(100% - 26px) 100%, 0 100%, 26px 50%); z-index: 2; }
   .chevron.m4 { background: var(--m4-solid); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 26px 50%); z-index: 1; padding-right: 20px; }
 
-  .chevron-icon { width: 30px; height: 30px; }
+  .chevron-icon { width: 23px; height: 23px; }
   .chevron-tag { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; opacity: 0.75; }
-  .chevron-nome { font-family: Georgia, serif; font-weight: 700; font-size: 15px; line-height: 1.15; }
-  .chevron-entrega { font-size: 10.6px; line-height: 1.3; opacity: 0.92; }
+  .chevron-nome { font-family: Georgia, serif; font-weight: 700; font-size: 14px; line-height: 1.15; }
+  .chevron-entrega { font-size: 10.6px; line-height: 1.3; opacity: 0.9; }
 
   /* ---------- ROW 2: MODULE CARDS ---------- */
-  .cards-row { display: flex; gap: 14px; }
+  .cards-row { display: flex; gap: 12px; }
   .card {
     flex: 1; background: var(--card-bg); border: 1px solid var(--border);
-    border-radius: 12px; padding: 16px 16px 18px; border-top: 4px solid;
-    display: flex; flex-direction: column; gap: 10px;
+    border-radius: 12px; padding: 13px 15px; border-top: 4px solid;
+    display: flex; flex-direction: column; gap: 9px;
   }
   .card.m0 { border-top-color: var(--m0-solid); background: linear-gradient(var(--m0-tint), var(--m0-tint)), var(--card-bg); }
   .card.m1 { border-top-color: var(--m1-solid); background: linear-gradient(var(--m1-tint), var(--m1-tint)), var(--card-bg); }
@@ -116,8 +119,8 @@
   .card.m3 { border-top-color: var(--m3-solid); background: linear-gradient(var(--m3-tint), var(--m3-tint)), var(--card-bg); }
   .card.m4 { border-top-color: var(--m4-solid); background: linear-gradient(var(--m4-tint), var(--m4-tint)), var(--card-bg); }
 
-  .card-titulo { font-weight: 700; font-size: 13.5px; }
-  .card-campo { display: flex; flex-direction: column; gap: 3px; }
+  .card-titulo { font-weight: 700; font-size: 13.5px; color: var(--ink-dim); }
+  .card-campo { display: flex; flex-direction: column; gap: 5px; }
   .card-label {
     font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700;
     color: var(--ink-faint); display: flex; align-items: center; gap: 5px;
@@ -125,45 +128,63 @@
   .card-label .dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
   .card-label .dot.identidade { background: none; border: 1.6px solid var(--accent); }
   .card-label .dot.entrega { background: var(--ink); }
-  .card-valor { font-size: 11.6px; line-height: 1.42; color: var(--ink); }
+  .card-valor { font-size: 11.6px; line-height: 1.44; color: var(--ink); }
   .card-valor em { font-style: italic; color: var(--ink-dim); }
-  .card-identidade {
-    font-family: Georgia, serif; font-style: italic; font-weight: 700;
-    color: var(--accent); font-size: 12.6px; line-height: 1.3;
-  }
 
-  /* ---------- ROW 3: TRILHA DE GATES ---------- */
-  .trilha-box {
+  .card-campo:last-of-type .card-label { opacity: 0.8; }
+  .card-campo:last-of-type .card-valor { font-size: 10.4px; color: var(--ink-dim); }
+
+  .transicao { display: flex; align-items: center; gap: 8px; margin: 2px 0; }
+  .transicao .antes { font-size: 13px; color: var(--ink-dim); font-weight: 600; }
+  .transicao .depois { font-family: Georgia, serif; font-style: italic; font-weight: 700; color: var(--accent); font-size: 16.5px; }
+  .seta-icon { width: 19px; height: 13px; flex: none; }
+  .seta-icon line, .seta-icon polyline { stroke: var(--ink-faint); stroke-width: 2; }
+
+  /* ---------- ROW 3: 12 MESES ---------- */
+  .meses-box {
     background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
-    padding: 18px 30px 20px;
+    padding: 13px 20px 14px;
   }
-  .trilha-titulo {
+  .meses-titulo {
     text-align: center; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-    font-weight: 700; color: var(--ink-faint); margin-bottom: 16px;
+    font-weight: 700; color: var(--ink-faint); margin-bottom: 3px;
   }
-  .trilha-titulo strong { color: var(--ink); }
-  .trilha {
-    display: flex; align-items: center;
+  .meses-titulo strong { color: var(--ink); }
+  .meses-nota {
+    text-align: center; font-size: 10.8px; font-style: italic; color: var(--ink-faint);
+    margin-bottom: 9px;
   }
-  .no {
-    display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 0 0 auto;
+  .meses-bar { display: flex; gap: 6px; margin-top: 20px; }
+  .mes {
+    flex: 1; border-radius: 8px; padding: 8px 3px 7px; text-align: center; color: #fff;
+    display: flex; flex-direction: column; gap: 3px; position: relative;
   }
-  .no-dot { width: 15px; height: 15px; border-radius: 50%; border: 3px solid var(--card-bg); box-shadow: 0 0 0 1.5px var(--border); }
-  .no.m0 .no-dot { background: var(--m0-solid); }
-  .no.m1 .no-dot { background: var(--m1-solid); }
-  .no.m2 .no-dot { background: var(--m2-solid); }
-  .no.m3 .no-dot { background: var(--m3-solid); }
-  .no.m4 .no-dot { background: var(--m4-solid); }
-  .no-label { font-size: 11px; font-weight: 700; }
-  .gate {
-    flex: 1; display: flex; flex-direction: column; align-items: center; gap: 5px;
-    padding: 0 10px; position: relative; top: -18px;
+  .milestone-badge {
+    position: absolute; top: -24px; left: 50%; transform: translateX(-50%);
+    background: var(--ink); color: #fff; font-size: 8.6px; font-weight: 700;
+    padding: 4px 9px; border-radius: 5px; white-space: nowrap; letter-spacing: 0.02em;
   }
-  .gate-linha { width: 100%; height: 1px; background: repeating-linear-gradient(to right, var(--ink-faint) 0 5px, transparent 5px 10px); }
-  .gate-texto { font-size: 10.4px; font-style: italic; color: var(--ink-dim); text-align: center; max-width: 22ch; }
+  .milestone-badge::after {
+    content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%);
+    border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid var(--ink);
+  }
+  .mes.marco { box-shadow: 0 0 0 2px var(--ink); }
+  .mes-num { font-family: Georgia, serif; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums; }
+  .mes-tag { font-size: 8.6px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 700; opacity: 0.92; }
+  .mes.m0 { background: var(--m0-solid); color: var(--ink); }
+  .mes.m0m1 { background: linear-gradient(135deg, var(--m0-solid) 0 50%, var(--m1-solid) 50% 100%); color: var(--ink); }
+  .mes.m1 { background: var(--m1-solid); color: var(--ink); }
+  .mes.m2 { background: var(--m2-solid); }
+  .mes.m3 { background: var(--m3-solid); }
+  .mes.m4 { background: var(--m4-solid); }
+  .mes.escala { background: var(--accent); color: var(--ink); }
+  .meses-legenda {
+    margin-top: 8px; text-align: center; font-size: 10.6px; color: var(--ink-dim);
+  }
+  .meses-legenda strong { color: var(--ink); }
 
   /* ---------- FOOTER ---------- */
-  .footer { text-align: center; padding-top: 4px; }
+  .footer { text-align: center; }
   .footer-linha {
     font-family: Georgia, serif; font-style: italic; font-weight: 700;
     font-size: clamp(14px, 1.5vw, 19px); color: var(--ink);
@@ -178,16 +199,16 @@
     <div class="eyebrow">Expert360º &nbsp;·&nbsp; Módulo 2, Aula 4</div>
     <h1>As <strong>3 Jornadas</strong>: o mapa de Ponto A a Ponto B do Expert360º</h1>
     <div class="legenda">
-      <div class="legenda-item"><span class="legenda-marca ordem"></span>Ordem das setas = Jornada Cronológica</div>
+      <div class="legenda-item"><span class="legenda-marca ordem"></span>Ordem e ritmo = Jornada Cronológica</div>
       <div class="legenda-item"><span class="legenda-marca entrega"></span>Entrega de cada módulo = Jornada Didática</div>
-      <div class="legenda-item"><span class="legenda-marca identidade"></span>Identidade = Jornada Psicológica</div>
+      <div class="legenda-item"><span class="legenda-marca identidade"></span>Antes → depois = Jornada Psicológica</div>
     </div>
   </div>
 
   <!-- ROW 1 -->
   <div class="jornada-row">
     <div class="ponto ponto-a">
-      <svg class="ponto-icon" viewBox="0 0 24 24" fill="none" stroke="#4a4436" stroke-width="1.6">
+      <svg class="ponto-icon" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1.6">
         <ellipse cx="12" cy="12" rx="9" ry="5.5"/>
         <circle cx="12" cy="12" r="2.4"/>
         <line x1="4" y1="4" x2="20" y2="20"/>
@@ -199,7 +220,7 @@
 
     <div class="chevrons">
       <div class="chevron m0">
-        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7">
+        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
           <rect x="5" y="11" width="14" height="9" rx="1.5"/>
           <path d="M8 11V8a4 4 0 0 1 7.8-1.2"/>
         </svg>
@@ -208,7 +229,7 @@
         <div class="chevron-entrega">História real documentada</div>
       </div>
       <div class="chevron m1">
-        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7">
+        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
           <circle cx="12" cy="12" r="8"/>
           <circle cx="12" cy="12" r="4.5"/>
           <circle cx="12" cy="12" r="1"/>
@@ -234,7 +255,7 @@
         </svg>
         <div class="chevron-tag">Módulo 3</div>
         <div class="chevron-nome">Vendas Secretas</div>
-        <div class="chevron-entrega">P4 + 3 vendas reais</div>
+        <div class="chevron-entrega">P4 — Proposta Validada</div>
       </div>
       <div class="chevron m4">
         <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7">
@@ -245,13 +266,13 @@
           <path d="M12 12 A10.5 10.5 0 0 0 12 22.5"/>
         </svg>
         <div class="chevron-tag">Módulo 4</div>
-        <div class="chevron-nome">Autoridade</div>
+        <div class="chevron-nome">Posicionamento de Autoridade</div>
         <div class="chevron-entrega">P5</div>
       </div>
     </div>
 
     <div class="ponto ponto-b">
-      <svg class="ponto-icon" viewBox="0 0 24 24" fill="none" stroke="#f2ded0" stroke-width="1.6">
+      <svg class="ponto-icon" viewBox="0 0 24 24" fill="none" stroke="#090a0b" stroke-width="1.6">
         <circle cx="12" cy="12" r="2"/>
         <path d="M12 12 L12 3"/>
         <path d="M12 12 L18.4 6.4"/>
@@ -270,8 +291,12 @@
     <div class="card m0">
       <div class="card-titulo">Módulo 0 — Desbloqueio</div>
       <div class="card-campo">
-        <div class="card-label"><span class="dot identidade"></span>Identidade</div>
-        <div class="card-identidade">Do Currículo à Autoridade</div>
+        <div class="card-label"><span class="dot identidade"></span>Identidade — quem ela se torna</div>
+        <div class="transicao">
+          <span class="antes">Currículo</span>
+          <svg class="seta-icon" viewBox="0 0 24 16" fill="none"><line x1="2" y1="8" x2="19" y2="8"/><polyline points="13,3 20,8 13,13"/></svg>
+          <span class="depois">Autoridade</span>
+        </div>
         <div class="card-valor"><em>História = dado, não vulnerabilidade.</em></div>
       </div>
       <div class="card-campo">
@@ -283,8 +308,12 @@
     <div class="card m1">
       <div class="card-titulo">Módulo 1 — Persona + Promessa</div>
       <div class="card-campo">
-        <div class="card-label"><span class="dot identidade"></span>Identidade</div>
-        <div class="card-identidade">Do Conhecimento à Narrativa</div>
+        <div class="card-label"><span class="dot identidade"></span>Identidade — quem ela se torna</div>
+        <div class="transicao">
+          <span class="antes">Conhecimento</span>
+          <svg class="seta-icon" viewBox="0 0 24 16" fill="none"><line x1="2" y1="8" x2="19" y2="8"/><polyline points="13,3 20,8 13,13"/></svg>
+          <span class="depois">Narrativa</span>
+        </div>
         <div class="card-valor"><em>Sua história vira diferencial.</em></div>
       </div>
       <div class="card-campo">
@@ -296,8 +325,12 @@
     <div class="card m2">
       <div class="card-titulo">Módulo 2 — Processo Autoral + Ecossistema</div>
       <div class="card-campo">
-        <div class="card-label"><span class="dot identidade"></span>Identidade</div>
-        <div class="card-identidade">Do Caos ao Método Autoral</div>
+        <div class="card-label"><span class="dot identidade"></span>Identidade — quem ela se torna</div>
+        <div class="transicao">
+          <span class="antes">Caos</span>
+          <svg class="seta-icon" viewBox="0 0 24 16" fill="none"><line x1="2" y1="8" x2="19" y2="8"/><polyline points="13,3 20,8 13,13"/></svg>
+          <span class="depois">Método Autoral</span>
+        </div>
         <div class="card-valor"><em>Especialista com algo que pode ensinar e escalar.</em></div>
       </div>
       <div class="card-campo">
@@ -309,44 +342,57 @@
     <div class="card m3">
       <div class="card-titulo">Módulo 3 — Vendas Secretas</div>
       <div class="card-campo">
-        <div class="card-label"><span class="dot identidade"></span>Identidade</div>
-        <div class="card-identidade">Da Promessa à Venda Secreta</div>
+        <div class="card-label"><span class="dot identidade"></span>Identidade — quem ela se torna</div>
+        <div class="transicao">
+          <span class="antes">Promessa</span>
+          <svg class="seta-icon" viewBox="0 0 24 16" fill="none"><line x1="2" y1="8" x2="19" y2="8"/><polyline points="13,3 20,8 13,13"/></svg>
+          <span class="depois">Venda Secreta</span>
+        </div>
         <div class="card-valor"><em>"Sou especial o suficiente?" some com a prova.</em></div>
       </div>
       <div class="card-campo">
         <div class="card-label"><span class="dot entrega"></span>Entrega</div>
-        <div class="card-valor">P4 + Rastreador de Leads + 3 vendas reais no 1:1 — Agente da Proposta Validada.</div>
+        <div class="card-valor">P4 — Proposta Validada, criada com o Agente da Proposta Validada e aplicada nas 3 vendas reais no 1:1.</div>
       </div>
     </div>
 
     <div class="card m4">
-      <div class="card-titulo">Módulo 4 — Autoridade</div>
+      <div class="card-titulo">Módulo 4 — Posicionamento de Autoridade</div>
       <div class="card-campo">
-        <div class="card-label"><span class="dot identidade"></span>Identidade</div>
-        <div class="card-identidade">Da Invisibilidade à Autoridade</div>
+        <div class="card-label"><span class="dot identidade"></span>Identidade — quem ela se torna</div>
+        <div class="transicao">
+          <span class="antes">Invisibilidade</span>
+          <svg class="seta-icon" viewBox="0 0 24 16" fill="none"><line x1="2" y1="8" x2="19" y2="8"/><polyline points="13,3 20,8 13,13"/></svg>
+          <span class="depois">Autoridade</span>
+        </div>
         <div class="card-valor"><em>Presença no digital com o que já está provado.</em></div>
       </div>
       <div class="card-campo">
         <div class="card-label"><span class="dot entrega"></span>Entrega</div>
-        <div class="card-valor">P5 (Presença Digital) — Agente da Autoridade Tríplice.</div>
+        <div class="card-valor">P5 (Posicionamento de Autoridade) — Agente da Autoridade Tríplice.</div>
       </div>
     </div>
   </div>
 
   <!-- ROW 3 -->
-  <div class="trilha-box">
-    <div class="trilha-titulo">Por que essa ordem <strong>não é arbitrária</strong> — a Jornada Cronológica, gate a gate</div>
-    <div class="trilha">
-      <div class="no m0"><div class="no-dot"></div><div class="no-label">M0</div></div>
-      <div class="gate"><div class="gate-linha"></div><div class="gate-texto">Persona precisa ressoar com a história</div></div>
-      <div class="no m1"><div class="no-dot"></div><div class="no-label">M1</div></div>
-      <div class="gate"><div class="gate-linha"></div><div class="gate-texto">Não se constrói método sem saber pra quem</div></div>
-      <div class="no m2"><div class="no-dot"></div><div class="no-label">M2</div></div>
-      <div class="gate"><div class="gate-linha"></div><div class="gate-texto">Não se monta oferta sem método</div></div>
-      <div class="no m3"><div class="no-dot"></div><div class="no-label">M3</div></div>
-      <div class="gate"><div class="gate-linha"></div><div class="gate-texto">Não se aparece no digital sem prova</div></div>
-      <div class="no m4"><div class="no-dot"></div><div class="no-label">M4</div></div>
+  <div class="meses-box">
+    <div class="meses-titulo">Sua jornada em <strong>12 meses</strong> — ritmo estimado (Jornada Cronológica)</div>
+    <div class="meses-nota">Acesso total liberado no 1º dia — este é o ritmo sugerido, não um bloqueio mensal.</div>
+    <div class="meses-bar">
+      <div class="mes m0m1"><div class="mes-num">1</div><div class="mes-tag">M0 + M1 (P1+P2)</div></div>
+      <div class="mes m2"><div class="mes-num">2</div><div class="mes-tag">Processo Autoral P3</div></div>
+      <div class="mes m2"><div class="mes-num">3</div><div class="mes-tag">Portfólio</div></div>
+      <div class="mes m3 marco"><div class="milestone-badge">Promessa: método validado</div><div class="mes-num">4</div><div class="mes-tag">Oferta P4</div></div>
+      <div class="mes m3"><div class="mes-num">5</div><div class="mes-tag">Validação</div></div>
+      <div class="mes m3"><div class="mes-num">6</div><div class="mes-tag">Vendas Reais</div></div>
+      <div class="mes m4"><div class="mes-num">7</div><div class="mes-tag">Autoridade Tríplice</div></div>
+      <div class="mes m4"><div class="mes-num">8</div><div class="mes-tag">Vitrine + Bio</div></div>
+      <div class="mes m4"><div class="mes-num">9</div><div class="mes-tag">Posicionamento P5</div></div>
+      <div class="mes escala"><div class="mes-num">10</div><div class="mes-tag">Linha Editorial</div></div>
+      <div class="mes escala"><div class="mes-num">11</div><div class="mes-tag">Conteúdo + Tráfego</div></div>
+      <div class="mes escala"><div class="mes-num">12</div><div class="mes-tag">Escala</div></div>
     </div>
+    <div class="meses-legenda">Mês 1 junta M0 e M1 — os agentes de IA aceleram o início. Meses 10-12 = escala do negócio digital, aplicando o que já foi construído.</div>
   </div>
 
   <div class="footer">

@@ -406,6 +406,8 @@ Aplicação: você não precisa apresentar as 3 jornadas usando esses nomes. O i
 
 Onde: abra o arquivo **Meu Método Autoral (P3)** no Drive e responda os 3 blocos de perguntas. **Bloco 1 — Jornada Didática:** para cada fase/módulo do seu método: o que aprende / entregável concreto / ferramenta ou agente associado. **Bloco 2 — Jornada Cronológica:** por que o módulo 2 não pode vir antes do módulo 1? Qual é o gate de passagem? Se a aluna tentar pular, o que quebra? Escreva uma frase de razão para cada gate — essa frase é o que você usa na venda. **Bloco 3 — Jornada Psicológica:** para cada fase: "antes desta fase, a aluna é X. Depois, ela se torna Y." X e Y são como ela se vê e como se autoriza a agir — não o que ela sabe. Quando: agora, antes de seguir pra A5 (Agente do Processo Autoral) — o rascunho é o input para os próximos agentes.
 
+Bônus — quer deixar isso visual? Depois que você tiver o rascunho das 3 jornadas escrito, dá pra transformar isso num infográfico em poucos minutos, de graça, sem precisar saber design. O passo a passo com o prompt pronto está no arquivo **Meu Infográfico das 3 Jornadas**, no seu Drive — usa uma ferramenta gratuita do Google chamada NotebookLM.
+
 ---
 
 Método projetado em 3 dimensões é método que entrega e que vende.
@@ -433,6 +435,7 @@ Com o rascunho das 3 jornadas em mãos, você está pronta para o Agente do Proc
 - Arquivo Meu Método Autoral (P3) no Drive
 - 3 blocos: Didática (módulos/entregáveis), Cronológica (gates com frase de razão), Psicológica ("antes X, depois Y" — identidade)
 - Agora, antes de seguir pra A5
+- Bônus: transformar o rascunho em infográfico visual — arquivo Meu Infográfico das 3 Jornadas (NotebookLM, prompt pronto)
 
 **Bloco 5 — Transição**
 - Gancho A5: com rascunho das 3 jornadas → Agente do Processo Autoral (construção completa de P3)

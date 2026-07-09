@@ -32,7 +32,7 @@
 | # | Item | Status |
 |---|---|---|
 | M01 | Criar biblioteca de templates (8–10 modelos Canva/Notion/Google Sheets) | Pendente — P2, pode vir em atualização pós-lançamento |
-| M02 | Revisar e finalizar materiais do Drive (M0.1 a M4.7) | Pendente — verificar prontidão para entrega |
+| M02 | Revisar e finalizar materiais do Drive (M0.1 a M4.7, incl. M2.4 novo) | Pendente — verificar prontidão para entrega |
 | M03 | Organizar Drive com estrutura de pastas por módulo | ✅ Concluído (30/06/2026) — G:\Meu Drive\PRODUTOS\Curso Expert360\Materiais\ organizado em M0-M4 |
 
 ---
