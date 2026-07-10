@@ -2,6 +2,10 @@
 
 > Depoimentos de alunas e clientes reais. Fonte de prova social para copy, landing page, conteúdo e posicionamento.
 > Atualizado em: 14/05/2026
+>
+> 📁 **Prints e vídeos reais** (com transcrições e guia de uso por objeção) em `provas/README.md` —
+> inclui provas masculinas (Rodrigo, Sérgio), prova de agente de IA (Anália "9 anos") e a da
+> Sandra Melo ("o que a IA não estava conseguindo").
 
 ---
 

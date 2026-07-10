@@ -1,0 +1,11 @@
+# Vídeos de prova são pesados (~526MB total) — não versionar no git.
+# Backup fica no OneDrive (a pasta do repo mora dentro do OneDrive) + originais em Downloads.
+# O catálogo com a lista dos vídeos está em ../README.md.
+*.mp4
+*.mov
+*.MOV
+*.MP4
+*.avi
+*.webm
+# mas manter este .gitignore versionado pra o diretório existir:
+!.gitignore
