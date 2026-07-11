@@ -1,8 +1,8 @@
-name: Post vazio-ganhar-bem-sem-proposito
+name: Post ia-braco-do-expert
 
 on:
   schedule:
-    - cron: '0 15 12 7 *'   # 12/07 às 15:00 UTC = 12h BRT
+    - cron: '0 15 13 7 *'   # 13/07 às 15:00 UTC = 12h BRT
   workflow_dispatch:
 
 jobs:
@@ -14,17 +14,17 @@ jobs:
           META_TOKEN: ${{ secrets.META_TOKEN }}
           IG_USER_ID: "17841437530973593"
           CAPTION: |
-            Ninguém questiona quem ganha bem.
+            O gargalo do especialista nunca foi criar conteúdo. Foi estruturar conhecimento em método.
 
-            Mas ganhar bem não é o mesmo que estar no lugar certo.
+            Eu uso IA pra isso — pra acelerar o raciocínio, não pra substituir o que eu sei.
 
-            Eu passei 13 anos no serviço público. Estabilidade total, salário garantido — e um vazio que eu não sabia nomear.
+            Uma aluna me disse: "Fiquei conversando com teu agente e estou sentindo o esclarecimento que desejava há 9 anos."
 
-            Não foi coragem que me tirou de lá. Foi entender que o custo de ficar tinha ficado maior que o custo de sair.
+            9 anos de dúvida resolvidos numa conversa bem estruturada.
 
-            Se isso te atravessou, comenta GRUPO.
+            Comenta AULA que eu te mostro como uso IA pra estruturar método — não pra fingir que você não precisa de um.
 
-            #incubadoradeexpert #expertdigital #transicaodecarreira #servidorpublico #proposito #recomeco
+            #incubadoradeexpert #expertdigital #inteligenciaartificial #iaparaempreender #metodoonline #estruturadeconhecimento
         run: |
           python3 - <<'EOF'
           import os, requests, urllib.parse as up
@@ -35,13 +35,14 @@ jobs:
           BASE    = "https://graph.facebook.com/v21.0"
 
           SLIDES = [
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783561091/instagram-carrosseis/vazio-ganhar-bem-sem-proposito/slide-01.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783561093/instagram-carrosseis/vazio-ganhar-bem-sem-proposito/slide-02.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783561094/instagram-carrosseis/vazio-ganhar-bem-sem-proposito/slide-03.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783561096/instagram-carrosseis/vazio-ganhar-bem-sem-proposito/slide-04.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783561097/instagram-carrosseis/vazio-ganhar-bem-sem-proposito/slide-05.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783561099/instagram-carrosseis/vazio-ganhar-bem-sem-proposito/slide-06.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783561100/instagram-carrosseis/vazio-ganhar-bem-sem-proposito/slide-07.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783813462/instagram-carrosseis/ia-braco-do-expert/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783813465/instagram-carrosseis/ia-braco-do-expert/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783813467/instagram-carrosseis/ia-braco-do-expert/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783813470/instagram-carrosseis/ia-braco-do-expert/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783813473/instagram-carrosseis/ia-braco-do-expert/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783813476/instagram-carrosseis/ia-braco-do-expert/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783813478/instagram-carrosseis/ia-braco-do-expert/slide-07.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1783813481/instagram-carrosseis/ia-braco-do-expert/slide-08.png",
           ]
 
           def meta_post(path, data):

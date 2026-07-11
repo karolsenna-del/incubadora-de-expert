@@ -23,3 +23,5 @@
 | 01/07/2026 | mais-concorrentes-metodo-unico | 05/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-mais-concorrentes-metodo-unico.yml) |
 | 08/07/2026 | cinco-perguntas-travada | 11/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-cinco-perguntas-travada.yml) |
 | 08/07/2026 | vazio-ganhar-bem-sem-proposito | 12/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-vazio-ganhar-bem-sem-proposito.yml) |
+| 11/07/2026 | vazio-ganhar-bem-sem-proposito (legenda trocada) | 12/07/2026 12h BRT | via GitHub Actions | legenda atualizada — nova versão "Ninguém questiona quem ganha bem" + hashtags |
+| 11/07/2026 | ia-braco-do-expert (Desafio Dia 6) | 13/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-ia-braco-do-expert.yml) — 8 slides no Cloudinary |
