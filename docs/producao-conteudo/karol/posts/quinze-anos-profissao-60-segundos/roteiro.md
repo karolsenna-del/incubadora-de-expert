@@ -8,38 +8,39 @@
 
 ## FALA
 
-**[HOOK — 0-4s]**
-15 anos de gestão, auditoria e planejamento estratégico.
-Em 60 segundos.
+**[HOOK — 0-5s]**
+Lembro que eu era chamada de "dedo podre"
+entre os colegas do meu trabalho.
 
-**[INTRO — 4-12s]**
-Não é currículo pra te impressionar.
-É o motivo de eu ver as coisas
-de um jeito diferente.
+**[VIRADA DO SENTIDO — 5-16s]**
+Calma. Não é o que você tá pensando.
+Não era sobre homem, nem escolha ruim.
 
-**[CONTEÚDO — 12-42s]**
-Sou auditora de formação.
-Meu olho foi treinado pra achar padrão.
-Achar anormalidade. Achar o que não bate.
+Era porque onde eu batia o olho,
+eu achava o problema.
+A divergência. O número que não fechava.
+O que tava fora do padrão.
 
-Passei anos analisando processo de empresa grande —
-onde entra dinheiro, onde vaza,
-onde o processo quebra.
+**[CONTEÚDO — 14-45s]**
+Sou contadora e administradora de formação.
+Auditora contábil, dez anos de planejamento estratégico,
+depois controladoria.
+Quinze anos treinando o olho pra uma coisa: achar padrão.
 
 Quando eu virei pro digital,
 percebi uma coisa:
 
 O conhecimento das minhas alunas
 nunca foi o problema.
-Era exatamente igual ao de empresa nenhuma
-com processo quebrado —
+Era a mesma coisa que eu via
+em empresa com processo quebrado:
 
-o conhecimento existe, só que
-espalhado, sem sequência,
+o conhecimento existe —
+só que espalhado, sem sequência,
 sem prioridade.
 
 Eu não ensino conteúdo.
-Eu vejo o padrão dentro da bagunça
+Eu bato o olho na bagunça, acho o padrão
 e organizo em método.
 
 **[MORAL + CTA — 42-60s]**
@@ -55,16 +56,25 @@ Comenta GRUPO que eu te mostro como.
 ---
 
 ## TEXTO NA TELA
-- 0s: "15 anos de gestão, auditoria e planejamento estratégico"
-- ~15s: "Sou auditora. Meu olho foi treinado pra achar padrão."
+- 0s: "Me chamavam de 'DEDO PODRE'" (sem contexto — deixa a pista falsa agir)
+- ~12s: "Onde eu batia o olho, achava o problema."
 - ~45s: "Não precisa de mais curso. Precisa de alguém que veja o padrão."
 - Final: "Comenta GRUPO 👇"
 
-## LEGENDA
-15 anos não me deram um diploma que vende.
-Me deram um olho que vê método onde você só vê bagunça.
+> Nota factual (corrigido 09/07 com a Karol): formação = Contadora + Administradora. Trajetória = auditoria contábil (3 anos) → planejamento estratégico (10 anos) → controladoria (3 anos), os dois últimos no serviço público. 2 pós (auditoria e gestão financeira · especialização em administração). "Auditora de formação" era ERRO de fabricação do roteiro anterior — não usar.
 
-👉 Comenta GRUPO — toda semana eu aplico esse olhar ao vivo, no conhecimento de quem participa.
+## LEGENDA
+> Complementa o vídeo (voz de influencer) — NÃO repete a história falada. O Reel conta o "dedo podre → padrão"; a legenda vira a lição pro seguidor.
+
+Demorei anos pra entender que aquilo que me vendiam como defeito era, na verdade, meu maior ativo.
+
+Se você é do tipo que sempre vê o que tá faltando, que incomoda porque enxerga o problema antes de todo mundo — para de achar que isso é chatice. Isso é diagnóstico. E é raro.
+
+O digital tá lotado de gente que sabe muito. O que quase ninguém tem é alguém que pegue esse conhecimento todo e coloque numa ordem que funciona.
+
+Se você sente que sabe demais e mesmo assim não sai do lugar, o problema não é conteúdo. Você não precisa aprender mais nada. Você precisa de método.
+
+👉 Comenta GRUPO que é exatamente isso que eu faço ao vivo, toda semana, com o conhecimento de quem tá lá dentro.
 
 ---
 
