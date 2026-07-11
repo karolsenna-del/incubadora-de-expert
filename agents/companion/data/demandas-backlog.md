@@ -8,6 +8,8 @@
 
 ## Importante (proximo foco)
 
+- **6 posts da `business/instagram/fila/` — revisar copy e produzir carrossel** (Karol confirmou 10/07 que NAO sao lixo): `cansaco-palavra-do-ano`, `diploma-vs-vivencia`, `duas-pos-graduacoes`, `medo-parecer-amadora`, `nao-precisa-seguidores`, `sabe-demais-paralisando`. Fluxo: Karol revisa copy -> handoff pro Squad Carrossel Arcane produzir. (nunca versionados no git — commitar junto)
+- **Limpar 12 screenshots do Cloudinary soltos na raiz** — Karol autorizou apagar (10/07). Rotear pro Organizer (backup + limpeza).
 - ~~**Criar "Expert em Lives" via Worker Forge**~~ — **CONCLUIDO 18/06**. Worker criado e instalado.
 - ~~**Bio Instagram com tese**~~ — **CONCLUIDO**.
 - **Primeiros posts feed** — post da tese sendo publicado 18/06. Continuar com angulo "expert em fracassar no digital" nos proximos conteudos.
@@ -17,8 +19,6 @@
 
 <!-- Gancho "Expert em fracassar no digital" — elevado para posicionamento central em 28/05. Ver log-decisoes.md. -->
 
-- **`business/instagram/fila/` tem 6 posts nunca versionados no git** (nao e por gitignore, so nunca foram commitados): `cansaco-palavra-do-ano`, `diploma-vs-vivencia`, `duas-pos-graduacoes`, `medo-parecer-amadora`, `nao-precisa-seguidores`, `sabe-demais-paralisando` (datas de 25-30/06). Karol pediu lembrete (08/07) durante fechamento do Dia 4/5 do Desafio 10 Dias. Verificar se sao conteudo pronto esperando entrar na esteira de agendamento ou se ficaram presos por algum motivo.
-
 ---
 
-*Ultima atualizacao: 08/07/2026*
+*Ultima atualizacao: 10/07/2026*

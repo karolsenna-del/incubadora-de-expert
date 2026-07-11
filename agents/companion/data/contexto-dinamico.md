@@ -131,7 +131,15 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
-Sessao 01-02/07 — Live 20 feita, Expert360 corrigido pra plataforma VOOMP, sessao M0 com a Milena fechada + metodo realinhado.
+**Sessao 10/07 — Weekly review + Desafio 10 Dias em andamento:**
+- Weekly review realizada (no prazo, previa 10/07). Proximo review: 17/07.
+- **Desafio 10 Dias (Ciclo 1, 08→17/07)** entrou no cockpit como ATIVO #2. Ciclo de ativacao do algoritmo (ebook ReelsPro + linha Alcateia), montado pela Iris/Squad Conteudo Arcane. Batelada de 8 posts (4 carrosseis + 4 Reels) produzida em 07/07. Dias 1-3 agendados, Dia 4 gravado, Dia 6 ("IA braco do expert", 8 slides) renderizado no Canva (usa print real da Anália no slide 5). Karol no Dia 6. Dia 8 (15/07) = analise da Aria. Plano: `docs/producao-conteudo/karol/desafio-10-dias-plano.md`.
+- **Mentoria Milena:** P2 (Promessa Transformadora) FECHADA + criacao do metodo adiantada (puxou trabalho da semana de 14/07). Ritmo acelerado do cronograma novo confirmado na pratica.
+- **Expert360:** Karol gravando o **Modulo M2**. Next inalterado: upload na VOOMP quando gravacao terminar.
+- Pendencia morta: destino do botao "diagnostico" trocado no **Linktree** (nao era Bitly). LP Diagnostico 100% fechada.
+- Backlog atualizado: 6 posts da `instagram/fila/` viram tarefa (Karol revisa copy -> Squad Carrossel produz); 12 screenshots do Cloudinary autorizados pra apagar (rotear Organizer).
+
+**Sessao 01-02/07 — Live 20 feita, Expert360 corrigido pra plataforma VOOMP, sessao M0 com a Milena fechada + metodo realinhado.**
 
 **O que foi feito (01-02/07):**
 - Live 20 realizada (roteiro em `business/campanhas/lives-semanais/live-20-roteiro.md`).
@@ -188,4 +196,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 04/07/2026 (Bootstrap 3 — Fases 0 e 1 fechadas)*
+*Ultima atualizacao: 10/07/2026 (Weekly review — Desafio 10 Dias no cockpit, Milena P2 fechada)*

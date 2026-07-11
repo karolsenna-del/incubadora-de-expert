@@ -4,8 +4,8 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 03/07/2026
-**Proximo review:** 10/07/2026
+**Ultima atualizacao:** 10/07/2026
+**Proximo review:** 17/07/2026
 
 ---
 
@@ -13,7 +13,8 @@
 
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
-| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Karol gravando as aulas — retomar upload na VOOMP quando gravacao terminar | Karol | Producao — 43 roteiros prontos, assets visuais feitos, descricoes prontas, gravacao em andamento. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
+| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Karol gravando o Modulo M2 — retomar upload na VOOMP quando gravacao terminar | Karol | Producao — 43 roteiros prontos, assets visuais feitos, descricoes prontas. Gravando M2. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
+| 2 | Desafio 10 Dias (Instagram) | Ativar o algoritmo com frequencia/presenca (Ciclo 1, 08→17/07) | Karol no Dia 6 — postar carrossel "IA braco do expert" 13/07 12h; Dia 8 (15/07) = analise da Aria | Karol + Squad Conteudo Arcane | Ativo — batelada de 8 posts produzida, Dias 1-4 no ar/agendados, Dia 6 renderizado. Fim previsto 17/07 (retro + Ciclo 2). | [plano](../docs/producao-conteudo/karol/desafio-10-dias-plano.md) |
 
 ---
 
@@ -47,9 +48,9 @@
 
 | Operacao | Responsavel | Status | Onde acompanhar |
 |----------|-------------|--------|-----------------|
-| Instagram / Conteudo | Karol | Ativa — Destaques 1 e 2 postados, Destaque 3 + posts feed em andamento | contexto-dinamico.md — prioridades do momento |
+| Instagram / Conteudo | Karol | Ativa — Ciclo Desafio 10 Dias rodando (ver ATIVOS #2) | contexto-dinamico.md — prioridades do momento |
 | Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 21 realizada (08/07), deu tudo certo | business/campanhas/lives-semanais/ |
-| Mentoria (5 alunos) | Karol | Ativa — Milena: P1 fechada, P2 semana 06-10/07. Roteiro da jornada rebalanceado (03/07) e replicado pros 5 alunos | mentoria/alunas/ |
+| Mentoria (5 alunos) | Karol | Ativa — Milena: P2 (Promessa) FECHADA + criacao do metodo adiantada (10/07). Roteiro da jornada rebalanceado (03/07) e replicado pros 5 alunos | mentoria/alunas/ |
 | Funil mini treinamento (LP → WhatsApp) | Karol | LP nova PUBLICADA — treinamento.incubadoradeexpert.com.br (Vercel) | business/campanhas/lp-minitreinamento/ |
 
 ---

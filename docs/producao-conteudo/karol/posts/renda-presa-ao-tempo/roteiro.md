@@ -118,6 +118,22 @@ em método que vende.
 
 ---
 
+## LEGENDA (do post — complementa os slides, não transcreve)
+
+Tem um tipo de cansaço que não passa com férias.
+
+É o cansaço de saber que, se você parar, tudo para junto. A renda, a entrega, o negócio — tudo depende de você estar lá, presente, dando o corpo.
+
+E aí vem aquela culpa esquisita: "mas eu ganho bem, do que eu tô reclamando?"
+
+Você não tá reclamando. Você tá percebendo um teto. E perceber é o primeiro passo pra romper com ele.
+
+O que vira o jogo não é trabalhar mais, nem cobrar mais caro até o mercado não aguentar. É deixar de ser a única peça que faz a máquina girar.
+
+👉 Comenta AULA que eu te mostro o primeiro passo pra transformar o que você já sabe num ativo — em vez de mais uma sessão na sua agenda.
+
+---
+
 ## Análise Técnica
 
 - **Contagem:** ~1.300 caracteres
