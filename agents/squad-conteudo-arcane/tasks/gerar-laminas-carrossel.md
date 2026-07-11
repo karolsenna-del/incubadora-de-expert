@@ -14,6 +14,7 @@ Checklist:
   - "Cada slide tem: texto pra Canva + sugestao visual + prompt GPT pronto"
   - "Orientacao de execucao incluida (GPT → Canva ou squad de design)"
   - "Salvou laminas-carrossel.md"
+  - "Salvou legenda.txt na fila do insta-scheduler (business/instagram/fila/{slug}/)"
 execution_type: "interactive"
 ---
 
@@ -256,6 +257,35 @@ Salva em `docs/producao-conteudo/{expert}/posts/{slug}/laminas-carrossel.md`:
 {caption sugerida usando hook + 2-3 linhas + CTA}
 
 Hashtags (opcionais): {3-5 hashtags do nicho}
+```
+
+---
+
+## Step 6: Entregar legenda.txt na Fila do Agendador (OBRIGATÓRIO — fecha o pipeline)
+
+A caption sugerida acima não pode ficar só enterrada no `laminas-carrossel.md`. Ela tem que
+virar `legenda.txt` na **fila do insta-scheduler** — é o arquivo que o agendador lê pra postar.
+Sem isso, a Karol precisa mandar a legenda na mão toda vez.
+
+- **Slug canônico:** o mesmo nome da pasta do post (`posts/{slug}/`). O squad de carrossel
+  entrega os slides na mesma pasta com esse slug.
+- **Destino:** `business/instagram/fila/{slug}/legenda.txt`
+- **Conteúdo:** a legenda final (caption + hashtags) — **só o texto do post**, sem specs de
+  design, sem marcadores de slide. Exatamente o que vai no Instagram.
+
+```bash
+mkdir -p "business/instagram/fila/{slug}"
+# gravar a caption final (com hashtags) em business/instagram/fila/{slug}/legenda.txt
+```
+
+Se a Karol pedir ajuste na legenda depois, reescrever esse `legenda.txt` (é a fonte da
+verdade pro agendamento, não a seção "sugestão" do laminas-carrossel.md).
+
+Contrato completo da fila: `agents/insta-scheduler/data/insta-scheduler-rules.md` (RULE-1).
+
+```
+Legenda entregue na fila: business/instagram/fila/{slug}/legenda.txt
+Quando o squad de carrossel depositar os slides na mesma pasta, o insta-scheduler agenda.
 ```
 
 ---
