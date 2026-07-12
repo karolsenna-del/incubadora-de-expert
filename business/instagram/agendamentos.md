@@ -25,3 +25,4 @@
 | 08/07/2026 | vazio-ganhar-bem-sem-proposito | 12/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-vazio-ganhar-bem-sem-proposito.yml) |
 | 11/07/2026 | vazio-ganhar-bem-sem-proposito (legenda trocada) | 12/07/2026 12h BRT | via GitHub Actions | legenda atualizada — nova versão "Ninguém questiona quem ganha bem" + hashtags |
 | 11/07/2026 | ia-braco-do-expert (Desafio Dia 6) | 13/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-ia-braco-do-expert.yml) — 8 slides no Cloudinary |
+| 11/07/2026 | renda-presa-ao-tempo (Desafio Dia 7) | 14/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-renda-presa-ao-tempo.yml) — 7 slides no Cloudinary, sem hashtags |
