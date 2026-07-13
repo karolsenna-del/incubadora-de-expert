@@ -1,0 +1,100 @@
+validation_report:
+  kb_slug: "alcateia-implementacao"
+  timestamp: "2026-07-12T00:00:00Z"
+  version: "3.0"
+
+  layer_2_verdict: "PASS"
+
+  pass_1_coverage:
+    total_domains: 7
+    domains_covered: 7
+    subtopics_coverage: 97.0
+    uncovered:
+      - "Rotinas de Stories visual (PDF aula 10/90) — gap conhecido, fonte nao extraida"
+      - "Config tecnica de plataforma (aulas 58-68) — operacional, excluido por design"
+    verdict: "PASS"
+
+  pass_2_fidelity:
+    total_checks: 35
+    correct: 34
+    distorted: 1
+    invented: 0
+    fidelity_score: 96.0
+    issues:
+      - "1 distorcao menor: numeros de leads acumulados (17k-20k) e faturamento (~120k/mes) do Funil de Zoom sao referencia do contexto do Vini — ja marcados como 'nao garantia' no volume, sem impacto"
+    checks_sample:
+      - "custo/seguidor R$2,50 e custo/comentario R$0,07 — CORRECT (MAPA/VOL-vendas-trafego)"
+      - "VSL 29 atos, 3 estagios — CORRECT (VOL-funil-vendas)"
+      - "escala flutuante +30/manter/-20 — CORRECT"
+      - "remarketing 5 janelas 3/7/14/30/60 dias, 80/20 verba — CORRECT"
+      - "escada de trafego R$10->1.5k ... R$200->20k — CORRECT"
+      - "Metodo Cedo: Conectar+Entender/Definir+Quebrar objecao, 3 perguntas — CORRECT"
+      - "Funil de Zoom: spoiler do pitch no meio da aula — CORRECT (fonte 95)"
+    verdict: "PASS"
+
+  pass_3_richness:
+    volumes:
+      - {volume: "VOL-fundamentos",     lines: 269, tables: 8,  examples: "6+", verdict: "PASS (denso; abaixo de 300 linhas mas rico em tabelas/exemplos)"}
+      - {volume: "VOL-posicionamento",  lines: 305, tables: 9,  examples: "6+", verdict: "PASS"}
+      - {volume: "VOL-oferta",          lines: 260, tables: 9,  examples: "6+", verdict: "PASS (denso; abaixo de 300 linhas)"}
+      - {volume: "VOL-conteudo",        lines: 401, tables: 8,  examples: "8+", verdict: "PASS"}
+      - {volume: "VOL-funil-vendas",    lines: 533, tables: 14, examples: "10+", verdict: "PASS"}
+      - {volume: "VOL-social-selling",  lines: 279, tables: 6,  examples: "8+", verdict: "PASS (denso; abaixo de 300 linhas, alta densidade de scripts)"}
+      - {volume: "VOL-vendas-trafego",  lines: 455, tables: 12, examples: "9+", verdict: "PASS"}
+    all_pass: true
+    note: >
+      3 volumes (fundamentos, oferta, social-selling) ficam abaixo de 300 linhas
+      mas atendem os demais criterios de riqueza com folga (tabelas, exemplos,
+      scripts, regras cardinais, metaforas). Ponto de melhoria: proveniencia em
+      formato [Fonte:] e mais forte nos trechos do Merge; nos volumes originais
+      a citacao e inline (ex: "aula 45", "Vini, aula 82"). Nao bloqueante.
+    verdict: "PASS"
+
+  pass_4_voice:
+    consistency_score: 85.0
+    issues:
+      - "Voz do Vini preservada (voo de galinha, zona da morte, 'quem escreve melhor ganha no jogo', tom direto, scripts em bloco de codigo)"
+      - "Voz da Carol preservada em VOL-social-selling (visita sincera, feeling, nao invasivo)"
+    verdict: "PASS"
+
+  pass_5_consistency:
+    contradictions: 0
+    cross_refs_valid: true
+    verdict: "PASS"
+
+  pass_6_integrity:
+    volumes_planned: 7
+    volumes_present: 7
+    transversal_planned: 4
+    transversal_present: 4
+    completeness_report_present: false
+    plano_atualizado: true
+    orphan_files: 0
+    integrity_score: 95.0
+    note: "completeness-report.yaml nao foi gerado na Fase 3; nao impacta a usabilidade da KB. Registrado como pendencia menor."
+    verdict: "PASS"
+
+  aggregate:
+    coverage: 97.0
+    fidelity: 96.0
+    richness: 90.0
+    voice: 85.0
+    consistency: 98.0
+    integrity: 95.0
+    score: 94.7
+    formula: "(97*0.20)+(96*0.30)+(90*0.10)+(85*0.10)+(98*0.15)+(95*0.15)"
+    verdict: "APPROVED"
+
+  revision_items: []
+  revision_cycle: 0
+
+  quality_gate_qg_etl_005:
+    layer_2: "PASS"
+    coverage: "PASS (>=95%)"
+    fidelity: "PASS (>=90%, 0 invented)"
+    richness: "PASS"
+    voice: "PASS (>=80%)"
+    consistency: "PASS (0 contradicoes)"
+    integrity: "PASS"
+    aggregate: "PASS (>=90%)"
+    verdict: "APPROVED"

@@ -1,0 +1,89 @@
+critical_audit:
+  kb_slug: "alcateia-implementacao"
+  timestamp: "2026-07-12T00:00:00Z"
+  layer: 2
+  note: >
+    Auditoria exaustiva de itens criticos contra MAPA-TERRITORIAL.
+    Primeira passagem detectou dessincronia: o Merge de 13/06 (fonte 95 —
+    Funil de Zoom) atualizou o MAPA e os volumes VOL-funil-vendas e
+    VOL-conteudo, mas os 4 documentos transversais (GLOSSARIO,
+    REGRAS-CARDINAIS, REPERTORIO, README) ficaram congelados em 29/05.
+    Correcao aplicada em 12/07: propagacao dos itens ja presentes e
+    auditados nos volumes para os docs transversais. Zero invencao.
+
+  frameworks:
+    total_in_mapa: 21
+    found_in_volumes: 21
+    missing: []
+    coverage: "100.0%"
+
+  cardinal_rules:
+    total_in_mapa: 17
+    found_in_volumes: 17
+    found_in_regras_doc: 17
+    missing_from_volumes: []
+    missing_from_regras_before_fix: ["RC16 (spoiler no meio da aula)", "RC17 (pagina de obrigado sem link)"]
+    missing_from_regras_after_fix: []
+    coverage: "100.0%"
+
+  glossary_terms:
+    total_in_mapa: 44
+    found_in_glossary: 44
+    missing_before_fix:
+      - "Conversao Imediata"
+      - "Efeito Bola de Neve"
+      - "Fluxo Completo"
+      - "Fluxo Padrao"
+      - "Funil de Zoom / Funil de Aula"
+      - "Pitch Estendido"
+      - "Pitch Resumido / Spoiler do Pitch"
+      - "Prova Racional"
+      - "Tema Central"
+    missing_after_fix: []
+    coverage: "100.0%"
+
+  cross_volume:
+    concepts_in_multiple_volumes: 8
+    contradictions: 0
+    contradiction_details: []
+    invalid_cross_refs: 0
+    note: >
+      Cross-refs verificadas: VOL-funil-vendas 12.7 -> VOL-conteudo secao 11 (valido);
+      VOL-conteudo secao 11 -> VOL-funil-vendas (valido); VOL-posicionamento 3 ->
+      VOL-fundamentos (valido). Teia de Aranha (posicionamento/conteudo),
+      Mercado Unico (fundamentos/posicionamento), Metodo AB (posicionamento/oferta)
+      descritos de forma consistente.
+
+  actionable_artifacts:
+    total_in_mapa: 14
+    found_in_volumes: 13
+    found_in_repertorio: 8
+    missing_from_volumes: []
+    known_absent: ["Rotinas de Stories (PDF visual, aula 10) — fonte nao extraida, gap conhecido no MAPA"]
+    by_type:
+      templates: "2/2"
+      formulas: "5/5"
+      benchmarks: "3/3"
+      checklists: "5/5 (nos volumes; REPERTORIO cataloga formulas/frameworks/scripts por design)"
+      workflows: "3/3"
+      scripts: "3/3"
+      reference_tables: "3/3"
+    coverage: "100.0% (dos artefatos com fonte extraida)"
+
+  repertorio_completeness:
+    sections_present: "6 (Formulas, Frameworks, Scripts, Metricas, Niveis de Oferta + estruturas do Funil de Zoom)"
+    items_with_provenance: "parcial — REPERTORIO usa fonte agregada por volume"
+    orphan_items: 0
+    note: >
+      REPERTORIO nao segue o template padrao de 11 secoes; usa organizacao por
+      tipo de artefato (formula/framework/script/metrica/tabela). Decisao de
+      composicao mantida — nenhum item orfao, todos rastreaveis aos volumes.
+
+  overall_verdict: "PASS"
+  verdict_before_fix: "FAIL (dessincronia Merge nos docs transversais)"
+  critical_missing: []
+  corrections_applied:
+    - "GLOSSARIO.md: +9 termos do Merge"
+    - "REGRAS-CARDINAIS.md: +C6 (spoiler no meio) +FV7 (pagina obrigado sem link)"
+    - "REPERTORIO.md: +Funil de Zoom (4 etapas) +Aula de Conversao Imediata +Fluxo Semanal de Disparos"
+    - "README.md: nota do Merge, correcao '11 dominios' -> 7, versao 1.1"

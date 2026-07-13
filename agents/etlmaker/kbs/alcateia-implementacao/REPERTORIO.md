@@ -1,7 +1,7 @@
 # REPERTÓRIO — Alcateia Implementação
 **KB:** Alcateia Implementação — Vini Grevy  
 **Tipo:** Frameworks e fórmulas prontos para uso direto  
-**Produzido em:** 2026-05-29
+**Produzido em:** 2026-05-29 (sincronizado com o Merge de 2026-06-13 — Funil de Zoom)
 
 ---
 
@@ -185,6 +185,44 @@ Quarta     → Dor/Evento (ManyChat)
 Quinta     → Alcance (viral/reels)
 Sexta      → Dor/Evento (ManyChat)
 Sábado     → Alcance (viral/reels)
+```
+
+### Funil de Zoom (Funil de Aula) — 4 Etapas
+```
+1. NARRATIVA   → Grande Motivo + Grande Promessa + Única Ação (CTA)
+                 (aparece em TODO conteúdo de captação)
+2. CAPTAÇÃO    → orgânico (stories 3x/sem + feed) ou pago → página de captura
+                 Página de obrigado SEM link → link do grupo só via WhatsApp
+3. AULA (~1h)  → modelo Conversão Imediata (ver estrutura abaixo)
+4. VENDAS      → fluxo de disparos via WhatsApp ao longo da semana
+                 Efeito bola de neve: base de leads cresce a cada ciclo
+```
+
+### Estrutura da Aula de Conversão Imediata (spoiler do pitch no meio)
+```
+TEMA CENTRAL (objetivo, não subjetivo — resultado palpável)
+    ↓
+1. Estrutura/Narrativa  → o "porquê" da entrega
+    ↓
+2. Execução             → o "como", passo a passo
+    → SPOILER DO PITCH (1-2 frases) no fim desta etapa = pico de audiência
+    ↓
+3. Prática              → mão na massa
+    ↓
+4. Prova Racional + PITCH ESTENDIDO → números que provam o resultado + oferta completa
+```
+
+### Fluxo Semanal de Disparos (Funil de Zoom)
+```
+FLUXO PADRÃO (mínimo):
+  Domingo  → anuncia o tema + lembrete
+  Segunda  → lembrete
+  Terça    → "hoje é o link, começamos" (dia da aula)
+
+FLUXO COMPLETO (extensão):
+  + Quarta → replay da aula
+  + Quinta → reunião de vendas / tira-dúvida
+  + Sexta  → segunda oferta (downsell / quebra de objeção de preço)
 ```
 
 ---

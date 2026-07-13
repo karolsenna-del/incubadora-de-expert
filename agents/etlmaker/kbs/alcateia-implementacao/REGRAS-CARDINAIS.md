@@ -1,7 +1,7 @@
 # REGRAS CARDINAIS — Alcateia Implementação
 **KB:** Alcateia Implementação — Vini Grevy  
 **Consolidado de:** todos os 7 volumes  
-**Produzido em:** 2026-05-29
+**Produzido em:** 2026-05-29 (sincronizado com o Merge de 2026-06-13 — regras do Funil de Zoom)
 
 ---
 
@@ -48,6 +48,7 @@
 | C3 | **Consistência semanal > qualidade esporádica.** Post bom toda semana bate post perfeito a cada mês | Algoritmo penaliza irregularidade |
 | C4 | **Nunca criar 30 dias de conteúdo de uma vez (voo de galinha).** | Paralisia após o burst, restart do progresso |
 | C5 | **Conteúdo de dor precisa de CTA com palavra-chave ManyChat.** Sem CTA, conteúdo não converte | Engajamento sem entrada no funil |
+| C6 | **Em lives/aulas longas, solte o spoiler do pitch no meio — nunca espere só o final.** No meio é o pico de audiência [Fonte: 95-funil-de-zoom-vinizoom] | Pitch no final pega só quem já está saindo — menos gente ouve a oferta |
 
 ## MÓDULO 5 — FUNIL DE VENDAS
 
@@ -59,6 +60,7 @@
 | FV4 | **VSL escrito à mão — nunca ChatGPT.** | Conversão 50–70% menor que VSL autêntico |
 | FV5 | **Aguardar 48h antes de turbinar post novo.** Engajamento orgânico primeiro | Algoritmo não favorece, custo mais alto |
 | FV6 | **Comentários ManyChat = dividir por 2.** A automação duplica o número bruto | Métricas infladas, decisões erradas |
+| FV7 | **Página de obrigado do Funil de Zoom sem nenhum link.** O link do grupo só chega via WhatsApp [Fonte: 95-funil-de-zoom-vinizoom] | Sem autoqualificação — leads com WhatsApp errado entram e sujam o CRM |
 
 ## MÓDULO 6 — SOCIAL SELLING
 
@@ -84,7 +86,9 @@
 
 ---
 
-## CONSOLIDADO — AS 15 MAIS CRÍTICAS
+## CONSOLIDADO — AS MAIS CRÍTICAS
+
+> Total de 17 regras cardinais (F1–F5, P1–P5, O1–O5, C1–C6, FV1–FV7, SS1–SS6, T1–T6). Abaixo, as 15 de maior prioridade para quem quer começar por onde mais dói. As 2 regras do Funil de Zoom (C6 e FV7) entram no ciclo de quem já roda live/aula ao vivo.
 
 Para quem quer priorizar:
 

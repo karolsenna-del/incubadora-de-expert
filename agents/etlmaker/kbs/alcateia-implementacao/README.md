@@ -1,9 +1,9 @@
 # KB — Alcateia Implementação
 **Expert:** Vini Grevy  
 **Produto:** Alcateia Implementação (vinigrevy.memberkit.com.br)  
-**Versão KB:** 1.0  
+**Versão KB:** 1.1  
 **Produzida por:** ETLmaker v3.0  
-**Data:** 2026-05-29  
+**Data:** 2026-05-29 (atualizada 2026-06-13 — Merge Funil de Zoom; validada 2026-07-12)  
 
 ---
 
@@ -11,7 +11,7 @@
 
 Esta Knowledge Base contém o conhecimento tratado do curso **Alcateia Implementação** de Vini Grevy — um sistema de implementação para experts que querem construir um negócio digital previsível a partir do seu conhecimento.
 
-A KB foi extraída de 92 transcrições de aulas (de 94 disponíveis) e organizada em 7 volumes temáticos por um pipeline ETL completo.
+A KB foi extraída de 92 transcrições de aulas (de 94 disponíveis) e organizada em 7 volumes temáticos por um pipeline ETL completo. Em 13/06/2026 recebeu, via Merge, a aula de imersão **Funil de Zoom** (curso Funil Vinizoom) — que enriqueceu os volumes de Funil de Vendas e Conteúdo com o funil de aula ao vivo e a técnica de pitch no meio da live.
 
 ---
 
@@ -31,8 +31,8 @@ Esta KB é útil para:
 | [VOL-fundamentos](VOL-fundamentos.md) | Curva J, modelo de negócio, 4 escalas, caminho 30k, caixa rápido | 1° |
 | [VOL-posicionamento](VOL-posicionamento.md) | Mercado único, promessa matadora, método AB, perfil matador, Instagram Fantasma | 2° |
 | [VOL-oferta](VOL-oferta.md) | Precificação, criação de método, níveis L1/L2/L3, mentoria/infoproduto | 3° |
-| [VOL-conteudo](VOL-conteudo.md) | 3 tipos de conteúdo, linha editorial, teia de aranha, frequência | 4° |
-| [VOL-funil-vendas](VOL-funil-vendas.md) | Cilindro de vendas, mini treinamento, aula milionária (29 atos), ManyChat, GreatPages, VTurb | 5° |
+| [VOL-conteudo](VOL-conteudo.md) | 3 tipos de conteúdo, linha editorial, teia de aranha, frequência, aula de conversão imediata (pitch no meio) | 4° |
+| [VOL-funil-vendas](VOL-funil-vendas.md) | Cilindro de vendas, mini treinamento, aula milionária (29 atos), ManyChat, GreatPages, VTurb, Funil de Zoom | 5° |
 | [VOL-social-selling](VOL-social-selling.md) | Social selling Instagram+WhatsApp, protocolo Carol, CRM, downsell, reativação | 6° |
 | [VOL-vendas-trafego](VOL-vendas-trafego.md) | Método Cedo, scripts, métricas, turbinar, escala flutuante, remarketing | 7° |
 
@@ -88,7 +88,7 @@ TRÁFEGO E ESCALA
 
 ## Documentação do Pipeline
 
-- [MAPA-TERRITORIAL.md](00-pipeline/MAPA-TERRITORIAL.md) — mapeamento completo dos 11 domínios
+- [MAPA-TERRITORIAL.md](00-pipeline/MAPA-TERRITORIAL.md) — mapeamento completo dos 7 domínios
 - [REGRAS-CARDINAIS.md](REGRAS-CARDINAIS.md) — todas as regras invioláveis do método
 - [REPERTORIO.md](REPERTORIO.md) — frameworks e fórmulas prontos para uso
 - [GLOSSARIO.md](GLOSSARIO.md) — glossário consolidado de todos os volumes

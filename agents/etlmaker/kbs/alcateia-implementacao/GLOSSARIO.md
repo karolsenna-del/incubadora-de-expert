@@ -1,7 +1,7 @@
 # GLOSSÁRIO CONSOLIDADO — Alcateia Implementação
 **KB:** Alcateia Implementação — Vini Grevy  
 **Consolidado de:** todos os 7 volumes  
-**Produzido em:** 2026-05-29
+**Produzido em:** 2026-05-29 (sincronizado com o Merge de 2026-06-13 — termos do Funil de Zoom)
 
 ---
 
@@ -19,6 +19,7 @@
 | **Conteúdo de Alcance** | Posts que atraem novos seguidores — carrossel viral ou reels, não relacionados ao expert especificamente | Conteúdo |
 | **Conteúdo de Dor/Evento** | Posts com situação de dor do frustrado + CTA para palavra-chave da automação ManyChat | Conteúdo |
 | **Conteúdo de Princípios** | Posts pessoais com história real + visão de mundo — escritos obrigatoriamente à mão | Conteúdo |
+| **Conversão Imediata** | Modelo de aula/live desenhado pra vender durante a própria aula — não só no final. Contrapõe o modelo de mercado (aula → conteúdo → pitch) | Conteúdo / Funil de Vendas |
 | **Custo/comentário** | Investimento em tráfego dividido por comentários únicos (total/2). Meta: R$0,07 | Vendas e Tráfego |
 | **Custo/seguidor** | Investimento em tráfego dividido pelo número de novos seguidores. Meta: R$2,50 | Vendas e Tráfego |
 | **Curva J** | Fase de crescimento lento antes da inflexão exponencial do negócio. A maioria desiste aqui | Fundamentos |
@@ -27,15 +28,19 @@
 | **Destino** | Resultado final que o cliente vai alcançar — 4° pilar do Método AB e anunciado no início do VSL | Posicionamento / Funil |
 | **Desenvolvidos** | Segmento hi-ticket — já têm resultado, querem escalar. Ticket R$3k+ | Fundamentos |
 | **Downsell** | Oferta de produto mais acessível para lead que não fechou o principal. Padrão: 50% do valor | Oferta / Social Selling |
+| **Efeito Bola de Neve** | Acúmulo de leads aula a aula — quem não compareceu nos primeiros ciclos aparece num ciclo futuro; a base cresce continuamente, mesmo sem tráfego novo | Funil de Vendas |
 | **Empilhamento de Preço** | Ato 16 do VSL — mostrar valor de cada componente separado antes de revelar o preço do pacote | Funil de Vendas |
 | **Empurrãozinho** | Série de stories com narrativa longa + oferta embutida — funciona para audiência morna | Fundamentos / Conteúdo |
 | **Escada de Tráfego** | Tabela de referência: investimento diário × faturamento mensal estimado | Vendas e Tráfego |
 | **Escala Flutuante** | Ajuste semanal do orçamento de tráfego baseado em ROI: +30% se lucrou, manter se empatou, -20% se perdeu | Vendas e Tráfego |
 | **Feeling de Vendas** | Capacidade intuitiva de sentir quando o lead está pronto. Desenvolvida com volume (10–20 conversas/dia) | Social Selling |
+| **Fluxo Completo** | Fluxo Padrão + replay (quarta), reunião de vendas/tira-dúvida (quinta), segunda oferta/quebra de objeção (sexta) | Funil de Vendas |
+| **Fluxo Padrão** | Disparos via WhatsApp do Funil de Zoom: domingo (anuncia tema + lembrete), segunda (lembrete), terça (link + "começamos") | Funil de Vendas |
 | **Follow-frio** | Lead que não respondeu à abordagem inicial — 3 mensagens em 3 dias, depois arquiva | Social Selling |
 | **Follow-morto** | Lead que parou na etapa de mapeamento — reativar após 15 dias com produto de entrada | Social Selling |
 | **Follow-quente** | Lead que parou na etapa de oferta (mais valioso) — reativar na última semana do mês | Social Selling |
 | **Frustrados** | Segmento primário — já tentaram, não conseguiram. Têm dinheiro e urgência. Ticket R$197–R$3k | Fundamentos |
+| **Funil de Zoom / Funil de Aula** | Funil de captação e venda via aula ao vivo semanal/quinzenal (Zoom, Meet ou grupo de WhatsApp) — alternativa ao funil de lançamento/VSL | Funil de Vendas / Conteúdo |
 | **Garantia** | Política de reembolso de 30 dias — aumenta conversão sem aumentar reembolsos reais | Oferta |
 | **GreatPages** | Construtor de páginas (mini treinamento, VSL) com delay de botão configurável | Funil de Vendas |
 | **Inconformados** | Segmento de baixo ticket (R$19–R$97) — iniciantes insatisfeitos. Fora do público primário | Fundamentos |
@@ -57,17 +62,21 @@
 | **Mini Treinamento** | Vídeo 5–10 min que qualifica lead para mentoria hi-ticket via WhatsApp | Funil de Vendas |
 | **Oferta** | Etapa do protocolo WhatsApp: apresentação dos pilares, entregáveis e pergunta de fit | Social Selling |
 | **Perfil Matador** | Configuração de Instagram: 70% rosto, SEO no nome, bio de promessa, 4+ stories fixados | Posicionamento |
+| **Pitch Estendido** | Oferta completa apresentada no final da aula, após a prova racional (geralmente tickets R$1k+) | Funil de Vendas / Conteúdo |
+| **Pitch Resumido / Spoiler do Pitch** | Prévia curta (1–2 frases) da oferta solta no MEIO da aula, no pico de audiência — planta a semente antes do pitch estendido | Funil de Vendas / Conteúdo |
 | **Play Open** | Ato 7 do VSL — anunciar ao início que haverá oferta ao final (prepara a mente para comprar) | Funil de Vendas |
 | **Ponto A** | Situação atual do cliente — ponto de partida do Método AB | Posicionamento |
 | **Ponto B** | Destino desejado pelo cliente — 4° pilar do Método AB, o resultado final | Posicionamento |
 | **Post Twitter** | Formato de post com 1 slide e texto curto/assertivo — alto potencial viral (ex: 66k alcance) | Conteúdo |
 | **Produto de Entrada** | Mini-produto ~R$200 para reativar leads que pararam no mapeamento (10% do produto principal) | Social Selling |
 | **Promessa Matadora** | Fórmula: [público] + [problema de 90 dias] + [mecanismo único] = headline | Posicionamento |
+| **Prova Racional** | Demonstração via números/cálculo (não depoimento) de que o resultado prometido é alcançável — usada na etapa final da Conversão Imediata | Funil de Vendas / Conteúdo |
 | **Randomizador** | Configuração ManyChat que alterna entre 3–4 mensagens para evitar padrão de spam | Funil de Vendas |
 | **Remarketing** | Tráfego pago segmentado para quem já engajou com o perfil (visitou, comentou, salvou) | Vendas e Tráfego |
 | **Retenção** | % de espectadores que continuam assistindo em ponto medido (30s / 3min / pitch) | Funil de Vendas |
 | **ROI 2** | Retorno sobre investimento de 2x — coloco R$1 e volta R$2+ | Vendas e Tráfego |
 | **Template de Serviço** | Estrutura base da oferta: meta + entregáveis + acesso complementar + garantia | Oferta |
+| **Tema Central** | Assunto da aula/live. Quanto menos subjetivo (mais ligado a um resultado palpável), maior a tração e a conversão | Conteúdo / Funil de Vendas |
 | **Teia de Aranha** | Rotina de 31 dias de stories com 6 tipos de interação para criar pontos de contato contínuos | Posicionamento / Conteúdo |
 | **Turbinar** | Recurso nativo do Instagram de impulsionar publicação. Sempre: visitas ao perfil + notebook | Vendas e Tráfego |
 | **Universo de Produtos** | Ecossistema de produtos ao redor de 1 core com diferentes níveis de acesso — oposto da escada | Oferta |

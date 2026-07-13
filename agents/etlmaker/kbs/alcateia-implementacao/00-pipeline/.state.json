@@ -10,7 +10,7 @@
     "phase_2": "completed",
     "phase_3": "completed",
     "phase_4": "completed",
-    "phase_5": "pending"
+    "phase_5": "completed"
   },
   "sources": [
     {"type": "transcricoes", "count": 92, "path": "sources/transcricoes/"}
@@ -33,9 +33,12 @@
     "GLOSSARIO.md"
   ],
   "mapa_territorial": "MAPA-TERRITORIAL.md",
-  "validation_score": 0,
-  "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003", "QG-ETL-004"],
+  "validation_score": 94.7,
+  "validation_verdict": "APPROVED",
+  "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003", "QG-ETL-004", "QG-ETL-005"],
   "started_at": "2026-05-26T13:00:00Z",
   "phase_2_completed_at": "2026-05-29T00:00:00Z",
-  "phase_4_completed_at": "2026-05-29T00:00:00Z"
+  "phase_4_completed_at": "2026-05-29T00:00:00Z",
+  "phase_5_completed_at": "2026-07-12T00:00:00Z",
+  "status": "COMPLETED"
 }

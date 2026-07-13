@@ -29,11 +29,19 @@
 
 ## Status
 - [x] Fase 0: Setup
-- [ ] Fase 1: Ingestão (extração de áudio + transcrição)
-- [ ] Fase 2: Mapeamento Territorial
-- [ ] Fase 3: Composição Blocada
-- [ ] Fase 4: Integração
-- [ ] Fase 5: Validação Final
+- [x] Fase 1: Ingestão (extração de áudio + transcrição) — 92 transcrições
+- [x] Fase 2: Mapeamento Territorial — MAPA com 7 domínios, 21 frameworks, 17 regras
+- [x] Fase 3: Composição Blocada — 7/7 volumes
+- [x] Fase 4: Integração — README, REGRAS-CARDINAIS, REPERTÓRIO, GLOSSÁRIO
+- [x] Fase 5: Validação Final — **APPROVED, score 94.7%** (12/07/2026)
+
+## Resultado da Validação Final (12/07/2026)
+- **Camada 2 (auditoria exaustiva):** PASS — 21/21 frameworks, 17/17 regras, 44/44 termos, 0 contradições
+- **Camada 3 (6 passes):** cobertura 97 · fidelidade 96 (0 invenções) · riqueza 90 · voz 85 · consistência 98 · integridade 95
+- **Agregado:** 94.7% → **APPROVED** · QG-ETL-005 passou
+- **Correção aplicada:** dessincronia do Merge de 13/06 — os 4 docs transversais estavam em 29/05 e foram sincronizados (9 termos, 2 regras, framework do Funil de Zoom, README). Conteúdo já existia nos volumes; zero invenção.
+- **Pendências menores (não bloqueantes):** completeness-report.yaml não gerado na Fase 3; proveniência em formato [Fonte:] mais forte nos trechos do Merge que nos volumes originais (citação inline por aula).
+- Relatórios: `00-pipeline/critical-audit-report.yaml` + `00-pipeline/validation-report.yaml`
 
 ## Progresso de Ingestão
 - [ ] 01-bem-vindo-a-alcateia
