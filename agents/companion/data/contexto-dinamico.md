@@ -58,6 +58,7 @@ Karol faz lives semanais pro grupo fechado (Google Meet). Worker especializado c
 - Live 19 feita (15/06): "A Lista de Fracassos que vira Autoridade". Outline: `business/campanhas/lives-semanais/live-19-outline.md`.
 - Live 20 roteiro pronto (28/06): "Preciso de mais ideias de conteúdo" — mapa dor → pauta, pitch VIP (comenta VIP no chat). Roteiro: `business/campanhas/lives-semanais/live-20-roteiro.md`. Fonte: ETL Desafio Jejum 5em7 (VOL-03).
 - Live 21 roteirizada (07/07) e **realizada (08/07): deu tudo certo.** "Meu método é bom, ninguém compra" — framework das 3 Jornadas (Didática/Cronológica/Psicológica) do Expert360 M2/A4. Formato ajustado a pedido da Karol: aula teórica pura (sem exercício ao vivo/chat), Parte 3 virou demonstração de prompt pro NotebookLM (infográfico gratuito, sem depender de Claude Code pago). Prova Racional sem número (sem dado de conversão disponível) — usou gatilho da razão (clareza vende) em vez de depoimento/estatística. CTA: comenta EXPRESS no chat → Mentoria Express (1h, monta o infográfico das 3 jornadas junto). Roteiro: `business/campanhas/lives-semanais/live-21-roteiro.md`.
+- Live 22 roteiro pronto (13/07): **"Criar conteúdo é a minha maior trava no digital" — e isso é um grande erro.** Desmonta 2 erros: (1) ordem errada — não postar antes de ter método/produto/posicionamento (postar cru enfraquece autoridade); conteúdo/audiência é etapa de posicionamento, entra depois de validar e é paga pelo próprio negócio; (2) premissa errada — conteúdo consistente tem várias formas, o operacional pesado é da IA (carrossel no Claude Code, cortes no Opus Clip, Reel estilo yap sem edição) — depois que tem clareza do que postar. Âncora: história real da Karol (obrigação de consistência × mergulhar no produto → peso na consciência → quase desistir → virou as 2 chaves). Parte 3 = **demo AO VIVO** de um carrossel nascendo no Claude Code (roteiro → squad carrossel → lâminas → legenda → postador). Prova Racional = a própria demo (evidência, sem número). CTA: comenta **ORDEM** no chat → mentoria individual. Pitch: IA dá o braço operacional, a visão/ordem/método é a estratégia inroubável que a mentoria entrega. Roteiro: `business/campanhas/lives-semanais/live-22-roteiro.md`.
 
 ## Desafio Flavio Augusto — Squad Conteudo Arcane (14/06/2026)
 
@@ -71,7 +72,7 @@ Proximo passo (retomar): Karol revisa/aprova os 6 roteiros (9-14). Apos aprovaca
 
 ## Background (nao urgente)
 
-- ETL Alcateia Implementacao — Fase 0 concluida, Fase 1 (transcricao/ingestion) pendente. Retomar quando Expert360 liberar foco.
+- ETL Alcateia Implementacao — **Fases 0-4 CONCLUIDAS** (92 transcricoes ingeridas, 7 volumes entregues, integracao + mapa territorial feitos, 5 quality gates passados). **Falta so a Fase 5 (Validacao Final)** — validation_score ainda 0. Fonte real: `agents/etlmaker/kbs/alcateia-implementacao/00-pipeline/.state.json`. (Correcao 12/07: o contexto antigo dizia "Fase 1 pendente" — estava desatualizado.) Retomar via `/etlmaker` pra rodar a validacao final.
 
 ## TESE FINALIZADA (sessao Euriler — 01/05/2026)
 
@@ -180,7 +181,7 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 - Tracker: `business/infra/bootstrap3-tracker.md`. Retomar com `/bootstrap3` (entra direto na Fase 2).
 
 **Pendencias abertas:**
-- LP Diagnostico do Expert NO AR (https://diagnostico.incubadoradeexpert.com.br) — falta so a Karol trocar o destino do botao "diagnostico" no Bitly (forms → pagina)
+- ~~LP Diagnostico do Expert — trocar destino do botao "diagnostico" no Linktree~~ — **RESOLVIDO (12/07): Karol trocou o botao.** LP 100% fechada (https://diagnostico.incubadoradeexpert.com.br)
 - Expert360: subir curso na VOOMP (ativar /course-publisher quando videos estiverem prontos)
 - LP versao B (teste A/B): **NO AR e validada** — https://treinamento2.incubadoradeexpert.com.br (HTTPS 200, pixel PageView+Contact ok, redirect HTTP→HTTPS ok). Clone fiel da pagina GreatPages, fonte em `business/campanhas/lp-minitreinamento-b/`, projeto Vercel `lp-minitreinamento-b`. GreatPages cancelado pela Karol (assinatura ate 27/07). Teste A/B: quando subir anuncios, dividir trafego (2 conjuntos, um pra cada URL) — Trafego Arcane. SOP-018 no playbook do TechOps.
 - Teste A/B das duas LPs: quando subir anuncios, dividir trafego no Meta (2 conjuntos identicos, um pra cada URL) — Trafego Arcane

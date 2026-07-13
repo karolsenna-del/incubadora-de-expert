@@ -67,11 +67,21 @@ Quero saber qual caminho é o teu.
 - Final: "Comenta: qual é o teu? 👇"
 
 ## LEGENDA
-3 perfis. 1 método. Caminhos diferentes até chegar lá.
+> Complementa o vídeo (voz de influencer) — NÃO repete os 3 perfis falados. O Reel mostra o caminho de cada perfil; a legenda vai pro lado da desculpa ("no meu caso é diferente").
 
-O que muda não é a estrutura — é o risco que cada um carrega e o ritmo que faz sentido pra cada realidade.
+"Mas no meu caso é diferente."
 
-👉 Comenta aqui: liberal, CLT ou servidor? Quero entender melhor o teu caminho.
+Já reparou que todo mundo acha que a própria situação é a exceção que não dá certo?
+
+O CLT acha que não pode arriscar. O servidor tem medo de ser visto. O liberal jura que não tem tempo. Cada um transforma a própria realidade numa muralha.
+
+Só que a realidade nunca foi o SE. Ela é só o RITMO.
+
+Ninguém aqui precisa largar o emprego amanhã, nem se expor antes da hora, nem virar a noite. Precisa de um caminho que respeite de onde você tá saindo — e comece mesmo assim.
+
+A pergunta não é "dá pra alguém como eu?". É "qual é o meu próximo passo, do jeito que a minha vida é hoje?".
+
+👉 Me conta nos comentários: liberal, CLT ou servidor? Quero te mostrar como o caminho se ajusta pra ti.
 
 ---
 
