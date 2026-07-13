@@ -67,11 +67,11 @@ validation_report:
     volumes_present: 7
     transversal_planned: 4
     transversal_present: 4
-    completeness_report_present: false
+    completeness_report_present: true
     plano_atualizado: true
     orphan_files: 0
-    integrity_score: 95.0
-    note: "completeness-report.yaml nao foi gerado na Fase 3; nao impacta a usabilidade da KB. Registrado como pendencia menor."
+    integrity_score: 100.0
+    note: "completeness-report.yaml gerado em 13/07 (retroativo a Fase de Integracao). Todos os artefatos de pipeline presentes."
     verdict: "PASS"
 
   aggregate:
@@ -80,9 +80,9 @@ validation_report:
     richness: 90.0
     voice: 85.0
     consistency: 98.0
-    integrity: 95.0
-    score: 94.7
-    formula: "(97*0.20)+(96*0.30)+(90*0.10)+(85*0.10)+(98*0.15)+(95*0.15)"
+    integrity: 100.0
+    score: 95.4
+    formula: "(97*0.20)+(96*0.30)+(90*0.10)+(85*0.10)+(98*0.15)+(100*0.15)"
     verdict: "APPROVED"
 
   revision_items: []

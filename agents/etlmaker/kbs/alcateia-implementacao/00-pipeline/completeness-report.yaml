@@ -1,0 +1,83 @@
+completeness_report:
+  kb_slug: "alcateia-implementacao"
+  kb_name: "Alcateia Implementação - Vini Grevy"
+  phase: "integracao"
+  generated_at: "2026-07-13T00:00:00Z"
+  note: >
+    Placar de completude do pacote integrado, referente a MAPA-TERRITORIAL.md.
+    Gerado retroativamente na Fase 5 — a integracao original (29/05) nao havia
+    emitido este arquivo. Os numeros vem da auditoria exaustiva (Camada 2),
+    ja registrada em critical-audit-report.yaml, apos a sincronizacao dos docs
+    transversais com o Merge de 13/06 (Funil de Zoom).
+
+  volumes:
+    planned: 7
+    delivered: 7
+    list:
+      - {slug: "VOL-fundamentos",    dominio: "D1 Modelo de Negocio",       status: "delivered"}
+      - {slug: "VOL-posicionamento", dominio: "D2 Posicionamento",          status: "delivered"}
+      - {slug: "VOL-oferta",         dominio: "D3 Oferta",                   status: "delivered"}
+      - {slug: "VOL-conteudo",       dominio: "D4 Conteudo",                status: "delivered"}
+      - {slug: "VOL-funil-vendas",   dominio: "D5 Funil de Vendas",         status: "delivered"}
+      - {slug: "VOL-social-selling", dominio: "D6 Vendas e Social Selling", status: "delivered"}
+      - {slug: "VOL-vendas-trafego", dominio: "D7 Trafego e Escala",        status: "delivered"}
+    coverage: "100.0%"
+
+  transversal_docs:
+    planned: 4
+    present: 4
+    list:
+      - {file: "README.md",            status: "present", synced_with_merge: true}
+      - {file: "REGRAS-CARDINAIS.md",  status: "present", synced_with_merge: true}
+      - {file: "REPERTORIO.md",        status: "present", synced_with_merge: true}
+      - {file: "GLOSSARIO.md",         status: "present", synced_with_merge: true}
+    coverage: "100.0%"
+
+  frameworks:
+    total_in_mapa: 21
+    present_in_volumes: 21
+    missing: []
+    coverage: "100.0%"
+
+  cardinal_rules:
+    total_in_mapa: 17
+    present_in_volumes: 17
+    present_in_regras_doc: 17
+    missing: []
+    coverage: "100.0%"
+
+  glossary_terms:
+    total_in_mapa: 44
+    present_in_glossary: 44
+    missing: []
+    coverage: "100.0%"
+
+  actionable_artifacts:
+    total_in_mapa: 14
+    present_in_volumes: 13
+    orphans: 0
+    known_absent:
+      - "Rotinas de Stories (PDF visual, aula 10) — fonte nao extraida; gap conhecido no MAPA"
+    coverage: "100.0% (dos artefatos com fonte extraida)"
+
+  cross_references:
+    total_checked: 3
+    valid: 3
+    broken: 0
+    detail:
+      - "VOL-funil-vendas 12.7 -> VOL-conteudo secao 11 (valido)"
+      - "VOL-conteudo secao 11 -> VOL-funil-vendas (valido)"
+      - "VOL-posicionamento 3 -> VOL-fundamentos (valido)"
+
+  source_coverage:
+    sources_total: 92
+    sources_used: 89
+    sources_absent:
+      - "Aula 90 (PDF nao transcrito)"
+      - "Aula 93 (PDF nao transcrito)"
+      - "Aulas 58-68 (config de plataforma — excluidas por design, sem valor metodologico)"
+    merge_sources:
+      - "95-funil-de-zoom-vinizoom (Merge 13/06)"
+
+  overall_verdict: "COMPLETE"
+  pending: []

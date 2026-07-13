@@ -30,10 +30,11 @@
     "README.md",
     "REGRAS-CARDINAIS.md",
     "REPERTORIO.md",
-    "GLOSSARIO.md"
+    "GLOSSARIO.md",
+    "completeness-report.yaml"
   ],
   "mapa_territorial": "MAPA-TERRITORIAL.md",
-  "validation_score": 94.7,
+  "validation_score": 95.4,
   "validation_verdict": "APPROVED",
   "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003", "QG-ETL-004", "QG-ETL-005"],
   "started_at": "2026-05-26T13:00:00Z",
