@@ -22,7 +22,7 @@
 | # | Item | Status |
 |---|---|---|
 | A01 | 6 agentes de IA (Persona, Promessa, Processo, Portfólio, Proposta, Tríplice) | ✅ Prontos |
-| A02 | Renomear "Posicionamento de Autoridade" → "Agente da Autoridade Tríplice" no painel | Pendente (Karol) |
+| A02 | Renomear "Posicionamento de Autoridade" → "Agente da Autoridade Tríplice" no painel | ✅ Concluído (13/07/2026) — Karol renomeou |
 | A03 | Agente de suporte dentro da Hotmart | ✅ Nativo — sem ação necessária |
 
 ---
@@ -31,7 +31,7 @@
 
 | # | Item | Status |
 |---|---|---|
-| M01 | Criar biblioteca de templates (8–10 modelos Canva/Notion/Google Sheets) | Pendente — P2, pode vir em atualização pós-lançamento |
+| M01 | Criar biblioteca de templates (8–10 modelos Canva/Notion/Google Sheets) | ✅ Concluído (14/07/2026) — 10 templates genéricos + índice em `biblioteca-templates/`. Moldes reaproveitáveis (checklist, diagnóstico, roteiro, scripts, rastreamento, planner, worksheet, mapa, calculadora, template de conteúdo). Duplo uso: entregável do curso + produto low ticket avulso. Falta só o design visual (formatação Sheets / capa Canva). |
 | M02 | Revisar e finalizar materiais do Drive (M0.1 a M4.7, incl. M2.4 novo) | Pendente — verificar prontidão para entrega |
 | M03 | Organizar Drive com estrutura de pastas por módulo | ✅ Concluído (30/06/2026) — G:\Meu Drive\PRODUTOS\Curso Expert360\Materiais\ organizado em M0-M4 |
 
@@ -87,5 +87,5 @@
 | Prioridade | Itens | Critério |
 |---|---|---|
 | **P1 — Bloqueia o lançamento** | C02–C07, A02, M02–M03, H01–H04, H06–H08, H09 | Sem isso o curso não existe nem pode ser vendido |
-| **P2 — Importante, pode vir em atualização** | M01 (biblioteca de templates) | Referenciada no curso mas não bloqueia |
+| **P2 — Importante, pode vir em atualização** | ~~M01 (biblioteca de templates)~~ ✅ concluída (14/07) | Referenciada no curso mas não bloqueia |
 | **P3 — Housekeeping** | D01–D03 | PRD é documento interno |
