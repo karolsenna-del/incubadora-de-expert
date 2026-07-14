@@ -2,9 +2,12 @@
 # Define a estrutura de módulos, aulas, e o mapeamento entre:
 #   - video: nome do arquivo em business/producao/expert360/{MODULO}/
 #   - descricao_slug: chave em descricoes.md para buscar a descrição
-#   - hotmart_name: nome da aula como vai aparecer para a aluna na Hotmart
-#   - hotmart_lesson_url: (opcional) URL direta da aula no editor Hotmart.
-#       Se vazio, o script tenta navegar por nome. Preencha após criar as aulas na Hotmart.
+#   - hotmart_name: nome da aula como vai aparecer para a aluna na plataforma
+#   - voomp_module_id / voomp_lesson_id: IDs na Voomp Play (curso 9512)
+#   - youtube_id: vídeo hospedado como "Não listado" no canal profissional
+#       (Karol Senna, UCZRmVUdvdj_87fzQz7hSi3Q). Decisão 13/07/2026: Voomp não
+#       hospeda vídeos >80MB; embed via Voomp Tube (link do YouTube).
+#       Link: https://youtu.be/{youtube_id}
 
 modules:
 
@@ -16,26 +19,31 @@ modules:
       - hotmart_name: "Desbloqueia sua especialidade"
         video: "00-modulo-0-desbloqueio.mp4"
         descricao_slug: "00-intro"
+        youtube_id: "oa5wS2TEBvQ"
         hotmart_lesson_url: "https://app.hotmart.com/membership/incubadora-de-expert/products/edit/6325786/admin/beta/modules/PeABMkNV7W/content/1469YaExOd"
 
       - hotmart_name: "Fracasso como prova"
         video: "01-fracasso-como-prova.mp4"
         descricao_slug: "01-fracasso-como-prova"
+        youtube_id: "KgbNefT-Fn4"
         hotmart_lesson_url: "https://app.hotmart.com/membership/incubadora-de-expert/products/edit/6325786/admin/beta/modules/PeABMkNV7W/content/E4zN05JQ4l"
 
       - hotmart_name: "Sua História Real"
         video: "02-exercicio-sua-historia-real.mp4"
         descricao_slug: "02-historia-real"
+        youtube_id: "J4FZeBTedQw"
         hotmart_lesson_url: "https://app.hotmart.com/membership/incubadora-de-expert/products/edit/6325786/admin/beta/modules/PeABMkNV7W/content/M7GE3lJa4w"
 
       - hotmart_name: "Ikigai - Onde seu conhecimento cabe no mundo"
         video: "03-exercicio-ikigai.mp4"
         descricao_slug: "03-ikigai"
+        youtube_id: "IYbn8KjTgyc"
         hotmart_lesson_url: "https://app.hotmart.com/membership/incubadora-de-expert/products/edit/6325786/admin/beta/modules/PeABMkNV7W/content/oOD8MlGQOP"
 
       - hotmart_name: "Quem você se tornou"
         video: "04-encerramento.mp4"
         descricao_slug: "04-encerramento"
+        youtube_id: "R0COUY8aa2E"
         hotmart_lesson_url: "https://app.hotmart.com/membership/incubadora-de-expert/products/edit/6325786/admin/beta/modules/PeABMkNV7W/content/ROxA3kDy4D"
 
   - id: M1
@@ -48,112 +56,114 @@ modules:
         descricao_slug: "00-intro"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213973"
+        youtube_id: "Zu0xBRBY3mM"
 
       - hotmart_name: "A1 — O que é Persona Compradora"
         video: "03-o-que-e-persona-compradora.mp4"
         descricao_slug: "01-persona-compradora"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213974"
+        youtube_id: "XsogWf_dmGQ"
 
       - hotmart_name: "A2 — Exercício: Agente da Persona"
         video: "04-agente-da-persona.mp4"
         descricao_slug: "02-agente-persona"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213975"
+        youtube_id: "iEpChEXx3Fw"
 
       - hotmart_name: "A3 — O que é Promessa Transformadora"
         video: "05-o-que-e-promessa-transformadora.mp4"
         descricao_slug: "03-promessa-transformadora"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213976"
+        youtube_id: "M9lO1Di-T9Y"
 
       - hotmart_name: "A4 — Exercício: Agente da Promessa"
         video: "06-agente-da-promessa.mp4"
         descricao_slug: "04-agente-promessa"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213977"
+        youtube_id: "8LrHizogfn4"
 
       - hotmart_name: "A5 — Posicionamento no Mercado"
         video: "01-empreendedora-mede-por-ano.mp4"
         descricao_slug: "05-posicionamento-no-mercado"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213978"
+        youtube_id: "-BlTLClbx78"
 
       - hotmart_name: "A6 — O Custo Invisível do Sim"
         video: "02-o-custo-invisivel-do-sim.mp4"
         descricao_slug: "06-objecoes"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213979"
+        youtube_id: "3w66-axvM5o"
 
       - hotmart_name: "Quem Você se Tornou no M1"
         video: "07-quem-voce-se-tornou.mp4"
         descricao_slug: "07-quem-voce-se-tornou"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213980"
+        youtube_id: "rPkK2Hi7TN8"
 
   - id: M2
     hotmart_name: "M2 — Método Autoral"
     voomp_module_id: "38817"
     capa: "M2-metodo-autoral.png"
+    # CURRÍCULO REESTRUTURADO pela Karol em 14/07/2026 (9 aulas, ordem nova):
+    # aulas de mentalidade adiantadas pro início; "Ecossistema do Método" removida
+    # (lesson 213989 deletada da Voomp). Aplicado na Voomp em 14/07 via API.
+    # ATENÇÃO Course Creator: m2-roteiros.md e descricoes.md seguem a ordem antiga.
     lessons:
-      - hotmart_name: "Boas-vindas ao M2"
+      - hotmart_name: "O que te espera no Módulo 2"
         video: "00-boas-vindas.mp4"
         descricao_slug: "00-intro"
-        hotmart_lesson_url: ""
         voomp_lesson_id: "213981"
+        youtube_id: "L0l2r3jwNsY"
 
-      - hotmart_name: "A1 — O que é um Método Autoral"
-        video: null
-        descricao_slug: "01-metodo-autoral"
-        hotmart_lesson_url: ""
-        voomp_lesson_id: "213982"
-
-      - hotmart_name: "A2 — Insegurança Inteligente"
+      - hotmart_name: "Você não precisa saber tudo"
         video: null
         descricao_slug: "02-inseguranca-inteligente"
-        hotmart_lesson_url: ""
         voomp_lesson_id: "213983"
+        youtube_id: "8UiYFl4ToWI"
+        # ex "A2 — Insegurança Inteligente"; vídeo só no YouTube (sem arquivo local)
 
-      - hotmart_name: "A3 — Mapeando seu Processo"
-        video: null
+      - hotmart_name: "Seu método já existe"
+        video: "01-segundo-video.mp4"
         descricao_slug: "03-mapeando-seu-processo"
-        hotmart_lesson_url: ""
         voomp_lesson_id: "213984"
+        youtube_id: "7TzG1kH0-A8"
+        # ex "A3 — Mapeando seu Processo"
 
-      - hotmart_name: "A4 — As 3 Jornadas"
+      - hotmart_name: "O que é um Método Autoral"
+        video: null
+        descricao_slug: "01-metodo-autoral"
+        voomp_lesson_id: "213982"
+
+      - hotmart_name: "As 3 Jornadas do Aluno"
         video: null
         descricao_slug: "04-as-3-jornadas"
-        hotmart_lesson_url: ""
         voomp_lesson_id: "213985"
 
-      - hotmart_name: "A5 — Exercício: Agente do Processo Autoral"
+      - hotmart_name: "Agente do Processo Autoral"
         video: null
         descricao_slug: "05-agente-processo-autoral"
-        hotmart_lesson_url: ""
         voomp_lesson_id: "213986"
 
-      - hotmart_name: "A6 — Portfólio Estratégico"
+      - hotmart_name: "Por que ferramentas vendem mais do que copy"
         video: null
         descricao_slug: "06-portfolio-estrategico"
-        hotmart_lesson_url: ""
         voomp_lesson_id: "213987"
 
-      - hotmart_name: "A7 — Exercício: Agente do Portfólio"
+      - hotmart_name: "Agente do Portfólio Estratégico"
         video: null
         descricao_slug: "07-agente-portfolio"
-        hotmart_lesson_url: ""
         voomp_lesson_id: "213988"
-
-      - hotmart_name: "A8 — Ecossistema do Método"
-        video: null
-        descricao_slug: "08-ecosistema-do-metodo"
-        hotmart_lesson_url: ""
-        voomp_lesson_id: "213989"
 
       - hotmart_name: "Quem Você se Tornou no M2"
         video: null
         descricao_slug: "09-quem-voce-se-tornou"
-        hotmart_lesson_url: ""
         voomp_lesson_id: "213990"
 
   - id: M3

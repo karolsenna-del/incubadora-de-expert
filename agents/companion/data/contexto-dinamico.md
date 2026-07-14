@@ -132,6 +132,15 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 13-14/07 (madrugada) — Expert360 NO AR na Voomp (course-publisher):**
+- Slash command `/course-publisher` criado (agente existia sem comando registrado).
+- **Decisao de hospedagem:** Voomp nao hospeda video >80MB → YouTube "Nao listado" + Voomp Tube (custo zero). Ver log-decisoes 13/07.
+- 16 videos publicados como Nao listado no canal profissional Karol Senna (M0 5, M1 8, M2 3). Incidente resolvido: 8 videos subidos por engano no canal pessoal Karoline Franzini foram excluidos permanentemente.
+- **M0 e M1 completos e PUBLICADOS na Voomp** (13 aulas com video+descricao+capa). **M2 reestruturado pela Karol** (9 aulas, ordem nova, "Ecossistema do Metodo" removida) — 3 primeiras publicadas com video, 6 aguardando gravacao. ATENCAO: m2-roteiros.md e descricoes.md (secao M2) seguem ordem antiga; thumbs de aula do M2 tem titulos antigos na arte.
+- Capas dos 6 modulos configuradas + exibicao da plataforma corrigida (modulos na home, capa horizontal). Curso duplicado vazio (id 9511) deletado.
+- API da Voomp mapeada e automatizada: `agents/course-publisher/scripts/voomp-link-youtube.py` + SOP-008 no playbook. Fluxo pros proximos modulos: gravou → me chama → YouTube → script vincula.
+- Nota: capa de AULA na Voomp so aparece no card "Continuar Estudando" (apos aluna assistir); lista de aulas e sempre texto.
+
 **Sessao 10/07 — Weekly review + Desafio 10 Dias em andamento:**
 - Weekly review realizada (no prazo, previa 10/07). Proximo review: 17/07.
 - **Desafio 10 Dias (Ciclo 1, 08→17/07)** entrou no cockpit como ATIVO #2. Ciclo de ativacao do algoritmo (ebook ReelsPro + linha Alcateia), montado pela Iris/Squad Conteudo Arcane. Batelada de 8 posts (4 carrosseis + 4 Reels) produzida em 07/07. Dias 1-3 agendados, Dia 4 gravado, Dia 6 ("IA braco do expert", 8 slides) renderizado no Canva (usa print real da Anália no slide 5). Karol no Dia 6. Dia 8 (15/07) = analise da Aria. Plano: `docs/producao-conteudo/karol/desafio-10-dias-plano.md`.
@@ -190,11 +199,11 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 - ~~DNS raiz do dominio~~ — **RESOLVIDO (08/07):** apontamento feito no Registro.br (raiz + www saem do GreatPages antes do cancelamento em 27/07).
 
 **Proximo foco:**
-1. Fechar P2 da Milena (sessao semana 06-10/07) + cronograma novo da jornada
-2. Expert360: preparar upload na VOOMP
+1. Expert360: gravar M2 (6 aulas restantes na ordem nova) — ao gravar, /course-publisher sobe e vincula em minutos
+2. Course Creator: realinhar m2-roteiros.md e descricoes.md ao curriculo novo do M2
 
 Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 10/07/2026 (Weekly review — Desafio 10 Dias no cockpit, Milena P2 fechada)*
+*Ultima atualizacao: 14/07/2026 (Expert360 no ar na Voomp — M0/M1 publicados, M2 reestruturado)*

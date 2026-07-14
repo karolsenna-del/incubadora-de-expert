@@ -10,6 +10,16 @@
 **Impacto:** [o que muda]
 -->
 
+## 13/07/2026 — Hospedagem dos vídeos do Expert360: YouTube não listado + Voomp Tube
+
+**Contexto:** Ao iniciar o upload das aulas na Voomp Play, descobrimos que o plano atual não hospeda vídeo de curso: upload direto limitado a 80 MB por arquivo e 3 GB de biblioteca — os vídeos do Expert360 têm 219-864 MB cada (~6,8 GB já gravados, curso completo deve passar de 15 GB).
+
+**Decisão:** Hospedar os vídeos no YouTube como "não listado" e embedar nas aulas via Voomp Tube (player customizado da Voomp por cima do YouTube).
+
+**Racional:** Custo zero, Karol já usa YouTube (VSL da LP), links não listados não aparecem em busca nem no canal (risco de vazamento baixo, prática comum em cursos). Alternativas pagas (Vimeo ~R$100+/mês, Cloudflare Stream ~US$5-10/mês) não se justificam agora. Upload em lote pelo YouTube Studio é rápido e o restante (link → aula certa + título + descrição + thumb na Voomp) é 100% automatizável.
+
+**Impacto:** Fluxo de publicação do curso vira: Karol sobe vídeos em lote no YouTube Studio (não listado) → course-publisher mapeia cada link à aula na Voomp via automação. O voomp-publisher.py será adaptado desse novo fluxo (sem upload de arquivo).
+
 ## 03/07/2026 — Rebalancear o Roteiro da Jornada: acelerar fases iniciais, mais tempo pra proposta/validação/posicionamento
 
 **Contexto:** Na prática com a Milena, M0 e P1 (Persona Compradora) fecharam em sequência acelerada — as fases iniciais são conduzidas pelos agentes de IA com a aluna e andam muito mais rápido do que o roteiro de 12 meses previa (5 meses pra M0-M2). Já a parte que realmente demora é a criação e validação do produto no campo.

@@ -167,6 +167,31 @@ Missao: "Gera as capas dos modulos do Expert360"
 
 ---
 
+### SOP-008: Publicar Aulas na Voomp Play (YouTube + Voomp Tube via API)
+
+**Quando usar:** vincular vídeos de aula do Expert360 (ou outro curso) na Voomp Play.
+**Contexto:** o plano da Voomp NÃO hospeda vídeo de curso (upload direto: máx 80MB/arquivo, 3GB total). Vídeos ficam no YouTube como "Não listado" e entram na aula via Voomp Tube (player customizado por cima do YouTube).
+
+**Fase 1 — YouTube (canal profissional Karol Senna, UCZRmVUdvdj_87fzQz7hSi3Q):**
+1. Studio → Configurações → Padrões de envio → Visibilidade: Não listado (fazer 1x por canal)
+2. Criar → Enviar vídeos → selecionar os .mp4 em lote (upload paralelo, ~1min/GB)
+3. Vídeos ficam como RASCUNHO — publicar cada um: Editar rascunho → etapa Visibilidade → Não listado → Salvar → fechar modal "Vídeo publicado"
+   - Automação Playwright: cliques REAIS (browser_click) em `ytcp-uploads-dialog #step-badge-3`, `tp-yt-paper-radio-button[name="UNLISTED"]`, `#done-button`. Cliques sintéticos (JS .click()) marcam o radio mas NÃO salvam.
+4. Coletar IDs: lista de conteúdo → href de cada row (`/video/{id}`) → registrar `youtube_id` no config.yaml
+
+**Fase 2 — Voomp (API api.voompplay.com.br, token = header `authorization` de qualquer chamada do app logado):**
+1. Thumb: `POST /media` multipart (`file` + `title`) → retorna `id` (custom_thumb) 
+2. Aula nova: `POST /course/{curso}/module/{mod}/lesson`
+   Aula existente: `POST /course/{curso}/module/{mod}/lesson/{id}` (PUT retorna 500 — rota só aceita POST)
+3. Payload: `{course_id, title, mediaType: "voomptube", source, content: "<p>descrição</p>", order, thumb: "https://img.youtube.com/vi/{yt}/sddefault.jpg", custom_thumb: media_id, status: "draft", small_category: null}`
+4. `source` = hex de XOR 0x33 sobre `{"url":"https://youtu.be/{yt}","theme":"default","carryOn":false}` (JSON sem espaços)
+
+**Script pronto:** `scripts/voomp-link-youtube.py` (dry-run com `--dry-run`; editar TASKS). Verificação: `GET /course/{c}/module/{m}/lesson` → conferir mediaType=voomptube + custom_thumb.
+
+**Publicação final (lançamento):** aulas ficam em `status: draft` — publicar em massa depois via mesmo POST com `status: "published"`.
+
+---
+
 ## TIER 3 — ONE-SHOT
 
 ### SOP-007: Configurar Modo Galeria na Hotmart
