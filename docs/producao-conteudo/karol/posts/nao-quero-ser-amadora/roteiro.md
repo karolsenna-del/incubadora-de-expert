@@ -1,6 +1,6 @@
 # Roteiro — nao-quero-ser-amadora (Carrossel)
 
-> Squad: Conteúdo Arcane (Rico — roteirista) | Data: 30/06/2026
+> Squad: Conteúdo Arcane (Rico — roteirista) | Data: 30/06/2026 · **APROVADO pela Karol em 14/07/2026 (sem alterações — feminino mantido por decisão dela)**
 > Formato: Carrossel · 7 slides · 1700 caracteres | CTA: Comente GRUPO
 > Tipo de capa: Foto da persona (IA gerada — Laura)
 > Tese: Você não precisa de exposição pública — precisa de ambiente controlado para validar antes.

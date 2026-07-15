@@ -14,7 +14,7 @@
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
 | 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Karol gravando o Modulo M2 — retomar upload na VOOMP quando gravacao terminar | Karol | Producao — 43 roteiros prontos, assets visuais feitos, descricoes prontas. Gravando M2. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
-| 2 | Desafio 10 Dias (Instagram) | Ativar o algoritmo com frequencia/presenca (Ciclo 1, 08→17/07) | Karol no Dia 6 — postar carrossel "IA braco do expert" 13/07 12h; Dia 8 (15/07) = analise da Aria | Karol + Squad Conteudo Arcane | Ativo — batelada de 8 posts produzida, Dias 1-4 no ar/agendados, Dia 6 renderizado. Fim previsto 17/07 (retro + Ciclo 2). | [plano](../docs/producao-conteudo/karol/desafio-10-dias-plano.md) |
+| 2 | Desafio 10 Dias (Instagram) | Ativar o algoritmo com frequencia/presenca (Ciclo 1, 08→17/07) | Dia 8 (15/07) — Karol traz metricas dos posts pra analise da Aria + double down #1 as 19h30 | Karol + Squad Conteudo Arcane | Ativo — Fase 2 (dias 4-7) CONCLUIDA. 3 carrosseis extras (Nikolas, Bottura, Amadora) produzidos e na fila aguardando legendas. Fim previsto 17/07 (retro + Ciclo 2). | [plano](../docs/producao-conteudo/karol/desafio-10-dias-plano.md) |
 
 ---
 

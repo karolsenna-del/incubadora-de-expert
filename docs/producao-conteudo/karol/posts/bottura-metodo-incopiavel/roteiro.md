@@ -1,7 +1,7 @@
 # Roteiro — bottura-metodo-incopiavel (Carrossel)
 
-> Squad: Conteúdo Arcane (Rico — roteirista) | Data: 30/06/2026
-> Formato: Carrossel · 7 slides · 1700 caracteres | CTA: Compartilhar
+> Squad: Conteúdo Arcane (Rico — roteirista) | Data: 30/06/2026 · **Revisado 14/07/2026 (CTA trocado pela Karol)**
+> Formato: Carrossel · 7 slides · 1700 caracteres | CTA: Comente GRUPO
 > Tipo de capa: Foto de personalidade (Massimo Bottura — Chef's Table Netflix T1)
 > Tese: Receita qualquer um copia. O que virou estrela Michelin não era a receita — era a história dentro de cada prato.
 > Ângulo: método incopiável · timing IA
@@ -119,19 +119,28 @@ vai replicar isso.
 ## Slide 7 — CTA + Posicionamento
 
 **Texto:**
-Manda pra aquele especialista
-que tem medo de que a IA
-vai torná-lo irrelevante.
+Você não precisa de estrela Michelin.
+
+Precisa aprender a estruturar
+o que só você viveu
+num método autoral.
+
+Comente GRUPO aqui embaixo
+e te adiciono nas lives semanais
+do meu WhatsApp fechado — é
+exatamente isso que eu ensino lá.
 
 Karol Senna · Incubadora de Expert
 Transformo conhecimento invisível
 em método que vende.
 
+**Nota de revisão (14/07):** CTA original ("manda pra aquele especialista com medo da IA") descartado pela Karol — post inteiro fala com "você", mandar compartilhar no fim quebrava a coerência, e o gancho de IA fugia do tema (método autoral). Novo CTA: GRUPO, fechando na linha "aprender a estruturar seu método autoral".
+
 ---
 
 ## Análise Técnica
 
-- **Contagem:** ~1.290 caracteres ✓
+- **Contagem:** ~1.360 caracteres ✓
 - **Loopings:** L1 aberto slide 1 → fechado slide 4 | L2 aberto slide 3 → fechado slide 5
 - **Elementos notáveis:** História (S4) · Fato curioso (S4) · Contra-intuitivo (S5) · Prova (S6)
-- **CTA tipo:** Compartilhar
+- **CTA tipo:** Comente GRUPO (v2 — revisão Karol 14/07)
