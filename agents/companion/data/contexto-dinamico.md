@@ -141,6 +141,14 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 - API da Voomp mapeada e automatizada: `agents/course-publisher/scripts/voomp-link-youtube.py` + SOP-008 no playbook. Fluxo pros proximos modulos: gravou → me chama → YouTube → script vincula.
 - Nota: capa de AULA na Voomp so aparece no card "Continuar Estudando" (apos aluna assistir); lista de aulas e sempre texto.
 
+**Sessao 15/07 — Desafio 10 Dias: Dia 8 completo (analise + double down #1):**
+- **Analise do ciclo feita pela Aria** (11 posts, prints): relatorio em `docs/producao-conteudo/karol/analises/2026-07-15/relatorio-batch.md`. Padrao vencedor: Reels falado + historia pessoal + hook curiosidade com pista falsa ("Dedo Podre": 8s de retencao = 2x a media, 13 interacoes). Anti-padrao: video sem Karol falando (Carta Aberta: zero interacao) e carrossel conceitual (60-100 views organicas). Carrossel "Vazio" (2.553 views) confirmado como PATROCINADO — fora do comparativo organico, mas tema validado (comentario da persona dos sonhos: servidora publica em transicao).
+- **Regra nova de roteiro (diagnostico da propria Karol):** no Dedo Podre o engano foi desfeito cedo demais (segunda fala). Padrao novo pro Rico: pista falsa sustentada ate 40-60% do video, micro-loopings que escalam o engano antes do reveal.
+- **Double down #1 GRAVADO e PROGRAMADO (15/07 19h30):** Reels react do depoimento do Canada (`posts/depoimento-canada-react/roteiro.md`) — corte da live roda no climax com Karol reagindo. Headline escolhida: "Ela esperou MESES pra me dizer isso ao vivo". CTA GRUPO.
+- CTA GRUPO validado como funil real: comentario "Grupo" no post 8 lancamentos recebeu link no direct.
+- Vitrine (bio) OK — revisada com squad de posicionamento. Alcance dos Reels (91-642 contas com 6.803 seguidores) confirma conta ainda travada; frequencia e o remedio em curso.
+- Proximo: Dia 9 (16/07) double down #2 — Iris apresenta candidatos filtrados pelo padrao (fortes: versao Reels falado do "vazio" com os 13 anos de servico publico; versao historia de 1 dos 8 lancamentos). Dia 10 (17/07): double down #3 + retro + Ciclo 2.
+
 **Sessao 10/07 — Weekly review + Desafio 10 Dias em andamento:**
 - Weekly review realizada (no prazo, previa 10/07). Proximo review: 17/07.
 - **Desafio 10 Dias (Ciclo 1, 08→17/07)** entrou no cockpit como ATIVO #2. Ciclo de ativacao do algoritmo (ebook ReelsPro + linha Alcateia), montado pela Iris/Squad Conteudo Arcane. Batelada de 8 posts (4 carrosseis + 4 Reels) produzida em 07/07. Dias 1-3 agendados, Dia 4 gravado, Dia 6 ("IA braco do expert", 8 slides) renderizado no Canva (usa print real da Anália no slide 5). Karol no Dia 6. Dia 8 (15/07) = analise da Aria. Plano: `docs/producao-conteudo/karol/desafio-10-dias-plano.md`.
