@@ -2,7 +2,7 @@ name: Post nikolas-autoridade-digital
 
 on:
   schedule:
-    - cron: '0 15 15 7 *'   # 15/07 às 15:00 UTC = 12h BRT
+    - cron: '0 15 18 7 *'   # 18/07 às 15:00 UTC = 12h BRT
   workflow_dispatch:
 
 jobs:

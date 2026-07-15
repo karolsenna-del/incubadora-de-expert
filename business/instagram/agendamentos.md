@@ -29,3 +29,6 @@
 | 14/07/2026 | nikolas-autoridade-digital | 15/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-nikolas-autoridade-digital.yml) — 8 slides no Cloudinary |
 | 14/07/2026 | bottura-metodo-incopiavel | 16/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-bottura-metodo-incopiavel.yml) — 8 slides no Cloudinary |
 | 14/07/2026 | nao-quero-ser-amadora | 17/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-nao-quero-ser-amadora.yml) — 7 slides no Cloudinary |
+| 15/07/2026 | nikolas-autoridade-digital (reagendado) | 18/07/2026 12h BRT | via GitHub Actions | cron atualizado a pedido da Karol (era 15/07) |
+| 15/07/2026 | nao-quero-ser-amadora (reagendado) | 19/07/2026 12h BRT | via GitHub Actions | cron atualizado a pedido da Karol (era 17/07) |
+| 15/07/2026 | bottura-metodo-incopiavel (reagendado) | 20/07/2026 12h BRT | via GitHub Actions | cron atualizado a pedido da Karol (era 16/07) |

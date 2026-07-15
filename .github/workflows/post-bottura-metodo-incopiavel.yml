@@ -2,7 +2,7 @@ name: Post bottura-metodo-incopiavel
 
 on:
   schedule:
-    - cron: '0 15 16 7 *'   # 16/07 às 15:00 UTC = 12h BRT
+    - cron: '0 15 20 7 *'   # 20/07 às 15:00 UTC = 12h BRT
   workflow_dispatch:
 
 jobs:
