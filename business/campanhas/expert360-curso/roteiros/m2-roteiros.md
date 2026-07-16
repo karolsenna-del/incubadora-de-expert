@@ -1,5 +1,5 @@
 # Expert360º — Roteiros Módulo 2: Processo Autoral + Ecossistema
-Versão: 3.0 (teleprompter de fala livre) | Base: v2.0 aprovada (QG-CC-006) | Data: 09/07/2026
+Versão: 3.2 (A7 — output do agente definido como Kit de Ferramentas: planilha de 9 colunas, arquivo "M2.2 - Meu Portfólio Estratégico" no Drive) | Base: v2.0 aprovada (QG-CC-006) | Data: 16/07/2026
 Status: bullets pra gravar falando livre — o script em prosa completo foi movido pro fim do arquivo (SCRIPTS DE REFERÊNCIA), só como consulta.
 
 **Aulas:** 9 (Introdução + 2 mentalidade + 3 P3 + 2 portfólio + Encerramento)
@@ -170,7 +170,7 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 - Antes de fechar a aula, escolha a sua: Tesouro Escondido, Olhar Sagaz, Grande Obstáculo, Resolvedor ou Fora da Curva.
 
 **TRANSIÇÃO**
-- Gancho A4: projetar a transformação do seu aluno em 3 dimensões — e sair com o rascunho das 3 jornadas em mãos.
+- Gancho A4: projetar a transformação do seu aluno em 3 dimensões — o framework que o agente vai construir com você na A5.
 
 ---
 ---
@@ -185,7 +185,7 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 
 **O QUE E POR QUÊ**
 - Tema: o framework das 3 Jornadas — Didática, Cronológica e Psicológica.
-- Importa agora porque você sai com o rascunho das 3 jornadas, e ele é o input pro Agente do Processo Autoral (A5) e pro Agente do Portfólio (A7). Quanto mais claro, mais preciso o que os agentes constroem.
+- Importa agora porque na A5 as 3 jornadas serão construídas junto com o Agente do Processo Autoral — aqui você entende a função e a importância de cada uma, pra chegar lá sabendo o que está construindo.
 
 **COMO**
 ▸ Ponto 1 — o método de uma dimensão + as 3 jornadas
@@ -206,15 +206,12 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
    - Não precisa apresentar com esses nomes — precisa que as três estejam presentes, senão alguma pergunta fica sem resposta e quem compraria sai sem comprar.
 
 **ONDE E QUANDO**
-- Abra o arquivo Meu Método Autoral (P3) no Drive e responda os 3 blocos:
-   - Bloco 1 — Didática: por fase, o que aprende / entregável concreto / ferramenta ou agente associado.
-   - Bloco 2 — Cronológica: por que o módulo 2 não pode vir antes do 1? qual o gate? o que quebra se pular? — uma frase de razão por gate (essa frase é o que você usa na venda).
-   - Bloco 3 — Psicológica: por fase, "antes a aluna é X, depois se torna Y" — X e Y são como ela se vê e se autoriza a agir, não o que sabe.
-- Agora, antes de seguir pra A5 — o rascunho é o input dos próximos agentes.
-- Bônus: dá pra virar infográfico em minutos, de graça, no NotebookLM — prompt pronto no arquivo Meu Infográfico das 3 Jornadas.
+- Sem exercício manual aqui: as 3 jornadas você constrói junto com o Agente do Processo Autoral, na A5 — fazer sozinha no papel é demorado e trava; com o agente sai muito mais completo.
+- Desta aula você leva o entendimento: o que cada jornada responde e por que as três precisam existir no seu método.
+- No final da conversa com o agente, leve as 3 jornadas pro NotebookLM ou ChatGPT com o prompt pronto do arquivo Meu Infográfico das 3 Jornadas — vira infográfico em minutos.
 
 **TRANSIÇÃO**
-- Gancho A5: com o rascunho das 3 jornadas, você está pronta pro Agente do Processo Autoral — a construção completa de P3.
+- Gancho A5: entendidas as 3 dimensões, você está pronta pro Agente do Processo Autoral — a construção completa de P3, com as 3 jornadas dentro.
 
 ---
 ---
@@ -223,7 +220,7 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 *Estimativa: 10–12 minutos (vídeo) + tempo com o agente*
 
 **ABERTURA**
-- Bridge: você tem contexto, material, a hipótese de narrativa e o rascunho das 3 jornadas.
+- Bridge: você tem contexto, material, a hipótese de narrativa e entende as 3 jornadas que o método precisa ter.
 - Agora vem a construção completa de P3.
 
 **O QUE E POR QUÊ**
@@ -234,7 +231,9 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 ▸ Ponto 1 — o que entra (inputs)
    - O agente conduz por seis etapas e precisa de material real pra trabalhar.
    - Quatro documentos do Drive: Minha História Real (M0 A2), Meu Ikigai (M0 A3), Minha Persona Compradora P1 (M1 A4), Minha Promessa Transformadora P2 (M1 A6).
-   - Mais a hipótese do tipo de narrativa (A3) e o rascunho das 3 Jornadas (A4). Separe tudo antes de começar — mais input, output mais preciso.
+   - Mais a hipótese do tipo de narrativa (A3).
+   - Antes de abrir o agente: responda as 3 perguntas da Seção 1 do arquivo Meu Processo Autoral (P3) — experiências e formações, influências, descobertas próprias. São profundas, reserve tempo pra responder com calma.
+   - Separe tudo antes de começar — mais input, output mais preciso.
 ▸ Ponto 2 — como rodar (as 6 etapas + as 3 posturas)
    - As 6 etapas em sequência: Narrativa → Tipo → Diferencial → Blueprint → Estrutura → Nome.
    - Postura 1 — despejar antes de filtrar: quando pedir sua trajetória, fala tudo sem editar; a edição vem no processo, não na entrada.
@@ -244,10 +243,11 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 ▸ Ponto 3 — o que sai (output)
    - Você termina com P3 completo: método com nome próprio, subtítulo, módulos ou pilares, e a narrativa de origem que o torna incopiável.
    - P3 vai pro Agente do Portfólio (A7), pro M3 (oferta) e pro M4 (posicionamento).
-   - Salve no Drive em Meu Método Autoral (P3), na seção principal, junto do rascunho das 3 Jornadas.
+   - Cole o resultado na Seção 2 do arquivo Meu Processo Autoral (P3) no Drive.
+   - No final: leve as 3 jornadas pro NotebookLM ou ChatGPT com o prompt pronto do arquivo Meu Infográfico das 3 Jornadas — o infográfico visual do seu método.
 
 **ONDE E QUANDO**
-- Agente do Processo Autoral no painel + os 4 documentos + hipótese do tipo + rascunho das 3 jornadas.
+- Agente do Processo Autoral no painel + os 4 documentos + hipótese do tipo + as 3 perguntas da Seção 1 respondidas.
 - Agora, antes de A6 — porque A7 parte de P3.
 
 **TRANSIÇÃO**
@@ -314,8 +314,9 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
    - Movimento 3 — brainstorm de portfólio premium: com objeções e travas mapeadas, as ferramentas de maior valor — não só as necessárias, as que tornam o portfólio memorável.
    - Postura: deixa o agente propor antes de julgar; o critério não é "eu acharia valioso", é "a minha persona, com as travas que tem, acharia valioso".
 ▸ Ponto 3 — o que sai (output)
-   - Uma planilha de portfólio: por ferramenta — nome, formato (planilha/template/checklist/roteiro), objetivo, relação com o método (em qual fase é usada), relação com a dor da persona (qual objeção ou trava resolve), e potencial de uso independente.
-   - Essa planilha é o guia de produção — cada ferramenta é um item do checklist de produção do curso. Salve no Drive.
+   - ⚓ O Kit de Ferramentas: uma planilha onde cada ferramenta tem — nome, descrição (objetivo e relação com método/persona), relação com a Promessa Transformadora, formato recomendado, eficiência, potencial de virar produto de entrada (low ticket), momento da jornada, público atendido e prioridade de criação.
+   - Essa planilha é o guia de produção — cada ferramenta é um item do checklist de produção do curso, e as colunas de prioridade e eficiência dizem por onde começar.
+   - ⚓ Preencha no arquivo "M2.2 - Meu Portfólio Estratégico" no seu Drive — uma linha por ferramenta.
 
 **ONDE E QUANDO**
 - Agente do Portfólio Estratégico no painel + P1, P2 e P3 no Drive.
@@ -604,7 +605,7 @@ Onde: a hipótese do tipo de narrativa vai com você pra próxima aula (A4 — A
 
 Você sabe o que é um método autoral e tem uma hipótese sobre o tipo de narrativa que está no coração do seu.
 
-Na próxima aula, antes de abrir qualquer agente, você vai aprender como projetar a transformação do seu aluno em 3 dimensões — e vai sair com o rascunho das 3 jornadas do seu método em mãos. Esse rascunho vai ser o input que você leva para o agente. Vem comigo.
+Na próxima aula, antes de abrir qualquer agente, você vai aprender como projetar a transformação do seu aluno em 3 dimensões — as 3 jornadas que você vai construir junto com o agente logo depois. Vem comigo.
 
 ---
 
@@ -627,7 +628,7 @@ Essas são perguntas de design. E a maioria dos métodos não responde nenhuma d
 
 O tema de hoje é o framework das 3 Jornadas — a Didática, a Cronológica e a Psicológica.
 
-Isso importa agora porque você vai sair desta aula com o rascunho das 3 jornadas do seu método — e esse rascunho vai ser o input que você leva para o Agente do Processo Autoral (A5) e para o Agente do Portfólio Estratégico (A7). Quanto mais claro o rascunho, mais preciso o que os agentes constroem com você.
+Isso importa agora porque na próxima aula as 3 jornadas do seu método serão construídas junto com o Agente do Processo Autoral — e quanto mais claro esse framework estiver pra você, mais preciso o que o agente constrói com você.
 
 ---
 
@@ -657,15 +658,15 @@ Aplicação: você não precisa apresentar as 3 jornadas usando esses nomes. O i
 
 ---
 
-Onde: abra o arquivo **Meu Método Autoral (P3)** no Drive e responda os 3 blocos de perguntas. **Bloco 1 — Jornada Didática:** para cada fase/módulo do seu método: o que aprende / entregável concreto / ferramenta ou agente associado. **Bloco 2 — Jornada Cronológica:** por que o módulo 2 não pode vir antes do módulo 1? Qual é o gate de passagem? Se a aluna tentar pular, o que quebra? Escreva uma frase de razão para cada gate — essa frase é o que você usa na venda. **Bloco 3 — Jornada Psicológica:** para cada fase: "antes desta fase, a aluna é X. Depois, ela se torna Y." X e Y são como ela se vê e como se autoriza a agir — não o que ela sabe. Quando: agora, antes de seguir pra A5 (Agente do Processo Autoral) — o rascunho é o input para os próximos agentes.
+Onde: aqui não tem exercício manual — as 3 jornadas do seu método você vai construir junto com o Agente do Processo Autoral, na próxima aula. Fazer isso sozinha, no papel, é demorado e trava; com o agente, sai muito mais completo. O que você leva desta aula é o entendimento das três dimensões: o que cada jornada responde e por que as três precisam existir no seu método.
 
-Bônus — quer deixar isso visual? Depois que você tiver o rascunho das 3 jornadas escrito, dá pra transformar isso num infográfico em poucos minutos, de graça, sem precisar saber design. O passo a passo com o prompt pronto está no arquivo **Meu Infográfico das 3 Jornadas**, no seu Drive — usa uma ferramenta gratuita do Google chamada NotebookLM.
+Bônus — quer deixar isso visual? Depois que o agente entregar o seu método com as 3 jornadas, dá pra transformar isso num infográfico em poucos minutos, de graça, sem precisar saber design. O passo a passo com o prompt pronto está no arquivo **Meu Infográfico das 3 Jornadas**, no seu Drive — usa o NotebookLM (ferramenta gratuita do Google) ou o ChatGPT.
 
 ---
 
 Método projetado em 3 dimensões é método que entrega e que vende.
 
-Com o rascunho das 3 jornadas em mãos, você está pronta para o Agente do Processo Autoral — a construção completa do P3. Vem comigo.
+Entendidas as 3 dimensões, você está pronta para o Agente do Processo Autoral — a construção completa do P3, com as 3 jornadas dentro. Vem comigo.
 
 ---
 
@@ -674,7 +675,7 @@ Com o rascunho das 3 jornadas em mãos, você está pronta para o Agente do Proc
 
 ---
 
-Você tem o contexto. Você tem o material. Você tem uma hipótese sobre o tipo de narrativa que está no coração do seu método. E agora você tem o rascunho das 3 jornadas.
+Você tem o contexto. Você tem o material. Você tem uma hipótese sobre o tipo de narrativa que está no coração do seu método. E agora você entende as 3 jornadas que o seu método precisa ter.
 
 Agora vem a construção completa.
 
@@ -690,9 +691,9 @@ Isso importa agora porque P3 é o entregável que alimenta todo o resto deste m�
 
 Ideia: o agente conduz você por seis etapas — Narrativa, Tipo, Diferencial, Blueprint, Estrutura e Nome — e precisa de material real pra trabalhar.
 
-Exemplo: os inputs são quatro documentos do Drive: **Minha História Real** (M0, A2), **Meu Ikigai** (M0, A3), **Minha Persona Compradora P1** (M1, A4) e **Minha Promessa Transformadora P2** (M1, A6). Mais a hipótese do tipo de narrativa (A3 deste módulo) e o rascunho das 3 Jornadas (A4 deste módulo).
+Exemplo: os inputs são quatro documentos do Drive: **Minha História Real** (M0, A2), **Meu Ikigai** (M0, A3), **Minha Persona Compradora P1** (M1, A4) e **Minha Promessa Transformadora P2** (M1, A6). Mais a hipótese do tipo de narrativa (A3 deste módulo).
 
-Aplicação: separe todos os arquivos antes de começar. Quanto mais material o agente recebe, mais preciso o que ele entrega.
+Aplicação: antes de abrir o agente, responda as 3 perguntas da Seção 1 do arquivo **Meu Processo Autoral (P3)** — quais experiências e formações contribuem pra sua metodologia, quais mentores, livros e métodos influenciaram seu jeito de resolver, e o que você descobriu trabalhando que ninguém te ensinou. São perguntas profundas: reserve um tempo pra responder com calma, porque ir direto pro agente sem elas trava o processo. Depois, separe todos os arquivos antes de começar. Quanto mais material o agente recebe, mais preciso o que ele entrega.
 
 **Ponto 2 — Como rodar (as 6 etapas).**
 
@@ -708,11 +709,11 @@ Ideia: ao final da conversa, você vai ter P3 completo — o seu método autoral
 
 Exemplo: P3 vai para o Agente do Portfólio Estratégico (A7), vai para o Módulo 3 quando você construir a oferta, e vai para o Módulo 4 quando você construir o posicionamento.
 
-Aplicação: salve P3 no Drive no arquivo **Meu Método Autoral (P3)**, na seção principal — abaixo ou na mesma seção do rascunho das 3 Jornadas.
+Aplicação: cole o resultado completo na Seção 2 do arquivo **Meu Processo Autoral (P3)** no Drive. E no final, leve as 3 jornadas pro NotebookLM ou ChatGPT usando o prompt pronto do arquivo **Meu Infográfico das 3 Jornadas** — o infográfico visual do seu método.
 
 ---
 
-Onde: **Agente do Processo Autoral** no seu painel de agentes + quatro documentos do Drive (História Real, Ikigai, P1, P2) + hipótese do tipo + rascunho das 3 jornadas. Quando: agora — antes de seguir pra A6, porque A7 parte de P3.
+Onde: **Agente do Processo Autoral** no seu painel de agentes + quatro documentos do Drive (História Real, Ikigai, P1, P2) + hipótese do tipo + as 3 perguntas da Seção 1 respondidas. Quando: agora — antes de seguir pra A6, porque A7 parte de P3.
 
 ---
 
@@ -812,11 +813,11 @@ Aplicação: uma instrução importante — deixar o agente propor antes de julg
 
 **Ponto 3 — O que sai (output).**
 
-Ideia: ao final dos 3 movimentos, você vai ter uma planilha de portfólio organizada.
+Ideia: ao final dos 3 movimentos, você vai ter o seu Kit de Ferramentas — uma planilha de portfólio organizada.
 
-Exemplo: cada ferramenta na planilha tem: nome, formato (planilha/template/checklist/roteiro), objetivo, relação com o método (em qual fase é usada), relação com a dor da persona (qual objeção ou trava resolve), e potencial de uso independente.
+Exemplo: cada ferramenta na planilha tem: nome; descrição com objetivo e relação com o método e a persona; relação com a Promessa Transformadora; formato recomendado; eficiência; potencial de virar produto de entrada (low ticket); momento da jornada em que entra; público atendido; e prioridade de criação.
 
-Aplicação: essa planilha é o guia de produção — cada ferramenta é um item do checklist de produção do curso. Salve no Drive.
+Aplicação: essa planilha é o guia de produção — cada ferramenta é um item do checklist de produção do curso, e as colunas de prioridade e eficiência dizem por onde começar. Preencha no arquivo "M2.2 - Meu Portfólio Estratégico" no seu Drive — uma linha por ferramenta.
 
 ---
 
