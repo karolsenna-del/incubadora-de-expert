@@ -1,0 +1,38 @@
+name: Instagram Métricas
+
+on:
+  schedule:
+    - cron: '0 10 * * *'   # todo dia às 10h UTC = 7h BRT
+  workflow_dispatch:         # permite disparar manualmente para testar
+
+permissions:
+  contents: write
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install requests
+
+      - name: Coletar métricas do Instagram
+        env:
+          IG_INSIGHTS_TOKEN: ${{ secrets.IG_INSIGHTS_TOKEN }}
+        run: python .github/scripts/coletar_metricas.py
+
+      - name: Commit das métricas
+        run: |
+          git config user.name "insta-metricas[bot]"
+          git config user.email "bot@incubadoradeexpert.com.br"
+          git pull --rebase
+          git add business/instagram/metricas/
+          git diff --staged --quiet || git commit -m "campanha: métricas diárias do Instagram coletadas automaticamente"
+          git push
