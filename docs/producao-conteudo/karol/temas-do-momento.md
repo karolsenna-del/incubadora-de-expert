@@ -170,3 +170,25 @@ RECOMENDAÇÃO: ENTRAR / avaliar
 ~200 alertas na inbox de jan–jul/2026. O resto era: Método Telecom/Oi, métodos contraceptivos,
 método Bukele, programa de TV "Tem Método", eventos regionais de Sebrae/prefeituras, shorts de
 YouTube sem visualização. Zero valor pra timing posting ou acervo. Enviados pra lixeira.
+
+---
+
+## Radar diário — 17/07/2026
+
+*(consolidado do rascunho do Gmail. Alerta processado: "autoridade digital", 7 notícias → 2 quentes, 5 lixo, 0 acervo novo.)*
+
+🔥 TEMA DO MOMENTO: "Aparecer no Google não basta mais"
+STATUS: em alta — publicado 16/07, replicado em 2 veículos (Paracatu News e UAI/Mundo Corporativo) em 17/07
+DNA: bate (O Problema Impostor — o mercado ainda vende presença/SEO como solução, e a própria matéria admite que aparecer sozinho não constrói autoridade)
+VISÃO ÚNICA: você tem (Aparecer não é o problema nem a solução — é vaidade cara quando não tem método por trás. Antes de brigar por posição no Google, resolve o que sustenta essa posição: um método com o teu nome.)
+JANELA: 2-3 dias
+LINK: https://www.uai.com.br/app/noticia/mundo-corporativo/2026/07/16/noticia-mundo-corporativo,386978/especialista-explica-que-aparecer-no-google-nao-basta-mais.shtml
+RECOMENDAÇÃO: ENTRAR
+
+🔥 TEMA DO MOMENTO: "Executivos invisíveis digitalmente perdem negócios, diz neurociência"
+STATUS: em alta — artigo de opinião na Revista LIDE, 17/07
+DNA: bate (A Especialista Invisível — a dor central da persona Laura, reconhecida no offline e invisível no digital, ganha respaldo científico)
+VISÃO ÚNICA: você tem (A ciência deu nome ao que minha aluna vive todo dia: invisibilidade não é neutra, ela tem preço — em oportunidade perdida. Só que a saída não é aparecer de qualquer jeito. É aparecer com método, não com desespero.)
+JANELA: 3-4 dias
+LINK: https://www.noticias.lide.com.br/noticias-lide/opiniao/neurociencia-explica-por-que-executivos-invisiveis-digitalmente-perdem-negocios-
+RECOMENDAÇÃO: ENTRAR
