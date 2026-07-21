@@ -27,7 +27,7 @@ O que faz alguém te escolher não é o que você sabe. É o método que só voc
 
 Teu conhecimento é a praia. Teu método é a Genesis Pool.
 
-Se você quer construir o teu, comenta AULA que eu te mando o treinamento no direct.
+Se você é especialista com 10, 15, 20 anos de bagagem, mas nunca colocou isso dentro de um método com nome seu — comenta AULA que eu te mando o caminho pra construir o teu.
 
 ---
 
@@ -47,4 +47,4 @@ Se você quer construir o teu, comenta AULA que eu te mando o treinamento no dir
 
 - Loopings: L1 aberto no hook ("não é a praia — então o que é?") → fechado no corpo (praia construída dentro) | L2 "por que eu escolhi" → fechado na tese
 - Elementos notáveis: Fato curioso (primeiro do Nordeste) · Contra-intuitivo (praia dentro do resort) · Analogia visual (praia=conhecimento / Genesis=método)
-- CTA tipo: Comente AULA (envio no direct — C4+C3)
+- CTA tipo: Comente AULA (envio no direct — C4+C3). Reescrito 20/07 pra CTA de reconhecimento específico (nomeia "especialista com bagagem sem método nomeado"), não mais condicional genérico ("se você quer...") — ver relatório da Aria de 20/07.

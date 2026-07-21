@@ -25,11 +25,11 @@ Agora a pergunta que interessa: qual é a TUA frase?
 
 Porque se o teu cliente não consegue repetir em uma linha por que te escolher, ele não te escolhe. Ele vai no mais barato ou no mais famoso.
 
-A minha eu levei anos pra lapidar: eu transformo conhecimento invisível em método que vende.
+A minha eu levei anos pra lapidar: diploma é o que você estudou, método é o que você viveu. E o que sustenta essa frase é o método autoral — o diferencial que só eu tenho.
 
 **FECHO + CTA (falado pra câmera):**
 
-Se você ainda não tem a tua, comenta GRUPO que te adiciono nas lives semanais do meu WhatsApp fechado — posicionamento é exatamente o que a gente constrói lá.
+Se você é especialista, tem uma trajetória real, mas ainda não sabe dizer em 1 frase por que alguém te escolheria — comenta GRUPO que te chamo pras lives semanais do meu WhatsApp fechado, é exatamente isso que a gente constrói lá.
 
 ---
 
@@ -49,4 +49,4 @@ Se você ainda não tem a tua, comenta GRUPO que te adiciono nas lives semanais 
 
 - Loopings: L1 aberto no hook (que frase vale 214 mi?) → fechado no início do corpo | L2 "qual é a tua?" → fechado com a frase da Karol (modelo aplicado)
 - Elementos notáveis: Número forte verificado (R$ 214 mi) · Desconstrução (engenharia da frase) · Vulnerabilidade+autoridade ("levei anos pra lapidar") · Valor prático (template de posicionamento)
-- CTA tipo: Comente GRUPO
+- CTA tipo: Comente GRUPO. Reescrito 20/07 pra CTA de reconhecimento específico (nomeia "especialista sem frase de posicionamento"), não mais condicional genérico — ver relatório da Aria de 20/07.

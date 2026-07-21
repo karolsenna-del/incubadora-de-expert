@@ -14,9 +14,23 @@
 - **Reclamava todos os dias ao acordar** e mais ainda **na hora do almoço**
 - Depois que a **filha nasceu**, voltar pro trabalho virou **sofrimento**
 
-**Leitura da squad:** identificação universal (tristeza de domingo) + vira de chave emocional (maternidade). Conecta com o tema Vazio validado no ciclo 1 (comentário da servidora "persona dos sonhos"). Pista falsa possível: parece desabafo de mãe cansada → reveal: não era cansaço, era o modelo/falta de propósito.
+**Atualização e cronologia real (palavras da Karol, 17/07 — corrige a versão de 16/07 E uma 1ª correção equivocada da squad):**
+- **Já estava num emprego público** e queria sair — a vontade de sair não nasceu da maternidade, já existia antes
+- O que ela ODIAVA no emprego público: **bater ponto, politicagem, falcatruas, puxar saco pra conseguir cargo**
+- **Estudou 4 anos pra um concurso da Receita Federal** — era o PLANO DE FUGA do emprego público que já tinha (NÃO é o concurso que a colocou no cargo — é uma tentativa de trocar de emprego público por outro)
+- **Até conhecer o digital e se apaixonar** — e entender que trocar pela Receita Federal seria **"6 por meia dúzia"**: o que ela odiava (bater ponto, politicagem, falcatruas, puxar saco) existe em QUALQUER órgão público, Receita Federal inclusive. O plano de fuga não resolvia a raiz do problema.
+- **O digital foi "a luz no fim do túnel"** da vida dela — a saída real, diferente da Receita Federal
+- **Domingo já era angustiante** quando ela estava saturada do emprego público e sonhava em ir pra Receita Federal (ANTES de conhecer o digital)
+- **Depois do digital E da filha nascer, ficou SUFOCANTE** — dois fatores somados intensificaram a dor (não um só)
+- **Julia nasceu em janeiro/2021**
+- **Licença-maternidade de 7 meses**
+- **Setembro/2021**: voltou ao trabalho — o que mais pesava era **voltar pro trabalho depois do almoço**
 
-**Status:** ⭐ candidata a double down (Dia 9 ou 10)
+**⚠️ Nota da squad:** uma primeira tentativa de reescrever essa história (17/07, manhã) usou o hook "Eu estudei 4 anos pra passar num concurso público... Consegui, passei, virei servidora efetiva" — **isso está ERRADO**. Ela não passou nesse concurso nem ele a colocou no cargo; os 4 anos de estudo pra Receita Federal foram um plano de fuga abandonado quando ela descobriu que a Receita Federal teria os mesmos problemas do emprego que já tinha. Não repetir esse erro — o concurso da Receita Federal NUNCA foi uma conquista celebrada, foi um caminho que ela largou ao entender que não resolvia nada.
+
+**Leitura da squad (atualizada 2ª vez):** a força real da história não é "conquista que virou prisão" (Dedo Podre clássico) — é **"a saída que eu tava construindo era só outra versão da mesma cela"**. 4 anos investidos numa fuga (Receita Federal) que, na hora H, ela percebeu que não fugia de nada — o problema era o SISTEMA (público), não o órgão específico. O digital foi a saída que não fazia parte do sistema. E a dor de domingo tem uma escalada real, não um salto único: angustiante (saturação + sonho da Receita Federal) → sufocante (depois do digital abrir os olhos dela + a filha nascer, sem mais margem).
+
+**Status:** ⭐ usada no Dia 10 do Desafio (17/07) — `posts/tristeza-domingo-a-noite/` — roteiro em 3ª versão (corrigindo a 2ª que usou fato errado)
 
 ---
 

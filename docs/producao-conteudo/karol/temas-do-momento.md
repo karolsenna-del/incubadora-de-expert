@@ -7,6 +7,17 @@
 > **Diferença pro pool (`base-inicial.md`):** o pool guarda TEMAS VIRAIS (perenes, pra escala). Este arquivo
 > guarda TEMAS DO MOMENTO (hype passageiro, react de matéria — validade curta). São coisas diferentes.
 
+## Status de uso (atualizado 20/07/2026)
+
+Batelada de 5 posts novos produzida em 20/07 (ver LOG do `base-inicial.md`). Usados desta lista:
+- **1.1** Essência como diferencial de autoridade → post `essencia-diferencial-autoridade`
+- **1.9** Marketing conversacional → post `venda-na-conversa-nao-no-palco`
+- **2.1** Matheus Carmo (Método PQV) → post `matheus-carmo-valida-antes-de-vender`
+- **2.2** Carol Diniz (Teacher dos Famosos) → post `carol-diniz-metodo-proprio`
+- **2.3** Mari Vabo (Instinto Primitivo) → post `mari-vabo-credencial-nao-basta`
+
+Restam nesta lista pra próxima batelada: 1.2 a 1.8, 1.10, 1.11 (tendências) + 2.4 a 2.10 (casos, com cuidado nos 2.9/2.10 que são contraexemplo/polêmica).
+
 ## Como levar uma pauta pro squad
 
 1. Escolha uma pauta aqui (ou no rascunho diário `📌 Radar de Pautas` do Gmail).

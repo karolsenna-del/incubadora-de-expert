@@ -10,6 +10,16 @@
 **Impacto:** [o que muda]
 -->
 
+## 20/07/2026 — Reanálise completa do Ciclo 1 (Desafio 10 Dias): gargalo é interação, não alcance nem volume
+
+**Contexto:** Karol sentia o perfil "travado" mesmo com o Desafio 10 Dias rodando. Reanálise da Aria com dado automatizado completo (27 posts, não mais prints seletivos) mostrou que NENHUM post cruzou o threshold de 10% de Interação/View do Método Audience — 8 de 27 tiveram zero interação. Padrão: posts de "afirmação genérica" (tom consultoria) zeram; posts com confronto de crença + história pessoal performam melhor (ainda abaixo do threshold, mas melhor).
+
+**Decisão:** (1) Cortar o formato "afirmação genérica" dos próximos roteiros. (2) Testar CTA de reconhecimento específico em vez de "comenta X" solto. (3) Manter o volume alto de postagem — NÃO reduzir.
+
+**Racional:** Hipótese inicial da Aria era que o volume alto (4-6 posts/dia) dividia a atenção da mesma audiência entre os posts. Karol contestou: a maioria das views vem de não-seguidores (confirmado 87,7% no post "domingo à noite", 18/07) — cada post é descoberto por gente nova, não compete pela mesma base fixa. Reduzir volume não resolveria o gargalo real (interação), só reduziria as chances de achar o padrão que converte.
+
+**Impacto:** Próximo roteiro do Ciclo 2 (Rico) parte desse padrão: sem afirmação genérica, CTA de reconhecimento específico, volume mantido. Relatório completo: `docs/producao-conteudo/karol/analises/2026-07-20/relatorio-batch-completo.md`.
+
 ## 13/07/2026 — Hospedagem dos vídeos do Expert360: YouTube não listado + Voomp Tube
 
 **Contexto:** Ao iniciar o upload das aulas na Voomp Play, descobrimos que o plano atual não hospeda vídeo de curso: upload direto limitado a 80 MB por arquivo e 3 GB de biblioteca — os vídeos do Expert360 têm 219-864 MB cada (~6,8 GB já gravados, curso completo deve passar de 15 GB).

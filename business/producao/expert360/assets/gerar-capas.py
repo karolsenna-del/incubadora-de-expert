@@ -96,64 +96,65 @@ def gerar_html(modulo, logo_data_url=LOGO_DATA_URL):
       position: relative;
     }}
 
-    /* Numero grande de fundo */
-    .bg-number {{
-      position: absolute;
-      right: -20px;
-      top: -60px;
-      font-size: 600px;
-      font-weight: 900;
-      color: #f85627;
-      opacity: 0.06;
-      line-height: 1;
-      user-select: none;
-      letter-spacing: -20px;
-    }}
-
     /* Linha vertical laranja lateral esquerda */
     .side-bar {{
       position: absolute;
       left: 0;
       top: 0;
-      width: 8px;
+      width: 14px;
       height: 100%;
       background: #f85627;
+    }}
+
+    /* Selo solido com o numero do modulo — le bem mesmo em miniatura */
+    .badge {{
+      position: absolute;
+      left: 96px;
+      top: 96px;
+      width: 210px;
+      height: 210px;
+      background: #f85627;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }}
+
+    .badge span {{
+      color: #090a0b;
+      font-size: 124px;
+      font-weight: 900;
+      letter-spacing: -4px;
     }}
 
     /* Conteudo principal */
     .content {{
       position: absolute;
-      left: 80px;
-      bottom: 90px;
+      left: 96px;
+      top: 340px;
       right: 120px;
-    }}
-
-    .label {{
-      color: #f85627;
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 8px;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-      opacity: 0.9;
+      bottom: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }}
 
     .module-name {{
       color: #fcfcfc;
-      font-size: 108px;
+      font-size: 188px;
       font-weight: 900;
       text-transform: uppercase;
-      line-height: 0.92;
-      margin-bottom: 32px;
-      letter-spacing: -2px;
+      line-height: 0.9;
+      margin-bottom: 30px;
+      letter-spacing: -5px;
     }}
 
     .subtitle {{
       color: #ddddde;
-      font-size: 32px;
-      font-weight: 300;
-      letter-spacing: 1px;
-      opacity: 0.75;
+      font-size: 38px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      opacity: 0.8;
     }}
 
     /* Barra laranja inferior */
@@ -162,7 +163,7 @@ def gerar_html(modulo, logo_data_url=LOGO_DATA_URL):
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 5px;
+      height: 14px;
       background: #f85627;
     }}
 
@@ -179,10 +180,9 @@ def gerar_html(modulo, logo_data_url=LOGO_DATA_URL):
 </head>
 <body>
   <div class="side-bar"></div>
-  <div class="bg-number">{numero}</div>
+  <div class="badge"><span>{numero}</span></div>
   <img class="logo" src="{logo_src}" alt="Expert360">
   <div class="content">
-    <div class="label">Módulo {slug if slug != "MO" else "de Orientações"}</div>
     <div class="module-name">{nome}</div>
     <div class="subtitle">{subtitulo}</div>
   </div>

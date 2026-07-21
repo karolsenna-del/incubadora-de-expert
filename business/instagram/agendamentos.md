@@ -8,6 +8,12 @@
 |-----------|-----------|--------------|----------|--------|
 | — | — | — | — | *(inicializado em 2026-06-22)* |
 | 23/06/2026 | adiando-ha-anos | publicado imediatamente | 18098747612464009 | ✓ publicado |
+| 21/07/2026 | genesis-pool-metodo-autoral | publicado imediatamente (14h08 BRT — passou do horário padrão de 12h, Karol pediu pra publicar hoje) | 18099073856191847 | ✓ publicado |
+| 21/07/2026 | carol-diniz-metodo-proprio | 22/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-carol-diniz-metodo-proprio.yml) — aguardando push |
+| 21/07/2026 | mari-vabo-credencial-nao-basta | 23/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-mari-vabo-credencial-nao-basta.yml) — aguardando push |
+| 21/07/2026 | matheus-carmo-valida-antes-de-vender | 24/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-matheus-carmo-valida-antes-de-vender.yml) — aguardando push |
+| 21/07/2026 | venda-na-conversa-nao-no-palco | 25/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-venda-na-conversa-nao-no-palco.yml) — aguardando push |
+| 21/07/2026 | essencia-diferencial-autoridade | 26/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-essencia-diferencial-autoridade.yml) — aguardando push |
 | 24/06/2026 | cansaco-palavra-do-ano | 24/06/2026 12h | 17872005231534534 | publicado automaticamente |
 | 25/06/2026 | diploma-vs-vivencia | 25/06/2026 12h | 18085160435415148 | publicado automaticamente |
 | 25/06/2026 | diploma-vs-vivencia (repost corrigido) | 25/06/2026 agora | 18101351368942926 | publicado manualmente |

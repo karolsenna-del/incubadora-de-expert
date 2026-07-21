@@ -27,7 +27,7 @@ Quem cobra pelo valor filtra quem chega. E cliente filtrado é cliente que tem r
 
 Preço baixo não enche agenda. Enche desgaste.
 
-Se você quer construir uma oferta que sustenta preço premium, comenta AULA que eu te mando o caminho no direct.
+Se você é especialista e vive competindo por preço achando que é assim que a agenda enche — comenta AULA que eu te mostro como construir uma oferta que sustenta valor, sem disputar quem cobra menos.
 
 ---
 
@@ -47,4 +47,4 @@ Se você quer construir uma oferta que sustenta preço premium, comenta AULA que
 
 - Loopings: L1 aberto no hook (paradoxo caro+cheio) → fechado no corpo (valor percebido) | L2 "cliente errado" → fechado no fecho (desgaste)
 - Elementos notáveis: Paradoxo (caro e lotado) · Contra-intuitivo (barato atrai o errado) · Prova presencial (você lá dentro)
-- CTA tipo: Comente AULA (C4 + envio no direct)
+- CTA tipo: Comente AULA (C4 + envio no direct). Reescrito 20/07 pra CTA de reconhecimento específico (nomeia "especialista que compete por preço"), não mais condicional genérico — ver relatório da Aria de 20/07.

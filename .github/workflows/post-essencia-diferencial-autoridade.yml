@@ -1,0 +1,77 @@
+name: Post essencia-diferencial-autoridade
+
+on:
+  schedule:
+    - cron: '0 15 26 7 *'   # 26/07 às 15:00 UTC = 12h BRT
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publicar carrossel via Meta Graph API
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: "17841437530973593"
+          CAPTION: |
+            Uma matéria de mercado confirmou essa semana: essência é o maior diferencial de autoridade em 2026. Bate com o que eu ensino desde sempre — história dentro do método, não conteúdo solto.
+
+            Só que "essência" sozinha também não resolve. Vira só "seja você mesma", conselho vago que não sai do lugar.
+
+            E tem mais um motivo pra levar isso a sério agora: na era da IA, qualquer um gera conteúdo em segundos. A única coisa que ela não cria é a sua história.
+
+            Não é sobre copiar fórmula — isso a inteligência artificial já faz melhor e mais rápido que qualquer pessoa. É sobre transformar sua vivência real em método, com nome, estrutura, e a sua história dentro.
+
+            Autoridade que ninguém copia não vem de fórmula, nem de IA. Vem da sua história. Você não precisa de mais conteúdo pronto — precisa organizar o que já viveu.
+
+            Comenta AULA que eu te mando o caminho.
+
+            #incubadoradeexpert #expertdigital #autenticidade #posicionamentodigital #metodoonline
+        run: |
+          python3 - <<'EOF'
+          import os, requests, urllib.parse as up
+
+          TOKEN   = os.environ["META_TOKEN"]
+          IG_ID   = os.environ["IG_USER_ID"]
+          CAPTION = os.environ["CAPTION"].strip()
+          BASE    = "https://graph.facebook.com/v21.0"
+
+          SLIDES = [
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653654/instagram-carrosseis/essencia-diferencial-autoridade/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653656/instagram-carrosseis/essencia-diferencial-autoridade/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653657/instagram-carrosseis/essencia-diferencial-autoridade/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653659/instagram-carrosseis/essencia-diferencial-autoridade/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653661/instagram-carrosseis/essencia-diferencial-autoridade/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653663/instagram-carrosseis/essencia-diferencial-autoridade/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653665/instagram-carrosseis/essencia-diferencial-autoridade/slide-07.png"
+          ]
+
+          def meta_post(path, data):
+            r = requests.post(f"{BASE}/{path}", params={"access_token": TOKEN},
+                              data=up.urlencode(data).encode("utf-8"),
+                              headers={"Content-Type": "application/x-www-form-urlencoded"})
+            print(f"{path}: {r.status_code} {r.text[:200]}")
+            r.raise_for_status()
+            return r.json()
+
+          print("Criando item containers...")
+          item_ids = []
+          for url in SLIDES:
+            resp = meta_post(f"{IG_ID}/media", {"image_url": url, "is_carousel_item": "true"})
+            item_ids.append(resp["id"])
+          print(f"{len(item_ids)} containers criados")
+
+          print("Criando carousel container...")
+          resp = meta_post(f"{IG_ID}/media", {
+            "media_type": "CAROUSEL",
+            "children":   ",".join(item_ids),
+            "caption":    CAPTION,
+            "published":  "false",
+          })
+          carousel_id = resp["id"]
+          print(f"carousel_id: {carousel_id}")
+
+          print("Publicando...")
+          resp = meta_post(f"{IG_ID}/media_publish", {"creation_id": carousel_id})
+          print(f"PUBLICADO: {resp}")
+          EOF

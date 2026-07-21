@@ -56,8 +56,9 @@ const id = {
   sizeImg: parseInt(meta('text_size_image', '44'), 10),
   sizeTxt: parseInt(meta('text_size_textonly', '48'), 10),
 };
-const avatarSrc = path.join(tdir, 'avatar.png');
-const hasAvatar = fs.existsSync(avatarSrc);
+const avatarSrc = [path.join(tdir, 'avatar.png'), path.join(tdir, 'assets', 'avatar.png')]
+  .find(p => fs.existsSync(p));
+const hasAvatar = !!avatarSrc;
 
 // ---------- build dir ----------
 const buildDir = path.join(os.tmpdir(), `carousel-build-${cfg.name}`);
@@ -143,17 +144,35 @@ function html(slide, imgRef) {
 // ---------- resolve Chrome ----------
 function findChrome() {
   const candidates = [];
-  const pw = path.join(HOME, 'Library/Caches/ms-playwright');
-  if (fs.existsSync(pw)) {
-    for (const d of fs.readdirSync(pw)) {
-      const p = path.join(pw, d, 'Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing');
+  const pwMac = path.join(HOME, 'Library/Caches/ms-playwright');
+  if (fs.existsSync(pwMac)) {
+    for (const d of fs.readdirSync(pwMac)) {
+      const p = path.join(pwMac, d, 'Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing');
       if (fs.existsSync(p)) candidates.push(p);
-      const p2 = path.join(pw, d, 'chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing');
+      const p2 = path.join(pwMac, d, 'chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing');
       if (fs.existsSync(p2)) candidates.push(p2);
     }
   }
   candidates.push('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome');
   candidates.push('/Applications/Chromium.app/Contents/MacOS/Chromium');
+
+  // Windows
+  const pwWin = path.join(HOME, 'AppData/Local/ms-playwright');
+  if (fs.existsSync(pwWin)) {
+    for (const d of fs.readdirSync(pwWin)) {
+      if (!d.startsWith('chromium-')) continue;
+      const p = path.join(pwWin, d, 'chrome-win64', 'chrome.exe');
+      if (fs.existsSync(p)) candidates.push(p);
+      const p32 = path.join(pwWin, d, 'chrome-win', 'chrome.exe');
+      if (fs.existsSync(p32)) candidates.push(p32);
+    }
+  }
+  candidates.push('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe');
+  candidates.push('C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe');
+
+  // Linux
+  candidates.push('/usr/bin/google-chrome', '/usr/bin/chromium-browser', '/usr/bin/chromium');
+
   return candidates.find(c => fs.existsSync(c));
 }
 const CHROME = findChrome();

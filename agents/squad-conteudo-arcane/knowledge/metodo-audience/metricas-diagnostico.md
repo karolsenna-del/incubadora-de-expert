@@ -19,6 +19,8 @@
 - Reels → Estatísticas → "Tempo de exibição médio" + "Visualizações iniciais"
 - Algumas versões mostram "Taxa de retenção nos primeiros segundos"
 
+> ⚠️ **Atualização 17/07/2026:** no app nativo atual, essa métrica **não aparece mais** — nem em "Visão geral" nem em "Engajamento" (confirmado em análise real, ver `docs/producao-conteudo/karol/analises/2026-07-17/relatorio-planilha-chefe.md`). As abas mostram só: Curtidas/Comentários/Reposts/Compartilhamentos/Salvamentos, Visão Geral (Visualizações, Contas alcançadas, Tempo médio de visualização, Seguidores), Engajamento (Ações após visualização + Interações + gráfico "quando curtiram") e Público. Sem taxa de 3s isolada. **Ajuste de método:** até reaparecer, Aria diagnostica gancho combinando Tempo Médio (Métrica 2) como proxy — tempo médio alto só acontece se o gancho segurou o suficiente pro conteúdo entregar — e não afirma taxa de 3s isolada como confirmada, só como inferência.
+
 ### Diagnóstico se Falha (<50%)
 
 **Problema:** GANCHO FRACO

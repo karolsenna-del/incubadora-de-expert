@@ -1,0 +1,77 @@
+name: Post venda-na-conversa-nao-no-palco
+
+on:
+  schedule:
+    - cron: '0 15 25 7 *'   # 25/07 às 15:00 UTC = 12h BRT
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publicar carrossel via Meta Graph API
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: "17841437530973593"
+          CAPTION: |
+            A mídia deu nome, esse mês, ao que eu ensino desde sempre: venda acontece na conversa, não no palco.
+
+            Chamam de marketing conversacional. Eu chamo de Vendas Secretas.
+
+            Por anos te ensinaram que vender é ter alcance — quanto mais gente vê, mais gente compra. Mas repara: suas vendas de verdade sempre aconteceram numa conversa, não num post.
+
+            Você não precisa de palco pra vender. Isso não é desculpa de quem tem medo de aparecer — agora tem nome de mercado, e uma estratégia inteira por trás: sala reservada, ambiente controlado, sem julgamento de plateia. Você testa preço, oferta, pitch, antes de qualquer exposição pública.
+
+            Não é sobre quantas pessoas te veem. É sobre a conversa certa, com a pessoa certa.
+
+            Comenta AULA que eu te mando o caminho.
+
+            #incubadoradeexpert #expertdigital #vendassecretas #posicionamentodigital #marketingdigital
+        run: |
+          python3 - <<'EOF'
+          import os, requests, urllib.parse as up
+
+          TOKEN   = os.environ["META_TOKEN"]
+          IG_ID   = os.environ["IG_USER_ID"]
+          CAPTION = os.environ["CAPTION"].strip()
+          BASE    = "https://graph.facebook.com/v21.0"
+
+          SLIDES = [
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653641/instagram-carrosseis/venda-na-conversa-nao-no-palco/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653643/instagram-carrosseis/venda-na-conversa-nao-no-palco/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653645/instagram-carrosseis/venda-na-conversa-nao-no-palco/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653646/instagram-carrosseis/venda-na-conversa-nao-no-palco/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653648/instagram-carrosseis/venda-na-conversa-nao-no-palco/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653650/instagram-carrosseis/venda-na-conversa-nao-no-palco/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784653652/instagram-carrosseis/venda-na-conversa-nao-no-palco/slide-07.png"
+          ]
+
+          def meta_post(path, data):
+            r = requests.post(f"{BASE}/{path}", params={"access_token": TOKEN},
+                              data=up.urlencode(data).encode("utf-8"),
+                              headers={"Content-Type": "application/x-www-form-urlencoded"})
+            print(f"{path}: {r.status_code} {r.text[:200]}")
+            r.raise_for_status()
+            return r.json()
+
+          print("Criando item containers...")
+          item_ids = []
+          for url in SLIDES:
+            resp = meta_post(f"{IG_ID}/media", {"image_url": url, "is_carousel_item": "true"})
+            item_ids.append(resp["id"])
+          print(f"{len(item_ids)} containers criados")
+
+          print("Criando carousel container...")
+          resp = meta_post(f"{IG_ID}/media", {
+            "media_type": "CAROUSEL",
+            "children":   ",".join(item_ids),
+            "caption":    CAPTION,
+            "published":  "false",
+          })
+          carousel_id = resp["id"]
+          print(f"carousel_id: {carousel_id}")
+
+          print("Publicando...")
+          resp = meta_post(f"{IG_ID}/media_publish", {"creation_id": carousel_id})
+          print(f"PUBLICADO: {resp}")
+          EOF
