@@ -14,6 +14,7 @@
 | 21/07/2026 | matheus-carmo-valida-antes-de-vender | 24/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-matheus-carmo-valida-antes-de-vender.yml) — aguardando push |
 | 21/07/2026 | venda-na-conversa-nao-no-palco | 25/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-venda-na-conversa-nao-no-palco.yml) — aguardando push |
 | 21/07/2026 | essencia-diferencial-autoridade | 26/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-essencia-diferencial-autoridade.yml) — aguardando push |
+| 24/07/2026 | matheus-carmo-valida-antes-de-vender | — | via GitHub Actions | **FALHOU** — erro 9007 Meta API (corrida de processamento, ver RULE-2). Reagendado pra 27/07/2026 12h BRT com fix (espera FINISHED antes do publish) |
 | 24/06/2026 | cansaco-palavra-do-ano | 24/06/2026 12h | 17872005231534534 | publicado automaticamente |
 | 25/06/2026 | diploma-vs-vivencia | 25/06/2026 12h | 18085160435415148 | publicado automaticamente |
 | 25/06/2026 | diploma-vs-vivencia (repost corrigido) | 25/06/2026 agora | 18101351368942926 | publicado manualmente |

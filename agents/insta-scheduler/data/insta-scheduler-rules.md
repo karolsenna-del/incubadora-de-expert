@@ -47,9 +47,29 @@ business/instagram/fila/{slug}/
 
 ---
 
+### RULE-2: Sempre esperar container FINISHED antes de media_publish
+**Incidente:** `matheus-carmo-valida-antes-de-vender` (batelada de 5, 21/07) falhou ao rodar
+em 24/07 — erro 9007 "Media ID is not available" da Meta Graph API. O workflow criava os
+containers dos slides, criava o container do carrossel, e chamava `media_publish` na sequência,
+sem esperar a Meta terminar de processar (ela busca as imagens do Cloudinary de forma
+assíncrona). É corrida: 3 dos 5 posts da mesma batelada passaram sem problema, esse não.
+O script mais antigo `.github/scripts/publicar.py` já tinha essa espera implementada
+(loop de até 100s checando `status_code=FINISHED`) — mas o fluxo novo de workflows
+individuais por post (`execute-mission.md`) não incluía o passo.
+**Regra:** TODO workflow `post-{slug}.yml` que cria carrossel via Meta Graph API DEVE
+esperar `status_code=FINISHED` no container do carrossel antes de chamar `media_publish`.
+Nunca publicar logo após criar o container pai. Ver `execute-mission.md` Passo 4b.1.
+**Adicionada em:** 2026-07-25
+
+---
+
 ## Histórico de Incidentes
 
 - 2026-07-11 — Desafio 10 Dias (Dias 5, 6 e 7): legendas chegavam soltas no chat e os slides
   no `~/Downloads/`. Fechado o pipeline com o contrato da RULE-1: passo de entrega na fila
   adicionado no `produce-carousel.md` (carrossel, Step 6) e no `gerar-laminas-carrossel.md`
   (conteúdo, Step 6). A partir daqui, a Karol não precisa mais enviar legenda na mão.
+- 2026-07-24 — `matheus-carmo-valida-antes-de-vender` falhou (erro 9007, corrida de
+  processamento assíncrono da Meta). Reagendado pra 27/07 12h (primeiro dia livre).
+  Fix aplicado: espera de FINISHED adicionada nesse workflow, no `essencia-diferencial-autoridade`
+  (ainda não rodado) e na task `execute-mission.md` pra todo workflow futuro. Ver RULE-2.

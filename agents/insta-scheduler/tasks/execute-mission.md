@@ -140,6 +140,27 @@ Params:
 # Resposta: {"id": "carousel_id"}
 ```
 
+**Passo 4b.1: Aguardar container ficar FINISHED (OBRIGATÓRIO)**
+
+A Meta processa os containers de forma assíncrona (busca as imagens no Cloudinary). Chamar `media_publish` sem esperar causa erro intermitente 9007 ("Media ID is not available") — falha de corrida, não de conteúdo.
+
+```python
+import time
+
+for tentativa in range(20):
+    r = requests.get(f"{BASE}/{carousel_id}", params={"fields": "status_code", "access_token": TOKEN})
+    status = r.json().get("status_code", "UNKNOWN")
+    if status == "FINISHED":
+        break
+    if status == "ERROR":
+        raise RuntimeError("Container falhou com status ERROR")
+    time.sleep(5)
+else:
+    raise RuntimeError("Container não ficou FINISHED após 100s")
+```
+
+Todo `post-{slug}.yml` gerado a partir desta task DEVE incluir este passo entre a criação do container do carrossel e o `media_publish`. Sem exceção.
+
 **Passo 4c: Publicar (agendar)**
 
 ```python
