@@ -4,7 +4,7 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 25/07/2026
+**Ultima atualizacao:** 26/07/2026
 **Proximo review:** 27/07/2026
 
 ---
@@ -13,7 +13,7 @@
 
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
-| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | M2 gravado (20/07) — terminar edicao/legenda e subir na VOOMP via /course-publisher | Karol | Producao — 43 roteiros prontos, assets visuais feitos, descricoes prontas. M2 gravado, em edicao. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
+| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Reeditar (CapCut, legenda queimada) e subir via /course-publisher: M1 aulas 00 e 01 restantes + M2 aulas 5-9 + M3 e M4 completos | Karol | Producao — M0 (5/5) e M2 (5/9) publicados na Voomp com legenda; M1 (6/8) publicado, faltam 2 aulas sem legenda. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
 | 2 | Desafio 10 Dias (Instagram) → Ciclo 2 | Reanalise completa (Aria, dado automatizado) + abertura do Ciclo 2 com conteudo do resort (Samoa Villa) + batelada de temas novos | `resort-nao-quer-todo-mundo` (Reels, ideia 2 da serie Samoa Villa) segue com roteiro pronto mas sem gravar/agendar — proximo passo da serie. `resort-caro-e-cheio` pausado (resort confirmado vazio). Batelada de 5 ja aprovada e no ar/agendada: 3 publicados (22-24/07), `venda-na-conversa-nao-no-palco` publica hoje (25/07), `essencia-diferencial-autoridade` fecha amanha (26/07) | Karol + Squad Conteudo Arcane | Batelada de 5 posts (Carol Diniz, Mari Vabo, Matheus Carmo, marketing conversacional, essencia x IA) produzida, aprovada e agendada via GitHub Actions (21/07). `genesis-pool-metodo-autoral` convertido de Reels pra Carrossel com fotos reais da viagem e publicado imediatamente (21/07). Coleta automatica de metricas do Instagram rodando diariamente. | [plano](../docs/producao-conteudo/karol/desafio-10-dias-plano.md) |
 
 ---

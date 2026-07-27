@@ -44,7 +44,7 @@
 | # | Item | Status |
 |---|---|---|
 | H01 | Configurar estrutura do curso na Voomp (módulos, aulas, ordem) | ✅ Concluído via course-publisher — 5 módulos + Orientações criados, 43 aulas com slot na Voomp (config.yaml) |
-| H02 | Upload das aulas gravadas + edição | Pendente — só M0/M1 têm vídeo mapeado (gravados); M2-M4 aguardam gravação |
+| H02 | Upload das aulas gravadas + edição | Em andamento — M0 (5/5), M1 (6/8) e M2 (5/9) com vídeo legendado publicado na Voomp (26/07/2026, via course-publisher). M1 aulas 00 e 01 ainda sem legenda (Karol vai reeditar). M2 aulas 5-9 e M3-M4 aguardam gravação |
 | H03 | Vincular materiais do Drive em cada aula | Pendente — depende do upload dos vídeos |
 | H04 | Configurar bloqueio sequencial (Orientações → M0 → M1 → ...) | A confirmar com course-publisher — estrutura de módulos existe, não confirmei se o bloqueio sequencial já está ativo |
 | H09 | Criar questionário de pré-diagnóstico nativo (gate de avanço antes do M0) | Pendente — verificar equivalente na Voomp (substituiu Google Forms externo) |

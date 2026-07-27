@@ -132,6 +132,13 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 26/07 — Reenvio com legenda queimada (course-publisher):**
+- Achado: Voomp Tube (player sobre YouTube nao listado) nao expoe legenda/CC nativa. Decisao: Karol reedita cada aula no CapCut queimando a legenda no video, worker resobe.
+- M0 (5/5) e M2 (3 recapturadas + 2 primeira-gravacao — "O que e um Metodo Autoral" e "As 3 Jornadas do Aluno") e M1 (6/8 — aulas 00 e 01 ainda sem legenda) reenviados: 16 videos novos publicados como Nao Listado no YouTube, 16 lessons da Voomp atualizadas via API.
+- **Achado critico evitado:** 14 das 16 lessons ja estavam `status: published` (curso ao vivo pras alunas). O script antigo tinha default "draft" — se usado sem checar, teria despublicado aulas em producao so por trocar o link do video. Corrigido antes de rodar.
+- 14 videos antigos (sem legenda) excluidos do YouTube, so depois de confirmar via API que a Voomp ja apontava pro video novo (decisao explicita da Karol).
+- Pendente: Karol reeditar M1 aulas 00-01, M2 aulas 5-9, e gravar/editar M3 e M4.
+
 **Sessao 13-14/07 (madrugada) — Expert360 NO AR na Voomp (course-publisher):**
 - Slash command `/course-publisher` criado (agente existia sem comando registrado).
 - **Decisao de hospedagem:** Voomp nao hospeda video >80MB → YouTube "Nao listado" + Voomp Tube (custo zero). Ver log-decisoes 13/07.
@@ -207,11 +214,11 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 - ~~DNS raiz do dominio~~ — **RESOLVIDO (08/07):** apontamento feito no Registro.br (raiz + www saem do GreatPages antes do cancelamento em 27/07).
 
 **Proximo foco:**
-1. Expert360: gravar M2 (6 aulas restantes na ordem nova) — ao gravar, /course-publisher sobe e vincula em minutos
+1. Expert360: Karol reedita (CapCut, legenda queimada) M1 aulas 00-01 e grava M2 aulas 5-9, M3 e M4 — ao terminar, /course-publisher sobe e vincula
 2. Course Creator: realinhar m2-roteiros.md e descricoes.md ao curriculo novo do M2
 
 Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 14/07/2026 (Expert360 no ar na Voomp — M0/M1 publicados, M2 reestruturado)*
+*Ultima atualizacao: 26/07/2026 (Expert360 — reenvio com legenda: M0 completo, M1 6/8, M2 5/9 publicados na Voomp)*
