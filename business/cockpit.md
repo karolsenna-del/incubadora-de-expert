@@ -4,8 +4,8 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 26/07/2026
-**Proximo review:** 27/07/2026
+**Ultima atualizacao:** 28/07/2026
+**Proximo review:** 04/08/2026
 
 ---
 
@@ -14,7 +14,7 @@
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
 | 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Reeditar (CapCut, legenda queimada) e subir via /course-publisher: M1 aulas 00 e 01 restantes + M2 aulas 5-9 + M3 e M4 completos | Karol | Producao — M0 (5/5) e M2 (5/9) publicados na Voomp com legenda; M1 (6/8) publicado, faltam 2 aulas sem legenda. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
-| 2 | Desafio 10 Dias (Instagram) → Ciclo 2 | Reanalise completa (Aria, dado automatizado) + abertura do Ciclo 2 com conteudo do resort (Samoa Villa) + batelada de temas novos | `resort-nao-quer-todo-mundo` (Reels, ideia 2 da serie Samoa Villa) segue com roteiro pronto mas sem gravar/agendar — proximo passo da serie. `resort-caro-e-cheio` pausado (resort confirmado vazio). Batelada de 5 ja aprovada e no ar/agendada: 3 publicados (22-24/07), `venda-na-conversa-nao-no-palco` publica hoje (25/07), `essencia-diferencial-autoridade` fecha amanha (26/07) | Karol + Squad Conteudo Arcane | Batelada de 5 posts (Carol Diniz, Mari Vabo, Matheus Carmo, marketing conversacional, essencia x IA) produzida, aprovada e agendada via GitHub Actions (21/07). `genesis-pool-metodo-autoral` convertido de Reels pra Carrossel com fotos reais da viagem e publicado imediatamente (21/07). Coleta automatica de metricas do Instagram rodando diariamente. | [plano](../docs/producao-conteudo/karol/desafio-10-dias-plano.md) |
+| 2 | Desafio 10 Dias (Instagram) → Ciclo 2 | Reanalise completa (Aria, dado automatizado) + abertura do Ciclo 2 com conteudo do resort (Samoa Villa) + batelada de temas novos | Serie Samoa Villa ENCERRADA (Karol ja deixou o resort — `resort-nao-quer-todo-mundo` nao sera gravado, junta ao `resort-caro-e-cheio` ja pausado). Iris precisa trazer novo pool de temas/candidatos pro Ciclo 2 (sem mais material do resort) | Karol + Squad Conteudo Arcane | Batelada de 5 posts (Carol Diniz, Mari Vabo, Matheus Carmo, marketing conversacional, essencia x IA) publicada e agendada via GitHub Actions (21-26/07). "cafe da manha no hotel" (Reels de teste) liberado pra audiencia geral (28/07) apos validar bem com nao-seguidores (analise da Aria, 27/07). Coleta automatica de metricas do Instagram rodando diariamente. | [plano](../docs/producao-conteudo/karol/desafio-10-dias-plano.md) |
 
 ---
 
@@ -22,7 +22,7 @@
 
 | # | Projeto | Objetivo | Depende de | Prioridade |
 |---|---------|----------|------------|------------|
-| 1 | ETL Alcateia Implementacao | Processar KB para uso futuro nos agentes | Expert360 liberar tempo | Background |
+| | | | | |
 
 ---
 
@@ -49,7 +49,7 @@
 | Operacao | Responsavel | Status | Onde acompanhar |
 |----------|-------------|--------|-----------------|
 | Instagram / Conteudo | Karol | Ativa — Ciclo Desafio 10 Dias rodando (ver ATIVOS #2) | contexto-dinamico.md — prioridades do momento |
-| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 22 realizada (15/07). Sem live essa semana (Karol de ferias) | business/campanhas/lives-semanais/ |
+| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 22 realizada (15/07). Roteiro da live desta semana sendo fechado em outro chat com /expert-em-lives | business/campanhas/lives-semanais/ |
 | Mentoria (5 alunos) | Karol | Ativa — Milena: P2 (Promessa) FECHADA + criacao do metodo adiantada (10/07). Roteiro da jornada rebalanceado (03/07) e replicado pros 5 alunos | mentoria/alunas/ |
 | Funil mini treinamento (LP → WhatsApp) | Karol | LP nova PUBLICADA — treinamento.incubadoradeexpert.com.br (Vercel) | business/campanhas/lp-minitreinamento/ |
 
@@ -60,6 +60,7 @@
 | Projeto | Concluido em | Resultado |
 |---------|-------------|-----------|
 | Ferramenta de Produto Arcane | 20/05/2026 | Expert360 totalmente definido — PRD v1.2 aprovado |
+| ETL Alcateia Implementacao | 12/07/2026 | KB completa: 7 volumes entregues, validation_score 95.4, verdict APPROVED. Estava registrada como pendente na fila por engano — pipeline ja tinha fechado. |
 
 ---
 
