@@ -10,6 +10,16 @@
 **Impacto:** [o que muda]
 -->
 
+## 28/07/2026 — Contratação de comercial/closer + CRM de reativação de leads
+
+**Contexto:** Karol identificou que perde vendas porque nunca faz follow-up de quem fez sessão estratégica (diagnóstico) e não fechou. Contratou um comercial/closer pra assumir essa reativação.
+
+**Decisão:** Abrir um projeto (CRM Reativação de Leads) pra dar ferramenta de trabalho ao closer: expandir o banco unificado do Bootstrap 3 (Supabase: pessoas/capturas/compras) com status de lead, histórico de follow-up e resumo automático gerado por IA a partir do diagnóstico. Três fontes de lead: sessão estratégica (Google Forms), compradores de outros produtos (Hotmart — ex. workshop Destrave seu curso online, ainda não importado), e grupo fechado do WhatsApp (números, sem nome ainda). Interface operacional: planilha (Google Sheets) com colunas divididas em "zona do robô" (sync automático do Supabase) e "zona do closer" (status/observação/follow-up, só ele escreve).
+
+**Racional:** O gargalo real não era falta de leads — era falta de acompanhamento. Ferramenta em planilha (não Supabase direto) porque o closer não é técnico. Separação robô/closer evita que o sync automático sobrescreva o que o closer acabou de registrar — causa comum de CRM em planilha virar bagunça. Reuso do banco do Bootstrap 3 em vez de criar do zero (Fase 1 já entregou pessoas/capturas/compras com RLS).
+
+**Impacto:** Projeto criado no cockpit (`business/campanhas/crm-reativacao-leads/tracker.md`). Próximo passo: handoff pro Dara (data-engineer) desenhar o schema expandido. Compras históricas da Hotmart e lista de participantes do grupo WhatsApp são importações/investigações separadas, ainda não resolvidas.
+
 ## 20/07/2026 — Reanálise completa do Ciclo 1 (Desafio 10 Dias): gargalo é interação, não alcance nem volume
 
 **Contexto:** Karol sentia o perfil "travado" mesmo com o Desafio 10 Dias rodando. Reanálise da Aria com dado automatizado completo (27 posts, não mais prints seletivos) mostrou que NENHUM post cruzou o threshold de 10% de Interação/View do Método Audience — 8 de 27 tiveram zero interação. Padrão: posts de "afirmação genérica" (tom consultoria) zeram; posts com confronto de crença + história pessoal performam melhor (ainda abaixo do threshold, mas melhor).
