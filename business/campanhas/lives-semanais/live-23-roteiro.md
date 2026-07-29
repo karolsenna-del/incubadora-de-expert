@@ -1,8 +1,8 @@
 # Live 23 — Por que eu não faço lançamento (e você também não precisa)
 
 > Tema: Vendas Secretas — vender na conversa, não no palco
-> Duração estimada: ~29 min
-> Modelo: Funil de Zoom
+> Duração estimada: ~23-25 min
+> Modelo: Funil de Zoom (adaptado — sem pausa de prática ao vivo/chat, confirmado 28/07)
 
 ---
 
@@ -46,33 +46,17 @@ Aplicação: dá pra testar preço, testar oferta, treinar seu pitch, antes de q
 
 > **Spoiler do pitch:** "É exatamente isso que a gente trabalha dentro da Incubadora de Expert — o módulo inteiro de Vendas Secretas existe pra te tirar da lógica de lançamento e te colocar na lógica de conversa. No final eu te mostro como entrar."
 
-**Transição:** "Agora é a sua vez de mapear isso pra você."
+**Transição (sem pausa ao vivo — apresentar o material, não preencher agora):**
+
+**[AÇÃO: compartilhar tela agora e abrir o arquivo `live-23-mapa-das-5-conversas.md` — mostrar o template, não precisa preencher ao vivo]**
+
+"Você não precisa fazer isso agora comigo. Olha só o que eu deixei pronto pra você — o Mapa das 5 Conversas [mostra na tela]. Depois que a live terminar, você abre esse documento e faz: lista 1 produto ou oferta que você quer vender, e 5 pessoas reais — não seguidores, gente que você já conhece ou já atendeu — que você poderia procurar essa semana pra conversar sobre isso. Pra cada uma, anota por que ela é a pessoa certa agora. Essa lista vale mais do que 1000 seguidores novos, porque é gente com quem você pode vender essa semana — não daqui a 6 meses."
+
+"Esse arquivo vai ficar disponível pra vocês em [ONDE: grupo do WhatsApp / pasta compartilhada / Drive — Karol define]."
 
 ---
 
-## PARTE 3 — PRÁTICA (~8 min)
-
-**Instrução do exercício — "Mapa das 5 Conversas":**
-1. Escreve no papel ou documento: 1 produto, serviço ou oferta que você quer vender (ou já vende) hoje.
-2. Lista 5 pessoas reais — nome ou perfil — que você poderia procurar essa semana pra uma conversa sobre isso. Não são seguidores. São pessoas que você já conhece, já atendeu, ou tem acesso direto.
-3. Pra cada uma: por que ela é a pessoa certa pra essa conversa agora?
-
-**Tempo:** 4-5 min de silêncio real na live.
-
-**Reforço durante o silêncio:**
-"Não precisa ser gente 'perfeita'. Precisa ser gente real, que você consegue chamar essa semana."
-"Se você não consegue pensar em 5, pensa em 2 ou 3. O número importa menos que o exercício de sair do 'preciso de mais gente' pro 'já tenho gente'."
-
-**Reengajar:**
-Pedir pra 1-2 pessoas compartilharem no chat 1 nome (ou perfil, sem expor dados) da lista e por que escolheram.
-Responder ao vivo conectando com o princípio: "viu? você já tinha a pessoa certa — só não tinha dado nome a essa conversa como estratégia."
-
-**Frase de fechamento da prática:**
-"Essa lista que você acabou de fazer vale mais do que 1000 seguidores novos. Porque são pessoas com quem você pode vender essa semana — não daqui a 6 meses."
-
----
-
-## PARTE 4 — PROVA RACIONAL + PITCH (~5 min)
+## PARTE 3 — PROVA RACIONAL + PITCH (~6-8 min)
 
 **Prova Racional (versão validação externa — sem depoimento):**
 "Eu fracassei em 8 lançamentos. Depois que troquei lançamento por conversa, foi a primeira vez que o digital funcionou de verdade pra mim. E olha que interessante: em 2026, o mercado deu nome oficial a isso. Virou tendência confirmada — 'marketing conversacional'. Batizaram agora, de fora, o que eu já ensino de dentro há anos como Vendas Secretas."
@@ -86,16 +70,18 @@ CTA: "Se você chegou até aqui e quer aprender a vender assim — na conversa, 
 
 ## CHECKLIST PRÉ-LIVE
 
-- [ ] Testar o tempo do silêncio na Prática — 4-5 min real, cronometrar
 - [ ] Confirmar que o chat/moderação está pronto pra filtrar comentários "LANÇAMENTO" e disparar o direct
+- [ ] Sem pausa de prática ao vivo/chat nesta live (confirmado 28/07) — "Mapa das 5 Conversas" vira tarefa pra depois, mencionada na transição da Parte 2
+- [ ] Compartilhar tela na Parte 2 (transição) pra mostrar o `live-23-mapa-das-5-conversas.md` ao vivo — apresentação rápida, sem preencher na hora
+- [ ] Definir ONDE o arquivo fica disponível pro grupo depois (WhatsApp / Drive / pasta compartilhada) e confirmar que está lá antes da live
 
 ---
 
 ## DoD — Checklist de Entrega
 
-- [x] 4 blocos presentes (Narrativa / Execução / Prática / Pitch)
-- [x] Exercício concreto com entrega tangível (Mapa das 5 Conversas)
-- [x] Duração estimada por bloco (total ~29 min)
+- [x] 3 blocos presentes (Narrativa / Execução / Prova Racional+Pitch) — formato adaptado sem pausa de prática ao vivo (confirmado 28/07)
+- [x] Exercício concreto com entrega tangível (Mapa das 5 Conversas — tarefa pra fazer depois, sem pausa ao vivo)
+- [x] Duração estimada por bloco (total ~23-25 min)
 - [x] Tom da Karol — direto, acolhedor, vulnerável na história dos 8 lançamentos
 - [x] História pessoal ancorada em material documentado (Live 1/6/8/14 + M3 roteiros)
 - [x] Spoiler do pitch presente na Parte 2
