@@ -13,6 +13,10 @@
 | 21/07/2026 | mari-vabo-credencial-nao-basta | 23/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-mari-vabo-credencial-nao-basta.yml) — aguardando push |
 | 21/07/2026 | matheus-carmo-valida-antes-de-vender | 24/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-matheus-carmo-valida-antes-de-vender.yml) — aguardando push |
 | 21/07/2026 | venda-na-conversa-nao-no-palco | 25/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-venda-na-conversa-nao-no-palco.yml) — aguardando push |
+| 28/07/2026 | frase-que-vale-milhoes | 29/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-frase-que-vale-milhoes.yml) — aguardando push |
+| 28/07/2026 | circo-mercado-saturado-cem-anos | 30/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-circo-mercado-saturado-cem-anos.yml) — aguardando push |
+| 28/07/2026 | apareco-e-ninguem-ve | 31/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-apareco-e-ninguem-ve.yml) — aguardando push |
+| 28/07/2026 | mariana-rios-metodo-sem-lastro | 01/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-mariana-rios-metodo-sem-lastro.yml) — aguardando push |
 | 21/07/2026 | essencia-diferencial-autoridade | 26/07/2026 12h BRT | via GitHub Actions | agendado (workflow: post-essencia-diferencial-autoridade.yml) — aguardando push |
 | 24/07/2026 | matheus-carmo-valida-antes-de-vender | — | via GitHub Actions | **FALHOU** — erro 9007 Meta API (corrida de processamento, ver RULE-2). Reagendado pra 27/07/2026 12h BRT com fix (espera FINISHED antes do publish) |
 | 24/06/2026 | cansaco-palavra-do-ano | 24/06/2026 12h | 17872005231534534 | publicado automaticamente |
@@ -39,3 +43,5 @@
 | 15/07/2026 | nikolas-autoridade-digital (reagendado) | 18/07/2026 12h BRT | via GitHub Actions | cron atualizado a pedido da Karol (era 15/07) |
 | 15/07/2026 | nao-quero-ser-amadora (reagendado) | 19/07/2026 12h BRT | via GitHub Actions | cron atualizado a pedido da Karol (era 17/07) |
 | 15/07/2026 | bottura-metodo-incopiavel (reagendado) | 20/07/2026 12h BRT | via GitHub Actions | cron atualizado a pedido da Karol (era 16/07) |
+| 19/07/2026 | nao-quero-ser-amadora | — | via GitHub Actions | **FALHOU** — erro 9007 Meta API (mesma corrida do RULE-2, workflow criado antes do fix). Achado tardiamente em 28/07 (Karol notou post sumido). Reagendado pra 03/08/2026 12h BRT com fix aplicado |
+| 20/07/2026 | bottura-metodo-incopiavel | — | via GitHub Actions | **FALHOU** — erro 9007 Meta API (mesma corrida do RULE-2, workflow criado antes do fix). Achado tardiamente em 28/07 (Karol notou post sumido). Reagendado pra 02/08/2026 12h BRT com fix aplicado |

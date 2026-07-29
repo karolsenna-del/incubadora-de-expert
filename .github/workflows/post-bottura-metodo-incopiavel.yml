@@ -2,7 +2,7 @@ name: Post bottura-metodo-incopiavel
 
 on:
   schedule:
-    - cron: '0 15 20 7 *'   # 20/07 às 15:00 UTC = 12h BRT
+    - cron: '0 15 2 8 *'   # 02/08 às 15:00 UTC = 12h BRT (reagendado — falhou em 20/07 com erro 9007, mesma corrida assíncrona do RULE-2, fix aplicado agora)
   workflow_dispatch:
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
             #metodoautoral #expertdigital #autoridadedigital #incubadoradeexpert
         run: |
           python3 - <<'EOF'
-          import os, requests, urllib.parse as up
+          import os, time, requests, urllib.parse as up
 
           TOKEN   = os.environ["META_TOKEN"]
           IG_ID   = os.environ["IG_USER_ID"]
@@ -71,6 +71,19 @@ jobs:
           })
           carousel_id = resp["id"]
           print(f"carousel_id: {carousel_id}")
+
+          print("Aguardando container ficar pronto...")
+          for tentativa in range(20):
+            r = requests.get(f"{BASE}/{carousel_id}", params={"fields": "status_code", "access_token": TOKEN})
+            status = r.json().get("status_code", "UNKNOWN")
+            if status == "FINISHED":
+              print(f"container pronto ({tentativa+1} checagens)")
+              break
+            if status == "ERROR":
+              raise RuntimeError("Container falhou com status ERROR")
+            time.sleep(5)
+          else:
+            raise RuntimeError("Container não ficou FINISHED após 100s")
 
           print("Publicando...")
           resp = meta_post(f"{IG_ID}/media_publish", {"creation_id": carousel_id})

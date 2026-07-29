@@ -73,3 +73,13 @@ Nunca publicar logo após criar o container pai. Ver `execute-mission.md` Passo 
   processamento assíncrono da Meta). Reagendado pra 27/07 12h (primeiro dia livre).
   Fix aplicado: espera de FINISHED adicionada nesse workflow, no `essencia-diferencial-autoridade`
   (ainda não rodado) e na task `execute-mission.md` pra todo workflow futuro. Ver RULE-2.
+- 2026-07-28 — Achados 2 casos MAIS ANTIGOS do mesmo bug (erro 9007), que passaram
+  despercebidos porque a falha é silenciosa e ninguém tinha auditado a leva de workflows
+  criados antes do fix da RULE-2 (25/07): `bottura-metodo-incopiavel` (falhou 20/07) e
+  `nao-quero-ser-amadora` (falhou 19/07). A Karol notou que os posts "sumiram" e perguntou.
+  Confirmado via `gh run list` + `gh run view --log` (não assumido — checado). Fix aplicado
+  nos 2 workflows, reagendados pra 02/08 e 03/08. `nikolas-autoridade-digital` (mesma leva,
+  mesmo bug potencial, não corrigido) rodou OK em 18/07 — corrida é intermitente, não afeta
+  sempre. **Aprendizado:** falha de workflow agendado não gera alerta nenhum — vale, de tempos
+  em tempos, rodar `gh run list --workflow=post-{slug}.yml` em toda a leva de workflows
+  criados antes de 25/07 pra confirmar que nenhum outro ficou pra trás sem publicar.

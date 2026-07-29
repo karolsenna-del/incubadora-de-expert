@@ -1,8 +1,8 @@
-name: Post nao-quero-ser-amadora
+name: Post apareco-e-ninguem-ve
 
 on:
   schedule:
-    - cron: '0 15 3 8 *'   # 03/08 às 15:00 UTC = 12h BRT (reagendado — falhou em 19/07 com erro 9007, mesma corrida assíncrona do RULE-2, fix aplicado agora)
+    - cron: '0 15 31 7 *'   # 31/07 às 15:00 UTC = 12h BRT
   workflow_dispatch:
 
 jobs:
@@ -14,19 +14,17 @@ jobs:
           META_TOKEN: ${{ secrets.META_TOKEN }}
           IG_USER_ID: "17841437530973593"
           CAPTION: |
-            "Não quero me sentir iniciante e amadora novamente."
+            Você tem medo de ser julgada quando posta. Devia ter medo de uma coisa pior — e não é crítica.
 
-            Se essa frase já passou pela tua cabeça, presta atenção: isso não é medo de câmera. É o peso de ter uma reputação inteira construída no offline — e a sensação de que um passo em falso no digital coloca tudo em risco.
+            É publicar, atualizar a tela, checar se alguém comentou. Nada. De novo. Julgamento pelo menos prova que alguém viu. Silêncio não prova nada — e é o que mais acontece.
 
-            O mercado te empurra pro palco: "grava, aparece, lança". Mas ninguém te conta que existe uma etapa antes.
+            Não é falta de coragem pra aparecer. É aparecer sem clareza de pra quem você fala e sobre o quê — aí a mensagem não pousa em ninguém.
 
-            Validar em ambiente controlado. Testar o preço, treinar o pitch, ouvir objeção real, fazer as primeiras vendas — sem algoritmo, sem plateia, sem risco pra imagem que você levou anos pra construir.
+            Aparecer não basta. Aparecer com posicionamento claro é o que transforma exposição em reconhecimento.
 
-            Valida primeiro. Aparece depois. Nessa ordem.
+            Comenta AULA que eu te mando o passo a passo pra clarear pra quem e sobre o quê você fala.
 
-            Comente GRUPO aqui embaixo que eu te adiciono nas lives semanais do meu WhatsApp fechado.
-
-            #expertdigital #especialistas #autoridadedigital #incubadoradeexpert
+            #incubadoradeexpert #expertdigital #posicionamentodigital #autoridadedigital #especialistainvisivel
         run: |
           python3 - <<'EOF'
           import os, time, requests, urllib.parse as up
@@ -37,13 +35,13 @@ jobs:
           BASE    = "https://graph.facebook.com/v21.0"
 
           SLIDES = [
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080497/instagram-carrosseis/nao-quero-ser-amadora/slide-01.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080499/instagram-carrosseis/nao-quero-ser-amadora/slide-02.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080500/instagram-carrosseis/nao-quero-ser-amadora/slide-03.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080502/instagram-carrosseis/nao-quero-ser-amadora/slide-04.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080503/instagram-carrosseis/nao-quero-ser-amadora/slide-05.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080505/instagram-carrosseis/nao-quero-ser-amadora/slide-06.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080506/instagram-carrosseis/nao-quero-ser-amadora/slide-07.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293748/instagram-carrosseis/apareco-e-ninguem-ve/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293750/instagram-carrosseis/apareco-e-ninguem-ve/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293751/instagram-carrosseis/apareco-e-ninguem-ve/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293754/instagram-carrosseis/apareco-e-ninguem-ve/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293756/instagram-carrosseis/apareco-e-ninguem-ve/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293757/instagram-carrosseis/apareco-e-ninguem-ve/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293759/instagram-carrosseis/apareco-e-ninguem-ve/slide-07.png"
           ]
 
           def meta_post(path, data):

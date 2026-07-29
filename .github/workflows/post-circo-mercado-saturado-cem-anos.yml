@@ -1,8 +1,8 @@
-name: Post nao-quero-ser-amadora
+name: Post circo-mercado-saturado-cem-anos
 
 on:
   schedule:
-    - cron: '0 15 3 8 *'   # 03/08 às 15:00 UTC = 12h BRT (reagendado — falhou em 19/07 com erro 9007, mesma corrida assíncrona do RULE-2, fix aplicado agora)
+    - cron: '0 15 30 7 *'   # 30/07 às 15:00 UTC = 12h BRT
   workflow_dispatch:
 
 jobs:
@@ -14,19 +14,17 @@ jobs:
           META_TOKEN: ${{ secrets.META_TOKEN }}
           IG_USER_ID: "17841437530973593"
           CAPTION: |
-            "Não quero me sentir iniciante e amadora novamente."
+            O mercado de circo estava saturado. Mais de 100 anos de história, ninguém apostaria em "mais um" ali. Foi exatamente onde nasceu o Cirque du Soleil.
 
-            Se essa frase já passou pela tua cabeça, presta atenção: isso não é medo de câmera. É o peso de ter uma reputação inteira construída no offline — e a sensação de que um passo em falso no digital coloca tudo em risco.
+            Eles não inventaram uma categoria nova. Não criaram "circo 2.0". Tiraram o que sobrava — os animais, o picadeiro tradicional, o formato de sempre — e entregaram o que faltava: experiência, narrativa, estética.
 
-            O mercado te empurra pro palco: "grava, aparece, lança". Mas ninguém te conta que existe uma etapa antes.
+            Resultado: virou um dos negócios de entretenimento mais valiosos do mundo, no mesmo mercado que todo mundo achava saturado e ultrapassado. Hoje é sinônimo de experiência premium. Ingresso high-ticket.
 
-            Validar em ambiente controlado. Testar o preço, treinar o pitch, ouvir objeção real, fazer as primeiras vendas — sem algoritmo, sem plateia, sem risco pra imagem que você levou anos pra construir.
+            "Mercado saturado" não existe. Existe gente competindo toda no mesmo nível — a técnica de sempre. Quem entrega o que falta encontra espaço, mesmo em mercado maduro.
 
-            Valida primeiro. Aparece depois. Nessa ordem.
+            Quer saber exatamente o que tirar e o que entregar no seu nicho? Comenta EXPERT que eu entro em contato.
 
-            Comente GRUPO aqui embaixo que eu te adiciono nas lives semanais do meu WhatsApp fechado.
-
-            #expertdigital #especialistas #autoridadedigital #incubadoradeexpert
+            #incubadoradeexpert #expertdigital #posicionamentodigital #metodoautoral #altoticket
         run: |
           python3 - <<'EOF'
           import os, time, requests, urllib.parse as up
@@ -37,13 +35,13 @@ jobs:
           BASE    = "https://graph.facebook.com/v21.0"
 
           SLIDES = [
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080497/instagram-carrosseis/nao-quero-ser-amadora/slide-01.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080499/instagram-carrosseis/nao-quero-ser-amadora/slide-02.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080500/instagram-carrosseis/nao-quero-ser-amadora/slide-03.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080502/instagram-carrosseis/nao-quero-ser-amadora/slide-04.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080503/instagram-carrosseis/nao-quero-ser-amadora/slide-05.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080505/instagram-carrosseis/nao-quero-ser-amadora/slide-06.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080506/instagram-carrosseis/nao-quero-ser-amadora/slide-07.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293736/instagram-carrosseis/circo-mercado-saturado-cem-anos/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293737/instagram-carrosseis/circo-mercado-saturado-cem-anos/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293739/instagram-carrosseis/circo-mercado-saturado-cem-anos/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293741/instagram-carrosseis/circo-mercado-saturado-cem-anos/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293743/instagram-carrosseis/circo-mercado-saturado-cem-anos/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293745/instagram-carrosseis/circo-mercado-saturado-cem-anos/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293746/instagram-carrosseis/circo-mercado-saturado-cem-anos/slide-07.png"
           ]
 
           def meta_post(path, data):

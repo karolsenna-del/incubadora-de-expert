@@ -41,8 +41,11 @@ const tdir = path.join(TEMPLATES_DIR, cfg.template);
 if (!fs.existsSync(tdir)) { console.error(`ERRO: template não encontrado: ${tdir}`); process.exit(1); }
 const metaRaw = fs.readFileSync(path.join(tdir, 'meta.yaml'), 'utf8');
 const meta = (k, def) => {
-  const m = metaRaw.match(new RegExp(`^\\s*${k}\\s*:\\s*"?([^"#\\n]+?)"?\\s*(#.*)?$`, 'm'));
-  return m ? m[1].trim() : def;
+  // Valores entre aspas podem conter '#' (ex: cores hex) — tenta aspas primeiro, senão cai pro sem-aspas (que aí sim para no '#' de comentário).
+  const m = metaRaw.match(new RegExp(`^\\s*${k}\\s*:\\s*(?:"([^"\\n]*)"|'([^'\\n]*)'|([^#\\n]+))`, 'm'));
+  if (!m) return def;
+  const val = m[1] !== undefined ? m[1] : (m[2] !== undefined ? m[2] : m[3]);
+  return val.trim();
 };
 const id = {
   name:    meta('author_name', 'Autor'),

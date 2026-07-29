@@ -1,8 +1,8 @@
-name: Post nao-quero-ser-amadora
+name: Post frase-que-vale-milhoes
 
 on:
   schedule:
-    - cron: '0 15 3 8 *'   # 03/08 às 15:00 UTC = 12h BRT (reagendado — falhou em 19/07 com erro 9007, mesma corrida assíncrona do RULE-2, fix aplicado agora)
+    - cron: '0 15 29 7 *'   # 29/07 às 15:00 UTC = 12h BRT
   workflow_dispatch:
 
 jobs:
@@ -14,19 +14,23 @@ jobs:
           META_TOKEN: ${{ secrets.META_TOKEN }}
           IG_USER_ID: "17841437530973593"
           CAPTION: |
-            "Não quero me sentir iniciante e amadora novamente."
+            Um resort pode ter investido 214 milhões de reais. Mas o que sustenta esse investimento inteiro é uma frase de uma linha.
 
-            Se essa frase já passou pela tua cabeça, presta atenção: isso não é medo de câmera. É o peso de ter uma reputação inteira construída no offline — e a sensação de que um passo em falso no digital coloca tudo em risco.
+            "O único com praia interna integrada ao mar."
 
-            O mercado te empurra pro palco: "grava, aparece, lança". Mas ninguém te conta que existe uma etapa antes.
+            Não é slogan bonito. É posicionamento: te diz exatamente por que ali, e não no resort do lado.
 
-            Validar em ambiente controlado. Testar o preço, treinar o pitch, ouvir objeção real, fazer as primeiras vendas — sem algoritmo, sem plateia, sem risco pra imagem que você levou anos pra construir.
+            A pergunta que fica: qual é a SUA frase?
 
-            Valida primeiro. Aparece depois. Nessa ordem.
+            Se o seu cliente não consegue repetir em uma linha por que te escolher, ele não te escolhe. Ele vai no mais barato ou no mais famoso.
 
-            Comente GRUPO aqui embaixo que eu te adiciono nas lives semanais do meu WhatsApp fechado.
+            A minha eu levei anos pra lapidar: "Diploma é o que você estudou. Método é o que você viveu."
 
-            #expertdigital #especialistas #autoridadedigital #incubadoradeexpert
+            E o que sustenta essa frase é o método autoral — o diferencial que só eu tenho, construído com a minha vivência.
+
+            Comenta GRUPO que eu te chamo pras lives semanais do meu WhatsApp fechado — é exatamente isso que a gente constrói lá.
+
+            #incubadoradeexpert #expertdigital #metodoonline #posicionamentodigital #autoridadedigital
         run: |
           python3 - <<'EOF'
           import os, time, requests, urllib.parse as up
@@ -37,13 +41,13 @@ jobs:
           BASE    = "https://graph.facebook.com/v21.0"
 
           SLIDES = [
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080497/instagram-carrosseis/nao-quero-ser-amadora/slide-01.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080499/instagram-carrosseis/nao-quero-ser-amadora/slide-02.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080500/instagram-carrosseis/nao-quero-ser-amadora/slide-03.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080502/instagram-carrosseis/nao-quero-ser-amadora/slide-04.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080503/instagram-carrosseis/nao-quero-ser-amadora/slide-05.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080505/instagram-carrosseis/nao-quero-ser-amadora/slide-06.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080506/instagram-carrosseis/nao-quero-ser-amadora/slide-07.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293723/instagram-carrosseis/frase-que-vale-milhoes/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293724/instagram-carrosseis/frase-que-vale-milhoes/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293726/instagram-carrosseis/frase-que-vale-milhoes/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293728/instagram-carrosseis/frase-que-vale-milhoes/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293730/instagram-carrosseis/frase-que-vale-milhoes/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293732/instagram-carrosseis/frase-que-vale-milhoes/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293733/instagram-carrosseis/frase-que-vale-milhoes/slide-07.png"
           ]
 
           def meta_post(path, data):

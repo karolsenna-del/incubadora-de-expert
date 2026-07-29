@@ -1,8 +1,8 @@
-name: Post nao-quero-ser-amadora
+name: Post mariana-rios-metodo-sem-lastro
 
 on:
   schedule:
-    - cron: '0 15 3 8 *'   # 03/08 às 15:00 UTC = 12h BRT (reagendado — falhou em 19/07 com erro 9007, mesma corrida assíncrona do RULE-2, fix aplicado agora)
+    - cron: '0 15 1 8 *'   # 01/08 às 15:00 UTC = 12h BRT
   workflow_dispatch:
 
 jobs:
@@ -14,19 +14,17 @@ jobs:
           META_TOKEN: ${{ secrets.META_TOKEN }}
           IG_USER_ID: "17841437530973593"
           CAPTION: |
-            "Não quero me sentir iniciante e amadora novamente."
+            Mariana Rios lançou um curso de R$297 sobre como atrair prosperidade. A internet não reclamou do preço. Reclamou de uma coisa bem mais específica.
 
-            Se essa frase já passou pela tua cabeça, presta atenção: isso não é medo de câmera. É o peso de ter uma reputação inteira construída no offline — e a sensação de que um passo em falso no digital coloca tudo em risco.
+            Ela é casada com o herdeiro do Grupo Pão de Açúcar. E a web fez a conta: "Tudo que eu tenho, eu atraí" virou piada — porque existe uma explicação bem mais óbvia pro resultado dela.
 
-            O mercado te empurra pro palco: "grava, aparece, lança". Mas ninguém te conta que existe uma etapa antes.
+            Resultado não prova método. Prova só que a pessoa chegou lá — o caminho pode ter sido outro.
 
-            Validar em ambiente controlado. Testar o preço, treinar o pitch, ouvir objeção real, fazer as primeiras vendas — sem algoritmo, sem plateia, sem risco pra imagem que você levou anos pra construir.
+            Autoridade não vem de mostrar resultado. Vem de mostrar o processo que qualquer pessoa, em qualquer ponto de partida, consegue repetir.
 
-            Valida primeiro. Aparece depois. Nessa ordem.
+            Comenta AULA que eu te ensino a blindar teu resultado assim — mostrando processo, não só o resultado.
 
-            Comente GRUPO aqui embaixo que eu te adiciono nas lives semanais do meu WhatsApp fechado.
-
-            #expertdigital #especialistas #autoridadedigital #incubadoradeexpert
+            #incubadoradeexpert #expertdigital #metodoautoral #posicionamentodigital #autoridadedigital
         run: |
           python3 - <<'EOF'
           import os, time, requests, urllib.parse as up
@@ -37,13 +35,13 @@ jobs:
           BASE    = "https://graph.facebook.com/v21.0"
 
           SLIDES = [
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080497/instagram-carrosseis/nao-quero-ser-amadora/slide-01.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080499/instagram-carrosseis/nao-quero-ser-amadora/slide-02.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080500/instagram-carrosseis/nao-quero-ser-amadora/slide-03.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080502/instagram-carrosseis/nao-quero-ser-amadora/slide-04.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080503/instagram-carrosseis/nao-quero-ser-amadora/slide-05.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080505/instagram-carrosseis/nao-quero-ser-amadora/slide-06.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1784080506/instagram-carrosseis/nao-quero-ser-amadora/slide-07.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293761/instagram-carrosseis/mariana-rios-metodo-sem-lastro/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293763/instagram-carrosseis/mariana-rios-metodo-sem-lastro/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293765/instagram-carrosseis/mariana-rios-metodo-sem-lastro/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293766/instagram-carrosseis/mariana-rios-metodo-sem-lastro/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293768/instagram-carrosseis/mariana-rios-metodo-sem-lastro/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293770/instagram-carrosseis/mariana-rios-metodo-sem-lastro/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785293772/instagram-carrosseis/mariana-rios-metodo-sem-lastro/slide-07.png"
           ]
 
           def meta_post(path, data):
