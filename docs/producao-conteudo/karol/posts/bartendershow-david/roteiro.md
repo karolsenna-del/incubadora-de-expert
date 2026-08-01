@@ -10,8 +10,8 @@
 ## Hook (3 primeiros segundos)
 **Verbal:** "Um aluno meu quase desistiu de ensinar bartender porque achava que já tinha gente demais ensinando a fazer drinks."
 **Visual:** Karol falando direto pra câmera, tom confidencial (contando um caso real)
-**Textual:** "'JÁ TEM GENTE DEMAIS ENSINANDO A FAZER DRINKS'"
-**Gatilhos usados:** Mistério + Identificação
+**Textual:** "VOCÊ TAMBÉM ACHA QUE JÁ TEM GENTE DEMAIS ENSINANDO O QUE VOCÊ SABE?"
+**Gatilhos usados:** Identificação + Reconhecimento (pergunta direta, confronta quem assiste antes de contar a história)
 
 ## Intro Forte
 "Ele veio pros Estados Unidos ensinar latinos a virarem bartender — uma saída pra não ficar preso em obra ou limpeza, trabalhos comuns de imigrante irregular. Só que ele quase não começou."
@@ -24,12 +24,12 @@
 "Ele pensava: 'já tem curso de bartender demais, quem vai me pagar por isso?'"
 
 [VIRADA / PROVA]
-"Até eu entender uma coisa: ele não ensinava fazer drink. Ele fazia mágica com a bebida — fogo, fumaça, malabarismo."
+"Até eu entender uma coisa: ele já não ensinava só drink. No curso presencial dele já tinha malabarismo, fogo, o show inteiro. Só que a conta já se chamava 'bartendershow' e ele continuava contando pro mundo que ensinava... drink."
 
-→ Fecha LOOPING 1 / Abre LOOPING 2: "e o que isso mudou de verdade?"
+→ Fecha LOOPING 1 / Abre LOOPING 2: "e o que a gente mudou então?"
 
 [REPOSICIONAMENTO / VALOR PRÁTICO]
-"Mudamos o nome da conta dele pra 'bartendershow'. Porque drink é receita — isso tem em qualquer curso, qualquer um ensina. Show é experiência — isso só ele tinha."
+"Mudamos toda a narrativa dele. Porque drink é receita — isso tem em qualquer curso, qualquer youtuber ensina. Show é experiência — isso só ele tinha. A gente só parou de esconder o que ele já fazia."
 
 [RESULTADO]
 "Hoje ele é contratado em evento e em bar cheio de turista, onde experiência paga mais que técnica."
@@ -42,7 +42,7 @@
 (CTA de reconhecimento — mesma palavra-código do post do Cirque, contato direto)
 
 ## Fechamento + Posicionamento
-"Diploma é o que você estudou. Método é o que você viveu. Ninguém mais viveu o que você viveu — é por isso que ninguém mais ensina do seu jeito."
+"Diploma é o que você estudou. Método é o que você viveu. É por isso que seu método começa na sua história."
 
 → Posicionamento construído: método = vivência, não técnica
 → Visão de mundo: concorrência na técnica não é ameaça, é prova de que o mercado paga
@@ -62,3 +62,6 @@
 
 ## Versão / Iterações
 - v1: 28/07/2026
+- v2: 30/07/2026 — Corrigido reveal: "bartendershow" já era o handle real do David (não foi renomeado). A mudança foi na narrativa/posicionamento, não no nome da conta. Ajustado bloco Virada/Prova e Reposicionamento.
+- v3: 30/07/2026 — Fechamento ajustado: troca "ninguém mais ensina do seu jeito" por "seu método começa na sua história" — desloca o foco de "exclusividade" pra "origem/raiz do método".
+- v4: 30/07/2026 — Headline (textual hook) trocado: de citação passiva da objeção do David pra pergunta direta de confronto ("VOCÊ TAMBÉM ACHA QUE JÁ TEM GENTE DEMAIS ENSINANDO O QUE VOCÊ SABE?") — Karol apontou que o original não parava o scroll pra persona dela.

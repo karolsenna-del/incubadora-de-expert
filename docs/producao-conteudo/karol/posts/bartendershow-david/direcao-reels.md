@@ -42,7 +42,7 @@ Ambiente neutro — escritório simples ou parede limpa. Se tiver imagem/vídeo 
 
 ## TEXTOS ON-SCREEN (pra editar no CapCut)
 
-- Capa: "'JÁ TEM GENTE DEMAIS ENSINANDO A FAZER DRINKS'"
+- Capa: "VOCÊ TAMBÉM ACHA QUE JÁ TEM GENTE DEMAIS ENSINANDO O QUE VOCÊ SABE?"
 - No momento da virada (~0:20): "BARTENDERSHOW" em destaque
 - No fechamento: "DIPLOMA É O QUE VOCÊ ESTUDOU. MÉTODO É O QUE VOCÊ VIVEU."
 
@@ -58,7 +58,7 @@ Ambiente neutro — escritório simples ou parede limpa. Se tiver imagem/vídeo 
 ## PUBLICAÇÃO
 
 - Capa = frame com o texto do hook
-- Caption: hook + 2-3 linhas + CTA ("comenta EXPERT")
+- Caption (legenda final, escrita pelo Rico): ver `legenda.md` — complementa o vídeo com a lição por trás, não repete a história do David. Fecha em "comenta EXPERT"
 - CTA "EXPERT" é resposta manual da Karol — sem automação
 
 ## REAPROVEITAMENTO
