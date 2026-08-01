@@ -1,0 +1,19 @@
+# Course Publisher — Estado da Sincronização Semanal (Meet → Hotmart)
+# Atualizado a cada execução da task weekly-sync.md — nunca editar manualmente
+# sem necessidade, é o que evita subir aula duplicada.
+
+live_expert360:
+  ultimo_processado_titulo: "Live Expert360 - 2026/07/29 13:56 GMT-04:00 - Recording"
+  ultimo_processado_data: "2026-07-29T18:42:33Z"  # createdTime do arquivo no Drive
+  proximo_numero: 24
+  ultima_execucao: "2026-07-31"
+
+mentoria_em_grupo:
+  ultimo_processado_titulo: "Encontro Incubadora - 2026/07/27 14:10 GMT-04:00 - Recording"
+  ultimo_processado_data: "2026-07-27T20:47:12Z"  # createdTime do arquivo no Drive
+  ultima_execucao: "2026-07-31"
+
+pendencias:
+  # Preenchido automaticamente pela task quando algo não pode ser resolvido sozinho
+  # (roteiro de Live faltando, Anotações do Gemini sem tema claro, sessão Hotmart expirada)
+  []

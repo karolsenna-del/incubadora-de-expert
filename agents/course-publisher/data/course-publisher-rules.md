@@ -76,7 +76,26 @@ Cada produto pode ter identidade visual diferente. Antes de gerar assets:
 verificar se existe briefing visual do produto em `business/campanhas/{produto}/branding/`.
 Se nao existir: perguntar qual paleta usar antes de gerar.
 
+## REGRA-014 — Estado evita duplicata
+
+Antes de subir qualquer aula na missao weekly-sync: conferir `data/weekly-sync-state.yaml`.
+Nunca processar de novo um arquivo do Drive cujo `createdTime` seja <= ao ultimo processado da serie.
+Atualizar o state IMEDIATAMENTE apos cada upload bem-sucedido, nao so no final da missao.
+
+## REGRA-015 — Missao autonoma nunca trava esperando humano
+
+Missoes disparadas por agendamento (sem a Karol na conversa) nunca param pra perguntar algo.
+Se faltar informacao pra decidir com seguranca (titulo, roteiro, tema, sessao expirada sem fallback):
+pular esse item, registrar a pendencia clara no relatorio e no Mission Log, e seguir pros proximos.
+Preferir nao subir uma aula a subir com titulo inventado ou adivinhado.
+
+## REGRA-016 — Missao headless sempre notifica ao final
+
+A weekly-sync roda sem ninguem olhando o terminal. Karol pediu explicitamente pra ser avisada
+quando rodar. Por isso: SEMPRE chamar PushNotification como ultimo passo dessa missao, com o
+resultado (subiu aula, nada novo, pendencia, ou erro) — nunca terminar em silencio.
+
 ---
 
 **Rules Status:** Production Ready
-**Versao:** 1.0.0
+**Versao:** 1.2.0

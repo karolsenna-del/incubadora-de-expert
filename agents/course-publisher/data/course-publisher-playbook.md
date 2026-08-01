@@ -17,8 +17,10 @@ Missao recebida
 │   └── SOP-002
 ├── "Configura as capas na Hotmart"
 │   └── SOP-003 + SOP-004
-└── "Gera o certificado"
-    └── SOP-005
+├── "Gera o certificado"
+│   └── SOP-005
+└── (agendada, sem pedido explicito) "Sincroniza gravacoes da semana"
+    └── SOP-009
 ```
 
 ---
@@ -129,6 +131,27 @@ Missao: "Gera as capas dos modulos do Expert360"
 3. `page.set_input_files(selector_thumb, caminho_png)`
 4. Confirmar
 5. Repetir para cada aula do modulo
+
+---
+
+### SOP-009: Sincronizar Gravações Semanais do Meet → Hotmart (recorrente, autônoma)
+
+**Quando usar:** disparada por agendamento (Task Scheduler configurado pelo Ops), não por pedido
+direto da Karol. Roda toda semana sozinha.
+
+**Inputs necessários:**
+- Pasta Drive "Meet Recordings" (`1eZySH6OIAsGasoHAZB9XxII0Gx686qQi`)
+- `data/weekly-sync-state.yaml` (o que já foi processado)
+- `business/campanhas/lives-semanais/live-{N}-*.md` (roteiros das Lives, pra título)
+- Anotações do Gemini de cada Encontro Incubadora (Drive, pra tema)
+- Sessão Hotmart ativa (`combo_incubadora_url` no vault)
+
+**Passos:** ver `tasks/weekly-sync.md` — protocolo completo.
+
+**Regras obrigatórias:** REGRA-002, REGRA-003, REGRA-009, REGRA-013, REGRA-014, REGRA-015.
+
+**Diferença essencial vs SOP-002:** essa missão nunca pergunta nada pra Karol no meio da execução
+— o que não dá pra decidir com segurança vira pendência registrada, não uma pergunta pendurada.
 
 ---
 
