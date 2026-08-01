@@ -17,7 +17,7 @@
 |---|------|--------|--------|-----|
 | 1 | Definicao do Produto | Done | 14/05 | 20/05 |
 | 2 | Estrutura do Curso | Em andamento | 22/05 | — |
-| 3 | Criacao dos Agentes | Nao iniciado | — | — |
+| 3 | Criacao dos Agentes | Done | — | — |
 | 4 | Gravacao | Nao iniciado | — | — |
 | 5 | Lancamento | Nao iniciado | — | — |
 
@@ -57,6 +57,7 @@
 ## LOG
 
 > Mais recente primeiro.
+- 31/07 — @companion: **Correção de status — Fase 3 (Criação dos Agentes) estava marcada "Não iniciado" por engano.** Os 6 agentes (Persona Compradora, Promessa Transformadora, Processo Autoral, Portfólio Estratégico, Proposta Validada, Autoridade Tríplice) já existem como Custom GPTs e atendem alunas há meses — links em `mentoria/alunas/{aluna}/0- Biblioteca de IAs.md` (e no `_template/`). Tracker nunca tinha sido atualizado depois da criação. Corrigido fase + métrica. Contexto: surgiu ao desenhar os entregáveis do Grupo pro ecossistema de ofertas novo (ver `business/campanhas/crm-reativacao-leads/arsenal-vendas-closer.md`) — o Grupo pode dar acesso a esses agentes hoje, sem precisar construir nada novo.
 - 26/07 — @course-publisher: Reenvio com legenda queimada (CapCut) — M0 (5/5) e M2 (3 recapturadas + 2 primeira-gravacao: "O que e um Metodo Autoral" e "As 3 Jornadas do Aluno") e M1 (6/8: aulas 02-07: custo invisivel do sim, persona compradora, agente da persona, promessa transformadora, agente da promessa, quem voce se tornou — aulas 00 e 01 do M1 ficam de fora, Karol ainda nao tem versao legendada). 16 videos publicados como Nao Listado no YouTube (canal Karol Senna), 16 lessons da Voomp atualizadas via API mantendo `status: published` (achado critico: 14 das 16 ja estavam publicadas pras alunas — usar o default antigo de "draft" teria despublicado aulas em producao). 14 videos antigos (sem legenda) excluidos do YouTube, so depois de confirmar via API que a Voomp ja apontava pro video novo. `config.yaml` atualizado com os youtube_id novos e o `voomp_lesson_id` do M0 que estava faltando.
 - 20/07 — @karol: **M2 GRAVADO** (6 aulas restantes). Em edição — adicionando legenda manualmente (Voomp não tem legenda automática). Próximo: terminar edição → `/course-publisher` sobe e vincula.
 - 14/07 — @course-publisher: M2 REESTRUTURADO na Voomp conforme currículo novo da Karol (9 aulas): mentalidade adiantada (Aula 1 "Você não precisa saber tudo" = ex-Insegurança Inteligente; Aula 2 "Seu método já existe" = ex-Mapeando seu Processo), "Por que ferramentas vendem mais do que copy" (ex-Portfólio Estratégico), "Ecossistema do Método" REMOVIDA (deletada, estava vazia). Aulas 0-2 publicadas com vídeo; 3-8 em rascunho aguardando gravação. Curso duplicado vazio (id 9511) deletado da Voomp. Exibição da plataforma corrigida: "Exibir Módulos na Página Inicial" ativado + formato de capa horizontal — capas de módulo agora visíveis na home. ATENÇÃO Course Creator: m2-roteiros.md e descricoes.md (seção M2) seguem a ordem/nomes antigos — realinhar. Thumbs de aula do M2 podem ter títulos antigos na arte — regenerar antes de aplicar.
@@ -112,7 +113,7 @@
 | Metrica | Baseline | Meta | Atual |
 |---------|----------|------|-------|
 | Modulos estruturados | 0 | 5 (M0-M4) | 5 (todos) |
-| Agentes criados | 0 | 6 | 0 |
+| Agentes criados | 0 | 6 | 6 (todos — funcionam como Custom GPTs, atendendo alunas há meses. Links em `mentoria/alunas/{aluna}/0- Biblioteca de IAs.md` e no template) |
 | Aulas roteirizadas | 0 | ~43 | 43 (M0+M1+M2+M3+M4 completos — todos os 5 módulos) |
 
 ---

@@ -21,7 +21,7 @@
 | 4 | Interface planilha (zona robo / zona closer) + sync n8n | Done | 30/07 | 30/07 |
 | 5 | Ativacao com o comercial | Nao iniciado | — | — |
 
-**Fase atual:** 5 — Ativacao com o comercial.
+**Fase atual:** 5 — Ativacao com o comercial. Arsenal de vendas do closer pronto (31/07) — falta so links de pagamento e ativacao efetiva.
 
 ---
 
@@ -50,6 +50,7 @@ Karol contratou um comercial/closer pra reativar leads que fizeram sessao estrat
 | Confirmar se Z-API consegue listar participantes de grupo do WhatsApp via API | Dara ou Gestor de Infra | Descartado | — | Karol exportou manual pelo WhatsApp Web (30/07) — nao precisa mais da automacao pra este import. Pode reaparecer se o grupo precisar de sync continuo no futuro |
 | Construir automacao Google Sheets → Supabase (n8n) | Gestor de Infra Arcane | **Done (30/07)** | — | 2 workflows publicados no n8n (ativos, rodando a cada 15min). Ver detalhes abaixo |
 | Criar a planilha operacional (arquivo) | Gestor de Infra Arcane | Done — 30/07 | — | Criada so com cabecalho (18 colunas da especificacao). O job do robo preenche os dados quando a automacao estiver pronta |
+| Montar arsenal de vendas do closer (produtos, objecoes, provas, fluxo) | Companion | Done — 31/07 | — | `arsenal-vendas-closer.md`. Junto, repaginacao completa do ecossistema de ofertas (ver `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md` + log-decisoes 31/07). Falta: links de pagamento/checkout de cada produto (nao documentados ainda) |
 
 ---
 
@@ -168,6 +169,8 @@ Fonte lida direto do Drive: "Pré-diagnóstico do Seu Perfil de Expert. (Respost
 
 > Mais recente primeiro. Cada entrada: data — agente/pessoa: o que fez.
 
+- 31/07 — @companion: **Entregáveis do Faço por Você, Individual e Grupo fechados e adicionados ao arsenal.** No processo, achado e corrigido: tracker do Expert360 dizia Fase 3 (agentes) "Não iniciado", mas os 6 agentes por P já existem e atendem alunas há meses (corrigido em `expert360-curso/tracker.md`). Grupo pode oferecer acesso a eles hoje; faltam construir só o Agente de Roteiro de Validação e o Agente de Feedback de Portfólio (Clone Karol restrito). Decisão completa em log-decisoes 31/07.
+- 31/07 — @companion: **Arsenal de vendas do closer criado** (`arsenal-vendas-closer.md`) — produtos por perfil de lead, mapas de objeção (Laura + Ricardo + a específica de reativação), provas por objeção, fluxo de uso da planilha. No processo, repaginação completa do ecossistema de ofertas da Incubadora (2 eixos: vender vs. manter/escalar; novo produto "Faço por Você" R$3.000 + continuações; Grupo travado em R$5.000/12 meses; VIP, Express e Diagnóstico Ferramentas consolidados). Decisão registrada em log-decisoes 31/07, fonte oficial de produto em `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md`. Pendente: links de pagamento/checkout e teste real do Método Express.
 - 30/07 — @gestor-infra: **Fase 4 concluída — sync Planilha ↔ Supabase publicado no n8n.** 2 workflows ativos (schedule 15min): "CRM - Robo to Sheets" e "CRM - Sheets to Supabase". Seed inicial dos 150 leads feito na planilha. 2 bugs de configuração n8n encontrados e corrigidos no processo (execução por item causando 10.800 chamadas indevidas; `queryParameters` no lugar errado fazendo `select`/`order` serem ignorados silenciosamente). Testado ponta a ponta com edição simulada de closer — sincronizou e limpou célula corretamente. Detalhes completos na seção acima. Projeto passa pra Fase 5 (ativação com o comercial).
 - 30/07 — @data-engineer (Dara): Rosiane Cavalcante Bezerra (5511987220049) — Karol confirmou que fechou tambem. Status atualizado a_reativar → fechou, followup registrado.
 - 30/07 — @data-engineer (Dara): Confirmado com a Karol — os 6 numeros (DDD 67, ver secao CONTEXTO) nao vem de outra planilha, sao numeros que ela quer bloquear de qualquer import futuro deste grupo. Guardados como lista de bloqueio (nao existiam no CRM, nada foi deletado).

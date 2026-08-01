@@ -10,6 +10,46 @@
 **Impacto:** [o que muda]
 -->
 
+## 31/07/2026 — Entregáveis do Faço por Você, Individual e Grupo fechados
+
+**Contexto:** Depois de travar preços do ecossistema de ofertas (ver decisão "Repaginação do ecossistema de ofertas" abaixo, mesma data), faltava definir o que cada oferta entrega de fato — principalmente Individual (pedido original da Karol: mais coisas prontas, já que é 1:1) e Grupo (versão sem presença dela, via IA).
+
+**Decisão:**
+- **Faço por Você** — 5 semanas com entregável fixo por semana: imersão → persona+promessa → processo+ferramentas → proposta+roteiros de validação → agente de IA do método + handoff.
+- **Individual** — entregáveis novos amarrados às fases já existentes do Roteiro de 12 meses (decisão 03/07): fundação personalizada (mês 1-3), roteiros reais de validação (mês 4-6), e na fase de escala (mês 7-12) — além do agente do método — também página/LP, funil de automação e configuração de tráfego, usando os squads que a Karol já tem prontos (Squad LPago Arcane, Gestor de Infra Arcane, Tráfego Arcane).
+- **Grupo** — acesso aos 6 agentes do método por P (persona, promessa, processo, portfólio, proposta, autoridade) + 2 agentes novos a construir: Agente de Roteiro de Validação (prioridade alta — é o diferencial central de Vendas Secretas) e Agente de Feedback de Portfólio, um "Clone Karol" com escopo restrito (só avalia fundação com o critério dela, não é um clone completo).
+
+**Racional:** No processo, descobrimos que o tracker do Expert360º estava desatualizado — os 6 agentes por P já existem (Custom GPTs, atendendo alunas do Expert360 há meses, ver `mentoria/alunas/{aluna}/0- Biblioteca de IAs.md`), mas a Fase 3 do tracker (`business/campanhas/expert360-curso/tracker.md`) seguia marcada "Não iniciado". Isso significa que o item 1 do Grupo já é entregável hoje, sem trabalho novo — só os 2 agentes extras (roteiro de validação, feedback) ainda precisam ser construídos antes de prometer pro aluno. O agente do método na Individual só entra na fase de escala (mês 7-12), depois de validado com vendas reais — construir antes seria prematuro, o método ainda pode mudar durante a validação.
+
+**Impacto:** `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md` e `business/campanhas/crm-reativacao-leads/arsenal-vendas-closer.md` atualizados com os entregáveis. Tracker do Expert360 corrigido (Fase 3 = Done, métrica de agentes = 6/6). Pendente: construir Agente de Roteiro de Validação (via Worker Forge/Mind Forge) e Agente de Feedback de Portfólio (via Clone Forge, escopo restrito) antes de vender essa parte do Grupo.
+
+## 31/07/2026 — Repaginação do ecossistema de ofertas da Incubadora de Expert
+
+**Contexto:** Karol foi criar o arsenal de vendas pro closer (CRM Reativação de Leads) e percebeu que a oferta documentada (PDF "Incubadora de Expert: Crie seu método com clareza e segurança") estava desatualizada e sub-aproveitando a capacidade de entrega atual via Auroq/Claude Code — principalmente na Mentoria Individual, onde dá pra personalizar ferramentas, roteiros e até criar um agente de IA do método de cada aluno durante o 1:1, ao invés de entregar bônus genéricos. Na conversa também vieram à tona 3 serviços que ela já vende ou testou fora do repo (Método Express, Método VIP, Faço por Você/diagnóstico de ferramentas) e que nunca tinham sido consolidados com o resto do ecossistema.
+
+**Decisão:** Novo ecossistema de produtos, organizado em 2 eixos (VENDER vs. MANTER/ESCALAR) com preços travados:
+
+*Eixo 1 — Ajudar a criar método e vender (do zero até a primeira venda):*
+| Produto | Duração | Preço | Pra quem |
+|---|---|---|---|
+| Expert360º (curso) | Self-paced | R$497 (funil) / R$697 (plataforma) | Tem tempo, orçamento baixo, quer estudar sozinha |
+| Método Express | 1 encontro (1h) | R$300 | Trava pontual num dos 5Ps. **Nunca vendido — precisa testar antes de tratar como validado** |
+| Método VIP | 3 encontros | R$1.500 (3x R$500 pix) | Quer fazer ela mesma, precisa de direção/ajuste (na prática costuma virar trabalho de posicionamento/conteúdo) |
+| Faço por Você | 5 semanas | R$3.000 | Travada por falta de tempo **e** clareza ao mesmo tempo — já tentou e não conseguiu, ou não sabe nada de marketing/ferramentas. Entrega fundação pronta (persona+promessa+processo+proposta+agente do método), sem validação. Depende da agenda dela abrir |
+| → Continuação Grupo (pós-FPV) | 6 meses | R$2.000 | Só valida+posiciona+escala — fundação já feita. Total FPV+continuação = R$5.000, igual ao Grupo do zero |
+| → Continuação Individual (pós-FPV) | 6 meses | R$5.000 | Total FPV+continuação = R$8.000 — R$2.000 mais barato que a Individual do zero, como recompensa por já ter validado o caminho |
+| Grupo (do zero) | 12 meses (única duração agora — 6 meses não dá tempo de validar+posicionar) | R$5.000 | Quer jornada completa com validação, topa atenção dividida |
+| Individual (do zero) | 12 meses | R$10.000 | Mantido — produto mais caro, mais garantido em agenda |
+
+*Eixo 2 — Ajudar a manter/escalar (produto já rodando, dor é o aluno terminar/engajar, não vender):*
+| Produto | Formato | Preço |
+|---|---|---|
+| Diagnóstico Ferramentas | Questionário + reunião → proposta de 15-20 ferramentas, orçamento à parte pra construir | R$97 (vira cashback se contratar a construção) |
+
+**Racional:** A Individual (12 meses) e o Grupo (5.000-7.500) estavam sem nada entre eles e o VIP (1.500) — buraco grande de preço que fazia o Grupo parecer caro sem ter pra que comparar. O Faço por Você preenche esse buraco com um produto rápido (5 semanas) e 100% personalizado — o mesmo aproveitamento de Auroq que motivou repensar os bônus da Individual, só que empacotado como oferta própria. A continuação (pós-FPV) reaproveita o Grupo/Individual como destino em vez de criar produto novo, e o desconto na Individual (R$2.000) funciona como incentivo real pra passar pelo FPV primeiro — fecha mais rápido, ela prova valor antes de pedir R$10k, e quem chega na Individual por esse caminho já é lead mais qualificado. O Diagnóstico Ferramentas não compete com nada disso — ataca a segunda grande dor do expert (fazer o aluno terminar o método, não vender), pra quem já tem produto rodando; inclusive pode ser oferecido pros leads do CRM já marcados como `aluno_ativo` (compraram o Combo Incubadora), que não são alvo de reativação pra uma mentoria nova.
+
+**Impacto:** Vira fonte oficial em `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md` (substitui a análise de precificação de maio como referência de preço atual). Arsenal de vendas do closer (CRM Reativação de Leads, Fase 5) construído em cima dessa tabela. Pendente: Método Express precisa ser testado com lead real antes de entrar como oferta validada; links de pagamento/checkout de cada produto ainda não estão documentados no sistema.
+
 ## 28/07/2026 — Contratação de comercial/closer + CRM de reativação de leads
 
 **Contexto:** Karol identificou que perde vendas porque nunca faz follow-up de quem fez sessão estratégica (diagnóstico) e não fechou. Contratou um comercial/closer pra assumir essa reativação.
