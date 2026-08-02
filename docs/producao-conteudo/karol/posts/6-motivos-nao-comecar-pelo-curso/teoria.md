@@ -98,6 +98,7 @@ Diversidade de gatilhos coberta:
 
 **Casos Pessoais:**
 - Karol está no processo de gravação do próprio curso agora e sente cada atrito na pele: imprevistos do dia a dia, chuva atrapalhando o áudio, prioridades que comem o horário reservado pra gravar
+- **Correção importante (31/07/2026):** isso NÃO é uma lição que ela aprendeu tarde/na marra. "Não grave seu curso antes de validar o método" é regra que ela sempre ensinou. A gravação atual é a PROVA da sequência certa, não a descoberta dela: o método dela já está validado (anos de mentoria individual, aluna a aluna) — é exatamente por isso que agora é a hora de escalar com um produto mais barato, o curso. Pra persona dela (quem ainda não validou), pular direto pro curso agora seria erro. Cuidado em não framear como "eu também errei nisso" ou "descobri tarde" — isso contradiz a autoridade dela no tema.
 
 **Os 6 Motivos (organizados em 2 categorias):**
 - Fricção de execução: (1) precisa se arrumar/estar com ânimo, (2) cenário/áudio/iluminação vira desculpa de investimento e procrastinação, (3) cansativo — grava, erra, regrava
