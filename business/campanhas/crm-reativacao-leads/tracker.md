@@ -21,7 +21,16 @@
 | 4 | Interface planilha (zona robo / zona closer) + sync n8n | Done | 30/07 | 30/07 |
 | 5 | Ativacao com o comercial | Nao iniciado | — | — |
 
-**Fase atual:** 5 — Ativacao com o comercial. Arsenal de vendas do closer pronto (31/07) — falta so links de pagamento e ativacao efetiva.
+**Fase atual:** 5 — Ativacao com o comercial. Arsenal de vendas do closer pronto (31/07). 7 paginas de venda no ar (02/08) — falta so ativacao efetiva do closer.
+
+**Links das 7 paginas (site `vendas-incubadora` no Vercel):**
+- Metodo Express (R$300): https://vendas-incubadora.vercel.app/metodo-express/
+- Metodo VIP (R$1.500): https://vendas-incubadora.vercel.app/metodo-vip/
+- Sprint do Metodo (R$3.000): https://vendas-incubadora.vercel.app/sprint-do-metodo/
+- Grupo (R$5.000/12m): https://vendas-incubadora.vercel.app/grupo/
+- Individual (R$10.000/12m): https://vendas-incubadora.vercel.app/individual/
+- Expert360º (R$497): https://vendas-incubadora.vercel.app/expert360/
+- Diagnostico Ferramentas (R$97): https://vendas-incubadora.vercel.app/diagnostico-ferramentas/
 
 ---
 
@@ -50,7 +59,9 @@ Karol contratou um comercial/closer pra reativar leads que fizeram sessao estrat
 | Confirmar se Z-API consegue listar participantes de grupo do WhatsApp via API | Dara ou Gestor de Infra | Descartado | — | Karol exportou manual pelo WhatsApp Web (30/07) — nao precisa mais da automacao pra este import. Pode reaparecer se o grupo precisar de sync continuo no futuro |
 | Construir automacao Google Sheets → Supabase (n8n) | Gestor de Infra Arcane | **Done (30/07)** | — | 2 workflows publicados no n8n (ativos, rodando a cada 15min). Ver detalhes abaixo |
 | Criar a planilha operacional (arquivo) | Gestor de Infra Arcane | Done — 30/07 | — | Criada so com cabecalho (18 colunas da especificacao). O job do robo preenche os dados quando a automacao estiver pronta |
-| Montar arsenal de vendas do closer (produtos, objecoes, provas, fluxo) | Companion | Done — 31/07 | — | `arsenal-vendas-closer.md`. Junto, repaginacao completa do ecossistema de ofertas (ver `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md` + log-decisoes 31/07). Falta: links de pagamento/checkout de cada produto (nao documentados ainda) |
+| Montar arsenal de vendas do closer (produtos, objecoes, provas, fluxo) | Companion | Done — 31/07 | — | `arsenal-vendas-closer.md`. Junto, repaginacao completa do ecossistema de ofertas (ver `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md` + log-decisoes 31/07). |
+| Criar copy das 7 paginas de vendas (uma por oferta: Metodo Express, Metodo VIP, Sprint do Metodo, Grupo, Individual, Expert360, Diagnostico Ferramentas) | Squad LPago Arcane | **Done — 7 de 7 aprovadas (01-02/08)** | Escopo fechado 01/08 | Substitui o item antigo "links de pagamento/checkout" — fechamento e no pix (exceto Grupo/Individual/Expert360), pagina serve pra apoiar decisao do lead, nao pra checkout automatizado. 7 arquivos de briefing+copy em `paginas-vendas/`. Metodo Express e Diagnostico Ferramentas usam garantia de 100% devolucao (sessao/entrega unica); as demais usam 30 dias. Expert360 vendido como curso completo apesar de M3/M4 ainda nao gravados (decisao 02/08, entrega progressiva). Ver log-decisoes 01/08 |
+| Implementar as 7 paginas em page builder real (HTML/Vercel, mesmo padrao de lp-diagnostico-expert e lp-minitreinamento) | Gestor de Infra Arcane | **Done (02/08)** — 7 de 7 no ar, testadas (200 OK). CTA de Grupo/Individual/Expert360 apontando pro checkout real (Hotmart/Voomp); as outras 4 apontam pro WhatsApp | Copy das 7 paginas aprovada | SOP-018 criado no playbook do Gestor de Infra. Evento de pixel nas 3 com checkout trocado de `Contact` pra `InitiateCheckout` (mais preciso pra otimizacao de trafego pago no futuro). Links na secao abaixo |
 
 ---
 

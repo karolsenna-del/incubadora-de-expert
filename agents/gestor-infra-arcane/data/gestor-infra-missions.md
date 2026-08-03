@@ -14,7 +14,9 @@
 
 | # | Data | Missao | Resultado | SOP Criado? | Observacoes |
 |---|------|--------|-----------|-------------|-------------|
-| — | — | — | — | — | Nenhuma missao registrada ainda |
+| 1 | 2026-08-02 | Implementar piloto (Metodo Express) das 7 paginas de vendas do CRM Reativacao de Leads — HTML real a partir da copy aprovada pelo Squad LPago Arcane | ok | sim — SOP-018 | Reusou 100% do CSS do template `lp-diagnostico-expert`. Deploy: projeto Vercel `vendas-incubadora`, pagina em `/metodo-express/`. CTA aponta pro WhatsApp (+55 67 9232-4690) por falta de checkout automatizado — piloto aprovado pela Karol |
+| 2 | 2026-08-02 | Replicar as outras 6 paginas (Metodo VIP, Sprint do Metodo, Grupo, Individual, Expert360, Diagnostico Ferramentas) seguindo o padrao do piloto (SOP-018) | ok | nao (reuso do SOP-018) | Todas as 7 paginas no ar em `https://vendas-incubadora.vercel.app/{slug}/`, testadas (200 OK) |
+| 3 | 2026-08-02 | Trocar CTA de Grupo/Individual/Expert360 do WhatsApp pro checkout real assim que a Karol passou os links (Voomp pro curso, Hotmart pras 2 mentorias) | ok | nao | Href trocado + evento de pixel `Contact` -> `InitiateCheckout` nessas 3 (mais correto pro tipo de acao). Verificado via curl que o href certo esta no ar em cada uma. Pendencia fechada |
 
 ---
 

@@ -10,6 +10,36 @@
 **Impacto:** [o que muda]
 -->
 
+## 01/08/2026 — Correção de promessa: validar em até 4 meses, não 12
+
+**Contexto:** Ao revisar a página de vendas do Grupo (construída pelo Quill/Squad LPago Arcane), Karol identificou que a headline prometia "12 meses até a primeira venda" — mas o roteiro da jornada (fundação → processo autoral → validação nos meses 4-6) permite validar/fazer as primeiras vendas já a partir do mês 4. Prometer o total de acesso (12 meses) como se fosse o prazo até o resultado é uma promessa mais fraca do que a real.
+
+**Decisão:** Headline, CTA e FAQ das páginas de Grupo e Individual passam a prometer "primeiras vendas em até 4 meses", com "12 meses de acesso" reposicionado como o tempo pra completar a jornada até posicionamento/escala — não como a promessa principal. Confirmado que a correção vale pras duas ofertas (mesmo roteiro de jornada: fundação → validação no mês 4-6 → escala).
+
+**Racional:** RC-005 do Método LP (Squad LPago Arcane) — a primeira dobra deve prometer o resultado mais forte, não o programa inteiro. "4 meses até vender" é objetivamente mais forte que "12 meses até vender", mesmo sendo o mesmo produto — só estava prometendo a métrica errada.
+
+**Impacto:** `business/campanhas/crm-reativacao-leads/paginas-vendas/grupo-briefing-copy.md` e `individual-briefing-copy.md` corrigidos (headline, cards de entrega, FAQ, CTA final). `00-documento-mestre-ofertas.md` atualizado com nota de promessa de tempo pras duas ofertas — vale como padrão pra qualquer página futura com o mesmo roteiro de jornada.
+
+## 01/08/2026 — Escopo das páginas de venda pro closer: 7 páginas, uma por oferta
+
+**Contexto:** O item pendente "links de pagamento" da Fase 5 do CRM Reativação de Leads foi repensado — Karol fecha a maioria das ofertas no pix direto na conversa (Método Express, VIP, Sprint do Método, Diagnóstico Ferramentas), então o que a Closer precisa não é checkout automatizado, é uma página estruturada pra mandar quando o lead quer saber mais antes de decidir. Grupo, Individual e Expert360º fecham por outro caminho (não pix), mas não têm material de vendas atualizado — o PDF antigo está desatualizado (ver decisão de repaginação do ecossistema, 31/07).
+
+**Decisão:** Construir 7 páginas de vendas, uma por oferta (não um cardápio único) — página por oferta evita confundir o lead na hora de fechar, já que a Closer conduz a conversa pra uma oferta específica antes de mandar o link. Escopo: Método Express, Método VIP, Sprint do Método, Grupo, Individual, Expert360º, Diagnóstico Ferramentas.
+
+**Racional:** Página única por oferta reforça a oferta que a Closer já escolheu na ligação, em vez de abrir múltiplas opções que geram indecisão. A Incubadora já tem página de captação (diagnóstico/sessão estratégica, topo de funil) — essas 7 são páginas de fechamento, função diferente.
+
+**Impacto:** `crm-reativacao-leads/tracker.md` (Fase 5) e `arsenal-vendas-closer.md` atualizados com o escopo. Pendente: rotear construção pro Squad LPago Arcane (reaproveita padrão das LPs de diagnóstico e mini treinamento já feitas).
+
+## 01/08/2026 — "Faço por Você" renomeado pra "Sprint do Método"
+
+**Contexto:** Ao planejar as páginas de venda pro closer (CRM Reativação de Leads, Fase 5), o nome "Faço por Você" ficou em pauta — genérico, linguagem de agência ("eu crio seu site pra você"), sem ligação com a tese da Incubadora e sem diferenciar de um pacote pronto/template, o que contradiz o próprio diferencial do produto (a fundação é do aluno, construída com o método dele, só que em ritmo acelerado).
+
+**Decisão:** Renomear "Faço por Você" para **"Sprint do Método"**. Mantém o padrão de nomenclatura funcional dos outros produtos (Método Express, Método VIP) e evita a armadilha de soar "pronto/genérico".
+
+**Racional:** Companion sugeriu 4 opções (Fundação Expressa, Sprint do Método, Método em 5 Semanas, Fundação Guiada) — Karol escolheu "Sprint do Método" por capturar o formato intensivo/construído-junto sem contradizer a tese.
+
+**Impacto:** Renomeado em `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md` e `business/campanhas/crm-reativacao-leads/arsenal-vendas-closer.md` (todas as ocorrências, incluindo abreviação FPV → Sprint).
+
 ## 31/07/2026 — Entregáveis do Faço por Você, Individual e Grupo fechados
 
 **Contexto:** Depois de travar preços do ecossistema de ofertas (ver decisão "Repaginação do ecossistema de ofertas" abaixo, mesma data), faltava definir o que cada oferta entrega de fato — principalmente Individual (pedido original da Karol: mais coisas prontas, já que é 1:1) e Grupo (versão sem presença dela, via IA).

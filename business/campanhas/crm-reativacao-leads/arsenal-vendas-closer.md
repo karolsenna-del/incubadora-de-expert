@@ -44,9 +44,9 @@ Especialista sênior, financeiramente estável, já consolidado no offline. Não
 | 3 | Expert360º (funil) | Vender | Self-paced | R$497 | Curso gravado, sem contato pessoal |
 | 3 | Expert360º (plataforma) | Vender | Self-paced | R$697 | Curso gravado, sem contato pessoal |
 | 4 | Método VIP | Vender | 3 encontros | R$1.500 (3x R$500 pix) | Orientação — cliente executa, ela adapta o foco |
-| 5 | Faço por Você | Vender | 5 semanas | R$3.000 | Fundação pronta feita por ela, sem validação. Depende de agenda dela abrir |
-| 6a | → Continuação Grupo (pós-FPV) | Vender | 6 meses | R$2.000 | Total FPV+continuação = R$5.000, igual ao Grupo do zero |
-| 6b | → Continuação Individual (pós-FPV) | Vender | 6 meses | R$5.000 | Total FPV+continuação = R$8.000 — R$2.000 mais barato que a Individual do zero |
+| 5 | Sprint do Método | Vender | 5 semanas | R$3.000 | Fundação pronta feita por ela, sem validação. Depende de agenda dela abrir |
+| 6a | → Continuação Grupo (pós-Sprint) | Vender | 6 meses | R$2.000 | Total Sprint+continuação = R$5.000, igual ao Grupo do zero |
+| 6b | → Continuação Individual (pós-Sprint) | Vender | 6 meses | R$5.000 | Total Sprint+continuação = R$8.000 — R$2.000 mais barato que a Individual do zero |
 | 7 | Grupo (do zero) | Vender | 12 meses (única duração) | R$5.000 | Jornada completa, atenção dividida |
 | 8 | Individual (do zero) | Vender | 12 meses | R$10.000 | Jornada completa 1:1, entrega mais garantida em agenda |
 
@@ -54,9 +54,9 @@ Fonte oficial (se este arsenal desatualizar, esse arquivo vale): `docs/knowledge
 
 ### O que cada oferta entrega de verdade (pra usar na ligação)
 
-**Faço por Você (5 semanas)** — semana 1: sessão de imersão. Semana 2: persona+promessa documentados. Semana 3: processo autoral + ferramentas personalizadas. Semana 4: proposta + roteiros reais das ligações de venda. Semana 5: agente de IA do método dele, pronto + handoff. Não inclui validar com vendas reais — isso é a continuação.
+**Sprint do Método (5 semanas)** — semana 1: sessão de imersão. Semana 2: persona+promessa documentados. Semana 3: processo autoral + ferramentas personalizadas. Semana 4: proposta + roteiros reais das ligações de venda. Semana 5: agente de IA do método dele, pronto + handoff. Não inclui validar com vendas reais — isso é a continuação.
 
-**Individual (12 meses)** — meses 1-3: fundação personalizada (igual ao FPV, no ritmo coached). Meses 4-6: roteiros reais de venda pro caso dele + validação. Meses 7-12: agente de IA do método + página construída + funil de automação configurado + tráfego pronto pra rodar. É a única oferta que entrega infraestrutura pronta (página, funil, tráfego), não só orientação.
+**Individual (12 meses)** — meses 1-3: fundação personalizada (igual ao Sprint, no ritmo coached). Meses 4-6: roteiros reais de venda pro caso dele + validação. Meses 7-12: agente de IA do método + página construída + funil de automação configurado + tráfego pronto pra rodar. É a única oferta que entrega infraestrutura pronta (página, funil, tráfego), não só orientação.
 
 **Grupo (12 meses)** — acesso aos 6 agentes do método (persona, promessa, processo, portfólio, proposta, autoridade — **já existem e funcionam**, mesmos que os alunos do Expert360 usam), jornada completa coached em grupo. **Ainda não tem** o agente de roteiro de validação nem o agente de feedback de portfólio — não prometa esses dois, ainda estão em construção.
 
@@ -76,13 +76,13 @@ Antes de empurrar qualquer produto, descubra uma coisa: **o lead já tem um mét
 | Só quer clareza pontual num ponto específico, orçamento baixo | Método Express *(oferta em teste — ver nota abaixo)* | R$300 |
 | Tem orçamento baixo, tempo disponível, prefere estudar sozinha | Expert360º (curso) | R$497-697 |
 | Quer fazer ela mesma mas precisa de direção e ajuste no caminho | Método VIP | R$1.500 (3x R$500 pix) |
-| **Já tentou e não conseguiu, ou não sabe nada de marketing/tecnologia — trava por falta de tempo E clareza** | **Faço por Você** | R$3.000 |
+| **Já tentou e não conseguiu, ou não sabe nada de marketing/tecnologia — trava por falta de tempo E clareza** | **Sprint do Método** | R$3.000 |
 | Quer jornada completa (validação incluída), topa grupo, ticket menor | Grupo | R$5.000 (12 meses) |
 | Quer jornada completa 1:1, quer o acompanhamento mais garantido | Individual | R$10.000 (12 meses) |
 
 **Nota — Método Express nunca foi vendido.** Se for oferecer, deixe claro internamente (não precisa avisar o lead) que é uma oferta nova sendo testada. Avise a Karol como foi a primeira venda, se acontecer.
 
-**Se o lead já fez o Faço por Você antes** (ou está decidindo entre FPV e continuar depois): a continuação é mais barata que entrar direto, porque a fundação já está pronta —
+**Se o lead já fez o Sprint do Método antes** (ou está decidindo entre Sprint e continuar depois): a continuação é mais barata que entrar direto, porque a fundação já está pronta —
 - Continuação → Grupo: R$2.000 (6 meses)
 - Continuação → Individual: R$5.000 (6 meses) — R$2.000 de desconto vs. Individual do zero
 
@@ -98,7 +98,7 @@ Bom pra quem já fechou antes (ex: leads `aluno_ativo` do Hotmart — Combo Incu
 
 | Objeção | Como responder |
 |---|---|
-| "Não tenho tempo." | Boa parte do trabalho pesado é feito **com** ela nas sessões, ou **por** ela no Faço por Você. As primeiras vendas acontecem em conversas 1:1 — não exige produção de conteúdo constante nem rotina nova. |
+| "Não tenho tempo." | Boa parte do trabalho pesado é feito **com** ela nas sessões, ou **por** ela no Sprint do Método. As primeiras vendas acontecem em conversas 1:1 — não exige produção de conteúdo constante nem rotina nova. |
 | "Preciso estudar mais." | Conhecimento e método são coisas diferentes. Ela já sabe o suficiente — o que falta é estrutura, não mais curso. *(Prova: Hilda — 4 anos estudando, resolveu com um método com nome próprio)* |
 | "Marketing não é meu forte." | Não precisa virar profissional de marketing. O mecanismo é venda 1:1 (Vendas Secretas), não performance de anúncio ou crescimento de audiência. |
 | "Tenho medo de investir." | Por isso o método valida antes de escalar — nada de investimento pesado sem prova de que funciona primeiro. |
@@ -122,15 +122,15 @@ Bom pra quem já fechou antes (ex: leads `aluno_ativo` do Hotmart — Combo Incu
 
 | Objeção | Como responder |
 |---|---|
-| "Se for pra fazer, tem que ser bem feito." | É por isso que a Individual e o Faço por Você são 1:1 — nada de fórmula genérica de grupo. Ferramentas e agente são construídos sob medida pra ele. |
-| "Não tenho tempo." | Faço por Você é literalmente pra isso: ela constrói, ele só valida em pontos específicos. |
-| "Grupo não é para mim." | Certo — não ofereça Grupo pra esse perfil. Direcione pra Individual ou Faço por Você + continuação Individual. |
+| "Se for pra fazer, tem que ser bem feito." | É por isso que a Individual e o Sprint do Método são 1:1 — nada de fórmula genérica de grupo. Ferramentas e agente são construídos sob medida pra ele. |
+| "Não tenho tempo." | Sprint do Método é literalmente pra isso: ela constrói, ele só valida em pontos específicos. |
+| "Grupo não é para mim." | Certo — não ofereça Grupo pra esse perfil. Direcione pra Individual ou Sprint do Método + continuação Individual. |
 | "Preciso confiar muito." | Use prova de reconhecimento por pares, não depoimento de iniciante — indicação espontânea de outra criadora (metodo-nanny.png), ou prova de quem já é estabelecido (Lua Azevedo, live-expert360-lua.png). |
 | "Já estou bem financeiramente." | Não é sobre necessidade financeira — é sobre relevância e legado. Pergunte o que ele vê no mercado mudando ao redor dele. |
 | "Não quero depender de algoritmo." | Vendas Secretas é exatamente um funil discreto, sem depender de audiência ou algoritmo. |
 | "Digital é instável." | Não é pra ele virar influenciador. É um ativo estruturado e documentado — método, não sorte de viral. |
 | "Não vejo urgência." / "Será que preciso agora?" | Não empurre urgência falsa. Pergunte o que tira o sono dele em relação ao próprio mercado — geralmente é medo de estagnação ou de perder relevância, não falta de dinheiro. |
-| "Só entro se for personalizado." | Essa é literalmente a proposta da Individual e do Faço por Você. Reforce que não tem nada de padronizado nessas duas ofertas. |
+| "Só entro se for personalizado." | Essa é literalmente a proposta da Individual e do Sprint do Método. Reforce que não tem nada de padronizado nessas duas ofertas. |
 
 **Provas:** workshop-rodrigo-teixeira.png (homem, "achava que sabia montar o curso, mas não sabia") e vídeos do Sérgio — as duas provas masculinas do banco.
 
@@ -142,7 +142,7 @@ Bom pra quem já fechou antes (ex: leads `aluno_ativo` do Hotmart — Combo Incu
 
 Não se justifique demais — use como ponte de volta pra dor. Sugestão de abordagem:
 
-> "Na época você teve o diagnóstico, mas talvez o passo seguinte parecesse grande demais pra decidir de cara. Hoje existe um caminho mais leve pra começar — não precisa decidir a mentoria completa de uma vez. [Apresentar Método Express, VIP ou Faço por Você conforme o perfil.] A pergunta que importa é: aquela dor que te fez marcar o diagnóstico — ainda tá aí?"
+> "Na época você teve o diagnóstico, mas talvez o passo seguinte parecesse grande demais pra decidir de cara. Hoje existe um caminho mais leve pra começar — não precisa decidir a mentoria completa de uma vez. [Apresentar Método Express, VIP ou Sprint do Método conforme o perfil.] A pergunta que importa é: aquela dor que te fez marcar o diagnóstico — ainda tá aí?"
 
 Isso é verdade sobre o momento atual do ecossistema: antes só existia Grupo/Individual (ticket alto), agora há degraus de entrada mais baratos — é argumento real, não script vazio.
 
@@ -158,8 +158,24 @@ Isso é verdade sobre o momento atual do ecossistema: antes só existia Grupo/In
 
 ---
 
-## 9. Pendências (não inventar, perguntar à Karol)
+## 9. Páginas de vendas — uma por oferta
 
-- Links de pagamento/checkout de cada produto ainda não estão documentados — confirmar antes de fechar qualquer venda.
+Manda o link certo conforme a oferta que você indicou na ligação (não manda mais de um):
+
+| Oferta | Link |
+|---|---|
+| Método Express (R$300) | https://vendas-incubadora.vercel.app/metodo-express/ |
+| Método VIP (R$1.500) | https://vendas-incubadora.vercel.app/metodo-vip/ |
+| Sprint do Método (R$3.000) | https://vendas-incubadora.vercel.app/sprint-do-metodo/ |
+| Grupo (R$5.000/12m) | https://vendas-incubadora.vercel.app/grupo/ |
+| Individual (R$10.000/12m) | https://vendas-incubadora.vercel.app/individual/ |
+| Expert360º (R$497) | https://vendas-incubadora.vercel.app/expert360/ |
+| Diagnóstico Ferramentas (R$97) | https://vendas-incubadora.vercel.app/diagnostico-ferramentas/ |
+
+O botão de Grupo, Individual e Expert360º já abre o checkout real (Hotmart/Voomp) — o lead pode fechar direto na página. As outras 4 (Express, VIP, Sprint, Diagnóstico) ainda abrem o WhatsApp — fecham no pix pela conversa.
+
+## 10. Pendências (não inventar, perguntar à Karol)
+
+- Parcelamento da Individual e do Grupo já confirmados nas páginas — se o lead perguntar algo além disso (ex: outras formas de pagamento), confirmar com a Karol antes de prometer.
 - Parcelamento da Individual (o material antigo trazia 12x R$1.035 no cartão) — confirmar se continua valendo.
 - Método Express: primeira venda real ainda não aconteceu — reportar como foi.

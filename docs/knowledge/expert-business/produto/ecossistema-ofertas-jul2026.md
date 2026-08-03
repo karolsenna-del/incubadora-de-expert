@@ -21,11 +21,11 @@ Pra quem ainda não tem método/produto validado, do desbloqueio inicial até a 
 | **Expert360º** (curso) | Self-paced | R$497 (funil) / R$697 (plataforma) | Tem tempo, orçamento baixo, quer estudar sozinha | Curso gravado (M0-M4) + agentes de IA genéricos pros exercícios. Sem contato pessoal com a Karol |
 | **Método Express** | 1 encontro (1h) | R$300 | Trava pontual e específica num dos 5Ps — sabe exatamente qual é o buraco | Diagnóstico focado + plano de ação daquele ponto. **Nunca foi vendido — tratar como oferta em teste até validar com lead real** |
 | **Método VIP** | 3 encontros | R$1.500 (parcelado 3x R$500 no pix) | Quer fazer ela mesma, mas precisa de direção e ajuste ao longo do caminho | Encontro 1: análise de persona/promessa/método + sugestões de produto e ferramentas. Encontro 2: plano de ação de validação (sem precisar lançar/se expor ainda). Encontro 3: acompanhamento e correção do plano. Grava e transcreve cada sessão. Na prática, o foco frequentemente pesa mais pra posicionamento/conteúdo — a Karol adapta ao que o lead realmente precisa |
-| **Faço por Você** | 5 semanas | R$3.000 | Travada por falta de tempo **e** clareza ao mesmo tempo — já tentou sozinha e não conseguiu, ou não sabe nada de marketing/ferramentas/tecnologia. Projeto nunca sai do papel | A Karol constrói a fundação pronta (persona, promessa, processo autoral, proposta, ferramentas personalizadas, roteiros de validação, agente de IA do método) — o cliente só valida/aprova em cada etapa. **Não inclui validação de campo** (isso exige o próprio cliente prospectar/testar, o que não cabe em 5 semanas). Depende da agenda da Karol abrir — hoje ela é a única entregando |
-| **Grupo** (do zero) | 12 meses (única duração — 6 meses não dá tempo de validar e posicionar) | R$5.000 | Quer a jornada completa (fundação + validação + posicionamento), topa atenção dividida em grupo, prefere ticket menor que a Individual | Jornada completa coached em grupo, incluindo validação com vendas reais. Ver seção "Entregáveis por agente de IA (Grupo)" abaixo |
-| **Individual** (do zero) | 12 meses | R$10.000 (à vista) | Quer a jornada completa 1:1, com acompanhamento total | Jornada completa coached individualmente — fundação + validação + posicionamento + escala. Ver quadro "Entregáveis da Individual por fase" abaixo. É o produto mais caro e o com entrega mais garantida em agenda |
+| **Sprint do Método** | 5 semanas | R$3.000 | Travada por falta de tempo **e** clareza ao mesmo tempo — já tentou sozinha e não conseguiu, ou não sabe nada de marketing/ferramentas/tecnologia. Projeto nunca sai do papel | A Karol constrói a fundação pronta (persona, promessa, processo autoral, proposta, ferramentas personalizadas, roteiros de validação, agente de IA do método) — o cliente só valida/aprova em cada etapa. **Não inclui validação de campo** (isso exige o próprio cliente prospectar/testar, o que não cabe em 5 semanas). Depende da agenda da Karol abrir — hoje ela é a única entregando |
+| **Grupo** (do zero) | 12 meses (única duração — 6 meses não dá tempo de validar e posicionar) | R$5.000 (à vista) ou 12x R$517,12 no cartão | Quer a jornada completa (fundação + validação + posicionamento), topa atenção dividida em grupo, prefere ticket menor que a Individual | Jornada completa coached em grupo, incluindo validação com vendas reais. Ver seção "Entregáveis por agente de IA (Grupo)" abaixo |
+| **Individual** (do zero) | 12 meses | R$10.000 (à vista) ou 12x R$1.035 no cartão | Quer a jornada completa 1:1, com acompanhamento total | Jornada completa coached individualmente — fundação + validação + posicionamento + escala. Ver quadro "Entregáveis da Individual por fase" abaixo. É o produto mais caro e o com entrega mais garantida em agenda |
 
-### Entregáveis do Faço por Você, semana a semana
+### Entregáveis do Sprint do Método, semana a semana
 
 | Semana | Entregável |
 |---|---|
@@ -41,7 +41,7 @@ Segue o Roteiro da Jornada rebalanceado (ver decisão 03/07/2026): Mês 1 (M0+M1
 
 | Fase | Entregável personalizado |
 |---|---|
-| Fundação (mês 1-3) | Ferramentas personalizadas + documentos (persona/promessa/processo) prontos com o método do aluno — mesmo padrão do FPV, no ritmo coached |
+| Fundação (mês 1-3) | Ferramentas personalizadas + documentos (persona/promessa/processo) prontos com o método do aluno — mesmo padrão do Sprint, no ritmo coached |
 | Validação (mês 4-6) | Roteiros reais das ligações de venda, escritos pro caso do aluno |
 | Escala (mês 7-12) | Agente de IA do método do aluno (via Mind Forge/Clone Forge) + página/LP construída (Squad LPago Arcane) + funil de automação configurado (Gestor de Infra Arcane) + configuração de tráfego pronta pra rodar campanha (Tráfego Arcane) |
 
@@ -57,14 +57,14 @@ O agente do método entra na fase de escala, não antes — só faz sentido cons
 
 **Enquanto os 2 itens pendentes não existem, o Grupo continua sendo vendido só com o que já tem hoje** (jornada coached em grupo + acesso aos 6 agentes do método, que já são reais).
 
-### Continuação pós-Faço por Você
+### Continuação pós-Sprint do Método
 
-Quem faz o FPV já sai com a fundação pronta — falta só validar, posicionar e escalar (a segunda metade da jornada). Por isso a continuação é mais curta (6 meses) que o produto do zero (12 meses).
+Quem faz o Sprint já sai com a fundação pronta — falta só validar, posicionar e escalar (a segunda metade da jornada). Por isso a continuação é mais curta (6 meses) que o produto do zero (12 meses).
 
-| Continuação | Duração | Preço | Total (FPV + continuação) | Comparação |
+| Continuação | Duração | Preço | Total (Sprint + continuação) | Comparação |
 |---|---|---|---|---|
 | → Grupo | 6 meses | R$2.000 | R$5.000 | Igual ao Grupo do zero — sem desconto, só dividido em 2 decisões de compra |
-| → Individual | 6 meses | R$5.000 | R$8.000 | R$2.000 mais barato que a Individual do zero (R$10.000) — recompensa por já ter validado o caminho pelo FPV, e incentivo real pra puxar gente pro FPV primeiro |
+| → Individual | 6 meses | R$5.000 | R$8.000 | R$2.000 mais barato que a Individual do zero (R$10.000) — recompensa por já ter validado o caminho pelo Sprint, e incentivo real pra puxar gente pro Sprint primeiro |
 
 ---
 
@@ -80,9 +80,12 @@ Serve tanto quem está criando um curso do zero (entrega roteiros + ferramentas 
 
 ---
 
+## Pagamento (confirmado 01/08/2026)
+
+Pix é sempre à vista. Cartão parcelado em 12x só nas 2 mentorias (Grupo e Individual) — as demais ofertas (Expert360, Método Express, Método VIP, Sprint do Método, Diagnóstico Ferramentas) fecham à vista no pix.
+
 ## Pendências
 
 - **Método Express** precisa ser testado com lead real antes de entrar em qualquer material de vendas como oferta validada.
-- **Links de pagamento/checkout** de cada produto ainda não estão documentados no sistema — confirmar com a Karol antes de qualquer material apontar pra um link específico.
-- Preço da Mentoria Individual mantido em R$10.000 sem revisão do parcelamento (o PDF antigo trazia 12x R$1.035 — confirmar se esse parcelamento continua valendo).
-- **Agente de Roteiro de Validação** e **Agente de Feedback de Portfólio** (Grupo) ainda não existem — construir antes de prometer pro aluno. Quando for a hora: roteiro de validação via Worker Forge/Mind Forge, feedback via Clone Forge (escopo restrito).
+- **Páginas de venda por oferta** — em construção via Squad LPago Arcane (ver `business/campanhas/crm-reativacao-leads/paginas-vendas/`). Checkout/link de pagamento real de cada produto ainda não existe — pendência separada, pra quando as páginas estiverem prontas.
+- **Agente de Roteiro de Validação** e **Agente de Feedback de Portfólio** (Grupo) ainda não existem — construir antes do aluno chegar na etapa que os usa. Quando for a hora: roteiro de validação via Worker Forge/Mind Forge, feedback via Clone Forge (escopo restrito). Karol confirma prazo OK pra ficarem prontos a tempo (01/08).

@@ -22,6 +22,7 @@
 9. [SOP-016] Operar workflow n8n de dispatch (agendado ou webhook)
 10. [SOP-017] Manutencao de prompt de agente Bia (trocar data, link, texto)
 11. [SOP-003] Instalar Microsoft Clarity em pagina Lovable
+12. [SOP-018] Implementar pagina de vendas estatica a partir de copy aprovada (reuso template Karol)
 
 > **Fora do escopo:** Setup inicial do pipeline (instalar n8n + Chatwoot, criar tabelas Supabase + RPCs, configurar Meta Business Manager, gerar System User Token, importar os workflows core WF-INBOUND/AGENT-CORE/OUTBOUND). Isso e responsabilidade do **agente de setup** — outro agente dedicado. Este squad so opera o pipeline ja instalado.
 
@@ -747,6 +748,34 @@ Primeiras 3 respostas da Bia em producao apos o deploy devem ser validadas. Se a
 **Trigger:** Heatmaps/recordings numa pagina Lovable
 
 Resumo: Clarity (clarity.microsoft.com) > criar projeto > copiar snippet > Lovable chat "adicione no head" > Publish > verificar 4 checks (clarityId, clarityMs, clarityGlobal, clskCookie). Free e ilimitado.
+
+---
+
+### [SOP-018] Implementar pagina de vendas estatica a partir de copy aprovada
+**Criado em:** 2026-08-02
+**Ultima execucao:** 2026-08-02 (Metodo Express, CRM Reativacao de Leads)
+**Trigger:** Squad LPago Arcane (ou qualquer agente) entrega briefing+copy aprovada de uma pagina de vendas e pede implementacao
+**Tempo estimado:** ~30-40min por pagina (copy ja pronta, so adaptar pro template)
+**Ferramentas:** Write/Edit (HTML), Vercel CLI
+
+**Pre-requisitos:**
+- Copy final aprovada (nao esqueleto) — headline, secoes, CTA, FAQ, footer
+- Template de referencia: `business/campanhas/lp-diagnostico-expert/index.html` (CSS completo reusavel — paleta preto/branco/cinza/laranja, fonte Sora, mobile-first, barra CTA fixa, Meta Pixel)
+
+**Passos:**
+1. Copiar o bloco `<style>` inteiro do template de referencia — NAO reinventar CSS, so adicionar classes novas se a copy tiver secao sem equivalente (ex: `.oferta-card`, `.objecao`, `.faq-item` — ja criadas, reusar)
+2. Mapear secoes da copy pras classes existentes: Hero→`.hero`, Identificacao→`.secao-escura`+`.ruminacoes`, Autoridade→`.depoimentos`, Cards de entrega→`.passos`, Sobre→`.sobre-grid` (foto `karol.jpg` compartilhada na raiz do projeto), CTA final→`.final`, Footer→copiar exato (CNPJ 38.431.977/0001-36)
+3. Meta Pixel: ID `4188654601446070`, `PageView` no load. CTA dispara evento `Contact` (padrao ja usado nas outras paginas do negocio pra clique de WhatsApp)
+4. CTA aponta pro WhatsApp (`https://wa.me/{numero}?text={mensagem codificada}`) quando nao ha checkout automatizado definido — confirmar com o requisitante se e esse o destino certo
+5. Cada pagina fica em `business/campanhas/crm-reativacao-leads/paginas-vendas/site/{slug-da-oferta}/index.html` — pastas dentro do MESMO projeto Vercel (nao criar projeto novo por pagina)
+6. Deploy: `cd .../paginas-vendas/site && vercel --prod --yes` — Vercel serve `/{slug}/` automaticamente a partir de `{slug}/index.html`
+   - Verificar: `curl -s -o /dev/null -w "%{http_code}" https://{projeto}.vercel.app/{slug}/` deve retornar 200
+
+**Output esperado:** URL `https://vendas-incubadora.vercel.app/{slug}/` ao vivo, testado (200 OK), fiel a copy aprovada sem reescrever texto.
+
+**Troubleshooting:**
+- Se a copy tiver secao sem classe equivalente no template: criar classe nova minima seguindo o padrao visual (cores das CSS vars, radius 12-20px, mesma escala de fonte) em vez de estilo solto inline.
+- Karol prefere revisar a pagina JA IMPLEMENTADA (nao a copy em markdown) — nao pedir aprovacao de copy de novo se ja foi aprovada em outro chat/etapa.
 
 ---
 
