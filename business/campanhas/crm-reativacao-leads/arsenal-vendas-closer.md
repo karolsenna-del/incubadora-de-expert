@@ -35,7 +35,49 @@ Especialista sênior, financeiramente estável, já consolidado no offline. Não
 
 ---
 
-## 3. Tabela do ecossistema (todos os produtos)
+## 3. Como abrir a conversa por origem do lead
+
+Persona (Laura/Ricardo) diz COMO ela decide. Origem diz O QUE ela já sabe sobre você e a Incubadora — isso muda a abertura da ligação, antes mesmo de chegar em qual oferta indicar (seção 5).
+
+### Sessão Estratégica (a mais quente — já fez diagnóstico 1:1 com a Karol)
+
+Já conhece a Incubadora, já foi diagnosticada, já ouviu a oferta (Grupo/Individual) na época e não fechou. Não recomece do zero — use a atualização real da oferta como gancho de reabertura:
+
+> "Desde a sua sessão, a gente melhorou os entregáveis e dobrou o tempo de acesso do Grupo — de 6 pra 12 meses, porque validar e posicionar não cabia em 6. Fiquei pensando em você porque [dor/objetivo do Resumo IA]..."
+
+- Leia **Resumo (IA)** e **O que já tentou** antes de ligar — a abertura precisa citar a dor específica dela, não algo genérico.
+- Se ela hesitar por já ter dito não uma vez, use a ponte da seção 8 (a objeção que só existe na reativação).
+- Ela já foi exposta ao ticket alto (Grupo/Individual) — pode reapresentar do jeito atualizado, ou usar os degraus novos (Express/VIP/Sprint) como caminho mais leve pra começar.
+
+### Webinar "Método em 1 Hora"
+
+Conhece a Karol só de conteúdo/palestra — nunca teve conversa 1:1, nunca foi diagnosticada. Você é provavelmente o primeiro contato comercial direto que ela recebe.
+
+- Abra reconectando com o momento da palestra: "Você participou do Método em 1 Hora — fiquei pensando se aquilo ainda é uma trava pra você."
+- Não assuma que ela já tem clareza de oferta — pergunte onde ela está antes de indicar produto. Ela pode nem saber que dá pra fazer uma Sessão Estratégica/diagnóstico antes de decidir algo maior.
+- Se ainda não tem nada estruturado, considere sugerir o diagnóstico como próximo passo antes de empurrar oferta paga — a menos que ela já demonstre clareza suficiente pra entrar direto em Express/VIP.
+
+### Comprador de outro produto (workshop, ex: "Destrave seu curso online" via Hotmart)
+
+Já pagou algo à Karol antes — a barreira de confiança pra pagar de novo é menor. Mas o produto que comprou não é sobre método/vendas, é sobre outra coisa — não assuma que ela já entende a oferta da mentoria.
+
+- Primeira pergunta que direciona tudo: **ela já criou o método a partir do workshop?**
+  - **Se já criou mas ainda não valida/vende** → ela já mostrou que executa sozinha — **Sprint do Método** (5 semanas, fundação pronta + roteiros de validação) é o caminho natural, sem precisar dos passos mais lentos (Express/VIP).
+  - **Se não criou nada ainda** → segue a tabela padrão do Eixo 1 pelo perfil dela (seção 5).
+- Cuidado pra não confundir com quem já é **aluna da própria mentoria** (`status_geral = aluno_ativo`, comprou o Combo Incubadora) — esse caso raro não é reativação de mentoria nova, é a oferta de Diagnóstico Ferramentas (Eixo 2, seção 5).
+
+### Grupo do WhatsApp (o mais frio)
+
+Vem das lives semanais — engajamento de conteúdo, não contato comercial. Muitos ainda estão só com telefone (sem nome, sem histórico). Nunca pediu explicitamente pra ser contatada sobre a mentoria.
+
+- Não abra com pitch. Reconheça a participação no grupo/lives primeiro, pergunte o nome se ainda não tiver, e só depois explore se ela topa conversar sobre o método dela.
+- Trate a primeira mensagem também como oportunidade de enriquecer a ficha (nome, contexto, o que faz) — não só de vender.
+- **Se ela perguntar "como você tem meu número?" ou "quem te passou meu contato?"** — seja transparente: "Peguei do grupo do WhatsApp das lives da Karol, que você participa. Não é nada automático, sou eu mesma entrando em contato." Não minta nem enrole — é o jeito mais rápido de perder a pouca confiança que já existe.
+- Se ela reagir mal ou pedir pra não ser contatada, registre e não insista — o número veio de exportação do grupo, não de opt-in comercial explícito.
+
+---
+
+## 4. Tabela do ecossistema (todos os produtos)
 
 | # | Produto | Eixo | Duração | Preço | Observação |
 |---|---------|------|---------|-------|------------|
@@ -62,7 +104,7 @@ Fonte oficial (se este arsenal desatualizar, esse arquivo vale): `docs/knowledge
 
 ---
 
-## 4. Qual oferta indicar
+## 5. Qual oferta indicar
 
 Antes de empurrar qualquer produto, descubra uma coisa: **o lead já tem um método/produto rodando, ou ainda não lançou nada?**
 
@@ -94,7 +136,7 @@ Bom pra quem já fechou antes (ex: leads `aluno_ativo` do Hotmart — Combo Incu
 
 ---
 
-## 5. Mapa de objeções — Laura
+## 6. Mapa de objeções — Laura
 
 | Objeção | Como responder |
 |---|---|
@@ -118,7 +160,7 @@ Bom pra quem já fechou antes (ex: leads `aluno_ativo` do Hotmart — Combo Incu
 
 ---
 
-## 6. Mapa de objeções — Ricardo (perfil VIP)
+## 7. Mapa de objeções — Ricardo (perfil VIP)
 
 | Objeção | Como responder |
 |---|---|
@@ -136,9 +178,11 @@ Bom pra quem já fechou antes (ex: leads `aluno_ativo` do Hotmart — Combo Incu
 
 ---
 
-## 7. A objeção que só existe na reativação
+## 8. As objeções que só existem na reativação (por origem)
 
-**"Já fiz a sessão estratégica / diagnóstico e não fechei. Por que agora seria diferente?"**
+Duas origens carregam a mesma objeção de fundo — "já tive contato com você antes e não avançou, por que agora seria diferente?" — mas com pontes diferentes.
+
+### Sessão Estratégica: "Já fiz o diagnóstico e não fechei. Por que agora seria diferente?"
 
 Não se justifique demais — use como ponte de volta pra dor. Sugestão de abordagem:
 
@@ -146,9 +190,17 @@ Não se justifique demais — use como ponte de volta pra dor. Sugestão de abor
 
 Isso é verdade sobre o momento atual do ecossistema: antes só existia Grupo/Individual (ticket alto), agora há degraus de entrada mais baratos — é argumento real, não script vazio.
 
+### Comprador de workshop: "Já comprei um produto seu e não consegui criar/aplicar nada. Por que seria diferente agora?"
+
+Não é a mesma coisa que o diagnóstico não converter — aqui ela **tentou executar sozinha** e travou. A ponte é sobre o formato, não sobre a oferta:
+
+> "O workshop te deu o caminho, mas era pra fazer por conta própria — e boa parte do que trava não é falta de conteúdo, é não ter alguém junto pra decidir com você. O Sprint do Método é literalmente isso: a fundação sai construída COM você em 5 semanas, não é mais um material pra você aplicar sozinha."
+
+Se ela disser que nem chegou a tentar (comprou e não usou), não empurre o Sprint de cara — volta pra pergunta padrão da seção 3 (já criou o método ou não) e trata pelo Eixo 1 normal.
+
 ---
 
-## 8. Como trabalhar no CRM
+## 9. Como trabalhar no CRM
 
 - Planilha operacional: https://docs.google.com/spreadsheets/d/1BD4L6toolVi17Of1PrwmNFnRQprk8obV6wWN_lLatn0/edit (aba "CRM")
 - Sua zona de trabalho: coluna **Status** (dropdown: a_reativar / em_conversa / follow_up_marcado / fechou / desistiu) e **Observação (novo contato)** — escreva o que aconteceu, o sync limpa a célula automaticamente depois de gravar no histórico.
@@ -158,7 +210,7 @@ Isso é verdade sobre o momento atual do ecossistema: antes só existia Grupo/In
 
 ---
 
-## 9. Páginas de vendas — uma por oferta
+## 10. Páginas de vendas — uma por oferta
 
 Manda o link certo conforme a oferta que você indicou na ligação (não manda mais de um):
 
@@ -174,7 +226,13 @@ Manda o link certo conforme a oferta que você indicou na ligação (não manda 
 
 O botão de Grupo, Individual e Expert360º já abre o checkout real (Hotmart/Voomp) — o lead pode fechar direto na página. As outras 4 (Express, VIP, Sprint, Diagnóstico) ainda abrem o WhatsApp — fecham no pix pela conversa.
 
-## 10. Pendências (não inventar, perguntar à Karol)
+### Dados do PIX (pra fechar Express, VIP, Sprint e Diagnóstico Ferramentas direto na conversa)
+
+**Informações PIX:**
+- Nome: Gestão pra Tudo - Karoline Franzini de Carvalho Senna
+- Chave (CNPJ): 38.431.977/0001-36
+
+## 11. Pendências (não inventar, perguntar à Karol)
 
 - Parcelamento da Individual e do Grupo já confirmados nas páginas — se o lead perguntar algo além disso (ex: outras formas de pagamento), confirmar com a Karol antes de prometer.
 - Parcelamento da Individual (o material antigo trazia 12x R$1.035 no cartão) — confirmar se continua valendo.
