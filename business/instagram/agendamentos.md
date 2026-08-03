@@ -52,3 +52,5 @@
 | 15/07/2026 | bottura-metodo-incopiavel (reagendado) | 20/07/2026 12h BRT | via GitHub Actions | cron atualizado a pedido da Karol (era 16/07) |
 | 19/07/2026 | nao-quero-ser-amadora | — | via GitHub Actions | **FALHOU** — erro 9007 Meta API (mesma corrida do RULE-2, workflow criado antes do fix). Achado tardiamente em 28/07 (Karol notou post sumido). Reagendado pra 03/08/2026 12h BRT com fix aplicado |
 | 20/07/2026 | bottura-metodo-incopiavel | — | via GitHub Actions | **FALHOU** — erro 9007 Meta API (mesma corrida do RULE-2, workflow criado antes do fix). Achado tardiamente em 28/07 (Karol notou post sumido). Reagendado pra 02/08/2026 12h BRT com fix aplicado |
+| 02/08/2026 | bottura-metodo-incopiavel (reagendado) | 02/08/2026 12h BRT | 17950047768245771 | ✓ publicado — fix da RULE-2 confirmado, sem erro 9007 |
+| 03/08/2026 | nao-quero-ser-amadora (reagendado) | 03/08/2026 12h BRT | 18121516213876346 | ✓ publicado — fix da RULE-2 confirmado, sem erro 9007 |
