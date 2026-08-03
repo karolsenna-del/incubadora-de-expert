@@ -6,6 +6,11 @@
 
 | Data Exec | Carrossel | Agendado Para | Media ID | Status |
 |-----------|-----------|--------------|----------|--------|
+| 02/08/2026 | autoridade-comportamento-busca-ia | 05/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-autoridade-comportamento-busca-ia.yml) — aguardando push |
+| 02/08/2026 | executivos-ausentes-linkedin-triplice | 06/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-executivos-ausentes-linkedin-triplice.yml) — aguardando push |
+| 02/08/2026 | geo-o-novo-seo | 07/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-geo-o-novo-seo.yml) — aguardando push |
+| 02/08/2026 | maira-cardi-promessa-vaga-metodo | 08/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-maira-cardi-promessa-vaga-metodo.yml) — aguardando push |
+| 02/08/2026 | metodo-e-modelo-de-negocio | 09/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-metodo-e-modelo-de-negocio.yml) — 8 slides no Cloudinary — aguardando push |
 | 01/08/2026 | 6-motivos-nao-comecar-pelo-curso | 04/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-6-motivos-nao-comecar-pelo-curso.yml) — aguardando push |
 | — | — | — | — | *(inicializado em 2026-06-22)* |
 | 23/06/2026 | adiando-ha-anos | publicado imediatamente | 18098747612464009 | ✓ publicado |

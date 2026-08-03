@@ -1,0 +1,92 @@
+name: Post autoridade-comportamento-busca-ia
+
+on:
+  schedule:
+    - cron: '0 15 5 8 *'   # 05/08 às 15:00 UTC = 12h BRT
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publicar carrossel via Meta Graph API
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: "17841437530973593"
+          CAPTION: |
+            Sabia que a forma como as pessoas pesquisam na internet mudou e isso é uma grande oportunidade pra você?
+
+            37% das pessoas já nem abrem mais o Google. Abrem um chat de IA e perguntam direto — eu também já faço minhas pesquisas assim. E você, já mudou o seu jeito de procurar? O ChatGPT dobrou de usuário em menos de 1 ano — 400 milhões pra 900 milhões de pessoas usando toda semana.
+
+            Você tá otimizando post pro Instagram. Uma em cada três pessoas já nem procura mais lá.
+
+            25% das buscas no Google devem desaparecer até o fim desse ano. Não é previsão de blog — é projeção de mercado.
+
+            Se a busca virou conversa com IA, tem uma pergunta que decide se você existe pro público: quando alguém pergunta pra uma IA sobre o que você ensina, você é a resposta?
+
+            Testa uma coisa por mim: pergunta pra uma IA sobre algo que você ensina. Comenta aqui o que ela respondeu.
+
+            Ter método autoral é a saída pra aparecer nessas pesquisas — e aumentar sua autoridade no digital.
+
+            #incubadoradeexpert #expertdigital #inteligenciaartificial #comportamentodigital #metodoautoral
+        run: |
+          python3 - <<'EOF'
+          import os, time, requests, urllib.parse as up
+
+          TOKEN   = os.environ["META_TOKEN"]
+          IG_ID   = os.environ["IG_USER_ID"]
+          CAPTION = os.environ["CAPTION"].strip()
+          BASE    = "https://graph.facebook.com/v21.0"
+
+          SLIDES = [
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721472/instagram-carrosseis/autoridade-comportamento-busca-ia/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721474/instagram-carrosseis/autoridade-comportamento-busca-ia/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721475/instagram-carrosseis/autoridade-comportamento-busca-ia/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721477/instagram-carrosseis/autoridade-comportamento-busca-ia/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721478/instagram-carrosseis/autoridade-comportamento-busca-ia/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721480/instagram-carrosseis/autoridade-comportamento-busca-ia/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721481/instagram-carrosseis/autoridade-comportamento-busca-ia/slide-07.png"
+          ]
+
+          def meta_post(path, data):
+            r = requests.post(f"{BASE}/{path}", params={"access_token": TOKEN},
+                              data=up.urlencode(data).encode("utf-8"),
+                              headers={"Content-Type": "application/x-www-form-urlencoded"})
+            print(f"{path}: {r.status_code} {r.text[:200]}")
+            r.raise_for_status()
+            return r.json()
+
+          print("Criando item containers...")
+          item_ids = []
+          for url in SLIDES:
+            resp = meta_post(f"{IG_ID}/media", {"image_url": url, "is_carousel_item": "true"})
+            item_ids.append(resp["id"])
+          print(f"{len(item_ids)} containers criados")
+
+          print("Criando carousel container...")
+          resp = meta_post(f"{IG_ID}/media", {
+            "media_type": "CAROUSEL",
+            "children":   ",".join(item_ids),
+            "caption":    CAPTION,
+            "published":  "false",
+          })
+          carousel_id = resp["id"]
+          print(f"carousel_id: {carousel_id}")
+
+          print("Aguardando container ficar pronto...")
+          for tentativa in range(20):
+            r = requests.get(f"{BASE}/{carousel_id}", params={"fields": "status_code", "access_token": TOKEN})
+            status = r.json().get("status_code", "UNKNOWN")
+            if status == "FINISHED":
+              print(f"container pronto ({tentativa+1} checagens)")
+              break
+            if status == "ERROR":
+              raise RuntimeError("Container falhou com status ERROR")
+            time.sleep(5)
+          else:
+            raise RuntimeError("Container não ficou FINISHED após 100s")
+
+          print("Publicando...")
+          resp = meta_post(f"{IG_ID}/media_publish", {"creation_id": carousel_id})
+          print(f"PUBLICADO: {resp}")
+          EOF

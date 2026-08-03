@@ -1,0 +1,90 @@
+name: Post maira-cardi-promessa-vaga-metodo
+
+on:
+  schedule:
+    - cron: '0 15 8 8 *'   # 08/08 às 15:00 UTC = 12h BRT
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publicar carrossel via Meta Graph API
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: "17841437530973593"
+          CAPTION: |
+            Maíra Cardi foi processada duas vezes — por duas alunas diferentes. Um juiz disse que não houve problema. Outro mandou devolver o dinheiro.
+
+            Caso 1, Rio de Janeiro: pedido de R$300 mil por propaganda enganosa. A Justiça negou — considerou que não houve propaganda enganosa. Caso 2, São Paulo, processo diferente: outra aluna insatisfeita, e aqui, condenação a devolver R$829,80.
+
+            Os dois processos giram em torno da mesma promessa: "transformar dificuldade financeira em prosperidade, com ganhos de R$250 a R$100 mil." Faixa larga demais pra qualquer um interpretar.
+
+            O problema nunca foi prometer transformação. Foi prometer ela de um jeito vago o suficiente pra virar terreno de discordância — até pra Justiça.
+
+            Todo expert precisa saber escrever a propaganda de 10 segundos do próprio método: a transformação real que ele entrega, dita de forma direta, simples e atrativa, sem espaço pra má interpretação.
+
+            Testa agora: consegue resumir a transformação do teu método em 1 frase direta? Comenta aqui — vamos ver.
+
+            #incubadoradeexpert #expertdigital #metodoautoral #posicionamentodigital #autoridadedigital
+        run: |
+          python3 - <<'EOF'
+          import os, time, requests, urllib.parse as up
+
+          TOKEN   = os.environ["META_TOKEN"]
+          IG_ID   = os.environ["IG_USER_ID"]
+          CAPTION = os.environ["CAPTION"].strip()
+          BASE    = "https://graph.facebook.com/v21.0"
+
+          SLIDES = [
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721505/instagram-carrosseis/maira-cardi-promessa-vaga-metodo/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721506/instagram-carrosseis/maira-cardi-promessa-vaga-metodo/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721508/instagram-carrosseis/maira-cardi-promessa-vaga-metodo/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721509/instagram-carrosseis/maira-cardi-promessa-vaga-metodo/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721511/instagram-carrosseis/maira-cardi-promessa-vaga-metodo/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721512/instagram-carrosseis/maira-cardi-promessa-vaga-metodo/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1785721514/instagram-carrosseis/maira-cardi-promessa-vaga-metodo/slide-07.png"
+          ]
+
+          def meta_post(path, data):
+            r = requests.post(f"{BASE}/{path}", params={"access_token": TOKEN},
+                              data=up.urlencode(data).encode("utf-8"),
+                              headers={"Content-Type": "application/x-www-form-urlencoded"})
+            print(f"{path}: {r.status_code} {r.text[:200]}")
+            r.raise_for_status()
+            return r.json()
+
+          print("Criando item containers...")
+          item_ids = []
+          for url in SLIDES:
+            resp = meta_post(f"{IG_ID}/media", {"image_url": url, "is_carousel_item": "true"})
+            item_ids.append(resp["id"])
+          print(f"{len(item_ids)} containers criados")
+
+          print("Criando carousel container...")
+          resp = meta_post(f"{IG_ID}/media", {
+            "media_type": "CAROUSEL",
+            "children":   ",".join(item_ids),
+            "caption":    CAPTION,
+            "published":  "false",
+          })
+          carousel_id = resp["id"]
+          print(f"carousel_id: {carousel_id}")
+
+          print("Aguardando container ficar pronto...")
+          for tentativa in range(20):
+            r = requests.get(f"{BASE}/{carousel_id}", params={"fields": "status_code", "access_token": TOKEN})
+            status = r.json().get("status_code", "UNKNOWN")
+            if status == "FINISHED":
+              print(f"container pronto ({tentativa+1} checagens)")
+              break
+            if status == "ERROR":
+              raise RuntimeError("Container falhou com status ERROR")
+            time.sleep(5)
+          else:
+            raise RuntimeError("Container não ficou FINISHED após 100s")
+
+          print("Publicando...")
+          resp = meta_post(f"{IG_ID}/media_publish", {"creation_id": carousel_id})
+          print(f"PUBLICADO: {resp}")
+          EOF
