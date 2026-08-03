@@ -7,7 +7,7 @@
 > **Diferença pro pool (`base-inicial.md`):** o pool guarda TEMAS VIRAIS (perenes, pra escala). Este arquivo
 > guarda TEMAS DO MOMENTO (hype passageiro, react de matéria — validade curta). São coisas diferentes.
 
-## Status de uso (atualizado 20/07/2026)
+## Status de uso (atualizado 01/08/2026)
 
 Batelada de 5 posts novos produzida em 20/07 (ver LOG do `base-inicial.md`). Usados desta lista:
 - **1.1** Essência como diferencial de autoridade → post `essencia-diferencial-autoridade`
@@ -16,7 +16,14 @@ Batelada de 5 posts novos produzida em 20/07 (ver LOG do `base-inicial.md`). Usa
 - **2.2** Carol Diniz (Teacher dos Famosos) → post `carol-diniz-metodo-proprio`
 - **2.3** Mari Vabo (Instinto Primitivo) → post `mari-vabo-credencial-nao-basta`
 
-Restam nesta lista pra próxima batelada: 1.2 a 1.8, 1.10, 1.11 (tendências) + 2.4 a 2.10 (casos, com cuidado nos 2.9/2.10 que são contraexemplo/polêmica).
+**Batelada de 5 posts (teste CTA-pergunta direta, insight Aria) produzida em 01/08 — teorias prontas, aguardando Rico:**
+- **1.2** Fim dos influencers → post `metodo-e-modelo-de-negocio`
+- **1.6** IA muda as regras do marketing → post `autoridade-comportamento-busca-ia` (Parte 2 explícita de `essencia-diferencial-autoridade`)
+- **1.7** GEO — a maior mudança do marketing digital → post `geo-o-novo-seo`
+- **1.8** Presença de executivos no digital → post `executivos-ausentes-linkedin-triplice` (framework Tríplice do Expert360 M4)
+- **2.9** Mariana Rios (usado como referência estrutural, não consumido diretamente) → o caso NOVO usado foi **Maíra Cardi** (fora da lista numerada original, garimpo à parte) → post `maira-cardi-promessa-vaga-metodo`
+
+Restam nesta lista pra próxima batelada: 1.3, 1.4, 1.5, 1.10, 1.11 (tendências) + 2.4 a 2.8, 2.10 (casos, 2.10 com cuidado — é exemplo de empacotamento, não de conteúdo).
 
 ## Como levar uma pauta pro squad
 

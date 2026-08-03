@@ -128,6 +128,19 @@ echo "OK: $OUTPUT_PNG"
 
 Tornar executavel: `chmod +x tools/render.sh`
 
+## Nota Windows (achado 02/08/2026)
+
+Em Windows (testado com Chromium via `~/AppData/Local/ms-playwright/chromium-{v}/chrome-win64/chrome.exe`), `body/.slide { width: 1080px; height: 1350px }` **causa corte de conteúdo na borda direita/inferior** — a área realmente capturada pelo `--screenshot` não bate com o valor fixo em px, mesmo o PNG de saída saindo com as dimensões corretas (1080x1350). Elementos `position:absolute`/`fixed` ancorados em `bottom`/`right`, ou conteúdo em flexbox `justify-content:flex-end` perto da borda, ficam cortados.
+
+**Fix validado:** usar `width:100%; height:100%` no `html`, `body` e no elemento raiz do slide (`.slide`), em vez de `1080px`/`1350px` fixos. Com isso a área ocupa 100% do viewport real, sem corte — confirmado nos templates `stats-hero`, `foto-frase`, `diagnostico-tipografico` e `capa-marca` (corrigidos nessa data).
+
+Outros ajustes necessários pra rodar em Windows:
+- Localizar Chrome: checar `~/AppData/Local/ms-playwright/chromium-*/chrome-win64/chrome.exe` (não só os paths de macOS/Linux que este doc lista acima)
+- Passar `--no-sandbox` (sem essa flag, o Chrome as vezes recusa acesso ao próprio binário — "Sandbox cannot access executable")
+- Montar a URL `file://` com o path estilo Windows (`file:///C:/Users/...`), **não** o path POSIX que o Git Bash usa por padrão (`/c/Users/...`) — senão vira `ERR_FILE_NOT_FOUND`. Converter com `cygpath -w` antes de montar a URL.
+
+`build-carousel.mjs` já faz tudo isso certo (ver `findChrome()` no próprio script) — o problema só aparece em renders manuais fora desse motor (ex: templates tipo "capa" com `template.html` próprio, renderizados via `render.sh` ou chamada direta ao Chrome).
+
 ## Performance
 
 - 1 render: ~1-2 segundos

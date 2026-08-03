@@ -1,0 +1,13 @@
+{
+  "template": "card-tweet-dark",
+  "name": "metodo-e-modelo-de-negocio",
+  "_nota": "Slides 1 e 2 do post final (capa-hook sem número + hero com o '49') são renderizados manualmente fora deste motor (template HERO/diagnostico-tipografico, dark) — ver roteiro.md. Este array cobre só os slides 3-8 (card-tweet, branco), que o build-carousel.mjs numera como slide-01.png..slide-06.png em Downloads — renomear pra slide-03..slide-08 ao copiar pra fila.",
+  "slides": [
+    { "text": "Pra onde foi o resto? Virou negócio próprio.<br><strong>45%</strong> dos influencers em tempo integral já lançaram produto ou marca própria — faturando perto de US$100 mil por ano.", "image": null },
+    { "text": "Influência é aluguel. Você paga com atenção, mas o imóvel nunca é seu.<br>Depende do patrocinador pagar, do algoritmo entregar, da plataforma continuar existindo.", "image": null },
+    { "text": "<strong>Método é modelo de negócio.</strong><br>Produto, funil de vendas, autoridade — coisas que transcendem o digital e não dependem de like de ninguém.", "image": null },
+    { "text": "\"Mas eu não tenho seguidores pra vender.\"<br>Nem quem TEM milhões de seguidores tá apostando só nisso mais. Audiência grande sem método também é aluguel — só que caro.", "image": null },
+    { "text": "Quem tem método sobrevive a qualquer queda de algoritmo.<br>Quem só tem alcance, cai junto com a plataforma.", "image": null },
+    { "text": "Alcance ou método: qual dos dois você tá construindo hoje?<br><strong>Comenta aqui embaixo</strong>. Quero ler a real da tua conta 👇", "image": null }
+  ]
+}
