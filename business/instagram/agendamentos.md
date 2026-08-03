@@ -12,6 +12,7 @@
 | 02/08/2026 | maira-cardi-promessa-vaga-metodo | 08/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-maira-cardi-promessa-vaga-metodo.yml) — aguardando push |
 | 02/08/2026 | metodo-e-modelo-de-negocio | 09/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-metodo-e-modelo-de-negocio.yml) — 8 slides no Cloudinary — aguardando push |
 | 01/08/2026 | 6-motivos-nao-comecar-pelo-curso | 04/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-6-motivos-nao-comecar-pelo-curso.yml) — aguardando push |
+| 02/08/2026 | primeiras-vendas-simplificar-metodo | 10/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-primeiras-vendas-simplificar-metodo.yml) — 8 slides no Cloudinary — aguardando push |
 | — | — | — | — | *(inicializado em 2026-06-22)* |
 | 23/06/2026 | adiando-ha-anos | publicado imediatamente | 18098747612464009 | ✓ publicado |
 | 21/07/2026 | genesis-pool-metodo-autoral | publicado imediatamente (14h08 BRT — passou do horário padrão de 12h, Karol pediu pra publicar hoje) | 18099073856191847 | ✓ publicado |
