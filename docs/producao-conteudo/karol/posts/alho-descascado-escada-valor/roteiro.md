@@ -28,7 +28,7 @@ Ele tem tempo livre. É aposentado.
 Mas tempo livre não é a mesma coisa
 que gostar de fazer sozinho.
 
-Ele só decidiu que economizar valia
+Ele só decidiu que economizar dinheiro valia
 mais que economizar tempo.
 
 **[CONTEÚDO / APLICAÇÃO — 30-52s]**
