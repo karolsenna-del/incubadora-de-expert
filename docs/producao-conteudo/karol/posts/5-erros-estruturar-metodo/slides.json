@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "5-erros-estruturar-metodo",
+  "slides": [
+    { "numero": "5", "texto": "erros em estruturar seu método que custam <strong>meses de trabalho</strong> jogado fora.", "modifiers": ["numero-topo"] },
+    { "numero": "", "texto": "Não são iniciantes.\n\nSão especialistas experientes, com anos de conhecimento — que erram justamente porque <strong>sabem demais</strong> e nunca pararam pra estruturar.", "modifiers": ["sem-numero"] },
+    { "numero": "1", "texto": "<strong>Erro 1:</strong> Colocar tudo dentro do produto. Curso gigante, confuso — ninguém segue até o fim.\n\n<strong>Correção:</strong> escolha 1 resultado específico e corte tudo que não leva direto a ele.", "modifiers": [] },
+    { "numero": "2", "texto": "<strong>Erro 2:</strong> Tentar aparecer e se posicionar antes de saber com precisão quem você serve.\n\n<strong>Correção:</strong> defina a persona primeiro — sem isso, todo o resto fica genérico.", "modifiers": [] },
+    { "numero": "3", "texto": "<strong>Erro 3:</strong> Lançar pro público antes de validar o método.\n\n<strong>Correção:</strong> valide 1:1 primeiro — feche vendas reais em ambiente controlado antes de se expor.", "modifiers": [] },
+    { "numero": "4", "texto": "<strong>Erro 4:</strong> Aparecer sem estrutura — imitando quem tem menos experiência que você.\n\n<strong>Correção:</strong> o problema nunca foi aparecer. É aparecer sem posicionamento e método definidos.", "modifiers": [] },
+    { "numero": "5", "texto": "<strong>Erro 5:</strong> Confundir conhecimento com método — achar que \"saber muito\" já é \"ter um caminho pronto pra ensinar\".\n\n<strong>Correção:</strong> conhecimento é sua trajetória. Método é a transformação organizada pra outra pessoa seguir.", "modifiers": [] },
+    { "numero": "", "texto": "Se você se reconheceu em pelo menos 1 desses, não é falta de competência.\n\n<strong>Me segue:</strong> aqui eu ensino a corrigir isso, um bloco de cada vez.\n\n<small>Karol Senna · Incubadora de Expert</small>", "modifiers": ["sem-numero"] }
+  ]
+}
