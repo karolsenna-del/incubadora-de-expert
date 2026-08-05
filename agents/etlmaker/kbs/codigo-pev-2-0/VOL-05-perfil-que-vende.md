@@ -1,188 +1,147 @@
 # VOL-05 — Estrutura de um Perfil que Vende
 
-**KB:** Código PEV 2.0 — Clara Siqueira
-**Módulo:** Estrutura de um Perfil que Vende (Aulas 1–3)
+> **Fontes primárias:** 01-estrutura-perfil-que-vende.txt · 02-reels-x-stories.txt · 03-stories-que-vendem.txt
+> **Domínios:** OBE (Básico do Perfil), Reels x Stories (papéis distintos), Clima de Compra (regra 80/20)
+> **Autores:** Clara Siqueira (Aula 1) + co-estrategista não identificado por nome completo nas fontes (Aulas 2 e 3 — ver MAPA-TERRITORIAL, Seção 3)
 
 ---
 
-## 1. A Lógica por Trás do Instagram como Canal de Venda
+## Nota sobre Qualidade de Fonte
 
-**O objetivo:** levar pessoas do Ponto A (navegando no Instagram) ao Ponto B (seu perfil).
-
-Independente de tráfego orgânico (conteúdo) ou tráfego pago (anúncios), o objetivo é sempre o mesmo: trazer pessoas para o seu perfil. O melhor cenário usa os dois.
-
-> "Se alguém defende só tráfego orgânico, é porque não sabe fazer tráfego pago. Se defende só tráfego pago, é porque não sabe produzir conteúdo. O melhor dos mundos é os dois."
-
-**Sequência recomendada:**
-1. Começar com produção de conteúdo orgânico
-2. Quando começar a faturar, reinvestir em tráfego pago
-3. Os dois juntos = escala
+A transcrição da Aula 1 (01-estrutura-perfil-que-vende.txt) tem ruído significativo (Whisper `tiny`), incluindo trocas de palavras prováveis ("trafigo" por "tráfego") e um diálogo com um interlocutor chamado "João Vito" que dificulta atribuição de algumas falas. A composição abaixo prioriza os trechos inequívocos e sinaliza inferências quando necessário.
 
 ---
 
-## 2. O Perfil Minimamente Estruturado (OBE)
+## 1. A Lógica Comercial por Trás do Instagram
 
-O OBE é o básico obrigatório. **A casa precisa estar arrumada antes de você trazer visita.**
+O módulo abre com um reposicionamento: depois de aprender a viralizar e crescer (Módulos 1-4), a virada é encarar o Instagram como estrutura comercial. *"Qual é a lógica por trás do Instagram? [...] Você olha o Instagram como uma estrutura comercial: eu preciso fazer dinheiro com o meu perfil."* [Fonte: 01-estrutura-perfil-que-vende.txt]
 
-### Foto de Perfil
-- Rosto visível, foto clara
-- Não precisa ser profissional, mas precisa dar para ver quem é você
-- Sem óculos escuros, sem foto de costas, sem foto de baixa qualidade
+> **Framework citado:** *"Eu preciso levar pessoas do ponto A ao ponto B [...] o ponto A é todas as pessoas que estão navegando no Instagram [...] o ponto B é o seu perfil."*
+> [Fonte: 01-estrutura-perfil-que-vende.txt]
 
-### Nome e Arroba
-- Nome: claro e fácil de lembrar. Não colocar muito longo.
-- Arroba: tente ter o mínimo de caracteres especiais. Se o ideal não estiver disponível, use ponto ou iniciais do sobrenome.
+### Tráfego Orgânico + Tráfego Pago, Não Um ou Outro
 
-Exemplo: `@clarasiqueira.` → Clara optou por um ponto para não ter sequência absurda de caracteres
+> *"Eu vou te ensinar a detectar guru na internet [...] se a pessoa fica defendendo muito só um lado [...] ela não sabe fazer de fato o outro [...] o melhor dos mundos é: tráfego orgânico mais tráfego pago."*
+> [Fonte: 01-estrutura-perfil-que-vende.txt]
 
-### Bio
-Deve ter rapidamente:
-- Ponto de autoridade (o que você conquistou ou quem é sua audiência)
-- O que você faz / o que você entrega
-- Proposta de valor do produto principal
-- Link
-
-Exemplo da Clara:
-> "Cristã e esposa. Mentora. Rotina, valores e conselhos de amigo. Te faço viralizar em 24 horas com o PEV. +50 mil alunas em 35 países. [Link]"
-
-### Destaques
-Variar entre:
-- Viagens / lifestyle (pontos de conexão)
-- Sobre a mentoria / produto
-- Alunas e resultados
-- Depoimentos
-
-Os destaques são o que a pessoa vai consumir depois de assistir ao reels viral e decidir te seguir.
-
-### Produção de conteúdo em dia
-O feed precisa estar ativo. Pessoa chega pelo reels viral → vai no perfil → encontra produção recente → segue.
-
-> "Imagina chamar alguém para um café e a casa está uma bagunça, o café frio, e você fala 'senta aí em qualquer lugar'. Você acha que ela vai querer voltar?"
+A recomendação prática: primeiro construir tempo e volume na produção de conteúdo orgânico, e só depois reinvestir em tráfego pago sobre o que já performa. [Fonte: 01-estrutura-perfil-que-vende.txt]
 
 ---
 
-## 3. Reels x Stories: Objetivos Completamente Diferentes
+## 2. OBE: O Básico do Perfil
 
-A confusão mais comum: tentar vender por reels e criar conexão por stories. É o contrário.
+> **Checklist — OBE (elementos mínimos do perfil estruturado)**
+> - Foto de perfil clara e cristalina (não precisa ser profissional, mas precisa ter qualidade e mostrar o rosto)
+> - Nome objetivo, sem excesso de caracteres
+> - Arroba (@) simples, fácil de lembrar
+> - Bio resumindo: ponto de autoridade + trajetória + o que você entrega + proposta de valor do produto principal
+> - Destaques organizados (viagens, mentoria, depoimentos)
+> - Feed com produção de conteúdo em dia
+> [Fonte: 01-estrutura-perfil-que-vende.txt]
 
-### Reels — Para Atrair Seguidor
+> **Metáfora usada pela fonte:** *"Imagina que você chamou a pessoa pra tomar um café na sua casa [...] a casa está desarrumada, o café tá frio [...] ela não vai querer te seguir, muito menos comprar de você, porque a primeira impressão ainda fica."*
+> [Fonte: 01-estrutura-perfil-que-vende.txt]
 
-**Objetivo principal:** trazer pessoas novas para o perfil.
+> **REGRA CARDINAL — O óbvio é o melhor caminho**
+> *"O óbvio é o melhor caminho, eu vou repetir mais uma vez: o óbvio é o melhor caminho."*
+> *Motivo:* a fonte argumenta que estrutura básica bem executada (não necessariamente sofisticada) já é suficiente pra não perder a pessoa que chegou por um vídeo viral — over-engineering do perfil não é o gargalo, a ausência do básico é.
+> [Fonte: 01-estrutura-perfil-que-vende.txt]
 
-**Premissa obrigatória:** sempre produza reels como se a pessoa **nunca tivesse te visto**. Porque provavelmente ela não viu. Reels alcança não-seguidores — esse é o ponto.
-
-**Tipos de Reels e seus objetivos:**
-
-| Tipo | Objetivo | Viraliza? |
-|------|----------|-----------|
-| Loufai (opinião polêmica) | Ganho de seguidor + engajamento | Alto potencial |
-| Vlog/rotina | Engajamento + conexão | Bom potencial |
-| Qualificação | Conscientizar quem já segue | Baixo, mas necessário |
-| Venda (10% da produção) | Converter quem já está aquecido | Não viraliza |
-
-**A proporção:**
-- 90% dos reels → para viralizar, engajar, ganhar seguidor
-- 10% dos reels → com CTA de venda direta (especialmente usando mini-chat)
-
-> "A essência do reels não é para vender. É para atrair base."
-
-**Métricas que indicam reels de qualidade:**
-- Loufai com 5,3M de visualizações + 12.000 comentários → trouxe 44.000 novos seguidores
-- O que faz crescer: volume de comentários (concordando E discordando)
-
-### Stories — Para Conectar e Vender
-
-**Objetivo principal:** criar conexão com quem já te segue e converter em venda.
-
-**A proporção dos stories:**
-- **80% rotina** (documentar a vida, conexão)
-- **20% venda** (depoimentos, bastidores do produto/serviço, CTA)
-
-> "Jamais inverta essa proporção. Se for 20% rotina e 80% venda, você vira o vendedor chato que ninguém quer seguir."
-
-**Referência da Globo:**
-85% da grade é entretenimento. 15% são comerciais. Só com os 15% a Globo paga todas as contas. Se fosse ao contrário, ninguém assistiria. O Instagram funciona igual.
-
-**A jornada de compra em 2026:**
-Antes (até 2021): a pessoa precisava de 7 pontos de contato para comprar.
-Hoje: média de **28 pontos de contato** antes de uma decisão de compra.
-
-Isso significa que a pessoa pode te seguir hoje e comprar daqui a 28 dias. Você precisa estar presente nesses 28 dias com rotina e conexão. É por isso que postar stories todos os dias é estratégico, não opcional.
+Exemplo de bio citado como modelo: uma combinação de identidade pessoal ("cristã e esposa") + prova de resultado ("mais de 50 mil alunas em 35 países") + proposta de valor direta ("te faço viralizar em 24 horas com o óbvio"). [Fonte: 01-estrutura-perfil-que-vende.txt]
 
 ---
 
-## 4. Stories que Vendem: A Estratégia 80/20
+## 3. Reels x Stories: Papéis Completamente Diferentes
 
-### O Clima de Compra
+Esta aula (narrada pelo co-estrategista) estabelece uma separação de função que organiza todo o resto do módulo:
 
-**Problema:** Se você só posta rotina (100%) sem nunca mostrar que tem algo a vender, quando você fizer uma oferta, a audiência não está preparada. Ninguém vai comprar porque você nunca criou o "clima de compra".
+> **REGRA CARDINAL — Reels atrai, Stories converte**
+> *"Reels é pra trazer, é pra ganhar seguidor [...] Stories é pra criar conexão através da minha vida, da minha rotina, e vender."*
+> *Motivo:* confundir os dois objetivos — tentar vender no Reels ou tentar só crescer nos Stories — desperdiça o potencial de cada formato.
+> [Fonte: 02-reels-x-stories.txt]
 
-**Solução:** Os 20% de venda criam o clima de compra — a audiência está sempre levemente ciente de que você tem algo a oferecer.
+### Tipos de Reels por Objetivo
+
+| Tipo de Reels | Objetivo | Métrica-Chave |
+|---|---|---|
+| Loufai/opinião polêmica | Engajamento (comentários) | Volume de comentários (concordando/discordando) |
+| Viral genérico | Alcance/viralização | Views, não necessariamente seguidor |
+| Ganho de seguidor | Trazer gente nova | Novos seguidores gerados |
+| Qualificação (meio de funil) | Engajar quem já segue com mais profundidade | Salvamentos, comentários qualificados |
+| Venda direta | Conversão | Cliques/comentários com palavra-chave |
+
+[Fonte: 02-reels-x-stories.txt]
+
+> **REGRA CARDINAL — No máximo 10% dos Reels deve ser venda direta**
+> *"A essência do Reels não é para poder vender [...] 10% da sua produção de conteúdo vai ser Reels de venda, os outros 90% vai ser para poder viralizar, engajar e ganhar seguidor."*
+> *Motivo:* Reels de venda direta tem alcance limitado ao público que já converte — usar a maioria dos Reels pra isso desperdiça o potencial de atração de público novo.
+> [Fonte: 02-reels-x-stories.txt]
+
+### Premissa de Produção: "Ninguém Nunca Te Viu"
+
+> *"Sempre quando você for produzir esses conteúdos [de topo de funil] [...] produz a partir da premissa que aquela pessoa nunca te viu, nunca viu uma opinião sua [...] então seja intenso a cada produção."*
+> [Fonte: 02-reels-x-stories.txt]
+
+### A Jornada de Pontos de Contato: 7 → 28
+
+> **Benchmark citado:** *"Antes de 2021, a pessoa precisava de 7 pontos de contato pra tomar uma decisão de compra [...] hoje é 28, a média do mercado."*
+> [Fonte: 02-reels-x-stories.txt]
+
+Essa mudança de benchmark justifica por que Stories (que sustentam contato repetido e frequente) se tornaram mais centrais na jornada de conversão do que eram há alguns anos.
+
+### A Analogia da Grade da TV Globo
+
+> *"Vamos pegar a grade da Globo [...] 85% é entretenimento, 15% é comercial [...] se fosse ao contrário, as pessoas não iam querer ver [...] através da conexão, a Globo consegue vender os 15%, e os 15% pagam a conta toda. A lógica do Instagram é a mesma coisa."*
+> [Fonte: 02-reels-x-stories.txt]
+
+> **REGRA CARDINAL — Regra 80/20 nos Stories**
+> Stories devem ser 80% rotina/conexão e 20% venda — nunca o inverso.
+> *Motivo (citado pela fonte):* *"Existe um abismo entre você vender pra pessoa e fazer a pessoa querer comprar de você [...] a lógica de 2026 não é você vender pra pessoa, é fazer a pessoa querer comprar de você."*
+> [Fonte: 02-reels-x-stories.txt]
+
+---
+
+## 4. Stories que Vendem: O Clima de Compra
 
 ### Os 3 Pilares do Clima de Compra
 
-**1. Depoimentos (Prova Social)**
-- Depoimentos de quem usou o produto/serviço e teve resultado
-- "Antes e depois" — como a pessoa estava e como está agora
-- A prova social sempre vai ser o maior gatilho de compra
-- Ninguém quer ser cobaia — ver que outras pessoas tiveram resultado remove o medo
+> **Checklist — Construindo Clima de Compra nos 20% de Venda**
+> 1. **Depoimento / prova social** — "ninguém gosta de ser cobaia de ninguém"; mostrar pessoas reais com resultado real
+> 2. **Bastidores do produto/serviço** — mostrar rotina de atendimento, mentoria, consulta, sem necessariamente ofertar
+> 3. **CTA com palavra-chave** — pedir pra comentar/responder uma palavra específica pra receber oferta no direto
+> [Fonte: 03-stories-que-vendem.txt]
 
-**2. Bastidores do Produto/Serviço**
-- Mostrar que você tem um atendimento, uma consulta, uma mentoria
-- Sair de uma reunião e postar → as pessoas sabem que você está trabalhando
-- Mostrar encontros ao vivo da mentoria (sem fazer oferta) → cria curiosidade sobre "o que é isso que ela tem?"
-- Para nutricionista: "saí de uma consulta", "foi uma sessão com paciente"
-- Para advogada: "acabou de sair de uma audiência importante"
+> *"A partir do momento que você traz depoimento tangível, palpável [...] chegaram assim e aconteceu isso, chegaram nesse momento e tiveram essa melhora [...] independente se é emagrecimento, se é advocacia, saúde e beleza."*
+> [Fonte: 03-stories-que-vendem.txt]
 
-**3. CTA com Palavra-Chave**
-- No final de uma sequência de stories (após mostrar depoimentos e bastidores), fazer a oferta
-- "Se você quer também, comenta aqui a palavra CÓDIGO" → fluxo de mini-chat no direto → recebe a oferta automaticamente
-- Estratégia de mini-chat: a pessoa comenta a palavra → recebe mensagem automática no direto com o link de compra
+### Exemplo de Sequência Real de Stories (9 stories, proporção 80/20)
 
-### Exemplo de um dia de stories da Clara aplicando o 80/20
+A fonte descreve, story a story, uma sequência real da Clara: (1) foto + pergunta de bom dia, (2-3) rotina + desejo pelo produto sem falar diretamente dele, (4) rotina de academia, (5) rotina de casa/almoço, (6) desabafo/rotina emocional, (7) bastidores do closet/organização, (8) clima de compra explícito mencionando o produto, (9) oferta final + retorno à rotina. *"1, 2, 3, 4, 5, 6, 7, 8, 9 — de 9, ela fez um de clima de compra [...] e outro fazendo oferta, respeitando aí a proporção de 80/20."* [Fonte: 03-stories-que-vendem.txt]
 
-1. Foto de bom dia com pergunta (engajamento)
-2. Print de visualizações ou notificação de venda → leve clima de compra
-3. Rotina da manhã (café, skincare)
-4. Usando o produto (sem falar diretamente dele)
-5. Indo para o trabalho / academia
-6. Rotina do trabalho
-7. Almoço
-8. História pessoal do dia (algo que aconteceu)
-9. Depoimento de aluna → clima de compra
-10. Oferta com CTA (comenta a palavra X) → 1 story de venda
-11. Rotina noturna
-12. Foto relaxando (sinal de encerramento do dia)
+### Erro Comum: Confundir Poucos Stories com Boa Estratégia
 
-Contagem: 1 de venda a cada ~9–10 stories de rotina = 80/20 respeitado.
+> *"Não vou postar só três stories por dia, porque aí minhas visualizações vão lá em cima [...] mas com três stories, vai conseguir gerar conexão e confiança? Não."*
+> [Fonte: 03-stories-que-vendem.txt]
+
+A recomendação é pensar em blocos do dia (manhã, tarde, noite), cada um com sua própria mini-sequência de rotina + eventualmente um clima de compra — não reduzir volume pra "otimizar" visualização às custas de conexão. [Fonte: 03-stories-que-vendem.txt]
+
+### Prova Social Como Prioridade
+
+> *"Depoimento ainda vai ser o melhor gatilho de vendas [...] primeiro você e uma pessoa próxima a você [se tornam prova], depois vira uma engrenagem de mais depoimentos, mais clientes."*
+> [Fonte: 03-stories-que-vendem.txt]
 
 ---
 
-## 5. A Diferença Entre Vender para a Pessoa e Fazer a Pessoa Querer Comprar
+## Visão Consolidada: Da Estrutura à Venda
 
-**2026 não é sobre você vender para a pessoa. É sobre fazer a pessoa querer comprar de você.**
+| Elemento | Papel | Proporção Recomendada |
+|---|---|---|
+| OBE (perfil) | Base que não pode faltar | N/A — pré-requisito |
+| Reels | Atração, engajamento, viralização | 90% do conteúdo total; só 10% venda direta |
+| Stories | Conexão + venda | 80% rotina / 20% clima de compra |
 
-Isso muda tudo: você não empurra o produto — você cria uma vida tão atraente e uma comunidade tão forte que a pessoa **quer** fazer parte do que você tem.
-
-Como se cria isso:
-- Mostrando os resultados que você e seus clientes têm
-- Documentando a vida que o produto possibilitou
-- Criando conexão genuína com a audiência
-- Estando presente todos os dias (os 28 pontos de contato)
-
-> "Existe um abismo entre você vender para a pessoa e fazer a pessoa querer comprar de você."
+[Síntese consolidada de 01-estrutura-perfil-que-vende.txt, 02-reels-x-stories.txt, 03-stories-que-vendem.txt]
 
 ---
 
-## Resumo dos Conceitos-Chave
-
-| Conceito | O que é |
-|----------|---------|
-| OBE | Básico obrigatório do perfil: foto, nome, bio, destaques, feed ativo |
-| Reels = atração | 90% para viralizar e ganhar seguidor. Não é para vender. |
-| Stories = conversão | 80% rotina, 20% venda. É onde a pessoa compra. |
-| Clima de compra | Audiência sempre ciente de que você tem algo a oferecer — nunca pega de surpresa |
-| 28 pontos de contato | Média de dias que a pessoa leva para comprar hoje. Presença diária é estratégica. |
-| Depoimentos | Maior gatilho de compra. Prova social remove o medo de ser cobaia. |
-| Mini-chat | Sistema de palavra-chave nos comentários → fluxo automático de oferta no direto |
-| 80/20 Globo | 85% entretenimento, 15% comercial — o Instagram funciona igual |
+**Status deste volume:** Composto a partir das 3 fontes primárias do Módulo 5, com qualidade de transcrição mais baixa que os demais módulos (ver nota inicial). Fecha o curso conectando tudo que foi ensinado (viralizar, escrever roteiro, sustentar movimento) com a estrutura final de conversão em vendas.

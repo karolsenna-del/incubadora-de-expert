@@ -2,8 +2,20 @@
 
 **Tipo:** Curso em vídeo (20 aulas, 5 módulos)
 **Fonte:** Cademi — clarasiqueira.cademi.com.br
-**Processamento:** ETLmaker v3.0 — transcrição via Whisper + composição manual
-**Status:** Completo
+**Processamento:** ETLmaker v3.0 — transcrição via Whisper `tiny` + Mapeamento Territorial retroativo + composição com rastreabilidade completa
+**Status:** Completo e validado (Camada 2 + Camada 3)
+**Autores:** Clara Siqueira (Módulos 1-4 e Módulo 5/Aula 1) + co-estrategista não identificado por nome completo (Módulo 5/Aulas 2-3)
+
+---
+
+## Docs Transversais
+
+| Doc | Descrição |
+|-----|-----------|
+| [MAPA-TERRITORIAL.md](00-pipeline/MAPA-TERRITORIAL.md) | Mapeamento territorial completo (11 seções) |
+| [REGRAS-CARDINAIS.md](REGRAS-CARDINAIS.md) | 13 princípios absolutos organizados por domínio |
+| [REPERTORIO.md](REPERTORIO.md) | Templates, fórmulas, checklists, workflows, catchphrases (11 seções) |
+| [GLOSSARIO.md](GLOSSARIO.md) | 22 termos proprietários com definições |
 
 ---
 
@@ -94,6 +106,12 @@ Conteúdo:
 | Regra 80/20 dos stories | VOL-05 |
 | Clima de compra | VOL-05 |
 | 28 pontos de contato | VOL-05 |
+
+---
+
+## Uso desta KB
+
+Esta KB fica **standalone** — disponível pra qualquer agente futuro sobre crescimento de perfil, stories ou vendas no Instagram. Por decisão do expert, apenas **VOL-02** (Os 5 Códigos Virais) e **VOL-03** (Como Escrever Roteiros Virais) foram trazidos pra dentro da KB multi-autor `conteudo-viral` (junto com Afonso Molina e Rafael Bem), por serem os módulos mais diretamente relacionados a criação de conteúdo viral. VOL-01, VOL-04 e VOL-05 continuam aqui, prontos pra alimentar um agente diferente (ex.: crescimento de perfil / conversão em vendas) quando fizer sentido.
 
 ---
 

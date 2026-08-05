@@ -1,0 +1,53 @@
+critical_audit:
+  kb_slug: "conteudo-viral"
+  kb_name: "Conteudo Viral (Multi-Autor: Afonso Molina + Rafael Bem + Clara Siqueira)"
+  timestamp: "2026-08-05"
+  cycle: "merge 2 (Clara Siqueira adicionada como 3o autor)"
+
+  frameworks:
+    total_in_mapa: 14
+    found_in_output: 14
+    missing: []
+    coverage: "100.0%"
+    note: "9 frameworks do ciclo 1 (Afonso+Rafael) + 5 novos de Clara (Tempo de Tela, 5 Codigos, Estrutura 8 passos, 3 Tipos de Gancho, CTA Duplo)"
+
+  cardinal_rules:
+    total_in_mapa: 15
+    found_in_volumes: 15
+    found_in_regras_doc: 15
+    missing_from_volumes: []
+    missing_from_regras: []
+    coverage: "100.0%"
+    note: "11 regras do ciclo 1 + 4 novas/reforcadas de Clara. Regra de CTA e Modelagem agora triplamente convergentes (3 autores independentes)"
+
+  glossary_terms:
+    total_in_mapa: 41
+    found_in_glossary: 41
+    missing: []
+    coverage: "100.0%"
+
+  cross_volume:
+    concepts_in_multiple_volumes: 8
+    contradictions: 0
+    contradiction_details: []
+    invalid_cross_refs: 0
+    note: "Verificadas todas as referencias cruzadas internas do VOL-06 e VOL-07 apos copia da KB standalone — links VOL-01/VOL-02/VOL-03/VOL-04 que originalmente apontavam para a propria KB do Codigo PEV foram corrigidos para VOL-06/VOL-07/KB-standalone conforme aplicavel. 0 links quebrados encontrados na verificacao final."
+
+  actionable_artifacts:
+    total_in_mapa: 20
+    found_in_volumes: 20
+    found_in_repertorio: 20
+    missing_from_volumes: []
+    missing_from_repertorio: []
+    coverage: "100.0%"
+
+  repertorio_completeness:
+    sections_present: "11/11"
+    items_with_provenance: "45+/45+"
+    items_with_cross_ref: "45+/45+"
+    orphan_items: 0
+
+  overall_verdict: "PASS"
+  critical_missing: []
+
+  nota_qualidade_fonte_clara: "Transcricoes de Clara feitas com Whisper tiny (qualidade inferior a Afonso/Rafael, que usaram small ou legenda nativa). VOL-06 e VOL-07 usam apenas conteudo claramente compreensivel das fontes — nenhuma inferencia de trechos ruidosos."

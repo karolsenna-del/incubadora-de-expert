@@ -1,0 +1,77 @@
+validation_report:
+  kb_slug: "conteudo-viral"
+  timestamp: "2026-08-05"
+  version: "3.0"
+  cycle: "merge 2 — Clara Siqueira adicionada"
+
+  layer_2_verdict: "PASS"
+
+  pass_1_coverage:
+    total_domains: 13
+    domains_covered: 13
+    subtopics_coverage: 100.0
+    uncovered: []
+    verdict: "PASS"
+
+  pass_2_fidelity:
+    total_checks: 10
+    correct: 10
+    distorted: 0
+    invented: 0
+    fidelity_score: 100.0
+    issues: []
+    checked_claims:
+      - "Regra CTA duplo concordar/discordar (VOL-06 sec1) vs mod-codigos-01 — CORRECT"
+      - "8 passos do roteiro (VOL-07 sec4) vs mod-roteiros-04 — CORRECT"
+      - "3 tipos de gancho (VOL-07 sec1) vs mod-roteiros-01 — CORRECT"
+      - "Resultados Loufai 180 mil/2.9 milhoes (VOL-06 sec3) vs mod-codigos-03 — CORRECT"
+      - "Metodo TikTok filtro curtidas (VOL-06 sec2) vs mod-codigos-02 — CORRECT"
+      - "Convergencia tripla regra modelagem (VOL-08 sec3.5) vs VOL-01/VOL-03/VOL-06 — CORRECT, citacoes conferem com os 3 volumes-fonte"
+      - "Convergencia tripla regra CTA (VOL-08 sec3.5) vs VOL-01/VOL-03/VOL-07 — CORRECT"
+      - "Vlog 4 milhoes sem CTA (VOL-07 sec3) vs mod-roteiros-03 — CORRECT"
+      - "Cross-references VOL-06/VOL-07 apontando corretamente para KB standalone quando aplicavel — CORRECT, verificado manualmente"
+      - "Nao ha invencao de nome completo do co-narrador do Modulo 5 da Clara (fora do escopo do merge, mas verificado por consistencia) — CORRECT, MAPA nao presume nome"
+    verdict: "PASS"
+
+  pass_3_richness:
+    volumes:
+      - {id: "VOL-01", lines: 303, pass: true}
+      - {id: "VOL-02", lines: 305, pass: true}
+      - {id: "VOL-03", lines: 315, pass: true}
+      - {id: "VOL-04", lines: 296, pass: true}
+      - {id: "VOL-05", lines: 221, pass: true}
+      - {id: "VOL-06", lines: 306, tables: 8, provenance_refs: 44, pass: true}
+      - {id: "VOL-07", lines: 224, tables: 6, provenance_refs: 26, pass: true}
+      - {id: "VOL-08", lines: 102, tables: 5, provenance_refs: 10, pass: true, note: "Volume de sintese curto por natureza — mesma logica aplicada ao VOL-05 no ciclo 1"}
+    all_pass: true
+    verdict: "PASS"
+
+  pass_4_voice:
+    consistency_score: 88.0
+    issues: ["Clara Siqueira nao tem volume de voz dedicado nesta KB (diferente de Afonso/Rafael que tem VOL-02/VOL-04) — decisao deliberada do expert, escopo do merge foi so metodo (VOL-06/07), nao didatica. Voice profile de Clara documentado de forma resumida no MAPA-TERRITORIAL Secao 11."]
+    verdict: "PASS"
+
+  pass_5_consistency:
+    contradictions: 0
+    cross_refs_valid: true
+    verdict: "PASS"
+
+  pass_6_integrity:
+    volumes_planned: 8
+    volumes_present: 8
+    transversal_planned: 4
+    transversal_present: 4
+    verdict: "PASS"
+
+  aggregate:
+    coverage: 100.0
+    fidelity: 100.0
+    richness: 100.0
+    voice: 88.0
+    consistency: 100.0
+    integrity: 100.0
+    score: 98.8
+    verdict: "APPROVED"
+
+  revision_items: []
+  revision_cycle: 0

@@ -1,0 +1,82 @@
+completeness_report:
+  version: "3.0"
+  kb_name: "Codigo PEV 2.0 (Clara Siqueira)"
+  kb_slug: "codigo-pev-2-0"
+  generated_at: "2026-08-05"
+  generated_by: "ETLmaker v3.0 (ciclo retroativo)"
+
+  source:
+    authors: ["Clara Siqueira", "co-estrategista (Modulo 5)"]
+    total_sources: 20
+    total_words: 9800
+    formats: ["video-transcrito-whisper-tiny"]
+
+  pipeline:
+    phase_0_setup: "completed (pre-existente)"
+    phase_1_territorial: "completed (retroativo, nesta sessao)"
+    phase_2_composition: "completed (recomposto com rastreabilidade, nesta sessao)"
+    phase_3_integration: "completed (docs transversais criados nesta sessao — nao existiam)"
+    phase_4_validation: "completed (nesta sessao — nao existia)"
+
+  volumes:
+    - id: "VOL-01"
+      title: "Algoritmo e Estrutura Viral"
+      file: "VOL-01-algoritmo-e-estrutura.md"
+      lines: 184
+      tables: 4
+      provenance_refs: 25
+      domains: ["O que e o Codigo PEV", "Fundamentos do Algoritmo", "Topo/Meio/Fundo de Funil"]
+    - id: "VOL-02"
+      title: "Os 5 Codigos Virais"
+      file: "VOL-02-os-cinco-codigos-virais.md"
+      lines: 305
+      tables: 7
+      provenance_refs: 44
+      domains: ["Tempo de Tela", "Curadoria TikTok", "Loufai", "React", "Vogue", "Frases", "Pauta Quente"]
+      merge_target: true
+    - id: "VOL-03"
+      title: "Como Escrever Roteiros Virais"
+      file: "VOL-03-roteiros-virais.md"
+      lines: 223
+      tables: 6
+      provenance_refs: 26
+      domains: ["3 Tipos de Gancho", "Retencao no Meio", "CTA", "Estrutura de 8 Passos"]
+      merge_target: true
+    - id: "VOL-04"
+      title: "Movimento, Stories e Posicionamento"
+      file: "VOL-04-movimento-stories-posicionamento.md"
+      lines: 173
+      tables: 3
+      provenance_refs: 26
+      domains: ["Movimento Constante", "Stories como Novela", "Posicionamento e Repostagem"]
+    - id: "VOL-05"
+      title: "Estrutura de um Perfil que Vende"
+      file: "VOL-05-perfil-que-vende.md"
+      lines: 147
+      tables: 2
+      provenance_refs: 21
+      domains: ["OBE", "Reels x Stories", "Clima de Compra"]
+
+  transversal_docs:
+    readme: true
+    regras_cardinais: true
+    repertorio: true
+    glossario: true
+    all_created_this_session: true
+
+  quality_gates:
+    QG-ETL-000: "PASSED"
+    QG-ETL-001: "PASSED"
+    QG-ETL-002: "PASSED"
+    QG-ETL-003: "PASSED"
+    QG-ETL-004: "PASSED"
+    QG-ETL-005: "PASSED"
+
+  totals:
+    total_volumes: 5
+    total_lines: 1032
+    total_tables: 22
+    total_provenance_refs: 142
+
+  verdict: "APPROVED"
+  verdict_notes: "Score agregado 98.2%. Fidelidade 100% (10/10 claims verificados, 0 invencoes). Camada 2 PASS 100% — 10 frameworks, 13 regras cardinais, 22 termos de glossario, 10 artefatos, todos rastreados. KB elevada ao mesmo padrao de rigor das KBs de Afonso Molina e Rafael Bem. VOL-02 e VOL-03 aprovados para merge na KB multi-autor conteudo-viral; VOL-01/04/05 permanecem standalone para uso futuro."

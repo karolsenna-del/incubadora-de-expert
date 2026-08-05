@@ -1,0 +1,68 @@
+critical_audit:
+  kb_slug: "codigo-pev-2-0"
+  kb_name: "Codigo PEV 2.0 (Clara Siqueira)"
+  timestamp: "2026-08-05"
+  cycle: "retroativo (Fase 1 e Fase 4 refeitas nesta sessao sobre KB ja existente)"
+
+  frameworks:
+    total_in_mapa: 10
+    found_in_output: 10
+    missing: []
+    coverage: "100.0%"
+
+  cardinal_rules:
+    total_in_mapa: 7
+    found_in_volumes: 13
+    found_in_regras_doc: 13
+    missing_from_volumes: []
+    missing_from_regras: []
+    coverage: "100.0%"
+    note: "13 regras finais vs 7 planejadas no MAPA — 6 regras emergentes identificadas durante composicao detalhada de cada volume (comum quando a leitura profunda revela mais principios absolutos que a leitura territorial inicial capturou)"
+
+  glossary_terms:
+    total_in_mapa: 16
+    found_in_glossary: 22
+    missing: []
+    coverage: "100.0%"
+    note: "22 termos finais vs 16 planejados — termos emergentes (Assunto vs Tema, Retencao que Hipnotiza, Ponto A/Ponto B, Mini-chat) adicionados durante composicao"
+
+  cross_volume:
+    concepts_in_multiple_volumes: 4
+    concepts_checked:
+      - "Algoritmo nao distingue concordancia/discordancia (VOL-02 producao de conteudo / VOL-04 repostagem por terceiros)"
+      - "Topo/Meio/Fundo de funil (VOL-01 conceito / VOL-04 Stories como meio / VOL-05 Reels e Stories como topo/fundo)"
+      - "Estrutura de 8 passos generaliza os 5 codigos (VOL-02 codigos / VOL-03 estrutura)"
+      - "CTA obrigatorio (VOL-03 principio / VOL-05 aplicacao especifica em Stories)"
+    contradictions: 0
+    contradiction_details: []
+    invalid_cross_refs: 0
+    note: "Nenhuma contradicao de conteudo entre os 5 modulos — progressao consistente"
+
+  actionable_artifacts:
+    total_in_mapa: 10
+    found_in_volumes: 10
+    found_in_repertorio: 10
+    missing_from_volumes: []
+    missing_from_repertorio: []
+    by_type:
+      templates: "2/2"
+      formulas: "2/2"
+      benchmarks: "1/1 (tabela consolidada)"
+      checklists: "4/4"
+      workflows: "5/5"
+      scripts: "3/3"
+      swipes: "2/2"
+      reference_tables: "3/3"
+    coverage: "100.0%"
+
+  repertorio_completeness:
+    sections_present: "11/11"
+    items_with_provenance: "30+/30+"
+    items_with_cross_ref: "30+/30+"
+    orphan_items: 0
+
+  overall_verdict: "PASS"
+  critical_missing: []
+
+  qualidade_de_fonte:
+    nota: "Transcricoes feitas com Whisper modelo tiny (ciclo anterior), qualidade inferior as KBs de Afonso/Rafael (modelo small). 2 arquivos com ruido significativo: 01-estrutura-perfil-que-vende.txt e trecho de 03-estrutura-viral-2026.txt. Composicao evitou inferir conteudo dos trechos corrompidos, usando apenas passagens claras — sinalizado explicitamente nos volumes afetados (VOL-01 e VOL-05)."

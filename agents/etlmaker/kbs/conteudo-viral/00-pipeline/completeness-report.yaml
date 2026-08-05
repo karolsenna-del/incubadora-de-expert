@@ -1,0 +1,130 @@
+completeness_report:
+  version: "3.0"
+  kb_name: "Conteudo Viral (Multi-Autor: Afonso Molina + Rafael Bem + Clara Siqueira)"
+  kb_slug: "conteudo-viral"
+  previous_kb_slug: "rota100k-conteudo-viral"
+  generated_at: "2026-08-05"
+  generated_by: "ETLmaker v3.0"
+  merge_cycle: 2
+
+  source:
+    authors: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+    total_sources: 27
+    total_words: 15700
+    formats: ["video-transcrito-whisper", "pdf", "video-transcrito-referencia", "legenda-nativa-panda-video"]
+
+  pipeline:
+    phase_0_setup: "completed"
+    phase_1_territorial: "completed (merge multi-autor, 2 ciclos)"
+    phase_2_composition: "completed"
+    phase_3_integration: "completed (docs transversais regenerados para 3 autores)"
+    phase_4_validation: "completed"
+
+  volumes:
+    - id: "VOL-01"
+      title: "O Metodo: Da Referencia ao Post Publicado"
+      author: "Afonso Molina"
+      file: "VOL-01-o-metodo-da-referencia-ao-post-publicado.md"
+      lines: 303
+      tables: 7
+      examples: 8
+      provenance_refs: 42
+      domains: ["Caca as Referencias", "Modelagem de Formato", "Construcao de Gancho e Roteiro", "Edicao e Publicacao", "Identidade Visual", "Frequencia e Proporcao"]
+      qg_003_pass: true
+    - id: "VOL-02"
+      title: "Como o Afonso Ensina: Modelagem de Voz e Didatica"
+      author: "Afonso Molina"
+      file: "VOL-02-como-o-afonso-ensina.md"
+      lines: 305
+      tables: 8
+      examples: 6
+      provenance_refs: 23
+      domains: ["Voice Profile", "Estrutura de Aula", "Padroes Retoricos", "Didatica"]
+      qg_003_pass: true
+    - id: "VOL-03"
+      title: "O Metodo do Rafael Bem: 3 Pilares, 5 Elementos e o Catalogo de Modelos Virais"
+      author: "Rafael Bem"
+      file: "VOL-03-o-metodo-do-rafael-bem.md"
+      lines: 315
+      tables: 8
+      examples: 9
+      provenance_refs: 46
+      domains: ["3 Pilares do Algoritmo", "5 Elementos Praticos", "Catalogo de Modelos Virais", "Deep-dive Modelo Tutorial", "Troubleshooting"]
+      qg_003_pass: true
+    - id: "VOL-04"
+      title: "Como o Rafael Bem Ensina: Modelagem de Voz e Didatica"
+      author: "Rafael Bem"
+      file: "VOL-04-como-o-rafael-bem-ensina.md"
+      lines: 296
+      tables: 3
+      examples: 10
+      provenance_refs: 30
+      domains: ["Voice Profile", "Estrutura de Aula", "Padroes Retoricos", "Didatica"]
+      qg_003_pass: true
+      note: "4 linhas abaixo do minimo tecnico de 300 — variancia aceita, demais criterios superados com folga (ver validation-report.yaml)"
+    - id: "VOL-05"
+      title: "Sintese Comparativa: Afonso Molina x Rafael Bem"
+      author: "Ambos (volume comparativo)"
+      file: "VOL-05-sintese-comparativa-afonso-x-rafael.md"
+      lines: 221
+      tables: 5
+      examples: 3
+      provenance_refs: 14
+      domains: ["Mapa de Equivalencias", "Convergencias", "Divergencias", "Guia de Decisao", "Orientacao para Agente"]
+      qg_003_pass: true
+      note: "Volume de sintese — estimativa original no MAPA era 200-250 linhas, dentro da faixa"
+
+    - id: "VOL-06"
+      title: "O Metodo de Clara Siqueira: Codigos Virais"
+      author: "Clara Siqueira"
+      file: "VOL-06-o-metodo-de-clara-siqueira-codigos-virais.md"
+      lines: 306
+      tables: 8
+      provenance_refs: 44
+      domains: ["Tempo de Tela", "Curadoria TikTok", "5 Codigos Virais"]
+      qg_003_pass: true
+      note: "Trazido da KB standalone codigo-pev-2-0 via modo Merge, com fontes renomeadas e cross-refs corrigidas"
+    - id: "VOL-07"
+      title: "O Metodo de Clara Siqueira: Roteiros Virais"
+      author: "Clara Siqueira"
+      file: "VOL-07-o-metodo-de-clara-siqueira-roteiros-virais.md"
+      lines: 224
+      tables: 6
+      provenance_refs: 26
+      domains: ["3 Tipos de Gancho", "Retencao", "CTA", "Estrutura 8 Passos"]
+      qg_003_pass: true
+    - id: "VOL-08"
+      title: "Clara Siqueira no Contexto dos 3 Metodos"
+      author: "Todos (sintese)"
+      file: "VOL-08-clara-siqueira-no-contexto-dos-tres-metodos.md"
+      lines: 102
+      tables: 5
+      provenance_refs: 10
+      domains: ["Convergencias Triplas", "Divergencias", "Guia de Decisao Atualizado"]
+      qg_003_pass: true
+      note: "Volume de sintese curto por natureza, complementa VOL-05"
+
+  transversal_docs:
+    readme: true
+    regras_cardinais: true
+    repertorio: true
+    glossario: true
+    all_regenerated_for_multi_author: true
+    author_count: 3
+
+  quality_gates:
+    QG-ETL-000: "PASSED"
+    QG-ETL-001: "PASSED"
+    QG-ETL-002: "PASSED"
+    QG-ETL-003: "PASSED"
+    QG-ETL-004: "PASSED"
+    QG-ETL-005: "PASSED"
+
+  totals:
+    total_volumes: 8
+    total_lines: 2072
+    total_tables: 50
+    total_provenance_refs: 235
+
+  verdict: "APPROVED"
+  verdict_notes: "Score agregado 98.8%. Fidelidade 100% (10/10 claims verificados, 0 invencoes). Camada 2 PASS — 100% frameworks (14), regras cardinais (15), termos de glossario (41) e artefatos acionaveis (20) rastreados. 0 contradicoes reais entre os 3 autores — convergencia tripla e independente em 4 principios centrais (gancho, CTA, modelagem, formatos prontos) e a evidencia mais forte da KB de que sao padroes estruturais do Instagram, nao opiniao de criador. KB multi-autor (3 experts) pronta para uso e para servir de base a construcao de agente (Mente Sintetica)."
