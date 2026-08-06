@@ -145,6 +145,35 @@ Tempo de Tela, Loufai, React (código), Vogue, Frases (código), Pauta Quente, A
 
 **Estilo didático:** demonstra ao vivo comentando vídeos próprios com métricas reais citadas; usa prova social pesada (45 mil alunas, depoimentos); repete a mesma legenda/CTA como modelo replicável; ensina "de dentro pra fora" (mostra resultado primeiro, decompõe depois).
 
+---
+
+## 12. Adição — 3º Ciclo (Catálogo Completo Rafael Bem, VOL-09)
+
+**Contexto:** durante o Playback do Mind Forge (ExpertViral), a Karol trouxe o board Trello público do catálogo de 18 Modelos Virais do Rafael — gap documentado desde o 1º ciclo ("Catálogo completo dos 18 Modelos Virais do Rafael vive num Trello externo, fora do alcance desta KB").
+
+### VOL-09 — Catálogo Completo: 18 Modelos Virais do Rafael Bem *(novo, 3º ciclo)*
+- **Primária:** board Trello "🧠🔥 MODELOS VIRAIS 2026 ReelsPro©" (20 listas, 314 cards) — extraído via endpoint JSON público
+- **Não é fonte nova de autor** — expande a cobertura de um autor já presente na KB (Rafael Bem), não introduz 4º expert
+- **Propósito:** fecha o gap do catálogo completo, confirma a anatomia universal (Gancho→Desenvolvimento→Clímax→CTA) em 18 casos independentes, adiciona taxonomia de 11 gatilhos psicológicos nomeados
+
+### Plano de Volumes — Atualizado (3º Ciclo)
+
+| Volume | Título | Autor | Status |
+|---|---|---|---|
+| VOL-09 | Catálogo Completo: 18 Modelos Virais do Rafael Bem | Rafael Bem | **Novo (3º ciclo)** — 334 linhas |
+
+### Gaps Fechados
+- ~~Catálogo completo de 18 modelos vive num Trello externo~~ — **RESOLVIDO (3º ciclo):** todos os 18 modelos documentados em VOL-09.
+
+### Gaps Ainda Abertos (não afetados por este ciclo)
+- Fórmula sistemática de legenda/descrição
+- Como lidar com comentários negativos/backlash real
+- Tráfego pago
+- 3 dos 5 módulos do curso completo de Clara (fora do escopo desta KB, disponíveis na standalone `codigo-pev-2-0`)
+
+### Nota sobre Rigor de Validação Deste Ciclo
+Diferente dos ciclos 1 e 2 (que introduziram autores novos e passaram pela bateria completa de Camada 2 + Camada 3), o 3º ciclo é uma **expansão de cobertura de um autor já validado**. A composição do VOL-09 seguiu as mesmas regras de rastreabilidade e zero-invenção, mas não repetiu os 6-passes estatísticos completos — decisão do etl-chief por ser expansão, não merge de fonte de autor novo. Se a Karol quiser, um passe de Camada 2/3 formal sobre o VOL-09 pode ser rodado à parte.
+
 *(Perfil não expandido em volume dedicado nesta KB — a análise completa de voz de Clara fica na KB standalone `codigo-pev-2-0`, que não tem volume de voz dedicado por não ter sido esse o foco original daquela KB)*
 
 ---

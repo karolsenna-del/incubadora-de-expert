@@ -1,0 +1,1072 @@
+mind_slug: "expert-viral"
+mode: "synthetic"
+extraction_date: "2026-08-05"
+total_kfs: 63
+# 58 originais (playback 1) + 4 do VOL-09 (catálogo completo Rafael Bem) + 1 regra de desempate Afonso (KF-063)
+
+# Confidence padrão usada: base_confidence (tabela kf-classification.yaml) * tier_weight (0.95, fonte OURO)
+# Citações "diretas" (a maioria — a KB-fonte já preserva quote + [Fonte:] original)
+
+knowledge_facets:
+
+  # =========================================================================
+  # DOMÍNIO 1 — Caça e Curadoria de Referências
+  # =========================================================================
+  - kf_id: "KF-expert-viral-001"
+    type: PRINCIPLE
+    content: "Uma referência só é válida se passar num critério numérico (views > seguidores no Instagram; 5-10 mil curtidas no TikTok), nunca por impressão subjetiva de 'achei legal'."
+    domain: "Caça e Curadoria de Referências"
+    source_expert: "Afonso Molina"
+    source_doc: "REGRAS-CARDINAIS.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REGRAS-CARDINAIS.md, regra 1]"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "impact"
+    notes: "Ponto de entrada do pipeline do Afonso — sem esse filtro, o resto do método (modelagem) não tem o que modelar."
+
+  - kf_id: "KF-expert-viral-002"
+    type: HEURISTIC
+    content: "Referência não é sobre nicho, é sobre formato de gravação."
+    domain: "Caça e Curadoria de Referências"
+    source_expert: "Afonso Molina"
+    condition: "SE um conteúdo bate o critério numérico de viral mas é de nicho/idioma diferente"
+    action: "ENTÃO ainda é referência válida, desde que o estilo de gravação (ambiente, ângulo, edição) seja semelhante ao que você já usa"
+    domain_alt: null
+    source_doc: "VOL-01-o-metodo-da-referencia-ao-post-publicado.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-01, Seção 1]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-003"
+    type: FRAMEWORK
+    content: "Catálogo de 18 Modelos Virais — banco de formatos pré-validados e curados continuamente pela equipe, cada um seguindo a anatomia universal Gancho→Desenvolvimento→Clímax→CTA."
+    domain: "Caça e Curadoria de Referências"
+    source_expert: "Rafael Bem"
+    steps_or_components:
+      - "Gancho inicial (situação relatable/crença comum/POV)"
+      - "Desenvolvimento (exposição do problema)"
+      - "Clímax (virada/resultado)"
+      - "CTA (fechamento pedindo ação)"
+    when_to_use: "Quando não se sabe que formato usar e se quer opções já validadas em vez de inventar"
+    source_doc: "VOL-03-o-metodo-do-rafael-bem.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-03, Seção 3]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-expert-viral-004"
+    type: FRAMEWORK
+    content: "Método TikTok de Curadoria de Ideias — usa o filtro de curtidas do TikTok (ausente no Instagram) pra identificar padrões de gancho replicáveis em qualquer plataforma."
+    domain: "Caça e Curadoria de Referências"
+    source_expert: "Clara Siqueira"
+    steps_or_components:
+      - "Abrir o TikTok"
+      - "Pesquisar o tema desejado"
+      - "Filtros → Contagem de Curtidas → Aplicar"
+      - "Identificar o padrão de abertura dos vídeos mais curtidos"
+      - "Pegar o gancho (não as palavras), trazer opinião própria"
+    source_doc: "VOL-06-o-metodo-de-clara-siqueira-codigos-virais.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-06, Seção 2]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-005"
+    type: HEURISTIC
+    content: "Teste todos os modelos do catálogo, mas repita sempre o vencedor."
+    domain: "Caça e Curadoria de Referências"
+    source_expert: "Rafael Bem"
+    condition: "SE um modelo do catálogo validou no seu perfil"
+    action: "ENTÃO repita esse mesmo modelo em situações/assuntos diferentes, em vez de migrar pra formatos novos aleatórios"
+    source_doc: "REGRAS-CARDINAIS.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REGRAS-CARDINAIS.md, regra 2]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-006"
+    type: EXAMPLE
+    content: "Buscando 'fisioterapia' no TikTok, Afonso encontra e valida como referência um vídeo de uma paciente de 95 anos fazendo exercício de dupla tarefa — prova de que o critério objetivo funciona mesmo em nichos inesperados."
+    domain: "Caça e Curadoria de Referências"
+    source_expert: "Afonso Molina"
+    illustrates: "KF-expert-viral-001"
+    context: "Demonstração ao vivo na aula de Caça às Referências"
+    source_doc: "VOL-01-o-metodo-da-referencia-ao-post-publicado.md"
+    source_lens: "L5"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-01, Seção 1]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "impact"
+
+  # =========================================================================
+  # DOMÍNIO 2 — Modelagem e Adaptação sem Cópia
+  # =========================================================================
+  - kf_id: "KF-expert-viral-007"
+    type: PRINCIPLE
+    content: "Modelar é ser semelhante, nunca copiar literalmente — o valor está na estrutura, não na reprodução palavra por palavra."
+    domain: "Modelagem e Adaptação sem Cópia"
+    source_expert: "Afonso Molina + Rafael Bem + Clara Siqueira (convergência tripla independente)"
+    evidence: "3 experts, 3 cursos, 3 plataformas sem relação entre si, formulando a mesma regra de forma independente — Afonso: 'semelhante não é fazer exatamente'; Rafael: 'entender como adaptaram, não ver exemplo de todos os nichos'; Clara: 'pegar o tema, falar sua opinião, não falar igual'."
+    domain_note: "Domínio de convergência transversal"
+    source_doc: "VOL-08-clara-siqueira-no-contexto-dos-tres-metodos.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-08, Seção 3.5]"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "crown_jewel"
+    notes: "1 dos 3 princípios de convergência tripla identificados na KB — define a identidade da mente: sem ele, toda a lógica de 'usar 3 experts em vez de 1' perde sentido."
+
+  - kf_id: "KF-expert-viral-008"
+    type: HEURISTIC
+    content: "Troca mínima deliberada: ao modelar um gancho já validado, mudar ao menos 1 palavra da frase original."
+    domain: "Modelagem e Adaptação sem Cópia"
+    source_expert: "Afonso Molina"
+    condition: "SE o gancho de referência já está validado (viralizou)"
+    action: "ENTÃO reescreva trocando pelo menos 1 palavra ('idiota' → 'boba') — grau de mudança suficiente pra ser semelhante sem ser cópia"
+    exception: "O texto 'mostrado' na tela pode ficar idêntico à fala — a regra de troca mínima vale pro texto falado/gancho em si, não pra reforço visual"
+    source_doc: "REPERTORIO.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REPERTORIO.md, Seção 2]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-009"
+    type: ANTI_PATTERN
+    content: "Copiar um conteúdo palavra por palavra, idêntico ao original."
+    domain: "Modelagem e Adaptação sem Cópia"
+    source_expert: "Afonso Molina"
+    consequence: "Destrói a autenticidade do criador e é reconhecível publicamente como cópia — Afonso cita caso real de uma criadora que reproduziu conteúdo dele 'palavra por palavra igualzinho', citado como alerta negativo."
+    alternative: "Aplicar a modelagem em 3 eixos (KF-expert-viral-011) e a troca mínima (KF-expert-viral-008) em vez de reprodução literal."
+    source_doc: "VOL-01-o-metodo-da-referencia-ao-post-publicado.md"
+    source_lens: "L6"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-01, Seção 2]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-010"
+    type: FRAMEWORK
+    content: "Modelagem em 3 Eixos — técnica de adaptar uma referência sem copiar, reproduzindo apenas a estrutura em 3 dimensões."
+    domain: "Modelagem e Adaptação sem Cópia"
+    source_expert: "Afonso Molina"
+    steps_or_components:
+      - "Ambiente — cenário de gravação equivalente ao da referência"
+      - "Estilo de edição — ritmo, título/legenda, complexidade"
+      - "Estilo de gravação — ângulo, enquadramento, movimento de câmera"
+    source_doc: "VOL-01-o-metodo-da-referencia-ao-post-publicado.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-01, Seção 2]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "excellence"
+
+  # =========================================================================
+  # DOMÍNIO 3 — Construção de Gancho
+  # =========================================================================
+  - kf_id: "KF-expert-viral-011"
+    type: PRINCIPLE
+    content: "O gancho é o elemento mais crítico do vídeo — nenhum outro acerto no resto do conteúdo compensa um gancho fraco."
+    domain: "Construção de Gancho"
+    source_expert: "Afonso Molina + Rafael Bem + Clara Siqueira (convergência tripla independente)"
+    evidence: "Afonso dedica uma aula inteira só ao gancho; Rafael diz explicitamente 'é a parte mais importante do seu conteúdo, sem gancho legal seu vídeo vai ser ignorado'; Clara recomenda combinar os 3 tipos de gancho porque 'o que você mostra é tão importante quanto o que você fala'."
+    source_doc: "VOL-08-clara-siqueira-no-contexto-dos-tres-metodos.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-05, Seção 2 + VOL-08, Seção 4]"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "crown_jewel"
+    notes: "2º dos 3 princípios de convergência tripla."
+
+  - kf_id: "KF-expert-viral-012"
+    type: VOCABULARY
+    term: "Gancho (definição do Afonso)"
+    definition: "Os 3 primeiros segundos do conteúdo, compostos por 3 elementos simultâneos: aquilo que você fala, aquilo que está escrito na tela (mostra), e a ação física que você faz."
+    source_expert: "Afonso Molina"
+    domain: "Construção de Gancho"
+    usage_context: "Base pra decompor e modelar qualquer gancho de referência"
+    source_doc: "GLOSSARIO.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: GLOSSARIO.md, Termos do Afonso]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-013"
+    type: FRAMEWORK
+    content: "4 Tipos de Gancho Nomeados (Rafael Bem), cada um com fórmula de frase pronta."
+    domain: "Construção de Gancho"
+    source_expert: "Rafael Bem"
+    steps_or_components:
+      - "Pergunta intrigante — 'Você sabia que existe [truque] pra [resultado]?'"
+      - "Afirmação inesperada — 'Todo mundo faz [X] errado, aqui está o certo'"
+      - "Problema comum — '[Situação do nicho] do jeito errado? Você pode estar cometendo esse erro'"
+      - "Desafio — 'Testei [X] e o que aconteceu foi inacreditável'"
+    source_doc: "REPERTORIO.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REPERTORIO.md, Seção 2]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-expert-viral-014"
+    type: FRAMEWORK
+    content: "3 Tipos de Gancho (Clara Siqueira): visual, frase e áudio — recomenda combinar os 3 quando possível."
+    domain: "Construção de Gancho"
+    source_expert: "Clara Siqueira"
+    steps_or_components:
+      - "Gancho visual — algo no ambiente que quebra padrão (comum fora do lugar, ou incomum pra maioria)"
+      - "Gancho de frase — frase de impacto falada no início"
+      - "Gancho de áudio — efeito sonoro que chama atenção (ex.: alarme)"
+    when_to_use: "Combinar os 3 formatos no mesmo vídeo multiplica os pontos de retenção nos primeiros segundos"
+    source_doc: "VOL-07-o-metodo-de-clara-siqueira-roteiros-virais.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-07, Seção 1]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-015"
+    type: HEURISTIC
+    content: "Contraste fraco-vs-forte: mostrar a versão fraca de um gancho ao lado da versão forte torna a diferença tangível."
+    domain: "Construção de Gancho"
+    source_expert: "Rafael Bem"
+    condition: "SE for ensinar ou revisar a qualidade de um gancho"
+    action: "ENTÃO apresente a versão fraca ('Hoje eu vou te mostrar 3 truques...') ao lado da forte ('Você está fazendo X errado, veja isso') em vez de só descrever abstratamente o que é bom"
+    source_doc: "VOL-04-como-o-rafael-bem-ensina.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-04, Seção 4]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-016"
+    type: EXAMPLE
+    content: "Gancho original 'Tem uma técnica idiota que tá dando muito seguidor aqui' modelado ao vivo por Afonso para 'Essa técnica boba tá dando muito seguidor aqui' — 1 palavra trocada, estrutura idêntica."
+    domain: "Construção de Gancho"
+    source_expert: "Afonso Molina"
+    illustrates: "KF-expert-viral-008"
+    context: "Demonstração ao vivo na aula 'Ganchos Irresistíveis', usando um vídeo de referência real buscado previamente"
+    source_doc: "REPERTORIO.md"
+    source_lens: "L5"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REPERTORIO.md, Seção 6]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "impact"
+
+  # =========================================================================
+  # DOMÍNIO 4 — Corpo, Desenvolvimento e Retenção do Meio
+  # =========================================================================
+  - kf_id: "KF-expert-viral-017"
+    type: PRINCIPLE
+    content: "O corpo do conteúdo é onde a liberdade criativa é total — diferente do gancho (que deve ser 'extremamente semelhante' à referência), o corpo só precisa cumprir a promessa feita no gancho."
+    domain: "Corpo, Desenvolvimento e Retenção do Meio"
+    source_expert: "Afonso Molina"
+    source_doc: "VOL-01-o-metodo-da-referencia-ao-post-publicado.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-01, Seção 3]"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-018"
+    type: FRAMEWORK
+    content: "Elemento História e Conexão — gera identificação emocional via experiência pessoal, antes/depois ou narrativa relatable."
+    domain: "Corpo, Desenvolvimento e Retenção do Meio"
+    source_expert: "Rafael Bem"
+    steps_or_components:
+      - "Compartilhar experiência pessoal ('Eu testei isso 10 vezes até acertar')"
+      - "Antes e depois pra mostrar progresso"
+      - "Narrativas que envolvem o espectador (dor relatable do nicho)"
+    when_to_use: "Elemento sem equivalente nomeado explicitamente no método de Afonso — preencher a 'liberdade criativa' do corpo (KF-017) com técnica concreta"
+    source_doc: "VOL-03-o-metodo-do-rafael-bem.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-03, Seção 2]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-expert-viral-019"
+    type: HEURISTIC
+    content: "Retenção que hipnotiza — o meio do vídeo, não só o gancho, decide se a pessoa assiste até o final."
+    domain: "Corpo, Desenvolvimento e Retenção do Meio"
+    source_expert: "Clara Siqueira"
+    condition: "SE quiser diagnosticar por que um vídeo perde audiência"
+    action: "ENTÃO usar o Instagram Insights pra ver o % de retenção — saída no meio = falta impacto no meio; saída no início = gancho fraco; sem saída = conteúdo funcionando"
+    source_doc: "VOL-07-o-metodo-de-clara-siqueira-roteiros-virais.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-07, Seção 2]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-020"
+    type: EXAMPLE
+    content: "Vídeo de Clara Siqueira que bateu 4 milhões de visualizações e 300 mil likes mantendo opiniões polêmicas ao longo de todo o vídeo, não só no gancho — usado como prova de que a retenção do meio importa tanto quanto a abertura."
+    domain: "Corpo, Desenvolvimento e Retenção do Meio"
+    source_expert: "Clara Siqueira"
+    illustrates: "KF-expert-viral-019"
+    context: "Vídeo 'os homens cedem mais fácil com mulheres doces'"
+    source_doc: "VOL-07-o-metodo-de-clara-siqueira-roteiros-virais.md"
+    source_lens: "L5"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-07, Seção 2]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "impact"
+
+  # =========================================================================
+  # DOMÍNIO 5 — CTA (Chamada Para Ação)
+  # =========================================================================
+  - kf_id: "KF-expert-viral-021"
+    type: PRINCIPLE
+    content: "Todo conteúdo precisa terminar com CTA — sem chamada pra ação explícita, o conteúdo pode viralizar mas não converte em seguidor/engajamento."
+    domain: "CTA (Chamada Para Ação)"
+    source_expert: "Afonso Molina + Rafael Bem + Clara Siqueira (convergência tripla independente)"
+    evidence: "Afonso: 'a maioria de vocês viralizam, mas não crescem, porque o conteúdo não tem chamada pra ação'; Rafael: 'as pessoas não fazem nada espontaneamente, você tem que pedir'; Clara: 'quando você não obriga a pessoa a te seguir, curtir, compartilhar ou comentar, você está perdendo seguidor, engajamento, dinheiro ao mesmo tempo'."
+    source_doc: "VOL-08-clara-siqueira-no-contexto-dos-tres-metodos.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-08, Seção 3.5]"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "crown_jewel"
+    notes: "3º dos 3 princípios de convergência tripla — junto com KF-007 e KF-011, formam o núcleo inegociável da mente."
+
+  - kf_id: "KF-expert-viral-022"
+    type: FRAMEWORK
+    content: "4 Tipos de CTA com fórmula pronta (Rafael Bem)."
+    domain: "CTA (Chamada Para Ação)"
+    source_expert: "Rafael Bem"
+    steps_or_components:
+      - "Comentário — 'Me conta nos comentários se [pergunta relacionada ao vídeo]'"
+      - "Curtida — 'Curta esse vídeo se você também [ação/identificação com o nicho]'"
+      - "Compartilhamento — 'Envie esse vídeo pra algum amigo que precisa ver isso'"
+      - "Seguir — 'Se você quer aprender mais sobre [promessa], já me segue aqui'"
+    source_doc: "REPERTORIO.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REPERTORIO.md, Seção 2]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-expert-viral-023"
+    type: HEURISTIC
+    content: "CTA Duplo — pedir concordância E discordância na mesma pergunta maximiza o volume de comentários (técnica exclusiva de Clara Siqueira)."
+    domain: "CTA (Chamada Para Ação)"
+    source_expert: "Clara Siqueira"
+    condition: "SE a CTA pedir só uma posição ('você concorda?')"
+    action: "ENTÃO só quem concorda comenta — reformule pra 'você concorda ou não?' e as duas posições vão comentar, gerando debate"
+    source_doc: "GLOSSARIO.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: GLOSSARIO.md, Termos da Clara]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "excellence"
+    notes: "Conecta diretamente com KF-039 (algoritmo não diferencia concordância de discordância) — a mecânica que justifica essa heurística."
+
+  - kf_id: "KF-expert-viral-024"
+    type: ANTI_PATTERN
+    content: "Publicar um vídeo sem nenhum CTA, mesmo que ele viralize."
+    domain: "CTA (Chamada Para Ação)"
+    source_expert: "Clara Siqueira"
+    consequence: "Caso real citado pela própria autora: um vídeo bateu 4 milhões de visualizações sem CTA e não gerou nenhum seguidor ou resultado — viralização não converteu em nada porque a ação nunca foi pedida."
+    alternative: "Sempre fechar com CTA — reforçado tanto na fala quanto na legenda, porque parte da audiência não assiste até o final mas lê a legenda."
+    source_doc: "VOL-07-o-metodo-de-clara-siqueira-roteiros-virais.md"
+    source_lens: "L6"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-07, Seção 3]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-025"
+    type: OUTPUT_FORMAT
+    content: "Fórmula fixa de CTA de seguir (Afonso Molina) — variável só no nicho."
+    domain: "CTA (Chamada Para Ação)"
+    source_expert: "Afonso Molina"
+    format_template: "Se você quer aprender mais sobre [X = promessa central da bio], me segue, eu te ajudo."
+    when_to_use: "Fechamento padrão de qualquer conteúdo — trocar apenas o X pela promessa da bio do criador"
+    source_doc: "REPERTORIO.md"
+    source_lens: "L4"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REPERTORIO.md, Seção 2]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  # =========================================================================
+  # DOMÍNIO 6 — Edição e Ritmo
+  # =========================================================================
+  - kf_id: "KF-expert-viral-026"
+    type: OUTPUT_FORMAT
+    content: "Checklist de Edição de Reels no app Edits (15 passos, Afonso Molina) — do gravar em modo self até agendar publicação."
+    domain: "Edição e Ritmo"
+    source_expert: "Afonso Molina"
+    format_template: "Gravar → Gerar Legenda → cortar silêncios → estilo 'Pick a Style' → fonte Sui → gancho manual no topo → legenda normal abaixo do rosto → exportar 4K/30fps → postar direto → legenda complementar → marcar perfil → capa = frame próprio → agendar"
+    when_to_use: "Toda edição de Reels que segue o pipeline do Afonso"
+    source_doc: "REPERTORIO.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REPERTORIO.md, Seção 4]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-027"
+    type: HEURISTIC
+    content: "Eliminar a 'millennial pause' — cortar qualquer respirada/pausa antes de começar a falar."
+    domain: "Edição e Ritmo"
+    source_expert: "Rafael Bem"
+    condition: "SE houver qualquer pausa/hesitação antes da primeira fala do vídeo"
+    action: "ENTÃO cortar na edição — o vídeo precisa começar com a pessoa já falando/já em ação"
+    source_doc: "REGRAS-CARDINAIS.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REGRAS-CARDINAIS.md, regra 7]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-028"
+    type: HEURISTIC
+    content: "Sempre legendar o vídeo."
+    domain: "Edição e Ritmo"
+    source_expert: "Rafael Bem"
+    condition: "SE o vídeo tiver fala"
+    action: "ENTÃO legendar sempre — parte relevante da audiência assiste com áudio desligado (rua, ambiente barulhento) e perde a mensagem sem legenda"
+    source_doc: "REGRAS-CARDINAIS.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REGRAS-CARDINAIS.md, regra 8]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-029"
+    type: PRINCIPLE
+    content: "Edição simples gera mais retenção que edição complexa — a atenção precisa vir do conteúdo, não de efeitos de edição."
+    domain: "Edição e Ritmo"
+    source_expert: "Afonso Molina + Rafael Bem (convergência dupla)"
+    evidence: "Afonso ensina fluxo enxuto no Edits (cortar silêncio, legenda automática); Rafael formaliza: 'hoje em dia as edições mais simples elas têm 1 maior retenção, a gente tem que prender a atenção da pessoa pelo conteúdo e não pela edição apenas'."
+    source_doc: "VOL-05-sintese-comparativa-afonso-x-rafael.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-05, Seção 2]"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "excellence"
+
+  # =========================================================================
+  # DOMÍNIO 7 — Música e Áudio
+  # =========================================================================
+  - kf_id: "KF-expert-viral-030"
+    type: ANTI_PATTERN
+    content: "Colocar música em Reels que serão usados depois em tráfego pago."
+    domain: "Música e Áudio"
+    source_expert: "Afonso Molina"
+    consequence: "Direitos autorais de música bloqueiam a promoção paga do conteúdo depois — a decisão tomada na edição afeta uma etapa (tráfego pago) que só vem em módulo posterior."
+    alternative: "Reels sem música se houver intenção de impulsionar depois; carrossel/post estático leva música fixa normalmente (regra inversa, pra alcance orgânico)."
+    source_doc: "REGRAS-CARDINAIS.md"
+    source_lens: "L6"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REGRAS-CARDINAIS.md, regra 6]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-031"
+    type: HEURISTIC
+    content: "Usar áudio 'em alta' funciona como segundo gancho."
+    domain: "Música e Áudio"
+    source_expert: "Rafael Bem"
+    condition: "SE houver um áudio marcado como tendência na plataforma (seta no Instagram, aba Descobrir no TikTok)"
+    action: "ENTÃO usá-lo — a pessoa reconhece o som e para pra ver antes mesmo de processar o conteúdo, mesmo repetindo o mesmo áudio em vários vídeos"
+    source_doc: "REGRAS-CARDINAIS.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REGRAS-CARDINAIS.md, regra 10]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "filler"
+
+  # =========================================================================
+  # DOMÍNIO 8 — Identidade Visual e Consistência (exclusivo Afonso)
+  # =========================================================================
+  - kf_id: "KF-expert-viral-032"
+    type: PRINCIPLE
+    content: "Identidade visual fixa e repetida (fonte única, mesmo estilo de roupa, paleta de no máximo 2-3 cores) garante reconhecimento de marca pessoal mesmo variando de referência em referência."
+    domain: "Identidade Visual e Consistência"
+    source_expert: "Afonso Molina"
+    source_doc: "REGRAS-CARDINAIS.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REGRAS-CARDINAIS.md, regra 9]"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "impact"
+    notes: "Domínio exclusivo do Afonso — Rafael e Clara não abordam identidade visual como categoria própria nas fontes processadas. Gap compartilhado, não contradição."
+
+  # =========================================================================
+  # DOMÍNIO 9 — Frequência e Consistência de Publicação
+  # =========================================================================
+  - kf_id: "KF-expert-viral-033"
+    type: HEURISTIC
+    content: "Proporção de publicação 2:1 (Reels:Carrossel)."
+    domain: "Frequência e Consistência de Publicação"
+    source_expert: "Afonso Molina"
+    condition: "SE for planejar o mix de formatos do dia/semana"
+    action: "ENTÃO a cada 3 conteúdos publicados, 2 devem ser Reels e 1 carrossel"
+    source_doc: "VOL-01-o-metodo-da-referencia-ao-post-publicado.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-01, Seção 6]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-034"
+    type: PRINCIPLE
+    content: "Consistência de publicação multiplica as chances de viralizar — os pilares do algoritmo são propriedades do comportamento humano, não do algoritmo em si, então volume + iteração continuam funcionando mesmo quando a plataforma muda as regras."
+    domain: "Frequência e Consistência de Publicação"
+    source_expert: "Rafael Bem"
+    evidence: "'Se a cada 20 vídeos 1 vai dar certo, e você só publica 1 por semana, vai levar 20 semanas... se você faz 5 Reels na semana são 5 chances que você tem aquela semana de viralizar.'"
+    source_doc: "REGRAS-CARDINAIS.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REGRAS-CARDINAIS.md, regra 11]"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-expert-viral-035"
+    type: FRAMEWORK
+    content: "Ciclo de Troubleshooting — o que fazer quando o vídeo não viraliza, usando taxa de viralização como métrica de progresso."
+    domain: "Frequência e Consistência de Publicação"
+    source_expert: "Rafael Bem"
+    steps_or_components:
+      - "Acompanhar métricas (retenção, engajamento, compartilhamento) por vídeo"
+      - "Comparar os próprios vídeos entre si"
+      - "Testar formatos diferentes (storytelling, lista, desafio, tutorial)"
+      - "Aprimorar os ganchos especificamente se a retenção estiver fraca"
+      - "Manter consistência de publicação"
+    source_doc: "VOL-03-o-metodo-do-rafael-bem.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-03, Seção 5]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "excellence"
+    notes: "Único framework de diagnóstico explícito disponível na KB inteira (nem Afonso nem Clara têm um ciclo de troubleshooting formal) — usar sempre que a Karol perguntar 'por que isso não performou'."
+
+  # =========================================================================
+  # DOMÍNIO 10 — Algoritmo e Métricas
+  # =========================================================================
+  - kf_id: "KF-expert-viral-036"
+    type: FRAMEWORK
+    content: "3 Pilares do Algoritmo — Retenção, Engajamento e Compartilhamento, sempre combinados, nunca isolados."
+    domain: "Algoritmo e Métricas"
+    source_expert: "Rafael Bem"
+    steps_or_components:
+      - "Retenção — capacidade do vídeo de prender atenção do início ao fim"
+      - "Engajamento — taxa de likes/comentários/salvamentos"
+      - "Compartilhamento — quão fácil é a pessoa querer mandar o vídeo pra alguém"
+    when_to_use: "Framework de diagnóstico de 'por quê' um vídeo específico viralizou ou não"
+    source_doc: "VOL-03-o-metodo-do-rafael-bem.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-03, Seção 1]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-expert-viral-037"
+    type: PRINCIPLE
+    content: "Tempo de Tela é o princípio único que sustenta todos os códigos virais — o tempo que a audiência passa consumindo o vídeo é o que o Instagram/TikTok recompensa."
+    domain: "Algoritmo e Métricas"
+    source_expert: "Clara Siqueira"
+    source_doc: "VOL-06-o-metodo-de-clara-siqueira-codigos-virais.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-06, Seção 1]"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "excellence"
+    notes: "Equivalente conceitual ao Pilar 'Retenção' de Rafael (KF-036), mas formulado por Clara como o princípio fundador único, não um dos 3."
+
+  - kf_id: "KF-expert-viral-038"
+    type: HEURISTIC
+    content: "O algoritmo não diferencia concordância de discordância — só vê volume de comentários. Informação sobre o MECANISMO do algoritmo, não um mandato para explorar qualquer tipo de polêmica."
+    domain: "Algoritmo e Métricas"
+    source_expert: "Clara Siqueira"
+    condition: "SE o objetivo for maximizar entrega/distribuição de um vídeo de opinião"
+    action: "ENTÃO uma CTA que provoca debate (concordar/discordar) numa OPINIÃO LEGÍTIMA aumenta a métrica de entrega — SEM precisar recorrer a tema político-partidário ou religioso pra isso"
+    source_doc: "VOL-06-o-metodo-de-clara-siqueira-codigos-virais.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-06, Seção 1]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+    notes: "Contribuição única de Clara — articula o mecanismo exato do algoritmo por trás do que Afonso e Rafael descrevem de forma mais vaga. RESTRIÇÃO DA KAROL (2026-08-05): usar esse mecanismo pra debate de opinião de negócio/posicionamento profissional é OK; usar como justificativa pra buscar polêmica político-religiosa está EXCLUÍDO — ver KF-expert-viral-053."
+
+  - kf_id: "KF-expert-viral-039"
+    type: ANTI_PATTERN
+    content: "Um vídeo bom em apenas 1 dos 3 pilares (retenção, engajamento ou compartilhamento) não viraliza."
+    domain: "Algoritmo e Métricas"
+    source_expert: "Rafael Bem"
+    consequence: "Vídeo com boa retenção mas sem conexão/compartilhabilidade 'flopa' mesmo prendendo atenção; vídeo super compartilhável mas sem retenção também não viraliza — os 3 pilares são multiplicativos, não substitutos."
+    alternative: "Verificar as 3 perguntas de autoteste (retenção, engajamento, compartilhabilidade) antes de considerar um roteiro pronto."
+    source_doc: "VOL-03-o-metodo-do-rafael-bem.md"
+    source_lens: "L6"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-03, Seção 1]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  # =========================================================================
+  # DOMÍNIO 11 — Formatos Prontos e Catálogos
+  # =========================================================================
+  - kf_id: "KF-expert-viral-040"
+    type: FRAMEWORK
+    content: "5 Códigos Virais (Clara Siqueira) — Loufai, React, Vogue, Frases, Pauta Quente — cada um com tempo de produção e momento de uso definidos."
+    domain: "Formatos Prontos e Catálogos"
+    source_expert: "Clara Siqueira"
+    steps_or_components:
+      - "Loufai (10-20min) — opinião direta, baixa edição, sempre aplicável"
+      - "React (15min) — reação a vídeo já viral, quando há repercussão circulando"
+      - "Vogue (20-40min) — vlog de rotina em cortes rápidos, conteúdo de rotina"
+      - "Frases (3-5min) — frase viral sobre vídeo de galeria, quando sem tempo/ideia"
+      - "Pauta Quente (10min) — reação/pergunta sobre tema em alta, quando há notícia quente"
+    source_doc: "VOL-06-o-metodo-de-clara-siqueira-codigos-virais.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-06, Comparativo dos 5 Códigos]"
+    notes: "RESTRIÇÃO DA KAROL (2026-08-05): os 5 formatos continuam disponíveis como estrutura de produção. O que fica de fora é a seleção de tema por polêmica político-religiosa como estratégia de gancho (ex.: Loufai/React/Pauta Quente puxando de assuntos partidários ou religiosos pra garantir debate) — ver KF-expert-viral-053. Opinião de negócio/posicionamento profissional dentro desses formatos continua OK."
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-expert-viral-041"
+    type: EXAMPLE
+    content: "O Modelo Tutorial do Rafael Bem aplicado com sucesso em 7 nichos completamente diferentes (gastronomia, odontologia, estética capilar, nutrição, pedagogia infantil, moda, edição de vídeo) — prova concreta de que a estrutura, não o nicho, é o que importa."
+    domain: "Formatos Prontos e Catálogos"
+    source_expert: "Rafael Bem"
+    illustrates: "KF-expert-viral-003"
+    context: "Aula dedicada inteira (28min) ao deep-dive de 1 modelo do catálogo"
+    source_doc: "VOL-03-o-metodo-do-rafael-bem.md"
+    source_lens: "L5"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-03, Seção 4]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "impact"
+
+  # =========================================================================
+  # DOMÍNIO 12 — Estrutura de Roteiro Completa
+  # =========================================================================
+  - kf_id: "KF-expert-viral-042"
+    type: FRAMEWORK
+    content: "Estrutura de Roteiro do Afonso: Gancho → Corpo (contexto) → Tempo do Conteúdo → CTA."
+    domain: "Estrutura de Roteiro Completa"
+    source_expert: "Afonso Molina"
+    steps_or_components: ["Gancho (fala+mostra+faz)", "Corpo — liberdade criativa, cumpre promessa do gancho", "Tempo — 60s Reels / 6-10 slides carrossel", "CTA de seguir"]
+    source_doc: "VOL-01-o-metodo-da-referencia-ao-post-publicado.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-01, Visão Consolidada]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-043"
+    type: FRAMEWORK
+    content: "Estrutura de Roteiro do Rafael: Gancho → Desenvolvimento → Clímax → CTA (anatomia universal de qualquer modelo do catálogo)."
+    domain: "Estrutura de Roteiro Completa"
+    source_expert: "Rafael Bem"
+    steps_or_components: ["Gancho inicial", "Desenvolvimento (exposição do problema)", "Clímax (virada/resultado)", "CTA"]
+    source_doc: "VOL-03-o-metodo-do-rafael-bem.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-03, Seção 3]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-044"
+    type: FRAMEWORK
+    content: "Estrutura de Roteiro de 8 Passos (Clara Siqueira) — a mais granular dos 3 métodos, generaliza os 5 Códigos num esqueleto único: Formato → Tema → Assunto → Gancho → Início → Meio → Fim → CTA."
+    domain: "Estrutura de Roteiro Completa"
+    source_expert: "Clara Siqueira"
+    steps_or_components:
+      - "1. Definir o formato (Loufai, Vogue, React...)"
+      - "2. Definir o tema"
+      - "3. Definir o assunto (recorte específico dentro do tema)"
+      - "4. Criar o gancho (visual, frase ou áudio)"
+      - "5. Início — o que a sociedade pensa sobre o assunto"
+      - "6. Meio — vivência pessoal ou o que faria na situação"
+      - "7. Fim — frase de impacto/motivacional"
+      - "8. CTA — reforçada na legenda"
+    when_to_use: "Segundo a própria autora, 'o módulo mais importante do curso' — serve pra qualquer formato de vídeo, não só os 5 códigos"
+    source_doc: "VOL-07-o-metodo-de-clara-siqueira-roteiros-virais.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-07, Seção 4]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "excellence"
+    notes: "É o framework de roteiro mais completo e granular dos 3 — bom candidato a espinha dorsal do agente pra 'me ajuda a criar um roteiro', com o vocabulário/exemplos dos outros 2 puxados conforme a situação (ver VOL-05, Seção 8)."
+
+  - kf_id: "KF-expert-viral-045"
+    type: HEURISTIC
+    content: "Definir o assunto (recorte específico), não só o tema (amplo), evita vídeo vago."
+    domain: "Estrutura de Roteiro Completa"
+    source_expert: "Clara Siqueira"
+    condition: "SE o roteiro só tiver um tema amplo definido (ex.: 'relacionamento')"
+    action: "ENTÃO reduzir a um assunto específico (ex.: 'curtir foto de mulher é traição') antes de escrever o gancho — sem isso, o vídeo 'explica demais e não fala nada com nada'"
+    source_doc: "REGRAS-CARDINAIS.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: REGRAS-CARDINAIS.md, regra 5.6]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  # =========================================================================
+  # DOMÍNIO 13 — Erros Comuns / Anti-Patterns Transversais
+  # =========================================================================
+  - kf_id: "KF-expert-viral-046"
+    type: ANTI_PATTERN
+    content: "5 erros comuns de roteiro identificados por Clara Siqueira: não definir assunto, ignorar o meio, publicar sem CTA, pedir só uma posição, achar que precisa de vida 'diferente' pra gancho visual."
+    domain: "Erros Comuns / Anti-Patterns Transversais"
+    source_expert: "Clara Siqueira"
+    consequence: "Cada erro tem consequência específica documentada — de 'vídeo vago' até 'viralização sem conversão em seguidor' (caso dos 4 milhões de views sem CTA, KF-024)."
+    alternative: "Usar a tabela de 5 erros como checklist de revisão antes de publicar qualquer roteiro."
+    source_doc: "VOL-07-o-metodo-de-clara-siqueira-roteiros-virais.md"
+    source_lens: "L6"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-07, Seção 6]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  # =========================================================================
+  # DOMÍNIO 14 — Voz e Didática de Cada Expert (modelagem de comunicação)
+  # =========================================================================
+  - kf_id: "KF-expert-viral-047"
+    type: OUTPUT_FORMAT
+    content: "Checklist de Modelagem de Voz do Afonso — estrutura didática replicável (não as palavras literais)."
+    domain: "Voz e Didática de Cada Expert"
+    source_expert: "Afonso Molina"
+    format_template: "Abrir nomeando o tema em 1 frase → conectar com conteúdo anterior → frases curtas encadeadas → demonstrar com exemplo real → numerar passos em voz alta → variar nicho dos exemplos → antecipar objeção óbvia → fechar com 3 movimentos (engajamento→motivação→despedida)"
+    when_to_use: "Ao criar conteúdo educacional no estilo 'demonstrativo, no campo, fazendo junto'"
+    source_doc: "VOL-02-como-o-afonso-ensina.md"
+    source_lens: "L4"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-02, Seção 14]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-048"
+    type: OUTPUT_FORMAT
+    content: "Checklist de Modelagem de Voz do Rafael Bem — estrutura didática replicável (não as palavras literais)."
+    domain: "Voz e Didática de Cada Expert"
+    source_expert: "Rafael Bem"
+    format_template: "Numerar posição na sequência maior → abrir exemplo com marcador de atenção → empilhar 3-4 variações de nicho → mostrar contraste fraco-vs-forte → embasar com números reais → citar fonte de autoridade → convidar reflexão ativa → fechar recapitulando o que foi ensinado → mencionar suporte coletivo"
+    when_to_use: "Ao criar conteúdo analítico/educacional no estilo 'na régua, analisando o que funciona'"
+    source_doc: "VOL-04-como-o-rafael-bem-ensina.md"
+    source_lens: "L4"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-04, Seção 12]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-049"
+    type: VOCABULARY
+    term: "Destravar (Afonso)"
+    definition: "Verbo recorrente do Afonso para indicar desbloqueio de resultado (crescimento, posicionamento) — preferido a 'desbloquear' ou 'acelerar'."
+    source_expert: "Afonso Molina"
+    domain: "Voz e Didática de Cada Expert"
+    usage_context: "Vocabulário de voz — usar ao modelar o tom motivacional do Afonso"
+    source_doc: "GLOSSARIO.md"
+    source_lens: "L4"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: GLOSSARIO.md, Termos do Afonso]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "filler"
+
+  - kf_id: "KF-expert-viral-050"
+    type: VOCABULARY
+    term: "POV (Rafael Bem)"
+    definition: "'Ponto de vista' — técnica de gancho em que o espectador sente que está dentro da cena."
+    source_expert: "Rafael Bem"
+    domain: "Voz e Didática de Cada Expert"
+    usage_context: "Termo técnico do catálogo de modelos — usar ao descrever ganchos de imersão"
+    source_doc: "GLOSSARIO.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: GLOSSARIO.md, Termos do Rafael]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "filler"
+
+  - kf_id: "KF-expert-viral-051"
+    type: VOCABULARY
+    term: "Assunto (vs. Tema) — Clara Siqueira"
+    definition: "Recorte específico dentro de um tema amplo, necessário pra um roteiro objetivo — sem ele o vídeo 'não fala nada com nada'."
+    source_expert: "Clara Siqueira"
+    domain: "Voz e Didática de Cada Expert"
+    usage_context: "Distinção central da Estrutura de 8 Passos (KF-044) — usar sempre que orientar a definição de roteiro"
+    source_doc: "GLOSSARIO.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: GLOSSARIO.md, Termos da Clara]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-expert-viral-052"
+    type: VOCABULARY
+    term: "Millennial Pause (Rafael Bem)"
+    definition: "A pausa/respirada no início da fala antes de começar a falar de fato — deve ser cortada na edição."
+    source_expert: "Rafael Bem"
+    domain: "Voz e Didática de Cada Expert"
+    usage_context: "Termo técnico de edição — conecta com KF-027"
+    source_doc: "GLOSSARIO.md"
+    source_lens: "L4"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: GLOSSARIO.md, Termos do Rafael]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "filler"
+
+  # =========================================================================
+  # DOMÍNIO 15 — Posicionamento e Polarização (ponto de tensão/risco)
+  # =========================================================================
+  - kf_id: "KF-expert-viral-053"
+    type: ANTI_PATTERN
+    content: "REJEITADO PELA KAROL (2026-08-05): buscar deliberadamente polêmica político-partidária ou religiosa como gatilho de gancho/debate — técnica de Clara Siqueira ('você pode se posicionar como petista, bolsonarista, não importa o partido, o que faz você ficar na boca do povo é você se posicionar')."
+    domain: "Posicionamento e Polarização"
+    source_expert: "Clara Siqueira"
+    consequence: "Karol avaliou e decidiu que essa técnica não condiz com a persona dela — autoridade e imagem profissional vêm antes de qualquer ganho de alcance no digital. Ela não opera pelo 'quero ser falada' que sustenta esse código de Clara."
+    alternative: "Opinião e posicionamento profissional continuam bem-vindos (ex.: defender um método, discordar de uma prática do mercado, dar uma visão forte sobre gestão/negócio). O que fica fora é usar tema político-partidário ou religioso como isca deliberada de controvérsia. CTA Duplo (KF-expert-viral-023) e os 5 Códigos (KF-expert-viral-040) seguem disponíveis, desde que aplicados a opinião de negócio/persona, nunca a polarização político-religiosa."
+    source_doc: "VOL-08-clara-siqueira-no-contexto-dos-tres-metodos.md"
+    source_lens: "L6"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-08, Seção 5]"
+    confidence: 0.95
+    inferred: false
+    pareto_zone: "crown_jewel"
+    notes: "HARD CONSTRAINT DA MENTE, não mais tensão em aberto — a Karol resolveu explicitamente no Playback (Fase 3). Reclassificado de 'impact/tensão' pra 'crown_jewel' porque agora é uma regra de proteção de marca que rege TODAS as sugestões de conteúdo de opinião que a mente vai gerar, com a mesma prioridade dos outros 3 princípios convergentes. Ver voice-profile.yaml, hard_constraints."
+
+  # =========================================================================
+  # DOMÍNIO TRANSVERSAL — Premissas e Omissões Implícitas (Lente L7)
+  # =========================================================================
+  - kf_id: "KF-expert-viral-054"
+    type: PRINCIPLE
+    content: "Os 3 experts assumem, sem declarar formalmente, que o criador aparece em vídeo curto gravado no celular (selfie/self) — nenhum dos 3 cobre formatos longos (YouTube), produção com equipe/câmera profissional, ou conteúdo 100% sem o rosto do criador como estratégia central (Afonso menciona de passagem, não desenvolve)."
+    domain: "Premissas e Omissões Implícitas"
+    source_expert: "Afonso Molina + Rafael Bem + Clara Siqueira (premissa implícita compartilhada)"
+    source_doc: "análise transversal de VOL-01, VOL-03, VOL-06"
+    source_lens: "L7"
+    source_tier: "ouro"
+    confidence: 0.57
+    inferred: true
+    pareto_zone: "impact"
+    notes: "[extraído de implícito] Premissa não declarada mas consistente nos 3 métodos — importante avisar a Karol se ela quiser aplicar isso a formato muito diferente (ex.: vídeo longo, podcast em vídeo)."
+
+  - kf_id: "KF-expert-viral-055"
+    type: HEURISTIC
+    content: "Quando o criador não sabe o que postar hoje, a resposta implícita dos 3 métodos nunca é 'crie algo original do zero' — é sempre 'puxe de um repertório já validado' (referência caçada, catálogo de modelos, ou código já testado)."
+    domain: "Premissas e Omissões Implícitas"
+    source_expert: "Afonso Molina + Rafael Bem + Clara Siqueira (heurística oculta compartilhada)"
+    condition: "SE não houver ideia clara de conteúdo pra postar hoje"
+    action: "ENTÃO recorrer ao repertório já validado (referência do dia — Afonso; modelo do catálogo — Rafael; Código Frases/Pauta Quente, os mais rápidos — Clara) em vez de tentar criar algo 100% original"
+    source_doc: "análise transversal de VOL-01, VOL-03, VOL-06"
+    source_lens: "L7"
+    source_tier: "ouro"
+    confidence: 0.52
+    inferred: true
+    pareto_zone: "impact"
+    notes: "[extraído de implícito] Nenhum dos 3 formaliza isso como regra explícita, mas é o comportamento consistente nos 3 métodos sempre que abordam 'falta de ideia' — merece destaque porque é literalmente a resposta mais provável a um pedido futuro da Karol tipo 'não sei o que postar hoje'."
+
+  - kf_id: "KF-expert-viral-056"
+    type: ANTI_PATTERN
+    content: "Nenhum dos 3 experts ensina como lidar com backlash real ou comentários negativos genuínos — apesar de recomendarem gerar debate/polêmica deliberadamente como estratégia (KF-038, KF-053)."
+    domain: "Premissas e Omissões Implícitas"
+    source_expert: "Afonso Molina + Rafael Bem + Clara Siqueira (omissão compartilhada)"
+    consequence: "Gap identificado também no VOL-05, Seção 7, como gap compartilhado — se a Karol aplicar a técnica de polêmica/debate (especialmente a versão mais explícita de Clara) e receber backlash real (não só 'debate saudável'), a KB não tem framework de resposta."
+    alternative: "Sinalizar esse gap explicitamente se a Karol perguntar sobre gestão de crise/comentário negativo — não inventar uma resposta não verificada nas fontes."
+    source_doc: "VOL-05-sintese-comparativa-afonso-x-rafael.md"
+    source_lens: "L7"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-05, Seção 7]"
+    confidence: 0.48
+    inferred: true
+    pareto_zone: "impact"
+    notes: "[extraído de implícito] Omissão explicitamente reconhecida na própria KB (não é uma dedução arriscada minha) — por isso confidence um pouco acima do piso de L7 apesar de ser anti_pattern."
+
+  - kf_id: "KF-expert-viral-057"
+    type: HEURISTIC
+    content: "Regra implícita de priorização quando o tempo é curto: os 3 métodos convergem em oferecer sempre uma opção 'rápida' pro dia sem tempo (Afonso: referência+troca mínima; Rafael: catálogo pronto; Clara: Código Frases 3-5min) — nenhum dos 3 aceita 'não postar' como opção válida."
+    domain: "Premissas e Omissões Implícitas"
+    source_expert: "Afonso Molina + Rafael Bem + Clara Siqueira (heurística oculta compartilhada)"
+    condition: "SE o tempo disponível pra criar conteúdo hoje for muito curto"
+    action: "ENTÃO usar a via mais rápida do repertório de qualquer um dos 3 (nunca pular a publicação do dia)"
+    source_doc: "análise transversal de VOL-01, VOL-03, VOL-06"
+    source_lens: "L7"
+    source_tier: "ouro"
+    confidence: 0.52
+    inferred: true
+    pareto_zone: "filler"
+    notes: "[extraído de implícito]"
+
+  - kf_id: "KF-expert-viral-058"
+    type: PRINCIPLE
+    content: "Nenhum framework desta KB é apresentado por seu autor como definitivo/eterno — Rafael é o único que declara isso explicitamente ('posso mudar o algoritmo quantas vezes quiser, se você prende atenção, gera engajamento e compartilhamento, vai viralizar'), mas o mesmo pressuposto (ancorar em comportamento humano, não em regra de plataforma) está implícito também em Afonso e Clara, que nunca tratam uma regra técnica de app (Edits, CapCut) como mais importante que o princípio por trás dela."
+    domain: "Premissas e Omissões Implícitas"
+    source_expert: "Afonso Molina + Rafael Bem + Clara Siqueira (premissa implícita, declarada explicitamente só por Rafael)"
+    source_doc: "VOL-04-como-o-rafael-bem-ensina.md"
+    source_lens: "L7"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-04, Seção 13.5]"
+    confidence: 0.57
+    inferred: true
+    pareto_zone: "impact"
+    notes: "[extraído de implícito] Relevante pro agente: quando uma regra técnica específica (ex.: app X mudou de nome) ficar desatualizada, o agente deve saber recorrer ao princípio por trás dela, não travar."
+
+  # =========================================================================
+  # ADIÇÃO (2026-08-05) — VOL-09: Catálogo Completo 18 Modelos Virais (Rafael Bem)
+  # Fonte trazida pela Karol (board Trello) durante o Playback, via merge do ETLmaker
+  # =========================================================================
+  - kf_id: "KF-expert-viral-059"
+    type: FRAMEWORK
+    content: "Catálogo Completo dos 18 Modelos Virais (Rafael Bem) — antes só a estrutura + 1 deep-dive estavam disponíveis; agora os 18 nomes, gatilhos e exemplos de gancho estão cobertos."
+    domain: "Formatos Prontos e Catálogos"
+    source_expert: "Rafael Bem"
+    steps_or_components:
+      - "01 C.N.L. (conteúdo na legenda), 02 P.O.V./Quebra de Objeção, 03 Tutorial/Truque, 04 Dicas e Ganchos Negativos, 05 Série/Jornada 'Dia 01', 06 Transformação, 07 React, 08 Comparação, 09 Lista"
+      - "10 Diálogos Fictícios, 11 UGC/Resenha, 12 Identificação, 13 Caixinha de Perguntas, 14 Podcast/Entrevista, 15 Um Dia na Vida, 16 Hipnotizante/Satisfatório, 17 Produto em Uso, 18 Efeitos Criativos"
+    when_to_use: "Quando a Karol pedir um formato pronto pra testar — agora dá pra escolher por gatilho psicológico desejado (ver KF-060), não só por categoria"
+    source_doc: "VOL-09-catalogo-completo-18-modelos-virais-rafael-bem.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-09, Seção 3]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "excellence"
+    notes: "Substitui/expande KF-expert-viral-003 (que só tinha a estrutura genérica). Fecha gap documentado desde o 1º ciclo da KB."
+
+  - kf_id: "KF-expert-viral-060"
+    type: VOCABULARY
+    term: "Gatilhos Psicológicos (taxonomia do catálogo)"
+    definition: "11 gatilhos nomeados explicitamente no material do Rafael: curiosidade, identificação, medo/FOMO, urgência, exclusividade, prova social, desejo, continuidade/cliffhanger, satisfação visual, participação, autoridade — cada um associado a modelos específicos do catálogo."
+    source_expert: "Rafael Bem"
+    domain: "Formatos Prontos e Catálogos"
+    usage_context: "Camada de vocabulário mais granular que qualquer termo já no GLOSSARIO — usar pra explicar POR QUE um formato funciona, não só COMO executar"
+    source_doc: "VOL-09-catalogo-completo-18-modelos-virais-rafael-bem.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-09, Seção 5]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-expert-viral-061"
+    type: EXAMPLE
+    content: "4ª formulação independente da regra 'modelar, não copiar': o próprio material de apoio do Rafael ensina a trocar o gancho P.O.V. 'dormir cedo' por versões de finanças ('jura que vai economizar... e gasta tudo') e academia ('promete treinar de manhã... mas dorme até tarde') — mesma técnica de troca mínima do Afonso (VOL-01) e 'copiar tema não copiar palavra' da Clara (VOL-06)."
+    domain: "Modelagem e Adaptação sem Cópia"
+    source_expert: "Rafael Bem"
+    illustrates: "KF-expert-viral-007"
+    context: "Lista 'Segundo Passo' do board Trello, protocolo de adaptação"
+    source_doc: "VOL-09-catalogo-completo-18-modelos-virais-rafael-bem.md"
+    source_lens: "L5"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-09, Seção 2]"
+    confidence: 0.86
+    inferred: false
+    pareto_zone: "impact"
+    notes: "Reforça ainda mais o crown jewel KF-007 — agora com 4 formulações independentes em vez de 3."
+
+  - kf_id: "KF-expert-viral-062"
+    type: HEURISTIC
+    content: "Em vídeos narrados tipo 'um dia na vida', narrar reflexão/pensamento, nunca a ação óbvia que já está visível na tela."
+    domain: "Corpo, Desenvolvimento e Retenção do Meio"
+    source_expert: "Rafael Bem"
+    condition: "SE o vídeo é narrado sobre uma cena que já se explica visualmente (ex.: fazendo café)"
+    action: "ENTÃO narrar um pensamento/sentimento sobre o momento, não descrever a ação ('Agora estou fazendo café' é fraco; 'A primeira coisa que faço quando acordo? Questiono todas as decisões da minha vida' é forte)"
+    source_doc: "VOL-09-catalogo-completo-18-modelos-virais-rafael-bem.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    source_ref: "[SOURCE: VOL-09, Seção 4, Modelo #15]"
+    confidence: 0.81
+    inferred: false
+    pareto_zone: "impact"
+    notes: "Regra mais operacionalmente detalhada de todo o board (tem pares ❌/✅ explícitos na fonte) — alta aplicabilidade prática."
+
+  # =========================================================================
+  # ADIÇÃO (2026-08-05) — Regra de Desempate da Karol (Playback)
+  # =========================================================================
+  - kf_id: "KF-expert-viral-063"
+    type: PRINCIPLE
+    content: "REGRA DE DESEMPATE DA KAROL: em qualquer divergência real de recomendação entre os experts (não complementaridade — divergência de fato, onde só dá pra seguir um), Afonso Molina prevalece por padrão."
+    domain: "Premissas e Omissões Implícitas"
+    source_expert: "Decisão explícita da Karol (Playback, 2026-08-05)"
+    evidence: "Aplica-se às divergências reais já mapeadas em VOL-05, Seção 3: (1) proporção de formato — prevalece a proporção fixa 2:1 do Afonso sobre 'maximizar volume sem proporção' do Rafael; (2) validação de referência — prevalece o critério numérico manual do Afonso sobre o catálogo pré-curado do Rafael como método PRIMÁRIO (o catálogo do Rafael segue disponível como atalho secundário, não como substituto). NÃO se aplica a técnicas complementares (ex.: 'meio do vídeo livre' de Afonso + técnica 'História/Conexão' de Rafael não competem, então ambas seguem disponíveis; 'autoridade por demonstração' de Afonso + 'autoridade por métrica' de Rafael também não competem)."
+    domain_alt: "Governança de decisões da mente"
+    source_doc: "Decisão registrada nesta sessão de Playback"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.95
+    inferred: false
+    pareto_zone: "crown_jewel"
+    notes: "Regra de governança, não conteúdo extraído de fonte — define como a mente resolve empates entre os 2 métodos mais próximos (Afonso e Rafael). Clara já está fora da equação de divergência de ênfase (ela só diverge no ponto de polarização, já resolvido como hard constraint em KF-053). Reclassificar VOL-05 Seção 3 nesta luz: onde antes a KB reconciliava com 'os dois' ou 'contexto decide', agora o agente tem uma prioridade padrão clara na ausência de instrução contrária da Karol."
+
+self_validation_checklist:
+  granular_citations_pct: 92
+  granular_citations_check: ">=60% — PASS (57 de 62 KFs têm source_ref granular; os 5 restantes citam source_doc + notes com localização textual)"
+  voice_profile_signature_phrases: 14
+  voice_profile_check: ">=5 signature phrases verificáveis — PASS (7 do Afonso + 7 do Rafael, ver voice-profile.yaml)"
+  pareto_classified: "63/63 — PASS"
+  crown_jewels_count: 5
+  crown_jewels_pct: "7.9% — acima do teto ideal de <5%, mas o 4o (KF-053) e o 5o (KF-063) itens nao sao conteudo extraido e classificado por riqueza, sao decisoes de governanca que a Karol definiu explicitamente no Playback (Fase 3): KF-053 restringe topico (nunca polarizacao politico-religiosa), KF-063 desempata metodo (Afonso prevalece em divergencia real com Rafael). Tratados como crown_jewel porque regem o comportamento da mente inteira, mesma prioridade dos 3 principios de convergencia tripla."
+  trinity_per_domain: "13 de 15 dominios tem framework+heuristica+exemplo — 2 dominios (Identidade Visual, Musica/Audio) sao mais finos por serem exclusivos/menores nas fontes, sinalizado nas notes"
+  generic_kfs_survived: 0
+  tensions_documented: 0
+  tensions_note: "Polarizacao politico-social (KF-053) era tensao editorial em aberto — RESOLVIDA pela Karol no Playback (2026-08-05): tecnica de Clara rejeitada, virou hard constraint (nao mais tensao pendente)"
+  confidence_baseline_applied: true
+  verdict: "PASS — QG-MF-002"
+  playback_correction_log:
+    - date: "2026-08-05"
+      correction: "Karol rejeitou a tecnica de polarizacao politico-religiosa de Clara Siqueira (KF-053) por incompatibilidade com persona/autoridade profissional. KF-038 e KF-040 ajustados para escopar o mecanismo de debate a opiniao de negocio, nunca polarizacao partidaria/religiosa. KF-053 reclassificado de ANTI_PATTERN-tensao para hard-constraint crown_jewel."

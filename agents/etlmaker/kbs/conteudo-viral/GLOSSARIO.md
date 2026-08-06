@@ -77,4 +77,22 @@
 
 ---
 
-**Total: 41 termos catalogados** — 17 do Afonso, 12 do Rafael Bem, 9 da Clara Siqueira, 4 convergentes com nuance própria de cada autor. Termos de outros módulos de qualquer um dos cursos (citados de passagem, mas não explicados aqui) foram deixados fora — ver "Escopo e Limites" no [README.md](README.md).
+## Gatilhos Psicológicos (Catálogo de 18 Modelos Virais — Rafael Bem, VOL-09)
+
+> Taxonomia nomeada explicitamente no board Trello do catálogo — mais granular que qualquer termo dos módulos em vídeo do Rafael.
+
+| Termo | Definição | Fonte |
+|---|---|---|
+| Curiosidade (gatilho) | "Preciso saber disso" — o espectador continua assistindo pra resolver uma dúvida criada no gancho | [Fonte: VOL-09, Seção 5] |
+| Identificação (gatilho) | "Isso sou eu" — o espectador se vê na cena e comenta reconhecendo a situação | [Fonte: VOL-09, Seção 5] |
+| Medo / FOMO (gatilho) | "Será que estou errando?" / medo de ficar de fora — ativa urgência de assistir e corrigir um comportamento | [Fonte: VOL-09, Seção 5] |
+| Exclusividade (gatilho) | "Poucas pessoas sabem disso" — sensação de estar recebendo informação privilegiada | [Fonte: VOL-09, Seção 5] |
+| Prova social (gatilho) | "Se funcionou pra essa pessoa real, funciona" — testemunho ou resultado real aumenta credibilidade | [Fonte: VOL-09, Seção 5] |
+| Continuidade / cliffhanger (gatilho) | "Preciso ver o próximo episódio" — usado no formato Série/Jornada "Dia 01..." | [Fonte: VOL-09, Seção 5] |
+| Satisfação visual (gatilho) | Padrões, repetição e movimentos organizados geram prazer de assistir (formato Hipnotizante) | [Fonte: VOL-09, Seção 5] |
+
+*Ver [VOL-09, Seção 5](VOL-09-catalogo-completo-18-modelos-virais-rafael-bem.md#5-gatilhos-psicológicos--glossário-transversal) pra tabela completa com os 11 gatilhos e os modelos onde cada um aparece com mais força.*
+
+---
+
+**Total: 41 termos catalogados** (+ 7 gatilhos psicológicos do catálogo de 18 modelos, Seção acima) — 17 do Afonso, 12 do Rafael Bem, 9 da Clara Siqueira, 4 convergentes com nuance própria de cada autor. Termos de outros módulos de qualquer um dos cursos (citados de passagem, mas não explicados aqui) foram deixados fora — ver "Escopo e Limites" no [README.md](README.md).

@@ -1,0 +1,59 @@
+mind_slug: "expert-viral"
+mode: "synthetic"
+analysis_date: "2026-08-05"
+
+metrics:
+  total_kfs: 63
+  by_type:
+    PRINCIPLE: 12
+    FRAMEWORK: 14
+    HEURISTIC: 15
+    EXAMPLE: 5
+    ANTI_PATTERN: 7
+    VOCABULARY: 6
+    OUTPUT_FORMAT: 4
+  by_pareto_zone:
+    crown_jewel: 5
+    excellence: 15
+    impact: 38
+    filler: 5
+  total_domains: 16
+  average_confidence: 0.82
+  inferred_ratio: 0.086
+  source_ref_coverage: 0.91
+  convergences: 4
+  tensions: 0
+  gaps:
+    - "Fórmula sistemática de legenda/descrição de post"
+    - "Como lidar com comentários negativos ou backlash real"
+    - "Tráfego pago / impulsionamento (fora do escopo desta KB)"
+    - "3 dos 5 módulos do curso de Clara (Algoritmo, Movimento/Stories, Perfil que Vende) fora do escopo"
+  gaps_resolved:
+    - "RESOLVIDO (2026-08-05): Catálogo completo dos 18 Modelos Virais do Rafael — Karol trouxe o board Trello, ETLmaker compôs VOL-09, 4 novos KFs incorporados (KF-059 a KF-062)"
+
+quality_gate_qg_mf_002:
+  min_kfs_synthetic: "62 >= 20 — PASS"
+  min_frameworks: "14 >= 2 — PASS"
+  min_heuristics: "15 >= 3 — PASS"
+  min_domains: "16 >= 3 — PASS"
+  min_avg_confidence: "0.82 >= 0.7 — PASS"
+  voice_profile_complete: "PASS — 3 perfis (Afonso, Rafael Bem, Clara Siqueira) + fusion_voice proposta"
+  inferred_ratio_check: "0.086 < 0.4 — PASS"
+  verdict: "PASS"
+
+deviation_notes:
+  - "Distribuição pareto (crown_jewel 5.2%, excellence 24%) fica acima da faixa-guia de referência para 'excellence' (~10-15%). Motivo identificado: as 12 fontes já são uma KB curada pelo ETLmaker (score 98.8%, 0 invenções), não documentação bruta — a densidade de conteúdo 'pilar' (frameworks nomeados, princípios centrais por autor) é estruturalmente mais alta do que o caso comum que a tabela-guia pressupõe. Os 3 crown jewels permanecem estritamente justificados por convergência tripla independente (critério objetivo, não generosidade de classificação) — nenhum item foi promovido a crown_jewel sem os 3 experts convergindo de forma independente."
+  - "2 domínios (Identidade Visual, Música/Áudio) ficam com cobertura 'baixa' (1-2 KFs) por serem genuinamente exclusivos/menores nas fontes processadas — não é lacuna de extração, é o formato real do material-fonte (mesma lógica já documentada nos relatórios de validação do ETLmaker pra essa KB)."
+
+self_validation_summary: "8/8 itens do checklist de auto-validação (ver knowledge-facets.yaml) passaram. Nenhum KF genérico sobreviveu à extração. 5 KFs L7/implícitos, todos com confidence <=0.57 e inferred:true, marcados para confirmação explícita da Karol na Fase 3 (Playback)."
+
+playback_correction_2026_08_05:
+  summary: "Karol rejeitou a técnica de polarização político-religiosa de Clara Siqueira (persona/autoridade profissional vêm antes de alcance digital). KF-038, KF-040 e KF-053 ajustados. Tensão antes em aberto (1) virou 0 — resolvida, não mais pendente."
+  new_hard_constraint: "Mente nunca sugere tema político-partidário ou religioso como isca de polêmica/debate, mesmo usando os formatos/CTAs que tecnicamente permitiriam isso (CTA Duplo, Loufai, React, Pauta Quente). Opinião de negócio/posicionamento profissional continua plenamente disponível."
+  external_source_resolved: "Karol trouxe o link do Trello do Rafael Bem com o catálogo completo dos 18 Modelos Virais. ETLmaker processou (modo Merge, 3º ciclo) e compôs VOL-09. 4 novos KFs (059-062) incorporados a este mind. Gap fechado."
+
+playback_correction_2_2026_08_05:
+  summary: "Karol definiu regra de desempate: em divergência real de recomendação entre Afonso e Rafael (não complementaridade), Afonso prevalece por padrão."
+  new_governance_rule: "KF-063 — aplica-se às 2 divergências reais mapeadas em VOL-05 Seção 3 (proporção de formato 2:1 vs volume livre; validação de referência por critério numérico vs catálogo pré-curado). Não se aplica onde os métodos são complementares, não conflitantes (ex.: liberdade do meio do vídeo + técnica História/Conexão; autoridade por demonstração + autoridade por métrica)."
+
+verdict: "APPROVED — pronto para reapresentar o Playback final à Karol (Fase 3) e, com a confirmação dela, seguir para a Fase 4 (Forja)"

@@ -1,9 +1,9 @@
 # KB — Conteúdo Viral (Multi-Autor: Afonso Molina + Rafael Bem + Clara Siqueira)
 
-> **Versão:** 3.0
-> **Fontes:** 27 fontes processadas (~15.700 palavras) — Afonso: 4 aulas + PDF + vídeo de referência · Rafael Bem: 10 aulas/legendas · Clara Siqueira: 11 aulas (Módulos 2-3 do Código PEV 2.0)
+> **Versão:** 3.1
+> **Fontes:** 28 fontes processadas (~32.000 palavras) — Afonso: 4 aulas + PDF + vídeo de referência · Rafael Bem: 10 aulas/legendas + catálogo completo (board Trello, 18 modelos) · Clara Siqueira: 11 aulas (Módulos 2-3 do Código PEV 2.0)
 > **Autores:** Afonso Molina (ROTA 100K) · Rafael Bem (Reels Pro) · Clara Siqueira (Código PEV 2.0)
-> **Volumes:** 8 volumes + 4 docs transversais
+> **Volumes:** 9 volumes + 4 docs transversais
 > **Gerado por:** ETLmaker v3.0
 
 ---
@@ -28,6 +28,7 @@ Extração e estruturação de **três métodos independentes** sobre criação 
 | 6 | [O Método de Clara Siqueira: Códigos Virais](VOL-06-o-metodo-de-clara-siqueira-codigos-virais.md) | Clara Siqueira | Tempo de Tela, Curadoria TikTok, os 5 Códigos Virais | 306 |
 | 7 | [O Método de Clara Siqueira: Roteiros Virais](VOL-07-o-metodo-de-clara-siqueira-roteiros-virais.md) | Clara Siqueira | 3 Tipos de Gancho, Retenção, CTA, Estrutura de 8 Passos | 224 |
 | 8 | [Clara Siqueira no Contexto dos 3 Métodos](VOL-08-clara-siqueira-no-contexto-dos-tres-metodos.md) | Todos | Convergências/divergências tripla, guia de decisão atualizado | 102 |
+| 9 | [Catálogo Completo: 18 Modelos Virais do Rafael Bem](VOL-09-catalogo-completo-18-modelos-virais-rafael-bem.md) | Rafael Bem | Os 18 modelos com gatilhos psicológicos nomeados, protocolo de adaptação, taxonomia de gatilhos | 334 |
 
 ## Docs Transversais
 
@@ -88,6 +89,14 @@ Extração e estruturação de **três métodos independentes** sobre criação 
 
 **Processamento:** transcrições trazidas via modo Merge do ETLmaker a partir da KB standalone `codigo-pev-2-0` (login Cademi → ffmpeg → Whisper `tiny` → Fase 1/4 retroativas feitas em 2026-08-05). **Escopo parcial:** apenas 2 dos 5 módulos do curso de Clara entraram neste merge — os módulos "Algoritmo", "Movimento/Stories" e "Perfil que Vende" ficam na KB standalone, disponíveis pra outro agente.
 
+### Rafael Bem — Catálogo Completo (3º ciclo de merge, 2026-08-05)
+
+| # | Título | Fonte |
+|---|--------|-------|
+| 28 | Board Trello "🧠🔥 MODELOS VIRAIS 2026 ReelsPro©" — 18 modelos, 314 cards | Board público indicado pela Karol, extraído via API JSON pública do Trello |
+
+**Processamento:** download do JSON público do board (`https://trello.com/b/{id}/{slug}.json`) → parsing estruturado (listas + cards + descrições) → composição do VOL-09. Fecha o gap "catálogo completo fora do alcance" documentado desde o 1º ciclo desta KB.
+
 ## Autores
 
 | Autor | Papel | Peso |
@@ -103,7 +112,7 @@ Os 3 autores são tratados com **peso igual** — não é um caso de autor princ
 ## Escopo e Limites Desta KB
 
 - **Afonso:** cobre apenas o Módulo 3 do ROTA 100K.
-- **Rafael Bem:** cobre os módulos "Modelos Virais" e "Ingredientes do Perfil Viral" do Reels Pro (10 de 50 conteúdos do curso completo). Catálogo completo de 18 modelos vive num Trello externo, fora do alcance desta KB.
+- **Rafael Bem:** cobre os módulos "Modelos Virais" e "Ingredientes do Perfil Viral" do Reels Pro (10 de 50 conteúdos do curso completo) + o catálogo completo de 18 Modelos Virais (VOL-09, trazido do board Trello no 3º ciclo de merge).
 - **Clara Siqueira:** cobre apenas 2 dos 5 módulos do Código PEV 2.0 (Códigos Virais + Roteiros). Os módulos de Algoritmo, Movimento/Stories e Perfil que Vende dela ficam na KB standalone `codigo-pev-2-0`.
 - **Gaps compartilhados** (nenhum dos 3 autores cobre nas fontes processadas): fórmula sistemática de legenda/descrição, como lidar com comentários negativos, prática de tráfego pago. Ver VOL-05, Seção 7.
 - **Ponto de atenção editorial:** Clara recomenda grau de polarização político-social explícito mais alto que Afonso e Rafael — ver VOL-08, Seção 5, antes de aplicar essa técnica específica.

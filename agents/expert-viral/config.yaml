@@ -1,0 +1,20 @@
+name: expert-viral
+slash_prefix: expertViral
+version: 1.0.0
+description: "Mente Sintética — fusão de Afonso Molina, Rafael Bem e Clara Siqueira sobre criação de conteúdo viral pro Instagram/TikTok. Roteiriza, analisa referências e diagnostica performance."
+type: single-mind
+
+agents:
+  - expert-viral
+
+tasks:
+  - start
+  - roteirizar
+  - analisar-referencia
+  - diagnosticar
+  - consultor
+
+knowledge_base: agents/expert-viral/data/
+
+memory:
+  kb: agents/expert-viral/data/expert-viral-kb.md

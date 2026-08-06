@@ -1,0 +1,155 @@
+mind_slug: "expert-viral"
+mode: "synthetic"
+total_domains: 16
+
+domains:
+  - name: "Caça e Curadoria de Referências"
+    kf_count: 6
+    kf_types: { PRINCIPLE: 1, FRAMEWORK: 2, HEURISTIC: 2, EXAMPLE: 1, ANTI_PATTERN: 0, VOCABULARY: 0, OUTPUT_FORMAT: 0 }
+    coverage: "high"
+    contributing_experts: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+    convergence_note: "Os 3 têm uma via de curadoria própria (busca manual com critério — Afonso; catálogo pré-curado — Rafael; TikTok com filtro de curtidas — Clara), mas com ferramentas e critérios distintos — divergência de ênfase, não de princípio. ATUALIZADO 2026-08-05 (KF-063 — regra de desempate da Karol): 2ª divergência real da KB — por padrão, o critério numérico manual do Afonso é o método PRIMÁRIO de validação de referência; o catálogo do Rafael segue disponível como atalho secundário, não como substituto."
+
+  - name: "Modelagem e Adaptação sem Cópia"
+    kf_count: 5
+    kf_types: { PRINCIPLE: 1, FRAMEWORK: 1, HEURISTIC: 1, ANTI_PATTERN: 1, EXAMPLE: 1, VOCABULARY: 0, OUTPUT_FORMAT: 0 }
+    coverage: "high"
+    contributing_experts: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+    convergence_note: "CROWN JEWEL — convergência tripla independente ('modelar, não copiar'). Ver KF-expert-viral-007. Reforçado (2026-08-05) por uma 4ª formulação independente vinda do material de apoio do próprio Rafael (KF-061, VOL-09)."
+
+  - name: "Construção de Gancho"
+    kf_count: 6
+    kf_types: { PRINCIPLE: 1, FRAMEWORK: 2, HEURISTIC: 1, EXAMPLE: 1, VOCABULARY: 1, ANTI_PATTERN: 0, OUTPUT_FORMAT: 0 }
+    coverage: "high"
+    contributing_experts: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+    convergence_note: "CROWN JEWEL — convergência tripla ('gancho é o elemento mais crítico'). Cada expert nomeia a estrutura de forma diferente (3 partes / 4 tipos / 3 tipos), mas a função e a prioridade são idênticas."
+
+  - name: "Corpo, Desenvolvimento e Retenção do Meio"
+    kf_count: 5
+    kf_types: { PRINCIPLE: 1, FRAMEWORK: 1, HEURISTIC: 2, EXAMPLE: 1, ANTI_PATTERN: 0, VOCABULARY: 0, OUTPUT_FORMAT: 0 }
+    coverage: "high"
+    contributing_experts: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+    convergence_note: "Afonso trata o meio como 'liberdade total' sem técnica nomeada; Rafael nomeia História/Conexão como técnica própria; Clara foca em diagnóstico de retenção via Insights. Complementares, não conflitantes — juntos formam um domínio mais completo que qualquer um isolado."
+
+  - name: "CTA (Chamada Para Ação)"
+    kf_count: 5
+    kf_types: { PRINCIPLE: 1, FRAMEWORK: 1, HEURISTIC: 1, ANTI_PATTERN: 1, OUTPUT_FORMAT: 1, EXAMPLE: 0, VOCABULARY: 0 }
+    coverage: "high"
+    contributing_experts: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+    convergence_note: "CROWN JEWEL — convergência tripla ('CTA é obrigatório'). Clara contribui a técnica exclusiva de CTA Duplo, que nem Afonso nem Rafael ensinam."
+
+  - name: "Edição e Ritmo"
+    kf_count: 4
+    kf_types: { OUTPUT_FORMAT: 1, HEURISTIC: 2, PRINCIPLE: 1, FRAMEWORK: 0, EXAMPLE: 0, ANTI_PATTERN: 0, VOCABULARY: 0 }
+    coverage: "high"
+    contributing_experts: ["Afonso Molina", "Rafael Bem"]
+    convergence_note: "Convergência dupla explícita: edição simples > complexa. Clara também edita simples (CapCut, cortar pausas) mas isso já está capturado no domínio de Formatos Prontos (os 5 Códigos), não duplicado aqui."
+
+  - name: "Música e Áudio"
+    kf_count: 2
+    kf_types: { ANTI_PATTERN: 1, HEURISTIC: 1, PRINCIPLE: 0, FRAMEWORK: 0, EXAMPLE: 0, VOCABULARY: 0, OUTPUT_FORMAT: 0 }
+    coverage: "low"
+    contributing_experts: ["Afonso Molina", "Rafael Bem"]
+    convergence_note: "Domínio fino — só 2 KFs, ambos de regras técnicas específicas de plataforma. Clara não aborda música/áudio como categoria própria nas fontes processadas."
+
+  - name: "Identidade Visual e Consistência"
+    kf_count: 1
+    kf_types: { PRINCIPLE: 1, FRAMEWORK: 0, HEURISTIC: 0, EXAMPLE: 0, ANTI_PATTERN: 0, VOCABULARY: 0, OUTPUT_FORMAT: 0 }
+    coverage: "low"
+    contributing_experts: ["Afonso Molina"]
+    convergence_note: "Domínio exclusivo do Afonso — gap compartilhado, não contradição. Rafael e Clara não tratam identidade visual como categoria própria."
+
+  - name: "Frequência e Consistência de Publicação"
+    kf_count: 3
+    kf_types: { HEURISTIC: 1, PRINCIPLE: 1, FRAMEWORK: 1, EXAMPLE: 0, ANTI_PATTERN: 0, VOCABULARY: 0, OUTPUT_FORMAT: 0 }
+    coverage: "medium"
+    contributing_experts: ["Afonso Molina", "Rafael Bem"]
+    convergence_note: "Afonso ensina proporção fixa de formato (2:1); Rafael ensina volume/consistência com ciclo de troubleshooting. ATUALIZADO 2026-08-05 (KF-063 — regra de desempate da Karol): esta é uma das 2 divergências reais da KB — por padrão, prevalece a proporção fixa 2:1 do Afonso; o volume/consistência do Rafael entra como critério secundário, não substitui a proporção."
+
+  - name: "Algoritmo e Métricas"
+    kf_count: 4
+    kf_types: { FRAMEWORK: 1, PRINCIPLE: 1, HEURISTIC: 1, ANTI_PATTERN: 1, EXAMPLE: 0, VOCABULARY: 0, OUTPUT_FORMAT: 0 }
+    coverage: "high"
+    contributing_experts: ["Rafael Bem", "Clara Siqueira"]
+    convergence_note: "Rafael formaliza 3 Pilares (retenção/engajamento/compartilhamento); Clara nomeia o mesmo território como 'Tempo de Tela' (mais próximo do pilar Retenção) e explica o mecanismo exato do algoritmo por trás da polêmica. Afonso não formaliza esse domínio explicitamente — trata retenção implicitamente via regras de duração/ritmo."
+
+  - name: "Formatos Prontos e Catálogos"
+    kf_count: 4
+    kf_types: { FRAMEWORK: 2, EXAMPLE: 1, VOCABULARY: 1, PRINCIPLE: 0, HEURISTIC: 0, ANTI_PATTERN: 0, OUTPUT_FORMAT: 0 }
+    coverage: "high"
+    contributing_experts: ["Rafael Bem", "Clara Siqueira"]
+    convergence_note: "Rafael (18 modelos, agora completo — VOL-09) e Clara (5 códigos) convergem na lógica de repertório-pronto-pra-adaptar; Afonso não tem catálogo formal (ensina a caçar referência caso a caso). ATUALIZADO 2026-08-05: gap do catálogo incompleto do Rafael foi fechado — os 18 modelos + taxonomia de 11 gatilhos psicológicos agora estão cobertos (KF-059, KF-060)."
+
+  - name: "Estrutura de Roteiro Completa"
+    kf_count: 4
+    kf_types: { FRAMEWORK: 3, HEURISTIC: 1, PRINCIPLE: 0, EXAMPLE: 0, ANTI_PATTERN: 0, VOCABULARY: 0, OUTPUT_FORMAT: 0 }
+    coverage: "high"
+    contributing_experts: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+    convergence_note: "3 formulações equivalentes de estrutura (Gancho→Corpo→Tempo→CTA / Gancho→Desenvolvimento→Clímax→CTA / 8 passos de Clara). A estrutura de Clara é a mais granular e recomendada como espinha dorsal padrão (ver VOL-05, Seção 8) — os outros 2 vocabulários entram como enriquecimento situacional."
+
+  - name: "Erros Comuns / Anti-Patterns Transversais"
+    kf_count: 1
+    kf_types: { ANTI_PATTERN: 1, PRINCIPLE: 0, FRAMEWORK: 0, HEURISTIC: 0, EXAMPLE: 0, VOCABULARY: 0, OUTPUT_FORMAT: 0 }
+    coverage: "medium"
+    contributing_experts: ["Clara Siqueira"]
+    convergence_note: "Consolidação de 5 erros específicos de Clara — funcionalmente um índice reverso de vários KFs de outros domínios (CTA, Gancho, Roteiro), não conhecimento novo isolado."
+
+  - name: "Voz e Didática de Cada Expert"
+    kf_count: 6
+    kf_types: { OUTPUT_FORMAT: 2, VOCABULARY: 4, PRINCIPLE: 0, FRAMEWORK: 0, HEURISTIC: 0, EXAMPLE: 0, ANTI_PATTERN: 0 }
+    coverage: "high"
+    contributing_experts: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+    convergence_note: "Domínio meta — não é 'o que fazer' e sim 'como falar'. Ver voice-profile.yaml para o detalhamento completo (esse arquivo tem só uma amostra representativa dos termos/checklists; GLOSSARIO.md e VOL-02/VOL-04 completos continuam sendo a referência exaustiva)."
+
+  - name: "Posicionamento e Polarização"
+    kf_count: 1
+    kf_types: { ANTI_PATTERN: 1, PRINCIPLE: 0, FRAMEWORK: 0, HEURISTIC: 0, EXAMPLE: 0, VOCABULARY: 0, OUTPUT_FORMAT: 0 }
+    coverage: "low"
+    contributing_experts: ["Clara Siqueira"]
+    convergence_note: "RESOLVIDO no Playback (2026-08-05) — não é mais tensão em aberto. Karol rejeitou explicitamente a técnica de polarização político-religiosa de Clara por incompatibilidade com persona/autoridade profissional. Vira hard constraint da mente (KF-expert-viral-053, agora crown_jewel): opinião de negócio continua disponível, polarização partidária/religiosa como isca de debate, não."
+
+  - name: "Premissas e Omissões Implícitas"
+    kf_count: 5
+    kf_types: { PRINCIPLE: 2, HEURISTIC: 2, ANTI_PATTERN: 1, FRAMEWORK: 0, EXAMPLE: 0, VOCABULARY: 0, OUTPUT_FORMAT: 0 }
+    coverage: "medium"
+    contributing_experts: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+    convergence_note: "Domínio gerado pela Lente L7 (Implícito) — todos os 5 KFs marcados inferred:true, confidence <=0.57, pendentes de confirmação explícita da Karol no Playback (Fase 3)."
+
+convergences_summary:
+  - principle: "Modelar é ser semelhante, nunca copiar"
+    experts: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+    kf_ref: "KF-expert-viral-007"
+    pareto_zone: "crown_jewel"
+  - principle: "Gancho é o elemento mais crítico do vídeo"
+    experts: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+    kf_ref: "KF-expert-viral-011"
+    pareto_zone: "crown_jewel"
+  - principle: "CTA é obrigatório — sem ele não converte"
+    experts: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+    kf_ref: "KF-expert-viral-021"
+    pareto_zone: "crown_jewel"
+  - principle: "Edição simples gera mais retenção que edição complexa"
+    experts: ["Afonso Molina", "Rafael Bem"]
+    kf_ref: "KF-expert-viral-029"
+    pareto_zone: "excellence"
+
+tensions_summary: []
+# Tensão original (polarização político-social) foi RESOLVIDA pela Karol no Playback de 2026-08-05.
+# Ver resolved_tensions abaixo.
+
+resolved_tensions:
+  - topic: "Grau de polarização político-social como estratégia de conteúdo"
+    afonso_rafael: "Falam de 'posicionamento' de forma genérica (valores, estilo de vida) — sem recomendar polarização político-partidária explícita"
+    clara: "Recomenda explicitamente que o grau de polarização (inclusive política) pode ser mais alto — 'o que faz você ficar na boca do povo é você se posicionar'"
+    kf_ref: "KF-expert-viral-053"
+    resolucao: "Karol rejeitou a técnica de Clara: sua persona tem autoridade e imagem profissional a zelar antes de qualquer ganho de alcance digital. Opinião de negócio/posicionamento profissional segue disponível; polêmica política ou religiosa como isca de debate está fora, mesmo usando formatos/técnicas que tecnicamente permitiriam (CTA Duplo, Loufai, React, Pauta Quente)."
+    resolvido_em: "2026-08-05"
+
+gaps_detected:
+  - "Fórmula sistemática de legenda/descrição de post — nenhum dos 3 experts ensina de forma completa (mencionam de passagem)"
+  - "Como lidar com comentários negativos ou backlash real (distinto de 'debate saudável') — omissão compartilhada pelos 3, mesmo recomendando gerar polêmica deliberadamente (ver KF-expert-viral-056)"
+  - "Tráfego pago / impulsionamento — fora do escopo desta KB (Afonso tem módulo específico sobre isso no ROTA 100K completo, não processado aqui)"
+  - "3 dos 5 módulos do curso de Clara (Algoritmo, Movimento/Stories, Perfil que Vende) ficaram fora do escopo — disponíveis na KB standalone codigo-pev-2-0 se precisar expandir"
+
+gaps_resolved:
+  - "RESOLVIDO (2026-08-05): Catálogo completo dos 18 Modelos Virais do Rafael — antes só estrutura + 1 deep-dive (Tutorial); Karol trouxe o board Trello, ETLmaker compôs VOL-09 com os 18 modelos completos + taxonomia de 11 gatilhos psicológicos (KF-059, KF-060)."

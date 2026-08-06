@@ -1,0 +1,167 @@
+mind_slug: "expert-viral"
+mode: "synthetic"
+ingestion_date: "2026-08-05"
+total_sources: 12
+total_words: 32000
+ouro_ratio: 1.0
+
+sources:
+  - id: SRC-001
+    path: "agents/etlmaker/kbs/conteudo-viral/README.md"
+    type: "kb"
+    tier: "ouro"
+    tier_weight: 0.95
+    expert: "Afonso Molina + Rafael Bem + Clara Siqueira"
+    word_count: 900
+    sections: 8
+    quality: "deep"
+    key_sections: ["O Que É Esta KB", "Escopo e Limites", "Autores"]
+    notes: "Documento-mapa da KB. Já contextualiza autores, pesos e limites — usado principalmente pra checar coerência do resto da ingestão."
+
+  - id: SRC-002
+    path: "agents/etlmaker/kbs/conteudo-viral/REGRAS-CARDINAIS.md"
+    type: "kb"
+    tier: "ouro"
+    tier_weight: 0.95
+    expert: "Afonso Molina + Rafael Bem + Clara Siqueira"
+    word_count: 2400
+    sections: 6
+    quality: "deep"
+    key_sections: ["Caça às Referências", "Modelagem de Formato", "Construção de Gancho e Roteiro", "Edição e Publicação", "Identidade Visual", "Música/Áudio", "Consistência e Iteração"]
+    notes: "15 regras cardinais já extraídas e citadas com [Fonte:], cada uma com autor identificado e racional ('por que é absoluta') — fonte primária pra PRINCIPLE e HEURISTIC de alta confiança."
+
+  - id: SRC-003
+    path: "agents/etlmaker/kbs/conteudo-viral/REPERTORIO.md"
+    type: "kb"
+    tier: "ouro"
+    tier_weight: 0.95
+    expert: "Afonso Molina + Rafael Bem + Clara Siqueira"
+    word_count: 4200
+    sections: 11
+    quality: "deep"
+    key_sections: ["Templates", "Fórmulas", "Benchmarks", "Checklists", "Workflows", "Scripts e Copy", "Swipes", "Tabelas de Referência", "Metáforas", "Frases de Assinatura", "Histórias e Casos"]
+    notes: "11/11 seções preenchidas, todos os itens com proveniência — fonte primária pra FRAMEWORK, EXAMPLE, OUTPUT_FORMAT."
+
+  - id: SRC-004
+    path: "agents/etlmaker/kbs/conteudo-viral/GLOSSARIO.md"
+    type: "kb"
+    tier: "ouro"
+    tier_weight: 0.95
+    expert: "Afonso Molina + Rafael Bem + Clara Siqueira"
+    word_count: 1800
+    sections: 4
+    quality: "deep"
+    key_sections: ["Termos do Afonso", "Termos do Rafael", "Termos da Clara", "Termos Convergentes"]
+    notes: "41 termos catalogados com definição fiel ao autor — fonte primária pra VOCABULARY."
+
+  - id: SRC-005
+    path: "agents/etlmaker/kbs/conteudo-viral/VOL-01-o-metodo-da-referencia-ao-post-publicado.md"
+    type: "kb"
+    tier: "ouro"
+    tier_weight: 0.95
+    expert: "Afonso Molina"
+    word_count: 3300
+    sections: 6
+    quality: "deep"
+    key_sections: ["Caça às Referências", "Modelagem de Formato", "Construção de Gancho e Roteiro", "Edição e Publicação", "Identidade Visual", "Frequência e Proporção"]
+    notes: "Pipeline operacional completo do Afonso — 4 passos sequenciais."
+
+  - id: SRC-006
+    path: "agents/etlmaker/kbs/conteudo-viral/VOL-02-como-o-afonso-ensina.md"
+    type: "kb"
+    tier: "ouro"
+    tier_weight: 0.95
+    expert: "Afonso Molina"
+    word_count: 3400
+    sections: 17
+    quality: "deep"
+    key_sections: ["Tom Geral", "Abertura/Fechamento", "Catchphrases", "Metáforas", "Terminologia", "Ficha-Resumo"]
+    notes: "Voice profile completo do Afonso — fonte primária de L4 (Voice & Personality)."
+
+  - id: SRC-007
+    path: "agents/etlmaker/kbs/conteudo-viral/VOL-03-o-metodo-do-rafael-bem.md"
+    type: "kb"
+    tier: "ouro"
+    tier_weight: 0.95
+    expert: "Rafael Bem"
+    word_count: 3600
+    sections: 6
+    quality: "deep"
+    key_sections: ["3 Pilares do Algoritmo", "5 Elementos Práticos", "Catálogo de 18 Modelos", "Deep-Dive Modelo Tutorial", "Troubleshooting"]
+    notes: "Método completo do Rafael — framework mais formalizado dos 3 (3 Pilares nomeados explicitamente)."
+
+  - id: SRC-008
+    path: "agents/etlmaker/kbs/conteudo-viral/VOL-04-como-o-rafael-bem-ensina.md"
+    type: "kb"
+    tier: "ouro"
+    tier_weight: 0.95
+    expert: "Rafael Bem"
+    word_count: 3200
+    sections: 15
+    quality: "deep"
+    key_sections: ["Assinatura por Evidência", "Contraste Fraco-vs-Forte", "Voz Coletiva", "Ficha-Resumo"]
+    notes: "Voice profile completo do Rafael — fonte primária de L4."
+
+  - id: SRC-009
+    path: "agents/etlmaker/kbs/conteudo-viral/VOL-05-sintese-comparativa-afonso-x-rafael.md"
+    type: "kb"
+    tier: "ouro"
+    tier_weight: 0.95
+    expert: "Afonso Molina + Rafael Bem (síntese)"
+    word_count: 2400
+    sections: 8
+    quality: "deep"
+    key_sections: ["Mapa de Equivalências", "Convergências", "Divergências", "Guia de Decisão", "Orientação para Agente"]
+    notes: "Volume já pensado pra alimentar a construção de um agente — Seção 8 é orientação editorial direta pro Mind Forge."
+
+  - id: SRC-010
+    path: "agents/etlmaker/kbs/conteudo-viral/VOL-06-o-metodo-de-clara-siqueira-codigos-virais.md"
+    type: "kb"
+    tier: "ouro"
+    tier_weight: 0.95
+    expert: "Clara Siqueira"
+    word_count: 3300
+    sections: 7
+    quality: "deep"
+    key_sections: ["Tempo de Tela", "Curadoria TikTok", "5 Códigos Virais", "Padrão Transversal"]
+    notes: "Trazido via modo Merge da KB standalone codigo-pev-2-0. Fontes originais Whisper tier 'tiny' (ruído maior) — a KB já sinaliza isso; tratado aqui como OURO porque o dado que chega até o Mind Forge é o volume já composto e curado, não a transcrição bruta."
+
+  - id: SRC-011
+    path: "agents/etlmaker/kbs/conteudo-viral/VOL-07-o-metodo-de-clara-siqueira-roteiros-virais.md"
+    type: "kb"
+    tier: "ouro"
+    tier_weight: 0.95
+    expert: "Clara Siqueira"
+    word_count: 2600
+    sections: 6
+    quality: "deep"
+    key_sections: ["3 Tipos de Gancho", "Retenção que Hipnotiza", "CTA", "Estrutura de 8 Passos", "Erros Comuns"]
+    notes: "Segundo a própria autora, 'o módulo mais importante do curso' — generaliza os 5 Códigos do VOL-06 num framework único."
+
+  - id: SRC-012
+    path: "agents/etlmaker/kbs/conteudo-viral/VOL-08-clara-siqueira-no-contexto-dos-tres-metodos.md"
+    type: "kb"
+    tier: "ouro"
+    tier_weight: 0.95
+    expert: "Todos (síntese tripla)"
+    word_count: 1200
+    sections: 6
+    quality: "deep"
+    key_sections: ["Mapa de Equivalências Tripla", "Convergência Tripla", "Divergência de Risco (polarização)", "Guia de Decisão Atualizado"]
+    notes: "Volume mais denso em convergência cross-source — base direta pra crown jewels da Fase 2 (3 princípios convergentes independentes: modelar-não-copiar, gancho crítico, CTA obrigatório)."
+
+quality_gate_qg_mf_001:
+  all_sources_readable: true
+  total_words_check: "32000 >= 500 — PASS"
+  all_sources_typed: true
+  no_empty_or_corrupt: true
+  verdict: "PASS"
+
+notes: |
+  Todas as 12 fontes são documentos já processados pelo ETLmaker (score de validação 98.8%,
+  0 invenções, 100% rastreável a [Fonte:] original). Isso eleva o piso de qualidade da ingestão
+  do Mind Forge muito acima do caso comum (documentação bruta) — cada KF extraído na Fase 2
+  herda a rastreabilidade dupla: KF → volume da KB → transcrição bruta original.
+  Único ponto de atenção sinalizado (não bloqueante): as transcrições originais de Clara Siqueira
+  usaram Whisper "tiny" (mais ruidoso que o "small" usado em Afonso/Rafael) — o VOL-06/07 já
+  filtraram isso na composição, então o dado chega limpo até aqui, mas fica registrado.

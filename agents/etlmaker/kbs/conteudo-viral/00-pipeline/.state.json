@@ -38,17 +38,20 @@
     "00-pipeline/sources/transcricoes-clara-siqueira/mod-roteiros-01-ganchos-virais.txt",
     "00-pipeline/sources/transcricoes-clara-siqueira/mod-roteiros-02-retencao-que-hipnotiza.txt",
     "00-pipeline/sources/transcricoes-clara-siqueira/mod-roteiros-03-acao-que-gera-seguidor.txt",
-    "00-pipeline/sources/transcricoes-clara-siqueira/mod-roteiros-04-criando-primeiro-roteiro-viral.txt"
+    "00-pipeline/sources/transcricoes-clara-siqueira/mod-roteiros-04-criando-primeiro-roteiro-viral.txt",
+    "00-pipeline/sources/trello-rafael-bem/catalogo-18-modelos-virais-raw.txt"
   ],
   "previous_kb_slug": "rota100k-conteudo-viral",
   "authors": ["Afonso Molina", "Rafael Bem", "Clara Siqueira"],
-  "merge_cycles": 2,
-  "volumes_composed": 8,
+  "merge_cycles": 3,
+  "volumes_composed": 9,
   "validation_score": 98.8,
   "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003", "QG-ETL-004", "QG-ETL-005"],
   "started_at": "2026-08-04",
   "merge_started_at": "2026-08-05",
   "merge_2_clara_siqueira_at": "2026-08-05",
+  "merge_3_catalogo_rafael_trello_at": "2026-08-05",
   "completed_at": "2026-08-05",
-  "verdict": "APPROVED"
+  "verdict": "APPROVED",
+  "merge_3_notes": "VOL-09 adicionado (catalogo completo 18 Modelos Virais do Rafael Bem, via board Trello publico). Validacao aplicada na composicao (rastreabilidade 100%, 1 anomalia de fonte documentada no Modelo #18, zero invencao) em vez da bateria completa de Camada 2/3 -- expansao de autor ja coberto, nao merge de autor novo."
 }

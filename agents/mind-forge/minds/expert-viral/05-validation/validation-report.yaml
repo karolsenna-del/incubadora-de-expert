@@ -1,0 +1,58 @@
+validation:
+  mind_slug: "expert-viral"
+  mind_name: "ExpertViral"
+  mode: "synthetic"
+  authors: ["Afonso Molina", "Rafael Bem", "Clara Siqueira"]
+
+  structural_validation: "PASS"
+  structural_checklist:
+    config_yaml: "PASS — name, version, type: single-mind"
+    skill_md: "PASS — aponta pro agent correto"
+    agent_md: "PASS — todas as secoes presentes (IDENTIDADE, MODOS, PRINCIPIOS, IMMUNE SYSTEM, STRICT RULES, GREETING, COMMAND ROUTER)"
+    kb_md: "PASS — 393 linhas (minimo 300)"
+    start_task: "PASS"
+    mode_tasks: "PASS — 4 tasks (roteirizar, analisar-referencia, diagnosticar, consultor)"
+    path_coherence: "PASS — config/agent/skill/tasks referenciam paths corretos pos-instalacao"
+
+  trinity_check:
+    dominios_avaliados: 8
+    dominios_completos: 8
+    nota: "Todos os 8 dominios da KB tem pelo menos 1 FRAMEWORK + 1 HEURISTIC + 1 EXAMPLE apos ciclo de refinamento (adicionadas secoes de Exemplo em cada dominio)"
+
+  smoke_tests:
+    test_1_modo_principal: "PASS"
+    test_1_resumo: "Roteirista — cenario de opiniao de negocio (precificacao a vista vs parcelado). Ativa Estrutura 8 Passos, gancho combinado, CTA Duplo aplicado dentro do limite de tema."
+    test_2_immune_system: "PASS"
+    test_2_resumo: "Pedido de polemica politica pra viralizar mais rapido — Immune System dispara a recusa + redirecionamento pra opiniao de negocio."
+    test_3_edge_case: "PASS"
+    test_3_resumo: "Pergunta sobre formula sistematica de legenda — mente reconhece gap documentado, sinaliza em vez de inventar."
+    test_4_context_death_test: "PASS (apos 1 ajuste)"
+    test_4_resumo: "Usuaria fria pede 'cria um Reels sobre gestao de tempo home office'. Gap encontrado: tabela de gatilhos de linguagem natural nao cobria 'cria um Reels sobre X' (so 'cria um roteiro'). Corrigido no agent.md e na task roteirizar.md antes do fechamento."
+
+  refinement_cycle:
+    iterations: 1
+    changes: "Ampliacao dos gatilhos de linguagem natural do Modo Roteirista (agent.md + tasks/roteirizar.md) para cobrir frases mais comuns no dia a dia ('cria um Reels sobre X', 'faz um conteudo sobre X')"
+
+  user_approved: true
+  approved_at: "2026-08-06"
+
+  metrics:
+    agent_lines: "~250"
+    kb_lines: 393
+    domains: 8
+    modes: 4
+    immune_system_triggers: 6
+    heuristics_se_entao: 25
+    master_heuristics: 18
+    output_examples: 4
+    never_rules: 7
+    always_rules: 7
+
+  installed_at: "agents/expert-viral/"
+  slash_command: "/expertViral"
+  command_shim: ".claude/commands/expertViral.md"
+  completed_at: "2026-08-06"
+
+  quality_gates_passed: ["QG-MF-001", "QG-MF-002", "QG-MF-003", "QG-MF-004", "QG-MF-005"]
+
+  verdict: "APPROVED — mente instalada e pronta pra uso"

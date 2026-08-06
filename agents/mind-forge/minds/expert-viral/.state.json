@@ -1,0 +1,52 @@
+{
+  "mind_slug": "expert-viral",
+  "mind_name": "ExpertViral",
+  "mode": "synthetic",
+  "current_phase": 5,
+  "phase_status": {
+    "phase_0": "completed",
+    "phase_1": "completed",
+    "phase_2": "completed",
+    "phase_3": "completed",
+    "phase_4": "completed",
+    "phase_5": "completed"
+  },
+  "purpose": "Base de criacao de conteudo viral pro Instagram da Karol, modelando o metodo e a voz de 3 experts fundidos (Afonso Molina, Rafael Bem, Clara Siqueira). Analisa referencias e roteiriza conteudo original a partir dos frameworks extraidos.",
+  "known_limitations": [
+    "Pode abrir e ler uma URL especifica de Instagram/TikTok que o usuario indicar (via Playwright), mas nao faz garimpo automatico de referencias nas plataformas (risco de deteccao anti-bot e ToS).",
+    "Transcreve audio de video (gancho falado, roteiro) com fidelidade alta via pipeline Whisper, mas nao 'assiste' video continuamente — analise visual (cenario, edicao, corte) exige extracao manual de frames, e e aproximada."
+  ],
+  "sources": [
+    "agents/etlmaker/kbs/conteudo-viral/README.md",
+    "agents/etlmaker/kbs/conteudo-viral/REGRAS-CARDINAIS.md",
+    "agents/etlmaker/kbs/conteudo-viral/REPERTORIO.md",
+    "agents/etlmaker/kbs/conteudo-viral/GLOSSARIO.md",
+    "agents/etlmaker/kbs/conteudo-viral/VOL-01-o-metodo-da-referencia-ao-post-publicado.md",
+    "agents/etlmaker/kbs/conteudo-viral/VOL-02-como-o-afonso-ensina.md",
+    "agents/etlmaker/kbs/conteudo-viral/VOL-03-o-metodo-do-rafael-bem.md",
+    "agents/etlmaker/kbs/conteudo-viral/VOL-04-como-o-rafael-bem-ensina.md",
+    "agents/etlmaker/kbs/conteudo-viral/VOL-05-sintese-comparativa-afonso-x-rafael.md",
+    "agents/etlmaker/kbs/conteudo-viral/VOL-06-o-metodo-de-clara-siqueira-codigos-virais.md",
+    "agents/etlmaker/kbs/conteudo-viral/VOL-07-o-metodo-de-clara-siqueira-roteiros-virais.md",
+    "agents/etlmaker/kbs/conteudo-viral/VOL-08-clara-siqueira-no-contexto-dos-tres-metodos.md",
+    "agents/etlmaker/kbs/conteudo-viral/VOL-09-catalogo-completo-18-modelos-virais-rafael-bem.md"
+  ],
+  "authors": ["Afonso Molina", "Rafael Bem", "Clara Siqueira"],
+  "total_kfs": 62,
+  "domains_identified": 16,
+  "quality_gates_passed": ["QG-MF-001", "QG-MF-002", "QG-MF-003", "QG-MF-004", "QG-MF-005"],
+  "forged_at": "2026-08-06",
+  "forged_output": "agents/mind-forge/minds/expert-viral/04-forged/ — KB 393 linhas, 4 modos, 8 dominios, 18 heuristicas mestras, immune system 6 triggers, self-check mind-quality.md PASS",
+  "completed_at": "2026-08-06",
+  "installed": {
+    "path": "agents/expert-viral/",
+    "slash_command": "/expertViral",
+    "command_shim": ".claude/commands/expertViral.md"
+  },
+  "started_at": "2026-08-05",
+  "paused_at": "2026-08-05",
+  "resumed_at": "2026-08-05",
+  "pause_reason": "RESOLVIDO (2026-08-05): ETLmaker processou o board Trello (https://trello.com/b/eK2y4KYp) via merge 3o ciclo, compos VOL-09 (334 linhas, 18 modelos completos). Gap fechado.",
+  "playback_status": "2 correcoes integradas: (1) rejeicao da tecnica de polarizacao politico-religiosa de Clara Siqueira (KF-053, hard constraint); (2) catalogo completo do Rafael incorporado (KF-059 a KF-062, total 62 KFs). Pronto pra reapresentar o Playback final e pedir aprovacao explicita da Karol antes de avancar pra Fase 4 (Forja).",
+  "resume_instruction": "Reapresentar o mapa de conhecimento atualizado (62 KFs, 4 crown jewels incluindo o hard constraint de persona, catalogo completo de 18 modelos) e aguardar confirmacao explicita da Karol. So entao fazer handoff pro mind-smith (Fase 4)."
+}
