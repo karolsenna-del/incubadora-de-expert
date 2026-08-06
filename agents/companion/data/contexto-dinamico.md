@@ -134,6 +134,14 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 06/08 — Weekly review (Companion):**
+- Weekly review feita (previa 04/08, 2 dias atrasada). Proximo review: 13/08.
+- **Desafio 10 Dias (Ciclo 2) ENCERRADO** — Karol: "nao resultou em nada, nenhum formato validado, nenhum conteudo garanhao". Movido pro ARQUIVO no cockpit.
+- **Desafio Rota100k (Instagram) ABERTO no lugar** (ATIVOS #2) — guia externo da mentoria "Se Posicione" (Afonso), iniciado 05/08. Rotina fixa: Reels 9h+10h, Carrossel 20h, CTA unico "seguir". Semana 01 (07-09/08) roteirizada/aprovada/produzida pelo Squad Conteudo Arcane, 3 carrosseis ja agendados via GitHub Actions. Duracao total do desafio ainda nao confirmada com a Karol.
+- Expert360: Karol editando M2 no CapCut agora (nao esta parado, so sem log formal ha 6 dias).
+- Live 24 realizada (05/08) — "Ninguem tem oferta irresistivel com apenas um produto". Correu tudo certo.
+- Mentoria: Milena e David avancaram essa semana. Confirmado que a fonte de verdade e o Drive de cada aluna (Karol atualiza direto la) — cockpit so aponta pra la, nao replica detalhe.
+
 **Sessao 26/07 — Reenvio com legenda queimada (course-publisher):**
 - Achado: Voomp Tube (player sobre YouTube nao listado) nao expoe legenda/CC nativa. Decisao: Karol reedita cada aula no CapCut queimando a legenda no video, worker resobe.
 - M0 (5/5) e M2 (3 recapturadas + 2 primeira-gravacao — "O que e um Metodo Autoral" e "As 3 Jornadas do Aluno") e M1 (6/8 — aulas 00 e 01 ainda sem legenda) reenviados: 16 videos novos publicados como Nao Listado no YouTube, 16 lessons da Voomp atualizadas via API.
@@ -223,4 +231,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 26/07/2026 (Expert360 — reenvio com legenda: M0 completo, M1 6/8, M2 5/9 publicados na Voomp)*
+*Ultima atualizacao: 06/08/2026 (weekly review — Desafio 10 Dias encerrado sem resultado, Desafio Rota100k aberto, Live 24 realizada)*

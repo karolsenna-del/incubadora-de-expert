@@ -4,8 +4,8 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 28/07/2026 (projeto CRM Reativacao de Leads aberto)
-**Proximo review:** 04/08/2026
+**Ultima atualizacao:** 06/08/2026 (weekly review — Desafio 10 Dias encerrado, Desafio Rota100k aberto no lugar)
+**Proximo review:** 13/08/2026
 
 ---
 
@@ -13,8 +13,8 @@
 
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
-| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Reeditar (CapCut, legenda queimada) e subir via /course-publisher: M1 aulas 00 e 01 restantes + M2 aulas 5-9 + M3 e M4 completos | Karol | Producao — M0 (5/5) e M2 (5/9) publicados na Voomp com legenda; M1 (6/8) publicado, faltam 2 aulas sem legenda. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
-| 2 | Desafio 10 Dias (Instagram) → Ciclo 2 | Reanalise completa (Aria, dado automatizado) + abertura do Ciclo 2 com conteudo do resort (Samoa Villa) + batelada de temas novos | Serie Samoa Villa ENCERRADA (Karol ja deixou o resort — `resort-nao-quer-todo-mundo` nao sera gravado, junta ao `resort-caro-e-cheio` ja pausado). Iris precisa trazer novo pool de temas/candidatos pro Ciclo 2 (sem mais material do resort) | Karol + Squad Conteudo Arcane | Batelada de 5 posts (Carol Diniz, Mari Vabo, Matheus Carmo, marketing conversacional, essencia x IA) publicada e agendada via GitHub Actions (21-26/07). "cafe da manha no hotel" (Reels de teste) liberado pra audiencia geral (28/07) apos validar bem com nao-seguidores (analise da Aria, 27/07). Coleta automatica de metricas do Instagram rodando diariamente. | [plano](../docs/producao-conteudo/karol/desafio-10-dias-plano.md) |
+| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Karol editando M2 no CapCut (legenda queimada) — ao terminar, /course-publisher sobe e vincula. Depois: M1 aulas 00-01 + M3 e M4 completos | Karol | Producao ativa (editando M2 em 06/08) — M0 (5/5) e M2 (5/9) publicados na Voomp com legenda; M1 (6/8) publicado, faltam 2 aulas sem legenda. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
+| 2 | Desafio Rota100k (Instagram) | Executar o Desafio Rota100k (guia externo, mentoria "Se Posicione" — Afonso) — rotina fixa Reels (9h+10h) + Carrossel (20h) pra crescimento/posicionamento no Instagram. **Duracao: ate dezembro/2026.** | Semana 01 (07-09/08) roteirizada, aprovada e agendada — gravar e postar os 6 Reels; 3 carrosseis ja na fila via GitHub Actions | Karol + Squad Conteudo Arcane | Ativo — iniciado 05/08. Semana 01 (v3) aprovada pela Karol, produção visual pronta, posts de sex-dom agendados. | [roteiro semana 01](../docs/producao-conteudo/karol/posts/desafio-rota100k-semana01/roteiro.md) |
 | 3 | CRM Reativação de Leads (Comercial) | Dar ferramenta pro comercial/closer contratado reativar leads (sessao estrategica sem fechamento, compradores de outros produtos, grupo fechado WhatsApp) via CRM expandido do banco unificado (Supabase) + planilha operacional | Handoff pro Dara (data-engineer): desenhar schema expandido (status, historico, follow-up, resumo automatico) em cima de pessoas/capturas/compras | Karol + Dara | Escopo definido em conversa 28/07. Fase 2 — schema do banco | [tracker](campanhas/crm-reativacao-leads/tracker.md) |
 
 ---
@@ -49,9 +49,9 @@
 
 | Operacao | Responsavel | Status | Onde acompanhar |
 |----------|-------------|--------|-----------------|
-| Instagram / Conteudo | Karol | Ativa — Ciclo Desafio 10 Dias rodando (ver ATIVOS #2) | contexto-dinamico.md — prioridades do momento |
-| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 22 realizada (15/07). Roteiro da live desta semana sendo fechado em outro chat com /expert-em-lives | business/campanhas/lives-semanais/ |
-| Mentoria (5 alunos) | Karol | Ativa — Milena: P2 (Promessa) FECHADA + criacao do metodo adiantada (10/07). Roteiro da jornada rebalanceado (03/07) e replicado pros 5 alunos | mentoria/alunas/ |
+| Instagram / Conteudo | Karol | Ativa — Desafio Rota100k rodando (ver ATIVOS #2) | contexto-dinamico.md — prioridades do momento |
+| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 24 realizada (05/08): "Ninguém tem oferta irresistível com apenas um produto". Correu tudo certo | business/campanhas/lives-semanais/ |
+| Mentoria (5 alunos) | Karol | Ativa — Milena e David avançaram (semana de 06/08). Fonte de verdade e o Drive de cada aluna, nao o cockpit (Karol atualiza direto la) | mentoria/alunas/ |
 | Funil mini treinamento (LP → WhatsApp) | Karol | LP nova PUBLICADA — treinamento.incubadoradeexpert.com.br (Vercel) | business/campanhas/lp-minitreinamento/ |
 
 ---
@@ -62,6 +62,7 @@
 |---------|-------------|-----------|
 | Ferramenta de Produto Arcane | 20/05/2026 | Expert360 totalmente definido — PRD v1.2 aprovado |
 | ETL Alcateia Implementacao | 12/07/2026 | KB completa: 7 volumes entregues, validation_score 95.4, verdict APPROVED. Estava registrada como pendente na fila por engano — pipeline ja tinha fechado. |
+| Desafio 10 Dias (Instagram) → Ciclo 2 | 05/08/2026 | **Nao resultou em nada** — nenhum formato validado, nenhum conteudo garanhao. Substituido pelo Desafio Rota100k (ver ATIVOS #2). Plano historico: [plano](../docs/producao-conteudo/karol/desafio-10-dias-plano.md) |
 
 ---
 

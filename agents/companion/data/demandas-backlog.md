@@ -6,6 +6,8 @@
 
 <!-- O que precisa ser feito AGORA -->
 
+- **Logar manualmente na Hotmart no perfil do Playwright MCP** (ou atualizar senha em `agents/course-publisher/data/vault.yaml`) — 1ª execução real da automação Meet→Hotmart (06/08, 08h) falhou por sessão sem login (401). Bloqueia o upload do Encontro Incubadora de 03/08 (Rosiani) e qualquer rodada futura até resolver. Automação roda de novo toda quinta 08h. Detalhe: `agents/course-publisher/data/weekly-sync-state.yaml`.
+
 ## Importante (proximo foco)
 
 - ~~**6 posts da `business/instagram/fila/` — revisar copy e produzir carrossel**~~ — **CONCLUIDO.** Confirmado 28/07 (Karol) + git log: os 6 (`cansaco-palavra-do-ano`, `diploma-vs-vivencia`, `duas-pos-graduacoes`, `medo-parecer-amadora`, `nao-precisa-seguidores`, `sabe-demais-paralisando`) ja tinham sido publicados automaticamente pelo insta-scheduler entre 24-29/06. Item ficou desatualizado no backlog por engano.

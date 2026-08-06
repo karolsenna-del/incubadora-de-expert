@@ -10,6 +10,16 @@
 **Impacto:** [o que muda]
 -->
 
+## 06/08/2026 — Desafio 10 Dias (Ciclo 2) encerrado sem resultado
+
+**Contexto:** Weekly review. Ciclo 2 do Desafio 10 Dias (ativação do algoritmo via ebook ReelsPro, batelada de posts 21-28/07) chegou ao fim.
+
+**Decisão:** Karol encerrou o desafio: "não resultou em nada, nenhum formato validado, nenhum conteúdo garanhão". Substituído no cockpit pelo Desafio Rota100k (guia externo da mentoria "Se Posicione", iniciado 05/08).
+
+**Racional:** Nenhum framework testado gerou sinal validado. Esse é o 5º ciclo de conteúdo de negócio sem engajamento consistente (mesma questão em aberto desde a Reanálise do Ciclo 1 em 20/07 — ver decisão daquela data). A causa raiz continua indefinida entre duas hipóteses: falta de audiência de base (visão da Karol) vs. falta de consistência/sinal de conta (suspeita da Aria/Sage). Nenhum dos dois é descartável só com este resultado.
+
+**Impacto:** Cockpit atualizado (ARQUIVO). Se o Desafio Rota100k também não validar formato até o fim da Semana 01-02, vale parar e investigar a causa raiz diretamente (auditoria de conta/sinal) em vez de testar mais um framework de conteúdo.
+
 ## 01/08/2026 — Correção de promessa: validar em até 4 meses, não 12
 
 **Contexto:** Ao revisar a página de vendas do Grupo (construída pelo Quill/Squad LPago Arcane), Karol identificou que a headline prometia "12 meses até a primeira venda" — mas o roteiro da jornada (fundação → processo autoral → validação nos meses 4-6) permite validar/fazer as primeiras vendas já a partir do mês 4. Prometer o total de acesso (12 meses) como se fosse o prazo até o resultado é uma promessa mais fraca do que a real.
