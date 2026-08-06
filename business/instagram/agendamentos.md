@@ -6,6 +6,9 @@
 
 | Data Exec | Carrossel | Agendado Para | Media ID | Status |
 |-----------|-----------|--------------|----------|--------|
+| 06/08/2026 | rota100k-sex-checklist-leads | 07/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-sex-checklist-leads.yml) — 7 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K, mentoria "Se Posicione") — aguardando push |
+| 06/08/2026 | rota100k-sab-frases-metodo | 08/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-sab-frases-metodo.yml) — 7 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K) — aguardando push |
+| 06/08/2026 | rota100k-dom-carta-mim-mesma | 09/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-dom-carta-mim-mesma.yml) — 7 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K) — aguardando push |
 | 02/08/2026 | autoridade-comportamento-busca-ia | 05/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-autoridade-comportamento-busca-ia.yml) — aguardando push |
 | 02/08/2026 | executivos-ausentes-linkedin-triplice | 06/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-executivos-ausentes-linkedin-triplice.yml) — aguardando push |
 | 02/08/2026 | geo-o-novo-seo | 07/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-geo-o-novo-seo.yml) — aguardando push |
