@@ -31,10 +31,11 @@ Ler `agents/course-publisher/data/weekly-sync-state.yaml`. Contém, por série:
 
 ### 2. Buscar gravações novas no Drive
 
-Pasta: `1eZySH6OIAsGasoHAZB9XxII0Gx686qQi` ("Meet Recordings").
-**Atenção:** essa pasta também recebe gravações de outras reuniões da Karol (mentorias 1:1 tipo
-"Milena", "Simone e Mavi", "David" etc.) que NÃO são desta automação. Filtrar SEMPRE por prefixo
-exato do título:
+**Duas raízes possíveis** (desde 05/08/2026, ver missão #12 no Mission Log):
+
+1. Pasta clássica `1eZySH6OIAsGasoHAZB9XxII0Gx686qQi` ("Meet Recordings") — também recebe
+   gravações de outras reuniões da Karol (mentorias 1:1 tipo "Milena", "Simone e Mavi", "David"
+   etc.) que NÃO são desta automação. Filtrar SEMPRE por prefixo exato do título:
 
 ```
 parentId = '1eZySH6OIAsGasoHAZB9XxII0Gx686qQi'
@@ -43,7 +44,19 @@ and createdTime > '{ultimo_processado_data}'
 and (title contains 'Live Expert360 -' or title contains 'Encontro Incubadora -')
 ```
 
-Ignorar qualquer arquivo de vídeo que não comece exatamente com um desses dois prefixos.
+2. Pasta nova `1mlJbXrY5rLxcobA9PTztLcX0NnMXr17L` ("Google Meet") — o Meet passou a criar aqui
+   uma subpasta por série recorrente (`{Série} (recurring)`), ex: "Live Expert360 (recurring)"
+   (`1GGeLSKWDPiKT-GNic7GeKyDIU4A8asAv`). Buscar por subpastas com esse padrão de nome dentro
+   dela e repetir a mesma busca por `mimeType = 'video/mp4' and createdTime > '{ultimo_processado_data}'`
+   dentro de cada uma encontrada. Se aparecer uma pasta "Encontro Incubadora (recurring)" pela
+   primeira vez, ela provavelmente **não estará compartilhada** com `karol.franzini@gmail.com`
+   ainda — tentar baixar, e se der 403, registrar como pendência pedindo pra Karol compartilhar
+   (mesma solução já usada antes), não travar a missão inteira por isso.
+
+Ignorar qualquer arquivo de vídeo que não comece exatamente com um desses dois prefixos, em
+qualquer uma das raízes. Causa da mudança de pasta ainda não confirmada (mudança no convite
+recorrente do Calendar ou comportamento novo do Workspace) — manter vigiando as duas raízes até
+ficar claro que uma delas parou de receber gravações novas.
 
 ### 3. Para cada gravação nova (ordem cronológica)
 

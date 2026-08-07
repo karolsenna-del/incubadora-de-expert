@@ -3,34 +3,25 @@
 # sem necessidade, é o que evita subir aula duplicada.
 
 live_expert360:
-  ultimo_processado_titulo: "Live Expert360 - 2026/07/29 13:56 GMT-04:00 - Recording"
-  ultimo_processado_data: "2026-07-29T18:42:33Z"  # createdTime do arquivo no Drive
-  proximo_numero: 24
+  ultimo_processado_titulo: "Live Expert360 - 2026/08/05 13:58 GMT-04:00 - Recording"
+  ultimo_processado_data: "2026-08-05T23:05:45Z"  # createdTime do arquivo no Drive
+  proximo_numero: 25
   ultima_execucao: "2026-08-06"
+  # 06/08/2026: a partir desta gravação, o Meet passou a salvar em pasta nova
+  # "Live Expert360 (recurring)" (id 1GGeLSKWDPiKT-GNic7GeKyDIU4A8asAv), dentro de uma
+  # pasta raiz nova "Google Meet" (id 1mlJbXrY5rLxcobA9PTztLcX0NnMXr17L) — ambas criadas em
+  # 2026-08-05T18:41:47Z. Karol confirmou que não mexeu no convite recorrente do Calendar —
+  # então é comportamento novo do lado do Google/Workspace, não algo que ela mudou. A pasta
+  # antiga "Meet Recordings" segue existindo e pode voltar a ser usada — busca do weekly-sync
+  # agora precisa checar as duas.
 
 mentoria_em_grupo:
-  ultimo_processado_titulo: "Encontro Incubadora - 2026/07/27 14:10 GMT-04:00 - Recording"
-  ultimo_processado_data: "2026-07-27T20:47:12Z"  # createdTime do arquivo no Drive — inalterado: gravação nova de 03/08 encontrada mas NÃO upada (ver pendência)
+  ultimo_processado_titulo: "Encontro Incubadora - 2026/08/03 14:00 GMT-04:00 - Recording"
+  ultimo_processado_data: "2026-08-03T22:34:41Z"  # createdTime do arquivo no Drive
   ultima_execucao: "2026-08-06"
 
-pendencias:
-  # Preenchido automaticamente pela task quando algo não pode ser resolvido sozinho
-  # (roteiro de Live faltando, Anotações do Gemini sem tema claro, sessão Hotmart expirada)
-  - data: "2026-08-06"
-    tipo: "login_hotmart_falhou"
-    descricao: >
-      Login na Hotmart falhou (401 "Email ou senha incorretos") com a credencial do vault
-      (karol.franzini@gmail.com). Perfil do Chrome do Playwright MCP estava recém-instalado
-      nesta execução (sem cookies/sessão salva de login anterior) — REGRA-013 não teve fallback
-      de sessão ativa pra usar. Bloqueou o upload de 1 gravação nova encontrada no Drive.
-    impacto: >
-      "Encontro Incubadora - 2026/08/03 14:00 GMT-04:00 - Recording" (série Mentoria em Grupo,
-      id Drive 1m--g5kruN6eQ3zlovBBDFOBYdfiZjyxi, ~837MB) NÃO foi upada. Tema já identificado via
-      Anotações do Gemini (id 10m1zlQgpL8Okap5dS9nPAj7tl3BjvAtPNjnmvBDUK9I): sessão com Rosiani
-      Bezerra sobre definição do nome do método e priorização das 19 ferramentas (NR01).
-      Nome sugerido pra Hotmart: "03.08.26 - Nome e Ferramentas do Método (Rosiani)".
-      State desta série NÃO foi avançado — próxima execução vai reencontrar essa gravação.
-    acao_necessaria: >
-      Karol precisa logar manualmente na Hotmart (https://app.hotmart.com) uma vez no mesmo
-      perfil de navegador usado pelo Playwright MCP (ou atualizar a senha em data/vault.yaml /
-      data/course-publisher-vault.md) pra estabelecer sessão válida antes da próxima rodada.
+pendencias: []
+# Pendência "login_hotmart_falhou" de 2026-08-06 (manhã) resolvida na execução da tarde: Karol
+# corrigiu a senha no vault (KSFPate2026!) e logou manualmente com código 2FA por email quando
+# pedido. Gravação "Encontro Incubadora - 2026/08/03" upada com sucesso — ver missão #11 no
+# Mission Log. Sessão do perfil Playwright MCP ativa a partir daqui.

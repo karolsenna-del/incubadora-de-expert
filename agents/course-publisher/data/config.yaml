@@ -168,24 +168,32 @@ modules:
         # 26/07/2026: primeira gravação, legenda queimada (CapCut)
 
       - hotmart_name: "Agente do Processo Autoral"
-        video: null
+        video: "05-agente-processo-autoral.mp4"
         descricao_slug: "05-agente-processo-autoral"
         voomp_lesson_id: "213986"
+        youtube_id: "FV7TbHZsld4"
+        # 06/08/2026: primeira gravação, upada como Não listado
 
       - hotmart_name: "Por que ferramentas vendem mais do que copy"
-        video: null
+        video: "06-portfolio-estrategico.mp4"
         descricao_slug: "06-portfolio-estrategico"
         voomp_lesson_id: "213987"
+        youtube_id: "1yl97febgHg"
+        # 06/08/2026: primeira gravação, upada como Não listado
 
       - hotmart_name: "Agente do Portfólio Estratégico"
-        video: null
+        video: "07-agente-portfolio.mp4"
         descricao_slug: "07-agente-portfolio"
         voomp_lesson_id: "213988"
+        youtube_id: "Y1edC4d-iwU"
+        # 06/08/2026: primeira gravação, upada como Não listado
 
       - hotmart_name: "Quem Você se Tornou no M2"
-        video: null
+        video: "08-quem-voce-se-tornou.mp4"
         descricao_slug: "09-quem-voce-se-tornou"
         voomp_lesson_id: "213990"
+        youtube_id: "UyATh-MRLpQ"
+        # 06/08/2026: primeira gravação, upada como Não listado
 
   - id: M3
     hotmart_name: "M3 — Vendas Secretas"

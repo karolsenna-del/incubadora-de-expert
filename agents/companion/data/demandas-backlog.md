@@ -6,7 +6,7 @@
 
 <!-- O que precisa ser feito AGORA -->
 
-- **Logar manualmente na Hotmart no perfil do Playwright MCP** (ou atualizar senha em `agents/course-publisher/data/vault.yaml`) — 1ª execução real da automação Meet→Hotmart (06/08, 08h) falhou por sessão sem login (401). Bloqueia o upload do Encontro Incubadora de 03/08 (Rosiani) e qualquer rodada futura até resolver. Automação roda de novo toda quinta 08h. Detalhe: `agents/course-publisher/data/weekly-sync-state.yaml`.
+- ~~**Logar manualmente na Hotmart no perfil do Playwright MCP** (ou atualizar senha em `agents/course-publisher/data/vault.yaml`)~~ — **Senha corrigida (06/08): `KSFPate2026!`.** Fallback de login deve funcionar na próxima rodada (quinta, 08h) sem precisar de sessão salva. Ainda não confirmado na prática — se falhar de novo, o problema é outro (ex: 2FA). Monitorar o resultado do próximo `weekly-sync` em `agents/course-publisher/data/course-publisher-missions.md`.
 
 ## Importante (proximo foco)
 
