@@ -1,0 +1,243 @@
+<!doctype html><html><head><meta charset='utf-8'><style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap');
+
+:root {
+  --preto: #0B0B0C;
+  --preto-2: #151517;
+  --branco: #FFFFFF;
+  --laranja: #FF6B1A;
+  --laranja-escuro: #E85A0D;
+  --cinza-100: #F4F4F5;
+  --cinza-300: #D4D4D8;
+  --cinza-500: #71717A;
+  --cinza-700: #3F3F46;
+  --display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --texto: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: var(--texto);
+  color: var(--preto);
+  background: var(--branco);
+  font-size: 10.5pt;
+  line-height: 1.55;
+  margin: 0;
+  padding: 0 6mm;
+}
+.capa {
+  background: var(--preto);
+  color: var(--branco);
+  border-radius: 14px;
+  padding: 30px 34px;
+  margin: 4mm 0 10mm;
+}
+.capa .eyebrow {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--laranja);
+  border: 1px solid rgba(255, 107, 26, 0.4);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 14px;
+}
+.capa h1 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 19pt;
+  color: var(--branco);
+  margin: 0 0 6px;
+  line-height: 1.15;
+}
+.capa .subtitulo {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 13pt;
+  color: var(--laranja);
+  margin: 0 0 14px;
+}
+.capa .meta {
+  color: var(--cinza-300);
+  font-size: 9pt;
+  line-height: 1.7;
+  margin: 0;
+}
+h1 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 14pt;
+  color: var(--preto);
+  margin: 22px 0 10px;
+}
+h2.clausula {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 11pt;
+  color: var(--preto);
+  border-left: 3px solid var(--laranja);
+  padding-left: 10px;
+  margin: 20px 0 8px;
+  page-break-after: avoid;
+}
+h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 10.5pt;
+  color: var(--preto);
+  margin: 14px 0 6px;
+}
+p { margin: 0 0 8px; text-align: justify; }
+p.checkbox { font-weight: 600; }
+strong { color: var(--preto); }
+code {
+  font-family: 'Consolas', monospace;
+  background: var(--cinza-100);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 9pt;
+}
+.callout {
+  background: var(--cinza-100);
+  border-left: 3px solid var(--laranja);
+  border-radius: 0 10px 10px 0;
+  padding: 10px 14px;
+  margin: 10px 0;
+  font-style: italic;
+  color: var(--cinza-700);
+  font-size: 9.5pt;
+}
+hr.divisor {
+  border: none;
+  border-top: 1px solid var(--cinza-300);
+  margin: 16px 0;
+}
+table.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 14px;
+  font-size: 9pt;
+}
+table.tabela th {
+  background: var(--preto);
+  color: var(--branco);
+  font-family: var(--display);
+  font-weight: 600;
+  text-align: left;
+  padding: 7px 9px;
+}
+table.tabela td {
+  border-bottom: 1px solid var(--cinza-300);
+  padding: 7px 9px;
+  vertical-align: top;
+}
+table.tabela tr:nth-child(even) td { background: var(--cinza-100); }
+ol, ul { margin: 0 0 10px; padding-left: 22px; }
+li { margin-bottom: 4px; }
+.anexo-divisor {
+  page-break-before: always;
+  background: var(--preto);
+  color: var(--branco);
+  border-radius: 14px;
+  padding: 22px 28px;
+  margin: 10mm 0 8mm;
+}
+.anexo-divisor .eyebrow {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--laranja);
+  margin-bottom: 8px;
+}
+.anexo-divisor h2 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 15pt;
+  margin: 0;
+  color: var(--branco);
+}
+.assinatura {
+  page-break-inside: avoid;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 2px solid var(--laranja);
+}
+.campos-local-data { margin-bottom: 26px; }
+.campo-linha { margin-bottom: 10px; }
+.campo-branco {
+  display: inline-block;
+  min-width: 220px;
+  border-bottom: 1px solid var(--preto);
+  height: 14px;
+  vertical-align: bottom;
+}
+.assinaturas-grid {
+  display: flex;
+  gap: 30px;
+}
+.bloco-assinatura { flex: 1; text-align: center; }
+.linha-assinatura {
+  border-top: 1px solid var(--preto);
+  margin-bottom: 8px;
+  height: 30px;
+}
+.bloco-assinatura p { text-align: center; font-size: 9pt; color: var(--cinza-700); }
+</style></head>
+    <body>
+    <div class="capa">
+      <span class="eyebrow">Incubadora de Expert · Instrumento Particular</span>
+      <h1>Termos de Compra e Licença de Uso</h1>
+      <p class="subtitulo">Curso Expert360º</p>
+      <p class="meta">
+        CONTRATADA: Gestão pra Tudo - Karoline Franzini de Carvalho Senna — CNPJ 38.431.977/0001-36
+      </p>
+    </div>
+    <div class="callout">Diferente dos demais serviços do ecossistema, o Expert360º é um produto digital self-paced, vendido por checkout automatizado (funil/plataforma), sem contato pessoal com a CONTRATADA antes da compra. Por isso, em vez de um contrato assinado bilateralmente, o formato recomendado é um <strong>Termo de Compra e Licença de Uso</strong>, aceito pelo CONTRATANTE no ato do checkout (ex.: checkbox "li e aceito os termos").<br>Estes termos ainda referenciam o Anexo I (<code>00-termos-gerais-prestacao-servicos.md</code>) para as cláusulas de propriedade intelectual, LGPD e limitação de responsabilidade, que se aplicam integralmente.</div>
+<hr class="divisor">
+<h2 class="clausula">1. DAS PARTES</h2>
+<p><strong>VENDEDORA:</strong> Gestão pra Tudo - Karoline Franzini de Carvalho Senna, CNPJ 38.431.977/0001-36, com sede em Rio Negro, nº 375, Casa 12, CEP 79023-041, Campo Grande/MS.</p>
+<p><strong>COMPRADOR(A):</strong> identificado(a) pelos dados informados no ato da compra (nome, CPF, e-mail).</p>
+<h2 class="clausula">2. DO OBJETO</h2>
+<p>2.1. Venda de licença de acesso ao curso online "Expert360º", composto por 5 (cinco) módulos (M0 a M4) em formato de vídeo-aula gravada, acompanhado de agentes de IA de apoio genéricos para os exercícios propostos, hospedado na plataforma Voomp Play.</p>
+<p>2.2. O produto <strong>não inclui</strong> contato pessoal, mentoria individual ou personalização do conteúdo pela VENDEDORA — é conteúdo gravado, de estudo autônomo.</p>
+<h2 class="clausula">3. DO ACESSO</h2>
+<p>3.1. O acesso é liberado em até [PRAZO — ex.: 24 horas úteis] após a confirmação do pagamento, diretamente na plataforma de hospedagem do curso.</p>
+<p>3.2. O prazo de acesso ao conteúdo é de 12 (doze) meses, contados da data de liberação do acesso.</p>
+<h2 class="clausula">4. DO PREÇO</h2>
+<p>4.1. O valor da licença varia conforme o canal de venda:</p>
+<ul><li>R$ 497,00 (quatrocentos e noventa e sete reais) — quando adquirido via funil de vendas específico; ou</li><li>R$ 697,00 (seiscentos e noventa e sete reais) — quando adquirido diretamente na plataforma.</li></ul>
+<p>4.2. Pagamento processado pela plataforma de checkout utilizada (Hotmart/Voomp), podendo ser à vista ou parcelado conforme as opções ali disponibilizadas — condições de parcelamento são as da própria plataforma de pagamento, não desta VENDEDORA.</p>
+<h2 class="clausula">5. DO DIREITO DE ARREPENDIMENTO</h2>
+<p>5.1. Nos termos do art. 49 do Código de Defesa do Consumidor, o(a) COMPRADOR(A) tem o prazo de 7 (sete) dias corridos, a contar da data da compra, para desistir da aquisição e solicitar reembolso integral, bastando manifestação por escrito à VENDEDORA, <strong>independentemente de já ter iniciado o consumo do conteúdo</strong>, salvo se o(a) COMPRADOR(A) manifestar, no ato da compra, renúncia expressa a esse prazo em troca de acesso imediato.</p>
+<h2 class="clausula">6. DA PROPRIEDADE INTELECTUAL E DA LICENÇA DE USO</h2>
+<p>6.1. O acesso concedido é uma <strong>licença de uso pessoal e intransferível</strong>. É vedado compartilhar login, redistribuir gravações, extrair e redistribuir o conteúdo, ou utilizá-lo para formar terceiros, nos termos da Cláusula 6 do Anexo I.</p>
+<p>6.2. O uso indevido identificado pela VENDEDORA autoriza a suspensão do acesso, sem direito a reembolso, sem prejuízo de outras medidas cabíveis.</p>
+<h2 class="clausula">7. DO SUPORTE</h2>
+<p>7.1. O suporte ao COMPRADOR(A), quando existente, é prestado pelo agente de suporte nativo da plataforma de hospedagem ou por canal informado no momento da compra — não há suporte individual da CONTRATADA incluído neste produto.</p>
+<h2 class="clausula">8. DAS DISPOSIÇÕES GERAIS</h2>
+<p>8.1. Aplicam-se subsidiariamente as cláusulas de Propriedade Intelectual (6), Uso de Imagem (7), Confidencialidade e LGPD (8), Limitação de Responsabilidade (11) e Foro (13) do Anexo I (<code>00-termos-gerais-prestacao-servicos.md</code>), no que forem compatíveis com a natureza de produto digital autoatendido.</p>
+<p>8.2. Estes termos são aceitos eletronicamente no ato do checkout.</p>
+<hr class="divisor">
+<p><em>Estes termos devem ser publicados na página de vendas/checkout do produto, com checkbox de aceite obrigatório antes da finalização da compra.</em></p>
+    <div class="assinatura">
+      <div class="campos-local-data">
+        <p class="campo-linha">Local: <span class="campo-branco"></span></p>
+        <p class="campo-linha">Data: <span class="campo-branco"></span></p>
+      </div>
+      <div class="assinaturas-grid">
+        <div class="bloco-assinatura">
+          <div class="linha-assinatura"></div>
+          <p>CONTRATADA<br><strong>Gestão pra Tudo - Karoline Franzini de Carvalho Senna</strong></p>
+        </div>
+        <div class="bloco-assinatura">
+          <div class="linha-assinatura"></div>
+          <p>CONTRATANTE</p>
+        </div>
+      </div>
+    </div>
+    </body></html>

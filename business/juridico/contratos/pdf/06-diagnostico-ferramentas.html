@@ -1,0 +1,305 @@
+<!doctype html><html><head><meta charset='utf-8'><style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap');
+
+:root {
+  --preto: #0B0B0C;
+  --preto-2: #151517;
+  --branco: #FFFFFF;
+  --laranja: #FF6B1A;
+  --laranja-escuro: #E85A0D;
+  --cinza-100: #F4F4F5;
+  --cinza-300: #D4D4D8;
+  --cinza-500: #71717A;
+  --cinza-700: #3F3F46;
+  --display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --texto: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: var(--texto);
+  color: var(--preto);
+  background: var(--branco);
+  font-size: 10.5pt;
+  line-height: 1.55;
+  margin: 0;
+  padding: 0 6mm;
+}
+.capa {
+  background: var(--preto);
+  color: var(--branco);
+  border-radius: 14px;
+  padding: 30px 34px;
+  margin: 4mm 0 10mm;
+}
+.capa .eyebrow {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--laranja);
+  border: 1px solid rgba(255, 107, 26, 0.4);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 14px;
+}
+.capa h1 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 19pt;
+  color: var(--branco);
+  margin: 0 0 6px;
+  line-height: 1.15;
+}
+.capa .subtitulo {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 13pt;
+  color: var(--laranja);
+  margin: 0 0 14px;
+}
+.capa .meta {
+  color: var(--cinza-300);
+  font-size: 9pt;
+  line-height: 1.7;
+  margin: 0;
+}
+h1 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 14pt;
+  color: var(--preto);
+  margin: 22px 0 10px;
+}
+h2.clausula {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 11pt;
+  color: var(--preto);
+  border-left: 3px solid var(--laranja);
+  padding-left: 10px;
+  margin: 20px 0 8px;
+  page-break-after: avoid;
+}
+h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 10.5pt;
+  color: var(--preto);
+  margin: 14px 0 6px;
+}
+p { margin: 0 0 8px; text-align: justify; }
+p.checkbox { font-weight: 600; }
+strong { color: var(--preto); }
+code {
+  font-family: 'Consolas', monospace;
+  background: var(--cinza-100);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 9pt;
+}
+.callout {
+  background: var(--cinza-100);
+  border-left: 3px solid var(--laranja);
+  border-radius: 0 10px 10px 0;
+  padding: 10px 14px;
+  margin: 10px 0;
+  font-style: italic;
+  color: var(--cinza-700);
+  font-size: 9.5pt;
+}
+hr.divisor {
+  border: none;
+  border-top: 1px solid var(--cinza-300);
+  margin: 16px 0;
+}
+table.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 14px;
+  font-size: 9pt;
+}
+table.tabela th {
+  background: var(--preto);
+  color: var(--branco);
+  font-family: var(--display);
+  font-weight: 600;
+  text-align: left;
+  padding: 7px 9px;
+}
+table.tabela td {
+  border-bottom: 1px solid var(--cinza-300);
+  padding: 7px 9px;
+  vertical-align: top;
+}
+table.tabela tr:nth-child(even) td { background: var(--cinza-100); }
+ol, ul { margin: 0 0 10px; padding-left: 22px; }
+li { margin-bottom: 4px; }
+.anexo-divisor {
+  page-break-before: always;
+  background: var(--preto);
+  color: var(--branco);
+  border-radius: 14px;
+  padding: 22px 28px;
+  margin: 10mm 0 8mm;
+}
+.anexo-divisor .eyebrow {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--laranja);
+  margin-bottom: 8px;
+}
+.anexo-divisor h2 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 15pt;
+  margin: 0;
+  color: var(--branco);
+}
+.assinatura {
+  page-break-inside: avoid;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 2px solid var(--laranja);
+}
+.campos-local-data { margin-bottom: 26px; }
+.campo-linha { margin-bottom: 10px; }
+.campo-branco {
+  display: inline-block;
+  min-width: 220px;
+  border-bottom: 1px solid var(--preto);
+  height: 14px;
+  vertical-align: bottom;
+}
+.assinaturas-grid {
+  display: flex;
+  gap: 30px;
+}
+.bloco-assinatura { flex: 1; text-align: center; }
+.linha-assinatura {
+  border-top: 1px solid var(--preto);
+  margin-bottom: 8px;
+  height: 30px;
+}
+.bloco-assinatura p { text-align: center; font-size: 9pt; color: var(--cinza-700); }
+</style></head>
+    <body>
+    <div class="capa">
+      <span class="eyebrow">Incubadora de Expert · Instrumento Particular</span>
+      <h1>Contrato de Prestação de Serviços</h1>
+      <p class="subtitulo">Diagnóstico Ferramentas</p>
+      <p class="meta">
+        CONTRATADA: Gestão pra Tudo - Karoline Franzini de Carvalho Senna — CNPJ 38.431.977/0001-36
+      </p>
+    </div>
+    <p>Pelo presente instrumento, de um lado:</p>
+<p><strong>CONTRATADA:</strong> Gestão pra Tudo - Karoline Franzini de Carvalho Senna, CNPJ 38.431.977/0001-36, com sede em Rio Negro, nº 375, Casa 12, CEP 79023-041, Campo Grande/MS, doravante "CONTRATADA".</p>
+<p>E de outro:</p>
+<p><strong>CONTRATANTE:</strong></p>
+<p>Nome completo / Razão social: _____________________________________________</p>
+<p>CPF ou CNPJ: _____________________________________________</p>
+<p>Endereço / Sede: _____________________________________________</p>
+<p>E-mail: _____________________________________________</p>
+<p>Telefone: _____________________________________________</p>
+<p>Doravante denominado(a) simplesmente "CONTRATANTE".</p>
+<p>Têm entre si justo e contratado o presente instrumento, regido pelas cláusulas abaixo e pelos <strong>Termos e Condições Gerais de Prestação de Serviços</strong> (Anexo I, arquivo <code>00-termos-gerais-prestacao-servicos.md</code>), que as Partes declaram conhecer e aceitar integralmente.</p>
+<hr class="divisor">
+<h2 class="clausula">1. OBJETO</h2>
+<p>1.1. Prestação de serviço de diagnóstico de ferramentas de engajamento e retenção para produto/curso/método que o CONTRATANTE já possui em operação, com foco em reduzir abandono e aumentar a taxa de conclusão de seus próprios alunos/clientes.</p>
+<h2 class="clausula">2. ENTREGÁVEIS</h2>
+<p>2.1. Questionário de levantamento, respondido pelo CONTRATANTE previamente à reunião.</p>
+<p>2.2. Reunião de análise entre CONTRATADA e CONTRATANTE.</p>
+<p>2.3. Proposta escrita com 15 a 20 (quinze a vinte) ferramentas sugeridas (frameworks, checklists, agentes de IA) para engajamento/retenção, entregue após a reunião.</p>
+<p>2.4. <strong>Não incluído:</strong> construção das ferramentas escolhidas — objeto de orçamento à parte, por escopo, caso o CONTRATANTE deseje contratar a construção.</p>
+<h2 class="clausula">3. PRAZO</h2>
+<p>3.1. A reunião de análise deve ser agendada em até 30 (trinta) dias corridos da confirmação do pagamento e do recebimento do questionário respondido, salvo acordo diverso entre as Partes.</p>
+<h2 class="clausula">4. INVESTIMENTO E FORMA DE PAGAMENTO</h2>
+<p>4.1. O valor total do serviço é de <strong>R$ 97,00 (noventa e sete reais)</strong>.</p>
+<p>4.2. Pagamento à vista, via PIX, para a chave CNPJ 38.431.977/0001-36 (Gestão pra Tudo - Karoline Franzini de Carvalho Senna), previamente à realização da reunião.</p>
+<p>4.3. <strong>Cashback:</strong> caso o CONTRATANTE contrate a construção das ferramentas propostas no item 2.3 em até 15 (quinze) dias corridos após a entrega da proposta, o valor pago neste contrato é integralmente abatido do valor do orçamento de construção, conforme condições a serem detalhadas em contrato específico de construção, no momento da contratação.</p>
+        <div class="anexo-divisor">
+          <span class="eyebrow">Parte integrante deste contrato</span>
+          <h2>Anexo I — Termos e Condições Gerais</h2>
+        </div>
+        <div class="callout">Este documento é o <strong>Anexo I</strong> de todo Instrumento Particular de Contrato de Prestação de Serviços celebrado entre a CONTRATADA e um CONTRATANTE, para qualquer um dos serviços do ecossistema da Incubadora de Expert (Método Express, Método VIP, Sprint do Método, Grupo, Individual, Diagnóstico Ferramentas).<br>O contrato específico de cada serviço (objeto, prazo, valor, forma de pagamento e entregáveis) faz referência a este Anexo I e prevalece sobre ele em caso de conflito direto quanto a esses pontos específicos.</div>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 1 — DAS PARTES</h2>
+<p><strong>CONTRATADA:</strong> Gestão pra Tudo - Karoline Franzini de Carvalho Senna, pessoa jurídica de direito privado, inscrita no CNPJ sob o nº 38.431.977/0001-36, com sede em Rio Negro, nº 375, Casa 12, CEP 79023-041, Campo Grande/MS, doravante denominada simplesmente "CONTRATADA".</p>
+<p><strong>CONTRATANTE:</strong> qualificado(a) no preâmbulo do Instrumento Particular específico deste contrato, doravante denominado(a) simplesmente "CONTRATANTE".</p>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 2 — DO OBJETO GERAL</h2>
+<p>2.1. A CONTRATADA presta serviços de mentoria, consultoria e formação no campo de posicionamento, criação de método autoral e comercialização de conhecimento no ambiente digital, sob a metodologia própria "Incubadora de Expert".</p>
+<p>2.2. O objeto específico, escopo, entregáveis, prazo e cronograma de cada contratação estão descritos no Instrumento Particular correspondente (um por serviço), que é parte indissociável destes Termos Gerais.</p>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 3 — DA NATUREZA DO SERVIÇO</h2>
+<p>3.1. O serviço contratado tem natureza de <strong>orientação, mentoria e consultoria</strong> — não é serviço de execução terceirizada nem garantia de resultado financeiro.</p>
+<p>3.2. A CONTRATADA se compromete a empregar seus melhores esforços, conhecimento técnico e metodologia própria na condução do serviço, mas <strong>não garante faturamento, número de vendas, número de alunos/clientes ou qualquer resultado financeiro específico</strong> para o CONTRATANTE, uma vez que o resultado depende de fatores fora do controle da CONTRATADA (execução do CONTRATANTE, mercado, nicho, precificação, entre outros).</p>
+<p>3.3. Onde o Instrumento Particular previr entrega de material específico (documentos, roteiros, ferramentas, agente de IA, página/LP, configuração de funil ou tráfego), essa entrega é obrigação de meio quanto ao resultado de negócio e obrigação de resultado quanto à própria entrega do material.</p>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 4 — DAS OBRIGAÇÕES DA CONTRATADA</h2>
+<p>4.1. Prestar o serviço com zelo técnico, dentro do escopo e cronograma definidos no Instrumento Particular.</p>
+<p>4.2. Disponibilizar os materiais, ferramentas e/ou agentes de IA descritos no Instrumento Particular, quando aplicável.</p>
+<p>4.3. Manter sigilo sobre informações confidenciais do CONTRATANTE nos termos da Cláusula 8.</p>
+<p>4.4. Comunicar com antecedência razoável qualquer necessidade de reagendamento de sessões previamente marcadas.</p>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 5 — DAS OBRIGAÇÕES DO CONTRATANTE</h2>
+<p>5.1. Fornecer as informações necessárias à execução do serviço, com veracidade.</p>
+<p>5.2. Comparecer aos encontros/sessões agendados ou reagendar com antecedência mínima de 24 (vinte e quatro) horas — reagendamentos fora desse prazo ou faltas não justificadas podem ser computados como sessão realizada, a critério da CONTRATADA.</p>
+<p>5.3. Efetuar o pagamento na forma e nos prazos definidos no Instrumento Particular.</p>
+<p>5.4. Não reproduzir, revender, redistribuir ou repassar a terceiros os materiais, roteiros, ferramentas e/ou acesso a agentes de IA entregues, nos termos da Cláusula 6.</p>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 6 — DA PROPRIEDADE INTELECTUAL</h2>
+<p>6.1. A metodologia "Incubadora de Expert", seus materiais, roteiros, frameworks, templates e agentes de IA são de autoria e propriedade exclusiva da CONTRATADA, protegidos pela Lei nº 9.610/1998 (Lei de Direitos Autorais).</p>
+<p>6.2. O CONTRATANTE recebe <strong>licença de uso pessoal e intransferível</strong> dos materiais entregues, exclusivamente para aplicação em seu próprio negócio/método, vedada a reprodução, revenda, distribuição ou uso para ensinar/formar terceiros sem autorização expressa e por escrito da CONTRATADA.</p>
+<p>6.3. Documentos, roteiros e ferramentas personalizados <strong>para o caso concreto do CONTRATANTE</strong> (ex.: sua persona, sua promessa, seu processo autoral) são de uso exclusivo do CONTRATANTE quanto ao conteúdo aplicado ao seu negócio, mas a estrutura/framework subjacente permanece de titularidade da CONTRATADA.</p>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 7 — DO USO DE IMAGEM E DEPOIMENTO</h2>
+<p>7.1. A CONTRATADA poderá solicitar ao CONTRATANTE autorização específica para uso de depoimento, resultado obtido ou imagem em materiais de divulgação. <strong>Nenhum uso ocorre sem autorização expressa e específica do CONTRATANTE para cada peça</strong>, revogável a qualquer momento mediante aviso por escrito.</p>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 8 — DA CONFIDENCIALIDADE E DA LGPD</h2>
+<p>8.1. As Partes se comprometem a manter sigilo sobre informações confidenciais trocadas em razão deste contrato, incluindo dados de negócio, financeiros e estratégicos, não podendo divulgá-las a terceiros sem autorização prévia, salvo obrigação legal.</p>
+<p>8.2. Dados pessoais do CONTRATANTE coletados para a execução do serviço são tratados pela CONTRATADA em conformidade com a Lei nº 13.709/2018 (LGPD), sendo utilizados exclusivamente para a finalidade da prestação do serviço contratado e comunicação relacionada, podendo o CONTRATANTE solicitar acesso, correção ou eliminação de seus dados a qualquer momento, nos termos da lei.</p>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 9 — DO CANCELAMENTO E DO DIREITO DE ARREPENDIMENTO</h2>
+<p>9.1. <strong>Direito de arrependimento (compra realizada fora do estabelecimento comercial, art. 49 do CDC):</strong> o CONTRATANTE tem o prazo de 7 (sete) dias corridos, contados da data de assinatura/confirmação da compra, para desistir da contratação, com devolução integral dos valores pagos, desde que o serviço ainda não tenha sido iniciado (primeira sessão/encontro realizado ou primeiro material entregue).</p>
+<p>9.2. <strong>Após o início da prestação do serviço</strong> (realização da primeira sessão ou entrega do primeiro material), a desistência do CONTRATANTE dá direito a reembolso proporcional às sessões/semanas/entregáveis ainda não realizados até o momento do pedido de cancelamento, calculado sobre o valor total do contrato dividido pelo número de etapas previstas no Instrumento Particular, deduzido um percentual de 20% (vinte por cento) sobre esse valor proporcional, a título de custos administrativos e de organização já incorridos pela CONTRATADA. O reembolso é processado em até 10 (dez) dias úteis após o pedido.</p>
+<div class="callout"><em>Exemplo de aplicação (Método VIP, R$1.500, 3 encontros): se o CONTRATANTE cancela após o Encontro 1, restam 2/3 do valor (R$1.000) a título de etapas não realizadas; desse valor, deduz-se 20% (R$200), resultando em reembolso de R$800.</em></div>
+<p>9.3. Em caso de cancelamento por parte da CONTRATADA por motivo de força maior ou impossibilidade de continuidade do serviço, o CONTRATANTE tem direito à devolução integral dos valores pagos referentes às etapas ainda não entregues, sem qualquer ônus.</p>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 10 — DO INADIMPLEMENTO E DA RESCISÃO</h2>
+<p>10.1. O atraso no pagamento por prazo superior a 5 (cinco) dias úteis autoriza a CONTRATADA a suspender a prestação do serviço até a regularização, sem prejuízo da cobrança de multa moratória de 2% (dois por cento) sobre o valor em atraso — limite do art. 52, §1º do CDC para relações de consumo — e juros de mora de 1% (um por cento) ao mês, sem prejuízo de correção monetária.</p>
+<p>10.2. O descumprimento de qualquer cláusula deste contrato por qualquer das Partes, não sanado em até 10 (dez) dias após notificação por escrito, autoriza a Parte prejudicada a rescindir o contrato, sem prejuízo de eventuais perdas e danos.</p>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 11 — DA LIMITAÇÃO DE RESPONSABILIDADE</h2>
+<p>11.1. A responsabilidade da CONTRATADA limita-se ao valor efetivamente pago pelo CONTRATANTE no âmbito deste contrato, não respondendo por lucros cessantes, danos indiretos ou resultado de negócio não alcançado.</p>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 12 — DAS DISPOSIÇÕES GERAIS</h2>
+<p>12.1. Este contrato pode ser assinado eletronicamente, sendo válida a aceitação por meio de assinatura digital, clique de aceite em formulário/checkout, ou troca de mensagens confirmando os termos, nos termos da Lei nº 14.063/2020.</p>
+<p>12.2. A tolerância de qualquer das Partes quanto ao descumprimento de qualquer cláusula não implica novação ou renúncia ao direito de exigi-la a qualquer tempo.</p>
+<p>12.3. Este contrato obriga as Partes e seus eventuais sucessores a qualquer título.</p>
+<hr class="divisor">
+<h2 class="clausula">CLÁUSULA 13 — DO FORO</h2>
+<p>13.1. Fica eleito o foro da comarca de Campo Grande/MS para dirimir quaisquer controvérsias oriundas deste contrato, com renúncia a qualquer outro, por mais privilegiado que seja, ressalvado o foro do domicílio do consumidor quando aplicável por lei.</p>
+        
+    <div class="assinatura">
+      <div class="campos-local-data">
+        <p class="campo-linha">Local: <span class="campo-branco"></span></p>
+        <p class="campo-linha">Data: <span class="campo-branco"></span></p>
+      </div>
+      <div class="assinaturas-grid">
+        <div class="bloco-assinatura">
+          <div class="linha-assinatura"></div>
+          <p>CONTRATADA<br><strong>Gestão pra Tudo - Karoline Franzini de Carvalho Senna</strong></p>
+        </div>
+        <div class="bloco-assinatura">
+          <div class="linha-assinatura"></div>
+          <p>CONTRATANTE</p>
+        </div>
+      </div>
+    </div>
+    </body></html>
