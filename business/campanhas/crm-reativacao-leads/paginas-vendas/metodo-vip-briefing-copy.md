@@ -197,7 +197,7 @@ correção é feita com você — não é ficar sozinha tentando entender
 tudo de uma vez.
 
 "Não sou boa com tecnologia."
-Existe um sistema de IA (Auroq) que cuida do operacional. Você não
+Existe um sistema de IA que cuida do operacional. Você não
 precisa dominar nada disso pra aproveitar os 3 encontros.
 ```
 

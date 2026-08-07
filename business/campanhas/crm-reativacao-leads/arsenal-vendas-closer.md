@@ -145,7 +145,7 @@ Bom pra quem já fechou antes (ex: leads `aluno_ativo` do Hotmart — Combo Incu
 | "Marketing não é meu forte." | Não precisa virar profissional de marketing. O mecanismo é venda 1:1 (Vendas Secretas), não performance de anúncio ou crescimento de audiência. |
 | "Tenho medo de investir." | Por isso o método valida antes de escalar — nada de investimento pesado sem prova de que funciona primeiro. |
 | "Já tem muita gente fazendo." | Ninguém tem a história dela. O diferencial não é o conteúdo — é a narrativa autoral, que é incopiável. |
-| "Não sou boa com tecnologia." | Existe um sistema de IA (Auroq) que cuida do operacional. Ela não precisa dominar tecnologia — o sistema entrega ferramentas prontas. |
+| "Não sou boa com tecnologia." | Existe um sistema de IA que cuida do operacional. Ela não precisa dominar tecnologia — o sistema entrega ferramentas prontas. |
 | "Não tenho seguidores." | Audiência é consequência do método validado, não pré-requisito. As primeiras vendas acontecem no 1:1 ou por indicação — não precisam de 10 mil seguidores. |
 | "Minha vida offline já está boa." | Não é sobre abandonar o offline — é sobre não ficar 5 anos no mesmo lugar por medo. Extensão do propósito, não substituição da carreira. |
 | "Tenho medo de me expor." | Vendas Secretas existe exatamente pra isso: validar em ambiente controlado (Zoom, conversa reservada) antes de qualquer exposição pública. |

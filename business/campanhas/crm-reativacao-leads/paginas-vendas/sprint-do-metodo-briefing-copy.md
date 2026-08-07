@@ -217,7 +217,7 @@ Não precisa virar profissional de marketing. O Sprint entrega o que
 falta pronto — você só participa das validações.
 
 "Não sou boa com tecnologia."
-Existe um sistema de IA (Auroq) que cuida do operacional. Seu
+Existe um sistema de IA que cuida do operacional. Seu
 agente de IA do método sai pronto no final — você não precisa
 dominar nada disso.
 ```
