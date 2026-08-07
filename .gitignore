@@ -2,6 +2,8 @@
 business/vault/
 agents/*/data/vault.yaml
 agents/*/data/vault.md
+agents/*/data/*vault*.yaml
+agents/*/data/*vault*.md
 .env
 .env.local
 .env.*.local
