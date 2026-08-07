@@ -4,7 +4,7 @@
 **Slug:** `gpt-publisher`
 **Versão:** 1.0.0
 **Criado em:** 2026-08-06
-**Status:** EM DISCOVERY (aguardando confirmação)
+**Status:** APROVADO — worker ativado em `agents/gpt-publisher/`, comando `/gpt-publisher`
 
 ---
 
