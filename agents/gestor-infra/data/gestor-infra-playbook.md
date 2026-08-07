@@ -23,6 +23,7 @@
 10. [SOP-017] Manutencao de prompt de agente Bia (trocar data, link, texto)
 11. [SOP-003] Instalar Microsoft Clarity em pagina Lovable
 12. [SOP-018] Publicar LP estatica na Vercel + subdominio (Registro.br)
+13. [SOP-019] Trocar CTA de WhatsApp por checkout (Voomp/Hotmart/etc) + icone flutuante de WhatsApp pra duvidas
 
 > **Fora do escopo:** Setup inicial do pipeline (instalar n8n + Chatwoot, criar tabelas Supabase + RPCs, configurar Meta Business Manager, gerar System User Token, importar os workflows core WF-INBOUND/AGENT-CORE/OUTBOUND). Isso e responsabilidade do **agente de setup** — outro agente dedicado. Este squad so opera o pipeline ja instalado.
 
@@ -771,6 +772,43 @@ Resumo: Clarity (clarity.microsoft.com) > criar projeto > copiar snippet > Lovab
 
 **Troubleshooting:**
 - {problema}: {solucao}
+
+---
+
+### [SOP-019] Trocar CTA de WhatsApp por checkout + icone flutuante de WhatsApp pra duvidas
+**Trigger:** "troca o botao de whatsapp por link de pagamento", "quero checkout direto na pagina", "coloca link do Voomp/Hotmart no lugar do whats"
+**Tempo estimado:** 15-30 min por par de paginas (com layout ja padronizado)
+**Ferramentas:** Editor de texto (Edit com replace_all), Playwright ou curl+node pra validar, Vercel CLI
+
+**Pre-requisitos:**
+- Link de checkout final (Voomp/Hotmart/Kiwify) — pedir se nao foi passado
+- Confirmar: troca TOTAL dos botoes ou mantem WhatsApp em alguns
+- Identificar TODAS as ocorrencias do botao antigo na pagina (geralmente se repete identico em hero / oferta / CTA final / barra mobile fixa — 3-4x)
+
+**Passos:**
+
+1. Ler o(s) arquivo(s) `index.html` da(s) pagina(s) e localizar TODAS as ocorrencias do CTA antigo (`class="cta cta-wa"` ou equivalente)
+2. Se o `<a>` do CTA for **byte-identico** em varios lugares (mesmo href + mesmo texto), usar 1 `Edit` com `replace_all: true` pra trocar todos de uma vez. Se algum tiver texto diferente (ex: barra mobile com copy encurtada), tratar em edit separado
+3. Trocar `href` pro link de checkout + renomear classe de marcacao (`cta-wa` → `cta-checkout`) pra nao confundir tracking
+4. Adicionar icone flutuante de WhatsApp (fixed, canto inferior direito, z-index acima da barra mobile) pra manter canal de duvida:
+   - CSS: `.whats-flutuante` fixed bottom-right, circulo verde `#25D366`, `z-index` maior que a barra mobile; classe `.subiu` pra subir o icone quando a barra mobile fixa estiver ativa (mobile)
+   - HTML: `<a class="whats-flutuante" id="whatsFlutuante" href="https://wa.me/{{NUMERO}}?text={{MSG_CONTEXTUAL}}" target="_blank" rel="noopener">` + SVG inline do logo WhatsApp (nao usar CDN externo)
+   - JS: no `heroObserver` que já controla a barra mobile, alternar `.subiu` no icone junto com `.ativa` na barra (`mobileAtiva && window.innerWidth < 768`)
+5. Atualizar o listener de pixel: trocar `fbq('track','Contact')` dos botoes de checkout pra `fbq('track','InitiateCheckout')` (evento certo pra quem vai pagar, nao falar no WhatsApp). O icone flutuante mantem `Contact`
+6. Validar local: `python -m http.server {porta}` na pasta do site + `curl` pra extrair o HTML + `node -c` no `<script>` extraido (regex `/<script>([\s\S]*?)<\/script>/g`, ultimo match) — confirma sintaxe JS sem precisar de browser
+7. Se Playwright disponivel: screenshot desktop (1366px) + mobile (390px) pra confirmar que o icone flutuante nao colide com a barra mobile
+8. Deploy: `vercel deploy --prod --yes` de dentro da pasta linkada
+9. Validar em producao: `curl` + `grep -c` pelo dominio do checkout e pela classe do icone flutuante — confirma que o build publicado bate com o local
+
+**Output esperado:** Todos os CTAs principais apontando pro checkout, com pixel `InitiateCheckout`; icone flutuante de WhatsApp presente em toda a pagina (sem colidir com barra mobile) com pixel `Contact`.
+
+**Troubleshooting:**
+- Browser (Playwright) preso em outra sessao ("Browser is already in use"): pular validacao visual, usar `node -c` no JS extraido + `curl`/`grep` como validacao alternativa. Registrar no Mission Log que a validacao visual nao rodou
+- `node -c` falha com `Cannot find module`: caminho `/tmp` do bash nao bate com o `/tmp` que o node (nativo Windows) resolve — usar sempre o path absoluto do scratchpad (`C:/Users/.../Temp/claude/.../scratchpad`) tanto no lado bash quanto no lado node
+- Icone flutuante colidindo com barra mobile: confirmar que a classe `.subiu` esta sendo alternada junto com `.ativa` da barra, e que o offset (`bottom: 88px` ou equivalente) e maior que a altura da barra mobile
+- Se existem OUTRAS paginas do mesmo site com o mesmo padrao de CTA que nao foram mencionadas pelo usuario: NAO tocar sem pedir — so flagar como gap no relatorio/Mission Log
+
+**Referencia real:** `business/campanhas/crm-reativacao-leads/paginas-vendas/site/metodo-vip/index.html` e `.../sprint-do-metodo/index.html` (2026-08-06)
 
 ---
 

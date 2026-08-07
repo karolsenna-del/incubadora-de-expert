@@ -15,6 +15,7 @@
 | # | Data | Missao | Resultado | SOP Criado? | Observacoes |
 |---|------|--------|-----------|-------------|-------------|
 | 1 | 2026-07-03 | Clonar LP do GreatPages (/minitreinamento2) — reconstrucao limpa (copy/layout/design identicos, pixel Meta PageView+Contact, CTA delay 120s) e publicar na Vercel (projeto lp-minitreinamento-b) com dominio treinamento2.incubadoradeexpert.com.br | ok | sim ([SOP-018]) | CONCLUIDA: DNS criado pela Karol, HTTPS emitido, validado (200 + TLS + pixel init/PageView/Contact + redirect 308). GreatPages cancelado (assinatura ate 27/07). GAP FLAGADO: apex + www apontam pro GreatPages e morrem dia 27/07 — reapontar antes (registrado no contexto-dinamico) |
+| 2 | 2026-08-06 | Trocar CTA de WhatsApp por checkout Voomp nas paginas metodo-vip e sprint-do-metodo (projeto vendas-incubadora) — 4 botoes por pagina (hero/oferta/final/barra mobile) + criacao de icone flutuante de WhatsApp so pra duvidas, com pixel InitiateCheckout nos botoes e Contact no icone | ok | sim ([SOP-019]) | Validado local (http.server + node -c no JS) e em producao (curl + grep: 4x voompcreators, 5x whats-flutuante, 0 residuo cta-wa nos botoes). GAP FLAGADO e CONFIRMADO PELA KAROL: metodo-express e diagnostico-ferramentas continuam no WhatsApp; grupo e individual ja fecham direto no checkout Hotmart (nao WhatsApp) — decisao explicita de nao tocar agora. Karol pretende migrar todo checkout pra Voomp no futuro (ainda sem data) |
 
 ---
 
