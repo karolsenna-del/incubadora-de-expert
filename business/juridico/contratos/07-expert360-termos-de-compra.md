@@ -33,9 +33,11 @@
 
 4.2. Pagamento processado pela plataforma de checkout utilizada (Hotmart/Voomp), podendo ser à vista ou parcelado conforme as opções ali disponibilizadas — condições de parcelamento são as da própria plataforma de pagamento, não desta VENDEDORA.
 
-## 5. DO DIREITO DE ARREPENDIMENTO
+## 5. DO DIREITO DE ARREPENDIMENTO E DA GARANTIA COMERCIAL
 
 5.1. Nos termos do art. 49 do Código de Defesa do Consumidor, o(a) COMPRADOR(A) tem o prazo de 7 (sete) dias corridos, a contar da data da compra, para desistir da aquisição e solicitar reembolso integral, bastando manifestação por escrito à VENDEDORA, **independentemente de já ter iniciado o consumo do conteúdo**, salvo se o(a) COMPRADOR(A) manifestar, no ato da compra, renúncia expressa a esse prazo em troca de acesso imediato.
+
+5.2. Adicionalmente ao prazo legal do item 5.1, a VENDEDORA concede voluntariamente **garantia comercial de 30 (trinta) dias corridos**, contados da data de confirmação da compra, dentro da qual o(a) COMPRADOR(A) pode solicitar reembolso integral do valor pago, mediante manifestação por escrito à VENDEDORA, independentemente do motivo e do consumo já feito do conteúdo. Esta garantia é específica deste produto e não se estende aos demais serviços do ecossistema, regidos pelo Anexo I.
 
 ## 6. DA PROPRIEDADE INTELECTUAL E DA LICENÇA DE USO
 

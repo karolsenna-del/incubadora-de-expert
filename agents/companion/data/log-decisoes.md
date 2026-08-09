@@ -10,6 +10,16 @@
 **Impacto:** [o que muda]
 -->
 
+## 09/08/2026 — Garantia das 7 ofertas alinhada ao contrato (após venda revelar inconsistência)
+
+**Contexto:** Karol vendeu o Sprint do Método e ficou em dúvida se "30 dias de garantia" — texto que estava nas páginas de venda — tinha sido uma decisão dela. Checagem mostrou que não havia registro dessa decisão, e pior: o contrato real (Termos Gerais, Cláusula 9) só cobre 7 dias corridos de arrependimento (art. 49 CDC) antes do serviço começar, mais reembolso proporcional às etapas não entregues (menos 20% de custo administrativo) depois disso — divergente do que a página prometia. Risco de publicidade enganosa (CDC art. 37) em 4 páginas ainda não vendidas (VIP, Grupo, Individual, além do Sprint já vendido).
+
+**Decisão:** Sprint, VIP, Grupo e Individual (as 4 ofertas de "Prestação de Serviço", que usam a Cláusula 9 dos Termos Gerais) passam a anunciar "7 dias de garantia incondicional" + explicação do reembolso proporcional no FAQ. Expert360 fica de fora dessa correção — é produto digital self-paced, contrato próprio de "Termo de Compra" (não Prestação de Serviço) — Karol decidiu manter os 30 dias ali, e o contrato do Expert360 recebeu cláusula nova (5.2) garantindo isso explicitamente, já que antes só tinha o mínimo legal de 7 dias.
+
+**Racional:** A copy precisa refletir o que o contrato realmente garante — prometer mais do que o contrato cobre expõe a Karol legalmente (e o Sprint já tinha sido vendido com a promessa errada). Pra quem já comprou o Sprint sob a promessa de 30 dias, a orientação foi honrar os 30 dias prometidos na venda (o que a cliente viu antes de comprar prevalece), mesmo com a página já corrigida daqui pra frente.
+
+**Impacto:** 4 páginas de vendas corrigidas + contrato do Expert360 atualizado. Fica em aberto: revisão de advogado nos 9 contratos (pendência já conhecida, não é bloqueio) e reexportar o PDF do Expert360 via Playwright (só o `.md`/HTML foram atualizados até agora).
+
 ## 06/08/2026 — Desafio 10 Dias (Ciclo 2) encerrado sem resultado
 
 **Contexto:** Weekly review. Ciclo 2 do Desafio 10 Dias (ativação do algoritmo via ebook ReelsPro, batelada de posts 21-28/07) chegou ao fim.
