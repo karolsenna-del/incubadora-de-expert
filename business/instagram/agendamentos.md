@@ -18,6 +18,7 @@
 | 02/08/2026 | primeiras-vendas-simplificar-metodo | 10/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-primeiras-vendas-simplificar-metodo.yml) — 8 slides no Cloudinary — aguardando push |
 | 05/08/2026 | metodo-explicado-10-anos | 05/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-metodo-explicado-10-anos.yml) — 7 slides no Cloudinary — horário 20h a pedido explícito da Karol (exceção ao padrão 12h; 05/08 já tinha `autoridade-comportamento-busca-ia` às 12h, mantido — 2 posts no dia) — aguardando push |
 | 05/08/2026 | 5-erros-estruturar-metodo | 06/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-5-erros-estruturar-metodo.yml) — 8 slides no Cloudinary — horário 20h a pedido explícito da Karol (exceção ao padrão 12h; 06/08 já tinha `executivos-ausentes-linkedin-triplice` às 12h, mantido — 2 posts no dia) — aguardando push |
+| 09/08/2026 | nigro-parceria-que-completa | 11/08/2026 12h BRT | via GitHub Actions | agendado (workflow: post-nigro-parceria-que-completa.yml) — 7 slides no Cloudinary — próximo dia livre às 12h (10/08 já tinha `primeiras-vendas-simplificar-metodo`, mantido) — aguardando push |
 | — | — | — | — | *(inicializado em 2026-06-22)* |
 | 23/06/2026 | adiando-ha-anos | publicado imediatamente | 18098747612464009 | ✓ publicado |
 | 21/07/2026 | genesis-pool-metodo-autoral | publicado imediatamente (14h08 BRT — passou do horário padrão de 12h, Karol pediu pra publicar hoje) | 18099073856191847 | ✓ publicado |

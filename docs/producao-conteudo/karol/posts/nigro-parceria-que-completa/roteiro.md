@@ -17,16 +17,17 @@
 
 ## Roteiro Slide a Slide
 
-### Slide 1 — CAPA (Hook 1 — v3, do Banco de Ganchos Rota100k)
+### Slide 1 — CAPA (Hook 1 — v5, do banco "+100 Ganchos" do Afonso)
 **Texto:**
-> "Todo mundo aplaude quem dá conta de tudo sozinha. Eu não."
+> "O maior erro que todo mundo comete quando começa a vender."
 **Destaque:**
-> "Thiago Nigro também não — e olha o que ele fatura."
+> "Tentar fazer tudo sozinha. Thiago Nigro sabe o caminho certo — e dá pra aprender com ele."
 
-**Gatilhos:** Opinião com dono (posição pessoal da Karol, não informação neutra) + Reputação/Autoridade + Contra-intuitivo
-**Elemento notável:** Contra-intuitivo + Polêmica leve + Fato curioso
-**Looping:** Abre L1 — "por que ela discorda, se 'dar conta de tudo' parece virtude?"
-**Técnica aplicada:** template "Todo mundo aplaude [prática]. Eu não." — categoria Provocação e Opinião, Banco de Ganchos da Semana 01 do Rota100k (`C:\Users\karol\Downloads\DESAFIO-ROTA100K-Semana-01-04-a-09-08.pdf`, pág. 9, 1 dos 40 ganchos coringa). Preenchido com "dar conta de tudo sozinha" e reforçado com o caso Nigro no destaque. Bate com a regra da semana ("opinião com dono": pelo menos 1 conteúdo/dia com posição pessoal, não só informação neutra).
+**Gatilhos:** Polêmico/Contraintuitivo + Reputação/Autoridade
+**Elemento notável:** Contra-intuitivo + Fato curioso
+**Looping:** Abre L1 — "qual é o caminho certo que ele sabe?"
+**Técnica aplicada:** template "O maior erro que TODO mundo comete quando começa." — categoria 🔥 Polêmicos/Contraintuitivos, banco "+100 Ganchos Virais" do Afonso Molina (`agents/squad-conteudo-arcane/knowledge/swipe-files/hooks-virais/banco-ganchos-afonso-100-emocionais.md`). Preenchido com "tentar fazer tudo sozinha" e resolvido no destaque com o caso Nigro.
+**Correção (pedido da Karol):** v4 afirmava como fato absoluto que "ele nunca lançou nada sem parceiro" — não dá pra provar isso (só temos os 3 casos verificados: Érico Rocha, G4/Grupo Primo). Reformulado pra "sabe o caminho certo — dá pra aprender com ele": vira convite de autoridade, não afirmação factual arriscada. Os casos específicos continuam servindo de prova no Slide 2, sem generalizar pra "nunca".
 
 ---
 
@@ -145,4 +146,6 @@ Curiosidade (S1) → confirmação/autoridade (S2) → confronto de crença (S3)
 
 **V1** — 09/08/2026 — primeira versão, 7 slides, hook de Autoridade (Nigro), CTA GRUPO conforme pedido da Karol ("conhecer outros experts, quem sabe rola parceria"). Status: aguardando aprovação.
 **V2** — 09/08/2026 — hook da capa fortalecido, 1ª tentativa: fórmula "afirmação inesperada" do Rafael Bem (KB `conteudo-viral`). Depois superada pela V3 (a KB do squad não tinha o material certo — ver V3).
-**V3** — 09/08/2026 — Karol indicou o PDF real: `DESAFIO-ROTA100K-Semana-01-04-a-09-08.pdf` (Downloads, não estava na KB do squad — é material pessoal do desafio, não do curso base do Afonso). Página 9 tem "Banco de Ganchos", 40 templates em 4 categorias. Capa reescrita com o template "Todo mundo aplaude [prática]. Eu não." (categoria Provocação e Opinião), preenchido com "dar conta de tudo sozinha" + reforço do caso Nigro no destaque. Nota: esse PDF vale considerar pra Iris incorporar na KB `conteudo-viral` ou como swipe file próprio do squad (`knowledge/swipe-files/`) — tem 40 ganchos reutilizáveis pra qualquer post futuro, não só esse.
+**V3** — 09/08/2026 — Karol indicou o PDF real: `DESAFIO-ROTA100K-Semana-01-04-a-09-08.pdf` (Downloads, não estava na KB do squad — é material pessoal do desafio, não do curso base do Afonso). Página 9 tem "Banco de Ganchos", 40 templates em 4 categorias. Capa reescrita com o template "Todo mundo aplaude [prática]. Eu não." (categoria Provocação e Opinião). Banco salvo em `knowledge/swipe-files/hooks-virais/banco-ganchos-rota100k-semana01.md`.
+**V4** — 10/08/2026 — Karol trouxe 2º banco (Notion do Afonso, "+100 Ganchos Virais", acessível como aluna — extraído e salvo em `knowledge/swipe-files/hooks-virais/banco-ganchos-afonso-100-emocionais.md`). Capa trocada pro template "O maior erro que TODO mundo comete quando começa." (categoria Polêmicos/Contraintuitivos), preenchido com "tentar fazer tudo sozinha" + resolução com o caso Nigro no destaque.
+**V5** — 10/08/2026 — Karol pediu correção: não dá pra afirmar como fato que Nigro "nunca lançou nada sem parceiro" (não verificável, risco de dado inventado). Destaque reformulado pra "sabe o caminho certo — dá pra aprender com ele" (convite de autoridade em vez de afirmação absoluta). Status: aguardando aprovação final da Karol.
