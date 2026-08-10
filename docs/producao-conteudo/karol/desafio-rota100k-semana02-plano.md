@@ -23,7 +23,7 @@ Você acha que precisa terminar o produto sozinha, na sua cabeça, antes de vend
 **Estrutura:** o que a pessoa acha que economiza (evitar erro/constrangimento) → a conta real (tempo, motivação, mercado andando) → CTA seguir.
 
 **Legenda:**
-Adiar a primeira venda até "estar pronta" parece prudência. Na prática, custa tempo, motivação e mercado andando sem você. Cada mês esperando é um mês sem aprender o que só quem compra te ensina. Me segue, ensino isso toda semana.
+Adiar a primeira venda até "estar pronta" parece prudência. Na prática, custa tempo, motivação e mercado andando sem você. Cada mês esperando é um mês sem aprender o que só quem compra te ensina. Me siga para aprender a estruturar seu conhecimento e validar seu método.
 
 ### 17h Reels YAP — "O primeiro passo se você está começando"
 **Gancho:** "O passo 1 que quase todo mundo pula."
@@ -58,8 +58,6 @@ Prontidão não é um estado que chega antes — é o que você constrói venden
 **Virada:** quase lancei algo que, na prática, não ajudava ninguém — o produto que eu imaginava e o que a aluna realmente precisava eram coisas diferentes. Foi aí que entendi que validar antes de fechar não é enrolação.
 **Seeding (oferta):** menciona de passagem que validar antes de fechar é uma fase inteira do Expert360º hoje — sem virar CTA de venda.
 
-> ⚠️ Corrigido 10/08 — versão anterior ("testei fazer tudo sozinha") contradizia a realidade atual da Karol (hoje com Claude Code ela faz muita coisa sozinha; antes era impossível). Trocado por um teste real da trajetória dela que não conflita.
-
 **Legenda:**
 Testei fechar meu primeiro produto sozinha, só na minha cabeça, sem validar com ninguém. Resultado: quase lancei algo que, na prática, não ajudava ninguém — o que eu imaginava e o que a aluna precisava de verdade eram coisas diferentes. Validar antes de fechar não é enrolação, é o que separa produto que parece bom de produto que funciona — hoje é uma fase inteira do que eu ensino no Expert360º. Me segue, falo sobre isso toda semana.
 
@@ -82,7 +80,7 @@ Antes de contratar mentoria ou curso, faz essas 3 perguntas: esse método tem no
 ### 20h Carrossel Neutro — "Sinais de alerta no seu nicho"
 **Gancho:** "[Número] sinais de alerta em [tema]."
 **Preenchido:** "5 sinais de que você tá vendendo curso genérico sem perceber."
-**Estrutura (7 slides):** capa → pra quem serve → 1) prometeu tudo pra todo mundo → 2) não tem nome próprio → 3) qualquer concorrente reproduz → 4) cliente termina e não sabe o próximo passo → 5) você não consegue explicar em 1 frase o que entrega → fecha, CTA seguir
+**Estrutura (8 slides — 5 itens usa 8, não 7):** capa (só o gancho) → pra quem serve → 1) prometeu tudo pra todo mundo → 2) não tem nome próprio → 3) qualquer concorrente reproduz → 4) cliente termina e não sabe o próximo passo → 5) você não consegue explicar em 1 frase o que entrega → fecha, CTA seguir
 
 **Legenda:**
 5 sinais de que você tá vendendo curso genérico sem perceber: promete tudo pra todo mundo, não tem nome próprio, qualquer concorrente reproduz, o cliente termina sem saber o próximo passo, e nem você consegue explicar em 1 frase o que entrega. Cada sinal desses é sintoma de conhecimento solto, não de método — é exatamente isso que a gente resolve dentro do Expert360º. Me segue, ensino a estruturar isso direito.
@@ -97,7 +95,7 @@ Antes de contratar mentoria ou curso, faz essas 3 perguntas: esse método tem no
 **Virada:** a história que você viveu explicando por que seu jeito funciona é o que ninguém copia — o resto qualquer concorrente reproduz.
 
 **Legenda:**
-Se eu tivesse que escolher uma única coisa pra você estruturar seu método, seria essa: história dentro do processo. Não é a técnica que você ensina — isso qualquer concorrente reproduz. É a sua vivência explicando por que o seu jeito funciona. Isso ninguém copia — e é a primeira coisa que eu ajudo a extrair no Expert360º. Me segue, ensino a estruturar isso toda semana.
+Se eu tivesse que escolher uma única coisa pra você estruturar seu método, seria essa: história dentro do processo. Não é a técnica que você ensina — isso qualquer concorrente reproduz. É a sua vivência explicando por que o seu jeito funciona. Isso ninguém copia — e é a primeira coisa que eu ajudo a extrair no Expert360º. Me siga para aprender a estruturar seu conhecimento e validar seu método.
 
 ### 12h Reels YAP — "O jeito rápido x o jeito certo"
 **Gancho:** "Tem o jeito rápido e o jeito certo. Eles não são o mesmo."
@@ -133,7 +131,7 @@ Antes de lançar seu curso pro público geral, faz essas 4 coisas: valida com 3 
 **Virada:** a resposta que cheguei depois virou a base do que eu ensino hoje: conhecimento é o que você sabe, método é o caminho estruturado pra outra pessoa chegar aonde você chegou.
 
 **Legenda:**
-Uma aluna me perguntou: "qual a diferença entre o que eu sei e um método?" Não soube responder na hora — fiquei pensando a semana inteira. A resposta que cheguei virou a base do que ensino hoje: conhecimento é o que você sabe, método é o caminho estruturado pra alguém chegar aonde você chegou. São coisas diferentes, e confundir as duas é o que trava quem quer transformar experiência em produto — foi resolvendo isso que nasceu o Expert360º. Me segue, ensino essa diferença toda semana.
+Uma aluna me perguntou: "qual a diferença entre o que eu sei e um método?" Não soube responder na hora — fiquei pensando a semana inteira. A resposta que cheguei virou a base do que ensino hoje: conhecimento é o que você sabe, método é o caminho estruturado pra alguém chegar aonde você chegou. São coisas diferentes, e confundir as duas é o que trava quem quer transformar experiência em produto — foi resolvendo isso que nasceu o Expert360º. Me siga para aprender a estruturar seu conhecimento e validar seu método.
 
 ### 12h Reels YAP — "O que mudou na minha área"
 **Gancho:** "O que se fazia em [área] há [X] anos hoje é erro."
@@ -153,11 +151,13 @@ Quanto tempo leva pra estruturar um método que vende de verdade? A resposta hon
 
 ### 20h Carrossel Neutro — "O que esperar em cada fase"
 **Gancho:** "O mapa de [tema]: as [número] fases até [resultado]."
-**Preenchido:** "O mapa do método: as 5 fases até você ter algo que vende de verdade."
-**Estrutura (7 slides):** capa → por que gente desiste no meio → 1) desbloqueio de crença (credencial não vende, história tem valor) → 2) persona (quem você serve com precisão) → 3) processo autoral (método com nome e estrutura) → 4) proposta validada (vendas reais no 1:1) → 5) autoridade (presença estratégica, não exposição) → fecha, CTA seguir
+**Preenchido:** "O mapa do método: os 5 Ps até você ter algo que vende de verdade."
+**Estrutura (8 slides — 5 itens usa 8, não 7):** capa (só o gancho) → intro (por que gente desiste no meio — menciona o desbloqueio de crença como pré-requisito, sem contar como um dos 5) → P1 Persona Compradora (quem você serve com precisão) → P2 Promessa Transformadora (a transformação clara que você entrega) → P3 Processo Autoral (método com nome e estrutura) → P4 Proposta Validada (vendas reais no 1:1) → P5 Posicionamento de Autoridade (presença estratégica, não exposição) → fecha, CTA seguir
+
+> ⚠️ Corrigido 10/08 — nomes dos Ps estavam errados (faltava P2 Promessa Transformadora, "autoridade" curto demais pra P5, e "desbloqueio de crença" contado como 1 dos 5 quando na verdade é pré-requisito, não um P). Nomes canônicos: `docs/knowledge/expert-business/metodologia/expert360-framework-completo.md`.
 
 **Legenda:**
-O mapa do método: as 5 fases até você ter algo que realmente vende. Desbloqueio de crença, persona definida com precisão, processo autoral com nome e estrutura, proposta validada em vendas reais, e só depois autoridade. Quem pula fase trava lá na frente e não sabe por quê — essa é a mesma estrutura que eu uso com toda aluna que mentoro no Expert360º. Salva esse mapa. Me segue, ensino cada fase dessas toda semana.
+O mapa do método: os 5 Ps até você ter algo que realmente vende. Persona Compradora, Promessa Transformadora, Processo Autoral, Proposta Validada e Posicionamento de Autoridade — nessa ordem, cada um sustentando o próximo. Antes disso tem um desbloqueio de crença que muda tudo: credencial não vende, história tem valor. Quem pula um P trava lá na frente e não sabe por quê — essa é a mesma estrutura que eu uso com toda aluna que mentoro no Expert360º. Salva esse mapa. Me segue, ensino cada P desses toda semana.
 
 ---
 
@@ -171,13 +171,18 @@ O mapa do método: as 5 fases até você ter algo que realmente vende. Desbloque
 **Legenda:**
 Essa semana eu errei em uma coisa: gravei rápido demais um dia e o gancho saiu fraco. Não tem problema nenhum admitir — processo real é assim, cheio de ajuste no meio do caminho. Da próxima vez separo o gancho antes de ligar a câmera — mesma disciplina que cobro de quem eu mentoro no Expert360º. Me segue, sexta é dia de balanço por aqui.
 
-### 12h Reels YAP — "O detalhe que ninguém repara"
+### 12h Reels YAP — "O detalhe que ninguém repara" (REACT — trocado 10/08)
 **Gancho:** "Tem um detalhe em [tema] que ninguém repara e muda tudo."
-**Preenchido:** "Tem um detalhe em vender método que ninguém repara: o nome que você dá pra ele."
-**Virada:** sem nome, vira "mais um curso". Com nome, vira propriedade sua — nome + estrutura é o que separa método de conteúdo solto.
+**Preenchido:** "Tem um detalhe sobre 'autenticidade x IA' que quase ninguém fala."
+**Contexto:** tá bombando um post essa semana (@rafaelkiso, react ao gatilho real) dizendo que autenticidade virou recurso escasso com o avanço da IA.
+**Virada (com caso real, não genérico):** eu uso IA todo dia — meus alunos preenchem um diagnóstico com um agente de IA que eu treinei, e em minutos têm a clareza que levaria meses de sessão pra chegar. A Anália ficou 9 anos com uma dúvida e resolveu numa conversa estruturada assim (print real dela documentado). Isso não é IA sendo autêntica no meu lugar — é IA acelerando o raciocínio. Quem julga se aquilo é coerente, se é dela mesma, é ela. Julgamento não se terceiriza.
+**Fonte do gatilho:** post de @rafaelkiso (verificado), 793 likes/339 comentários, promovendo aula gratuita "DNA do Conteúdo" — usado como gancho de atualidade, não copiado.
+**Fonte do caso real:** `posts/ia-braco-do-expert/roteiro.md` — mesmo agente de diagnóstico e print da Anália já usados nesse post anterior (13/07). Reaproveitando prova real já validada, ângulo novo (react + IA x autenticidade, não "IA x substituição").
+
+> Nota: trocado o conteúdo original desse slot ("o nome que você dá ao método") por esse react — pedido da Karol pra sempre puxar história real dos arquivos em vez de argumento genérico sobre IA.
 
 **Legenda:**
-Tem um detalhe em vender método que ninguém repara: o nome que você dá pra ele. Sem nome, vira "mais um curso" — igual a qualquer outro no feed. Com nome, vira propriedade sua, algo que só você ensina daquele jeito. Parece pequeno, mas é o que separa método de conteúdo solto — é literalmente o primeiro passo do Processo Autoral que eu ensino no Expert360º. Me segue, esses detalhes eu trago toda semana.
+Tá bombando um post essa semana dizendo que, com o avanço da IA, autenticidade virou recurso escasso. Concordo, mas prefiro ser mais específica: eu uso IA todo dia — meus alunos preenchem um diagnóstico com um agente que eu treinei, e em minutos têm a clareza que levaria meses de sessão pra chegar. A Anália ficou 9 anos com uma dúvida e resolveu numa conversa assim. Só que isso não substitui autenticidade nenhuma — a IA gera a estrutura, mas quem julga se aquilo é coerente, se é dela mesma, é ela. Julgamento não se terceiriza. É isso que ninguém copia, com ou sem IA. Me siga para aprender a estruturar seu conhecimento e validar seu método.
 
 ### 17h Reels YAP — "Respondendo dúvida de seguidor"
 **Gancho:** "Perguntaram no direct: '[pergunta]'. Respondendo aqui."
@@ -190,7 +195,7 @@ Perguntaram no direct: "não tenho seguidores, dá pra vender assim mesmo?" Resp
 ### 20h Carrossel Neutro — "Perguntas frequentes respondidas"
 **Gancho:** "As [número] perguntas que mais me fazem sobre [tema]."
 **Preenchido:** "As 5 perguntas que mais me fazem sobre vender método."
-**Estrutura (7 slides):** capa → por que essas dúvidas se repetem → 1) preciso de audiência? não → 2) preciso ter tudo pronto? não → 3) preciso saber tudo pra ensinar? não → 4) preciso aparecer muito? não → 5) quanto tempo leva? o tempo de validar, não um fim de semana → fecha, CTA seguir
+**Estrutura (8 slides — 5 itens usa 8, não 7):** capa (só o gancho) → por que essas dúvidas se repetem → 1) preciso de audiência? não → 2) preciso ter tudo pronto? não → 3) preciso saber tudo pra ensinar? não → 4) preciso aparecer muito? não → 5) quanto tempo leva? o tempo de validar, não um fim de semana → fecha, CTA seguir
 
 **Legenda:**
 As 5 perguntas que mais me fazem sobre vender método: preciso de audiência? Preciso ter tudo pronto? Preciso saber tudo pra ensinar? Preciso aparecer muito? Quanto tempo leva? A resposta pras 4 primeiras é não — e a última é: o tempo de validar, não um fim de semana. Cada resposta dessas desmonta um motivo de adiar — e cada uma delas eu destrincho com calma dentro do Expert360º. Me segue, respondo isso toda semana.
@@ -265,7 +270,7 @@ Uma coisa que eu aprendi essa semana: prontidão não é um estado que você ati
 **Estrutura (7 slides):** capa frase forte → pra quem é o recado (quem trava esperando condição ideal) → 1) diploma é o que você estudou, método é o que você viveu → 2) credencial não vende, história tem valor → 3) prontidão vem de vender, não antes → 4) parceria de área complementar fortalece, não dilui → fecha, CTA seguir
 
 **Legenda:**
-Um recado pra quem me acompanhou essa semana inteira do desafio: diploma é o que você estudou, método é o que você viveu. Credencial não vende — história tem valor. Prontidão vem de vender, não antes de vender. E parceria de área complementar fortalece a entrega, não dilui sua autoridade. Se você chegou até aqui, guarda essas 4 coisas — e se quiser aprender a estruturar tudo isso do zero, é exatamente o que eu ensino no Expert360º. Me segue, começamos a semana 03 juntas.
+Um recado pra quem me acompanhou essa semana inteira do desafio: diploma é o que você estudou, método é o que você viveu. Credencial não vende — história tem valor. Prontidão vem de vender, não antes de vender. E parceria de área complementar fortalece a entrega, não dilui sua autoridade. Se você chegou até aqui, guarda essas 4 coisas. Me siga para aprender a estruturar seu conhecimento e validar seu método — começamos a semana 03 juntas.
 
 ---
 
@@ -275,6 +280,9 @@ Um recado pra quem me acompanhou essa semana inteira do desafio: diploma é o qu
 - [x] Terça 11/08 a Domingo 16/08 — 24 posts mapeados + legendas prontas (10/08)
 - [x] Seeding de oferta (Expert360º) aplicado em 24/28 legendas (10/08) — 4 restantes (segunda) ficam sem, já estavam gravadas/em uso antes da regra existir
 - [ ] Gravação/postagem — Karol executa dia a dia; nenhum post ainda gravado além de segunda
+- [x] Sexta 12h trocado por react ao post de @rafaelkiso (IA x autenticidade) com caso real da Anália (10/08)
+- [x] CTA nova "Me siga para aprender a estruturar seu conhecimento e validar seu método" aplicada em 5 posts (segunda 12h, quarta 09h, quinta 09h, sexta 12h/react, domingo 20h)
+- [x] Correção: nomes dos 5 Ps do Expert360º (quinta 20h) e contagem de slides de carrosséis de 5 itens (terça e sexta 20h, agora 8 slides)
 
 ## Pool normal do squad
 

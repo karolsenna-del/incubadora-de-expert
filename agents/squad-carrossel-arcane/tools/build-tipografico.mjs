@@ -67,6 +67,57 @@ function html(slide) {
   return out;
 }
 
+// Chrome headless (Windows) recorta a janela sem preencher o viewport inteiro —
+// sobra uma barra preta (~18px direita, ~96px embaixo) quando o slide não é fundo
+// preto. Validado empiricamente em 10/08/2026 (constante, não escala com o tamanho).
+// Fix: renderiza maior que o alvo e corta a sobra de volta pro tamanho exato via ffmpeg.
+const WIN_BORDER_X = 18;
+const WIN_BORDER_Y = 96;
+
+function findFFmpeg() {
+  const candidates = ['ffmpeg', 'ffmpeg.exe'];
+  const winget = path.join(HOME, 'AppData/Local/Microsoft/WinGet/Packages');
+  if (fs.existsSync(winget)) {
+    for (const pkg of fs.readdirSync(winget)) {
+      if (!pkg.toLowerCase().includes('ffmpeg')) continue;
+      const pkgDir = path.join(winget, pkg);
+      const stack = [pkgDir];
+      while (stack.length) {
+        const dir = stack.pop();
+        for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+          const p = path.join(dir, entry.name);
+          if (entry.isDirectory()) stack.push(p);
+          else if (entry.name.toLowerCase() === 'ffmpeg.exe') candidates.push(p);
+        }
+      }
+    }
+  }
+  for (const c of candidates) {
+    try { execFileSync(c, ['-version'], { stdio: 'ignore' }); return c; } catch (e) { /* tenta próximo */ }
+  }
+  return null;
+}
+const FFMPEG = findFFmpeg();
+
+function screenshot(chromeArgsExtra, htmlPath, finalOutPath, w, h) {
+  if (!FFMPEG) {
+    execFileSync(CHROME, [
+      '--headless', '--disable-gpu', '--hide-scrollbars', '--no-sandbox',
+      `--window-size=${w},${h}`, '--virtual-time-budget=6000',
+      `--screenshot=${finalOutPath}`, ...chromeArgsExtra, `file://${htmlPath}`,
+    ], { stdio: 'ignore' });
+    return;
+  }
+  const rawPath = finalOutPath.replace(/\.png$/, '.raw.png');
+  execFileSync(CHROME, [
+    '--headless', '--disable-gpu', '--hide-scrollbars', '--no-sandbox',
+    `--window-size=${w + WIN_BORDER_X},${h + WIN_BORDER_Y}`, '--virtual-time-budget=6000',
+    `--screenshot=${rawPath}`, ...chromeArgsExtra, `file://${htmlPath}`,
+  ], { stdio: 'ignore' });
+  execFileSync(FFMPEG, ['-y', '-i', rawPath, '-vf', `crop=${w}:${h}:0:0`, finalOutPath], { stdio: 'ignore' });
+  fs.rmSync(rawPath, { force: true });
+}
+
 function findChrome() {
   const candidates = [];
   const pwMac = path.join(HOME, 'Library/Caches/ms-playwright');
@@ -107,13 +158,9 @@ for (const f of fs.readdirSync(outDir)) if (/^slide-\d+\.png$/.test(f)) fs.rmSyn
 
 cfg.slides.forEach((slide, i) => {
   const nn = String(i + 1).padStart(2, '0');
-  fs.writeFileSync(path.join(buildDir, `slide-${nn}.html`), html(slide), 'utf8');
-  execFileSync(CHROME, [
-    '--headless', '--disable-gpu', '--hide-scrollbars', '--no-sandbox',
-    '--window-size=1080,1350', '--virtual-time-budget=6000',
-    `--screenshot=${path.join(outDir, `slide-${nn}.png`)}`,
-    `file://${path.join(buildDir, `slide-${nn}.html`)}`,
-  ], { stdio: 'ignore' });
+  const htmlPath = path.join(buildDir, `slide-${nn}.html`);
+  fs.writeFileSync(htmlPath, html(slide), 'utf8');
+  screenshot([], htmlPath, path.join(outDir, `slide-${nn}.png`), 1080, 1350);
 });
 
 const total = fs.readdirSync(outDir).filter(f => /^slide-\d+\.png$/.test(f)).length;
