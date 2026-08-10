@@ -244,6 +244,107 @@ O que domina os virais de vendas/empreendedorismo/infoprodutos NÃO é trend nem
 
 ---
 
+## POOL DE TEMAS — NOVA LEVA (data: 09/08/2026)
+
+> Pool original (temas 1-21 + prova social + 6 quentes, seção acima) está **esgotado** — todos já viraram post entre 15/06 e 02/08. Essa leva nasce do garimpo pós-análise da Aria (relatório `analises/2026-08-09/`) + notícia de mercado ago/2026 + 3 casos trazidos pela Karol.
+> Garimpo: Iris (Squad Conteúdo Arcane), com validação cruzada Aria (padrão de vulnerabilidade confirmado externamente).
+
+### 🔥 FORTES (8 temas)
+
+1. **"Só 13% de quem compra curso termina de assistir — e o produtor nunca fala nisso"**
+   - Formato: Carrossel de Dor ou Reels Gancho Negativo
+   - Categoria: Inimigos + Crenças
+   - Por que é forte: dado de mercado 2026 batendo direto na tese "conhecimento ≠ método" — curso sem método é abandonado, é prova, não opinião
+   - Fonte: pesquisa de mercado de infoprodutos 2026 (taxa de conclusão de curso)
+
+2. **"Eu lançava uma expert. Uma aluna pediu reembolso do curso dela — porque o conteúdo já tava todo no feed dela de graça"**
+   - Formato: Carrossel de Alcance ou Reels C.N.L.
+   - Categoria: Crenças + Inimigos
+   - Por que é forte: caso real vivido pela Karol como lançadora — autoridade de bastidor, não teoria. Aprofunda o tema já validado pela Aria essa semana ("problema é o formato do infoproduto", 3,41%)
+   - ⚠️ Anonimizar a expert citada (pessoa real não-pública) na hora de roteirizar
+   - Fonte: vivência da Karol
+
+3. **"Autoridade silenciosa: quem grita menos no digital, vende mais"**
+   - Formato: Carrossel de Dor ou Reels falado
+   - Categoria: Crenças + Inimigos
+   - Por que é forte: tendência 2026 confirmada em fonte internacional — reforça posicionamento central da Karol como precursora, não como quem copiou trend
+   - Fonte: Forbes Business Council, "Depth Over Flash: The New Rules For Personal Brand Influence In 2026"
+
+4. **"Eu não tive um lançamento ruim. Tive oito. E demorei anos pra entender que o problema se repetia sempre no mesmo lugar"**
+   - Formato: Reels confronto (mesma estrutura validada essa semana)
+   - Categoria: Momentos de vida + Comportamentos-
+   - Por que é forte: ⭐ validação DUPLA — Aria achou o padrão de confronto+vulnerabilidade nos posts da semana (3,11%-3,41%), e tendência gringa 2026 confirma de fora (founders que postam "pior mês" engajam mais que quem posta resultado). Ângulo diferente do post `oito-lancamentos-60-segundos` já feito (aquele era autoridade condensada; esse é confronto)
+   - Fonte: Aria (relatório 09/08) + tendência de hooks 2026
+
+5. **"Você não precisa de milhares de seguidores — precisa de uma lista pequena e certa"**
+   - Formato: Carrossel de Dor
+   - Categoria: Crenças
+   - Por que é forte: confirmação externa de que lista pequena engajada > milhão de seguidor — exatamente a Venda Secreta
+   - Fonte: tendência de hooks/course creators 2026
+
+6. **"De 40 módulos pra 6: por que curso gigante não vende mais"**
+   - Formato: Carrossel de Alcance (usa case real de aluno)
+   - Categoria: Crenças + histórico próprio
+   - Por que é forte: microlearning é tendência confirmada 2026 (pílulas curtas aumentam conclusão em até 20%) — e a Karol já tem case real documentado (mapa de método de aluno que foi de 40 pra 6 módulos)
+   - Fonte: tendência de microlearning 2026 + case interno
+
+12. **"O erro da Natália Beauty não foi a grosseria. Foi não ter resposta pronta pra pergunta mais óbvia que existe: 'qual seu diferencial?'"**
+    - Formato: Reels de reação/análise ou Carrossel de Dor
+    - Categoria: Momentos de vida + Crenças
+    - Por que é forte: caso real verificado (biomédica Nahê Rhayane perguntou o diferencial da mentoria num evento em Curitiba; Natália disse que ela não era bem-vinda; perdeu 86.643 seguidores em 2 dias). Ângulo ainda não explorado: o problema não foi a resposta ríspida, foi não TER resposta — quem tem método estruturado nunca é pego de surpresa nessa pergunta. Liga com Vendas Secretas (pergunta difícil em ambiente 1:1 controlado vs. palco público sem roteiro)
+    - ⚠️ Tom: ela já se desculpou publicamente e já foi punida socialmente — post fica mais forte como análise estrutural, não repetindo julgamento moral
+    - Fonte: Band, Folha Vitória, Tribuna do Planalto (jun/2026)
+
+13. **"Tô no desafio do Afonso Molina: 22 reels por dia. O @caiomktviral já chegou a postar 100/dia. E mesmo assim: isso não é pra quem ainda não validou se o método vende"**
+    - Formato: Reels P.O.V. / bastidor real
+    - Categoria: Comportamentos- (excesso) + Crenças
+    - Por que é forte: vivência real da Karol acontecendo AGORA (desafio Afonso Molina em andamento) + referência nomeada (@caiomktviral, confirmado pela Karol) + contraste com Vendas Secretas — quem tá validando precisa de conversa 1:1, não de escala de conteúdo
+    - Fonte: Afonso Molina (Reels10k, método de alto volume confirmado) + @caiomktviral (confirmado pela Karol) + vivência própria
+
+### ⚡ MÉDIOS (5 temas)
+
+7. **"Reforma tributária chegou nos infoprodutos — quem só vende curso solto vai sentir"**
+   - Categoria: Instituições
+   - Por que: ângulo de bastidor/profissionalização, autoridade de quem entende o jogo todo do mercado
+   - Fonte: matéria Terra/Economia, reforma tributária e infoprodutos (ago/2026)
+
+8. **"Curso de 'virar influenciador' caiu 40% em vendas — porque prometia fama, não método"**
+   - Categoria: Inimigos + Eventos sazonais (crise 2026)
+   - Por que: dado de mercado fresco, contrasta direto com método real vs. promessa de fama
+   - Fonte: pesquisa de mercado 2026 (queda de vendas de curso de influenciador)
+
+9. **"Enquanto tem gente protestando na Paulista contra curso vazio, eu ensino só o que sei de verdade"**
+   - Categoria: Momentos de vida + Inimigos
+   - Por que: notícia quente (protesto real 2026), posicionamento por contraste
+   - ⚠️ Cuidado: mencionar o fato sem ridicularizar quem foi enganado (são vítimas, não motivo de deboche)
+   - Fonte: pesquisa de mercado 2026 (protesto Av. Paulista, promessas de enriquecimento rápido)
+
+11. **"Reels virou busca do Google — cada vídeo seu agora é também SEO"**
+    - Categoria: Itens conhecidos (mudança de plataforma)
+    - Por que: tendência técnica recente (Google indexa Reels desde set/2025), pouca gente do nicho ainda fala disso
+    - Fonte: tendências Instagram 2026
+
+14. **"Thiago Nigro não lança sozinho. Junta quem lança (Érico Rocha) com quem ensina a guardar o que entrou (G4). Não é sorte — é arquitetura de parceria"**
+    - Categoria: Famosos + Crenças
+    - Por que: parceria Nigro + Érico Rocha confirmada (Plano Perfeito, Ultra Black Friday Infinita) + G4 e Grupo Primo confirmados pela Karol (live de lançamento anunciada no Instagram deles). Ângulo pro expert: parceria estratégica acelera jornada do aluno e agrega valor na entrega — não é "terceirizar"
+    - Fonte: NeoFeed, Investidor10 (Nigro + Érico Rocha) + Instagram G4/Grupo Primo (confirmado pela Karol)
+
+### 🌟 QUENTES / EMERGENTES (2 temas)
+
+10. **"Vem aí lei que regulamenta influenciador digital como profissão — o que muda pra quem vende conhecimento"**
+    - STATUS: emergente — PL 1234/2026 em regime de urgência no Senado
+    - Janela: 1-2 meses antes de virar assunto batido em perfis de negócio
+    - Por que pegar: poucos no nicho da Karol ainda conectaram isso com "vender conhecimento com método"
+    - Fonte: debate legislativo 2026 (mercado de curso de influenciador)
+
+15. **"A crise dos infoprodutos de 2026"**
+    - STATUS: emergente — debate ativo no mercado agora (matérias tituladas literalmente "Crise do Mercado Digital", "Crise dos Infoprodutos: correções e oportunidades reais")
+    - Janela: 1-2 meses antes de virar assunto batido
+    - Por que pegar: a tese da Karol sempre foi contra infoproduto genérico — ela entra como quem já via isso vindo, não como reativa
+    - Fonte: Entrega Digital, Digital Manager Guru (blogs de mercado, ago/2026)
+
+---
+
 ## LOG
 
 - 15/06 — @iris-pesquisador: Base criada — 3 formatos de carrossel + pool de 15 temas + insights 2026 + fontes externas.
@@ -274,6 +375,8 @@ O que domina os virais de vendas/empreendedorismo/infoprodutos NÃO é trend nem
 - 01/08 — @rico-roteirista: **5 legendas escritas** pra batelada de teste CTA-pergunta — prosa corrida complementando o carrossel (mesmo padrão validado em `essencia-diferencial-autoridade`/`mariana-rios-metodo-sem-lastro`), mas CTA final é pergunta direta (não palavra-código), coerente com o roteiro de cada post. Salvas em `docs/producao-conteudo/karol/posts/{slug}/legenda.txt` (ainda não movidas pra `fila/` — falta o Mack gerar as lâminas). **Teoria + roteiro + legenda completos nos 5 posts. Falta só produção visual (Mack) pra ir pra fila.**
 - 02/08 — @carrossel-chief + @producer: **5 carrosséis produzidos e entregues na fila** (`business/instagram/fila/{slug}/`), cada um com capa em template diferente a pedido da Karol: `metodo-e-modelo-de-negocio` (stats-hero), `autoridade-comportamento-busca-ia` (card-tweet, continuidade visual com a Parte 1), `geo-o-novo-seo` (diagnostico-tipografico, modifier "sem-numero"), `executivos-ausentes-linkedin-triplice` (foto-frase, com foto real da Karol — `Downloads/Minhas fotos/3.png`), `maira-cardi-promessa-vaga-metodo` (card-tweet). **Bug de ferramenta encontrado e corrigido na origem:** os templates tipo "capa" (`stats-hero`, `foto-frase`, `diagnostico-tipografico`, `capa-marca`) usavam `width:1080px;height:1350px` fixo, o que cortava conteúdo perto da borda no Chrome headless deste Windows — corrigido pra `width:100%;height:100%` nos 4 templates mestres (`~/.carrossel-arcane/templates/`) e documentado em `agents/squad-carrossel-arcane/knowledge/render-html-png.md`. **Os 5 posts têm PNGs (7 slides cada) + legenda.txt na fila, prontos pro insta-scheduler agendar.**
 - 18/07 — @aria-analista: **Insight de formato formalizado** (seção INSIGHTS DE FORMATO 2026) — áudio/clipe reconhecível (testado com abertura do Fantástico no Reels "domingo à noite") é alavanca de DISTRIBUIÇÃO real (alcance recorde do ciclo, 87,7% não seguidores) mas não de conversão sozinho (retenção e interação abaixo do padrão recente). Candidato a testar de novo no Ciclo 2 com corte mais rápido pro hook pessoal — ainda não é padrão confirmado (1 dado só).
+- 09/08 — @aria-analista: **Batch automático analisado (64 publicações → 54 peças, período 31/07-08/08).** Zero-interação caiu pra 26% (vs 47% no relatório anterior). REELS 2,96% vs FEED 1,07% (quase 3x, amostra grande). Achado central: conteúdo de negócio com hook de confronto+vulnerabilidade ("você também pode ser burro", "o problema é seu método") chegou perto do pessoal em performance pela 1ª vez — possível quebra do padrão "só pessoal engaja" dos 3 relatórios anteriores, amostra ainda pequena (3 posts). Relatório completo: `analises/2026-08-09/relatorio-batch-automatico.md`.
+- 09/08 — @iris-pesquisador: **Pool original (27 temas) esgotado — nova leva de 15 temas garimpada e cravada**, ver seção POOL DE TEMAS — NOVA LEVA acima. Combina: insights da Aria (tema "erro/caos no infoproduto" validado + hipótese confronto/vulnerabilidade), pesquisa de mercado 2026 (crise de conclusão de curso 13%, autoridade silenciosa/Forbes, reforma tributária, queda de 40% em curso de influenciador, PL 1234/2026, crise dos infoprodutos) + 3 casos trazidos pela Karol (Natália Beauty — ângulo de "não ter resposta pronta pro diferencial", vs. o julgamento moral já batido; frequência de posts — desafio Afonso Molina 22/dia + @caiomktviral 100/dia vs. fase de validação; Thiago Nigro + Érico Rocha + G4/Grupo Primo — arquitetura de parceria). Tema 4 ("oito lançamentos ruins seguidos") e tema 2 (case de reembolso como lançadora) corrigidos em cima do feedback da Karol pra ficarem fiéis à história real dela. Status: pool cravado, aguardando escolha do próximo tema pra produzir.
 
 ---
 
