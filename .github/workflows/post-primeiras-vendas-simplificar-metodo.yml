@@ -2,7 +2,7 @@ name: Post primeiras-vendas-simplificar-metodo
 
 on:
   schedule:
-    - cron: '0 15 10 8 *'   # 10/08 às 15:00 UTC = 12h BRT
+    - cron: '0 18 10 8 *'   # 10/08 às 18:00 UTC = 15h BRT
   workflow_dispatch:
 
 jobs:

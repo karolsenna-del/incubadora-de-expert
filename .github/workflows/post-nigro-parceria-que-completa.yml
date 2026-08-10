@@ -2,7 +2,7 @@ name: Post nigro-parceria-que-completa
 
 on:
   schedule:
-    - cron: '0 15 11 8 *'   # 11/08 às 15:00 UTC = 12h BRT
+    - cron: '0 18 11 8 *'   # 11/08 às 18:00 UTC = 15h BRT
   workflow_dispatch:
 
 jobs:

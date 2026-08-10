@@ -4,7 +4,7 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 06/08/2026 (weekly review — Desafio 10 Dias encerrado, Desafio Rota100k aberto no lugar)
+**Ultima atualizacao:** 10/08/2026 (Ops — Desafio Rota100k entrou na Semana 02, 4 posts/dia, virou prioridade da semana)
 **Proximo review:** 13/08/2026
 
 ---
@@ -14,7 +14,7 @@
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
 | 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Karol editando M2 no CapCut (legenda queimada) — ao terminar, /course-publisher sobe e vincula. Depois: M1 aulas 00-01 + M3 e M4 completos | Karol | Producao ativa (editando M2 em 06/08) — M0 (5/5) e M2 (5/9) publicados na Voomp com legenda; M1 (6/8) publicado, faltam 2 aulas sem legenda. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
-| 2 | Desafio Rota100k (Instagram) | Executar o Desafio Rota100k (guia externo, mentoria "Se Posicione" — Afonso) — rotina fixa Reels (9h+10h) + Carrossel (20h) pra crescimento/posicionamento no Instagram. **Duracao: ate dezembro/2026.** | Semana 01 (07-09/08) roteirizada, aprovada e agendada — gravar e postar os 6 Reels; 3 carrosseis ja na fila via GitHub Actions | Karol + Squad Conteudo Arcane | Ativo — iniciado 05/08. Semana 01 (v3) aprovada pela Karol, produção visual pronta, posts de sex-dom agendados. | [roteiro semana 01](../docs/producao-conteudo/karol/posts/desafio-rota100k-semana01/roteiro.md) |
+| 2 | Desafio Rota100k (Instagram) | Executar o Desafio Rota100k (guia externo, mentoria "Se Posicione" — Afonso) — pra crescimento/posicionamento no Instagram. **Duracao: ate dezembro/2026.** Semana 02 (10-16/08) sobe o volume: 4 posts/dia (Reels 9h+12h+17h + Carrossel 20h), 28 posts na semana — **prioridade da semana, pool normal do squad de conteudo em pausa.** | Segunda 10/08 mapeada (4 posts + legendas prontas, aguardando gravacao da Karol) — falta mapear terca a domingo quando ela confirmar que segue no ritmo | Karol + Squad Conteudo Arcane | Ativo — Semana 01 concluida (05-09/08), Semana 02 iniciada 10/08. | [plano semana 02](../docs/producao-conteudo/karol/desafio-rota100k-semana02-plano.md) |
 | 3 | CRM Reativação de Leads (Comercial) | Dar ferramenta pro comercial/closer contratado reativar leads (sessao estrategica sem fechamento, compradores de outros produtos, grupo fechado WhatsApp) via CRM expandido do banco unificado (Supabase) + planilha operacional | Handoff pro Dara (data-engineer): desenhar schema expandido (status, historico, follow-up, resumo automatico) em cima de pessoas/capturas/compras | Karol + Dara | Escopo definido em conversa 28/07. Fase 2 — schema do banco | [tracker](campanhas/crm-reativacao-leads/tracker.md) |
 
 ---
