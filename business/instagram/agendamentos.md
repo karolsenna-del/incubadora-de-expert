@@ -6,6 +6,13 @@
 
 | Data Exec | Carrossel | Agendado Para | Media ID | Status |
 |-----------|-----------|--------------|----------|--------|
+| 10/08/2026 | rota100k-seg-mapa-prontidao | 10/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-seg-mapa-prontidao.yml) — 7 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K Semana 02) — aguardando push |
+| 10/08/2026 | rota100k-ter-sinais-curso-generico | 11/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-ter-sinais-curso-generico.yml) — 8 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K Semana 02) — aguardando push |
+| 10/08/2026 | rota100k-qua-antes-de-lancar | 12/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-qua-antes-de-lancar.yml) — 7 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K Semana 02) — aguardando push |
+| 10/08/2026 | rota100k-qui-mapa-metodo | 13/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-qui-mapa-metodo.yml) — 8 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K Semana 02) — aguardando push |
+| 10/08/2026 | rota100k-sex-perguntas-frequentes | 14/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-sex-perguntas-frequentes.yml) — 8 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K Semana 02) — aguardando push |
+| 10/08/2026 | rota100k-sab-lancamento-vs-secreta | 15/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-sab-lancamento-vs-secreta.yml) — 7 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K Semana 02) — aguardando push |
+| 10/08/2026 | rota100k-dom-recado-1-ano | 16/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-dom-recado-1-ano.yml) — 7 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K Semana 02) — aguardando push |
 | 06/08/2026 | rota100k-sex-checklist-leads | 07/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-sex-checklist-leads.yml) — 7 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K, mentoria "Se Posicione") — aguardando push |
 | 06/08/2026 | rota100k-sab-frases-metodo | 08/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-sab-frases-metodo.yml) — 7 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K) — aguardando push |
 | 06/08/2026 | rota100k-dom-carta-mim-mesma | 09/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-dom-carta-mim-mesma.yml) — 7 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K) — aguardando push |
