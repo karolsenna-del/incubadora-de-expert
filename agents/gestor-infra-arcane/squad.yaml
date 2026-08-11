@@ -1,5 +1,6 @@
 name: "Gestor de Infra Arcane"
 slug: "gestor-infra"
+slash_prefix: "techOps"
 version: "1.0.0"
 type: "worker"
 forged_by: "worker-forge"

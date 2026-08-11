@@ -23,6 +23,8 @@
 10. [SOP-017] Manutencao de prompt de agente Bia (trocar data, link, texto)
 11. [SOP-003] Instalar Microsoft Clarity em pagina Lovable
 12. [SOP-018] Implementar pagina de vendas estatica a partir de copy aprovada (reuso template Karol)
+13. [SOP-019] Trocar CTA de WhatsApp por checkout (Voomp/Hotmart/etc) + icone flutuante de WhatsApp pra duvidas
+14. [SOP-020] Publicar LP estatica na Vercel + subdominio (Registro.br)
 
 > **Fora do escopo:** Setup inicial do pipeline (instalar n8n + Chatwoot, criar tabelas Supabase + RPCs, configurar Meta Business Manager, gerar System User Token, importar os workflows core WF-INBOUND/AGENT-CORE/OUTBOUND). Isso e responsabilidade do **agente de setup** — outro agente dedicado. Este squad so opera o pipeline ja instalado.
 
@@ -776,6 +778,71 @@ Resumo: Clarity (clarity.microsoft.com) > criar projeto > copiar snippet > Lovab
 **Troubleshooting:**
 - Se a copy tiver secao sem classe equivalente no template: criar classe nova minima seguindo o padrao visual (cores das CSS vars, radius 12-20px, mesma escala de fonte) em vez de estilo solto inline.
 - Karol prefere revisar a pagina JA IMPLEMENTADA (nao a copy em markdown) — nao pedir aprovacao de copy de novo se ja foi aprovada em outro chat/etapa.
+
+---
+
+### [SOP-019] Trocar CTA de WhatsApp por checkout + icone flutuante de WhatsApp pra duvidas
+**Trigger:** "troca o botao de whatsapp por link de pagamento", "quero checkout direto na pagina", "coloca link do Voomp/Hotmart no lugar do whats", "adiciona icone flutuante de whatsapp"
+**Tempo estimado:** 15-30 min por par de paginas (com layout ja padronizado)
+**Ferramentas:** Editor de texto (Edit com replace_all), Playwright ou curl+node pra validar, Vercel CLI
+
+**Pre-requisitos:**
+- Link de checkout final (Voomp/Hotmart/Kiwify) — pedir se nao foi passado (nao se aplica se a missao for SO adicionar o icone, sem trocar CTA)
+- Confirmar: troca TOTAL dos botoes ou mantem WhatsApp em alguns
+- Identificar TODAS as ocorrencias do botao antigo na pagina (geralmente se repete identico em hero / oferta / CTA final / barra mobile fixa — 3-4x)
+
+**Passos:**
+
+1. Ler o(s) arquivo(s) `index.html` da(s) pagina(s) e localizar TODAS as ocorrencias do CTA antigo (`class="cta cta-wa"` ou equivalente)
+2. Se o `<a>` do CTA for **byte-identico** em varios lugares (mesmo href + mesmo texto), usar 1 `Edit` com `replace_all: true` pra trocar todos de uma vez. Se algum tiver texto diferente (ex: barra mobile com copy encurtada), tratar em edit separado
+3. Se a missao inclui trocar CTA pro checkout: trocar `href` pro link de checkout + renomear classe de marcacao (`cta-wa` → `cta-checkout`) pra nao confundir tracking. Se a missao e SO adicionar o icone (CTAs continuam WhatsApp), pular este passo
+4. Adicionar icone flutuante de WhatsApp (fixed, canto inferior direito, z-index acima da barra mobile) pra manter canal de duvida:
+   - CSS: `.whats-flutuante` fixed bottom-right, circulo verde `#25D366`, `z-index` maior que a barra mobile; classe `.subiu` pra subir o icone quando a barra mobile fixa estiver ativa (mobile)
+   - HTML: `<a class="whats-flutuante" id="whatsFlutuante" href="https://wa.me/{{NUMERO}}?text={{MSG_CONTEXTUAL}}" target="_blank" rel="noopener">` + SVG inline do logo WhatsApp (nao usar CDN externo). Mensagem contextual diferente da dos CTAs principais (ex: "Tenho uma duvida sobre X" em vez de "Quero saber mais sobre X") pra sinalizar que e canal de duvida, nao de compra
+   - JS: no `heroObserver` que já controla a barra mobile, alternar `.subiu` no icone junto com `.ativa` na barra (`mobileAtiva && window.innerWidth < 768`)
+5. Se trocou CTA pro checkout: atualizar o listener de pixel — trocar `fbq('track','Contact')` dos botoes de checkout pra `fbq('track','InitiateCheckout')` (evento certo pra quem vai pagar, nao falar no WhatsApp). O icone flutuante sempre mantem `Contact` (listener proprio, nao cai no seletor `.cta-wa`/`.cta-checkout`)
+6. Validar local: `python -m http.server {porta}` na pasta do site + `curl` pra extrair o HTML + `node -c` no `<script>` extraido (regex `/<script>([\s\S]*?)<\/script>/g`, ultimo match) — confirma sintaxe JS sem precisar de browser
+7. Se Playwright disponivel: screenshot desktop (1366px) + mobile (390px) pra confirmar que o icone flutuante nao colide com a barra mobile; scroll pra baixo do hero e conferir via `browser_evaluate` que as classes `.ativa`/`.subiu` aparecem juntas
+8. Deploy: `vercel deploy --prod --yes` de dentro da pasta linkada
+9. Validar em producao: `curl` + `grep -c` pelo dominio do checkout (se trocou) e pela classe do icone flutuante — confirma que o build publicado bate com o local
+
+**Output esperado:** Icone flutuante de WhatsApp presente em toda a pagina (sem colidir com barra mobile) com pixel `Contact`. Se a missao incluiu troca de CTA: todos os CTAs principais apontando pro checkout, com pixel `InitiateCheckout`.
+
+**Troubleshooting:**
+- Browser (Playwright) preso em outra sessao ("Browser is already in use"): pular validacao visual, usar `node -c` no JS extraido + `curl`/`grep` como validacao alternativa. Registrar no Mission Log que a validacao visual nao rodou
+- `node -c` falha com `Cannot find module`: caminho `/tmp` do bash nao bate com o `/tmp` que o node (nativo Windows) resolve — usar sempre o path absoluto do scratchpad (`C:/Users/.../Temp/claude/.../scratchpad`, com barras normais) tanto no lado bash quanto no lado node
+- Icone flutuante colidindo com barra mobile: confirmar que a classe `.subiu` esta sendo alternada junto com `.ativa` da barra, e que o offset (`bottom: 88px` ou equivalente) e maior que a altura da barra mobile
+- Se existem OUTRAS paginas do mesmo site com o mesmo padrao de CTA que nao foram mencionadas pelo usuario: NAO tocar sem pedir — so flagar como gap no relatorio/Mission Log
+
+**Referencia real:** `business/campanhas/crm-reativacao-leads/paginas-vendas/site/metodo-vip/index.html` e `.../sprint-do-metodo/index.html` (troca de CTA + icone, 2026-08-06); `.../diagnostico-ferramentas/index.html` (so icone, CTA continua WhatsApp, 2026-08-11)
+
+---
+
+### [SOP-020] Publicar LP estatica na Vercel + subdominio (Registro.br)
+
+**Quando usar:** publicar qualquer pagina estatica (LP, obrigado, VSL) num subdominio de incubadoradeexpert.com.br.
+
+**Pre-requisitos:**
+- Vercel CLI autenticado (`vercel whoami` → karolsenna-1721, team karol-sennas-projects)
+- Pasta do projeto em `business/campanhas/{nome}/` com `index.html` + assets locais
+- `.gitignore` com `.vercel` na pasta
+
+**Passos:**
+1. Criar pasta `business/campanhas/{nome}/` com index.html + assets (imagens LOCAIS, sem CDN de terceiros)
+2. Pixel Meta obrigatorio: init `4188654601446070` + PageView; evento Contact no clique de links WhatsApp
+3. Se a LP usa delay de CTA: `setTimeout(liberarCta, 120000)` + wrap com `visibility:hidden` e `min-height` (reserva espaco, evita layout shift)
+4. Validar local: `python -m http.server {porta}` + Playwright screenshot desktop (1366px) e mobile (390px)
+5. Deploy: `cd {pasta} && vercel deploy --prod --yes` (cria projeto com nome da pasta)
+6. Dominio: `vercel domains add {sub}.incubadoradeexpert.com.br` (de dentro da pasta linkada)
+7. DNS (Registro.br — manual pela Karol): nova entrada tipo **A**, nome `{sub}`, valor `76.76.21.21`
+8. Validar: `curl -sL https://{sub}.incubadoradeexpert.com.br -w "%{http_code}"` → 200 + grep do pixel
+
+**Output esperado:** LP no ar em https://{sub}.incubadoradeexpert.com.br com HTTPS automatico (Vercel emite o certificado apos DNS propagar).
+
+**Troubleshooting:**
+- Dominio HTTP 000: registro A ainda nao criado/propagado no Registro.br (propagacao: minutos ate ~1h)
+- Clonar pagina do GreatPages: HTML estatico vem sem estilo — o layout e montado por engine JS em runtime. Reconstruir a pagina limpa usando screenshots (desktop+mobile) + estilos computados extraidos via Playwright `getComputedStyle`. Atencao: no GreatPages, mobile pode inverter cores de secoes (conferir os dois screenshots)
+- Referencia real: `business/campanhas/lp-minitreinamento/` (treinamento) e `business/campanhas/lp-minitreinamento-b/` (treinamento2, clone GreatPages)
 
 ---
 
