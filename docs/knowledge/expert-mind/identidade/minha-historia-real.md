@@ -46,6 +46,8 @@ O incômodo começou uns 8 anos antes de eu sair. Eu tinha estabilidade, bom sal
 
 Em 2020, na pandemia, conheci o digital. Thiago Nigro me mostrou o conceito do Ikigai — fazer o que amas, que és boa, e ganhar bem por isso. Flávio Augusto me deu a virada: era mais assustador deixar minha vida nas mãos do governo e do INSS do que tentar empreender.
 
+A frase que puxou o gatilho final veio de um scroll qualquer no feed: "você só aprende a nadar soltando a borda." No dia seguinte fui à missa e ela não saía da minha cabeça — chorei muito ali dentro, e senti Deus falando comigo: "sai, minha filha." Entendi ali que eu tinha fracassado tantas vezes porque sempre segurava a borda — e que ter a borda pra voltar é o que me impedia de me esforçar o suficiente. Nesse momento a Incubadora já tinha 2 meses de vida e 2 clientes ativos, nascidos das vendas secretas — meu método já existia e fazia sentido pra gente como eu. Eu tinha encontrado meu ikigai, vivia o skin in the game, a persona que eu queria transformar já estava clara. Era hora de soltar a borda de vez.
+
 Em 28 de fevereiro de 2024, queimei a ponte. Saí para falar sem ser boicotada, criar minhas regras, ser avaliada pela minha capacidade — não pela politicagem.
 
 ---

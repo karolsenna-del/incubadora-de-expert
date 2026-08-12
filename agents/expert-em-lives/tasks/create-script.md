@@ -26,15 +26,20 @@ PARTE 2 — EXECUÇÃO (~10-12 min)
   Objetivo: entregar o framework. Plantar spoiler do pitch.
   - Reframing do problema (mudar a perspectiva)
   - 2-3 princípios ou passos concretos (Ideia → Exemplo → Aplicação)
-  - Spoiler do pitch no pico de atenção: "é exatamente isso que a gente trabalha dentro da Incubadora..."
+  - Spoiler do pitch no pico de atenção: nomeia a oferta específica que vai ser pitchada na
+    Parte 4 desta live (Sprint, Mentoria Grupo, VIP, Individual, ecossistema etc.) — NUNCA
+    "Incubadora de Expert" genérico. [regra 12/08/2026]
   - Transição: "agora é a sua vez"
 
-PARTE 3 — PRÁTICA (~8-10 min)
-  Objetivo: exercício concreto ao vivo. Entrega tangível.
-  - Instrução clara do exercício (o que fazer, como, em quanto tempo)
-  - Dar espaço real (silêncio ou tempo de preenchimento)
-  - Reengajamento: pedir 1-2 pessoas compartilharem no chat
-  - Frase de fechamento da prática
+PARTE 3 — PRÁTICA (~3-4 min, sem pausa forçada)
+  Objetivo: exercício concreto com entrega tangível, falado durante a live no fluxo normal.
+  [regra 12/08/2026 — Karol nunca dá o tempo de silêncio nem faz a interação de chat na
+  prática; só 2-3 pessoas participam, não compensa parar a live. Mas quem se engajar
+  espontaneamente e comentar no chat é bem-vindo — a live só não espera nem cobra isso]
+  - Instrução clara do exercício (o que fazer, como)
+  - Formato (escrita, reflexão, lista)
+  - Frase de fechamento
+  - NÃO pausar a live pra silêncio nem pedir explicitamente reengajamento no chat
 
 PARTE 4 — PROVA RACIONAL + PITCH (~5-6 min)
   Objetivo: provar que funciona. CTA único.
@@ -71,8 +76,9 @@ SE o roteiro ficaria mais forte com uma história específica da Karol:
 Todo exercício deve ter:
 1. Instrução clara (o que fazer)
 2. Formato (escrita, reflexão, lista)
-3. Tempo estimado (3-5 min ao vivo)
-4. Como reengajar (o que perguntar no chat)
+3. Falado durante a live no fluxo normal — NÃO pausar pra silêncio formal nem pedir
+   explicitamente reengajamento no chat. Quem se engajar por conta própria e comentar, ótimo;
+   a live não espera nem cobra isso [regra 12/08/2026]
 
 Exercícios reutilizáveis disponíveis em m0-roteiros.md:
 - Lista de Fracassos (M0, Aula 2) — funciona em lives sobre história, fracasso, narrativa
