@@ -183,6 +183,7 @@ Funcionario digital persistente com schedule. Modelo de triggers + autonomia + e
 - [ ] STRICT RULES: >= 5 NUNCAs + >= 5 SEMPREs
 - [ ] skill.md como shim de ativacao
 - [ ] squad.yaml valido (rules como critical/always, KB e Playbook como on-demand)
+- [ ] `.claude/commands/{slashPrefix}.md` criado — sem isso o worker nao aparece no menu de `/` (passo documentado em validate-worker.md, mas nao verificavel automaticamente; conferir manualmente antes de fechar a Fase 5)
 
 ---
 
