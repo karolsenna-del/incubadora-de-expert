@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área de Membros — Incubadora de Expert</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app-body">
+  <header class="topbar-v2">
+    <img class="marca-logo" src="img/logo-incubadora-dark.png" alt="Incubadora de Expert">
+    <nav class="topbar-tabs">
+      <button class="topbar-tab ativo" id="nav-home">Início</button>
+      <button class="topbar-tab" id="nav-roteiro">Meu Roteiro</button>
+      <button class="topbar-tab" id="nav-vitrine">Vitrine</button>
+    </nav>
+    <div class="topbar-user">
+      <span class="email" id="user-email"></span>
+      <button class="logout" id="btn-logout">Sair</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- VIEW: INÍCIO (home) -->
+    <section id="view-home" class="home-view">
+      <div class="home-boas-vindas">
+        <h1 id="home-saudacao">Bem-vinda de volta</h1>
+        <p id="home-sub">Aqui está o seu progresso e o que vem a seguir.</p>
+      </div>
+
+      <div class="home-continuar" id="home-continuar" style="display:none"></div>
+
+      <div class="home-progresso-grid" id="home-progresso-grid"></div>
+
+      <div class="home-vitrine-slot" id="home-vitrine-slot"></div>
+    </section>
+
+    <!-- VIEW: ROTEIRO -->
+    <section id="view-roteiro" class="roteiro-grid" style="display:none">
+      <div class="jornada-col">
+        <div class="trilha-tabs" id="trilha-tabs"></div>
+
+        <div class="jornada-header">
+          <div id="jornada-logo-slot"></div>
+          <h2 id="jornada-titulo">Mapa da Jornada</h2>
+          <div class="progresso-linha">
+            <div class="progresso-bar"><div class="progresso-fill" id="progresso-fill"></div></div>
+            <span class="progresso-pct" id="progresso-pct">0%</span>
+          </div>
+        </div>
+
+        <div class="timeline" id="timeline"></div>
+      </div>
+
+      <div class="conteudo-col" id="conteudo-col">
+        <div class="conteudo-vazio">Escolhe uma aula no roteiro pra começar.</div>
+      </div>
+    </section>
+
+    <!-- VIEW: VITRINE -->
+    <section id="view-vitrine" class="vitrine-view" style="display:none">
+      <h1>Vitrine — Ecossistema Incubadora de Expert</h1>
+      <div id="vitrine-view-slot"></div>
+    </section>
+  </main>
+
+  <!-- STANDBY -->
+  <div class="standby-overlay" id="standby-overlay">
+    <div class="frase" id="standby-frase"></div>
+    <div class="dica">clique ou digite algo pra voltar</div>
+  </div>
+
+  <!-- POPUP FIM DE MÓDULO -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-card">
+      <span class="eyebrow">Módulo concluído</span>
+      <h2>Como foi essa etapa pra você?</h2>
+      <div id="perguntas-container"></div>
+      <div class="modal-acoes">
+        <button class="btn-secundario" id="btn-pular-popup">Pular</button>
+        <button class="btn-concluir" id="btn-enviar-popup">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/covers.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

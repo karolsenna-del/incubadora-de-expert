@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar | Área de Membros — Incubadora de Expert</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login-card">
+      <div class="marca-video-wrap">
+        <video class="marca-logo-video" id="video-logo" autoplay muted playsinline poster="img/logo-incubadora-dark.png">
+          <source src="video/logo-animada.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="sub">Área de Membros</div>
+
+      <form id="form-login">
+        <input type="email" id="input-email" placeholder="seu@email.com" required autocomplete="email">
+        <button type="submit" class="cta" id="btn-entrar">Receber código de acesso</button>
+      </form>
+
+      <form id="form-codigo" style="display:none">
+        <input type="text" id="input-codigo" placeholder="Código de 6 dígitos" inputmode="numeric" autocomplete="one-time-code">
+        <button type="submit" class="cta" id="btn-verificar">Entrar</button>
+        <button type="button" class="link-secundario" id="btn-reenviar">Reenviar código</button>
+      </form>
+
+      <div class="login-msg" id="login-msg"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

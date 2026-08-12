@@ -10,6 +10,26 @@
 **Impacto:** [o que muda]
 -->
 
+## 11/08/2026 — Checkout unificado na Voomp pra todas as 7 ofertas
+
+**Contexto:** Ao desenhar a vitrine da área de membros (mostrando as 7 ofertas do ecossistema), Karol decidiu unificar o checkout. Ela já tinha criado checkout na Voomp pro Método VIP e pro Sprint do Método (que antes fechavam por Hotmart/conversa) e vai criar pros demais, incluindo o Diagnóstico Ferramentas (R$97).
+
+**Decisão:** Todas as 7 ofertas (Diagnóstico Ferramentas, Expert360º, Método Express, Método VIP, Sprint do Método, Grupo, Individual) passam a ter checkout na Voomp Pay — não mais mix de Hotmart + WhatsApp manual.
+
+**Racional:** Coerência com a vitrine unificada da área de membros — checkout espalhado em plataformas diferentes complicaria tanto a experiência de compra quanto a automação de liberação de acesso (um único webhook de venda, já confirmado que a Voomp tem, libera acesso em qualquer produto, sem precisar de fluxo manual pros que fechavam só por conversa).
+
+**Impacto:** As 7 páginas de vendas (`vendas-incubadora.vercel.app`) precisam ter os CTAs atualizados pra apontar pro checkout Voomp de cada oferta — hoje Método Express e Diagnóstico Ferramentas apontam pro WhatsApp, Grupo e Individual apontavam pro Hotmart. Fica pendente pro Gestor de Infra Arcane assim que a Karol passar os links Voomp de cada oferta (Fase 5 do tracker `crm-reativacao-leads` precisa ser reaberta pra essa troca).
+
+## 11/08/2026 — Karol assume a operação de vendas do CRM pessoalmente, closer pausado
+
+**Contexto:** CRM Reativação de Leads (150 leads, planilha + arsenal de vendas) foi construído pra um closer contratado trabalhar (Fase 5 — Ativação com o comercial). Karol conversou com o Clone Euriler sobre a situação financeira atual: precisa de dinheiro, sem receita recorrente, sem previsibilidade nenhuma no momento.
+
+**Decisão:** Por orientação do Clone Euriler, Karol assume a reativação de leads pessoalmente (usando a planilha/CRM/arsenal já prontos) em vez de delegar pro closer, até a venda virar processo validado e repetível.
+
+**Racional:** Sem receita recorrente, delegar pra quem ainda não validou o processo é risco maior que o ganho de tempo. Bate com a premissa "pavimenta primeiro" — quem faz sabe cobrar qualidade depois de delegar. Karol reativando ela mesma valida oferta e script na prática antes de repassar.
+
+**Impacto:** CRM Reativação de Leads sai de ATIVOS e vira Operação Contínua no cockpit — a ferramenta já está pronta e permanente, o que muda é quem opera. Closer fica pausado por ora (não descartado — retoma quando o processo estiver validado). O `arsenal-vendas-closer.md` passa a ser o script de trabalho da própria Karol nesse meio tempo.
+
 ## 09/08/2026 — Garantia das 7 ofertas alinhada ao contrato (após venda revelar inconsistência)
 
 **Contexto:** Karol vendeu o Sprint do Método e ficou em dúvida se "30 dias de garantia" — texto que estava nas páginas de venda — tinha sido uma decisão dela. Checagem mostrou que não havia registro dessa decisão, e pior: o contrato real (Termos Gerais, Cláusula 9) só cobre 7 dias corridos de arrependimento (art. 49 CDC) antes do serviço começar, mais reembolso proporcional às etapas não entregues (menos 20% de custo administrativo) depois disso — divergente do que a página prometia. Risco de publicidade enganosa (CDC art. 37) em 4 páginas ainda não vendidas (VIP, Grupo, Individual, além do Sprint já vendido).

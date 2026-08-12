@@ -95,6 +95,30 @@ Plataforma alternativa ao Hotmart. Mesma funcao — produtos digitais, checkout,
 
 ---
 
+### 1.3 Voomp (Voomp Creators / Voomp Play)
+
+**O que e:** Plataforma brasileira de produtos digitais (concorrente Hotmart/Kiwify) — checkout (Voomp Pay) + area de membros (Voomp Play). E onde o Expert360º roda hoje (curso, migrado do Hotmart em 01/07). Video nao fica hospedado na Voomp — o padrao adotado (course-publisher) e YouTube nao-listado + Voomp Tube so embeda.
+
+**Duas APIs distintas — nao confundir:**
+
+| API | Uso | Autenticacao | Publica/documentada? |
+|-----|-----|--------------|----------------------|
+| `api.voompplay.com.br` | Gestao de curso/aula (upload de video/thumb, modulos, status published/draft) | Header `authorization` = token de sessao logada (capturada via app, nao developer portal) | Nao — interna do app, usada via engenharia reversa (ver `agents/course-publisher/scripts/`) |
+| Webhook de vendas (Voomp Creators) | Notificar sistema externo quando ocorre evento de venda | URL de callback configurada na UI (produto > **Entregas**) | Sim — documentada na Central de Ajuda |
+
+**Webhook de vendas — CONFIRMADO que existe (pesquisa 11/08/2026):**
+- Configuracao: editar produto > aba **Entregas** > escolher evento(s) > colar Webhook URL > "Criar Liberacao"
+- Eventos disponiveis: **Vendas** (compra avulsa/valor unico), **Assinatura** (mensal/trimestral/semestral/anual), **Checkout** (lead que preencheu nome/email/telefone e NAO finalizou — equivalente a abandono de carrinho)
+- Confirmado suporte a integracao via Zapier/Make (categoria E-commerce) e via ferramentas BR (Notazz, Notificacoes Inteligentes, SellFlux, ActiveCampaign) — mesmo mecanismo de webhook por baixo
+- **Nao verificado ainda:** formato exato do payload (schema JSON), se tem retry/idempotencia como a Hotmart, rate limits. Fazer teste real (webhook.site) antes de integrar em producao
+- Doc oficial: https://faq.voompcreators.com.br/integracao-de-produtos/como-integrar-com-webhook-voomp-creators/
+
+**Implicacao pratica:** da pra manter o checkout na Voomp Pay (ja em producao, sem risco de mexer em pagamento) enquanto a liberacao de acesso aponta pra uma plataforma de entrega propria — webhook de venda -> endpoint (n8n ou Edge Function) -> grava em `compras`/`crm_leads` no Supabase -> libera acesso na plataforma nova. Mesmo desenho que o Bootstrap 3 Fase 2 ja tinha deixado pausado pra Hotmart, so trocando a origem do webhook.
+
+**Gap a fechar antes de implementar de verdade:** disparar uma venda de teste (ou usar webhook.site) pra capturar o payload real e confirmar o schema — a doc da central de ajuda descreve a configuracao, nao o JSON exato.
+
+---
+
 ## 2. Pipeline WhatsApp (Cloud API + Z-API + Dispatcher)
 
 **Stack padrao:** WhatsApp Cloud API (Meta) pra mensageria 1-a-1 via n8n + Z-API pra grupos/comunidades + Dispatcher pra disparos programados em campanhas.
@@ -601,6 +625,63 @@ supabase gen types typescript --linked > types/supabase.ts  # Types
 | Auth nao funciona | Verificar Redirect URLs |
 | Migration falha | Testar SQL no Studio primeiro |
 | Realtime nao funciona | `ALTER TABLE x REPLICA IDENTITY FULL` |
+
+### 5.2 Padrao — App estatico com login (Supabase Auth magic link + Vercel)
+
+**O que e:** Padrao pra construir uma area logada (dashboard, area de membros) sem framework/build step — mesmo espirito do Launch Command Center (`agents/lp-dash-engineer/data/dashboard-template/`), acrescentando autenticacao real.
+
+**Estrutura de arquivos:**
+```
+site/
+  index.html        # login (magic link)
+  app.html           # area logada
+  css/styles.css
+  js/config.js        # supabaseUrl + supabaseAnonKey (anon key e publica por design, RLS protege dado)
+  js/supabase-client.js  # initSupabase()/getSupabase() via window.supabase.createClient (CDN UMD)
+  js/auth.js          # signInWithOtp (magic link) na pagina de login
+  js/app.js           # getSession() como guard; se nao tem sessao, redireciona pro login
+```
+
+**Login sem senha (magic link):**
+```js
+await sb.auth.signInWithOtp({
+  email,
+  options: { emailRedirectTo: window.location.origin + '/app.html' }
+});
+```
+Supabase manda o e-mail, o link volta com `#access_token=...` na URL — o client detecta sozinho (`detectSessionInUrl`, default `true` no supabase-js v2) e cria a sessao. Nao precisa de backend nem de tabela nova — usa `auth.users`, que ja vem provisionado em qualquer projeto Supabase.
+
+**Regra:** login/auth NAO conta como "mudar schema" (Nivel 7 — Delegate na Delegation Map). Criar TABELA nova (matricula, progresso, etc.) conta como Nivel 3 — Consult, precisa propor e esperar aprovacao antes de rodar a migration.
+
+**QA local antes de deploy:** `python -m http.server {porta}` na pasta do site + Playwright pra screenshot de cada tela (login, app, estados de overlay/modal). Pra testar telas que exigem sessao sem mandar e-mail de verdade: gate temporario via `localStorage.getItem('preview_mode')` no guard de auth, **removido antes de qualquer integracao real de dado** — documentar isso claramente no codigo (comentario) pra nao esquecer de tirar.
+
+**CUIDADO — QA local pode ser visto pelo usuario:** se o Playwright estiver controlando um browser real/visivel (nao headless isolado), o usuario pode literalmente estar olhando pra mesma janela que voce testa, achando que e o site publicado. Sinal de alerta: usuario reporta bug com print mostrando `localhost:PORTA` na barra de enderecos, ou bug que voce nao consegue reproduzir de jeito nenhum no ambiente publicado. Nesse caso, a missao inclui checar o print antes de qualquer outra investigacao, e orientar o usuario a testar sempre na URL publicada (Vercel), nunca no localhost da sessao de QA.
+
+**Armadilha de CSS Grid — `overflow`/`max-height` que nao funciona dentro de coluna de grid:** um item de `display:grid` tem `min-height: auto` implicito (nao `0`), que IGNORA `max-height` + `overflow-y:auto` se o conteudo interno for mais alto — o item cresce mesmo assim, empurrando a pagina e criando scroll quebrado/duplo (a coluna "devia" rolar sozinha mas nao rola, ou rola errado). Sintoma tipico reportado pelo usuario: "nao consigo descer pra ver/clicar em algo". Fix rapido: `min-height: 0` no item de grid. Fix mais robusto (usado aqui): nem tentar scroll independente por coluna — deixar a pagina inteira rolar como uma unica area (`align-items:start` no grid, sem `max-height`/`overflow` nas colunas), com o header fixo via `position: sticky; top:0`. Mais simples, zero calculo de `100vh - Npx`, funciona em qualquer altura de tela.
+
+**Usado em:** `business/campanhas/area-de-membros/` (11/08/2026) — ver tracker do projeto.
+
+### 5.3 Logo/imagem de marca sem versao dark — como aplicar sem gambiarra
+
+**Contexto:** Marca fornece PNG opaco (fundo branco, so vezes com elemento de design que nao e "fundo removivel" — ex.: um semi-circulo cinza-claro que faz parte da composicao). Precisa aparecer numa superficie escura.
+
+**NAO fazer:** chroma-key generico (remover branco por threshold) quando a arte tem cores proximas do branco fazendo parte do desenho — fica com halo/artefato visivel.
+
+**Fazer:** colocar a logo original (opaca, fiel) dentro de um badge/card com fundo branco (`border-radius` + padding), plantado sobre a superficie escura. Look intencional, zero risco de artefato, nao depende de editar a arte.
+
+**Quando a marca já manda a variante certa** (ex.: "logo preto" = fundo escuro, "logo branco" = fundo claro/transparente): usar direto, sem tratamento.
+
+### 5.4 Capa de produto gerada em SVG (sem foto/IA externa)
+
+**Contexto:** Precisa de capa "premium" pra card de produto (tipo vitrine de plataforma de curso) mas nao tem foto/asset pronto, e nao ha credencial de gerador de imagem (Freepik/Kling/Magnific/DALL-E) no vault.
+
+**Padrao:** gerar a capa em SVG puro, no cliente (sem chamada de API): fundo escuro em gradiente + motivo geometrico reaproveitado da propria identidade visual (ex.: arcos concentricos ecoando um logo que já usa arco/orbita) + tipografia grande e quase invisivel (opacidade ~0.05) como textura editorial + 1 elemento de destaque (ponto com glow via `radialGradient`). Variação sistemática entre produtos: 1 campo numerico simples (ex. "intensidade" 1-7 = tier/preço) controla quantos elementos aparecem — mais caro, composição mais "funda" — sem precisar desenhar cada capa a mao.
+
+**Vantagem sobre gradiente CSS flat:** gradiente colorido chapado (laranja→preto diagonal) lê como "template generico". Fundo majoritariamente escuro com POUCO elemento de cor de destaque le como editorial/premium — mesma logica de moodboard usada em plataformas premium (fundo escuro + luz pontual, nao preenchimento colorido total).
+
+**Implementacao:** funcao JS que monta a string SVG (`<svg viewBox="0 0 400 225">...`) via template literal, injetada direto no `innerHTML` do card (nao precisa de arquivo de imagem, nao precisa de asset build). Seed deterministico por `slug` (hash simples da string) pra cada produto ter variação própria e estável entre reloads, sem aleatoriedade real.
+
+**Usado em:** `business/campanhas/area-de-membros/site/js/covers.js` (11/08/2026).
 
 ---
 

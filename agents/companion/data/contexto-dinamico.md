@@ -135,6 +135,16 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 11-12/08 — Área de Membros nasceu e ganhou Fase 1 completa (Companion + Gestor de Infra Arcane):**
+- **Projeto novo criado e ATIVO no cockpit:** Área de Membros (Curso + Mentoria) — plataforma própria pra unificar Expert360º + mentoria 1:1, modelada na Arka/Arcane, com vitrine das 7 ofertas (cross-sell nativo). Escopo completo em `business/campanhas/area-de-membros/briefing.md`, execução em `tracker.md`. V1 no ar: **https://area-de-membros-incubadora.vercel.app**
+- **CRM Reativação de Leads** saiu de ATIVOS pra Operações Contínuas (ferramenta pronta, Karol reativando pessoalmente por orientação do Clone Euriler — closer pausado por ora). Vaga aberta no cockpit foi ocupada pela Área de Membros.
+- **O que tem no V1:** login por OTP (link + código de 6 dígitos, sem senha), Home com boas-vindas + progresso + "continuar de onde parei" + vitrine "Seus Produtos/Outros Produtos" (estilo Arka), Roteiro em formato "Mapa da Jornada" (timeline com checklist clicável, progresso %, modo foco que esconde a coluna), logos reais aplicadas (Incubadora + Expert360º), capas de produto geradas em SVG (arcos ecoando os logos, sem foto/IA externa), vídeo animado da logo na tela de login (ativa o som sozinho no primeiro clique, já que autoplay-com-som é bloqueado por todo navegador).
+- **INCIDENTE corrigido:** integração inicial usou projeto Supabase errado (achado por grep, não pelo vault — REGRA-015 criada pro Gestor de Infra Arcane). E-mail de login chegava com marca "ARKA/Mentoria Arcane". Corrigido pro projeto certo (`pxnbcbhgoewrwyreohki`, ver `business/vault/supabase.md`).
+- **SMTP customizado (Resend) configurado** — domínio `incubadoradeexpert.com.br` verificado (DKIM/SPF no Registro.br), e-mail de login agora sai com marca própria. Limite de 2 e-mails/hora (padrão Supabase) também foi encontrado e corrigido (subiu pra 30/hora) — esse limite bateu tanto nos meus testes quanto nos da Karol, causa dos erros "não consegui enviar" que apareceram na sessão.
+- **PENDENTE pra confirmar amanhã:** Karol ainda não confirmou se o código de 6 dígitos está aparecendo certo no e-mail (testei 2x, ela não confirmou o resultado do 2º teste antes de encerrar a sessão — o rate limit baixo pode ter mascarado o teste real). Primeira coisa a checar na próxima sessão.
+- **Pendências conhecidas da Área de Membros (ver tracker):** validar e-mail contra alunos ativos antes de liberar conteúdo (Fase 4, depende de tabela de matrícula — Nível 3 Consult), remover bypass `localStorage.preview_mode` antes de dado real, Karol ainda vai entregar banco de frases motivacionais e perguntas do popup de NPS aos poucos nas weeklys, migração de conteúdo real (Expert360º + Mentoria) roda em paralelo depois que a Fase 1 estiver 100% validada.
+- Checkout unificado na Voomp pras 7 ofertas: Karol já tinha feito VIP e Sprint, seguindo pros demais.
+
 **Sessao 06/08 — Weekly review (Companion):**
 - Weekly review feita (previa 04/08, 2 dias atrasada). Proximo review: 13/08.
 - **Desafio 10 Dias (Ciclo 2) ENCERRADO** — Karol: "nao resultou em nada, nenhum formato validado, nenhum conteudo garanhao". Movido pro ARQUIVO no cockpit.
@@ -232,4 +242,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 06/08/2026 (weekly review — Desafio 10 Dias encerrado sem resultado, Desafio Rota100k aberto, Live 24 realizada)*
+*Ultima atualizacao: 12/08/2026 (Área de Membros criada e com V1 no ar — login, Home, Roteiro/Mapa da Jornada, Vitrine, SMTP próprio via Resend. CRM Reativação de Leads virou Operação Contínua)*

@@ -181,6 +181,20 @@ Celulares brasileiros podem aparecer com 13 digitos (com nono digito) ou 12 digi
 
 ---
 
+## REGRA-015: Credencial encontrada via grep NAO e credencial confirmada — checar o vault de registro primeiro
+
+**Contexto:** Ao integrar a Área de Membros com Supabase, precisei de URL+anon key. Em vez de checar `business/vault/supabase.md` (o registro oficial do projeto Supabase da Karol), busquei por "supabase.co" no codigo e reaproveitei a primeira credencial que apareceu (`lib/supabase.js`, usada pelo trafego-arcane). Era um projeto DIFERENTE — nao o "incubadora-de-expert" (`pxnbcbhgoewrwyreohki`), mas outro projeto (provavelmente compartilhado da Arcane, usado pelo Launch Command Center). Resultado: contas de login da área de membros foram criadas no projeto errado, e o e-mail de autenticacao chegou com a marca "ARKA — Mentoria Arcane" pro aluno, nao "Incubadora de Expert".
+
+**Regra:** Antes de reaproveitar QUALQUER credencial de plataforma (Supabase, Hotmart, Voomp, etc.) encontrada via grep/busca no codigo, confirmar contra o vault de registro oficial:
+- `business/vault/*.md` — vault do negocio (fonte prioritaria pra credenciais de plataforma do negocio)
+- `data/gestor-infra-vault.md` (ou vault de outro worker relevante) — vault operacional do agente
+
+**Se a credencial encontrada no codigo NAO bate com o vault de registro:** parar, nao usar, investigar por que existem duas — pode ser projeto de outro dono/proposito (como neste caso), nao so uma duplicata inofensiva.
+
+**Licao adicional:** e-mail de auth (magic link/OTP) e um canal que o usuario final VE — usar o projeto/credencial errado nao e so um bug tecnico silencioso, vaza pra fora (marca errada aparecendo na caixa de entrada de gente real). Testar esse tipo de fluxo merece atencao redobrada antes de considerar "pronto".
+
+---
+
 ## Registro de Incidentes
 
 | # | O que aconteceu | Fix | Regra criada |
@@ -191,3 +205,4 @@ Celulares brasileiros podem aparecer com 13 digitos (com nono digito) ou 12 digi
 | 4 | Registros com phone formatado, leads com prompt errado | Normalizar phone, refazer upsert | REGRA-013 |
 | 5 | Contatos duplicados por 8/9 digitos (celular BR) | Merge duplicados + fallback alternativo | REGRA-013 |
 | 6 | Trabalho sem rastro — sem Mission Log, sem auditoria e historico perdendo valor | Registro obrigatorio ao final de cada missao/sessao + revisao mensal | REGRA-014 |
+| 7 | Área de Membros usou projeto Supabase errado (achado via grep, nao via vault) — e-mail de login chegou com marca da Arcane pro aluno | Trocar pro projeto certo (vault `business/vault/supabase.md`), corrigir `site_url`/`uri_allow_list` no Auth | REGRA-015 |
