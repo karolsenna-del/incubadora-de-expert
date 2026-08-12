@@ -1,0 +1,77 @@
+name: "Live Deck Builder"
+slug: "live-deck-builder"
+slash_prefix: "live-deck-builder"
+version: "1.0.0"
+type: "worker"
+forged_by: "worker-forge"
+description: "Monta o deck visual (HTML) de cada live semanal a partir do roteiro pronto — cor, tipografia, ícones e gráficos nativos, sem foto, sem Gamma, sem imagem paga. Publica como Artifact + cópia local."
+
+agents:
+  - id: "live-deck-builder"
+    path: "agents/live-deck-builder.md"
+
+tasks:
+  - id: "start"
+    path: "tasks/start.md"
+  - id: "execute-mission"
+    path: "tasks/execute-mission.md"
+  - id: "adjust-deck"
+    path: "tasks/adjust-deck.md"
+  - id: "research-tool"
+    path: "tasks/research-tool.md"
+  - id: "document-process"
+    path: "tasks/document-process.md"
+  - id: "diagnose-issue"
+    path: "tasks/diagnose-issue.md"
+
+knowledge_base:
+  - id: "live-deck-builder-rules"
+    path: "data/live-deck-builder-rules.md"
+    priority: "critical"
+    loading: "always"
+  - id: "live-deck-builder-kb"
+    path: "data/live-deck-builder-kb.md"
+    priority: "high"
+    loading: "on-demand"
+  - id: "live-deck-builder-playbook"
+    path: "data/live-deck-builder-playbook.md"
+    priority: "high"
+    loading: "on-demand"
+  - id: "live-deck-builder-missions"
+    path: "data/live-deck-builder-missions.md"
+    priority: "normal"
+    loading: "on-demand"
+
+domains:
+  - "html-css-svg-native-rendering"
+  - "presentation-design"
+  - "brand-identity-application"
+  - "roteiro-to-slide-condensation"
+
+modes:
+  - id: "mission"
+    label: "Missao"
+    trigger: "*mission"
+  - id: "adjust"
+    label: "Ajuste"
+    trigger: "*ajusta"
+  - id: "research"
+    label: "Pesquisa"
+    trigger: "*research"
+  - id: "documentation"
+    label: "Documentacao"
+    trigger: "*document"
+  - id: "diagnose"
+    label: "Diagnostico"
+    trigger: "*diagnose"
+
+tools_required:
+  - "artifact"
+
+skills_required:
+  - "artifact-design"
+  - "dataviz"
+
+created: "2026-08-11"
+language: "pt-BR"
+target_user: "karol-senna"
