@@ -109,13 +109,16 @@ const ENCONTROS_POR_OFERTA = {
   'diagnostico-ferramentas': ['Diagnóstico', 'Outros encontros']
 };
 
-// Frases motivacionais do standby — PLACEHOLDER. Karol ainda vai entregar o banco real (ver briefing.md, pergunta em aberto).
+// Frases motivacionais do standby — PLACEHOLDER. Karol decidiu (12/08) não usar o banco extraído de PDFs
+// (tom de "empreendedor genérico"/autoridade emprestada, não bate com a voz atual do método) — material
+// bruto arquivado em `business/campanhas/area-de-membros/material-bruto-frases-standby.md` pra Aria
+// (squad-conteudo-arcane) construir um banco de verdade na voz da Karol, quando ela chamar.
 const FRASES_MOTIVACIONAIS = [
   'Diploma é o que você estudou. Método é o que você viveu.',
   'Feito é melhor que perfeito.',
   'Quem valida antes de escalar, escala sem quebrar.',
   'Prontidão não é pré-requisito pra vender — é consequência de vender.'
-]; // PLACEHOLDER — trocar pelo banco real da Karol
+]; // PLACEHOLDER — trocar pelo banco real da Karol (via Aria)
 
 // Perguntas do popup de fim de módulo — PLACEHOLDER. Karol ainda vai definir o conteúdo exato (ver briefing.md).
 const PERGUNTAS_POPUP_MODULO = [

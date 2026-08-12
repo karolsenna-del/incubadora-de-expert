@@ -126,7 +126,7 @@ function encontrarProximaAula() {
 
 function renderHome() {
   const nome = getNomeExibicao();
-  document.getElementById('home-saudacao').textContent = nome ? `Bem-vinda de volta, ${nome}` : 'Bem-vinda de volta';
+  document.getElementById('home-saudacao').textContent = nome ? `Bem-vindo de volta, ${nome}` : 'Bem-vindo de volta';
 
   // Continuar de onde parou
   const proxima = encontrarProximaAula();
@@ -403,7 +403,7 @@ async function renderConsultorias() {
     if (!casosReais.length) {
       const vazio = document.createElement('div');
       vazio.className = 'fase-vazio';
-      vazio.textContent = 'Ainda não tem casos compartilhados por outras colegas.';
+      vazio.textContent = 'Ainda não tem casos compartilhados por outros colegas.';
       secaoCasos.appendChild(vazio);
     } else {
       casosReais.forEach(m => secaoCasos.appendChild(criarCardMaterial(m, true)));
@@ -412,7 +412,7 @@ async function renderConsultorias() {
     secaoCasos.className = 'consultoria-secao consultoria-bloqueado';
     secaoCasos.innerHTML = `
       <h3>Casos Reais — outras consultorias</h3>
-      <div class="fase-vazio">Compartilhe suas sessões pra destravar o acesso aos casos reais de outras alunas.</div>
+      <div class="fase-vazio">Compartilhe suas sessões pra destravar o acesso aos casos reais de outros alunos.</div>
       <button class="btn-concluir" id="btn-abrir-compartilhar">Saber como funciona</button>
     `;
     timeline.appendChild(secaoCasos);

@@ -195,6 +195,19 @@ Celulares brasileiros podem aparecer com 13 digitos (com nono digito) ou 12 digi
 
 ---
 
+## REGRA-016: Confirmar `pwd` antes de `cd` relativo ou `vercel` em sessão longa
+
+**Contexto:** Numa sessão longa (muitas horas, dezenas de comandos Bash), o cwd do shell persiste entre comandos — um `cd caminho/relativo` executado em cima de um cwd que já tinha se movido (por um `cd` anterior de outro comando) empilha o caminho errado. Aconteceu na Área de Membros (12/08): um `cd business/campanhas/.../site` rodou quando o cwd já estava dentro de `site/`, criando `site/business/campanhas/.../site` (aninhado). O `vercel --prod` rodou nesse diretório bogus (sem `.vercel/project.json` correto), e a Vercel CRIOU um projeto novo do zero chamado "site" (nome da pasta) e publicou nele — não deu erro, então passou despercebido até eu conferir a URL do deployment retornada (`site-xxxxx...` em vez de `area-de-membros-incubadora-xxxxx...`).
+
+**Regra:**
+- Antes de `cd` relativo em qualquer sessão que já rodou vários comandos Bash: rodar `pwd` primeiro, ou usar caminho absoluto direto.
+- Antes de `vercel --prod` (ou qualquer comando que possa criar recurso novo silenciosamente): confirmar `pwd` E `cat .vercel/project.json` mostra o `projectName` esperado, ANTES de publicar. A Vercel não avisa quando cria projeto novo em vez de usar um existente — só aparece no nome da URL retornada.
+- Preferir caminho absoluto em `cd`/`vercel` sempre que a sessão já tiver mais de ~10 comandos Bash rodados.
+
+**Fix quando acontecer:** `vercel remove {nome-errado} --yes` remove o projeto stray sem deixar lixo na conta.
+
+---
+
 ## Registro de Incidentes
 
 | # | O que aconteceu | Fix | Regra criada |
@@ -206,3 +219,4 @@ Celulares brasileiros podem aparecer com 13 digitos (com nono digito) ou 12 digi
 | 5 | Contatos duplicados por 8/9 digitos (celular BR) | Merge duplicados + fallback alternativo | REGRA-013 |
 | 6 | Trabalho sem rastro — sem Mission Log, sem auditoria e historico perdendo valor | Registro obrigatorio ao final de cada missao/sessao + revisao mensal | REGRA-014 |
 | 7 | Área de Membros usou projeto Supabase errado (achado via grep, nao via vault) — e-mail de login chegou com marca da Arcane pro aluno | Trocar pro projeto certo (vault `business/vault/supabase.md`), corrigir `site_url`/`uri_allow_list` no Auth | REGRA-015 |
+| 8 | `cd` relativo empilhado criou diretorio aninhado bogus, `vercel --prod` rodou nele e criou projeto novo do zero ("site") em vez de usar o existente — passou despercebido ate eu checar a URL retornada | `vercel remove site --yes` + redeploy no diretorio/projeto certo (confirmado via `pwd` + `.vercel/project.json`) | REGRA-016 |
