@@ -1,11 +1,18 @@
 // Área de Membros — App shell (Fase 1: layout com dados placeholder — ver js/data.js)
 // Roteiro no formato "Mapa da Jornada" (checklist com progresso, timeline de módulos)
 
-const TRILHAS = [ROTEIRO_EXPERT360, ROTEIRO_MENTORIA];
-let trilhaAtivaId = TRILHAS[0].id;
+const TRILHAS = [ROTEIRO_EXPERT360, ROTEIRO_MENTORIA, TRILHA_CONSULTORIAS];
+let trilhaAtivaId = null; // definido em runtime a partir das trilhas liberadas pra matrícula (ver trilhasDoAluno)
 let aulaAtivaRef = null; // { moduloId, aulaIdx }
 let modoFoco = false;
 let sessaoAtual = null;
+
+// ---------- TRILHAS LIBERADAS (por matrícula — hoje usa MATRICULA_EXEMPLO, Fase 4 troca por matrícula real) ----------
+// Vitrine mostra as 7 ofertas; Roteiro só mostra a(s) trilha(s) de conteúdo que a matrícula libera (TRILHA_POR_OFERTA).
+function trilhasDoAluno() {
+  const idsLiberados = new Set(MATRICULA_EXEMPLO.map(slug => TRILHA_POR_OFERTA[slug]).filter(Boolean));
+  return TRILHAS.filter(t => idsLiberados.has(t.id));
+}
 
 // ---------- AUTH GUARD ----------
 async function checarSessao() {
@@ -25,11 +32,42 @@ async function checarSessao() {
   return session;
 }
 
+// ---------- NOME PREFERIDO (onboarding, so pergunta uma vez) ----------
+// Guardado em user_metadata do Supabase Auth — nao precisa de tabela nova (REUSE).
+// Se um dia a matricula (Fase 4) trouxer o nome real da compra via webhook, esse valor
+// pode ser pre-preenchido aqui em vez de perguntar, mas continua editavel (apelido != nome de pagamento).
+function getNomeExibicao() {
+  const meta = (sessaoAtual && sessaoAtual.user && sessaoAtual.user.user_metadata) || {};
+  if (meta.nome_preferido) return meta.nome_preferido;
+  const email = sessaoAtual && sessaoAtual.user ? sessaoAtual.user.email : '';
+  return email ? email.split('@')[0] : '';
+}
+
+function checarNomePreferido(session) {
+  const meta = session.user.user_metadata || {};
+  if (meta.nome_preferido || meta.nome_perguntado) return;
+  document.getElementById('modal-nome').classList.add('visivel');
+}
+
+async function salvarNomePreferido() {
+  const valor = document.getElementById('input-nome-preferido').value.trim();
+  const dados = valor ? { nome_preferido: valor, nome_perguntado: true } : { nome_perguntado: true };
+  const { data, error } = await getSupabase().auth.updateUser({ data: dados });
+  if (!error && data && data.user) {
+    sessaoAtual.user = data.user;
+  }
+  document.getElementById('modal-nome').classList.remove('visivel');
+  renderHome();
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   const session = await checarSessao();
   if (!session) return;
   sessaoAtual = session;
 
+  await carregarProgresso();
+  const minhasTrilhas = trilhasDoAluno();
+  trilhaAtivaId = minhasTrilhas.length ? minhasTrilhas[0].id : null;
   montarTrilhaTabs();
   renderJornada();
 
@@ -44,6 +82,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   document.getElementById('btn-pular-popup').addEventListener('click', fecharPopup);
   document.getElementById('btn-enviar-popup').addEventListener('click', enviarPopup);
+
+  document.getElementById('btn-salvar-nome').addEventListener('click', () => salvarNomePreferido());
+  document.getElementById('btn-pular-nome').addEventListener('click', () => salvarNomePreferido());
+  document.getElementById('input-nome-preferido').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') salvarNomePreferido();
+  });
+  checarNomePreferido(session);
+
+  document.getElementById('btn-sim-compartilhar').addEventListener('click', () => decidirCompartilhar(true));
+  document.getElementById('btn-nao-compartilhar').addEventListener('click', () => decidirCompartilhar(false));
 
   renderVitrine(document.getElementById('vitrine-view-slot'));
   renderHome();
@@ -64,7 +112,7 @@ function trocarView(view) {
 
 // ---------- HOME (Início) ----------
 function encontrarProximaAula() {
-  for (const trilha of TRILHAS) {
+  for (const trilha of trilhasDoAluno()) {
     for (const modulo of trilha.modulos) {
       for (let idx = 0; idx < modulo.aulas.length; idx++) {
         if (!modulo.aulas[idx].concluida) {
@@ -77,7 +125,7 @@ function encontrarProximaAula() {
 }
 
 function renderHome() {
-  const nome = sessaoAtual && sessaoAtual.user ? sessaoAtual.user.email.split('@')[0] : '';
+  const nome = getNomeExibicao();
   document.getElementById('home-saudacao').textContent = nome ? `Bem-vinda de volta, ${nome}` : 'Bem-vinda de volta';
 
   // Continuar de onde parou
@@ -106,7 +154,7 @@ function renderHome() {
   // Progresso por trilha
   const grid = document.getElementById('home-progresso-grid');
   grid.innerHTML = '';
-  TRILHAS.forEach(trilha => {
+  trilhasDoAluno().forEach(trilha => {
     const { pct } = calcularProgresso(trilha);
     const card = document.createElement('div');
     card.className = 'home-progresso-card';
@@ -138,7 +186,7 @@ function getTrilhaAtiva() {
 function montarTrilhaTabs() {
   const container = document.getElementById('trilha-tabs');
   container.innerHTML = '';
-  TRILHAS.forEach(trilha => {
+  trilhasDoAluno().forEach(trilha => {
     const btn = document.createElement('button');
     btn.className = 'trilha-tab' + (trilha.id === trilhaAtivaId ? ' ativo' : '');
     btn.textContent = trilha.nome;
@@ -153,6 +201,231 @@ function montarTrilhaTabs() {
   });
 }
 
+// ---------- PERSISTÊNCIA DE PROGRESSO (Supabase — tabela `progresso`) ----------
+// Sem sessão real (modo preview de QA), mantém os dados de exemplo do data.js — não há usuário de verdade pra persistir.
+async function carregarProgresso() {
+  const userId = sessaoAtual && sessaoAtual.user && sessaoAtual.user.id;
+  if (!userId) return;
+
+  TRILHAS.forEach(t => t.modulos.forEach(m => m.aulas.forEach(a => { a.concluida = false; })));
+
+  const { data, error } = await getSupabase()
+    .from('progresso')
+    .select('trilha_id, modulo_id, aula_idx')
+    .eq('user_id', userId);
+
+  if (error) {
+    console.error('Erro ao carregar progresso:', error);
+    return;
+  }
+
+  (data || []).forEach(row => {
+    const trilha = TRILHAS.find(t => t.id === row.trilha_id);
+    const modulo = trilha && trilha.modulos.find(m => m.id === row.modulo_id);
+    const aula = modulo && modulo.aulas[row.aula_idx];
+    if (aula) aula.concluida = true;
+  });
+}
+
+async function salvarProgresso(trilhaId, moduloId, aulaIdx, concluida) {
+  const userId = sessaoAtual && sessaoAtual.user && sessaoAtual.user.id;
+  if (!userId) return true; // modo preview — nada real pra persistir, nao trata como falha
+
+  const sb = getSupabase();
+  if (concluida) {
+    const { error } = await sb.from('progresso').upsert(
+      { user_id: userId, trilha_id: trilhaId, modulo_id: moduloId, aula_idx: aulaIdx },
+      { onConflict: 'user_id,trilha_id,modulo_id,aula_idx' }
+    );
+    if (error) { console.error('Erro ao salvar progresso:', error); return false; }
+  } else {
+    const { error } = await sb.from('progresso').delete()
+      .eq('user_id', userId).eq('trilha_id', trilhaId).eq('modulo_id', moduloId).eq('aula_idx', aulaIdx);
+    if (error) { console.error('Erro ao remover progresso:', error); return false; }
+  }
+  return true;
+}
+
+// ---------- CONSULTORIAS (tabela `materiais_consultoria` — gravações/materiais por aluna) ----------
+// Reciprocidade estilo Erico Rocha: compartilhar as próprias sessões destrava ver as das outras.
+// A regra é imposta pela própria RLS da tabela (ver migration) — o front só reflete o que o banco já permite.
+async function carregarMateriaisConsultoria() {
+  const userId = sessaoAtual && sessaoAtual.user && sessaoAtual.user.id;
+  if (!userId) return { proprios: [], casosReais: [], jaDecidiu: true, compartilha: false };
+
+  const sb = getSupabase();
+
+  const { data: proprios, error: erroProprios } = await sb
+    .from('materiais_consultoria')
+    .select('*')
+    .eq('user_id', userId)
+    .order('data_sessao', { ascending: false });
+  if (erroProprios) console.error('Erro ao carregar materiais de consultoria:', erroProprios);
+
+  const { data: casosReais, error: erroCasos } = await sb
+    .from('materiais_consultoria')
+    .select('*')
+    .eq('compartilhado', true)
+    .neq('user_id', userId)
+    .order('data_sessao', { ascending: false });
+  if (erroCasos) console.error('Erro ao carregar casos reais:', erroCasos);
+
+  const meta = sessaoAtual.user.user_metadata || {};
+  return {
+    proprios: proprios || [],
+    casosReais: casosReais || [],
+    jaDecidiu: !!meta.compartilhar_perguntado,
+    compartilha: !!meta.compartilha_consultoria
+  };
+}
+
+async function decidirCompartilhar(sim) {
+  const { data, error } = await getSupabase().auth.updateUser({
+    data: { compartilha_consultoria: sim, compartilhar_perguntado: true }
+  });
+  if (!error && data && data.user) sessaoAtual.user = data.user;
+
+  const userId = sessaoAtual && sessaoAtual.user && sessaoAtual.user.id;
+  if (sim && userId) {
+    const { error: erroUpdate } = await getSupabase()
+      .from('materiais_consultoria')
+      .update({ compartilhado: true })
+      .eq('user_id', userId);
+    if (erroUpdate) console.error('Erro ao marcar materiais como compartilhados:', erroUpdate);
+  }
+
+  document.getElementById('modal-compartilhar').classList.remove('visivel');
+  renderJornada();
+}
+
+function criarBlocoOferta(slug, materiaisProprios) {
+  const oferta = VITRINE_OFERTAS.find(o => o.slug === slug);
+  const encontros = ENCONTROS_POR_OFERTA[slug] || [];
+  const materiaisDaOferta = materiaisProprios.filter(m => m.produto_slug === slug);
+  const feitas = encontros.filter(label => materiaisDaOferta.some(m => m.titulo === label)).length;
+
+  const fase = document.createElement('div');
+  fase.className = 'fase';
+
+  const marker = document.createElement('div');
+  marker.className = 'fase-marker' + (feitas === encontros.length && encontros.length ? ' completa' : (feitas > 0 ? ' parcial' : ''));
+  marker.textContent = feitas === encontros.length && encontros.length ? '✓' : String(encontros.length);
+  fase.appendChild(marker);
+
+  const titulo = document.createElement('div');
+  titulo.className = 'fase-titulo';
+  titulo.textContent = oferta ? oferta.nome : slug;
+  fase.appendChild(titulo);
+
+  const sub = document.createElement('div');
+  sub.className = 'fase-subtitulo';
+  sub.textContent = `${feitas}/${encontros.length} encontros`;
+  fase.appendChild(sub);
+
+  const aulasSub = document.createElement('div');
+  aulasSub.className = 'aulas-sub';
+
+  encontros.forEach(label => {
+    const materiais = materiaisDaOferta.filter(m => m.titulo === label);
+    const feito = materiais.length > 0;
+
+    const row = document.createElement('div');
+    row.className = 'aula-row';
+    row.innerHTML = `
+      <div class="check ${feito ? 'concluida' : ''}">${feito ? '✓' : ''}</div>
+      <div class="titulo ${feito ? 'concluida' : ''}">${label}${materiais.length > 1 ? ` (${materiais.length})` : ''}</div>
+    `;
+    aulasSub.appendChild(row);
+
+    materiais.forEach(m => {
+      const linha = document.createElement('div');
+      linha.className = 'material-sub-link';
+      const dataFormatada = new Date(m.data_sessao + 'T00:00:00').toLocaleDateString('pt-BR');
+      linha.innerHTML = m.url_gravacao
+        ? `<a href="${m.url_gravacao}" target="_blank" rel="noopener">${dataFormatada} — Ver gravação →</a>`
+        : `<span>${dataFormatada}${m.descricao ? ' — ' + m.descricao : ''}</span>`;
+      aulasSub.appendChild(linha);
+    });
+  });
+
+  fase.appendChild(aulasSub);
+  return fase;
+}
+
+function criarCardMaterial(m, mostrarAutor) {
+  const card = document.createElement('div');
+  card.className = 'material-card';
+  const autor = mostrarAutor ? `<span class="material-autor">${m.nome_aluna || 'Colega de mentoria'}</span>` : '';
+  const link = m.url_gravacao ? `<a href="${m.url_gravacao}" target="_blank" rel="noopener">Ver gravação →</a>` : '';
+  const dataFormatada = new Date(m.data_sessao + 'T00:00:00').toLocaleDateString('pt-BR');
+  card.innerHTML = `
+    <div class="material-data">${dataFormatada}</div>
+    <div class="material-titulo">${m.titulo}</div>
+    ${autor}
+    ${m.descricao ? `<p class="material-desc">${m.descricao}</p>` : ''}
+    ${link}
+  `;
+  return card;
+}
+
+async function renderConsultorias() {
+  document.getElementById('jornada-titulo').textContent = 'Consultorias';
+  document.getElementById('jornada-logo-slot').innerHTML = '';
+  document.getElementById('progresso-fill').style.width = '0%';
+  document.getElementById('progresso-pct').textContent = '';
+
+  const timeline = document.getElementById('timeline');
+  timeline.className = 'timeline timeline-consultorias';
+  timeline.innerHTML = '<div class="fase-vazio">Carregando...</div>';
+  mostrarConteudoVazio();
+
+  const { proprios, casosReais, jaDecidiu, compartilha } = await carregarMateriaisConsultoria();
+
+  timeline.innerHTML = '';
+
+  const ofertasConsultoria = MATRICULA_EXEMPLO.filter(slug => TRILHA_POR_OFERTA[slug] === 'consultorias');
+
+  const secaoPropria = document.createElement('div');
+  secaoPropria.className = 'consultoria-secao';
+  secaoPropria.innerHTML = '<h3>Suas sessões</h3>';
+  if (!ofertasConsultoria.length) {
+    secaoPropria.innerHTML += '<div class="fase-vazio">Nenhuma consultoria liberada ainda.</div>';
+  } else {
+    ofertasConsultoria.forEach(slug => secaoPropria.appendChild(criarBlocoOferta(slug, proprios)));
+  }
+  timeline.appendChild(secaoPropria);
+
+  const secaoCasos = document.createElement('div');
+  secaoCasos.className = 'consultoria-secao';
+  if (compartilha) {
+    secaoCasos.innerHTML = '<h3>Casos Reais — outras consultorias</h3>';
+    timeline.appendChild(secaoCasos);
+    if (!casosReais.length) {
+      const vazio = document.createElement('div');
+      vazio.className = 'fase-vazio';
+      vazio.textContent = 'Ainda não tem casos compartilhados por outras colegas.';
+      secaoCasos.appendChild(vazio);
+    } else {
+      casosReais.forEach(m => secaoCasos.appendChild(criarCardMaterial(m, true)));
+    }
+  } else {
+    secaoCasos.className = 'consultoria-secao consultoria-bloqueado';
+    secaoCasos.innerHTML = `
+      <h3>Casos Reais — outras consultorias</h3>
+      <div class="fase-vazio">Compartilhe suas sessões pra destravar o acesso aos casos reais de outras alunas.</div>
+      <button class="btn-concluir" id="btn-abrir-compartilhar">Saber como funciona</button>
+    `;
+    timeline.appendChild(secaoCasos);
+    document.getElementById('btn-abrir-compartilhar').addEventListener('click', () => {
+      document.getElementById('modal-compartilhar').classList.add('visivel');
+    });
+  }
+
+  if (!jaDecidiu && proprios.length) {
+    document.getElementById('modal-compartilhar').classList.add('visivel');
+  }
+}
+
 // ---------- MAPA DA JORNADA (timeline + progresso) ----------
 function calcularProgresso(trilha) {
   let total = 0, feitas = 0;
@@ -165,6 +438,24 @@ function calcularProgresso(trilha) {
 
 function renderJornada() {
   const trilha = getTrilhaAtiva();
+
+  if (!trilha) {
+    document.getElementById('jornada-titulo').textContent = 'Nenhum conteúdo liberado ainda';
+    document.getElementById('jornada-logo-slot').innerHTML = '';
+    document.getElementById('progresso-fill').style.width = '0%';
+    document.getElementById('progresso-pct').textContent = '';
+    const timelineVazia = document.getElementById('timeline');
+    timelineVazia.className = 'timeline';
+    timelineVazia.innerHTML = '<div class="fase-vazio">Assim que uma matrícula for liberada na sua conta, o roteiro aparece aqui. Enquanto isso, dá uma olhada na Vitrine.</div>';
+    mostrarConteudoVazio();
+    return;
+  }
+
+  if (trilha.id === 'consultorias') {
+    renderConsultorias();
+    return;
+  }
+
   document.getElementById('jornada-titulo').textContent = `Mapa da Jornada — ${trilha.nome}`;
 
   const logoSlot = document.getElementById('jornada-logo-slot');
@@ -177,6 +468,7 @@ function renderJornada() {
   document.getElementById('progresso-pct').textContent = pct + '%';
 
   const timeline = document.getElementById('timeline');
+  timeline.className = 'timeline';
   timeline.innerHTML = '';
 
   trilha.modulos.forEach(modulo => {
@@ -277,12 +569,13 @@ function toggleModoFoco() {
   }
 }
 
-function toggleAulaConcluida(modulo, idx) {
+async function toggleAulaConcluida(modulo, idx) {
   const aula = modulo.aulas[idx];
   const estavaTudoFeito = modulo.aulas.every(a => a.concluida);
-  aula.concluida = !aula.concluida;
+  const novoValor = !aula.concluida;
+  aula.concluida = novoValor;
 
-  renderJornada(); // atualiza timeline + barra de progresso
+  renderJornada(); // atualiza timeline + barra de progresso (otimista, antes de confirmar no banco)
 
   // só re-renderiza o painel de conteúdo se a aula alterada é a que está aberta
   const ehAtiva = aulaAtivaRef && aulaAtivaRef.moduloId === modulo.id && aulaAtivaRef.aulaIdx === idx;
@@ -291,6 +584,15 @@ function toggleAulaConcluida(modulo, idx) {
   const todasFeitasAgora = modulo.aulas.every(a => a.concluida);
   if (aula.concluida && todasFeitasAgora && !estavaTudoFeito) {
     abrirPopupModulo(modulo);
+  }
+
+  const trilha = TRILHAS.find(t => t.modulos.includes(modulo));
+  const salvou = await salvarProgresso(trilha.id, modulo.id, idx, novoValor);
+  if (!salvou) {
+    // gravacao falhou — reverte o estado otimista pra nao ficar dessincronizado do banco
+    aula.concluida = !novoValor;
+    renderJornada();
+    if (ehAtiva) selecionarAula(modulo, idx);
   }
 }
 
@@ -359,7 +661,10 @@ function renderVitrine(container) {
 }
 
 // ---------- POPUP FIM DE MÓDULO ----------
+let moduloPopupAtual = null; // guarda qual módulo está aberto no popup, pra persistir com o id certo
+
 function abrirPopupModulo(modulo) {
+  moduloPopupAtual = modulo;
   const container = document.getElementById('perguntas-container');
   container.innerHTML = '';
 
@@ -399,17 +704,40 @@ function fecharPopup() {
   document.getElementById('modal-overlay').classList.remove('visivel');
 }
 
-function enviarPopup() {
-  // PLACEHOLDER — Fase 4 (integração) grava isso numa tabela nova no Supabase (proposta de schema pendente de aprovação da Karol).
+async function enviarPopup() {
   const respostas = [];
-  document.querySelectorAll('#perguntas-container .nota-escala').forEach(el => {
-    const sel = el.querySelector('.selecionada');
-    respostas.push({ tipo: 'nota', valor: sel ? sel.dataset.nota : null });
+  document.querySelectorAll('#perguntas-container .pergunta-bloco').forEach((bloco, idx) => {
+    const pergunta = PERGUNTAS_POPUP_MODULO[idx];
+    if (pergunta.tipo === 'nota') {
+      const sel = bloco.querySelector('.nota-escala .selecionada');
+      respostas.push({ pergunta: pergunta.pergunta, tipo: 'nota', valor: sel ? sel.dataset.nota : null });
+    } else {
+      const valor = bloco.querySelector('textarea').value.trim();
+      respostas.push({ pergunta: pergunta.pergunta, tipo: 'texto', valor: valor || null });
+    }
   });
-  document.querySelectorAll('#perguntas-container textarea').forEach(el => {
-    respostas.push({ tipo: 'texto', valor: el.value });
-  });
-  console.log('Respostas do popup de módulo (placeholder, ainda não persistido):', respostas);
+
+  const userId = sessaoAtual && sessaoAtual.user && sessaoAtual.user.id;
+  if (userId && moduloPopupAtual) {
+    const trilha = TRILHAS.find(t => t.modulos.includes(moduloPopupAtual));
+    const linhas = respostas
+      .filter(r => r.valor !== null)
+      .map(r => ({
+        user_id: userId,
+        trilha_id: trilha.id,
+        modulo_id: moduloPopupAtual.id,
+        pergunta: r.pergunta,
+        tipo: r.tipo,
+        valor: String(r.valor)
+      }));
+    if (linhas.length) {
+      const { error } = await getSupabase().from('respostas_popup').insert(linhas);
+      if (error) console.error('Erro ao salvar respostas do popup:', error);
+    }
+  } else {
+    console.log('Respostas do popup de módulo (modo preview, não persistido):', respostas);
+  }
+
   fecharPopup();
 }
 

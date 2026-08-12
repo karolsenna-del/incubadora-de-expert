@@ -6,6 +6,7 @@
 
 <!-- O que precisa ser feito AGORA -->
 
+- **Automatizar Stories — EM ANDAMENTO** (12/08): Karol pediu pra iniciar agora (antes de ir pra uma live), vai mandar o roteiro das 12 semanas em seguida. Plano: quando o roteiro chegar, adaptar copy pra formato Stories + layouts prontos (Squad Conteudo Arcane) e avaliar agendamento automatico via GitHub Actions, reaproveitando o padrao ja usado no Rota100k (Gestor de Infra Arcane). Nao precisa de vaga no cockpit — entra como melhoria da operacao continua "Instagram / Conteudo". Proximo passo: aguardando o roteiro da Karol.
 - ~~**Logar manualmente na Hotmart no perfil do Playwright MCP** (ou atualizar senha em `agents/course-publisher/data/vault.yaml`)~~ — **Senha corrigida (06/08): `KSFPate2026!`.** Fallback de login deve funcionar na próxima rodada (quinta, 08h) sem precisar de sessão salva. Ainda não confirmado na prática — se falhar de novo, o problema é outro (ex: 2FA). Monitorar o resultado do próximo `weekly-sync` em `agents/course-publisher/data/course-publisher-missions.md`.
 
 ## Importante (proximo foco)
@@ -23,6 +24,12 @@
 
 <!-- Gancho "Expert em fracassar no digital" — elevado para posicionamento central em 28/05. Ver log-decisoes.md. -->
 
+- **Diagnóstico do Expert — perguntas de qualificação por oferta** (12/08): adicionar perguntas ao diagnóstico atual (tempo disponível/semana, facilidade com IA/ChatGPT, renda geral do negócio — não só digital, prefere aprender/fazer junto/receber pronto) pra indicar qual das 7 ofertas o lead mais se encaixa antes da sessão estratégica. Afeta `diagnostico.incubadoradeexpert.com.br`.
+- **Oferta Individual — adicionar "10 ferramentas personalizadas do método"** (12/08): hoje a Individual usa os mesmos 10 templates genéricos da biblioteca (`docs/knowledge/expert-business/produto/biblioteca-templates/`); ideia é adaptar esses templates pra cada aluno como entregável exclusivo. Atualizar copy da página de vendas + `ecossistema-ofertas-jul2026.md`.
+- **App da Incubadora de Expert** (12/08): PRECISA CLARIFICAR — pode ser a mesma coisa que a Área de Membros (já ativa, cockpit #3) ou algo diferente (app nativo mobile?). Não tratar como ideia nova antes de confirmar com a Karol.
+- **Agente/prompts de fotos profissionais de bônus** (12/08): gerar 10-20 fotos profissionais por IA, calibradas no estilo de comunicação/valores de cada expert, a partir do resultado da Autoridade Tríplice. Bônus de posicionamento — oferta de destino ainda não definida.
+- **Automatizar Stories** (12/08) — dor recorrente: Karol tem roteiro de 12 semanas pronto mas não consegue manter o hábito de postar. Quer copy adaptada + layouts prontos pra postar rápido, possivelmente agendado via GitHub (já existe precedente: agendamento de carrossel do Rota100k via GitHub Actions).
+
 ---
 
-*Ultima atualizacao: 10/07/2026*
+*Ultima atualizacao: 12/08/2026*

@@ -26,9 +26,10 @@ Plataforma própria de entrega + vitrine, modelada na experiência da plataforma
 - **Encontros da Incubadora** — hoje já tem automação que sobe pra Hotmart
 - **Lives Expert360º** — hoje também já tem automação que sobe pra Hotmart (as duas automações vão precisar redirecionar pra plataforma nova)
 - **NOVO módulo — Encontros Individuais** — hoje o 1:1 é só um link de Google Meet dentro do "Roteiro do Expert" no Drive da aluna, sem ficar registrado em lugar nenhum. Vai virar módulo próprio na plataforma: sessão é gravada, e aparece automaticamente no módulo da aluna.
-  - **Aprovação é única, no onboarding** (não por sessão) — a aluna consente uma vez que as sessões serão gravadas e publicadas no módulo dela; depois disso, toda gravação nova entra sem fricção.
   - **Automação:** reaproveita a mesma automação que já sobe Encontros da Incubadora e Lives Expert360º pra Hotmart (não precisa criar nova). Só precisa de convenção de nome pra automação achar e rotear certo dentro da pasta de gravações do Google Meet:
     - **Padrão CONFIRMADO (11/08):** `Individual - {slug-da-aluna} - {AAAA-MM-DD}` (slug igual ao já usado em `mentoria/alunas/{slug}/` — ex: `milena-gehrke`, `analia-arguello`) — nome da reunião/gravação no Google Meet segue esse padrão daqui pra frente.
+
+**CORREÇÃO (12/08):** o texto original desta seção dizia que a "aprovação única no onboarding" servia pra aluna consentir que a sessão fosse "publicada no módulo dela" (implicitamente privado, só ela + Karol). Karol esclareceu que a intenção sempre foi outra: benchmarking — compartilhar com OUTRAS alunas, modelo Erico Rocha (quem compartilha a própria análise destrava ver a dos outros; quem não compartilha, não vê). Isso virou a trilha "Consultorias" (ver seção nova abaixo) — mecanismo de compartilhamento por reciprocidade, não aprovação de gravação simples.
 
 ## Vitrine — TODAS as ofertas, não só curso e mentoria
 
@@ -73,6 +74,16 @@ Reaproveita a IV já validada nas páginas de venda: preto `#0B0B0C`, laranja `#
 2. **Frases motivacionais do standby** — já existe um banco, ou puxo da sua metodologia/tese pra montar?
 3. **Quem executa a Fase 1 (layout/plataforma)** — candidato natural é o Gestor de Infra Arcane (já construiu as 7 páginas de venda + já tem contexto técnico do projeto), mas é escopo maior que uma LP estática. Confirmar antes de rotear.
 
+## Trilha "Consultorias" (fechado 12/08)
+
+Terceira trilha de conteúdo, ao lado de Expert360º e Mentoria — cobre as consultorias individuais mais curtas: **Método VIP, Método Express, Sprint do Método e Diagnóstico Ferramentas** (Grupo e Individual continuam na trilha Mentoria — são as mentorias 1:1 de 12 meses, roteiro fixo já desenhado).
+
+- **Checklist fixo por oferta (12/08):** cada consultoria tem um número definido de encontros, no mesmo formato visual do Mapa da Jornada (check verde = tem material). Definido pela Karol: Método VIP = 3 encontros, Método Express = 1, Sprint do Método = 5, Diagnóstico Ferramentas = 2 (1 do diagnóstico em si + 1 "Outros encontros", balde de tamanho variável pra construção da ferramenta). O check fica verde quando existe material em `materiais_consultoria` com aquele título — não é a aluna que marca, é reflexo do que foi entregue.
+- **Compartilhamento por reciprocidade (modelo Erico Rocha):** por padrão, o material de cada aluna é privado (só ela + Karol). Se ela optar por compartilhar as próprias sessões, destrava o acesso ao repositório de quem também compartilhou. Quem não compartilha, não vê as dos outros. Regra imposta na própria RLS do banco (função `eu_compartilhei_algo()`), não só na tela.
+- **O que é compartilhado:** a gravação bruta da sessão (decisão de 12/08 — sem curadoria/edição, por ser mais trabalho).
+- **Como a aluna decide:** popup explicando a regra, com as opções "Quero compartilhar" ou "Prefiro manter exclusivo" — decisão única (fica salva no perfil dela), não por sessão.
+- **Pendente pra Fase 4:** a automação que sobe as gravações (mesma que já sobe Encontros da Incubadora/Lives/Encontros Individuais pro Hotmart) precisa inserir as linhas em `materiais_consultoria` com o `produto_slug` e `data_sessao` corretos — ainda não construído, só o schema existe.
+
 ## Decisões já fechadas
 
 - **11/08** — Plataforma unificada (curso + mentoria), não separada. Motivo: cross-sell nativo via vitrine.
@@ -81,5 +92,6 @@ Reaproveita a IV já validada nas páginas de venda: preto `#0B0B0C`, laranja `#
 - **11/08** — Mentoria ganha módulo novo "Encontros Individuais" — sessões 1:1 gravadas, entram automaticamente no módulo. Aprovação da aluna é única (onboarding), não por sessão. Reaproveita a automação já existente (mesma que sobe Encontros da Incubadora/Lives pra Hotmart), só precisa de convenção de nome pra rotear certo.
 - **11/08** — Popup de fim de módulo vira coleta estruturada: 2-3 perguntas de NPS/transformação + espaço pra feedback/prova do método (não é só lembrete).
 - **11/08** — Padrão de nome das gravações de Encontros Individuais: `Individual - {slug-da-aluna} - {AAAA-MM-DD}` (mesmo slug de `mentoria/alunas/`).
+- **12/08** — Trilha "Consultorias" criada (VIP/Express/Sprint/Diagnóstico) — conteúdo dinâmico por aluna, compartilhamento por reciprocidade estilo Erico Rocha, gravação bruta (sem curadoria), decisão via popup único (ver seção acima).
 - **11/08** — Projeto vira ATIVO no cockpit (vaga aberta pela saída do CRM pra Operações Contínuas).
 - **11/08** — Sequência de execução: constrói o layout/estrutura da plataforma inteiro primeiro (Fase 1); migração de conteúdo (Expert360º + Mentoria) roda em paralelo depois — não é uma coisa de cada vez.

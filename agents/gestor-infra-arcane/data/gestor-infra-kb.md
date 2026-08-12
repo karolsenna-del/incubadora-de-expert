@@ -625,6 +625,7 @@ supabase gen types typescript --linked > types/supabase.ts  # Types
 | Auth nao funciona | Verificar Redirect URLs |
 | Migration falha | Testar SQL no Studio primeiro |
 | Realtime nao funciona | `ALTER TABLE x REPLICA IDENTITY FULL` |
+| `infinite recursion detected in policy for relation "x"` (42P17) | Policy de RLS faz `EXISTS (select ... from x ...)` na MESMA tabela que ela protege — a subquery reavalia a propria RLS, que reavalia a subquery, infinito. Achado na area-de-membros (12/08, tabela `materiais_consultoria`, policy de reciprocidade "só vê compartilhado de outro se também compartilhou o próprio"). Fix: extrair a subquery pra uma function `security definer` (roda fora do contexto de RLS de quem chamou, quebra o ciclo) e a policy chama a function em vez do EXISTS direto: `create function f() returns boolean language sql security definer set search_path = public as $$ select exists (...) $$; grant execute on function f() to authenticated;` — depois `create policy ... using (f())`. Sempre testar policy self-referencing com uma chamada real (clique na UI, nao só o SQL isolado) antes de dar como pronta — o SQL da migration sozinho nao aciona a recursao, só aparece quando o Postgres avalia a policy dentro de uma query real |
 
 ### 5.2 Padrao — App estatico com login (Supabase Auth magic link + Vercel)
 

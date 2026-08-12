@@ -180,6 +180,24 @@ body.app-body { background: var(--preto); color: var(--branco); }
 .nota-escala button { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--cinza-300); background: var(--branco); font-size: 0.82rem; font-weight: 600; }
 .nota-escala button.selecionada { background: var(--laranja); color: var(--branco); border-color: var(--laranja); }
 .pergunta-bloco textarea { width: 100%; border: 1px solid var(--cinza-300); border-radius: 10px; padding: 10px 12px; font-size: 0.9rem; font-family: var(--texto); resize: vertical; min-height: 64px; }
+.modal-card input[type="text"] { width: 100%; border: 1px solid var(--cinza-300); border-radius: 10px; padding: 12px 14px; font-size: 0.95rem; font-family: var(--texto); margin-bottom: 4px; }
+.modal-texto { font-size: 0.88rem; color: var(--cinza-700); line-height: 1.55; margin-bottom: 20px; }
+
+/* ===== CONSULTORIAS (trilha dinâmica — materiais_consultoria) ===== */
+.timeline-consultorias::before { display: none; }
+.timeline-consultorias { padding-left: 0; }
+.consultoria-secao { margin-bottom: 32px; }
+.consultoria-secao h3 { font-size: 1rem; font-weight: 700; margin-bottom: 14px; }
+.material-card { background: var(--preto-2); border: 1px solid var(--preto-3); border-radius: 10px; padding: 16px 18px; margin-bottom: 10px; }
+.material-data { font-size: 0.72rem; color: var(--cinza-500); text-transform: uppercase; letter-spacing: .06em; }
+.material-titulo { font-weight: 700; margin: 4px 0; }
+.material-autor { display: block; font-size: 0.78rem; color: var(--laranja); margin-bottom: 6px; }
+.material-desc { font-size: 0.85rem; color: var(--cinza-300); margin: 6px 0; }
+.material-card a { color: var(--laranja); font-size: 0.85rem; font-weight: 600; }
+.consultoria-bloqueado .btn-concluir { margin-top: 12px; }
+.material-sub-link { padding: 0 12px 10px 46px; font-size: 0.82rem; }
+.material-sub-link a { color: var(--laranja); font-weight: 600; }
+.material-sub-link span { color: var(--cinza-500); }
 .modal-acoes { display: flex; justify-content: flex-end; gap: 10px; margin-top: 8px; }
 .modal-acoes .btn-secundario { background: none; border: none; color: var(--cinza-500); font-size: 0.85rem; padding: 12px; }
 .modal-acoes .btn-concluir { padding: 12px 24px; }

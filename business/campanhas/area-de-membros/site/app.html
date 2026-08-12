@@ -73,6 +73,32 @@
     <div class="dica">clique ou digite algo pra voltar</div>
   </div>
 
+  <!-- ONBOARDING: NOME PREFERIDO (só aparece no primeiro login) -->
+  <div class="modal-overlay" id="modal-nome">
+    <div class="modal-card">
+      <span class="eyebrow">Antes de começar</span>
+      <h2>Como você quer ser chamada por aqui?</h2>
+      <input type="text" id="input-nome-preferido" placeholder="Seu nome ou apelido" maxlength="40">
+      <div class="modal-acoes">
+        <button class="btn-secundario" id="btn-pular-nome">Agora não</button>
+        <button class="btn-concluir" id="btn-salvar-nome">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP: COMPARTILHAR CONSULTORIA COMO BENCHMARKING (modelo de reciprocidade) -->
+  <div class="modal-overlay" id="modal-compartilhar">
+    <div class="modal-card">
+      <span class="eyebrow">Casos Reais</span>
+      <h2>Quer compartilhar suas sessões com outras alunas?</h2>
+      <p class="modal-texto">Funciona como benchmarking: se você compartilhar suas sessões de consultoria, elas ficam visíveis pra outras alunas que também compartilharam — e você destrava o acesso aos casos reais delas também. Se preferir manter exclusivo, sem problema: suas sessões continuam só entre você e a Karol, só que você não vê as das outras.</p>
+      <div class="modal-acoes">
+        <button class="btn-secundario" id="btn-nao-compartilhar">Prefiro manter exclusivo</button>
+        <button class="btn-concluir" id="btn-sim-compartilhar">Quero compartilhar</button>
+      </div>
+    </div>
+  </div>
+
   <!-- POPUP FIM DE MÓDULO -->
   <div class="modal-overlay" id="modal-overlay">
     <div class="modal-card">

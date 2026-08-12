@@ -79,6 +79,36 @@ const VITRINE_OFERTAS = [
 // Exemplo de matrícula (Fase 1 — mock. Fase 4 troca isso por leitura real do Supabase via webhook Voomp)
 const MATRICULA_EXEMPLO = ['expert360', 'metodo-vip']; // PLACEHOLDER — ofertas que este aluno de exemplo já tem
 
+// Mapeia cada oferta pra trilha de CONTEÚDO (Roteiro) que ela libera — não é 1:1 com a Vitrine, que mostra as 7 ofertas.
+// Fonte: briefing.md ("Público/Quem usa o quê") + decisão de 12/08 — Grupo e Individual são as mentorias 1:1 de
+// 12 meses (roteiro fixo, "Jornada de 12 meses"). VIP, Método Express, Sprint do Método e Diagnóstico Ferramentas
+// são consultorias individuais mais curtas — caem na trilha "Consultorias" (conteúdo dinâmico, não currículo fixo).
+const TRILHA_POR_OFERTA = {
+  'expert360': 'expert360',
+  'grupo': 'mentoria',
+  'individual': 'mentoria',
+  'metodo-vip': 'consultorias',
+  'metodo-express': 'consultorias',
+  'sprint-do-metodo': 'consultorias',
+  'diagnostico-ferramentas': 'consultorias'
+};
+
+// Trilha "Consultorias" — ao contrário de Expert360º/Mentoria, não tem módulos/aulas fixos no data.js: o
+// conteúdo real vem da tabela `materiais_consultoria` no Supabase (ver app.js renderConsultorias()).
+// Fica como um "trilha vazia" aqui só pra entrar no mesmo mecanismo de abas/matrícula das outras duas.
+const TRILHA_CONSULTORIAS = { id: 'consultorias', nome: 'Consultorias', modulos: [] };
+
+// Quantidade e rótulo dos encontros por consultoria (definido pela Karol, 12/08) — cada rótulo vira 1 check
+// no checklist da aluna; fica "concluído" quando existe material em `materiais_consultoria` com esse título.
+const ENCONTROS_POR_OFERTA = {
+  'metodo-vip': ['Encontro 1', 'Encontro 2', 'Encontro 3'],
+  'metodo-express': ['Encontro único'],
+  'sprint-do-metodo': ['Encontro 1', 'Encontro 2', 'Encontro 3', 'Encontro 4', 'Encontro 5'],
+  // Diagnóstico Ferramentas: 1 encontro fixo do diagnóstico em si + 1 "balde" pros encontros de construção
+  // da ferramenta, que variam de quantidade — "Outros encontros" pode ter 0, 1 ou vários materiais dentro.
+  'diagnostico-ferramentas': ['Diagnóstico', 'Outros encontros']
+};
+
 // Frases motivacionais do standby — PLACEHOLDER. Karol ainda vai entregar o banco real (ver briefing.md, pergunta em aberto).
 const FRASES_MOTIVACIONAIS = [
   'Diploma é o que você estudou. Método é o que você viveu.',
