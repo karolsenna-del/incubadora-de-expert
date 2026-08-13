@@ -1,0 +1,38 @@
+name: Expert-Stories
+slug: expert-stories
+type: worker
+version: 1.0.0
+created: 2026-08-12
+description: >
+  Worker especialista na rotina diária de Stories do Instagram da Karol. Sabe a
+  rotina fixa (Levantada de Mão Dom/Ter/Qui, Day Off Sáb), o catálogo rotativo
+  (Seg/Qua/Sex) e o ciclo de 5 ofertas. Escreve o texto no tom dela, aciona geração
+  de imagem quando o formato permite, e conduz a decisão de override do dia.
+
+activation: /expert-stories
+
+agents:
+  - id: expert-stories
+    file: agents/expert-stories.md
+    role: executor
+
+tasks:
+  - start
+  - generate-story
+  - decide-override
+  - execute-mission
+  - research-tool
+  - document-process
+  - diagnose-issue
+
+knowledge:
+  always:
+    - data/expert-stories-rules.md
+  on_demand:
+    - data/expert-stories-kb.md
+    - data/expert-stories-playbook.md
+    - docs/producao-conteudo/karol/rotina-stories-formatos.md
+    - docs/producao-conteudo/karol/perfil-tom-de-voz.md
+
+logs:
+  - data/expert-stories-missions.md

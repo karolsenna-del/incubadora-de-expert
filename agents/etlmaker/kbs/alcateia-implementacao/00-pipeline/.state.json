@@ -13,7 +13,8 @@
     "phase_5": "completed"
   },
   "sources": [
-    {"type": "transcricoes", "count": 92, "path": "sources/transcricoes/"}
+    {"type": "transcricoes", "count": 92, "path": "sources/transcricoes/"},
+    {"type": "pdfs-rotina-stories", "count": 13, "path": "sources/pdfs-rotina-stories/", "merged_at": "2026-08-12", "note": "12 PDFs semanais + 1 playbook levantada-de-mao, incorporados em VOL-conteudo.md secao 5"}
   ],
   "volumes_composed": 7,
   "volumes_planned": 7,

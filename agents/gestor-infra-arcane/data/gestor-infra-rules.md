@@ -208,6 +208,41 @@ Celulares brasileiros podem aparecer com 13 digitos (com nono digito) ou 12 digi
 
 ---
 
+## REGRA-017: Arquivos novos (untracked) somem quando várias janelas do Claude Code rodam na mesma pasta
+
+**Contexto:** Em 13/08, com a Karol rodando "muitas janelas abertas do Claude Code" na mesma
+pasta do repo, uma sessão criou um worker novo inteiro (`agents/expert-stories/`, ~16
+arquivos) + um documento novo (`docs/producao-conteudo/karol/rotina-stories-formatos.md`) +
+um slash command (`.claude/commands/expert-stories.md`) — tudo isso sumiu do disco entre um
+tool call e outro, sem nenhum comando de delete executado pela própria sessão. Investigação:
+`git reflog` mostrou um merge (`Merge remote-tracking branch 'origin/master'`) feito por outra
+sessão/janela nesse exato intervalo (10:43-10:45), autor "Karol Senna" (ou seja, rodado com a
+identidade dela, não IA sem contexto — outra sessão de Ops ou similar). O merge em si só
+trouxe 3 arquivos de métricas (inofensivo), mas algo no processo daquela outra sessão (commit
+`git add -A` seguido de limpeza, ou script de sync) removeu os arquivos untracked da sessão
+concorrente. **Arquivos já commitados/trackeados não foram afetados** — só o que ainda não
+tinha virado commit.
+
+**Regra:**
+- Quando a Karol tiver várias janelas do Claude Code abertas simultaneamente na mesma pasta
+  do repo, **cada sessão deve commitar o quanto antes** depois de criar arquivo novo — não
+  deixar trabalho novo "untracked" por muito tempo, porque outra sessão pode rodar uma
+  operação git (pull, clean, add -A + algo) que apaga esse trabalho sem aviso
+- Se um arquivo que acabou de ser criado nessa sessão sumir do disco sem explicação: rodar
+  `git reflog` primeiro (checar se outra sessão fez commit/merge no mesmo intervalo) antes de
+  assumir erro próprio ou bug de ferramenta
+- Ao perceber a perda: avisar o usuário imediatamente e claramente (não tentar just
+  silenciosamente recriar sem contexto) — ele pode ter outras janelas em estado que também
+  precisa saber disso
+- Recriar o conteúdo perdido (se a sessão ainda tiver ele no proprio contexto da conversa) e
+  sugerir commit imediato pra proteger contra nova perda
+
+**Fix aplicado:** worker `agents/expert-stories/` e `rotina-stories-formatos.md` recriados
+integralmente a partir do contexto da própria conversa (a sessão tinha escrito e revisado
+cada arquivo, então a reconstrução foi fiel). Commit imediato recomendado à Karol via Ops.
+
+---
+
 ## Registro de Incidentes
 
 | # | O que aconteceu | Fix | Regra criada |
@@ -220,3 +255,4 @@ Celulares brasileiros podem aparecer com 13 digitos (com nono digito) ou 12 digi
 | 6 | Trabalho sem rastro — sem Mission Log, sem auditoria e historico perdendo valor | Registro obrigatorio ao final de cada missao/sessao + revisao mensal | REGRA-014 |
 | 7 | Área de Membros usou projeto Supabase errado (achado via grep, nao via vault) — e-mail de login chegou com marca da Arcane pro aluno | Trocar pro projeto certo (vault `business/vault/supabase.md`), corrigir `site_url`/`uri_allow_list` no Auth | REGRA-015 |
 | 8 | `cd` relativo empilhado criou diretorio aninhado bogus, `vercel --prod` rodou nele e criou projeto novo do zero ("site") em vez de usar o existente — passou despercebido ate eu checar a URL retornada | `vercel remove site --yes` + redeploy no diretorio/projeto certo (confirmado via `pwd` + `.vercel/project.json`) | REGRA-016 |
+| 9 | Multiplas janelas do Claude Code na mesma pasta — arquivos novos (untracked) de uma sessao (worker Expert-Stories completo + documento de rotina) sumiram do disco por causa de commit/merge feito por outra sessao concorrente | Recriado a partir do contexto da propria conversa + commit imediato recomendado | REGRA-017 |

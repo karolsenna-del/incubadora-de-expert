@@ -21,7 +21,7 @@ O corpus cobre 7 domínios principais organizados em sequência de implantação
 | D7 | **Tráfego e Escala** | Métricas (custo/seguidor, custo/comentário), turbinar, validação, escala flutuante, remarketing avançado | 79–89 |
 
 **Domínios ausentes / parciais:**
-- Rotinas de Stories (Teia de Aranha visual) — referenciadas em texto, sem artefato PDF extraído
+- ~~Rotinas de Stories (Teia de Aranha visual) — referenciadas em texto, sem artefato PDF extraído~~ — **RESOLVIDO (Merge 12/08/2026).** 12 PDFs semanais + playbook extraídos, catálogo de 20 formatos incorporado em VOL-conteudo.md seção 5. Ver 1.2 abaixo
 - Configuração técnica de plataformas (aulas 58–68: GreatPages, VTurb config) — operacional, sem conteúdo metodológico relevante
 
 ### 1.1 Fonte Adicionada via Merge (13/06)
@@ -29,6 +29,12 @@ O corpus cobre 7 domínios principais organizados em sequência de implantação
 | Fonte | Curso | Domínios afetados | Escopo |
 |-------|-------|-------------------|--------|
 | 95-funil-de-zoom-vinizoom | Funil Vinizoom (Imersão ViniZoom) | D5 (Funil de Vendas) + D4 (Conteúdo) | Estrutura completa do "Funil de Zoom" (funil de aula ao vivo) — captação, narrativa, estrutura da aula com técnica de pitch no meio do conteúdo, fluxo de vendas semanal, efeito bola de neve |
+
+### 1.2 Fonte Adicionada via Merge (12/08)
+
+| Fonte | Tipo | Domínios afetados | Escopo |
+|-------|------|-------------------|--------|
+| pdfs-rotina-stories (12 PDFs semanais + playbook) | PDF visual (print + execução) | D4 (Conteúdo) — fecha o gap de Teia de Aranha visual | Rotina real de Stories aplicada semana a semana: 2 âncoras fixas (Domingo=Levantada de Mão, Sábado=Day Off) + catálogo de 20 formatos rotativos (Caixinha, Enquete Positiva, Dominando a Mente, Cantinho do Pensamento, Pico de Engajamento, Sequência, Isca Digital/Social Selling/Call, Você no Game, Teste de Tráfego, Depoimento ou Bastidor, entre outros). Scripts completos verbatim incorporados em VOL-conteudo.md seção 5 |
 
 ---
 
@@ -199,7 +205,7 @@ Regras que o corpus trata como inegociáveis — violá-las aparece associado a 
 | Ausência | Impacto | Ação recomendada |
 |---------|---------|-----------------|
 | Aulas 58–68 (config-pv) | Baixo — configuração de plataforma, sem metodologia | Ignorar nos volumes |
-| Aula 90 (PDF) | Desconhecido — possivelmente rotina de stories visual | Solicitar ao expert se crítico |
+| ~~Aula 90 (PDF) — rotina de stories visual~~ | **RESOLVIDO (Merge 12/08/2026)** — Karol enviou os 12 PDFs semanais + playbook, incorporados em VOL-conteudo.md seção 5 | — |
 | Aula 93 (PDF) | Desconhecido — possivelmente artefato complementar | Solicitar ao expert se crítico |
 | Aula 95 — trecho de venda (oferta de implementação R$6k do Vini) | Não é metodologia replicável — é o próprio "pitch estendido" de Vini em ação | Usado só como EXEMPLO ilustrativo da técnica (pitch estendido), não como conteúdo de oferta nos volumes |
 
@@ -247,7 +253,7 @@ Ferramentas, templates e recursos referenciados no corpus que devem constar como
 | Planilha de ROI mini treinamento | Spreadsheet | aula 45 | VOL-funil-vendas |
 | CRM de leads (classificação) | Framework | aulas 92, 94 | VOL-social-selling ✅ |
 | Agentes de IA para conteúdo | Serviço (Alcateia) | aulas 28, 36, 42 | VOL-conteudo |
-| Rotinas de Stories (PDF visual) | PDF (ausente) | aula 10 | VOL-conteudo |
+| ~~Rotinas de Stories (PDF visual)~~ | PDF — **incorporado (Merge 12/08/2026)** | aula 10 + 12 PDFs semanais | VOL-conteudo (seção 5) |
 | Escada de tráfego (R$10→20k) | Tabela de referência | aula 82 | VOL-vendas-trafego |
 | Estrutura de remarketing (5 conjuntos) | Framework | aulas 87–89 | VOL-vendas-trafego |
 

@@ -140,6 +140,40 @@ Params: fields=quota_usage
 
 ---
 
+## 1.5 Publicar Stories (`media_type=STORIES`) — pesquisado 12/08/2026
+
+**Fonte:** Meta Developer Docs, Content Publishing API (developers.facebook.com/docs/instagram-platform/content-publishing/).
+Pesquisado pra destravar a automação de Stories da Karol (worker `agents/expert-stories/`).
+
+**Confirmado: Stories É suportado pela mesma API, mesmo flow de 2 passos.**
+
+```
+POST https://graph.instagram.com/v21.0/{IG_USER_ID}/media
+Params: media_type = STORIES
+        image_url  = {url pública} (ou video_url pra vídeo)
+        access_token = {META_TOKEN}
+```
+→ retorna container_id. Depois:
+```
+POST https://graph.instagram.com/v21.0/{IG_USER_ID}/media_publish
+Params: creation_id = {container_id}
+```
+
+**Diferenças em relação ao fluxo de carrossel já implementado:**
+- Sem `is_carousel_item`/`children` — Stories é sempre 1 mídia por container (não suporta múltiplos slides como carrossel)
+- `media_type` no container criado é `STORIES`, não `IMAGE`/`CAROUSEL`
+- Ao consultar depois, o campo `media_type` retorna `IMAGE`/`VIDEO` (não `STORIES`) — pra confirmar que é uma Story, consultar o campo `media_product_type`
+
+**`scheduled_publish_time` pra Stories: NÃO documentado pela Meta (zona cinzenta).** Mas isso não bloqueia nada aqui — o script atual (`post-frase-que-vale-milhoes.yml` e os demais workflows) **já não usa esse parâmetro pra agendar**: o "agendamento" real é o próprio cron do GitHub Actions disparando o workflow na hora certa, e o script publica imediatamente (`published:"false"` → espera `FINISHED` → `media_publish` na hora). Então o mesmo padrão serve pra Stories sem depender de scheduling nativo da Meta.
+
+**Confirmado: NÃO dá pra anexar sticker interativo (caixinha de pergunta, enquete, quiz) via API.** A documentação de publicação não lista nenhum parâmetro pra isso — stickers nativos só existem quando postados manualmente pelo app. Isso bate com o que já era esperado pro catálogo de Stories (formatos como Caixinha/Enquete Positiva sempre vão precisar do toque manual da Karol no app, mesmo com imagem de fundo gerada e publicada via API).
+
+**Limitação adicional achada:** campo novo `alt_text` (introduzido mar/2025) explicitamente NÃO suporta Reels nem Stories — não é relevante pro fluxo atual, só registro.
+
+**Conclusão pra extensão do insta-scheduler:** dá pra reaproveitar quase 100% do script de carrossel — trocar `media_type: CAROUSEL` + loop de containers por um único `media_type: STORIES` + `image_url`, sem o passo de criar múltiplos `is_carousel_item`. Esforço estimado: baixo (script já existe, é adaptação, não criação do zero).
+
+---
+
 ## 2. TOKEN MANAGEMENT
 
 ### 2.1 Tipos de Token

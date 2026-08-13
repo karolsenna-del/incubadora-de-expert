@@ -77,7 +77,7 @@
 | **ROI 2** | Retorno sobre investimento de 2x — coloco R$1 e volta R$2+ | Vendas e Tráfego |
 | **Template de Serviço** | Estrutura base da oferta: meta + entregáveis + acesso complementar + garantia | Oferta |
 | **Tema Central** | Assunto da aula/live. Quanto menos subjetivo (mais ligado a um resultado palpável), maior a tração e a conversão | Conteúdo / Funil de Vendas |
-| **Teia de Aranha** | Rotina de 31 dias de stories com 6 tipos de interação para criar pontos de contato contínuos | Posicionamento / Conteúdo |
+| **Teia de Aranha** | Rotina semanal de stories com 2 âncoras fixas (Domingo=Levantada de Mão, Sábado=Day Off) e catálogo de ~20 formatos rotativos de segunda a sexta, pra criar pontos de contato contínuos | Posicionamento / Conteúdo |
 | **Turbinar** | Recurso nativo do Instagram de impulsionar publicação. Sempre: visitas ao perfil + notebook | Vendas e Tráfego |
 | **Universo de Produtos** | Ecossistema de produtos ao redor de 1 core com diferentes níveis de acesso — oposto da escada | Oferta |
 | **Upsell** | Oferta complementar apresentada imediatamente após a compra do produto inicial | Oferta / Funil |

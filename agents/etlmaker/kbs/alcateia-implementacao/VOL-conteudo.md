@@ -195,7 +195,7 @@ A Teia de Aranha é a rotina de Stories que cria pontos de contato contínuos co
 | Planeja-se com antecedência | Acontece no dia a dia |
 | Escala no tempo | Expira em 24h |
 
-### Rotina de Stories (Vini)
+### Rotina de Stories (Vini) — visão resumida (fonte: aula em áudio, 10-teia-de-aranha-da-alcateia)
 
 | Momento | Tipo de Story | Frequência |
 |---------|--------------|-----------|
@@ -205,26 +205,105 @@ A Teia de Aranha é a rotina de Stories que cria pontos de contato contínuos co
 | Ocasional | Empurrãozinho (texto longo com oferta) | Quando audiência estiver quente |
 | Ocasional | Story de isca para formulário | 1–2x/semana |
 
-### Scripts de Stories
+> Essa é a versão que Vini explica em áudio. Os 13 PDFs abaixo (Merge 12/08/2026) mostram a execução visual real, semana a semana — mais granular e é o que se aplica na prática.
 
-**Levantada de mão:**
-```
-"Quem aqui quer [resultado específico]?
-Responde esse Story com qualquer mensagem."
-```
+### Estrutura Semanal Real — 12 Semanas + Playbook (Merge 12/08/2026)
 
-**3x1 (o story de oferta):**
-```
-"Tô abrindo [X] vagas para [produto].
-Quer detalhes? Me chama no WhatsApp."
-```
+Cada um dos 13 PDFs (`00-pipeline/sources/pdfs-rotina-stories/`) documenta uma semana real de Vini com MODELO (print do story) + EXECUÇÃO (passo a passo numerado). Nas 12 semanas analisadas, 2 dias são âncoras fixas e os outros 5 são rotativos entre um catálogo maior de formatos:
 
-**Empurrãozinho:**
+| Dia | Padrão | Fixo? |
+|-----|--------|-------|
+| Domingo | Levantada de Mão | Sim — nas 12 semanas |
+| Sábado | Day Off | Sim — nas 12 semanas |
+| Segunda a Sexta | Rotativo — ver catálogo abaixo | Não. Terça puxou pra Caixinha em 7 das 12 semanas, mas sem ser regra fixa |
+
+### Catálogo de Formatos (fonte: 12 PDFs semanais + playbook)
+
+| Formato | Dia mais comum | O que é / Execução |
+|---------|----------------|---------------------|
+| **Levantada de Mão** | Domingo (12/12 semanas) | Story com oferta a poucas vagas (consultoria/mentoria/produto), postado entre 8h-10h da manhã, depois de esperar os stories zerarem. Pede reação/comentário de palavra-chave. Aborda quem reagiu no direct entendendo o momento antes de ofertar ticket maior |
+| **Day Off** | Sábado (12/12 semanas) | Lifestyle simples do dia a dia (passeio, restaurante, tempo com filho/família) — não precisa ostentar; o "simples" de quem posta pode ser desafiador pra quem acompanha |
+| **Caixinha** | Segunda ou Terça (7/12 semanas) | Abre caixinha de perguntas, responde 3 com link/autoridade. Se vier pouca pergunta, usa o "Prompt de Suporte" (ChatGPT) pra gerar perguntas e respostas estratégicas |
+| **Enquete Positiva** | Quinta (6/12 semanas) | Enquete "qual sua maior dificuldade hoje?" com opções do nicho. Chama quem respondeu, entende o momento, gera valor; se for cliente ideal, chama pra call ou WhatsApp com oferta |
+| **Dominando a Mente** | Sexta (5/12 semanas) | Texto, vídeo ou sequência mostrando por que o método é mais simples, rápido, barato e fácil de aplicar que o "jeito certo" tradicional. Bom formato pra testar tráfego (custo baixo por seguidor) |
+| **Cantinho do Pensamento** | Terça (4/12 semanas) | Reflexão de onde o produto leva o cliente. Reforça: seu modo de pensar, por que o produto é melhor, o resultado claro que traz, ir contra o mercado |
+| **Pico de Engajamento** | Quarta ou Sexta (4/12 semanas) | Entrega de graça nos stories um conteúdo que seria pago, em formato quiz ("qual você prefere, 1 ou 2?"), depois faz o CTA pro produto |
+| **Sequência** | Quarta (3/12 semanas) | Sequência de storytelling que escala até uma oferta/CTA de palavra-chave no direct |
+| **Isca Digital / Isca para Social Selling / Isca para Call** | Sexta, Quinta ou Quarta (5/12 semanas, família de formatos) | Oferece ebook/PDF curto (2-4 páginas) com oferta no final — gera a primeira conversa em DM. Variantes: (a) follow-up 1 dia depois perguntando a dificuldade de quem pediu; (b) fluxo visual clientes→estratégia→oferta que qualifica antes de oferecer uma call gratuita de 30min ("isso não vai resolver seu problema, mas dá pra marcar um bate-papo de 30min?") |
+| **Você no Game** | Segunda (2/12 semanas) | Bastidor trabalhando, estudando ou com cliente — mostra rotina real, ou o que está por dentro de um produto/entrega |
+| **Teste de Tráfego** | Terça (2/12 semanas) | Depois de responder as caixinhas da semana, investe ~R$6 por 4 dias em 2 caixinhas de pergunta respondidas (testando como anúncio). Se performar, escala o valor |
+| **Depoimento ou Bastidor** | Sexta (2/12 semanas) | Posta depoimento direto com link pro produto; se não tiver depoimento, posta bastidor (call recente, estudo, reunião com cliente, algo que mostre "estar no game") |
+| **De Volta ao Passado** | Quarta (1/12 semanas) | Resgata um story antigo que significou algo, reflexão de evolução (antes/depois) |
+| **Atualização** | Quarta (1/12 semanas) | Mostra uma novidade em produção, gera desejo/curiosidade |
+| **Gerar Valor** | Sexta (1/12 semanas) | Ajuda simples sem entregar o "ouro" completo; se a conversa evoluir muito, usa script pra oferecer o produto ("aqui pelo direct é mais complicado, mas posso te ajudar com [produto]") |
+| **Novo Produto** | Segunda (1/12 semanas) | Anúncio de produto/serviço novo |
+| **Inimigo Comum** | Quarta (1/12 semanas) | Desmonta uma crença/promessa vazia do mercado (ex: "sala secreta", "lançamento pago" = marketing disfarçado) |
+| **Ângulo Diferente** | Quinta (1/12 semanas) | Mostra um jeito de pensar ou fazer fora do padrão esperado do nicho |
+| **Sequência de Vendas** | Quarta (1/12 semanas) | Sequência de stories conduzindo direto pra reabertura/oferta de vagas |
+| **Teste de Demanda** | Quinta (1/12 semanas) | Enquete com temas de produto/workshop ainda não criado ("um produto de..."), chama quem respondeu oferecendo bate-papo — testa demanda antes de construir |
+
+### Scripts Completos dos Formatos-Âncora (verbatim, fonte: PDFs)
+
+**Levantada de Mão (Domingo — estrutura recorrente em todas as variações do playbook):**
 ```
-[3–5 slides de história + situação]
-Slide final: "Se você está passando por isso, tenho uma solução.
-[Link ou 'me chama no WhatsApp']"
+Estou buscando [N] pessoas que queiram [resultado específico, ex: "escalar sua
+mentoria para +30k/mês"].
+
+1. [diferencial 1, ex: "Modelo previsível e escalável"]
+2. [diferencial 2, ex: "Sem depender de modelos tradicionais (lançamento,
+   perpétuo, low ticket, high ticket)"]
+3. [diferencial 3, ex: "Baixo investimento em tráfego"]
+4. [garantia/suporte, ex: "Acesso ao meu acompanhamento por 6 meses e suporte
+   100% individual e personalizado"]
+
+Se isso te interessa, comente "[PALAVRA-CHAVE]"
 ```
+Execução: esperar os stories zerarem (ou apagar antes), postar entre 8h-10h da manhã. Abordar quem reagiu no direct, entender o momento da pessoa, e fazer oferta com ticket maior (consultoria, mentoria, prestação de serviço). Script de abordagem: *"Oi [NOME], vi que você reagiu aos stories e está interessado em [O ASSUNTO], posso te mandar meu WhatsApp pra continuarmos a conversa por lá?"*
+
+**Caixinha:**
+1. Abrir caixinha de perguntas
+2. Responder 3 perguntas, cada resposta terminando com um link
+3. Se vier pouca pergunta, usar o Prompt de Suporte abaixo pra gerar 20 perguntas/respostas estratégicas de alto engajamento
+
+Prompt de Suporte (colar no ChatGPT, substituindo o nicho em azul no original):
+> Objetivo: criar um conjunto de perguntas e respostas estratégicas para caixinhas de perguntas no Instagram, projetadas para engajar o público, agregar valor imediato e incentivar ações específicas (DM). Preencher: promessa principal do produto, público-alvo, ticket médio, tom de voz. Cada resposta deve entregar valor imediato, mostrar autoridade, e terminar com um CTA natural pro direct (ex: "Quer saber como aplicar isso na prática? Envie uma mensagem!").
+
+**Enquete Positiva:**
+1. Postar enquete "Qual sua maior dificuldade hoje?" com opções do nicho (ex: Posicionamento / Oferta e produto / Estratégia de vendas)
+2. Chamar no direct quem respondeu, entender o momento, gerar valor pra ajudar
+3. Se a pessoa for cliente ideal, chamar pra uma call de vendas ou WhatsApp com oferta detalhada. Script de transição: *"Oi [NOME], eu não consigo te ajudar aqui no DM, mas consigo dentro de um dos meus programas, posso te mandar meu WhatsApp pra continuarmos a conversa por lá?"*
+
+**Cantinho do Pensamento:**
+1. Postar um story único ou uma sequência
+2. Fazer uma reflexão de onde o produto pode levar o cliente
+3. Reforçar: seu modo de pensar / por que seu produto é melhor / o resultado claro que ele traz / ir contra o mercado
+
+**Pico de Engajamento:**
+1. Postar um story único ou sequência
+2. Entregar de graça um conteúdo que seria pago, em até 3 stories (vídeo ou texto), no formato quiz: *"Vou entregar um conteúdo pago gratuito hoje nos stories: Tema 1: XXXX / Tema 2: XXXX — Qual você prefere, 1 ou 2?"*
+3. Fazer o CTA pra algum produto depois de entregar
+
+**Dominando a Mente:**
+1. Objetivo: dominar a mente do cliente, implementar seu modo de pensar na cabeça dele
+2. Formato texto, vídeo, ou sequência de stories
+3. Focar nos benefícios do próprio modelo: mais simples, mais rápido, mais barato e mais fácil de aplicar
+4. Testar tráfego nesse tipo de conteúdo — pode trazer seguidores por um custo bem baixo
+
+**Isca Digital / Social Selling:**
+1. Oferecer uma isca (ebook ou PDF de 2-4 páginas no máximo, sempre com uma oferta no final) pra iniciar uma conversa em DM
+2. Um dia após enviar a isca, mandar mensagem pra quem pediu: *"E aí [NOME], blz?! Te mandei o [material] ontem, era o que você estava procurando? Qual sua maior dificuldade hoje?"*
+
+**Day Off:**
+1. Postar algo relacionado ao dia a dia, sem precisar ostentar pra mostrar lifestyle
+2. Se não tiver um lifestyle tão interessante: um passeio, um restaurante, tempo com a família
+3. "O que pode parecer simples pra você pode ser algo desafiador pra quem te acompanha"
+
+### Regras da Rotina (padrão extraído das 12 semanas)
+
+1. **Domingo e Sábado nunca variam** — Levantada de Mão e Day Off são as âncoras fixas da semana
+2. **Segunda a sexta tem um catálogo, não uma fórmula fixa** — os formatos rotativos evitam repetir a mesma sequência semana a semana
+3. **Toda oferta direta tem CTA de palavra-chave ou "toque aqui"** — nunca link solto sem contexto
+4. **Scripts de abordagem no direct sempre entendem o momento da pessoa antes de ofertar** — nenhum script pula direto pra oferta sem essa pergunta
 
 ---
 

@@ -10,10 +10,11 @@
 3 seções solicitadas:
 1. **Alcateia Implementação** — 7 módulos, ~90 aulas, ~8h52m
 2. **Social Selling** — 4 aulas, ~1h59m
-3. **Rotinas de Stories** — apenas PDFs (pendente estratégia de extração)
+3. ~~**Rotinas de Stories** — apenas PDFs (pendente estratégia de extração)~~ — **RESOLVIDO (Merge 12/08/2026).** Ver item 5 abaixo.
 
 ### Merge — Fontes Adicionadas Posteriormente
 4. **Funil Vinizoom — Imersão ViniZoom** (categoria 285180-funil-vinizoom, mesmo parent "Mentoria Alcateia") — 1 aula "Funil de Zoom" (1h17m28s), adicionada via Merge em 13/06. Foco solicitado por Karol: técnica de Vini Grevy de inserir CTA no meio de uma live longa, pra aplicar nas lives de Zoom dela (não cobertas em VOL-conteudo, que trata de conteúdo em feed/stories).
+5. **Rotinas de Stories (PDFs)** — 12 PDFs semanais ("Teia de Aranha", semana-01 a semana-12) + 1 playbook (levantada-de-mão), adicionados via Merge em 12/08. Bloqueio original (Read tool sem `pdftoppm`/poppler-utils) resolvido pelo Ops. Conteúdo incorporado em VOL-conteudo.md seção 5 — catálogo de 20 formatos de Stories com scripts verbatim.
 
 ## Módulos — Alcateia Implementação
 | Módulo | Aulas | Duração |
@@ -145,9 +146,10 @@
 
 ## Decisões Chave
 - Método de extração: m3u8 via Playwright + ffmpeg + Whisper (mesmo padrão do Código PEV 2.0)
-- Rotinas de Stories: apenas PDFs — estratégia pendente (download manual ou selenium)
+- ~~Rotinas de Stories: apenas PDFs — estratégia pendente (download manual ou selenium)~~ — resolvido, ver decisão 12/08 abaixo
 - Páginas de vendas e PDF e DOCS: sem vídeo, serão pulados pelo script
 - **13/06 — Merge aprovado por Karol:** fonte 95-funil-de-zoom-vinizoom (curso Funil Vinizoom, módulo Imersão-ViniZoom) entra na KB Alcateia Implementação via modo Merge. Impacta VOL-funil-vendas (estrutura do funil de Zoom) e VOL-conteudo (formato de live longa + técnica de CTA no meio do conteúdo)
+- **12/08 — Merge aprovado por Karol:** 13 PDFs de rotina de Stories (retomada do backlog "Automatizar Stories"). Bloqueio de leitura de PDF (faltava poppler-utils) resolvido pelo Ops. ETLmaker leu os 13 PDFs via Read tool (extração de imagem por página) e atualizou VOL-conteudo.md seção 5, sem recriar o que já existia — fecha os gaps "Aula 90" e "Rotinas de Stories (PDF ausente)" do MAPA-TERRITORIAL.md
 
 ## Regras de Operação
 - RELER ESTE PLANO a cada autocompact
