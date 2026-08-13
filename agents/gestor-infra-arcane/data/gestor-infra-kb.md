@@ -117,6 +117,14 @@ Plataforma alternativa ao Hotmart. Mesma funcao — produtos digitais, checkout,
 
 **Gap a fechar antes de implementar de verdade:** disparar uma venda de teste (ou usar webhook.site) pra capturar o payload real e confirmar o schema — a doc da central de ajuda descreve a configuracao, nao o JSON exato.
 
+**Produto vs Oferta — CRITICO (achado 12/08/2026):** o painel de vendedor fica em `adm.voompcreators.com.br` (diferente do `app.voompplay.com.br`, que e o app de conteudo). Dentro dele, **Produto** e **Oferta** sao coisas diferentes:
+- **Produto:** entidade com nome, descricao, checkout proprio, e a aba **Entregas** (onde fica configurado o webhook/liberacao de acesso) — a aba Entregas e configurada A NIVEL DE PRODUTO.
+- **Oferta:** uma variacao de preco/checkout DENTRO de um produto — todas as ofertas de um mesmo produto COMPARTILHAM a mesma config de Entregas do produto pai.
+
+**Armadilha:** se voce cria uma "oferta nova" com preco diferente dentro de um produto que ja existe (ex: produto "Curso X" e voce cria oferta "Curso X - Premium R$XXX"), o comprador dessa oferta recebe a MESMA entrega/acesso configurada no produto pai — nao da pra ter 2 produtos/entregas diferentes compartilhando o mesmo produto Voomp. Se as ofertas sao coisas DIFERENTES de verdade (ex: um produto e curso gravado, outro e mentoria 1:1), cada uma precisa ser um **PRODUTO separado** na Voomp, nao uma oferta dentro do mesmo produto.
+
+**Como criar produto novo (fluxo confirmado via Playwright):** Produtos > Criar Produto > preencher Titulo/Descricao/Pagina de Vendas/Tipo/Categoria/Garantia(dias)/Tipo de Cobranca(Valor unico ou Assinatura)/Preco > **imagem 120x120 e OBRIGATORIA** (upload via campo "Procurar imagens") > Criar Produto. Produto novo entra em **"Produto em Processo de Analise"** (moderacao da Voomp) — prazo de liberacao nao confirmado ainda. Depois: aba **Entregas** > Adicionar Entregas > Sistemas externos > Webhook > marcar evento (ex: "Venda Paga") > URL > Criar Liberacao > Salvar Edicao.
+
 ---
 
 ## 2. Pipeline WhatsApp (Cloud API + Z-API + Dispatcher)

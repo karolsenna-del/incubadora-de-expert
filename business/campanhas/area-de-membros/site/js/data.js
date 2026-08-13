@@ -120,9 +120,9 @@ const FRASES_MOTIVACIONAIS = [
   'Prontidão não é pré-requisito pra vender — é consequência de vender.'
 ]; // PLACEHOLDER — trocar pelo banco real da Karol (via Aria)
 
-// Perguntas do popup de fim de módulo — PLACEHOLDER. Karol ainda vai definir o conteúdo exato (ver briefing.md).
+// Perguntas do popup de fim de módulo — confirmadas pela Karol (12/08), conteúdo final.
 const PERGUNTAS_POPUP_MODULO = [
   { tipo: 'nota', pergunta: 'De 0 a 10, o quanto esse módulo te aproximou do resultado que você busca?' },
   { tipo: 'texto', pergunta: 'O que mudou pra você depois desse módulo?' },
   { tipo: 'texto', pergunta: '(Opcional) Quer deixar um print, depoimento ou prova do que você construiu?' }
-]; // PLACEHOLDER — trocar pelas perguntas reais da Karol
+];
