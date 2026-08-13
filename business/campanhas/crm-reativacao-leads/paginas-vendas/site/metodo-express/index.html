@@ -364,6 +364,25 @@
       box-shadow: none;
     }
     @media (min-width: 768px) { .barra-mobile { display: none; } }
+
+    .whats-flutuante {
+      position: fixed;
+      right: 20px;
+      bottom: 24px;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.28);
+      z-index: 101;
+      transition: bottom .3s ease, transform .15s ease;
+    }
+    .whats-flutuante:hover { transform: scale(1.08); }
+    .whats-flutuante svg { width: 28px; height: 28px; }
+    .whats-flutuante.subiu { bottom: 88px; }
   </style>
 </head>
 <body>
@@ -376,7 +395,7 @@
       <p class="sub">Você não precisa de mentoria completa pra resolver UM ponto específico. Precisa de 1 hora com quem já viu esse mesmo travamento em centenas de especialistas.</p>
 
       <div>
-        <a class="cta cta-wa" href="https://wa.me/556792324690?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20M%C3%A9todo%20Express%20(R%24300).">QUERO MEU DIAGNÓSTICO DE 1 HORA</a>
+        <a class="cta cta-checkout" href="https://pay.voompcreators.com.br/16363">QUERO MEU DIAGNÓSTICO DE 1 HORA</a>
         <span class="cta-micro">"Cada conversa com ela me gera muitos insights. Ajuda em tudo — estrutura, copy e até precificação." — Evelyn</span>
       </div>
 
@@ -469,7 +488,7 @@
           <li>Plano de ação por escrito</li>
           <li>Garantia: se não ficar satisfeita, devolvo 100% do valor</li>
         </ul>
-        <a class="cta cta-wa" href="https://wa.me/556792324690?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20M%C3%A9todo%20Express%20(R%24300).">QUERO MEU DIAGNÓSTICO DE 1 HORA</a>
+        <a class="cta cta-checkout" href="https://pay.voompcreators.com.br/16363">QUERO MEU DIAGNÓSTICO DE 1 HORA</a>
       </div>
     </div>
   </section>
@@ -534,7 +553,7 @@
         <li>Garantia de 100% do valor de volta</li>
       </ul>
       <div class="reveal">
-        <a class="cta cta-wa" href="https://wa.me/556792324690?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20M%C3%A9todo%20Express%20(R%24300).">QUERO MEU DIAGNÓSTICO DE 1 HORA</a>
+        <a class="cta cta-checkout" href="https://pay.voompcreators.com.br/16363">QUERO MEU DIAGNÓSTICO DE 1 HORA</a>
         <span class="cta-micro">R$300 à vista no pix</span>
       </div>
     </div>
@@ -551,15 +570,23 @@
 
   <!-- ============ BARRA MOBILE ============ -->
   <div class="barra-mobile" id="barraMobile">
-    <a class="cta cta-wa" href="https://wa.me/556792324690?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20M%C3%A9todo%20Express%20(R%24300).">QUERO MEU DIAGNÓSTICO</a>
+    <a class="cta cta-checkout" href="https://pay.voompcreators.com.br/16363">QUERO MEU DIAGNÓSTICO</a>
   </div>
 
+  <a class="whats-flutuante" id="whatsFlutuante" href="https://wa.me/556792324690?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20M%C3%A9todo%20Express%20(R%24300)." target="_blank" rel="noopener" aria-label="Falar no WhatsApp pra tirar dúvida">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.362.687 4.564 1.877 6.417L4 29l7.86-1.837A11.9 11.9 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3zm0 21.7c-2.02 0-3.92-.55-5.55-1.51l-.397-.235-4.66 1.09 1.114-4.55-.258-.42A9.65 9.65 0 0 1 6.3 15c0-5.354 4.35-9.7 9.704-9.7 5.354 0 9.7 4.346 9.7 9.7 0 5.354-4.346 9.7-9.7 9.7zm5.316-7.264c-.29-.145-1.716-.847-1.983-.944-.266-.097-.46-.145-.653.146-.194.29-.75.944-.92 1.138-.17.194-.34.218-.63.073-.29-.145-1.222-.45-2.328-1.436-.86-.767-1.44-1.716-1.61-2.006-.17-.29-.018-.447.152-.605.145-.145.34-.377.508-.567.17-.19.226-.324.34-.54.113-.218.056-.4-.037-.567-.097-.17-.87-2.093-1.19-2.865-.243-.582-.5-.503-.688-.512l-.586-.01c-.194 0-.508.073-.775.363-.266.29-1.02.997-1.02 2.43 0 1.436 1.05 2.822 1.194 3.014.145.19 2.006 3.06 4.86 4.166 2.855 1.105 2.855.737 3.372.69.516-.048 1.717-.7 1.96-1.377.243-.678.243-1.26.17-1.377-.073-.12-.267-.19-.556-.335z"/></svg>
+  </a>
+
   <script>
-    document.querySelectorAll('.cta-wa').forEach(function (btn) {
+    document.querySelectorAll('.cta-checkout').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        if (typeof fbq === 'function') fbq('track', 'Contact');
+        if (typeof fbq === 'function') fbq('track', 'InitiateCheckout');
       });
     });
+    var whatsFlutuante = document.getElementById('whatsFlutuante');
+    if (whatsFlutuante) {
+      whatsFlutuante.addEventListener('click', function () { if (typeof fbq === 'function') fbq('track', 'Contact'); });
+    }
 
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -574,7 +601,9 @@
     var hero = document.querySelector('.hero');
     var barra = document.getElementById('barraMobile');
     var heroObserver = new IntersectionObserver(function (entries) {
-      barra.classList.toggle('ativa', !entries[0].isIntersecting);
+      var mobileAtiva = !entries[0].isIntersecting;
+      barra.classList.toggle('ativa', mobileAtiva);
+      if (whatsFlutuante) whatsFlutuante.classList.toggle('subiu', mobileAtiva && window.innerWidth < 768);
     }, { threshold: 0 });
     heroObserver.observe(hero);
   </script>

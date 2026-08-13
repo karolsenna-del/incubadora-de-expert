@@ -216,17 +216,17 @@ Manda o link certo conforme a oferta que você indicou na ligação (não manda 
 
 | Oferta | Link |
 |---|---|
-| Método Express (R$300) | https://vendas-incubadora.vercel.app/metodo-express/ |
-| Método VIP (R$1.500) | https://vendas-incubadora.vercel.app/metodo-vip/ |
-| Sprint do Método (R$3.000) | https://vendas-incubadora.vercel.app/sprint-do-metodo/ |
-| Grupo (R$5.000/12m) | https://vendas-incubadora.vercel.app/grupo/ |
-| Individual (R$10.000/12m) | https://vendas-incubadora.vercel.app/individual/ |
-| Expert360º (R$497) | https://vendas-incubadora.vercel.app/expert360/ |
-| Diagnóstico Ferramentas (R$97) | https://vendas-incubadora.vercel.app/diagnostico-ferramentas/ |
+| Método Express (R$300) | https://vendas.incubadoradeexpert.com.br/metodo-express/ |
+| Método VIP (R$1.500) | https://vendas.incubadoradeexpert.com.br/metodo-vip/ |
+| Sprint do Método (R$3.000) | https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/ |
+| Grupo (R$5.000/12m) | https://vendas.incubadoradeexpert.com.br/grupo/ |
+| Individual (R$10.000/12m) | https://vendas.incubadoradeexpert.com.br/individual/ |
+| Expert360º (R$497) | https://vendas.incubadoradeexpert.com.br/expert360/ |
+| Diagnóstico Ferramentas (R$97) | https://vendas.incubadoradeexpert.com.br/diagnostico-ferramentas/ |
 
-O botão de Grupo, Individual e Expert360º já abre o checkout real (Hotmart/Voomp) — o lead pode fechar direto na página. As outras 4 (Express, VIP, Sprint, Diagnóstico) ainda abrem o WhatsApp — fecham no pix pela conversa.
+**Atualizado 13/08:** as 7 páginas agora vivem em domínio próprio (`vendas.incubadoradeexpert.com.br`); o link antigo (`vendas-incubadora.vercel.app`) continua no ar em paralelo, mas manda sempre o novo daqui pra frente. Todos os 7 botões já abrem o checkout real na própria página (Voomp Creators) — o lead pode fechar sozinho, sem precisar de link separado nem de você. Antes só Grupo/Individual/Expert360º tinham isso; Express, VIP, Sprint e Diagnóstico foram migrados nesta data (VIP e Sprint corrigiram um bug — apontavam pro checkout errado desde 12/08; Grupo e Individual também trocaram de Hotmart pra Voomp, aprovado pela Karol).
 
-### Dados do PIX (pra fechar Express, VIP, Sprint e Diagnóstico Ferramentas direto na conversa)
+### Dados do PIX (alternativa manual, se o lead preferir fechar direto com você em vez de usar o checkout da página)
 
 **Informações PIX:**
 - Nome: Gestão pra Tudo - Karoline Franzini de Carvalho Senna
