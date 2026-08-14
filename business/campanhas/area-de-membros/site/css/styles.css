@@ -100,6 +100,8 @@ body.app-body { background: var(--preto); color: var(--branco); }
 .conteudo-eyebrow { font-family: var(--display); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--laranja); display: block; margin-bottom: 10px; }
 .conteudo-titulo { font-size: 1.7rem; font-weight: 800; margin-bottom: 26px; letter-spacing: -0.01em; }
 .player-box { background: var(--preto-2); border: 1px solid var(--preto-3); border-radius: 16px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; color: var(--cinza-500); font-size: 0.92rem; margin-bottom: 24px; }
+.player-box.embed { padding: 0; overflow: hidden; }
+.player-box.embed iframe { width: 100%; height: 100%; border: 0; border-radius: inherit; }
 .materiais { background: var(--preto-2); border: 1px solid var(--preto-3); border-radius: 12px; padding: 20px 22px; margin-bottom: 26px; }
 .materiais h3 { font-size: 0.92rem; margin-bottom: 10px; color: var(--branco); }
 .materiais ul { list-style: none; display: grid; gap: 8px; }

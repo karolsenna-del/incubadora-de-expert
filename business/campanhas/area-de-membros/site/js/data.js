@@ -4,7 +4,8 @@
 // Tudo marcado com "// PLACEHOLDER" ainda não foi entregue pela Karol — não inventar conteúdo final aqui.
 // ============================================
 
-// Roteiro do Expert360º — nomes de módulo REAIS (course-publisher-kb.md). Aulas dentro de cada módulo são placeholder.
+// Roteiro do Expert360º — nomes de módulo REAIS (course-publisher-kb.md). M0-M2 têm título+youtube_id
+// reais (fonte: agents/course-publisher/data/config.yaml). M3-M4 ainda placeholder — vídeo não gravado.
 const ROTEIRO_EXPERT360 = {
   id: 'expert360',
   nome: 'Expert360º',
@@ -12,20 +13,41 @@ const ROTEIRO_EXPERT360 = {
     {
       id: 'm0', numero: 'M0', titulo: 'Desbloqueio',
       aulas: [
-        { titulo: 'Introdução', concluida: true },
-        { titulo: 'Fracasso como Prova', concluida: true },
-        { titulo: 'Sua História Real', concluida: true },
-        { titulo: 'Ikigai', concluida: false },
-        { titulo: 'Encerramento — Quem Você Se Tornou', concluida: false }
+        { titulo: 'Introdução', concluida: true, youtube_id: 'vJj2pCeJYAI' },
+        { titulo: 'Fracasso como Prova', concluida: true, youtube_id: 'PtGmzBl1H0Y' },
+        { titulo: 'Sua História Real', concluida: true, youtube_id: 'Ok4Rv2Kskyc' },
+        { titulo: 'Ikigai', concluida: false, youtube_id: 'trhH9zkWpg0' },
+        { titulo: 'Encerramento — Quem Você Se Tornou', concluida: false, youtube_id: 'rlFwMM8KQjA' }
       ]
     },
     {
+      // Títulos e youtube_id via course-publisher config.yaml (fonte oficial de mapeamento aula→vídeo)
       id: 'm1', numero: 'M1', titulo: 'Persona e Promessa', subtitulo: 'Para de vender pra todo mundo',
-      aulas: Array.from({ length: 8 }, (_, i) => ({ titulo: `Aula ${i + 1}`, concluida: false })) // PLACEHOLDER
+      aulas: [
+        { titulo: 'Boas-vindas ao M1', concluida: false, youtube_id: 'Zu0xBRBY3mM' },
+        { titulo: 'O que é Persona Compradora', concluida: false, youtube_id: 'i_t69Lq-tx8' },
+        { titulo: 'Exercício: Agente da Persona', concluida: false, youtube_id: '9CYk8jvNg3Y' },
+        { titulo: 'O que é Promessa Transformadora', concluida: false, youtube_id: 'L_dzTw-c8b4' },
+        { titulo: 'Exercício: Agente da Promessa', concluida: false, youtube_id: 's6VNasrevwY' },
+        { titulo: 'Posicionamento no Mercado', concluida: false, youtube_id: '-BlTLClbx78' },
+        { titulo: 'O Custo Invisível do Sim', concluida: false, youtube_id: 'EPsmMlqu7NQ' },
+        { titulo: 'Quem Você se Tornou no M1', concluida: false, youtube_id: 'zMbcIcrDHFY' }
+      ]
     },
     {
+      // Ordem segue o currículo reestruturado em 14/07/2026 (course-publisher config.yaml), não a numeração do arquivo de vídeo
       id: 'm2', numero: 'M2', titulo: 'Método Autoral', subtitulo: 'Inconfundível. Com nome próprio.',
-      aulas: Array.from({ length: 9 }, (_, i) => ({ titulo: `Aula ${i + 1}`, concluida: false })) // PLACEHOLDER
+      aulas: [
+        { titulo: 'O que te espera no Módulo 2', concluida: false, youtube_id: '88MC-eycrgE' },
+        { titulo: 'Você não precisa saber tudo', concluida: false, youtube_id: '11ivTDwd1ws' },
+        { titulo: 'Seu método já existe', concluida: false, youtube_id: 'KeI0rnRISeE' },
+        { titulo: 'O que é um Método Autoral', concluida: false, youtube_id: 'L1O9iCSYTnk' },
+        { titulo: 'As 3 Jornadas do Aluno', concluida: false, youtube_id: 'gufIRh7Kh-M' },
+        { titulo: 'Agente do Processo Autoral', concluida: false, youtube_id: 'FV7TbHZsld4' },
+        { titulo: 'Por que ferramentas vendem mais do que copy', concluida: false, youtube_id: '1yl97febgHg' },
+        { titulo: 'Agente do Portfólio Estratégico', concluida: false, youtube_id: 'Y1edC4d-iwU' },
+        { titulo: 'Quem Você se Tornou no M2', concluida: false, youtube_id: 'UyATh-MRLpQ' }
+      ]
     },
     {
       id: 'm3', numero: 'M3', titulo: 'Vendas Secretas', subtitulo: '3 vendas reais antes de aparecer',
@@ -39,24 +61,22 @@ const ROTEIRO_EXPERT360 = {
 };
 
 // Roteiro da Mentoria — estrutura descrita no briefing (business/campanhas/area-de-membros/briefing.md). Conteúdo placeholder.
+// Teoria do método (Expert360º) NÃO é módulo daqui — é acesso direto à trilha 'expert360' (ver TRILHA_POR_OFERTA,
+// decisão 14/08: dar acesso em vez de duplicar conteúdo — fonte única de verdade pro vídeo).
 const ROTEIRO_MENTORIA = {
   id: 'mentoria',
   nome: 'Mentoria',
   modulos: [
     {
-      id: 'metodo', numero: '01', titulo: 'Teoria do Método (Expert360º)',
-      aulas: [{ titulo: 'Reaproveita o roteiro completo do Expert360º acima', concluida: false }]
-    },
-    {
-      id: 'encontros-incubadora', numero: '02', titulo: 'Encontros da Incubadora',
+      id: 'encontros-incubadora', numero: '01', titulo: 'Encontros da Incubadora',
       aulas: Array.from({ length: 3 }, (_, i) => ({ titulo: `Encontro ${i + 1}`, concluida: false })) // PLACEHOLDER
     },
     {
-      id: 'lives', numero: '03', titulo: 'Lives Expert360º',
+      id: 'lives', numero: '02', titulo: 'Lives Expert360º',
       aulas: Array.from({ length: 3 }, (_, i) => ({ titulo: `Live ${i + 1}`, concluida: false })) // PLACEHOLDER
     },
     {
-      id: 'individuais', numero: '04', titulo: 'Encontros Individuais',
+      id: 'individuais', numero: '03', titulo: 'Encontros Individuais',
       aulas: [], // PLACEHOLDER — populado automaticamente conforme as sessões 1:1 são gravadas (ver briefing.md)
       vazio_msg: 'Suas sessões individuais aparecem aqui automaticamente depois de gravadas.'
     }
@@ -76,21 +96,26 @@ const VITRINE_OFERTAS = [
   { slug: 'individual', nome: 'Individual', preco: 'R$10.000/12m', desc: '1:1 do zero até escalar, tudo personalizado', intensidade: 7 }
 ];
 
-// Exemplo de matrícula (Fase 1 — mock. Fase 4 troca isso por leitura real do Supabase via webhook Voomp)
-const MATRICULA_EXEMPLO = ['expert360', 'metodo-vip']; // PLACEHOLDER — ofertas que este aluno de exemplo já tem
+// Matrícula do aluno logado — valor abaixo é só o fallback do modo preview (sem sessão real).
+// Com sessão real, `carregarMatriculaReal()` (app.js) sobrescreve isso com a leitura de verdade
+// da tabela `matriculas` (gravada pelo webhook Voomp — ver api/webhook-voomp.js), no boot.
+const MATRICULA_EXEMPLO = ['expert360', 'metodo-vip']; // fallback do modo preview
 
-// Mapeia cada oferta pra trilha de CONTEÚDO (Roteiro) que ela libera — não é 1:1 com a Vitrine, que mostra as 7 ofertas.
-// Fonte: briefing.md ("Público/Quem usa o quê") + decisão de 12/08 — Grupo e Individual são as mentorias 1:1 de
-// 12 meses (roteiro fixo, "Jornada de 12 meses"). VIP, Método Express, Sprint do Método e Diagnóstico Ferramentas
+// Mapeia cada oferta pras trilhas de CONTEÚDO (Roteiro) que ela libera — não é 1:1 com a Vitrine, que mostra as 7 ofertas.
+// Cada valor é um array (uma oferta pode liberar mais de 1 trilha). Fonte: briefing.md ("Público/Quem usa o quê") +
+// decisão de 12/08 — Grupo e Individual são as mentorias 1:1 de 12 meses (roteiro fixo, "Jornada de 12 meses"), que
+// por sua vez inclui a teoria do método Expert360º. VIP, Método Express, Sprint do Método e Diagnóstico Ferramentas
 // são consultorias individuais mais curtas — caem na trilha "Consultorias" (conteúdo dinâmico, não currículo fixo).
+// Decisão 14/08: Grupo/Individual ganham acesso DIRETO à trilha 'expert360' (mesma aba, mesmo vídeo) em vez de
+// replicar as aulas do método dentro da Mentoria — evita 2 cópias do mesmo conteúdo dessincronizando com o tempo.
 const TRILHA_POR_OFERTA = {
-  'expert360': 'expert360',
-  'grupo': 'mentoria',
-  'individual': 'mentoria',
-  'metodo-vip': 'consultorias',
-  'metodo-express': 'consultorias',
-  'sprint-do-metodo': 'consultorias',
-  'diagnostico-ferramentas': 'consultorias'
+  'expert360': ['expert360'],
+  'grupo': ['expert360', 'mentoria'],
+  'individual': ['expert360', 'mentoria'],
+  'metodo-vip': ['consultorias'],
+  'metodo-express': ['consultorias'],
+  'sprint-do-metodo': ['consultorias'],
+  'diagnostico-ferramentas': ['consultorias']
 };
 
 // Trilha "Consultorias" — ao contrário de Expert360º/Mentoria, não tem módulos/aulas fixos no data.js: o

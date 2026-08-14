@@ -1,6 +1,9 @@
-# Course Publisher — Estado da Sincronização Semanal (Meet → Hotmart)
+# Course Publisher — Estado da Sincronização Semanal (Meet → Área de Membros)
 # Atualizado a cada execução da task weekly-sync.md — nunca editar manualmente
 # sem necessidade, é o que evita subir aula duplicada.
+# 14/08/2026: destino mudou de Hotmart (upload nativo) pra YouTube não-listado + tabela
+# encontros_mentoria no Supabase — ver weekly-sync.md pro protocolo novo. Corte direto,
+# sem período em paralelo (decisão da Karol).
 
 live_expert360:
   ultimo_processado_titulo: "Live Expert360 - 2026/08/05 13:58 GMT-04:00 - Recording"
@@ -24,6 +27,15 @@ mentoria_em_grupo:
   ultima_execucao: "2026-08-13"
   # 13/08/2026: nenhuma gravação nova encontrada em nenhuma das duas raízes do Drive — não
   # houve Encontro Incubadora (ou não foi gravado) na segunda-feira 10/08.
+  # 14/08/2026: a partir da PRÓXIMA gravação nova, destino vira YouTube+encontros_mentoria (não
+  # mais Hotmart) — ver weekly-sync.md.
+
+encontros_individuais:
+  ultimo_processado_titulo: null
+  ultimo_processado_data: null
+  ultima_execucao: null
+  # 14/08/2026: série nova (padrão "Individual - {slug} - {AAAA-MM-DD}") — ainda nenhuma gravação
+  # com esse padrão foi processada. Primeira rodada busca sem filtro de data mínima (campo null).
 
 pendencias:
   - data: "2026-08-13"

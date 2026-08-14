@@ -134,19 +134,26 @@ Missao: "Gera as capas dos modulos do Expert360"
 
 ---
 
-### SOP-009: Sincronizar Gravações Semanais do Meet → Hotmart (recorrente, autônoma)
+### SOP-009: Sincronizar Gravações Semanais do Meet → Área de Membros (recorrente, autônoma)
 
 **Quando usar:** disparada por agendamento (Task Scheduler configurado pelo Ops), não por pedido
 direto da Karol. Roda toda semana sozinha.
 
+**Mudou em 14/08/2026:** destino deixou de ser Hotmart (upload nativo) — agora sobe no YouTube
+Não-listado (mesmo canal/procedimento da SOP-008 Fase 1) e grava a linha em `encontros_mentoria`
+no Supabase. Corte direto, sem período em paralelo com o Hotmart (decisão da Karol).
+
 **Inputs necessários:**
 - Pasta Drive "Meet Recordings" (`1eZySH6OIAsGasoHAZB9XxII0Gx686qQi`)
-- `data/weekly-sync-state.yaml` (o que já foi processado)
+- `data/weekly-sync-state.yaml` (o que já foi processado, séries: Live Expert360, Mentoria em
+  Grupo, Encontros Individuais)
 - `business/campanhas/lives-semanais/live-{N}-*.md` (roteiros das Lives, pra título)
 - Anotações do Gemini de cada Encontro Incubadora (Drive, pra tema)
-- Sessão Hotmart ativa (`combo_incubadora_url` no vault)
+- Sessão do YouTube Studio ativa (canal Karol Senna)
+- `service_role key` do Supabase (`business/vault/supabase.md`) pra gravar em `encontros_mentoria`
 
-**Passos:** ver `tasks/weekly-sync.md` — protocolo completo.
+**Passos:** ver `tasks/weekly-sync.md` — protocolo completo (upload YouTube reaproveita SOP-008
+Fase 1, não repetido aqui).
 
 **Regras obrigatórias:** REGRA-002, REGRA-003, REGRA-009, REGRA-013, REGRA-014, REGRA-015.
 

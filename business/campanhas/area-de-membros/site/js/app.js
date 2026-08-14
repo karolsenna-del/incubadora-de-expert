@@ -7,10 +7,32 @@ let aulaAtivaRef = null; // { moduloId, aulaIdx }
 let modoFoco = false;
 let sessaoAtual = null;
 
-// ---------- TRILHAS LIBERADAS (por matrícula — hoje usa MATRICULA_EXEMPLO, Fase 4 troca por matrícula real) ----------
+// ---------- MATRÍCULA REAL (tabela `matriculas`, gravada pelo webhook Voomp) ----------
+// Substitui o mock MATRICULA_EXEMPLO por dado real quando há sessão logada de verdade.
+// Modo preview (sem user.id real) mantém o mock do data.js intacto — QA continua funcionando.
+async function carregarMatriculaReal() {
+  const userId = sessaoAtual && sessaoAtual.user && sessaoAtual.user.id;
+  const email = sessaoAtual && sessaoAtual.user && sessaoAtual.user.email;
+  if (!userId || !email) return;
+
+  const { data, error } = await getSupabase()
+    .from('matriculas')
+    .select('produto_slug')
+    .eq('email', email)
+    .eq('ativo', true);
+
+  if (error) { console.error('Erro ao carregar matrícula:', error); return; }
+
+  MATRICULA_EXEMPLO.length = 0;
+  (data || []).forEach(row => {
+    if (!MATRICULA_EXEMPLO.includes(row.produto_slug)) MATRICULA_EXEMPLO.push(row.produto_slug);
+  });
+}
+
+// ---------- TRILHAS LIBERADAS (por matrícula) ----------
 // Vitrine mostra as 7 ofertas; Roteiro só mostra a(s) trilha(s) de conteúdo que a matrícula libera (TRILHA_POR_OFERTA).
 function trilhasDoAluno() {
-  const idsLiberados = new Set(MATRICULA_EXEMPLO.map(slug => TRILHA_POR_OFERTA[slug]).filter(Boolean));
+  const idsLiberados = new Set(MATRICULA_EXEMPLO.flatMap(slug => TRILHA_POR_OFERTA[slug] || []));
   return TRILHAS.filter(t => idsLiberados.has(t.id));
 }
 
@@ -65,6 +87,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (!session) return;
   sessaoAtual = session;
 
+  await carregarMatriculaReal(); // precisa rodar antes de qualquer trilhasDoAluno() — define o que o aluno realmente comprou
+  await carregarEncontrosMentoria(); // precisa rodar antes: define o tamanho final de aulas[] que carregarProgresso indexa
   await carregarProgresso();
   const minhasTrilhas = trilhasDoAluno();
   trilhaAtivaId = minhasTrilhas.length ? minhasTrilhas[0].id : null;
@@ -227,6 +251,33 @@ async function carregarProgresso() {
   });
 }
 
+// ---------- ENCONTROS DA MENTORIA (tabela `encontros_mentoria` — populada pela automação weekly-sync do course-publisher) ----------
+// Substitui os módulos placeholder "Encontros da Incubadora"/"Lives Expert360º" por dado real quando existir.
+// Sem sessão real (modo preview) ou sem linha na tabela ainda: mantém o placeholder do data.js.
+async function carregarEncontrosMentoria() {
+  const userId = sessaoAtual && sessaoAtual.user && sessaoAtual.user.id;
+  if (!userId) return;
+
+  const { data, error } = await getSupabase()
+    .from('encontros_mentoria')
+    .select('tipo, titulo, youtube_id, data_encontro')
+    .in('tipo', ['incubadora', 'live'])
+    .order('data_encontro', { ascending: true });
+
+  if (error) { console.error('Erro ao carregar encontros da mentoria:', error); return; }
+  if (!data || !data.length) return; // RLS sem matrícula na mentoria, ou tabela ainda vazia — mantém placeholder
+
+  const porTipo = { incubadora: [], live: [] };
+  data.forEach(row => { if (porTipo[row.tipo]) porTipo[row.tipo].push(row); });
+
+  const mapaModulo = { incubadora: 'encontros-incubadora', live: 'lives' };
+  Object.entries(mapaModulo).forEach(([tipo, moduloId]) => {
+    if (!porTipo[tipo].length) return; // sem gravação real desse tipo ainda — mantém placeholder
+    const modulo = ROTEIRO_MENTORIA.modulos.find(m => m.id === moduloId);
+    if (modulo) modulo.aulas = porTipo[tipo].map(row => ({ titulo: row.titulo, concluida: false, youtube_id: row.youtube_id }));
+  });
+}
+
 async function salvarProgresso(trilhaId, moduloId, aulaIdx, concluida) {
   const userId = sessaoAtual && sessaoAtual.user && sessaoAtual.user.id;
   if (!userId) return true; // modo preview — nada real pra persistir, nao trata como falha
@@ -383,7 +434,7 @@ async function renderConsultorias() {
 
   timeline.innerHTML = '';
 
-  const ofertasConsultoria = MATRICULA_EXEMPLO.filter(slug => TRILHA_POR_OFERTA[slug] === 'consultorias');
+  const ofertasConsultoria = MATRICULA_EXEMPLO.filter(slug => (TRILHA_POR_OFERTA[slug] || []).includes('consultorias'));
 
   const secaoPropria = document.createElement('div');
   secaoPropria.className = 'consultoria-secao';
@@ -546,7 +597,9 @@ function selecionarAula(modulo, idx) {
   col.innerHTML = `
     <span class="conteudo-eyebrow">${modulo.titulo}</span>
     <h1 class="conteudo-titulo">${aula.titulo}</h1>
-    <div class="player-box">▶ ${aula.titulo}</div>
+    ${aula.youtube_id
+      ? `<div class="player-box embed"><iframe src="https://www.youtube-nocookie.com/embed/${aula.youtube_id}" title="${aula.titulo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+      : `<div class="player-box">▶ ${aula.titulo}</div>`}
     <div class="conteudo-acoes">
       <button class="btn-concluir ${aula.concluida ? 'feita' : ''}" id="btn-marcar-concluida">
         ${aula.concluida ? 'Aula concluída ✓ — desmarcar' : 'Marcar aula como concluída'}

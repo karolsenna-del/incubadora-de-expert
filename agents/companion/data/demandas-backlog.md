@@ -36,6 +36,8 @@
 
 ## Importante (proximo foco)
 
+- **Otimizar funil de mini treinamento (LP → WhatsApp)** (14/08, weekly review) — Karol reportou que o funil "nunca deu resultado". Nao vira projeto novo agora (cockpit sem vaga, 3 ativos) — fica registrado pra priorizar quando abrir espaco ou a dor aumentar. Precisa de diagnostico antes de mexer (LP fraca? trafego fraco? oferta errada?) — nao presumir causa.
+
 - ~~**6 posts da `business/instagram/fila/` — revisar copy e produzir carrossel**~~ — **CONCLUIDO.** Confirmado 28/07 (Karol) + git log: os 6 (`cansaco-palavra-do-ano`, `diploma-vs-vivencia`, `duas-pos-graduacoes`, `medo-parecer-amadora`, `nao-precisa-seguidores`, `sabe-demais-paralisando`) ja tinham sido publicados automaticamente pelo insta-scheduler entre 24-29/06. Item ficou desatualizado no backlog por engano.
 - ~~**Limpar 12 screenshots do Cloudinary soltos na raiz**~~ — **CONCLUIDO 12/07 (Organizer).** Eram 13 arquivos `cloudinary-*.png` (prints do wizard de onboarding), todos commitados no git. Varredura de seguranca: nenhum exibia API key/secret (apesar dos nomes `cloudinary-apikeys*.png`) — sem necessidade de rotacionar credencial. Backup dispensado: historico do git ja preserva. `git rm` dos 13 + commit local. Push pendente com o Ops.
 - ~~**Criar "Expert em Lives" via Worker Forge**~~ — **CONCLUIDO 18/06**. Worker criado e instalado.

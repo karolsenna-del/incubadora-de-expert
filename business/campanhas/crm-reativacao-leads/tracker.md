@@ -19,9 +19,9 @@
 | 2 | Schema do banco (Camada Sistema: crm_leads + crm_followups) | Done | 28/07 | 28/07 |
 | 3 | Importacao de dados das 4 fontes | Done — Forms + Hotmart (28/07) + grupo WhatsApp (30/07) | 28/07 | 30/07 |
 | 4 | Interface planilha (zona robo / zona closer) + sync n8n | Done | 30/07 | 30/07 |
-| 5 | Ativacao com o comercial | Nao iniciado | — | — |
+| 5 | Ativacao com o comercial | Descontinuada nesse formato — 14/08 | — | 14/08 |
 
-**Fase atual:** 5 — Ativacao com o comercial. Arsenal de vendas do closer pronto (31/07). 7 paginas de venda no ar (02/08) — falta so ativacao efetiva do closer.
+**Fase atual:** Projeto virou Operacao Continua (14/08, confirmado com a Karol no weekly review). Closer pausado (decisao 11/08) — Karol reativa os leads pessoalmente, usando planilha/CRM/arsenal ja prontos, ate o processo virar validado e repetivel. Ferramenta permanece pronta e disponivel pro closer quando retomar. Ver [cockpit](../../cockpit.md) — Operacoes Continuas.
 
 **Links das 7 paginas (site `vendas-incubadora` no Vercel, dominio proprio desde 13/08):**
 - Metodo Express (R$300): https://vendas.incubadoradeexpert.com.br/metodo-express/

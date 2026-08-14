@@ -10,6 +10,16 @@
 **Impacto:** [o que muda]
 -->
 
+## 14/08/2026 — Área de membros vira entrega da Individual (fase de escala) + manutenção recorrente pós-mentoria
+
+**Contexto:** Ao pensar em dar "cara de produto" ao Sprint do Método — que hoje entrega os 5Ps + roteiros de validação via pasta de Drive replicada por aluno + encontros por Zoom/Meet, sem nenhuma plataforma — Karol cogitou incluir uma área de membros clonada da própria (adaptada com a identidade visual do cliente, inicialmente só com a trilha Mentoria). Ao olhar o esforço real de construção da própria Área de Membros (dezenas de missões no tracker), ficou claro que replicar isso a cada venda do Sprint (R$3.000/5 semanas) não escala sem um "motor" replicável pronto pra spin-up rápido — que Karol decidiu não construir agora, preferindo deixar a própria estrutura amadurecer com uso e ajustes reais antes de generalizar pra outros clientes.
+
+**Decisão:** Área de membros (site próprio do aluno, identidade visual adaptada, inicialmente só trilha Mentoria) passa a ser entrega da **Mentoria Individual (R$10.000/12 meses)**, dentro da fase de escala (mês 7-12) — como extensão do que já estava prometido ali (página/LP, funil de automação, configuração de tráfego — decisão de 31/07). Não entra no Sprint do Método por enquanto. Abre também a possibilidade de **manutenção recorrente paga após o fim dos 12 meses**, pra quem quiser manter o site rodando e atualizado — escopo exato dessa recorrência (ilimitado vs. pacote fechado de ajustes/mês) ainda não foi fechado.
+
+**Racional:** R$10K/12 meses tem margem e prazo pra absorver construção sob medida (sem motor replicável pronto) — o que R$3.000/5 semanas do Sprint não tem. A Individual já promete infra nessa fase (página/LP/funil/tráfego), então área de membros formaliza/estende esse item em vez de criar escopo novo do zero. Motor replicável fica pra depois — pavimenta primeiro (Karol usa e ajusta a própria estrutura antes de generalizar pra outros clientes).
+
+**Impacto:** Roteiro da Individual (fase de escala, mês 7-12) precisa refletir área de membros como parte do item de infra já existente. `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md` deve registrar essa entrega + a linha de manutenção recorrente pós-mentoria (receita nova, escopo do pacote em aberto). Sprint do Método segue como está (persona/promessa/processo/proposta/agente do método + roteiros de validação, entrega via Drive/Zoom) — sem área de membros por ora. Motor replicável (template genérico pra spin-up rápido por cliente) fica como ideia futura, condicionada à maturidade da própria Área de Membros da Karol.
+
 ## 11/08/2026 — Checkout unificado na Voomp pra todas as 7 ofertas
 
 **Contexto:** Ao desenhar a vitrine da área de membros (mostrando as 7 ofertas do ecossistema), Karol decidiu unificar o checkout. Ela já tinha criado checkout na Voomp pro Método VIP e pro Sprint do Método (que antes fechavam por Hotmart/conversa) e vai criar pros demais, incluindo o Diagnóstico Ferramentas (R$97).
