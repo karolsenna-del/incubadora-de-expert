@@ -40,3 +40,14 @@ _backup-pre-sync/
 *.wav
 *.m4a
 .vercel
+
+# ── Protecoes do Auroq OS (adicionadas automaticamente) ──
+# Segredos — NUNCA sobem pro GitHub
+*.key
+*.pem
+
+# Midia pesada — fica no Drive, nao no repo
+*.png
+*.jpeg
+*.jpg
+*.mov

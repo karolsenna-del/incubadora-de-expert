@@ -14,8 +14,10 @@
 
 const path = require('path');
 const fs = require('fs-extra');
-const { execSync } = require('child_process');
+const { execSync, execFileSync } = require('child_process');
 const auth = require('../lib/auth');
+
+const PKG_VERSION = require('../package.json').version;
 
 // ─── CORES ───────────────────────────────────────────────
 const PURPLE = '\x1b[38;2;120;80;200m';
@@ -32,7 +34,7 @@ function showBanner() {
 
 ${PURPLE}  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}
 
-${PURPLE}${BOLD}       ▄▀█ █  █ █▀█ █▀█ █▀█${RESET}  ${DIM}OS v1.0${RESET}
+${PURPLE}${BOLD}       ▄▀█ █  █ █▀█ █▀█ █▀█${RESET}  ${DIM}OS v${PKG_VERSION}${RESET}
 ${PURPLE}${BOLD}       █▀█ █▄▄█ █▀▄ █▄█ ▀▀█${RESET}
 
 ${DIM}       Sistema Operacional de IA para Experts${RESET}
@@ -52,6 +54,131 @@ function warn(msg) { console.log(`  ${GOLD}!${RESET} ${msg}`); }
 function error(msg) { console.log(`  ${PURPLE}✗${RESET} ${msg}`); }
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+// Pergunta sim/nao no terminal. Funciona em TTY e com stdin encadeado (pipe).
+// Se o stdin estiver fechado (automatos/CI), question() nunca resolve — por isso
+// a corrida com o evento 'close': EOF vira resposta vazia, ou seja, "nao".
+async function askYesNo(question) {
+  const readline = require('node:readline/promises');
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+  try {
+    const closed = new Promise(resolve => rl.once('close', () => resolve('')));
+    const answer = String(await Promise.race([rl.question(question), closed])).trim().toLowerCase();
+    return answer === 's' || answer === 'sim' || answer === 'y' || answer === 'yes';
+  } catch {
+    return false;
+  } finally {
+    rl.close();
+  }
+}
+
+// ─── PROTECAO DE SEGREDOS (gitignore canonico) ───────────
+// Gerado por codigo, nao copiado de arquivo: o tarball do npm nem sempre
+// preserva .gitignore, e o merge preserva as linhas proprias do expert.
+const GITIGNORE_PROTECTIONS = [
+  ['Segredos — NUNCA sobem pro GitHub', ['.env', '.env.local', '.env.*.local', '.npmrc', 'business/vault/', '*.key', '*.pem']],
+  ['Runtime — se recria sozinho em cada maquina', ['node_modules/', '.auroq/', '.synapse/sessions/', '.tmp/', '*.tmp', '*.log']],
+  ['Skills do Codex — geradas por maquina', ['.agents/skills/']],
+  ['Sistema operacional', ['.DS_Store', 'Thumbs.db']],
+  ['Midia pesada — fica no Drive, nao no repo', ['*.png', '*.jpeg', '*.jpg', '*.mp4', '*.mov', '*.mp3', '*.wav']],
+];
+
+async function ensureGitignore(targetDir) {
+  const giPath = path.join(targetDir, '.gitignore');
+  const existing = (await fs.pathExists(giPath)) ? await fs.readFile(giPath, 'utf8') : '';
+  const have = new Set(existing.split('\n').map(l => l.trim()).filter(Boolean));
+  const missingBlocks = [];
+  for (const [comment, lines] of GITIGNORE_PROTECTIONS) {
+    const missing = lines.filter(l => !have.has(l));
+    if (missing.length) missingBlocks.push(`# ${comment}\n${missing.join('\n')}`);
+  }
+  if (!missingBlocks.length) return [];
+  const base = existing.trim().length ? existing.replace(/\s*$/, '\n\n') : '';
+  const header = '# ── Protecoes do Auroq OS (adicionadas automaticamente) ──\n';
+  await fs.writeFile(giPath, base + header + missingBlocks.join('\n\n') + '\n');
+  return missingBlocks.flatMap(b => b.split('\n').filter(l => l && !l.startsWith('#')));
+}
+
+// Tira do controle de versao segredos que ja foram rastreados (ficam no disco).
+async function untrackSecrets(targetDir) {
+  if (!(await fs.pathExists(path.join(targetDir, '.git')))) return [];
+  let tracked = [];
+  try {
+    const out = execFileSync('git', ['ls-files', '--', 'business/vault', '.env', '.env.local', '*.key', '*.pem', '.npmrc'], { cwd: targetDir, encoding: 'utf8' });
+    tracked = out.split('\n').map(s => s.trim()).filter(Boolean);
+  } catch {
+    return [];
+  }
+  if (!tracked.length) return [];
+  try {
+    execFileSync('git', ['rm', '-r', '--cached', '--quiet', '--', ...tracked], { cwd: targetDir, stdio: 'pipe' });
+  } catch {
+    return [];
+  }
+  return tracked;
+}
+
+async function applySecretProtections(targetDir) {
+  const added = await ensureGitignore(targetDir);
+  if (added.length) {
+    success(`Protecoes adicionadas ao .gitignore (${added.length} regras: vault, .env, runtime, midia)`);
+  } else {
+    success('.gitignore ja protege segredos e runtime');
+  }
+  const untracked = await untrackSecrets(targetDir);
+  if (untracked.length) {
+    warn(`${untracked.length} arquivo(s) sensivel(is) removido(s) do controle de versao (continuam no seu disco):`);
+    for (const f of untracked.slice(0, 8)) log(`${DIM}    - ${f}${RESET}`);
+    if (untracked.length > 8) log(`${DIM}    ... e mais ${untracked.length - 8}${RESET}`);
+    warn('No proximo commit isso vira permanente.');
+    let hasRemote = false;
+    try { hasRemote = execFileSync('git', ['remote'], { cwd: targetDir, encoding: 'utf8' }).trim().length > 0; } catch { /* sem git */ }
+    if (hasRemote) {
+      warn(`${GOLD}IMPORTANTE: esses arquivos podem ja ter subido pro GitHub em commits antigos.${RESET}`);
+      warn(`${GOLD}Troque as chaves que estavam neles — peca ajuda ao Ops: "minhas chaves do vault${RESET}`);
+      warn(`${GOLD}podem ter vazado no git, me ajuda a trocar e limpar".${RESET}`);
+    }
+  }
+  return { added, untracked };
+}
+
+// ─── HEALTH CHECK (compartilhado por init e clone) ───────
+const HEALTH_CHECKS = [
+  ['.auroq-core/constitution.md', 'Constitution'],
+  ['.claude/CLAUDE.md', 'CLAUDE.md'],
+  ['.claude/hooks/synapse-engine.cjs', 'Synapse Hook'],
+  ['agents/companion/agents/companion.md', 'Companion'],
+  ['agents/organizer/agents/organizer.md', 'Organizer'],
+  ['.claude/commands/AuroqOS/agents/ops.md', 'Ops'],
+  ['agents/squad-forge/agents/forge-chief.md', 'Squad Forge'],
+  ['agents/mind-forge/agents/forge-chief.md', 'Mind Forge'],
+  ['agents/worker-forge/agents/worker-chief.md', 'Worker Forge'],
+  ['agents/clone-forge/agents/clone-forge-chief.md', 'Clone Forge'],
+  ['agents/etlmaker/agents/etl-chief.md', 'ETLmaker'],
+  ['business/cockpit.md', 'Cockpit'],
+  ['.synapse/manifest', 'Synapse Manifest'],
+  ['AGENTS.md', 'Codex AGENTS.md'],
+  ['.agents/skills/companion/SKILL.md', 'Codex Companion'],
+  ['.agents/skills/ops/SKILL.md', 'Codex Ops'],
+  ['scripts/validate-hybrid.mjs', 'Validador hibrido'],
+];
+
+async function runHealthChecks(targetDir) {
+  let passed = 0;
+  for (const [file, label] of HEALTH_CHECKS) {
+    if (await fs.pathExists(path.join(targetDir, file))) {
+      passed++;
+    } else {
+      warn(`${label} nao encontrado`);
+    }
+  }
+  if (passed === HEALTH_CHECKS.length) {
+    success(`${passed}/${HEALTH_CHECKS.length} verificacoes OK`);
+  } else {
+    warn(`${passed}/${HEALTH_CHECKS.length} verificacoes OK — rode *bootstrap pra corrigir`);
+  }
+  return { passed, total: HEALTH_CHECKS.length };
+}
 
 // ─── INSTALACAO ──────────────────────────────────────────
 async function init() {
@@ -76,6 +203,27 @@ async function init() {
     error('');
     error('Troque "meu-negocio" pelo nome que quiser pro seu projeto.');
     process.exit(1);
+  }
+
+  // ─── GUARDRAIL: segunda maquina usa clone, nao init
+  // So pergunta em instalacao NOVA (pasta sem .auroq-core) — update/reinstall pula direto.
+  const isNewInstall = !(await fs.pathExists(path.join(targetDir, '.auroq-core')));
+  if (isNewInstall && process.env.AUROQ_INIT_MODE !== 'novo') {
+    const jaUsa = await askYesNo(`  Voce JA usa o Auroq OS em outra maquina e quer continuar o MESMO negocio aqui? ${DIM}(s/N)${RESET} `);
+    if (jaUsa) {
+      log('');
+      log(`${BOLD}Entao o caminho certo NAO e instalar do zero — e clonar o que ja existe.${RESET}`);
+      log('');
+      log('O seu negocio ja vive no GitHub (o Ops fez isso no Bootstrap 1).');
+      log('Instalar do zero aqui criaria um segundo Auroq desconectado do primeiro.');
+      log('');
+      log(`Rode: ${CYAN}npx auroq-os clone${RESET}`);
+      log('');
+      log(`${DIM}Ele baixa o seu negocio inteiro do GitHub — sistema, memoria e documentos —${RESET}`);
+      log(`${DIM}e deixa tudo pronto. Depois e so reconectar o cofre com *conectar-1password.${RESET}`);
+      log('');
+      process.exit(0);
+    }
   }
 
   log(`${DIM}Instalando em: ${targetDir}${RESET}\n`);
@@ -194,6 +342,7 @@ async function init() {
     '.claude/rules/project-tracker.md',
     '.claude/rules/tool-response-filtering.md',
     '.claude/rules/natural-language-first.md',
+    '.claude/rules/custom-do-aluno.md',
 
     // Hooks
     '.claude/hooks/synapse-engine.cjs',
@@ -255,7 +404,8 @@ async function init() {
     'docs/knowledge/expert-business/publico-alvo.md',
 
     // Root
-    '.gitignore',
+    // (.gitignore NAO entra aqui: e gerado por codigo em applySecretProtections —
+    //  o tarball do npm nem sempre o preserva, e a copia cega apagaria linhas do expert)
     '.env.example',
     'README.md',
 
@@ -267,6 +417,10 @@ async function init() {
 
   // Arquivos do ALUNO — nunca sobrescrever se ja existem
   const studentFiles = [
+    // Config/customizacao pessoal — o lugar oficial pra regras e overrides do aluno.
+    // O update do framework cria a semente na 1a vez e NUNCA mais toca.
+    '.claude/rules/custom-do-aluno.md',
+    '.claude/settings.local.json',
     'agents/companion/data/contexto-dinamico.md',
     'agents/companion/data/log-decisoes.md',
     'agents/companion/data/padroes-observados.md',
@@ -392,19 +546,9 @@ async function init() {
   }
   success(`${dirsCopied} modulos instalados (Meta Squads + scripts)`);
 
-  // ─── Fase 4c: Adaptador Codex CLI (skills locais por projeto)
-  step('Configurando Codex CLI...');
-  try {
-    execSync('node scripts/sync-codex-skills.mjs --clean', { cwd: targetDir, stdio: 'pipe' });
-    execSync('node scripts/sync-codex-skills.mjs --check', { cwd: targetDir, stdio: 'pipe' });
-    success('Codex CLI pronto — skills locais verificadas ($companion, $ops, etc.)');
-  } catch {
-    warn('Sync de skills do Codex falhou — rode "npx auroq-os sync-codex" para diagnosticar');
-  }
-
-  // ─── Fase 5: Package.json + npm install
-  step('Configurando dependencias...');
-
+  // O package.json precisa existir ANTES do sync do Codex: o ownership das
+  // skills usa o name do package — gerar skills antes dele criava marcador
+  // com o nome da pasta e todo sync seguinte recusava ("foreign").
   const pkgPath = path.join(targetDir, 'package.json');
   if (!(await fs.pathExists(pkgPath))) {
     await fs.writeJSON(pkgPath, {
@@ -417,6 +561,19 @@ async function init() {
       },
     }, { spaces: 2 });
   }
+
+  // ─── Fase 4c: Adaptador Codex CLI (skills locais por projeto)
+  step('Configurando Codex CLI...');
+  try {
+    execSync('node scripts/sync-codex-skills.mjs --clean', { cwd: targetDir, stdio: 'pipe' });
+    execSync('node scripts/sync-codex-skills.mjs --check', { cwd: targetDir, stdio: 'pipe' });
+    success('Codex CLI pronto — skills locais verificadas ($companion, $ops, etc.)');
+  } catch {
+    warn('Sync de skills do Codex falhou — rode "npx auroq-os sync-codex" para diagnosticar');
+  }
+
+  // ─── Fase 5: npm install
+  step('Configurando dependencias...');
 
   // Comandos namespaced: adiciona a manutencao Auroq sem sobrescrever scripts do negocio.
   const targetPackage = await fs.readJSON(pkgPath);
@@ -448,43 +605,15 @@ async function init() {
     success('Git ja inicializado');
   }
 
+  // Protecoes de segredo: .gitignore canonico + destraquear o que nao pode viajar.
+  // Roda em toda instalacao E em todo update (o update reexecuta o init) — e assim
+  // que alunos com instalacao antiga sao migrados automaticamente.
+  step('Protegendo segredos...');
+  await applySecretProtections(targetDir);
+
   // ─── Fase 7: Health check rapido
   step('Verificando integridade...');
-
-  const checks = [
-    ['.auroq-core/constitution.md', 'Constitution'],
-    ['.claude/CLAUDE.md', 'CLAUDE.md'],
-    ['.claude/hooks/synapse-engine.cjs', 'Synapse Hook'],
-    ['agents/companion/agents/companion.md', 'Companion'],
-    ['agents/organizer/agents/organizer.md', 'Organizer'],
-    ['.claude/commands/AuroqOS/agents/ops.md', 'Ops'],
-    ['agents/squad-forge/agents/forge-chief.md', 'Squad Forge'],
-    ['agents/mind-forge/agents/forge-chief.md', 'Mind Forge'],
-    ['agents/worker-forge/agents/worker-chief.md', 'Worker Forge'],
-    ['agents/clone-forge/agents/clone-forge-chief.md', 'Clone Forge'],
-    ['agents/etlmaker/agents/etl-chief.md', 'ETLmaker'],
-    ['business/cockpit.md', 'Cockpit'],
-    ['.synapse/manifest', 'Synapse Manifest'],
-    ['AGENTS.md', 'Codex AGENTS.md'],
-    ['.agents/skills/companion/SKILL.md', 'Codex Companion'],
-    ['.agents/skills/ops/SKILL.md', 'Codex Ops'],
-    ['scripts/validate-hybrid.mjs', 'Validador hibrido'],
-  ];
-
-  let passed = 0;
-  for (const [file, label] of checks) {
-    if (await fs.pathExists(path.join(targetDir, file))) {
-      passed++;
-    } else {
-      warn(`${label} nao encontrado`);
-    }
-  }
-
-  if (passed === checks.length) {
-    success(`${passed}/${checks.length} verificacoes OK`);
-  } else {
-    warn(`${passed}/${checks.length} verificacoes OK — rode *bootstrap pra corrigir`);
-  }
+  await runHealthChecks(targetDir);
 
   // ─── Resultado final
   console.log(`
@@ -499,6 +628,10 @@ ${DIM}  Proximo passo:${RESET}
     ${CYAN}/auroq-companion${RESET} ${DIM}ou${RESET} ${CYAN}\$companion${RESET}
 
 ${DIM}  O Companion vai te receber e guiar a partir daqui.${RESET}
+
+${DIM}  Suas customizacoes (sobrevivem a todo update):${RESET}
+    ${CYAN}.claude/rules/custom-do-aluno.md${RESET}   ${DIM}— suas regras e overrides${RESET}
+    ${CYAN}.claude/settings.local.json${RESET}        ${DIM}— suas configuracoes locais${RESET}
 
 ${DIM}  Agentes core disponiveis:${RESET}
     ${PURPLE}/companion${RESET}              ${DIM}— Parceiro cognitivo${RESET}
@@ -515,8 +648,170 @@ ${DIM}  Meta Squads (criadores de agentes):${RESET}
 ${DIM}  Claude Code e Codex sao runtimes oficiais. Escolha um por sessao; ambos usam os mesmos agentes e arquivos.${RESET}
 
 ${PURPLE}${BOLD}  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}
-${DIM}  Auroq OS v2.1.0 — Sistema Operacional de IA para Experts${RESET}
+${DIM}  Auroq OS v${PKG_VERSION} — Sistema Operacional de IA para Experts${RESET}
 ${DIM}  "Tu aumentaste o meu poder como do boi selvagem." — Sl 92:10${RESET}
+`);
+}
+
+// ─── CLONE (segunda maquina / colaborador) ───────────────
+// O Auroq nao mora no computador — mora no GitHub. Clonar JA E a instalacao:
+// o sistema vem inteiro no clone. Este comando so completa o que nao viaja
+// (dependencias, skills do Codex) e confere a integridade.
+async function clone(repoArg) {
+  showBanner();
+  await sleep(300);
+
+  const cwd = process.cwd();
+
+  if (await fs.pathExists(path.join(cwd, '.auroq-core'))) {
+    error('Voce ja esta DENTRO de um projeto Auroq.');
+    error('Va pra pasta onde quer criar a copia (ex: cd ~/Documents) e rode de novo.');
+    process.exit(1);
+  }
+
+  log(`${DIM}Clonando o seu negocio para: ${cwd}${RESET}\n`);
+
+  // ─── Fase 1: Pre-requisitos
+  step('Verificando pre-requisitos...');
+  try {
+    execSync('git --version', { encoding: 'utf8', stdio: 'pipe' });
+    success('Git instalado');
+  } catch {
+    error('Git nao encontrado. Instale git primeiro.');
+    process.exit(1);
+  }
+
+  // Sem gate de aluno aqui — decisao de produto (05/08/2026): colaborador NAO
+  // precisa ser aluno. O gate real do clone e o convite do GitHub (repo privado);
+  // um git clone puro ja entregaria o mesmo conteudo. Os gates de aluno ficam
+  // onde ha valor do framework: init (criar do zero) e *update-auroq (atualizar).
+
+  // ─── Fase 2: Resolver o repositorio
+  let repoRef = repoArg;
+  if (!repoRef) {
+    step('Localizando o seu negocio no GitHub...');
+    try {
+      execSync('gh --version', { encoding: 'utf8', stdio: 'pipe' });
+    } catch {
+      error('GitHub CLI (gh) nao encontrado e nenhum repositorio informado.');
+      error('');
+      error('Duas opcoes:');
+      error(`  1. Instale o gh (https://cli.github.com) e rode de novo: ${CYAN}npx auroq-os clone${RESET}`);
+      error(`  2. Ou informe o endereco direto: ${CYAN}npx auroq-os clone https://github.com/SEU-USUARIO/SEU-REPO.git${RESET}`);
+      process.exit(1);
+    }
+    try {
+      execSync('gh auth status', { encoding: 'utf8', stdio: 'pipe' });
+      success('GitHub conectado');
+    } catch {
+      warn('GitHub nao conectado nesta maquina — abrindo o login...');
+      try {
+        execSync('gh auth login', { stdio: 'inherit' });
+      } catch {
+        error('Login no GitHub falhou. Rode "gh auth login" e tente de novo.');
+        process.exit(1);
+      }
+    }
+    let repos = [];
+    try {
+      const out = execSync('gh repo list --json nameWithOwner,updatedAt --limit 30', { encoding: 'utf8', stdio: ['pipe', 'pipe', 'pipe'] });
+      repos = JSON.parse(out);
+    } catch { /* lista vazia tratada abaixo */ }
+    if (!repos.length) {
+      error('Nenhum repositorio encontrado na sua conta do GitHub.');
+      error(`Informe o endereco direto: ${CYAN}npx auroq-os clone https://github.com/SEU-USUARIO/SEU-REPO.git${RESET}`);
+      process.exit(1);
+    }
+    const prompts = require('prompts');
+    const resp = await prompts({
+      type: 'select',
+      name: 'repo',
+      message: 'Qual repositorio e o seu negocio?',
+      choices: repos.map(r => ({ title: r.nameWithOwner, value: r.nameWithOwner })),
+    }, { onCancel: () => { error('Cancelado.'); process.exit(1); } });
+    repoRef = resp.repo;
+  }
+
+  // ─── Fase 3: Clonar
+  step(`Baixando o negocio inteiro (${repoRef})...`);
+  const destName = path.basename(String(repoRef).replace(/[\\/]+$/, '')).replace(/\.git$/, '');
+  const destDir = path.join(cwd, destName);
+  if (await fs.pathExists(destDir)) {
+    error(`A pasta "${destName}" ja existe aqui. Entre nela (cd ${destName}) ou rode em outro lugar.`);
+    process.exit(1);
+  }
+  const isOwnerRepo = /^[\w.-]+\/[\w.-]+$/.test(String(repoRef));
+  try {
+    if (isOwnerRepo) {
+      execFileSync('gh', ['repo', 'clone', String(repoRef)], { cwd, stdio: 'inherit' });
+    } else {
+      execFileSync('git', ['clone', String(repoRef), destName], { cwd, stdio: 'inherit' });
+    }
+    success('Negocio baixado do GitHub');
+  } catch {
+    error('Falha ao clonar. Confira o endereco e o seu acesso ao repositorio.');
+    process.exit(1);
+  }
+
+  // ─── Fase 4: Reconhecer o projeto
+  if (await fs.pathExists(path.join(destDir, '.auroq-core'))) {
+    success('Projeto Auroq reconhecido — o sistema veio inteiro no clone');
+  } else {
+    warn('Este repositorio nao parece um projeto Auroq (.auroq-core ausente).');
+    warn('Se for o repo errado, apague a pasta e rode de novo com o repo certo.');
+  }
+
+  // ─── Fase 5: Protecoes de segredo
+  step('Protegendo segredos...');
+  await applySecretProtections(destDir);
+
+  // ─── Fase 6: Dependencias (nao viajam no git — de proposito)
+  step('Instalando dependencias...');
+  try {
+    execSync('npm install --silent', { cwd: destDir, stdio: 'pipe' });
+    success('Dependencias instaladas');
+  } catch {
+    warn('npm install falhou — entre na pasta e rode "npm install" manualmente');
+  }
+
+  // ─── Fase 7: Skills do Codex (geradas por maquina)
+  if (await fs.pathExists(path.join(destDir, 'scripts', 'sync-codex-skills.mjs'))) {
+    step('Configurando Codex CLI...');
+    try {
+      execSync('node scripts/sync-codex-skills.mjs --clean', { cwd: destDir, stdio: 'pipe' });
+      success('Skills locais do Codex regeneradas');
+    } catch {
+      warn('Sync de skills do Codex falhou — rode "npx auroq-os sync-codex" depois');
+    }
+  }
+
+  // ─── Fase 8: Health check
+  step('Verificando integridade...');
+  await runHealthChecks(destDir);
+
+  // ─── Resultado final
+  console.log(`
+${PURPLE}${BOLD}  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}
+
+${GREEN}${BOLD}  Negocio clonado com sucesso. Esta maquina esta pronta.${RESET}
+
+${DIM}  Uma vez so, nesta maquina:${RESET}
+
+    ${CYAN}cd ${destName}${RESET}
+    ${CYAN}claude${RESET} ${DIM}ou${RESET} ${CYAN}codex${RESET}
+    ${CYAN}/AuroqOS:agents:ops${RESET}
+    ${CYAN}*conectar-1password${RESET}   ${DIM}— reconectar o cofre de senhas${RESET}
+    ${DIM}(dono do negocio: se o sistema pedir login em algum momento, ${RESET}${CYAN}npx auroq-os login${RESET}${DIM})${RESET}
+
+${DIM}  Ritual de todo dia, em toda maquina:${RESET}
+
+    ${GOLD}Sentou${RESET}    → ${CYAN}*sync${RESET}              ${DIM}— puxa o que mudou nas outras maquinas${RESET}
+    ${GOLD}Levantou${RESET}  → ${CYAN}*commit${RESET} + ${CYAN}*push${RESET}   ${DIM}— entrega o seu trabalho pro GitHub${RESET}
+
+${DIM}  Nunca levante da maquina com trabalho nao entregue.${RESET}
+
+${PURPLE}${BOLD}  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}
+${DIM}  Auroq OS v${PKG_VERSION} — Sistema Operacional de IA para Experts${RESET}
 `);
 }
 
@@ -526,6 +821,19 @@ const command = process.argv[2];
 if (command === 'init' || command === 'install') {
   init().catch(err => {
     error(`Falha na instalacao: ${err.message}`);
+    process.exit(1);
+  });
+} else if (command === 'clone') {
+  clone(process.argv[3]).catch(err => {
+    error(`Falha ao clonar: ${err.message}`);
+    process.exit(1);
+  });
+} else if (command === 'fix-gitignore') {
+  (async () => {
+    step('Protegendo segredos...');
+    await applySecretProtections(process.cwd());
+  })().catch(err => {
+    error(`Falha: ${err.message}`);
     process.exit(1);
   });
 } else if (command === 'login') {
@@ -563,6 +871,12 @@ if (command === 'init' || command === 'install') {
   log(`  3. Digite: ${CYAN}*update${RESET}`);
   log('');
   log(`${DIM}O Ops atualiza o framework sem tocar nos seus dados.${RESET}`);
+} else if (command === 'conectar-1password' || command === 'connect-1password') {
+  const onepassword = require('../lib/onepassword');
+  onepassword.connect().catch(e => {
+    error(`Falha ao conectar 1Password: ${e.message}`);
+    process.exit(1);
+  });
 } else if (command === 'sync-codex') {
   // Regenera as skills do Codex CLI a partir dos comandos atuais do projeto.
   try {
@@ -576,13 +890,16 @@ if (command === 'init' || command === 'install') {
 } else {
   showBanner();
   log(`${BOLD}Comandos disponiveis:${RESET}`);
-  log(`  ${CYAN}init${RESET}     Instalar Auroq OS no diretorio atual`);
+  log(`  ${CYAN}init${RESET}     Instalar Auroq OS no diretorio atual (primeira maquina)`);
+  log(`  ${CYAN}clone${RESET}    Continuar o seu negocio NESTA maquina (segunda maquina / colaborador)`);
+  log(`  ${CYAN}fix-gitignore${RESET}  Garantir protecoes de segredo no .gitignore (vault, .env)`);
   log(`  ${CYAN}login${RESET}    Autenticar com email + senha da Mentoria Arcane`);
   log(`  ${CYAN}logout${RESET}   Encerrar sessao local`);
   log(`  ${CYAN}whoami${RESET}   Mostrar usuario autenticado`);
   log(`  ${CYAN}check-access${RESET}  Validar acesso ativo (online; exit 0=ativo, 1=bloqueado)`);
   log(`  ${CYAN}update${RESET}   Atualizar (via Ops dentro do Claude Code)`);
   log(`  ${CYAN}sync-codex${RESET}  Gerar e verificar as skills locais do Codex CLI ($nome)`);
+  log(`  ${CYAN}conectar-1password${RESET}  Conectar o 1Password CLI (token lido do Ctrl+C, nunca digitado)`);
   log('');
   log(`${DIM}Uso: npx auroq-os init${RESET}`);
   log('');

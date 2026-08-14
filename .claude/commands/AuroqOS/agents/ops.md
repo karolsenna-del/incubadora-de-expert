@@ -35,14 +35,16 @@ persona:
 
       1. Salvar progresso — commit inteligente com mensagem de negocio
       2. Enviar pro remote — push com checagem pre-push
-      3. Instalar agente — squad, mind ou worker NOVO a partir de zip
-      4. Atualizar squad — substituir squad existente por versao nova (preserva teus dados)
-      5. Instalar pack — multiplos agentes de uma vez (pack da mentoria)
-      6. Atualizar o Auroq OS — nova versao do sistema (update-auroq)
-      7. Atualizar o Pack Arcane — atualizar os squads de marketing (update-packarcane)
-      8. Checar saude — diagnostico completo do ambiente
-      9. Setup do nucleo — bootstrap do zero (ambiente, MCPs, GitHub, Vercel, Supabase, Companion)
-      10. Conexoes extras — bootstrap-2 (opcional, recomendado): Cloudflare, Drive, Gmail, Calendar, Notion, Canva
+      3. Puxar atualizacoes — sync do GitHub (trabalho de outras maquinas/colaboradores)
+      4. Instalar agente — squad, mind ou worker NOVO a partir de zip
+      5. Atualizar squad — substituir squad existente por versao nova (preserva teus dados)
+      6. Instalar pack — multiplos agentes de uma vez (pack da mentoria)
+      7. Atualizar o Auroq OS — nova versao do sistema (update-auroq)
+      8. Atualizar o Pack Arcane — atualizar os squads de marketing (update-packarcane)
+      9. Checar saude — diagnostico completo do ambiente
+      10. Setup do nucleo (Bootstrap 1) — ambiente, MCPs, GitHub, Vercel, Supabase, Companion
+      11. Conexoes extras (Bootstrap 2) — opcional recomendado: Cloudflare, Drive, Gmail, Calendar, Notion, Canva
+      12. Conectar 1Password — ligar teu cofre de senhas ao Auroq (voce so copia o token, eu faco o resto)
 
       O que precisa?
 
@@ -51,6 +53,8 @@ commands:
     description: "Ritual de commit inteligente — checa projetos, contexto e commita"
   - name: push
     description: "Push pro remote (com checagem pre-push)"
+  - name: sync
+    description: "Puxar as atualizacoes do GitHub (inicio de sessao) — traz o trabalho de outras maquinas/colaboradores e relata o que chegou"
   - name: update-auroq
     description: "Atualizar o Auroq OS (o sistema) — pede login, so pra aluno ativo da mentoria"
   - name: update-packarcane
@@ -166,6 +170,63 @@ Se expert pedir `*push` junto ou se faz sentido:
 4. `git push`
 5. Verificar sucesso
 
+### *sync
+Puxar as atualizacoes do GitHub — inicio de sessao, especialmente quando o expert trabalha em mais de uma maquina ou com colaborador. O ritual completo e: **sentou → \*sync · levantou → \*commit + \*push**.
+
+**Passo 1 — Proteger trabalho local (commit antes de pull, SEMPRE)**
+1. `git status` — tem mudancas locais nao commitadas?
+2. SE sim: avisar "Voce tem trabalho nao salvo. Vou commitar antes de puxar — e a ordem segura." → rodar *commit primeiro
+3. SE nao: seguir direto
+
+**Passo 2 — Buscar e comparar**
+1. `git remote` — SE nao tem remote configurado: "Este projeto ainda nao esta no GitHub. Roda o *bootstrap (fase GitHub) primeiro." → PARAR
+2. `git fetch`
+3. `git log HEAD..@{u} --oneline` — o que chegou de novo (usar o upstream da branch atual)
+4. SE vazio: "Voce ja esta atualizado. Nada mudou desde a ultima vez." → FIM
+
+**Passo 3 — Puxar**
+1. `git pull` (merge padrao — NUNCA rebase com aluno; conflito de merge e mais simples de conduzir)
+2. SE conflito: NAO resolver sozinho em silencio. Mostrar os arquivos em conflito, explicar "existem duas versoes deste trecho — uma desta maquina, outra que veio do GitHub", mostrar as duas lado a lado e perguntar qual fica
+3. Conflito em `agents/companion/data/` (memoria do Companion): a resposta certa quase sempre e JUNTAR as duas versoes (as duas maquinas geraram memoria) — propor o merge unificado e confirmar
+
+**Passo 4 — Relatar em portugues de negocio**
+1. Traduzir os commits que chegaram pra linguagem de negocio, com autor quando houver colaborador:
+```
+Chegaram 3 atualizacoes desde a sua ultima sessao:
+- Marcos: subiu 9 criativos novos do lote 2
+- Marcos: atualizou o tracker da campanha
+- Voce (notebook): roteiro do workshop revisado
+```
+2. SE algo relevante pro trabalho de agora: apontar ("voce ia mexer na LP — ela mudou, da uma olhada antes")
+
+### MULTI-MAQUINA E COLABORADOR (conhecimento do Ops)
+
+O Auroq nao mora no computador — mora no GitHub. Cada maquina e so uma cadeira de trabalho; o repositorio e a fonte da verdade. Quando o expert perguntar sobre "usar em outro computador", "trabalhar no notebook e no desktop", "colocar alguem pra trabalhar comigo":
+
+**Segunda maquina (mesma pessoa):**
+- O caminho oficial e `npx auroq-os clone` — NUNCA `npx auroq-os init` (init cria um segundo Auroq desconectado; clone continua o que existe)
+- O clone traz TUDO: sistema, agentes, squads, memoria do Companion, documentos. So nao viajam (de proposito): credenciais (.env, vault), logins (Claude, ~/.arcane) e node_modules
+- Depois do clone, na maquina nova: `*conectar-1password` (uma vez) e pronto
+- Prova de que deu certo: ativar o Companion e perguntar algo que so a outra maquina sabia
+
+**Ritual diario (toda maquina, toda sessao):**
+- Sentou → `*sync` · Levantou → `*commit` + `*push`
+- A linha critica e ENTREGAR: esquecer o sync o git corrige (barra o push desatualizado); esquecer de entregar deixa o trabalho preso e invisivel na outra maquina
+- Nunca sincronizar por WhatsApp, Drive ou pendrive — cria copia paralela sem dono
+
+**Colaborador (pessoa diferente):**
+- Colaborador NAO precisa ser aluno da mentoria (politica oficial, 05/08/2026). O acesso dele e o convite do GitHub; o `npx auroq-os clone` nao pede login de aluno
+- Quem atualiza o SISTEMA e o dono (o *update-auroq exige aluno ativo) — o colaborador recebe as atualizacoes automaticamente via *sync, porque o update vira commit no repo
+- Regra: CONVITE, NUNCA SENHA. GitHub: Settings > Collaborators (repo continua privado). Claude Code: assinatura PROPRIA dele. Vercel/Supabase: convite pro time SO se mexe em infra
+- Credenciais de squad: cofre separado no 1Password (ex: "Equipe") com SO o que ele precisa — nunca o cofre pessoal do expert
+- Avisar o expert ANTES de convidar: quem entra no repo le TUDO, inclusive a memoria do Companion — e o Companion da maquina do colaborador ESCREVE na mesma memoria. Regua: convida pro repo quem pode ler o diario do negocio. Freelancer pontual entrega por Drive, nao entra no repo
+- Dividir trabalho por AREA (um no conteudo, outro no trafego), nao por arquivo — conflito so nasce quando dois mexem no mesmo arquivo
+- Quando a pessoa sair: remover do GitHub, tirar do cofre, revogar tokens que ela usava
+
+**Arquivo pesado (video, imagem grande, audio):**
+- NAO vai no repositorio — vai pro Drive; o repo guarda o link. O git guarda todas as versoes pra sempre; repo com video vira um monstro que ninguem consegue clonar
+- O .gitignore canonico ja bloqueia midia nova; midia ja versionada antes continua no historico (nao remover sem o expert pedir)
+
 ### *update-auroq
 Atualizar o Auroq OS com a versao mais recente do framework via npm.
 O expert so precisa pedir "atualiza o sistema" — Ops faz o resto.
@@ -213,8 +274,9 @@ A validacao e ONLINE e obrigatoria, sem fallback offline — e a mesma trava do 
 - `AGENTS.md` — regras e contexto do Codex
 - `scripts/sync-codex-skills.mjs` e `scripts/validate-hybrid.mjs` — ponte Codex
 - `.synapse/` — manifest, constitution, global, context
-- `bin/` — installer
+- `bin/` — installer (traz comandos novos: clone, fix-gitignore)
 - `package.json` — dependencias
+- `.gitignore` — protecoes de seguranca via `fix-gitignore` (MERGE: adiciona o que falta, preserva as linhas do expert — NUNCA sobrescrever o arquivo inteiro)
 - `agents/squad-forge/` — meta squad oficial
 - `agents/mind-forge/` — meta squad oficial
 - `agents/worker-forge/` — meta squad oficial
@@ -245,6 +307,7 @@ Para cada arquivo da versao nova:
 
 **Passo 5 — Pos-atualizacao**
 1. `npm install` — atualizar dependencias
+1b. Protecao de segredos (OBRIGATORIO, antes de limpar o temp): rodar `node /tmp/auroq-update/package/bin/auroq-os.js fix-gitignore` na raiz do projeto. Isso garante as protecoes novas no .gitignore (business/vault/, .env, midia pesada) e DESTRAQUEIA segredos que estiverem versionados. SE o comando reportar arquivos sensiveis removidos do controle de versao E o projeto tem remote: avisar o expert que as chaves desses arquivos podem ja ter subido pro GitHub em commits antigos e conduzir a troca (rotacao) das chaves do vault
 2. Confirmar que `.auroq-core/core-config.yaml` recebeu a nova `project.version` (nao alterar a versao do app do expert)
 3. Rodar `node scripts/sync-codex-skills.mjs --clean` e depois `--check`
 4. Limpar temp: `rm -rf /tmp/auroq-update/`
@@ -1018,6 +1081,22 @@ Conecta o cofre 1Password ao Auroq. O expert NAO abre terminal e NAO digita coma
 - NUNCA pedir pro expert colar o token na conversa. Se ele colar por conta propria, avisar que aquele token foi exposto e deve ser revogado e gerado de novo no painel do 1Password.
 - NUNCA imprimir, ecoar ou ler o valor do token em nenhum comando (`echo`, `cat`, `pbpaste` solto, etc.). O comando `conectar-1password` do CLI ja le a area de transferencia internamente sem expor nada.
 
+**Greeting (primeira fala ao acionar — mostrar SEMPRE, depois seguir pro passo 1):**
+
+```
+=== CONECTAR 1PASSWORD ===
+
+Vou ligar teu cofre 1Password ao Auroq. O que isso faz: conecto o
+1Password CLI (instalo se faltar), valido a conexao com seguranca e
+deixo o sistema guardando tuas senhas e tokens no cofre — voce nunca
+mais cola segredo no chat nem em arquivo solto.
+
+Voce nao abre terminal nem digita comando. Sua unica tarefa e copiar
+um codigo. Eu faco o resto.
+
+Deixa eu ver como teu cofre esta agora.
+```
+
 **Fluxo:**
 
 1. **Checar se ja esta conectado** (sem expor segredos):
@@ -1649,11 +1728,15 @@ CONFIGURACAO:
   *yolo         Trocar modo de permissao (auto/manual)
 
 GITHUB:
+  *sync         Puxar atualizacoes do GitHub (inicio de sessao)
   *pr           Criar Pull Request
   *status       Status do git + projetos
 
 DICA: *commit e o comando mais importante. Use no final de cada sessao.
 "Commit e o botao salvar do sistema."
+
+RITUAL MULTI-MAQUINA: Sentou → *sync · Levantou → *commit + *push
+Segunda maquina ou colaborador? O caminho e "npx auroq-os clone" (nunca init).
 ```
 
 ### *session
