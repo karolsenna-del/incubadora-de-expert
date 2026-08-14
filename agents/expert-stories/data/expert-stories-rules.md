@@ -18,6 +18,43 @@ em vez de reduzir a fonte pra caber.
 **Aplica quando:** Gerando imagem de Story via Squad Carrossel Arcane, template
 `story-texto`, qualquer modifier com slot de corpo (`texto-corrido`, `cta-grande`).
 
+## [14/08/2026] — Story usa fonte de sistema, não a identidade de marca do carrossel
+**Origem:** Karol perguntou se a fonte da primeira imagem (Inter/Lato/Bree Serif, identidade
+do Card Tweet Dark) era nativa do Instagram — não é. Ela pediu fonte nativa "pra ficar mais
+natural".
+**Regra:** No template `story-texto`, usar stack de fonte de sistema
+(`-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial,
+sans-serif`) em vez das fontes de marca (Inter/Lato/Bree Serif) usadas no carrossel/feed. Sem
+itálico serifado nos destaques — só peso bold + laranja. Mantém fundo preto, texto branco,
+laranja de destaque (isso continua igual). **Isso é específico de Stories** — não mudar a
+identidade de marca do carrossel/feed (Card Tweet Dark e demais templates), que continua com
+Inter/Lato/Bree Serif normalmente.
+**Aplica quando:** Gerando qualquer imagem com o template `story-texto`.
+**Confirmado (14/08):** o estilo usado equivale ao "Classic" nativo do Instagram (fonte de
+sistema, sem serifa, sem itálico) — fica como padrão fixo dos Stories. Variar pra outros
+estilos nativos (Modern serifado, Neon, Typewriter, Strong condensada bold) é decisão
+futura, caso a caso — não é o padrão.
+
+## [14/08/2026] — Day Off pode ter mais de 1 Story no dia
+**Origem:** Karol trouxe 2 momentos genuínos pro Day Off de 15/08 (natação da filha de manhã,
+amiga que chegou da Polônia pro churrasco à tarde/noite) e perguntou se podia postar os dois.
+**Regra:** Day Off (e Stories em geral) não está limitado a 1 post por dia como o feed —
+pode ter mais de um momento no mesmo dia quando fizer sentido pro que realmente aconteceu.
+Isso não é override (não tem formato concorrendo), é só reconhecer que Stories é sequência
+de momentos, não post único.
+**Aplica quando:** O dia (especialmente Day Off) tiver mais de um momento genuíno pra
+registrar.
+
+## [14/08/2026] — Frase-ponte do Day Off é opcional, não obrigatória
+**Origem:** No Story da amiga da Polônia, a frase-ponte original ("O que parece simples pra
+você pode ser desafiador pra quem te acompanha.") não encaixou — a história era sobre presença
+e amizade, não sobre estabilidade/tempo livre que a frase pressupõe. Karol pediu pra tirar.
+**Regra:** A frase-ponte do formato Day Off só entra quando a cena realmente carrega esse
+contraste (rotina estável / tempo livre / vida pós-corrida vs. audiência ainda na correria).
+Quando a história tem peso próprio (ex: relação pessoal, amizade, família) sem precisar da
+moldura de "simples pra mim, difícil pra quem me acompanha", deixar a história falar sozinha.
+**Aplica quando:** Escrevendo o texto de apoio de qualquer Story de Day Off.
+
 ---
 
 ## Formato de Entrada
