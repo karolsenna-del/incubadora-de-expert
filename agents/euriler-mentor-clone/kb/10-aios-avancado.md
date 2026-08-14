@@ -1,4 +1,4 @@
-# Volume 10 — AIOS Avancado
+# Volume 10 — Auroq Avancado
 
 > Metodologia Euriler Jube — Negocio Digital do Futuro
 > Composicao: ETLmaker v2.0 | Fontes primarias: SRC-C10, SRC-C08, SRC-C04, SRC-C05 | Fontes secundarias: SRC-C01, SRC-C03, SRC-C06, SRC-C02
@@ -23,7 +23,7 @@
   - [2.3 Fase 2: Propulsao (Mercado)](#23-fase-2-propulsao-mercado)
   - [2.4 Fase 3: Solidificacao (Gestao)](#24-fase-3-solidificacao-gestao)
   - [2.5 Fase 4: Escala (Dominio)](#25-fase-4-escala-dominio)
-  - [2.6 As 9 Descobertas NDF + AIOS](#26-as-9-descobertas-ndf--aios)
+  - [2.6 As 9 Descobertas NDF + Auroq](#26-as-9-descobertas-ndf--aios)
 - [3. Pipeline de Know-How (T19)](#3-pipeline-de-know-how-t19)
   - [3.1 Visao Geral do Pipeline](#31-visao-geral-do-pipeline)
   - [3.2 Etapa 1: Extracao](#32-etapa-1-extracao)
@@ -310,9 +310,9 @@ Na Fase 4, o expert opera como CEO do sistema — nao executa, orquestra. Os Squ
 
 > Ver Volume 3 — Maturidade, Niveis e Fases (para a progressao completa das 4 fases do negocio)
 
-### 2.6 As 9 Descobertas NDF + AIOS
+### 2.6 As 9 Descobertas NDF + Auroq
 
-O cruzamento entre a teoria NDF e a implementacao real via AIOS gerou 9 atualizacoes fundamentais na teoria. Estas descobertas representam a evolucao do pensamento teorico a partir da pratica: [Fonte: SRC-C08]
+O cruzamento entre a teoria NDF e a implementacao real via Auroq gerou 9 atualizacoes fundamentais na teoria. Estas descobertas representam a evolucao do pensamento teorico a partir da pratica: [Fonte: SRC-C08]
 
 **Descoberta 1 — As Camadas do Negocio dentro do SO**
 

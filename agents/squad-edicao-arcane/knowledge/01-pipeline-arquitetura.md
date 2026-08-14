@@ -15,8 +15,8 @@ Video bruto
    ↓
 [@chief]       recebe, valida path
    ↓
-[@installer]         doctor.sh → QG-SEA-001
-   ↓                         ↓ FAIL: install.sh → re-doctor
+[@installer]         doctor.py → QG-SEA-001
+   ↓                         ↓ FAIL: install.py → re-doctor
 [@cutter]      speech-cut → QG-SEA-002
    ↓                         ↓ alerta se fora 30-70%
 [@scribe]      transcribe + revisão pt → QG-SEA-003
@@ -42,7 +42,7 @@ Cada agent é dono do próprio quality gate. Auditoria separada gera ping-pong (
 
 ## Por que os scripts são embutidos (não importados de lib externa)
 
-REGRA AUTOCONTIDO. Aluno baixa o squad, roda `install.sh`, tudo funciona. Sem dependência de paths privados do criador do squad. Os 4 scripts (.py/.sh) vivem em `scripts/` dentro do próprio squad.
+REGRA AUTOCONTIDO. Aluno baixa o squad, roda `install.py` (cross-platform), tudo funciona. Sem dependência de paths privados do criador do squad. Todos os scripts (`.py`, com `_common.py` compartilhado) vivem em `scripts/` dentro do próprio squad.
 
 ## Por que venv local (não global)
 

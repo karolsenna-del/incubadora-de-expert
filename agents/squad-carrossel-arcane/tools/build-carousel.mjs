@@ -41,11 +41,8 @@ const tdir = path.join(TEMPLATES_DIR, cfg.template);
 if (!fs.existsSync(tdir)) { console.error(`ERRO: template não encontrado: ${tdir}`); process.exit(1); }
 const metaRaw = fs.readFileSync(path.join(tdir, 'meta.yaml'), 'utf8');
 const meta = (k, def) => {
-  // Valores entre aspas podem conter '#' (ex: cores hex) — tenta aspas primeiro, senão cai pro sem-aspas (que aí sim para no '#' de comentário).
-  const m = metaRaw.match(new RegExp(`^\\s*${k}\\s*:\\s*(?:"([^"\\n]*)"|'([^'\\n]*)'|([^#\\n]+))`, 'm'));
-  if (!m) return def;
-  const val = m[1] !== undefined ? m[1] : (m[2] !== undefined ? m[2] : m[3]);
-  return val.trim();
+  const m = metaRaw.match(new RegExp(`^\\s*${k}\\s*:\\s*"?([^"#\\n]+?)"?\\s*(#.*)?$`, 'm'));
+  return m ? m[1].trim() : def;
 };
 const id = {
   name:    meta('author_name', 'Autor'),
@@ -59,9 +56,8 @@ const id = {
   sizeImg: parseInt(meta('text_size_image', '44'), 10),
   sizeTxt: parseInt(meta('text_size_textonly', '48'), 10),
 };
-const avatarSrc = [path.join(tdir, 'avatar.png'), path.join(tdir, 'assets', 'avatar.png')]
-  .find(p => fs.existsSync(p));
-const hasAvatar = !!avatarSrc;
+const avatarSrc = path.join(tdir, 'avatar.png');
+const hasAvatar = fs.existsSync(avatarSrc);
 
 // ---------- build dir ----------
 const buildDir = path.join(os.tmpdir(), `carousel-build-${cfg.name}`);
@@ -147,90 +143,21 @@ function html(slide, imgRef) {
 // ---------- resolve Chrome ----------
 function findChrome() {
   const candidates = [];
-  const pwMac = path.join(HOME, 'Library/Caches/ms-playwright');
-  if (fs.existsSync(pwMac)) {
-    for (const d of fs.readdirSync(pwMac)) {
-      const p = path.join(pwMac, d, 'Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing');
+  const pw = path.join(HOME, 'Library/Caches/ms-playwright');
+  if (fs.existsSync(pw)) {
+    for (const d of fs.readdirSync(pw)) {
+      const p = path.join(pw, d, 'Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing');
       if (fs.existsSync(p)) candidates.push(p);
-      const p2 = path.join(pwMac, d, 'chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing');
+      const p2 = path.join(pw, d, 'chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing');
       if (fs.existsSync(p2)) candidates.push(p2);
     }
   }
   candidates.push('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome');
   candidates.push('/Applications/Chromium.app/Contents/MacOS/Chromium');
-
-  // Windows
-  const pwWin = path.join(HOME, 'AppData/Local/ms-playwright');
-  if (fs.existsSync(pwWin)) {
-    for (const d of fs.readdirSync(pwWin)) {
-      if (!d.startsWith('chromium-')) continue;
-      const p = path.join(pwWin, d, 'chrome-win64', 'chrome.exe');
-      if (fs.existsSync(p)) candidates.push(p);
-      const p32 = path.join(pwWin, d, 'chrome-win', 'chrome.exe');
-      if (fs.existsSync(p32)) candidates.push(p32);
-    }
-  }
-  candidates.push('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe');
-  candidates.push('C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe');
-
-  // Linux
-  candidates.push('/usr/bin/google-chrome', '/usr/bin/chromium-browser', '/usr/bin/chromium');
-
   return candidates.find(c => fs.existsSync(c));
 }
 const CHROME = findChrome();
 if (!CHROME) { console.error('ERRO: Chromium não encontrado (npx @playwright/mcp install-browser chromium)'); process.exit(1); }
-
-// Chrome headless (Windows) recorta a janela sem preencher o viewport inteiro —
-// sobra uma barra preta (~18px direita, ~96px embaixo) quando o slide não é fundo
-// preto. Validado empiricamente em 10/08/2026 (constante, não escala com o tamanho).
-// Fix: renderiza maior que o alvo e corta a sobra de volta pro tamanho exato via ffmpeg.
-const WIN_BORDER_X = 18;
-const WIN_BORDER_Y = 96;
-
-function findFFmpeg() {
-  const candidates = ['ffmpeg', 'ffmpeg.exe'];
-  const winget = path.join(HOME, 'AppData/Local/Microsoft/WinGet/Packages');
-  if (fs.existsSync(winget)) {
-    for (const pkg of fs.readdirSync(winget)) {
-      if (!pkg.toLowerCase().includes('ffmpeg')) continue;
-      const pkgDir = path.join(winget, pkg);
-      const stack = [pkgDir];
-      while (stack.length) {
-        const dir = stack.pop();
-        for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-          const p = path.join(dir, entry.name);
-          if (entry.isDirectory()) stack.push(p);
-          else if (entry.name.toLowerCase() === 'ffmpeg.exe') candidates.push(p);
-        }
-      }
-    }
-  }
-  for (const c of candidates) {
-    try { execFileSync(c, ['-version'], { stdio: 'ignore' }); return c; } catch (e) { /* tenta próximo */ }
-  }
-  return null;
-}
-const FFMPEG = findFFmpeg();
-
-function screenshot(htmlPath, finalOutPath, w, h) {
-  if (!FFMPEG) {
-    execFileSync(CHROME, [
-      '--headless', '--disable-gpu', '--hide-scrollbars',
-      `--window-size=${w},${h}`, '--virtual-time-budget=6000',
-      `--screenshot=${finalOutPath}`, `file://${htmlPath}`,
-    ], { stdio: 'ignore' });
-    return;
-  }
-  const rawPath = finalOutPath.replace(/\.png$/, '.raw.png');
-  execFileSync(CHROME, [
-    '--headless', '--disable-gpu', '--hide-scrollbars',
-    `--window-size=${w + WIN_BORDER_X},${h + WIN_BORDER_Y}`, '--virtual-time-budget=6000',
-    `--screenshot=${rawPath}`, `file://${htmlPath}`,
-  ], { stdio: 'ignore' });
-  execFileSync(FFMPEG, ['-y', '-i', rawPath, '-vf', `crop=${w}:${h}:0:0`, finalOutPath], { stdio: 'ignore' });
-  fs.rmSync(rawPath, { force: true });
-}
 
 // ---------- output ----------
 const outDir = outFlagIdx >= 0 ? path.resolve(args[outFlagIdx + 1]) : path.join(HOME, 'Downloads', cfg.name);
@@ -247,9 +174,13 @@ cfg.slides.forEach((slide, i) => {
     else { imgRef = `img-${nn}.png`; fs.copyFileSync(slide.image, path.join(buildDir, imgRef)); withImg++; }
   }
   if (!imgRef) textOnly++;
-  const htmlPath = path.join(buildDir, `slide-${nn}.html`);
-  fs.writeFileSync(htmlPath, html(slide, imgRef), 'utf8');
-  screenshot(htmlPath, path.join(outDir, `slide-${nn}.png`), 1080, 1350);
+  fs.writeFileSync(path.join(buildDir, `slide-${nn}.html`), html(slide, imgRef), 'utf8');
+  execFileSync(CHROME, [
+    '--headless', '--disable-gpu', '--hide-scrollbars',
+    '--window-size=1080,1350', '--virtual-time-budget=6000',
+    `--screenshot=${path.join(outDir, `slide-${nn}.png`)}`,
+    `file://${path.join(buildDir, `slide-${nn}.html`)}`,
+  ], { stdio: 'ignore' });
 });
 
 const total = fs.readdirSync(outDir).filter(f => /^slide-\d+\.png$/.test(f)).length;

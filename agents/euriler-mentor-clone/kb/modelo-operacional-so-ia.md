@@ -78,7 +78,7 @@ Tudo que foi construído no sistema nasceu de 4 necessidades reais. Não foram p
 
 **Manifestações práticas:**
 - Tech Ops resolve qualquer coisa de infra com um comando
-- Gestor de Tráfego opera campanhas com metodologia da Babruna
+- Gestor de Tráfego opera campanhas com a metodologia clonada da gestora referência
 - Bia (agente WhatsApp) vende e atende automaticamente
 - Squads rodam projetos completos com pipeline e gates
 - Minds consultam e julgam quando preciso

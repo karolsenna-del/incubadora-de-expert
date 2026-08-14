@@ -148,7 +148,7 @@ E como ir ao medico: consulta, tratamento, protocolo. Nao precisa de internacao,
 
 **Exemplos:** Mentorias, consultorias, masterminds, imersoes. [Fonte: SRC-A05]
 
-**Nuance:** Hospital nem sempre e high ticket. Euriler tem uma imersao de tres dias (hospitalzinho, barata) e a mentoria (hospitalzao, high ticket). O tipo define profundidade da transformacao, nao necessariamente preco. O Wendell Carvalho ficou mega milionario quando criou o high ticket — Hospital bem feito multiplica a lucratividade de forma absurda. [Fonte: SRC-E02]
+**Nuance:** Hospital nem sempre e high ticket. Euriler tem uma imersao de tres dias (hospitalzinho, barata) e a mentoria (hospitalzao, high ticket). O tipo define profundidade da transformacao, nao necessariamente preco. Um grande mentor de desenvolvimento pessoal ficou mega milionario quando criou o high ticket — Hospital bem feito multiplica a lucratividade de forma absurda. [Fonte: SRC-E02]
 
 ### 2.4 Combinando os 3 Tipos
 
@@ -269,7 +269,7 @@ O perfil do expert determina a temperatura possivel dos produtos: [Fonte: SRC-E0
 |---------------|-------------|
 | Cria movimento, puxa pela causa | Entrega tecnico, mais reservado |
 | Forte presenca, magnetismo | Mais discreto, menos palco |
-| Ex: Pablo Marcal | Ex: Erico Rocha |
+| Ex: um expert quente famoso do mercado BR (movimento, palco, polemica) | Ex: o maior lancador do Brasil (tecnico, reservado, autoridade silenciosa) |
 
 Nao existe certo ou errado — o design de temperatura tem que ser coerente com o perfil. Forcar temperatura sem capacidade de sustentar e insustentavel a longo prazo. [Fonte: SRC-E02]
 
@@ -341,7 +341,7 @@ A esteira e o **conjunto de produtos organizados estrategicamente**, de acordo c
 - Cada etapa e complexa o suficiente para ser um produto separado
 - O cliente precisa de tudo do produto anterior para consumir o proximo
 
-**Exemplo — Paulo Vieira:** Formacao em Coaching → Master Coaching. Nao faria sentido criar um "Super Coaching" que juntasse os dois — cada um e muito complexo e completo por si so. O Paulo Vieira tambem vende um pacote de cursos que a pessoa vai fazendo e juntando, e no final ganha um "Golden Belt" com quase mil horas de curso feito. [Fonte: SRC-E02]
+**Exemplo — o maior coach do Brasil:** Formacao em Coaching → Master Coaching. Nao faria sentido criar um "Super Coaching" que juntasse os dois — cada um e muito complexo e completo por si so. Ele tambem vende um pacote de cursos que a pessoa vai fazendo e juntando, e no final ganha uma "faixa dourada" com quase mil horas de curso feito. [Fonte: SRC-E02]
 
 ### 5.2 Esteira por Orbita
 
@@ -375,22 +375,22 @@ A esteira e o **conjunto de produtos organizados estrategicamente**, de acordo c
 
 Mesma metodologia (treino), diferentes niveis de proximidade.
 
-**Exemplo — Paulo Vieira (esteira completa):** [Fonte: SRC-E02]
+**Exemplo — o maior coach do Brasil (esteira completa):** [Fonte: SRC-E02]
 
 | Produto | Proximidade | Preco |
 |---------|------------|-------|
-| Livro "O Poder da Acao" | Baixissima — metodologia completa, consumo autonomo | Baixo |
-| Imersao Metodo CIS | Media — vivencia presencial da metodologia | Medio |
+| Livro best-seller | Baixissima — metodologia completa, consumo autonomo | Baixo |
+| Imersao presencial da metodologia | Media — vivencia presencial | Medio |
 | Formacao em Coaching | Media/Alta — aprofundamento com pratica | Alto |
-| Coaching pessoal com Paulo Vieira | Maxima — o Paulo Vieira aplica a mesma metodologia em voce | Ultra alto |
+| Coaching pessoal com o proprio expert | Maxima — ele aplica a mesma metodologia em voce | Ultra alto |
 
-**Exemplo — Erico Rocha:** [Fonte: SRC-E02]
+**Exemplo — o maior lancador do Brasil:** [Fonte: SRC-E02]
 
 | Produto | Proximidade |
 |---------|------------|
-| Formula de Lancamento | Curso (metodo completo) |
-| Insider | Mentoria de acompanhamento |
-| Titanio Platinum | Mastermind (mais proximo do Erico) |
+| Curso do metodo completo | Curso (metodo completo) |
+| Mentoria de acompanhamento | Mentoria |
+| Mastermind premium | Mastermind (mais proximo do expert) |
 
 > **REGRA CARDINAL:** Na esteira por proximidade, mesma metodologia, diferentes precos — o que muda e o ACESSO. Quanto mais proximo, menos erros o cliente comete, mais rapido chega ao resultado — por isso paga mais. [Fonte: SRC-E02]
 
@@ -403,7 +403,7 @@ Mesma metodologia (treino), diferentes niveis de proximidade.
 
 [Fonte: SRC-A05, SRC-C02]
 
-Esteiras podem misturar tipos (Paulo Vieira combina ordem + proximidade). O foco da Fase 1 e definir o primeiro produto — a visao da esteira ajuda a saber para onde vai, mas nao precisa criar tudo agora. [Fonte: SRC-E02]
+Esteiras podem misturar tipos (o maior coach do Brasil combina ordem + proximidade). O foco da Fase 1 e definir o primeiro produto — a visao da esteira ajuda a saber para onde vai, mas nao precisa criar tudo agora. [Fonte: SRC-E02]
 
 ---
 

@@ -30,21 +30,21 @@ Stylist apresenta os 3 caminhos (greeting do agent). Expert escolhe.
 
 Pra cada `data/estilos/*.yaml`, gera mockup:
 
-```bash
+```text
 # texto exemplo (se há transcript do expert, usa frase real; senao, generico)
-TXT="UMA EMPRESA INTEIRA COM IA"
-FRAME=/tmp/stylist-frame.png
-ffmpeg -y -ss <t> -i <video_expert> -frames:v 1 $FRAME 2>/dev/null
+# TXT = "UMA EMPRESA INTEIRA COM IA"
+# extrai um frame do video do expert pra um arquivo temporario portavel (tempdir do OS)
+# ffmpeg -y -ss <t> -i <video_expert> -frames:v 1 <tempdir>/stylist-frame.png
 
-# pra cada estilo
-for estilo in neutro viral clean organico; do
-  # le yaml e monta drawtext (igual o video-captions.py faz, mas em PNG estatico)
-  # salva /tmp/stylist-mockup-<nome>.png
-done
+# pra cada estilo (neutro / viral / clean / organico):
+#   le o yaml e monta o drawtext IGUAL o video-captions.py faz (fonte OS-aware via
+#   _common.drawtext_font_opt — font= no Mac, fontfile= no Windows), mas num PNG estatico
+#   salva <tempdir>/stylist-mockup-<nome>.png
 
-# abre todos os mockups
-open /tmp/stylist-mockup-*.png
+# abre os mockups pro expert: Invoke-Item (Windows) / open (Mac) / xdg-open (Linux)
 ```
+
+> Dica de implementação: reaproveitar `scripts/_common.py` (`drawtext_font_opt`, `tmp_path`, `ffmpeg`) pra montar os mockups com o mesmo código que a legenda real usa — garante que o preview bate com o output.
 
 Pergunta: "Qual? (neutro / viral / clean / organico)"
 
@@ -85,7 +85,8 @@ estilo_ativo: "<nome-escolhido>"
 
 Se 2 → mantém `estilo-ativo.yaml` como tá. Stylist passa o estilo como flag pro próximo `/auroq-squad-edicao-arcane` step:
 ```bash
-{SQUAD_DIR}/.venv/bin/python3 scripts/video-captions.py <video> <transcript> --style <nome>
+# <venv-python> = Windows: {SQUAD_DIR}\.venv\Scripts\python.exe · Mac/Linux: {SQUAD_DIR}/.venv/bin/python3
+<venv-python> scripts/video-captions.py <video> <transcript> --style <nome>
 ```
 
 ### Step 4 — Confirmar e ceder

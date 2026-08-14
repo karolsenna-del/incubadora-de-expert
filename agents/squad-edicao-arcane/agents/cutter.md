@@ -54,8 +54,12 @@ Criterios:
 
 ### Comando
 
+Roda com o Python do venv (precisa de torch/silero):
+- Windows: `{SQUAD_DIR}\.venv\Scripts\python.exe`
+- Mac/Linux: `{SQUAD_DIR}/.venv/bin/python3`
+
 ```bash
-{SQUAD_DIR}/.venv/bin/python3 {SQUAD_DIR}/scripts/video-speech-cut.py <video> [<output>]
+<venv-python> {SQUAD_DIR}/scripts/video-speech-cut.py <video> [<output>]
 ```
 
 Defaults aplicados automaticamente (modo agressivo "minima respiracao"):

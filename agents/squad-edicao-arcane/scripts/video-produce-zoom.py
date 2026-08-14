@@ -11,22 +11,14 @@ Adaptado pra source vertical (1080x1920) — cropa fracao centrada no rosto.
 o video ja foi acelerado mas as sections foram montadas com timestamps do
 transcript pre-speed. Default 1.0 (sem reescala).
 
-Executar com: {SQUAD_DIR}/.venv/bin/python3 video-produce-zoom.py ...
+Executar com o Python do venv (Windows: .venv/Scripts/python.exe · Mac/Linux: .venv/bin/python3).
 """
 import sys, subprocess, os, json, cv2, statistics, argparse
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _common
 
-def _bin(name):
-    """ffmpeg do Homebrew (bottle completo). Evita um ffmpeg de conda/build
-    estatico no PATH que possa faltar filtros."""
-    for base in ("/opt/homebrew/bin", "/usr/local/bin"):
-        cand = os.path.join(base, name)
-        if os.path.exists(cand):
-            return cand
-    return name
-
-
-FFMPEG = _bin("ffmpeg")
+FFMPEG = _common.ffmpeg()
 
 ap = argparse.ArgumentParser()
 ap.add_argument("video")
@@ -107,7 +99,7 @@ for i, sec in enumerate(sections):
 parts.append("".join(f"[v{i}]" for i in range(len(sections)))
     + f"concat=n={len(sections)}:v=1:a=0[outv]")
 
-ff = f"/tmp/zoom_filter_{os.getpid()}.txt"
+ff = _common.tmp_path(".txt")
 open(ff,"w").write("\n".join(parts))
 subprocess.run([FFMPEG,"-y","-i",video,"-filter_complex_script",ff,
     "-map","[outv]","-map","0:a",

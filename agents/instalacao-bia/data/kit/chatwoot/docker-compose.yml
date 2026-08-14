@@ -1,0 +1,113 @@
+# ===============================================================================
+# Chatwoot self-hosted (Community) — template do kit da Bia
+# Sobe 4 containers: app + sidekiq (worker de fundo) + postgres (pgvector) + redis.
+# SSL automatico (https) via Traefik/EasyPanel — rede externa "easypanel".
+#
+# ANTES DE SUBIR, troque os 4 valores {{...}} (veja README.md desta pasta):
+#   {{CHATWOOT_DOMINIO}}     -> chatwoot.seudominio.com  (com DNS A apontando pro IP do servidor)
+#   {{CW_POSTGRES_PASSWORD}} -> senha forte   (gere com: openssl rand -hex 16)
+#   {{CW_REDIS_PASSWORD}}    -> senha forte   (gere com: openssl rand -hex 16)
+#   {{CW_SECRET_KEY_BASE}}   -> chave longa   (gere com: openssl rand -hex 64)
+#
+# Versao fixada (v4.3.0) de proposito: e a versao validada com a Bia. Nao use "latest".
+# ===============================================================================
+
+services:
+  chatwoot-db:
+    image: pgvector/pgvector:pg16          # Postgres 16 + pgvector (Chatwoot v4 exige)
+    restart: always
+    environment:
+      POSTGRES_DB: chatwoot
+      POSTGRES_USER: chatwoot
+      POSTGRES_PASSWORD: "{{CW_POSTGRES_PASSWORD}}"
+    volumes:
+      - chatwoot_db_data:/var/lib/postgresql/data
+    networks:
+      - chatwoot-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U chatwoot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  chatwoot-redis:
+    image: redis:7-alpine
+    restart: always
+    command: redis-server --requirepass "{{CW_REDIS_PASSWORD}}"
+    volumes:
+      - chatwoot_redis_data:/data
+    networks:
+      - chatwoot-net
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "{{CW_REDIS_PASSWORD}}", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  chatwoot:
+    image: chatwoot/chatwoot:v4.3.0
+    restart: always
+    command: bundle exec rails s -p 3000 -b 0.0.0.0
+    environment:
+      - RAILS_ENV=production
+      - SECRET_KEY_BASE={{CW_SECRET_KEY_BASE}}
+      - FRONTEND_URL=https://{{CHATWOOT_DOMINIO}}
+      - DEFAULT_LOCALE=pt_BR
+      - DATABASE_URL=postgres://chatwoot:{{CW_POSTGRES_PASSWORD}}@chatwoot-db:5432/chatwoot
+      - REDIS_URL=redis://:{{CW_REDIS_PASSWORD}}@chatwoot-redis:6379
+      - RAILS_LOG_TO_STDOUT=true
+      - LOG_LEVEL=info
+      # 1a CONTA: deixe ENABLE_ACCOUNT_SIGNUP=true pra criar seu admin pela tela do navegador.
+      # Depois que a conta existir, troque pra "false" e rode "docker compose up -d" de novo
+      # (fecha o cadastro publico — so voce entra).
+      - ENABLE_ACCOUNT_SIGNUP=true
+      - INSTALLATION_ENV=docker
+    depends_on:
+      chatwoot-db:
+        condition: service_healthy
+      chatwoot-redis:
+        condition: service_healthy
+    networks:
+      - chatwoot-net
+      - easypanel
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.chatwoot.rule: "Host(`{{CHATWOOT_DOMINIO}}`)"
+      traefik.http.routers.chatwoot.entrypoints: "https"
+      traefik.http.routers.chatwoot.tls.certresolver: "letsencrypt"
+      traefik.http.services.chatwoot.loadbalancer.server.port: "3000"
+      traefik.docker.network: "easypanel"
+
+  chatwoot-sidekiq:
+    image: chatwoot/chatwoot:v4.3.0
+    restart: always
+    command: bundle exec sidekiq -C config/sidekiq.yml
+    environment:
+      - RAILS_ENV=production
+      - SECRET_KEY_BASE={{CW_SECRET_KEY_BASE}}
+      - FRONTEND_URL=https://{{CHATWOOT_DOMINIO}}
+      - DEFAULT_LOCALE=pt_BR
+      - DATABASE_URL=postgres://chatwoot:{{CW_POSTGRES_PASSWORD}}@chatwoot-db:5432/chatwoot
+      - REDIS_URL=redis://:{{CW_REDIS_PASSWORD}}@chatwoot-redis:6379
+      - RAILS_LOG_TO_STDOUT=true
+      - LOG_LEVEL=info
+    depends_on:
+      chatwoot-db:
+        condition: service_healthy
+      chatwoot-redis:
+        condition: service_healthy
+    networks:
+      - chatwoot-net
+
+volumes:
+  chatwoot_db_data:
+  chatwoot_redis_data:
+
+networks:
+  chatwoot-net:
+    driver: bridge
+  # Rede do proxy reverso (Traefik). No servidor padrao da mentoria (EasyPanel) ela se
+  # chama "easypanel". Se no seu servidor o proxy usa outro nome, troque aqui e no label
+  # "traefik.docker.network" acima. Veja como descobrir no README.md desta pasta.
+  easypanel:
+    external: true

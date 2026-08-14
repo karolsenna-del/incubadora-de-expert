@@ -17,6 +17,12 @@ Workflow master do squad. Orquestra os 5 specialists em sequencia com quality ga
 
 Tudo isso pode ser desligado por comando explicito do expert (ver "Opcoes").
 
+**Convenção de comando (cross-platform, v1.1.0):** os scripts que usam torch/silero/cv2/pyyaml (`video-speech-cut.py`, `video-produce-zoom.py`, `video-captions.py`) rodam com o **Python do venv** — abaixo grafado `<venv-python>`:
+- Windows: `{SQUAD_DIR}\.venv\Scripts\python.exe`
+- Mac/Linux: `{SQUAD_DIR}/.venv/bin/python3`
+
+Os que só usam ffmpeg (`video-speed-up.py`, `video-transcribe.py`, `video-add-music.py`) rodam com `python` puro.
+
 ## Visao geral
 
 ```
@@ -26,7 +32,7 @@ Tudo isso pode ser desligado por comando explicito do expert (ver "Opcoes").
         │ video.mp4
         ▼
    ┌──────────┐
-   │INSTALLER │  doctor.sh → ambiente OK?
+   │INSTALLER │  doctor.py → ambiente OK?
    └────┬─────┘
         │ QG-SEA-001 PASS
         ▼
@@ -68,7 +74,7 @@ Tudo isso pode ser desligado por comando explicito do expert (ver "Opcoes").
 
 ### Step 1 — Validar ambiente (@installer)
 
-- Roda `tasks/diagnosticar.md` (doctor.sh)
+- Roda `tasks/diagnosticar.md` (doctor.py)
 - **QG-SEA-001:** ambiente OK?
 - PASS → handoff @cutter
 - FAIL → roda `tasks/instalar.md` e re-valida
@@ -76,7 +82,7 @@ Tudo isso pode ser desligado por comando explicito do expert (ver "Opcoes").
 ### Step 2 — Cortar por fala (@cutter)
 
 ```bash
-{SQUAD_DIR}/.venv/bin/python3 {SQUAD_DIR}/scripts/video-speech-cut.py \
+<venv-python> {SQUAD_DIR}/scripts/video-speech-cut.py \
   <video_input> \
   videos-editados/<basename>/<basename>_speechcut.mp4
 ```
@@ -91,7 +97,7 @@ Tudo isso pode ser desligado por comando explicito do expert (ver "Opcoes").
 #### 3a. Transcrever (automatico)
 
 ```bash
-bash {SQUAD_DIR}/scripts/video-transcribe.sh \
+python {SQUAD_DIR}/scripts/video-transcribe.py \
   videos-editados/<basename>/<basename>_speechcut.mp4 \
   videos-editados/<basename>/<basename>_transcript_raw.txt
 ```
@@ -111,7 +117,7 @@ Le `<basename>_transcript_raw.txt`, aplica dicionario do expert, corrige acentua
 #### 3c. Acelerar 1.2x
 
 ```bash
-bash {SQUAD_DIR}/scripts/video-speed-up.sh \
+python {SQUAD_DIR}/scripts/video-speed-up.py \
   videos-editados/<basename>/<basename>_speechcut.mp4 \
   1.2 \
   videos-editados/<basename>/<basename>_speed.mp4
@@ -131,7 +137,7 @@ Claude le `<basename>_transcript_revisado.txt` e classifica cada trecho em `norm
 #### 4b. Aplicar zoom
 
 ```bash
-{SQUAD_DIR}/.venv/bin/python3 {SQUAD_DIR}/scripts/video-produce-zoom.py \
+<venv-python> {SQUAD_DIR}/scripts/video-produce-zoom.py \
   videos-editados/<basename>/<basename>_speed.mp4 \
   videos-editados/<basename>/<basename>_sections.json \
   videos-editados/<basename>/<basename>_zoomed.mp4 \
@@ -150,7 +156,7 @@ Claude le `<basename>_transcript_revisado.txt` e classifica cada trecho em `norm
 #### 5a. Queimar legenda
 
 ```bash
-{SQUAD_DIR}/.venv/bin/python3 {SQUAD_DIR}/scripts/video-captions.py \
+<venv-python> {SQUAD_DIR}/scripts/video-captions.py \
   videos-editados/<basename>/<basename>_zoomed.mp4 \
   videos-editados/<basename>/<basename>_transcript_revisado.txt \
   videos-editados/<basename>/<basename>_captioned.mp4 \
@@ -165,7 +171,7 @@ Claude le `<basename>_transcript_revisado.txt` e classifica cada trecho em `norm
 #### 5b. Adicionar trilha de fundo
 
 ```bash
-bash {SQUAD_DIR}/scripts/video-add-music.sh \
+python {SQUAD_DIR}/scripts/video-add-music.py \
   videos-editados/<basename>/<basename>_captioned.mp4 \
   "" \
   videos-editados/<basename>/<basename>_final.mp4
@@ -202,10 +208,10 @@ Report final pro expert:
 - Legendas: <K> queimadas (estilo <nome>)
 - Trilha: <nome.mp3> com ducking
 - Encoding: 1080x1920 h264 Main yuv420p, AAC 192k, faststart
-- Abre em: QuickTime, Safari, Chrome, Reels
+- Abre em: QuickTime/Windows Media Player, Safari/Chrome/Edge, Reels
 ```
 
-`open <final>`
+Abrir o resultado pro expert conferir — `open <final>` (Mac) / `start "" <final>` (Windows) / `Invoke-Item <final>` (PowerShell).
 
 ## Opcoes do expert (overrides do default)
 
@@ -221,7 +227,7 @@ Report final pro expert:
 
 Apos expert aprovar:
 - Mantem: video original (raw) + `<basename>_final.mp4` + `<basename>_transcript_revisado.txt` + `<basename>_sections.json`
-- Remove: `_speechcut.mp4`, `_speed.mp4`, `_zoomed.mp4`, `_captioned.mp4`, `_transcript_raw.txt`, `/tmp/*.wav`
+- Remove: `_speechcut.mp4`, `_speed.mp4`, `_zoomed.mp4`, `_captioned.mp4`, `_transcript_raw.txt` (os temporários de `.wav`/filtergraph já são limpos pelos scripts no tempdir do OS)
 
 ## Error recovery
 
@@ -232,6 +238,6 @@ Apos expert aprovar:
 | QG-SEA-003 | @scribe re-revisa transcript / re-acelera |
 | QG-SEA-006 | @zoomer ajusta classificacao ou pula (fallback centro do frame) |
 | QG-SEA-004 | @finisher re-encoda forcando defaults (yuv420p + Main + faststart) |
-| QG-SEA-005 | @finisher checa fonte (`fc-match`), refaz com `--speed` correto |
+| QG-SEA-005 | @finisher checa fonte (Mac: `fc-match`; Windows: `.ttf` embarcado via fontfile), refaz com `--speed` correto |
 
 Cada agent tem visibilidade do que precisa pra desbloquear seu QG — sem ping-pong pro chief.

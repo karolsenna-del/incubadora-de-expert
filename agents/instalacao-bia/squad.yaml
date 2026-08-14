@@ -1,0 +1,102 @@
+# ===============================================================================
+# SQUAD: Instalacao da Bia
+# Conduz o aluno da Mentoria Arcane a instalar a Bia (agente WhatsApp Cloud API)
+# na propria infra — do zero ao smoke test, validando cada gate.
+# ===============================================================================
+
+name: instalacao-bia
+title: "Instalacao da Bia"
+version: "1.0.0"
+author: "Euriler Jube"
+description: >
+  Squad que conduz um aluno da Mentoria Arcane (expert, nao-dev) a instalar
+  a Bia — agente de atendimento WhatsApp via Meta Cloud API — em cima da infra
+  que ele ja levantou (n8n + Supabase + Chatwoot + dominio/SSL) e da API oficial
+  Meta ja configurada. 5 agentes: chief (guia + consultor permanente) + 4 estacoes
+  de jornada (preparador, construtor, conector, doutor). Entrega: Bia viva,
+  respondendo no WhatsApp do aluno, com a personalidade dele e handoff humano.
+
+slash_prefix: "instalacaoBia"
+pattern_prefix: "IB"
+target_user: "Aluno da Mentoria Arcane — expert, nao-dev, com infra de pe + API Meta pronta"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# USE CASES
+# ─────────────────────────────────────────────────────────────────────────────
+use_cases:
+  - id: UC1
+    name: "Instalacao guiada da Bia"
+    description: "Conduzir o aluno pelos passos do INSTALL (em 4 estacoes) ate a Bia viva, validando cada gate"
+  - id: UC2
+    name: "Consultoria pos-instalacao"
+    description: "Tirar duvidas sobre como a Bia funciona, trocar campanha, ajustar comportamento"
+  - id: UC3
+    name: "Diagnostico de instalacao"
+    description: "Quando o smoke test falha — identificar causa raiz e consertar (foco ponte Meta-n8n)"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TIER SYSTEM
+# ─────────────────────────────────────────────────────────────────────────────
+tiers:
+  orchestrator:
+    - bia-chief
+  tier_1:
+    - preparador
+    - construtor
+    - conector
+    - doutor
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TASKS
+# ─────────────────────────────────────────────────────────────────────────────
+tasks:
+  - start
+  - fase-preparar
+  - fase-construir
+  - fase-conectar
+  - fase-diagnosticar
+
+# ─────────────────────────────────────────────────────────────────────────────
+# WORKFLOWS
+# ─────────────────────────────────────────────────────────────────────────────
+workflows:
+  - wf-instalacao-bia
+
+# ─────────────────────────────────────────────────────────────────────────────
+# QUALITY GATES
+# ─────────────────────────────────────────────────────────────────────────────
+quality_gates:
+  - id: QG-IB-000
+    name: "Pre-requisitos prontos"
+    transition: "entrada -> Preparar"
+    blocking: true
+    criteria: "API Meta funcional + infra-base de pe (n8n, Supabase, dominio com SSL/proxy). Chatwoot NAO e pre-req — instalado no Passo 0.5"
+  - id: QG-IB-001
+    name: "Terreno pronto"
+    transition: "Preparador -> Construtor"
+    blocking: true
+    criteria: "Chatwoot vivo (https + admin), tabelas bia_* no Supabase, inbox Chatwoot criado, 5 credentials testadas"
+  - id: QG-IB-002
+    name: "Motor montado"
+    transition: "Construtor -> Conector"
+    blocking: true
+    criteria: "4 workflows integros (sem credential vermelha), prompts injetados sem {{var}}, JS validado, cache cycle"
+  - id: QG-IB-003
+    name: "Portas abertas"
+    transition: "Conector -> Doutor"
+    blocking: true
+    criteria: "Webhook Meta verificado (200 + challenge), campo messages inscrito, webhook Chatwoot ligado, 4 workflows ativos"
+  - id: QG-IB-004
+    name: "Bia viva"
+    transition: "Doutor -> Done"
+    blocking: true
+    criteria: "4 cenarios do smoke test passam, handoff funciona, zero {{var}} literal na resposta"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DEPENDENCIES
+# ─────────────────────────────────────────────────────────────────────────────
+# O squad e autocontido: kit embarcado em data/kit/, KB em knowledge/.
+# Pre-requisitos (infra + API Meta) sao do ambiente do aluno, nao deps do squad.
+dependencies:
+  required: []
+  optional: []

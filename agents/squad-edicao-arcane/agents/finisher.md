@@ -24,8 +24,8 @@ Queima a legenda no **estilo ativo** (lido de `data/estilo-ativo.yaml`, default:
 
 | Skill | Onde | O que faz |
 |---|---|---|
-| `queimar-legenda` | `scripts/video-captions.py` | Drawtext lendo estilo de `data/estilo-ativo.yaml` (default: `neutro` — Bebas Neue branco com stroke grosso). Flag `--speed FLOAT` reescalada timestamps do transcript. Outros estilos via `--style <nome>` ou trocados pelo @stylist. Forca 8-bit yuv420p profile Main |
-| `add-music` | `scripts/video-add-music.sh` | Mixa trilha de fundo com ducking balanceado (sidechaincompress threshold=0.1 ratio=4 release=150ms). Default: `data/trilhas/default.mp3`. Aluno pode passar trilha custom como 2º arg. Volume default `0.18` (audivel nas pausas, voz ainda manda). `-c:v copy` — nao re-encoda video |
+| `queimar-legenda` | `scripts/video-captions.py` | Drawtext lendo estilo de `data/estilo-ativo.yaml` (default: `neutro` — Bebas Neue branco com stroke grosso). Flag `--speed FLOAT` reescalada timestamps do transcript. Outros estilos via `--style <nome>` ou trocados pelo @stylist. Forca 8-bit yuv420p profile Main. A resolucao da fonte e OS-aware (ver strict rules) |
+| `add-music` | `scripts/video-add-music.py` | Mixa trilha de fundo com ducking balanceado (sidechaincompress threshold=0.1 ratio=4 release=150ms). Default: `data/trilhas/default.mp3`. Aluno pode passar trilha custom como 2º arg. Volume default `0.18` (audivel nas pausas, voz ainda manda). `-c:v copy` — nao re-encoda video |
 
 ### Quality gates
 
@@ -44,7 +44,7 @@ Criterios:
 **QG-SEA-005 — Legenda renderizada corretamente E sincronizada**
 
 Criterios:
-- Fonte do estilo ativo resolveu (Bebas/Montserrat/Poppins — verificavel: ffmpeg log nao mencionou fallback pra Verdana)
+- Fonte do estilo ativo resolveu (Bebas/Montserrat/Poppins). No Windows/Linux o script usa `fontfile=` (freetype abre o `.ttf` embarcado direto) — se o ffmpeg reclamar "Fontconfig error / Cannot open font", o path da fonte tem acento/espaco e o short-path 8.3 falhou (raro). No Mac usa `font=` (fontconfig) — fallback pra Verdana indica fonte nao instalada.
 - Acentos portugueses renderizam (extrair 3-5 frames de amostra e validar visualmente)
 - Pelo menos 80% das legendas tem palavras inteiras (sem corte tipo "MENS" no fim)
 - **Sincronia:** flag `--speed` foi passada com o fator correto (1.2 default). Validar amostrando 2-3 frames em pontos chave do video e conferindo que o texto bate com o audio.
@@ -65,8 +65,12 @@ Criterios:
 
 ### 1. Queimar legenda
 
+Usar o Python do venv (o captions le pyyaml):
+- Windows: `{SQUAD_DIR}\.venv\Scripts\python.exe`
+- Mac/Linux: `{SQUAD_DIR}/.venv/bin/python3`
+
 ```bash
-{SQUAD_DIR}/.venv/bin/python3 {SQUAD_DIR}/scripts/video-captions.py \
+<venv-python> {SQUAD_DIR}/scripts/video-captions.py \
   <video_zoomed.mp4> \
   <transcript_revisado.txt> \
   <video_captioned.mp4> \
@@ -86,8 +90,10 @@ Default do squad: `neutro` (Bebas Neue branco puro, stroke 5, sem amarelo, Y=0.6
 
 ### 2. Adicionar trilha de fundo
 
+`add-music` so usa ffmpeg (nao precisa do venv) — `python` puro serve:
+
 ```bash
-bash {SQUAD_DIR}/scripts/video-add-music.sh \
+python {SQUAD_DIR}/scripts/video-add-music.py \
   <video_captioned.mp4> \
   "" \
   <video_final.mp4>
@@ -109,12 +115,12 @@ ffmpeg -v error -i <final> -f null - 2>&1
 ffprobe -v trace <final> 2>&1 | grep -m1 moov | head
 # esperado: moov com offset baixo (faststart)
 
-# QG-SEA-005
-ffmpeg -y -ss <tempo> -i <final> -frames:v 1 /tmp/check.png
+# QG-SEA-005 — extrair frame num path temporario portavel (nada de /tmp cravado)
+ffmpeg -y -ss <tempo> -i <final> -frames:v 1 <tempdir>/check.png
 # extrair 3-5 frames e revisar visualmente (acentos OK? palavras inteiras? texto bate com audio?)
 ```
 
-Se algum falha: identificar causa em `knowledge/04-troubleshooting.md` (10-bit? fontfile vs font? caracteres invalidos? `--speed` errado?).
+Se algum falha: identificar causa em `knowledge/04-troubleshooting.md` (10-bit? fonte nao resolveu — font= no Mac / fontfile= no Windows? caracteres invalidos? `--speed` errado?).
 
 ### 4. Report final
 
@@ -136,7 +142,7 @@ Se algum falha: identificar causa em `knowledge/04-troubleshooting.md` (10-bit? 
 - Aceita `profile` diferente de `Main` (High 4:4:4 nao abre nativo)
 - Pula `+faststart`
 - Usa `-c:a copy` (pode propagar audio do iPhone com problema — sempre re-encoda AAC 192k)
-- Usa `fontfile=` no drawtext (cai pra Verdana silenciosamente — sempre `font='<nome>'` via fontconfig)
+- Força na mão a forma da fonte no drawtext — o `video-captions.py` já escolhe por OS (Mac: `font='<nome>'` via fontconfig; Windows/Linux: `fontfile='<.ttf embarcado>'` via freetype). Deixa o script decidir.
 - Queima legenda SEM passar `--speed` quando o video foi acelerado (drift garantido)
 - Declara entrega sem QG-SEA-004 E QG-SEA-005 PASS
 

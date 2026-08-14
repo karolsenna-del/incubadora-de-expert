@@ -3,7 +3,7 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # Configuravel por cada expert. O squad usa esse arquivo em DOIS lugares:
 #
-# 1. video-transcribe.sh: alimenta o whisper com `--prompt` (whisper transcreve
+# 1. video-transcribe.py: alimenta o whisper com `--prompt` (whisper transcreve
 #    melhor nomes proprios quando recebe contexto)
 #
 # 2. revisao do @scribe na main thread: o agente conhece os nomes corretos e

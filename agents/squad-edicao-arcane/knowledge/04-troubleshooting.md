@@ -23,53 +23,45 @@ ffmpeg -y -i <video_10bit> -c:v libx264 -crf 18 -pix_fmt yuv420p \
   -c:a aac -b:a 192k <video_8bit>.mp4
 ```
 
-## Bug 2: Legenda renderiza em fonte errada (Verdana)
+## Bug 2: Legenda em fonte errada / não renderiza (é OS-específico)
 
-**Sintoma:** Legenda aparece em Verdana (serif larga) em vez de Bebas Neue.
+A partir da v1.1.0 o `video-captions.py` resolve a fonte **por OS** (`_common.drawtext_font_opt`):
 
-**Causa:** O script usou `fontfile='/path/to/font.ttf'` em vez de `font='Bebas Neue'`. Quando o ffmpeg tem `libfontconfig` compilado, ele **silenciosamente ignora `fontfile=`** e tenta resolver pelo nome — se a fonte não estiver instalada, cai pra Verdana.
+- **Mac** → `font='Bebas Neue'` (fontconfig). Falha = cai pra Verdana (fonte não instalada).
+- **Windows/Linux** → `fontfile='<.ttf embarcado>'` (freetype abre o arquivo direto, dispensa fontconfig). Falha = `Fontconfig error: Cannot load default config file` (o ffmpeg não abriu o `.ttf` e tentou o fallback).
 
-**Diagnóstico:**
+**Mac — cai pra Verdana:**
 ```bash
-fc-match "Bebas Neue"
-# esperado: BebasNeue-Regular.ttf: "Bebas Neue" "Regular"
-# bug: Verdana.ttf: "Verdana" "Regular"
+fc-match "Bebas Neue"   # esperado: BebasNeue-Regular.ttf. Se der Verdana, a fonte não está instalada.
+fc-cache -fv ~/Library/Fonts/    # e rode o install de novo
 ```
 
-**Fix:**
-1. Verificar que `~/Library/Fonts/BebasNeue-Regular.ttf` existe
-2. Rodar `fc-cache -fv ~/Library/Fonts/`
-3. Re-rodar `fc-match`
-4. Se ainda Verdana — o squad foi mal instalado, rodar `install.sh` de novo
+**Windows — "Fontconfig error / Cannot open font":** o path do `.ttf` tem **acento ou espaço** e o short-path 8.3 do volume está desabilitado (raro). O `_common` já converte pra short-path 8.3 automaticamente; se mesmo assim falhar, **mova o squad pra um path só-ASCII** (ex: `C:\arka\squad-edicao-arcane\`) e rode o install de novo. Empiricamente validado: com short-path, a legenda renderiza com acento correto (É, Ç, Ã) no Windows.
 
 ## Bug 3: Script Python não acha biblioteca (cv2, silero, torch)
 
 **Sintoma:** `ModuleNotFoundError: No module named 'silero_vad'` (ou cv2/torch/scipy).
 
-**Causa:** Você rodou com `python3` (do Homebrew) em vez do venv do squad.
+**Causa:** Você rodou com `python`/`python3` puro em vez do venv do squad.
 
-**Fix:** SEMPRE usar `{SQUAD_DIR}/.venv/bin/python3`, nunca `python3` puro.
+**Fix:** Pros scripts que usam torch/silero/cv2 (`video-speech-cut.py`, `video-produce-zoom.py`) e pyyaml (`video-captions.py`), SEMPRE usar o Python do venv:
 
 ```bash
-# ERRADO
-python3 scripts/video-speech-cut.py video.mp4
-
-# CERTO
-~/arka1/squads/squad-edicao-arcane/.venv/bin/python3 \
-  ~/arka1/squads/squad-edicao-arcane/scripts/video-speech-cut.py video.mp4
+# Mac/Linux:
+{SQUAD_DIR}/.venv/bin/python3 {SQUAD_DIR}/scripts/video-speech-cut.py video.mp4
+# Windows:
+{SQUAD_DIR}\.venv\Scripts\python.exe {SQUAD_DIR}\scripts\video-speech-cut.py video.mp4
 ```
 
-## Bug 4: `printf: invalid number` em `video-speed-up.sh`
+Os scripts que só usam ffmpeg (`video-speed-up.py`, `video-transcribe.py`, `video-add-music.py`) rodam com `python` puro.
 
-**Sintoma:** Log do `speed-up.sh` mostra:
-```
-printf: 125.500000: invalid number
-original: 0,0s -> acelerado: 0,0s
-```
+## Bug 4: `printf: invalid number` no speed-up (EXTINTO na v1.1.0)
 
-**Causa:** Locale pt-BR usa vírgula como separador decimal (`125,5`), mas o `printf %.1f` em C espera ponto (`125.5`). O vídeo **é gerado corretamente** — só o log final fica estranho.
+**Sintoma (v1.0.0, só no `.sh`):** `printf: 125.500000: invalid number` no log.
 
-**Fix:** Script já corrige com `LC_NUMERIC=C printf ...`. Se mesmo assim aparecer, atualizar o script.
+**Causa:** Locale pt-BR usava vírgula decimal, quebrando o `printf %.1f` do bash.
+
+**Status:** **Não acontece mais.** O `video-speed-up.py` (Python) formata float com ponto independente de locale. O bug morreu junto com a conversão `.sh → .py`.
 
 ## Bug 5: Whisper transcreve nome próprio errado
 
@@ -103,16 +95,13 @@ original: 0,0s -> acelerado: 0,0s
 
 ## Bug 8: Modelo whisper "ggml-medium.bin" ausente
 
-**Sintoma:** `whisper-cli ... -m /opt/homebrew/share/whisper-cpp/models/ggml-medium.bin` reporta arquivo não encontrado.
+**Sintoma:** `video-transcribe.py` reporta "modelo whisper nao encontrado".
 
-**Fix:**
-```bash
-mkdir -p /opt/homebrew/share/whisper-cpp/models
-curl -L -o /opt/homebrew/share/whisper-cpp/models/ggml-medium.bin \
-  https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-medium.bin
-```
+**Path por OS** (resolvido por `_common.model_path()`): env `WHISPER_MODEL` → `/opt/homebrew/share/whisper-cpp/models/ggml-medium.bin` (Mac) → `<squad>/models/ggml-medium.bin` (Windows/Linux).
 
-Ou rodar `install.sh` do squad — ele baixa automaticamente.
+**Fix:** rodar o `install.py` do squad — ele baixa no lugar certo automaticamente. Ou apontar `WHISPER_MODEL` pra um `ggml-medium.bin` que você já tenha. Download manual: https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-medium.bin
+
+**Download incompleto (v1.1.0):** o modelo tem **1533763059 bytes** exatos. Se a conexão cair no meio, o `install.py` **retoma de onde parou** (HTTP Range) em vez de recomeçar 1.5GB, e só dá OK quando bate o tamanho exato. O `doctor.py` também checa o **tamanho**, não só a existência — arquivo truncado (ex: 778MB) não passa mais como `[OK]` falso. Se o doctor marcar o modelo como `[FAIL]` com o arquivo presente, é tamanho errado: rode o install de novo (retoma) ou apague `<squad>/models/ggml-medium.bin` e rode de novo.
 
 ## Bug 9: Vídeo abre mas áudio sai com pitch errado
 
@@ -120,7 +109,7 @@ Ou rodar `install.sh` do squad — ele baixa automaticamente.
 
 **Causa:** Script usou `asetrate` em vez de `atempo`. `asetrate` muda a taxa de amostragem (= muda pitch). `atempo` time-stretch mantendo pitch.
 
-**Fix:** Os scripts **usam `atempo`** corretamente. Se acontecer, verificar `video-speed-up.sh`.
+**Fix:** Os scripts **usam `atempo`** corretamente. Se acontecer, verificar `video-speed-up.py`.
 
 ## Bug 10: ffmpeg "Unable to open font" ou cai pra Verdana mesmo com font correto
 
@@ -150,10 +139,47 @@ ffmpeg -filters 2>/dev/null | grep drawtext    # vazio = ffmpeg do PATH não tem
 /opt/homebrew/bin/ffmpeg -filters | grep drawtext   # o do Homebrew TEM (em Intel: /usr/local/bin/ffmpeg)
 ```
 
-**Fix (a partir desta versão do squad):** os scripts já usam o ffmpeg do Homebrew direto (`/opt/homebrew/bin/ffmpeg`, ou `/usr/local/bin` no Intel), ignorando o PATH. Basta garantir que o ffmpeg do Homebrew esteja instalado:
+**Fix (v1.1.0):** o `_common.find_bin` resolve o ffmpeg pelo **PATH primeiro** (`shutil.which`) e cai pros diretórios do brew só como fallback no Mac. Ou seja: garanta que o ffmpeg **certo** (com drawtext) esteja na frente do PATH, ou que o do brew esteja instalado no Mac. Se um conda ffmpeg sem drawtext estiver na frente do PATH, o jeito limpo é instalar o ffmpeg bom:
 ```bash
-brew install ffmpeg     # (ou: brew reinstall ffmpeg). NÃO use --build-from-source.
-bash scripts/doctor.sh  # confirma "ffmpeg drawtext (legenda) ✓"
+brew install ffmpeg               # Mac (ou: brew reinstall ffmpeg). NÃO use --build-from-source.
+winget install --id Gyan.FFmpeg   # Windows (build full, já com drawtext)
+python scripts/doctor.py          # confirma "ffmpeg drawtext (legenda) [ OK ]"
 ```
 
-**Resposta pronta pro aluno que perguntou do "custo":** "Não precisa compilar nada nem tem custo nenhum. O ffmpeg do Homebrew já vem com legenda pronta. Roda `brew install ffmpeg` e depois o `doctor.sh` do squad — resolve."
+**Resposta pronta pro aluno que perguntou do "custo":** "Não precisa compilar nada nem tem custo nenhum. O ffmpeg do Homebrew já vem com legenda pronta. Roda `brew install ffmpeg` e depois o `doctor.py` do squad — resolve." No Windows, o equivalente é `winget install --id Gyan.FFmpeg -e` (build full, já com drawtext).
+
+---
+
+## Bugs específicos de Windows (v1.1.0)
+
+### W1: `pip install` falha no torch
+
+**Sintoma:** o venv cria, mas `pip install torch` falha (`No matching distribution`).
+
+**Causa:** Python **3.14** (ou mais novo) ainda não tem wheel de torch.
+
+**Fix (v1.1.0):** o `install.py` **resolve sozinho** — quando só acha Python ≥ 3.14, ele instala o **Python 3.13 via winget** (`Python.Python.3.13`) e cria o venv com o exe recém-instalado (por caminho absoluto, não depende do launcher recarregar). Sem winget na máquina: instale Python 3.13 (python.org) e rode o install de novo. Se o instalador avisar que instalou mas não localizou o exe na sessão, **abra um novo terminal** e rode de novo (idempotente).
+
+### W2: `whisper-cli` não instala
+
+**Sintoma:** `doctor.py` mostra `whisper-cli [FAIL]` no Windows.
+
+**Causa:** o download do release do whisper.cpp falhou. Bug histórico: a URL apontava pro `v1.7.4`, que **não tem** o asset `whisper-bin-x64.zip` (dava HTTP 404).
+
+**Fix (v1.1.0):** a URL agora aponta pro release **`v1.9.1`** (que tem o asset) — o `install.py` baixa e extrai `whisper-cli.exe` + `ggml*.dll` pra `<squad>/bin/` sozinho. Se ainda falhar (rede): baixar `whisper-bin-x64.zip` de https://github.com/ggml-org/whisper.cpp/releases manualmente e extrair `whisper-cli.exe` (+ `ggml*.dll`) pra `<squad>/bin/`. O `_common.find_bin` acha ele lá. Alternativa: pôr o `whisper-cli.exe` em qualquer pasta do PATH.
+
+### W3: legenda "Fontconfig error" com acento/espaço no caminho
+
+Ver **Bug 2** (seção Windows): o `_common` usa short-path 8.3 automaticamente; se o volume tiver 8.3 desabilitado, mova o squad pra um path só-ASCII sem espaço.
+
+### W4: ffmpeg não aparece após `winget install`
+
+**Sintoma:** instalou via winget mas `ffmpeg` continua "ausente".
+
+**Causa:** o PATH da sessão atual não recarregou.
+
+**Fix:** **abrir um novo terminal** e rodar o `install.py`/`doctor.py` de novo.
+
+### W5: nada de bash
+
+O squad **não usa mais bash** — todos os scripts são `.py`. Não precisa de Git Bash nem WSL no Windows. Se algum agent antigo mandar `bash ...sh`, está desatualizado: o comando certo é `python ...py`.

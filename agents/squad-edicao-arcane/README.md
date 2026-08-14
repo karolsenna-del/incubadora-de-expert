@@ -32,14 +32,20 @@ Ter o **Auroq OS** instalado (`npx auroq-os init` numa pasta sua — geralmente 
    unzip ~/Downloads/auroq-squad-edicao-arcane.zip
    ```
 
-2. **Roda o instalador:**
+2. **Roda o instalador** (cross-platform — detecta o OS sozinho):
 
    ```bash
+   # Mac/Linux:
    cd squad-edicao-arcane
-   bash install.sh
+   python3 install.py            # (ou o shim: bash install.sh)
+   ```
+   ```powershell
+   # Windows (PowerShell):
+   cd squad-edicao-arcane
+   py install.py                 # (ou o shim: powershell -ExecutionPolicy Bypass -File install.ps1)
    ```
 
-   Faz tudo: detecta o projeto Auroq, instala `ffmpeg`/`whisper-cpp`/modelo medium (1.5GB), cria venv local, instala fonte Bebas Neue, **registra o slash command** em `<projeto>/.claude/commands/auroq-squad-edicao-arcane.md`.
+   Faz tudo: detecta o projeto Auroq, instala `ffmpeg` (brew/winget), `whisper-cli` (brew/release GitHub), modelo medium (1.5GB), cria venv local, resolve a fonte e **registra o slash command** em `<projeto>/.claude/commands/auroq-squad-edicao-arcane.md`.
 
 ### Editar vídeo
 
@@ -103,7 +109,9 @@ squad-edicao-arcane/
 ├── README.md                    (este arquivo)
 ├── squad.yaml                   (manifesto)
 ├── skill.md                     (chief activation — slash command)
-├── install.sh                   (setup inicial)
+├── install.py                   (setup inicial cross-platform — lógica real)
+├── install.sh                   (shim Mac/Linux → install.py)
+├── install.ps1                  (shim Windows → install.py)
 ├── agents/
 │   ├── chief.md                 (Vector — orquestrador)
 │   ├── installer.md                   (Forge — install + doctor)
@@ -117,11 +125,14 @@ squad-edicao-arcane/
 ├── workflows/
 │   └── pipeline-edicao.md       (workflow master da esteira completa)
 ├── scripts/
-│   ├── video-speech-cut.py      (Silero VAD agressivo)
-│   ├── video-speed-up.sh        (1.2x mantendo pitch)
-│   ├── video-transcribe.sh      (whisper + prompt)
-│   ├── video-captions.py (legenda estilo viral)
-│   └── doctor.sh                (health check)
+│   ├── _common.py               (helpers cross-platform: bins, tmp, modelo, fonte OS-aware)
+│   ├── video-speech-cut.py      (Silero VAD agressivo — venv)
+│   ├── video-speed-up.py        (1.2x mantendo pitch)
+│   ├── video-transcribe.py      (whisper + prompt)
+│   ├── video-captions.py        (legenda estilo viral — venv)
+│   ├── video-produce-zoom.py    (zoom dinâmico no rosto — venv)
+│   ├── video-add-music.py       (trilha + ducking)
+│   └── doctor.py                (health check cross-platform)
 ├── knowledge/
 │   ├── 01-pipeline-arquitetura.md  (visão geral)
 │   ├── 02-defaults-validados.md    (params + por quê)
@@ -135,8 +146,10 @@ squad-edicao-arcane/
 
 ## Requisitos
 
-- **macOS** (Apple Silicon M1/M2/M3/M4 — outros precisam adaptar paths)
-- **Homebrew** instalado
+- **macOS** (Apple Silicon) **ou Windows 10/11** — o squad é cross-platform desde a v1.1.0
+  - Mac: **Homebrew**
+  - Windows: **winget** (App Installer) recomendado; o instalador usa pra pôr ffmpeg. **Python 3.12 ou 3.13** (o torch ainda não tem wheel pra 3.14 — o instalador prefere uma versão compatível se você tiver)
+- **Python 3.10+** (o instalador é em Python)
 - **~3 GB de espaço** (modelo whisper 1.5GB + venv ~1GB + fonte/scripts)
 - **Tempo de instalação:** ~5-10 min (depende da conexão pra baixar o modelo)
 
@@ -170,7 +183,13 @@ Pra **produzir conteúdo** (escolher tema, escrever roteiro), use o `/squad-cont
 
 ---
 
-**Versão:** 1.0.0
-**Criado:** 19/05/2026
+**Versão:** 1.1.1
+**Criado:** 19/05/2026 · **Port cross-platform:** 10/07/2026 (@squad-creator)
 **Criado por:** Euriler Jubé via Squad Forge (UC1 acelerado — pipeline validado iterativamente em conversa)
-**Validado em:** vídeo IMG_6894 (4min09s talking-head) → 1min44s Reels pronto, todos os QGs PASS
+**Validado em:** vídeo IMG_6894 (Mac, v1.0.0) → 1min44s Reels pronto, todos os QGs PASS · etapas de ffmpeg (speed/legenda/trilha) validadas no Windows 11 na v1.1.0
+
+### Changelog
+
+- **v1.1.1 (11/07/2026):** Port Windows funcional de ponta a ponta (`doctor.py` 25/25 verde, validado ao vivo no Windows 11). Corrige 4 bugs destampados por um install do zero: (1) `.venv` — symlink do Mac estava commitado e bloqueava `python -m venv` em toda máquina nova (removido do tracking + `.gitignore` novo); (2) auto-install do Python passa a usar o caminho absoluto do `python.exe` (contorna lag do launcher `py -3.13`); (3) URL do whisper-cli corrigida pro `v1.9.1` (a `v1.7.4` não tinha o asset — 404); (4) download do modelo com HTTP Range (resume) + verificação de tamanho exato (antes truncava e o doctor validava truncado como OK).
+- **v1.1.0 (10/07/2026):** Suporte nativo a Windows. Instalador único cross-platform em Python (`install.py`); `_common.py` resolve binários (PATH+winget/brew), temporários (`tempfile` no lugar de `/tmp`) e fonte OS-aware (`fontfile=` com short-path no Windows/Linux, `font=` mantido no Mac); scripts `.sh` convertidos em `.py`. Bug 4 (locale) extinto de brinde.
+- **v1.0.0 (19/05/2026):** Release inicial (macOS).

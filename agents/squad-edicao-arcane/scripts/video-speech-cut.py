@@ -3,26 +3,18 @@
 video-speech-cut.py — corte por fala usando Silero VAD (modo agressivo: minima respiracao)
 uso: video-speech-cut.py <video> [<output>] [--scale WxH]
 
-Executar com: {SQUAD_DIR}/.venv/bin/python3 video-speech-cut.py ...
-(o venv local do squad e criado pelo install.sh)
+Executar com o Python do venv (Windows: .venv/Scripts/python.exe · Mac/Linux: .venv/bin/python3).
+O venv local do squad e criado pelo install.py.
 """
 import sys, subprocess, os, argparse, torch
 from scipy.io import wavfile
 from silero_vad import load_silero_vad, get_speech_timestamps
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _common
 
-def _bin(name):
-    """ffmpeg/ffprobe do Homebrew (bottle completo). Evita um ffmpeg de
-    conda/build estatico no PATH que possa faltar filtros."""
-    for base in ("/opt/homebrew/bin", "/usr/local/bin"):
-        cand = os.path.join(base, name)
-        if os.path.exists(cand):
-            return cand
-    return name
-
-
-FFMPEG = _bin("ffmpeg")
-FFPROBE = _bin("ffprobe")
+FFMPEG = _common.ffmpeg()
+FFPROBE = _common.ffprobe()
 
 p = argparse.ArgumentParser()
 p.add_argument("video")
@@ -44,7 +36,7 @@ base = os.path.splitext(video)[0]
 output = args.output or f"{base}_speechcut.mp4"
 scale = args.scale.replace("x", ":")
 
-wav = f"/tmp/sv_{os.getpid()}.wav"
+wav = _common.tmp_path(".wav")
 subprocess.run([FFMPEG,"-y","-i",video,"-ar","16000","-ac","1","-f","wav",wav],
     capture_output=True, check=True)
 
@@ -73,7 +65,7 @@ for i,(s,e) in enumerate(segs):
     parts.append(f"[0:a]atrim=start={s:.6f}:end={e:.6f},asetpts=PTS-STARTPTS[a{i}];")
 parts.append("".join(f"[v{i}][a{i}]" for i in range(len(segs)))
     + f"concat=n={len(segs)}:v=1:a=1[outv][outa]")
-ff = f"/tmp/sv_filter_{os.getpid()}.txt"
+ff = _common.tmp_path(".txt")
 open(ff,"w").write("\n".join(parts))
 subprocess.run([FFMPEG,"-y","-i",video,"-filter_complex_script",ff,
     "-map","[outv]","-map","[outa]",

@@ -1,15 +1,22 @@
 ---
 name: squad-carrossel-arcane
 description: |
-  Squad pra producao de carrosseis e posts estaticos pra Instagram.
-  Identity Designer cria os templates visuais do aluno (3-5 ideais), Producer monta os PNGs.
+  Squad pra producao de carrosseis e posts estaticos pra Instagram. Faz a ARTE do
+  post — nao escreve a copy.
+
+  Trabalha em duas camadas visuais:
+  - Arte em CSS (HTML+CSS renderizado aqui no Claude Code, sem custo de API) — a
+    moldura do post: fundo, tipografia, layout, avatar. Quem faz: Identity Designer.
+  - Imagem gerada por IA (GPT Image 2 / Nano Banana Pro, gasta credito) — a
+    ilustracao de conteudo que encena a tese do card. Quem faz: Image Director.
+  Um carrossel pode usar as duas: a imagem de IA entra dentro da moldura CSS.
 
   Use quando o aluno quer:
-  - Criar templates visuais do zero com identidade propria
-  - Produzir carrossel a partir de copy pronta
-  - Produzir post estatico
-  - Adicionar templates novos
-  - Listar templates ja criados
+  - Definir o template de arte CSS dos posts (padrao reutilizavel)
+  - Definir o estilo padrao das imagens geradas por IA (padrao reutilizavel)
+  - Gerar as imagens de IA dos cards de um carrossel
+  - Produzir carrossel ou post estatico a partir de copy pronta
+  - Listar templates e estilos ja salvos
 
   Output em ~/Downloads/{nome-do-carrossel}/ com PNGs numerados prontos pra postar.
 ---
@@ -20,19 +27,45 @@ Ativacao: `/squad-carrossel-arcane`
 
 ## O que faz
 
-Pipeline end-to-end de producao de carrosseis Instagram. 2 fluxos:
+Transforma copy pronta em carrossel ou post estatico de Instagram — PNGs prontos
+pra postar.
 
-1. **Setup** (primeiro uso): Identity Designer cria 3-5 templates visuais a partir das tuas referencias
-2. **Producao** (normal): Producer recebe tua copy + escolhe template + entrega PNGs em ~/Downloads/
+## O que NAO faz
 
-## Quando usar
+- **Nao escreve a copy nem o texto do post** — isso o aluno traz pronto
+- **Nao posta em rede social** — entrega os arquivos
+- Apresentacoes de palestra/aula → use `/slideForgeV2`
+- Copy/roteiro do post → use `/squad-conteudo-arcane`
 
-- Aluno tem copy pronta e quer transformar em carrossel/post visual
-- Aluno quer padronizar identidade visual dos posts
-- Aluno quer escalar producao de conteudo sem depender de designer
+## As duas camadas visuais
 
-## Quando NAO usar
+| Camada | O que e | Onde e feita | Custo | Agente |
+|--------|---------|--------------|-------|--------|
+| **1. Arte em CSS** | A moldura do post: fundo, tipografia, layout, avatar, caixa de texto | Aqui, no Claude Code (HTML+CSS → PNG) | Nenhum — refaz a vontade | Identity Designer |
+| **2. Imagem de IA** | A ilustracao de conteudo do card: a cena que encena a tese e para o scroll | GPT Image 2 / Nano Banana Pro | Gasta credito/API | Image Director |
 
-- Pra criar apresentacoes de palestra/aula → use `/slideForgeV2`
-- Pra criar copy/roteiro do post → use `/squad-conteudo-arcane`
-- Pra postar automaticamente → squad nao posta, so entrega arquivos
+Um carrossel forte normalmente usa as duas — a imagem de IA entra **dentro** da
+moldura CSS. Carrossel so-texto usa so a camada 1.
+
+## Os dois padroes reutilizaveis
+
+O aluno define uma vez e reusa em todo post:
+
+- **Template de arte** (camada 1) → Identity Designer. A cara dos posts.
+- **Estilo de imagem** (camada 2) → Image Director. Faz toda imagem gerada sair na
+  linguagem visual do aluno, em qualquer sessao nova.
+
+## Quem faz o que
+
+| Agente | Funcao |
+|--------|--------|
+| **carrossel-chief** | Apresenta, detecta estado, roteia |
+| **identity-designer** | Cria/ajusta o template de arte em CSS |
+| **image-director** | Define o estilo de imagem e gera as imagens de IA dos cards |
+| **producer** | Junta copy + template + imagens e entrega os PNGs |
+
+## Fluxos tipicos
+
+- **Carrossel com imagem:** Image Director gera as imagens → Producer monta o post
+- **Carrossel so-texto:** vai direto no Producer
+- **Primeiro uso:** Identity Designer cria o template de arte antes de qualquer producao

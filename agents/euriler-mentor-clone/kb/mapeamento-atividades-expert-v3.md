@@ -386,7 +386,7 @@ Dentro de um projeto ativo, a lógica é sequência e fluxo, não hierarquia. In
 
 **Ativos intangíveis e capital de marca:** Networking, associações estratégicas, relevância de mercado, palestras, matérias. É uma dimensão não mapeada que opera numa camada diferente — alta relevância com menor visibilidade é diferente de grande audiência com pouca influência real.
 
-**AIOS e Squads:** Evolução futura onde atividades hoje em modo C ou B migram pra A via squads de IA. Não mapeado nesta versão — foco é o modo atual de operação.
+**Auroq e Squads:** Evolução futura onde atividades hoje em modo C ou B migram pra A via squads de IA. Não mapeado nesta versão — foco é o modo atual de operação.
 
 ---
 

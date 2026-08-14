@@ -68,7 +68,7 @@ Mas nao sao mais 2 produtos. Sao 2 angulos da mesma marca, convergindo pro mesmo
 
 **O visionario que enxerga o futuro do trabalho e constroi a ponte pra quem quer chegar la.**
 
-27 anos. Nao e dev, nao e tecnico, nao e guru. E um estrategista de negocios que dominou IA como sistema operacional e construiu um negocio de mais de meio milhao operando praticamente sozinho. Casado, pai de duas filhas, cristao. Fe integrada ao negocio de forma natural — nunca forcada, nunca performatica.
+27 anos. Nao e dev, nao e tecnico, nao e guru. E o cara do MARKETING que dominou a IA (reposicionamento 11/05/2026): 9 anos de digital, +R$80M vendidos, e hoje opera o negocio praticamente sozinho com IA como sistema operacional. Casado, pai de tres filhas, cristao. Fe integrada ao negocio de forma natural — nunca forcada, nunca performatica.
 
 O que o diferencia de qualquer outro "cara de IA" no mercado:
 
@@ -76,7 +76,7 @@ O que o diferencia de qualquer outro "cara de IA" no mercado:
 2. **Nao e teorico — e operador.** Tudo que ensina, usa todo dia. O sistema que mostra e o sistema que roda o negocio dele.
 3. **Nao e guru — e construtor.** Nao vende promessa vazia. Mostra a maquina funcionando. "Olha aqui. E isso que eu uso. Agora faz igual."
 4. **Nao e superficial — vai fundo.** Nao ensina 50 ferramentas. Ensina 1 sistema com profundidade absurda. A diferenca entre brinquedo e sistema operacional.
-5. **Tem pele no jogo.** 500K+ de receita, operando sozinho com IA. Nao e coach que fala bonito — e empreendedor que faz.
+5. **Tem pele no jogo.** +R$80M vendidos em 9 anos de digital, hoje operando praticamente sozinho com IA. Nao e coach que fala bonito — e empreendedor que faz.
 
 ---
 
@@ -178,9 +178,8 @@ Agora ensina o sistema. Nao porque precisa de mais dinheiro — porque acredita 
 
 **Problema:** IRRELEVANCIA — saber que pode ser gigante e nao ser.
 
-**Preco:** ~15K (a definir).
+**Preco:** cheio R$20.000; oferta exclusiva de workshop R$13.400 (12x R$1.385); ultima cartada R$11.900 (detalhes em `poc-v2-addendum.yaml`).
 
-**Estrutura:** `business/nova-arcane.md`
 
 ### Arcane Pro (futuro — upgrade)
 

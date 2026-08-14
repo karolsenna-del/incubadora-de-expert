@@ -3,6 +3,8 @@
 > Casos reais de uso do SO de IA que demonstram a teoria funcionando.
 > Cada caso é um argumento tangível. Quanto mais casos, mais valor na hora de apresentar, convencer, impressionar.
 > Formato: situação, o que foi feito, resultado, conceito que prova.
+>
+> **NOTA (jul/2026):** casos históricos de fev-mar/2026 — a LÓGICA de cada caso continua válida, mas ferramentas citadas podem ter sido substituídas. Em especial: o Lovable foi ABANDONADO (páginas hoje são feitas direto no Claude Code + deploy Vercel, por uma ordem). Stack atual: `mius-v2-methodology.yaml` e `poc-v2-addendum.yaml`.
 
 ---
 
@@ -78,16 +80,16 @@
 
 ---
 
-## CP-007: Clone Babruna — Mind Upload na prática
+## CP-007: Clone de tráfego — Mind Upload na prática
 
 **Situação:** Precisava de expertise em tráfego pago (Método Andromeda) operando dentro do SO, sem depender de consultor externo.
 
-**O que foi feito:** Clone Forge extraiu conhecimento da Barbara Bruna (especialista tráfego) em 3 versões progressivas:
+**O que foi feito:** Clone Forge extraiu conhecimento de uma gestora de tráfego referência (na visão do Euriler, a melhor do Brasil) em 3 versões progressivas:
 - v1: 82 reels extraídos
 - v2: 122 reels, POC com 77.3% de fidelidade
 - v3: modelagem cognitivo-motora — não só o que ela diz, mas como pensa e decide
 
-**Resultado:** 246 MIUs extraídas. Agente Babruna opera com os padrões de decisão dela. Prioriza, julga e decide como ela. Disponível 24/7 dentro do SO.
+**Resultado:** 246 MIUs extraídas. O clone opera com os padrões de decisão dela. Prioriza, julga e decide como ela. Disponível 24/7 dentro do SO.
 
 **Conceito que prova:** Mind Upload, ETL como mecanismo, Clone Forge, conhecimento é baixável e instalável, Fórmula do Sistema (IA + Conhecimento = Superagente).
 
@@ -121,7 +123,7 @@
 
 **Situação:** Tinha 3 pessoas na equipe, ~30K/mês de custo. Gestor de infra, gestor de tráfego, assistente.
 
-**O que foi feito:** Migrou progressivamente cada função pra IA. Infra → Tech Ops. Tráfego → Gestor Andromeda + Babruna. Assistente → Bia + Workers.
+**O que foi feito:** Migrou progressivamente cada função pra IA. Infra → Tech Ops. Tráfego → Gestor Andromeda + clone de tráfego. Assistente → Bia + Workers.
 
 **Resultado:** Custo de equipe: zero. Qualidade: igual ou superior. Velocidade: absurdamente maior. Autonomia: total.
 
@@ -157,7 +159,7 @@
 
 **Situação:** Tinha a KB de tráfego Andromeda (7 volumes, 4273 linhas) mas era documento passivo.
 
-**O que foi feito:** ETLmaker processou a KB. Squad Forge criou o Gestor Andromeda (4 agentes, 9 tasks, 1 workflow). Babruna (clone) foi integrada como consultora de estratégia dentro do squad.
+**O que foi feito:** ETLmaker processou a KB. Squad Forge criou o Gestor Andromeda (4 agentes, 9 tasks, 1 workflow). O clone de tráfego foi integrado como consultor de estratégia dentro do squad.
 
 **Resultado:** Squad que opera Meta Ads com metodologia dentro. Não é IA genérica apertando botão — é IA que sabe COMO o método funciona, com regras cardinais, nomenclatura, padrão de decisão.
 

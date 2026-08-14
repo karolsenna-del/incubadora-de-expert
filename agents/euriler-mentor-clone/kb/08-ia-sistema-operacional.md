@@ -303,7 +303,7 @@ Os 4 Modos medem **COMO** o expert interage com a IA em cada atividade. [Fonte: 
 
 **Sistema:** IA e a forma como a pessoa opera. Pensa com IA, faz com IA, lembra com IA. Tem Skills, tem workflows, tem Squads. Nao e uma ferramenta que usa — e o jeito que trabalha. [Fonte: SRC-C01]
 
-O NDF ensina o Nivel 3. Tudo que vem depois — Skills, Squads, AIOS — sao camadas de sofisticacao DENTRO do paradigma de sistema. Usar IA no co-piloto ja e sistema. Pensar junto com IA ja e sistema. A diferenca e o grau de sofisticacao, nao o paradigma. [Fonte: SRC-C01]
+O NDF ensina o Nivel 3. Tudo que vem depois — Skills, Squads, Auroq — sao camadas de sofisticacao DENTRO do paradigma de sistema. Usar IA no co-piloto ja e sistema. Pensar junto com IA ja e sistema. A diferenca e o grau de sofisticacao, nao o paradigma. [Fonte: SRC-C01]
 
 **A progressao dentro do Sistema (4 Niveis de Sofisticacao):**
 
@@ -399,7 +399,8 @@ A Arvore explica o negocio (framework de ensino). As 4 Areas mostram o dia a dia
 1. **Copy:** Puxou skill de lancamento pago → IA definiu secoes e variacoes → fez secao por secao, debatendo ate aprovar cada uma → IA julgava ativamente ("ta generico", "proposta nao ta clara")
 2. **Design:** Mandou referencias visuais → IA apresentou opcoes → escolheu estilo → fez visual secao por secao com animacoes
 3. **Programacao:** Copy pronto + design aprovado → programou direto
-4. **Derivacoes:** Transformou em briefing pro designer, prompt pro Lovable, material completo
+4. **Derivacoes:** Transformou em briefing pro designer, prompt pra ferramenta de pagina da epoca, material completo
+   *(NOTA jul/2026: caso historico — hoje a pagina inteira e feita direto no Claude Code + deploy Vercel, sem ferramenta intermediaria)*
 
 ### 4.4 Gestao
 
@@ -490,7 +491,7 @@ A separacao de papeis e o que impede a entropia: o executor nao julga seu propri
 
 **Organizacao por output, nao por disciplina:** Squads devem ser verticais — organizados por campanha ou entrega, nao por habilidade. Squad de Lancamento Pago (dentro dele tem copywriter + designer + traffic manager + funnel builder) e certo. Squad de Copy (varios copywriters que servem qualquer campanha) e errado. O expert tem 3-6 motores de receita. Cada motor e um Squad. [Fonte: SRC-C08]
 
-> *Referencia cruzada:* A arquitetura completa do AIOS com 5 camadas organizacionais, meta-squads e progressao por faturamento esta em → Vol 10 (AIOS Avancado).
+> *Referencia cruzada:* A arquitetura completa do Auroq com 5 camadas organizacionais, meta-squads e progressao por faturamento esta em → Vol 10 (Auroq Avancado).
 
 ### 5.3 Agentes vs Chatbots
 

@@ -107,7 +107,7 @@ core_principles:
   - CRITICAL: Cada agent dono do proprio QG — chief monitora, nao executa
   - CRITICAL: Bloquear entrega se output 10-bit OU profile != Main OU legenda quebrada
   - CRITICAL: 8-bit yuv420p + profile Main + faststart em TODOS os re-encodes (sem isso, vídeo nao abre)
-  - CRITICAL: NAO usar fontfile= no drawtext — sempre font='Bebas Neue' via fontconfig
+  - CRITICAL: fonte da legenda e OS-aware (v1.1.0) — o video-captions.py decide: font='Bebas Neue' (fontconfig) no Mac, fontfile='<.ttf embarcado>' (freetype) no Windows/Linux. NAO forcar um dos dois na mao
   - CRITICAL: NAO usar -c:a copy — sempre re-encodar AAC 192k (iPhone audio pode propagar problema)
   - CRITICAL: Revisao de portugues e na MAIN THREAD (@scribe usa Opus) — automacao pura nao pega tudo
   - CRITICAL: REGRA AUTOCONTIDO — zero refs a paths externos, scripts/fontes embarcados
@@ -116,7 +116,7 @@ specialists:
   - id: installer
     persona: Forge — Engineer (install + doctor)
     apresentacao_aluno: "Instala dependencias na 1a vez e valida ambiente antes de cada edicao. Detecta o que falta"
-    skills: "install.sh (provisiona ffmpeg, whisper-cpp, modelo, venv, fontes) + doctor.sh (health check)"
+    skills: "install.py (cross-platform: provisiona ffmpeg, whisper-cli, modelo, venv, fontes) + doctor.py (health check)"
     quality_gate: "QG-SEA-001 — ambiente passa em todas checagens"
 
   - id: cutter
@@ -128,13 +128,13 @@ specialists:
   - id: scribe
     persona: Letra — Transcritor + revisor (unico agent pensante)
     apresentacao_aluno: "Roda whisper com prompt customizado, le o transcript e corrige portugues na main thread"
-    skills: "video-transcribe.sh (whisper -ml 32 -sow --prompt) + revisao Opus (acentos, nomes proprios, dicionario)"
+    skills: "video-transcribe.py (whisper -ml 32 -sow --prompt) + revisao Opus (acentos, nomes proprios, dicionario)"
     quality_gate: "QG-SEA-003 — transcript_revisado.txt com dicionario aplicado"
 
   - id: finisher
     persona: Finalizador — Acelera + queima legenda + entrega
     apresentacao_aluno: "Acelera 1.2x (mantendo pitch) e queima legenda estilo B (Bebas Neue, 2 linhas branco+amarelo)"
-    skills: "video-speed-up.sh + video-captions.py — forca 8-bit yuv420p profile Main + AAC 192k + faststart"
+    skills: "video-speed-up.py + video-captions.py — forca 8-bit yuv420p profile Main + AAC 192k + faststart"
     quality_gate: "QG-SEA-004 (output abre) + QG-SEA-005 (legenda renderiza)"
 
 commands:
@@ -143,7 +143,7 @@ commands:
     description: 'Lista comandos + visao geral dos 5 agents'
   - name: instalar
     visibility: [full, quick, key]
-    description: 'Setup inicial (installer -> install.sh)'
+    description: 'Setup inicial (installer -> install.py)'
   - name: editar
     visibility: [full, quick, key]
     description: 'Editar video bruto — pipeline completo'
@@ -185,11 +185,14 @@ dependencies:
     - nomes-proprios.yaml
     - fontes/BebasNeue-Regular.ttf
   scripts:
+    - _common.py
     - video-speech-cut.py
-    - video-speed-up.sh
-    - video-transcribe.sh
+    - video-speed-up.py
+    - video-transcribe.py
     - video-captions.py
-    - doctor.sh
+    - video-produce-zoom.py
+    - video-add-music.py
+    - doctor.py
 
 autoClaude:
   version: '1.0'
@@ -205,7 +208,7 @@ autoClaude:
 ## Quick Commands
 
 ### Modo Guiado
-- `*instalar` — Ops roda install.sh (1a vez ou pra atualizar)
+- `*instalar` — Ops roda install.py (1a vez ou pra atualizar)
 - `*editar <video>` — Pipeline completo: corte → speed → legenda
 - `*cortar <video>` — Apenas corte por fala
 - `*diagnosticar` — Doctor checa ambiente
@@ -234,14 +237,14 @@ autoClaude:
 - **4 scripts embutidos** validados em produção
 - **KB embarcada** (arquitetura, defaults, dicionário, troubleshooting)
 - **Fonte Bebas Neue embarcada** (estilo de legenda viral)
-- **Install automatizado** — `bash install.sh` provisiona tudo
+- **Install automatizado cross-platform** — `python install.py` (Mac/Windows) provisiona tudo
 
 ### Workflow Típico
 
 ```
 PRIMEIRA VEZ:
 *instalar
-  → Ops roda install.sh (ffmpeg, whisper, modelo, venv, fontes)
+  → Ops roda install.py (ffmpeg, whisper, modelo, venv, fontes)
   → Health check final
   ↓
 EDITAR VIDEO:

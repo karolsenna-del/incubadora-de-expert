@@ -4,7 +4,7 @@ responsavel: "@producer"
 responsavel_type: "agent"
 atomic_layer: "task"
 Entrada: "Aluno tem templates salvos e quer produzir carrossel"
-Saida: "PNGs numerados em ~/Downloads/{nome-do-carrossel}/ E entregues em business/instagram/fila/{slug}/"
+Saida: "PNGs numerados em ~/Downloads/{nome-do-carrossel}/"
 execution_type: "interactive"
 ---
 
@@ -104,31 +104,6 @@ Pronto. {N} slides em ~/Downloads/{name}/. Abrir?
 
 ```bash
 open "$HOME/Downloads/{name}"
-```
-
-### Step 6: Entregar na Fila do Agendador (OBRIGATÓRIO — fecha o pipeline)
-
-Depois de renderizar e validar, **copiar os slides pra fila do insta-scheduler**. É isso que
-faz o post ser agendado sem a Karol enviar nada na mão.
-
-- **Slug canônico:** o nome da pasta do post em `docs/producao-conteudo/{expert}/posts/{slug}/`
-  (NÃO o `{name}` do Downloads). Ex: post `ia-braco-do-expert` → fila `ia-braco-do-expert`.
-  Na dúvida de qual é o slug, confirmar com o aluno antes de copiar.
-- **Destino:** `business/instagram/fila/{slug}/`
-- **Copiar** todos os `slide-NN.png` mantendo a numeração (slide-01.png, slide-02.png, ...).
-
-```bash
-mkdir -p "business/instagram/fila/{slug}"
-cp "$HOME/Downloads/{name}"/slide-*.png "business/instagram/fila/{slug}/"
-```
-
-Contrato completo da fila: `agents/insta-scheduler/data/insta-scheduler-rules.md` (RULE-1).
-O squad de conteúdo deposita o `legenda.txt` na mesma pasta — quando os dois chegam, o
-insta-scheduler agenda.
-
-```
-Slides entregues na fila: business/instagram/fila/{slug}/ ({N} PNGs).
-Falta só o legenda.txt (squad de conteúdo) pra o insta-scheduler agendar.
 ```
 
 ## Re-render parcial

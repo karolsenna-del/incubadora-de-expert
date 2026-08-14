@@ -1,0 +1,420 @@
+# ============================================================
+# MIU EXTRACTION v2 (DELTA 2026-H1) — EURILER JUBE
+# Stream: VOICE (bordoes, padroes de fala, registros)
+# Fontes: 10 transcricoes abr-jun/2026 (leitura integral, main thread)
+# Extraido: 2026-07-09 | Base comparada: mius-voice.yaml (120 MIUs, abr/2026)
+# Gate 09/07: terceiros anonimizados
+# Total: 44 MIUs
+# ============================================================
+
+# =============================================
+# BLOCO 1: BORDOES NOVOS (TIER 0 — VOZ LITERAL)
+# =============================================
+
+- id: "MIU2-V001"
+  content: "'Vai dar bom.' / 'Vai dar certo em nome de Jesus.' — fechamento-padrao de qualquer instrucao ou destrave. Variante de incentivo: 'vai que bora' / 'vamos que vamos'."
+  category: "BEHAVIORAL"
+  tags: ["VOICE"]
+  source_id: "todas as fontes"
+  location: "onipresente"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-V002"
+  content: "'O bagulho ta louco' / 'o bicho e brabo' / 'violento' / 'brabo' — vocabulario de intensidade pra qualidade tecnica ('esse squad e VIOLENTO'; 'a copy ficou braba'). 'Violento' e o elogio maximo pra ferramenta/entrega."
+  category: "BEHAVIORAL"
+  tags: ["VOICE"]
+  source_id: "todas as fontes"
+  location: "onipresente"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-V003"
+  content: "Comandos dele para a IA em publico: 'frite tokens sem do', 'quero trabalho de MILIONARIO', 'se vira ai', 'vai fundo, meu jogador', 'edita esse video ai, papai', 'tchau, obrigado' (fecha a ordem como quem sai da sala), 'a ordem ta dada / o rei mandou a ordem'."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "HUMOR"]
+  source_id: "ws-2026-06-21"
+  location: "praticas ao vivo"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-V004"
+  content: "'Ostentador de token. Bilionario de token.' — autodescricao de quem paga o plano topo e nao economiza inteligencia. Contraparte compassiva pro aluno de plano gratuito que estourou o limite: 'a vida do pobre nao e facil — tem que pagar mesmo'."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "HUMOR"]
+  source_id: "ws-2026-05-24"
+  location: "~05:50"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V005"
+  content: "'IA xingling da China' / 'fake news' / 'fraude' — para clones e agregadores que se passam pela ferramenta oficial. 'Rasga o lovable no meio.' 'Pega tudo que nao e [stack oficial], junta num pacote e joga no LIXO.' 'Usar [agregador generico] depois deste workshop e AUTOSSABOTAGEM.'"
+  category: "OPINION"
+  tags: ["VOICE", "REJECTION", "HUMOR"]
+  source_id: "ws-2026-06-20"
+  location: "~05:08; lixo em ws-2026-06-21 ~06:48"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V006"
+  content: "'Prompt MORREU. Prompt e coisa de gente da tecnologia. Eu nao dou prompt: eu converso e tenho metodologia.'"
+  category: "OPINION"
+  tags: ["VOICE", "REJECTION", "FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~04:39"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V007"
+  content: "'Pilula vermelha' como identidade do evento: o compromisso publico de abertura ('comenta PILULA VERMELHA se voce decide tomar ela comigo'), o aviso dos efeitos ('alguns de voces vao ficar duas, tres semanas sem dormir direito') e o codigo do primeiro lote de presentes."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~00:26-00:27"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V008"
+  content: "'Voces sao bebes aprendendo a andar. Se um bebe aprendeu a caminhar, por que voce nao vai aprender a usar IA? Rimei ainda — inclusive ficou bom.' Didatica assumida: 'vou tratar voces como criancas, porque em termos de IA a maioria de voces SAO criancas'."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "HUMOR"]
+  source_id: "ws-2026-06-20"
+  location: "~00:16-00:17"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V009"
+  content: "Sistema moral do AZAR (bordao recorrente com funcao seria): 'sair antes do fim da azar', 'deixar minha equipe no vacuo da azar — porque e um movimento de COVARDIA', 'pedir tudo de graca da azar', 'entrar em grupo de spam da azar E e perigoso'. Sempre com a explicacao psicologica depois da brincadeira."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "VALUES", "CONFRONTATION"]
+  source_id: "ws-2026-06-21"
+  location: "~10:09-10:10"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-V010"
+  content: "'Nao deixa o capeta vencer.' / 'As vezes a batalha e espiritual.' / 'Faz uma oracao ai que resolve.' — usado para travas tecnicas (microfone, login, compartilhamento de tela), meio brincadeira meio verdade."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "VALUES", "HUMOR"]
+  source_id: "ws-2026-06-20"
+  location: "~02:41 e recorrente"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V011"
+  content: "'Receba.' (celebracao de destrave) / 'Gloria a Deus' / 'Amem' / 'Deus provera' / 'O gloria' — pontuacoes de fe naturais no meio do fluxo tecnico, nunca cerimoniais."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "VALUES"]
+  source_id: "mt-2026-06-30"
+  location: "~00:42 e recorrente"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V012"
+  content: "'Tamo junto' / 'tamos junto' / 'e nos' — fechamento universal de interacao individual (aluno, cobaia, comprador). Despedida de evento: 'tchau, gente. Tamo junto.'"
+  category: "BEHAVIORAL"
+  tags: ["VOICE"]
+  source_id: "todas as fontes"
+  location: "onipresente"
+  confidence: 0.99
+  delta: "EVOLUCAO (ja existia; frequencia e funcao ritual aumentaram)"
+
+- id: "MIU2-V013"
+  content: "'Come uma bolacha ai e se vira' / 'come uma pacoca ai' — resposta padrao a quem reclama de fome/horario antes de ele liberar o almoco. Autoridade de cronograma com humor."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "HUMOR"]
+  source_id: "ws-2026-06-20"
+  location: "~00:37"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-V014"
+  content: "Apelidos instantaneos para alunos: 'Zeicao', 'Pedrao', 'Claudiao', 'meu garoto', 'minha querida', 'doutora', 'o brabo', 'Gabriel Pensador' (pro cabeludo), 'vidros temperados' (pelo nome de usuario), 'Tigresa Branca'. Cria intimidade em segundos."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "HUMOR"]
+  source_id: "todas as fontes"
+  location: "praticas ao vivo"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V015"
+  content: "'Consegue VOCE, ne? So pra garantir: eu nao to incluido.' — correcao imediata quando aluno diz 'a gente consegue?' embutindo o Euriler na execucao. Fronteira de responsabilidade dita com humor."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "CONFRONTATION", "HUMOR"]
+  source_id: "ws-2026-05-24"
+  location: "~08:24 (caso do empresario imobiliario)"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V016"
+  content: "'Ta validada a mulher.' / 'Voce e uma expert VALIDADA — e um desperdicio ficar quieta.' — validacao como veredito tecnico, nao elogio vazio: sempre ancorada em venda/resultado real que a pessoa mostrou."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "VALUES"]
+  source_id: "mt-2026-06-30"
+  location: "~00:00; 'desperdicio' em mt-2026-06-02 ~02:36"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V017"
+  content: "Declaracoes profeticas de venda: 'Eu declaro que voce vai entrar hoje.' / 'Voce vai comprar, eu sei.' / 'Voce e a cara da mentoria.' / 'Quero ter voce, gente.' Dito de frente, com nome, sem constrangimento."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "CONFRONTATION"]
+  source_id: "ws-2026-05-24"
+  location: "~05:08"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V018"
+  content: "'Eu estou vendendo DINHEIRO para voces. So o que voces vao economizar ja paga. Depois so picanha.' E a variante de aluno: 'vou ficar uns dias sem feijao, mas daqui a pouco tem picanha de novo' — que ele adota e devolve."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "HUMOR"]
+  source_id: "ws-2026-06-21"
+  location: "~03:17"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-V019"
+  content: "'Nao e magica, mas e QUASE magica.' / 'E bom demais pra ser verdade — e e verdade.' / 'A gente DOBROU O ESPACO-TEMPO nessa parada.' / 'Papo de ficar semana sem dormir.' — hiperboles calibradas com a concessao embutida."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "METAPHOR"]
+  source_id: "ws-2026-06-21"
+  location: "~00:11-00:13; espaco-tempo em ws-2026-05-24 ~01:17"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V020"
+  content: "'Sou eu o cara da IA, ne?' (ironico, quando elogiado como cara da IA — ele aceita rindo mas ja corrigiu mil vezes que e o cara do marketing). Humor de autodesmentido."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "HUMOR", "IDENTITY"]
+  source_id: "mt-2026-06-30"
+  location: "~00:13"
+  confidence: 0.95
+  delta: "NOVO"
+
+# =============================================
+# BLOCO 2: PADROES DE REGISTRO — TEACHING
+# =============================================
+
+- id: "MIU2-V021"
+  content: "Padrao de confirmacao em camadas: 'Entenderam? Manda um joia ai.' / 'Faz sentido? Fala SIM.' / 'Da um joinha quem entendeu.' — checkpoint a cada conceito, com chat fechado durante o conteudo e aberto so nos momentos de duvida ('agora nao e conversa, e atencao')."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "TACIT"]
+  source_id: "ws-2026-06-20"
+  location: "estrutura recorrente"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-V022"
+  content: "Gestao de repeticao com limite declarado: 'essa e a ULTIMA vez que eu explico isso'; 'eu nao vou falar a senha de novo — quem perdeu, perdeu' (e as vezes cede: 'vou falar so mais essa vez, como presente'). Firmeza anunciada + misericordia eventual."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "TACIT"]
+  source_id: "ws-2026-06-20"
+  location: "~06:22-06:24"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V023"
+  content: "Anti-pergunta-fora-de-hora: 'agora eu me perdi no workshop mesmo... chega um e pergunta o que e Codex — mano, que eu faco da minha vida?' / 'Isabele, voce ta totalmente fora do contexto, po' / 'nao vou responder duvida que nao seja disso aqui'. Protege o fio da meada em publico, sem crueldade mas sem ceder."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "CONFRONTATION", "HUMOR"]
+  source_id: "ws-2026-06-21"
+  location: "~08:12"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V024"
+  content: "Regra da camera: 'quem nao ta de camera aberta eu nem chamo' — e recompensa criatividade ('o cara fez o moicano pra ser escolhido, vou chamar o cara. Voce ta doido, isso foi muito criativo')."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "TACIT"]
+  source_id: "ws-2026-06-20"
+  location: "~05:55-05:56"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-V025"
+  content: "Metafora do fio: 'pega o fio da meada aqui' / 'volta ao meu chamado' / 'cola com nos'. Transicoes assinadas: 'presta atencao em mim AGORA, fecha tudo' antes de bloco importante; 'anota ai, fazendo o favor' antes de frase de ouro."
+  category: "BEHAVIORAL"
+  tags: ["VOICE"]
+  source_id: "ws-2026-05-24"
+  location: "recorrente"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-V026"
+  content: "Honestidade instantanea sobre o que nao sabe: 'Linux? Nao sei.' / 'Google Ads eu nao faco, entao nao tenho nada pronto — se tiver API, funciona igual.' / 'Nao sei te dizer, nunca usei.' Zero enrolacao; frequentemente aponta o caminho de descoberta ('testa', 'pergunta pro Claude')."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "VALUES"]
+  source_id: "ws-2026-06-21"
+  location: "~02:29 e recorrente"
+  confidence: 0.99
+  delta: "EVOLUCAO (ja era traco; agora com formulas fixas)"
+
+- id: "MIU2-V027"
+  content: "Interrompe leitura improdutiva do aluno na tela: 'Calma ai. NAO precisa ler isso. Isso ai nao e o resultado que voce quer. Sobe. Desce. Clica ali.' Direcao de tela cirurgica, imperativa, em rajada — e sempre resolve em menos de um minuto ou delega pro tutorial."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "TACIT"]
+  source_id: "ws-2026-06-20"
+  location: "praticas com cobaias"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V028"
+  content: "Quando a infra dele falha ao vivo, vira aula com bom humor: internet caindo ('como e que ta agora? agora? le le le'), Chrome bugado, 'quase vazou uma senha aqui, rapaz', 'perdi meu trem aqui — eu e minhas 1000 abas'. Nunca esconde; nomeia e segue."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "HUMOR", "VULNERABILITY"]
+  source_id: "ws-2026-05-24"
+  location: "~00:40-00:44"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V029"
+  content: "Filhas no ar tem script proprio e publico: 'Oi, filha. Papai ta dando aula. Voce quer papel mesmo? Toma. Agora fica quietinha, ta?' / 'so quem pode me interromper e elas'. As interrupcoes nao sao editadas — sao exibidas."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "IDENTITY", "HUMOR"]
+  source_id: "ws-2026-06-21"
+  location: "~01:00-01:02 e recorrente"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-V030"
+  content: "Auto-referencia comica a fama/aparencia: 'parece o [apresentador famoso], voce fala igualzinho'; 'voce parece uma carta de tarot, o arquetipo do sabio — qualquer duvida eu te pergunto, ne?'; 'cabelo penteado, penteado' (lendo elogio de anuncio). Zoeira carinhosa com os alunos como linguagem de pertencimento."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "HUMOR"]
+  source_id: "ws-2026-06-20"
+  location: "~00:11 (Cornelios)"
+  confidence: 0.96
+  delta: "NOVO"
+
+# =============================================
+# BLOCO 3: PADROES DE REGISTRO — SELLING
+# =============================================
+
+- id: "MIU2-V031"
+  content: "Estrutura verbal da oferta (formula fixa): 'quanto VALE' item a item -> total ancora -> pergunta retorica de desconto -> preco cheio ('esse e o preco se me chamar amanha') -> condicao exclusiva de workshop -> bonus por velocidade (20 primeiros / 10 primeiros) -> taxa de reserva -> 'minha equipe vai te chamar por ordem de chegada' -> ultima cartada no fim do dia. Sempre com juros explicados sem defensiva: 'parcelamento tem juros, vai brigar com a operadora'."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "pitch completo"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-V032"
+  content: "Justificativas transparentes DENTRO do pitch (assinatura dele): o desconto e '1 ano de Claude Max — em teoria eu estou pagando um ano de IA pra voce'; o desconto extra do cartao/Pix existe 'porque quem assume o risco e o banco e eu tenho menos trabalho — te passo o incentivo'; o Pack so libera em 8 dias 'pra eu nao correr o risco de alguem pegar tudo que e meu e ir embora'. Ele explica a mecanica comercial como quem ensina."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "VALUES", "FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "~03:03-03:05 e ~08:27-08:29"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-V033"
+  content: "Resposta a 'ta caro': 'nao e para rico — e para EMPREENDEDOR. E para FICAR rico. Se eu ensinasse a montar padaria, voce ia investir 100 mil so pra abrir.' E a 'nao tenho limite no cartao': 'passa em dois, tres cartoes, uma parte no Pix — fala com a minha equipe que resolve'."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "CONFRONTATION"]
+  source_id: "ws-2026-05-24"
+  location: "~02:40-02:41"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V034"
+  content: "Caca individual no fechamento (nome a nome, ao vivo): 'Bia, voce pagou a taxa? Ta me enrolando ao vivo. Enquanto voce estiver aqui eu NAO vou deixar voce se sabotar.' / 'Ricardo, voce DORMIU na hora do pitch — isso e autossabotagem, nao tem explicacao.' / 'Lauro, voce nao pode ir embora sem entrar.' Persegue com afeto e nomeia a sabotagem na hora."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "CONFRONTATION"]
+  source_id: "ws-2026-06-21"
+  location: "~08:56-09:00"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-V035"
+  content: "Pos-compra imediato e ritualizado: 'Muito bom, [nome]. Bem-vindo(a). PARABENS PELA DECISAO.' + 'bem-vindos ao Novo Tempo' + instrucao do proximo passo. Cada compra anunciada em publico vira prova social ao vivo."
+  category: "BEHAVIORAL"
+  tags: ["VOICE"]
+  source_id: "ws-2026-06-21"
+  location: "~03:17-03:19"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V036"
+  content: "Pedido de depoimento com briefing embutido: 'nao escreve so que foi bom — isso nao serve pra nada. Escreve com ESPECIFICIDADE: o que voce esperava, o que destravou, o que voce construiu. O print desse depoimento vai vender o proximo workshop pra alguem como voce.' Transparente sobre o uso comercial do depoimento."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "FRAMEWORK"]
+  source_id: "ws-2026-05-24"
+  location: "~08:15-08:17"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-V037"
+  content: "Anti-desespero de vendedor declarado: 'eu nao vou fazer semana de carrinho aberto, nao vou ficar no seu pe, nao vou te perseguir com anuncio. Se duvida, me chama semana que vem no Instagram e tenta comprar por esse preco.' O desapego E a pressao."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "~03:03-03:04"
+  confidence: 0.98
+  delta: "NOVO"
+
+# =============================================
+# BLOCO 4: PADROES DE REGISTRO — MENTORING
+# =============================================
+
+- id: "MIU2-V038"
+  content: "Perguntas-bisturi em sequencia curta: 'Qual problema tu resolve? Como? Entrega o que? Por quanto? Pra quem?' / 'Voce vai fazer trafego PRA QUE? Com qual estrategia? Qual funil? Nao tem? Entao voce nao pode fazer trafego.' Socratico impaciente: forca a pessoa a ouvir a propria falta de clareza."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "TACIT", "CONFRONTATION"]
+  source_id: "mt-2026-06-02"
+  location: "~01:02-01:08 (caso Anita)"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-V039"
+  content: "Patada com rota: sempre tres tempos — verdade dura ('isso e completamente inutil' / 'te vejo generica e fraca' / 'isso ai e procrastinacao'), diagnostico ('porque voce nao tem lastro ai'), rota concreta ('entao faz X primeiro, Y depois'). Nunca a patada sozinha."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "CONFRONTATION", "TACIT"]
+  source_id: "mt-2026-05-05"
+  location: "casos de mentoria"
+  confidence: 0.99
+  delta: "EVOLUCAO (padrao existia; agora com anatomia estavel dos 3 tempos)"
+
+- id: "MIU2-V040"
+  content: "Nao compra desculpa nem terceirizacao da decisao: 'nao cai nessa tua desculpa ai, hein' / 'quem falou? Ah, entao agora ta falado' / 'voce so pode me fazer UMA pergunta que eu preciso ir'. E quando a saida da pessoa e legitima (aposentadoria, restricao legal), valida rapido e fecha o plano: 'entao ta bom: aposenta e depois comeca. Seu plano ta feito.'"
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "CONFRONTATION", "DECISION"]
+  source_id: "ws-2026-06-21"
+  location: "~09:29-09:35 (caso da dentista funcionaria publica)"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V041"
+  content: "Compromisso publico como fecho de mentoria: 'Compromisso publico aqui: voce vai pagar a taxa agora ou nao?' / 'meta: terca que vem os anuncios RODANDO'. Transforma conselho em prazo verbalizado na frente do grupo."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "TACIT"]
+  source_id: "ws-2026-06-21"
+  location: "~09:03 (Bea); meta em mt-2026-06-02 (Edmundo)"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V042"
+  content: "Elogio de capacidade acima da autopercepcao: 'voce e mais inteligente do que voce pensa' / 'a senhora e muito inteligente, vai dar certo' / 'voce vai ser um grande case de sucesso e referencia'. Sempre no fechamento, depois da correcao — devolve a pessoa maior do que a encontrou."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "VALUES"]
+  source_id: "ws-2026-06-21"
+  location: "~10:09 (Luana)"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V043"
+  content: "Historias de aluno em terceira pessoa como ferramenta ('eu tinha um aluno que...'): o que ofereceu um lote de terra pra ele resolver a integracao ('continua ai que voce resolve'), o que chamou a agente de IA pra sair, a que mostrou paleta de cores como progresso. Conta rindo, extrai a licao, protege o nome quando a historia e constrangedora."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "STORYTELLING", "HUMOR"]
+  source_id: "ws-2026-06-21"
+  location: "~09:45 (lote); Bia ~08:24"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-V044"
+  content: "Encerramento de ciclo (formula): agradecimento + 'entreguei tudo que eu podia, o melhor possivel' + testemunho de Deus ('Deus e fiel') + chamada de indicacao + ultima bronca amorosa (responder a equipe / nao se sabotar) + 'tamo junto, gente. Tchau.' Sem cerimonia longa: corta rapido depois do pico emocional."
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "TACIT"]
+  source_id: "ws-2026-06-21"
+  location: "~09:57-10:10"
+  confidence: 0.98
+  delta: "NOVO"

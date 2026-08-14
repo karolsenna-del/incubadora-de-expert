@@ -1,0 +1,164 @@
+{
+  "name": "WF-CHATWOOT-HUMAN — Human Takeover via Chatwoot",
+  "description": null,
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "wf-chatwoot-human",
+        "options": {
+          "rawBody": false
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        250,
+        300
+      ],
+      "id": "webhook-chatwoot",
+      "name": "Webhook Chatwoot",
+      "webhookId": "22004952-62ce-4f9b-ab42-55ad72921b31"
+    },
+    {
+      "parameters": {
+        "jsCode": "// === FILTRA EVENTOS CHATWOOT ===\n// So processa: message_created por humano (sender.type=user, message_type=outgoing)\n// Ignora: msgs da Bia (syncadas pelo n8n), msgs incoming, status changes, etc.\n\nconst payload = $input.first().json.body || $input.first().json;\nconst event = payload.event || '';\n\n// Processa: message_created (humano respondendo) ou conversation_status_changed (resolver → devolver pra Bia)\nif (event === 'conversation_status_changed') {\n  // Conversa resolvida = devolver pra Bia (resetar is_human_takeover)\n  const conv = payload.conversation || payload;\n  const status = conv.status || payload.status;\n  if (status === 'resolved') {\n    const contact = conv.contact || conv.meta?.sender || {};\n    const phone = (contact.phone_number || contact.identifier || '').replace(/[^0-9]/g, '');\n    return [{ json: {\n      _skip: false,\n      _action: 'reset_handoff',\n      phone: phone,\n      conversation_id: conv.id,\n      contact_id: contact.id\n    } }];\n  }\n  return [{ json: { _skip: true, reason: 'status_not_resolved', status } }];\n}\n\nif (event !== 'message_created') {\n  return [{ json: { _skip: true, reason: 'unhandled_event', event } }];\n}\n\nconst message = payload.message || payload;\nconst conversation = payload.conversation || {};\nconst sender = message.sender || {};\nconst account = payload.account || {};\n\n// FILTRO 1: So mensagens outgoing (humano respondendo)\nif (message.message_type !== 1 && message.message_type !== 'outgoing') {\n  return [{ json: { _skip: true, reason: 'not_outgoing', message_type: message.message_type } }];\n}\n\n// FILTRO 2: So de agentes humanos (sender.type = 'user' no Chatwoot)\n// sender.type = 'user' = agente humano\n// sender.type = 'agent_bot' ou 'contact' = nao humano\nif (sender.type !== 'user') {\n  return [{ json: { _skip: true, reason: 'not_human_sender', sender_type: sender.type } }];\n}\n\n// FILTRO 2.5: Anti-loop — mensagens syncadas pelo n8n tem \\u200B no final\nconst msgContent = (message.content || '');\nif (msgContent.endsWith('\\u200B') || msgContent.endsWith('\\u200b')) {\n  return [{ json: { _skip: true, reason: 'n8n_synced_zwsp' } }];\n}\n\n// FILTRO 3: Anti-loop — so encaminha se humano esta atendendo (is_human_takeover=true)\n// Se is_human_takeover=false, a Bia ta atendendo e essa msg e sync do Sender → ignorar\nconst https = require('https');\nconst _conv = payload.conversation || {};\nconst _contact = _conv.contact || _conv.meta?.sender || {};\nconst phoneForCheck = (_contact.phone_number || _contact.identifier || '').replace(/[^0-9]/g, '');\nif (phoneForCheck) {\n  try {\n    const checkResult = await new Promise((resolve, reject) => {\n      const req = https.request({\n        hostname: '{{SUPABASE_PROJECT_REF}}.supabase.co',\n        path: '/rest/v1/bia_whatsapp_contacts?phone=eq.' + phoneForCheck + '&select=is_human_takeover',\n        method: 'GET',\n        headers: {\n          'apikey': '{{SUPABASE_SERVICE_ROLE_KEY}}',\n          'Authorization': 'Bearer {{SUPABASE_SERVICE_ROLE_KEY}}'\n        }\n      }, (res) => {\n        let data = '';\n        res.on('data', c => data += c);\n        res.on('end', () => { try { resolve(JSON.parse(data)); } catch { resolve([]); } });\n      });\n      req.on('error', () => resolve([]));\n      req.end();\n    });\n    const isHumanActive = checkResult?.[0]?.is_human_takeover === true;\n    if (!isHumanActive) {\n      // Humano digitou no Chatwoot sem handoff prévio — setar is_human_takeover=true\n      try {\n        await new Promise((resolve, reject) => {\n          const body = JSON.stringify({ is_human_takeover: true });\n          const req = https.request({\n            hostname: '{{SUPABASE_PROJECT_REF}}.supabase.co',\n            path: '/rest/v1/bia_whatsapp_contacts?phone=eq.' + phoneForCheck,\n            method: 'PATCH',\n            headers: {\n              'apikey': '{{SUPABASE_SERVICE_ROLE_KEY}}',\n              'Authorization': 'Bearer {{SUPABASE_SERVICE_ROLE_KEY}}',\n              'Content-Type': 'application/json',\n              'Content-Length': Buffer.byteLength(body)\n            }\n          }, (res) => { let d=''; res.on('data',c=>d+=c); res.on('end',()=>resolve(d)); });\n          req.on('error', () => resolve(''));\n          req.write(body);\n          req.end();\n        });\n      } catch (e) { /* best effort */ }\n    }\n  } catch (e) {\n    // If check fails, let it through (safe fallback)\n  }\n}\n\n// FILTRO 3 original: Anti-loop — ignora msgs com content_attributes.external\n// O n8n seta esse atributo quando synca msgs pro Chatwoot\nconst contentAttrs = message.content_attributes || {};\nif (contentAttrs.external === true || contentAttrs.synced_by === 'n8n') {\n  return [{ json: { _skip: true, reason: 'synced_by_n8n' } }];\n}\n\n// FILTRO 4: Ignora msgs privadas (notas internas)\nif (message.private === true) {\n  return [{ json: { _skip: true, reason: 'private_note' } }];\n}\n\n// Extrai dados\nconst contact = conversation.contact || conversation.meta?.sender || {};\nconst phone = contact.phone_number || contact.identifier || '';\nconst phoneClean = phone.replace(/[^0-9]/g, '');\n\nreturn [{ json: {\n  _skip: false,\n  text: message.content || '',\n  phone: phoneClean,\n  conversation_id: conversation.id || message.conversation_id,\n  contact_id: contact.id,\n  sender_name: sender.name || 'Agente',\n  message_id: message.id\n} }];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        470,
+        300
+      ],
+      "id": "filter-chatwoot",
+      "name": "Filtra Eventos Chatwoot"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "skip-check",
+              "leftValue": "={{ $json._skip }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        670,
+        300
+      ],
+      "id": "if-skip",
+      "name": "Processar?"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        870,
+        200
+      ],
+      "id": "skip-event",
+      "name": "Ignorar Evento"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Handle reset_handoff action (conversa resolvida no Chatwoot → devolver pra Bia)\nif ($input.first().json._action === 'reset_handoff') {\n  const https = require('https');\n  const phone = $input.first().json.phone;\n  const body = JSON.stringify({ is_human_takeover: false });\n  const options = {\n    hostname: '{{SUPABASE_PROJECT_REF}}.supabase.co',\n    path: '/rest/v1/bia_whatsapp_contacts?phone=eq.' + phone,\n    method: 'PATCH',\n    headers: {\n      'Content-Type': 'application/json',\n      'apikey': '{{SUPABASE_SERVICE_ROLE_KEY}}',\n      'Authorization': 'Bearer {{SUPABASE_SERVICE_ROLE_KEY}}',\n      'Content-Length': Buffer.byteLength(body)\n    },\n    timeout: 5000\n  };\n  await new Promise((resolve) => {\n    const r = https.request(options, () => resolve());\n    r.on('error', () => resolve());\n    r.write(body);\n    r.end();\n  });\n  return [{ json: { status: 'handoff_reset', phone } }];\n}\n\n// === RESOLVE PHONE NUMBER ID ===\n// Busca o phone_number_id do contato no Supabase\n// pra saber pra qual conta Cloud API enviar\n\nconst https = require('https');\nconst input = $input.first().json;\n\nconst SB_URL = '{{SUPABASE_PROJECT_REF}}.supabase.co';\nconst SB_KEY = '{{SUPABASE_SERVICE_ROLE_KEY}}';\n\nconst phone = input.phone;\nif (!phone) return [{ json: { ...input, phone_number_id: null, _error: 'no_phone' } }];\n\nconst data = await new Promise((resolve, reject) => {\n  const req = https.request({\n    hostname: SB_URL,\n    path: '/rest/v1/bia_whatsapp_contacts?phone=eq.' + phone + '&select=phone_number_id',\n    method: 'GET',\n    headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY },\n    timeout: 5000\n  }, (res) => {\n    let d = '';\n    res.on('data', c => d += c);\n    res.on('end', () => { try { resolve(JSON.parse(d)); } catch { resolve(null); } });\n  });\n  req.on('error', () => resolve(null));\n  req.end();\n});\n\nconst phone_number_id = (data && data.length > 0) ? data[0].phone_number_id : '717596344764478'; // Default: conta 07\n\nreturn [{ json: { ...input, phone_number_id } }];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        870,
+        400
+      ],
+      "id": "resolve-phone-id",
+      "name": "Resolve Phone Number ID"
+    },
+    {
+      "parameters": {
+        "jsCode": "// === ENVIA VIA CLOUD API ===\n// Humano respondeu no Chatwoot → envia pro WhatsApp do lead via Cloud API\n\nconst https = require('https');\nconst input = $input.first().json;\n\nconst TOKEN_BY_PHONE = {\n  '{{PHONE_NUMBER_ID}}': '{{SYSTEM_USER_TOKEN}}',\n  // '<phone_number_id_2>': '<system_user_token_2>',  // numero de outra BM\n};\nconst phone_number_id = input.phone_number_id;\nconst CLOUD_API_TOKEN = TOKEN_BY_PHONE[phone_number_id] || '{{SYSTEM_USER_TOKEN}}';\nconst recipient = input.phone;\nconst text = input.text;\n\nif (!phone_number_id || !recipient || !text) {\n  // Save human message to bia_agent_context so Bia has context when she returns\n  try {\n    // Get current agent_id for this contact\n    const ctxGet = await new Promise((resolve) => {\n      const req = https.request({\n        hostname: '{{SUPABASE_PROJECT_REF}}.supabase.co',\n        path: '/rest/v1/bia_whatsapp_contacts?phone=eq.' + recipient + '&select=active_agent_id',\n        method: 'GET',\n        headers: {\n          'apikey': '{{SUPABASE_SERVICE_ROLE_KEY}}',\n          'Authorization': 'Bearer {{SUPABASE_SERVICE_ROLE_KEY}}'\n        }\n      }, (res) => {\n        let d = ''; res.on('data', c => d += c);\n        res.on('end', () => { try { resolve(JSON.parse(d)); } catch { resolve([]); } });\n      });\n      req.on('error', () => resolve([]));\n      req.end();\n    });\n    const agentId = ctxGet?.[0]?.active_agent_id || 'bia';\n\n    // Append human message to context via Supabase RPC\n    const ctxBody = JSON.stringify({\n      p_subscriber_id: String(recipient),\n      p_agent_id: agentId,\n      p_role: 'assistant',\n      p_content: '[HUMANO - ' + (input.sender_name || 'Agente') + '] ' + text\n    });\n    await new Promise((resolve) => {\n      const req = https.request({\n        hostname: '{{SUPABASE_PROJECT_REF}}.supabase.co',\n        path: '/rest/v1/rpc/append_agent_context',\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n          'apikey': '{{SUPABASE_SERVICE_ROLE_KEY}}',\n          'Authorization': 'Bearer {{SUPABASE_SERVICE_ROLE_KEY}}',\n          'Content-Length': Buffer.byteLength(ctxBody)\n        }\n      }, () => resolve());\n      req.on('error', () => resolve());\n      req.write(ctxBody);\n      req.end();\n    });\n  } catch (e) { /* best effort — context save is non-blocking */ }\n\n  return [{ json: { status: 'error', error: 'Missing data', phone_number_id, recipient, text: !!text } }];\n}\n\nconst res = await new Promise((resolve, reject) => {\n  const body = JSON.stringify({\n    messaging_product: 'whatsapp',\n    recipient_type: 'individual',\n    to: recipient,\n    type: 'text',\n    text: { preview_url: true, body: text }\n  });\n  const options = {\n    hostname: 'graph.facebook.com',\n    path: '/v21.0/' + phone_number_id + '/messages',\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json',\n      'Authorization': 'Bearer ' + CLOUD_API_TOKEN,\n      'Content-Length': Buffer.byteLength(body)\n    },\n    timeout: 10000\n  };\n  const req = https.request(options, (res) => {\n    let data = '';\n    res.on('data', c => data += c);\n    res.on('end', () => {\n      try { resolve({ ok: res.statusCode >= 200 && res.statusCode < 300, data: JSON.parse(data) }); }\n      catch { resolve({ ok: res.statusCode >= 200 && res.statusCode < 300, data: { raw: data } }); }\n    });\n  });\n  req.on('error', reject);\n  req.write(body);\n  req.end();\n});\n\nconsole.log(JSON.stringify({\n  event: 'chatwoot_human_send',\n  phone: recipient,\n  phone_number_id,\n  sender: input.sender_name,\n  status: res.ok ? 'sent' : 'error',\n  timestamp: new Date().toISOString()\n}));\n\n\n  // Setar is_human_takeover=true (humano respondendo via Chatwoot → Bia nao responde por cima)\n  try {\n    const hBody = JSON.stringify({ is_human_takeover: true });\n    await new Promise((resolve) => {\n      const hReq = https.request({\n        hostname: '{{SUPABASE_PROJECT_REF}}.supabase.co',\n        path: '/rest/v1/bia_whatsapp_contacts?phone=eq.' + recipient,\n        method: 'PATCH',\n        headers: {\n          'Content-Type': 'application/json',\n          'apikey': '{{SUPABASE_SERVICE_ROLE_KEY}}',\n          'Authorization': 'Bearer {{SUPABASE_SERVICE_ROLE_KEY}}',\n          'Content-Length': Buffer.byteLength(hBody)\n        },\n        timeout: 5000\n      }, () => resolve());\n      hReq.on('error', () => resolve());\n      hReq.write(hBody);\n      hReq.end();\n    });\n  } catch (e) { /* best effort */ }\n\n  // Save human message to bia_agent_context so Bia has context when she returns\n  try {\n    // Get current agent_id for this contact\n    const ctxGet = await new Promise((resolve) => {\n      const req = https.request({\n        hostname: '{{SUPABASE_PROJECT_REF}}.supabase.co',\n        path: '/rest/v1/bia_whatsapp_contacts?phone=eq.' + recipient + '&select=active_agent_id',\n        method: 'GET',\n        headers: {\n          'apikey': '{{SUPABASE_SERVICE_ROLE_KEY}}',\n          'Authorization': 'Bearer {{SUPABASE_SERVICE_ROLE_KEY}}'\n        }\n      }, (res) => {\n        let d = ''; res.on('data', c => d += c);\n        res.on('end', () => { try { resolve(JSON.parse(d)); } catch { resolve([]); } });\n      });\n      req.on('error', () => resolve([]));\n      req.end();\n    });\n    const agentId = ctxGet?.[0]?.active_agent_id || 'bia';\n\n    // Append human message to context via Supabase RPC\n    const ctxBody = JSON.stringify({\n      p_subscriber_id: String(recipient),\n      p_agent_id: agentId,\n      p_role: 'assistant',\n      p_content: '[HUMANO - ' + (input.sender_name || 'Agente') + '] ' + text\n    });\n    await new Promise((resolve) => {\n      const req = https.request({\n        hostname: '{{SUPABASE_PROJECT_REF}}.supabase.co',\n        path: '/rest/v1/rpc/append_agent_context',\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json',\n          'apikey': '{{SUPABASE_SERVICE_ROLE_KEY}}',\n          'Authorization': 'Bearer {{SUPABASE_SERVICE_ROLE_KEY}}',\n          'Content-Length': Buffer.byteLength(ctxBody)\n        }\n      }, () => resolve());\n      req.on('error', () => resolve());\n      req.write(ctxBody);\n      req.end();\n    });\n  } catch (e) { /* best effort — context save is non-blocking */ }\n\n  return [{ json: {\n  status: res.ok ? 'sent' : 'error',\n  phone: recipient,\n  sender: input.sender_name,\n  message_preview: text.substring(0, 80),\n  cloud_api_response: res.data\n} }];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1070,
+        400
+      ],
+      "id": "send-cloud-api",
+      "name": "Envia via Cloud API"
+    }
+  ],
+  "connections": {
+    "Webhook Chatwoot": {
+      "main": [
+        [
+          {
+            "node": "Filtra Eventos Chatwoot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filtra Eventos Chatwoot": {
+      "main": [
+        [
+          {
+            "node": "Processar?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Processar?": {
+      "main": [
+        [
+          {
+            "node": "Ignorar Evento",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Resolve Phone Number ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resolve Phone Number ID": {
+      "main": [
+        [
+          {
+            "node": "Envia via Cloud API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  }
+}

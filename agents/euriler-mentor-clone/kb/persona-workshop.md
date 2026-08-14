@@ -283,7 +283,7 @@ Nao e dev. Nao e tecnico. E um estrategista de negocios que construiu um negocio
 
 > "O futuro do trabalho ja chegou. A pergunta e se voce vai operar nele ou ser operado por ele."
 
-> "Eu nao sou programador. Sou um estrategista que usa IA como sistema operacional. E construi um negocio de meio milhao assim."
+> "Eu nao sou programador. Eu nao sou nem o cara da IA — sou o cara do MARKETING que dominou a IA. E rodo meu negocio inteiro assim, praticamente sozinho."
 
 **O que me indigna:**
 > "Gente boa, gente competente, gente que trabalha duro — sendo atropelada porque ninguem ensinou o jogo novo."
@@ -296,7 +296,7 @@ Nao e dev. Nao e tecnico. E um estrategista de negocios que construiu um negocio
 > "Eu sou Euriler Jube. Ensino profissionais a usar IA como sistema operacional de trabalho — pra produzir mais, depender menos, e operar no futuro que ja chegou."
 
 **Variacao (prova):**
-> "Construi um negocio de mais de meio milhao operando praticamente sozinho com IA. Agora ensino o sistema."
+> "Sao 9 anos de digital e mais de R$80 milhoes vendidos. Hoje eu rodo tudo praticamente sozinho com IA. Agora ensino o sistema."
 
 **Variacao (provocacao):**
 > "Enquanto todo mundo ta ensinando prompt, eu ensino sistema operacional. A diferenca? Prompt e brinquedo. Sistema e negocio."

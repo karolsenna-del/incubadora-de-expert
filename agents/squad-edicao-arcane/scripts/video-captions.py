@@ -13,26 +13,17 @@ Default 1.0 (sem reescala).
 Quebra automatica em linhas visuais: cada legenda eh subdividida em N linhas
 que cabem em max_chars_per_line. NUNCA deixa texto sair da tela.
 
-Executar com: {SQUAD_DIR}/.venv/bin/python3 video-captions.py ...
+Executar com o Python do venv (Windows: .venv/Scripts/python.exe · Mac/Linux: .venv/bin/python3), que tem pyyaml.
 """
 import sys, subprocess, os, re, argparse, yaml
 
-SQUAD_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import _common
 
+SQUAD_DIR = _common.SQUAD_DIR
 
-def _bin(name):
-    """Resolve ffmpeg/ffprobe do Homebrew (bottle JA traz drawtext). Evita pegar
-    um ffmpeg de conda/Anaconda ou build estatico no PATH que nao tenha drawtext
-    — causa #1 da legenda nao renderizar. Cai pro PATH so se nao houver brew."""
-    for base in ("/opt/homebrew/bin", "/usr/local/bin"):
-        cand = os.path.join(base, name)
-        if os.path.exists(cand):
-            return cand
-    return name
-
-
-FFMPEG = _bin("ffmpeg")
-FFPROBE = _bin("ffprobe")
+FFMPEG = _common.ffmpeg()
+FFPROBE = _common.ffprobe()
 
 p = argparse.ArgumentParser()
 p.add_argument("video")
@@ -49,10 +40,10 @@ SPEED = args.speed if args.speed > 0 else 1.0
 if args.style:
     style_name = args.style
 else:
-    with open(f"{SQUAD_DIR}/data/estilo-ativo.yaml") as f:
+    with open(f"{SQUAD_DIR}/data/estilo-ativo.yaml", encoding="utf-8") as f:
         style_name = yaml.safe_load(f)["estilo_ativo"]
 
-with open(f"{SQUAD_DIR}/data/estilos/{style_name}.yaml") as f:
+with open(f"{SQUAD_DIR}/data/estilos/{style_name}.yaml", encoding="utf-8") as f:
     s = yaml.safe_load(f)
 
 # default robusto caso yaml antigo nao tenha o campo
@@ -71,7 +62,7 @@ TW, TH = map(int, probe.split(","))
 
 # ─── le transcript ───
 raw_events = []
-for line in open(args.transcript).read().splitlines():
+for line in open(args.transcript, encoding="utf-8").read().splitlines():
     mt = re.match(r"\[(\d+:\d+:\d+\.\d+) --> (\d+:\d+:\d+\.\d+)\]\s*(.+)", line)
     if mt:
         def ts(t):
@@ -120,8 +111,10 @@ def esc(t):
     return t
 
 def draw(text, color, y, st, en):
+    # fonte OS-aware: font='<nome>' no Mac (fontconfig, validado v1.0.0);
+    # fontfile='<caminho .ttf>' no Windows/Linux (freetype direto, sem fontconfig).
     parts = [
-        f"drawtext=font='{s['font']}'",
+        f"drawtext={_common.drawtext_font_opt(s)}",
         f"text='{esc(text)}'",
         f"fontcolor={color}",
         f"fontsize={FS}",
@@ -199,8 +192,8 @@ for st, en, tx in events:
         raise ValueError(f"mode desconhecido: {s['mode']}")
 
 graph = "[0:v]" + ",".join(filters) + "[outv]"
-ff = f"/tmp/cap_filter_{os.getpid()}.txt"
-open(ff,"w").write(graph)
+ff = _common.tmp_path(".txt")
+open(ff,"w",encoding="utf-8").write(graph)
 subprocess.run([FFMPEG,"-y","-i",video,"-filter_complex_script",ff,
     "-map","[outv]","-map","0:a",
     "-c:v","libx264","-preset","fast","-crf","18",

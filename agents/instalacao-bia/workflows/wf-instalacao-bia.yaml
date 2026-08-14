@@ -1,0 +1,93 @@
+# ===============================================================================
+# WORKFLOW: wf-instalacao-bia
+# Jornada de instalação da Bia — passos do INSTALL em 4 estações, unidirecional, gates bloqueantes.
+# Conduzido pelo bia-chief; cada bloco executado pela estação dona.
+# ===============================================================================
+
+name: wf-instalacao-bia
+title: "Jornada de Instalação da Bia"
+version: "1.0.0"
+orchestrator: bia-chief
+description: >
+  Pipeline unidirecional do zero à Bia viva. O Chief conduz, valida cada gate
+  e só libera a próxima estação quando a anterior fecha. Nada volta no fluxo —
+  se uma fase falha, corrige-se nela antes de avançar.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# GATE DE ENTRADA
+# ─────────────────────────────────────────────────────────────────────────────
+entry_gate:
+  id: QG-IB-000
+  owner: bia-chief
+  blocking: true
+  criteria: "API Meta funcional + infra-base de pé (n8n, Supabase, domínio/SSL com proxy). Chatwoot NÃO é pré-req — instalado no Passo 0.5"
+  on_fail: "Bloquear início. Listar o que falta. Não improvisar instalação de infra-base."
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SEQUÊNCIA DE FASES
+# ─────────────────────────────────────────────────────────────────────────────
+phases:
+  - id: preparar
+    label: "Preparar (Passos 0.5, 1, 3, 4)"
+    station: preparador
+    task: fase-preparar
+    produces: "Chatwoot vivo (https + admin), tabelas bia_*, inbox Chatwoot criado, 5 credentials testadas"
+    gate:
+      id: QG-IB-001
+      blocking: true
+      criteria: "Chatwoot vivo · tabelas bia_* · inbox Chatwoot criado · 5 credentials testadas"
+
+  - id: construir
+    label: "Construir (Passos 5, 6)"
+    station: construtor
+    task: fase-construir
+    depends_on: preparar
+    produces: "4 workflows íntegros, prompts injetados (Bia com corpo e alma)"
+    gate:
+      id: QG-IB-002
+      blocking: true
+      criteria: "Sem credential vermelha · prompts sem {{var}} · JS validado · cache cycle"
+
+  - id: conectar
+    label: "Conectar (Passos 5.4-5.5, 7)"
+    station: conector
+    task: fase-conectar
+    depends_on: construir
+    produces: "Webhook Meta + Chatwoot ligados, 4 workflows ativos"
+    gate:
+      id: QG-IB-003
+      blocking: true
+      criteria: "Webhook Meta 200+challenge · messages inscrito · Chatwoot ligado · workflows ativos"
+
+  - id: diagnosticar
+    label: "Acender (Passo 8)"
+    station: doutor
+    task: fase-diagnosticar
+    depends_on: conectar
+    produces: "Bia viva — smoke test 4/4"
+    gate:
+      id: QG-IB-004
+      blocking: true
+      criteria: "4 cenários passam · handoff funciona · zero {{var}} literal"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# HANDOFFS
+# ─────────────────────────────────────────────────────────────────────────────
+# O aluno só fala com o bia-chief. As estações executam por baixo e reportam
+# o gate de volta ao Chief, que decide a transição.
+handoffs:
+  - "bia-chief → preparador (abre Preparar após QG-IB-000)"
+  - "preparador → bia-chief (reporta QG-IB-001)"
+  - "bia-chief → construtor (após QG-IB-001)"
+  - "construtor → bia-chief (reporta QG-IB-002)"
+  - "bia-chief → conector (após QG-IB-002)"
+  - "conector → bia-chief (reporta QG-IB-003)"
+  - "bia-chief → doutor (após QG-IB-003)"
+  - "doutor → bia-chief (reporta QG-IB-004 → Bia viva)"
+
+# Transversal: o doutor pode apontar causa raiz em fase anterior; nesse caso o
+# Chief reaciona a estação dona com o diagnóstico pronto (exceção controlada à
+# unidirecionalidade — correção, não retrocesso de fluxo).
+bottleneck: "conectar — ponte Meta↔n8n é onde mais trava"
+
+final_state: "Bia viva: respondendo no WhatsApp do aluno, com handoff humano via Chatwoot"

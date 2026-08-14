@@ -206,13 +206,13 @@ Quando o expert vai construir a metodologia, **nao esta comecando do zero** — 
 - Mecanismo Unico: Abordagem tridimensional e sistemica (tecnica, emocional e espiritual)
 - Metodologia: A Arvore do Expert — construida em cima desse principio. Tudo que existe ali dentro serve para desenvolver o expert nessas tres dimensoes
 
-**Fernanda — Metodo Aguia** [Fonte: SRC-A03]
+**Uma mentorada — metodo proprio de reprogramacao** [Fonte: SRC-A03]
 - Mecanismo Unico: Reprogramacao a nivel subconsciente
-- Metodologia: Metodo Aguia — o processo estruturado para aplicar essa reprogramacao
+- Metodologia: o processo estruturado (com nome proprio) para aplicar essa reprogramacao
 
-**Paulo Vieira — Metodo CIS** [Fonte: SRC-A03, SRC-E04]
-- Mecanismo Unico: Coaching Integral Sistemico (trabalha razao + emocao em todas as areas da vida)
-- Metodologia: Metodo CIS — framework completo com formacoes e especializacoes
+**O maior coach do Brasil — metodo proprietario** [Fonte: SRC-A03, SRC-E04]
+- Mecanismo Unico: coaching integral e sistemico (trabalha razao + emocao em todas as areas da vida)
+- Metodologia: framework completo com formacoes e especializacoes em cima do mecanismo
 
 > **REGRA CARDINAL:** A bussola (MU) vem ANTES do mapa (Metodologia). Se o expert nao tem MU claro, precisa voltar ao bloco de Posicionamento antes de construir a metodologia.
 
@@ -478,28 +478,28 @@ Apos construir os 7 passos, e hora de dar nome e sintetizar o metodo como um tod
 
 Definir um nome para o metodo, nem que seja o primeiro nome. **Nao precisa ser perfeito.** O nome pode (e vai) ser refinado com o tempo. [Fonte: SRC-A03, SRC-E04]
 
-### Exemplo: Paulo Vieira e o Metodo CIS
+### Exemplo: o maior coach do Brasil e seu metodo proprietario
 
-Paulo Vieira, o maior coach do Brasil — excelente exemplo de tigre branco do mercado. [Fonte: SRC-E04]
+O maior coach do Brasil — excelente exemplo de tigre branco do mercado. [Fonte: SRC-E04]
 
 Ele pegou: [Fonte: SRC-A03, SRC-E04]
 - O coaching (que ja existia nos EUA)
 - Estudou PNL e varias outras tecnicas
 - Somou desenvolvimentos e descobertas proprias
 
-E criou: **Coaching Integral Sistemico (CIS)**
+E criou um **coaching com sobrenome proprio** — tres palavras, cada uma com significado:
 
 | Componente | Significado |
 |------------|-------------|
 | **Coaching** | Metodo de ponto A ao ponto B |
-| **Integral** | Trabalha lado direito e esquerdo do cerebro (razao e emocao) |
-| **Sistemico** | Trabalha todas as areas da vida (saude, financas, profissional, espiritual) |
+| **"Integral"** | Trabalha lado direito e esquerdo do cerebro (razao e emocao) |
+| **"Sistemico"** | Trabalha todas as areas da vida (saude, financas, profissional, espiritual) |
 
-A partir disso, criou: a FEBRACIS (Federacao Brasileira de Coaching Integral Sistemico), o curso Metodo CIS de 3-4 dias, formacao em coaching integral sistemico, especializacoes (Business Coaching, Master Coach), grade de produtos (Golden Belt, Green Belt, Black Belt). [Fonte: SRC-E04]
+A partir disso, criou: uma federacao propria da metodologia, o curso de imersao de 3-4 dias, formacao completa na metodologia, especializacoes (business, master), grade de produtos com faixas de progressao (belts). [Fonte: SRC-E04]
 
 **Uma metodologia -> dezenas de produtos -> imperio.** [Fonte: SRC-A03]
 
-O MU (Coaching Integral Sistemico) e a bussola que criou o metodo dele. Voce se torna um coach integral sistemico — nao e um coach qualquer, e um coach com mecanismo unico, diferenciado. [Fonte: SRC-E04]
+O MU e a bussola que criou o metodo dele. Voce se torna um coach daquela escola especifica — nao e um coach qualquer, e um coach com mecanismo unico, diferenciado. [Fonte: SRC-E04]
 
 ---
 

@@ -55,6 +55,7 @@
 **IA que dá prompt pra outra IA**
 *"Minha IA deu o prompt pro Lovable. A IA deu prompt pra ferramenta de IA."*
 → Conceito: Meta-nível de coordenação. IA orquestrando outras IAs. O expert nem precisa saber que a ferramenta existe.
+→ NOTA (jul/2026): frase histórica de mar/2026. O Lovable foi ABANDONADO ("rasga no meio — caro, lento, inútil depois do Claude Code"); hoje páginas são feitas direto no Claude Code + Vercel. A metáfora de orquestração continua válida.
 
 ---
 

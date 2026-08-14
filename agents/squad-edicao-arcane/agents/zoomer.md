@@ -89,8 +89,10 @@ Salvar em `<basename>_sections.json`.
 
 ### Step 3: Rodar produce-zoom
 
+Roda com o Python do venv (precisa de cv2/OpenCV) — Windows: `{SQUAD_DIR}\.venv\Scripts\python.exe` · Mac/Linux: `{SQUAD_DIR}/.venv/bin/python3`
+
 ```bash
-{SQUAD_DIR}/.venv/bin/python3 {SQUAD_DIR}/scripts/video-produce-zoom.py \
+<venv-python> {SQUAD_DIR}/scripts/video-produce-zoom.py \
   <video>_speed.mp4 \
   <video>_sections.json \
   <video>_zoomed.mp4 \

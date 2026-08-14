@@ -1,21 +1,35 @@
-# Deployment Notes — Clone Euriler Jube v2.0
+# Deployment Notes — Clone Euriler Jube v3.0
 
 ## Ficha Tecnica
 
 | Campo | Valor |
 |-------|-------|
 | Clone | Euriler Jube |
-| Versao | **2.0.0** (rebuild 13/04/2026) |
-| Pipeline | Clone Forge (8 fases) |
+| Versao | **3.0.0** (refresh 09/07/2026) |
+| Pipeline | Clone Forge (8 fases) + ETL delta 2026-H1 |
 | Data inicial | 2026-04-10 |
-| Ultima atualizacao | **2026-04-13** |
+| Ultima atualizacao | **2026-07-09** |
 | Ativacao | `/euriler` ou `@euriler` |
-| System Prompt | `08-agent/system-prompt.md` (~8000 tokens — expandido v2) |
-| Fidelidade Global | 95.0% (subiu de 94.4% com 27 KBs ativadas) |
-| Smoke Tests | 3/3 PASS (v1) — rebuild v2 pendente de nova bateria |
+| System Prompt | `08-agent/system-prompt.md` (~8500 tokens — bloco v2 de precedencia) |
+| Fidelidade Global | 95.0% (base) — refresh v3 validado por stress test 15/15 |
+| Smoke Tests | 3/3 PASS (v1) — v3 validada em `07-validation/validation-v2.md` |
 | QG-005 | PASS (v1) |
-| KBs registradas | **29** (v1: 2) |
-| KBs totais em linhas | 13.506 |
+| KBs registradas | **36** (v2: 29 + 7 arquivos v2-2026H1) |
+| KBs totais em linhas | ~14.9k |
+
+---
+
+## CHANGELOG v3.0 (09/07/2026)
+
+**Contexto:** clone de abril ficou desatualizado — reposicionamento de 11/05 (Marketing com IA), bio (3 filhas), oferta em escada, equipe, stack 2026 e um semestre de teoria/metodo novos. ETL v2 leu INTEGRALMENTE 10 fontes novas (~482k palavras de workshops e mentorias abr-jun/2026) e extraiu 210 MIUs delta.
+
+**Mudancas:**
+
+1. **7 KBs v2 adicionadas** (`kb/*v2*`) com REGRA DE PRECEDENCIA sobre a base de abril: mius-v2-{theory,methodology,identity,voice}, poc-v2-addendum (fatos atuais), dna-synthesis-v2-addendum, mind-drivers-v2-addendum (10 drivers novos, DRV-048..057).
+2. **System prompt atualizado** — bio (3 filhas), reposicionamento 11/05, arco 2026 (deserto→Auroq→colheita), bordoes novos, regra de precedencia v2, 4 regras vinculantes (numeros so de palco; Fable 5 = narrativa; terceiros anonimizados; v2 prevalece).
+3. **KB antiga reconciliada** — fatos supersedidos corrigidos in-place (filhas, posicionamento, precos, "Acabou N8N" removido) + notas historicas nos casos com ferramentas mortas (Lovable).
+4. **Anonimizacao total de terceiros** na KB distribuida (decisao de gate 09/07) — nomes substituidos por descricoes; referencias bibliograficas classicas mantidas.
+5. **Metadata** — version 3.0.0, mius_total 734, drivers_total 57, kb_files_registered 36.
 
 ---
 
@@ -60,7 +74,7 @@
 
 7. **Metadata atualizada** — version 2.0.0, updated_at, rebuild_v2_by, rebuild_v2_prd, kb_files_registered: 29.
 
-8. **Source sincronizado** — as 29 KBs agora vivem em `agents/clone-forge/minds/euriler_jube/08-agent/kb/` (antes so 2 estavam no source, o resto so vivia no zip).
+8. **Source sincronizado** — as 29 KBs agora vivem em `squads/clones/euriler_jube/08-agent/kb/` (antes so 2 estavam no source, o resto so vivia no zip).
 
 **Nao tocado (preservado da v1):**
 - Voice DNA (9.2/10)
@@ -111,7 +125,7 @@
 
 ### Onde o clone funciona PARCIALMENTE:
 
-7. **Trafego pago (Andromeda)** — O clone conhece os principios e as 10 Regras Cardinais, mas nao tem profundidade tatica de operacao de campanha. Pra isso, usar o Consultor Andromeda ou a Babruna.
+7. **Trafego pago (Andromeda)** — O clone conhece os principios e as 10 Regras Cardinais, mas nao tem profundidade tatica de operacao de campanha. Pra isso, usar o squad Trafego Arcane (Gestor Andromeda + clone de trafego).
 
 8. **Lancamento pago (LP Master)** — Conhece os volumes e regras cardinais em nivel estrategico, mas operacao tatica detalhada requer o Consultor LP Master.
 
@@ -119,7 +133,7 @@
 
 ### Onde o clone NAO deve ser usado:
 
-10. **Codigo/implementacao tecnica** — Apesar de construir AIOS, Euriler se identifica como "nao dev." O clone nao gera codigo. Delegar pra @dev.
+10. **Codigo/implementacao tecnica** — Apesar de construir Auroq, Euriler se identifica como "nao dev." O clone nao gera codigo. Delegar pra @dev.
 
 11. **Operacao de ferramentas** — Nao configura N8N, Supabase, Meta Ads, Z-API. Diz O QUE fazer, nao COMO executar.
 

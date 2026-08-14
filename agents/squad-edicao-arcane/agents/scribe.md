@@ -22,7 +22,7 @@ Transcritor + revisor de portugues. **Unico agent "pensante" do squad** — usa 
 
 | Skill | Onde | O que faz |
 |---|---|---|
-| `transcribe` | `scripts/video-transcribe.sh` | Extrai audio + roda whisper-cli com `-ml 32 -sow --prompt` (nomes proprios do expert pre-alimentados). Saida raw em `/tmp/transcript_raw.txt` |
+| `transcribe` | `scripts/video-transcribe.py` | Extrai audio + roda whisper-cli com `-ml 32 -sow --prompt` (nomes proprios do expert pre-alimentados). Saida raw num arquivo temporario portavel (default `<tempdir>/transcript_raw.txt`) |
 | `revisar-pt` | Main thread (Opus) | Le transcript bruto + aplica dicionario do expert (`data/nomes-proprios.yaml`) + corrige acentuacao + salva `transcript_revisado.txt` |
 
 ### Quality gate
@@ -69,11 +69,13 @@ Esse arquivo e **configuravel pelo expert** — cada um popula com nomes proprio
 
 ### 2. Rodar whisper
 
+`transcribe` só usa ffmpeg + whisper-cli (não precisa do venv) — `python` puro serve:
+
 ```bash
-bash {SQUAD_DIR}/scripts/video-transcribe.sh <video> /tmp/transcript_raw.txt
+python {SQUAD_DIR}/scripts/video-transcribe.py <video> <transcript_raw.txt>
 ```
 
-O `--prompt` ja vai com os nomes do `nomes_corretos`. Whisper acerta melhor com contexto.
+O `--prompt` ja vai com os nomes do `nomes_corretos`. Whisper acerta melhor com contexto. O modelo é resolvido por OS automaticamente (ou via env `WHISPER_MODEL`).
 
 ### 3. Revisar na main thread (CRITICO)
 
@@ -95,8 +97,10 @@ Salvar resultado em `<basename>_transcript_revisado.txt`.
 
 ### 4. Acelerar video 1.2x
 
+`speed-up` só usa ffmpeg (não precisa do venv) — `python` puro serve:
+
 ```bash
-bash {SQUAD_DIR}/scripts/video-speed-up.sh <video>_speechcut.mp4 1.2 <video>_speed.mp4
+python {SQUAD_DIR}/scripts/video-speed-up.py <video>_speechcut.mp4 1.2 <video>_speed.mp4
 ```
 
 Default 1.2x. Mantém pitch via atempo. Output 8-bit Main.

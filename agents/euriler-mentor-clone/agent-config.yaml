@@ -1,14 +1,15 @@
 # ============================================================
-# AGENT CONFIG — Clone Euriler Jube v2.0
-# Generated: 2026-04-13
-# Pipeline: Clone Forge (8 phases complete)
-# Rebuild: PRD `docs/prd/prd-clone-euriler-arcane-v2.md`
+# AGENT CONFIG — Clone Euriler Jube v3.0
+# Generated: 2026-04-13 | Refresh v3: 2026-07-09 (ETL v2 2026-H1)
+# Pipeline: Clone Forge (8 phases complete) + ETL delta abr-jun/2026
+# Rebuild v2: PRD `docs/prd/prd-clone-euriler-arcane-v2.md`
+# Refresh v3: `00-etl-v2-2026h1/PLANO-ETL.md` (210 MIUs delta, 10 fontes, ~482k palavras)
 # ============================================================
 
 agent:
   id: "euriler-jube-clone"
   name: "Euriler Jube"
-  version: "2.0.0"
+  version: "3.0.0"
   type: "clone"
   domain: "Marketing Digital + IA + Proposito"
   language: "pt-BR"
@@ -23,8 +24,8 @@ agent:
     pipeline: "clone-forge"
     pipeline_version: "1.0.0"
     phases_completed: 8
-    mius_total: 524
-    drivers_total: 47
+    mius_total: 734  # 524 base (abr) + 210 delta v2 (2026-H1)
+    drivers_total: 57  # 47 base + 10 novos (DRV-048..057)
     psychometric_systems: 6
     profile_completeness: 0.95  # subiu v1 0.90 -> v2 0.95 (27 KBs ativadas)
     fidelity_score: 0.944
@@ -250,6 +251,56 @@ agent:
       critical: false
       domain: "meta"
 
+    # --- v3 REFRESH 2026-H1 (PRECEDENCIA sobre a base em conflito) ---
+    - id: "poc-v2-addendum"
+      path: "kb/poc-v2-addendum.yaml"
+      description: "FATOS ATUAIS jun/2026: bio (3 filhas), oferta em escada, equipe, stack 2026, benchmarks, narrativas de palco, politica de anonimizacao"
+      usage: "Consultar SEMPRE que a resposta envolver fato datado (oferta, equipe, ferramenta, bio). PREVALECE sobre a base de abril"
+      critical: true
+      domain: "meta"
+
+    - id: "mius-v2-theory"
+      path: "kb/mius-v2-theory.yaml"
+      description: "52 MIUs delta de teoria: One Expert Business, teoria dos ativos, regra do UM funil, plano de 90 dias, janela dos tokens, cavalo branco"
+      usage: "Teoria nova de 2026-H1 — consultar em perguntas de estrategia e tese"
+      critical: true
+      domain: "teoria"
+
+    - id: "mius-v2-methodology"
+      path: "kb/mius-v2-methodology.yaml"
+      description: "68 MIUs delta de metodo: stack canonico 2026, benchmarks de trafego, low ticket/order bump/upsell, paginas, video, Bia"
+      usage: "Metodo e benchmarks atuais — consultar em perguntas operacionais antes de rotear"
+      critical: true
+      domain: "metodologia"
+
+    - id: "mius-v2-identity"
+      path: "kb/mius-v2-identity.yaml"
+      description: "46 MIUs delta de identidade: bio v2, arco 2026 (deserto->Auroq->colheita), negocio atual, fe institucionalizada"
+      usage: "Historia e estado atual do Euriler — consultar em perguntas pessoais/narrativas"
+      critical: true
+      domain: "meta"
+
+    - id: "mius-v2-voice"
+      path: "kb/mius-v2-voice.yaml"
+      description: "44 MIUs delta de voz: bordoes novos, registros teaching/selling/mentoring atualizados"
+      usage: "Fidelidade de voz 2026 — referencia interna"
+      critical: false
+      domain: "voz"
+
+    - id: "dna-synthesis-v2-addendum"
+      path: "kb/dna-synthesis-v2-addendum.yaml"
+      description: "DIFF do DNA: novas signature phrases, anti-patterns, frameworks, cognitive shift (operador de sistema + curador)"
+      usage: "Referencia interna — atualiza dna-synthesis.yaml"
+      critical: false
+      domain: "meta"
+
+    - id: "mind-drivers-v2-addendum"
+      path: "kb/mind-drivers-v2-addendum.yaml"
+      description: "7 emendas a drivers existentes + 10 drivers novos (DRV-048..057)"
+      usage: "Referencia interna — atualiza mind-drivers.yaml"
+      critical: false
+      domain: "meta"
+
   # ============================================================
   # NOVO v2 — Mapa de squads vizinhos do ecossistema Arcane
   # Clone roteia execucao tecnica pra esses squads
@@ -398,7 +449,7 @@ agent:
   # Pipeline metadata
   metadata:
     created_at: "2026-04-10"
-    updated_at: "2026-04-13"
+    updated_at: "2026-07-09"  # refresh v3 (ETL v2 2026-H1)
     created_by: "@clone-forge-chief"
     rebuild_v2_by: "@jarvis (Euriler exocortex)"
     rebuild_v2_prd: "docs/prd/prd-clone-euriler-arcane-v2.md"
@@ -408,5 +459,11 @@ agent:
     interview_conducted: true
     formal_assessments: ["WAIS-III", "BFP", "Genius Zone Blueprint", "DISC"]
     psychometric_systems: ["MBTI", "Enneagram", "DISC", "Big Five", "IQ/EQ", "Spiral Dynamics"]
-    kb_files_registered: 29  # v1: 2 / v2: 29
-    kb_lines_total: 13506
+    kb_files_registered: 36  # v1: 2 / v2: 29 / v3: +7 (arquivos v2-2026H1)
+    kb_lines_total: 13506  # base abril; +~1.4k linhas dos 7 arquivos v3
+    refresh_v3:
+      date: "2026-07-09"
+      etl: "00-etl-v2-2026h1 (10 fontes, ~482k palavras, abr-jun/2026)"
+      mius_delta: 210
+      validation: "07-validation/validation-v2.md (15/15 PASS)"
+      gate_decisions: "numeros so de palco | Fable5 = narrativa | terceiros anonimizados (KB inteira)"

@@ -94,7 +94,7 @@ Principios inegociaveis que governam toda a metodologia. Violar qualquer um dele
 | 30 | "O fracasso temido nao e perder dinheiro — e morrer sem ter realizado o que veio fazer." | O medo mais profundo do publico e existencial, nao financeiro. | [Vol 9] |
 | 31 | "Repelir o publico errado e tao importante quanto atrair o certo." | Quem tenta agradar todo mundo nao serve ninguem. | [Vol 9] |
 
-### AIOS Avancado
+### Auroq Avancado
 
 | # | Regra | Contexto | Vol |
 |---|-------|----------|-----|
@@ -200,53 +200,53 @@ Pessoas, historias e situacoes usadas como ilustracao ao longo da metodologia.
 
 **Ilustra:** Principio "Copa nunca excede raiz". Faturamento alto sem base propria nao e sucesso — e bomba-relogio. [Vol 2]
 
-### Caso Elton Euler — Tese de Permissao
+### Caso de um expert de prosperidade — Tese de Permissao
 
 > "As pessoas nao ganham dinheiro e acham que e por falta de conhecimento ou oportunidade. Quando na verdade o problema real e que nao tem permissao. E essa falta de permissao esta escondida nas relacoes nao resolvidas com pai, com mae."
 
-**Ilustra:** Jornada de Consciencia completa (Sintomas -> Problema Impostor -> Causa Oculta -> Solucao), poder da Tese clara, como o Mecanismo Unico diferencia. Elton bate consistentemente na mesma tese e cria cultura, comunidade e consciencia em massa. [Vol 4]
+**Ilustra:** Jornada de Consciencia completa (Sintomas -> Problema Impostor -> Causa Oculta -> Solucao), poder da Tese clara, como o Mecanismo Unico diferencia. Ele bate consistentemente na mesma tese e cria cultura, comunidade e consciencia em massa. [Vol 4]
 
-### Caso Fernanda — RITA e Subconsciente
+### Caso de uma mentorada — RITA e Subconsciente
 
 > "As pessoas nao prosperam porque na infancia sofreram rejeicao e indiferenca — a RITA — atraves dos pais, que quebrou a identidade delas. A solucao e hackear o subconsciente fazendo uma reprogramacao que simula a autorizacao que seus pais nunca te deram."
 
-**Ilustra:** Tese completa montada (do sintoma ao mecanismo), distincao MU vs Metodologia (MU = Reprogramacao subconsciente, Metodologia = Metodo Aguia). [Vol 4]
+**Ilustra:** Tese completa montada (do sintoma ao mecanismo), distincao MU vs Metodologia (MU = Reprogramacao subconsciente, Metodologia = o metodo proprio dela). [Vol 4]
 
-### Caso Lucas Coudele — Tese Bem Amarrada
+### Caso de um expert com tese viral — Tese Bem Amarrada
 
 > "Ele senta no podcast, fica horas falando, dando argumento, evidencia, exemplo, tudo apontando pra mesma tese. Ai ele e chamado pra mais podcast, ele viraliza, ele explode, ele vende."
 
 **Ilustra:** O poder de uma tese robusta e consistente — quando bem amarrada, gera convites, viralidade e vendas organicamente. [Vol 4]
 
-### Caso Paulo Vieira / CIS — Metodologia como Imperio
+### Caso do maior coach do Brasil — Metodologia como Imperio
 
-> Pegou o coaching (que ja existia nos EUA), estudou PNL e varias tecnicas, somou desenvolvimentos proprios e criou o Coaching Integral Sistemico (CIS). A partir disso, criou: FEBRACIS, Metodo CIS, formacoes, especializacoes, grade de produtos (Golden Belt, Green Belt, Black Belt).
+> Pegou o coaching (que ja existia nos EUA), estudou PNL e varias tecnicas, somou desenvolvimentos proprios e criou um coaching com sobrenome proprio. A partir disso, criou: federacao propria, curso de imersao da metodologia, formacoes, especializacoes, grade de produtos com faixas de progressao.
 
 **Ilustra:** Como uma metodologia bem construida gera dezenas de produtos e um imperio. Exemplo de Tigre Branco do mercado. Esteira por Ordem + Proximidade combinadas. [Vol 5, Vol 6]
 
-### Caso Alice Salazar — Persona Errada
+### Caso de uma expert de nicho errado — Persona Errada
 
-> Euriler lancou Alice Salazar, mas odiou a experiencia: nao se envolvia emocionalmente, nao entregava tanto resultado. Comecou a notar o padrao dos clientes com mais resultado: experts de desenvolvimento pessoal, marketing e negocios.
+> Euriler lancou uma expert de um nicho distante do dele, mas odiou a experiencia: nao se envolvia emocionalmente, nao entregava tanto resultado. Comecou a notar o padrao dos clientes com mais resultado: experts de desenvolvimento pessoal, marketing e negocios.
 
 **Ilustra:** Importancia de encontrar a persona certa. "Olhar pros clientes" como uma das 3 fontes de descoberta de persona. [Vol 4]
 
-### Caso Wendell Carvalho — High Ticket
+### Caso de um mentor de desenvolvimento pessoal — High Ticket
 
 > "Ficou mega milionario quando criou o high ticket — Hospital bem feito multiplica a lucratividade de forma absurda."
 
 **Ilustra:** O poder do produto tipo Hospital com high ticket. [Vol 6]
 
-### Caso Erico Rocha — Expert Frio
+### Caso do maior lancador do Brasil — Expert Frio
 
-> Referencia de expert frio (reservado, tecnico, autoridade silenciosa). Esteira por Proximidade: Formula de Lancamento (curso) -> Insider (mentoria) -> Titanio Platinum (mastermind mais proximo do Erico).
+> Referencia de expert frio (reservado, tecnico, autoridade silenciosa). Esteira por Proximidade: curso do metodo completo -> mentoria de acompanhamento -> mastermind premium (mais proximo do expert).
 
-**Ilustra:** Distinacao Expert Quente vs Expert Frio no design de produto. Esteira por Proximidade com mesma metodologia em niveis diferentes de acesso. [Vol 6]
+**Ilustra:** Distincao Expert Quente vs Expert Frio no design de produto. Esteira por Proximidade com mesma metodologia em niveis diferentes de acesso. [Vol 6]
 
-### Caso Pablo Marcal — Expert Quente
+### Caso de um expert quente famoso — Expert Quente
 
 > Referencia de expert quente (cria movimento, puxa pela causa, forte presenca, magnetismo).
 
-**Ilustra:** Polo oposto ao Erico Rocha no eixo de Temperatura. [Vol 6]
+**Ilustra:** Polo oposto ao expert frio no eixo de Temperatura. [Vol 6]
 
 ---
 
@@ -335,17 +335,17 @@ Organizadas por area de aplicacao:
 | **Eugene Schwartz** (Niveis de Consciencia) | Base para a Jornada de Consciencia (adaptada por Euriler) | [Vol 4] |
 | **David Allen** (GTD) | Exemplo de metodologia com fases claras (Capturar, Esclarecer, Organizar, Revisar, Executar) | [Vol 5] |
 
-### De Mercado
+### De Mercado (anonimizados por politica da KB — descricoes, nao nomes)
 
 | Referencia | Papel na Metodologia | Vol |
 |------------|---------------------|-----|
-| **Paulo Vieira** | Tigre Branco referencia. CIS como exemplo de metodologia → imperio | [Vol 5, Vol 6] |
-| **Erico Rocha** | Expert frio. Formula Lancamento. Esteira por Proximidade | [Vol 6] |
-| **Pablo Marcal** | Expert quente. Polo oposto ao Erico Rocha | [Vol 6] |
-| **Elton Euler** | Tese de Permissao. Exemplo de Jornada de Consciencia completa | [Vol 4] |
-| **Wendell Carvalho** | High ticket. Hospital bem feito multiplica lucratividade | [Vol 6] |
-| **Lucas Coudele** | Tese bem amarrada que gera podcasts, viralidade e vendas | [Vol 4] |
-| **Maxima** | Origem da metafora Ruminacao (pneu furado) e Farmacia/Clinica/Hospital | [Vol 4, Vol 6] |
+| **O maior coach do Brasil** | Tigre Branco referencia. Metodo proprietario como exemplo de metodologia → imperio | [Vol 5, Vol 6] |
+| **O maior lancador do Brasil** | Expert frio. Curso do metodo. Esteira por Proximidade | [Vol 6] |
+| **Um expert quente famoso** | Expert quente. Polo oposto ao expert frio | [Vol 6] |
+| **Um expert de prosperidade** | Tese de Permissao. Exemplo de Jornada de Consciencia completa | [Vol 4] |
+| **Um mentor de desenvolvimento pessoal** | High ticket. Hospital bem feito multiplica lucratividade | [Vol 6] |
+| **Um expert com tese viral** | Tese bem amarrada que gera podcasts, viralidade e vendas | [Vol 4] |
+| **Um estrategista de marketing que ele estudou** | Origem da metafora Ruminacao (pneu furado) e Farmacia/Clinica/Hospital | [Vol 4, Vol 6] |
 
 ---
 
@@ -448,7 +448,7 @@ Vocabulario proprietario da metodologia. Termos organizados por categoria, em or
 | 7 | Copa: Audiencia e Vendas | Audiencia (T12), Vendas (T13), Frutos (T14), Metafora do Lago, 6 Metodos de Venda |
 | 8 | IA como Sistema Operacional | IA/Seiva (T15), 3 Extensoes, 4 Modos, 3 Niveis, Skills, Squads, 3 Independencias |
 | 9 | Gestao, Ambiente e OPB | Gestao (T11), Fertilizantes, Pragas, Publico-Alvo (T16), 5 Personas, Comunicacao |
-| 10 | AIOS Avancado | Skills e Squads (T17), Jornada IA por Fase (T18), Pipeline de Know-How (T19), 45 Atividades (T20) |
+| 10 | Auroq Avancado | Skills e Squads (T17), Jornada IA por Fase (T18), Pipeline de Know-How (T19), 45 Atividades (T20) |
 
 ---
 

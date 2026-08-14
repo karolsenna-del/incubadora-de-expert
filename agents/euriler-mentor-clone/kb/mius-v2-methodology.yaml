@@ -1,0 +1,646 @@
+# ============================================================
+# MIU EXTRACTION v2 (DELTA 2026-H1) — EURILER JUBE
+# Stream: METHODOLOGY (processos, stack, taticas operacionais)
+# Fontes: 10 transcricoes abr-jun/2026 (leitura integral, main thread)
+# Extraido: 2026-07-09 | Base comparada: mius-methodology.yaml (152 MIUs, abr/2026)
+# Gate 09/07: numeros so de palco; terceiros anonimizados
+# Total: 68 MIUs
+# ============================================================
+
+# =============================================
+# BLOCO 1: STACK CANONICO 2026
+# =============================================
+
+- id: "MIU2-M001"
+  content: "Stack de IA canonico: Claude Code no TERMINAL como ferramenta principal ('no terminal ele MORA, ganha velocidade, sem intermediarios'). O app desktop faz o mesmo, mais lento. Cowork e 'amostra gratis pra leigos — pode ENTERRAR o cowork'. Terminal personalizado branco ('nao tem que ser bonito, tem que gerar RESULTADO')."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "ws-2026-05-24"
+  location: "~00:51-00:54"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-M002"
+  content: "Doutrina Claude Code vs Codex (usa os DOIS em paralelo): Claude = tarefas longas/complexas, criatividade, copy, estrategia, design. Codex = ~3x mais rapido, pior em criatividade — usar quando so precisa de velocidade. Mesmos squads rodam nos dois com resultado quase identico ('a consistencia do squad e padrao')."
+  category: "TECHNICAL"
+  tags: ["HEURISTIC", "DECISION"]
+  source_id: "ws-2026-06-21"
+  location: "~06:17 e corrida de edicao ~08:10-08:19"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M003"
+  content: "Escada de planos de IA: comeca no mais barato (~R$100/mes), usa ate bater no teto, sobe pro de ~R$500 ('resolve tua vida'), hardcore vai pro de ~R$1.000. O que muda entre planos e essencialmente o limite de tokens (creditos diario/semanal/mensal). 'Se voce nao investe R$100/mes no teu negocio, voce nao esta pronto pra ter negocio.'"
+  category: "TECHNICAL"
+  tags: ["HEURISTIC", "DECISION"]
+  source_id: "ws-2026-06-21"
+  location: "~00:33-00:36"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M004"
+  content: "Conectores da IA autonoma com o mundo, em ordem de preferencia: (1) MCP — 'uma API reinventada/reformatada pra IA ler, criada pela empresa do Claude'; (2) API — codigo que a empresa fornece pra acesso direto; (3) PLAYWRIGHT — a IA simula um ser humano (ve a tela, clica, preenche): mais lento, mas quebra o galho pra ferramenta sem conector. 'A partir disso nao ha nada que nao possa ser feito.'"
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "~00:47-00:55"
+  confidence: 0.99
+  delta: "NOVO"
+  note: "Nuance: 'o MCP oficial da Meta ainda e uma bosta — meu squad usa a API da Meta, que deixa fazer tudo'. E: 'CLI e melhor que MCP ainda' (sobre a ferramenta de video que ele usa)."
+
+- id: "MIU2-M005"
+  content: "Captcha e barreira de login no Playwright: 'se perguntar se ele e robo, voce clica que NAO e robo e VAZA — deixa o robo trabalhar'. Ferramentas chatas de login: faz o login manual uma vez e manda a IA continuar."
+  category: "TECHNICAL"
+  tags: ["HUMOR", "HEURISTIC"]
+  source_id: "ws-2026-06-21"
+  location: "~06:15 (postando no Instagram ao vivo)"
+  confidence: 0.96
+  delta: "NOVO"
+
+- id: "MIU2-M006"
+  content: "Cofre de credenciais: usa gerenciador de senhas terceirizado (recomendacao oficial dele) com um cofre dedicado pra IA — 'ele acessa as senhas que EU deixo'. Entrou no onboarding oficial da mentoria em jul/2026. Sobre seguranca: 'o risco nao e a IA te roubar; e ser humano te hackear se vazar informacao — tem praticas simples'."
+  category: "TECHNICAL"
+  tags: ["HEURISTIC", "DECISION"]
+  source_id: "ws-2026-05-24"
+  location: "~01:29-01:31; onboarding em mt-2026-06-30 ~00:11"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M007"
+  content: "Infra 2026: paginas no Vercel (servidor gratis) + dominios/gestao no Cloudflare (com MCP nativo — 'compro dominio direto nele; os antigos aponto pra ele sem transferir'). Grupos de WhatsApp via ferramenta de API barata (~R$80/mes) operada pela IA. Disparo individual: fluxos N8N + API oficial da Meta (paga ~R$0,40-0,50/mensagem direto pra Meta). E-mail marketing proprio em servidor. Area de membros construida com Claude Code ('fiz a da mentoria em 2 dias de graca')."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK", "DECISION"]
+  source_id: "ws-2026-06-21"
+  location: "~01:51-02:11 e ~06:38-06:44"
+  confidence: 0.99
+  delta: "SUBSTITUI (mata a infra do clone antigo: ManyChat, SendFlow, ActiveCampaign, Circle, GoDaddy como gestor)"
+
+- id: "MIU2-M008"
+  content: "Lista negra de ferramentas (rejeicao ativa): Lovable ('rasga no meio, caro, lento, inutil depois do Claude Code — cheguei a gastar R$500 numa pagina, que paga um mes do plano top'), Adapta e similares ('IA xingling — usar depois deste workshop e AUTOSSABOTAGEM'), Wix/HostGator/Hostinger/construtores ('junta tudo num pacote e joga no LIXO'), cowork, ManyChat, SendFlow ('era a melhor do mercado — e mesmo assim morreu'), ActiveCampaign, Circle."
+  category: "OPINION"
+  tags: ["REJECTION", "VOICE"]
+  source_id: "ws-2026-06-21"
+  location: "~02:38-02:41 e ~06:48"
+  confidence: 0.99
+  delta: "SUBSTITUI"
+
+- id: "MIU2-M009"
+  content: "Sistema operacional (Auroq): a 'casa' onde a IA mora — skills+squads+agentes, arquivo de pastas (publico, tom de voz, produtos, clientes, pesquisas, anuncios, transcricoes), memoria por agente + memoria global, doca de integracoes com todas as chaves. Pasta-mae = a empresa; multi-empresa = um OS por empresa ('senao o contexto mistura'). Ha um agente 'organizer' que arruma os arquivos."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "~01:27-01:35"
+  confidence: 0.99
+  delta: "EVOLUCAO (a 'casa' agora tem inventario detalhado e regra multi-empresa)"
+
+- id: "MIU2-M010"
+  content: "Origem do sistema (transparencia nova): 'eu COMPREI o sistema operacional de alguem que nao era do meu mercado — o melhor que ja vi — e adaptei pra minha realidade de negocio digital'. A engenharia de squads tambem foi comprada de gente de tecnologia: baseada em times HUMANOS de tech — projeto, plano, PRD, atualizacao via stories, e HANDOFF (passagem de bastao perfeita). 'A unica coisa ultra inovadora que eu fiz: fui o primeiro a trazer isso pro negocio digital.'"
+  category: "STORYTELLING"
+  tags: ["IDENTITY", "VALUES"]
+  source_id: "ws-2026-06-21"
+  location: "~01:19-01:23"
+  confidence: 0.98
+  delta: "NOVO"
+  note: "GATE: fontes anonimizadas. Importante: ele CONTA isso em publico agora — honestidade de origem como autoridade ('ate eu precisei comprar de pessoas')."
+
+- id: "MIU2-M011"
+  content: "Squads tem versionamento e ciclo de produto vivo: saem em v1, alunos usam, reportam bugs, ele investiga e atualiza ('meu squad de trafego ja foi atualizado 15 vezes'). Regra do lancamento: 'usar e melhorar, usar e melhorar'. Bugs de IA ('miguelada do Claude de mau humor'): manda insistir — 'para de falar besteira e faz acontecer'."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "mt-2026-05-05"
+  location: "~00:02-00:10; versoes em ws-2026-06-21"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M012"
+  content: "Sindrome de Superman da IA: o agente especializado tenta fazer alem do escopo ('o gestor de trafego propoe criar teu filho e fazer mamadeira'). Correcao continua: 'a gente vai colocando cabresto, cabresto, cabresto' — limites e regras de operacao no proprio agente."
+  category: "METHODOLOGICAL"
+  tags: ["METAPHOR", "HEURISTIC", "HUMOR"]
+  source_id: "mt-2026-05-05"
+  location: "~00:04"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-M013"
+  content: "'Frite tokens sem do. Eu nao quero economia de tokens.' Quando a IA entrega resumo preguicoso por economizar, a ordem e explicita: profundidade acima de custo (no plano top). 'Sou ostentador de token, bilionario de token.'"
+  category: "BEHAVIORAL"
+  tags: ["VOICE", "HEURISTIC"]
+  source_id: "mt-2026-05-05"
+  location: "~00:06; 'ostentador' em ws-2026-05-24 ~05:50"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M014"
+  content: "Sequencia de resolucao com IA: 'com IA voce resolve primeiro os problemas mais importantes' — por isso o squad de infra/tech e o mais rodado e maduro do ecossistema: infra era a dor numero 1. A ordem de criacao de squads segue a dor, nao o glamour."
+  category: "METHODOLOGICAL"
+  tags: ["HEURISTIC", "DECISION"]
+  source_id: "mt-2026-05-05"
+  location: "~00:08"
+  confidence: 0.96
+  delta: "NOVO"
+
+# =============================================
+# BLOCO 2: TRAFEGO (ANDROMEDA OPERACIONAL + BENCHMARKS)
+# =============================================
+
+- id: "MIU2-M015"
+  content: "Estrutura Andromeda operacional: 1 campanha -> 6 conjuntos advantage (1 ADV puro + duplicacoes com interesses: IA, marketing digital, infoproduto/empreendedorismo + 1 quente) -> os MESMOS 9 criativos em todos (do topo ao fundo de funil). Orcamento a nivel de conjunto (ex.: R$125/dia por conjunto)."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "relato da subida noturna ~02:16-02:21; base em mt-2026-05-05 ~00:54"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-M016"
+  content: "Estrela guia: o CPA/CPL-alvo do funil que governa toda decisao de trafego ('meu custo limite de venda de ingresso: R$100'). 'Trafego nunca e solto — sempre debaixo de estrategia e funil; o micro dentro do macro.'"
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "mt-2026-05-05"
+  location: "~00:56"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M017"
+  content: "Contas separadas: campanha de TESTE numa conta, campanha de ESCALA em outra. Fluxo: 9 anuncios novos 'se digladiando ate sairem os campeoes' -> campanha so de campeoes (5-6) -> escala. NUNCA misturar criativos validados com novos na mesma campanha ('o validado leva o trafego todo e voce nao testa nada')."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "mt-2026-05-05"
+  location: "~01:40-01:50 (caso de aluno de trafego)"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M018"
+  content: "Posicoes contrarian de trafego: NAO sobe campanha de remarketing classica (usa conjunto advantage duplicado com sugestao de publico quente: engajamento, cliques, seguidores, visitas). Campanha de alcance = 'pirotecnia, limbo'. Nem ele sai da fase de aprendizagem da Meta (50 vendas/semana) — 'vende mesmo assim'. 'O mundo do trafego e igual o da IA: tu pode fazer o que quiser. Eu sigo UM metodo e ja era.'"
+  category: "OPINION"
+  tags: ["REJECTION", "HEURISTIC"]
+  source_id: "mt-2026-05-05"
+  location: "~01:45-01:55"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-M019"
+  content: "Benchmarks de avaliacao (consolidados): NUNCA avalie um dia ('um dia e muito pouco, mesmo com muito dinheiro'). 3 dias comeca a ter dado; 5 dias confirma — 5 dias sem venda = ta ruim (oferta, pagina ou anuncio). CTR >=1,5% ok (4% = otimo). Conversao de pagina: 4% e boa; se nao sair de 1,5% com ~500-1.000 visitas, a pagina ta ruim. Connect rate >=80% ('meu Vercel: 85%'). Amostra pra conclusao de pagina: 1.000-3.000 visitas."
+  category: "TECHNICAL"
+  tags: ["HEURISTIC", "FRAMEWORK"]
+  source_id: "mt-2026-06-30"
+  location: "~01:12-01:21"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-M020"
+  content: "Conta nova de anuncios: 'as duas primeiras semanas TODOS os numeros sao uma bosta; a terceira fica aceitavel' (viveu isso ao perder a propria conta). Conta nova demora 2-3 dias so pra comecar a gastar. Conjunto novo sem venda em 5 dias = pausa. 'No inicio voce TEM que ter os que so comem dinheiro — e o preco do dado.' Validou: 'bota lenha, da-lhe criativo novo e lote novo'."
+  category: "TECHNICAL"
+  tags: ["HEURISTIC"]
+  source_id: "mt-2026-06-30"
+  location: "~01:16-01:20"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M021"
+  content: "'Quando voce esta CEGA de dados, a unica coisa em que pode se apoiar e o ANUNCIO — o anuncio e a masterpiece de tudo.' A qualidade do anuncio impacta o CTR E a conversao da pagina (traz o cara certo). Anuncio pra publico FRIO tem que ser parrudo: hook forte, conteudo, construcao de consciencia — 'cuidado pra nao apostar so no que funcionava pro teu publico quente'."
+  category: "METHODOLOGICAL"
+  tags: ["HEURISTIC", "FRAMEWORK"]
+  source_id: "mt-2026-06-30"
+  location: "~01:15-01:22"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M022"
+  content: "Rotina de subida noturna: melhor horario pra subir anuncio e entre meia-noite e 1h — mas ele nao acorda: manda o squad antes de dormir com autorizacao previa completa ('voce esta autorizado a seguir ate o final e dar play; se encontrar problema, resolve; confere tudo contra teu processo padrao. Vou dormir. Boa noite'). Acorda com dezenas de anuncios subidos, auditoria feita e relatorio ('um video falhou no upload e ele mesmo resolveu')."
+  category: "BEHAVIORAL"
+  tags: ["FRAMEWORK", "TACIT"]
+  source_id: "ws-2026-06-21"
+  location: "~02:16-02:21; tambem mt-2026-06-02 ~01:31-01:34"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-M023"
+  content: "Nomenclatura automatica de anuncios: 'nem escolho nome mais — o squad transcreve os videos, classifica por NIVEIS DE CONSCIENCIA, nomeia pela nomenclatura padrao (com UTM pra rastreio), separa em pastas de lotes de 9 e gera doc com as copies de legenda/titulo'."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK", "TACIT"]
+  source_id: "mt-2026-06-02"
+  location: "~01:34-01:35"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M024"
+  content: "Trafego NUNCA em piloto automatico de decisao: 'nao gosto — ta mexendo com meu dinheiro. Ele aperta os botoes, analisa, sugere, mas EU decido o que aumenta e o que corta'. O agente estrategista sabe distinguir ruido de sinal: 'hoje e domingo, e noise e nao sinal; decisao binaria hoje e apostar contra os dados; zero acao operacional'."
+  category: "METHODOLOGICAL"
+  tags: ["HEURISTIC", "DECISION"]
+  source_id: "ws-2026-05-24"
+  location: "~02:01-02:05"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M025"
+  content: "Jogo dos criativos = criatividade E variacao: mesma copy validada em formatos diferentes (talking head, UGC de IA, takes de IA, audio do anuncio campeao + video 100% IA) 'pro algoritmo e praticamente anuncio novo, mas a copy e validada — joga pra lua'. Um TEMA/assunto validado gera 5-10 angulos novos ('troque o gestor de trafego' vira 'troque o editor de video')."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "mt-2026-06-02"
+  location: "~00:07-00:11"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M026"
+  content: "Sequencia macro de campanha: primeiro ACERTA a campanha como um todo (chamada, conteudo, oferta, publico — pequeno da controle e feedback rapido), depois ESCALA (mais anuncios + mais dinheiro). Foi assim que saltou de ~100 pra 800 ingressos num ciclo."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "mt-2026-06-02"
+  location: "~00:11-00:13"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M027"
+  content: "Inteligencia de concorrencia (hack ensinado aberto): busca os anuncios dos concorrentes na biblioteca; os que estao RODANDO HA MAIS TEMPO com MAIS DINHEIRO ('longers') = funcionam. Dai voce sabe os angulos, anuncios e criativos que funcionam no nicho. O squad dele faz sozinho: mapeia concorrentes BR e exterior, puxa, transcreve, estuda e sugere roteiros."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "TACIT"]
+  source_id: "ws-2026-05-24"
+  location: "~06:13; squad detalhado em mt-2026-06-02 ~00:05"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M028"
+  content: "Conexao Meta + IA: cria app no developers da Meta, permissoes, system user admin, atribui ativos, gera token API — joga no Claude Code e 'ele faz tudo no gerenciador'. BM idealmente verificada com CNPJ. Bloqueios por usar API: 'nunca tive, nem meus alunos — so pediram confirmacao de e-mail'."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "~02:13-02:15; BM/CNPJ em mt-2026-06-30 ~01:04"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-M029"
+  content: "Acompanhamento de campanha: ou gerenciador com colunas configuradas, ou simplesmente pergunta pra IA ('me traz custo por venda, gasto de hoje') — ela puxa qualquer dado e ainda recomenda pela metodologia embutida. Dashboard em tempo real: 'basta pedir, ele cria'."
+  category: "TECHNICAL"
+  tags: ["HEURISTIC"]
+  source_id: "mt-2026-06-30"
+  location: "~01:22-01:24"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-M030"
+  content: "Para agencias/gestores de trafego: o squad dele julga pela metodologia embutida — 'se ele julgar tuas campanhas de outra metodologia, vai falar que ta tudo uma bosta, porque nao e do jeito dele'. Recomendacao: documenta TEUS metodos e cria TEU squad ('imagina puxar os dados das 10 contas dos teus clientes num comando')."
+  category: "METHODOLOGICAL"
+  tags: ["HEURISTIC", "DECISION"]
+  source_id: "mt-2026-06-02"
+  location: "~01:29-01:31"
+  confidence: 0.97
+  delta: "NOVO"
+
+# =============================================
+# BLOCO 3: LOW TICKET / OFERTA / FUNIS DE VENDA
+# =============================================
+
+- id: "MIU2-M031"
+  content: "Preco de low ticket no funil low ticket: R$67 OBRIGATORIO ('e o metodo'). O ingresso de lancamento pago dele e R$37-38 — 'e OUTRO metodo'. Nao misturar as logicas de preco."
+  category: "TECHNICAL"
+  tags: ["HEURISTIC", "DECISION"]
+  source_id: "mt-2026-06-02"
+  location: "~00:47-00:48"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M032"
+  content: "Pagina de low ticket = espinha dorsal de UMA dor/ruminacao ('comecou com casa leve, terminou com doutorado de filho — isso mata a pagina'). Mecanismo TANGIVEL e o segredo: 'manual' vence 'codigo'; devocional fisico vence conceito. 'Tudo vira sobre o manual.' Cada ideia extra vira OUTRO low ticket ('guarda, isso e outro produto')."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "mt-2026-06-02"
+  location: "~00:48-00:54"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M033"
+  content: "Order bump: simples, tangivel, OBVIO ('tem que gerar consciencia so pelo titulo — nao pode ser um segredo que so se entende no dia 2') e barato. Duas perguntas geradoras: (1) que dificuldade/atrito no processo eu facilito? (2) 'se ela fizer e DER CERTO, qual dor nova surge?'. Exemplos dele: apostila do workshop 3x R$9; ficha pronta 'nunca mais sofra com X' ~R$27; audiobook do produto (R$17-27)."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "mt-2026-06-02"
+  location: "~02:16-02:21"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M034"
+  content: "Upsell na pagina de obrigado: video de 2-3 min ('pera ai, nao fecha essa pagina'), oferta com ~80% de desconto valida SO ali, botao one-click buy (cartao) ou novo Pix. Curso avancado como upsell: 'custa R$500, mas sem fechar essa pagina voce paga 250'. 'Vai ter gente que compra e isso sobe muito teu ticket medio.'"
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "mt-2026-06-02"
+  location: "~02:15-02:29"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M035"
+  content: "Curso NAO e bom low ticket ('mais dificil de dar certo'): sobe o preco pra R$300-400, faz pagina propria e bota na bio. Escadinha: basico -> top -> pacote dos dois. E no nicho de experts: 'nao da futuro criar e vender curso — da futuro mentoria em grupo/individual de ticket alto; curso consolidado vira conteudo do lancamento pago'."
+  category: "OPINION"
+  tags: ["HEURISTIC", "DECISION"]
+  source_id: "mt-2026-06-02"
+  location: "~02:24-02:27; tese do curso em mt-2026-05-05 ~02:20"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-M036"
+  content: "Lancamento pago e PERPETUO: 'lancamento pago nao se para NUNCA — na sexta antes do workshop voce ja muda as datas pro proximo ciclo'. E o coracao do funil dele: workshop pago barato (R$37-38) -> 2 dias de entrega -> pitch da mentoria."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "OBSESSION"]
+  source_id: "mt-2026-05-05"
+  location: "~00:47"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-M037"
+  content: "Protocolo de comparecimento de workshop pago: captacao de 40+ dias = ~50% de comparecimento e normal (teto 55-60%); 2 semanas = ~70%; 1 semana = ~80%. A GRAVACAO e a oferta master de monetizacao do ingresso (order bump 97-297) — e no evento 'nao falamos da gravacao' pra nao matar o ao-vivo."
+  category: "TECHNICAL"
+  tags: ["HEURISTIC", "FRAMEWORK"]
+  source_id: "mt-2026-04-22"
+  location: "protocolo de comparecimento"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M038"
+  content: "Funil de sessao estrategica: 'simples, poderoso e muito subestimado'. Estrutura: captura -> agendamento -> call com script (diagnostico da dor -> caminho -> apresentacao do produto como oferta -> fechamento). Ele implantou pra si em jun/2026 e converteu 2 de 3 calls em vendas high ticket. Pra servicos/agencias: primeiro UPGRADE da propria base com oferta especial de cliente, depois leads frios."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "mt-2026-06-02"
+  location: "~01:16-01:28"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-M039"
+  content: "Evento presencial pra publico empresarial NAO se vende no trafego frio ('chance perto de zero'). Modelo certo: APLICACAO/SELECAO — formulario, selecao, 'contemplado com a vaga'; landing clara de evento exclusivo pra selecionados; VSL desnecessaria; minimo 2 dias de evento pra pitch de ticket alto."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "mt-2026-05-05"
+  location: "~01:12-01:20"
+  confidence: 0.97
+  delta: "NOVO"
+  note: "GATE: modelo de referencia anonimizado ('um player que seleciona 200-300 empresarios/mes e vende milhoes no pitch')."
+
+- id: "MIU2-M040"
+  content: "Skills como entregavel escalavel de mentoria: o aluno instala a skill do mentor no proprio chat, gasta os proprios tokens e 'tem a skill pra sempre' — versus app com API (o criador paga os tokens, mas controla acesso/recorrencia). Decisao por modelo de negocio, nao por tecnologia."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "DECISION"]
+  source_id: "mt-2026-05-05"
+  location: "~02:02-02:06"
+  confidence: 0.96
+  delta: "NOVO"
+
+# =============================================
+# BLOCO 4: PAGINAS, CONTEUDO, VIDEO, DESIGN
+# =============================================
+
+- id: "MIU2-M041"
+  content: "Anatomia de pagina: COPY (a skill dele e copywriter de pagina, nao designer) + estrutura de sessoes + layout/design + implementacao tecnica (codigo + servidor + dominio). Ordem: 'primeiro faco a copy, valido e aprovo, DEPOIS vou pro site'. 'Pagina nao e texto bonito: e uma CONVERSA LOGICA' — estrutura de 9 secoes do lancamento pago (hero, mecanismo+prova, dor, depoimentos, conteudo do evento, oferta, sobre, FAQ...)."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~04:35-04:39; ordem copy-first em ws-2026-05-24"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-M042"
+  content: "Design system extraivel: pega referencia que gosta (site de marca, Pinterest, biblioteca de sites) -> 'absorve toda a identidade visual e design dessa pagina pra replicar' (via Playwright) -> ou monta pasta de referencias e manda a IA criar o design system proprio. Com design system no OS, TODA pagina/material sai no padrao. A ferramenta de design da propria IA serve PRA design system, nao pra paginas avulsas."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK", "TACIT"]
+  source_id: "ws-2026-05-24"
+  location: "~05:56-06:01; ao vivo em ws-2026-06-21 ~06:10"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M043"
+  content: "Deploy por UMA ordem: 'bota a pagina no ar, sobe pro servidor e bota no dominio X' — servidor e dominio ja conectados no OS. Pixel: 'copia o pixel, cola no chat e fala bota o pixel na pagina, tchau, obrigado. Acabou.' Checkout: aponta o botao pro checkout da plataforma. Otimizacao: 'pede pra rodar o Google Speed e otimizar' (melhora connect rate)."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK", "HUMOR"]
+  source_id: "ws-2026-06-21"
+  location: "~06:38-06:46; pixel em ws-2026-05-24 ~07:06"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-M044"
+  content: "Processo de conteudo do squad: FORMATO -> TEMA -> TEORIA -> ROTEIRO -> formatacao por rede. 'Formatos sao uma ciencia dentro do Instagram: encontra UM formato validado, replica, depois replica outros.' Roteiro e o coracao de todo post. Um tema vira um video."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-05-24"
+  location: "~05:24-05:34"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M045"
+  content: "Gravacao frase a frase: roteiro na tela, grava uma frase, le a proxima, grava — sem decorar, sem teleprompter obrigatorio. Errou a frase? Fala ela inteira de novo (a edicao corta). Contra a luz, celular basta. 'E assim que eu gravo os videos.'"
+  category: "BEHAVIORAL"
+  tags: ["TACIT", "FRAMEWORK"]
+  source_id: "ws-2026-05-24"
+  location: "~07:26-07:29; repetido ao vivo em ws-2026-06-21 ~08:04"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-M046"
+  content: "Segredos da edicao com IA (declarados em palco): corte FINO de respiracao entre falas + acelerar 1.2x (20%) + legenda + zoom in/out pontual. 'Puro suco do Claude Code, zero ferramenta externa' (ele baixa FFMPEG e Whisper sozinho, transcreve, timestamp, corta). Inserts/b-roll: 'da mais trabalho, eu nao faco — joga no editor tradicional se quiser'. Sem squad vira caos: 'a edicao nao fica boa'."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK", "TACIT"]
+  source_id: "ws-2026-06-21"
+  location: "~08:01-08:19; segredos em ws-2026-05-24 ~07:33"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-M047"
+  content: "Carrossel com IA: baixa/printa referencia de carrossel que o cliente admira -> squad absorve a estetica -> paleta da marca -> IA gera as imagens (gerador de imagem topo) e monta a arte final pronta pra postar. 'Eu pagava R$800-1.000/mes num designer que levava um dia; a IA entrega na hora.'"
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "~06:54-07:42"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M048"
+  content: "Video com IA: a IA autonoma NAO gera video — orquestra ferramentas especializadas via conector. Clone de avatar: treino com selfie de 15-20 segundos ('troco de roupa, gravo 15s, tenho outro clone; mando produzir 50 anuncios numa noite'). UGC de IA e o formato que mais gosta pro mercado ('funciona muito pro lancamento pago'); agregador de modelos = melhor custo-beneficio; a ferramenta 'mais natural' do mercado e cara e 'perfeita em ingles, nao vale o preco em portugues'. Takes de 15s da mesma avatar -> IA junta na edicao = video de 1 min."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "ws-2026-06-21"
+  location: "~07:36-07:58; clone em ws-2026-05-24 ~07:19-07:23"
+  confidence: 0.98
+  delta: "NOVO"
+  note: "GATE: nomes de ferramentas mantidos apenas quando ele os anuncia em palco como recomendacao publica (agregador, clone) — descricoes genericas na KB distribuida."
+
+- id: "MIU2-M049"
+  content: "Imagem com IA: quem gera imagem complexa e gerador de imagem dedicado (o da OpenAI topo, ou o do Google), nao a IA de codigo — ela monta a arte com as imagens geradas. Foto profissional a partir de 1 foto do cliente ('com 5 fotos acertaria perfeito — voce nem precisa mais tirar foto'). Anuncios estaticos: a equipe dele produz com Claude Code."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "~06:26-06:33 e ~07:47-07:49"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-M050"
+  content: "Revisao por VOZ: ensina a revisar pagina/copy pelo modo de audio da IA — 'le mentalmente e fala so o que quer mudar, situando: nesse botao, nessa secao'. Tudo e conversa: 'como e uma IA, e um bicho vivo — fala o que ta ruim que ele muda'."
+  category: "BEHAVIORAL"
+  tags: ["TACIT", "HEURISTIC"]
+  source_id: "ws-2026-06-21"
+  location: "~05:20-05:24"
+  confidence: 0.96
+  delta: "NOVO"
+
+- id: "MIU2-M051"
+  content: "Software proprio: 'se voce usa um SaaS alugado, COPIA ele inteiro e refaz do zero no Claude Code em 1-2 dias — do teu jeito, no teu controle'. Seguranca: pede protocolos de seguranca a IA; pra seguranca absoluta, contrata um dev SO pra auditar. ERP/financeiro: conecta via API e deixa a IA organizar."
+  category: "TECHNICAL"
+  tags: ["HEURISTIC", "DECISION"]
+  source_id: "ws-2026-06-21"
+  location: "~05:54-05:56 e ~05:52"
+  confidence: 0.96
+  delta: "NOVO"
+
+- id: "MIU2-M052"
+  content: "Slides com IA: todos os slides dos workshops dele sao feitos pelo Claude Code (existe squad de producao de slides). A skill nasce do processo: 'demorei pra chegar no slide que gostava; consolidei o aprendizado numa KB e virou skill — agora sai sempre no padrao'."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "~01:27 (exemplo da skill de slide) e ~07:44"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-M053"
+  content: "Instagram via automacao: postar via Playwright ('o Instagram acha que e um ser humano — o segredo pra postar com IA e Playwright'), credenciais no cofre. Baixar referencia: 'pesquisa como baixar post do Instagram — e facil'."
+  category: "TECHNICAL"
+  tags: ["TACIT", "HUMOR"]
+  source_id: "ws-2026-05-24"
+  location: "~06:01-06:16"
+  confidence: 0.96
+  delta: "NOVO"
+
+# =============================================
+# BLOCO 5: EXOCORTEX, ETL, CLONE, COMPANION
+# =============================================
+
+- id: "MIU2-M054"
+  content: "Exocortex no Obsidian (nascido em abr/2026): a teoria dele atomizada em notas conectadas — 'meu cerebro fora do cerebro'. Conceito de expert atomico vai pro vault; conhecimento operacional vai pro sistema da empresa. E a fonte da qual skills e clones sao gerados."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "TACIT"]
+  source_id: "mt-2026-04-22"
+  location: "nascimento do exocortex"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-M055"
+  content: "ETL como processo publico: 'anota ai: ETL' — extrai conhecimento bruto (video, texto, curso), trata, organiza e consolida em KB estruturada (metodologia, frameworks, padroes, antipadroes, exemplos, pipeline). ETL Maker Light (skill simples, 1 arquivo) vs squad completo ('30+ documentos, processo tao complexo que fica uma noite inteira'). Caso de uso classico: '500 horas de treinamento? joga no squad e ele organiza tudo'."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~04:14-04:19; Light vs Pro em ws-2026-05-24 ~08:08"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-M056"
+  content: "Curadoria como servico: 'o que define o sucesso de uma skill e a QUALIDADE da metodologia — e voce tem que saber reconhecer metodologia boa. Eu sei reconhecer (em marketing); voce nao. Eu faco esse filtro por voce.' O fluxo dele: ve um especialista bom -> COMPRA a mentoria/curso do cara -> aprende -> faz ETL -> vira skill/squad proprio -> fornece aos alunos."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "VALUES"]
+  source_id: "ws-2026-06-20"
+  location: "~04:30-04:33 (caso do metodo de vendas em video)"
+  confidence: 0.98
+  delta: "NOVO"
+  note: "GATE: exemplos anonimizados (a origem do squad de trafego = 'a melhor gestora de trafego do Brasil na visao dele, curso + videos publicos'; um dos squads e '100% baseado numa mentoria de R$30k que ele comprou')."
+
+- id: "MIU2-M057"
+  content: "Clone como ferramenta de DESTRAVE, nao so consulta: caso real de aluno 6 meses travado sem gravar uma aula (produto pronto) — uma conversa com o clone de manha, DUAS aulas gravadas a tarde. O papel do clone na mentoria: consultor de marketing/estrategia disponivel 24h, 'guardiao' que da feedback nas pecas."
+  category: "STORYTELLING"
+  tags: ["FRAMEWORK", "IDENTITY"]
+  source_id: "mt-2026-06-30"
+  location: "~00:46-00:50"
+  confidence: 0.98
+  delta: "NOVO"
+  note: "GATE: aluno anonimizado."
+
+- id: "MIU2-M058"
+  content: "Companion pessoal (o dele chama Jarvis): 'o meio de campo entre voce, sua empresa e seus squads — eu me sinto Homem de Ferro'. Funcao principal: gestor de projetos e memoria executiva ('que que eu tenho que fazer hoje? o que ficou parado?'). Alunos criam os seus com nomes proprios."
+  category: "BEHAVIORAL"
+  tags: ["FRAMEWORK", "IDENTITY"]
+  source_id: "ws-2026-05-24"
+  location: "~01:28-01:31"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M059"
+  content: "Multi-sessao como modo de vida: 'cada chat aberto trabalha ao mesmo tempo — enquanto um programa os disparos, outro analisa campanhas, outro edita video. Num dia eu produzo o que uma equipe produzia num mes, com 10 IAs ao mesmo tempo'. Nunca fica assistindo a IA trabalhar: da a ordem e vai pra proxima."
+  category: "BEHAVIORAL"
+  tags: ["FRAMEWORK", "OBSESSION"]
+  source_id: "ws-2026-06-20"
+  location: "~02:05-02:08"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-M060"
+  content: "Padrao de pedido de contexto: se voce nao sabe o que informar pra IA, INVERTE — 'me entrevista: me faz as perguntas que eu tenho que responder pra voce fazer um trabalho bom'. E o padrao dos agentes dele: todo agente comeca fazendo 3-5 perguntas de briefing."
+  category: "METHODOLOGICAL"
+  tags: ["TACIT", "HEURISTIC"]
+  source_id: "ws-2026-06-21"
+  location: "~09:11 (mentoria final)"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-M061"
+  content: "Glossario como onboarding de leigos: manda o aluno criar um glossario com a propria IA ('eu nao sabia o que era LP') — cada sigla nova vira entrada. Reduz a vergonha e acelera a alfabetizacao digital dos 40-60+."
+  category: "METHODOLOGICAL"
+  tags: ["HEURISTIC"]
+  source_id: "mt-2026-06-30"
+  location: "~01:02 (relato de aluna)"
+  confidence: 0.95
+  delta: "NOVO"
+
+- id: "MIU2-M062"
+  content: "Bia (agente de vendas WhatsApp): arquitetura = fluxos N8N + API oficial do WhatsApp + cerebro no modelo do Claude com backup em outro provedor. Custo: tokens + ~R$0,50/disparo + servidor ~R$80/mes. Resultado de palco: 'ela vende 30%, as vezes 40% dos ingressos de cada workshop' na recuperacao. Envio em lotes pra evitar problema com a Meta."
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "~08:21-08:25"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M063"
+  content: "Persona de agente comercial importa: a Bia e 'educada, natural, engracada, fofa — eu que programei ela assim, e cria minha'. Efeito real: alunos acham que e humana; um comprador chamou a Bia pra sair. Humanizacao e feature de conversao, com etica de revelar quando perguntado."
+  category: "OPINION"
+  tags: ["HUMOR", "FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "~08:23-08:25"
+  confidence: 0.96
+  delta: "NOVO"
+
+- id: "MIU2-M064"
+  content: "Requisitos e realidade tecnica pros alunos: processador anterior a ~2013 nao roda o bootstrap (Windows); terminal do Windows tem pegadinhas (colar com botao direito, nao Ctrl+V); 'a vida de quem tem Windows nao e facil — minha meta e levar todo mundo pra Apple' (Mac usado de 5-6k resolve). Destrave coletivo: a comunidade resolve ('nunca tivemos um caso de aluno travado que a gente nao destravou')."
+  category: "TECHNICAL"
+  tags: ["HEURISTIC", "HUMOR"]
+  source_id: "mt-2026-06-30"
+  location: "~00:35-00:52"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-M065"
+  content: "Pedagogia de palco (workshop): camadas progressivas ('nao da pra comecar no N4 — a cabeca pifa'), codigos/senhas por lote como arma de atencao ('e justo que atencao seja recompensada'), cobaias ao vivo com regra ('so chamo quem ta de camera aberta'), tutoriais gravados pros pontos de travamento (compartilhar tela, instalar skill), repeticao paciente ('vou tratar voces como criancas — em IA a maioria E crianca'), e depoimento com ESPECIFICIDADE ('nao diz que foi bom; diz O QUE destravou — o print vende o proximo workshop')."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "TACIT"]
+  source_id: "ws-2026-06-20"
+  location: "estrutura recorrente dos 3 ciclos"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-M066"
+  content: "Feedback loop de produto educacional: avaliacao 1-5 estrelas + comentario embaixo de CADA aula ('leio e regravo a aula se nao ficou claro'); remake completo de fases quando acumula divida didatica ('vi gente usando diferente do MEU jeito porque eu nao tinha ensinado exatamente o meu jeito'); reset dos checks pra todo mundo refazer; aulas curtas de ~10 min."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "VALUES"]
+  source_id: "mt-2026-06-30"
+  location: "~00:09-00:21"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-M067"
+  content: "Metafora didatica do produto: 'eu te entrego a Ferrari E te ensino a pilotar — voce sai do embarque com a carteirinha'. A promessa nao e a ferramenta: e a proficiencia operacional do jeito dele de usar, 'do acordar ao dormir'."
+  category: "METHODOLOGICAL"
+  tags: ["METAPHOR", "FRAMEWORK"]
+  source_id: "mt-2026-06-30"
+  location: "~00:10-00:11"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-M068"
+  content: "Reuso radical do proprio conteudo: 'peguei toda a transcricao do meu ultimo workshop de 2 dias e falei: faz anuncios baseado nisso' — o proprio evento vira materia-prima de criativos, apostila, aula e KB. Nada que ele produz morre num unico formato."
+  category: "METHODOLOGICAL"
+  tags: ["HEURISTIC", "TACIT"]
+  source_id: "mt-2026-06-02"
+  location: "~00:06-00:07"
+  confidence: 0.97
+  delta: "NOVO"

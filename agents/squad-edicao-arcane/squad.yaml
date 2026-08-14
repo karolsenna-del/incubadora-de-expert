@@ -7,7 +7,7 @@
 
 name: squad-edicao-arcane
 title: "Edicao Arcane"
-version: "1.1.0"
+version: "1.1.1"
 author: "Euriler Jube (Arka / Mentoria Arcane)"
 description: >
   Squad de 5 agentes (1 chief + 4 specialists) que edita videos talking-head
@@ -27,7 +27,7 @@ based_on: "Pipeline validado iterativamente (Silero VAD + ffmpeg + whisper.cpp +
 # ESCOPO
 # ─────────────────────────────────────────────────────────────────────────────
 # IN-scope:
-#   - Instalar dependencias no Mac (ffmpeg, whisper-cpp + modelo medium, venv silero/torch, fontes)
+#   - Instalar dependencias cross-platform (macOS/Windows): ffmpeg, whisper-cli + modelo medium, venv silero/torch, fontes
 #   - Validar ambiente antes de cada rodada (doctor)
 #   - Cortar buracos sem fala (Silero VAD agressivo — respiracao minima)
 #   - Acelerar 1.2x mantendo pitch
@@ -50,7 +50,7 @@ based_on: "Pipeline validado iterativamente (Silero VAD + ffmpeg + whisper.cpp +
 use_cases:
   - id: UC1
     name: "Setup Inicial"
-    description: "Expert acabou de receber o squad. Squad instala todas as dependencias automaticamente no Mac dele. Workflow instalar."
+    description: "Expert acabou de receber o squad. install.py detecta o OS (macOS/Windows) e instala todas as dependencias automaticamente. Workflow instalar."
 
   - id: UC2
     name: "Editar 1 Video"
@@ -94,8 +94,8 @@ agents:
     kb_sources:
       - "knowledge/04-troubleshooting.md"
     skills_orchestrated:
-      - "install (scripts/install.sh — provisiona ffmpeg, whisper-cpp+modelo, venv, fontes)"
-      - "doctor (scripts/doctor.sh — health check)"
+      - "install (install.py — cross-platform: provisiona ffmpeg, whisper-cli+modelo, venv, fontes)"
+      - "doctor (scripts/doctor.py — health check cross-platform)"
     role: "Engineer. Setup inicial (1a vez) + check antes de cada rodada. Detecta o que falta, corrige ou orienta. Quality gate: QG-SEA-001 (ambiente passa em todas checagens)"
     quality_gate: "QG-SEA-001"
 
@@ -113,7 +113,7 @@ agents:
     kb_sources:
       - "knowledge/03-dicionario-correcoes.md"
     skills_orchestrated:
-      - "transcribe (scripts/video-transcribe.sh — whisper-cli com --prompt de nomes proprios do expert)"
+      - "transcribe (scripts/video-transcribe.py — whisper-cli com --prompt de nomes proprios do expert)"
       - "revisar-pt (revisao humana inteligente na main thread — acentos, nomes, dicionario)"
     role: "Roda whisper -> le transcript bruto -> aplica dicionario do expert (data/nomes-proprios.yaml) -> revisa acentos manualmente -> salva transcript_revisado. Quality gate: QG-SEA-003"
     quality_gate: "QG-SEA-003"
@@ -133,9 +133,9 @@ agents:
       - "knowledge/02-defaults-validados.md"
       - "knowledge/04-troubleshooting.md"
     skills_orchestrated:
-      - "speed-up (scripts/video-speed-up.sh — 1.2x mantendo pitch)"
+      - "speed-up (scripts/video-speed-up.py — 1.2x mantendo pitch)"
       - "queimar-legenda (scripts/video-captions.py — le estilo de data/estilo-ativo.yaml)"
-      - "add-music (scripts/video-add-music.sh — trilha de fundo com ducking. Default: data/trilhas/default.mp3 ambient uplifting baixinha)"
+      - "add-music (scripts/video-add-music.py — trilha de fundo com ducking. Default: data/trilhas/default.mp3 ambient uplifting baixinha)"
     role: "Pega o video cortado + transcript revisado. Acelera 1.2x -> queima legenda no estilo ativo. Forca 8-bit yuv420p profile Main + faststart + AAC 192k. Quality gates: QG-SEA-004 (output abre) + QG-SEA-005 (legenda renderiza)"
     quality_gate: "QG-SEA-004, QG-SEA-005"
 
@@ -218,18 +218,18 @@ quality_gates:
 # ─────────────────────────────────────────────────────────────────────────────
 dependencies:
   required:
-    - "ffmpeg (Homebrew, com drawtext + sidechaincompress + libfontconfig)"
-    - "whisper-cpp + modelo ggml-medium.bin (1,5GB)"
-    - "Python 3.10+ (Homebrew)"
-    - "venv local com: silero-vad, torch, torchaudio, scipy, numpy, fonttools"
-    - "Fonte Bebas Neue Regular (embarcada em data/fontes/)"
+    - "ffmpeg com drawtext + sidechaincompress (Mac: brew | Windows: winget Gyan.FFmpeg full)"
+    - "whisper-cli + modelo ggml-medium.bin (1,5GB) (Mac: brew whisper-cpp | Windows: release whisper.cpp em <squad>/bin/)"
+    - "Python 3.10+ — venv usa 3.12/3.13 (torch nao tem wheel pra 3.14)"
+    - "venv local com: silero-vad, torch, torchaudio, scipy, numpy, fonttools, pyyaml, opencv-python-headless"
+    - "Fontes Bebas Neue / Montserrat / Poppins (embarcadas em data/fontes/ — usadas via fontfile no Windows/Linux)"
   optional: []
 
 # REGRA AUTOCONTIDO:
-# - Todos os scripts embarcados em scripts/
-# - Fonte Bebas Neue embarcada em data/fontes/ (60KB)
-# - Modelo whisper baixado pelo install.sh (1.5GB — nao embarca no ZIP)
-# - venv criado em squads/squad-edicao-arcane/.venv pelo install.sh
+# - Todos os scripts embarcados em scripts/ (Python, cross-platform via _common.py)
+# - Fontes Bebas Neue/Montserrat/Poppins embarcadas em data/fontes/
+# - Modelo whisper baixado pelo install.py (1.5GB — nao embarca no ZIP)
+# - venv criado em squads/squad-edicao-arcane/.venv pelo install.py
 # - Zero referencias a paths externos (~/.claude/, business/, docs/knowledge/)
 # - Dicionario de nomes proprios e CONFIGURAVEL (cada expert preenche o seu em data/nomes-proprios.yaml)
 

@@ -5,14 +5,18 @@
 
 name: squad-carrossel-arcane
 title: "Carrossel Arcane"
-version: "1.1.0"
+version: "1.2.0"
 author: "Euriler Jube (Arka / Mentoria Arcane)"
 description: >
-  Squad de 4 agentes (1 chief + 3 specialists) que produz carrosseis e posts
-  estaticos pra Instagram. Identity Designer cria os templates visuais (moldura).
-  Image Director cria as imagens de conteudo de alto nivel de cada card — as
-  ilustracoes cinematograficas que encenam a tese (card{N}-FINAL.png), com
-  templates de estilo reutilizaveis (ex.: euriler). Producer monta os PNGs finais.
+  Squad de 4 agentes (1 chief + 3 specialists) que produz a ARTE de carrosseis e
+  posts estaticos pra Instagram — nao escreve a copy. Trabalha em duas camadas
+  visuais: (1) ARTE EM CSS, a moldura do post feita em HTML+CSS dentro do Claude
+  Code, sem custo de API — criada pelo Identity Designer como template reutilizavel;
+  (2) IMAGEM GERADA POR IA (GPT Image 2 / Nano Banana Pro), a ilustracao que encena
+  a tese do card (card{N}-FINAL.png) — criada pelo Image Director, que tambem salva
+  o estilo de imagem do aluno como padrao reutilizavel. Um carrossel pode usar as
+  duas camadas: a imagem de IA entra dentro da moldura CSS. Producer junta copy +
+  template + imagens e entrega os PNGs finais.
   KB embarcada — squad 100% autocontido pra alunos Arcane.
 
 slash_prefix: "squad-carrossel-arcane"

@@ -15,41 +15,45 @@ Roda na 1a vez que o expert recebe o squad. Idempotente.
 ## Pre-flight
 
 ```bash
-test -f {SQUAD_DIR}/install.sh || { echo "install.sh nao encontrado"; exit 1; }
+test -f {SQUAD_DIR}/install.py || { echo "install.py nao encontrado"; exit 1; }
 ```
 
 ## Execucao
 
 ```bash
-bash {SQUAD_DIR}/install.sh
+# Mac/Linux:
+python3 {SQUAD_DIR}/install.py      # (ou o shim: bash install.sh)
+# Windows:
+py {SQUAD_DIR}\install.py           # (ou o shim: powershell -ExecutionPolicy Bypass -File install.ps1)
 ```
 
-O `install.sh` faz:
-1. Detecta macOS
-2. Verifica Homebrew
-3. Instala `ffmpeg` (se faltar)
-4. Instala `whisper-cpp` (se faltar)
-5. Baixa `ggml-medium.bin` (~1.5GB, demora alguns minutos)
-6. Cria venv local em `{SQUAD_DIR}/.venv/`
-7. Instala `silero-vad`, `torch`, `torchaudio`, `scipy`, `numpy`, `fonttools` no venv
-8. Copia `data/fontes/BebasNeue-Regular.ttf` pra `~/Library/Fonts/`
-9. Roda `fc-cache`
-10. Roda `doctor.sh` no fim — health check
+O `install.py` detecta o OS e faz:
+1. Detecta o sistema (macOS / Windows / Linux) e a versao do Python
+2. Instala `ffmpeg` com drawtext+sidechaincompress — brew (Mac) / winget Gyan.FFmpeg (Windows)
+3. Instala `whisper-cli` — brew whisper-cpp (Mac) / release do whisper.cpp em `<squad>/bin/` (Windows)
+4. Baixa `ggml-medium.bin` (~1.5GB) — layout do brew (Mac) ou `<squad>/models/` (Windows)
+5. Cria venv local (`.venv/bin` no Mac, `.venv\Scripts` no Windows), escolhendo um Python compativel com torch (evita 3.14). No Windows, se so achar Python >= 3.14, **instala o Python 3.13 via winget sozinho** e cria o venv com ele
+6. Instala `silero-vad`, `torch`, `torchaudio`, `scipy`, `numpy`, `fonttools`, `pyyaml`, `opencv-python-headless` no venv
+7. Fontes: no Mac copia pra `~/Library/Fonts/` + `fc-cache` (pro `font=`); no Windows/Linux nada a instalar (a legenda usa o `.ttf` embarcado via `fontfile=`)
+8. Registra o wrapper do slash command em `<projeto>/.claude/commands/`
+9. Roda `doctor.py` no fim — health check
 
 ## Quality gate
 
 **QG-SEA-001 — Ambiente passa em todas as checagens**
 
-Apos `install.sh`, o `doctor.sh` reporta cada componente como ✓ ou ❌. Se tudo ✓: QG PASS. Se algum ❌: identificar e tratar.
+Apos `install.py`, o `doctor.py` reporta cada componente como `[ OK ]` ou `[FAIL]`. Se tudo OK: QG PASS. Se algum FAIL: identificar e tratar.
 
 ### Erros comuns
 
 | Erro | Causa | Acao |
 |---|---|---|
-| Homebrew ausente | Mac novo | Mandar expert instalar: https://brew.sh, rodar de novo |
-| Modelo nao baixou | Conexao instavel | Tentar de novo (idempotente) |
-| `pip install` falhou | PEP 668 (Homebrew Python) | venv local resolve — verifica que `{SQUAD_DIR}/.venv/` foi criado |
-| `fc-match "Bebas Neue"` nao resolve | Cache antigo | `fc-cache -fv ~/Library/Fonts/` |
+| Homebrew ausente (Mac) | Mac novo | Instalar: https://brew.sh, rodar de novo |
+| winget ausente (Windows) | Windows sem App Installer | Instalar ffmpeg full (gyan.dev) e Python 3.13 (python.org) na mao, rodar de novo |
+| `pip install` falha no torch | Python 3.14 (sem wheel de torch) | **Automatico com winget:** o install instala o Python 3.13 sozinho. Sem winget: instalar Python 3.13 na mao e rodar de novo |
+| Modelo nao baixou / truncado | Conexao instavel | Rodar de novo — o download **retoma** de onde parou e valida o tamanho exato (idempotente) |
+| whisper-cli ausente (Windows) | Download do release falhou | Baixar `whisper-bin-x64.zip` de github.com/ggml-org/whisper.cpp/releases/download/v1.9.1/ e por `whisper-cli.exe` em `<squad>/bin/` |
+| Legenda cai pra Verdana (Mac) | Fonte nao instalada | `fc-cache -fv ~/Library/Fonts/` |
 
 ## Report
 

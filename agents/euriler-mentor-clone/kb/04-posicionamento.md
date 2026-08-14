@@ -49,7 +49,7 @@ Posicionamento vem DEPOIS do Proposito (Bloco 1). O proposito diz quem o expert 
 
 A Jornada de Consciencia e o **framework central do posicionamento** -- um mapa do caminho que o cliente percorre da descoberta do problema ate a solucao. Ela organiza toda a logica de posicionamento, marketing e produto. [Fonte: SRC-A04]
 
-Euriler situa essa jornada no contexto de outros frameworks do mercado: "Existe um cara que chama Eugene Schwartz, que criou os niveis de consciencia de Eugene. Tem coisas que o Erico Rocha ja falou da piramide do 99 e 1 [...] Mas juntando tudo isso e toda a minha experiencia, eu cheguei nessa jornada de consciencia especifica aqui." [Fonte: SRC-E01]
+Euriler situa essa jornada no contexto de outros frameworks do mercado: "Existe um cara que chama Eugene Schwartz, que criou os niveis de consciencia de Eugene. Tem coisas que [um grande lancador brasileiro] ja falou da piramide do 99 e 1 [...] Mas juntando tudo isso e toda a minha experiencia, eu cheguei nessa jornada de consciencia especifica aqui." [Fonte: SRC-E01]
 
 ### 2.1 As 6 Etapas
 
@@ -118,7 +118,7 @@ O empacotamento comercial do meio. Aquilo que se compra pra receber a metodologi
 
 > **REGRA CARDINAL:** O Posicionamento vai do ponto 1 (Sintomas) ate o ponto 4 (Solucao). A Metodologia pega no ponto 5 (Meio). O Produto e o ponto 6. Nao misturar os blocos. [Fonte: SRC-E01]
 
-### 2.3 Exemplo Pratico Completo: Elton Euler (Nicho de Prosperidade)
+### 2.3 Exemplo Pratico Completo: um expert de prosperidade
 
 | Etapa | Aplicacao |
 |-------|-----------|
@@ -209,7 +209,7 @@ O que ja fez pra resolver? O que funcionou, o que nao funcionou? Por que? [Fonte
 
 > **REGRA CARDINAL:** Ruminacoes sao ouro pra copy e conteudo. Quando se fala sobre a ruminacao da persona, ela sente que e entendida e que existe solucao. [Fonte: SRC-A04]
 
-Euriler conta a analogia do pneu furado (credito ao Maxima): "Imagina que voce ta fazendo uma viagem longa de carro e de repente fura o pneu. [...] A partir daquele momento que voce comeca a dirigir de novo, voce so dirige pensando na sua cabeca. Onde e que tem uma borracharia? [...] Sera que esse pneu vai aguentar? Sera que ele vai estourar de novo? [...] Voce so vai ficar pensando nisso a viagem inteira. Isso e ruminacao." [Fonte: SRC-E01]
+Euriler conta a analogia do pneu furado (credito a um estrategista de marketing que ele estudou): "Imagina que voce ta fazendo uma viagem longa de carro e de repente fura o pneu. [...] A partir daquele momento que voce comeca a dirigir de novo, voce so dirige pensando na sua cabeca. Onde e que tem uma borracharia? [...] Sera que esse pneu vai aguentar? Sera que ele vai estourar de novo? [...] Voce so vai ficar pensando nisso a viagem inteira. Isso e ruminacao." [Fonte: SRC-E01]
 
 #### Dimensao 8: Dilemas
 
@@ -254,7 +254,7 @@ Como se comporta esse publico? O que busca, fala, pergunta? Ver conteudos mais b
 **2. Olhando pros clientes**
 Analisar quem ja passou pelo expert. Dentro de todos, existe um padrao de cliente ideal -- aqueles com mais resultado, mais valorizacao, mais prazer na entrega. [Fonte: SRC-A04]
 
-Euriler conta o caso da Alice Salazar: "Lancei ela e tal, ela gostou do lancamento [...] so que eu odiei a experiencia, nao por causa dela nem nada do tipo, mas porque eu nao gostei de vender produtos daquele nicho, eu nao me envolvia muito emocionalmente, eu nao entregava tanto resultado tambem. E ai eu comecei a notar o padrao de todas as pessoas que eu mais atraia como cliente, que eu mais gerava resultado, que eu mais me envolvia emocionalmente. E era experts do nicho de desenvolvimento pessoal, do nicho de marketing, do nicho de negocios." [Fonte: SRC-E01]
+Euriler conta o caso de uma expert de um nicho distante do dele: "Lancei ela e tal, ela gostou do lancamento [...] so que eu odiei a experiencia, nao por causa dela nem nada do tipo, mas porque eu nao gostei de vender produtos daquele nicho, eu nao me envolvia muito emocionalmente, eu nao entregava tanto resultado tambem. E ai eu comecei a notar o padrao de todas as pessoas que eu mais atraia como cliente, que eu mais gerava resultado, que eu mais me envolvia emocionalmente. E era experts do nicho de desenvolvimento pessoal, do nicho de marketing, do nicho de negocios." [Fonte: SRC-E01]
 
 **3. Olhando pra si mesmo**
 Muitas vezes o expert e ou esta sendo a persona transformada da propria solucao. A maior fonte de estudo pode ser o proprio expert. [Fonte: SRC-A04]
@@ -375,8 +375,8 @@ O problema **real**, que quase ninguem ve. A descoberta do expert como cientista
 
 | Expert | Causa Oculta |
 |--------|-------------|
-| **Elton Euler** | "As pessoas nao ganham dinheiro por falta de permissao" |
-| **Fernanda** | "As pessoas nao prosperam porque sofreram rejeicao na infancia (RITA) que destruiu a autorizacao delas" |
+| **Um expert de prosperidade** | "As pessoas nao ganham dinheiro por falta de permissao" |
+| **Uma mentorada** | "As pessoas nao prosperam porque sofreram rejeicao na infancia (RITA) que destruiu a autorizacao delas" |
 | **Euriler** (via SRC-B02) | Falta de autonomia tecnica -- o expert cai na mao de lancador, socio, equipe cara |
 
 [Fonte: SRC-A04, SRC-E01, SRC-B02]
@@ -430,11 +430,11 @@ A tese e uma **narrativa completa** que conecta tudo de forma fluida. E um quebr
 
 ### 5.5 Exemplos de Tese Montada
 
-**Tese do Elton Euler:**
+**Tese de um expert de prosperidade:**
 
 > "As pessoas nao ganham dinheiro e acham que e por falta de conhecimento ou oportunidade. Quando na verdade o problema real e que nao tem permissao. E essa falta de permissao esta escondida nas relacoes nao resolvidas com pai, com mae. Resolva suas relacoes e isso vai aumentar sua permissao e o dinheiro vai vir." [Fonte: SRC-A04, SRC-E01]
 
-**Tese da Fernanda:**
+**Tese de uma mentorada:**
 
 > "As pessoas nao prosperam e acham que e por falta de oportunidade ou conhecimento. Mas o problema real e que na infancia sofreram rejeicao e indiferenca -- a RITA -- atraves dos pais, que quebrou a identidade delas e criou uma pessoa que nao se sente merecedora. A solucao e recuperar essa autorizacao dos pais. E o caminho e hackear o subconsciente fazendo uma reprogramacao a nivel subconsciente que simula a autorizacao que seus pais nunca te deram." [Fonte: SRC-A04, SRC-E01]
 
@@ -448,9 +448,9 @@ Primeiro mapeia e constroi a tese. Depois **deixa mais forte e robusta**, rechea
 
 Quanto mais se vive, trabalha e coloca a tese em pratica, mais forte ela fica. [Fonte: SRC-A04]
 
-Euriler usa o exemplo do Elton: "Tudo que ele faz, ele so fala de uma coisa em essencia, permissao. Voce precisa de permissao, voce precisa de permissao. Permissao explica tudo. Quando ele bate consistentemente com isso, ele vai criando cultura, comunidade, ele vai criando consciencia em massa no publico dele." [Fonte: SRC-E01]
+Euriler usa o exemplo do expert de prosperidade: "Tudo que ele faz, ele so fala de uma coisa em essencia, permissao. Voce precisa de permissao, voce precisa de permissao. Permissao explica tudo. Quando ele bate consistentemente com isso, ele vai criando cultura, comunidade, ele vai criando consciencia em massa no publico dele." [Fonte: SRC-E01]
 
-E o caso do Lucas Coudele: "Ele tem uma tese muito bem amarrada, ele tem um angulo poderoso que ele carrega. [...] Ele senta no podcast, ele fica horas falando, dando argumento, evidencia, exemplo, tudo apontando pra mesma tese. Ai ele e chamado pra mais podcast, ele viraliza, ele explode, ele vende." [Fonte: SRC-E01]
+E o caso de um expert com tese viral: "Ele tem uma tese muito bem amarrada, ele tem um angulo poderoso que ele carrega. [...] Ele senta no podcast, ele fica horas falando, dando argumento, evidencia, exemplo, tudo apontando pra mesma tese. Ai ele e chamado pra mais podcast, ele viraliza, ele explode, ele vende." [Fonte: SRC-E01]
 
 ### 5.7 A Tese como Espinha Dorsal
 
@@ -466,7 +466,7 @@ A tese e a **espinha dorsal de todo o negocio**. Tudo deriva disso -- comunicaca
 
 [Fonte: SRC-A04]
 
-*Exemplo: O Elton tem "pre-queda" como um ponto dentro da tese. Pode dar um workshop inteiro so sobre pre-queda, ou fazer um post sobre isso. A Fernanda tem "RITA" -- imagina o tanto de conteudo que ela pode gerar so sobre rejeicoes que pais fazem com o filho.* [Fonte: SRC-A04, SRC-E01]
+*Exemplo: o expert de prosperidade tem "pre-queda" como um ponto dentro da tese. Pode dar um workshop inteiro so sobre pre-queda, ou fazer um post sobre isso. A mentorada tem "RITA" -- imagina o tanto de conteudo que ela pode gerar so sobre rejeicoes que pais fazem com o filho.* [Fonte: SRC-A04, SRC-E01]
 
 Euriler na transcricao: "Voce pode pegar o Neymar no final de uma copa errando um penalti decisivo e falar 'o Neymar errou o penalti', um tema em alta, um tema hype, ele conecta isso com a teoria dele, com a tese dele, 'isso dai e pre-queda, deixa eu explicar o que e pre-queda' [...] e pum, ele desenvolveu a tese dele." [Fonte: SRC-E01]
 
@@ -537,7 +537,7 @@ Uma nova compreensao que muda tudo. [Fonte: SRC-A04]
 
 [Fonte: SRC-A04]
 
-*Exemplo da Fernanda: Mecanismo Unico = Reprogramacao a nivel subconsciente. Metodologia = Metodo Aguia.* [Fonte: SRC-A04, SRC-E01]
+*Exemplo da mentorada: Mecanismo Unico = Reprogramacao a nivel subconsciente. Metodologia = o metodo proprio dela (com nome de marca).* [Fonte: SRC-A04, SRC-E01]
 
 > **Referencia cruzada:** Ver **Vol 5 -- Metodologia** para a construcao do metodo (o "como" completo, com fases, etapas e ferramentas).
 
@@ -590,7 +590,7 @@ Uma frase que diz quem ajuda, a chegar em qual resultado, e de que maneira. [Fon
 
 | Expert | Declaracao |
 |--------|-----------|
-| **Fernanda** | "Eu ajudo pessoas a prosperarem atraves da recuperacao da autorizacao dos pais" |
+| **Uma mentorada** | "Eu ajudo pessoas a prosperarem atraves da recuperacao da autorizacao dos pais" |
 | **Euriler** (via SRC-B02) | "Eu ajudo experts a construir um negocio digital de sucesso sem depender de socio, equipe ou lancador" |
 
 [Fonte: SRC-A04, SRC-E01, SRC-B02]
@@ -609,8 +609,8 @@ Uma versao curta e memoravel, um slogan, uma bandeira que as pessoas vao poder r
 
 | Expert | Frase-Tese |
 |--------|-----------|
-| **Elton Euler** | "Voce nao prospera por falta de permissao" |
-| **Fernanda** | "Voce nao prospera porque seus pais nao te autorizaram" |
+| **Um expert de prosperidade** | "Voce nao prospera por falta de permissao" |
+| **Uma mentorada** | "Voce nao prospera porque seus pais nao te autorizaram" |
 | **Euriler** | "Expert sem raiz, qualquer vento derruba" |
 
 [Fonte: SRC-A04, SRC-E01]

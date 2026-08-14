@@ -1,6 +1,6 @@
 # Squad Carrossel Arcane
 
-> **Versao 1.0.0** — release 2026-05-21. Squad pra producao de carrosseis e posts estaticos pra Instagram. Identity Designer + Producer. Output em ~/Downloads/.
+> **Versao 1.2.0** — Squad pra producao de carrosseis e posts estaticos pra Instagram. Faz a ARTE do post (nao a copy), em duas camadas: arte em CSS + imagem gerada por IA. Output em ~/Downloads/.
 
 ---
 
@@ -12,26 +12,60 @@
 
 ---
 
+## O que faz / o que NAO faz
+
+**Faz:** transforma copy pronta em carrossel ou post estatico — PNGs prontos pra postar.
+
+**Nao faz:** nao escreve a copy nem o texto do post (isso tu traz pronto) e nao posta em rede social (entrega os arquivos).
+
+---
+
+## As duas camadas visuais
+
+Entender essa separacao e o que faz usar bem o squad:
+
+| Camada | O que e | Onde e feita | Custo | Agente |
+|--------|---------|--------------|-------|--------|
+| **1. Arte em CSS** | A moldura do post: fundo, tipografia, layout, avatar, caixa de texto | Aqui, no Claude Code (HTML+CSS → PNG via Chromium) | Nenhum — refaz a vontade | Identity Designer |
+| **2. Imagem de IA** | A ilustracao de conteudo do card: a cena que encena a tese e para o scroll | GPT Image 2 / Nano Banana Pro | Gasta credito/API | Image Director |
+
+Um carrossel forte normalmente usa as **duas** — a imagem de IA entra dentro da moldura CSS. Carrossel so-texto usa so a camada 1.
+
+---
+
+## Os dois padroes reutilizaveis
+
+Define uma vez, reusa em todo post:
+
+| Padrao | Camada | Agente | Onde fica |
+|--------|--------|--------|-----------|
+| **Template de arte** | 1 (CSS) | Identity Designer | `~/.carrossel-arcane/templates/` |
+| **Estilo de imagem** | 2 (IA) | Image Director | `~/.carrossel-arcane/image-styles/` |
+
+O estilo de imagem faz toda imagem gerada sair na tua linguagem visual em qualquer sessao nova — o conhecimento vive no template, nao na conversa. O squad ja vem com o estilo `euriler` embarcado como referencia.
+
+---
+
 ## Fluxo
 
 ### Primeiro uso
 
 1. Identity Designer pergunta tuas referencias visuais
-2. (Opcional) configura API de imagem AI
-3. Loop iterativo de criacao de templates (3-5 ideal, 1 minimo)
-4. Templates salvos em `~/.carrossel-arcane/templates/`
+2. Loop iterativo de criacao de templates de arte (3-5 ideal, 1 minimo)
+3. Templates salvos em `~/.carrossel-arcane/templates/`
 
-### Producao normal
+### Producao com imagens de IA
 
-1. Greeting mostra menu (carrossel / post estatico / add template / listar)
-2. Cola copy
-3. Squad infere numero de slides e confirma
-4. Aluno escolhe template (previews visuais)
-5. Producer monta cada slide:
-   - Pausa em placeholders de imagem AI (mostra preview)
-   - Pausa em placeholders manuais (pede imagem)
-   - Slides so texto rodam direto
-6. PNGs em `~/Downloads/{nome-do-carrossel}/`
+1. **Image Director** carrega/calibra teu estilo de imagem
+2. Gera as imagens dos cards (batch ou incremental) → `card{N}-FINAL.png`
+3. Cristaliza os aprendizados no teu estilo salvo
+4. **Producer** monta o carrossel apontando pra essa pasta
+
+### Producao so-texto
+
+1. Cola copy → Producer infere numero de slides e confirma
+2. Escolhe template de arte (previews visuais)
+3. PNGs em `~/Downloads/{nome-do-carrossel}/`
 
 ---
 
@@ -39,9 +73,10 @@
 
 | Agente | Funcao |
 |--------|--------|
-| **carrossel-chief** | Orchestrator. Detecta estado, mostra menu, roteia |
-| **identity-designer** | Cria templates visuais iterativamente |
-| **producer** | Produz carrossel/post a partir de copy + template |
+| **carrossel-chief** | Orchestrator. Apresenta o squad, detecta estado, roteia |
+| **identity-designer** | Cria/ajusta o template de arte em CSS (camada 1) |
+| **image-director** | Define o estilo de imagem e gera as imagens de IA dos cards (camada 2) |
+| **producer** | Junta copy + template + imagens e entrega os PNGs |
 
 ---
 
@@ -70,7 +105,7 @@ Apos primeiro uso, o squad cria estes diretorios na home do aluno:
 
 ```
 ~/.carrossel-arcane/
-├── templates/
+├── templates/                # CAMADA 1 — arte em CSS (Identity Designer)
 │   ├── capa-minimalista/
 │   │   ├── template.html
 │   │   ├── meta.yaml
@@ -80,15 +115,22 @@ Apos primeiro uso, o squad cria estes diretorios na home do aluno:
 │   │   └── ...
 │   └── cta-limpo/
 │       └── ...
+├── image-styles/             # CAMADA 2 — estilo das imagens de IA (Image Director)
+│   └── {meu-estilo}/
+│       ├── style.md          # regras, direcao visual, vibe
+│       ├── examples.md       # texto do card → prompt → resultado aprovado
+│       └── meta.yaml
 └── config/
-    └── api.yaml          # so se conectou API
+    └── api.yaml              # so se conectou API de imagem
 ```
 
 Output dos carrosseis vai pra:
 
 ```
 ~/Downloads/{nome-do-carrossel}/
-├── slide-01.png
+├── card-1-FINAL.png      # imagens de IA (Image Director)
+├── card-2-FINAL.png
+├── slide-01.png          # post montado (Producer)
 ├── slide-02.png
 └── slide-N.png
 ```
@@ -99,10 +141,12 @@ Output dos carrosseis vai pra:
 
 | Comando | Descricao |
 |---------|-----------|
-| `*start` | Detecta estado e roteia |
-| `*setup` | Forcar fluxo Identity Designer |
-| `*produce` | Forcar fluxo Producer |
-| `*list` | Listar templates salvos |
+| `*start` | Apresentacao + detecta estado + roteia |
+| `*setup` | Criar template de arte CSS (Identity Designer) |
+| `*images` | Gerar as imagens de IA dos cards (Image Director) |
+| `*style` | Criar/ajustar o estilo padrao de imagem (Image Director) |
+| `*produce` | Montar o post (Producer) |
+| `*list` | Listar templates de arte e estilos de imagem salvos |
 | `*help` | Comandos |
 | `*exit` | Sair |
 

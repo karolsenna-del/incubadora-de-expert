@@ -514,7 +514,7 @@ Skill v1 e boa. Skill v3 (passou centenas de execucoes reais, acumulou patches, 
 | Categoria | O que e | Quando usar | Exemplo |
 |-----------|---------|-------------|---------|
 | **Companion** | Parceiro cognitivo pessoal. Pensa junto, lembra, faz, roteia, protege | Toda sessao. "Onde estamos? O que importa hoje?" | Jarvis |
-| **Minds** | Pensam, julgam, consultam. Nao executam pipelines | "Essa estrategia faz sentido?" / "Avalia minha pagina" | Babruna (clone), GPMaster (sintetica), LP Master (consultor) |
+| **Minds** | Pensam, julgam, consultam. Nao executam pipelines | "Essa estrategia faz sentido?" / "Avalia minha pagina" | Clone de trafego (de uma gestora referencia), GPMaster (sintetica), LP Master (consultor) |
 | **Workers** | Executam tarefas operacionais. Especialista com cargo e funcoes | "Configura meu dominio" / "Sobe a campanha" | Tech Ops |
 | **Squads** | Executam processos complexos. Multi-agente com pipeline e gates | "Faz o lancamento pago inteiro" | Gestor Andromeda, Metodo Audience |
 
@@ -524,7 +524,7 @@ Skill v1 e boa. Skill v3 (passou centenas de execucoes reais, acumulou patches, 
 
 | Subtipo | Fonte | Exemplo |
 |---|---|---|
-| **Clone** | Replica capacidade funcional de pessoa real | Babruna (Barbara Bruna — trafego pago) |
+| **Clone** | Replica capacidade funcional de pessoa real | Clone de trafego pago (feito a partir de uma gestora que, na visao do Euriler, e a melhor do Brasil) |
 | **Mente Sintetica** | Fusao de conhecimento de varios experts | GPMaster (10 mestres de gestao fundidos) |
 | **Consultor** | Empacota dominio/metodologia | LP Master (especialista em lancamento pago) |
 
@@ -577,11 +577,11 @@ KB materializada (pacote instalavel)
 Mind/Worker/Squad que OPERA com aquele conhecimento
 ```
 
-**Exemplo concreto — Babruna:**
-- Material bruto: 122 reels de Barbara Bruna ensinando trafego pago
+**Exemplo concreto — clone de trafego pago:**
+- Material bruto: 122 reels de uma gestora de trafego referencia (na visao do Euriler, a melhor do Brasil) ensinando trafego pago
 - ETL via Clone Forge: 3 versoes progressivas (v1: 82 reels → v2: 122 reels, POC 77.3% → v3: modelagem cognitivo-motora)
 - 246 MIUs extraidas, enriquecidas com cross-validacao
-- Resultado: agente que nao "sabe sobre" trafego — opera com os padroes de decisao da Barbara Bruna
+- Resultado: agente que nao "sabe sobre" trafego — opera com os padroes de decisao dela
 - Prioriza como ela, julga como ela, decide como ela
 
 Nao e upload de consciencia — e **transferencia de capacidade funcional.** Replicavel pra qualquer expert com material gravado (aulas, reels, podcasts, mentorias).

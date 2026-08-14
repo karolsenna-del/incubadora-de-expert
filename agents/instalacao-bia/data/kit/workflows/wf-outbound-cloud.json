@@ -1,0 +1,212 @@
+{
+  "name": "WF-OUTBOUND-CLOUD — Envio Cloud API",
+  "description": null,
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        300
+      ],
+      "id": "b597aebe-17d1-44bd-be18-efb4343859d0"
+    },
+    {
+      "parameters": {
+        "jsCode": "// === CONFIG CLOUD API — Roteamento de Phone Number ID ===\n// Resolve phone_number_id + token por agent_id.\n// BM API 1 (WABA do expert) — numero (numero do expert).\n\nconst PHONE_NUMBER_MAP = {\n  'default': '{{PHONE_NUMBER_ID}}',\n  'bia': '{{PHONE_NUMBER_ID}}',\n  'bia-convite': '{{PHONE_NUMBER_ID}}',\n  'bia-recovery': '{{PHONE_NUMBER_ID}}',\n  'bia-boas-vindas': '{{PHONE_NUMBER_ID}}',\n};\n\n// Token System User da BM API 1\n// PLACEHOLDER — substituir com o token real da sua API Meta (pré-requisito)\n// Token POR NUMERO. 1 BM = 1 token (deixe so o primario abaixo).\n// Varios numeros de BMs DIFERENTES = adicione 1 linha por numero (pnid: token).\nconst TOKEN_BY_PHONE = {\n  '{{PHONE_NUMBER_ID}}': '{{SYSTEM_USER_TOKEN}}',\n  // '<phone_number_id_2>': '<system_user_token_2>',\n};\n\nconst input = $input.first().json;\nconst agent_id = input.agent_id || 'bia';\nconst phone_number_id = input.phone_number_id || PHONE_NUMBER_MAP[agent_id] || PHONE_NUMBER_MAP['default'];\nconst CLOUD_API_TOKEN = TOKEN_BY_PHONE[phone_number_id] || '{{SYSTEM_USER_TOKEN}}';\n\nreturn [{ json: {\n  ...input,\n  phone_number_id,\n  cloud_api_token: CLOUD_API_TOKEN,\n  graph_api_url: 'https://graph.facebook.com/v21.0/' + phone_number_id\n} }];\n",
+        "mode": "runOnceForAllItems"
+      },
+      "name": "Config Cloud API",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        300
+      ],
+      "id": "ab3501b5-6841-489c-a206-131552737f84"
+    },
+    {
+      "parameters": {
+        "jsCode": "// === CHECK ATENDIMENTO HUMANO — Cloud API Edition ===\n// Verifica is_human_takeover na tabela bia_whatsapp_contacts (Supabase).\n// Se humano atendendo, NAO envia resposta IA.\n// Se agent_id especifico (pipeline ativa), SEMPRE envia.\n\nconst https = require('https');\n\nconst SUPA_HOST = '{{SUPABASE_PROJECT_REF}}.supabase.co';\nconst SUPA_KEY = '{{SUPABASE_SERVICE_ROLE_KEY}}';\n\nfunction supaGet(path) {\n  return new Promise((resolve, reject) => {\n    const options = {\n      hostname: SUPA_HOST,\n      path: '/rest/v1/' + path,\n      method: 'GET',\n      headers: {\n        'apikey': SUPA_KEY,\n        'Authorization': 'Bearer ' + SUPA_KEY\n      },\n      timeout: 5000\n    };\n    const req = https.request(options, (res) => {\n      let data = '';\n      res.on('data', c => data += c);\n      res.on('end', () => {\n        try { resolve(JSON.parse(data)); }\n        catch { resolve([]); }\n      });\n    });\n    req.on('timeout', () => { req.destroy(); reject({ code: 'ETIMEDOUT' }); });\n    req.on('error', reject);\n    req.end();\n  });\n}\n\nconst input = $input.first().json;\nconst phone = input.phone;\n\n// Se agent_id especifico (pipeline ativa), sempre envia\nif (input.agent_id && input.agent_id !== 'bia') {\n  return [{ json: { ...input, _skip: false } }];\n}\n\n// Verifica flag humano no Supabase\ntry {\n  const contacts = await supaGet(\n    'bia_whatsapp_contacts?phone=eq.' + encodeURIComponent(phone) + '&select=is_human_takeover'\n  );\n  if (contacts.length > 0 && contacts[0].is_human_takeover) {\n    return [{ json: { _skip: true, reason: 'humano_atendendo', phone } }];\n  }\n} catch (e) {\n  // Se check falhar, segue normalmente (nao bloqueia pipeline)\n}\n\nreturn [{ json: { ...input, _skip: false } }];\n",
+        "mode": "runOnceForAllItems"
+      },
+      "name": "Check Atendimento Humano",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        300
+      ],
+      "id": "1700e506-abdd-4258-973c-2185c6eb5e9c"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "check-skip-humano",
+              "leftValue": "={{ $json._skip }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "name": "Humano Atendendo?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        660,
+        300
+      ],
+      "id": "3588b96b-50e7-4df0-b34e-3ab5921b49d7"
+    },
+    {
+      "parameters": {},
+      "name": "Skip (Humano Ativo)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        880,
+        160
+      ],
+      "id": "5c136ebd-6cef-4922-95cd-56e7e5ff064b"
+    },
+    {
+      "parameters": {
+        "jsCode": "// === CHUNKER — Portado do David (Separa Frases) ===\n// Algoritmo original preservado integralmente\n// Preserva: links, R$, parenteses, emails\n\nconst input = $input.first().json;\n// === HANDOFF_HUMANO Detection ===\nconst rawText = input.resposta_final || input.resposta || '';\nconst needsHandoff = rawText.includes('[HANDOFF_HUMANO]');\nconst cleanText = rawText.replace(/\\[HANDOFF_HUMANO\\]/g, '').trim();\n// Override resposta with cleaned version\nconst resposta = cleanText;\n\nif (!resposta.trim()) {\n  return [{ json: { needs_handoff: needsHandoff, ...input, chunks: [], total_chunks: 0 } }];\n}\n\n// Funcao para remover citacoes no formato 【...】\nfunction removeCitations(text) {\n  return text.replace(/【[^】]*】/g, '').trim();\n}\n\n// Funcao para identificar links e e-mails\nfunction isLinkOrEmail(text) {\n  const urlRegex = /^(https?:\\/\\/)?[\\w.-]+\\.[a-z]{2,}(\\/\\S*)?$/i;\n  const emailRegex = /\\S+@\\S+\\.\\S+/;\n  return urlRegex.test(text.trim()) || emailRegex.test(text.trim());\n}\n\n// Funcao para verificar se e um numero com pontuacao\nfunction isNumberWithPunctuation(text) {\n  return /^[\\d.,/-]+$/.test(text.trim());\n}\n\n// Funcao para verificar se a palavra termina com pontuacao de fim de frase\nfunction endsWithSentencePunctuation(word) {\n  return word.endsWith('.') || word.endsWith('?') || word.endsWith('!');\n}\n\n// Funcao principal de split — PORTADA INTEGRALMENTE do David\nfunction splitTextPreservingSpecialCases(text) {\n  const parts = [];\n  let currentPart = '';\n  let insideParentheses = false;\n  const words = text.split(/\\s+/);\n  \n  for (let i = 0; i < words.length; i++) {\n    const word = words[i];\n    \n    if (word.includes('(')) insideParentheses = true;\n    \n    if (isLinkOrEmail(word)) {\n      if (currentPart.trim()) {\n        parts.push(currentPart.trim());\n        currentPart = '';\n      }\n      parts.push(word);\n    } else if (isNumberWithPunctuation(word) || insideParentheses || (word === 'R$' && i < words.length - 1 && isNumberWithPunctuation(words[i + 1]))) {\n      currentPart += (currentPart ? ' ' : '') + word;\n    } else {\n      currentPart += (currentPart ? ' ' : '') + word;\n      if (endsWithSentencePunctuation(word) && !insideParentheses) {\n        parts.push(currentPart.trim());\n        currentPart = '';\n      }\n    }\n    \n    if (word.includes(')')) {\n      insideParentheses = false;\n      if (endsWithSentencePunctuation(word)) {\n        parts.push(currentPart.trim());\n        currentPart = '';\n      }\n    }\n  }\n  \n  if (currentPart.trim()) {\n    parts.push(currentPart.trim());\n  }\n  \n  return parts;\n}\n\n// Executa\nlet cleanedText = removeCitations(resposta);\n\n// STEP 1: Split by line breaks FIRST (cada \\n = mensagem separada)\nconst lineChunks = cleanedText.split(/\\n+/).map(l => l.trim()).filter(l => l.length > 0);\n\n// STEP 2: Apply sentence-based splitting WITHIN each line (ALWAYS)\nlet chunks = [];\nfor (const line of lineChunks) {\n  const subChunks = splitTextPreservingSpecialCases(line);\n  chunks.push(...subChunks);\n}\n\n// Limite de 15 chunks — agrupa excedentes no ultimo\nconst MAX_CHUNKS = 15;\nif (chunks.length > MAX_CHUNKS) {\n  const excess = chunks.slice(MAX_CHUNKS - 1).join(' ');\n  chunks = chunks.slice(0, MAX_CHUNKS - 1);\n  chunks.push(excess);\n}\n\n// Calcula delay por chunk baseado no tamanho\n// Delay fixo de 3.2s entre chunks (calibrado em producao)\nconst chunksWithDelay = chunks.map((text, i) => {\n  return { text, delay_ms: 3200, index: i + 1 };\n});\n\nreturn [{\n  json: {\n    subscriber_id: input.subscriber_id,\n    nome: input.nome,\n    handoff: input.handoff || false,\n    needs_handoff: needsHandoff,\n    chunks: chunksWithDelay,\n    total_chunks: chunksWithDelay.length,\n    llm_provider: input.llm_provider,\n    llm_model: input.llm_model,\n    tokens_in: input.tokens_in,\n    tokens_out: input.tokens_out\n  }\n}];",
+        "mode": "runOnceForAllItems"
+      },
+      "name": "Chunker (Separa Frases)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        440
+      ],
+      "id": "b8ac968b-9ad9-4485-afab-cd99a318f1f9"
+    },
+    {
+      "parameters": {
+        "jsCode": "// === SENDER CLOUD API v1.0 ===\n// Envia chunks via Graph API POST (Phone Number ID {{PHONE_NUMBER_ID}}).\n// Sync outbound → Chatwoot (CRM/monitor only).\n// Handoff: flag Supabase + Chatwoot open + SMS/WhatsApp Twilio.\n\nconst https = require('https');\n\nfunction httpRequest(method, hostname, path, headers, body) {\n  return new Promise((resolve, reject) => {\n    const bodyStr = body ? (typeof body === 'string' ? body : JSON.stringify(body)) : '';\n    const reqHeaders = { ...headers };\n    if (body) reqHeaders['Content-Length'] = Buffer.byteLength(bodyStr);\n    const options = { hostname, path, method, headers: reqHeaders, timeout: 15000, rejectUnauthorized: false };\n    const req = https.request(options, (res) => {\n      let data = '';\n      res.on('data', chunk => data += chunk);\n      res.on('end', () => {\n        try { resolve({ ok: res.statusCode >= 200 && res.statusCode < 300, status: res.statusCode, data: JSON.parse(data) }); }\n        catch { resolve({ ok: res.statusCode >= 200 && res.statusCode < 300, status: res.statusCode, data: { raw: data } }); }\n      });\n    });\n    req.on('timeout', () => { req.destroy(); reject({ code: 'ETIMEDOUT' }); });\n    req.on('error', (e) => resolve({ ok: false, status: 0, data: { error: e.message } }));\n    if (body) req.write(bodyStr);\n    req.end();\n  });\n}\n\nfunction httpPostForm(hostname, path, authHeader, formParams) {\n  return new Promise((resolve, reject) => {\n    const bodyStr = Object.entries(formParams)\n      .map(([k, v]) => encodeURIComponent(k) + '=' + encodeURIComponent(v))\n      .join('&');\n    const options = {\n      hostname, path, method: 'POST',\n      headers: {\n        'Authorization': authHeader,\n        'Content-Type': 'application/x-www-form-urlencoded',\n        'Content-Length': Buffer.byteLength(bodyStr)\n      }\n    };\n    const req = https.request(options, (res) => {\n      let data = '';\n      res.on('data', chunk => data += chunk);\n      res.on('end', () => {\n        try { resolve({ ok: res.statusCode >= 200 && res.statusCode < 300, data: JSON.parse(data) }); }\n        catch { resolve({ ok: res.statusCode >= 200 && res.statusCode < 300, data: { raw: data } }); }\n      });\n    });\n    req.on('error', (e) => resolve({ ok: false, data: { error: e.message } }));\n    req.write(bodyStr);\n    req.end();\n  });\n}\n\nconst input = $input.first().json;\nconst triggerData = (() => { try { return $('Execute Workflow Trigger').first().json; } catch { return input; } })();\nconst config = (() => { try { return $('Config Cloud API').first().json; } catch { return input; } })();\n\nconst chunks = input.chunks || [];\nconst phone = triggerData.phone || input.phone || triggerData.subscriber_id || input.subscriber_id;\nconst phone_number_id = config.phone_number_id;\nconst token = config.cloud_api_token;\nconst subscriber_id = triggerData.subscriber_id || input.subscriber_id || phone;\n\n// Chatwoot config\nconst CHATWOOT_HOST = 'chatwoot.{{SEU_DOMINIO}}';\nconst CHATWOOT_TOKEN = '{{CHATWOOT_TOKEN}}';\n// Resolve chatwoot_conversation_id — fallback: Supabase lookup\nlet chatwoot_conversation_id = triggerData.chatwoot_conversation_id || input.chatwoot_conversation_id;\nif (!chatwoot_conversation_id && phone) {\n  try {\n    const cwLookup = await httpRequest('GET', SUPA_HOST,\n      '/rest/v1/bia_whatsapp_contacts?phone=eq.' + phone + '&select=chatwoot_conversation_id',\n      { 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY });\n    if (cwLookup.ok && Array.isArray(cwLookup.data) && cwLookup.data.length > 0 && cwLookup.data[0].chatwoot_conversation_id) {\n      chatwoot_conversation_id = cwLookup.data[0].chatwoot_conversation_id;\n    }\n  } catch (e) { /* fallback failed, continue without sync */ }\n}\n\n// Supabase config\nconst SUPA_HOST = '{{SUPABASE_PROJECT_REF}}.supabase.co';\nconst SUPA_KEY = '{{SUPABASE_SERVICE_ROLE_KEY}}';\n\nif (chunks.length === 0) {\n  return [{ json: { status: 'no_chunks', phone, subscriber_id } }];\n}\n\nconst results = [];\n\n\n// Delay inicial 2.7s — simula Bia \"lendo\" antes de responder\nawait new Promise(r => setTimeout(r, 2700));\n\nfor (let i = 0; i < chunks.length; i++) {\n  const chunk = chunks[i];\n\n  // Delay humanizado entre chunks (3.2s)\n  if (i > 0) await new Promise(r => setTimeout(r, chunk.delay_ms));\n\n  // Envia via Cloud API (Graph API)\n  try {\n    const res = await httpRequest('POST', 'graph.facebook.com',\n      '/v21.0/' + phone_number_id + '/messages',\n      { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' },\n      { messaging_product: 'whatsapp', to: phone, type: 'text', text: { body: chunk.text } }\n    );\n\n    if (res.ok) {\n      results.push({ chunk: i + 1, status: 'sent', wamid: (res.data.messages || [])[0]?.id });\n    } else {\n      results.push({ chunk: i + 1, status: 'error', code: res.status, error: JSON.stringify(res.data).substring(0, 200) });\n    }\n  } catch (e) {\n    results.push({ chunk: i + 1, status: 'error', error: e.message });\n  }\n\n  // Sync outbound → Chatwoot (best effort)\n  if (chatwoot_conversation_id) {\n    try {\n      await httpRequest('POST', CHATWOOT_HOST,\n        '/api/v1/accounts/2/conversations/' + chatwoot_conversation_id + '/messages',\n        { 'api_access_token': CHATWOOT_TOKEN, 'Content-Type': 'application/json' },\n        { content: chunk.text + '\\u200B', message_type: 'outgoing', private: false, content_attributes: { external: true, synced_by: 'n8n' } }\n      );\n    } catch (e) { /* best effort */ }\n  }\n}\n\n// Handle handoff\nconst needs_handoff = input.needs_handoff || false;\nif (triggerData.handoff || needs_handoff) {\n  // 1. Flag Supabase: is_human_takeover = true\n  try {\n    await httpRequest('PATCH', SUPA_HOST,\n      '/rest/v1/bia_whatsapp_contacts?phone=eq.' + encodeURIComponent(phone),\n      {\n        'Content-Type': 'application/json',\n        'apikey': SUPA_KEY,\n        'Authorization': 'Bearer ' + SUPA_KEY,\n        'Prefer': 'return=minimal'\n      },\n      { is_human_takeover: true }\n    );\n    results.push({ action: 'supabase_handoff_flag', status: 'ok' });\n  } catch (e) {\n    results.push({ action: 'supabase_handoff_flag', status: 'error', error: e.message });\n  }\n\n  // 2. Chatwoot: abrir conversa (status open)\n  if (chatwoot_conversation_id) {\n    try {\n      await httpRequest('PATCH', CHATWOOT_HOST,\n        '/api/v1/accounts/2/conversations/' + chatwoot_conversation_id + '/toggle_status',\n        { 'api_access_token': CHATWOOT_TOKEN, 'Content-Type': 'application/json' },\n        { status: 'open' }\n      );\n      results.push({ action: 'chatwoot_open', status: 'ok' });\n    } catch (e) {\n      results.push({ action: 'chatwoot_open', status: 'error', error: e.message });\n    }\n  }\n\n  // 3. SMS + WhatsApp suporte via Twilio\n  const TWILIO_SID = '{{TWILIO_ACCOUNT_SID}}';\n  const TWILIO_TOKEN = '{{TWILIO_AUTH_TOKEN}}';\n  const TWILIO_AUTH = 'Basic ' + Buffer.from(TWILIO_SID + ':' + TWILIO_TOKEN).toString('base64');\n  const TWILIO_FROM = '{{TWILIO_FROM_NUMBER}}';\n  const SUPORTE_ALERTA = '+{{WHATSAPP_SUPORTE}}';\n\n  let mensagem = 'N/A';\n  try { mensagem = triggerData.mensagem || input.mensagem_original || 'N/A'; } catch (e) {}\n  const notifMsg = 'HANDOFF [Cloud API]: Lead ' + (triggerData.nome || input.nome || phone) + '\\nMsg: ' + mensagem;\n\n  try {\n    await Promise.allSettled([\n      httpPostForm('api.twilio.com', '/2010-04-01/Accounts/' + TWILIO_SID + '/Messages.json',\n        TWILIO_AUTH, { From: TWILIO_FROM, To: SUPORTE_ALERTA, Body: notifMsg }),\n      httpPostForm('api.twilio.com', '/2010-04-01/Accounts/' + TWILIO_SID + '/Messages.json',\n        TWILIO_AUTH, { From: 'whatsapp:' + TWILIO_FROM, To: 'whatsapp:' + SUPORTE_ALERTA, Body: notifMsg })\n    ]);\n    results.push({ action: 'twilio_notify', status: 'ok' });\n  } catch (e) {\n    results.push({ action: 'twilio_notify', status: 'error', error: e.message });\n  }\n\n  // 4. Registra handoff no Supabase (bia_handoffs)\n  try {\n    await httpRequest('POST', SUPA_HOST, '/rest/v1/bia_handoffs',\n      {\n        'Content-Type': 'application/json',\n        'apikey': SUPA_KEY,\n        'Authorization': 'Bearer ' + SUPA_KEY,\n        'Prefer': 'return=minimal'\n      },\n      {\n        subscriber_id: String(subscriber_id),\n        subscriber_name: triggerData.nome || input.nome || null,\n        phone: phone,\n        agent_id: triggerData.agent_id || input.agent_id || 'bia',\n        reason: needs_handoff ? 'handoff_ia' : 'handoff_trigger',\n        status: 'aberto'\n      }\n    );\n    results.push({ action: 'supabase_handoff_logged', status: 'ok' });\n  } catch (e) {\n    results.push({ action: 'supabase_handoff_logged', status: 'error', error: e.message });\n  }\n}\n\nconst sent_count = results.filter(r => r.status === 'sent').length;\n\nreturn [{ json: {\n  subscriber_id,\n  nome: triggerData.nome || input.nome,\n  phone,\n  total_chunks_sent: sent_count,\n  total_chunks: chunks.length,\n  handoff: triggerData.handoff || false,\n  needs_handoff,\n  delivery_method: 'cloud_api_direct',\n  results\n} }];\n",
+        "mode": "runOnceForAllItems"
+      },
+      "name": "Sender Cloud API",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        440
+      ],
+      "id": "962257a5-1be1-4145-ac58-12b71093a888"
+    },
+    {
+      "parameters": {
+        "jsCode": "// === LOG INTERACAO — Cloud API Edition (versao kit) ===\n// Log estruturado + daily stats em memoria. Sem dependencias externas.\n\nconst input = $input.first().json;\nconst sd = $getWorkflowStaticData('node');\n\nconst logEntry = {\n  ts: new Date().toISOString(),\n  phone: input.phone || input.subscriber_id,\n  nome: input.nome || 'Lead',\n  agent_id: input.agent_id || 'bia',\n  llm: input.llm_provider || 'unknown',\n  model: input.llm_model || 'unknown',\n  tok_in: input.tokens_in || 0,\n  tok_out: input.tokens_out || 0,\n  chunks_sent: input.total_chunks_sent || 0,\n  chunks_total: input.total_chunks || 0,\n  handoff: input.handoff || false,\n  needs_handoff: input.needs_handoff || false,\n  source: 'cloud_api',\n  status: 'ok'\n};\n\nif (input.handoff || input.needs_handoff) logEntry.status = 'handoff';\nelse if ((input.total_chunks || 0) > 0 && (input.total_chunks_sent || 0) === 0) logEntry.status = 'delivery_error';\nelse if ((input.total_chunks_sent || 0) > 0 && input.total_chunks_sent < input.total_chunks) logEntry.status = 'partial';\n\n// === Daily stats (em memoria, sem dependencia externa) ===\nconst today = logEntry.ts.split('T')[0];\nif (!sd.daily) sd.daily = {};\nif (!sd.daily[today]) sd.daily[today] = { total: 0, errors: 0, handoffs: 0, fallbacks: 0, tokens_in: 0, tokens_out: 0 };\nconst d = sd.daily[today];\nd.total++;\nd.tokens_in += logEntry.tok_in;\nd.tokens_out += logEntry.tok_out;\nif (logEntry.status === 'delivery_error' || logEntry.status === 'partial') d.errors++;\nif (logEntry.status === 'handoff') d.handoffs++;\nif (input.was_fallback) d.fallbacks++;\n\nconst cutoff = new Date(); cutoff.setDate(cutoff.getDate() - 30);\nconst cutoffStr = cutoff.toISOString().split('T')[0];\nfor (const day of Object.keys(sd.daily)) { if (day < cutoffStr) delete sd.daily[day]; }\n\nconsole.log('[WF-OUTBOUND-CLOUD]', JSON.stringify(logEntry));\n\nreturn [{ json: { ...input, log: logEntry, daily_stats: sd.daily[today] } }];",
+        "mode": "runOnceForAllItems"
+      },
+      "name": "Log Interacao",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1320,
+        440
+      ],
+      "id": "a047eb2d-6690-4f50-9bfa-81992aef1bed"
+    }
+  ],
+  "connections": {
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Config Cloud API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Config Cloud API": {
+      "main": [
+        [
+          {
+            "node": "Check Atendimento Humano",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Atendimento Humano": {
+      "main": [
+        [
+          {
+            "node": "Humano Atendendo?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Humano Atendendo?": {
+      "main": [
+        [
+          {
+            "node": "Skip (Humano Ativo)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Chunker (Separa Frases)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chunker (Separa Frases)": {
+      "main": [
+        [
+          {
+            "node": "Sender Cloud API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sender Cloud API": {
+      "main": [
+        [
+          {
+            "node": "Log Interacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  }
+}

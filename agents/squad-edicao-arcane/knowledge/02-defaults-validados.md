@@ -48,7 +48,7 @@ Parâmetros usados nos 4 scripts. Cada um tem um motivo — não mexer sem enten
 | Borda | `borderw=5 bordercolor=black` | Stroke grosso pra ler em qualquer fundo |
 | Cor linha 1 | `white` | Texto principal |
 | Cor linha 2 | `yellow` | Destaque (palavra-chave do final do chunk) |
-| `font=` (não `fontfile=`) | SEMPRE | Drawtext silenciosamente cai pra Verdana se usar `fontfile=` — sempre nome via fontconfig |
+| Resolução da fonte | OS-aware (v1.1.0) | Mac: `font='<nome>'` via fontconfig (validado). Windows/Linux: `fontfile='<.ttf embarcado>'` via freetype (com short-path no Windows pra fugir de acento/espaço). O `video-captions.py` decide sozinho — ver `_common.drawtext_font_opt` |
 
 ## Encoding (TODOS os scripts)
 

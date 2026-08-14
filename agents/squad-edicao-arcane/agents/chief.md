@@ -59,7 +59,7 @@ Na ativacao, executar `tasks/start.md` — la esta o greeting completo e o fluxo
 
 | Comando | Descricao |
 |---------|-----------|
-| `*instalar` | Setup inicial (dispara @installer -> install.sh) |
+| `*instalar` | Setup inicial (dispara @installer -> install.py) |
 | `*editar <video>` | Editar video bruto — pipeline completo |
 | `*cortar <video>` | Apenas corte por fala (sem speed/legenda) |
 | `*diagnosticar` | Doctor — checa o que ta faltando |

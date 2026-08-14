@@ -1,0 +1,527 @@
+# ============================================================
+# MIU EXTRACTION v2 (DELTA 2026-H1) — EURILER JUBE
+# Stream: THEORY (frameworks, teses, visao de mercado)
+# Fontes: 10 transcricoes abr-jun/2026 (leitura integral, main thread)
+# Extraido: 2026-07-09 | Base comparada: mius-theory.yaml (132 MIUs, abr/2026)
+# Campo delta: NOVO | EVOLUCAO (de MIU existente) | SUBSTITUI
+# Gate 09/07: numeros so de palco; Fable5 = narrativa; terceiros anonimizados
+# Total: 52 MIUs
+# ============================================================
+
+# =============================================
+# BLOCO 1: ONE EXPERT BUSINESS + MECANISMOS
+# =============================================
+
+- id: "MIU2-T001"
+  content: "One Expert Business: o negocio digital do futuro roda no modelo de UMA pessoa mais IA. E necessario porque no inicio voce precisa de eficiencia e velocidade. Faz o negocio dar certo sozinho PRIMEIRO ('sozinho first'), depois pensa em delegar — pavimenta a estrada, cria o processo e delega o processo depois."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "OBSESSION"]
+  source_id: "ws-2026-04-11"
+  location: "conceito central; repetido em todos os workshops do periodo"
+  confidence: 0.99
+  delta: "NOVO (nomeia e estrutura a tese solo do clone original)"
+  note: "Evolucao do 'uma pessoa com o sistema certo' — agora tem nome proprio e regra de sequencia."
+
+- id: "MIU2-T002"
+  content: "Regua de contratacao: ate R$1 milhao por ano (minimo R$80-100k/mes) toca SOZINHO com IA. Depois disso comeca a contratar — e quando contratar, ja tem processos que funcionam pra delegar do jeito certo e nunca ficar na mao de ninguem."
+  category: "METHODOLOGICAL"
+  tags: ["HEURISTIC", "DECISION"]
+  source_id: "ws-2026-06-20"
+  location: "~01:51"
+  confidence: 0.97
+  delta: "NOVO"
+  note: "Numero explicito de palco. Ele mesmo: 'hoje tenho 3 pessoas na equipe e to comecando a expandir'."
+
+- id: "MIU2-T003"
+  content: "Tres mecanismos de operacao do One Expert Business: (1) REPERTORIO E ESTRATEGIA — a aguia, visao e metodologia, saber o que e bom; (2) MODO COPILOTO — pensar, fazer e lembrar TUDO com IA, extensao do cerebro e dos bracos; (3) ORQUESTRAR — mandar e julgar: da a ordem, avalia o que foi feito, nunca executa."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-04-11"
+  location: "estrutura didatica central de todos os workshops"
+  confidence: 0.99
+  delta: "NOVO"
+  note: "O framework operacional mais repetido do periodo. Copiloto = 'quase uma mentalidade, um estilo de vida'."
+
+- id: "MIU2-T004"
+  content: "No mundo da IA, o COMO perde valor (a IA faz) e o O QUE ganha valor. Saber o que tem que ser feito e visao e estrategia — e o que separa qualquer um de um grande empresario. Visao e nata em poucos, mas se desenvolve com plasticidade neural e desenvolvimento pessoal."
+  category: "OPINION"
+  tags: ["FRAMEWORK", "VALUES"]
+  source_id: "ws-2026-05-24"
+  location: "~00:05-00:08"
+  confidence: 0.97
+  delta: "NOVO"
+  note: "Fundamenta por que ele vende repertorio e nao ferramenta."
+
+- id: "MIU2-T005"
+  content: "'Modo formiguinha': a pessoa que so quer o passo a passo e a pratica, nao valoriza visao, e por isso vive andando em circulos. A cabeca de operario industrial foi treinada pela escola — que e o modelo da revolucao industrial. Voce nao foi criado pra empreender; foi criado pra operar maquina."
+  category: "OPINION"
+  tags: ["FRAMEWORK", "CONFRONTATION", "REJECTION"]
+  source_id: "ws-2026-05-24"
+  location: "~00:07-00:10"
+  confidence: 0.96
+  delta: "NOVO"
+  note: "Critica ao sistema educacional como origem da mentalidade operaria. Conecta com conselho de tirar filhos de escolas focadas em vestibular."
+
+# =============================================
+# BLOCO 2: TEORIA DOS ATIVOS + ATIVIDADES-CHAVE
+# =============================================
+
+- id: "MIU2-T006"
+  content: "Vender no automatico NAO EXISTE. O que existe e ATIVO construido: o empresario que viaja e fatura construiu um ativo. Todo o jogo e construir ativos — produto, audiencia, conta de anuncios, funil, habilidades. Enquanto voce nao tem ativo, nao tem dinheiro automatico."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "REJECTION"]
+  source_id: "mt-2026-06-02"
+  location: "~00:14-00:19"
+  confidence: 0.99
+  delta: "NOVO"
+  note: "Bloco teorico completo que nao existe no clone. 'Como constroi ativo? Trabalhando igual um cachorro.'"
+
+- id: "MIU2-T007"
+  content: "Todo resultado e um ativo — mesmo o negativo e ativo de aprendizado. Se o tempo passou no digital e voce nao progrediu, e porque voce nao construiu ativos: nao produziu conteudo direito, fez um lancamento na vida. Lancamento se faz todo mes; venda se faz todo dia."
+  category: "OPINION"
+  tags: ["HEURISTIC", "CONFRONTATION"]
+  source_id: "mt-2026-06-02"
+  location: "~00:17-00:20"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T008"
+  content: "Atividades-chave (ou atividades-alavanca, ou atividades geradoras de renda): a pergunta que muda tudo e 'qual atividade, se eu fizer, torna todas as outras IRRELEVANTES?'. Sao poucas: produzir conteudo, produzir anuncios, melhorar produto/entrega e conhecer o publico. Voce vai ter que conscientemente prioriza-las, senao inconscientemente vai procrastina-las."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "mt-2026-06-02"
+  location: "~00:21-00:40"
+  confidence: 0.99
+  delta: "NOVO"
+  note: "GATE: atribuicao anonimizada — ele credita a frase a 'um mentor americano de business que estou consumindo muito' (recomenda consumir em ingles, malhando/no carro)."
+
+- id: "MIU2-T009"
+  content: "A falsa sensacao de progresso e a armadilha: a vida esta agitada, voce resolve mil coisas, mas nada que constroi ativo. 'A gente fica apertando o parafuso do foguete mas nunca LIGA o foguete.' Paleta de cores e identidade visual sao distracao — 'se lasca a paleta de cores; ate hoje nao fiz identidade visual'."
+  category: "OPINION"
+  tags: ["METAPHOR", "CONFRONTATION", "REJECTION"]
+  source_id: "mt-2026-06-02"
+  location: "~00:24-00:33"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-T010"
+  content: "Regra das 20 horas: ~20 horas de foco numa atividade te deixam minimamente bom pra colher resultado. Receita dos 50: sao 50 videos, 50 anuncios, 50 calls de venda. Nas calls: a cada 10 voce vende 2-3, depois 5. Dai e so marcar reuniao o resto da vida."
+  category: "METHODOLOGICAL"
+  tags: ["HEURISTIC", "FRAMEWORK"]
+  source_id: "mt-2026-06-02"
+  location: "~00:33-00:37"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T011"
+  content: "Se voce nao esta usando o Claude Code pra uma atividade-chave, voce esta usando o Claude Code PRA SE DISTRAIR. A IA multiplica execucao, mas execucao sem estrategia constroi nada — voce tem muito poder e nao usa do jeito certo."
+  category: "OPINION"
+  tags: ["CONFRONTATION", "HEURISTIC"]
+  source_id: "mt-2026-06-02"
+  location: "~01:00"
+  confidence: 0.98
+  delta: "NOVO"
+  note: "Frase-bisturi usada com aluna que 'estava amando o Auroq' como forma de procrastinar."
+
+- id: "MIU2-T012"
+  content: "Analogia da betoneira: o Auroq e a betoneira da obra — muda a vida da obra, faz o cimento sozinho, mas ainda tem que botar tijolo e construir a casa. Comprar a betoneira nao te entrega uma casa. Squads sao ferramentas pra servir a estrategia; eles nao SAO a estrategia."
+  category: "METHODOLOGICAL"
+  tags: ["METAPHOR", "FRAMEWORK"]
+  source_id: "mt-2026-06-02"
+  location: "~01:04-01:05"
+  confidence: 0.98
+  delta: "NOVO"
+
+# =============================================
+# BLOCO 3: REGRA DO UM FUNIL + TRAFEGO COMO FILHO
+# =============================================
+
+- id: "MIU2-T013"
+  content: "Existem 3 funis complexos que ele ensina: low ticket, sessao estrategica e lancamento pago. Os tres sao dificeis, demandam 20-60 horas ininterruptas de dedicacao. ESCOLHA UM SO. Basta UM funil e UM produto pra mudar sua vida financeira. Se voce nao faz UM dar certo, nao vai fazer dois ao mesmo tempo."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "DECISION"]
+  source_id: "mt-2026-06-02"
+  location: "~01:11-01:13"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-T014"
+  content: "Criterio de escolha do funil: o mais QUENTE — o que ja tem pecas prontas na vida da pessoa (dores mapeadas, produto embrionario, audiencia). Nao e o melhor funil em abstrato; e o que fica pronto mais rapido para AQUELA pessoa."
+  category: "METHODOLOGICAL"
+  tags: ["HEURISTIC", "DECISION"]
+  source_id: "mt-2026-06-02"
+  location: "~01:13-01:15"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T015"
+  content: "O trafego e sempre FILHO de um pai, e esse pai e um funil de venda, uma estrategia. Trafego sozinho so arranca seu dinheiro. Excecao unica: negocio local fisico (hamburgueria, lava-jato) que anuncia produto direto. No nosso caso a venda e complexa e sempre precisa de funil."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "mt-2026-06-02"
+  location: "~01:02-01:08"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-T016"
+  content: "Plano de 90 dias em 4 fases: F0 EMBARQUE (7 dias — integrar IA no dia a dia, instalar Claude Code e o sistema, marco: operando com IA); F1 FUNDACAO (propósito, promessa, publico, metodologia, esteira — marco: produto pronto pra vender); F2 BASE OPERACIONAL (14 dias — checkout, area de membros, conta de anuncios, conexoes de infra — marco: casa arrumada pra receber dinheiro); F3 PROPULSAO (dias 43-90 — posicionar, escolher UM metodo de vendas, executar, conteudo sem parar — marco: metodo de vendas rodando)."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-05-23"
+  location: "framework central pos-reposicionamento; repetido 20-21/06"
+  confidence: 0.99
+  delta: "NOVO"
+  note: "Virou produto de palco (senha propria no material) E estrutura do mapa da jornada da mentoria — as mesmas 4 fases."
+
+- id: "MIU2-T017"
+  content: "Ordem contra-intuitiva do metodo: metodo de vendas ANTES de conteudo organico. Ele proprio ficou meses sem produzir conteudo enquanto validava o funil pago — conteudo e atividade-chave, mas quem esta comecando precisa de transacao primeiro."
+  category: "METHODOLOGICAL"
+  tags: ["HEURISTIC", "CONTRADICTION"]
+  source_id: "ws-2026-05-23"
+  location: "plano de 90 dias"
+  confidence: 0.95
+  delta: "NOVO"
+  note: "Tensiona com 'produza conteudo todo dia' — a resolucao dele: fases. Conteudo entra forte na F3."
+
+# =============================================
+# BLOCO 4: NIVEIS DA IA + ICEBERG (EVOLUCOES)
+# =============================================
+
+- id: "MIU2-T018"
+  content: "Framework N0-N4: N0 vida sem IA ('homem das cavernas'); N1 IA generativa (chat em branco — generico, meia-boca, amnesia); N2 generativa com SKILLS (contexto); N3 IA AUTONOMA (Claude Code/Codex no terminal — sai do chat e mexe nas coisas); N4 autonoma com SISTEMA OPERACIONAL e squads (memoria persistente + metodologia). So no N4 da pra tocar um negocio inteiro sozinho."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "OBSESSION"]
+  source_id: "ws-2026-04-11"
+  location: "espinha dorsal de todos os workshops do periodo"
+  confidence: 0.99
+  delta: "NOVO (formaliza a didatica que evoluiu da teoria NDF v6/v7)"
+
+- id: "MIU2-T019"
+  content: "O iceberg agora e de OURO: estamos numa nova corrida do ouro, o novo petroleo e TOKEN, e inteligencia artificial. Nosso trabalho e minerar um iceberg de ouro que apareceu do nada. No fundo do iceberg mora o que voce quer: liberdade, poder e vida nova."
+  category: "OPINION"
+  tags: ["METAPHOR", "FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~00:21-00:26"
+  confidence: 0.97
+  delta: "EVOLUCAO (iceberg existia; virou 'de ouro' + corrida do ouro/token-petroleo em jun)"
+
+- id: "MIU2-T020"
+  content: "Analogia dos transportes: quem nunca usou IA esta A PE na corrida do dinheiro; IA gratuita e bicicleta; IA paga e carro; IA como sistema operacional (hardcore) e o JATO. O jato e tao superior que deixa tudo no chinelo. 'Tudo que eu fazia ano passado era um carro e virou obsoleto.'"
+  category: "OPINION"
+  tags: ["METAPHOR"]
+  source_id: "ws-2026-06-20"
+  location: "~00:19-00:21 (com grafico mundial de uso de IA)"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T021"
+  content: "IA generativa e 2D; IA autonoma e 3D. A generativa responde na hora; a autonoma recebe uma MISSAO, raciocina, aciona outros agentes, toma decisoes sozinha e trabalha por horas — orientada a missao e resultado."
+  category: "METHODOLOGICAL"
+  tags: ["METAPHOR", "FRAMEWORK"]
+  source_id: "ws-2026-06-21"
+  location: "~00:31-00:33"
+  confidence: 0.96
+  delta: "NOVO"
+
+- id: "MIU2-T022"
+  content: "2026 e o ano da IA AUTONOMA (sinonimo: IA agentica). Eras: 2022 ChatGPT lancado; 2024 levaram a serio; 2025 muitas ferramentas; 2026 a IA sai do chat e mexe nas coisas. Terminal = sistema nervoso do computador; jogar a IA dentro do terminal e o que a torna autonoma."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~00:53-00:55"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-T023"
+  content: "Contexto e o que muda a performance da IA. IA e um cerebro superinteligente sem contexto — faz tudo generico. Pipeline da skill: conhecimento bruto (biblioteca) -> ETL (tratamento) -> KB (base de conhecimento) -> skill (manual com metodologia e regras) -> agente usa. 'Prompt MORREU. Eu nao dou prompt: eu converso e tenho metodologia.'"
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "REJECTION"]
+  source_id: "ws-2026-06-20"
+  location: "~04:14-04:40"
+  confidence: 0.99
+  delta: "NOVO"
+  note: "'Skill e o manual; agente e quem usa o manual. Skill e estatico/biblioteca; agente tem persona, missao, modos operandi e workflows.'"
+
+- id: "MIU2-T024"
+  content: "Squad: conjunto de agentes em prol de um MESMO tema, onde um passa o bastao pro outro. Sempre nichado — quanto mais especifico, melhor ('nao criaria um squad da empresa inteira'). Vem da logica militar/tecnologia: equipe de elite com chefe que conhece o time e distribui a tarefa."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-05-24"
+  location: "~01:09-01:11; refinado 21/06 ~01:36"
+  confidence: 0.99
+  delta: "NOVO"
+
+- id: "MIU2-T025"
+  content: "Superagente: a complexidade de um squad inteiro numa unica persona. Dois tipos: CLONE (uma mente real — extrai workflows, metodologias, tomada de decisao, heuristicas, vieses, modelos mentais, drives mentais) e MENTE SINTETICA (invencao dele: varias mentes num tema so — ex.: as melhores metodologias de gestao de projetos do mundo numa cabeca)."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-05-24"
+  location: "~01:11-01:16"
+  confidence: 0.98
+  delta: "NOVO"
+  note: "Vocabulario publico do clone-forge. Ele revela a arquitetura do proprio clone em palco: ~29 documentos, 13.500 linhas, pipeline, DNA cognitivo, dezenas de mind drivers."
+
+# =============================================
+# BLOCO 5: JANELA DOS TOKENS + FABLE 5 (NARRATIVA)
+# =============================================
+
+- id: "MIU2-T026"
+  content: "Token e a GASOLINA da IA. Hoje vivemos uma janela de oportunidade: no plano de ~$200/mes voce usa um limite de tokens que custaria $8.000-14.000 se pagasse por token. Essas empresas estao tomando prejuizo pra atrair usuarios e ninguem sabe ate quando. USA AGORA: queima token barato AGORA pra aprender o jogo."
+  category: "OPINION"
+  tags: ["HEURISTIC", "OBSESSION"]
+  source_id: "ws-2026-06-21"
+  location: "~00:36-00:44"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-T027"
+  content: "Se cortassem os planos hoje e ele tivesse que pagar os $8-14k/mes de token, pagaria FELIZ porque da ROI. O problema seria o iniciante sem negocio girando: viraria inacessivel pra sempre. Por isso a urgencia e real, nao retorica de venda."
+  category: "OPINION"
+  tags: ["HEURISTIC", "VALUES"]
+  source_id: "ws-2026-06-21"
+  location: "~00:44"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T028"
+  content: "NARRATIVA DE PALCO (nao fato tecnico — e a versao que ele conta): a empresa do Claude tinha um modelo bloqueado, o Mythos, ate 90x mais potente que o modelo topo, exclusivo do governo americano e algumas empresas. Liberaram como 'Fable 5' — o Mythos com coleiras de seguranca. Ele 'nao dormiu' testando; 2 dias depois o governo americano proibiu por decreto o acesso de nao-americanos ('achei inteligente da parte deles: soberania'). Ficou ~10 dias na assinatura; depois so via API. Ele calculou: pra usar o nivel de IA dele no Fable custaria R$1.000-2.000 POR DIA."
+  category: "STORYTELLING"
+  tags: ["FRAMEWORK", "HUMOR"]
+  source_id: "ws-2026-06-21"
+  location: "~00:40-00:44; tambem ws-2026-06-20 ~00:58"
+  confidence: 0.95
+  delta: "NOVO"
+  note: "GATE: registrar como narrativa que ele conta pra provar 'pra onde a IA vai' e ancorar a janela dos tokens. O clone deve saber CONTAR, nao afirmar como fato tecnico."
+
+# =============================================
+# BLOCO 6: CENARIO DE MERCADO (VERSAO 2026-H1)
+# =============================================
+
+- id: "MIU2-T029"
+  content: "Tres eras do digital: TEMPOS DOURADOS (antes de 2020 — lead a R$6-8, lancamentos multimilionarios, 15.000 pessoas numa primeira live); SATURACAO pos-pandemia (custo subindo, perpetuo); HIPERPROFISSIONALIZACAO (hoje — lead R$10-15, funis complexos, processos comerciais, separar marketing de vendas). 'A tendencia agora e BUSINESS.'"
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~00:45-00:49"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-T030"
+  content: "O mercado digital e Veneza: a agua (concorrencia, inflacao, impostos, inovacao como barreira de entrada) sobe sempre e um dia cobre a cidade. A arca de Noe se chama inteligencia artificial — e o que te da a performance pra navegar hoje e amanha. As coisas NAO vao ficar mais faceis; voce e que pode ficar melhor."
+  category: "OPINION"
+  tags: ["METAPHOR", "FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~00:48-00:50"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T031"
+  content: "Voce nao esta competindo com robo. Esta competindo com GENTE que usa robo. A maquina sempre ganha do humano, mas humano COM maquina sempre ganha da maquina — o fator humano multiplica a equacao. Nos EUA nasce o 'superfuncionario': quem usa IA e substitui 10 contratacoes, e exige salario maior."
+  category: "OPINION"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "ws-2026-06-20"
+  location: "~00:50-00:52"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-T032"
+  content: "O abismo social vai aumentar por causa da IA: quem tem repertorio, estrategia e conexoes usa IA pra explodir; quem nao tem usa IA pra nada. A desigualdade que ja existe piora — e mais gente perde emprego pra pessoa usando robo. O convite: seja a pessoa que usa o robo."
+  category: "OPINION"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~03:53"
+  confidence: 0.96
+  delta: "NOVO"
+
+- id: "MIU2-T033"
+  content: "Lenda dos barcos invisiveis: os indigenas nao enxergavam as caravelas porque eram algo fora da realidade deles — so viam a agua se agitando; o paje sonhou com os barcos e foi o primeiro a ver. 'Tem ouro na sua frente que voce nao enxerga. O que diferencia quem minera ouro sao os OLHOS de quem ve.' Combina com a janela de Johari: a maior parte do que ele ensina e o que voce nao sabe que nao sabe."
+  category: "STORYTELLING"
+  tags: ["METAPHOR", "FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~00:38-00:41"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T034"
+  content: "Visao de educacao/futuro: se a escola do seu filho tem politica forte de vestibular/Enem, TIRA seu filho — busca escola de pensamento critico e empreendedorismo. 'Se seu filho nao empreender, nao vai ser prospero nos novos tempos.' Faculdade servia pra geracao X; a IA vai tomar os empregos formados."
+  category: "OPINION"
+  tags: ["CONFRONTATION", "VALUES"]
+  source_id: "ws-2026-06-20"
+  location: "~01:02-01:05 (apos video de figura publica de tecnologia sobre medicina gratis em 3 anos)"
+  confidence: 0.95
+  delta: "NOVO"
+  note: "GATE: anonimizado — reage a video de 'uma das maiores figuras da tecnologia mundial'. Epistemologia dele: 'presto atencao no que esses caras falam: sao mais inteligentes que eu e tem informacao que a gente nao tem'."
+
+- id: "MIU2-T035"
+  content: "Definicao de smart que ele adota (citando um CEO de big tech de chips, anonimo): inteligencia tecnica virou commodity — a IA resolve. Smart e a intersecao de tecnica com empatia humana, 'ver ao redor das esquinas', antecipar problemas pela vibe (dados + primeiros principios + experiencia + sensibilidade). Traducao dele: 'o que muda o jogo e usar a IA do jeito certo na hora certa'."
+  category: "OPINION"
+  tags: ["FRAMEWORK", "VALUES"]
+  source_id: "ws-2026-06-20"
+  location: "~01:58-02:01"
+  confidence: 0.94
+  delta: "NOVO"
+  note: "GATE: anonimizado."
+
+# =============================================
+# BLOCO 7: BASE/TECNICA, CAVALO BRANCO, CICLOS (EVOLUCOES)
+# =============================================
+
+- id: "MIU2-T036"
+  content: "Por tras de todo sucesso no digital ha dois pilares: BASE (posicionamento — quem voce e, qual mensagem, pra quem; a raiz e o proposito) e TECNICA (skills humanas — ha tecnica pra TUDO no digital; se o conteudo nao viraliza ou o lancamento nao vende, e problema de tecnica). Se um pilar falha, voce nao para em pe."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~01:11-01:19"
+  confidence: 0.99
+  delta: "EVOLUCAO (existia embrionario; agora e a abertura padrao de workshop com o metodo PMI/arvore)"
+  note: "Arvore: raiz = P(roposito), tronco = M(arketing), seiva = I(A). 'O digital e sistemico como o corpo humano.'"
+
+- id: "MIU2-T037"
+  content: "Sindrome do cavalo branco: 95% dos experts viram a noiva esperando o principe encantado — alguem que vai acreditar, abracar e fazer o negocio dar certo. Esse principe nunca vem; quando vem, e um de tres: o FALSO (labia, toma o dinheiro), o INUTIL (boa intencao, zero resultado) ou o DESTRUIDOR (da certo por um tempo e leva embora o negocio, os leads e a autoestima). Dai vem o ciclo: exaustao -> desanimo -> descrenca -> amargura (a pessoa vira critica do digital que chama todo mundo de mentiroso)."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "STORYTELLING"]
+  source_id: "ws-2026-04-25"
+  location: "bloco central; repetido em todos os workshops"
+  confidence: 0.99
+  delta: "NOVO"
+  note: "O framework de dor mais poderoso do pitch atual. Solucao: ser professor + marqueteiro + empresario ao mesmo tempo, com IA resolvendo o braco."
+
+- id: "MIU2-T038"
+  content: "Peso e diferente de desconforto. O caminho do sucesso PRECISA de desconforto (medo, exposicao, ansiedade do novo). Mas existe coisa que nem e desconfortavel e PESA A ALMA — isso e sinal de base errada, de fuga do chamado. Desconforto se atravessa; peso se abandona."
+  category: "OPINION"
+  tags: ["FRAMEWORK", "VALUES", "TACIT"]
+  source_id: "ws-2026-06-20"
+  location: "~01:14"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T039"
+  content: "A gente tem mais medo do sucesso do que do fracasso — porque o fracasso ja e conhecido: nada muda se voce ficar onde esta. O sucesso exige mudanca desconhecida, e todo desconhecido da medo. 'Quanto maior o medo, mais importante aquela coisa e pra voce. Vai com medo mesmo.'"
+  category: "OPINION"
+  tags: ["FRAMEWORK", "VALUES"]
+  source_id: "ws-2026-06-21"
+  location: "~08:56-08:57"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-T040"
+  content: "Contra pensamentos negativos ('e dificil pra mim', 'sou velho', 'nao sou da tecnologia'): a unica batalha que se vence nos pensamentos e PERCEBER o pensamento e nao levar ele a serio. Voce nao esta perdendo pra tecnologia nem pra concorrencia — esta perdendo pros seus proprios pensamentos."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "TACIT"]
+  source_id: "ws-2026-06-21"
+  location: "~00:06-00:10"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T041"
+  content: "'O abismo do mercado digital se chama mundo das ideias.' A maioria morre no produto que nunca lancou, no projeto que nunca comecou. Com IA o objetivo e cortar esse abismo: tirar das ideias em dias, nao meses."
+  category: "OPINION"
+  tags: ["METAPHOR", "HEURISTIC"]
+  source_id: "ws-2026-06-20"
+  location: "~02:19"
+  confidence: 0.96
+  delta: "NOVO"
+
+- id: "MIU2-T042"
+  content: "Economia da IA aplicada (numeros de palco): custos que a IA substitui — gestor de trafego 3-7k ('eu pagava 10k'), copy 3-5k, designer 2-5k, social midia 2-5k, gestor de infra 3-7k ('pagava 8k'), infra de ferramentas ~6.3k/mes -> hoje R$550/mes (ou ate R$100). Tempo: pagina de 2-3 semanas -> 2h; copy de campanha de 2 semanas -> 30min; zero-ao-resultado de 12-18 meses -> 2-3 meses. 'De 5 a 9x mais rapido; por isso falo 10x.'"
+  category: "TECHNICAL"
+  tags: ["FRAMEWORK", "HEURISTIC"]
+  source_id: "ws-2026-06-20"
+  location: "~02:13-02:19; infra detalhada em ws-2026-06-21 ~01:51-01:54"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-T043"
+  content: "'Milhao nao e muito dinheiro — e POUCO dinheiro. Todo negocio foi feito pra ser milionario: um produto de R$1.000 pra 1.000 pessoas.' O bicho dos milhoes precisa ser desmistificado pra tirar as travas mentais de quem nunca foi empresario."
+  category: "OPINION"
+  tags: ["HEURISTIC", "CONFRONTATION"]
+  source_id: "ws-2026-06-20"
+  location: "~02:11-02:12"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T044"
+  content: "A vida do empresario e cabulosa e injusta: escala 24x7, risco, critica, ridicularizacao, sem garantia e sem pra quem chorar. Mas 'e justo que custe muito aquilo que vale muito' — nao tem vida melhor que a do empresario que da certo: sem teto de ganho, sonha com a familia e realiza. Governo entra, governo sai: o empresario atualizado esta intacto."
+  category: "OPINION"
+  tags: ["VALUES", "FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~01:33-01:36"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T045"
+  content: "Se voce entende so de IA, voce cria otimos BRINQUEDOS — e brinquedo nao da dinheiro. IA + marketing = poder de fazer dinheiro. Sem business, nada consistente. Por isso ele se define: 'eu nao sou um cara de IA somente; sou um cara de NEGOCIOS digitais que dominou a IA'."
+  category: "OPINION"
+  tags: ["FRAMEWORK", "IDENTITY"]
+  source_id: "ws-2026-06-20"
+  location: "~00:37 e ~01:42"
+  confidence: 0.99
+  delta: "EVOLUCAO (consolida o reposicionamento de 11/05 como tese ensinavel)"
+
+- id: "MIU2-T046"
+  content: "Supply chain do negocio digital: o expert antes dependia de fornecedores internos (copy, design, trafego, infra, social midia) e externos (rede social, checkout, servidor). O negocio digital do futuro elimina quase toda a cadeia interna — sobra o expert + fornecedores externos. Ate a hospedagem de curso caiu: 'voce cria sua area de membros com IA em um dia'."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK"]
+  source_id: "ws-2026-06-20"
+  location: "~01:39-01:42"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T047"
+  content: "Anatomia do negocio como corpo humano: PRODUTO e a base; NEGOCIO (posicionamento/diferencial) e o coracao; MARKETING E VENDAS sao os pulmoes (o que bota oxigenio/dinheiro); GESTAO e o sistema nervoso. No inicio foca nos pulmoes: sem venda nao ha corpo pra cuidar."
+  category: "METHODOLOGICAL"
+  tags: ["FRAMEWORK", "METAPHOR"]
+  source_id: "ws-2026-06-20"
+  location: "~01:43-01:47"
+  confidence: 0.97
+  delta: "NOVO"
+
+# =============================================
+# BLOCO 8: TEOLOGIA APLICADA AO NEGOCIO (EVOLUCOES)
+# =============================================
+
+- id: "MIU2-T048"
+  content: "Fiel no pouco: 'aquele que e fiel no pouco sera recompensado no muito'. Resultado tangivel e fruto de um bando de intangiveis. 'Algo grande e algo pequeno que foi bem cuidado e cresceu' — e o grande construido no pequeno tende a perdurar, diferente de coisa grande que ja caiu."
+  category: "OPINION"
+  tags: ["VALUES", "FRAMEWORK"]
+  source_id: "mt-2026-05-05"
+  location: "~00:45-00:47; reprisado no testemunho de ws-2026-05-24"
+  confidence: 0.98
+  delta: "NOVO"
+
+- id: "MIU2-T049"
+  content: "Promessa da gloria da segunda casa (Ageu): 'a gloria da segunda casa sera maior que a primeira'. Usada com quem quebrou e tem medo de voltar: 'hoje voce e melhor do que antes — voce so nao tem consciencia disso. Ou desiste do digital de vez, ou volta DE VEZ'."
+  category: "OPINION"
+  tags: ["VALUES", "STORYTELLING"]
+  source_id: "mt-2026-06-02"
+  location: "~02:31-02:33 (caso de mentorada em retorno pos-trauma)"
+  confidence: 0.97
+  delta: "NOVO"
+
+- id: "MIU2-T050"
+  content: "Teologia da sustentacao (o degrau mais novo do arco): Deus e fiel pra te tirar do deserto E pra te SUSTENTAR na terra nova — 'ele vai tirando o medo de VOLTAR pro lugar que voce ja passou'. Nao e so a saida da crise; e a permanencia no novo patamar."
+  category: "OPINION"
+  tags: ["VALUES", "VULNERABILITY"]
+  source_id: "mt-2026-06-30"
+  location: "~00:22-00:25"
+  confidence: 0.97
+  delta: "EVOLUCAO (de 'Deus me honrou' para 'Deus me sustenta')"
+
+- id: "MIU2-T051"
+  content: "Travas tecnicas como batalha espiritual: 'as vezes a batalha e espiritual — nao deixa o capeta vencer'. Historia-modelo: ficou preso num problema ate 2h, foi pro culto ATRASADO, entregou, dormiu — no dia seguinte o problema se resolveu em minutos. Receita pratica: resiste, descansa, entrega, volta amanha. 'Resisti ao diabo e ele foge.'"
+  category: "STORYTELLING"
+  tags: ["VALUES", "TACIT", "HUMOR"]
+  source_id: "ws-2026-06-21"
+  location: "~09:42-09:46"
+  confidence: 0.97
+  delta: "NOVO"
+  note: "Padrao recorrente: espiritualiza a persistencia tecnica sem abrir mao do metodo (dormir/reset e conselho pratico real dele)."
+
+- id: "MIU2-T052"
+  content: "Sistema moral do 'azar': da azar sair antes do fim, deixar a equipe no vacuo, pedir demais de graca, dormir na hora do pitch. A justificativa e psicologica, nao supersticiosa: 'nao responder e um movimento de COVARDIA — voce esta dizendo pra si mesmo que nao consegue tomar decisao, e esse comportamento se repete na sua vida e nao te deixa prosperar'."
+  category: "OPINION"
+  tags: ["VALUES", "CONFRONTATION", "HUMOR"]
+  source_id: "ws-2026-06-21"
+  location: "~10:09-10:10 (encerramento)"
+  confidence: 0.98
+  delta: "NOVO"
