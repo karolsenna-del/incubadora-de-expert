@@ -64,4 +64,35 @@
 
 ---
 
+## 4. A virada de nível dos entregáveis — Google Forms/Voomp/Hotmart → experiência premium (13/08)
+
+**Fatos (palavras da Karol, 13/08):**
+- Até a semana anterior (primeira semana de agosto/2026), ela usava **diagnóstico no Google Forms** e **área de membros separada entre Voomp e Hotmart, sem identidade visual**
+- Nessa semana (semana de 10-16/08), ela **subiu de nível**: experiência premium desde o primeiro contato com o método
+- Sensação: orgulho e confiança na transformação que a IA vai ajudar a fazer na educação do Brasil — sempre quis ser **fomentadora da educação**, e hoje isso é mais possível, com qualidade mais alta
+
+**Status:** ✅ usado — Rota100k Semana 02, Domingo 16/08 17h Reels YAP ("O que eu aprendi essa semana") no `desafio-rota100k-semana02-plano.md`.
+
+---
+
+## 5. Crença: método novo sem entregável em IA não se sustenta (13/08)
+
+**Fatos/crença (palavras da Karol, 13/08):**
+- Fala isso desde 2025: **não acredita em método nascendo agora sem entregáveis feitos com IA**
+- Produto feito em 2024/2025, sem atualização, já fica **defasado** com o ritmo de evolução das IAs
+- Conhecimento pode permanecer válido, mas se a entrega/ferramenta não é atualizada, fica pra trás
+- Frase pronta pra copy (retirada do slot de domingo 17h a pedido da Karol em 13/08 — fica só aqui): **"Não acredito em método nascendo agora sem entregável feito com IA: quem não atualiza a entrega fica pra trás, mesmo com conhecimento bom."**
+
+**Tese ligada (palavras da Karol, 13/08):** prontidão não é um estado — é hábito de repetição. A ideia de "um dia eu chego lá e fico pronta de vez" é ilusão; o método dela nunca tá pronto, os produtos nunca estão perfeitos, porque tudo muda. Por isso começa hoje e melhora a cada reunião, cada venda, cada post, cada aluno — e a Venda Secreta existe pra colocar em movimento sem exposição amadora, sem precisar lançar pra entrar no jogo.
+
+**Roteiro já rascunhado pela própria Karol (17h Reels YAP — "O que eu aprendi essa semana"):**
+- Gancho: "Uma coisa que eu aprendi essa semana em [área]."
+- Preenchido: "Uma coisa que eu aprendi essa semana: prontidão não é um estado, é hábito de repetição."
+- Contexto: a ideia que a gente carrega é que existe um dia em que "chega lá" — fica pronta de vez e para de duvidar. Aprofundou esse tema na live Expert360 — vive isso constantemente, método nunca tá pronto, produtos nunca estão perfeitos, porque tudo muda (produtos de 2024/2025 já defasados com as IAs). Conhecimento permanece, mas entrega/ferramenta desatualizada fica pra trás.
+- Virada: por isso começa hoje e melhora a cada reunião, cada venda, cada post, cada aluno. A Venda Secreta serve pra colocar em movimento sem exposição amadora — entra pro jogo sem precisar lançar.
+
+**Status:** ⭐ guardado pra outro dia — item independente do #4 (não misturar: essa é a crença abstrata, #4 é o caso concreto). Karol pediu pra NÃO usar no slot de quinta 17h do desafio Rota100k Semana 02 agora.
+
+---
+
 *Regra de uso: roteiro só com fato confirmado pela Karol. Detalhe que não está aqui → perguntar, nunca preencher.*

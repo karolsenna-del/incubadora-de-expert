@@ -6,7 +6,7 @@ live_expert360:
   ultimo_processado_titulo: "Live Expert360 - 2026/08/05 13:58 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-05T23:05:45Z"  # createdTime do arquivo no Drive
   proximo_numero: 25
-  ultima_execucao: "2026-08-06"
+  ultima_execucao: "2026-08-13"
   # 06/08/2026: a partir desta gravação, o Meet passou a salvar em pasta nova
   # "Live Expert360 (recurring)" (id 1GGeLSKWDPiKT-GNic7GeKyDIU4A8asAv), dentro de uma
   # pasta raiz nova "Google Meet" (id 1mlJbXrY5rLxcobA9PTztLcX0NnMXr17L) — ambas criadas em
@@ -14,14 +14,33 @@ live_expert360:
   # então é comportamento novo do lado do Google/Workspace, não algo que ela mudou. A pasta
   # antiga "Meet Recordings" segue existindo e pode voltar a ser usada — busca do weekly-sync
   # agora precisa checar as duas.
+  # 13/08/2026: gravação de 12/08 encontrada (Live 25) mas NÃO upada — ver pendência abaixo.
+  # ultimo_processado_data/titulo NÃO avançaram de propósito, pra próxima rodada reencontrar
+  # e tentar de novo.
 
 mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/03 14:00 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-03T22:34:41Z"  # createdTime do arquivo no Drive
-  ultima_execucao: "2026-08-06"
+  ultima_execucao: "2026-08-13"
+  # 13/08/2026: nenhuma gravação nova encontrada em nenhuma das duas raízes do Drive — não
+  # houve Encontro Incubadora (ou não foi gravado) na segunda-feira 10/08.
 
-pendencias: []
-# Pendência "login_hotmart_falhou" de 2026-08-06 (manhã) resolvida na execução da tarde: Karol
-# corrigiu a senha no vault (KSFPate2026!) e logou manualmente com código 2FA por email quando
-# pedido. Gravação "Encontro Incubadora - 2026/08/03" upada com sucesso — ver missão #11 no
-# Mission Log. Sessão do perfil Playwright MCP ativa a partir daqui.
+pendencias:
+  - data: "2026-08-13"
+    tipo: "acesso_hotmart_bloqueado"
+    detalhe: >
+      Live 25 (gravação de 12/08, arquivo Drive id 1o0Y2s7S3Za_tg3ZJ-OBnAWqt056k1YbD, ~435MB,
+      pasta "Live Expert360 (recurring)") pronta pra subir — roteiro já identificado
+      (business/campanhas/lives-semanais/live-25-roteiro.md, título "Preciso estar 100% pronta
+      pra vender", nome final "25 - Preciso estar 100% pronta pra vender") — mas não foi
+      possível acessar a Hotmart nesta execução. Perfil Chrome do Playwright MCP
+      (mcp-chrome-for-testing-293c91b, com a sessão Hotmart ativa) estava em uso por outro
+      processo/janela aberta no momento da missão (erro "Browser is already in use") — não
+      derrubei o processo pra não arriscar interromper algo que a Karol pudesse estar fazendo
+      manualmente. Tentei fallback via Firefox (perfil novo, instalado nesta execução): login
+      com email+senha do vault foi aceito, mas a Hotmart exigiu "Human Verification" (tela de
+      captcha) por ser dispositivo/perfil não reconhecido — automação não consegue resolver
+      captcha sozinha. Próxima rodada: se o Chrome do Playwright MCP estiver livre (ninguém
+      usando), deve funcionar direto com a sessão salva; senão, precisa da Karol logar
+      manualmente uma vez no perfil Firefox pra passar da verificação e a sessão ficar salva
+      pras próximas.

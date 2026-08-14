@@ -1,0 +1,12 @@
+﻿Calculadora: {troque pelo seu resultado},
+,
+Campo (preencha os de cima),Valor
+Custos fixos mensais (R$),
+Sessões/unidades por mês,
+Quanto quer ganhar por mês (R$),
+Margem para impostos e imprevistos (%),
+,
+RESULTADOS (calculam sozinhos),
+Custo por unidade,=B4/B5
+Base por unidade (ganho + custo),=(B6/B5)+B10
+PREÇO SUGERIDO,=B11*(1+B7/100)
