@@ -22,7 +22,7 @@ BASE  = "https://graph.instagram.com/v21.0"
 OUT_DIR       = "business/instagram/metricas"
 COMENT_DIR    = f"{OUT_DIR}/comentarios"
 HIST_CSV      = f"{OUT_DIR}/historico-conta.csv"
-N_POSTS       = 25          # quantos posts recentes acompanhar
+JANELA_DIAS   = 10          # janela de dias pra acompanhar (era: últimos 25 posts, fixo)
 N_COMENTARIOS = 50          # limite de comentarios buscados por post
 BRT           = timezone(timedelta(hours=-3))
 
@@ -61,6 +61,36 @@ def insights_do_post(media_id, tipo):
     return resultado
 
 
+def media_da_conta(dias):
+    """Busca posts recentes paginando até passar da janela de `dias` (em vez de contagem fixa de posts).
+    Para assim que encontra um post mais velho que a janela, ou quando as páginas acabam
+    (com um teto de segurança pra não paginar sem fim se algo vier fora de ordem)."""
+    cutoff = datetime.now(timezone.utc) - timedelta(days=dias)
+    coletados = []
+    url = f"{BASE}/me/media"
+    params = {
+        "fields": "id,caption,media_type,media_product_type,timestamp,"
+                  "like_count,comments_count,permalink",
+        "limit": 50,
+        "access_token": TOKEN,
+    }
+    pagina = 0
+    while url and pagina < 10:  # teto de seguranca: 10 paginas (ate ~500 posts)
+        r = requests.get(url, params=params, timeout=60)
+        data = r.json()
+        if "error" in data:
+            raise RuntimeError(f"me/media: {data['error'].get('message')}")
+        for m in data.get("data", []):
+            ts = datetime.fromisoformat(m["timestamp"].replace("+0000", "+00:00"))
+            if ts < cutoff:
+                return coletados  # ja passou da janela, encerra sem seguir paginando
+            coletados.append(m)
+        url = (data.get("paging") or {}).get("next")
+        params = None  # a URL de "next" ja vem com querystring completa
+        pagina += 1
+    return coletados
+
+
 def comentarios_do_post(media_id):
     """Comentários (texto) de um post. Retorna lista de dicts."""
     try:
@@ -87,11 +117,8 @@ try:
 except RuntimeError as e:
     print(f"aviso: insights da conta indisponíveis ({e})")
 
-# ── 2. Posts recentes ─────────────────────────────────────────────────────────
-midia = get("me/media",
-            fields="id,caption,media_type,media_product_type,timestamp,"
-                   "like_count,comments_count,permalink",
-            limit=N_POSTS)["data"]
+# ── 2. Posts recentes (janela de dias, não contagem fixa) ─────────────────────
+midia = media_da_conta(JANELA_DIAS)
 
 posts = []
 comentarios_por_post = []
@@ -149,7 +176,7 @@ linhas = [
     f"- **Alcance (hoje):** {reach_dia}",
     f"- **Visitas ao perfil (hoje):** {visitas_dia}",
     "",
-    f"## Últimos {len(posts)} posts (métricas lifetime)",
+    f"## Posts dos últimos {JANELA_DIAS} dias — {len(posts)} peças (métricas lifetime)",
     "",
     "> Skip rate e tempo médio só existem pra Reels (métrica em desenvolvimento na API da Meta — pode vir vazia às vezes).",
     "",
