@@ -36,6 +36,8 @@
 
 ## Importante (proximo foco)
 
+- **Separar commit f97a23f (16/08)** — sessão concorrente do Desafio Rota100K Semana 03 commitou junto o Mission Log do Expert-Stories (que devia ficar isolado, a pedido da Karol). Ainda não foi pra o GitHub (`git push` pendente). Quando a sessão do Rota100K terminar e não tiver mais risco de conflito: usar `git rebase -i` (ou revert + recommit) pra separar em 2 commits — um só do Rota100K, outro só do Expert-Stories (`agents/expert-stories/data/expert-stories-missions.md`). Karol confirmou essa abordagem (16/08).
+
 - **Otimizar funil de mini treinamento (LP → WhatsApp)** (14/08, weekly review) — Karol reportou que o funil "nunca deu resultado". Nao vira projeto novo agora (cockpit sem vaga, 3 ativos) — fica registrado pra priorizar quando abrir espaco ou a dor aumentar. Precisa de diagnostico antes de mexer (LP fraca? trafego fraco? oferta errada?) — nao presumir causa.
 
 - ~~**6 posts da `business/instagram/fila/` — revisar copy e produzir carrossel**~~ — **CONCLUIDO.** Confirmado 28/07 (Karol) + git log: os 6 (`cansaco-palavra-do-ano`, `diploma-vs-vivencia`, `duas-pos-graduacoes`, `medo-parecer-amadora`, `nao-precisa-seguidores`, `sabe-demais-paralisando`) ja tinham sido publicados automaticamente pelo insta-scheduler entre 24-29/06. Item ficou desatualizado no backlog por engano.
