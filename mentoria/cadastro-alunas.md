@@ -13,6 +13,7 @@
 | [Ricardo Ramires](alunas/ricardo-ramires/_mentor/cadastro.md) | Incubadora — Dupla 1 ano | ✅ Ativa | 07/04/2026 | M0 | (43) 99938-9976 |
 | [Hélio de Oliveira Neto](alunas/helio-oliveira/_mentor/cadastro.md) | Incubadora de Expert | ✅ Ativa | (verificar) | M0 | (67) 99972-0041 |
 | [Rodrigo Teixeira](alunas/rodrigo-teixeira/_mentor/cadastro.md) | Incubadora de Expert | ⚠️ Verificar | (verificar boleto) | M0 | (11) 98449-7156 |
+| [Rosiani Bezerra](alunas/rosiani-bezerra/_mentor/cadastro.md) | Incubadora de Expert | ✅ Ativa | 21/10/2026 | Criação das Ferramentas (Roteiro 6m) | (11) 98722-0049 |
 
 > ⚠️ **Rodrigo Teixeira:** boleto parcelado com vencimento 18/07/2025 — verificar se pagamento foi confirmado na Hotmart.
 

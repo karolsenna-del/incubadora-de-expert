@@ -62,6 +62,7 @@
 |------|------|
 | 30/06/2026 | Análise prévia dos materiais — história real e Ikigai muito ricos. Pilar técnico excluído do método. Nicho ampliado. Propostas a validar na próxima sessão. |
 | 01/07/2026 | 20 arquivos aluna-facing (Biblioteca de IAs, Roteiro da Jornada, M0.1-M4.7) entregues na pasta dela no Drive (`Incubadora de Expert 2026`). Os 2 arquivos antigos já preenchidos (`M0.1) Minha história real.gdoc`, `M0.2) Meu Ikigai.gdoc`) foram mantidos em uso por decisão da Karol — não sobrescritos. Exercício "Lista de Fracassos" (M0.1 novo) não será usado com essa aluna. Roteiro da Jornada reconvertido de .docx pra .xlsx (status dos entregáveis precisa ser editável — dropdown Pendente/Em andamento/Concluído). |
+| 17/08/2026 | Pedido antigo da Karol (nunca executado — sem registro em tracker/decisão/commit) finalmente entregue: Biblioteca de Templates (10 ferramentas do Expert360º) entregue numa subpasta própria `Biblioteca de Templates` dentro da pasta dela no Drive (`Incubadora de Expert 2026`) — 7 moldes em .docx + 4 planilhas .xlsx (com fórmula calculando sozinha: diagnóstico, rastreador, planner, calculadora) + 4 Google Docs de texto explicativo + capa. Primeira tentativa soltou os 16 arquivos direto na raiz da pasta (bagunçado); corrigido no mesmo dia — subpasta criada e regra registrada no SOP (`entrega-materiais-mentoria-drive.md`). Milena tinha cobrado a Karol por não achar o material. |
 
 ---
 

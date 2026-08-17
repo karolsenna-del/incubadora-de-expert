@@ -108,6 +108,23 @@ Adicionar uma linha em `_mentor/cadastro.md`, seção "Notas de acompanhamento",
 
 ---
 
+## Entrega da Biblioteca de Templates (caso especial — não é aluna-facing numerado)
+
+Diferente dos entregáveis M0.1-M4.7 (que são individuais por módulo), a **Biblioteca de Templates** (10 ferramentas genéricas do Expert360º — checklist, diagnóstico, roteiro, scripts, planilhas, planner, worksheet, mapa, calculadora, template de conteúdo) é um pacote único que se repete igual pra toda aluna.
+
+**Fonte (repo, markdown):** `business/campanhas/expert360-curso/biblioteca-templates/` — 11 `.md` + 4 `.csv`, source of truth.
+
+**Master pronto pra entregar (Drive):** pasta `Biblioteca de Templates` dentro de `Materiais/` — 16 itens: 7 `.docx` + 4 `.xlsx` (com fórmula já calculando) + 4 Google Docs (texto explicativo de diagnóstico/rastreador/planner/calculadora) + capa. Sempre que o repo mudar, atualizar esse master primeiro.
+
+**Regra obrigatória: sempre entrega como SUBPASTA, nunca arquivo solto.**
+1. Criar uma pasta `Biblioteca de Templates` dentro da pasta da aluna no Drive (`create_file` com `mimeType` de pasta).
+2. Copiar (`copy_file`) os 16 itens do master pra dentro dessa subpasta nova — cada arquivo com `parentId` = id da subpasta.
+3. Nunca soltar os arquivos direto na raiz da pasta da aluna, misturados com M0.1-M4.7 — isso vira bagunça (aconteceu com a Milena em 17/08, corrigido no mesmo dia).
+
+**Incidente (17/08/2026):** primeira entrega pra Milena foi feita com os 16 arquivos soltos na raiz da pasta dela, misturados com os outros entregáveis. Corrigido no mesmo dia: criada a subpasta e todos os itens movidos pra dentro (via `update_file` trocando o `parentId`). Regra da subpasta obrigatória nasceu dessa correção.
+
+---
+
 ## Caso de referência
 
 Aplicado pela primeira vez em 01/07/2026 pra Milena Gehrke — 20 arquivos aluna-facing convertidos e entregues em `G:\Meu Drive\CLIENTES\Milena Gehrke\Incubadora de Expert 2026\`. Dois arquivos antigos (`M0.1) Minha história real.gdoc`, `M0.2) Meu Ikigai.gdoc`) já estavam preenchidos e a Karol optou por mantê-los em uso — não foram apagados, coexistem com os novos. O exercício "Lista de Fracassos" (M0.1 novo) não será usado com essa aluna.
