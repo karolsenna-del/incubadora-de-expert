@@ -41,8 +41,10 @@ const tdir = path.join(TEMPLATES_DIR, cfg.template);
 if (!fs.existsSync(tdir)) { console.error(`ERRO: template não encontrado: ${tdir}`); process.exit(1); }
 const metaRaw = fs.readFileSync(path.join(tdir, 'meta.yaml'), 'utf8');
 const meta = (k, def) => {
-  const m = metaRaw.match(new RegExp(`^\\s*${k}\\s*:\\s*"?([^"#\\n]+?)"?\\s*(#.*)?$`, 'm'));
-  return m ? m[1].trim() : def;
+  const m = metaRaw.match(new RegExp(`^\\s*${k}\\s*:\\s*"([^"]*)"|^\\s*${k}\\s*:\\s*([^\\n#]+)`, 'm'));
+  if (!m) return def;
+  const v = (m[1] !== undefined ? m[1] : m[2]).trim();
+  return v || def;
 };
 const id = {
   name:    meta('author_name', 'Autor'),
@@ -56,8 +58,12 @@ const id = {
   sizeImg: parseInt(meta('text_size_image', '44'), 10),
   sizeTxt: parseInt(meta('text_size_textonly', '48'), 10),
 };
-const avatarSrc = path.join(tdir, 'avatar.png');
-const hasAvatar = fs.existsSync(avatarSrc);
+const avatarCandidates = [
+  path.join(tdir, 'assets', 'avatar.png'),
+  path.join(tdir, 'avatar.png'),
+];
+const avatarSrc = avatarCandidates.find(p => fs.existsSync(p));
+const hasAvatar = !!avatarSrc;
 
 // ---------- build dir ----------
 const buildDir = path.join(os.tmpdir(), `carousel-build-${cfg.name}`);
@@ -154,6 +160,23 @@ function findChrome() {
   }
   candidates.push('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome');
   candidates.push('/Applications/Chromium.app/Contents/MacOS/Chromium');
+
+  // Windows
+  const pwWin = path.join(HOME, 'AppData/Local/ms-playwright');
+  if (fs.existsSync(pwWin)) {
+    for (const d of fs.readdirSync(pwWin)) {
+      const p = path.join(pwWin, d, 'chrome-win/chrome.exe');
+      if (fs.existsSync(p)) candidates.push(p);
+    }
+  }
+  candidates.push('C:/Program Files/Google/Chrome/Application/chrome.exe');
+  candidates.push('C:/Program Files (x86)/Google/Chrome/Application/chrome.exe');
+
+  // Linux
+  candidates.push('/usr/bin/google-chrome');
+  candidates.push('/usr/bin/chromium-browser');
+  candidates.push('/usr/bin/chromium');
+
   return candidates.find(c => fs.existsSync(c));
 }
 const CHROME = findChrome();

@@ -95,4 +95,33 @@
 
 ---
 
+## 6. O amaciante Ypê x L'Occitane (poder da indicação, 16/08)
+
+**Fatos (palavras da Karol, 16/08):**
+- A **vizinha** apresentou o lançamento de um amaciante da **Ypê em parceria com a L'Occitane** — todo mundo já associa o perfume e o renome que a L'Occitane tem
+- **À tarde**, ela foi ao mercado e **já comprou**
+- **À noite**, as amigas estavam na casa dela e ela **já mostrou** pra elas
+- **No dia seguinte**, uma das amigas **já tinha comprado**
+- **Nenhuma propaganda** entrou nesse caminho — só o boca a boca, reforçado pelo nome L'Occitane
+
+**Moral (palavras da Karol):** o poder da indicação continua muito forte mesmo em tempos de mundo digital — é a mesma estratégia que ela ensina pra fazer as primeiras vendas e validar o método.
+
+**Status:** ✅ usado — Rota100k Semana 03, Sábado 22/08 12h Reels YAP (substituiu o gancho genérico de "pouco recurso" por essa prova real).
+
+---
+
+## 7. O espumante que estragou (timing, 16/08)
+
+**Fatos (palavras da Karol, 16/08):**
+- Guardou um **espumante por 3 anos** esperando a ocasião certa
+- **Ontem** (15/08), bebeu com as amigas — **o gosto tava ruim**
+
+**Moral (palavras da Karol):** isso se chama timing. Dá pra ter muito conhecimento e ficar esperando o momento perfeito pra transformar ele em método — mas quando decidir, pode ser tarde demais: conhecimento fica defasado, perde a chance de ser pioneira, de virar referência.
+
+**Leitura da squad:** ilustração concreta da tese #5 (prontidão não é estado, é hábito de repetição) — mesma crença, agora com imagem vívida em vez de reflexão abstrata.
+
+**Status:** ✅ usado — Rota100k Semana 03, Domingo 23/08 07h Reels 7s (substituiu o fecho reflexivo da semana por essa imagem).
+
+---
+
 *Regra de uso: roteiro só com fato confirmado pela Karol. Detalhe que não está aqui → perguntar, nunca preencher.*
