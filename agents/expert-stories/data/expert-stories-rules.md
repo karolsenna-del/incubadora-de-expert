@@ -45,6 +45,38 @@ de momentos, não post único.
 **Aplica quando:** O dia (especialmente Day Off) tiver mais de um momento genuíno pra
 registrar.
 
+## [18/08/2026] — Story da live de quarta é conteúdo do tema, não convite — e usa os assets reais da pasta da live
+**Origem:** Karol apontou que os roteiros das lives semanais (Expert360º) ficam em
+`business/campanhas/lives-semanais/live-N-roteiro.md`, com pasta `assets/` contendo fotos/vídeos
+reais usados na narrativa da live (ex: `live-26-foto-blazer.jpg`, `live-26-foto-bebe.jpg`).
+Pediu pra sempre puxar Story dali — mas corrigiu que o Story de quarta NÃO é convite/divulgação
+("de divulgação eu já postei"), é conteúdo sobre o tema da live.
+**Regra:** Pro compromisso fixo de quarta (live Expert360º, 15h-16h), montar o Story a partir
+do roteiro (`lives-semanais/live-N-roteiro.md`) + assets reais (`lives-semanais/assets/`) —
+foto real + trecho literal da história/tese da live como legenda, ensinando o tema, não
+convidando pra assistir. SEM CTA de "vem assistir"/horário — a divulgação da live é feita à
+parte, por fora deste worker. Pode virar sequência de 2-3 Stories (foto 1 + citação, foto 2 +
+citação, fechamento em texto com a frase-âncora/tese) quando o roteiro tiver mais de um
+momento real reaproveitável — mesmo princípio do Day Off (mais de 1 Story no dia quando fizer
+sentido). Isso é 🔴 quando usa foto real da pasta assets, mesmo sendo texto+foto já existente
+(não gerada do zero) — não fabricar frase que não esteja no roteiro.
+**Aplica quando:** Todo compromisso de quarta-feira (live Expert360º) — checar
+`business/campanhas/lives-semanais/live-N-roteiro.md` e a pasta `assets/` correspondente antes
+de perguntar à Karol o que postar. Se a pasta de assets da semana não tiver foto/vídeo real,
+perguntar à Karol antes de usar template genérico de texto.
+
+**Objetivo do slot (alinhado 18/08, após a Karol perguntar "serve pra quê?"):** é o mesmo
+objetivo do formato **Você no Game** do catálogo — prova de autoridade via bastidor real
+("estar no jogo"), NÃO engajamento nem venda. Por isso:
+- Sempre contextualizar que é dela, de hoje, do que ela ensinou/contou na live (ex: "Hoje, na
+  live do Expert360º, contei essa história.") — nunca soltar citação/foto sem dizer de onde
+  vem
+- Fechar apontando o ensinamento/frase-âncora que ela entregou, como prova de profundidade —
+  não como CTA
+- Postar depois da live acontecer (15h-16h), não antes — mesmo que o conteúdo tenha sido
+  produzido com antecedência a partir do roteiro fechado, a intenção é "o que foi falado", não
+  teaser pré-live
+
 ## [14/08/2026] — Frase-ponte do Day Off é opcional, não obrigatória
 **Origem:** No Story da amiga da Polônia, a frase-ponte original ("O que parece simples pra
 você pode ser desafiador pra quem te acompanha.") não encaixou — a história era sobre presença

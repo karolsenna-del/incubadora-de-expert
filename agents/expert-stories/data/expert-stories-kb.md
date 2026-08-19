@@ -134,12 +134,20 @@ O Expert-Stories **não renderiza imagem por conta própria** — delega pro Squ
 Arcane (`@producer`, task `produce-static-post`), que já tem o motor de renderização (HTML →
 PNG via Chromium headless, ver `agents/squad-carrossel-arcane/knowledge/render-html-png.md`).
 
-**Template pronto (criado 13/08/2026):** `story-texto`
+**Template pronto (criado 13/08/2026, `template.html` recriado 18/08/2026):** `story-texto`
 (`~/.carrossel-arcane/templates/story-texto/`) — dimensão **1080x1920 (9:16)**, variante do
 template "Card Tweet Dark" já aprovado pela Karol (fundo preto `#000000`, texto branco
-`#FFFFFF`, laranja `#FF6B00` de destaque, fontes Lato/Inter/Bree Serif). Padding de 260px
-topo/rodapé pra respeitar a zona segura da UI nativa do Instagram (nome/hora no topo, campo
-de resposta embaixo).
+`#FFFFFF`, laranja `#FF6B00` de destaque). **Fonte: stack de sistema** (`-apple-system,
+BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif`) —
+não usa Lato/Inter/Bree Serif do carrossel/feed, por regra de 14/08 (ver
+`expert-stories-rules.md`). Padding de 260px topo/rodapé pra respeitar a zona segura da UI
+nativa do Instagram (nome/hora no topo, campo de resposta embaixo).
+
+**Nota (18/08):** o `template.html` do `story-texto` (e do `card-tweet-dark`, do qual deriva)
+estava ausente da pasta — só `meta.yaml` e `preview.png` sobreviveram, provavelmente na mesma
+perda acidental de 13/08 registrada no Mission Log do Gestor de Infra Arcane. Reconstruído a
+partir da spec do `meta.yaml` + regras de 14/08, e salvo de volta na pasta do template pra não
+se perder de novo.
 
 4 modifiers cobrem os formatos do catálogo:
 - `numerada` — lista numerada (Levantada de Mão, Isca Digital/Social Selling/Call)
