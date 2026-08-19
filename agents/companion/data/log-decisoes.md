@@ -10,6 +10,16 @@
 **Impacto:** [o que muda]
 -->
 
+## 19/08/2026 — Link bio do Instagram reestruturado: vitrine de 7 ofertas entra como 3ª posição, não como funil principal
+
+**Contexto:** No Squad Posicionamento Arcane, Karol propôs trocar o link bio atual (grupo de leads + diagnóstico gratuito + suporte "fale com a Karol") por um único link pra uma página com as 7 ofertas à venda, mais os links de grupo e diagnóstico. O @vitrine-strategist confrontou: página com 7 ofertas como primeiro link vira "cardápio" e gera paralisia de escolha — quebra a regra de ouro do link bio (primeiro link = funil principal único).
+
+**Decisão:** Nova estrutura do link bio do Instagram: 1) Diagnóstico gratuito (funil principal da mentoria) — continua primeiro; 2) Grupo de leads gratuito — segunda porta pra quem não tá pronto pra call; 3) Página vitrine com as 7 ofertas (a mesma vitrine já decidida em 11/08/2026 pra área de membros) — como opção de explorar pra quem já confia e quer escolher sozinho, não como porta de entrada; 4) "Fale com a Karol" sai do link bio — vai pra um destaque de Contato ou fica só em DM.
+
+**Racional:** Objetivo atual do Instagram é SALES/DM (vender a mentoria via diagnóstico), então o primeiro clique precisa levar a UM destino óbvio. Cardápio de 7 produtos não serve como porta de entrada — serve como camada extra pra quem já está mais próximo. Suporte não deveria competir por espaço no link bio comercial.
+
+**Impacto:** Karol vai construir a página vitrine (mesma vitrine da decisão de 11/08) e adicionar no Linktree na posição 3. "Fale com a Karol" precisa ser realocado pra um destaque de Contato.
+
 ## 14/08/2026 — Área de membros vira entrega da Individual (fase de escala) + manutenção recorrente pós-mentoria
 
 **Contexto:** Ao pensar em dar "cara de produto" ao Sprint do Método — que hoje entrega os 5Ps + roteiros de validação via pasta de Drive replicada por aluno + encontros por Zoom/Meet, sem nenhuma plataforma — Karol cogitou incluir uma área de membros clonada da própria (adaptada com a identidade visual do cliente, inicialmente só com a trilha Mentoria). Ao olhar o esforço real de construção da própria Área de Membros (dezenas de missões no tracker), ficou claro que replicar isso a cada venda do Sprint (R$3.000/5 semanas) não escala sem um "motor" replicável pronto pra spin-up rápido — que Karol decidiu não construir agora, preferindo deixar a própria estrutura amadurecer com uso e ajustes reais antes de generalizar pra outros clientes.
