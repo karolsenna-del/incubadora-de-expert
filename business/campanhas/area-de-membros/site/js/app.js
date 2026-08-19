@@ -41,12 +41,6 @@ async function checarSessao() {
   const sb = getSupabase();
   const { data: { session } } = await sb.auth.getSession();
   if (!session) {
-    // TEMP QA — bypass local pra visualizar o layout sem precisar de login real via e-mail.
-    // Remover antes da Fase 4 (integração real de acesso).
-    if (localStorage.getItem('preview_mode') === '1') {
-      document.getElementById('user-email').textContent = 'preview@incubadoradeexpert.com.br (modo preview)';
-      return { user: { email: 'preview@incubadoradeexpert.com.br' } };
-    }
     window.location.href = 'index.html';
     return null;
   }
