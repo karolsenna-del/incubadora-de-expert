@@ -36,7 +36,7 @@
 
 ## Importante (proximo foco)
 
-- **Separar commit f97a23f (16/08)** — sessão concorrente do Desafio Rota100K Semana 03 commitou junto o Mission Log do Expert-Stories (que devia ficar isolado, a pedido da Karol). Ainda não foi pra o GitHub (`git push` pendente). Quando a sessão do Rota100K terminar e não tiver mais risco de conflito: usar `git rebase -i` (ou revert + recommit) pra separar em 2 commits — um só do Rota100K, outro só do Expert-Stories (`agents/expert-stories/data/expert-stories-missions.md`). Karol confirmou essa abordagem (16/08).
+- ~~**Separar commit f97a23f (16/08)**~~ — **DESCARTADO (17/08).** Sessão concorrente do Desafio Rota100K Semana 03 commitou junto o Mission Log do Expert-Stories. Ao checar pra separar, o commit já tinha sido empurrado pro GitHub (+ um merge por cima) — separar exigiria `git rebase -i` de vários commits e force-push. Karol optou por deixar como está: nenhum dado foi perdido, só o histórico não fica 100% limpo.
 
 - **Otimizar funil de mini treinamento (LP → WhatsApp)** (14/08, weekly review) — Karol reportou que o funil "nunca deu resultado". Nao vira projeto novo agora (cockpit sem vaga, 3 ativos) — fica registrado pra priorizar quando abrir espaco ou a dor aumentar. Precisa de diagnostico antes de mexer (LP fraca? trafego fraco? oferta errada?) — nao presumir causa.
 
