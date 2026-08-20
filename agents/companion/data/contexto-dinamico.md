@@ -136,6 +136,18 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 19/08 — Reconciliacao de cockpit e contexto (Companion):**
+Cockpit e contexto-dinamico estavam parados desde 14/08 enquanto 5 dias de trabalho real aconteceram (reconstituido via git log + trackers, sem sessao formal do Companion nesse periodo):
+- **Área de Membros (Gestor de Infra Arcane, 17-18/08):** fechou pendencias tecnicas criticas. Removeu o bypass de auth `localStorage.preview_mode` (risco real pos-Fase 4 — qualquer um via conteudo pago sem login). Fechou RLS de leitura pro tipo `individual` em `encontros_mentoria` com backfill de Milena/Rosiani/Analia. Corrigiu bug real na constraint de `matriculas` (nao incluia `trilha_id` — a primeira venda real de Grupo/Individual ia perder uma trilha de acesso silenciosamente, achado e corrigido antes de qualquer venda bater nisso). Resolveu o gap de e-mail checkout×login com aviso adicionado nas 7 paginas de venda.
+- **Desafio Rota100k:** Semana 03 (35 posts) mapeada e revisada post a post com a Karol (16/08); analise da Aria fechou a Semana 02. Os 7 carrosseis da Semana 03 ja agendados via GitHub Actions (17/08, 20h BRT). Decisao 18/08: nao separar retroativamente o commit f97a23f (Mission Log do Expert-Stories misturado ao commit do Rota100k de 16/08) — ja tinha ido pro GitHub com merge por cima, custo do rebase interativo + force-push nao compensa (nenhum dado perdido, so historico nao 100% limpo).
+- **Expert360º:** tracker sem entrada de LOG desde 14/08 (5 dias, bate no limite de alerta de projeto parado). Cockpit ainda mostra "Karol gravando M3" mas sem confirmacao recente — **checar status real na proxima interacao com a Karol.**
+- **Mentoria:** Rosiani Bezerra (aluna ativa de turma anterior, so rastreada no Drive ate agora) ganhou pasta formal em `mentoria/alunas/` (17/08) — total de alunas sobe de 5 pra 6. Biblioteca de Templates do Expert360 entregue formalmente a Milena e Rosiani numa subpasta propria do Drive (corrigindo entrega bagunçada anterior da Milena) — virou SOP em `business/processos/entrega-materiais-mentoria-drive.md`.
+- **Live 26:** roteiro e deck fechados (17/08) — "Ninguém te enxerga como autoridade" (Triplice do Posicionamento, P5/M4), 18 slides HTML nativo com 2 fotos reais + video do proprio feed da Karol como exemplo ao vivo. CTA VITRINE confirmado. Data de gravacao ainda nao confirmada no que foi lido.
+- **Expert-Stories (worker) passou a rodar de verdade (19/08):** produziu Story de terca (Levantada de Mao, reforco Diagnostico Ferramentas) e sequencia de quarta (bastidor real da Live 26, com fotos + roteiro). Nova regra registrada: Story de quarta usa roteiro/assets reais da live semanal, sem CTA de convite (divulgacao e feita a parte) — objetivo e autoridade, estilo "Voce no Game", postado so depois da live acontecer. Recuperou um `template.html` do story-texto que estava perdido desde incidente de 13/08.
+- **Achado novo, fora do cockpit:** `business/campanhas/workshop-metodo-validado/documento-mestre.md` (criado 14/08) — "Workshop Método Validado", proposta e publico ja fechados no documento, mas nunca entrou no cockpit nem no inbox. Adicionado ao INBOX do cockpit pra Karol decidir o que fazer.
+
+Retomar com: `/expert-companion` — proxima conversa deve confirmar status do Expert360 (M3) e o que fazer com o Workshop Método Validado.
+
 **Sessao 14/08 — Weekly review (Companion):**
 - Weekly review feita (previa 13/08, 1 dia atrasada). Proximo review: 21/08.
 - **Expert360:** M2 concluido e publicado na Voomp (9/9 com legenda). Modulo de Orientacoes gravado, falta editar (legenda). Karol ja iniciou a gravacao do M3.
@@ -252,4 +264,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 14/08/2026 (Weekly review — M2 do Expert360 concluido, M3 em gravacao. Live 25 realizada. CRM Fase 5 formalizada como encerrada. Funil mini treinamento flagado sem resultado)*
+*Ultima atualizacao: 19/08/2026 (Reconciliacao — Área de Membros endurecida contra bugs/bypass reais, Rota100k Semana 03 agendada, Live 26 fechada, Expert-Stories rodando de verdade, Expert360 sem log ha 5 dias, Workshop Método Validado achado fora do cockpit)*

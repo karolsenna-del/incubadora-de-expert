@@ -4,7 +4,7 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 14/08/2026 (Companion — weekly review. Expert360 next action atualizada, CRM Fase 5 formalizada como encerrada nesse formato, Live 25 confirmada realizada)
+**Ultima atualizacao:** 19/08/2026 (Companion — reconciliacao de 5 dias sem atualizacao formal: Área de Membros endurecida contra bugs reais, Rota100k Semana 03 agendada, Expert360 sem log desde 14/08)
 **Proximo review:** 21/08/2026
 
 ---
@@ -13,9 +13,9 @@
 
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
-| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | M2 concluido e no ar. Modulo de Orientacoes gravado, falta editar (legenda). Karol gravando M3 agora. Depois: M1 aulas 00-01 + M4 | Karol | Producao ativa (M3 em gravacao — 14/08) — M0 (5/5) e M2 (9/9) publicados na Voomp com legenda; M1 (6/8) publicado, faltam 2 aulas sem legenda. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
-| 2 | Desafio Rota100k (Instagram) | Executar o Desafio Rota100k (guia externo, mentoria "Se Posicione" — Afonso) — pra crescimento/posicionamento no Instagram. **Duracao: ate dezembro/2026.** Semana 03 (17-23/08) sobe o volume de novo: 5 posts/dia (novo slot 07h Reels 7s sem fala + Reels 9h/12h/17h + Carrossel 20h), 35 posts na semana — **prioridade da semana, pool normal do squad de conteudo em pausa.** | Semana 03 inteira mapeada (16/08) e aguardando revisao da Karol antes de gravar — 1 pendencia sinalizada (quinta 12h sem caso real, ver Status no plano) | Karol + Squad Conteudo Arcane | Ativo — Semana 01 (05-09/08) e Semana 02 (10-16/08) concluidas. Semana 03 mapeada inteira, aguardando revisao. | [plano semana 03](../docs/producao-conteudo/karol/desafio-rota100k-semana03-plano.md) |
-| 3 | Área de Membros (Curso + Mentoria) | Construir plataforma própria (modelada na Arcane) unificando Expert360º e mentoria 1:1, com vitrine das 7 ofertas do ecossistema (cross-sell nativo) — substitui Voomp Play e o Drive solto da mentoria | **V1 do layout no ar:** https://membros.incubadoradeexpert.com.br (domínio próprio desde 13/08; login por magic link). Karol entrega aos poucos nas weeklys: banco de frases motivacionais (standby) + perguntas do popup de fim de módulo. Migração de conteúdo real (Expert360º + Mentoria) roda em paralelo | Karol + Gestor de Infra Arcane | Ativo — Fase 1 (layout) com V1 construído (11/08). Checkout unificado na Voomp em andamento (VIP e Sprint já criados) | [tracker](campanhas/area-de-membros/tracker.md) |
+| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | M2 concluido e no ar. Modulo de Orientacoes gravado, falta editar (legenda). Karol gravando M3 (ultima confirmacao 14/08 — **sem log de tracker ha 5 dias, confirmar status atual com a Karol**). Depois: M1 aulas 00-01 + M4 | Karol | Producao ativa (M3 em gravacao — ultima confirmacao 14/08) — M0 (5/5) e M2 (9/9) publicados na Voomp com legenda; M1 (6/8) publicado, faltam 2 aulas sem legenda. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
+| 2 | Desafio Rota100k (Instagram) | Executar o Desafio Rota100k (guia externo, mentoria "Se Posicione" — Afonso) — pra crescimento/posicionamento no Instagram. **Duracao: ate dezembro/2026.** Semana 03 (17-23/08) sobe o volume de novo: 5 posts/dia (novo slot 07h Reels 7s sem fala + Reels 9h/12h/17h + Carrossel 20h), 35 posts na semana — **prioridade da semana, pool normal do squad de conteudo em pausa.** | Semana 03 revisada post a post com a Karol (16/08); os 7 carrosseis ja agendados via GitHub Actions (17/08, 20h BRT). Falta: Reels/Stories da semana seguirem sendo produzidos/publicados ate 23/08 | Karol + Squad Conteudo Arcane | Ativo — Semana 01 (05-09/08) e Semana 02 (10-16/08) concluidas. Semana 03 mapeada, revisada e com carrosseis agendados. | [plano semana 03](../docs/producao-conteudo/karol/desafio-rota100k-semana03-plano.md) |
+| 3 | Área de Membros (Curso + Mentoria) | Construir plataforma própria (modelada na Arcane) unificando Expert360º e mentoria 1:1, com vitrine das 7 ofertas do ecossistema (cross-sell nativo) — substitui Voomp Play e o Drive solto da mentoria | Pendencias tecnicas criticas fechadas (17-18/08): bypass de auth removido, RLS de mentoria individual fechada, bug de constraint de matriculas corrigido, aviso de e-mail checkout×login publicado nas 7 paginas. Segue: Karol entrega aos poucos nas weeklys banco de frases motivacionais + perguntas do popup de NPS; migracao de conteudo real roda em paralelo | Karol + Gestor de Infra Arcane | Ativo — Fase 4 (checkout→acesso) fechada ponta a ponta e endurecida contra bypass/bugs reais (17-18/08). V1 no ar em dominio proprio (membros.incubadoradeexpert.com.br). | [tracker](campanhas/area-de-membros/tracker.md) |
 
 ---
 
@@ -31,7 +31,7 @@
 
 | Ideia | Origem | Notas |
 |-------|--------|-------|
-| | | |
+| Workshop Método Validado | Documento mestre criado 14/08 (`business/campanhas/workshop-metodo-validado/documento-mestre.md`) — proposta e público já fechados | Achado pelo Companion em 19/08 durante reconciliação — nunca entrou no cockpit/inbox. Nao processado: perguntar Karol se vira projeto novo (sem vaga — 3 ativos), fica congelado, ou e outra coisa (ex: parte de operação existente) |
 
 > Companion classifica no weekly review: sobe pra fila, congela, ou descarta.
 
@@ -49,9 +49,9 @@
 
 | Operacao | Responsavel | Status | Onde acompanhar |
 |----------|-------------|--------|-----------------|
-| Instagram / Conteudo | Karol | Ativa — Desafio Rota100k rodando (ver ATIVOS #2) | contexto-dinamico.md — prioridades do momento |
-| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 25 realizada (confirmada 14/08): "Preciso estar 100% pronta pra vender". Deu certo | business/campanhas/lives-semanais/ |
-| Mentoria (5 alunos) | Karol | Ativa — Milena e David avançaram (semana de 06/08). Fonte de verdade e o Drive de cada aluna, nao o cockpit (Karol atualiza direto la) | mentoria/alunas/ |
+| Instagram / Conteudo | Karol | Ativa — Desafio Rota100k rodando (ver ATIVOS #2). Expert-Stories (worker) passou a produzir Stories de verdade a partir de 19/08 (rotina fixa + override por evento) | contexto-dinamico.md — prioridades do momento |
+| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 26 com roteiro e deck fechados (17/08): "Ninguém te enxerga como autoridade", CTA VITRINE. Data de gravação a confirmar | business/campanhas/lives-semanais/ |
+| Mentoria (6 alunas) | Karol | Ativa — Rosiani Bezerra (aluna de turma anterior) ganhou pasta formal em mentoria/alunas/ (17/08), total subiu de 5 pra 6. Fonte de verdade e o Drive de cada aluna, nao o cockpit (Karol atualiza direto la) | mentoria/alunas/ |
 | Funil mini treinamento (LP → WhatsApp) | Karol | Ativa mas **sem resultado** (flagado 14/08 pela Karol: "nunca deu resultado", precisa ser otimizado) | business/campanhas/lp-minitreinamento/ |
 | CRM Reativação de Leads | Karol | Ativa — ferramenta (Supabase + planilha + sync n8n) construída e permanente. Karol reativando os leads pessoalmente, confirmado em andamento (14/08) — Clone Euriler orientou não enviar pro closer. Fase 5 do tracker formalizada como encerrada nesse formato | [tracker](campanhas/crm-reativacao-leads/tracker.md) |
 
