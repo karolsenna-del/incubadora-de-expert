@@ -1,0 +1,29 @@
+{
+  "process_name": "Conduz Agro",
+  "expert": "Milena Gehrke (aluna Incubadora de Expert)",
+  "publico": "Profissionais que atuam com regularizacao de imoveis rurais, credito rural e servicos relacionados ao agro (consultores, projetistas de credito, tecnicos, engenheiros, topografos)",
+  "transformacao": "De execucao tecnica a conducao estrategica — autoridade para conduzir o produtor rural com seguranca e nao depender apenas de preco",
+  "mode": "individual",
+  "current_phase": 4,
+  "phase_status": {
+    "phase_0": "done",
+    "phase_1": "done",
+    "phase_2": "done",
+    "phase_3": "done",
+    "phase_4": "in_review",
+    "phase_5": "pending",
+    "phase_6": "pending",
+    "phase_7": "pending",
+    "phase_8": "pending",
+    "phase_9": "pending"
+  },
+  "quality_gates_passed": ["QG-MC-001", "QG-MC-002", "QG-MC-003", "QG-MC-004"],
+  "prd_path": "mentoria/alunas/milena-gehrke/conduz-agro/prd.md",
+  "notes": "Metodologia (Fase 2) ja mapeada quase integralmente no Relatorio do Processo Autoral (Expert360 M2.1) da Milena no Google Drive. PRD da Fase 1 incorpora esse material — aguardando aprovacao explicita antes de avancar.",
+  "source_docs": {
+    "processo_autoral": "Google Doc 1TYeV0xkB-IlbBVNBHIOApi1Ake5_hA3J",
+    "portfolio_estrategico": "Google Sheet 1daP8QmB1TG681RgaID7AU0b7zCLIa5AO6ZaFWe8zwU4"
+  },
+  "started_at": "2026-08-20",
+  "paused_at": ""
+}
