@@ -6,9 +6,9 @@
 # sem período em paralelo (decisão da Karol).
 
 live_expert360:
-  ultimo_processado_titulo: "Live Expert360 - 2026/08/05 13:58 GMT-04:00 - Recording"
-  ultimo_processado_data: "2026-08-05T23:05:45Z"  # createdTime do arquivo no Drive
-  proximo_numero: 25
+  ultimo_processado_titulo: "Live Expert360 - 2026/08/19 13:58 GMT-04:00 - Recording"
+  ultimo_processado_data: "2026-08-19T19:10:58.082Z"  # createdTime do arquivo no Drive (Live 26)
+  proximo_numero: 27
   ultima_execucao: "2026-08-20"
   # 06/08/2026: a partir desta gravação, o Meet passou a salvar em pasta nova
   # "Live Expert360 (recurring)" (id 1GGeLSKWDPiKT-GNic7GeKyDIU4A8asAv), dentro de uma
@@ -23,6 +23,19 @@ live_expert360:
   # avançaram de propósito, pra próxima rodada reencontrar as duas e tentar de novo.
   # 20/08/2026 (2ª rodada, missão #16, mesmo dia): reconfirmado — nenhuma gravação adicional
   # além de Live 25 e 26, bloqueio de acesso ao Drive segue idêntico.
+  # 20/08/2026 (missão #17): Karol resolveu o compartilhamento (ver pendência resolvida abaixo).
+  # ACHADO CRÍTICO ao processar: Live 25 JÁ ESTAVA em encontros_mentoria (youtube_id 6gSyVQlWGR8,
+  # inserida em 14/08 pelo backfill histórico das 25 Lives — processo separado que nunca
+  # atualizou este state.yaml). Esse state ficou desatualizado desde 14/08, achando que Live 25
+  # ainda precisava ser processada. Cheguei a subir um vídeo NOVO duplicado pra Live 25
+  # (youtube_id uWdDRBNl2DY) antes de checar a tabela — DELETADO do YouTube assim que percebi
+  # (nenhuma linha duplicada chegou a entrar no Supabase). Live 26 (genuinamente nova, não
+  # coberta pelo backfill de 14/08) processada normalmente: youtube_id sdaaCr63UX8, título
+  # "26 - Ninguém te enxerga como autoridade e o problema não é sua competência", linha inserida
+  # em encontros_mentoria (id 96f8d9b8-e125-4054-b733-8c324ed6127b). LIÇÃO PRA PRÓXIMA EXECUÇÃO:
+  # antes de subir qualquer vídeo, checar se o título/data já existe em encontros_mentoria via
+  # SELECT (não confiar só neste state.yaml) — mission logs anteriores e backfills podem ter
+  # processado fora desta automação.
 
 mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/03 14:00 GMT-04:00 - Recording"
@@ -35,6 +48,8 @@ mentoria_em_grupo:
   # 20/08/2026: ainda nenhuma gravação nova em nenhuma das duas raízes (nem pasta clássica, nem
   # "Encontro Incubadora (recurring)" — essa subpasta continua sem existir na raiz nova).
   # 20/08/2026 (2ª rodada, missão #16, mesmo dia): reconfirmado, mesmo resultado.
+  # 20/08/2026 (missão #17): reconfirmado de novo, mesmo resultado — só o arquivo de 03/08 já
+  # processado nas duas raízes.
 
 encontros_individuais:
   ultimo_processado_titulo: null
@@ -45,35 +60,19 @@ encontros_individuais:
   # 20/08/2026: busca sem filtro de data repetida, nenhum arquivo com esse prefixo encontrado
   # em nenhuma das duas raízes.
   # 20/08/2026 (2ª rodada, missão #16, mesmo dia): reconfirmado, mesmo resultado.
+  # 20/08/2026 (missão #17): reconfirmado de novo — a raiz "Google Meet" tem 2 pastas de sessão
+  # 1:1 com a Milena ("Milena - 2026/08/19 15:02..." e "Milena 4/12 - 2026/08/05 15:01..."), mas
+  # NENHUMA segue o padrão de nome "Individual - {slug} - {AAAA-MM-DD}" esperado pelo protocolo —
+  # o Meet está nomeando pastas de 1:1 pelo nome da aluna + hora, não no padrão combinado no
+  # briefing da Área de Membros (decisão 11/08). Filtro da busca não pega essas pastas (não
+  # começam com "Individual -"). Não mexi em nada (fora do escopo desta missão) — registrar como
+  # achado pra Karol/Gestor de Infra Arcane decidirem: ajustar o filtro do weekly-sync pra
+  # reconhecer esse padrão novo, ou renomear as pastas manualmente. Sem isso, esta série nunca vai
+  # processar nada mesmo que a Karol grave 1:1s.
 
-pendencias:
-  - data: "2026-08-20"
-    tipo: "acesso_drive_bloqueado"
-    detalhe: >
-      Live 25 (gravação de 12/08, arquivo Drive id 1o0Y2s7S3Za_tg3ZJ-OBnAWqt056k1YbD, ~435MB) e
-      Live 26 (gravação de 19/08, arquivo Drive id 1V174s2fmOwWFZc3CnwwzG028nOUF4avB, ~338MB),
-      ambas na pasta "Live Expert360 (recurring)" (1GGeLSKWDPiKT-GNic7GeKyDIU4A8asAv, dentro da
-      raiz "Google Meet" 1mlJbXrY5rLxcobA9PTztLcX0NnMXr17L) — roteiros já identificados e prontos
-      (Live 25 = "25 - Preciso estar 100% pronta pra vender", Live 26 = "26 - Ninguém te enxerga
-      como autoridade e o problema não é sua competência") — mas nenhuma das duas pôde ser
-      baixada nesta execução. Achado: o bloqueio NÃO é mais o de Hotmart (missão #13) — agora é
-      acesso ao próprio Google Drive. O perfil Chrome do Playwright MCP (logado como
-      karol.franzini@gmail.com) recebeu 403 "Acesso negado" tanto na pasta "Live Expert360
-      (recurring)" quanto na raiz "Google Meet" inteira (antes essa conta tinha acesso — ver
-      missão #12). Tentei resolver programaticamente via `mcp__claude_ai_Google_Drive__share_file`
-      (conta karolsenna@incubadoradeexpert.com.br, dona dos arquivos, conectada ao MCP): retornou
-      "The caller does not have permission" — sugere que o Workspace da Incubadora passou a
-      bloquear compartilhamento externo (karol.franzini@gmail.com é conta pessoal fora do domínio
-      incubadoradeexpert.com.br), o que também explicaria por que a dona não consegue re-conceder
-      acesso nem via API. `get_file_permissions` confirmou: nem o arquivo nem a pasta raiz têm
-      qualquer permissão além de "owner" pra karolsenna. Não tentei logar como
-      karolsenna@incubadoradeexpert.com.br no Playwright (sem credencial dela no vault — REGRA-005
-      proíbe pedir/inventar). Resolução provável: Karol (ou admin do Workspace) precisa checar a
-      política de compartilhamento externo em admin.google.com, OU compartilhar manualmente os 2
-      arquivos com karol.franzini@gmail.com logada como karolsenna. `ultimo_processado_data` da
-      série Live NÃO avançou — próxima rodada reencontra as duas gravações e tenta de novo.
-      RECONFIRMADO em nova execução no mesmo dia (2026-08-20, missão #16): `get_file_permissions`
-      na pasta "Live Expert360 (recurring)" e na raiz "Google Meet" segue mostrando só "owner"
-      (karolsenna); `share_file` (karolsenna → karol.franzini@gmail.com, role reader) repetiu o
-      mesmo erro "The caller does not have permission". Bloqueio ainda não resolvido do lado do
-      Workspace — nada a fazer autonomamente além do que já foi tentado nas duas rodadas.
+pendencias: []
+# 20/08/2026 (missão #17): pendência "acesso_drive_bloqueado" (registrada nas missões #15/#16)
+# RESOLVIDA — Karol recompartilhou a pasta "Live Expert360 (recurring)" (confirmado: permissão
+# "anyone:writer" apareceu via get_file_permissions, e o perfil karol.franzini@gmail.com acessou
+# a pasta sem 403 no Playwright). Live 25 e Live 26 processadas nesta missão — ver notas na série
+# live_expert360 acima pro achado do duplicado da Live 25 (já existia via backfill de 14/08).
