@@ -9,7 +9,7 @@ live_expert360:
   ultimo_processado_titulo: "Live Expert360 - 2026/08/05 13:58 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-05T23:05:45Z"  # createdTime do arquivo no Drive
   proximo_numero: 25
-  ultima_execucao: "2026-08-13"
+  ultima_execucao: "2026-08-20"
   # 06/08/2026: a partir desta gravação, o Meet passou a salvar em pasta nova
   # "Live Expert360 (recurring)" (id 1GGeLSKWDPiKT-GNic7GeKyDIU4A8asAv), dentro de uma
   # pasta raiz nova "Google Meet" (id 1mlJbXrY5rLxcobA9PTztLcX0NnMXr17L) — ambas criadas em
@@ -18,41 +18,62 @@ live_expert360:
   # antiga "Meet Recordings" segue existindo e pode voltar a ser usada — busca do weekly-sync
   # agora precisa checar as duas.
   # 13/08/2026: gravação de 12/08 encontrada (Live 25) mas NÃO upada — ver pendência abaixo.
-  # ultimo_processado_data/titulo NÃO avançaram de propósito, pra próxima rodada reencontrar
-  # e tentar de novo.
+  # 20/08/2026: gravação de 19/08 também encontrada (Live 26) — MESMO bloqueio, agora mais
+  # grave (ver pendência "acesso_drive_bloqueado" abaixo). ultimo_processado_data/titulo NÃO
+  # avançaram de propósito, pra próxima rodada reencontrar as duas e tentar de novo.
+  # 20/08/2026 (2ª rodada, missão #16, mesmo dia): reconfirmado — nenhuma gravação adicional
+  # além de Live 25 e 26, bloqueio de acesso ao Drive segue idêntico.
 
 mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/03 14:00 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-03T22:34:41Z"  # createdTime do arquivo no Drive
-  ultima_execucao: "2026-08-13"
+  ultima_execucao: "2026-08-20"
   # 13/08/2026: nenhuma gravação nova encontrada em nenhuma das duas raízes do Drive — não
   # houve Encontro Incubadora (ou não foi gravado) na segunda-feira 10/08.
   # 14/08/2026: a partir da PRÓXIMA gravação nova, destino vira YouTube+encontros_mentoria (não
   # mais Hotmart) — ver weekly-sync.md.
+  # 20/08/2026: ainda nenhuma gravação nova em nenhuma das duas raízes (nem pasta clássica, nem
+  # "Encontro Incubadora (recurring)" — essa subpasta continua sem existir na raiz nova).
+  # 20/08/2026 (2ª rodada, missão #16, mesmo dia): reconfirmado, mesmo resultado.
 
 encontros_individuais:
   ultimo_processado_titulo: null
   ultimo_processado_data: null
-  ultima_execucao: null
+  ultima_execucao: "2026-08-20"
   # 14/08/2026: série nova (padrão "Individual - {slug} - {AAAA-MM-DD}") — ainda nenhuma gravação
   # com esse padrão foi processada. Primeira rodada busca sem filtro de data mínima (campo null).
+  # 20/08/2026: busca sem filtro de data repetida, nenhum arquivo com esse prefixo encontrado
+  # em nenhuma das duas raízes.
+  # 20/08/2026 (2ª rodada, missão #16, mesmo dia): reconfirmado, mesmo resultado.
 
 pendencias:
-  - data: "2026-08-13"
-    tipo: "acesso_hotmart_bloqueado"
+  - data: "2026-08-20"
+    tipo: "acesso_drive_bloqueado"
     detalhe: >
-      Live 25 (gravação de 12/08, arquivo Drive id 1o0Y2s7S3Za_tg3ZJ-OBnAWqt056k1YbD, ~435MB,
-      pasta "Live Expert360 (recurring)") pronta pra subir — roteiro já identificado
-      (business/campanhas/lives-semanais/live-25-roteiro.md, título "Preciso estar 100% pronta
-      pra vender", nome final "25 - Preciso estar 100% pronta pra vender") — mas não foi
-      possível acessar a Hotmart nesta execução. Perfil Chrome do Playwright MCP
-      (mcp-chrome-for-testing-293c91b, com a sessão Hotmart ativa) estava em uso por outro
-      processo/janela aberta no momento da missão (erro "Browser is already in use") — não
-      derrubei o processo pra não arriscar interromper algo que a Karol pudesse estar fazendo
-      manualmente. Tentei fallback via Firefox (perfil novo, instalado nesta execução): login
-      com email+senha do vault foi aceito, mas a Hotmart exigiu "Human Verification" (tela de
-      captcha) por ser dispositivo/perfil não reconhecido — automação não consegue resolver
-      captcha sozinha. Próxima rodada: se o Chrome do Playwright MCP estiver livre (ninguém
-      usando), deve funcionar direto com a sessão salva; senão, precisa da Karol logar
-      manualmente uma vez no perfil Firefox pra passar da verificação e a sessão ficar salva
-      pras próximas.
+      Live 25 (gravação de 12/08, arquivo Drive id 1o0Y2s7S3Za_tg3ZJ-OBnAWqt056k1YbD, ~435MB) e
+      Live 26 (gravação de 19/08, arquivo Drive id 1V174s2fmOwWFZc3CnwwzG028nOUF4avB, ~338MB),
+      ambas na pasta "Live Expert360 (recurring)" (1GGeLSKWDPiKT-GNic7GeKyDIU4A8asAv, dentro da
+      raiz "Google Meet" 1mlJbXrY5rLxcobA9PTztLcX0NnMXr17L) — roteiros já identificados e prontos
+      (Live 25 = "25 - Preciso estar 100% pronta pra vender", Live 26 = "26 - Ninguém te enxerga
+      como autoridade e o problema não é sua competência") — mas nenhuma das duas pôde ser
+      baixada nesta execução. Achado: o bloqueio NÃO é mais o de Hotmart (missão #13) — agora é
+      acesso ao próprio Google Drive. O perfil Chrome do Playwright MCP (logado como
+      karol.franzini@gmail.com) recebeu 403 "Acesso negado" tanto na pasta "Live Expert360
+      (recurring)" quanto na raiz "Google Meet" inteira (antes essa conta tinha acesso — ver
+      missão #12). Tentei resolver programaticamente via `mcp__claude_ai_Google_Drive__share_file`
+      (conta karolsenna@incubadoradeexpert.com.br, dona dos arquivos, conectada ao MCP): retornou
+      "The caller does not have permission" — sugere que o Workspace da Incubadora passou a
+      bloquear compartilhamento externo (karol.franzini@gmail.com é conta pessoal fora do domínio
+      incubadoradeexpert.com.br), o que também explicaria por que a dona não consegue re-conceder
+      acesso nem via API. `get_file_permissions` confirmou: nem o arquivo nem a pasta raiz têm
+      qualquer permissão além de "owner" pra karolsenna. Não tentei logar como
+      karolsenna@incubadoradeexpert.com.br no Playwright (sem credencial dela no vault — REGRA-005
+      proíbe pedir/inventar). Resolução provável: Karol (ou admin do Workspace) precisa checar a
+      política de compartilhamento externo em admin.google.com, OU compartilhar manualmente os 2
+      arquivos com karol.franzini@gmail.com logada como karolsenna. `ultimo_processado_data` da
+      série Live NÃO avançou — próxima rodada reencontra as duas gravações e tenta de novo.
+      RECONFIRMADO em nova execução no mesmo dia (2026-08-20, missão #16): `get_file_permissions`
+      na pasta "Live Expert360 (recurring)" e na raiz "Google Meet" segue mostrando só "owner"
+      (karolsenna); `share_file` (karolsenna → karol.franzini@gmail.com, role reader) repetiu o
+      mesmo erro "The caller does not have permission". Bloqueio ainda não resolvido do lado do
+      Workspace — nada a fazer autonomamente além do que já foi tentado nas duas rodadas.
