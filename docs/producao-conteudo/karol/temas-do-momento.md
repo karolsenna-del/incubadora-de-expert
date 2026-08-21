@@ -210,3 +210,18 @@ VISÃO ÚNICA: você tem (A ciência deu nome ao que minha aluna vive todo dia: 
 JANELA: 3-4 dias
 LINK: https://www.noticias.lide.com.br/noticias-lide/opiniao/neurociencia-explica-por-que-executivos-invisiveis-digitalmente-perdem-negocios-
 RECOMENDAÇÃO: ENTRAR
+
+---
+
+## Radar diário — 21/08/2026
+
+*(trazido diretamente pela Karol, com pesquisa interna já embutida e caso pessoal como aluna lançada. Pesquisa externa dos fatos verificada pelo Sage no mesmo dia — ver fontes abaixo. GUARDADO, não virou teoria/roteiro ainda — aguardando encaixe no Desafio Rota100k Semana 04 (a partir de domingo 30/08).)*
+
+🔥 TEMA DO MOMENTO: "TRF1 derruba regra que autorizava dentista a fazer harmonização facial"
+STATUS: quentíssimo — julgamento encerrado 19/08/2026 (3x2), notícia com 2 dias de vida nesta data
+DNA: bate (Diploma é o que você estudou, vivência é o que te tornou autoridade / tema-tese "credencial não basta" — carol-diniz, mari-vabo — só que aqui invertido: mostra o RISCO de depender só da credencial/regulamentação de terceiros)
+VISÃO ÚNICA: você tem — CASO PRÓPRIO CONFIRMADO: Karol lançou uma dentista que atua com HOF; ela segue na área hoje e "deve estar aterrorizada com a decisão" (anonimizar na hora de roteirizar). Ângulo: quem constrói carreira só em cima de credencial regulamentada tem o teto definido por gente que nunca vai te representar (CFM/SBD entraram contra o CFO e, por ora, ganharam) — método e autoridade próprios ninguém derruba em 3 votos a 2. Reflexão da Karol sobre possíveis interesses de mercado por trás (CFM x CFO) entra como pergunta dela, não como acusação factual.
+FATOS VERIFICADOS (Sage, 21/08): TRF1, 8ª Turma, 19/08/2026, placar 3x2, anulou a Resolução nº 198/2019 do CFO (reconhecia HOF como especialidade odontológica: botox, preenchimento, bioestimulador, laser em toda a face). Recurso movido por CFM + Sociedade Brasileira de Dermatologia. Ainda cabe recurso — norma só perde validade na publicação do acórdão; até lá dentistas seguem atuando.
+JANELA: 1-2 semanas (vira notícia velha rápido — se for além disso, reposicionar como "aniversário de 1 ano da decisão" ou tema perene sobre teto de vidro de profissão regulamentada)
+FONTES: [Migalhas](https://www.migalhas.com.br/quentes/462893/trf-1-anula-norma-que-autorizava-harmonizacao-facial-por-dentistas) · [Correio Braziliense](https://www.correiobraziliense.com.br/brasil/2026/08/7484248-harmonizacao-facial-nao-e-especialidade-odontologica-define-justica.html) · [CREMERJ News](https://news.cremerj.org.br/2026/08/20/tribunal-regional-federal-anula-resolucao-que-autorizava-dentistas-a-realizar-harmonizacao-orofacial/)
+RECOMENDAÇÃO: ENTRAR — mas só quando a batelada da semana entrar em produção (Karol pediu pra esperar Rota100k Semana 04)
