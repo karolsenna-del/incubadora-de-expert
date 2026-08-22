@@ -243,7 +243,7 @@ textarea{min-height:110px;}
 "use strict";
 
 var STORAGE_KEY = "conduz-agro-diagnostico-v1";
-var SHEETS_ENDPOINT_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
+var SHEETS_ENDPOINT_URL = "https://script.google.com/macros/s/AKfycby3MKJzBZGGRgqbQt4xStuaixZX737eskENEIbRoE9rgd4wr1fBf7r_roCtTQGWmzJfIw/exec";
 
 /* ---------------- BRAND MARK (inline, matches Conduz Agro icon: árvore-cérebro) ---------------- */
 var BRAND_SVG = '<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">'+
@@ -670,6 +670,7 @@ function buildResult(){
     sendBtn.textContent = "Enviado ✓";
     sendBtn.disabled = true;
     sendToSheet({
+      _form: "diagnostico_completo",
       nome: state.identity.nome || "",
       email: state.identity.email || "",
       indice_geral: geral,

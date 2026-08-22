@@ -119,7 +119,7 @@ textarea{min-height:110px;}
 "use strict";
 
 var STORAGE_KEY = "conduz-agro-pre-diagnostico-v1";
-var SHEETS_ENDPOINT_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
+var SHEETS_ENDPOINT_URL = "https://script.google.com/macros/s/AKfycby3MKJzBZGGRgqbQt4xStuaixZX737eskENEIbRoE9rgd4wr1fBf7r_roCtTQGWmzJfIw/exec";
 
 var BRAND_SVG = '<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">'+
   '<path d="M32 8c-7 0-12 5-12 11 0 4 2 7 5 9-4 2-7 6-7 10 0 6 6 10 14 10s14-4 14-10c0-4-3-8-7-10 3-2 5-5 5-9 0-6-5-11-12-11z" fill="#5C6B3F" opacity=".18"/>'+
@@ -404,7 +404,7 @@ function buildOutro(){
     sendState.sent = true;
     sendBtn.textContent = "Enviado ✓";
     sendBtn.disabled = true;
-    sendToSheet(Object.assign({}, state.values, {trava_sinalizada: empatados.length>=2 ? empatados.join("+") : pior}));
+    sendToSheet(Object.assign({}, state.values, {_form: "pre_diagnostico", trava_sinalizada: empatados.length>=2 ? empatados.join("+") : pior}));
   });
   s.appendChild(sendBtn);
   s.appendChild(el("p", {class:"footer-note", text:"Depois de enviar, a Milena entra em contato pra confirmar o melhor horário pra sua sessão estratégica."}));
