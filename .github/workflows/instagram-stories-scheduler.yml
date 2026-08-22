@@ -1,0 +1,43 @@
+name: Instagram Stories Scheduler
+
+on:
+  workflow_dispatch:   # disparo manual pra teste supervisionado — cron entra depois de validado com caso real
+  # schedule:
+  #   - cron: '30 12 * * *'   # sugestao: 09h30 BRT (12h30 UTC) — depois que o Expert-Stories tiver
+  #                            # gatilho diario proprio gerando a imagem mais cedo (ver handoff Ops
+  #                            # 21/08/2026). Descomentar so apos 1o teste manual bem-sucedido.
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install requests
+
+      - name: Publicar Story(s) do dia
+        env:
+          META_TOKEN:              ${{ secrets.META_TOKEN }}
+          IG_USER_ID:              ${{ secrets.IG_USER_ID }}
+          CLOUDINARY_CLOUD_NAME:   ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY:      ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET:   ${{ secrets.CLOUDINARY_API_SECRET }}
+        run: python .github/scripts/publicar_story.py
+
+      - name: Commit log e pasta agendados
+        run: |
+          git config user.name "insta-scheduler[bot]"
+          git config user.email "bot@incubadoradeexpert.com.br"
+          git add business/instagram/stories/
+          git diff --staged --quiet || git commit -m "campanha: story publicada automaticamente pelo insta-scheduler"
+          git push

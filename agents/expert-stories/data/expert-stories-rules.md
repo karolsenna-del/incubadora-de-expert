@@ -77,6 +77,33 @@ objetivo do formato **Você no Game** do catálogo — prova de autoridade via b
   produzido com antecedência a partir do roteiro fechado, a intenção é "o que foi falado", não
   teaser pré-live
 
+## [21/08/2026] — Levantada de Mão usa 2 vagas fixas, não pergunta mais o número real
+**Origem:** Karol vinha sendo perguntada toda vez ("qual o número real de vagas hoje?") pra
+não inventar prova numérica. Ela decidiu fixar o número em vez de responder isso a cada
+missão — motivado também por destravar a automação diária (menos pontos em que o worker
+precisa parar e esperar resposta dela).
+**Regra:** Usar **2 vagas** como padrão fixo em todo texto de Levantada de Mão (Domingo,
+Terça, Quinta), sem perguntar de novo — até o dia em que a Karol mudar esse número
+explicitamente.
+**Aplica quando:** Escrevendo qualquer texto de Levantada de Mão que mencione número de
+vagas disponíveis.
+
+## [21/08/2026] — Banco de histórias reais existe e pode alimentar formatos 🔴 baseados em texto
+**Origem:** Karol perguntou se os formatos não davam pra puxar do banco de histórias que o
+Squad Conteúdo Arcane já mantém (`docs/producao-conteudo/karol/historias-trajetoria.md` e
+`historias-mentorias-atendidas.md`) — achado confirmado, os dois arquivos existem, com
+histórias reais catalogadas (usadas e disponíveis) e regra clara de "usar sem inventar
+detalhe".
+**Regra:** Antes de tratar **De Volta ao Passado** ou **Depoimento ou Bastidor** como 🔴
+bloqueado esperando conteúdo novo da Karol, checar primeiro se já existe história disponível
+nesses dois bancos que sirva sem precisar de foto/vídeo novo. Se servir, o formato pode ser
+gerado como 🟢/🟡 (texto sobre fundo, sem esperar produção nova dela) — reclassificação
+proposta, ainda não aplicada na tabela oficial de `rotina-stories-formatos.md` (pendente
+aprovação dela). **Day Off, Você no Game e Atualização continuam 🔴 de verdade** — exigem
+foto/vídeo do momento específico, os bancos de texto não resolvem esses.
+**Aplica quando:** Decidindo um formato 🔴 do catálogo rotativo, antes de perguntar à Karol
+por conteúdo novo.
+
 ## [14/08/2026] — Frase-ponte do Day Off é opcional, não obrigatória
 **Origem:** No Story da amiga da Polônia, a frase-ponte original ("O que parece simples pra
 você pode ser desafiador pra quem te acompanha.") não encaixou — a história era sobre presença

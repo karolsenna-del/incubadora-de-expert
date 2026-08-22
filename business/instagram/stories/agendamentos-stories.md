@@ -1,0 +1,10 @@
+# Log de Agendamentos — Instagram Stories
+
+> Histórico de Stories publicadas automaticamente. Append-only.
+> Formato de pasta esperado: `business/instagram/stories/fila/{slug}/story-00.png`, `story-01.png`, ...
+> (sequência publicada em ordem — Day Off e live de quarta podem ter mais de uma).
+
+---
+
+| Data | Slug | Qtd Stories | Media IDs | Story anterior apagada |
+|------|------|-------------|-----------|-------------------------|

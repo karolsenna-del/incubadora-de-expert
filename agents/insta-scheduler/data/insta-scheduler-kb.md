@@ -172,6 +172,63 @@ Params: creation_id = {container_id}
 
 **Conclusão pra extensão do insta-scheduler:** dá pra reaproveitar quase 100% do script de carrossel — trocar `media_type: CAROUSEL` + loop de containers por um único `media_type: STORIES` + `image_url`, sem o passo de criar múltiplos `is_carousel_item`. Esforço estimado: baixo (script já existe, é adaptação, não criação do zero).
 
+**IMPLEMENTADO (22/08/2026, Gestor de Infra Arcane):** `.github/scripts/publicar_story.py` + workflow
+`.github/workflows/instagram-stories-scheduler.yml` — ver SOP-021 no Playbook. Ainda em modo
+`workflow_dispatch` (manual), cron comentado até 1º teste supervisionado.
+
+---
+
+## 1.6 Apagar Story — DELETE `/{ig-media-id}` (pesquisado 22/08/2026)
+
+**Fonte:** Meta Developer Docs, Instagram Media Reference
+(developers.facebook.com/docs/instagram-platform/reference/instagram-media/).
+Pesquisado pra atender pedido da Karol (21/08): a Levantada de Mão (Story automatizada,
+8h-10h) não pode subir misturada com a Story do dia anterior ainda ativa.
+
+**Confirmado: Stories podem ser apagadas via API.**
+
+```
+DELETE https://graph.facebook.com/v21.0/{IG_MEDIA_ID}?access_token={META_TOKEN}
+```
+
+Resposta: `{"success": true, "deleted_id": "{IG_MEDIA_ID}"}`
+
+**Permissão necessária:** `instagram_manage_contents` (além de `instagram_basic`) —
+**NÃO CONFIRMADO ainda se o app/token atual (escopo original: `instagram_content_publish`) já
+tem essa permissão.** Teste de rede bloqueado pelo sandbox do Claude Code durante essa missão
+(chamada `curl` com token real foi negada pelo classifier de automação) — precisa ser testado
+de verdade na primeira execução manual (`workflow_dispatch`) do `instagram-stories-scheduler.yml`,
+ou verificado antes via Graph API Explorer (developers.facebook.com → app → Ferramentas →
+Graph API Explorer → gerar token → conferir se `instagram_manage_contents` aparece marcado).
+**Se não tiver:** re-gerar o token com a permissão adicionada (mesmo fluxo do SOP-002, só
+adicionando o escopo na hora de gerar) — não deveria exigir reautorização completa do app,
+só um novo token com escopo maior.
+
+**Só funciona com Instagram API via Facebook Login** (não via Instagram Login) — o
+`META_TOKEN` atual já é dessa família (usado pelos workflows de publicação via
+`graph.facebook.com`, distinto do `IG_INSIGHTS_TOKEN` que é Instagram Login/métricas), então
+não deveria ter conflito de tipo de token, só de escopo.
+
+**Comportamento se a permissão faltar ou a Story já tiver expirado sozinha (24h):** o script
+`publicar_story.py` **não aborta** — só loga um aviso e segue publicando a Story nova. Pior
+cenário é a Story antiga expirar sozinha mais tarde (comportamento nativo do Instagram),
+nunca um post perdido por causa disso.
+
+**Achado paralelo (não bloqueia, registrar pra revisão futura):** a seção 1.1 desta KB
+descreve a base URL de publicação como `https://graph.instagram.com/v21.0/`, mas o código
+real que já está em produção (`.github/scripts/publicar.py`, todos os workflows
+`post-*.yml`) usa `https://graph.facebook.com/v21.0/{IG_USER_ID}/...`. O código é a fonte
+de verdade (funciona, publica todo dia) — a KB está desatualizada nesse detalhe específico
+de base URL. Não corrigido nesta missão por não ser bloqueante; vale ajustar a seção 1.1 numa
+próxima passada de limpeza da KB.
+
+**Achado adicional, fora do escopo desta missão mas relevante:** `agents/insta-scheduler/data/vault.md`
+tem uma inconsistência de data de expiração do `META_TOKEN` — o bloco de credenciais diz
+`META_TOKEN_EXPIRES=2026-08-29` (renovado 07/01), mas a checklist "Status de Configuração"
+no fim do arquivo ainda diz "expira 2026-08-22" (hoje). Não deu pra confirmar qual está certo
+via teste de rede real (bloqueado pelo sandbox). Recomendo checar/renovar o token antes de
+depender dele pro fluxo de Stories — token vencido quebra publicação E deleção ao mesmo tempo.
+
 ---
 
 ## 2. TOKEN MANAGEMENT

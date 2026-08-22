@@ -10,6 +10,33 @@
 **Impacto:** [o que muda]
 -->
 
+## 21/08/2026 — Rotina de Stories: vagas fixas, handoff pra automação diária
+
+**Contexto:** Karol relatou dificuldade em manter os Stories em dia porque a rotina hoje
+depende dela vir puxar conversa com o Expert-Stories todo dia. Proposta feita e aprovada:
+automatizar em duas frentes — script de postagem (Gestor de Infra Arcane) e gatilho diário
+que ativa o worker sozinho (Ops). No caminho, dois destravamentos: (1) Karol fixou o número
+de vagas da Levantada de Mão em 2, eliminando a maior causa recorrente de precisar perguntar
+algo a ela; (2) confirmado que existe banco de histórias reais (Squad Conteúdo Arcane,
+`historias-trajetoria.md` + `historias-mentorias-atendidas.md`) que pode alimentar formatos
+antes tratados como 🔴 (De Volta ao Passado, possivelmente Depoimento ou Bastidor) sem
+precisar de conteúdo novo dela.
+
+**Decisão:** (1) Vagas da Levantada de Mão fixas em 2 até ela mudar explicitamente. (2)
+Seguir com handoff pro Gestor de Infra Arcane (escrever/testar script de publicação de
+Stories no `insta-scheduler`, incluindo apagar a Story anterior antes de publicar a nova) e
+pro Ops (configurar gatilho diário que ativa o Expert-Stories sozinho). (3) Canal de aviso
+quando o worker precisar de algo dela: notificação push (Claude Code/Remote Control) — ela
+só trabalha no chat à tarde, então perguntas urgentes de manhã (ex: Levantada de Mão 8h-10h)
+não podem depender só do chat.
+
+**Racional:** Cada blocker que dependia de resposta manual da Karol reduz o quanto a
+automação pode rodar sem ela. Fixar o número e mapear o banco de histórias já elimina dois
+dos três blockers recorrentes (número real, conteúdo 🔴) — sobra praticamente só override.
+
+**Impacto:** Handoffs registrados em `.auroq/handoffs/`. Depois que o script existir e o
+cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o chat.
+
 ## 19/08/2026 — Link bio do Instagram reestruturado: vitrine de 7 ofertas entra como 3ª posição, não como funil principal
 
 **Contexto:** No Squad Posicionamento Arcane, Karol propôs trocar o link bio atual (grupo de leads + diagnóstico gratuito + suporte "fale com a Karol") por um único link pra uma página com as 7 ofertas à venda, mais os links de grupo e diagnóstico. O @vitrine-strategist confrontou: página com 7 ofertas como primeiro link vira "cardápio" e gera paralisia de escolha — quebra a regra de ouro do link bio (primeiro link = funil principal único).

@@ -846,6 +846,50 @@ Resumo: Clarity (clarity.microsoft.com) > criar projeto > copiar snippet > Lovab
 
 ---
 
+### [SOP-021] Publicar Stories automaticamente (insta-scheduler) — com delecao da Story anterior
+
+**Criado em:** 22/08/2026
+**Trigger:** Handoff do Expert-Stories pedindo automacao de postagem de Stories (`.auroq/handoffs/handoff-expert-stories-to-gestor-infra-arcane-20260821.yaml`)
+**Tempo estimado:** ja implementado — falta so teste supervisionado + habilitar cron
+**Ferramentas:** Python (requests), Meta Graph API v21.0, Cloudinary, GitHub Actions
+
+**Pre-requisitos:**
+- `META_TOKEN` valido com escopo `instagram_content_publish` (publicar) + `instagram_manage_contents` (apagar) — o 2o **ainda nao confirmado** no token atual, ver KB `agents/insta-scheduler/data/insta-scheduler-kb.md` secao 1.6
+- Imagem(ns) da Story em `business/instagram/stories/fila/{slug}/story-00.png`, `story-01.png`, ... (zero-padded, ordem de publicacao)
+- GitHub Secrets ja existentes (META_TOKEN, IG_USER_ID, CLOUDINARY_*) — mesmos do carrossel
+
+**Como funciona:**
+1. `.github/scripts/publicar_story.py` pega a primeira pasta encontrada em `fila/` (nao tem SCHEDULE fixo por data como o carrossel — quem decide o slug/dia e o Expert-Stories, esse script so publica o que achar pronto)
+2. Antes de publicar, tenta apagar a Story anterior (media_id salvo em `business/instagram/stories/ultima-story-media-id.txt`) via `DELETE /{media-id}` — se falhar (token sem permissao, ou Story ja expirada sozinha em 24h), so loga aviso e segue, nunca aborta o post novo
+3. Publica cada `story-NN.png` em sequencia (container STORIES -> aguarda FINISHED -> media_publish) — sem caption (Stories nao aceita esse parametro)
+4. Salva o media_id da ULTIMA story publicada no state file (e essa que sera apagada no proximo dia)
+5. Loga em `business/instagram/stories/agendamentos-stories.md`, move a pasta pra `agendados/`, commita e da push
+
+**Workflow:** `.github/workflows/instagram-stories-scheduler.yml` — hoje so `workflow_dispatch`
+(manual). O cron (`schedule:`) esta comentado no arquivo com sugestao de horario (09h30 BRT) —
+so descomentar depois de 1 teste manual bem-sucedido de ponta a ponta, e depois de alinhar com
+o Ops o horario do gatilho que ativa o Expert-Stories pra gerar a imagem (a geracao precisa
+acontecer ANTES desse cron rodar, com folga).
+
+**Como testar manualmente:**
+```bash
+gh workflow run instagram-stories-scheduler.yml
+gh run watch  # acompanhar
+```
+
+**Troubleshooting:**
+- DELETE retorna erro de permissao → token precisa ser re-gerado com escopo `instagram_manage_contents` (ver KB secao 1.6) — nao bloqueia o post, so a limpeza da Story anterior
+- Fila vazia → script sai limpo (`sys.exit(0)`), sem erro — normal em dias sem Story gerada ainda
+- Sequencia com mais de 1 imagem publica todas, mas so a ULTIMA fica marcada pra deletar no dia seguinte (as intermediarias ja terao expirado sozinhas em 24h de qualquer forma)
+
+**Pendencias abertas (nao bloqueiam o build, bloqueiam ir pra producao com cron ativo):**
+- [ ] Confirmar permissao `instagram_manage_contents` no token atual (teste real, sandbox bloqueou verificacao via curl)
+- [ ] Resolver inconsistencia de data de expiracao do META_TOKEN (`vault.md`: bloco diz 29/08, checklist diz 22/08 — ver KB secao 1.6)
+- [ ] 1o teste manual (`workflow_dispatch`) com uma Story real do Expert-Stories
+- [ ] Habilitar cron so depois do teste OK + Ops confirmar horario do gatilho de geracao
+
+---
+
 ## Template de SOP
 
 ### [SOP-XXX] {Nome do Processo}
