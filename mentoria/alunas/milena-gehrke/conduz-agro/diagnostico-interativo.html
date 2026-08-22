@@ -1,0 +1,726 @@
+<title>Diagnóstico da Autoridade Aplicada</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Quicksand:wght@500;600;700&display=swap');
+
+:root{
+  --paper:#F5F0E6;
+  --paper-raised:#EDE6D6;
+  --paper-deep:#E4DBC4;
+  --ink:#3D2817;
+  --ink-soft:#6B5A44;
+  --olive:#5C6B3F;
+  --olive-deep:#34401F;
+  --gold:#B07A16;
+  --gold-soft:#C08A1E;
+  --rust:#A8461F;
+  --rule:#D9CDB0;
+  --shadow: 0 1px 2px rgba(61,40,23,.06), 0 8px 24px -12px rgba(61,40,23,.25);
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Quicksand',system-ui,sans-serif;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:32px 16px 64px;
+}
+
+h1,h2,h3,.display{
+  font-family:'Fraunces',Georgia,serif;
+  font-weight:700;
+  text-wrap:balance;
+  color:var(--ink);
+  margin:0;
+}
+
+.wrap{width:100%;max-width:640px;}
+
+/* ---------- progress (root growing) ---------- */
+.progress-shell{
+  width:100%;
+  margin:0 0 28px;
+}
+.progress-track{
+  position:relative;
+  height:6px;
+  border-radius:999px;
+  background:var(--paper-deep);
+  overflow:hidden;
+}
+.progress-fill{
+  position:absolute; inset:0 auto 0 0;
+  width:0%;
+  background:linear-gradient(90deg,var(--olive),var(--gold-soft));
+  border-radius:999px;
+  transition:width .5s cubic-bezier(.22,.8,.28,1);
+}
+.progress-label{
+  display:flex; justify-content:space-between; align-items:baseline;
+  margin-top:8px;
+  font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--ink-soft); font-weight:600;
+}
+.progress-label b{color:var(--ink); font-weight:700;}
+
+/* ---------- card ---------- */
+.card{
+  background:var(--paper-raised);
+  border:1px solid var(--rule);
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  padding:40px 36px;
+  animation:rise .45s cubic-bezier(.22,.8,.28,1);
+}
+@media (max-width:520px){ .card{padding:28px 22px;border-radius:16px;} }
+@keyframes rise{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+@media (prefers-reduced-motion:reduce){
+  .card{animation:none;}
+  .progress-fill{transition:none;}
+}
+
+/* ---------- intro ---------- */
+.brand{
+  display:flex; align-items:center; gap:12px;
+  margin-bottom:28px;
+}
+.brand-mark{width:40px;height:40px;flex:none;}
+.brand-name{font-family:'Fraunces',serif; font-weight:700; font-size:1.05rem; line-height:1.15;}
+.brand-name em{font-style:normal; color:var(--olive);}
+.brand-by{font-size:.72rem; color:var(--ink-soft); letter-spacing:.03em;}
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:.74rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--esfera-color,var(--olive));
+  margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--esfera-color,var(--olive));}
+
+.q-title{font-size:1.5rem; line-height:1.3; margin-bottom:6px;}
+.q-sub{font-size:.85rem; color:var(--ink-soft); margin-bottom:22px;}
+.lede{font-size:1rem; line-height:1.6; color:var(--ink-soft); margin:0 0 28px;}
+
+/* ---------- options ---------- */
+.options{display:flex; flex-direction:column; gap:10px; margin-bottom:8px;}
+.opt{
+  display:flex; align-items:flex-start; gap:12px;
+  text-align:left;
+  width:100%;
+  background:var(--paper);
+  border:1.5px solid var(--rule);
+  border-radius:14px;
+  padding:16px 18px;
+  font-family:'Quicksand',sans-serif;
+  font-size:.98rem; font-weight:600; color:var(--ink);
+  cursor:pointer;
+  transition:border-color .15s ease, background .15s ease, transform .1s ease;
+}
+.opt:hover{border-color:var(--esfera-color,var(--olive)); background:#fff;}
+.opt:active{transform:scale(.99);}
+.opt:focus-visible{outline:3px solid var(--gold-soft); outline-offset:2px;}
+.opt.selected{
+  border-color:var(--esfera-color,var(--olive));
+  background:#fff;
+  box-shadow:inset 0 0 0 1px var(--esfera-color,var(--olive));
+}
+.opt-dot{
+  flex:none; width:20px;height:20px; border-radius:50%;
+  border:1.5px solid var(--rule); margin-top:1px;
+  display:flex;align-items:center;justify-content:center;
+}
+.opt.selected .opt-dot{border-color:var(--esfera-color,var(--olive)); background:var(--esfera-color,var(--olive));}
+.opt.selected .opt-dot::after{content:"";width:8px;height:8px;border-radius:50%;background:#fff;}
+
+/* ---------- text/scale inputs ---------- */
+textarea, input[type=text], input[type=email]{
+  width:100%;
+  font-family:'Quicksand',sans-serif;
+  font-size:1rem; color:var(--ink);
+  background:var(--paper);
+  border:1.5px solid var(--rule);
+  border-radius:14px;
+  padding:14px 16px;
+  resize:vertical;
+}
+textarea:focus, input:focus{outline:3px solid var(--gold-soft); outline-offset:1px; border-color:var(--olive);}
+textarea{min-height:110px;}
+
+/* ---------- nav ---------- */
+.nav{display:flex; justify-content:space-between; align-items:center; margin-top:28px; gap:12px;}
+.btn{
+  font-family:'Quicksand',sans-serif; font-weight:700; font-size:.95rem;
+  border-radius:999px; padding:13px 26px; cursor:pointer; border:none;
+  transition:transform .1s ease, opacity .15s ease;
+}
+.btn:active{transform:scale(.97);}
+.btn-primary{background:var(--ink); color:var(--paper);}
+.btn-primary:disabled{opacity:.35; cursor:not-allowed;}
+.btn-ghost{background:transparent; color:var(--ink-soft); padding:13px 6px;}
+.btn-ghost:hover{color:var(--ink);}
+.btn:focus-visible{outline:3px solid var(--gold-soft); outline-offset:2px;}
+
+/* ---------- outro ---------- */
+.outro-icon{width:56px;height:56px;margin:0 auto 18px;display:block;}
+.center{text-align:center;}
+.small-note{font-size:.82rem; color:var(--ink-soft); line-height:1.6;}
+
+/* ---------- results ---------- */
+.result-hero{text-align:center; padding:6px 0 26px;}
+.result-index{
+  font-family:'Fraunces',serif; font-weight:900; font-size:4.2rem; line-height:1;
+  font-variant-numeric:tabular-nums;
+  color:var(--ink);
+}
+.result-band{
+  display:inline-block; margin-top:10px;
+  font-size:.85rem; font-weight:700; letter-spacing:.04em;
+  padding:6px 16px; border-radius:999px;
+  background:var(--band-bg,var(--paper-deep)); color:var(--band-fg,var(--ink));
+}
+
+.esfera-rows{display:flex; flex-direction:column; gap:16px; margin:26px 0 30px;}
+.esfera-row-head{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;}
+.esfera-row-name{font-weight:700; font-size:.92rem;}
+.esfera-row-pct{font-family:'Fraunces',serif; font-weight:700; font-size:1.1rem; font-variant-numeric:tabular-nums;}
+.esfera-bar{height:10px; border-radius:999px; background:var(--paper-deep); overflow:hidden;}
+.esfera-bar-fill{height:100%; border-radius:999px; width:0%; transition:width 1s cubic-bezier(.22,.8,.28,1);}
+.esfera-row-label{font-size:.76rem; color:var(--ink-soft); margin-top:5px;}
+
+.trava-block{
+  background:var(--paper);
+  border:1.5px solid var(--rule);
+  border-radius:16px;
+  padding:22px 22px;
+  margin-bottom:16px;
+}
+.trava-block h3{font-size:1.05rem; margin-bottom:14px;}
+.trava-item{display:flex; gap:12px; align-items:flex-start; padding:10px 0; border-top:1px solid var(--rule);}
+.trava-item:first-of-type{border-top:none; padding-top:0;}
+.trava-tag{
+  flex:none; font-size:1.2rem; line-height:1.4;
+}
+.trava-text b{display:block; font-size:.95rem;}
+.trava-text span{font-size:.82rem; color:var(--ink-soft);}
+
+.insight{
+  background:var(--olive-deep); color:#F5F0E6;
+  border-radius:16px; padding:20px 22px; margin-bottom:16px;
+  font-size:.95rem; line-height:1.55;
+}
+.insight b{font-family:'Fraunces',serif; font-weight:700; display:block; margin-bottom:6px; font-size:1rem;}
+
+.perfil-block{
+  border:1.5px dashed var(--gold-soft);
+  border-radius:16px; padding:20px 22px; margin-bottom:24px;
+}
+.perfil-block .eyebrow{margin-bottom:8px;}
+.perfil-block h3{font-size:1.2rem; margin-bottom:6px;}
+.perfil-block p{font-size:.92rem; color:var(--ink-soft); line-height:1.6; margin:0;}
+
+.footer-note{font-size:.78rem; color:var(--ink-soft); text-align:center; margin-top:18px; line-height:1.6;}
+
+#stage{width:100%;}
+</style>
+
+<div class="wrap">
+  <div class="progress-shell" id="progressShell" style="display:none;">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label"><span>Diagnóstico da Autoridade Aplicada</span><span><b id="stepCount">0</b>/30</span></div>
+  </div>
+  <div id="stage"></div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var STORAGE_KEY = "conduz-agro-diagnostico-v1";
+var SHEETS_ENDPOINT_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
+
+/* ---------------- BRAND MARK (inline, matches Conduz Agro icon: árvore-cérebro) ---------------- */
+var BRAND_SVG = '<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">'+
+  '<path d="M32 8c-7 0-12 5-12 11 0 4 2 7 5 9-4 2-7 6-7 10 0 6 6 10 14 10s14-4 14-10c0-4-3-8-7-10 3-2 5-5 5-9 0-6-5-11-12-11z" fill="#5C6B3F" opacity=".18"/>'+
+  '<path d="M32 30c5 3 8 6 8 12M32 30c-5 3-8 6-8 12" stroke="#34401F" stroke-width="2" stroke-linecap="round"/>'+
+  '<circle cx="32" cy="18" r="11" fill="none" stroke="#5C6B3F" stroke-width="2.2"/>'+
+  '<path d="M32 7v22" stroke="#B07A16" stroke-width="2"/>'+
+  '<path d="M25 12c2 2 2 5 0 7M39 12c-2 2-2 5 0 7" stroke="#B07A16" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>'+
+  '<path d="M32 42v14" stroke="#34401F" stroke-width="2.2" stroke-linecap="round"/>'+
+  '<path d="M32 48c-6 2-9 6-9 10M32 48c6 2 9 6 9 10M32 52c-4 1-6 4-6 7M32 52c4 1 6 4 6 7" stroke="#A8461F" stroke-width="1.6" stroke-linecap="round" opacity=".8"/>'+
+  '<circle cx="32" cy="55" r="3" fill="#B07A16"/>'+
+  '</svg>';
+
+/* ---------------- QUESTIONS ---------------- */
+var QUESTIONS = [
+  {esfera:"tecnica", sub:"T1", subNome:"Domínio documental", id:"T1a",
+   q:"Você entende o processo completo de regularização de um imóvel rural?",
+   o:["Sim, domino todas as etapas com segurança","Tenho conhecimento, mas com dúvidas em algumas fases","Tenho dificuldade em entender o processo completo"]},
+  {esfera:"tecnica", sub:"T1", subNome:"Domínio documental", id:"T1b",
+   q:"Você sabe identificar e corrigir inconsistências nos documentos dos imóveis rurais (CCIR, ITR, CIB, CAR)?",
+   o:["Sim, faço análise técnica e ajustes","Sei o básico, mas não aprofundo","Tenho dificuldade"]},
+  {esfera:"tecnica", sub:"T2", subNome:"Diagnóstico e estratégia", id:"T2a",
+   q:"Você utiliza diagnóstico e consegue transformá-lo em solução para o cliente?",
+   o:["Sim, conduzo do problema à solução","Consigo parcialmente","Tenho dificuldade em aplicar"]},
+  {esfera:"tecnica", sub:"T2", subNome:"Diagnóstico e estratégia", id:"T2b",
+   q:"Você consegue definir a melhor estratégia de regularização para cada caso?",
+   o:["Sim, analiso e direciono com segurança","Tenho dúvidas na decisão","Não sei definir"]},
+  {esfera:"tecnica", sub:"T3", subNome:"Atualização e ferramentas", id:"T3a",
+   q:"Você se mantém atualizado sobre normas e mudanças envolvendo regularização de imóveis/crédito rural?",
+   o:["Sim, acompanho constantemente","Às vezes acompanho","Não acompanho"]},
+  {esfera:"tecnica", sub:"T4", subNome:"Visão consultiva", id:"T4a",
+   q:"Você sabe como o CAR, CCIR, ITR, matrícula, documentos de posse ou contratos agrícolas impactam o crédito rural?",
+   o:["Sim, explico claramente ao cliente","Entendo parcialmente","Não sei relacionar"]},
+  {esfera:"tecnica", sub:"T4", subNome:"Visão consultiva", id:"T4b",
+   q:"Quando chega alguma demanda que o produtor já solicita diretamente o que precisa ser feito (ex: retificação nº matrícula CAR), como você procede na execução?",
+   o:["Mesmo que ele só solicita a retificação nº matrícula, eu acabo analisando todo o CAR","Faço o que ele pediu, mas pergunto se não tem algo a mais pra ajustar","Executo o que o produtor solicitou"]},
+
+  {esfera:"emocional", sub:"E1", subNome:"Segurança e autoconfiança", id:"E1a",
+   q:"Você sente de fato segurança em todos os serviços que oferece?",
+   o:["Sim, absolutamente","Às vezes, dependendo da complexidade, fico um pouco inseguro","Na maioria das vezes sinto-me inseguro. Fico com receio de entregar algo incorreto para o produtor."]},
+  {esfera:"emocional", sub:"E1", subNome:"Segurança e autoconfiança", id:"E1b",
+   q:"Você acredita que pode prosperar com os serviços técnicos de regularização/crédito rural que oferece hoje?",
+   o:["Sim, com certeza","Acredito que sim, mas falta ter mais confiança para mostrar meu valor","Não, tenho que aprender sempre mais porque sinto-me que nunca sei o suficiente."]},
+  {esfera:"emocional", sub:"E2", subNome:"Rejeição e autovalor", id:"E2a",
+   q:"Como você se sente ao saber que o produtor rural fechou demanda com o outro técnico depois de ter vindo conversar com você sobre o caso?",
+   o:["Aceito numa boa","Fico me questionando o porque ele fechou com o outro, o que eu fiz ou não fiz/falei de diferente do outro técnico, mas acabo me conformando","Fico desanimado e pensativo bastante tempo/dias sobre a situação"]},
+  {esfera:"emocional", sub:"E2", subNome:"Rejeição e autovalor", id:"E2b",
+   q:"O que você sente quando o cliente acha que seu serviço é barato?",
+   o:["Reforço o valor da minha entrega e aproveito a percepção positiva","Fico em dúvida se estou cobrando certo","Me sinto desconfortável e começo a questionar meu próprio valor ou preço"]},
+  {esfera:"emocional", sub:"E3", subNome:"Autossabotagem e execução", id:"E3a",
+   q:"Quando você tem uma ideia que pode melhorar seu negócio, o que costuma acontecer?",
+   o:["Coloco em prática rapidamente, mesmo que simples","Anoto e deixo para fazer quando tiver mais tempo/organização","Penso bastante, mas dificilmente tiro do papel"]},
+  {esfera:"emocional", sub:"E3", subNome:"Autossabotagem e execução", id:"E3b",
+   q:"Quando você precisa tomar uma decisão importante no seu negócio, como age?",
+   o:["Decido com base nas informações que tenho e sigo","Penso bastante antes de decidir","Adio a decisão esperando mais segurança ou “o momento certo”"]},
+  {esfera:"emocional", sub:"E4", subNome:"Medo de errar e perfeccionismo", id:"E4a",
+   q:"Em relação ao medo de errar ao tentar algo novo, como você se comporta?",
+   o:["Vejo o erro como parte do processo e sigo","Tento me preparar ao máximo para evitar erros","Evito tentar para não correr o risco de errar"]},
+  {esfera:"emocional", sub:"E4", subNome:"Medo de errar e perfeccionismo", id:"E4b",
+   q:"Como você reage quando algo não sai exatamente como você planejou?",
+   o:["Ajusto a rota e sigo em frente","Fico frustrado(a), mas continuo","Travo ou desanimo, adiando a ideia ou desistindo"]},
+  {esfera:"emocional", sub:"E5", subNome:"Exposição e comparação", id:"E5a",
+   q:"Quando você se compara com outros profissionais do agro, o que acontece?",
+   o:["Uso como referência para evoluir e me posicionar melhor","Às vezes me comparo, mas sigo fazendo o meu","Me comparo e isso me faz recuar ou duvidar da minha capacidade"]},
+  {esfera:"emocional", sub:"E5", subNome:"Exposição e comparação", id:"E5b",
+   q:"Você se sente confortável ao gravar vídeos, postar fotos ou aparecer nas redes sociais?",
+   o:["Sim, me posiciono com naturalidade e consistência","Consigo aparecer, mas ainda com insegurança ou sem frequência","Evito aparecer por não me sentir à vontade ou preparado(a)"]},
+  {esfera:"emocional", sub:"E6", subNome:"Dinheiro, cobrança e merecimento", id:"E6a",
+   q:"Como você se sente ao apresentar um orçamento ao produtor?",
+   o:["Apresento com segurança, explicando o valor e conduzindo a decisão","Apresento, mas fico inseguro(a) sobre o preço e com receio da reação","Me sinto desconfortável, evito ou acabo reduzindo o valor para facilitar o fechamento"]},
+  {esfera:"emocional", sub:"E6", subNome:"Dinheiro, cobrança e merecimento", id:"E6b",
+   q:"Você costuma conceder descontos rapidamente ao negociar com o produtor?",
+   o:["Não, sustento o valor explicando a entrega e o benefício do serviço","Às vezes cedo, dependendo da situação ou da pressão do produtor","Sim, cedo facilmente para não perder o cliente ou evitar desconforto"]},
+  {esfera:"emocional", sub:"E7", subNome:"Pressão e estabilidade emocional", id:"E7a",
+   q:"O que mais tira o seu sono atualmente em relação ao seu trabalho?",
+   o:["Tenho clareza do que preciso fazer e sigo com segurança nas decisões","Algumas situações me preocupam, mas consigo administrar","Sinto preocupação constante, insegurança ou sobrecarga que trava minhas ações"]},
+
+  {esfera:"conducao", sub:"C1", subNome:"Posicionamento e percepção de valor", id:"C1a",
+   q:"Na sua comunicação com o produtor, você explica a regularização como obrigação ou como oportunidade?",
+   o:["Explico como oportunidade, conectando com ganhos financeiros e segurança patrimonial","Às vezes explico como oportunidade, mas ainda foco muito no lado obrigatório","Explico mais como obrigação, cumprimento de exigências ou burocracia"]},
+  {esfera:"conducao", sub:"C1", subNome:"Posicionamento e percepção de valor", id:"C1b",
+   q:"Como você explica o valor do seu serviço ao produtor?",
+   o:["Conecto o valor à entrega, explicando o que será feito, os riscos envolvidos, os benefícios e a segurança que o serviço proporciona ao produtor","Explico o que está incluído no serviço, mas ainda tenho dificuldade para demonstrar o valor além das atividades que serão executadas","Foco principalmente no preço e no que será entregue, deixando que o produtor avalie se o investimento vale a pena"]},
+  {esfera:"conducao", sub:"C2", subNome:"Processo de atendimento", id:"C2a",
+   q:"Quais são seus passos ao conduzir o primeiro atendimento com um produtor que deseja regularizar o imóvel?",
+   o:["Tenho um processo claro: levanto a situação do imóvel, identifico inconsistências, explico riscos e oportunidades e conduzo para a solução","Faço algumas perguntas e explico de forma geral, mas sem um padrão bem definido","Não tenho um processo estruturado, vou conduzindo conforme a conversa acontece"]},
+  {esfera:"conducao", sub:"C2", subNome:"Processo de atendimento", id:"C2b",
+   q:"Ao conversar com o produtor sobre uma demanda de regularização, você busca compreender também os fatores financeiros, familiares, patrimoniais e emocionais que podem influenciar a decisão?",
+   o:["Sim, procuro entender esses fatores e considero como eles influenciam a situação e a decisão do produtor","Percebo alguns desses fatores, mas normalmente concentro a conversa na questão técnica e na solução do serviço","Não costumo abordar esses aspectos, fico focado principalmente na demanda técnica apresentada pelo produtor"]},
+  {esfera:"conducao", sub:"C3", subNome:"Negociação e fechamento", id:"C3a",
+   q:"Quando o produtor diz que seu serviço está caro, como você reage?",
+   o:["Pergunto o que ele considerou caro, entendo a objeção e reforço o valor, a entrega e os riscos envolvidos antes de falar em preço","Explico novamente o que está incluído no serviço, mas fico inseguro(a) e considero negociar o valor","Fico preocupado(a) em perder o cliente e rapidamente ofereço desconto ou reduzo o preço para tentar fechar"]},
+  {esfera:"conducao", sub:"C3", subNome:"Negociação e fechamento", id:"C3b",
+   q:"Após apresentar sua explicação ao produtor, você consegue conduzir a conversa até uma decisão?",
+   o:["Sim, faço perguntas, esclareço dúvidas e conduzo naturalmente para o próximo passo, sem pressionar o produtor","Tenho dificuldade para avançar depois da explicação, pois fico com receio de parecer insistente ou pressionar o produtor","Após explicar o serviço, prefiro deixar o produtor à vontade e aguardo que ele tome a iniciativa de retornar"]},
+  {esfera:"conducao", sub:"C4", subNome:"Comunicação e leitura do produtor", id:"C4a",
+   q:"Você busca entender o perfil do produtor antes de definir como conduzir a conversa?",
+   o:["Sim, identifico o perfil, o momento e as necessidades do produtor e adapto minha comunicação e condução","Percebo algumas diferenças entre os produtores, mas ainda tenho dificuldade para adaptar minha abordagem","Conduzo praticamente todos da mesma forma, pois ainda não domino a leitura de comportamento e perfil do produtor"]},
+  {esfera:"conducao", sub:"C4", subNome:"Comunicação e leitura do produtor", id:"C4b",
+   q:"Como você costuma se comunicar com o produtor durante um atendimento?",
+   o:["Faço perguntas, pratico escuta ativa e adapto minha linguagem, traduzindo o técnico para uma explicação simples e conectada à realidade do produtor","Faço perguntas e procuro ouvir, mas ainda utilizo bastante linguagem técnica ou tenho dificuldade para adaptar a explicação ao perfil do produtor","Explico principalmente o que precisa ser feito, utilizando uma linguagem mais técnica para demonstrar meu entendimento; e falo mais do que perguntando ou investigando o cenário do produtor"]},
+  {esfera:"conducao", sub:"C5", subNome:"Conflitos e situações difíceis", id:"C5a",
+   q:"Como você costuma proceder quando surgem conflitos entre pessoas durante um atendimento ou negociação?",
+   o:["Escuto os envolvidos, mantenho a neutralidade e busco conduzir a situação para uma solução","Tento apaziguar a situação, mas fico desconfortável e nem sempre sei como conduzir o conflito","Evito me envolver ou tomar uma posição, deixando que os envolvidos resolvam entre si para não gerar desgaste"]},
+  {esfera:"conducao", sub:"C5", subNome:"Conflitos e situações difíceis", id:"C5b",
+   q:"Quando o produtor diz que o prazo para realizar o serviço é muito demorado, como você reage?",
+   o:["Explico o que determina esse prazo, mostro os riscos de fazer de forma apressada e conduzo o produtor para uma decisão segura","Explico que o prazo é necessário, mas tenho dificuldade para lidar quando ele insiste que está demorando","Fico preocupado(a) em perder o cliente e procuro reduzir o prazo ou deixo o produtor decidir se quer seguir em frente"]}
+];
+
+var ESFERA_META = {
+  tecnica:{nome:"Técnica", color:"var(--gold-soft)", n:7,
+    labels:["Trava Técnica","Pontos de Atenção Técnica","Domínio Técnico em Desenvolvimento","Domínio Técnico"]},
+  emocional:{nome:"Emocional", color:"var(--rust)", n:13,
+    labels:["Travas Emocionais Relevantes","Pontos de Atenção Emocional","Base Emocional em Desenvolvimento","Base Emocional Forte"]},
+  conducao:{nome:"Condução", color:"var(--olive)", n:10,
+    labels:["Trava na Condução","Condução Reativa","Condução em Desenvolvimento","Condutor Estratégico"]}
+};
+var GERAL_LABELS = ["Profissional Travado","Profissional em Destrave","Profissional em Evolução Estratégica","Condutor Estratégico"];
+
+var IDENTITY_FIELDS = [
+  {id:"nome", label:"Qual seu nome?", type:"text"},
+  {id:"email", label:"Qual seu e-mail?", type:"email"}
+];
+
+var steps = [{type:"intro"}];
+IDENTITY_FIELDS.forEach(function(f){ steps.push({type:"field", f:f}); });
+QUESTIONS.forEach(function(q){ steps.push({type:"question", q:q}); });
+steps.push({type:"outro"});
+
+var state = {stepIndex:0, answers:{}, identity:{}};
+try{
+  var saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+  if(saved && typeof saved.stepIndex === "number"){ state = saved; }
+}catch(e){}
+
+function saveState(){
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){}
+}
+
+function el(tag, attrs, children){
+  var e = document.createElement(tag);
+  attrs = attrs || {};
+  Object.keys(attrs).forEach(function(k){
+    if(k === "text"){ e.textContent = attrs[k]; }
+    else if(k === "html"){ e.innerHTML = attrs[k]; }
+    else if(k.indexOf("on") === 0 && typeof attrs[k] === "function"){ e.addEventListener(k.slice(2), attrs[k]); }
+    else if(k === "style"){ e.setAttribute("style", attrs[k]); }
+    else{ e.setAttribute(k, attrs[k]); }
+  });
+  (children||[]).forEach(function(c){ if(c) e.appendChild(c); });
+  return e;
+}
+
+var stage = document.getElementById("stage");
+var progressShell = document.getElementById("progressShell");
+var progressFill = document.getElementById("progressFill");
+var stepCount = document.getElementById("stepCount");
+
+function questionIndexOf(step){
+  var qOnly = steps.filter(function(s){ return s.type === "question"; });
+  return qOnly.indexOf(step) + 1;
+}
+
+function isAnswerable(step){
+  if(step.type === "field") return typeof state.identity[step.f.id] === "string" && state.identity[step.f.id].trim().length > 0;
+  if(step.type === "question") return typeof state.answers[step.q.id] === "number";
+  return true;
+}
+
+function updateChrome(step){
+  if(step.type === "question" || step.type === "field"){
+    progressShell.style.display = "block";
+    var n = step.type === "question" ? questionIndexOf(step) : 0;
+    var pct = step.type === "question" ? (n / QUESTIONS.length) * 100 : (Object.keys(state.identity).length / IDENTITY_FIELDS.length) * 6;
+    progressFill.style.width = Math.max(pct,2) + "%";
+    stepCount.textContent = step.type === "question" ? n : "";
+  } else {
+    progressShell.style.display = "none";
+  }
+}
+
+function go(delta){
+  var next = state.stepIndex + delta;
+  if(next < 0 || next >= steps.length) return;
+  state.stepIndex = next;
+  saveState();
+  render();
+}
+
+/* ---------------- SCREENS ---------------- */
+
+function buildIntro(){
+  var s = el("div", {class:"card center"});
+  s.appendChild(el("div", {class:"brand"}, [
+    (function(){var d=document.createElement("div"); d.className="brand-mark"; d.innerHTML=BRAND_SVG; return d;})(),
+    el("div", {}, [
+      el("div", {class:"brand-name", html:"Conduz <em>Agro</em>"}),
+      el("div", {class:"brand-by", text:"Método Conduz Agro · Milena Gehrke"})
+    ])
+  ]));
+  s.appendChild(el("h1", {class:"display", text:"Diagnóstico da Autoridade Aplicada", style:"font-size:1.7rem;margin-bottom:14px;"}));
+  s.appendChild(el("p", {class:"lede", text:"O mapeamento para medir sua autoridade, excelência e destrave no agro. Descubra onde estão suas travas e como transformar conhecimento técnico em autoridade para conduzir produtores, decisões e processos."}));
+  s.appendChild(el("p", {class:"small-note", text:"Leva de 8 a 12 minutos. Suas respostas ficam salvas sozinhas — se fechar a página, você continua de onde parou.", style:"margin-bottom:26px;"}));
+  var btn = el("button", {class:"btn btn-primary", type:"button", text:"Começar meu diagnóstico →", onclick:function(){ go(1); }});
+  s.appendChild(btn);
+  return s;
+}
+
+function buildField(step){
+  var f = step.f;
+  var s = el("div", {class:"card"});
+  s.appendChild(el("div", {class:"eyebrow", text:"Antes de começar"}));
+  s.appendChild(el("h2", {class:"q-title", text:f.label}));
+  var input = el("input", {type:f.type, value: state.identity[f.id] || "", placeholder: f.type==="email" ? "seuemail@exemplo.com" : "" , style:"margin-top:18px;"});
+  input.addEventListener("input", function(){
+    state.identity[f.id] = input.value;
+    saveState();
+    refreshBtn();
+  });
+  s.appendChild(input);
+
+  var nav = el("div", {class:"nav"});
+  var back = el("button", {class:"btn btn-ghost", type:"button", text:"← Voltar", onclick:function(){ go(-1); }});
+  var next = el("button", {class:"btn btn-primary", type:"button", text:"Continuar →"});
+  function refreshBtn(){ next.disabled = !isAnswerable(step); }
+  next.addEventListener("click", function(){ if(isAnswerable(step)) go(1); });
+  refreshBtn();
+  nav.appendChild(back); nav.appendChild(next);
+  s.appendChild(nav);
+  setTimeout(function(){ input.focus(); }, 50);
+  return s;
+}
+
+function buildQuestion(step){
+  var q = step.q;
+  var meta = ESFERA_META[q.esfera];
+  var s = el("div", {class:"card"});
+  s.style.setProperty("--esfera-color", meta.color);
+  s.appendChild(el("div", {class:"eyebrow", text: meta.nome + " · " + q.subNome}));
+  s.appendChild(el("h2", {class:"q-title", text:q.q}));
+
+  var opts = el("div", {class:"options"});
+  q.o.forEach(function(label, idx){
+    var pts = 3 - idx; // primeira = 3, segunda = 2, terceira = 1
+    var selected = state.answers[q.id] === pts;
+    var btn = el("button", {type:"button", class:"opt" + (selected ? " selected" : "")}, [
+      el("span", {class:"opt-dot"}),
+      el("span", {text:label})
+    ]);
+    btn.addEventListener("click", function(){
+      state.answers[q.id] = pts;
+      saveState();
+      go(1);
+    });
+    opts.appendChild(btn);
+  });
+  s.appendChild(opts);
+
+  var nav = el("div", {class:"nav"});
+  var back = el("button", {class:"btn btn-ghost", type:"button", text:"← Voltar", onclick:function(){ go(-1); }});
+  nav.appendChild(back);
+  s.appendChild(nav);
+  return s;
+}
+
+function buildOutro(){
+  var allAnswered = QUESTIONS.every(function(q){ return typeof state.answers[q.id] === "number"; });
+  var s = el("div", {class:"card center"});
+  if(!allAnswered){
+    s.appendChild(el("h2", {class:"q-title", text:"Ainda faltam respostas"}));
+    s.appendChild(el("p", {class:"lede", text:"Parece que você pulou alguma pergunta. Volta e completa pra gerar seu resultado."}));
+    var back = el("button", {class:"btn btn-primary", type:"button", text:"← Voltar às perguntas", onclick:function(){ go(-1); }});
+    s.appendChild(back);
+    return s;
+  }
+  return buildResult();
+}
+
+/* ---------------- SCORING ---------------- */
+
+function sumEsfera(esfera){
+  var total = 0;
+  QUESTIONS.forEach(function(q){ if(q.esfera === esfera) total += state.answers[q.id]; });
+  return total;
+}
+function pctEsfera(esfera){
+  var n = ESFERA_META[esfera].n;
+  var raw = sumEsfera(esfera);
+  return Math.round(((raw - n) / (n*2)) * 100);
+}
+function bandFor(pct, labels){
+  if(pct >= 80) return {label:labels[3], tier:3};
+  if(pct >= 60) return {label:labels[2], tier:2};
+  if(pct >= 40) return {label:labels[1], tier:1};
+  return {label:labels[0], tier:0};
+}
+function subdims(){
+  var map = {};
+  QUESTIONS.forEach(function(q){
+    if(!map[q.sub]) map[q.sub] = {sub:q.sub, nome:q.subNome, esfera:q.esfera, qs:[]};
+    map[q.sub].qs.push(q);
+  });
+  return Object.keys(map).map(function(k){
+    var d = map[k];
+    var n = d.qs.length;
+    var raw = d.qs.reduce(function(acc,q){ return acc + state.answers[q.id]; }, 0);
+    d.pct = Math.round(((raw - n) / (n*2)) * 100);
+    return d;
+  });
+}
+
+function classify(pct){
+  if(pct >= 80) return "alta";
+  if(pct >= 40) return "media";
+  return "baixa";
+}
+
+var PERFIS = [
+  {nome:"O Técnico que Sabe, mas Não Conduz", cond:function(t,e,c){return t==="alta" && e!=="baixa" && c==="baixa";},
+   desc:"Conhece o processo, mas ainda entrega muito conhecimento e pouca condução."},
+  {nome:"O Técnico Travado", cond:function(t,e,c){return t==="alta" && e==="baixa" && c==="media";},
+   desc:"O conhecimento existe, mas insegurança, perfeccionismo ou medo de errar impedem que ele seja colocado em prática."},
+  {nome:"O Condutor em Desenvolvimento", cond:function(t,e,c){return t==="media" && e==="alta" && (c==="media"||c==="alta");},
+   desc:"Tem boa base para crescer, mas precisa estruturar método, processo e posicionamento."},
+  {nome:"O Condutor Estratégico", cond:function(t,e,c){return t==="alta" && e==="alta" && c==="alta";},
+   desc:"Domina, sustenta e conduz."}
+];
+
+function buildResult(){
+  var pT = pctEsfera("tecnica"), pE = pctEsfera("emocional"), pC = pctEsfera("conducao");
+  var geral = Math.round((pT + pE + pC) / 3);
+  var bandGeral = bandFor(geral, GERAL_LABELS);
+
+  var dims = subdims().sort(function(a,b){ return a.pct - b.pct; });
+  var travaPrincipal = dims[0];
+  var travaSecundaria = dims[1];
+  var forcaPrincipal = dims[dims.length-1];
+  var gap = forcaPrincipal.pct - travaPrincipal.pct;
+
+  var tCl = classify(pT), eCl = classify(pE), cCl = classify(pC);
+  var perfil = null;
+  for(var i=0;i<PERFIS.length;i++){ if(PERFIS[i].cond(tCl,eCl,cCl)){ perfil = PERFIS[i]; break; } }
+
+  var s = el("div", {class:"card"});
+
+  var hero = el("div", {class:"result-hero"});
+  hero.appendChild(el("div", {class:"eyebrow", text:"Índice Conduz Agro", style:"justify-content:center;"}));
+  var idxEl = el("div", {class:"result-index", text:"0%"});
+  hero.appendChild(idxEl);
+  var bandEl = el("span", {class:"result-band", text:bandGeral.label});
+  hero.appendChild(bandEl);
+  s.appendChild(hero);
+
+  var rows = el("div", {class:"esfera-rows"});
+  [["tecnica",pT],["emocional",pE],["conducao",pC]].forEach(function(pair){
+    var key = pair[0], pct = pair[1];
+    var meta = ESFERA_META[key];
+    var band = bandFor(pct, meta.labels);
+    var row = el("div", {class:"esfera-row"});
+    var head = el("div", {class:"esfera-row-head"}, [
+      el("span", {class:"esfera-row-name", text:meta.nome}),
+      el("span", {class:"esfera-row-pct", text:pct + "%"})
+    ]);
+    row.appendChild(head);
+    var bar = el("div", {class:"esfera-bar"});
+    var fill = el("div", {class:"esfera-bar-fill", style:"background:"+meta.color+";"});
+    bar.appendChild(fill);
+    row.appendChild(bar);
+    row.appendChild(el("div", {class:"esfera-row-label", text:band.label}));
+    rows.appendChild(row);
+    setTimeout(function(f,p){ return function(){ f.style.width = Math.max(p,3)+"%"; }; }(fill,pct), 250);
+  });
+  s.appendChild(rows);
+
+  var travaBlock = el("div", {class:"trava-block"});
+  travaBlock.appendChild(el("h3", {text:"Onde está a sua trava"}));
+  travaBlock.appendChild(el("p", {class:"small-note", text:"Cada ponto abaixo é o padrão das suas respostas naquele tema específico — não é uma nota exata (são poucas perguntas por tema), é uma direção pra olhar com mais atenção na sua jornada.", style:"margin:-6px 0 16px;"}));
+  travaBlock.appendChild(el("div", {class:"trava-item"}, [
+    el("span", {class:"trava-tag", text:"🚨"}),
+    el("div", {class:"trava-text"}, [
+      el("b", {text:travaPrincipal.nome + " ("+ESFERA_META[travaPrincipal.esfera].nome+")"}),
+      el("span", {text:"Sua trava principal"})
+    ])
+  ]));
+  travaBlock.appendChild(el("div", {class:"trava-item"}, [
+    el("span", {class:"trava-tag", text:"⚠️"}),
+    el("div", {class:"trava-text"}, [
+      el("b", {text:travaSecundaria.nome + " ("+ESFERA_META[travaSecundaria.esfera].nome+")"}),
+      el("span", {text:"Trava secundária"})
+    ])
+  ]));
+  travaBlock.appendChild(el("div", {class:"trava-item"}, [
+    el("span", {class:"trava-tag", text:"💎"}),
+    el("div", {class:"trava-text"}, [
+      el("b", {text:forcaPrincipal.nome + " ("+ESFERA_META[forcaPrincipal.esfera].nome+")"}),
+      el("span", {text:"Sua principal força"})
+    ])
+  ]));
+  s.appendChild(travaBlock);
+
+  if(gap >= 25){
+    var insight = el("div", {class:"insight"}, [
+      el("b", {text:"Você sabe mais do que consegue demonstrar."}),
+      el("span", {text:"A distância entre sua força ("+forcaPrincipal.nome+") e sua trava principal ("+travaPrincipal.nome+") é grande. Isso costuma significar que o conhecimento existe, mas ainda não está sendo convertido em autoridade percebida — é exatamente o que a mentoria trabalha primeiro."})
+    ]);
+    s.appendChild(insight);
+  }
+
+  if(perfil){
+    var pBlock = el("div", {class:"perfil-block"});
+    pBlock.appendChild(el("div", {class:"eyebrow", text:"Seu padrão se parece com"}));
+    pBlock.appendChild(el("h3", {class:"display", text:perfil.nome}));
+    pBlock.appendChild(el("p", {text:perfil.desc}));
+    s.appendChild(pBlock);
+  }
+
+  s.appendChild(el("p", {class:"footer-note", text:"Esse resultado é o ponto de partida da sua jornada no Conduz Agro — vamos aprofundar cada trava juntas nas próximas sessões."}));
+
+  var sendState = {sent:false};
+  var sendBtn = el("button", {class:"btn btn-primary", type:"button", text:"Enviar resultado e continuar →", style:"width:100%;margin-top:22px;"});
+  sendBtn.addEventListener("click", function(){
+    if(sendState.sent) return;
+    sendState.sent = true;
+    sendBtn.textContent = "Enviado ✓";
+    sendBtn.disabled = true;
+    sendToSheet({
+      nome: state.identity.nome || "",
+      email: state.identity.email || "",
+      indice_geral: geral,
+      tecnica: pT, emocional: pE, conducao: pC,
+      trava_principal: travaPrincipal.nome, trava_secundaria: travaSecundaria.nome, forca_principal: forcaPrincipal.nome,
+      perfil: perfil ? perfil.nome : "",
+      respostas: state.answers
+    });
+  });
+  s.appendChild(sendBtn);
+
+  setTimeout(function(){
+    var target = geral, cur = 0;
+    var step = Math.max(1, Math.round(target/24));
+    var t = setInterval(function(){
+      cur += step;
+      if(cur >= target){ cur = target; clearInterval(t); }
+      idxEl.textContent = cur + "%";
+    }, 20);
+  }, 150);
+
+  return s;
+}
+
+function sendToSheet(payload){
+  if(!SHEETS_ENDPOINT_URL || SHEETS_ENDPOINT_URL.indexOf("COLE_AQUI") === 0){
+    return; // endpoint ainda não configurado — silencioso, não trava a experiência
+  }
+  try{
+    fetch(SHEETS_ENDPOINT_URL, {
+      method:"POST",
+      mode:"no-cors",
+      headers:{"Content-Type":"text/plain"},
+      body: JSON.stringify(payload)
+    });
+  }catch(e){}
+}
+
+function render(){
+  var step = steps[state.stepIndex];
+  stage.innerHTML = "";
+  updateChrome(step);
+  var screen;
+  if(step.type === "intro") screen = buildIntro();
+  else if(step.type === "field") screen = buildField(step);
+  else if(step.type === "question") screen = buildQuestion(step);
+  else screen = buildOutro();
+  stage.appendChild(screen);
+  window.scrollTo({top:0, behavior:"instant" in window ? "instant" : "auto"});
+}
+
+render();
+})();
+</script>

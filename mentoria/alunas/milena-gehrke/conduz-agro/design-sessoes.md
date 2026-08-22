@@ -1,6 +1,6 @@
 # Design de Sessões — Conduz Agro
 
-> Status: RASCUNHO v2 — aguardando aprovação (QG-MC-005)
+> Status: ✓ APROVADO v2 (QG-MC-005) — 21/08/2026
 > Executa contra: `estrutura-programa.md` v2 (2 etapas) + `prd.md`
 > Formato padrão de sessão 1:1 (60-90 min): Check-in (5-10min) → Review de ações (10-15min) → Tema central (30-40min) → Plano de ação (10-15min) → Fechamento (5min)
 > Toda sessão fecha com a atividade da semana na Trilha Paralela de Aplicação Diária (ver `estrutura-programa.md`), sincronizada com o tema do dia
@@ -12,9 +12,10 @@
 Passagem condensada pelos 6 pilares. Meta: mentorado sai da Etapa 1 já tendo conduzido/cobrado melhor em pelo menos 1 caso real.
 
 ### Sessão 1 — Diagnóstico: onde você está hoje
-- **Objetivo:** o mentorado entende sua trava predominante (técnica, emocional, relacional ou estratégica) e nomeia seu papel atual
+- **Objetivo:** o mentorado entende sua trava predominante entre as 3 esferas do método (Técnica, Emocional, Condução) e nomeia seu papel atual
 - **Framework/ferramenta:** Diagnóstico da Autoridade Aplicada + teste DISC
 - **Exercício prático:** preencher o diagnóstico e revisar junto com a mentora
+- **Nota de produção:** candidato a virar diagnóstico interativo (Claude Artifact, sem domínio — mesmo molde do "Diagnóstico do Expert" da Incubadora: wizard com progresso salvo, resultado calculado, envio pra Google Sheet via Apps Script). Identidade visual já disponível (`branding.md` Seção 6, logos e paleta da apresentação da Milena) — construção liberada, não bloqueada mais pela Fase 6.
 - **Entregável:** diagnóstico preenchido + papel atual nomeado (executor / consultor / condutor estratégico)
 - **Conexão anterior:** abertura do programa
 - **Conexão próxima:** base pro plano de 12 meses da S2

@@ -1,0 +1,2 @@
+Nome do Produtor,Documento a Renovar,Data da Última Atualização,Data Prevista de Reativação,Status de Reativação,Observações
+"[exemplo — apague antes de usar] João Bezerra","CAR","15/03/2026","=EDATE(C2,12)","A vencer","Renovação anual padrão — sem pendência conhecida"

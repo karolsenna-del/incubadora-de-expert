@@ -49,7 +49,7 @@
 ## 4. Entregáveis Comprometidos
 
 **Sessões e estrutura:**
-- [ ] Diagnóstico inicial da postura profissional (trava técnica, emocional, relacional ou estratégica)
+- [ ] Diagnóstico inicial da postura profissional (3 esferas: Técnica, Emocional, Condução — Índice Conduz Agro + mapa de travas)
 - [ ] 24 sessões 1:1 quinzenais ao longo de 12 meses, seguindo os 6 módulos do método (ver Seção 5)
 - [ ] Suporte via WhatsApp direto com a mentora entre sessões
 - [ ] Protocolo Pessoal de Condução construído pelo mentorado ao final (sequência própria: Abrir → Ouvir → Investigar → Diagnosticar → Orientar → Propor → Negociar → Decidir → Conduzir → Acompanhar)
@@ -58,7 +58,7 @@
 - [ ] Indicadores de evolução + plano de continuidade pós-programa
 
 **Ferramentas do método (Portfólio Estratégico — a priorizar/produzir):**
-- [ ] Diagnóstico da Autoridade Aplicada — identifica se a trava é técnica, emocional, relacional ou estratégica
+- [ ] Diagnóstico da Autoridade Aplicada — 64 perguntas em 3 esferas (Técnica, Emocional, Condução), Índice Conduz Agro geral + mapa de travas por subdimensão (ver `diagnostico-aluno-completo.md`)
 - [ ] Simulador de Conversas que Conduzem — treino de respostas pra desconto, atraso, resistência, pressão
 - [ ] **Plano de Aplicação Diária** (trilha paralela, 15 min, 5x/semana) — não é tarefa pontual, é a metodologia inteira fatiada em prática diária ao longo dos 12 meses, sincronizada por quinzena com o tema da sessão em curso. Tática/de ação imediata na Etapa 1, reflexiva/de aprofundamento na Etapa 2. Detalhe em `estrutura-programa.md`
 - [ ] Mapa de Valor Percebido no Agro — traduz tarefas técnicas em riscos evitados e ganhos, reduz disputa por preço
@@ -71,6 +71,7 @@
 - [ ] Raio-X da Conversa com o Produtor — usado potencialmente como isca/diagnóstico de entrada (fora do programa 1:1, ferramenta de aquisição)
 - [ ] Agente de IA Técnico em Regularização — suporte técnico pontual: tira dúvida técnica e dá segurança em casos complexos de regularização/crédito rural. Não contradiz a exclusão do pilar técnico do método (Seção 7): a mentoria em si continua 100% comportamental, o agente é uma ferramenta de apoio que preenche a lacuna técnica sem virar conteúdo do programa
 - [ ] **Agente do Método Conduz Agro** — agente de IA de referência geral, cobre dúvida sobre qualquer conteúdo do método (os 6 módulos, framework, ferramentas). Diferente do Agente Técnico (só regularização) e do Preparador/Destrava (só situações pontuais de conversa/trava) — esse é o "tira-dúvida" de conhecimento do método em si, disponível a qualquer momento
+- [ ] **CRM Comercial Conduz Agro** — planilha (Google Sheets) pra Milena acompanhar produtores prospectados, pipeline até o fechamento, controle financeiro (a pagar/em dia/atrasado/quitado) e reativação anual pra atualização de documentação (CAR/CCIR/ITR vencem e precisam ser renovados). Adaptado do "Rastreador de Leads" do próprio Expert360º da Milena (M3.5). Execução do serviço em si (documentação, andamento do caso) fica coberta pelas ferramentas de condução de caso já existentes (Mapa do Caso, Destrava Condução) — o CRM é só a camada comercial/financeira/reativação. Ver `crm-comercial.md`
 
 *(Itens fora do escopo do programa 1:1 mas do ecossistema Conduz Agro: Rede de Apoio, Central de Condução do Atendimento, Conselho Estratégico, Sessão Estratégica avulsa, Radar de Evidências — ver Seção 7)*
 

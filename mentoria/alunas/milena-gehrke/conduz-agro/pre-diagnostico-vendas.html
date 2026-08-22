@@ -1,0 +1,437 @@
+<title>Pré-Diagnóstico Conduz Agro</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Quicksand:wght@500;600;700&display=swap');
+
+:root{
+  --paper:#F5F0E6;
+  --paper-raised:#EDE6D6;
+  --paper-deep:#E4DBC4;
+  --ink:#3D2817;
+  --ink-soft:#6B5A44;
+  --olive:#5C6B3F;
+  --olive-deep:#34401F;
+  --gold:#B07A16;
+  --gold-soft:#C08A1E;
+  --rust:#A8461F;
+  --rule:#D9CDB0;
+  --shadow: 0 1px 2px rgba(61,40,23,.06), 0 8px 24px -12px rgba(61,40,23,.25);
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Quicksand',system-ui,sans-serif;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:32px 16px 64px;
+}
+
+h1,h2,h3,.display{
+  font-family:'Fraunces',Georgia,serif;
+  font-weight:700;
+  text-wrap:balance;
+  color:var(--ink);
+  margin:0;
+}
+
+.wrap{width:100%;max-width:640px;}
+
+.progress-shell{width:100%;margin:0 0 28px;}
+.progress-track{position:relative;height:6px;border-radius:999px;background:var(--paper-deep);overflow:hidden;}
+.progress-fill{position:absolute;inset:0 auto 0 0;width:0%;background:linear-gradient(90deg,var(--olive),var(--gold-soft));border-radius:999px;transition:width .5s cubic-bezier(.22,.8,.28,1);}
+.progress-label{display:flex;justify-content:space-between;align-items:baseline;margin-top:8px;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+.progress-label b{color:var(--ink);font-weight:700;}
+
+.card{background:var(--paper-raised);border:1px solid var(--rule);border-radius:20px;box-shadow:var(--shadow);padding:40px 36px;animation:rise .45s cubic-bezier(.22,.8,.28,1);}
+@media (max-width:520px){ .card{padding:28px 22px;border-radius:16px;} }
+@keyframes rise{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+@media (prefers-reduced-motion:reduce){.card{animation:none;}.progress-fill{transition:none;}}
+
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:28px;}
+.brand-mark{width:40px;height:40px;flex:none;}
+.brand-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;line-height:1.15;}
+.brand-name em{font-style:normal;color:var(--olive);}
+.brand-by{font-size:.72rem;color:var(--ink-soft);letter-spacing:.03em;}
+
+.eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--esfera-color,var(--olive));margin-bottom:14px;}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--esfera-color,var(--olive));}
+
+.q-title{font-size:1.5rem;line-height:1.3;margin-bottom:6px;}
+.q-sub{font-size:.85rem;color:var(--ink-soft);margin-bottom:22px;}
+.lede{font-size:1rem;line-height:1.6;color:var(--ink-soft);margin:0 0 28px;}
+
+.options{display:flex;flex-direction:column;gap:10px;margin-bottom:8px;}
+.opt{display:flex;align-items:flex-start;gap:12px;text-align:left;width:100%;background:var(--paper);border:1.5px solid var(--rule);border-radius:14px;padding:16px 18px;font-family:'Quicksand',sans-serif;font-size:.98rem;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .15s ease,background .15s ease,transform .1s ease;}
+.opt:hover{border-color:var(--esfera-color,var(--olive));background:#fff;}
+.opt:active{transform:scale(.99);}
+.opt:focus-visible{outline:3px solid var(--gold-soft);outline-offset:2px;}
+.opt.selected{border-color:var(--esfera-color,var(--olive));background:#fff;box-shadow:inset 0 0 0 1px var(--esfera-color,var(--olive));}
+.opt-dot{flex:none;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--rule);margin-top:1px;display:flex;align-items:center;justify-content:center;}
+.opt.selected .opt-dot{border-color:var(--esfera-color,var(--olive));background:var(--esfera-color,var(--olive));}
+.opt.selected .opt-dot::after{content:"";width:8px;height:8px;border-radius:50%;background:#fff;}
+
+textarea,input[type=text],input[type=email]{width:100%;font-family:'Quicksand',sans-serif;font-size:1rem;color:var(--ink);background:var(--paper);border:1.5px solid var(--rule);border-radius:14px;padding:14px 16px;resize:vertical;}
+textarea:focus,input:focus{outline:3px solid var(--gold-soft);outline-offset:1px;border-color:var(--olive);}
+textarea{min-height:110px;}
+
+.scale{display:flex;gap:6px;flex-wrap:wrap;}
+.scale button{flex:1 1 auto;min-width:34px;padding:12px 0;border-radius:10px;border:1.5px solid var(--rule);background:var(--paper);font-family:'Quicksand',sans-serif;font-weight:700;cursor:pointer;color:var(--ink);}
+.scale button.selected{background:var(--ink);border-color:var(--ink);color:var(--paper);}
+.scale-labels{display:flex;justify-content:space-between;font-size:.74rem;color:var(--ink-soft);margin-top:8px;}
+
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:28px;gap:12px;}
+.btn{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.95rem;border-radius:999px;padding:13px 26px;cursor:pointer;border:none;transition:transform .1s ease,opacity .15s ease;}
+.btn:active{transform:scale(.97);}
+.btn-primary{background:var(--ink);color:var(--paper);}
+.btn-primary:disabled{opacity:.35;cursor:not-allowed;}
+.btn-ghost{background:transparent;color:var(--ink-soft);padding:13px 6px;}
+.btn-ghost:hover{color:var(--ink);}
+.btn:focus-visible{outline:3px solid var(--gold-soft);outline-offset:2px;}
+
+.center{text-align:center;}
+.small-note{font-size:.82rem;color:var(--ink-soft);line-height:1.6;}
+
+.result-hero{text-align:center;padding:6px 0 10px;}
+.result-band{display:inline-block;margin-top:6px;font-size:.9rem;font-weight:700;letter-spacing:.02em;padding:8px 18px;border-radius:999px;background:var(--paper-deep);color:var(--ink);}
+
+.signal-block{background:var(--olive-deep);color:#F5F0E6;border-radius:16px;padding:24px 24px;margin:22px 0;}
+.signal-block b{font-family:'Fraunces',serif;font-weight:700;display:block;margin-bottom:8px;font-size:1.15rem;}
+.signal-block p{margin:0;font-size:.95rem;line-height:1.55;}
+
+.footer-note{font-size:.78rem;color:var(--ink-soft);text-align:center;margin-top:18px;line-height:1.6;}
+#stage{width:100%;}
+</style>
+
+<div class="wrap">
+  <div class="progress-shell" id="progressShell" style="display:none;">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label"><span>Pré-Diagnóstico Conduz Agro</span><span><b id="stepCount">0</b>/<span id="stepTotal">0</span></span></div>
+  </div>
+  <div id="stage"></div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var STORAGE_KEY = "conduz-agro-pre-diagnostico-v1";
+var SHEETS_ENDPOINT_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
+
+var BRAND_SVG = '<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">'+
+  '<path d="M32 8c-7 0-12 5-12 11 0 4 2 7 5 9-4 2-7 6-7 10 0 6 6 10 14 10s14-4 14-10c0-4-3-8-7-10 3-2 5-5 5-9 0-6-5-11-12-11z" fill="#5C6B3F" opacity=".18"/>'+
+  '<path d="M32 30c5 3 8 6 8 12M32 30c-5 3-8 6-8 12" stroke="#34401F" stroke-width="2" stroke-linecap="round"/>'+
+  '<circle cx="32" cy="18" r="11" fill="none" stroke="#5C6B3F" stroke-width="2.2"/>'+
+  '<path d="M32 7v22" stroke="#B07A16" stroke-width="2"/>'+
+  '<path d="M25 12c2 2 2 5 0 7M39 12c-2 2-2 5 0 7" stroke="#B07A16" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>'+
+  '<path d="M32 42v14" stroke="#34401F" stroke-width="2.2" stroke-linecap="round"/>'+
+  '<path d="M32 48c-6 2-9 6-9 10M32 48c6 2 9 6 9 10M32 52c-4 1-6 4-6 7M32 52c4 1 6 4 6 7" stroke="#A8461F" stroke-width="1.6" stroke-linecap="round" opacity=".8"/>'+
+  '<circle cx="32" cy="55" r="3" fill="#B07A16"/>'+
+  '</svg>';
+
+/* ---------------- FIELDS (qualificação) ---------------- */
+var FIELDS = [
+  {id:"nome", type:"text", label:"Qual seu nome?"},
+  {id:"email", type:"email", label:"Qual seu e-mail?"},
+  {id:"whatsapp", type:"text", label:"Qual seu WhatsApp?", placeholder:"(DD) 9XXXX-XXXX"},
+  {id:"atuacao", type:"choice", label:"Qual sua área de atuação?",
+   o:["Consultor(a)","Projetista de crédito rural","Técnico(a)","Engenheiro(a)","Topógrafo(a)","Outro"]},
+  {id:"tempo", type:"choice", label:"Há quanto tempo você atua nesse mercado?",
+   o:["Até 1 ano","De 1 a 3 anos","De 3 a 6 anos","Acima de 6 anos"]},
+  {id:"faturamento", type:"choice", label:"Qual seu faturamento mensal aproximado hoje?",
+   o:["Ainda nada","Até R$3.000","De R$3.001 a R$8.000","De R$8.001 a R$15.000","Acima de R$15.000"]},
+  {id:"dificuldade", type:"textarea", label:"Qual sua maior dificuldade hoje pra conduzir seus atendimentos?"},
+  {id:"urgencia", type:"scale", label:"Numa escala de 1 a 10, qual sua urgência em resolver isso?"}
+];
+
+/* ---------------- TEASER (3 pares: fechada + aberta) ---------------- */
+var TEASER = [
+  {esfera:"tecnica", closedId:"t_fechada", openId:"t_aberta",
+   q:"Você entende o processo completo de regularização de um imóvel rural?",
+   o:["Sim, domino todas as etapas com segurança","Tenho conhecimento, mas com dúvidas em algumas fases","Tenho dificuldade em entender o processo completo"],
+   openLabel:"Me conta uma situação real recente em que essa parte técnica pesou — o que aconteceu?"},
+  {esfera:"emocional", closedId:"e_fechada", openId:"e_aberta",
+   q:"Você sente de fato segurança em todos os serviços que oferece?",
+   o:["Sim, absolutamente","Às vezes, dependendo da complexidade, fico um pouco inseguro","Na maioria das vezes sinto-me inseguro. Fico com receio de entregar algo incorreto para o produtor."],
+   openLabel:"Qual foi a última vez que você sentiu essa insegurança com um produtor? O que rolou?"},
+  {esfera:"conducao", closedId:"c_fechada", openId:"c_aberta",
+   q:"Na sua comunicação com o produtor, você explica a regularização como obrigação ou como oportunidade?",
+   o:["Explico como oportunidade, conectando com ganhos financeiros e segurança patrimonial","Às vezes explico como oportunidade, mas ainda foco muito no lado obrigatório","Explico mais como obrigação, cumprimento de exigências ou burocracia"],
+   openLabel:"Pensa na sua última conversa sobre isso com um produtor — como foi? O que você sentiu que travou ou funcionou?"}
+];
+
+var ESFERA_NOME = {tecnica:"Técnica", emocional:"Emocional", conducao:"Condução"};
+var ESFERA_COR = {tecnica:"var(--gold-soft)", emocional:"var(--rust)", conducao:"var(--olive)"};
+var ESFERA_LEITURA = {
+  tecnica:"o domínio técnico e a segurança pra executar o que você já sabe fazer",
+  emocional:"a segurança interna — confiar no próprio valor antes mesmo de abrir a boca com o produtor",
+  conducao:"como você leva esse conhecimento até o produtor — comunicar valor e conduzir a decisão, não só entregar um serviço"
+};
+
+/* build steps: intro, fields, teaser pairs (closed then open), outro */
+var steps = [{type:"intro"}];
+FIELDS.forEach(function(f){ steps.push({type:"field", f:f}); });
+TEASER.forEach(function(t){
+  steps.push({type:"teaser-closed", t:t});
+  steps.push({type:"teaser-open", t:t});
+});
+steps.push({type:"outro"});
+
+var totalSteps = FIELDS.length + (TEASER.length*2);
+document.getElementById("stepTotal").textContent = totalSteps;
+
+var state = {stepIndex:0, values:{}};
+try{
+  var saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+  if(saved && typeof saved.stepIndex === "number"){ state = saved; }
+}catch(e){}
+
+function saveState(){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){} }
+
+function el(tag, attrs, children){
+  var e = document.createElement(tag);
+  attrs = attrs || {};
+  Object.keys(attrs).forEach(function(k){
+    if(k === "text"){ e.textContent = attrs[k]; }
+    else if(k === "html"){ e.innerHTML = attrs[k]; }
+    else if(k.indexOf("on") === 0 && typeof attrs[k] === "function"){ e.addEventListener(k.slice(2), attrs[k]); }
+    else if(k === "style"){ e.setAttribute("style", attrs[k]); }
+    else{ e.setAttribute(k, attrs[k]); }
+  });
+  (children||[]).forEach(function(c){ if(c) e.appendChild(c); });
+  return e;
+}
+
+var stage = document.getElementById("stage");
+var progressShell = document.getElementById("progressShell");
+var progressFill = document.getElementById("progressFill");
+var stepCount = document.getElementById("stepCount");
+
+function progressableIndexOf(step){
+  var countable = steps.filter(function(s){ return s.type !== "intro" && s.type !== "outro"; });
+  return countable.indexOf(step) + 1;
+}
+
+function isAnswerable(step){
+  if(step.type === "field"){
+    var v = state.values[step.f.id];
+    if(step.f.type === "scale") return typeof v === "number";
+    return typeof v === "string" && v.trim().length > 0;
+  }
+  if(step.type === "teaser-closed") return typeof state.values[step.t.closedId] === "number";
+  if(step.type === "teaser-open") return typeof state.values[step.t.openId] === "string" && state.values[step.t.openId].trim().length > 0;
+  return true;
+}
+
+function updateChrome(step){
+  if(step.type === "intro" || step.type === "outro"){ progressShell.style.display = "none"; return; }
+  progressShell.style.display = "block";
+  var n = progressableIndexOf(step);
+  progressFill.style.width = Math.max((n/totalSteps)*100, 3) + "%";
+  stepCount.textContent = n;
+}
+
+function go(delta){
+  var next = state.stepIndex + delta;
+  if(next < 0 || next >= steps.length) return;
+  state.stepIndex = next;
+  saveState();
+  render();
+}
+
+function buildIntro(){
+  var s = el("div", {class:"card center"});
+  s.appendChild(el("div", {class:"brand"}, [
+    (function(){var d=document.createElement("div"); d.className="brand-mark"; d.innerHTML=BRAND_SVG; return d;})(),
+    el("div", {}, [
+      el("div", {class:"brand-name", html:"Conduz <em>Agro</em>"}),
+      el("div", {class:"brand-by", text:"Método Conduz Agro · Milena Gehrke"})
+    ])
+  ]));
+  s.appendChild(el("h1", {class:"display", text:"Pré-Diagnóstico Conduz Agro", style:"font-size:1.6rem;margin-bottom:14px;"}));
+  s.appendChild(el("p", {class:"lede", text:"Antes da nossa conversa, quero entender rapidinho sua situação — assim a gente já chega direto no que importa, sem perder tempo explicando o básico. Leva uns 6 minutos."}));
+  s.appendChild(el("p", {class:"small-note", text:"Suas respostas ficam salvas sozinhas — se fechar a página, você continua de onde parou.", style:"margin-bottom:26px;"}));
+  var btn = el("button", {class:"btn btn-primary", type:"button", text:"Começar →", onclick:function(){ go(1); }});
+  s.appendChild(btn);
+  return s;
+}
+
+function buildField(step){
+  var f = step.f;
+  var s = el("div", {class:"card"});
+  s.appendChild(el("div", {class:"eyebrow", text:"Sobre você"}));
+  s.appendChild(el("h2", {class:"q-title", text:f.label}));
+
+  var next;
+  function refreshBtn(){ next.disabled = !isAnswerable(step); }
+
+  if(f.type === "text" || f.type === "email"){
+    var input = el("input", {type:f.type, value: state.values[f.id] || "", placeholder: f.placeholder || "", style:"margin-top:18px;"});
+    input.addEventListener("input", function(){ state.values[f.id] = input.value; saveState(); refreshBtn(); });
+    s.appendChild(input);
+    setTimeout(function(){ input.focus(); }, 50);
+  } else if(f.type === "textarea"){
+    var ta = el("textarea", {placeholder:"", style:"margin-top:18px;"});
+    ta.value = state.values[f.id] || "";
+    ta.addEventListener("input", function(){ state.values[f.id] = ta.value; saveState(); refreshBtn(); });
+    s.appendChild(ta);
+    setTimeout(function(){ ta.focus(); }, 50);
+  } else if(f.type === "choice"){
+    var opts = el("div", {class:"options", style:"margin-top:18px;"});
+    f.o.forEach(function(label){
+      var selected = state.values[f.id] === label;
+      var btn = el("button", {type:"button", class:"opt"+(selected?" selected":"")}, [el("span",{class:"opt-dot"}), el("span",{text:label})]);
+      btn.addEventListener("click", function(){ state.values[f.id] = label; saveState(); go(1); });
+      opts.appendChild(btn);
+    });
+    s.appendChild(opts);
+  } else if(f.type === "scale"){
+    var scale = el("div", {class:"scale", style:"margin-top:18px;"});
+    for(var i=1;i<=10;i++){
+      (function(n){
+        var b = el("button", {type:"button", text:String(n), class: state.values[f.id]===n ? "selected" : ""});
+        b.addEventListener("click", function(){ state.values[f.id] = n; saveState(); render(); });
+        scale.appendChild(b);
+      })(i);
+    }
+    s.appendChild(scale);
+    s.appendChild(el("div", {class:"scale-labels"}, [el("span",{text:"Sem pressa"}), el("span",{text:"Preciso resolver agora"})]));
+  }
+
+  var nav = el("div", {class:"nav"});
+  var back = el("button", {class:"btn btn-ghost", type:"button", text:"← Voltar", onclick:function(){ go(-1); }});
+  nav.appendChild(back);
+  if(f.type !== "choice"){
+    next = el("button", {class:"btn btn-primary", type:"button", text:"Continuar →"});
+    next.addEventListener("click", function(){ if(isAnswerable(step)) go(1); });
+    refreshBtn();
+    nav.appendChild(next);
+  }
+  s.appendChild(nav);
+  return s;
+}
+
+function buildTeaserClosed(step){
+  var t = step.t;
+  var s = el("div", {class:"card"});
+  s.style.setProperty("--esfera-color", ESFERA_COR[t.esfera]);
+  s.appendChild(el("div", {class:"eyebrow", text: ESFERA_NOME[t.esfera]}));
+  s.appendChild(el("h2", {class:"q-title", text:t.q}));
+
+  var opts = el("div", {class:"options"});
+  t.o.forEach(function(label, idx){
+    var pts = 3 - idx;
+    var selected = state.values[t.closedId] === pts;
+    var btn = el("button", {type:"button", class:"opt"+(selected?" selected":"")}, [el("span",{class:"opt-dot"}), el("span",{text:label})]);
+    btn.addEventListener("click", function(){ state.values[t.closedId] = pts; saveState(); go(1); });
+    opts.appendChild(btn);
+  });
+  s.appendChild(opts);
+
+  var nav = el("div", {class:"nav"});
+  nav.appendChild(el("button", {class:"btn btn-ghost", type:"button", text:"← Voltar", onclick:function(){ go(-1); }}));
+  s.appendChild(nav);
+  return s;
+}
+
+function buildTeaserOpen(step){
+  var t = step.t;
+  var s = el("div", {class:"card"});
+  s.style.setProperty("--esfera-color", ESFERA_COR[t.esfera]);
+  s.appendChild(el("div", {class:"eyebrow", text: ESFERA_NOME[t.esfera] + " · pra você contextualizar"}));
+  s.appendChild(el("h2", {class:"q-title", text:t.openLabel}));
+  s.appendChild(el("p", {class:"q-sub", text:"Quanto mais contexto real, mais direta e útil vai ser nossa conversa."}));
+
+  var ta = el("textarea", {});
+  ta.value = state.values[t.openId] || "";
+  function refreshBtn(){ next.disabled = !isAnswerable(step); }
+  ta.addEventListener("input", function(){ state.values[t.openId] = ta.value; saveState(); refreshBtn(); });
+  s.appendChild(ta);
+
+  var nav = el("div", {class:"nav"});
+  nav.appendChild(el("button", {class:"btn btn-ghost", type:"button", text:"← Voltar", onclick:function(){ go(-1); }}));
+  var next = el("button", {class:"btn btn-primary", type:"button", text:"Continuar →"});
+  next.addEventListener("click", function(){ if(isAnswerable(step)) go(1); });
+  refreshBtn();
+  nav.appendChild(next);
+  s.appendChild(nav);
+  setTimeout(function(){ ta.focus(); }, 50);
+  return s;
+}
+
+function buildOutro(){
+  var allAnswered = FIELDS.every(function(f){
+    var v = state.values[f.id];
+    return f.type === "scale" ? typeof v === "number" : (typeof v === "string" && v.trim().length>0);
+  }) && TEASER.every(function(t){
+    return typeof state.values[t.closedId] === "number" && typeof state.values[t.openId] === "string" && state.values[t.openId].trim().length>0;
+  });
+
+  var s = el("div", {class:"card center"});
+  if(!allAnswered){
+    s.appendChild(el("h2", {class:"q-title", text:"Ainda faltam respostas"}));
+    s.appendChild(el("p", {class:"lede", text:"Parece que você pulou alguma pergunta. Volta e completa pra eu te mostrar sua leitura inicial."}));
+    s.appendChild(el("button", {class:"btn btn-primary", type:"button", text:"← Voltar", onclick:function(){ go(-1); }}));
+    return s;
+  }
+
+  var pts = {tecnica: state.values.t_fechada, emocional: state.values.e_fechada, conducao: state.values.c_fechada};
+  var pior = Object.keys(pts).sort(function(a,b){ return pts[a]-pts[b]; })[0];
+  var empatados = Object.keys(pts).filter(function(k){ return pts[k] === pts[pior]; });
+
+  s.appendChild(el("div", {class:"eyebrow", text:"Sua leitura inicial", style:"justify-content:center;"}));
+  s.appendChild(el("h2", {class:"display", text:"Obrigada por compartilhar isso com a gente.", style:"font-size:1.6rem;"}));
+
+  var sig = el("div", {class:"signal-block"});
+  if(empatados.length >= 2){
+    sig.appendChild(el("b", {text:"Pelas suas respostas, mais de uma frente pede atenção."}));
+    sig.appendChild(el("p", {text:"Isso é comum — as três esferas do método (Técnica, Emocional, Condução) se conectam. Na nossa conversa, vamos olhar juntas onde vale focar primeiro."}));
+  } else {
+    sig.appendChild(el("b", {text:"Pelas suas respostas, sua trava pode estar mais em "+ESFERA_NOME[pior]+"."}));
+    sig.appendChild(el("p", {text:"Isso costuma ter a ver com "+ESFERA_LEITURA[pior]+". Não é um veredito — é só um sinal inicial. Na sessão estratégica, a gente aprofunda isso com calma, já com o contexto que você contou aqui."}));
+  }
+  s.appendChild(sig);
+
+  s.appendChild(el("p", {class:"lede", text:"Guarda essa leitura — quando você se tornar mentorada, o Diagnóstico completo da Sessão 1 vai comparar exatamente com o que você respondeu hoje, pra mostrar sua evolução desde o primeiro contato."}));
+
+  var sendState = {sent:false};
+  var sendBtn = el("button", {class:"btn btn-primary", type:"button", text:"Enviar e agendar minha sessão →", style:"width:100%;"});
+  sendBtn.addEventListener("click", function(){
+    if(sendState.sent) return;
+    sendState.sent = true;
+    sendBtn.textContent = "Enviado ✓";
+    sendBtn.disabled = true;
+    sendToSheet(Object.assign({}, state.values, {trava_sinalizada: empatados.length>=2 ? empatados.join("+") : pior}));
+  });
+  s.appendChild(sendBtn);
+  s.appendChild(el("p", {class:"footer-note", text:"Depois de enviar, a Milena entra em contato pra confirmar o melhor horário pra sua sessão estratégica."}));
+  return s;
+}
+
+function sendToSheet(payload){
+  if(!SHEETS_ENDPOINT_URL || SHEETS_ENDPOINT_URL.indexOf("COLE_AQUI") === 0) return;
+  try{
+    fetch(SHEETS_ENDPOINT_URL, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain"}, body: JSON.stringify(payload)});
+  }catch(e){}
+}
+
+function render(){
+  var step = steps[state.stepIndex];
+  stage.innerHTML = "";
+  updateChrome(step);
+  var screen;
+  if(step.type === "intro") screen = buildIntro();
+  else if(step.type === "field") screen = buildField(step);
+  else if(step.type === "teaser-closed") screen = buildTeaserClosed(step);
+  else if(step.type === "teaser-open") screen = buildTeaserOpen(step);
+  else screen = buildOutro();
+  stage.appendChild(screen);
+  window.scrollTo({top:0, behavior:"auto"});
+}
+
+render();
+})();
+</script>

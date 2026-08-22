@@ -1,6 +1,6 @@
 # Estrutura do Programa — Conduz Agro
 
-> Status: RASCUNHO v2 — aguardando aprovação (QG-MC-004)
+> Status: ✓ APROVADO v2 (QG-MC-004) — 21/08/2026
 > Executa contra: `prd.md`
 > v2: reestruturado em 2 etapas (resultado comercial rápido + aprofundamento), mesma lógica do modelo da Karol (validação em 4 meses, acesso de 12 meses, aprofundamento depois)
 
@@ -72,7 +72,7 @@ Quatro soluções distintas, não uma dependente da outra — evita que tudo vir
 
 ## Assessment de Entrada
 
-**Diagnóstico da Autoridade Aplicada** (Sessão 1) — identifica se a trava predominante é técnica, emocional, relacional ou estratégica. Calibra ênfase nas sessões seguintes.
+**Diagnóstico da Autoridade Aplicada** (Sessão 1) — 64 perguntas em 3 esferas (Técnica, Emocional, Condução), gera Índice Conduz Agro geral + mapa de travas por subdimensão. Calibra ênfase nas sessões seguintes.
 
 ## Plano Personalizado
 
