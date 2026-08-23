@@ -86,7 +86,24 @@ precisa parar e esperar resposta dela).
 Terça, Quinta), sem perguntar de novo — até o dia em que a Karol mudar esse número
 explicitamente.
 **Aplica quando:** Escrevendo qualquer texto de Levantada de Mão que mencione número de
-vagas disponíveis.
+vagas disponíveis — **EXCETO quando a oferta da semana é o Expert360º** (ver regra de
+23/08/2026 logo abaixo, que substitui "vagas" por outro gancho nesse caso específico).
+
+## [23/08/2026] — "2 vagas fixas" NÃO se aplica quando a oferta da semana é o Expert360º
+**Origem:** Execução autônoma de teste (23/08, domingo, rotina agendada na nuvem) escreveu
+"Tô com 2 vagas abertas pra Expert360º" seguindo a regra de 21/08 ao pé da letra. Ao revisar,
+identificamos que isso é **escassez fabricada**: Expert360º é curso gravado/self-paced, sem
+capacidade limitada de verdade — diferente de Grupo/Individual/Diagnóstico Ferramentas, que
+têm limite real (agenda 1:1 da Karol). A regra de 21/08 foi pensada de forma genérica pra
+toda Levantada de Mão e não previu essa exceção.
+**Regra:** Quando a oferta-foco da semana (ciclo de 5) for **Expert360º**, NÃO usar a moldura
+"Tô com [N] vagas abertas" — não existe vaga real pra um curso gravado. Trocar por um CTA
+direto sem número: ex. "Comenta 'MÉTODO' que te mando o link" ou variação equivalente que não
+implique limite de capacidade. As outras 4 ofertas do ciclo (Diagnóstico Ferramentas, Sprint
+do Método, Grupo, Individual) continuam usando a moldura de vagas normalmente — só o
+Expert360º é exceção, por ser o único produto self-paced do ciclo.
+**Aplica quando:** Domingo/Terça/Quinta em que a oferta-foco do ciclo de 5 semanas for
+Expert360º (semana 2 do ciclo).
 
 ## [21/08/2026] — Banco de histórias reais existe e pode alimentar formatos 🔴 baseados em texto
 **Origem:** Karol perguntou se os formatos não davam pra puxar do banco de histórias que o
