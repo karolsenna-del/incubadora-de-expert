@@ -84,6 +84,13 @@ Diferente das Seções 1-3, aqui não tenho uma fonte validada da própria Milen
 
 **Nota:** os tons são leitura visual da apresentação, não valores exatos de arquivo de marca. Se for produzir peça de alto investimento (ex: página de vendas), vale pedir os arquivos-fonte (logo em SVG/PNG, hex exatos) direto com a Milena.
 
+**Assets reais recebidos (22-23/08)** — pasta `assets/`:
+- `logo-conduz-agro-480.png` — ícone (árvore-cérebro-raízes) recortado de `Logo destaque.png` (Downloads), 480×480, fundo cream sólido (disco), sem transparência.
+- `logo-conduz-agro-480-transparente.png` — mesmo ícone, disco de fundo removido via chroma-key (fundo transparente). **Versão usada nos diagnósticos** — evita a borda visível que o disco cream causava contra o `--paper-raised` do card. É a versão a reusar por padrão em qualquer peça digital nova.
+- `logo-metodo-mentoria-conduz-agro.png` — logo completa do método (selo circular com ícone + wordmark "MENTORIA CONDUZ AGRO" + tagline "Condução Estratégica para Resultados no Agro"), recortada de `Logo metodo.png` (Downloads), 617×700, fundo transparente. Ainda não aplicada em nenhuma peça — salva pra quando precisar (ex: capa de apresentação, assinatura de e-mail, material impresso).
+
+Essas três substituem o ícone SVG desenhado à mão (aproximação) que era usado antes. A versão transparente do ícone está embutida como base64 no `<img>` do brand-mark de `diagnostico-interativo.html` e `pre-diagnostico-vendas.html`.
+
 ## 7. Pendências antes de fechar QG-MC-007
 
 - [x] "Conduz Agro" confirmado como nome definitivo — 21/08/2026
