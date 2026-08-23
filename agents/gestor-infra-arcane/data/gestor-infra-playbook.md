@@ -850,7 +850,7 @@ Resumo: Clarity (clarity.microsoft.com) > criar projeto > copiar snippet > Lovab
 
 **Criado em:** 22/08/2026
 **Trigger:** Handoff do Expert-Stories pedindo automacao de postagem de Stories (`.auroq/handoffs/handoff-expert-stories-to-gestor-infra-arcane-20260821.yaml`)
-**Tempo estimado:** ja implementado — falta so teste supervisionado + habilitar cron
+**Tempo estimado:** implementado, testado e em producao (cron habilitado 23/08/2026)
 **Ferramentas:** Python (requests), Meta Graph API v21.0, Cloudinary, GitHub Actions
 
 **Pre-requisitos:**
@@ -865,11 +865,10 @@ Resumo: Clarity (clarity.microsoft.com) > criar projeto > copiar snippet > Lovab
 4. Salva o media_id da ULTIMA story publicada no state file (e essa que sera apagada no proximo dia)
 5. Loga em `business/instagram/stories/agendamentos-stories.md`, move a pasta pra `agendados/`, commita e da push
 
-**Workflow:** `.github/workflows/instagram-stories-scheduler.yml` — hoje so `workflow_dispatch`
-(manual). O cron (`schedule:`) esta comentado no arquivo com sugestao de horario (09h30 BRT) —
-so descomentar depois de 1 teste manual bem-sucedido de ponta a ponta, e depois de alinhar com
-o Ops o horario do gatilho que ativa o Expert-Stories pra gerar a imagem (a geracao precisa
-acontecer ANTES desse cron rodar, com folga).
+**Workflow:** `.github/workflows/instagram-stories-scheduler.yml` — cron ativo desde 23/08/2026,
+`30 13 * * *` (09h30 America/Cuiaba), 2h30 depois do gatilho do Expert-Stories (07h America/Cuiaba,
+rotina `trig_01KbSchvgTKq46LyG26SCM1a`), dentro da janela 8h-10h da Levantada de Mao.
+`workflow_dispatch` continua disponivel pra disparo manual quando precisar.
 
 **Como testar manualmente:**
 ```bash
@@ -882,11 +881,19 @@ gh run watch  # acompanhar
 - Fila vazia → script sai limpo (`sys.exit(0)`), sem erro — normal em dias sem Story gerada ainda
 - Sequencia com mais de 1 imagem publica todas, mas so a ULTIMA fica marcada pra deletar no dia seguinte (as intermediarias ja terao expirado sozinhas em 24h de qualquer forma)
 
-**Pendencias abertas (nao bloqueiam o build, bloqueiam ir pra producao com cron ativo):**
-- [ ] Confirmar permissao `instagram_manage_contents` no token atual (teste real, sandbox bloqueou verificacao via curl)
-- [ ] Resolver inconsistencia de data de expiracao do META_TOKEN (`vault.md`: bloco diz 29/08, checklist diz 22/08 — ver KB secao 1.6)
-- [ ] 1o teste manual (`workflow_dispatch`) com uma Story real do Expert-Stories
-- [ ] Habilitar cron so depois do teste OK + Ops confirmar horario do gatilho de geracao
+**Resolvido (23/08/2026):**
+- [x] 1o teste manual (`workflow_dispatch`) com uma Story real do Expert-Stories — Levantada de
+  Mao/Expert360o, domingo 23/08, media_id `18085430390658472`, publicada de verdade
+- [x] Cron habilitado apos o teste OK
+- [x] `git push` da rotina agendada do Expert-Stories destravado — bloqueio nao era GitHub App/org
+  (que exigia plano Team/Enterprise), era falta de `/web-setup` local sincronizando o token do
+  `gh` CLI com a conta Claude. Ver `docs/en/claude-code-on-the-web#github-authentication-options`
+- [x] Chromium na nuvem exigia `--no-sandbox` (roda como root) — corrigido no `render.sh`
+
+**Ainda em aberto:**
+- [ ] Confirmar permissao `instagram_manage_contents` no token atual pra deletar Stories antigas —
+  ainda nao testado de verdade (so a Story de 23/08 foi publicada, era a primeira, sem anterior
+  pra apagar); vai ser exercitado no proximo ciclo
 
 ---
 

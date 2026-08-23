@@ -1,11 +1,12 @@
 name: Instagram Stories Scheduler
 
 on:
-  workflow_dispatch:   # disparo manual pra teste supervisionado — cron entra depois de validado com caso real
-  # schedule:
-  #   - cron: '30 12 * * *'   # sugestao: 09h30 BRT (12h30 UTC) — depois que o Expert-Stories tiver
-  #                            # gatilho diario proprio gerando a imagem mais cedo (ver handoff Ops
-  #                            # 21/08/2026). Descomentar so apos 1o teste manual bem-sucedido.
+  workflow_dispatch:   # continua disponivel pra disparo manual/teste
+  schedule:
+    - cron: '30 13 * * *'   # 09h30 America/Cuiaba (13h30 UTC) — 2h30 de folga apos o gatilho
+                             # do Expert-Stories (07h America/Cuiaba, rotina trig_01KbSchvgTKq46LyG26SCM1a),
+                             # ainda dentro da janela 8h-10h da Levantada de Mao. Habilitado 23/08/2026
+                             # apos teste manual completo (texto+imagem+push+publicacao real validados).
 
 permissions:
   contents: write
