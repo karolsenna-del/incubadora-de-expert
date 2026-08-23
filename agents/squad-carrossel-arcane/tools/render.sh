@@ -64,7 +64,13 @@ else
 fi
 
 # Renderizar
+# --no-sandbox + --disable-dev-shm-usage: obrigatorios quando o Chromium roda como
+# root (ambientes de container/nuvem, ex: CCR) — sem isso, falha com
+# "Running as root without --no-sandbox is not supported" antes de renderizar nada.
+# Inofensivo em Mac/Windows local (roda sem ser root, as flags so nao fazem diferenca).
 "$CHROME" --headless \
+  --no-sandbox \
+  --disable-dev-shm-usage \
   --disable-gpu \
   --hide-scrollbars \
   --window-size="${WIDTH},${HEIGHT}" \
