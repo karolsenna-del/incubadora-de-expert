@@ -34,33 +34,32 @@ O medo real nunca foi a agenda. É a sensação de gastar os melhores anos resol
 Trinta minutos com processo valem mais que os mesmos 30 minutos rolando feed depois que todo mundo já dormiu.
 Me segue, ensino a estruturar isso todo dia.
 
-### 12h Reels YAP — "Eu não tinha tempo pra competir do jeito que todo mundo competia"
-**Gancho:** "Teve uma fase em que eu media meu valor pelo tanto que eu conseguia entregar, correndo atrás dos mesmos grandes players do mercado."
+### 12h Reels YAP — "Um mentor me disse uma verdade que doeu"
+**Gancho:** "Um mentor me disse: 'você não tem resultado pra competir com os grandes do mercado.' Doeu — mas ele tinha razão."
 **Contexto:** Depois da sociedade na agência, a Incubadora nasceu primeiro voltada a ensinar especialistas a lançarem — repetindo o meu próprio caminho de lançadora. O Euriler, mentor com quem eu trabalhava, foi direto: eu não tinha grandes resultados pra brigar de igual pra igual com quem já dominava lançamento havia anos.
 **Virada:** Ele disse que isso era irrelevante — porque o meu diferencial real nunca foi ter mais resultado de lançamento, era ser "a rainha do método". Fez sentido pelo meu histórico: auditoria, gestão, planejamento estratégico — eu enxergava método como modelo de negócio de um jeito que quem só lançava não enxergava. Não precisei arrumar mais tempo pra competir na régua errada. Precisei parar de competir nela.
-**Estrutura:** Abre 0-3s (a fase de medir valor pela régua errada) → Contexto (por que eu vinha do caminho de lançadora) → Virada (o diferencial real que ela revelou) → Fecha CTA seguir.
+**Estrutura:** Abre 0-3s (a frase direta do mentor, sem enrolação) → Contexto (por que eu vinha do caminho de lançadora) → Virada (o diferencial real que ela revelou) → Fecha CTA seguir.
 
 **Legenda:**
-Teve uma fase em que eu media meu valor pelo tanto que eu conseguia entregar correndo atrás dos mesmos grandes players do mercado.
 Um mentor me disse, sem rodeio: "você não tem resultado pra competir com os grandes players de lançamento." Doeu, mas tinha razão.
 O que ele apontou depois é que isso nunca foi o meu jogo. Meu diferencial real vinha do meu histórico — auditoria, gestão, planejamento estratégico. Não precisei de mais tempo pra brigar na régua errada. Precisei parar de competir nela.
 Às vezes "não tenho tempo" é sinal de que você tá competindo no jogo de outra pessoa.
 Me segue, ensino a achar seu jogo real no Expert360º.
 
 ### 17h Reels YAP — "Comece com o que você já tem"
-**Gancho:** "Você não precisa arrumar 'tempo livre' que nunca chega. Hoje, antes de guardar o celular à noite, bloqueia 30 minutos pra 1 etapa do teu método."
+**Gancho:** "Hoje, antes de guardar o celular à noite: bloqueia 30 minutos pra 1 etapa do teu método."
 **Contexto:** A maioria espera "sobrar" tempo — e tempo sobrando nunca chega, sempre tem outra urgência, outro filho pra ajudar com a tarefa, outro cliente pra responder.
 **Virada:** Não precisa de dia inteiro livre. Precisa de 30 minutos protegidos, sem notificação, numa etapa só. Trinta minutos repetidos por 5 dias valem mais que 1 domingo perdido tentando fazer tudo de uma vez.
-**Estrutura:** Abre 0-3s (dá a ordem direta, ligada à rotina real dela) → Contexto (por que "esperar sobrar tempo" não funciona) → Virada (como fazer, passo curto) → Fecha CTA seguir.
+**Estrutura:** Abre 0-3s (a ordem direta, curta, ligada a um gesto do fim do dia) → Contexto (por que "esperar sobrar tempo" não funciona) → Virada (como fazer, passo curto) → Fecha CTA seguir.
 
 **Legenda:**
-Você não precisa arrumar um dia inteiro livre. Bloqueia 30 minutos, hoje, antes de guardar o celular à noite, numa etapa só do teu método.
+Hoje, antes de guardar o celular à noite: bloqueia 30 minutos numa etapa só do teu método.
 Trinta minutos protegidos, repetidos, valem mais que um domingo imaginário que nunca chega.
 Faz isso agora, antes de rolar mais um feed no fim do dia.
 Me segue.
 
 ### 20h Carrossel Neutro — "As objeções que mais aparecem no meu direct"
-**Gancho:** "Você tem agenda cheia, sabe muito, e mesmo assim trava. Aqui estão as 5 frases que mais escuto de gente boa como você — e a resposta pra cada uma."
+**Gancho:** "Você sabe muito. E mesmo assim trava na hora de estruturar seu método."
 **Estrutura (8 slides):**
 1. Capa — só o gancho
 2. Isso aqui não é teoria. São as frases reais que mais recebo de quem já é muito capaz e ainda trava.
@@ -72,7 +71,7 @@ Me segue.
 8. Salva esse post — toda vez que uma dessas travar você, volta aqui. Me segue, ensino a resolver cada uma no Expert360º.
 
 **Legenda:**
-Você tem agenda cheia, sabe muito, e mesmo assim trava. 5 frases que mais escuto de gente boa como você, e a resposta curta pra cada uma.
+Você sabe muito. E mesmo assim trava na hora de estruturar seu método — 5 frases que mais escuto de gente boa como você, e a resposta curta pra cada uma.
 Nenhuma dessas é sobre capacidade. Todas são sobre não ter processo validado ainda.
 Salva esse post. Me segue, ensino a resolver cada uma no Expert360º.
 
@@ -101,53 +100,53 @@ Ninguém sabe tudo. Nem eu. O que ensina de verdade não é saber tudo — é sa
 Se você tá esperando virar enciclopédia pra começar, esse vídeo é desconfortável de propósito.
 Me segue.
 
-### 12h Reels YAP — "O medo de ficar pra trás me fez ignorar quem já sabia o caminho"
-**Gancho:** "Tive medo de ficar pra trás tanto quanto você tem hoje — só que resolvi isso do jeito errado."
-**Contexto:** Em 2021, entrei pro Insider do Érico Rocha com meu irmão — R$50 mil, pagos com o valor de um terreno que meu pai vendeu e doou. Lançamos copiando estratégia de outros players, achando que precisava me atualizar rápido pra não ficar pra trás.
-**Virada:** Investimos R$10 mil e não vendemos nada. Na análise do lançamento, uma mentora que já tinha faturado R$2 milhões avisou: "você é concursada vendendo pra empresário, isso não vai dar certo." Ignoramos. Fomos, nas minhas palavras, muito petulantes e arrogantes. O erro não foi faltar estudo ou ferramenta nova — foi recusar a experiência de quem já tinha andado o caminho.
-**Estrutura:** Abre 0-3s (o medo de ficar pra trás, resolvido do jeito errado) → Contexto (o investimento e a estratégia copiada às pressas) → Virada (o resultado e a lição sobre arrogância) → Fecha CTA seguir.
+### 12h Reels YAP — "Fui arrogante e me dei mal"
+**Gancho:** "Fui arrogante depois de pagar R$50 mil numa mentoria. Me dei mal."
+**Contexto:** Em 2021, entrei pro Insider do Érico Rocha com meu irmão — R$50 mil, pagos com o valor de um terreno que meu pai vendeu e doou. Lançamos copiando estratégia de outros players.
+**Virada:** Investimos R$10 mil e não vendemos nada. Na análise do lançamento, uma mentora que já tinha faturado R$2 milhões avisou: "você é concursada vendendo pra empresário, isso não vai dar certo." Ignoramos. Fomos, nas minhas palavras, muito petulantes e arrogantes. O erro não foi faltar estudo — foi recusar a experiência de quem já tinha andado o caminho.
+**Estrutura:** Abre 0-3s (o vexame concreto — pagou caro e se deu mal) → Contexto (o investimento e a estratégia copiada) → Virada (o aviso ignorado e a lição sobre arrogância) → Fecha CTA seguir.
 
 **Legenda:**
-Tive medo de ficar pra trás tanto quanto você tem hoje — só que resolvi isso do jeito errado.
-Uma mentora que já tinha faturado R$2 milhões me avisou antes de eu lançar: "você é concursada vendendo pra empresário, isso não vai dar certo." Ignorei. Investi R$10 mil copiando estratégia de outro player e não vendi nada.
-Fui arrogante — e o problema nunca foi faltar estudo ou tecnologia nova, foi recusar quem já sabia o caminho.
+Fui arrogante depois de pagar R$50 mil numa mentoria. Me dei mal.
+Em 2021 entrei pro Insider do Érico Rocha com meu irmão — pagamos com o valor de um terreno que meu pai vendeu e doou. Lançamos copiando estratégia de outro player, investimos R$10 mil e não vendemos nada.
+Uma mentora que já tinha faturado R$2 milhões tinha avisado antes: "você é concursada vendendo pra empresário, isso não vai dar certo." Ignorei — e paguei caro por isso, além do dinheiro.
 Me segue, ensino a ouvir isso antes de repetir meu erro.
 
 ### 17h Reels YAP — "O ajuste de 1% que ninguém faz"
-**Gancho:** "Antes de abrir mais um curso salvo 'pra depois', escreve numa frase o que você já sabe que ninguém mais aprendeu do jeito que você aprendeu."
-**Contexto:** A maioria trava tentando resumir "tudo que sabe" — vira uma lista infinita, ninguém termina, e o curso salvo continua fechado.
-**Virada:** Não precisa da lista inteira. Precisa de UMA frase concreta — o que você já resolveu que sua persona ainda não conseguiu resolver sozinha. Isso já é o início do método, hoje, sem precisar de mais um curso.
-**Estrutura:** Abre 0-3s (a ordem direta, ligada ao curso salvo) → Contexto (por que trava tentando listar tudo) → Virada (a frase certa, pequena) → Fecha CTA seguir.
+**Gancho:** "Hoje, esquece o que você estudou. Lista 3 resultados reais que você já entregou."
+**Contexto:** A maioria tenta provar valor listando curso, certificado, ano de faculdade — o que estudou, não o que já entregou de verdade.
+**Virada:** Ninguém compra diploma. Compram resultado que se repete. Olha pros 3 resultados que você listou — o que aparece igual entre eles já é a sua promessa transformadora, pronta pra testar no digital.
+**Estrutura:** Abre 0-3s (a ordem direta — nada de listar estudo) → Contexto (o erro de provar valor com credencial) → Virada (o padrão que vira promessa) → Fecha CTA seguir.
 
 **Legenda:**
-Antes de abrir mais um curso salvo "pra depois", escreve numa frase o que só você sabe resolver, do seu jeito.
-Não precisa listar tudo que você estudou. Precisa de uma frase concreta — isso já é o começo do método.
-Dez minutos agora valem mais que mais um curso guardado pra depois.
+Hoje, esquece o que você estudou. Lista 3 resultados reais que você já entregou pra alguém.
+Ninguém compra diploma. Compra resultado que se repete.
+O que aparecer igual nos 3 já é a sua promessa transformadora — pronta pra testar no digital.
 Me segue.
 
 ### 20h Carrossel Neutro — "O que falta quando você acha que precisa estudar mais"
-**Gancho:** "Você sente que tá ficando pra trás, que gente mais nova entende mais de ferramenta que você. Calma — quase nunca é isso que falta."
+**Gancho:** "Você sente que tá ficando pra trás — que gente mais nova já manja de Claude Code e você ainda nem abriu o app. Calma, quase nunca é isso que falta."
 **Estrutura (8 slides):**
 1. Capa — só o gancho
 2. Essa é a objeção que mais adia gente que já sabe o suficiente pra começar.
 3. Diploma é o que você estudou. Método é o que você viveu — e são coisas diferentes.
-4. Estudar mais não tem linha de chegada. Sempre existe mais curso, mais pós, mais certificado, mais ferramenta nova.
-5. O que falta de verdade, quase sempre: clareza de persona (pra quem exatamente você fala).
-6. E clareza de promessa (o que exatamente você entrega — não a lista do que você sabe).
+4. Estudar mais não tem linha de chegada. Sempre existe mais curso, mais pós, mais certificado, mais IA nova pra aprender sozinha (tipo Claude Code).
+5. Você não precisa estruturar isso sozinha. Ninguém devia.
+6. O que falta de verdade: clareza de persona e de promessa — isso o Expert360º estrutura junto com você, não estudando mais IA sozinha.
 7. Quem tem essas duas coisas claras já pode cobrar — com o conhecimento que já tem hoje, não com o que ainda vai estudar.
-8. Salva esse mapa. Me segue, ensino a montar essa clareza no Expert360º.
+8. Salva esse mapa. Me segue, ensino a montar isso junto com você no sprint do método (Expert360º).
 
 **Legenda:**
-Você sente que tá ficando pra trás, que gente mais nova entende mais de ferramenta que você. Quase nunca é isso que falta de verdade.
-Diploma é o que você estudou. Método é o que você viveu — e o que costuma faltar é clareza de persona e de promessa, não mais curso guardado.
-Salva esse mapa. Me segue, ensino a montar essa clareza no Expert360º.
+Você sente que tá ficando pra trás, que gente mais nova já manja de Claude Code e você ainda nem abriu o app. Quase nunca é isso que falta de verdade.
+Diploma é o que você estudou. Método é o que você viveu — e o que costuma faltar é clareza de persona e de promessa. Isso a gente estrutura junto, você não precisa aprender IA sozinha.
+Salva esse mapa. Me segue, ensino isso no sprint do método (Expert360º).
 
 ---
 
 ## Quarta 26/08 — Objeção do dia: "Marketing não é meu forte."
 
-### 07h Reels 7s · sem fala — "Uma pergunta sobre o que fica"
-**Gancho de tela:** "Tudo que você sabe hoje, de tanto trabalhar, um dia some com você — se nunca sair da sua cabeça pra fora."
+### 07h Reels 7s · sem fala — "Uma verdade sobre legado"
+**Gancho de tela:** "Você vai levar pro caixão todo o conhecimento que não virou método."
 
 **Legenda:**
 "Marketing não é meu forte" guarda um medo maior por trás: o de deixar tudo que você sabe morrer com você, sem nunca ter chegado em quem precisava.
@@ -156,56 +155,57 @@ Quem tem clareza de método não precisa aprender a "se vender". Precisa aprende
 Me segue, falo sobre isso a semana inteira.
 
 ### 09h Reels YAP — "Todo mundo quer resultado, ninguém quer processo"
-**Gancho:** "Você já pensou no que acontece com tudo que você sabe, se você nunca conseguir contar isso pra quem tá fora do seu círculo?"
-**Contexto:** Parece verdade que "marketing não é seu forte": tem gente tímida, que não gosta de câmera, que trava na hora de "se vender".
-**Virada:** O que trava não é falta de jeito com marketing — é falta de processo pra explicar o que você faz. Quem tem processo claro (persona, promessa, método com nome) não precisa performar nada — só precisa repetir a mesma explicação, sem inventar de novo a cada post.
-**Estrutura:** Abre 0-3s (o medo do conhecimento morrer guardado) → Contexto (o que as pessoas imaginam ser o problema) → Virada (o que de fato falta) → Fecha CTA seguir.
+**Gancho:** "Thiago Nigro me apresentou uma ferramenta japonesa que mudou como eu enxergo propósito. Chama Ikigai."
+**Contexto:** "Marketing não é meu forte" parece ser sobre jeito de comunicar. Quase nunca é. É sobre não ter clareza do próprio propósito — o que você ama, o que você é boa, e o que o mundo precisa de você, tudo junto.
+**Virada:** O Ikigai é o filtro que junta essas três coisas. Sem essa interseção clara, qualquer tentativa de "aprender marketing" vira decorar fórmula de copy sem substância. Com ela clara, você não precisa performar — só repetir a mesma verdade. Por isso inseri o Ikigai como exercício dentro do Módulo 0 do Expert360º, antes de qualquer coisa de comunicação.
+**Estrutura:** Abre 0-3s (a referência concreta — Thiago Nigro e o Ikigai) → Contexto (o que "marketing não é meu forte" esconde de verdade) → Virada (o Ikigai como filtro, e onde ele mora no método) → Fecha CTA seguir.
 
 **Legenda:**
-Você já pensou no que acontece com tudo que você sabe, se isso nunca sair do seu círculo de gente que já te conhece?
-Quem tem processo claro (pra quem fala, o que promete, o método com nome) não precisa performar nada. Só precisa repetir a mesma explicação, sem reinventar a cada post.
-O processo é o que faz o resto ficar fácil.
+Thiago Nigro me apresentou uma ferramenta japonesa que mudou como eu enxergo propósito: o Ikigai.
+"Marketing não é meu forte" quase nunca é sobre jeito de falar — é sobre não ter clara a interseção entre o que você ama, o que você é boa e o que o mundo precisa de você.
+Por isso o Ikigai é exercício do Módulo 0 do Expert360º, antes de qualquer comunicação.
 Me segue.
 
-### 12h Reels YAP — "Já tive minha voz na mão de gente que não acreditava em mim"
-**Gancho:** "Já tive minha comunicação inteira na mão de gente que não acreditava em mim — e isso quase apagou tudo que eu tinha pra ensinar."
-**Contexto:** Depois de sair do serviço público, fui convidada pra uma sociedade numa agência de lançamentos — os sócios seriam só investidores, eu desenhava a empresa como gostaria, achando que bastava fazer bem a minha parte.
-**Virada:** Os objetivos não estavam alinhados: virei, na prática, uma funcionária que prestava serviço — eles não acreditavam no meu método e me afastaram do ambiente de lançamento. A mesma coisa se repetiu depois em consultorias de controladoria sem relação com o meu negócio, só pelo fixo mensal. A lição: quem terceiriza a própria comunicação também terceiriza o próprio posicionamento.
-**Estrutura:** Abre 0-3s (a voz na mão de quem não acreditava nela) → Contexto (a sociedade e o desenho da empresa) → Virada (o afastamento e o padrão que se repetiu) → Fecha CTA seguir.
+### 12h Reels YAP — "O post que parece feito por qualquer um"
+**Gancho:** "Dá pra saber, em 3 segundos, quando um post foi feito só no Canva, sem ninguém por trás."
+**Contexto:** Isso acontece toda vez que o expert acha que "marketing não é seu forte" e passa a comunicação inteira pro social media, sem antes deixar claro pra ele quem é o Expert, quem é a Persona e o que é o Produto — a Autoridade Tríplice do método.
+**Virada:** Sem essa clareza, o social media preenche o vazio com o que tem à mão: template genérico, texto gerado por IA sem revisão, frase que qualquer concorrente também usaria. O post fica raso, sem essência — dá pra perceber que podia ser de qualquer perfil, altamente copiável. Terceirizar a produção é normal. Terceirizar a clareza de quem você é, nunca.
+**Estrutura:** Abre 0-3s (o detalhe concreto e reconhecível — o post genérico de Canva) → Contexto (o que causa isso — falta de Autoridade Tríplice clara) → Virada (o resultado raso e copiável) → Fecha CTA seguir.
 
 **Legenda:**
-Já tive minha comunicação inteira na mão de gente que não acreditava em mim — e isso quase apagou tudo que eu tinha pra ensinar.
-Entrei numa sociedade achando que bastava fazer bem o meu trabalho — que o resto (posicionamento, comunicação) outra pessoa cuidava. Virei uma funcionária que presta serviço. Eles não acreditavam no meu método e me afastaram.
-Quem terceiriza a própria comunicação também terceiriza o próprio posicionamento.
-Me segue, ensino a não repetir isso.
+Dá pra saber, em 3 segundos, quando um post foi feito só no Canva, sem ninguém por trás.
+Isso acontece quando o expert acha que "marketing não é seu forte" e passa a comunicação pro social media sem deixar claro quem é o Expert, quem é a Persona e o que é o Produto — a Autoridade Tríplice do método.
+Sem isso, o post fica raso, genérico, copiável por qualquer concorrente.
+Me segue, ensino a estruturar isso antes de terceirizar qualquer produção.
 
-### 17h Reels YAP — "Faça isso em 10 minutos hoje"
-**Gancho:** "Hoje, escreve numa frase só, pensando em alguém que nunca vai te conhecer pessoalmente: o que você quer que ela leve da sua experiência."
-**Contexto:** A maioria acha que precisa de "copy boa" ou fórmula pronta pra se comunicar bem com quem tá fora do próprio círculo.
-**Virada:** Não precisa. Uma frase honesta — o que você entrega, pra quem, e o que muda depois — já destrava mais clareza que semana de curso de marketing.
-**Estrutura:** Abre 0-3s (a ordem direta, pensando em alcançar quem tá fora do círculo) → Contexto (por que parece que precisa de "jeito com marketing") → Virada (a frase simples que resolve) → Fecha CTA seguir.
+### 17h Reels YAP — "O teste dos 10 segundos"
+**Gancho:** "Hoje, testa isso: explica o que você faz como se estivesse numa fila de pão, pra manicure."
+**Contexto:** A maioria só treina a explicação "profissional", cheia de termo técnico, pensando em quem já entende do assunto.
+**Virada:** Se você consegue explicar o que faz, em 10 segundos, pra alguém que não tem nenhum contexto — sua propaganda de fila de pão — você tem clareza de verdade. Se travar ou encher de jargão, é ali que o processo ainda não tá pronto, não é falta de jeito com marketing.
+**Estrutura:** Abre 0-3s (a ordem direta, com a cena concreta da fila de pão) → Contexto (o erro de só treinar a explicação técnica) → Virada (o que o teste revela) → Fecha CTA seguir.
 
 **Legenda:**
-Hoje, escreve numa frase só, pensando em alguém que nunca vai te conhecer pessoalmente: o que você quer que ela leve do que você sabe.
-Uma frase honesta destrava mais clareza que semana de curso de marketing.
-Faz isso agora, antes de esperar "aprender a se vender".
+Hoje, testa isso: explica o que você faz como se estivesse numa fila de pão, pra manicure — a propaganda de 10 segundos.
+Se você trava ou enche de termo técnico, o problema não é jeito com marketing. É processo que ainda não tá claro nem pra você.
+Quando sai fácil numa fila de pão, sai fácil em qualquer post.
 Me segue.
 
 ### 20h Carrossel Neutro — "O que um resort me ensinou sobre método"
-**Gancho:** "Você acha que 'marketing não é seu forte' porque acha que cada caso seu é único demais pra virar processo. Um resort me ensinou o contrário."
+**Gancho:** "Um resort onde fiquei tinha cardápio de travesseiro. Oito opções, antes de dormir."
 **Estrutura (8 slides):**
 1. Capa — só o gancho
-2. Uma amiga voltou de um resort encantada com uma coisa boba: um "menu de travesseiros" — 8 opções pra escolher antes de dormir.
-3. Achei genial. Não porque é luxo — porque é padrão bem feito.
-4. A gente acha que "meu caso é muito específico, não dá pra ter processo padrão". Errado.
-5. Padrão e personalização não são opostos. Padrão bem feito é o que permite personalizar sem reinventar a roda a cada cliente.
-6. Sem padrão, cada atendimento vira do zero — você refaz o raciocínio inteiro toda vez, e chama isso de "cuidado".
-7. Com padrão, você escolhe a variação certa dentro de um processo que já testou — e sobra energia pra parte que realmente exige você.
+2. Achei genial. Não porque é luxo — porque é padrão bem feito.
+3. A gente acha que "meu caso é muito específico, não dá pra ter processo padrão". Errado.
+4. Padrão e personalização não são opostos. Padrão bem feito é o que permite personalizar sem reinventar a roda a cada cliente.
+5. Sem padrão, cada atendimento vira do zero — você refaz o raciocínio inteiro toda vez, e chama isso de "cuidado".
+6. Com padrão, você escolhe a variação certa dentro de um processo que já testou — e sobra energia pra parte que realmente exige você.
+7. "Marketing não é meu forte" quase sempre é "eu ainda não estruturei meu processo".
 8. Marketing não é sua falha. Falta de processo é. Me segue, ensino a estruturar isso no Expert360º.
 
 **Legenda:**
-Você acha que "marketing não é seu forte" porque acha que cada caso seu é único demais pra virar processo. O menu de travesseiros de um resort — 8 opções antes de dormir — me ensinou o contrário.
-Padrão e personalização não são opostos: padrão bem feito é o que permite personalizar sem reinventar a roda a cada cliente novo.
+Um resort onde fiquei tinha cardápio de travesseiro. Oito opções, antes de dormir.
+Achei genial — não porque é luxo, porque é padrão bem feito. Padrão e personalização não são opostos: padrão bem feito é o que permite personalizar sem reinventar a roda a cada cliente novo.
+"Marketing não é meu forte" quase sempre é "eu ainda não estruturei meu processo".
 Me segue, ensino a estruturar isso no Expert360º.
 
 ---
@@ -519,8 +519,9 @@ Salva esse mapa e leva pra setembro. Me segue, começamos o mês novo juntos.
 - [x] **Pendência de material, não forçada:** os 4 slots de Domingo (balanço do mês, o que farei diferente, prepare setembro, o que funcionou) são estruturalmente numéricos/reflexivos por definição do próprio desafio — não há "urgência oculta" de vida a puxar sem inventar contexto (ex.: forçar "medo de envelhecer" num post de retrospectiva de métricas soaria artificial). Mantidos com tom reflexivo já ligado a legado/relevância onde coube (07h e 12h), sem forçar nos demais.
 - [x] Histórias reais usadas no 12h (7 dias, todas causo pessoal da Karol): Segunda — "A guinada pro método" (historias-trajetoria.md #18); Terça — "A Faixa Preta avisou, e ela foi arrogante" (#15); Quarta — "A sociedade na agência" (#10); Quinta — "Skin in the game das próprias alunas / babá x costureira" (#16); Sexta — "45 dias de férias na Austrália" (#17); Sábado — caso TRF1/dentista lançada por ela (`temas-do-momento.md`, radar 21/08, reservado pela Karol pra essa semana); Domingo — "Assessora no auge" + "Exonerada por telefone" (#9 e #13).
 - [x] Objeções usadas: as 6 primeiras do dossiê da persona Laura na ordem 1, 2, 3, 5, 7, 9 — "não tenho tempo", "preciso estudar mais", "marketing não é meu forte", "já tem muita gente fazendo", "não tenho seguidores", "tenho medo de me expor". Restam 4 objeções não usadas ("tenho medo de investir", "não sou boa com tecnologia", "minha vida offline já está boa", "parece complicado") — disponíveis pra próxima semana do desafio ou pro pool normal do squad.
-- [x] Casos mantidos de fora desta batelada, por cautela: Nanny Faggiano (figura pública, precisa de autorização antes de creditar a virada de posicionamento) e Milena Gehrke/Conduz Agro (aluna ativa, disponível como prova social mas não necessária nesta semana). Casos de mentee Bruno (contador) e Hélio (advogado-corretor), retirados do 12h no ajuste pós-Aria, seguem disponíveis pra outros slots/semanas.
-- [x] Regra de gênero (masculino genérico pro leitor/aluno; feminino só em 1ª pessoa da própria Karol ou referindo-se à persona Laura, que é mulher por definição do dossiê) mantida e revisada.
+- [x] Casos mantidos de fora desta batelada, por escolha de agenda (não mais por cautela — Karol autorizou nomear todos os alunos em 23/08, inclusive Nanny Faggiano): Nanny Faggiano e Milena Gehrke/Conduz Agro seguem disponíveis, reservados pra semana 05. Casos de mentee Bruno (contador) e Hélio (advogado-corretor), retirados do 12h no ajuste pós-Aria, seguem disponíveis pra outros slots/semanas.
+- [x] **Teste de direcionamento (decisão consciente da Karol, 23/08):** a partir do ajuste 2, o "você" de endereçamento direto (gancho/legenda, especialmente Segunda 07h/09h) passou a concordar no feminino ("sozinha", etc.) em vez do masculino genérico padrão do squad — a Karol confirmou explicitamente que quer testar falar direto com a persona Laura essa semana, mesmo sabendo que ~40% do público é masculino. É teste, não mudança permanente de regra: a Aria deve comparar performance dessa semana (endereçamento feminino) contra semanas anteriores (masculino genérico) no relatório de fechamento, pra decidir se vira padrão ou volta ao genérico.
+- [x] **Ajuste 3 — revisão linha a linha da Karol (23/08):** 2 regras gerais aplicadas ao documento inteiro — (1) legenda padrão 3-5 linhas, 07h até ~10 (conferidas as 35, todas já dentro do limite, nenhum corte necessário); (2) gancho precisa parar o scroll em 1-2s — cortado o padrão "frase-conceito que já entrega a moral" (identificado não só nos pontos citados pela Karol, mas também em Quinta 12h e Sexta 12h, que tinham o mesmo defeito — ajustados por consistência) em favor de curiosidade concreta (detalhe específico, citação direta, número real). 11 pontos corrigidos: Segunda 12h (gancho curto/direto, mesma história Euriler), Segunda 17h (gancho encurtado), Segunda 20h (ângulo "sabe muito e mesmo assim trava"), Terça 12h (gancho "paguei R$50 mil e me dei mal" — valor confirmado em `historias-trajetoria.md` #15, "R$50 mil, com desconto de R$57 mil" — sem pendência), Terça 17h (pergunta trocada de "o que estudou" pra "resultados que já entregou"), Terça 20h (cita Claude Code nominalmente + deixa claro que a Karol estrutura junto no sprint do método), Quarta 07h (gancho de legado/caixão), Quarta 09h (Ikigai + Thiago Nigro — verificado em `docs/knowledge/expert-mind/identidade/meu-ikigai.md`: "Foi ele que me apresentou o Ikigai — a exata interseção que estruturei como método", e o exercício é literalmente o M0.3 do curso), Quarta 12h (reescrito do zero — Autoridade Tríplice Expert/Persona/Produto, conteúdo raso de quem terceiriza sem essa clareza), Quarta 17h (teste da fila de pão/manicure, 10 segundos), Quarta 20h (capa agora abre com o detalhe concreto do menu de travesseiros, slide 2 ajustado pra não repetir o fato).
 - [x] CTA único "seguir" aplicado nos 35 posts. Seeding de oferta (Expert360º / Vendas Secretas / Venda Secreta) aplicado onde fez sentido natural, sem virar CTA de venda.
 - [ ] Gravação/postagem — Karol executa dia a dia; nenhum post ainda gravado.
 - [ ] Produção visual (Mack) e handoff pro squad de carrossel/Postador — não acionados nesta etapa, fora do escopo pedido.
@@ -528,3 +529,4 @@ Salva esse mapa e leva pra setembro. Me segue, começamos o mês novo juntos.
 ## Pool normal do squad
 
 Em pausa enquanto o desafio for prioridade. Pool "nova leva" (`base-inicial.md`) segue disponível pra quando a rotina normal do squad voltar — vários temas ainda não usados (Livelo/milhas, 13% conclusão de curso, autoridade silenciosa Forbes, reforma tributária, entre outros).
+
