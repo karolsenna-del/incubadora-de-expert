@@ -8,3 +8,4 @@
 
 | Data | Slug | Qtd Stories | Media IDs | Story anterior apagada |
 |------|------|-------------|-----------|-------------------------|
+| 23/08/2026 | expert360-domingo-2026-08-23 | 1 | 18085430390658472 | sim (ver log de execucao) |
