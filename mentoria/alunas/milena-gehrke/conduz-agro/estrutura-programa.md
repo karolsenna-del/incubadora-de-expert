@@ -59,14 +59,14 @@ Ferramenta contínua rodando em paralelo às 24 sessões, ao longo dos 12 meses 
 
 Quatro soluções distintas, não uma dependente da outra — evita que tudo vire gargalo no tempo da Milena:
 
-1. **Agente do Método Conduz Agro** (self-service, agente de IA) — tira-dúvida de referência geral sobre qualquer conteúdo do método (os 6 módulos, framework, ferramentas). Pra quando o mentorado esqueceu um conceito ou quer reconsultar algo já visto.
-2. **Preparador de Conversas Difíceis** (self-service, agente de IA/formulário) — o mentorado aciona sozinho quando tem uma conversa real difícil chegando (preço, cobrança, documento, limite). Resposta instantânea, sem esperar ninguém.
-3. **Destrava Condução** (self-service, agente de IA/formulário) — o mentorado aciona sozinho quando trava num caso pontual e não quer esperar a próxima sessão. Resposta instantânea.
+1. **Agente do Método Conduz Agro** (self-service, agente de IA, ilimitado) — tira-dúvida de referência geral sobre qualquer conteúdo do método (os 6 módulos, framework, ferramentas). Pra quando o mentorado esqueceu um conceito ou quer reconsultar algo já visto.
+2. **Preparador de Conversas Difíceis** (self-service, agente de IA/formulário, ilimitado) — o mentorado aciona sozinho quando tem uma conversa real difícil chegando (preço, cobrança, documento, limite). Resposta instantânea, sem esperar ninguém.
+3. **Destrava Condução — S.O.S. de Caso Real** (Milena resolve, não é self-service ilimitado — **corrigido 23/08**, ver `design-entregaveis.md` Seção 8) — o mentorado escreve um caso real travado usando a **Ficha de Inscrição** (contexto, produtor, trava percebida, o que já tentou), e a Milena ajuda a resolver. **Capado em 2 usos nos 12 meses** — alinha naturalmente com os checkpoints "aplicação em caso real" de S8 e S22 (`design-sessoes.md`), mas o mentorado pode acionar antes se precisar, respeitando o limite total.
 4. **WhatsApp direto com a mentora** — reservado pro que exige julgamento humano da Milena especificamente, quando as ferramentas acima não foram suficientes ou o caso é sensível demais pra um agente.
 
-**Fluxo:** mentorado tenta resolver com o agente/ferramenta self-service certo primeiro (dúvida de conteúdo → Agente do Método; conversa difícil chegando → Preparador; travou num caso → Destrava Condução) → se não resolver, escala pro WhatsApp humano.
+**Fluxo:** mentorado tenta resolver com o agente/ferramenta self-service certo primeiro (dúvida de conteúdo → Agente do Método; conversa difícil chegando → Preparador; travou de vez num caso real, dentro do limite de 2 → Destrava Condução via Ficha de Inscrição) → se não resolver, escala pro WhatsApp humano.
 
-**SLA do WhatsApp:** resposta em até 48h úteis *(a validar com a capacidade da Milena — como as três ferramentas self-service absorvem a maior parte da demanda pontual, o volume que chega no WhatsApp deve ser bem menor)*
+**SLA do WhatsApp:** resposta em até 48h úteis *(a validar com a capacidade da Milena — como as ferramentas self-service (Agente do Método, Preparador) absorvem a maior parte da demanda pontual, e o Destrava Condução é capado em 2 usos, o volume que chega no WhatsApp deve ser bem menor — corrigido 23/08)*
 
 *(Dúvida técnica de regularização é uma 5ª camada, separada dessas 4 — coberta pelo Agente de IA Técnico em Regularização, PRD Seção 4)*
 

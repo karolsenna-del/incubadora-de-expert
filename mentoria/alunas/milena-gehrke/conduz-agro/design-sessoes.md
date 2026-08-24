@@ -1,6 +1,6 @@
 # Design de Sessões — Conduz Agro
 
-> Status: ✓ APROVADO v2 (QG-MC-005) — 21/08/2026
+> Status: ✓ APROVADO v2 (QG-MC-005) — 21/08/2026 | **Addendum 23/08/2026** — linha de Validação de Coerência corrigida (Destrava Condução não é mais ilimitado, ver `design-entregaveis.md` Seção 8)
 > Executa contra: `estrutura-programa.md` v2 (2 etapas) + `prd.md`
 > Formato padrão de sessão 1:1 (60-90 min): Check-in (5-10min) → Review de ações (10-15min) → Tema central (30-40min) → Plano de ação (10-15min) → Fechamento (5min)
 > Toda sessão fecha com a atividade da semana na Trilha Paralela de Aplicação Diária (ver `estrutura-programa.md`), sincronizada com o tema do dia
@@ -222,5 +222,5 @@ Retoma os 6 pilares com profundidade — trabalho emocional mais denso, casos re
 - **Carga equilibrada:** cada sessão com 1 objetivo central ✓
 - **Conexões:** toda sessão referencia a anterior e prepara a próxima ✓
 - **Ferramentas do portfólio com uso definido:** Diagnóstico da Autoridade Aplicada (S1), Círculo de Controle (S3), Mapa do Caso (S4, S12), Simulador de Conversas (S6, S16), Mapa de Posicionamento (S7, S18), Mapa de Valor Percebido (S7), Protocolo Pessoal (S23-S24), Checklist de Evidências (S8, S12, S16, S20, S24 — 5 marcações cumulativas) ✓
-- **Suporte async com ferramentas concretas:** Preparador de Conversas Difíceis + Destrava Condução, disponíveis via WhatsApp em qualquer ponto do programa (ver `estrutura-programa.md`) ✓
+- **Suporte async com ferramentas concretas:** Preparador de Conversas Difíceis (self-service, ilimitado) + Destrava Condução — S.O.S. de Caso Real (capado em 2 usos nos 12 meses, via Ficha de Inscrição, coincide naturalmente com S8/S22) — disponíveis em qualquer ponto do programa dentro dos respectivos limites (ver `estrutura-programa.md`, corrigido 23/08) ✓
 - **Trilha diária:** roda em paralelo às 24 sessões, sincronizada por quinzena (ver `estrutura-programa.md`) ✓

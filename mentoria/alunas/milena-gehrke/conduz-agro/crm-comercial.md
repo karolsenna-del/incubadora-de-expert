@@ -1,6 +1,6 @@
 # CRM Comercial Conduz Agro
 **Ferramenta do Portfólio Estratégico — Google Sheets**
-*Milena usa esta planilha pra acompanhar produtores rurais prospectados, o pipeline até o fechamento, o financeiro de cada cliente e a reativação anual pra atualização de documentação.*
+*Planilha pra acompanhar produtores rurais prospectados, o pipeline até o fechamento, o financeiro de cada cliente e a reativação anual pra atualização de documentação. Entregue como template a cada aluno — cada mentorado roda o próprio pipeline com ela, no seu próprio negócio de regularização/crédito rural. Milena também usa a mesma estrutura no negócio dela (foi a origem do adaptado — ver abaixo), mas não é exclusiva dela: é ferramenta do Portfólio, entregue no kit de boas-vindas. Corrigido 23/08/2026 — antes registrada por engano como ferramenta interna, não entregável.*
 
 > Adaptado do **Rastreador de Leads** do próprio Expert360º da Milena (`M3.5 - Meu Rastreador de Leads`), com 2 abas em vez de 1: a lógica de pipeline vem de lá, o financeiro e a reativação anual são novos, específicos do negócio de regularização.
 > **Escopo:** só a camada comercial (prospecção → fechamento → financeiro) e a reativação. A execução do serviço em si (documentação, andamento técnico do caso) fica com as ferramentas de condução de caso do método (Mapa do Caso, Destrava Condução) — não duplicado aqui.

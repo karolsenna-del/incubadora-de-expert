@@ -1,6 +1,6 @@
 # Design de Entregáveis — Conduz Agro
 
-> Status: ✓ APROVADO (QG-MC-006) — 21/08/2026
+> Status: ✓ APROVADO (QG-MC-006) — 21/08/2026 | **Addendum 23/08/2026** (correção pós-Fase 7, ver Seção 8) — reabre pontualmente QG-MC-006 pras mudanças abaixo, sem invalidar o resto do gate
 > Executa contra: `prd.md` (Seção 4 — Entregáveis Comprometidos) + `estrutura-programa.md` + `design-sessoes.md`
 > Modalidade: Individual (1:1) — não há componente de turma/cohort
 
@@ -35,15 +35,19 @@ Já mapeadas no PRD (Seção 4) e com uso definido nas sessões (`design-sessoes
 | Ferramenta | O que mede/faz | Onde entra |
 |---|---|---|
 | Diagnóstico da Autoridade Aplicada + DISC | 30 perguntas (reduzido de 64 pra evitar fadiga), 3 esferas (Técnica/Emocional/Condução), Índice Conduz Agro geral + mapa de travas por subdimensão + perfil comportamental (DISC). Tem também uma versão ainda mais reduzida — o Pré-Diagnóstico de Vendas — pro lead, pré-matrícula. Ver `diagnostico-aluno-completo.md` | S1 (baseline) e S21/reaplicação (final); versão de vendas na sessão estratégica pré-matrícula |
-| Círculo de Controle da Condução | Separa o que depende do profissional / pode influenciar / está fora de controle | S3, revisitado sempre que a pressão de um caso pede |
+| Círculo de Controle da Condução | **Uso duplo (23/08).** (1) Interno — separa o que depende do profissional / pode influenciar / está fora de controle, reduz sensação de impotência diante da pressão. (2) Aplicado ao produtor — versão client-facing apresentada no ato de contratação: matriz de responsabilidade e cronograma mostrando as responsabilidades e prazos do próprio produtor E de terceiros envolvidos (cartório, banco), reduz ruído e cobrança indevida sobre o profissional | (1) S3, revisitado sempre que a pressão de um caso pede. (2) Entregue ao produtor no fechamento de cada atendimento — ferramenta de uso comercial contínuo da Milena/mentorado, não pontual de sessão |
 | Mapa do Caso | Demanda → problema real → riscos → próximo passo | S4 (versão rápida), S12 (versão avançada) |
 | Simulador de Conversas que Conduzem | Treino de resposta a objeção/pressão | S6, S16 |
 | Mapa de Posicionamento | Eu sou → Eu resolvo → Para quem → Como faço → Qual valor entrego | S7, S18 (revisado) |
 | Mapa de Valor Percebido no Agro | Traduz tarefa técnica em risco evitado/ganho — reduz disputa por preço | S7 |
+| Roteiro de Condução da Conversa *(adicionado 23/08)* | Fluxograma completo da prospecção à entrega do serviço contratado — scripts, ordem, comportamentos, com bifurcações condicionais (se o produtor responde X, segue caminho A; se responde Y, caminho B). Referência de consulta rápida, distinto do roteiro personalizado que a S5 produz pra 1 atendimento específico | Material de referência no kit de boas-vindas, base pro roteiro personalizado da S5 |
+| Raio-X da Conversa com o Produtor *(adicionado 23/08)* | **Uso duplo.** (1) Fora do programa — isca/diagnóstico de entrada pro lead (já previsto no PRD Seção 4). (2) Dentro do programa — aluno envia uma conversa real que teve com um produtor (texto/áudio transcrito), Milena ou agente de IA analisa, aponta erros de script e condução na negociação, sugere melhoria pro próximo atendimento | (1) Ferramenta de aquisição, fora do 1:1. (2) Uso contínuo do mentorado ao longo dos 12 meses, sob demanda — não preso a sessão específica |
 | Protocolo Pessoal de Condução | Sistema pessoal repetível (Abrir→Ouvir→Investigar→Diagnosticar→Orientar→Propor→Negociar→Decidir→Conduzir→Acompanhar) | S23-S24 |
 | Checklist de Evidências da Autoridade | Registro cumulativo de evolução — 5 marcações | S8, S12, S16, S20, S24 |
 | Plano de Aplicação Diária | Trilha paralela, 15min 5x/semana, sincronizada por quinzena | Contínuo, todos os 12 meses (formato de entrega — ver Seção 5) |
-| CRM Comercial Conduz Agro | Planilha (Sheets): pipeline de prospecção → fechamento + controle financeiro (a pagar/em dia/atrasado/quitado) + reativação anual pra renovar documentação. Adaptado do Rastreador de Leads do Expert360º (M3.5) da própria Milena. Execução do serviço fica com as ferramentas de condução de caso, não com o CRM | Uso contínuo da Milena no negócio dela (fora das sessões) — ver `crm-comercial.md` |
+| Destrava Condução (S.O.S. de Caso Real) *(corrigido 23/08 — ver Seção 8)* | Aluno escreve um caso real em que está travado, Milena ajuda a resolver — organiza a trava, a ação recomendada e o próximo passo. **Capado em 2 usos por mentorado nos 12 meses** (não é self-service ilimitado — correção da definição anterior). Acionado via Ficha de Inscrição, que o aluno preenche antes pra Milena já chegar com contexto, sem precisar de reunião só pra entender o caso | Os 2 usos coincidem naturalmente com S8 e S22 (checkpoints de "aplicação em caso real" já desenhados em `design-sessoes.md`) — mas o aluno pode acionar antes se ficar travado num caso urgente, respeitando o limite de 2 no total |
+| Ficha de Inscrição *(novo entregável, 23/08)* | Formulário curto que o aluno preenche antes de acionar o Destrava Condução: contexto do caso, quem é o produtor, qual a trava percebida, o que já tentou. Objetivo: Milena chega na sessão/retorno já com o contexto, sem gastar tempo de atendimento juntando informação básica | Preenchido pelo aluno sempre que for usar um dos 2 usos do Destrava Condução |
+| CRM Comercial Conduz Agro | Planilha (Sheets): pipeline de prospecção → fechamento + controle financeiro (a pagar/em dia/atrasado/quitado) + reativação anual pra renovar documentação. Adaptado do Rastreador de Leads do Expert360º (M3.5) da própria Milena. Execução do serviço fica com as ferramentas de condução de caso, não com o CRM. **Entregável ao aluno** (corrigido 23/08 — antes registrado por engano como ferramenta interna): cada mentorado recebe o template e roda o próprio pipeline de prospecção no negócio dele. Milena também usa a mesma estrutura no negócio dela | Entregue no kit de boas-vindas, uso contínuo do mentorado no próprio negócio (fora das sessões) — ver `crm-comercial.md` |
 
 **Nota de produção:** o Diagnóstico da Autoridade Aplicada é candidato natural a virar ferramenta interativa self-service (Claude Artifact, sem domínio — molde do "Diagnóstico do Expert" da Incubadora: wizard, progresso salvo, resultado calculado, respostas indo pra uma planilha). Identidade visual já disponível (`branding.md` Seção 6) — construção liberada.
 
@@ -51,9 +55,9 @@ Já mapeadas no PRD (Seção 4) e com uso definido nas sessões (`design-sessoes
 
 Não há comunidade (modalidade individual). Suporte já desenhado na Fase 3 (`estrutura-programa.md`, seção "Suporte Entre Sessões — 4 Camadas") — replicado aqui pra fechar o gate:
 
-1. **Agente do Método Conduz Agro** (self-service) — dúvida de referência sobre qualquer conteúdo do método
-2. **Preparador de Conversas Difíceis** (self-service) — antes de uma conversa real difícil (preço, cobrança, documento, limite)
-3. **Destrava Condução** (self-service) — quando trava num caso pontual e não quer esperar a próxima sessão
+1. **Agente do Método Conduz Agro** (self-service, ilimitado) — dúvida de referência sobre qualquer conteúdo do método
+2. **Preparador de Conversas Difíceis** (self-service, ilimitado) — antes de uma conversa real difícil (preço, cobrança, documento, limite)
+3. **Destrava Condução (S.O.S. de Caso Real)** — **capado em 2 usos nos 12 meses** *(corrigido 23/08 — antes descrito como self-service ilimitado, era confusão com "Aplicação em Caso Real"; ver Seção 3)*. Aciona via Ficha de Inscrição, Milena resolve o caso travado
 4. **WhatsApp direto com a Milena** — reservado pro que exige julgamento humano dela, SLA 48h úteis (a validar com a capacidade dela)
 
 *(Agente de IA Técnico em Regularização é uma 5ª camada separada, cobrindo dúvida técnica — não comportamental)*
@@ -75,11 +79,11 @@ Não há comunidade (modalidade individual). Suporte já desenhado na Fase 3 (`e
 - [x] Suporte via WhatsApp direto com a mentora — Seção 4 deste doc
 - [x] Protocolo Pessoal de Condução — S23-S24
 - [x] Plano de posicionamento 30/60/90 — S20 (parte do escopo revisado)
-- [x] Aplicação em caso real (simulação + atendimento real) — S8 e S22
+- [x] Aplicação em caso real (S8 e S22) = os 2 usos do Destrava Condução (S.O.S. de Caso Real) — unificado 23/08, ver Seção 8
 - [x] Indicadores de evolução + plano de continuidade — S24
-- [x] Todas as 13 ferramentas do Portfólio Estratégico — Seção 3 deste doc + `design-sessoes.md`
+- [x] Todas as ferramentas do Portfólio Estratégico, incluindo Roteiro de Condução da Conversa e Raio-X da Conversa com o Produtor (uso interno) — Seção 3 deste doc + `design-sessoes.md`
 
-**Zero gaps contra o PRD.**
+**Zero gaps contra o PRD (revalidado 23/08 pós-correção).**
 
 ## 7. Decisões fechadas (histórico)
 
@@ -89,3 +93,16 @@ Não há comunidade (modalidade individual). Suporte já desenhado na Fase 3 (`e
 4. Alumni/oferta de continuidade → fica pra quando houver 3+ mentorados formados, nome a definir na Fase 6 (21/08)
 
 **Oferta de próximo nível pós-programa** segue fora de escopo deste squad (é planejamento de esteira) — sinalizado pra retomar depois.
+
+## 8. Addendum 23/08/2026 — Correção pós-Fase 7
+
+Durante o empacotamento (Fase 7), a Karol identificou que a Planilha do Portfólio Estratégico (fonte original da Milena) tem duas linhas parecidas — "Plano de Aplicação por Caso Real (Destrava Condução)" e "Destrava Condução" — que geraram inconsistência entre os docs deste squad (`prd.md`, `estrutura-programa.md`, `design-sessoes.md` tratavam como coisas diferentes ou não deixavam claro). A Milena/Karol esclareceram: na concepção original é **uma ferramenta só** — um S.O.S. em que o aluno escreve seu caso real travado e a Milena ajuda a resolver — **com direito a 2 usos no período**, não self-service ilimitado.
+
+**Correções aplicadas:**
+1. Unificado "Aplicação em Caso Real" + "Destrava Condução" numa única ferramenta, capada em 2 usos (naturalmente alinhados a S8 e S22, mas com flexibilidade de uso antecipado)
+2. Criada a **Ficha de Inscrição** — formulário de intake que o aluno preenche antes de acionar o Destrava Condução, pra Milena não precisar de reunião só pra levantar contexto
+3. Adicionadas ao Portfólio duas ferramentas que estavam na planilha-fonte mas não tinham chegado nos docs do squad: **Roteiro de Condução da Conversa** (fluxograma da prospecção à entrega) e **Raio-X da Conversa com o Produtor** (uso interno — análise de conversas reais do aluno, além do uso já previsto como isca externa)
+4. Esclarecido o uso duplo do **Círculo de Controle da Condução** — versão interna (autoconhecimento do profissional, já existia) + versão aplicada ao produtor (matriz de responsabilidade/cronograma no ato de contratação, nova)
+5. ~~Marcado explicitamente que o CRM Comercial é ferramenta interna da Milena, não entregável ao aluno~~ — **CORRIGIDO no mesmo dia:** o CRM É entregável ao aluno também. Cada mentorado recebe o template pra rodar o próprio pipeline de prospecção de produtores no negócio dele — não é exclusivo do uso interno da Milena
+
+**Propagação necessária:** `prd.md` Seção 4, `estrutura-programa.md` (Suporte Entre Sessões), `empacotamento.md` — todos precisam refletir essas correções.
