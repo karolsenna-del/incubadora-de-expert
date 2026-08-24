@@ -177,7 +177,8 @@
 - No começo da carreira pública (empresa de saneamento), foi convidada pro **PNQS — Prêmio Nacional da Qualidade no Saneamento**
 - Preparou relatórios, colheu evidências, se preparou pra auditoria da premiação — com apenas **2 meses de prazo**, estando há só **6 meses na empresa**
 - O Diretor foi até a sala dela e combinou: **"se fôssemos premiados, eu iria para Vitória/ES receber o troféu"** — e ainda "cortou" a mão em acordo
-- Trabalharam muito, **foram premiados** — **e ela não foi levada pra premiação**
+- **Correção/detalhe (23/08/2026, confirmado pela Karol direto):** a promessa era levá-la junto com a Diretoria pra Vitória receber o troféu — não só ele ir sozinho
+- Trabalharam muito, **foram premiados** — **ele foi receber o prêmio, ela não foi levada pra premiação**, apesar da promessa
 - Nas palavras dela: "ali foi a primeira de muitas decepções que essa Diretoria me traria ao longo dos anos"
 
 **Leitura da squad:** estrutura clássica de promessa-quebrada — trabalho duro, resultado entregue, reconhecimento negado. Ponto de partida de um padrão que se repetiu (promoções prometidas e nunca cumpridas, ver #12).

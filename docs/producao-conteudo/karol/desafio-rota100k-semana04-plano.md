@@ -5,7 +5,7 @@
 > Tema central da semana: **quebrar objeção**. 09h de cada dia (Segunda a Sábado) é sempre "a objeção da vez" — uma das 10 objeções reais documentadas da persona Laura (`docs/knowledge/expert-business/dossie-personas.md`). 12h é história/bastidor real (prova pelo que a Karol viveu ou viu numa sessão de mentoria). 17h é prático/imediato (o que dá pra fazer hoje). Domingo foge da lógica de objeção-do-dia e segue o encerramento de mês que o próprio material pede.
 > CTA único do desafio: **seguir** (regra do material — nada de link, direct, GRUPO ou AULA).
 > Sem repetição de ganchos, histórias ou estruturas já usadas nas Semanas 02 e 03.
-> 2 causos reservados especificamente pra essa semana a pedido da Karol (21/08): o caso TRF1/harmonização facial (dentista que ela lançou) e o causo do menu de travesseiros do resort. Ambos usados abaixo.
+> 2 causos reservados especificamente pra essa semana a pedido da Karol (21/08): o caso TRF1/harmonização facial (dentista que ela lançou) e o causo do menu de travesseiros do resort — **correção (23/08): quem ficou no resort foi uma amiga da Karol, não a Karol; a amiga mandou foto do cardápio de travesseiro maravilhada, e a Karol puxou a lição de método a partir disso.** Ambos usados abaixo.
 
 > **REVISÃO 23/08 (pedido direto da Karol):** os ganchos da v1 ficaram genéricos, clichê de auto-ajuda ("agenda cheia é falta de prioridade") — não furam o scroll. Nova direção: o funil atual só capta quem já está com desejo ardente de ir pro digital, mas existem "milhares de Lauras" que ainda nem sabem que essa é a dor delas. Pra atingir essas, o GANCHO (principalmente 07h e a abertura do 09h/12h/17h) entra primeiro pela VIDA dela — agenda cheia, filhos, desejo de legado, medo de ficar tecnologicamente ultrapassada, medo de perder relevância ao envelhecer/aposentar — e só na virada conecta com estruturar conhecimento em método. Matéria-prima: `dossie-personas.md` → Urgências Ocultas + Frases de Empatia da Laura. Ganchos e aberturas reescritos abaixo; estrutura, objeção-do-dia, CTA e os 7 causos pessoais do 12h mantidos.
 
@@ -190,11 +190,11 @@ Se você trava ou enche de termo técnico, o problema não é jeito com marketin
 Quando sai fácil numa fila de pão, sai fácil em qualquer post.
 Me segue.
 
-### 20h Carrossel Neutro — "O que um resort me ensinou sobre método"
-**Gancho:** "Um resort onde fiquei tinha cardápio de travesseiro. Oito opções, antes de dormir."
+### 20h Carrossel Neutro — "O que a viagem de uma amiga me ensinou sobre método"
+**Gancho:** "Uma amiga voltou de viagem encantada com uma coisa só: o cardápio de travesseiro do resort. Oito opções, antes de dormir."
 **Estrutura (8 slides):**
 1. Capa — só o gancho
-2. Achei genial. Não porque é luxo — porque é padrão bem feito.
+2. Quando ela me contou, achei genial. Não porque é luxo — porque é padrão bem feito.
 3. A gente acha que "meu caso é muito específico, não dá pra ter processo padrão". Errado.
 4. Padrão e personalização não são opostos. Padrão bem feito é o que permite personalizar sem reinventar a roda a cada cliente.
 5. Sem padrão, cada atendimento vira do zero — você refaz o raciocínio inteiro toda vez, e chama isso de "cuidado".
@@ -203,8 +203,8 @@ Me segue.
 8. Marketing não é sua falha. Falta de processo é. Me segue, ensino a estruturar isso no Expert360º.
 
 **Legenda:**
-Um resort onde fiquei tinha cardápio de travesseiro. Oito opções, antes de dormir.
-Achei genial — não porque é luxo, porque é padrão bem feito. Padrão e personalização não são opostos: padrão bem feito é o que permite personalizar sem reinventar a roda a cada cliente novo.
+Uma amiga voltou de viagem encantada com uma coisa só: o cardápio de travesseiro do resort onde ficou. Oito opções, antes de dormir.
+Quando ela me contou, achei genial — não porque é luxo, porque é padrão bem feito. Padrão e personalização não são opostos: padrão bem feito é o que permite personalizar sem reinventar a roda a cada cliente novo.
 "Marketing não é meu forte" quase sempre é "eu ainda não estruturei meu processo".
 Me segue, ensino a estruturar isso no Expert360º.
 
@@ -395,7 +395,7 @@ Me segue.
 1. Capa — só o gancho
 2. No começo da minha carreira pública, fui convidada pro PNQS — Prêmio Nacional da Qualidade no Saneamento.
 3. Preparei relatórios, colhi evidências, me preparei pra auditoria da premiação — com só 2 meses de prazo e 6 meses de empresa.
-4. O Diretor combinou: "se formos premiados, eu vou pra Vitória receber o troféu."
+4. O Diretor prometeu, na cara dura: se fossem premiados, ele a levaria junto com a Diretoria pra Vitória receber o troféu.
 5. Trabalhamos muito. Fomos premiados. Eu não fui levada pra premiação.
 6. Foi a primeira de muitas decepções que aquela diretoria me traria — reconhecimento que dependia da vontade de outra pessoa.
 7. Foi aí que entendi: reconhecimento que depende de terceiro pode ser negado mesmo quando você entrega o resultado.
@@ -458,20 +458,23 @@ Não precisa de plano longo — precisa de 3 decisões antes do mês virar.
 Faz isso agora e agradece em setembro.
 Me segue.
 
-### 20h Carrossel Neutro — "O que funcionou nesse mês"
-**Gancho:** "O que funcionou em agosto — retrospectiva de 4 semanas de desafio, sem enfeite."
+### 20h Carrossel Neutro — "Só comecei a postar assim depois de validar o método"
+**Gancho:** "Só comecei a postar com essa intensidade depois de validar meu método. Não antes."
 **Estrutura (8 slides):**
 1. Capa — só o gancho
-2. Quatro semanas de desafio, cinco posts por dia, mesmos horários fixos. Chega de chutar — os números já respondem.
-3. Qual horário mais entregou: soma as views por slot (07h, 09h, 12h, 17h, 20h). Um deles vai destoar.
-4. Qual formato trouxe seguidor: views é alcance, seguidor é o que conta de verdade no desafio.
-5. Quantos seguidores o mês trouxe: essa é a sua linha de base pra setembro.
-6. Quais 3 ganchos repetiriam: marca os que mais geraram comentário e salvamento.
-7. O padrão que aparece na quarta semana: quase todo perfil tem um horário e um formato que puxam o resto — a decisão certa é dobrar a qualidade desses, não cortar os outros cedo demais.
-8. Quem corta cedo volta pro zero de alcance em duas semanas. Salva esse mapa e leva pra setembro. Me segue.
+2. Quatro semanas, cinco posts por dia, todo santo dia — foi o desafio que topei em agosto.
+3. Só topei porque já sabia 3 coisas antes de gravar o primeiro vídeo: com quem eu falo, o que vendo, como me posiciono.
+4. Sem isso resolvido, postar todo dia é gastar energia sem direção — vira ruído, não vira audiência.
+5. Quem começa achando que "postar mais" resolve geralmente ainda não validou persona, oferta nem processo.
+6. Antes de copiar minha rotina de 5 posts/dia, resolve isso primeiro — é o que sustenta o volume, não o contrário.
+7. Validar vem antes de escalar. Sempre nessa ordem, nunca ao contrário.
+8. Se você ainda não validou isso, comece por aí — não pelo calendário de postagem. Me segue, ensino essa ordem no Expert360º.
 
 **Legenda:**
-Retrospectiva de agosto, sem enfeite: qual horário mais entregou, qual formato trouxe seguidor de verdade, quantos seguidores o mês trouxe, e quais 3 ganchos merecem repetir.
+Só comecei a postar com essa intensidade — 5 vezes por dia, 4 semanas seguidas — depois de já ter validado meu método.
+Antes de qualquer volume de conteúdo, resolvi 3 coisas: com quem eu falo, o que vendo, como me posiciono. Sem isso, postar todo dia só gasta energia sem direção.
+Se você tá começando, não copia o volume — resolve a base primeiro. Validar vem antes de escalar.
+Me segue, ensino essa ordem no Expert360º.
 O padrão que mais aparece depois de 1 mês inteiro: quase todo perfil tem um par horário+formato que puxa o resto — a decisão certa é dobrar a qualidade dele, não abandonar os outros cedo demais.
 Salva esse mapa e leva pra setembro. Me segue, começamos o mês novo juntos.
 
@@ -523,6 +526,9 @@ Salva esse mapa e leva pra setembro. Me segue, começamos o mês novo juntos.
 - [x] **Teste de direcionamento (decisão consciente da Karol, 23/08):** a partir do ajuste 2, o "você" de endereçamento direto (gancho/legenda, especialmente Segunda 07h/09h) passou a concordar no feminino ("sozinha", etc.) em vez do masculino genérico padrão do squad — a Karol confirmou explicitamente que quer testar falar direto com a persona Laura essa semana, mesmo sabendo que ~40% do público é masculino. É teste, não mudança permanente de regra: a Aria deve comparar performance dessa semana (endereçamento feminino) contra semanas anteriores (masculino genérico) no relatório de fechamento, pra decidir se vira padrão ou volta ao genérico.
 - [x] **Ajuste 3 — revisão linha a linha da Karol (23/08):** 2 regras gerais aplicadas ao documento inteiro — (1) legenda padrão 3-5 linhas, 07h até ~10 (conferidas as 35, todas já dentro do limite, nenhum corte necessário); (2) gancho precisa parar o scroll em 1-2s — cortado o padrão "frase-conceito que já entrega a moral" (identificado não só nos pontos citados pela Karol, mas também em Quinta 12h e Sexta 12h, que tinham o mesmo defeito — ajustados por consistência) em favor de curiosidade concreta (detalhe específico, citação direta, número real). 11 pontos corrigidos: Segunda 12h (gancho curto/direto, mesma história Euriler), Segunda 17h (gancho encurtado), Segunda 20h (ângulo "sabe muito e mesmo assim trava"), Terça 12h (gancho "paguei R$50 mil e me dei mal" — valor confirmado em `historias-trajetoria.md` #15, "R$50 mil, com desconto de R$57 mil" — sem pendência), Terça 17h (pergunta trocada de "o que estudou" pra "resultados que já entregou"), Terça 20h (cita Claude Code nominalmente + deixa claro que a Karol estrutura junto no sprint do método), Quarta 07h (gancho de legado/caixão), Quarta 09h (Ikigai + Thiago Nigro — verificado em `docs/knowledge/expert-mind/identidade/meu-ikigai.md`: "Foi ele que me apresentou o Ikigai — a exata interseção que estruturei como método", e o exercício é literalmente o M0.3 do curso), Quarta 12h (reescrito do zero — Autoridade Tríplice Expert/Persona/Produto, conteúdo raso de quem terceiriza sem essa clareza), Quarta 17h (teste da fila de pão/manicure, 10 segundos), Quarta 20h (capa agora abre com o detalhe concreto do menu de travesseiros, slide 2 ajustado pra não repetir o fato).
 - [x] CTA único "seguir" aplicado nos 35 posts. Seeding de oferta (Expert360º / Vendas Secretas / Venda Secreta) aplicado onde fez sentido natural, sem virar CTA de venda.
+- [x] **Ajuste 4 — correções pontuais da Karol após revisão de Segunda a Quarta (23/08):** (1) **correção factual** — Quarta 20h ("cardápio de travesseiro") estava atribuído à própria Karol; corrigido pra deixar claro que foi uma amiga dela que ficou no resort e mandou a foto, Karol só puxou a lição de método a partir disso (título, gancho, slide 2 e legenda ajustados). (2) Sábado 20h ("O troféu que não veio") — slide 4 causava confusão de voz (citação em 1ª pessoa do Diretor misturando com a narração em 1ª pessoa da Karol); reescrito em discurso indireto ("ele mesmo iria pra Vitória") pra eliminar a ambiguidade, mantendo o fato conforme `historias-trajetoria.md` #11. (3) Domingo 20h ("O que funcionou nesse mês") — reescrito por pedido direto: sai o carrossel instrucional genérico sobre os números do desafio, entra o ângulo pessoal — ela só posta com essa intensidade agora porque já validou o método, e quem tá começando não deve gastar energia produzindo conteúdo em volume sem antes saber com quem fala, o que vende e como se posiciona.
+- [x] **Ajuste 5 — correção factual da Karol (23/08):** slide 4 do "troféu que não veio" (Sábado 20h) estava impreciso — a promessa do Diretor não era só ele ir sozinho, era levá-la junto com a Diretoria. Corrigido pra "ele a levaria junto com a Diretoria pra Vitória receber o troféu"; ele foi, ela não foi levada, apesar do combinado. Fonte `historias-trajetoria.md` #11 também atualizada com esse detalhe pra não se perder em usos futuros.
+- [ ] **Revisão da Karol cobre só Segunda a Quarta (23/08).** Quinta, Sexta, Sábado e Domingo (exceto os pontos dos Ajustes 4 e 5 acima) ainda não foram revisados linha a linha por ela — tratar como rascunho, não como aprovado, até ela confirmar.
 - [ ] Gravação/postagem — Karol executa dia a dia; nenhum post ainda gravado.
 - [ ] Produção visual (Mack) e handoff pro squad de carrossel/Postador — não acionados nesta etapa, fora do escopo pedido.
 
