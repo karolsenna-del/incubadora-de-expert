@@ -1,38 +1,51 @@
-# Setup — Ferramentas do Portfólio (Círculo de Controle + Matriz de Responsabilidade)
+# Setup — Ferramentas do Portfólio (Círculo de Controle, Matriz de Responsabilidade, Mapa do Caso)
 
-Gera 2 abas-modelo, já formatadas na identidade visual do Conduz Agro (paleta, cores por responsável, bordas), dentro de uma planilha Google. Diferente dos diagnósticos, essas ferramentas **não têm formulário web** — são preenchidas direto na planilha, e reusadas por **duplicação da aba** a cada caso novo.
+Cada ferramenta *distinta* do Portfólio que o aluno usa vira um **arquivo Google Sheets próprio** — não abas dentro de uma planilha só. Abas-dentro-de-1-arquivo só faz sentido quando é uso interno da Milena acompanhando várias submissões (como a planilha dos diagnósticos, onde cada aba recebe as respostas de todos os alunos/leads) **ou** quando são profundidades diferentes da MESMA ferramenta (ex: Mapa do Caso rápido x avançado — mesmo propósito, mesmo aluno, só a complexidade muda).
 
-## 1. Onde colar
+Já criei os arquivos, em branco, na pasta do Drive:
+- **Círculo de Controle da Condução:** https://docs.google.com/spreadsheets/d/1W16t8QQwEt_BQ4uqVy6B5vVRNxoou9Yu1TAnKIFxmEE/edit
+- **Matriz de Responsabilidade e Prazos:** https://docs.google.com/spreadsheets/d/1tSXLwcAFW2Rt3h5dPb_vTaMQ6vcFp3VdrA19hW6MfAU/edit
+- **Mapa do Caso** (rápida + avançada, 2 abas-modelo no mesmo arquivo): https://docs.google.com/spreadsheets/d/1KgNmThGzyStiXwgCGK1Q5yFP78FScxqbJuT5qMkL26A/edit
 
-Pode ser na mesma planilha "Conduz Agro — Diagnósticos" que você já tem (fica tudo num lugar só), ou numa planilha nova — funciona do mesmo jeito. Se for a mesma planilha dos diagnósticos, é só adicionar mais este script junto do que já está lá.
+## 1. Colar o script em cada arquivo
 
-1. Na planilha: **Extensões → Apps Script**
-2. Se já tem código de outro script na mesma planilha (ex: `apps-script-diagnosticos.gs`), **não apague** — clica em **+ (Arquivo) → Script** no menu lateral do editor, dá o nome "templates-ferramentas", e cola o conteúdo de `apps-script-templates-ferramentas.gs` (mesma pasta deste guia) nesse arquivo novo
-3. Se for um projeto de script novo (planilha nova), pode colar direto no arquivo padrão
-4. Salva (Ctrl+S)
+Cada planilha recebe **só o script dela** (são independentes):
 
-## 2. Gerar as abas-modelo
+1. Abre a planilha **Círculo de Controle da Condução** → **Extensões → Apps Script**
+2. Apaga o conteúdo padrão e cola o conteúdo de `apps-script-circulo-controle.gs` (mesma pasta deste guia)
+3. Salva (Ctrl+S)
+4. Repete o mesmo processo na planilha **Matriz de Responsabilidade e Prazos**, colando `apps-script-matriz-responsabilidade.gs`
+5. Repete de novo na planilha **Mapa do Caso**, colando `apps-script-mapa-do-caso.gs` (esse tem 2 funções, porque gera 2 abas-modelo — rápida e avançada — no mesmo arquivo)
 
-1. No topo do editor, troca a função selecionada pra **`criarTodosTemplates`**
-2. Clica em **Executar** (▶)
-3. Na primeira vez, autoriza o script (mesmo processo de sempre: Revisar permissões → sua conta → Avançado → Acessar → Permitir)
-4. Volta pra planilha — 2 abas novas aparecem: **"MODELO — Círculo de Controle"** e **"MODELO — Matriz de Responsabilidade"**, já formatadas (cores, bordas, cabeçalhos)
+## 2. Gerar a(s) aba(s)-modelo em cada uma
 
-Se quiser gerar só uma das duas, troca a função selecionada pra `criarTemplateCirculoControle` ou `criarTemplateMatrizResponsabilidade` antes de Executar.
+**Círculo de Controle** e **Matriz de Responsabilidade** (1 aba cada):
+1. Confirma que a função selecionada é `criarTemplateCirculoControle` (1ª planilha) ou `criarTemplateMatrizResponsabilidade` (2ª)
+2. Clica em **Executar** (▶) — autoriza na primeira vez (Revisar permissões → sua conta → Avançado → Acessar → Permitir)
+3. Aparece a aba **"MODELO"**, já formatada
+
+**Mapa do Caso** (2 abas):
+1. Confirma que a função selecionada é `criarTodosMapasDoCaso` (cria as 2 de uma vez) — ou rode `criarTemplateMapaRapido` e `criarTemplateMapaAvancado` separadamente se preferir
+2. Clica em **Executar** (▶), autoriza se pedir
+3. Aparecem **"MODELO — Rápida (S4)"** e **"MODELO — Avançada (S12)"**
+
+Em todas: pode apagar a aba padrão em branco ("Página1" ou "Sheet1") que sobrou — não é usada.
 
 ## 3. Como usar no dia a dia
 
 **Nunca edite a aba "MODELO" diretamente** — ela é o molde. Pra cada caso novo:
 
-1. Clica com o botão direito na aba MODELO correspondente → **Duplicar**
-2. Renomeia a cópia com o nome do caso/cliente (ex: "Círculo — Fazenda Santa Rita" ou "Matriz — João, regularização")
-3. Preenche a cópia à vontade — a formatação (cores, bordas) já vem pronta, só digitar
-4. A aba duplicada fica salva na planilha pra sempre — histórico de todos os casos, sem perder nada
+1. Clica com o botão direito na aba MODELO → **Duplicar**
+2. Renomeia a cópia com o nome do caso/cliente (ex: "Fazenda Santa Rita — 24/08")
+3. Preenche a cópia à vontade — a formatação já vem pronta, só digitar
+4. A aba duplicada fica salva nesse mesmo arquivo pra sempre — histórico de todos os casos daquela ferramenta, sem perder nada
 
 **Círculo de Controle:** situação de pressão no topo, os 3 anéis no meio (fora do controle / posso influenciar / eu controlo), próxima ação embaixo.
 
-**Matriz de Responsabilidade:** dados do caso no topo, tabela de etapas com um dropdown na coluna "Responsável" (Você / Produtor / Terceiro) — a cor da célula muda sozinha conforme a escolha. Pra entregar ao produtor: **Arquivo → Baixar → PDF (.pdf)**, ou imprimir a aba direto.
+**Matriz de Responsabilidade:** dados do caso no topo, tabela de etapas com dropdown na coluna "Responsável" (Você / Produtor / Terceiro) — a cor da célula muda sozinha. Pra entregar ao produtor: **Arquivo → Baixar → PDF (.pdf)**, ou imprimir a aba direto.
+
+**Mapa do Caso:** escolhe qual duplicar conforme a complexidade — "Rápida" (S4, 4 campos: demanda → problema real → riscos → próximo passo) pra um atendimento direto, ou "Avançada" (S12, 7 campos: pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos) pra casos com múltiplos envolvidos e interesses divergentes.
 
 ## Quando atualizar o script
 
-Se mudar algo no layout, atualiza `apps-script-templates-ferramentas.gs` aqui no repo, cola a versão nova no Apps Script, salva, e roda `criarTodosTemplates` de novo — isso recria as abas MODELO do zero (apaga e recria, não mexe nas cópias já duplicadas de casos anteriores).
+Se mudar algo no layout, atualiza o `.gs` correspondente aqui no repo, cola a versão nova no Apps Script daquele arquivo específico, salva, e roda a função de novo — isso recria só a aba MODELO do zero (apaga e recria, não mexe nas cópias já duplicadas de casos anteriores).
