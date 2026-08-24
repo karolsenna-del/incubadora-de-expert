@@ -215,15 +215,23 @@ business/instagram/fila/{slug}/ → business/instagram/agendados/{slug}/
 
 **Trigger:** token expira em < 5 dias OU erro 190 da Meta API
 
+**CORRIGIDO 24/08/2026:** `META_TOKEN` é da família Facebook Login (prefixo `EAA`, usado via
+`graph.facebook.com` nos workflows de publicação) — o endpoint `graph.instagram.com/refresh_access_token`
+com `ig_refresh_token` (versão antiga deste SOP) retorna erro 190 "Cannot parse access token" pra
+esse tipo de token — só serve pra token da família Instagram Login (ex: `IG_INSIGHTS_TOKEN`).
+
 ```python
-GET https://graph.instagram.com/refresh_access_token
+GET https://graph.facebook.com/v21.0/oauth/access_token
 Params:
-  grant_type: ig_refresh_token
-  access_token: {META_TOKEN_ATUAL}
-# Resposta: {"access_token": "novo_token", "expires_in": 5184000}
+  grant_type: fb_exchange_token
+  client_id: {META_APP_ID}
+  client_secret: {META_APP_SECRET}
+  fb_exchange_token: {META_TOKEN_ATUAL}
+# Resposta: {"access_token": "novo_token", "token_type": "bearer", "expires_in": segundos}
 ```
 
-Atualizar token no Vault após renovação.
+Atualizar `META_TOKEN` e `META_TOKEN_EXPIRES` (data de hoje + expires_in segundos) no Vault
+**e** no GitHub Secret `META_TOKEN` (`gh secret set META_TOKEN`) após renovação.
 
 ---
 

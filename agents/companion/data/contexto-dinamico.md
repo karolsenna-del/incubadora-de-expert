@@ -136,6 +136,19 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 24/08 — Reconciliacao de 4 dias sem atualizacao formal (Companion):**
+Cockpit e contexto-dinamico estavam parados desde 19-20/08 enquanto trabalho real aconteceu (reconstituido via git log, sem sessao formal do Companion nesse periodo):
+- **Desafio Rota100k:** Semana 03 fechada (23/08). Semana 04 (24-30/08) planejada e os 7 carrosseis ja agendados via GitHub Actions (23/08, 20h BRT cada dia).
+- **URGENTE achado pelo Postador (23/08):** `META_TOKEN` do vault do insta-scheduler expira **29/08/2026**. Os posts de sabado 29/08 e domingo 30/08 (20h) da Semana 04 rodam em cima da expiracao — risco de falhar com erro 190 sem gerar alerta (mesmo padrao silencioso ja documentado em RULE-2). Registrado como Urgente em `demandas-backlog.md`. Acao: renovar token (SOP-001) antes de sexta 28/08.
+- **Automacao de Stories foi ao ar de verdade (22-23/08):** cron habilitado (09h30 America/Cuiaba) publicando sozinho via insta-scheduler (SOP-021, apaga Story anterior antes de postar) — primeira publicacao automatica confirmada (Story de Domingo, Levantada de Mao semana 2, 23/08). Alem disso, SOP-022 (Direct automatico por palavra-gatilho) teve o codigo escrito (23/08) mas ainda **aguarda acao da Karol** pra ativar.
+- **Conduz Agro (Milena Gehrke) — pipeline COMPLETO (20-23/08), achado fora do cockpit:** metodo de mentoria da Milena (regularizacao de imoveis rurais/credito rural — publico: consultores, projetistas de credito, tecnicos, engenheiros, topografos do agro) empacotado do zero ao fim — 10/10 fases done, 10/10 quality gates aprovados (`mentoria/alunas/milena-gehrke/conduz-agro/.state.json`). Cobriu PRD, estrutura do programa, design de sessoes/entregaveis, branding (identidade visual real da Milena aplicada), 2 diagnosticos interativos (Claude Artifacts publicados, com backend via Apps Script), CRM comercial (Sheets, adaptado do Rastreador de Leads do Expert360), empacotamento (preco ancora R$3.997, validacao R$2.797 ate 3 vendas, depois preco cheio) e checklist de producao (31 itens, 8 P1 bloqueiam lancamento). **Nunca entrou no cockpit/inbox — adicionado ao INBOX em 24/08 pelo Companion.** Proximo passo documentado: Karol/Milena executam os itens P1 do checklist pra abrir a 1a turma de validacao. Pendente decisao da Karol: vira operacao continua monitorada ou fica so como entregavel na pasta da aluna (sem status no cockpit, igual as outras alunas)?
+- **Expert360:** tracker sem entrada de LOG desde 14/08 — agora **10 dias**, acima do limiar de alerta de projeto parado. Cockpit ainda mostra "Karol gravando M3" sem confirmacao recente — **checar status real na proxima interacao com a Karol.**
+- **Weekly review atrasado:** ultimo review real foi 14/08 — **10 dias**, acima do limiar de 7 dias.
+- **Pendencias tecnicas menores no periodo:** fix no `render.sh` (Chromium precisa de `--no-sandbox` rodando como root em nuvem, 23/08); metricas diarias do Instagram e do hook Synapse seguem sendo coletadas automaticamente.
+- **Estado do git no momento deste registro:** 3 commits locais a frente de `origin/master` (push pendente — Ops). Working tree com `hook-metrics.json` e `apps-script-diagnosticos.gs` modificados + `ficha-inscricao.html` (Conduz Agro) nao rastreado, ainda sem commit.
+
+Retomar com: `/expert-companion` — proxima conversa deve (1) confirmar status real do Expert360 (M3), (2) decidir o que fazer com Conduz Agro no cockpit, (3) garantir que o META_TOKEN seja renovado antes de 28/08, (4) rodar o weekly review atrasado.
+
 **Sessao 20/08 (continuacao) — Blocker do Drive RESOLVIDO, Live 26 publicada (Companion + Course Publisher):**
 Karol resolveu o compartilhamento — o problema era que a primeira tentativa compartilhou a pasta-mae "Google Meet", nao a pasta-filha "Live Expert360 (recurring)" (que tem permissao propria, nao herda automaticamente). Compartilhou a pasta certa explicitamente com `karol.franzini@gmail.com` como Editor — confirmado por screenshot e por `get_file_permissions` via API. Disparamos a weekly-sync manualmente pra confirmar (nao esperar ate quinta que vem):
 - **Live 26** ("Ninguem te enxerga como autoridade e o problema nao e sua competencia") processada com sucesso: YouTube nao-listado `youtu.be/sdaaCr63UX8`, gravada em `encontros_mentoria` (Supabase). No ar na Área de Membros.
@@ -276,4 +289,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 19/08/2026 (Reconciliacao — Área de Membros endurecida contra bugs/bypass reais, Rota100k Semana 03 agendada, Live 26 fechada, Expert-Stories rodando de verdade, Expert360 sem log ha 5 dias, Workshop Método Validado achado fora do cockpit)*
+*Ultima atualizacao: 24/08/2026 (Reconciliacao — Rota100k Semana 04 agendada + risco urgente de META_TOKEN, automacao de Stories no ar de verdade, Conduz Agro/Milena pipeline 10/10 fases achado fora do cockpit, Expert360 sem log ha 10 dias, weekly review atrasado ha 10 dias)*

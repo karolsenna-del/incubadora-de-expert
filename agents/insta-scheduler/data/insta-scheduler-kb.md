@@ -260,6 +260,24 @@ Resposta: `{"access_token": "...", "token_type": "bearer", "expires_in": 5183944
 
 **Quando:** Token com menos de 5 dias para expirar OU erro 190.
 
+**CORRIGIDO 24/08/2026:** o `META_TOKEN` em produção é da família **Facebook Login** (prefixo
+`EAA`, usado via `graph.facebook.com`), não Instagram Login. O fluxo `ig_refresh_token` abaixo
+só funciona para token da família Instagram Login (ex: `IG_INSIGHTS_TOKEN`) — testado com o
+`META_TOKEN` real em 24/08 e retornou erro 190 "Cannot parse access token". Fluxo correto pro
+`META_TOKEN`:
+
+```
+GET https://graph.facebook.com/v21.0/oauth/access_token
+Params:
+  grant_type      = fb_exchange_token
+  client_id       = {META_APP_ID}
+  client_secret   = {META_APP_SECRET}
+  fb_exchange_token = {LONG_LIVED_TOKEN_ATUAL}
+```
+
+Resposta: `{"access_token": "novo_token", "token_type": "bearer", "expires_in": segundos}` (~59 dias).
+
+Fluxo antigo (só serve pra token Instagram Login, tipo `IG_INSIGHTS_TOKEN`):
 ```
 GET https://graph.instagram.com/refresh_access_token
 Params:
@@ -267,9 +285,8 @@ Params:
   access_token = {LONG_LIVED_TOKEN_ATUAL}
 ```
 
-Resposta: `{"access_token": "novo_token", "token_type": "bearer", "expires_in": 5184000}`
-
-**Salvar novo token no Vault imediatamente.**
+**Salvar novo token no Vault imediatamente, e atualizar o GitHub Secret correspondente
+(`gh secret set META_TOKEN`).**
 
 **Regra:** Verificar validade do token em TODA ativação do worker.
 

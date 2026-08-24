@@ -63,6 +63,21 @@ Nunca publicar logo após criar o container pai. Ver `execute-mission.md` Passo 
 
 ---
 
+### RULE-3: SOP-001 (renovar META_TOKEN) usava endpoint da família errada de token
+**Incidente:** SOP-001 documentado (KB seção 2.3 e `execute-mission.md`) usava
+`graph.instagram.com/refresh_access_token` com `grant_type=ig_refresh_token` — esse fluxo é só
+pra token da família Instagram Login. O `META_TOKEN` real em produção é da família Facebook
+Login (prefixo `EAA`, usado via `graph.facebook.com` em todos os workflows de publicação).
+Rodar o SOP como documentado deu erro 190 "Cannot parse access token" (24/08/2026, renovação de
+emergência antes da expiração de 29/08).
+**Regra:** Renovar `META_TOKEN` sempre via `graph.facebook.com/v21.0/oauth/access_token` com
+`grant_type=fb_exchange_token` + `client_id` (META_APP_ID) + `client_secret` (META_APP_SECRET) +
+`fb_exchange_token` (token atual). O fluxo `ig_refresh_token` só serve pro `IG_INSIGHTS_TOKEN`
+(família Instagram Login), nunca pro `META_TOKEN`.
+**Adicionada em:** 2026-08-24
+
+---
+
 ## Histórico de Incidentes
 
 - 2026-07-11 — Desafio 10 Dias (Dias 5, 6 e 7): legendas chegavam soltas no chat e os slides
@@ -83,3 +98,7 @@ Nunca publicar logo após criar o container pai. Ver `execute-mission.md` Passo 
   sempre. **Aprendizado:** falha de workflow agendado não gera alerta nenhum — vale, de tempos
   em tempos, rodar `gh run list --workflow=post-{slug}.yml` em toda a leva de workflows
   criados antes de 25/07 pra confirmar que nenhum outro ficou pra trás sem publicar.
+- 2026-08-24 — Postador achou (23/08) que `META_TOKEN` expirava 29/08, em cima dos posts de
+  sábado/domingo da Semana 04 do Rota100k. Renovação de emergência rodada: SOP-001 documentado
+  (`ig_refresh_token`) falhou com erro 190. Trocado pra `fb_exchange_token` (família correta do
+  token) — funcionou de primeira. Novo token válido até 22/10/2026. Ver RULE-3.

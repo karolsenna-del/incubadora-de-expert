@@ -24,3 +24,5 @@
 **Descricao:** Igual ao SOP ja existente pros arquivos `00- Anotações.md` (registrado em contexto-dinamico, sessao 01-02/07) — o cockpit/Companion nao deve tentar manter o status detalhado das 5 alunas. E operacao continua monitorada, mas o detalhe vive no Drive.
 
 **Recomendacao:** No boot/weekly review, nao cobrar "status desatualizado" da linha de Mentoria no cockpit como se fosse um problema — so confirmar rapidamente com a Karol se alguma aluna avancou de fase, sem pedir pra ela recitar o detalhe (isso ja esta no Drive dela).
+
+**Confirmado/estendido em 24/08/2026:** o mesmo vale mesmo quando o trabalho da aluna acontece dentro do proprio repo (ex: pipeline completo do Conduz Agro/Milena Gehrke, construido via squads entre 20-23/08). Companion tentou adicionar ao INBOX do cockpit pra decisao — Karol vetou direto: "Milena nao entra no meu cockpit". Entregavel de mentee (mesmo volumoso, mesmo produzido com apoio de squad) fica na pasta da aluna (`mentoria/alunas/{aluna}/`), nunca no cockpit. Nao repetir a pergunta pra outras alunas/entregaveis futuros do mesmo tipo.
