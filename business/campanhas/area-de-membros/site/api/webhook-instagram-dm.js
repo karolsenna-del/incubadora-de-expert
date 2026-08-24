@@ -19,12 +19,40 @@
 // 3. Pra funcionar com leads de verdade (nao so a propria Karol): ainda depende da analise do
 //    app (App Review) ser aprovada pela Meta — enviada em 24/08, aguardando
 
-import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const gatilhos = JSON.parse(readFileSync(join(__dirname, 'data', 'gatilhos-direct.json'), 'utf-8'));
+// Dados embutidos direto no arquivo (mesmo padrao do webhook-voomp.js) — a Vercel compila este
+// arquivo de ESM pra CommonJS, e import.meta.url (usado antes pra ler o JSON externo em disco)
+// nao sobrevive a essa conversao, causava FUNCTION_INVOCATION_FAILED (achado 24/08, 1o deploy).
+//
+// FONTE DE VERDADE fica em business/campanhas/area-de-membros/site/api/data/gatilhos-direct.json
+// (o Expert-Stories le esse arquivo pra saber a palavra certa de cada oferta). Se mudar uma
+// palavra ou link la, ATUALIZAR AQUI TAMBEM manualmente — os dois precisam ficar iguais.
+const gatilhos = {
+  'diagnostico-ferramentas': {
+    palavra: 'DIAGNOSTICO',
+    nome_oferta: 'Diagnóstico Ferramentas',
+    link: 'https://vendas.incubadoradeexpert.com.br/diagnostico-ferramentas/'
+  },
+  'expert360': {
+    palavra: 'METODO',
+    nome_oferta: 'Expert360º',
+    link: 'https://vendas.incubadoradeexpert.com.br/expert360/'
+  },
+  'sprint-do-metodo': {
+    palavra: 'SPRINT',
+    nome_oferta: 'Sprint do Método',
+    link: 'https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/'
+  },
+  'grupo': {
+    palavra: 'GRUPO',
+    nome_oferta: 'Grupo',
+    link: 'https://vendas.incubadoradeexpert.com.br/grupo/'
+  },
+  'individual': {
+    palavra: 'INDIVIDUAL',
+    nome_oferta: 'Individual',
+    link: 'https://vendas.incubadoradeexpert.com.br/individual/'
+  }
+};
 
 const IG_TOKEN = process.env.IG_MESSAGING_TOKEN;
 const IG_USER_ID = process.env.IG_USER_ID;
