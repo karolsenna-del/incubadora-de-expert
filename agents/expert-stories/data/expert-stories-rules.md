@@ -7,6 +7,22 @@
 
 ## Regras Ativas
 
+## [23/08/2026] — Palavra-gatilho da Levantada de Mão é fixa por oferta (nunca improvisar)
+**Origem:** Karol pediu automação de resposta de Direct (estilo ManyChat) — quem manda a palavra-
+chave do CTA no Direct recebe automaticamente o link da oferta certa. Isso só funciona se a
+palavra usada no Story for sempre a mesma pra cada oferta — se o worker variar a palavra a cada
+vez (como fazia antes), a automação não sabe qual link mandar.
+**Regra:** No CTA de qualquer Levantada de Mão ("Se isso te interessa, comenta X" ou "Comenta X
+que te mando o link"), a palavra X tem que ser exatamente a que está cadastrada em
+`business/campanhas/area-de-membros/site/api/data/gatilhos-direct.json` pra aquela oferta —
+nunca inventar variação, sinônimo ou versão nova. Palavras fixas hoje: Diagnóstico Ferramentas =
+`DIAGNOSTICO`, Expert360º = `METODO`, Sprint do Método = `SPRINT`, Grupo = `GRUPO`, Individual =
+`INDIVIDUAL`. Se esse arquivo for atualizado no futuro (nova oferta entrando no ciclo, ou Karol
+trocando uma palavra), a rotina de Stories sempre lê a versão mais recente de lá — não fixar a
+palavra de cabeça, sempre conferir o arquivo antes de escrever o CTA.
+**Aplica quando:** Escrevendo o texto de qualquer Levantada de Mão (Domingo, Terça, Quinta) que
+tenha CTA de palavra-chave.
+
 ## [14/08/2026] — Corpo do Story curto e fonte grande
 **Origem:** Primeira imagem gerada (Inimigo Comum, template `story-texto`, modifier
 `cta-grande`) saiu com corpo de 3 parágrafos em fonte 34px — Karol reportou "texto muito

@@ -897,6 +897,50 @@ gh run watch  # acompanhar
 
 ---
 
+### [SOP-022] Automação de Direct por palavra-gatilho (estilo ManyChat)
+
+**Criado em:** 23/08/2026
+**Trigger:** Pedido direto da Karol — quem manda a palavra-chave do CTA de um Story no Direct
+recebe automaticamente o link da oferta certa + aviso de que pode tirar dúvida ali (ela continua
+manual dali em diante, sem bot de conversa).
+**Status:** Código escrito, **NÃO testado contra a API real ainda** — falta ação da Karol (ver
+Pré-requisitos) antes do primeiro teste.
+
+**Como funciona:**
+1. `business/campanhas/area-de-membros/site/api/data/gatilhos-direct.json` é a fonte única de
+   verdade: palavra → oferta → link. As 5 ofertas do ciclo da Levantada de Mão já estão
+   cadastradas (Diagnóstico Ferramentas, Expert360º, Sprint do Método, Grupo, Individual)
+2. O Expert-Stories agora é obrigado (regra de 23/08 em `expert-stories-rules.md`) a usar
+   exatamente essa palavra no CTA — nunca inventar variação
+3. `business/campanhas/area-de-membros/site/api/webhook-instagram-dm.js` recebe o webhook de
+   Direct da Meta, casa o texto recebido (normalizado, sem acento/maiúsculo) com o mapa, e manda
+   de volta 1 mensagem automática com o link — sem tentar qualificar ou conversar
+4. Deploy: mesmo projeto Vercel do `webhook-voomp.js` (`area-de-membros-incubadora`) — reaproveita
+   infra existente, sem criar projeto novo
+
+**Pré-requisitos (dependem da Karol, não são automatizáveis por aqui):**
+- [ ] Gerar `META_TOKEN` novo com a permissão `instagram_manage_messages` adicionada (Graph API
+  Explorer, mesmo processo de sempre — nome certo pro nosso setup, que usa Facebook Login; NÃO é
+  `instagram_business_manage_messages`, que é de outro tipo de login)
+- [ ] **Verificar se precisa de Advanced Access + App Review da Meta** pra funcionar com contas
+  reais (achado na pesquisa de 23/08) — sem isso pode só funcionar em modo teste/dev, não pra
+  leads de verdade. Checar no painel do App antes de prometer que vai funcionar com todo mundo
+- [ ] Registrar o webhook no painel do App da Meta (developers.facebook.com → app → Webhooks →
+  campo `messages`), apontando pra URL do endpoint publicado + um `INSTAGRAM_WEBHOOK_VERIFY_TOKEN`
+  (gerar um valor aleatório, colocar como env var na Vercel E no formulário de registro do webhook)
+- [ ] Configurar env vars na Vercel do projeto `area-de-membros-incubadora`: `META_TOKEN`,
+  `IG_USER_ID`, `INSTAGRAM_WEBHOOK_VERIFY_TOKEN` (os 2 primeiros provavelmente ainda não existem
+  nesse projeto — só existiam nos GitHub Secrets do insta-scheduler)
+- [ ] Mandar 1 Direct de teste real com a palavra-gatilho antes de confiar
+
+**Troubleshooting (antecipado, ainda sem incidente real):**
+- Sem resposta nenhuma → checar se o webhook está registrado pro campo certo (`messages`) e se o
+  `INSTAGRAM_WEBHOOK_VERIFY_TOKEN` bate dos dois lados
+- Erro de permissão no send → falta `instagram_manage_messages` no token, ou é caso de precisar
+  de Advanced Access/App Review
+
+---
+
 ## Template de SOP
 
 ### [SOP-XXX] {Nome do Processo}

@@ -1,0 +1,28 @@
+{
+  "_comentario": "Fonte unica de verdade: palavra-gatilho -> oferta -> link -> mensagem. Usado por (1) Expert-Stories, que TEM que usar exatamente essa palavra no CTA do Story daquela oferta (nunca inventar palavra nova) e (2) webhook-instagram-dm.js, que responde quem manda a palavra no Direct. Se mudar uma palavra aqui, os dois lados ficam sincronizados automaticamente. Fica dentro de site/api/ (nao em business/instagram/) porque o deploy da Vercel desse projeto so empacota o que esta dentro de business/campanhas/area-de-membros/site/ — um arquivo fora dessa arvore nao vai pro build.",
+  "diagnostico-ferramentas": {
+    "palavra": "DIAGNOSTICO",
+    "nome_oferta": "Diagnóstico Ferramentas",
+    "link": "https://vendas.incubadoradeexpert.com.br/diagnostico-ferramentas/"
+  },
+  "expert360": {
+    "palavra": "METODO",
+    "nome_oferta": "Expert360º",
+    "link": "https://vendas.incubadoradeexpert.com.br/expert360/"
+  },
+  "sprint-do-metodo": {
+    "palavra": "SPRINT",
+    "nome_oferta": "Sprint do Método",
+    "link": "https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/"
+  },
+  "grupo": {
+    "palavra": "GRUPO",
+    "nome_oferta": "Grupo",
+    "link": "https://vendas.incubadoradeexpert.com.br/grupo/"
+  },
+  "individual": {
+    "palavra": "INDIVIDUAL",
+    "nome_oferta": "Individual",
+    "link": "https://vendas.incubadoradeexpert.com.br/individual/"
+  }
+}
