@@ -50,7 +50,7 @@
 | Operacao | Responsavel | Status | Onde acompanhar |
 |----------|-------------|--------|-----------------|
 | Instagram / Conteudo | Karol | Ativa — Desafio Rota100k rodando (ver ATIVOS #1... #2 acima). Automacao de Stories no ar de verdade (23/08): cron publica sozinho as 09h30 America/Cuiaba (SOP-021, apaga a Story anterior antes de postar). SOP-022 (Direct automatico por palavra-gatilho) com codigo escrito, aguardando acao da Karol pra ativar | contexto-dinamico.md — prioridades do momento |
-| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 26 com roteiro e deck fechados (17/08): "Ninguém te enxerga como autoridade", CTA VITRINE. Data de gravação a confirmar | business/campanhas/lives-semanais/ |
+| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 26 realizada (confirmado 24/08): "Ninguém te enxerga como autoridade", CTA VITRINE | business/campanhas/lives-semanais/ |
 | Mentoria (6 alunas) | Karol | Ativa — Rosiani Bezerra (aluna de turma anterior) ganhou pasta formal em mentoria/alunas/ (17/08), total subiu de 5 pra 6. Fonte de verdade e o Drive de cada aluna, nao o cockpit (Karol atualiza direto la) | mentoria/alunas/ |
 | Funil mini treinamento (LP → WhatsApp) | Karol | Ativa mas **sem resultado** (flagado 14/08 pela Karol: "nunca deu resultado", precisa ser otimizado) | business/campanhas/lp-minitreinamento/ |
 | CRM Reativação de Leads | Karol | Ativa — ferramenta (Supabase + planilha + sync n8n) construída e permanente. Karol reativando os leads pessoalmente, confirmado em andamento (14/08) — Clone Euriler orientou não enviar pro closer. Fase 5 do tracker formalizada como encerrada nesse formato | [tracker](campanhas/crm-reativacao-leads/tracker.md) |
