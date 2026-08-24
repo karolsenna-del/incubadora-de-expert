@@ -3,19 +3,21 @@
 // com o link, avisa que pode mandar duvida ali, e ela continua manual dali em diante (sem bot
 // de conversa, sem qualificacao automatica).
 //
-// AINDA NAO TESTADO CONTRA A API REAL — construido a partir da documentacao oficial da Meta
-// (Instagram Messaging API), nao foi validado com um Direct de verdade ainda. Antes de confiar:
-// 1. Gerar META_TOKEN novo com a permissao instagram_manage_messages (nome certo pro nosso caso —
-//    nosso setup usa Facebook Login/graph.facebook.com, "instagram_manage_messages" e diferente de
-//    "instagram_business_manage_messages", que e so pro outro tipo de login/Instagram Login).
-//    Adicionar essa, junto com instagram_content_publish + instagram_manage_contents que ja tem.
-// 2. ACHADO IMPORTANTE (pesquisa 23/08): permissao de mensageria normalmente exige "Advanced Access"
-//    + App Review da Meta pra funcionar com contas de verdade (nao so a sua propria conta de teste).
-//    Sem isso, pode funcionar so em modo Standard/dev (voce mandando Direct pra voce mesma), mas nao
-//    pra leads reais. Verificar isso no painel do App antes de contar que vai funcionar com todo mundo.
-// 3. Registrar esse webhook no painel do App da Meta (developers.facebook.com > app > Webhooks),
-//    campo "messages", apontando pra URL deste endpoint publicado + o INSTAGRAM_WEBHOOK_VERIFY_TOKEN
-// 4. Mandar 1 Direct de teste com a palavra-gatilho pra ver se a resposta chega de verdade
+// ATUALIZADO 24/08/2026 — achado real durante a configuracao: mensageria do Instagram vive
+// numa "app" e API totalmente separada (Login do Instagram, base graph.instagram.com), com seu
+// proprio App ID (3074711462723810, distinto do META_APP_ID usado pra publicar) e seu proprio
+// token (IG_MESSAGING_TOKEN, ver vault). NAO usa o META_TOKEN nem graph.facebook.com — eram os
+// nomes certos, so o sistema de auth que estava errado (Facebook Login classico nao aceita
+// escopo instagram_business_manage_messages, so o fluxo de Login do Instagram aceita).
+//
+// AINDA NAO TESTADO CONTRA A API REAL — token gerado em 24/08 (Acesso Padrao, tester
+// karolsenna._), mas o envio de mensagem em si ainda nao foi exercitado. Antes de confiar:
+// 1. Registrar esse webhook no painel do App (Casos de Uso > API do Instagram > secao "3.
+//    Configurar webhooks"), campo "messages", com a URL deste endpoint publicado +
+//    INSTAGRAM_WEBHOOK_VERIFY_TOKEN
+// 2. Mandar 1 Direct de teste (da propria Karol, ela e tester) com a palavra-gatilho
+// 3. Pra funcionar com leads de verdade (nao so a propria Karol): ainda depende da analise do
+//    app (App Review) ser aprovada pela Meta — enviada em 24/08, aguardando
 
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -24,10 +26,10 @@ import { dirname, join } from 'node:path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const gatilhos = JSON.parse(readFileSync(join(__dirname, 'data', 'gatilhos-direct.json'), 'utf-8'));
 
-const META_TOKEN = process.env.META_TOKEN;
+const IG_TOKEN = process.env.IG_MESSAGING_TOKEN;
 const IG_USER_ID = process.env.IG_USER_ID;
 const VERIFY_TOKEN = process.env.INSTAGRAM_WEBHOOK_VERIFY_TOKEN;
-const META_BASE = 'https://graph.facebook.com/v21.0';
+const IG_BASE = 'https://graph.instagram.com/v21.0';
 
 function normalizar(texto) {
   return (texto || '')
@@ -48,7 +50,7 @@ function montarMapaPalavras() {
 }
 
 async function enviarMensagem(destinatarioId, texto) {
-  const resp = await fetch(`${META_BASE}/${IG_USER_ID}/messages`, {
+  const resp = await fetch(`${IG_BASE}/${IG_USER_ID}/messages?access_token=${encodeURIComponent(IG_TOKEN)}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
