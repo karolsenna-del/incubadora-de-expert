@@ -18,11 +18,11 @@
 | 1.5 | Simulador de Conversas que Conduzem — template/ferramenta | Usado S6, S16 | P2 | [ ] Pendente |
 | 1.6 | Mapa de Posicionamento — template preenchível | Usado S7, S18 | P2 | [ ] Pendente |
 | 1.7 | Mapa de Valor Percebido no Agro — template preenchível | Usado S7 | P2 | [ ] Pendente |
-| 1.8 | Círculo de Controle da Condução — versão interna (template) | Usado S3 | P2 | [ ] Pendente |
-| 1.9 | Círculo de Controle da Condução — versão pro produtor (matriz de responsabilidade/cronograma) | Entregue no ato de contratação (novo, 23/08) | P2 | [ ] Pendente |
+| 1.8 | Círculo de Controle da Condução — versão interna (template) | **Reconstruído como template Google Sheets** (não mais HTML — aluno reusa por duplicação de aba, mantém histórico). `scripts/apps-script-templates-ferramentas.gs` + `scripts/SETUP-FERRAMENTAS.md`. Formatado na IV da Milena (cores, bordas). Usado S3 | P2 | [~] Em progresso — falta Milena rodar `criarTodosTemplates` na planilha |
+| 1.9 | Círculo de Controle da Condução — versão pro produtor (matriz de responsabilidade/cronograma) | **Reconstruído como template Google Sheets** — tabela com dropdown de Responsável (Você/Produtor/Terceiro, cor muda sozinha), sem marca Conduz Agro. Entrega ao produtor via Baixar → PDF. Mesmo script/guia do item 1.8 | P2 | [~] Em progresso — falta Milena rodar `criarTodosTemplates` na planilha |
 | 1.10 | Roteiro de Condução da Conversa — fluxograma completo (prospecção → entrega) | Novo, 23/08 — kit de boas-vindas | P2 | [ ] Pendente |
 | 1.11 | Raio-X da Conversa com o Produtor — ferramenta de análise (in-program) | Novo, 23/08 — uso contínuo do mentorado | P2 | [ ] Pendente |
-| 1.12 | Ficha de Inscrição — formulário de intake do Destrava Condução | Novo, 23/08 | P1 *(precisa existir antes do primeiro uso do Destrava Condução, que pode acontecer cedo — S8 é mês 4)* | [ ] Pendente |
+| 1.12 | Ficha de Inscrição — formulário de intake do Destrava Condução | `ficha-inscricao.html` construído (mesmo padrão visual dos diagnósticos), Apps Script atualizado (`apps-script-diagnosticos.gs`, 3ª aba) | P1 *(precisa existir antes do primeiro uso do Destrava Condução, que pode acontecer cedo — S8 é mês 4)* | [~] Em progresso — falta Milena colar o `.gs` atualizado no Apps Script existente e reimplantar (ver `scripts/SETUP-PLANILHAS.md`), depois publicar o HTML como Artifact |
 | 1.13 | Protocolo Pessoal de Condução — template do sistema pessoal | Usado S23-S24 | P3 *(só usado no fim do programa)* | [ ] Pendente |
 | 1.14 | Checklist de Evidências da Autoridade — template com pontuação | Usado S8, S12, S16, S20, S24 | P2 *(precisa existir até S8, mês 4)* | [ ] Pendente |
 | 1.15 | Plano de Aplicação Diária — formato de entrega definido e montado (agente de IA ou calendário/PDF) | `estrutura-programa.md` — formato ainda em aberto | P2 | [ ] Pendente |

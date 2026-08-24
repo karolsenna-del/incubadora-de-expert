@@ -1,12 +1,14 @@
 /**
- * Conduz Agro — recebe os envios dos 2 diagnósticos (diagnostico-interativo.html
- * e pre-diagnostico-vendas.html) e grava cada um na aba certa da planilha.
+ * Conduz Agro — recebe os envios dos formularios (diagnostico-interativo.html,
+ * pre-diagnostico-vendas.html e ficha-inscricao.html) e grava cada um na aba
+ * certa da planilha.
  *
  * Setup: ver `SETUP-PLANILHAS.md` na mesma pasta.
  */
 
 var TAB_DIAGNOSTICO = "Diagnóstico Completo";
 var TAB_PRE_DIAGNOSTICO = "Pré-Diagnóstico Vendas";
+var TAB_FICHA_INSCRICAO = "Ficha de Inscrição";
 
 function doPost(e) {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
@@ -19,11 +21,31 @@ function doPost(e) {
 
   if (payload._form === "pre_diagnostico") {
     appendPreDiagnostico(ss, payload);
+  } else if (payload._form === "ficha_inscricao") {
+    appendFichaInscricao(ss, payload);
   } else {
     appendDiagnosticoCompleto(ss, payload);
   }
 
   return respond({ok: true});
+}
+
+function appendFichaInscricao(ss, p) {
+  var sheet = getOrCreateSheet(ss, TAB_FICHA_INSCRICAO, [
+    "Timestamp", "Nome", "Email", "Uso Nº (1 ou 2)", "Produtor/Cliente",
+    "Contexto do Caso", "Trava Percebida", "O Que Já Tentou", "Urgência"
+  ]);
+  sheet.appendRow([
+    new Date(),
+    p.nome || "",
+    p.email || "",
+    p.usoNumero || "",
+    p.produtor || "",
+    p.contexto || "",
+    p.trava || "",
+    p.jaTentou || "",
+    p.urgencia || ""
+  ]);
 }
 
 function appendDiagnosticoCompleto(ss, p) {
@@ -102,5 +124,9 @@ function testSetup() {
     "Timestamp", "Nome", "Email", "WhatsApp", "Área de Atuação", "Tempo de Mercado",
     "Faturamento", "Maior Dificuldade", "Urgência (1-10)", "Resposta Técnica (contexto)",
     "Resposta Emocional (contexto)", "Resposta Condução (contexto)", "Trava Sinalizada"
+  ]);
+  getOrCreateSheet(ss, TAB_FICHA_INSCRICAO, [
+    "Timestamp", "Nome", "Email", "Uso Nº (1 ou 2)", "Produtor/Cliente",
+    "Contexto do Caso", "Trava Percebida", "O Que Já Tentou", "Urgência"
   ]);
 }

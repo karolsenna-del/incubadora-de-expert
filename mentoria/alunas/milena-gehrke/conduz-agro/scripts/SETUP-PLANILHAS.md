@@ -1,6 +1,8 @@
 # Setup — Planilhas dos Diagnósticos Conduz Agro
 
-Conecta os 2 diagnósticos interativos (`diagnostico-interativo.html` e `pre-diagnostico-vendas.html`) a uma planilha Google, sem precisar de domínio, servidor ou banco de dados.
+Conecta os 3 formulários interativos (`diagnostico-interativo.html`, `pre-diagnostico-vendas.html` e `ficha-inscricao.html`) a uma planilha Google, sem precisar de domínio, servidor ou banco de dados.
+
+> **Addendum 23/08/2026:** `ficha-inscricao.html` (Fase 9, ferramenta do Destrava Condução) foi adicionado ao mesmo script/planilha, numa 3ª aba ("Ficha de Inscrição"). Se a planilha e o Apps Script já estavam implantados antes desse addendum, siga a seção "Quando atualizar o script" abaixo pra colar a versão nova do `.gs` e reimplantar — a URL não muda.
 
 ## 1. Criar a planilha
 
@@ -18,7 +20,7 @@ Conecta os 2 diagnósticos interativos (`diagnostico-interativo.html` e `pre-dia
 1. No topo do editor, troca a função selecionada de `doPost` pra **`testSetup`**
 2. Clica em **Executar** (▶)
 3. Na primeira vez, o Google vai pedir autorização — clica em **Revisar permissões**, escolhe sua conta, clica em **Avançado** → **Acessar [nome do projeto] (não seguro)** → **Permitir**. É só o aviso padrão pra scripts que você mesmo escreveu, não é perigoso.
-4. Volta pra planilha — as 2 abas ("Diagnóstico Completo" e "Pré-Diagnóstico Vendas") já aparecem com cabeçalho
+4. Volta pra planilha — as 3 abas ("Diagnóstico Completo", "Pré-Diagnóstico Vendas" e "Ficha de Inscrição") já aparecem com cabeçalho
 
 ## 4. Publicar como Web App
 
@@ -31,9 +33,9 @@ Conecta os 2 diagnósticos interativos (`diagnostico-interativo.html` e `pre-dia
 5. Autoriza de novo se pedir (mesmo processo do Passo 3)
 6. Copia a **URL do app da Web** que aparece (termina em `/exec`)
 
-## 5. Colar a URL nos 2 arquivos HTML
+## 5. Colar a URL nos arquivos HTML
 
-Em cada um dos 2 arquivos (`diagnostico-interativo.html` e `pre-diagnostico-vendas.html`), procura a linha:
+Em cada um dos 3 arquivos (`diagnostico-interativo.html`, `pre-diagnostico-vendas.html` e `ficha-inscricao.html`), procura a linha:
 
 ```js
 var SHEETS_ENDPOINT_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
