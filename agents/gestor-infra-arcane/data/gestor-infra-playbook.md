@@ -903,8 +903,10 @@ gh run watch  # acompanhar
 **Trigger:** Pedido direto da Karol — quem manda a palavra-chave do CTA de um Story no Direct
 recebe automaticamente o link da oferta certa + aviso de que pode tirar dúvida ali (ela continua
 manual dali em diante, sem bot de conversa).
-**Status:** Código escrito, **NÃO testado contra a API real ainda** — falta ação da Karol (ver
-Pré-requisitos) antes do primeiro teste.
+**Status:** **Testado e funcionando de verdade (24/08/2026)** — Karol mandou Direct com a palavra
+`METODO` pra própria conta e recebeu a resposta automática. Funciona hoje pra ela mesma (Acesso
+Padrão, tester do app); pra funcionar com leads reais, ainda depende da aprovação do App Review
+enviado em 24/08 (ver "Ainda em aberto").
 
 **Como funciona:**
 1. `business/campanhas/area-de-membros/site/api/data/gatilhos-direct.json` é a fonte única de
@@ -918,26 +920,45 @@ Pré-requisitos) antes do primeiro teste.
 4. Deploy: mesmo projeto Vercel do `webhook-voomp.js` (`area-de-membros-incubadora`) — reaproveita
    infra existente, sem criar projeto novo
 
-**Pré-requisitos (dependem da Karol, não são automatizáveis por aqui):**
-- [ ] Gerar `META_TOKEN` novo com a permissão `instagram_manage_messages` adicionada (Graph API
-  Explorer, mesmo processo de sempre — nome certo pro nosso setup, que usa Facebook Login; NÃO é
-  `instagram_business_manage_messages`, que é de outro tipo de login)
-- [ ] **Verificar se precisa de Advanced Access + App Review da Meta** pra funcionar com contas
-  reais (achado na pesquisa de 23/08) — sem isso pode só funcionar em modo teste/dev, não pra
-  leads de verdade. Checar no painel do App antes de prometer que vai funcionar com todo mundo
-- [ ] Registrar o webhook no painel do App da Meta (developers.facebook.com → app → Webhooks →
-  campo `messages`), apontando pra URL do endpoint publicado + um `INSTAGRAM_WEBHOOK_VERIFY_TOKEN`
-  (gerar um valor aleatório, colocar como env var na Vercel E no formulário de registro do webhook)
-- [ ] Configurar env vars na Vercel do projeto `area-de-membros-incubadora`: `META_TOKEN`,
-  `IG_USER_ID`, `INSTAGRAM_WEBHOOK_VERIFY_TOKEN` (os 2 primeiros provavelmente ainda não existem
-  nesse projeto — só existiam nos GitHub Secrets do insta-scheduler)
-- [ ] Mandar 1 Direct de teste real com a palavra-gatilho antes de confiar
+**ACHADO CENTRAL (24/08) — dois sistemas de API separados coexistem no mesmo app da Meta:**
+- **Facebook Login** (`graph.facebook.com`, App ID `1425049681635685`, token `META_TOKEN`) —
+  usado pra PUBLICAR (Stories/carrossel). Permissões sem prefixo: `instagram_content_publish`,
+  `instagram_manage_contents`
+- **Login do Instagram** (`graph.instagram.com`, App ID **separado** `3074711462723810`, tokens
+  `IG_INSIGHTS_TOKEN`/`IG_MESSAGING_TOKEN`) — usado pra MÉTRICAS e MENSAGENS. Permissões com
+  prefixo `instagram_business_*`: `instagram_business_manage_messages`,
+  `instagram_business_manage_insights`. Gerados em Casos de Uso → API do Instagram →
+  "Configuração da API com login do Instagram" → seção "2. Gerar tokens de acesso" — **não** pela
+  Graph API Explorer clássica (a permissão não aparece lá, é de outro sistema de auth).
+  `IG_USER_ID` é o mesmo número (`17841437530973593`) nos dois sistemas.
 
-**Troubleshooting (antecipado, ainda sem incidente real):**
+**Resolvido (24/08):**
+- [x] Token gerado com `instagram_business_manage_messages` (+ `_basic` + `_manage_comments`) via
+  o fluxo certo (ver achado acima) — salvo como `IG_MESSAGING_TOKEN` no vault
+- [x] App Review enviado pra essas 3 permissões — **aprovação ainda pendente da Meta**, mas não
+  bloqueia teste com a própria conta (Acesso Padrão, ela é tester)
+- [x] Webhook registrado no painel (URL de callback + verify token), campo `messages` assinado
+- [x] Env vars configuradas na Vercel (`IG_MESSAGING_TOKEN`, `IG_USER_ID`,
+  `INSTAGRAM_WEBHOOK_VERIFY_TOKEN`) via `vercel env add`
+- [x] Bug de deploy corrigido: `import.meta.url` não sobrevive à compilação ESM→CommonJS da
+  Vercel — trocado por dados embutidos direto no arquivo (mesmo padrão do `webhook-voomp.js`)
+- [x] Deploy automático via git não estava puxando esse projeto (último deploy antes de hoje
+  tinha 7 dias) — publicado manual via `vercel --prod --yes`; investigar por que o
+  `vercel git connect` não está dando fast-forward sozinho
+- [x] Teste real: Direct com "METODO" → resposta automática chegou
+
+**Ainda em aberto:**
+- [ ] Aprovação do App Review da Meta (enviado 24/08) — sem isso, só funciona pra contas
+  tester/admin do app (a própria Karol), não pra leads reais de fora
+- [ ] Investigar o deploy automático da Vercel pra esse projeto (git push devia publicar sozinho)
+
+**Troubleshooting:**
 - Sem resposta nenhuma → checar se o webhook está registrado pro campo certo (`messages`) e se o
   `INSTAGRAM_WEBHOOK_VERIFY_TOKEN` bate dos dois lados
-- Erro de permissão no send → falta `instagram_manage_messages` no token, ou é caso de precisar
-  de Advanced Access/App Review
+- Erro de permissão no send → App Review ainda não aprovado (só funciona com contas
+  tester/admin até aprovar)
+- `FUNCTION_INVOCATION_FAILED` (500) → checar se algum código novo usa `import.meta` ou outra
+  sintaxe ESM que não sobrevive à compilação pra CommonJS dessa Vercel
 
 ---
 
