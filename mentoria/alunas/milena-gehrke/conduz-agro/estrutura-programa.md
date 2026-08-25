@@ -52,7 +52,10 @@ Ferramenta contínua rodando em paralelo às 24 sessões, ao longo dos 12 meses 
 - **Cadência:** 5 atividades práticas de 15 min por semana (não diário corrido — dá folga e reduz taxa de abandono)
 - **Sincronia:** cada quinzena entre sessões trabalha, em micro-doses, o tema que acabou de ser visto na sessão anterior
 - **Ritmo por etapa:** na Etapa 1, atividades mais táticas/de ação imediata (ex: "hoje, aplique 1 pergunta estratégica no seu próximo atendimento"); na Etapa 2, atividades mais reflexivas/de aprofundamento (ex: "hoje, revise uma conversa recente e identifique a objeção real por trás da aparente")
-- **Formato de entrega:** a definir na Fase 5 (Design de Entregáveis) — candidatos: agente de IA que manda a atividade do dia, ou calendário/PDF com a trilha completa
+- **Formato de entrega:** *(definido 24/08)* tabela/calendário no Google Sheets, 24 semanas × 5 atividades, conteúdo já rascunhado (ver `scripts/apps-script-plano-aplicacao-diaria.gs`) — candidato futuro de virar agente de IA fica em aberto, não bloqueia o lançamento
+- **Variedade de dinâmica:** *(adicionado 24/08)* não é só tarefa de escrever — as atividades alternam entre 8 tipos: 🎧 áudio de mentalidade, ✍️ escrita, 🪞 treino no espelho, 🎯 desafio rápido, 🧪 teste/autoavaliação, 👥 avaliação com terceiros (inclusive família), 🎭 simulação, 💭 reflexão. Dá textura à trilha e efeito de gamificação — evita a monotonia de "escreva sobre X" toda semana
+- **Áudios de mentalidade:** *(decisão 24/08)* as 5 atividades 🎧 (semanas 2, 8, 12, 20, 24) dependem de produção real — Milena grava os áudios (não é conteúdo que se inventa nem que o aluno recebe pronto de fábrica). Fica registrado como item de produção pendente (`checklist-producao.md` item 1.17)
+- **Envio da trilha ao aluno:** *(decisão 24/08)* manual por enquanto — Milena copia a atividade do dia da planilha e manda por WhatsApp. Programa ainda não teve a 1ª venda, não é hora de investir em automação. E-mail automatizado (via Apps Script, sem custo) é o próximo passo natural quando fizer sentido; WhatsApp automatizado exige API paga (Meta Business API / Twilio / Zenvia) e fica pra quando o volume justificar
 - **Cobertura:** os 12 meses inteiros do programa, fatiados por sessão/quinzena
 
 ## Suporte Entre Sessões — 4 Camadas Separadas

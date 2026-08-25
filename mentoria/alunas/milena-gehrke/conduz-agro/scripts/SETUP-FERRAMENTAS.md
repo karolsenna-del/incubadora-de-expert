@@ -1,11 +1,17 @@
-# Setup — Ferramentas do Portfólio (Círculo de Controle, Matriz de Responsabilidade, Mapa do Caso)
+# Setup — Ferramentas do Portfólio (Sheets)
 
-Cada ferramenta *distinta* do Portfólio que o aluno usa vira um **arquivo Google Sheets próprio** — não abas dentro de uma planilha só. Abas-dentro-de-1-arquivo só faz sentido quando é uso interno da Milena acompanhando várias submissões (como a planilha dos diagnósticos, onde cada aba recebe as respostas de todos os alunos/leads) **ou** quando são profundidades diferentes da MESMA ferramenta (ex: Mapa do Caso rápido x avançado — mesmo propósito, mesmo aluno, só a complexidade muda).
+Cada ferramenta *distinta* do Portfólio que o aluno usa vira um **arquivo Google Sheets próprio** — não abas dentro de uma planilha só. Abas-dentro-de-1-arquivo só faz sentido quando é uso interno da Milena acompanhando várias submissões (como a planilha dos diagnósticos, onde cada aba recebe as respostas de todos os alunos/leads) **ou** quando são profundidades/versões diferentes da MESMA ferramenta (ex: Mapa do Caso rápido x avançado; Mapa de Posicionamento inicial x revisado).
+
+Existe ainda um 3º padrão, diferente dos dois acima: **biblioteca cumulativa** — 1 tabela só que cresce com o tempo, sem duplicar aba (mesma lógica do CRM). É o caso do Mapa de Valor Percebido.
 
 Já criei os arquivos, em branco, na pasta do Drive:
 - **Círculo de Controle da Condução:** https://docs.google.com/spreadsheets/d/1W16t8QQwEt_BQ4uqVy6B5vVRNxoou9Yu1TAnKIFxmEE/edit
 - **Matriz de Responsabilidade e Prazos:** https://docs.google.com/spreadsheets/d/1tSXLwcAFW2Rt3h5dPb_vTaMQ6vcFp3VdrA19hW6MfAU/edit
 - **Mapa do Caso** (rápida + avançada, 2 abas-modelo no mesmo arquivo): https://docs.google.com/spreadsheets/d/1KgNmThGzyStiXwgCGK1Q5yFP78FScxqbJuT5qMkL26A/edit
+- **Mapa de Posicionamento** (versão inicial S7 + revisada S18, duplicar por revisão): https://docs.google.com/spreadsheets/d/1Ep5Yk4SHPpig_SGz3rupMQi8J-QEXJjFMXvjzNjLuDM/edit
+- **Mapa de Valor Percebido no Agro** (biblioteca cumulativa, não duplica): https://docs.google.com/spreadsheets/d/1Fp5E1Cuudzp3MS5wLpSlia86UB4BTuIFsHNS5xiCdzA/edit
+- **Checklist de Evidências da Autoridade** (tabela fixa, preenchida ao longo dos 12 meses, não duplica): https://docs.google.com/spreadsheets/d/1tSgX8p92DqerHjxpOmqWgRaXjulVgOYEdWlJUpre4-g/edit
+- **Plano de Aplicação Diária** (tabela fixa, 24 semanas × 5 atividades, igual pra todo aluno, não duplica): https://docs.google.com/spreadsheets/d/17ZtPL0rcOlJfNAEn4X4tQZItvDwVX-87UvAjuSJCFbM/edit
 
 ## 1. Colar o script em cada arquivo
 
@@ -16,11 +22,15 @@ Cada planilha recebe **só o script dela** (são independentes):
 3. Salva (Ctrl+S)
 4. Repete o mesmo processo na planilha **Matriz de Responsabilidade e Prazos**, colando `apps-script-matriz-responsabilidade.gs`
 5. Repete de novo na planilha **Mapa do Caso**, colando `apps-script-mapa-do-caso.gs` (esse tem 2 funções, porque gera 2 abas-modelo — rápida e avançada — no mesmo arquivo)
+6. Repete na planilha **Mapa de Posicionamento**, colando `apps-script-mapa-posicionamento.gs`
+7. Repete na planilha **Mapa de Valor Percebido no Agro**, colando `apps-script-mapa-valor-percebido.gs`
+8. Repete na planilha **Checklist de Evidências da Autoridade**, colando `apps-script-checklist-evidencias.gs`
+9. Repete na planilha **Plano de Aplicação Diária**, colando `apps-script-plano-aplicacao-diaria.gs`
 
 ## 2. Gerar a(s) aba(s)-modelo em cada uma
 
-**Círculo de Controle** e **Matriz de Responsabilidade** (1 aba cada):
-1. Confirma que a função selecionada é `criarTemplateCirculoControle` (1ª planilha) ou `criarTemplateMatrizResponsabilidade` (2ª)
+**Círculo de Controle**, **Matriz de Responsabilidade** e **Mapa de Posicionamento** (1 aba MODELO cada):
+1. Confirma que a função selecionada é `criarTemplateCirculoControle`, `criarTemplateMatrizResponsabilidade` ou `criarTemplateMapaPosicionamento` (conforme a planilha)
 2. Clica em **Executar** (▶) — autoriza na primeira vez (Revisar permissões → sua conta → Avançado → Acessar → Permitir)
 3. Aparece a aba **"MODELO"**, já formatada
 
@@ -28,6 +38,21 @@ Cada planilha recebe **só o script dela** (são independentes):
 1. Confirma que a função selecionada é `criarTodosMapasDoCaso` (cria as 2 de uma vez) — ou rode `criarTemplateMapaRapido` e `criarTemplateMapaAvancado` separadamente se preferir
 2. Clica em **Executar** (▶), autoriza se pedir
 3. Aparecem **"MODELO — Rápida (S4)"** e **"MODELO — Avançada (S12)"**
+
+**Mapa de Valor Percebido** (tabela única, sem MODELO):
+1. Confirma que a função selecionada é `criarMapaValorPercebido`
+2. Clica em **Executar** (▶), autoriza se pedir
+3. Aparece a aba **"Mapa de Valor Percebido"** já com cabeçalho formatado e 4 linhas de exemplo — esses exemplos são um rascunho meu (regularização de área, CAR, CCIR/ITR, usucapião), ajusta ou apaga conforme a experiência real da Milena
+
+**Checklist de Evidências** (tabela única, sem MODELO):
+1. Confirma que a função selecionada é `criarChecklistEvidencias`
+2. Clica em **Executar** (▶), autoriza se pedir
+3. Aparece a aba **"Checklist de Evidências"** com os 14 indicadores (já aprovados no PRD, não são rascunho) e as 5 colunas de checkpoint (S8-S24), com dropdown de pontuação 0-3 e uma linha de TOTAL que soma sozinha
+
+**Plano de Aplicação Diária** (tabela única, sem MODELO):
+1. Confirma que a função selecionada é `criarPlanoAplicacaoDiaria`
+2. Clica em **Executar** (▶), autoriza se pedir
+3. Aparece a aba **"Plano de Aplicação Diária"** com as 24 semanas (1 por sessão) × 5 atividades — Etapa 1 (semanas 1-8) com fundo claro, Etapa 2 (semanas 9-24) com fundo esverdeado. Cada atividade tem um ícone de tipo (🎧 áudio de mentalidade · ✍️ escrita · 🪞 treino no espelho · 🎯 desafio rápido · 🧪 teste/autoavaliação · 👥 avaliação com terceiros · 🎭 simulação · 💭 reflexão) — legenda fica na linha 3 da própria aba. **Todo o conteúdo das atividades é rascunho meu** — precisa de revisão da Milena antes de ir pro aluno (mesma ressalva de todo conteúdo de fala/script deste squad)
 
 Em todas: pode apagar a aba padrão em branco ("Página1" ou "Sheet1") que sobrou — não é usada.
 
@@ -45,6 +70,14 @@ Em todas: pode apagar a aba padrão em branco ("Página1" ou "Sheet1") que sobro
 **Matriz de Responsabilidade:** dados do caso no topo, tabela de etapas com dropdown na coluna "Responsável" (Você / Produtor / Terceiro) — a cor da célula muda sozinha. Pra entregar ao produtor: **Arquivo → Baixar → PDF (.pdf)**, ou imprimir a aba direto.
 
 **Mapa do Caso:** escolhe qual duplicar conforme a complexidade — "Rápida" (S4, 4 campos: demanda → problema real → riscos → próximo passo) pra um atendimento direto, ou "Avançada" (S12, 7 campos: pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos) pra casos com múltiplos envolvidos e interesses divergentes.
+
+**Mapa de Posicionamento:** 5 campos (Eu sou → Eu resolvo → Para quem → Como faço → Qual valor entrego). Duplica a aba MODELO na Sessão 7 (versão inicial) e de novo na Sessão 18 (revisão) — **não apaga a versão anterior**, o valor está em comparar a evolução.
+
+**Mapa de Valor Percebido:** aqui é diferente — **não duplica**. É 1 tabela só que vai crescendo: toda vez que encontrar uma tarefa técnica nova, adiciona uma linha (tarefa → risco evitado → ganho → quando usar esse argumento). Consulta antes de montar qualquer proposta (Passo 6 "Propor" do Roteiro de Condução).
+
+**Checklist de Evidências:** também não duplica — é uma tabela fixa de 14 indicadores (7 sinais concretos + 7 sinais internos, exatamente os do PRD) que o aluno vai pontuando de 0 a 3 em 5 momentos do programa (S8, S12, S16, S20, S24), sempre comparando com quem ele era na S1. A linha de TOTAL no fim soma cada checkpoint automaticamente — dá pra ver a evolução numérica ao longo dos 12 meses.
+
+**Plano de Aplicação Diária:** também não duplica — é a mesma trilha de 24 semanas pra todo aluno. Cada semana (sincronizada com a sessão em curso) tem 5 atividades de 15 min — tom tático nas semanas 1-8 (Etapa 1), reflexivo nas semanas 9-24 (Etapa 2). Formato de entrega ao aluno ainda em aberto (calendário/PDF exportado da própria planilha, ou reaproveitar o conteúdo num agente de IA no futuro).
 
 ## Quando atualizar o script
 

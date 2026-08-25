@@ -1,8 +1,10 @@
 # Setup — Planilhas dos Diagnósticos Conduz Agro
 
-Conecta os 3 formulários interativos (`diagnostico-interativo.html`, `pre-diagnostico-vendas.html` e `ficha-inscricao.html`) a uma planilha Google, sem precisar de domínio, servidor ou banco de dados.
+Conecta os 4 formulários interativos (`diagnostico-interativo.html`, `pre-diagnostico-vendas.html`, `ficha-inscricao.html` e `raio-x-conversa.html`) a uma planilha Google, sem precisar de domínio, servidor ou banco de dados.
 
-> **Addendum 23/08/2026:** `ficha-inscricao.html` (Fase 9, ferramenta do Destrava Condução) foi adicionado ao mesmo script/planilha, numa 3ª aba ("Ficha de Inscrição"). Se a planilha e o Apps Script já estavam implantados antes desse addendum, siga a seção "Quando atualizar o script" abaixo pra colar a versão nova do `.gs` e reimplantar — a URL não muda.
+> **Addendum 23/08/2026:** `ficha-inscricao.html` (Fase 9, ferramenta do Destrava Condução) foi adicionado ao mesmo script/planilha, numa 3ª aba ("Ficha de Inscrição").
+> **Addendum 24/08/2026:** `raio-x-conversa.html` (Raio-X da Conversa com o Produtor, uso dentro do programa) foi adicionado numa 4ª aba ("Raio-X de Conversas"), com uma coluna "Status da Análise" que começa em "Pendente" — muda pra "Feito" na mão depois de analisar, funciona como fila de trabalho da Milena. O formulário aceita **print(s) da conversa** (até 5, 6MB cada) além de texto colado — copiar e colar de WhatsApp/Direct raramente sai formatado direito, então print virou a opção principal. Os prints são salvos automaticamente numa pasta do Drive ("Conduz Agro — Prints do Raio-X", criada sozinha no primeiro envio) e o link de cada um cai na planilha, na coluna "Prints (links)".
+> Se a planilha e o Apps Script já estavam implantados antes desses addendums, siga a seção "Quando atualizar o script" abaixo pra colar a versão nova do `.gs` e reimplantar — a URL não muda.
 
 ## 1. Criar a planilha
 
@@ -20,7 +22,7 @@ Conecta os 3 formulários interativos (`diagnostico-interativo.html`, `pre-diagn
 1. No topo do editor, troca a função selecionada de `doPost` pra **`testSetup`**
 2. Clica em **Executar** (▶)
 3. Na primeira vez, o Google vai pedir autorização — clica em **Revisar permissões**, escolhe sua conta, clica em **Avançado** → **Acessar [nome do projeto] (não seguro)** → **Permitir**. É só o aviso padrão pra scripts que você mesmo escreveu, não é perigoso.
-4. Volta pra planilha — as 3 abas ("Diagnóstico Completo", "Pré-Diagnóstico Vendas" e "Ficha de Inscrição") já aparecem com cabeçalho
+4. Volta pra planilha — as 4 abas ("Diagnóstico Completo", "Pré-Diagnóstico Vendas", "Ficha de Inscrição" e "Raio-X de Conversas") já aparecem com cabeçalho
 
 ## 4. Publicar como Web App
 
@@ -35,7 +37,7 @@ Conecta os 3 formulários interativos (`diagnostico-interativo.html`, `pre-diagn
 
 ## 5. Colar a URL nos arquivos HTML
 
-Em cada um dos 3 arquivos (`diagnostico-interativo.html`, `pre-diagnostico-vendas.html` e `ficha-inscricao.html`), procura a linha:
+Em cada um dos 4 arquivos (`diagnostico-interativo.html`, `pre-diagnostico-vendas.html`, `ficha-inscricao.html` e `raio-x-conversa.html`), procura a linha:
 
 ```js
 var SHEETS_ENDPOINT_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
