@@ -10,6 +10,16 @@
 **Impacto:** [o que muda]
 -->
 
+## 24/08/2026 — Padronizar nome dos encontros 1:1 no Calendar, sem backfill do histórico
+
+**Contexto:** Weekly review. A automação de Encontros Individuais (`weekly-sync`, Área de Membros) espera que a gravação no Drive comece com `Individual - {slug-da-aluna} - {data}`, mas o Google Meet nomeia pelo título da reunião no Calendar — hoje só "Milena", "Simone e Mavi", "David" etc, sem o prefixo. Resultado: nenhuma gravação de 1:1 está sendo processada automaticamente. Levantada a possibilidade de puxar o histórico também (a série nunca rodou, watermark null = primeira rodada sem filtro de data), mas o comportamento de descoberta de subpasta nessa série nunca foi testado — risco parecido com o quase-duplicado da Live 25 (20/08).
+
+**Decisão:** Karol renomeia a reunião recorrente de cada aluna no Google Calendar/Meet pra `Individual - {slug-da-aluna}` (slug = nome da pasta em `mentoria/alunas/{slug}/`) — vale pra todas as alunas com 1:1 recorrente, não só a Milena. **Sem backfill do histórico** — só gravações novas, feitas depois da renomeação, entram na automação.
+
+**Racional:** Renomear a reunião é ação simples e sem risco, resolve o problema pra frente sem esforço de dev. Puxar histórico exigiria testar um caminho de código nunca validado (descoberta de subpasta pra série nova) — o ganho (algumas gravações antigas na Área de Membros) não compensa o risco de repetir um incidente de dado duplicado/errado, especialmente sem supervisão ativa da Karol no teste.
+
+**Impacto:** Nenhuma mudança de código necessária agora. Pendência de `demandas-backlog.md` fechada como decidida. Se o comportamento de descoberta de subpasta precisar ser confirmado/corrigido no futuro (ex: se a Karol quiser puxar histórico depois), rotear pro Gestor de Infra Arcane.
+
 ## 21/08/2026 — Rotina de Stories: vagas fixas, handoff pra automação diária
 
 **Contexto:** Karol relatou dificuldade em manter os Stories em dia porque a rotina hoje

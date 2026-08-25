@@ -4,8 +4,8 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 24/08/2026 (Companion — reconciliacao de 4 dias sem atualizacao formal: Rota100k Semana 04 agendada + risco de META_TOKEN, Conduz Agro/Milena pipeline 10/10 fases concluido fora do cockpit, Expert360 sem log ha 10 dias)
-**Proximo review:** ATRASADO — ultimo review real foi 14/08 (10 dias)
+**Ultima atualizacao:** 24/08/2026 (Companion — weekly review: META_TOKEN renovado, Expert360/M3 confirmado, Live 26 confirmada realizada, Workshop Método Validado congelado, encontros 1:1 padronizados daqui pra frente)
+**Proximo review:** 31/08/2026
 
 ---
 
@@ -31,7 +31,7 @@
 
 | Ideia | Origem | Notas |
 |-------|--------|-------|
-| Workshop Método Validado | Documento mestre criado 14/08 (`business/campanhas/workshop-metodo-validado/documento-mestre.md`) — proposta e público já fechados | Achado pelo Companion em 19/08 durante reconciliação — nunca entrou no cockpit/inbox. Nao processado: perguntar Karol se vira projeto novo (sem vaga — 3 ativos), fica congelado, ou e outra coisa (ex: parte de operação existente) |
+| | | |
 
 > Companion classifica no weekly review: sobe pra fila, congela, ou descarta.
 
@@ -41,7 +41,7 @@
 
 | Projeto | Objetivo | Por que parou |
 |---------|----------|---------------|
-| | | |
+| Workshop Método Validado | Documento mestre em `business/campanhas/workshop-metodo-validado/documento-mestre.md` — proposta e público já fechados | Congelado no weekly review de 24/08 — cockpit sem vaga (3 ativos), Karol decidiu não priorizar agora |
 
 ---
 
