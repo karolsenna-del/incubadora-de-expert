@@ -3,18 +3,22 @@
 *Planilha pra acompanhar produtores rurais prospectados, o pipeline até o fechamento, o financeiro de cada cliente e a reativação anual pra atualização de documentação. Entregue como template a cada aluno — cada mentorado roda o próprio pipeline com ela, no seu próprio negócio de regularização/crédito rural. Milena também usa a mesma estrutura no negócio dela (foi a origem do adaptado — ver abaixo), mas não é exclusiva dela: é ferramenta do Portfólio, entregue no kit de boas-vindas. Corrigido 23/08/2026 — antes registrada por engano como ferramenta interna, não entregável.*
 
 > Adaptado do **Rastreador de Leads** do próprio Expert360º da Milena (`M3.5 - Meu Rastreador de Leads`), com 2 abas em vez de 1: a lógica de pipeline vem de lá, o financeiro e a reativação anual são novos, específicos do negócio de regularização.
-> **Escopo:** só a camada comercial (prospecção → fechamento → financeiro) e a reativação. A execução do serviço em si (documentação, andamento técnico do caso) fica com as ferramentas de condução de caso do método (Mapa do Caso, Destrava Condução) — não duplicado aqui.
+> **Escopo:** só a camada comercial (prospecção → fechamento → financeiro) e a reativação. **O acompanhamento operacional do caso depois de fechado (etapa atual, checkpoints, comunicação com o produtor) tem ferramenta própria — a Central de Condução do Atendimento** (`central-conducao-atendimento.md`), corrigido 24/08. Essa divisão comercial/operacional é intencional, não é a mesma ferramenta com abas a mais.
 
 ---
 
 ## Como usar
 
-1. Crie 1 arquivo novo no Google Sheets com 2 abas
-2. Importe `crm-comercial-prospeccao.csv` numa aba (renomeie pra "Prospecção") e `crm-comercial-reativacao.csv` na outra (renomeie pra "Reativação")
-3. Configure dropdowns (Dados → Validação de dados) nas colunas Origem, Status, Fechou?, Status de Pagamento (aba Prospecção) e Documento a Renovar, Status de Reativação (aba Reativação) com as opções listadas abaixo
-4. Na aba Reativação, a coluna **Data Prevista de Reativação** usa fórmula `=EDATE(data_última_atualização; 12)` — calcula 12 meses à frente automaticamente, sem contar manual
-5. Apague a linha de exemplo antes de preencher de verdade
-6. Atualize o Status sempre que um produtor avançar de etapa — é isso que transforma a planilha em pipeline, não em lista parada
+**Arquivo já criado** (24/08) na pasta do Drive, em branco: https://docs.google.com/spreadsheets/d/1fztf30doEE9zV_ZCUtOKv7YDLtubX0mIhzqrf0Msq3o/edit
+
+1. Abre a planilha → **Extensões → Apps Script**
+2. Apaga o conteúdo padrão e cola `scripts/apps-script-crm-comercial.gs`
+3. Salva, seleciona a função `criarCRMComercial`, clica em **Executar** (▶), autoriza se pedir
+4. Aparecem as 2 abas já formatadas ("Prospecção" e "Reativação"), com dropdowns configurados (Origem, Status, Fechou?, Status de Pagamento na Prospecção; Documento a Renovar, Status de Reativação na Reativação) e cor automática por status (atrasado/vencido = vermelho, em dia/renovado = verde, quitado = dourado)
+5. Na aba Reativação, a coluna **Data Prevista de Reativação** já vem com a fórmula `=EDATE(...)` em todas as 30 linhas — calcula 12 meses à frente sozinha
+6. Apague a linha de exemplo (linha 4, em itálico) antes de preencher de verdade
+7. Atualize o Status sempre que um produtor avançar de etapa — é isso que transforma a planilha em pipeline, não em lista parada
+8. Pode apagar a aba padrão em branco ("Página1"/"Sheet1") que sobra
 
 ---
 

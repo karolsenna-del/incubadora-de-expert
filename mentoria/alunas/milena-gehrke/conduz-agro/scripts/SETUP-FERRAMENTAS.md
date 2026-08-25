@@ -12,6 +12,9 @@ Já criei os arquivos, em branco, na pasta do Drive:
 - **Mapa de Valor Percebido no Agro** (biblioteca cumulativa, não duplica): https://docs.google.com/spreadsheets/d/1Fp5E1Cuudzp3MS5wLpSlia86UB4BTuIFsHNS5xiCdzA/edit
 - **Checklist de Evidências da Autoridade** (tabela fixa, preenchida ao longo dos 12 meses, não duplica): https://docs.google.com/spreadsheets/d/1tSgX8p92DqerHjxpOmqWgRaXjulVgOYEdWlJUpre4-g/edit
 - **Plano de Aplicação Diária** (tabela fixa, 24 semanas × 5 atividades, igual pra todo aluno, não duplica): https://docs.google.com/spreadsheets/d/17ZtPL0rcOlJfNAEn4X4tQZItvDwVX-87UvAjuSJCFbM/edit
+- **Protocolo Pessoal de Condução** (documento único do aluno, S23-24, campos em branco pra ele preencher — não duplica): https://docs.google.com/spreadsheets/d/1teCrdqrK9npR--vXKS5o8pyF9_q24gD1sRza5gQltdI/edit
+- **CRM Comercial Conduz Agro** (metade comercial, biblioteca cumulativa, 2 abas — Prospecção e Reativação, não duplica): https://docs.google.com/spreadsheets/d/1fztf30doEE9zV_ZCUtOKv7YDLtubX0mIhzqrf0Msq3o/edit — setup detalhado em `crm-comercial.md`
+- **Central de Condução do Atendimento** (metade operacional, biblioteca cumulativa, não duplica): https://docs.google.com/spreadsheets/d/1Fb3fgBjtJywE8Fi7S904SHKFrJtmbkWpMztQHZzs-lU/edit — setup detalhado em `central-conducao-atendimento.md`
 
 ## 1. Colar o script em cada arquivo
 
@@ -26,6 +29,7 @@ Cada planilha recebe **só o script dela** (são independentes):
 7. Repete na planilha **Mapa de Valor Percebido no Agro**, colando `apps-script-mapa-valor-percebido.gs`
 8. Repete na planilha **Checklist de Evidências da Autoridade**, colando `apps-script-checklist-evidencias.gs`
 9. Repete na planilha **Plano de Aplicação Diária**, colando `apps-script-plano-aplicacao-diaria.gs`
+10. Repete na planilha **Protocolo Pessoal de Condução**, colando `apps-script-protocolo-pessoal.gs`
 
 ## 2. Gerar a(s) aba(s)-modelo em cada uma
 
@@ -77,7 +81,9 @@ Em todas: pode apagar a aba padrão em branco ("Página1" ou "Sheet1") que sobro
 
 **Checklist de Evidências:** também não duplica — é uma tabela fixa de 14 indicadores (7 sinais concretos + 7 sinais internos, exatamente os do PRD) que o aluno vai pontuando de 0 a 3 em 5 momentos do programa (S8, S12, S16, S20, S24), sempre comparando com quem ele era na S1. A linha de TOTAL no fim soma cada checkpoint automaticamente — dá pra ver a evolução numérica ao longo dos 12 meses.
 
-**Plano de Aplicação Diária:** também não duplica — é a mesma trilha de 24 semanas pra todo aluno. Cada semana (sincronizada com a sessão em curso) tem 5 atividades de 15 min — tom tático nas semanas 1-8 (Etapa 1), reflexivo nas semanas 9-24 (Etapa 2). Formato de entrega ao aluno ainda em aberto (calendário/PDF exportado da própria planilha, ou reaproveitar o conteúdo num agente de IA no futuro).
+**Plano de Aplicação Diária:** também não duplica — é a mesma trilha de 24 semanas pra todo aluno. Cada semana (sincronizada com a sessão em curso) tem 5 atividades de 15 min — tom tático nas semanas 1-8 (Etapa 1), reflexivo nas semanas 9-24 (Etapa 2). Entrega manual por enquanto (Milena copia e manda por WhatsApp) — decisão de 24/08, sem automação nessa fase.
+
+**Protocolo Pessoal de Condução:** documento único do aluno, campos em branco — só a pergunta-guia de cada um dos 10 passos (Abrir → Ouvir → Investigar → Diagnosticar → Orientar → Propor → Negociar → Decidir → Conduzir → Acompanhar). O aluno preenche com as próprias palavras nas Sessões 23-24, a partir do caso real da S22. Não tem exemplo de resposta pronto de propósito — é o sistema *dele*, não um roteiro da Milena.
 
 ## Quando atualizar o script
 

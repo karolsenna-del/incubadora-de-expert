@@ -73,7 +73,7 @@ Racional do número-âncora (R$3.997): fica acima do piso da faixa aprovada na F
 - **Formato:** Ao vivo (sessões 1:1), com gravação disponibilizada depois
 - **Individual ou grupo:** Individual (1:1)
 - **Entrega:** Programa fechado de 12 meses, sem renovação automática — continuidade é decisão separada, pós-programa (ecossistema Conduz Agro maior, fora de escopo aqui)
-- **Preço e condições:** R$ 2.797 à vista (fase de validação, ancorado em R$ 3.997) ou parcelado em até 12x — alinhado ao próprio período de acesso à mentoria (12 meses). 12x de R$ 2.797 sem juros = R$ 233,08/mês; valor final com juros depende da plataforma de checkout — **Voomp** é a indicação da Karol
+- **Preço e condições:** R$ 2.797 à vista (fase de validação, ancorado em R$ 3.997) ou parcelado em até 12x — alinhado ao próprio período de acesso à mentoria (12 meses). 12x de R$ 2.797 sem juros = R$ 233,08/mês. **Corrigido 24/08:** venda não passa por checkout/gateway automatizado — o modelo é venda consultiva, fechada na Sessão Estratégica, com pagamento via **PIX parcelado** (parcelas combinadas diretamente com o aluno na sessão, sem taxa de plataforma)
 - **Duração:** 12 meses, 24 sessões quinzenais de 60-90min
 - **Agenda:** Início a definir por turma de entrada (individual, não depende de fechar turma — pode iniciar a qualquer momento após fechamento)
 
@@ -108,7 +108,8 @@ Ver Passo 2 acima (20 itens característica → benefício)
 
 ## Comercial
 - **Preço:** R$ 2.797 à vista (fase de validação, ancorado em R$ 3.997 — valor cheio a partir da 4ª venda; as 3 primeiras vendas ficam no preço de validação)
-- **Condições:** à vista ou parcelado em até 12x (R$ 233,08/mês sem juros)
+- **Condições:** à vista ou parcelado em até 12x (R$ 233,08/mês), via PIX combinado direto com o aluno — sem checkout/gateway
+- **Venda:** consultiva, fechada em Sessão Estratégica (1:1) — não é autoatendimento/checkout
 - **Modelo:** Online (Meet)
 - **Formato:** Ao vivo + gravado
 - **Duração:** 12 meses
