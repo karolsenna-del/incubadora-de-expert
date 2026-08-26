@@ -201,22 +201,29 @@ modules:
     capa: "M3-vendas-secretas.png"
     lessons:
       - hotmart_name: "Boas-vindas ao M3"
-        video: null
+        video: "00-intro.mp4"
         descricao_slug: "00-intro"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213991"
+        youtube_id: "jWJvBgpiHms"
+        # 26/08/2026: gravado/editado, upado como Nao listado (Area de Membros, nao Voomp)
 
       - hotmart_name: "A1 — Vendas Secretas: Conceito"
-        video: null
+        video: "01-vendas-secretas-conceito.mp4"
         descricao_slug: "01-vendas-secretas-conceito"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213992"
+        youtube_id: "RralsyVgAtA"
+        # 26/08/2026: arquivo local "Identidade de vendas antes da tecnica.mp4" (mesmo conteudo,
+        # conferido contra descricoes.md); upado como Nao listado (Area de Membros, nao Voomp)
 
       - hotmart_name: "A2 — Feito é Melhor que Perfeito"
-        video: null
+        video: "02-feito-e-melhor-que-perfeito.mp4"
         descricao_slug: "02-feito-e-melhor-que-perfeito"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213993"
+        youtube_id: "G27FO-emYaY"
+        # 26/08/2026: gravado/editado, upado como Nao listado (Area de Membros, nao Voomp)
 
       - hotmart_name: "A3 — A Oferta de Lançamento"
         video: null
@@ -349,13 +356,18 @@ modules:
     capa: "MO-orientacoes.png"
     lessons:
       - hotmart_name: "Boas-vindas ao Expert360"
-        video: null
+        video: "00-boas-vindas.mp4"
         descricao_slug: "00-boas-vindas"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213971"
+        youtube_id: "u-_ZM9k3Ntw"
+        # 26/08/2026: gravado/editado, upado como Nao listado (Area de Membros, nao Voomp)
 
       - hotmart_name: "Antes de Começar"
-        video: null
+        video: "01-antes-de-comecar.mp4"
         descricao_slug: "01-antes-de-comecar"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213972"
+        youtube_id: "Gcz0wrqSqEo"
+        # 26/08/2026: arquivo local "Setup inicial.mp4" (mesmo conteudo, conferido contra
+        # descricoes.md); upado como Nao listado (Area de Membros, nao Voomp)

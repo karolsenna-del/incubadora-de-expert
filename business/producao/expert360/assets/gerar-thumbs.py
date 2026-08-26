@@ -121,7 +121,8 @@ MODULOS = [
         "numero": "",
         "nome": "Orientacoes",
         "aulas": [
-            "00-intro",
+            "00-boas-vindas",
+            "01-antes-de-comecar",
         ],
     },
 ]

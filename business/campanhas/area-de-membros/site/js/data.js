@@ -4,12 +4,20 @@
 // Tudo marcado com "// PLACEHOLDER" ainda não foi entregue pela Karol — não inventar conteúdo final aqui.
 // ============================================
 
-// Roteiro do Expert360º — nomes de módulo REAIS (course-publisher-kb.md). M0-M2 têm título+youtube_id
-// reais (fonte: agents/course-publisher/data/config.yaml). M3-M4 ainda placeholder — vídeo não gravado.
+// Roteiro do Expert360º — nomes de módulo REAIS (course-publisher-kb.md). Orientações + M0-M2 têm
+// título+youtube_id reais (fonte: agents/course-publisher/data/config.yaml). M3 parcial (3/13, 26/08).
+// M4 ainda placeholder — vídeo não gravado.
 const ROTEIRO_EXPERT360 = {
   id: 'expert360',
   nome: 'Expert360º',
   modulos: [
+    {
+      id: 'orientacoes', numero: 'OR', titulo: 'Módulo de Orientações', subtitulo: 'Antes de começar',
+      aulas: [
+        { titulo: 'Boas-vindas ao Expert360', concluida: false, youtube_id: 'u-_ZM9k3Ntw' },
+        { titulo: 'Antes de Começar', concluida: false, youtube_id: 'Gcz0wrqSqEo' }
+      ]
+    },
     {
       id: 'm0', numero: 'M0', titulo: 'Desbloqueio',
       aulas: [
@@ -50,8 +58,23 @@ const ROTEIRO_EXPERT360 = {
       ]
     },
     {
+      // Currículo real via course-publisher config.yaml — 3/13 aulas com vídeo (26/08), resto aguarda gravação
       id: 'm3', numero: 'M3', titulo: 'Vendas Secretas', subtitulo: '3 vendas reais antes de aparecer',
-      aulas: Array.from({ length: 12 }, (_, i) => ({ titulo: `Aula ${i + 1}`, concluida: false })) // PLACEHOLDER
+      aulas: [
+        { titulo: 'Boas-vindas ao M3', concluida: false, youtube_id: 'jWJvBgpiHms' },
+        { titulo: 'A1 — Vendas Secretas: Conceito', concluida: false, youtube_id: 'RralsyVgAtA' },
+        { titulo: 'A2 — Feito é Melhor que Perfeito', concluida: false, youtube_id: 'G27FO-emYaY' },
+        { titulo: 'A3 — A Oferta de Lançamento', concluida: false },
+        { titulo: 'A4 — Exercício: Agente da Proposta Validada', concluida: false },
+        { titulo: 'A5 — Rastreador de Leads Quentes', concluida: false },
+        { titulo: 'A6 — Social Selling', concluida: false },
+        { titulo: 'A7 — Lendo seu Lead', concluida: false },
+        { titulo: 'A8 — Roteiro de Abordagem', concluida: false },
+        { titulo: 'A9 — Roteiro da Sessão', concluida: false },
+        { titulo: 'A10 — Pós-Sessão', concluida: false },
+        { titulo: 'A11 — A Escala Secreta', concluida: false },
+        { titulo: 'Quem Você se Tornou no M3', concluida: false }
+      ]
     },
     {
       id: 'm4', numero: 'M4', titulo: 'Autoridade Digital', subtitulo: 'Presença que vende sem precisar pedir',
