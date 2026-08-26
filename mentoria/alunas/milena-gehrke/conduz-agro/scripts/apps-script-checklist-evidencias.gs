@@ -32,14 +32,14 @@ function criarChecklistEvidencias() {
   for (var c = 3; c <= 7; c++) sh.setColumnWidth(c, 90);
   sh.setHiddenGridlines(true);
 
-  sh.getRange("A1:G1").merge().setValue("CHECKLIST DE EVIDÊNCIAS DA AUTORIDADE")
-    .setBackground(COR_OLIVE_DEEP).setFontColor(COR_PAPER)
-    .setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
+  sh.getRange("A1:B1").merge().setValue("CHECKLIST DE EVIDÊNCIAS DA AUTORIDADE")
+    .setFontColor(COR_PAPER).setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
+  sh.getRange("A1:G1").setBackground(COR_OLIVE_DEEP);
   sh.setRowHeight(1, 32);
 
-  sh.getRange("A2:G2").merge().setValue("Conduz Agro — 5 checkpoints cumulativos ao longo dos 12 meses. Pontue de 0 a 3 em cada coluna: 0 = ainda não · 1 = às vezes · 2 = na maioria das vezes · 3 = consistente. Compare sempre com o que você era na Sessão 1.")
-    .setBackground(COR_PAPER).setFontColor(COR_INK_SOFT).setFontStyle("italic")
-    .setFontSize(9).setHorizontalAlignment("center").setWrap(true);
+  sh.getRange("A2:B2").merge().setValue("Conduz Agro — 5 checkpoints cumulativos ao longo dos 12 meses. Pontue de 0 a 3 em cada coluna: 0 = ainda não · 1 = às vezes · 2 = na maioria das vezes · 3 = consistente. Compare sempre com o que você era na Sessão 1.")
+    .setFontColor(COR_INK_SOFT).setFontStyle("italic").setFontSize(9).setHorizontalAlignment("center").setWrap(true);
+  sh.getRange("A2:G2").setBackground(COR_PAPER);
   sh.setRowHeight(2, 40);
 
   // Cabeçalho da tabela
@@ -72,8 +72,9 @@ function criarChecklistEvidencias() {
   var row = 5;
   indicadores.forEach(function(item){
     if (item[1] === null) {
-      sh.getRange(row, 1, 1, 7).merge().setValue(item[0])
+      sh.getRange(row, 1, 1, 2).merge().setValue(item[0])
         .setBackground(COR_GOLD_TINT).setFontColor(COR_GOLD).setFontWeight("bold").setFontSize(9.5);
+      sh.getRange(row, 3, 1, 5).setBackground(COR_GOLD_TINT);
       sh.setRowHeight(row, 22);
     } else {
       sh.getRange(row, 1).setValue(item[0]).setFontColor(COR_INK_SOFT).setFontSize(9).setHorizontalAlignment("center");

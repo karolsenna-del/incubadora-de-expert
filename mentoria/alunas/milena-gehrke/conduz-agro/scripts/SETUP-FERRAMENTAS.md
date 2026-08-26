@@ -15,6 +15,10 @@ Já criei os arquivos, em branco, na pasta do Drive:
 - **Protocolo Pessoal de Condução** (documento único do aluno, S23-24, campos em branco pra ele preencher — não duplica): https://docs.google.com/spreadsheets/d/1teCrdqrK9npR--vXKS5o8pyF9_q24gD1sRza5gQltdI/edit
 - **CRM Comercial Conduz Agro** (metade comercial, biblioteca cumulativa, 2 abas — Prospecção e Reativação, não duplica): https://docs.google.com/spreadsheets/d/1fztf30doEE9zV_ZCUtOKv7YDLtubX0mIhzqrf0Msq3o/edit — setup detalhado em `crm-comercial.md`
 - **Central de Condução do Atendimento** (metade operacional, biblioteca cumulativa, não duplica): https://docs.google.com/spreadsheets/d/1Fb3fgBjtJywE8Fi7S904SHKFrJtmbkWpMztQHZzs-lU/edit — setup detalhado em `central-conducao-atendimento.md`
+- **Plano Personalizado** *(novo, 25/08)* (12 meses → continuidade, duplicar por revisão): https://docs.google.com/spreadsheets/d/1YpZ8oeKTBAvJsbFPol9MZf8m1f8a4k61KchAou1rltI/edit
+- **Proposta Comercial** *(novo, 25/08)* (duplicar por caso): https://docs.google.com/spreadsheets/d/1Mr35ErujvmE_0csNboMQURk8bPKVl2iC9jVM3iFYel0/edit
+- **Mapa Pessoal de Padrões** *(novo, 25/08)* (biblioteca cumulativa, não duplica): https://docs.google.com/spreadsheets/d/1Y0coyGUibkCw8LblfleuI2hxzHGW_gOW3YGNuR2Djhs/edit
+- **Banco de Comunicação** *(novo, 25/08)* (biblioteca cumulativa, não duplica): https://docs.google.com/spreadsheets/d/1QXecZvkYr0ZjFy6beN-C2G_qn75lgIek5OjxxXhWWdI/edit
 
 ## 1. Colar o script em cada arquivo
 
@@ -30,11 +34,15 @@ Cada planilha recebe **só o script dela** (são independentes):
 8. Repete na planilha **Checklist de Evidências da Autoridade**, colando `apps-script-checklist-evidencias.gs`
 9. Repete na planilha **Plano de Aplicação Diária**, colando `apps-script-plano-aplicacao-diaria.gs`
 10. Repete na planilha **Protocolo Pessoal de Condução**, colando `apps-script-protocolo-pessoal.gs`
+11. Repete na planilha **Plano Personalizado**, colando `apps-script-plano-personalizado.gs`
+12. Repete na planilha **Proposta Comercial**, colando `apps-script-proposta-comercial.gs`
+13. Repete na planilha **Mapa Pessoal de Padrões**, colando `apps-script-mapa-padroes.gs`
+14. Repete na planilha **Banco de Comunicação**, colando `apps-script-banco-comunicacao.gs`
 
 ## 2. Gerar a(s) aba(s)-modelo em cada uma
 
-**Círculo de Controle**, **Matriz de Responsabilidade** e **Mapa de Posicionamento** (1 aba MODELO cada):
-1. Confirma que a função selecionada é `criarTemplateCirculoControle`, `criarTemplateMatrizResponsabilidade` ou `criarTemplateMapaPosicionamento` (conforme a planilha)
+**Círculo de Controle**, **Matriz de Responsabilidade**, **Mapa de Posicionamento**, **Plano Personalizado** e **Proposta Comercial** (1 aba MODELO cada):
+1. Confirma que a função selecionada é `criarTemplateCirculoControle`, `criarTemplateMatrizResponsabilidade`, `criarTemplateMapaPosicionamento`, `criarTemplatePlanoPersonalizado` ou `criarTemplatePropostaComercial` (conforme a planilha)
 2. Clica em **Executar** (▶) — autoriza na primeira vez (Revisar permissões → sua conta → Avançado → Acessar → Permitir)
 3. Aparece a aba **"MODELO"**, já formatada
 
@@ -57,6 +65,16 @@ Cada planilha recebe **só o script dela** (são independentes):
 1. Confirma que a função selecionada é `criarPlanoAplicacaoDiaria`
 2. Clica em **Executar** (▶), autoriza se pedir
 3. Aparece a aba **"Plano de Aplicação Diária"** com as 24 semanas (1 por sessão) × 5 atividades — Etapa 1 (semanas 1-8) com fundo claro, Etapa 2 (semanas 9-24) com fundo esverdeado. Cada atividade tem um ícone de tipo (🎧 áudio de mentalidade · ✍️ escrita · 🪞 treino no espelho · 🎯 desafio rápido · 🧪 teste/autoavaliação · 👥 avaliação com terceiros · 🎭 simulação · 💭 reflexão) — legenda fica na linha 3 da própria aba. **Todo o conteúdo das atividades é rascunho meu** — precisa de revisão da Milena antes de ir pro aluno (mesma ressalva de todo conteúdo de fala/script deste squad)
+
+**Mapa Pessoal de Padrões** (tabela única, sem MODELO):
+1. Confirma que a função selecionada é `criarMapaPadroes`
+2. Clica em **Executar** (▶), autoriza se pedir
+3. Aparece a aba **"Mapa Pessoal de Padrões"** com cabeçalho formatado e 1 linha de exemplo (rascunho, apaga antes de usar)
+
+**Banco de Comunicação** (tabela única, sem MODELO):
+1. Confirma que a função selecionada é `criarBancoComunicacao`
+2. Clica em **Executar** (▶), autoriza se pedir
+3. Aparece a aba **"Banco de Comunicação"** com cabeçalho formatado, dropdown de Tipo (Pergunta/Argumento) e 2 linhas de exemplo (rascunho, apaga antes de usar)
 
 Em todas: pode apagar a aba padrão em branco ("Página1" ou "Sheet1") que sobrou — não é usada.
 
@@ -84,6 +102,14 @@ Em todas: pode apagar a aba padrão em branco ("Página1" ou "Sheet1") que sobro
 **Plano de Aplicação Diária:** também não duplica — é a mesma trilha de 24 semanas pra todo aluno. Cada semana (sincronizada com a sessão em curso) tem 5 atividades de 15 min — tom tático nas semanas 1-8 (Etapa 1), reflexivo nas semanas 9-24 (Etapa 2). Entrega manual por enquanto (Milena copia e manda por WhatsApp) — decisão de 24/08, sem automação nessa fase.
 
 **Protocolo Pessoal de Condução:** documento único do aluno, campos em branco — só a pergunta-guia de cada um dos 10 passos (Abrir → Ouvir → Investigar → Diagnosticar → Orientar → Propor → Negociar → Decidir → Conduzir → Acompanhar). O aluno preenche com as próprias palavras nas Sessões 23-24, a partir do caso real da S22. Não tem exemplo de resposta pronto de propósito — é o sistema *dele*, não um roteiro da Milena.
+
+**Plano Personalizado** *(novo, 25/08)*: criado na S2, revisado ao final de cada etapa/sub-fase (S8, S12, S16, S20) e estendido em plano de continuidade na S24 — **duplica por revisão**, mesma lógica do Mapa de Posicionamento (guarda o histórico, não apaga versão anterior). Campo "Continuidade" só se preenche na última versão (S24).
+
+**Proposta Comercial** *(novo, 25/08)*: criada na S7 (estrutura essencial), ajustada na S19 (casos maiores) — **duplica por caso**, uma cópia por produtor. Usa o Mapa de Valor Percebido como munição de argumento no campo Investimento.
+
+**Mapa Pessoal de Padrões** *(novo, 25/08)*: usado a partir da S9 — **não duplica**, biblioteca cumulativa (trava → situação → efeito comercial). Toda vez que uma trava se repetir, adiciona uma linha — ver o padrão escrito por escrito é o que diferencia "tive um dia ruim" de "isso sempre acontece quando X".
+
+**Banco de Comunicação** *(novo, 25/08)*: usado nas S13-S14 — **não duplica**, biblioteca cumulativa que junta perguntas de escuta boas + argumentos de valor que funcionaram, cada linha marcada por Tipo (dropdown Pergunta/Argumento). Junta o que antes seriam 2 ferramentas separadas — mesma função, evita duplicar.
 
 ## Quando atualizar o script
 

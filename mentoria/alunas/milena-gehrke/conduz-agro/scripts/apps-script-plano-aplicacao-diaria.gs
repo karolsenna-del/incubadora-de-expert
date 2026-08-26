@@ -42,18 +42,22 @@ function criarPlanoAplicacaoDiaria() {
   for (var c = 4; c <= 8; c++) sh.setColumnWidth(c, 250);
   sh.setHiddenGridlines(true);
 
-  sh.getRange("A1:H1").merge().setValue("PLANO DE APLICAÇÃO DIÁRIA — 12 MESES")
-    .setBackground(COR_OLIVE_DEEP).setFontColor(COR_PAPER)
-    .setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
+  sh.getRange("A1:C1").merge().setValue("PLANO DE APLICAÇÃO DIÁRIA — 12 MESES")
+    .setFontColor(COR_PAPER).setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
+  sh.getRange("D1:H1").merge();
+  sh.getRange("A1:H1").setBackground(COR_OLIVE_DEEP);
   sh.setRowHeight(1, 32);
 
-  sh.getRange("A2:H2").merge().setValue("Conduz Agro — 5 atividades de 15 min por semana (não diário corrido), sincronizadas com a sessão em curso. RASCUNHO — validar com a Milena antes de distribuir. Etapa 1 (semanas 1-8): tom tático, ação imediata. Etapa 2 (semanas 9-24): tom reflexivo, aprofundamento.")
-    .setBackground(COR_GOLD_TINT).setFontColor(COR_GOLD).setFontStyle("italic")
-    .setFontSize(9).setHorizontalAlignment("center").setWrap(true);
+  sh.getRange("A2:C2").merge().setValue("Conduz Agro — 5 atividades de 15 min por semana (não diário corrido), sincronizadas com a sessão em curso. RASCUNHO — validar com a Milena antes de distribuir. Etapa 1 (semanas 1-8): tom tático, ação imediata. Etapa 2 (semanas 9-24): tom reflexivo, aprofundamento.")
+    .setFontColor(COR_GOLD).setFontStyle("italic").setFontSize(9).setHorizontalAlignment("center").setWrap(true);
+  sh.getRange("D2:H2").merge();
+  sh.getRange("A2:H2").setBackground(COR_GOLD_TINT);
   sh.setRowHeight(2, 44);
 
-  sh.getRange("A3:H3").merge().setValue("🎧 Áudio de Mentalidade   ✍️ Escrita   🪞 Treino no Espelho   🎯 Desafio Rápido   🧪 Teste/Autoavaliação   👥 Avaliação com Terceiros   🎭 Simulação   💭 Reflexão")
-    .setBackground(COR_PAPER).setFontColor(COR_INK_SOFT).setFontSize(8.5).setHorizontalAlignment("center").setWrap(true);
+  sh.getRange("A3:C3").merge().setValue("🎧 Áudio de Mentalidade   ✍️ Escrita   🪞 Treino no Espelho   🎯 Desafio Rápido   🧪 Teste/Autoavaliação   👥 Avaliação com Terceiros   🎭 Simulação   💭 Reflexão")
+    .setFontColor(COR_INK_SOFT).setFontSize(8.5).setHorizontalAlignment("center").setWrap(true);
+  sh.getRange("D3:H3").merge();
+  sh.getRange("A3:H3").setBackground(COR_PAPER);
   sh.setRowHeight(3, 22);
 
   var headers = [["#", "Sessão", "Tema da semana", "Dia 1", "Dia 2", "Dia 3", "Dia 4", "Dia 5"]];
@@ -219,11 +223,11 @@ function criarPlanoAplicacaoDiaria() {
       .setBorder(true, true, true, true, true, true, COR_RULE, SpreadsheetApp.BorderStyle.SOLID)
       .setVerticalAlignment("top").setWrap(true);
 
-    sh.getRange(row, 1).setValue(w[0]).setFontColor(COR_INK_SOFT).setFontSize(9).setHorizontalAlignment("center");
-    sh.getRange(row, 2).setValue(w[1]).setFontWeight("bold").setFontColor(COR_GOLD).setFontSize(9.5).setHorizontalAlignment("center");
-    sh.getRange(row, 3).setValue(w[2]).setFontWeight("bold").setFontColor(COR_INK).setFontSize(9.5);
+    sh.getRange(row, 1).setValue(w[0]).setFontColor(COR_INK_SOFT).setFontSize(10).setHorizontalAlignment("center");
+    sh.getRange(row, 2).setValue(w[1]).setFontWeight("bold").setFontColor(COR_GOLD).setFontSize(10).setHorizontalAlignment("center");
+    sh.getRange(row, 3).setValue(w[2]).setFontWeight("bold").setFontColor(COR_INK).setFontSize(10);
     for (var d = 0; d < 5; d++) {
-      sh.getRange(row, 4 + d).setValue(w[3][d]).setFontColor(COR_INK).setFontSize(9);
+      sh.getRange(row, 4 + d).setValue(w[3][d]).setFontColor(COR_INK).setFontSize(10);
     }
     sh.setRowHeight(row, 70);
     row++;

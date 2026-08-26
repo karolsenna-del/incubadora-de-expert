@@ -42,14 +42,14 @@ function criarAbaProspeccao() {
   for (var i = 0; i < headers.length; i++) sh.setColumnWidth(i + 1, 145);
   sh.setColumnWidth(16, 260);
 
-  sh.getRange(1, 1, 1, 16).merge().setValue("CRM COMERCIAL CONDUZ AGRO — PROSPECÇÃO")
-    .setBackground(COR_OLIVE_DEEP).setFontColor(COR_PAPER)
-    .setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
+  sh.getRange(1, 1).setValue("CRM COMERCIAL CONDUZ AGRO — PROSPECÇÃO")
+    .setFontColor(COR_PAPER).setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
+  sh.getRange(1, 1, 1, 16).setBackground(COR_OLIVE_DEEP);
   sh.setRowHeight(1, 32);
 
-  sh.getRange(2, 1, 1, 16).merge().setValue("Pipeline de prospecção até o fechamento + financeiro de cada cliente. Atualize o Status sempre que um produtor avançar de etapa — é isso que transforma a planilha em pipeline, não em lista parada. Apague a linha de exemplo (linha 4) antes de usar de verdade.")
-    .setBackground(COR_PAPER).setFontColor(COR_INK_SOFT).setFontStyle("italic")
-    .setFontSize(9).setHorizontalAlignment("center").setWrap(true);
+  sh.getRange(2, 1).setValue("Pipeline de prospecção até o fechamento + financeiro de cada cliente. Atualize o Status sempre que um produtor avançar de etapa — é isso que transforma a planilha em pipeline, não em lista parada. Apague a linha de exemplo (linha 4) antes de usar de verdade.")
+    .setFontColor(COR_INK_SOFT).setFontStyle("italic").setFontSize(9).setHorizontalAlignment("center").setWrap(true);
+  sh.getRange(2, 1, 1, 16).setBackground(COR_PAPER);
   sh.setRowHeight(2, 34);
 
   sh.getRange(3, 1, 1, 16).setValues([headers])
@@ -107,14 +107,14 @@ function criarAbaReativacao() {
   sh.setColumnWidth(5, 190);
   sh.setColumnWidth(6, 320);
 
-  sh.getRange(1, 1, 1, 6).merge().setValue("CRM COMERCIAL CONDUZ AGRO — REATIVAÇÃO ANUAL")
-    .setBackground(COR_OLIVE_DEEP).setFontColor(COR_PAPER)
-    .setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
+  sh.getRange(1, 1).setValue("CRM COMERCIAL CONDUZ AGRO — REATIVAÇÃO ANUAL")
+    .setFontColor(COR_PAPER).setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
+  sh.getRange(1, 1, 1, 6).setBackground(COR_OLIVE_DEEP);
   sh.setRowHeight(1, 32);
 
-  sh.getRange(2, 1, 1, 6).merge().setValue("Documentos (CAR, CCIR, ITR) vencem e precisam ser atualizados — essa aba garante que nenhum cliente fica esquecido depois que o serviço foi entregue. A coluna de Data Prevista já calcula 12 meses à frente sozinha. Apague a linha de exemplo (linha 4) antes de usar de verdade.")
-    .setBackground(COR_PAPER).setFontColor(COR_INK_SOFT).setFontStyle("italic")
-    .setFontSize(9).setHorizontalAlignment("center").setWrap(true);
+  sh.getRange(2, 1).setValue("Documentos (CAR, CCIR, ITR) vencem e precisam ser atualizados — essa aba garante que nenhum cliente fica esquecido depois que o serviço foi entregue. A coluna de Data Prevista já calcula 12 meses à frente sozinha. Apague a linha de exemplo (linha 4) antes de usar de verdade.")
+    .setFontColor(COR_INK_SOFT).setFontStyle("italic").setFontSize(9).setHorizontalAlignment("center").setWrap(true);
+  sh.getRange(2, 1, 1, 6).setBackground(COR_PAPER);
   sh.setRowHeight(2, 40);
 
   sh.getRange(3, 1, 1, 6).setValues([headers])

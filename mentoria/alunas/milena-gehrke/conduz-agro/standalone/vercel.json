@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    { "source": "/", "destination": "https://centralalunos.milenagehrke.com.br", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/diagnostico", "destination": "/diagnostico-interativo.html" },
+    { "source": "/pre-diagnostico", "destination": "/pre-diagnostico-vendas.html" },
+    { "source": "/ficha-inscricao", "destination": "/ficha-inscricao.html" },
+    { "source": "/raio-x", "destination": "/raio-x-conversa.html" },
+    { "source": "/leitura-do-produtor", "destination": "/leitura-do-produtor.html" },
+    { "source": "/roteiro-conducao", "destination": "/roteiro-conducao-conversa.html" },
+    { "source": "/simulador", "destination": "/simulador-conversas.html" }
+  ]
+}

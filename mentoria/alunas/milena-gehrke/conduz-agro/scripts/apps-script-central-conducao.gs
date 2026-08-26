@@ -44,14 +44,14 @@ function criarCentralConducao() {
   sh.setColumnWidth(8, 120);
   sh.setColumnWidth(9, 240);
 
-  sh.getRange(1, 1, 1, 9).merge().setValue("CENTRAL DE CONDUÇÃO DO ATENDIMENTO")
-    .setBackground(COR_OLIVE_DEEP).setFontColor(COR_PAPER)
-    .setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
+  sh.getRange(1, 1).setValue("CENTRAL DE CONDUÇÃO DO ATENDIMENTO")
+    .setFontColor(COR_PAPER).setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
+  sh.getRange(1, 1, 1, 9).setBackground(COR_OLIVE_DEEP);
   sh.setRowHeight(1, 32);
 
-  sh.getRange(2, 1, 1, 9).merge().setValue("Metade OPERACIONAL do CRM — o CRM fecha a venda, esta planilha acompanha a entrega do serviço. Cruza com o CRM pelo Nome do Produtor. Atualize sempre que der um checkpoint pro produtor — é isso que evita cobrança por atraso que não é seu. Apague a linha de exemplo (linha 4) antes de usar de verdade.")
-    .setBackground(COR_PAPER).setFontColor(COR_INK_SOFT).setFontStyle("italic")
-    .setFontSize(9).setHorizontalAlignment("center").setWrap(true);
+  sh.getRange(2, 1).setValue("Metade OPERACIONAL do CRM — o CRM fecha a venda, esta planilha acompanha a entrega do serviço. Cruza com o CRM pelo Nome do Produtor. Atualize sempre que der um checkpoint pro produtor — é isso que evita cobrança por atraso que não é seu. Apague a linha de exemplo (linha 4) antes de usar de verdade.")
+    .setFontColor(COR_INK_SOFT).setFontStyle("italic").setFontSize(9).setHorizontalAlignment("center").setWrap(true);
+  sh.getRange(2, 1, 1, 9).setBackground(COR_PAPER);
   sh.setRowHeight(2, 40);
 
   sh.getRange(3, 1, 1, 9).setValues([headers])

@@ -1,4 +1,9 @@
-<title>Raio-X da Conversa com o Produtor</title>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha de Inscrição — Destrava Condução</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Quicksand:wght@500;600;700&display=swap');
 
@@ -20,18 +25,39 @@
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
 body{
-  background:var(--paper); color:var(--ink); font-family:'Quicksand',system-ui,sans-serif;
-  min-height:100vh; display:flex; flex-direction:column; align-items:center;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Quicksand',system-ui,sans-serif;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   padding:32px 16px 64px;
 }
-h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:700; text-wrap:balance; color:var(--ink); margin:0;}
-.wrap{width:100%; max-width:640px;}
+
+h1,h2,h3,.display{
+  font-family:'Fraunces',Georgia,serif;
+  font-weight:700;
+  text-wrap:balance;
+  color:var(--ink);
+  margin:0;
+}
+
+.wrap{width:100%;max-width:640px;}
+
 .card{
-  background:var(--paper-raised); border:1px solid var(--rule); border-radius:20px;
-  box-shadow:var(--shadow); padding:40px 36px; animation:rise .45s cubic-bezier(.22,.8,.28,1);
+  background:var(--paper-raised);
+  border:1px solid var(--rule);
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  padding:40px 36px;
+  animation:rise .45s cubic-bezier(.22,.8,.28,1);
 }
 @media (max-width:520px){ .card{padding:28px 22px;border-radius:16px;} }
-@keyframes rise{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+@keyframes rise{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
 @media (prefers-reduced-motion:reduce){ .card{animation:none;} }
 
 .brand{display:flex; align-items:center; gap:12px; margin-bottom:28px;}
@@ -41,32 +67,50 @@ h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:700; text-wrap:balanc
 .brand-by{font-size:.72rem; color:var(--ink-soft); letter-spacing:.03em;}
 
 .eyebrow{
-  display:inline-flex; align-items:center; gap:6px; font-size:.74rem; font-weight:700;
-  letter-spacing:.09em; text-transform:uppercase; color:var(--olive); margin-bottom:14px;
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:.74rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--olive);
+  margin-bottom:14px;
 }
 .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--olive);}
-h1.title{font-size:1.5rem; line-height:1.3; margin-bottom:6px;}
-.intro{font-size:.95rem; line-height:1.6; color:var(--ink-soft); margin:0 0 28px;}
+
+h1.title{font-size:1.65rem; line-height:1.3; margin-bottom:10px;}
+
+.intro{font-size:.95rem; line-height:1.65; color:var(--ink-soft); margin:0 0 18px;}
+.usos-box{
+  display:flex; gap:14px; margin:0 0 28px;
+  background:var(--paper); border:1.5px solid var(--rule); border-radius:14px;
+  padding:14px 18px;
+}
+.usos-box .num{
+  font-family:'Fraunces',serif; font-weight:900; font-size:1.6rem; color:var(--gold-soft);
+  line-height:1;
+}
+.usos-box p{margin:0; font-size:.82rem; color:var(--ink-soft); line-height:1.5;}
+.usos-box strong{color:var(--ink);}
 
 fieldset{border:none; padding:0; margin:0 0 22px;}
-label{display:block; font-weight:700; font-size:.85rem; color:var(--ink); margin-bottom:6px;}
+label{
+  display:block; font-weight:700; font-size:.85rem; color:var(--ink);
+  margin-bottom:6px;
+}
 label .hint{display:block; font-weight:500; font-size:.78rem; color:var(--ink-soft); margin-top:2px;}
-input[type="text"], input[type="email"], textarea{
+input[type="text"], input[type="email"], textarea, select{
   width:100%; font-family:'Quicksand',sans-serif; font-size:.95rem; color:var(--ink);
   background:var(--paper); border:1.5px solid var(--rule); border-radius:12px;
   padding:12px 14px; outline:none; transition:border-color .2s;
 }
-input:focus, textarea:focus{border-color:var(--gold-soft);}
+input:focus, textarea:focus, select:focus{border-color:var(--gold-soft);}
 textarea{resize:vertical; min-height:88px; line-height:1.5;}
-textarea#conversa{min-height:160px;}
 .field{margin-bottom:18px;}
+
 .required{color:var(--rust);}
 
 .btn{
   width:100%; font-family:'Quicksand',sans-serif; font-weight:700; font-size:1rem;
   color:var(--paper); background:linear-gradient(135deg,var(--olive),var(--olive-deep));
   border:none; border-radius:14px; padding:16px 20px; cursor:pointer;
-  box-shadow:var(--shadow); transition:transform .15s;
+  box-shadow:var(--shadow); transition:transform .15s, box-shadow .15s;
 }
 .btn:hover{transform:translateY(-1px);}
 .btn:disabled{opacity:.6; cursor:not-allowed; transform:none;}
@@ -74,38 +118,16 @@ textarea#conversa{min-height:160px;}
 .msg{font-size:.8rem; color:var(--ink-soft); text-align:center; margin-top:12px;}
 .msg.err{color:var(--rust);}
 
-.upload-box{
-  border:1.5px dashed var(--rule); border-radius:12px; background:var(--paper);
-  padding:18px; text-align:center; cursor:pointer; transition:border-color .2s;
-}
-.upload-box:hover, .upload-box.drag{border-color:var(--gold-soft); background:var(--gold-tint,#F3E6C8);}
-.upload-box input[type=file]{display:none;}
-.upload-box .icon{font-size:1.6rem; margin-bottom:6px;}
-.upload-box p{margin:0; font-size:.85rem; color:var(--ink-soft);}
-.upload-box p b{color:var(--olive-deep);}
-
-.previews{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
-.preview-item{position:relative; width:84px; height:84px; border-radius:10px; overflow:hidden; border:1.5px solid var(--rule);}
-.preview-item img{width:100%; height:100%; object-fit:cover; display:block;}
-.preview-item .rm{
-  position:absolute; top:3px; right:3px; width:20px; height:20px; border-radius:50%;
-  background:rgba(61,40,23,.75); color:#fff; border:none; font-size:.75rem; cursor:pointer;
-  display:flex; align-items:center; justify-content:center; line-height:1;
-}
-
-.or-divider{
-  display:flex; align-items:center; gap:12px; margin:20px 0;
-  font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft);
-}
-.or-divider::before, .or-divider::after{content:""; flex:1; height:1px; background:var(--rule);}
-
 .done{display:none; text-align:center;}
 .done.show{display:block;}
 .done .icon{font-size:2.4rem; margin-bottom:12px;}
 .done h2{font-size:1.3rem; margin-bottom:10px;}
 .done p{font-size:.92rem; color:var(--ink-soft); line-height:1.6; margin:0;}
+
 .form-shell.hide{display:none;}
 </style>
+</head>
+<body>
 
 <div class="wrap">
   <div class="card">
@@ -118,144 +140,89 @@ textarea#conversa{min-height:160px;}
     </div>
 
     <div class="form-shell" id="formShell">
-      <div class="eyebrow">Ferramenta do Portfólio · Uso contínuo</div>
-      <h1 class="title">Raio-X da Conversa com o Produtor</h1>
-      <p class="intro">Manda uma conversa real que você teve com um produtor — a Milena (ou o time dela) analisa, aponta onde o script ou a condução podem melhorar, e devolve sugestão pro próximo atendimento. <strong>Print funciona melhor que copiar e colar</strong> (principalmente do Direct, que nem tem como copiar direito) — mas se preferir digitar um resumo, também dá.</p>
+      <div class="eyebrow">Destrava Condução</div>
+      <h1 class="title">Ficha de Inscrição do S.O.S. de Caso Real</h1>
+      <p class="intro">Preencha essa ficha sempre que quiser acionar o Destrava Condução — o S.O.S. em que você escreve um caso real travado e a Milena ajuda a resolver. Ela chega já com o contexto, sem precisar de uma reunião só pra entender o que está acontecendo.</p>
 
-      <form id="raioxForm">
+      <div class="usos-box">
+        <div class="num">2</div>
+        <p><strong>Você tem direito a 2 usos</strong> do Destrava Condução ao longo dos 12 meses do programa. Use quando estiver realmente travado num caso real — não precisa esperar a S8 ou a S22, mas lembre que o total é 2.</p>
+      </div>
+
+      <form id="fichaForm">
         <fieldset>
           <div class="field">
             <label for="nome">Seu nome <span class="required">*</span></label>
             <input type="text" id="nome" name="nome" required>
           </div>
           <div class="field">
-            <label for="email">Seu e-mail <span class="required">*</span></label>
+            <label for="email">Seu e-mail <span class="required">*</span>
+              <span class="hint">Pra Milena te identificar e te retornar</span>
+            </label>
             <input type="email" id="email" name="email" required>
           </div>
           <div class="field">
-            <label for="produtor">Produtor envolvido (opcional)
-              <span class="hint">Só pra você identificar depois — não precisa ser o nome completo</span>
-            </label>
-            <input type="text" id="produtor" name="produtor">
+            <label for="usoNumero">Esse é o seu 1º ou 2º uso? <span class="required">*</span></label>
+            <select id="usoNumero" name="usoNumero" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="1">1º uso</option>
+              <option value="2">2º uso (último)</option>
+            </select>
           </div>
           <div class="field">
-            <label for="contexto">Contexto rápido <span class="required">*</span>
-              <span class="hint">O que estava em jogo nessa conversa — proposta, cobrança, objeção, primeira abordagem...</span>
+            <label for="produtor">Nome do produtor / cliente envolvido no caso <span class="required">*</span></label>
+            <input type="text" id="produtor" name="produtor" required>
+          </div>
+          <div class="field">
+            <label for="contexto">Contexto do caso <span class="required">*</span>
+              <span class="hint">O que está acontecendo, em que fase está o atendimento, o que já foi conversado com o produtor</span>
             </label>
             <textarea id="contexto" name="contexto" required></textarea>
           </div>
           <div class="field">
-            <label>A conversa <span class="required">*</span>
-              <span class="hint">Print(s) da tela (WhatsApp, Direct, e-mail...) ou o texto colado — pelo menos um dos dois</span>
+            <label for="trava">Qual a trava que você percebe? <span class="required">*</span>
+              <span class="hint">O que está te travando especificamente nesse caso — pode ser técnico, emocional ou de condução</span>
             </label>
-            <label class="upload-box" id="uploadBox" for="prints">
-              <div class="icon">📎</div>
-              <p><b>Clica pra anexar</b> ou arrasta o(s) print(s) aqui</p>
-              <input type="file" id="prints" name="prints" accept="image/*" multiple>
-            </label>
-            <div class="previews" id="previews"></div>
-          </div>
-          <div class="or-divider">ou digita um resumo</div>
-          <div class="field">
-            <label for="conversa">Resumo da conversa (opcional se já anexou print)
-              <span class="hint">Cola a transcrição ou resume o que foi dito, dos dois lados</span>
-            </label>
-            <textarea id="conversa" name="conversa"></textarea>
+            <textarea id="trava" name="trava" required></textarea>
           </div>
           <div class="field">
-            <label for="percepcao">O que você já percebe que pode ter dado errado (opcional)
-              <span class="hint">Não precisa saber a resposta — só ajuda a Milena a focar onde você já sente a dúvida</span>
-            </label>
-            <textarea id="percepcao" name="percepcao"></textarea>
+            <label for="jaTentou">O que você já tentou fazer?</label>
+            <textarea id="jaTentou" name="jaTentou"></textarea>
+          </div>
+          <div class="field">
+            <label for="urgencia">Urgência <span class="required">*</span></label>
+            <select id="urgencia" name="urgencia" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="Ainda essa semana">Preciso resolver ainda essa semana</option>
+              <option value="Próximas 2 semanas">Tenho até 2 semanas</option>
+              <option value="Não é urgente">Não é urgente, quero só organizar o próximo passo</option>
+            </select>
           </div>
         </fieldset>
 
-        <button type="submit" class="btn" id="submitBtn">Enviar pra análise</button>
+        <button type="submit" class="btn" id="submitBtn">Enviar caso pra Milena</button>
         <p class="msg" id="statusMsg"></p>
       </form>
     </div>
 
     <div class="done" id="doneShell">
-      <div class="icon">🔎</div>
-      <h2>Recebido!</h2>
-      <p>A Milena vai analisar a conversa e te retornar com os pontos de melhoria. Fica de olho no WhatsApp/e-mail.</p>
+      <div class="icon">🌱</div>
+      <h2>Ficha enviada!</h2>
+      <p>A Milena recebeu seu caso e vai te retornar com orientação. Se for urgente, reforça também pelo WhatsApp direto com ela.</p>
     </div>
   </div>
 </div>
 
 <script>
 var SHEETS_ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbysyv1ZplOnbGoJ133EomMJpOjcxTylx2YQBlLyDPzi8LkAwuoNGhcLkf7PRcewRYsVXA/exec";
-var MAX_PRINTS = 5;
-var MAX_MB_PER_FILE = 6;
-var selectedFiles = [];
 
-var fileInput = document.getElementById('prints');
-var previews = document.getElementById('previews');
-var uploadBox = document.getElementById('uploadBox');
-
-fileInput.addEventListener('change', function(){
-  var incoming = Array.prototype.slice.call(fileInput.files);
-  incoming.forEach(function(file){
-    if(selectedFiles.length >= MAX_PRINTS) return;
-    if(file.size > MAX_MB_PER_FILE * 1024 * 1024) return;
-    selectedFiles.push(file);
-  });
-  fileInput.value = "";
-  renderPreviews();
-});
-
-['dragover','dragleave','drop'].forEach(function(evt){
-  uploadBox.addEventListener(evt, function(ev){ ev.preventDefault(); });
-});
-uploadBox.addEventListener('dragover', function(){ uploadBox.classList.add('drag'); });
-uploadBox.addEventListener('dragleave', function(){ uploadBox.classList.remove('drag'); });
-uploadBox.addEventListener('drop', function(ev){
-  uploadBox.classList.remove('drag');
-  var incoming = Array.prototype.slice.call(ev.dataTransfer.files).filter(function(f){ return f.type.indexOf('image/') === 0; });
-  incoming.forEach(function(file){
-    if(selectedFiles.length >= MAX_PRINTS) return;
-    if(file.size > MAX_MB_PER_FILE * 1024 * 1024) return;
-    selectedFiles.push(file);
-  });
-  renderPreviews();
-});
-
-function renderPreviews(){
-  previews.innerHTML = "";
-  selectedFiles.forEach(function(file, idx){
-    var url = URL.createObjectURL(file);
-    var item = document.createElement('div');
-    item.className = 'preview-item';
-    var img = document.createElement('img');
-    img.src = url;
-    var rm = document.createElement('button');
-    rm.type = 'button'; rm.className = 'rm'; rm.textContent = '✕';
-    rm.addEventListener('click', function(){ selectedFiles.splice(idx, 1); renderPreviews(); });
-    item.appendChild(img); item.appendChild(rm);
-    previews.appendChild(item);
-  });
-}
-
-function fileToBase64(file){
-  return new Promise(function(resolve, reject){
-    var reader = new FileReader();
-    reader.onload = function(){ resolve(reader.result.split(',')[1]); };
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
-}
-
-document.getElementById('raioxForm').addEventListener('submit', function(ev){
+document.getElementById('fichaForm').addEventListener('submit', function(ev){
   ev.preventDefault();
   var btn = document.getElementById('submitBtn');
   var msg = document.getElementById('statusMsg');
-
-  var conversaTexto = document.getElementById('conversa').value.trim();
-  if(selectedFiles.length === 0 && !conversaTexto){
-    msg.textContent = "Anexa pelo menos 1 print ou digita um resumo da conversa.";
-    msg.className = "msg err";
-    return;
-  }
+  var data = new FormData(ev.target);
+  var payload = {_form: "ficha_inscricao"};
+  data.forEach(function(v,k){ payload[k] = v; });
 
   if(!SHEETS_ENDPOINT_URL || SHEETS_ENDPOINT_URL.indexOf("COLE_AQUI") === 0){
     msg.textContent = "Endpoint não configurado ainda — fala com quem monta a planilha.";
@@ -263,29 +230,21 @@ document.getElementById('raioxForm').addEventListener('submit', function(ev){
     return;
   }
 
-  var data = new FormData(ev.target);
-  var payload = {_form: "raio_x"};
-  data.forEach(function(v,k){ if(k !== 'prints') payload[k] = v; });
-
   btn.disabled = true;
   btn.textContent = "Enviando...";
-  msg.textContent = "";
 
-  Promise.all(selectedFiles.map(function(file){
-    return fileToBase64(file).then(function(b64){
-      return {filename: file.name, mimeType: file.type, data: b64};
+  fetch(SHEETS_ENDPOINT_URL, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain"}, body: JSON.stringify(payload)})
+    .then(function(){
+      document.getElementById('formShell').classList.add('hide');
+      document.getElementById('doneShell').classList.add('show');
+    })
+    .catch(function(){
+      msg.textContent = "Não deu pra enviar agora — tenta de novo em instantes.";
+      msg.className = "msg err";
+      btn.disabled = false;
+      btn.textContent = "Enviar caso pra Milena";
     });
-  })).then(function(prints){
-    payload.prints = prints;
-    return fetch(SHEETS_ENDPOINT_URL, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain"}, body: JSON.stringify(payload)});
-  }).then(function(){
-    document.getElementById('formShell').classList.add('hide');
-    document.getElementById('doneShell').classList.add('show');
-  }).catch(function(){
-    msg.textContent = "Não deu pra enviar agora — tenta de novo em instantes.";
-    msg.className = "msg err";
-    btn.disabled = false;
-    btn.textContent = "Enviar pra análise";
-  });
 });
 </script>
+</body>
+</html>

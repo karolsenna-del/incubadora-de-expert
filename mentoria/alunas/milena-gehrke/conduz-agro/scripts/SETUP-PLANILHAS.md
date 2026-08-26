@@ -1,4 +1,4 @@
-# Setup — Planilhas dos Diagnósticos Conduz Agro
+# Setup — Respostas dos Formulários - Conduz Agro
 
 Conecta os 4 formulários interativos (`diagnostico-interativo.html`, `pre-diagnostico-vendas.html`, `ficha-inscricao.html` e `raio-x-conversa.html`) a uma planilha Google, sem precisar de domínio, servidor ou banco de dados.
 
@@ -8,14 +8,14 @@ Conecta os 4 formulários interativos (`diagnostico-interativo.html`, `pre-diagn
 
 ## 1. Criar a planilha
 
-1. Cria uma planilha nova no Google Sheets, nomeia **"Conduz Agro — Diagnósticos"**
+1. Cria uma planilha nova no Google Sheets, nomeia **"Respostas dos Formulários - Conduz Agro"**
 2. Não precisa criar as abas manualmente — o script cria sozinho no primeiro envio (ou você roda `testSetup` uma vez, ver Passo 3)
 
 ## 2. Colar o script
 
 1. Na planilha: **Extensões → Apps Script**
 2. Apaga o conteúdo padrão (`function myFunction() {}`) e cola o conteúdo inteiro de `apps-script-diagnosticos.gs` (mesma pasta deste guia)
-3. Salva (ícone de disquete ou Ctrl+S), dá um nome pro projeto (ex: "Diagnósticos Conduz Agro")
+3. Salva (ícone de disquete ou Ctrl+S), dá um nome pro projeto (ex: "Respostas dos Formulários - Conduz Agro")
 
 ## 3. (Opcional) Criar as abas com cabeçalho antes de testar
 
