@@ -45,7 +45,6 @@ Pontos a tocar:
 - Abrir os 2 sites ao vivo na tela, navegar rapidinho pelos links
 - Mostrar o Diagnóstico e o Pré-Diagnóstico funcionando (já publicados, já testados)
 - **Dizer explicitamente**: "as planilhas de ferramentas — Mapa do Caso, Círculo de Controle, CRM, todas elas — eu já configurei e formatei pra você. Você vai receber elas prontas pra usar, não precisa mexer em nada técnico."
-- Esse é o momento de nomear o alívio: "sei que script e Apps Script não é sua praia, e não vai precisar ser — isso é comigo."
 
 ---
 
