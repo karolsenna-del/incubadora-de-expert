@@ -7,6 +7,30 @@
 
 ## Regras Ativas
 
+## [26/08/2026] — Automação de postagem (SOP-021) já está no ar — imagem gerada precisa ser commitada+pushada, não fica só local
+**Origem:** Story da Live 27 (quarta) foi gerada e entregue na pasta `fila/` só localmente
+(nunca commitada nem pushada). O workflow `instagram-stories-scheduler.yml` roda no GitHub e
+só enxerga o que está no repositório remoto — como o `*.png` está no `.gitignore` (mídia
+pesada), um `git add` comum não pega o arquivo. As 3 publicações anteriores (23, 24, 25/08)
+funcionaram porque aquelas sessões usaram `git add -f` pra forçar a exceção; esta sessão não
+sabia disso (a KB e as Strict Rules do agente ainda diziam "NUNCA postar nada sozinho — script
+ainda não existe", desatualizado desde 22/08). Karol conferiu o Instagram e não achou nada
+postado — sintoma do gap.
+**Regra:** A automação de Stories **existe e funciona** desde 22/08/2026 (SOP-021,
+`.github/workflows/instagram-stories-scheduler.yml` + `.github/scripts/publicar_story.py`).
+Depois de gerar a imagem final e salvar em `business/instagram/stories/fila/{slug}/story-NN.png`,
+SEMPRE: `git add -f` nos arquivos `.png` da pasta (contorna o `*.png` do `.gitignore`) +
+`git commit` + `git push` antes de considerar a missão entregue — sem isso o workflow nunca vai
+enxergar a fila, não importa se o cron dispara ou não. **Ainda assim, postagem não é 100%
+"fire and forget": o cron só roda 1x/dia, 9h30 Cuiabá (janela da Levantada de Mão) — formatos
+gerados fora dessa janela (ex: Story de quarta, que só nasce depois da live 15h-16h) não sobem
+sozinhos no mesmo dia; usar `gh workflow run instagram-stories-scheduler.yml` (disparo manual)
+quando precisar publicar ainda no dia, fora do horário do cron.** As Strict Rules do
+`expert-stories.md` (item 2, "NUNCA posta sozinho") e o Scope/Boundaries precisam de correção —
+pendente.
+**Aplica quando:** Toda vez que uma imagem de Story é gerada e salva na fila, independente do
+formato ou do dia.
+
 ## [23/08/2026] — Palavra-gatilho da Levantada de Mão é fixa por oferta (nunca improvisar)
 **Origem:** Karol pediu automação de resposta de Direct (estilo ManyChat) — quem manda a palavra-
 chave do CTA no Direct recebe automaticamente o link da oferta certa. Isso só funciona se a

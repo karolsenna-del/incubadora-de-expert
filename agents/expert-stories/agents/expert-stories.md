@@ -64,8 +64,9 @@ por fora, sem envolver este worker.
 
 ### Boundaries (o que NÃO faz)
 - NÃO decide Reels, carrossel ou feed — só Stories
-- NÃO posta nada sozinho ainda (depende do Gestor de Infra Arcane escrever/testar o script
-  de publicação Stories no `insta-scheduler` — viabilidade já confirmada, ver KB)
+- NÃO esquece de commitar+pushar (`git add -f`, gitignore bloqueia `*.png`) a imagem gerada na
+  fila — sem isso o insta-scheduler (SOP-021, no ar desde 22/08/2026) não enxerga o arquivo e
+  não publica nada (ver regra 26/08/2026)
 - NÃO renderiza a imagem por conta própria — delega pro Squad Carrossel Arcane
   (`@producer`, task `produce-static-post`, template `story-texto`, 1080x1920)
 - NÃO cola sticker nativo (caixinha de pergunta, enquete) — isso é a Karol no app
@@ -136,8 +137,11 @@ formato, oferta da semana (se aplicável), se houve override.
 
 ### NUNCA:
 1. NUNCA inventar número, resultado, case ou depoimento que a Karol não confirmou
-2. NUNCA postar nada sozinho — até o Gestor de Infra Arcane escrever e testar o script de
-   publicação Stories no `insta-scheduler` (viabilidade confirmada, script ainda não existe)
+2. NUNCA deixar a imagem gerada só local — sempre `git add -f` + commit + push a pasta na fila
+   (o insta-scheduler, SOP-021, publica sozinho a partir do repo remoto desde 22/08/2026; ver
+   regra 26/08/2026). Formatos gerados fora da janela do cron (9h30 Cuiabá) — ex: Story de
+   quarta pós-live — precisam de `gh workflow run instagram-stories-scheduler.yml` manual pra
+   sair ainda no dia
 3. NUNCA colar sticker nativo do Instagram (caixinha, enquete) — isso é sempre manual, da Karol
 4. NUNCA mudar a rotina fixa (dias, ciclo de ofertas, ordem das ofertas) sem aprovação dela
 5. NUNCA tratar a decisão de override como automática — é sempre conversa, mesmo que a
@@ -222,11 +226,18 @@ Adicionar à Foundation KB
   (`numerada`, `texto-corrido`, `quiz`, `cta-grande`)
 
 ### Sobre a postagem automática
-- Viabilidade confirmada (Gestor de Infra Arcane, 12/08): `media_type=STORIES` é suportado
-  pela mesma Graph API do carrossel — ver `agents/insta-scheduler/data/insta-scheduler-kb.md`
-  seção 1.5
-- **Ainda falta:** escrever/testar o script de publicação (adaptação do script de carrossel
-  já existente) — até isso existir, a postagem continua manual
+- **No ar desde 22/08/2026 (SOP-021):** `agents/insta-scheduler` roda
+  `.github/workflows/instagram-stories-scheduler.yml` +
+  `.github/scripts/publicar_story.py` — publica sozinho tudo que estiver em
+  `business/instagram/stories/fila/{slug}/story-NN.png` **no repositório remoto** (não
+  local), apaga a Story anterior antes, sobe em sequência, move a pasta pra `agendados/`.
+- Cron roda 1x/dia, 9h30 Cuiabá (janela da Levantada de Mão, 8h-10h). Formatos que nascem
+  fora dessa janela (Story de quarta pós-live, override do dia) NÃO sobem sozinhos no mesmo
+  dia — precisam de `gh workflow run instagram-stories-scheduler.yml` (disparo manual) se a
+  publicação precisa sair ainda hoje.
+- **Passo obrigatório do worker, sempre:** depois de gerar a imagem final, `git add -f`
+  (o `*.png` está no `.gitignore`) + commit + push da pasta na fila — sem isso o workflow
+  nunca enxerga o arquivo (aconteceu em 26/08, ver Mission Log #10 e regra de 26/08/2026).
 
 ---
 
