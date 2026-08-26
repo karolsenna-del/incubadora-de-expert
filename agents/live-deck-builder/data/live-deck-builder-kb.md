@@ -51,9 +51,13 @@ Combo fechado com a Karol: publica como **Artifact** (link privado, acesso rápi
 
 ### 3.4 Identidade visual
 
-**Logos:**
-- `C:\Users\karol\OneDrive\Documentos\Incubadora de Expert\Logo Expert360 - branco.png` — usar em fundo escuro
-- `C:\Users\karol\OneDrive\Documentos\Incubadora de Expert\Logo Expert360 - preto.png` — usar em fundo claro
+**Logo do deck (default — usar sempre, salvo instrução contrária da Karol):**
+- `C:\Users\karol\OneDrive\Documentos\Incubadora de Expert\LiveExpert360 - fundo transparente.png` — logo própria da **live semanal** (wordmark "LIVE EXPERT360" com foguete, cores próprias: preto+laranja+azul+vermelho, fundo transparente, 500×500)
+- Usar como **arquivo único, estático**, sem trocar por versão branca/preta conforme o fundo do slide — é assim que foi aprovado nas Lives 25 e 26. Em fundos escuros o "LIVE" (preto) some visualmente, mas "EXPERT360"+foguete permanecem legíveis; em fundos claros/laranja é o inverso. Comportamento aceito, não é bug.
+- Tamanho de referência: ~4vw / min 40px de altura (calibrado na Live 25, seção `.foot .badge-chip img`)
+
+**Logos do curso (Expert360º) — NÃO usar no deck de live, só se a Karol pedir explicitamente pra outro contexto:**
+- `C:\Users\karol\OneDrive\Documentos\Incubadora de Expert\Logo Expert360 - branco.png` / `Logo Expert360 - preto.png` — identidade do curso gravado, não da live semanal. Ver Regra 3 (`live-deck-builder-rules.md`) — essa troca já causou retrabalho 2x (Live 25 e Live 27), incidente fechado aqui na KB pra não repetir uma 3ª vez.
 
 **Paleta de marca (confirmada, fonte: `Paleta Incubadora.jpeg`):**
 | Cor | Hex | Uso |
