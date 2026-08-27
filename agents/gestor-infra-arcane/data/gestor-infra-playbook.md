@@ -865,10 +865,15 @@ Resumo: Clarity (clarity.microsoft.com) > criar projeto > copiar snippet > Lovab
 4. Salva o media_id da ULTIMA story publicada no state file (e essa que sera apagada no proximo dia)
 5. Loga em `business/instagram/stories/agendamentos-stories.md`, move a pasta pra `agendados/`, commita e da push
 
-**Workflow:** `.github/workflows/instagram-stories-scheduler.yml` — cron ativo desde 23/08/2026,
-`30 13 * * *` (09h30 America/Cuiaba), 2h30 depois do gatilho do Expert-Stories (07h America/Cuiaba,
-rotina `trig_01KbSchvgTKq46LyG26SCM1a`), dentro da janela 8h-10h da Levantada de Mao.
-`workflow_dispatch` continua disponivel pra disparo manual quando precisar.
+**Workflow:** `.github/workflows/instagram-stories-scheduler.yml` — 2 crons ativos:
+- `30 13 * * *` (09h30 America/Cuiaba, todo dia) desde 23/08/2026, 2h30 depois do gatilho do
+  Expert-Stories (07h America/Cuiaba, rotina `trig_01KbSchvgTKq46LyG26SCM1a`), dentro da janela
+  8h-10h da Levantada de Mao.
+- `30 21 * * 3` (17h30 America/Cuiaba, so quarta) desde 27/08/2026 — cobre a Story da live
+  Expert360o (compromisso 15h-16h Brasilia), que so nasce na fila depois do fim da live, fora da
+  janela do cron matinal. Ver "Gap achado 26/08" abaixo.
+`workflow_dispatch` continua disponivel pra disparo manual quando precisar (fila vazia = script
+sai limpo, seguro rodar o cron de quarta mesmo sem Story pendente).
 
 **Como testar manualmente:**
 ```bash
@@ -894,6 +899,18 @@ gh run watch  # acompanhar
 - [ ] Confirmar permissao `instagram_manage_contents` no token atual pra deletar Stories antigas —
   ainda nao testado de verdade (so a Story de 23/08 foi publicada, era a primeira, sem anterior
   pra apagar); vai ser exercitado no proximo ciclo
+
+**Gap achado 26/08/2026 (Karol reportou "os Stories nao subiram"), resolvido 27/08:**
+Causa dupla: (1) a imagem da Story da Live 27 (quarta) tinha sido gerada e salva na fila só
+localmente pelo Expert-Stories, nunca commitada/pushada — o workflow roda no GitHub e só enxerga
+o repositorio remoto, e o `*.png` esta no `.gitignore` (precisa `git add -f`, como as publicacoes
+anteriores ja faziam sem isso estar documentado em lugar nenhum); (2) mesmo corrigido o push, o
+cron so disparava 1x/dia (9h30 Cuiaba) — a Story de quarta nasce so a tarde, pos-live, entao
+nunca seria pega no mesmo dia. Resolvido na hora com `gh workflow run` manual (Karol autorizou).
+Fix estrutural: 2o cron so-quarta adicionado (`30 21 * * 3`, ver acima). Documentado tambem nas
+Rules e na persona do Expert-Stories (`agents/expert-stories/data/expert-stories-rules.md`, regra
+26/08/2026) o passo obrigatorio de `git add -f` + commit + push apos gerar a imagem — sem isso
+nenhum cron, novo ou antigo, resolve o problema.
 
 ---
 

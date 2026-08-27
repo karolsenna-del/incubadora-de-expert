@@ -7,6 +7,13 @@ on:
                              # do Expert-Stories (07h America/Cuiaba, rotina trig_01KbSchvgTKq46LyG26SCM1a),
                              # ainda dentro da janela 8h-10h da Levantada de Mao. Habilitado 23/08/2026
                              # apos teste manual completo (texto+imagem+push+publicacao real validados).
+    - cron: '30 21 * * 3'   # 17h30 America/Cuiaba (21h30 UTC), so quarta — cobre a Story da live
+                             # Expert360o (compromisso 15h-16h Brasilia = 14h-15h Cuiaba), que so
+                             # nasce na fila depois do fim da live, fora da janela do cron matinal.
+                             # Adicionado 27/08/2026 apos gap real: Story da Live 27 (26/08) so foi
+                             # publicada via disparo manual porque a rodada das 9h30 rodou vazia.
+                             # Script sai limpo (sys.exit(0)) se a fila ja estiver vazia — seguro
+                             # rodar mesmo em quartas sem Story pendente.
 
 permissions:
   contents: write
