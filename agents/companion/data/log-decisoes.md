@@ -10,6 +10,32 @@
 **Impacto:** [o que muda]
 -->
 
+## 27/08/2026 — Recuperados 52 commits (23-26/08) que nunca chegaram ao GitHub
+
+**Contexto:** Execução autônoma do Expert-Stories (missão de quinta) encontrou o container
+partindo de um HEAD detached, não conectado a nenhum branch. Investigando, `origin/master`
+estava travado no commit de 23/08 10h11 UTC — 4 dias sem avançar — enquanto o container local
+tinha 52 commits em cima desse ponto, de 23 a 26/08: missões #6-#10 do Expert-Stories (imagens
+geradas, publicações via insta-scheduler), correções de regras (palavra-gatilho fixa, exceção
+Expert360º nas vagas, `git add -f` obrigatório), SOP-022 (automação de Direct), fix de webhook
+em produção, weekly review de 24/08, e múltiplas entregas do Conduz Agro (Milena Gehrke). Tudo
+commitado localmente em sessões anteriores, mas nenhum push chegou a completar — provável causa
+o erro 403 do GitHub App já citado nas instruções da missão diária ("conhecido, pode ainda não
+estar resolvido").
+**Decisão:** Confirmado que `origin/master` era ancestral direto dessa cadeia (fast-forward
+puro, nada reescrito) — sincronizado com `git push` normal, sem force. Nenhum conteúdo
+descartado; a missão de hoje (Story de quinta, Expert360º) foi aplicada por cima e enviada
+junto.
+**Racional:** Container é efêmero — mais um ciclo de reclaim sem esse push e os 3.5 dias de
+trabalho (de vários agentes, não só Expert-Stories) se perderiam de vez. Como era fast-forward
+verificado, o risco do push era baixo comparado ao risco de perder o trabalho.
+**Impacto:** `origin/master` está em dia (27/08). O push manual funcionou desta vez — o 403
+mencionado nas instruções não se repetiu agora, mas o padrão (commits acumulando sem push por
+dias sem ninguém perceber) é um risco real: vale o Gestor de Infra Arcane investigar se algo
+no ambiente de execução autônoma está deixando o `git push` falhar silenciosamente em algumas
+sessões, e considerar um passo de verificação (`git fetch` + comparar com `origin/HEAD`) no
+início de toda missão autônoma, não só no fim.
+
 ## 24/08/2026 — Padronizar nome dos encontros 1:1 no Calendar, sem backfill do histórico
 
 **Contexto:** Weekly review. A automação de Encontros Individuais (`weekly-sync`, Área de Membros) espera que a gravação no Drive comece com `Individual - {slug-da-aluna} - {data}`, mas o Google Meet nomeia pelo título da reunião no Calendar — hoje só "Milena", "Simone e Mavi", "David" etc, sem o prefixo. Resultado: nenhuma gravação de 1:1 está sendo processada automaticamente. Levantada a possibilidade de puxar o histórico também (a série nunca rodou, watermark null = primeira rodada sem filtro de data), mas o comportamento de descoberta de subpasta nessa série nunca foi testado — risco parecido com o quase-duplicado da Live 25 (20/08).
