@@ -12,3 +12,4 @@
 | 24/08/2026 | pico-engajamento-2026-08-24 | 1 | 18113468137771346 | sim (ver log de execucao) |
 | 25/08/2026 | expert360-terca-2026-08-25 | 1 | 17978501190096123 | sim (ver log de execucao) |
 | 26/08/2026 | live27-quarta-2026-08-26 | 3 | 18146723275536631, 17924281749181212, 17949033828255825 | sim (ver log de execucao) |
+| 27/08/2026 | expert360-quinta-2026-08-27 | 1 | 18119387594476772 | sim (ver log de execucao) |
