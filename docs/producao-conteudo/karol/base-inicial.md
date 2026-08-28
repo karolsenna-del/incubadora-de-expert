@@ -347,6 +347,38 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - **Diarista/produto de limpeza** ("já postado 06/08, reel 'Você também pode ser burro'") — status: **usado** — post original, ⚠️ não reusar de novo tão cedo (só voltou a cogitar reuso em 13/08 e foi trocado por Shein pra não repetir)
 - **Pai descascando alho** ("já postado 04/08, reel 'O problema não é o método'") — status: **usado** — post original, mesma ressalva de reuso
 
+### 🗂️ HISTÓRIAS/REFLEXÕES REGISTRADAS — AGUARDANDO DESENVOLVIMENTO (28/08/2026)
+
+> Registrado a pedido explícito da Karol ("quero registrar mais umas histórias pra conteúdo") — GUARDADO, não virou teoria/roteiro ainda.
+
+**A. "O feedback que dei pro meu mentor: até produto excelente pode trazer problema"**
+- Formato sugerido: Carrossel de Dor ou Reels confronto/vulnerabilidade
+- Categoria (Audience): Crenças + Comportamentos− + Contra-intuitivo
+- Causo: Karol deu feedback real pro próprio mentor sobre 2 efeitos colaterais de uma ferramenta de IA poderosa dentro da mentoria dele — (1) alunos sumindo dos encontros humanizados porque a IA (+ clone do mentor) dá conta de tudo, gerando sensação de autossuficiência, risco de queda na taxa de renovação e desconexão do mentor; (2) alunos "reclusos apaixonados" pela ferramenta — produzem muito, mas não saem de trás da operação pra vender, sentem que trabalham mas não veem dinheiro no fim do mês. Karol admite que o efeito 2 tá acontecendo com ela: "minha entrega tá incrível, mas não estou entregando pra quase ninguém."
+- Moral candidata: "Ferramenta poderosa resolve o COMO. Não resolve o fato de que você ainda precisa VENDER — IA não substitui execução comercial."
+- Ângulo alternativo (mais vulnerável): "Minha entrega nunca esteve tão boa. E eu nunca vendi tão pouco."
+- Sugestões que ela deu ao mentor (podem virar conteúdo à parte ou reforço de prova): enviar lembrete automático nos dias de encontro pra aumentar presença; criar desafios de lançamento pago pra tirar aluno "da caverna da IA" e gerar resultado real em dinheiro (cita Érico Rocha na pandemia como precedente).
+- Liga com: tese-mãe da Incubadora (ordem certa: método → venda, não confundir produção com faturamento) + Vendas Secretas
+- Fonte: vivência da Karol (feedback dado ao próprio mentor)
+- Referência real (interna, não citar no conteúdo): o feedback foi sobre o Auroq (framework de IA do Euriler na Mentoria Arcane). Karol confirmou (28/08): generalizar no roteiro — "ferramenta de IA poderosa"/"minha mentoria", sem nomear Auroq/Euriler.
+
+**B. "Dei as ideias, ela quis tentar sozinha com a IA. Quanto tempo isso custa?"**
+- Formato sugerido: Reels P.O.V. ou Carrossel de Dor
+- Categoria: Crenças + Contra-intuitivo
+- Causo: Karol se reuniu com uma pessoa capaz de construir um ecossistema digital grande, deu várias ideias — a pessoa preferiu refletir e tentar sozinha com Claude. Karol reconhece que é possível ela conseguir sozinha, mas questiona quanto tempo isso vai levar e se vale a pena perder o timing por causa disso.
+- Moral candidata: "Com IA você PODE fazer tudo sozinho. A pergunta não é se consegue — é quanto tempo isso custa, e se você tem esse tempo pra perder."
+- Liga com: mesma tese da história A ("nem tudo convém", "continuamos trocando tempo por dinheiro") + causo já registrado no Banco de Causos Reais ("tráfego/infra/automação — delegar é foco, não preguiça")
+- Fonte: vivência da Karol (reunião recente)
+- Nota: pode virar post próprio ou se fundir com a história A (2 exemplos da mesma tese) — Karol decide na hora de roteirizar.
+
+**C. "Curso técnico antes de validar o método vira concorrente de si mesma"**
+- Formato sugerido: Carrossel de Dor
+- Categoria: Crenças (A Ordem Certa)
+- Causo: aluna que trabalha com regularização de imóveis, mas cuja promessa real é ensinar a CONDUZIR — trazer inteligência emocional pros técnicos, transformar técnica em autoridade pra vender mais e parar de brigar por preço. A aluna quer criar direto um curso da parte técnica de regularização, alegando ser a demanda que chega pra ela. Karol orientou: esse curso, DEPOIS da validação do método principal, agrega valor — ANTES disso, vira concorrente de energia/posicionamento e pode canibalizar os próprios clientes.
+- Moral candidata: "Curso técnico antes do método validado não é atalho — é concorrente de você mesma."
+- Liga com: tese-mãe "A Ordem Certa" (método → venda → validação → presença → escala), já usada em `nigro-parceria-que-completa` e `matheus-carmo-valida-antes-de-vender`
+- Fonte: mentoria real da Karol (caso de aluna — anonimizar na hora de roteirizar)
+
 ### 🌟 QUENTES / EMERGENTES (2 temas)
 
 10. **"Vem aí lei que regulamenta influenciador digital como profissão — o que muda pra quem vende conhecimento"**
@@ -397,6 +429,8 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - 09/08 — @aria-analista: **Batch automático analisado (64 publicações → 54 peças, período 31/07-08/08).** Zero-interação caiu pra 26% (vs 47% no relatório anterior). REELS 2,96% vs FEED 1,07% (quase 3x, amostra grande). Achado central: conteúdo de negócio com hook de confronto+vulnerabilidade ("você também pode ser burro", "o problema é seu método") chegou perto do pessoal em performance pela 1ª vez — possível quebra do padrão "só pessoal engaja" dos 3 relatórios anteriores, amostra ainda pequena (3 posts). Relatório completo: `analises/2026-08-09/relatorio-batch-automatico.md`.
 - 09/08 — @iris-pesquisador: **Pool original (27 temas) esgotado — nova leva de 15 temas garimpada e cravada**, ver seção POOL DE TEMAS — NOVA LEVA acima. Combina: insights da Aria (tema "erro/caos no infoproduto" validado + hipótese confronto/vulnerabilidade), pesquisa de mercado 2026 (crise de conclusão de curso 13%, autoridade silenciosa/Forbes, reforma tributária, queda de 40% em curso de influenciador, PL 1234/2026, crise dos infoprodutos) + 3 casos trazidos pela Karol (Natália Beauty — ângulo de "não ter resposta pronta pro diferencial", vs. o julgamento moral já batido; frequência de posts — desafio Afonso Molina 22/dia + @caiomktviral 100/dia vs. fase de validação; Thiago Nigro + Érico Rocha + G4/Grupo Primo — arquitetura de parceria). Tema 4 ("oito lançamentos ruins seguidos") e tema 2 (case de reembolso como lançadora) corrigidos em cima do feedback da Karol pra ficarem fiéis à história real dela. Status: pool cravado, aguardando escolha do próximo tema pra produzir.
 - 21/08 — @sage-teorico: **2 histórias novas guardadas, sem virar teoria/roteiro ainda** (a pedido explícito da Karol — aguardar Desafio Rota100k Semana 04, a partir de domingo). (1) TRF1 derruba regra de HOF por dentistas (19/08) — registrado em `temas-do-momento.md` (radar diário 21/08) com fatos verificados e fontes, caso pessoal confirmado (Karol lançou uma dentista que segue atuando em HOF hoje). (2) Menu de travesseiros do resort — causo padrão-vs-personalização, registrado no Banco de Causos Reais acima. Ambos disponíveis pra quando a Karol quiser encaixar nos ganchos da semana que vem.
+- 28/08 — @sage-teorico: **3 histórias novas registradas, sem virar teoria/roteiro ainda** (a pedido explícito da Karol — só registrar por enquanto). Ver seção HISTÓRIAS/REFLEXÕES REGISTRADAS acima: (A) feedback dado ao próprio mentor sobre 2 efeitos colaterais de ferramenta de IA poderosa em mentoria (alunos somem dos encontros humanizados / produzem muito mas não vendem — Karol se inclui nesse segundo efeito); (B) reunião com pessoa capaz que preferiu tentar sozinha com IA em vez de aplicar as ideias dadas — questão de timing perdido; (C) caso de aluna (regularização de imóveis) que queria pular direto pro curso técnico antes de validar o método principal — risco de canibalização de posicionamento/clientes. Disponíveis pra quando a Karol quiser encaixar.
+- 28/08 — @karol: **Confirmado (história A):** generalizar no roteiro, sem nomear Auroq/Euriler — o feedback real foi sobre o Auroq, mas o conteúdo fala de "ferramenta de IA poderosa"/"minha mentoria" de forma genérica.
 - 09/08 a 10/08 — @sage-teorico + @rico-roteirista + @carrossel-chief/@producer: **`nigro-parceria-que-completa` produzido e entregue.** Tema 14 do pool (Thiago Nigro/parcerias) cravado, Carrossel de Alcance, CTA GRUPO. Teoria com pesquisa interna (Jornada360 + Agente do Portfólio Estratégico — mecanismo já documentado no método, achado sem re-interrogar a Karol) + externa (EY Barometer 97%, HBR 85% inovação, University of Kansas). Capa passou por 5 iterações de hook até fechar ("O maior erro que todo mundo comete quando começa..." — banco "+100 Ganchos" do Afonso, categoria Polêmicos/Contraintuitivos) — correção importante no meio do processo: cortada a claim absoluta "ele nunca lançou nada sem parceiro" (não verificável) por pedido da Karol, virou "sabe o caminho certo — dá pra aprender com ele". 2 bancos de ganchos novos incorporados à KB do squad nesse processo: `knowledge/swipe-files/hooks-virais/banco-ganchos-rota100k-semana01.md` (40 ganchos) e `banco-ganchos-afonso-100-emocionais.md` (96 ganchos, extraídos do Notion do Afonso via Playwright). Produção: imagem real (book "Do Mil ao Milhão") adicionada no slide 1 a pedido da Karol. 7 slides + legenda.txt entregues em `business/instagram/fila/nigro-parceria-que-completa/` — completo, pronto pro insta-scheduler agendar.
 
 ---

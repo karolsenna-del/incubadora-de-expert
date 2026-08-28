@@ -341,3 +341,15 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Racional:** Formaliza o que já era prática de facto, fecha o gap antes do lançamento formal do produto.
 
 **Impacto:** Registrado em `business/campanhas/incubadora-de-expert-individual/estrutura-programa.md`. Ação pendente: atualizar `_mentor/cadastro.md` de Milena e David com o canal.
+
+## 28/08/2026 — Offboarding da Incubadora de Expert: depoimento na validação do método, não no fechamento
+
+**Contexto:** Fase 5 do Mentoring Creator (Design de Entregáveis) levantou que nenhum aluno passou pelo offboarding formal ainda (Rodrigo, Ricardo e Helio finalizaram sem processo estruturado). Karol definiu as peças que faltavam.
+
+**Decisões:**
+- Depoimento/case study é capturado logo após a validação do método (3ª venda real das Vendas Secretas, Sessão 8/F3) — não no fechamento dos 12 meses (F4). Motivo: a prova em campo é a promessa central da mentoria, não a autoridade digital.
+- Plano de continuidade usa a ferramenta **Expert Plan** (já existe, precisa melhorar): https://docs.google.com/spreadsheets/d/1T8hHRb1IRXDuRElpUwNKa8tHWuVxWp_g6gyPUB5vHpE/edit — 3 camadas (estratégico: projeção de faturamento por produto; tático: funis ativos; operacional: prospecção/sessões/follow-up).
+- Alumni network: mantém como está por enquanto (sem grupo/acesso contínuo pós-programa).
+- Próximo nível pós-mentoria: ideia embrionária da Karol (ela é contadora/administradora de formação) — entrar na gestão do negócio do aluno (contratar, estruturar, processos). Não é produto formal ainda; entregue informalmente 1:1 quando algum aluno chegar nesse ponto.
+
+**Impacto:** Registrado em `business/campanhas/incubadora-de-expert-individual/design-entregaveis.md`. `design-sessoes.md` (Fase 4) revisado: Sessão 8 ganhou captura de depoimento, Sessão 14 ficou só com assessment final + Expert Plan.

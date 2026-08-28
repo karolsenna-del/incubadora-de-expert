@@ -1,22 +1,24 @@
 {
   "process_name": "Incubadora de Expert — Mentoria Individual",
   "mode": "individual",
-  "current_phase": 3,
+  "current_phase": 5,
   "phase_status": {
     "phase_0": "done",
     "phase_1": "done",
     "phase_2": "done",
     "phase_3": "done",
-    "phase_4": "pending",
-    "phase_5": "pending",
+    "phase_4": "done",
+    "phase_5": "done",
     "phase_6": "pending",
     "phase_7": "pending",
     "phase_8": "pending",
     "phase_9": "pending"
   },
-  "quality_gates_passed": ["QG-MC-001", "QG-MC-002", "QG-MC-003", "QG-MC-004"],
+  "quality_gates_passed": ["QG-MC-001", "QG-MC-002", "QG-MC-003", "QG-MC-004", "QG-MC-005", "QG-MC-006"],
   "prd_path": "business/campanhas/incubadora-de-expert-individual/prd.md",
   "estrutura_path": "business/campanhas/incubadora-de-expert-individual/estrutura-programa.md",
+  "sessoes_path": "business/campanhas/incubadora-de-expert-individual/design-sessoes.md",
+  "entregaveis_path": "business/campanhas/incubadora-de-expert-individual/design-entregaveis.md",
   "started_at": "2026-08-28",
   "paused_at": "",
   "notes": {
