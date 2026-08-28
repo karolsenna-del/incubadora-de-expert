@@ -1,0 +1,27 @@
+{
+  "hooks": {
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node 'C:\\Users\\karol\\OneDrive\\Documentos\\Incubadora-de-expert\\.codex\\hooks\\precompact-session-digest.cjs'",
+            "timeout": 15000
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node 'C:\\Users\\karol\\OneDrive\\Documentos\\Incubadora-de-expert\\.codex\\hooks\\synapse-engine.cjs'",
+            "timeout": 10000
+          }
+        ]
+      }
+    ]
+  }
+}
