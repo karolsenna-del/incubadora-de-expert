@@ -1,5 +1,5 @@
 # PRD — Incubadora de Expert (Mentoria Individual)
-Versão: 1.0 | Data: 28/08/2026 | Status: Em aprovação (QG-MC-002) | Fase atual: Fase 1 — Benchmarking + PRD
+Versão: 1.1 | Data: 28/08/2026 | Status: Aprovado (QG-MC-002, QG-MC-003) | Fase atual: Fase 2 completa — metodologia mapeada e validada
 
 ---
 
@@ -80,7 +80,38 @@ Ponto B — Método autoral com nome próprio, validado com **vendas reais no 1:
 ---
 
 ## 5. Metodologia
-*(preenchido na Fase 2 — Ingestão da Metodologia)*
+
+**Nome:** Expert360º (metodologia proprietária da Karol) — aplicada na mentoria sob a marca **Incubadora de Expert**. Cada aluno sai com **seu próprio método nomeado** (ex: Milena → Conduz Agro; o "Método IAP" foi apenas o rascunho inicial antes de fechar o P3). Expert360º é o meta-método — o processo que ensina a construir o método autoral de cada um, não o nome que o aluno usa.
+
+### Arquitetura (3 camadas em paralelo)
+- **3 Pilares** (o que se desenvolve): Identidade Autoral · Método Estruturado · Estratégia de Mercado
+- **3 Princípios** (como se constrói): Autoria · Ordem · Prova — nenhuma fase abre sem evidência concreta da anterior ("sinto que estou pronta" não vale; o critério é sempre verificável)
+- **3 Mecanismos proprietários** (o incopiável): Narrativa do Método · **Vendas Secretas** · Autoridade Tríplice
+
+### 5 Fases (jornada psicológica — o que o aluno se torna)
+1. Do Currículo à Autoridade — desbloqueio: a história é o diferencial, não o currículo
+2. Do Conhecimento à Narrativa — sabe quem serve e o que tem de único
+3. Do Caos ao Método Autoral — tem método com nome e história dentro
+4. Da Promessa à Venda Secreta — tem prova real (vendas no 1:1)
+5. Da Invisibilidade à Autoridade — aparece com clareza, sem desconforto
+
+### 5Ps (jornada didática — o que se constrói)
+P1 Persona Compradora → P2 Promessa Transformadora → P3 Processo Autoral → *[transição: Portfólio Estratégico — 15-20 ferramentas do método]* → P4 Proposta Validada (**Vendas Secretas**: 3 vendas reais no 1:1) → P5 Posicionamento de Autoridade (**Autoridade Tríplice**: Expert + Persona + Produto)
+
+### A metáfora central
+Constrói a casa por dentro antes de abrir pro mundo: Fundação (crença) → Estrutura (P1+P2+P3) → Acabamento interno (P4, Vendas Secretas) → Fachada (P5). Posicionamento é fachada, não fundação — consistente com a correção da Fase 1 (a promessa central não é posicionamento).
+
+### Como se aplica na mentoria (diferença-chave individual vs. grupo)
+- **Individual:** Karol responde o agente de IA **junto com o aluno, dentro da sessão** — a sessão É o momento de construção do P
+- **Grupo:** o aluno responde o agente **sozinho, antes da sessão**, e traz pronto para Karol revisar/ajustar em sessão
+
+### Conexão com o add-on de ferramentas/tráfego (Fase 1)
+A metodologia já apontava esse caminho, ainda não construído: o "Gap 3" do framework registra que a Biblioteca de Templates (que vira ferramentas/produtos) estava planejada "para a Incubadora 2.0", e a tabela de entregáveis do P5 já lista **"funis discretos ativos"** como parte da Autoridade Tríplice. O add-on de ferramentas/páginas/tráfego formaliza e precifica o que a metodologia já previa como próximo passo — não é escopo novo.
+
+**Docs fonte:**
+- `docs/knowledge/expert-business/metodologia/expert360-framework-completo.md`
+- `docs/knowledge/expert-business/metodologia/expert360-mecanismo-unico.md`
+- `mentoria/alunas/milena-gehrke/_mentor/` (cadastro, contexto, negócio, perfil, roteiro — caso de referência real)
 
 ---
 
