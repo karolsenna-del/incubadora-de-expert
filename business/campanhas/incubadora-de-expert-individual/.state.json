@@ -1,12 +1,12 @@
 {
   "process_name": "Incubadora de Expert — Mentoria Individual",
   "mode": "individual",
-  "current_phase": 2,
+  "current_phase": 3,
   "phase_status": {
     "phase_0": "done",
     "phase_1": "done",
     "phase_2": "done",
-    "phase_3": "pending",
+    "phase_3": "done",
     "phase_4": "pending",
     "phase_5": "pending",
     "phase_6": "pending",
@@ -14,8 +14,9 @@
     "phase_8": "pending",
     "phase_9": "pending"
   },
-  "quality_gates_passed": ["QG-MC-001", "QG-MC-002", "QG-MC-003"],
+  "quality_gates_passed": ["QG-MC-001", "QG-MC-002", "QG-MC-003", "QG-MC-004"],
   "prd_path": "business/campanhas/incubadora-de-expert-individual/prd.md",
+  "estrutura_path": "business/campanhas/incubadora-de-expert-individual/estrutura-programa.md",
   "started_at": "2026-08-28",
   "paused_at": "",
   "notes": {

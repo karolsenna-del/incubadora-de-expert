@@ -331,3 +331,13 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Racional:** Alienar 40% da audiência custa mais do que a especificidade de gênero agrega. A persona Laura segue como referência de dores e ruminações — muda só a marca gramatical.
 
 **Impacto:** Aplicado na LP nova (`business/campanhas/lp-minitreinamento/`). Vale pra toda produção de copy futura (registrado também na memória do sistema).
+
+## 28/08/2026 — Canal oficial de suporte async da Incubadora de Expert: WhatsApp
+
+**Contexto:** Fase 3 do Mentoring Creator (Estrutura do Programa) identificou que o campo "Canal de comunicação preferido" nunca tinha sido preenchido no `_mentor/cadastro.md` de nenhum aluno (nem Milena, nem David) — gap real na operação atual.
+
+**Decisão:** Canal oficial de suporte entre sessões é WhatsApp. SLA de resposta e regras de uso ficam em aberto pra Fase 5 (Design de Entregáveis) do pipeline.
+
+**Racional:** Formaliza o que já era prática de facto, fecha o gap antes do lançamento formal do produto.
+
+**Impacto:** Registrado em `business/campanhas/incubadora-de-expert-individual/estrutura-programa.md`. Ação pendente: atualizar `_mentor/cadastro.md` de Milena e David com o canal.
