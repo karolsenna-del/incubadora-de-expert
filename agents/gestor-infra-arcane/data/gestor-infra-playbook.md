@@ -912,6 +912,20 @@ Rules e na persona do Expert-Stories (`agents/expert-stories/data/expert-stories
 26/08/2026) o passo obrigatorio de `git add -f` + commit + push apos gerar a imagem — sem isso
 nenhum cron, novo ou antigo, resolve o problema.
 
+**Gap achado 28/08/2026 (Karol reportou de novo "nao foi postado nada hoje"), resolvido no mesmo dia:**
+Causa raiz desta vez foi outra: o cron `30 13 * * *` simplesmente nao disparou (nenhuma execucao
+pra 28/08 em `gh run list` ate 15h11 Cuiaba, workflow seguia `active`) — ver REGRA-019. A Story
+do dia ja estava gerada/commitada/pushada corretamente as 07h04 Cuiaba, dentro do prazo; o problema
+foi 100% o agendamento do GitHub Actions nao disparar, nao o conteudo. Resolvido com `gh workflow
+run` manual (Karol autorizou), publicou com sucesso. **Investigacao expos um 2o bug, mais antigo e
+silencioso:** o passo `git add business/instagram/stories/` (sem `-f`) nunca commitava de fato a
+pasta `agendados/` apos o script mover pra la (`.png` gitignorado) — rodava assim desde 23/08,
+mascarado porque os posts publicavam normalmente no Instagram (media IDs reais confirmados em
+`agendamentos-stories.md`), so o "arquivamento" documentado nunca existiu de verdade no repo remoto
+(pastas ficavam vazias/fantasma em `fila/` no ambiente local). Corrigido: `git add` → `git add -f`
+no passo "Commit log e pasta agendados" do workflow. Ver REGRA-018 e REGRA-019 (Rules do Gestor de
+Infra Arcane) pros detalhes completos.
+
 ---
 
 ### [SOP-022] Automação de Direct por palavra-gatilho (estilo ManyChat)

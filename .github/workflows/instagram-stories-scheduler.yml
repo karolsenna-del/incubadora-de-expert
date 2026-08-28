@@ -46,6 +46,6 @@ jobs:
         run: |
           git config user.name "insta-scheduler[bot]"
           git config user.email "bot@incubadoradeexpert.com.br"
-          git add business/instagram/stories/
+          git add -f business/instagram/stories/
           git diff --staged --quiet || git commit -m "campanha: story publicada automaticamente pelo insta-scheduler"
           git push

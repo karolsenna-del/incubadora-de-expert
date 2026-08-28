@@ -243,6 +243,26 @@ cada arquivo, então a reconstrução foi fiel). Commit imediato recomendado à 
 
 ---
 
+## REGRA-018: `git add` em pasta com `.gitignore` de mídia SEMPRE precisa `-f` no passo de commit de qualquer workflow, não só na entrega inicial
+
+**Contexto:** O workflow `.github/workflows/instagram-stories-scheduler.yml` move a pasta publicada de `fila/` pra `agendados/` (via `shutil.move` no `publicar_story.py`) e depois roda `git add business/instagram/stories/` (sem `-f`) pra commitar o resultado. Como `*.png` está no `.gitignore`, esse `git add` NUNCA pega os arquivos recém-movidos pra `agendados/` (ignorados, apesar de já não serem novos) — só pega a *exclusão* dos arquivos que já estavam trackeados em `fila/` (deleção de arquivo trackeado não é bloqueada por `.gitignore`). Resultado: todo post publicado desde 23/08/2026 (23, 24, 25, 26, 27/08 — confirmados via `agendamentos-stories.md` com media IDs reais) publicou de verdade no Instagram, mas a pasta `agendados/` nunca existiu de fato no repositório remoto — o "arquivo" documentado do que foi postado nunca se sustentou, e sobravam pastas fantasmas vazias em `fila/` no ambiente local da Karol. Só foi percebido em 28/08 quando a Karol reportou "não foi postado nada hoje" (causa real desse dia foi outra — REGRA-019 — mas a investigação expôs este bug de arquivamento, que já rodava silencioso há 5 dias).
+
+**Regra:** Todo passo de `git add` dentro de um workflow que precisa commitar arquivo de mídia (`.png`/`.jpg`/`.mp4`, etc. — qualquer extensão coberta por `.gitignore`) precisa usar `-f`, não só no passo de ENTREGA inicial (Expert-Stories já sabia disso pra `fila/`, ver regra 26/08/2026 do Expert-Stories), mas em QUALQUER passo subsequente que mexe nesses arquivos — incluindo mover, renomear ou arquivar. Ao criar ou revisar qualquer workflow que manipula pasta com mídia gitignorada, checar TODOS os passos de `git add`, não só o primeiro.
+
+**Fix aplicado (28/08):** `git add business/instagram/stories/` → `git add -f business/instagram/stories/` na linha do passo "Commit log e pasta agendados".
+
+---
+
+## REGRA-019: Cron do GitHub Actions pode simplesmente não disparar — não confiar 100% no agendamento sem checagem periódica
+
+**Contexto:** O cron `30 13 * * *` do `instagram-stories-scheduler.yml` não disparou em 28/08/2026 — `gh run list` não mostra NENHUMA execução pra essa data até 15h11 Cuiabá (bem depois da janela 9h30). O workflow estava `active`, não desabilitado. Este repositório tem ~58 workflows agendados (a maioria posts de conteúdo com seus próprios crons) — suspeita não confirmada é que o volume de agendamentos compete pela fila de scheduling do GitHub Actions, comportamento de delay/drop já documentado publicamente pela própria GitHub em repos com muitos crons. Resolvido na hora com `gh workflow run` manual.
+
+**Regra:** Cron do GitHub Actions não é garantia — é best-effort. Pra automações com janela de tempo sensível (ex: conteúdo que só faz sentido postar no dia), não assumir que "o cron existe" = "vai rodar". Quando um agente reportar/detectar que uma automação agendada não rodou na janela esperada, checar `gh run list --workflow={nome}.yml` pra confirmar se disparou antes de investigar o conteúdo/script em si — a causa pode ser o disparo, não o código.
+
+**Mitigação pendente (não implementada ainda):** avaliar reduzir workflows agendados redundantes no repo, ou adicionar monitoramento que avisa quando um cron esperado não roda no dia (ex: checagem no fim do dia comparando "tinha Story na fila" x "rodou publicação").
+
+---
+
 ## Registro de Incidentes
 
 | # | O que aconteceu | Fix | Regra criada |
@@ -256,3 +276,5 @@ cada arquivo, então a reconstrução foi fiel). Commit imediato recomendado à 
 | 7 | Área de Membros usou projeto Supabase errado (achado via grep, nao via vault) — e-mail de login chegou com marca da Arcane pro aluno | Trocar pro projeto certo (vault `business/vault/supabase.md`), corrigir `site_url`/`uri_allow_list` no Auth | REGRA-015 |
 | 8 | `cd` relativo empilhado criou diretorio aninhado bogus, `vercel --prod` rodou nele e criou projeto novo do zero ("site") em vez de usar o existente — passou despercebido ate eu checar a URL retornada | `vercel remove site --yes` + redeploy no diretorio/projeto certo (confirmado via `pwd` + `.vercel/project.json`) | REGRA-016 |
 | 9 | Multiplas janelas do Claude Code na mesma pasta — arquivos novos (untracked) de uma sessao (worker Expert-Stories completo + documento de rotina) sumiram do disco por causa de commit/merge feito por outra sessao concorrente | Recriado a partir do contexto da propria conversa + commit imediato recomendado | REGRA-017 |
+| 10 | `git add` sem `-f` no passo de commit do insta-scheduler nunca commitou a pasta `agendados/` (gitignorada) — 5 dias de posts reais (23-27/08) sem arquivamento de verdade no repo | `git add -f` no passo de commit do workflow | REGRA-018 |
+| 11 | Cron das 9h30 do insta-scheduler nao disparou em 28/08 — Story do dia ficou sem publicar ate a Karol reportar | Disparo manual (`gh workflow run`) | REGRA-019 |
