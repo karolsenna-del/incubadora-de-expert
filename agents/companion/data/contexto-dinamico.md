@@ -136,6 +136,20 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 28/08 — Reconciliacao de 4 dias sem sessao formal do Companion (25-28/08):**
+Cockpit e contexto-dinamico ficaram parados desde 24/08 enquanto bastante trabalho real aconteceu (reconstituido via git log + trackers, sem sessao formal do Companion nesse periodo):
+- **Incidente de infra grave, RESOLVIDO (27/08):** `origin/master` ficou travado no commit de 23/08 por 4 dias — 52 commits (missoes do Expert-Stories, SOP-022, fix de webhook, weekly review de 24/08, entregas do Conduz Agro) ficaram presos localmente sem chegar ao GitHub, provavelmente por erro 403 do GitHub App. Confirmado fast-forward puro (nada reescrito), sincronizado com `git push` normal. **Risco real identificado:** push pode falhar silenciosamente em sessoes autonomas sem ninguem perceber — Gestor de Infra Arcane sinalizado pra investigar e considerar checagem `git fetch`/compare no inicio de toda missao autonoma. Ver log-decisoes 27/08.
+- **Área de Membros:** Modulo de Orientacoes + inicio do M3 (Expert360) publicados. Karol (dona) ganhou matricula real/acesso proprio (login com `karolsenna@incubadoradeexpert.com.br` nao mostrava nenhum produto — so tinha matricula de compra-teste). Legenda dupla corrigida em 53 videos (27 aulas Expert360 + 26 Lives) — a legenda automatica (ASR) do YouTube sobrepunha a legenda queimada; texto da faixa auto-gerada limpo e republicado.
+- **Design System da Incubadora consolidado (27/08):** primeiro documento formal de identidade visual — cores (preto/branco/cinza/laranja, sem vermelho), tipografia (Sora + fonte de sistema), padroes de componente. Extraido do padrao ja replicado em 3 pecas reais (Area de Membros, LP Diagnostico, LP Mini Treinamento).
+- **Mentoria individual "Incubadora de Expert" — squad Mentoring Creator acionado (28/08), Fases 0-2 concluidas:** repaginando a mentoria 1:1 que ja existe (David, Milena, Ricardo passou). Fase 1: posicionamento corrigido pra "arquiteta de metodo e infoprodutos" (diferencial = validacao secreta no 1:1 antes de exposicao publica), preco-base R$10.000 confirmado, ferramentas/paginas/trafego como add-on a parte. Fase 2: metodologia mapeada no PRD (5 fases, 5Ps, 3 mecanismos proprietarios — Narrativa do Metodo, Vendas Secretas, Autoridade Triplice), confirmado que cada aluno sai com metodo autoral proprio nomeado (ex: Milena -> Conduz Agro), Expert360 e o meta-metodo da Karol. Proxima fase: Estrutura do Programa (Fase 3). **Explicitamente NAO entra como item novo em ATIVOS do cockpit** (cockpit sem vaga, 3/3) — nasce dentro da operacao continua "Mentoria (6 alunas)", mesmo padrao ja confirmado com o Conduz Agro (Karol vetou colocar entregaveis de aluna no cockpit). Tracker: `business/campanhas/incubadora-de-expert-individual/prd.md` + `.state.json`.
+- **Conduz Agro (Milena):** entrega organizada e enviada pra aluna (roteiro de video, guia de acompanhamento em 3 blocos sem jargao, canal de feedback definido). Central Conduz ganhou atalho pros 2 diagnosticos (Autoridade Aplicada + Pre-Diagnostico de Vendas).
+- **Automacao de Stories:** SOP-021 ganhou 2º cron (17h30 Cuiaba, so quarta) pra fechar o gap da Story pos-live que nunca subia sozinha no mesmo dia (fix estrutural do Gestor de Infra Arcane, 27/08) — ainda nao testado em producao, primeiro teste real cai na quarta 02/09. Story de sexta (28/08, "Sequencia, historia real 'solta a borda'") entregue na fila.
+- **Setup (28/08):** ponte Codex (config + hooks) adicionada ao Auroq OS nesta maquina.
+- **Expert360:** com M2/Orientacoes e inicio do M3 ja publicados na Area de Membros, tracker formal segue sem entrada de LOG desde 01/06 (fonte de verdade real e o git log/contexto-dinamico) — **checar com a Karol se M3 ja terminou de gravar/editar.**
+- **Weekly review:** proximo em 31/08 (nao atrasado ainda — ultimo foi 24/08).
+
+Retomar com: `/expert-companion` — proxima conversa deve (1) confirmar status real do Expert360 (M3 pronto?), (2) seguir acompanhando a Fase 3 (Estrutura do Programa) da mentoria individual com a Karol, (3) considerar commitar/revisar trackers formais (Expert360, Area de Membros) que estao desatualizados frente ao git log real.
+
 **Sessao 24/08 — Reconciliacao de 4 dias sem atualizacao formal (Companion):**
 Cockpit e contexto-dinamico estavam parados desde 19-20/08 enquanto trabalho real aconteceu (reconstituido via git log, sem sessao formal do Companion nesse periodo):
 - **Desafio Rota100k:** Semana 03 fechada (23/08). Semana 04 (24-30/08) planejada e os 7 carrosseis ja agendados via GitHub Actions (23/08, 20h BRT cada dia).
@@ -289,4 +303,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 24/08/2026 (Reconciliacao — Rota100k Semana 04 agendada + risco urgente de META_TOKEN, automacao de Stories no ar de verdade, Conduz Agro/Milena pipeline 10/10 fases achado fora do cockpit, Expert360 sem log ha 10 dias, weekly review atrasado ha 10 dias)*
+*Ultima atualizacao: 28/08/2026 (Reconciliacao — 52 commits recuperados apos incidente de push, Area de Membros com acesso proprio da Karol + legenda dupla corrigida, Design System consolidado, mentoria individual "Incubadora de Expert" em construcao via Mentoring Creator fora do cockpit)*

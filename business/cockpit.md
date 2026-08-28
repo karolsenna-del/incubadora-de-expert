@@ -4,7 +4,7 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 24/08/2026 (Companion — weekly review: META_TOKEN renovado, Expert360/M3 confirmado, Live 26 confirmada realizada, Workshop Método Validado congelado, encontros 1:1 padronizados daqui pra frente)
+**Ultima atualizacao:** 28/08/2026 (Companion — reconciliacao: Area de Membros com M3 iniciado + acesso proprio da Karol, 52 commits recuperados apos incidente de push)
 **Proximo review:** 31/08/2026
 
 ---
@@ -13,9 +13,9 @@
 
 | # | Projeto | Objetivo | Next Action | Dono | Status | Tracker |
 |---|---------|----------|-------------|------|--------|---------|
-| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Karol gravando e editando M3 (confirmado 24/08). Depois: M1 aulas 00-01 + M4 | Karol | Producao ativa — M3 em gravacao/edicao. M0 (5/5) e M2 (9/9) publicados na Voomp com legenda; M1 (6/8) publicado, faltam 2 aulas sem legenda. Plataforma migrada de Hotmart pra VOOMP (01/07). | [tracker](campanhas/expert360-curso/tracker.md) |
+| 1 | Expert360º (Curso) | Construir e lancar curso escalavel para especialistas | Modulo de Orientacoes + inicio do M3 ja publicados na Area de Membros (26/08) — checar com Karol se M3 terminou de gravar/editar. Depois: M1 aulas 00-01 + M4 | Karol | Producao ativa — M3 em gravacao/edicao/publicacao. Legenda dupla (ASR sobrepondo legenda queimada) corrigida em 53 videos (27/08). | [tracker](campanhas/expert360-curso/tracker.md) |
 | 2 | Desafio Rota100k (Instagram) | Executar o Desafio Rota100k (guia externo, mentoria "Se Posicione" — Afonso) — pra crescimento/posicionamento no Instagram. **Duracao: ate dezembro/2026.** Semana 04 (24-30/08) com os 7 carrosseis ja agendados via GitHub Actions (20h BRT cada dia). | Reels/Stories da semana seguirem sendo produzidos/publicados ate 30/08. **URGENTE: renovar META_TOKEN antes de sexta 28/08** — expira 29/08, risco dos posts de sabado 29/08 e domingo 30/08 (20h) falharem sem alerta (SOP-001) | Karol + Squad Conteudo Arcane | Ativo — Semanas 01, 02 e 03 concluidas. Semana 04 mapeada e com os 7 carrosseis agendados. | [plano semana 04](../docs/producao-conteudo/karol/desafio-rota100k-semana04-plano.md) |
-| 3 | Área de Membros (Curso + Mentoria) | Construir plataforma própria (modelada na Arcane) unificando Expert360º e mentoria 1:1, com vitrine das 7 ofertas do ecossistema (cross-sell nativo) — substitui Voomp Play e o Drive solto da mentoria | **RESOLVIDO (20/08): Live 26 no ar na Área de Membros** (compartilhamento do Drive corrigido pela Karol + sync manual disparada). Achado no processo: pastas de sessao 1:1 da Milena no Drive nao seguem o padrao de nome que a automacao de Encontros Individuais espera — precisa decisao (ajustar filtro ou renomear pastas). Fora isso: pendencias tecnicas criticas fechadas (17-18/08 — bypass de auth, RLS, bug de matricula, aviso de e-mail); Karol entrega aos poucos banco de frases motivacionais + perguntas do popup de NPS | Karol + Gestor de Infra Arcane | Ativo — Fase 4 (checkout→acesso) fechada e endurecida (17-18/08). V1 no ar em dominio proprio. Bloqueio de acesso ao Drive (20/08) resolvido e confirmado — Live 26 publicada. | [tracker](campanhas/area-de-membros/tracker.md) |
+| 3 | Área de Membros (Curso + Mentoria) | Construir plataforma própria (modelada na Arcane) unificando Expert360º e mentoria 1:1, com vitrine das 7 ofertas do ecossistema (cross-sell nativo) — substitui Voomp Play e o Drive solto da mentoria | **RESOLVIDO (27-28/08): Karol (dona) ganhou matricula/acesso proprio** (login antigo nao mostrava produto nenhum). Modulo de Orientacoes + inicio do M3 publicados. Legenda dupla (ASR x legenda queimada) corrigida em 53 videos. Pendente: pastas 1:1 da Milena no Drive fora do padrao esperado pela automacao (decisao registrada em log-decisoes 24/08 — vale so daqui pra frente) | Karol + Gestor de Infra Arcane | Ativo — Fase 4 (checkout→acesso) fechada e endurecida. V1 no ar em dominio proprio, conteudo do Expert360 crescendo (M0-M3). | [tracker](campanhas/area-de-membros/tracker.md) |
 
 ---
 
