@@ -1,0 +1,37 @@
+{
+  "process_name": "Incubadora de Expert — Mentoria Individual",
+  "mode": "individual",
+  "current_phase": 0,
+  "phase_status": {
+    "phase_0": "done",
+    "phase_1": "pending",
+    "phase_2": "pending",
+    "phase_3": "pending",
+    "phase_4": "pending",
+    "phase_5": "pending",
+    "phase_6": "pending",
+    "phase_7": "pending",
+    "phase_8": "pending",
+    "phase_9": "pending"
+  },
+  "quality_gates_passed": ["QG-MC-001"],
+  "prd_path": "",
+  "started_at": "2026-08-28",
+  "paused_at": "",
+  "notes": {
+    "context": "Produto ja existe e esta em operacao (nao e greenfield). Ja consta na esteira do Expert360o: 'Expert360o (curso, escala) -> Incubadora de Expert (mentoria, high ticket)'. Alunos atuais na individual: David e Milena (Ricardo teve passagem tambem). Grupo (Rosiani e Analia) sera rodada separada do pipeline depois. Rodrigo, Ricardo e Helio ja finalizaram o periodo de acesso.",
+    "publico_alvo": "Laura (persona principal, mesma do Expert360o) — perfil que quer suporte e acompanhamento, nao fazer sozinha, paga mais por isso",
+    "ponto_a": "Especialista offline, invisivel no digital, sem metodo nem validacao — mesmo ponto de partida do curso Expert360o (curso e mentoria partem do mesmo A; diferem no perfil de consumo)",
+    "ponto_b": "Metodo validado + posicionamento no ar (igual ao curso) + ferramentas construidas + paginas no ar + trafego configurado e rodando. IMPORTANTE: configurar != gerir — nao inclui gestao de trafego continua nem analise de metricas mensal",
+    "diferencial_vs_curso": "Curso entrega templates pra ela fazer sozinha; mentoria entrega construido/configurado com suporte 1:1 semanal (um encontro por P do metodo)",
+    "formato_atual": "Encontros ~semanais, um por P do metodo (Persona, Promessa, Processo Autoral, Vendas Secretas, Autoridade)",
+    "direcao_nova_a_validar_na_fase_1": "Karol quer incluir construcao de ferramentas + paginas + configuracao de trafego como entregavel formal, pra rodar o produto em fase de escala ao longo de 12 meses. Ainda nao formalizado — vira entregavel concreto na Fase 1 (PRD) e Fase 5 (Entregaveis)",
+    "fontes_para_reuse": [
+      "business/campanhas/expert360-curso/prd.md (benchmark de mercado + metodologia 5Ps ja mapeados)",
+      "business/campanhas/expert360-curso/cartao-de-identidade.md (esteira de produto, posicionamento)",
+      "mentoria/alunas/ (pastas atuais de David, Milena, Ricardo — raio-x do que ja roda)",
+      "mentoria/alunas/milena-gehrke/_mentor/ (piloto mais estruturado: cadastro, contexto, negocio, perfil, roteiro)"
+    ],
+    "cockpit_note": "Cockpit (business/cockpit.md) esta com 3 ativos (limite). Este trabalho nao entra como novo item em ATIVOS — nasce dentro da operacao continua 'Mentoria (6 alunas)' ja listada em OPERACOES CONTINUAS. Se o trabalho crescer a ponto de precisar de tracker formal no cockpit, avisar a Karol antes de criar."
+  }
+}
