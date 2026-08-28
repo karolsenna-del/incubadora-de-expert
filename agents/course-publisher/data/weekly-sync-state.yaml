@@ -9,7 +9,11 @@ live_expert360:
   ultimo_processado_titulo: "Live Expert360 - 2026/08/19 13:58 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-19T19:10:58.082Z"  # createdTime do arquivo no Drive (Live 26)
   proximo_numero: 27
-  ultima_execucao: "2026-08-20"
+  ultima_execucao: "2026-08-27"
+  # 27/08/2026 (2ª rodada, missão #20, mesmo dia): reconfirmado — sem gravação nova em nenhuma
+  # das duas raízes, próxima gravação esperada segue sendo Live 27.
+  # 27/08/2026 (missão #19): sem gravação nova em nenhuma das duas raízes (pasta clássica e
+  # "Live Expert360 (recurring)") — próxima gravação esperada é Live 27.
   # 06/08/2026: a partir desta gravação, o Meet passou a salvar em pasta nova
   # "Live Expert360 (recurring)" (id 1GGeLSKWDPiKT-GNic7GeKyDIU4A8asAv), dentro de uma
   # pasta raiz nova "Google Meet" (id 1mlJbXrY5rLxcobA9PTztLcX0NnMXr17L) — ambas criadas em
@@ -40,7 +44,13 @@ live_expert360:
 mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/03 14:00 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-03T22:34:41Z"  # createdTime do arquivo no Drive
-  ultima_execucao: "2026-08-20"
+  ultima_execucao: "2026-08-27"
+  # 27/08/2026 (2ª rodada, missão #20, mesmo dia): reconfirmado de novo — mesmo falso positivo do
+  # arquivo de 03/08 (precisão de timestamp, já conhecido desde a missão #15), nenhuma gravação
+  # nova real; "Encontro Incubadora (recurring)" continua sem existir na raiz nova.
+  # 27/08/2026 (missão #19): reconfirmado, mesmo resultado — só o arquivo de 03/08 já processado
+  # (a busca com filtro de data ainda devolve esse mesmo arquivo por precisão de timestamp, não é
+  # gravação nova; "Encontro Incubadora (recurring)" continua sem existir na raiz nova).
   # 13/08/2026: nenhuma gravação nova encontrada em nenhuma das duas raízes do Drive — não
   # houve Encontro Incubadora (ou não foi gravado) na segunda-feira 10/08.
   # 14/08/2026: a partir da PRÓXIMA gravação nova, destino vira YouTube+encontros_mentoria (não
@@ -54,7 +64,14 @@ mentoria_em_grupo:
 encontros_individuais:
   ultimo_processado_titulo: null
   ultimo_processado_data: null
-  ultima_execucao: "2026-08-20"
+  ultima_execucao: "2026-08-27"
+  # 27/08/2026 (2ª rodada, missão #20, mesmo dia): reconfirmado — nenhum arquivo com prefixo
+  # "Individual -" em nenhuma raiz. Achado da missão #17 (Meet nomeia pastas 1:1 pelo nome da
+  # aluna, não pelo padrão combinado) segue pendente de decisão da Karol/Gestor de Infra Arcane.
+  # 27/08/2026 (missão #19): reconfirmado — as pastas "Milena - ..." seguem sem o padrão
+  # "Individual - {slug} - {AAAA-MM-DD}" esperado; nenhum arquivo novo com esse prefixo em
+  # nenhuma raiz. Achado da missão #17 sobre ajuste de filtro/renomeação segue pendente de
+  # decisão da Karol/Gestor de Infra Arcane — não mexido aqui.
   # 14/08/2026: série nova (padrão "Individual - {slug} - {AAAA-MM-DD}") — ainda nenhuma gravação
   # com esse padrão foi processada. Primeira rodada busca sem filtro de data mínima (campo null).
   # 20/08/2026: busca sem filtro de data repetida, nenhum arquivo com esse prefixo encontrado
