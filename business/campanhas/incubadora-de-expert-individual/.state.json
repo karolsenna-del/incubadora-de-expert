@@ -1,7 +1,8 @@
 {
   "process_name": "Incubadora de Expert — Mentoria Individual",
   "mode": "individual",
-  "current_phase": 7,
+  "current_phase": 9,
+  "status": "CONCLUIDO",
   "phase_status": {
     "phase_0": "done",
     "phase_1": "done",
@@ -11,10 +12,11 @@
     "phase_5": "done",
     "phase_6": "done",
     "phase_7": "done",
-    "phase_8": "pending",
-    "phase_9": "pending"
+    "phase_8": "done",
+    "phase_9": "done"
   },
-  "quality_gates_passed": ["QG-MC-001", "QG-MC-002", "QG-MC-003", "QG-MC-004", "QG-MC-005", "QG-MC-006", "QG-MC-007", "QG-MC-008"],
+  "quality_gates_passed": ["QG-MC-001", "QG-MC-002", "QG-MC-003", "QG-MC-004", "QG-MC-005", "QG-MC-006", "QG-MC-007", "QG-MC-008", "QG-MC-009", "QG-MC-010"],
+  "checklist_path": "business/campanhas/incubadora-de-expert-individual/checklist-producao.md",
   "prd_path": "business/campanhas/incubadora-de-expert-individual/prd.md",
   "estrutura_path": "business/campanhas/incubadora-de-expert-individual/estrutura-programa.md",
   "sessoes_path": "business/campanhas/incubadora-de-expert-individual/design-sessoes.md",

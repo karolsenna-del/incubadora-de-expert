@@ -54,7 +54,7 @@
 - **Última sessão:** (a confirmar — sessão de onboarding/contratação)
 - **Próxima sessão:** (a preencher — sessão de fechamento do M0)
 - **Frequência de sessões:** (a definir)
-- **Canal de comunicação preferido:** (a preencher)
+- **Canal de comunicação preferido:** WhatsApp
 
 ### Notas de acompanhamento
 

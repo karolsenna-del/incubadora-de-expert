@@ -74,8 +74,8 @@ Ponto B — Método autoral com nome próprio, validado com **vendas reais no 1:
 - [ ] Ferramentas do método construídas + 1 agente de IA (~R$1.000)
 - [ ] Páginas + configuração de tráfego (preço a definir) — sem gestão contínua
 
-**Ainda não formalizado (gap identificado no raio-x):**
-- [ ] Pasta formal de acompanhamento pro David (hoje sem registro em `mentoria/alunas/`)
+**Resolvido (29/08 — Fase 8):**
+- [x] Pasta formal de acompanhamento pro David — `mentoria/alunas/david-rose/` criada com a estrutura padrão do `_template/`. Falta preencher dados reais (contato, progresso, pasta no Drive) — não inventado, deixado em branco pra Karol completar.
 
 ---
 
