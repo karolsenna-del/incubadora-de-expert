@@ -136,6 +136,18 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 29/08 — Reconciliacao de trabalho da tarde/noite de 28/08 (Companion):**
+Contexto-dinamico ficou parado no checkpoint das 15h de 28/08 enquanto mais trabalho real aconteceu no resto do dia (reconstituido via git log):
+- **Mentoring Creator (Incubadora de Expert individual) avancou ate Fase 5 — pipeline agora em `current_phase: 5`, fases 0-5 done, 6-9 pending:**
+  - Fase 3 (Estrutura do Programa) aprovada + Fase 4 (Design de Sessoes) em rascunho. Decisao 28/08: canal oficial de suporte async entre sessoes e **WhatsApp** (gap real achado — campo nunca preenchido no cadastro de nenhum aluno). Acao pendente: atualizar `_mentor/cadastro.md` de Milena e David com o canal.
+  - Fase 5 (Design de Entregaveis) fechada. Decisoes: depoimento/case study capturado na **3a venda real das Vendas Secretas** (Sessao 8/F3), nao no fechamento dos 12 meses — a prova em campo e a promessa central, nao autoridade digital. Ferramenta de continuidade = **Expert Plan** (ja existe, precisa melhorar). Alumni network mantem como esta por enquanto. "Proximo nivel pos-mentoria" (Karol entrar na gestao do negocio do aluno) e ideia embrionaria, nao produto formal ainda.
+  - **branding.md com autocorrecao registrada, ainda NAO COMMITADA:** Companion tinha achado uma "inconsistencia" (labels F0-F4 da Estrutura do Programa vs. nomes da jornada psicologica) e proposto trocar — Karol corrigiu: sao camadas diferentes (jornada psicologica = transformacao vivida pelo aluno; F0-F4 = rotulo operacional), nao precisam bater 1:1. Mudanca esta no working tree, sem commit ainda.
+- **Automacao de Stories: bug real achado e corrigido (28/08 15h33, Gestor de Infra Arcane) —** cron do dia falhou + arquivamento da fila estava silenciosamente quebrado desde 23/08 (regras/playbook atualizados). **Confirmado funcionando:** Story publicada automaticamente as 19h27 do mesmo dia (sequencia "solta a borda").
+- **Desafio Rota100k Semana 04:** bloco de Domingo revisado (16h54) — 09h virou confissao real (prospeccao prometida x cumprida, criar vs vender), 12h e 17h reancorados na imersao de Black Friday que comeca no dia seguinte.
+- **Estado do git no momento deste registro:** working tree com `hook-metrics.json` (rotina, sync automatico) e `branding.md` (correcao documentada acima) modificados, ainda sem commit.
+
+Retomar com: `/expert-companion` — proxima conversa deve (1) confirmar status real do Expert360 (M3 pronto?), (2) seguir Mentoring Creator pra Fase 6, (3) commitar branding.md + metrics pendentes via Ops, (4) weekly review cai em 31/08 (2 dias, ainda nao atrasado).
+
 **Sessao 28/08 — Reconciliacao de 4 dias sem sessao formal do Companion (25-28/08):**
 Cockpit e contexto-dinamico ficaram parados desde 24/08 enquanto bastante trabalho real aconteceu (reconstituido via git log + trackers, sem sessao formal do Companion nesse periodo):
 - **Incidente de infra grave, RESOLVIDO (27/08):** `origin/master` ficou travado no commit de 23/08 por 4 dias — 52 commits (missoes do Expert-Stories, SOP-022, fix de webhook, weekly review de 24/08, entregas do Conduz Agro) ficaram presos localmente sem chegar ao GitHub, provavelmente por erro 403 do GitHub App. Confirmado fast-forward puro (nada reescrito), sincronizado com `git push` normal. **Risco real identificado:** push pode falhar silenciosamente em sessoes autonomas sem ninguem perceber — Gestor de Infra Arcane sinalizado pra investigar e considerar checagem `git fetch`/compare no inicio de toda missao autonoma. Ver log-decisoes 27/08.
@@ -303,4 +315,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 28/08/2026 (Reconciliacao — 52 commits recuperados apos incidente de push, Area de Membros com acesso proprio da Karol + legenda dupla corrigida, Design System consolidado, mentoria individual "Incubadora de Expert" em construcao via Mentoring Creator fora do cockpit)*
+*Ultima atualizacao: 29/08/2026 (Reconciliacao — Mentoring Creator da Incubadora de Expert individual avancou ate Fase 5 (canal WhatsApp, offboarding/depoimento definidos), fix da automacao de Stories confirmado em producao, Rota100k Semana 04 com Domingo revisado)*
