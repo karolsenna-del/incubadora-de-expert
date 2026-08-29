@@ -10,6 +10,9 @@ let sessaoAtual = null;
 // ---------- MATRÍCULA REAL (tabela `matriculas`, gravada pelo webhook Voomp) ----------
 // Substitui o mock MATRICULA_EXEMPLO por dado real quando há sessão logada de verdade.
 // Modo preview (sem user.id real) mantém o mock do data.js intacto — QA continua funcionando.
+// `expira_em` (29/08): NULL = acesso vitalício (comportamento de sempre); com data preenchida, uma
+// linha expirada é tratada exatamente como "nunca comprou" — não entra em MATRICULA_EXEMPLO, então
+// tudo que já filtra por essa lista (Vitrine, Roteiro, Biblioteca de IA) fica protegido automaticamente.
 async function carregarMatriculaReal() {
   const userId = sessaoAtual && sessaoAtual.user && sessaoAtual.user.id;
   const email = sessaoAtual && sessaoAtual.user && sessaoAtual.user.email;
@@ -17,16 +20,23 @@ async function carregarMatriculaReal() {
 
   const { data, error } = await getSupabase()
     .from('matriculas')
-    .select('produto_slug')
+    .select('produto_slug, expira_em')
     .eq('email', email)
     .eq('ativo', true);
 
   if (error) { console.error('Erro ao carregar matrícula:', error); return; }
 
+  const agora = new Date();
   MATRICULA_EXEMPLO.length = 0;
   (data || []).forEach(row => {
+    if (row.expira_em && new Date(row.expira_em) <= agora) return; // expirado, trata como sem acesso
     if (!MATRICULA_EXEMPLO.includes(row.produto_slug)) MATRICULA_EXEMPLO.push(row.produto_slug);
   });
+}
+
+// ---------- BIBLIOTECA DE AGENTES DE IA (mesma matrícula, produto_slug 'biblioteca-ia') ----------
+function temAcessoBibliotecaIA() {
+  return MATRICULA_EXEMPLO.includes('biblioteca-ia');
 }
 
 // ---------- TRILHAS LIBERADAS (por matrícula) ----------
@@ -97,6 +107,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('nav-home').addEventListener('click', () => trocarView('home'));
   document.getElementById('nav-roteiro').addEventListener('click', () => trocarView('roteiro'));
   document.getElementById('nav-vitrine').addEventListener('click', () => trocarView('vitrine'));
+  document.getElementById('nav-biblioteca-ia').addEventListener('click', () => trocarView('biblioteca-ia'));
 
   document.getElementById('btn-pular-popup').addEventListener('click', fecharPopup);
   document.getElementById('btn-enviar-popup').addEventListener('click', enviarPopup);
@@ -111,21 +122,135 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('btn-sim-compartilhar').addEventListener('click', () => decidirCompartilhar(true));
   document.getElementById('btn-nao-compartilhar').addEventListener('click', () => decidirCompartilhar(false));
 
+  document.getElementById('btn-chat-fechar').addEventListener('click', fecharChatAgente);
+  document.getElementById('btn-chat-enviar').addEventListener('click', enviarMensagemChat);
+  document.getElementById('chat-input').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); enviarMensagemChat(); }
+  });
+
   renderVitrine(document.getElementById('vitrine-view-slot'));
   renderHome();
   trocarView('home');
   iniciarStandby();
 });
 
-// ---------- NAV (Início / Roteiro / Vitrine) ----------
+// ---------- NAV (Início / Roteiro / Vitrine / Biblioteca de IA) ----------
 function trocarView(view) {
   document.getElementById('view-home').style.display = view === 'home' ? 'block' : 'none';
   document.getElementById('view-roteiro').style.display = view === 'roteiro' ? 'grid' : 'none';
   document.getElementById('view-vitrine').style.display = view === 'vitrine' ? 'block' : 'none';
+  document.getElementById('view-biblioteca-ia').style.display = view === 'biblioteca-ia' ? 'block' : 'none';
   document.getElementById('nav-home').classList.toggle('ativo', view === 'home');
   document.getElementById('nav-roteiro').classList.toggle('ativo', view === 'roteiro');
   document.getElementById('nav-vitrine').classList.toggle('ativo', view === 'vitrine');
+  document.getElementById('nav-biblioteca-ia').classList.toggle('ativo', view === 'biblioteca-ia');
   if (view === 'home') renderHome(); // reflete progresso mais recente
+  if (view === 'biblioteca-ia') renderBibliotecaIA();
+}
+
+// ---------- BIBLIOTECA DE AGENTES DE IA (view dedicada) ----------
+function renderBibliotecaIA() {
+  const container = document.getElementById('biblioteca-ia-slot');
+  container.innerHTML = '';
+
+  if (!temAcessoBibliotecaIA()) {
+    container.innerHTML = `
+      <div class="material-card">
+        <div class="material-titulo">🔒 Ainda não faz parte do seu acesso</div>
+        <p class="material-desc">A Biblioteca de Agentes de IA é uma oferta à parte — em breve você vai poder liberar isso.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const grid = document.createElement('div');
+  grid.className = 'biblioteca-ia-grid';
+  BIBLIOTECA_IA_AGENTES.forEach(agente => {
+    if (agente.modo === 'chat') {
+      const card = document.createElement('div');
+      card.className = 'material-card';
+      card.style.cursor = 'pointer';
+      card.innerHTML = `
+        <div class="material-titulo">${agente.titulo}</div>
+        <p class="material-desc">${agente.descricao}</p>
+        <span class="link">Conversar →</span>
+      `;
+      card.addEventListener('click', () => abrirChatAgente(agente));
+      grid.appendChild(card);
+      return;
+    }
+    const card = document.createElement('a');
+    card.className = 'material-card';
+    card.href = agente.link;
+    card.target = '_blank';
+    card.rel = 'noopener';
+    card.innerHTML = `
+      <div class="material-titulo">${agente.titulo}</div>
+      <p class="material-desc">${agente.descricao}</p>
+      <span class="link">Abrir agente →</span>
+    `;
+    grid.appendChild(card);
+  });
+  container.appendChild(grid);
+}
+
+// ---------- CHAT INTERNO (api/chat-agente.js) ----------
+// Histórico fica só na memória da sessão (não persiste no banco) — cada conversa começa do zero
+// ao reabrir. MVP: se a Karol quiser guardar histórico depois, é uma tabela nova (fora de escopo agora).
+let chatAgenteAtual = null;
+let chatHistorico = [];
+
+function abrirChatAgente(agente) {
+  chatAgenteAtual = agente;
+  chatHistorico = [];
+  document.getElementById('chat-agente-titulo').textContent = agente.titulo;
+  document.getElementById('chat-mensagens').innerHTML = '';
+  document.getElementById('chat-input').value = '';
+  document.getElementById('modal-chat-agente').classList.add('visivel');
+}
+
+function fecharChatAgente() {
+  document.getElementById('modal-chat-agente').classList.remove('visivel');
+  chatAgenteAtual = null;
+}
+
+function adicionarMensagemChat(role, texto) {
+  const div = document.createElement('div');
+  div.className = `chat-msg chat-msg-${role}`;
+  div.textContent = texto;
+  document.getElementById('chat-mensagens').appendChild(div);
+  div.scrollIntoView({ block: 'end' });
+}
+
+async function enviarMensagemChat() {
+  const input = document.getElementById('chat-input');
+  const texto = input.value.trim();
+  if (!texto || !chatAgenteAtual) return;
+
+  input.value = '';
+  chatHistorico.push({ role: 'user', content: texto });
+  adicionarMensagemChat('user', texto);
+  adicionarMensagemChat('carregando', 'Pensando...');
+
+  const accessToken = sessaoAtual && sessaoAtual.access_token;
+  try {
+    const resp = await fetch('/api/chat-agente', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ agenteId: chatAgenteAtual.agenteId, mensagens: chatHistorico, accessToken })
+    });
+    const data = await resp.json();
+    document.querySelector('.chat-msg-carregando')?.remove();
+    if (!resp.ok) {
+      adicionarMensagemChat('erro', data.error || 'Erro ao falar com o agente.');
+      return;
+    }
+    chatHistorico.push({ role: 'assistant', content: data.resposta });
+    adicionarMensagemChat('assistant', data.resposta);
+  } catch (err) {
+    document.querySelector('.chat-msg-carregando')?.remove();
+    adicionarMensagemChat('erro', 'Erro de conexão com o agente.');
+  }
 }
 
 // ---------- HOME (Início) ----------

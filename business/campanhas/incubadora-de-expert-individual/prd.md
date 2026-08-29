@@ -55,7 +55,7 @@ Ponto B — Método autoral com nome próprio, validado com **vendas reais no 1:
 | Nível de entrega | DWY (done-with-you) — aluno executa com apoio de agentes de IA entre sessões, Karol conduz e valida em sessão |
 | Preço-base | R$10.000 |
 | Add-on: ferramentas + agente de IA do método | ~R$1.000 (referência: caso Milena) — cobrado à parte, exceto quando usado como bônus tático de decisão rápida em sessão de venda/lançamento |
-| Add-on: páginas + configuração de tráfego | Ainda não precificado — a definir na Fase 5 (Design de Entregáveis) |
+| Add-on: páginas + configuração de tráfego | R$1.500 (fechado na Fase 7 — Empacotamento) |
 | Escopo do add-on de tráfego | Configurar e deixar rodando — **não inclui gestão contínua nem análise de métricas mensal** |
 
 ---

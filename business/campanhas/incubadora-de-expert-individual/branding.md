@@ -1,5 +1,5 @@
 # Branding do Produto — Incubadora de Expert (Mentoria Individual)
-Versão: 0.1 (DRAFT — aguardando validação) | Fase 6 do Mentoring Creator | Gate: QG-MC-007
+Versão: 1.0 (Aprovado) | Fase 6 do Mentoring Creator | Gate: QG-MC-007 ✅
 
 > Diferente das fases anteriores, aqui quase tudo já existe e já é forte — o produto já tem nome, logo, frase-tese e posicionamento rodando há meses. Meu trabalho nesta fase é validar contra os 4 testes de naming, garantir consistência com o que construímos nas Fases 3-5, e resolver a única inconsistência real que encontrei.
 
@@ -17,6 +17,8 @@ Versão: 0.1 (DRAFT — aguardando validação) | Fase 6 do Mentoring Creator | 
 | **Escala** | ✅ Funciona pra individual, grupo ou consultoria — não trava o produto num formato só |
 
 **Veredito: nome aprovado nos 4 critérios, sem necessidade de ajuste.**
+
+**Nota à parte (fora do escopo desta fase — visual, não naming/verbal):** a logo atual usa um ícone de foguete, que comunica lançamento/decolagem público — em tensão com o mecanismo real do produto (validação em segredo, antes de expor). Faz sentido historicamente: a Incubadora nasceu pra preparar o expert pro lançamento. Karol confirmou (29/08) que vai trabalhar a logo em frente separada, fora deste pipeline.
 
 ---
 
@@ -71,4 +73,4 @@ Verificado contra o que já foi construído (Fases 3-5):
 
 ---
 
-*Draft — Fase 6 do Mentoring Creator. Aguardando validação da Karol (QG-MC-007).*
+*Fase 6 do Mentoring Creator — aprovada pela Karol em 29/08/2026 (QG-MC-007).*

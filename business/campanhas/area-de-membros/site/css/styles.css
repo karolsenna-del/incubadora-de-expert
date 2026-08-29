@@ -196,6 +196,24 @@ body.app-body { background: var(--preto); color: var(--branco); }
 .material-autor { display: block; font-size: 0.78rem; color: var(--laranja); margin-bottom: 6px; }
 .material-desc { font-size: 0.85rem; color: var(--cinza-300); margin: 6px 0; }
 .material-card a { color: var(--laranja); font-size: 0.85rem; font-weight: 600; }
+a.material-card { display: block; text-decoration: none; color: inherit; transition: border-color .15s ease; }
+a.material-card:hover { border-color: var(--laranja); }
+a.material-card .link { display: inline-block; margin-top: 8px; color: var(--laranja); font-size: 0.85rem; font-weight: 600; }
+.biblioteca-ia-view { padding: 40px 48px; }
+.biblioteca-ia-view h1 { font-size: 1.6rem; margin-bottom: 8px; }
+.biblioteca-ia-view .biblioteca-ia-sub { font-size: 0.9rem; color: var(--cinza-500); margin-bottom: 28px; }
+.biblioteca-ia-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+
+/* ===== CHAT INTERNO (Biblioteca de Agentes de IA) ===== */
+.chat-card { max-width: 560px; display: flex; flex-direction: column; }
+.chat-mensagens { display: flex; flex-direction: column; gap: 10px; max-height: 50vh; overflow-y: auto; margin: 14px 0; padding-right: 4px; }
+.chat-msg { padding: 10px 14px; border-radius: 10px; font-size: 0.9rem; line-height: 1.45; max-width: 85%; white-space: pre-wrap; }
+.chat-msg-user { align-self: flex-end; background: var(--laranja); color: var(--branco); }
+.chat-msg-assistant { align-self: flex-start; background: var(--cinza-100); color: var(--preto); }
+.chat-msg-carregando { align-self: flex-start; background: var(--cinza-100); color: var(--cinza-500); font-style: italic; }
+.chat-msg-erro { align-self: flex-start; background: #FEE2E2; color: #B91C1C; }
+.chat-input-linha { display: flex; gap: 10px; align-items: flex-end; }
+.chat-input-linha textarea { flex: 1; border: 1px solid var(--cinza-300); border-radius: 10px; padding: 10px 12px; font-size: 0.9rem; font-family: var(--texto); resize: vertical; min-height: 44px; }
 .consultoria-bloqueado .btn-concluir { margin-top: 12px; }
 .material-sub-link { padding: 0 12px 10px 46px; font-size: 0.82rem; }
 .material-sub-link a { color: var(--laranja); font-weight: 600; }

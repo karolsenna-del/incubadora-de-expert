@@ -16,6 +16,7 @@
       <button class="topbar-tab ativo" id="nav-home">Início</button>
       <button class="topbar-tab" id="nav-roteiro">Meu Roteiro</button>
       <button class="topbar-tab" id="nav-vitrine">Vitrine</button>
+      <button class="topbar-tab" id="nav-biblioteca-ia">Biblioteca de IA</button>
     </nav>
     <div class="topbar-user">
       <span class="email" id="user-email"></span>
@@ -65,6 +66,13 @@
       <h1>Vitrine — Ecossistema Incubadora de Expert</h1>
       <div id="vitrine-view-slot"></div>
     </section>
+
+    <!-- VIEW: BIBLIOTECA DE AGENTES DE IA -->
+    <section id="view-biblioteca-ia" class="biblioteca-ia-view" style="display:none">
+      <h1>Biblioteca de Agentes de IA</h1>
+      <p class="biblioteca-ia-sub">Agentes prontos pra te ajudar a construir cada entregável do método.</p>
+      <div id="biblioteca-ia-slot"></div>
+    </section>
   </main>
 
   <!-- STANDBY -->
@@ -95,6 +103,21 @@
       <div class="modal-acoes">
         <button class="btn-secundario" id="btn-nao-compartilhar">Prefiro manter exclusivo</button>
         <button class="btn-concluir" id="btn-sim-compartilhar">Quero compartilhar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAT INTERNO (Biblioteca de Agentes de IA) -->
+  <div class="modal-overlay" id="modal-chat-agente">
+    <div class="modal-card chat-card">
+      <span class="eyebrow" id="chat-agente-titulo">Agente</span>
+      <div class="chat-mensagens" id="chat-mensagens"></div>
+      <div class="chat-input-linha">
+        <textarea id="chat-input" placeholder="Escreve sua mensagem..." rows="2"></textarea>
+        <button class="btn-concluir" id="btn-chat-enviar">Enviar</button>
+      </div>
+      <div class="modal-acoes">
+        <button class="btn-secundario" id="btn-chat-fechar">Fechar</button>
       </div>
     </div>
   </div>

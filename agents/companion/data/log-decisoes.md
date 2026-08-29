@@ -353,3 +353,14 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 - Próximo nível pós-mentoria: ideia embrionária da Karol (ela é contadora/administradora de formação) — entrar na gestão do negócio do aluno (contratar, estruturar, processos). Não é produto formal ainda; entregue informalmente 1:1 quando algum aluno chegar nesse ponto.
 
 **Impacto:** Registrado em `business/campanhas/incubadora-de-expert-individual/design-entregaveis.md`. `design-sessoes.md` (Fase 4) revisado: Sessão 8 ganhou captura de depoimento, Sessão 14 ficou só com assessment final + Expert Plan.
+
+## 29/08/2026 — Empacotamento da Incubadora de Expert: preço-base mantido, add-on de tráfego fechado em R$1.500
+
+**Contexto:** Fase 7 do Mentoring Creator (Empacotamento). Karol cogitou subir o preço-base de R$10.000 pra R$15.000, mas recuou por já ter vendido pouco a R$10.000. Add-on de páginas+tráfego nunca foi cobrado antes (sem preço de referência interna).
+
+**Decisões:**
+- Preço-base mantido em R$10.000. Diagnóstico: pelo benchmark de mercado (teto R$50.000, add-on gringo US$3-6k só pra parte técnica), o preço não está caro — o baixo volume de vendas é mais provável ser problema de distribuição/audiência do que de preço. Revisão de preço fica pra depois de investigar a causa real do baixo volume (conecta com a hipótese já registrada sobre audiência vs. consistência de conteúdo).
+- Add-on de páginas + configuração de tráfego: pesquisa de mercado sugeriu R$3.000-5.000, mas Karol achou caro pro serviço prestado e fechou em **R$1.500** (valor único, sem gestão contínua).
+- Descoberta durante a fase: existe um produto separado, **Sprint do Método** (DFY — Karol monta toda a fundação do método pro cliente), seguido de uma variante de 6 meses da Incubadora de Expert cobrindo só Posicionamento + outros produtos do Portfólio pra escala. Não é uma opção alternativa da Incubadora de 12 meses — é esteira de entrada diferente. Fora do escopo deste pipeline; candidato a processo próprio do Mentoring Creator no futuro, se a Karol quiser formalizar.
+
+**Impacto:** Registrado em `business/campanhas/incubadora-de-expert-individual/empacotamento.md` e `prd.md` (preço do add-on de tráfego atualizado).

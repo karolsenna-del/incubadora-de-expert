@@ -174,3 +174,24 @@ const PERGUNTAS_POPUP_MODULO = [
   { tipo: 'texto', pergunta: 'O que mudou pra você depois desse módulo?' },
   { tipo: 'texto', pergunta: '(Opcional) Quer deixar um print, depoimento ou prova do que você construiu?' }
 ];
+
+// Biblioteca de Agentes de IA — produto novo (29/08, ideia da imersão de Black Friday: vitalício no
+// curso + 1 ano na biblioteca). Acesso controlado pela MESMA tabela `matriculas` — produto_slug
+// 'biblioteca-ia', com `expira_em` preenchido (ver carregarMatriculaReal em app.js) quando a oferta
+// for por tempo limitado; NULL = vitalício, mesmo mecanismo usado pro resto da plataforma.
+// Karol confirmou (29/08): são estes 6 agentes hoje, mais serão adicionados em breve — pedir pra ela
+// sempre que quiser incluir um novo (título + descrição curta + link do Custom GPT).
+//
+// `agenteId` reservado pro chat interno (api/chat-agente.js) — hoje nenhum tem o prompt real ainda
+// (Karol precisa mandar login do ChatGPT + chave da OpenAI), então todos ficam em modo 'link' (abre o
+// Custom GPT numa aba nova, comportamento de sempre). Quando o prompt de um agente chegar, adiciono
+// ele em AGENTES_CONFIG (api/chat-agente.js) e troco esse agente pra `modo: 'chat'` aqui — nada muda
+// nos outros 5 enquanto isso.
+const BIBLIOTECA_IA_AGENTES = [
+  { agenteId: 'persona-compradora', modo: 'link', titulo: 'Agente da Persona Compradora', descricao: 'Constrói o retrato de quem você atende de verdade — pra parar de vender pra todo mundo.', link: 'https://chatgpt.com/g/g-6a33f4bccd848191a1e5ceba5028f91a-persona-compradora' },
+  { agenteId: 'promessa-transformadora', modo: 'link', titulo: 'Agente da Promessa Transformadora', descricao: 'Define a transformação central que seu método entrega — a promessa que sustenta tudo.', link: 'https://chatgpt.com/g/g-6a340215217c8191a813c3a574545b22-agente-promessa-transformadora' },
+  { agenteId: 'processo-autoral', modo: 'link', titulo: 'Agente do Processo Autoral', descricao: 'Organiza o passo a passo do seu método com nome próprio — inconfundível, com a sua cara.', link: 'https://chatgpt.com/g/g-6a2ff74c85a88191b14a2cda25406187-processo-autoral' },
+  { agenteId: 'portfolio-estrategico', modo: 'link', titulo: 'Agente do Portfólio Estratégico', descricao: 'Monta as provas e entregáveis que sustentam a credibilidade do seu método.', link: 'https://chatgpt.com/g/g-68eae9371f8481919ac18d9dbbf2ced1-portfolio-estrategico' },
+  { agenteId: 'proposta-validada', modo: 'link', titulo: 'Agente da Proposta Validada', descricao: 'Ajuda a estruturar a oferta e o fechamento das suas vendas secretas.', link: 'https://chatgpt.com/g/g-69040ce07b7481918336fb272b6cb0a2-proposta-validada' },
+  { agenteId: 'autoridade-triplice', modo: 'link', titulo: 'Agente da Autoridade Tríplice', descricao: 'Constrói a presença que sustenta sua autoridade sem precisar implorar por atenção.', link: 'https://chatgpt.com/g/g-69154b5565408191a441f7dfccc8ed9e-autoridade-triplice' }
+];
