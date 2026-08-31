@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "qui-1-hora-por-semana-metodo",
+  "slides": [
+    { "numero": "", "texto": "SE VOCÊ SÓ TEM 1 HORA POR SEMANA PARA CRIAR SEU MÉTODO, PRESTE ATENÇÃO NISSO AQUI", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Não tente construir tudo.\n\nUse a hora para produzir uma <strong>evidência</strong>.", "modifiers": ["sem-numero"] },
+    { "numero": "1", "texto": "<strong>10 min</strong> · escolha um problema específico que aparece repetidamente.", "modifiers": [] },
+    { "numero": "2", "texto": "<strong>15 min</strong> · descreva quem vive esse problema e o que já tentou.", "modifiers": [] },
+    { "numero": "3", "texto": "<strong>15 min</strong> · escreva a transformação que você consegue sustentar.", "modifiers": [] },
+    { "numero": "4", "texto": "<strong>10 min</strong> · liste as etapas que você já usa para chegar a essa transformação.", "modifiers": [] },
+    { "numero": "5", "texto": "<strong>10 min</strong> · marque uma conversa com uma pessoa real para testar entendimento.", "modifiers": [] },
+    { "numero": "", "texto": "Uma hora com ordem vale mais que uma semana abrindo abas.\n\nSalva e me segue.", "modifiers": ["sem-numero"] }
+  ]
+}

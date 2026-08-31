@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "qua-perguntas-nivel-metodo",
+  "slides": [
+    { "numero": "6", "texto": "perguntas que revelam se existe método — ou só conteúdo solto", "modifiers": ["numero-topo"] },
+    { "numero": "1", "texto": "Quem é a <strong>pessoa específica</strong> que esse processo serve?", "modifiers": [] },
+    { "numero": "2", "texto": "Qual <strong>transformação</strong> ela consegue reconhecer no final?", "modifiers": [] },
+    { "numero": "3", "texto": "O que <strong>entra</strong> — e o que <strong>fica de fora</strong> — para chegar lá?", "modifiers": [] },
+    { "numero": "4", "texto": "Qual é a <strong>ordem das etapas</strong> e por que ela não pode ser invertida?", "modifiers": [] },
+    { "numero": "5", "texto": "Que parte da sua <strong>trajetória</strong> prova esse caminho?", "modifiers": [] },
+    { "numero": "6", "texto": "Que <strong>evidência real</strong> mostra que a proposta funciona?", "modifiers": [] },
+    { "numero": "", "texto": "Se as respostas ainda estão vagas, não grave nenhuma aula.\n\nVolte à estrutura. Salva e me segue.", "modifiers": ["sem-numero"] }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "ter-meta-funciona-x-meta-enfeita",
+  "slides": [
+    { "numero": "", "texto": "META QUE FUNCIONA × META QUE ENFEITA", "modifiers": ["sem-numero"] },
+    { "numero": "1", "texto": "<strong>Enfeita:</strong> 'trabalhar no meu método'.\n<strong>Funciona:</strong> 'definir uma persona específica até sexta'.", "modifiers": [] },
+    { "numero": "2", "texto": "<strong>Enfeita:</strong> 'postar mais'.\n<strong>Funciona:</strong> 'publicar 3 conteúdos sobre a mesma tese e observar a resposta'.", "modifiers": [] },
+    { "numero": "3", "texto": "<strong>Enfeita:</strong> 'vender no digital'.\n<strong>Funciona:</strong> 'conversar com 3 pessoas que já vivem o problema'.", "modifiers": [] },
+    { "numero": "4", "texto": "<strong>Enfeita:</strong> 'criar meu curso'.\n<strong>Funciona:</strong> 'desenhar a jornada do problema à transformação antes de gravar'.", "modifiers": [] },
+    { "numero": "5", "texto": "<strong>Enfeita:</strong> 'melhorar meu posicionamento'.\n<strong>Funciona:</strong> 'explicar em 10 segundos quem eu ajudo e com quê'.", "modifiers": [] },
+    { "numero": "", "texto": "A regra: <strong>uma etapa + um entregável + uma evidência.</strong>", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Salva e reescreve sua meta de setembro.\n\nMe segue.", "modifiers": ["sem-numero"] }
+  ]
+}

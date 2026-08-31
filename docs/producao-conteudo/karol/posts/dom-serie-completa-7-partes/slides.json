@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "dom-serie-completa-7-partes",
+  "slides": [
+    { "numero": "", "texto": "DE TODO O CONHECIMENTO MISTURADO A UM MÉTODO ESTRUTURADO\n\n<strong>AS 7 PARTES</strong>", "modifiers": ["sem-numero"] },
+    { "numero": "1", "texto": "Se o caminho só existe quando você aplica pessoalmente, o <strong>conhecimento</strong> ainda mora só em você.", "modifiers": [] },
+    { "numero": "2", "texto": "Defina a <strong>Persona Compradora</strong>: quem exatamente você serve — não um perfil genérico.", "modifiers": [] },
+    { "numero": "3", "texto": "Escreva a <strong>Promessa Transformadora</strong>: a mudança clara que essa pessoa reconhece e prova pros outros.", "modifiers": [] },
+    { "numero": "4", "texto": "Estruture o <strong>Processo Autoral</strong>: a sequência das etapas, com a sua história dentro — não uma grade de aulas.", "modifiers": [] },
+    { "numero": "5", "texto": "Descreva a <strong>Proposta Validada</strong>: três vendas reais no 1:1, antes de qualquer palco.", "modifiers": [] },
+    { "numero": "6", "texto": "Crie seu <strong>Posicionamento de Autoridade</strong>: a presença pública que só entra depois de tudo validado.", "modifiers": [] },
+    { "numero": "7", "texto": "O resultado: uma pessoa real, um problema específico e a <strong>primeira prova</strong>.\n\nSalva. Executa uma parte amanhã. Me segue.", "modifiers": [] }
+  ]
+}

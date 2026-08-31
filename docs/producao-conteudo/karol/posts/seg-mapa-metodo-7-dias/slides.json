@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "seg-mapa-metodo-7-dias",
+  "slides": [
+    { "numero": "", "texto": "<strong>O mapa do método</strong>\n\n<small>De todo o conhecimento misturado na sua cabeça a um método estruturado.</small>", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Seu conhecimento ainda está todo acumulado na sua cabeça e ninguém sabe quem você ajuda, o que resolve, o que faz por aqui...\n\nSiga esse mapa para resolver isso.", "modifiers": ["sem-numero"] },
+    { "numero": "1", "texto": "<strong>Persona Compradora:</strong> quem exatamente você serve — primeira definição para estruturar seu método.", "modifiers": [] },
+    { "numero": "2", "texto": "<strong>Promessa Transformadora:</strong> a mudança clara que você entrega, o resultado do seu método.", "modifiers": [] },
+    { "numero": "3", "texto": "<strong>Processo Autoral:</strong> a sequência para chegar ao resultado, com a sua história dentro.", "modifiers": [] },
+    { "numero": "4", "texto": "<strong>Proposta Validada:</strong> testar de forma secreta, antes de se expor, com vendas reais.", "modifiers": [] },
+    { "numero": "5", "texto": "<strong>Posicionamento de Autoridade:</strong> a presença que vem depois da prova. Ser visto como autoridade.", "modifiers": [] },
+    { "numero": "", "texto": "Seguindo esse mapa, você sai da bagunça da sua cabeça para um <strong>método estruturado</strong>.\n\nSalva este mapa e me segue.", "modifiers": ["sem-numero"] }
+  ]
+}

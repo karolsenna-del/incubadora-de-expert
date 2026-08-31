@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "sex-5-frases-parar-de-dizer",
+  "slides": [
+    { "numero": "5", "texto": "frases para parar de dizer sobre seu método", "modifiers": ["numero-topo"] },
+    { "numero": "1", "texto": "<strong>'Preciso estudar mais.'</strong>\n→ 'Que decisão específica ainda não consigo tomar?'", "modifiers": [] },
+    { "numero": "2", "texto": "<strong>'Não tenho seguidores.'</strong>\n→ 'Quem já confia no meu trabalho e vive este problema?'", "modifiers": [] },
+    { "numero": "3", "texto": "<strong>'Vou vender quando estiver pronto.'</strong>\n→ 'Que parte posso testar numa conversa real agora?'", "modifiers": [] },
+    { "numero": "4", "texto": "<strong>'Meu público é todo mundo.'</strong>\n→ 'Quem reconhece esta dor com mais urgência?'", "modifiers": [] },
+    { "numero": "5", "texto": "<strong>'Marketing não é meu forte.'</strong>\n→ 'Consigo explicar quem ajudo e com qual transformação?'", "modifiers": [] },
+    { "numero": "", "texto": "Frase vaga preserva a trava.\n\n<strong>Pergunta específica produz decisão.</strong>", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Salva para a próxima vez que uma dessas aparecer.\n\nMe segue.", "modifiers": ["sem-numero"] }
+  ]
+}

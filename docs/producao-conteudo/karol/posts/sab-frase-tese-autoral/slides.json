@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "sab-frase-tese-autoral",
+  "slides": [
+    { "numero": "", "texto": "O problema que sua persona diz que tem\n\n<strong>quase nunca é o problema real.</strong>", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Se você é especialista e ainda apresenta seu método citando ferramenta, técnica ou currículo, você tá comunicando <strong>sintoma</strong> — não a causa que de fato prende sua persona.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "No caso da minha persona: ela pensa isso:\n\n'preciso estudar mais', 'preciso de mais ferramenta', 'preciso postar mais'.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Por trás disso mora a <strong>causa oculta</strong>: o problema de verdade, que quase ninguém nomeia antes de você.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Sua autoridade nasce aí — no <strong>mecanismo único</strong>: o jeito específico como seu método resolve a causa, não só o sintoma.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Tudo isso vira uma frase:\n\n'As pessoas acham que o problema é [sintoma]. Mas não é. O problema real é [causa oculta]. E o caminho é [seu mecanismo único].'\n\n— a sua <strong>Frase-Tese Autoral</strong>.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Teste se ela se sustenta: ela responde às perguntas mais óbvias que sua persona faria sobre sua tese?\n\nSe não responde, ainda é <strong>opinião</strong> — não é tese.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Salva esse mapa e testa a sua frase.\n\nMe segue.", "modifiers": ["sem-numero"] }
+  ]
+}
