@@ -15,3 +15,4 @@
 | 27/08/2026 | expert360-quinta-2026-08-27 | 1 | 18119387594476772 | sim (ver log de execucao) |
 | 28/08/2026 | sequencia-solta-borda-2026-08-28 | 1 | 17903452905331022 | sim (ver log de execucao) |
 | 30/08/2026 | sprint-metodo-domingo-2026-08-30 | 1 | 18100042496275774 | sim (ver log de execucao) |
+| 31/08/2026 | gerar-valor-metodo-autoral-2026-08-31 | 1 | 18164524012414660 | sim (ver log de execucao) |
