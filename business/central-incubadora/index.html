@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central da Incubadora</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap');
+
+:root{
+  --ink:#0B0B0C;
+  --ink-2:#151517;
+  --paper:#FFFFFF;
+  --fog:#F4F4F5;
+  --mist:#D4D4D8;
+  --ash:#71717A;
+  --line:#3F3F46;
+  --ember:#FF6B1A;
+  --ember-dark:#E85A0D;
+  --display:'Sora',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --text:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--fog);
+  color:var(--ink);
+  font-family:var(--text);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:48px 16px 80px;
+}
+.wrap{width:100%;max-width:720px;}
+h1,.display{font-family:var(--display); font-weight:800; margin:0;}
+.brand{margin-bottom:8px;}
+.brand-name{font-family:var(--display); font-weight:800; font-size:1.1rem;}
+.brand-name span{color:var(--ember);}
+h1{font-size:1.8rem; margin:12px 0 8px; letter-spacing:-0.02em;}
+.lede{font-size:1rem; line-height:1.6; color:var(--ash); margin:0 0 8px;}
+.sub-lede{
+  font-size:.82rem; color:var(--ember-dark); margin:0 0 36px; background:#FFF1E6; border:1px solid #FFD3AD;
+  border-radius:10px; padding:10px 14px; line-height:1.5;
+}
+.section-title{
+  font-family:var(--display); font-size:.75rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ash); margin:36px 0 12px;
+}
+.section-title:first-of-type{margin-top:0;}
+.grid{display:flex; flex-direction:column; gap:10px;}
+.grid.cols2{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+@media (max-width:560px){.grid.cols2{grid-template-columns:1fr;}}
+.card{
+  display:block;
+  background:var(--paper);
+  border:1px solid var(--mist);
+  border-radius:14px;
+  padding:16px 18px;
+  text-decoration:none;
+  color:inherit;
+  transition:border-color .15s ease, transform .1s ease, box-shadow .15s ease;
+}
+.card:hover{border-color:var(--ember); transform:translateY(-1px); box-shadow:0 8px 20px -12px rgba(255,107,26,.35);}
+.card:active{transform:scale(.995);}
+.card h2{font-size:1rem; font-family:var(--display); font-weight:700; margin:0 0 3px;}
+.card p{font-size:.85rem; color:var(--ash); margin:0; line-height:1.45;}
+.tag{
+  display:inline-block; font-size:.66rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--ember-dark); margin-bottom:6px;
+}
+footer{margin-top:48px; font-size:.78rem; color:var(--ash); text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <div class="brand-name">Incubadora <span>de Expert</span></div>
+  </div>
+
+  <h1>Central da Incubadora</h1>
+  <p class="lede">Todos os seus links num lugar só — páginas, checkouts, diagnósticos, ferramentas e área de membros.</p>
+  <p class="sub-lede">Link pessoal, não divulgado pra ninguém. Não tem senha, mas também não aparece em nenhum lugar público — só quem recebe direto de você chega aqui.</p>
+
+  <div class="section-title">Área de Membros</div>
+  <div class="grid">
+    <a class="card" href="https://membros.incubadoradeexpert.com.br" target="_blank" rel="noopener">
+      <span class="tag">Membros</span>
+      <h2>Área de Membros</h2>
+      <p>Login das alunas, todas as trilhas (Expert360º, Mentoria, Consultorias, Biblioteca de IA).</p>
+    </a>
+  </div>
+
+  <div class="section-title">Diagnósticos</div>
+  <div class="grid">
+    <a class="card" href="https://diagnostico.incubadoradeexpert.com.br" target="_blank" rel="noopener">
+      <span class="tag">Topo de funil</span>
+      <h2>Diagnóstico do Expert</h2>
+      <p>LP → pré-diagnóstico interativo → agenda a Sessão Estratégica de 45 min.</p>
+    </a>
+    <a class="card" href="https://dna.incubadoradeexpert.com.br" target="_blank" rel="noopener">
+      <span class="tag">Onboarding</span>
+      <h2>DNA do Expert</h2>
+      <p>Pra quem já comprou — preenche antes da 1ª sessão da Incubadora.</p>
+    </a>
+    <a class="card" href="https://kit-de-ferramentas.vercel.app" target="_blank" rel="noopener">
+      <span class="tag">Produto</span>
+      <h2>Kit de Ferramentas — Diagnóstico</h2>
+      <p>Intake de quem compra o Kit de Ferramentas.</p>
+    </a>
+    <a class="card" href="https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/diagnostico/" target="_blank" rel="noopener">
+      <span class="tag">Produto</span>
+      <h2>Sprint do Método — Diagnóstico</h2>
+      <p>História Real + Ikigai de quem entra no Sprint.</p>
+    </a>
+  </div>
+
+  <div class="section-title">Respostas dos diagnósticos (planilhas)</div>
+  <div class="grid">
+    <a class="card" href="https://docs.google.com/spreadsheets/d/1VWthqPmKdb2U5KK_oMQJzz4ucjZHyY-jjmgZoyahMXI/edit" target="_blank" rel="noopener">
+      <span class="tag">Planilha</span>
+      <h2>Diagnóstico do Expert — Leads</h2>
+    </a>
+    <a class="card" href="https://docs.google.com/spreadsheets/d/1fsEp51aXkXg3d-iHJ_R5sp6IyGlL5_Jy2MBv2TkhXw4/edit" target="_blank" rel="noopener">
+      <span class="tag">Planilha</span>
+      <h2>DNA do Expert — Respostas</h2>
+    </a>
+    <a class="card" href="https://docs.google.com/spreadsheets/d/1zdYw6usODuphCAVZbQpi-9qQmIusGLOs9dt7IzNgPRc/edit" target="_blank" rel="noopener">
+      <span class="tag">Planilha</span>
+      <h2>Kit de Ferramentas — Respostas</h2>
+    </a>
+    <a class="card" href="https://docs.google.com/spreadsheets/d/1v2wfmWFTmGwcV7ueEa0L0ZEUPDvuuh9vM-cNhPvSm1M/edit" target="_blank" rel="noopener">
+      <span class="tag">Planilha</span>
+      <h2>Sprint do Método — Diagnósticos</h2>
+    </a>
+  </div>
+
+  <div class="section-title">Páginas de venda</div>
+  <div class="grid cols2">
+    <a class="card" href="https://vendas.incubadoradeexpert.com.br/expert360/" target="_blank" rel="noopener">
+      <h2>Expert360º</h2>
+      <p>R$697</p>
+    </a>
+    <a class="card" href="https://vendas.incubadoradeexpert.com.br/metodo-express/" target="_blank" rel="noopener">
+      <h2>Método Express</h2>
+      <p>R$300</p>
+    </a>
+    <a class="card" href="https://vendas.incubadoradeexpert.com.br/metodo-vip/" target="_blank" rel="noopener">
+      <h2>Método VIP</h2>
+      <p>R$1.500</p>
+    </a>
+    <a class="card" href="https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/" target="_blank" rel="noopener">
+      <h2>Sprint do Método</h2>
+      <p>R$3.000</p>
+    </a>
+    <a class="card" href="https://vendas.incubadoradeexpert.com.br/grupo/" target="_blank" rel="noopener">
+      <h2>Grupo (Mentoria)</h2>
+      <p>R$5.000</p>
+    </a>
+    <a class="card" href="https://vendas.incubadoradeexpert.com.br/individual/" target="_blank" rel="noopener">
+      <h2>Individual (Incubadora)</h2>
+      <p>R$10.000</p>
+    </a>
+    <a class="card" href="https://vendas.incubadoradeexpert.com.br/diagnostico-ferramentas/" target="_blank" rel="noopener">
+      <h2>Diagnóstico Ferramentas</h2>
+      <p>R$97</p>
+    </a>
+  </div>
+
+  <div class="section-title">Checkouts diretos (Voomp)</div>
+  <div class="grid cols2">
+    <a class="card" href="https://pay.voompcreators.com.br/15514" target="_blank" rel="noopener">
+      <h2>Expert360º</h2>
+    </a>
+    <a class="card" href="https://pay.voompcreators.com.br/16363" target="_blank" rel="noopener">
+      <h2>Método Express</h2>
+    </a>
+    <a class="card" href="https://pay.voompcreators.com.br/16364" target="_blank" rel="noopener">
+      <h2>Método VIP</h2>
+    </a>
+    <a class="card" href="https://pay.voompcreators.com.br/16365" target="_blank" rel="noopener">
+      <h2>Sprint do Método</h2>
+    </a>
+    <a class="card" href="https://pay.voompcreators.com.br/16366" target="_blank" rel="noopener">
+      <h2>Grupo</h2>
+    </a>
+    <a class="card" href="https://pay.voompcreators.com.br/16367" target="_blank" rel="noopener">
+      <h2>Individual</h2>
+    </a>
+    <a class="card" href="https://pay.voompcreators.com.br/16368" target="_blank" rel="noopener">
+      <h2>Diagnóstico Ferramentas</h2>
+    </a>
+  </div>
+
+  <div class="section-title">Funil de treinamento</div>
+  <div class="grid cols2">
+    <a class="card" href="https://treinamento.incubadoradeexpert.com.br" target="_blank" rel="noopener">
+      <h2>Mini Treinamento (A)</h2>
+    </a>
+    <a class="card" href="https://treinamento2.incubadoradeexpert.com.br" target="_blank" rel="noopener">
+      <h2>Mini Treinamento (B)</h2>
+    </a>
+  </div>
+
+  <div class="section-title">Painéis e administração</div>
+  <div class="grid">
+    <a class="card" href="https://adm.voompcreators.com.br" target="_blank" rel="noopener">
+      <span class="tag">Painel</span>
+      <h2>Voomp Creators — Vendedor</h2>
+      <p>Produtos, checkouts, vendas, aba Entregas.</p>
+    </a>
+    <a class="card" href="https://vercel.com/karol-sennas-projects" target="_blank" rel="noopener">
+      <span class="tag">Painel</span>
+      <h2>Vercel — Projetos</h2>
+      <p>Todos os sites e páginas publicadas.</p>
+    </a>
+    <a class="card" href="https://supabase.com/dashboard/project/pxnbcbhgoewrwyreohki" target="_blank" rel="noopener">
+      <span class="tag">Painel</span>
+      <h2>Supabase — incubadora-de-expert</h2>
+      <p>Banco de dados da Área de Membros.</p>
+    </a>
+  </div>
+
+  <footer>Central da Incubadora — uso pessoal da Karol</footer>
+</div>
+</body>
+</html>
