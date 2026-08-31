@@ -38,7 +38,8 @@ O aluno escolhe a categoria (linguagem simples). O worker escolhe o dispositivo 
 - **Identidade do Comunicador** — manter o tom/mantra do aluno presente, não virar aula genérica de mercado
 
 ### Vender
-- **Ansiedade pela Abertura** (se a oferta tem vagas/data limitada) ou **Pânico pelo Conteúdo** (se é sobre um conteúdo/bônus por tempo limitado) — escolher conforme o que o aluno está oferecendo
+- **Antes de escolher o dispositivo, perguntar:** "Sua oferta tem vaga limitada, data de fechamento, ou bônus por tempo limitado — ou está sempre disponível?" Nunca presumir escassez.
+- **Se tiver vaga/data real:** Ansiedade pela Abertura. **Se tiver conteúdo/bônus com prazo real:** Pânico pelo Conteúdo. **Se a oferta está sempre disponível:** nenhum dos dois — usar CTA direta sem alegação de urgência (ex: foco no resultado/transformação, não no prazo).
 - **Levante a Mão** — no story de CTA, pedir sinalização de interesse (responder o story, chamar no direct) em vez de só citar o link
 - Regra de CTA obrigatória (seção 2) se aplica aqui
 

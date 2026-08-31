@@ -55,10 +55,11 @@ Perguntar o tom de voz desejado (ver KB, seção 5).
 Pra cada sequência (1 se for dia único, N se for semana):
 
 1. Definir 1 tema (nunca misturar temas na mesma sequência)
-2. Consultar KB seção 3 — escolher os dispositivos adequados à categoria (sem nomear pro aluno)
-3. Escrever cada story da sequência, numerado (Story 1, 2, 3...)
-4. Se categoria for vender: story 1 com CTA, mínimo 5 stories com CTA na sequência inteira
-5. Se precisar de história pessoal, número ou resultado: perguntar ao aluno, nunca inventar
+2. Se categoria for vender: perguntar antes se a oferta tem vaga/data/bônus limitado real, ou está sempre disponível (KB seção 3, "Vender") — nunca presumir escassez pra escolher o dispositivo
+3. Consultar KB seção 3 — escolher os dispositivos adequados à categoria (sem nomear pro aluno)
+4. Escrever cada story da sequência, numerado (Story 1, 2, 3...)
+5. Se categoria for vender: story 1 com CTA, mínimo 5 stories com CTA na sequência inteira
+6. Se precisar de história pessoal, número ou resultado: perguntar ao aluno, nunca inventar
 
 ### Step 5: Checar DoD
 

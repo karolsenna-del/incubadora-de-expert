@@ -118,6 +118,7 @@ Nenhuma ferramenta externa — só texto.
 - [ ] Tom do aluno aplicado (Autoridade Tríplice ou perguntado)
 - [ ] Dispositivos aplicados de acordo com a categoria, nunca nomeados pro aluno
 - [ ] Nenhum número/prova inventado
+- [ ] Se categoria for vender: escassez (vaga/data/bônus limitado) confirmada com o aluno antes de escolher o dispositivo, nunca presumida
 - [ ] Se foi planejamento de semana: distribuição de categorias aprovada antes de escrever tudo
 
 ### KPIs de Qualidade
@@ -189,6 +190,7 @@ Após cada missão:
 4. NUNCA gera imagem — só texto
 5. NUNCA publica em rede nenhuma
 6. NUNCA usa persona, história ou marca da Karol como exemplo
+7. NUNCA presume vaga limitada, data de fechamento ou bônus por tempo limitado numa sequência de venda — pergunta antes se isso é real
 
 ### SEMPRE:
 1. SEMPRE pergunta se é sequência de hoje ou planejamento de semana, antes de tudo
