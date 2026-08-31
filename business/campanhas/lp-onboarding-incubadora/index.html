@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onboarding | Incubadora de Expert</title>
+  <meta name="description" content="Bem-vindo à Incubadora de Expert. Tudo que você precisa pra dar o primeiro passo: sua jornada, o DNA do Expert, como funcionam os encontros e o suporte.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonte display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --preto: #0B0B0C;
+      --preto-2: #151517;
+      --branco: #FFFFFF;
+      --cinza-100: #F4F4F5;
+      --cinza-300: #D4D4D8;
+      --cinza-500: #71717A;
+      --cinza-700: #3F3F46;
+      --laranja: #FF6B1A;
+      --laranja-escuro: #E85A0D;
+      --display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --texto: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--texto);
+      color: var(--preto);
+      background: var(--branco);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    .container-wide { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    section { padding: 72px 0; }
+
+    h1, h2, h3 { font-family: var(--display); line-height: 1.2; }
+
+    h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+      letter-spacing: -0.02em;
+    }
+
+    p { max-width: 62ch; }
+
+    strong { font-weight: 700; }
+
+    .destaque { color: var(--laranja); }
+
+    /* ===== Animação de entrada ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visivel { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      display: inline-block;
+      background: var(--laranja);
+      color: var(--branco);
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      text-align: center;
+      padding: 18px 40px;
+      border-radius: 12px;
+      letter-spacing: 0.01em;
+      transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+      box-shadow: 0 8px 24px rgba(255, 107, 26, 0.35);
+    }
+    .cta:hover {
+      background: var(--laranja-escuro);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(255, 107, 26, 0.45);
+    }
+    .cta-micro {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--cinza-500);
+      max-width: 46ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-wrap { text-align: center; margin-top: 40px; }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: var(--preto);
+      color: var(--branco);
+      padding: 48px 0 64px;
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-family: var(--display);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--laranja);
+      border: 1px solid rgba(255, 107, 26, 0.4);
+      border-radius: 100px;
+      padding: 8px 18px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(1.9rem, 5.5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      max-width: 22ch;
+      margin: 0 auto 16px;
+    }
+    .hero .sub {
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: var(--cinza-300);
+      max-width: 54ch;
+      margin: 0 auto 28px;
+    }
+    .hero .assinatura {
+      margin-top: 32px;
+      color: var(--cinza-500);
+      font-size: 0.95rem;
+    }
+    .hero .assinatura strong { color: var(--branco); display: block; margin-top: 4px; }
+
+    /* ===== TESE / FRASE-BANDEIRA ===== */
+    .tese-texto { display: grid; gap: 18px; color: var(--cinza-700); }
+    .tese-texto strong { color: var(--preto); }
+
+    .frase-bandeira {
+      margin: 0 auto 40px;
+      max-width: 640px;
+      background: var(--preto);
+      color: var(--branco);
+      border-radius: 20px;
+      padding: 44px 32px;
+      text-align: center;
+      font-family: var(--display);
+      font-size: clamp(1.15rem, 3.2vw, 1.5rem);
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .frase-bandeira .destaque { display: block; font-weight: 800; margin-top: 6px; }
+
+    /* ===== JORNADA (5 fases) ===== */
+    .jornada { display: grid; gap: 18px; }
+    .fase {
+      background: var(--branco);
+      border: 1px solid var(--cinza-300);
+      border-radius: 16px;
+      padding: 26px 24px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .fase .marcador {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--laranja);
+    }
+    .fase h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .fase .quando {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cinza-500);
+      margin-bottom: 8px;
+    }
+    .fase p { font-size: 0.95rem; color: var(--cinza-700); }
+
+    .jornada-nota {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 0.92rem;
+      color: var(--cinza-500);
+      background: var(--cinza-100);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+
+    /* ===== CHECK-IN / DNA DO EXPERT (destaque) ===== */
+    .checkin {
+      background: var(--cinza-100);
+      border-radius: 20px;
+      padding: 40px 32px;
+      text-align: center;
+      border-top: 4px solid var(--laranja);
+    }
+    .checkin p { max-width: 54ch; margin: 0 auto 28px; color: var(--cinza-700); }
+
+    /* ===== CARDS (materiais / suporte) ===== */
+    .cards { display: grid; gap: 20px; grid-template-columns: 1fr; }
+    @media (min-width: 768px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+    .card {
+      background: var(--cinza-100);
+      border-radius: 16px;
+      padding: 28px 24px;
+      border-top: 4px solid var(--laranja);
+    }
+    .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 12px; }
+    .card p { font-size: 0.95rem; color: var(--cinza-700); }
+
+    /* ===== SEÇÃO ESCURA (Suporte) ===== */
+    .secao-escura { background: var(--preto); color: var(--branco); }
+    .secao-escura h2 { color: var(--branco); }
+    .suporte-grid { display: grid; gap: 16px; max-width: 640px; margin: 0 auto 32px; }
+    @media (min-width: 640px) { .suporte-grid { grid-template-columns: repeat(2, 1fr); } }
+    .suporte-canal {
+      background: var(--preto-2);
+      border-left: 3px solid var(--laranja);
+      border-radius: 0 12px 12px 0;
+      padding: 22px 24px;
+    }
+    .suporte-canal h3 { font-size: 1rem; margin-bottom: 8px; color: var(--branco); }
+    .suporte-canal p { font-size: 0.92rem; color: var(--cinza-300); }
+    .suporte-fecho {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+      color: var(--cinza-300);
+      font-size: 0.95rem;
+    }
+    .suporte-fecho strong { color: var(--branco); }
+
+    /* ===== FAQ ===== */
+    .faq { display: grid; gap: 24px; max-width: 640px; margin: 0 auto; }
+    .faq-item h3 { font-size: 1rem; margin-bottom: 8px; }
+    .faq-item p { font-size: 0.95rem; color: var(--cinza-700); }
+
+    /* ===== CTA FINAL ===== */
+    .final { text-align: center; }
+    .final h2 { max-width: 26ch; margin-left: auto; margin-right: auto; }
+    .final .assinatura {
+      margin-top: 28px;
+      color: var(--cinza-500);
+      font-size: 0.95rem;
+    }
+    .final .assinatura strong { color: var(--preto); display: block; margin-top: 4px; }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+      background: var(--preto);
+      color: var(--cinza-500);
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 0.8rem;
+      line-height: 2;
+    }
+
+    /* ===== BARRA MOBILE FIXA ===== */
+    .barra-mobile {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(11, 11, 12, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+      z-index: 100;
+      transform: translateY(100%);
+      transition: transform .3s ease;
+    }
+    .barra-mobile.ativa { transform: none; }
+    .barra-mobile .cta {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      font-size: 0.95rem;
+      box-shadow: none;
+    }
+    @media (min-width: 768px) { .barra-mobile { display: none; } }
+  </style>
+</head>
+<body>
+
+  <!-- ============ SEÇÃO 1 — CAPA + BOAS-VINDAS ============ -->
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Incubadora de Expert · Onboarding</span>
+      <h1>Seja bem-vindo à <span class="destaque">Incubadora de Expert</span></h1>
+      <p class="sub">Aqui começa a jornada de transformar o que você já sabe fazer num método autoral — com nome próprio, validado por vendas reais, antes de qualquer exposição pública.</p>
+      <p class="sub">Nesta página você encontra tudo que precisa pra dar o primeiro passo.</p>
+      <div class="assinatura">
+        Vamos juntos. 🚀
+        <strong>Karol Senna</strong>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ COMECE POR AQUI — ÁREA DE MEMBROS + DNA DO EXPERT (lado a lado) ============ -->
+  <section style="padding-top: 0;">
+    <div class="container-wide">
+      <h2 class="reveal">Comece por aqui</h2>
+      <div class="cards">
+        <div class="checkin reveal">
+          <h3 style="margin-bottom: 12px; font-size: 1.1rem;">1. Área de membros</h3>
+          <p style="font-size: 0.95rem;">Entre com o mesmo e-mail que você usou na compra.</p>
+          <a class="cta" href="https://membros.incubadoradeexpert.com.br" target="_blank" rel="noopener">ACESSAR A ÁREA DE MEMBROS</a>
+        </div>
+        <div class="checkin reveal">
+          <h3 style="margin-bottom: 12px; font-size: 1.1rem;">2. DNA do Expert</h3>
+          <p style="font-size: 0.95rem;">Preencha antes do nosso primeiro encontro — é o que destrava o agendamento da sua 1ª sessão.</p>
+          <a class="cta" href="https://dna.incubadoradeexpert.com.br" target="_blank" rel="noopener">PREENCHER O DNA DO EXPERT</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEÇÃO 2 — O QUE É A INCUBADORA DE EXPERT ============ -->
+  <section>
+    <div class="container">
+      <div class="frase-bandeira reveal">
+        Diploma é o que você estudou.
+        <span class="destaque">Método é o que você viveu.</span>
+      </div>
+      <h2 class="reveal">O que é a Incubadora de Expert</h2>
+      <div class="tese-texto reveal">
+        <p>A Incubadora de Expert <strong>não é um curso</strong> — é um acompanhamento personalizado, 1:1, ao longo de 12 meses.</p>
+        <p>Aqui, você não recebe um framework pronto pra preencher sozinho. Você constrói o seu método autoral junto com a Karol, sessão por sessão — e só avança pra próxima etapa quando tem prova concreta de que a anterior funcionou.</p>
+        <p>O centro de tudo é a <strong>Vendas Secretas</strong>: você valida seu método com vendas reais, no 1:1, antes de qualquer exposição pública. Segurança de verdade, não teoria.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEÇÃO 3 — SUA JORNADA ============ -->
+  <section style="background: var(--cinza-100);">
+    <div class="container-wide">
+      <h2 class="reveal">Sua jornada — 12 meses</h2>
+      <div class="jornada">
+        <div class="fase reveal">
+          <span class="marcador">01</span>
+          <div>
+            <span class="quando">Mês 1</span>
+            <h3>Fundação</h3>
+            <p>Sua história real e o que te torna único — a matéria-prima de tudo que vem depois.</p>
+          </div>
+        </div>
+        <div class="fase reveal">
+          <span class="marcador">02</span>
+          <div>
+            <span class="quando">Mês 1</span>
+            <h3>Persona e Promessa</h3>
+            <p>Pra quem você fala, e o que promete a essa pessoa. Sem isso, nada mais se sustenta.</p>
+          </div>
+        </div>
+        <div class="fase reveal">
+          <span class="marcador">03</span>
+          <div>
+            <span class="quando">Meses 2-3</span>
+            <h3>Método Autoral</h3>
+            <p>Seu processo ganha nome. Você constrói o Portfólio Estratégico — as ferramentas do seu método.</p>
+          </div>
+        </div>
+        <div class="fase reveal">
+          <span class="marcador">04</span>
+          <div>
+            <span class="quando">Meses 4-6</span>
+            <h3>Vendas Secretas</h3>
+            <p>Você vende de verdade, no 1:1 — 3 vendas reais antes de qualquer exposição pública. É aqui que seu método vira prova, não promessa.</p>
+          </div>
+        </div>
+        <div class="fase reveal">
+          <span class="marcador">05</span>
+          <div>
+            <span class="quando">Meses 7-12</span>
+            <h3>Autoridade e Escala</h3>
+            <p>Com a prova em mãos, você constrói sua presença digital com segurança — e sai com um plano pra continuar sozinho.</p>
+          </div>
+        </div>
+      </div>
+      <p class="jornada-nota reveal">14 encontros individuais ao longo do caminho — mais frequentes no início (quando construímos juntos), espaçando conforme você ganha autonomia em campo.</p>
+    </div>
+  </section>
+
+  <!-- ============ SEÇÃO 4 — COMO FUNCIONAM OS ENCONTROS ============ -->
+  <section style="background: var(--cinza-100);">
+    <div class="container">
+      <h2 class="reveal">Como funcionam os encontros</h2>
+      <div class="tese-texto reveal">
+        <p>Os encontros são <strong>individuais (1:1), ao vivo, e gravados</strong> — você pode rever qualquer sessão quando quiser.</p>
+        <p>No começo, a gente se encontra toda semana: é quando construímos junto, ao vivo, cada peça do seu método. Conforme você ganha autonomia e vai pro campo validar, os encontros espaçam — até ficarem mensais, na fase de consolidar sua presença digital.</p>
+        <p>Cada sessão parte de onde a anterior parou. Nada se perde: seu <strong>Roteiro da Jornada</strong> registra o que já foi feito e o que vem a seguir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEÇÃO 5 — PERÍODO DE ACESSO ============ -->
+  <section>
+    <div class="container">
+      <h2 class="reveal">Período de acesso</h2>
+      <div class="tese-texto reveal" style="text-align: center; margin: 0 auto;">
+        <p>Seu acesso à Incubadora de Expert é de <strong>12 meses</strong> — o tempo real que leva pra construir, validar em campo e consolidar seu método com segurança.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEÇÃO 6 — SEU DRIVE E MATERIAIS ============ -->
+  <section style="background: var(--cinza-100);">
+    <div class="container-wide">
+      <h2 class="reveal">Seus materiais</h2>
+      <p class="reveal" style="text-align: center; margin: -20px auto 32px; color: var(--cinza-700);">Tudo que você vai usar ao longo da jornada fica organizado na sua pasta no Google Drive.</p>
+      <div class="cards">
+        <div class="card reveal">
+          <h3>📁 Biblioteca de IAs</h3>
+          <p>Os agentes de inteligência artificial que te ajudam a construir cada etapa do método.</p>
+        </div>
+        <div class="card reveal">
+          <h3>📁 Roteiro da Jornada</h3>
+          <p>Seu plano personalizado, com status de cada entrega — o que já foi feito, o que falta.</p>
+        </div>
+        <div class="card reveal">
+          <h3>📁 Biblioteca de Templates</h3>
+          <p>Ferramentas prontas pra adaptar ao seu método.</p>
+        </div>
+        <div class="card reveal">
+          <h3>📁 Portfólio Estratégico</h3>
+          <p>As ferramentas específicas do SEU método, construídas com você a partir do Mês 2.</p>
+        </div>
+      </div>
+      <p class="jornada-nota reveal">O link da sua pasta chega junto com a confirmação da sua primeira sessão.</p>
+    </div>
+  </section>
+
+  <!-- ============ SEÇÃO 7 — SUPORTE ============ -->
+  <section class="secao-escura">
+    <div class="container">
+      <h2 class="reveal">Suporte</h2>
+      <div class="suporte-grid">
+        <div class="suporte-canal reveal">
+          <h3>Dúvida de conteúdo</h3>
+          <p>Grupo de WhatsApp — a Karol responde em até <strong style="color: var(--branco);">24h úteis</strong>.</p>
+        </div>
+        <div class="suporte-canal reveal">
+          <h3>Acesso, calendário, financeiro ou contrato</h3>
+          <p>Canal específico — o Whats do Suporte.</p>
+        </div>
+      </div>
+      <div class="suporte-fecho reveal">
+        <p>Atendimento: dias úteis, das <strong>9h às 18h</strong>.</p>
+        <p style="margin-top: 12px;">Gravação de encontro ao vivo? Fica disponível em até <strong>48h úteis</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEÇÃO 8 — FAQ + PRÓXIMO PASSO ============ -->
+  <section>
+    <div class="container">
+      <h2 class="reveal">Perguntas frequentes</h2>
+      <div class="faq reveal">
+        <div class="faq-item">
+          <h3>Acabei de entrar. O que eu faço primeiro?</h3>
+          <p>Preenche o DNA do Expert (link acima) — é o que destrava o agendamento da sua primeira sessão.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Quanto tempo eu tenho de acesso?</h3>
+          <p>12 meses, contados a partir da sua entrada.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Tenho uma dúvida entre os encontros. Como faço?</h3>
+          <p>Manda no grupo de WhatsApp — a Karol responde em até 24h úteis.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Os encontros ficam gravados?</h3>
+          <p>Sim. Disponíveis em até 48h úteis após cada sessão.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Como acesso a área de membros?</h3>
+          <p><a href="https://membros.incubadoradeexpert.com.br" target="_blank" rel="noopener" style="color: var(--laranja);">membros.incubadoradeexpert.com.br</a> — usa o mesmo e-mail da compra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="final" style="background: var(--cinza-100);">
+    <div class="container">
+      <h2 class="reveal">Próximo passo</h2>
+      <div class="reveal">
+        <a class="cta" href="https://dna.incubadoradeexpert.com.br" target="_blank" rel="noopener">PREENCHER O DNA DO EXPERT</a>
+        <span class="cta-micro">Assim que preencher, a gente agenda sua primeira sessão — e a jornada começa de verdade.</span>
+      </div>
+      <div class="assinatura reveal">
+        Estou aqui com você. 🚀
+        <strong>Karol Senna</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer>
+    Incubadora de Expert · CNPJ 38.431.977/0001-36<br>
+    Página de onboarding — uso exclusivo de alunos ativos
+  </footer>
+
+  <!-- ============ BARRA MOBILE ============ -->
+  <div class="barra-mobile" id="barraMobile">
+    <a class="cta" href="https://dna.incubadoradeexpert.com.br" target="_blank" rel="noopener">PREENCHER O DNA DO EXPERT</a>
+  </div>
+
+  <script>
+    // Animações de entrada no scroll
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visivel');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+
+    // Barra mobile: aparece quando o hero sai da tela (CTA sempre disponível)
+    var hero = document.querySelector('.hero');
+    var barra = document.getElementById('barraMobile');
+    var heroObserver = new IntersectionObserver(function (entries) {
+      barra.classList.toggle('ativa', !entries[0].isIntersecting);
+    }, { threshold: 0 });
+    heroObserver.observe(hero);
+  </script>
+</body>
+</html>

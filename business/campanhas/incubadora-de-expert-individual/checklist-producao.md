@@ -7,9 +7,9 @@ Versão: 1.0 (Aprovado) | Fase 9 do Mentoring Creator | Gate: QG-MC-010 ✅
 
 ## P1 — Bloqueia (afeta a entrada de um novo aluno agora)
 
-- [ ] **Nova página de onboarding** (substitui o PDF "Onboarding Simplificado V1", desatualizado) — conteúdo alinhado com as 5 fases / 14 sessões / 5Ps / Vendas Secretas — origem: Fase 5
-- [ ] **Mensagem de boas-vindas atualizada** com o link da nova área de membros (substitui o link antigo do Hotmart Club) — origem: Fase 5
-- [ ] **Confirmar e documentar o novo link** do formulário de diagnóstico (DNA do Expert) — o link mudou e precisa ficar registrado em algum lugar central — origem: Fase 5
+- [x] **Nova página de onboarding** (substitui o PDF "Onboarding Simplificado V1", desatualizado) — publicada em **onboarding.incubadoradeexpert.com.br** (31/08). Construída com o Squad LPago Arcane, arquivos em `business/campanhas/lp-onboarding-incubadora/` — origem: Fase 5
+- [ ] **Mensagem de boas-vindas atualizada** com os links da nova página de onboarding (`onboarding.incubadoradeexpert.com.br`) e da área de membros (`membros.incubadoradeexpert.com.br`) — origem: Fase 5
+- [x] **Confirmar e documentar o novo link** do formulário de diagnóstico (DNA do Expert) — `dna.incubadoradeexpert.com.br`, confirmado pela Karol em 30/08 — origem: Fase 5
 - [ ] **Contrato de 12 meses** — o único contrato encontrado no Drive é "Mod 6M" (que é do Sprint do Método, produto diferente). Confirmar/criar a versão de 12 meses com os add-ons (ferramentas R$1.000, tráfego R$1.500) refletidos — origem: Fase 7
 
 ## P2 — Importante (não trava o dia 1, mas precisa existir antes de alguém chegar lá)

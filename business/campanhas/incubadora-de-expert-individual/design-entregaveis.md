@@ -37,9 +37,9 @@ Karol trouxe duas referências reais (28/08):
 **Resolvido (28/08):** o onboarding segue em uso e está em transição — Karol vai construir uma **nova página de onboarding** (substitui/atualiza o PDF), a mensagem de boas-vindas precisa apontar pra **nova área de membros** (troca o link do Hotmart Club atual) e o **link do diagnóstico (DNA do Expert) também mudou**. Ou seja: os 3 componentes da welcome sequence (mensagem, página/PDF, formulário de diagnóstico) estão todos com atualização pendente — não é decisão de design, é produção de material novo.
 
 **Vira item do checklist de produção (Fase 9):**
-- [ ] Nova página de onboarding (substitui o PDF V1) — conteúdo atualizado pra bater com as 5 fases / 14 sessões / 5Ps / Vendas Secretas
-- [ ] Mensagem de boas-vindas atualizada com o link da nova área de membros
-- [ ] Confirmar e documentar o novo link do formulário de diagnóstico (DNA do Expert)
+- [x] Nova página de onboarding (substitui o PDF V1) — publicada em `onboarding.incubadoradeexpert.com.br` (31/08), construída com o Squad LPago Arcane (`business/campanhas/lp-onboarding-incubadora/`)
+- [ ] Mensagem de boas-vindas atualizada com os links da página de onboarding e da área de membros — `onboarding.incubadoradeexpert.com.br` + `membros.incubadoradeexpert.com.br`
+- [x] Confirmar e documentar o novo link do formulário de diagnóstico (DNA do Expert) — `dna.incubadoradeexpert.com.br` (confirmado 30/08)
 
 ---
 
