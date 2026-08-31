@@ -1,0 +1,24 @@
+name: reels-virais-aluno
+slash_prefix: reelsViraisAluno
+version: 1.0.0
+description: "Mente Sintética — fusão de Afonso Molina, Rafael Bem e Clara Siqueira sobre criação de conteúdo viral pro Instagram/TikTok. Variante genérica de agents/expert-viral/, pra Biblioteca de IA da área de membros — roteiriza, analisa referências e diagnostica performance do próprio conteúdo do aluno."
+type: single-mind
+adapted_from: agents/expert-viral
+
+agents:
+  - reels-virais-aluno
+
+tasks:
+  - start
+  - roteirizar
+  - analisar-referencia
+  - diagnosticar
+  - consultor
+
+knowledge_base: agents/reels-virais-aluno/data/
+
+memory:
+  kb: agents/reels-virais-aluno/data/reels-virais-aluno-kb.md
+
+target_user: aluno-expert360
+created: "2026-08-30"

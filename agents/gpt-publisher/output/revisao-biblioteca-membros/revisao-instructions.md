@@ -172,3 +172,91 @@
 6. **"Tsunami" adaptado pro contexto 1:1:** oferta diferenciada em duas janelas — condição especial pra quem fecha ainda durante a sessão de vendas, condição secundária (menor) pra quem fecha dentro de 24h após a sessão; depois disso a condição especial não vale mais. Acrescentar também um roteiro curto de follow-up pós-sessão que reforce essa janela de 24h sem soar como pressão vazia.
 
 ---
+
+## 6. Autoridade Tríplice
+
+**Tamanho:** referência não recalculada (texto original + Seção 4 nova, sem limite de caracteres).
+
+### Pontos fortes
+- 3 pilares bem separados (Expert / Persona / Produto), cada um com transição clara pro próximo.
+- Âncoras metodológicas concretas, não genéricas: 12 Arquétipos de Jung pro Tom de Voz, Marketing de Premissas (Leandro Ladeira) pro Posicionamento do Produto.
+
+### Problemas encontrados
+1. **Senha — sexta implementação diferente**, e a mais estranha: apresentada como "confirmar que está pronto", não como trava de acesso. → Removida (decisão global), sem perda de comportamento real.
+2. **1.1 pergunta de novo a Promessa Transformadora**, que já existe como documento validado em outro agente.
+3. **3.3 pergunta de novo o nome do produto**, que já é gerado (5 opções + subtítulo) no Processo Autoral, Etapa 15.
+4. **13 perguntas novas propostas pela Karol** — cruzadas com os outros 5 agentes e com o próprio documento: 4 das 13 eram redundantes (ver mapeamento abaixo).
+
+### Mapeamento das 13 perguntas novas (confirmado)
+
+| # | Pergunta | Veredito |
+|---|----------|----------|
+| 1 | Sintoma + problema impostor da persona | Nova |
+| 2 | Causa oculta | Nova |
+| 3 | "Qual é a solução (destino)" | Redundante com Promessa Transformadora — excluída, reaproveita 1.1 corrigida |
+| 4 | Jornada de consciência | Nova — monta com "meio" (Processo Autoral) e "produto" (Seção 3) já prontos |
+| 5 | Problema impostor + o que já tentou | Metade redundante com #1 — fundida (só "o que já tentou" era novo) |
+| 6 | O que o mercado fala / resposta óbvia | Redundante com Processo Autoral Etapa 8 (Pesquisa de Mercado) — excluída |
+| 7 | O que você descobriu que os outros não veem | Redundante com Processo Autoral Etapa 6 (Descobertas Próprias) — excluída |
+| 8 | Frase de problema impostor + causa oculta | Nova (síntese de #1+#2) |
+| 9 | Diferencial vs. concorrentes | Redundante com a 3.4 já existente — fundida |
+| 10 | Tipo de mecanismo único | Nova |
+| 11 | Narrativa completa da tese | Nova (síntese) |
+| 12 | Declaração de posicionamento + Frase-Tese Autoral | Nova — é o entregável definitivo citado na revisão da Promessa Transformadora (M4, pós-Autoridade Tríplice) |
+| 13 | Teste de sustentação | Nova |
+
+### Decisões tomadas — APLICADAS
+
+1. **Senha removida** (decisão global).
+2. **1.1 reescrita:** "Cole sua Promessa Transformadora já validada." (em vez de perguntar de novo).
+3. **3.3 reescrita:** "Cole o nome e subtítulo do produto já definidos no Processo Autoral (Etapa 15)." (em vez de perguntar de novo).
+4. **3.4 absorve a #9:** "O que você acredita ser o diferencial do seu produto? Por que o que o mercado costuma oferecer não funciona ou funciona só parcialmente?"
+5. **Confirmação padronizada pra "sim"/"ajustar"** (decisão global) em toda a Seção 4.
+6. **Nova Seção 4 — Tese Autoral**, inserida entre "3. Posicionamento do Produto" e "Entrega Final":
+
+   > **4. TESE AUTORAL**
+   >
+   > **4.1 – Sintoma e Problema Impostor da Persona**
+   > Pergunte: "Qual é o sintoma mais forte que sua persona sente no dia a dia — a dor que ela enxerga na superfície? O que ela acha que é o problema (o problema impostor)? E o que ela já tentou fazer pra resolver — e por que não funcionou?"
+   >
+   > **4.2 – Causa Oculta**
+   > Pergunte: "Na sua visão, qual é o problema real — a causa oculta por trás desse sintoma, que quase ninguém vê?"
+   >
+   > **4.3 – Jornada de Consciência**
+   > Monte a jornada cruzando: sintoma e problema impostor (4.1) → causa oculta (4.2) → solução (destino da Promessa Transformadora já colada em 1.1) → meio (metodologia do Processo Autoral) → produto (Posicionamento do Produto, Seção 3). Apresente a jornada montada e pergunte: "Essa jornada de consciência faz sentido? Responda 'sim' ou 'ajustar'."
+   >
+   > **4.4 – Frases de Diagnóstico**
+   > Com base em 4.1 e 4.2, sugira duas frases: "As pessoas acham que o problema é ___" (problema impostor) e "Mas o problema real é ___" (causa oculta). Pergunte: "Essas frases capturam bem o diagnóstico? 'sim' ou 'ajustar'."
+   >
+   > **4.5 – Mecanismo Único**
+   > Pergunte: "Seu mecanismo único é de ingrediente (um elemento específico), de processo (uma sequência proprietária), de descoberta (uma nova compreensão), ou uma combinação? Qual é o nome ou elemento específico da sua solução?"
+   >
+   > **4.6 – Narrativa da Tese**
+   > Monte, com tudo que foi construído até aqui: "As pessoas não conseguem [promessa, já validada]. Elas acham que o problema é [problema impostor, 4.4]. Mas não é. O problema real é [causa oculta, 4.4]. E o caminho pra resolver isso é [solução/destino] através de [mecanismo único, 4.5]." Pergunte: "Essa narrativa está redonda? 'sim' ou 'ajustar'."
+   >
+   > **4.7 – Declaração de Posicionamento e Frase-Tese Autoral**
+   > Sugira uma declaração simples ("Eu ajudo [persona] a [promessa] através de [mecanismo único]") e uma Frase-Tese Autoral curta e memorável — a bandeira que a pessoa pode repetir de cabeça. Pergunte: "Essa é a sua Frase-Tese Autoral? 'sim' ou 'ajustar'."
+   >
+   > **4.8 – Teste de Sustentação**
+   > Liste 3 perguntas que o público da persona faria sobre a tese, responda cada uma conectando com a Frase-Tese Autoral, e traga pelo menos 3 evidências (do que já foi coletado nos agentes anteriores, ou fornecido pelo expert) que sustentam a tese.
+
+---
+
+## Status: revisão dos 6 agentes concluída
+
+Todos os 6 GPTs foram revisados e as decisões estão aplicadas neste documento, prontas pra virarem a versão reescrita na área de membros:
+
+| # | Agente | Status |
+|---|--------|--------|
+| 1 | Persona Compradora | Revisado — senha removida, coleta condensada de História/Ikigai adicionada, Dossiê vira compilação (não regeneração) |
+| 2 | Promessa Transformadora | Revisado — senha removida, seção de segurança compactada, Headline de Bio marcada como provisória |
+| 3 | Processo Autoral | Revisado — senha removida, Etapa 11 vira loop por módulo, Abertura+Etapa 1 fundidas |
+| 4 | Portfólio Estratégico | Revisado — senha removida, Persona+Promessa+Processo Autoral viram hard requirement, Etapa 1 aponta repertório com precisão |
+| 5 | Proposta Validada | Revisado — senha removida, avaliação/recomendações/próximos passos viram schema dinâmico (achado crítico: conteúdo fixo de exemplo real), Tsunami adaptado pra 1:1 |
+| 6 | Autoridade Tríplice | Revisado — senha removida, 1.1 e 3.3 reaproveitam documentos existentes, nova Seção 4 (Tese Autoral) com as 13 perguntas mapeadas (9 aproveitadas, 4 excluídas por redundância) |
+
+**Decisões globais aplicadas nos 6:** senha de ativação removida · confirmação padronizada em "sim"/"ajustar" · sem limite de 8.000 caracteres (reescrita fora do GPT Builder).
+
+**Próximo passo natural:** reescrever os 6 textos finais (com todas as correções deste documento já incorporadas) pra colar na biblioteca da área de membros.
+
+---

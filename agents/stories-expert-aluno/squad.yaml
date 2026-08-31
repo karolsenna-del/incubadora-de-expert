@@ -1,0 +1,70 @@
+name: "Stories Expert Aluno"
+slug: "stories-expert-aluno"
+slash_prefix: "stories-expert-aluno"
+version: "1.0.0"
+type: "worker"
+forged_by: "worker-forge"
+description: "Escreve a sequência de Stories do próprio aluno (persona/promessa/método dele), aplicando por trás dos panos os dispositivos do método Stories 10x — variante genérica de agents/expert-stories/, pra Biblioteca de IA da área de membros."
+
+agents:
+  - id: "stories-expert-aluno"
+    path: "agents/stories-expert-aluno.md"
+
+tasks:
+  - id: "start"
+    path: "tasks/start.md"
+  - id: "execute-mission"
+    path: "tasks/execute-mission.md"
+  - id: "research-tool"
+    path: "tasks/research-tool.md"
+  - id: "document-process"
+    path: "tasks/document-process.md"
+  - id: "diagnose-issue"
+    path: "tasks/diagnose-issue.md"
+
+knowledge_base:
+  - id: "stories-expert-aluno-rules"
+    path: "data/stories-expert-aluno-rules.md"
+    priority: "critical"
+    loading: "always"
+  - id: "stories-expert-aluno-kb"
+    path: "data/stories-expert-aluno-kb.md"
+    priority: "high"
+    loading: "on-demand"
+  - id: "stories-expert-aluno-playbook"
+    path: "data/stories-expert-aluno-playbook.md"
+    priority: "high"
+    loading: "on-demand"
+  - id: "stories-expert-aluno-missions"
+    path: "data/stories-expert-aluno-missions.md"
+    priority: "normal"
+    loading: "on-demand"
+
+domains:
+  - "sequencia-de-stories"
+  - "dispositivos-engenharia-social"
+  - "condensacao-metodo-em-conteudo-diario"
+
+modes:
+  - id: "mission"
+    label: "Missao"
+    trigger: "*stories"
+  - id: "research"
+    label: "Pesquisa"
+    trigger: "*research"
+  - id: "documentation"
+    label: "Documentacao"
+    trigger: "*document"
+  - id: "diagnose"
+    label: "Diagnostico"
+    trigger: "*diagnose"
+
+tools_required: []
+
+skills_required: []
+
+created: "2026-08-30"
+language: "pt-BR"
+target_user: "aluno-expert360"
+adapted_from: "agents/expert-stories"
+metodo_fonte: "agents/etlmaker/kbs/stories-10x (Leandro Ladeira — conteúdo licenciado, uso interno do produto da Incubadora de Expert)"

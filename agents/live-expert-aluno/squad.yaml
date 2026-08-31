@@ -1,0 +1,69 @@
+name: "Live Expert Aluno"
+slug: "live-expert-aluno"
+slash_prefix: "live-expert-aluno"
+version: "1.0.0"
+type: "worker"
+forged_by: "worker-forge"
+description: "Roteiriza a live semanal do próprio aluno (persona/promessa/método dele) no modelo Funil de Zoom — variante genérica de agents/expert-em-lives/, pra Biblioteca de IA da área de membros."
+
+agents:
+  - id: "live-expert-aluno"
+    path: "agents/live-expert-aluno.md"
+
+tasks:
+  - id: "start"
+    path: "tasks/start.md"
+  - id: "execute-mission"
+    path: "tasks/execute-mission.md"
+  - id: "research-tool"
+    path: "tasks/research-tool.md"
+  - id: "document-process"
+    path: "tasks/document-process.md"
+  - id: "diagnose-issue"
+    path: "tasks/diagnose-issue.md"
+
+knowledge_base:
+  - id: "live-expert-aluno-rules"
+    path: "data/live-expert-aluno-rules.md"
+    priority: "critical"
+    loading: "always"
+  - id: "live-expert-aluno-kb"
+    path: "data/live-expert-aluno-kb.md"
+    priority: "high"
+    loading: "on-demand"
+  - id: "live-expert-aluno-playbook"
+    path: "data/live-expert-aluno-playbook.md"
+    priority: "high"
+    loading: "on-demand"
+  - id: "live-expert-aluno-missions"
+    path: "data/live-expert-aluno-missions.md"
+    priority: "normal"
+    loading: "on-demand"
+
+domains:
+  - "roteiro-de-live"
+  - "funil-de-zoom"
+  - "condensacao-metodo-em-tema"
+
+modes:
+  - id: "mission"
+    label: "Missao"
+    trigger: "*roteiriza"
+  - id: "research"
+    label: "Pesquisa"
+    trigger: "*research"
+  - id: "documentation"
+    label: "Documentacao"
+    trigger: "*document"
+  - id: "diagnose"
+    label: "Diagnostico"
+    trigger: "*diagnose"
+
+tools_required: []
+
+skills_required: []
+
+created: "2026-08-30"
+language: "pt-BR"
+target_user: "aluno-expert360"
+adapted_from: "agents/expert-em-lives"
