@@ -33,7 +33,7 @@ function criarTemplatePropostaComercial() {
     .setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
   sh.setRowHeight(1, 32);
 
-  sh.getRange("A2").setValue("Conduz Agro — Sessão 7 (estrutura essencial) e Sessão 19 (ajuste fino pra casos maiores). Duplique esta aba pra cada produtor novo — não preencha por cima de uma proposta já enviada.")
+  sh.getRange("A2").setValue("Conduz Agro — MODELO EDITÁVEL. Sessão 7 (estrutura essencial) e Sessão 19 (ajuste fino pra casos maiores). Duplique esta aba pra cada produtor novo, edite a cópia e não preencha por cima de uma proposta já enviada.")
     .setBackground(COR_PAPER).setFontColor(COR_INK_SOFT).setFontStyle("italic")
     .setFontSize(9).setHorizontalAlignment("center").setWrap(true);
   sh.setRowHeight(2, 34);

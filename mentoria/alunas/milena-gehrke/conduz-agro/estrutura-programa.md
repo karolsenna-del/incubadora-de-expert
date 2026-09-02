@@ -79,7 +79,7 @@ Quatro soluções distintas, não uma dependente da outra — evita que tudo vir
 
 ## Plano Personalizado
 
-Construído ao final da S2, revisado ao final de cada etapa/sub-fase (S8, S12, S16, S20) — nunca perde a espinha dorsal das 2 etapas.
+Construído ao final da S2, revisado ao final de cada etapa/sub-fase (S8, S12, S16, S20) — nunca perde a espinha dorsal das 2 etapas. Na S2, o aluno preenche: ponto de partida do Diagnóstico; transformação dos 12 meses e evidência de sucesso; meta até o próximo checkpoint; 3 prioridades; ação, prazo, evidência e apoio de cada prioridade; barreira previsível e resposta; compromisso até a revisão. Em cada checkpoint, duplica a aba, registra o que mudou e redefine meta/prioridades/ações, sem apagar versões anteriores. Na S24, a última cópia recebe a seção Continuidade (resultado a sustentar, hábitos, frequência de revisão, indicadores, riscos de recaída, apoio, primeira ação e próxima data de revisão). Portanto, **Plano de Continuidade é a versão final do Plano Personalizado, não uma ferramenta separada**.
 
 ## Checkpoints de Progresso
 

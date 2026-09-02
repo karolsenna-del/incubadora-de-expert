@@ -3,228 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Central Alunos — Conduz Agro</title>
+<title>Central do Aluno — Conduz Agro</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Quicksand:wght@500;600;700&display=swap');
-
-:root{
-  --paper:#F5F0E6;
-  --paper-raised:#EDE6D6;
-  --paper-deep:#E4DBC4;
-  --ink:#3D2817;
-  --ink-soft:#6B5A44;
-  --olive:#5C6B3F;
-  --olive-deep:#34401F;
-  --gold:#B07A16;
-  --gold-soft:#C08A1E;
-  --rule:#D9CDB0;
-  --shadow: 0 1px 2px rgba(61,40,23,.06), 0 8px 24px -12px rgba(61,40,23,.25);
-}
-*{box-sizing:border-box;}
-html,body{margin:0;padding:0;}
-body{
-  background:var(--paper);
-  color:var(--ink);
-  font-family:'Quicksand',system-ui,sans-serif;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding:48px 16px 80px;
-}
-h1,.display{font-family:'Fraunces',Georgia,serif; font-weight:700; text-wrap:balance; color:var(--ink); margin:0;}
-.wrap{width:100%;max-width:720px;}
-.brand{display:flex; align-items:center; gap:14px; margin-bottom:36px;}
-.brand-mark{width:48px;height:48px;flex:none;}
-.brand-name{font-family:'Fraunces',serif; font-weight:700; font-size:1.3rem; line-height:1.15;}
-.brand-name em{font-style:normal; color:var(--olive);}
-.brand-by{font-size:.8rem; color:var(--ink-soft); letter-spacing:.03em;}
-h1{font-size:1.7rem; margin-bottom:8px;}
-.lede{font-size:1rem; line-height:1.6; color:var(--ink-soft); margin:0 0 8px;}
-.sub-lede{font-size:.85rem; color:var(--ink-soft); margin:0 0 32px;}
-.section-label{
-  font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
-  color:var(--olive); margin:28px 0 12px; padding-top:20px; border-top:1px solid var(--rule);
-}
-.section-label:first-of-type{margin-top:0; padding-top:0; border-top:none;}
-.grid{display:flex; flex-direction:column; gap:12px;}
-.card{
-  display:block;
-  background:var(--paper-raised);
-  border:1px solid var(--rule);
-  border-radius:16px;
-  box-shadow:var(--shadow);
-  padding:20px 22px;
-  text-decoration:none;
-  color:inherit;
-  transition:border-color .15s ease, transform .1s ease;
-}
-.card:hover{border-color:var(--olive); transform:translateY(-1px);}
-.card:active{transform:scale(.995);}
-.card.featured{background:linear-gradient(135deg, var(--olive-tint, #E9EEDD), var(--paper-raised)); border-color:var(--olive);}
-.card h2{font-size:1.1rem; font-family:'Fraunces',serif; font-weight:700; margin:0 0 4px;}
-.card p{font-size:.88rem; color:var(--ink-soft); margin:0; line-height:1.5;}
-.tag{
-  display:inline-block; font-size:.68rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
-  color:var(--gold-soft); margin-bottom:8px;
-}
-footer{margin-top:40px; font-size:.78rem; color:var(--ink-soft); text-align:center;}
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Quicksand:wght@500;600;700&display=swap');
+:root{--paper:#F5F0E6;--raised:#EDE6D6;--ink:#3D2817;--soft:#6B5A44;--olive:#5C6B3F;--olive-deep:#34401F;--gold:#B07A16;--rule:#D9CDB0;--shadow:0 1px 2px rgba(61,40,23,.06),0 8px 24px -12px rgba(61,40,23,.25)}
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{background:var(--paper);color:var(--ink);font-family:'Quicksand',system-ui,sans-serif;min-height:100vh;padding:48px 16px 80px}.wrap{width:100%;max-width:800px;margin:auto}.brand{display:flex;align-items:center;gap:14px;margin-bottom:32px}.brand-mark{width:48px;height:48px}.brand-name,h1,h2{font-family:'Fraunces',Georgia,serif}.brand-name{font-size:1.3rem;font-weight:700}.brand-name em{font-style:normal;color:var(--olive)}.brand-by{font-size:.8rem;color:var(--soft)}h1{font-size:1.9rem;margin:0 0 8px}.lede{line-height:1.6;color:var(--soft);margin:0}.instruction{margin:20px 0 30px;padding:16px 18px;background:#E9EEDD;border-left:4px solid var(--olive);border-radius:10px;line-height:1.55}.section-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--olive);margin:34px 0 12px;padding-top:22px;border-top:1px solid var(--rule)}.alphabet{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px}.card{display:block;background:var(--raised);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);padding:17px 19px;text-decoration:none;color:inherit;transition:.15s}.card:hover{border-color:var(--olive);transform:translateY(-1px)}.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.card h2{font-size:1.04rem;margin:0}.sessions{flex:none;color:var(--olive-deep);background:#DDE5CD;border-radius:999px;padding:4px 8px;font-size:.68rem;font-weight:700;white-space:nowrap}.tag{display:block;color:var(--gold);font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:7px}.card p{font-size:.84rem;line-height:1.45;color:var(--soft);margin:7px 0 0}.reference-grid{display:flex;flex-direction:column;gap:12px}.reference{background:linear-gradient(135deg,#E9EEDD,var(--raised));border-color:var(--olive)}footer{margin-top:40px;text-align:center;color:var(--soft);font-size:.78rem}@media(max-width:520px){body{padding-top:28px}.alphabet{grid-template-columns:1fr}.card-head{display:block}.sessions{display:inline-block;margin-top:7px}}
 </style>
 </head>
 <body>
-<div class="wrap">
+<main class="wrap">
   <div class="brand">
     <img class="brand-mark" src="assets/logo-conduz-agro-480-transparente.png" alt="Conduz Agro">
-    <div>
-      <div class="brand-name">Conduz <em>Agro</em></div>
-      <div class="brand-by">Método Conduz Agro · Milena Gehrke</div>
-    </div>
+    <div><div class="brand-name">Conduz <em>Agro</em></div><div class="brand-by">Método Conduz Agro · Milena Gehrke</div></div>
   </div>
-
   <h1>Central do Aluno</h1>
-  <p class="lede">Todas as ferramentas do Portfólio Conduz Agro, num só lugar.</p>
-  <p class="sub-lede">As planilhas são modelo — ao abrir, clique em "Fazer uma cópia" pra ter a sua própria versão. Nunca edite o modelo original.</p>
+  <p class="lede">Índice central das ferramentas da mentoria, em ordem alfabética, com as sessões em que cada uma é usada.</p>
+  <div class="instruction"><strong>Como usar:</strong> localize a ferramenta pelo nome e confira a sessão no selo ao lado. Nas planilhas, clique em <strong>“Fazer uma cópia”</strong> e trabalhe na sua versão; nunca edite o modelo original. Resultados como “Identidade Profissional Revisada” e “Relatório de Evolução” são produzidos dentro das ferramentas indicadas no roteiro — não são arquivos separados.</div>
 
-  <div class="grid">
-    <a class="card featured" href="https://claude.ai/code/artifact/6b603a66-7872-4131-aef2-c160b03707be" target="_blank" rel="noopener">
-      <span class="tag">Comece aqui</span>
-      <h2>Sua Jornada de 12 Meses</h2>
-      <p>As 24 sessões, Etapa 1 e Etapa 2 — o que você leva de cada uma.</p>
-    </a>
+  <div class="section-label">Ferramentas — índice alfabético</div>
+  <section class="alphabet" id="indice-ferramentas">
+    <a class="card tool" data-tool="Banco de Comunicação" href="https://docs.google.com/spreadsheets/d/1QXecZvkYr0ZjFy6beN-C2G_qn75lgIek5OjxxXhWWdI/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>Banco de Comunicação</h2><span class="sessions">S13 · S14</span></div><p>Perguntas de escuta e argumentos de valor reunidos numa biblioteca cumulativa.</p></a>
+    <a class="card tool" data-tool="Central de Condução do Atendimento" href="https://docs.google.com/spreadsheets/d/1Fb3fgBjtJywE8Fi7S904SHKFrJtmbkWpMztQHZzs-lU/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>Central de Condução do Atendimento</h2><span class="sessions">S1–S24</span></div><p>Acompanhamento operacional dos casos já fechados.</p></a>
+    <a class="card tool" data-tool="Checklist de Evidências da Autoridade" href="https://docs.google.com/spreadsheets/d/1tSgX8p92DqerHjxpOmqWgRaXjulVgOYEdWlJUpre4-g/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>Checklist de Evidências da Autoridade</h2><span class="sessions">S8 · S12 · S16 · S20 · S21 · S24</span></div><p>Registro cumulativo dos indicadores e da evolução antes x depois.</p></a>
+    <a class="card tool" data-tool="Círculo de Controle da Condução" href="https://docs.google.com/spreadsheets/d/1W16t8QQwEt_BQ4uqVy6B5vVRNxoou9Yu1TAnKIFxmEE/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>Círculo de Controle da Condução</h2><span class="sessions">S3 · uso contínuo</span></div><p>Separa o que você controla, influencia ou precisa reconhecer como externo.</p></a>
+    <a class="card tool" data-tool="CRM Comercial Conduz Agro" href="https://docs.google.com/spreadsheets/d/1fztf30doEE9zV_ZCUtOKv7YDLtubX0mIhzqrf0Msq3o/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>CRM Comercial Conduz Agro</h2><span class="sessions">S1–S24</span></div><p>Pipeline de prospecção, fechamento, financeiro e reativação.</p></a>
+    <a class="card tool" data-tool="Diagnóstico da Autoridade Aplicada" href="https://www.milenagehrke.com.br/diagnostico" target="_blank" rel="noopener"><span class="tag">Diagnóstico</span><div class="card-head"><h2>Diagnóstico da Autoridade Aplicada</h2><span class="sessions">S1 · S21</span></div><p>Baseline e reaplicação final das esferas Técnica, Emocional e Condução.</p></a>
+    <a class="card tool" data-tool="Ficha de Inscrição — Destrava Condução" href="https://www.milenagehrke.com.br/ficha-inscricao" target="_blank" rel="noopener"><span class="tag">Intake do S.O.S.</span><div class="card-head"><h2>Ficha de Inscrição — Destrava Condução</h2><span class="sessions">S8 · S22</span></div><p>Contextualiza o caso antes de um dos 2 usos do Destrava Condução.</p></a>
+    <a class="card tool" data-tool="Leitura do Produtor" href="https://www.milenagehrke.com.br/leitura-do-produtor" target="_blank" rel="noopener"><span class="tag">Consulta</span><div class="card-head"><h2>Leitura do Produtor</h2><span class="sessions">S4 · S13</span></div><p>Os 6 perfis de produtor, sinais e formas de abordagem.</p></a>
+    <a class="card tool" data-tool="Mapa de Posicionamento" href="https://docs.google.com/spreadsheets/d/1Ep5Yk4SHPpig_SGz3rupMQi8J-QEXJjFMXvjzNjLuDM/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>Mapa de Posicionamento</h2><span class="sessions">S7 · S17 · S18</span></div><p>Identidade profissional inicial e revisada, mantendo as versões para comparação.</p></a>
+    <a class="card tool" data-tool="Mapa de Valor Percebido no Agro" href="https://docs.google.com/spreadsheets/d/1Fp5E1Cuudzp3MS5wLpSlia86UB4BTuIFsHNS5xiCdzA/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>Mapa de Valor Percebido no Agro</h2><span class="sessions">S7 · S10 · S19</span></div><p>Transforma tarefa técnica em risco evitado e ganho percebido.</p></a>
+    <a class="card tool" data-tool="Mapa do Caso" href="https://docs.google.com/spreadsheets/d/1KgNmThGzyStiXwgCGK1Q5yFP78FScxqbJuT5qMkL26A/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>Mapa do Caso</h2><span class="sessions">S4 · S11 · S12 · S22</span></div><p>Modelos de Crédito Rural, Regularização e Georreferenciamento, mais versão avançada.</p></a>
+    <a class="card tool" data-tool="Mapa Pessoal de Padrões" href="https://docs.google.com/spreadsheets/d/1Y0coyGUibkCw8LblfleuI2hxzHGW_gOW3YGNuR2Djhs/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>Mapa Pessoal de Padrões</h2><span class="sessions">S9</span></div><p>Biblioteca de trava, situação, efeito comercial e resposta.</p></a>
+    <a class="card tool" data-tool="Matriz de Responsabilidade e Prazos" href="https://docs.google.com/spreadsheets/d/1tSXLwcAFW2Rt3h5dPb_vTaMQ6vcFp3VdrA19hW6MfAU/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>Matriz de Responsabilidade e Prazos</h2><span class="sessions">S7 em diante</span></div><p>Versão entregue ao produtor: responsável e prazo de cada etapa.</p></a>
+    <a class="card tool" data-tool="Plano de Aplicação Diária" href="https://docs.google.com/spreadsheets/d/17ZtPL0rcOlJfNAEn4X4tQZItvDwVX-87UvAjuSJCFbM/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>Plano de Aplicação Diária</h2><span class="sessions">S1–S24</span></div><p>Cinco atividades curtas por semana, sincronizadas com a sessão.</p></a>
+    <a class="card tool" data-tool="Plano Personalizado" href="https://docs.google.com/spreadsheets/d/1YpZ8oeKTBAvJsbFPol9MZf8m1f8a4k61KchAou1rltI/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>Plano Personalizado</h2><span class="sessions">S2 · S8 · S12 · S16 · S20 · S24</span></div><p>Plano dos 12 meses e revisões; na S24, a cópia final vira o plano de continuidade.</p></a>
+    <a class="card tool" data-tool="Proposta Comercial" href="https://docs.google.com/spreadsheets/d/1Mr35ErujvmE_0csNboMQURk8bPKVl2iC9jVM3iFYel0/copy" target="_blank" rel="noopener"><span class="tag">Modelo editável · sua cópia</span><div class="card-head"><h2>Proposta Comercial</h2><span class="sessions">S7 · S19</span></div><p>Modelo editável duplicado por produtor e reformulado em cada caso.</p></a>
+    <a class="card tool" data-tool="Protocolo Pessoal de Condução" href="https://docs.google.com/spreadsheets/d/1teCrdqrK9npR--vXKS5o8pyF9_q24gD1sRza5gQltdI/copy" target="_blank" rel="noopener"><span class="tag">Template · sua cópia</span><div class="card-head"><h2>Protocolo Pessoal de Condução</h2><span class="sessions">S23 · S24</span></div><p>Seu sistema repetível de condução, escrito com suas próprias palavras.</p></a>
+    <a class="card tool" data-tool="Raio-X da Conversa com o Produtor" href="https://www.milenagehrke.com.br/raio-x" target="_blank" rel="noopener"><span class="tag">Análise</span><div class="card-head"><h2>Raio-X da Conversa com o Produtor</h2><span class="sessions">S1–S24 · sob demanda</span></div><p>Análise de conversa real para identificar ajustes de script e condução.</p></a>
+    <a class="card tool" data-tool="Roteiro de Condução da Conversa" href="https://www.milenagehrke.com.br/roteiro-conducao" target="_blank" rel="noopener"><span class="tag">Consulta</span><div class="card-head"><h2>Roteiro de Condução da Conversa</h2><span class="sessions">S5 · S14</span></div><p>Referência do passo a passo da conversa; o roteiro de um caso é sua aplicação, não outra ferramenta.</p></a>
+    <a class="card tool" data-tool="Simulador de Conversas que Conduzem" href="https://www.milenagehrke.com.br/simulador" target="_blank" rel="noopener"><span class="tag">Treino</span><div class="card-head"><h2>Simulador de Conversas que Conduzem</h2><span class="sessions">S6 · S16</span></div><p>Treino de objeções e pressão antes da conversa real.</p></a>
+  </section>
 
-    <a class="card featured" href="https://claude.ai/code/artifact/f2700f61-7b58-4fff-b895-dc16a43e9d92" target="_blank" rel="noopener">
-      <h2>Mapa de Utilização das Ferramentas</h2>
-      <p>O ciclo do negócio — qual ferramenta pegar em cada momento com o produtor.</p>
-    </a>
-  </div>
+  <div class="section-label">Jornada e consulta — não são ferramentas separadas</div>
+  <section class="reference-grid">
+    <a class="card reference" href="https://claude.ai/code/artifact/f2700f61-7b58-4fff-b895-dc16a43e9d92" target="_blank" rel="noopener"><span class="tag">Referência de uso contínuo</span><div class="card-head"><h2>Mapa de Utilização das Ferramentas</h2><span class="sessions">S1–S24</span></div><p>Mostra qual ferramenta usar em cada momento do ciclo comercial.</p></a>
+    <a class="card reference" href="https://claude.ai/code/artifact/6b603a66-7872-4131-aef2-c160b03707be" target="_blank" rel="noopener"><span class="tag">Visão geral do programa</span><div class="card-head"><h2>Sua Jornada de 12 Meses</h2><span class="sessions">S1–S24</span></div><p>As 24 sessões, as duas etapas e o que você leva de cada uma.</p></a>
+  </section>
 
-  <div class="section-label">Ferramentas do ciclo comercial</div>
-  <div class="grid">
-    <a class="card" href="https://www.milenagehrke.com.br/ficha-inscricao" target="_blank" rel="noopener">
-      <span class="tag">Intake</span>
-      <h2>Ficha de Inscrição — Destrava Condução</h2>
-      <p>Formulário do S.O.S. de caso real (2 usos nos 12 meses).</p>
-    </a>
-
-    <a class="card" href="https://www.milenagehrke.com.br/raio-x" target="_blank" rel="noopener">
-      <span class="tag">Análise</span>
-      <h2>Raio-X da Conversa com o Produtor</h2>
-      <p>Envie print ou texto de uma conversa real pra análise.</p>
-    </a>
-
-    <a class="card" href="https://www.milenagehrke.com.br/leitura-do-produtor" target="_blank" rel="noopener">
-      <span class="tag">Consulta</span>
-      <h2>Leitura do Produtor</h2>
-      <p>Os 6 perfis de produtor — sinais, erro comum, como abordar.</p>
-    </a>
-
-    <a class="card" href="https://www.milenagehrke.com.br/roteiro-conducao" target="_blank" rel="noopener">
-      <span class="tag">Consulta</span>
-      <h2>Roteiro de Condução da Conversa</h2>
-      <p>Fluxograma completo — prospecção até entrega, passo a passo.</p>
-    </a>
-
-    <a class="card" href="https://www.milenagehrke.com.br/simulador" target="_blank" rel="noopener">
-      <span class="tag">Treino</span>
-      <h2>Simulador de Conversas que Conduzem</h2>
-      <p>7 cenários reais de objeção pra praticar antes de aplicar.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1KgNmThGzyStiXwgCGK1Q5yFP78FScxqbJuT5qMkL26A/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Mapa do Caso</h2>
-      <p>Demanda → problema real → riscos → próximo passo (versão rápida e avançada).</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1fztf30doEE9zV_ZCUtOKv7YDLtubX0mIhzqrf0Msq3o/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>CRM Comercial</h2>
-      <p>Seu próprio pipeline de prospecção, fechamento e financeiro.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1Mr35ErujvmE_0csNboMQURk8bPKVl2iC9jVM3iFYel0/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Proposta Comercial</h2>
-      <p>Contexto → diagnóstico → solução → escopo → investimento → próximo passo.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1Fb3fgBjtJywE8Fi7S904SHKFrJtmbkWpMztQHZzs-lU/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Central de Condução do Atendimento</h2>
-      <p>Acompanhamento operacional de cada caso já fechado.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1W16t8QQwEt_BQ4uqVy6B5vVRNxoou9Yu1TAnKIFxmEE/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Círculo de Controle da Condução</h2>
-      <p>Fora do controle / posso influenciar / eu controlo.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1tSXLwcAFW2Rt3h5dPb_vTaMQ6vcFp3VdrA19hW6MfAU/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Matriz de Responsabilidade e Prazos</h2>
-      <p>Versão pro produtor — quem é responsável por cada etapa.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1Ep5Yk4SHPpig_SGz3rupMQi8J-QEXJjFMXvjzNjLuDM/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Mapa de Posicionamento</h2>
-      <p>Eu sou → eu resolvo → para quem → como faço → qual valor entrego.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1Fp5E1Cuudzp3MS5wLpSlia86UB4BTuIFsHNS5xiCdzA/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Mapa de Valor Percebido no Agro</h2>
-      <p>Traduz tarefa técnica em risco evitado e ganho — reduz disputa por preço.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1QXecZvkYr0ZjFy6beN-C2G_qn75lgIek5OjxxXhWWdI/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Banco de Comunicação</h2>
-      <p>Perguntas de escuta e argumentos de valor que funcionaram em casos reais.</p>
-    </a>
-  </div>
-
-  <div class="section-label">Sua jornada de autoridade</div>
-  <div class="grid">
-    <a class="card" href="https://www.milenagehrke.com.br/diagnostico" target="_blank" rel="noopener">
-      <span class="tag">Diagnóstico</span>
-      <h2>Diagnóstico da Autoridade Aplicada</h2>
-      <p>S1 e S21 — mapeamento de 30 perguntas, autoridade e travas no agro.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1YpZ8oeKTBAvJsbFPol9MZf8m1f8a4k61KchAou1rltI/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Plano Personalizado</h2>
-      <p>Seu plano de 12 meses, revisado a cada etapa — até virar plano de continuidade na S24.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1Y0coyGUibkCw8LblfleuI2hxzHGW_gOW3YGNuR2Djhs/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Mapa Pessoal de Padrões</h2>
-      <p>Trava → situação → efeito comercial — reconhece o que se repete.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1tSgX8p92DqerHjxpOmqWgRaXjulVgOYEdWlJUpre4-g/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Checklist de Evidências da Autoridade</h2>
-      <p>Pontua sua evolução em 5 momentos ao longo dos 12 meses.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/17ZtPL0rcOlJfNAEn4X4tQZItvDwVX-87UvAjuSJCFbM/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Plano de Aplicação Diária</h2>
-      <p>5 atividades curtas por semana, sincronizadas com a sessão em curso.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1teCrdqrK9npR--vXKS5o8pyF9_q24gD1sRza5gQltdI/copy" target="_blank" rel="noopener">
-      <span class="tag">Template · sua cópia</span>
-      <h2>Protocolo Pessoal de Condução</h2>
-      <p>S23-24 — o seu sistema final, construído a partir de um caso real.</p>
-    </a>
-  </div>
-
+  <div class="section-label">Apoio humano — serviço, não ferramenta separada</div>
+  <section class="reference-grid">
+    <div class="card"><div class="card-head"><h2>Destrava Condução — S.O.S. de Caso Real</h2><span class="sessions">S8 · S22</span></div><p>Dois usos durante o programa. Para acionar, use a Ficha de Inscrição já listada no índice.</p></div>
+  </section>
   <footer>Conduz Agro — Milena Gehrke</footer>
-</div>
+</main>
 </body>
 </html>
