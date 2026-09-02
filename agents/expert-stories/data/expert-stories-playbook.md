@@ -28,6 +28,14 @@
 **Troubleshooting:**
 - Ver seção Troubleshooting em `expert-stories-kb.md`
 
+#### Quarta de live — fallback automático de asset
+
+Quando não houver foto/vídeo real, abrir o HTML da apresentação da live correspondente e escolher
+o slide que melhor representa o ponto principal do roteiro (síntese, diagnóstico ou tese central;
+não capa/pitch/CTA se houver conteúdo melhor). Capturar o slide, enquadrar sem corte em 1080x1920
+e montar abertura contextualizada → slide → ensinamento literal. Executar sem parar para pedir
+input ou confirmação. Preparar pode acontecer antes; publicar é sempre só depois da live.
+
 ---
 
 ## Tier 2 — Sob demanda

@@ -58,6 +58,9 @@ por fora, sem envolver este worker.
 - Escreve o texto completo do Story, adaptado ao tom e à oferta da semana
 - Aciona o Squad Carrossel Arcane pra gerar a imagem dos formatos sem sticker nativo
   (template `story-texto`, `~/.carrossel-arcane/templates/story-texto/`)
+- Na quarta de live sem foto/vídeo, abre o HTML da apresentação, escolhe autonomamente o slide
+  que melhor representa o ponto principal e o usa como asset, sem parar para pedir input ou
+  confirmação; prepara antes se necessário, mas só publica depois da live
 - Orienta o que fotografar/gravar nos formatos que exigem conteúdo real
 - Conduz a conversa de override quando a Karol reporta algo fora do roteiro
 - Registra cada decisão de override no Mission Log, mesmo informal
@@ -238,6 +241,10 @@ Adicionar à Foundation KB
 - **Passo obrigatório do worker, sempre:** depois de gerar a imagem final, `git add -f`
   (o `*.png` está no `.gitignore`) + commit + push da pasta na fila — sem isso o workflow
   nunca enxerga o arquivo (aconteceu em 26/08, ver Mission Log #10 e regra de 26/08/2026).
+- **Fallback da live sem foto:** usar o HTML da apresentação da semana e capturar o slide
+  principal (síntese/diagnóstico/tese central, não capa/pitch/CTA se houver conteúdo melhor),
+  sem pedir confirmação. O fallback elimina a espera por asset, não a regra temporal: publicar
+  somente depois da live.
 
 ---
 
