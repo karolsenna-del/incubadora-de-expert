@@ -7,7 +7,7 @@ Existe ainda um 3º padrão, diferente dos dois acima: **biblioteca cumulativa**
 Já criei os arquivos, em branco, na pasta do Drive:
 - **Círculo de Controle da Condução:** https://docs.google.com/spreadsheets/d/1W16t8QQwEt_BQ4uqVy6B5vVRNxoou9Yu1TAnKIFxmEE/edit
 - **Matriz de Responsabilidade e Prazos:** https://docs.google.com/spreadsheets/d/1tSXLwcAFW2Rt3h5dPb_vTaMQ6vcFp3VdrA19hW6MfAU/edit
-- **Mapa do Caso** (rápida + avançada, 2 abas-modelo no mesmo arquivo): https://docs.google.com/spreadsheets/d/1KgNmThGzyStiXwgCGK1Q5yFP78FScxqbJuT5qMkL26A/edit
+- **Mapa do Caso** (4 abas-modelo no mesmo arquivo: Crédito Rural, Regularização, Georreferenciamento — S4 — e Avançada — S11/S12/S22): https://docs.google.com/spreadsheets/d/1KgNmThGzyStiXwgCGK1Q5yFP78FScxqbJuT5qMkL26A/edit
 - **Mapa de Posicionamento** (versão inicial S7 + revisada S18, duplicar por revisão): https://docs.google.com/spreadsheets/d/1Ep5Yk4SHPpig_SGz3rupMQi8J-QEXJjFMXvjzNjLuDM/edit
 - **Mapa de Valor Percebido no Agro** (biblioteca cumulativa, não duplica): https://docs.google.com/spreadsheets/d/1Fp5E1Cuudzp3MS5wLpSlia86UB4BTuIFsHNS5xiCdzA/edit
 - **Checklist de Evidências da Autoridade** (tabela fixa, preenchida ao longo dos 12 meses, não duplica): https://docs.google.com/spreadsheets/d/1tSgX8p92DqerHjxpOmqWgRaXjulVgOYEdWlJUpre4-g/edit
@@ -15,8 +15,8 @@ Já criei os arquivos, em branco, na pasta do Drive:
 - **Protocolo Pessoal de Condução** (documento único do aluno, S23-24, campos em branco pra ele preencher — não duplica): https://docs.google.com/spreadsheets/d/1teCrdqrK9npR--vXKS5o8pyF9_q24gD1sRza5gQltdI/edit
 - **CRM Comercial Conduz Agro** (metade comercial, biblioteca cumulativa, 2 abas — Prospecção e Reativação, não duplica): https://docs.google.com/spreadsheets/d/1fztf30doEE9zV_ZCUtOKv7YDLtubX0mIhzqrf0Msq3o/edit — setup detalhado em `crm-comercial.md`
 - **Central de Condução do Atendimento** (metade operacional, biblioteca cumulativa, não duplica): https://docs.google.com/spreadsheets/d/1Fb3fgBjtJywE8Fi7S904SHKFrJtmbkWpMztQHZzs-lU/edit — setup detalhado em `central-conducao-atendimento.md`
-- **Plano Personalizado** *(novo, 25/08)* (12 meses → continuidade, duplicar por revisão): https://docs.google.com/spreadsheets/d/1YpZ8oeKTBAvJsbFPol9MZf8m1f8a4k61KchAou1rltI/edit
-- **Proposta Comercial** *(novo, 25/08)* (duplicar por caso): https://docs.google.com/spreadsheets/d/1Mr35ErujvmE_0csNboMQURk8bPKVl2iC9jVM3iFYel0/edit
+- **Plano Personalizado** *(novo, 25/08)* (S2; revisões S8/S12/S16/S20; a cópia S24 é o Plano de Continuidade): https://docs.google.com/spreadsheets/d/1YpZ8oeKTBAvJsbFPol9MZf8m1f8a4k61KchAou1rltI/edit
+- **Proposta Comercial** *(novo, 25/08)* (modelo editável, duplicar por caso; S7/S19): https://docs.google.com/spreadsheets/d/1Mr35ErujvmE_0csNboMQURk8bPKVl2iC9jVM3iFYel0/edit
 - **Mapa Pessoal de Padrões** *(novo, 25/08)* (biblioteca cumulativa, não duplica): https://docs.google.com/spreadsheets/d/1Y0coyGUibkCw8LblfleuI2hxzHGW_gOW3YGNuR2Djhs/edit
 - **Banco de Comunicação** *(novo, 25/08)* (biblioteca cumulativa, não duplica): https://docs.google.com/spreadsheets/d/1QXecZvkYr0ZjFy6beN-C2G_qn75lgIek5OjxxXhWWdI/edit
 
@@ -28,7 +28,7 @@ Cada planilha recebe **só o script dela** (são independentes):
 2. Apaga o conteúdo padrão e cola o conteúdo de `apps-script-circulo-controle.gs` (mesma pasta deste guia)
 3. Salva (Ctrl+S)
 4. Repete o mesmo processo na planilha **Matriz de Responsabilidade e Prazos**, colando `apps-script-matriz-responsabilidade.gs`
-5. Repete de novo na planilha **Mapa do Caso**, colando `apps-script-mapa-do-caso.gs` (esse tem 2 funções, porque gera 2 abas-modelo — rápida e avançada — no mesmo arquivo)
+5. Repete de novo na planilha **Mapa do Caso**, colando `apps-script-mapa-do-caso.gs` (gera 4 abas-modelo no mesmo arquivo: 3 específicas por serviço + avançada)
 6. Repete na planilha **Mapa de Posicionamento**, colando `apps-script-mapa-posicionamento.gs`
 7. Repete na planilha **Mapa de Valor Percebido no Agro**, colando `apps-script-mapa-valor-percebido.gs`
 8. Repete na planilha **Checklist de Evidências da Autoridade**, colando `apps-script-checklist-evidencias.gs`
@@ -46,10 +46,10 @@ Cada planilha recebe **só o script dela** (são independentes):
 2. Clica em **Executar** (▶) — autoriza na primeira vez (Revisar permissões → sua conta → Avançado → Acessar → Permitir)
 3. Aparece a aba **"MODELO"**, já formatada
 
-**Mapa do Caso** (2 abas):
-1. Confirma que a função selecionada é `criarTodosMapasDoCaso` (cria as 2 de uma vez) — ou rode `criarTemplateMapaRapido` e `criarTemplateMapaAvancado` separadamente se preferir
+**Mapa do Caso** (4 abas):
+1. Confirma que a função selecionada é `criarTodosMapasDoCaso` (cria as 4 de uma vez) — ou rode `criarTemplateMapaCreditoRural`, `criarTemplateMapaRegularizacao`, `criarTemplateMapaGeorreferenciamento` e `criarTemplateMapaAvancado` separadamente
 2. Clica em **Executar** (▶), autoriza se pedir
-3. Aparecem **"MODELO — Rápida (S4)"** e **"MODELO — Avançada (S12)"**
+3. Aparecem **"MODELO — Crédito Rural (S4)"**, **"MODELO — Regularização (S4)"**, **"MODELO — Georreferenciamento (S4)"** e **"MODELO — Avançada (S12)"**
 
 **Mapa de Valor Percebido** (tabela única, sem MODELO):
 1. Confirma que a função selecionada é `criarMapaValorPercebido`
@@ -91,7 +91,7 @@ Em todas: pode apagar a aba padrão em branco ("Página1" ou "Sheet1") que sobro
 
 **Matriz de Responsabilidade:** dados do caso no topo, tabela de etapas com dropdown na coluna "Responsável" (Você / Produtor / Terceiro) — a cor da célula muda sozinha. Pra entregar ao produtor: **Arquivo → Baixar → PDF (.pdf)**, ou imprimir a aba direto.
 
-**Mapa do Caso:** escolhe qual duplicar conforme a complexidade — "Rápida" (S4, 4 campos: demanda → problema real → riscos → próximo passo) pra um atendimento direto, ou "Avançada" (S12, 7 campos: pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos) pra casos com múltiplos envolvidos e interesses divergentes.
+**Mapa do Caso:** na S4, escolhe e duplica o modelo específico do serviço — **Crédito Rural**, **Regularização** ou **Georreferenciamento**. Na S11/S12 e no registro final da S22, usa a versão **Avançada** (7 campos: pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos) quando o caso tiver múltiplos envolvidos/interesses. O "Plano de Condução de Caso Complexo" e o "Relatório de Aplicação" são resultados desse preenchimento, não ferramentas separadas.
 
 **Mapa de Posicionamento:** 5 campos (Eu sou → Eu resolvo → Para quem → Como faço → Qual valor entrego). Duplica a aba MODELO na Sessão 7 (versão inicial) e de novo na Sessão 18 (revisão) — **não apaga a versão anterior**, o valor está em comparar a evolução.
 
@@ -103,9 +103,9 @@ Em todas: pode apagar a aba padrão em branco ("Página1" ou "Sheet1") que sobro
 
 **Protocolo Pessoal de Condução:** documento único do aluno, campos em branco — só a pergunta-guia de cada um dos 10 passos (Abrir → Ouvir → Investigar → Diagnosticar → Orientar → Propor → Negociar → Decidir → Conduzir → Acompanhar). O aluno preenche com as próprias palavras nas Sessões 23-24, a partir do caso real da S22. Não tem exemplo de resposta pronto de propósito — é o sistema *dele*, não um roteiro da Milena.
 
-**Plano Personalizado** *(novo, 25/08)*: criado na S2, revisado ao final de cada etapa/sub-fase (S8, S12, S16, S20) e estendido em plano de continuidade na S24 — **duplica por revisão**, mesma lógica do Mapa de Posicionamento (guarda o histórico, não apaga versão anterior). Campo "Continuidade" só se preenche na última versão (S24).
+**Plano Personalizado** *(novo, 25/08)*: criado na S2 com ponto de partida, transformação/evidência dos 12 meses, meta do checkpoint, 3 prioridades, ações com prazo/evidência/apoio, barreira/resposta e compromisso. Revisado em S8/S12/S16/S20 — **duplica por revisão**, guarda o histórico e não apaga versão anterior. Na S24, duplica de novo e preenche Continuidade (resultado a sustentar, hábitos, frequência de revisão, indicadores, riscos, apoio, primeira ação e próxima revisão). O "Plano de Continuidade" é essa última versão, não outro arquivo.
 
-**Proposta Comercial** *(novo, 25/08)*: criada na S7 (estrutura essencial), ajustada na S19 (casos maiores) — **duplica por caso**, uma cópia por produtor. Usa o Mapa de Valor Percebido como munição de argumento no campo Investimento.
+**Proposta Comercial** *(novo, 25/08)*: é o **modelo editável** criado na S7 (estrutura essencial) e ajustado na S19 (casos maiores) — **duplica por caso**, uma cópia por produtor. A "Proposta Comercial Reformulada" é a cópia preenchida; não é outra ferramenta. Usa o Mapa de Valor Percebido como munição no campo Investimento.
 
 **Mapa Pessoal de Padrões** *(novo, 25/08)*: usado a partir da S9 — **não duplica**, biblioteca cumulativa (trava → situação → efeito comercial). Toda vez que uma trava se repetir, adiciona uma linha — ver o padrão escrito por escrito é o que diferencia "tive um dia ruim" de "isso sempre acontece quando X".
 

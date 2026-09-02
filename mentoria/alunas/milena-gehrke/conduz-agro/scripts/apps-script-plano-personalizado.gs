@@ -40,13 +40,16 @@ function criarTemplatePlanoPersonalizado() {
   sh.setRowHeight(2, 48);
 
   var campos = [
-    ["DATA / SESSÃO DESTA VERSÃO", "Quando esse plano foi criado ou revisado"],
-    ["ONDE VOCÊ ESTÁ AGORA", "Referência ao papel nomeado no Diagnóstico (S1) — ainda é verdade?"],
-    ["META PRINCIPAL DO PERÍODO", "O que precisa ser verdade até a próxima revisão"],
-    ["3 PRIORIDADES", "O que vem antes de tudo o resto até lá"],
-    ["O QUE JÁ MUDOU DESDE A ÚLTIMA VERSÃO", "Deixe em branco na 1ª versão (S2) — preencha a partir da 1ª revisão"],
-    ["PRÓXIMOS PASSOS", "O que fazer entre agora e a próxima sessão de revisão"],
-    ["CONTINUIDADE (só na S24)", "O que sustenta esse resultado depois que as sessões quinzenais acabarem"]
+    ["DATA / SESSÃO DESTA VERSÃO", "Informe a data e S2, S8, S12, S16, S20 ou S24"],
+    ["PONTO DE PARTIDA", "Copie do Diagnóstico da S1: papel atual, trava prioritária e evidência concreta"],
+    ["TRANSFORMAÇÃO DOS 12 MESES", "Descreva o resultado final e qual evidência observável provará que aconteceu"],
+    ["META ATÉ O PRÓXIMO CHECKPOINT", "Escreva um resultado verificável e o prazo"],
+    ["3 PRIORIDADES DO PERÍODO", "Liste exatamente três, em ordem; diga o que ficará fora de foco"],
+    ["AÇÕES DAS PRIORIDADES", "Para cada prioridade: ação concreta, prazo, evidência de conclusão e apoio necessário"],
+    ["BARREIRA PREVISÍVEL E RESPOSTA", "O que pode travar a execução e o que você fará se acontecer"],
+    ["O QUE MUDOU DESDE A ÚLTIMA VERSÃO", "Na S2, escreva 'primeira versão'; nas revisões, compare evidências e decisões"],
+    ["COMPROMISSO ATÉ A REVISÃO", "Primeira ação, data e frase de compromisso do mentorado"],
+    ["CONTINUIDADE (S24)", "Resultado a sustentar; hábitos; frequência de revisão; indicadores; riscos de recaída e resposta; apoio; primeira ação; próxima revisão. Antes da S24, escreva 'não se aplica nesta versão'."]
   ];
 
   var row = 4;

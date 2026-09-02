@@ -1,11 +1,12 @@
 /**
- * Conduz Agro — gera as 2 abas-modelo (formatadas na identidade visual da
- * Milena) do Mapa do Caso: versão rápida (S4) e versão avançada (S12).
+ * Conduz Agro — gera 4 abas-modelo (formatadas na identidade visual da
+ * Milena) do Mapa do Caso: 3 modelos de S4 específicos por serviço
+ * (Crédito Rural, Regularização e Georreferenciamento) e versão avançada.
  *
- * É a MESMA ferramenta em 2 profundidades diferentes (não 2 ferramentas
+ * É a MESMA ferramenta com modelos por serviço e uma versão avançada (não 4 ferramentas
  * distintas como Círculo de Controle x Matriz de Responsabilidade) — por
- * isso fica num arquivo só, com 2 abas-modelo. O aluno escolhe qual duplicar
- * conforme a complexidade do caso.
+ * isso fica num arquivo só, com 4 abas-modelo. O aluno escolhe qual duplicar
+ * conforme o tipo e a complexidade do caso.
  *
  * Como usar: ver `SETUP-FERRAMENTAS.md` na mesma pasta.
  */
@@ -22,13 +23,46 @@ var COR_RULE = "#D9CDB0";
 var COR_GOLD_TINT = "#F3E6C8";
 
 function criarTodosMapasDoCaso() {
-  criarTemplateMapaRapido();
+  criarTemplateMapaCreditoRural();
+  criarTemplateMapaRegularizacao();
+  criarTemplateMapaGeorreferenciamento();
   criarTemplateMapaAvancado();
 }
 
-function criarTemplateMapaRapido() {
+function criarTemplateMapaCreditoRural() {
+  criarTemplateMapaPorServico_("Crédito Rural", [
+    ["DEMANDA DE CRÉDITO DECLARADA", "O que o produtor pediu, nas palavras dele"],
+    ["NECESSIDADE REAL", "O objetivo por trás do pedido e o que precisa ser viabilizado"],
+    ["RISCOS E PENDÊNCIAS", "O que pode impedir ou atrasar a condução do caso"],
+    ["PRÓXIMO PASSO", "A ação concreta, o responsável e o prazo"]
+  ]);
+}
+
+function criarTemplateMapaRegularizacao() {
+  criarTemplateMapaPorServico_("Regularização", [
+    ["DEMANDA DE REGULARIZAÇÃO DECLARADA", "O que o produtor pediu, nas palavras dele"],
+    ["PROBLEMA REAL", "O que precisa ficar regular e por que isso importa neste caso"],
+    ["RISCOS E PENDÊNCIAS", "Documentos, pessoas ou prazos que podem travar a condução"],
+    ["PRÓXIMO PASSO", "A ação concreta, o responsável e o prazo"]
+  ]);
+}
+
+function criarTemplateMapaGeorreferenciamento() {
+  criarTemplateMapaPorServico_("Georreferenciamento", [
+    ["DEMANDA DE GEORREFERENCIAMENTO", "O que o produtor pediu e qual imóvel/área está envolvido"],
+    ["PROBLEMA REAL", "O que o georreferenciamento precisa destravar neste caso"],
+    ["RISCOS E PENDÊNCIAS", "Informações, documentos, envolvidos ou prazos que exigem atenção"],
+    ["PRÓXIMO PASSO", "A ação concreta, o responsável e o prazo"]
+  ]);
+}
+
+function criarTemplateMapaPorServico_(servico, campos) {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
-  var nome = "MODELO — Rápida (S4)";
+  var nome = "MODELO — " + servico + " (S4)";
+  if (servico === "Crédito Rural") {
+    var legado = ss.getSheetByName("MODELO — Rápida (S4)");
+    if (legado) ss.deleteSheet(legado);
+  }
   var old = ss.getSheetByName(nome);
   if (old) ss.deleteSheet(old);
   var sh = ss.insertSheet(nome);
@@ -36,22 +70,16 @@ function criarTemplateMapaRapido() {
   sh.setColumnWidth(1, 620);
   sh.setHiddenGridlines(true);
 
-  sh.getRange("A1").setValue("MAPA DO CASO — VERSÃO RÁPIDA")
+  sh.getRange("A1").setValue("MAPA DO CASO — " + servico.toUpperCase())
     .setBackground(COR_OLIVE_DEEP).setFontColor(COR_PAPER)
     .setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
   sh.setRowHeight(1, 32);
 
-  sh.getRange("A2").setValue("Conduz Agro — uso na Sessão 4. 1 atendimento real, do início ao fim: demanda → problema real → riscos → próximo passo. Duplique esta aba a cada caso novo.")
+  sh.getRange("A2").setValue("Conduz Agro — modelo específico de " + servico + " para uso na Sessão 4. Duplique esta aba a cada caso novo.")
     .setBackground(COR_PAPER).setFontColor(COR_INK_SOFT).setFontStyle("italic")
     .setFontSize(9).setHorizontalAlignment("center").setWrap(true);
   sh.setRowHeight(2, 30);
 
-  var campos = [
-    ["DEMANDA DECLARADA", "O que o produtor pediu, nas palavras dele"],
-    ["PROBLEMA REAL", "O que está por trás do pedido — o que ele realmente precisa resolver"],
-    ["RISCOS", "O que pode dar errado se esse caso não for bem conduzido"],
-    ["PRÓXIMO PASSO", "A ação concreta que você vai tomar agora"]
-  ];
 
   var row = 4;
   campos.forEach(function(c){
