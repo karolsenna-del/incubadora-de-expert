@@ -7,7 +7,7 @@
 > desconto forçado ("Black Fraud").
 > Fonte documentada: `business/propostas/proposta-black-friday-euriler.md` (síntese com
 > timestamps da transcrição da imersão).
-> Duração estimada: ~28-31 min
+> Duração estimada: ~31-35 min (subiu com o bloco das 6 fases de preparação, adicionado 02/09)
 > Modelo: Funil de Zoom — 4 blocos, com pausa curta de escrita na Prática (diagnóstico é
 > decisão, não produção longa)
 
@@ -50,7 +50,7 @@ pro tamanho real de quem tá começando, não pro tamanho de quem já tem opera�
 
 ---
 
-## PARTE 2 — EXECUÇÃO (~13-14 min)
+## PARTE 2 — EXECUÇÃO (~16-18 min)
 
 **Reframing:**
 "Black Friday não é uma data no calendário. É uma pergunta: 'o que eu já validei, que eu posso
@@ -87,12 +87,28 @@ Perpétuo não é só argumento de venda; é uma obrigação operacional de long
 2. Eu tenho alguma base — mesmo pequena — que me conhece? (sim/não)
 3. Minha oferta é ousada e fora do normal o suficiente para justificar uma Black Friday? (sim/não — por quê)
 
+**As fases de uma Black Friday que não vira "Black Fraud" (pra quem respondeu sim nas 3 perguntas):**
+"Isso não é teoria puxada do nada — é o mesmo caminho que eu uso pra estruturar campanha
+comercial de verdade, só que do tamanho da sua operação:"
+1. **Diagnóstico e decisão** — antes de qualquer criativo, decidir com clareza: essa operação
+   faz Black Friday esse ano ou aquece pra fazer valendo ano que vem.
+2. **Oferta e segmentação** — definir o que vai vender, pra quem (aluno, ex-cliente, público
+   novo) e sob qual condição real e justificável — não desconto empilhado.
+3. **Campanha executável** — transformar a decisão num plano com calendário, mensagens e
+   ativos definidos, não numa lista solta de ideias.
+4. **Implementação acompanhada** — produzir com alguém revisando decisão por decisão,
+   corrigindo rota antes de publicar errado.
+5. **Abertura e acompanhamento** — rodar a campanha com indicador definido, sem virar apagar
+   incêndio no meio da data.
+6. **Fechamento e aprendizado** — fechar registrando o que funcionou, pra próxima Black Friday
+   nascer mais fácil que essa.
+
 > **Spoiler do pitch** (colocar no pico de atenção, fim desta parte):
-> "É exatamente esse tipo de raio-x que eu faço na Auditoria do Método + criação de
-> ferramentas — eu olho pra tudo que você já tem pronto no seu ecossistema e te falo com
-> clareza: o que já dá pra usar nessa Black Friday, o que ainda falta, e que ferramenta
-> específica faria sua oferta ficar irresistível de verdade — sem inventar desconto. No final
-> eu te conto como participar."
+> "Você não precisa passar por essas 6 fases sozinha, tentando adivinhar. É exatamente isso que
+> eu comprimo nos 3 encontros da Mentoria VIP: um pra planejar sua Black Friday em cima do que
+> você já validou, um pra acompanhar a execução, e um pra corrigir rota no meio do caminho, se
+> precisar. Eu não te entrego um relatório — eu monto a Black Friday com você. No final eu te
+> conto como participar."
 
 **Transição:** "Agora é sua vez de fazer esse diagnóstico com a sua própria operação."
 
@@ -133,20 +149,16 @@ fraca não ficam fortes só porque chegou novembro. Hoje eu consigo enxergar que
 depende de timing, de uma oferta ousada e de uma operação capaz de sustentar o que promete."
 
 **Pitch:**
-"É por isso que existe a Auditoria do Método + criação de ferramentas. Eu analiso tudo que
-você já tem pronto no seu ecossistema — produto, base, comunicação — e te recomendo, com
-clareza, quais ferramentas criar pra sua oferta de Black Friday ficar irresistível de verdade.
-Sem inventar desconto, sem imitar operação que não é a sua. Diploma é o que você estudou.
-Método é o que você viveu — e uma Black Friday de verdade nasce do que você já validou, não do
-que você finge que tem."
+"É por isso que existe a Mentoria VIP. Não é um curso que te entrega um plano genérico — são 3
+encontros comigo: no primeiro eu analiso seu produto, sua base e sua oferta e te digo com
+clareza o que já dá pra usar nessa Black Friday; no segundo a gente monta o plano de execução
+junto; no terceiro eu acompanho como foi e corrijo o que precisar no meio do caminho. Sem
+inventar desconto, sem imitar operação que não é a sua. Diploma é o que você estudou. Método é
+o que você viveu — e uma Black Friday de verdade nasce do que você já validou, com alguém
+acompanhando de perto, não de um post de 'ESQUENTA BLACK'."
 
-**CTA:** comenta **AUDITORIA** no chat — eu ou minha equipe te chamo no direct pra explicar
-como funciona.
-
-> **Nota (não é decisão do worker — Karol define):** CTA pode mudar pra um Desafio de Black
-> Friday que a Karol está desenhando dentro da Arcane. Se mudar, a oferta pitchada continua
-> sendo a Auditoria do Método + criação de ferramentas — só o gatilho/formato de entrada muda.
-> Preço ainda não definido — não mencionar valor na live.
+**CTA:** comenta **VIP** no chat — eu ou minha equipe te chamo no direct pra explicar como
+funciona.
 
 ---
 
@@ -166,12 +178,20 @@ como funciona.
 
 ## CHECKLIST PRÉ-LIVE
 
-- [ ] Confirmar CTA final antes da live: AUDITORIA (chat → direct) ou o Desafio de Black
-      Friday da Arcane, se já estiver fechado até lá
+- [x] Confirmado (02/09): oferta pitchada trocada de Auditoria do Método + criação de
+      ferramentas para **Mentoria VIP** (R$1.500, 3x R$500) — 3 encontros reformulados pro
+      contexto de Black Friday: planejamento / execução / acompanhamento da execução. Preço
+      não é mencionado na live.
+- [x] Confirmado (02/09): CTA final é **VIP** no chat → direct
 - [x] Confirmado (01/09): pode nomear o Leandro Ferrari e a imersão publicamente na live
 - [x] História da Black Expert do ano passado: campanha improvisada e oferta fraca
-- [ ] Duração ~28-31 min está no padrão recente — se precisar encurtar, cortar o Princípio 3
-      (segmentação) da Execução e ir direto pro passo a passo
+- [x] Adicionado (02/09): bloco "As 6 fases de uma Black Friday que não vira Black Fraud" na
+      Execução, adaptado das fases do plano da `proposta-black-friday-euriler.md` (seção 10),
+      simplificado pra audiência da live (sem menções a Euriler/Arcane/piloto) e conectado ao
+      spoiler da Mentoria VIP
+- [ ] Duração subiu pra ~31-35 min (acima do padrão recente de ~28-31) — se precisar encurtar,
+      cortar o Princípio 3 (segmentação) ou o Princípio 4 (perigo do perpétuo) da Execução antes
+      de cortar o bloco das 6 fases (ele é o que sustenta o spoiler/pitch)
 - [x] Confirmado (01/09): terá slide dos 3 pilares de prontidão (produto validado / base /
       oferta ousada) — ver seção "Material de apoio" acima
 - [x] Tema confirmado pela Karol (01/09): "Você tá pronta pra sua Black Friday?"
@@ -183,7 +203,7 @@ como funciona.
 - [x] 4 blocos presentes (Narrativa / Execução / Prática / Pitch)
 - [x] Exercício concreto com entrega tangível (diagnóstico escrito de 3 perguntas +
       classificação sim/não/verdadeira)
-- [x] Duração estimada por bloco (total ~28-31 min)
+- [x] Duração estimada por bloco (total ~31-35 min)
 - [x] Tom da Karol — direto, acolhedor, com vulnerabilidade estratégica (reconhece que a
       imersão foi feita pra operação maior que a da própria audiência)
 - [x] História pessoal ancorada — Black Expert do ano passado improvisada, com oferta fraca
@@ -191,6 +211,5 @@ como funciona.
 - [x] Pitch é conclusão natural, não bloco separado
 - [x] Conexão com método Expert360 explícita (filosofia Vendas Secretas/"sem lançamentos" —
       condição real vs. Black Fraud; validação antes de escalar)
-- [x] CTA confirmado pela Karol: comenta AUDITORIA no chat → direct → Auditoria do Método +
-      criação de ferramentas (preço em aberto; CTA pode mudar pro Desafio de Black Friday da
-      Arcane — oferta pitchada se mantém)
+- [x] CTA confirmado pela Karol: comenta VIP no chat → direct → Mentoria VIP (3 encontros:
+      planejamento da BF / execução / acompanhamento da execução; preço não mencionado na live)
