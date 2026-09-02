@@ -23,6 +23,8 @@
 
 **Fase atual:** 2 — Estrutura do Curso
 
+**Next action (weekly 02/09):** fechar uma leva objetiva do M3 — gravar, editar e publicar um bloco delimitado antes de abrir outra frente. O tamanho da leva nao foi definido.
+
 ---
 
 ## TAREFAS (fase atual)
@@ -58,6 +60,7 @@
 ## LOG
 
 > Mais recente primeiro.
+- 02/09 — @companion (weekly review): Karol decidiu **fechar uma leva objetiva do M3** como proximo resultado do projeto. Mantido o estado verificado anterior (3/13 aulas do M3 publicadas na Area de Membros); quantidade da nova leva nao definida, sem presumir escopo.
 - 26/08 — @course-publisher: **Modulo de Orientacoes completo (2/2) + inicio do M3 (3/13) publicados — primeira vez direto na Area de Membros, pulando a Voomp.** Karol pediu pra publicar na `membros.incubadoradeexpert.com.br` (nao mais Voomp Play). Videos vieram de `OneDrive\Videos\Capcut\Expert360\` (Orientacoes 360 e Modulo 3), copiados pra pasta de producao (`modulo-orientacoes/`, `M3/`). Mapeamento conferido contra `descricoes.md` antes de subir (nomes de arquivo do CapCut diferiam dos titulos do config.yaml, mas o conteudo batia). 5 videos upados como Nao Listado no YouTube (canal Karol Senna): Boas-vindas ao Expert360 (u-_ZM9k3Ntw), Antes de Comecar (Gcz0wrqSqEo), Boas-vindas ao M3 (jWJvBgpiHms), A1 Vendas Secretas Conceito (RralsyVgAtA), A2 Feito e Melhor que Perfeito (G27FO-emYaY). `config.yaml` atualizado com os 5 `youtube_id` + campo `video`. Gerada a thumbnail que faltava (`MO-01-antes-de-comecar.png` — so existia a de boas-vindas). **Handoff pendente:** Gestor de Infra Arcane precisa ligar esses `youtube_id` em `js/data.js` da Area de Membros (mesmo procedimento manual usado em M0-M2) — registrado no tracker da Area de Membros.
 - 24/08 — @companion (weekly review): confirmado com a Karol — M3 segue em gravacao e edicao. Sem novidade de publicacao desde 14/08 (M0 5/5, M2 9/9 publicados com legenda; M1 6/8, faltam aulas 00-01).
 - 14/08 — @companion (weekly review): M2 editado e publicado na Voomp (9/9 aulas, com legenda). Modulo de Orientacoes gravado — falta editar (legenda). Gravacao do M3 iniciada.

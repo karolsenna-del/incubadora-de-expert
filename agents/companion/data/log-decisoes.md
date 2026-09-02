@@ -364,3 +364,18 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 - Descoberta durante a fase: existe um produto separado, **Sprint do Método** (DFY — Karol monta toda a fundação do método pro cliente), seguido de uma variante de 6 meses da Incubadora de Expert cobrindo só Posicionamento + outros produtos do Portfólio pra escala. Não é uma opção alternativa da Incubadora de 12 meses — é esteira de entrada diferente. Fora do escopo deste pipeline; candidato a processo próprio do Mentoring Creator no futuro, se a Karol quiser formalizar.
 
 **Impacto:** Registrado em `business/campanhas/incubadora-de-expert-individual/empacotamento.md` e `prd.md` (preço do add-on de tráfego atualizado).
+
+## 02/09/2026 — Weekly review: foco em entrega, Biblioteca de IA e comercial quente
+
+**Contexto:** Weekly review posterior à de 24/08. Karol fechou as prioridades da semana e as decisões que ainda estavam abertas sobre a proposta de Black Friday enviada a Euriler e sobre a formalização da Mentoria Individual.
+
+**Decisões:**
+- Expert360º: fechar uma leva objetiva do M3; quantidade da leva não definida.
+- Black Friday: priorizar a Biblioteca de IA; pacote, preço, prazo de acesso e demais condições continuam sem definição.
+- Comercial: concentrar em CRM e contatos quentes Nanny e Euriler. Nanny segue pensando na parceria. A proposta de Black Friday já foi enviada a Euriler e, até 02/09, não houve retorno.
+- Proposta Euriler: objeto confirmado como desafio para um grupo selecionado de alunos da Arcane/Auroq. O público são os alunos que demonstrarem interesse e forem admitidos; todos os interessados elegíveis admitidos entram em um grupo administrado pela própria Karol. Nenhum critério adicional de seleção foi definido.
+- Mentoria Individual: fechar nesta semana o contrato de 12 meses, a mensagem de boas-vindas e as regras de uso do WhatsApp. Decisão confirmada; não voltar a perguntar se esses três itens devem ser feitos.
+
+**Racional:** Reduzir dispersão e transformar frentes já maduras em entregas concretas, sem inventar condições comerciais ou escopo ainda não decidido.
+
+**Impacto:** Cockpit e trackers passam a refletir as próximas ações; a proposta do Euriler fica marcada como enviada/aguardando retorno e deixa de tratar o objeto como decisão pendente. Próxima weekly review: 09/09/2026.
