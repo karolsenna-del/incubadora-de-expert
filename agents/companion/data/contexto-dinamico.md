@@ -19,10 +19,10 @@ Variaveis:
 
 ## Projeto Ativo Principal
 
-**Expert360º (Curso)** — Em construcao, Fase 2 (Estrutura do Curso)
-- M0, M1, M2 estruturados (26/05)
-- M3 (Vendas Secretas) e M4 (Autoridade): a estruturar
-- 0 de 6 agentes criados
+**Expert360º (Curso)** — Em producao e publicacao na Area de Membros
+- M0-M4 estruturados e roteirizados; 6 de 6 agentes existentes
+- Orientacoes 2/2 e M3 3/13 publicados na Area de Membros
+- Next action confirmado na weekly de 02/09: fechar uma leva objetiva do M3; quantidade da leva nao definida
 - Tracker: `business/campanhas/expert360-curso/tracker.md`
 - PRD: `business/campanhas/expert360-curso/prd.md`
 
@@ -39,9 +39,10 @@ O metodo da Karol nasceu dos fracassos — autoridade visceral construida na der
 
 ## Operacao Continua: Instagram / Conteudo
 
-Prioridades imediatas:
-1. Bio com tese aplicada
-2. Primeiros conteudos com angulo "expert em fracassar no digital"
+Prioridades imediatas (weekly 02/09):
+1. Fechar uma leva objetiva do M3 do Expert360º
+2. Priorizar a Biblioteca de IA para a Black Friday, sem presumir pacote, preco ou prazo de acesso
+3. Comercial: seguir CRM e contatos quentes Nanny e Euriler
 
 **Base de producao completa (04/07/2026):** Iris (Squad Conteudo Arcane) integrou 2 fontes externas de formatos virais — Trello ReelsPro (18 modelos) e Arsenal Viral/Venda Todo Santo Dia (47 formatos criativos + 134 referencias garimpadas dos nichos adjacentes).
 - `docs/producao-conteudo/karol/formatos-virais-adaptados.md` — analise dos 18 modelos + taxonomia Arsenal + swipe file com 15 referencias adaptadas
@@ -137,6 +138,16 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 - Criativos
 
 ## Onde Parou
+
+**Sessao 02/09 — Weekly review concluida (Companion):**
+- **Expert360º:** fechar uma leva objetiva do M3. O tamanho da leva nao foi definido; nao abrir escopo novo por inferencia.
+- **Black Friday / Area de Membros:** Biblioteca de IA e a prioridade. A infraestrutura generica existe; pacote, preco, prazo de acesso e demais condicoes continuam sem decisao.
+- **Comercial:** foco em CRM + contatos quentes. Nanny segue pensando na parceria. A proposta de Black Friday ja foi enviada a Euriler e, ate 02/09, nao houve retorno; nao enviar nova mensagem sem decisao da Karol.
+- **Objeto da proposta Euriler:** desafio para um grupo selecionado de alunos da Arcane/Auroq. O publico sao os alunos que demonstrarem interesse e forem admitidos; todos os interessados elegiveis admitidos ficam em um grupo administrado pela Karol. Nenhum criterio adicional de selecao foi fechado.
+- **Mentoria Individual:** decisao confirmada para esta semana — fechar contrato de 12 meses, mensagem de boas-vindas e regras de uso do WhatsApp. Nao voltar a perguntar se esses tres itens devem ser feitos; permanecem abertos apenas ate a execucao.
+- **Weekly:** anterior em 24/08; esta concluida em 02/09; proxima em 09/09.
+
+Retomar com: fechar a leva objetiva do M3; fechar as condicoes da Biblioteca de IA; executar os tres itens confirmados da Mentoria Individual; acompanhar Nanny e o retorno de Euriler sem nova mensagem automatica.
 
 **Sessao 29/08 — Reconciliacao de trabalho da tarde/noite de 28/08 (Companion):**
 Contexto-dinamico ficou parado no checkpoint das 15h de 28/08 enquanto mais trabalho real aconteceu no resto do dia (reconstituido via git log):
@@ -317,4 +328,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 29/08/2026 (Reconciliacao — Mentoring Creator da Incubadora de Expert individual avancou ate Fase 5 (canal WhatsApp, offboarding/depoimento definidos), fix da automacao de Stories confirmado em producao, Rota100k Semana 04 com Domingo revisado)*
+*Ultima atualizacao: 02/09/2026 (Weekly review concluida — prioridades, proposta Euriler e proxima leva da Mentoria Individual reconciliadas)*

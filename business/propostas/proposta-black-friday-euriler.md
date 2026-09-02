@@ -2,20 +2,14 @@
 
 **De:** Karol Senna
 **Para:** Euriler Jube
-**Status:** versão para revisão da Karol — não enviar antes de fechar as decisões sinalizadas
-**Objeto recomendado:** piloto de implementação de Black Friday para transformar estratégia, agentes de IA e ativos já existentes em campanha executável, com foco em oferta, priorização e ida ao mercado.
-
-> **[DECISÃO DA KAROL — objeto da proposta]** Confirmar uma opção antes de apresentar:
-> **A. Recomendada:** piloto para um grupo selecionado de alunos da Mentoria Arcane/Auroq;
-> **B.** apoio à Black Friday da própria operação de Euriler;
-> **C.** piloto híbrido: aplicar primeiro na operação de Euriler e converter o processo validado em sprint para alunos.
-> O documento abaixo está redigido pela opção A. Se Karol escolher B ou C, público, papéis, dados, entregáveis e critérios de sucesso precisam ser ajustados — não basta trocar o título.
+**Status:** enviada a Euriler — aguardando retorno (sem retorno até 02/09/2026)
+**Objeto confirmado:** desafio de implementação de Black Friday para um grupo selecionado de alunos da Arcane/Auroq. O público é formado pelos alunos que demonstrarem interesse e forem admitidos no desafio; todos os interessados elegíveis admitidos serão reunidos em um grupo administrado pela própria Karol.
 
 ---
 
 ## 1. Resumo executivo
 
-A oportunidade não é criar mais conteúdo sobre Black Friday. É criar uma camada de **implementação comercial** que faça o aluno sair do planejamento e chegar a uma campanha coerente com seu estágio, sua base e sua capacidade real.
+A oportunidade não é criar mais conteúdo sobre Black Friday. É criar uma camada de **implementação comercial** que faça o aluno sair do planejamento e chegar a uma campanha coerente com seu estágio, sua base e sua capacidade real. O formato confirmado é um desafio para alunos da Arcane/Auroq que demonstrarem interesse e forem admitidos, reunidos em um grupo administrado por Karol.
 
 Karol já levou a Euriler um diagnóstico relevante: uma ferramenta de IA poderosa pode elevar muito a capacidade de produção, mas também pode gerar dois efeitos colaterais — alunos se afastarem dos encontros humanos por sensação de autossuficiência e alunos produzirem muito sem transformar essa produção em venda. Esse registro é um feedback da própria Karol sobre o Auroq e a Mentoria Arcane; deve ser tratado como **hipótese operacional a validar**, não como dado geral de comportamento da base.
 
@@ -84,7 +78,7 @@ Karol **não deve prometer nesta proposta**, sem acordo adicional:
 
 ## 4. Oportunidade estratégica
 
-Criar um **Sprint de Implementação Black Friday** dentro da Mentoria Arcane/Auroq, dirigido apenas a operações que passem por um diagnóstico de prontidão.
+Criar um **Sprint de Implementação Black Friday** dentro da Mentoria Arcane/Auroq, em formato de desafio para um grupo selecionado de alunos que demonstrarem interesse e forem admitidos. Todos os interessados elegíveis admitidos ficam reunidos em um grupo administrado pela própria Karol. Os critérios específicos de seleção ainda não foram definidos e não devem ser presumidos.
 
 O sprint funcionaria como a ponte entre:
 
@@ -125,7 +119,7 @@ O diferencial não é ensinar mais uma fórmula. É fazer cada operação respon
 
 ### Objetivo principal
 
-Conduzir um piloto com operações elegíveis para que cada participante termine com uma campanha de Black Friday **decidida, documentada e pronta para execução pelo próprio time**, respeitando estágio, base, oferta e capacidade operacional.
+Conduzir um desafio com os alunos da Arcane/Auroq que demonstrarem interesse e forem admitidos para que cada participante termine com uma campanha de Black Friday **decidida, documentada e pronta para execução pelo próprio time**, respeitando estágio, base, oferta e capacidade operacional.
 
 ### O que “pronta para execução” significa
 
@@ -147,7 +141,9 @@ Ao final da preparação, a operação precisa ter, no mínimo:
 
 ## 7. Público e critérios de entrada
 
-### Elegíveis
+**Público confirmado:** grupo selecionado de alunos da Arcane/Auroq. O aluno demonstra interesse, passa pela admissão do desafio e, sendo elegível, entra no grupo administrado pela Karol. Não há critério adicional de seleção confirmado neste documento.
+
+### Sinais de prontidão a avaliar na admissão
 
 Operações que tenham pelo menos parte relevante destes ativos:
 
@@ -159,7 +155,7 @@ Operações que tenham pelo menos parte relevante destes ativos:
 - capacidade de suporte e entrega após a venda;
 - disponibilidade para produzir/aprovar os ativos necessários.
 
-### Veto ou rota alternativa
+### Não admissão ou rota alternativa
 
 Não entram na execução principal operações que:
 
@@ -172,13 +168,13 @@ Não entram na execução principal operações que:
 
 Esses casos podem receber um diagnóstico e uma recomendação de preparação para outro ciclo, sem promessa de campanha nesta Black Friday.
 
-> **[DECISÃO DA KAROL]** Definir: tamanho máximo da turma; critérios obrigatórios de entrada; quem faz a triagem; e se operações não elegíveis recebem apenas devolutiva, uma rota preparatória ou nenhuma entrega adicional.
+> **[DECISÃO DA KAROL]** Ainda definir, sem presumir: tamanho máximo da turma; critérios objetivos de admissão além do interesse demonstrado; como a admissão será operacionalizada; e se operações não admitidas recebem apenas devolutiva, uma rota preparatória ou nenhuma entrega adicional.
 
 ---
 
 ## 8. Escopo proposto
 
-### Incluído no piloto
+### Incluído no desafio
 
 1. **Diagnóstico de prontidão**
    - produto e validação;
@@ -234,7 +230,7 @@ Esses casos podem receber um diagnóstico e uma recomendação de preparação p
 > **[DECISÃO DA KAROL — profundidade de execução]** Escolher:
 > **A. Arquitetura e governança:** Karol diagnostica, estrutura e acompanha; cada operação produz;
 > **B. Done-with-you limitado:** inclui revisão de um conjunto definido de ativos por operação;
-> **C. Piloto interno com time Arcane:** Karol arquiteta e o time indicado por Euriler executa peças.
+> **C. Execução pelo time Arcane:** Karol arquiteta e o time indicado por Euriler executa peças.
 > Não apresentar a proposta sem limitar quantidade de operações, encontros, revisões e ativos.
 
 ---
@@ -244,6 +240,7 @@ Esses casos podem receber um diagnóstico e uma recomendação de preparação p
 ### Karol
 
 - desenhar e conduzir o diagnóstico;
+- administrar o grupo do desafio;
 - estruturar o documento mestre e os templates;
 - facilitar decisões de oferta, público, sequência e dependências;
 - avaliar congruência entre promessa, oferta e implementação;
@@ -253,7 +250,7 @@ Esses casos podem receber um diagnóstico e uma recomendação de preparação p
 
 ### Euriler
 
-- validar o objetivo estratégico do piloto;
+- validar o objetivo estratégico do desafio;
 - aprovar público, posicionamento e regras comerciais;
 - patrocinar o movimento dentro da comunidade;
 - indicar um dono interno da operação;
@@ -282,9 +279,9 @@ Karol responde pela qualidade da arquitetura, do diagnóstico e dos artefatos de
 
 ## 10. Plano por fases
 
-### Fase 0 — Alinhamento e desenho do piloto
+### Fase 0 — Alinhamento e desenho do desafio
 
-**Objetivo:** fechar objeto, público, capacidade, dono, limites e investimento.
+**Objetivo:** operacionalizar o objeto e o público já confirmados, fechando capacidade, critérios de admissão, dono, limites e investimento.
 **Saída:** termo de escopo aprovado + critérios de entrada + calendário relativo + matriz inicial de papéis.
 
 ### Fase 1 — Triagem e go/no-go
@@ -315,7 +312,7 @@ Karol responde pela qualidade da arquitetura, do diagnóstico e dos artefatos de
 ### Fase 6 — Pós-mortem e reaproveitamento
 
 **Objetivo:** transformar execução em conhecimento acumulado.
-**Saída:** retrospectiva por operação, consolidado do piloto, padrões, falhas, ativos reaproveitáveis e recomendação para próximo ciclo.
+**Saída:** retrospectiva por operação, consolidado do desafio, padrões, falhas, ativos reaproveitáveis e recomendação para próximo ciclo.
 
 ---
 
@@ -332,7 +329,7 @@ Karol responde pela qualidade da arquitetura, do diagnóstico e dos artefatos de
 9. Painel ou planilha de acompanhamento.
 10. Registro de decisões e riscos.
 11. Template de pós-mortem.
-12. Relatório consolidado do piloto.
+12. Relatório consolidado do desafio.
 
 > **[DECISÃO DA KAROL]** Definir formato e quantidade: número de documentos por operação; se haverá personalização individual; quantidade de revisões; encontros ao vivo; suporte assíncrono; e quais entregáveis serão produzidos por agentes de IA versus revisados pessoalmente por Karol.
 
@@ -353,13 +350,13 @@ A data de abertura será chamada de **T0**. O calendário definitivo só pode se
 
 A antecipação narrativa não deve começar apenas na captação. Se Black Friday for a próxima campanha relevante, a imersão recomenda assumir o movimento desde antes e não esconder que haverá venda ([01:25:50–01:28:29](#fontes-da-imersao)).
 
-> **[DECISÃO DA KAROL/EURILER]** Fechar: T0, data de fechamento, data-limite de entrada no piloto, janelas de encontros, conflitos com outras campanhas e limite de atraso após o qual a operação é retirada do piloto.
+> **[DECISÃO DA KAROL/EURILER]** Fechar: T0, data de fechamento, data-limite de entrada no desafio, janelas de encontros, conflitos com outras campanhas e limite de atraso após o qual a operação é retirada do desafio.
 
 ---
 
 ## 13. Critérios de sucesso
 
-### Critérios de processo — podem ser medidos no piloto
+### Critérios de processo — podem ser medidos no desafio
 
 - percentual de participantes triados antes de entrar;
 - percentual de operações com go/no-go explícito;
@@ -386,7 +383,7 @@ A antecipação narrativa não deve começar apenas na captação. Se Black Frid
 
 ### Critério de aprendizado
 
-O piloto também é bem-sucedido se produzir uma decisão fundamentada de **não executar** para operações despreparadas. Evitar uma campanha incoerente é resultado de diagnóstico, não fracasso do sprint.
+O desafio também é bem-sucedido se produzir uma decisão fundamentada de **não executar** para operações despreparadas. Evitar uma campanha incoerente é resultado de diagnóstico, não fracasso do sprint.
 
 ---
 
@@ -411,7 +408,7 @@ O piloto também é bem-sucedido se produzir uma decisão fundamentada de **não
 
 ## 15. Dependências
 
-O piloto depende de:
+O desafio depende de:
 
 - data e objetivo comercial definidos;
 - autorização de Euriler;
@@ -435,7 +432,7 @@ Sem essas dependências, a proposta não deve virar promessa pública.
 Não há fonte que defina preço, forma de pagamento ou remuneração desta parceria.
 
 > **[DECISÃO DA KAROL — investimento]** Escolher e precificar uma estrutura:
-> **A. Fee fixo pelo piloto**, com limite de participantes, encontros, revisões e entregáveis;
+> **A. Fee fixo pelo desafio**, com limite de participantes, encontros, revisões e entregáveis;
 > **B. Fee fixo + componente variável**, somente com métrica, fórmula, fonte de dados, janela de atribuição, cancelamento e pagamento definidos em contrato;
 > **C. Atuação dentro do escopo já remunerado de mentora**, apenas se houver acordo vigente que cubra claramente este trabalho e sua capacidade.
 > **Valor:** [DECISÃO DA KAROL]
@@ -449,7 +446,7 @@ Não há fonte que defina preço, forma de pagamento ou remuneração desta parc
 
 ## 17. Propriedade intelectual, dados e uso de cases
 
-> **[DECISÃO DA KAROL/EURILER]** Formalizar antes do piloto:
+> **[DECISÃO DA KAROL/EURILER]** Formalizar antes do desafio:
 
 - quem é dono dos templates e agentes criados por Karol;
 - licença de uso dentro da Arcane/Auroq;
@@ -460,7 +457,7 @@ Não há fonte que defina preço, forma de pagamento ou remuneração desta parc
 - autorização específica para depoimentos e cases;
 - aprovação conjunta antes de divulgar números ou resultados.
 
-Nenhum case deve ser publicado apenas porque foi gerado dentro do piloto.
+Nenhum case deve ser publicado apenas porque foi gerado dentro do desafio.
 
 ---
 
@@ -468,15 +465,14 @@ Nenhum case deve ser publicado apenas porque foi gerado dentro do piloto.
 
 Uma reunião de decisão entre Karol e Euriler para fechar somente os pontos que mudam o escopo:
 
-1. objeto: alunos, operação própria ou híbrido;
-2. público e critérios de entrada;
-3. tamanho do piloto;
-4. profundidade da execução;
-5. time e recursos disponíveis;
-6. calendário e T0;
-7. dados e indicadores;
-8. investimento;
-9. propriedade intelectual e uso de cases.
+1. critérios de admissão do grupo já definido como público;
+2. tamanho do desafio;
+3. profundidade da execução;
+4. time e recursos disponíveis;
+5. calendário e T0;
+6. dados e indicadores;
+7. investimento;
+8. propriedade intelectual e uso de cases.
 
 Depois dessas decisões, Karol entrega a versão final do escopo e o calendário relativo convertido em datas reais.
 
@@ -484,18 +480,19 @@ Depois dessas decisões, Karol entrega a versão final do escopo e o calendário
 
 ## 19. Mensagem curta de apresentação
 
-> Euriler, depois da imersão de Black Friday eu conectei o conteúdo com um feedback que já tinha te dado sobre o Auroq: a IA aumenta muito a capacidade de produção, mas isso não garante que o aluno saia da operação e venda. Estruturei uma proposta de piloto para transformar a Black Friday num sprint de implementação dentro da Arcane — com diagnóstico de prontidão, oferta, segmentação, plano executável e acompanhamento, sem prometer resultado nem colocar todo mundo na mesma campanha. Minha atuação seria complementar à tua: você entra com direção e repertório; eu organizo o método e a implementação para o aluno chegar ao mercado. Quero te mostrar o desenho e decidir contigo se faz sentido testar com um grupo pequeno.
+> Euriler, depois da imersão de Black Friday eu conectei o conteúdo com um feedback que já tinha te dado sobre o Auroq: a IA aumenta muito a capacidade de produção, mas isso não garante que o aluno saia da operação e venda. Estruturei uma proposta de desafio para um grupo selecionado de alunos da Arcane/Auroq que demonstrarem interesse e forem admitidos — com diagnóstico de prontidão, oferta, segmentação, plano executável e acompanhamento, sem prometer resultado nem colocar operações despreparadas na mesma rota. Eu administro o grupo e organizo o método e a implementação para o aluno chegar ao mercado; você entra com direção e repertório.
 
-> **[DECISÃO DA KAROL]** Antes de usar a mensagem: confirmar se pode mencionar nominalmente Auroq e Arcane; substituir “grupo pequeno” pelo limite aprovado; e decidir se enviará documento antes ou depois da conversa.
+> **Registro:** proposta já enviada a Euriler. Esta mensagem fica como referência documental; não reenviar sem nova decisão da Karol.
 
 ---
 
 ## 20. Decisões pendentes — checklist da Karol
 
-- [ ] Objeto A, B ou C.
+**Já fechado:** objeto = desafio para um grupo selecionado de alunos da Arcane/Auroq que demonstrarem interesse e forem admitidos; todos os interessados elegíveis admitidos ficam em um grupo administrado pela Karol.
+
 - [ ] Nome final do sprint.
 - [ ] Público e critérios obrigatórios de entrada.
-- [ ] Tamanho máximo do piloto.
+- [ ] Tamanho máximo do desafio.
 - [ ] Profundidade: arquitetura, done-with-you limitado ou execução pelo time Arcane.
 - [ ] Número e formato de encontros/checkpoints.
 - [ ] Limite de revisões e ativos por operação.
@@ -541,4 +538,4 @@ Timestamps conferidos na transcrição integral `transcricao-completa.md`; núme
 
 ---
 
-**Nota final para Karol:** esta versão é comercialmente apresentável como base de conversa, mas ainda não é uma proposta contratual. Os campos `[DECISÃO DA KAROL]` existem justamente para impedir que hipótese vire compromisso.
+**Nota final para Karol:** proposta enviada e aguardando retorno; ainda não é instrumento contratual. Os campos `[DECISÃO DA KAROL]` restantes existem justamente para impedir que hipótese vire compromisso.

@@ -3,21 +3,23 @@ Versão: 1.0 (Aprovado) | Fase 9 do Mentoring Creator | Gate: QG-MC-010 ✅
 
 > O programa já está rodando (Milena e David) — isso não é um checklist de "lançar do zero", é o que falta produzir/ajustar pra fechar os gaps encontrados ao longo das 9 fases.
 
+> **Decisão confirmada na weekly de 02/09:** executar **nesta semana** a próxima leva objetiva nesta ordem: fechar o contrato de 12 meses, atualizar a mensagem de boas-vindas e definir as regras de uso do WhatsApp. Não perguntar novamente se os três itens devem ser feitos; eles continuam desmarcados apenas até a execução ser realmente concluída.
+
 ---
 
 ## P1 — Bloqueia (afeta a entrada de um novo aluno agora)
 
 - [x] **Nova página de onboarding** (substitui o PDF "Onboarding Simplificado V1", desatualizado) — publicada em **onboarding.incubadoradeexpert.com.br** (31/08). Construída com o Squad LPago Arcane, arquivos em `business/campanhas/lp-onboarding-incubadora/` — origem: Fase 5
-- [ ] **Mensagem de boas-vindas atualizada** com os links da nova página de onboarding (`onboarding.incubadoradeexpert.com.br`) e da área de membros (`membros.incubadoradeexpert.com.br`) — origem: Fase 5
+- [ ] **Mensagem de boas-vindas atualizada** com os links da nova página de onboarding (`onboarding.incubadoradeexpert.com.br`) e da área de membros (`membros.incubadoradeexpert.com.br`) — execução confirmada na weekly de 02/09; origem: Fase 5
 - [x] **Confirmar e documentar o novo link** do formulário de diagnóstico (DNA do Expert) — `dna.incubadoradeexpert.com.br`, confirmado pela Karol em 30/08 — origem: Fase 5
-- [ ] **Contrato de 12 meses** — o único contrato encontrado no Drive é "Mod 6M" (que é do Sprint do Método, produto diferente). Confirmar/criar a versão de 12 meses com os add-ons (ferramentas R$1.000, tráfego R$1.500) refletidos — origem: Fase 7
+- [ ] **Contrato de 12 meses** — o único contrato encontrado no Drive é "Mod 6M" (que é do Sprint do Método, produto diferente). Confirmar/criar a versão de 12 meses com os add-ons já documentados refletidos — execução confirmada na weekly de 02/09; origem: Fase 7
 
 ## P2 — Importante (não trava o dia 1, mas precisa existir antes de alguém chegar lá)
 
 - [ ] **Criar o arquivo M3.5 (Rastreador de Leads)** no `_template/` — a ferramenta é citada e usada na Sessão 6 (Fase 4) e no `crm-comercial.md` da Milena, mas nunca existiu como documento formal no template — origem: Fase 4
 - [ ] **Melhorar a planilha Expert Plan** (plano de continuidade, usado na Sessão 14) — link: https://docs.google.com/spreadsheets/d/1T8hHRb1IRXDuRElpUwNKa8tHWuVxWp_g6gyPUB5vHpE/edit — origem: Fase 7
 - [ ] **Preencher dados reais da pasta do David** (`mentoria/alunas/david-rose/`) — contato, progresso atual, caminho da pasta no Drive (a estrutura já existe, criada na Fase 8) — origem: Fase 8
-- [ ] **Definir regras de uso do canal WhatsApp** — além do horário já fechado (dias úteis, 9h-18h), falta decidir o que pode ser mandado por lá vs. o que espera a próxima sessão — origem: Fase 5
+- [ ] **Definir regras de uso do canal WhatsApp** — além do horário já fechado (dias úteis, 9h-18h), falta decidir o que pode ser mandado por lá vs. o que espera a próxima sessão — execução confirmada na weekly de 02/09; origem: Fase 5
 
 ## P3 — Nice to Have
 
