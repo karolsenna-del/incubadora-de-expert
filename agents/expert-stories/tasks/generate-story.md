@@ -37,6 +37,10 @@ Encontro individual ou Sessão estratégica) — esses SEMPRE viram Story do que
 mesmo em dia de catálogo rotativo. Perguntar à Karol se algum desses aconteceu hoje antes de
 puxar o catálogo rotativo.
 
+**Exceção determinística de quarta:** se o roteiro da live da semana existe, a live já é o
+compromisso do dia — não pedir confirmação. Produzir a sequência com antecedência, mas manter na
+fila e só publicar depois da live.
+
 ### Step 2: Se for Levantada de Mão — Checar o Ciclo de Ofertas
 
 Ler o Mission Log (`data/expert-stories-missions.md`) pra saber em que semana do ciclo de 5
@@ -80,6 +84,18 @@ Consultar a classificação visual no catálogo:
   foto/vídeo rápido de você trabalhando ou numa sessão")
 - Escrever só o texto de apoio (legenda/overlay) pra ela aplicar em cima da própria mídia
 
+**Quarta de live — fallback sem foto/vídeo:**
+1. Procurar primeiro foto/vídeo real da live da semana.
+2. Se não houver, abrir o HTML da apresentação `lives-semanais/live-N-apresentacao.html` e
+   identificar autonomamente o slide que melhor representa o ponto principal do roteiro. Dar
+   preferência ao slide de síntese/diagnóstico que ensina a tese central; não escolher capa,
+   convite, pitch ou CTA quando houver um slide de conteúdo equivalente.
+3. Capturar esse slide em 16:9 e enquadrá-lo sem corte num canvas 1080x1920. Usá-lo como asset
+   central da sequência pós-live (abertura contextualizando → slide real → ensinamento literal).
+4. Fazer isso sem parar nem pedir input ou confirmação à Karol. Só parar se o roteiro ou o HTML
+   não existir, porque aí falta fonte e não é permitido inventar.
+5. Pode preparar antes, mas publicação/disparo do workflow continua vetado até depois da live.
+
 ### Step 6: Entregar
 
 ```
@@ -103,5 +119,6 @@ aplicável), se precisou perguntar dado real, se teve algum ajuste da Karol.
 | Condição | Ação |
 |---|---|
 | Formato pede prova numérica sem dado real disponível | PARAR, perguntar à Karol — nunca inventar |
-| Dia tem compromisso fixo não confirmado (live, mentoria, encontro) | Perguntar antes de puxar catálogo rotativo |
+| Mentoria/encontro condicional não confirmado | Perguntar antes de puxar catálogo rotativo; a live semanal com roteiro existente não entra neste veto |
+| Quarta de live sem foto/vídeo real | Usar automaticamente o slide principal do HTML da apresentação, sem pedir confirmação; publicar somente depois da live |
 | Template Stories não existe no Squad Carrossel Arcane | Não deveria acontecer — template `story-texto` já existe desde 13/08. Se sumiu, avisar a Karol e sugerir `*add-template` de novo lá |

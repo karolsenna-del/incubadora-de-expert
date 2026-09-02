@@ -102,8 +102,13 @@ sentido). Isso é 🔴 quando usa foto real da pasta assets, mesmo sendo texto+f
 (não gerada do zero) — não fabricar frase que não esteja no roteiro.
 **Aplica quando:** Todo compromisso de quarta-feira (live Expert360º) — checar
 `business/campanhas/lives-semanais/live-N-roteiro.md` e a pasta `assets/` correspondente antes
-de perguntar à Karol o que postar. Se a pasta de assets da semana não tiver foto/vídeo real,
-perguntar à Karol antes de usar template genérico de texto.
+de decidir o que postar. Se não houver foto/vídeo real, abrir o HTML da apresentação
+`live-N-apresentacao.html`, identificar autonomamente o slide que melhor representa o ponto
+principal do roteiro e capturá-lo como asset real. Priorizar síntese/diagnóstico/tese central,
+evitando capa, convite, pitch e CTA quando houver slide de conteúdo. Seguir sem parar nem pedir
+input ou confirmação à Karol. Só bloquear se faltar também o roteiro ou o HTML da apresentação;
+nunca inventar conteúdo para preencher a ausência. A sequência pode ficar pronta antes, mas só
+é publicada depois da live.
 
 **Objetivo do slot (alinhado 18/08, após a Karol perguntar "serve pra quê?"):** é o mesmo
 objetivo do formato **Você no Game** do catálogo — prova de autoridade via bastidor real
