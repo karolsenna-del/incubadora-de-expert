@@ -1,7 +1,7 @@
 # Live 28 — "Você tá pronta pra sua Black Friday?"
 
 > Tema: Diagnóstico de Prontidão pra Black Friday. Insight extraído de uma imersão externa de
-> 2 dias com Leandro Ferrari (29-30/08), traduzido pro tamanho real da Laura — que muitas vezes
+> 1 dia com Leandro Ferrari, traduzido pro tamanho real da Laura — que muitas vezes
 > ainda não tem produto validado nem base, diferente do público padrão desse tipo de imersão.
 > Conecta com a tese "sem lançamentos"/Vendas Secretas: condição real e justificável, não
 > desconto forçado ("Black Fraud").
@@ -16,18 +16,18 @@
 ## PARTE 1 — NARRATIVA (~7 min)
 
 **Gancho de abertura:**
-"Esse mês seu feed vai lotar de 'ESQUENTA BLACK FRIDAY'. Antes de você postar um, eu preciso
-te perguntar uma coisa que ninguém tá perguntando: você tá pronta pra fazer Black Friday esse
-ano? Ou vai só imitar o que todo mundo tá fazendo?"
+"Você sabe fazer campanha de Black Friday ou acha que é só dar desconto no seu produto?"
 
 Deixar o chat reagir antes de seguir.
 
-**História real (documentada — feedback já dado ao Euriler):**
-"Fim de semana passado eu passei 2 dias inteiros numa imersão sobre Black Friday, com o
-Leandro Ferrari. Muita coisa boa, muita tática. Mas o que mais ficou pra mim não foi tática de
-anúncio. Foi confirmar um alerta que eu já tinha dado, faz tempo, pro Euriler — meu mentor
-dentro da Arcane. Eu falei pra ele: a ferramenta de IA aumenta muito a capacidade de produzir
-de quem usa. Mas ela não garante que a pessoa venda. Dá braço. Não dá venda."
+**A imersão e a ficha que caiu:**
+"Fim de semana passado eu passei 1 dia numa imersão sobre Black Friday, com o Leandro Ferrari.
+Na imersão caiu a ficha: Black Friday não é para todo mundo. Depende de timing — do momento do
+produto, da base e da oferta."
+
+**Minha história — Black Expert:**
+"A minha Black Expert do ano passado foi improvisada. Eu entrei na data sem uma campanha
+estruturada e com uma oferta fraca. A data, sozinha, não corrigiu o que faltava na estratégia."
 
 **Frase-âncora:**
 "IA dá braço. Não dá venda. E Black Friday sem prontidão não é oportunidade — é Black Fraud
@@ -62,8 +62,8 @@ que mudou."
   ter saído do papel)
 - Alguma base ou audiência que te conhece — mesmo pequena (ex-clientes, seguidores engajados,
   grupo, lista)
-- Condição real: se você desse um desconto ou bônus hoje, ele seria verdadeiro (você ainda
-  ganha margem, ainda entrega bem) — ou seria inventado só pra ter algo pra postar?
+- Oferta ousada, fora do normal: forte o bastante para justificar a campanha e fazer a pessoa
+  perceber que aquela não é uma oferta comum.
 
 **Princípio 2 — "Black Fraud" é a armadilha que a pressa cria:**
 "A crítica mais forte que ouvi na imersão foi essa: condição fraca, empilhada, sem
@@ -72,15 +72,20 @@ método tem MAIS chance de cair nisso, porque a pressão de 'todo mundo tá faze
 clareza do que realmente pode oferecer."
 
 **Princípio 3 — segmentação simples (mesmo com base pequena):**
-"Mesmo com pouca gente, dá pra separar quem já te conhece (aluna, ex-cliente) de quem tá
-descobrindo agora. A mensagem pra cada um é diferente — pra quem já comprou, a conversa é
-continuidade; pra quem nunca comprou, a conversa é primeiro contato. Antecipar essa
-diferença evita fazer uma Black Friday genérica que não fala direito com ninguém."
+"A campanha também muda conforme a relação com a pessoa. Para quem já é aluno, a Black Friday
+pode ser uma campanha de ascensão: uma próxima oferta coerente com o caminho que ele já percorreu.
+Para quem ainda não é aluno, é uma campanha de oferta: uma entrada clara para quem ainda não
+comprou de você. São públicos em momentos diferentes — e pedem campanhas diferentes."
+
+**Princípio 4 — perigo da oferta perpétua para quem está começando:**
+"Se você ainda não tem certeza da estrutura e da operação futura, cuidado ao vender acesso
+perpétuo. Você pode criar uma promessa que a sua capacidade de entrega não consegue sustentar.
+Perpétuo não é só argumento de venda; é uma obrigação operacional de longo prazo."
 
 **Passo a passo — Diagnóstico de Prontidão (o que vai virar a Prática):**
 1. Eu tenho produto/oferta que já vendeu pelo menos uma vez? (sim/não)
 2. Eu tenho alguma base — mesmo pequena — que me conhece? (sim/não)
-3. Se eu desse uma condição real hoje, ela seria verdadeira ou inventada? (verdadeira/inventada)
+3. Minha oferta é ousada e fora do normal o suficiente para justificar uma Black Friday? (sim/não — por quê)
 
 > **Spoiler do pitch** (colocar no pico de atenção, fim desta parte):
 > "É exatamente esse tipo de raio-x que eu faço na Auditoria do Método + criação de
@@ -101,8 +106,7 @@ diferença evita fazer uma Black Friday genérica que não fala direito com ning
 1. Eu tenho um produto ou oferta que já vendeu pelo menos uma vez? Se sim, qual.
 2. Eu tenho alguma base que me conhece — mesmo pequena? Se sim, mais ou menos qual tamanho
    (ex-clientes, seguidores engajados, grupo, lista).
-3. Se eu desse uma condição de Black Friday hoje, ela seria verdadeira (eu ainda ganho margem,
-   ainda entrego bem) ou inventada (só pra ter algo pra postar)?"
+3. Minha oferta é ousada e fora do normal o suficiente para justificar uma Black Friday? Por quê?"
 
 **Dar 2-3 min de escrita.**
 
@@ -123,12 +127,10 @@ Porque ela é sua, não é imitação de operação que não é a sua."
 
 ## PARTE 4 — PROVA RACIONAL + PITCH (~6-7 min)
 
-**Prova Racional (estrutural, sem depoimento nem número inventado):**
-"Hoje eu tenho 7 ofertas rodando no meu negócio. Nenhuma nasceu pronta — todas nasceram de
-validação, uma de cada vez. Foi assim que eu paguei pra participar de uma imersão de 2 dias
-sobre Black Friday e voltei confirmando algo que eu já sabia: ferramenta e tática não
-substituem prontidão. Prontidão se constrói antes, com validação — não se inventa em cima da
-data."
+**Prova Racional (história própria):**
+"A minha Black Expert do ano passado mostrou isso na prática: campanha improvisada e oferta
+fraca não ficam fortes só porque chegou novembro. Hoje eu consigo enxergar que Black Friday
+depende de timing, de uma oferta ousada e de uma operação capaz de sustentar o que promete."
 
 **Pitch:**
 "É por isso que existe a Auditoria do Método + criação de ferramentas. Eu analiso tudo que
@@ -158,8 +160,7 @@ como funciona.
 1. **Produto validado** — já vendeu pelo menos uma vez (não precisa ser um sucesso, precisa
    ter saído do papel)
 2. **Base que te conhece** — mesmo pequena (ex-clientes, seguidores engajados, grupo, lista)
-3. **Condição real** — desconto/bônus verdadeiro (ainda ganha margem, ainda entrega bem), não
-   inventado só pra ter algo pra postar
+3. **Oferta ousada** — fora do normal e forte o bastante para justificar a campanha
 
 ---
 
@@ -168,13 +169,11 @@ como funciona.
 - [ ] Confirmar CTA final antes da live: AUDITORIA (chat → direct) ou o Desafio de Black
       Friday da Arcane, se já estiver fechado até lá
 - [x] Confirmado (01/09): pode nomear o Leandro Ferrari e a imersão publicamente na live
-- [ ] História "feedback dado ao Euriler sobre IA/venda" confirmada como âncora — já está
-      documentada em `business/propostas/proposta-black-friday-euriler.md`; registrar também
-      em `lives-expert360-roteiros.md` após a live, se ainda não constar
+- [x] História da Black Expert do ano passado: campanha improvisada e oferta fraca
 - [ ] Duração ~28-31 min está no padrão recente — se precisar encurtar, cortar o Princípio 3
       (segmentação) da Execução e ir direto pro passo a passo
 - [x] Confirmado (01/09): terá slide dos 3 pilares de prontidão (produto validado / base /
-      condição real) — ver seção "Material de apoio" acima
+      oferta ousada) — ver seção "Material de apoio" acima
 - [x] Tema confirmado pela Karol (01/09): "Você tá pronta pra sua Black Friday?"
 
 ---
@@ -187,8 +186,7 @@ como funciona.
 - [x] Duração estimada por bloco (total ~28-31 min)
 - [x] Tom da Karol — direto, acolhedor, com vulnerabilidade estratégica (reconhece que a
       imersão foi feita pra operação maior que a da própria audiência)
-- [x] Histórias pessoais ancoradas — feedback real já documentado dado ao Euriler
-      (`proposta-black-friday-euriler.md`), sem invenção
+- [x] História pessoal ancorada — Black Expert do ano passado improvisada, com oferta fraca
 - [x] Spoiler do pitch presente na Parte 2 — específico da oferta desta live
 - [x] Pitch é conclusão natural, não bloco separado
 - [x] Conexão com método Expert360 explícita (filosofia Vendas Secretas/"sem lançamentos" —
