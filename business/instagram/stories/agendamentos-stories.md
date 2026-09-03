@@ -18,3 +18,4 @@
 | 31/08/2026 | gerar-valor-metodo-autoral-2026-08-31 | 1 | 18164524012414660 | sim (ver log de execucao) |
 | 01/09/2026 | sprint-metodo-terca-2026-09-01 | 1 | 18076718426391579 | sim (ver log de execucao) |
 | 02/09/2026 | live-28-black-friday-2026-09-02 | 3 | 18100667708631772, 18110212613110576, 17909938494463302 | sim (ver log de execucao) |
+| 03/09/2026 | sprint-metodo-quinta-2026-09-03 | 1 | 18115522393971833 | sim (ver log de execucao) |
