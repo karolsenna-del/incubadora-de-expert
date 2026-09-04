@@ -78,6 +78,30 @@ emergência antes da expiração de 29/08).
 
 ---
 
+### RULE-4: Erro 9004 (falha ao baixar mídia) é transiente — retry via workflow_dispatch resolve
+**Incidente:** `qui-1-hora-por-semana-metodo` (agendado 30/08 pra 03/09 20h BRT) rodou às 21h30 BRT
+(atraso normal do cron, ver nota abaixo) e falhou no 4º slide com erro 9004 da Meta API:
+`"Only photo or video can be accepted as media type"` / `"Falha ao baixar mídia"`. A URL do
+Cloudinary (`slide-04.png`) foi testada manualmente depois (`curl -I`) e respondeu 200 OK com a
+imagem correta — não era problema do arquivo nem da conta Cloudinary, foi falha pontual da Meta
+ao buscar aquela URL especificamente naquele instante.
+**Regra:** Erro 9004 (diferente do 9007 da RULE-2, que é corrida de processamento) é transiente
+de rede/infra da Meta, não de conteúdo. Antes de qualquer alteração de slides/legenda/cron:
+1. Testar a URL do Cloudinary do slide que falhou (`curl -I {url}`) — SE 200 OK, o arquivo está
+   intacto.
+2. Disparar o mesmo workflow de novo via `gh workflow run post-{slug}.yml` (usa o
+   `workflow_dispatch:` que todo workflow já tem) — não precisa editar cron nem esperar o
+   próximo dia. Roda em minutos e reusa exatamente as mesmas URLs/legenda já validadas.
+3. Só investigar Cloudinary/conteúdo se o retry falhar de novo com o MESMO erro.
+**Nota sobre atraso de cron:** workflows agendados por `on: schedule` neste repo consistentemente
+disparam 1h50-2h30 depois do horário marcado no cron (observado em pelo menos 4 posts de
+agosto/setembro/2026) — é comportamento documentado do GitHub Actions em horários de pico, não é
+bug do workflow. Não estranhar nem tentar "consertar" o cron por causa disso; se precisar do
+horário exato, disparar manualmente via `workflow_dispatch` em vez de confiar no `schedule`.
+**Adicionada em:** 2026-09-04
+
+---
+
 ## Histórico de Incidentes
 
 - 2026-07-11 — Desafio 10 Dias (Dias 5, 6 e 7): legendas chegavam soltas no chat e os slides
