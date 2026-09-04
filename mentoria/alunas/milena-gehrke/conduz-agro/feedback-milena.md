@@ -6,7 +6,12 @@
 
 ## Pendentes
 
-*(nenhum — rodada de 02/09/2026 integralmente aplicada e testada)*
+- [ ] 04/09/2026 — S11/S12 — Karol achou as duas sessões parecidas demais (mesmo exercício: Mapa do Caso avançado aplicado a caso com múltiplos envolvidos). Em stand by, sem decisão ainda.
+  → Alternativas discutidas:
+    1. **Triagem estratégica (sugestão do agente):** S12 usa os casos já mapeados em S9-S11 pra treinar o julgamento "isso é só leitura/organização" x "isso já passou do limite e precisa de mediação/encaminhamento" — sem repetir o exercício de preencher o Mapa do Caso do zero, e sem duplicar a S15.
+    2. **Aprofundar mediação de conflitos:** descartada por ora — duplicaria a S15, que já tem "plano de mediação" como entregável central. Exigiria redesenhar a S15 junto.
+    3. **Aprofundar posicionamento e vendas:** descartada por ora — duplicaria toda a sub-fase 2.3 (S17-S20), que já é dedicada a isso. Exigiria redesenhar a sub-fase inteira.
+  → Karol vai pensar mais antes de decidir a direção.
 
 ## Resolvidos
 
