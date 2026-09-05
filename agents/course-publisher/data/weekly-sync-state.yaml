@@ -9,7 +9,12 @@ live_expert360:
   ultimo_processado_titulo: "Live Expert360 - 2026/08/19 13:58 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-19T19:10:58.082Z"  # createdTime do arquivo no Drive (Live 26)
   proximo_numero: 27
-  ultima_execucao: "2026-08-27"
+  ultima_execucao: "2026-09-03"
+  # 03/09/2026 (2ª rodada, missão #22, disparada via /course-publisher + weekly-sync.md direto):
+  # reconfirmado — sem gravação nova em nenhuma das duas raízes, próxima gravação esperada segue
+  # sendo Live 27.
+  # 03/09/2026 (missão #21, disparo autônomo REGRA-015): reconfirmado — sem gravação nova em
+  # nenhuma das duas raízes, próxima gravação esperada segue sendo Live 27.
   # 27/08/2026 (2ª rodada, missão #20, mesmo dia): reconfirmado — sem gravação nova em nenhuma
   # das duas raízes, próxima gravação esperada segue sendo Live 27.
   # 27/08/2026 (missão #19): sem gravação nova em nenhuma das duas raízes (pasta clássica e
@@ -44,7 +49,13 @@ live_expert360:
 mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/03 14:00 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-03T22:34:41Z"  # createdTime do arquivo no Drive
-  ultima_execucao: "2026-08-27"
+  ultima_execucao: "2026-09-03"
+  # 03/09/2026 (2ª rodada, missão #22, disparada via /course-publisher + weekly-sync.md direto):
+  # reconfirmado — mesmo falso positivo do arquivo de 03/08 (precisão de timestamp), nenhuma
+  # gravação nova real; "Encontro Incubadora (recurring)" continua sem existir na raiz nova.
+  # 03/09/2026 (missão #21, disparo autônomo REGRA-015): reconfirmado — mesmo falso positivo do
+  # arquivo de 03/08 (precisão de timestamp, já conhecido desde a missão #15), nenhuma gravação
+  # nova real; "Encontro Incubadora (recurring)" continua sem existir na raiz nova.
   # 27/08/2026 (2ª rodada, missão #20, mesmo dia): reconfirmado de novo — mesmo falso positivo do
   # arquivo de 03/08 (precisão de timestamp, já conhecido desde a missão #15), nenhuma gravação
   # nova real; "Encontro Incubadora (recurring)" continua sem existir na raiz nova.
@@ -64,7 +75,16 @@ mentoria_em_grupo:
 encontros_individuais:
   ultimo_processado_titulo: null
   ultimo_processado_data: null
-  ultima_execucao: "2026-08-27"
+  ultima_execucao: "2026-09-03"
+  # 03/09/2026 (2ª rodada, missão #22, disparada via /course-publisher + weekly-sync.md direto):
+  # reconfirmado — nenhum arquivo com prefixo "Individual -" em nenhuma raiz. Raiz "Google Meet"
+  # segue só com pastas "Milena - ..." (nome da aluna + hora), mesmo achado da missão #17 —
+  # decisão da Karol/Gestor de Infra Arcane sobre ajustar filtro ou renomear manualmente segue
+  # pendente, não mexido aqui.
+  # 03/09/2026 (missão #21, disparo autônomo REGRA-015): reconfirmado — nenhum arquivo com
+  # prefixo "Individual -" em nenhuma raiz. Raiz "Google Meet" segue só com pastas "Milena - ..."
+  # (nome da aluna + hora), mesmo achado da missão #17 — decisão da Karol/Gestor de Infra Arcane
+  # sobre ajustar filtro ou renomear manualmente segue pendente, não mexido aqui.
   # 27/08/2026 (2ª rodada, missão #20, mesmo dia): reconfirmado — nenhum arquivo com prefixo
   # "Individual -" em nenhuma raiz. Achado da missão #17 (Meet nomeia pastas 1:1 pelo nome da
   # aluna, não pelo padrão combinado) segue pendente de decisão da Karol/Gestor de Infra Arcane.
