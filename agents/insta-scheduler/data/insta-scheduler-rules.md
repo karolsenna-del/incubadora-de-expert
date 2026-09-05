@@ -78,15 +78,25 @@ emergência antes da expiração de 29/08).
 
 ---
 
-### RULE-4: Erro 9004 (falha ao baixar mídia) é transiente — retry via workflow_dispatch resolve
+### RULE-4: Erro 9004 (falha ao baixar mídia) virou padrão recorrente nos posts das 20h — retry via workflow_dispatch resolve
 **Incidente:** `qui-1-hora-por-semana-metodo` (agendado 30/08 pra 03/09 20h BRT) rodou às 21h30 BRT
 (atraso normal do cron, ver nota abaixo) e falhou no 4º slide com erro 9004 da Meta API:
 `"Only photo or video can be accepted as media type"` / `"Falha ao baixar mídia"`. A URL do
 Cloudinary (`slide-04.png`) foi testada manualmente depois (`curl -I`) e respondeu 200 OK com a
 imagem correta — não era problema do arquivo nem da conta Cloudinary, foi falha pontual da Meta
 ao buscar aquela URL especificamente naquele instante.
+**Repetiu no dia seguinte:** `sex-5-frases-parar-de-dizer` (mesma leva, agendado 30/08 pra 04/09
+20h BRT) rodou às 21h48 BRT e falhou da MESMA forma (erro 9004, agora no slide-02). URL também
+testada e válida (200 OK). **2 casos seguidos, ambos nos posts das 20h da leva Rota100k Semana 05
+(todos com slides subidos ao Cloudinary no mesmo dia, 30/08), ambos resolvidos de primeira com
+`workflow_dispatch`.** Hipótese não confirmada: pode haver contenção/rate-limit no fetch da Meta
+especificamente no horário de pico (~21h30-22h BRT) em que os crons atrasados disparam em lote —
+não é causa raiz comprovada, só um padrão observado. Enquanto a leva Semana 05 não terminar
+(faltam 05/09 e 06/09 às 20h), **checar `gh run list --workflow=post-{slug}.yml` na manhã seguinte
+de cada post** em vez de assumir que rodou certo.
 **Regra:** Erro 9004 (diferente do 9007 da RULE-2, que é corrida de processamento) é transiente
-de rede/infra da Meta, não de conteúdo. Antes de qualquer alteração de slides/legenda/cron:
+de rede/infra da Meta, não de conteúdo, MESMO quando se repete em dias seguidos — a URL segue
+íntegra nos dois casos confirmados. Antes de qualquer alteração de slides/legenda/cron:
 1. Testar a URL do Cloudinary do slide que falhou (`curl -I {url}`) — SE 200 OK, o arquivo está
    intacto.
 2. Disparar o mesmo workflow de novo via `gh workflow run post-{slug}.yml` (usa o
