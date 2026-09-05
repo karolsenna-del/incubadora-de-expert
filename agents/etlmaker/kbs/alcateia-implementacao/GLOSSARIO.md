@@ -1,13 +1,19 @@
 # GLOSSÁRIO CONSOLIDADO — Alcateia Implementação
 **KB:** Alcateia Implementação — Vini Grevy  
 **Consolidado de:** todos os 7 volumes  
-**Produzido em:** 2026-05-29 (sincronizado com o Merge de 2026-06-13 — termos do Funil de Zoom)
+**Produzido em:** 2026-05-29 (sincronizado com o Merge de 2026-09-04 — termos da Aula de 8 Blocos)
 
 ---
 
 | Termo | Definição | Volume |
 |-------|-----------|--------|
 | **3x1** | Cadência de stories: 3 posts de conteúdo/relacionamento para 1 story de oferta | Social Selling / Conteúdo |
+| **5 Afirmações** | Técnica de quebra de objeção via IA: pedir as 10 maiores objeções do público-alvo e condensar em 5 afirmações que as respondem, uma a uma, ao vivo | Funil de Vendas |
+| **Acordo** | Bloco 1 da Aula de 8 Blocos — contrato inicial: quem você é e o que vai entregar na aula | Funil de Vendas |
+| **Aula de 8 Blocos** | Roteiro de aula de vendas em 8 blocos: Acordo → Filtro de Leads → Dor e Eventos → Tira a Culpa do Lead → Autoridade Imediata/Método → 5 Afirmações → Projeção do Cliente → Pitch + Oferta | Funil de Vendas |
+| **Bônus Único** | Regra de oferta: apenas 1 bônus, nunca vários — o bônus não pode valer mais que o produto principal | Funil de Vendas |
+| **Decisão Mais Inteligente** | Framing de fechamento: apresentar 2 caminhos (executar sozinho vs. ter acompanhamento) — efeito de copy, não alegação de resultado | Funil de Vendas |
+| **Filtro de Pré-requisito** | Critério de qualificação anunciado na oferta (ex: mínimo R$500/semana em tráfego) — sinaliza orçamento do lead pro ticket cobrado | Funil de Vendas |
 | **4 Escalas** | As 4 formas de monetização de conhecimento: mentoria individual, prestação de serviço, grupo, infoproduto/recorrência | Fundamentos |
 | **Agente de Conteúdo** | IA treinada com 600+ carrosseis para produzir conteúdo viral e de dor — exclusivo mentorados L2/L3 | Conteúdo |
 | **Alcateia** | Produto mentoria/comunidade de Vini Grevy para experts digitais | — |

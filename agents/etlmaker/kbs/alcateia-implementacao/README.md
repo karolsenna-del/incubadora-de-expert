@@ -1,9 +1,9 @@
 # KB — Alcateia Implementação
 **Expert:** Vini Grevy  
 **Produto:** Alcateia Implementação (vinigrevy.memberkit.com.br)  
-**Versão KB:** 1.1  
+**Versão KB:** 1.2  
 **Produzida por:** ETLmaker v3.0  
-**Data:** 2026-05-29 (atualizada 2026-06-13 — Merge Funil de Zoom; validada 2026-07-12)  
+**Data:** 2026-05-29 (atualizada 2026-09-04 — Merge Aula de 8 Blocos; validada 2026-07-12)  
 
 ---
 
@@ -11,7 +11,7 @@
 
 Esta Knowledge Base contém o conhecimento tratado do curso **Alcateia Implementação** de Vini Grevy — um sistema de implementação para experts que querem construir um negócio digital previsível a partir do seu conhecimento.
 
-A KB foi extraída de 92 transcrições de aulas (de 94 disponíveis) e organizada em 7 volumes temáticos por um pipeline ETL completo. Em 13/06/2026 recebeu, via Merge, a aula de imersão **Funil de Zoom** (curso Funil Vinizoom) — que enriqueceu os volumes de Funil de Vendas e Conteúdo com o funil de aula ao vivo e a técnica de pitch no meio da live.
+A KB foi extraída de 92 transcrições de aulas (de 94 disponíveis) e organizada em 7 volumes temáticos por um pipeline ETL completo. Em 13/06/2026 recebeu, via Merge, a aula de imersão **Funil de Zoom** (curso Funil Vinizoom) — que enriqueceu os volumes de Funil de Vendas e Conteúdo com o funil de aula ao vivo e a técnica de pitch no meio da live. Em 04/09/2026 recebeu, via Merge, as aulas **Aula de 8 Blocos** e **Condução** (curso Funil de 1 Dia) — que detalham o roteiro interno da aula de vendas e os macetes de condução ao vivo (VOL-funil-vendas, seção 13).
 
 ---
 

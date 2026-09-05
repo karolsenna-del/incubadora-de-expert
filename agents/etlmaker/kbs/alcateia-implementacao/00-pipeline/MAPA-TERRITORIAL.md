@@ -36,6 +36,13 @@ O corpus cobre 7 domínios principais organizados em sequência de implantação
 |-------|------|-------------------|--------|
 | pdfs-rotina-stories (12 PDFs semanais + playbook) | PDF visual (print + execução) | D4 (Conteúdo) — fecha o gap de Teia de Aranha visual | Rotina real de Stories aplicada semana a semana: 2 âncoras fixas (Domingo=Levantada de Mão, Sábado=Day Off) + catálogo de 20 formatos rotativos (Caixinha, Enquete Positiva, Dominando a Mente, Cantinho do Pensamento, Pico de Engajamento, Sequência, Isca Digital/Social Selling/Call, Você no Game, Teste de Tráfego, Depoimento ou Bastidor, entre outros). Scripts completos verbatim incorporados em VOL-conteudo.md seção 5 |
 
+### 1.3 Fonte Adicionada via Merge (04/09)
+
+| Fonte | Curso | Domínios afetados | Escopo |
+|-------|-------|-------------------|--------|
+| 96-funil-1dia-aula-8-blocos | Funil de 1 Dia (mesmo autor, Vini Grevy) | D5 (Funil de Vendas) | Roteiro detalhado da aula de vendas em 8 blocos (Acordo → Filtro → Dor e Eventos → Tira a Culpa → Autoridade Imediata → 5 Afirmações → Projeção do Cliente → Pitch/Oferta) — detalha a Etapa 3 do Funil de Zoom (ver VOL-funil-vendas seção 13) |
+| 97-funil-1dia-aula-conducao | Funil de 1 Dia | D5 (Funil de Vendas) | Macetes de condução ao vivo: foco no resultado, entregar o combinado, não ter dó de entregar conteúdo mesmo pra audiência pequena, revelar o quê sem revelar o como, fechamento "Decisão Mais Inteligente" |
+
 ---
 
 ## 2. BACKBONE — TENSÕES E PRINCÍPIOS ESTRUTURANTES
@@ -106,6 +113,7 @@ O backbone são as ideias que organizam toda a visão de mundo do método. Confl
 | **Remarketing em Camadas** | 5 conjuntos: 3/7/14/30/60 dias de engajamento. 80% verba aquisição, 20% remarketing. Mínimo: R$1k/mês | 87–89 | D7 |
 | **Funil de Zoom (Funil de Aula)** | Funil de captação + conversão via aula ao vivo semanal/quinzenal (Zoom, Meet ou similar). 4 etapas: Narrativa → Captação → Aula → Vendas. Roda orgânico ou pago. Efeito bola de neve acumula leads pra base evergreen | 95 | D5 |
 | **Aula de Conversão Imediata** | Estrutura de aula desenhada pra vender durante a própria aula: tema central objetivo → estrutura/narrativa → execução (com spoiler do pitch no meio, no pico de audiência) → prática → prova racional + pitch estendido. Contrasta com o modelo de mercado (aula → conteúdo → pitch só no final) | 95 | D4/D5 |
+| **Aula de 8 Blocos** | Roteiro granular de aula de vendas: Acordo → Filtro de Leads → Dor e Eventos → Tira a Culpa do Lead → Autoridade Imediata/Método → 5 Afirmações (quebra objeção via IA) → Projeção do Cliente → Pitch + Oferta (Promessa/Filtro/Estrutura/Bônus Único). Detalha a Etapa 3 do Funil de Zoom | 96 | D5 |
 
 ---
 
@@ -132,6 +140,9 @@ Regras que o corpus trata como inegociáveis — violá-las aparece associado a 
 | RC15 | **Produto deve resolver problema que é buscável no Instagram E segmentável em tráfego pago** | Critério de viabilidade de nicho (aula 11) |
 | RC16 | **Soltar o spoiler/pitch resumido no meio da aula — nunca esperar só o final** | No meio é o pico de audiência; o pitch do final pega quem já está saindo (aula 95) |
 | RC17 | **Página de obrigado do Funil de Zoom não pode ter nenhum link — link só chega via WhatsApp** | Autoqualifica o lead: quem cadastrou WhatsApp errado não recebe o link e não entra no grupo (aula 95) |
+| RC18 | **Evite falar preço durante a aula — direcione pro WhatsApp** | Preço vira objeção antes da pessoa entender o entregável completo; converte mais no WhatsApp. Prática padrão de Vini ("normalmente eu não falo preço"), não regra absoluta enunciada por ele (aula 96) |
+| RC19 | **Revele o que o lead deve fazer, nunca o como fazer passo a passo** | O "como" completo é o produto — entregar de graça na aula elimina o motivo de comprar (aulas 96, 97) |
+| RC20 | **Entregue o conteúdo da aula sem dó, mesmo pra audiência pequena** | 3–10 pessoas que pararam 1h pra ouvir geram autoridade real, que converte em algum momento (aula 97) |
 
 ---
 
@@ -183,6 +194,10 @@ Regras que o corpus trata como inegociáveis — violá-las aparece associado a 
 | **VSL** | Video Sales Letter = Aula Milionária. Hospedado no VTurb |
 | **VTurb** | Plataforma de hospedagem de vídeo com smart auto play, continuar assistindo e sem barra de progresso |
 | **3x1** | A cada 3 respostas de Stories, 1 oferta direta — cadência de abordagem no Instagram |
+| **Aula de 8 Blocos** | Roteiro de aula de vendas: Acordo, Filtro de Leads, Dor e Eventos, Tira a Culpa, Autoridade Imediata, 5 Afirmações, Projeção do Cliente, Pitch+Oferta |
+| **Acordo** | Bloco 1 da Aula de 8 Blocos — contrato inicial: quem você é e o que vai entregar |
+| **5 Afirmações** | Técnica de quebra de objeção via IA — pede as 10 maiores objeções do público e condensa em 5 afirmações que as respondem |
+| **Decisão Mais Inteligente** | Framing de fechamento: 2 caminhos (sozinho vs. acompanhamento) — efeito de copy, não é o motivo de compra |
 
 ---
 
@@ -199,6 +214,7 @@ Regras que o corpus trata como inegociáveis — violá-las aparece associado a 
 | **Checklist/Wrapup** | 05–06, 09, 17, 27, 44, 57, 84 | Alta — síntese das etapas | Artefatos de checklist, Quality Gates |
 | **Workshop externo (Carol)** | 92, 94 | Alta — experiência prática validada | VOL-social-selling (já produzido) |
 | **Imersão externa (Merge)** | 95 | Alta — experiência direta de Vini, funil validado desde 2024 em 50+ nichos | VOL-funil-vendas (estrutura do Funil de Zoom) + VOL-conteudo (técnica de pitch no meio da aula) |
+| **Curso externo (Merge)** | 96, 97 | Alta — mesmo autor (Vini Grevy), roteiro com exemplos de aulas reais que faturaram (R$100k–2M citados) | VOL-funil-vendas seção 13 (roteiro de 8 blocos + macetes de condução) |
 
 ### 7.2 Fontes ausentes e impacto
 
@@ -349,5 +365,22 @@ Ferramentas, templates e recursos referenciados no corpus que devem constar como
   "frameworks_mapeados_total": 21,
   "regras_cardinais_total": 17,
   "atualizado_em": "2026-06-13"
+}
+```
+
+---
+
+## ATUALIZAÇÃO — MERGE 04/09 (fontes 96-funil-1dia-aula-8-blocos, 97-funil-1dia-aula-conducao)
+
+```json
+{
+  "fontes_merge": ["96-funil-1dia-aula-8-blocos", "97-funil-1dia-aula-conducao"],
+  "volumes_impactados": ["VOL-funil-vendas"],
+  "frameworks_adicionados": 1,
+  "regras_cardinais_adicionadas": 3,
+  "glossario_termos_adicionados": 4,
+  "frameworks_mapeados_total": 22,
+  "regras_cardinais_total": 20,
+  "atualizado_em": "2026-09-04"
 }
 ```

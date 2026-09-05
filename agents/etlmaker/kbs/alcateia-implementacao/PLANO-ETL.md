@@ -143,6 +143,8 @@
 
 ### Merge — Fontes Adicionadas
 - [x] 95-funil-de-zoom-vinizoom (áudio extraído, transcrição completa, mapeamento territorial concluído, VOL-conteudo e VOL-funil-vendas atualizados — Merge concluído 13/06)
+- [x] 96-funil-1dia-aula-8-blocos (curso "Funil de 1 Dia" — áudio extraído, transcrito, incorporado em VOL-funil-vendas seção 13 — Merge concluído 04/09)
+- [x] 97-funil-1dia-aula-conducao (curso "Funil de 1 Dia" — áudio extraído, transcrito, incorporado em VOL-funil-vendas seção 13.12–13.13 — Merge concluído 04/09)
 
 ## Decisões Chave
 - Método de extração: m3u8 via Playwright + ffmpeg + Whisper (mesmo padrão do Código PEV 2.0)
@@ -150,6 +152,7 @@
 - Páginas de vendas e PDF e DOCS: sem vídeo, serão pulados pelo script
 - **13/06 — Merge aprovado por Karol:** fonte 95-funil-de-zoom-vinizoom (curso Funil Vinizoom, módulo Imersão-ViniZoom) entra na KB Alcateia Implementação via modo Merge. Impacta VOL-funil-vendas (estrutura do funil de Zoom) e VOL-conteudo (formato de live longa + técnica de CTA no meio do conteúdo)
 - **12/08 — Merge aprovado por Karol:** 13 PDFs de rotina de Stories (retomada do backlog "Automatizar Stories"). Bloqueio de leitura de PDF (faltava poppler-utils) resolvido pelo Ops. ETLmaker leu os 13 PDFs via Read tool (extração de imagem por página) e atualizou VOL-conteudo.md seção 5, sem recriar o que já existia — fecha os gaps "Aula 90" e "Rotinas de Stories (PDF ausente)" do MAPA-TERRITORIAL.md
+- **04/09 — Merge pedido por Karol, objetivo declarado: melhorar o Funil de Zoom dela.** Fontes 96 (aula-de-8-blocos) e 97 (aula-conducao), curso "Funil de 1 Dia" (mesmo autor, Vini Grevy). Extração com o mesmo script padrão (login MemberKit + captura m3u8 + ffmpeg + Whisper), rodada como script isolado por fonte em vez do extrair.py principal (mais simples pra 1-2 aulas pontuais). Whisper foi interrompido (killed) 3x na transcrição da fonte 97 por motivo externo não identificado — retomado com sucesso rodando em foreground. Conteúdo incorporado em VOL-funil-vendas.md seção 13 (nova) — roteiro de 8 blocos detalha a Etapa 3 do Funil de Zoom (seção 12.7), sem alterar o que já existia sobre o Funil de Zoom em si
 
 ## Regras de Operação
 - RELER ESTE PLANO a cada autocompact

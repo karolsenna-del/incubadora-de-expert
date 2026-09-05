@@ -1,7 +1,7 @@
 # REGRAS CARDINAIS — Alcateia Implementação
 **KB:** Alcateia Implementação — Vini Grevy  
 **Consolidado de:** todos os 7 volumes  
-**Produzido em:** 2026-05-29 (sincronizado com o Merge de 2026-06-13 — regras do Funil de Zoom)
+**Produzido em:** 2026-05-29 (sincronizado com o Merge de 2026-09-04 — regras da Aula de 8 Blocos)
 
 ---
 
@@ -61,6 +61,9 @@
 | FV5 | **Aguardar 48h antes de turbinar post novo.** Engajamento orgânico primeiro | Algoritmo não favorece, custo mais alto |
 | FV6 | **Comentários ManyChat = dividir por 2.** A automação duplica o número bruto | Métricas infladas, decisões erradas |
 | FV7 | **Página de obrigado do Funil de Zoom sem nenhum link.** O link do grupo só chega via WhatsApp [Fonte: 95-funil-de-zoom-vinizoom] | Sem autoqualificação — leads com WhatsApp errado entram e sujam o CRM |
+| FV8 | **Evite falar preço durante a aula — direcione pro WhatsApp.** Prática padrão de Vini, não regra que ele enuncia como absoluta ("normalmente eu não falo preço"). [Fonte: 96-funil-1dia-aula-8-blocos] | Preço vira objeção antes da pessoa entender o entregável; conversão cai |
+| FV9 | **Revele o que fazer, nunca o como fazer passo a passo, dentro da aula.** O "como" completo é o produto [Fonte: 96-funil-1dia-aula-8-blocos, 97-funil-1dia-aula-conducao] | Entregar o como de graça elimina o motivo de comprar |
+| FV10 | **Entregue o conteúdo da aula sem dó, mesmo pra audiência pequena.** [Fonte: 97-funil-1dia-aula-conducao] | Sem entrega real, não constrói autoridade — e sem autoridade, não converte |
 
 ## MÓDULO 6 — SOCIAL SELLING
 
@@ -88,7 +91,7 @@
 
 ## CONSOLIDADO — AS MAIS CRÍTICAS
 
-> Total de 17 regras cardinais (F1–F5, P1–P5, O1–O5, C1–C6, FV1–FV7, SS1–SS6, T1–T6). Abaixo, as 15 de maior prioridade para quem quer começar por onde mais dói. As 2 regras do Funil de Zoom (C6 e FV7) entram no ciclo de quem já roda live/aula ao vivo.
+> Total de 20 regras cardinais (F1–F5, P1–P5, O1–O5, C1–C6, FV1–FV10, SS1–SS6, T1–T6). Abaixo, as 15 de maior prioridade para quem quer começar por onde mais dói. As regras do Funil de Zoom (C6, FV7) e da Aula de 8 Blocos (FV8–FV10) entram no ciclo de quem já roda live/aula ao vivo.
 
 Para quem quer priorizar:
 

@@ -1,7 +1,7 @@
 # VOL — Funil de Vendas
 **KB:** Alcateia Implementação — Vini Grevy  
-**Fontes:** aula-38 (cilindro de vendas), aula-39 (jornada do cliente), aula-40 (mini treinamento), aula-41 (ManyChat), aula-43 (GreatPages), aula-44 (checklist mini treinamento), aula-45 (métricas), aula-47 (aula milionária estrutura), aula-48 (intro VSL), aula-49 (conteúdo VSL), aula-50 (oferta VSL), aula-51 (VSL sem depoimentos), aula-52 (VSL com depoimentos), aula-53 (VTurb), aula-54 (GreatPages VSL), aula-55 (upsell), aula-56 (ManyChat VSL), aula-69 (funil seguidores — descontinuado), aula-70 (funil manual seguidores), aula-71 (estratégia canais), aula-72 (funis no perfil), aula-73 (aumento conversão 30%), 95-funil-de-zoom-vinizoom (Funil de Zoom completo — Merge 13/06)  
-**Produzido em:** 2026-05-29 (atualizado 2026-06-13)
+**Fontes:** aula-38 (cilindro de vendas), aula-39 (jornada do cliente), aula-40 (mini treinamento), aula-41 (ManyChat), aula-43 (GreatPages), aula-44 (checklist mini treinamento), aula-45 (métricas), aula-47 (aula milionária estrutura), aula-48 (intro VSL), aula-49 (conteúdo VSL), aula-50 (oferta VSL), aula-51 (VSL sem depoimentos), aula-52 (VSL com depoimentos), aula-53 (VTurb), aula-54 (GreatPages VSL), aula-55 (upsell), aula-56 (ManyChat VSL), aula-69 (funil seguidores — descontinuado), aula-70 (funil manual seguidores), aula-71 (estratégia canais), aula-72 (funis no perfil), aula-73 (aumento conversão 30%), 95-funil-de-zoom-vinizoom (Funil de Zoom completo — Merge 13/06), 96-funil-1dia-aula-8-blocos + 97-funil-1dia-aula-conducao (Funil de 1 Dia — roteiro detalhado da aula de vendas + macetes de condução — Merge 04/09)  
+**Produzido em:** 2026-05-29 (atualizado 2026-09-04)
 
 ---
 
@@ -366,6 +366,9 @@ Usar 3–4 variações de mensagem no ManyChat evita que o Instagram identifique
 7. **Comentários ManyChat = dividir por 2.** A automação responde, duplicando o número bruto.
 8. **No Funil de Zoom, solte o spoiler do pitch no meio da aula — não espere o final.** No meio é o pico de audiência (ver seção 12 e VOL-conteudo, seção 11). [Fonte: 95-funil-de-zoom-vinizoom]
 9. **Página de obrigado do Funil de Zoom sem nenhum link.** O link do grupo só chega via WhatsApp — isso autoqualifica o lead. [Fonte: 95-funil-de-zoom-vinizoom]
+10. **Evite falar preço durante a aula — direcione pro WhatsApp.** É mais fácil converter no WhatsApp do que falar o preço ao vivo e ver parte da audiência sair. O preço pode virar objeção antes da pessoa entender o entregável completo. *(No áudio original, Vini fala "normalmente eu não falo preço" — é a prática padrão dele, não uma regra que ele enuncia como absoluta.)* (ver seção 13.11) [Fonte: 96-funil-1dia-aula-8-blocos]
+11. **Revele o que o lead deve fazer, nunca o como fazer passo a passo.** O "como" completo é o produto — entregar isso de graça na aula elimina o motivo de comprar (ver seção 13.10). [Fonte: 96-funil-1dia-aula-8-blocos, 97-funil-1dia-aula-conducao]
+12. **Entregue o conteúdo da aula sem dó, mesmo para audiência pequena.** 3, 5 ou 10 pessoas que pararam 1h pra te ouvir geram autoridade e conversão — trate a aula como se estivesse sendo pago por ela (ver seção 13.10). [Fonte: 97-funil-1dia-aula-conducao]
 
 ---
 
@@ -395,6 +398,12 @@ Usar 3–4 variações de mensagem no ManyChat evita que o Instagram identifique
 | **Pitch Estendido** | Oferta completa apresentada no final da aula, após a prova racional |
 | **Tema Central** | Assunto da aula — quanto menos subjetivo, maior a tração e a conversão |
 | **Prova Racional** | Números/cálculo que demonstram que o resultado prometido é alcançável (vs. prova social/depoimento) |
+| **Aula de 8 Blocos** | Roteiro estruturado de aula de vendas em 8 blocos: Acordo → Filtro de Leads → Dor e Eventos → Tira a Culpa → Autoridade Imediata → 5 Afirmações → Projeção do Cliente → Pitch + Oferta. Ver seção 13 |
+| **Acordo** | Bloco 1 da Aula de 8 Blocos — contrato inicial com a audiência: quem você é e o que vai entregar na aula |
+| **5 Afirmações** | Técnica do bloco 6 — pedir à IA as 10 maiores objeções do público-alvo e condensar em 5 afirmações que as quebram, uma a uma, ao vivo |
+| **Decisão Mais Inteligente** | Framing usado no fechamento: apresentar 2 caminhos (fazer sozinho vs. ter acompanhamento) sem parecer pitch — efeito de copy que aproveita o desejo de "ser inteligente" |
+| **Filtro de Pré-requisito** | Critério explícito de qualificação anunciado na oferta (ex: mínimo R$500/semana em tráfego) — sinaliza que o lead tem orçamento pro ticket cobrado |
+| **Bônus Único** | Regra de oferta da Aula de 8 Blocos: só 1 bônus, nunca vários — bônus não pode valer mais que o produto principal |
 
 ---
 
@@ -485,6 +494,8 @@ A estrutura completa da aula (Conversão Imediata + técnica do spoiler do pitch
 - Modelo: Conversão Imediata — vende durante a própria aula, não só no final
 - 4 partes: Estrutura/Narrativa → Execução (+ spoiler do pitch) → Prática → Prova + Pitch Estendido
 
+> **Detalhamento:** o roteiro interno de blocos que preenche essas 4 partes (e os macetes de condução pra executar ao vivo) estão na **seção 13 — Aula de 8 Blocos**, fonte adicionada via Merge em 04/09 (curso "Funil de 1 Dia", mesmo autor). É o mesmo tipo de aula da Etapa 3 — o roteiro de 8 blocos é a versão granular de "Estrutura/Narrativa → Execução → Prática → Prova + Pitch".
+
 ### 12.8 Etapa 4 — Vendas / Fluxo Semanal de Disparos
 
 **Fluxo Padrão (mínimo):**
@@ -530,3 +541,138 @@ Cada ciclo semanal acumula leads. Quem não compareceu nos primeiros ciclos even
 | Ticket mínimo recomendado | R$1.000 |
 
 > Os valores são do contexto/nicho do Vini. Use como referência de ordem de grandeza, não como garantia — o que importa é a proporção: captação barata + aula de conversão imediata + fluxo de vendas semanal.
+
+---
+
+## 13. AULA DE 8 BLOCOS — ROTEIRO DETALHADO DA AULA DE VENDAS
+
+> **Fontes:** 96-funil-1dia-aula-8-blocos + 97-funil-1dia-aula-conducao (curso "Funil de 1 Dia", Vini Grevy). Adicionadas via Merge em 04/09. Esta seção detalha o roteiro que preenche a Etapa 3 ("A Aula") do Funil de Zoom — ver 12.7.
+
+### 13.1 O que é
+
+O roteiro de 8 blocos é a estrutura interna de uma aula de vendas ao vivo (ou gravada) desenhada pra passar o lead por toda a jornada — quebra de objeção, autoridade, prova e oferta — dentro de uma única sessão. Vini afirma ter usado essa exata estrutura numa aula que já faturou mais de R$100k–300k, e outra que passou de R$2 milhões.
+
+Não é sobre o que ensinar tecnicamente — é sobre a sequência que faz o lead sair convencido a agir.
+
+### 13.2 Os 8 Blocos — Visão Geral
+
+| Bloco | Nome | Função |
+|---|---|---|
+| 1 | **Acordo** | Diz quem você é e o que vai entregar na aula — contrato inicial com a audiência |
+| 2 | **Filtro de Leads** | Nichos validados + depoimentos — quebra a objeção "funciona pra mim?" |
+| 3 | **Dor e Eventos** | Expõe os funis tradicionais do mercado (lançamento, low ticket, high ticket, VSL perpétuo) e explica por que cada um falha |
+| 4 | **Tira a Culpa do Lead** | Reposiciona: "o problema não é você, é o mercado e as soluções que você tentou" |
+| 5 | **Autoridade Imediata / Método** | Mostra por que o método funciona, a estrutura por cima — revela o "o quê", não o "como" |
+| 6 | **5 Afirmações (quebra de objeção via IA)** | Usa IA pra levantar as 10 maiores objeções do público e condensa em 5 afirmações que as quebram, uma a uma |
+| 7 | **Projeção do Cliente** | Projeta onde o lead estará em 15/30/90 dias e 6 meses — executando vs. não executando |
+| 8 | **Pitch + Estrutura de Oferta + Q&A** | Apresenta a oferta em 4 partes e abre pra tirar dúvida |
+
+### 13.3 Bloco 1 — Acordo
+
+Primeira coisa que acontece na aula: "qual é o nosso acordo?" — o que você vai entregar, quanto custaria fazer isso sozinho, o que a pessoa vai levar ao final.
+
+> É a parte mais importante da aula — define a régua que você tem que cumprir no bloco 8 (ver Regra Cardinal 10 do Funil de Vendas: entregar o que foi combinado).
+
+### 13.4 Bloco 2 — Filtro de Leads
+
+Mostra nichos validados (ex: "mais de 50 nichos validados") e uma sequência de depoimentos ("uma cassetada de depoimento") pra quebrar a objeção mais comum logo no início: "isso funciona pro meu nicho?"
+
+### 13.5 Bloco 3 — Dor e Eventos
+
+Expõe e critica, um a um, os funis tradicionais do mercado — não pra ofender, só pra explicar por que não funcionam:
+
+| Funil tradicional | Por que falha (segundo o roteiro) |
+|---|---|
+| **Lançamento** | Muito trabalho, muito dinheiro, exige ser especialista em várias frentes ao mesmo tempo |
+| **Low ticket** | Sem lucro real (empata ou perde), exige time comercial forte, alto capital de teste — sem venda, fica sem lead e sem seguidor |
+| **High ticket tradicional** | Lead frio com baixo nível de consciência, reunião improdutiva, cliente sem potencial de pagar, exige time comercial |
+| **Perpétuo com página de vendas (VSL)** | Citado como mais um modelo tradicional a ser contrastado com a Aula de 8 Blocos |
+
+### 13.6 Bloco 4 — Tira a Culpa do Lead
+
+Reposicionamento central: "o problema não é o seu lead — é o mercado e as soluções que ele já tentou, que não são adequadas pra ele." Introduz a ideia de que existe uma solução mais rápida, que é exatamente o funil que a pessoa está assistindo agora (o perfil + zona de conversão + aula).
+
+### 13.7 Bloco 5 — Autoridade Imediata / Apresentação do Método
+
+Explica por que o método funciona tão bem: quanto mais tempo de tela a pessoa passa com você, mais exposta ela fica a pagar. Apresenta a metodologia **só por cima** — fala o que a pessoa precisa fazer, sem ensinar como fazer.
+
+> Regra explícita do roteiro: "revele o que ela deve fazer, sem revelar o como ela deve fazer" — o como completo é o produto que ela paga pra receber (ver Regra Cardinal 11 do Funil de Vendas).
+
+### 13.8 Bloco 6 — 5 Afirmações (quebra de objeção via IA)
+
+Técnica pra levantar e quebrar objeções ao vivo, com apoio de IA:
+
+1. Pedir pra uma IA: "Eu vendo [produto] para [público]. Me dê as 10 maiores objeções desse público e quebre cada uma delas."
+2. Da lista de 10, o apresentador condensa em **5 afirmações** — as principais objeções reformuladas como afirmações que já respondem a dúvida antes dela aparecer.
+3. Exemplos usados por Vini nessa aula específica:
+
+| Objeção do público | Afirmação que quebra |
+|---|---|
+| "Não tenho audiência/seguidores suficientes pra vender" | O funil permite vender sem depender de audiência grande |
+| "Meu produto é bom, mas ninguém compra" | O funil escala a operação trabalhando pouco — o problema não é o produto, é o funil |
+| "Não sei se funciona no meu nicho" | Já validado em 50+ nichos |
+| "Não tenho produto nem método pronto" | Você constrói isso dentro do processo |
+| "Já fiz live/aula antes e não deu certo" | Os 3 erros mais comuns são narrativa, conteúdo e condução — errar neles é o que gera esse resultado, não o formato em si |
+
+> No relato de Vini, o processo da aula **até este ponto** (do Acordo até fechar as 5 Afirmações) consome cerca de 40 minutos — não é o tempo isolado do bloco 6. Depois de quebrar as 5 objeções, o passo seguinte é projetar o cliente no tempo (bloco 7).
+
+### 13.9 Bloco 7 — Projeção do Cliente (Custo de Não Executar)
+
+Depois de quebrar as objeções, o apresentador projeta o lead no futuro em dois cenários — executando vs. não executando:
+
+| Prazo | Se executar | Se não executar |
+|---|---|---|
+| 15 dias | Tudo pronto e rodando | Continua perdido |
+| 30 dias | Faturamento citado na casa de R$4 mil a R$20 mil* | Sem resultado, testando cursos e fórmulas |
+| 90 dias | Pode bater R$100 mil | Segue sem sistema |
+| 6 meses | Operação faturando com sistema bem construído | Testando "um monte de curso, um monte de fórmula" |
+
+> *A transcrição do trecho de 30 dias saiu fragmentada no áudio original — os dois valores (R$4 mil e R$20 mil) aparecem próximos, mas não dá pra confirmar se são dois marcos distintos ou uma correção em tempo real. Trate como ordem de grandeza, não como dois números fechados.
+>
+> A lógica geral do bloco: fazer o lead sentir o custo de adiar a decisão — não é "compre agora por FOMO", é "aqui está o que você perde continuando como está".
+
+### 13.10 Bloco 8 — Pitch + Estrutura de Oferta + Q&A
+
+A oferta é apresentada em 4 partes fixas:
+
+| Parte | Conteúdo |
+|---|---|
+| **1. Promessa** | O resultado prometido com prazo (ex: "3 encontros em 15 dias") |
+| **2. Pré-requisitos / Filtro** | Critério de qualificação explícito — ex: mínimo R$500/semana em tráfego (R$500 × 4 semanas = R$2.000, sinaliza que o lead tem orçamento pro ticket de R$2–4k) |
+| **3. Estrutura / Entregáveis** | Lista objetiva do que a pessoa recebe (ex: 3 encontros ao vivo, roteiro de 8 blocos adaptado, script de oferta pronto, template de página de captura, acesso direto por 15 dias) |
+| **4. Bônus** | **Um único bônus** — nunca uma pilha de bônus ("nada de um milhão de bônus pra pessoa"). O áudio original também sinaliza que o bônus não deve ofuscar o produto principal, mas o trecho saiu fragmentado na transcrição — tratar como leitura de contexto, não citação literal |
+
+Depois da oferta, abre pra tirar dúvida ao vivo (ou nos comentários, se gravada).
+
+### 13.11 Regras Práticas de Execução
+
+Do fechamento da aula 96:
+
+| Regra | Detalhe |
+|---|---|
+| **Normalmente não fala preço na aula** (prática, não regra absoluta no áudio) | Direciona pro WhatsApp — "fala com meu comercial ou comigo e aí eu te falo o preço". Falar preço ao vivo é objeção antes da pessoa entender o entregável completo |
+| **Priorize aula ao vivo, mas pode reprisar em replay** | Vive gera intimidade; depois disso, reprisa gravada pra quem não assistiu ao vivo (plataformas tipo Hot Webinar suportam isso) |
+| **Grave 4 aulas com temas diferentes pra testar** | Testa qual tema converte melhor com o público, depois repete o tema validado |
+| **PDF + transcrição da própria aula ficam disponíveis pra quem assiste modelar** | Meta-técnica: a aula ensina a estrutura entregando, como prova, o material dela mesma pronto pra cópia |
+
+### 13.12 Macetes de Condução (fonte: 97-funil-1dia-aula-conducao)
+
+Estrutura de blocos não é suficiente sozinha — como você conduz ao vivo determina a conversão. 4 princípios:
+
+1. **Foca no resultado, não no produto.** Ninguém quer comprar um produto — quer o resultado que ele entrega. Trocar o enquadramento de "vou te vender X" para "vou te mostrar o resultado Y" muda a recepção da audiência.
+
+2. **Entregue exatamente o que foi combinado no Acordo (bloco 1).** Não usar só gatilho, não mentir sobre o que vai ser entregue — "a galera tá cansada de gente que mente no marketing digital".
+
+3. **Não tenha dó de entregar conteúdo de verdade — mesmo pra audiência pequena.** Analogia usada: pense como se alguém te pagasse R$50 mil pra dar aquela aula pra uma sala de 50 pessoas. Se só apareceram 3, 5 ou 10 pessoas, elas pararam 1 hora do dia delas pra te ouvir — isso já constrói autoridade, e em algum momento essa autoridade converte em venda. (Case citado: Pedro Sobral construiu autoridade fazendo lives há anos, começando com públicos pequenos.)
+
+4. **Revele o que fazer, nunca o como fazer passo a passo.** O "como" é o produto — entregar o "como" completo de graça elimina o motivo de comprar (ver bloco 5 / Regra Cardinal 11).
+
+### 13.13 Fechamento — "Decisão Mais Inteligente"
+
+Técnica de enquadramento pro CTA final, usada em toda aula/vídeo de venda de Vini:
+
+> Ao final, apresentar 2 caminhos: (1) o lead tenta executar sozinho o que acabou de aprender, ou (2) toma a "decisão mais inteligente" — ter acompanhamento/suporte pra executar junto.
+
+Por que funciona: não soa como pitch de venda ("eu quero te vender algo"), soa como um convite pra uma escolha mais esperta — e "as pessoas gostam de se sentir inteligentes". É um efeito de copy explícito, não uma alegação de resultado.
+
+> Condição ética citada pelo próprio roteiro: a técnica só funciona porque o conteúdo entregue antes é real — "se eu tô prometendo aquilo, eu vou entregar aquilo". A Decisão Mais Inteligente é o CTA, não o motivo pra comprar; o motivo é o valor já demonstrado nos blocos 1–7.

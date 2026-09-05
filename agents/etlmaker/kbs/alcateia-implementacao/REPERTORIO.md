@@ -1,7 +1,7 @@
 # REPERTÓRIO — Alcateia Implementação
 **KB:** Alcateia Implementação — Vini Grevy  
 **Tipo:** Frameworks e fórmulas prontos para uso direto  
-**Produzido em:** 2026-05-29 (sincronizado com o Merge de 2026-06-13 — Funil de Zoom)
+**Produzido em:** 2026-05-29 (sincronizado com o Merge de 2026-09-04 — Aula de 8 Blocos)
 
 ---
 
@@ -223,6 +223,50 @@ FLUXO COMPLETO (extensão):
   + Quarta → replay da aula
   + Quinta → reunião de vendas / tira-dúvida
   + Sexta  → segunda oferta (downsell / quebra de objeção de preço)
+```
+
+### Aula de 8 Blocos (roteiro de aula de vendas)
+```
+BLOCO 1 — Acordo
+  "Quem sou eu, o que vou entregar nessa aula"
+
+BLOCO 2 — Filtro de Leads
+  Nichos validados + depoimentos → quebra "funciona pra mim?"
+
+BLOCO 3 — Dor e Eventos
+  Expõe funis tradicionais (lançamento, low ticket, high ticket, VSL perpétuo)
+  e explica por que cada um falha
+
+BLOCO 4 — Tira a Culpa do Lead
+  "O problema não é você — é o mercado e as soluções que você tentou"
+
+BLOCO 5 — Autoridade Imediata / Método
+  Mostra por que funciona + estrutura por cima
+  (revela o QUÊ, nunca o COMO)
+
+BLOCO 6 — 5 Afirmações
+  IA levanta as 10 maiores objeções do público
+  → condensar em 5 afirmações que quebram cada uma
+  (~40min do tempo de aula)
+
+BLOCO 7 — Projeção do Cliente
+  Onde o lead estará em 15/30/90 dias e 6 meses
+  → executando vs. não executando
+
+BLOCO 8 — Pitch + Oferta + Q&A
+  1. Promessa (resultado + prazo)
+  2. Pré-requisitos / Filtro (ex: R$500/semana em tráfego)
+  3. Estrutura / Entregáveis
+  4. Bônus Único (nunca vários)
+  → abre pra tirar dúvida
+```
+
+### Prompt — 5 Afirmações via IA
+```
+"Eu vendo [produto/oferta] para [público específico].
+Me dê as 10 maiores objeções desse público pra não comprar,
+e para cada objeção, me dê uma afirmação curta que já quebra
+essa objeção antes dela ser dita em voz alta."
 ```
 
 ---
