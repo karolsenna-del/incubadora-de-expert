@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "rota100k-semana06-qui-erros-mais-contam",
+  "slides": [
+    { "numero": "5", "texto": "frases que travam gente que sabe muito, toda semana.", "modifiers": ["numero-topo"] },
+    { "numero": "", "texto": "Isso aqui não é teoria — são as frases reais que mais recebo de gente muito capaz.", "modifiers": ["sem-numero"] },
+    { "numero": "1", "texto": "<strong>'Não sou boa com tecnologia.'</strong>\n→ você não precisa dominar ferramenta, precisa de alguém que traduza pra você (é literalmente o que eu faço).", "modifiers": [] },
+    { "numero": "2", "texto": "<strong>'Minha vida offline já está boa.'</strong>\n→ não é motivo pra não migrar, é motivo pra migrar com mais segurança, sem pressa.", "modifiers": [] },
+    { "numero": "3", "texto": "<strong>'Não sei transformar conhecimento em produto.'</strong>\n→ ninguém nasce sabendo. Método é isso: organizar o que já existe na sua cabeça.", "modifiers": [] },
+    { "numero": "4", "texto": "<strong>'Sinto que estou atrasada.'</strong>\n→ atrasada em relação a quê? Quem tem anos de vivência real começa na frente, não atrás.", "modifiers": [] },
+    { "numero": "5", "texto": "<strong>'Falta consistência, eu me sinto insegura.'</strong>\n→ consistência não nasce de motivação, nasce de ter processo claro pra seguir mesmo sem vontade.", "modifiers": [] },
+    { "numero": "", "texto": "Salva esse post — toda vez que uma dessas travar você, volta aqui.\n\nComenta qual dessas frases já saiu da sua boca.\n\nMe segue que eu ensino a resolver cada uma.", "modifiers": ["sem-numero"] }
+  ]
+}

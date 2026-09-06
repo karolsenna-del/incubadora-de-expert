@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "rota100k-semana06-qua-antes-depois-aplicou",
+  "slides": [
+    { "numero": "", "texto": "Antes: cliente pagando modelo, filmagem e edição de catálogo do zero.\n\n<strong>Depois: R$30.000 economizados, mesmo resultado.</strong>", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Uma aluna (<strong>Yamada</strong>) trabalha com moda usando IA — clientes de R$10 mil a R$4 milhões por mês.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "O erro que ela quase cometeu: vender <strong>'IA'</strong> como promessa.\n\nNinguém procura ela querendo aprender IA.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Quem procura ela quer resultado de <strong>MODA</strong>.\n\nIA é o que ela entrega, não o que ela promete.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Case real: catálogo completo de uma loja — modelo, filmagem, edição, tudo com IA.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "<strong>Antes:</strong> catálogo assim custava produção cara, semanas de trabalho.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "<strong>Depois:</strong> R$30.000 economizados pro cliente, no mesmo prazo curto.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Não são promessas. São casos.\n\nComenta se você também acha que tá vendendo a ferramenta em vez do resultado.\n\nMe segue que eu ensino a fazer essa virada de promessa.", "modifiers": ["sem-numero"] }
+  ]
+}

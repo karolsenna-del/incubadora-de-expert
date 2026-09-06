@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "rota100k-semana06-seg-guia-independencia-digital",
+  "slides": [
+    { "numero": "5", "texto": "passos do guia da independência no digital — sem fórmula mágica.", "modifiers": ["numero-topo"] },
+    { "numero": "1", "texto": "<strong>Escreva sua história</strong> — o que você viveu, não o que você estudou, é o que ninguém copia.", "modifiers": [] },
+    { "numero": "2", "texto": "<strong>Descubra seu Ikigai</strong> — o que você ama, o que você é boa, e o que alguém paga pra ter.", "modifiers": [] },
+    { "numero": "3", "texto": "<strong>Identifique quem você quer ajudar</strong> — não 'todo mundo', uma pessoa específica.", "modifiers": [] },
+    { "numero": "4", "texto": "<strong>Crie seu método</strong> — organize o que você já sabe em passos que outra pessoa consegue seguir.", "modifiers": [] },
+    { "numero": "5", "texto": "<strong>Inicie suas primeiras vendas</strong> pra quem já te conhece — sem precisar de audiência nova.", "modifiers": [] },
+    { "numero": "", "texto": "Cada passo desses é mais simples do que parece.\n\nO difícil nunca foi o conteúdo — foi <strong>a ordem</strong>.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Seu produto tá pronto pra te trazer <strong>independência no digital</strong>.\n\nSalva esse guia e comenta em qual desses 5 passos você tá agora — quero te ajudar no próximo.\n\nMe segue que eu ensino cada uma dessas etapas, com estrutura.", "modifiers": ["sem-numero"] }
+  ]
+}

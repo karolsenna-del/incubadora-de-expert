@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "rota100k-semana06-sex-sozinho-x-com-ajuda",
+  "slides": [
+    { "numero": "", "texto": "<strong>Sozinha</strong>, anos pra descobrir que devia validar antes de aparecer.\n\n<strong>Com direção</strong>, 2 meses pra ter os 2 primeiros clientes.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Não é sobre motivação.\n\nÉ sobre quantas voltas você faz o mesmo caminho até alguém de fora te mostrar o atalho.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "<strong>Sozinha:</strong> 8 lançamentos tentando descobrir, no erro e no prejuízo, que eu precisava validar antes de aparecer.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "<strong>Com direção de um mentor:</strong> quando parei de tentar competir sozinha e passei a validar 1:1 antes de qualquer exposição — 2 clientes em 2 meses.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "A diferença nunca foi capacidade.\n\nSozinha eu tinha a mesma cabeça, a mesma vontade.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "A diferença foi ter alguém de fora apontando exatamente o que eu não conseguia ver de dentro:\n\n<strong>a ordem errada.</strong>", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Nem sempre dá pra pagar ajuda.\n\nMas sempre dá pra escolher: repetir o caminho mais longo sozinha, ou buscar quem já andou nele.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Nem sempre vale pagar. Nem sempre vale economizar.\n\nComenta aqui se você tá tentando sozinha ou com ajuda hoje — quero entender seu momento.\n\nMe segue que eu ensino a decidir isso com clareza, não com culpa.", "modifiers": ["sem-numero"] }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "rota100k-semana06-sab-legado-digital-7-dias",
+  "slides": [
+    { "numero": "7", "texto": "perguntas, uma por dia, pra descobrir seu legado digital.", "modifiers": ["numero-topo"] },
+    { "numero": "1", "texto": "<strong>Segunda:</strong> o que você faz hoje que, se sumisse, alguém sentiria falta de verdade?", "modifiers": [] },
+    { "numero": "2", "texto": "<strong>Terça:</strong> se você tivesse que ensinar 1 coisa só pro resto da vida, qual seria?", "modifiers": [] },
+    { "numero": "3", "texto": "<strong>Quarta:</strong> quem é a pessoa que você já ajudou e nunca esqueceu?", "modifiers": [] },
+    { "numero": "4", "texto": "<strong>Quinta:</strong> o que você sabe hoje que gostaria de ter sabido há 10 anos?", "modifiers": [] },
+    { "numero": "5", "texto": "<strong>Sexta:</strong> se seu método sumisse amanhã, o que ficaria registrado sobre você?", "modifiers": [] },
+    { "numero": "6", "texto": "<strong>Sábado:</strong> qual palavra você quer que as pessoas usem pra te descrever daqui a 10 anos?", "modifiers": [] },
+    { "numero": "7", "texto": "<strong>Domingo:</strong> junta as respostas — isso é o esboço do seu legado digital.\n\nComenta qual dessas perguntas foi mais difícil de responder.\n\nMe segue que eu ensino a transformar isso em método.", "modifiers": [] }
+  ]
+}

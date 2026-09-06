@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "rota100k-semana06-ter-problema-tres-cenarios",
+  "slides": [
+    { "numero": "3", "texto": "especialistas, um mesmo problema: achar que seu conhecimento não era suficiente.", "modifiers": ["numero-topo"] },
+    { "numero": "1", "texto": "<strong>Bruno</strong>, contador e ex-auditor: sabia fazer gestão financeira pra empresário, mas isso soava 'serviço', não 'método'.", "modifiers": [] },
+    { "numero": "", "texto": "A virada dele: parar de vender 'contabilidade' e vender <strong>paz</strong> — processos autogerenciáveis pra empresário deixar de ser escravo do próprio negócio.", "modifiers": ["sem-numero"] },
+    { "numero": "2", "texto": "<strong>Rodrigo</strong>, consultor financeiro: fazia demonstrações e planos de negócio pra buscar investidor, mas achava que essa persona 'não compraria curso'.", "modifiers": [] },
+    { "numero": "", "texto": "A virada dele: não precisava vender curso pra ESSA persona — criou um método pra <strong>outros infoprodutores</strong> organizarem a esteira de produtos pela margem de lucro.", "modifiers": ["sem-numero"] },
+    { "numero": "3", "texto": "<strong>Milena</strong>, servidora pública especialista em regularização de imóveis rurais: achava que só sabia 'resolver documento'.", "modifiers": [] },
+    { "numero": "", "texto": "A virada dela: era mediadora, simplificadora — o <strong>Conduz Agro</strong> nasceu daí, tratando posicionamento e relação com o produtor rural, não só papelada.", "modifiers": ["sem-numero"] },
+    { "numero": "", "texto": "Três áreas diferentes. Mesmo problema: achar que 'o que eu sei fazer' não é, por si só, um produto.\n\nComenta qual desses três cenários é mais parecido com o seu — quero te ajudar a achar o produto que já tá aí.\n\nMe segue que eu ensino a transformar 'o que você sabe fazer' em produto real.", "modifiers": ["sem-numero"] }
+  ]
+}

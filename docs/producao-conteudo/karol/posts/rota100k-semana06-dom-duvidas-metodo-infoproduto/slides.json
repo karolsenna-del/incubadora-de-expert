@@ -1,0 +1,14 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "rota100k-semana06-dom-duvidas-metodo-infoproduto",
+  "slides": [
+    { "numero": "7", "texto": "principais dúvidas sobre criar método e infoproduto — respondidas direto, sem enrolação.", "modifiers": ["numero-topo"] },
+    { "numero": "1", "texto": "<strong>'Meu conhecimento é suficiente pra virar método?'</strong>\n→ sim, quando organizado. Não quando 'mais estudado'.", "modifiers": [] },
+    { "numero": "2", "texto": "<strong>'Preciso ter muitos seguidores pra vender?'</strong>\n→ não. A primeira venda quase nunca vem de audiência grande.", "modifiers": [] },
+    { "numero": "3", "texto": "<strong>'Meu nicho já tá saturado?'</strong>\n→ só quando ninguém ocupa a interseção que só você tem.", "modifiers": [] },
+    { "numero": "4", "texto": "<strong>'Sou mentor ou curso online?'</strong>\n→ depende se você quer proximidade ou escala.", "modifiers": [] },
+    { "numero": "5", "texto": "<strong>'Preciso estudar mais antes de começar?'</strong>\n→ estudar mais raramente é o que falta de verdade.", "modifiers": [] },
+    { "numero": "6", "texto": "<strong>'E se eu não for a persona perfeita pro que eu ensino?'</strong>\n→ autoridade vem da dor vivida, não do rótulo idêntico.", "modifiers": [] },
+    { "numero": "7", "texto": "<strong>'Por onde eu começo, tenho informação demais?'</strong>\n→ pelo que já vendeu, já tem prova, ou já é mais perguntado.\n\nSalva esse post. Me segue que eu respondo dúvida real toda semana.", "modifiers": [] }
+  ]
+}
