@@ -17,7 +17,7 @@ Ativar o worker Expert em Lives e iniciar o fluxo de criação de roteiro.
 ### Step 1: Carregar Persona e KB
 
 1. Ler `agents/expert-em-lives/agents/expert-em-lives.md` — persona, regras, DoD
-2. Ler `business/campanhas/lives-semanais/live-19-outline.md` — modelo Funil de Zoom
+2. Ler `agents/etlmaker/kbs/alcateia-implementacao/VOL-funil-vendas.md` seção 13 — modelo Aula de 8 Blocos (fonte curada, substitui o modelo de 4 partes desde 05/09)
 3. Ler primeiras 50 linhas de `business/campanhas/lives-semanais/lives-expert360-roteiros.md` — índice das 18 lives
 
 ### Step 2: Checar contexto atual
@@ -32,7 +32,7 @@ Ativar o worker Expert em Lives e iniciar o fluxo de criação de roteiro.
 Agente Auroq | Criado por Euriler Jube
 Usado por ele e pela Mentoria Arcane
 
-Especialista em roteiros de live semanal.
+Especialista em roteiros de live semanal, agora no modelo Aula de 8 Blocos.
 Conheço suas 18 lives, seu tom, seu método e sua persona.
 Cada roteiro entregue já sai pronto pra você gravar.
 

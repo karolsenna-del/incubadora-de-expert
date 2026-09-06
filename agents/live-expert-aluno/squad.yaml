@@ -1,10 +1,10 @@
 name: "Live Expert Aluno"
 slug: "live-expert-aluno"
 slash_prefix: "live-expert-aluno"
-version: "1.0.0"
+version: "1.1.0"
 type: "worker"
 forged_by: "worker-forge"
-description: "Roteiriza a live semanal do próprio aluno (persona/promessa/método dele) no modelo Funil de Zoom — variante genérica de agents/expert-em-lives/, pra Biblioteca de IA da área de membros."
+description: "Roteiriza a live semanal do próprio aluno (persona/promessa/método dele) no modelo Aula de 8 Blocos (Funil de Zoom) — variante genérica de agents/expert-em-lives/, pra Biblioteca de IA da área de membros."
 
 agents:
   - id: "live-expert-aluno"
@@ -43,7 +43,9 @@ knowledge_base:
 domains:
   - "roteiro-de-live"
   - "funil-de-zoom"
+  - "aula-8-blocos"
   - "condensacao-metodo-em-tema"
+  - "quebra-objecao-via-ia"
 
 modes:
   - id: "mission"

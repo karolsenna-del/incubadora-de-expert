@@ -17,6 +17,6 @@ Automático após cada missão, ou "documenta esse padrão"
 ## Passos
 
 1. Registrar o que foi feito (tema, estrutura usada, ajustes pedidos)
-2. Se for um padrão novo (ex: formato de live diferente, tipo de exercício que funcionou bem): criar SOP no Playbook
+2. Se for um padrão novo (ex: formato de live diferente, tipo de afirmação/objeção que funcionou bem no Bloco 6): criar SOP no Playbook
 3. Se já existe SOP pro caso: atualizar
 4. Nunca reescrever a KB com conteúdo específico de um aluno — só padrões reutilizáveis por qualquer aluno

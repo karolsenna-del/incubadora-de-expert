@@ -1,84 +1,167 @@
 # Live Expert Aluno — Foundation KB
 
-> Conhecimento de método (Funil de Zoom, adaptado do Vinizoom). Genérico — não contém persona, história ou marca da Karol.
-> Fonte original: `agents/expert-em-lives/` (versão calibrada pra Karol) + `business/campanhas/lives-semanais/live-19-outline.md` (estrutura de referência).
+> Conhecimento de método (Funil de Zoom + Aula de 8 Blocos, adaptado do Vinizoom/Vini Grevy). Genérico — não contém persona, história ou marca da Karol nem números específicos de terceiros.
+> Fonte original: `agents/expert-em-lives/` (versão calibrada pra Karol) + KB `agents/etlmaker/kbs/alcateia-implementacao/VOL-funil-vendas.md`, seção 13 (Merge 04/09 — roteiro de 8 blocos + macetes de condução).
+> **Atualizado em 05/09** — substitui o modelo anterior de 4 blocos (Narrativa/Execução/Prática/Prova+Pitch) pelo modelo de 8 blocos, por decisão explícita da Karol: os roteiros devem seguir exatamente essa estrutura, sem bloco de exercício ao vivo.
 
 ---
 
-## 1. O que é o Funil de Zoom
+## 1. O que é a Aula de 8 Blocos
 
-Formato de live pra grupo fechado (não é live pública de topo de funil) — o objetivo é gerar identificação, ensinar um princípio de verdade, fazer o público aplicar na hora, e fechar com uma oferta natural. Não é aula solta nem palestra motivacional: cada bloco empurra pro próximo.
+Formato de live pra grupo fechado (não é live pública de topo de funil) — o objetivo é passar o público por toda a jornada de convencimento dentro de uma única sessão: quebra de objeção, autoridade, prova e oferta. Não é aula solta nem palestra motivacional: cada bloco empurra pro próximo, e o último é sempre pitch + Q&A.
 
-Estrutura: **Narrativa → Execução → Prática → Prova Racional + Pitch**
+Estrutura: **Acordo → Filtro de Leads → Dor e Eventos → Tira a Culpa do Lead → Autoridade Imediata/Método → 5 Afirmações → Projeção do Cliente → Pitch + Oferta**
 
-Duração de referência: ~30 min pra live semanal padrão (pode chegar a 45-50 min em lives especiais, se o aluno topar — mas o padrão da biblioteca mira 30 min).
+Duração de referência: ~45-60 min pra live semanal (pode variar conforme o tema e a quantidade de objeções a quebrar no Bloco 6).
 
 ---
 
-## 2. Bloco 1 — Narrativa (Porquê)
+## 2. Bloco 1 — Acordo
 
-**Tempo:** ~15-20% do total (ex: 5-8 min numa live de 30 min)
-
-**Objetivo:** gerar identificação imediata usando uma história real do aluno — prova vivida, não teoria abstrata.
+**Objetivo:** contrato inicial com a audiência — diz quem você é e o que vai entregar na aula.
 
 **Estrutura interna:**
-1. Gancho de abertura — pergunta direta que já convoca o público a se reconhecer na dor (ex: "quantas vezes você já...")
-2. Uma ou duas histórias reais do aluno relacionadas ao tema da live — pedir ao aluno, nunca inventar
-3. Frase-âncora — uma frase curta que resume o aprendizado da história e conecta com o método do aluno
-4. Transição pro Bloco 2
+1. Quem é você (autoridade mínima pra abrir, sem exagero)
+2. O que exatamente vai ser entregue nessa aula — o "combinado"
+3. Ancoragem opcional: quanto custaria/valeria fazer isso sozinho
 
-**Erro comum a evitar:** força genérica ("aprendi a ser mais forte") em vez de força específica ("aprendi que método sem persona não converte"). Força específica conecta mais com quem assiste.
+> É a parte mais importante da aula — define a régua que o Bloco 8 precisa cumprir. Tudo prometido aqui tem que ser entregue de verdade (ver Regras Práticas, seção 9).
 
 ---
 
-## 3. Bloco 2 — Execução (Como)
+## 3. Bloco 2 — Filtro de Leads
 
-**Tempo:** ~35-40% do total (o bloco mais longo)
-
-**Objetivo:** entregar o framework/princípio central do tema da live, e plantar o "spoiler do pitch" no pico de atenção do público.
+**Objetivo:** quebrar a objeção mais comum logo no início — "isso funciona pro meu caso/nicho?"
 
 **Estrutura interna:**
-1. Reframing ou princípio central do tema (o "porquê isso funciona assim")
-2. Passo a passo prático de como aplicar o princípio
-3. Spoiler do pitch — uma menção curta e natural da oferta do aluno, no meio ou fim deste bloco (não é o pitch completo, é uma isca: "é exatamente isso que a gente trabalha dentro de [nome da oferta] — no final eu te mostro como entrar")
-4. Transição pro Bloco 3 ("agora é sua vez de aplicar isso")
+1. Casos, nichos ou situações já validadas pelo próprio aluno (perguntar quais ele tem — nunca inventar)
+2. Depoimentos ou resultados reais, se existirem
+3. Se o aluno ainda não tiver casos/depoimentos: usar validação indireta (ex: "esse princípio vem de [processo autoral], testado em [contexto]") — nunca fabricar prova social
 
 ---
 
-## 4. Bloco 3 — Prática (Mão na Massa)
+## 4. Bloco 3 — Dor e Eventos
 
-**Tempo:** ~20-25% do total
-
-**Objetivo:** aplicar ao vivo — o público faz algo concreto durante a live, não só ouve.
+**Objetivo:** expor e criticar, com respeito, os caminhos tradicionais que a audiência já tentou e não funcionaram — sem ofender quem já tentou.
 
 **Estrutura interna:**
-1. Instrução clara do exercício (o que abrir, o que listar/escrever, quanto tempo)
-2. Reservar tempo real de silêncio pra fazer (mesmo em live, isso importa — não pular essa parte)
-3. Reforço durante o silêncio (1-2 frases que mantêm o foco sem interromper o exercício)
-4. Reengajar — pedir que 1-2 pessoas compartilhem algo no chat, responder conectando com a dor
-5. Frase de fechamento da prática, conectando de volta ao tema
+1. Listar 2-4 abordagens tradicionais do nicho do aluno (o que o mercado dele geralmente vende/ensina)
+2. Pra cada uma, explicar objetivamente por que costuma falhar (sem atacar concorrentes nominalmente)
+3. Fechar preparando a transição: "isso não é culpa de quem tentou" (gancho pro Bloco 4)
 
-**Regra de ouro:** todo exercício precisa de entrega tangível — algo que existe fora da cabeça da pessoa ao final (uma lista, uma frase escrita, uma resposta). Sem isso, não é "prática", é reflexão passiva.
+**Erro comum a evitar:** criticar de forma genérica ("esses métodos não funcionam") em vez de específica (motivo concreto de cada abordagem citada).
 
 ---
 
-## 5. Bloco 4 — Prova Racional + Pitch
+## 5. Bloco 4 — Tira a Culpa do Lead
 
-**Tempo:** ~20-25% do total
-
-**Objetivo:** provar com resultado concreto (não depoimento de terceiro) que o caminho funciona, e fechar com CTA único.
+**Objetivo:** reposicionar — "o problema não é você, é o mercado e as soluções que você tentou."
 
 **Estrutura interna:**
-1. Prova Racional — um número ou resultado real do próprio aluno (não do público, não inventado) conectado de volta à história do Bloco 1, fechando o arco narrativo
-2. Pitch estendido — agora sim, apresentar a oferta completa: o que ela resolve, como se conecta ao que acabou de ser ensinado
-3. Reforçar a frase-tese ou princípio central do método do aluno (se ele tiver uma definida na Autoridade Tríplice)
-4. CTA único e claro — nunca mais de uma chamada de ação na mesma live
-
-**Erro comum a evitar:** trocar prova racional (número/resultado) por depoimento de terceiro nesse bloco — depoimento de terceiro é bônus, não substitui a prova do próprio aluno.
+1. Afirmar explicitamente que a audiência não é o problema
+2. Redirecionar a causa pro mercado/soluções inadequadas (conectar com o Bloco 3)
+3. Introduzir a ideia de que existe um caminho mais direto — exatamente o que a aula está prestes a mostrar
 
 ---
 
-## 6. Perguntas de Onboarding (quando falta Autoridade Tríplice)
+## 6. Bloco 5 — Autoridade Imediata / Apresentação do Método
+
+**Objetivo:** mostrar por que o método do aluno funciona, sem ensinar o "como" completo.
+
+**Estrutura interna:**
+1. Por que o método funciona (o racional, não o passo a passo)
+2. Estrutura do método **por cima** — o que a pessoa precisa fazer, nunca o how-to detalhado
+3. Reforço de autoridade: quanto mais a audiência presta atenção nesse bloco, mais exposta ela fica a confiar no restante da aula
+
+> Regra explícita da fonte original: "revele o que a pessoa deve fazer, sem revelar o como ela deve fazer" — o como completo é o produto que ela paga pra receber. Ver Regra Cardinal na seção 10 (Macetes de Condução).
+
+---
+
+## 7. Bloco 6 — 5 Afirmações (quebra de objeção via IA)
+
+**Objetivo:** neutralizar as principais objeções da audiência antes que elas apareçam, com apoio de IA.
+
+**Passo a passo:**
+1. Perguntar ao aluno qual é o produto/oferta e o público específico dessa live
+2. Usar um chat de IA (Claude/ChatGPT/Gemini) com o prompt: *"Eu vendo [produto/oferta] para [público específico]. Me dê as 10 maiores objeções desse público pra não comprar, e pra cada uma, uma afirmação curta que já quebra essa objeção antes dela ser dita em voz alta."*
+3. Condensar as 10 objeções em **5 afirmações** — as principais, priorizadas pelo aluno
+4. Roteirizar cada afirmação como uma virada curta na aula (objeção → afirmação que quebra)
+
+Esse é o bloco mais longo — reserve o tempo proporcional a isso no roteiro.
+
+---
+
+## 8. Bloco 7 — Projeção do Cliente (Custo de Não Executar)
+
+**Objetivo:** fazer a audiência sentir o custo de adiar a decisão — projetando dois cenários no tempo.
+
+**Estrutura interna (tabela a preencher com o aluno, nunca inventar números):**
+
+| Prazo | Se executar | Se não executar |
+|---|---|---|
+| 15 dias | {a definir com o aluno} | {a definir com o aluno} |
+| 30 dias | {a definir com o aluno} | {a definir com o aluno} |
+| 90 dias | {a definir com o aluno} | {a definir com o aluno} |
+
+**Regra:** os números e resultados dessa tabela têm que vir do aluno (resultado real dele ou de um caso que ele pode citar) — nunca inventados ou copiados de outro expert. Se o aluno não tiver números concretos, usar projeção qualitativa ("onde você estaria" em vez de "quanto você faturaria").
+
+> A lógica não é "compre agora por FOMO" — é "aqui está o que você perde continuando como está".
+
+---
+
+## 9. Bloco 8 — Pitch + Estrutura de Oferta + Q&A
+
+**Objetivo:** apresentar a oferta em 4 partes fixas e abrir pra tirar dúvida.
+
+| Parte | Conteúdo |
+|---|---|
+| **1. Promessa** | O resultado prometido com prazo — puxar da Promessa Transformadora do aluno |
+| **2. Pré-requisitos / Filtro** | Critério de qualificação explícito (a definir com o aluno — ex: orçamento mínimo, nível de comprometimento) — sinaliza que o lead tem o perfil certo pro ticket cobrado |
+| **3. Estrutura / Entregáveis** | Lista objetiva do que a pessoa recebe na oferta do aluno |
+| **4. Bônus** | Um único bônus — nunca uma pilha de bônus. O bônus não pode ofuscar o produto principal |
+
+Depois da oferta, abre pra tirar dúvida ao vivo (ou nos comentários, se gravada).
+
+---
+
+## 10. Regras Práticas de Execução
+
+| Regra | Detalhe |
+|---|---|
+| **Evite falar preço na aula — direcione pro WhatsApp/DM** | Preço vira objeção antes da pessoa entender o entregável completo. É uma prática recomendada, não uma regra rígida — se o aluno preferir falar preço ao vivo, respeitar a escolha dele |
+| **Priorize aula ao vivo, mas pode reprisar em replay** | Ao vivo gera intimidade; depois disso, reprisar gravada pra quem não assistiu (qualquer plataforma de live/replay serve) |
+| **Se for testar temas, grave versões com temas diferentes** | Testa qual tema converte melhor com o público do aluno, depois repete o validado |
+| **Material da própria aula disponível pra quem assiste modelar** | Meta-técnica opcional: disponibilizar resumo/transcrição da aula pra audiência reforça a entrega prometida no Bloco 1 |
+
+---
+
+## 11. Macetes de Condução (como conduzir ao vivo, não só o que dizer)
+
+Estrutura de blocos não é suficiente sozinha — como o aluno conduz ao vivo determina a conversão. 4 princípios:
+
+1. **Foca no resultado, não no produto.** A audiência quer o resultado que o produto entrega, não o produto em si. Roteirizar frases que enquadram resultado, não features.
+
+2. **Entregue exatamente o que foi combinado no Bloco 1 (Acordo).** Sem gatilho vazio, sem prometer o que não vai ser entregue.
+
+3. **Não ter dó de entregar conteúdo de verdade — mesmo pra audiência pequena.** Reforçar isso na recomendação final ao aluno: se a live tiver poucas pessoas assistindo, o valor entregue não muda — quem ficou até o fim já é audiência qualificada, e isso constrói autoridade real pra conversões futuras.
+
+4. **Revele o que fazer, nunca o como fazer passo a passo.** O "como" completo é o produto do aluno — entregar isso de graça na aula elimina o motivo de comprar (ver Bloco 5).
+
+---
+
+## 12. Fechamento — "Decisão Mais Inteligente"
+
+Técnica de enquadramento pro CTA final do Bloco 8:
+
+> Apresentar 2 caminhos: (1) a pessoa tenta executar sozinho o que acabou de aprender, ou (2) toma a "decisão mais inteligente" — ter o acompanhamento/produto do aluno pra executar junto.
+
+Por que funciona: não soa como pitch de venda ("eu quero te vender algo"), soa como um convite pra uma escolha mais esperta.
+
+**Condição obrigatória:** essa técnica só é ética se o conteúdo entregue nos blocos 1-7 for real e completo — a Decisão Mais Inteligente é o CTA, não o motivo de comprar. O motivo é o valor já demonstrado antes do Bloco 8.
+
+---
+
+## 13. Perguntas de Onboarding (quando falta Autoridade Tríplice)
 
 Se o aluno não tiver a Autoridade Tríplice pronta, perguntar diretamente:
 - "Qual tom de voz você quer usar na live? (inspirador, direto, provocativo, acolhedor, técnico, emocional, autoridade, sofisticado, ou outro)"
@@ -87,9 +170,10 @@ Não perguntar sobre valores/posicionamento completo aqui — isso é escopo da 
 
 ---
 
-## 7. O que NUNCA fazer (herdado do original, sem as partes específicas da Karol)
+## 14. O que NUNCA fazer
 
-- Nunca inventar história, fracasso ou resultado que o aluno não confirmou
-- Nunca pular o Bloco 3 (Prática) — é o que diferencia live de palestra
-- Nunca colocar mais de um CTA na mesma live
-- Nunca usar exemplo, persona ou marca de outra pessoa (incluindo a Karol) como se fosse do aluno
+- Nunca inventar caso, depoimento, número de projeção ou resultado que o aluno não confirmou (Blocos 2, 7 e 8)
+- Nunca revelar o "como" completo do método do aluno dentro da aula — isso é o produto (Bloco 5)
+- Nunca colocar mais de um bônus na oferta do Bloco 8
+- Nunca usar exemplo, persona, número ou marca de outra pessoa (incluindo a Karol ou o Vini Grevy) como se fosse do aluno
+- Nunca pular o Bloco 1 (Acordo) ou entregar menos do que foi prometido nele

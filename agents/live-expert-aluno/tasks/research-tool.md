@@ -17,6 +17,6 @@ execution_type: "sequential"
 ## Passos
 
 1. Pesquisar via WebSearch
-2. Sintetizar o que é relevante pro Funil de Zoom (não trazer formato de live genérico de mercado — sempre adaptar aos 4 blocos)
+2. Sintetizar o que é relevante pro Funil de Zoom (não trazer formato de live genérico de mercado — sempre adaptar aos 8 blocos)
 3. Adicionar à Foundation KB (`data/live-expert-aluno-kb.md`) com a fonte
 4. Reportar o que encontrou
