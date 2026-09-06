@@ -20,3 +20,4 @@
 | 02/09/2026 | live-28-black-friday-2026-09-02 | 3 | 18100667708631772, 18110212613110576, 17909938494463302 | sim (ver log de execucao) |
 | 03/09/2026 | sprint-metodo-quinta-2026-09-03 | 1 | 18115522393971833 | sim (ver log de execucao) |
 | 04/09/2026 | dominando-mente-metodo-2026-09-04 | 1 | 18103127987249275 | sim (ver log de execucao) |
+| 06/09/2026 | grupo-domingo-2026-09-06 | 1 | 18113372857813697 | sim (ver log de execucao) |
