@@ -1,0 +1,79 @@
+name: Post rota100k-semana06-qui-erros-mais-contam
+
+on:
+  schedule:
+    - cron: '0 23 10 9 *'   # 10/09 às 23:00 UTC = 20h BRT
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publicar carrossel via Meta Graph API
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: "17841437530973593"
+          CAPTION: |
+            5 frases que mais escuto de gente boa como você. Nenhuma delas é sobre capacidade.
+        run: |
+          python3 - <<'EOF'
+          import os, time, requests, urllib.parse as up
+
+          TOKEN   = os.environ["META_TOKEN"]
+          IG_ID   = os.environ["IG_USER_ID"]
+          CAPTION = os.environ["CAPTION"].strip()
+          BASE    = "https://graph.facebook.com/v21.0"
+
+          SLIDES = [
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788669022/instagram-carrosseis/rota100k-semana06-qui-erros-mais-contam/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788669023/instagram-carrosseis/rota100k-semana06-qui-erros-mais-contam/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788669023/instagram-carrosseis/rota100k-semana06-qui-erros-mais-contam/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788669024/instagram-carrosseis/rota100k-semana06-qui-erros-mais-contam/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788669024/instagram-carrosseis/rota100k-semana06-qui-erros-mais-contam/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788669025/instagram-carrosseis/rota100k-semana06-qui-erros-mais-contam/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788669026/instagram-carrosseis/rota100k-semana06-qui-erros-mais-contam/slide-07.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788669026/instagram-carrosseis/rota100k-semana06-qui-erros-mais-contam/slide-08.png"
+          ]
+
+          def meta_post(path, data):
+            r = requests.post(f"{BASE}/{path}", params={"access_token": TOKEN},
+                              data=up.urlencode(data).encode("utf-8"),
+                              headers={"Content-Type": "application/x-www-form-urlencoded"})
+            print(f"{path}: {r.status_code} {r.text[:200]}")
+            r.raise_for_status()
+            return r.json()
+
+          print("Criando item containers...")
+          item_ids = []
+          for url in SLIDES:
+            resp = meta_post(f"{IG_ID}/media", {"image_url": url, "is_carousel_item": "true"})
+            item_ids.append(resp["id"])
+          print(f"{len(item_ids)} containers criados")
+
+          print("Criando carousel container...")
+          resp = meta_post(f"{IG_ID}/media", {
+            "media_type": "CAROUSEL",
+            "children":   ",".join(item_ids),
+            "caption":    CAPTION,
+            "published":  "false",
+          })
+          carousel_id = resp["id"]
+          print(f"carousel_id: {carousel_id}")
+
+          print("Aguardando container ficar pronto...")
+          for tentativa in range(20):
+            r = requests.get(f"{BASE}/{carousel_id}", params={"fields": "status_code", "access_token": TOKEN})
+            status = r.json().get("status_code", "UNKNOWN")
+            if status == "FINISHED":
+              print(f"container pronto ({tentativa+1} checagens)")
+              break
+            if status == "ERROR":
+              raise RuntimeError("Container falhou com status ERROR")
+            time.sleep(5)
+          else:
+            raise RuntimeError("Container não ficou FINISHED após 100s")
+
+          print("Publicando...")
+          resp = meta_post(f"{IG_ID}/media_publish", {"creation_id": carousel_id})
+          print(f"PUBLICADO: {resp}")
+          EOF
