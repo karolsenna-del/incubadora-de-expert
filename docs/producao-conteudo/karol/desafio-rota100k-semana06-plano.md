@@ -2,22 +2,40 @@
 
 > Squad: Conteúdo Arcane (Sage — pesquisa interna | Rico — roteirista)
 > Fonte do desafio: `DESAFIO-ROTA100K-Semana-06-07-a-13-09.pdf` (Downloads).
-> **Revisão 1 (05/09, pedido direto da Karol) aplicada:**
-> 1. Dia 07/09 (feriado da Independência) reescrito em torno do tema "independência do profissional" em 3 contextos: horário/dia de trabalho (17h), cliente que atende (09h), forma de ensinar — mentor x curso (12h). 20h virou "Guia da Independência no Digital" com conteúdo definido pela Karol.
-> 2. Milena SAI do plano como comparação direta com a Karol (ainda é servidora pública ativa — expor esse ângulo pode prejudicá-la no emprego). Slot de 08/09-09h reescrito com a Patrícia (corrida/constância) em vez disso. Milena continua só no carrossel de 08/09-20h (caso profissional dela, Conduz Agro, sem o ângulo de boicote interno).
-> 3. 08/09-12h reescrito no formato "sonho → deu tudo errado → meritocracia com outro nome" (recusa de assinar estudo errado).
-> 4. 09/09-09h: troca "mercado de infoproduto" por "marketing digital" (fura mais a bolha).
-> 5. 09/09-12h: corrige a origem da Incubadora — nasceu DEPOIS de saída do serviço público; primeiras vendas vieram de quem a viu trabalhando como lançadora de outros experts e percebeu que o diferencial dela era preparar o expert pro digital.
-> 6. 09/09-17h: conteúdo novo (checar contexto antes de copiar grande player — método validado + produto rodando ou não).
-> 7. 10/09-07h: troca pra "8 lançamentos fracassados, mesmo com conhecimento de sobra".
-> 8. 10/09-09h: história real nova — mentoria tentou vender pra ela campanha de R$30k/mês sem ela ter os pré-requisitos, pagamento só depois do resultado.
-> 9. 10/09-12h: corrige história do concurso — não foi Receita Federal anulada. Receita Federal simplesmente nunca abriu o concurso; foi o **ISS Campo Grande** que teve questões anuladas e prejudicou o resultado, gerando a dúvida sorte-ou-azar.
-> 10. 10/09-17h: versão concreta (3 critérios: o que já vendeu, o que já tem prova, o que mais perguntam — não mais vago).
-> 11. **CTA reformulado em TODO o plano:** nunca mais "me segue" seco — sempre "me segue que eu ensino/mostro [tema do post]". Comentário nunca mais "comenta a tua dúvida" seco — sempre com convite caloroso, pedindo a versão da pessoa, com motivo de participar.
-> 12. **Legendas dos Reels 7s (07h) aprofundadas** — ~10 linhas cada, não mais 2 linhas.
-> Dias 11-13/09 (5, 6, 7) tiveram o formato de CTA/legenda corrigido nesta revisão, mas o CONTEÚDO ainda não foi revisado pela Karol linha a linha — sinalizado no rodapé.
+> **Revisão 1 (05/09) aplicada aos Dias 1-4** — ver histórico de decisões abaixo.
+> **Revisão 2 (05/09) aplicada aos Dias 5-7** — ver histórico de decisões abaixo.
 > CTA oficial do desafio: **seguir**, sem link/direct/GRUPO/AULA. Exceção: 15h pode convidar pra comentar a próxima dúvida.
+> Regra fixa em todo o plano: nunca "me segue" seco — sempre "me segue que eu ensino/mostro [tema do post]". Nunca "comenta a tua dúvida" seco — sempre convite caloroso, pedindo a versão da pessoa, com motivo de participar.
 > Fato só o documentado ou corrigido diretamente pela Karol — nada inventado.
+
+**Histórico de decisões (revisão 1, Dias 1-4):**
+1. Dia 07/09 (feriado da Independência) reescrito em torno de "independência do profissional" em 3 contextos: horário/dia de trabalho (17h), cliente que atende (09h), forma de ensinar — mentor x curso (12h). 20h virou "Guia da Independência no Digital".
+2. Milena sai do plano como comparação direta com a Karol (ainda é servidora pública ativa — expor esse ângulo pode prejudicá-la). 08/09-09h reescrito com a Patrícia (corrida/constância). Milena continua só no carrossel de 08/09-20h (caso profissional dela, Conduz Agro, sem o ângulo de boicote interno).
+3. 08/09-12h: narrativa "sonho de ser promovida → deu tudo errado → meritocracia com outro nome" (recusa de assinar estudo errado).
+4. 09/09-09h: troca "mercado de infoproduto" por "marketing digital".
+5. 09/09-12h: corrige origem da Incubadora — nasceu DEPOIS da saída do serviço público; primeiras vendas vieram de quem a viu trabalhando como lançadora de outros experts.
+6. 09/09-17h: conteúdo novo (checar contexto antes de copiar grande player — método validado + produto rodando ou não).
+7. 10/09-07h: troca pra "8 lançamentos fracassados, mesmo com conhecimento de sobra".
+8. 10/09-09h: história real nova — mentoria tentou vender campanha de R$30k/mês sem pré-requisitos, pagamento só depois do resultado.
+9. 10/09-12h: corrige história do concurso — Receita Federal nunca abriu (sem anulação); foi o **ISS Campo Grande** que teve questões anuladas e prejudicou o resultado.
+10. 10/09-17h: versão concreta (3 critérios: o que já vendeu, o que já tem prova, o que mais perguntam).
+
+**Histórico de decisões (revisão 2, Dias 5-7, 05/09):**
+11. 11/09-07h: legenda reescrita — 3 primeiras linhas estavam genéricas, agora concretas (puxa Vanessa e Fabiano por nome).
+12. 11/09-09h: gancho ajustado pra "Se eu estivesse no seu lugar — com conhecimento de sobra e sem método estruturado — eu faria isso."
+13. 11/09-12h: "minha semana em números" virou inventário real (1 mentoria em grupo, 2 individuais, 10 prospecções, 1 casamento, 1 feriado).
+14. 11/09-15h: corrige o caso da Analia — ela É mãe; a autoridade dela não vem de não ser mãe, vem do cansaço próprio começando aos 16 anos, muito antes da maternidade, resolvido com suplementação/sol/luz vermelha/alimentação (não remédio).
+15. 11/09-17h: "duas opções boas" trocado — de "R$20k estabilidade x incerto" (não parecia opção boa dos dois lados) pra "sociedade em agência x Incubadora sozinha" (as duas eram de fato boas).
+16. 11/09-20h: gancho especifica o quê é "ordem certa" (validar antes de aparecer) e quem é a "direção" (um mentor).
+17. 12/09-07h: gancho reforçado pra parar scroll (era vago demais — "dúvida guardada de quê?").
+18. 12/09-09h: história real nova — parar de lançar fez ela se aproximar da persona 1:1 e entender objeção de perto; lançamento é escala, ela tinha pulado a etapa 1:1.
+19. 12/09-12h: história real nova — um "faixa preta" do Insider disse que sem viver o skin in the game ela não seria expert de verdade; a partir dali ela soube que tinha chegado lá.
+20. 12/09-17h: corrige a história do Instagram/marido — não foi esconder por medo, foi gravar o primeiro vídeo num dia que o marido tava no futebol e deixar rolar, sem clareza ainda do que aquilo significava.
+21. 12/09-20h: tema novo — "1 tarefa por dia pra descobrir seu legado digital".
+22. 13/09-07h: gancho reforçado pra parar scroll de não seguidor.
+23. 13/09-09h: assunto trocado — sem citar o desafio nem resultado de engajamento (a semana ainda não aconteceu, resultado real é desconhecido).
+24. 13/09-17h: mesma lógica — retirado o contexto do desafio.
+25. 13/09-20h: tema novo — "7 principais dúvidas respondidas sobre criação de método e infoprodutos" (FAQ evergreen, sem referência à semana específica).
 
 ---
 
@@ -377,28 +395,28 @@ Cada flop virou uma fase do método que eu ensino hoje. Se você já flopou pare
 ---
 ---
 
-## DIA 5 — Sexta, 11/09 (conteúdo original, ainda sem revisão da Karol — só CTA/legenda corrigidos)
+## DIA 5 — Sexta, 11/09 (revisão 2, 05/09 — corrigido pela Karol)
 
 ### 07h · Reels 7s sem fala — "Uma declaração curta"
 **Gancho de tela:** "Não existe pergunta boba sobre método. Cada dúvida que eu respondo essa semana já foi minha também."
 
 **Legenda:**
-Comentário de vocês virar conteúdo aqui é fácil de entender.
+Toda dúvida que eu respondo essa semana já foi minha, numa fase mais crua do meu próprio negócio.
 
-Sem comentário, eu uso o que já me perguntaram pessoalmente — em sessão, no direct, numa mentoria.
+A pergunta da Vanessa — será que o que eu sei é suficiente? — foi a minha, nos primeiros anos.
 
-Dá exatamente no mesmo, porque a pergunta é real dos dois jeitos.
+A pergunta do Fabiano — será que meu assunto já tá saturado? — foi a minha, antes de eu entender interseção.
 
-Cada dúvida que eu respondo essa semana, em algum momento, também foi minha.
+Não é força de expressão. Cada uma dessas dúvidas passou pela minha cabeça antes de passar pela cabeça delas.
 
-Não tem pergunta boba sobre método — só tem gente com vergonha de perguntar o que já devia ter perguntado há anos.
+Por isso eu não preciso de comentário novo pra responder de verdade: a dúvida sempre esteve guardada, só precisava de espaço pra sair.
 
-Se você tem uma dúvida guardada há tempo, comenta aqui — essa semana é feita pra isso.
+Se a sua também tá guardada, comenta aqui — essa semana é feita pra isso.
 
 ---
 
 ### 09h · Reels YAP — "O que eu faria no seu lugar hoje"
-**Gancho:** "Se eu tivesse a experiência que você tem e ainda não tivesse começado, eu não gravaria o primeiro Reels."
+**Gancho:** "Se eu estivesse no seu lugar — com conhecimento de sobra e sem método estruturado — eu faria isso."
 
 **Contexto:** O conselho padrão é "comece aparecendo, treina na prática, o algoritmo perdoa quem tenta". Parece corajoso e prático.
 
@@ -411,65 +429,65 @@ Se você tem uma dúvida guardada há tempo, comenta aqui — essa semana é fei
 ---
 
 ### 12h · Reels YAP — "Minha semana em números"
-**Gancho:** "Essa semana: 42 posts programados. 1 só espaço fixo pra conversar de verdade."
+**Gancho:** "Minha semana: 1 mentoria em grupo, 2 mentorias individuais, 10 prospecções, 1 casamento, 1 feriado."
 
-**Contexto:** O desafio pede grade cheia — 6 posts por dia, todo dia, sem exceção. Parece produção industrial.
+**Contexto:** Numa semana comum a agenda já vem cheia de atendimento — grupo, individual, gente batendo na porta querendo entrar.
 
-**Virada:** De 42, só 1 por dia é feito pra ouvir alguém de verdade. É pouco. Mas é o suficiente pra a semana inteira não virar só volume — vira 7 conversas reais escondidas dentro de 42 posts.
+**Virada:** E essa semana ainda teve casamento de gente querida e feriado no meio. A vida não para de acontecer só porque o negócio tá rodando — e o negócio não para só porque a vida acontece. Independência não é escolher entre os dois. É fazer os dois caberem na mesma semana.
 
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
-**Fecha:** Se pra você também 1 conversa de verdade vale mais que 41 posts de volume, comenta aqui. Me segue que eu ensino a criar esse espaço de conversa no seu conteúdo também.
+**Fecha:** Comenta aqui como foi a sua semana em números — trabalho e vida junto, sem separar. Me segue que eu ensino a construir negócio que cabe dentro da vida, não a vida que sobra depois do negócio.
 
 ---
 
 ### 15h · Reels YAP · Conversa (Analia)
-**Gancho:** "Eu quero ajudar mães cansadas. Mas eu não sou mãe. Não sei se tenho autoridade pra falar sobre isso." — dúvida da Analia.
+**Gancho:** "Sou mãe. Quero ajudar mães cansadas. Mas contando minha própria história, descobri uma coisa mais funda." — reflexão da Analia.
 
-**Contexto:** Parece razão de sobra pra travar — como ensinar sobre um cansaço que, no papel, você não vive do mesmo jeito que a pessoa que você quer ajudar?
+**Contexto:** Fazia sentido a Analia achar que a maternidade era a origem do cansaço que ela queria resolver nas outras — é a dor mais visível, a mais parecida com o que ela vive hoje.
 
-**Virada:** Contando a própria história, a Analia descobriu que era cansada desde os 16 anos — não por ser mãe, por nunca ter cuidado do próprio corpo direito. A autoridade dela nunca veio de ser mãe. Veio de ter vivido o cansaço e achado a saída — inclusive um recurso trazido de uma formação fora do Brasil. Ninguém precisa carregar a mesma etiqueta da persona. Precisa ter vivido a mesma dor.
+**Virada:** Só que a raiz do cansaço dela nunca foi ser mãe. Começou aos 16 anos, bem antes de qualquer filho. Ela passou anos tomando remédio até entender o que realmente faltava: suplementação, sol, luz vermelha, alimentação certa. A autoridade dela não vem de "ser mãe cansada" — vem de ter caçado a causa real do próprio cansaço, numa jornada que começou muito antes da maternidade.
 
-**Fecha:** Se você acha que "não é igual" à pessoa que quer ajudar, comenta aqui qual é a diferença que te trava. Me segue que eu ensino a construir autoridade a partir da dor vivida, não do rótulo.
+**Fecha:** Se você também acha que sua dor é só "porque eu sou X", comenta aqui — pode ser que a raiz seja mais funda e mais antiga do que você imagina. Me segue que eu ensino a separar o rótulo da causa real.
 
-**Legenda:** Autoridade não vem do rótulo que você carrega. Vem da dor que você já atravessou.
+**Legenda:** Nem toda dor que parece "de mãe" nasceu com a maternidade. Às vezes ela só ficou mais visível ali.
 
 ---
 
 ### 17h · Reels YAP — "Como escolher quando as duas opções são boas"
-**Gancho:** "Eu tive duas opções boas: ficar com quase R$20 mil por mês de estabilidade, ou sair pro incerto."
+**Gancho:** "Tive duas opções boas de verdade: virar sócia numa agência de lançamento já estabelecida, ou seguir sozinha com a Incubadora, do zero."
 
-**Contexto:** As duas eram racionalmente defensáveis — não era escolher entre certo e errado, era escolher entre dois "certos" diferentes.
+**Contexto:** A sociedade tinha estrutura, resultado provado, nome no mercado. A Incubadora sozinha tinha só a convicção de que eu enxergava algo que ninguém mais via.
 
-**Virada:** O critério que decidiu não foi qual dava mais dinheiro. Foi qual eu não ia me arrepender de não ter tentado. Quando as duas opções são boas, o dinheiro deixa de ser o critério certo pra decidir.
+**Virada:** As duas eram boas de verdade — não era escolher entre seguro e arriscado, era escolher entre dois caminhos que dariam certo, só que de jeitos diferentes. O critério que decidiu não foi qual tinha mais estrutura. Foi: em qual dos dois eu seria dona da minha própria autoridade, não funcionária disfarçada de sócia.
 
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
-**Fecha:** Se você também já teve duas opções boas e não sabia qual escolher, comenta aqui quais eram as suas. Me segue que eu ensino o critério que eu uso pra decisões assim.
+**Fecha:** Se você também já teve duas opções boas de verdade e não sabia qual escolher, comenta aqui quais eram as suas. Me segue que eu ensino o critério que eu uso pra decisões assim.
 
 ---
 
 ### 20h · Carrossel Neutro (8 slides) — "Sozinho x com ajuda"
-**Gancho (Slide 1):** "Sozinha, levei anos tentando descobrir a ordem certa. Com direção certa, 2 meses pra ter os 2 primeiros clientes."
+**Gancho (Slide 1):** "Sozinha, levei anos pra descobrir que devia validar antes de aparecer. Com um mentor apontando isso, 2 meses pra ter os 2 primeiros clientes."
 
 1. **Slide 1:** Gancho.
-2. **Slide 2:** Não é sobre motivação. É sobre com quantas voltas você faz o mesmo caminho.
-3. **Slide 3:** Sozinha: 8 lançamentos tentando descobrir a ordem certa, na base do erro e do prejuízo.
-4. **Slide 4:** Com direção: quando parei de tentar competir sozinha e passei a validar 1:1 antes de qualquer exposição — 2 clientes em 2 meses.
+2. **Slide 2:** Não é sobre motivação. É sobre com quantas voltas você faz o mesmo caminho até alguém de fora te mostrar o atalho.
+3. **Slide 3:** Sozinha: 8 lançamentos tentando descobrir, no erro e no prejuízo, que eu precisava validar antes de aparecer.
+4. **Slide 4:** Com direção de um mentor: quando parei de tentar competir sozinha e passei a validar 1:1 antes de qualquer exposição — 2 clientes em 2 meses.
 5. **Slide 5:** A diferença nunca foi capacidade. Sozinha eu tinha a mesma cabeça, a mesma vontade.
-6. **Slide 6:** A diferença foi ter alguém de fora apontando o que eu não conseguia ver de dentro.
-7. **Slide 7:** Nem sempre dá pra pagar ajuda. Mas sempre dá pra escolher: repetir o caminho mais longo, ou buscar quem já andou nele.
+6. **Slide 6:** A diferença foi ter alguém de fora apontando exatamente o que eu não conseguia ver de dentro: a ordem errada.
+7. **Slide 7:** Nem sempre dá pra pagar ajuda. Mas sempre dá pra escolher: repetir o caminho mais longo sozinha, ou buscar quem já andou nele.
 8. **Slide 8:** Nem sempre vale pagar. Nem sempre vale economizar. Comenta aqui se você tá tentando sozinha ou com ajuda hoje — quero entender seu momento. Me segue que eu ensino a decidir isso com clareza, não com culpa.
 
-**Legenda:** Sozinha, muito mais tempo. Com direção, poucos meses. Mesma pessoa, caminho diferente.
+**Legenda:** Sozinha, anos. Com direção, poucos meses. Mesma pessoa, caminho diferente.
 
 ---
 ---
 
-## DIA 6 — Sábado, 12/09 (conteúdo original, ainda sem revisão da Karol — só CTA/legenda corrigidos)
+## DIA 6 — Sábado, 12/09 (revisão 2, 05/09 — corrigido pela Karol)
 
 ### 07h · Reels 7s sem fala — "Um convite curto"
-**Gancho de tela:** "Se você tem uma dúvida guardada, esse é o convite: comenta com as suas palavras. Amanhã eu junto tudo no fechamento da semana."
+**Gancho de tela:** "Guardou uma dúvida sobre como estruturar seu método e não perguntou pra ninguém? Comenta agora — amanhã eu respondo."
 
 **Legenda:**
 Se você acompanhou essa semana e ainda não comentou nada, esse é o convite direto — sem enrolação.
@@ -485,28 +503,28 @@ Comenta. Vale mais o que é real do que o que parece "certo" de perguntar.
 ---
 
 ### 09h · Reels YAP — "O que melhorou quando eu parei"
-**Gancho:** "O que melhorou quando eu parei de tentar competir em lançamento: parei de brigar na régua errada."
+**Gancho:** "Quando parei de lançar, descobri que eu tinha pulado uma etapa inteira."
 
-**Contexto:** Eu vinha do caminho de lançadora — competindo por resultado de lançamento com quem já dominava isso havia anos. Parecia o único jogo que existia.
+**Contexto:** Lançamento é funil de escala — você fala pra muita gente de uma vez, sem realmente conhecer cada objeção, cada dúvida, cada trava de perto.
 
-**Virada:** Quando parei, meu diferencial real apareceu: não era ter mais resultado de lançamento, era ser a pessoa que enxergava método como modelo de negócio — auditoria, gestão, planejamento estratégico. Não precisei de mais tempo pra competir. Precisei parar de competir naquele jogo.
+**Virada:** Quando passei a vender 1:1, comecei a me conhecer melhor como vendedora e me aproximar de verdade da persona — entendendo objeção, dúvida e trava uma por uma, não em bloco. Eu tinha começado pela ordem errada: fui pro funil de escala antes de aprender a vender de perto.
 
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
-**Fecha:** Se você já sentiu que precisava parar de competir na régua de outra pessoa, comenta aqui qual régua era essa. Me segue que eu ensino a achar a sua régua real.
+**Fecha:** Se você também já tentou escalar antes de entender as objeções de perto, comenta aqui qual foi a sua. Me segue que eu ensino a fazer o 1:1 primeiro, a escala depois.
 
 ---
 
 ### 12h · Reels YAP — "O que meus seguidores me ensinaram"
-**Gancho:** "Uma aluna me disse uma frase que virou parte de como eu ensino hoje: 'você não fala sobre evolução, você vive isso'."
+**Gancho:** "Um faixa preta do Insider me escreveu uma frase que mudou como eu via expertise: 'enquanto você não viver o skin in the game, você não vai ser uma expert de verdade.'"
 
-**Contexto:** Eu já sabia, na teoria, que vivência pesa mais que teoria. Mas foi ouvindo isso de quem eu acompanhava que a frase ganhou peso de verdade.
+**Contexto:** Eu já sabia teoricamente que vivência importava mais que estudo. Mas ouvir isso de alguém que já tinha percorrido o caminho deu outro peso.
 
-**Virada:** As pessoas que eu ensino também me ensinam — cada sessão devolve alguma coisa que eu não tinha formulado tão bem sozinha. Método não é via de mão única. Quem acha que só ensina, para de aprender.
+**Virada:** A partir do momento que me escreveram isso, entendi que eu já tinha chegado lá — não porque eu tinha mais um diploma, mas porque eu já vivia, na pele, o que eu ensinava. "Não fala, vive" deixou de ser frase bonita e virou critério real de expertise.
 
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
-**Fecha:** Comenta aqui uma frase que algum aluno ou cliente já te disse que te ensinou alguma coisa — quero ler. Me segue que eu mostro como aprender com quem você ensina, não só ensinar.
+**Fecha:** Se alguém já te disse uma frase que mudou como você se via como expert, comenta aqui qual foi. Me segue que eu ensino a reconhecer quando você já "chegou lá" de verdade.
 
 ---
 
@@ -524,39 +542,39 @@ Comenta. Vale mais o que é real do que o que parece "certo" de perguntar.
 ---
 
 ### 17h · Reels YAP — "Como fazer isso com a família junto"
-**Gancho:** "No começo, eu escondia do meu marido que tava tentando o digital."
+**Gancho:** "Gravei meu primeiro vídeo um dia que meu marido tava no futebol. Postei, e deixei rolar."
 
-**Contexto:** Abri canal no YouTube sem contar pra ele — tinha vergonha de tentar mais uma coisa, com medo de não dar certo de novo.
+**Contexto:** Não escondi por medo nem vergonha — eu simplesmente não tinha clareza ainda do que aquilo significava. Não contei pra ninguém, não fiquei divulgando, só deixei existir.
 
-**Virada:** Hoje eu faço questão do contrário: não porque preciso de permissão, mas porque é mais leve compartilhado. Se dá pra envolver alguém de casa — mesmo que só contando o que você tá tentando — o resultado costuma ser melhor, e o peso fica menor.
+**Virada:** Hoje eu faço diferente: envolvo quem tá em casa desde o início, porque ter alguém sabendo o que você tá tentando construir dá mais direção do que fazer sozinha, sem clareza, torcendo pra entender depois.
 
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
-**Fecha:** Se você também já escondeu uma tentativa de alguém de casa por medo de não dar certo, comenta aqui — quero saber como foi. Me segue que eu ensino a construir isso com mais leveza, com quem tá do seu lado.
+**Fecha:** Se você também já começou algo "escondido" só por falta de clareza, não por medo, comenta aqui como foi. Me segue que eu ensino a dar clareza antes de esconder ou expor.
 
 ---
 
-### 20h · Carrossel Neutro (8 slides) — "Um passo por dia da próxima semana"
-**Gancho (Slide 1):** "Uma tarefa por dia pra próxima semana. Segunda faz isso, terça faz aquilo. Simples assim."
+### 20h · Carrossel Neutro (8 slides) — "1 tarefa por dia pra descobrir seu legado digital"
+**Gancho (Slide 1):** "1 tarefa por dia pra descobrir seu legado digital. Sete dias, sete perguntas."
 
 1. **Slide 1:** Gancho.
-2. **Slide 2:** Segunda: escreve 1 parágrafo de uma história real sua — sem se preocupar se "presta".
-3. **Slide 3:** Terça: lista 3 coisas que você sabe fazer bem, mesmo que pareçam sem relação entre si.
-4. **Slide 4:** Quarta: junta duas dessas três — a combinação que ninguém mais tem.
-5. **Slide 5:** Quinta: escreve 1 frase que resume essa combinação, em linguagem simples.
-6. **Slide 6:** Sexta: manda essa frase pra 1 pessoa só, pede a opinião sincera dela.
-7. **Slide 7:** Sábado: ajusta a frase com o que essa pessoa te devolveu.
-8. **Slide 8:** Domingo: descansa. Sete passos pequenos valem mais que um mês inteiro só pensando. Salva esse post e comenta em qual desses sete passos você tá agora. Me segue que eu acompanho essa semana com você.
+2. **Slide 2:** Segunda: o que você faz hoje que, se sumisse, alguém sentiria falta de verdade?
+3. **Slide 3:** Terça: se você tivesse que ensinar 1 coisa só pro resto da vida, qual seria?
+4. **Slide 4:** Quarta: quem é a pessoa que você já ajudou e nunca esqueceu?
+5. **Slide 5:** Quinta: o que você sabe hoje que gostaria de ter sabido há 10 anos?
+6. **Slide 6:** Sexta: se seu método sumisse amanhã, o que ficaria registrado sobre você?
+7. **Slide 7:** Sábado: qual palavra você quer que as pessoas usem pra te descrever daqui a 10 anos?
+8. **Slide 8:** Domingo: junta as respostas — isso é o esboço do seu legado digital. Comenta qual dessas perguntas foi mais difícil de responder. Me segue que eu ensino a transformar isso em método.
 
-**Legenda:** Sete passos pequenos. Nenhum precisa de coragem de palco.
+**Legenda:** Legado não é sobre alcance. É sobre o que sobra quando você não tá mais lá pra explicar.
 
 ---
 ---
 
-## DIA 7 — Domingo, 13/09 (fechamento da semana — conteúdo original, só CTA/legenda corrigidos)
+## DIA 7 — Domingo, 13/09 (revisão 2, 05/09 — corrigido pela Karol)
 
 ### 07h · Reels 7s sem fala — "Fechamento da semana"
-**Gancho de tela:** "Semana de conversa encerrada. Comentário ou não, vocês me disseram muita coisa."
+**Gancho de tela:** "A dúvida que mais aparece em mentoria não é sobre marketing. É sobre se o que você sabe é suficiente."
 
 **Legenda:**
 Essa semana eu não fiquei esperando comentário pra ter conversa de verdade.
@@ -571,16 +589,16 @@ Semana que vem tem mais — e se você quiser deixar sua dúvida desde já, ela 
 
 ---
 
-### 09h · Reels YAP — "O que essa semana de conversa mostrou"
-**Gancho:** "Essa semana mostrou uma coisa: o problema nunca foi falta de pergunta. Foi falta de canal aberto pra ela."
+### 09h · Reels YAP — "O que responder ensina pra quem responde"
+**Gancho:** "Toda vez que eu respondo dúvida de verdade, aprendo tanto quanto quem perguntou."
 
-**Contexto:** Três semanas seguidas desse desafio fecharam sem nenhum comentário real — não porque ninguém tinha dúvida, mas porque o CTA "seguir" nunca pediu conversa.
+**Contexto:** É fácil achar que ensinar é só entregar resposta — que o conhecimento sai só numa direção.
 
-**Virada:** No momento em que eu abri espaço fixo pra responder dúvida de verdade (com ou sem comentário), a semana virou 6 conversas reais em vez de 42 posts genéricos. Canal aberto muda o que aparece — a pergunta sempre existiu.
+**Virada:** Não é assim. Cada dúvida que eu respondo me obriga a organizar um pensamento que às vezes nem eu tinha formulado tão bem. Responder de verdade é meio caminho pra continuar aprendendo.
 
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
-**Fecha:** Comenta aqui se você também sentiu que faltava canal, não pergunta, em algum momento da sua semana. Me segue que eu ensino a abrir esse canal no seu próprio conteúdo.
+**Fecha:** Comenta aqui uma dúvida sua — não precisa ser sobre método, pode ser qualquer coisa que te trava. Me segue que eu ensino a transformar pergunta em clareza, pros dois lados.
 
 ---
 
@@ -610,32 +628,32 @@ Semana que vem tem mais — e se você quiser deixar sua dúvida desde já, ela 
 
 ---
 
-### 17h · Reels YAP — "O que eu vou testar essa semana"
-**Gancho:** "Essa semana eu vou testar manter o convite de comentar mesmo fora do horário de conversa."
+### 17h · Reels YAP — "O que eu testo em mim antes de ensinar"
+**Gancho:** "Toda semana eu testo uma coisa nova no meu próprio método — não só ensino, aplico em mim primeiro."
 
-**Contexto:** O desafio pede CTA fixo "seguir" na maioria dos posts. Os dados dessa conta mostram que isso, sozinho, nunca gerou comentário real em três semanas.
+**Contexto:** É fácil ensinar teoria sem nunca ter testado na prática recente.
 
-**Virada:** Vou testar 1 post fora do slot das 15h com convite direto de comentário, só pra ver se o padrão muda quando não é só na conversa. Testar em público é desconfortável. E é o que ensina de verdade.
+**Virada:** Essa semana eu testei uma resposta diferente numa sessão — ainda não sei se vai virar padrão. Testar em mim antes de ensinar vem antes, sempre. Faz parte do método, não é um extra.
 
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
-**Fecha:** Comenta aqui se você quer que eu conte o resultado desse teste na semana que vem. Me segue que eu conto em público, dando certo ou não.
+**Fecha:** Comenta aqui se você também testa em si antes de ensinar, ou pula direto pra explicar pros outros. Me segue que eu conto os testes que eu faço, sempre — dando certo ou não.
 
 ---
 
-### 20h · Carrossel Neutro (8 slides) — "O resumo das conversas da semana"
-**Gancho (Slide 1):** "Sete dias, seis dúvidas reais respondidas. O resumo condensado da semana inteira."
+### 20h · Carrossel Neutro (8 slides) — "7 principais dúvidas respondidas sobre criação de método e infoprodutos"
+**Gancho (Slide 1):** "7 principais dúvidas sobre criar método e infoproduto — respondidas direto, sem enrolação."
 
 1. **Slide 1:** Gancho.
-2. **Slide 2:** Segunda — Vanessa: manicure + dados/IA. Método na interseção, não na escolha de uma coisa só.
-3. **Slide 3:** Terça — Fabiano: escola de corrida "saturada". Nicho lotado não é problema quando você serve o cruzamento certo.
-4. **Slide 4:** Quarta — Geliane: tese ampla demais. Falar com todo mundo é não falar com ninguém.
-5. **Slide 5:** Quinta — Hélio: advogado e corretor. Seu diferencial pode ser o detalhe que você nem menciona.
-6. **Slide 6:** Sexta — Analia: autoridade sem ser mãe. Vem da dor vivida, não do rótulo idêntico.
-7. **Slide 7:** Sábado — Rosiani: norma chata virando vantagem. Ninguém compra obrigação, todo mundo compra vantagem.
-8. **Slide 8:** Se você comentou aqui essa semana, tem um pedaço seu nesse post. Comenta qual desses seis casos é mais parecido com o seu — quero saber. Me segue que eu ensino a achar o cruzamento que já existe em você também.
+2. **Slide 2:** "Meu conhecimento é suficiente pra virar método?" → sim, quando organizado. Não quando "mais estudado".
+3. **Slide 3:** "Preciso ter muitos seguidores pra vender?" → não. A primeira venda quase nunca vem de audiência grande.
+4. **Slide 4:** "Meu nicho já tá saturado?" → só quando ninguém ocupa a interseção que só você tem.
+5. **Slide 5:** "Sou mentor ou curso online?" → depende se você quer proximidade ou escala.
+6. **Slide 6:** "Preciso estudar mais antes de começar?" → estudar mais raramente é o que falta de verdade.
+7. **Slide 7:** "E se eu não for a persona 'perfeita' pro que eu ensino?" → autoridade vem da dor vivida, não do rótulo idêntico.
+8. **Slide 8:** "Por onde eu começo, tenho informação demais?" → pelo que já vendeu, já tem prova, ou já é mais perguntado. Salva esse post. Me segue que eu respondo dúvida real toda semana.
 
-**Legenda:** Seis pessoas, seis áreas, uma resposta em comum: o método já existia, faltava juntar as peças.
+**Legenda:** 7 dúvidas que aparecem toda vez que alguém tenta organizar o que já sabe. Salva pra quando travar de novo.
 
 ---
 
@@ -646,6 +664,8 @@ Semana que vem tem mais — e se você quiser deixar sua dúvida desde já, ela 
 - **CTA em todo post:** nunca "me segue" sozinho — sempre "me segue que eu ensino/mostro [tema específico]". Convite de comentário sempre com motivo/calor, nunca "comenta a tua dúvida" seco.
 - Casos nomeados: Vanessa, Fabiano, Geliane, Hélio, Analia, Rosiani, Bruno, Rodrigo, Yamada (reuso pontual, Dia 3/20h — sinalizado). Milena SÓ aparece no carrossel de 08/09-20h com o caso profissional dela (Conduz Agro) — nunca em comparação direta com o boicote da Karol, por ela ainda ser servidora pública ativa. Nanny NÃO entra — precisa de alinhamento direto com ela antes de qualquer publicação que a credite.
 - Segunda 07/09 é feriado — atenção redobrada no agendamento (fila pode se comportar diferente em feriado, checar histórico de falhas 9004 registradas no negócio).
+- **Dias 09/09 (12h) e 12/09 (12h e 17h)** e demais slots que citam nomes reais de fontes internas (faixa preta do Insider) não precisam nomear a pessoa — mantido genérico de propósito.
+- **13/09 (Domingo):** 09h, 17h e 20h foram deliberadamente escritos sem citar o desafio Rota100k nem qualquer resultado de engajamento da própria semana — o resultado real ainda não existe no momento da produção, então nada é afirmado sobre ele.
 
-## Pendente de revisão
-Dias 5, 6 e 7 (11-13/09) tiveram só o formato de CTA e a legenda do 07h corrigidos nesta rodada — o conteúdo de cada post ainda é a versão original, sem revisão linha a linha da Karol. Falta ela revisar esses três dias.
+## Aviso técnico
+O arquivo foi aberto no Word em algum momento e salvo em UTF-16, o que corrompeu acentuação (mesmo problema já registrado antes com outros arquivos da semana). Reconstituí o texto certo nesta versão. Se for editar no Word de novo, me avisa antes da próxima rodada pra eu não perder nenhuma edição sua.
