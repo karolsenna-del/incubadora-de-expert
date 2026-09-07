@@ -8,7 +8,7 @@
 
 - `COMO USAR`: procedimento de criação e atualização.
 - `PAINEL`: uma linha por aluno, com sessão atual, sessões e atividades concluídas, próximas datas e alertas.
-- `MODELO — ALUNO`: 24 sessões com tema, objetivo, entregável, datas, 1 check da sessão, 5 checks de atividades, evidência, aprendizado, próxima ação, prazo e notas da Milena.
+- `MODELO — ALUNO`: 24 sessões com tema, objetivo, entregável, datas e check da sessão. Cada linha registra também as atividades combinadas entre sessões, data da revisão, check geral de conclusão, evidência/observação, aprendizado, próxima ação, prazo e notas da Milena.
 - Checkpoints destacados: S8, S12, S16, S20, S21 e S24.
 
 ## Regra de uso
