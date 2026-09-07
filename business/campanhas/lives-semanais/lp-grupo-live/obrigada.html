@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Você já tá dentro | Live Expert360º</title>
+  <meta name="robots" content="noindex">
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4188654601446070');
+    fbq('track', 'PageView');
+    fbq('track', 'CompleteRegistration');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4188654601446070&ev=PageView&noscript=1"
+  /></noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --preto: #0B0B0C;
+      --branco: #FFFFFF;
+      --cinza-300: #D4D4D8;
+      --cinza-500: #71717A;
+      --laranja: #FF6B1A;
+      --laranja-escuro: #E85A0D;
+      --verde: #25D366;
+      --verde-escuro: #1DA851;
+      --display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --texto: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--texto);
+      background: var(--preto);
+      color: var(--branco);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .card {
+      max-width: 480px;
+      text-align: center;
+    }
+    .check {
+      width: 64px; height: 64px;
+      background: var(--verde);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2rem;
+    }
+    h1 {
+      font-family: var(--display);
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    p { color: var(--cinza-300); margin-bottom: 12px; font-size: 1rem; }
+    .destaque { color: var(--laranja); font-weight: 700; }
+    .aviso {
+      background: rgba(255, 107, 26, 0.1);
+      border: 1px solid rgba(255, 107, 26, 0.3);
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 0.92rem;
+      margin: 20px 0 28px;
+      color: var(--cinza-300);
+    }
+    .cta {
+      display: block;
+      background: var(--verde);
+      color: var(--branco);
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      padding: 18px 32px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+      transition: transform .15s ease, background .15s ease;
+    }
+    .cta:hover { background: var(--verde-escuro); transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="check">✓</div>
+    <h1>Prontinho! Você já tá dentro.</h1>
+    <p>Agora falta um passo: entra no grupo fechado do WhatsApp.</p>
+    <div class="aviso">
+      A live acontece no <strong>Google Meet</strong>, toda <span class="destaque">quarta, 15h</span> (horário de Brasília) — o link é enviado no grupo <strong>10 minutos antes</strong> de começar.
+    </div>
+    <a class="cta" id="btnGrupo" href="https://chat.whatsapp.com/CvlYADzJBoI3MmiLs0enyr" target="_blank" rel="noopener">ENTRAR NO GRUPO AGORA</a>
+  </div>
+
+  <script>
+    document.getElementById('btnGrupo').addEventListener('click', function () {
+      if (typeof fbq === 'function') fbq('track', 'Contact');
+    });
+  </script>
+</body>
+</html>

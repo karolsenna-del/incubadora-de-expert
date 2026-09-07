@@ -83,6 +83,7 @@ Antes de entregar o roteiro, verificar:
 - [ ] Pitch estruturado nas 4 partes fixas do Bloco 8
 - [ ] Conexão com método Expert360 explícita (Bloco 5)
 - [ ] CTA marcado como [KAROL DEFINE] se não confirmado
+- [ ] Tag "tema desta semana" atualizada na LP do grupo (ver seção "Atualização da LP do Grupo" abaixo)
 
 ## Protocolo de Histórias, Casos e Números Pessoais
 
@@ -100,6 +101,20 @@ SE o roteiro ficaria mais forte com uma história, caso ou número específico d
 4. Roteirizar cada afirmação como uma virada curta dentro do Bloco 6
 
 Exercícios reutilizáveis de m0-roteiros.md (Lista de Fracassos, Minha História Real) continuam válidos como fonte de história pro Bloco 3 ou 5, mesmo sem bloco de prática dedicado.
+
+## Atualização da LP do Grupo
+
+Depois de fechar o título do roteiro (`# Live XX — [TÍTULO]`), atualizar a LP de inscrição no
+grupo com o tema da semana:
+
+1. Abrir `business/campanhas/lives-semanais/lp-grupo-live/index.html`
+2. Localizar a linha `<strong id="temaSemana">...</strong>` (dentro do bloco `.tema-semana` do Hero)
+3. Substituir pelo título da live desta semana — formatado de forma objetiva/quantificável quando
+   o roteiro tiver número ou resultado concreto (ex: "Como fazer em 3 dias o que levaria 3 meses")
+4. Republicar: `cd business/campanhas/lives-semanais/lp-grupo-live && vercel --prod --yes --scope karol-sennas-projects`
+
+Sem isso, a LP evergreen fica com o tema de uma semana anterior — não trava o cadastro, mas
+deixa a promessa da semana desatualizada.
 
 ## Formato de Entrega
 

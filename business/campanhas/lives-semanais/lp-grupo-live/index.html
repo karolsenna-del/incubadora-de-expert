@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Expert360º — Grupo Fechado | Incubadora de Expert</title>
+  <meta name="description" content="Toda quarta-feira, às 15h de Brasília, aula ao vivo e gratuita no grupo fechado, pra te ajudar a estruturar seu conhecimento em método validado.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Live Expert360º — toda quarta, 15h, no grupo fechado">
+  <meta property="og:description" content="Estruture seu conhecimento em método validado — sem precisar se expor de forma amadora ou insegura.">
+  <meta property="og:type" content="website">
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4188654601446070');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4188654601446070&ev=PageView&noscript=1"
+  /></noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --preto: #0B0B0C;
+      --preto-2: #151517;
+      --branco: #FFFFFF;
+      --cinza-100: #F4F4F5;
+      --cinza-300: #D4D4D8;
+      --cinza-500: #71717A;
+      --cinza-700: #3F3F46;
+      --laranja: #FF6B1A;
+      --laranja-escuro: #E85A0D;
+      --display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --texto: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--texto);
+      color: var(--preto);
+      background: var(--branco);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 64px 0; }
+    h1, h2, h3 { font-family: var(--display); line-height: 1.2; }
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 32px;
+      letter-spacing: -0.02em;
+    }
+    p { max-width: 62ch; }
+    strong { font-weight: 700; }
+    .destaque { color: var(--laranja); }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visivel { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+    .cta {
+      display: inline-block;
+      background: var(--laranja);
+      color: var(--branco);
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      text-align: center;
+      padding: 18px 32px;
+      border-radius: 12px;
+      letter-spacing: 0.01em;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+      box-shadow: 0 8px 24px rgba(255, 107, 26, 0.35);
+    }
+    .cta:hover { background: var(--laranja-escuro); transform: translateY(-2px); }
+    .cta:disabled { opacity: .7; cursor: wait; transform: none; }
+    .cta-micro { display: block; margin-top: 12px; font-size: 0.85rem; color: var(--cinza-500); text-align: center; }
+
+    /* ===== HERO ===== */
+    .hero { background: var(--preto); color: var(--branco); padding: 40px 0 48px; }
+    .hero-grid { display: grid; gap: 40px; align-items: start; }
+    @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.05fr 0.95fr; align-items: center; } }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--display);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--laranja);
+      border: 1px solid rgba(255, 107, 26, 0.4);
+      border-radius: 100px;
+      padding: 8px 16px;
+      margin-bottom: 20px;
+    }
+    .kicker .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #ff3b3b;
+      animation: pulsar 1.4s infinite;
+    }
+    @keyframes pulsar { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+
+    .logo-marca {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+    }
+    .logo-marca .live { color: var(--cinza-500); font-weight: 600; font-size: 0.85em; display: block; }
+
+    .hero h1 {
+      font-size: clamp(1.7rem, 4.2vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      max-width: 20ch;
+    }
+    .hero .sub {
+      font-size: clamp(1rem, 2.2vw, 1.1rem);
+      color: var(--cinza-300);
+      max-width: 48ch;
+      margin-bottom: 24px;
+    }
+
+    .tema-semana {
+      display: block;
+      background: var(--preto-2);
+      border-left: 3px solid var(--laranja);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 18px;
+      font-size: 0.92rem;
+      color: var(--cinza-300);
+      margin-bottom: 28px;
+    }
+    .tema-semana strong { color: var(--branco); }
+
+    /* ===== FORM ===== */
+    .form-card {
+      background: var(--branco);
+      color: var(--preto);
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
+    .form-card h3 { font-size: 1.05rem; margin-bottom: 4px; }
+    .form-card .form-sub { font-size: 0.88rem; color: var(--cinza-500); margin-bottom: 20px; }
+    .campo { margin-bottom: 14px; }
+    .campo input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--cinza-300);
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: var(--texto);
+      background: var(--cinza-100);
+    }
+    .campo input:focus { outline: 2px solid var(--laranja); outline-offset: 1px; background: var(--branco); }
+    .erro-form {
+      display: none;
+      background: #FFF1EE;
+      color: #B3400F;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      margin-bottom: 14px;
+    }
+    .erro-form.ativo { display: block; }
+
+    /* ===== VSL ===== */
+    .vsl {
+      max-width: 720px;
+      margin: 32px auto 0;
+      aspect-ratio: 16 / 9;
+      background: var(--preto-2);
+      border: 1px solid var(--cinza-700);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cinza-500);
+      font-size: 0.9rem;
+      overflow: hidden;
+    }
+    .vsl iframe, .vsl video { width: 100%; height: 100%; border: 0; }
+
+    /* ===== CONTADOR ===== */
+    .barra-contador { background: var(--laranja); color: var(--branco); }
+    .contador-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .contador-label {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .contador-blocos { display: flex; gap: 12px; }
+    .bloco-tempo {
+      background: rgba(0,0,0,0.15);
+      border-radius: 10px;
+      padding: 8px 14px;
+      min-width: 64px;
+    }
+    .bloco-tempo .num { font-family: var(--display); font-size: 1.4rem; font-weight: 800; display: block; }
+    .bloco-tempo .lbl { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; }
+
+    /* ===== O QUE É ===== */
+    .oque-grid { display: grid; gap: 36px; align-items: center; }
+    @media (min-width: 900px) { .oque-grid { grid-template-columns: 380px 1fr; } }
+    .laptop-mock {
+      background: var(--cinza-100);
+      border-radius: 20px;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .laptop-mock img { width: 100%; max-width: 320px; height: auto; }
+    .oque-texto { display: grid; gap: 16px; color: var(--cinza-700); }
+    .oque-texto strong { color: var(--preto); }
+
+    /* ===== SOBRE ===== */
+    .secao-escura { background: var(--preto); color: var(--branco); }
+    .secao-escura h2 { color: var(--branco); }
+    .sobre-grid { display: grid; gap: 32px; align-items: center; }
+    @media (min-width: 768px) { .sobre-grid { grid-template-columns: 280px 1fr; } }
+    .sobre-foto {
+      aspect-ratio: 4 / 5;
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--preto-2);
+    }
+    .sobre-foto img { width: 100%; height: 100%; object-fit: cover; }
+    .sobre-texto { display: grid; gap: 14px; color: var(--cinza-300); font-size: 0.98rem; }
+    .sobre-texto strong { color: var(--branco); }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+      background: var(--preto);
+      color: var(--cinza-500);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.78rem;
+      line-height: 1.9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="kicker"><span class="dot"></span> Ao vivo · toda quarta-feira, às 15h (horário de Brasília)</span>
+          <div class="logo-marca">LIVE<br><span class="live">EXPERT360º</span></div>
+
+          <h1 class="reveal">Toda quarta-feira, às 15h de Brasília, eu dou aula ao vivo e gratuita no grupo fechado.</h1>
+          <p class="sub reveal">Pra te ajudar a estruturar seu conhecimento em método validado — sem precisar se expor de forma amadora ou insegura.</p>
+
+          <div class="tema-semana reveal">
+            Nesta quarta: <strong id="temaSemana">Como fazer em 3 dias o que levaria 3 meses</strong>
+            <!-- Atualizar toda semana com o título do roteiro mais recente em
+                 business/campanhas/lives-semanais/live-XX-roteiro.md -->
+          </div>
+        </div>
+
+        <div class="form-card reveal">
+          <h3>Garanta seu acesso ao grupo</h3>
+          <p class="form-sub">Cadastro rápido — você recebe o convite automaticamente.</p>
+
+          <div class="erro-form" id="erroForm"></div>
+
+          <form id="formLead" novalidate>
+            <div class="campo">
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required autocomplete="name">
+            </div>
+            <div class="campo">
+              <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required autocomplete="email">
+            </div>
+            <div class="campo">
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp (DDD + número)" required autocomplete="tel">
+            </div>
+            <button type="submit" class="cta" id="btnSubmit">QUERO ENTRAR NO GRUPO</button>
+            <span class="cta-micro">Você recebe o link de acesso automaticamente depois do cadastro.</span>
+          </form>
+        </div>
+      </div>
+
+      <div class="vsl reveal">
+        <!-- Vídeo-convite (30-60s). Trocar pelo embed real quando gravado:
+             <iframe src="https://www.youtube-nocookie.com/embed/SEU_ID?rel=0&modestbranding=1"
+               title="Convite Live Expert360" allow="autoplay; encrypted-media; picture-in-picture"
+               allowfullscreen></iframe> -->
+        <span>Vídeo-convite (30-60s) — em breve</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ CONTADOR ============ -->
+  <div class="barra-contador">
+    <div class="contador-wrap">
+      <span class="contador-label">A próxima aula ao vivo começa em:</span>
+      <div class="contador-blocos">
+        <div class="bloco-tempo"><span class="num" id="cDias">00</span><span class="lbl">dias</span></div>
+        <div class="bloco-tempo"><span class="num" id="cHoras">00</span><span class="lbl">horas</span></div>
+        <div class="bloco-tempo"><span class="num" id="cMin">00</span><span class="lbl">min</span></div>
+        <div class="bloco-tempo"><span class="num" id="cSeg">00</span><span class="lbl">seg</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ O QUE É ============ -->
+  <section>
+    <div class="container">
+      <h2 class="reveal">A ordem que o mercado te ensina é a que mais frustra especialista</h2>
+      <div class="oque-grid">
+        <div class="laptop-mock reveal">
+          <img src="logo-liveexpert360.png" alt="Live Expert360º" loading="lazy">
+        </div>
+        <div class="oque-texto reveal">
+          <p>O mercado vende uma sequência: primeiro apareça, primeiro construa audiência, primeiro vire referência — só depois, talvez, venda.</p>
+          <p>Pra quem é especialista de verdade (não criador de conteúdo por natureza), essa ordem desgasta. Você se cobra postar todo dia, se compara com quem já tá anos à frente, e desiste no meio — exausto, sem ter visto um real entrar antes de meses expondo a cara.</p>
+          <p>A ordem que funciona é a inversa: estrutura seu método primeiro, valida com vendas reais — nem que seja pra pouca gente, num grupo pequeno — e só DEPOIS escala presença e audiência. <strong>Você valida antes de escalar.</strong> Vê dinheiro entrar antes de precisar aparecer pra milhares.</p>
+          <p>É isso que eu mostro, toda semana, ao vivo, de graça: o pedaço do método pra você aplicar AGORA — sem copiar grande player que tá anos à frente, gastando dinheiro que você não tem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section class="secao-escura">
+    <div class="container">
+      <h2 class="reveal">Sobre a Karol</h2>
+      <div class="sobre-grid">
+        <div class="sobre-foto reveal">
+          <img src="karol.jpg" alt="Karol Senna" loading="lazy">
+        </div>
+        <div class="sobre-texto reveal">
+          <p>Sou Karol Senna. Contadora e administradora de formação, 13 anos presa num cargo público que reconhecia minha competência e travava meu crescimento.</p>
+          <p>Pedi exoneração em 28/02/2024. Já faturei mais de <strong>R$500 mil</strong> lançando para outros experts — e também já fracassei feio tentando vender o meu próprio conhecimento, mesmo com toda credencial certa.</p>
+          <p>Foi aí que entendi: ter conhecimento de sobra não é estar preparado. Preparado é quem estrutura método e <strong>valida em vendas reais antes de escalar.</strong></p>
+          <p>É isso que eu ensino, toda semana, nessa live — de graça.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer>
+    Incubadora de Expert · CNPJ 38.431.977/0001-36<br>
+    Este site não faz parte do Google ou do Facebook (Meta Inc.).<br>
+    Política de privacidade · Termos de uso
+  </footer>
+
+  <script>
+    // Animações de entrada
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('visivel'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+
+    // ===== Contador evergreen: próxima quarta-feira, 15h horário de Brasília (18h UTC) =====
+    function getProximaQuarta18UTC() {
+      var agora = new Date();
+      var alvo = new Date(agora);
+      alvo.setUTCHours(18, 0, 0, 0);
+      var dia = alvo.getUTCDay(); // 0=dom ... 3=qua
+      var diff = (3 - dia + 7) % 7;
+      if (diff === 0 && agora >= alvo) diff = 7;
+      alvo.setUTCDate(alvo.getUTCDate() + diff);
+      return alvo;
+    }
+
+    function atualizarContador() {
+      var alvo = getProximaQuarta18UTC();
+      var agora = new Date();
+      var diffMs = alvo - agora;
+      if (diffMs < 0) diffMs = 0;
+
+      var seg = Math.floor(diffMs / 1000);
+      var dias = Math.floor(seg / 86400); seg -= dias * 86400;
+      var horas = Math.floor(seg / 3600); seg -= horas * 3600;
+      var min = Math.floor(seg / 60); seg -= min * 60;
+
+      document.getElementById('cDias').textContent = String(dias).padStart(2, '0');
+      document.getElementById('cHoras').textContent = String(horas).padStart(2, '0');
+      document.getElementById('cMin').textContent = String(min).padStart(2, '0');
+      document.getElementById('cSeg').textContent = String(seg).padStart(2, '0');
+    }
+    atualizarContador();
+    setInterval(atualizarContador, 1000);
+
+    // ===== Formulário =====
+    var form = document.getElementById('formLead');
+    var erroForm = document.getElementById('erroForm');
+    var btn = document.getElementById('btnSubmit');
+
+    function mostrarErro(msg) {
+      erroForm.textContent = msg;
+      erroForm.classList.add('ativo');
+    }
+
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      erroForm.classList.remove('ativo');
+
+      var nome = document.getElementById('nome').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var whatsapp = document.getElementById('whatsapp').value.trim();
+
+      if (!nome || !email || !whatsapp) {
+        mostrarErro('Preenche os 3 campos pra continuar.');
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        mostrarErro('Digite um e-mail válido.');
+        return;
+      }
+      if (whatsapp.replace(/\D/g, '').length < 10) {
+        mostrarErro('Digite um WhatsApp válido, com DDD.');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'ENTRANDO...';
+
+      if (typeof fbq === 'function') fbq('track', 'Lead');
+
+      fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome: nome, email: email, whatsapp: whatsapp })
+      })
+        .catch(function (err) { console.error('lead falhou:', err); })
+        .finally(function () {
+          window.location.href = 'obrigada.html';
+        });
+    });
+  </script>
+</body>
+</html>
