@@ -69,6 +69,8 @@ Hoje é dia de pensar nisso a sério. Eu vou falar sobre esses três tipos de in
 
 **Fecha:** Se você também já aceitou cliente errado só pela segurança do fixo, conta aqui como foi do seu lado — quero saber. Me segue que eu ensino a reconhecer esse padrão antes que ele se repita de novo.
 
+**Legenda:** O medo do "sem cliente" já me fez aceitar gente errada mais de uma vez. Ainda erro nisso — só que hoje erro com mais consciência.
+
 ---
 
 ### 12h · Reels YAP — Independência de escolher COMO ensinar
@@ -81,6 +83,8 @@ Hoje é dia de pensar nisso a sério. Eu vou falar sobre esses três tipos de in
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Se você não sabe se é mais mentor ou mais "curso", comenta aqui o que combina mais contigo — eu quero te ajudar a decidir. Me segue que eu ensino a escolher o formato certo pro seu jeito de ensinar.
+
+**Legenda:** Ninguém nasce sabendo se é mentor ou curso. Eu descobri o meu tentando os dois — e errando nos dois.
 
 ---
 
@@ -108,6 +112,8 @@ O mercado te ensina que você precisa micrar seu nicho até virar 1 coisa só. I
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Se hoje você também tá decidindo seu próprio horário, mesmo que seja só 30 minutos, comenta aqui o que você escolheu fazer. Me segue que eu ensino a construir isso com estrutura, não com culpa.
+
+**Legenda:** Ninguém vai te dar essa liberdade de presente. Ela se constrói, decisão por decisão, até virar rotina.
 
 ---
 
@@ -157,6 +163,8 @@ Se você reconhece esse padrão em você, comenta aqui — hoje eu falo sobre is
 
 **Fecha:** Se você também acha que o problema de quem você ensina é "entender mais", comenta aqui o que você ensina — pode ser que a dor real seja outra. Me segue que eu ensino a diagnosticar isso de verdade.
 
+**Legenda:** A dor que você acha que resolve quase nunca é a dor real. Ela só parece mais fácil de nomear.
+
 ---
 
 ### 12h · Reels YAP — "O início de um sonho que deu tudo errado"
@@ -169,6 +177,8 @@ Se você reconhece esse padrão em você, comenta aqui — hoje eu falo sobre is
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Se você já viveu isso — ser boa e mesmo assim ficar de fora — comenta aqui como foi. Me segue que eu ensino a sair desse jogo sem precisar continuar jogando ele.
+
+**Legenda:** Fui a melhor da equipe e mesmo assim fiquei de fora. Competência nunca foi o critério real.
 
 ---
 
@@ -195,6 +205,8 @@ Se você reconhece esse padrão em você, comenta aqui — hoje eu falo sobre is
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Se você também tem uma "restrição" te fazendo esperar o momento perfeito, comenta aqui qual é a sua. Me segue que eu ensino a estruturar o método pro seu contexto real, não pro ideal.
+
+**Legenda:** Todo mundo esperava que eu esperasse o "momento certo". Ele não ia chegar — eu tive que criar um.
 
 ---
 
@@ -246,6 +258,8 @@ Se você já sentiu essa atração pelo "fixo" bem na hora que devia arriscar ma
 
 **Fecha:** Se você também sente que tá "aparecendo" sem saber se alguém compraria, comenta aqui — quero entender onde você tá nessa ordem. Me segue que eu ensino a inverter essa sequência.
 
+**Legenda:** Ninguém te conta que dá pra vender antes de aparecer. Eu vendi antes — e só depois entendi por quê funcionou.
+
 ---
 
 ### 12h · Reels YAP — "O primeiro dinheiro que eu ganhei com isso"
@@ -258,6 +272,8 @@ Se você já sentiu essa atração pelo "fixo" bem na hora que devia arriscar ma
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Se alguém já te disse que você tem um jeito específico de fazer o que faz, comenta aqui o que foi — pode ser o início do seu método. Me segue que eu ensino a reconhecer isso.
+
+**Legenda:** A Incubadora não nasceu de um post viral. Nasceu de gente que me viu trabalhar de perto.
 
 ---
 
@@ -284,6 +300,8 @@ Se você já sentiu essa atração pelo "fixo" bem na hora que devia arriscar ma
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Me conta aqui: você já tem método validado e produto rodando, ou ainda tá nessa fase? Quero te ajudar a saber se vale a pena produzir mais conteúdo agora. Me segue que eu ensino a diagnosticar isso antes de gastar energia no lugar errado.
+
+**Legenda:** Copiar estratégia de quem já validou método é atalho. Copiar sem ter validado é atropelo.
 
 ---
 
@@ -337,6 +355,8 @@ Cada flop virou uma fase do método que eu ensino hoje. Se você já flopou pare
 
 **Fecha:** Isso devia ser proibido: vender mentoria pra quem não tem o pré-requisito pra alcançar o resultado prometido. Comenta aqui se algo assim já tentaram te vender — quero saber como você percebeu, ou se ainda não percebeu. Me segue que eu ensino a reconhecer esse tipo de armadilha antes de assinar.
 
+**Legenda:** Risco zero pra quem vende, risco total pra quem compra. Eu só enxerguei porque sei ler passo a passo de venda.
+
 ---
 
 ### 12h · Reels YAP — "A vez em que eu não soube responder"
@@ -349,6 +369,8 @@ Cada flop virou uma fase do método que eu ensino hoje. Se você já flopou pare
 **Estrutura:** Abre 0-3s (a confissão seca) → Contexto → Virada → Fecha.
 
 **Fecha:** Se você também tem uma dúvida antiga sobre se algo foi sorte ou perda, comenta aqui qual foi. Me segue que eu ensino a olhar pra trás sem precisar ter certeza na hora.
+
+**Legenda:** Achei que tinha perdido uma vaga. Hoje entendo que talvez tenha ganhado tempo pra descobrir outra coisa.
 
 ---
 
@@ -375,6 +397,8 @@ Cada flop virou uma fase do método que eu ensino hoje. Se você já flopou pare
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Comenta aqui: das coisas que você ensina, qual já vendeu, qual já tem prova, e qual as pessoas mais perguntam? Quero te ajudar a achar o ponto de partida. Me segue que eu ensino a organizar por resultado, não por completude.
+
+**Legenda:** Você não precisa organizar tudo antes de começar. Precisa só dos 3 sinais certos.
 
 ---
 
@@ -426,6 +450,8 @@ Se a sua também tá guardada, comenta aqui — essa semana é feita pra isso.
 
 **Fecha:** Se você também sente que precisa "aparecer primeiro" pra validar seu método, comenta aqui onde você tá nessa decisão. Me segue que eu ensino a vender antes de aparecer.
 
+**Legenda:** Não é conselho de guru. É o que eu faria de novo, porque foi o que funcionou pra mim.
+
 ---
 
 ### 12h · Reels YAP — "Minha semana em números"
@@ -438,6 +464,8 @@ Se a sua também tá guardada, comenta aqui — essa semana é feita pra isso.
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Comenta aqui como foi a sua semana em números — trabalho e vida junto, sem separar. Me segue que eu ensino a construir negócio que cabe dentro da vida, não a vida que sobra depois do negócio.
+
+**Legenda:** Negócio rodando não significa vida parada. Significa as duas coisas cabendo na mesma agenda.
 
 ---
 
@@ -464,6 +492,8 @@ Se a sua também tá guardada, comenta aqui — essa semana é feita pra isso.
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Se você também já teve duas opções boas de verdade e não sabia qual escolher, comenta aqui quais eram as suas. Me segue que eu ensino o critério que eu uso pra decisões assim.
+
+**Legenda:** Escolher entre duas coisas boas é mais difícil do que escolher entre o certo e o errado.
 
 ---
 
@@ -513,6 +543,8 @@ Comenta. Vale mais o que é real do que o que parece "certo" de perguntar.
 
 **Fecha:** Se você também já tentou escalar antes de entender as objeções de perto, comenta aqui qual foi a sua. Me segue que eu ensino a fazer o 1:1 primeiro, a escala depois.
 
+**Legenda:** Escala sem 1:1 antes é decorar resposta sem entender pergunta.
+
 ---
 
 ### 12h · Reels YAP — "O que meus seguidores me ensinaram"
@@ -525,6 +557,8 @@ Comenta. Vale mais o que é real do que o que parece "certo" de perguntar.
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Se alguém já te disse uma frase que mudou como você se via como expert, comenta aqui qual foi. Me segue que eu ensino a reconhecer quando você já "chegou lá" de verdade.
+
+**Legenda:** Expertise não se prova com diploma. Se prova vivendo o que você ensina, na pele.
 
 ---
 
@@ -551,6 +585,8 @@ Comenta. Vale mais o que é real do que o que parece "certo" de perguntar.
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Se você também já começou algo "escondido" só por falta de clareza, não por medo, comenta aqui como foi. Me segue que eu ensino a dar clareza antes de esconder ou expor.
+
+**Legenda:** Não foi medo. Foi falta de clareza do que aquilo ainda ia virar.
 
 ---
 
@@ -600,6 +636,8 @@ Semana que vem tem mais — e se você quiser deixar sua dúvida desde já, ela 
 
 **Fecha:** Comenta aqui uma dúvida sua — não precisa ser sobre método, pode ser qualquer coisa que te trava. Me segue que eu ensino a transformar pergunta em clareza, pros dois lados.
 
+**Legenda:** Ensinar de verdade nunca foi mão única. Quem responde também sai diferente.
+
 ---
 
 ### 12h · Reels YAP — "A pergunta para levar para a semana"
@@ -612,6 +650,8 @@ Semana que vem tem mais — e se você quiser deixar sua dúvida desde já, ela 
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Comenta aqui quais duas coisas que você sabe fazer você nunca pensou em juntar — não precisa responder agora, só plantar a pergunta. Me segue que eu ensino a juntar isso quando você tiver a resposta.
+
+**Legenda:** Seis pessoas essa semana. Nenhuma precisou de conhecimento novo. Só de juntar o que já tinha.
 
 ---
 
@@ -638,6 +678,8 @@ Semana que vem tem mais — e se você quiser deixar sua dúvida desde já, ela 
 **Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
 
 **Fecha:** Comenta aqui se você também testa em si antes de ensinar, ou pula direto pra explicar pros outros. Me segue que eu conto os testes que eu faço, sempre — dando certo ou não.
+
+**Legenda:** Não ensino teoria que não testei. Testo primeiro, erro primeiro, só depois ensino.
 
 ---
 
@@ -666,6 +708,7 @@ Semana que vem tem mais — e se você quiser deixar sua dúvida desde já, ela 
 - Segunda 07/09 é feriado — atenção redobrada no agendamento (fila pode se comportar diferente em feriado, checar histórico de falhas 9004 registradas no negócio).
 - **Dias 09/09 (12h) e 12/09 (12h e 17h)** e demais slots que citam nomes reais de fontes internas (faixa preta do Insider) não precisam nomear a pessoa — mantido genérico de propósito.
 - **13/09 (Domingo):** 09h, 17h e 20h foram deliberadamente escritos sem citar o desafio Rota100k nem qualquer resultado de engajamento da própria semana — o resultado real ainda não existe no momento da produção, então nada é afirmado sobre ele.
+- **06/09 — Legendas complementadas (Rico):** os 21 Reels YAP de 09h/12h/17h (Dias 1-7) não tinham legenda no plano original — só gancho/contexto/virada/fecha. Adicionada 1 legenda curta (1-2 linhas) por post, seguindo o padrão já usado nos horários 15h/20h: complementa a virada do vídeo sem repetir o roteiro falado. Agora os 42 posts da semana têm legenda.
 
 ## Aviso técnico
 O arquivo foi aberto no Word em algum momento e salvo em UTF-16, o que corrompeu acentuação (mesmo problema já registrado antes com outros arquivos da semana). Reconstituí o texto certo nesta versão. Se for editar no Word de novo, me avisa antes da próxima rodada pra eu não perder nenhuma edição sua.
