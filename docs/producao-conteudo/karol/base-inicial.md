@@ -379,6 +379,18 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - Liga com: tese-mãe "A Ordem Certa" (método → venda → validação → presença → escala), já usada em `nigro-parceria-que-completa` e `matheus-carmo-valida-antes-de-vender`
 - Fonte: mentoria real da Karol (caso de aluna — anonimizar na hora de roteirizar)
 
+**D. "Generalista não é quem sabe pouco — pode ser quem enxerga uma solução que o especialista não vê"** *(registrado em 07/09/2026)*
+- Status: **aguardando desenvolvimento pelo Squad de Conteúdo** — ainda não virou teoria nem roteiro.
+- Tensão central: Karol costuma ensinar que um método não deve conter tudo que o expert sabe. Essa regra resolve o excesso de quem domina profundamente uma área, mas existe a situação inversa: a pessoa acumulou conhecimentos pulverizados em muitos campos, profissões e experiências e quer reuni-los num método autoral.
+- Distinção a preservar: o especialista profundo precisa selecionar dentro de um domínio; o generalista de repertório precisa encontrar o problema comum que conecta sua bagagem diversa. Nos dois casos, método não é despejo de conhecimento — é seleção e sequência orientadas a uma transformação específica.
+- Reframing: às vezes a pessoa já trabalhou em tantas áreas diferentes que não se sente especialista em nada. Porém, esse pode ser seu maior diferencial: como generalista, ela pode trazer uma visão mais rica e abrangente para um problema que o mercado inteiro enxerga pela mesma solução. A autoridade não vem de afirmar que sabe tudo; vem de integrar conhecimentos que normalmente ficam separados e demonstrar como essa combinação resolve melhor um problema real.
+- Como isso aparece no trabalho da Karol: existem dois movimentos opostos na arquitetura de um método. Com o especialista profundo, Karol precisa **cortar** muito do que ele sabe para a entrega ficar didática — o aluno não precisa dominar tudo que o expert domina, mas percorrer o caminho mais simples e prático até o resultado. Com o expert de conhecimento pulverizado, Karol precisa **montar o quebra-cabeça**: encontrar o eixo que conecta experiências, profissões e competências dispersas e transformá-lo numa sequência autoral.
+- Tese operacional: em um caso, o método nasce por subtração; no outro, por integração. O trabalho da Karol é decidir o que sai, o que se conecta e em que ordem a pessoa aprende para chegar à transformação.
+- Guardrail: não romantizar dispersão nem defender a soma de todas as profissões num produto. Só entra no método o conhecimento que sustenta a mesma persona, o mesmo problema e a mesma transformação.
+- Formatos candidatos: Reels de contraste “método por subtração × método por integração”; carrossel diagnóstico “você precisa cortar excessos ou montar o quebra-cabeça?”; conteúdo de tese sobre método como arquitetura, não como currículo.
+- Ganchos candidatos: “E se o seu problema não for saber demais sobre uma área — mas ainda não ter encontrado o eixo que une tudo que você viveu?”; “Chamaram você de generalista porque ninguém enxergou o método que conecta sua bagagem.”
+- Fonte: ideia autoral ditada diretamente pela Karol em 07/09/2026.
+
 ### 🌟 QUENTES / EMERGENTES (2 temas)
 
 10. **"Vem aí lei que regulamenta influenciador digital como profissão — o que muda pra quem vende conhecimento"**
