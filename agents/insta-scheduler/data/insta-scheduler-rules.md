@@ -87,13 +87,18 @@ imagem correta — não era problema do arquivo nem da conta Cloudinary, foi fal
 ao buscar aquela URL especificamente naquele instante.
 **Repetiu no dia seguinte:** `sex-5-frases-parar-de-dizer` (mesma leva, agendado 30/08 pra 04/09
 20h BRT) rodou às 21h48 BRT e falhou da MESMA forma (erro 9004, agora no slide-02). URL também
-testada e válida (200 OK). **2 casos seguidos, ambos nos posts das 20h da leva Rota100k Semana 05
-(todos com slides subidos ao Cloudinary no mesmo dia, 30/08), ambos resolvidos de primeira com
-`workflow_dispatch`.** Hipótese não confirmada: pode haver contenção/rate-limit no fetch da Meta
-especificamente no horário de pico (~21h30-22h BRT) em que os crons atrasados disparam em lote —
-não é causa raiz comprovada, só um padrão observado. Enquanto a leva Semana 05 não terminar
-(faltam 05/09 e 06/09 às 20h), **checar `gh run list --workflow=post-{slug}.yml` na manhã seguinte
-de cada post** em vez de assumir que rodou certo.
+testada e válida (200 OK).
+**3º caso, 06/09:** `dom-serie-completa-7-partes` (última da leva Semana 05, agendado 30/08 pra
+06/09 20h BRT) rodou às 21h36 BRT e falhou de novo (erro 9004, agora no slide-05). URL testada
+e válida (200 OK). Resolvido de novo com `workflow_dispatch` (publicado 07/09 00h27 BRT).
+**3 casos seguidos, todos nos posts das 20h da leva Rota100k Semana 05 (todos com slides subidos
+ao Cloudinary no mesmo dia, 30/08), todos resolvidos de primeira com `workflow_dispatch`.**
+Hipótese não confirmada: pode haver contenção/rate-limit no fetch da Meta especificamente no
+horário de pico (~21h30-22h BRT) em que os crons atrasados disparam em lote — não é causa raiz
+comprovada, só um padrão observado, agora com 3 ocorrências. A leva Semana 05 terminou (06/09 foi
+o último); a leva Semana 06 (07/09-13/09, também 20h fixo) é o próximo teste real do padrão —
+**checar `gh run list --workflow=post-{slug}.yml` na manhã seguinte de cada post** em vez de
+assumir que rodou certo, durante toda a Semana 06.
 **Regra:** Erro 9004 (diferente do 9007 da RULE-2, que é corrida de processamento) é transiente
 de rede/infra da Meta, não de conteúdo, MESMO quando se repete em dias seguidos — a URL segue
 íntegra nos dois casos confirmados. Antes de qualquer alteração de slides/legenda/cron:
@@ -136,3 +141,7 @@ horário exato, disparar manualmente via `workflow_dispatch` em vez de confiar n
   sábado/domingo da Semana 04 do Rota100k. Renovação de emergência rodada: SOP-001 documentado
   (`ig_refresh_token`) falhou com erro 190. Trocado pra `fb_exchange_token` (família correta do
   token) — funcionou de primeira. Novo token válido até 22/10/2026. Ver RULE-3.
+- 2026-09-06 — `dom-serie-completa-7-partes` (último post da leva Rota100k Semana 05) falhou às
+  21h36 BRT com erro 9004 (3º caso seguido do mesmo padrão, ver RULE-4). URL do Cloudinary
+  testada e válida. Retry via `workflow_dispatch` publicou de primeira (07/09 00h27 BRT,
+  media ID 17925612792181143). Log atualizado, RULE-4 revisada com o 3º caso confirmado.
