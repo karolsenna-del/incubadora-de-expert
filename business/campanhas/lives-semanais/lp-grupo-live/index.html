@@ -43,6 +43,8 @@
       --cinza-700: #3F3F46;
       --laranja: #FF6B1A;
       --laranja-escuro: #E85A0D;
+      --verde: #25D366;
+      --verde-escuro: #1DA851;
       --display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --texto: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
@@ -78,74 +80,67 @@
 
     .cta {
       display: inline-block;
-      background: var(--laranja);
+      background: var(--verde);
       color: var(--branco);
       font-family: var(--display);
       font-weight: 700;
-      font-size: 1.05rem;
+      font-size: 0.92rem;
       text-decoration: none;
       text-align: center;
-      padding: 18px 32px;
-      border-radius: 12px;
+      padding: 13px 24px;
+      border-radius: 10px;
       letter-spacing: 0.01em;
       border: none;
       cursor: pointer;
       width: 100%;
       transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
-      box-shadow: 0 8px 24px rgba(255, 107, 26, 0.35);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
     }
-    .cta:hover { background: var(--laranja-escuro); transform: translateY(-2px); }
+    .cta:hover { background: var(--verde-escuro); transform: translateY(-2px); }
     .cta:disabled { opacity: .7; cursor: wait; transform: none; }
-    .cta-micro { display: block; margin-top: 12px; font-size: 0.85rem; color: var(--cinza-500); text-align: center; }
+    .cta-micro { display: block; margin-top: 8px; font-size: 0.72rem; color: var(--cinza-500); text-align: center; }
 
     /* ===== HERO ===== */
-    .hero { background: var(--preto); color: var(--branco); padding: 40px 0 48px; }
-    .hero-grid { display: grid; gap: 40px; align-items: start; }
-    @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.05fr 0.95fr; align-items: center; } }
+    .hero { background: var(--preto); color: var(--branco); padding: 20px 0 24px; }
+    .hero-grid { display: grid; gap: 20px; align-items: start; }
+    @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.2fr 0.8fr; align-items: start; } }
 
     .kicker {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       font-family: var(--display);
-      font-size: 0.75rem;
+      font-size: 0.62rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--laranja);
       border: 1px solid rgba(255, 107, 26, 0.4);
       border-radius: 100px;
-      padding: 8px 16px;
-      margin-bottom: 20px;
+      padding: 5px 12px;
+      margin-bottom: 10px;
     }
     .kicker .dot {
-      width: 8px; height: 8px; border-radius: 50%;
+      width: 7px; height: 7px; border-radius: 50%;
       background: #ff3b3b;
       animation: pulsar 1.4s infinite;
     }
     @keyframes pulsar { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
 
-    .logo-marca {
-      font-family: var(--display);
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: -0.01em;
-      margin-bottom: 18px;
-    }
-    .logo-marca .live { color: var(--cinza-500); font-weight: 600; font-size: 0.85em; display: block; }
+    .logo-marca { margin-bottom: 10px; }
+    .logo-marca img { height: 30px; width: auto; display: block; }
 
     .hero h1 {
-      font-size: clamp(1.7rem, 4.2vw, 2.5rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-      max-width: 20ch;
-    }
-    .hero .sub {
-      font-size: clamp(1rem, 2.2vw, 1.1rem);
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+      max-width: 42ch;
+      line-height: 1.35;
       color: var(--cinza-300);
-      max-width: 48ch;
-      margin-bottom: 24px;
+    }
+    .hero h1 .destaque {
+      font-weight: 800;
     }
 
     .tema-semana {
@@ -153,10 +148,10 @@
       background: var(--preto-2);
       border-left: 3px solid var(--laranja);
       border-radius: 0 10px 10px 0;
-      padding: 14px 18px;
-      font-size: 0.92rem;
+      padding: 8px 12px;
+      font-size: 0.76rem;
       color: var(--cinza-300);
-      margin-bottom: 28px;
+      margin-bottom: 14px;
     }
     .tema-semana strong { color: var(--branco); }
 
@@ -164,19 +159,19 @@
     .form-card {
       background: var(--branco);
       color: var(--preto);
-      border-radius: 20px;
-      padding: 28px 24px;
+      border-radius: 16px;
+      padding: 16px 16px;
       box-shadow: 0 20px 50px rgba(0,0,0,0.35);
     }
-    .form-card h3 { font-size: 1.05rem; margin-bottom: 4px; }
-    .form-card .form-sub { font-size: 0.88rem; color: var(--cinza-500); margin-bottom: 20px; }
-    .campo { margin-bottom: 14px; }
+    .form-card h3 { font-size: 0.92rem; margin-bottom: 2px; }
+    .form-card .form-sub { font-size: 0.76rem; color: var(--cinza-500); margin-bottom: 12px; }
+    .campo { margin-bottom: 8px; }
     .campo input {
       width: 100%;
-      padding: 14px 16px;
+      padding: 10px 12px;
       border: 1px solid var(--cinza-300);
-      border-radius: 10px;
-      font-size: 1rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
       font-family: var(--texto);
       background: var(--cinza-100);
     }
@@ -192,19 +187,21 @@
     }
     .erro-form.ativo { display: block; }
 
-    /* ===== VSL ===== */
+    /* ===== VSL (vídeo vertical 9:16) ===== */
     .vsl {
-      max-width: 720px;
-      margin: 32px auto 0;
-      aspect-ratio: 16 / 9;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+      aspect-ratio: 9 / 16;
       background: var(--preto-2);
       border: 1px solid var(--cinza-700);
       border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
       color: var(--cinza-500);
-      font-size: 0.9rem;
+      font-size: 0.75rem;
       overflow: hidden;
     }
     .vsl iframe, .vsl video { width: 100%; height: 100%; border: 0; }
@@ -238,17 +235,18 @@
     .bloco-tempo .lbl { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; }
 
     /* ===== O QUE É ===== */
-    .oque-grid { display: grid; gap: 36px; align-items: center; }
-    @media (min-width: 900px) { .oque-grid { grid-template-columns: 380px 1fr; } }
+    .oque-grid { display: grid; gap: 28px; align-items: center; }
+    @media (min-width: 900px) { .oque-grid { grid-template-columns: 1fr 300px 1fr; } }
+    .oque-texto h3 { font-size: 1.1rem; margin-bottom: 4px; color: var(--preto); }
     .laptop-mock {
       background: var(--cinza-100);
       border-radius: 20px;
-      padding: 32px;
+      padding: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .laptop-mock img { width: 100%; max-width: 320px; height: auto; }
+    .laptop-mock img { width: 100%; max-width: 380px; height: auto; }
     .oque-texto { display: grid; gap: 16px; color: var(--cinza-700); }
     .oque-texto strong { color: var(--preto); }
 
@@ -286,46 +284,48 @@
       <div class="hero-grid">
         <div>
           <span class="kicker"><span class="dot"></span> Ao vivo · toda quarta-feira, às 15h (horário de Brasília)</span>
-          <div class="logo-marca">LIVE<br><span class="live">EXPERT360º</span></div>
+          <div class="logo-marca"><img src="logo-liveexpert360.png" alt="Live Expert360º" loading="lazy"></div>
 
-          <h1 class="reveal">Toda quarta-feira, às 15h de Brasília, eu dou aula ao vivo e gratuita no grupo fechado.</h1>
-          <p class="sub reveal">Pra te ajudar a estruturar seu conhecimento em método validado — sem precisar se expor de forma amadora ou insegura.</p>
+          <h1 class="reveal">Nesta quarta às 15h de Brasília, eu vou dar uma aula ao vivo e gratuita onde vou mostrar <span class="destaque">como eu estruturei meu método e fiz as primeiras vendas no digital em 90 dias, sem exposição amadora nem lançamentos</span> (em vez de ficar criando audiência que não compra).</h1>
 
           <div class="tema-semana reveal">
-            Nesta quarta: <strong id="temaSemana">Como fazer em 3 dias o que levaria 3 meses</strong>
+            Nesta quarta: <strong id="temaSemana">Como usar IA pra fazer em 3 dias o que levaria 3 meses</strong>
             <!-- Atualizar toda semana com o título do roteiro mais recente em
                  business/campanhas/lives-semanais/live-XX-roteiro.md -->
           </div>
+
+          <div class="form-card reveal">
+            <h3>Garanta seu acesso ao grupo</h3>
+            <p class="form-sub">Cadastro rápido — você recebe o convite automaticamente.</p>
+
+            <div class="erro-form" id="erroForm"></div>
+
+            <form id="formLead" novalidate>
+              <div class="campo">
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required autocomplete="name">
+              </div>
+              <div class="campo">
+                <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required autocomplete="email">
+              </div>
+              <div class="campo">
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp (DDD + número)" required autocomplete="tel">
+              </div>
+              <button type="submit" class="cta" id="btnSubmit">QUERO PARTICIPAR</button>
+              <span class="cta-micro">Você recebe o link de acesso automaticamente depois do cadastro.</span>
+            </form>
+          </div>
         </div>
 
-        <div class="form-card reveal">
-          <h3>Garanta seu acesso ao grupo</h3>
-          <p class="form-sub">Cadastro rápido — você recebe o convite automaticamente.</p>
-
-          <div class="erro-form" id="erroForm"></div>
-
-          <form id="formLead" novalidate>
-            <div class="campo">
-              <input type="text" id="nome" name="nome" placeholder="Seu nome" required autocomplete="name">
-            </div>
-            <div class="campo">
-              <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required autocomplete="email">
-            </div>
-            <div class="campo">
-              <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp (DDD + número)" required autocomplete="tel">
-            </div>
-            <button type="submit" class="cta" id="btnSubmit">QUERO ENTRAR NO GRUPO</button>
-            <span class="cta-micro">Você recebe o link de acesso automaticamente depois do cadastro.</span>
-          </form>
+        <div class="vsl reveal">
+          <!-- Vídeo-convite (30-60s), gravado NA VERTICAL (9:16, mesmo formato de Reels/Stories)
+               e subido no YouTube (normal ou Shorts — tanto faz, o embed é igual).
+               Trocar pelo embed real quando gravado (o mesmo código serve pra vertical, o
+               container .vsl já está no formato 9:16, sem cortar nem sobrar tarja preta):
+               <iframe src="https://www.youtube-nocookie.com/embed/SEU_ID?rel=0&modestbranding=1"
+                 title="Convite Live Expert360" allow="autoplay; encrypted-media; picture-in-picture"
+                 allowfullscreen></iframe> -->
+          <span>Vídeo-convite<br>vertical · em breve</span>
         </div>
-      </div>
-
-      <div class="vsl reveal">
-        <!-- Vídeo-convite (30-60s). Trocar pelo embed real quando gravado:
-             <iframe src="https://www.youtube-nocookie.com/embed/SEU_ID?rel=0&modestbranding=1"
-               title="Convite Live Expert360" allow="autoplay; encrypted-media; picture-in-picture"
-               allowfullscreen></iframe> -->
-        <span>Vídeo-convite (30-60s) — em breve</span>
       </div>
     </div>
   </header>
@@ -348,12 +348,17 @@
     <div class="container">
       <h2 class="reveal">A ordem que o mercado te ensina é a que mais frustra especialista</h2>
       <div class="oque-grid">
-        <div class="laptop-mock reveal">
-          <img src="logo-liveexpert360.png" alt="Live Expert360º" loading="lazy">
-        </div>
         <div class="oque-texto reveal">
           <p>O mercado vende uma sequência: primeiro apareça, primeiro construa audiência, primeiro vire referência — só depois, talvez, venda.</p>
-          <p>Pra quem é especialista de verdade (não criador de conteúdo por natureza), essa ordem desgasta. Você se cobra postar todo dia, se compara com quem já tá anos à frente, e desiste no meio — exausto, sem ter visto um real entrar antes de meses expondo a cara.</p>
+          <p>Pra quem é especialista de verdade (não criador de conteúdo por natureza), essa ordem desgasta. Você se cobra postar todo dia, se compara com quem já tá anos à frente, e desiste no meio — <strong>exausto, sem ter visto um real entrar antes de meses expondo a cara.</strong></p>
+        </div>
+
+        <div class="laptop-mock reveal">
+          <img src="laptop-liveexpert360.png" alt="Live Expert360º" loading="lazy">
+        </div>
+
+        <div class="oque-texto reveal">
+          <h3>O que é a Live Expert360º?</h3>
           <p>A ordem que funciona é a inversa: estrutura seu método primeiro, valida com vendas reais — nem que seja pra pouca gente, num grupo pequeno — e só DEPOIS escala presença e audiência. <strong>Você valida antes de escalar.</strong> Vê dinheiro entrar antes de precisar aparecer pra milhares.</p>
           <p>É isso que eu mostro, toda semana, ao vivo, de graça: o pedaço do método pra você aplicar AGORA — sem copiar grande player que tá anos à frente, gastando dinheiro que você não tem.</p>
         </div>

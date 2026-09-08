@@ -110,7 +110,8 @@ grupo com o tema da semana:
 1. Abrir `business/campanhas/lives-semanais/lp-grupo-live/index.html`
 2. Localizar a linha `<strong id="temaSemana">...</strong>` (dentro do bloco `.tema-semana` do Hero)
 3. Substituir pelo título da live desta semana — formatado de forma objetiva/quantificável quando
-   o roteiro tiver número ou resultado concreto (ex: "Como fazer em 3 dias o que levaria 3 meses")
+   o roteiro tiver número ou resultado concreto (ex: "Como usar IA pra fazer em 3 dias o que
+   levaria 3 meses" — sempre com o "em relação a quê", nunca só o número solto)
 4. Republicar: `cd business/campanhas/lives-semanais/lp-grupo-live && vercel --prod --yes --scope karol-sennas-projects`
 
 Sem isso, a LP evergreen fica com o tema de uma semana anterior — não trava o cadastro, mas
