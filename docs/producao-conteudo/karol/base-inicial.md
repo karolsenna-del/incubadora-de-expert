@@ -379,6 +379,30 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - Liga com: tese-mãe "A Ordem Certa" (método → venda → validação → presença → escala), já usada em `nigro-parceria-que-completa` e `matheus-carmo-valida-antes-de-vender`
 - Fonte: mentoria real da Karol (caso de aluna — anonimizar na hora de roteirizar)
 
+**D. "Generalista não é quem sabe pouco — pode ser quem enxerga uma solução que o especialista não vê"** *(registrado em 07/09/2026)*
+- Status: **aguardando desenvolvimento pelo Squad de Conteúdo** — ainda não virou teoria nem roteiro.
+- Tensão central: Karol costuma ensinar que um método não deve conter tudo que o expert sabe. Essa regra resolve o excesso de quem domina profundamente uma área, mas existe a situação inversa: a pessoa acumulou conhecimentos pulverizados em muitos campos, profissões e experiências e quer reuni-los num método autoral.
+- Distinção a preservar: o especialista profundo precisa selecionar dentro de um domínio; o generalista de repertório precisa encontrar o problema comum que conecta sua bagagem diversa. Nos dois casos, método não é despejo de conhecimento — é seleção e sequência orientadas a uma transformação específica.
+- Reframing: às vezes a pessoa já trabalhou em tantas áreas diferentes que não se sente especialista em nada. Porém, esse pode ser seu maior diferencial: como generalista, ela pode trazer uma visão mais rica e abrangente para um problema que o mercado inteiro enxerga pela mesma solução. A autoridade não vem de afirmar que sabe tudo; vem de integrar conhecimentos que normalmente ficam separados e demonstrar como essa combinação resolve melhor um problema real.
+- Como isso aparece no trabalho da Karol: existem dois movimentos opostos na arquitetura de um método. Com o especialista profundo, Karol precisa **cortar** muito do que ele sabe para a entrega ficar didática — o aluno não precisa dominar tudo que o expert domina, mas percorrer o caminho mais simples e prático até o resultado. Com o expert de conhecimento pulverizado, Karol precisa **montar o quebra-cabeça**: encontrar o eixo que conecta experiências, profissões e competências dispersas e transformá-lo numa sequência autoral.
+- Tese operacional: em um caso, o método nasce por subtração; no outro, por integração. O trabalho da Karol é decidir o que sai, o que se conecta e em que ordem a pessoa aprende para chegar à transformação.
+- Guardrail: não romantizar dispersão nem defender a soma de todas as profissões num produto. Só entra no método o conhecimento que sustenta a mesma persona, o mesmo problema e a mesma transformação.
+- Formatos candidatos: Reels de contraste “método por subtração × método por integração”; carrossel diagnóstico “você precisa cortar excessos ou montar o quebra-cabeça?”; conteúdo de tese sobre método como arquitetura, não como currículo.
+- Ganchos candidatos: “E se o seu problema não for saber demais sobre uma área — mas ainda não ter encontrado o eixo que une tudo que você viveu?”; “Chamaram você de generalista porque ninguém enxergou o método que conecta sua bagagem.”
+- Fonte: ideia autoral ditada diretamente pela Karol em 07/09/2026.
+
+**E. "O cenário era próspero, mas eu não pertencia àquele sonho"** *(registrado em 07/09/2026)*
+- Status: **aguardando desenvolvimento pelo Squad de Conteúdo** — ainda não virou teoria nem roteiro.
+- História real: quando saiu do emprego público, Karol foi convidada por um grande amigo para se tornar controladora da agência que ela descreve como a maior agência de marketing digital de Mato Grosso do Sul. Ele era o CEO, queria Karol ao lado, apoiava seu crescimento e havia uma perspectiva concreta de promoção.
+- Cena de pertencimento: Karol participou da confraternização da agência. O clima era muito agradável, mas ela se sentiu como um peixe fora d'água. Percebeu que aquele projeto não era dela e não carregava os valores nem a forma de trabalhar que queria viver.
+- Virada: começou a sentir que não fazia sentido ter saído do emprego público para entrar em outro lugar que também não representava integralmente a vida e o trabalho que desejava construir.
+- Tese: o sentimento de pertencimento é poderoso na tomada de decisão. Não basta o cenário ser próspero, oferecer apoio e ter espaço de crescimento: quando você não se reconhece no lugar, no projeto ou no sonho, isso pode ser sinal de que não é onde deve permanecer.
+- Contraste central: **oportunidade promissora × sonho que não é seu**. Sair não significa negar a qualidade do lugar nem ser ingrata pelo convite; significa reconhecer que prosperar dentro do projeto de outra pessoa ainda pode afastar você do próprio projeto.
+- Guardrail: não transformar qualquer desconforto pontual em ordem para abandonar emprego ou projeto. O conteúdo deve mostrar a diferença entre adaptação normal e desalinhamento persistente de valores, identidade e forma de trabalhar.
+- Formatos candidatos: Reels de história pessoal com a cena da confraternização; carrossel “um lugar pode ser ótimo e ainda não ser seu”; conteúdo de tese sobre pertencimento como critério de decisão profissional.
+- Ganchos candidatos: “Eu tinha tudo para crescer na maior agência de marketing digital do estado. Foi numa confraternização que percebi que precisava sair.”; “Um lugar pode ser próspero, acolhedor e cheio de oportunidades — e ainda assim não ser seu.”
+- Fonte: relato direto da Karol em 07/09/2026. Manter amigo e agência anônimos até autorização explícita para nomeá-los; a caracterização “maior agência de marketing digital de MS” é afirmação da própria Karol, não verificação externa.
+
 ### 🌟 QUENTES / EMERGENTES (2 temas)
 
 10. **"Vem aí lei que regulamenta influenciador digital como profissão — o que muda pra quem vende conhecimento"**
