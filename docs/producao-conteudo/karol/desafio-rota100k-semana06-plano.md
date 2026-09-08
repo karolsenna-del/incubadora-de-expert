@@ -37,6 +37,10 @@
 24. 13/09-17h: mesma lógica — retirado o contexto do desafio.
 25. 13/09-20h: tema novo — "7 principais dúvidas respondidas sobre criação de método e infoprodutos" (FAQ evergreen, sem referência à semana específica).
 
+**Histórico de decisões (revisão 3, 08/09 — Rico, realinhamento à diretriz oficial do slot):**
+26. 08/09-15h: trocado o caso do Fabiano (não era discordância, era dúvida) pelo caso real do desinfetante — comentário real discordando de um exemplo dado em vídeo anterior (marido não sabe diferenciar desinfetante/Qboa/multiuso), Karol rebateu e sustentou a posição até o fechamento sobre responsabilidade do expert de simplificar. Perfil de quem comentou AUTORIZADO a identificar (confirmado pela Karol) — falta o @ pra Mack incluir no print/tela. Caso do Fabiano fica disponível pra reaproveitar em outro slot/semana — não é dúvida perdida, só saiu do 15h por não ser o papel certo do dia.
+27. 08/09-17h: história da saída do serviço público com a filha recém-nascida mantida (já validada antes), mas reestruturada de "história de origem" pra "prático e imediato" — fecha pedindo a restrição atual de quem assiste, não só convidando a comentar.
+
 ---
 
 ## DIA 1 — Segunda, 07/09 (feriado — Independência do Brasil)
@@ -182,31 +186,34 @@ Se você reconhece esse padrão em você, comenta aqui — hoje eu falo sobre is
 
 ---
 
-### 15h · Reels YAP · Conversa (Fabiano)
-**Gancho:** "Tenho escola de corrida desde 2010. Já tentei lançar curso com fórmula pronta, mais de uma vez. Nunca deu certo. Será que corrida já não é assunto saturado demais pra mim tentar de novo?" — pergunta do Fabiano.
+### 15h · Reels YAP · Conversa — "Alguém discordou de mim — e eu não aceitei" (revisão 3, 08/09 — Rico, realinhado à diretriz do desafio: papel do 15h é conversa real, comentário lido nas palavras exatas da pessoa; caso real trazido pela Karol, perfil AUTORIZADO a identificar — falta o @ pra Mack incluir no print/tela)
 
-**Contexto:** Faz sentido o Fabiano pensar assim. Corrida tem gente demais ensinando — parece nicho lotado. E ele já tinha tentado e falhado com uma fórmula genérica de lançamento, o que só reforça a sensação de "não é pra mim".
+**Gancho (fala + texto na tela, palavras exatas do comentário):** "'Quem nesse mundo não sabe o que é desinfetante?' — comentário real, exatamente como a pessoa escreveu. Vou responder aqui."
 
-**Virada:** O problema nunca foi o assunto, nem a fórmula em si — era que ele tava ensinando corrida genérica, pra todo mundo. O método do Fabiano mora numa interseção que quase ninguém ocupa: treino de força junto com plano de corrida, pra deixar a perna mais leve e melhorar o pace — falando só com quem já corre (intermediário/avançado), não com quem tá começando. Nicho saturado não é problema quando ninguém tá servindo o cruzamento que só você enxerga.
+**Contexto:** Num vídeo anterior eu tinha dado um exemplo: meu marido não sabe a diferença entre desinfetante, Qboa e multiuso — e falei que isso não é vergonhoso, porque quem entende de limpeza lá em casa é a minha diarista, não eu nem ele. Foi esse exemplo que gerou o comentário discordando — pra essa pessoa, não saber isso é óbvio demais pra alguém não saber.
 
-**Fecha:** Se você também acha que seu assunto "já tem gente demais fazendo", comenta aqui qual é — quero te mostrar a interseção que só você tem. Me segue que eu ensino a achar esse cruzamento.
+**Virada (resposta real, sem suavizar):** Eu respondi: eu faço pergunta básica e óbvia pra mim que essa pessoa não saberia responder — e se ela não soubesse responder pergunta básica sobre MÉTODO, que é a área dela, eu não acharia vergonhoso, porque não é o campo dela. Ela rebateu de novo: disse que eu sou irresponsável por comprar produto químico sem conhecer, e que eu tava comparando isso com desinteresse dos meus alunos, ignorando que existem fatores econômicos e sociais que atrapalham o desempenho deles. Aí eu fechei: se ela tivesse assistido o vídeo até o fim, veria que eu falo justamente o contrário — é responsabilidade do EXPERT explicar mais simples. Quanto mais ele sabe, mais fácil tem que ser a explicação dele.
 
-**Legenda:** Fórmula pronta vende curso genérico. Não vende o SEU método.
+**Estrutura:** Abre 0-3s (comentário lido) → Contexto (o exemplo que gerou a discordância) → Virada (a troca real, com os dois lados) → Fecha (convite pra próxima dúvida).
+
+**Fecha:** Não recuei porque a pessoa não tinha razão — mas a discussão me fez deixar mais claro um ponto que eu já defendo: quem sabe mais tem obrigação de simplificar mais, não menos. Se você já discordou de mim e eu ainda não respondi, comenta de novo — essa semana eu leio e respondo, uma por dia. Me segue que eu ensino a sustentar posição sem perder a didática.
+
+**Legenda:** Discordar de mim não me faz mudar de ideia — me faz explicar melhor o que eu já pensava.
 
 ---
 
-### 17h · Reels YAP — "Como adaptar se você tem uma restrição"
-**Gancho:** "Eu saí do emprego público com a minha filha recém-nascida no colo."
+### 17h · Reels YAP — "Como fazer a transição sem precisar aparecer" (revisão 4, 08/09 — Rico, realinhado pela Karol: CLT/concursado + Vendas Secretas)
+**Gancho:** "Quer fazer a transição pro digital, mas não pode ficar aparecendo por ser CLT ou concursado? Você não precisa começar pelo palco."
 
-**Contexto:** Todo mundo esperava que eu esperasse — filha pequena não é "momento ideal" pra trocar estabilidade por incerteza. É o conselho mais óbvio do mundo.
+**Contexto:** Muita gente adia a transição porque acha que o primeiro passo é mudar a bio, postar todos os dias e contar publicamente que está construindo um negócio. Só que, enquanto ainda existe vínculo com empresa ou serviço público, essa exposição pode não ser possível — por regra, conflito, reputação ou escolha pessoal.
 
-**Virada:** A restrição não foi motivo pra adiar — foi motivo pra estruturar diferente. Vendas Secretas (validar 1:1, sem exposição, sem depender de audiência) nasceu exatamente porque eu não tinha tempo nem energia pra fazer do jeito "normal" que o mercado ensina.
+**Virada:** É exatamente por isso que eu ensino Vendas Secretas. Você estrutura uma primeira versão do método e valida em conversas privadas, no 1:1, com pessoas que já reconhecem sua capacidade. Sem lançamento, sem anunciar a transição e sem depender de audiência. Você testa persona, promessa e proposta — e busca vendas reais — antes de aparecer. Não é esconder atividade irregular: é validar com discrição, respeitando as regras do seu vínculo e sem usar tempo, estrutura ou contatos do trabalho.
 
-**Estrutura:** Abre 0-3s → Contexto → Virada → Fecha.
+**Estrutura:** Abre 0-3s (CLT/concursado sem poder aparecer) → quebra da falsa exigência de exposição → apresenta Vendas Secretas → ação prática pra hoje.
 
-**Fecha:** Se você também tem uma "restrição" te fazendo esperar o momento perfeito, comenta aqui qual é a sua. Me segue que eu ensino a estruturar o método pro seu contexto real, não pro ideal.
+**Fecha:** Hoje, escolha três pessoas de confiança que vivem o problema que você resolve. Convide uma delas pra uma conversa privada e teste se ela entende a transformação que você propõe. Me segue que eu ensino a validar um método antes de colocar sua autoridade no palco.
 
-**Legenda:** Todo mundo esperava que eu esperasse o "momento certo". Ele não ia chegar — eu tive que criar um.
+**Legenda:** Você não precisa pedir demissão nem anunciar uma nova carreira antes de saber se sua proposta funciona. Vendas Secretas permitem validar método, promessa e oferta no 1:1, com discrição e vendas reais — sempre respeitando as regras do seu vínculo profissional.
 
 ---
 
