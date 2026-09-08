@@ -391,6 +391,18 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - Ganchos candidatos: “E se o seu problema não for saber demais sobre uma área — mas ainda não ter encontrado o eixo que une tudo que você viveu?”; “Chamaram você de generalista porque ninguém enxergou o método que conecta sua bagagem.”
 - Fonte: ideia autoral ditada diretamente pela Karol em 07/09/2026.
 
+**E. "O cenário era próspero, mas eu não pertencia àquele sonho"** *(registrado em 07/09/2026)*
+- Status: **aguardando desenvolvimento pelo Squad de Conteúdo** — ainda não virou teoria nem roteiro.
+- História real: quando saiu do emprego público, Karol foi convidada por um grande amigo para se tornar controladora da agência que ela descreve como a maior agência de marketing digital de Mato Grosso do Sul. Ele era o CEO, queria Karol ao lado, apoiava seu crescimento e havia uma perspectiva concreta de promoção.
+- Cena de pertencimento: Karol participou da confraternização da agência. O clima era muito agradável, mas ela se sentiu como um peixe fora d'água. Percebeu que aquele projeto não era dela e não carregava os valores nem a forma de trabalhar que queria viver.
+- Virada: começou a sentir que não fazia sentido ter saído do emprego público para entrar em outro lugar que também não representava integralmente a vida e o trabalho que desejava construir.
+- Tese: o sentimento de pertencimento é poderoso na tomada de decisão. Não basta o cenário ser próspero, oferecer apoio e ter espaço de crescimento: quando você não se reconhece no lugar, no projeto ou no sonho, isso pode ser sinal de que não é onde deve permanecer.
+- Contraste central: **oportunidade promissora × sonho que não é seu**. Sair não significa negar a qualidade do lugar nem ser ingrata pelo convite; significa reconhecer que prosperar dentro do projeto de outra pessoa ainda pode afastar você do próprio projeto.
+- Guardrail: não transformar qualquer desconforto pontual em ordem para abandonar emprego ou projeto. O conteúdo deve mostrar a diferença entre adaptação normal e desalinhamento persistente de valores, identidade e forma de trabalhar.
+- Formatos candidatos: Reels de história pessoal com a cena da confraternização; carrossel “um lugar pode ser ótimo e ainda não ser seu”; conteúdo de tese sobre pertencimento como critério de decisão profissional.
+- Ganchos candidatos: “Eu tinha tudo para crescer na maior agência de marketing digital do estado. Foi numa confraternização que percebi que precisava sair.”; “Um lugar pode ser próspero, acolhedor e cheio de oportunidades — e ainda assim não ser seu.”
+- Fonte: relato direto da Karol em 07/09/2026. Manter amigo e agência anônimos até autorização explícita para nomeá-los; a caracterização “maior agência de marketing digital de MS” é afirmação da própria Karol, não verificação externa.
+
 ### 🌟 QUENTES / EMERGENTES (2 temas)
 
 10. **"Vem aí lei que regulamenta influenciador digital como profissão — o que muda pra quem vende conhecimento"**
