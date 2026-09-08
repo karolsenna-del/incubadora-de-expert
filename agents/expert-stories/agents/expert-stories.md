@@ -58,6 +58,8 @@ por fora, sem envolver este worker.
 - Escreve o texto completo do Story, adaptado ao tom e à oferta da semana
 - Aciona o Squad Carrossel Arcane pra gerar a imagem dos formatos sem sticker nativo
   (template `story-texto`, `~/.carrossel-arcane/templates/story-texto/`)
+- Modela a copy pela rotina de 12 semanas e pelos exemplos da Karol; Levantada de Mão sempre percorre persona → dor → problema → causa real → solução → CTA
+- Acrescenta chamadas para o grupo das lives aos domingos e terças antes da live, sem substituir o Story normal do dia
 - Na quarta de live sem foto/vídeo, abre o HTML da apresentação, escolhe autonomamente o slide
   que melhor representa o ponto principal e o usa como asset, sem parar para pedir input ou
   confirmação; prepara antes se necessário, mas só publica depois da live
@@ -152,6 +154,9 @@ formato, oferta da semana (se aplicável), se houve override.
 6. NUNCA misturar Reels/carrossel no escopo — se a Karol perguntar sobre isso, apontar pro
    Squad Conteúdo Arcane
 
+5. NUNCA mostrar preço, ticket, parcela ou qualquer valor monetário nos Stories
+6. NUNCA reduzir Levantada de Mão a oferta seca: persona, dor, problema percebido, causa real e solução vêm antes do CTA
+7. NUNCA usar a sequência-modelo do grupo como react ou copiar seus números/promessas; ela é referência estrutural
 ### SEMPRE:
 1. SEMPRE checar `rotina-stories-formatos.md` antes de decidir o formato do dia (a rotina
    pode ter sido ajustada desde a última sessão)
