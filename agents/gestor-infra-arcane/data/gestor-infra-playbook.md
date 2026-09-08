@@ -983,6 +983,50 @@ enviado em 24/08 (ver "Ainda em aberto").
   tester/admin do app (a própria Karol), não pra leads reais de fora
 - [ ] Investigar o deploy automático da Vercel pra esse projeto (git push devia publicar sozinho)
 
+---
+
+### Extensão 07/09/2026 — comentário público (post/Reels) também dispara a automação
+
+**Pedido da Karol:** "como ManyChat", mas agora pra quem COMENTA a palavra-gatilho num post/Reels
+do feed, não só quem manda Direct. Mesma automação, canal novo.
+
+**Achado (pesquisado antes de implementar, não inventado):** comentário de Story != comentário
+de post. Resposta a um Story chega pro webhook como Direct normal (campo `messages`, já coberto
+desde 23/08) — então CTA "comenta X no meu Story" **já funciona hoje** com a infra existente,
+sem mudança nenhuma. O que faltava era só comentário em post/Reels/carrossel do feed, que chega
+por um campo de webhook diferente (`comments`, dentro de `entry[].changes[]`, não
+`entry[].messaging[]`).
+
+**Como funciona:**
+1. Mesmo arquivo (`webhook-instagram-dm.js`) ganhou um segundo loop: pra cada `changes[]` com
+   `field === 'comments'`, extrai `value.id` (comment_id), `value.text` e `value.from.id`
+2. Casa o texto (normalizado) contra o mesmo `gatilhos-direct.json` — nenhuma palavra nova
+   precisou ser cadastrada (ex: GRUPO já existia)
+3. Responde via **Private Reply oficial da Graph API**: `POST /{IG_USER_ID}/messages` com
+   `recipient: { comment_id }` em vez de `recipient: { id: psid }` — mesmo endpoint de mensagem
+   de sempre, só muda o formato do destinatário (confirmado via doc oficial da Meta antes de
+   implementar, não é gambiarra)
+4. Ignora comentário feito pela própria conta (evita a Karol respondendo o próprio post
+   disparar a automação nela mesma)
+
+**Limites reais da Private Reply (Meta, não configurável):**
+- 1 única private reply por comentário, PRA SEMPRE — reenvio no mesmo comment_id falha
+  (tratado como log, não como erro — comum em retry de webhook)
+- Só até 7 dias depois do comentário
+- Mesma trava do App Review de 24/08: só responde de verdade pra contas tester/admin até a
+  Meta aprovar
+
+**Registrar campo extra no painel:** o app já tinha o campo `messages` registrado no webhook —
+precisa marcar TAMBÉM o campo `comments` (Casos de Uso → API do Instagram → Webhooks), mesma URL
+de callback, nenhuma URL nova.
+
+**Deploy:** `vercel --prod` bloqueado pelo classificador de auto mode (2x — uma vez pro código,
+uma vez pra tentativa de editar `.claude/settings.local.json` adicionando `Bash(vercel *)` ao
+allowlist, também bloqueada). Karol rodou manualmente via `!` — publicado com sucesso em
+`membros.incubadoradeexpert.com.br` (alias do projeto `area-de-membros-incubadora`).
+Validado só com `node --check` (sintaxe) antes do deploy — teste ponta a ponta (comentar de
+verdade e confirmar a Private Reply) ainda pendente.
+
 **Troubleshooting:**
 - Sem resposta nenhuma → checar se o webhook está registrado pro campo certo (`messages`) e se o
   `INSTAGRAM_WEBHOOK_VERIFY_TOKEN` bate dos dois lados

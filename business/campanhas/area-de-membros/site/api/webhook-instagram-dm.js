@@ -18,6 +18,19 @@
 // 2. Mandar 1 Direct de teste (da propria Karol, ela e tester) com a palavra-gatilho
 // 3. Pra funcionar com leads de verdade (nao so a propria Karol): ainda depende da analise do
 //    app (App Review) ser aprovada pela Meta — enviada em 24/08, aguardando
+//
+// EXTENSAO 07/09/2026 (SOP-022) — pedido da Karol: mesma automacao pra quem COMENTA a
+// palavra-gatilho num POST/Reels (nao so quem manda Direct). Adiciona handling do campo de
+// webhook "comments" (entry[].changes[], nao entry[].messaging[]) e responde via Private Reply
+// (POST /{IG_USER_ID}/messages com recipient.comment_id em vez de recipient.id — mesmo endpoint
+// de mensagem, so muda o formato do destinatario). Meta permite 1 unica private reply por
+// comentario, pra sempre, dentro de ate 7 dias do comentario — retry/reenvio no mesmo
+// comment_id vai falhar (ver troubleshooting no Playbook SOP-022).
+// IMPORTANTE — Story "comentada" != Post comentado: resposta a um Story chega como Direct
+// normal (campo "messages", ja tratado abaixo), NAO como campo "comments". Este bloco novo so
+// cobre comentario publico em post/Reels/carrossel do feed.
+// Requer registrar TAMBEM o campo "comments" no webhook do painel do App (alem de "messages",
+// ja registrado) — mesma URL de callback, so marcar a caixa extra.
 
 // Dados embutidos direto no arquivo (mesmo padrao do webhook-voomp.js) — a Vercel compila este
 // arquivo de ESM pra CommonJS, e import.meta.url (usado antes pra ler o JSON externo em disco)
@@ -51,6 +64,11 @@ const gatilhos = {
     palavra: 'INDIVIDUAL',
     nome_oferta: 'Individual',
     link: 'https://vendas.incubadoradeexpert.com.br/individual/'
+  },
+  'grupo-lives': {
+    palavra: 'LIVE',
+    nome_oferta: 'Grupo de Lives (gratuito, ao vivo toda semana)',
+    link: 'https://grupo.incubadoradeexpert.com.br/'
   }
 };
 
@@ -77,12 +95,14 @@ function montarMapaPalavras() {
   return mapa;
 }
 
-async function enviarMensagem(destinatarioId, texto) {
+// `recipient` no formato da Graph API: { id: psid } pra Direct normal, ou
+// { comment_id: id } pra Private Reply de comentario de post/Reels.
+async function enviarMensagem(recipient, texto) {
   const resp = await fetch(`${IG_BASE}/${IG_USER_ID}/messages?access_token=${encodeURIComponent(IG_TOKEN)}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      recipient: { id: destinatarioId },
+      recipient,
       message: { text: texto }
     })
   });
@@ -124,6 +144,7 @@ export default async function handler(req, res) {
     const mapaPalavras = montarMapaPalavras();
 
     for (const entrada of entradas) {
+      // Direct message (Story reply tambem chega aqui, como Direct normal)
       const mensagens = entrada.messaging || [];
       for (const evento of mensagens) {
         // Ignora eco de mensagem que a propria conta mandou (evita loop respondendo a si mesma)
@@ -137,13 +158,46 @@ export default async function handler(req, res) {
         const match = mapaPalavras[textoNormalizado];
 
         if (!match) {
-          console.log(`[webhook-instagram-dm] sem match pra "${textoRecebido}" — ignorado, sem resposta automatica`);
+          console.log(`[webhook-instagram-dm] sem match pra "${textoRecebido}" (direct) — ignorado, sem resposta automatica`);
           continue;
         }
 
         const mensagem = montarMensagemBoasVindas(match.nome_oferta, match.link);
-        await enviarMensagem(remetenteId, mensagem);
-        console.log(`[webhook-instagram-dm] respondido: ${remetenteId} -> ${match.slug} (palavra "${textoRecebido}")`);
+        await enviarMensagem({ id: remetenteId }, mensagem);
+        console.log(`[webhook-instagram-dm] respondido (direct): ${remetenteId} -> ${match.slug} (palavra "${textoRecebido}")`);
+      }
+
+      // Comentario publico em post/Reels/carrossel (campo "comments", nao "messaging")
+      const mudancas = entrada.changes || [];
+      for (const mudanca of mudancas) {
+        if (mudanca.field !== 'comments') continue;
+        const valor = mudanca.value || {};
+
+        const comentarioId = valor.id;
+        const textoRecebido = valor.text;
+        const remetenteId = valor.from && valor.from.id;
+        if (!comentarioId || !textoRecebido) continue;
+
+        // Ignora comentario feito pela propria conta (ex: a Karol respondendo no proprio post)
+        if (remetenteId && String(remetenteId) === String(IG_USER_ID)) continue;
+
+        const textoNormalizado = normalizar(textoRecebido);
+        const match = mapaPalavras[textoNormalizado];
+
+        if (!match) {
+          console.log(`[webhook-instagram-dm] sem match pra "${textoRecebido}" (comentario ${comentarioId}) — ignorado`);
+          continue;
+        }
+
+        const mensagem = montarMensagemBoasVindas(match.nome_oferta, match.link);
+        try {
+          await enviarMensagem({ comment_id: comentarioId }, mensagem);
+          console.log(`[webhook-instagram-dm] private reply enviada: comentario ${comentarioId} -> ${match.slug} (palavra "${textoRecebido}")`);
+        } catch (err) {
+          // Meta permite so 1 private reply por comentario, pra sempre — retry/reenvio do
+          // mesmo webhook (comum em picos) vai cair aqui. Nao e erro real, so log.
+          console.log(`[webhook-instagram-dm] private reply falhou pra comentario ${comentarioId} (provavel duplicata ou fora da janela de 7 dias): ${err.message}`);
+        }
       }
     }
 

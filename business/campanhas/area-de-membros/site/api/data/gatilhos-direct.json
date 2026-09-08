@@ -24,5 +24,10 @@
     "palavra": "INDIVIDUAL",
     "nome_oferta": "Individual",
     "link": "https://vendas.incubadoradeexpert.com.br/individual/"
+  },
+  "grupo-lives": {
+    "palavra": "LIVE",
+    "nome_oferta": "Grupo de Lives (gratuito, ao vivo toda semana)",
+    "link": "https://grupo.incubadoradeexpert.com.br/"
   }
 }
