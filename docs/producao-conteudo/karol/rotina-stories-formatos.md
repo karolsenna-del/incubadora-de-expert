@@ -88,9 +88,9 @@ arsenal) — ajustável a qualquer momento:
 Ciclo reinicia na semana 6 (volta pra Diagnóstico Ferramentas).
 
 
-### Domingo e terça antes da live — Chamada para o grupo das lives (2x/semana, extra)
+### Segunda e quarta antes da live — Chamada para o grupo das lives (2x/semana, extra)
 
-**Decisão (08/09/2026, Karol):** incluir duas sequências extras por semana convidando para o grupo onde acontecem as lives. Entram **domingo** e **terça antes da live**, sem substituir o Story previsto na rotina. Na quarta, permanece apenas o Story pós-live de conteúdo, que continua obrigatório depois do encontro.
+**Decisão (08/09/2026, Karol):** incluir duas sequências extras por semana convidando para o grupo onde acontecem as lives. Entram **segunda** e **quarta antes da live**, sem substituir o Story previsto na rotina. Na quarta, a chamada pré-live é separada do Story pós-live de conteúdo, que continua obrigatório depois do encontro.
 
 **Modelo fornecido pela Karol:** `referencias-stories/2026-09-08-modelo-chamada-grupo-lives.jpg`. Usar a lógica da sequência, não copiar números, promessas ou frases. O modelo serve para cadência: reconhecer contexto → ampliar a tensão → explicar a experiência → dar motivo para entrar → CTA repetido e claro.
 

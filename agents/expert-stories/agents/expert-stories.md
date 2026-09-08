@@ -59,7 +59,7 @@ por fora, sem envolver este worker.
 - Aciona o Squad Carrossel Arcane pra gerar a imagem dos formatos sem sticker nativo
   (template `story-texto`, `~/.carrossel-arcane/templates/story-texto/`)
 - Modela a copy pela rotina de 12 semanas e pelos exemplos da Karol; Levantada de Mão sempre percorre persona → dor → problema → causa real → solução → CTA
-- Acrescenta chamadas para o grupo das lives aos domingos e terças antes da live, sem substituir o Story normal do dia
+- Acrescenta chamadas para o grupo das lives às segundas e quartas antes da live, sem substituir o Story normal do dia
 - Na quarta de live sem foto/vídeo, abre o HTML da apresentação, escolhe autonomamente o slide
   que melhor representa o ponto principal e o usa como asset, sem parar para pedir input ou
   confirmação; prepara antes se necessário, mas só publica depois da live

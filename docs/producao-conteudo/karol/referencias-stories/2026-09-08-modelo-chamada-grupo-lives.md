@@ -16,7 +16,7 @@
 
 - Persona → dor → problema percebido → causa real → solução → CTA.
 - CTA: `Comenta GRUPO que eu te mando o link.`
-- Frequência: domingo e terça antes da live, como sequência extra.
+- Frequência: segunda e quarta antes da live, como sequência extra.
 - Não copiar frases, números ou promessas da fonte.
 - Nunca mostrar preço, ticket, parcela ou valor monetário.
 - Alegações visíveis no modelo (“20k a 50k”, “5%”, “mil mentorados”) não pertencem à Karol e ficam proibidas na adaptação.

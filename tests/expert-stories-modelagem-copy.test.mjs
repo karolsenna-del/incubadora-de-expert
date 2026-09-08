@@ -9,7 +9,7 @@ test("Stories seguem modelos, não mostram valores e chamam grupo 2x",()=>{
  const play=read("agents/expert-stories/data/expert-stories-playbook.md");
  for(const s of [rotina,task,rules]) assert.match(s,/persona.*dor.*problema.*causa real.*solução.*CTA/is);
  for(const s of [rotina,task,rules,play]) assert.match(s,/não mostrar preço|NUNCA mostrar preço|zero preço/i);
- assert.match(rotina,/Domingo e terça antes da live/);
+ assert.match(rotina,/Segunda e quarta antes da live/);
  assert.match(rules,/sequência extra/);
  assert.match(play,/Comenta GRUPO que eu te mando o link/);
  assert.ok(fs.existsSync("docs/producao-conteudo/karol/referencias-stories/2026-09-08-modelo-chamada-grupo-lives.jpg"));

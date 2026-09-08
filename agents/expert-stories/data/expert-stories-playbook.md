@@ -40,7 +40,7 @@ input ou confirmação. Preparar pode acontecer antes; publicar é sempre só de
 
 ### [SOP-003] Chamada para o grupo das lives
 **Criado em:** 08/09/2026
-**Trigger:** Domingo e terça antes da live, duas vezes por semana
+**Trigger:** Segunda e quarta antes da live, duas vezes por semana
 **Ferramentas:** rotina de 12 semanas, modelo visual em `docs/producao-conteudo/karol/referencias-stories/2026-09-08-modelo-chamada-grupo-lives.jpg`, tema real da live quando existir
 **Regra:** sequência extra; não substitui o Story do dia. Quarta pós-live continua sendo conteúdo do encontro.
 
