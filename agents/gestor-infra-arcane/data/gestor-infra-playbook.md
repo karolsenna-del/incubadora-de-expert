@@ -1024,8 +1024,44 @@ de callback, nenhuma URL nova.
 uma vez pra tentativa de editar `.claude/settings.local.json` adicionando `Bash(vercel *)` ao
 allowlist, também bloqueada). Karol rodou manualmente via `!` — publicado com sucesso em
 `membros.incubadoradeexpert.com.br` (alias do projeto `area-de-membros-incubadora`).
-Validado só com `node --check` (sintaxe) antes do deploy — teste ponta a ponta (comentar de
-verdade e confirmar a Private Reply) ainda pendente.
+Validado só com `node --check` (sintaxe) antes do deploy.
+
+**Gatilho novo (08/09):** além de GRUPO/METODO/SPRINT/DIAGNOSTICO/INDIVIDUAL, adicionado
+`LIVE` → `https://grupo.incubadoradeexpert.com.br/` (grupo de leads gratuito, onde a Karol faz
+as lives semanais — distinto da oferta paga "Grupo", que continua em GRUPO).
+
+---
+
+### Teste real (07-08/09) — bateu num bloqueio administrativo da Meta, não técnico
+
+App usado: `postador-conteudo` (App ID `2350178172182056`, aparece como **"api-IG"** pro usuário
+final na tela "Ver e editar" do Instagram — mesmo app, nome de exibição diferente). Achados,
+em ordem:
+
+1. **App nunca publicado** (`Publicar: Não publicado` no painel). Checklist "Testar os casos de
+   uso" também nunca foi concluída (0 chamadas de API registradas pra `instagram_manage_comments`,
+   que pede 1 obrigatória).
+2. **Testador do Instagram não confirma:** convite enviado pra 2 contas reais diferentes da
+   Karol (incluindo @karolfranzini, status "Pendente" no painel) — excluído e reenviado, nada
+   aparece do lado do Instagram (checado em Configurações→Segurança→Apps e sites E via
+   `instagram.com/accounts/manage_access`, as duas vazias).
+3. **"Usuários de teste"** (Funções do app → Usuários de teste) — função ERRADA pra isso (são
+   contas sintéticas do Facebook, não contas reais do Instagram) mas testada mesmo assim por
+   eliminação: veio "temporariamente desabilitada".
+4. **Causa raiz provável:** o Painel do app mostra "Torne-se um Provedor de Tecnologia... você
+   precisará concluir a verificação de acesso". Isso é diferente da Verificação Empresarial
+   básica que a Karol já tem (usada no ManyChat) — Provedor de Tecnologia é exigido quando o app
+   acessa dados de OUTRAS contas do Instagram (nosso caso: comentário de qualquer seguidor), não
+   só da própria conta comercial. Explica os 3 bloqueios ao mesmo tempo.
+
+**Conexão da conta comercial em si está OK:** confirmado via Instagram → app "api-IG" →
+"Ver e editar" → todas as permissões necessárias (mensagens, comentários, publicar, insights)
+aparecem concedidas desde 24/08/2026, "Ativo". O problema é só do lado de quem PODE comentar de
+fora enquanto o app não é público.
+
+**Pendente:** iniciar o fluxo "Torne-se um Provedor de Tecnologia" (Painel do app) — processo
+administrativo da Meta, não é mais configuração. Só depois disso vale tentar testador/comentário
+de novo.
 
 **Troubleshooting:**
 - Sem resposta nenhuma → checar se o webhook está registrado pro campo certo (`messages`) e se o
