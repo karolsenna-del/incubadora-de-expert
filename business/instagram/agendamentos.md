@@ -102,3 +102,4 @@
 | 06/09/2026 | rota100k-semana06-dom-duvidas-metodo-infoproduto | 13/09/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-semana06-dom-duvidas-metodo-infoproduto.yml) — 8 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K Semana 06) — aguardando push |
 | 06/09/2026 | dom-serie-completa-7-partes | — | via GitHub Actions | **FALHOU** — erro 9004 Meta API (mesmo padrão de RULE-4), rodando às 21h36 BRT (atraso do cron), agora no slide-05. URL testada depois e válida (200 OK). Ver RULE-4 (atualizada — 3º caso seguido). |
 | 07/09/2026 | dom-serie-completa-7-partes (retry) | 07/09/2026 00h27 BRT | 17925612792181143 | ✓ publicado — disparado manualmente via workflow_dispatch, sem alterar slides/legenda |
+| 08/09/2026 | rota100k-semana06-seg-guia-independencia-digital | 08/09/2026 00h58 BRT (agendado 07/09 20h) | 18109184423137711 | ✓ publicado — rodou via cron (schedule) sem erro 9004, primeiro post da Semana 06 confirmado limpo |
