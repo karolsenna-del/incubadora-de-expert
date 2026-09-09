@@ -30,6 +30,21 @@ Não reinventar o CSS. O motor já aplica:
 
 Pra mudar o look (margem da imagem, cor, fonte, nome): editar o `meta.yaml` do template, **não** o motor.
 
+### Densidade de texto (validado 08/09/2026 — feedback direto da Karol)
+
+A copy geralmente chega com cada frase curta em sua própria linha (`\n`), estilo bloco de
+Instagram. **Não replicar isso 1:1 no card.** Juntar as frases curtas num texto corrido,
+com `<br>` (não `<br><br>`) separando só blocos de ideia distintos — nunca virgulando uma
+ideia por linha.
+
+- `<br><br>` (parágrafo com espaço em branco) só entre blocos que merecem respiro visual real.
+- Fragmentos tipo "Produtos.\nProjetos.\nEstruturas.\nPrioridades." viram lista corrida:
+  "produtos, projetos, estruturas, prioridades" — ou juntam com travessão/dois-pontos.
+- Resultado: fonte final maior (auto-fit não precisa encolher tanto) e o card não desce
+  até a margem inferior. Karol confirmou: "muito melhor desse jeito" — aplicar sempre,
+  em todo carrossel do template card-tweet (e por extensão, qualquer template com auto-fit
+  vertical parecido).
+
 ---
 
 ## Convenção de Mapeamento (CRÍTICA)
