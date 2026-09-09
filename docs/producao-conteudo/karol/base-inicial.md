@@ -448,6 +448,20 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - Ganchos candidatos: “A IA me deixou trabalhar pelo WhatsApp. E esse pode ser o maior risco dela.”; “Quando tudo ficou mais fácil de fazer, ficou mais difícil decidir o que não fazer.”; “Você não está sem produtividade. Está usando a IA para fugir da tarefa que dá resultado.”
 - Fonte: reflexão ditada diretamente pela Karol em 09/09/2026.
 
+**I. "A IA faz as respostas. O especialista precisa fazer as perguntas"** *(registrado em 09/09/2026)*
+- Status: **aguardando desenvolvimento pelo Squad de Conteúdo** — ainda não virou teoria nem roteiro.
+- Memória de abertura da Karol: ela lembra do Telecurso 2000, exibido bem cedo na Globo, associado à frase “quem move o mundo não são as respostas, são as perguntas”. A lembrança é uma boa âncora nostálgica, mas a atribuição exata ao programa/slogan não foi confirmada na busca e precisa ser verificada antes de publicar.
+- Tese: essa frase nunca foi tão atual. O “fazer” a IA faz; a diferença humana está em decidir **fazer o quê, com qual estratégia, em que sequência e quem valida**. Essas perguntas separam quem produz resultado com IA de quem apenas aumenta o volume de trabalho genérico.
+- Problema: quando a pessoa pede execução sem repertório, critério ou direção, a IA preenche o vazio com padrões médios. A resposta pode parecer bem escrita e ainda ser genérica, fora de ordem ou impossível de validar.
+- Diferencial do especialista: é o repertório vivido que alimenta a IA — casos, perguntas, decisões, erros, critérios, linguagem da persona e sequência do método. A ferramenta executa melhor quando recebe contexto que não está disponível para qualquer pessoa.
+- Jornada como ativo: quanto mais rica e relevante for a trajetória do especialista, maior o potencial de criar um agente de IA único e eficiente. O diferencial não está apenas no modelo usado, mas no conhecimento proprietário que orienta o que o agente pergunta, prioriza, recusa e entrega.
+- Tese operacional: IA sem repertório gera velocidade média. Repertório sem estrutura fica preso na cabeça. Repertório estruturado em método e conectado a um agente gera uma execução difícil de copiar.
+- Conexão com os 5Ps: Persona define para quem perguntar; Promessa define o resultado; Processo define sequência; Proposta define o que validar; Posicionamento define como comunicar. A IA executa dentro dessa arquitetura — não substitui as decisões.
+- Guardrail: não afirmar que uma trajetória longa ou diversificada produz automaticamente um agente melhor. A vantagem aparece quando a experiência é selecionada, documentada, transformada em critérios e validada em problemas reais.
+- Formatos candidatos: Reels nostálgico começando pelo programa da manhã; carrossel “4 perguntas que a IA não decide por você”; conteúdo de tese “seu agente só é único quando seu repertório entra nele”.
+- Ganchos candidatos: “Eu lembro de uma frase da televisão: quem move o mundo não são as respostas, são as perguntas. A IA acabou de torná-la urgente.”; “A IA faz. Mas quem decide o quê, em qual ordem e quem valida?”; “Seu agente de IA não fica único pelo prompt. Fica único pelo repertório que só você viveu.”
+- Fonte: reflexão ditada diretamente pela Karol em 09/09/2026. Verificação externa inicial não confirmou que a frase era slogan do Telecurso 2000; tratar como lembrança até localizar fonte primária.
+
 ### 🌟 QUENTES / EMERGENTES (2 temas)
 
 10. **"Vem aí lei que regulamenta influenciador digital como profissão — o que muda pra quem vende conhecimento"**
