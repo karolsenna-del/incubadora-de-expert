@@ -7,6 +7,27 @@
 
 ## Regras Ativas
 
+## [09/09/2026] — CTA da chamada pro grupo das lives usa a palavra LIVE, não GRUPO
+**Origem:** Executando a chamada pré-live de quarta (regra 08/09/2026) pela primeira vez, ao
+conferir `gatilhos-direct.json` antes de escrever o CTA (passo obrigatório da regra 23/08),
+achado que a regra de 08/09 e o modelo de referência
+(`referencias-stories/2026-09-08-modelo-chamada-grupo-lives.md`) escrevem literalmente "Comenta
+GRUPO" — mas o JSON tem uma entrada dedicada `grupo-lives` com palavra `LIVE`, criada pela
+própria Karol em 07/09/2026 (1 dia antes da regra/modelo), justamente pra não colidir com o
+gatilho `GRUPO` já usado desde 23/08 pra oferta paga Grupo (R$5.000/12 meses). Usar "GRUPO" no
+CTA da chamada de lives mandaria quem comentasse pro fluxo errado (oferta paga em vez do grupo
+gratuito de lives).
+**Regra:** No CTA da chamada pro grupo das lives (segunda e quarta antes da live), usar sempre
+`Comenta "LIVE" que eu te mando o link.` — nunca "GRUPO", que é exclusivo do CTA da oferta paga
+Grupo. Isso não substitui a regra de 23/08 (sempre conferir `gatilhos-direct.json` antes de
+escrever qualquer CTA de palavra-chave, JSON é sempre a fonte de verdade); só documenta o caso
+específico já resolvido pra não precisar redescobrir toda quarta/segunda.
+**Aplica quando:** Escrevendo o CTA de qualquer chamada pro grupo das lives (segunda ou quarta
+antes da live). **Pendente:** avisar a Karol que o texto da regra de 08/09 e do modelo de
+referência ainda dizem "GRUPO" — precisam ser corrigidos pra "LIVE" pra não confundir quem ler
+depois (ou ela pode preferir mudar o JSON de volta; decisão dela, sinalizada via
+PushNotification).
+
 ## [08/09/2026] — Copy modela a rotina de 12 semanas; sem valores; grupo 2x/semana
 **Origem:** Karol corrigiu que as copies diárias estavam fugindo dos exemplos usados para criar o agente. A sequência enviada depois não era referência de react: era modelo para chamadas de entrada no grupo das lives.
 **Regra:** (1) A rotina de 12 semanas e os exemplos da Karol são fonte obrigatória da copy; não substituir por oferta genérica. (2) NUNCA mostrar preço, ticket, parcela ou valor monetário em Stories. (3) Levantada de Mão segue persona → dor → problema percebido → causa real → solução → CTA. (4) Segunda e quarta antes da live recebem uma sequência extra de chamada para o grupo, sem substituir a rotina; quarta pós-live continua conteúdo, não convite. (5) O modelo recebido orienta estrutura e cadência, mas seus números/promessas não são copiados. CTA do grupo usa a palavra oficial `GRUPO`.
