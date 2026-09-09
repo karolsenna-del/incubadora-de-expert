@@ -9,6 +9,9 @@
 > Karol replica/complementa em Reels manualmente depois, por fora.
 > Tom aplicado: didático-estrategista, direto, sem escassez forçada, sem "última chance" /
 > "vagas se esgotando" — usa limite real quando existir, nunca fabricado.
+> **Correção da Karol (08/09/2026):** esta rotina de 12 semanas e os exemplos fornecidos por ela são a fonte de modelagem da copy. Não substituir a estrutura por copy genérica de oferta. **NUNCA mostrar preço, ticket, parcela ou qualquer valor monetário nos Stories.**
+> Em toda Levantada de Mão, construir a sequência em: **persona → dor → problema percebido → causa real → solução → CTA**.
+
 > Criado em: 12/08/2026. Recriado em 13/08/2026 após perda acidental do arquivo (conflito
 > entre sessões concorrentes do Claude Code rodando na mesma pasta — ver Mission Log do
 > Gestor de Infra Arcane).
@@ -52,21 +55,16 @@ sobraram (Segunda, Quarta, Sexta).
 
 **Original (Vini):** oferta de vaga de mentoria com 4 diferenciais numerados + "comente [palavra]".
 
-**Adaptado pra Karol:**
-```
-Tô com [N] vagas abertas pra [oferta da semana].
+**Modelagem obrigatória para a Karol (corrigida em 08/09):** não copiar a oferta seca nem abrir com produto/preço. Construir de 4 a 6 Stories curtos:
 
-1. [diferencial real da oferta — ex: "constrói o método junto com você, não entrega
-   pronto" (Sprint), ou "valida na prática antes de vender pro público" (Individual)]
-2. [diferencial real 2]
-3. [diferencial real 3, se houver]
+1. **Persona:** nomear a pessoa e o contexto em que ela se reconhece.
+2. **Dor:** mostrar a consequência concreta que ela vive hoje.
+3. **Problema percebido:** explicitar o que ela acha que precisa resolver.
+4. **Causa real:** trazer o diagnóstico da Karol — por que a solução tentada não resolve.
+5. **Solução:** apresentar a oferta/experiência como caminho, sem preço, ticket, parcela ou valor monetário.
+6. **CTA:** usar a palavra-gatilho oficial da oferta, sem variação improvisada.
 
-Se isso te interessa, comenta "[PALAVRA-CHAVE]"
-```
-**Execução:** postar entre 8h-10h. Abordar quem comentou entendendo primeiro o momento da
-pessoa (qual oferta faz sentido pra ela) antes de indicar — nunca empurra a mais cara de
-cara. **Nota de tom:** sem escassez fabricada ("última chance", "vagas se esgotando") — usa
-limite real quando existir (ex: agenda do mês, capacidade de atendimento 1:1).
+**Execução:** postar entre 8h-10h. Abordar quem comentou entendendo primeiro o momento da pessoa antes de indicar uma oferta. Sem escassez fabricada e sem exibir valores monetários. Número de vagas só entra quando for limite real e necessário para a decisão; nunca substitui persona, dor, causa e solução.
 
 **Decisão (12/08, Karol):** nem todas as 7 ofertas entram na rotina fixa — cada uma resolve
 uma trava específica (ver `crm-reativacao-leads/arsenal-vendas-closer.md`, seção 5), e nem
@@ -88,6 +86,23 @@ arsenal) — ajustável a qualquer momento:
 | 5 | Individual | Quer jornada completa 1:1, acompanhamento mais garantido |
 
 Ciclo reinicia na semana 6 (volta pra Diagnóstico Ferramentas).
+
+
+### Segunda e quarta antes da live — Chamada para o grupo das lives (2x/semana, extra)
+
+**Decisão (08/09/2026, Karol):** incluir duas sequências extras por semana convidando para o grupo onde acontecem as lives. Entram **segunda** e **quarta antes da live**, sem substituir o Story previsto na rotina. Na quarta, a chamada pré-live é separada do Story pós-live de conteúdo, que continua obrigatório depois do encontro.
+
+**Modelo fornecido pela Karol:** `referencias-stories/2026-09-08-modelo-chamada-grupo-lives.jpg`. Usar a lógica da sequência, não copiar números, promessas ou frases. O modelo serve para cadência: reconhecer contexto → ampliar a tensão → explicar a experiência → dar motivo para entrar → CTA repetido e claro.
+
+**Estrutura adaptada:**
+1. Persona: profissional experiente que quer transformar conhecimento em método/infoproduto e ainda está travada.
+2. Dor: sabe muito, mas continua sem clareza, produto validado ou autoridade proporcional.
+3. Problema percebido: acha que falta audiência, ferramenta, conteúdo ou mais estudo.
+4. Causa real: conhecimento ainda não foi organizado e validado como método e proposta.
+5. Solução: entrar no grupo para participar das lives semanais, acompanhar diagnósticos e aprender a ordem método → venda → validação → presença → escala.
+6. CTA: **“Comenta GRUPO que eu te mando o link.”** Conferir sempre a palavra no arquivo de gatilhos.
+
+**Vetos:** não mostrar preço, ticket, parcela, faturamento prometido ou qualquer valor monetário; não importar do modelo alegações como “20k a 50k”, “5%” ou “mil mentorados”; não inventar tema, depoimento ou resultado. Se houver tema real da live, conectá-lo à dor da persona.
 
 ### Sábado — Day Off
 

@@ -16,6 +16,13 @@ Identificar o formato certo pro dia, escrever o texto no tom da Karol, e gerar a
 
 ## Passos
 
+### Step 0: Modelar a copy antes de escolher palavras
+
+- Ler a rotina de 12 semanas e os exemplos da Karol como fonte de estrutura; não escrever oferta genérica por hábito.
+- Veto absoluto: não mostrar preço, ticket, parcela ou valor monetário em nenhum Story.
+- Em Levantada de Mão, validar os 6 blocos: persona → dor → problema percebido → causa real → solução → CTA. Se faltar um bloco, a copy não está pronta.
+- Segunda e quarta antes da live: acrescentar a chamada para o grupo como sequência extra, seguindo `referencias-stories/2026-09-08-modelo-chamada-grupo-lives.md`; não substituir o formato do dia.
+
 ### Step 1: Identificar o Dia e o Formato
 
 Consultar `docs/producao-conteudo/karol/rotina-stories-formatos.md`:

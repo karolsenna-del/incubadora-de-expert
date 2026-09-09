@@ -38,6 +38,22 @@ input ou confirmação. Preparar pode acontecer antes; publicar é sempre só de
 
 ---
 
+### [SOP-003] Chamada para o grupo das lives
+**Criado em:** 08/09/2026
+**Trigger:** Segunda e quarta antes da live, duas vezes por semana
+**Ferramentas:** rotina de 12 semanas, modelo visual em `docs/producao-conteudo/karol/referencias-stories/2026-09-08-modelo-chamada-grupo-lives.jpg`, tema real da live quando existir
+**Regra:** sequência extra; não substitui o Story do dia. Quarta pós-live continua sendo conteúdo do encontro.
+
+**Passos:**
+1. Nomear a persona e a situação concreta.
+2. Aprofundar dor e problema percebido.
+3. Revelar a causa real pela lente da Karol.
+4. Apresentar o grupo/lives como solução e dar motivo concreto para entrar.
+5. Fechar com `Comenta GRUPO que eu te mando o link.`
+6. Revisar: zero preço, ticket, parcela, promessa de faturamento ou número importado do modelo.
+
+**Definition of Done:** persona, dor, problema, causa, solução e CTA estão visíveis; palavra `GRUPO` conferida; nenhum valor monetário.
+
 ## Tier 2 — Sob demanda
 (SOPs que rodam quando pedido)
 

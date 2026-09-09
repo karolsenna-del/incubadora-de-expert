@@ -7,6 +7,11 @@
 
 ## Regras Ativas
 
+## [08/09/2026] — Copy modela a rotina de 12 semanas; sem valores; grupo 2x/semana
+**Origem:** Karol corrigiu que as copies diárias estavam fugindo dos exemplos usados para criar o agente. A sequência enviada depois não era referência de react: era modelo para chamadas de entrada no grupo das lives.
+**Regra:** (1) A rotina de 12 semanas e os exemplos da Karol são fonte obrigatória da copy; não substituir por oferta genérica. (2) NUNCA mostrar preço, ticket, parcela ou valor monetário em Stories. (3) Levantada de Mão segue persona → dor → problema percebido → causa real → solução → CTA. (4) Segunda e quarta antes da live recebem uma sequência extra de chamada para o grupo, sem substituir a rotina; quarta pós-live continua conteúdo, não convite. (5) O modelo recebido orienta estrutura e cadência, mas seus números/promessas não são copiados. CTA do grupo usa a palavra oficial `GRUPO`.
+**Aplica quando:** Em toda geração diária e, especialmente, nas Levantadas de Mão e chamadas para o grupo das lives.
+
 ## [26/08/2026] — Automação de postagem (SOP-021) já está no ar — imagem gerada precisa ser commitada+pushada, não fica só local
 **Origem:** Story da Live 27 (quarta) foi gerada e entregue na pasta `fila/` só localmente
 (nunca commitada nem pushada). O workflow `instagram-stories-scheduler.yml` roda no GitHub e
