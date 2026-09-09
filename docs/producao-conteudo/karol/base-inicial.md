@@ -421,6 +421,19 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - Ganchos candidatos: “Eu estruturei meu método em 5Ps. Depois descobri que nenhum deles sobrevive sem mentalidade.”; “A maioria dos métodos não quebra porque a técnica está errada — quebra porque o expert não consegue sustentar a execução.”
 - Fontes internas: `business/campanhas/expert360-curso/estrutura-modulos.md` (blocos de mentalidade M2, M3 e M4) e `business/campanhas/expert360-curso/prd.md` (camada especialista→empreendedor, crenças sobre fracasso, ciclo da tensão e identidade antes dos táticos).
 
+**G. "Quando a IA vira a terceira pessoa na relação entre mentor e aluno"** *(registrado em 09/09/2026)*
+- Status: **aguardando desenvolvimento pelo Squad de Conteúdo** — ainda não virou teoria nem roteiro.
+- Cena real recorrente observada pela Karol: mentor e mentorado saem de uma sessão alinhados, com decisões claras e sem dúvidas. Uma hora depois, o aluno volta cheio de perguntas, contrapontos e frases elaboradas pelo ChatGPT, reabrindo ou desvalidando o trabalho que havia acabado de ser construído em conjunto.
+- Problema: a IA responde sem viver a relação, sem carregar todo o contexto da sessão e sem assumir responsabilidade pelo resultado. A linguagem bem formulada pode dar aparência de profundidade a uma dúvida que apenas fragmenta a decisão e impede a execução.
+- Analogia central da Karol: relação de mentor e aluno é como casamento. Não precisa durar a vida toda, mas, para ser feliz enquanto durar, exige fidelidade e confiança. Escolher o mentor deve ser uma decisão calma; depois da escolha, não funciona permanecer desejando outros caminhos e desconfiando de toda orientação.
+- Comportamentos que quebram a confiança: o mentor orienta e o aluno consulta a IA para julgar o que ouviu; o mentor define um caminho e o aluno pergunta a outros alunos se “foi assim também”; o mentor passa uma estratégia e o aluno compara com a de um mentor concorrente. O resultado é cansaço na relação, decisões reabertas e execução pulverizada.
+- Tese: pensamento crítico não é consultar infinitas fontes até alguma confirmar o que você queria ouvir. Confiança também não é obediência cega. A dúvida deve voltar para a relação com contexto: “a IA levantou este ponto; como isso se aplica ao meu caso e ao caminho que definimos?”.
+- Posição da Karol sobre IA: o conteúdo não é anti-IA. A IA pode apoiar organização, criação e execução dentro do método; o problema começa quando ela vira árbitra da relação e substitui compromisso, contexto e confiança.
+- Guardrail: não atacar aluno nem tratar questionamento como traição. O alvo é a consulta compulsiva que reabre toda decisão. Preservar espaço para divergência real, revisão de estratégia e saída consciente quando a relação já não faz sentido.
+- Formatos candidatos: Reels com a cena “uma hora depois da sessão”; carrossel “3 formas de transformar a IA em terceira pessoa da mentoria”; conteúdo de opinião usando a analogia do casamento.
+- Ganchos candidatos: “O mentor sai da sessão com tudo alinhado. Uma hora depois, o ChatGPT já desfez o acordo.”; “Mentoria não precisa durar para sempre. Mas, enquanto durar, precisa de fidelidade.”; “Se toda orientação precisa ser validada por outra IA, outro aluno e outro mentor, você não tem acompanhamento — tem um conselho sem reunião.”
+- Fonte: reflexão ditada diretamente pela Karol em 09/09/2026. Anonimizar alunos e situações ao roteirizar.
+
 ### 🌟 QUENTES / EMERGENTES (2 temas)
 
 10. **"Vem aí lei que regulamenta influenciador digital como profissão — o que muda pra quem vende conhecimento"**
