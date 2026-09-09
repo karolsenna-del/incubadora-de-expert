@@ -462,6 +462,18 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - Ganchos candidatos: “Eu lembro de uma frase da televisão: quem move o mundo não são as respostas, são as perguntas. A IA acabou de torná-la urgente.”; “A IA faz. Mas quem decide o quê, em qual ordem e quem valida?”; “Seu agente de IA não fica único pelo prompt. Fica único pelo repertório que só você viveu.”
 - Fonte: reflexão ditada diretamente pela Karol em 09/09/2026. Verificação externa inicial não confirmou que a frase era slogan do Telecurso 2000; tratar como lembrança até localizar fonte primária.
 
+**J. "Empreender pode ser o rolê que for, mas dá liberdade para pensar no próprio futuro"** *(registrado em 09/09/2026)*
+- Status: **aguardando desenvolvimento pelo Squad de Conteúdo** — história transcrita, ainda não virou teoria nem roteiro.
+- Cena real: a manicure da Karol participou de uma imersão de dois dias para manicures em São Paulo e prolongou a viagem fazendo turismo. Ao precisar fazer a unha em outro salão, Karol conversou com uma funcionária que disse achar o evento incrível e querer muito participar, mas não pôde porque era fim de ano, a agenda estava cheia e a chefe não deixou.
+- Contraste observado: duas manicures haviam “batido as asinhas”, saído para empreender e aberto o próprio espaço; agora podiam escolher participar da capacitação e aproveitar a viagem. A funcionária queria investir no futuro profissional, mas a decisão estava subordinada à necessidade presente da agenda do salão.
+- Frase central da Karol: “Empreender pode ser o rolê que for, mas dá uma liberdade.”
+- Tese: a liberdade de empreender não é ausência de trabalho nem promessa de vida fácil. É poder decidir quando se capacitar, que oportunidade aproveitar e quanto investir no próprio futuro — decisões que, como funcionária, podem ser bloqueadas porque o negócio precisa proteger a operação presente.
+- Tensão para a persona: estabilidade e emprego podem oferecer segurança, mas também colocam o desenvolvimento da profissional sob prioridades que não são necessariamente as dela. Empreender transfere o risco, mas também devolve poder de decisão.
+- Guardrail: não atacar a chefe nem afirmar que toda relação de emprego impede crescimento. O caso mostra um conflito concreto entre agenda imediata do negócio e futuro da profissional; não prova intenção ruim nem resultado financeiro das manicures que empreenderam.
+- Formatos candidatos: Reels com o vídeo original; carrossel “a agenda cheia da chefe × o futuro da profissional”; conteúdo de história pessoal sobre a liberdade de escolher capacitação.
+- Ganchos candidatos: “Ela queria ir ao maior evento da profissão. A chefe não deixou porque a agenda estava cheia.”; “Duas manicures foram para a imersão. A terceira ficou atendendo porque não podia decidir.”; “Empreender pode ser o rolê que for, mas devolve uma coisa: a decisão sobre o seu futuro.”
+- Fonte: vídeo de 1 minuto enviado pela Karol em 09/09/2026. Transcrição revisada em `transcricoes/2026-09-09-liberdade-empreender-manicure.md`; há um trecho pouco claro entre 16s e 21s, mantido sem invenção. Anonimizar profissionais e salão.
+
 ### 🌟 QUENTES / EMERGENTES (2 temas)
 
 10. **"Vem aí lei que regulamenta influenciador digital como profissão — o que muda pra quem vende conhecimento"**
