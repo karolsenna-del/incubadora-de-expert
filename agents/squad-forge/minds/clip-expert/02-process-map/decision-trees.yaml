@@ -1,0 +1,25 @@
+process_slug: "clip-expert"
+
+decisions:
+  - decision_pu: "PU-clip-expert-005"
+    at_step: 3
+    name: "Transcricao disponivel?"
+    condition: "IF video de entrada ja tem transcricao (lives, mentorias por Meet costumam ter)"
+    branches:
+      - label: "SIM"
+        action: "Segue direto pra analise e pontuacao dos trechos (passo 4)"
+        next_step: 4
+      - label: "NAO (ex: video de palestra sem transcricao)"
+        action: "Transcreve automaticamente primeiro (Whisper ou equivalente), mesmo que demore mais, so depois segue pra analise"
+        next_step: 4
+    rationale: "Karol preferiu precisao a velocidade — corte baseado em transcricao lida bate melhor no 'momento bom' do que so heuristica de audio/video bruto"
+
+  - decision_pu: "PU-clip-expert-015"
+    at_step: 5
+    name: "Estilo de legenda"
+    condition: "Qual estilo de legenda queimar no corte final"
+    branches:
+      - label: "Reaproveitar Stylist do squad-edicao-arcane"
+        action: "Chama o agente Stylist ja existente (curador de estilo com catalogo, referencia e pesquisa web) em vez de reinventar escolha de estilo do zero"
+        next_step: 5
+    rationale: "Evita duplicar trabalho e mantem consistencia visual com o squad-edicao-arcane"

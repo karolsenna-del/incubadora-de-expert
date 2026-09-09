@@ -1,0 +1,11 @@
+# Nota minima de corte (escala 0-10). Corte abaixo disso e descartado (QG-CE-01).
+# Valor inicial conservador — calibrar pra cima ou pra baixo depois dos primeiros
+# videos reais processados (decisao explicita da Karol: comecar sem valor fixo
+# definido a priori, e calibrar com uso).
+
+nota_minima: 7.0
+
+historico_calibracao:
+  - data: "2026-09-08"
+    valor: 7.0
+    motivo: "Valor inicial na criacao do squad — ainda nao calibrado com video real"

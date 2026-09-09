@@ -1,0 +1,62 @@
+name: "wf-clip-expert"
+version: "1.0.0"
+description: "Da live semanal ate a fila do Postador — deteccao automatica, transcricao condicional, pontuacao com criterios do Expert Viral, corte+legenda via Stylist, entrega e revisao humana."
+trigger: "Nova linha em encontros_mentoria (Supabase), inserida pelo weekly-sync do course-publisher"
+
+phases:
+  - phase: 0
+    name: "Deteccao e Ingestao"
+    tasks:
+      - "detectar-live-nova"
+      - "transcrever-se-necessario"
+    agent: "@garimpeiro"
+    blocking: true
+    duration: "automatico (minutos a mais se precisar transcrever)"
+    quality_gate: null
+
+  - phase: 1
+    name: "Pontuacao e Quality Gate"
+    tasks:
+      - "pontuar-trechos"
+    agent: "@garimpeiro"
+    blocking: true
+    duration: "automatico"
+    quality_gate: "QG-CE-01"
+
+  - phase: 2
+    name: "Corte e Legenda"
+    tasks:
+      - "cortar-e-legendar"
+    agent: "@cortador"
+    blocking: true
+    duration: "automatico"
+    quality_gate: null
+
+  - phase: 3
+    name: "Entrega e Notificacao"
+    tasks:
+      - "entregar-e-notificar"
+    agent: "@cortador"
+    blocking: false
+    duration: "automatico"
+    quality_gate: null
+
+  - phase: 4
+    name: "Revisao e Handoff Postador"
+    tasks:
+      - "revisar-e-aprovar"
+    agent: "@clip-chief"
+    blocking: true
+    duration: "depende da Karol"
+    quality_gate: "QG-CE-02"
+
+quality_gates:
+  - id: "QG-CE-01"
+    transition: "phase_1 -> phase_2"
+    criteria: "Corte candidato so passa se atingir nota minima (0-10, criterios do Expert Viral). Entrega menos cortes em vez de forcar quantidade."
+    blocking: true
+
+  - id: "QG-CE-02"
+    transition: "phase_4 -> fila do Postador"
+    criteria: "So entra na fila do Postador o corte que a Karol aprovou explicitamente."
+    blocking: true

@@ -1,0 +1,58 @@
+{
+  "process_slug": "clip-expert",
+  "process_name": "Clip Expert",
+  "scope": "Encontrar automaticamente os melhores trechos/momentos virais dentro de um video longo (live, aula, mentoria) e gerar cortes candidatos prontos pra edicao/postagem",
+  "target_audience": "internal",
+  "current_phase": 5,
+  "phase_status": {
+    "phase_0": "completed",
+    "phase_1": "completed",
+    "phase_2": "completed",
+    "phase_3": "completed",
+    "phase_4": "completed",
+    "phase_5": "in_progress"
+  },
+  "extraction_rounds": 3,
+  "total_pus": 16,
+  "quality_gates_passed": ["QG-SF-001", "QG-SF-002", "QG-SF-003", "QG-SF-004"],
+  "blueprint_path": "agents/squad-forge/minds/clip-expert/03-blueprint/squad-blueprint.yaml",
+  "rounds_log": [
+    {
+      "round": 1,
+      "timestamp": "2026-09-08T00:00:00-03:00",
+      "pus_added": 6,
+      "lens_covered": ["L1", "L2"],
+      "avg_confidence": 1.0,
+      "gaps_detected": ["criterio de corte bom", "onde entrega o resultado", "excecao de video curto/sem momentos bons"]
+    },
+    {
+      "round": 2,
+      "timestamp": "2026-09-08T00:00:00-03:00",
+      "pus_added": 6,
+      "lens_covered": ["L3", "L4", "L5", "L6", "L7"],
+      "avg_confidence": 0.85,
+      "gaps_detected": ["fonte exata do video bruto (depende de /gestor-infra)"]
+    },
+    {
+      "round": 3,
+      "timestamp": "2026-09-08T00:00:00-03:00",
+      "pus_added": 4,
+      "lens_covered": ["L3", "L7", "L8"],
+      "avg_confidence": 1.0,
+      "gaps_detected": []
+    }
+  ],
+  "squad_artifacts": {
+    "agents": 3,
+    "tasks": 7,
+    "workflows": 1,
+    "kb_files": 1
+  },
+  "total_lines_generated": 1875,
+  "installed_to": "agents/clip-expert/",
+  "skill_registered": ".claude/commands/clipExpert.md",
+  "started_at": "2026-09-08T00:00:00-03:00",
+  "paused_at": "",
+  "resumed_at": "",
+  "completed_at": ""
+}
