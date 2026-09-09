@@ -91,7 +91,7 @@ Em todas: pode apagar a aba padrão em branco ("Página1" ou "Sheet1") que sobro
 
 **Matriz de Responsabilidade:** dados do caso no topo, tabela de etapas com dropdown na coluna "Responsável" (Você / Produtor / Terceiro) — a cor da célula muda sozinha. Pra entregar ao produtor: **Arquivo → Baixar → PDF (.pdf)**, ou imprimir a aba direto.
 
-**Mapa do Caso:** na S4, escolhe e duplica o modelo específico do serviço — **Crédito Rural**, **Regularização** ou **Georreferenciamento**. Na S11/S12 e no registro final da S22, usa a versão **Avançada** (7 campos: pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos) quando o caso tiver múltiplos envolvidos/interesses. O "Plano de Condução de Caso Complexo" e o "Relatório de Aplicação" são resultados desse preenchimento, não ferramentas separadas.
+**Mapa do Caso:** na S4, escolhe e duplica o modelo específico do serviço — **Crédito Rural**, **Regularização** ou **Georreferenciamento**. Na S11/S12 e no registro final da S22, usa a versão **Avançada** (9 campos, corrigido 08/09: demanda → problema real → pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos) quando o caso tiver múltiplos envolvidos/interesses. O "Plano de Condução de Caso Complexo" e o "Relatório de Aplicação" são resultados desse preenchimento, não ferramentas separadas.
 
 **Mapa de Posicionamento:** 5 campos (Eu sou → Eu resolvo → Para quem → Como faço → Qual valor entrego). Duplica a aba MODELO na Sessão 7 (versão inicial) e de novo na Sessão 18 (revisão) — **não apaga a versão anterior**, o valor está em comparar a evolução.
 
