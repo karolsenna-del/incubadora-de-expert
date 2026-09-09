@@ -196,7 +196,7 @@ próximos passos.
 - [x] Confirmado (08/09): CTA mantém **IA**
 - [x] Confirmado (05/09): bônus é a planilha Mapa de Priorização de Ferramentas do Método
 - [x] Confirmado (08/09): LP do grupo (`grupo.incubadoradeexpert.com.br`) atualizada e republicada com o novo tema
-- [x] Preparar/ter pronta a planilha Mapa de Priorização antes da live (entregável do bônus) — `live-29-bonus-mapa-priorizacao.csv` criada
+- [x] Preparar/ter pronta a planilha Mapa de Priorização antes da live (entregável do bônus) — formatada (cores + logo LiveExpert360) e publicada como Google Sheets: https://docs.google.com/spreadsheets/d/18c76TVqvAPoafMuqOP4OaIR8A0LVGZDZnLRKWeakdJU/edit
 - [x] Confirmado (05/09): pode citar a Milena/Conduz Agro nominalmente
 - [ ] Se tiver número real de tempo/dinheiro economizado (Milena ou outra aluna), passar pro Bloco 7 — segue qualitativo se não tiver
 - [ ] Registrar em `lives-expert360-roteiros.md` após a live
