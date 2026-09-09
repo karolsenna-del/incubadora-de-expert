@@ -1,0 +1,178 @@
+process:
+  name: "Clip Expert"
+  slug: "clip-expert"
+  owner: "Karol Senna"
+  description: "Pega a live semanal da Incubadora de Expert e encontra sozinho os melhores trechos pra virar Reels, usando os criterios do agente Expert Viral, entregando ja cortado e legendado pra revisao."
+  trigger: "Nova linha inserida na tabela Supabase encontros_mentoria pela automacao weekly-sync (course-publisher), apos ela processar a live de quarta"
+  endpoint: "Cortes aprovados por Karol entram na fila do Postador, que agenda a publicacao sozinho"
+  frequency: "semanal"
+  estimated_duration: "variavel — depende de precisar transcrever ou nao, e do tamanho da live"
+  complexity: "standard"
+
+extraction:
+  total_rounds: 3
+  total_pus: 16
+  pus_by_type:
+    STEP: 4
+    DECISION: 3
+    EXCEPTION: 1
+    QUALITY_GATE: 1
+    DEPENDENCY: 4
+    INPUT: 2
+    OUTPUT: 3
+    TACIT: 1
+  lens_coverage:
+    L1: true
+    L2: true
+    L3: true
+    L4: true
+    L5: true
+    L6: true
+    L7: true
+    L8: true
+  average_confidence: 0.97
+  inferred_ratio: 0.0
+  user_validated: true
+
+steps:
+  - step_number: 1
+    pu_id: "PU-clip-expert-001"
+    name: "Live acontece"
+    description: "Karol grava a live semanal da Incubadora de Expert (Google Meet), toda quarta-feira."
+    executor: "human"
+    estimated_time: "variavel"
+    inputs: []
+    outputs: []
+    decisions: []
+    exceptions: []
+    quality_gates: []
+    depends_on: []
+    tools: ["Google Meet"]
+
+  - step_number: 2
+    pu_id: "PU-clip-expert-002"
+    name: "weekly-sync processa a live (course-publisher)"
+    description: "Automacao ja existente (fora do escopo do Clip Expert): pega a gravacao na pasta do Drive 'Live Expert360 (recurring)', sobe pro YouTube nao-listado, registra linha nova na tabela Supabase encontros_mentoria."
+    executor: "worker"
+    estimated_time: "automatico"
+    inputs: ["PU-clip-expert-012"]
+    outputs: []
+    decisions: []
+    exceptions: []
+    quality_gates: []
+    depends_on: [1]
+    tools: ["course-publisher (squad existente)", "Google Drive", "YouTube", "Supabase"]
+
+  - step_number: 3
+    pu_id: "PU-clip-expert-003"
+    name: "Clip Expert dispara automaticamente"
+    description: "Assim que ha linha nova em encontros_mentoria, o Clip Expert pega o video bruto direto da pasta do Drive (qualidade melhor que o YouTube ja comprimido). Verifica se ha transcricao disponivel."
+    executor: "worker"
+    estimated_time: "automatico"
+    inputs: ["PU-clip-expert-004", "PU-clip-expert-012"]
+    outputs: []
+    decisions: ["PU-clip-expert-005"]
+    exceptions: []
+    quality_gates: []
+    depends_on: [2]
+    tools: ["Google Drive"]
+
+  - step_number: 4
+    pu_id: "PU-clip-expert-007"
+    name: "Encontra e pontua os melhores trechos"
+    description: "Analisa a transcricao (existente ou gerada no passo anterior) e pontua trechos candidatos usando os criterios do agente Expert Viral (gancho, retencao, anti-padroes)."
+    executor: "agent"
+    estimated_time: "variavel"
+    inputs: []
+    outputs: ["PU-clip-expert-006"]
+    decisions: []
+    exceptions: ["PU-clip-expert-009"]
+    quality_gates: ["PU-clip-expert-008"]
+    depends_on: [3]
+    tools: ["Expert Viral (agente existente)"]
+
+  - step_number: 5
+    pu_id: "PU-clip-expert-010"
+    name: "Corta, aplica legenda e entrega"
+    description: "Corta os trechos aprovados na pontuacao, aplica legenda queimada usando o agente Stylist (do squad-edicao-arcane) pra decidir o estilo, salva na pasta local e avisa Karol por e-mail."
+    executor: "agent"
+    estimated_time: "variavel"
+    inputs: []
+    outputs: ["PU-clip-expert-010", "PU-clip-expert-011"]
+    decisions: ["PU-clip-expert-015"]
+    exceptions: []
+    quality_gates: []
+    depends_on: [4]
+    tools: ["Stylist (squad-edicao-arcane)", "ffmpeg"]
+
+  - step_number: 6
+    pu_id: "PU-clip-expert-013"
+    name: "Karol revisa e aprova"
+    description: "Karol abre a pasta, assiste os cortes. Cortes aprovados entram direto na fila do Postador, que agenda a publicacao sozinho."
+    executor: "hybrid"
+    estimated_time: "variavel"
+    inputs: []
+    outputs: []
+    decisions: []
+    exceptions: []
+    quality_gates: []
+    depends_on: [5]
+    tools: ["Postador (agente existente)"]
+
+decision_tree:
+  - decision_pu: "PU-clip-expert-005"
+    at_step: 3
+    condition: "IF video de entrada tem transcricao disponivel"
+    branches:
+      - label: "SIM — segue direto pra analise (passo 4)"
+        next_step: 4
+      - label: "NAO — transcreve automaticamente primeiro (demora mais, mantem precisao), depois segue pra analise"
+        next_step: 4
+
+  - decision_pu: "PU-clip-expert-015"
+    at_step: 5
+    condition: "Escolha do estilo de legenda a queimar no corte"
+    branches:
+      - label: "Reaproveita o agente Stylist do squad-edicao-arcane (nao reinventa escolha de estilo)"
+        next_step: 5
+
+exceptions:
+  - exception_pu: "PU-clip-expert-009"
+    at_step: 4
+    trigger: "Video longo nao tem 10-15 momentos que passem na nota minima de qualidade"
+    response: "Entrega menos cortes — nunca entrega um corte fraco so pra completar o numero"
+    severity: "degraded"
+    frequency: "ocasional"
+
+quality_gates:
+  - gate_pu: "PU-clip-expert-008"
+    after_step: 4
+    criteria: "Corte candidato so passa se atingir nota minima (0-10) calculada com os criterios do Expert Viral. Nota exata a calibrar nos primeiros videos reais."
+    blocking: true
+
+dependencies:
+  sequential: [[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]]
+  parallel: []
+  external:
+    - step: 2
+      system: "course-publisher / weekly-sync (squad ja existente, roda antes)"
+    - step: 4
+      system: "Expert Viral (agente existente, fonte dos criterios de pontuacao)"
+    - step: 5
+      system: "Stylist do squad-edicao-arcane (agente existente, fonte do estilo de legenda)"
+    - step: 6
+      system: "Postador (agente existente, recebe a fila de aprovacao)"
+  bottleneck: 3
+
+tacit_knowledge:
+  - pu_id: "PU-clip-expert-016"
+    content: "Karol confirmou explicitamente que nao ha criterio de selecao de corte alem dos ja cobertos pelo Expert Viral."
+    heuristic: "Nao inventar criterio de 'corte bom' novo — sempre delegar pra logica do Expert Viral."
+    applies_to_steps: [4]
+
+validation:
+  playback_date: "2026-09-08"
+  user_confirmed: true
+  corrections_made: 2
+  open_gaps: []
+  completeness_score: 0.97

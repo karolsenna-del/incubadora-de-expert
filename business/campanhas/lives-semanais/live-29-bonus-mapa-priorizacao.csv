@@ -1,0 +1,14 @@
+﻿"MAPA DE PRIORIZAÇÃO DE FERRAMENTAS DO MÉTODO — liste os pontos do seu método que ainda não têm uma ferramenta pronta. Dê nota de 1 a 5 pra Impacto e pra Esforço. A coluna Prioridade calcula sozinha — comece pelas maiores.",,,,
+,,,,
+Ferramenta / Ponto do Método,O que ela resolve,Impacto (1=baixo a 5=alto),Esforço pra construir (1=fácil/rápido a 5=caro/demorado),Prioridade
+(exemplo — apague esta linha) Roteiro de Diagnóstico Inicial,"Ajuda a entender a real dor da cliente antes da primeira sessão, evitando começar o atendimento sem direção clara.",5,2,"=C4-D4"
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

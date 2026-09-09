@@ -17,6 +17,7 @@ Passagem condensada pelos 6 pilares. Meta: mentorado sai da Etapa 1 já tendo co
 - **Exercício prático:** preencher o diagnóstico e revisar junto com a mentora
 - **Nota de produção:** candidato a virar diagnóstico interativo (Claude Artifact, sem domínio — mesmo molde do "Diagnóstico do Expert" da Incubadora: wizard com progresso salvo, resultado calculado, envio pra Google Sheet via Apps Script). Identidade visual já disponível (`branding.md` Seção 6, logos e paleta da apresentação da Milena) — construção liberada, não bloqueada mais pela Fase 6.
 - **Entregável:** diagnóstico preenchido + papel atual nomeado (executor / consultor / condutor estratégico)
+- **Fechamento** *(adicionado 08/09)*: apresentar o Plano de Aplicação Diária pela 1ª vez (o que é, como preencher, atividade da semana 1) — não é enviado no kit de boas-vindas automático, só ao vivo aqui, pra não chegar sem contexto (ver `design-entregaveis.md` Seção 9)
 - **Conexão anterior:** abertura do programa
 - **Conexão próxima:** base pro plano de 12 meses da S2
 
@@ -25,6 +26,7 @@ Passagem condensada pelos 6 pilares. Meta: mentorado sai da Etapa 1 já tendo co
 - **Framework/ferramenta:** Framework "Da Semente à Colheita da Autoridade"
 - **Exercício prático:** montar o plano personalizado dos 12 meses a partir do diagnóstico da S1
 - **Entregável:** plano de 12 meses fechado e assinado
+- **Fechamento** *(adicionado 08/09)*: apresentar a Central do Aluno (índice completo das ferramentas da jornada) e liberar o CRM Comercial Conduz Agro — enquadrado como funil de negócio que roda em paralelo desde já, sem depender de conteúdo do método; o restante das ferramentas é apresentado sessão a sessão, no momento de uso (ver `design-entregaveis.md` Seção 9)
 - **Conexão anterior:** usa diagnóstico da S1
 - **Conexão próxima:** abre trabalho de segurança interna essencial (S3)
 
@@ -39,8 +41,8 @@ Passagem condensada pelos 6 pilares. Meta: mentorado sai da Etapa 1 já tendo co
 ### Sessão 4 — Leitura do produtor essencial
 - **Objetivo:** diferenciar demanda declarada de problema real; identificar perfil do produtor (tradicional, desconfiado, apressado, investidor, analítico, emocional)
 - **Framework/ferramenta:** Mapa do Caso (versão rápida: demanda → problema → riscos → próximo passo)
-- **Exercício prático:** aplicar o Mapa do Caso a um atendimento real em andamento
-- **Entregável:** Mapa do Caso de 1 atendimento real
+- **Exercício prático:** aplicar o Mapa do Caso a um atendimento real em andamento, e completar a Parte 2 (Plano de Condução do Caso, 7 campos) na mesma aba *(adicionado 08/09)*
+- **Entregável:** Mapa do Caso de 1 atendimento real + Plano de Condução do Caso preenchido
 - **Conexão anterior:** usa o Círculo de Controle da S3 pra não reagir por impulso à leitura do cliente
 - **Conexão próxima:** prepara a comunicação com esse perfil (S5)
 
@@ -100,14 +102,14 @@ Retoma os 6 pilares com profundidade — trabalho emocional mais denso, casos re
 
 ### Sessão 11 — Leitura de cenário complexo
 - **Objetivo:** organizar situações com múltiplos envolvidos, interesses divergentes e patrimônio em jogo — conflitos familiares no meio rural
-- **Exercício prático:** aplicar pessoas→documentos→interesses→riscos→conflitos→prioridades→próximos passos a um caso real com conflito familiar
-- **Entregável:** plano de condução de um caso complexo real
+- **Exercício prático:** aplicar demanda→problema real→pessoas→documentos→interesses→riscos→conflitos→prioridades→próximos passos (Parte 1, Mapa do Caso) a um caso real com conflito familiar, e completar a Parte 2 (Plano de Condução do Caso, 7 campos) na mesma aba *(campos de demanda/problema real e Parte 2 adicionados 08/09)*
+- **Entregável:** Mapa do Caso avançado + Plano de Condução de um caso complexo real
 - **Conexão anterior:** usa a IE trabalhada em S10 pra manter neutralidade
 - **Conexão próxima:** aprofunda diagnóstico estratégico (S12)
 
 ### Sessão 12 — Diagnóstico estratégico avançado + checkpoint
 - **Objetivo:** consolidar a leitura de cenário em situações com múltiplos interesses divergentes
-- **Exercício prático:** Mapa do Caso completo aplicado a uma situação de múltiplos envolvidos
+- **Exercício prático:** Mapa do Caso completo (9 campos: demanda, problema real, pessoas, documentos, interesses, riscos, conflitos, prioridades, próximos passos) aplicado a uma situação de múltiplos envolvidos
 - **Entregável:** Mapa do Caso avançado + 2ª marcação no Checklist de Evidências da Autoridade
 - **Conexão anterior:** integra S9-S11
 - **Conexão próxima:** abre sub-fase de comunicação e condução (S13)

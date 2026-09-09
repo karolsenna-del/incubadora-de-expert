@@ -8,6 +8,11 @@
  * isso fica num arquivo só, com 4 abas-modelo. O aluno escolhe qual duplicar
  * conforme o tipo e a complexidade do caso.
  *
+ * Cada aba tem 2 partes (adicionado 08/09, sugestão da Milena): Parte 1 é o
+ * Mapa do Caso (leitura do cenário); Parte 2 é o Plano de Condução do Caso
+ * (depois de ler o cenário, como vai conduzir esse produtor) — mesma aba,
+ * não é ferramenta separada nem arquivo separado.
+ *
  * Como usar: ver `SETUP-FERRAMENTAS.md` na mesma pasta.
  */
 
@@ -21,6 +26,18 @@ var COR_PAPER = "#F5F0E6";
 var COR_PAPER_DEEP = "#E4DBC4";
 var COR_RULE = "#D9CDB0";
 var COR_GOLD_TINT = "#F3E6C8";
+
+// Parte 2, igual em todas as 4 abas — adicionado 08/09 a pedido da Milena:
+// depois de ler o cenário (Parte 1), ela define como vai conduzir o caso.
+var CAMPOS_PLANO_CONDUCAO = [
+  ["O QUE PRECISA SER RESOLVIDO PRIMEIRO?", "A prioridade real, não a mais urgente na fala do produtor"],
+  ["QUEM PRECISA SER ENVOLVIDO?", "Pessoas cuja participação ou concordância o caso exige"],
+  ["QUAIS DOCUMENTOS PRECISAM SER LEVANTADOS?", "O que falta reunir antes do próximo passo"],
+  ["O QUE PRECISA SER CONFIRMADO?", "Informação que ainda é suposição, não fato verificado"],
+  ["QUAIS RISCOS PRECISAM SER COMUNICADOS?", "O que o produtor precisa saber antes de decidir"],
+  ["QUAL É O PRÓXIMO PASSO CONCRETO?", "Uma ação, não uma intenção"],
+  ["COMO O PROCESSO SERÁ ACOMPANHADO?", "Quando e por qual canal você retorna pro produtor"]
+];
 
 function criarTodosMapasDoCaso() {
   criarTemplateMapaCreditoRural();
@@ -56,6 +73,37 @@ function criarTemplateMapaGeorreferenciamento() {
   ]);
 }
 
+// Desenha um bloco de campos (rótulo + área de resposta de 2 linhas) a partir da linha `row`.
+// Retorna a próxima linha livre — usado pra emendar a Parte 2 depois da Parte 1 sem repetir código.
+function renderCampos_(sh, row, campos) {
+  campos.forEach(function(c){
+    sh.getRange(row, 1).setValue(c[0] + "  —  " + c[1])
+      .setBackground(COR_GOLD_TINT).setFontColor(COR_GOLD).setFontWeight("bold").setFontSize(10).setWrap(true);
+    sh.setRowHeight(row, 24);
+    sh.getRange(row + 1, 1, 2, 1).merge().setBackground(COR_PAPER)
+      .setBorder(true, true, true, true, false, false, COR_RULE, SpreadsheetApp.BorderStyle.SOLID)
+      .setVerticalAlignment("top").setWrap(true);
+    sh.setRowHeights(row + 1, 2, 26);
+    row += 4;
+  });
+  return row;
+}
+
+// Desenha o cabeçalho da Parte 2 (Plano de Condução) a partir da linha `row`. Retorna a próxima linha livre.
+function renderCabecalhoPlanoConducao_(sh, row) {
+  sh.getRange(row, 1).setValue("PARTE 2 — PLANO DE CONDUÇÃO DO CASO")
+    .setBackground(COR_OLIVE).setFontColor(COR_PAPER)
+    .setFontWeight("bold").setFontSize(12).setHorizontalAlignment("center");
+  sh.setRowHeight(row, 28);
+  row += 1;
+  sh.getRange(row, 1).setValue("Depois de ler o cenário (Parte 1), defina como vai conduzir esse produtor. Processo: Diagnóstico → Prioridades → Responsáveis → Documentos → Etapas → Acompanhamento.")
+    .setBackground(COR_PAPER).setFontColor(COR_INK_SOFT).setFontStyle("italic")
+    .setFontSize(9).setHorizontalAlignment("center").setWrap(true);
+  sh.setRowHeight(row, 30);
+  row += 2;
+  return row;
+}
+
 function criarTemplateMapaPorServico_(servico, campos) {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var nome = "MODELO — " + servico + " (S4)";
@@ -75,23 +123,14 @@ function criarTemplateMapaPorServico_(servico, campos) {
     .setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
   sh.setRowHeight(1, 32);
 
-  sh.getRange("A2").setValue("Conduz Agro — modelo específico de " + servico + " para uso na Sessão 4. Duplique esta aba a cada caso novo.")
+  sh.getRange("A2").setValue("Conduz Agro — modelo específico de " + servico + " para uso na Sessão 4. Parte 1 (abaixo) é o Mapa do Caso; Parte 2 é o Plano de Condução. Duplique esta aba a cada caso novo.")
     .setBackground(COR_PAPER).setFontColor(COR_INK_SOFT).setFontStyle("italic")
     .setFontSize(9).setHorizontalAlignment("center").setWrap(true);
   sh.setRowHeight(2, 30);
 
-
-  var row = 4;
-  campos.forEach(function(c){
-    sh.getRange(row, 1).setValue(c[0] + "  —  " + c[1])
-      .setBackground(COR_GOLD_TINT).setFontColor(COR_GOLD).setFontWeight("bold").setFontSize(10).setWrap(true);
-    sh.setRowHeight(row, 24);
-    sh.getRange(row + 1, 1, 2, 1).merge().setBackground(COR_PAPER)
-      .setBorder(true, true, true, true, false, false, COR_RULE, SpreadsheetApp.BorderStyle.SOLID)
-      .setVerticalAlignment("top").setWrap(true);
-    sh.setRowHeights(row + 1, 2, 26);
-    row += 4;
-  });
+  var row = renderCampos_(sh, 4, campos);
+  row = renderCabecalhoPlanoConducao_(sh, row);
+  renderCampos_(sh, row, CAMPOS_PLANO_CONDUCAO);
 
   sh.setFrozenRows(0);
 }
@@ -111,12 +150,14 @@ function criarTemplateMapaAvancado() {
     .setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
   sh.setRowHeight(1, 32);
 
-  sh.getRange("A2").setValue("Conduz Agro — uso na Sessão 12, casos com múltiplos envolvidos e interesses divergentes (ex: conflito familiar, decisão patrimonial). Duplique esta aba a cada caso complexo novo.")
+  sh.getRange("A2").setValue("Conduz Agro — uso na Sessão 12, casos com múltiplos envolvidos e interesses divergentes (ex: conflito familiar, decisão patrimonial). Parte 1 (abaixo) é o Mapa do Caso; Parte 2 é o Plano de Condução. Duplique esta aba a cada caso complexo novo.")
     .setBackground(COR_PAPER).setFontColor(COR_INK_SOFT).setFontStyle("italic")
     .setFontSize(9).setHorizontalAlignment("center").setWrap(true);
   sh.setRowHeight(2, 34);
 
   var campos = [
+    ["DEMANDA DECLARADA", "O que o produtor (ou a família) pediu, nas palavras dele — corrigido 08/09, faltava na versão avançada"],
+    ["PROBLEMA REAL", "O que precisa ficar resolvido de fato e por que isso importa neste caso — mesma leitura da versão rápida, antes de mapear quem está envolvido"],
     ["PESSOAS ENVOLVIDAS", "Quem participa da decisão — nem sempre é só quem contratou"],
     ["DOCUMENTOS ENVOLVIDOS", "Matrícula, CAR, CCIR, ITR, inventário, procurações..."],
     ["INTERESSES DE CADA PARTE", "O que cada pessoa envolvida quer, mesmo que não diga abertamente"],
@@ -126,17 +167,9 @@ function criarTemplateMapaAvancado() {
     ["PRÓXIMOS PASSOS", "Sequência de ações, não só a próxima"]
   ];
 
-  var row = 4;
-  campos.forEach(function(c){
-    sh.getRange(row, 1).setValue(c[0] + "  —  " + c[1])
-      .setBackground(COR_GOLD_TINT).setFontColor(COR_GOLD).setFontWeight("bold").setFontSize(10).setWrap(true);
-    sh.setRowHeight(row, 24);
-    sh.getRange(row + 1, 1, 2, 1).merge().setBackground(COR_PAPER)
-      .setBorder(true, true, true, true, false, false, COR_RULE, SpreadsheetApp.BorderStyle.SOLID)
-      .setVerticalAlignment("top").setWrap(true);
-    sh.setRowHeights(row + 1, 2, 26);
-    row += 4;
-  });
+  var row = renderCampos_(sh, 4, campos);
+  row = renderCabecalhoPlanoConducao_(sh, row);
+  renderCampos_(sh, row, CAMPOS_PLANO_CONDUCAO);
 
   sh.setFrozenRows(0);
 }

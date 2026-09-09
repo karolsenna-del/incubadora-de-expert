@@ -1,0 +1,159 @@
+squad:
+  name: "clip-expert"
+  title: "Clip Expert"
+  slug: "clip-expert"
+  version: "1.0.0"
+  author: "Karol Senna"
+  description: "Encontra sozinho os melhores trechos da live semanal da Incubadora de Expert e entrega cortos e legendados, usando os criterios do Expert Viral e o Stylist do squad-edicao-arcane."
+  slash_prefix: "clipExpert"
+  pattern_prefix: "CE"
+  target_user: "Karol Senna (uso interno por enquanto)"
+  target_audience: "internal"
+  complexity: "standard"
+
+agents:
+  - id: clip-chief
+    role: "Orquestrador. Detecta o gatilho geral, coordena o pipeline, conduz a revisao/aprovacao da Karol e faz o handoff pro Postador."
+    responsible_for:
+      steps: [6]
+      decisions: []
+    executor_profile: "hybrid"
+    pu_count: 3
+    rationale: "Todo squad Auroq tem 1 orchestrator que nao executa tasks tecnicas — so roteia e conduz o touchpoint humano (revisao/aprovacao), que e o unico passo hybrid do processo."
+
+  - id: garimpeiro
+    role: "Detecta live nova, busca o video bruto, transcreve se faltar, e pontua os trechos candidatos usando os criterios do Expert Viral."
+    responsible_for:
+      steps: [3, 4]
+      decisions: ["PU-clip-expert-005"]
+    executor_profile: "agent"
+    pu_count: 8
+    rationale: "Agrupa os passos que usam as mesmas ferramentas (Drive, whisper, Expert Viral) e sao fortemente acoplados em sequencia: sem transcricao nao da pra pontuar, sem pontuacao nao ha o que cortar. Separado do cortador porque a expertise e diferente — este agente 'entende conteudo', o outro 'produz midia'."
+
+  - id: cortador
+    role: "Corta os trechos aprovados, aplica legenda via Stylist, salva na pasta de entrega e notifica a Karol por e-mail."
+    responsible_for:
+      steps: [5]
+      decisions: ["PU-clip-expert-015"]
+    executor_profile: "agent"
+    pu_count: 4
+    rationale: "Passos de producao de midia (ffmpeg, legenda, export, notificacao) sao tecnicamente diferentes de 'entender o que e um bom trecho' — separar evita um agente genérico demais fazendo duas coisas distintas."
+
+tasks_per_agent:
+  clip-chief:
+    - start
+    - revisar-e-aprovar
+  garimpeiro:
+    - detectar-live-nova
+    - transcrever-se-necessario
+    - pontuar-trechos
+  cortador:
+    - cortar-e-legendar
+    - entregar-e-notificar
+
+workflow:
+  phases:
+    - phase: 0
+      name: "Deteccao e Ingestao"
+      tasks: ["detectar-live-nova", "transcrever-se-necessario"]
+      agent: "garimpeiro"
+      blocking: true
+      quality_gate: null
+
+    - phase: 1
+      name: "Pontuacao e Quality Gate"
+      tasks: ["pontuar-trechos"]
+      agent: "garimpeiro"
+      blocking: true
+      quality_gate: "QG-CE-01"
+
+    - phase: 2
+      name: "Corte e Legenda"
+      tasks: ["cortar-e-legendar"]
+      agent: "cortador"
+      blocking: true
+      quality_gate: null
+
+    - phase: 3
+      name: "Entrega e Notificacao"
+      tasks: ["entregar-e-notificar"]
+      agent: "cortador"
+      blocking: false
+      quality_gate: null
+
+    - phase: 4
+      name: "Revisao e Handoff Postador"
+      tasks: ["revisar-e-aprovar"]
+      agent: "clip-chief"
+      blocking: true
+      quality_gate: "QG-CE-02"
+
+quality_gates:
+  - id: "QG-CE-01"
+    name: "Nota minima de corte"
+    transition: "Pontuacao -> Corte"
+    blocking: true
+    criteria: "Corte candidato so passa se atingir nota minima (0-10) calculada com os criterios do Expert Viral. Entrega menos cortes em vez de forcar quantidade (PU-clip-expert-008, PU-clip-expert-009)."
+
+  - id: "QG-CE-02"
+    name: "Aprovacao da Karol"
+    transition: "Revisao -> Fila do Postador"
+    blocking: true
+    criteria: "So entra na fila do Postador o corte que a Karol aprovou explicitamente na pasta de revisao (PU-clip-expert-013, PU-clip-expert-014)."
+
+dependencies:
+  required:
+    - "ffmpeg + whisper-cli + venv silero (reaproveitados do squad-edicao-arcane, se ja instalado)"
+    - "Acesso ao Drive (pasta 'Live Expert360 (recurring)') com as mesmas credenciais que o course-publisher usa"
+    - "Acesso de leitura a tabela Supabase encontros_mentoria (mesmas credenciais do course-publisher)"
+    - "Agente Expert Viral instalado (agents/expert-viral/)"
+    - "Squad squad-edicao-arcane instalado (Stylist + fontes + ffmpeg)"
+    - "Agente insta-scheduler (Postador) instalado — publicacao real de REELS ainda nao suportada por ele (ver CON-004 do PRD)"
+  optional:
+    - "Envio de e-mail (SMTP ou servico ja configurado no ambiente da Karol) — se nao configurado, squad avisa via mensagem na sessao ao inves de e-mail"
+
+kb_plan:
+  cardinal_rules:
+    - pu_id: "PU-clip-expert-016"
+      content: "Nunca inventar criterio de 'corte bom' proprio — delegar 100% pra logica/criterios do Expert Viral"
+    - pu_id: "PU-clip-expert-009"
+      content: "Prefere menos cortes a corte fraco — nunca forcar o numero de 10-15"
+    - pu_id: "PU-clip-expert-005"
+      content: "Precisao > velocidade — transcreve automaticamente quando falta transcricao, mesmo que demore mais"
+  protocols:
+    - pu_id: "PU-clip-expert-003"
+      type: "operational"
+      content: "Protocolo de deteccao de live nova via encontros_mentoria + busca no Drive"
+    - pu_id: "PU-clip-expert-007"
+      type: "operational"
+      content: "Protocolo de pontuacao de trechos usando criterios do Expert Viral"
+    - pu_id: "PU-clip-expert-010"
+      type: "operational"
+      content: "Protocolo de corte + legenda via Stylist + entrega"
+  decision_trees:
+    - pu_id: "PU-clip-expert-005"
+      branches: 2
+      content: "Transcricao disponivel? -> analisa direto | Nao -> transcreve primeiro"
+    - pu_id: "PU-clip-expert-015"
+      branches: 1
+      content: "Estilo de legenda -> sempre via Stylist do squad-edicao-arcane"
+  troubleshooting:
+    - pu_id: "PU-clip-expert-009"
+      content: "Video sem 10-15 momentos bons -> entrega menos, nunca forca"
+    - pu_id: "CON-001"
+      content: "weekly-sync atrasado/bloqueado -> Clip Expert nao tem o que processar, avisa e espera"
+  internalize_from:
+    - source_path: "agents/expert-viral/data/expert-viral-kb.md"
+      sections: ["Construcao de Gancho", "Corpo/Retencao", "Anti-padroes", "Heuristicas Mestras"]
+      target_file: "agents/clip-expert/data/clip-expert-kb.md"
+      adaptation: "Sintetizado em forma de rubrica de pontuacao 0-10 (nao copiado literal) — ver secao 'Rubrica de Pontuacao' da KB"
+    - source_path: "agents/squad-edicao-arcane/agents/stylist.md"
+      sections: ["Responsabilidades", "Process"]
+      target_file: "agents/clip-expert/data/clip-expert-kb.md"
+      adaptation: "Referenciado como dependencia direta (squad já instalado no mesmo ambiente, target_audience interno) — nao duplicado, apenas documentado como se invoca"
+
+validation:
+  architecture_reviewed: true
+  circular_dependency: false
+  bottleneck_addressed: "Fase 0 (transcricao quando falta) e o gargalo — aceito conscientemente pela Karol em favor de precisao"
+  human_touchpoints: ["Fase 4 (revisao e aprovacao)"]

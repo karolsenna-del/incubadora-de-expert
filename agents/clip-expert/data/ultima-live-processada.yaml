@@ -1,0 +1,7 @@
+# Estado da ultima live processada por este squad. Atualizado pelo garimpeiro
+# ao final de detectar-live-nova. Evita reprocessar a mesma live duas vezes.
+# Formato espelha o padrao ja usado em agents/course-publisher/data/weekly-sync-state.yaml.
+
+ultimo_processado_titulo: null
+ultimo_processado_data: null
+ultima_execucao: null

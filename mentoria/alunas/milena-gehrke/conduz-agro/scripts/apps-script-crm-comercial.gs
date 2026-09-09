@@ -124,8 +124,8 @@ function criarAbaReativacao() {
 
   sh.getRange(4, 1).setValue("[exemplo — apague] João Bezerra").setFontStyle("italic").setFontColor(COR_INK_SOFT);
   sh.getRange(4, 2).setValue("CAR").setFontStyle("italic").setFontColor(COR_INK_SOFT);
-  sh.getRange(4, 3).setValue("15/03/2026").setFontStyle("italic").setFontColor(COR_INK_SOFT);
-  sh.getRange(4, 4).setFormula("=IF(C4=\"\",\"\",EDATE(C4,12))").setFontStyle("italic").setFontColor(COR_INK_SOFT);
+  sh.getRange(4, 3).setValue(new Date(2026, 2, 15)).setFontStyle("italic").setFontColor(COR_INK_SOFT);
+  sh.getRange(4, 4).setFormula("=IF(C4=\"\";\"\";EDATE(C4;12))").setFontStyle("italic").setFontColor(COR_INK_SOFT); // corrigido 08/09 — locale da planilha exige ; como separador de argumento, não ,
   sh.getRange(4, 5).setValue("A vencer").setFontStyle("italic").setFontColor(COR_INK_SOFT);
   sh.getRange(4, 6).setValue("Renovação anual padrão — sem pendência conhecida").setFontStyle("italic").setFontColor(COR_INK_SOFT);
 
@@ -135,10 +135,11 @@ function criarAbaReativacao() {
     .setBorder(true, true, true, true, true, true, COR_RULE, SpreadsheetApp.BorderStyle.SOLID)
     .setVerticalAlignment("middle").setFontSize(9);
   sh.setRowHeights(4, totalLinhas, 26);
+  sh.getRange(4, 3, totalLinhas, 2).setNumberFormat("dd/mm/yyyy"); // corrigido 08/09 — data de exemplo era texto puro, EDATE() quebrava (#ERROR!); agora Date real + formato aplicado em toda a coluna
 
   // Fórmula de data prevista pras linhas seguintes (a partir da linha 5)
   for (var r = 5; r < 4 + totalLinhas; r++) {
-    sh.getRange(r, 4).setFormula("=IF(C" + r + "=\"\",\"\",EDATE(C" + r + ",12))");
+    sh.getRange(r, 4).setFormula("=IF(C" + r + "=\"\";\"\";EDATE(C" + r + ";12))");
   }
 
   setDropdown(sh, 4, 2, totalLinhas, ["CAR","CCIR","ITR","Outro"]);

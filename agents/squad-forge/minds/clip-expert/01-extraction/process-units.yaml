@@ -1,0 +1,153 @@
+metadata:
+  process_slug: "clip-expert"
+  total_pus: 16
+  last_updated: "2026-09-08T00:00:00-03:00"
+  rounds_completed: 3
+  completeness: 0.97
+  user_validated: true
+  playback_date: "2026-09-08"
+
+units:
+  - pu_id: "PU-clip-expert-001"
+    type: STEP
+    content: "Live acontece toda quarta-feira (evento de origem do material bruto)"
+    source_lens: L1
+    source_round: R1
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-002"
+    type: DEPENDENCY
+    content: "Existe squad ja instalado que baixa a live do Google Drive e sobe pra area de membros — roda antes do Clip Expert na esteira"
+    source_lens: L7
+    source_round: R1
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-003"
+    type: STEP
+    content: "Clip Expert dispara automaticamente na quinta-feira, sem a Karol precisar pedir manualmente"
+    source_lens: L1
+    source_round: R1
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-004"
+    type: INPUT
+    content: "Video de entrada pode ja ter transcricao (lives, mentorias por Meet) ou nao ter (ex: video de palestra sem transcricao, como o ETL feito nessa sessao)"
+    source_lens: L5
+    source_round: R1
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-005"
+    type: DECISION
+    content: "Se o video de entrada nao tem transcricao, o Clip Expert transcreve automaticamente antes de buscar cortes — mesmo que isso demore mais"
+    source_lens: L3
+    source_round: R1
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-006"
+    type: OUTPUT
+    content: "Gera de 10 a 15 cortes de aproximadamente 1 minuto por video longo processado"
+    source_lens: L2
+    source_round: R1
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-007"
+    type: DEPENDENCY
+    content: "Criterios de pontuacao de corte (o que faz um trecho valer a pena) sao reaproveitados do agente ja existente Expert Viral (gancho, retencao, anti-padroes, heuristicas de viralizacao) — nao inventar criterio novo"
+    source_lens: L6
+    source_round: R2
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-008"
+    type: QUALITY_GATE
+    content: "Nota minima de qualidade (escala 0-10, calculada com os criterios do Expert Viral) abaixo da qual o corte candidato e descartado. Valor exato da nota sera calibrado testando nos primeiros videos reais (nao definido a priori)"
+    source_lens: L6
+    source_round: R2
+    confidence: 0.8
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-009"
+    type: EXCEPTION
+    content: "Se o video longo nao tiver 10-15 momentos que passem na nota minima, o Clip Expert entrega menos cortes — nunca entrega um corte fraco so pra bater o numero"
+    source_lens: L4
+    source_round: R2
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-010"
+    type: OUTPUT
+    content: "Cortes finais (video + legenda queimada) sao salvos numa pasta local pra revisao da Karol"
+    source_lens: L5
+    source_round: R2
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-011"
+    type: OUTPUT
+    content: "Karol e avisada por e-mail quando os cortes estiverem prontos na pasta"
+    source_lens: L5
+    source_round: R2
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-012"
+    type: INPUT
+    content: "Video bruto vem da automacao ja existente do squad course-publisher (task weekly-sync, dispara as quartas). Ela pega a gravacao do Google Meet na pasta do Drive 'Live Expert360 (recurring)', sobe pro YouTube nao-listado e registra a linha (com youtube_id) na tabela Supabase encontros_mentoria. O Clip Expert dispara DEPOIS que essa linha nova existe, e busca o video bruto direto na pasta do Drive (qualidade melhor que o YouTube ja comprimido), usando o titulo/data da linha mais recente em encontros_mentoria como referencia"
+    source_lens: L5
+    source_round: R2
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-013"
+    type: STEP
+    content: "Karol revisa os cortes na pasta antes de aprovar"
+    source_lens: L2
+    source_round: R3
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-014"
+    type: DEPENDENCY
+    content: "Cortes aprovados por Karol entram direto na fila do Postador (agente ja existente) — Postador agenda a publicacao sozinho apos aprovacao, sem passo manual extra"
+    source_lens: L7
+    source_round: R3
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-015"
+    type: DECISION
+    content: "Legenda queimada no corte reaproveita o agente Stylist (curador de estilo) ja existente no squad-edicao-arcane, em vez de reinventar escolha de estilo do zero"
+    source_lens: L3
+    source_round: R3
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true
+
+  - pu_id: "PU-clip-expert-016"
+    type: TACIT
+    content: "Karol confirma explicitamente que nao ha criterio de selecao de corte alem dos ja cobertos pelo Expert Viral — nenhum conhecimento tacito adicional a capturar aqui"
+    source_lens: L8
+    source_round: R3
+    confidence: 1.0
+    inferred: false
+    user_confirmed: true

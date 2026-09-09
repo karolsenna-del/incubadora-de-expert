@@ -1,0 +1,63 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# SQUAD: Clip Expert
+# Encontra sozinho os melhores trechos da live semanal e entrega ja cortados
+# e legendados, usando os criterios do Expert Viral e o Stylist do
+# squad-edicao-arcane. Gerado pelo Squad Forge a partir do processo da Karol.
+# ═══════════════════════════════════════════════════════════════════════════
+
+name: "clip-expert"
+title: "Clip Expert"
+version: "1.0.0"
+author: "Karol Senna (gerado via Squad Forge)"
+description: >
+  Pega a live semanal da Incubadora de Expert assim que o course-publisher
+  termina de processar, encontra os melhores trechos usando os criterios
+  do Expert Viral, corta, legenda (via Stylist do squad-edicao-arcane) e
+  entrega pronto pra revisao. Karol so aprova — o resto e automatico.
+
+slash_prefix: "clipExpert"
+pattern_prefix: "CE"
+target_user: "Karol Senna (uso interno)"
+
+tiers:
+  orchestrator:
+    - clip-chief
+  tier_1:
+    - garimpeiro
+    - cortador
+
+tasks:
+  - start
+  - detectar-live-nova
+  - transcrever-se-necessario
+  - pontuar-trechos
+  - cortar-e-legendar
+  - entregar-e-notificar
+  - revisar-e-aprovar
+
+workflows:
+  - wf-clip-expert
+
+quality_gates:
+  - id: "QG-CE-01"
+    name: "Nota minima de corte"
+    transition: "Pontuacao -> Corte"
+    blocking: true
+    criteria: "Corte candidato so passa se atingir a nota minima (0-10) calculada com os criterios do Expert Viral. Entrega menos cortes em vez de forcar quantidade."
+
+  - id: "QG-CE-02"
+    name: "Aprovacao da Karol"
+    transition: "Revisao -> Fila do Postador"
+    blocking: true
+    criteria: "So entra na fila do Postador o corte que a Karol aprovou explicitamente."
+
+dependencies:
+  required:
+    - "ffmpeg + whisper-cli + venv silero (reaproveitados do squad-edicao-arcane)"
+    - "Acesso ao Google Drive (pasta 'Live Expert360 (recurring)')"
+    - "Acesso de leitura a tabela Supabase encontros_mentoria"
+    - "Agente expert-viral instalado (agents/expert-viral/)"
+    - "Squad squad-edicao-arcane instalado (Stylist + fontes + ffmpeg)"
+    - "Agente insta-scheduler / Postador instalado (fila de publicacao)"
+  optional:
+    - "Envio de e-mail configurado no ambiente (SMTP ou servico existente)"

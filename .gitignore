@@ -51,3 +51,9 @@ _backup-pre-sync/
 *.jpeg
 *.jpg
 *.mov
+
+# Ambiente local de squads Python (venv, binarios, modelos baixados — nunca vao pro git)
+agents/squad-edicao-arcane/.venv/
+agents/squad-edicao-arcane/bin/
+agents/squad-edicao-arcane/models/
+__pycache__/

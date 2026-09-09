@@ -17,21 +17,23 @@ Passagem condensada pelos 6 pilares do método na versão essencial. Ao fim da E
 - **Objetivo:** o mentorado entende sua trava predominante entre as 3 esferas do método (Técnica, Emocional, Condução) e nomeia seu papel atual (executor / consultor / condutor estratégico)
 - **Conteúdo:** apresentar a filosofia central do método — "EU SEI. EU SUSTENTO. EU CONDUZO." (Técnica = eu sei fazer? / Emocional = eu consigo sustentar o que sei? / Condução = eu consigo levar o produtor até a decisão?). Explicar que a maioria dos profissionais técnicos do agro já resolveu o "eu sei" há anos — a trava real quase sempre está nas outras 2 esferas. Isso muda a expectativa de entrada: ninguém chega aqui pra aprender mais regularização.
 - **Exercício:** preencher o Diagnóstico da Autoridade Aplicada + DISC, revisar o resultado junto com a mentora — qual esfera puxou mais pra baixo, o que isso revela sobre o papel atual dele
-- **Fechamento:** nomear em voz alta o papel atual (executor/consultor/condutor estratégico) — é a frase que vai ser revisitada na S21
+- **Fechamento:** nomear em voz alta o papel atual (executor/consultor/condutor estratégico) — é a frase que vai ser revisitada na S21. **Antes de encerrar** *(adicionado 08/09)*: apresentar o Plano de Aplicação Diária — o que é (5 atividades curtas/semana, sincronizadas com as sessões), como preencher, e indicar a atividade da semana 1. É a primeira vez que o mentorado vê essa ferramenta — não é enviada antes, pra não chegar sem contexto
 - **Pontos-chave:**
   - Entregável obrigatório: diagnóstico preenchido + papel nomeado
   - Esse é o baseline de TUDO — reaplicado na S21, referência dos 5 checkpoints do Checklist de Evidências
   - Não force conforto aqui — a trava aparecer com clareza é o ponto, não um problema a resolver ainda
+  - *(08/09)* Plano de Aplicação Diária é apresentado aqui, ao vivo — não faz parte do kit de boas-vindas automático (ver `design-entregaveis.md` Seção 9)
 
 ### Sessão 2 — Pilares da autoridade + plano dos 12 meses
 
 - **Objetivo:** entender a diferença entre domínio técnico, valor percebido e autoridade; apresentar os 6 pilares e as 2 etapas do programa
 - **Conteúdo:** explicar o framework "Da Semente à Colheita da Autoridade" (Solo → Semente → Raiz → Caule → Ramos → Acelerador → Colheita) e como as próximas 24 sessões passam por ele 2 vezes — rápido primeiro (Etapa 1, meses 1-4, resultado comercial já no mês 4), fundo depois (Etapa 2, meses 5-12). Deixar claro: isso não é enrolação — é desenhado assim de propósito pra não perder o mentorado nos primeiros meses esperando resultado que só viria no mês 11.
 - **Exercício:** abrir o **Plano Personalizado** e preencher, sem deixar campos genéricos: (1) data/sessão da versão; (2) ponto de partida — papel atual e trava prioritária do Diagnóstico da S1; (3) transformação desejada ao fim dos 12 meses, com evidência observável de que aconteceu; (4) meta até o próximo checkpoint; (5) 3 prioridades do período; (6) para cada prioridade, ação concreta, prazo, evidência de conclusão e apoio necessário; (7) barreira previsível e resposta combinada; (8) compromisso que o mentorado assume até a próxima revisão. O campo **Continuidade** fica em branco na S2 e só é preenchido na S24. Nas revisões S8/S12/S16/S20, duplicar a aba, registrar o que mudou e redefinir meta, prioridades e ações sem apagar o histórico.
-- **Fechamento:** plano de 12 meses fechado e assinado — literalmente pedir pro mentorado dizer "topo esse plano"
+- **Fechamento:** plano de 12 meses fechado e assinado — literalmente pedir pro mentorado dizer "topo esse plano". **Antes de encerrar** *(adicionado 08/09)*: mostrar a Central do Aluno (índice com todas as ferramentas da jornada) e liberar o CRM Comercial Conduz Agro — enquadrar como "esse é seu funil, roda em paralelo às sessões desde já; o resto das ferramentas eu vou te apresentando ao longo do caminho, você não precisa entender tudo agora"
 - **Pontos-chave:**
   - Entregável obrigatório: plano de 12 meses fechado
   - É aqui que se define expectativa — se o mentorado não entender por que a Etapa 1 é "essencial" e não "completa", vai cobrar profundidade cedo demais
+  - *(08/09)* É aqui que a Central do Aluno é apresentada pela primeira vez — não antes (kit de boas-vindas não inclui o link). CRM é liberado junto porque não depende de nenhum conteúdo do método pra ser útil (ver `design-entregaveis.md` Seção 9)
 
 ### Sessão 3 — Segurança interna essencial
 
@@ -47,11 +49,12 @@ Passagem condensada pelos 6 pilares do método na versão essencial. Ao fim da E
 
 - **Objetivo:** diferenciar demanda declarada de problema real; identificar perfil do produtor (tradicional, desconfiado, apressado, investidor, analítico, emocional)
 - **Conteúdo:** usar a ferramenta Leitura do Produtor pra passar pelos 6 perfis — sinais que revelam cada um, erro comum de quem não reconhece o perfil, frase de abertura adaptada. Em seguida, escolher no **Mapa do Caso** o modelo específico do serviço do atendimento: **Crédito Rural**, **Regularização** ou **Georreferenciamento**. Os três mantêm a lógica demanda → problema real → riscos → próximo passo, mas trazem perguntas próprias do contexto. Enfatizar: o produtor raramente fala o problema real de cara ("quero regularizar" é a demanda; "tenho medo de perder a fazenda pro banco" pode ser o problema real por trás).
-- **Exercício:** aplicar o modelo específico do Mapa do Caso (Crédito Rural, Regularização ou Georreferenciamento) a um atendimento real em andamento
-- **Fechamento:** Mapa do Caso de 1 atendimento real preenchido
+- **Exercício:** aplicar o modelo específico do Mapa do Caso (Crédito Rural, Regularização ou Georreferenciamento) a um atendimento real em andamento — Parte 1 da aba. Na sequência, preencher a Parte 2 (Plano de Condução do Caso, mesma aba) *(adicionado 08/09)*: o que resolver primeiro, quem envolver, quais documentos levantar, o que confirmar, quais riscos comunicar, qual o próximo passo concreto, como vai acompanhar
+- **Fechamento:** Mapa do Caso + Plano de Condução de 1 atendimento real preenchidos
 - **Pontos-chave:**
-  - Entregável obrigatório: Mapa do Caso de 1 atendimento real
+  - Entregável obrigatório: Mapa do Caso + Plano de Condução de 1 atendimento real
   - Usa o Círculo de Controle da S3 aqui — se o produtor for de um perfil difícil (desconfiado, apressado), não deixar reagir por impulso à leitura
+  - *(08/09)* O Plano de Condução (Parte 2) não é ferramenta separada — é a mesma aba do Mapa do Caso, só depois da leitura do cenário
 
 ### Sessão 5 — Comunicação de valor essencial
 
@@ -125,17 +128,20 @@ Retoma os mesmos 6 pilares com profundidade — trabalho emocional mais denso, c
 ### Sessão 11 — Leitura de cenário complexo
 
 - **Objetivo:** organizar situações com múltiplos envolvidos, interesses divergentes e patrimônio em jogo — conflitos familiares no meio rural
-- **Conteúdo:** mapear pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos num caso com múltiplos envolvidos. Reforçar neutralidade: o profissional não escolhe lado num conflito familiar, ele organiza o caminho.
-- **Exercício:** abrir a versão avançada do **Mapa do Caso** e preencher pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos para um caso real com conflito familiar
-- **Fechamento:** versão avançada do Mapa do Caso preenchida, funcionando como plano de condução do caso complexo real
+- **Conteúdo:** mapear demanda → problema real → pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos num caso com múltiplos envolvidos. Começar por demanda/problema real mesmo em cenário complexo — antes de "quem está envolvido" vem "o que está sendo pedido de fato". Reforçar neutralidade: o profissional não escolhe lado num conflito familiar, ele organiza o caminho.
+- **Exercício:** abrir a versão avançada do **Mapa do Caso** e preencher demanda → problema real → pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos (Parte 1) para um caso real com conflito familiar. Na sequência, completar a Parte 2 (Plano de Condução do Caso, mesma aba) *(adicionado 08/09)*
+- **Fechamento:** Mapa do Caso avançado (Parte 1) + Plano de Condução do Caso (Parte 2) preenchidos
 - **Pontos-chave:**
-  - Entregável obrigatório: Mapa do Caso avançado preenchido; "plano de condução de caso complexo" é o resultado desse preenchimento, não uma ferramenta separada
+  - Entregável obrigatório: as 2 partes da aba preenchidas
+  - *(08/09)* O Plano de Condução de Caso Complexo agora tem campos próprios (Parte 2) — não é mais só "o resultado do preenchimento avançado", é preenchido depois da leitura do cenário. Continua sendo a mesma aba, não vira arquivo separado
+  - *(08/09)* Se o caso envolver reunião com múltiplos familiares/interessados, use o **Roteiro de Mediação de Conflitos** (novo, consulta) como guia da conversa — e o **Simulador de Conversas que Conduzem** (categoria "Conflito Familiar") pra treinar antes
   - Usa a IE trabalhada na S10 pra manter neutralidade — se o mentorado começar a "tomar partido" na sessão, é sinal pra retomar
+  - Campos de demanda e problema real adicionados no início da Parte 1 avançada — faltavam, e a leitura de cenário precisa partir do que está sendo pedido, igual na versão rápida da S4
 
 ### Sessão 12 — Diagnóstico estratégico avançado + checkpoint
 
 - **Objetivo:** consolidar a leitura de cenário em situações com múltiplos interesses divergentes
-- **Conteúdo:** Mapa do Caso versão avançada (7 campos: pessoas, documentos, interesses, riscos, conflitos, prioridades, próximos passos) — comparar com a versão rápida da S4, mostrar como a mesma ferramenta cresce em profundidade.
+- **Conteúdo:** Mapa do Caso versão avançada (9 campos: demanda, problema real, pessoas, documentos, interesses, riscos, conflitos, prioridades, próximos passos) — comparar com a versão rápida da S4, mostrar como a mesma ferramenta cresce em profundidade sem perder o ponto de partida (demanda → problema real).
 - **Exercício:** Mapa do Caso avançado aplicado a uma situação de múltiplos envolvidos
 - **Fechamento (diferente do padrão):** Mapa do Caso avançado preenchido + **2ª marcação no Checklist de Evidências da Autoridade** + fecha a sub-fase 2.1
 - **Pontos-chave:**

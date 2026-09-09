@@ -1,0 +1,88 @@
+structural:
+  method: "squad-validator.js (real, ajv instalado via --no-save pra viabilizar)"
+  config: PASS
+  agents: PASS
+  tasks: PASS
+  workflows: PASS
+  result: VALID
+  errors: []
+  warnings:
+    - code: "WORKFLOW_VALIDATOR_UNAVAILABLE"
+      message: "WorkflowValidator module not found, skipping workflow content validation"
+      note: "Nao bloqueante — modulo ausente no repo, nao e falha deste squad"
+
+self_audit:
+  agents:
+    - file: "clip-chief.md"
+      lines: 254
+      output_examples: 4
+      immune_triggers: 4
+      frases_chave: 5
+      verdict: PASS
+    - file: "garimpeiro.md"
+      lines: 250
+      output_examples: 4
+      immune_triggers: 4
+      frases_chave: 5
+      verdict: PASS
+    - file: "cortador.md"
+      lines: 250
+      output_examples: 4
+      immune_triggers: 4
+      frases_chave: 5
+      verdict: PASS
+  kb:
+    total_lines: 417
+    tables: 79
+    decision_trees: 3
+    cardinal_rules: 4
+    note: "Abaixo do piso ideal de 500-800 linhas documentado em assemble-squad.md pra squads operacionais/analiticos. Conteudo qualitativo cumprido (regras cardinais com exemplo+antipadrao, rubrica completa com worked example, decision trees, tabela de referencia, troubleshooting com 6 cenarios, glossario, ciclo semanal completo). Registrado como debito consciente, nao escondido."
+    verdict: "PASS COM RESSALVA"
+  overall: PASS
+
+smoke_tests:
+  test_1_happy_path:
+    cenario: "Live nova detectada com transcricao ja existente"
+    simulacao: |
+      Trigger: linha nova em encontros_mentoria pra 'Live 27'.
+      1. @garimpeiro (detectar-live-nova): confirma live nova, localiza arquivo
+         no Drive 'Live Expert360 (recurring)'.
+      2. @garimpeiro (transcrever-se-necessario): transcricao ja existe (Meet),
+         pula direto pra pontuacao.
+      3. @garimpeiro (pontuar-trechos): aplica rubrica derivada do Expert Viral,
+         12 candidatos, 9 passam na nota minima 7.0 (QG-CE-01).
+      4. @cortador (cortar-e-legendar): corta os 9, aplica legenda via Stylist
+         do squad-edicao-arcane, valida encoding 8-bit/profile Main.
+      5. @cortador (entregar-e-notificar): salva em
+         videos-editados/clip-expert/live-27/, envia e-mail.
+      6. @clip-chief (revisar-e-aprovar): aguarda Karol revisar.
+    status: "PENDENTE — aguardando confirmacao da Karol (nao simulado com dados reais)"
+  test_2_decision:
+    cenario: "Video sem transcricao (PU-clip-expert-005)"
+    simulacao: |
+      E se o video de entrada nao tiver transcricao (ex: palestra externa,
+      como 'Carol - Persona, Metodo e Posicionamento.mp4')?
+      -> @garimpeiro verifica, nao encontra transcricao
+      -> decide transcrever automaticamente via video-transcribe.py
+         (reaproveitado do squad-edicao-arcane), aceita demora extra
+      -> so entao segue pra pontuacao, com o MESMO criterio de qualquer
+         outro video (nenhuma diferenca de rigor por ter demorado mais)
+    status: "PENDENTE — aguardando confirmacao da Karol"
+  test_3_exception:
+    cenario: "Live fraca, poucos momentos bons (PU-clip-expert-009)"
+    simulacao: |
+      E se uma live render so 4 candidatos acima da nota minima, em vez de
+      10-15?
+      -> @garimpeiro entrega os 4 aprovados, documentando a nota e o motivo
+         de cada um
+      -> NAO rebaixa a nota minima pra forcar mais cortes
+      -> severity: degraded (menos entrega que o ideal, mas nao e erro)
+    status: "PENDENTE — aguardando confirmacao da Karol"
+  score: "0/3 confirmados pela usuaria (estrutural PASS, cenarios apresentados no chat aguardando validacao explicita)"
+
+user_approval:
+  approved: false
+  feedback: "Squad construido e instalado (agents/clip-expert/), mas QG-SF-005 exige aprovacao explicita da usuaria apos ver os 3 smoke tests — apresentados no resumo final da sessao, resposta ainda nao recebida no momento deste registro."
+  approved_at: ""
+
+overall: "QG-SF-001 a QG-SF-004: PASS. QG-SF-005: PENDENTE (aguardando aprovacao explicita da Karol nos 3 smoke tests apresentados)."

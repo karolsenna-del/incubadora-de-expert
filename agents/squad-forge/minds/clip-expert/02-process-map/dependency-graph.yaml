@@ -1,0 +1,35 @@
+process_slug: "clip-expert"
+
+sequential:
+  - [1, 2]  # Live acontece -> weekly-sync processa
+  - [2, 3]  # weekly-sync -> Clip Expert dispara
+  - [3, 4]  # dispara -> encontra e pontua trechos
+  - [4, 5]  # pontua -> corta/legenda/entrega
+  - [5, 6]  # entrega -> Karol revisa e aprova
+
+parallel: []
+
+external:
+  - step: 2
+    system: "course-publisher (squad existente) — task weekly-sync"
+    reason: "Fonte do video bruto. Clip Expert nao baixa a live sozinho, so consome o resultado dessa automacao (linha nova em encontros_mentoria + arquivo na pasta do Drive 'Live Expert360 (recurring)')"
+    type_dep: "blocking"
+
+  - step: 4
+    system: "Expert Viral (agente existente)"
+    reason: "Fonte dos criterios de pontuacao de corte (gancho, retencao, anti-padroes). Clip Expert nao inventa criterio proprio."
+    type_dep: "blocking"
+
+  - step: 5
+    system: "Stylist do squad-edicao-arcane (agente existente)"
+    reason: "Decide o estilo de legenda a queimar no corte, reaproveitando o curador ja validado"
+    type_dep: "soft"
+
+  - step: 6
+    system: "Postador (agente existente)"
+    reason: "Recebe os cortes aprovados numa fila e agenda a publicacao sozinho"
+    type_dep: "blocking"
+
+bottleneck:
+  step: 3
+  reason: "Quando o video de entrada nao tem transcricao, o passo de transcrever automaticamente antes de seguir e o mais lento do fluxo — decisao consciente da Karol de priorizar precisao sobre velocidade."
