@@ -39,36 +39,37 @@ Ler `agents/course-publisher/data/weekly-sync-state.yaml`. Contém, por série:
 
 ### 2. Buscar gravações novas no Drive
 
-**Duas raízes possíveis** (desde 05/08/2026, ver missão #12 no Mission Log):
+**09/09/2026 — mudança de protocolo (missão #23):** o Google Meet já recriou a pasta raiz "Google
+Meet" (e a subpasta "Live Expert360 (recurring)" dentro dela) **3 vezes** desde 05/08 — cada vez
+com um `id` novo, sem avisar (pasta clássica → 1ª raiz nova 05/08 → 2ª raiz nova 24/08). Rastrear
+folder IDs fixos no vault não é sustentável, quebra a cada rotação e faz a missão reportar "sem
+gravação nova" mesmo com gravação parada esperando (foi o que aconteceu com a Live 27 e 28,
+resolvido manualmente em 09/09 — ver Mission Log #23). **Protocolo novo, sem depender de folder ID:**
 
-1. Pasta clássica `1eZySH6OIAsGasoHAZB9XxII0Gx686qQi` ("Meet Recordings") — também recebe
-   gravações de outras reuniões da Karol (mentorias 1:1 tipo "Milena", "Simone e Mavi", "David"
-   etc.) que NÃO são desta automação. Filtrar SEMPRE por prefixo exato do título:
+Buscar via `mcp__claude_ai_Google_Drive__search_files` (autenticado como
+`karolsenna@incubadoradeexpert.com.br`, dona de todos os arquivos — não precisa de
+compartilhamento pra ENCONTRAR, só pra baixar depois) com uma query **sem `parentId`**, cobrindo o
+Drive inteiro:
 
 ```
-parentId = '1eZySH6OIAsGasoHAZB9XxII0Gx686qQi'
-and mimeType = 'video/mp4'
+mimeType = 'video/mp4'
 and createdTime > '{ultimo_processado_data}'
 and (title contains 'Live Expert360 -' or title contains 'Encontro Incubadora -' or title contains 'Individual -')
 ```
 
-O prefixo `Individual -` (padrão `Individual - {slug-da-aluna} - {AAAA-MM-DD}`, ver briefing.md da
-Área de Membros, decisão 11/08) é a série mais nova — pode não ter volume ainda, tratar igual às
-outras 2 (0 encontrados é resultado normal, não pendência).
+Isso substitui a lógica antiga de "verificar duas raízes conhecidas" — encontra a gravação não
+importa em qual pasta o Meet decidiu criar dessa vez. O prefixo do título (`Live Expert360 -`,
+`Encontro Incubadora -`, `Individual -`) continua sendo o único filtro que importa; ignorar
+qualquer vídeo que não comece exatamente com um desses três.
 
-2. Pasta nova `1mlJbXrY5rLxcobA9PTztLcX0NnMXr17L` ("Google Meet") — o Meet passou a criar aqui
-   uma subpasta por série recorrente (`{Série} (recurring)`), ex: "Live Expert360 (recurring)"
-   (`1GGeLSKWDPiKT-GNic7GeKyDIU4A8asAv`). Buscar por subpastas com esse padrão de nome dentro
-   dela e repetir a mesma busca por `mimeType = 'video/mp4' and createdTime > '{ultimo_processado_data}'`
-   dentro de cada uma encontrada. Se aparecer uma pasta "Encontro Incubadora (recurring)" pela
-   primeira vez, ela provavelmente **não estará compartilhada** com `karol.franzini@gmail.com`
-   ainda — tentar baixar, e se der 403, registrar como pendência pedindo pra Karol compartilhar
-   (mesma solução já usada antes), não travar a missão inteira por isso.
-
-Ignorar qualquer arquivo de vídeo que não comece exatamente com um desses três prefixos, em
-qualquer uma das raízes. Causa da mudança de pasta ainda não confirmada (mudança no convite
-recorrente do Calendar ou comportamento novo do Workspace) — manter vigiando as duas raízes até
-ficar claro que uma delas parou de receber gravações novas.
+Depois de achar a gravação, pegar o `parentId` dela via `get_file_metadata` e checar permissões
+via `get_file_permissions` **antes** de tentar baixar. Se só aparecer `karolsenna` como owner (sem
+`karol.franzini@gmail.com` ou `anyone`), a pasta é nova e ainda não foi compartilhada — tentar
+`share_file` (`karol.franzini@gmail.com`, role `reader`) primeiro; se vier "The caller does not
+have permission" (bloqueio do Workspace pra compartilhamento externo, recorrente — ver missões
+#15-17 e #23), registrar pendência pedindo pra Karol compartilhar manualmente a pasta específica
+(nome + link) e seguir sem travar a missão. Não tentar login como `karolsenna` no Playwright (sem
+credencial no vault, REGRA-005).
 
 ### 3. Para cada gravação nova (ordem cronológica)
 

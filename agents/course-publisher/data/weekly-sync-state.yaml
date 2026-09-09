@@ -6,10 +6,30 @@
 # sem período em paralelo (decisão da Karol).
 
 live_expert360:
-  ultimo_processado_titulo: "Live Expert360 - 2026/08/19 13:58 GMT-04:00 - Recording"
-  ultimo_processado_data: "2026-08-19T19:10:58.082Z"  # createdTime do arquivo no Drive (Live 26)
-  proximo_numero: 27
-  ultima_execucao: "2026-09-03"
+  ultimo_processado_titulo: "Live Expert360 - 2026/09/02 13:54 GMT-04:00 - Recording"
+  ultimo_processado_data: "2026-09-02T19:03:33.374Z"  # createdTime do arquivo no Drive (Live 28)
+  proximo_numero: 29
+  ultima_execucao: "2026-09-09"
+  # 09/09/2026 (missão #23, disparada manualmente pela Karol na conversa — ela percebeu que Live
+  # 27 e 28 não estavam na área de membros, apesar da Live 29 ser hoje): causa raiz encontrada —
+  # o Meet criou uma 2ª pasta raiz "Google Meet" nova em 24/08 (id 1FFA1Qjc7YlHRatOHbxYywTfnGzPdu9eU,
+  # diferente da raiz de 05/08 que o state/vault tinham registrada), com sua própria subpasta
+  # "Live Expert360 (recurring)" (id 13aM6fqdz_teB0SnZAqu-jmRF-UoZZpIO). As buscas das missões
+  # #19-22 (27/08 e 03/09) estavam checando a raiz ERRADA (a de 05/08, que parou de receber
+  # gravações novas em 26/08) — por isso reportaram "sem gravação nova" quando na verdade Live 27
+  # (26/08) e Live 28 (02/09) já estavam gravadas, só que na pasta nova. Confirmado via
+  # search_files sem parentId (busca por título, autenticado como karolsenna — não precisa de
+  # compartilhamento pra achar, só pra baixar). Resolvido nesta missão: Karol compartilhou a pasta
+  # nova com karol.franzini@gmail.com (mesmo bloqueio de sempre — API própria não conseguiu
+  # compartilhar, "The caller does not have permission"), os 2 vídeos foram baixados e upados no
+  # YouTube (Live 27: youtube_id DzqaYaOt2IE, "Live 27 — Você Não Cria um Infoproduto. Você
+  # Responde 5 Perguntas — e Ele Aparece."; Live 28: youtube_id 74SUW_40hpQ, "Live 28 — Você Tá
+  # Pronta pra sua Black Friday?"), e as 2 linhas inseridas em encontros_mentoria (ids
+  # 9f0ad8a5-eba4-4231-ba76-f0ab51e1b47e e 27c58a55-7b9d-45d7-b856-09b12e032db5). **MUDANÇA DE
+  # PROTOCOLO:** weekly-sync.md passo 2 reescrito pra buscar por título/mimeType/createdTime SEM
+  # depender de folder ID fixo — evita essa mesma falha se o Meet rotacionar a pasta de novo (já
+  # rotacionou 2x). Live 29 é hoje (09/09) — próxima rodada (agendada ou manual) já busca com o
+  # protocolo novo.
   # 03/09/2026 (2ª rodada, missão #22, disparada via /course-publisher + weekly-sync.md direto):
   # reconfirmado — sem gravação nova em nenhuma das duas raízes, próxima gravação esperada segue
   # sendo Live 27.
