@@ -403,6 +403,24 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - Ganchos candidatos: “Eu tinha tudo para crescer na maior agência de marketing digital do estado. Foi numa confraternização que percebi que precisava sair.”; “Um lugar pode ser próspero, acolhedor e cheio de oportunidades — e ainda assim não ser seu.”
 - Fonte: relato direto da Karol em 07/09/2026. Manter amigo e agência anônimos até autorização explícita para nomeá-los; a caracterização “maior agência de marketing digital de MS” é afirmação da própria Karol, não verificação externa.
 
+**F. "Nenhum método resiste só com técnica"** *(registrado em 08/09/2026)*
+- Status: **aguardando desenvolvimento pelo Squad de Conteúdo** — ainda não virou teoria nem roteiro.
+- Tese da Karol: além dos 5Ps — Persona Compradora, Promessa Transformadora, Processo Autoral, Proposta Validada e Posicionamento de Autoridade — foi necessário acrescentar uma camada transversal de **mentalidade** ao Expert360º. A maioria dos problemas que impede o expert de construir, vender e sustentar o método não se resolve apenas com técnica.
+- Por que a técnica não basta: a pessoa pode saber definir persona, estruturar processo, montar oferta e criar conteúdo, mas ainda assim adiar, tentar ficar pronta demais, cobrar com medo, evitar vendas, desistir no primeiro “não” ou confundir autoridade com influência. Sem trabalhar identidade, crença e ação, os 5Ps ficam documentados, mas não viram comportamento.
+- Assuntos de mentalidade tratados no Expert360º:
+  1. **Fracasso como matéria-prima, não fraqueza:** a lista de fracassos e a história real alimentam o método; fracassar faz parte do processo, não desautoriza o expert (M0).
+  2. **Transição de especialista para empreendedor:** pensar em horizonte de anos, reconhecer o custo invisível de dizer “sim” a projetos alheios e parar de esperar sentir-se pronta (M1).
+  3. **Você não precisa saber tudo para ensinar:** insegurança paralisante × insegurança inteligente; “mais um curso” como procrastinação disfarçada de prudência; basta saber conduzir a aluna pelo que ela precisa agora (M2).
+  4. **Seu método já existe na sua história:** método não é currículo acumulado; é vivência organizada. Limites antigos podem ter sido internalizados, como na metáfora da pulga. “Diploma é o que você estudou. Método é o que você viveu.” (M2).
+  5. **Identidade de vendas antes da técnica:** medo de cobrar como crença, vender como serviço, as três vendas como campo e a primeira conversa como aprendizado — não prova final de valor pessoal (M3).
+  6. **Feito é melhor que perfeito:** agir e vender antes de se sentir 100% pronta; “pronto demais” pode significar que a validação foi adiada (M3).
+  7. **Tensão, derrota e persistência:** medo de perder gera tensão, reduz criatividade e piora execução; tratar derrota como investimento devolve leveza. “Só fracassa quem desiste.” (M3).
+  8. **Autoridade digital não é influência:** entrar no digital não exige virar blogueira; autoridade serena é diferente de presença forçada, e o ambiente consumido molda o que a pessoa acredita ser possível (M4).
+- Tese operacional: mentalidade não é um “sexto P” isolado nem bloco motivacional. É a camada que permite atravessar todos os 5Ps: decidir, cortar excesso, ir ao campo, sustentar preço, lidar com rejeição e aparecer com coerência.
+- Formatos candidatos: Reels “você não tem um problema técnico”; carrossel “os 5Ps não funcionam sem esta camada”; série mostrando qual trava mental interrompe cada P; bastidor da decisão de incluir mentalidade no Expert360º.
+- Ganchos candidatos: “Eu estruturei meu método em 5Ps. Depois descobri que nenhum deles sobrevive sem mentalidade.”; “A maioria dos métodos não quebra porque a técnica está errada — quebra porque o expert não consegue sustentar a execução.”
+- Fontes internas: `business/campanhas/expert360-curso/estrutura-modulos.md` (blocos de mentalidade M2, M3 e M4) e `business/campanhas/expert360-curso/prd.md` (camada especialista→empreendedor, crenças sobre fracasso, ciclo da tensão e identidade antes dos táticos).
+
 ### 🌟 QUENTES / EMERGENTES (2 temas)
 
 10. **"Vem aí lei que regulamenta influenciador digital como profissão — o que muda pra quem vende conhecimento"**
