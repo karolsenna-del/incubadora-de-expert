@@ -23,3 +23,4 @@
 | 06/09/2026 | grupo-domingo-2026-09-06 | 1 | 18113372857813697 | sim (ver log de execucao) |
 | 07/09/2026 | cantinho-pensamento-prova-2026-09-07 | 1 | 18075264698529103 | sim (ver log de execucao) |
 | 08/09/2026 | grupo-terca-2026-09-08 | 1 | 18153349624510252 | sim (ver log de execucao) |
+| 09/09/2026 | chamada-grupo-lives-quarta-2026-09-09 | 6 | 17964508053192126, 18109081364334365, 18127996333755318, 18157136419507588, 17900592189571347, 18136838062528896 | sim (ver log de execucao) |
