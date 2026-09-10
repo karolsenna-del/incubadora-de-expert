@@ -1,0 +1,28 @@
+{
+  "data": "2026-09-10",
+  "username": "karolsenna._",
+  "total_posts_com_comentarios": 1,
+  "posts": [
+    {
+      "media_id": "18459263857138842",
+      "tipo": "REELS",
+      "permalink": "https://www.instagram.com/reel/DdCY1GMxb1Z/",
+      "caption": "O mundo é dos rasos. Ninguém consegue chegar no final do vídeo para entender toda a argumentação e contexto lógico.. e já saem criticando.\n\nJá viveu isso por aí?",
+      "timestamp": "2026-09-08T19:00:05+0000",
+      "comentarios": [
+        {
+          "id": "17860539246694941",
+          "texto": "@joaoo_ricardo e as eleições estão aí.. agora eles se esbaldam 😩😩😩",
+          "autor": "karolsenna._",
+          "data": "2026-09-08T19:15:39+0000"
+        },
+        {
+          "id": "18093860924407763",
+          "texto": "Opinadores de manchetes... sabem de todo o assunto e tem opinião formada, mas só leram a manchete 😂",
+          "autor": null,
+          "data": "2026-09-08T19:09:30+0000"
+        }
+      ]
+    }
+  ]
+}
