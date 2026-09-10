@@ -100,7 +100,7 @@ Ciclo reinicia na semana 6 (volta pra Diagnóstico Ferramentas).
 3. Problema percebido: acha que falta audiência, ferramenta, conteúdo ou mais estudo.
 4. Causa real: conhecimento ainda não foi organizado e validado como método e proposta.
 5. Solução: entrar no grupo para participar das lives semanais, acompanhar diagnósticos e aprender a ordem método → venda → validação → presença → escala.
-6. CTA: **“Comenta GRUPO que eu te mando o link.”** Conferir sempre a palavra no arquivo de gatilhos.
+6. CTA: **“Comenta LIVE que eu te mando o link.”** (corrigido 10/09 — `GRUPO` é exclusivo da oferta paga Grupo desde 23/08; `LIVE` é o gatilho do grupo gratuito de lives desde 07/09, ver `gatilhos-direct.json`). Conferir sempre a palavra no arquivo de gatilhos.
 
 **Vetos:** não mostrar preço, ticket, parcela, faturamento prometido ou qualquer valor monetário; não importar do modelo alegações como “20k a 50k”, “5%” ou “mil mentorados”; não inventar tema, depoimento ou resultado. Se houver tema real da live, conectá-lo à dor da persona.
 

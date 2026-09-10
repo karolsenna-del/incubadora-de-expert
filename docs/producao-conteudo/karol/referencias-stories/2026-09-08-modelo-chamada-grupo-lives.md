@@ -15,7 +15,7 @@
 ## Adaptação obrigatória para Karol
 
 - Persona → dor → problema percebido → causa real → solução → CTA.
-- CTA: `Comenta GRUPO que eu te mando o link.`
+- CTA: `Comenta LIVE que eu te mando o link.` (corrigido 10/09 — `GRUPO` é exclusivo da oferta paga Grupo desde 23/08; `LIVE` é o gatilho do grupo gratuito de lives desde 07/09, ver `gatilhos-direct.json`)
 - Frequência: segunda e quarta antes da live, como sequência extra.
 - Não copiar frases, números ou promessas da fonte.
 - Nunca mostrar preço, ticket, parcela ou valor monetário.

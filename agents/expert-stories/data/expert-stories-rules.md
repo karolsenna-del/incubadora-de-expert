@@ -23,15 +23,15 @@ Grupo. Isso não substitui a regra de 23/08 (sempre conferir `gatilhos-direct.js
 escrever qualquer CTA de palavra-chave, JSON é sempre a fonte de verdade); só documenta o caso
 específico já resolvido pra não precisar redescobrir toda quarta/segunda.
 **Aplica quando:** Escrevendo o CTA de qualquer chamada pro grupo das lives (segunda ou quarta
-antes da live). **Pendente:** avisar a Karol que o texto da regra de 08/09 e do modelo de
-referência ainda dizem "GRUPO" — precisam ser corrigidos pra "LIVE" pra não confundir quem ler
-depois (ou ela pode preferir mudar o JSON de volta; decisão dela, sinalizada via
-PushNotification).
+antes da live). **Resolvido (10/09):** Karol confirmou — a live é justamente pra entrar no
+grupo, então `LIVE` é a palavra certa. Textos da regra de 08/09 e do modelo de referência
+corrigidos de "GRUPO" pra "LIVE".
 
 ## [08/09/2026] — Copy modela a rotina de 12 semanas; sem valores; grupo 2x/semana
 **Origem:** Karol corrigiu que as copies diárias estavam fugindo dos exemplos usados para criar o agente. A sequência enviada depois não era referência de react: era modelo para chamadas de entrada no grupo das lives.
 **Regra:** (1) A rotina de 12 semanas e os exemplos da Karol são fonte obrigatória da copy; não substituir por oferta genérica. (2) NUNCA mostrar preço, ticket, parcela ou valor monetário em Stories. (3) Levantada de Mão segue persona → dor → problema percebido → causa real → solução → CTA. (4) Segunda e quarta antes da live recebem uma sequência extra de chamada para o grupo, sem substituir a rotina; quarta pós-live continua conteúdo, não convite. (5) O modelo recebido orienta estrutura e cadência, mas seus números/promessas não são copiados. CTA do grupo usa a palavra oficial `GRUPO`.
 **Aplica quando:** Em toda geração diária e, especialmente, nas Levantadas de Mão e chamadas para o grupo das lives.
+**Correção (10/09):** o item (5) valia pra oferta paga Grupo. A chamada pro grupo *das lives* usa `LIVE`, não `GRUPO` — ver regra [09/09/2026] logo abaixo, confirmada por ela em 10/09. Textos deste arquivo e do modelo de referência já corrigidos.
 
 ## [26/08/2026] — Automação de postagem (SOP-021) já está no ar — imagem gerada precisa ser commitada+pushada, não fica só local
 **Origem:** Story da Live 27 (quarta) foi gerada e entregue na pasta `fila/` só localmente
