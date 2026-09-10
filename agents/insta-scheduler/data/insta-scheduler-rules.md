@@ -99,6 +99,16 @@ comprovada, só um padrão observado, agora com 3 ocorrências. A leva Semana 05
 o último); a leva Semana 06 (07/09-13/09, também 20h fixo) é o próximo teste real do padrão —
 **checar `gh run list --workflow=post-{slug}.yml` na manhã seguinte de cada post** em vez de
 assumir que rodou certo, durante toda a Semana 06.
+**4º caso, 09/09 (Semana 06):** `rota100k-semana06-qua-antes-depois-aplicou` rodou 09/09 20h52 BRT
+(quase sem atraso do cron desta vez — enfraquece um pouco a hipótese de contenção só no horário de
+pico) e falhou de novo com erro 9004 (slide-02). Diferente dos 3 casos anteriores, a checagem
+matinal automatizada não conseguiu confirmar a URL via `curl -sI` porque a política de rede da
+sessão de checagem bloqueou a conexão com `res.cloudinary.com` (erro de proxy/ambiente, não
+resposta do Cloudinary) — mesmo assim o retry foi disparado direto por precedente (assinatura de
+erro idêntica aos 3 casos anteriores) e publicou de primeira (`workflow_dispatch`, 10/09 08h14 BRT,
+media ID 18204693133367619). Os 2 primeiros posts da Semana 06 (seg e ter) rodaram limpos, sem
+erro 9004 — o padrão não é 100% dos posts das 20h, mas continua recorrente o suficiente pra manter
+a checagem manhã seguinte.
 **Regra:** Erro 9004 (diferente do 9007 da RULE-2, que é corrida de processamento) é transiente
 de rede/infra da Meta, não de conteúdo, MESMO quando se repete em dias seguidos — a URL segue
 íntegra nos dois casos confirmados. Antes de qualquer alteração de slides/legenda/cron:
@@ -145,3 +155,10 @@ horário exato, disparar manualmente via `workflow_dispatch` em vez de confiar n
   21h36 BRT com erro 9004 (3º caso seguido do mesmo padrão, ver RULE-4). URL do Cloudinary
   testada e válida. Retry via `workflow_dispatch` publicou de primeira (07/09 00h27 BRT,
   media ID 17925612792181143). Log atualizado, RULE-4 revisada com o 3º caso confirmado.
+- 2026-09-10 — Checagem automatizada matinal (rotina agendada) achou `rota100k-semana06-qua-
+  antes-depois-aplicou` (agendado pra 09/09 20h) falhado com erro 9004 (4º caso, slide-02, ver
+  RULE-4). Verificação da URL via `curl` bloqueada pela política de rede da própria sessão de
+  checagem (proxy negou `res.cloudinary.com`) — não foi possível confirmar 200 OK manualmente,
+  mas a assinatura do erro era idêntica aos 3 casos anteriores, então o retry foi disparado
+  direto por precedente. Publicou de primeira via `workflow_dispatch` (10/09 08h14 BRT, media ID
+  18204693133367619). Log e RULE-4 atualizados com o 4º caso.
