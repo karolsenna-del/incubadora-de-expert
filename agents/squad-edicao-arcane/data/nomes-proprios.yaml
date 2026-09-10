@@ -20,12 +20,17 @@
 # ─────────────────────────────────────────────────────────────────────────────
 
 # Lista plana de nomes corretos — vai pro --prompt do whisper
-# APAGUE OS EXEMPLOS ABAIXO E COLOQUE OS SEUS antes de editar o 1o video.
 nomes_corretos:
-  # - "Seu Nome Aqui"
-  # - "Sua Marca"
-  # - "Seu Produto Principal"
-  # - "termo tecnico do seu nicho"
+  - "Karol Senna"
+  - "Incubadora de Expert"
+  - "Expert360"
+  - "Persona Compradora"
+  - "Promessa Transformadora"
+  - "Método Autoral"
+  - "Posicionamento de Autoridade"
+  - "Autoridade Tríplice"
+  - "Voomp"
+  - "Área de Membros"
 
 # Correcoes automaticas aplicadas pelo @scribe quando le o transcript bruto.
 # Formato: errado (como whisper transcreveu) -> correto (como deveria ser)
