@@ -9,7 +9,23 @@ live_expert360:
   ultimo_processado_titulo: "Live Expert360 - 2026/09/02 13:54 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-09-02T19:03:33.374Z"  # createdTime do arquivo no Drive (Live 28)
   proximo_numero: 29
-  ultima_execucao: "2026-09-09"
+  ultima_execucao: "2026-09-10"
+  # 10/09/2026 (missão #24, disparo autônomo REGRA-015): protocolo novo da missão #23 (busca sem
+  # parentId) funcionou exatamente como esperado — achou "Live Expert360 - 2026/09/09 14:00
+  # GMT-04:00 - Recording" (593MB, createdTime 2026-09-09T22:07:30Z) mesmo com a pasta raiz "Google
+  # Meet" tendo rotacionado uma 4ª vez (novo id 1RUOirge4sbihCNyRrsNgI0UCU8QwZxuW, criado
+  # 2026-09-09T18:59:10Z, contendo nova subpasta "Live Expert360 (recurring)" id
+  # 1MOmJg3RpaZmHwaagfXlz2vjOcYNB2FxS) — sem o fix da #23 a missão teria reportado "nada novo" de
+  # novo. Roteiro já identificado: `live-29-roteiro.md`, título extraído do H1 = "O Custo Invisível
+  # de Fazer Tudo Sozinha (mesmo com IA)" → nome final pronto "29 - O Custo Invisível de Fazer Tudo
+  # Sozinha (mesmo com IA)". Download BLOQUEADO: `get_file_permissions` no arquivo, na pasta "Live
+  # Expert360 (recurring)" nova e na raiz "Google Meet" nova mostram só "owner" karolsenna;
+  # `share_file` (karolsenna → karol.franzini@gmail.com, reader) tentado nas 3 camadas, mesmo erro
+  # "The caller does not have permission" de sempre (bloqueio de compartilhamento externo do
+  # Workspace, recorrente desde missões #15-17/#23). Não tentei login como karolsenna no Playwright
+  # (sem credencial no vault, REGRA-005). `ultimo_processado_data`/`proximo_numero` NÃO avançaram —
+  # próxima rodada reencontra a Live 29 e tenta de novo. Pendência registrada abaixo com o link da
+  # pasta pra Karol compartilhar manualmente.
   # 09/09/2026 (missão #23, disparada manualmente pela Karol na conversa — ela percebeu que Live
   # 27 e 28 não estavam na área de membros, apesar da Live 29 ser hoje): causa raiz encontrada —
   # o Meet criou uma 2ª pasta raiz "Google Meet" nova em 24/08 (id 1FFA1Qjc7YlHRatOHbxYywTfnGzPdu9eU,
@@ -69,7 +85,24 @@ live_expert360:
 mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/03 14:00 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-03T22:34:41Z"  # createdTime do arquivo no Drive
-  ultima_execucao: "2026-09-03"
+  ultima_execucao: "2026-09-10"
+  # 10/09/2026 (missão #24, disparo autônomo REGRA-015): PRIMEIRA VEZ que a subpasta "Encontro
+  # Incubadora (recurring)" aparece no Drive (id 1efQbtw1mAK2dFE-EulATEMLMj83qcnuf, criada
+  # 2026-08-24T19:47:13Z dentro da raiz "Google Meet" já conhecida de 24/08 — id
+  # 1FFA1Qjc7YlHRatOHbxYywTfnGzPdu9eU, a mesma raiz que já hospedava "Live Expert360 (recurring)"
+  # até a rotação de 09/09). Gravação encontrada: "Encontro Incubadora - 2026/08/24 14:24
+  # GMT-04:00 - Recording" (873MB, createdTime 2026-08-24T20:43:47.651Z) — passou desapercebida em
+  # todas as rodadas anteriores (#19 a #23) porque a busca antiga (por parentId conhecido) não
+  # cobria essa raiz pra essa série; o protocolo novo da #23 (busca global por título/mimeType)
+  # resolveu isso também. Tema já identificado via "Anotações do Gemini" (documento acessível
+  # direto por busca, sem precisar de permissão de pasta — sessão com Rosiani Bezerra sobre
+  # alinhar as ferramentas do método à NR01, categorizar portfólio e montar cronograma de 90 dias):
+  # nome final pronto "24.08.26 - Portfólio Estratégico e Ferramentas NR01 (Rosiani)". Download
+  # BLOQUEADO: mesmo padrão da série Live acima — `get_file_permissions` no arquivo e na pasta só
+  # mostram "owner" karolsenna; `share_file` tentado nas duas camadas, mesmo erro "The caller does
+  # not have permission". Não tentei login como karolsenna no Playwright (REGRA-005).
+  # `ultimo_processado_data` NÃO avançou — próxima rodada reencontra essa gravação e tenta de novo.
+  # Pendência registrada abaixo com o link da pasta.
   # 03/09/2026 (2ª rodada, missão #22, disparada via /course-publisher + weekly-sync.md direto):
   # reconfirmado — mesmo falso positivo do arquivo de 03/08 (precisão de timestamp), nenhuma
   # gravação nova real; "Encontro Incubadora (recurring)" continua sem existir na raiz nova.
@@ -95,7 +128,12 @@ mentoria_em_grupo:
 encontros_individuais:
   ultimo_processado_titulo: null
   ultimo_processado_data: null
-  ultima_execucao: "2026-09-03"
+  ultima_execucao: "2026-09-10"
+  # 10/09/2026 (missão #24, disparo autônomo REGRA-015): reconfirmado — busca por título contendo
+  # "Individual -" (sem filtro de parentId, cobrindo o Drive inteiro) não retornou nenhum arquivo.
+  # Achado da missão #17 sobre o Meet nomear pastas 1:1 pelo nome da aluna (não no padrão
+  # "Individual - {slug} - {AAAA-MM-DD}") segue pendente de decisão da Karol/Gestor de Infra
+  # Arcane — não mexido aqui.
   # 03/09/2026 (2ª rodada, missão #22, disparada via /course-publisher + weekly-sync.md direto):
   # reconfirmado — nenhum arquivo com prefixo "Individual -" em nenhuma raiz. Raiz "Google Meet"
   # segue só com pastas "Milena - ..." (nome da aluna + hora), mesmo achado da missão #17 —
@@ -127,7 +165,29 @@ encontros_individuais:
   # reconhecer esse padrão novo, ou renomear as pastas manualmente. Sem isso, esta série nunca vai
   # processar nada mesmo que a Karol grave 1:1s.
 
-pendencias: []
+pendencias:
+  - tipo: "acesso_drive_bloqueado"
+    serie: "live_expert360"
+    detalhe: >
+      Live 29 (09/09/2026) encontrada e com título pronto ("29 - O Custo Invisível de Fazer Tudo
+      Sozinha (mesmo com IA)"), mas download bloqueado. Pasta "Live Expert360 (recurring)" (4ª
+      rotação) só tem "owner" karolsenna@incubadoradeexpert.com.br — share_file pra
+      karol.franzini@gmail.com retornou "The caller does not have permission" no arquivo, na pasta
+      e na raiz "Google Meet" nova. Pedir Karol compartilhar manualmente (role reader ou writer)
+      com karol.franzini@gmail.com.
+    link: "https://drive.google.com/drive/folders/1MOmJg3RpaZmHwaagfXlz2vjOcYNB2FxS"
+    registrado_em: "2026-09-10 (missão #24)"
+  - tipo: "acesso_drive_bloqueado"
+    serie: "mentoria_em_grupo"
+    detalhe: >
+      Encontro Incubadora de 24/08/2026 encontrado e com tema pronto ("24.08.26 - Portfólio
+      Estratégico e Ferramentas NR01 (Rosiani)"), mas download bloqueado. Pasta "Encontro
+      Incubadora (recurring)" (primeira vez que existe) só tem "owner"
+      karolsenna@incubadoradeexpert.com.br — mesmo erro "The caller does not have permission" ao
+      tentar share_file pra karol.franzini@gmail.com no arquivo e na pasta. Pedir Karol
+      compartilhar manualmente.
+    link: "https://drive.google.com/drive/folders/1efQbtw1mAK2dFE-EulATEMLMj83qcnuf"
+    registrado_em: "2026-09-10 (missão #24)"
 # 20/08/2026 (missão #17): pendência "acesso_drive_bloqueado" (registrada nas missões #15/#16)
 # RESOLVIDA — Karol recompartilhou a pasta "Live Expert360 (recurring)" (confirmado: permissão
 # "anyone:writer" apareceu via get_file_permissions, e o perfil karol.franzini@gmail.com acessou
