@@ -107,11 +107,25 @@ mais de 10 mil alunos. Não é sorte, é estrutura."
 
 **CTA + Posicionamento (10-12s)**
 "Se você já travou nessa objeção de preço, tem uma live gratuita dia 15/09, às 19h,
-mostrando como funciona na prática — vagas limitadas, link na bio.
+mostrando como funciona na prática — vagas limitadas. Comenta VOOMP que eu te mando o
+link.
 
 Compartilha esse vídeo com todo infoprodutor que trava na hora de cobrar mais caro por
 falta de reconhecimento oficial. Autoridade não é gritar mais alto no anúncio — é ter
 estrutura que sustenta o preço que você cobra."
+
+**Legenda (complementa — não repete o que foi falado):**
+
+Verdade que ninguém me contou quando comecei a ajudar expert a estruturar método: preço
+trava não por falta de qualidade — trava por falta de reconhecimento oficial atrás do
+produto.
+
+Eu hospedo meu curso na Voomp. Vi que agora existe parceria deles com a Anhanguera pra
+infoprodutor virar parceiro de conteúdo oficial (curso de extensão ou pós-graduação
+reconhecida) — e isso quebra a objeção de preço antes de ela nascer.
+
+Dia 15/09, 19h, tem live gratuita mostrando como funciona. Comenta VOOMP que eu te
+mando o link.
 
 ---
 
@@ -147,7 +161,23 @@ anos. Não mudou o conteúdo. Mudou o que o aluno leva pra casa."
 um reconhecimento oficial na mão do seu aluno, e o preço que ele paga muda sem ele
 pensar duas vezes.
 
-Dia 15/09, 19h, tem live gratuita mostrando como. Link na bio, vagas limitadas."
+Dia 15/09, 19h, tem live gratuita mostrando como. Comenta VOOMP que eu te mando o link.
+Vagas limitadas."
+
+**Legenda (complementa — não repete o que foi falado):**
+
+Esse canudo aqui é do meu diploma de Contabilidade/Administração. Ele nunca foi o
+motivo de alguém confiar em mim — foi a vivência de anos resolvendo problema real.
+
+Mas isso não significa que reconhecimento oficial não vale nada. Pro SEU aluno, vale —
+e muito: quem tem pós-graduação ganha 255% mais de salário (Semesp), e quase 80% dos
+brasileiros já pagam por faculdade particular.
+
+Existe uma parceria entre a Voomp (onde hospedo meu curso) e a Anhanguera que
+transforma seu conhecimento em curso de extensão ou pós-graduação oficial pro seu
+aluno receber.
+
+Dia 15/09, 19h, tem live gratuita mostrando como. Comenta VOOMP que eu te mando o link.
 
 ---
 
@@ -174,7 +204,8 @@ Dia 15/09, 19h, tem live gratuita mostrando como. Link na bio, vagas limitadas."
 - Tom sério mas sem agressividade — confronto de mercado, não de pessoa.
 
 **Todos os 3**
-- Link de rastreio (UTM já existente) via sticker de link no Reels ou destacado na bio
-  enquanto os 3 estiverem no ar.
+- CTA é "Comenta VOOMP que eu te mando o link" — sem automação, é manual mesmo (poucos
+  comentários esperados). Karol confere os comentários e manda o link da live
+  (com UTM, ver topo do arquivo) direto no Direct de quem comentar VOOMP.
 - Janela é curta: live é dia 15/09, 19h — produção em 10/09. Ideal publicar os 3 entre
   hoje e amanhã (11/09) pra dar tempo de a audiência se organizar.
