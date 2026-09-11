@@ -9,9 +9,10 @@
 
 ## Teoria (Sage)
 
-Tese central: a Voomp (onde a Karol já hospeda o Expert360º) fechou parceria com a
-Anhanguera pra transformar conhecimento de infoprodutor em extensão universitária ou
-pós-graduação com reconhecimento oficial. Não é sobre estudar mais — é sobre o que o
+Tese central: a Voomp (onde a Karol já hospeda o Expert360º) fechou uma parceria de
+conteúdo com a Anhanguera pra infoprodutor virar parceiro de conteúdo oficial —
+transformando o que já sabe na base de um curso de extensão ou pós-graduação da
+Anhanguera com reconhecimento oficial. Não é sobre estudar mais — é sobre o que o
 aluno recebe, e isso muda o ticket que dá pra cobrar e quebra a objeção de preço.
 
 Dados reais extraídos da página (não inventados):
@@ -20,7 +21,7 @@ Dados reais extraídos da página (não inventados):
 - Brasil concentra quase 70% das edtechs da América Latina (fonte: EdTech Report)
 - Quase 80% dos brasileiros já estudam (e pagam) em faculdade particular (fonte: Censo do Ensino Superior)
 - Casos citados pela Voomp: Fisio Academy (R$700 de ticket médio → +R$35 milhões em 2 anos
-  com pós oficial); Maravipós (primeiro "6 em 7" após 20+ lançamentos, hoje +10 mil alunos);
+  com a parceria de conteúdo); Maravipós (primeiro "6 em 7" após 20+ lançamentos, hoje +10 mil alunos);
   Medicina Felina (quase 2 mil alunos numa pós de nicho hiper específico)
 
 3 ângulos (1 gatilho dominante por reel):
@@ -68,7 +69,7 @@ país no seu produto. Isso quebra a objeção "isso tem certificado reconhecido?
 dela nascer.
 
 Case real: Fisio Academy saiu de ticket R$700 pra mais de R$35 milhões faturados em 2
-anos com pós oficial.
+anos com a parceria de conteúdo.
 
 Dia 15/09, 19h, tem uma live gratuita (vagas limitadas) mostrando como funciona na
 prática — com uma condição que só existe pra quem tá ao vivo.
@@ -96,8 +97,9 @@ creator economy vai faturar US$480 bilhões até 2027, segundo a Goldman Sachs �
 80% dos brasileiros já pagam por faculdade particular. O mercado já decidiu que quer
 reconhecimento oficial.
 
-Existe uma parceria entre a Voomp e a Anhanguera que transforma o que você já sabe em
-curso de extensão ou pós-graduação oficial. Sozinho, você monta o plano pedagógico sem
+Existe uma parceria de conteúdo entre a Voomp e a Anhanguera: você vira parceiro de
+conteúdo oficial, e o que você já sabe vira a base de um curso de extensão ou
+pós-graduação da Anhanguera. Sozinho, você monta o plano pedagógico sem
 revisão técnica, com risco alto de reprovação e sem suporte. Com a parceria, tem revisão
 técnica especializada, alta taxa de aprovação, suporte no processo inteiro e uma
 plataforma completa por trás.
@@ -151,10 +153,11 @@ reconhecida. Isso não é opinião, é dado.
 Só que a virada não é você correr pra fazer mais uma pós. É o SEU ALUNO que quer um
 certificado reconhecido quando ele compra de você.
 
-Existe uma parceria entre a Voomp e a Anhanguera que transforma o que você já sabe em
-curso de extensão ou pós-graduação oficial pro seu aluno receber. A Fisio Academy
-vendia curso a R$700 há 14 anos — com pós oficial, faturou mais de R$35 milhões em 2
-anos. Não mudou o conteúdo. Mudou o que o aluno leva pra casa."
+Existe uma parceria de conteúdo entre a Voomp e a Anhanguera: você vira parceiro de
+conteúdo oficial, e o que você já sabe vira a base de um curso de extensão ou
+pós-graduação da Anhanguera pro seu aluno receber. A Fisio Academy vendia curso a
+R$700 há 14 anos — com essa parceria, faturou mais de R$35 milhões em 2 anos. Não
+mudou o conteúdo. Mudou o que o aluno leva pra casa."
 
 **CTA + Posicionamento (10-12s)**
 "Guarda seu canudo na gaveta — autoridade não tá nele, tá na sua vivência. Mas coloca
@@ -173,9 +176,9 @@ Mas isso não significa que reconhecimento oficial não vale nada. Pro SEU aluno
 e muito: quem tem pós-graduação ganha 255% mais de salário (Semesp), e quase 80% dos
 brasileiros já pagam por faculdade particular.
 
-Existe uma parceria entre a Voomp (onde hospedo meu curso) e a Anhanguera que
-transforma seu conhecimento em curso de extensão ou pós-graduação oficial pro seu
-aluno receber.
+Existe uma parceria de conteúdo entre a Voomp (onde hospedo meu curso) e a Anhanguera:
+você vira parceiro de conteúdo oficial, e seu conhecimento vira a base de um curso de
+extensão ou pós-graduação da Anhanguera pro seu aluno receber.
 
 Dia 15/09, 19h, tem live gratuita mostrando como. Comenta VOOMP que eu te mando o link.
 

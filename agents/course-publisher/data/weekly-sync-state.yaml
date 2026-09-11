@@ -10,6 +10,10 @@ live_expert360:
   ultimo_processado_data: "2026-09-02T19:03:33.374Z"  # createdTime do arquivo no Drive (Live 28)
   proximo_numero: 29
   ultima_execucao: "2026-09-10"
+  # 10/09/2026 (missão #25, 2ª execução no mesmo dia — reconfirmação): reexecutei a busca e o
+  # get_file_permissions na Live 29 (arquivo 1_KXnxRGKra_jzwYl5G9SQ9v8ImG86l6q) — segue só "owner"
+  # karolsenna, share_file tentado de novo, mesmo erro "The caller does not have permission".
+  # Nada mudou desde a missão #24 (mesmo dia, horas antes). Pendência mantida como está.
   # 10/09/2026 (missão #24, disparo autônomo REGRA-015): protocolo novo da missão #23 (busca sem
   # parentId) funcionou exatamente como esperado — achou "Live Expert360 - 2026/09/09 14:00
   # GMT-04:00 - Recording" (593MB, createdTime 2026-09-09T22:07:30Z) mesmo com a pasta raiz "Google
@@ -86,6 +90,10 @@ mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/03 14:00 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-03T22:34:41Z"  # createdTime do arquivo no Drive
   ultima_execucao: "2026-09-10"
+  # 10/09/2026 (missão #25, 2ª execução no mesmo dia — reconfirmação): reexecutei a busca e o
+  # get_file_permissions no Encontro de 24/08 (arquivo 1WyOceWlsGylWtzA-GKX7I9J1b6ElfS5E) — segue
+  # só "owner" karolsenna, share_file tentado de novo, mesmo erro "The caller does not have
+  # permission". Nada mudou desde a missão #24 (mesmo dia, horas antes). Pendência mantida.
   # 10/09/2026 (missão #24, disparo autônomo REGRA-015): PRIMEIRA VEZ que a subpasta "Encontro
   # Incubadora (recurring)" aparece no Drive (id 1efQbtw1mAK2dFE-EulATEMLMj83qcnuf, criada
   # 2026-08-24T19:47:13Z dentro da raiz "Google Meet" já conhecida de 24/08 — id
@@ -129,6 +137,8 @@ encontros_individuais:
   ultimo_processado_titulo: null
   ultimo_processado_data: null
   ultima_execucao: "2026-09-10"
+  # 10/09/2026 (missão #25, 2ª execução no mesmo dia — reconfirmação): busca por título contendo
+  # "Individual -" repetida, sem filtro de data — nenhum resultado, mesmo achado da #24.
   # 10/09/2026 (missão #24, disparo autônomo REGRA-015): reconfirmado — busca por título contendo
   # "Individual -" (sem filtro de parentId, cobrindo o Drive inteiro) não retornou nenhum arquivo.
   # Achado da missão #17 sobre o Meet nomear pastas 1:1 pelo nome da aluna (não no padrão
