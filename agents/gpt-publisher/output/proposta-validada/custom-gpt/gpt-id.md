@@ -28,8 +28,15 @@ Karol aplicou o Agente da Proposta Validada na oferta **Mentoria Conduz Agro** e
 
 **Revisão da Karol (11/09/2026):** apontou que os itens 6, 7 e 8 da v1 desta proposta generalizaram regras específicas da Conduz Agro ou perguntas que o próprio agente já podia responder. Corrigido — ver acima.
 
+## Segundo destino: Área de Membros (via API, sem limite de caracteres)
+
+Karol confirmou que os 6 agentes da Biblioteca de IA (este incluso) estão previstos pra rodar **dentro da própria área de membros**, via API da OpenAI, no lugar do link direto pro ChatGPT — projeto já em andamento, não é ideia nova. Ver `business/campanhas/area-de-membros/handoff-agentes-biblioteca-ia.md` (seção 5, atualizada em 11/09/2026 com as mesmas correções desta revisão, só que na versão sem corte de caracteres) e `business/campanhas/area-de-membros/site/api/chat-agente.js` (endpoint pronto, `AGENTES_CONFIG` ainda vazio — bloqueado pela `OPENAI_API_KEY`, ver tracker do projeto).
+
+Enquanto esse segundo destino não é ativado, o GPT publicado no ChatGPT (`instructions-atual.md` / `instructions-v2-proposta.md` deste registro) continua sendo o que as alunas usam de fato.
+
 ## Status
 
-- [ ] Karol validou a v2
+- [ ] Karol validou a v2 (versão comprimida pro GPT Builder)
 - [ ] V2 colada no GPT Builder (ação manual da Karol — este worker não tem acesso de edição ao GPT)
 - [ ] Testada com uma oferta real
+- [ ] Seção 5 do handoff (versão área de membros, sem corte de caracteres) revisada por quem for ligar o `AGENTES_CONFIG` quando a `OPENAI_API_KEY` estiver pronta
