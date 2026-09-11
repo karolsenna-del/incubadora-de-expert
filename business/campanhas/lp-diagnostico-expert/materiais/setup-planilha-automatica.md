@@ -3,6 +3,15 @@
 Mesmo processo que você já fez pro Sprint do Método — mas com uma planilha **separada**,
 porque é um formulário diferente (leads do topo de funil, não clientes pagantes).
 
+> **Atualização 2026-09-11:** o script original só gravava a linha na planilha — a nota
+> antiga deste documento dizia que não dava pra mandar e-mail "pelas mesmas razões
+> técnicas do Sprint", o que estava errado (não existe essa limitação — só faltava a
+> linha de código). A versão abaixo já inclui `MailApp.sendEmail(...)`. **Se você já tem
+> esse script publicado, é só abrir o projeto Apps Script existente (mesma planilha →
+> Extensões → Apps Script), substituir o código pela versão nova abaixo, salvar e
+> reimplantar** (Implantar → Gerenciar implantações → ✏️ na implantação ativa → Nova
+> versão → Implantar). Não precisa criar planilha nova nem mudar a URL.
+
 ---
 
 ## Passo 1 — Criar a planilha
@@ -16,8 +25,11 @@ porque é um formulário diferente (leads do topo de funil, não clientes pagant
 2. Apague o conteúdo padrão e cole isto:
 
 ```javascript
+var DEST_EMAIL = "karolsenna@incubadoradeexpert.com.br";
+
 function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getActiveSheet();
 
   var headers = [
     "Data","E-mail","Nome","Celular","Sexo","Idade",
@@ -35,6 +47,14 @@ function doPost(e) {
 
   var payload = JSON.parse(e.postData.contents);
   sheet.appendRow(payload.row);
+
+  MailApp.sendEmail({
+    to: DEST_EMAIL,
+    subject: "Novo Diagnóstico do Expert: " + (payload.row[2] || "sem nome"),
+    body: "Nome: " + (payload.row[2] || "") + "\nE-mail: " + (payload.row[1] || "") +
+          "\nCelular: " + (payload.row[3] || "") +
+          "\n\nRespostas completas na planilha:\n" + ss.getUrl()
+  });
 
   return ContentService
     .createTextOutput(JSON.stringify({ok: true}))
@@ -66,7 +86,7 @@ Cola aqui na conversa que eu conecto no arquivo.
 - Diferente do Sprint do Método, essa aqui **não tem botão de WhatsApp** — faz sentido pro
   Sprint (cliente avisando você), mas aqui é lead de topo de funil: você/equipe que entra em
   contato depois, puxando da planilha.
-- **O que ficou de fora do Google Forms original:** a opção "Enviar cópia das respostas" (o
-  Forms manda um e-mail automático pro respondente). Essa página não tem como mandar e-mail
-  sozinha pelas mesmas razões técnicas do Sprint — se isso for importante, me avisa que a
-  gente pensa numa solução.
+- **Aviso por e-mail:** desde a atualização de 2026-09-11, você recebe um e-mail toda vez
+  que um lead completa o diagnóstico (ver script acima). O que ainda não existe é a opção
+  do Google Forms de "Enviar cópia das respostas" pro próprio respondente — se isso for
+  importante, dá pra adicionar depois.

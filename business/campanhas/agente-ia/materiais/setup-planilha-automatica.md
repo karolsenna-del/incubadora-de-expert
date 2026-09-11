@@ -7,6 +7,14 @@ Essa versão já formata a planilha sozinha (cabeçalho em negrito + linha conge
 recebe os arquivos anexados no formulário, salvando cada envio numa subpasta dentro de uma
 pasta do Google Drive que você escolhe.
 
+> **Atualização 2026-09-11:** o script original não avisava ninguém quando chegava briefing
+> novo — só gravava na planilha e salvava os arquivos. A versão abaixo já inclui
+> `MailApp.sendEmail(...)`. **Se você já tem esse script publicado, é só abrir o projeto
+> Apps Script existente (mesma planilha → Extensões → Apps Script), substituir o código
+> pela versão nova abaixo, salvar e reimplantar** (Implantar → Gerenciar implantações →
+> ✏️ na implantação ativa → Nova versão → Implantar). Não precisa recriar pasta do Drive
+> nem mudar a URL do `SHEETS_ENDPOINT_URL`.
+
 ---
 
 ## Passo 1 — Criar a pasta no Drive
@@ -27,9 +35,11 @@ pasta do Google Drive que você escolhe.
 
 ```javascript
 var FOLDER_ID = "1nRHlUhAJmVbSYZp57pKu2u2f0FmkFWkO";
+var DEST_EMAIL = "karolsenna@incubadoradeexpert.com.br";
 
 function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getActiveSheet();
   var payload = JSON.parse(e.postData.contents);
 
   var headers = [
@@ -65,6 +75,14 @@ function doPost(e) {
   var row = payload.row.slice();
   row.push(folderUrl);
   sheet.appendRow(row);
+
+  MailApp.sendEmail({
+    to: DEST_EMAIL,
+    subject: "Novo Briefing de Agente de IA: " + (payload.row[1] || "sem nome"),
+    body: "Nome: " + (payload.row[1] || "") + "\nWhatsApp: " + (payload.row[2] || "") +
+          (folderUrl ? "\nArquivos: " + folderUrl : "") +
+          "\n\nRespostas completas na planilha:\n" + ss.getUrl()
+  });
 
   return ContentService
     .createTextOutput(JSON.stringify({ok: true, folderUrl: folderUrl}))

@@ -381,6 +381,7 @@ main#stage{
   <main id="stage"></main>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 (function(){
   "use strict";
@@ -728,26 +729,104 @@ main#stage{
     return String(a).trim();
   }
 
-  function sectionsText(indexes){
-    var lines = [];
-    SECTIONS.forEach(function(sec, si){
-      if(indexes && indexes.indexOf(si) === -1) return;
-      var qs = QUESTIONS.filter(function(q){return q.section===si;});
-      var any = qs.some(isAnswered);
-      if(!any) return;
-      lines.push("— " + sec.title.toUpperCase() + " —");
-      qs.forEach(function(q){
-        if(!isAnswered(q)) return;
-        lines.push(q.label);
-        lines.push(answerText(q));
-        lines.push("");
-      });
-    });
-    return lines.join("\n").trim();
+function hexRgb(hex){
+    var n = parseInt(hex.replace("#",""), 16);
+    return [(n>>16)&255, (n>>8)&255, n&255];
   }
 
-  function formatAnswersText(){
-    return "Kit de Ferramentas — Incubadora de Expert\n\n" + sectionsText(null);
+  function buildAnswersPdf(){
+    var INK = "#0B0B0C", ASH = "#71717A", EMBER = "#FF6B1A", MIST = "#D4D4D8", BODY = "#3F3F46";
+    var doc = new window.jspdf.jsPDF({unit:"pt", format:"a4"});
+    var pageW = doc.internal.pageSize.getWidth();
+    var pageH = doc.internal.pageSize.getHeight();
+    var margin = 48;
+    var maxWidth = pageW - margin*2;
+    var y = margin;
+
+    function orangeBar(){
+      doc.setFillColor.apply(doc, hexRgb(EMBER));
+      doc.rect(0, 0, pageW, 5, "F");
+    }
+    function ensureSpace(h){
+      if(y + h > pageH - margin){
+        doc.addPage();
+        orangeBar();
+        y = margin;
+      }
+    }
+
+    orangeBar();
+    doc.setTextColor.apply(doc, hexRgb(ASH));
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(9);
+    doc.text("INCUBADORA DE EXPERT", margin, y);
+    y += 26;
+
+    doc.setTextColor.apply(doc, hexRgb(INK));
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(20);
+    doc.splitTextToSize("Kit de Ferramentas", maxWidth).forEach(function(l){ doc.text(l, margin, y); y += 24; });
+    y += 4;
+
+    var nome = (state.answers.nome || "").toString().trim();
+    var today = new Date();
+    var dateStr = String(today.getDate()).padStart(2,"0") + "/" + String(today.getMonth()+1).padStart(2,"0") + "/" + today.getFullYear();
+    doc.setTextColor.apply(doc, hexRgb(ASH));
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(10);
+    doc.text((nome ? nome + " · " : "") + dateStr, margin, y);
+    y += 10;
+    doc.setDrawColor.apply(doc, hexRgb(MIST));
+    doc.line(margin, y, pageW - margin, y);
+    y += 24;
+
+    SECTIONS.forEach(function(sec, si){
+      var qs = QUESTIONS.filter(function(q){ return q.section === si; });
+      if(!qs.some(isAnswered)) return;
+
+      ensureSpace(34);
+      doc.setTextColor.apply(doc, hexRgb(EMBER));
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(11);
+      doc.text(sec.title.toUpperCase(), margin, y);
+      y += 8;
+      doc.setDrawColor.apply(doc, hexRgb(MIST));
+      doc.line(margin, y, pageW - margin, y);
+      y += 18;
+
+      qs.forEach(function(q){
+        if(!isAnswered(q)) return;
+        doc.setTextColor.apply(doc, hexRgb(INK));
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(10.5);
+        var labelLines = doc.splitTextToSize(q.label, maxWidth);
+        ensureSpace(labelLines.length * 14 + 15);
+        labelLines.forEach(function(l){ doc.text(l, margin, y); y += 14; });
+        y += 2;
+
+        doc.setTextColor.apply(doc, hexRgb(BODY));
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(10.5);
+        doc.splitTextToSize(answerText(q), maxWidth).forEach(function(l){
+          ensureSpace(15);
+          doc.text(l, margin, y);
+          y += 14;
+        });
+        y += 16;
+      });
+    });
+
+    var totalPages = doc.internal.getNumberOfPages();
+    for(var p = 1; p <= totalPages; p++){
+      doc.setPage(p);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(8);
+      doc.setTextColor.apply(doc, hexRgb(ASH));
+      doc.text("incubadoradeexpert.com.br", margin, pageH - 24);
+      doc.text(String(p) + "/" + totalPages, pageW - margin, pageH - 24, {align:"right"});
+    }
+
+    doc.save("kit-de-ferramentas-" + slug(state.answers.nome) + ".pdf");
   }
 
   function buildSheetRow(){
@@ -787,20 +866,13 @@ main#stage{
     var dlStatus = el("p", {class:"status-msg"});
     var dlBtn = el("button", {class:"btn-ghost", type:"button", text:"Baixar uma cópia pra mim"});
     dlBtn.addEventListener("click", function(){
-      if(!window.claude || !window.claude.downloads){
-        dlStatus.textContent = "Download não disponível aqui.";
-        return;
-      }
-      window.claude.downloads.save({
-        filename:"kit-de-ferramentas-" + slug(state.answers.nome) + ".txt",
-        data: formatAnswersText()
-      }).then(function(){
+      try{
+        buildAnswersPdf();
         dlStatus.textContent = "Baixado.";
         dlStatus.className = "status-msg ok";
-      }).catch(function(err){
-        if(err && err.code === "declined"){ dlStatus.textContent = ""; return; }
+      }catch(err){
         dlStatus.textContent = "Não consegui baixar agora.";
-      });
+      }
     });
     actions.appendChild(dlBtn);
 

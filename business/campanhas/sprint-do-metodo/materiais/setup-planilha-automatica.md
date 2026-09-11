@@ -4,6 +4,14 @@ Passo a passo pra ligar o diagnóstico interativo numa planilha Google que se pr
 sozinha, sem depender do cliente clicar em nada. Uma vez feito, fica pronto pra sempre —
 não precisa repetir a cada cliente novo.
 
+> **Atualização 2026-09-11:** o script original só gravava a linha na planilha e não
+> avisava ninguém — quem quisesse saber de uma resposta nova precisava abrir a planilha
+> manualmente. A versão abaixo já inclui `MailApp.sendEmail(...)`. **Se você já tem esse
+> script publicado, é só abrir o projeto Apps Script existente (mesma planilha →
+> Extensões → Apps Script), substituir o código pela versão nova abaixo, salvar e
+> reimplantar** (Implantar → Gerenciar implantações → ✏️ na implantação ativa → Nova
+> versão → Implantar). Não precisa criar planilha nova nem mudar a URL.
+
 ---
 
 ## Passo 1 — Criar a planilha
@@ -18,8 +26,11 @@ não precisa repetir a cada cliente novo.
 2. Apague o conteúdo padrão (`function myFunction() {}`) e cole isto:
 
 ```javascript
+var DEST_EMAIL = "karolsenna@incubadoradeexpert.com.br";
+
 function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getActiveSheet();
 
   var headers = [
     "Data","Nome","Profissão","Anos de Atuação","WhatsApp",
@@ -41,6 +52,13 @@ function doPost(e) {
 
   var payload = JSON.parse(e.postData.contents);
   sheet.appendRow(payload.row);
+
+  MailApp.sendEmail({
+    to: DEST_EMAIL,
+    subject: "Novo Diagnóstico Sprint do Método: " + (payload.row[1] || "sem nome"),
+    body: "Nome: " + (payload.row[1] || "") + "\nWhatsApp: " + (payload.row[4] || "") +
+          "\n\nRespostas completas na planilha:\n" + ss.getUrl()
+  });
 
   return ContentService
     .createTextOutput(JSON.stringify({ok: true}))
