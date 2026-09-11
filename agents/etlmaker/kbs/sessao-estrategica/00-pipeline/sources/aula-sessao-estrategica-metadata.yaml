@@ -1,0 +1,11 @@
+source:
+  id: "SRC-sessao-estrategica-001"
+  original_path: "https://arcane.arka.education/jornada"
+  format: "video-transcricao"
+  title: "Aula: Sessão Estratégica"
+  author: "Euriler Jube (a confirmar)"
+  date: ""
+  total_sections: 1
+  total_paragraphs: 6320
+  total_words: 31405
+  normalized_path: "00-pipeline/sources/aula-sessao-estrategica-normalized.md"

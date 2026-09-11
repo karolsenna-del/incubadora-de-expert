@@ -1,0 +1,14 @@
+ingestion_manifest:
+  kb_slug: "sessao-estrategica"
+  total_sources: 1
+  total_words: 31405
+  total_sections: 1
+  total_paragraphs: 6320
+  sources:
+    - id: "SRC-sessao-estrategica-001"
+      title: "Aula: Sessão Estratégica"
+      words: 31405
+      sections: 1
+      paragraphs: 6320
+      format: "video-transcricao"
+  timestamp: "2026-09-11T00:00:00Z"
