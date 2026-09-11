@@ -10,6 +10,7 @@ Provisiona:
   - ffmpeg (com drawtext + sidechaincompress)  -> brew (Mac) / winget (Windows)
   - whisper-cli (whisper.cpp)                  -> brew (Mac) / release GitHub (Windows)
   - modelo ggml-medium.bin (~1.5GB)            -> download direto
+  - modelo face_detection_yunet_2023mar.onnx (~230KB) -> download direto
   - venv local + pacotes (silero-vad, torch, opencv, ...) -> escolhe Python compativel
   - fontes (so no Mac, pro font= por nome; no Windows a legenda usa fontfile embarcado)
   - wrapper do slash command /auroq-squad-edicao-arcane
@@ -28,6 +29,11 @@ LOCAL_BIN = _common.LOCAL_BIN_DIR
 
 MODEL_URL = "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-medium.bin"
 MODEL_SIZE = _common.MODEL_SIZE  # bytes esperados do ggml-medium.bin (detecta download incompleto)
+# YuNet — detector de rosto usado por video-produce-zoom.py e video-reframe-vertical.py.
+# Substituiu cv2.CascadeClassifier (Haar) na v1.2.0: opencv-python-headless 5.0.0 removeu
+# a classe inteira da API Python (nao e so falta de dado XML) — ver knowledge/04-troubleshooting.md Bug 12.
+YUNET_URL = "https://github.com/opencv/opencv_zoo/raw/main/models/face_detection_yunet/face_detection_yunet_2023mar.onnx"
+YUNET_SIZE = 232589
 # release prebuilt do whisper.cpp pro Windows (contem whisper-cli.exe + dlls ggml).
 # Pinado numa versao que TEM o asset whisper-bin-x64.zip (o v1.7.4 antigo dava 404).
 WHISPER_WIN_URL = "https://github.com/ggml-org/whisper.cpp/releases/download/v1.9.1/whisper-bin-x64.zip"
@@ -193,6 +199,16 @@ def ensure_model():
         got = os.path.getsize(dest) if os.path.exists(dest) else 0
         WARNINGS.append(f"modelo ggml-medium.bin incompleto ({got}/{MODEL_SIZE} bytes) — rode o install de novo (retoma de onde parou)")
         print(f"   [!] modelo incompleto ({got}/{MODEL_SIZE}) — idempotente: rode de novo pra retomar")
+
+    yunet_dest = os.path.join(SQUAD_DIR, "models", "face_detection_yunet_2023mar.onnx")
+    if os.path.isfile(yunet_dest) and os.path.getsize(yunet_dest) == YUNET_SIZE:
+        print(f"   OK — modelo YuNet ja presente ({yunet_dest})")
+    elif download_verified(YUNET_URL, yunet_dest, YUNET_SIZE, "modelo YuNet (~230KB, deteccao de rosto)"):
+        print(f"   OK — {yunet_dest}")
+    else:
+        got = os.path.getsize(yunet_dest) if os.path.exists(yunet_dest) else 0
+        WARNINGS.append(f"modelo YuNet incompleto ({got}/{YUNET_SIZE} bytes) — video-produce-zoom.py e video-reframe-vertical.py precisam dele")
+        print(f"   [!] modelo YuNet incompleto ({got}/{YUNET_SIZE})")
 
 
 # ─────────────────────────────────────────────────────────────────────────────

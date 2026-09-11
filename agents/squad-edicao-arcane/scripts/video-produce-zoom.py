@@ -7,6 +7,11 @@ Sections JSON tem trechos com label normal/emphasis/critical.
 Cada label vira um zoom diferente (mais aperto pro critical).
 Adaptado pra source vertical (1080x1920) — cropa fracao centrada no rosto.
 
+Deteccao de rosto via YuNet (cv2.FaceDetectorYN) — nao Haar Cascade. A partir do
+opencv-python-headless 5.0.0, cv2.CascadeClassifier foi removido da API Python
+(nao e so falta do XML — a classe nao existe mais), ver knowledge/04-troubleshooting.md
+Bug 12. Requer models/face_detection_yunet_2023mar.onnx (baixado pelo install.py).
+
 --speed: reescalada start/end de cada section dividindo por SPEED. Use quando
 o video ja foi acelerado mas as sections foram montadas com timestamps do
 transcript pre-speed. Default 1.0 (sem reescala).
@@ -48,25 +53,25 @@ zoom_fracs = {  # fracao do height usada (resto vira crop)
     "critical": 0.70,   # cropa ~30%
 }
 
-# ─── face detection ───
+# ─── face detection (YuNet — ver nota no docstring) ───
 cap = cv2.VideoCapture(video)
 width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-casc = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+yunet_model = os.path.join(_common.SQUAD_DIR, "models", "face_detection_yunet_2023mar.onnx")
+detector = cv2.FaceDetectorYN_create(yunet_model, "", (width, height), 0.7, 0.3, 5000)
 
 centers = []
 for fi in [int(total*i/10) for i in range(10)]:
     cap.set(cv2.CAP_PROP_POS_FRAMES, fi)
     ret, frame = cap.read()
     if not ret: continue
-    small = cv2.resize(frame, None, fx=0.25, fy=0.25)
-    gray = cv2.cvtColor(small, cv2.COLOR_BGR2GRAY)
-    faces = casc.detectMultiScale(gray, 1.1, 5, minSize=(30,30))
-    if len(faces):
+    detector.setInputSize((frame.shape[1], frame.shape[0]))
+    _, faces = detector.detect(frame)
+    if faces is not None and len(faces):
         faces = sorted(faces, key=lambda f: f[2]*f[3], reverse=True)
-        x,y,w,h = faces[0]
-        centers.append((int((x+w/2)/0.25), int((y+h/2)/0.25)))
+        x,y,w,h = faces[0][:4]
+        centers.append((int(x+w/2), int(y+h/2)))
 cap.release()
 
 if centers:

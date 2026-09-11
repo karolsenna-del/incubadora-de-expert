@@ -93,6 +93,11 @@ if _common.IS_MAC:
 check(f"modelo ggml-medium.bin ({MODEL})",
     lambda: os.path.isfile(MODEL) and os.path.getsize(MODEL) == _common.MODEL_SIZE)
 
+# ─── Modelo YuNet (deteccao de rosto — video-produce-zoom.py, video-reframe-vertical.py) ───
+YUNET = os.path.join(_common.SQUAD_DIR, "models", "face_detection_yunet_2023mar.onnx")
+check(f"modelo YuNet ({YUNET})",
+    lambda: os.path.isfile(YUNET) and os.path.getsize(YUNET) == 232589)
+
 # ─── Venv local ───
 check(f"venv local ({VPY})", lambda: os.path.exists(VPY))
 if os.path.exists(VPY):
@@ -115,7 +120,7 @@ warn("fonte Poppins-Bold.ttf (estilo organico)",
 # ─── Scripts ───
 for scr in ("_common.py", "video-speech-cut.py", "video-speed-up.py",
             "video-transcribe.py", "video-captions.py", "video-produce-zoom.py",
-            "video-add-music.py"):
+            "video-add-music.py", "video-reframe-vertical.py", "video-headline.py"):
     check(scr, (lambda s: lambda: os.path.isfile(os.path.join(SQUAD_DIR, "scripts", s)))(scr))
 
 # ─── Data ───

@@ -131,6 +131,8 @@ squad-edicao-arcane/
 │   ├── video-transcribe.py      (whisper + prompt)
 │   ├── video-captions.py        (legenda estilo viral — venv)
 │   ├── video-produce-zoom.py    (zoom dinâmico no rosto — venv)
+│   ├── video-reframe-vertical.py (16:9 -> 9:16 seguindo o rosto — venv)
+│   ├── video-headline.py        (headline fixa no topo, primeiros segundos)
 │   ├── video-add-music.py       (trilha + ducking)
 │   └── doctor.py                (health check cross-platform)
 ├── knowledge/

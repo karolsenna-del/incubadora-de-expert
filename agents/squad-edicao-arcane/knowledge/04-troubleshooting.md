@@ -180,6 +180,41 @@ Ver **Bug 2** (seção Windows): o `_common` usa short-path 8.3 automaticamente;
 
 **Fix:** **abrir um novo terminal** e rodar o `install.py`/`doctor.py` de novo.
 
+## Bug 12: `cv2.CascadeClassifier` — `AttributeError: module 'cv2' has no attribute 'CascadeClassifier'`
+
+**Sintoma:** `video-produce-zoom.py` (ou qualquer script novo que faça detecção de rosto) quebra com esse `AttributeError` ao chamar `cv2.CascadeClassifier(...)`.
+
+**Causa:** A partir do `opencv-python-headless` **5.0.0**, a classe `CascadeClassifier` (detector Haar) foi **removida da API Python** — não é falta do arquivo `.xml` de cascade (`cv2.data.haarcascades` existe, mas fica vazio), é a classe inteira que não existe mais no binding. `pip show opencv-python-headless` mostrando `5.0.0` confirma o build novo.
+
+**Fix (v1.2.0):** Todos os scripts de detecção de rosto migraram pra **YuNet** (`cv2.FaceDetectorYN`), o detector suportado nesse build novo:
+```python
+detector = cv2.FaceDetectorYN_create(model_path, "", (width, height), 0.7, 0.3, 5000)
+detector.setInputSize((frame.shape[1], frame.shape[0]))
+_, faces = detector.detect(frame)   # faces[i][:4] = x, y, w, h
+```
+Modelo (`models/face_detection_yunet_2023mar.onnx`, ~230KB) é baixado automaticamente pelo `install.py` (etapa `[3/6]`, junto do `ggml-medium.bin`). Se faltar: `python scripts/doctor.py` reporta `[FAIL]` nele — rode o `install.py` de novo (idempotente) ou baixe manualmente de `https://github.com/opencv/opencv_zoo/raw/main/models/face_detection_yunet/face_detection_yunet_2023mar.onnx` pra `<squad>/models/`.
+
+**Achado em:** 11/09/2026, testando o Clip Expert (squad que reaproveita este) — descoberto como efeito colateral ao tentar cropar um vídeo horizontal (16:9) pra vertical (9:16) rastreando o rosto.
+
+## Bug 13: Acento corrompido (ou filtro falha) ao passar `-vf`/`-filter_complex` com texto acentuado direto na linha de comando (Windows)
+
+**Sintoma:** Texto com "Ú", "Ã", "É" etc. sai como `?` ou lixo no vídeo final — ou o ffmpeg nem roda: `Error parsing a filter description` / `No option name near '...'`.
+
+**Causa:** No Windows, quando o Python monta o argv pra chamar o ffmpeg via `subprocess.run([...])` passando o filtro como **string na lista de argumentos** (`-vf "drawtext=text='ÚNICO'..."`), o texto acentuado passa pela recodificação de codepage do console ao virar linha de comando C — e corrompe. Em alguns casos o próprio caractere corrompido quebra a sintaxe do filtro (aspas ficam desalinhadas) e o ffmpeg nem processa.
+
+**Fix:** **Nunca** passar filtro com texto dinâmico (transcript, headline, qualquer texto que não seja ASCII fixo) via `-vf "<string>"` direto no argv. Escrever o grafo do filtro num **arquivo `.txt` em UTF-8** e usar `-filter_complex_script <arquivo>` (mapeando `-map "[outv]" -map "0:a"` explicitamente) — é o padrão que `video-captions.py` já usava e que `video-headline.py` (novo) segue também:
+```python
+ff = _common.tmp_path(".txt")
+with open(ff, "w", encoding="utf-8") as fout:
+    fout.write(graph)
+subprocess.run([FFMPEG, "-y", "-i", video, "-filter_complex_script", ff,
+    "-map", "[outv]", "-map", "0:a", ...], check=True)
+os.remove(ff)
+```
+O ffmpeg lê o arquivo com seu próprio parser de encoding (UTF-8), sem passar pelo argv do processo — o caminho de escaping do `_common._drawtext_fontfile_value` (aspas + `:` escapado) continua necessário do mesmo jeito, só a fonte do texto que muda de lugar.
+
+**Achado em:** 11/09/2026, implementando o `video-headline.py` (headline com acento saindo corrompida até trocar `-vf` por `-filter_complex_script`).
+
 ### W5: nada de bash
 
 O squad **não usa mais bash** — todos os scripts são `.py`. Não precisa de Git Bash nem WSL no Windows. Se algum agent antigo mandar `bash ...sh`, está desatualizado: o comando certo é `python ...py`.
