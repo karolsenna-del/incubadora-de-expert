@@ -13,6 +13,12 @@
  * (depois de ler o cenário, como vai conduzir esse produtor) — mesma aba,
  * não é ferramenta separada nem arquivo separado.
  *
+ * Atualizado 11/09/2026 (design-entregaveis.md Seção 11): Parte 2 passou de 7
+ * para 9 campos (combinando os campos da Milena com os de uma análise externa
+ * de posicionamento), e a Parte 1 da versão avançada passou de 9 para 13
+ * campos (acrescentou situação financeira, urgência, informações que faltam
+ * e possibilidades). A versão essencial (por serviço) não muda.
+ *
  * Como usar: ver `SETUP-FERRAMENTAS.md` na mesma pasta.
  */
 
@@ -27,15 +33,19 @@ var COR_PAPER_DEEP = "#E4DBC4";
 var COR_RULE = "#D9CDB0";
 var COR_GOLD_TINT = "#F3E6C8";
 
-// Parte 2, igual em todas as 4 abas — adicionado 08/09 a pedido da Milena:
+// Parte 2, igual em todas as 4 abas — adicionado 08/09 a pedido da Milena,
+// ampliado de 7 para 9 campos em 11/09 (combinando com uma análise externa
+// de posicionamento, ver design-entregaveis.md Seção 11):
 // depois de ler o cenário (Parte 1), ela define como vai conduzir o caso.
 var CAMPOS_PLANO_CONDUCAO = [
-  ["O QUE PRECISA SER RESOLVIDO PRIMEIRO?", "A prioridade real, não a mais urgente na fala do produtor"],
-  ["QUEM PRECISA SER ENVOLVIDO?", "Pessoas cuja participação ou concordância o caso exige"],
+  ["O QUE AINDA PRECISA SER INVESTIGADO/CONFIRMADO?", "Informação que ainda é suposição, não fato verificado"],
+  ["QUAIS PERGUNTAS FAZER AO PRODUTOR?", "O que perguntar antes de orientar, não só executar o pedido"],
+  ["O QUE PRECISA SER EXPLICADO AO PRODUTOR?", "O que ele precisa entender pra decidir com clareza"],
   ["QUAIS DOCUMENTOS PRECISAM SER LEVANTADOS?", "O que falta reunir antes do próximo passo"],
-  ["O QUE PRECISA SER CONFIRMADO?", "Informação que ainda é suposição, não fato verificado"],
-  ["QUAIS RISCOS PRECISAM SER COMUNICADOS?", "O que o produtor precisa saber antes de decidir"],
+  ["QUEM PRECISA SER ENVOLVIDO/PARTICIPAR?", "Pessoas cuja participação ou concordância o caso exige"],
+  ["QUAIS RISCOS OU POSSIBILIDADES PRECISAM SER APRESENTADOS?", "O que o produtor precisa saber antes de decidir"],
   ["QUAL É O PRÓXIMO PASSO CONCRETO?", "Uma ação, não uma intenção"],
+  ["COMO CONDUZIR POSSÍVEIS OBJEÇÕES OU CONFLITOS?", "Como sustentar a condução sob pressão ou resistência"],
   ["COMO O PROCESSO SERÁ ACOMPANHADO?", "Quando e por qual canal você retorna pro produtor"]
 ];
 
@@ -160,8 +170,12 @@ function criarTemplateMapaAvancado() {
     ["PROBLEMA REAL", "O que precisa ficar resolvido de fato e por que isso importa neste caso — mesma leitura da versão rápida, antes de mapear quem está envolvido"],
     ["PESSOAS ENVOLVIDAS", "Quem participa da decisão — nem sempre é só quem contratou"],
     ["DOCUMENTOS ENVOLVIDOS", "Matrícula, CAR, CCIR, ITR, inventário, procurações..."],
+    ["SITUAÇÃO FINANCEIRA (QUANDO PERTINENTE)", "Capacidade de pagamento, dívidas, garantias ou fontes de recurso que afetam a decisão — adicionado 11/09"],
     ["INTERESSES DE CADA PARTE", "O que cada pessoa envolvida quer, mesmo que não diga abertamente"],
     ["RISCOS", "O que pode dar errado — jurídico, financeiro, relacional"],
+    ["URGÊNCIA", "O que tem prazo real correndo e o que pode esperar — adicionado 11/09"],
+    ["INFORMAÇÕES QUE FALTAM", "O que ainda não se sabe e precisa ser levantado antes de avançar — adicionado 11/09"],
+    ["POSSIBILIDADES", "Caminhos ou soluções que ainda não foram considerados pelo produtor — adicionado 11/09"],
     ["CONFLITOS IDENTIFICADOS", "Onde os interesses batem de frente"],
     ["PRIORIDADES", "O que precisa ser resolvido primeiro pra destravar o resto"],
     ["PRÓXIMOS PASSOS", "Sequência de ações, não só a próxima"]

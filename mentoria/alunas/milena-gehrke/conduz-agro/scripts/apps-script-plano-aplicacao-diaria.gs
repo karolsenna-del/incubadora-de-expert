@@ -74,7 +74,7 @@ function criarPlanoAplicacaoDiaria() {
       "✍️ Liste 3 momentos da semana em que se sentiu insegura",
       "🎭 Escolha 1 produtor real e ensaie mentalmente como nomearia seu papel nesse caso",
       "👥 Compartilhe com alguém de confiança 1 insight do diagnóstico e peça a opinião dela"]],
-    [2,"S2","Pilares da autoridade + plano 12 meses",[
+    [2,"S2","Rota Personalizada Conduz Agro",[
       "✍️ Releia seu plano de 12 meses e escreva a meta do mês 1 num post-it",
       "💭 Escreva o que \"condução\" significa pra você, com suas próprias palavras",
       "🧪 Autoavaliação rápida — marque de 1 a 5 cada um dos 6 pilares do método",
@@ -112,7 +112,7 @@ function criarPlanoAplicacaoDiaria() {
       "💭 Releia o que mudou entre a proposta antiga e a nova"]],
     [8,"S8","Aplicação real + checkpoint",[
       "🎭 Aplique o método completo (S1-S7) num atendimento real hoje",
-      "🧪 Registre no Checklist de Evidências sua 1ª marcação",
+      "🧪 Registre no Checklist de Evidências sua 2ª marcação",
       "✍️ Escreva o que já mudou desde a S1 até hoje",
       "👥 Conte pra alguém de confiança o resultado comercial concreto que você conseguiu",
       "🎧 Ouça algo inspirador e descanse — feche a Etapa 1 antes do aprofundamento"]],
@@ -136,7 +136,7 @@ function criarPlanoAplicacaoDiaria() {
       "💭 Você conseguiu não tomar partido essa semana?"]],
     [12,"S12","Diagnóstico avançado + checkpoint",[
       "🧪 Preencha o Mapa do Caso avançado pra 1 situação complexa real",
-      "🧪 Registre sua 2ª marcação no Checklist de Evidências",
+      "🧪 Registre sua 3ª marcação no Checklist de Evidências",
       "✍️ Compare seu diagnóstico de hoje com o da S1",
       "💭 Escreva 1 aprendizado da sub-fase de aprofundamento emocional",
       "🎧 Ouça algo leve e descanse antes de entrar na sub-fase de comunicação"]],
@@ -160,17 +160,17 @@ function criarPlanoAplicacaoDiaria() {
       "💭 Você manteve a condução mesmo sob pressão essa semana?"]],
     [16,"S16","Do impasse ao próximo passo + checkpoint",[
       "🎭 Use o Simulador de Conversas revisitado numa objeção real recente",
-      "🧪 Registre sua 3ª marcação no Checklist de Evidências",
+      "🧪 Registre sua 4ª marcação no Checklist de Evidências",
       "🎯 Formalize responsabilidades e próximo passo de 1 caso real",
       "✍️ Compare sua condução de objeções hoje com a da S6",
       "👥 Celebre a evolução da sub-fase com alguém de confiança"]],
-    [17,"S17","Posicionamento avançado",[
+    [17,"S17","Território de Autoridade",[
       "✍️ Revise sua identidade profissional definida na S7",
       "🪞 Observe sua postura e voz no espelho antes de 1 atendimento real",
       "✍️ Liste 3 provas concretas da sua autoridade acumuladas até agora",
       "🎯 Ajuste 1 detalhe de presença (tom, postura) num atendimento",
       "💭 Você parece mais condutora hoje do que na S7?"]],
-    [18,"S18","Mapa de Posicionamento revisado",[
+    [18,"S18","Mapa de Posicionamento + Comunicação",[
       "🧪 Duplique a aba do Mapa de Posicionamento e comece a revisão",
       "✍️ Atualize \"Eu resolvo\" com evidência de um caso real recente",
       "✍️ Atualize \"Qual valor entrego\" com um resultado mensurável",
@@ -186,7 +186,7 @@ function criarPlanoAplicacaoDiaria() {
       "✍️ Revise seus limites de disponibilidade e prazo de resposta",
       "🎯 Diga não a 1 pedido fora do seu escopo essa semana",
       "✍️ Atualize o plano de posicionamento 30/60/90 com o que já alcançou",
-      "🧪 Registre sua 4ª marcação no Checklist de Evidências",
+      "🧪 Registre sua 5ª marcação no Checklist de Evidências",
       "🎧 Celebre a evolução da sub-fase — ouça algo que te inspire"]],
     [21,"S21","Revisão da jornada completa",[
       "✍️ Releia seu diagnóstico da S1 e compare com quem você é hoje",
@@ -207,7 +207,7 @@ function criarPlanoAplicacaoDiaria() {
       "✍️ Escreva sua versão de \"Decidir, Conduzir, Acompanhar\"",
       "🪞 Releia o protocolo em voz alta, pro espelho, e ajuste o que não soa como você"]],
     [24,"S24","Indicadores finais + continuidade",[
-      "🧪 Finalize o Checklist de Evidências com a 5ª e última marcação",
+      "🧪 Finalize o Checklist de Evidências com a 6ª e última marcação",
       "✍️ Escreva seus indicadores de evolução mais importantes",
       "🎯 Monte seu plano de continuidade pros próximos 3 meses",
       "👥 Grave (ou escreva) seu depoimento sobre a jornada",

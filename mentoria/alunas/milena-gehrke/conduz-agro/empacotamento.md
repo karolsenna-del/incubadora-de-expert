@@ -41,7 +41,7 @@ Porque o mercado só oferece dois caminhos: curso técnico gravado (ensina mais 
 | Destrava Condução — S.O.S. de Caso Real (2 usos no período, com Ficha de Inscrição) | Travou de vez num caso real? Manda o contexto pronto e a Milena resolve com você — sem perder tempo explicando do zero numa call |
 | Agente de IA Técnico em Regularização | Dúvida técnica pontual não vira insegurança — tem retaguarda, mesmo o programa sendo 100% comportamental |
 | WhatsApp direto com a mentora | Pro que só um julgamento humano resolve, você tem acesso direto — não fica sozinho no caso difícil |
-| Checklist de Evidências da Autoridade (5 marcações) | Você enxerga sua própria evolução documentada — não é sensação, é registro comparável |
+| Checklist de Evidências da Autoridade (6 marcações, ampliado 11/09) | Você enxerga sua própria evolução documentada — não é sensação, é registro comparável |
 | Protocolo Pessoal de Condução (entregável final) | Sai do programa com um sistema seu, repetível, pra aplicar sozinho depois que o programa acabar |
 | Plano de posicionamento 30/60/90 | Não fica só no "entendi", sai com passos concretos pros 3 meses seguintes |
 | Gravação de todas as sessões | Pode voltar e rever qualquer conversa quando quiser, sem depender da memória |
@@ -77,7 +77,7 @@ Racional do número-âncora (R$3.997): fica acima do piso da faixa aprovada na F
 - **Duração:** 12 meses, 24 sessões quinzenais de 60-90min
 - **Agenda:** Início a definir por turma de entrada (individual, não depende de fechar turma — pode iniciar a qualquer momento após fechamento)
 
-**Produto 360 (combinação que diferencia):** sessões 1:1 ao vivo + gravação + trilha diária de aplicação + 2 agentes de IA self-service ilimitados (Método, Preparador) + Destrava Condução (S.O.S. capado, Milena resolve) + Agente Técnico em Regularização + WhatsApp direto com a mentora + assessment com 5 checkpoints cumulativos + protocolo pessoal como entregável final. Nenhum concorrente mapeado (PRD Seção 2) combina esses elementos.
+**Produto 360 (combinação que diferencia):** sessões 1:1 ao vivo + gravação + trilha diária de aplicação + 2 agentes de IA self-service ilimitados (Método, Preparador) + Destrava Condução (S.O.S. capado, Milena resolve) + Agente Técnico em Regularização + WhatsApp direto com a mentora + assessment com 6 checkpoints cumulativos (S1 ponto de partida) + protocolo pessoal como entregável final. Nenhum concorrente mapeado (PRD Seção 2) combina esses elementos.
 
 ## Passo 5 — Cartão de Identidade
 

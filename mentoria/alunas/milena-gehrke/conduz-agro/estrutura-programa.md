@@ -1,6 +1,6 @@
 # Estrutura do Programa — Conduz Agro
 
-> Status: ✓ APROVADO v2 (QG-MC-004) — 21/08/2026
+> Status: ✓ APROVADO v2 (QG-MC-004) — 21/08/2026 | **Addendum 11/09/2026** — S2 reenquadrada, Checklist de Evidências passa a ter 6 marcações (S1 inclusa), ver `design-entregaveis.md` Seção 11
 > Executa contra: `prd.md`
 > v2: reestruturado em 2 etapas (resultado comercial rápido + aprofundamento), mesma lógica do modelo da Karol (validação em 4 meses, acesso de 12 meses, aprofundamento depois)
 
@@ -14,14 +14,14 @@ Passagem condensada pelos 6 pilares do método na versão essencial — só o su
 
 | # | Sessão | Foco essencial | Checkpoint de saída |
 |---|--------|-----------------|----------------------|
-| S1 | Mês 1 Q1 | Diagnóstico inicial + papel atual (Diagnóstico da Autoridade Aplicada + DISC) | Diagnóstico preenchido |
-| S2 | Mês 1 Q2 | Pilares da autoridade + plano dos 12 meses (2 etapas explicadas ao mentorado) | Plano de 12 meses fechado |
+| S1 | Mês 1 Q1 | Diagnóstico inicial + papel atual (Diagnóstico da Autoridade Aplicada + DISC) | Diagnóstico preenchido + 1ª marcação (ponto de partida) no Checklist de Evidências |
+| S2 | Mês 1 Q2 | Rota Personalizada Conduz Agro — leitura estratégica do diagnóstico + pilares da autoridade + plano dos 12 meses (2 etapas explicadas ao mentorado) *(renomeada 11/09)* | Roteiro Personalizado de Evolução (plano de 12 meses) fechado |
 | S3 | Mês 2 Q1 | Segurança interna essencial — travas principais + Círculo de Controle da Condução (o suficiente pra agir apesar do medo) | Círculo de Controle preenchido |
 | S4 | Mês 2 Q2 | Leitura do produtor essencial — Mapa do Caso rápido + perfis de produtor | Mapa do Caso de 1 atendimento real |
 | S5 | Mês 3 Q1 | Comunicação de valor essencial — escuta, perguntas, tradução técnica, estrutura de conversa | Roteiro de conversa estruturado |
 | S6 | Mês 3 Q2 | Condução de objeções essencial — objeção de preço, Simulador de Conversas | Simulador aplicado numa objeção real |
 | S7 | Mês 4 Q1 | Posicionamento e precificação essencial — identidade, Mapa de Posicionamento, proposta reformulada | Proposta comercial reformulada |
-| S8 | Mês 4 Q2 | Aplicação em caso real + **checkpoint de resultado comercial** | Resultado comercial concreto registrado (fechou sem desconto / cobrou mais / conduziu objeção real) + Checklist de Evidências (1ª marcação) |
+| S8 | Mês 4 Q2 | Aplicação em caso real + **checkpoint de resultado comercial** | Resultado comercial concreto registrado (fechou sem desconto / cobrou mais / conduziu objeção real) + Checklist de Evidências (2ª marcação *(renumerada 11/09)*) |
 
 **Marco da Etapa 1:** até o mês 4, o mentorado já tem pelo menos 1 resultado comercial real e mensurável — não é mais promessa, é fato.
 
@@ -33,10 +33,10 @@ Retoma os mesmos 6 pilares com profundidade — trabalho emocional mais denso, c
 |---|---|---|---|
 | 2.1 — Aprofundamento Emocional e de Cenário | 5-6 | S9-S12 | Travas arraigadas, IE aplicada com casos reais acumulados, conflitos familiares, decisão patrimonial, mediação |
 | 2.2 — Aprofundamento em Comunicação e Condução | 7-8 | S13-S16 | Comunicação de valor avançada, simulação integral, objeções complexas, mediação sob pressão |
-| 2.3 — Aprofundamento em Posicionamento e Precificação | 9-10 | S17-S20 | Autoridade x aparência de autoridade, presença, precificação avançada, plano de posicionamento 30/60/90 revisado |
+| 2.3 — Aprofundamento em Posicionamento e Precificação | 9-10 | S17-S20 | Autoridade x aparência de autoridade, presença, território de autoridade, comunicação do posicionamento pros canais *(atualizado 11/09)*, precificação avançada, plano de posicionamento 30/60/90 revisado |
 | 2.4 — Consolidação | 11-12 | S21-S24 | Revisão da jornada, caso real final, Protocolo Pessoal de Condução, indicadores + continuidade |
 
-**Checkpoints da Etapa 2:** Checklist de Evidências da Autoridade marcado ao final de cada sub-fase (S12, S16, S20, S24) — 4 marcações cumulativas, além da 1ª feita em S8.
+**Checkpoints da Etapa 2:** Checklist de Evidências da Autoridade marcado ao final de cada sub-fase (S12, S16, S20, S24) — 4 marcações cumulativas, além das feitas em S1 (ponto de partida) e S8 *(renumerado 11/09)*.
 
 ## Sessões 1:1 — Parâmetros Gerais
 
@@ -83,7 +83,7 @@ Construído ao final da S2, revisado ao final de cada etapa/sub-fase (S8, S12, S
 
 ## Checkpoints de Progresso
 
-5 checkpoints cumulativos no Checklist de Evidências da Autoridade: S8 (fim Etapa 1), S12, S16, S20 (sub-fases da Etapa 2), S24 (final). Cada um compara o estado atual com o diagnóstico de entrada (S1).
+6 checkpoints cumulativos no Checklist de Evidências da Autoridade *(ampliado de 5 para 6 em 11/09)*: S1 (ponto de partida), S8 (fim Etapa 1), S12, S16, S20 (sub-fases da Etapa 2), S24 (final). Cada um a partir de S8 compara o estado atual com a marcação de entrada feita em S1.
 
 ## Validação contra o PRD
 

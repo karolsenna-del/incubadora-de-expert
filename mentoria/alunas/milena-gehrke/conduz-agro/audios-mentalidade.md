@@ -8,7 +8,7 @@
 
 ---
 
-## Áudio 1 — Semana 2 (S2: Pilares da autoridade + plano dos 12 meses)
+## Áudio 1 — Semana 2 (S2: Rota Personalizada Conduz Agro)
 
 **Momento:** logo no início, depois do diagnóstico e da nomeação do papel atual (S1). O aluno acabou de assumir "eu não sou só executor, sou condutor em formação" — esse áudio reforça isso antes de entrar na parte tática.
 
@@ -24,7 +24,7 @@
 
 ## Áudio 2 — Semana 8 (S8: Aplicação real + checkpoint — fecha a Etapa 1)
 
-**Momento:** fim da Etapa 1 (tática, meses 1-4). O aluno acabou de aplicar o método completo num atendimento real e fez a 1ª marcação no Checklist de Evidências. Vai descansar antes de entrar na Etapa 2 (reflexiva, aprofundamento).
+**Momento:** fim da Etapa 1 (tática, meses 1-4). O aluno acabou de aplicar o método completo num atendimento real e fez a 2ª marcação no Checklist de Evidências (a 1ª foi na S1, ponto de partida). Vai descansar antes de entrar na Etapa 2 (reflexiva, aprofundamento).
 
 > Você chegou na semana 8. Isso significa que você já aplicou o método inteiro — diagnóstico, círculo de controle, leitura do produtor, comunicação de valor, condução de objeção, posicionamento — num caso real, não num exercício. Isso não é pouco.
 >
@@ -50,7 +50,7 @@
 
 ## Áudio 4 — Semana 20 (S20: Limites e plano de posicionamento + checkpoint)
 
-**Momento:** fim do bloco de posicionamento e precificação avançada (S17-S20), 4ª marcação no Checklist de Evidências. Antes de entrar na consolidação final (S21-24).
+**Momento:** fim do bloco de posicionamento e precificação avançada (S17-S20), 5ª marcação no Checklist de Evidências. Antes de entrar na consolidação final (S21-24).
 
 > Semana 20. Você já reformulou proposta, já cobrou mais do que cobraria há alguns meses, já disse não pra alguma coisa fora do seu escopo. Isso é limite sendo posto na prática, não só na teoria.
 >
@@ -62,7 +62,7 @@
 
 ## Áudio 5 — Semana 24 (S24: Indicadores finais + plano de continuidade — fecha o programa)
 
-**Momento:** última semana dos 12 meses. Depois de finalizar o Checklist de Evidências (5ª marcação) e montar o plano de continuidade. Fecha o arco todo do programa.
+**Momento:** última semana dos 12 meses. Depois de finalizar o Checklist de Evidências (6ª e última marcação) e montar o plano de continuidade. Fecha o arco todo do programa.
 
 > Você chegou no fim. Doze meses, vinte e quatro sessões, e um jeito de trabalhar completamente diferente de quem começou lá atrás.
 >

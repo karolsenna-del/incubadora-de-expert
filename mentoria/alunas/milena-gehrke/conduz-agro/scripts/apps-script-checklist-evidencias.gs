@@ -1,8 +1,12 @@
 /**
  * Conduz Agro — gera a tabela (formatada na identidade visual da Milena) do
  * Checklist de Evidências da Autoridade: 14 indicadores (já aprovados em
- * prd.md Seção 6 — "Critérios de Qualidade"), pontuados em 5 checkpoints
- * cumulativos (S8, S12, S16, S20, S24), com referência ao baseline da S1.
+ * prd.md Seção 6 — "Critérios de Qualidade"), pontuados em 6 checkpoints
+ * cumulativos (S1, S8, S12, S16, S20, S24) — S1 é o ponto de partida.
+ *
+ * Atualizado 11/09/2026 (design-entregaveis.md Seção 11): antes eram 5
+ * checkpoints (S8-S24) comparados ao Diagnóstico da S1 à parte; agora a
+ * própria S1 já marca a 1ª coluna deste checklist.
  *
  * Padrão diferente dos outros: NÃO duplica aba — é 1 tabela fixa que o aluno
  * vai preenchendo, coluna por coluna, ao longo dos 12 meses do programa.
@@ -29,22 +33,22 @@ function criarChecklistEvidencias() {
 
   sh.setColumnWidth(1, 60);
   sh.setColumnWidth(2, 320);
-  for (var c = 3; c <= 7; c++) sh.setColumnWidth(c, 90);
+  for (var c = 3; c <= 8; c++) sh.setColumnWidth(c, 90);
   sh.setHiddenGridlines(true);
 
   sh.getRange("A1:B1").merge().setValue("CHECKLIST DE EVIDÊNCIAS DA AUTORIDADE")
     .setFontColor(COR_PAPER).setFontWeight("bold").setFontSize(14).setHorizontalAlignment("center");
-  sh.getRange("A1:G1").setBackground(COR_OLIVE_DEEP);
+  sh.getRange("A1:H1").setBackground(COR_OLIVE_DEEP);
   sh.setRowHeight(1, 32);
 
-  sh.getRange("A2:B2").merge().setValue("Conduz Agro — 5 checkpoints cumulativos ao longo dos 12 meses. Pontue de 0 a 3 em cada coluna: 0 = ainda não · 1 = às vezes · 2 = na maioria das vezes · 3 = consistente. Compare sempre com o que você era na Sessão 1.")
+  sh.getRange("A2:B2").merge().setValue("Conduz Agro — 6 checkpoints cumulativos ao longo dos 12 meses, começando pela S1 (ponto de partida). Pontue de 0 a 3 em cada coluna: 0 = ainda não · 1 = às vezes · 2 = na maioria das vezes · 3 = consistente. Compare sempre com a coluna S1.")
     .setFontColor(COR_INK_SOFT).setFontStyle("italic").setFontSize(9).setHorizontalAlignment("center").setWrap(true);
-  sh.getRange("A2:G2").setBackground(COR_PAPER);
+  sh.getRange("A2:H2").setBackground(COR_PAPER);
   sh.setRowHeight(2, 40);
 
   // Cabeçalho da tabela
-  var headers = [["#", "Indicador", "S8", "S12", "S16", "S20", "S24"]];
-  sh.getRange("A4:G4").setValues(headers)
+  var headers = [["#", "Indicador", "S1", "S8", "S12", "S16", "S20", "S24"]];
+  sh.getRange("A4:H4").setValues(headers)
     .setBackground(COR_OLIVE).setFontColor(COR_PAPER).setFontWeight("bold").setFontSize(10)
     .setHorizontalAlignment("center");
   sh.getRange("B4").setHorizontalAlignment("left");
@@ -74,20 +78,20 @@ function criarChecklistEvidencias() {
     if (item[1] === null) {
       sh.getRange(row, 1, 1, 2).merge().setValue(item[0])
         .setBackground(COR_GOLD_TINT).setFontColor(COR_GOLD).setFontWeight("bold").setFontSize(9.5);
-      sh.getRange(row, 3, 1, 5).setBackground(COR_GOLD_TINT);
+      sh.getRange(row, 3, 1, 6).setBackground(COR_GOLD_TINT);
       sh.setRowHeight(row, 22);
     } else {
       sh.getRange(row, 1).setValue(item[0]).setFontColor(COR_INK_SOFT).setFontSize(9).setHorizontalAlignment("center");
       sh.getRange(row, 2).setValue(item[1]).setFontColor(COR_INK).setFontSize(10).setWrap(true);
-      sh.getRange(row, 1, 1, 7).setBackground(COR_PAPER)
+      sh.getRange(row, 1, 1, 8).setBackground(COR_PAPER)
         .setBorder(true, true, true, true, true, true, COR_RULE, SpreadsheetApp.BorderStyle.SOLID);
-      sh.getRange(row, 3, 1, 5).setHorizontalAlignment("center");
+      sh.getRange(row, 3, 1, 6).setHorizontalAlignment("center");
 
       var scoreRule = SpreadsheetApp.newDataValidation()
         .requireValueInList(["0", "1", "2", "3"], true)
         .setAllowInvalid(false)
         .build();
-      sh.getRange(row, 3, 1, 5).setDataValidation(scoreRule);
+      sh.getRange(row, 3, 1, 6).setDataValidation(scoreRule);
 
       sh.setRowHeight(row, 30);
     }
@@ -97,9 +101,9 @@ function criarChecklistEvidencias() {
   // Linha de total
   var totalRow = row + 1;
   sh.getRange(totalRow, 2).setValue("TOTAL (máx. 42)").setFontWeight("bold").setFontColor(COR_INK).setFontSize(10);
-  sh.getRange(totalRow, 1, 1, 7).setBackground(COR_PAPER_DEEP)
+  sh.getRange(totalRow, 1, 1, 8).setBackground(COR_PAPER_DEEP)
     .setBorder(true, true, true, true, false, false, COR_RULE, SpreadsheetApp.BorderStyle.SOLID);
-  var cols = ["C", "D", "E", "F", "G"];
+  var cols = ["C", "D", "E", "F", "G", "H"];
   cols.forEach(function(col){
     var firstDataRow = 5;
     var lastDataRow = totalRow - 2;

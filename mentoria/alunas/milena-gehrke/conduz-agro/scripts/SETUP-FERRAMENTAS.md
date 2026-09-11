@@ -59,7 +59,7 @@ Cada planilha recebe **só o script dela** (são independentes):
 **Checklist de Evidências** (tabela única, sem MODELO):
 1. Confirma que a função selecionada é `criarChecklistEvidencias`
 2. Clica em **Executar** (▶), autoriza se pedir
-3. Aparece a aba **"Checklist de Evidências"** com os 14 indicadores (já aprovados no PRD, não são rascunho) e as 5 colunas de checkpoint (S8-S24), com dropdown de pontuação 0-3 e uma linha de TOTAL que soma sozinha
+3. Aparece a aba **"Checklist de Evidências"** com os 14 indicadores (já aprovados no PRD, não são rascunho) e as 6 colunas de checkpoint (S1-S24, ampliado 11/09 — S1 é o ponto de partida), com dropdown de pontuação 0-3 e uma linha de TOTAL que soma sozinha
 
 **Plano de Aplicação Diária** (tabela única, sem MODELO):
 1. Confirma que a função selecionada é `criarPlanoAplicacaoDiaria`
@@ -91,13 +91,13 @@ Em todas: pode apagar a aba padrão em branco ("Página1" ou "Sheet1") que sobro
 
 **Matriz de Responsabilidade:** dados do caso no topo, tabela de etapas com dropdown na coluna "Responsável" (Você / Produtor / Terceiro) — a cor da célula muda sozinha. Pra entregar ao produtor: **Arquivo → Baixar → PDF (.pdf)**, ou imprimir a aba direto.
 
-**Mapa do Caso:** na S4, escolhe e duplica o modelo específico do serviço — **Crédito Rural**, **Regularização** ou **Georreferenciamento**. Na S11/S12 e no registro final da S22, usa a versão **Avançada** (9 campos, corrigido 08/09: demanda → problema real → pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos) quando o caso tiver múltiplos envolvidos/interesses. O "Plano de Condução de Caso Complexo" e o "Relatório de Aplicação" são resultados desse preenchimento, não ferramentas separadas.
+**Mapa do Caso:** na S4, escolhe e duplica o modelo específico do serviço — **Crédito Rural**, **Regularização** ou **Georreferenciamento**. Na S11/S12 e no registro final da S22, usa a versão **Avançada** (13 campos, ampliado 11/09: demanda → problema real → pessoas → documentos → situação financeira → interesses → riscos → urgência → informações que faltam → possibilidades → conflitos → prioridades → próximos passos) quando o caso tiver múltiplos envolvidos/interesses. Todas as versões têm uma Parte 2 — Plano de Condução do Caso, 9 campos (ampliado 11/09) — abaixo da Parte 1. O "Relatório de Aplicação" é resultado desse preenchimento, não ferramenta separada.
 
 **Mapa de Posicionamento:** 5 campos (Eu sou → Eu resolvo → Para quem → Como faço → Qual valor entrego). Duplica a aba MODELO na Sessão 7 (versão inicial) e de novo na Sessão 18 (revisão) — **não apaga a versão anterior**, o valor está em comparar a evolução.
 
 **Mapa de Valor Percebido:** aqui é diferente — **não duplica**. É 1 tabela só que vai crescendo: toda vez que encontrar uma tarefa técnica nova, adiciona uma linha (tarefa → risco evitado → ganho → quando usar esse argumento). Consulta antes de montar qualquer proposta (Passo 6 "Propor" do Roteiro de Condução).
 
-**Checklist de Evidências:** também não duplica — é uma tabela fixa de 14 indicadores (7 sinais concretos + 7 sinais internos, exatamente os do PRD) que o aluno vai pontuando de 0 a 3 em 5 momentos do programa (S8, S12, S16, S20, S24), sempre comparando com quem ele era na S1. A linha de TOTAL no fim soma cada checkpoint automaticamente — dá pra ver a evolução numérica ao longo dos 12 meses.
+**Checklist de Evidências:** também não duplica — é uma tabela fixa de 14 indicadores (7 sinais concretos + 7 sinais internos, exatamente os do PRD) que o aluno vai pontuando de 0 a 3 em 6 momentos do programa *(ampliado de 5 para 6 em 11/09)* (S1, S8, S12, S16, S20, S24), sempre comparando com a coluna S1 — o ponto de partida. A linha de TOTAL no fim soma cada checkpoint automaticamente — dá pra ver a evolução numérica ao longo dos 12 meses.
 
 **Plano de Aplicação Diária:** também não duplica — é a mesma trilha de 24 semanas pra todo aluno. Cada semana (sincronizada com a sessão em curso) tem 5 atividades de 15 min — tom tático nas semanas 1-8 (Etapa 1), reflexivo nas semanas 9-24 (Etapa 2). Entrega manual por enquanto (Milena copia e manda por WhatsApp) — decisão de 24/08, sem automação nessa fase.
 

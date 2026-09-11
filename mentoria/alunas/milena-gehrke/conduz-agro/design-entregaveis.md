@@ -1,6 +1,6 @@
 # Design de Entregáveis — Conduz Agro
 
-> Status: ✓ APROVADO (QG-MC-006) — 21/08/2026 | **Addendum 23/08/2026** (correção pós-Fase 7, ver Seção 8) | **Addendum 08/09/2026** (dosagem da entrega de ferramentas, ver Seção 9; Plano de Condução do Caso como Parte 2 do Mapa do Caso, ver Seção 10) — reabre pontualmente QG-MC-006 pras mudanças abaixo, sem invalidar o resto do gate
+> Status: ✓ APROVADO (QG-MC-006) — 21/08/2026 | **Addendum 23/08/2026** (correção pós-Fase 7, ver Seção 8) | **Addendum 08/09/2026** (dosagem da entrega de ferramentas, ver Seção 9; Plano de Condução do Caso como Parte 2 do Mapa do Caso, ver Seção 10) | **Addendum 11/09/2026** (Checklist de Evidências com 6 marcações + Mapa do Caso avançado e Plano de Condução com novos campos, ver Seção 11) — reabre pontualmente QG-MC-006 pras mudanças abaixo, sem invalidar o resto do gate
 > Executa contra: `prd.md` (Seção 4 — Entregáveis Comprometidos) + `estrutura-programa.md` + `design-sessoes.md`
 > Modalidade: Individual (1:1) — não há componente de turma/cohort
 
@@ -14,7 +14,7 @@
 | Welcome sequence | Mensagem (WhatsApp + e-mail) após confirmação de pagamento: boas-vindas, o que esperar dos 12 meses, como funciona a Etapa 1 vs Etapa 2, link do kit de boas-vindas | Proposto |
 | Kit de boas-vindas *(corrigido 08/09 — ver Seção 9)* | Confirmação da data da S1 (as demais sessões são agendadas em comum acordo, sessão a sessão — não existe uma grade fixa de 24 datas pra entregar de cara), acesso ao Agente do Método Conduz Agro, ao Preparador de Conversas Difíceis e ao Destrava Condução, contato do WhatsApp direto. **Não inclui** Trilha de Aplicação Diária nem Central do Aluno/CRM — essas chegam ao vivo na S1 e S2 respectivamente, pra não chegar sem contexto | Proposto |
 | Sessão de intake = Sessão 1 | Não precisa de uma sessão de intake separada — a própria **Sessão 1 (Diagnóstico)** já cumpre esse papel: aplica o Diagnóstico da Autoridade Aplicada + DISC e nomeia o papel atual do mentorado | Confirmado (já desenhado na Fase 4) |
-| Baseline measurement | O preenchimento da Sessão 1 (diagnóstico + papel nomeado) É o baseline — usado como referência em todos os 5 checkpoints do Checklist de Evidências e na Sessão 21 (revisão antes x depois) | Confirmado |
+| Baseline measurement | O preenchimento da Sessão 1 (diagnóstico + papel nomeado) É o baseline, e a partir de 11/09 a própria Sessão 1 já faz a 1ª marcação do Checklist de Evidências — usado como referência nos 5 checkpoints seguintes (S8, S12, S16, S20, S24) e na Sessão 21 (revisão antes x depois) | Confirmado |
 | Apresentação ao grupo | N/A — modalidade individual | N/A |
 
 ## 2. Offboarding / Graduação
@@ -22,7 +22,7 @@
 | Etapa | Descrição | Status |
 |---|---|---|
 | Assessment final | Reaplicação do Diagnóstico da Autoridade Aplicada (mesmo formato da S1) — compara trava predominante no início x no fim. Já usado como base da Sessão 21 (revisão da jornada) | Confirmado |
-| Sessão de fechamento = Sessão 24 | Já desenhada: indicadores finais + plano de continuidade + 5ª marcação do Checklist de Evidências | Confirmado (Fase 4) |
+| Sessão de fechamento = Sessão 24 | Já desenhada: indicadores finais + plano de continuidade + 6ª e última marcação do Checklist de Evidências *(renumerada 11/09)* | Confirmado (Fase 4) |
 | Plano de continuidade | Componente da própria Sessão 24 — não é um entregável separado | Confirmado |
 | Depoimento/case study | Proposto: pedir depoimento em vídeo curto (2-3min) na Sessão 24, focado no resultado comercial concreto da Etapa 1 (S8) + na evolução registrada no Checklist de Evidências — dá prova social ancorada em fato, não em promessa | Proposto |
 | Alumni network (Conduz Agro, não confundir com o grupo do Expert360º) | Fica pra quando a Milena tiver 3+ mentorados formados — sem estrutura formal agora. Nome definitivo (não "alumni") sai na Fase 6 (Branding) | Confirmado (revisitar depois) |
@@ -36,7 +36,7 @@ Já mapeadas no PRD (Seção 4) e com uso definido nas sessões (`design-sessoes
 |---|---|---|
 | Diagnóstico da Autoridade Aplicada + DISC | 30 perguntas (reduzido de 64 pra evitar fadiga), 3 esferas (Técnica/Emocional/Condução), Índice Conduz Agro geral + mapa de travas por subdimensão + perfil comportamental (DISC). Tem também uma versão ainda mais reduzida — o Pré-Diagnóstico de Vendas — pro lead, pré-matrícula. Ver `diagnostico-aluno-completo.md` | S1 (baseline) e S21/reaplicação (final); versão de vendas na sessão estratégica pré-matrícula |
 | Círculo de Controle da Condução | **Uso duplo (23/08).** (1) Interno — separa o que depende do profissional / pode influenciar / está fora de controle, reduz sensação de impotência diante da pressão. (2) Aplicado ao produtor — versão client-facing apresentada no ato de contratação: matriz de responsabilidade e cronograma mostrando as responsabilidades e prazos do próprio produtor E de terceiros envolvidos (cartório, banco), reduz ruído e cobrança indevida sobre o profissional | (1) S3, revisitado sempre que a pressão de um caso pede. (2) Entregue ao produtor no fechamento de cada atendimento — ferramenta de uso comercial contínuo da Milena/mentorado, não pontual de sessão |
-| Mapa do Caso | Uma ferramenta com modelos específicos de S4 para **Crédito Rural**, **Regularização** e **Georreferenciamento** (todos seguem demanda → problema real → riscos → próximo passo), mais versão avançada para casos com múltiplos envolvidos. **Correção 08/09 (Seção 10):** cada uma das 4 abas-modelo agora tem 2 partes — Parte 1 é o Mapa do Caso (leitura do cenário), Parte 2 é o Plano de Condução do Caso (7 campos, definido depois da leitura). Ainda é a mesma aba, mesmo arquivo — não virou ferramenta separada, só ganhou uma segunda seção | S4 (modelo por serviço), S11-S12 (versão avançada), S22 (registro final) |
+| Mapa do Caso | Uma ferramenta com modelos específicos de S4 para **Crédito Rural**, **Regularização** e **Georreferenciamento** (todos seguem demanda → problema real → riscos → próximo passo), mais versão avançada para casos com múltiplos envolvidos. **Correção 08/09 (Seção 10):** cada uma das 4 abas-modelo agora tem 2 partes — Parte 1 é o Mapa do Caso (leitura do cenário), Parte 2 é o Plano de Condução do Caso, definido depois da leitura. Ainda é a mesma aba, mesmo arquivo — não virou ferramenta separada, só ganhou uma segunda seção. **Correção 11/09 (Seção 11):** na versão avançada, Parte 1 passa de 9 para 13 campos, e Parte 2 (todas as versões) passa de 7 para 9 campos | S4 (modelo por serviço, Parte 2 com 9 campos), S11-S12 (versão avançada, Parte 1 com 13 campos), S22 (registro final) |
 | Leitura do Produtor *(adicionado 24/08 — gap identificado pela Karol: S4 sempre mencionou "identificar perfil do produtor" como objetivo, mas nunca virou ferramenta própria)* | Os 6 perfis de produtor (tradicional, desconfiado, apressado, investidor, analítico, emocional) — sinais que revelam cada um, erro comum, como abordar, frase de abertura sugerida | S4 (leitura essencial), consulta contínua em qualquer atendimento novo |
 | Simulador de Conversas que Conduzem | Treino de resposta a objeção/pressão | S6, S16 |
 | Mapa de Posicionamento | Eu sou → Eu resolvo → Para quem → Como faço → Qual valor entrego. A "Identidade Profissional Revisada" da S17 é a revisão desta ferramenta, formalizada na cópia da S18 | S7, S17-S18 |
@@ -44,7 +44,7 @@ Já mapeadas no PRD (Seção 4) e com uso definido nas sessões (`design-sessoes
 | Roteiro de Condução da Conversa *(adicionado 23/08; nota corrigida 25/08)* | Fluxograma completo da prospecção à entrega do serviço contratado — scripts, ordem, comportamentos, com bifurcações condicionais (se o produtor responde X, segue caminho A; se responde Y, caminho B). Referência de consulta rápida — o "roteiro personalizado" que a S5 produz pra 1 atendimento específico **não é uma ferramenta separada**, é essa mesma referência aplicada ao caso do Mapa do Caso (S4) | Material de referência no kit de boas-vindas, base do exercício da S5 |
 | Raio-X da Conversa com o Produtor *(adicionado 23/08)* | **Uso duplo.** (1) Fora do programa — isca/diagnóstico de entrada pro lead (já previsto no PRD Seção 4). (2) Dentro do programa — aluno envia uma conversa real que teve com um produtor (texto/áudio transcrito), Milena ou agente de IA analisa, aponta erros de script e condução na negociação, sugere melhoria pro próximo atendimento | (1) Ferramenta de aquisição, fora do 1:1. (2) Uso contínuo do mentorado ao longo dos 12 meses, sob demanda — não preso a sessão específica |
 | Protocolo Pessoal de Condução | Sistema pessoal repetível (Abrir→Ouvir→Investigar→Diagnosticar→Orientar→Propor→Negociar→Decidir→Conduzir→Acompanhar) | S23-S24 |
-| Checklist de Evidências da Autoridade | Registro cumulativo de evolução — 5 marcações; na S21, é comparado ao Diagnóstico para produzir o registro antes x depois | S8, S12, S16, S20, S21, S24 |
+| Checklist de Evidências da Autoridade | Registro cumulativo de evolução — 6 marcações *(ampliado de 5 para 6 em 11/09 — S1 vira a 1ª marcação, ponto de partida)*; na S21, é comparado ao Diagnóstico para produzir o registro antes x depois | S1, S8, S12, S16, S20, S21, S24 |
 | Plano de Aplicação Diária | Trilha paralela, 15min 5x/semana, sincronizada por quinzena | Contínuo, todos os 12 meses (formato de entrega — ver Seção 5) |
 | Destrava Condução (S.O.S. de Caso Real) *(corrigido 23/08 — ver Seção 8)* | Aluno escreve um caso real em que está travado, Milena ajuda a resolver — organiza a trava, a ação recomendada e o próximo passo. **Capado em 2 usos por mentorado nos 12 meses** (não é self-service ilimitado — correção da definição anterior). Acionado via Ficha de Inscrição, que o aluno preenche antes pra Milena já chegar com contexto, sem precisar de reunião só pra entender o caso | Os 2 usos coincidem naturalmente com S8 e S22 (checkpoints de "aplicação em caso real" já desenhados em `design-sessoes.md`) — mas o aluno pode acionar antes se ficar travado num caso urgente, respeitando o limite de 2 no total |
 | Ficha de Inscrição *(novo entregável, 23/08)* | Formulário curto que o aluno preenche antes de acionar o Destrava Condução: contexto do caso, quem é o produtor, qual a trava percebida, o que já tentou. Objetivo: Milena chega na sessão/retorno já com o contexto, sem gastar tempo de atendimento juntando informação básica | Preenchido pelo aluno sempre que for usar um dos 2 usos do Destrava Condução |
@@ -59,8 +59,8 @@ Já mapeadas no PRD (Seção 4) e com uso definido nas sessões (`design-sessoes
 
 ### Entregáveis que são resultados, não ferramentas novas
 
-- **Plano de Condução de Caso Complexo (S11):** *(corrigido 08/09)* não é mais só "o resultado do preenchimento avançado" — é a Parte 2 explícita da mesma aba do Mapa do Caso (ver Seção 10), com 7 campos próprios.
-- **Identidade Profissional Revisada (S17):** revisão registrada no Mapa de Posicionamento e formalizada na 2ª versão da S18.
+- **Plano de Condução de Caso Complexo (S11):** *(corrigido 08/09, campos ampliados 11/09)* não é mais só "o resultado do preenchimento avançado" — é a Parte 2 explícita da mesma aba do Mapa do Caso (ver Seções 10 e 11), com 9 campos próprios.
+- **Território de Autoridade (S17) + Identidade Profissional Revisada (S17):** *(renomeado/ampliado 11/09, ver Seção 11)* definição de território registrada junto com a revisão de identidade, formalizadas na 2ª versão da S18.
 - **Relatório de Evolução (S21):** comparação entre Diagnóstico inicial/final e Checklist de Evidências.
 - **Relatório de Aplicação (S22):** registro completo do caso no Mapa do Caso.
 - **Plano de Continuidade (S24):** última versão do Plano Personalizado.
@@ -155,3 +155,35 @@ Referência de processo (nota de contexto, não campo preenchível): Diagnóstic
 **Uso:** aplica-se a toda sessão que usa o Mapa do Caso — S4 (versões por serviço) e S11-S12 (avançada), não só à versão complexa.
 
 **Propagação:** `scripts/apps-script-mapa-do-caso.gs` (corrigido — as 4 funções agora renderizam Parte 1 + Parte 2), `design-entregaveis.md` (tabela do Portfólio + lista de "resultados, não ferramentas novas", corrigido), `design-sessoes.md`/`roteiro-sessoes.md` (S4, S11, S12 — pendente), `central-alunos/index.html` (blurb do card Mapa do Caso — pendente), `checklist-producao.md` (item 1.4 — pendente, Milena precisa rodar `criarTodosMapasDoCaso()` de novo).
+
+## 11. Addendum 11/09/2026 — Revisão da jornada contra análise externa de posicionamento
+
+Karol trouxe um documento de análise de posicionamento/copy do Conduz Agro (jornada, promessa, mecanismo, oferta) pra confrontar contra o que já estava desenhado. Decisão: só a jornada (sessões e ferramentas) foi ajustada — preço (R$2.797→R$3.997), garantia, escassez, bônus "Rede que Gera Demanda" e a proposta de 3 agentes de IA da análise **não entraram**, por contradizerem ou duplicarem decisões já fechadas e testadas (empacotamento.md, 4 camadas de suporte). Mudanças aplicadas:
+
+**a) S2 renomeada — "Rota Personalizada Conduz Agro"**
+Objetivo passa a incluir a leitura estratégica do diagnóstico da S1 (forças, inseguranças, gargalos, padrões, casos prioritários) antes de apresentar os 6 pilares e o plano de 12 meses. Entregável renomeado pra "Roteiro Personalizado de Evolução". Framework "Da Semente à Colheita da Autoridade" mantido.
+
+**b) S17 renomeada — "Território de Autoridade"**
+Mantém o trabalho de autoridade x aparência de autoridade + presença, e acrescenta a definição explícita de território (por quais problemas quer ser lembrado, onde tem mais competência, diferenciais, percepção desejada).
+
+**c) S18 renomeada — "Mapa de Posicionamento + Comunicação do Posicionamento"**
+Mantém a atualização do Mapa de Posicionamento e acrescenta a tradução do território definido na S17 em mensagem concreta pros canais do mentorado (apresentação profissional, WhatsApp, networking, proposta, parceiros).
+
+**d) Checklist de Evidências da Autoridade — de 5 para 6 marcações**
+S1 passa a ser a 1ª marcação (ponto de partida), preenchida junto com o Diagnóstico da Autoridade Aplicada (que continua existindo como ferramenta separada). Renumeração: S8 = 2ª, S12 = 3ª, S16 = 4ª, S20 = 5ª, S24 = 6ª e última.
+
+**e) Mapa do Caso avançado (Parte 1, S11-S12) — de 9 para 13 campos**
+Novo: demanda, problema real, pessoas, documentos, **situação financeira**, interesses, riscos, **urgência**, **informações que faltam**, **possibilidades**, conflitos, prioridades, próximos passos. A versão essencial (S4, por serviço) não muda — continua enxuta (demanda → problema real → riscos → próximo passo) pra não sobrecarregar a aplicação rápida.
+
+**f) Plano de Condução do Caso (Parte 2, todas as versões) — de 7 para 9 campos, combinando os campos da Milena com os da análise**
+1. O que ainda precisa ser investigado/confirmado?
+2. Quais perguntas fazer ao produtor?
+3. O que precisa ser explicado ao produtor?
+4. Quais documentos precisam ser levantados?
+5. Quem precisa ser envolvido/participar?
+6. Quais riscos ou possibilidades precisam ser apresentados?
+7. Qual é o próximo passo concreto?
+8. Como conduzir possíveis objeções ou conflitos?
+9. Como o processo será acompanhado?
+
+**Propagação:** `design-sessoes.md` (S1, S2, S4, S8, S11, S12, S16, S17, S18, S20, S24 + Validação de Coerência — feito), `estrutura-programa.md` (tabela Etapa 1, sub-fase 2.3, Checkpoints de Progresso, Checkpoints da Etapa 2 — feito), `design-entregaveis.md` (esta seção — feito). **Pendente:** `scripts/apps-script-mapa-do-caso.gs` (campos novos de Parte 1 avançada e Parte 2 não estão na planilha real ainda), `scripts/apps-script-checklist-evidencias.gs` (coluna de S1 não existe ainda), `central-alunos/index.html` (blurbs dos cards Mapa do Caso/Checklist desatualizados), `roteiro-sessoes.md`/`roteiro-sessoes.html` (S2/S17/S18 com nome antigo), `checklist-producao.md` (itens de planilha precisam ser refeitos). Nenhum desses foi tocado nesta revisão — mexem em ferramenta já em produção com dados reais da Milena, exigem confirmação separada antes de rodar os scripts de novo.

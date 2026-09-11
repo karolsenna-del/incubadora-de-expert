@@ -5,6 +5,8 @@
 > **Formato padrão de toda sessão (60-90min):** Check-in (5-10min) → Review de ações da trilha diária (10-15min) → Tema central com o conteúdo abaixo (30-40min) → Plano de ação (10-15min) → Fechamento (5min)
 >
 > **Fechamento padrão, repetido em toda sessão** (por isso não é escrito 24 vezes): reforça o Entregável da sessão, registra o plano de ação, e aponta pra atividade da semana correspondente no Plano de Aplicação Diária (mesma semana = mesma sessão). Onde a sessão tem algo além disso (checkpoint, virada de etapa), está anotado na própria sessão.
+>
+> **Addendum 11/09/2026:** S2, S17 e S18 reenquadradas + Checklist de Evidências passa a ter 6 marcações (S1 inclusa como ponto de partida, renumerando as demais) + Mapa do Caso avançado (S11/S12) e Plano de Condução (S4/S11/S12) com novos campos — ver `design-entregaveis.md` Seção 11
 
 ---
 
@@ -19,19 +21,19 @@ Passagem condensada pelos 6 pilares do método na versão essencial. Ao fim da E
 - **Exercício:** preencher o Diagnóstico da Autoridade Aplicada + DISC, revisar o resultado junto com a mentora — qual esfera puxou mais pra baixo, o que isso revela sobre o papel atual dele
 - **Fechamento:** nomear em voz alta o papel atual (executor/consultor/condutor estratégico) — é a frase que vai ser revisitada na S21. **Antes de encerrar** *(adicionado 08/09)*: apresentar o Plano de Aplicação Diária — o que é (5 atividades curtas/semana, sincronizadas com as sessões), como preencher, e indicar a atividade da semana 1. É a primeira vez que o mentorado vê essa ferramenta — não é enviada antes, pra não chegar sem contexto
 - **Pontos-chave:**
-  - Entregável obrigatório: diagnóstico preenchido + papel nomeado
-  - Esse é o baseline de TUDO — reaplicado na S21, referência dos 5 checkpoints do Checklist de Evidências
+  - Entregável obrigatório: diagnóstico preenchido + papel nomeado + 1ª marcação (ponto de partida) no Checklist de Evidências da Autoridade *(adicionado 11/09)*
+  - Esse é o baseline de TUDO — reaplicado na S21, referência dos 6 checkpoints do Checklist de Evidências *(atualizado 11/09)*
   - Não force conforto aqui — a trava aparecer com clareza é o ponto, não um problema a resolver ainda
   - *(08/09)* Plano de Aplicação Diária é apresentado aqui, ao vivo — não faz parte do kit de boas-vindas automático (ver `design-entregaveis.md` Seção 9)
 
-### Sessão 2 — Pilares da autoridade + plano dos 12 meses
+### Sessão 2 — Rota Personalizada Conduz Agro *(renomeada 11/09)*
 
-- **Objetivo:** entender a diferença entre domínio técnico, valor percebido e autoridade; apresentar os 6 pilares e as 2 etapas do programa
+- **Objetivo:** ler estrategicamente o diagnóstico da S1 (forças, inseguranças, gargalos prioritários, padrões, casos que merecem atenção) e, a partir disso, entender a diferença entre domínio técnico, valor percebido e autoridade; apresentar os 6 pilares e as 2 etapas do programa
 - **Conteúdo:** explicar o framework "Da Semente à Colheita da Autoridade" (Solo → Semente → Raiz → Caule → Ramos → Acelerador → Colheita) e como as próximas 24 sessões passam por ele 2 vezes — rápido primeiro (Etapa 1, meses 1-4, resultado comercial já no mês 4), fundo depois (Etapa 2, meses 5-12). Deixar claro: isso não é enrolação — é desenhado assim de propósito pra não perder o mentorado nos primeiros meses esperando resultado que só viria no mês 11.
 - **Exercício:** abrir o **Plano Personalizado** e preencher, sem deixar campos genéricos: (1) data/sessão da versão; (2) ponto de partida — papel atual e trava prioritária do Diagnóstico da S1; (3) transformação desejada ao fim dos 12 meses, com evidência observável de que aconteceu; (4) meta até o próximo checkpoint; (5) 3 prioridades do período; (6) para cada prioridade, ação concreta, prazo, evidência de conclusão e apoio necessário; (7) barreira previsível e resposta combinada; (8) compromisso que o mentorado assume até a próxima revisão. O campo **Continuidade** fica em branco na S2 e só é preenchido na S24. Nas revisões S8/S12/S16/S20, duplicar a aba, registrar o que mudou e redefinir meta, prioridades e ações sem apagar o histórico.
-- **Fechamento:** plano de 12 meses fechado e assinado — literalmente pedir pro mentorado dizer "topo esse plano". **Antes de encerrar** *(adicionado 08/09)*: mostrar a Central do Aluno (índice com todas as ferramentas da jornada) e liberar o CRM Comercial Conduz Agro — enquadrar como "esse é seu funil, roda em paralelo às sessões desde já; o resto das ferramentas eu vou te apresentando ao longo do caminho, você não precisa entender tudo agora"
+- **Fechamento:** Roteiro Personalizado de Evolução (plano de 12 meses) fechado e assinado — literalmente pedir pro mentorado dizer "topo esse plano". **Antes de encerrar** *(adicionado 08/09)*: mostrar a Central do Aluno (índice com todas as ferramentas da jornada) e liberar o CRM Comercial Conduz Agro — enquadrar como "esse é seu funil, roda em paralelo às sessões desde já; o resto das ferramentas eu vou te apresentando ao longo do caminho, você não precisa entender tudo agora"
 - **Pontos-chave:**
-  - Entregável obrigatório: plano de 12 meses fechado
+  - Entregável obrigatório: Roteiro Personalizado de Evolução (plano de 12 meses) fechado
   - É aqui que se define expectativa — se o mentorado não entender por que a Etapa 1 é "essencial" e não "completa", vai cobrar profundidade cedo demais
   - *(08/09)* É aqui que a Central do Aluno é apresentada pela primeira vez — não antes (kit de boas-vindas não inclui o link). CRM é liberado junto porque não depende de nenhum conteúdo do método pra ser útil (ver `design-entregaveis.md` Seção 9)
 
@@ -49,7 +51,7 @@ Passagem condensada pelos 6 pilares do método na versão essencial. Ao fim da E
 
 - **Objetivo:** diferenciar demanda declarada de problema real; identificar perfil do produtor (tradicional, desconfiado, apressado, investidor, analítico, emocional)
 - **Conteúdo:** usar a ferramenta Leitura do Produtor pra passar pelos 6 perfis — sinais que revelam cada um, erro comum de quem não reconhece o perfil, frase de abertura adaptada. Em seguida, escolher no **Mapa do Caso** o modelo específico do serviço do atendimento: **Crédito Rural**, **Regularização** ou **Georreferenciamento**. Os três mantêm a lógica demanda → problema real → riscos → próximo passo, mas trazem perguntas próprias do contexto. Enfatizar: o produtor raramente fala o problema real de cara ("quero regularizar" é a demanda; "tenho medo de perder a fazenda pro banco" pode ser o problema real por trás).
-- **Exercício:** aplicar o modelo específico do Mapa do Caso (Crédito Rural, Regularização ou Georreferenciamento) a um atendimento real em andamento — Parte 1 da aba. Na sequência, preencher a Parte 2 (Plano de Condução do Caso, mesma aba) *(adicionado 08/09)*: o que resolver primeiro, quem envolver, quais documentos levantar, o que confirmar, quais riscos comunicar, qual o próximo passo concreto, como vai acompanhar
+- **Exercício:** aplicar o modelo específico do Mapa do Caso (Crédito Rural, Regularização ou Georreferenciamento) a um atendimento real em andamento — Parte 1 da aba. Na sequência, preencher a Parte 2 (Plano de Condução do Caso, mesma aba, 9 campos *(ampliado de 7 para 9 em 11/09)*) *(adicionado 08/09)*: o que ainda investigar/confirmar, quais perguntas fazer, o que explicar, quais documentos levantar, quem envolver, quais riscos ou possibilidades apresentar, qual o próximo passo concreto, como conduzir objeções ou conflitos, como vai acompanhar
 - **Fechamento:** Mapa do Caso + Plano de Condução de 1 atendimento real preenchidos
 - **Pontos-chave:**
   - Entregável obrigatório: Mapa do Caso + Plano de Condução de 1 atendimento real
@@ -91,7 +93,7 @@ Passagem condensada pelos 6 pilares do método na versão essencial. Ao fim da E
 - **Objetivo:** aplicar tudo (S1-S7) num atendimento real do início ao fim e registrar o primeiro resultado comercial concreto do programa
 - **Conteúdo:** essa sessão não introduz conceito novo — é prática guiada. Passar pelo atendimento real do mentorado junto com ele: diagnóstico → leitura do perfil → comunicação → objeção → proposta → fechamento, revisando decisão por decisão.
 - **Exercício:** simulação/aplicação real completa do ciclo
-- **Fechamento (diferente do padrão):** registrar o resultado comercial concreto (fechou sem desconto / cobrou mais / conduziu uma objeção real com sucesso) + fazer a **1ª marcação no Checklist de Evidências da Autoridade** + celebrar o fechamento da Etapa 1 antes de abrir a Etapa 2
+- **Fechamento (diferente do padrão):** registrar o resultado comercial concreto (fechou sem desconto / cobrou mais / conduziu uma objeção real com sucesso) + fazer a **2ª marcação no Checklist de Evidências da Autoridade** *(renumerada 11/09 — S1 é a 1ª)* + celebrar o fechamento da Etapa 1 antes de abrir a Etapa 2
 - **Pontos-chave:**
   - **Marco da Etapa 1:** até aqui, resultado comercial real e mensurável — não é mais promessa, é fato. Não deixa essa sessão passar sem esse registro concreto por escrito
   - Se não tiver caso real disponível: reagendar ou usar o caso mais próximo possível de real (não simular do zero)
@@ -128,8 +130,8 @@ Retoma os mesmos 6 pilares com profundidade — trabalho emocional mais denso, c
 ### Sessão 11 — Leitura de cenário complexo
 
 - **Objetivo:** organizar situações com múltiplos envolvidos, interesses divergentes e patrimônio em jogo — conflitos familiares no meio rural
-- **Conteúdo:** mapear demanda → problema real → pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos num caso com múltiplos envolvidos. Começar por demanda/problema real mesmo em cenário complexo — antes de "quem está envolvido" vem "o que está sendo pedido de fato". Reforçar neutralidade: o profissional não escolhe lado num conflito familiar, ele organiza o caminho.
-- **Exercício:** abrir a versão avançada do **Mapa do Caso** e preencher demanda → problema real → pessoas → documentos → interesses → riscos → conflitos → prioridades → próximos passos (Parte 1) para um caso real com conflito familiar. Na sequência, completar a Parte 2 (Plano de Condução do Caso, mesma aba) *(adicionado 08/09)*
+- **Conteúdo:** mapear demanda → problema real → pessoas → documentos → situação financeira → interesses → riscos → urgência → informações que faltam → possibilidades → conflitos → prioridades → próximos passos num caso com múltiplos envolvidos *(campos de situação financeira, urgência, informações que faltam e possibilidades adicionados 11/09)*. Começar por demanda/problema real mesmo em cenário complexo — antes de "quem está envolvido" vem "o que está sendo pedido de fato". Reforçar neutralidade: o profissional não escolhe lado num conflito familiar, ele organiza o caminho.
+- **Exercício:** abrir a versão avançada do **Mapa do Caso** e preencher os 13 campos da Parte 1 *(ampliado de 9 para 13 em 11/09)* para um caso real com conflito familiar. Na sequência, completar a Parte 2 (Plano de Condução do Caso, mesma aba, 9 campos) *(adicionado 08/09, campos ampliados 11/09)*
 - **Fechamento:** Mapa do Caso avançado (Parte 1) + Plano de Condução do Caso (Parte 2) preenchidos
 - **Pontos-chave:**
   - Entregável obrigatório: as 2 partes da aba preenchidas
@@ -141,11 +143,11 @@ Retoma os mesmos 6 pilares com profundidade — trabalho emocional mais denso, c
 ### Sessão 12 — Diagnóstico estratégico avançado + checkpoint
 
 - **Objetivo:** consolidar a leitura de cenário em situações com múltiplos interesses divergentes
-- **Conteúdo:** Mapa do Caso versão avançada (9 campos: demanda, problema real, pessoas, documentos, interesses, riscos, conflitos, prioridades, próximos passos) — comparar com a versão rápida da S4, mostrar como a mesma ferramenta cresce em profundidade sem perder o ponto de partida (demanda → problema real).
+- **Conteúdo:** Mapa do Caso versão avançada (13 campos *(ampliado de 9 para 13 em 11/09)*: demanda, problema real, pessoas, documentos, situação financeira, interesses, riscos, urgência, informações que faltam, possibilidades, conflitos, prioridades, próximos passos) — comparar com a versão rápida da S4, mostrar como a mesma ferramenta cresce em profundidade sem perder o ponto de partida (demanda → problema real).
 - **Exercício:** Mapa do Caso avançado aplicado a uma situação de múltiplos envolvidos
-- **Fechamento (diferente do padrão):** Mapa do Caso avançado preenchido + **2ª marcação no Checklist de Evidências da Autoridade** + fecha a sub-fase 2.1
+- **Fechamento (diferente do padrão):** Mapa do Caso avançado preenchido + **3ª marcação no Checklist de Evidências da Autoridade** *(renumerada 11/09)* + fecha a sub-fase 2.1
 - **Pontos-chave:**
-  - **Checkpoint 2.1:** Checklist de Evidências, 2ª marcação
+  - **Checkpoint 2.1:** Checklist de Evidências, 3ª marcação
   - Integra tudo de S9-S11 — se algum ficou incompleto, é aqui que aparece a lacuna
 
 ### Sub-fase 2.2 — Aprofundamento em Comunicação e Condução (Meses 7-8)
@@ -185,31 +187,31 @@ Retoma os mesmos 6 pilares com profundidade — trabalho emocional mais denso, c
 - **Objetivo:** transformar resistência em clareza em casos reais de "vou pensar", formalizar responsabilidades e próximo passo
 - **Conteúdo:** revisitar o Simulador de Conversas com mais nuance — o ciclo completo objeção → investigação → escuta → esclarecimento → negociação → organização → próximo passo. "Vou pensar" quase sempre esconde uma objeção não dita — a sessão treina destravar isso sem pressionar.
 - **Exercício:** simulação completa do ciclo inteiro
-- **Fechamento (diferente do padrão):** Simulador aplicado numa objeção real recente + **3ª marcação no Checklist de Evidências da Autoridade** + fecha a sub-fase 2.2
+- **Fechamento (diferente do padrão):** Simulador aplicado numa objeção real recente + **4ª marcação no Checklist de Evidências da Autoridade** *(renumerada 11/09)* + fecha a sub-fase 2.2
 - **Pontos-chave:**
-  - **Checkpoint 2.2:** Checklist de Evidências, 3ª marcação
+  - **Checkpoint 2.2:** Checklist de Evidências, 4ª marcação
   - Integra S13-S15 — mesma lógica de consolidação da S12
 
 ### Sub-fase 2.3 — Aprofundamento em Posicionamento e Precificação (Meses 9-10)
 
-### Sessão 17 — Posicionamento avançado
+### Sessão 17 — Território de Autoridade *(renomeada 11/09)*
 
-- **Objetivo:** aprofundar autoridade x aparência de autoridade (consistência, provas, coerência) e presença (postura, voz, clareza)
-- **Conteúdo:** autoridade de verdade é consistência ao longo do tempo, não uma pose isolada. Trabalhar presença — como postura, tom de voz e clareza de fala comunicam autoridade antes mesmo do conteúdo técnico entrar.
-- **Exercício:** reabrir o **Mapa de Posicionamento** da S7 e anotar, com evidências reais, o que mudou em Eu sou / Eu resolvo / Para quem / Como faço / Qual valor entrego; a cópia revisada é formalizada na S18
-- **Fechamento:** revisão da identidade registrada no Mapa de Posicionamento para concluir a 2ª versão na S18
+- **Objetivo:** aprofundar autoridade x aparência de autoridade (consistência, provas, coerência) e presença (postura, voz, clareza); definir o território de autoridade — por quais problemas quer ser lembrado, onde tem mais competência, quais diferenciais sustenta, como quer ser percebido
+- **Conteúdo:** autoridade de verdade é consistência ao longo do tempo, não uma pose isolada. Trabalhar presença — como postura, tom de voz e clareza de fala comunicam autoridade antes mesmo do conteúdo técnico entrar. Em seguida, mapear o território: por quais problemas o mentorado quer ser procurado, e onde ele tem mais competência real.
+- **Exercício:** reabrir o **Mapa de Posicionamento** da S7 e anotar, com evidências reais, o que mudou em Eu sou / Eu resolvo / Para quem / Como faço / Qual valor entrego; mapear o território de autoridade; a cópia revisada é formalizada na S18
+- **Fechamento:** território de autoridade definido + revisão da identidade registrada no Mapa de Posicionamento para concluir a 2ª versão na S18
 - **Pontos-chave:**
-  - Entregável obrigatório: revisão registrada no Mapa de Posicionamento; "Identidade Profissional Revisada" é o resultado da revisão, não uma ferramenta separada
+  - Entregável obrigatório: território de autoridade definido + revisão registrada no Mapa de Posicionamento; "Identidade Profissional Revisada" é o resultado da revisão, não uma ferramenta separada
   - Retoma o posicionamento essencial da Etapa 1 — comparar o "antes" (S7) com o "agora" já traz prova concreta de evolução
 
-### Sessão 18 — Mapa de Posicionamento revisado
+### Sessão 18 — Mapa de Posicionamento + Comunicação do Posicionamento *(renomeada 11/09)*
 
-- **Objetivo:** atualizar o Mapa de Posicionamento com os resultados reais acumulados desde a Etapa 1
-- **Conteúdo:** reabrir o Mapa de Posicionamento (aba duplicada, não apaga a versão da S7) — comparar lado a lado o que mudou em "Eu resolvo" e "Qual valor entrego" com evidência real, não intenção.
-- **Exercício:** repreencher o mapa com evidências reais de resultado
-- **Fechamento:** Mapa de Posicionamento atualizado (2ª versão, guardando a da S7 como histórico)
+- **Objetivo:** atualizar o Mapa de Posicionamento com os resultados reais acumulados desde a Etapa 1, e transformar o território definido na S17 em comunicação concreta pros canais do mentorado (apresentação profissional, WhatsApp, networking, proposta comercial, parceiros)
+- **Conteúdo:** reabrir o Mapa de Posicionamento (aba duplicada, não apaga a versão da S7) — comparar lado a lado o que mudou em "Eu resolvo" e "Qual valor entrego" com evidência real, não intenção. Depois, traduzir o território de autoridade da S17 numa mensagem que o mentorado consiga repetir nos canais que já usa.
+- **Exercício:** repreencher o mapa com evidências reais de resultado + adaptar a mensagem de posicionamento pros canais de uso do mentorado
+- **Fechamento:** Mapa de Posicionamento atualizado (2ª versão, guardando a da S7 como histórico) + mensagem de posicionamento estruturada pros canais
 - **Pontos-chave:**
-  - Entregável obrigatório: Mapa de Posicionamento atualizado
+  - Entregável obrigatório: Mapa de Posicionamento atualizado + mensagem de posicionamento pros canais
   - Não deixa apagar a versão da S7 — o valor está em comparar a evolução lado a lado
 
 ### Sessão 19 — Precificação avançada
@@ -227,9 +229,9 @@ Retoma os mesmos 6 pilares com profundidade — trabalho emocional mais denso, c
 - **Objetivo:** revisar limites (disponibilidade, escopo, prazo de resposta) e atualizar o plano de posicionamento de 30/60/90 dias
 - **Conteúdo:** limite também é autoridade — disponibilidade sem fim, escopo sem fim, e prazo de resposta sem fim comunicam o oposto de condução. Revisar o que o mentorado já aprendeu a dizer não, e o que ainda precisa ajustar.
 - **Exercício:** revisar e atualizar o plano de 30/60/90 com base no que já foi alcançado
-- **Fechamento (diferente do padrão):** plano de posicionamento atualizado + **4ª marcação no Checklist de Evidências da Autoridade** + fecha a sub-fase 2.3, abre a consolidação final
+- **Fechamento (diferente do padrão):** plano de posicionamento atualizado + **5ª marcação no Checklist de Evidências da Autoridade** *(renumerada 11/09)* + fecha a sub-fase 2.3, abre a consolidação final
 - **Pontos-chave:**
-  - **Checkpoint 2.3:** Checklist de Evidências, 4ª marcação
+  - **Checkpoint 2.3:** Checklist de Evidências, 5ª marcação
   - Integra S17-S19 — última sessão antes da reta final (consolidação)
 
 ### Sub-fase 2.4 — Consolidação (Meses 11-12)
@@ -267,11 +269,11 @@ Retoma os mesmos 6 pilares com profundidade — trabalho emocional mais denso, c
 ### Sessão 24 — Indicadores finais + plano de continuidade
 
 - **Objetivo:** revisar indicadores de evolução e definir como manter/ampliar os resultados depois do programa
-- **Conteúdo:** fechar os 14 indicadores do Checklist de Evidências (sinais concretos + sinais internos) com a 5ª e última marcação. Depois, olhar pra frente: o que sustenta esse resultado sem as sessões quinzenais? Que hábitos da Trilha de Aplicação Diária o mentorado quer manter sozinho?
+- **Conteúdo:** fechar os 14 indicadores do Checklist de Evidências (sinais concretos + sinais internos) com a 6ª e última marcação *(renumerada 11/09)*. Depois, olhar pra frente: o que sustenta esse resultado sem as sessões quinzenais? Que hábitos da Trilha de Aplicação Diária o mentorado quer manter sozinho?
 - **Exercício:** finalizar o Checklist de Evidências, duplicar a última versão do **Plano Personalizado** e preencher a seção Continuidade com: resultado que precisa ser sustentado; hábitos da Trilha de Aplicação que continuarão; frequência de revisão; indicadores que seguirá acompanhando; riscos de recaída e resposta; rede/apoio a acionar; primeira ação e data da próxima revisão
-- **Fechamento (diferente do padrão):** Protocolo Pessoal de Condução (versão final, revisado depois de 1 semana de uso) + plano de continuidade + **5ª e última marcação no Checklist de Evidências da Autoridade** — fim do programa
+- **Fechamento (diferente do padrão):** Protocolo Pessoal de Condução (versão final, revisado depois de 1 semana de uso) + plano de continuidade + **6ª e última marcação no Checklist de Evidências da Autoridade** — fim do programa
 - **Pontos-chave:**
-  - **Checkpoint final:** Protocolo Pessoal de Condução entregue + Checklist de Evidências completo (5 marcações, S1 como linha de base) + Plano Personalizado duplicado e concluído na versão S24
+  - **Checkpoint final:** Protocolo Pessoal de Condução entregue + Checklist de Evidências completo (6 marcações: S1, S8, S12, S16, S20, S24) + Plano Personalizado duplicado e concluído na versão S24
   - O "Plano de Continuidade" não é uma ferramenta nova: é a versão final do Plano Personalizado, preenchida com instruções específicas acima
   - Esse é o momento de pedir o depoimento em vídeo (`design-entregaveis.md` Seção 2) — pedir logo após o fechamento emocional da sessão, enquanto o resultado está fresco
   - Fecha com a pergunta que abriu tudo na S1: "que papel você exerce hoje?" — a resposta agora deveria ser visivelmente diferente
