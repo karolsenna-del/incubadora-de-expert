@@ -99,6 +99,29 @@ comprovada, só um padrão observado, agora com 3 ocorrências. A leva Semana 05
 o último); a leva Semana 06 (07/09-13/09, também 20h fixo) é o próximo teste real do padrão —
 **checar `gh run list --workflow=post-{slug}.yml` na manhã seguinte de cada post** em vez de
 assumir que rodou certo, durante toda a Semana 06.
+**4º caso, 09/09 (Semana 06):** `rota100k-semana06-qua-antes-depois-aplicou` rodou 09/09 20h52 BRT
+(quase sem atraso do cron desta vez — enfraquece um pouco a hipótese de contenção só no horário de
+pico) e falhou de novo com erro 9004 (slide-02). Diferente dos 3 casos anteriores, a checagem
+matinal automatizada não conseguiu confirmar a URL via `curl -sI` porque a política de rede da
+sessão de checagem bloqueou a conexão com `res.cloudinary.com` (erro de proxy/ambiente, não
+resposta do Cloudinary) — mesmo assim o retry foi disparado direto por precedente (assinatura de
+erro idêntica aos 3 casos anteriores) e publicou de primeira (`workflow_dispatch`, 10/09 08h14 BRT,
+media ID 18204693133367619). Os 2 primeiros posts da Semana 06 (seg e ter) rodaram limpos, sem
+erro 9004 — o padrão não é 100% dos posts das 20h, mas continua recorrente o suficiente pra manter
+a checagem manhã seguinte.
+**5º caso, 10/09 (Semana 06):** `rota100k-semana06-qui-erros-mais-contam` rodou 10/09 20h38 BRT
+(quase sem atraso do cron de novo) e falhou com erro 9004 (slide-05, 5º container da chamada).
+Igual ao 4º caso, a checagem matinal automatizada não conseguiu confirmar a URL via `curl -sI`
+porque a política de rede da sessão de checagem bloqueou de novo a conexão com
+`res.cloudinary.com` (mesmo erro de proxy/ambiente, não resposta do Cloudinary) — mesmo assim o
+retry foi disparado direto por precedente (assinatura de erro idêntica aos 4 casos anteriores) e
+publicou de primeira (`workflow_dispatch`, 11/09 08h12 BRT, media ID 17879985357622763). Com 5
+ocorrências em posts consecutivos das 20h (03/09, 04/09, 06/09, 09/09, 10/09 — só o 07/09 e 08/09
+rodaram limpos), o padrão já é a regra e não a exceção nesse horário; o bloqueio de rede da própria
+sessão de checagem também já é recorrente (2 casos seguidos) — não impede mais a decisão de retry
+por precedente, mas seria bom a Karol avaliar se dá pra liberar `res.cloudinary.com` na política de
+rede da sessão de checagem automatizada, pra voltar a confirmar a URL de verdade em vez de confiar
+só no precedente.
 **Regra:** Erro 9004 (diferente do 9007 da RULE-2, que é corrida de processamento) é transiente
 de rede/infra da Meta, não de conteúdo, MESMO quando se repete em dias seguidos — a URL segue
 íntegra nos dois casos confirmados. Antes de qualquer alteração de slides/legenda/cron:
@@ -224,3 +247,18 @@ minutos. Depois de uma falha 9004:
   Workflow desativado (`gh workflow disable`, precisou ser rodado pela Karol via `!` — comando
   bloqueado pelo classificador de permissão do Claude Code quando tentado pelo agente). RULE-5
   criada com o caso. Próximo teste do padrão: `duolingo-teste-antes-de-escalar` em 11/09.
+- 2026-09-10 — Checagem automatizada matinal (rotina agendada) achou `rota100k-semana06-qua-
+  antes-depois-aplicou` (agendado pra 09/09 20h) falhado com erro 9004 (4º caso, slide-02, ver
+  RULE-4). Verificação da URL via `curl` bloqueada pela política de rede da própria sessão de
+  checagem (proxy negou `res.cloudinary.com`) — não foi possível confirmar 200 OK manualmente,
+  mas a assinatura do erro era idêntica aos 3 casos anteriores, então o retry foi disparado
+  direto por precedente. Publicou de primeira via `workflow_dispatch` (10/09 08h14 BRT, media ID
+  18204693133367619). Log e RULE-4 atualizados com o 4º caso.
+- 2026-09-11 — Checagem automatizada matinal (rotina agendada) achou `rota100k-semana06-qui-
+  erros-mais-contam` (agendado pra 10/09 20h) falhado com erro 9004 (5º caso, slide-05, ver
+  RULE-4). Verificação da URL via `curl` bloqueada de novo pela mesma política de rede da sessão
+  de checagem — retry disparado direto por precedente (assinatura idêntica aos 4 casos
+  anteriores). Publicou de primeira via `workflow_dispatch` (11/09 08h12 BRT, media ID
+  17879985357622763). Log e RULE-4 atualizados com o 5º caso; padrão agora predominante nos
+  posts das 20h e bloqueio de rede da checagem já recorrente — sugestão registrada pra Karol
+  avaliar liberar `res.cloudinary.com` na política de rede da sessão de checagem.

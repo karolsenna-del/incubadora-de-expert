@@ -23,3 +23,7 @@
 | 06/09/2026 | grupo-domingo-2026-09-06 | 1 | 18113372857813697 | sim (ver log de execucao) |
 | 07/09/2026 | cantinho-pensamento-prova-2026-09-07 | 1 | 18075264698529103 | sim (ver log de execucao) |
 | 08/09/2026 | grupo-terca-2026-09-08 | 1 | 18153349624510252 | sim (ver log de execucao) |
+| 09/09/2026 | chamada-grupo-lives-quarta-2026-09-09 | 6 | 17964508053192126, 18109081364334365, 18127996333755318, 18157136419507588, 17900592189571347, 18136838062528896 | sim (ver log de execucao) |
+| 09/09/2026 | live-29-custo-invisivel-2026-09-09 | 3 | 18013198376949885, 18101790136992238, 18034039907837691 | sim (ver log de execucao) |
+| 10/09/2026 | grupo-quinta-2026-09-10 | 1 | 18127654216694400 | sim (ver log de execucao) |
+| 11/09/2026 | enquete-positiva-travas-2026-09-11 | 1 | 18076524422384650 | sim (ver log de execucao) |
