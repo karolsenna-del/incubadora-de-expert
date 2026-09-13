@@ -611,3 +611,16 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
   2. **“O que eu ganho com isso?”** — tornar explícitos os benefícios e a transformação esperada.
   3. **“Será que serve para mim?”** — apresentar provas de outras pessoas em contextos comparáveis, sem prometer o mesmo resultado.
 - **Uso na sessão:** ouvir em qual dessas três perguntas o lead trava, responder com a evidência correspondente e registrar a objeção para ajustar proposta e comunicação.
+
+### Funil de vendas — principais ações para validar o método
+
+1. **Prospecção e abordagem:** prospectar todos os dias e iniciar conversas com potenciais compradores.
+2. **Qualificação:** fazer de três a cinco perguntas que confirmem se o lead possui as características da Persona Compradora.
+3. **Sessão de Venda Secreta:** responder às três dúvidas centrais do lead: “Isso é verdade?” com história e autoridade; “O que eu ganho com isso?” com benefícios; “Será que serve para mim?” com provas de outras pessoas em situações comparáveis.
+4. **Follow-up:** acompanhar o lead até uma decisão clara. Nunca terminar uma reunião sem definir e marcar o próximo passo. Respeitar recusa explícita ou pedido para não receber novos contatos.
+5. **Negociação:** buscar o resultado desejado preservando o relacionamento. Não fazer concessão sem contrapartida correspondente.
+6. **Fechamento:** fazer uma pergunta cuja resposta confirme a venda, como “Posso contar com você?”, “Vamos fechar?” ou “Vamos iniciar nosso trabalho juntos a partir de agora?”.
+7. **Pós-venda:** assim que o serviço for pago, iniciar onboarding, entrega do produto, acompanhamento de satisfação, fidelização e estímulo à indicação.
+
+- **Tese:** validar o método não termina quando a pessoa demonstra interesse. A validação comercial percorre da prospecção ao pós-venda e gera evidências sobre persona, promessa, processo, proposta e experiência de entrega.
+- **Formato candidato:** carrossel “As 7 etapas para validar seu método vendendo” e Reels com uma etapa por corte.
