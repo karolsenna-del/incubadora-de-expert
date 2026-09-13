@@ -347,4 +347,11 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 12/09/2026 (Reconciliacao de 9 dias — Rota100k Semana 06, Live 29, Clip Expert, SOP-022 bloqueado, weekly review atrasada)*
+**Sessao 13/09 — Rota100k Semana 07 fechada:**
+- Aria analisou performance dos ultimos 10 dias (02-12/09): retencao 3s estagnada (~23-28%), zero-interacao em quase 40% das pecas, causo pessoal em 1a pessoa segue sendo o unico padrao que consistentemente passa do threshold. Relatorio em `docs/producao-conteudo/karol/analises/2026-09-12/relatorio-batch-10dias.md`.
+- Rico roteirizou os 42 posts da Semana 07 (14-20/09) aplicando esse aprendizado + o novo formato Demonstracao (15h), usado como vitrine real do negocio (Sprint do Metodo, Biblioteca de 6 Agentes de IA, Area de Membros, cases de mentorados com contrato). Plano em `docs/producao-conteudo/karol/desafio-rota100k-semana07-plano.md`.
+- Squad Carrossel Arcane produziu os 7 carrosseis (template Diagnostico Tipografico) e o Insta Scheduler preparou as legendas.
+- **Incidente ativo:** pipeline automatico de publicacao (GitHub Actions) com erro 9004 recorrente e nao resolvido (8+ casos investigados, causa raiz desconhecida — ver `agents/insta-scheduler/data/insta-scheduler-rules.md` RULE-4 a RULE-8). Por isso os 7 carrosseis da Semana 07 foram **programados manualmente pela Karol via app** (20h, nao pelo pipeline automatico) — registrado em `business/instagram/agendamentos.md`.
+- Pendencias que a Karol ainda precisa validar no plano da Semana 07: qual cliente do Sprint mostrar em cada Demonstracao, se nomeia Helio/Bruno, e qual e o "erro real" dela pro fechamento de domingo (deixado em aberto de proposito).
+
+*Ultima atualizacao: 13/09/2026 (Sessao Rota100k Semana 07 — analise Aria + roteiro + carrosseis programados)*
