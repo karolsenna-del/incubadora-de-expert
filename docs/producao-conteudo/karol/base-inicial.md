@@ -624,3 +624,18 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 
 - **Tese:** validar o método não termina quando a pessoa demonstra interesse. A validação comercial percorre da prospecção ao pós-venda e gera evidências sobre persona, promessa, processo, proposta e experiência de entrega.
 - **Formato candidato:** carrossel “As 7 etapas para validar seu método vendendo” e Reels com uma etapa por corte.
+
+### Sessão de Vendas Secretas com Decisão Imediata — cinco etapas
+
+- **Aplicação:** somente para lead previamente qualificado. O objetivo é sair da sessão com uma decisão clara — “sim” ou “não” — sem perseguição posterior.
+
+1. **Apresentação:** explicar brevemente quem é o especialista e quais fatos, histórias e provas sustentam sua autoridade.
+2. **Conexão:** aprofundar o contexto do lead com perguntas como “Me conta um pouco mais sobre você” e “Do que você sente falta para avançar?”. Continuar até a pessoa reconhecer, com as próprias palavras, que precisa de ajuda ou de uma solução.
+3. **Acordo de Decisão Imediata:** depois que o lead reconhece a necessidade, explicar como a solução será apresentada e combinar que, ao final, haverá uma resposta objetiva.
+   - **Script-base:** “Entendi que você precisa de alguém para te ajudar. Agora vou te explicar como posso te ajudar, mas quero fazer um combinado: vou explicar tudo e você vai tirar todas as suas dúvidas. Se, ao final, eu entender que você tem o perfil para avançar e você enxergar em mim a solução que precisa, eu já vou te direcionar para o fechamento da sua vaga. Se não fizer sentido, tudo bem; seguimos nosso caminho. Eu não vou ficar insistindo para você fechar. Você entendeu e consegue me dizer ‘sim’ ou ‘não’ ao final desta conversa?”
+   - Só prosseguir após o lead confirmar que entendeu o acordo.
+4. **Explicação do projeto:** apresentar a solução com energia, convicção e clareza. Antes de ouvir o investimento, o lead precisa compreender a transformação, desejar participar e saber como o projeto resolve seu problema.
+5. **Fechamento financeiro — oferta:** confirmar aderência, diferenciar a proposta, fazer a ancoragem e apresentar investimento e formas de pagamento. Perguntar “E aí, vamos fechar?”, manter a calma e esperar a resposta sem preencher o silêncio.
+
+- **Princípio:** decisão imediata não significa pressão imediata. O acordo antecipa transparência, elimina follow-up indefinido e preserva o direito do lead de dizer “não”.
+- **Cuidado:** não usar esse roteiro com lead sem qualificação, nem transformar silêncio, dúvida ou pedido de tempo em consentimento.
