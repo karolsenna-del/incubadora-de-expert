@@ -141,6 +141,23 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 12/09 — Reconciliacao de 9 dias sem sessao formal do Companion (03-11/09, Companion):**
+Contexto-dinamico e cockpit ficaram parados no checkpoint da weekly de 02/09 enquanto bastante trabalho autonomo real aconteceu (reconstituido via git log, ~140 commits, sem sessao formal do Companion no periodo):
+
+- **Desafio Rota100k — Semana 06 (07-13/09) EM EXECUCAO:** 42 posts roteirizados e revisados com correcoes da Karol (05-06/09), 7 conteudos gerados e enfileirados, 7 carrosseis de 20h agendados via GitHub Actions, 21 Reels YAP com legendas completas. Publicacao rodando via insta-scheduler com **erro 9004 da Meta API recorrente — 5 casos confirmados** (04, 05, 07, 10, 11/09), sempre resolvido por retry automatico/manual, sem post perdido ate agora. Padrao ja documentado, nao e mais incidente novo — so monitorar.
+- **Live 29 FINALIZADA (09/09):** roteiro com ajustes pos-feedback + deck reduzido de 19 pra 18 slides. Story pos-live publicada ("Custo Invisivel de Fazer Tudo Sozinha"). Bonus da live (planilha Mapa de Priorizacao de Ferramentas do Metodo) criado.
+- **Live Black For You (Voomp + Anhanguera, 15/09):** 3 Reels de divulgacao criados (10/09) — ver `project_divulgacao_live_voomp_anhanguera` na memoria. LP de inscricao no grupo (registro antes do WhatsApp) criada (07/09) + video-convite real subido (10/09) + copy/CTA ajustados.
+- **SOP-022 (comentario publico/Direct automatico) — ESTENDIDO mas BLOQUEADO:** passou a responder comentario publico "GRUPO"/"LIVE" (nao so Direct, 07/09), mas trava na verificacao "Provedor de Tecnologia" da Meta (achado 08/09: tela certa no painel do app, deadline real da Meta pra restringir apps sem isso e **07/11**). Formulario de verificacao ja submetido (08/09) — resposta da Meta esperada ate ~13/09 (amanha). Nada a fazer tecnicamente ate la. Detalhe completo em `demandas-backlog.md` (secao Importante).
+- **Conduz Agro (Milena) — avancando com aplicacao real:** stand-by das Sessoes 11/12 discutido com alternativas (04/09); Central de Alunos/Central Conduz atualizada com checklist e scripts (09/09); jornada ajustada conforme analise de posicionamento (11/09); agente "Proposta Validada" **revisado apos aplicacao real** (11/09, ultimo commit antes desta sessao) — sinal de que a Milena ja esta usando o metodo em campo, nao so em teoria.
+- **Novo squad instalado: Clip Expert** (via Squad Forge, 09/09) — `agents/clip-expert/`, ativa com `/clipExpert`. Pipeline garimpeiro → cortador → clip-chief pra extrair/cortar clipes de live com quality gate por nota minima. Adicionado ao mapa de agentes do Companion.
+- **5 diagnosticos sem aviso por e-mail — CORRIGIDO (11/09):** Kit de Ferramentas, Agente IA, Sprint do Metodo, Diagnostico do Expert e DNA do Expert nunca avisavam a Karol quando alguem respondia (Apps Script sem `MailApp.sendEmail`) — achado depois que ela reportou teste do Kit sem e-mail. Fix documentado em cada `setup-planilha-automatica.md`, pronto pra ela colar no Apps Script. Download trocado de `.txt` quebrado pra PDF real via jsPDF com identidade visual.
+- **Novo diagnostico criado: "Crie seu Metodo em 1 Hora"** (11/09) — bonus de aula, duplicado do Kit de Ferramentas com pergunta de interesse individual (Sim/Nao) antes do download. Fora do cockpit, nao processado ainda — perguntar a Karol se e so bonus pontual ou se deve virar operacao continua monitorada.
+- **ETL Sessao Estrategica (Arcane) iniciado (11/09):** mapeamento territorial completo, VOL-1 em andamento — trabalho da Karol como aluna/mentora na Arcane, fora do negocio da Incubadora.
+- **Automacoes rotineiras confirmadas rodando sozinhas o periodo todo:** metricas diarias do Instagram, boot metrics do Synapse, Stories automaticos (insta-scheduler) publicando sem intervencao manual.
+- **Weekly review ATRASADA:** ultima real foi 02/09, proxima estava marcada pra 09/09 — hoje (12/09) sao **10 dias desde a ultima e 3 dias passado do proximo review agendado.**
+
+Retomar com: `/expert-companion` — proxima conversa deve (1) rodar a weekly review atrasada, (2) confirmar status real do M3 do Expert360 (fechou a leva objetiva?), (3) checar resposta da Meta sobre o SOP-022 (esperada ate 13/09), (4) decidir o que fazer com "Crie seu Metodo em 1 Hora" (bonus pontual ou operacao?).
+
 **Sessao 02/09 — Weekly review concluida (Companion):**
 - **Expert360º:** fechar uma leva objetiva do M3. O tamanho da leva nao foi definido; nao abrir escopo novo por inferencia.
 - **Black Friday / Area de Membros:** Biblioteca de IA e a prioridade. A infraestrutura generica existe; pacote, preco, prazo de acesso e demais condicoes continuam sem decisao.
@@ -330,4 +347,4 @@ Retomar com: `/expert-companion`
 
 ---
 
-*Ultima atualizacao: 02/09/2026 (Weekly review concluida — prioridades, proposta Euriler e proxima leva da Mentoria Individual reconciliadas)*
+*Ultima atualizacao: 12/09/2026 (Reconciliacao de 9 dias — Rota100k Semana 06, Live 29, Clip Expert, SOP-022 bloqueado, weekly review atrasada)*
