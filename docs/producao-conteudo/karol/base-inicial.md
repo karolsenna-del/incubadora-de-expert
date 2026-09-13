@@ -596,7 +596,7 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 
 ## Vender exige ambição, técnica e gestão emocional
 
-- **Origem:** reflexão ditada diretamente pela Karol em 13/09/2026.
+- **Origem:** aprendizado da Karol no curso *Estabilidade Não Existe*, de Flávio Augusto, registrado em 13/09/2026.
 - **Tese central:** um bom vendedor combina ambição, técnica e gestão das emoções. Para o especialista que assume o papel de vendedor, aprender a ouvir “não” é parte do ofício — não uma prova de que perdeu autoridade.
 - **Analogia:** o médico convive com sangue e o mecânico com graxa. Nenhum deles precisa gostar disso; apenas entende que faz parte do trabalho. Em vendas, a rejeição ocupa esse mesmo lugar.
 - **Problema:** quando o especialista interpreta cada “não” como julgamento sobre sua competência, começa a duvidar do método, da oferta e de si antes de acumular evidência suficiente.
@@ -605,4 +605,4 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - **Gancho sugerido:** “O ‘não’ está para o vendedor como o sangue para o médico e a graxa para o mecânico.”
 - **Estrutura para Reels YAP:** três características → rejeição como parte do trabalho → erro do especialista ao personalizar o “não” → Vendas Secretas como treino protegido → CTA de diagnóstico.
 - **Aplicação prática:** depois de cada conversa, registrar objeção, resposta dada, estado emocional e próximo ajuste — separando dado de rejeição pessoal.
-- **Dado informado pela Karol:** cerca de 14 “nãos” para um “sim”. Verificar fonte e contexto antes de publicar como estatística.
+- **Dado citado no aprendizado do curso:** cerca de 14 “nãos” para um “sim”. Confirmar no material original de Flávio Augusto antes de publicar como estatística.
