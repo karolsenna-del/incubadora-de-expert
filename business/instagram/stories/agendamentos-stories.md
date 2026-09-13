@@ -27,3 +27,4 @@
 | 09/09/2026 | live-29-custo-invisivel-2026-09-09 | 3 | 18013198376949885, 18101790136992238, 18034039907837691 | sim (ver log de execucao) |
 | 10/09/2026 | grupo-quinta-2026-09-10 | 1 | 18127654216694400 | sim (ver log de execucao) |
 | 11/09/2026 | enquete-positiva-travas-2026-09-11 | 1 | 18076524422384650 | sim (ver log de execucao) |
+| 13/09/2026 | individual-domingo-2026-09-13 | 1 | 18391462405163650 | sim (ver log de execucao) |
