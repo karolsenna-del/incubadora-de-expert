@@ -50,9 +50,11 @@ jobs:
 
           print("Criando item containers...")
           item_ids = []
-          for url in SLIDES:
+          for i, url in enumerate(SLIDES):
             resp = meta_post(f"{IG_ID}/media", {"image_url": url, "is_carousel_item": "true"})
             item_ids.append(resp["id"])
+            if i < len(SLIDES) - 1:
+              time.sleep(2)
           print(f"{len(item_ids)} containers criados")
 
           print("Criando carousel container...")

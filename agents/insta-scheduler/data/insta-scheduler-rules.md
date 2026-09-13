@@ -212,6 +212,39 @@ minutos. Depois de uma falha 9004:
 
 ---
 
+### RULE-7: Hipótese de intervalo da RULE-6 não se sustenta — 2 casos de intervalo longo que falharam mesmo assim
+**Incidente:** A RULE-6 (11/09) propôs que esperar ≥2h51 entre falha e retry resolvia o erro 9004
+100% das vezes (3/3 confirmados até então). Dois casos desde então quebram essa correlação:
+1. `rota100k-semana06-sex-sozinho-x-com-ajuda` — falhou 11/09 20h46 BRT (schedule), retry via
+   `workflow_dispatch` 12/09 12h10 UTC (~11h23 depois, bem acima do mínimo) — **falhou de novo**
+   (slide-05 na 1ª, slide-07 na 2ª). Parado por instrução, pendente decisão da Karol.
+2. `duolingo-teste-antes-de-escalar` — 2 falhas em 11/09 (schedule 17h41 UTC, retry 18h28 UTC só
+   47min depois — consistente com RULE-6). Só retomado em 13/09 durante diagnóstico pedido pela
+   Karol ("os carrosséis das 11h não foram") — retry disparado ~34h depois da 2ª falha, com as 4
+   URLs dos slides pré-confirmadas via `curl -I` (200 OK, arquivo íntegro). **Falhou pela 3ª vez**
+   (slide-05, 4 containers criados antes).
+Com esses 2 casos, a contagem passa a ser 3 sucessos e 2 falhas entre os retries com intervalo
+≥2h51 — a correlação "intervalo longo = resolve" não é mais confiável.
+**Regra:** Intervalo de espera NÃO é preditor confiável de sucesso do retry pro erro 9004 — trata
+como fator que ajuda (ainda vale esperar antes de tentar de novo), não como garantia. Mantém a
+regra de parar após a 3ª falha seguida (RULE-5) independente do intervalo usado nas tentativas.
+Ainda não identificada causa raiz real do erro 9004 — descartados até agora: arquivo/Cloudinary
+(URLs sempre 200 OK), token (válido), horário do post (falha em 11h e 20h), contagem de slides,
+intervalo entre tentativas (agora também descartado como preditor único). Próxima hipótese a
+testar quando houver caso novo: comparar se o padrão está ligado a *qual* slide falha primeiro,
+ou a alguma característica do Cloudinary especificamente pra pasta `duolingo-teste-antes-de-
+escalar` e `rota100k-semana06-sex-sozinho-x-com-ajuda` (ambas geradas na mesma leva/dia?).
+**Adicionada em:** 2026-09-13
+
+**Atualização mesmo dia:** a pedido da Karol, mais 1 retry disparado em cada um dos 2 posts
+travados (13/09 05h26 UTC) — os dois falharam de novo (4ª falha seguida no `duolingo-teste-
+antes-de-escalar`, slide-02; 3ª falha seguida no `rota100k-semana06-sex-sozinho-x-com-ajuda`,
+slide-06). O do `sex-sozinho` reforça ainda mais a RULE-7: ~17h16 de intervalo desde a falha
+anterior, e mesmo assim falhou. Com 4 e 3 falhas seguidas respectivamente, mais retry automático
+sem novo dado deixou de fazer sentido (RULE-5) — os dois precisam de publicação manual.
+
+---
+
 ## Histórico de Incidentes
 
 - 2026-07-11 — Desafio 10 Dias (Dias 5, 6 e 7): legendas chegavam soltas no chat e os slides
@@ -262,3 +295,13 @@ minutos. Depois de uma falha 9004:
   17879985357622763). Log e RULE-4 atualizados com o 5º caso; padrão agora predominante nos
   posts das 20h e bloqueio de rede da checagem já recorrente — sugestão registrada pra Karol
   avaliar liberar `res.cloudinary.com` na política de rede da sessão de checagem.
+- 2026-09-13 — Karol perguntou "os carrosséis das 11h não foram". Diagnóstico achou que
+  `steve-jobs-metodo-foco` já estava resolvido (publicado manualmente 10/09, workflow desativado)
+  e `liquid-death-narrativa-autoral` ainda nem tinha chegado no horário (agendado pra 13/09 14h
+  UTC, hora da checagem era 05h02 UTC). O problema real era `duolingo-teste-antes-de-escalar`:
+  2 falhas de 11/09 nunca tinham sido logadas nem retomadas. Retry disparado com aprovação da
+  Karol (URLs pré-confirmadas 200 OK) — falhou pela 3ª vez, erro 9004 idêntico. Parado conforme
+  RULE-5 (3ª falha = não insistir às cegas). RULE-6 revisada com RULE-7: intervalo longo não é
+  mais garantia de sucesso (2º caso de falha com intervalo ≥2h51, depois do `rota100k-semana06-
+  sex-sozinho-x-com-ajuda` de 12/09). Publicação manual oferecida à Karol pros dois posts
+  pendentes (duolingo e sex-sozinho-x-com-ajuda).
