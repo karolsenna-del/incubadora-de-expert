@@ -54,3 +54,13 @@ E troca `"COLE_AQUI_A_URL_DO_APPS_SCRIPT"` pela URL copiada no Passo 4, entre as
 ## Quando atualizar o script
 
 Se um dia mudar alguma pergunta ou coluna nos diagnósticos, atualiza `apps-script-diagnosticos.gs` aqui no repo, cola a versão nova no Apps Script (Extensões → Apps Script, substitui o conteúdo), salva, e faz **Implantar → Gerenciar implantações → editar (ícone de lápis) → Nova versão → Implantar**. A URL continua a mesma, não precisa trocar nada nos HTMLs.
+
+## Como conferir se o que está no ar é a versão certa
+
+Colar/salvar código novo no editor do Apps Script **não atualiza sozinho** o Web App publicado — são duas coisas separadas. Pra confirmar:
+
+1. No Apps Script: `Implantar` → **Gerenciar implantações**
+2. Olha o campo **Versão** da implantação "Ativa" (linha destacada à esquerda) — a data ali é a que está realmente respondendo pelo link `/exec`, não a data do último salvamento
+3. Se essa data for mais antiga que a última edição real do `.gs`: clica no lápis (editar) → troca pra **Nova versão** → Implantar
+
+O "Histórico do projeto" (ícone de relógio na lateral do editor) mostra só o código *salvo* — não é o mesmo que o código *publicado*. Confundir os dois foi a causa de um caso real (12/09): script editado e salvo, mas o deploy ativo continuou preso numa versão de 12 dias antes.

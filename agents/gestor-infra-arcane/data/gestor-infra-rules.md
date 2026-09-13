@@ -263,6 +263,27 @@ cada arquivo, então a reconstrução foi fiel). Commit imediato recomendado à 
 
 ---
 
+## REGRA-020: Editar código Apps Script (ou qualquer editor Monaco/CodeMirror) via browser automation — nunca digitar caractere por caractere
+
+**Contexto:** Ao tentar corrigir o script `Recebe Briefing Agente de IA` (12-13/09), a automacao de teclado (`computer.type`) do Claude in Chrome derrubou repetidamente o caractere `}` sempre que ele aparecia sozinho como primeiro caractere nao-whitespace de uma linha (fechamento de bloco `if`/`forEach`/objeto). Aconteceu em pelo menos 3 blocos diferentes na mesma sessao, mesmo tentando: digitar de novo, selecionar+substituir a linha inteira, digitar em pedacos menores. Uma tentativa de correcao manual via clique+digitacao ainda inseriu conteudo no lugar errado (linha 26 virou lixo). O editor da Apps Script (e da maioria dos editores web modernos de codigo) roda Monaco por baixo — o auto-fechamento de chaves/parenteses do Monaco intercepta o keydown sintetico de forma diferente de um keydown real, e o resultado e silencioso (nao da erro, so nao insere o caractere).
+
+**Fix que funcionou:** usar a API JS do proprio editor em vez de simular teclado:
+```js
+const editor = monaco.editor.getEditors()[0];
+const model = editor.getModel();
+model.pushEditOperations([], [{ range: model.getFullModelRange(), text: CODIGO_NOVO_COMPLETO }], () => null);
+```
+Isso substitui o conteudo inteiro do arquivo numa unica operacao, sem passar por keydown nenhum — funciona de primeira, sem corromper nada. Depois so `Ctrl+S` (ou disparar save) e conferir que sumiu "Mudancas nao salvas"/erro de sintaxe antes de implantar.
+
+**Regra:**
+- Antes de editar codigo dentro de um editor web (Apps Script, qualquer coisa baseada em Monaco/CodeMirror) via `computer.type`: **nao digitar o codigo direto**. Primeiro checar se `window.monaco` existe (`javascript_tool`: `typeof window.monaco`) — se existir, usar `monaco.editor.getEditors()[0].getModel().pushEditOperations(...)` ou `.setValue(...)` pra escrever o conteudo inteiro de uma vez.
+- Se for so 1-2 caracteres pontuais (nao o arquivo inteiro), MESMO ASSIM preferir a API do editor — digitar `}` isolado e o caso que mais quebra.
+- **Depois de qualquer edicao via automacao**, SEMPRE conferir o resultado por comprimento/contagem de caracteres via JS (`model.getValue().length`, `model.getLineCount()`), nao so por screenshot — a renderizacao pode ficar com scroll horizontal deslocado e esconder visualmente se um `}` esta faltando ou nao (aconteceu nesta mesma sessao, um `});` real ficou ilegivel no screenshot mas estava correto).
+- **Cuidado com o classificador de auto mode ao usar `javascript_tool`:** ele pode bloquear a chamada com `[BLOCKED: Cookie/query string data]` se o *retorno* da funcao incluir strings que parecam token/ID longo (tipo um Drive folder ID) ou e-mail. Nao e um bloqueio de escrita — e de leitura/retorno. Solucao: nunca `return`/logar essas strings sensiveis de volta pro chat; se precisar verificar conteudo, comparar por `.length` ou hash em vez de devolver o texto cru.
+- **Depois de salvar**, sempre confirmar visualmente que o aviso "Mudancas nao salvas" sumiu E que nao aparece marcador vermelho de erro de sintaxe antes de ir pro `Implantar → Nova versao`.
+
+---
+
 ## Registro de Incidentes
 
 | # | O que aconteceu | Fix | Regra criada |
@@ -278,3 +299,4 @@ cada arquivo, então a reconstrução foi fiel). Commit imediato recomendado à 
 | 9 | Multiplas janelas do Claude Code na mesma pasta — arquivos novos (untracked) de uma sessao (worker Expert-Stories completo + documento de rotina) sumiram do disco por causa de commit/merge feito por outra sessao concorrente | Recriado a partir do contexto da propria conversa + commit imediato recomendado | REGRA-017 |
 | 10 | `git add` sem `-f` no passo de commit do insta-scheduler nunca commitou a pasta `agendados/` (gitignorada) — 5 dias de posts reais (23-27/08) sem arquivamento de verdade no repo | `git add -f` no passo de commit do workflow | REGRA-018 |
 | 11 | Cron das 9h30 do insta-scheduler nao disparou em 28/08 — Story do dia ficou sem publicar ate a Karol reportar | Disparo manual (`gh workflow run`) | REGRA-019 |
+| 12 | Digitacao automatizada (`computer.type`) no editor Apps Script (Monaco) derrubou `}` isolado varias vezes seguidas, corrompendo o script `Recebe Briefing Agente de IA` — precisou de 1h+ de tentativas ate achar o fix real | Reescrita via `monaco.editor.getEditors()[0].getModel().pushEditOperations(...)`, substituindo o arquivo inteiro numa unica operacao JS em vez de teclado simulado | REGRA-020 |
