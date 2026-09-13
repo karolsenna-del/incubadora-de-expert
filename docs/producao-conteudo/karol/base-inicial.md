@@ -606,3 +606,8 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - **Estrutura para Reels YAP:** três características → rejeição como parte do trabalho → erro do especialista ao personalizar o “não” → Vendas Secretas como treino protegido → CTA de diagnóstico.
 - **Aplicação prática:** depois de cada conversa, registrar objeção, resposta dada, estado emocional e próximo ajuste — separando dado de rejeição pessoal.
 - **Dado citado no aprendizado do curso:** cerca de 14 “nãos” para um “sim”. Confirmar no material original de Flávio Augusto antes de publicar como estatística.
+- **Três perguntas que o lead precisa responder numa sessão de Vendas Secretas:**
+  1. **“Isso é verdade?”** — responder com história, trajetória e autoridade que deem credibilidade à promessa.
+  2. **“O que eu ganho com isso?”** — tornar explícitos os benefícios e a transformação esperada.
+  3. **“Será que serve para mim?”** — apresentar provas de outras pessoas em contextos comparáveis, sem prometer o mesmo resultado.
+- **Uso na sessão:** ouvir em qual dessas três perguntas o lead trava, responder com a evidência correspondente e registrar a objeção para ajustar proposta e comunicação.
