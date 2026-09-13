@@ -587,3 +587,9 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - **Estrutura para Reels YAP:** página que não comunicava a história → ausência de prova como mentora → autoridade técnica já comprovada em outro mercado → confronto entre propósito e modelo de negócio → critério para escolher persona.
 - **Estrutura para carrossel:** “Sua persona está baseada em propósito ou em prova?” → identificação → autoridade → diferenciação → oportunidade → decisão estratégica.
 - **Cuidado editorial:** não usar a promessa de enriquecimento nem percentuais de mercado sem dados verificáveis. Não identificar a especialista sem autorização.
+
+## Referências de formatos e ideias — Instagram, 12/09/2026
+
+- Biblioteca registrada em `referencias-conteudo/2026-09-12-instagram-ideias-formatos.md`.
+- Fontes: `@turbo.partners`, `@copyafiliados` e `@kabritodigital`; crédito adicional de formato a `@malluramosss`.
+- Uso: adaptar formatos para método, validação, vendas e posicionamento; o caso Betty Crocker/ovos exige checagem histórica antes da publicação.
