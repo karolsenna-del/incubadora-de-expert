@@ -64,7 +64,7 @@
 | 4.1 | Welcome sequence (WhatsApp + e-mail pós-pagamento) | `design-entregaveis.md` Seção 1 — proposto, não escrito | P2 | [ ] Pendente |
 | 4.2 *(corrigido 08/09)* | Kit de boas-vindas enxuto (confirmação da data da S1, acessos aos 3 agentes, contato WhatsApp — **sem** calendário fixo de 24 datas, **sem** trilha diária, **sem** Central do Aluno/CRM: essas são apresentadas ao vivo na S1 e S2) | `design-entregaveis.md` Seção 1 + Seção 9 | P2 | [ ] Pendente |
 | 4.3 | Roteiro de pedido de depoimento em vídeo (S24) | `design-entregaveis.md` Seção 2 — proposto | P3 | [ ] Pendente |
-| 4.4 *(novo, 08/09)* | Republicar o Roteiro Executável das Sessões (Artifact 5c5f1907, `centralconduz`) com as mudanças de S1/S2 do Addendum — a versão publicada em 25/08 ainda está desatualizada e foi o que confundiu a Milena | `roteiro-sessoes.md` S1/S2 + `design-entregaveis.md` Seção 9 | P1 | [ ] Pendente |
+| 4.4 *(novo, 08/09)* | Republicar o Roteiro Executável das Sessões (Artifact 5c5f1907, `centralconduz`) com as mudanças de S1/S2 do Addendum — a versão publicada em 25/08 ainda está desatualizada e foi o que confundiu a Milena | `roteiro-sessoes.md` S1/S2 + `design-entregaveis.md` Seção 9 | P1 | [x] Feito — **13/09:** `roteiro-sessoes.md` e `roteiro-sessoes.html` já estavam com tudo certo (S1/S2 do addendum de 08/09 + S2/S17/S18 renomeadas e 6 marcações do addendum de 11/09), só faltava republicar — artifact republicado a partir do `.html` local, confirmado ao vivo |
 
 ## 5. Plataforma e Tecnologia
 
