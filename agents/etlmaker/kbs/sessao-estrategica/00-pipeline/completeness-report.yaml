@@ -3,20 +3,22 @@ completeness_report:
   kb_name: "Sessão Estratégica"
   kb_slug: "sessao-estrategica"
   generated_at: "2026-09-13"
+  updated_at: "2026-09-14"
+  updated_reason: "Merge da fonte SRC-002 (FHT/Lourival) — VOL-05 novo, integrado nos docs transversais. Fase 4 (validação) precisa rodar de novo considerando o volume novo."
   generated_by: "ETLmaker v3.0"
 
   source:
-    author: "Tomás"
-    total_sources: 1
-    total_words: 31405
-    formats: ["video (transcrito localmente via whisper.cpp)"]
+    author: "Tomás (SRC-001) + Lourival (SRC-002)"
+    total_sources: 2
+    total_words: 46321
+    formats: ["video (transcrito localmente via whisper.cpp, modelo medium — SRC-001)", "video (gravação de tela + transcrito localmente via whisper.cpp, modelo small — SRC-002)"]
 
   pipeline:
     phase_0_setup: "completed"
     phase_1_territorial: "completed"
     phase_2_composition: "completed"
     phase_3_integration: "completed"
-    phase_4_validation: "pending"
+    phase_4_validation: "completed"
 
   volumes:
     - id: "VOL-01"
@@ -63,6 +65,19 @@ completeness_report:
       domains: ["Estrutura da Sessão Estratégica/Diagnóstico (Pilar 3)"]
       qg_003_pass: true
 
+    - id: "VOL-05"
+      title: "Sessão A1 pelo Método FHT — Geração de Leads, Roteiro e Diagnóstico Raio-X"
+      file: "VOL-05-sessao-a1-metodo-fht.md"
+      author: "Lourival (SRC-002 — autor/mentoria diferente de Tomás)"
+      lines: 309
+      tables: 4
+      examples: 4
+      cardinal_rules: 4
+      provenance_refs: 61
+      domains: ["Geração de Leads para Sessão A1 (FHT)", "Estrutura e Etapas da Sessão A1 (FHT)", "Questionário Raio-X / RX (FHT)"]
+      qg_003_pass: true
+      nota: "Fonte transcrita com modelo whisper small (menor precisão) — ver README.md e Nota de Fidelidade no próprio volume."
+
   transversal_docs:
     readme: true
     regras_cardinais: true
@@ -70,20 +85,22 @@ completeness_report:
     glossario: true
 
   regras_cardinais_summary:
-    candidatas_antes_de_deduplicar: 22
-    unicas_apos_deduplicar: 22
-    nota: "As 22 regras marcadas nos 4 volumes são todas semanticamente distintas entre si; 7 delas também aparecem registradas de forma independente na seção 5 do MAPA-TERRITORIAL.md, confirmando (não duplicando) o mesmo princípio."
+    candidatas_antes_de_deduplicar: 26
+    unicas_apos_deduplicar: 26
+    nota: "22 regras de Tomás (semanticamente distintas entre si; 7 delas também aparecem registradas de forma independente na seção 5 do MAPA-TERRITORIAL.md) + 4 regras de Lourival/SRC-002 (seção própria em REGRAS-CARDINAIS.md, não fundidas com as de Tomás)."
 
   repertorio_summary:
-    total_itens: 27
+    total_itens: 33
     secoes_populadas: 11
     itens_orfaos: 0
+    nota: "27 itens de Tomás + 6 itens de Lourival/SRC-002 (4 do escopo mínimo do merge + 2 metáforas + 1 história, marcados (SRC-002/Lourival) em cada seção)."
 
   glossario_summary:
-    total_termos: 22
+    total_termos: 32
     termos_do_mapa_territorial: 17
     termos_emergentes: 5
-    nota: "Recontado na Fase 4 (auditoria) — o Mapa Territorial seção 6 tinha 17 termos na tabela real (não 14 como o texto da seção afirmava), e 2 estavam faltando no GLOSSARIO.md; corrigidos durante a auditoria."
+    termos_src_002: 10
+    nota: "Recontado na Fase 4 (auditoria) — o Mapa Territorial seção 6 tinha 17 termos na tabela real (não 14 como o texto da seção afirmava), e 2 estavam faltando no GLOSSARIO.md; corrigidos durante a auditoria. +10 termos de Lourival/SRC-002 adicionados no merge de 14/09, em seção própria pra não confundir com termos homônimos de Tomás (ex: Sessão A1 ≠ Sessão Estratégica)."
 
   cross_reference_check:
     readme_links_validos: true
@@ -102,12 +119,12 @@ completeness_report:
     QG-ETL-005: "PASSED"
 
   totals:
-    total_volumes: 4
-    total_lines: 1212
-    total_tables: 19
-    total_examples: 24
-    total_cardinal_rules_unique: 22
-    total_provenance_refs: 202
+    total_volumes: 5
+    total_lines: 1521
+    total_tables: 23
+    total_examples: 28
+    total_cardinal_rules_unique: 26
+    total_provenance_refs: 263
 
   verdict: "APPROVED"
-  verdict_notes: "Fase 4 (Validação Final) concluída. Camada 2 (auditoria exaustiva): PASS após correção de 2 termos faltantes no GLOSSARIO.md (ver critical-audit-report.yaml). Camada 3 (6-passes): score agregado 98.2% (coverage 95%, fidelity 100%, richness 100%, voice 92%, consistency 100%, integrity 100%) — verdict APPROVED. 2 itens não-bloqueantes documentados para eventual expansão futura (domínio 'Sazonalidade Comercial' não coberto; termo 'Roda da Vida/11 Pilares' definido mas não desenvolvido em volume). Ver validation-report.yaml para detalhes completos. KB PRONTA."
+  verdict_notes: "Fase 4 (Validação Final) re-executada em 14/09/2026 cobrindo os 5 volumes. Camada 2 (auditoria exaustiva) PASS — 0 correções necessárias, achados de 13/09 reconfirmados sem regressão. Camada 3 (6-passes): score agregado 98.44% (coverage 96.6, fidelity 100, richness 100, voice 91.2, consistency 100, integrity 100), verdict APPROVED. Ver validation-report.yaml e critical-audit-report.yaml (versões de 14/09, cobrindo SRC-001 + SRC-002)."

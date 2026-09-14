@@ -1,8 +1,8 @@
-# Regras Cardinais — Sessão Estratégica (Método Águia / Tomás)
+# Regras Cardinais — Sessão Estratégica
 
-> Estes princípios são tratados como **ABSOLUTOS** pelo autor (Tomás).
-> Não são sugestões — são leis do método, repetidas ao vivo e aplicadas na própria operação dele.
-> Organizadas por domínio para facilitar consulta. 22 regras, consolidadas dos 4 volumes (deduplicadas por conteúdo — 7 delas também aparecem registradas na seção 5 do Mapa Territorial).
+> Estes princípios são tratados como **ABSOLUTOS** pelos autores desta KB.
+> Não são sugestões — são leis do método, repetidas ao vivo e aplicadas na própria operação de cada um.
+> Organizadas por domínio para facilitar consulta. 26 regras no total: 22 de **Tomás** (Método Águia/Arcane, VOL-01–VOL-04, deduplicadas por conteúdo — 7 delas também aparecem registradas na seção 5 do Mapa Territorial) + 4 de **Lourival** (FHT, VOL-05, seção própria ao final — autor e mentoria diferentes, regras não misturadas com as de Tomás).
 
 ---
 
@@ -195,4 +195,48 @@ Fixo de R$1.500-2.000 (seller) vs. a partir de R$2.500 (closer) — a diferença
 
 ---
 
-*Consolidado pelo ETLmaker v3.0 a partir dos 4 volumes desta KB e da seção 5 do MAPA-TERRITORIAL.md.*
+## Sessão A1 (FHT / Lourival) — autor e mentoria diferentes de Tomás
+
+> As 4 regras abaixo vêm de uma fonte independente (SRC-002), transcrita com menor precisão que a de Tomás (ver README.md e MAPA-TERRITORIAL.md seção 10). Não são o mesmo método — são princípios de um segundo instrutor, aplicáveis dentro de [VOL-05](VOL-05-sessao-a1-metodo-fht.md).
+
+### 23. Execute o pitch de vendas 100% das vezes
+
+Mesmo que o Questionário Raio-X tenha ido mal ou pareça que o cliente não vai comprar, o pitch sempre acontece — a decisão de "aprovar" ou não o cliente é feita depois, nunca antes de apresentar a oferta.
+
+> "Muito importante você executar o pitch de vendas 100% das vezes."
+> [Fonte: SRC-002, ~00:27:38-00:28:02 — a regra mais repetida da fonte]
+
+**Por que é absoluta:** é a regra mais enfatizada de toda a fonte — Lourival a repete de forma incomum (com ruído de transcrição na repetição, ver Nota de Fidelidade do VOL-05).
+*Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md)*
+
+### 24. 100% integridade — nunca manipular o cliente pra vender
+
+Ser sincero sobre o que o produto não resolve; falar quando você não consegue endereçar um desafio específico do cliente.
+
+> "100% integridade. Não vale tudo pra vender [...] as pessoas sentem o cheiro da verdade, elas sentem o cheiro da malandragem também."
+> [Fonte: SRC-002, ~00:16:00-00:16:16]
+
+**Por que é absoluta:** apresentada como princípio central da "venda consultiva" que sustenta toda a filosofia da Sessão A1.
+*Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md)*
+
+### 25. A oferta precisa soar mais vantajosa pro cliente do que pra você
+
+A venda só é boa quando o resultado do cliente é desproporcionalmente maior que o valor cobrado — sem que isso signifique que você sai perdendo.
+
+> Exemplo dado: um acompanhamento de R$100 mil que ajuda o cliente a faturar R$1 milhão soa muito mais vantajoso pra quem compra do que pra quem vende, mesmo sendo ótimo negócio pros dois lados.
+> [Fonte: SRC-002, ~00:15:07-00:16:00]
+
+*Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md)*
+
+### 26. Balanceie as áreas de potencial e de dificuldade do Questionário RX
+
+Nem poucas, nem muitas — o exemplo dado foi 4 áreas de potencial e 3 de dificuldade, mas o número exato é secundário; o que importa é não pender só pra um lado (só potencial desmotiva a comprar por falta de urgência; só dificuldade desmotiva por desânimo).
+
+> "Às vezes pode ser 3, 3. Só não pode ser muito de um ou muito de outro [...] não tem que ser 7 áreas, você vai ficar um dia inteiro conduzindo a sessão."
+> [Fonte: SRC-002, ~00:23:57-00:24:09]
+
+*Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md)*
+
+---
+
+*Consolidado pelo ETLmaker v3.0 a partir dos 5 volumes desta KB e da seção 5 do MAPA-TERRITORIAL.md.*

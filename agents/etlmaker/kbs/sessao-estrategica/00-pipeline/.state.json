@@ -20,14 +20,18 @@
       "status": "transcribed_and_normalized"
     }
   ],
-  "volumes_composed": 4,
-  "volumes_total": 4,
-  "volumes_plan": ["VOL-01-fundamentos-modelo-negocio", "VOL-02-geracao-demanda", "VOL-03-processo-comercial-time", "VOL-04-sessao-estrategica-4-blocos"],
-  "validation_score": 98.2,
+  "volumes_composed": 5,
+  "volumes_total": 5,
+  "volumes_plan": ["VOL-01-fundamentos-modelo-negocio", "VOL-02-geracao-demanda", "VOL-03-processo-comercial-time", "VOL-04-sessao-estrategica-4-blocos", "VOL-05-sessao-a1-metodo-fht"],
+  "validation_score": 98.44,
   "validation_verdict": "APPROVED",
-  "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003-VOL-01", "QG-ETL-003-VOL-02", "QG-ETL-003-VOL-03", "QG-ETL-003-VOL-04", "QG-ETL-004", "QG-ETL-005"],
+  "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003-VOL-01", "QG-ETL-003-VOL-02", "QG-ETL-003-VOL-03", "QG-ETL-003-VOL-04", "QG-ETL-003-VOL-05", "QG-ETL-004", "QG-ETL-005"],
   "started_at": "2026-09-10",
-  "completed_at": "2026-09-13",
+  "completed_at": "2026-09-14",
+  "validation_history": [
+    {"date": "2026-09-13", "scope": "VOL-01 a VOL-04 (SRC-001 apenas)", "score": 98.2, "verdict": "APPROVED"},
+    {"date": "2026-09-14", "scope": "VOL-01 a VOL-05 (SRC-001 + SRC-002, apos merge FHT)", "score": 98.44, "verdict": "APPROVED"}
+  ],
   "merge_fht_sessao1a1": {
     "mode": "merge",
     "new_source": {
@@ -39,13 +43,26 @@
       "normalized_path": "00-pipeline/sources/fht-sessao1a1-normalized.md",
       "quality_gates_passed": ["QG-ETL-000"]
     },
-    "current_phase": 2,
+    "current_phase": 4,
     "phase_status": {
       "ingestion": "completed",
       "phase_1_mapeamento": "completed",
       "phase_2_composicao": "completed",
-      "phase_3_integracao": "pending",
-      "phase_4_validacao": "pending"
+      "phase_3_integracao": "completed",
+      "phase_4_validacao": "completed"
+    },
+    "validation_summary": {
+      "layer_2_verdict": "PASS",
+      "layer_3_score": 98.44,
+      "layer_3_verdict": "APPROVED",
+      "reports": ["00-pipeline/critical-audit-report.yaml", "00-pipeline/validation-report.yaml"]
+    },
+    "integration_summary": {
+      "docs_updated": ["README.md", "REGRAS-CARDINAIS.md", "REPERTORIO.md", "GLOSSARIO.md", "00-pipeline/completeness-report.yaml"],
+      "regras_cardinais_adicionadas": 4,
+      "repertorio_itens_adicionados": 6,
+      "glossario_termos_adicionados": 10,
+      "cross_reference_check": "PASSED (0 links quebrados, 5/5 volumes referenciados existem)"
     },
     "author_corrected": "Lourival (era 'Orival', erro de ASR corrigido pela usuária)",
     "volumes_composed": [

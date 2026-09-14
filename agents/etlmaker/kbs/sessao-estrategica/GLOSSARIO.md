@@ -1,7 +1,10 @@
-# Glossário — Sessão Estratégica (Método Águia / Tomás)
+# Glossário — Sessão Estratégica
 
-> Terminologia proprietária e termos técnicos do método.
-> Definições fiéis ao uso do autor (Tomás), preservando gírias e vocabulário próprio.
+> Terminologia proprietária e termos técnicos dos dois autores desta KB.
+> Definições fiéis ao uso de cada um, preservando gírias e vocabulário próprio.
+> Termos marcados **(Lourival/FHT)** vêm de uma fonte e mentoria diferentes de Tomás — atenção especial a termos parecidos: "Sessão Estratégica" (Tomás) e "Sessão A1" (Lourival) são NOMES DIFERENTES pro mesmo tipo de call, não sinônimos intercambiáveis dentro de um único volume.
+
+## Termos de Tomás (Método Águia / Arcane)
 
 | Termo | Definição | Fonte |
 |-------|-----------|-------|
@@ -30,6 +33,25 @@
 
 *(22 termos catalogados — 17 do Mapa Territorial (seção 6, recontados) + 5 emergentes identificados durante a composição dos volumes.)*
 
+## Termos de Lourival (Fórmula High Ticket / FHT)
+
+> Fonte com qualidade de transcrição inferior (modelo whisper "small") — ver README.md e seção 10 do MAPA-TERRITORIAL.md.
+
+| Termo | Definição | Fonte |
+|-------|-----------|-------|
+| **Sessão A1 / Sessão 1 a 1** | Nome do FHT pra reunião de diagnóstico/venda 1:1 — equivalente funcional à "Sessão Estratégica" de Tomás (acima), mas termo, roteiro e ferramentas próprios de Lourival. **Não é sinônimo de "Sessão Estratégica"** — são nomes de dois métodos diferentes para o mesmo tipo de call | [VOL-05](VOL-05-sessao-a1-metodo-fht.md) |
+| **Lead** (FHT) | Pessoa que forneceu contato (telefone/e-mail) com interesse específico, tornando-se candidata a agendar a Sessão A1 — antes disso é só "audiência" | [VOL-05](VOL-05-sessao-a1-metodo-fht.md) |
+| **Bônus Kinder Ovo** | Bônus de alta percepção de valor (ex.: consultoria gratuita) embutido num produto de entrada mais barato já existente, usado pra gerar leads qualificados pra Sessão A1 | [VOL-05](VOL-05-sessao-a1-metodo-fht.md) |
+| **Questionário Raio-X / "RX"** | Ferramenta de diagnóstico consultivo aplicada na Sessão A1 antes do pitch — série de perguntas investigativas organizadas por áreas de potencial e de dificuldade | [VOL-05](VOL-05-sessao-a1-metodo-fht.md) |
+| **Áreas de Potencial** | Dimensões do negócio/carreira do lead que mostram capacidade de gerar resultado (ex.: potencial de impacto, de negócio, de escala, de demanda/urgência) — mapeadas no RX | [VOL-05](VOL-05-sessao-a1-metodo-fht.md) |
+| **Áreas de Dificuldade** | Dimensões onde o lead tem obstáculo/lacuna que o acompanhamento vendido promete resolver — mapeadas no RX, balanceadas com as áreas de potencial | [VOL-05](VOL-05-sessao-a1-metodo-fht.md) |
+| **Seeding** | Técnica de "plantar uma semente" de que vai existir uma oferta ao final da Sessão A1, sem revelar detalhes, dita durante o alinhamento de expectativas no início da call | [VOL-05](VOL-05-sessao-a1-metodo-fht.md) |
+| **Venda Consultiva** | Filosofia de condução da Sessão A1 — parecer (e ser) uma consultoria que gera valor, não uma abordagem agressiva de venda | [VOL-05](VOL-05-sessao-a1-metodo-fht.md) |
+| **Público Frio** | Pessoas que ainda não conhecem o expert/oferta, geradas via tráfego pago, convertidas a partir do primeiro contato com um anúncio | [VOL-05](VOL-05-sessao-a1-metodo-fht.md) |
+| **HiTicket / HT** (grafia de Lourival) | Forma como Lourival se refere a "high ticket" — a transcrição automática (modelo small) frequentemente distorce esse termo para variações como "HTT", "ratíguete", "ratigue", "retíguet", todas normalizadas nesta KB como "high ticket"/"HT" — equivalente ao mesmo termo que Tomás usa, mas de fonte/transcrição diferente | [VOL-05](VOL-05-sessao-a1-metodo-fht.md) |
+
+*(10 termos de Lourival/FHT, vindos da seção 6/SRC-002 do MAPA-TERRITORIAL.md.)*
+
 ---
 
-*Consolidado pelo ETLmaker v3.0 a partir da seção 6 do MAPA-TERRITORIAL.md e dos 4 volumes desta KB.*
+*Consolidado pelo ETLmaker v3.0 a partir da seção 6 do MAPA-TERRITORIAL.md e dos 5 volumes desta KB. Total: 32 termos (22 de Tomás + 10 de Lourival).*

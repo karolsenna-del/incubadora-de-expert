@@ -1,8 +1,9 @@
-# Repertório — Sessão Estratégica (Método Águia / Tomás)
+# Repertório — Sessão Estratégica
 
 > Todos os artefatos acionáveis, exemplos, metáforas, histórias e frases
 > catalogados por tipo para consulta rápida.
 > Cada item com proveniência [Fonte:] e referência ao volume onde está contextualizado.
+> Itens marcados **(SRC-002/Lourival)** vêm do VOL-05 (FHT) — autor e mentoria diferentes de Tomás, catalogados junto por tipo mas nunca fundidos em conteúdo.
 
 ---
 
@@ -24,6 +25,17 @@ Ordem observada na demonstração ao vivo: (1) o que é o método + autoridade d
 
 [Fonte: aula-sessao-estrategica-normalized.md, 02:12:34-02:19:49]
 *Contextualizado em: [VOL-04](VOL-04-sessao-estrategica-4-blocos.md), seção 5*
+
+### Estrutura do Questionário Raio-X **(SRC-002/Lourival)**
+
+1. Definir N áreas de potencial do cliente (ex.: impacto, negócio, escala, demanda/urgência)
+2. Definir N áreas de dificuldade (balanceadas com as de potencial — nem poucas, nem muitas)
+3. Criar de 3 a 5 perguntas investigativas por área, em tom consultivo (não robótico)
+4. Aplicar ao vivo, compartilhando tela (planilha ou ferramenta própria), em 10-30 minutos
+5. Entregar a análise geral (pontos fortes/fracos) como ponte natural pra oferta
+
+[Fonte: SRC-002, 00:19:45-00:27:29]
+*Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md), seção 6*
 
 ---
 
@@ -93,6 +105,16 @@ Ordem observada na demonstração ao vivo: (1) o que é o método + autoridade d
 [Fonte: aula-sessao-estrategica-normalized.md, 02:20:34-02:25:23]
 *Contextualizado em: [VOL-04](VOL-04-sessao-estrategica-4-blocos.md), seção 6*
 
+### 4 Canais de Geração de Leads pra Sessão A1 **(SRC-002/Lourival)**
+
+- [ ] **Bônus Kinder Ovo** — tem produto de entrada pra embutir uma consultoria gratuita como bônus?
+- [ ] **Convite de audiência** — já tem lista de contatos, lançamentos anteriores ou rede pessoal pra convidar diretamente?
+- [ ] **Tráfego pago** — tem orçamento pra rodar anúncio convidando pra consultoria gratuita?
+- [ ] **Tráfego orgânico + indicação** — está postando/story convidando, engajando ativamente, e pedindo indicação de alunos/afiliados?
+
+[Fonte: SRC-002, 00:02:50-00:08:43]
+*Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md), seção 2*
+
 ---
 
 ## 5. Workflows
@@ -122,6 +144,15 @@ Confirmação do pagamento (PIX) → grupo de WhatsApp → e-mail → acesso à 
 
 [Fonte: aula-sessao-estrategica-normalized.md, 02:25:32-02:25:51]
 *Contextualizado em: [VOL-04](VOL-04-sessao-estrategica-4-blocos.md), seção 6*
+
+### Funil de 3 Etapas da Sessão A1 **(SRC-002/Lourival)**
+
+1. **Geração de Leads** — pessoa dá contato (via um dos 4 canais) → vira lead
+2. **Agendamento** — link de mensagem direta (WhatsApp), atendido por uma pessoa, não automação, até ganhar volume
+3. **Conversão** — a sessão em si: Apresentação → Alinhamento/Seeding → Questionário RX → Pitch de Vendas
+
+[Fonte: SRC-002, 00:03:56-00:04:00 e 00:12:56-00:13:01]
+*Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md), seção 1*
 
 ---
 
@@ -156,6 +187,13 @@ Demonstrado ao vivo com o aluno voluntário Thiago — do rapport ao PIX na call
 
 [Fonte: aula-sessao-estrategica-normalized.md, 01:56:00-02:27:01]
 *Contextualizado em: [VOL-04](VOL-04-sessao-estrategica-4-blocos.md)*
+
+### Exemplo de Perguntas Investigativas — Potencial de Impacto **(SRC-002/Lourival)**
+
+> "Quanto seu conhecimento e experiência podem gerar transformação pros seus clientes? Quanto você acredita que pode gerar resultado? Quanto você acredita que a transformação pode gerar um valor percebido? Quanto você acredita que pode superar as expectativas? Quanto você acredita que poderia gerar resultados ainda maiores com uma solução personalizada?"
+
+[Fonte: SRC-002, 00:24:26-00:24:38]
+*Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md), seção 6*
 
 ---
 
@@ -246,8 +284,10 @@ Demonstrado ao vivo com o aluno voluntário Thiago — do rapport ao PIX na call
 | "Tirar do inferno e levar pro céu" | Descreve a virada de eixo da call: do mapeamento da dor (inferno) pra visualização do futuro resolvido (céu), no Bloco 4 | [Fonte: aula-sessao-estrategica-normalized.md, 02:10:37-02:10:53] |
 | "Esse aqui é tipo um Hyundai" | Analogia de carro usada por Tomás pra descrever o produto Ultra High Ticket da esteira (fala transcrita fielmente, sem explicação da escolha da marca) | [Fonte: aula-sessao-estrategica-normalized.md, 02:29:46-02:29:51] |
 | "Não existe pular o deserto" | O posicionamento pessoal/autoridade não se constrói da noite pro dia — é preciso passar pela jornada de erro e aprendizado | [Fonte: aula-sessao-estrategica-normalized.md, 00:48:36] |
+| **(SRC-002/Lourival)** "O bônus Kinder Ovo" | Bônus embutido num produto de entrada com percepção de valor maior que o próprio produto principal — "qual criança compra o Kinder Ovo por causa do chocolate?" | [Fonte: SRC-002, 00:05:00-00:05:06] |
+| **(SRC-002/Lourival)** "O questionário é um raio-x do negócio" | O Questionário RX enxerga por dentro do negócio/momento do cliente antes de qualquer recomendação, do mesmo jeito que um raio-x médico | [Fonte: SRC-002, 00:17:58-00:18:00] |
 
-*Contextualizado em: [VOL-01](VOL-01-fundamentos-modelo-negocio.md), [VOL-02](VOL-02-geracao-demanda.md), [VOL-04](VOL-04-sessao-estrategica-4-blocos.md)*
+*Contextualizado em: [VOL-01](VOL-01-fundamentos-modelo-negocio.md), [VOL-02](VOL-02-geracao-demanda.md), [VOL-04](VOL-04-sessao-estrategica-4-blocos.md), [VOL-05](VOL-05-sessao-a1-metodo-fht.md)*
 
 ---
 
@@ -312,6 +352,13 @@ Print de cliente individual da Fernanda usado como slide de prova social — gr�
 [Fonte: aula-sessao-estrategica-normalized.md, 02:19:03-02:19:28]
 *Contextualizado em: [VOL-04](VOL-04-sessao-estrategica-4-blocos.md), seção 5*
 
+### A história do médico investigativo **(SRC-002/Lourival)**
+
+Lourival ficou gripado, foi a um posto de saúde — o médico mal olhou pra ele, perguntou pouco e já escreveu a receita. Revoltado, foi a um médico particular, que fez uma bateria extensa de perguntas (inclusive aparentemente estranhas). O diagnóstico final foi o mesmo — gripe — mas ele confiou no segundo médico e não no primeiro, porque o segundo investigou de verdade. Contada duas vezes ao longo da fonte, é a justificativa pedagógica central do Questionário Raio-X: perguntas investigativas geram confiança antes de qualquer recomendação.
+
+[Fonte: SRC-002, 00:10:35-00:12:00 e retomada em 00:20:27-00:22:06]
+*Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md), seção 6*
+
 ---
 
-*Consolidado pelo ETLmaker v3.0 a partir dos 4 volumes desta KB. Zero itens órfãos — todo artefato aqui existe em algum dos volumes.*
+*Consolidado pelo ETLmaker v3.0 a partir dos 5 volumes desta KB. Zero itens órfãos — todo artefato aqui existe em algum dos volumes.*
