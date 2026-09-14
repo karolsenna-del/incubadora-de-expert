@@ -62,7 +62,7 @@ Conhece a Karol só de conteúdo/palestra — nunca teve conversa 1:1, nunca foi
 Já pagou algo à Karol antes — a barreira de confiança pra pagar de novo é menor. Mas o produto que comprou não é sobre método/vendas, é sobre outra coisa — não assuma que ela já entende a oferta da mentoria.
 
 - Primeira pergunta que direciona tudo: **ela já criou o método a partir do workshop?**
-  - **Se já criou mas ainda não valida/vende** → ela já mostrou que executa sozinha — **Sprint do Método** (5 semanas, fundação pronta + roteiros de validação) é o caminho natural, sem precisar dos passos mais lentos (Express/VIP).
+  - **Se já criou mas ainda não valida/vende** → ela já mostrou que executa sozinha — **Sprint do Método** (6 semanas, fundação pronta + roteiros de validação) é o caminho natural, sem precisar dos passos mais lentos (Express/VIP).
   - **Se não criou nada ainda** → segue a tabela padrão do Eixo 1 pelo perfil dela (seção 5).
 - Cuidado pra não confundir com quem já é **aluna da própria mentoria** (`status_geral = aluno_ativo`, comprou o Combo Incubadora) — esse caso raro não é reativação de mentoria nova, é a oferta de Diagnóstico Ferramentas (Eixo 2, seção 5).
 
@@ -86,7 +86,7 @@ Vem das lives semanais — engajamento de conteúdo, não contato comercial. Mui
 | 3 | Expert360º (funil) | Vender | Self-paced | R$497 | Curso gravado, sem contato pessoal |
 | 3 | Expert360º (plataforma) | Vender | Self-paced | R$697 | Curso gravado, sem contato pessoal |
 | 4 | Método VIP | Vender | 3 encontros | R$1.500 (3x R$500 pix) | Orientação — cliente executa, ela adapta o foco |
-| 5 | Sprint do Método | Vender | 5 semanas | R$3.000 | Fundação pronta feita por ela, sem validação. Depende de agenda dela abrir |
+| 5 | Sprint do Método | Vender | 6 semanas | R$3.000 | Fundação pronta feita por ela, sem validação. Depende de agenda dela abrir |
 | 6a | → Continuação Grupo (pós-Sprint) | Vender | 6 meses | R$2.000 | Total Sprint+continuação = R$5.000, igual ao Grupo do zero |
 | 6b | → Continuação Individual (pós-Sprint) | Vender | 6 meses | R$5.000 | Total Sprint+continuação = R$8.000 — R$2.000 mais barato que a Individual do zero |
 | 7 | Grupo (do zero) | Vender | 12 meses (única duração) | R$5.000 | Jornada completa, atenção dividida |
@@ -96,7 +96,7 @@ Fonte oficial (se este arsenal desatualizar, esse arquivo vale): `docs/knowledge
 
 ### O que cada oferta entrega de verdade (pra usar na ligação)
 
-**Sprint do Método (5 semanas)** — semana 1: sessão de imersão. Semana 2: persona+promessa documentados. Semana 3: processo autoral + ferramentas personalizadas. Semana 4: proposta + roteiros reais das ligações de venda. Semana 5: agente de IA do método dele, pronto + handoff. Não inclui validar com vendas reais — isso é a continuação.
+**Sprint do Método (6 semanas)** — semana 1: sessão de imersão. Semana 2: persona+promessa documentados. Semana 3: processo autoral. Semana 4: ferramentas personalizadas. Semana 5: proposta + roteiros reais das ligações de venda. Semana 6: agente de IA do método dele, pronto + handoff. Não inclui validar com vendas reais — isso é a continuação.
 
 **Individual (12 meses)** — meses 1-3: fundação personalizada (igual ao Sprint, no ritmo coached). Meses 4-6: roteiros reais de venda pro caso dele + validação. Meses 7-12: agente de IA do método + página construída + funil de automação configurado + tráfego pronto pra rodar. É a única oferta que entrega infraestrutura pronta (página, funil, tráfego), não só orientação.
 
@@ -194,7 +194,7 @@ Isso é verdade sobre o momento atual do ecossistema: antes só existia Grupo/In
 
 Não é a mesma coisa que o diagnóstico não converter — aqui ela **tentou executar sozinha** e travou. A ponte é sobre o formato, não sobre a oferta:
 
-> "O workshop te deu o caminho, mas era pra fazer por conta própria — e boa parte do que trava não é falta de conteúdo, é não ter alguém junto pra decidir com você. O Sprint do Método é literalmente isso: a fundação sai construída COM você em 5 semanas, não é mais um material pra você aplicar sozinha."
+> "O workshop te deu o caminho, mas era pra fazer por conta própria — e boa parte do que trava não é falta de conteúdo, é não ter alguém junto pra decidir com você. O Sprint do Método é literalmente isso: a fundação sai construída COM você em 6 semanas, não é mais um material pra você aplicar sozinha."
 
 Se ela disser que nem chegou a tentar (comprou e não usou), não empurre o Sprint de cara — volta pra pergunta padrão da seção 3 (já criou o método ou não) e trata pelo Eixo 1 normal.
 

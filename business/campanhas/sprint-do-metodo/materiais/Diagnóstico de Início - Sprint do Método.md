@@ -18,7 +18,7 @@
 > "Seja bem-vinda ao Sprint do Método! Pra gente começar a Semana 01 — Levantamento Estratégico — preciso de duas coisas suas antes da nossa primeira sessão:
 >
 > 1. Responder esse formulário rápido de diagnóstico: [link do formulário]
-> 2. Preencher os dois arquivos em anexo — Minha História Real e Meu Ikigai — com calma, sem filtro. Eles são a matéria-prima de tudo que vamos construir nas próximas 5 semanas.
+> 2. Preencher os dois arquivos em anexo — Minha História Real e Meu Ikigai — com calma, sem filtro. Eles são a matéria-prima de tudo que vamos construir nas próximas 6 semanas.
 >
 > Assim que receber os três, marco nossa primeira sessão."
 
@@ -166,7 +166,7 @@ O que você já tentou pra resolver isso sozinha — e não funcionou?
 
 **Pergunta 12**
 ```
-Se pudesse sair das 5 semanas com UMA coisa resolvida, qual seria?
+Se pudesse sair das 6 semanas com UMA coisa resolvida, qual seria?
 ```
 *Tipo: Parágrafo | Obrigatória: Sim*
 
@@ -176,7 +176,7 @@ Se pudesse sair das 5 semanas com UMA coisa resolvida, qual seria?
 
 **Pergunta 13**
 ```
-Qual o melhor dia e horário pra suas sessões semanais nas próximas 5 semanas?
+Qual o melhor dia e horário pra suas sessões semanais nas próximas 6 semanas?
 ```
 *Tipo: Parágrafo | Obrigatória: Sim*
 
@@ -207,7 +207,7 @@ Antes da sessão de imersão, abra o Google Forms > Respostas > visualize a resp
 
 - **Perguntas 8-9** → contexto de negócio atual → base pra Persona e Promessa (Semana 2)
 - **Pergunta 10-11** → dor e antipadrão já vivido → evita repetir caminho que não funcionou
-- **Pergunta 12** → o resultado que ela mais valoriza → usar pra ancorar a sessão de handoff (Semana 5)
+- **Pergunta 12** → o resultado que ela mais valoriza → usar pra ancorar a sessão de handoff (Semana 6)
 - **História Real + Ikigai** → matéria-prima da Persona, Promessa e Processo Autoral (Semanas 2 e 3)
 
 Você entra na Semana 01 já sabendo onde ela está — a sessão vira aprofundamento, não descoberta do zero.

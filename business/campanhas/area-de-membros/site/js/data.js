@@ -114,7 +114,7 @@ const VITRINE_OFERTAS = [
   { slug: 'metodo-express', nome: 'Método Express', preco: 'R$300', desc: 'Sessão única, resultado rápido', intensidade: 2 },
   { slug: 'expert360', nome: 'Expert360º', preco: 'R$497', desc: 'Curso completo — estruture seu método autoral', intensidade: 3, logo: 'img/logo-expert360-preto.png' },
   { slug: 'metodo-vip', nome: 'Método VIP', preco: 'R$1.500', desc: 'Acompanhamento próximo, ritmo acelerado', intensidade: 4 },
-  { slug: 'sprint-do-metodo', nome: 'Sprint do Método', preco: 'R$3.000', desc: '5 semanas, fundação construída junto', intensidade: 5 },
+  { slug: 'sprint-do-metodo', nome: 'Sprint do Método', preco: 'R$3.000', desc: '6 semanas, fundação construída junto', intensidade: 5 },
   { slug: 'grupo', nome: 'Grupo', preco: 'R$5.000/12m', desc: 'Mentoria em grupo, jornada completa até validar', intensidade: 6 },
   { slug: 'individual', nome: 'Individual', preco: 'R$10.000/12m', desc: '1:1 do zero até escalar, tudo personalizado', intensidade: 7 }
 ];

@@ -21,7 +21,7 @@ Pra quem ainda não tem método/produto validado, do desbloqueio inicial até a 
 | **Expert360º** (curso) | Self-paced | R$497 (funil) / R$697 (plataforma) | Tem tempo, orçamento baixo, quer estudar sozinha | Curso gravado (M0-M4) + agentes de IA genéricos pros exercícios. Sem contato pessoal com a Karol |
 | **Método Express** | 1 encontro (1h) | R$300 | Trava pontual e específica num dos 5Ps — sabe exatamente qual é o buraco | Diagnóstico focado + plano de ação daquele ponto. **Nunca foi vendido — tratar como oferta em teste até validar com lead real** |
 | **Método VIP** | 3 encontros | R$1.500 (parcelado 3x R$500 no pix) | Quer fazer ela mesma, mas precisa de direção e ajuste ao longo do caminho | Encontro 1: análise de persona/promessa/método + sugestões de produto e ferramentas. Encontro 2: plano de ação de validação (sem precisar lançar/se expor ainda). Encontro 3: acompanhamento e correção do plano. Grava e transcreve cada sessão. Na prática, o foco frequentemente pesa mais pra posicionamento/conteúdo — a Karol adapta ao que o lead realmente precisa |
-| **Sprint do Método** | 5 semanas | R$3.000 | Travada por falta de tempo **e** clareza ao mesmo tempo — já tentou sozinha e não conseguiu, ou não sabe nada de marketing/ferramentas/tecnologia. Projeto nunca sai do papel | A Karol constrói a fundação pronta (persona, promessa, processo autoral, proposta, ferramentas personalizadas, roteiros de validação, agente de IA do método) — o cliente só valida/aprova em cada etapa. **Não inclui validação de campo** (isso exige o próprio cliente prospectar/testar, o que não cabe em 5 semanas). Depende da agenda da Karol abrir — hoje ela é a única entregando |
+| **Sprint do Método** | 6 semanas | R$3.000 | Travada por falta de tempo **e** clareza ao mesmo tempo — já tentou sozinha e não conseguiu, ou não sabe nada de marketing/ferramentas/tecnologia. Projeto nunca sai do papel | A Karol constrói a fundação pronta (persona, promessa, processo autoral, proposta, ferramentas personalizadas, roteiros de validação, agente de IA do método) — o cliente só valida/aprova em cada etapa. **Não inclui validação de campo** (isso exige o próprio cliente prospectar/testar, o que não cabe em 6 semanas). Depende da agenda da Karol abrir — hoje ela é a única entregando |
 | **Grupo** (do zero) | 12 meses (única duração — 6 meses não dá tempo de validar e posicionar) | R$5.000 (à vista) ou 12x R$517,12 no cartão | Quer a jornada completa (fundação + validação + posicionamento), topa atenção dividida em grupo, prefere ticket menor que a Individual | Jornada completa coached em grupo, incluindo validação com vendas reais. Ver seção "Entregáveis por agente de IA (Grupo)" abaixo |
 | **Individual** (do zero) | 12 meses | R$10.000 (à vista) ou 12x R$1.035 no cartão | Quer a jornada completa 1:1, com acompanhamento total | Jornada completa coached individualmente — fundação + validação + posicionamento + escala. Ver quadro "Entregáveis da Individual por fase" abaixo. É o produto mais caro e o com entrega mais garantida em agenda |
 
@@ -31,9 +31,10 @@ Pra quem ainda não tem método/produto validado, do desbloqueio inicial até a 
 |---|---|
 | 1 | Sessão de imersão (levantamento: história real, dores, contexto) |
 | 2 | Documento de Persona + Promessa, já preenchido com o caso do cliente |
-| 3 | Processo autoral estruturado + ferramentas personalizadas pro método dele |
-| 4 | Proposta de venda + roteiros reais das ligações de Vendas Secretas |
-| 5 | Agente de IA do método dele, montado e treinado + reunião de handoff |
+| 3 | Processo autoral estruturado |
+| 4 | Ferramentas personalizadas pro método dele |
+| 5 | Proposta de venda + roteiros reais das ligações de Vendas Secretas |
+| 6 | Agente de IA do método dele, montado e treinado + reunião de handoff |
 
 ### Entregáveis da Individual, por fase (12 meses)
 

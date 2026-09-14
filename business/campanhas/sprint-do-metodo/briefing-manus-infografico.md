@@ -11,12 +11,13 @@
 
 1. Esse é UM infográfico único, não uma sequência de slides — tudo cabe num frame.
 2. Layout: header com título+subtítulo à esquerda no topo, faixa "Início" abaixo em
-   toda a largura, depois 5 cards em linha horizontal representando as 5 semanas.
+   toda a largura, depois 6 cards em linha horizontal (ou 2 linhas de 3, se 6 em linha
+   única ficar espremido em 1920x1080) representando as 6 semanas.
 3. Ícones devem ser conceitualmente ligados ao tema de cada semana (não genéricos) —
    ver especificação por card abaixo.
-4. Card da Semana 05 tem tratamento visual de destaque (borda laranja mais grossa/glow
+4. Card da Semana 06 tem tratamento visual de destaque (borda laranja mais grossa/glow
    sutil) — é a entrega final do processo.
-5. Acima dos cards, uma linha fina conectando 5 pontos (dots) — os 4 primeiros discretos
+5. Acima dos cards, uma linha fina conectando 6 pontos (dots) — os 5 primeiros discretos
    em cinza, o último preenchido em laranja sólido, sinalizando o "fim da jornada".
 6. Não usar roxo/violeta em nenhuma parte — apenas a paleta preto/branco/cinza/laranja.
 7. Texto travado deve aparecer EXATO — sem paráfrase, sem tradução.
@@ -57,13 +58,13 @@ no cheesy gradients, no PowerPoint template look, no 3D icons, no heavy glossy d
 **Conceito visual:**
 Frame único 1920x1080, fundo #0B0B0C sólido levemente texturizado (grão sutil, quase
 imperceptível — não ruído digital óbvio). Topo-esquerda: título grande em Sora bold,
-branco. Logo abaixo, subtítulo em cinza claro com o número "5" em laranja de destaque
+branco. Logo abaixo, subtítulo em cinza claro com o número "6" em laranja de destaque
 dentro do texto corrido. Abaixo do header, uma faixa horizontal full-width em
 #151517 com borda sutil #3F3F46, com um chip/etiqueta laranja "Início" à esquerda e o
 texto explicativo em cinza claro ao lado. Abaixo da faixa, uma linha fina horizontal
-com 5 pontos circulares equidistantes — os 4 primeiros em #71717A vazados, o 5º
-preenchido sólido em #FF6B1A. Abaixo da linha, 5 cards retangulares com cantos
-arredondados suaves, fundo #151517, borda #3F3F46 (exceto o card 5, com borda #FF6B1A
+com 6 pontos circulares equidistantes — os 5 primeiros em #71717A vazados, o 6º
+preenchido sólido em #FF6B1A. Abaixo da linha, 6 cards retangulares com cantos
+arredondados suaves, fundo #151517, borda #3F3F46 (exceto o card 6, com borda #FF6B1A
 mais grossa e leve glow externo). Cada card, de cima pra baixo: um ícone de linha fina
 dentro de um pequeno quadrado com cantos arredondados em laranja translúcido (stroke
 laranja #FF6B1A), depois label "SEMANA" pequeno em cinza + número grande em laranja,
@@ -74,8 +75,8 @@ de produto SaaS, não de cartaz.
 **Título (top-left, Sora bold, branco):**
 "Sprint do Método" — exact text, do not paraphrase.
 
-**Subtítulo (abaixo do título, cinza claro, com "5 semanas" em laranja):**
-"5 semanas · do briefing à entrega, montado de ponta a ponta." — exact text, do not paraphrase.
+**Subtítulo (abaixo do título, cinza claro, com "6 semanas" em laranja):**
+"6 semanas · do briefing à entrega, montado de ponta a ponta." — exact text, do not paraphrase.
 
 **Faixa "Início" (chip laranja + texto):**
 Chip: "Início" — exact text, do not paraphrase.
@@ -100,28 +101,37 @@ Descrição: "Documento preenchido com dados específicos do caso." — exact te
 Cor de destaque: laranja #FF6B1A.
 Atmosfera: clareza tomando forma.
 
-### CARD 3 — Processo + Ferramentas
-Ícone: engrenagem entrelaçada com uma chave de linha fina — metáfora de sistema/
-ferramenta sendo construída.
+### CARD 3 — Processo Autoral
+Ícone: engrenagem de linha fina com uma trilha/caminho dentro — metáfora de sistema/
+estrutura sendo construída, com a história do cliente dentro.
 Label: "SEMANA 03" — exact text.
-Nome: "Processo + Ferramentas" — exact text, do not paraphrase.
-Descrição: "Estruturação do processo autoral com ferramentas personalizadas." — exact text, do not paraphrase.
+Nome: "Processo Autoral" — exact text, do not paraphrase.
+Descrição: "Estruturação do processo autoral, com a história do cliente dentro." — exact text, do not paraphrase.
 Cor de destaque: laranja #FF6B1A.
 Atmosfera: engenharia, estrutura sendo montada.
 
-### CARD 4 — Proposta + Roteiros
+### CARD 4 — Ferramentas
+Ícone: chave de fenda/chave inglesa de linha fina — metáfora de ferramenta sendo
+construída/entregue.
+Label: "SEMANA 04" — exact text.
+Nome: "Ferramentas" — exact text, do not paraphrase.
+Descrição: "Ferramentas personalizadas pro método do cliente." — exact text, do not paraphrase.
+Cor de destaque: laranja #FF6B1A.
+Atmosfera: mão na massa, algo tangível sendo entregue.
+
+### CARD 5 — Proposta + Roteiros
 Ícone: rolo de roteiro/pergaminho de linha fina com um ícone de balão de fala
 sobreposto — metáfora de discurso de venda estruturado.
-Label: "SEMANA 04" — exact text.
+Label: "SEMANA 05" — exact text.
 Nome: "Proposta + Roteiros" — exact text, do not paraphrase.
 Descrição: "Proposta de venda e roteiros de \"Vendas Secretas\"." — exact text, do not paraphrase.
 Cor de destaque: laranja #FF6B1A.
 Atmosfera: pronto pra conversar com o mercado.
 
-### CARD 5 — Agente de IA + Handoff (DESTAQUE — borda laranja grossa + glow sutil)
+### CARD 6 — Agente de IA + Handoff (DESTAQUE — borda laranja grossa + glow sutil)
 Ícone: chip/circuito de IA de linha fina combinado com uma pequena bandeira de chegada
 no canto — metáfora de automação entregue + linha de chegada do processo.
-Label: "SEMANA 05" — exact text.
+Label: "SEMANA 06" — exact text.
 Nome: "Agente de IA + Handoff" — exact text, do not paraphrase.
 Descrição: "Agente de IA do método treinado + reunião de transição final." — exact text, do not paraphrase.
 Cor de destaque: borda e glow em laranja #FF6B1A — este card é visualmente o ponto
@@ -129,7 +139,7 @@ culminante do infográfico.
 Atmosfera: conquista, entrega, virada de chave.
 
 (NOTE: Este é o card de conclusão da sequência — deve se destacar claramente dos
-outros 4 sem quebrar a consistência da grid. Visual rhyme com o dot preenchido acima
+outros 5 sem quebrar a consistência da grid. Visual rhyme com o dot preenchido acima
 dele na linha de progresso — mesma cor, mesmo peso de destaque.)
 
 ---
@@ -137,6 +147,6 @@ dele na linha de progresso — mesma cor, mesmo peso de destaque.)
 ## FINAL NOTES
 
 - **Visual rhyme:** o dot final preenchido em laranja (linha de progresso) ↔ a borda
-  de destaque do Card 5 — ambos sinalizam "conclusão" com o mesmo acento de cor.
+  de destaque do Card 6 — ambos sinalizam "conclusão" com o mesmo acento de cor.
 - Nenhuma sequência evolutiva dramática aplicável (é infográfico único, não deck).
 - Nenhuma tabela nesse infográfico.

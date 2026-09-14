@@ -58,8 +58,8 @@
 **Público principal:** Laura (trava dupla — falta tempo E clareza ao mesmo tempo; já tentou e não conseguiu, ou não sabe nada de marketing/ferramentas/tecnologia). Secundário: Ricardo (quando o problema dele é agenda, não dinheiro — "não tenho tempo" é objeção real dele também).
 **Conhecimento atual:** Projeto nunca sai do papel — sabe o que quer fazer no fundo, mas cada tentativa esbarra em falta de tempo ou de saber por onde começar.
 **Problema:** Paralisia por sobrecarga dupla (tempo + clareza) — não é preguiça, é estar sem estrutura E sem hora do dia pra construir sozinha.
-**Solução:** 5 semanas, a Karol constrói a fundação pronta com o cliente validando em cada etapa — não constrói sozinha no vácuo, cliente participa e aprova, mas o trabalho pesado é dela.
-**Peça que faltava:** Nome do mecanismo = **Sprint do Método** — 5 entregas semanais fixas (semana 1 imersão, semana 2 persona+promessa, semana 3 processo+ferramentas, semana 4 proposta+roteiros de validação, semana 5 agente de IA do método + handoff). Não inclui validação de campo (fica pra depois — a continuação existe pra isso).
+**Solução:** 6 semanas, a Karol constrói a fundação pronta com o cliente validando em cada etapa — não constrói sozinha no vácuo, cliente participa e aprova, mas o trabalho pesado é dela.
+**Peça que faltava:** Nome do mecanismo = **Sprint do Método** — 6 entregas semanais fixas (semana 1 imersão, semana 2 persona+promessa, semana 3 processo autoral, semana 4 ferramentas personalizadas, semana 5 proposta+roteiros de validação, semana 6 agente de IA do método + handoff). Processo e Ferramentas separados em 2 semanas (decisão 14/09 — muita informação pro cliente assimilar e validar numa semana só). Não inclui validação de campo (fica pra depois — a continuação existe pra isso).
 **Preço/pagamento:** R$3.000 pix à vista.
 **Ruminações a puxar:** "Não tenho tempo pra mais uma coisa." + "Já tentei sozinha e não consegui." (Ricardo: "Não tenho tempo.")
 

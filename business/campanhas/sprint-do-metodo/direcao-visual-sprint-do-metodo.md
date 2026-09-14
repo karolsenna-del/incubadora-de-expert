@@ -19,6 +19,8 @@ processo estruturado, não promessa vazia.
   banner "Início" full-width, 5 cards em linha (ícone + número + nome + descrição),
   último card com borda de destaque. Vale só pra **composição/layout**.
 - Cor NÃO segue a referência (era roxo) — segue o design system real da marca (abaixo).
+- **Nota 14/09/2026:** o Sprint passou de 5 pra 6 semanas — a composição real usa 6
+  cards (não os 5 da referência), com o card de destaque final agora sendo o 6º.
 
 ## Design System
 
@@ -54,14 +56,15 @@ Extraído diretamente do CSS da página de vendas real
 
 Fonte: https://vendas-incubadora.vercel.app/sprint-do-metodo/
 
-- **Serviço:** Sprint do Método — 5 semanas, R$3.000 à vista (PIX)
+- **Serviço:** Sprint do Método — 6 semanas, R$3.000 à vista (PIX)
 - **Semana 01 — Levantamento estratégico:** Imersão: levantamento completo da
   história, dores e contexto do cliente.
 - **Semana 02 — Persona + Promessa:** Documento preenchido com dados específicos
   do caso.
-- **Semana 03 — Processo + Ferramentas:** Estruturação do processo autoral com
-  ferramentas personalizadas.
-- **Semana 04 — Proposta + Roteiros:** Proposta de venda e roteiros de "Vendas
+- **Semana 03 — Processo Autoral:** Estruturação do processo autoral, com a
+  história do cliente dentro.
+- **Semana 04 — Ferramentas:** Ferramentas personalizadas pro método do cliente.
+- **Semana 05 — Proposta + Roteiros:** Proposta de venda e roteiros de "Vendas
   Secretas".
-- **Semana 05 — Agente de IA + Handoff** (entrega final, card em destaque): Agente
+- **Semana 06 — Agente de IA + Handoff** (entrega final, card em destaque): Agente
   de IA do método treinado + reunião de transição final.

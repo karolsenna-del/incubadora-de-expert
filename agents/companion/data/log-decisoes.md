@@ -10,6 +10,43 @@
 **Impacto:** [o que muda]
 -->
 
+## 14/09/2026 — Sprint do Metodo passa de 5 pra 6 semanas (Processo e Ferramentas separados)
+
+**Contexto:** Karol apontou que a semana 3 do Sprint do Metodo ("Processo Autoral + Ferramentas")
+tinha informacao demais pro cliente assimilar e validar numa unica sessao/semana.
+**Decisao:** Sprint do Metodo passa de 5 pra 6 semanas. Processo Autoral (semana 3) e
+Ferramentas personalizadas (semana 4, nova) viram entregas separadas, cada uma com sua
+propria semana. Semanas seguintes empurradas: Proposta+Roteiros vai pra semana 5 (era 4),
+Agente de IA+Handoff vai pra semana 6 (era 5). Preco (R$3.000) e demais termos comerciais
+nao mudam — decisao e so sobre ritmo/carga de entrega.
+**Racional:** Decisao explicita da Karol — qualidade de assimilacao do cliente importa mais
+que comprimir o cronograma.
+**Impacto:** Atualizado em cascata: master de ofertas, copy da pagina de vendas (doc +
+HTML live), doc de conhecimento do ecossistema de ofertas, arsenal do closer, contrato
+juridico (`.md` + HTML regerado — PDF final ainda pendente de reexportar via Playwright),
+Vitrine da Area de Membros, materiais de diagnostico de kickoff e briefings de design do
+infografico (nunca executado, sem asset visual pra refazer). Detalhe completo no LOG de
+`business/campanhas/crm-reativacao-leads/tracker.md` (entrada 14/09). Pendente: commit
+via Ops (mudancas ainda nao commitadas) + reexportar PDF do contrato antes de usar com
+cliente real.
+
+## 14/09/2026 — Agente de Roteiro de Validacao (Vendas Secretas) espera a KB Sessao Estrategica fechar
+
+**Contexto:** No fim da conversa sobre a aula bonus da Voomp (publico "Black For You"), Karol
+conectou a KB "Sessao Estrategica" (ETL em andamento, `agents/etlmaker/kbs/sessao-estrategica/`)
+com o backlog antigo (31/07) "Construir Agente de Roteiro de Validacao (Grupo/Vendas Secretas)".
+VOL-01 a VOL-04 (aula do Tomas, Arcane) ja estao aprovados e completos (score 98.2) — VOL-04
+cobre os 4 blocos da sessao estrategica (rapport, mapeamento de dor, conexao dor-produto,
+pitch+fechamento com PIX na call). Um merge adicional com material do Lourival (Formula High
+Ticket, modulo Sessao 1a1) esta em andamento — Fase 1 aprovada, Fase 2 (compor VOL-05) pendente.
+**Decisao:** Karol vai esperar o merge do VOL-05 (Lourival) fechar antes de comecar a construir
+o Agente de Roteiro de Validacao. Nao inicia o agente com so o material do Tomas.
+**Racional:** Decisao explicita da Karol — quer a KB completa (as duas fontes) como base antes
+de criar o agente.
+**Impacto:** Proximo passo tecnico e ETLmaker terminar o merge (Fase 2: compor VOL-05, ver
+`00-pipeline/PLANO-ETL.md`). So depois disso o Agente de Roteiro de Validacao entra em producao
+(Worker Forge ou Mind Forge). Backlog atualizado com este sequenciamento.
+
 ## 13/09/2026 — SOP-022 aprovado pela Meta; Direct automatico liberado pra teste real
 
 **Contexto:** App "postador-conteudo" estava bloqueado desde 07-08/09 por falta de verificacao de

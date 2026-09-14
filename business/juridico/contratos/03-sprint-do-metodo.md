@@ -27,9 +27,9 @@ Têm entre si justo e contratado o presente instrumento, regido pelas cláusulas
 
 ## 1. OBJETO
 
-1.1. Prestação de serviço intensivo de construção da fundação do método autoral do CONTRATANTE, conduzida diretamente pela CONTRATADA, ao longo de 5 (cinco) semanas, com o CONTRATANTE validando/aprovando cada etapa.
+1.1. Prestação de serviço intensivo de construção da fundação do método autoral do CONTRATANTE, conduzida diretamente pela CONTRATADA, ao longo de 6 (seis) semanas, com o CONTRATANTE validando/aprovando cada etapa.
 
-1.2. **Não incluído:** validação de campo do método (prospecção e testes reais com leads/clientes do CONTRATANTE) — essa etapa não cabe no prazo de 5 semanas e pode ser objeto de contratação futura (ver Cláusula 6).
+1.2. **Não incluído:** validação de campo do método (prospecção e testes reais com leads/clientes do CONTRATANTE) — essa etapa não cabe no prazo de 6 semanas e pode ser objeto de contratação futura (ver Cláusula 6).
 
 ## 2. ENTREGÁVEIS, SEMANA A SEMANA
 
@@ -37,13 +37,14 @@ Têm entre si justo e contratado o presente instrumento, regido pelas cláusulas
 |---|---|
 | 1 | Sessão de imersão (levantamento de história real, dores e contexto do CONTRATANTE) |
 | 2 | Documento de Persona + Promessa, preenchido com o caso do CONTRATANTE |
-| 3 | Processo autoral estruturado + ferramentas personalizadas para o método do CONTRATANTE |
-| 4 | Proposta de venda + roteiros reais das ligações de Vendas Secretas |
-| 5 | Agente de IA do método do CONTRATANTE, montado e treinado, + reunião de handoff |
+| 3 | Processo autoral estruturado para o método do CONTRATANTE |
+| 4 | Ferramentas personalizadas para o método do CONTRATANTE |
+| 5 | Proposta de venda + roteiros reais das ligações de Vendas Secretas |
+| 6 | Agente de IA do método do CONTRATANTE, montado e treinado, + reunião de handoff |
 
 ## 3. PRAZO
 
-3.1. O serviço tem duração de 5 (cinco) semanas corridas, com início a partir da data de agendamento da sessão de imersão.
+3.1. O serviço tem duração de 6 (seis) semanas corridas, com início a partir da data de agendamento da sessão de imersão.
 
 3.2. **A execução depende de disponibilidade de agenda da CONTRATADA no momento da contratação**, que informará ao CONTRATANTE a data de início possível antes da confirmação do pagamento.
 
@@ -55,7 +56,7 @@ Têm entre si justo e contratado o presente instrumento, regido pelas cláusulas
 
 ## 5. PROPRIEDADE DO AGENTE DE IA ENTREGUE
 
-5.1. O agente de IA do método do CONTRATANTE, entregue na Semana 5, é de uso pessoal e intransferível do CONTRATANTE, nos termos da Cláusula 6 dos Termos Gerais, permanecendo a estrutura/framework subjacente de titularidade da CONTRATADA.
+5.1. O agente de IA do método do CONTRATANTE, entregue na Semana 6, é de uso pessoal e intransferível do CONTRATANTE, nos termos da Cláusula 6 dos Termos Gerais, permanecendo a estrutura/framework subjacente de titularidade da CONTRATADA.
 
 ## 6. DA CONTINUAÇÃO (OPCIONAL)
 

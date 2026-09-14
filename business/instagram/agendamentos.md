@@ -6,6 +6,7 @@
 
 | Data Exec | Carrossel | Agendado Para | Media ID | Status |
 |-----------|-----------|--------------|----------|--------|
+| 14/09/2026 | liquid-death-narrativa-autoral | 13/09/2026 11h BRT (original) | — (publicado manualmente pela Karol via app) | ✓ publicado — pipeline automático falhou 2x com erro 9004 (PNG e depois JPEG, ver RULE-4 a RULE-9 no insta-scheduler-rules.md), workflow `post-liquid-death-narrativa-autoral.yml` a desativar pra não repostar. Bug aberto na Meta: 1094879746351637 |
 | 10/08/2026 | rota100k-seg-mapa-prontidao | 10/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-seg-mapa-prontidao.yml) — 7 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K Semana 02) — aguardando push |
 | 10/08/2026 | rota100k-ter-sinais-curso-generico | 11/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-ter-sinais-curso-generico.yml) — 8 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K Semana 02) — aguardando push |
 | 10/08/2026 | rota100k-qua-antes-de-lancar | 12/08/2026 20h BRT | via GitHub Actions | agendado (workflow: post-rota100k-qua-antes-de-lancar.yml) — 7 slides no Cloudinary — horário 20h fixo (regra do Desafio Rota100K Semana 02) — aguardando push |

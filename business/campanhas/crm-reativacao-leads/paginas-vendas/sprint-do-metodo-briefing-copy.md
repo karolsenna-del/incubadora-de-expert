@@ -3,7 +3,8 @@
 > Squad LPago Arcane — Quill (Copy & Página). Fonte: `00-documento-mestre-ofertas.md`.
 > Estrutura: 13 seções, mesmo padrão das páginas Individual/Grupo (12 padrão + "Para quem é / Para quem não é" — justificada, R$3.000 é high-ticket).
 > Público-alvo: Laura, principal (trava dupla — tempo E clareza). Secundário: Ricardo, quando o travamento dele é só agenda.
-> **Atenção — promessa diferente das outras 2 mentorias:** Sprint do Método NÃO inclui validação de vendas reais (isso fica pra depois, na continuação). A promessa aqui é fundação pronta em 5 semanas — não "primeiras vendas". Não copiar o padrão "valide em X meses" das páginas de Grupo/Individual.
+> **Atenção — promessa diferente das outras 2 mentorias:** Sprint do Método NÃO inclui validação de vendas reais (isso fica pra depois, na continuação). A promessa aqui é fundação pronta em 6 semanas — não "primeiras vendas". Não copiar o padrão "valide em X meses" das páginas de Grupo/Individual.
+> **Atualização 14/09/2026:** Sprint passou de 5 pra 6 semanas — Processo Autoral e Ferramentas viraram entregas separadas (1 semana cada, era 1 semana só) porque é muita informação pro cliente assimilar e validar de uma vez.
 
 ---
 
@@ -13,14 +14,14 @@
 
 ```
 [HEADLINE]
-Em 5 semanas, saia da paralisia e tenha a fundação do seu método
+Em 6 semanas, saia da paralisia e tenha a fundação do seu método
 pronta — persona, promessa, processo e proposta, construídos com
 você, não sozinha num PDF
 
 [SUBHEADLINE]
 Você não precisa de mais tempo livre nem de aprender marketing do
 zero. Precisa de alguém construindo isso COM você, num intensivo de
-5 semanas — você só valida cada etapa.
+6 semanas — você só valida cada etapa.
 
 [CTA PRIMÁRIO]
 QUERO MEU SPRINT DO MÉTODO
@@ -30,7 +31,7 @@ QUERO MEU SPRINT DO MÉTODO
 foco e evitar a procrastinação." — Dalvelyn
 ```
 
-**Justificativa da headline:** TEMPO = "5 semanas"; RESULTADO = "fundação do método pronta" (honesto — NÃO é "primeiras vendas", isso o Sprint não entrega); MECANISMO = "Sprint do Método", nomeado (RC-003). Bônus "construídos com você, não sozinha num PDF" mata a objeção real desse produto: medo de pagar caro por um material genérico entregue de qualquer jeito.
+**Justificativa da headline:** TEMPO = "6 semanas"; RESULTADO = "fundação do método pronta" (honesto — NÃO é "primeiras vendas", isso o Sprint não entrega); MECANISMO = "Sprint do Método", nomeado (RC-003). Bônus "construídos com você, não sozinha num PDF" mata a objeção real desse produto: medo de pagar caro por um material genérico entregue de qualquer jeito.
 
 **RCs:** RC-002 OK (persona/promessa/processo são entregáveis documentados) · RC-003 OK · RC-005 OK.
 
@@ -41,14 +42,14 @@ foco e evitar a procrastinação." — Dalvelyn
 **COPY REDIGIDA:**
 
 ```
-[H2] O Sprint do Método: 5 semanas, 5 entregas, sempre com você
+[H2] O Sprint do Método: 6 semanas, 6 entregas, sempre com você
 validando
 
 Não é um curso que você assiste e tenta aplicar sozinha. É a Karol
 construindo a fundação do SEU método com você, semana a semana — e
 você só entra pra validar e aprovar cada etapa.
 
-No fim das 5 semanas, você sai com: persona, promessa, processo
+No fim das 6 semanas, você sai com: persona, promessa, processo
 autoral, proposta de venda e um agente de IA do seu método —
 prontos, não esboçados.
 
@@ -134,15 +135,19 @@ A base de tudo que vem depois.
 Documento de Persona e Promessa, já preenchido com o seu caso —
 não um modelo genérico pra você adaptar sozinha.
 
-[CARD 3 — Semana 3 — Processo Autoral + Ferramentas]
-Seu processo estruturado e ferramentas personalizadas pro seu
-método.
+[CARD 3 — Semana 3 — Processo Autoral]
+Seu processo estruturado, com sua história dentro — nome, etapas,
+metodologia autoral.
 
-[CARD 4 — Semana 4 — Proposta + Roteiros de Venda]
+[CARD 4 — Semana 4 — Ferramentas]
+Ferramentas personalizadas pro seu método — prontas pra usar, não
+esqueleto genérico pra você preencher.
+
+[CARD 5 — Semana 5 — Proposta + Roteiros de Venda]
 Proposta de venda pronta + roteiros reais das ligações de Vendas
 Secretas — prontos pra usar quando você for validar.
 
-[CARD 5 — Semana 5 — Agente de IA + Handoff]
+[CARD 6 — Semana 6 — Agente de IA + Handoff]
 Agente de IA do seu método, montado e treinado + reunião de handoff
 pra você assumir com autonomia.
 ```
@@ -156,12 +161,12 @@ pra você assumir com autonomia.
 **COPY REDIGIDA:**
 
 ```
-[H2] Sprint do Método — 5 semanas, fundação pronta
+[H2] Sprint do Método — 6 semanas, fundação pronta
 
 R$3.000 à vista no pix
 
 Inclui:
-- 5 semanas de construção guiada, uma entrega por semana
+- 6 semanas de construção guiada, uma entrega por semana
 - Persona, promessa, processo autoral e proposta documentados
 - Roteiros reais de Vendas Secretas
 - Agente de IA do seu método, montado e treinado
@@ -193,7 +198,7 @@ era falta de conhecimento — era tentar fazer tudo sozinha, sem
 estrutura e sem ninguém pra construir junto.
 
 O Sprint do Método existe porque eu sei o que é travar entre "não
-tenho tempo" e "não sei por onde começar" ao mesmo tempo. Em 5
+tenho tempo" e "não sei por onde começar" ao mesmo tempo. Em 6
 semanas, eu construo a fundação com você — não te entrego uma
 tarefa a mais pra fazer sozinha.
 ```
@@ -256,7 +261,7 @@ dominar nada disso.
 ```
 [H2] Perguntas frequentes
 
-Como funciona nas 5 semanas?
+Como funciona nas 6 semanas?
 Uma entrega por semana. Você participa de sessões de validação —
 o trabalho pesado é feito pela Karol, você aprova cada etapa.
 
@@ -285,7 +290,7 @@ e checar disponibilidade de agenda.
 **COPY REDIGIDA:**
 
 ```
-[H2] Em 5 semanas, sua fundação pronta. Não é mais um curso pra
+[H2] Em 6 semanas, sua fundação pronta. Não é mais um curso pra
 deixar pela metade — é feito com você.
 
 QUERO MEU SPRINT DO MÉTODO
@@ -319,10 +324,12 @@ Política de privacidade · Termos de uso
 **4 inimigos:** sem texto centralizado em excesso, sem caixa larga, sem seção >5 parágrafos, Hero para o scroll — OK.
 **RCs:** RC-002 OK · RC-003 OK · RC-005 OK · RC-015 não aplicável.
 **Tom:** sem "masterclass exclusiva", sem vocabulário de estágio Arcane — OK.
-**Diferença deliberada das páginas de mentoria:** promessa de RESULTADO aqui é "fundação pronta em 5 semanas", não "primeiras vendas" — Sprint não inclui validação, seria promessa falsa prometer venda.
+**Diferença deliberada das páginas de mentoria:** promessa de RESULTADO aqui é "fundação pronta em 6 semanas", não "primeiras vendas" — Sprint não inclui validação, seria promessa falsa prometer venda.
 
 ---
 
 ## APROVAÇÃO
 
 **APROVADO por Karol em 02/08/2026.**
+
+**Atualização 14/09/2026:** estrutura semanal alterada de 5 pra 6 semanas (ver nota no topo do documento) — texto acima já reflete a mudança. Demais elementos da copy seguem aprovados como estavam.
