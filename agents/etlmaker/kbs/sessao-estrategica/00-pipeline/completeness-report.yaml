@@ -4,14 +4,14 @@ completeness_report:
   kb_slug: "sessao-estrategica"
   generated_at: "2026-09-13"
   updated_at: "2026-09-14"
-  updated_reason: "Merge da fonte SRC-002 (FHT/Lourival) — VOL-05 novo, integrado nos docs transversais. Fase 4 (validação) precisa rodar de novo considerando o volume novo."
+  updated_reason: "Merge da fonte SRC-003 (Expert360º/Karol) — VOL-06 e VOL-07 novos, integrados nos docs transversais. Fase 4 (validação) precisa rodar de novo considerando os 7 volumes."
   generated_by: "ETLmaker v3.0"
 
   source:
-    author: "Tomás (SRC-001) + Lourival (SRC-002)"
-    total_sources: 2
-    total_words: 46321
-    formats: ["video (transcrito localmente via whisper.cpp, modelo medium — SRC-001)", "video (gravação de tela + transcrito localmente via whisper.cpp, modelo small — SRC-002)"]
+    author: "Tomás (SRC-001) + Lourival (SRC-002) + Karol (SRC-003)"
+    total_sources: 3
+    total_words: 60441
+    formats: ["video (transcrito localmente via whisper.cpp, modelo medium — SRC-001)", "video (gravação de tela + transcrito localmente via whisper.cpp, modelo small — SRC-002)", "roteiro em prosa já escrito e revisado, não é transcrição de ASR — SRC-003"]
 
   pipeline:
     phase_0_setup: "completed"
@@ -78,6 +78,32 @@ completeness_report:
       qg_003_pass: true
       nota: "Fonte transcrita com modelo whisper small (menor precisão) — ver README.md e Nota de Fidelidade no próprio volume."
 
+    - id: "VOL-06"
+      title: "Vendas Secretas 1 — Identidade, Oferta e Geração de Leads"
+      file: "VOL-06-identidade-oferta-leads.md"
+      author: "Karol (SRC-003 — autora e dona do repositório)"
+      lines: 311
+      tables: 5
+      examples: 6
+      cardinal_rules: 4
+      provenance_refs: 60
+      domains: ["Identidade de Vendas (Expert360)", "Proposta Validada (P4)", "Geração/Priorização de Leads (Rastreador)", "Social Selling (Expert360)"]
+      qg_003_pass: true
+      nota: "Fonte de maior confiabilidade da KB — prosa escrita e revisada (QG-CC-006), não transcrição de ASR."
+
+    - id: "VOL-07"
+      title: "Vendas Secretas 2 — Leitura de Lead, Abordagem, Sessão ECROI e Pós-Venda"
+      file: "VOL-07-abordagem-sessao-ecroi.md"
+      author: "Karol (SRC-003 — autora e dona do repositório)"
+      lines: 303
+      tables: 9
+      examples: 6
+      cardinal_rules: 5
+      provenance_refs: 55
+      domains: ["Leitura de Lead e Abordagem (Expert360)", "O Roteiro ECROI da Sessão de Vendas (Expert360)", "Pós-Venda: Follow-up e Depoimento (Expert360)"]
+      qg_003_pass: true
+      nota: "Continuação direta do VOL-06. Mesma fonte de alta confiabilidade."
+
   transversal_docs:
     readme: true
     regras_cardinais: true
@@ -85,22 +111,23 @@ completeness_report:
     glossario: true
 
   regras_cardinais_summary:
-    candidatas_antes_de_deduplicar: 26
-    unicas_apos_deduplicar: 26
-    nota: "22 regras de Tomás (semanticamente distintas entre si; 7 delas também aparecem registradas de forma independente na seção 5 do MAPA-TERRITORIAL.md) + 4 regras de Lourival/SRC-002 (seção própria em REGRAS-CARDINAIS.md, não fundidas com as de Tomás)."
+    candidatas_antes_de_deduplicar: 35
+    unicas_apos_deduplicar: 35
+    nota: "22 regras de Tomás (semanticamente distintas entre si; 7 delas também aparecem registradas de forma independente na seção 5 do MAPA-TERRITORIAL.md) + 4 regras de Lourival/SRC-002 + 9 regras de Karol/SRC-003 — cada autor em seção própria em REGRAS-CARDINAIS.md, nunca fundidas."
 
   repertorio_summary:
-    total_itens: 33
+    total_itens: 44
     secoes_populadas: 11
     itens_orfaos: 0
-    nota: "27 itens de Tomás + 6 itens de Lourival/SRC-002 (4 do escopo mínimo do merge + 2 metáforas + 1 história, marcados (SRC-002/Lourival) em cada seção)."
+    nota: "27 itens de Tomás + 6 itens de Lourival/SRC-002 + 11 itens de Karol/SRC-003 (3 templates + 2 checklists + 2 scripts + 1 workflow + 1 metáfora + 4 histórias/casos), marcados (SRC-003/Karol) em cada seção."
 
   glossario_summary:
-    total_termos: 32
+    total_termos: 42
     termos_do_mapa_territorial: 17
     termos_emergentes: 5
     termos_src_002: 10
-    nota: "Recontado na Fase 4 (auditoria) — o Mapa Territorial seção 6 tinha 17 termos na tabela real (não 14 como o texto da seção afirmava), e 2 estavam faltando no GLOSSARIO.md; corrigidos durante a auditoria. +10 termos de Lourival/SRC-002 adicionados no merge de 14/09, em seção própria pra não confundir com termos homônimos de Tomás (ex: Sessão A1 ≠ Sessão Estratégica)."
+    termos_src_003: 10
+    nota: "Recontado na Fase 4 (auditoria) — o Mapa Territorial seção 6 tinha 17 termos na tabela real (não 14 como o texto da seção afirmava), e 2 estavam faltando no GLOSSARIO.md; corrigidos durante a auditoria. +10 termos de Lourival/SRC-002 (merge 14/09, manhã) e +10 termos de Karol/SRC-003 (merge 14/09, tarde), cada um em seção própria pra não confundir termos homônimos entre os três autores (ex: Sessão A1 ≠ Sessão Estratégica ≠ Sessão de Vendas Secretas)."
 
   cross_reference_check:
     readme_links_validos: true
@@ -119,12 +146,12 @@ completeness_report:
     QG-ETL-005: "PASSED"
 
   totals:
-    total_volumes: 5
-    total_lines: 1521
-    total_tables: 23
-    total_examples: 28
-    total_cardinal_rules_unique: 26
-    total_provenance_refs: 263
+    total_volumes: 7
+    total_lines: 2135
+    total_tables: 37
+    total_examples: 40
+    total_cardinal_rules_unique: 35
+    total_provenance_refs: 378
 
   verdict: "APPROVED"
-  verdict_notes: "Fase 4 (Validação Final) re-executada em 14/09/2026 cobrindo os 5 volumes. Camada 2 (auditoria exaustiva) PASS — 0 correções necessárias, achados de 13/09 reconfirmados sem regressão. Camada 3 (6-passes): score agregado 98.44% (coverage 96.6, fidelity 100, richness 100, voice 91.2, consistency 100, integrity 100), verdict APPROVED. Ver validation-report.yaml e critical-audit-report.yaml (versões de 14/09, cobrindo SRC-001 + SRC-002)."
+  verdict_notes: "Fase 4 (Validação Final) executada em 14/09/2026 cobrindo os 7 volumes. Camada 2 (auditoria exaustiva) PASS — 0 correções necessárias. Camada 3 (6-passes): score agregado 98.81% (coverage 97.9, fidelity 100, richness 100, voice 92.3, consistency 100, integrity 100), verdict APPROVED. Ver validation-report.yaml e critical-audit-report.yaml (versões de 14/09 tarde, cobrindo SRC-001+SRC-002+SRC-003). Executada diretamente pelo etl-chief, sem fork dedicado, dado bug de execução observado em tentativas de delegação — ver nota em validation-report.yaml."

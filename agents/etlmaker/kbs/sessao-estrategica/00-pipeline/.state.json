@@ -20,17 +20,18 @@
       "status": "transcribed_and_normalized"
     }
   ],
-  "volumes_composed": 5,
-  "volumes_total": 5,
-  "volumes_plan": ["VOL-01-fundamentos-modelo-negocio", "VOL-02-geracao-demanda", "VOL-03-processo-comercial-time", "VOL-04-sessao-estrategica-4-blocos", "VOL-05-sessao-a1-metodo-fht"],
-  "validation_score": 98.44,
+  "volumes_composed": 7,
+  "volumes_total": 7,
+  "volumes_plan": ["VOL-01-fundamentos-modelo-negocio", "VOL-02-geracao-demanda", "VOL-03-processo-comercial-time", "VOL-04-sessao-estrategica-4-blocos", "VOL-05-sessao-a1-metodo-fht", "VOL-06-identidade-oferta-leads", "VOL-07-abordagem-sessao-ecroi"],
+  "validation_score": 98.81,
   "validation_verdict": "APPROVED",
-  "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003-VOL-01", "QG-ETL-003-VOL-02", "QG-ETL-003-VOL-03", "QG-ETL-003-VOL-04", "QG-ETL-003-VOL-05", "QG-ETL-004", "QG-ETL-005"],
+  "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003-VOL-01", "QG-ETL-003-VOL-02", "QG-ETL-003-VOL-03", "QG-ETL-003-VOL-04", "QG-ETL-003-VOL-05", "QG-ETL-003-VOL-06", "QG-ETL-003-VOL-07", "QG-ETL-004", "QG-ETL-005"],
   "started_at": "2026-09-10",
   "completed_at": "2026-09-14",
   "validation_history": [
     {"date": "2026-09-13", "scope": "VOL-01 a VOL-04 (SRC-001 apenas)", "score": 98.2, "verdict": "APPROVED"},
-    {"date": "2026-09-14", "scope": "VOL-01 a VOL-05 (SRC-001 + SRC-002, apos merge FHT)", "score": 98.44, "verdict": "APPROVED"}
+    {"date": "2026-09-14", "scope": "VOL-01 a VOL-05 (SRC-001 + SRC-002, apos merge FHT)", "score": 98.44, "verdict": "APPROVED"},
+    {"date": "2026-09-14", "scope": "VOL-01 a VOL-07 (SRC-001 + SRC-002 + SRC-003, apos merge Expert360 M3)", "score": 98.81, "verdict": "APPROVED"}
   ],
   "merge_fht_sessao1a1": {
     "mode": "merge",
@@ -78,5 +79,66 @@
       }
     ],
     "started_at": "2026-09-13"
+  },
+  "merge_expert360_m3": {
+    "mode": "merge",
+    "new_source": {
+      "name": "expert360-m3-vendas-secretas",
+      "type": "roteiro-prosa",
+      "origin": "business/campanhas/expert360-curso/roteiros/m3-roteiros.md",
+      "author": "Karol (Incubadora de Expert)",
+      "status": "normalized",
+      "normalized_path": "00-pipeline/sources/expert360-m3-vendas-secretas-normalized.md",
+      "quality_gates_passed": ["QG-ETL-000"]
+    },
+    "current_phase": 4,
+    "phase_status": {
+      "ingestion": "completed",
+      "phase_1_mapeamento": "completed",
+      "phase_2_composicao": "completed",
+      "phase_3_integracao": "completed",
+      "phase_4_validacao": "completed"
+    },
+    "integration_summary": {
+      "docs_updated": ["README.md", "REGRAS-CARDINAIS.md", "REPERTORIO.md", "GLOSSARIO.md", "00-pipeline/completeness-report.yaml"],
+      "regras_cardinais_adicionadas": 9,
+      "repertorio_itens_adicionados": 11,
+      "glossario_termos_adicionados": 10,
+      "cross_reference_check": "PASSED (0 links quebrados, 7/7 volumes referenciados existem)"
+    },
+    "validation_summary": {
+      "layer_2_verdict": "PASS",
+      "layer_3_score": 98.81,
+      "layer_3_verdict": "APPROVED",
+      "reports": ["00-pipeline/critical-audit-report.yaml", "00-pipeline/validation-report.yaml"],
+      "nota": "Fase 4 executada diretamente pelo etl-chief (sem fork), dado bug de execucao observado em 2 tentativas de delegacao nesta sessao"
+    },
+    "volumes_plan": [
+      {"id": "VOL-06", "title": "Vendas Secretas 1 — Identidade, Oferta e Geração de Leads", "anchor": "Introdução + Aulas 1-6", "estimate_lines": "500-600"},
+      {"id": "VOL-07", "title": "Vendas Secretas 2 — Leitura de Lead, Abordagem, Sessão ECROI e Pós-Venda", "anchor": "Aulas 7-10 + Encerramento", "estimate_lines": "450-550"}
+    ],
+    "volumes_composed": [
+      {
+        "id": "VOL-06",
+        "path": "VOL-06-identidade-oferta-leads.md",
+        "title": "Vendas Secretas 1 — Identidade, Oferta e Geração de Leads",
+        "lines": 311,
+        "tables": 5,
+        "fonte_refs": 60,
+        "spot_check": "10/10 corretos, 0 inventados",
+        "quality_gates_passed": ["QG-ETL-003-VOL-06"]
+      },
+      {
+        "id": "VOL-07",
+        "path": "VOL-07-abordagem-sessao-ecroi.md",
+        "title": "Vendas Secretas 2 — Leitura de Lead, Abordagem, Sessão ECROI e Pós-Venda",
+        "lines": 303,
+        "tables": 9,
+        "fonte_refs": 55,
+        "spot_check": "10/10 corretos, 0 inventados",
+        "quality_gates_passed": ["QG-ETL-003-VOL-07"]
+      }
+    ],
+    "started_at": "2026-09-14"
   }
 }

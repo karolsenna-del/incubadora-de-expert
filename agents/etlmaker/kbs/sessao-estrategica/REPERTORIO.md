@@ -4,6 +4,7 @@
 > catalogados por tipo para consulta rápida.
 > Cada item com proveniência [Fonte:] e referência ao volume onde está contextualizado.
 > Itens marcados **(SRC-002/Lourival)** vêm do VOL-05 (FHT) — autor e mentoria diferentes de Tomás, catalogados junto por tipo mas nunca fundidos em conteúdo.
+> Itens marcados **(SRC-003/Karol)** vêm de VOL-06/VOL-07 (Expert360º) — método da autora e dona deste repositório, fonte de maior confiabilidade (prosa escrita, não ASR).
 
 ---
 
@@ -36,6 +37,31 @@ Ordem observada na demonstração ao vivo: (1) o que é o método + autoridade d
 
 [Fonte: SRC-002, 00:19:45-00:27:29]
 *Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md), seção 6*
+
+### Proposta Validada (P4) — 5 Componentes **(SRC-003/Karol)**
+
+1. Promessa específica da sessão — não a promessa geral do negócio (P2), o que ESSA pessoa alcança neste formato
+2. Mecanismo — o método da expert aplicado ao formato 1:1
+3. O que está incluído — sessões, duração, entregáveis que ela sustenta sozinha
+4. Como apresentar o preço — o enquadramento e o momento certo de falar
+5. Pitch de 3 frases — o que faz, pra quem, com qual resultado — cabe numa DM ou num "o que você faz?"
+
+[Fonte: SRC-003, Aula 4]
+*Contextualizado em: [VOL-06](VOL-06-identidade-oferta-leads.md), seção 2*
+
+### Rastreador de Leads Quentes — 6 Grupos × 3 Colunas **(SRC-003/Karol)**
+
+6 grupos (Círculo Íntimo, Colegas/ex-colegas de área, Clientes/ex-clientes, Seguidores engajados, Conexões frias qualificadas, Fui Prospectada) × 3 colunas de qualificação (Score de Fit, Prioridade de Abordagem, Perfil — Conectora/Analista/Diretiva).
+
+[Fonte: SRC-003, Aula 5 + M3.5]
+*Contextualizado em: [VOL-06](VOL-06-identidade-oferta-leads.md), seção 3*
+
+### Formulário de Pré-Diagnóstico **(SRC-003/Karol)**
+
+4 seções — Sobre Você, Sua Situação Atual, Contexto Econômico, Para a Nossa Conversa — 12 perguntas prontas pra Google Forms, cada uma com o tipo de resposta indicado e instrução de como usar na sessão.
+
+[Fonte: SRC-003, Aula 8 + M3.3]
+*Contextualizado em: [VOL-07](VOL-07-abordagem-sessao-ecroi.md), seção 2*
 
 ---
 
@@ -115,6 +141,26 @@ Ordem observada na demonstração ao vivo: (1) o que é o método + autoridade d
 [Fonte: SRC-002, 00:02:50-00:08:43]
 *Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md), seção 2*
 
+### Ritual dos 5 Minutos de Leitura de Lead **(SRC-003/Karol)**
+
+- [ ] Bio — impacto/pessoas/missão (Conectora) · números/método/certificação (Analista) · títulos/conquistas/autoridade (Diretiva)
+- [ ] Tipo de post — histórias/rostos/emoção (Conectora) · carrosséis/dados/frameworks (Analista) · poucos/alto impacto (Diretiva)
+- [ ] Linguagem — calorosa/exclamações (Conectora) · precisa/pede referência (Analista) · direta/curta/objetiva (Diretiva)
+- [ ] Energia — alta/expressiva (Conectora) · moderada/constante (Analista) · focada/decidida (Diretiva)
+- [ ] Registrar a palavra (Conectora/Analista/Diretiva) na coluna "Perfil" do Rastreador
+
+[Fonte: SRC-003, Aula 7]
+*Contextualizado em: [VOL-07](VOL-07-abordagem-sessao-ecroi.md), seção 1*
+
+### 3 Perguntas de Depoimento **(SRC-003/Karol)**
+
+- [ ] "Antes de começar, como estava a sua situação?"
+- [ ] "O que mudou?"
+- [ ] "Para quem você indicaria?"
+
+[Fonte: SRC-003, Aula 10]
+*Contextualizado em: [VOL-07](VOL-07-abordagem-sessao-ecroi.md), seção 4*
+
 ---
 
 ## 5. Workflows
@@ -153,6 +199,19 @@ Confirmação do pagamento (PIX) → grupo de WhatsApp → e-mail → acesso à 
 
 [Fonte: SRC-002, 00:03:56-00:04:00 e 00:12:56-00:13:01]
 *Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md), seção 1*
+
+### Cadência de 5 Toques (Follow-up "Vou Pensar") **(SRC-003/Karol)**
+
+| Toque | Prazo | Função |
+|---|---|---|
+| T1 | 24–48h | Presença, não cobrança |
+| T2 | 4–5 dias | Valor puro, sem mencionar a oferta |
+| T3 | 8–10 dias | Pergunta aberta |
+| T4 | 12–14 dias | Custo do status quo |
+| T5 | 18–21 dias | Encerramento gracioso |
+
+[Fonte: SRC-003, Aula 10]
+*Contextualizado em: [VOL-07](VOL-07-abordagem-sessao-ecroi.md), seção 4*
 
 ---
 
@@ -194,6 +253,24 @@ Demonstrado ao vivo com o aluno voluntário Thiago — do rapport ao PIX na call
 
 [Fonte: SRC-002, 00:24:26-00:24:38]
 *Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md), seção 6*
+
+### Roteiro de Abordagem por Perfil **(SRC-003/Karol)**
+
+```
+ABERTURA GENUÍNA → CONEXÃO AO PROBLEMA → O CONVITE
+```
+
+Falas exatas por perfil (Conectora/Analista/Diretiva) para cada uma das 3 etapas — ver tabela completa em [VOL-07](VOL-07-abordagem-sessao-ecroi.md), seção 2.
+
+[Fonte: SRC-003, Aula 8 + M3.2 — Roteiro de Abordagem]
+*Contextualizado em: [VOL-07](VOL-07-abordagem-sessao-ecroi.md), seção 2*
+
+### Roteiro ECROI Completo **(SRC-003/Karol)**
+
+As 5 etapas da sessão (Boas-vindas → Diagnóstico → História → Oferta ECROI → Fechamento) com falas-modelo prontas pra personalizar em cada uma das 4 letras (Colapso/Reenquadramento/Ordem/Inevitabilidade) e nas respostas às 3 objeções mais comuns.
+
+[Fonte: SRC-003, Aula 9 + M3.4 — Roteiro da Sessão 1 a 1]
+*Contextualizado em: [VOL-07](VOL-07-abordagem-sessao-ecroi.md), seção 3*
 
 ---
 
@@ -286,8 +363,9 @@ Demonstrado ao vivo com o aluno voluntário Thiago — do rapport ao PIX na call
 | "Não existe pular o deserto" | O posicionamento pessoal/autoridade não se constrói da noite pro dia — é preciso passar pela jornada de erro e aprendizado | [Fonte: aula-sessao-estrategica-normalized.md, 00:48:36] |
 | **(SRC-002/Lourival)** "O bônus Kinder Ovo" | Bônus embutido num produto de entrada com percepção de valor maior que o próprio produto principal — "qual criança compra o Kinder Ovo por causa do chocolate?" | [Fonte: SRC-002, 00:05:00-00:05:06] |
 | **(SRC-002/Lourival)** "O questionário é um raio-x do negócio" | O Questionário RX enxerga por dentro do negócio/momento do cliente antes de qualquer recomendação, do mesmo jeito que um raio-x médico | [Fonte: SRC-002, 00:17:58-00:18:00] |
+| **(SRC-003/Karol)** "Não é sobre esconder. É sobre afinação." | As Vendas Secretas não escondem nada — validar em privado é como afinar um instrumento antes de tocar em público: quando aparece publicamente (M4), já soa bem | [Fonte: SRC-003, Aula 1] |
 
-*Contextualizado em: [VOL-01](VOL-01-fundamentos-modelo-negocio.md), [VOL-02](VOL-02-geracao-demanda.md), [VOL-04](VOL-04-sessao-estrategica-4-blocos.md), [VOL-05](VOL-05-sessao-a1-metodo-fht.md)*
+*Contextualizado em: [VOL-01](VOL-01-fundamentos-modelo-negocio.md), [VOL-02](VOL-02-geracao-demanda.md), [VOL-04](VOL-04-sessao-estrategica-4-blocos.md), [VOL-05](VOL-05-sessao-a1-metodo-fht.md), [VOL-06](VOL-06-identidade-oferta-leads.md)*
 
 ---
 
@@ -359,6 +437,34 @@ Lourival ficou gripado, foi a um posto de saúde — o médico mal olhou pra ele
 [Fonte: SRC-002, 00:10:35-00:12:00 e retomada em 00:20:27-00:22:06]
 *Contextualizado em: [VOL-05](VOL-05-sessao-a1-metodo-fht.md), seção 6*
 
+### O ciclo do preço baixo (2020 e 2022) **(SRC-003/Karol)**
+
+Em 2020, cobrava R$697 por um curso de gestão de um ano e R$97 pelas consultorias — absurdamente barato, e mesmo assim não vendia. Em 2022, num novo nicho (produtividade para mães de bebês), a cada lançamento sem venda baixava o preço: começou em R$797, terminou em R$497. Karol nomeia o ciclo: quando não acredita no próprio valor, cobra menos; cobra menos, trabalha mais; trabalha mais, frustra; frustra, cobra menos ainda.
+
+[Fonte: SRC-003, Aula 1]
+*Contextualizado em: [VOL-06](VOL-06-identidade-oferta-leads.md), seção 2*
+
+### Josh Waitzkin e o investimento em derrota **(SRC-003/Karol)**
+
+Campeão de xadrez ainda criança, Waitzkin subia de categoria antes da hora e perdia — mas via isso como investir em derrota, porque a derrota acelera o aprendizado mais que a vitória fácil. Usada como analogia direta para as 3 primeiras vendas do M3: campo, não teste final.
+
+[Fonte: SRC-003, Aula 1]
+*Contextualizado em: [VOL-06](VOL-06-identidade-oferta-leads.md), seção 2*
+
+### O evento de networking — parar de pensar em si, pensar nas pessoas **(SRC-003/Karol)**
+
+No segundo dia de um evento, Karol se ofereceu para ajudar de graça um senhor de uma casa de abrigo; minutos depois uma psicanalista descreveu exatamente a persona dela, e o senhor os apresentou. Saiu do evento com um contato para uma sessão. Base narrativa para a tese de que servir sem calcular retorno cria confiança instantânea — fundamento do social selling.
+
+[Fonte: SRC-003, Aula 6]
+*Contextualizado em: [VOL-06](VOL-06-identidade-oferta-leads.md), seção 5*
+
+### O relatório da Triangulação 3D **(SRC-003/Karol)**
+
+Karol recebeu uma análise de 8 páginas do próprio perfil de Instagram (Júlio Azevedo, Triangulação 3D), que a descreveu como "A Conectora" — decide por conexão e impacto, fecha para abordagem fria, abre para calor com substância. A experiência de se reconhecer no relatório é o gancho pedagógico por trás da leitura de lead em 4 camadas.
+
+[Fonte: SRC-003, Aula 7]
+*Contextualizado em: [VOL-07](VOL-07-abordagem-sessao-ecroi.md), seção 1*
+
 ---
 
-*Consolidado pelo ETLmaker v3.0 a partir dos 5 volumes desta KB. Zero itens órfãos — todo artefato aqui existe em algum dos volumes.*
+*Consolidado pelo ETLmaker v3.0 a partir dos 7 volumes desta KB. Zero itens órfãos — todo artefato aqui existe em algum dos volumes.*

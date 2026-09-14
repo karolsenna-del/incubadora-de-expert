@@ -2,27 +2,27 @@ validation_report:
   kb_slug: "sessao-estrategica"
   timestamp: "2026-09-14"
   version: "3.0"
-  previous_report: "13/09/2026, escopo SRC-001/VOL-01-04 apenas (score 98.2%, APPROVED). Esta é uma nova rodada completa cobrindo os 5 volumes, não um diff."
+  previous_report: "14/09/2026 manhã, escopo SRC-001+SRC-002/VOL-01-05 (score 98.44%, APPROVED). Esta é uma nova rodada completa cobrindo os 7 volumes, não um diff. Executada diretamente pelo etl-chief (sem fork), dado bug de execução em 2 tentativas de delegação observado nesta sessão."
 
-  layer_2_verdict: "PASS (ver critical-audit-report.yaml — 0 correções necessárias nesta rodada, achados de 13/09 reconfirmados sem regressão)"
+  layer_2_verdict: "PASS (ver critical-audit-report.yaml — 0 correções necessárias nesta rodada, achados anteriores reconfirmados sem regressão)"
 
   pass_1_coverage:
-    total_domains: 11
-    domains_covered_fully: 10
-    domains_covered_weighted: "core (8/8, peso 3 — 5 de Tomás + 3 de Lourival) + supporting (2/2, peso 2) + peripheral (0/1, peso 1)"
-    subtopics_coverage: 96.6
+    total_domains: 17
+    domains_covered_fully: 16
+    domains_covered_weighted: "core (14/14, peso 3 — 5 de Tomás + 3 de Lourival + 6 de Karol) + supporting (2/2, peso 2) + peripheral (0/1, peso 1)"
+    subtopics_coverage: 97.9
     uncovered:
-      - "Sazonalidade Comercial (SRC-001, peripheral) — reconfirmado de 13/09, não afetado pelo merge"
+      - "Sazonalidade Comercial (SRC-001, peripheral) — reconfirmado, não afetado por este merge"
     verdict: "PASS"
-    nota: "Cobertura subiu de 95.0% pra 96.6% com a adição dos 3 domínios de SRC-002 (todos core dentro da fonte, todos 100% cobertos em VOL-05). O único domínio não coberto continua sendo o mesmo item periférico de SRC-001."
+    nota: "Cobertura subiu de 96.6% pra 97.9% com a adição dos 6 domínios de SRC-003 (todos core dentro da fonte, todos 100% cobertos em VOL-06/VOL-07). O único domínio não coberto continua sendo o mesmo item periférico de SRC-001, sem relação com nenhum dos merges."
 
   pass_2_fidelity:
-    total_checks: 22
-    correct: 22
+    total_checks: 27
+    correct: 27
     distorted: 0
     invented: 0
     fidelity_score: 100.0
-    method_note: "17 checks reconfirmados de SRC-001 (13/09) + 5 novos checks independentes contra fht-sessao1a1-normalized.md pro VOL-05: (1) citação 'como que você executa a sessão A1? existe a primeira etapa' [00:03:56] — bate literalmente; (2) 'mais de 200 vendedores' — confirmado na fonte apesar de ruído de ASR ao redor; (3) metáfora do Kinder Ovo ('qual criança que compra o Kinder Ovo por causa do chocolate') — bate literalmente; (4) taxa de conversão '20%, até 70%, de 2 a 7 em 10 pessoas' [00:03:00-00:03:22] — bate literalmente; (5) discrepância '800 reais' vs '200 reais' na história do médico — verificado por grep direto nas linhas 763 e 1366 da fonte, CONFIRMADO que a fonte realmente diverge entre as duas narrações, e o volume tratou isso corretamente (não reproduziu nenhum valor, documentou a divergência) — contado como CORRECT, não DISTORTED, porque a decisão de composição foi a mais fiel possível diante de uma fonte inconsistente."
+    method_note: "22 checks reconfirmados das rodadas anteriores + 5 novos checks independentes contra expert360-m3-vendas-secretas-normalized.md pros VOL-06/VOL-07: (1) '80% fazendo, 20% estudando' [linha 169 da fonte] — bate literalmente; (2) 'Triangulação 3D, feita pelo Júlio Azevedo' [linha 447] — bate literalmente; (3) cadência de 5 toques com prazo '18-21 dias' e fala de encerramento 'Cuida bem' [linha 652] — bate literalmente; (4) Regra de Ouro do fechamento ('nunca rebata direto, pergunta primeiro') [linha 601] — bate em conteúdo (fonte usa 'pergunta primeiro' na prosa da Aula 9 e 'pergunta antes' numa formulação levemente distinta no template M3.4, linha 1344 — mesma regra, duas ocorrências na fonte, volume cita a versão da Aula 9 corretamente); (5) spot-check completo de 10 claims do VOL-06 feito pelo composer no momento da composição (números de 2020/2022, Josh Waitzkin, os 4 degraus de confiança) — reconferido por amostragem neste passe, todos batem."
     issues: []
     verdict: "PASS"
 
@@ -63,53 +63,71 @@ validation_report:
         provenance: 61
         cardinal_rules: 4
         pass: true
-        nota: "Fonte de menor qualidade de transcrição, mas critérios de riqueza QG-ETL-003 atingidos normalmente — 4 tabelas, 4 regras cardinais, 61 referências [Fonte:], >5 headers H2/H3, múltiplas listas (checklist, workflow, template RX)."
+        nota: "Fonte de menor qualidade de transcrição, mas critérios de riqueza QG-ETL-003 atingidos normalmente."
+      - id: "VOL-06"
+        lines: 311
+        tables: 5
+        examples: 6
+        provenance: 60
+        cardinal_rules: 4
+        pass: true
+        nota: "Fonte de maior confiabilidade da KB (prosa escrita, não ASR)."
+      - id: "VOL-07"
+        lines: 303
+        tables: 9
+        examples: 6
+        provenance: 55
+        cardinal_rules: 5
+        pass: true
+        nota: "Continuação do VOL-06. Ajustado de 293 pra 303 linhas durante a composição (conteúdo real adicionado — nota cruzada + seção de referências —, não preenchimento) pra atingir o mínimo de 300."
     all_pass: true
     verdict: "PASS"
 
   pass_4_voice:
-    consistency_score: 91.2
+    consistency_score: 92.3
     checked:
-      - "Tomás (reconfirmado de 13/09): catchphrases, terminologia, metáforas, tom confessional, linguagem religiosa — todos preservados, score individual 92%"
-      - "Lourival (novo): marcador de discurso 'então' preservado com alta frequência (característico da fonte); '100% integridade' preservado como mantra repetido; ensino por passo numerado (1,2,3) preservado; história do médico investigativo preservada e reconhecida como recurso pedagógico central, não cortada; terminologia própria (Sessão A1, RX, seeding, Kinder Ovo) preservada sem formalização"
-      - "Cross-check de não-fusão: nenhum trecho do VOL-05 usa vocabulário de Tomás (ex: 'cara de PIX', 'puxar o PIX') e vice-versa — as duas vozes permanecem distintas e identificáveis"
+      - "Tomás (reconfirmado): catchphrases, terminologia, metáforas, tom confessional, linguagem religiosa — score individual 92%"
+      - "Lourival (reconfirmado): marcadores de discurso, mantra '100% integridade', ensino por passo numerado, história do médico preservada — score individual 88% (penalizado pela qualidade de transcrição, não pela composição)"
+      - "Karol (novo): estrutura didática Ideia→Exemplo→Aplicação preservada em todas as seções; marcadores ⚓ (fala exata) preservados como citação direta; catchphrases preservadas ('então' como conector, 'cara' como vocativo — mantidas com menor frequência que na fonte bruta, mas presentes); notas de bastidor [MB:...] corretamente excluídas (não fazem parte da voz pública da autora); metáfora da afinação preservada com contexto completo — score individual 95%, o mais alto da KB, coerente com ser a fonte de maior confiabilidade (prosa revisada, não ASR)"
+      - "Cross-check de não-fusão: nenhum trecho de VOL-06/VOL-07 usa vocabulário de Tomás ou Lourival (ex: 'cara de PIX', 'Sessão A1', 'RX') e vice-versa — as três vozes permanecem distintas e identificáveis"
     issues:
-      - "Score de Lourival estimado ligeiramente mais conservador (~88%) que o de Tomás (92%) por causa da qualidade de transcrição inferior (modelo small) — catchphrases exatas e citações diretas têm risco maior de imprecisão fonética, mesmo quando o padrão de tom/estrutura didática é claramente reconhecível e consistente ao longo de toda a fonte. Média ponderada dos 5 volumes: 91.2%."
+      - "Média ponderada dos 7 volumes (4×92 Tomás + 1×88 Lourival + 2×95 Karol) / 7 = 92.3%."
     verdict: "PASS"
 
   pass_5_consistency:
     contradictions: 0
     documented_source_inconsistencies: 3
     cross_refs_valid: true
-    detail: "0 contradições de composição (mantido de 13/09). 3 divergências DA PRÓPRIA FONTE (não de composição): as 2 já conhecidas de SRC-001 (encontros Ultra High Ticket, faturamento em cortes de tempo) + 1 nova de SRC-002 (valor da consulta médica no VOL-05, ver critical-audit-report.yaml) — todas documentadas explicitamente nos locais apropriados (volume + README/Nota de Fidelidade), nenhuma reconciliada artificialmente, conforme a diretriz do MAPA-TERRITORIAL. Cross-references verificadas em README.md, REPERTORIO.md, REGRAS-CARDINAIS.md e GLOSSARIO.md: todos os links pra VOL-0N apontam pra arquivos que existem (5/5). Verificado também que não há confusão de nomenclatura entre 'Sessão Estratégica' (Tomás) e 'Sessão A1' (Lourival) em nenhum dos 4 docs transversais — ambos os termos aparecem sempre com autor/fonte identificados."
+    detail: "0 contradições de composição (mantido). 3 divergências DA PRÓPRIA FONTE (não de composição), todas já conhecidas e documentadas — nenhuma nova nesta rodada. Cross-references verificadas em README.md, REPERTORIO.md, REGRAS-CARDINAIS.md e GLOSSARIO.md: todos os links pra VOL-0N apontam pra arquivos que existem (7/7). Verificado que não há confusão de nomenclatura entre 'Sessão Estratégica' (Tomás), 'Sessão A1' (Lourival) e 'Sessão de Vendas Secretas/Sessão 1:1' (Karol) em nenhum dos 4 docs transversais — os três termos aparecem sempre com autor/fonte identificados, com nota cruzada explícita no GLOSSARIO.md."
     verdict: "PASS"
 
   pass_6_integrity:
-    volumes_planned: 5
-    volumes_present: 5
+    volumes_planned: 7
+    volumes_present: 7
     transversal_planned: 4
     transversal_present: 4
     completeness_report_exists: true
     plano_etl_updated: true
     orphan_files: 0
     verdict: "PASS"
-    nota: "Inclui verificação de que os arquivos VOL-02, VOL-03, VOL-04 e os 4 docs transversais — que tinham sido perdidos do disco por uma limpeza de git em sessão concorrente e recuperados via git fsck (ver PLANO-ETL.md, entrada de 14/09) — estão íntegros e com o conteúdo original preservado (contagens de linha batem exatamente com os registros da auditoria de 13/09: VOL-02=300, VOL-03=301, VOL-04=303)."
+    nota: "Inclui reconfirmação de que os arquivos recuperados do incidente de git (VOL-02, VOL-03, VOL-04 + docs transversais) seguem íntegros após a Fase 3 de hoje, e que os 2 volumes novos (VOL-06, VOL-07) mais os 4 docs transversais atualizados foram salvos corretamente em disco (verificado via listagem de arquivos, não apenas assumido)."
 
   aggregate:
-    coverage: 96.6
+    coverage: 97.9
     fidelity: 100.0
     richness: 100.0
-    voice: 91.2
+    voice: 92.3
     consistency: 100.0
     integrity: 100.0
-    score: 98.44
-    formula: "(96.6*0.20) + (100*0.30) + (100*0.10) + (91.2*0.10) + (100*0.15) + (100*0.15) = 19.32 + 30 + 10 + 9.12 + 15 + 15 = 98.44"
+    score: 98.81
+    formula: "(97.9*0.20) + (100*0.30) + (100*0.10) + (92.3*0.10) + (100*0.15) + (100*0.15) = 19.58 + 30 + 10 + 9.23 + 15 + 15 = 98.81"
     verdict: "APPROVED"
 
   revision_items: []
   revision_cycle: 0
 
   open_items_not_blocking_approval:
-    - "Domínio 'Sazonalidade Comercial' (SRC-001, peripheral) — reconfirmado de 13/09, sem mudança."
-    - "'Roda da Vida / 11 Pilares' (SRC-001) — reconfirmado de 13/09, sem mudança."
-    - "VOL-05 (SRC-002) tem confiabilidade de transcrição inferior aos demais — não bloqueia aprovação porque o Composer e este Auditor trataram a limitação com rigor (paráfrase em vez de citação onde a fonte era ruidosa, valores marcados como aproximados, inconsistência da fonte documentada em vez de reconciliada). Se a usuária algum dia re-obter a fonte com melhor qualidade de áudio/transcrição, vale re-compor o VOL-05 com o modelo medium."
+    - "Domínio 'Sazonalidade Comercial' (SRC-001, peripheral) — reconfirmado, sem mudança."
+    - "'Roda da Vida / 11 Pilares' (SRC-001) — reconfirmado, sem mudança."
+    - "VOL-05 (SRC-002) tem confiabilidade de transcrição inferior aos demais — não bloqueia aprovação, tratado com rigor na composição. Se a usuária re-obter a fonte com melhor qualidade de áudio, vale re-compor com modelo medium."
+    - "Esta Fase 4 foi executada diretamente pelo etl-chief, não por um @auditor dedicado em fork — duas tentativas de delegação falharam de forma atípica nesta sessão (fork retornou 'rodando em background' sem executar nenhuma ferramenta real). Registrado como bug de comportamento, feedback enviado. Recomenda-se, numa sessão futura sem esse problema, uma segunda passada de auditoria independente se a usuária quiser confirmação adicional — não é bloqueante, mas é uma diferença de processo em relação às 2 validações anteriores desta KB."

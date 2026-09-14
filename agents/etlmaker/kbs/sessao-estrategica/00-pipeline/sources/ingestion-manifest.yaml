@@ -1,9 +1,9 @@
 ingestion_manifest:
   kb_slug: "sessao-estrategica"
-  total_sources: 2
-  total_words: 46321
-  total_sections: 6
-  total_paragraphs: 8178
+  total_sources: 3
+  total_words: 60441
+  total_sections: 18
+  total_paragraphs: 9601
   sources:
     - id: "SRC-sessao-estrategica-001"
       title: "Aula: Sessão Estratégica"
@@ -17,5 +17,12 @@ ingestion_manifest:
       sections: 5
       paragraphs: 1858
       format: "video-transcricao"
+    - id: "SRC-sessao-estrategica-003"
+      title: "Expert360o - Módulo 3: Vendas Secretas"
+      words: 14120
+      sections: 12
+      paragraphs: 1423
+      format: "roteiro-prosa"
   timestamp: "2026-09-11T00:00:00Z"
   merge_timestamp: "2026-09-14T00:00:00Z"
+  second_merge_timestamp: "2026-09-14T00:00:00Z"

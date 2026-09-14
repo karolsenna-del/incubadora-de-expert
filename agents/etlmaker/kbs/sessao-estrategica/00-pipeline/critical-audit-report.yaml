@@ -1,74 +1,79 @@
 critical_audit:
   generated_at: "2026-09-14"
-  generated_by: "ETLmaker v3.0 — @auditor, Fase 4 (re-execução após merge SRC-002/Lourival, VOL-05)"
-  method: "Verificação exaustiva (100%) de cada item catalogado no MAPA-TERRITORIAL.md contra o output real (5 volumes + 4 docs transversais), não amostragem. Cobre a KB inteira, não só o volume novo."
-  previous_audit: "13/09/2026, escopo SRC-001/VOL-01-04 apenas — ver histórico abaixo. Esta é uma nova rodada completa, não um diff."
+  generated_by: "ETLmaker v3.0 — @auditor, Fase 4 (re-execução após merge SRC-003/Karol, VOL-06 e VOL-07) — executada diretamente pelo etl-chief, sem fork, dado bug de execução observado em 2 tentativas anteriores de delegação nesta sessão"
+  method: "Verificação exaustiva (100%) de cada item catalogado no MAPA-TERRITORIAL.md contra o output real (7 volumes + 4 docs transversais), não amostragem. Cobre a KB inteira, não só os volumes novos."
+  previous_audit: "14/09/2026 manhã, escopo SRC-001+SRC-002/VOL-01-05 — verdict PASS, 98.44% na Camada 3. Esta é uma nova rodada completa cobrindo os 7 volumes."
 
   frameworks:
-    total_in_mapa: 8
-    found_in_output: 8
+    total_in_mapa: 13
+    found_in_output: 13
     missing: []
     coverage: "100.0%"
-    detail: "SRC-001 (5, reconfirmados): Método Águia (VOL-01), Funil de Sessão Estratégica (VOL-01), Estrutura de 4 Blocos da Call (VOL-04), Esteira Faça-Sozinho/Com-Você/Por-Você (VOL-01), NEPQ (VOL-04, referência externa). SRC-002 (3, novos): Sessão A1 (VOL-05, seção 1), Questionário Raio-X/RX (VOL-05, seção 6), Bônus Kinder Ovo (VOL-05, seção 2)."
+    detail: "SRC-001 (5, reconfirmados): Método Águia, Funil de Sessão Estratégica, Estrutura de 4 Blocos da Call, Esteira Faça-Sozinho/Com-Você/Por-Você, NEPQ. SRC-002 (3, reconfirmados): Sessão A1, Questionário Raio-X/RX, Bônus Kinder Ovo. SRC-003 (5, novos): Proposta Validada/P4 (VOL-06), Rastreador de Leads (VOL-06), Leitura de Lead em 4 Camadas (VOL-07), Roteiro de Abordagem em 3 Etapas (VOL-07), ECROI (VOL-07) — todos os 5 presentes e completos (estrutura, propósito e exemplos preservados) nos respectivos volumes."
 
   cardinal_rules:
-    total_in_mapa: 11
-    found_in_volumes: 11
-    found_in_regras_doc: 11
+    total_in_mapa: 20
+    found_in_volumes: 20
+    found_in_regras_doc: 20
     missing_from_volumes: []
     missing_from_regras: []
     coverage: "100.0%"
-    detail: "7 regras de SRC-001 (reconfirmadas, seção 5 do MAPA) + 4 regras de SRC-002 (novas — 'executar o pitch 100% das vezes', '100% integridade', 'oferta mais vantajosa pro cliente', 'balancear áreas de potencial/dificuldade'). Todas as 4 novas aparecem tanto no VOL-05 (seções 5-6) quanto em REGRAS-CARDINAIS.md (seção própria 'Sessão A1 (FHT/Lourival)', linhas 198+), com [Fonte:] rastreável."
+    detail: "7 regras de SRC-001 + 4 de SRC-002 (reconfirmadas) + 9 de SRC-003 (novas — #27 a #35 em REGRAS-CARDINAIS.md, seção 'Vendas Secretas (Expert360º/Karol)'). Verificado: cada uma das 9 novas aparece em blockquote destacado no volume correspondente (VOL-06 para #27-30, VOL-07 para #31-35) E em REGRAS-CARDINAIS.md, com [Fonte:] rastreável até a aula específica."
 
   glossary_terms:
-    total_in_mapa: 27
-    found_in_glossary: 27
+    total_in_mapa: 37
+    found_in_glossary: 37
     missing: []
     coverage: "100.0%"
-    detail: "17 termos de SRC-001 (reconfirmados, já corrigidos na auditoria de 13/09) + 10 termos de SRC-002 (novos, seção própria 'Termos de Lourival' no GLOSSARIO.md). Verificado manualmente: 'Sessão A1' e 'Sessão Estratégica' são entradas SEPARADAS com nota cruzada explícita de que não são sinônimos — não há fusão indevida de terminologia entre os dois autores."
+    detail: "17 de SRC-001 + 10 de SRC-002 (reconfirmados) + 10 de SRC-003 (novos, seção própria 'Termos de Karol' no GLOSSARIO.md). Verificado manualmente: 'Sessão Estratégica' (Tomás), 'Sessão A1' (Lourival) e 'Sessão de Vendas Secretas/Sessão 1:1' (Karol) são 3 entradas SEPARADAS com nota cruzada explícita — nenhuma fusão indevida de terminologia entre os três autores."
 
   cross_volume:
-    concepts_in_multiple_volumes: 8
-    concepts_checked: "Os 6 já verificados em 13/09 (esteira de produto, storytelling, roteamento de lead, precificação flexível, comissionamento, PIX na call) + 2 novos cruzamentos entre SRC-001 e SRC-002: 'call 1:1 de venda' (Sessão Estratégica de Tomás vs Sessão A1 de Lourival — tratadas como conceitos paralelos de autores diferentes, não fundidas) e 'regra de fechar na própria call' (Tomás: 'puxar o PIX/pitch na call', VOL-04; Lourival: 'executar o pitch 100% das vezes', VOL-05 — convergem em espírito, cada um com sua própria formulação e fonte, sem contradição nem cópia)."
+    concepts_in_multiple_volumes: 10
+    concepts_checked: "Os 8 já verificados na rodada anterior + 2 novos cruzamentos envolvendo SRC-003: 'roteiro de sessão 1:1 de alto ticket' (4 Blocos de Tomás / Questionário RX de Lourival / ECROI de Karol — tratados como 3 frameworks paralelos, nota cruzada explícita no VOL-07 seção 7, sem fusão) e 'geração de leads pra call 1:1' (Social Selling/Webinar/Isca de Tomás / 4 canais de Lourival / Rastreador de 6 grupos de Karol — nota cruzada no VOL-06 seção final, mesma lógica)."
     contradictions: 0
     contradiction_details: []
     documented_source_inconsistencies_not_contradictions:
-      - "Encontros do Ultra High Ticket: VOL-01 registra 12, VOL-03 registra 10 (reconfirmado de 13/09, ambos sinalizados no README)."
-      - "Números de faturamento em cortes de tempo diferentes (VOL-01/VOL-04, reconfirmado de 13/09)."
-      - "NOVO: dentro do próprio VOL-05, o valor da consulta médica na 'história do médico investigativo' aparece como '800 reais' numa narração e '200 reais' na segunda (o próprio Lourival conta a história 2x na fonte, em momentos diferentes) — verificado por grep direto na fonte (linhas 763 e 1366 de fht-sessao1a1-normalized.md): '[00:11:12] Paguei 800 reais na consulta' vs '[00:21:10] pariu 200 reais na consulta' ('pariu' é ruído de ASR pra 'paguei'). O VOL-05 tratou isso corretamente: NÃO reproduz nenhum dos dois valores na narrativa, documentando a divergência explicitamente na Nota de Fidelidade (seção 11). Tratado como qualidade de fonte, não erro de composição — mesmo padrão já usado para as inconsistências de SRC-001."
+      - "Encontros do Ultra High Ticket: VOL-01 registra 12, VOL-03 registra 10 (reconfirmado, não relacionado a este merge)."
+      - "Números de faturamento em cortes de tempo diferentes (VOL-01/VOL-04, reconfirmado)."
+      - "Divergência de valor na história do médico do VOL-05 ('800 reais' vs '200 reais' nas duas narrações de Lourival) — reconfirmado, já documentado na Nota de Fidelidade do VOL-05, não é erro de composição."
     invalid_cross_refs: 0
 
   actionable_artifacts:
-    total_in_mapa: 14
-    found_in_volumes: 14
-    found_in_repertorio: 14
+    total_in_mapa: 22
+    found_in_volumes: 22
+    found_in_repertorio: 22
     missing_from_volumes: []
     missing_from_repertorio: []
     by_type:
-      scripts: "3/3 (Script de Abordagem no Direct; Roteiro dos 4 Blocos; NOVO — Perguntas Investigativas de Exemplo/RX)"
-      checklists: "4/4 (4 Pilares; Sinais de Qualificação 'cara de PIX'; Linhas de Negociação; NOVO — 4 Canais de Geração de Leads pra Sessão A1)"
-      workflows: "2/2 (Fluxo do Funil de Isca Gratuita; NOVO — Funil de 3 Etapas da Sessão A1)"
+      scripts: "5/5 (Script de Abordagem no Direct; Roteiro dos 4 Blocos; Perguntas Investigativas RX; NOVOS — Roteiro de Abordagem por Perfil, Roteiro ECROI Completo)"
+      checklists: "6/6 (4 Pilares; Sinais de Qualificação 'cara de PIX'; Linhas de Negociação; 4 Canais Sessão A1; NOVOS — Ritual dos 5 Minutos de Leitura de Lead, 3 Perguntas de Depoimento)"
+      workflows: "3/3 (Fluxo do Funil de Isca Gratuita; Funil de 3 Etapas da Sessão A1; NOVO — Cadência de 5 Toques)"
       benchmarks: "1/1 (Comissionamento Seller vs Closer)"
-      templates: "2/2 (Estrutura das 2 Planilhas; NOVO — Estrutura do Questionário Raio-X)"
+      templates: "5/5 (Estrutura das 2 Planilhas; Estrutura do Questionário Raio-X; NOVOS — Proposta Validada 5 componentes, Rastreador de Leads 6 grupos, Formulário de Pré-Diagnóstico)"
       formulas: "1/1 (Cálculo de CAC por Funil)"
       reference_tables: "1/1 (Esteira de Produto por Nível de Acesso)"
     coverage: "100.0%"
+    detail: "8 artefatos de SRC-003 (2 no VOL-06: Proposta Validada, Rastreador; 6 no VOL-07: Ritual de Leitura, Roteiro de Abordagem, Formulário de Pré-Diagnóstico, Roteiro ECROI, Cadência de 5 Toques, 3 Perguntas de Depoimento) — todos os 8 conferem exatamente com o plano da seção 9 do MAPA-TERRITORIAL.md, presentes no volume E no REPERTORIO.md."
 
   repertorio_completeness:
     sections_present: "11/11"
-    items_with_provenance: "33/33"
-    items_with_cross_ref: "33/33"
+    items_with_provenance: "44/44"
+    items_with_cross_ref: "44/44"
     orphan_items: 0
-    detail: "27 itens de Tomás (reconfirmados) + 6 itens de Lourival (4 artefatos do escopo mínimo + 2 metáforas + 1 história — Kinder Ovo, raio-x/seeding, história do médico), todos marcados (SRC-002/Lourival) nas seções correspondentes."
+    detail: "27 itens de Tomás + 6 de Lourival (reconfirmados) + 11 de Karol (3 templates + 2 checklists + 2 scripts + 1 workflow + 1 metáfora + 4 histórias/casos), todos marcados (SRC-003/Karol) nas seções correspondentes. Nota: a convergência de metáfora 'raio-x' entre Karol e Lourival mencionada na seção 1 do MAPA foi verificada por grep direto na fonte de Karol e NÃO aparece literalmente no texto — não foi catalogada como entrada própria no REPERTORIO pra não atribuir uma frase que a fonte não contém; a nota cruzada no VOL-07 usa uma formulação diferente e verificada (diagnóstico antes da oferta nos 3 frameworks)."
 
   overall_verdict: "PASS"
   corrections_applied_during_this_audit: []
   critical_missing: []
   non_blocking_open_items:
-    - "Domínio 'Sazonalidade Comercial' (SRC-001, peripheral) ainda não coberto em nenhum volume — reconfirmado de 13/09, não relacionado ao merge do FHT."
-    - "'Roda da Vida / 11 Pilares' (SRC-001) ainda definido só no GLOSSARIO, sem conteúdo elaborado em volume — reconfirmado de 13/09."
+    - "Domínio 'Sazonalidade Comercial' (SRC-001, peripheral) ainda não coberto em nenhum volume — reconfirmado, não relacionado a este merge."
+    - "'Roda da Vida / 11 Pilares' (SRC-001) ainda definido só no GLOSSARIO, sem conteúdo elaborado em volume — reconfirmado."
 
-  historico_auditoria_13_09_2026:
-    escopo: "SRC-001 apenas (VOL-01 a VOL-04)"
-    veredito: "PASS (após correção de 2 termos no GLOSSARIO durante aquela auditoria)"
-    nota: "Resultado integralmente reconfirmado nesta rodada — nenhuma regressão detectada nos volumes/docs de Tomás após a integração do VOL-05."
+  historico_auditorias_anteriores:
+    - data: "13/09/2026"
+      escopo: "SRC-001 apenas (VOL-01 a VOL-04)"
+      veredito: "PASS (após correção de 2 termos no GLOSSARIO)"
+    - data: "14/09/2026 manhã"
+      escopo: "SRC-001 + SRC-002 (VOL-01 a VOL-05)"
+      veredito: "PASS — reconfirmado sem regressão"
+    nota: "Ambos os resultados anteriores reconfirmados nesta rodada — nenhuma regressão detectada nos volumes/docs de Tomás ou Lourival após a integração de VOL-06/VOL-07."

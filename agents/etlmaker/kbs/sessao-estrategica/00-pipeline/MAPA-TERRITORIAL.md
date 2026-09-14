@@ -1,10 +1,12 @@
 # Mapa Territorial — Sessão Estratégica
 
 > Gerado pelo ETLmaker v3.0 — Fase 1: Mapeamento Territorial
-> Data: 2026-09-11 (atualizado em 2026-09-14 — merge da fonte SRC-002/FHT)
-> Fontes: 2 fontes (transcrições de aula em vídeo), 46.321 palavras, ~3h47min de conteúdo falado
-> SRC-001: Tomás, "Sessão Estratégica" (Arcane), 31.405 palavras, 3h19min
-> SRC-002: Lourival, "FHT — Módulo Sessão 1a1" (Hotmart Club), 14.916 palavras, 28min20s — autor DIFERENTE de Tomás, mentoria/empresa diferente (Fórmula High Ticket), mesmo assunto geral (sessão de venda 1:1 pra high ticket) tratado por outro expert. Ver seção 3 sobre como a hierarquia de voz trata essa segunda fonte.
+> Data: 2026-09-11 (atualizado em 2026-09-14 — merge da fonte SRC-002/FHT; atualizado novamente em 2026-09-14 — merge da fonte SRC-003/Expert360)
+> Fontes: 3 fontes, 60.441 palavras
+> SRC-001: Tomás, "Sessão Estratégica" (Arcane), 31.405 palavras, 3h19min de vídeo transcrito
+> SRC-002: Lourival, "FHT — Módulo Sessão 1a1" (Hotmart Club), 14.916 palavras, 28min20s de vídeo transcrito — autor DIFERENTE de Tomás, mentoria/empresa diferente (Fórmula High Ticket), mesmo assunto geral (sessão de venda 1:1 pra high ticket) tratado por outro expert.
+> SRC-003: Karol, "Expert360º — Módulo 3: Vendas Secretas" (Incubadora de Expert), 14.120 palavras, roteiro em prosa já escrito (não é transcrição de ASR — alta confiabilidade) — a AUTORA DO REPOSITÓRIO INTEIRO, autoridade primária do negócio. Cobre identidade de vendas, oferta (Proposta Validada/P4), geração de leads (Rastreador), abordagem, a sessão de vendas (roteiro ECROI) e pós-venda.
+> Ver seção 3 sobre como a hierarquia de voz trata as 3 fontes — nenhuma se funde com outra.
 
 ---
 
@@ -24,7 +26,14 @@
 | **Estrutura e Etapas da Sessão A1 (FHT)** | As 3 etapas do funil (geração de leads → agendamento → conversão/realização da sessão) e o roteiro interno da call (apresentação/rapport → alinhamento de expectativas/"seeding" → Questionário Raio-X → pitch de vendas) | agendamento manual vs. automatizado, filosofia de venda consultiva, regra de sempre fechar o pitch | core (dentro da fonte SRC-002) | alta — é o segundo bloco inteiro da aula | SRC-002 |
 | **Questionário Raio-X / "RX" (FHT)** | Ferramenta proprietária de diagnóstico usada dentro da sessão A1 para aflorar necessidade e gerar confiança antes do pitch | definição de áreas de potencial (ex.: 4) e áreas de dificuldade (ex.: 3) por cliente, perguntas investigativas por área, aplicação ao vivo (planilha/ferramenta compartilhando tela), cuidado pra não soar robótico nem se alongar demais (10-30min ideal) | core (dentro da fonte SRC-002) | alta — é o núcleo metodológico da fonte | SRC-002 |
 
-**Nota sobre integração entre as duas fontes:** os domínios de "Geração de Demanda" (SRC-001, Tomás) e "Geração de Leads para Sessão A1" (SRC-002, Lourival) cobrem território parecido (como trazer gente pra uma call de venda 1:1) mas com metodologias, nomenclatura e vozes diferentes — não foram fundidos num domínio único porque são ensinados por autores distintos, com frameworks próprios (ex.: Tomás fala em "Social Selling"/"Webinar"/"Isca"; Lourival fala em "Bônus Kinder Ovo"/convite de audiência/tráfego). Tratar como dois olhares complementares, não como uma coisa só.
+| **Identidade de Vendas (Expert360)** | O que precisa estar resolvido internamente ANTES de qualquer técnica de venda — medo de cobrar como crença, vender como servir, tolerância a rejeição | medo de cobrar (crença vs. fato), "vender é servir quem já tem o problema", as vendas como campo/investimento em derrota (Josh Waitzkin), "feito > perfeito" (80% fazendo/20% estudando) | core (dentro da fonte SRC-003) | alta — é o bloco de abertura do módulo inteiro (2 das 12 aulas) | SRC-003 |
+| **A Oferta de Validação — Proposta Validada / P4 (Expert360)** | O que é uma oferta 1:1 de validação (diferente do produto final), por que começar pelo 1:1 antes de escalar, e como construí-la | 2 caminhos (com/sem validação), 3 componentes da proposta (o quê/como/preço), o que a Proposta Validada NÃO é, os 5 componentes que o Agente da Proposta Validada constrói (promessa específica, mecanismo, incluídos, preço, pitch de 3 frases) | core (dentro da fonte SRC-003) | alta — 2 aulas inteiras | SRC-003 |
+| **Geração e Priorização de Leads — Rastreador (Expert360)** | Como identificar e priorizar quem abordar primeiro dentro da própria rede, antes de precisar de audiência nova | os 6 grupos (Círculo Íntimo, Colegas, Clientes/ex-clientes, Seguidores engajados, Conexões frias qualificadas, Fui Prospectada), as 3 colunas (score de fit, prioridade, perfil), social selling como estratégia paralela (jornada notada→ouvida→reconhecida→pertencimento, ritmo de 1-2 interações genuínas/dia) | core (dentro da fonte SRC-003) | alta — 2 aulas inteiras | SRC-003 |
+| **Leitura de Lead e Abordagem (Expert360)** | Como ler o perfil comportamental de um lead antes do primeiro contato e adaptar a abordagem | 4 camadas de leitura (bio, tipo de conteúdo, linguagem, energia), os 3 perfis (Conectora/Analista/Diretiva), roteiro de abordagem em 3 etapas (abertura genuína → conexão ao problema → convite), cadência pré-sessão (2 caminhos: respondeu / não respondeu) | core (dentro da fonte SRC-003) | alta — 2 aulas inteiras | SRC-003 |
+| **O Roteiro ECROI da Sessão de Vendas (Expert360)** | Estrutura completa da conversa de venda 1:1: as 5 etapas e a narrativa ECROI pra apresentar a oferta como resposta, não pitch | Boas-vindas → Diagnóstico → História → Oferta ECROI (Colapso/Reenquadramento/Ordem/Inevitabilidade) → Fechamento; tratamento de objeções ("vou pensar", "está caro", "não tenho tempo") | core (dentro da fonte SRC-003) | alta — é o núcleo tático do módulo, aula mais longa (12-15min) | SRC-003 |
+| **Pós-Venda: Follow-up e Depoimento (Expert360)** | O que fazer nos 3 resultados possíveis da sessão (sim/não/vou pensar) e como transformar as sessões em prova para o módulo seguinte | cadência de 5 toques pro "vou pensar", como e quando pedir depoimento, o que documentar independente do resultado | core (dentro da fonte SRC-003) | alta — fecha o ciclo tático do módulo | SRC-003 |
+
+**Nota sobre integração entre as três fontes:** os domínios de "Geração de Demanda" (SRC-001, Tomás), "Geração de Leads para Sessão A1" (SRC-002, Lourival) e "Geração e Priorização de Leads" (SRC-003, Karol) cobrem território parecido (como trazer gente pra uma call de venda 1:1) mas com metodologias, nomenclatura e vozes diferentes — não foram fundidos num domínio único porque são ensinados por autores distintos, com frameworks próprios (ex.: Tomás fala em "Social Selling"/"Webinar"/"Isca"; Lourival fala em "Bônus Kinder Ovo"/convite de audiência/tráfego; Karol fala em "Rastreador de Leads"/6 grupos/social selling com framework de 4 degraus de confiança). Da mesma forma, o "roteiro ECROI" de Karol, os "4 blocos" de Tomás e o "Questionário RX" de Lourival são 3 estruturas DIFERENTES e comparáveis pra conduzir uma sessão de venda 1:1 — nunca tratadas como a mesma coisa. Tratar como três olhares complementares, não como uma coisa só.
 
 ---
 
@@ -37,6 +46,8 @@
 - **justification:** como é fonte única e oral, sem capítulos pré-definidos, reorganizar por domínio (em vez de por ordem cronológica da fala) produz volumes mais autocontidos e navegáveis do que uma transcrição corrida.
 
 **SRC-002 (FHT/Lourival) — backbone próprio, mais explícito que o de Tomás:** a fonte já vem estruturada pelo próprio instrutor em 3 etapas nomeadas (Geração de Leads → Agendamento → Conversão) e dentro da etapa de Conversão, um roteiro de 4 passos (Apresentação/Rapport → Alinhamento/"Seeding" → Questionário RX → Pitch de Vendas), citado explicitamente por Lourival por volta de [00:03:56]-[00:04:00] e detalhado passo a passo ao longo da aula. `strategy`: `use_author_backbone` — a estrutura da fonte já é quase 1:1 a estrutura ideal do volume, exige pouca reorganização editorial.
+
+**SRC-003 (Expert360/Karol) — backbone mais explícito e mais granular das três fontes:** é a única fonte que já é um ROTEIRO DE CURSO — vem com numeração de aula, estimativa de tempo e estrutura fixa por aula (Abertura → O Que e Por Quê → Como [3 pontos, cada um Ideia→Exemplo→Aplicação] → Onde e Quando → Transição), aplicada de forma consistente nas 12 aulas. O próprio módulo já está organizado em 4 blocos nomeados pela autora: Mentalidade → Oferta → Leads e Abordagem → Sessão e Pós-venda (citado na Introdução, "Ponto 3"). `strategy`: `use_author_backbone` — zero reorganização necessária, a sequência de aulas já É a sequência lógica ideal do(s) volume(s).
 
 ---
 
@@ -57,6 +68,12 @@
 
 **Hierarquia (SRC-002):** Lourival é 100% a autoridade narrativa desta fonte — é uma pessoa e uma operação totalmente diferentes de Tomás/Fernanda (mentoria FHT ≠ mentoria/Arcane de Tomás). **Regra de composição:** volumes compostos a partir de SRC-002 devem manter a voz em 1ª pessoa de Lourival e ser claramente identificados como uma fonte/autor separado — nunca fundir uma citação ou exemplo de Lourival dentro de um volume atribuído a Tomás, e vice-versa. Onde os dois autores tratam de temas parecidos (geração de leads pra sessão 1:1, por exemplo), o volume pode fazer nota cruzada explícita ("compare com a abordagem de Tomás no VOL-2") mas sem misturar as vozes num único parágrafo.
 
+| Nome | Papel | Domínios que ensina | Peso | Marcadores de voz |
+|---|---|---|---|---|
+| **Karol** — dona da Incubadora de Expert, autora do método Expert360º | `primary` — autora e narradora das 12 aulas do M3; **autoridade primária do repositório inteiro**, não é referência externa | Identidade de Vendas, Proposta Validada/P4, Rastreador de Leads, Leitura de Lead e Abordagem, Roteiro ECROI da Sessão, Pós-Venda | **maxima** — é a dona do negócio e da KB, peso mais alto das 3 fontes | Direta, estrutura didática rígida e consistente (Ideia → Exemplo → Aplicação, em 3 pontos por aula), usa histórias pessoais numeradas e nomeadas como prova ("duas histórias minhas", "eu segui essa lógica por oito lançamentos"), frases-âncora marcadas no roteiro original com ⚓, tom de mentora que já errou e documentou o erro (2020: gestão, R$697/R$97 — não vendia; 2022: produtividade pra mães, baixava preço a cada lançamento) |
+
+**Hierarquia (SRC-003):** Karol é a autoridade máxima desta KB — autora do repositório, do método Expert360º e de todo o negócio (Incubadora de Expert). Isso NÃO significa que seu conteúdo deva ser fundido com o de Tomás ou Lourival — a mesma regra de integridade de voz se aplica: volumes compostos a partir de SRC-003 mantêm a voz em 1ª pessoa de Karol, claramente atribuídos. A diferença é de PESO, não de tratamento editorial: em caso de comparação implícita entre as 3 abordagens de sessão 1:1 (ECROI de Karol vs. 4 Blocos de Tomás vs. Questionário RX de Lourival), a leitura de Karol como autora da KB tem precedência se algum dia for preciso decidir "qual é O método oficial da casa" — mas isso é decisão de negócio da usuária, não algo que o Composer deve inferir ou resolver sozinho. Nota cruzada é bem-vinda e incentivada (ex.: "compare com o roteiro de 4 blocos do Tomás no VOL-4" ou "compare com o Questionário RX do Lourival no VOL-5"), sem fundir parágrafos.
+
 ---
 
 ## 4. Frameworks e Métodos Proprietários
@@ -71,6 +88,11 @@
 | **Sessão A1 ("Sessão 1 a 1")** | Lourival / FHT | Framework nomeado do funil de venda 1:1 de high ticket do FHT — equivalente conceitual à "Sessão Estratégica" de Tomás, mas com nome, etapas e ferramentas próprias, não deve ser tratado como sinônimo direto | 3 etapas: Geração de Leads → Agendamento → Conversão (Apresentação/Rapport → Alinhamento/"Seeding" → Questionário RX → Pitch de Vendas) | SRC-002, [00:03:56]-[00:04:00] (nomeação das 3 etapas) |
 | **Questionário Raio-X ("RX")** | Lourival / FHT | Ferramenta de diagnóstico consultivo aplicada dentro da sessão A1, antes do pitch, pra aflorar necessidade e construir confiança sem parecer venda forçada | Passo 1: definir áreas de potencial do cliente (ex.: impacto, negócio, escala, demanda/urgência); Passo 2: definir áreas de dificuldade; Passo 3: criar perguntas investigativas pra cada área (~10-30min de condução); aplicado ao vivo, compartilhando tela, via planilha ou ferramenta própria | SRC-002, ~[00:19:45]-[00:27:29] |
 | **Bônus Kinder Ovo** | Lourival / FHT (nome cunhado por ele, "apelidei de kinder ovo") | Tática de gerar leads pra sessão A1 oferecendo uma consultoria/sessão gratuita como bônus de alta percepção de valor dentro de um produto de entrada mais barato já existente | Vender um produto de entrada (ebook, curso) com uma consultoria gratuita embutida como bônus; quem compra o produto de entrada e resgata o bônus vira lead qualificado pra sessão A1 | SRC-002, ~[00:04:10]-[00:06:00] |
+| **Proposta Validada (P4)** | Karol / Expert360º | Oferta de validação 1:1 — versão enxuta e barata o suficiente pra validar rápido, antes de escalar publicamente | 3 componentes: o que entrega (método/ferramentas/acompanhamento) + como entrega (sessões/duração/canal) + preço (de validação, nunca grátis); construída via Agente da Proposta Validada em 5 sub-componentes (promessa específica, mecanismo, incluídos, como apresentar preço, pitch de 3 frases) | SRC-003, Aulas 3 e 4 |
+| **Rastreador de Leads Quentes** | Karol / Expert360º (adaptado de modelo doTERRA, citado na fonte) | Ferramenta de priorização — transforma lista de contatos em pipeline ordenado, antes da primeira abordagem | Planilha com 6 grupos (Círculo Íntimo, Colegas, Clientes/ex-clientes, Seguidores engajados, Conexões frias qualificadas, Fui Prospectada) × 3 colunas de qualificação (Score de Fit, Prioridade, Perfil) | SRC-003, Aula 5 |
+| **Leitura de Lead em 4 Camadas** | Karol / Expert360º (intuição prática, não a metodologia completa — a fonte cita a "Triangulação 3D" de Júlio Azevedo como inspiração externa, não como criação própria) | Identificar o perfil comportamental de um lead (Conectora/Analista/Diretiva) antes do primeiro contato, pra calibrar a abordagem | 4 camadas lidas em 5min: bio, tipo de conteúdo, linguagem, energia — bio e linguagem são os sinais mais decisivos quando o perfil é misto | SRC-003, Aula 7 |
+| **Roteiro de Abordagem em 3 Etapas** | Karol / Expert360º | Estrutura da primeira mensagem de prospecção — objetivo é marcar a sessão, não vender | Abertura genuína (adaptada por perfil) → Conexão ao problema → O convite; roteiro (guia flexível), não script (rígido) | SRC-003, Aula 8 |
+| **ECROI (narrativa da oferta na sessão de vendas)** | Karol / Expert360º — framework autoral | Construir a lógica que leva a lead da identificação à decisão, sem pitch agressivo — a oferta aparece como resposta, não argumento | Colapso (derruba a crença errada) → Reenquadramento (causa real) → Ordem (a sequência certa = o método) → Inevitabilidade (o resultado como consequência lógica); aplicado na Etapa 4 do roteiro de 5 etapas da sessão (Boas-vindas → Diagnóstico → História → Oferta ECROI → Fechamento) | SRC-003, Aula 9, framework central do módulo |
 
 ---
 
@@ -91,6 +113,20 @@
 | **(SRC-002/Lourival)** As áreas de potencial e de dificuldade do Questionário RX devem ficar balanceadas (nem poucas, nem muitas) — o exemplo dado foi 4 áreas de potencial e 3 de dificuldade | 1x, mas com ênfase de regra prática | média | SRC-002, ~[00:23:57]-[00:24:07] |
 
 **Nota:** as regras de SRC-002 não substituem nem contradizem as de SRC-001 — são princípios de um segundo instrutor, aplicáveis dentro do volume próprio dele (ver seção 8).
+
+| Regra | Frequência | Absoluteness | Fonte |
+|---|---|---|---|
+| **(SRC-003/Karol)** "Só fracassa quem desiste. Não quem ouve não, não quem conduz uma sessão que não fecha. Fracasso de verdade é parar antes de chegar" | citada como conclusão do bloco de mentalidade, reforçada no encerramento do módulo | máxima | SRC-003, Aula 1 |
+| **(SRC-003/Karol)** "80% fazendo, 20% estudando" — mais preparo antes do campo atrasa, não acelera; o critério não é "estou pronta", é "tenho o mínimo pra isso não me destruir" | tese central da Aula 2, citada como inversão da lógica escolar | máxima | SRC-003, Aula 2 |
+| **(SRC-003/Karol)** "Não ofereça de graça — grátis atrai quem está curioso, não quem está comprometida" | 1x, mas como regra prática de precificação da Proposta Validada | alta | SRC-003, Aula 3 |
+| **(SRC-003/Karol)** "Vender é servir quem já tem o problema" — recuar por medo de parecer vendedora prejudica quem já precisa da solução | tese central da Aula 1, retomada em outras aulas como fundamento | máxima | SRC-003, Aula 1 |
+| **(SRC-003/Karol)** "O objetivo da abordagem não é vender — é marcar a sessão" — a venda acontece na sessão, não na mensagem de prospecção | 1x, mas base de toda a Aula 8 | alta | SRC-003, Aula 8 |
+| **(SRC-003/Karol)** "Preço → para. O silêncio não precisa ser preenchido" — nunca justificar ou suavizar o preço depois de dito | repetida (âncora de valor antes do preço + no próprio momento do preço) | alta | SRC-003, Aula 9 |
+| **(SRC-003/Karol)** "Nunca rebata objeção direto — pergunta primeiro. Objeção declarada ≠ objeção real" | regra de ouro do fechamento, explicitamente nomeada como tal | máxima | SRC-003, Aula 9 |
+| **(SRC-003/Karol)** "Grave todas as sessões (com permissão)" — matéria-prima pra revisão própria e pra prova no módulo seguinte | 1x, recomendação direta | alta | SRC-003, Aula 9 |
+| **(SRC-003/Karol)** "Um não não é veredicto — fala sobre essa pessoa nesse momento, não sobre o seu método" | 1x, princípio de resiliência pós-sessão | alta | SRC-003, Aula 10 |
+
+**Nota:** as regras de SRC-003 não substituem nem contradizem as de SRC-001/SRC-002 — são princípios da autora/dona da KB, aplicáveis dentro dos volumes próprios dela (ver seção 8). Nenhuma regra das 3 fontes é logicamente incompatível com outra — todas tratam do mesmo domínio geral (venda 1:1 de alto valor) sob perspectivas de 3 autores diferentes.
 
 ---
 
@@ -135,6 +171,25 @@
 
 *(10 termos de SRC-002 — no mínimo exigido pelo QG-ETL-001, considerando isoladamente; somado a SRC-001, a KB tem 24 termos únicos no total.)*
 
+**Glossário SRC-003 (Expert360/Karol):**
+
+| Termo | Definição |
+|---|---|
+| **Vendas Secretas** | Nome do módulo/filosofia: validar a oferta vendendo em silêncio, no privado (1:1), antes de crescer audiência ou aparecer publicamente — inverte a ordem "crescer→validar→vender" pra "validar→vender→crescer" |
+| **Proposta Validada (P4)** | Oferta de validação 1:1, versão enxuta e precificada pra comprometer o cliente — não é o produto final, não é consultoria grátis, não é favor |
+| **Rastreador de Leads Quentes** | Planilha/ferramenta de priorização de contatos por grupo de relacionamento, score de fit e perfil comportamental |
+| **Os 6 Grupos** | Categorias do Rastreador: Círculo Íntimo, Colegas e ex-colegas de área, Clientes e ex-clientes, Seguidores engajados, Conexões frias qualificadas, Fui Prospectada |
+| **Conectora / Analista / Diretiva** | Os 3 perfis de leitura comportamental de lead (framework simplificado, inspirado na Triangulação 3D de Júlio Azevedo) — calibram tom de abertura na abordagem |
+| **ECROI** | Framework autoral da narrativa de oferta na sessão de vendas: Colapso → Reenquadramento → Ordem → Inevitabilidade |
+| **Sessão de Vendas Secretas / Sessão 1:1** | A call de 30-40min onde a venda acontece — 5 etapas: Boas-vindas, Diagnóstico, História, Oferta ECROI, Fechamento |
+| **Social Selling (Expert360)** | Prática diária de 1-2 interações genuínas por dia, fundamentada na jornada de confiança (ser notada→ouvida→reconhecida→pertencimento) — pipeline de médio prazo (4-8 semanas), não tática de resultado imediato |
+| **Lead Frio (Expert360)** | Status do Rastreador pra quem disse "vou pensar" e não retomou, ou disse "não" — pausa, não descarte; alimenta a cadência de 5 toques |
+| **Depoimento** | Prova documentada pós-sessão, coletada via 3 perguntas (situação antes / o que mudou / pra quem indicaria) — ativo mais valioso pro módulo seguinte (M4, Autoridade) |
+
+*(10 termos de SRC-003 — no mínimo exigido pelo QG-ETL-001; somado a SRC-001 e SRC-002, a KB tem 34 termos únicos no total.)*
+
+**Nota de sobreposição terminológica:** "Sessão 1:1" aparece nas 3 fontes com sentidos relacionados mas não idênticos — Tomás usa "Sessão Estratégica", Lourival usa "Sessão A1", Karol usa "Sessão de Vendas Secretas" ou simplesmente "a sessão". São 3 nomes de 3 metodologias distintas pro mesmo tipo geral de encontro (call individual de diagnóstico+venda). Nunca usar os termos como sinônimos intercambiáveis dentro de um volume — cada um pertence ao vocabulário do seu autor.
+
 ---
 
 ## 7. Classificação de Fontes por Volume
@@ -145,8 +200,9 @@ Como há apenas **uma fonte** (a transcrição da aula), ela é primária (ânco
 |---|---|---|
 | VOL-1 a VOL-4 | SRC-001 (recorte por trecho de timestamp/domínio) | nenhuma |
 | VOL-5 (novo) | SRC-002 (recorte por trecho de timestamp/domínio) | nenhuma |
+| VOL-6 e VOL-7 (novos) | SRC-003 (recorte por aula) | nenhuma |
 
-Como SRC-002 é de um autor diferente de SRC-001, ela NÃO serve de suporte/enriquecimento pros volumes já compostos (VOL-1 a VOL-4) nem vice-versa — cada fonte é primária apenas dos seus próprios volumes, preservando a integridade de voz de cada autor.
+Como cada fonte é de um autor diferente, nenhuma serve de suporte/enriquecimento pros volumes das outras fontes — cada fonte é primária apenas dos seus próprios volumes, preservando a integridade de voz de cada autor. SRC-003 é a única com templates/artefatos originais completos (M3.1-M3.5) incluídos na própria fonte normalizada — não é enriquecimento externo, é parte da fonte primária.
 
 ---
 
@@ -166,7 +222,10 @@ Como SRC-002 é de um autor diferente de SRC-001, ela NÃO serve de suporte/enri
 - `REPERTORIO.md` (catálogo de artefatos, seção 9 abaixo)
 - `GLOSSARIO.md` (seção 6 acima)
 
-**Sequência lógica e justificativa:** VOL-1 (por quê e o quê) → VOL-2 (como gerar demanda) → VOL-3 (como estruturar o time que atende essa demanda) → VOL-4 (como de fato conduzir e fechar a venda) → VOL-5 (um segundo instrutor, outra mentoria, tratando do mesmo tipo de call — colocado por último por ser conteúdo complementar/comparativo, não parte da progressão pedagógica de Tomás). Cada volume pressupõe o vocabulário definido no anterior, mas é autocontido o suficiente para ser lido isoladamente por quem já conhece o conceito de "sessão estratégica"/"sessão 1:1". VOL-5 é o único que muda de autor — isso deve ficar óbvio pro leitor logo no início do volume (nome do instrutor e da mentoria em destaque, não só numa nota de rodapé).
+| **VOL-6** (novo — SRC-003, autora Karol/Expert360) | Vendas Secretas 1 — Identidade, Oferta e Geração de Leads | Identidade de Vendas, Proposta Validada/P4, Geração e Priorização de Leads (Rastreador) | Introdução + Aulas 1-6 do M3 | — | ~500-600 linhas | Primeira metade do módulo: por que vender em silêncio antes de crescer audiência (a tese "Vendas Secretas"), a identidade que precisa estar resolvida antes da técnica (medo de cobrar como crença, "feito > perfeito"), o que é e como construir a Proposta Validada (P4), o Rastreador de Leads Quentes (6 grupos, 3 colunas de qualificação) e social selling como estratégia paralela pra quem tem lista pequena |
+| **VOL-7** (novo — SRC-003, autora Karol/Expert360) | Vendas Secretas 2 — Leitura de Lead, Abordagem, Sessão ECROI e Pós-Venda | Leitura de Lead e Abordagem, Roteiro ECROI da Sessão, Pós-Venda | Aulas 7-10 + Encerramento do M3 | — | ~450-550 linhas | Segunda metade, mais tática: como ler o perfil comportamental de um lead em 5 minutos (Conectora/Analista/Diretiva), o roteiro de abordagem em 3 etapas com cadência pré-sessão, o roteiro completo da sessão de vendas com a narrativa ECROI (Colapso/Reenquadramento/Ordem/Inevitabilidade) e tratamento de objeções, e o pós-sessão (cadência de 5 toques, coleta de depoimento) |
+
+**Sequência lógica e justificativa:** VOL-1 (por quê e o quê) → VOL-2 (como gerar demanda) → VOL-3 (como estruturar o time que atende essa demanda) → VOL-4 (como de fato conduzir e fechar a venda) → VOL-5 (um segundo instrutor, outra mentoria, tratando do mesmo tipo de call) → VOL-6 e VOL-7 (a autora da própria KB, método Expert360º, tratando do mesmo tipo de call sob uma terceira perspectiva — dividido em 2 por volume de conteúdo: mentalidade+oferta+leads primeiro, depois abordagem+sessão+pós-venda). Cada volume pressupõe o vocabulário definido no anterior, mas é autocontido o suficiente para ser lido isoladamente por quem já conhece o conceito de "sessão 1:1" de alto valor. VOL-5, VOL-6 e VOL-7 mudam de autor em relação a VOL-1-4 — isso deve ficar óbvio pro leitor logo no início de cada volume (nome do autor em destaque, não só numa nota de rodapé). VOL-6 e VOL-7, especificamente, têm o peso adicional de serem a voz da DONA da KB — o volume deve deixar isso claro (é o método oficial da Incubadora de Expert, não uma referência externa como VOL-5).
 
 ---
 
@@ -188,6 +247,14 @@ Como SRC-002 é de um autor diferente de SRC-001, ela NÃO serve de suporte/enri
 | `workflow` (SRC-002) | Funil de 3 Etapas da Sessão A1 | Geração de Leads → Agendamento (link direto WhatsApp) → Conversão (rapport → alinhamento/seeding → RX → pitch) | [00:03:56]–[00:04:00] | VOL-5 |
 | `checklist` (SRC-002) | 4 Canais de Geração de Leads pra Sessão A1 | Bônus kinder ovo (produto de entrada + consultoria bônus), convite de audiência/lista de contatos, tráfego pago, tráfego orgânico + indicação/afiliados | [00:02:50]–[00:08:43] | VOL-5 |
 | `script` (SRC-002) | Perguntas Investigativas de Exemplo (Áreas de Potencial) | Exemplos de perguntas pra aflorar potencial de impacto/negócio/escala/urgência sem soar robótico | [00:26:00]–[00:27:00] | VOL-5 |
+| `template` (SRC-003) | Proposta Validada (P4) — 5 componentes | Promessa específica + mecanismo + incluídos + como apresentar preço + pitch de 3 frases | Aula 4 | VOL-6 |
+| `template` (SRC-003) | Rastreador de Leads Quentes | Planilha completa: 6 grupos × colunas de Score de Fit/Prioridade/Perfil/Status/Próxima Ação/Fechamento/Depoimento (M3.5 original) | Aula 5 + M3.5 | VOL-6 |
+| `checklist` (SRC-003) | Ritual dos 5 Minutos de Leitura de Lead | 4 camadas (bio/post/linguagem/energia) → perfil (Conectora/Analista/Diretiva) | Aula 7 | VOL-7 |
+| `script` (SRC-003) | Roteiro de Abordagem por Perfil (M3.2 original) | Abertura + conexão ao problema, com falas exatas pra cada um dos 3 perfis | Aula 8 + M3.2 | VOL-7 |
+| `template` (SRC-003) | Formulário de Pré-Diagnóstico (M3.3 original) | 12 perguntas prontas pra Google Forms, com tipo de resposta e como usar cada uma na sessão | Aula 8 + M3.3 | VOL-7 |
+| `script` (SRC-003) | Roteiro ECROI Completo (M3.4 original) | As 5 etapas da sessão com falas prontas pra preencher (Colapso/Reenquadramento/Ordem/Inevitabilidade + objeções) | Aula 9 + M3.4 | VOL-7 |
+| `workflow` (SRC-003) | Cadência de 5 Toques (Follow-up "Vou Pensar") | T1 (24-48h) a T5 (18-21 dias), cada um com função e exemplo de mensagem | Aula 10 | VOL-7 |
+| `checklist` (SRC-003) | 3 Perguntas de Depoimento | Como estava antes / o que mudou / pra quem indicaria | Aula 10 | VOL-7 |
 
 ---
 
@@ -210,6 +277,14 @@ Como SRC-002 é de um autor diferente de SRC-001, ela NÃO serve de suporte/enri
 - **Números e nomes citados como prova social são de confiabilidade baixa:** Lourival cita pelo menos 3 casos de alunos com faturamento alto atribuído à sessão A1 (uma aluna em nicho de comunicação profissional, um aluno em nicho de música/eventos, um aluno em nicho de migração/medicina com indicação como canal principal) — os VALORES exatos de faturamento e nomes têm alta chance de erro de transcrição (dígitos e nomes próprios são o que ASR mais erra). O Composer NÃO deve reproduzir esses números como fato confirmado; se usar os exemplos, deve marcar explicitamente como "valor aproximado, conforme mencionado na aula" ou omitir o valor exato e manter só o padrão qualitativo (ex.: "aluna que teve resultado expressivo aplicando os 2 primeiros canais").
 - **Fonte cobre só 28min20s de um módulo maior:** o módulo "ESTRATÉGIA DE VENDA" do FHT continua depois disso com outro formato de venda chamado "SHT" e depois um bloco "IM" (não capturados, fora do escopo pedido pela usuária) — se um merge futuro quiser esses formatos, é fonte nova (mesma trilha, outro recorte), não uma correção deste merge.
 - **Sem material de apoio:** assim como SRC-001, não havia slides/PDF disponíveis — a Hotmart Club não permite download direto do vídeo; a fonte foi obtida via gravação de tela com OBS enquanto a usuária assistia no navegador.
+
+### Gaps específicos de SRC-003 (Expert360/Karol)
+
+- **[POSITIVO] Fonte de alta confiabilidade — não é transcrição.** Diferente de SRC-001 e SRC-002 (ambas transcrições de ASR com erros de reconhecimento), SRC-003 é um roteiro de vídeo já ESCRITO, REVISADO e APROVADO (v2.0 aprovada em QG-CC-006, v3.0 é só a versão em bullets pra gravação — o conteúdo em prosa não mudou). Zero risco de palavra trocada foneticamente, zero alucinação de modelo, zero necessidade de ceticismo redobrado como em SRC-002. O Composer pode citar diretamente com confiança alta.
+- **Marcadores especiais na fonte original:** o arquivo-fonte usa ⚓ pra marcar frases-âncora (fala exata que não pode sair errada) e `[MB: ...]` como nota de bastidor pra enriquecimento futuro (não é conteúdo pronto, é lembrete de produção — não incorporar como se fosse fala da Karol). Esses marcadores foram preservados na normalização; o Composer deve tratar as frases com ⚓ como citação literal preferencial (são as frases que a própria autora marcou como intocáveis) e ignorar completamente os `[MB: ...]`.
+- **Numeração de aula com bloco de mentalidade fora de sequência:** a Aula 2 ("O que você está vendendo") aparece numerada como "# 2" duas vezes na estrutura original (uma vez no bloco de Mentalidade — Identidade de Vendas — e outra no bloco da Oferta, conforme `estrutura-modulos.md`), mas o arquivo de roteiro (`m3-roteiros.md`) resolve isso numerando sequencialmente 1-10 (Aula 2 = "Feito é melhor que perfeito", Aula 3 = "O que você está vendendo"). Adotado nesta KB a numeração do roteiro (1-10 + Introdução + Encerramento = 12 aulas), que é a fonte mais granular e a que foi de fato gravada.
+- **Referências a fontes externas não incluídas neste merge:** o roteiro cita RC-07, RC-08, RC-09, RC-13, VOL-03, VOL-06 (documentos de "Mentalidade Black" e outros — provavelmente de outra KB ou biblioteca interna da Incubadora, não localizados/inclusos neste merge) como origem de algumas histórias/princípios. Essas citações foram preservadas como referência no texto da fonte, mas o Composer não deve tentar buscar ou inventar o conteúdo dessas fontes externas — só reconhecer que existem.
+- **Depoimentos/casos de alunas mencionados no rodapé de M3.1/M3.5 são templates em branco:** os arquivos de material do aluno (M3.1, parcialmente M3.5) são moldes vazios pra aluna preencher, não exemplos reais preenchidos por uma aluna específica — diferente de SRC-002 (que cita casos reais, ainda que de confiabilidade duvidosa). Não há "prova social de aluna" nesta fonte pra reproduzir — os exemplos numéricos que existem (histórico de 2020/2022) são da própria Karol, não de alunas.
 
 ---
 
@@ -238,3 +313,18 @@ Como SRC-002 é de um autor diferente de SRC-001, ela NÃO serve de suporte/enri
 - **Terminologia preferida vs. formal:** "cara de trair" não aparece aqui (isso é termo de Tomás) — Lourival prefere "aflorar a necessidade" a "criar urgência"; "sessão consultiva" a "call de vendas"; "raio-x" a "diagnóstico"
 - **Terminologia do domínio:** lead, tráfego pago, tráfego orgânico, conversão, rapport, pitch, high ticket (grafias variadas, ver seção 10) — vocabulário técnico de vendas digitais similar ao de Tomás, mas com termos proprietários próprios (Sessão A1, RX, Bônus Kinder Ovo) que não devem ser confundidos com os de Tomás
 - **⚠️ Nota de confiabilidade:** este perfil foi construído sobre uma transcrição de qualidade inferior (modelo small, ver seção 10) — traços de tom/energia são razoavelmente confiáveis (são padrões que se repetem por toda a fonte), mas catchphrases exatas e citações diretas têm risco maior de imprecisão que o perfil de Tomás. O Composer deve preferir paráfrase a citação literal ao reproduzir a voz de Lourival, exceto onde o trecho da fonte estiver claramente legível e coerente.
+
+**Autor SRC-003: Karol (Expert360º/Incubadora de Expert) — perfil de ALTA confiança (fonte escrita, não transcrita)**
+
+- **Tom:** formalidade média (5/10 — português correto, sem gírias pesadas, mas conversacional e direto — "cara", "né" aparecem pontualmente, não como marcador constante), energia média-alta (7/10 — frases curtas, ritmo de urgência controlada, muitas pausas retóricas marcadas com "—"), diretividade muito alta (9/10 — estrutura didática rígida: toda aula tem exatamente 3 pontos, cada ponto é Ideia→Exemplo→Aplicação, sem exceção nas 12 aulas)
+- **Catchphrases:**
+  - "Vem comigo" — fechamento de transição entre aulas, convite pro próximo passo
+  - "Faz sentido pra você?" — usado dentro do script de fechamento da sessão (mesma frase que Tomás usa, mas em contexto próprio — não é influência cruzada, é convergência natural de linguagem de vendas)
+  - Perguntas retóricas de abertura de bloco ("O que é uma Proposta Validada?", "Como você executa isso?") — usadas pra introduzir cada novo conceito antes de defini-lo
+  - "Isso não é [X]. É [Y]." — estrutura de contraste recorrente pra definir conceitos por oposição (ex.: "roteiro não é script", "isso não é veredicto")
+- **Estilo didático:** estrutura fixa e nomeada (Abertura → O Que e Por Quê → Como [3 pontos] → Onde e Quando → Transição) aplicada com rigor nas 12 aulas — é o traço de voz mais forte e mais fácil de preservar; usa histórias pessoais NUMERADAS e datadas como prova (2020: gestão; 2022: produtividade pra mães; "oito lançamentos"); referências a frameworks/pessoas externas sempre creditadas explicitamente (Josh Waitzkin, Júlio Azevedo/Triangulação 3D)
+- **Metáforas:** "o questionário/leitura é um raio-x" (linguagem de enxergar por dentro — nota: metáfora quase idêntica à de Lourival no VOL-5, "questionário é um raio-x" — convergência entre as fontes, documentar como nota cruzada no volume, não como coincidência suspeita); "afinar o instrumento em privado antes de tocar no público" (por que validar 1:1 antes de aparecer); "kinder ovo" NÃO aparece aqui (é termo de Lourival) — Karol usa "bônus" sem apelido especial
+- **Terminologia preferida vs. formal:** "Vendas Secretas" a "validação de oferta"; "campo" a "prática"/"experiência de mercado"; "afinar" a "testar"/"ajustar"; "espelhar" (usar as palavras da lead de volta) a "parafrasear"
+- **Terminologia do domínio:** lead, pipeline, rapport, diagnóstico, objeção, follow-up, CTA, fit — vocabulário técnico de vendas/marketing digital em comum com as outras 2 fontes, mas SEM os termos proprietários de Tomás (CAC, lead scoring explícito) ou Lourival (RX, Bônus Kinder Ovo) — Karol tem seu próprio vocabulário proprietário (P4, ECROI, Rastreador, os 6 Grupos)
+- **Presença de linguagem religiosa/espiritual:** ausente nesta fonte (diferente de Tomás) — tom é prático/estratégico, sem menções a fé ou direcionamento espiritual
+- **Nota de confiabilidade:** ALTA — fonte é prosa escrita e aprovada (QG-CC-006), não transcrição de fala. Citações diretas podem ser usadas com confiança sem necessidade de paráfrase defensiva, diferente de SRC-002.

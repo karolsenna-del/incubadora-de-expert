@@ -2,7 +2,7 @@
 
 > Estes princípios são tratados como **ABSOLUTOS** pelos autores desta KB.
 > Não são sugestões — são leis do método, repetidas ao vivo e aplicadas na própria operação de cada um.
-> Organizadas por domínio para facilitar consulta. 26 regras no total: 22 de **Tomás** (Método Águia/Arcane, VOL-01–VOL-04, deduplicadas por conteúdo — 7 delas também aparecem registradas na seção 5 do Mapa Territorial) + 4 de **Lourival** (FHT, VOL-05, seção própria ao final — autor e mentoria diferentes, regras não misturadas com as de Tomás).
+> Organizadas por domínio para facilitar consulta. 35 regras no total: 22 de **Tomás** (Método Águia/Arcane, VOL-01–VOL-04, deduplicadas por conteúdo — 7 delas também aparecem registradas na seção 5 do Mapa Territorial) + 4 de **Lourival** (FHT, VOL-05) + 9 de **Karol** (Expert360º, VOL-06–VOL-07) — cada autor em seção própria ao final, regras nunca misturadas entre si.
 
 ---
 
@@ -239,4 +239,88 @@ Nem poucas, nem muitas — o exemplo dado foi 4 áreas de potencial e 3 de dific
 
 ---
 
-*Consolidado pelo ETLmaker v3.0 a partir dos 5 volumes desta KB e da seção 5 do MAPA-TERRITORIAL.md.*
+## Vendas Secretas (Expert360º / Karol) — autora e dona deste repositório
+
+> As 9 regras abaixo vêm da fonte de maior confiabilidade da KB (SRC-003, roteiro em prosa já escrito e revisado — não transcrição de ASR). São o método próprio de Karol, aplicáveis dentro de [VOL-06](VOL-06-identidade-oferta-leads.md) e [VOL-07](VOL-07-abordagem-sessao-ecroi.md). Não substituem nem contradizem as regras de Tomás ou Lourival — são um terceiro olhar sobre o mesmo domínio (venda 1:1 de alto ticket).
+
+### 27. Só fracassa quem desiste
+
+Não é quem ouve um não, não é quem conduz uma sessão que não fecha — o único fracasso definitivo é parar antes de chegar.
+
+> "Só fracassa quem desiste. Não quem ouve não, não quem conduz uma sessão que não fecha. Fracasso de verdade é parar antes de chegar."
+> [Fonte: SRC-003, Aula 1]
+
+**Por que é absoluta:** é a conclusão do bloco de mentalidade inicial e é retomada explicitamente no encerramento do módulo — a régua que sustenta todo o resto do M3.
+*Contextualizado em: [VOL-06](VOL-06-identidade-oferta-leads.md)*
+
+### 28. 80% fazendo, 20% estudando
+
+Mais preparo antes do campo atrasa, não acelera. O critério pra começar não é "estou pronta" — é "tenho o mínimo pra que isso não me destrua".
+
+> [Fonte: SRC-003, Aula 2]
+
+**Por que é absoluta:** é a tese central da Aula 2, apresentada como inversão deliberada da lógica escolar (estudo → conhecimento → resultado).
+*Contextualizado em: [VOL-06](VOL-06-identidade-oferta-leads.md)*
+
+### 29. Vender é servir quem já tem o problema
+
+Recuar por medo de parecer vendedora prejudica quem já precisa da solução — quem paga bem respeita o processo e chega no resultado.
+
+> [Fonte: SRC-003, Aula 1]
+
+**Por que é absoluta:** tese central da Aula 1, retomada como fundamento em outras aulas do módulo.
+*Contextualizado em: [VOL-06](VOL-06-identidade-oferta-leads.md)*
+
+### 30. Não ofereça de graça
+
+Grátis atrai quem está curioso, não quem está comprometida — a Proposta Validada tem preço, mesmo sendo uma oferta de validação.
+
+> [Fonte: SRC-003, Aula 3]
+
+*Contextualizado em: [VOL-06](VOL-06-identidade-oferta-leads.md)*
+
+### 31. O objetivo da abordagem não é vender — é marcar a sessão
+
+A venda acontece na sessão, nunca na mensagem de prospecção. Quando o objetivo é vender, a pessoa sente — quando é marcar a sessão, a abordagem chega com curiosidade genuína.
+
+> [Fonte: SRC-003, Aula 8]
+
+*Contextualizado em: [VOL-07](VOL-07-abordagem-sessao-ecroi.md)*
+
+### 32. Preço → para. O silêncio não precisa ser preenchido
+
+Depois de dizer o preço na sessão, não justificar, não suavizar, não preencher a pausa.
+
+> [Fonte: SRC-003, Aula 9]
+
+**Por que é absoluta:** repetida duas vezes na mesma aula (âncora de valor antes do preço + no próprio momento do preço) como regra de comportamento na hora exata do fechamento.
+*Contextualizado em: [VOL-07](VOL-07-abordagem-sessao-ecroi.md)*
+
+### 33. Nunca rebata objeção direto — pergunta primeiro
+
+Objeção declarada ≠ objeção real. "Vou pensar", "está caro" e "não tenho tempo" são pontos de partida pra uma pergunta, não pra um argumento de venda.
+
+> [Fonte: SRC-003, Aula 9 — nomeada explicitamente como "Regra de Ouro"]
+
+*Contextualizado em: [VOL-07](VOL-07-abordagem-sessao-ecroi.md)*
+
+### 34. Grave todas as sessões (com permissão)
+
+Cada gravação é matéria-prima pra revisão própria e pra prova de autoridade no módulo seguinte do curso.
+
+> "Posso gravar? É para eu poder revisar e continuar melhorando."
+> [Fonte: SRC-003, Aula 9]
+
+*Contextualizado em: [VOL-07](VOL-07-abordagem-sessao-ecroi.md)*
+
+### 35. Um não não é veredicto
+
+Fala sobre a pessoa naquele momento específico, não sobre o método. Campo produz resultados variados — encerrar com generosidade e arquivar como lead fria (pausa, não descarte).
+
+> [Fonte: SRC-003, Aula 10]
+
+*Contextualizado em: [VOL-07](VOL-07-abordagem-sessao-ecroi.md)*
+
+---
+
+*Consolidado pelo ETLmaker v3.0 a partir dos 7 volumes desta KB e da seção 5 do MAPA-TERRITORIAL.md.*

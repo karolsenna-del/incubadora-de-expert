@@ -2,7 +2,7 @@
 
 > Terminologia proprietária e termos técnicos dos dois autores desta KB.
 > Definições fiéis ao uso de cada um, preservando gírias e vocabulário próprio.
-> Termos marcados **(Lourival/FHT)** vêm de uma fonte e mentoria diferentes de Tomás — atenção especial a termos parecidos: "Sessão Estratégica" (Tomás) e "Sessão A1" (Lourival) são NOMES DIFERENTES pro mesmo tipo de call, não sinônimos intercambiáveis dentro de um único volume.
+> Termos marcados **(Lourival/FHT)** vêm de uma fonte e mentoria diferentes de Tomás — atenção especial a termos parecidos: "Sessão Estratégica" (Tomás), "Sessão A1" (Lourival) e "Sessão de Vendas Secretas/Sessão 1:1" (Karol) são NOMES DIFERENTES pro mesmo tipo geral de call, não sinônimos intercambiáveis dentro de um único volume.
 
 ## Termos de Tomás (Método Águia / Arcane)
 
@@ -52,6 +52,25 @@
 
 *(10 termos de Lourival/FHT, vindos da seção 6/SRC-002 do MAPA-TERRITORIAL.md.)*
 
+## Termos de Karol (Expert360º / Incubadora de Expert)
+
+> Fonte de maior confiabilidade da KB — roteiro escrito e revisado, não transcrição de ASR. Karol é a autora e dona deste repositório.
+
+| Termo | Definição | Fonte |
+|-------|-----------|-------|
+| **Vendas Secretas** | Nome do módulo/filosofia: validar a oferta vendendo em silêncio, no privado (1:1), antes de crescer audiência ou aparecer publicamente — inverte a ordem "crescer→validar→vender" pra "validar→vender→crescer" | [VOL-06](VOL-06-identidade-oferta-leads.md) |
+| **Proposta Validada (P4)** | Oferta de validação 1:1, versão enxuta e precificada pra comprometer o cliente — não é o produto final, não é consultoria grátis, não é favor | [VOL-06](VOL-06-identidade-oferta-leads.md) |
+| **Rastreador de Leads Quentes** | Planilha/ferramenta de priorização de contatos por grupo de relacionamento, score de fit e perfil comportamental | [VOL-06](VOL-06-identidade-oferta-leads.md) |
+| **Os 6 Grupos** | Categorias do Rastreador: Círculo Íntimo, Colegas e ex-colegas de área, Clientes e ex-clientes, Seguidores engajados, Conexões frias qualificadas, Fui Prospectada | [VOL-06](VOL-06-identidade-oferta-leads.md) |
+| **Conectora / Analista / Diretiva** | Os 3 perfis de leitura comportamental de lead (framework simplificado, inspirado na Triangulação 3D de Júlio Azevedo) — calibram tom de abertura na abordagem | [VOL-07](VOL-07-abordagem-sessao-ecroi.md) |
+| **ECROI** | Framework autoral da narrativa de oferta na sessão de vendas: Colapso → Reenquadramento → Ordem → Inevitabilidade | [VOL-07](VOL-07-abordagem-sessao-ecroi.md) |
+| **Sessão de Vendas Secretas / Sessão 1:1** (Karol) | A call de 30-40min onde a venda acontece — 5 etapas: Boas-vindas, Diagnóstico, História, Oferta ECROI, Fechamento. **Não é sinônimo de "Sessão Estratégica" (Tomás) nem de "Sessão A1" (Lourival)** — mesmo tipo geral de call, três nomes e roteiros diferentes | [VOL-07](VOL-07-abordagem-sessao-ecroi.md) |
+| **Social Selling** (Expert360) | Prática diária de 1-2 interações genuínas por dia, fundamentada na jornada de confiança (ser notada→ouvida→reconhecida→pertencimento) — pipeline de médio prazo (4-8 semanas), não tática de resultado imediato | [VOL-06](VOL-06-identidade-oferta-leads.md) |
+| **Lead Frio** (Expert360) | Status do Rastreador pra quem disse "vou pensar" e não retomou, ou disse "não" — pausa, não descarte; alimenta a cadência de 5 toques | [VOL-07](VOL-07-abordagem-sessao-ecroi.md) |
+| **Depoimento** | Prova documentada pós-sessão, coletada via 3 perguntas (situação antes / o que mudou / pra quem indicaria) — ativo mais valioso pro módulo seguinte (M4, Autoridade) | [VOL-07](VOL-07-abordagem-sessao-ecroi.md) |
+
+*(10 termos de Karol/Expert360, vindos da seção 6/SRC-003 do MAPA-TERRITORIAL.md.)*
+
 ---
 
-*Consolidado pelo ETLmaker v3.0 a partir da seção 6 do MAPA-TERRITORIAL.md e dos 5 volumes desta KB. Total: 32 termos (22 de Tomás + 10 de Lourival).*
+*Consolidado pelo ETLmaker v3.0 a partir da seção 6 do MAPA-TERRITORIAL.md e dos 7 volumes desta KB. Total: 42 termos (22 de Tomás + 10 de Lourival + 10 de Karol).*
