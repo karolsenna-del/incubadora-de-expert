@@ -1,8 +1,10 @@
 # Mapa Territorial — Sessão Estratégica
 
 > Gerado pelo ETLmaker v3.0 — Fase 1: Mapeamento Territorial
-> Data: 2026-09-11
-> Fontes: 1 fonte (transcrição de aula em vídeo), 31.405 palavras, 3h19min de conteúdo falado
+> Data: 2026-09-11 (atualizado em 2026-09-14 — merge da fonte SRC-002/FHT)
+> Fontes: 2 fontes (transcrições de aula em vídeo), 46.321 palavras, ~3h47min de conteúdo falado
+> SRC-001: Tomás, "Sessão Estratégica" (Arcane), 31.405 palavras, 3h19min
+> SRC-002: Lourival, "FHT — Módulo Sessão 1a1" (Hotmart Club), 14.916 palavras, 28min20s — autor DIFERENTE de Tomás, mentoria/empresa diferente (Fórmula High Ticket), mesmo assunto geral (sessão de venda 1:1 pra high ticket) tratado por outro expert. Ver seção 3 sobre como a hierarquia de voz trata essa segunda fonte.
 
 ---
 
@@ -18,6 +20,11 @@
 | **Social Selling Avançado — Análise de Persona** | Como qualificar um lead pelo perfil do Instagram antes de abordá-lo, para não desperdiçar reunião | "cara de PIX", leitura de bio/posts/stories, prospecção ativa em grupos fechados | supporting | média (bloco final, com exemplos reais ao vivo) | SRC-001 |
 | **Mentalidade e Crença Financeira do Expert** | Bloqueios pessoais que impedem o expert de cobrar e vender | história de reprogramação mental do próprio casal, medo de falar preço, storytelling pessoal | supporting | média | SRC-001 |
 | **Sazonalidade Comercial** | Como o calendário (Black Friday, Natal, janeiro) afeta a disposição de compra do lead e a estratégia de abordagem | ciclo de endividamento nov-jan, uso de grupos de lançamento futuro para vender agora | peripheral | baixa (um bloco de resposta a pergunta) | SRC-001 |
+| **Geração de Leads para Sessão A1 (FHT)** | Os 4 canais que Lourival ensina para trazer pessoas para a call de venda 1:1 ("sessão A1") | aproveitamento de ativos/produto de entrada ("bônus kinder ovo"), convite direto da audiência/lista de contatos, tráfego pago, tráfego orgânico + prospecção ativa + indicação/afiliados | core (dentro da fonte SRC-002) | alta — é o primeiro bloco inteiro da aula | SRC-002 |
+| **Estrutura e Etapas da Sessão A1 (FHT)** | As 3 etapas do funil (geração de leads → agendamento → conversão/realização da sessão) e o roteiro interno da call (apresentação/rapport → alinhamento de expectativas/"seeding" → Questionário Raio-X → pitch de vendas) | agendamento manual vs. automatizado, filosofia de venda consultiva, regra de sempre fechar o pitch | core (dentro da fonte SRC-002) | alta — é o segundo bloco inteiro da aula | SRC-002 |
+| **Questionário Raio-X / "RX" (FHT)** | Ferramenta proprietária de diagnóstico usada dentro da sessão A1 para aflorar necessidade e gerar confiança antes do pitch | definição de áreas de potencial (ex.: 4) e áreas de dificuldade (ex.: 3) por cliente, perguntas investigativas por área, aplicação ao vivo (planilha/ferramenta compartilhando tela), cuidado pra não soar robótico nem se alongar demais (10-30min ideal) | core (dentro da fonte SRC-002) | alta — é o núcleo metodológico da fonte | SRC-002 |
+
+**Nota sobre integração entre as duas fontes:** os domínios de "Geração de Demanda" (SRC-001, Tomás) e "Geração de Leads para Sessão A1" (SRC-002, Lourival) cobrem território parecido (como trazer gente pra uma call de venda 1:1) mas com metodologias, nomenclatura e vozes diferentes — não foram fundidos num domínio único porque são ensinados por autores distintos, com frameworks próprios (ex.: Tomás fala em "Social Selling"/"Webinar"/"Isca"; Lourival fala em "Bônus Kinder Ovo"/convite de audiência/tráfego). Tratar como dois olhares complementares, não como uma coisa só.
 
 ---
 
@@ -28,6 +35,8 @@
 - **backbone_source:** SRC-001, por volta de [00:15:00] ("vocês vão precisar ter quatro pilares... geração de demanda, processo comercial, estrutura do diagnóstico e estruturação de produto").
 - **strategy:** `use_author_backbone` com reordenação editorial — os 4 pilares do instrutor mapeiam quase 1:1 para 4 dos 4 volumes propostos (seção 8), mas o conteúdo de Q&A espalhado ao longo da aula foi realocado para o volume de domínio correspondente (ex.: a pergunta do Jaisson sobre SaaS/consultoria foi para o volume de Estruturação de Produto, não mantida como bloco solto).
 - **justification:** como é fonte única e oral, sem capítulos pré-definidos, reorganizar por domínio (em vez de por ordem cronológica da fala) produz volumes mais autocontidos e navegáveis do que uma transcrição corrida.
+
+**SRC-002 (FHT/Lourival) — backbone próprio, mais explícito que o de Tomás:** a fonte já vem estruturada pelo próprio instrutor em 3 etapas nomeadas (Geração de Leads → Agendamento → Conversão) e dentro da etapa de Conversão, um roteiro de 4 passos (Apresentação/Rapport → Alinhamento/"Seeding" → Questionário RX → Pitch de Vendas), citado explicitamente por Lourival por volta de [00:03:56]-[00:04:00] e detalhado passo a passo ao longo da aula. `strategy`: `use_author_backbone` — a estrutura da fonte já é quase 1:1 a estrutura ideal do volume, exige pouca reorganização editorial.
 
 ---
 
@@ -40,7 +49,13 @@
 | **Euriler** (mentor da Arcane) | `guest`/citado — não fala na aula, mas é referenciado como quem ajudou Tomás a estruturar o evento presencial e a "pivotagem empresarial" | Mencionado como fonte de apoio estratégico externo, não ensina conteúdo técnico nesta aula | low (nesta fonte) | — |
 | **Thiago** ("Tiagão") | voluntário aluno usado para a demonstração ao vivo do diagnóstico | Serve de "cobaia" para a demonstração dos 4 blocos | low (papel de exemplo, não de autoridade) | — |
 
-**Hierarquia:** Tomás é 100% a autoridade narrativa desta fonte. Fernanda é a autoridade de marca/metodologia citada por ele, mas não fala. Qualquer volume composto deve manter a voz em 1ª pessoa de Tomás, e tratar as falas atribuídas a "Fernanda" apenas como relato indireto de Tomás.
+**Hierarquia (SRC-001):** Tomás é 100% a autoridade narrativa desta fonte. Fernanda é a autoridade de marca/metodologia citada por ele, mas não fala. Qualquer volume composto a partir de SRC-001 deve manter a voz em 1ª pessoa de Tomás, e tratar as falas atribuídas a "Fernanda" apenas como relato indireto de Tomás.
+
+| Nome | Papel | Domínios que ensina | Peso | Marcadores de voz |
+|---|---|---|---|---|
+| **Lourival** | `primary` — ministra sozinho as 5 aulas do módulo Sessão 1a1 do FHT | Geração de Leads para Sessão A1, Estrutura/Roteiro da Sessão A1, Questionário Raio-X | high (dentro de SRC-002) | Casual, "cara"/"então"/"né" recorrentes, ensina por analogia/história pessoal longa (ex.: a história do médico investigativo x médico apressado, usada pra justificar por que perguntas investigativas geram confiança), usa números de faturamento de alunos como prova social (ex.: aluna que faturou alto com sessão A1 em nicho de comunicação profissional, aluno que faturou alto no nicho de música, aluno com alta conversão via indicação em nicho de migração/medicina) — **valores exatos incertos, ver seção 10 sobre qualidade de transcrição** |
+
+**Hierarquia (SRC-002):** Lourival é 100% a autoridade narrativa desta fonte — é uma pessoa e uma operação totalmente diferentes de Tomás/Fernanda (mentoria FHT ≠ mentoria/Arcane de Tomás). **Regra de composição:** volumes compostos a partir de SRC-002 devem manter a voz em 1ª pessoa de Lourival e ser claramente identificados como uma fonte/autor separado — nunca fundir uma citação ou exemplo de Lourival dentro de um volume atribuído a Tomás, e vice-versa. Onde os dois autores tratam de temas parecidos (geração de leads pra sessão 1:1, por exemplo), o volume pode fazer nota cruzada explícita ("compare com a abordagem de Tomás no VOL-2") mas sem misturar as vozes num único parágrafo.
 
 ---
 
@@ -53,6 +68,9 @@
 | **Estrutura de 4 Blocos da Call (Diagnóstico)** | Tomás, validado por Fernanda | Roteiro replicável para conduzir a reunião de vendas do início ao fechamento | Bloco 1: boas-vindas/rapport/desafio central; Bloco 2: mapeamento de dores (uso de NEPQ); Bloco 3: apresentação da solução; Bloco 4: bloco de sonhos → gancho → pitch → negociação/fechamento | SRC-001, demonstrado integralmente ~[01:56:00]–[02:24:00] |
 | **Esteira Faça-Sozinho / Faça-Com-Você / Faço-Por-Você** | Tomás (framework genérico de precificação por nível de acesso, aplicado ao caso do aluno Jaisson) | Estruturar 3 faixas de produto (SaaS puro, SaaS+consultoria, mentoria/consultoria high-end) sem canibalizar o high ticket | 3 camadas de produto com preços e entregas crescentes | SRC-001, ~[00:52:00]–[00:59:00] |
 | **NEPQ (Neuro Emotional Persuasion Questions)** | Jeremy Miner (citado por Tomás como referência externa, não é criação própria) | Base teórica das perguntas de diagnóstico usadas no Bloco 2 | Citado apenas pelo nome/sigla, recomendado como estudo complementar | SRC-001, ~[01:56:35] |
+| **Sessão A1 ("Sessão 1 a 1")** | Lourival / FHT | Framework nomeado do funil de venda 1:1 de high ticket do FHT — equivalente conceitual à "Sessão Estratégica" de Tomás, mas com nome, etapas e ferramentas próprias, não deve ser tratado como sinônimo direto | 3 etapas: Geração de Leads → Agendamento → Conversão (Apresentação/Rapport → Alinhamento/"Seeding" → Questionário RX → Pitch de Vendas) | SRC-002, [00:03:56]-[00:04:00] (nomeação das 3 etapas) |
+| **Questionário Raio-X ("RX")** | Lourival / FHT | Ferramenta de diagnóstico consultivo aplicada dentro da sessão A1, antes do pitch, pra aflorar necessidade e construir confiança sem parecer venda forçada | Passo 1: definir áreas de potencial do cliente (ex.: impacto, negócio, escala, demanda/urgência); Passo 2: definir áreas de dificuldade; Passo 3: criar perguntas investigativas pra cada área (~10-30min de condução); aplicado ao vivo, compartilhando tela, via planilha ou ferramenta própria | SRC-002, ~[00:19:45]-[00:27:29] |
+| **Bônus Kinder Ovo** | Lourival / FHT (nome cunhado por ele, "apelidei de kinder ovo") | Tática de gerar leads pra sessão A1 oferecendo uma consultoria/sessão gratuita como bônus de alta percepção de valor dentro de um produto de entrada mais barato já existente | Vender um produto de entrada (ebook, curso) com uma consultoria gratuita embutida como bônus; quem compra o produto de entrada e resgata o bônus vira lead qualificado pra sessão A1 | SRC-002, ~[00:04:10]-[00:06:00] |
 
 ---
 
@@ -67,6 +85,12 @@
 | "Cada lead chega num momento de compra e capacidade de pagamento diferente — a oferta final é decidida pelo closer na call, não travada num script único" | 2x, explicitamente ensinado como princípio | alta | SRC-001 |
 | "Seja justo — não empurre o produto goela abaixo; a venda só faz sentido se gerar transformação real" | 1x, mas citada como princípio ético central | alta | SRC-001 |
 | "Todo storytelling precisa existir e ser repetido várias vezes — é o que conecta e faz a pessoa concluir a compra" | 2x | alta | SRC-001 |
+| **(SRC-002/Lourival)** "Você tem que executar o pitch de vendas 100% das vezes" — nunca pular o pitch mesmo depois de um bom RX | repetida de forma incomum (5x consecutivas, quase idênticas — ver nota de qualidade na seção 10) | máxima | SRC-002, ~[00:27:38]-[00:28:02] |
+| **(SRC-002/Lourival)** "100% integridade" — nunca manipular o cliente pra vender, ser sincero sobre o que o produto não resolve | 1x, mas apresentada como princípio central da "venda consultiva" | máxima | SRC-002, ~[00:16:00]-[00:16:16] |
+| **(SRC-002/Lourival)** "A oferta precisa soar mais vantajosa pra ele do que pra você" — a venda só é boa se o resultado do cliente for desproporcionalmente maior que o valor cobrado | 1x, explicada com exemplo numérico | alta | SRC-002, ~[00:15:07]-[00:16:00] |
+| **(SRC-002/Lourival)** As áreas de potencial e de dificuldade do Questionário RX devem ficar balanceadas (nem poucas, nem muitas) — o exemplo dado foi 4 áreas de potencial e 3 de dificuldade | 1x, mas com ênfase de regra prática | média | SRC-002, ~[00:23:57]-[00:24:07] |
+
+**Nota:** as regras de SRC-002 não substituem nem contradizem as de SRC-001 — são princípios de um segundo instrutor, aplicáveis dentro do volume próprio dele (ver seção 8).
 
 ---
 
@@ -92,7 +116,24 @@
 | **Linha de Negociação** | Roteiro pré-definido de como conduzir objeções de forma de pagamento (à vista, cartão parcelado, entrada + boleto) |
 | **CS / Tutor / Treinador Águia** | Papel de suporte que ajuda na entrega da mentoria em grupo, liberando a agenda da expert principal |
 
-*(14 termos catalogados — acima do mínimo de 10 exigido pelo QG-ETL-001.)*
+*(14 termos de SRC-001 — acima do mínimo de 10 exigido pelo QG-ETL-001.)*
+
+**Glossário SRC-002 (FHT/Lourival):**
+
+| Termo | Definição |
+|---|---|
+| **Sessão A1 / Sessão 1 a 1** | Nome do FHT pra reunião de diagnóstico/venda 1:1 — equivalente funcional à "Sessão Estratégica" de Tomás, mas termo e metodologia próprios de Lourival |
+| **Lead** | Pessoa que forneceu contato (telefone/e-mail) com interesse específico, tornando-se candidata a agendar a sessão A1 |
+| **Bônus Kinder Ovo** | Bônus de alta percepção de valor (ex.: consultoria gratuita) embutido num produto de entrada mais barato, usado pra gerar leads qualificados pra sessão A1 |
+| **Questionário Raio-X / "RX"** | Ferramenta de diagnóstico consultivo aplicada na sessão A1 antes do pitch — série de perguntas investigativas organizadas por áreas de potencial e de dificuldade |
+| **Áreas de Potencial** | Dimensões do negócio/carreira do lead que mostram capacidade de gerar resultado (ex.: potencial de impacto, de negócio, de escala, de demanda/urgência) — mapeadas no RX |
+| **Áreas de Dificuldade** | Dimensões onde o lead tem obstáculo/lacuna que o acompanhamento vendido promete resolver — mapeadas no RX, balanceadas com as áreas de potencial |
+| **Seeding** | Técnica de "plantar uma semente" de que vai existir uma oferta ao final da sessão, sem revelar detalhes, dita durante o alinhamento de expectativas no início da call |
+| **Venda Consultiva** | Filosofia de condução da sessão A1 — parecer (e ser) uma consultoria que gera valor, não uma abordagem agressiva de venda |
+| **Público Frio** | Pessoas que ainda não conhecem o expert/oferta, geradas via tráfego pago, convertidas a partir do primeiro contato com um anúncio |
+| **HiTicket / HT** | Forma como Lourival se refere a "high ticket" — a transcrição automática (modelo small) frequentemente distorce esse termo para variações como "HTT", "ratíguete", "ratigue", "retíguet", todas normalizadas aqui como "high ticket"/"HT" (ver seção 10) |
+
+*(10 termos de SRC-002 — no mínimo exigido pelo QG-ETL-001, considerando isoladamente; somado a SRC-001, a KB tem 24 termos únicos no total.)*
 
 ---
 
@@ -103,6 +144,9 @@ Como há apenas **uma fonte** (a transcrição da aula), ela é primária (ânco
 | Volume | Fonte primária | Fonte de suporte |
 |---|---|---|
 | VOL-1 a VOL-4 | SRC-001 (recorte por trecho de timestamp/domínio) | nenhuma |
+| VOL-5 (novo) | SRC-002 (recorte por trecho de timestamp/domínio) | nenhuma |
+
+Como SRC-002 é de um autor diferente de SRC-001, ela NÃO serve de suporte/enriquecimento pros volumes já compostos (VOL-1 a VOL-4) nem vice-versa — cada fonte é primária apenas dos seus próprios volumes, preservando a integridade de voz de cada autor.
 
 ---
 
@@ -114,6 +158,7 @@ Como há apenas **uma fonte** (a transcrição da aula), ela é primária (ânco
 | **VOL-2** | Geração de Demanda — Os 3 Funis e a Prospecção Ativa | Geração de Demanda, Social Selling Avançado (análise de persona) | [00:59:00]–[01:32:00] + [02:56:00]–[03:11:00] | — | ~450-550 linhas | O script completo de Social Selling (abordagem no Direct, perguntas qualificatórias, convite), o Webinar Semanal/Sala Secreta, o Funil de Isca gravado, canais paralelos, e a parte avançada de como analisar o perfil do Instagram do lead antes de abordar ("cara de PIX") |
 | **VOL-3** | Processo Comercial, Time e Infraestrutura de Dados | Processo Comercial e Time | [01:32:00]–[01:56:00] | — | ~350-400 linhas | Papéis do time (seller, closer, expert, tutor/CS), comissionamento de mercado, as duas planilhas (marketing e comercial), cálculo de CAC, lead scoring |
 | **VOL-4** | A Sessão Estratégica — Os 4 Blocos do Diagnóstico e Fechamento | Estrutura da Sessão Estratégica/Diagnóstico | [01:56:00]–[02:27:00] | — | ~500-600 linhas | O coração do método: os 4 blocos da call, com a demonstração ao vivo completa com o aluno Thiago (rapport → mapeamento de dores via NEPQ → apresentação da solução → bloco de sonhos → pitch → negociação e fechamento com PIX na call), regras de negociação de forma de pagamento |
+| **VOL-5** (novo — SRC-002, autor Lourival/FHT) | Sessão A1 pelo Método FHT — Geração de Leads, Roteiro e Diagnóstico Raio-X | Geração de Leads para Sessão A1, Estrutura/Etapas da Sessão A1, Questionário Raio-X | [00:00:00]–[00:28:20] (fonte inteira) | — | ~300-350 linhas | Segundo olhar sobre a venda 1:1 de high ticket, de um instrutor diferente (Lourival, FHT): os 4 canais de geração de leads pra sessão A1 (bônus kinder ovo, convite de audiência, tráfego pago, tráfego orgânico/indicação), as 3 etapas do funil (leads → agendamento → conversão), o roteiro de condução da call (rapport breve → alinhamento/seeding → Questionário RX por áreas de potencial/dificuldade → pitch), e a regra de sempre fechar com o pitch. Volume autocontido — não pressupõe leitura de VOL-1 a VOL-4, mas pode conter notas cruzadas pontuais comparando com a abordagem de Tomás onde fizer sentido pro leitor, sem fundir as vozes. **Fonte de menor confiabilidade que VOL-1 a VOL-4** (transcrita com modelo whisper "small" por limitação de memória — ver seção 10): Composer deve tratar nomes próprios, números e frases mais "estranhas" com ceticismo redobrado, marcando incerteza em vez de suavizar/inventar |
 
 **Docs transversais obrigatórios:**
 - `README.md`
@@ -121,7 +166,7 @@ Como há apenas **uma fonte** (a transcrição da aula), ela é primária (ânco
 - `REPERTORIO.md` (catálogo de artefatos, seção 9 abaixo)
 - `GLOSSARIO.md` (seção 6 acima)
 
-**Sequência lógica e justificativa:** VOL-1 (por quê e o quê) → VOL-2 (como gerar demanda) → VOL-3 (como estruturar o time que atende essa demanda) → VOL-4 (como de fato conduzir e fechar a venda). Cada volume pressupõe o vocabulário definido no anterior, mas é autocontido o suficiente para ser lido isoladamente por quem já conhece o conceito de "sessão estratégica".
+**Sequência lógica e justificativa:** VOL-1 (por quê e o quê) → VOL-2 (como gerar demanda) → VOL-3 (como estruturar o time que atende essa demanda) → VOL-4 (como de fato conduzir e fechar a venda) → VOL-5 (um segundo instrutor, outra mentoria, tratando do mesmo tipo de call — colocado por último por ser conteúdo complementar/comparativo, não parte da progressão pedagógica de Tomás). Cada volume pressupõe o vocabulário definido no anterior, mas é autocontido o suficiente para ser lido isoladamente por quem já conhece o conceito de "sessão estratégica"/"sessão 1:1". VOL-5 é o único que muda de autor — isso deve ficar óbvio pro leitor logo no início do volume (nome do instrutor e da mentoria em destaque, não só numa nota de rodapé).
 
 ---
 
@@ -139,6 +184,10 @@ Como há apenas **uma fonte** (a transcrição da aula), ela é primária (ânco
 | `checklist` | Linhas de Negociação de Forma de Pagamento | À vista com desconto → cartão 12x → entrada PIX + boleto/cartão do mês seguinte | [02:19:00]–[02:27:00] | VOL-4 |
 | `reference_table` | Esteira de Produto por Nível de Acesso | Ultra high ticket (12 encontros individuais) → mentoria em grupo (6 encontros + individuais) → produto de entrada (1 sessão individual, 6 meses) | [02:29:00]–[02:35:00] | VOL-1 |
 | `checklist` | Sinais de Qualificação de Lead pelo Perfil ("cara de PIX") | Bio, fotos, filhos, viagens, posicionamento profissional, engajamento — o que olhar antes de abordar | [02:57:00]–[03:10:00] | VOL-2 |
+| `template` (SRC-002) | Estrutura do Questionário Raio-X | Passo a passo: definir N áreas de potencial + N áreas de dificuldade → criar perguntas investigativas por área → aplicar ao vivo compartilhando tela (planilha ou ferramenta) | [00:19:45]–[00:27:29] | VOL-5 |
+| `workflow` (SRC-002) | Funil de 3 Etapas da Sessão A1 | Geração de Leads → Agendamento (link direto WhatsApp) → Conversão (rapport → alinhamento/seeding → RX → pitch) | [00:03:56]–[00:04:00] | VOL-5 |
+| `checklist` (SRC-002) | 4 Canais de Geração de Leads pra Sessão A1 | Bônus kinder ovo (produto de entrada + consultoria bônus), convite de audiência/lista de contatos, tráfego pago, tráfego orgânico + indicação/afiliados | [00:02:50]–[00:08:43] | VOL-5 |
+| `script` (SRC-002) | Perguntas Investigativas de Exemplo (Áreas de Potencial) | Exemplos de perguntas pra aflorar potencial de impacto/negócio/escala/urgência sem soar robótico | [00:26:00]–[00:27:00] | VOL-5 |
 
 ---
 
@@ -152,6 +201,15 @@ Como há apenas **uma fonte** (a transcrição da aula), ela é primária (ânco
 - **Números de faturamento apresentados em momentos diferentes da aula não são estritamente consistentes** (ex.: "R$1.799.000" mencionado num ponto, "R$2.700.000" e depois "R$3 milhões sem lançamento" mencionados perto do final) — não é necessariamente contradição (podem ser cortes de tempo diferentes: acumulado do ano vs. acumulado histórico), mas o Composer não deve tentar reconciliar ou arredondar esses números — deve reportá-los como o instrutor os apresentou, cada um no seu contexto/timestamp.
 - **NEPQ é framework de terceiro (Jeremy Miner), citado apenas de passagem** — não detalhado nesta fonte além do nome. Se uma KB futura sobre técnicas de venda quiser aprofundar NEPQ, precisará de fonte externa; aqui deve aparecer apenas como referência de estudo recomendada pelo instrutor, não como conteúdo proprietário explicado.
 - **Áudio/vídeo com trechos de baixa qualidade de fala** (gírias, interrupções, participantes falando ao mesmo tempo, "tá bugado" mencionado pelo próprio instrutor por volta de [01:46:00]) — a transcrição automática apresenta pequenos erros de reconhecimento em nomes próprios e jargões (ex.: "Med-DW", "NPQ" em vez de "NEPQ", "Ak Spirulis" provavelmente é o nome de um evento mal transcrito). O Composer deve usar bom senso ao normalizar esses termos, sinalizando incerteza quando necessário.
+
+### Gaps específicos de SRC-002 (FHT/Lourival)
+
+- **[CRÍTICO] Transcrição de qualidade inferior — modelo "small", não "medium".** A máquina estava com pouca memória disponível no momento da transcrição (14/09/2026), então usei o modelo whisper "small" em vez do "medium" usado em SRC-001. O texto tem MUITO mais ruído de reconhecimento que SRC-001: palavras trocadas por outras foneticamente parecidas mas sem sentido ("punidos" onde provavelmente é "funis", "lotique" onde provavelmente é "lote", "líderes qualificadas" onde é "leads qualificados", "Med Mario RX"/"queixo Mario RX" onde é "Questionário RX", "biócrata" onde provavelmente é algo como "diagnóstico" ou "bate-papo"), frases truncadas/sem nexo em vários pontos, e pelo menos um trecho com REPETIÇÃO EM LOOP de 5 frases quase idênticas ("você vai fazer um processo de aprovação... pitch de vendas 100% das vezes", [00:27:38]-[00:28:02]) — típico de alucinação de modelo ASR menor em trecho de áudio mais difícil, não é o instrutor repetindo de propósito 5 vezes seguidas (embora o conteúdo pareça real e a repetição ocasional para ênfase seja um traço de voz genuíno do autor, então o Composer deve manter 1-2 repetições como estilo, não as 5). **Toda vez que o Composer for citar algo diretamente de SRC-002 como fala exata, deve reler o trecho da fonte com ceticismo e, se a frase não fizer sentido pleno, reformular como paráfrase marcada, não como citação literal.**
+- **Termo "HiTicket"/"high ticket" transcrito de formas muito variadas:** "HiTicket", "HTT", "HT", "ratíguete", "ratigue", "retíguet", "rádtiguet" — todas são tentativas de ASR de capturar "high ticket" (s vezes pronunciado com sotaque/anglicismo). Normalizado nesta KB como "high ticket" (por extenso na primeira menção de cada volume) ou "HT" abreviado depois, seguindo convenção já usada em SRC-001.
+- **"Sessão A1" = "Sessão 1 a 1":** confirmado pelo próprio texto ("como que você executa a sessão A1?" seguido de explicação que é uma call individual) — grafado "A1" na maior parte da fonte, mas o sentido falado é "um a um"/"1 a 1". Adotado "Sessão A1 (1 a 1)" na primeira menção de cada volume, depois "Sessão A1".
+- **Números e nomes citados como prova social são de confiabilidade baixa:** Lourival cita pelo menos 3 casos de alunos com faturamento alto atribuído à sessão A1 (uma aluna em nicho de comunicação profissional, um aluno em nicho de música/eventos, um aluno em nicho de migração/medicina com indicação como canal principal) — os VALORES exatos de faturamento e nomes têm alta chance de erro de transcrição (dígitos e nomes próprios são o que ASR mais erra). O Composer NÃO deve reproduzir esses números como fato confirmado; se usar os exemplos, deve marcar explicitamente como "valor aproximado, conforme mencionado na aula" ou omitir o valor exato e manter só o padrão qualitativo (ex.: "aluna que teve resultado expressivo aplicando os 2 primeiros canais").
+- **Fonte cobre só 28min20s de um módulo maior:** o módulo "ESTRATÉGIA DE VENDA" do FHT continua depois disso com outro formato de venda chamado "SHT" e depois um bloco "IM" (não capturados, fora do escopo pedido pela usuária) — se um merge futuro quiser esses formatos, é fonte nova (mesma trilha, outro recorte), não uma correção deste merge.
+- **Sem material de apoio:** assim como SRC-001, não havia slides/PDF disponíveis — a Hotmart Club não permite download direto do vídeo; a fonte foi obtida via gravação de tela com OBS enquanto a usuária assistia no navegador.
 
 ---
 
@@ -170,3 +228,13 @@ Como há apenas **uma fonte** (a transcrição da aula), ela é primária (ânco
 - **Terminologia preferida vs. formal:** prefere "cara de PIX" a "lead qualificado financeiramente"; "puxar o PIX na call" a "fechar a venda no primeiro contato"; "sala secreta" a "webinar fechado por convite"
 - **Terminologia do domínio:** CAC, lead scoring, UTM, funil, closer, social seller, high ticket, follow-up, comissão — vocabulário padrão de operação comercial digital, usado com fluência técnica apesar do tom coloquial
 - **Presença de linguagem religiosa:** menções frequentes a Deus/direcionamento espiritual como parte da narrativa de decisão de negócio (ex.: a pivotagem de nicho da Fernanda é atribuída a um "direcionamento espiritual"; a aula termina com uma bênção). Isso é parte autêntica da voz do autor e do contexto da Arcane, e deve ser preservado nas composições, não removido como "ruído".
+
+**Autor SRC-002: Lourival (FHT) — perfil com confiança reduzida, ver nota abaixo**
+
+- **Tom:** formalidade baixa (2-3/10 — "cara", "né", "então" o tempo todo), energia média-alta (7/10 — fala corrida, muitas frases incompletas retomadas), diretividade alta (7/10 — estrutura em passos numerados: "primeira etapa", "passo número um", "passo número dois")
+- **Catchphrases:** "então" como conector quase a cada frase (marcador de discurso muito forte, mais que em Tomás); "cara" como vocativo; "100% integridade" repetido como mantra de venda ética; "então é isso" / "essa é a visão geral" como fechamento de bloco
+- **Estilo didático:** ensina por passo numerado explícito (1, 2, 3...) mais do que Tomás; usa UMA história pessoal longa e detalhada (a consulta médica) como analogia central pra justificar todo o método de perguntas investigativas — recurso didático de "história com moral", repetido/retomado duas vezes ao longo da fonte (às vezes de forma truncada/reprocessada, ver seção 10) reforçando que é peça central do seu ensino, não um lapso do ASR; cita resultados de alunos nominalmente como prova social (mas ver ressalva de confiabilidade na seção 10)
+- **Metáforas:** "questionário é um raio-x" (enxergar por dentro do negócio do cliente antes de recomendar); "bônus kinder ovo" (bônus cujo valor percebido supera o produto principal, como o brinquedo em relação ao chocolate)
+- **Terminologia preferida vs. formal:** "cara de trair" não aparece aqui (isso é termo de Tomás) — Lourival prefere "aflorar a necessidade" a "criar urgência"; "sessão consultiva" a "call de vendas"; "raio-x" a "diagnóstico"
+- **Terminologia do domínio:** lead, tráfego pago, tráfego orgânico, conversão, rapport, pitch, high ticket (grafias variadas, ver seção 10) — vocabulário técnico de vendas digitais similar ao de Tomás, mas com termos proprietários próprios (Sessão A1, RX, Bônus Kinder Ovo) que não devem ser confundidos com os de Tomás
+- **⚠️ Nota de confiabilidade:** este perfil foi construído sobre uma transcrição de qualidade inferior (modelo small, ver seção 10) — traços de tom/energia são razoavelmente confiáveis (são padrões que se repetem por toda a fonte), mas catchphrases exatas e citações diretas têm risco maior de imprecisão que o perfil de Tomás. O Composer deve preferir paráfrase a citação literal ao reproduzir a voz de Lourival, exceto onde o trecho da fonte estiver claramente legível e coerente.

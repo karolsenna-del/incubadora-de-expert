@@ -27,5 +27,39 @@
   "validation_verdict": "APPROVED",
   "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003-VOL-01", "QG-ETL-003-VOL-02", "QG-ETL-003-VOL-03", "QG-ETL-003-VOL-04", "QG-ETL-004", "QG-ETL-005"],
   "started_at": "2026-09-10",
-  "completed_at": "2026-09-13"
+  "completed_at": "2026-09-13",
+  "merge_fht_sessao1a1": {
+    "mode": "merge",
+    "new_source": {
+      "name": "fht-sessao1a1",
+      "type": "video",
+      "origin": "https://hotmart.com/pt-BR/club/mentoria-formula-high-ticket/products/6630013/content/R4jjX22p4a",
+      "duration": "0:28:20",
+      "status": "transcribed_and_normalized",
+      "normalized_path": "00-pipeline/sources/fht-sessao1a1-normalized.md",
+      "quality_gates_passed": ["QG-ETL-000"]
+    },
+    "current_phase": 2,
+    "phase_status": {
+      "ingestion": "completed",
+      "phase_1_mapeamento": "completed",
+      "phase_2_composicao": "completed",
+      "phase_3_integracao": "pending",
+      "phase_4_validacao": "pending"
+    },
+    "author_corrected": "Lourival (era 'Orival', erro de ASR corrigido pela usuária)",
+    "volumes_composed": [
+      {
+        "id": "VOL-05",
+        "path": "VOL-05-sessao-a1-metodo-fht.md",
+        "title": "Sessão A1 pelo Método FHT — Geração de Leads, Roteiro e Diagnóstico Raio-X",
+        "lines": 309,
+        "tables": 4,
+        "fonte_refs": 61,
+        "spot_check": "10/10 corretos, 0 inventados",
+        "quality_gates_passed": ["QG-ETL-003-VOL-05"]
+      }
+    ],
+    "started_at": "2026-09-13"
+  }
 }

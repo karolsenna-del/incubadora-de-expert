@@ -1,0 +1,106 @@
+validation_report:
+  kb_slug: "sessao-estrategica"
+  timestamp: "2026-09-13"
+  version: "3.0"
+
+  layer_2_verdict: "PASS (após correção objetiva de 2 termos no GLOSSARIO.md durante esta auditoria — ver critical-audit-report.yaml)"
+
+  pass_1_coverage:
+    total_domains: 8
+    domains_covered_fully: 7
+    domains_covered_weighted: "core (5/5, peso 3) + supporting (2/2, peso 2) + peripheral (0/1, peso 1)"
+    subtopics_coverage: 95.0
+    uncovered:
+      - "Sazonalidade Comercial (peripheral, baixa frequência no MAPA) — nunca alocado a um volume na Fase 1, não aparece em nenhum dos 4 volumes"
+    verdict: "PASS"
+    nota: "95% é o limite exato do threshold (>=95%). Todos os 5 domínios 'core' e os 2 'supporting' estão 100% cobertos; o único domínio não coberto é o único classificado como 'peripheral' pelo próprio Mapa Territorial (um bloco de resposta a pergunta, não um pilar da aula)."
+
+  pass_2_fidelity:
+    total_checks: 17
+    correct: 17
+    distorted: 0
+    invented: 0
+    fidelity_score: 100.0
+    method_note: "9 claims verificados durante o fechamento do VOL-01 (Fase 2, antes desta Fase 4) + 8 claims verificados de forma independente nesta auditoria via grep contra a fonte normalizada, cobrindo VOL-02 (funil 'Direct é Tinder', gatilho R$100mil/mês social selling '30 pau'), VOL-03 (256 leads/novembro, gasto de tráfego R$3.270), e VOL-04 (credenciais 11 mil pessoas/8 países/12 mil horas, oferta R$8mil/R$2mil+12x600/R$6mil à vista, história 150 mil dívida→1 milhão ano seguinte). Todos os 17 batem literalmente com a fonte, incluindo os timestamps citados."
+    issues: []
+    verdict: "PASS"
+
+  pass_3_richness:
+    volumes:
+      - id: "VOL-01"
+        lines: 308
+        tables: 4
+        examples: 6
+        provenance: 61
+        cardinal_rules: 6
+        pass: true
+      - id: "VOL-02"
+        lines: 300
+        tables: 4
+        examples: 7
+        provenance: 40
+        cardinal_rules: 4
+        pass: true
+      - id: "VOL-03"
+        lines: 301
+        tables: 7
+        examples: 6
+        provenance: 51
+        cardinal_rules: 5
+        pass: true
+      - id: "VOL-04"
+        lines: 303
+        tables: 4
+        examples: 5
+        provenance: 50
+        cardinal_rules: 7
+        pass: true
+    all_pass: true
+    verdict: "PASS"
+
+  pass_4_voice:
+    consistency_score: 92.0
+    checked:
+      - "Catchphrases 'Fechou?'/'Entendeu?'/'Faz sentido pra você?' aparecem repetidamente nos 4 volumes, documentadas nas seções 'Marcas de Voz' de cada um"
+      - "Terminologia preferida preservada: 'cara de PIX', 'puxar o PIX na call', 'sala secreta' — nunca substituídos por formal"
+      - "Metáforas do autor preservadas com contexto original: 'Direct é um Tinder', 'sessão estratégica é como escolher psicólogo', 'tirar do inferno e levar pro céu', 'não existe pular o deserto', 'Hyundai' (analogia de carro)"
+      - "Tom confessional/vulnerável preservado (Tomás admite erros ao vivo — CAC mal calculado no VOL-03, fracasso do primeiro evento presencial no VOL-01)"
+      - "Presença de linguagem religiosa preservada (não removida como ruído, conforme voice profile do MAPA seção 11)"
+    issues:
+      - "Score não é 100% porque a demonstração de linguagem espiritual/religiosa aparece com menos densidade nos volumes técnicos (VOL-02, VOL-03) do que na fonte original — esperado, já que esses volumes cobrem conteúdo operacional (funis, CAC, planilhas) onde o instrutor também fala menos sobre fé no áudio original."
+    verdict: "PASS"
+
+  pass_5_consistency:
+    contradictions: 0
+    documented_source_inconsistencies: 2
+    cross_refs_valid: true
+    detail: "0 contradições reais (de composição). 2 divergências de números da PRÓPRIA FONTE em pontos diferentes da aula (encontros do Ultra High Ticket: 12 vs 10; faturamento em diferentes cortes de tempo) — ambas documentadas explicitamente em pelo menos 2 lugares cada (volume + README), conforme orientação do MAPA de não reconciliar. Cross-references verificadas por grep: todos os links README/REPERTORIO/REGRAS-CARDINAIS/GLOSSARIO → VOL-0N apontam para arquivos que existem."
+    verdict: "PASS"
+
+  pass_6_integrity:
+    volumes_planned: 4
+    volumes_present: 4
+    transversal_planned: 4
+    transversal_present: 4
+    completeness_report_exists: true
+    plano_etl_updated: true
+    orphan_files: 0
+    verdict: "PASS"
+
+  aggregate:
+    coverage: 95.0
+    fidelity: 100.0
+    richness: 100.0
+    voice: 92.0
+    consistency: 100.0
+    integrity: 100.0
+    score: 98.2
+    formula: "(95*0.20) + (100*0.30) + (100*0.10) + (92*0.10) + (100*0.15) + (100*0.15) = 19 + 30 + 10 + 9.2 + 15 + 15 = 98.2"
+    verdict: "APPROVED"
+
+  revision_items: []
+  revision_cycle: 0
+
+  open_items_not_blocking_approval:
+    - "Domínio 'Sazonalidade Comercial' (peripheral) não coberto em nenhum volume — se a KB for revisitada/expandida no futuro, considerar um parágrafo curto no VOL-02 ou VOL-03 sobre o ciclo de endividamento nov-jan e uso de grupos de lançamento futuro, usando a fonte original entre aprox. [00:20:00]-[00:23:00] (região onde '80% de indicações' e discussão de sazonalidade aparecem)."
+    - "'Roda da Vida / 11 Pilares' definido no GLOSSARIO mas sem conteúdo elaborado em nenhum volume — baixo impacto (framework citado de passagem no Mapa, não é artefato acionável nem regra cardinal)."

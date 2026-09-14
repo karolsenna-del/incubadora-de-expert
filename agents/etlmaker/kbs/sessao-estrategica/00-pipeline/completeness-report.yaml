@@ -1,0 +1,113 @@
+completeness_report:
+  version: "3.0"
+  kb_name: "Sessão Estratégica"
+  kb_slug: "sessao-estrategica"
+  generated_at: "2026-09-13"
+  generated_by: "ETLmaker v3.0"
+
+  source:
+    author: "Tomás"
+    total_sources: 1
+    total_words: 31405
+    formats: ["video (transcrito localmente via whisper.cpp)"]
+
+  pipeline:
+    phase_0_setup: "completed"
+    phase_1_territorial: "completed"
+    phase_2_composition: "completed"
+    phase_3_integration: "completed"
+    phase_4_validation: "pending"
+
+  volumes:
+    - id: "VOL-01"
+      title: "Fundamentos e Modelo de Negócio da Sessão Estratégica"
+      file: "VOL-01-fundamentos-modelo-negocio.md"
+      lines: 308
+      tables: 4
+      examples: 6
+      cardinal_rules: 6
+      provenance_refs: 61
+      domains: ["Modelo de Negócio do Funil de Sessão Estratégica", "Mentalidade e Crença Financeira do Expert", "Estruturação de Produto/Esteira"]
+      qg_003_pass: true
+
+    - id: "VOL-02"
+      title: "Geração de Demanda — Os 3 Funis e a Prospecção Ativa"
+      file: "VOL-02-geracao-demanda.md"
+      lines: 300
+      tables: 4
+      examples: 7
+      cardinal_rules: 4
+      provenance_refs: 40
+      domains: ["Geração de Demanda (Pilar 1)", "Social Selling Avançado — Análise de Persona"]
+      qg_003_pass: true
+
+    - id: "VOL-03"
+      title: "Processo Comercial, Time e Infraestrutura de Dados"
+      file: "VOL-03-processo-comercial-time.md"
+      lines: 301
+      tables: 7
+      examples: 6
+      cardinal_rules: 5
+      provenance_refs: 51
+      domains: ["Processo Comercial e Time (Pilar 2)"]
+      qg_003_pass: true
+
+    - id: "VOL-04"
+      title: "A Sessão Estratégica — Os 4 Blocos do Diagnóstico e Fechamento"
+      file: "VOL-04-sessao-estrategica-4-blocos.md"
+      lines: 303
+      tables: 4
+      examples: 5
+      cardinal_rules: 7
+      provenance_refs: 50
+      domains: ["Estrutura da Sessão Estratégica/Diagnóstico (Pilar 3)"]
+      qg_003_pass: true
+
+  transversal_docs:
+    readme: true
+    regras_cardinais: true
+    repertorio: true
+    glossario: true
+
+  regras_cardinais_summary:
+    candidatas_antes_de_deduplicar: 22
+    unicas_apos_deduplicar: 22
+    nota: "As 22 regras marcadas nos 4 volumes são todas semanticamente distintas entre si; 7 delas também aparecem registradas de forma independente na seção 5 do MAPA-TERRITORIAL.md, confirmando (não duplicando) o mesmo princípio."
+
+  repertorio_summary:
+    total_itens: 27
+    secoes_populadas: 11
+    itens_orfaos: 0
+
+  glossario_summary:
+    total_termos: 22
+    termos_do_mapa_territorial: 17
+    termos_emergentes: 5
+    nota: "Recontado na Fase 4 (auditoria) — o Mapa Territorial seção 6 tinha 17 termos na tabela real (não 14 como o texto da seção afirmava), e 2 estavam faltando no GLOSSARIO.md; corrigidos durante a auditoria."
+
+  cross_reference_check:
+    readme_links_validos: true
+    repertorio_links_para_volumes_validos: true
+    glossario_links_para_volumes_validos: true
+    regras_cardinais_fontes_existentes: true
+    todos_volumes_presentes_conforme_plano: true
+    status: "PASSED"
+
+  quality_gates:
+    QG-ETL-000: "PASSED"
+    QG-ETL-001: "PASSED"
+    QG-ETL-002: "PASSED"
+    QG-ETL-003: "PASSED"
+    QG-ETL-004: "PASSED"
+    QG-ETL-005: "PASSED"
+
+  totals:
+    total_volumes: 4
+    total_lines: 1212
+    total_tables: 19
+    total_examples: 24
+    total_cardinal_rules_unique: 22
+    total_provenance_refs: 202
+
+  verdict: "APPROVED"
+  verdict_notes: "Fase 4 (Validação Final) concluída. Camada 2 (auditoria exaustiva): PASS após correção de 2 termos faltantes no GLOSSARIO.md (ver critical-audit-report.yaml). Camada 3 (6-passes): score agregado 98.2% (coverage 95%, fidelity 100%, richness 100%, voice 92%, consistency 100%, integrity 100%) — verdict APPROVED. 2 itens não-bloqueantes documentados para eventual expansão futura (domínio 'Sazonalidade Comercial' não coberto; termo 'Roda da Vida/11 Pilares' definido mas não desenvolvido em volume). Ver validation-report.yaml para detalhes completos. KB PRONTA."

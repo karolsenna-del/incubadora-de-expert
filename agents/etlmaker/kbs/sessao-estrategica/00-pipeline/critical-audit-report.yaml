@@ -1,0 +1,70 @@
+critical_audit:
+  generated_at: "2026-09-13"
+  generated_by: "ETLmaker v3.0 — @auditor, Fase 4"
+  method: "Verificação exaustiva (100%) de cada item catalogado no MAPA-TERRITORIAL.md contra o output real (4 volumes + 4 docs transversais), não amostragem."
+
+  frameworks:
+    total_in_mapa: 5
+    found_in_output: 5
+    missing: []
+    coverage: "100.0%"
+    detail: "Método Águia (VOL-01), Funil de Sessão Estratégica (VOL-01), Estrutura de 4 Blocos da Call (VOL-04), Esteira Faça-Sozinho/Com-Você/Por-Você (VOL-01), NEPQ (VOL-04, citado como referência externa conforme o próprio MAPA já indicava)."
+
+  cardinal_rules:
+    total_in_mapa: 7
+    found_in_volumes: 7
+    found_in_regras_doc: 7
+    missing_from_volumes: []
+    missing_from_regras: []
+    coverage: "100.0%"
+    detail: "As 7 regras da seção 5 do MAPA aparecem, com o mesmo significado, tanto no volume de domínio correspondente quanto em REGRAS-CARDINAIS.md (regras #1, #3, #4, #5, #16, #21, #22 do documento consolidado)."
+
+  glossary_terms:
+    total_in_mapa: 17
+    found_in_glossary_before_audit: 15
+    missing_before_audit: ["Roda da Vida / 11 Pilares", "Linha de Negociação"]
+    correction_applied: "Ambos os termos adicionados ao GLOSSARIO.md durante esta auditoria (Fase 4). 'Linha de Negociação' tem conteúdo completo em VOL-04 — correção plena. 'Roda da Vida / 11 Pilares' recebeu apenas a definição do MAPA-TERRITORIAL — o framework em si NUNCA foi elaborado com esse nome em nenhum dos 4 volumes (ver nota abaixo)."
+    found_in_glossary_after_audit: 17
+    coverage_after_correction: "100.0%"
+    open_gap: "Roda da Vida / 11 Pilares está agora DEFINIDO no glossário mas não está USADO/desenvolvido em nenhum volume — é um item do Mapa Territorial (seção 3, contexto de autores) que nenhum dos 4 forks de composição incorporou. Domínio relacionado ('Mentalidade e Crença Financeira do Expert') foi coberto por outros ângulos (VOL-01 seção 3, VOL-04 seção 7), então não há perda de conteúdo prático — apenas este framework nomeado específico não aparece. Não bloqueante: framework citado de passagem no MAPA, não listado como artefato acionável (seção 9) nem como regra cardinal (seção 5)."
+    note_pre_existing_mapa_defect: "O MAPA-TERRITORIAL.md seção 6 afirma '14 termos catalogados', mas a tabela real da seção 6 sempre teve 17 linhas — inconsistência pré-existente da Fase 1 (não introduzida por nenhum fork de composição desta sessão). Documentado aqui, não corrigido no MAPA (fora do escopo desta auditoria — MAPA é artefato de referência, não output final)."
+
+  cross_volume:
+    concepts_in_multiple_volumes: 6
+    concepts_checked: "Esteira de produto (VOL-01/VOL-03), regra de storytelling (VOL-01/VOL-04), roteamento de lead A/B/C (VOL-01/VOL-03), regra de precificação flexível por lead (VOL-01/VOL-03), comissionamento (VOL-02 menção breve/VOL-03 detalhado), PIX na call (VOL-04/VOL-03 planilha)"
+    contradictions: 0
+    contradiction_details: []
+    documented_source_inconsistencies_not_contradictions:
+      - "Número de encontros do produto Ultra High Ticket: VOL-01 registra 12 (fonte 02:31:07), VOL-03 registra 10 (fonte 01:53:20) — ambos são falas diretas do instrutor em momentos diferentes da aula, e ambos os volumes E o README já sinalizam a divergência explicitamente, seguindo a orientação da seção 10 do MAPA-TERRITORIAL de não reconciliar números não-consistentes da fonte. Tratado como qualidade de fonte, não como erro de composição."
+      - "Números de faturamento (R$794 mil/R$1.799.000 em VOL-01 vs. 'um milhão de reais no ano seguinte' em VOL-04) — mesma orientação do MAPA, cortes de tempo diferentes da mesma trajetória, ambos os volumes sinalizam isso."
+    invalid_cross_refs: 0
+
+  actionable_artifacts:
+    total_in_mapa: 10
+    found_in_volumes: 10
+    found_in_repertorio: 10
+    missing_from_volumes: []
+    missing_from_repertorio: []
+    by_type:
+      scripts: "2/2 (Script de Abordagem no Direct; Roteiro dos 4 Blocos)"
+      checklists: "3/3 (4 Pilares; Sinais de Qualificação 'cara de PIX'; Linhas de Negociação)"
+      workflows: "1/1 (Fluxo do Funil de Isca Gratuita)"
+      benchmarks: "1/1 (Comissionamento Seller vs Closer)"
+      templates: "1/1 (Estrutura das 2 Planilhas)"
+      formulas: "1/1 (Cálculo de CAC por Funil)"
+      reference_tables: "1/1 (Esteira de Produto por Nível de Acesso)"
+    coverage: "100.0%"
+
+  repertorio_completeness:
+    sections_present: "11/11"
+    items_with_provenance: "27/27"
+    items_with_cross_ref: "27/27"
+    orphan_items: 0
+
+  overall_verdict: "PASS (após 1 correção objetiva aplicada nesta auditoria)"
+  corrections_applied_during_audit:
+    - "GLOSSARIO.md: adicionado termo 'Linha de Negociação' (conteúdo já existia em VOL-04, só faltava a entrada no glossário)"
+    - "GLOSSARIO.md: adicionado termo 'Roda da Vida / 11 Pilares' com definição do MAPA-TERRITORIAL, sinalizado como não desenvolvido em nenhum volume"
+  critical_missing: []
+  non_blocking_open_items:
+    - "Domínio 'Sazonalidade Comercial' (MAPA seção 1, classificado como peripheral/baixa frequência — Black Friday/Natal/janeiro e uso de grupos de lançamento futuro pra vender agora) nunca foi alocado a nenhum volume no plano da Fase 1 (seção 8 do MAPA) e não aparece em nenhum dos 4 volumes finais. Ver Pass 1 (Cobertura) na Camada 3 para o impacto no score."
