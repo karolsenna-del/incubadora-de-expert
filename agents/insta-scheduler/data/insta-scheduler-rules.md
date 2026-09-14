@@ -281,6 +281,40 @@ parece esgotada pra esses 3 casos. **Ação recomendada agora: publicação manu
 
 ---
 
+### RULE-10: Erro 9004 também atinge Stories — não é específico do endpoint de carrossel
+**Incidente:** `instagram-stories-scheduler.yml` (run 34883077013, 14/09 18h48 UTC) falhou publicando
+`chamada-grupo-lives-segunda-2026-09-14` (sequência de 6 Stories). story-00 e story-01 publicaram
+normalmente (media IDs 18196639651388844 e 17962887443982429). story-02 falhou na criação do
+container com `"Only photo or video can be accepted as media type"` — texto de erro **idêntico**
+ao erro 9004 documentado em RULE-4 a RULE-9 pros carrosséis. URL do Cloudinary testada
+imediatamente depois (`curl -I`) → 200 OK, PNG 1080x1920 íntegro, `Content-Length` consistente —
+mesmo padrão dos casos de carrossel: arquivo sempre perfeito, Meta que rejeita.
+**Consequência nova (específica de Stories):** como o script `publicar_story.py` só grava o log,
+atualiza o `ultima-story-media-id.txt` e move a pasta pra `agendados/` DEPOIS de publicar TODA a
+sequência, uma falha no meio do loop deixa a pasta inteira intacta em `fila/` — incluindo os
+slides que JÁ foram publicados (story-00 e story-01). Como o step de commit/push do workflow não
+tem `if: always()`, a falha também aborta esse step, então nada disso fica registrado no repo.
+Sem intervenção manual, o próximo disparo do cron reprocessaria a mesma pasta do zero e
+**republicaria story-00 e story-01 que já estão no ar**, além de deixar a pasta seguinte da fila
+(`de-volta-ao-passado-camisa-2026-09-14`) travada atrás dela indefinidamente.
+**Regra:**
+1. O erro 9004 não é exclusivo do endpoint de carrossel (`media_publish` com `children`) — atinge
+   igualmente o endpoint de Stories (`media_type=STORIES`). Causa raiz continua desconhecida
+   (ver RULE-4 a RULE-9); tratar como o mesmo bug, não como incidente novo e isolado.
+2. Quando uma sequência de Stories falha no meio: **não disparar `workflow_dispatch` de novo sem
+   antes checar quais slides da sequência já publicaram** (via log de execução — procurar linhas
+   "Publicando ... ok (media_id)") — senão duplica Stories já no ar.
+3. Se retomar for arriscado (sequência parcialmente publicada), publicar manualmente pelo app
+   só os slides restantes, na ordem, e então mover a pasta pra `agendados/` e logar o resultado
+   misto (parte automática, parte manual) — não deixar a pasta em `fila/` gerando risco de
+   reprocessamento.
+4. Considerar adicionar `if: always()` no step de commit do `instagram-stories-scheduler.yml`
+   (e do equivalente de carrossel) pra pelo menos preservar o estado real (o que já publicou)
+   mesmo quando o script quebra no meio — hoje uma falha parcial não deixa rastro nenhum no repo.
+**Adicionada em:** 2026-09-14
+
+---
+
 ## Histórico de Incidentes
 
 - 2026-07-11 — Desafio 10 Dias (Dias 5, 6 e 7): legendas chegavam soltas no chat e os slides
@@ -341,3 +375,12 @@ parece esgotada pra esses 3 casos. **Ação recomendada agora: publicação manu
   mais garantia de sucesso (2º caso de falha com intervalo ≥2h51, depois do `rota100k-semana06-
   sex-sozinho-x-com-ajuda` de 12/09). Publicação manual oferecida à Karol pros dois posts
   pendentes (duolingo e sex-sozinho-x-com-ajuda).
+- 2026-09-14 — Karol notou que os Stories automáticos pararam. `instagram-stories-scheduler.yml`
+  (14/09 18h48 UTC) falhou publicando `chamada-grupo-lives-segunda-2026-09-14` (sequência de 6):
+  story-00 e story-01 publicaram (media IDs 18196639651388844 e 17962887443982429), story-02
+  falhou com erro 9004 idêntico ao dos carrosséis (RULE-4 a RULE-9) — 1ª confirmação de que o bug
+  atinge Stories também, não só carrossel. URL testada e válida (200 OK). Pasta ficou travada em
+  `fila/` (script quebrou antes do commit), bloqueando também `de-volta-ao-passado-camisa-2026-09-
+  14` atrás dela na fila. RULE-10 criada. Karol optou por publicar manualmente os 4 slides
+  restantes (story-02 a story-05, enviados pelo insta-scheduler) e desativar o workflow até
+  investigar mais — sem retry automático.
