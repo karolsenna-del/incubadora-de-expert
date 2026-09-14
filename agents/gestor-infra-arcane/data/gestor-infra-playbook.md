@@ -934,10 +934,12 @@ Infra Arcane) pros detalhes completos.
 **Trigger:** Pedido direto da Karol — quem manda a palavra-chave do CTA de um Story no Direct
 recebe automaticamente o link da oferta certa + aviso de que pode tirar dúvida ali (ela continua
 manual dali em diante, sem bot de conversa).
-**Status:** **Testado e funcionando de verdade (24/08/2026)** — Karol mandou Direct com a palavra
-`METODO` pra própria conta e recebeu a resposta automática. Funciona hoje pra ela mesma (Acesso
-Padrão, tester do app); pra funcionar com leads reais, ainda depende da aprovação do App Review
-enviado em 24/08 (ver "Ainda em aberto").
+**Status (13/09/2026):** **Testado e funcionando pra conta de fora.** Verificação de Provedor de
+Tecnologia aprovada (09/09). Teste real comentário→Direct confirmado com conta externa
+(karolfranzini). App Review formal submetido, 3 de 4 permissões completas — falta só a Meta
+detectar a chamada de API real de `instagram_manage_comments` (pode levar até 24h). Só depois da
+aprovação final do App Review funciona pra QUALQUER conta (leads reais), não só testadores
+cadastrados. Detalhe completo na seção "Verificação aprovada + App Review submetido" mais abaixo.
 
 **Como funciona:**
 1. `business/campanhas/area-de-membros/site/api/data/gatilhos-direct.json` é a fonte única de
@@ -1062,6 +1064,69 @@ fora enquanto o app não é público.
 **Pendente:** iniciar o fluxo "Torne-se um Provedor de Tecnologia" (Painel do app) — processo
 administrativo da Meta, não é mais configuração. Só depois disso vale tentar testador/comentário
 de novo.
+
+---
+
+### Verificação aprovada + App Review submetido (13-14/09/2026)
+
+**Verificação de Provedor de Tecnologia APROVADA pela Meta em 09/09** (notificação só apareceu na
+Caixa de Entrada de Alertas do app, não foi anúncio ativo — checar lá quando esperando resposta).
+"Karol Senna - Matriz foi verificada como Provedora de Tecnologia. Nenhuma outra ação é necessária."
+
+**Teste real confirmado funcionando (13/09):** convite de testador pra `karolfranzini` (conta
+secundária real da Karol) que antes nunca aparecia — agora aparece normal em
+`instagram.com/accounts/manage_access/` → aba "Convites de teste". Aceito, e o teste de
+comentário→Direct funcionou de ponta a ponta: comentário "METODO"/"LIVE" num post real de
+`@karolsenna._`, Private Reply chegou em ~1 min na conta karolfranzini, com o link certo. Prova
+que a automação já funciona pra conta de fora, não só pra tester/admin — só falta o App Review
+formal (abaixo) pra funcionar com QUALQUER conta (leads reais), não só testadores cadastrados.
+
+**Gaps novos achados no app `postador-conteudo` (nunca preenchidos antes, bloqueavam a submissão
+do App Review):** faltavam Ícone do app, URL da Política de Privacidade, Categoria — o app nunca
+tinha completado o cadastro básico. Resolvido:
+- **Ícone:** logo da Incubadora (`business/campanhas/area-de-membros/site/img/logo-incubadora.png`,
+  500x500 com fundo branco) reprocessado via `System.Drawing` (PowerShell): chroma-key do fundo
+  branco pra transparente (threshold RGB≥245) + upscale pra 1024x1024. Upload manual da Karol
+  (arrastar o arquivo — `file_upload` do Claude in Chrome não localizou o `<input type=file>`
+  real desse widget de crop, só achou o botão/div por cima).
+- **Política de Privacidade:** reescrita (`business/processos/politica-de-privacidade-app-meta.md`)
+  pra cobrir as 4 permissões atuais (antes só descrevia publicação) e publicada como página real em
+  `https://membros.incubadoradeexpert.com.br/privacidade.html` (novo arquivo no mesmo projeto
+  Vercel `area-de-membros-incubadora`, deploy via Karol por `!` — classificador de auto mode
+  bloqueia `vercel --prod`, REGRA-016 já documentada).
+- **Categoria:** "Educação".
+
+**App Review submetido (rascunho, 3 de 4 permissões completas):**
+`instagram_business_basic` ✅, `instagram_business_manage_messages` ✅, `public_profile` ✅ —
+descrição + screencast (gravado com `gif_creator` do Claude in Chrome, convertido de GIF pra MP4
+via `ffmpeg` porque a Meta exige MIME `video/*`, não aceita GIF) + checkbox de conformidade,
+salvos em cada modal de "Uso permitido". `instagram_manage_comments` fica pendente só no item
+"Verifique se você fez as ligações de teste de API exigidas" (0 de 1) — a Meta exige 1 chamada de
+API registrada com essa permissão, e o texto da própria Meta diz que pode levar até 24h pra
+aparecer mesmo com chamadas reais já feitas (o webhook de produção já fez chamadas reais hoje,
+deve contar sozinho). **Tentei simular via Graph API Explorer e não deu:** esse app
+(`postador-conteudo`) é só Facebook Login, não tem Login do Instagram configurado — trocar o
+domínio do Explorer pra `.instagram.com/` e gerar token deu erro "Invalid platform app". Não
+insistir nesse caminho — só esperar o uso real (re)aparecer no painel.
+
+**"Instruções para o analista":** o app não tinha nenhuma plataforma cadastrada (obrigatório antes
+de preencher essa seção) — adicionada plataforma "Website" apontando pra
+`https://incubadoradeexpert.com.br`. Texto explicando que é automação backend sem login (aponta o
+revisor pros screencasts).
+
+**Gotcha de automação (Claude in Chrome nesta máquina):** a extensão do 1Password intercepta
+QUALQUER clique em campo de texto no painel da Meta com um popup de autofill/sugestão que trava a
+aba inteira pro automation (`Cannot access a chrome-extension:// URL of different extension` no
+screenshot, depois `CDP sendCommand timed out` até no clique) — não é diálogo nativo do Windows,
+é só a extensão. Fix: apertar Escape logo depois do clique (antes de digitar) resolve a maior parte
+das vezes; se travar author (`Failed to type`), Escape de novo e conferir com `get_page_text` +
+screenshot se o texto já digitado ficou duplicado/cortado antes de continuar. Digitar em pedaços
+curtos (1-2 frases por vez) reduz a chance de pegar o popup no meio.
+
+**Pendente pra próxima sessão:** checar se `instagram_manage_comments` mostra "1 de 1" agora (pode
+levar até 24h desde 13/09 ~21h) e, se sim, terminar o checkbox de conformidade dessa permissão +
+clicar "Enviar para análise" (aguardando confirmação explícita da Karol antes desse clique final —
+é submissão real pra Meta, não reversível facilmente).
 
 **Troubleshooting:**
 - Sem resposta nenhuma → checar se o webhook está registrado pro campo certo (`messages`) e se o

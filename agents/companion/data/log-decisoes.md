@@ -10,6 +10,25 @@
 **Impacto:** [o que muda]
 -->
 
+## 13/09/2026 — SOP-022 aprovado pela Meta; Direct automatico liberado pra teste real
+
+**Contexto:** App "postador-conteudo" estava bloqueado desde 07-08/09 por falta de verificacao de
+Provedor de Tecnologia (selo extra exigido pra apps que acessam comentarios de outras contas). Formulario
+de verificacao enviado em 08/09, resposta esperada ate 13/09.
+**Decisao:** Meta aprovou a verificacao (confirmado por Karol, 13/09, weekly review).
+**Racional:** Verificacao era o unico bloqueio identificado — App Review, testador e usuarios de teste
+travavam por causa dela.
+**Impacto:** Proximo passo e testar comentario→Direct de verdade com conta de fora (testador ou App
+Review completo). Rotear pro Gestor de Infra Arcane pra rodar o teste.
+
+## 13/09/2026 — "Crie seu Metodo em 1 Hora" e bonus pontual de aula, nao operacao monitorada
+
+**Contexto:** Diagnostico novo criado 11/09 (duplicado do Kit de Ferramentas com pergunta de interesse
+individual), ainda fora do cockpit — decisao pendente desde a criacao.
+**Decisao:** Fica como bonus de aula, nao entra como operacao continua monitorada pelo Companion.
+**Racional:** Karol confirmou no weekly review (13/09).
+**Impacto:** Nenhuma acao de infra adicional necessaria; nao entra no cockpit nem em operacoes continuas.
+
 ## 27/08/2026 — Recuperados 52 commits (23-26/08) que nunca chegaram ao GitHub
 
 **Contexto:** Execução autônoma do Expert-Stories (missão de quinta) encontrou o container

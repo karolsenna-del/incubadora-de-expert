@@ -141,6 +141,18 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 13/09 — Weekly review (Companion):**
+- Weekly review feita (previa 02/09, atrasada — 11 dias sem review formal). Proximo review: 20/09.
+- **Expert360 (M3):** Karol confirmou — ainda falta gravar e editar o resto. Nenhuma leva nova publicada desde 26/08 (segue 3/13 na Area de Membros). Tracker parado 11 dias so por falta de tempo, nao ha blocker tecnico. Next action mantida sem mudanca de escopo.
+- **SOP-022 APROVADO pela Meta (13/09):** verificacao de Provedor de Tecnologia liberada. Proximo passo: testar comentario→Direct de verdade com conta de fora — rotear pro Gestor de Infra Arcane. Ver log-decisoes.md.
+- **"Crie seu Metodo em 1 Hora"** decidido: fica como bonus pontual de aula, nao vira operacao monitorada.
+- **Biblioteca de IA (Black Friday):** Karol ainda nao tem pacote/preco/prazo definidos — sem novidade, item segue aberto igual estava.
+- **Desafio Rota100k:** Semana 07 (14-20/09) roteirizada, produzida e programada (12/09) — rodando sem blocker, so falta Karol publicar/gravar os Reels YAP + Demonstracoes.
+- **Fix real (12/09):** causa raiz do erro 9004 recorrente na Meta API testada (nao so retry manual). Gap de e-mail nos 5 diagnosticos corrigido (Agente IA sem MailApp).
+- Working tree com `hook-metrics.json` e `agents/insta-scheduler/data/insta-scheduler-rules.md` modificados, ainda sem commit no momento deste registro.
+
+Retomar com: `/expert-companion` — proxima conversa deve (1) acompanhar publicacao dos Reels da Semana 07 do Rota100k, (2) confirmar com Gestor de Infra Arcane o teste real do SOP-022, (3) commitar hook-metrics.json + insta-scheduler-rules.md via Ops, (4) seguir monitorando se o M3 avanca (11 dias parado, proximo review 20/09).
+
 **Sessao 12/09 — Reconciliacao de 9 dias sem sessao formal do Companion (03-11/09, Companion):**
 Contexto-dinamico e cockpit ficaram parados no checkpoint da weekly de 02/09 enquanto bastante trabalho autonomo real aconteceu (reconstituido via git log, ~140 commits, sem sessao formal do Companion no periodo):
 

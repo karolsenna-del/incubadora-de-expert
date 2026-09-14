@@ -284,6 +284,33 @@ Isso substitui o conteudo inteiro do arquivo numa unica operacao, sem passar por
 
 ---
 
+## REGRA-021: Extensão do 1Password trava a aba inteira durante automação de browser (Claude in Chrome)
+
+**Contexto:** Preenchendo o App Review da Meta (13/09), a extensão do 1Password interceptou
+repetidamente cliques em campos de texto comuns (nada relacionado a senha) com um popup de
+autofill/sugestão. O sintoma não é um diálogo nativo do Windows — é só a extensão — mas o efeito
+pro Claude in Chrome é o mesmo: `screenshot` falha com `Cannot access a chrome-extension:// URL of
+different extension`, e se insistir, até `click`/`type` param de responder (`CDP sendCommand timed
+out`). Aconteceu em pelo menos 6 campos diferentes na mesma sessão.
+
+**Fix que funciona:**
+1. Depois de QUALQUER clique num campo de texto num painel novo (Meta developer, ou qualquer site
+   não testado antes nesta sessão), apertar `Escape` antes de tentar `type` — resolve a maioria.
+2. Se `type` retornar erro (`Failed to type` / `CDP sendCommand timed out`): apertar `Escape` de
+   novo, depois conferir com `get_page_text` (funciona mesmo com a extensão travando `screenshot`)
+   se o texto parcial já digitado ficou certo antes de continuar — NUNCA assumir que nada foi
+   digitado, geralmente digitou parcial e fica silencioso.
+3. Digitar em pedaços curtos (1-2 frases por chamada de `type`) reduz a chance de pegar o popup no
+   meio de uma frase longa e duplicar/cortar texto.
+4. Se a aba travar de vez (nem `Escape` responde): fechar a aba e abrir uma nova — mais rápido que
+   tentar destravar. Preservar estado (URL da submissão em progresso) antes de fechar.
+
+**Não é bug do Claude in Chrome nem diálogo nativo do sistema** — não pedir pra Karol procurar
+janela nenhuma primeiro; só pedir pra ela clicar num espaço vazio da página ou apertar Escape se a
+automação também estiver travada do lado dela (aconteceu 1x, resolveu na hora).
+
+---
+
 ## Registro de Incidentes
 
 | # | O que aconteceu | Fix | Regra criada |
@@ -300,3 +327,4 @@ Isso substitui o conteudo inteiro do arquivo numa unica operacao, sem passar por
 | 10 | `git add` sem `-f` no passo de commit do insta-scheduler nunca commitou a pasta `agendados/` (gitignorada) — 5 dias de posts reais (23-27/08) sem arquivamento de verdade no repo | `git add -f` no passo de commit do workflow | REGRA-018 |
 | 11 | Cron das 9h30 do insta-scheduler nao disparou em 28/08 — Story do dia ficou sem publicar ate a Karol reportar | Disparo manual (`gh workflow run`) | REGRA-019 |
 | 12 | Digitacao automatizada (`computer.type`) no editor Apps Script (Monaco) derrubou `}` isolado varias vezes seguidas, corrompendo o script `Recebe Briefing Agente de IA` — precisou de 1h+ de tentativas ate achar o fix real | Reescrita via `monaco.editor.getEditors()[0].getModel().pushEditOperations(...)`, substituindo o arquivo inteiro numa unica operacao JS em vez de teclado simulado | REGRA-020 |
+| 13 | Extensao do 1Password travou repetidamente cliques/digitacao em campos de texto no App Review da Meta (nada relacionado a senha) — screenshot e ate type paravam de responder | Escape logo apos o clique antes de digitar; se travar mesmo assim, Escape de novo + conferir texto parcial com get_page_text antes de continuar; fechar/reabrir aba se travar de vez | REGRA-021 |

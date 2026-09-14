@@ -25,4 +25,12 @@
 
 **Recomendacao:** No boot/weekly review, nao cobrar "status desatualizado" da linha de Mentoria no cockpit como se fosse um problema — so confirmar rapidamente com a Karol se alguma aluna avancou de fase, sem pedir pra ela recitar o detalhe (isso ja esta no Drive dela).
 
+## Expert360 (gravacao/edicao do M3) trava recorrentemente enquanto outros ativos avancam
+
+**Observado em:** weekly reviews de 19/08 (5 dias parado), 24/08 (10 dias), e agora 13/09 (11 dias) — mesmo padrao se repete: Rota100k e Lives semanais avancam toda semana, Expert360 fica sem entrada de LOG por longos periodos porque depende de Karol gravar/editar sozinha (sem agente pra essa etapa).
+
+**Descricao:** Nao e um blocker tecnico nem falta de plano — e gargalo de tempo/energia da Karol numa tarefa que so ela pode fazer (gravar aula, editar no CapCut com legenda queimada). Perguntar "o que travou?" no weekly geralmente recebe a mesma resposta ("falta gravar e editar").
+
+**Recomendacao:** No boot/weekly, nao tratar isso como alerta urgente igual um blocker de infra — e esperado dado o formato do projeto. Focar a pergunta em "quer ajuda pra destravar essa etapa especifica?" (ex: bloco de tempo dedicado, quebrar em leva menor) em vez de repetir "por que ta parado?".
+
 **Confirmado/estendido em 24/08/2026:** o mesmo vale mesmo quando o trabalho da aluna acontece dentro do proprio repo (ex: pipeline completo do Conduz Agro/Milena Gehrke, construido via squads entre 20-23/08). Companion tentou adicionar ao INBOX do cockpit pra decisao — Karol vetou direto: "Milena nao entra no meu cockpit". Entregavel de mentee (mesmo volumoso, mesmo produzido com apoio de squad) fica na pasta da aluna (`mentoria/alunas/{aluna}/`), nunca no cockpit. Nao repetir a pergunta pra outras alunas/entregaveis futuros do mesmo tipo.

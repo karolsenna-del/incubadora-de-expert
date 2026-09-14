@@ -639,3 +639,9 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 
 - **Princípio:** decisão imediata não significa pressão imediata. O acordo antecipa transparência, elimina follow-up indefinido e preserva o direito do lead de dizer “não”.
 - **Cuidado:** não usar esse roteiro com lead sem qualificação, nem transformar silêncio, dúvida ou pedido de tempo em consentimento.
+
+## Referência de ganchos e trends — Instagram, 13/09/2026
+
+- Carrossel de `@kabritodigital` registrado em `referencias-conteudo/2026-09-13-kabritodigital-trends-ganchos-conteudos.md`.
+- Foram extraídos cinco formatos: lista “Formas de...”, versões antigas de si, trocadilho visual com +4, comportamentos com estrelinha dourada e revelação “Eu queria que você pudesse me conhecer...”.
+- Uso: adaptar para método autoral, validação, vendas, posicionamento e autoridade; citar Kammila Brito quando a fonte ou a mecânica original estiver visível.

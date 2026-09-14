@@ -243,16 +243,24 @@ slide-06). O do `sex-sozinho` reforça ainda mais a RULE-7: ~17h16 de intervalo 
 anterior, e mesmo assim falhou. Com 4 e 3 falhas seguidas respectivamente, mais retry automático
 sem novo dado deixou de fazer sentido (RULE-5) — os dois precisam de publicação manual.
 
-**RULE-9 EM TESTE (13/09, mesmo dia): hipótese de formato PNG vs JPEG.** Pesquisa (KB seção 1.7)
-achou que a doc oficial da Meta lista só JPEG como formato suportado — PNG nunca é mencionado.
-Todos os slides do pipeline são PNG. `liquid-death-narrativa-autoral` (falhou 13/09 14h UTC,
-erro 9004 no slide-02, `is_transient:false`) virou o caso de teste: os 9 slides foram convertidos
-pra JPEG (qualidade 95, fundo branco pra transparência) e re-subidos ao Cloudinary com public_id
-`{slide}-jpg`; o workflow `post-liquid-death-narrativa-autoral.yml` foi atualizado pra apontar
-pras novas URLs JPEG. Ainda não disparado o retry — pendente commit/push (Ops) e
-`workflow_dispatch`. **Resultado deste teste decide se a causa raiz do erro 9004 finalmente foi
-achada** (se publicar de primeira com JPEG, forte indício de que PNG era o problema o tempo todo;
-se falhar de novo com erro idêntico, descarta mais essa hipótese, igual RULE-8).
+**RULE-9 TESTADA E REFUTADA (13/09-14/09, mesmo incidente): hipótese de formato PNG vs JPEG.**
+Pesquisa (KB seção 1.7) achou que a doc oficial da Meta lista só JPEG como formato suportado —
+PNG nunca é mencionado. Todos os slides do pipeline são PNG. `liquid-death-narrativa-autoral`
+(falhou 13/09 14h UTC, erro 9004 no slide-02, `is_transient:false`) virou o caso de teste: os 9
+slides foram convertidos pra JPEG (qualidade 95, fundo branco pra transparência), re-subidos ao
+Cloudinary com public_id `{slide}-jpg`, workflow atualizado, retry disparado via
+`workflow_dispatch` (14/09 01h21 UTC, run 34795629915). **Falhou de novo, erro 9004 idêntico
+(`is_transient:false`), agora no slide-08** (passou dos 7 primeiros containers dessa vez —
+slide que falha continua variando, não é um arquivo específico). **RULE-9 marcada como refutada:**
+formato do arquivo (PNG vs JPEG) não é a causa raiz. Causa raiz do erro 9004 permanece
+desconhecida depois de 9+ casos investigados (RULE-4 a RULE-9): não é arquivo, não é token, não
+é horário, não é contagem de slides, não é intervalo entre tentativas, não é velocidade de
+criação dos containers, não é formato da imagem. Pesquisa também confirmou que não existe
+upload binário direto pra foto na API (só pra vídeo) — não há como eliminar o passo de fetch por
+URL, então esse ponto de falha é estrutural da API, não do nosso pipeline. Próxima hipótese a
+testar: abrir ticket de suporte com a Meta usando os IDs de containers falhados como evidência
+(nunca tentado) — investigação própria por eliminação de hipóteses parece esgotada.
+`liquid-death-narrativa-autoral` segue pendente — oferecida publicação manual à Karol.
 
 **RULE-8 TESTADA E REFUTADA (mesmo dia, 13/09 06h26 UTC):** hipótese de rate-limit por criação
 rápida de containers (pesquisa externa apontava para isso) — delay de 2s adicionado entre cada

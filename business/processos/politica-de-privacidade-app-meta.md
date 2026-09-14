@@ -1,12 +1,14 @@
-# Política de Privacidade — App de Publicação Instagram
+# Política de Privacidade — App postador-conteudo (Instagram)
 
-**Última atualização:** 23 de junho de 2026
+**Última atualização:** 13 de setembro de 2026
+
+**Publicada em:** https://membros.incubadoradeexpert.com.br/privacidade.html
 
 ---
 
 ## 1. Identificação
 
-Este aplicativo ("App") é operado por **Karoline Franzini de Carvalho Senna**, responsável pela **Incubadora de Expert**, com sede no Brasil.
+Este aplicativo ("App", `postador-conteudo`, exibido como "api-IG" na tela de permissões do Instagram) é operado por **Karoline Franzini de Carvalho Senna**, responsável pela **Incubadora de Expert**, com sede no Brasil.
 
 Contato: karolsenna@incubadoradeexpert.com.br
 
@@ -14,17 +16,25 @@ Contato: karolsenna@incubadoradeexpert.com.br
 
 ## 2. O que este App faz
 
-Este App acessa a API do Instagram (Meta) exclusivamente para **publicar conteúdo** (posts e carrosséis) na conta do Instagram da Incubadora de Expert. Não é um aplicativo público — é utilizado internamente pela própria titular da conta.
+Este App acessa a API do Instagram (Meta) pra automatizar 3 tarefas na conta do Instagram da Incubadora de Expert (`@karolsenna._`):
+
+1. **Publicar conteúdo** — posts e carrosséis agendados
+2. **Responder automaticamente por Direct** quando alguém manda uma palavra-chave específica (ex: "GRUPO", "LIVE") — envia de volta o link da oferta ou grupo correspondente
+3. **Responder automaticamente por Direct (Private Reply) quando alguém comenta** uma palavra-chave num post/Reels público — mesmo mecanismo do item 2, canal diferente
+
+Não é um aplicativo público de terceiros — é uma automação de uso interno, operada exclusivamente pela própria titular da conta comercial, sem interface para outras empresas ou contas usarem.
 
 ---
 
 ## 3. Dados coletados
 
-Este App **não coleta dados de usuários terceiros**. O único dado acessado é:
+Este App **não coleta nem armazena dados pessoais de quem interage** (quem comenta ou manda Direct). O processamento é feito em tempo real, sem persistência:
 
-- **Token de acesso do Instagram** da titular da conta, necessário para autenticar as chamadas à API da Meta e publicar conteúdo.
+- **Texto do comentário ou da mensagem recebida** — lido apenas pra checar se bate com uma palavra-gatilho cadastrada; não é salvo em nenhum banco de dados
+- **ID do comentário/conversa** (fornecido pela própria API da Meta) — usado só pra endereçar a resposta automática; não é armazenado após o envio
+- **Token de acesso** da conta comercial da titular, necessário pra autenticar as chamadas à API
 
-Nenhum dado é compartilhado com terceiros, armazenado em servidores externos ou utilizado para fins de análise, publicidade ou marketing.
+Nenhum dado de quem comenta ou manda mensagem é retido, analisado, vendido ou usado pra qualquer finalidade além de responder aquela interação pontual.
 
 ---
 
@@ -32,26 +42,28 @@ Nenhum dado é compartilhado com terceiros, armazenado em servidores externos ou
 
 O App utiliza as seguintes permissões da Meta:
 
-- `instagram_content_publish` — para publicar posts e carrosséis na conta do Instagram da titular
-- `instagram_basic` — para verificar informações básicas da conta autenticada
+- `instagram_business_basic` — informações básicas da conta comercial autenticada
+- `instagram_content_publish` — publicar posts e carrosséis
+- `instagram_business_manage_messages` — ler e responder mensagens diretas (Direct) enviadas à conta
+- `instagram_manage_comments` — ler comentários em posts/Reels próprios e responder via Private Reply
 
 ---
 
 ## 5. Armazenamento de dados
 
-Os tokens de acesso são armazenados **localmente** na máquina da titular da conta, em arquivo protegido e não versionado publicamente. Nenhum dado é transmitido para servidores externos além das chamadas necessárias à API oficial da Meta.
+O token de acesso é armazenado como variável de ambiente segura na infraestrutura de hospedagem (Vercel), nunca exposto no código-fonte público nem no lado do cliente. Nenhum dado de terceiros (quem comenta ou manda Direct) é armazenado — o processamento é feito em tempo real e descartado após a resposta.
 
 ---
 
 ## 6. Compartilhamento de dados
 
-Este App **não compartilha nenhum dado** com terceiros.
+Este App **não compartilha nenhum dado** com terceiros. As únicas chamadas de rede são entre o App e a API oficial da Meta (`graph.instagram.com` / `graph.facebook.com`).
 
 ---
 
 ## 7. Direitos do usuário
 
-Por se tratar de uso interno e exclusivo da titular da conta, não há usuários externos. Para dúvidas ou solicitações relacionadas a dados, entre em contato pelo e-mail: karolsenna@incubadoradeexpert.com.br
+Quem comenta ou manda Direct pra conta não tem dado nenhum retido — não há o que solicitar exclusão, já que nada é armazenado além do necessário pra responder em tempo real. Para dúvidas, entre em contato pelo e-mail: karolsenna@incubadoradeexpert.com.br
 
 ---
 

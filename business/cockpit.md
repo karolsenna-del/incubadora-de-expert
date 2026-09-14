@@ -4,8 +4,8 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 12/09/2026 (Companion — reconciliacao pos 9 dias sem sessao)
-**Proximo review:** ATRASADO (previsto 09/09/2026, hoje 12/09 — 3 dias)
+**Ultima atualizacao:** 13/09/2026 (Companion — weekly review)
+**Proximo review:** 20/09/2026
 
 ---
 
@@ -49,7 +49,7 @@
 
 | Operacao | Responsavel | Status | Onde acompanhar |
 |----------|-------------|--------|-----------------|
-| Instagram / Conteudo | Karol | Ativa — Desafio Rota100k Semana 06 em execucao (ver ATIVOS #2). Automacao de Stories publicou a sequencia pos-Live 28 em 02/09; SOP-022 (Direct automatico por palavra-gatilho) segue aguardando acao da Karol pra ativar | contexto-dinamico.md — prioridades do momento |
+| Instagram / Conteudo | Karol | Ativa — Desafio Rota100k Semana 07 roteirizada/produzida/programada (12/09). **SOP-022 APROVADO pela Meta (13/09)** — verificacao de Provedor de Tecnologia liberada; falta testar comentario->Direct de verdade com conta de fora | contexto-dinamico.md — prioridades do momento |
 | Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 29 realizada (09/09): "Eu uso IA pra fazer em 3 dias o que levaria 3 meses". Live Black For You (Voomp+Anhanguera, 15/09) com 3 reels de divulgação prontos | business/campanhas/lives-semanais/ |
 | Mentoria (6 alunas) | Karol | Ativa — Mentoria Individual formalizada. Proxima leva confirmada em 02/09: fechar o contrato de 12 meses, atualizar a mensagem de boas-vindas e definir as regras de uso do WhatsApp. Fonte de verdade das alunas segue sendo o Drive de cada uma | [checklist](campanhas/incubadora-de-expert-individual/checklist-producao.md) |
 | Funil mini treinamento (LP → WhatsApp) | Karol | Ativa mas **sem resultado** (flagado 14/08 pela Karol: "nunca deu resultado", precisa ser otimizado) | business/campanhas/lp-minitreinamento/ |

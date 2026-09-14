@@ -31,7 +31,7 @@ Tomás é explícito sobre o ponto de partida:
 > "Eu comecei com 150 mil reais em dívida, tá? No primeiro ano, esses primeiros quatro meses era eu e Fernanda. Fernanda era expert e closer... e eu fazia o bastidor e fazia [...] social selling, construí, validei todo o processo comercial [...] tinha ninguém no time, era nós dois e um sonho, literalmente."
 > [Fonte: aula-sessao-estrategica-normalized.md, 00:11:33]
 
-Ele conta que, quebrado, "morando de favor na casa da [sua] sogra, sem carro", usava o cartão de crédito do irmão para comprar fralda da filha Cléo (então com 9-10 meses). Foi nesse momento que testaram, pela primeira vez, o funil de social selling conectado à sessão estratégica: agendaram 10 reuniões e Fernanda fechou 8 vendas — 80% de conversão. [Fonte: aula-sessao-estrategica-normalized.md, 00:39:40]
+Ele conta que, quebrado, "morando de favor na casa da [sua] sogra, sem carro", usava o cartão de crédito do irmão para comprar fralda da filha Cléo (então com 9-10 meses). Foi nesse momento que testaram, pela primeira vez, o funil de social selling conectado à sessão estratégica: agendaram 10 reuniões e Fernanda fechou 8 vendas — 80% de conversão. [Fonte: aula-sessao-estrategica-normalized.md, 00:29:29-00:29:50]
 
 A progressão de faturamento que ele apresenta como prova:
 
@@ -232,7 +232,7 @@ Mais tarde na aula (dentro do bloco de estruturação de produto que fecha a Ses
 
 | Produto | Formato de entrega | Ticket | Encontros | Analogia do autor |
 |---|---|---|---|---|
-| **Ultra High Ticket** | 100% individual com Fernanda | ~R$100 mil | 12 encontros, 100% com Fernanda | "Isso aqui é tipo um Hyundai" *(nota: possível erro de transcrição/fala — Tomás está descrevendo o topo da esteira; contexto sugere referência a um carro de luxo)* |
+| **Ultra High Ticket** | 100% individual com Fernanda | ~R$100 mil | 12 encontros, 100% com Fernanda | "Esse aqui é tipo um Hyundai" — analogia de carro usada literalmente por Tomás pra descrever o topo da esteira (fala transcrita fielmente; o instrutor não explica a escolha da marca) |
 | **Individual + FE** | Tomás e Fernanda, atendimento individual junto com a Fernanda | ~R$30 mil | 6 encontros, metade com Fernanda | — |
 | **Mentoria em Grupo** | Grupo + 2 sessões individuais, 1 ano de mentoria | R$7 mil | 1 ano + 2 individuais | — |
 | **Entrada** | Individual, reprogramação mental | R$3 mil | 1 sessão individual | 6 meses de duração (não 1 ano) |
@@ -250,6 +250,22 @@ Tomás explica que essa mesma lógica de esteira nasce da variabilidade do momen
 > **REGRA CARDINAL:** Seja justo — não empurre o produto goela abaixo; a venda só faz sentido se gerar transformação real.
 > *Motivo:* apresentada como princípio ético central logo depois da regra anterior, no mesmo bloco: "Não é só vender por vender [...] Você precisa gerar a transformação e vender realmente o que a pessoa precisa."
 > [Fonte: aula-sessao-estrategica-normalized.md, 02:28:04]
+
+### Por que não ir mais barato — a defesa do high ticket pra quem tá começando
+
+Ainda dentro desse bloco de números reais, Tomás conta que cogitou criar um produto ainda mais barato (R$1.000 a R$1.500, "colocar muitas pessoas") — e explica por que decidiu não fazer isso, nem apostar tudo na mentoria em grupo de R$7-12 mil:
+
+> "O brasileiro tem 80%... 8 em cada 10 do brasileiro são endividados, então eu capto 300 leads no mês, eu faço 15 vendas, porque as pessoas têm nome sujo, a pessoa não tem cartão, não tem limite no cartão, a pessoa tem no boleto, a pessoa entra no boleto e paga 3, 4 parcelas, a pessoa quer cancelar a mentoria porque perdeu o emprego."
+> [Fonte: aula-sessao-estrategica-normalized.md, 02:35:47-02:36:11]
+
+A inadimplência é o primeiro motivo contra descer o ticket. O segundo é velocidade de validação — e é aqui que ele fecha o argumento a favor do high ticket como ponto de partida, não só como topo de esteira:
+
+> "Eu vejo que o high ticket é muito bom para quem está começando, porque você valida rápido, a sessão estratégica é o high ticket [...] você puxa a caixa, você ganha a autoridade, você começa a ter muitos alunos, você gera muita prova social, isso te ajuda, você vendeu outros produtos depois."
+> [Fonte: aula-sessao-estrategica-normalized.md, 02:36:14-02:36:36]
+
+> **REGRA CARDINAL:** Não desça o ticket pra escalar volume no começo — o high ticket valida mais rápido, gera caixa e constrói a autoridade/prova social que sustentam os produtos mais baratos depois.
+> *Motivo:* Tomás chega nessa conclusão comparando diretamente com a alternativa que cogitou (produto de R$1-1,5 mil em volume) e rejeitou por causa da inadimplência do brasileiro médio e da lentidão de validação de ticket baixo.
+> [Fonte: aula-sessao-estrategica-normalized.md, 02:35:47-02:36:36]
 
 Ele também explica como o time decide, na prática, qual produto oferecer a cada lead:
 

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade | postador-conteudo — Incubadora de Expert</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --preto: #0B0B0C;
+      --branco: #FFFFFF;
+      --cinza: #71717A;
+      --cinza-claro: #D4D4D8;
+      --laranja: #FF6B1A;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Sora', sans-serif;
+      background: var(--branco);
+      color: var(--preto);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .topo {
+      border-bottom: 3px solid var(--laranja);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .topo .marca {
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--laranja);
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      margin: 0 0 8px;
+    }
+    .meta {
+      color: var(--cinza);
+      font-size: 14px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      color: var(--preto);
+    }
+    p, li {
+      font-size: 15px;
+      color: #27272A;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    code {
+      background: #F4F4F5;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    a {
+      color: var(--laranja);
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--cinza-claro);
+      margin: 32px 0;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--cinza-claro);
+      color: var(--cinza);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topo">
+      <div class="marca">Incubadora de Expert</div>
+      <h1>Política de Privacidade — App postador-conteudo</h1>
+      <div class="meta">Última atualização: 13 de setembro de 2026</div>
+    </div>
+
+    <h2>1. Identificação</h2>
+    <p>Este aplicativo ("App", <code>postador-conteudo</code>, exibido como "api-IG" na tela de permissões do Instagram) é operado por <strong>Karoline Franzini de Carvalho Senna</strong>, responsável pela <strong>Incubadora de Expert</strong>, com sede no Brasil.</p>
+    <p>Contato: <a href="mailto:karolsenna@incubadoradeexpert.com.br">karolsenna@incubadoradeexpert.com.br</a></p>
+
+    <h2>2. O que este App faz</h2>
+    <p>Este App acessa a API do Instagram (Meta) pra automatizar 3 tarefas na conta comercial do Instagram da Incubadora de Expert (<code>@karolsenna._</code>):</p>
+    <ul>
+      <li><strong>Publicar conteúdo</strong> — posts e carrosséis agendados</li>
+      <li><strong>Responder automaticamente por Direct</strong> quando alguém manda uma palavra-chave específica (ex: "GRUPO", "LIVE") — envia de volta o link da oferta ou grupo correspondente</li>
+      <li><strong>Responder automaticamente por Direct (Private Reply)</strong> quando alguém comenta uma palavra-chave num post ou Reels público — mesmo mecanismo do item anterior, canal diferente</li>
+    </ul>
+    <p>Não é um aplicativo público de terceiros — é uma automação de uso interno, operada exclusivamente pela própria titular da conta comercial, sem interface para outras empresas ou contas usarem.</p>
+
+    <h2>3. Dados coletados</h2>
+    <p>Este App <strong>não coleta nem armazena dados pessoais de quem interage</strong> (quem comenta ou manda Direct). O processamento é feito em tempo real, sem persistência:</p>
+    <ul>
+      <li><strong>Texto do comentário ou da mensagem recebida</strong> — lido apenas pra checar se bate com uma palavra-gatilho cadastrada; não é salvo em nenhum banco de dados</li>
+      <li><strong>ID do comentário/conversa</strong> (fornecido pela própria API da Meta) — usado só pra endereçar a resposta automática; não é armazenado após o envio</li>
+      <li><strong>Token de acesso</strong> da conta comercial da titular, necessário pra autenticar as chamadas à API</li>
+    </ul>
+    <p>Nenhum dado de quem comenta ou manda mensagem é retido, analisado, vendido ou usado pra qualquer finalidade além de responder aquela interação pontual.</p>
+
+    <h2>4. Permissões utilizadas</h2>
+    <ul>
+      <li><code>instagram_business_basic</code> — informações básicas da conta comercial autenticada</li>
+      <li><code>instagram_content_publish</code> — publicar posts e carrosséis</li>
+      <li><code>instagram_business_manage_messages</code> — ler e responder mensagens diretas (Direct) enviadas à conta</li>
+      <li><code>instagram_manage_comments</code> — ler comentários em posts/Reels próprios e responder via Private Reply</li>
+    </ul>
+
+    <h2>5. Armazenamento de dados</h2>
+    <p>O token de acesso é armazenado como variável de ambiente segura na infraestrutura de hospedagem (Vercel), nunca exposto no código-fonte público nem no lado do cliente. Nenhum dado de terceiros (quem comenta ou manda Direct) é armazenado — o processamento é feito em tempo real e descartado após a resposta.</p>
+
+    <h2>6. Compartilhamento de dados</h2>
+    <p>Este App <strong>não compartilha nenhum dado</strong> com terceiros. As únicas chamadas de rede são entre o App e a API oficial da Meta (<code>graph.instagram.com</code> / <code>graph.facebook.com</code>).</p>
+
+    <h2>7. Direitos do usuário</h2>
+    <p>Quem comenta ou manda Direct pra conta não tem dado nenhum retido — não há o que solicitar exclusão, já que nada é armazenado além do necessário pra responder em tempo real. Para dúvidas, entre em contato pelo e-mail acima.</p>
+
+    <h2>8. Alterações nesta política</h2>
+    <p>Esta política pode ser atualizada periodicamente. A data de última atualização estará sempre indicada no topo desta página.</p>
+
+    <footer>
+      Incubadora de Expert · <a href="mailto:karolsenna@incubadoradeexpert.com.br">karolsenna@incubadoradeexpert.com.br</a> · incubadoradeexpert.com.br
+    </footer>
+  </div>
+</body>
+</html>

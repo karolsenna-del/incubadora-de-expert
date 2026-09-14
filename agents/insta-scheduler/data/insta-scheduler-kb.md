@@ -267,11 +267,11 @@ alguma característica específica do arquivo PNG (perfil de cor incorporado, co
 transparência) — o que o time de investigação anterior nunca testou, porque sempre focou em
 rede/timing/token, não em formato.
 
-**NÃO CONFIRMADO AINDA — é a hipótese mais forte até agora, mas não testada na prática.**
-Próximo passo recomendado: gerar a próxima leva de slides em JPEG (em vez de PNG) e observar se
-o erro 9004 para de ocorrer. Mudança fica fora do escopo do insta-scheduler (ele não altera
-slides — quem gera é o `squad-carrossel-arcane`, Step 6 de `produce-carousel.md`) — precisa ser
-uma decisão da Karol e um ajuste no squad que exporta os slides.
+**TESTADO E REFUTADO (13/09-14/09):** os 9 slides do `liquid-death-narrativa-autoral` foram
+convertidos pra JPEG (qualidade 95) e re-testados via `workflow_dispatch` — **falhou de novo com
+erro 9004 idêntico** (agora no slide-08, antes era slide-02). Formato do arquivo não é a causa
+raiz. Ver RULE-9 no rules.md pro detalhe completo. Não vale a pena mudar o pipeline de exportação
+do squad-carrossel-arcane de PNG pra JPEG por causa disso — a suspeita não se confirmou.
 
 **Referências:**
 - https://developers.facebook.com/docs/instagram-platform/content-publishing/

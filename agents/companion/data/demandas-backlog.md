@@ -44,7 +44,10 @@
 
 ## Importante (proximo foco)
 
-- **Automacao de comentario→Direct (SOP-022, extensao 07-08/09) — codigo pronto e deployado, mas bloqueada por verificacao pendente da Meta (nao e mais coisa de configuracao):** webhook responde comentario "GRUPO"/"LIVE" em post/Reels via Private Reply, alem do Direct que ja funcionava desde 23/08. Sessao de 07-08/09 gastou horas tentando destravar teste real e bateu num beco sem saida administrativo:
+- **Automacao de comentario→Direct (SOP-022) — verificacao aprovada, App Review formal em andamento (13-14/09).** Testado de verdade com conta de fora (karolfranzini): comentario→Private Reply funcionando ponta a ponta. Mas isso so funciona pra testadores cadastrados — pra funcionar com QUALQUER conta (leads reais) falta a Meta aprovar o App Review formal das 4 permissoes, submetido 3/4 (falta so `instagram_manage_comments` detectar 1 chamada de API real, ate 24h). **Proximo passo:** checar se completou e, com a Karol confirmando, clicar "Enviar para analise" (Gestor de Infra Arcane). Detalhe completo: Playbook SOP-022 do Gestor de Infra.
+
+<!-- historico do bloqueio, mantido pra referencia -->
+- [ARQUIVADO — bloqueio resolvido acima] Automacao de comentario→Direct (SOP-022, extensao 07-08/09) — codigo pronto e deployado, mas bloqueada por verificacao pendente da Meta (nao e mais coisa de configuracao): webhook responde comentario "GRUPO"/"LIVE" em post/Reels via Private Reply, alem do Direct que ja funcionava desde 23/08. Sessao de 07-08/09 gastou horas tentando destravar teste real e bateu num beco sem saida administrativo:
   - App "postador-conteudo" (`developers.facebook.com/apps/2350178172182056`, aparece como "api-IG" pro usuario final na tela de permissoes do Instagram) nunca foi publicado (`Publicar: Nao publicado`).
   - Tentativas de registrar um Testador do Instagram real (2 contas diferentes da Karol, incluindo @karolfranzini com convite reenviado) falharam — convite nunca aparece pro lado do Instagram (checado em Configuracoes→Seguranca→Apps e sites e via `instagram.com/accounts/manage_access`, nada apareceu em nenhuma).
   - "Usuarios de teste" (contas sinteticas do Facebook, funcao ERRADA pra isso mas testada mesmo assim) veio "temporariamente desabilitada".
