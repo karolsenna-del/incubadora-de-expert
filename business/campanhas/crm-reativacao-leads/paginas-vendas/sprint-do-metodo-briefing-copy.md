@@ -136,8 +136,8 @@ Documento de Persona e Promessa, já preenchido com o seu caso —
 não um modelo genérico pra você adaptar sozinha.
 
 [CARD 3 — Semana 3 — Processo Autoral]
-Seu processo estruturado, com sua história dentro — nome, etapas,
-metodologia autoral.
+Definição do seu método, a partir da sua história — o processo que
+entrega a promessa transformadora que sua persona deseja.
 
 [CARD 4 — Semana 4 — Ferramentas]
 Ferramentas personalizadas pro seu método — prontas pra usar, não

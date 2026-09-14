@@ -106,7 +106,7 @@ Atmosfera: clareza tomando forma.
 estrutura sendo construída, com a história do cliente dentro.
 Label: "SEMANA 03" — exact text.
 Nome: "Processo Autoral" — exact text, do not paraphrase.
-Descrição: "Estruturação do processo autoral, com a história do cliente dentro." — exact text, do not paraphrase.
+Descrição: "Definição do método, a partir da história do cliente — o que entrega a promessa transformadora que a persona deseja." — exact text, do not paraphrase.
 Cor de destaque: laranja #FF6B1A.
 Atmosfera: engenharia, estrutura sendo montada.
 

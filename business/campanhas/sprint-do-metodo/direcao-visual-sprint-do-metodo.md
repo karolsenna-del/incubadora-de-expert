@@ -61,8 +61,8 @@ Fonte: https://vendas-incubadora.vercel.app/sprint-do-metodo/
   história, dores e contexto do cliente.
 - **Semana 02 — Persona + Promessa:** Documento preenchido com dados específicos
   do caso.
-- **Semana 03 — Processo Autoral:** Estruturação do processo autoral, com a
-  história do cliente dentro.
+- **Semana 03 — Processo Autoral:** Definição do método, a partir da história
+  do cliente — o que entrega a promessa transformadora que a persona dele deseja.
 - **Semana 04 — Ferramentas:** Ferramentas personalizadas pro método do cliente.
 - **Semana 05 — Proposta + Roteiros:** Proposta de venda e roteiros de "Vendas
   Secretas".
