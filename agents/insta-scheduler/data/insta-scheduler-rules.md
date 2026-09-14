@@ -243,6 +243,34 @@ slide-06). O do `sex-sozinho` reforça ainda mais a RULE-7: ~17h16 de intervalo 
 anterior, e mesmo assim falhou. Com 4 e 3 falhas seguidas respectivamente, mais retry automático
 sem novo dado deixou de fazer sentido (RULE-5) — os dois precisam de publicação manual.
 
+**RULE-9 EM TESTE (13/09, mesmo dia): hipótese de formato PNG vs JPEG.** Pesquisa (KB seção 1.7)
+achou que a doc oficial da Meta lista só JPEG como formato suportado — PNG nunca é mencionado.
+Todos os slides do pipeline são PNG. `liquid-death-narrativa-autoral` (falhou 13/09 14h UTC,
+erro 9004 no slide-02, `is_transient:false`) virou o caso de teste: os 9 slides foram convertidos
+pra JPEG (qualidade 95, fundo branco pra transparência) e re-subidos ao Cloudinary com public_id
+`{slide}-jpg`; o workflow `post-liquid-death-narrativa-autoral.yml` foi atualizado pra apontar
+pras novas URLs JPEG. Ainda não disparado o retry — pendente commit/push (Ops) e
+`workflow_dispatch`. **Resultado deste teste decide se a causa raiz do erro 9004 finalmente foi
+achada** (se publicar de primeira com JPEG, forte indício de que PNG era o problema o tempo todo;
+se falhar de novo com erro idêntico, descarta mais essa hipótese, igual RULE-8).
+
+**RULE-8 TESTADA E REFUTADA (mesmo dia, 13/09 06h26 UTC):** hipótese de rate-limit por criação
+rápida de containers (pesquisa externa apontava para isso) — delay de 2s adicionado entre cada
+container nos 3 workflows travados (`duolingo-teste-antes-de-escalar`,
+`rota100k-semana06-sex-sozinho-x-com-ajuda`, `rota100k-semana06-sab-legado-digital-7-dias`),
+commitado e pushado pelo Ops, retry disparado nos 3. **Os 3 falharam de novo com erro 9004
+idêntico.** O caso mais revelador é o `sab-legado-digital-7-dias`: falhou na **1ª chamada da
+sequência, com 0 containers criados antes** — ou seja, falhou ANTES de qualquer delay entrar em
+jogo (o delay só age entre chamadas subsequentes). Isso invalida a hipótese de rate-limit por
+velocidade de chamada: não há como uma única chamada, a primeira do processo, sofrer de "chamadas
+rápidas demais". **RULE-8 marcada como refutada.** Causa raiz do erro 9004 permanece desconhecida
+depois de 8+ casos investigados (RULE-4 a RULE-8): não é arquivo, não é token, não é horário,
+não é contagem de slides, não é intervalo entre tentativas, não é velocidade de criação dos
+containers. Próxima hipótese a testar (quando houver caso novo e tempo pra investigar):
+comparar se e algo especifico da conta/token nesse dia, ou abrir ticket com o suporte da Meta
+com os IDs dos containers falhados como evidencia — investigação de retry por conta própria
+parece esgotada pra esses 3 casos. **Ação recomendada agora: publicação manual pelos 3 posts.**
+
 ---
 
 ## Histórico de Incidentes

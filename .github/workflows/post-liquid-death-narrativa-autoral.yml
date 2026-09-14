@@ -30,15 +30,15 @@ jobs:
           BASE    = "https://graph.facebook.com/v21.0"
 
           SLIDES = [
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788898922/instagram-carrosseis/liquid-death-narrativa-autoral/slide-01.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788898924/instagram-carrosseis/liquid-death-narrativa-autoral/slide-02.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788898926/instagram-carrosseis/liquid-death-narrativa-autoral/slide-03.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788898928/instagram-carrosseis/liquid-death-narrativa-autoral/slide-04.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788898930/instagram-carrosseis/liquid-death-narrativa-autoral/slide-05.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788898932/instagram-carrosseis/liquid-death-narrativa-autoral/slide-06.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788898933/instagram-carrosseis/liquid-death-narrativa-autoral/slide-07.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788898935/instagram-carrosseis/liquid-death-narrativa-autoral/slide-08.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1788898937/instagram-carrosseis/liquid-death-narrativa-autoral/slide-09.png"
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1789346600/instagram-carrosseis/liquid-death-narrativa-autoral/slide-01-jpg.jpg",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1789346605/instagram-carrosseis/liquid-death-narrativa-autoral/slide-02-jpg.jpg",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1789346607/instagram-carrosseis/liquid-death-narrativa-autoral/slide-03-jpg.jpg",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1789346609/instagram-carrosseis/liquid-death-narrativa-autoral/slide-04-jpg.jpg",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1789346611/instagram-carrosseis/liquid-death-narrativa-autoral/slide-05-jpg.jpg",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1789346613/instagram-carrosseis/liquid-death-narrativa-autoral/slide-06-jpg.jpg",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1789346616/instagram-carrosseis/liquid-death-narrativa-autoral/slide-07-jpg.jpg",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1789346618/instagram-carrosseis/liquid-death-narrativa-autoral/slide-08-jpg.jpg",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1789346620/instagram-carrosseis/liquid-death-narrativa-autoral/slide-09-jpg.jpg"
           ]
 
           def meta_post(path, data):

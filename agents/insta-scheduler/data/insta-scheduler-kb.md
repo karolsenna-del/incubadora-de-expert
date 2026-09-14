@@ -49,11 +49,12 @@ Repetir para cada slide. Coletar todos os container_ids.
 
 **Limitações dos slides:**
 - Máximo 10 slides por carrossel
-- Formato: JPEG ou PNG
-- Tamanho mínimo: 320x320px
-- Tamanho máximo: 1440px (lado mais longo)
-- Aspect ratio: 1:1 (quadrado) recomendado, suporta 4:5 e 16:9
+- Formato: JPEG ou PNG — **ATENÇÃO: ver seção 1.7, doc oficial atual (2026) lista só JPEG como suportado**
+- Tamanho mínimo: 320x320px (doc atual: mínimo 320px de largura)
+- Tamanho máximo: 1440px (lado mais longo / largura)
+- Aspect ratio: 4:5 a 1.91:1 (doc atual — mais restrito que "1:1 recomendado, suporta 4:5 e 16:9" registrado aqui antes)
 - Tamanho do arquivo: máximo 8MB por imagem
+- Color space: sRGB (Meta converte automaticamente se vier de outro espaço)
 
 #### Step 2: Criar container pai do carrossel
 
@@ -228,6 +229,53 @@ tem uma inconsistência de data de expiração do `META_TOKEN` — o bloco de cr
 no fim do arquivo ainda diz "expira 2026-08-22" (hoje). Não deu pra confirmar qual está certo
 via teste de rede real (bloqueado pelo sandbox). Recomendo checar/renovar o token antes de
 depender dele pro fluxo de Stories — token vencido quebra publicação E deleção ao mesmo tempo.
+
+---
+
+## 1.7 Upload direto/binário existe? E formato PNG é realmente suportado? — pesquisado 13/09/2026
+
+**Fonte:** Meta Developer Docs (Content Publishing + Media reference), WebSearch cruzando GitHub
+issues de terceiros com o mesmo erro. Pesquisado durante diagnóstico do erro 9004 recorrente
+(RULE-4 a RULE-8 no rules.md) — pergunta: dá pra eliminar o passo "Meta busca a URL" que é onde
+o erro sempre acontece?
+
+**Pergunta 1: dá pra fazer upload binário direto (sem `image_url`), pra eliminar o fetch?**
+**Resposta: NÃO, pra fotos.** O `upload_type=resumable` com upload binário pra
+`rupload.facebook.com/ig-api-upload/{versao}/{container-id}` existe, mas **só pra vídeo**
+(criado pra rede instável em upload de vídeo grande). Pra imagem — incluindo item de carrossel —
+a doc é explícita: *"Set to the path of the image or video. We will cURL your image using the
+passed in URL so it must be on a public server."* Não existe alternativa de upload binário pra
+foto na Content Publishing API. **Essa via não elimina o ponto de falha.**
+
+**Pergunta 2: nossos slides são PNG — isso é suportado oficialmente?**
+**Achado importante: a documentação atual (2026) da Meta lista formato suportado como
+JPEG, sem mencionar PNG.** Múltiplas fontes (doc oficial via WebFetch + outras integrações
+de terceiros que documentaram o mesmo erro) convergem: *"The only image format supported by
+the Instagram Graph API is JPEG. PNG, WebP, and GIF are not supported."*
+
+Isso contradiz o que estava registrado na seção 1.2 acima ("Formato: JPEG ou PNG") — informação
+desatualizada ou nunca verificada contra a doc oficial. **Todos os slides do pipeline atual são
+PNG** (`slide-01.png`...`slide-09.png`, confirmado via `curl -I` no incidente do
+`liquid-death-narrativa-autoral`: `Content-Type: image/png`).
+
+**Por que isso bate com o padrão do erro 9004 (não é 100% das vezes, é intermitente):**
+Se PNG fosse rejeitado de forma hard e determinística, todo post falharia sempre, no mesmo
+slide, sempre. Não é isso que observamos (RULE-4 a RULE-8: falha em slide aleatório, arquivo
+sempre íntegro via curl, às vezes passa de primeira). Hipótese: a Meta tolera PNG na maioria
+dos casos via conversão interna não documentada, e falha de forma intermitente dependendo de
+alguma característica específica do arquivo PNG (perfil de cor incorporado, compressão,
+transparência) — o que o time de investigação anterior nunca testou, porque sempre focou em
+rede/timing/token, não em formato.
+
+**NÃO CONFIRMADO AINDA — é a hipótese mais forte até agora, mas não testada na prática.**
+Próximo passo recomendado: gerar a próxima leva de slides em JPEG (em vez de PNG) e observar se
+o erro 9004 para de ocorrer. Mudança fica fora do escopo do insta-scheduler (ele não altera
+slides — quem gera é o `squad-carrossel-arcane`, Step 6 de `produce-carousel.md`) — precisa ser
+uma decisão da Karol e um ajuste no squad que exporta os slides.
+
+**Referências:**
+- https://developers.facebook.com/docs/instagram-platform/content-publishing/
+- https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media/
 
 ---
 
