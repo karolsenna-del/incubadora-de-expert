@@ -3,6 +3,8 @@
 *Copie este modelo, crie o formulário no Google Forms e envie o link junto com os arquivos de História Real e Ikigai assim que o pagamento for confirmado.*
 
 > **Substituído pela versão interativa.** Este modelo de Forms foi trocado por uma página própria (`diagnostico-interativo.html`, na identidade visual do Sprint do Método) que já inclui o diagnóstico de negócio, a História Real e o Ikigai no mesmo fluxo, com salvamento automático e envio direto por WhatsApp. Não precisa mais montar isso no Google Forms nem mandar os arquivos de História Real/Ikigai separados. Este arquivo fica só de referência do conteúdo original das perguntas.
+>
+> **Mensagem de boas-vindas atual (14/09/2026):** a "mensagem de boas-vindas sugerida" abaixo também está desatualizada — a versão real e em uso está em `business/processos/onboarding-pos-compra.md`, seção Sprint do Método.
 
 ---
 
