@@ -1,0 +1,690 @@
+mind_slug: "vendedor-secreto"
+mode: "synthetic"
+analysis_date: "2026-09-14"
+kf_count: 41
+
+knowledge_facets:
+
+  # ============================================================
+  # DOMINIO 1 — Identidade e Mentalidade de Venda
+  # ============================================================
+  - kf_id: "KF-vendedor-secreto-001"
+    type: PRINCIPLE
+    content: "Vender é servir quem já tem o problema — recuar por medo de parecer vendedora prejudica quem já precisa da solução. Quem paga bem respeita o processo e chega no resultado."
+    domain: "Identidade e Mentalidade de Venda"
+    source_expert: "Karol"
+    source_doc: "VOL-06-identidade-oferta-leads.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.95
+    inferred: false
+    source_ref: "[SOURCE: VOL-06, seção 1, Aula 1]"
+    pareto_zone: "excellence"
+    notes: "Convergência de espírito com Tomás (regra 'seja justo, não empurre goela abaixo') e com Lourival ('100% integridade') — os 3 experts tratam venda ética como pré-requisito, não como tática."
+
+  - kf_id: "KF-vendedor-secreto-002"
+    type: PRINCIPLE
+    content: "Só fracassa quem desiste. Não quem ouve um não, não quem conduz uma sessão que não fecha — fracasso de verdade é parar antes de chegar."
+    domain: "Identidade e Mentalidade de Venda"
+    source_expert: "Karol"
+    source_doc: "VOL-06-identidade-oferta-leads.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.95
+    inferred: false
+    source_ref: "[SOURCE: VOL-06, Aula 1 e Encerramento]"
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-vendedor-secreto-003"
+    type: HEURISTIC
+    content: "Regra do 80/20 antes de campo"
+    domain: "Identidade e Mentalidade de Venda"
+    source_expert: "Karol"
+    condition: "SE você está esperando se sentir 100% pronta / totalmente confortável antes de conduzir uma sessão de vendas"
+    action: "ENTÃO você já esperou demais — o critério não é 'estou pronta', é 'tenho o mínimo pra que isso não me destrua'. Vá a campo agora."
+    exception: "Ter o mínimo de preparo (roteiro básico + P1/P2/P3 ou equivalente) ainda é pré-requisito — a regra não elimina preparo, elimina o excesso dele."
+    source_doc: "VOL-06-identidade-oferta-leads.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-06, Aula 2]"
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-vendedor-secreto-004"
+    type: ANTI_PATTERN
+    content: "Manipular o cliente pra vender, ou esconder o que o produto não resolve"
+    domain: "Identidade e Mentalidade de Venda"
+    source_expert: "Lourival"
+    consequence: "Quebra a venda consultiva — o cliente sente 'o cheiro da malandragem', e mesmo que feche, a relação nasce comprometida."
+    alternative: "100% integridade: ser sincero sobre o que a oferta não resolve, mesmo que isso custe a venda."
+    source_doc: "VOL-05-sessao-a1-metodo-fht.md"
+    source_lens: "L6"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-05, ~00:16:00]"
+    pareto_zone: "impact"
+
+  - kf_id: "KF-vendedor-secreto-005"
+    type: PRINCIPLE
+    content: "Faturamento não é lucro, faturamento é ego — o que sustenta a operação é o caixa (dinheiro em conta), não o número de faturamento."
+    domain: "Identidade e Mentalidade de Venda"
+    source_expert: "Tomas"
+    source_doc: "VOL-04-sessao-estrategica-4-blocos.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: aula-sessao-estrategica-normalized.md, 02:22:53-02:23:07]"
+    pareto_zone: "impact"
+    notes: "Mais sobre gestão financeira que sobre condução de sessão — relevante como pano de fundo de por que puxar o pagamento na call importa (ver KF-018)."
+
+  # ============================================================
+  # DOMINIO 2 — Os 3 Frameworks de Sessão (nucleo da mente)
+  # ============================================================
+  - kf_id: "KF-vendedor-secreto-006"
+    type: FRAMEWORK
+    content: "Estrutura de 4 Blocos da Call (Diagnóstico e Fechamento)"
+    domain: "Frameworks de Sessão"
+    source_expert: "Tomas"
+    steps_or_components:
+      - "Bloco 1: Boas-vindas, rapport, desafio central — avisa já aqui que vai haver oferta no final"
+      - "Bloco 2: Mapeamento de dores (uso de perguntas estilo NEPQ)"
+      - "Bloco 3: Apresentação da solução"
+      - "Bloco 4: Bloco de sonhos → gancho de confirmação → pitch → negociação e fechamento"
+    when_to_use: "Call de diagnóstico e venda 1:1 de alto ticket, com demonstração completa validada ao vivo."
+    source_doc: "VOL-04-sessao-estrategica-4-blocos.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: aula-sessao-estrategica-normalized.md, 01:56:00-02:27:01]"
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-vendedor-secreto-007"
+    type: FRAMEWORK
+    content: "Questionário Raio-X (RX)"
+    domain: "Frameworks de Sessão"
+    source_expert: "Lourival"
+    steps_or_components:
+      - "1. Definir N áreas de potencial do cliente (ex: impacto, negócio, escala, urgência)"
+      - "2. Definir N áreas de dificuldade — balanceadas com as de potencial (nem poucas, nem muitas)"
+      - "3. Criar 3-5 perguntas investigativas por área, em tom consultivo (não robótico)"
+      - "4. Aplicar ao vivo, compartilhando tela, em 10-30 minutos"
+      - "5. Entregar a análise geral (pontos fortes/fracos) como ponte natural pra oferta"
+    when_to_use: "Antes do pitch, dentro da Sessão A1, pra gerar confiança e aflorar necessidade."
+    source_doc: "VOL-05-sessao-a1-metodo-fht.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: VOL-05, seção 6]"
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-vendedor-secreto-008"
+    type: FRAMEWORK
+    content: "Roteiro ECROI da Sessão de Vendas Secretas"
+    domain: "Frameworks de Sessão"
+    source_expert: "Karol"
+    steps_or_components:
+      - "Etapa 1 — Boas-vindas (3-5min): presença + alinhar o que vai acontecer"
+      - "Etapa 2 — Diagnóstico (10-12min): perguntas do método específico, anotar as palavras exatas que a lead usa"
+      - "Etapa 3 — História (5min): compartilhar trecho pessoal que espelha o que a lead descreveu"
+      - "Etapa 4 — Oferta com narrativa ECROI (12-15min): Colapso → Reenquadramento → Ordem → Inevitabilidade"
+      - "Etapa 5 — Fechamento: CTA de sinal de interesse → escassez (se real) → CTA emocional → tratamento de objeções"
+    when_to_use: "Sessão 1:1 de 30-40min onde a venda acontece, depois do lead já ter passado por abordagem e agendamento."
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 3]"
+    pareto_zone: "excellence"
+    notes: "Autora e dona do repositório — em caso de decisão de design da mente (qual framework vira o roteiro-padrão gerado), este é o framework-âncora por padrão, salvo indicação contrária da usuária no Playback."
+
+  - kf_id: "KF-vendedor-secreto-009"
+    type: FRAMEWORK
+    content: "A Narrativa ECROI (dentro da Etapa 4 do roteiro de sessão)"
+    domain: "Frameworks de Sessão"
+    source_expert: "Karol"
+    steps_or_components:
+      - "C — Colapso: derruba a crença que mantém a lead presa, ataca a premissa, não a pessoa"
+      - "R — Reenquadramento: revela a causa real (não julgamento, revelação)"
+      - "O — Ordem: a sequência correta = o método da expert, o programa é consequência lógica"
+      - "I — Inevitabilidade: o resultado prometido como conclusão natural, não promessa vazia"
+    when_to_use: "Na apresentação da oferta, depois do diagnóstico — nunca antes."
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 3]"
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-vendedor-secreto-010"
+    type: PRINCIPLE
+    content: "A ordem que faz a sessão funcionar é sempre a mesma nos 3 frameworks: primeiro ouvir/diagnosticar, depois construir a ponte, só então apresentar a oferta. Quando a oferta aparece depois do diagnóstico, não é pitch — é resposta."
+    domain: "Frameworks de Sessão"
+    source_expert: "Karol"
+    evidence: "Convergência verificada: Tomás faz mapeamento de dores (Bloco 2) antes da solução (Bloco 3); Lourival aplica o RX inteiro antes do pitch; Karol nomeia isso explicitamente (Diagnóstico antes da Oferta ECROI)."
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 7 — Nota Cruzada]"
+    pareto_zone: "crown_jewel"
+    notes: "CONVERGÊNCIA DOS 3 EXPERTS — candidato mais forte a Crown Jewel / Princípio Universal da mente fundida."
+
+  # ============================================================
+  # DOMINIO 3 — Rapport, Leitura de Lead e Abertura
+  # ============================================================
+  - kf_id: "KF-vendedor-secreto-011"
+    type: FRAMEWORK
+    content: "Leitura de Lead em 4 Camadas + 3 Perfis (Conectora/Analista/Diretiva)"
+    domain: "Rapport e Abertura"
+    source_expert: "Karol"
+    steps_or_components:
+      - "Camada 1 — Bio: o que a pessoa escolheu escrever sobre si"
+      - "Camada 2 — Tipo de conteúdo: o que posta e em que formato"
+      - "Camada 3 — Linguagem: como fala em legendas e comentários"
+      - "Camada 4 — Energia do perfil: vibe geral"
+      - "Classificar em 1 dos 3 perfis: Conectora (relacional), Analista (dados/método), Diretiva (objetiva)"
+    when_to_use: "5 minutos antes de qualquer abordagem, pra calibrar tom de abertura."
+    when_not_to_use: "Quando o perfil é muito misto — nesse caso, priorizar bio e linguagem como sinais mais decisivos."
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 1]"
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-vendedor-secreto-012"
+    type: HEURISTIC
+    content: "Avisar já no rapport inicial que vai haver oferta ao final"
+    domain: "Rapport e Abertura"
+    source_expert: "Tomas"
+    condition: "SE está no bloco de abertura/rapport da sessão"
+    action: "ENTÃO já avisa explicitamente que no final vai apresentar uma oferta, tipo 'vou te explicar como funciona essa sessão... e no final, se fizer sentido, vou te explicar como você pode fazer parte'"
+    source_doc: "VOL-04-sessao-estrategica-4-blocos.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: aula-sessao-estrategica-normalized.md, 01:59:18-01:59:46]"
+    pareto_zone: "impact"
+    related_to: ["KF-vendedor-secreto-013"]
+
+  - kf_id: "KF-vendedor-secreto-013"
+    type: VOCABULARY
+    term: "Seeding"
+    definition: "Técnica de 'plantar uma semente' de que vai existir uma oferta ao final da sessão, sem revelar detalhes, dita durante o alinhamento de expectativas no início da call."
+    source_expert: "Karol"
+    domain: "Rapport e Abertura"
+    usage_context: "Equivalente funcional ao aviso de oferta do Tomás (KF-012) — mesma função, termo próprio de Karol."
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "impact"
+
+  - kf_id: "KF-vendedor-secreto-014"
+    type: EXAMPLE
+    content: "Karol recebeu uma análise de 8 páginas do próprio perfil de Instagram (Triangulação 3D, Júlio Azevedo) que a descreveu como 'A Conectora' — decide por conexão e impacto, fecha para abordagem fria, abre para calor com substância. Essa experiência de autorreconhecimento é o gancho pedagógico da leitura de lead em 4 camadas."
+    domain: "Rapport e Abertura"
+    source_expert: "Karol"
+    illustrates: "KF-vendedor-secreto-011"
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L5"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 1]"
+    pareto_zone: "impact"
+
+  # ============================================================
+  # DOMINIO 4 — Diagnóstico e Perguntas Investigativas
+  # ============================================================
+  - kf_id: "KF-vendedor-secreto-015"
+    type: HEURISTIC
+    content: "Balancear áreas de potencial e de dificuldade no diagnóstico"
+    domain: "Diagnóstico e Perguntas"
+    source_expert: "Lourival"
+    condition: "SE está montando as perguntas de um questionário de diagnóstico (RX ou equivalente)"
+    action: "ENTÃO balanceie o número de áreas de potencial e de dificuldade (ex: 4 de potencial, 3 de dificuldade) — nem poucas, nem muitas"
+    exception: "Não deixar passar de ~7 áreas no total — o diagnóstico viraria uma sessão inteira por si só."
+    source_doc: "VOL-05-sessao-a1-metodo-fht.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.75
+    inferred: false
+    source_ref: "[SOURCE: VOL-05, ~00:23:57-00:24:09]"
+    pareto_zone: "impact"
+
+  - kf_id: "KF-vendedor-secreto-016"
+    type: HEURISTIC
+    content: "Anotar as palavras exatas que a lead usa durante o diagnóstico"
+    domain: "Diagnóstico e Perguntas"
+    source_expert: "Karol"
+    condition: "SE está na etapa de diagnóstico da sessão, ouvindo a lead descrever a própria situação"
+    action: "ENTÃO anote literalmente as palavras que ela usa — elas voltam na apresentação da oferta como espelho, criando a sensação de que a oferta foi feita sob medida"
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 3, Etapa 2]"
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-vendedor-secreto-017"
+    type: EXAMPLE
+    content: "A história do médico investigativo: Lourival foi a um posto de saúde com gripe, o médico mal perguntou nada e já receitou. Foi a um médico particular que fez uma bateria extensa de perguntas — o diagnóstico final foi o mesmo (gripe), mas ele confiou no segundo médico, não no primeiro, porque o segundo investigou de verdade. Justificativa pedagógica central de por que perguntas investigativas profundas geram confiança antes de qualquer recomendação."
+    domain: "Diagnóstico e Perguntas"
+    source_expert: "Lourival"
+    illustrates: "KF-vendedor-secreto-007"
+    source_doc: "VOL-05-sessao-a1-metodo-fht.md"
+    source_lens: "L5"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: SRC-002, 00:10:35-00:12:00, retomada em 00:20:27-00:22:06]"
+    pareto_zone: "impact"
+
+  # ============================================================
+  # DOMINIO 5 — Apresentação da Oferta
+  # ============================================================
+  - kf_id: "KF-vendedor-secreto-018"
+    type: HEURISTIC
+    content: "Nunca apresentar a oferta sem confirmação explícita de interesse"
+    domain: "Apresentação da Oferta"
+    source_expert: "Tomas"
+    condition: "SE terminou o diagnóstico e está prestes a abrir a oferta"
+    action: "ENTÃO peça confirmação explícita antes: 'Posso te apresentar [o método], se fizer sentido pra você conhecer?' — só avance com um sim claro"
+    source_doc: "VOL-04-sessao-estrategica-4-blocos.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: aula-sessao-estrategica-normalized.md, 02:11:17-02:12:00]"
+    pareto_zone: "excellence"
+    related_to: ["KF-vendedor-secreto-013"]
+
+  - kf_id: "KF-vendedor-secreto-019"
+    type: HEURISTIC
+    content: "Executar o pitch de vendas 100% das vezes"
+    domain: "Apresentação da Oferta"
+    source_expert: "Lourival"
+    condition: "SE chegou ao final do diagnóstico, mesmo que pareça que o cliente não vai comprar"
+    action: "ENTÃO apresente o pitch de qualquer forma — a decisão de 'aprovar' o cliente é feita depois, nunca antes de apresentar a oferta"
+    source_doc: "VOL-05-sessao-a1-metodo-fht.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.75
+    inferred: false
+    source_ref: "[SOURCE: SRC-002, ~00:27:38-00:28:02]"
+    pareto_zone: "impact"
+    notes: "Fonte com ruído de ASR nesse trecho (repetição em loop na fonte bruta) — o volume já tratou isso mantendo só a regra, não a repetição."
+
+  - kf_id: "KF-vendedor-secreto-020"
+    type: HEURISTIC
+    content: "Preço → para. O silêncio não precisa ser preenchido"
+    domain: "Apresentação da Oferta"
+    source_expert: "Karol"
+    condition: "SE acabou de dizer o preço da oferta"
+    action: "ENTÃO pare de falar. Não justifique, não suavize, não preencha a pausa — deixe o silêncio existir até a lead reagir"
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 3, Etapa 4]"
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-vendedor-secreto-021"
+    type: HEURISTIC
+    content: "Ancorar o valor antes do preço"
+    domain: "Apresentação da Oferta"
+    source_expert: "Karol"
+    condition: "SE está prestes a revelar o preço da oferta"
+    action: "ENTÃO pergunte antes 'quanto vale pra você chegar em [resultado]?' — construa a percepção de valor antes do número"
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.80
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 3, Etapa 4]"
+    pareto_zone: "impact"
+
+  - kf_id: "KF-vendedor-secreto-022"
+    type: ANTI_PATTERN
+    content: "Revelar o preço fora da sessão (conteúdo público, Instagram, site)"
+    domain: "Apresentação da Oferta"
+    source_expert: "Tomas"
+    consequence: "Elimina a função do funil de diagnóstico como etapa obrigatória — a pessoa decide sem contexto, e a opacidade que sustenta a sessão como evento de valor se perde."
+    alternative: "O preço só é revelado dentro da sessão, pelo closer/expert, depois do diagnóstico."
+    source_doc: "VOL-03-processo-comercial-time.md"
+    source_lens: "L6"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: aula-sessao-estrategica-normalized.md, 00:43:39-00:44:03]"
+    pareto_zone: "impact"
+
+  # ============================================================
+  # DOMINIO 6 — Objeções e Fechamento
+  # ============================================================
+  - kf_id: "KF-vendedor-secreto-023"
+    type: HEURISTIC
+    content: "Nunca rebater objeção direto — pergunta primeiro"
+    domain: "Objeções e Fechamento"
+    source_expert: "Karol"
+    condition: "SE a lead apresenta uma objeção ('vou pensar', 'está caro', 'não tenho tempo')"
+    action: "ENTÃO responda com uma pergunta que investiga a objeção real, nunca com um argumento pronto — objeção declarada ≠ objeção real"
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 3, Etapa 5 — 'Regra de Ouro']"
+    pareto_zone: "crown_jewel"
+
+  - kf_id: "KF-vendedor-secreto-024"
+    type: OUTPUT_FORMAT
+    content: "Tabela de respostas a objeções comuns"
+    domain: "Objeções e Fechamento"
+    source_expert: "Karol"
+    format_template: "'Vou pensar' → 'O que especificamente você está considerando?' | 'Está caro' → 'Quanto está custando ficar no ponto A?' | 'Não tenho tempo' → 'Quantas horas por semana você conseguiria dedicar?'"
+    when_to_use: "Na Etapa 5 (Fechamento) da sessão, aplicando a heurística KF-023."
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L4"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 3, Etapa 5]"
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-vendedor-secreto-025"
+    type: HEURISTIC
+    content: "Cliente precisa fechar o pagamento ainda na câmera"
+    domain: "Objeções e Fechamento"
+    source_expert: "Tomas"
+    condition: "SE o cliente decide comprar durante a sessão"
+    action: "ENTÃO conduza o pagamento ainda na chamada — nunca deixe a pessoa desligar 'pra fazer depois'. Se surgir uma desculpa técnica ('app do banco não abre'), continue negociando: geralmente esconde uma objeção não resolvida"
+    source_doc: "VOL-04-sessao-estrategica-4-blocos.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: aula-sessao-estrategica-normalized.md, 02:21:53-02:22:17]"
+    pareto_zone: "excellence"
+    notes: "Converge em espírito com o hábito de Tomás de sempre fechar na call — reforça a lógica geral de 'nunca saia da call sem resolver o próximo passo concreto', também presente em Karol (KF-028)."
+
+  - kf_id: "KF-vendedor-secreto-026"
+    type: OUTPUT_FORMAT
+    content: "Linhas de negociação de forma de pagamento"
+    domain: "Objeções e Fechamento"
+    source_expert: "Tomas"
+    format_template: "Tem cartão sem restrição → à vista com desconto primeiro, senão 12x. Sem cartão/nome sujo → entrada PIX + restante no boleto. Quer mas 'sem limite agora' → entrada pequena PIX + cobrança no mês seguinte."
+    source_doc: "VOL-04-sessao-estrategica-4-blocos.md"
+    source_lens: "L4"
+    source_tier: "ouro"
+    confidence: 0.80
+    inferred: false
+    source_ref: "[SOURCE: aula-sessao-estrategica-normalized.md, 02:20:34-02:25:23]"
+    pareto_zone: "impact"
+
+  - kf_id: "KF-vendedor-secreto-027"
+    type: FRAMEWORK
+    content: "Cadência de 5 Toques (follow-up de 'vou pensar')"
+    domain: "Objeções e Fechamento"
+    source_expert: "Karol"
+    steps_or_components:
+      - "T1 (24-48h): presença, referência a algo específico que a lead disse, sem pergunta de fechamento"
+      - "T2 (4-5 dias): valor puro, sem mencionar a oferta"
+      - "T3 (8-10 dias): pergunta aberta ('ficou alguma dúvida?')"
+      - "T4 (12-14 dias): custo do status quo"
+      - "T5 (18-21 dias): encerramento gracioso"
+    when_to_use: "Quando a sessão termina em 'vou pensar' — resultado mais comum nas primeiras sessões, não deve ser tratado como falha."
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 4]"
+    pareto_zone: "excellence"
+
+  # ============================================================
+  # DOMINIO 7 — Pós-Sessão
+  # ============================================================
+  - kf_id: "KF-vendedor-secreto-028"
+    type: HEURISTIC
+    content: "Fechar 3 pontos concretos antes do tchau quando a lead diz sim"
+    domain: "Pós-Sessão"
+    source_expert: "Karol"
+    condition: "SE a lead disse sim durante a sessão"
+    action: "ENTÃO confirme ainda na chamada: forma de pagamento, próxima data, canal de comunicação — antes que o entusiasmo esfrie e a decisão vacile"
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 4]"
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-vendedor-secreto-029"
+    type: HEURISTIC
+    content: "Grave todas as calls, sem exceção"
+    domain: "Pós-Sessão"
+    source_expert: "Tomas"
+    condition: "SE vai conduzir qualquer sessão de vendas 1:1"
+    action: "ENTÃO grave a call inteira (com permissão) — proteção contra disputa futura de contrato/cancelamento, e matéria-prima pra revisão e prova de autoridade"
+    source_doc: "VOL-04-sessao-estrategica-4-blocos.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: aula-sessao-estrategica-normalized.md, 02:26:00-02:26:44]"
+    pareto_zone: "impact"
+    related_to: ["KF-vendedor-secreto-030"]
+    notes: "Convergência com Karol, que recomenda o mesmo (KF-030) mas com foco em revisão/aprendizado ao invés de proteção jurídica — os dois motivos coexistem, não competem."
+
+  - kf_id: "KF-vendedor-secreto-030"
+    type: OUTPUT_FORMAT
+    content: "3 Perguntas de Depoimento"
+    domain: "Pós-Sessão"
+    source_expert: "Karol"
+    format_template: "'Antes de começar, como estava a sua situação?' / 'O que mudou?' / 'Para quem você indicaria?'"
+    when_to_use: "No encerramento do trabalho com a cliente, ou quando ela mencionar resultado espontaneamente — nunca logo depois do sim."
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L4"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 4]"
+    pareto_zone: "impact"
+
+  - kf_id: "KF-vendedor-secreto-031"
+    type: PRINCIPLE
+    content: "Um não não é veredicto — fala sobre a pessoa naquele momento, não sobre o método"
+    domain: "Pós-Sessão"
+    source_expert: "Karol"
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 4]"
+    pareto_zone: "impact"
+
+  # ============================================================
+  # DOMINIO 8 — Geração de Leads e Preparação (suporte, fora do foco central de "condução da sessão")
+  # ============================================================
+  - kf_id: "KF-vendedor-secreto-032"
+    type: FRAMEWORK
+    content: "Rastreador de Leads Quentes — 6 grupos × 3 colunas"
+    domain: "Geração de Leads e Preparação"
+    source_expert: "Karol"
+    steps_or_components:
+      - "6 grupos: Círculo Íntimo, Colegas/ex-colegas de área, Clientes/ex-clientes, Seguidores engajados, Conexões frias qualificadas, Fui Prospectada"
+      - "3 colunas de qualificação: Score de Fit, Prioridade de Abordagem, Perfil (Conectora/Analista/Diretiva)"
+    source_doc: "VOL-06-identidade-oferta-leads.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-06, seção 3]"
+    pareto_zone: "impact"
+    notes: "Suporte à preparação, não à condução da sessão em si — relevante pro roteiro personalizado, menos pro comportamento durante a call."
+
+  - kf_id: "KF-vendedor-secreto-033"
+    type: FRAMEWORK
+    content: "4 Canais de Geração de Leads pra Sessão A1 (incluindo Bônus Kinder Ovo)"
+    domain: "Geração de Leads e Preparação"
+    source_expert: "Lourival"
+    steps_or_components:
+      - "Bônus Kinder Ovo — consultoria gratuita embutida como bônus de alta percepção de valor num produto de entrada mais barato"
+      - "Convite de audiência / lista de contatos"
+      - "Tráfego pago"
+      - "Tráfego orgânico + indicação/afiliados"
+    source_doc: "VOL-05-sessao-a1-metodo-fht.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: VOL-05, seção 2]"
+    pareto_zone: "impact"
+
+  - kf_id: "KF-vendedor-secreto-034"
+    type: FRAMEWORK
+    content: "3 Funis de Geração de Demanda (Social Selling, Webinar, Isca)"
+    domain: "Geração de Leads e Preparação"
+    source_expert: "Tomas"
+    steps_or_components:
+      - "Social Selling — abordagem manual no Direct"
+      - "Webinar Semanal / Sala Secreta — aula ao vivo fechada, terminando em pitch"
+      - "Funil de Isca Gratuita — página de captura + VSL + formulário"
+    source_doc: "VOL-02-geracao-demanda.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: aula-sessao-estrategica-normalized.md, 00:59:00-01:32:00]"
+    pareto_zone: "filler"
+    notes: "Tangencial ao propósito central da mente (conduzir/roteirizar a SESSÃO). Candidato a ficar em segundo plano ou até fora do escopo da v1 do Vendedor Secreto — decisão pro Playback."
+
+  # ============================================================
+  # VOCABULARIO ADICIONAL (cross-domain)
+  # ============================================================
+  - kf_id: "KF-vendedor-secreto-035"
+    type: VOCABULARY
+    term: "Sessão Estratégica / Sessão A1 / Sessão de Vendas Secretas"
+    definition: "Três nomes DIFERENTES, de três autores diferentes, pro mesmo tipo geral de evento: uma call 1:1 de diagnóstico + venda de alto ticket. Tomás chama de 'Sessão Estratégica', Lourival de 'Sessão A1' ('1 a 1'), Karol de 'Sessão de Vendas Secretas' ou 'Sessão 1:1'. Não são sinônimos intercambiáveis — cada um tem roteiro e ferramentas próprios."
+    source_expert: "Karol, Tomas, Lourival"
+    domain: "Frameworks de Sessão"
+    usage_context: "O Vendedor Secreto precisa decidir (no Playback) qual nome usar como padrão pra se dirigir ao formato genérico, ou se usa um quarto nome próprio da mente fundida."
+    source_doc: "GLOSSARIO.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "excellence"
+
+  - kf_id: "KF-vendedor-secreto-036"
+    type: VOCABULARY
+    term: "Cara de PIX"
+    definition: "Gíria de Tomás pra 'perfil com sinais visíveis de poder de compra' — usada pra qualificar um lead antes de abordar (bio, fotos, viagens, posicionamento profissional)."
+    source_expert: "Tomas"
+    domain: "Geração de Leads e Preparação"
+    source_doc: "VOL-02-geracao-demanda.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "filler"
+
+  - kf_id: "KF-vendedor-secreto-037"
+    type: EXAMPLE
+    content: "Demonstração completa com o aluno voluntário Thiago: a call de diagnóstico e fechamento inteira, do rapport ao PIX, com dor mapeada sendo o relacionamento com o filho — termina com fechamento via entrada de R$2 mil + parcelamento."
+    domain: "Frameworks de Sessão"
+    source_expert: "Tomas"
+    illustrates: "KF-vendedor-secreto-006"
+    context: "Única demonstração AO VIVO e completa (do início ao fim) entre os 3 experts — Lourival e Karol descrevem o roteiro mas não demonstram uma sessão real ponta a ponta na fonte."
+    source_doc: "VOL-04-sessao-estrategica-4-blocos.md"
+    source_lens: "L5"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: aula-sessao-estrategica-normalized.md, 01:58:43-02:25:51]"
+    pareto_zone: "excellence"
+    notes: "Ativo raro e valioso — se a mente puder citar/usar como exemplo-mestre de como uma sessão real soa, é o único caso ponta-a-ponta disponível nas 3 fontes."
+
+  - kf_id: "KF-vendedor-secreto-038"
+    type: HEURISTIC
+    content: "[L7 — implícito] Os 3 experts nunca ensinam a fazer diagnóstico e oferta na mesma respiração — todos impõem uma transição obrigatória (história pessoal, ou bloco de sonhos, ou apresentação formal) entre o fim do diagnóstico e o início da oferta."
+    domain: "Frameworks de Sessão"
+    source_expert: "Karol, Tomas, Lourival"
+    condition: "SE o diagnóstico acabou de terminar"
+    action: "ENTÃO não pule direto pra oferta — insira uma ponte (história de identificação, transição de bloco, ou resumo do diagnóstico) antes de abrir a apresentação"
+    source_doc: "MAPA-TERRITORIAL.md"
+    source_lens: "L7"
+    source_tier: "ouro"
+    confidence: 0.60
+    inferred: true
+    pareto_zone: "impact"
+    notes: "[extraído de implícito] — nenhum dos 3 experts formaliza isso como regra explícita, mas o padrão se repete nos 3 roteiros. Confirmar com a usuária no Playback antes de tratar como regra da mente."
+
+  # ============================================================
+  # DOMINIO 9 — Qualificação de Lead Pré-Sessão (elevado a core no Playback, 14/09)
+  # ============================================================
+  - kf_id: "KF-vendedor-secreto-039"
+    type: HEURISTIC
+    content: "Lead Scoring A/B/C — rotear o lead conforme qualificação, não tratar todos igual"
+    domain: "Qualificação de Lead Pré-Sessão"
+    source_expert: "Tomas"
+    condition: "SE um lead chega e precisa ser direcionado antes da sessão"
+    action: "ENTÃO classifique como A (muito qualificado — vai direto pro closer/expert principal), intermediário (qualificado com reserva — vai pro closer), ou C (pouco qualificado/frio — vai pro webinar da semana antes de merecer uma sessão 1:1)"
+    exception: "Lead quente mas de baixa capacidade declarada / vindo de indicação pode ir direto pro expert, mesmo sem passar pelo crivo normal — exige mais poder de conversa pessoal."
+    source_doc: "VOL-03-processo-comercial-time.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: aula-sessao-estrategica-normalized.md, 00:37:56-00:40:14]"
+    pareto_zone: "excellence"
+    notes: "Adicionado após feedback da usuária no Playback (14/09) — domínio elevado de 'supporting' pra 'core', pois molda o QUE fazer antes da sessão, não só durante."
+
+  - kf_id: "KF-vendedor-secreto-040"
+    type: HEURISTIC
+    content: "Checklist de qualificação de lead pelo perfil ('Cara de PIX') antes de convidar pra sessão"
+    domain: "Qualificação de Lead Pré-Sessão"
+    source_expert: "Tomas"
+    condition: "SE está avaliando se vale a pena convidar um lead específico pra sessão"
+    action: "ENTÃO confira: tem posicionamento profissional visível na bio? tem sinais de poder aquisitivo (viagens, eventos, empresário)? tem sinais de identidade compatível com o público-alvo? o comentário/interação foi genuína (não hostil)? já usa o digital pra gerar renda?"
+    source_doc: "REPERTORIO.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.80
+    inferred: false
+    source_ref: "[SOURCE: aula-sessao-estrategica-normalized.md, 02:59:44-03:09:59]"
+    pareto_zone: "impact"
+    related_to: ["KF-vendedor-secreto-011"]
+    notes: "Complementar à Leitura de Lead em 4 Camadas de Karol (KF-011) — Tomás qualifica pra decidir SE convida, Karol calibra COMO abordar depois de decidido. As duas técnicas são compatíveis em sequência."
+
+  - kf_id: "KF-vendedor-secreto-041"
+    type: OUTPUT_FORMAT
+    content: "Formulário de Pré-Diagnóstico — 4 seções, 12 perguntas, preenchido pela lead antes da sessão"
+    domain: "Qualificação de Lead Pré-Sessão"
+    source_expert: "Karol"
+    format_template: "Seção 1 — Sobre Você | Seção 2 — Sua Situação Atual | Seção 3 — Contexto Econômico | Seção 4 — Para a Nossa Conversa. 12 perguntas no total, cada uma com tipo de resposta definido (curta, múltipla escolha, etc), enviado logo após a lead confirmar presença na sessão."
+    when_to_use: "Enviado assim que a sessão é confirmada, para que o vendedor entre no Diagnóstico já sabendo o contexto básico — economiza os primeiros minutos da call."
+    source_doc: "VOL-07-abordagem-sessao-ecroi.md"
+    source_lens: "L4"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: VOL-07, seção 2 + M3.3]"
+    pareto_zone: "excellence"
+    notes: "Adicionado após feedback da usuária no Playback (14/09). Este é o elo que conecta Qualificação Pré-Sessão ao Diagnóstico (KF-016) — o formulário é o que o vendedor releva/aprofunda na Etapa 2 da sessão, não repete do zero."

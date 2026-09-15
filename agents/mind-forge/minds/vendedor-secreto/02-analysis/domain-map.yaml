@@ -1,0 +1,124 @@
+mind_slug: "vendedor-secreto"
+mode: "synthetic"
+total_domains: 9
+playback_iteration: "1 correção significativa integrada em 14/09/2026 — ver secao 'correcoes_do_playback' ao final"
+
+domains:
+  - name: "Frameworks de Sessão"
+    description: "O núcleo da mente — os 3 roteiros de sessão nomeados (um por expert) e os princípios que os conectam."
+    kf_count: 9
+    kf_ids: ["KF-vendedor-secreto-006", "KF-vendedor-secreto-007", "KF-vendedor-secreto-008", "KF-vendedor-secreto-009", "KF-vendedor-secreto-010", "KF-vendedor-secreto-035", "KF-vendedor-secreto-037", "KF-vendedor-secreto-038"]
+    frameworks_count: 4
+    heuristics_count: 1
+    examples_count: 1
+    experts_representados: ["Tomas", "Lourival", "Karol"]
+    importancia: "core"
+
+  - name: "Identidade e Mentalidade de Venda"
+    description: "O que precisa estar resolvido internamente antes de qualquer técnica — medo de cobrar, vender como servir, tolerância ao não."
+    kf_count: 5
+    frameworks_count: 0
+    heuristics_count: 1
+    experts_representados: ["Karol", "Tomas", "Lourival"]
+    importancia: "core"
+
+  - name: "Rapport e Abertura"
+    description: "Como abrir a sessão, ler o perfil da lead e calibrar o tom."
+    kf_count: 4
+    frameworks_count: 1
+    heuristics_count: 1
+    experts_representados: ["Karol", "Tomas"]
+    importancia: "core"
+
+  - name: "Diagnóstico e Perguntas"
+    description: "Como conduzir a etapa de perguntas investigativas antes da oferta."
+    kf_count: 3
+    heuristics_count: 2
+    experts_representados: ["Lourival", "Karol"]
+    importancia: "core"
+
+  - name: "Apresentação da Oferta"
+    description: "Como apresentar a oferta depois do diagnóstico — narrativa, confirmação, preço."
+    kf_count: 5
+    heuristics_count: 4
+    experts_representados: ["Tomas", "Lourival", "Karol"]
+    importancia: "core"
+
+  - name: "Objeções e Fechamento"
+    description: "Como responder objeções e conduzir o fechamento (incluindo forma de pagamento)."
+    kf_count: 5
+    heuristics_count: 2
+    frameworks_count: 1
+    experts_representados: ["Karol", "Tomas"]
+    importancia: "core"
+
+  - name: "Pós-Sessão"
+    description: "O que fazer depois da call — os 3 resultados possíveis, gravação, depoimento."
+    kf_count: 4
+    heuristics_count: 2
+    experts_representados: ["Karol", "Tomas"]
+    importancia: "core"
+
+  - name: "Geração de Leads e Preparação"
+    description: "Como preencher a agenda de sessões — funis, canais, rastreador. Suporte à preparação, não à condução da sessão em si."
+    kf_count: 4
+    frameworks_count: 3
+    experts_representados: ["Karol", "Lourival", "Tomas"]
+    importancia: "supporting"
+    nota: "Confirmado como supporting no Playback (14/09) — mantido resumido. Diferente de 'Qualificação de Lead Pré-Sessão' (domínio 9, elevado a core), que é sobre QUEM merece ir pra sessão, não sobre como encher a agenda."
+
+  - name: "Qualificação de Lead Pré-Sessão"
+    description: "Como decidir se/como um lead chega à sessão, e o que coletar dele antes de começar — a peça que faltava entre 'gerar o lead' e 'conduzir a sessão', apontada pela usuária no Playback."
+    kf_count: 3
+    kf_ids: ["KF-vendedor-secreto-039", "KF-vendedor-secreto-040", "KF-vendedor-secreto-041"]
+    heuristics_count: 2
+    output_formats_count: 1
+    experts_representados: ["Tomas", "Karol"]
+    importancia: "core"
+    nota: "ADICIONADO no Playback (14/09) — a usuária identificou que a análise original tinha subestimado isso. Elo entre Geração de Leads (domínio 8) e Diagnóstico (domínio 4): o Formulário de Pré-Diagnóstico (KF-041) é revisitado/aprofundado na Etapa 2 da sessão (KF-016)."
+
+convergences:
+  - topic: "Diagnóstico sempre antes da oferta"
+    experts: ["Tomas", "Lourival", "Karol"]
+    kf_ref: "KF-vendedor-secreto-010"
+    descricao: "Os 3 frameworks de sessão, apesar de nomes e estruturas diferentes, seguem exatamente a mesma lógica: ouvir/diagnosticar primeiro, construir ponte, só então apresentar a oferta. É a convergência mais forte da mente — candidata a virar o Princípio Universal #1."
+
+  - topic: "Venda ética / não manipular"
+    experts: ["Tomas", "Lourival", "Karol"]
+    kf_ref: "KF-vendedor-secreto-001, KF-vendedor-secreto-004"
+    descricao: "Tomás ('seja justo, não empurre goela abaixo'), Lourival ('100% integridade') e Karol ('vender é servir quem já tem o problema') convergem em tratar a venda ética como pré-requisito, cada um com sua própria formulação."
+
+  - topic: "Nunca sair da call sem resolver o próximo passo concreto"
+    experts: ["Tomas", "Karol"]
+    kf_ref: "KF-vendedor-secreto-025, KF-vendedor-secreto-028"
+    descricao: "Tomás foca em fechar o pagamento ainda na câmera; Karol foca em confirmar 3 pontos (pagamento/data/canal) antes do tchau. Mesma lógica de fundo, formulações complementares."
+
+  - topic: "Gravar as sessões"
+    experts: ["Tomas", "Karol"]
+    kf_ref: "KF-vendedor-secreto-029"
+    descricao: "Tomás por proteção jurídica/contratual, Karol por revisão e prova de autoridade — motivos diferentes, mesma prática recomendada."
+
+tensions_resolvidas_no_playback:
+  - topic: "3 nomes diferentes pro mesmo tipo de sessão"
+    decisao_usuaria: "'Sessão de Vendas Secretas' — nome de Karol adotado como padrão da mente."
+    kf_afetado: "KF-vendedor-secreto-035 (atualizar term/usage_context na forja)"
+
+  - topic: "Rigor de execução do pitch"
+    decisao_usuaria: "Confirmada a síntese proposta: avisar já no início da sessão (seeding) que, após o diagnóstico, a oferta será apresentada — depois disso, o pitch é executado sempre (disciplina de Lourival), nunca pulado por pessimismo do vendedor."
+    kf_afetado: "KF-vendedor-secreto-018 + KF-vendedor-secreto-019 (fundir em 1 heurística única na forja)"
+
+framework_de_sessao_fundido:
+  status: "Proposto no Playback (14/09), pendente de confirmação final da usuária antes da Fase 4 (Forja)"
+  nome_provisorio: "Roteiro da Sessão de Vendas Secretas (fusão Tomás+Lourival+Karol)"
+  etapas:
+    - "1. Abertura + Seeding — rapport (comum aos 3) + aviso explícito de que, após o diagnóstico, virá uma oferta"
+    - "2. Diagnóstico Estruturado — perguntas por categoria de potencial/dificuldade (estrutura de Lourival) + técnica de anotar palavras exatas da lead pra espelhar depois (Karol) — alimentado pelo Formulário de Pré-Diagnóstico (KF-041) já respondido"
+    - "3. Ponte de Identificação — a mente oferece 2 estilos e pergunta qual combina: História pessoal do vendedor (Karol) OU Bloco de Sonhos / visualização do futuro resolvido (Tomás)"
+    - "4. Oferta com Narrativa ECROI — estrutura retórica de Karol (Colapso→Reenquadramento→Ordem→Inevitabilidade), enriquecida com o detalhamento concreto de 'como mostrar o programa' de Tomás"
+    - "5. Fechamento — tabela de objeções de Karol + linhas de negociação de pagamento por perfil financeiro de Tomás + disciplina de sempre executar o pitch de Lourival"
+  precondicao: "Qualificação de Lead Pré-Sessão (domínio 9) já rodou antes da Etapa 1 — lead scoring (Tomás) + formulário preenchido (Karol)"
+  nota: "Isto NÃO é mais 'escolha 1 dos 3 frameworks' — é uma quarta estrutura, própria do Vendedor Secreto, com proveniência rastreável passo a passo a qual expert contribuiu o quê. Precisa de confirmação final da usuária antes de virar a KB forjada."
+
+gaps_detectados:
+  - "Nenhum dos 3 experts detalha o que fazer se a lead interromper a sessão no meio (call cai, imprevisto) — gap real, não coberto por nenhuma fonte."
+  - "Domínio 'Geração de Leads e Preparação' tem 3 frameworks diferentes (funis, canais, rastreador) mas nenhum deles foi extraído com o mesmo nível de exemplo concreto que os frameworks de sessão — mais raso, coerente com ser periférico ao propósito da mente."

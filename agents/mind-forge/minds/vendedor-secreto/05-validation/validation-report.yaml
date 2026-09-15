@@ -1,0 +1,34 @@
+validation:
+  mind_slug: "vendedor-secreto"
+  mind_name: "Vendedor Secreto"
+  mode: "synthetic"
+  structural_validation: "PASS"
+  smoke_tests:
+    test_1_modo_principal: "PASS"
+    test_2_immune_system: "PASS"
+    test_3_edge_case: "PASS"
+    test_4_context_death_test: "PASS (após 1 refinamento no greeting)"
+  refinement_cycle:
+    iteracao_1: "Greeting ajustado para deixar explícito que a mente funciona mesmo sem P1/P2/P3/P4 prontos — gap encontrado no Context Death Test."
+  user_approved: true
+  installed_at: "agents/vendedor-secreto/"
+  slash_command: "/vendedor-secreto"
+  completed_at: "2026-09-14"
+
+fontes:
+  - "agents/etlmaker/kbs/sessao-estrategica/ (KB Sessão Estratégica, 7 volumes, 3 experts: Tomás, Lourival, Karol)"
+
+sumario_da_mente:
+  total_kfs: 41
+  total_domains: 9
+  crown_jewels: 2
+  frameworks_na_kb: "10+ (roteiro fundido de 5 etapas + 3 originais + suporte)"
+  heuristicas_mestras: 15
+  immune_system_triggers: 5
+  modos_operacionais: 4
+
+decisoes_de_design_da_usuaria:
+  - "Nome padrão pro tipo de sessão: 'Sessão de Vendas Secretas'"
+  - "Framework de sessão: fusão própria em 5 etapas (não escolha de 1 dos 3 originais)"
+  - "Rigor do pitch: seeding no início + execução garantida depois do diagnóstico"
+  - "Domínio 'Qualificação de Lead Pré-Sessão' adicionado como core, a pedido da usuária"

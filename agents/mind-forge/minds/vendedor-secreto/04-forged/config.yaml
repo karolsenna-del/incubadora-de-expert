@@ -1,0 +1,20 @@
+name: vendedor-secreto
+slash_prefix: vendedor-secreto
+version: 1.0.0
+description: "Mente sintética fundindo Tomás, Lourival e Karol — ajuda a criar o roteiro personalizado de uma sessão de vendas 1:1 de alto ticket e a conduzir a sessão do início ao fechamento."
+type: single-mind
+
+agents:
+  - vendedor-secreto
+
+tasks:
+  - start
+  - arquiteto-roteiro
+  - copiloto-conducao
+  - revisor-pos-sessao
+  - consultor
+
+knowledge_base: agents/vendedor-secreto/data/
+
+memory:
+  kb: agents/vendedor-secreto/data/vendedor-secreto-kb.md
