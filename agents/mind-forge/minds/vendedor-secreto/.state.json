@@ -1,0 +1,33 @@
+{
+  "mind_slug": "vendedor-secreto",
+  "mind_name": "Vendedor Secreto",
+  "mode": "synthetic",
+  "purpose": "Ajudar a aluna do Expert360 (ou cliente de mentoria individual) a criar o roteiro personalizado da sua sessao de vendas 1:1 e conduzir a sessao inteira do inicio ao fechamento. Entregavel do curso, tambem personalizado como servico da Karol.",
+  "experts_fundidos": [
+    {"nome": "Tomas", "fonte": "VOL-01 a VOL-04", "framework_de_sessao": "Estrutura de 4 Blocos (rapport -> dores/NEPQ -> solucao -> bloco de sonhos/pitch)"},
+    {"nome": "Lourival", "fonte": "VOL-05", "framework_de_sessao": "Questionario Raio-X (RX) por areas de potencial/dificuldade"},
+    {"nome": "Karol", "fonte": "VOL-06 e VOL-07", "framework_de_sessao": "ECROI (Colapso->Reenquadramento->Ordem->Inevitabilidade)", "nota": "autora e dona do repositorio, autoridade primaria"}
+  ],
+  "current_phase": 5,
+  "phase_status": {
+    "phase_0": "completed",
+    "phase_1": "completed",
+    "phase_2": "completed",
+    "phase_3": "completed",
+    "phase_4": "completed",
+    "phase_5": "completed"
+  },
+  "sources": ["agents/etlmaker/kbs/sessao-estrategica/"],
+  "total_kfs": 41,
+  "domains_identified": 9,
+  "quality_gates_passed": ["QG-MF-001", "QG-MF-002", "QG-MF-003", "QG-MF-004", "QG-MF-005"],
+  "playback_summary": "Usuaria validou o mapa com 3 ajustes: (1) nome padrao 'Sessao de Vendas Secretas', (2) framework de sessao fundido em 5 etapas proprio (nao escolha de 1 dos 3), (3) novo dominio core 'Qualificacao de Lead Pre-Sessao' com 3 KFs adicionados. Aprovacao final: 'perfeito, siga'.",
+  "completed_at": "2026-09-14",
+  "installed": {
+    "path": "agents/vendedor-secreto/",
+    "slash_command": "/vendedor-secreto"
+  },
+  "started_at": "2026-09-14",
+  "paused_at": "",
+  "resumed_at": ""
+}

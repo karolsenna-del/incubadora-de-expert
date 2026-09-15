@@ -1,0 +1,48 @@
+metrics:
+  total_kfs: 41
+  playback_update: "14/09/2026 — 3 KFs adicionados (039-041, domínio 'Qualificação de Lead Pré-Sessão') após feedback da usuária no Playback."
+  by_type:
+    PRINCIPLE: 5
+    FRAMEWORK: 9
+    HEURISTIC: 15
+    EXAMPLE: 3
+    ANTI_PATTERN: 2
+    VOCABULARY: 3
+    OUTPUT_FORMAT: 4
+  by_pareto_zone:
+    crown_jewel: 2
+    excellence: 19
+    impact: 18
+    filler: 2
+    nota: "Distribuição bem mais concentrada em excellence/impact do que a curva-padrão (5/10-15/20-30/50-60) sugerida na regra — esperado aqui, porque as 3 fontes já passaram por um pipeline de ETL curado (ETLmaker v3.0, ouro tier, validação 98.81%) antes de chegar ao Mind Forge. Não é fonte bruta cheia de ruído/generalidades — é conhecimento já filtrado, então o filler natural é baixo (5.3%, não 50-60%)."
+  total_domains: 9
+  average_confidence: 0.86
+  inferred_ratio: 0.03
+  source_ref_coverage: 0.88
+  convergences: 4
+  tensions: 3
+  tensions_resolvidas_no_playback: 2
+  tensao_pendente: "Framework de sessão fundido (proposta 'Roteiro da Sessão de Vendas Secretas' em domain-map.yaml) — aguardando confirmação final antes da Fase 4"
+  gaps:
+    - "Nenhum expert cobre o que fazer se a sessão for interrompida no meio (imprevisto técnico, ligação cai)"
+    - "Domínio 'Geração de Leads e Preparação' mais raso em exemplos concretos que os domínios de condução de sessão — coerente com ser periférico ao propósito declarado da mente (roteirizar + conduzir a sessão, não gerar a agenda)"
+
+self_validation_checklist:
+  citacoes_granulares: "PASS — 89% dos KFs com source_ref preenchido (>=60% exigido)"
+  voice_profile_completo: "PASS — 3 perfis individuais + proposta de voz fundida, com >=5 signature phrases verificáveis por expert"
+  pareto_classificado: "PASS — 38/38 KFs com pareto_zone atribuído"
+  crown_jewels_identificados: "PASS — 2/38 (5.3%), corrigido de uma primeira passada com 8/38 (21%, generosa demais)"
+  trinity_por_dominio: "PASS PARCIAL — os 6 domínios core (Frameworks de Sessão, Identidade, Rapport, Diagnóstico, Apresentação da Oferta, Objeções/Fechamento, Pós-Sessão) têm framework+heurística+exemplo. 'Geração de Leads e Preparação' tem framework mas exemplo mais fraco — registrado como gap, não bloqueante."
+  zero_kfs_genericos: "PASS — nenhum KF sobrevivente é do tipo 'ser organizado é importante'; todos rastreiam a uma fala/decisão específica de um dos 3 experts"
+  tensoes_documentadas: "PASS — 3 tensões registradas em domain-map.yaml com os dois lados de cada uma, mais proposta de encaminhamento pro Playback"
+  confidence_baseline_aplicado: "PASS — confidences seguem a tabela de kf-classification.yaml (FRAMEWORK direto ~0.90, HEURISTIC direto ~0.85, L7 implícito 0.60)"
+
+quality_gate_QG-MF-002:
+  minimum_kfs: "38 >= 20 — PASS"
+  minimum_frameworks: "9 >= 2 — PASS"
+  minimum_heuristics: "13 >= 3 — PASS"
+  minimum_domains: "8 >= 3 — PASS"
+  confianca_media: "0.86 >= 0.7 — PASS"
+  voice_profile_completo: "PASS"
+  inferred_ratio: "0.03 < 0.4 — PASS"
+  veredito: "PASS — todos os critérios atendidos com folga"
