@@ -68,6 +68,103 @@ mantido só como referência histórica das perguntas originais, não como o pro
 
 ---
 
+## 2. Individual — R$10.000/12m (3x R$1.035 no cartão ou à vista)
+
+**Quando enviar:** assim que o pagamento/contrato for confirmado (Voomp, produto `individual`,
+checkout `/16367` — ou fechamento manual via PIX/contrato quando for o caso, já que é venda
+1:1 de alto ticket).
+
+**Pré-requisito:** nenhum arquivo separado pra anexar. A página de onboarding
+(`onboarding.incubadoradeexpert.com.br`) já explica a jornada de 12 meses, os encontros, o
+suporte e onde preencher o DNA do Expert — a mensagem só precisa apontar pra ela, não repetir
+o conteúdo (fonte: `lp-onboarding-incubadora/briefing.md`, página publicada 31/08/2026).
+
+**MENSAGEM (WhatsApp):**
+```
+Seja bem-vinda(o) à Incubadora de Expert! Você está começando uma jornada de
+12 meses — do método autoral validado até as primeiras vendas reais.
+
+Antes da nossa primeira sessão, dá uma passada pela página de onboarding — ela
+explica como funciona a jornada, os encontros e o suporte:
+
+https://onboarding.incubadoradeexpert.com.br
+
+Seu acesso à Área de Membros já está liberado (usa o mesmo e-mail da compra
+pra entrar):
+
+https://membros.incubadoradeexpert.com.br
+
+A única coisa que falta antes de eu marcar nossa 1ª sessão é você responder o
+DNA do Expert (o link também está na página de onboarding) — assim que eu
+receber suas respostas, entro em contato pra agendarmos.
+
+Parabéns pela decisão!
+```
+
+**Por que esse formato:**
+- Não repete o conteúdo da página de onboarding (jornada em 5 fases, encontros, suporte, Drive)
+  — ela já existe e já faz isso melhor que uma mensagem de WhatsApp conseguiria. A mensagem só
+  entrega os 2 links e o próximo passo.
+- Mesmo padrão de fechamento do Sprint: "eu entro em contato pra agendarmos" (não o cliente
+  escolhendo sozinho) + "Parabéns pela decisão!" no final. **Confirmado pela Karol (14/09)**
+  que esse padrão vale também pra Individual.
+- Menciona "mesmo e-mail da compra" pro login na Área de Membros — gap real já documentado
+  (checkout vs. login), mesma frase já usada na página de vendas do Sprint.
+
+**O que acontece quando o cliente termina o DNA do Expert:** mesmo padrão do Sprint — o
+`diagnostico-interativo.html` do DNA do Expert (`lp-onboarding-incubadora/dna-do-expert/`) está
+na lista dos "5 diagnósticos" corrigidos em 11/09 (ver contexto-dinamico.md) — Karol recebe
+e-mail automático quando o aluno termina, não depende de aviso manual.
+
+**Pendência real que isso resolve:** este é o item que ficou em aberto desde a weekly de 02/09
+("mensagem de boas-vindas atualizada com os links da página de onboarding e da área de membros")
+— registrado como `[ ]` não feito em
+`incubadora-de-expert-individual/checklist-producao.md` linha 13. Ao aprovar esta mensagem,
+esse item pode ser marcado como concluído.
+
+**Grupo (R$5.000/12m) — ADIADO DE PROPÓSITO (decisão da Karol, 14/09).** A página de onboarding
+atual descreve especificamente o formato **1:1** ("programa personalizado 1:1", "14 sessões
+1:1") — não serve pro Grupo sem ajuste, e o Grupo já tem 2 alunas reais (Rosiani, Analia). A
+Karol decidiu: (1) terminar as mensagens dos outros produtos primeiro, (2) só depois construir
+uma página de onboarding própria pro Grupo (rotear pro Squad LPago Arcane ou adaptar a existente
+— decidir na hora), (3) escrever a mensagem do Grupo depois que a página existir. Não escrever
+essa mensagem agora — ficaria presa numa página que descreve a experiência errada.
+
+---
+
+## 3. Expert360º — R$497 (funil) / R$697 (plataforma)
+
+**Quando enviar:** assim que o pagamento aparecer confirmado (Voomp, produto `expert360`,
+checkout `/15514`).
+
+**Pré-requisito:** nenhum — checkout automatizado, sem contato pessoal antes da compra
+(diferente de todos os outros produtos desta lista).
+
+**MENSAGEM (WhatsApp):**
+```
+Seja bem-vinda(o) ao Expert360º! Seu acesso já está liberado na Área de
+Membros — usa o mesmo e-mail da compra pra entrar:
+
+https://membros.incubadoradeexpert.com.br
+
+O curso é no seu ritmo: 5 módulos (M0 a M4), com um agente de IA te
+acompanhando em cada etapa.
+
+Parabéns pela decisão!
+```
+
+**Por que esse formato:**
+- Sem "próxima sessão" nem "vou entrar em contato" — não existe encontro marcado, é self-paced.
+  Diferente de todos os outros produtos da lista.
+- **Removido (decisão da Karol, 14/09):** a frase original tinha "não precisa de agenda comigo"
+  — tirado porque passa a ideia de que o aluno está sozinho no processo, o que pode gerar
+  frustração. O agente de IA por módulo já comunica acompanhamento sem prometer contato pessoal
+  que não existe nesse produto.
+- Sem link de diagnóstico — o Expert360º não tem etapa de diagnóstico prévio, o aluno entra
+  direto no curso.
+
+---
+
 ## Estado da automação (14/09/2026)
 
 **Hoje é 100% manual.** Não existe nada ligando "pagamento confirmado" → "mensagem enviada":
@@ -82,5 +179,6 @@ API, ou pelo menos um alerta pra Karol saber que precisa mandar). Este arquivo j
 como fonte das mensagens por produto quando isso for construído.
 
 **Próximo passo combinado:** adaptar esse mesmo formato pros demais produtos (Método Express,
-Método VIP, Expert360º, Diagnóstico Ferramentas, Grupo, Individual) — cada um entra numa seção
-nova aqui, mesma lógica: só o que muda de fato entre eles.
+Método VIP, Expert360º, Diagnóstico Ferramentas, Grupo) — cada um entra numa seção nova aqui,
+mesma lógica: só o que muda de fato entre eles. Grupo provavelmente reaproveita quase 100% da
+seção do Individual (ver nota lá).
