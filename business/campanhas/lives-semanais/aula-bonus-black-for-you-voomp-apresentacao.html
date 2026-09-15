@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<title>Consegui a certificação, e agora?</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap">
+<style>
+  :root{
+    --laranja:#f85627;
+    --cinza:#ddddde;
+    --preto:#090a0b;
+    --branco:#fcfcfc;
+    --font-display:'Sora',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --font-body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;background:var(--preto);}
+  body{
+    font-family:var(--font-body);
+    overflow:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  .deck{width:100vw;height:100vh;position:relative;}
+  .slide{
+    position:absolute;inset:0;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    padding:5.5vw 7vw;
+  }
+  .slide.active{display:flex;}
+  .slide[data-bg="preto"]{background:var(--preto);color:var(--branco);}
+  .slide[data-bg="branco"]{background:var(--branco);color:var(--preto);}
+  .slide[data-bg="cinza"]{background:var(--cinza);color:var(--preto);}
+  .slide[data-bg="laranja"]{background:var(--laranja);color:var(--branco);}
+
+  .kicker{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:clamp(11px,1vw,14px);
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    opacity:.6;
+    margin-bottom:1.4vw;
+    display:flex;align-items:center;gap:.6em;
+  }
+  .kicker .dot{width:.5em;height:.5em;border-radius:50%;background:var(--laranja);flex:none;}
+  .kicker.on-laranja .dot{background:var(--branco);}
+  .kicker.on-laranja{opacity:.85;}
+
+  h1{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:clamp(30px,4.4vw,64px);
+    line-height:1.08;
+    letter-spacing:-.03em;
+    text-wrap:balance;
+    max-width:17ch;
+  }
+  h2{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:clamp(24px,3.2vw,46px);
+    line-height:1.14;
+    letter-spacing:-.02em;
+    text-wrap:balance;
+    max-width:18ch;
+    margin-bottom:1.6vw;
+  }
+  .sub{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:clamp(15px,1.6vw,22px);
+    opacity:.75;
+    margin-top:1vw;
+    max-width:34ch;
+  }
+  p.lead{
+    font-size:clamp(15px,1.35vw,21px);
+    line-height:1.55;
+    max-width:52ch;
+  }
+  p.small{
+    font-size:clamp(12px,1vw,15px);
+    line-height:1.5;
+    opacity:.68;
+    max-width:48ch;
+    margin-top:1vw;
+  }
+  .stack{display:flex;flex-direction:column;gap:1.1vw;}
+
+  /* split layout: texto à esquerda, reforço visual à direita — usa a largura toda do slide 16:9 */
+  .split{display:flex;align-items:center;gap:4vw;width:100%;}
+  .split .split-text{flex:1 1 auto;min-width:0;max-width:44vw;}
+  .split .split-visual{flex:1 1 auto;display:flex;align-items:center;justify-content:center;min-width:0;}
+  .deco-icon{width:min(20vw,260px);height:min(20vw,260px);color:var(--laranja);opacity:.16;}
+  [data-bg="preto"] .deco-icon{opacity:.22;}
+
+  /* pill */
+  .pill{
+    display:inline-flex;align-items:center;gap:.5em;
+    font-family:var(--font-display);font-weight:700;
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    padding:.5em 1em;border-radius:100px;
+    background:var(--laranja);color:var(--branco);
+    width:fit-content;margin-bottom:1.2vw;
+  }
+
+  /* cards */
+  .grid{display:grid;gap:1.4vw;margin-top:1.6vw;}
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .card{
+    border-radius:16px;
+    padding:1.8vw 1.6vw;
+    display:flex;flex-direction:column;gap:.8vw;
+  }
+  [data-bg="preto"] .card{background:rgba(252,252,252,.08);border:1px solid rgba(252,252,252,.14);}
+  [data-bg="branco"] .card, [data-bg="cinza"] .card{
+    background:rgba(252,252,252,.9);
+    border:1px solid rgba(9,10,11,.08);
+    box-shadow:0 1px 2px rgba(9,10,11,.04);
+  }
+  [data-bg="cinza"] .card{background:var(--branco);}
+  .card .icon{width:2.2vw;height:2.2vw;min-width:28px;min-height:28px;color:var(--laranja);}
+  .card h3{font-family:var(--font-display);font-weight:700;font-size:clamp(15px,1.3vw,19px);line-height:1.25;}
+  .card p{font-size:clamp(12.5px,1.05vw,15px);line-height:1.48;opacity:.78;}
+  .card .tag{
+    font-family:var(--font-display);font-weight:700;font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--laranja);
+  }
+
+  /* quote */
+  .quote-mark{
+    font-family:var(--font-display);font-size:clamp(50px,6vw,90px);font-weight:800;
+    color:rgba(252,252,252,.35);line-height:.6;margin-bottom:.2vw;
+  }
+  [data-bg="branco"] .quote-mark,[data-bg="cinza"] .quote-mark{color:rgba(9,10,11,.18);}
+  .quote-text{
+    font-family:var(--font-display);font-weight:700;font-size:clamp(24px,3vw,42px);
+    line-height:1.22;letter-spacing:-.01em;max-width:22ch;text-wrap:balance;
+  }
+
+  /* stat row (números pequenos, ex: 0 · 1 · 4) */
+  .stat-row{display:flex;align-items:baseline;gap:1.1vw;margin-top:1.6vw;}
+  .stat-row .n{font-family:var(--font-display);font-weight:800;font-size:clamp(30px,3.4vw,50px);color:var(--laranja);}
+  .stat-row .sep{font-size:clamp(18px,1.8vw,26px);opacity:.35;}
+  .stat-label{font-family:var(--font-display);font-weight:700;font-size:clamp(12px,1.05vw,15px);letter-spacing:.04em;opacity:.7;margin-top:.5vw;}
+
+  /* mini bar chart (8 lançamentos: 0 · 1 · 4 vendas) */
+  .mini-bars{display:flex;align-items:flex-end;gap:1.6vw;height:14vw;}
+  .mini-bars .bar-col{display:flex;flex-direction:column;align-items:center;gap:.6vw;height:100%;justify-content:flex-end;}
+  .mini-bars .bar-val{font-family:var(--font-display);font-weight:800;font-size:clamp(15px,1.3vw,19px);color:var(--preto);}
+  .mini-bars .bar{width:min(3.4vw,44px);border-radius:6px 6px 2px 2px;background:var(--laranja);}
+  .mini-bars .bar-tag{font-family:var(--font-display);font-weight:700;font-size:clamp(10px,.85vw,12.5px);opacity:.55;text-transform:uppercase;letter-spacing:.04em;}
+
+  /* stat tile grande (gate) */
+  .gate-wrap{display:flex;align-items:center;gap:3.6vw;margin-top:2.4vw;}
+  .gate-num{font-family:var(--font-display);font-weight:800;font-size:clamp(70px,8.5vw,130px);line-height:1;}
+  .gate-label{font-family:var(--font-display);font-weight:700;font-size:clamp(14px,1.2vw,17px);letter-spacing:.04em;max-width:14ch;line-height:1.3;opacity:.9;}
+  .gate-plus{font-family:var(--font-display);font-weight:800;font-size:clamp(34px,3.4vw,48px);opacity:.6;}
+
+  /* cycle diagram */
+  .cycle-wrap{display:flex;align-items:center;justify-content:space-between;margin-top:2.6vw;gap:1.2vw;max-width:64vw;}
+  .cycle-step{display:flex;flex-direction:column;align-items:center;gap:1vw;text-align:center;max-width:14vw;}
+  .cycle-step .num{
+    width:4.2vw;height:4.2vw;min-width:52px;min-height:52px;border-radius:50%;
+    background:var(--laranja);color:var(--branco);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);font-weight:800;font-size:clamp(18px,1.7vw,24px);
+  }
+  .cycle-step p{font-family:var(--font-display);font-weight:700;font-size:clamp(15px,1.3vw,19px);}
+  .cycle-arrow{color:var(--laranja);opacity:.5;font-size:2.2vw;flex:1;text-align:center;}
+
+  /* comparison columns */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:2vw;margin-top:1.8vw;}
+  .col{border-radius:16px;padding:1.8vw;display:flex;flex-direction:column;gap:.9vw;}
+  .col.dim{background:rgba(252,252,252,.06);border:1px solid rgba(252,252,252,.14);}
+  [data-bg="branco"] .col.dim,[data-bg="cinza"] .col.dim{background:rgba(9,10,11,.05);border:1px solid rgba(9,10,11,.1);}
+  .col.bright{background:var(--laranja);color:var(--branco);}
+  .col .col-label{font-family:var(--font-display);font-weight:800;font-size:clamp(13px,1.1vw,16px);letter-spacing:.08em;text-transform:uppercase;}
+  .col p{font-size:clamp(13px,1.1vw,16px);line-height:1.5;opacity:.9;}
+
+  /* tuning diagram (fio condutor) */
+  .tune-wrap{display:flex;align-items:center;justify-content:space-between;gap:2.2vw;margin-top:2.8vw;max-width:60vw;}
+  .tune-step{display:flex;flex-direction:column;align-items:flex-start;gap:1vw;max-width:19vw;}
+  .tune-icon{width:4.6vw;height:4.6vw;min-width:52px;min-height:52px;color:var(--laranja);}
+  .tune-step h3{font-family:var(--font-display);font-weight:800;font-size:clamp(18px,1.7vw,24px);}
+  .tune-step p{font-size:clamp(14px,1.2vw,17px);opacity:.75;line-height:1.4;}
+  .tune-arrow{color:var(--laranja);opacity:.55;font-size:2.2vw;flex:1;text-align:center;}
+
+  /* objection -> affirmation, compact list */
+  .obj-list{display:flex;flex-direction:column;margin-top:1.3vw;}
+  .obj-row{
+    display:grid;grid-template-columns:minmax(0,34%) auto minmax(0,1fr);
+    align-items:center;gap:1vw;padding:.85vw 0;
+    border-top:1px solid rgba(9,10,11,.1);
+  }
+  .obj-row:last-child{border-bottom:1px solid rgba(9,10,11,.1);}
+  .obj-row .obj{font-size:clamp(12px,1vw,14.5px);opacity:.55;text-decoration:line-through;text-decoration-color:var(--laranja);text-decoration-thickness:1.5px;line-height:1.3;}
+  .obj-row .arrow{color:var(--laranja);font-weight:700;}
+  .obj-row .aff{font-family:var(--font-display);font-weight:700;font-size:clamp(13px,1.05vw,15.5px);line-height:1.32;}
+
+  /* recap */
+  .recap{display:flex;flex-direction:column;gap:1.2vw;margin-top:1.6vw;}
+  .recap-item{display:flex;gap:1.2vw;align-items:flex-start;}
+  .recap-item .num{font-family:var(--font-display);font-weight:800;font-size:clamp(22px,2vw,30px);color:var(--laranja);min-width:1.4em;}
+  .recap-item p{font-size:clamp(14px,1.2vw,18px);line-height:1.45;font-weight:600;font-family:var(--font-display);}
+
+  /* cta */
+  .cta-head{font-family:var(--font-display);font-weight:800;font-size:clamp(34px,4.6vw,64px);letter-spacing:-.02em;line-height:1.05;max-width:16ch;text-wrap:balance;}
+  .cta-btn{
+    display:inline-flex;align-items:center;gap:.7em;margin-top:1.8vw;
+    font-family:var(--font-display);font-weight:800;font-size:clamp(13px,1.15vw,17px);
+    letter-spacing:.03em;padding:.9em 1.5em;border-radius:100px;
+    background:var(--branco);color:var(--laranja);width:fit-content;
+  }
+  .cta-btn svg{width:1.1em;height:1.1em;}
+  .cta-url{font-family:var(--font-display);font-weight:700;font-size:clamp(11px,1vw,14px);opacity:.85;margin-top:1vw;letter-spacing:.02em;}
+
+  /* decorative shapes */
+  .deco-ring{position:absolute;border-radius:50%;border:1.5px solid var(--laranja);opacity:.18;pointer-events:none;}
+  [data-bg="laranja"] .deco-ring{border-color:var(--branco);opacity:.22;}
+  .deco-fill{position:absolute;border-radius:50%;background:var(--laranja);opacity:.12;pointer-events:none;}
+  [data-bg="laranja"] .deco-fill{background:var(--branco);opacity:.14;}
+
+  /* footer — sem logo, handle do instagram no lugar */
+  .foot{
+    position:absolute;bottom:2.2vw;left:7vw;right:7vw;
+    display:flex;align-items:center;justify-content:space-between;
+    font-family:var(--font-display);font-weight:600;font-size:11px;letter-spacing:.08em;opacity:.55;
+  }
+  .ig-handle{display:flex;align-items:center;gap:.5em;font-weight:700;}
+  .ig-handle svg{width:1.3em;height:1.3em;opacity:.8;}
+  .foot .count{font-variant-numeric:tabular-nums;}
+
+  @media (max-width:820px){
+    .grid-3,.cols{grid-template-columns:1fr;}
+    .cycle-wrap,.tune-wrap,.gate-wrap{flex-direction:column;align-items:flex-start;}
+    .cycle-arrow{transform:rotate(90deg);}
+    .tune-arrow{transform:rotate(90deg);align-self:flex-start;}
+  }
+</style>
+
+<div class="deck" id="deck">
+
+  <!-- 1 — TÍTULO -->
+  <div class="slide active" data-bg="preto">
+    <div class="deco-ring" style="width:26vw;height:26vw;top:-8vw;right:-8vw;"></div>
+    <div class="kicker"><span class="dot"></span>Aula bônus · Black For You</div>
+    <h1>Consegui a minha<br>certificação. E agora?</h1>
+    <div class="sub">Primeiros passos antes de lançar seu curso certificado</div>
+    <div class="foot">
+      <span class="ig-handle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>
+        @karolsenna._
+      </span>
+      <span class="count">01 / 15</span>
+    </div>
+  </div>
+
+  <!-- 2 — ACORDO -->
+  <div class="slide" data-bg="branco">
+    <div class="split">
+      <div class="split-text">
+        <div class="pill">O acordo</div>
+        <h2>O selo já resolve uma parte importante</h2>
+        <p class="lead">Fortalece a percepção de valor e responde "isso tem respaldo?". Só existe uma pergunta que ele ainda não responde sozinho: essa oferta, do seu jeito, pra esse público, já foi testada com alguém de verdade?</p>
+        <p class="small">Eu aprendi a fazer essa pergunta depois de oito lançamentos — alguns caros, todos cheios de aprendizado.</p>
+      </div>
+      <div class="split-visual">
+        <svg class="deco-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="6"/><path d="M8.2 13.5 6.5 22l5.5-3 5.5 3-1.7-8.5"/><path d="M9.3 8.5l1.8 1.8 3.6-3.6"/></svg>
+      </div>
+    </div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">02 / 15</span></div>
+  </div>
+
+  <!-- 3 — FILTRO DE LEADS -->
+  <div class="slide" data-bg="cinza">
+    <div class="split">
+      <div class="split-text">
+        <div class="pill">Pra quem já tem método</div>
+        <h2>Conhecimento validado não é oferta validada</h2>
+        <p class="lead">Seu método pode ter anos de prática. Um curso certificado é uma oferta nova — promessa, formato, preço e decisão de compra próprios. Essa combinação ainda precisa encontrar o mercado real.</p>
+        <p class="small">Se você já tem método, melhor: não precisa voltar ao começo. Só validar a nova embalagem comercial antes de amplificá-la.</p>
+      </div>
+      <div class="split-visual">
+        <svg class="deco-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v6c0 5 4 8.5 9 9 5-.5 9-4 9-9V7l-9-5z"/><path d="M8.5 12l2.5 2.5 5-5"/></svg>
+      </div>
+    </div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">03 / 15</span></div>
+  </div>
+
+  <!-- 4 — DOR: 3 CAMINHOS -->
+  <div class="slide" data-bg="preto">
+    <div class="kicker"><span class="dot"></span>Dor e eventos</div>
+    <h2>É natural querer pular direto pro lançamento</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4a1 1 0 0 0 1 1h2l7 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19 6.5a9 9 0 0 1 0 11"/></svg>
+        <div class="tag">Caminho 1</div>
+        <h3>"Assim que aprovar, eu anuncio"</h3>
+        <p>Trata o dia do lançamento como o primeiro encontro da oferta com a realidade.</p>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg>
+        <div class="tag">Caminho 2</div>
+        <h3>Coloca tráfego antes de testar</h3>
+        <p>Multiplica uma mensagem que ainda não foi validada numa conversa real de compra.</p>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div class="tag">Caminho 3</div>
+        <h3>"Já tenho experiência, não preciso validar"</h3>
+        <p>Confunde ter conhecimento consolidado com ter uma oferta comprovada.</p>
+      </div>
+    </div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">04 / 15</span></div>
+  </div>
+
+  <!-- 5 — HISTÓRIA: 8 LANÇAMENTOS -->
+  <div class="slide" data-bg="branco">
+    <div class="split">
+      <div class="split-text">
+        <div class="pill">A história</div>
+        <div class="quote-mark">"</div>
+        <p class="quote-text" style="margin-bottom:1vw;">Eu estava tentando escalar uma mensagem que nunca tinha sido validada.</p>
+        <p class="lead">Fiz oito lançamentos na ordem que parecia certa: montava o produto, lançava, investia — só depois descobria os buracos.</p>
+      </div>
+      <div class="split-visual">
+        <div class="mini-bars">
+          <div class="bar-col"><span class="bar-val">0</span><div class="bar" style="height:6%;"></div><span class="bar-tag">Lote 1</span></div>
+          <div class="bar-col"><span class="bar-val">1</span><div class="bar" style="height:22%;"></div><span class="bar-tag">Lote 2</span></div>
+          <div class="bar-col"><span class="bar-val">4</span><div class="bar" style="height:100%;"></div><span class="bar-tag">Lote 3</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="stat-label" style="margin-top:1.6vw;">vendas por lançamento — sempre no prejuízo</div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">05 / 15</span></div>
+  </div>
+
+  <!-- 6 — TIRA A CULPA (QUOTE) -->
+  <div class="slide" data-bg="laranja">
+    <div class="deco-fill" style="width:20vw;height:20vw;bottom:-8vw;left:-6vw;"></div>
+    <div class="deco-ring" style="width:16vw;height:16vw;top:-4vw;right:6vw;"></div>
+    <div class="quote-mark">"</div>
+    <p class="quote-text" style="max-width:30ch;font-size:clamp(28px,3.6vw,50px);">Reconhecimento oficial e validação de oferta são ativos diferentes.</p>
+    <div class="sub" style="max-width:44ch;">Você não precisa escolher entre eles. Só colocar na ordem certa.</div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">06 / 15</span></div>
+  </div>
+
+  <!-- 7 — MÉTODO: ORDEM CERTA -->
+  <div class="slide" data-bg="preto">
+    <div class="kicker"><span class="dot"></span>Autoridade imediata · método</div>
+    <h2>A ordem certa: validar → vender → crescer</h2>
+    <div class="cycle-wrap">
+      <div class="cycle-step"><div class="num">1</div><p>Validar</p></div>
+      <div class="cycle-arrow">→</div>
+      <div class="cycle-step"><div class="num">2</div><p>Vender</p></div>
+      <div class="cycle-arrow">→</div>
+      <div class="cycle-step"><div class="num">3</div><p>Crescer</p></div>
+    </div>
+    <p class="small" style="margin-top:2vw;">No Expert360º, isso é o Módulo 3 — Vendas Secretas: o "secreto" é o ambiente de validação, privado e próximo, antes da exposição pública.</p>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">07 / 15</span></div>
+  </div>
+
+  <!-- 8 — CAMINHO A vs B -->
+  <div class="slide" data-bg="branco">
+    <div class="pill">Dois caminhos</div>
+    <h2>Caminho A vs. Caminho B</h2>
+    <div class="cols">
+      <div class="col dim">
+        <div class="col-label">Caminho A</div>
+        <p>Produto pronto, lançamento, tráfego — você descobre os buracos no palco, na frente de todo mundo.</p>
+      </div>
+      <div class="col bright">
+        <div class="col-label">Caminho B</div>
+        <p>Valida com poucas pessoas certas, cobra um preço de comprometimento, ajusta — só depois amplia com o selo.</p>
+      </div>
+    </div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">08 / 15</span></div>
+  </div>
+
+  <!-- 9 — FIO CONDUTOR: AFINAÇÃO -->
+  <div class="slide" data-bg="preto">
+    <div class="kicker"><span class="dot"></span>O mecanismo</div>
+    <h2>Não é esconder o instrumento. É afinar antes do concerto.</h2>
+    <div class="tune-wrap">
+      <div class="tune-step">
+        <svg class="tune-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v8a4 4 0 0 0 8 0V3"/><path d="M12 15v6"/><path d="M9 21h6"/></svg>
+        <h3>Privado</h3>
+        <p>Você afina: valida com poucas pessoas, ajusta, documenta.</p>
+      </div>
+      <div class="tune-arrow">→</div>
+      <div class="tune-step">
+        <svg class="tune-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7a8 8 0 0 1 16 0v7"/><path d="M4 21h16"/><path d="M9 21v-4a3 3 0 0 1 6 0v4"/></svg>
+        <h3>Público</h3>
+        <p>Você amplia com o selo — já soando bem, com prova real.</p>
+      </div>
+    </div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">09 / 15</span></div>
+  </div>
+
+  <!-- 10 — PROPOSTA VALIDADA: 3 COMPONENTES -->
+  <div class="slide" data-bg="branco">
+    <div class="pill">A Proposta Validada</div>
+    <h2>3 coisas antes de expor</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+        <div class="tag">1</div>
+        <h3>O que você entrega</h3>
+        <p>Problema, transformação e entrega concretos.</p>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>
+        <div class="tag">2</div>
+        <h3>Como você entrega</h3>
+        <p>Formato simples e próximo — sem operação complexa ainda.</p>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10"/><path d="M9.5 9.6c0-1.4 1.1-2.1 2.5-2.1s2.5.7 2.5 2c0 1.3-1.1 1.7-2.5 2.1-1.4.4-2.5.9-2.5 2.2 0 1.3 1.1 2 2.5 2s2.5-.6 2.5-2"/></svg>
+        <div class="tag">3</div>
+        <h3>Preço de validação</h3>
+        <p>Não é o preço final. Grátis mede curiosidade; pagamento mede decisão.</p>
+      </div>
+    </div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">10 / 15</span></div>
+  </div>
+
+  <!-- 11 — GATE: 3 VENDAS + 1 DEPOIMENTO -->
+  <div class="slide" data-bg="laranja">
+    <div class="deco-ring" style="width:22vw;height:22vw;top:-6vw;right:-6vw;"></div>
+    <div class="kicker on-laranja"><span class="dot"></span>O critério do Módulo 3</div>
+    <h2>O gate: vendas reais + depoimento</h2>
+    <div class="split">
+      <div class="split-text">
+        <div class="gate-wrap">
+          <div><div class="gate-num">3</div><div class="gate-label">vendas reais, pagamento confirmado</div></div>
+          <div class="gate-plus">+</div>
+          <div><div class="gate-num">1</div><div class="gate-label">depoimento real documentado</div></div>
+        </div>
+        <p class="small" style="opacity:.85;margin-top:2vw;">Não é garantia universal — é o critério do Expert360º pra não trocar evidência por sensação.</p>
+      </div>
+      <div class="split-visual">
+        <svg class="deco-icon" style="color:var(--branco);opacity:.22;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v4a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a3 3 0 0 0 3 3"/><path d="M17 6h3a3 3 0 0 1-3 3"/></svg>
+      </div>
+    </div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">11 / 15</span></div>
+  </div>
+
+  <!-- 12 — 5 AFIRMAÇÕES -->
+  <div class="slide" data-bg="cinza">
+    <div class="pill">5 respostas</div>
+    <h2 style="font-size:clamp(22px,2.6vw,36px);">As frases que mais fazem pular essa etapa</h2>
+    <div class="obj-list">
+      <div class="obj-row"><span class="obj">"O selo já resolve minha venda"</span><span class="arrow">→</span><span class="aff">Reduz a objeção de credibilidade. Não resolve promessa, formato nem confiança.</span></div>
+      <div class="obj-row"><span class="obj">"Vender no privado contradiz o selo"</span><span class="arrow">→</span><span class="aff">A validação privada prepara a exposição pública — você afina antes de comunicar.</span></div>
+      <div class="obj-row"><span class="obj">"Não tenho tempo, quero lançar logo"</span><span class="arrow">→</span><span class="aff">Descobrir depois do lançamento costuma custar mais tempo do que validar antes.</span></div>
+      <div class="obj-row"><span class="obj">"Meu método já funciona, não preciso validar"</span><span class="arrow">→</span><span class="aff">Você valida a decisão comercial nova — não a sua trajetória inteira.</span></div>
+      <div class="obj-row"><span class="obj">"Cobrar numa versão sendo refinada é antiético"</span><span class="arrow">→</span><span class="aff">É entrega real, documentada e transparente — não é favor nem promessa vazia.</span></div>
+    </div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">12 / 15</span></div>
+  </div>
+
+  <!-- 13 — PROJEÇÃO: 2 CENÁRIOS -->
+  <div class="slide" data-bg="preto">
+    <div class="kicker"><span class="dot"></span>Projeção do cliente</div>
+    <h2>Dois cenários</h2>
+    <div class="cols">
+      <div class="col dim">
+        <div class="col-label">Sem validar</div>
+        <p>Cada ajuste depois do lançamento vira um palpite caro — você não sabe se foi promessa, preço, página ou formato.</p>
+      </div>
+      <div class="col bright">
+        <div class="col-label">Com validar</div>
+        <p>O lançamento vira a ampliação de um aprendizado que já começou — com pitch testado e prova real.</p>
+      </div>
+    </div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">13 / 15</span></div>
+  </div>
+
+  <!-- 14 — RESUMO -->
+  <div class="slide" data-bg="cinza">
+    <div class="pill">Resumo</div>
+    <h2>Antes de expor, leva isso</h2>
+    <div class="recap">
+      <div class="recap-item"><span class="num">1</span><p>O selo fortalece a credibilidade institucional.</p></div>
+      <div class="recap-item"><span class="num">2</span><p>Só a validação privada prova que a oferta vende.</p></div>
+      <div class="recap-item"><span class="num">3</span><p>A ordem: validar → vender → crescer.</p></div>
+    </div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">14 / 15</span></div>
+  </div>
+
+  <!-- 15 — CTA -->
+  <div class="slide" data-bg="laranja">
+    <div class="deco-fill" style="width:24vw;height:24vw;bottom:-10vw;right:-8vw;"></div>
+    <div class="kicker on-laranja"><span class="dot"></span>Seu próximo passo</div>
+    <div class="cta-head">Grupo de Lives<br>Expert360º</div>
+    <p class="lead" style="margin-top:1.2vw;opacity:.95;">Toda semana, uma live gratuita sobre método, oferta, Vendas Secretas e posicionamento — os bastidores das decisões que eu tomo na Incubadora.</p>
+    <div class="cta-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      Clique no botão abaixo do vídeo
+    </div>
+    <div class="cta-url">grupo.incubadoradeexpert.com.br</div>
+    <div class="foot"><span class="ig-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></svg>@karolsenna._</span><span class="count">15 / 15</span></div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var slides=document.querySelectorAll('.slide');
+  var i=0;
+  function show(n){
+    n=Math.max(0,Math.min(slides.length-1,n));
+    if(n===i)return;
+    slides[i].classList.remove('active');
+    i=n;
+    slides[i].classList.add('active');
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();show(i+1);}
+    if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();show(i-1);}
+    if(e.key==='Home')show(0);
+    if(e.key==='End')show(slides.length-1);
+  });
+  document.getElementById('deck').addEventListener('click',function(){show(i+1);});
+})();
+</script>
+
+</body>
+</html>
