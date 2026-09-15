@@ -44,9 +44,9 @@
 
 | # | Item | Referência | Prioridade | Status |
 |---|---|---|---|---|
-| 2.1 | Agente do Método Conduz Agro (self-service, ilimitado) | `estrutura-programa.md` Seção 4 | P2 | [ ] Pendente |
-| 2.2 | Preparador de Conversas Difíceis (self-service, ilimitado) | `estrutura-programa.md` Seção 4 | P2 | [ ] Pendente |
-| 2.3 | Agente de IA Técnico em Regularização | `prd.md` Seção 4 | P2 | [ ] Pendente |
+| 2.1 | Agente do Método Conduz Agro (self-service, ilimitado) | `estrutura-programa.md` Seção 4. **Consolidado na LIA Agro (ver 2.2)** — a Milena descreveu no questionário de 02/09/2026 um único agente cobrindo método geral + preparo de conversas. Confirmar com ela se era pra ficar junto ou separado | P2 | [ ] Ver 2.2 |
+| 2.2 | Preparador de Conversas Difíceis (self-service, ilimitado) | `estrutura-programa.md` Seção 4. Rascunho: `agente-lia-instructions.md` + `agente-lia-knowledge-base.md` (nomeada "LIA Agro" pela Milena, cobre perfil do produtor, objeções, travas do técnico, mediação familiar e proposta/negociação — mais amplo que só "preparador de conversas") | P2 | [ ] Rascunho pronto — aguardando validação da Milena (confirmar consolidação com 2.1 e seção LIMITES) |
+| 2.3 | Agente de IA Técnico em Regularização (REGIA) | `prd.md` Seção 4. Rascunho: `agente-regia-instructions.md` + `agente-regia-knowledge-base.md`, a partir do questionário respondido pela Milena em 02/09/2026 | P2 | [ ] Estrutura pronta, mas **KB tecnicamente rasa** — falta o julgamento prático da Milena (matrícula, cruzamento, georref, riscos). Roteiro enviado: `roteiro-conhecimento-tecnico-regia.md`. Bloqueado até ela responder |
 
 ## 3. Sessões e Currículo
 

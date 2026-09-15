@@ -17,7 +17,6 @@
   --olive-deep:#34401F;
   --gold:#B07A16;
   --gold-soft:#C08A1E;
-  --rule:#D9CDB0;
   --shadow: 0 1px 2px rgba(61,40,23,.06), 0 8px 24px -12px rgba(61,40,23,.25);
 }
 *{box-sizing:border-box;}
@@ -33,7 +32,7 @@ body{
   padding:48px 16px 80px;
 }
 h1,.display{font-family:'Fraunces',Georgia,serif; font-weight:700; text-wrap:balance; color:var(--ink); margin:0;}
-.wrap{width:100%;max-width:680px;}
+.wrap{width:100%;max-width:720px;}
 .brand{display:flex; align-items:center; gap:14px; margin-bottom:36px;}
 .brand-mark{width:48px;height:48px;flex:none;}
 .brand-name{font-family:'Fraunces',serif; font-weight:700; font-size:1.3rem; line-height:1.15;}
@@ -45,11 +44,21 @@ h1{font-size:1.7rem; margin-bottom:8px;}
   font-size:.8rem; color:var(--gold); margin:0 0 32px; background:#F3E6C8; border:1px solid #DCC486;
   border-radius:10px; padding:10px 14px; line-height:1.5;
 }
-.grid{display:flex; flex-direction:column; gap:12px;}
+.section-label{
+  width:100%;
+  font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--olive);
+  margin:34px 0 4px;
+  padding-top:24px;
+  border-top:1px solid var(--paper-deep);
+}
+.section-label:first-of-type{margin-top:0;padding-top:0;border-top:none;}
+.section-hint{width:100%;font-size:.84rem;color:var(--ink-soft);margin:0 0 14px;line-height:1.5;}
+.grid{display:flex; flex-direction:column; gap:12px; width:100%;}
 .card{
   display:block;
   background:var(--paper-raised);
-  border:1px solid var(--rule);
+  border:1px solid var(--paper-deep);
   border-radius:16px;
   box-shadow:var(--shadow);
   padding:20px 22px;
@@ -66,6 +75,7 @@ h1{font-size:1.7rem; margin-bottom:8px;}
   color:var(--gold-soft); margin-bottom:8px;
 }
 footer{margin-top:40px; font-size:.78rem; color:var(--ink-soft); text-align:center;}
+@media(max-width:520px){body{padding-top:32px;}}
 </style>
 </head>
 <body>
@@ -82,11 +92,59 @@ footer{margin-top:40px; font-size:.78rem; color:var(--ink-soft); text-align:cent
   <p class="lede">Suas próprias ferramentas de controle — negócio e programa.</p>
   <p class="sub-lede">Esse link não é divulgado pros alunos. Não precisa de senha pra abrir, mas também não aparece em nenhum lugar público — só quem recebe o link direto de você chega aqui.</p>
 
+  <div class="section-label">Condução dos leads</div>
+  <p class="section-hint">Do primeiro contato até o fechamento da Mentoria Individual.</p>
   <div class="grid">
+    <a class="card" href="https://www.milenagehrke.com.br/pre-diagnostico" target="_blank" rel="noopener">
+      <span class="tag">Questionário</span>
+      <h2>Pré-Diagnóstico de Vendas</h2>
+      <p>Qualificação de lead antes da Sessão Estratégica.</p>
+    </a>
+
+    <a class="card" href="https://docs.google.com/spreadsheets/d/1cs8OmgV3a-rzNMPen1AD38KJql0Cw2yyPoE4BFejTww/edit" target="_blank" rel="noopener">
+      <span class="tag">Planilha · aba Pré-Diagnóstico</span>
+      <h2>Respostas dos Formulários — Conduz Agro</h2>
+      <p>Onde caem as respostas de todo mundo que preenche o Pré-Diagnóstico.</p>
+    </a>
+
+    <a class="card" href="roteiro-vendas-secretas.html">
+      <span class="tag">Conduzir a sessão de vendas</span>
+      <h2>Roteiro Vendas Secretas</h2>
+      <p>Abertura, diagnóstico, ponte de identificação, oferta e fechamento — passo a passo pra sessão com o lead.</p>
+    </a>
+
+    <a class="card" href="oferta-conduz-agro.html">
+      <span class="tag">Compartilhar na tela</span>
+      <h2>Oferta Conduz Agro</h2>
+      <p>A apresentação da Mentoria Individual — método, formato, investimento e condições.</p>
+    </a>
+  </div>
+
+  <div class="section-label">Condução dos alunos</div>
+  <p class="section-hint">Diagnóstico de entrada e as ferramentas de cada sessão da mentoria.</p>
+  <div class="grid">
+    <a class="card" href="https://www.milenagehrke.com.br/diagnostico" target="_blank" rel="noopener">
+      <span class="tag">Questionário</span>
+      <h2>Diagnóstico da Autoridade Aplicada</h2>
+      <p>Pra mandar direto pro produtor ou conferir como está no ar.</p>
+    </a>
+
+    <a class="card" href="https://docs.google.com/spreadsheets/d/1cs8OmgV3a-rzNMPen1AD38KJql0Cw2yyPoE4BFejTww/edit" target="_blank" rel="noopener">
+      <span class="tag">Planilha · aba Diagnóstico</span>
+      <h2>Respostas dos Formulários — Conduz Agro</h2>
+      <p>Onde caem as respostas de todo mundo que preenche o Diagnóstico.</p>
+    </a>
+
     <a class="card" href="https://claude.ai/code/artifact/aabc1e63-89a2-49ad-8e97-f7dd4791f1e7" target="_blank" rel="noopener">
-      <span class="tag">Visão geral · uso interno</span>
+      <span class="tag">Visão geral</span>
       <h2>Mapa da Mentora</h2>
-      <p>Os 24 encontros, as 2 etapas e o momento exato de entregar cada ferramenta de uso contínuo — pra não perder o fio da meada.</p>
+      <p>Os 24 encontros, as 2 etapas e o momento exato de entregar cada ferramenta — pra não perder o fio da meada.</p>
+    </a>
+
+    <a class="card" href="https://claude.ai/code/artifact/5c5f1907-507e-4838-9973-7ec124ca943a" target="_blank" rel="noopener">
+      <span class="tag">Roteiro das sessões</span>
+      <h2>Roteiro Executável das Sessões</h2>
+      <p>As 24 sessões — objetivo, conteúdo, exercício, fechamento e pontos-chave pra não esquecer.</p>
     </a>
 
     <a class="card" href="guia-plano-personalizado.html">
@@ -94,19 +152,11 @@ footer{margin-top:40px; font-size:.78rem; color:var(--ink-soft); text-align:cent
       <h2>Guia do Plano Personalizado</h2>
       <p>Exemplos para cada pergunta e como revisar o plano em S2, S8, S12, S16, S20 e S24.</p>
     </a>
+  </div>
 
-    <a class="card" href="https://claude.ai/code/artifact/5c5f1907-507e-4838-9973-7ec124ca943a" target="_blank" rel="noopener">
-      <span class="tag">Conduzir sessão</span>
-      <h2>Roteiro Executável das Sessões</h2>
-      <p>As 24 sessões — objetivo, conteúdo, exercício, fechamento e pontos-chave pra não esquecer.</p>
-    </a>
-
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1YtM89u69I9JHAgm59EI28XOwkB73KeMKcY1ADj6wSaE/edit" target="_blank" rel="noopener">
-      <span class="tag">Acompanhamento dos alunos</span>
-      <h2>Trilha Mestre dos Alunos</h2>
-      <p>24 sessões por aluno, atividades, entregas, evidências, próximas ações e alertas num painel único.</p>
-    </a>
-
+  <div class="section-label">Uso interno</div>
+  <p class="section-hint">Seu negócio e o acompanhamento de todos os alunos, num painel só seu.</p>
+  <div class="grid">
     <a class="card" href="https://docs.google.com/spreadsheets/d/1zE24A0b1EMCLTbUxVL-kEtZAnPf2CRXLyS_d77R3pi8/edit" target="_blank" rel="noopener">
       <span class="tag">Seu negócio</span>
       <h2>CRM Comercial — uso próprio</h2>
@@ -119,22 +169,10 @@ footer{margin-top:40px; font-size:.78rem; color:var(--ink-soft); text-align:cent
       <p>Sua cópia, separada do modelo entregue aos alunos.</p>
     </a>
 
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1cs8OmgV3a-rzNMPen1AD38KJql0Cw2yyPoE4BFejTww/edit" target="_blank" rel="noopener">
-      <span class="tag">Respostas dos formulários</span>
-      <h2>Respostas dos Formulários - Conduz Agro</h2>
-      <p>Onde caem Diagnóstico, Pré-Diagnóstico, Ficha de Inscrição e Raio-X de todo mundo que preenche.</p>
-    </a>
-
-    <a class="card" href="https://www.milenagehrke.com.br/diagnostico" target="_blank" rel="noopener">
-      <span class="tag">Diagnóstico</span>
-      <h2>Diagnóstico da Autoridade Aplicada</h2>
-      <p>Pra mandar direto pro produtor ou conferir como está no ar.</p>
-    </a>
-
-    <a class="card" href="https://www.milenagehrke.com.br/pre-diagnostico" target="_blank" rel="noopener">
-      <span class="tag">Diagnóstico</span>
-      <h2>Pré-Diagnóstico de Vendas</h2>
-      <p>Qualificação de lead antes da Sessão Estratégica.</p>
+    <a class="card" href="https://docs.google.com/spreadsheets/d/1YtM89u69I9JHAgm59EI28XOwkB73KeMKcY1ADj6wSaE/edit" target="_blank" rel="noopener">
+      <span class="tag">Acompanhamento dos alunos</span>
+      <h2>Trilha Mestre dos Alunos</h2>
+      <p>24 sessões por aluno, atividades, entregas, evidências, próximas ações e alertas num painel único.</p>
     </a>
   </div>
 
