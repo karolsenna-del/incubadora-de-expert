@@ -8,6 +8,17 @@
 > **Formato:** Aula de 8 Blocos, adaptada para vídeo gravado, sem interação ao vivo.
 > **CTA único:** Grupo de Lives Expert360º, gratuito — `https://grupo.incubadoradeexpert.com.br/`.
 
+## Requisitos oficiais de gravação
+
+> Fonte prioritária: `Guia_Gravacao_Aula_Partners_BFY (2).docx`, recebido e conferido em 15/09/2026.
+
+1. **Entrega:** aula genuína, prática e aplicável para infoprodutores.
+2. **Especificações:** 15–30 min; horizontal 16:9; MP4; mínimo 1080p; áudio limpo; iluminação frontal; câmera estável; cenário simples ou estrutura habitual.
+3. **Ordem:** apresentação → conteúdo principal → CTA final.
+4. **Apresentação:** no máximo 1 min. Neste roteiro, a apresentação pessoal ocupa os primeiros ~50 s; o restante do Bloco 1 já é o acordo e a abertura do conteúdo.
+5. **CTA:** direto e específico, indicando onde ir e o que a pessoa encontrará.
+6. **Entrega operacional:** nomear o arquivo `Aula_KarolSenna_VoompBFY.mp4` e entregar até 18/09/2026, por Google Drive ou WeTransfer, ao contato indicado no guia oficial. A gravação e o envio não fazem parte desta missão.
+
 ## Fontes internas conferidas
 
 - `agents/etlmaker/kbs/sessao-estrategica/VOL-06-identidade-oferta-leads.md`: oito lançamentos, resultados de zero/uma/quatro vendas, tese validar → vender → crescer, Proposta Validada e gate de três vendas reais + um depoimento.
@@ -18,7 +29,7 @@
 
 ---
 
-## BLOCO 1 — ACORDO (~2 min)
+## BLOCO 1 — APRESENTAÇÃO (até 1 min) + ACORDO (~2 min no total)
 
 ### Teleprompter
 
@@ -274,3 +285,12 @@ Clique no botão abaixo e entra no Grupo de Lives Expert360º. Eu te espero lá.
 - [x] CTA único nomeia a oferta específica: **Grupo de Lives Expert360º, gratuito**.
 - [x] URL confirmada: `https://grupo.incubadoradeexpert.com.br/`.
 - [x] Configuração operacional: inserir abaixo do vídeo um botão com o texto **ENTRAR NO GRUPO DE LIVES** apontando para a URL confirmada.
+
+### Conferir antes de enviar o vídeo
+
+- [ ] Duração final entre 15 e 30 min e apresentação pessoal com no máximo 1 min.
+- [ ] Vídeo horizontal 16:9, MP4, mínimo 1080p e câmera estável.
+- [ ] Áudio limpo, iluminação frontal e ausência de contraluz.
+- [ ] Botão/link do CTA configurado e testado.
+- [ ] Arquivo nomeado `Aula_KarolSenna_VoompBFY.mp4`.
+- [ ] Entrega até 18/09/2026 pelo canal e ao contato definidos no guia oficial.

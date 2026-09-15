@@ -24,4 +24,4 @@
 **Entregue em:** 15/09/2026
 **Executada em:** aguardando gravação.
 **Ajustes ao vivo:** não se aplica — formato gravado.
-**Aprendizado:** para audiência de parceria externa, separar com respeito o valor da certificação da validação comercial; quando não houver case específico, usar critério qualitativo documentado em vez de generalizar ou inventar prova.
+**Aprendizado:** para audiência de parceria externa, separar com respeito o valor da certificação da validação comercial; quando não houver case específico, usar critério qualitativo documentado em vez de generalizar ou inventar prova. Guia oficial recebido depois da primeira versão: apresentação pessoal limitada a 1 min, conteúdo aplicável, CTA claro e especificações de gravação incorporados ao roteiro.
