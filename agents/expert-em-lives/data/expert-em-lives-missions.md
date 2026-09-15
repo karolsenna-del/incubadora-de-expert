@@ -18,4 +18,10 @@
 
 ---
 
-*(primeira live a ser registrada aqui)*
+## Aula Bônus — Seu selo da Anhanguera não vende sozinho — 15/09/2026
+**Tema:** reconhecimento oficial não substitui validação; aplicar Vendas Secretas antes de ampliar a oferta certificada.
+**Exercício:** não se aplica — aula assíncrona no modelo narrativo de 8 blocos.
+**Entregue em:** 15/09/2026
+**Executada em:** aguardando gravação.
+**Ajustes ao vivo:** não se aplica — formato gravado.
+**Aprendizado:** para audiência de parceria externa, separar com respeito o valor da certificação da validação comercial; quando não houver case específico, usar critério qualitativo documentado em vez de generalizar ou inventar prova.
