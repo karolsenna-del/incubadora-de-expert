@@ -1,9 +1,15 @@
-# Live 30 — "Eu sou formada em Contabilidade, não em Marketing — e por anos achei que isso me desqualificava pra ensinar meu método"
+# Live 30 — "Seu conhecimento é suficiente para se tornar método"
 > Tema: a objeção "será que meu conhecimento é suficiente?" — síndrome do impostor aplicada à Laura
 > que já tem expertise real no offline, mas duvida se ela "conta" pra vender no digital.
-> Ancorado na trajetória real da Karol: formação em Contabilidade/Administração, carreira em
-> auditoria → planejamento → controladoria (não em marketing/comunicação) — e como isso quase a
-> impediu de se ver como expert, até ela entender que método é o que se viveu, não o que se estudou.
+> Ancorado na trajetória real da Karol (confirmada por ela em 14/09): foi expert de 2 produtos
+> próprios, virou insider, foi convidada pra ser lançadora de outros experts, fez 8 lançamentos,
+> faturou bem — mas ficou na mão do expert (dependente, sem negócio próprio). Voltou como expert
+> com a Incubadora juntando TUDO que viveu: os próprios fracassos, o processo de lançamento que
+> dominou como estrategista, ferramentas de ADM (5W2H, PDCA), a base de contabilidade/auditoria
+> (que deu nome ao serviço **Auditoria do Método**), a visão sistêmica de modelo de negócio que a
+> auditoria deu, e o foco em satisfação do cliente que o serviço público (FNQ) deu. Tudo isso virou
+> o método e o portfólio de hoje — nenhuma dessas experiências, isoladas, "seria suficiente"; juntas,
+> formaram o diferencial.
 > Duração estimada: ~30-33 min
 > Modelo: Aula de 8 Blocos (Funil de Zoom) — sem bloco de prática ao vivo
 > Fonte da fórmula: `agents/etlmaker/kbs/alcateia-implementacao/VOL-funil-vendas.md` seção 13
@@ -13,22 +19,23 @@
 > Oferta do Bloco 8: **Mentoria em Grupo** (confirmado pela Karol).
 > Bônus: planilha **Mapa de Ativos de Autoridade** (confirmado pela Karol — entra como bônus
 > baixável mencionado na transição, sem pausa de exercício ao vivo).
+> CTA: **AUTORIDADE** (confirmado pela Karol em 14/09).
 
 ---
 
 ## ⚠️ PENDÊNCIAS ABERTAS (checar com a Karol antes de gravar)
 
-1. **Título** — proposto acima usando o fato já documentado da formação em Contabilidade/Administração
-   (ver `user_trajetoria_profissional_karol` na memória). Se preferir outro ângulo de abertura, me fala.
-2. **Bloco 6 (5 Afirmações)** — gerei as 10 objeções pelo prompt padrão do modelo e condensei uma
-   sugestão de 5. Preciso que você confirme ou reprioize (regra do worker: não decido objeção sozinho).
-3. **CTA** — sugeri **ESTRUTURA** (conecta com a virada central: "não falta conhecimento, falta
-   estrutura"). Confirma ou troca?
-4. **História pessoal do Bloco 3/5** — usei só o fato já documentado (formação/carreira). Se tiver um
-   momento específico e real de dúvida sobre "será que eu sei o suficiente" (ex: um episódio dos 8
-   fracassos, ou uma conversa com aluna que travou nisso), me fala que eu encaixo — fortalece bastante.
+1. ~~Título~~ — **confirmado (14/09): "Seu conhecimento é suficiente para se tornar método"**.
+2. ~~Bloco 6 (5 Afirmações)~~ — **confirmado (14/09)**: trocada a afirmação sobre "grupo genérico"
+   pela objeção de investimento (obj. 9 da lista de 10) — ver bloco abaixo.
+3. ~~CTA~~ — **confirmado: AUTORIDADE**.
+4. ~~História pessoal~~ — **confirmada e integrada** (8 lançamentos → dependência do expert →
+   volta como expert própria juntando fracassos + processo de lançamento + ferramentas ADM/PDCA +
+   contabilidade/auditoria + visão sistêmica + foco em satisfação do cliente da FNQ).
 5. **Planilha Mapa de Ativos de Autoridade** — preciso do link publicado (Google Sheets) antes da
    live, igual foi feito com o bônus da Live 29.
+6. ~~Nomes dos produtos/experts~~ — **confirmado (14/09): mantém genérico**, sem citar nomes de
+   terceiros ("fui expert de 2 produtos", "lançadora de outros experts").
 
 ---
 
@@ -39,11 +46,12 @@
 que você já vive em autoridade. Diploma é o que você estudou. Método é o que você viveu."
 
 **O combinado dessa live:**
-"Hoje eu vou te contar uma coisa que eu escondi de mim mesma por anos: eu sou formada em
-Contabilidade e Administração. Fiz carreira em auditoria, depois planejamento, depois
-controladoria — treze anos disso, tudo dentro do setor público. Nenhuma linha de marketing,
-nenhuma linha de comunicação. E por muito tempo, isso foi a prova que eu usava contra mim mesma
-pra não me colocar como expert."
+"Hoje eu vou te contar uma fase da minha história que pouca gente sabe: eu já fui expert de 2
+produtos próprios. Depois virei insider, fui convidada pra ser lançadora de outros experts — fiz
+8 lançamentos, faturei bem fazendo isso. E mesmo assim, fiquei na mão do expert. O negócio nunca
+era meu. Foi só quando eu juntei tudo que eu já tinha vivido — os fracassos, o processo de
+lançamento que eu dominava como estrategista, ferramentas que vêm da minha formação em
+Administração e Contabilidade — que eu voltei como expert, com o meu próprio método."
 
 **Ancoragem:**
 "Se você também carrega essa pergunta — 'será que o que eu sei é suficiente pra vender isso?' —
@@ -56,8 +64,9 @@ resposta que te deixe 100% segura. Vou te mostrar a pergunta certa pra fazer no 
 
 **Nichos validados:**
 "Isso já rodou com profissional liberal de área nenhuma parecida com marketing — advocacia,
-saúde, agro, serviço público, consultoria técnica. Gente que, assim como eu, tinha um diploma
-que não dizia nada sobre 'ser digital' e mesmo assim construiu método que vende."
+saúde, agro, serviço público, consultoria técnica. Eu mesma passei por lançamento de nichos bem
+diferentes como estrategista antes de virar expert do meu próprio método — o que valida não é o
+nicho, é o processo."
 
 **Quebra de objeção ("funciona pro meu caso?"):**
 "Não interessa se o seu diploma é de contabilidade, enfermagem, direito ou engenharia. O que
@@ -77,24 +86,30 @@ tem, credencial nenhuma muda isso."
    certeza que falta. Nunca dá — sempre existe um curso seguinte.
 2. **"Espera ficar mais experiente"** — empurra o começo pro futuro indefinidamente, porque
    "experiência suficiente" não é uma linha de chegada, é um alvo que se move.
-3. **"Compara com quem já é referência"** — olha pra quem tem anos de audiência e conclui que
-   ainda não está no nível, ignorando que quem é referência hoje começou do mesmo lugar de dúvida.
+3. **"Vira mão de obra de quem já é expert"** — parece a saída mais segura: você entra como
+   estrategista, ghostwriter, lançadora, apoio de quem já tem autoridade. Fatura, aprende, mas o
+   negócio nunca é seu — você continua na mão do expert.
 
 **A virada real (história própria da Karol):**
-"Eu vivi os três ao mesmo tempo. Treze anos de serviço público, formação numa área que nada tem
-a ver com digital, e uma cabeça cheia da pergunta: 'quem sou eu pra ensinar isso, se eu nem tenho
-diploma na área?' Essa pergunta não sumiu com mais um curso. Ela só sumiu quando eu entendi que
-tava perguntando a coisa errada."
+"Eu vivi o caminho 3 de verdade. Eu já tinha sido expert de 2 produtos meus. Depois virei
+insider, fui convidada pra ser lançadora de outros experts — fiz 8 lançamentos, faturei bem
+fazendo isso. Mas em algum momento eu percebi: eu sabia lançar qualquer coisa, menos o meu
+próprio negócio. Eu tava dependente do expert que eu servia."
 
 **A camada que eu não via:**
-"Eu achava que 'saber o suficiente' significava ter credencial acadêmica. Mas o que realmente
-qualifica alguém a ensinar um método não é o diploma — é ter vivido o problema até resolver de
-verdade. Diploma é o que você estudou. Método é o que você viveu. Eu não tinha diploma de
-marketing. Mas eu tinha oito fracassos no digital até acertar — isso é uma credencial que
-nenhuma faculdade dá."
+"Achei que precisava escolher entre 'ser expert' (que exige ter uma coisa só, redondinha, pronta
+pra ensinar) ou 'ser estrategista' (que exige servir o método de outra pessoa). O que eu não via
+é que tudo que eu tinha vivido nos dois papéis já era o meu método — só que espalhado. Os
+fracassos dos meus 2 produtos. O processo de lançamento que eu dominava de dentro, dos 8 que
+fiz pra outros. As ferramentas de gestão da minha formação em Administração — 5W2H, PDCA. A
+base de contabilidade e auditoria, que hoje dá nome a um dos meus serviços: **Auditoria do
+Método**. A visão sistêmica de modelo de negócio que auditoria me deu. E o foco obsessivo em
+satisfação do cliente que o serviço público me ensinou, trabalhando na FNQ. Nenhuma dessas
+coisas sozinha seria 'suficiente'. Juntas, formaram o método que hoje é o meu portfólio inteiro."
 
-**Transição:** "Isso não é falta de conhecimento. É a pergunta errada te mantendo presa num loop
-que nunca termina."
+**Transição:** "Isso não é falta de conhecimento. É a pergunta errada — 'o que eu sei é
+suficiente?' — te impedindo de ver que o que você já viveu, espalhado em vários papéis, já é
+matéria-prima de método."
 
 ---
 
@@ -126,6 +141,14 @@ Estratégico, Posicionamento de Autoridade. Na minha experiência com centenas d
 conhecimento, mas porque o conhecimento que existe ainda não foi organizado num formato que se
 ensina, vende e entrega."
 
+**A prova que ninguém espera:**
+"Eu não ensino DRE pra ninguém. Ninguém que me contrata quer saber do meu conhecimento de
+contabilidade. Mas todo mundo quer lucro. E essa base — saber qual modelo de negócio vende mais,
+que preço cobrar, qual perfil de cliente é mais rentável — vem exatamente dali. No fundo, é
+gestão de negócio, que eu comecei a aplicar no digital. O conhecimento 'irrelevante' virou a
+parte mais valiosa do método, só que traduzido — ninguém compra o conhecimento cru, compra o
+resultado que ele produz."
+
 **Revelando o quê, não o como:**
 "Eu não vou destrinchar aqui, ao vivo, como se organiza isso passo a passo — é literalmente o
 que a mentoria entrega. O que eu quero que você leve é: a resposta pra 'sei o suficiente?' não
@@ -144,7 +167,8 @@ mais no fim."
 > **10 objeções levantadas (prompt padrão do Bloco 6 — "Eu vendo Mentoria em Grupo (Expert360,
 > 12 meses) pra Laura, profissional liberal 35-45 anos que já tentou digital, se frustrou e duvida
 > se seu conhecimento é suficiente ou diferenciado. Me dê as 10 maiores objeções desse público.")
-> — sugestão de condensação em 5 abaixo. **Pendente de confirmação/reprioização com a Karol.**
+> — condensação em 5 confirmada com a Karol em 14/09 (trocou a objeção de "grupo genérico" pela
+> objeção de investimento, obj. 9).
 
 | # | Objeção levantada |
 |---|---|
@@ -159,7 +183,7 @@ mais no fim."
 | 9 | "R$5.000 é muito dinheiro pra apostar numa coisa que ainda não sei se vai validar meu conhecimento" |
 | 10 | "12 meses em grupo não vai me dar atenção suficiente — meu caso é específico demais pra formato coletivo" |
 
-**Sugestão de 5 Afirmações (condensadas — confirmar com a Karol):**
+**5 Afirmações (condensadas — confirmadas com a Karol em 14/09):**
 
 | Objeção condensada | Afirmação que quebra |
 |---|---|
@@ -167,7 +191,7 @@ mais no fim."
 | "Meu conhecimento não é diferenciado o suficiente" (obj. 2, 3, 6) | Conhecimento não precisa ser inédito pra vender — precisa estar organizado numa jornada que sua persona reconheça como dela. É isso que faz quem "sabe menos" vender mais que quem sabe mais |
 | "Já tentei antes e não funcionou" (obj. 5) | Quando curso ou mentoria anterior não deu resultado, o gap raramente foi conhecimento — foi acompanhamento humano corrigindo rota, que é a diferença entre estudar sozinha e caminhar em grupo |
 | "Preciso ter certeza antes de decidir" (obj. 7, 8) | Não existe "estar pronta" — existe começar com quem já viu centenas de Lauras no mesmo ponto. Em até 4 meses dá pra ter validação e primeira venda real, não esperar um momento indefinido |
-| "Grupo é genérico/exposto demais pro meu caso" (obj. 4, 10) | Cada aluna trabalha o próprio primeiro travamento, no próprio ritmo — não é curso gravado genérico, é acompanhamento humano real dentro de uma jornada estruturada |
+| "É muito investimento pra uma coisa que ainda não sei se vai validar meu conhecimento" (obj. 9) | O risco não é investir sem ter certeza — é continuar sem estrutura pagando o mesmo custo em tempo perdido. Quanto antes você organiza o que já sabe, antes esse conhecimento vira retorno real |
 
 ---
 
@@ -223,18 +247,19 @@ método, mesmo que hoje pareça bagunçado."
 sensação chega — ou tomar a decisão mais inteligente, organizar o que você já vive com quem já
 viu centenas de Lauras chegarem exatamente de onde você está."
 
-**CTA (sugestão — confirmar):** comenta **ESTRUTURA** no chat — Karol (ou equipe) chama no
-direct/WhatsApp pra falar valor e próximos passos.
+**CTA:** comenta **AUTORIDADE** no chat — Karol (ou equipe) chama no direct/WhatsApp pra falar
+valor e próximos passos.
+> Confirmado pela Karol (14/09).
 
 ---
 
 ## CHECKLIST PRÉ-LIVE
 
-- [ ] Confirmar título final (proposto: ancorado na formação em Contabilidade/Administração)
-- [ ] Confirmar ou reprioizar as 5 Afirmações do Bloco 6 (10 objeções levantadas acima)
-- [ ] Confirmar CTA (sugerido: **ESTRUTURA**)
-- [ ] Definir se entra história pessoal adicional no Bloco 3/5 (episódio específico dos 8 fracassos ou caso de aluna)
-- [ ] Publicar planilha Mapa de Ativos de Autoridade (Google Sheets) e colar o link no Bloco 8
-- [ ] Confirmar se pode citar aluna nomeada no Bloco 2 (Filtro de Leads) ou mantém generalizado
-- [ ] Preço da Mentoria Grupo confirmado (R$5.000 pix ou 12x R$517,12) — nunca falado na live
+- [x] Confirmado (14/09): título **"Seu conhecimento é suficiente para se tornar método"**
+- [x] Confirmado (14/09): 5 Afirmações do Bloco 6 (objeção "grupo genérico" trocada pela de investimento)
+- [x] Confirmado (14/09): CTA **AUTORIDADE**
+- [x] Confirmado (14/09): história pessoal integrada (8 lançamentos → dependência do expert → volta como expert própria)
+- [x] Confirmado (14/09): nomes de produtos/experts terceiros mantidos genéricos
+- [ ] **Pendente:** Karol vai criar a planilha Mapa de Ativos de Autoridade — colar o link do Google Sheets no Bloco 8 quando estiver pronta
+- [x] Confirmado (14/09): preço da Mentoria Grupo R$5.000 (pix ou 12x R$517,12) — segue sem ser falado na live
 - [ ] Registrar em `lives-expert360-roteiros.md` após a live
