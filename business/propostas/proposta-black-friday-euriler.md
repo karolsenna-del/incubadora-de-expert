@@ -2,7 +2,7 @@
 
 **De:** Karol Senna
 **Para:** Euriler Jube
-**Status:** enviada a Euriler — aguardando retorno (sem retorno até 02/09/2026)
+**Status:** encerrada — Euriler não aceitou a parceria em 16/09/2026
 **Objeto confirmado:** desafio de implementação de Black Friday para um grupo selecionado de alunos da Arcane/Auroq. O público é formado pelos alunos que demonstrarem interesse e forem admitidos no desafio; todos os interessados elegíveis admitidos serão reunidos em um grupo administrado pela própria Karol.
 
 ---
