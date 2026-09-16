@@ -1,3 +1,5 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oferta Conduz Agro</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Quicksand:wght@400;500;600;700&display=swap">
 <style>
@@ -265,17 +267,109 @@ p{margin:0;text-wrap:pretty;}
 .cond-card h3{font-size:1.02rem;font-weight:700;margin-bottom:8px;line-height:1.25;}
 .cond-card p{font-size:.86rem;color:var(--ink-soft);line-height:1.5;}
 
-/* ---------- fechamento ---------- */
-#s13 .slide-inner{text-align:center;display:flex;flex-direction:column;align-items:center;gap:24px;}
-#s13 img.logo-big{width:min(20vw,110px);opacity:.9;}
+/* ---------- mentora + fechamento ---------- */
+#s13 .slide-inner{display:flex;flex-direction:column;gap:20px;}
+.mentor-proof{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  width:100%;
+}
+.mentor-proof article{
+  background:var(--paper-raised);
+  border:1.5px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+}
+.mentor-proof h3{font-size:1rem;font-weight:700;margin-bottom:8px;}
+.mentor-proof p{font-size:.82rem;line-height:1.48;color:var(--ink-soft);}
+.formation-note{
+  border-left:3px solid var(--gold);
+  padding-left:14px;
+  max-width:900px;
+  font-size:.82rem;
+  line-height:1.5;
+  color:var(--ink-soft);
+}
+#s14 .slide-inner{max-width:1040px;}
+.final-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(250px,.72fr);
+  align-items:center;
+  gap:clamp(28px,5vw,64px);
+}
+.final-copy{display:flex;flex-direction:column;align-items:flex-start;gap:20px;}
+.final-copy .eyebrow{margin:0;}
+.final-copy .lede{max-width:590px;}
+.mentor-photo-card{
+  position:relative;
+  justify-self:center;
+  padding:10px;
+  background:var(--paper-raised);
+  border:1.5px solid var(--border);
+  border-radius:22px;
+  box-shadow:0 18px 45px var(--shadow);
+}
+.mentor-photo{
+  display:block;
+  width:min(100%,360px);
+  height:auto;
+  max-height:68vh;
+  aspect-ratio:2/3;
+  object-fit:contain;
+  border-radius:14px;
+}
+.photo-caption{
+  position:absolute;
+  left:24px;right:24px;bottom:22px;
+  padding:9px 12px;
+  border-radius:10px;
+  color:#fff;
+  background:rgba(61,40,23,.82);
+  font-size:.74rem;
+  font-weight:700;
+  text-align:center;
+  letter-spacing:.03em;
+}
 
 @media(max-width:760px){
-  .metodo-grid,.apoio-grid,.cond-grid{grid-template-columns:1fr;}
+  .slide{padding:74px 24px 72px;overflow:auto;justify-content:flex-start;}
+  .metodo-grid,.apoio-grid,.cond-grid,.mentor-proof,.final-grid{grid-template-columns:1fr;}
   .formato-strip{gap:18px;}
   .checklist-points{flex-wrap:wrap;row-gap:14px;}
   .checklist-line{display:none;}
   .click-zone{width:10%;}
   .brand-corner span{display:none;}
+  .final-copy{gap:14px;}
+  .mentor-photo{max-height:42vh;width:auto;max-width:100%;}
+  .final-grid{gap:20px;}
+}
+@media(max-height:720px) and (min-width:761px){
+  .slide{padding-top:48px;padding-bottom:66px;}
+  .mentor-proof article{padding:14px;}
+  .mentor-proof p,.formation-note{font-size:.76rem;}
+  .mentor-photo{max-height:62vh;}
+}
+@media print{
+  @page{size:16in 9in;margin:0;}
+  html,body{height:auto;background:var(--paper);overflow:visible;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  #deck{height:auto;width:auto;}
+  .slide,.slide.active{
+    position:relative;
+    inset:auto;
+    width:16in;
+    height:9in;
+    opacity:1;
+    visibility:visible;
+    transform:none;
+    transition:none;
+    page-break-after:always;
+    break-after:page;
+    overflow:hidden;
+  }
+  .slide:last-child{page-break-after:auto;break-after:auto;}
+  .brand-corner{position:fixed;}
+  #navbar,#counter,.click-zone{display:none!important;}
 }
 </style>
 
@@ -433,11 +527,47 @@ p{margin:0;text-wrap:pretty;}
     </div>
   </section>
 
-  <!-- 13 FECHAMENTO -->
+  <!-- 13 QUEM CONDUZ -->
   <section class="slide" id="s13">
     <div class="slide-inner">
-      <img class="logo-big" src="assets/logo-conduz-agro-480-transparente.png" alt="Conduz Agro">
-      <h2 class="title-lg">Vamos conduzir isso juntos?</h2>
+      <div>
+        <div class="eyebrow">Quem vai conduzir você</div>
+        <h2 class="title-lg">Milena Gehrke</h2>
+        <p class="lede" style="margin-top:12px;">Engenheira Agrícola especializada em regularização de imóveis rurais, avaliações e georreferenciamento.</p>
+      </div>
+      <div class="mentor-proof">
+        <article>
+          <h3>Do documento à regularização</h3>
+          <p>Atua com organização e atualização documental, retificação e registro de imóveis, certificação junto ao Incra, CCIR e ITR.</p>
+        </article>
+        <article>
+          <h3>Decisões que pedem critério</h3>
+          <p>Realiza avaliações de imóveis rurais para compra e venda, financiamentos, partilhas e planejamento patrimonial.</p>
+        </article>
+        <article>
+          <h3>Clareza para reduzir riscos</h3>
+          <p>Seu trabalho é orientado por clareza, objetividade e segurança jurídica, com foco em prevenir riscos e valorizar propriedades.</p>
+        </article>
+      </div>
+      <p class="formation-note"><b>Formação complementar:</b> pós-graduação em Georreferenciamento de Imóveis Rurais, Avaliações Rurais e Ambientais, Desapropriação e Servidão Administrativa e Regularização Imobiliária Rural e Controle Patrimonial.</p>
+    </div>
+  </section>
+
+  <!-- 14 FECHAMENTO -->
+  <section class="slide" id="s14">
+    <div class="slide-inner">
+      <div class="final-grid">
+        <div class="final-copy">
+          <div class="eyebrow">Conduz Agro</div>
+          <h2 class="title-lg">Sua técnica já é forte.<br>Agora ela precisa ser percebida.</h2>
+          <p class="lede">Se você quer conduzir melhor produtores, comunicar valor, negociar com firmeza e construir uma atuação mais valorizada, vamos fazer isso juntos.</p>
+          <p class="pull" style="font-size:clamp(1.5rem,2.6vw,2.15rem);">Vamos conduzir isso juntos?</p>
+        </div>
+        <figure class="mentor-photo-card" style="margin:0;">
+          <img class="mentor-photo" src="assets/milena-gehrke-retrato.jpg" alt="Retrato profissional de Milena Gehrke">
+          <figcaption class="photo-caption">Milena Gehrke · Engenheira Agrícola</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
