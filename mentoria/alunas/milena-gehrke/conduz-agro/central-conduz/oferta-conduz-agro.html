@@ -33,7 +33,7 @@ h1,h2,h3,.display{
 }
 p{margin:0;text-wrap:pretty;}
 .eyebrow{
-  font-size:.8rem;
+  font-size:.95rem;
   font-weight:700;
   letter-spacing:.14em;
   text-transform:uppercase;
@@ -63,7 +63,7 @@ p{margin:0;text-wrap:pretty;}
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  padding:min(6vw,64px) min(8vw,80px) calc(min(6vw,64px) + 64px);
+  padding:min(5vw,56px) min(6vw,64px) calc(min(5vw,56px) + 58px);
   opacity:0;
   visibility:hidden;
   transform:translateX(24px);
@@ -79,7 +79,7 @@ p{margin:0;text-wrap:pretty;}
 }
 .slide-inner{
   width:100%;
-  max-width:980px;
+  max-width:1100px;
   margin:0 auto;
 }
 .brand-corner{
@@ -145,7 +145,7 @@ p{margin:0;text-wrap:pretty;}
 #counter{
   position:fixed;
   right:26px;bottom:24px;
-  font-size:.78rem;
+  font-size:.88rem;
   color:var(--ink-soft);
   letter-spacing:.06em;
   font-variant-numeric:tabular-nums;
@@ -162,8 +162,9 @@ p{margin:0;text-wrap:pretty;}
 .title-xl{font-size:clamp(2.4rem,5.4vw,4.4rem);font-weight:600;color:var(--ink);line-height:1.04;}
 .title-lg{font-size:clamp(1.9rem,3.6vw,3rem);font-weight:600;color:var(--ink);line-height:1.08;}
 .title-md{font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:600;color:var(--ink);}
-.lede{font-size:clamp(1.05rem,1.6vw,1.28rem);color:var(--ink-soft);line-height:1.55;max-width:640px;}
-.body-copy{font-size:1.08rem;line-height:1.6;color:var(--ink);max-width:640px;}
+.lede{font-size:clamp(1.28rem,1.8vw,1.55rem);color:var(--ink-soft);line-height:1.48;max-width:780px;}
+.body-copy{font-size:1.36rem;line-height:1.5;color:var(--ink);max-width:800px;}
+.fine-print{font-size:1.06rem;color:var(--ink-soft);line-height:1.42;}
 .pull{
   font-family:"Fraunces",serif;
   font-weight:600;
@@ -176,13 +177,13 @@ p{margin:0;text-wrap:pretty;}
 /* ---------- capa ---------- */
 #s1 .slide-inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px;}
 #s1 img.logo-big{width:min(30vw,170px);height:auto;}
-#s1 .prog{color:var(--ink-soft);font-size:.95rem;margin-top:6px;}
+#s1 .prog{color:var(--ink-soft);font-size:1.08rem;margin-top:6px;}
 
 /* ---------- metodo grid ---------- */
 .metodo-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:16px;
+  gap:18px;
   width:100%;
   margin-top:30px;
 }
@@ -190,20 +191,20 @@ p{margin:0;text-wrap:pretty;}
   background:var(--paper-raised);
   border:1.5px solid var(--border);
   border-radius:16px;
-  padding:24px 22px;
+  padding:22px 24px;
   text-align:left;
   position:relative;
 }
 .metodo-num{
   font-family:"Fraunces",serif;
   font-weight:600;
-  font-size:1.6rem;
+  font-size:1.78rem;
   color:var(--gold);
   margin-bottom:8px;
   display:block;
 }
-.metodo-card h3{font-size:1.08rem;font-weight:700;margin-bottom:8px;}
-.metodo-card p{font-size:.92rem;color:var(--ink-soft);line-height:1.5;}
+.metodo-card h3{font-size:1.34rem;font-weight:700;margin-bottom:8px;}
+.metodo-card p{font-size:1.2rem;color:var(--ink-soft);line-height:1.42;}
 
 /* ---------- timeline (etapas) ---------- */
 .etapas-wrap{width:100%;margin-top:34px;display:flex;flex-direction:column;gap:0;}
@@ -217,14 +218,14 @@ p{margin:0;text-wrap:pretty;}
   font-family:"Fraunces",serif;font-weight:600;font-size:1.1rem;
 }
 .etapa-row:nth-child(2) .etapa-mark{background:var(--gold);}
-.etapa-body h3{font-size:1.12rem;font-weight:700;margin-bottom:4px;}
-.etapa-body .meses{font-size:.78rem;color:var(--olive-deep);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;display:block;}
-.etapa-body p{font-size:.95rem;color:var(--ink-soft);max-width:560px;}
+.etapa-body h3{font-size:1.28rem;font-weight:700;margin-bottom:4px;}
+.etapa-body .meses{font-size:.9rem;color:var(--olive-deep);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;display:block;}
+.etapa-body p{font-size:1.1rem;line-height:1.45;color:var(--ink-soft);max-width:720px;}
 .formato-strip{
   display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;
 }
-.formato-strip div{font-size:.86rem;color:var(--ink-soft);}
-.formato-strip b{display:block;font-family:"Fraunces",serif;font-size:1.5rem;color:var(--ink);font-weight:600;}
+.formato-strip div{font-size:1rem;color:var(--ink-soft);}
+.formato-strip b{display:block;font-family:"Fraunces",serif;font-size:1.62rem;color:var(--ink);font-weight:600;}
 
 /* ---------- jornada / checklist timeline ---------- */
 .checklist-track{
@@ -238,13 +239,13 @@ p{margin:0;text-wrap:pretty;}
 .cp{display:flex;flex-direction:column;align-items:center;gap:10px;flex:1;}
 .cp-dot{width:14px;height:14px;border-radius:50%;background:var(--paper);border:2.5px solid var(--gold);}
 .cp:first-child .cp-dot,.cp:last-child .cp-dot{background:var(--olive);border-color:var(--olive);}
-.cp span{font-size:.78rem;color:var(--ink-soft);font-weight:700;}
+.cp span{font-size:.9rem;color:var(--ink-soft);font-weight:700;}
 
 /* ---------- apoio grid ---------- */
 .apoio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;width:100%;margin-top:26px;}
-.apoio-card{background:var(--paper-raised);border:1.5px solid var(--border);border-radius:14px;padding:16px;}
-.apoio-card h3{font-size:.92rem;font-weight:700;margin-bottom:6px;}
-.apoio-card p{font-size:.8rem;color:var(--ink-soft);line-height:1.4;}
+.apoio-card{background:var(--paper-raised);border:1.5px solid var(--border);border-radius:14px;padding:20px;}
+.apoio-card h3{font-size:1.14rem;font-weight:700;margin-bottom:6px;}
+.apoio-card p{font-size:1.04rem;color:var(--ink-soft);line-height:1.45;}
 
 /* ---------- inevitabilidade ---------- */
 #s10 .slide-inner{text-align:center;display:flex;flex-direction:column;align-items:center;gap:26px;}
@@ -262,10 +263,10 @@ p{margin:0;text-wrap:pretty;}
 
 /* ---------- condicoes grid ---------- */
 .cond-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;width:100%;margin-top:30px;}
-.cond-card{background:var(--paper-raised);border:1.5px solid var(--border);border-radius:16px;padding:22px 18px;text-align:left;}
-.cond-card .tag{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
-.cond-card h3{font-size:1.02rem;font-weight:700;margin-bottom:8px;line-height:1.25;}
-.cond-card p{font-size:.86rem;color:var(--ink-soft);line-height:1.5;}
+.cond-card{background:var(--paper-raised);border:1.5px solid var(--border);border-radius:16px;padding:22px 20px;text-align:left;}
+.cond-card .tag{font-size:.92rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.cond-card h3{font-size:1.28rem;font-weight:700;margin-bottom:8px;line-height:1.22;}
+.cond-card p{font-size:1.14rem;color:var(--ink-soft);line-height:1.42;}
 
 /* ---------- mentora + fechamento ---------- */
 #s13 .slide-inner{display:flex;flex-direction:column;gap:20px;}
@@ -279,16 +280,16 @@ p{margin:0;text-wrap:pretty;}
   background:var(--paper-raised);
   border:1.5px solid var(--border);
   border-radius:16px;
-  padding:18px;
+  padding:20px;
 }
-.mentor-proof h3{font-size:1rem;font-weight:700;margin-bottom:8px;}
-.mentor-proof p{font-size:.82rem;line-height:1.48;color:var(--ink-soft);}
+.mentor-proof h3{font-size:1.24rem;font-weight:700;margin-bottom:8px;}
+.mentor-proof p{font-size:1.08rem;line-height:1.42;color:var(--ink-soft);}
 .formation-note{
   border-left:3px solid var(--gold);
   padding-left:14px;
   max-width:900px;
-  font-size:.82rem;
-  line-height:1.5;
+  font-size:1.05rem;
+  line-height:1.42;
   color:var(--ink-soft);
 }
 #s14 .slide-inner{max-width:1040px;}
@@ -326,7 +327,7 @@ p{margin:0;text-wrap:pretty;}
   border-radius:10px;
   color:#fff;
   background:rgba(61,40,23,.82);
-  font-size:.74rem;
+  font-size:.95rem;
   font-weight:700;
   text-align:center;
   letter-spacing:.03em;
@@ -345,9 +346,10 @@ p{margin:0;text-wrap:pretty;}
   .final-grid{gap:20px;}
 }
 @media(max-height:720px) and (min-width:761px){
-  .slide{padding-top:48px;padding-bottom:66px;}
-  .mentor-proof article{padding:14px;}
-  .mentor-proof p,.formation-note{font-size:.76rem;}
+  .slide{padding-top:44px;padding-bottom:62px;}
+  .metodo-grid,.etapas-wrap,.cond-grid{margin-top:20px;}
+  .etapa-row{padding:14px 0;}
+  .mentor-proof article{padding:16px;}
   .mentor-photo{max-height:62vh;}
 }
 @media print{
@@ -413,10 +415,10 @@ p{margin:0;text-wrap:pretty;}
       <div class="eyebrow">A ordem certa</div>
       <h2 class="title-lg">Método Conduz Agro</h2>
       <div class="metodo-grid">
-        <div class="metodo-card"><span class="metodo-num">1</span><h3>Analisar com mais segurança</h3><p>Ler o caso completo: objetivo do produtor, situação documental, patrimonial, riscos, pessoas envolvidas, o que falta, impacto.</p></div>
+        <div class="metodo-card"><span class="metodo-num">1</span><h3>Analisar com mais segurança</h3><p>Ler o caso completo: objetivo, documentos, patrimônio, riscos, envolvidos, lacunas e impactos.</p></div>
         <div class="metodo-card"><span class="metodo-num">2</span><h3>Definir como conduzir</h3><p>Mapa do Caso + Plano de Condução: o que investigar, o que explicar, quem envolver, qual o próximo passo.</p></div>
-        <div class="metodo-card"><span class="metodo-num">3</span><h3>Orientar e negociar com firmeza</h3><p>Comunicação, tradução técnica, proposta, preço, objeções, condução até a decisão.</p></div>
-        <div class="metodo-card"><span class="metodo-num">4</span><h3>Construir atuação valorizada</h3><p>Posicionamento, diferencial, precificação, limites — até o seu Protocolo Pessoal de Condução.</p></div>
+        <div class="metodo-card"><span class="metodo-num">3</span><h3>Orientar e negociar com firmeza</h3><p>Traduzir a técnica, apresentar proposta e preço, responder objeções e conduzir até a decisão.</p></div>
+        <div class="metodo-card"><span class="metodo-num">4</span><h3>Construir atuação valorizada</h3><p>Definir posicionamento, diferencial, preço e limites — até criar seu Protocolo Pessoal de Condução.</p></div>
       </div>
     </div>
   </section>
@@ -470,7 +472,7 @@ p{margin:0;text-wrap:pretty;}
           <div class="cp"><div class="cp-dot"></div><span>S24</span></div>
         </div>
       </div>
-      <p style="font-size:.78rem;color:var(--ink-soft);margin-top:12px;">Checklist de Evidências da Autoridade — checkpoints ao longo dos 12 meses</p>
+      <p class="fine-print" style="margin-top:12px;">Checklist de Evidências da Autoridade — checkpoints ao longo dos 12 meses</p>
     </div>
   </section>
 
@@ -484,7 +486,7 @@ p{margin:0;text-wrap:pretty;}
         <div class="apoio-card"><h3>LIA</h3><p>Conduz você na prospecção de produtores rurais até o atendimento, traduzindo termos técnicos e quebrando objeção.</p></div>
         <div class="apoio-card"><h3>REGIA</h3><p>Destrava dúvidas técnicas e ainda analisa os documentos de regularização de imóveis rurais e crédito rural.</p></div>
       </div>
-      <p style="font-size:.78rem;color:var(--ink-soft);margin-top:14px;">Os agentes apoiam — nunca substituem seu julgamento e sua responsabilidade técnica.</p>
+      <p class="fine-print" style="margin-top:14px;">Os agentes apoiam — nunca substituem seu julgamento e sua responsabilidade técnica.</p>
     </div>
   </section>
 
