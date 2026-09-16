@@ -1,9 +1,10 @@
 # Live 30 — "Seu conhecimento é suficiente para se tornar método"
 > Tema: a objeção "será que meu conhecimento é suficiente?" — síndrome do impostor aplicada à Laura
 > que já tem expertise real no offline, mas duvida se ela "conta" pra vender no digital.
-> Ancorado na trajetória real da Karol (confirmada por ela em 14/09): foi expert de 2 produtos
-> próprios, virou insider, foi convidada pra ser lançadora de outros experts, fez 8 lançamentos,
-> faturou bem — mas ficou na mão do expert (dependente, sem negócio próprio). Voltou como expert
+> Ancorado na trajetória real da Karol (confirmada por ela em 14/09, corrigida em 15/09): foi expert
+> de 2 produtos próprios — fez 8 lançamentos nesses produtos e fracassou. Depois virou insider, foi
+> convidada pra ser estrategista/lançadora de outros experts — faturou bem fazendo isso, mas ficou
+> na mão do expert (dependente, sem negócio próprio). Voltou como expert
 > com a Incubadora juntando TUDO que viveu: os próprios fracassos, o processo de lançamento que
 > dominou como estrategista, ferramentas de ADM (5W2H, PDCA), a base de contabilidade/auditoria
 > (que deu nome ao serviço **Auditoria do Método**), a visão sistêmica de modelo de negócio que a
@@ -29,11 +30,12 @@
 2. ~~Bloco 6 (5 Afirmações)~~ — **confirmado (14/09)**: trocada a afirmação sobre "grupo genérico"
    pela objeção de investimento (obj. 9 da lista de 10) — ver bloco abaixo.
 3. ~~CTA~~ — **confirmado: AUTORIDADE**.
-4. ~~História pessoal~~ — **confirmada e integrada** (8 lançamentos → dependência do expert →
-   volta como expert própria juntando fracassos + processo de lançamento + ferramentas ADM/PDCA +
-   contabilidade/auditoria + visão sistêmica + foco em satisfação do cliente da FNQ).
-5. **Planilha Mapa de Ativos de Autoridade** — preciso do link publicado (Google Sheets) antes da
-   live, igual foi feito com o bônus da Live 29.
+4. ~~História pessoal~~ — **confirmada e integrada, corrigida em 15/09**: 2 produtos próprios (8
+   lançamentos, fracasso) → estrategista/lançadora de outros experts (faturou bem, mas dependente)
+   → volta como expert própria juntando fracassos + processo de lançamento + ferramentas ADM/PDCA +
+   contabilidade/auditoria + visão sistêmica + foco em satisfação do cliente da FNQ.
+5. ~~Planilha Mapa de Ativos de Autoridade~~ — **publicada e verificada (16/09)**. Link de cópia
+   individual: https://docs.google.com/spreadsheets/d/1yFGslckpBPkFRAfnMjkGlh9OTXWE2UvyIY170wnPacw/copy
 6. ~~Nomes dos produtos/experts~~ — **confirmado (14/09): mantém genérico**, sem citar nomes de
    terceiros ("fui expert de 2 produtos", "lançadora de outros experts").
 
@@ -47,11 +49,12 @@ que você já vive em autoridade. Diploma é o que você estudou. Método é o q
 
 **O combinado dessa live:**
 "Hoje eu vou te contar uma fase da minha história que pouca gente sabe: eu já fui expert de 2
-produtos próprios. Depois virei insider, fui convidada pra ser lançadora de outros experts — fiz
-8 lançamentos, faturei bem fazendo isso. E mesmo assim, fiquei na mão do expert. O negócio nunca
-era meu. Foi só quando eu juntei tudo que eu já tinha vivido — os fracassos, o processo de
-lançamento que eu dominava como estrategista, ferramentas que vêm da minha formação em
-Administração e Contabilidade — que eu voltei como expert, com o meu próprio método."
+produtos próprios — fiz 8 lançamentos nesses produtos, e fracassei. Depois virei insider, fui
+convidada pra ser estrategista e lançadora de outros experts. Faturei bem fazendo isso. E mesmo
+assim, fiquei na mão do expert. O negócio nunca era meu. Foi só quando eu juntei tudo que eu já
+tinha vivido — os fracassos dos meus produtos, o processo de lançamento que eu dominava como
+estrategista, ferramentas que vêm da minha formação em Administração e Contabilidade — que eu
+voltei como expert, com o meu próprio método."
 
 **Ancoragem:**
 "Se você também carrega essa pergunta — 'será que o que eu sei é suficiente pra vender isso?' —
@@ -91,17 +94,17 @@ tem, credencial nenhuma muda isso."
    negócio nunca é seu — você continua na mão do expert.
 
 **A virada real (história própria da Karol):**
-"Eu vivi o caminho 3 de verdade. Eu já tinha sido expert de 2 produtos meus. Depois virei
-insider, fui convidada pra ser lançadora de outros experts — fiz 8 lançamentos, faturei bem
-fazendo isso. Mas em algum momento eu percebi: eu sabia lançar qualquer coisa, menos o meu
-próprio negócio. Eu tava dependente do expert que eu servia."
+"Eu vivi o caminho 3 de verdade. Eu já tinha sido expert de 2 produtos meus — fiz 8 lançamentos
+nesses produtos, e fracassei. Depois virei insider, fui convidada pra ser lançadora de outros
+experts. Faturei bem fazendo isso. Mas em algum momento eu percebi: eu sabia lançar qualquer
+coisa, menos o meu próprio negócio. Eu tava dependente do expert que eu servia."
 
 **A camada que eu não via:**
 "Achei que precisava escolher entre 'ser expert' (que exige ter uma coisa só, redondinha, pronta
 pra ensinar) ou 'ser estrategista' (que exige servir o método de outra pessoa). O que eu não via
 é que tudo que eu tinha vivido nos dois papéis já era o meu método — só que espalhado. Os
-fracassos dos meus 2 produtos. O processo de lançamento que eu dominava de dentro, dos 8 que
-fiz pra outros. As ferramentas de gestão da minha formação em Administração — 5W2H, PDCA. A
+fracassos dos meus 2 produtos, dos 8 lançamentos que fiz neles. O processo de lançamento que
+eu dominava de dentro, da experiência como estrategista pra outros experts. As ferramentas de gestão da minha formação em Administração — 5W2H, PDCA. A
 base de contabilidade e auditoria, que hoje dá nome a um dos meus serviços: **Auditoria do
 Método**. A visão sistêmica de modelo de negócio que auditoria me deu. E o foco obsessivo em
 satisfação do cliente que o serviço público me ensinou, trabalhando na FNQ. Nenhuma dessas
@@ -136,7 +139,7 @@ esperar mais nada."
 **Conectando com o método (5Ps):**
 "É exatamente por isso que a Incubadora não começa pelo conteúdo, nem pela credencial. Começa
 pelos 5Ps — Persona Compradora, Promessa Transformadora, Processo Autoral, Portfólio
-Estratégico, Posicionamento de Autoridade. Na minha experiência com centenas de Lauras, a dúvida
+Estratégico, Posicionamento de Autoridade. Na minha experiência com dezenas de Lauras, a dúvida
 'será que sei o suficiente' quase sempre trava bem no início dessa sequência — não porque falte
 conhecimento, mas porque o conhecimento que existe ainda não foi organizado num formato que se
 ensina, vende e entrega."
@@ -190,7 +193,7 @@ mais no fim."
 | "Já sei o suficiente, só preciso organizar sozinha" (obj. 1) | Ter conhecimento não é ter estrutura — e organizar sozinha é exatamente a parte que mais trava quem tenta sem acompanhamento. É isso que a Mentoria entrega, não mais conteúdo pra estudar |
 | "Meu conhecimento não é diferenciado o suficiente" (obj. 2, 3, 6) | Conhecimento não precisa ser inédito pra vender — precisa estar organizado numa jornada que sua persona reconheça como dela. É isso que faz quem "sabe menos" vender mais que quem sabe mais |
 | "Já tentei antes e não funcionou" (obj. 5) | Quando curso ou mentoria anterior não deu resultado, o gap raramente foi conhecimento — foi acompanhamento humano corrigindo rota, que é a diferença entre estudar sozinha e caminhar em grupo |
-| "Preciso ter certeza antes de decidir" (obj. 7, 8) | Não existe "estar pronta" — existe começar com quem já viu centenas de Lauras no mesmo ponto. Em até 4 meses dá pra ter validação e primeira venda real, não esperar um momento indefinido |
+| "Preciso ter certeza antes de decidir" (obj. 7, 8) | Não existe "estar pronta" — existe começar com quem já viu dezenas de Lauras no mesmo ponto. Em até 4 meses dá pra ter validação e primeira venda real, não esperar um momento indefinido |
 | "É muito investimento pra uma coisa que ainda não sei se vai validar meu conhecimento" (obj. 9) | O risco não é investir sem ter certeza — é continuar sem estrutura pagando o mesmo custo em tempo perdido. Quanto antes você organiza o que já sabe, antes esse conhecimento vira retorno real |
 
 ---
@@ -240,12 +243,13 @@ precisar do 1:1 exclusivo, com acompanhamento humano de verdade, não sozinha nu
 erros e padrões de resolução, e te ajuda a enxergar a matéria-prima que você já tem pra virar
 método, mesmo que hoje pareça bagunçado."
 > Bônus único, formato simples (planilha) — não ofusca o entregável principal (a jornada coached
-> de 12 meses). **Pendente: link do Google Sheets publicado antes da live.**
+> de 12 meses). **Link para cada participante criar a própria cópia editável:**
+> https://docs.google.com/spreadsheets/d/1yFGslckpBPkFRAfnMjkGlh9OTXWE2UvyIY170wnPacw/copy
 
 **Fechamento — Decisão Mais Inteligente:**
 "Você tem 2 caminhos: continuar esperando se sentir 'suficiente' sozinha, sem saber quando essa
 sensação chega — ou tomar a decisão mais inteligente, organizar o que você já vive com quem já
-viu centenas de Lauras chegarem exatamente de onde você está."
+viu dezenas de Lauras chegarem exatamente de onde você está."
 
 **CTA:** comenta **AUTORIDADE** no chat — Karol (ou equipe) chama no direct/WhatsApp pra falar
 valor e próximos passos.
@@ -258,8 +262,8 @@ valor e próximos passos.
 - [x] Confirmado (14/09): título **"Seu conhecimento é suficiente para se tornar método"**
 - [x] Confirmado (14/09): 5 Afirmações do Bloco 6 (objeção "grupo genérico" trocada pela de investimento)
 - [x] Confirmado (14/09): CTA **AUTORIDADE**
-- [x] Confirmado (14/09): história pessoal integrada (8 lançamentos → dependência do expert → volta como expert própria)
+- [x] Confirmado (14/09), corrigido (15/09): história pessoal integrada — 2 produtos próprios (8 lançamentos, fracasso) → estrategista/lançadora de outros experts (faturou bem, dependente) → volta como expert própria
 - [x] Confirmado (14/09): nomes de produtos/experts terceiros mantidos genéricos
-- [ ] **Pendente:** Karol vai criar a planilha Mapa de Ativos de Autoridade — colar o link do Google Sheets no Bloco 8 quando estiver pronta
+- [x] Concluído (16/09): planilha **Mapa de Ativos de Autoridade** publicada; mestre em modo leitor para quem tem o link e entrega por cópia individual: https://docs.google.com/spreadsheets/d/1yFGslckpBPkFRAfnMjkGlh9OTXWE2UvyIY170wnPacw/copy
 - [x] Confirmado (14/09): preço da Mentoria Grupo R$5.000 (pix ou 12x R$517,12) — segue sem ser falado na live
 - [ ] Registrar em `lives-expert360-roteiros.md` após a live
