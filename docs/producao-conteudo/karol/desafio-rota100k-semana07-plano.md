@@ -322,19 +322,15 @@ A combinação dessas respostas escolhe o produto melhor do que copiar a escada 
 Me segue e salva essa régua.
 
 ### 20h · Carrossel neutro
-**Tema:** "Como desenhar um ecossistema de produtos sem criar tudo de uma vez"
-1. **Capa:** "Você não precisa de 7 produtos. Precisa de 1 transformação validada e próximos passos coerentes."
-2. **Reforço do hook:** "Ecossistema não é catálogo. Cada produto precisa resolver uma etapa diferente para a mesma jornada."
-3. **Passo 1 — transformação central:** escreva o antes e o depois que você já consegue conduzir. Se ainda não vendeu nem entregou, não abra novas ofertas.
-4. **Passo 2 — porta de entrada:** escolha conversa, diagnóstico ou conteúdo que ajude a pessoa a reconhecer o problema; não invente low ticket só para “ter entrada”.
-5. **Passo 3 — validação:** use mentoria ou serviço próximo do cliente quando ainda precisa observar objeções, adaptar e provar a sequência.
-6. **Passo 4 — padronização:** transforme perguntas recorrentes em checklist, aula ou material de apoio. Só o que se repete merece virar ativo.
-7. **Passo 5 — escala:** curso gravado ou low ticket entra quando promessa, processo, aquisição e suporte já têm critério — não como fuga da venda.
-8. **Passo 6 — continuidade:** crie próximo produto apenas quando existir uma próxima dor comprovada, não para preencher uma “escada de valor”.
-9. **Checklist final:** cada peça tem público, problema, entrega, prova e próximo passo diferentes? Se duas ofertas fazem a mesma coisa, simplifique.
-10. **CTA + assinatura:** "Me segue para aprender a validar a primeira peça antes de construir o resto."
-
-**Produção — Mack:** monte no Canva com uma única linha visual de seis caixas e setas; use ícones genéricos e texto, sem foto, print, logo de plataforma ou prova de cliente.
+**Tema:** "Os 5Ps não funcionam sem esta camada"
+1. **Capa:** "Seu método não funciona sem esta camada — e você provavelmente trava numa parte dele."
+2. **Reforço do hook:** "Você pode ter feito o curso certo sobre cada parte do teu método e mesmo assim travar igual. O motivo real não é o que você imagina."
+3. **Persona travada:** geralmente é insegurança de achar que precisa saber tudo antes de definir quem atender.
+4. **Promessa travada:** geralmente é medo de prometer algo que ainda não se sente 100% pronta pra sustentar.
+5. **Processo travado:** geralmente é perfeccionismo — "feito é melhor que perfeito", mas ninguém executa isso de verdade.
+6. **Proposta travada:** geralmente é medo de cobrar — a crença de que vender é serviço, não prova de valor pessoal.
+7. **Posicionamento travado:** geralmente é confundir autoridade com influência forçada.
+8. **CTA + assinatura:** "Qual desses 5 é o teu? Comenta que eu te digo por onde eu começaria."
 
 ---
 
@@ -407,19 +403,15 @@ Curso livre e educação formal resolvem problemas diferentes.
 Me segue e salva esse checklist.
 
 ### 20h · Carrossel neutro
-**Tema:** "Curso livre ou educação formal? Uma matriz de decisão sem promessa falsa"
-1. **Capa:** "Seu curso precisa de MEC — ou sua persona só precisa de um resultado aplicável?"
-2. **Reforço do hook:** "Curso livre não precisa de autorização ou reconhecimento do MEC. Educação formal segue outra lógica. Misturar os dois cria promessa falsa."
-3. **Se a meta é aplicação:** método autoral, atualização e habilidade prática podem caber em curso livre, com escopo e certificado descritos claramente.
-4. **Se a meta é título acadêmico:** avalie modalidade formal e instituição credenciada; não transforme certificado livre em “pós” por linguagem de marketing.
-5. **Se a meta é carreira:** confirme por escrito o que empregador, edital ou plano de carreira realmente aceita. Não presuma.
-6. **Se a profissão é regulamentada:** verifique regras do conselho e deixe explícito que o curso não habilita ato profissional quando não habilitar.
-7. **Se pensar em parceria:** avalie instituição, responsabilidades, projeto pedagógico, avaliação, documentação e comunicação — não apenas o selo.
-8. **Texto mínimo da oferta:** categoria do curso, emissor, carga horária, finalidade do certificado e limites de uso.
-9. **Decisão:** escolha curso livre pela aplicação; escolha via formal quando o título fizer parte real do resultado esperado.
-10. **CTA + assinatura:** "Me segue para aprender a desenhar o produto antes de escolher o rótulo."
-
-**Produção — Mack:** faça o carrossel como matriz de duas colunas, com rodapé pequeno “Fonte: MEC — FAQs de cursos livres e pós-graduação lato sensu”; use apenas texto e ícones neutros, sem brasão ou logomarca oficial.
+**Tema:** "5 perguntas que a IA não decide por você"
+1. **Capa:** "5 perguntas do teu método que a IA não decide por você — não importa quão bom seja o prompt."
+2. **Reforço do hook:** "Ela escreve a legenda, monta o slide, sugere o preço. Mas essas 5 decisões aqui, nenhuma IA faz por você."
+3. **Persona:** pra quem eu tô perguntando? A IA não sabe com quem você já gerou resultado de verdade.
+4. **Promessa:** qual resultado eu realmente quero entregar? Isso vem da sua trajetória, não de um prompt.
+5. **Processo:** em que ordem eu executo isso? Sequência errada quebra o resultado certo.
+6. **Proposta:** o que eu valido antes de escalar? A IA não sabe o que ainda não foi testado no seu negócio.
+7. **Posicionamento:** como eu comunico isso pro mercado? Isso é decisão de tom, não de ferramenta.
+8. **CTA + assinatura:** "Comenta qual dessas 5 decisões você ainda tá terceirizando pra sorte, não pra critério."
 
 ---
 
@@ -487,19 +479,15 @@ Oferta validada, script real, volume, métrica e margem vêm antes da contrataç
 Me segue que eu ensino o que documentar.
 
 ### 20h · Carrossel neutro
-**Tema:** "High ticket ou low ticket: escolha pela operação que você consegue sustentar"
-1. **Capa:** "Sem audiência grande, eu testaria o produto mais caro primeiro. Aqui está o porquê."
-2. **Reforço do hook:** "Preço baixo precisa de volume. High ticket pode começar com poucas conversas qualificadas."
-3. **High ticket no início:** permite prospectar, qualificar e vender no 1:1 por Sessões de Vendas Secretas, acumulando linguagem e objeções.
-4. **Condição do high ticket:** transformação complexa, valor claro, persona aderente e entrega próxima. Não é cobrar caro por promessa vaga.
-5. **Low ticket na prática:** precisa de distribuição, página, checkout, suporte em volume, números acompanhados e próximo passo na esteira.
-6. **Condição do low ticket:** dor estreita, entrega padronizada, margem conhecida e aquisição minimamente previsível.
-7. **Sem audiência:** escolha conversas qualificadas, não preço baixo por medo de vender.
-8. **Com aquisição validada:** low ticket pode cumprir entrada, ativação ou diagnóstico dentro do ecossistema.
-9. **Time comercial:** só depois de oferta, script, volume, métrica e margem; antes disso, o expert ainda precisa aprender a venda.
-10. **CTA + assinatura:** "Me segue para escolher produto pelo que ele exige — não pelo que parece fácil."
-
-**Produção — Mack:** use layout dividido “conversa” × “volume” e um checklist visual; não inclua faturamento, taxa de conversão ou promessa numérica sem base documental.
+**Tema:** "Sua persona está baseada em propósito ou em prova?"
+1. **Capa:** "A persona dela conectava. A prova mais forte que ela tinha morava em outro mercado — e quase ficou de fora da oferta."
+2. **Reforço do hook:** "Isso quase aconteceu com uma mentorada minha essa semana. E pode estar acontecendo com você agora, sem você perceber."
+3. **Identificação:** com quem você mais se conecta pela própria dor vivida? Essa é só a primeira pergunta, não a resposta final.
+4. **Autoridade:** pra quem você já gerou resultado de verdade, com prova? Nem sempre é o mesmo público da identificação.
+5. **Diferenciação:** em qual mercado sua bagagem te destaca da concorrência, em vez de te igualar a todo mundo?
+6. **Oportunidade:** esse mercado tem gente disposta a pagar pelo que você resolve, hoje?
+7. **Decisão estratégica:** se identificação e autoridade apontam pra lugares diferentes, escolhe pela prova — ela é mais difícil de copiar do que a dor.
+8. **CTA + assinatura:** "Comenta: hoje, sua persona é mais propósito ou mais prova?"
 
 ---
 
@@ -568,19 +556,15 @@ Uma mudança por vez preserva o diagnóstico.
 Me segue e aplica essa auditoria hoje.
 
 ### 20h · Carrossel neutro
-**Tema:** "As 7 etapas para validar seu método vendendo"
-1. **Capa:** "Seu método não é validado por elogio. Ele atravessa estas 7 etapas."
-2. **Prospecção:** iniciar conversas todos os dias com potenciais compradores e registrar resposta — sem acesso à persona, não há teste.
-3. **Qualificação:** fazer de três a cinco perguntas para confirmar aderência à Persona Compradora antes de oferecer sessão.
-4. **Sessão de Venda Secreta:** responder “isso é verdade?”, “o que eu ganho?” e “serve para mim?” com autoridade, benefício e provas comparáveis, sem garantir resultado.
-5. **Follow-up:** sair de toda conversa com próximo passo e data; encerrar quando houver recusa explícita ou pedido para não contatar.
-6. **Negociação:** preservar relacionamento e proposta; concessão só com contrapartida clara.
-7. **Fechamento:** fazer pergunta objetiva que permita “sim” ou “não” e registrar a decisão sem preencher o silêncio.
-8. **Pós-venda:** iniciar onboarding após o pagamento, entregar, acompanhar satisfação, aprender com o uso e estimular indicação quando houver mérito.
-9. **Diagnóstico:** linha vazia = validação interrompida. Corrija uma etapa antes de trocar produto, preço e promessa juntos.
-10. **CTA + assinatura:** "Me segue para transformar cada etapa em processo, não improviso."
-
-**Produção — Mack:** diagrama no Canva em sete degraus numerados; uma frase e um ícone por degrau. Não usar funil de cliente, número de venda, depoimento ou tela de pagamento.
+**Tema:** "A semana inteira em imagens"
+1. **Capa:** "Prometi mostrar o trabalho a semana inteira. Isso muda o que vocês vão aceitar de mim daqui pra frente."
+2. **Segunda:** 15 anos de auditoria viraram critério de método. Mostrar o processo, não só o resultado.
+3. **Terça:** mentoria também precisa de fidelidade — não deixa a IA virar árbitro da relação com seu mentor.
+4. **Quarta:** capacidade não é prioridade. Decide o que fazer, delegar, deixar pra depois ou cortar.
+5. **Quinta:** método documentado no papel não vira comportamento sem trabalhar a mentalidade por trás dele.
+6. **Sexta:** empreender devolve uma coisa que estabilidade não dá — decisão sobre o próprio futuro.
+7. **Sábado:** persona sem prova de autoridade é só identificação bonita, não estratégia.
+8. **CTA + assinatura:** "Qual desses 6 dias você quer que eu aprofunde primeiro? Comenta o número."
 
 ---
 
