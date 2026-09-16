@@ -640,6 +640,22 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - **Princípio:** decisão imediata não significa pressão imediata. O acordo antecipa transparência, elimina follow-up indefinido e preserva o direito do lead de dizer “não”.
 - **Cuidado:** não usar esse roteiro com lead sem qualificação, nem transformar silêncio, dúvida ou pedido de tempo em consentimento.
 
+## Teses de produto e operação — registradas em 17/09/2026
+
+- **Ecossistema de produtos:** não é catálogo nem obrigação de ter uma “escada” cheia. Parte de uma transformação validada; perguntas recorrentes viram materiais, processos repetidos podem virar produtos padronizados e a continuidade só nasce de uma próxima dor comprovada.
+- **Produto × persona × expert:** mentoria tende a servir a quem quer fazer junto e precisa de adaptação; low ticket, a dores estreitas com aplicação mais autônoma; curso gravado, a processos já repetidos e estáveis; serviço, a quem quer o resultado feito. A escolha também depende da maturidade do método e da capacidade de entrega do expert.
+- **Fácil × médio × difícil, no eixo correto:** mentoria costuma ser mais fácil de criar e validar por permitir venda e aprendizagem no 1:1, mas não é necessariamente fácil de entregar. Low ticket pede mais estrutura de aquisição, conversão, suporte e esteira. Curso gravado exige método estável, roteiro, produção e experiência do aluno antes da escala.
+- **High ticket no começo:** tende a ser mais aderente quando a transformação é complexa e pode ser validada por Sessões de Vendas Secretas com poucos leads qualificados, sem depender de audiência grande. Não autoriza preço alto sem valor, prova e entrega coerentes.
+- **Low ticket:** costuma exigir audiência ou tráfego, página, checkout, suporte em volume, margem acompanhada, continuidade e operação comercial. Estimativas de conversão devem ficar marcadas como hipótese até existirem dados reais.
+- **Claim sem fonte:** “a cada 4 low tickets, 1 dá certo” é relato/tese da Karol ainda sem base documental. Não publicar como estatística. Até confirmação, formular apenas como experiência: “na minha experiência, muitos low tickets não sustentam a operação de volume que exigem”.
+- **Time comercial:** o expert vende primeiro para documentar persona, qualificação, objeções, proposta, follow-up e fechamento. Time entra para repetir e ampliar um processo conhecido quando existem demanda, volume mensurável e margem para treinamento e gestão; apoio operacional pode entrar antes sem terceirizar a aprendizagem comercial.
+- **Curso livre × educação formal:** segundo o MEC, cursos livres não precisam de autorização ou reconhecimento dos sistemas de ensino e seus certificados não equivalem a diploma, pós-graduação ou habilitação profissional. Quando a persona valoriza título acadêmico, progressão ou requisito formal — inclusive em nichos como advocacia e medicina — avaliar modalidade adequada e instituição credenciada, além das regras do conselho profissional. Não usar “certificado pelo MEC” como fórmula genérica.
+- **Fontes oficiais para terminologia educacional:** FAQ do MEC “O que são cursos livres?” (atualizada em 22/12/2023) e FAQ “Os cursos de pós-graduação lato sensu precisam ser autorizados e reconhecidos pelo MEC?” (atualizada em 08/02/2024).
+  - https://www.gov.br/mec/pt-br/acesso-a-informacao/institucional/estrutura-organizacional/orgaos-especificos-singulares/secretaria-de-regulacao-e-supervisao-da-educacao-superior/perguntasfrequentes/o-que-sao-cursos-livres
+  - https://www.gov.br/mec/pt-br/acesso-a-informacao/perguntas-frequentes/educacao-superior-1/pos-graduacao-lato-sensu-e-stricto-sensu/os-cursos-de-pos-graduacao-lato
+
+> O funil de validação em sete etapas permanece na seção anterior e é a fonte de verdade operacional: prospecção, qualificação, sessão, follow-up, negociação, fechamento e pós-venda.
+
 ## Referência de ganchos e trends — Instagram, 13/09/2026
 
 - Carrossel de `@kabritodigital` registrado em `referencias-conteudo/2026-09-13-kabritodigital-trends-ganchos-conteudos.md`.

@@ -258,292 +258,336 @@ Me segue que eu ensino a usar isso todo dia.
 ---
 
 ## DIA 4 — Quinta, 17/09
-**Tema do dia:** mentalidade como camada transversal dos 5Ps (item F).
+**Tema do dia:** escolher o primeiro produto e desenhar um ecossistema sem começar pela peça mais pesada.
 
 ### 07h · Reels 7s · sem fala
-**Gancho de tela:** "Eu estruturei meu método em 5Ps. Descobri depois que nenhum deles sobrevive sem mentalidade."
+**Gancho de tela:** "Eu achava que mentoria, low ticket e curso gravado davam o mesmo trabalho. Não dão."
+*(Regra do 7s: sem fala, gancho na tela do 1º ao último frame, música de fundo, "leia a legenda" nos 3s finais.)*
 
 **Legenda (10 linhas):**
-Eu estruturei meu método em 5Ps.
-Persona, Promessa, Processo, Proposta, Posicionamento.
-Documentados, prontos, revisados.
-E mesmo assim, travados.
-Porque técnica sozinha não sustenta execução.
-Dá pra saber tudo isso no papel e ainda assim adiar, cobrar com medo, desistir no primeiro não.
-Descobri que faltava uma camada — mentalidade.
-Não é bloco motivacional. É o que te faz atravessar os 5Ps de verdade.
-Diploma é o que você estudou. Método é o que você viveu.
-Me segue que eu mostro a camada que faltava.
+Se a pergunta é criar e validar, existe uma ordem prática.
+Mentoria costuma ser a mais rápida: você conversa, vende e testa ao vivo.
+Isso não quer dizer que seja fácil de entregar.
+Boa mentoria exige diagnóstico, presença e adaptação.
+Low ticket parece simples pelo preço, mas pede página, checkout, comunicação, tráfego ou audiência e suporte em volume.
+Curso gravado exige método mais estável, roteiro, gravação, edição e experiência do aluno.
+Fácil, médio e difícil aqui medem criação e validação — não o valor do produto.
+Comece pelo formato que produz evidência com menos estrutura.
+Depois transforme o que funcionou em esteira.
+Me segue que eu mostro como escolher sem copiar a esteira de outra pessoa.
+
+**Produção — Mack:** grave 7 segundos apontando para três cartões feitos à mão — “mentoria”, “low ticket” e “curso gravado” — e vire o cartão “criar/validar”; não use foto de cliente, print de faturamento nem trend.
 
 ### 09h · Reels YAP
-**Opinião:** por que método documentado não vira comportamento.
-**Abertura (0-3s, falado + na tela):** "A maioria dos métodos não quebra porque a técnica tá errada. Quebra porque o expert não consegue sustentar a execução."
-**Contexto (por que quase todo mundo pensa diferente):** A maioria acha que se documentou o método direito — persona, processo, oferta — o resto é só executar. Você sabe definir tudo isso. E ainda assim adia, cobra com medo, desiste no primeiro "não".
-**Virada (a resposta clara):** Sem mexer em identidade e crença, os 5Ps ficam no papel. Mentalidade não é bloco motivacional. É o que te faz atravessar os 5Ps de verdade.
-**Fecha (CTA falado):** "Me segue que eu destrincho isso."
+**Opinião:** mentoria é mais fácil de criar e validar; não é necessariamente fácil de entregar.
+**Abertura (0-3s, falado + na tela):** "Mentoria é o produto mais fácil pra começar — e essa frase fica perigosa quando você corta o final."
+**Contexto (por que quase todo mundo pensa diferente):** Quando eu digo “mais fácil”, estou comparando a estrutura necessária para criar e validar. Na mentoria você consegue vender uma transformação, acompanhar de perto e descobrir objeções, sequência e lacunas antes de gravar dezenas de aulas.
+**Virada (a resposta clara):** Fácil de criar e validar não significa fácil de entregar. A entrega exige diagnóstico, acompanhamento e decisões personalizadas. A comparação correta é: mentoria reduz o custo de aprender; low ticket e curso gravado aumentam a estrutura antes de você saber se a promessa se sustenta.
+**Aplicação:** antes de escolher, responda: eu preciso aprender com casos reais? Minha transformação exige adaptação? Já repeti meu processo o bastante para padronizar? Se as duas primeiras respostas forem “sim” e a última “não”, comece testando a mentoria.
+**Fecha (CTA falado):** "Me segue que eu ensino a validar antes de empacotar."
 **Legenda (caption):**
-Você sabe definir persona, estruturar processo, montar oferta. E ainda assim adia, cobra com medo, desiste no primeiro "não". Sem mexer em identidade e crença, os 5Ps ficam no papel.
-Mentalidade não é bloco motivacional. É o que te faz atravessar os 5Ps de verdade.
-Me segue que eu destrincho isso.
+Mentoria costuma ser mais fácil de criar e validar porque aproxima você do caso real. Não é sinônimo de entrega fácil: exige presença, diagnóstico e adaptação.
+Use três perguntas: preciso aprender com casos reais? A transformação exige adaptação? Meu processo já se repete sem mim?
+Me segue que eu ensino a validar antes de empacotar.
 
 ### 12h · Reels YAP
-**História/bastidor:** ⚠️ Nanny não é mentorada — colega de mentoria em comum, Karol confirmou (13/09) que pode nomear (não é sigilo), mas sem autorização formal por escrito. Por isso entra como bastidor contado, não demonstração com documento/pessoa na tela.
-**Abertura (0-3s, falado + na tela):** "Uma colega minha saiu de 7 mil pra 1 milhão de seguidores em poucos meses. Não foi sorte — foi decisão."
-**Contexto (por que quase todo mundo pensa diferente):** Todo mundo olha pra esse tipo de crescimento e pensa "viralizou por sorte" ou "já tinha um diferencial gigante escondido". Conheci a Nanny Faggiano numa mentoria em comum e acabei ajudando no projeto dela em paralelo — ela já tinha o diferencial. Faltava direção.
-**Virada (a resposta clara):** Método, oferta e página de vendas estruturados, e uma persona que finalmente comunicava o que ela resolve de verdade. Diploma é o que você estudou. Método é o que você viveu — e direção certa multiplica isso.
-**Fecha (CTA falado):** "Me segue que eu mostro como eu enxergo esse tipo de virada."
+**Comparação:** tipo de produto × tipo de persona × tipo de expert.
+**Abertura (0-3s, falado + na tela):** "O melhor produto não existe. Existe o encaixe entre quem compra, o que precisa e o que você consegue sustentar."
+**Contexto (por que quase todo mundo pensa diferente):** Copiar o produto de outro expert ignora três variáveis: autonomia da persona, complexidade da transformação e maturidade do seu método.
+**Virada (a resposta clara):** Pessoa que quer fazer junto e precisa de decisão adaptada tende a aproveitar melhor mentoria. Pessoa autônoma, com dor específica e resultado estreito, pode aproveitar low ticket. Processo repetido, estável e demonstrável pode virar curso gravado. Quem quer o resultado feito, e não aprender a fazê-lo, precisa de serviço. E, em nichos que valorizam título formal, o desenho pode exigir uma parceria educacional — não apenas trocar o nome do curso.
+**Aplicação:** faça uma tabela com três colunas: “como a persona prefere avançar”, “quanto o resultado depende de adaptação” e “quantas vezes eu já entreguei esse processo”. Só depois escolha o produto.
+**Fecha (CTA falado):** "Me segue que eu mostro como transformar essa tabela numa esteira."
 **Legenda (caption):**
-Conheci a Nanny Faggiano numa mentoria em comum e acabei ajudando no projeto dela em paralelo. Ela não precisava de mais técnica — precisava de direção: método, oferta e página de vendas estruturados, e uma persona que finalmente comunicava o que ela resolve de verdade.
-Diploma é o que você estudou. Método é o que você viveu — e direção certa multiplica isso.
-Me segue que eu mostro como eu enxergo esse tipo de virada.
+Mentoria: fazer junto e adaptar. Low ticket: resolver uma dor estreita com autonomia. Curso gravado: repetir um processo já estável. Serviço: receber o resultado pronto.
+Cruze preferência da persona, complexidade da transformação e maturidade do expert antes de escolher.
+Me segue que eu mostro como transformar essa tabela numa esteira.
+
+**Produção — Mack:** use somente uma folha ou quadro em branco e escreva ao vivo as três colunas; não mostre planilha de cliente nem documento interno.
 
 ### 15h · Reels Demonstração (novo formato)
-**O que mostra:** o Canvas de Persona Compradora sendo preenchido ao vivo, na tela, a partir da História Real de uma cliente do Sprint do Método — mostrando como a dor vivida vira critério de mercado, não só identificação.
-**Voz por cima:** "Vou te mostrar o Canvas de Persona sendo montado de verdade, com a história real de uma cliente. Repara como cada resposta vira um critério — não é 'quem eu gosto', é 'com quem eu já gero resultado'."
-**Fecho + convite:** "Qual dos 5Ps você já tem no papel mas ainda não consegue executar de verdade? Comenta — te digo qual camada de mentalidade costuma travar esse P."
-⚠️ Confirmar com a Karol: qual cliente do Sprint mostrar aqui (sugestão: Rosiani — NR01/neurodivergência, diferenciação clara — mas qualquer case coberto por contrato serve).
+**O que mostra:** câmera sobre uma folha em branco enquanto a Karol monta um ecossistema mínimo, sem citar produto ainda inexistente: entrada pela conversa, mentoria validada, material de apoio, curso gravado só depois da repetição e continuidade apenas quando houver demanda comprovada.
+**Voz por cima (até 40s):** "Ecossistema não é empilhar produto. É dar um próximo passo coerente. Eu começo pela transformação que consigo vender e acompanhar. O que se repete vira material. O que fica estável pode virar curso. E só crio continuidade quando o aluno realmente precisa dela."
+**Fecho + convite:** "Qual seta desse ecossistema você quer que eu explique no próximo vídeo: entrada, validação, padronização ou continuidade?"
+**Produção — Mack:** capture de cima uma folha A4 vazia; desenhe cinco caixas durante a gravação — “conversa”, “mentoria”, “material”, “curso”, “continuidade” — e ligue com setas. Filme apenas mãos e papel; não dependa de dashboard, depoimento, nome, rosto ou documento de terceiros.
 
-### 17h · Reels YAP
-**Prático:** autodiagnóstico rápido.
-**Abertura (0-3s, falado + na tela):** "Teste rápido: seu P travado é técnico ou é mentalidade?"
-**Contexto (por que quase todo mundo pensa diferente):** A maioria trata todo travamento como se fosse falta de conhecimento — "preciso estudar mais isso". Às vezes é. Às vezes não é isso.
-**Virada (a resposta clara):** Pergunta: você sabe EXATAMENTE o próximo passo técnico? Se sim e mesmo assim não executou — não é técnica, é mentalidade (medo, crença, identidade). Se você não sabe nem o próximo passo — aí sim é técnica, e o P precisa de trabalho.
-**Fecha (CTA falado):** "Me segue que eu ensino a separar isso antes de travar de novo."
+### 17h · Reels YAP prático
+**Prático:** checklist de decisão do primeiro produto.
+**Abertura (0-3s, falado + na tela):** "Não escolha teu primeiro produto pelo preço. Escolha por estas 5 respostas."
+**Contexto (por que quase todo mundo pensa diferente):** Preço é consequência do tipo de transformação, do suporte e da estrutura. Começar por “quero um produto barato” ou “quero high ticket” pula a decisão principal.
+**Virada (a resposta clara):** 1) A dor é estreita ou envolve várias decisões? 2) A pessoa consegue aplicar sozinha? 3) O processo já foi repetido com casos reais? 4) Eu consigo vender em conversa antes de escalar? 5) A entrega exige minha presença ou pode ser padronizada? Dor complexa, baixa autonomia e método ainda em validação apontam para mentoria. Dor estreita, alta autonomia e método repetido abrem espaço para produto mais padronizado.
+**Fecha (CTA falado):** "Me segue e salva essa régua antes de batizar teu próximo produto."
 **Legenda (caption):**
-Pergunta: você sabe EXATAMENTE o próximo passo técnico? Se sim e mesmo assim não executou — não é técnica, é mentalidade (medo, crença, identidade).
-Se você não sabe nem o próximo passo — aí sim é técnica, e o P precisa de trabalho.
-Me segue que eu ensino a separar isso antes de travar de novo.
+Antes do preço, responda: dor estreita ou complexa? A pessoa aplica sozinha? O processo já se repetiu? Dá para vender em conversa? A entrega depende de mim?
+A combinação dessas respostas escolhe o produto melhor do que copiar a escada de alguém.
+Me segue e salva essa régua.
 
 ### 20h · Carrossel neutro
-**Tema:** "Os 5Ps não funcionam sem esta camada"
-1. **Capa:** "Seu método não funciona sem esta camada — e você provavelmente trava numa parte dele."
-2. **Reforço do hook:** "Você pode ter feito o curso certo sobre cada parte do teu método e mesmo assim travar igual. O motivo real não é o que você imagina."
-3. **Persona travada:** geralmente é insegurança de achar que precisa saber tudo antes de definir quem atender.
-4. **Promessa travada:** geralmente é medo de prometer algo que ainda não se sente 100% pronta pra sustentar.
-5. **Processo travado:** geralmente é perfeccionismo — "feito é melhor que perfeito", mas ninguém executa isso de verdade.
-6. **Proposta travada:** geralmente é medo de cobrar — a crença de que vender é serviço, não prova de valor pessoal.
-7. **Posicionamento travado:** geralmente é confundir autoridade com influência forçada.
-8. **CTA + assinatura:** "Qual desses 5 é o teu? Comenta que eu te digo por onde eu começaria."
+**Tema:** "Como desenhar um ecossistema de produtos sem criar tudo de uma vez"
+1. **Capa:** "Você não precisa de 7 produtos. Precisa de 1 transformação validada e próximos passos coerentes."
+2. **Reforço do hook:** "Ecossistema não é catálogo. Cada produto precisa resolver uma etapa diferente para a mesma jornada."
+3. **Passo 1 — transformação central:** escreva o antes e o depois que você já consegue conduzir. Se ainda não vendeu nem entregou, não abra novas ofertas.
+4. **Passo 2 — porta de entrada:** escolha conversa, diagnóstico ou conteúdo que ajude a pessoa a reconhecer o problema; não invente low ticket só para “ter entrada”.
+5. **Passo 3 — validação:** use mentoria ou serviço próximo do cliente quando ainda precisa observar objeções, adaptar e provar a sequência.
+6. **Passo 4 — padronização:** transforme perguntas recorrentes em checklist, aula ou material de apoio. Só o que se repete merece virar ativo.
+7. **Passo 5 — escala:** curso gravado ou low ticket entra quando promessa, processo, aquisição e suporte já têm critério — não como fuga da venda.
+8. **Passo 6 — continuidade:** crie próximo produto apenas quando existir uma próxima dor comprovada, não para preencher uma “escada de valor”.
+9. **Checklist final:** cada peça tem público, problema, entrega, prova e próximo passo diferentes? Se duas ofertas fazem a mesma coisa, simplifique.
+10. **CTA + assinatura:** "Me segue para aprender a validar a primeira peça antes de construir o resto."
+
+**Produção — Mack:** monte no Canva com uma única linha visual de seis caixas e setas; use ícones genéricos e texto, sem foto, print, logo de plataforma ou prova de cliente.
 
 ---
 
 ## DIA 5 — Sexta, 18/09
-**Tema do dia:** liberdade de empreender — causo da manicure (item J) + fechamento com "perguntas > respostas" (item I).
+**Tema do dia:** decidir quando um produto educacional deve ser curso livre e quando educação formal faz sentido.
 
 ### 07h · Reels 7s · sem fala
-**Gancho de tela:** "Ela queria ir ao maior evento da profissão. A chefe não deixou porque a agenda tava cheia."
+**Gancho de tela:** "Nem todo curso precisa do MEC. Mas alguns públicos compram o título junto com o aprendizado."
+*(Regra do 7s: sem fala, gancho na tela do 1º ao último frame, música de fundo, "leia a legenda" nos 3s finais.)*
 
 **Legenda (10 linhas):**
-Fui fazer unha em outro salão essa semana.
-Minha manicure tava numa imersão de dois dias, em São Paulo.
-Duas colegas dela foram junto e ainda emendaram turismo.
-No salão, uma funcionária me contou que queria muito ter ido.
-"É incrível esse evento", ela disse.
-Mas não podia — fim de ano, agenda cheia, a chefe não liberou.
-Não era falta de vontade.
-Era falta de decisão sobre o próprio futuro.
-Empreender pode ser o rolê que for. Mas devolve isso: quem decide é você.
-Me segue que eu conto o resto dessa cena.
+Curso livre não precisa ser autorizado ou reconhecido pelo MEC.
+E certificado de curso livre não vira diploma nem habilitação profissional.
+Isso não torna o curso menor.
+Torna a promessa diferente.
+Se a persona quer aplicação, atualização ou método autoral, curso livre pode bastar.
+Se valoriza título acadêmico, progressão ou educação formal, o desenho muda.
+Em áreas regulamentadas, como medicina e advocacia, cuidado redobrado com habilitação e publicidade.
+Não escreva “certificado pelo MEC” só para parecer mais sério.
+Decida pela finalidade e pela expectativa da persona.
+Me segue que eu mostro a régua correta.
+
+**Fonte de checagem:** MEC, FAQ “O que são cursos livres?” (atualizada em 22/12/2023) e FAQ sobre pós-graduação lato sensu (atualizada em 08/02/2024).
+
+**Produção — Mack:** grave 7 segundos segurando dois cartões — “curso livre” e “educação formal” — sem usar brasão, logomarca do MEC ou certificado cenográfico.
 
 ### 09h · Reels YAP
-**Opinião:** o que empreender realmente devolve.
-**Abertura (0-3s, falado + na tela):** "Empreender pode ser o rolê que for. Mas devolve uma coisa: a decisão sobre o teu próprio futuro."
-**Contexto (por que quase todo mundo pensa diferente):** A maioria pensa em empreender como "trabalhar sem chefe" ou "ganhar mais". Fui fazer unha em outro salão essa semana porque a minha manicure tava numa imersão em São Paulo — e ainda ficou passeando no fim de semana.
-**Virada (a resposta clara):** No salão, uma funcionária me disse que queria muito ter ido, mas não podia: fim de ano, agenda cheia, a chefe não liberou. Ela não estava impedida por falta de vontade. Estava impedida porque a decisão não era dela.
-**Fecha (CTA falado):** "Me segue que eu falo sobre o que muda quando você é dona da própria agenda."
+**Opinião:** “certificado pelo MEC” é a pergunta errada para curso livre.
+**Abertura (0-3s, falado + na tela):** "Se alguém te promete que todo curso pode ser ‘certificado pelo MEC’, começa conferindo a categoria do curso."
+**Contexto (por que quase todo mundo pensa diferente):** O próprio MEC informa que cursos livres não precisam de autorização nem reconhecimento dos sistemas de ensino. Eles podem emitir certificado de participação ou conclusão, mas isso não equivale a diploma, título de pós-graduação ou habilitação para profissão regulamentada.
+**Virada (a resposta clara):** A pergunta prática é: isso será curso livre ou educação formal ofertada por instituição credenciada? Para pós-graduação lato sensu, por exemplo, a instituição ofertante precisa estar credenciada e o curso segue regras próprias; não é o MEC “certificando cada curso”.
+**Aplicação:** na página, nomeie a categoria, a instituição responsável, a carga horária, o que o certificado comprova e, principalmente, o que ele não habilita a fazer.
+**Fecha (CTA falado):** "Me segue que eu ensino a comunicar autoridade sem promessa regulatória falsa."
 **Legenda (caption):**
-Fui fazer unha em outro salão porque a minha manicure tava numa imersão de dois dias em São Paulo — e ainda ficou passeando no fim de semana. No salão, uma funcionária me disse que queria muito ter ido, mas não podia: fim de ano, agenda cheia, a chefe não liberou.
-Ela não estava impedida por falta de vontade. Estava impedida porque a decisão não era dela.
-Me segue que eu falo sobre o que muda quando você é dona da própria agenda.
+Curso livre não precisa de autorização ou reconhecimento do MEC. Certificado de curso livre não é diploma, pós-graduação nem habilitação profissional.
+Se for educação formal, confira a instituição credenciada e as regras da modalidade. Comunique categoria, carga horária, emissor e limite do certificado.
+Me segue que eu ensino a fazer essa distinção com clareza.
+
+**Fontes oficiais:**
+- https://www.gov.br/mec/pt-br/acesso-a-informacao/institucional/estrutura-organizacional/orgaos-especificos-singulares/secretaria-de-regulacao-e-supervisao-da-educacao-superior/perguntasfrequentes/o-que-sao-cursos-livres
+- https://www.gov.br/mec/pt-br/acesso-a-informacao/perguntas-frequentes/educacao-superior-1/pos-graduacao-lato-sensu-e-stricto-sensu/os-cursos-de-pos-graduacao-lato
 
 ### 12h · Reels YAP
-**História/bastidor:**
-**Abertura (0-3s, falado + na tela):** "Duas manicures foram pra imersão. A terceira ficou atendendo porque não podia decidir."
-**Contexto (por que quase todo mundo pensa diferente):** Não é sobre culpar a chefe — é tentador ver isso como "patroa má". É mais sutil que isso: um conflito real entre a agenda do negócio hoje e o futuro da profissional.
-**Virada (a resposta clara):** Estabilidade e emprego dão segurança, mas colocam teu desenvolvimento sob prioridade de outra pessoa. Empreender transfere o risco. Mas devolve poder de decisão.
-**Fecha (CTA falado):** "Me segue que eu mostro o que fazer com esse poder quando ele é seu."
+**Comparação:** quando a educação formal pode agregar valor para personas que valorizam títulos.
+**Abertura (0-3s, falado + na tela):** "Na advocacia e na medicina, o mesmo conteúdo pode ser ótimo e ainda estar no formato errado para a persona."
+**Contexto (por que quase todo mundo pensa diferente):** Há públicos que compram aplicação imediata. Outros também avaliam vínculo institucional, título acadêmico, pontuação em carreira, requisitos do empregador ou educação continuada aceita pela própria entidade profissional.
+**Virada (a resposta clara):** Educação formal pode fazer sentido quando o título é parte explícita do resultado esperado e existe instituição credenciada apta a ofertá-la. Curso livre faz sentido quando a promessa é método, atualização ou aplicação e não envolve habilitar a pessoa a exercer ato profissional. Em profissão regulamentada, confirme também as regras do conselho e não prometa habilitação que o produto não concede.
+**Aplicação:** pergunte à persona: “Você quer aprender a aplicar, comprovar horas, obter título acadêmico ou cumprir requisito profissional?”. A resposta muda produto, parceiro e comunicação.
+**Fecha (CTA falado):** "Me segue que eu mostro como transformar essa resposta em desenho de oferta."
 **Legenda (caption):**
-Não é sobre culpar a chefe — é sobre um conflito real entre a agenda do negócio hoje e o futuro da profissional. Estabilidade e emprego dão segurança, mas colocam teu desenvolvimento sob prioridade de outra pessoa.
-Empreender transfere o risco. Mas devolve poder de decisão.
-Me segue que eu mostro o que fazer com esse poder quando ele é seu.
+“Quero aprender”, “quero comprovar horas”, “quero título acadêmico” e “preciso cumprir requisito profissional” são quatro demandas diferentes.
+Em advocacia, medicina e outras profissões regulamentadas, confirme as regras da instituição e do conselho antes de prometer efeito profissional.
+Me segue que eu mostro como desenhar a oferta certa.
 
 ### 15h · Reels Demonstração (novo formato)
-**O que mostra:** ela mostrando, na tela, a estrutura real da Área de Membros da Incubadora — dashboard do aluno, roteiro clicável por módulo, vitrine com as 7 ofertas — contando por que ela decidiu construir a própria plataforma em vez de deixar tudo espalhado em Drive/Hotmart.
-**Voz por cima:** "Vou te mostrar onde meus alunos vivem o método. Não é vídeo solto — é roteiro, progresso e proposta clara de próximo passo, tudo numa casa só. E o motivo de eu poder decidir construir isso do meu jeito é exatamente a liberdade que empreender devolve."
-**Fecho + convite:** "Comenta: hoje, quem decide se você pode se capacitar ou não — você ou a agenda de outra pessoa?"
+**O que mostra:** gravação de tela abrindo as duas páginas oficiais do MEC citadas acima e preenchendo, em documento vazio, uma tabela “curso livre × educação formal” com quatro linhas: regulação, documento emitido, finalidade e limite da promessa.
+**Voz por cima (até 40s):** "Em vez de repetir ‘reconhecido pelo MEC’, eu verifico a categoria. O MEC diz que curso livre não precisa de autorização ou reconhecimento. Já a educação formal depende da modalidade e da instituição credenciada. Daqui saem quatro informações obrigatórias da oferta: o que é, quem emite, para que serve e o que não habilita."
+**Fecho + convite:** "Qual dessas quatro linhas você quer que eu detalhe: regulação, certificado, finalidade ou limite?"
+**Produção — Mack:** capture a URL e o título das duas páginas oficiais do MEC, depois um documento novo sendo preenchido; não mostre certificados reais, dados pessoais, página de aluno ou marca de parceiro. Se uma página não abrir no dia, use captura feita previamente da própria fonte oficial com data visível.
 
-### 17h · Reels YAP
-**Prático:** IA como aliada de quem já tem repertório vivido (item I, fechando a semana).
-**Abertura (0-3s, falado + na tela):** "A IA faz. Mas quem decide o quê, em qual ordem e quem valida?"
-**Contexto (por que quase todo mundo pensa diferente):** A maioria acha que o diferencial de quem usa bem a IA é o prompt. Eu lembro de uma frase repetida na TV, na minha infância: quem move o mundo não são as respostas, são as perguntas ⚠️(checar fonte exata antes de publicar como fato — usar como lembrança pessoal, não como citação confirmada). Ficou mais atual do que nunca.
-**Virada (a resposta clara):** A IA executa. A diferença humana é decidir fazer o quê, com que critério, em que sequência, e quem valida o resultado.
-**Fecha (CTA falado):** "Me segue que eu ensino a fazer essas perguntas certas."
+### 17h · Reels YAP prático
+**Prático:** checklist para decidir se vale buscar uma parceria de educação formal.
+**Abertura (0-3s, falado + na tela):** "Antes de procurar uma faculdade, responda estas 5 perguntas."
+**Contexto (por que quase todo mundo pensa diferente):** Parceria educacional não é selo decorativo. Ela muda desenho pedagógico, documentação, responsabilidades e promessa.
+**Virada (a resposta clara):** 1) A persona pede título acadêmico ou só aplicação? 2) Existe requisito de carreira, empregador ou conselho? 3) O conteúdo pretende habilitar ato profissional? 4) Há instituição credenciada com aderência ao projeto? 5) Você aceita adaptar carga horária, avaliação, corpo docente e documentação ao formato formal? Se o valor está só no método aplicado, curso livre pode ser mais honesto. Se o título é parte do resultado, investigue a via formal com a instituição.
+**Fecha (CTA falado):** "Me segue e salva esse checklist antes de negociar qualquer selo."
 **Legenda (caption):**
-Eu lembro de uma frase repetida na TV, na minha infância: quem move o mundo não são as respostas, são as perguntas. Ficou mais atual do que nunca.
-A IA executa. A diferença humana é decidir fazer o quê, com que critério, em que sequência.
-Me segue que eu ensino a fazer essas perguntas certas.
+Título desejado, requisito profissional, habilitação, instituição credenciada e exigências acadêmicas: essas cinco respostas vêm antes da parceria.
+Curso livre e educação formal resolvem problemas diferentes.
+Me segue e salva esse checklist.
 
 ### 20h · Carrossel neutro
-**Tema:** "5 perguntas que a IA não decide por você"
-1. **Capa:** "5 perguntas do teu método que a IA não decide por você — não importa quão bom seja o prompt."
-2. **Reforço do hook:** "Ela escreve a legenda, monta o slide, sugere o preço. Mas essas 5 decisões aqui, nenhuma IA faz por você."
-3. **Persona:** pra quem eu tô perguntando? A IA não sabe com quem você já gerou resultado de verdade.
-4. **Promessa:** qual resultado eu realmente quero entregar? Isso vem da sua trajetória, não de um prompt.
-5. **Processo:** em que ordem eu executo isso? Sequência errada quebra o resultado certo.
-6. **Proposta:** o que eu valido antes de escalar? A IA não sabe o que ainda não foi testado no seu negócio.
-7. **Posicionamento:** como eu comunico isso pro mercado? Isso é decisão de tom, não de ferramenta.
-8. **CTA + assinatura:** "Comenta qual dessas 5 decisões você ainda tá terceirizando pra sorte, não pra critério."
+**Tema:** "Curso livre ou educação formal? Uma matriz de decisão sem promessa falsa"
+1. **Capa:** "Seu curso precisa de MEC — ou sua persona só precisa de um resultado aplicável?"
+2. **Reforço do hook:** "Curso livre não precisa de autorização ou reconhecimento do MEC. Educação formal segue outra lógica. Misturar os dois cria promessa falsa."
+3. **Se a meta é aplicação:** método autoral, atualização e habilidade prática podem caber em curso livre, com escopo e certificado descritos claramente.
+4. **Se a meta é título acadêmico:** avalie modalidade formal e instituição credenciada; não transforme certificado livre em “pós” por linguagem de marketing.
+5. **Se a meta é carreira:** confirme por escrito o que empregador, edital ou plano de carreira realmente aceita. Não presuma.
+6. **Se a profissão é regulamentada:** verifique regras do conselho e deixe explícito que o curso não habilita ato profissional quando não habilitar.
+7. **Se pensar em parceria:** avalie instituição, responsabilidades, projeto pedagógico, avaliação, documentação e comunicação — não apenas o selo.
+8. **Texto mínimo da oferta:** categoria do curso, emissor, carga horária, finalidade do certificado e limites de uso.
+9. **Decisão:** escolha curso livre pela aplicação; escolha via formal quando o título fizer parte real do resultado esperado.
+10. **CTA + assinatura:** "Me segue para aprender a desenhar o produto antes de escolher o rótulo."
+
+**Produção — Mack:** faça o carrossel como matriz de duas colunas, com rodapé pequeno “Fonte: MEC — FAQs de cursos livres e pós-graduação lato sensu”; use apenas texto e ícones neutros, sem brasão ou logomarca oficial.
 
 ---
 
 ## DIA 6 — Sábado, 19/09
-**Tema do dia:** persona não é só identificação — análise real de página de vendas (item K). ⚠️ Especialista da história mantida anônima em TODOS os posts do dia, sem exceção, até ela autorizar.
+**Tema do dia:** escolher high ticket ou low ticket pelo modelo de venda e pela estrutura disponível.
 
 ### 07h · Reels 7s · sem fala
-**Gancho de tela:** "Ela escolheu a persona pela própria dor. A autoridade mais difícil de copiar estava em outro mercado."
+**Gancho de tela:** "Eu começaria pelo produto mais caro — justamente porque ainda não tenho audiência grande."
+*(Regra do 7s: sem fala, gancho na tela do 1º ao último frame, música de fundo, "leia a legenda" nos 3s finais.)*
 
 **Legenda (10 linhas):**
-Analisei a página de vendas de uma mentorada essa semana.
-A história dela conectava de verdade.
-Sete anos imersa na maternidade, identidade profissional perdida, recomeço do zero.
-O problema não era a história.
-Era a prova.
-A autoridade mais forte que ela tinha estava escondida — em outro mercado, bem diferente do que ela escolheu pra vender.
-Persona não é só sobre quem te identifica.
-É sobre onde tá a prova que sustenta a promessa.
-Ela quase deixou o ativo mais valioso dela de fora da própria oferta.
-Me segue que eu mostro o resto dessa análise.
+Parece contraintuitivo.
+Mas high ticket pode ser melhor para começar.
+Você precisa de menos compradores para conversar, vender e aprender.
+Dá para validar em Sessões de Vendas Secretas, no 1:1.
+Sem lançamento e sem depender de audiência grande.
+Low ticket cobra pouco por venda e exige volume.
+Volume pede audiência ou tráfego, página, checkout, suporte e acompanhamento de números.
+Não é produto ruim.
+É uma operação mais completa do que o preço faz parecer.
+Me segue que eu mostro como escolher pelo modelo, não pelo ego.
+
+**Produção — Mack:** grave 7 segundos colocando “1:1” ao lado de “high ticket” e “volume” ao lado de “low ticket” em dois papéis; não mostre valores, dashboards ou prints de faturamento.
 
 ### 09h · Reels YAP
-**Opinião:** persona não é só identificação emocional.
-**Abertura (0-3s, falado + na tela):** "Sua persona tá baseada em propósito ou em prova?"
-**Contexto (por que quase todo mundo pensa diferente):** A maioria escolhe persona pela dor que viveu. Faz sentido — gera conexão de verdade. O problema é parar por aí.
-**Virada (a resposta clara):** Persona precisa cruzar 4 coisas: dor vivida, prova de autoridade, capacidade de gerar transformação e oportunidade de mercado. História pessoal gera conexão. Não substitui prova.
-**Fecha (CTA falado):** "Me segue que eu ensino a cruzar essas 4 coisas."
+**Opinião:** high ticket tende a ser melhor no começo quando a validação acontece por conversa.
+**Abertura (0-3s, falado + na tela):** "Pouca audiência não te obriga a vender barato. Às vezes obriga exatamente o contrário."
+**Contexto (por que quase todo mundo pensa diferente):** A crença comum é começar com preço baixo para “facilitar”. Só que preço baixo não cria distribuição. Você ainda precisa alcançar muita gente, converter, atender e medir.
+**Virada (a resposta clara):** Num high ticket coerente com uma transformação complexa, você pode prospectar pessoas aderentes, qualificar e vender por Sessões de Vendas Secretas. Cada conversa devolve objeção, linguagem e critério para ajustar a oferta sem exposição prematura. Isso não garante venda e não dispensa entrega excelente; reduz a dependência de escala para aprender.
+**Aplicação:** se você consegue nomear uma transformação valiosa, identificar poucas pessoas com o problema e conduzir uma conversa consultiva, teste antes de construir audiência de massa.
+**Fecha (CTA falado):** "Me segue que eu ensino a validar no 1:1 antes de escalar."
 **Legenda (caption):**
-A maioria escolhe persona pela dor que viveu. Faz sentido — gera conexão de verdade. Mas persona precisa cruzar 4 coisas: dor vivida, prova de autoridade, capacidade de gerar transformação e oportunidade de mercado.
-História pessoal gera conexão. Não substitui prova.
-Me segue que eu ensino a cruzar essas 4 coisas.
+Low ticket não resolve falta de audiência. High ticket pode permitir validação com poucas conversas qualificadas, usando Sessões de Vendas Secretas.
+A condição é ter transformação valiosa, persona aderente e entrega que sustente a promessa.
+Me segue que eu ensino a validar no 1:1.
 
 ### 12h · Reels YAP
-**História/bastidor:** ⚠️ especialista anônima.
-**Abertura (0-3s, falado + na tela):** "Ela já treinou homens que torceram o nariz só de saber que quem ensinaria era uma mulher de salto."
-**Contexto (por que quase todo mundo pensa diferente):** Uma mentorada queria orientar mães empreendedoras — dor que ela viveu na pele, sete anos de maternidade intensa. Parecia óbvio: persona = quem ela mais se identifica.
-**Virada (a resposta clara):** Mas a autoridade técnica dela mais forte e mais difícil de copiar estava em outro mercado, majoritariamente masculino: acabamentos, obra, engenharia. Não é sobre convencer a maioria masculina. É sobre recortar a fatia feminina de um mercado grande onde ela já tinha prova.
-**Fecha (CTA falado):** "Me segue que eu mostro como cheguei nessa virada com ela."
+**Comparação:** o custo escondido do low ticket.
+**Abertura (0-3s, falado + na tela):** "Low ticket é barato para o cliente. Para a operação, pode ser o produto mais caro da mesa."
+**Contexto (por que quase todo mundo pensa diferente):** O preço pequeno dá sensação de produto simples. Mas cada venda deixa pouca margem para pagar aquisição, plataforma, suporte, reembolso, produção e análise.
+**Virada (a resposta clara):** Para funcionar com consistência, low ticket costuma pedir audiência ou tráfego, promessa estreita, página e checkout testados, recuperação, suporte em volume, esteira de continuidade e operação comercial. Ele faz sentido quando você já domina aquisição e conversão ou quando cumpre uma função clara no ecossistema — não apenas porque parece fácil.
+**Aplicação:** antes de lançar, preencha seis linhas: origem do tráfego, custo máximo de aquisição, conversão esperada — marcada como hipótese até ter dado — suporte por venda, margem e próximo produto. Se faltam respostas, ainda existe uma operação para desenhar.
+**Fecha (CTA falado):** "Me segue que eu mostro a estrutura que o preço baixo esconde."
 **Legenda (caption):**
-Uma mentorada queria orientar mães empreendedoras — dor que ela viveu na pele, sete anos de maternidade intensa. Mas a autoridade técnica dela mais forte e mais difícil de copiar estava em outro mercado, majoritariamente masculino: acabamentos, obra, engenharia.
-Não é sobre convencer a maioria masculina. É sobre recortar a fatia feminina de um mercado grande onde ela já tinha prova.
-Me segue que eu mostro como cheguei nessa virada com ela.
+Low ticket costuma exigir volume, e volume pede aquisição, conversão, suporte, margem e continuidade.
+Não invente taxa. Marque toda estimativa como hipótese até os dados reais aparecerem.
+Me segue que eu mostro a estrutura que o preço baixo esconde.
 
 ### 15h · Reels Demonstração (novo formato)
-**O que mostra:** o Diagnóstico interativo + a planilha automática captando uma resposta ao vivo, na tela — mostrando como a informação que alimenta a análise de persona (dor, oferta atual, território de autoridade) chega sozinha, sem ela precisar copiar nada na mão.
-**Voz por cima:** "Vou te mostrar de onde vêm os dados que eu uso pra aplicar os 4 critérios de persona. Alguém preenche esse diagnóstico, e essa resposta já cai aqui, na planilha, sozinha — com aviso pra mim na hora."
-**Fecho + convite:** "Comenta: na tua página ou bio, qual desses 4 pontos falta hoje?"
+**O que mostra:** uma Sessão de Vendas Secretas simulada com cartões, sem encenar cliente real: “prospecção”, “qualificação”, “sessão”, “próximo passo”. Em seguida, a Karol registra uma objeção fictícia e transforma em ajuste de mensagem.
+**Voz por cima (até 40s):** "É assim que eu validaria um high ticket sem audiência grande. Primeiro encontro uma pessoa aderente. Depois qualifico. Na sessão, descubro se ela acredita na promessa, entende o ganho e se vê nesse resultado. A objeção não vira derrota: vira dado para ajustar a oferta."
+**Fecho + convite:** "Qual parte dessa conversa você quer ver simulada depois: qualificação, objeção ou fechamento?"
+**Produção — Mack:** filme de cima quatro cartões e uma folha escrita “EXEMPLO FICTÍCIO”; use a objeção inventada apenas como demonstração (“não entendi como isso se aplica ao meu caso”), sem atribuí-la a cliente. Não use conversa, áudio, nome, foto, CRM ou print real.
 
-### 17h · Reels YAP
-**Prático:** as 4 perguntas de diagnóstico de persona.
-**Abertura (0-3s, falado + na tela):** "4 perguntas antes de fechar a tua persona de vez."
-**Contexto (por que quase todo mundo pensa diferente):** A maioria fecha a persona depois de responder só "com quem eu me identifico" — e para por aí, achando que tá pronto.
-**Virada (a resposta clara):** 1) Com quem eu me identifico de verdade? 2) Pra quem eu já gerei resultado? 3) Em qual mercado minha bagagem me diferencia? 4) Que provas sustentam essa promessa? Se alguma resposta te incomodou, é ali que sua persona precisa de ajuste.
-**Fecha (CTA falado):** "Me segue que eu ensino a aplicar isso na prática."
+### 17h · Reels YAP prático
+**Prático:** em que etapa contratar ou estruturar time comercial.
+**Abertura (0-3s, falado + na tela):** "Time comercial antes da hora só escala uma oferta que você ainda não sabe vender."
+**Contexto (por que quase todo mundo pensa diferente):** Contratar vendedor parece a solução quando o expert evita prospecção ou follow-up. Só que ninguém transfere um processo que ainda está na própria cabeça.
+**Virada (a resposta clara):** Primeiro, o expert vende até documentar persona, perguntas de qualificação, objeções, proposta, cadência de follow-up e critério de fechamento. O time entra quando há demanda que o expert não consegue atender, processo repetível, volume mensurável e margem para treinar e gerir. Antes disso, apoio operacional pode organizar agenda e CRM, mas a aprendizagem comercial continua com o expert.
+**Aplicação:** marque “sim” ou “não”: tenho oferta validada? Script baseado em conversas reais? Leads suficientes? Conversão acompanhada? Margem para gestão? Quatro ou cinco “sins” indicam hora de desenhar o time; menos que isso indica processo para validar.
+**Fecha (CTA falado):** "Me segue que eu ensino o que documentar antes de delegar vendas."
 **Legenda (caption):**
-1) Com quem eu me identifico de verdade?
-2) Pra quem eu já gerei resultado?
-3) Em qual mercado minha bagagem me diferencia?
-4) Que provas sustentam essa promessa?
-Se alguma resposta te incomodou, é ali que sua persona precisa de ajuste.
-Me segue que eu ensino a aplicar isso na prática.
+Time comercial entra para repetir e ampliar um processo conhecido — não para descobrir sozinho como sua oferta vende.
+Oferta validada, script real, volume, métrica e margem vêm antes da contratação.
+Me segue que eu ensino o que documentar.
 
 ### 20h · Carrossel neutro
-**Tema:** "Sua persona está baseada em propósito ou em prova?"
-1. **Capa:** "A persona dela conectava. A prova mais forte que ela tinha morava em outro mercado — e quase ficou de fora da oferta."
-2. **Reforço do hook:** "Isso quase aconteceu com uma mentorada minha essa semana. E pode estar acontecendo com você agora, sem você perceber."
-3. **Identificação:** com quem você mais se conecta pela própria dor vivida? Essa é só a primeira pergunta, não a resposta final.
-4. **Autoridade:** pra quem você já gerou resultado de verdade, com prova? Nem sempre é o mesmo público da identificação.
-5. **Diferenciação:** em qual mercado sua bagagem te destaca da concorrência, em vez de te igualar a todo mundo?
-6. **Oportunidade:** esse mercado tem gente disposta a pagar pelo que você resolve, hoje?
-7. **Decisão estratégica:** se identificação e autoridade apontam pra lugares diferentes, escolhe pela prova — ela é mais difícil de copiar do que a dor.
-8. **CTA + assinatura:** "Comenta: hoje, sua persona é mais propósito ou mais prova?"
+**Tema:** "High ticket ou low ticket: escolha pela operação que você consegue sustentar"
+1. **Capa:** "Sem audiência grande, eu testaria o produto mais caro primeiro. Aqui está o porquê."
+2. **Reforço do hook:** "Preço baixo precisa de volume. High ticket pode começar com poucas conversas qualificadas."
+3. **High ticket no início:** permite prospectar, qualificar e vender no 1:1 por Sessões de Vendas Secretas, acumulando linguagem e objeções.
+4. **Condição do high ticket:** transformação complexa, valor claro, persona aderente e entrega próxima. Não é cobrar caro por promessa vaga.
+5. **Low ticket na prática:** precisa de distribuição, página, checkout, suporte em volume, números acompanhados e próximo passo na esteira.
+6. **Condição do low ticket:** dor estreita, entrega padronizada, margem conhecida e aquisição minimamente previsível.
+7. **Sem audiência:** escolha conversas qualificadas, não preço baixo por medo de vender.
+8. **Com aquisição validada:** low ticket pode cumprir entrada, ativação ou diagnóstico dentro do ecossistema.
+9. **Time comercial:** só depois de oferta, script, volume, métrica e margem; antes disso, o expert ainda precisa aprender a venda.
+10. **CTA + assinatura:** "Me segue para escolher produto pelo que ele exige — não pelo que parece fácil."
+
+**Produção — Mack:** use layout dividido “conversa” × “volume” e um checklist visual; não inclua faturamento, taxa de conversão ou promessa numérica sem base documental.
 
 ---
 
 ## DIA 7 — Domingo, 20/09
-**Tema do dia:** fechamento da semana — "mostrar" como prática permanente, não só desafio.
+**Tema do dia:** validar o método vendendo — sete etapas da prospecção ao pós-venda.
 
 ### 07h · Reels 7s · sem fala
-**Gancho de tela:** "Uma semana mostrando tudo por dentro. Agora você olha diferente."
+**Gancho de tela:** "Eu achava que validar era ouvir ‘eu compraria’. Validação só termina depois do pós-venda."
+*(Regra do 7s: sem fala, gancho na tela do 1º ao último frame, música de fundo, "leia a legenda" nos 3s finais.)*
 
 **Legenda (10 linhas):**
-Uma semana inteira mostrando tudo por dentro.
-Sete dias, sete demonstrações.
-Sem discurso, só o trabalho acontecendo na tela.
-Trajetória técnica, papel da IA na mentoria, autocontrole, mentalidade, liberdade de empreender, análise real de persona.
-Não pedi pra você acreditar em nada disso.
-Só mostrei acontecendo.
-Quem acompanhou a semana inteira já sabe escolher melhor.
-Transparência não é estratégia de marketing.
-É consequência de quem não tem nada pra esconder no processo.
-Me segue que a próxima semana tem mais bastidor.
+Interesse não é validação.
+Reunião boa não é validação.
+Pagamento é uma evidência importante, mas ainda não encerra o teste.
+Você precisa prospectar e qualificar.
+Fazer a sessão e acompanhar a decisão.
+Negociar sem desmontar a proposta.
+Fechar com clareza.
+Depois entregar, observar satisfação e aprender com o resultado.
+São sete etapas, da prospecção ao pós-venda.
+Me segue que eu mostro o funil inteiro.
+
+**Produção — Mack:** grave 7 segundos marcando, num checklist impresso, “interesse”, “venda” e “pós-venda”; destaque apenas “pós-venda” no final. Não use lista, CRM ou dados de cliente.
 
 ### 09h · Reels YAP
-**Opinião:** o que a semana de bastidores mostrou.
-**Abertura (0-3s, falado + na tela):** "A conclusão de sete dias mostrando tudo: transparência não é marketing. É consequência."
-**Contexto (por que quase todo mundo pensa diferente):** A maioria acha que "mostrar bastidor" é estratégia de engajamento. Mostrei trajetória técnica, papel da IA na mentoria, autocontrole, mentalidade, liberdade de empreender e como eu analiso persona de verdade.
-**Virada (a resposta clara):** O que mais surpreendeu vocês foi justamente o básico — a régua concreta, não a teoria. Não é estratégia. É porque não tenho nada pra esconder no processo.
-**Fecha (CTA falado):** "Me segue que essa é a forma como eu sempre vou ensinar."
+**Opinião:** validar método é um processo comercial completo, não uma enquete.
+**Abertura (0-3s, falado + na tela):** "Se ninguém pagou, aplicou e continuou satisfeito, você não validou o método — coletou opinião."
+**Contexto (por que quase todo mundo pensa diferente):** Enquete, elogio e “eu compraria” parecem prova porque são fáceis de obter. Mas não testam prioridade, preço, decisão, entrega nem resultado percebido.
+**Virada (a resposta clara):** O funil de validação percorre sete ações: prospecção, qualificação, sessão, follow-up, negociação, fechamento e pós-venda. Cada uma testa uma hipótese diferente — acesso à persona, aderência, clareza da proposta, objeção, limite comercial, decisão e experiência de entrega.
+**Aplicação:** pare de perguntar só “você compraria?”. Identifique em qual das sete etapas a evidência acaba e execute a próxima.
+**Fecha (CTA falado):** "Me segue que eu ensino a validar com decisão real, sem palco."
 **Legenda (caption):**
-Mostrei trajetória técnica, papel da IA na mentoria, autocontrole, mentalidade, liberdade de empreender e como eu analiso persona de verdade. O que mais surpreendeu vocês foi justamente o básico — a régua concreta, não a teoria.
-Me segue que essa é a forma como eu sempre vou ensinar.
+Prospecção, qualificação, sessão, follow-up, negociação, fechamento e pós-venda.
+Cada etapa testa uma parte diferente do método. Elogio e intenção não substituem decisão nem experiência real.
+Me segue que eu ensino a validar com decisão real.
 
 ### 12h · Reels YAP
-**História/bastidor:**
-**Abertura (0-3s, falado + na tela):** "Depois de tudo isso, ainda erro. Isso aqui é o que eu mais erro até hoje."
-**Contexto (por que quase todo mundo pensa diferente):** Depois de uma semana mostrando método, entregável, agente de IA, plataforma — dá pra parecer que eu resolvi tudo. Quem diz que não erra mais, parou de tentar.
-**Virada (a resposta clara):** Minha trava até hoje é [⚠️ Karol: qual é — decisão de preço? tempo de resposta? algo específico da semana?]. Errar menos é possível. Não errar, não.
-**Fecha (CTA falado):** "Me segue que eu sigo mostrando os dois lados."
+**Bastidor de tese:** o número “a cada 4 low tickets, 1 dá certo” não está pronto para publicação factual.
+**Abertura (0-3s, falado + na tela):** "Eu tenho uma impressão forte sobre low ticket. Mas impressão não vira estatística só porque cabe num gancho."
+**Contexto (por que quase todo mundo pensa diferente):** Na prática, eu vejo muita oferta barata ser criada e poucas sustentarem aquisição, margem e continuidade. Eu poderia transformar isso numa frase com número e parecer precisa.
+**Virada (a resposta clara):** Sem fonte documental, o correto é dizer “na minha experiência, muitos low tickets não sustentam a operação que exigem” — e separar opinião de dado. Se eu quiser publicar proporção, preciso definir amostra, período, o que significa “dar certo” e onde os casos foram registrados.
+**Aplicação:** antes de postar número, anote: fonte, amostra, período, definição e possibilidade de conferência. Se faltar um, retire o número ou marque como hipótese interna.
+**Fecha (CTA falado):** "Me segue que eu mostro o critério por trás das teses, não só a frase bonita."
 **Legenda (caption):**
-Quem diz que não erra mais, parou de tentar. Minha trava até hoje é [⚠️ Karol: qual é — decisão de preço? tempo de resposta? algo específico da semana?]. Errar menos é possível. Não errar, não.
-Me segue que eu sigo mostrando os dois lados.
+Minha experiência sugere que muitos low tickets não sustentam a operação de volume que exigem. Isso é opinião profissional, não estatística.
+Para publicar proporção, eu precisaria de fonte, amostra, período e definição de sucesso.
+Me segue que eu mostro o critério por trás das teses.
+
+**⚠️ Alerta interno — não publicar como fato:** “a cada 4 low tickets, 1 dá certo” segue sem fonte documental. Só usar depois de confirmação; até lá, manter a formulação de experiência acima, sem número.
 
 ### 15h · Reels Demonstração (novo formato)
-**O que mostra:** o entregável real de uma sessão com o Bruno (contador e ex-auditor que hoje dá consultoria de gestão) — o processo autogerenciável que tira o empresário da posição de "escravo do próprio negócio".
-**Voz por cima:** "Vou te fechar a semana com isso: o Bruno é contador, foi auditor como eu já fui da área técnica. Virou consultoria de gestão com uma promessa clara — dar paz pro empresário. Isso aqui é o processo que a gente estruturou pra isso."
-**Fecho + convite:** "Da semana inteira, qual desses 6 temas você quer que eu aprofunde primeiro? Comenta o número do dia."
-⚠️ Confirmar com a Karol: usar nome do Bruno ou manter só "um cliente" — case coberto por contrato, decisão de exposição é sua.
+**O que mostra:** uma planilha vazia sendo preenchida com um exemplo fictício e explicitamente identificado como simulação. Colunas: etapa, ação, evidência, próximo passo. Linhas: prospecção, qualificação, sessão, follow-up, negociação, fechamento e pós-venda.
+**Voz por cima (até 40s):** "Vou transformar validação em rastreio. Na prospecção eu registro resposta. Na qualificação, aderência. Na sessão, dúvidas. No follow-up, decisão pendente. Na negociação, condição e contrapartida. No fechamento, o sim ou não. No pós-venda, entrega, satisfação e indicação. Se uma linha está vazia, é ali que a validação parou."
+**Fecho + convite:** "Qual dessas sete linhas você quer que eu abra com perguntas prontas no próximo vídeo?"
+**Produção — Mack:** crie uma planilha nova, sem integração e sem dados reais, com selo visível “SIMULAÇÃO”; grave o preenchimento das sete linhas. Não abrir CRM, WhatsApp, e-mail, contrato, pagamento ou cadastro de cliente.
 
-### 17h · Reels YAP
-**Prático:** como escolher o próximo passo depois de uma semana de conteúdo denso.
-**Abertura (0-3s, falado + na tela):** "Depois de tudo que você viu essa semana, o próximo passo é só um."
-**Contexto (por que quase todo mundo pensa diferente):** Depois de uma semana densa, a maioria tenta aplicar tudo de uma vez — persona, IA, mentalidade, agenda — e trava justamente por excesso.
-**Virada (a resposta clara):** Não tenta aplicar os 6 temas ao mesmo tempo. Escolhe 1 — o que mais doeu enquanto você assistia — e resolve só esse antes de ir pro próximo. O caminho muda conforme onde você está.
-**Fecha (CTA falado):** "Me segue que eu te ajudo a escolher por onde começar."
+### 17h · Reels YAP prático
+**Prático:** auditoria de sete minutos no funil de validação.
+**Abertura (0-3s, falado + na tela):** "Sete minutos para descobrir onde teu método parou de ser validado."
+**Contexto (por que quase todo mundo pensa diferente):** Quando as vendas não avançam, a tendência é mudar promessa, preço e produto ao mesmo tempo. Isso apaga o diagnóstico.
+**Virada (a resposta clara):** Dê uma nota de 0 a 2 para cada etapa: 0 = não existe; 1 = acontece sem registro; 2 = acontece com critério e evidência. Prospecção, qualificação, sessão, follow-up, negociação, fechamento e pós-venda. Escolha apenas a menor nota para corrigir nesta semana. Empate? Corrija a etapa mais próxima do início do funil.
+**Fecha (CTA falado):** "Me segue e aplica uma correção por vez, sem desmontar a oferta inteira."
 **Legenda (caption):**
-Não tenta aplicar os 6 temas ao mesmo tempo. Escolhe 1 — o que mais doeu enquanto você assistia — e resolve só esse antes de ir pro próximo.
-O caminho muda conforme onde você está. Decide hoje, começa amanhã.
-Me segue que eu te ajudo a escolher por onde começar.
+Nota 0, 1 ou 2 para cada uma das sete etapas. Corrija a menor; em empate, comece pela mais próxima do topo.
+Uma mudança por vez preserva o diagnóstico.
+Me segue e aplica essa auditoria hoje.
 
 ### 20h · Carrossel neutro
-**Tema:** "A semana inteira em imagens"
-1. **Capa:** "Prometi mostrar o trabalho a semana inteira. Isso muda o que vocês vão aceitar de mim daqui pra frente."
-2. **Segunda:** 15 anos de auditoria viraram critério de método. Mostrar o processo, não só o resultado.
-3. **Terça:** mentoria também precisa de fidelidade — não deixa a IA virar árbitro da relação com seu mentor.
-4. **Quarta:** capacidade não é prioridade. Decide o que fazer, delegar, deixar pra depois ou cortar.
-5. **Quinta:** método documentado no papel não vira comportamento sem trabalhar a mentalidade por trás dele.
-6. **Sexta:** empreender devolve uma coisa que estabilidade não dá — decisão sobre o próprio futuro.
-7. **Sábado:** persona sem prova de autoridade é só identificação bonita, não estratégia.
-8. **CTA + assinatura:** "Qual desses 6 dias você quer que eu aprofunde primeiro? Comenta o número."
+**Tema:** "As 7 etapas para validar seu método vendendo"
+1. **Capa:** "Seu método não é validado por elogio. Ele atravessa estas 7 etapas."
+2. **Prospecção:** iniciar conversas todos os dias com potenciais compradores e registrar resposta — sem acesso à persona, não há teste.
+3. **Qualificação:** fazer de três a cinco perguntas para confirmar aderência à Persona Compradora antes de oferecer sessão.
+4. **Sessão de Venda Secreta:** responder “isso é verdade?”, “o que eu ganho?” e “serve para mim?” com autoridade, benefício e provas comparáveis, sem garantir resultado.
+5. **Follow-up:** sair de toda conversa com próximo passo e data; encerrar quando houver recusa explícita ou pedido para não contatar.
+6. **Negociação:** preservar relacionamento e proposta; concessão só com contrapartida clara.
+7. **Fechamento:** fazer pergunta objetiva que permita “sim” ou “não” e registrar a decisão sem preencher o silêncio.
+8. **Pós-venda:** iniciar onboarding após o pagamento, entregar, acompanhar satisfação, aprender com o uso e estimular indicação quando houver mérito.
+9. **Diagnóstico:** linha vazia = validação interrompida. Corrija uma etapa antes de trocar produto, preço e promessa juntos.
+10. **CTA + assinatura:** "Me segue para transformar cada etapa em processo, não improviso."
+
+**Produção — Mack:** diagrama no Canva em sete degraus numerados; uma frase e um ícone por degrau. Não usar funil de cliente, número de venda, depoimento ou tela de pagamento.
 
 ---
 
-## Pendências pra você validar antes de ir pra fila
+## Pendências pra validar antes de ir pra fila
 
-1. **15h de segunda:** qual cliente do Sprint do Método mostrar como exemplo real (documentos prontos na tela).
-2. **15h de quarta e domingo:** usar o nome real (Hélio, Bruno) ou manter só "um cliente"/"um mentorado" — o case já está coberto pelo contrato, a decisão de expor o nome é sua.
-3. **15h de quinta:** qual cliente do Sprint mostrar no Canvas de Persona ao vivo — sugeri a Rosiani (NR01/neurodivergência), mas qualquer case coberto por contrato serve.
-4. **Todo o Dia 6 (sábado):** a especialista da análise de persona (item K, terça-feira passada) segue sem nome/identificação em todos os posts que citam ela — se ela autorizar depois, dá pra reforçar com crédito num post futuro.
-5. **12h de quinta (Nanny):** confirma se topa nomear ela mesmo sem autorização formal por escrito, ou se prefere que eu deixe só "uma colega de mentoria" sem nome até você confirmar com ela.
-6. **12h de domingo:** qual é, hoje, o erro real que você mais reconhece — deixei em aberto de propósito pra não inventar.
-7. **Frase do Telecurso 2000 (sexta, 17h):** ainda não confirmei a fonte exata — tratando como lembrança pessoal sua, não como citação comprovada.
+1. **Claim de low ticket:** a frase “a cada 4 low tickets, 1 dá certo” continua sem fonte documental. Não publicar como estatística; o roteiro de 20/09 às 12h usa experiência/opinião sem número.
+2. **Terminologia educacional:** manter “curso livre”, “educação formal”, “instituição credenciada” e “certificado de conclusão/participação” conforme o caso. Não usar “curso certificado pelo MEC” como fórmula genérica. Antes da fila, conferir se links e regras oficiais continuam vigentes.
+3. **Profissões regulamentadas:** qualquer exemplo de advocacia, medicina ou outra profissão deve permanecer educacional e geral. Conferir regras do conselho aplicável antes de prometer pontuação, habilitação ou efeito profissional.
 
-Roda os olhos nisso e me diz o que muda. Depois de aprovado, entrego pro Mack orientar a produção (as 7 Demonstrações, principalmente, têm setup específico — tela/mãos, não precisa aparecer).
+Revisão prática concluída para 17–20/09: 24 conteúdos, seis por dia, com demonstrações executáveis sem depender de ativo de terceiro.
