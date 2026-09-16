@@ -435,3 +435,19 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Racional:** Reduzir dispersão e transformar frentes já maduras em entregas concretas, sem inventar condições comerciais ou escopo ainda não decidido.
 
 **Impacto:** Cockpit e trackers passam a refletir as próximas ações; a proposta do Euriler fica marcada como enviada/aguardando retorno e deixa de tratar o objeto como decisão pendente. Próxima weekly review: 09/09/2026.
+
+## 16/09/2026 — Reprecificação da Mentoria Individual: R$10.000+add-ons vira R$13.500 tudo incluso
+
+**Contexto:** Karol trouxe o documento "Proposta Validada — Mentoria Individual" (item 5 de 6 dos agentes de IA do método: Persona → Promessa → Processo Autoral → Portfólio Estratégico → Proposta Validada → Autoridade Tríplice), gerado fora do Mentoring Creator, com uma oferta reformulada. Reabriu a Fase 7 (Empacotamento, aprovada em 29/08 com preço-base R$10.000 + add-ons) pra reconciliar com essa versão nova.
+
+**Decisões:**
+- Preço sai do modelo composto (R$10.000 base + ~R$1.000 ferramentas/agente de IA + R$1.500 páginas/tráfego, total ~R$12.500) e vira **preço único: R$15.000 referência / R$13.500 condição atual**, à vista no pix ou **12x R$1.350,01** no cartão.
+- Ferramentas do método, Agente de IA do Método Autoral e páginas+configuração de tráfego deixam de ser add-on cobrado à parte e passam a estar **inclusos** no preço.
+- Nova **garantia de aderência de 30 dias**, formalizada como argumento comercial (sem virar barreira burocrática).
+- **Escassez comunicada como agenda**, não como urgência de preço — "o que é limitado é a minha agenda, porque durante 12 meses eu participo diretamente da construção do projeto."
+- Cadência das 14 sessões (aprovada em 28/08 na Fase 4) foi revisada junto e **mantida sem alteração**.
+- Preço da continuação "Individual 6 meses pós-Sprint" (R$5.000, ancorado nos R$10.000 antigos) fica **pendente de nova decisão** — não foi inventado número novo, registrado como pendência em `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md`.
+
+**Racional:** Consolidar num preço único o que já era entregue de fato (ferramentas, agente de IA, páginas/tráfego), em vez de manter como add-ons fragmentados — alinhado ao diferencial já mapeado na Fase 1 de que o mercado gringo sempre cobra a implementação técnica separada da mentoria.
+
+**Impacto:** Atualizados `business/campanhas/incubadora-de-expert-individual/prd.md`, `empacotamento.md` (v2.0), `checklist-producao.md` (v2.0 — revisado item a item com a Karol; 5 dos 10 itens originais já resolvidos desde 29/08) e `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md` (fonte oficial de preços). Documento original guardado em `business/campanhas/incubadora-de-expert-individual/proposta-validada-2026-09.md`. Commitado em `78a3a07`.
