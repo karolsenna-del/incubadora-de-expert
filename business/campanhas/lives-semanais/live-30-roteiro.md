@@ -32,8 +32,8 @@
 4. ~~História pessoal~~ — **confirmada e integrada** (8 lançamentos → dependência do expert →
    volta como expert própria juntando fracassos + processo de lançamento + ferramentas ADM/PDCA +
    contabilidade/auditoria + visão sistêmica + foco em satisfação do cliente da FNQ).
-5. **Planilha Mapa de Ativos de Autoridade** — preciso do link publicado (Google Sheets) antes da
-   live, igual foi feito com o bônus da Live 29.
+5. ~~Planilha Mapa de Ativos de Autoridade~~ — **publicada e verificada (16/09)**. Link de cópia
+   individual: https://docs.google.com/spreadsheets/d/1yFGslckpBPkFRAfnMjkGlh9OTXWE2UvyIY170wnPacw/copy
 6. ~~Nomes dos produtos/experts~~ — **confirmado (14/09): mantém genérico**, sem citar nomes de
    terceiros ("fui expert de 2 produtos", "lançadora de outros experts").
 
@@ -240,7 +240,8 @@ precisar do 1:1 exclusivo, com acompanhamento humano de verdade, não sozinha nu
 erros e padrões de resolução, e te ajuda a enxergar a matéria-prima que você já tem pra virar
 método, mesmo que hoje pareça bagunçado."
 > Bônus único, formato simples (planilha) — não ofusca o entregável principal (a jornada coached
-> de 12 meses). **Pendente: link do Google Sheets publicado antes da live.**
+> de 12 meses). **Link para cada participante criar a própria cópia editável:**
+> https://docs.google.com/spreadsheets/d/1yFGslckpBPkFRAfnMjkGlh9OTXWE2UvyIY170wnPacw/copy
 
 **Fechamento — Decisão Mais Inteligente:**
 "Você tem 2 caminhos: continuar esperando se sentir 'suficiente' sozinha, sem saber quando essa
@@ -260,6 +261,6 @@ valor e próximos passos.
 - [x] Confirmado (14/09): CTA **AUTORIDADE**
 - [x] Confirmado (14/09): história pessoal integrada (8 lançamentos → dependência do expert → volta como expert própria)
 - [x] Confirmado (14/09): nomes de produtos/experts terceiros mantidos genéricos
-- [ ] **Pendente:** Karol vai criar a planilha Mapa de Ativos de Autoridade — colar o link do Google Sheets no Bloco 8 quando estiver pronta
+- [x] Concluído (16/09): planilha **Mapa de Ativos de Autoridade** publicada; mestre em modo leitor para quem tem o link e entrega por cópia individual: https://docs.google.com/spreadsheets/d/1yFGslckpBPkFRAfnMjkGlh9OTXWE2UvyIY170wnPacw/copy
 - [x] Confirmado (14/09): preço da Mentoria Grupo R$5.000 (pix ou 12x R$517,12) — segue sem ser falado na live
 - [ ] Registrar em `lives-expert360-roteiros.md` após a live
