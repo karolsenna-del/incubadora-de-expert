@@ -32,7 +32,7 @@ Ponto B — Método autoral com nome próprio, validado com **vendas reais no 1:
 | Fórmula de Lançamento (Érico Rocha) | R$1.997–R$9.500 | Lançar infoprodutos | Assume que o método já existe. Exige exposição total antes de qualquer prova de venda. |
 | VTSD (Leandro Ladeira) | R$2.500 | Vender e escalar produtos digitais | Assume que o produto existe. Foco em tráfego e copy, requer audiência. |
 | Mentorias high ticket BR genéricas (posicionamento/autoridade) | R$3.000–R$50.000 | Proximidade + personalização, acesso ao mentor | Vendem posicionamento como promessa central — pulam a etapa de validar o método com vendas reais antes de expor |
-| Coaching + funil "done for you" (mercado gringo) | US$3.000–6.000 (add-on, separado do coaching) | Implementação técnica (funil, site, tráfego) | Sempre vendido separado da mentoria — nunca embutido no preço base. Confirma a decisão de manter ferramentas/funil como add-on aqui também |
+| Coaching + funil "done for you" (mercado gringo) | US$3.000–6.000 (add-on, separado do coaching) | Implementação técnica (funil, site, tráfego) | Sempre vendido separado da mentoria — nunca embutido no preço base. **Decisão local diverge desse benchmark:** desde 16/09 a Incubadora inclui ferramentas/páginas/tráfego no preço único, como diferencial vs. esse padrão de mercado |
 | Arcane (Euriler Jube) | High ticket | Mesma lógica de mentoria 1:1 de alto contato | Formato de referência mais próximo — mecanismo proprietário diferente |
 
 **Gaps de mercado:**
@@ -53,26 +53,28 @@ Ponto B — Método autoral com nome próprio, validado com **vendas reais no 1:
 | Formato | 1:1, encontros semanais (~1 por P do método) |
 | Duração | 12 meses (roteiro já existente: Mês 1 = M0+M1 · Meses 2-3 = M2+campo · Meses 4-6 = M3+campo · Meses 7-12 = M4+escala) |
 | Nível de entrega | DWY (done-with-you) — aluno executa com apoio de agentes de IA entre sessões, Karol conduz e valida em sessão |
-| Preço-base | R$10.000 |
-| Add-on: ferramentas + agente de IA do método | ~R$1.000 (referência: caso Milena) — cobrado à parte, exceto quando usado como bônus tático de decisão rápida em sessão de venda/lançamento |
-| Add-on: páginas + configuração de tráfego | R$1.500 (fechado na Fase 7 — Empacotamento) |
-| Escopo do add-on de tráfego | Configurar e deixar rodando — **não inclui gestão contínua nem análise de métricas mensal** |
+| Preço | R$15.000 (referência) / **R$13.500 à vista (pix) ou 12x R$1.350,01 no cartão** — tudo incluso, sem add-ons separados |
+| Ferramentas + Agente de IA do método | **Incluso no preço** (era add-on de ~R$1.000 até a reprecificação de 16/09) |
+| Páginas + configuração de tráfego | **Incluso no preço** (era add-on de R$1.500 até a reprecificação de 16/09) — escopo continua sendo configurar e deixar rodando, **não inclui gestão contínua nem análise de métricas mensal** |
+| Garantia | 30 dias de aderência |
+| Escassez | Agenda individual (capacidade de acompanhamento), não urgência artificial de preço |
+
+**Nota de reprecificação (16/09/2026):** o preço-base saiu de R$10.000 + add-ons (~R$12.500 total) para R$13.500 all-in (referência R$15.000), formalizado no documento "Proposta Validada" trazido pela Karol. Ver `empacotamento.md` v2.0 para o racional completo.
 
 ---
 
 ## 4. Entregáveis Comprometidos
 
-**Núcleo (incluso no preço-base de R$10.000):**
+**Núcleo (incluso no preço de R$13.500 — tudo incluso, sem add-ons):**
 - [ ] Método autoral com nome próprio (P3)
 - [ ] Persona Compradora (P1) + Promessa Transformadora (P2)
 - [ ] Proposta Validada (P4) + roteiro de abordagem + roteiro de sessão 1:1 + vendas reais no 1:1 (Vendas Secretas)
 - [ ] Autoridade Tríplice + Frase-Tese Autoral + Narrativa de Posicionamento (P5)
-- [ ] Sessões semanais 1:1 ao longo de 12 meses, uma por etapa do método
+- [ ] Sessões 1:1 ao longo de 12 meses (14 sessões, cadência front-loaded — ver `estrutura-programa.md`)
 - [ ] Acompanhamento individual via `_mentor/` (cadastro, contexto, negócio, perfil, roteiro) — já em uso
-
-**Add-on (fora do preço-base, cobrado à parte):**
-- [ ] Ferramentas do método construídas + 1 agente de IA (~R$1.000)
-- [ ] Páginas + configuração de tráfego (preço a definir) — sem gestão contínua
+- [ ] Ferramentas do método construídas + 1 Agente de IA do Método Autoral (era add-on ~R$1.000 — incluso desde 16/09)
+- [ ] Páginas + configuração de tráfego, sem gestão contínua (era add-on R$1.500 — incluso desde 16/09)
+- [ ] Garantia de aderência de 30 dias
 
 **Resolvido (29/08 — Fase 8):**
 - [x] Pasta formal de acompanhamento pro David — `mentoria/alunas/david-rose/` criada com a estrutura padrão do `_template/`. Falta preencher dados reais (contato, progresso, pasta no Drive) — não inventado, deixado em branco pra Karol completar.

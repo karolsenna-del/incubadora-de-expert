@@ -39,6 +39,7 @@
       "mentoria/alunas/ (pastas atuais de David, Milena, Ricardo — raio-x do que ja roda)",
       "mentoria/alunas/milena-gehrke/_mentor/ (piloto mais estruturado: cadastro, contexto, negocio, perfil, roteiro)"
     ],
-    "cockpit_note": "Cockpit (business/cockpit.md) esta com 3 ativos (limite). Este trabalho nao entra como novo item em ATIVOS — nasce dentro da operacao continua 'Mentoria (6 alunas)' ja listada em OPERACOES CONTINUAS. Se o trabalho crescer a ponto de precisar de tracker formal no cockpit, avisar a Karol antes de criar."
+    "cockpit_note": "Cockpit (business/cockpit.md) esta com 3 ativos (limite). Este trabalho nao entra como novo item em ATIVOS — nasce dentro da operacao continua 'Mentoria (6 alunas)' ja listada em OPERACOES CONTINUAS. Se o trabalho crescer a ponto de precisar de tracker formal no cockpit, avisar a Karol antes de criar.",
+    "reprecificacao_16_09": "Karol trouxe documento 'Proposta Validada' (salvo em proposta-validada-2026-09.md) com preco novo: R$15.000 referencia / R$13.500 atual, tudo incluso (ferramentas + agente de IA + paginas/trafego + garantia 30 dias + escassez de agenda formalizada). Reabriu Fase 7 (empacotamento.md v2.0, aprovado) e atualizou prd.md. Cadencia de sessoes (estrutura-programa.md, design-sessoes.md) confirmada como ainda valida, sem mudanca. Checklist de producao (Fase 9) precisa ser revisado em seguida."
   }
 }
