@@ -6,6 +6,7 @@
 > CTA oficial da semana (igual às anteriores): **seguir**, sem link/direct/GRUPO/AULA — nunca "me segue" seco, sempre amarrado ao tema do post. Espaço de interação oficial: no fecho da Demonstração (15h), convite pra pedir o próximo ângulo/dúvida.
 > Fato só o documentado ou corrigido diretamente pela Karol — nada inventado. Onde um gancho depende de confirmação ou de terceiro (mentorada, especialista, colega), está marcado com ⚠️.
 > **v1 — todo mundo aqui é rascunho pra você revisar comigo antes de ir pra fila.** Loop de ajuste normal, sem ego.
+> **Revisão de 16/09:** os carrosséis das 20h de 17 a 20/09 foram mantidos nas versões anteriores, pois já estão programados. A revisão prática desses dias vale para os outros cinco slots.
 
 ## Aprendizado da Aria aplicado (relatório de 12/09, últimos 10 dias)
 
