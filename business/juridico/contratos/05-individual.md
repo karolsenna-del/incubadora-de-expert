@@ -45,11 +45,11 @@ Têm entre si justo e contratado o presente instrumento, regido pelas cláusulas
 
 ## 4. INVESTIMENTO E FORMA DE PAGAMENTO
 
-4.1. O valor total do serviço é de **R$ 10.000,00 (dez mil reais)**, com as seguintes opções de pagamento:
+4.1. O valor total do serviço é de **R$ 13.500,00 (treze mil e quinhentos reais)**, com as seguintes opções de pagamento:
 
 a) À vista, via PIX; ou
 
-b) Parcelado em até 12x (doze vezes) de R$ 1.034,23 (mil e trinta e quatro reais e vinte e três centavos) no cartão de crédito, sujeito às condições da plataforma de pagamento utilizada.
+b) Parcelado em até 12x (doze vezes) de R$ 1.350,01 (mil trezentos e cinquenta reais e um centavo) no cartão de crédito, sujeito às condições da plataforma de pagamento utilizada.
 
 ## 5. CONDIÇÃO ESPECÍFICA — TERMO DE RESCISÃO DO DIREITO DE ARREPENDIMENTO
 
