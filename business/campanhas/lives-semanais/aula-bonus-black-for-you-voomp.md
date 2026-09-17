@@ -3,10 +3,10 @@
 
 > **Contexto:** aula bônus assíncrona para participantes da Black For You, parceria Voomp + Anhanguera.
 > **Público:** infoprodutor ou especialista que já tem conhecimento e método e está avaliando transformar sua entrega em curso de extensão ou pós-graduação com reconhecimento oficial.
-> **Tese:** o reconhecimento oficial fortalece a oferta, mas não substitui a validação; a ordem é **validar → vender → crescer**.
+> **Tese:** o reconhecimento oficial fortalece a oferta, mas não substitui a validação; a ordem é **vender → validar → crescer**.
 > **Ajuste de tom (15/09, pedido da Karol):** tema original soou agressivo demais ("Seu selo não vende sozinho"). Título trocado por uma pergunta em primeira pessoa — mais educativo, menos confronto — e Blocos 1/3/4 reescritos na mesma linha (ver detalhe no fim do arquivo).
 > **Mecanismo:** Vendas Secretas, Módulo 3 do Expert360º — validação privada antes da exposição pública.
-> **Duração estimada:** ~24 min.
+> **Duração estimada:** ~26 min.
 > **Formato:** Aula de 8 Blocos, adaptada para vídeo gravado, sem interação ao vivo.
 > **CTA único:** Grupo de Lives Expert360º, gratuito — `https://grupo.incubadoradeexpert.com.br/`.
 
@@ -35,19 +35,17 @@
 
 ### Teleprompter
 
-Eu sou a Karol, dona da Incubadora de Expert e criadora do método Expert360º.
+Eu sou a Karol Senna, Eu ensino especialistas a criarem método e realizarem as primeiras vendas no digital, sem exposição amadora nem lançamentos. 
 
-Antes de tudo, eu quero deixar uma coisa clara: eu não estou aqui pra questionar o valor de um certificado, de uma extensão universitária ou de uma pós-graduação. Muito pelo contrário.
-
-Eu hospedo meu próprio curso na Voomp. Conheço a plataforma como usuária. E, se você chegou até esta aula bônus pela Black For You, você já deu um passo importante: enxergou uma oportunidade real na parceria com a Anhanguera — transformar o conhecimento que você já construiu em uma formação com reconhecimento oficial.
+E, se você chegou até esta aula bônus pela Black For You, você já deu um passo importante: enxergou uma oportunidade real na parceria com a Anhanguera — transformar o seu conhecimento em uma formação com reconhecimento oficial.
 
 Essa aula é sobre o que vem depois desse passo.
 
-"Consegui a minha certificação. E agora?" — é essa pergunta que eu quero te ajudar a responder nos próximos minutos, mostrando o que costuma fazer diferença entre quem lança essa nova oferta com tranquilidade e quem lança e fica sem entender por que não vendeu.
+"Consegui a minha certificação. E agora?" — é essa pergunta que eu quero te ajudar a responder nos próximos minutos, mostrando o que costuma fazer diferença entre quem lança uma nova oferta com tranquilidade e quem lança e fica sem entender por que não vendeu quanto esperava.
 
 O selo já resolve uma parte importante: fortalece a percepção de valor, responde uma dúvida real de quem compra, abre uma possibilidade nova pro seu negócio. Só existe uma pergunta que ele ainda não responde sozinho: essa oferta, com essa promessa, nesse formato e pra esse público, já foi testada com alguém de verdade?
 
-Eu aprendi a fazer essa pergunta depois de oito lançamentos — alguns caros, todos cheios de aprendizado. Hoje eu sigo uma sequência que me ajuda a não repetir esse caminho: validar, vender e só então crescer. É essa sequência que eu quero te mostrar aqui, aplicada ao seu momento.
+Eu aprendi a fazer essa pergunta depois de fracassar em lançamentos — alguns caros, todos cheios de aprendizado. Hoje eu sigo uma sequência que me ajuda a não repetir esse caminho: vender, validar e só então crescer. É essa sequência que eu quero te mostrar aqui, aplicada ao seu momento.
 
 ---
 
@@ -67,7 +65,7 @@ O seu método pode ter anos de aplicação. Seus clientes podem reconhecer a sua
 
 E essa combinação precisa encontrar o mercado real.
 
-Eu não vou te apresentar aqui um caso de certificação que eu não tenho documentado. Vou te dar um critério mais honesto e mais útil: uma oferta começa a sair do campo da hipótese quando a pessoa certa entende a proposta, coloca dinheiro nela, recebe a entrega e confirma, com a própria experiência, que aquilo resolveu o problema que prometia resolver.
+Uma oferta começa a sair do campo da hipótese quando a pessoa certa entende a proposta, coloca dinheiro nela, recebe a entrega e confirma, com a própria experiência, que aquilo resolveu o problema que prometia resolver.
 
 Então, se você já tem método, melhor ainda. Você não precisa voltar ao começo. Precisa apenas validar a nova embalagem comercial antes de amplificá-la.
 
@@ -97,17 +95,7 @@ O terceiro caminho é pensar: “Eu já tenho experiência. Não preciso validar
 
 Essa é a confusão mais sutil, porque parte de uma verdade. Você realmente tem experiência. O seu conhecimento pode ser excelente. Mas o mercado não compra conhecimento em estado bruto. Ele compra uma promessa apresentada num formato, por um preço, em determinado momento.
 
-Foi exatamente aí que eu errei.
-
-Eu fiz oito lançamentos seguindo a ordem que parecia certa. Construía o produto, preparava tudo, lançava, investia e só então descobria os buracos. Tive lançamento com zero venda, com uma venda, com quatro vendas. E, do jeito como a operação estava montada, sempre fiquei no prejuízo.
-
-Durante muito tempo, eu achei que o problema era a audiência. Pensei que precisava de mais gente, mais conteúdo, mais alcance.
-
-Mas o problema não era o tamanho da audiência. Eu estava tentando escalar uma mensagem que nunca tinha sido validada.
-
-Percebe a diferença?
-
-O selo da Anhanguera pode fortalecer a credibilidade da formação. Isso tem valor. Só que credibilidade institucional e validação comercial cumprem funções diferentes.
+O selo da Anhanguera vai fortalecer a credibilidade da formação. Só que credibilidade institucional e validação comercial cumprem funções diferentes.
 
 Uma ajuda a pessoa a confiar no reconhecimento da formação. A outra mostra se a sua proposta específica faz sentido para alguém a ponto de essa pessoa pagar, entrar, executar e reconhecer o valor da transformação.
 
@@ -119,7 +107,7 @@ Você não precisa escolher entre uma e outra. Precisa colocá-las na ordem cert
 
 ### Teleprompter
 
-E, se você já estava pronta pra lançar assim que o reconhecimento saísse, isso não significa que você é afobada, irresponsável ou que não confia no próprio método.
+E, se você já estava pronto pra lançar assim que o reconhecimento saísse, isso não significa que você é afobado, irresponsável ou que não confia no próprio método.
 
 Essa pressa é quase uma consequência natural do jeito como o mercado apresenta a oportunidade.
 
@@ -129,7 +117,7 @@ Mas, para o negócio, ela é uma nova linha de partida.
 
 Ninguém ensina com clareza que reconhecimento oficial e validação de oferta são ativos diferentes. Então a gente mistura os dois e espera que um resolva o trabalho do outro.
 
-A boa notícia é que você não precisa abandonar o projeto certificado, atrasar indefinidamente nem desmontar o que já construiu.
+A boa notícia é que você não precisa abandonar o projeto certificado, nem desmontar o que já construiu.
 
 Você só precisa criar uma etapa protegida entre “eu tenho uma nova oferta” e “eu vou expor essa oferta para todo mundo”.
 
@@ -139,15 +127,15 @@ Foi a mudança de ordem que mudou o digital pra mim. E é essa ordem que eu vou 
 
 ---
 
-## BLOCO 5 — AUTORIDADE IMEDIATA / MÉTODO (~5 min)
+## BLOCO 5 — AUTORIDADE IMEDIATA / MÉTODO (~7 min)
 
 ### Teleprompter
 
 A ordem que o mercado costuma ensinar é: crescer, ficar conhecida, lançar e torcer para validar.
 
-No Expert360º, eu faço o contrário: **validar, vender e crescer**.
+Na Incubadora de Expert, eu faço o contrário: **vender, validar e crescer**.
 
-Isso aparece no Módulo 3 do método, que eu chamo de Vendas Secretas.
+Eu chamo essa estratégia de Vendas Secretas.
 
 Vendas Secretas não tem nada a ver com esconder uma oferta ruim, vender sem transparência ou fazer algo por fora da parceria. O “secreto” fala do ambiente de validação: privado, controlado e próximo, antes da exposição pública.
 
@@ -156,6 +144,16 @@ Pensa em dois caminhos.
 No Caminho A, você transforma tudo em produto final primeiro. Grava, empacota, monta campanha, investe em tráfego e apresenta a oferta para muita gente de uma vez. Se a promessa estiver pouco clara, se o formato tiver um buraco ou se o preço estiver mal enquadrado, você descobre no palco.
 
 No Caminho B, você estrutura uma versão de validação. Convida poucas pessoas certas da sua rede. Apresenta a proposta numa conversa. Cobra um preço justo de comprometimento. Entrega de forma próxima. Observa. Ajusta. Documenta o que aconteceu.
+
+Deixa eu te mostrar como essa conversa acontece na prática, porque não é feeling, é estrutura.
+
+Primeiro, você oferece um diagnóstico gratuito — um formulário simples que já traz a pessoa contando a própria situação antes de vocês se falarem. Isso poupa os primeiros minutos da sessão, que normalmente iam embora só pra entender o básico.
+
+Você analisa as respostas antes da call. Chega na conversa já sabendo onde ela está.
+
+Aí agenda a sessão. E o roteiro dessa conversa tem uma ordem que não pode ser invertida: primeiro você escuta — discute o diagnóstico, aprofunda a dor com as perguntas do seu próprio método. Só depois entra o rapport — e aqui entra a sua história, o pedaço da sua trajetória que espelha o que ela acabou de te contar. Não é papo furado, é identificação: "eu já fui como você".
+
+Só então, depois de escutar e criar identificação, você apresenta a oferta. Nessa ordem, ela não recebe pitch. Recebe resposta.
 
 Depois, quando você amplia a comunicação e usa toda a força do reconhecimento oficial, não está começando do zero. Está escalando algo que já encontrou resposta no mundo real.
 
@@ -169,19 +167,23 @@ Segundo: como você entrega. Pode ser um formato mais simples e próximo nessa f
 
 Terceiro: o preço de validação. Ele não precisa ser o preço definitivo da versão pública, mas precisa existir. Gratuito mede curiosidade. Pagamento mede decisão e comprometimento.
 
-E aqui tem uma diferença ética importante: versão de validação não é produto improvisado nem promessa vazia. É uma entrega profissional, com começo, meio, fim e resultado definido. O que muda é que você assume, com transparência, que está acompanhando de perto as primeiras aplicações e refinando a forma de entregar.
+E aqui tem uma diferença ética importante: versão de validação não é produto improvisado nem promessa vazia. É uma entrega profissional, com começo, meio, fim e resultado definido. O que muda é que você assume, com transparência, que está acompanhando de perto as primeiras aplicações e refinando a forma de entregar. Intitule-os de “OS FUNDADORES”
 
-No Módulo 3 do Expert360º, eu uso um gate concreto: três vendas reais, com pagamento confirmado, e um depoimento real documentado. Não porque o número três seja uma garantia universal. Cada negócio tem seu ritmo. Esse é um critério de passagem do meu método para impedir que a aluna troque evidência por sensação.
+No meu método eu uso como validação esses sinais: três vendas reais, com pagamento confirmado, e um depoimento real documentado. Não porque o número três seja uma garantia universal. Cada negócio tem seu ritmo. Esse é um critério de passagem do meu método para impedir que o aluno troque evidência por sensação.
 
 Essas primeiras vendas produzem muito mais do que faturamento.
 
 Elas mostram quais palavras fazem a pessoa entender a promessa. Revelam a objeção que você não tinha previsto. Mostram em que parte da entrega o cliente avança e onde trava. Dão material para ajustar o pitch. E, quando existe transformação, produzem uma prova que não nasceu da sua opinião sobre o próprio curso.
 
+Cada lançamento (pago ou gratuito) inicia pela big ideia de qual problema a persona tem e porque esse produto é a melhor solução, com base no inimigo comum e no mecanismo único e depois de aquecer a audiência e levar pro evento ele faz o pitch.
+
+O que eu faço com as vendas secretas é um lançamento individual. A cada sessão eu treino tudo isso: a narrativa, a oferta e coleto dados.. após a oferta convencer e converter, eu parto para escala que pode ser o lançamento.
+
 É por isso que o selo não substitui a validação.
 
-O reconhecimento oficial pode fortalecer a oferta. A validação faz você descobrir qual oferta merece ser fortalecida.
+O reconhecimento oficial pode fortalecer a oferta. A validação faz você descobrir qual oferta merece ser escalada.
 
-Primeiro você prova em pequeno. Depois comunica em grande.
+Primeiro você prova no pequeno. Depois comunica no grande.
 
 ---
 
@@ -193,7 +195,7 @@ Agora eu quero responder às cinco frases que mais fazem uma pessoa pular essa e
 
 A primeira é: “Com o reconhecimento oficial, minha venda já está resolvida.”
 
-Não está. O reconhecimento pode reduzir uma objeção de credibilidade, mas a compra continua dependendo da relevância da promessa, da confiança em você, da adequação do formato e da percepção de que essa entrega serve para o caso daquela pessoa. O selo fortalece uma boa oferta. Ele não transforma automaticamente qualquer oferta em uma boa decisão.
+Não está. O reconhecimento pode reduzir uma objeção de credibilidade, mas a compra continua dependendo da relevância da promessa, da confiança em você, da adequação do formato e da percepção de que essa entrega serve para o caso daquela pessoa. O selo fortalece uma boa oferta. Ele não transforma oferta em decisão.
 
 A segunda é: “Vender no privado contradiz a força de aparecer com uma faculdade por trás.”
 
@@ -233,9 +235,7 @@ No segundo cenário, você começa com poucas conversas qualificadas. Apresenta 
 
 Quando chegar o momento de ampliar, você não depende apenas da frase “eu acredito que meu curso é bom”. Você tem as palavras que o cliente usou, as objeções que apareceram, o pitch que foi entendido e, quando a entrega gerou resultado, um depoimento real.
 
-Eu não vou prometer em quantos dias isso acontece, porque cada oferta, público e ciclo de decisão tem um ritmo.
-
-Mas eu posso te dizer o que muda qualitativamente: sem validação, o lançamento é o começo do aprendizado. Com validação, o lançamento é a ampliação de um aprendizado que já começou.
+É isso que muda qualitativamente: sem validação, o lançamento é o começo do aprendizado. Com validação, o lançamento é a ampliação de um aprendizado que já começou.
 
 Essa é a diferença entre usar o selo como esperança e usar o selo como alavanca.
 
@@ -247,15 +247,15 @@ Essa é a diferença entre usar o selo como esperança e usar o selo como alavan
 
 Se esta aula fez você perceber que reconhecimento e validação precisam caminhar juntos, eu quero te convidar para o Grupo de Lives Expert360º.
 
-É um grupo fechado e gratuito onde eu aviso sobre as minhas aulas ao vivo no Google Meet. Toda semana, eu aprofundo um ponto da construção de um negócio de conhecimento: método, oferta, Vendas Secretas, posicionamento e os bastidores das decisões que eu mesma tomo na Incubadora de Expert.
+É um grupo fechado e gratuito onde eu aviso sobre as minhas aulas ao vivo, toda quarta-feira às 15h de Brasília. Toda semana, eu aprofundo um ponto da construção de um negócio de conhecimento: método, oferta, Vendas Secretas, posicionamento e os bastidores das decisões que eu mesma tomo na Incubadora de Expert.
 
-Não é uma promessa de fórmula pronta. É um espaço pra quem tem conhecimento de verdade e quer organizar, validar e comunicar esse conhecimento sem depender de lançamento como primeira prova e sem se expor de forma amadora.
+É um espaço pra quem tem conhecimento de verdade e quer organizar, validar e comunicar esse conhecimento sem depender de lançamento como primeira prova e sem se expor de forma amadora.
 
 Você vai poder acompanhar as próximas aulas ao vivo, receber o link pelo grupo e fazer perguntas no encontro.
 
 E o seu próximo passo é simples: clique no botão que está abaixo deste vídeo. Você vai abrir a página do Grupo de Lives Expert360º, fazer uma inscrição rápida e, na sequência, entrar no grupo fechado do WhatsApp onde eu envio o acesso das lives.
 
-Você pode tentar organizar tudo isso sozinha a partir do que ouviu aqui. E já vai sair com uma decisão importante: não tratar o selo como substituto da validação.
+Você pode tentar organizar tudo isso sozinho a partir do que ouviu aqui. E já vai sair com uma decisão importante: não tratar o selo como substituto da validação.
 
 Mas a decisão mais inteligente pode ser continuar perto, vendo como essa lógica se aplica a oferta, venda e posicionamento, e trazendo as suas dúvidas para as aulas.
 
@@ -263,7 +263,7 @@ Você já está construindo um ativo importante ao buscar reconhecimento oficial
 
 Agora construa o ativo que vem antes da escala: uma oferta validada por pessoas reais.
 
-Primeiro validar. Depois vender. Então crescer.
+Primeiro vender. Depois validar. Então crescer.
 
 Clique no botão abaixo e entra no Grupo de Lives Expert360º. Eu te espero lá.
 
@@ -272,20 +272,23 @@ Clique no botão abaixo e entra no Grupo de Lives Expert360º. Eu te espero lá.
 ## Checklist de produção
 
 - [x] Título definitivo alinhado à tese da aula.
-- [x] Oito blocos presentes, coerentes e com duração estimada total de ~24 min.
+- [x] Oito blocos presentes, coerentes e com duração estimada total de ~26 min (atualizado 17/09 após crescimento do Bloco 5, agora ~7 min).
 - [x] Bloco 2 usa validação indireta honesta; nenhum depoimento de certificação foi inventado.
 - [x] Bloco 5 conecta Vendas Secretas ao Módulo 3 do Expert360º.
 - [x] Bloco 6 contém cinco objeções priorizadas e roteirizadas para a aula.
 - [x] Bloco 7 usa projeção qualitativa e declara que não há prazo universal.
-- [x] História e números pessoais ancorados em fonte interna: oito lançamentos; zero/uma/quatro vendas; sempre no prejuízo.
+- [x] **(Atualizado 17/09)** Bloco 3 não usa mais o número de lançamentos/vendas — corte proposital da Karol. Bloco 1 mantém referência genérica ("fracassar em lançamentos"), sem número específico.
 - [x] Gate “três vendas reais + um depoimento” apresentado como critério do Expert360º, não como promessa universal.
 - [x] Tom preserva o valor da parceria: questiona a ordem, não a certificação.
 - [x] CTA único nomeia a oferta específica: **Grupo de Lives Expert360º, gratuito**.
 - [x] URL confirmada: `https://grupo.incubadoradeexpert.com.br/`.
 - [x] Configuração operacional: inserir abaixo do vídeo um botão com o texto **ENTRAR NO GRUPO DE LIVES** apontando para a URL confirmada.
 - [x] **Ajuste de tom (15/09):** título trocado de "Seu selo não vende sozinho" (confronto) pra "Consegui a minha certificação e agora?" (pergunta em 1ª pessoa, mais educativo). Bloco 1 reescrito na mesma linha; Bloco 3 com abertura suavizada ("é muito natural" em vez de "o risco começa"). Blocos 2, 4-8 mantidos — já tinham tom de acolhimento (Bloco 2 valida quem já tem método, Bloco 4 existe justamente pra tirar a culpa).
-- [x] **Prova racional confirmada com a Karol (15/09):** ela não tem caso/depoimento/dado externo pra essa aula específica — segue só com a história pessoal (8 lançamentos) como prova, sem inventar número ou caso.
+- [x] **Prova racional confirmada com a Karol (15/09):** ela não tem caso/depoimento/dado externo pra essa aula específica. **(Atualizado 17/09)** — o número de lançamentos foi retirado do texto por decisão dela; a prova agora é estrutural (a lógica vender→validar→crescer em si), sem depoimento nem número.
 - [x] **Deck ressincronizado (15/09):** `/live-deck-builder` atualizou slides 1, 2 e 4 (título e tom) — mesmo link do Artifact, Version 3.
+- [x] **Revisão direta da Karol no Word (16-17/09):** Bloco 1 reescrito (abertura + fechamento), Bloco 5 ganhou o trecho de execução da sessão de vendas (diagnóstico gratuito → analisa respostas → agenda call → sessão com rapport/história pessoal → oferta, ancorado no VOL-07 §2-3) e 2 parágrafos novos contrastando lançamento clássico com "lançamento individual" das Vendas Secretas, Bloco 8 ganhou o horário fixo (quarta-feira às 15h de Brasília). Encoding do arquivo corrigido de UTF-16 para UTF-8 (corrompido na edição via Word).
+- [x] **Correção de sequência CONFIRMADA (17/09):** ordem trocada de "validar → vender → crescer" para **"vender → validar → crescer"** em todo o arquivo (Tese, Bloco 5, Bloco 8). Nas palavras da Karol: "eu faço a VENDA secreta, o aluno passa pelo método para VALIDAR e depois trabalhamos o posicionamento para CRESCER" — é a sequência real, não era typo. Decisão registrada em `agents/companion/data/log-decisoes.md` (17/09/2026). **Pendente fora do escopo deste worker:** VOL-06 (Regra Cardinal) e Lives 23/25/28/29/30 publicadas ainda usam a ordem antiga — rotear correção pro ETLmaker/Companion.
+- [x] **Gênero corrigido (17/09):** Bloco 4 tinha concordância feminina ("você já estava pronta", "você é afobada") — corrigido pra masculino genérico ("pronto"/"afobado"), já que a aula fala pra público masculino/geral, não feminino (confirmado pela Karol). Regra reforçada em memória (`feedback_vocabulario_persona`). Mesma correção replicada no texto padrão do Teleprompter.
 
 ### Conferir antes de enviar o vídeo
 
@@ -295,3 +298,4 @@ Clique no botão abaixo e entra no Grupo de Lives Expert360º. Eu te espero lá.
 - [ ] Botão/link do CTA configurado e testado.
 - [ ] Arquivo nomeado `Aula_KarolSenna_VoompBFY.mp4`.
 - [ ] Entrega até 18/09/2026 pelo canal e ao contato definidos no guia oficial.
+

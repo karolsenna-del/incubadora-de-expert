@@ -10,6 +10,26 @@
 **Impacto:** [o que muda]
 -->
 
+## 17/09/2026 — Sequencia oficial do Vendas Secretas e VENDER -> VALIDAR -> CRESCER (nao validar->vender->crescer)
+
+**Contexto:** Revisando o roteiro da aula bonus da Voomp (Black For You), a Karol corrigiu a ordem
+do mecanismo Vendas Secretas que o roteiro usava. A KB `agents/etlmaker/kbs/sessao-estrategica/VOL-06-identidade-oferta-leads.md`
+(linha 17, Regra Cardinal) e as Lives 23, 25, 28, 29 e 30 ja publicadas usam a ordem
+"validar -> vender -> crescer".
+**Decisao:** A ordem correta, nas palavras da Karol: "eu faco a VENDA secreta, o aluno passa
+pelo metodo para VALIDAR e depois trabalhamos o posicionamento para CRESCER". Ou seja:
+**vender -> validar -> crescer**. A venda individual em privado (a "venda secreta") e o que
+o aluno usa pra validar o metodo na pratica; só depois entra o trabalho de posicionamento
+pra crescer/escalar.
+**Racional:** Correcao explicita da autora do metodo, dada apos eu apontar a inconsistencia
+com a KB e as lives anteriores — nao foi typo, e a sequencia real que ela ensina e pratica.
+**Impacto:** Roteiro `business/campanhas/lives-semanais/aula-bonus-black-for-you-voomp.md" ja
+corrigido (Tese, Bloco 5, Bloco 8). **Pendente:** (1) VOL-06 tem uma Regra Cardinal desatualizada
+e precisa de correcao — fora do escopo do worker Expert em Lives, rotear pro ETLmaker; (2) Lives
+23/25/28/29/30 ja publicadas usam a ordem antiga — decidir se ficam como estao (ja gravadas/entregues)
+ou se merece nota de atualizacao; (3) contexto-dinamico.md e outros materiais que citam a tese
+("validar -> vender -> crescer") tambem ficam desatualizados.
+
 ## 14/09/2026 — Sprint do Metodo passa de 5 pra 6 semanas (Processo e Ferramentas separados)
 
 **Contexto:** Karol apontou que a semana 3 do Sprint do Metodo ("Processo Autoral + Ferramentas")
