@@ -34,3 +34,4 @@
 | 18/09/2026 | individual-quinta-2026-09-17 | 1 | 18092764949659181 | sim (ver log de execucao) |
 | 18/09/2026 | individual-terca-2026-09-15 | 1 | 18621847945039466 | sim (ver log de execucao) |
 | 18/09/2026 | live-30-suficiente-2026-09-16 | 3 | 18484693648110651, 18636932683034454, 18101192774637611 | sim (ver log de execucao) |
+| 18/09/2026 | teste-demanda-agentes-ia-2026-09-18 | 1 | 17905094820559489 | sim (ver log de execucao) |
