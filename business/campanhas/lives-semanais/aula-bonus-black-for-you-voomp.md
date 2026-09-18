@@ -159,7 +159,7 @@ Pensa em dois caminhos.
 
 No Caminho A, você transforma tudo em produto final primeiro. Grava, empacota, monta campanha, investe em tráfego e apresenta a oferta para muita gente de uma vez. Se a promessa estiver pouco clara, se o formato tiver um buraco ou se o preço estiver mal enquadrado, você descobre no palco.
 
-No Caminho B, você estrutura uma versão de validação. Convida poucas pessoas certas da sua rede. Apresenta a proposta numa conversa. Cobra um preço justo de comprometimento. Entrega de forma próxima. Observa. Ajusta. Documenta o que aconteceu.
+No Caminho B, você estrutura uma versão de validação. Convida poucas pessoas certas da sua rede. Apresenta a proposta numa conversa. Cobra um preço real. Entrega de forma próxima. Observa. Ajusta. Documenta o que aconteceu.
 
 🎬 [SLIDE 09/17 — Como essa conversa acontece na prática]
 
@@ -187,7 +187,7 @@ Primeiro: o que você entrega. Qual problema você resolve, qual transformação
 
 Segundo: como você entrega. Pode ser um formato mais simples e próximo nessa fase, sem construir uma operação complexa antes de saber o que o cliente realmente precisa.
 
-Terceiro: o preço de validação. Ele não precisa ser o preço definitivo da versão pública, mas nunca é gratuito, nem um valor simbólico — pra quem já está certificando o curso, isso não faz sentido. A validação serve pra testar preço de verdade: a cada sessão, você testa um preço ou uma oferta diferente, e é assim que você descobre qual delas merece ser escalada.
+Terceiro: o preço de validação. Ele não precisa ser o preço definitivo da versão pública — a validação serve pra testar preço de verdade: a cada sessão, você testa um preço ou uma oferta diferente, e é assim que você descobre qual delas merece ser escalada.
 
 E aqui tem uma diferença ética importante: versão de validação não é produto improvisado nem promessa vazia. É uma entrega profissional, com começo, meio, fim e resultado definido. O que muda é que você assume, com transparência, que está acompanhando de perto as primeiras aplicações e refinando a forma de entregar. Intitule-os de "OS FUNDADORES"
 
@@ -328,6 +328,8 @@ Clique no botão abaixo e entra no Grupo de Lives Expert360º. Eu te espero lá.
 - [x] **Preço de validação reescrito (18/09, pedido da Karol):** removida a ideia de que o preço de validação pode ser "gratuito" ou "um valor simbólico" — não faz sentido pra quem já está certificando o curso. Novo texto: a validação serve pra TESTAR preço — cada sessão testa um preço/oferta diferente, pra descobrir qual escalar. Mesma correção aplicada no slide 11/17 do deck ("Preço de validação").
 - [x] **Encoding corrigido de novo (18/09):** arquivo tinha sido salvo em UTF-16 pelo Word (mesmo bug de 16-17/09, aconteceu de novo mesmo depois de fechado), reescrito em UTF-8 limpo. **Recomendação: não abrir mais este `.md` no Word — usar Bloco de Notas, VS Code ou editar via chat.**
 - [x] **Marcadores de slide inseridos (18/09):** cada bloco tem `🎬 [SLIDE XX/17]` sincronizado com o deck. Deck reordenado pra bater com a ordem real de fala (ver nota no topo do arquivo).
+- [x] **Reincidência do preço "de comprometimento" corrigida (18/09):** a correção de preço de validação (item acima) só tinha sido aplicada no Bloco 5/slide 11 ("Preço de validação"). O Bloco 5/slide 08 ("Caminho A vs. Caminho B") ainda tinha a frase antiga "cobra um preço justo de comprometimento" — trocada por "cobra um preço real", consistente com o slide 11.
+- [x] **Menção a "grátis ou simbólico" removida de vez (18/09, pedido da Karol):** a frase "nunca é gratuito, nem um valor simbólico — pra quem já está certificando o curso, isso não faz sentido" (slide 11/17) foi cortada — não faz sentido cogitar pós-graduação/certificação de graça pra essa persona, nem levantar a hipótese. Texto agora só afirma que a validação serve pra testar preço. Mesmo corte aplicado no slide 08/17 (md e deck).
 
 ### Conferir antes de enviar o vídeo
 
