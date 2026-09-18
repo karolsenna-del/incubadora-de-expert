@@ -9,7 +9,28 @@ live_expert360:
   ultimo_processado_titulo: "Live Expert360 - 2026/09/02 13:54 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-09-02T19:03:33.374Z"  # createdTime do arquivo no Drive (Live 28)
   proximo_numero: 29
-  ultima_execucao: "2026-09-10"
+  ultima_execucao: "2026-09-17"
+  # 17/09/2026 (missão #27, 2ª execução no mesmo dia — disparada diretamente via /course-publisher
+  # + task weekly-sync.md, execução autônoma sem confirmação, pedido explícito): reexecutei a busca
+  # global e o get_file_permissions em Live 29 (1_KXnxRGKra_jzwYl5G9SQ9v8ImG86l6q) e Live 30
+  # (14X1tucVxxhsMxbkl69U0RbBBOy11sFPW) — seguem só "owner" karolsenna, share_file tentado de novo
+  # nas duas, mesmo erro "The caller does not have permission". Nada mudou desde a missão #26 (mesmo
+  # dia, antes). Pendências mantidas como estão.
+  # 17/09/2026 (missão #26, disparo autônomo REGRA-015): busca global (sem parentId) achou 2
+  # gravações pendentes na série: Live 29 (09/09, já conhecida) e uma NOVA — "Live Expert360 -
+  # 2026/09/16 13:53 GMT-04:00 - Recording" (613MB, id 14X1tucVxxhsMxbkl69U0RbBBOy11sFPW,
+  # createdTime 2026-09-16T19:32:33.144Z, mesma pasta "Live Expert360 (recurring)" atual
+  # 1MOmJg3RpaZmHwaagfXlz2vjOcYNB2FxS). Roteiro da próxima (Live 30, depois que a 29 for
+  # processada) já identificado: `live-30-roteiro.md`, título extraído do H1 = "Seu conhecimento é
+  # suficiente para se tornar método" → nome final pronto "30 - Seu conhecimento é suficiente para
+  # se tornar método". `get_file_permissions` nos dois arquivos (Live 29 e Live 30) segue mostrando
+  # só "owner" karolsenna@incubadoradeexpert.com.br; `share_file` (karolsenna →
+  # karol.franzini@gmail.com, reader) tentado nos dois, mesmo erro "The caller does not have
+  # permission" de sempre (bloqueio de compartilhamento externo do Workspace, recorrente desde
+  # missões #15-17/#23/#24/#25). Não tentei login como karolsenna no Playwright (sem credencial no
+  # vault, REGRA-005). `ultimo_processado_data`/`proximo_numero` NÃO avançaram — próxima rodada
+  # reencontra as duas (Live 29 e Live 30) e tenta de novo. Pendência da Live 30 adicionada abaixo;
+  # pendência da Live 29 (já existente) mantida sem alteração.
   # 10/09/2026 (missão #25, 2ª execução no mesmo dia — reconfirmação): reexecutei a busca e o
   # get_file_permissions na Live 29 (arquivo 1_KXnxRGKra_jzwYl5G9SQ9v8ImG86l6q) — segue só "owner"
   # karolsenna, share_file tentado de novo, mesmo erro "The caller does not have permission".
@@ -89,7 +110,17 @@ live_expert360:
 mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/03 14:00 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-03T22:34:41Z"  # createdTime do arquivo no Drive
-  ultima_execucao: "2026-09-10"
+  ultima_execucao: "2026-09-17"
+  # 17/09/2026 (missão #27, 2ª execução no mesmo dia — disparada diretamente via /course-publisher
+  # + task weekly-sync.md, execução autônoma sem confirmação): reexecutei a busca e o
+  # get_file_permissions no Encontro de 24/08 (1WyOceWlsGylWtzA-GKX7I9J1b6ElfS5E) — segue só "owner"
+  # karolsenna, share_file tentado de novo, mesmo erro "The caller does not have permission". Nada
+  # mudou desde a missão #26 (mesmo dia, antes). Pendência mantida.
+  # 17/09/2026 (missão #26, disparo autônomo REGRA-015): busca global reconfirmou só o mesmo
+  # Encontro Incubadora de 24/08 pendente (arquivo 1WyOceWlsGylWtzA-GKX7I9J1b6ElfS5E) — nenhum
+  # Encontro Incubadora novo além dele. `get_file_permissions` segue só "owner" karolsenna;
+  # `share_file` pra karol.franzini@gmail.com tentado de novo, mesmo erro "The caller does not have
+  # permission". Nada mudou desde a missão #25. Pendência mantida como está, sem alteração.
   # 10/09/2026 (missão #25, 2ª execução no mesmo dia — reconfirmação): reexecutei a busca e o
   # get_file_permissions no Encontro de 24/08 (arquivo 1WyOceWlsGylWtzA-GKX7I9J1b6ElfS5E) — segue
   # só "owner" karolsenna, share_file tentado de novo, mesmo erro "The caller does not have
@@ -136,7 +167,14 @@ mentoria_em_grupo:
 encontros_individuais:
   ultimo_processado_titulo: null
   ultimo_processado_data: null
-  ultima_execucao: "2026-09-10"
+  ultima_execucao: "2026-09-17"
+  # 17/09/2026 (missão #27, 2ª execução no mesmo dia — disparada diretamente via /course-publisher
+  # + task weekly-sync.md): busca global por título contendo "Individual -" repetida, sem filtro de
+  # data — nenhum resultado, mesmo achado da missão #26. Achado da missão #17 sobre nomenclatura de
+  # pasta segue pendente de decisão.
+  # 17/09/2026 (missão #26, disparo autônomo REGRA-015): busca global por título contendo
+  # "Individual -" repetida, sem filtro de data — nenhum resultado, mesmo achado das missões
+  # anteriores. Achado da missão #17 sobre nomenclatura de pasta segue pendente de decisão.
   # 10/09/2026 (missão #25, 2ª execução no mesmo dia — reconfirmação): busca por título contendo
   # "Individual -" repetida, sem filtro de data — nenhum resultado, mesmo achado da #24.
   # 10/09/2026 (missão #24, disparo autônomo REGRA-015): reconfirmado — busca por título contendo
@@ -187,6 +225,19 @@ pendencias:
       com karol.franzini@gmail.com.
     link: "https://drive.google.com/drive/folders/1MOmJg3RpaZmHwaagfXlz2vjOcYNB2FxS"
     registrado_em: "2026-09-10 (missão #24)"
+    reconfirmado_em: "2026-09-17 (missão #27) — sem mudança"
+  - tipo: "acesso_drive_bloqueado"
+    serie: "live_expert360"
+    detalhe: >
+      Live 30 (16/09/2026) encontrada e com título pronto ("30 - Seu conhecimento é suficiente
+      para se tornar método"), mas download bloqueado — mesmo padrão da Live 29 acima (mesma pasta
+      "Live Expert360 (recurring)", só "owner" karolsenna, share_file pra
+      karol.franzini@gmail.com retornou "The caller does not have permission"). Pedir Karol
+      compartilhar manualmente (role reader ou writer) com karol.franzini@gmail.com — resolve as
+      duas Lives pendentes (29 e 30) de uma vez, já que estão na mesma pasta.
+    link: "https://drive.google.com/drive/folders/1MOmJg3RpaZmHwaagfXlz2vjOcYNB2FxS"
+    registrado_em: "2026-09-17 (missão #26)"
+    reconfirmado_em: "2026-09-17 (missão #27) — sem mudança"
   - tipo: "acesso_drive_bloqueado"
     serie: "mentoria_em_grupo"
     detalhe: >
@@ -198,6 +249,7 @@ pendencias:
       compartilhar manualmente.
     link: "https://drive.google.com/drive/folders/1efQbtw1mAK2dFE-EulATEMLMj83qcnuf"
     registrado_em: "2026-09-10 (missão #24)"
+    reconfirmado_em: "2026-09-17 (missão #27) — sem mudança"
 # 20/08/2026 (missão #17): pendência "acesso_drive_bloqueado" (registrada nas missões #15/#16)
 # RESOLVIDA — Karol recompartilhou a pasta "Live Expert360 (recurring)" (confirmado: permissão
 # "anyone:writer" apareceu via get_file_permissions, e o perfil karol.franzini@gmail.com acessou

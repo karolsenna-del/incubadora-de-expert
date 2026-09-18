@@ -359,38 +359,37 @@ Me segue que eu mostro a régua correta.
 **Produção — Mack:** grave 7 segundos segurando dois cartões — “curso livre” e “educação formal” — sem usar brasão, logomarca do MEC ou certificado cenográfico.
 
 ### 09h · Reels YAP
-**Opinião:** “certificado pelo MEC” é a pergunta errada para curso livre.
-**Abertura (0-3s, falado + na tela):** "Se alguém te promete que todo curso pode ser ‘certificado pelo MEC’, começa conferindo a categoria do curso."
-**Contexto (por que quase todo mundo pensa diferente):** O próprio MEC informa que cursos livres não precisam de autorização nem reconhecimento dos sistemas de ensino. Eles podem emitir certificado de participação ou conclusão, mas isso não equivale a diploma, título de pós-graduação ou habilitação para profissão regulamentada.
-**Virada (a resposta clara):** A pergunta prática é: isso será curso livre ou educação formal ofertada por instituição credenciada? Para pós-graduação lato sensu, por exemplo, a instituição ofertante precisa estar credenciada e o curso segue regras próprias; não é o MEC “certificando cada curso”.
-**Aplicação:** na página, nomeie a categoria, a instituição responsável, a carga horária, o que o certificado comprova e, principalmente, o que ele não habilita a fazer.
-**Fecha (CTA falado):** "Me segue que eu ensino a comunicar autoridade sem promessa regulatória falsa."
+**Opinião:** antes de buscar um selo para o produto, o expert precisa descobrir qual prova a persona realmente valoriza.
+**Abertura (0-3s, falado + na tela):** "Antes de buscar MEC pro seu curso, abre a persona. É ela que mostra se esse título agrega valor."
+**Contexto (por que quase todo mundo pensa diferente):** Você quer transformar o que sabe em produto e ensinar. Aí o certificado parece um atalho pra dar autoridade. Só que autoridade não vem de enfeitar a oferta com um título que o aluno nem precisa. Vem de entregar o resultado que ele procura e apresentar a prova que o mercado dele reconhece.
+**Virada (a resposta clara):** Antes de decidir o formato, responda três coisas: qual resultado essa pessoa quer, qual prova ou título ela precisa apresentar e quem reconhece essa prova. Essas respostas vêm antes do selo.
+**Aplicação:** se ela quer aprender um método e aplicar, sem precisar apresentar um título reconhecido por alguém, um curso livre pode resolver. Se o resultado depende de uma prova aceita por empregador, instituição ou conselho, investigue o requisito real e uma parceria formal antes de prometer.
+**Fecha (CTA falado):** "Me segue que eu mostro como transformar conhecimento em produto com critério, não com enfeite."
 **Legenda (caption):**
-Curso livre não precisa de autorização ou reconhecimento do MEC. Certificado de curso livre não é diploma, pós-graduação nem habilitação profissional.
-Se for educação formal, confira a instituição credenciada e as regras da modalidade. Comunique categoria, carga horária, emissor e limite do certificado.
-Me segue que eu ensino a fazer essa distinção com clareza.
-
-**Fontes oficiais:**
-- https://www.gov.br/mec/pt-br/acesso-a-informacao/institucional/estrutura-organizacional/orgaos-especificos-singulares/secretaria-de-regulacao-e-supervisao-da-educacao-superior/perguntasfrequentes/o-que-sao-cursos-livres
-- https://www.gov.br/mec/pt-br/acesso-a-informacao/perguntas-frequentes/educacao-superior-1/pos-graduacao-lato-sensu-e-stricto-sensu/os-cursos-de-pos-graduacao-lato
+Antes de buscar um selo, descubra o que a persona precisa provar — e pra quem.
+Resultado desejado, prova exigida e quem reconhece essa prova: essas três respostas ajudam a decidir entre curso livre e investigar uma parceria formal.
+Se o valor está no método e na aplicação, não invente uma exigência que a persona não tem.
+Me segue que eu mostro como transformar conhecimento em produto com critério.
 
 ### 12h · Reels YAP
-**Comparação:** quando a educação formal pode agregar valor para personas que valorizam títulos.
-**Abertura (0-3s, falado + na tela):** "Na advocacia e na medicina, o mesmo conteúdo pode ser ótimo e ainda estar no formato errado para a persona."
-**Contexto (por que quase todo mundo pensa diferente):** Há públicos que compram aplicação imediata. Outros também avaliam vínculo institucional, título acadêmico, pontuação em carreira, requisitos do empregador ou educação continuada aceita pela própria entidade profissional.
-**Virada (a resposta clara):** Educação formal pode fazer sentido quando o título é parte explícita do resultado esperado e existe instituição credenciada apta a ofertá-la. Curso livre faz sentido quando a promessa é método, atualização ou aplicação e não envolve habilitar a pessoa a exercer ato profissional. Em profissão regulamentada, confirme também as regras do conselho e não prometa habilitação que o produto não concede.
-**Aplicação:** pergunte à persona: “Você quer aprender a aplicar, comprovar horas, obter título acadêmico ou cumprir requisito profissional?”. A resposta muda produto, parceiro e comunicação.
-**Fecha (CTA falado):** "Me segue que eu mostro como transformar essa resposta em desenho de oferta."
+**História/bastidor:** a pergunta real da Milena mostra por que a persona vem antes do formato.
+**Abertura (0-3s, falado + na tela):** "A Milena me perguntou: ‘Faz sentido ter MEC?’. Eu não respondi olhando pro MEC. Respondi olhando pra persona."
+**Contexto (por que quase todo mundo pensa diferente):** A Milena é engenheira agrícola e está transformando o conhecimento dela em produto. É normal pensar que um título deixaria a oferta mais forte. Mas a pergunta não é se o selo parece importante pra gente. É se o aluno precisa dele para chegar ao resultado que quer.
+**Virada (a resposta clara):** Em nichos como advocacia e medicina, a persona pode valorizar certificado ou título. Isso não quer dizer que todo advogado ou médico exija isso. Tem que verificar o requisito real do conselho, da instituição ou do empregador. No meu mercado, marketing digital, não há razão pra eu buscar MEC quando o valor está no meu método e na aplicação.
+**Aplicação:** eu faria a persona responder: “Qual resultado você quer?”, “Que prova ou título precisa apresentar?” e “Quem reconhece essa prova?”. Se ninguém relevante exige um título formal, não use isso como atalho de autoridade. Se exige, investigue a via formal antes de desenhar a oferta.
+**Fecha (CTA falado):** "Me segue que eu mostro como deixar a persona decidir o formato do seu produto."
 **Legenda (caption):**
-“Quero aprender”, “quero comprovar horas”, “quero título acadêmico” e “preciso cumprir requisito profissional” são quatro demandas diferentes.
-Em advocacia, medicina e outras profissões regulamentadas, confirme as regras da instituição e do conselho antes de prometer efeito profissional.
-Me segue que eu mostro como desenhar a oferta certa.
+A Milena, que é engenheira agrícola, me perguntou se fazia sentido “ter MEC”.
+A resposta não começa no selo. Começa na persona: qual resultado ela quer, que prova precisa apresentar e quem reconhece essa prova?
+Em alguns nichos, inclusive advocacia e medicina, o público pode valorizar certificado ou título. Confirme o requisito real; não generalize.
+No marketing digital, meu valor está no método e na aplicação — não há razão pra eu buscar MEC só pra parecer mais séria.
+Me segue que eu mostro como usar a persona pra decidir o formato do produto.
 
 ### 15h · Reels Demonstração (novo formato)
-**O que mostra:** gravação de tela abrindo as duas páginas oficiais do MEC citadas acima e preenchendo, em documento vazio, uma tabela “curso livre × educação formal” com quatro linhas: regulação, documento emitido, finalidade e limite da promessa.
-**Voz por cima (até 40s):** "Em vez de repetir ‘reconhecido pelo MEC’, eu verifico a categoria. O MEC diz que curso livre não precisa de autorização ou reconhecimento. Já a educação formal depende da modalidade e da instituição credenciada. Daqui saem quatro informações obrigatórias da oferta: o que é, quem emite, para que serve e o que não habilita."
-**Fecho + convite:** "Qual dessas quatro linhas você quer que eu detalhe: regulação, certificado, finalidade ou limite?"
-**Produção — Mack:** capture a URL e o título das duas páginas oficiais do MEC, depois um documento novo sendo preenchido; não mostre certificados reais, dados pessoais, página de aluno ou marca de parceiro. Se uma página não abrir no dia, use captura feita previamente da própria fonte oficial com data visível.
+**O que mostra:** gravação de tela começando pelo print autorizado da pergunta da Milena — deixando visível somente “Faz sentido ter MEC?” e ocultando nome, foto, telefone, horário, notificações e qualquer conteúdo alheio. Em seguida, abre a persona do produto e preenche, ao vivo, três campos: “resultado desejado”, “prova ou título que precisa apresentar” e “quem reconhece essa prova”. Na última tela, aplica a decisão: “curso livre” ou “investigar parceria formal”.
+**Voz por cima (até 40s):** "Essa foi a pergunta de uma aluna: ‘Faz sentido ter MEC?’. Pra responder, eu não começo pesquisando selo. Eu abro a persona e preencho três critérios. Primeiro: qual resultado ela quer? Segundo: que prova ou título precisa apresentar? Terceiro: quem reconhece essa prova — empregador, instituição, conselho ou ninguém? Se o valor está no método e na aplicação, e ninguém exige título formal, o caminho pode ser curso livre. Se existe uma exigência real, aí sim eu investigo uma parceria formal antes de fazer qualquer promessa."
+**Fecho + convite:** "Quer que eu aplique esses três critérios ao seu produto? Comenta qual conhecimento você quer transformar em curso."
+**Produção — Mack:** use o print autorizado pela Karol, mas aplique máscara opaca e permanente em nome, foto, telefone, horário, notificações e conteúdo alheio; deixe visível apenas a pergunta. Grave a transição do print para a persona, o preenchimento dos três critérios e a decisão final. Revise o vídeo quadro a quadro antes de exportar para garantir que nenhum dado apareça em transições, miniaturas, barra lateral ou notificações.
 
 ### 17h · Reels YAP prático
 **Prático:** checklist para decidir se vale buscar uma parceria de educação formal.
