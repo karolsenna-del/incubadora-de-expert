@@ -31,3 +31,4 @@
 | 14/09/2026 | chamada-grupo-lives-segunda-2026-09-14 | 6 | story-00 18196639651388844, story-01 17962887443982429 (via workflow, run 34883077013); story-02 a story-05 publicados manualmente pela Karol no app após falha (erro 9004, RULE-10) — media IDs não capturados | parcial — apagada só na tentativa automática do story-00 |
 | 18/09/2026 | chamada-grupo-lives-quarta-2026-09-16 | 6 | 17945755413315308, 18427803091146290, 18103213571209753, 18115307423283141, 18351403324220652, 18049439270803604 | sim (ver log de execucao) |
 | 18/09/2026 | de-volta-ao-passado-camisa-2026-09-14 | 1 | 17922977613205929 | sim (ver log de execucao) |
+| 18/09/2026 | individual-quinta-2026-09-17 | 1 | 18092764949659181 | sim (ver log de execucao) |
