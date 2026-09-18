@@ -1,6 +1,7 @@
 # Briefing + Copy Redigida — Página Grupo (R$5.000/12 meses)
 
 > Squad LPago Arcane — Quill (Copy & Página). Fonte: `00-documento-mestre-ofertas.md` (Bloco 1+2 aprovado).
+> **Atualização 17/09/2026 (aprovada por Karol em chat, ainda não publicada):** parcelamento migrado pra Voomp com juros menor (12x R$517,12 → 12x R$500), 2 bônus novos (Studio de Ensaio do Expert + Raio-X da Primeira Sessão) e garantia reduzida de 30 pra **15 dias** (regra da esteira: Individual 30 / Grupo 15 / Curso 7). Ver Seção 6, nova Seção 6b e FAQ.
 > Estrutura: 13 seções, mesmo padrão aprovado na página Individual (12 padrão + "Para quem é / Para quem não é" — justificada, high-ticket).
 > Público-alvo: **Laura, exclusivamente** — Ricardo está fora deste produto (arsenal: "Grupo não é para mim", direcionar ele pra Individual ou Sprint+continuação).
 
@@ -168,7 +169,7 @@ de Validação e o Agente de Feedback de Portfólio.
 [H2] Grupo — 12 meses, jornada completa, acompanhamento coletivo
 
 R$5.000 à vista no pix
-ou 12x de R$517,12 no cartão
+ou 12x de R$500 no cartão
 
 Inclui:
 - Jornada completa coached em grupo, 12 meses
@@ -176,11 +177,40 @@ Inclui:
   posicionamento
 - Acesso aos 6 agentes de IA do método (+ 2 chegando ao longo da
   jornada)
+- Studio de Ensaio do Expert
+- Raio-X da Primeira Sessão
+- Garantia de Aderência de 15 dias
 - Turma pequena — acompanhamento próximo, não sala de aula genérica
 
 [CTA]
 QUERO MINHA VAGA NO GRUPO
 ```
+
+---
+
+## SEÇÃO 6b — BÔNUS (novo, 17/09/2026)
+
+**COPY REDIGIDA:**
+
+```
+[H2] 2 bônus que resolvem o que mais trava
+
+Studio de Ensaio do Expert
+Pra quem tem medo de aparecer e "parecer amadora": antes do palco
+público, você ensaia narrativa, trajetória, método, objeções e convite
+comercial. Ninguém precisa estrear sem ensaiar.
+
+Raio-X da Primeira Sessão
+Pra quem tem medo de chegar na conversa e não saber vender: você grava
+sua primeira sessão real de venda e recebe uma análise sobre condução,
+ritmo, diagnóstico, objeções e fechamento. Vira aprendizado, não
+julgamento.
+
+Capacidade limitada a até 10 análises por mês — cada gravação é
+revisada individualmente.
+```
+
+**Posição:** logo depois da Seção 6 (Oferta).
 
 ---
 
@@ -285,10 +315,10 @@ a fundação e o processo autoral estão prontos. Os meses seguintes
 (até o 12) são pra posicionar e escalar o que você já validou.
 
 Posso parcelar?
-Sim — 12x de R$517,12 no cartão, ou R$5.000 à vista no pix.
+Sim — 12x de R$500 no cartão, ou R$5.000 à vista no pix.
 
 Tem garantia?
-Sim — 30 dias de garantia.
+Sim — Garantia de Aderência de 15 dias.
 
 Como começo?
 Uma conversa rápida pra entender se o Grupo é o formato certo pro
@@ -307,7 +337,7 @@ posicionar e escalar. Turma pequena, do seu lado o caminho todo.
 
 QUERO MINHA VAGA NO GRUPO
 
-R$5.000 à vista ou 12x R$517,12
+R$5.000 à vista ou 12x R$500
 ```
 
 ---
@@ -343,3 +373,7 @@ Política de privacidade · Termos de uso
 ## APROVAÇÃO
 
 **APROVADO por Karol em 01/08/2026** (após correção da promessa de tempo — validação em até 4 meses).
+
+**Atualização de parcelamento/bônus/garantia APROVADA por Karol em chat, 17/09/2026** (Seção 6 + nova Seção 6b + FAQ + CTA final). **Status: ainda não implementada no page builder** — página ao vivo em `vendas.incubadoradeexpert.com.br/grupo/` segue com os valores antigos até alguém publicar essa versão.
+
+**Pendente (fora do escopo do Quill):** a proposta original também sugeria mudar a estrutura de acompanhamento (6 meses coached + 6 meses acesso autônomo, em vez dos 12 meses corridos que a página atual sugere). Karol ainda não confirmou essa mudança estrutural — não aplicada aqui, só o que foi explicitamente aprovado (preço/bônus/garantia).

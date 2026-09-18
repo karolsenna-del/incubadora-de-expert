@@ -1,6 +1,7 @@
-# Briefing + Copy Redigida — Página Individual (R$10.000/12 meses)
+# Briefing + Copy Redigida — Página Individual (R$13.500 — tudo incluso)
 
 > Squad LPago Arcane — Quill (Copy & Página). Fonte: `00-documento-mestre-ofertas.md` (Bloco 1+2 aprovado por Atlas/Karol em 01/08/2026).
+> **Atualização 17/09/2026:** reprecificação de R$10.000 pra R$15.000 referência / R$13.500 condição atual (tudo incluso, sem add-ons), formalizada em `business/campanhas/incubadora-de-expert-individual/empacotamento.md` v2.0 e `proposta-validada-2026-09.md`. Ver Seção 6 (Oferta) e nova Seção 6b (Escassez). Aprovado por Karol em chat, ainda **não publicado no page builder**.
 > Estrutura: **13 seções** — 12 padrão + variante "Para quem é / Para quem não é" (justificada: produto high-ticket, RC de estrutura permite seção adicional pra filtrar lead antes do CTA).
 > Público-alvo primário: Ricardo (especialista sênior, financeiramente estável, decide rápido quando confia). Secundário: Laura de ticket mais alto, que quer o acompanhamento mais garantido.
 
@@ -181,8 +182,11 @@ play quando o método já estiver validado.
 ```
 [H2] Individual — 12 meses, 1:1, do zero à venda validada
 
-R$10.000 à vista no pix
-ou 12x de R$1.035 no cartão
+R$ 13.500 à vista no pix
+ou 12x de R$ 1.350,01 no cartão
+(valor de referência: R$ 15.000)
+
+Preço único. Tudo incluso. Sem add-on escondido depois.
 
 Inclui:
 - Acompanhamento 1:1 com a Karol por 12 meses
@@ -192,12 +196,38 @@ Inclui:
 - Página de vendas construída
 - Funil de automação configurado
 - Configuração de tráfego pronta pra rodar
+- Garantia de Aderência de 30 dias
 
 [CTA]
 QUERO CONVERSAR SOBRE A INDIVIDUAL
 ```
 
-**Validação:** preço já é o preço final do produto (não é "ingresso" de lançamento — RC-015 não se aplica aqui, confirmado por Atlas no documento mestre condensado).
+**Validação:** preço já é o preço final do produto (não é "ingresso" de lançamento — RC-015 não se aplica aqui, confirmado por Atlas no documento mestre condensado). RC-002 reforçada: "preço único, tudo incluso" em vez de lista de add-ons soltos.
+
+---
+
+## SEÇÃO 6b — ESCASSEZ (nova, 17/09/2026)
+
+**BRIEFING:** `empacotamento.md` v2.0 formaliza escassez de agenda como argumento comercial oficial — não existia na página aprovada em 01/08.
+
+**COPY REDIGIDA:**
+
+```
+[H2] O que é limitado aqui não é o preço
+
+Eu não trabalho com urgência artificial nessa mentoria. Não tem
+cronômetro, não tem "só hoje".
+
+O que é limitado é minha agenda — porque durante 12 meses eu participo
+diretamente da construção do seu projeto, sessão a sessão. Isso
+significa que a minha capacidade de acompanhamento é real, não
+discurso.
+
+A entrada depende de eu ainda ter capacidade pra assumir um novo
+acompanhamento individual.
+```
+
+**Posição:** logo depois da Seção 6 (Oferta), antes da Seção 7 (Sobre Você).
 
 ---
 
@@ -298,7 +328,7 @@ fundação está pronta. A infraestrutura completa (site, funil,
 tráfego) entra na fase de escala, meses 7-12.
 
 Posso parcelar?
-Sim — 12x de R$1.035 no cartão, ou R$10.000 à vista no pix.
+Sim — 12x de R$1.350,01 no cartão, ou R$13.500 à vista no pix.
 
 Preciso já ter produto definido?
 Não. A fundação (persona, promessa, processo) é construída com
@@ -324,7 +354,7 @@ construir a infraestrutura completa e escalar.
 
 QUERO CONVERSAR SOBRE A INDIVIDUAL
 
-R$10.000 à vista ou 12x R$1.035
+R$13.500 à vista ou 12x R$1.350,01
 ```
 
 ---
@@ -370,3 +400,5 @@ Política de privacidade · Termos de uso
 ## APROVAÇÃO
 
 **APROVADO por Karol em 01/08/2026.** Copy redigida pronta pra implementação em page builder (fora do escopo do squad). Vira padrão de estrutura/tom pras outras 6 páginas.
+
+**Atualização de preço/oferta APROVADA por Karol em chat, 17/09/2026** (Seção 6 + nova Seção 6b + FAQ + CTA final). **Status: ainda não implementada no page builder** — página ao vivo em `vendas.incubadoradeexpert.com.br/individual/` segue com o preço/garantia antigos até alguém publicar essa versão.

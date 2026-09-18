@@ -1,5 +1,7 @@
-# Documento Mestre — Black Friday Grupo 2026
-Versão: 1.1 (rascunho) | Data: 18/09/2026 | Status: Em construção — cronograma de disparos (15 dias, base Ferrari) fechado; falta confirmar contador de vagas e meta
+# Documento Mestre — Black Expert (Grupo 2026)
+Versão: 1.2 (rascunho) | Data: 18/09/2026 | Status: Em construção — cronograma fechado, Echo escrevendo copies (Disparo #1 em aprovação)
+
+**Nome oficial da campanha: "Black Expert"** — usar em toda copy (WhatsApp, e-mail, Instagram, página). Pasta do projeto mantém o nome técnico `black-friday-grupo-2026` só como identificador interno.
 
 > Produzido pelo Squad LPago Arcane (Atlas). Não é lançamento pago clássico com tráfego —
 > é oferta relâmpago de 1 dia (VSL) pra base existente, no produto Mentoria em Grupo.
@@ -21,6 +23,8 @@ Versão: 1.1 (rascunho) | Data: 18/09/2026 | Status: Em construção — cronogr
 
 - **Canal:** só base existente (CRM, leads frios, alunos/ex-alunos, seguidores aquecidos) — **sem tráfego pago**
 - Público/persona: reaproveita a Laura já mapeada (nenhum recorte novo necessário — não é lançamento de aquisição, é reativação/conversão de quem já conhece a Karol)
+- **Confirmado (18/09):** existe um grupo de WhatsApp da Black Friday passada. Plano: convidar 1:1 (WhatsApp) + e-mail pra esse grupo — `https://chat.whatsapp.com/D150ioiZPgfGuYgsSNIwBH`. A partir daí, os disparos "grupo" do cronograma passam a ser voz coletiva de verdade, não individual.
+- ⚠️ **Em aberto:** precisa checar se quem já está no grupo antigo está no CRM dos 150 — pode haver gente no grupo que não conta nos 150, ou vice-versa. Karol ainda decidindo.
 
 ## Bloco 3 — Cronograma Operacional
 
@@ -42,9 +46,9 @@ Versão: 1.1 (rascunho) | Data: 18/09/2026 | Status: Em construção — cronogr
 
 | # | Quando | Canal | Tipo | Intenção |
 |---|---|---|---|---|
-| 1 | T-15d (29/09) | Instagram (Stories/Feed) + e-mail | Teaser | Sinaliza que Black Expert vem aí — assume que vai vender, sem esconder |
-| 2 | T-12d (02/10) | E-mail + Instagram | Contexto/vulnerabilidade | História da Black Expert do ano passado (campanha improvisada, oferta fraca) como prova de que essa é diferente |
-| 3 | T-9d (05/10) | WhatsApp (lista/grupo) + e-mail | Hype | Revela que é a Mentoria em Grupo com condição especial — ainda sem preço |
+| 1 | T-15d (29/09) | Instagram (Stories/Feed) + WhatsApp individual + e-mail | Teaser + convite pro grupo | Sinaliza que Black Expert vem aí (sem esconder) e já convida pro grupo de WhatsApp (reaproveitado da BF passada) — `chat.whatsapp.com/D150ioiZPgfGuYgsSNIwBH`. A partir daqui, "grupo" no cronograma é voz coletiva real |
+| 2 | T-12d (02/10) | E-mail + Instagram + Grupo WA | Contexto/vulnerabilidade | História da Black Expert do ano passado (campanha improvisada, oferta fraca) como prova de que essa é diferente |
+| 3 | T-9d (05/10) | Grupo WA + e-mail | Hype | Revela que é a Mentoria em Grupo com condição especial — ainda sem preço |
 | 4 | T-7d (07/10) | Instagram + e-mail | Prova social | Depoimento/resultado real pra aumentar desejo antes do preço aparecer |
 | 5 | T-5d (09/10) | E-mail + WhatsApp | Mecanismo | Reforça Sequência do Expert Seguro / Vendas Secretas — por que essa condição é real, não desconto forçado |
 | 6 | T-3d (11/10) | WhatsApp + Instagram | Reveal dos bônus | Anuncia bônus em camada (Central do Mentor / Agente do Método / Desafio 5 dias) — ainda sem preço |
@@ -66,11 +70,15 @@ Escassez real em camada, dentro do dia todo (não é "todo mundo que comprar" �
 2. **Agente do Método Autoral** — vai só pro **1º** que comprar (esse item normalmente é exclusivo da Individual — aqui vira o bônus mais forte da BF, só pro primeiro lugar)
 3. **Desafio "Seu Método em 5 Dias" com a Karol** — ao vivo, 19 a 23/10, uma aula ao vivo por dia — esse vale **pra todo mundo** que comprar na BF, não só os primeiros
 
-**Importante pra copy:** isso precisa aparecer com contador visível/real na página (ex: "restam 2 de 3 vagas da Central do Mentor") — se não der pra rastrear em tempo real quem já comprou, a escassez vira promessa que não dá pra provar. Confirma se o checkout/Voomp consegue mostrar isso ao vivo ou se vai ser "no braço" (WhatsApp avisando conforme vende).
+**Confirmado (18/09):** não tem contador de vagas em tempo real. A escassez pública é só de **tempo** (a janela de 1 dia). As vagas dos bônus (3 da Central do Mentor / 1 do Agente do Método) são reais, mas o controle é manual — a Karol acompanha quem comprou e avisa no braço (WhatsApp) conforme as vagas vão fechando, sem widget/contador automático na página. Echo precisa escrever isso sem prometer um contador que não existe (ex: nada de "veja ao vivo quantas restam" — usar algo como "assim que as 3 vagas da Central do Mentor forem preenchidas, aviso aqui no grupo").
 
-## Bloco 5 — Metas (em aberto)
+## Bloco 5 — Metas
 
-Ainda não definidas — "nem ideia" foi sua resposta, então não vou inventar número. Se quiser, me passa só o tamanho da base que vai receber a comunicação (quantos contatos no CRM/lista/WhatsApp) que eu te ajudo a pensar um número realista a partir de taxa de conversão de base aquecida (não de tráfego frio). Sem isso, meta fica em aberto e a campanha roda sem alvo numérico declarado — o que é aceitável pra um teste, só não dá pra medir sucesso depois sem alguma referência.
+**Base confirmada (18/09):** 150 contatos no CRM.
+
+Não vou inventar meta numérica pra você — isso é decisão sua, não benchmark que eu possa cravar sem saber o quão aquecida essa base está (comprou antes? é lead frio antigo? interage nas lives?). Só como referência pra você calibrar (não é promessa): ofertas com desconto forte pra base própria costumam converter numa faixa ampla, tipicamente de baixos dígitos percentuais até a casa de 1 dígito alto, dependendo do quão quente a base é — em 150 contatos isso reduz bastante o número absoluto de vendas esperadas. Se quiser, me diz quantos desses 150 já compraram algo antes ou interagem ativamente, que eu ajusto a referência.
+
+Meta numérica final: **[DECISÃO DA KAROL]** — segue em aberto até você declarar um alvo.
 
 ## Bloco 6 — Validação RCs
 

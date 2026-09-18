@@ -1,6 +1,7 @@
 # Briefing + Copy Redigida — Página Expert360º (R$497)
 
 > Squad LPago Arcane — Quill (Copy & Página). Fonte: `00-documento-mestre-ofertas.md`.
+> **Atualização 17/09/2026 (aprovada por Karol em chat, ainda não publicada):** ancoragem de preço (R$997 → R$497), 2 bônus novos (Studio de Ensaio do Expert + Jornada360), seção de diferenciação vs. Mentoria em Grupo, e garantia reduzida de 30 pra **7 dias** (regra da esteira: Individual 30 / Grupo 15 / Curso 7). Ver Seção 6, novas Seções 6b/6c e FAQ.
 > Estrutura: **12 seções padrão** — R$497 fica abaixo do corte de R$500 pra variante "Para quem é/não é", mesma lógica aplicada no Método Express.
 > Público-alvo: Laura — recorte de orçamento mais baixo, tem tempo, prefere estudar sozinha, sem depender de agenda/contato pessoal com a Karol.
 > **Decisão de prontidão do produto (02/08/2026):** M3 e M4 ainda não foram gravados (tracker: M0 completo, M1 6/8, M2 5/9, M3-M4 aguardando gravação). Karol confirmou vender como curso completo mesmo assim — quem compra hoje recebe M0-M2 já disponíveis e M3/M4 chegam por entrega progressiva conforme forem gravados/publicados. Página trata isso com honestidade na seção de FAQ, sem alarmar.
@@ -153,16 +154,65 @@ mesmos que atendem as alunas da mentoria hoje.
 ```
 [H2] Expert360º — curso completo, no seu ritmo
 
-R$497
+Valor do acesso: R$ 997
+Condição atual: R$ 497 à vista no pix ou 12x de R$ 49,70
 
 Inclui:
 - Curso completo: M0 a M4 (43 aulas)
 - Acesso aos 6 agentes de IA do método
 - Acesso no seu ritmo, sem prazo de turma
+- Studio de Ensaio do Expert
+- Jornada360
+- Garantia de 7 dias
 
 [CTA]
 QUERO O EXPERT360º
 ```
+
+---
+
+## SEÇÃO 6b — BÔNUS (novo, 17/09/2026)
+
+**COPY REDIGIDA:**
+
+```
+[H2] 2 bônus pra você não travar sozinha
+
+Studio de Ensaio do Expert
+Pra quem tem medo de aparecer, falar do método e parecer amadora: um
+processo guiado pra praticar vídeo, história, promessa, apresentação
+do método, objeções e convite — antes da exposição pública. Primeiro
+ensaia. Depois sobe ao palco.
+
+Jornada360
+Pra quem já tem o método mas não sabe fazer o resto (página, tráfego,
+imagem, vídeo): aulas complementares com outros profissionais, nas
+competências que faltam pro negócio rodar. Você usa no momento certo
+— não precisa começar por aqui.
+```
+
+**Fica de fora deliberadamente:** Raio-X da Primeira Sessão, Agente Personalizado do Método Autoral e feedback direto da Karol — reservados pra Grupo/Individual (protege a escada de upsell).
+
+---
+
+## SEÇÃO 6c — DIFERENÇA PRA MENTORIA EM GRUPO (novo, 17/09/2026)
+
+**COPY REDIGIDA:**
+
+```
+[H2] Curso ou Mentoria em Grupo — qual é pra você?
+
+No Curso, o sistema te guia: método + agentes de IA + ferramentas +
+roteiro, no seu ritmo.
+
+Na Mentoria em Grupo, além de tudo isso, você tem plantões quinzenais
+e meu olhar estratégico corrigindo sua rota.
+
+Curso Online → "quero fazer com o sistema."
+Mentoria em Grupo → "quero fazer com o sistema e com acompanhamento."
+```
+
+**Justificativa:** protege o produto de R$5.000 — sem essa seção, a página de R$497 corre risco de parecer que entrega o mesmo resultado acompanhado da mentoria por um décimo do preço.
 
 ---
 
@@ -231,7 +281,7 @@ Posso parcelar?
 Sim, a opção de parcelamento aparece na tela de pagamento.
 
 Tem garantia?
-Sim — 30 dias de garantia.
+Sim — Garantia de 7 dias.
 
 Como começo?
 Compra, recebe acesso à plataforma e começa pelo M0.
@@ -286,3 +336,5 @@ Política de privacidade · Termos de uso
 ## APROVAÇÃO
 
 **APROVADO por Karol em 02/08/2026.**
+
+**Atualização de ancoragem/bônus/garantia APROVADA por Karol em chat, 17/09/2026** (Seção 6 + novas Seções 6b/6c + FAQ). **Status: ainda não implementada no page builder** — página ao vivo em `vendas.incubadoradeexpert.com.br/expert360/` segue com os valores antigos até alguém publicar essa versão.
