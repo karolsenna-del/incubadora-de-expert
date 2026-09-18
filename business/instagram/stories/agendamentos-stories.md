@@ -28,3 +28,4 @@
 | 10/09/2026 | grupo-quinta-2026-09-10 | 1 | 18127654216694400 | sim (ver log de execucao) |
 | 11/09/2026 | enquete-positiva-travas-2026-09-11 | 1 | 18076524422384650 | sim (ver log de execucao) |
 | 13/09/2026 | individual-domingo-2026-09-13 | 1 | 18391462405163650 | sim (ver log de execucao) |
+| 14/09/2026 | chamada-grupo-lives-segunda-2026-09-14 | 6 | story-00 18196639651388844, story-01 17962887443982429 (via workflow, run 34883077013); story-02 a story-05 publicados manualmente pela Karol no app após falha (erro 9004, RULE-10) — media IDs não capturados | parcial — apagada só na tentativa automática do story-00 |
