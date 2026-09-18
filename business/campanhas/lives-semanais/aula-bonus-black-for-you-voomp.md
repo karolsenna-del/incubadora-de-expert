@@ -9,6 +9,8 @@
 > **Duração estimada:** ~26 min.
 > **Formato:** Aula de 8 Blocos, adaptada para vídeo gravado, sem interação ao vivo.
 > **CTA único:** Grupo de Lives Expert360º, gratuito — `https://grupo.incubadoradeexpert.com.br/`.
+> **Sincronização com o slide (18/09):** cada bloco abaixo tem marcadores `🎬 [SLIDE XX/17 — nome]` indicando o momento exato de trocar o slide no `aula-bonus-black-for-you-voomp-apresentacao.html` durante a gravação. O deck foi reordenado nesta mesma sessão pra bater com a ordem real de fala (o slide "Como a sessão acontece" e o "Caminho A vs B" trocaram de posição — Caminho A/B vem primeiro agora; o slide "Lançamento clássico vs Vendas Secretas" passou pra depois do Gate). Como é vídeo gravado, dá pra cortar e ajustar o timing exato na edição — os marcadores são o ponto de referência, não um cronômetro fixo.
+> **IMPORTANTE — não abrir este arquivo no Word:** o Word está salvando este `.md` em UTF-16 e corrompendo todos os acentos (bug recorrente, já aconteceu 3x). Pra editar, use o Bloco de Notas, o VS Code ou peça pra mim direto no chat.
 
 ## Requisitos oficiais de gravação
 
@@ -35,7 +37,9 @@
 
 ### Teleprompter
 
-Eu sou a Karol Senna, Eu ensino especialistas a criarem método e realizarem as primeiras vendas no digital, sem exposição amadora nem lançamentos. 
+🎬 [SLIDE 02/17 — Karol Senna]
+
+Eu sou a Karol Senna, Eu ensino especialistas a criarem método e realizarem as primeiras vendas no digital, sem exposição amadora nem lançamentos.
 
 E, se você chegou até esta aula bônus pela Black For You, você já deu um passo importante: enxergou uma oportunidade real na parceria com a Anhanguera — transformar o seu conhecimento em uma formação com reconhecimento oficial.
 
@@ -43,7 +47,9 @@ Essa aula é sobre o que vem depois desse passo.
 
 "Consegui a minha certificação. E agora?" — é essa pergunta que eu quero te ajudar a responder nos próximos minutos, mostrando o que costuma fazer diferença entre quem lança uma nova oferta com tranquilidade e quem lança e fica sem entender por que não vendeu quanto esperava.
 
-O selo já resolve uma parte importante: fortalece a percepção de valor, responde uma dúvida real de quem compra, abre uma possibilidade nova pro seu negócio. Só existe uma pergunta que ele ainda não responde sozinho: essa oferta, com essa promessa, nesse formato e pra esse público, já foi testada com alguém de verdade?
+🎬 [SLIDE 03/17 — O selo já resolve uma parte importante]
+
+O selo já resolve uma parte importante: fortalece a percepção de valor, responde uma dúvida real de quem compra, abre uma possibilidade nova pro seu negócio. Só existe uma pergunta que ele ainda não responde sozinho: essa oferta, com essa promessa, nesse formato e pra esse público, já foi testada com alguém de verdade? Converteu?
 
 Eu aprendi a fazer essa pergunta depois de fracassar em lançamentos — alguns caros, todos cheios de aprendizado. Hoje eu sigo uma sequência que me ajuda a não repetir esse caminho: vender, validar e só então crescer. É essa sequência que eu quero te mostrar aqui, aplicada ao seu momento.
 
@@ -53,11 +59,13 @@ Eu aprendi a fazer essa pergunta depois de fracassar em lançamentos — alguns 
 
 ### Teleprompter
 
-Talvez você esteja pensando: “Karol, mas eu não estou começando. Eu já atendo. Já ensino. Já tenho audiência. Já tenho um método que funciona.”
+Talvez você esteja pensando: "Karol, mas eu não estou começando. Eu já atendo. Já ensino. Já tenho audiência. Já tenho um método que funciona."
 
 Ótimo. Esta aula é especialmente importante pra você.
 
 Porque eu não estou questionando o seu conhecimento. Não estou dizendo que os seus anos de prática precisam ser provados de novo. E também não estou tratando você como alguém que acabou de chegar ao digital.
+
+🎬 [SLIDE 04/17 — Conhecimento validado não é oferta validada]
 
 O ponto é outro: conhecimento validado e oferta validada não são a mesma coisa.
 
@@ -75,23 +83,25 @@ Então, se você já tem método, melhor ainda. Você não precisa voltar ao com
 
 ### Teleprompter
 
+🎬 [SLIDE 05/17 — É natural querer pular direto pro lançamento]
+
 É muito natural que a empolgação com o reconhecimento oficial faça a gente querer pular direto pra parte boa — o lançamento.
 
-O primeiro caminho parece muito lógico, e é o que a maioria segue: “Assim que estiver tudo aprovado, eu anuncio pra todo mundo.”
+O primeiro caminho parece muito lógico, e é o que a maioria segue: "Assim que estiver tudo aprovado, eu anuncio pra todo mundo."
 
 Você monta a página, grava o curso, prepara a campanha, avisa a audiência inteira e trata o dia do anúncio como o dia da verdade.
 
 Só que o dia do anúncio não deveria ser o primeiro encontro da sua oferta com a realidade.
 
-O reconhecimento pode ajudar a responder: “Esse certificado tem respaldo?” Mas a pessoa ainda vai querer saber: “Isso foi feito pra alguém como eu? Essa promessa cabe no meu momento? Esse formato funciona? Eu confio em quem vai conduzir?”
+O reconhecimento pode ajudar a responder: "Esse certificado tem respaldo?" Mas a pessoa ainda vai querer saber: "Isso foi feito pra alguém como eu? Essa promessa cabe no meu momento? Esse formato funciona? Eu confio em quem vai conduzir?"
 
 O segundo caminho é colocar tráfego antes de ter resposta pra essas perguntas.
 
-A lógica é: “Agora eu tenho uma oferta mais forte. Então preciso alcançar mais gente.” E aí você investe pra multiplicar uma mensagem que ainda não foi testada numa conversa real de compra.
+A lógica é: "Agora eu tenho uma oferta mais forte. Então preciso alcançar mais gente." E aí você investe pra multiplicar uma mensagem que ainda não foi testada numa conversa real de compra.
 
 Tráfego não corrige uma promessa confusa. Ele distribui a confusão mais rápido.
 
-O terceiro caminho é pensar: “Eu já tenho experiência. Não preciso validar.”
+O terceiro caminho é pensar: "Eu já tenho experiência. Não preciso validar."
 
 Essa é a confusão mais sutil, porque parte de uma verdade. Você realmente tem experiência. O seu conhecimento pode ser excelente. Mas o mercado não compra conhecimento em estado bruto. Ele compra uma promessa apresentada num formato, por um preço, em determinado momento.
 
@@ -115,11 +125,13 @@ Você passa tanto tempo buscando uma credencial, uma plataforma, uma aprovação
 
 Mas, para o negócio, ela é uma nova linha de partida.
 
+🎬 [SLIDE 06/17 — Quote: reconhecimento oficial e validação são ativos diferentes]
+
 Ninguém ensina com clareza que reconhecimento oficial e validação de oferta são ativos diferentes. Então a gente mistura os dois e espera que um resolva o trabalho do outro.
 
 A boa notícia é que você não precisa abandonar o projeto certificado, nem desmontar o que já construiu.
 
-Você só precisa criar uma etapa protegida entre “eu tenho uma nova oferta” e “eu vou expor essa oferta para todo mundo”.
+Você só precisa criar uma etapa protegida entre "eu tenho uma nova oferta" e "eu vou expor essa oferta para todo mundo".
 
 É nessa etapa que você testa a promessa, ouve as objeções reais, ajusta a entrega e constrói as primeiras provas.
 
@@ -131,13 +143,17 @@ Foi a mudança de ordem que mudou o digital pra mim. E é essa ordem que eu vou 
 
 ### Teleprompter
 
+🎬 [SLIDE 07/17 — A ordem certa: vender → validar → crescer]
+
 A ordem que o mercado costuma ensinar é: crescer, ficar conhecida, lançar e torcer para validar.
 
 Na Incubadora de Expert, eu faço o contrário: **vender, validar e crescer**.
 
 Eu chamo essa estratégia de Vendas Secretas.
 
-Vendas Secretas não tem nada a ver com esconder uma oferta ruim, vender sem transparência ou fazer algo por fora da parceria. O “secreto” fala do ambiente de validação: privado, controlado e próximo, antes da exposição pública.
+Vendas Secretas não tem nada a ver com esconder uma oferta ruim, vender sem transparência ou fazer algo por fora da parceria. O "secreto" fala do ambiente de validação: privado, controlado e próximo, antes da exposição pública.
+
+🎬 [SLIDE 08/17 — Caminho A vs. Caminho B]
 
 Pensa em dois caminhos.
 
@@ -145,19 +161,25 @@ No Caminho A, você transforma tudo em produto final primeiro. Grava, empacota, 
 
 No Caminho B, você estrutura uma versão de validação. Convida poucas pessoas certas da sua rede. Apresenta a proposta numa conversa. Cobra um preço justo de comprometimento. Entrega de forma próxima. Observa. Ajusta. Documenta o que aconteceu.
 
+🎬 [SLIDE 09/17 — Como essa conversa acontece na prática]
+
 Deixa eu te mostrar como essa conversa acontece na prática, porque não é feeling, é estrutura.
 
 Primeiro, você oferece um diagnóstico gratuito — um formulário simples que já traz a pessoa contando a própria situação antes de vocês se falarem. Isso poupa os primeiros minutos da sessão, que normalmente iam embora só pra entender o básico.
 
-Você analisa as respostas antes da call. Chega na conversa já sabendo onde ela está.
+Você analisa as respostas antes da call. Chega na conversa já sabendo onde a pessoa está.
 
-Aí agenda a sessão. E o roteiro dessa conversa tem uma ordem que não pode ser invertida: primeiro você escuta — discute o diagnóstico, aprofunda a dor com as perguntas do seu próprio método. Só depois entra o rapport — e aqui entra a sua história, o pedaço da sua trajetória que espelha o que ela acabou de te contar. Não é papo furado, é identificação: "eu já fui como você".
+Aí agenda a sessão. E o roteiro dessa conversa tem uma ordem que não pode ser invertida: primeiro você escuta — discute o diagnóstico, aprofunda a dor com as perguntas do seu próprio método. Só depois entra o rapport — e aqui entra a sua história, o pedaço da sua trajetória que espelha o que a pessoa acabou de te contar. Não é papo furado, é identificação: "eu já fui como você".
 
-Só então, depois de escutar e criar identificação, você apresenta a oferta. Nessa ordem, ela não recebe pitch. Recebe resposta.
+Só então, depois de escutar e criar identificação, você apresenta a oferta. Nessa ordem, a pessoa não recebe pitch. Recebe resposta.
 
 Depois, quando você amplia a comunicação e usa toda a força do reconhecimento oficial, não está começando do zero. Está escalando algo que já encontrou resposta no mundo real.
 
+🎬 [SLIDE 10/17 — Não é esconder o instrumento. É afinar antes do concerto]
+
 Eu gosto de uma metáfora: não é esconder o instrumento. É afinar o instrumento antes do concerto.
+
+🎬 [SLIDE 11/17 — 3 coisas antes de expor]
 
 Uma Proposta Validada precisa de três coisas claras.
 
@@ -165,15 +187,19 @@ Primeiro: o que você entrega. Qual problema você resolve, qual transformação
 
 Segundo: como você entrega. Pode ser um formato mais simples e próximo nessa fase, sem construir uma operação complexa antes de saber o que o cliente realmente precisa.
 
-Terceiro: o preço de validação. Ele não precisa ser o preço definitivo da versão pública, mas precisa existir. Gratuito mede curiosidade. Pagamento mede decisão e comprometimento.
+Terceiro: o preço de validação. Ele não precisa ser o preço definitivo da versão pública, mas nunca é gratuito, nem um valor simbólico — pra quem já está certificando o curso, isso não faz sentido. A validação serve pra testar preço de verdade: a cada sessão, você testa um preço ou uma oferta diferente, e é assim que você descobre qual delas merece ser escalada.
 
-E aqui tem uma diferença ética importante: versão de validação não é produto improvisado nem promessa vazia. É uma entrega profissional, com começo, meio, fim e resultado definido. O que muda é que você assume, com transparência, que está acompanhando de perto as primeiras aplicações e refinando a forma de entregar. Intitule-os de “OS FUNDADORES”
+E aqui tem uma diferença ética importante: versão de validação não é produto improvisado nem promessa vazia. É uma entrega profissional, com começo, meio, fim e resultado definido. O que muda é que você assume, com transparência, que está acompanhando de perto as primeiras aplicações e refinando a forma de entregar. Intitule-os de "OS FUNDADORES"
+
+🎬 [SLIDE 12/17 — O gate: vendas reais + depoimento]
 
 No meu método eu uso como validação esses sinais: três vendas reais, com pagamento confirmado, e um depoimento real documentado. Não porque o número três seja uma garantia universal. Cada negócio tem seu ritmo. Esse é um critério de passagem do meu método para impedir que o aluno troque evidência por sensação.
 
 Essas primeiras vendas produzem muito mais do que faturamento.
 
 Elas mostram quais palavras fazem a pessoa entender a promessa. Revelam a objeção que você não tinha previsto. Mostram em que parte da entrega o cliente avança e onde trava. Dão material para ajustar o pitch. E, quando existe transformação, produzem uma prova que não nasceu da sua opinião sobre o próprio curso.
+
+🎬 [SLIDE 13/17 — Lançamento clássico vs. Vendas Secretas]
 
 Cada lançamento (pago ou gratuito) inicia pela big ideia de qual problema a persona tem e porque esse produto é a melhor solução, com base no inimigo comum e no mecanismo único e depois de aquecer a audiência e levar pro evento ele faz o pitch.
 
@@ -191,25 +217,27 @@ Primeiro você prova no pequeno. Depois comunica no grande.
 
 ### Teleprompter
 
+🎬 [SLIDE 14/17 — As frases que mais fazem pular essa etapa]
+
 Agora eu quero responder às cinco frases que mais fazem uma pessoa pular essa etapa.
 
-A primeira é: “Com o reconhecimento oficial, minha venda já está resolvida.”
+A primeira é: "Com o reconhecimento oficial, minha venda já está resolvida."
 
 Não está. O reconhecimento pode reduzir uma objeção de credibilidade, mas a compra continua dependendo da relevância da promessa, da confiança em você, da adequação do formato e da percepção de que essa entrega serve para o caso daquela pessoa. O selo fortalece uma boa oferta. Ele não transforma oferta em decisão.
 
-A segunda é: “Vender no privado contradiz a força de aparecer com uma faculdade por trás.”
+A segunda é: "Vender no privado contradiz a força de aparecer com uma faculdade por trás."
 
 Não contradiz. A validação privada prepara a exposição pública. Você não está escondendo o reconhecimento nem contornando regra nenhuma. Está testando a sua proposta com poucas pessoas, dentro das condições permitidas para o projeto, antes de investir em alcance. Você afina em privado para comunicar com mais clareza em público.
 
-A terceira é: “Eu não tenho tempo. Quero aproveitar a oportunidade e lançar logo.”
+A terceira é: "Eu não tenho tempo. Quero aproveitar a oportunidade e lançar logo."
 
 Eu entendo essa sensação. Só que descobrir depois do lançamento que a promessa não estava clara costuma custar mais tempo do que conversar com as primeiras pessoas antes. A validação não é um desvio do lançamento. Ela é parte da construção dele. No empreendedorismo, estudar indefinidamente atrasa, mas ampliar antes de testar também. O campo precisa entrar cedo — só não precisa começar diante de uma multidão.
 
-A quarta é: “Meu método já funciona. Eu não preciso validar de novo.”
+A quarta é: "Meu método já funciona. Eu não preciso validar de novo."
 
 Você não está validando de novo toda a sua trajetória. Está validando uma nova decisão comercial. Um mesmo método pode ser vendido como mentoria, curso livre, extensão ou pós-graduação. Cada formato muda expectativa, entrega, preço e comparação. O conhecimento continua sendo seu. A oferta é que precisa provar que encontrou a combinação certa.
 
-E a quinta é: “Cobrar por uma versão que ainda está sendo refinada parece errado.”
+E a quinta é: "Cobrar por uma versão que ainda está sendo refinada parece errado."
 
 Seria errado esconder a condição da entrega ou cobrar por algo que você não consegue cumprir. Não é isso que eu estou propondo. A versão de validação tem promessa, estrutura e entrega reais. O cliente recebe acompanhamento e resultado. Você recebe comprometimento, aprendizado e prova. O preço dessa fase não precisa ser o preço final, mas precisa ser coerente com o valor entregue e comunicado com transparência.
 
@@ -223,6 +251,8 @@ Elas apenas devolvem a cada ativo o seu papel: o reconhecimento sustenta a credi
 
 ### Teleprompter
 
+🎬 [SLIDE 15/17 — Dois cenários]
+
 Agora imagina os dois cenários.
 
 No primeiro, você espera o projeto ficar inteiro pronto, anuncia para todo mundo e só então escuta o mercado.
@@ -233,7 +263,7 @@ E a tendência é concluir que faltou audiência, que o mercado não valorizou o
 
 No segundo cenário, você começa com poucas conversas qualificadas. Apresenta a proposta. Registra as perguntas. Faz as primeiras vendas. Entrega. Observa a transformação. Ajusta uma coisa de cada vez.
 
-Quando chegar o momento de ampliar, você não depende apenas da frase “eu acredito que meu curso é bom”. Você tem as palavras que o cliente usou, as objeções que apareceram, o pitch que foi entendido e, quando a entrega gerou resultado, um depoimento real.
+Quando chegar o momento de ampliar, você não depende apenas da frase "eu acredito que meu curso é bom". Você tem as palavras que o cliente usou, as objeções que apareceram, o pitch que foi entendido e, quando a entrega gerou resultado, um depoimento real.
 
 É isso que muda qualitativamente: sem validação, o lançamento é o começo do aprendizado. Com validação, o lançamento é a ampliação de um aprendizado que já começou.
 
@@ -253,6 +283,8 @@ Se esta aula fez você perceber que reconhecimento e validação precisam caminh
 
 Você vai poder acompanhar as próximas aulas ao vivo, receber o link pelo grupo e fazer perguntas no encontro.
 
+🎬 [SLIDE 16/17 — Antes de expor, leva isso (resumo)]
+
 E o seu próximo passo é simples: clique no botão que está abaixo deste vídeo. Você vai abrir a página do Grupo de Lives Expert360º, fazer uma inscrição rápida e, na sequência, entrar no grupo fechado do WhatsApp onde eu envio o acesso das lives.
 
 Você pode tentar organizar tudo isso sozinho a partir do que ouviu aqui. E já vai sair com uma decisão importante: não tratar o selo como substituto da validação.
@@ -264,6 +296,8 @@ Você já está construindo um ativo importante ao buscar reconhecimento oficial
 Agora construa o ativo que vem antes da escala: uma oferta validada por pessoas reais.
 
 Primeiro vender. Depois validar. Então crescer.
+
+🎬 [SLIDE 17/17 — CTA: Grupo de Lives Expert360º]
 
 Clique no botão abaixo e entra no Grupo de Lives Expert360º. Eu te espero lá.
 
@@ -278,7 +312,7 @@ Clique no botão abaixo e entra no Grupo de Lives Expert360º. Eu te espero lá.
 - [x] Bloco 6 contém cinco objeções priorizadas e roteirizadas para a aula.
 - [x] Bloco 7 usa projeção qualitativa e declara que não há prazo universal.
 - [x] **(Atualizado 17/09)** Bloco 3 não usa mais o número de lançamentos/vendas — corte proposital da Karol. Bloco 1 mantém referência genérica ("fracassar em lançamentos"), sem número específico.
-- [x] Gate “três vendas reais + um depoimento” apresentado como critério do Expert360º, não como promessa universal.
+- [x] Gate "três vendas reais + um depoimento" apresentado como critério do Expert360º, não como promessa universal.
 - [x] Tom preserva o valor da parceria: questiona a ordem, não a certificação.
 - [x] CTA único nomeia a oferta específica: **Grupo de Lives Expert360º, gratuito**.
 - [x] URL confirmada: `https://grupo.incubadoradeexpert.com.br/`.
@@ -289,6 +323,11 @@ Clique no botão abaixo e entra no Grupo de Lives Expert360º. Eu te espero lá.
 - [x] **Revisão direta da Karol no Word (16-17/09):** Bloco 1 reescrito (abertura + fechamento), Bloco 5 ganhou o trecho de execução da sessão de vendas (diagnóstico gratuito → analisa respostas → agenda call → sessão com rapport/história pessoal → oferta, ancorado no VOL-07 §2-3) e 2 parágrafos novos contrastando lançamento clássico com "lançamento individual" das Vendas Secretas, Bloco 8 ganhou o horário fixo (quarta-feira às 15h de Brasília). Encoding do arquivo corrigido de UTF-16 para UTF-8 (corrompido na edição via Word).
 - [x] **Correção de sequência CONFIRMADA (17/09):** ordem trocada de "validar → vender → crescer" para **"vender → validar → crescer"** em todo o arquivo (Tese, Bloco 5, Bloco 8). Nas palavras da Karol: "eu faço a VENDA secreta, o aluno passa pelo método para VALIDAR e depois trabalhamos o posicionamento para CRESCER" — é a sequência real, não era typo. Decisão registrada em `agents/companion/data/log-decisoes.md` (17/09/2026). **Pendente fora do escopo deste worker:** VOL-06 (Regra Cardinal) e Lives 23/25/28/29/30 publicadas ainda usam a ordem antiga — rotear correção pro ETLmaker/Companion.
 - [x] **Gênero corrigido (17/09):** Bloco 4 tinha concordância feminina ("você já estava pronta", "você é afobada") — corrigido pra masculino genérico ("pronto"/"afobado"), já que a aula fala pra público masculino/geral, não feminino (confirmado pela Karol). Regra reforçada em memória (`feedback_vocabulario_persona`). Mesma correção replicada no texto padrão do Teleprompter.
+- [x] **Adição da Karol (18/09):** Bloco 1 ganhou "Converteu?" no final da pergunta sobre a oferta já testada.
+- [x] **Gênero corrigido de novo (18/09):** Bloco 5 tinha "ela" duas vezes se referindo à pessoa hipotética da sessão de vendas ("o que ela acabou de te contar", "ela não recebe pitch") — trocado por "a pessoa", consistente com o resto do arquivo.
+- [x] **Preço de validação reescrito (18/09, pedido da Karol):** removida a ideia de que o preço de validação pode ser "gratuito" ou "um valor simbólico" — não faz sentido pra quem já está certificando o curso. Novo texto: a validação serve pra TESTAR preço — cada sessão testa um preço/oferta diferente, pra descobrir qual escalar. Mesma correção aplicada no slide 11/17 do deck ("Preço de validação").
+- [x] **Encoding corrigido de novo (18/09):** arquivo tinha sido salvo em UTF-16 pelo Word (mesmo bug de 16-17/09, aconteceu de novo mesmo depois de fechado), reescrito em UTF-8 limpo. **Recomendação: não abrir mais este `.md` no Word — usar Bloco de Notas, VS Code ou editar via chat.**
+- [x] **Marcadores de slide inseridos (18/09):** cada bloco tem `🎬 [SLIDE XX/17]` sincronizado com o deck. Deck reordenado pra bater com a ordem real de fala (ver nota no topo do arquivo).
 
 ### Conferir antes de enviar o vídeo
 
@@ -298,4 +337,3 @@ Clique no botão abaixo e entra no Grupo de Lives Expert360º. Eu te espero lá.
 - [ ] Botão/link do CTA configurado e testado.
 - [ ] Arquivo nomeado `Aula_KarolSenna_VoompBFY.mp4`.
 - [ ] Entrega até 18/09/2026 pelo canal e ao contato definidos no guia oficial.
-
