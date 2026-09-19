@@ -51,8 +51,6 @@ jobs:
             Salve este post para revisitar quando estiver estruturando sua oferta.
 
             E compartilhe com alguém que sabe MUITO, mas ainda não percebeu o valor comercial do próprio conhecimento.
-
-            @vinigrevy
         run: |
           python3 - <<'EOF'
           import os, time, requests, urllib.parse as up
