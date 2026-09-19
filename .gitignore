@@ -30,6 +30,8 @@ Thumbs.db
 *.log
 *-snapshot.md
 .playwright-mcp/
+~$*.md
+~$*.docx
 
 # Backups locais pré-sync (não vão pro npm/git)
 _backup-pre-sync/
