@@ -49,6 +49,7 @@
 | 19/09/2026 | medo-de-validar | 23/09/2026 11h BRT | via GitHub Actions | agendado (workflow: post-medo-de-validar.yml) — 8 slides no Cloudinary — horário 11h a pedido explícito da Karol; mesmo script padrão das 20h (com espera FINISHED) — aguardando push |
 | 19/09/2026 | dollar-shave-club | 24/09/2026 11h BRT | via GitHub Actions | agendado (workflow: post-dollar-shave-club.yml) — 10 slides no Cloudinary (máximo permitido) — horário 11h a pedido explícito da Karol; mesmo script padrão das 20h (com espera FINISHED) — aguardando push |
 | 19/09/2026 | clareza-oferta | 25/09/2026 11h BRT | via GitHub Actions | agendado (workflow: post-clareza-oferta.yml) — 8 slides no Cloudinary — horário 11h a pedido explícito da Karol; mesmo script padrão das 20h (com espera FINISHED) — aguardando push |
+| 19/09/2026 | categoria-propria-kondo | 26/09/2026 11h BRT | via GitHub Actions | agendado (workflow: post-categoria-propria-kondo.yml) — 10 slides no Cloudinary (máximo permitido) — horário 11h a pedido explícito da Karol; mesmo script padrão das 20h (com espera FINISHED) — aguardando push |
 | — | — | — | — | *(inicializado em 2026-06-22)* |
 | 23/06/2026 | adiando-ha-anos | publicado imediatamente | 18098747612464009 | ✓ publicado |
 | 21/07/2026 | genesis-pool-metodo-autoral | publicado imediatamente (14h08 BRT — passou do horário padrão de 12h, Karol pediu pra publicar hoje) | 18099073856191847 | ✓ publicado |
