@@ -45,6 +45,7 @@
 | 18/09/2026 | pesquisando-vs-testando | 19/09/2026 11h BRT | via GitHub Actions | agendado (workflow: post-pesquisando-vs-testando.yml) — 8 slides no Cloudinary — horário 11h a pedido explícito da Karol; script duplicado do padrão das 20h (idêntico, com espera FINISHED — a pedido da Karol, já que os 20h não têm dado erro 9004 e os 11h sim) — aguardando push |
 | 18/09/2026 | emyth-gerber | 20/09/2026 11h BRT | via GitHub Actions | agendado (workflow: post-emyth-gerber.yml) — 9 slides no Cloudinary — horário 11h a pedido explícito da Karol; mesmo script padrão das 20h (com espera FINISHED) — aguardando push |
 | 19/09/2026 | metodo-vendavel | 21/09/2026 11h BRT | via GitHub Actions | agendado (workflow: post-metodo-vendavel.yml) — 8 slides no Cloudinary — horário 11h a pedido explícito da Karol; mesmo script padrão das 20h (com espera FINISHED) — aguardando push |
+| 19/09/2026 | buffer-validacao | 22/09/2026 11h BRT | via GitHub Actions | agendado (workflow: post-buffer-validacao.yml) — 10 slides no Cloudinary (máximo permitido) — horário 11h a pedido explícito da Karol; mesmo script padrão das 20h (com espera FINISHED) — aguardando push |
 | — | — | — | — | *(inicializado em 2026-06-22)* |
 | 23/06/2026 | adiando-ha-anos | publicado imediatamente | 18098747612464009 | ✓ publicado |
 | 21/07/2026 | genesis-pool-metodo-autoral | publicado imediatamente (14h08 BRT — passou do horário padrão de 12h, Karol pediu pra publicar hoje) | 18099073856191847 | ✓ publicado |
