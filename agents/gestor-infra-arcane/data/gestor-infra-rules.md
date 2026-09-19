@@ -311,6 +311,22 @@ automação também estiver travada do lado dela (aconteceu 1x, resolveu na hora
 
 ---
 
+## REGRA-022: Confirmar a conta Google ATIVA antes de criar qualquer recurso novo (Sheets/Docs/Apps Script) via browser automation
+
+**Contexto:** Ao criar a planilha + Apps Script de "Parceiros — Jornada 360º" (18/09), naveguei direto pra `sheets.google.com/create` numa aba nova do Chrome. A aba abriu numa sessão de conta diferente da padrão (`/u/1/` — "Gestão Pra Tudo", `gestaopratudoo@gmail.com`) em vez da conta certa (`/u/0/` — Karol Senna, `karolsenna@incubadoradeexpert.com.br`, marcada como "Padrão" no seletor de contas). Só foi percebido no passo de "Executar como" do deploy do Apps Script, que mostrou o e-mail errado — se não fosse essa checagem visual, a planilha inteira (e as respostas reais de leads que viriam depois) ficaria hospedada na conta errada.
+
+**Motivo:** Chrome com múltiplas contas Google logadas mantém sessões independentes por aba/janela (`/u/0/`, `/u/1/`, etc.) — qual sessão uma aba NOVA usa depende do estado interno do Chrome no momento (não necessariamente a conta "padrão"), e isso não é visível sem checar explicitamente. Diferente da REGRA-015 (credencial errada reaproveitada de outro lugar do código) — aqui o problema é a sessão do PRÓPRIO BROWSER no momento da criação, silenciosa e fácil de não notar porque a UI do Google Sheets/Docs não avisa "você está criando isso como Fulano".
+
+**Regra:**
+- Antes de criar qualquer recurso novo do Google (Planilha, Doc, Apps Script, Forms) via browser automation, navegar com `?authuser={email-esperado}` na URL (ex: `docs.google.com/spreadsheets/create?authuser=karolsenna@incubadoradeexpert.com.br`) — força a sessão certa em vez de confiar no default da aba.
+- Depois de criar, confirmar visualmente clicando no avatar/conta no canto superior direito (ou zoom no tooltip) ANTES de prosseguir com qualquer configuração adicional — o avatar mostra iniciais/foto diferentes por conta, é um check rápido.
+- Se descobrir tarde que o recurso foi criado na conta errada: mover pra lixeira (não apagar direto — 30 dias de graça caso precise recuperar algo) e recriar do zero na conta certa, a menos que o usuário prefira transferir propriedade explicitamente.
+- Esse cuidado vale especialmente quando a máquina/perfil do Chrome tem mais de uma conta Google logada (confirmado neste caso: "Gestão Pra Tudo", "Karol Senna", "Karoline Franzini" todas na mesma sessão do navegador).
+
+**Fix aplicado:** planilha+script recriados via URL com `authuser` explícito, confirmado o avatar antes do deploy — segunda tentativa ficou 100% na conta certa.
+
+---
+
 ## Registro de Incidentes
 
 | # | O que aconteceu | Fix | Regra criada |
@@ -328,3 +344,4 @@ automação também estiver travada do lado dela (aconteceu 1x, resolveu na hora
 | 11 | Cron das 9h30 do insta-scheduler nao disparou em 28/08 — Story do dia ficou sem publicar ate a Karol reportar | Disparo manual (`gh workflow run`) | REGRA-019 |
 | 12 | Digitacao automatizada (`computer.type`) no editor Apps Script (Monaco) derrubou `}` isolado varias vezes seguidas, corrompendo o script `Recebe Briefing Agente de IA` — precisou de 1h+ de tentativas ate achar o fix real | Reescrita via `monaco.editor.getEditors()[0].getModel().pushEditOperations(...)`, substituindo o arquivo inteiro numa unica operacao JS em vez de teclado simulado | REGRA-020 |
 | 13 | Extensao do 1Password travou repetidamente cliques/digitacao em campos de texto no App Review da Meta (nada relacionado a senha) — screenshot e ate type paravam de responder | Escape logo apos o clique antes de digitar; se travar mesmo assim, Escape de novo + conferir texto parcial com get_page_text antes de continuar; fechar/reabrir aba se travar de vez | REGRA-021 |
+| 14 | Planilha + Apps Script de Parceiros criados numa sessao de conta Google errada (`/u/1/`, "Gestao Pra Tudo") em vez da conta certa (`/u/0/`, Karol) — Chrome com multiplas contas logadas nao usa a conta padrao automaticamente em aba nova | Movido pra lixeira (nao deletado), recriado com `?authuser=email@certo` na URL + confirmacao visual do avatar antes de prosseguir | REGRA-022 |
