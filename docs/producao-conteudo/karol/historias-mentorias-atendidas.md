@@ -11,7 +11,7 @@
 - [2. Patrícia — expert em corrida (planilha facilitada)](#2-patrícia--expert-em-corrida-planilha-facilitada-pra-corredores) — disponível
 - [3. Yamada — especialista em moda com IA](#3-yamada--especialista-em-moda-com-ia) — ✅ usada (Rota100k S02, "Se você quer ser mentora, é assim de verdade")
 - [4. Geliane — especialista em terapia (gêmeo sobrevivente)](#4-geliane--especialista-em-terapia-psicologia-pré-perinatal) — disponível
-- [5. Vanessa — manicure com formação em dados](#5-vanessa--manicure-com-formação-em-dados-e-paixão-por-inteligência-emocional) — disponível
+- [5. Vanessa — manicure com formação em dados](#5-vanessa--manicure-com-formação-em-dados-e-paixão-por-inteligência-emocional) — disponível (pivotou de novo em 19/09, ver atualização)
 - [6. David — bartender que virava "show"](#6-david--bartender-que-virava-show) — ✅ usada (`posts/bartendershow-david/`)
 - [7. Analia — nutróloga integrativa (banho de luz vermelha)](#7-analia--nutróloga-integrativa-banho-de-luz-vermelha) — disponível
 - [8. Rosiani — NR01 e a genialidade neurodivergente nas empresas](#8-rosiani--nr01-e-a-genialidade-neurodivergente-nas-empresas) — disponível
@@ -20,6 +20,11 @@
 - [11. Bruno — contador que dá paz ao empresário](#11-bruno--contador-que-dá-paz-ao-empresário) — disponível
 - [12. Rodrigo — consultor financeiro que criou método pra esteira de produtos](#12-rodrigo--consultor-financeiro-que-criou-método-pra-esteira-de-produtos) — disponível
 - [13. Nanny Faggiano — de 7 mil pra 1 milhão de seguidores](#13-nanny-faggiano--de-7-mil-pra-1-milhão-de-seguidores) — ⭐ disponível, case mais forte do banco, tem prints de prova
+- [14. Roberto — fotógrafo institucional (Itália, 20 anos) vira ferramenteiro pra experts](#14-roberto--fotógrafo-institucional-itália-20-anos-vira-ferramenteiro-pra-experts) — disponível
+- [15. Aldo — dentista que ensina dentistas, funil de live secreta](#15-aldo--dentista-que-ensina-dentistas-funil-de-live-secreta) — disponível
+- [16. Ruhama — rotina pra mães, virada de low ticket pra comunidade por assinatura](#16-ruhama--rotina-pra-mães-virada-de-low-ticket-pra-comunidade-por-assinatura) — disponível
+- [17. Mariana — pedagoga/matemática/computação, comunidade escolar](#17-mariana--pedagogamatemáticacomputação-comunidade-escolar) — disponível
+- [18. Danielle — livro de família com IA (projeto Alzheimer da sogra)](#18-danielle--livro-de-família-com-ia-projeto-alzheimer-da-sogra) — disponível
 
 ---
 
@@ -116,6 +121,15 @@
 - Transformar toda a vivência dela (manicure + dados + IE) num **método**
 
 **Status:** matéria-prima, ainda não usada em roteiro
+
+**ATUALIZAÇÃO (sessão 19/09/2026) — pivotou de novo:**
+- Vanessa voltou com ideia nova: ensinar IA pra mulheres em geral
+- Karol analisou a página do evento dela e achou muito genérica, sem persona definida
+- Na conversa, Vanessa revelou que quer ensinar isso porque **é secretária** e faz em 2 horas com IA o que levava 2 semanas pra fazer manualmente
+- **Conclusão da sessão:** abandonar o "IA pra mulheres" genérico e focar em **secretárias que querem se tornar mais eficientes e se destacar** — usa o próprio caso dela (2 semanas → 2 horas) como prova viva
+- Terceira virada de posicionamento em 3 sessões (studio manicure → ferramenteira de manicures → IA pra mulheres → **IA pra secretárias**) — bom material pra ilustrar "descobrir o nicho certo é processo, não sorte de largada"
+
+**Status:** matéria-prima, ainda não usada em roteiro (virada mais recente ainda quente)
 
 ---
 
@@ -244,6 +258,86 @@
 **Leitura da squad:** é o case mais forte do banco inteiro — nome público, real, verificável (1M de seguidores, livro publicado, evento próprio), com prova documental (prints das conversas). Diferente dos outros 12 casos (alunos privados/anônimos), Nanny é figura pública — antes de publicar qualquer coisa que credite a Karol pela virada de posicionamento dela, vale confirmar alinhamento/autorização com a Nanny, já que é a narrativa de marca de outra pessoa pública, não uma aluna anônima.
 
 **Status:** ⭐ disponível, nunca usada como causo próprio. Prints das conversas existem — perguntar pra Karol onde estão salvos quando for produzir.
+
+---
+
+## 14. Roberto — fotógrafo institucional (Itália, 20 anos) vira ferramenteiro pra experts
+
+**Contexto:**
+- 50 anos, fotógrafo, mora há 20 anos na Itália
+- Ensina fotografia como hobby/estudo, já estuda IA há bastante tempo
+- Fez trabalhos institucionais, inclusive pra revistas como a Vogue
+- Ele mesmo reconhece: mercado de fotografia tá em declínio
+
+**Diagnóstico feito na sessão:**
+- Ele acha que "qualquer um faz foto" (e é verdade) — mas poucos têm o repertório dele pra escrever um prompt de IA com critério real ou avaliar se uma foto gerada presta
+
+**Orientação dada pela Karol:**
+- Repertório + IA vira produto, não só método: catálogos pra revistas digitais, moda, experts
+- Ele pode vender o que a maioria não tem — critério técnico de quem já trabalhou pra Vogue, aplicado a avaliar/gerar imagem com IA
+
+**Status:** matéria-prima, ainda não usada em roteiro
+
+---
+
+## 15. Aldo — dentista que ensina dentistas, funil de live secreta
+
+**Contexto:**
+- Dentista, ensina outros dentistas a faturarem R$50k/mês sem lotar a agenda
+- Dificuldade em gerar demanda — fazia 1 live/dia, aberta pra todo mundo, ninguém entrava
+
+**Diagnóstico feito na sessão:**
+- Live aberta sem audiência mina a autoconfiança — o bem mais precioso pra continuar empreendendo no digital
+- Exposição sem resultado corrói mais do que ajuda
+
+**Orientação dada pela Karol:**
+- Funil de **live secreta semanal**: mesmo que ninguém apareça, ninguém fica sabendo — zero exposição
+- Quando alguém aparecer, vai ser mais qualificado, com chance real de venda
+
+**Status:** matéria-prima, ainda não usada em roteiro
+
+---
+
+## 16. Ruhama — rotina pra mães, virada de low ticket pra comunidade por assinatura
+
+**Contexto:**
+- Especialista em rotina pra mães
+- Tinha vários low tickets — Karol já tinha dito em sessões anteriores que era contra esse modelo por ser mais difícil de dar lucro real
+
+**Diagnóstico feito na sessão:**
+- Muitos produtos, sem elo claro entre eles
+
+**Orientação dada pela Karol:**
+- Criar uma **comunidade com aplicativo**, todos os produtos dentro de **assinatura anual**
+- Trilhas de estudo de acordo com a idade da criança
+- Toda a comunicação centrada no método — pilares: **mãe, criança, lar**. Tudo dentro desse contexto
+
+**Status:** matéria-prima, ainda não usada em roteiro
+
+---
+
+## 17. Mariana — pedagoga/matemática/computação, comunidade escolar
+
+**Contexto:**
+- Formação em pedagogia, matemática e computação
+
+**Orientação dada pela Karol:**
+- Criar comunidade escolar com ferramentas pra: planejar o ano letivo, facilitar controle dos professores, tornar aulas mais dinâmicas
+- Fomentar a educação do Brasil — enquadramento de propósito maior pra tese dela
+
+**Status:** matéria-prima, ainda não usada em roteiro
+
+---
+
+## 18. Danielle — livro de família com IA (projeto Alzheimer da sogra)
+
+**Contexto:**
+- Está criando um livro físico em que a família responde várias perguntas e a IA cruza as respostas e cria uma história inédita da vida dessas pessoas
+- Projeto nasceu por causa da sogra dela, que está com Alzheimer — forma de preservar lembrança
+
+**Leitura da squad:** case com carga emocional forte (memória, família, doença) — encaixa bem em "conteúdo notável"/prova de que IA serve pra propósito humano, não só produtividade. Checar com a Karol nível de detalhe autorizado antes de publicar (envolve terceira pessoa real com condição de saúde).
+
+**Status:** matéria-prima, ainda não usada em roteiro
 
 ---
 
