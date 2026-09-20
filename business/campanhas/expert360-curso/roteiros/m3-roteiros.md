@@ -225,13 +225,13 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
    - G5 Conexões frias qualificadas — conhece vagamente, perfil claramente encaixa.
    - G6 Fui prospectada — sem relação prévia: entrou no seu grupo fechado de lives ou pegou uma isca e veio sozinha; você não escolhe abordar, só registra e cuida do que já chegou quente.
    - Comece por G1 e G3 (mais quentes). O G6 entra direto — quem vem até você já pulou a fila.
-▸ Ponto 3 — como preencher: as 3 colunas
-   - Score de fit — critérios de P1 (especialista consolidada? tentando o digital? renda pra investir? não quer aparecer amadora?); cada critério que bate soma.
+▸ Ponto 3 — como preencher: as colunas de qualificação
+   - Fit — 4 perguntas Sim ou Não, uma por critério de P1: especialista consolidada? tentando o digital? renda pra investir? não quer aparecer amadora? A coluna Score de Fit soma sozinha quantos "Sim" a pessoa teve (0 a 4) — você não preenche o score, só as 4 perguntas.
    - Prioridade de abordagem — combina o score com o grupo (calor da relação): fit médio no G1 pode ter prioridade maior que fit alto no G5.
    - Perfil — uma palavra depois de ler a pessoa (Conectora, Analista ou Diretiva); informa como você escreve a mensagem. A A7 ensina a chegar nisso.
 
 **ONDE E QUANDO**
-- Arquivo Meu Rastreador de Leads no Drive — já vem com os 6 grupos, as colunas de score e um guia de critérios de P1. Seu trabalho é preencher, não criar do zero.
+- Arquivo Meu Rastreador de Leads no Drive — já vem com os 6 grupos, as 4 perguntas de fit, o score automático e um guia de critérios de P1. Seu trabalho é preencher, não criar do zero.
 - Antes da A6 — o Rastreador é input da A7 e da A8.
 
 **TRANSIÇÃO**
@@ -809,17 +809,17 @@ Exemplo: **Grupo 1 — Círculo íntimo.** Amigas próximas, família, pessoas c
 
 Aplicação: comece pelo Grupo 1 e 3. São os relacionamentos mais quentes. Fit + calor da relação = prioridade. O Grupo 6 entra direto na lista — quem vem até você já pulou a fila.
 
-**Ponto 3 — Como preencher: as 3 colunas + a pergunta que vai surgir.**
+**Ponto 3 — Como preencher: as colunas de qualificação + a pergunta que vai surgir.**
 
-Ideia: o Rastreador tem três colunas que trabalham juntas mas medem coisas diferentes.
+Ideia: o Rastreador tem colunas de qualificação que trabalham juntas mas medem coisas diferentes.
 
-Exemplo: **Score de fit** — baseado nos critérios de P1: especialista com experiência consolidada? Tentando entrar no digital? Renda que permite investir? Não quer aparecer de forma amadora? Cada critério que bate soma ao score. **Prioridade de abordagem** — combina score de fit com o grupo (quão aquecida está a relação). Uma pessoa com fit médio no Grupo 1 pode ter prioridade maior do que uma com fit alto no Grupo 5. Não é só sobre quem encaixa na persona — é sobre quem você consegue abordar de forma natural agora. **Perfil** — uma palavra registrada depois de você ler o perfil da pessoa (bio, posts, linguagem): Conectora, Analista ou Diretiva. Essa coluna informa diretamente como você vai escrever a mensagem de abordagem. A Aula 7 ensina como chegar nesse perfil.
+Exemplo: **Fit** — 4 perguntas de Sim ou Não, uma por critério de P1: especialista com experiência consolidada? Tentando entrar no digital? Renda que permite investir? Não quer aparecer de forma amadora? A coluna Score de Fit soma sozinha quantos "Sim" a pessoa teve — de 0 a 4. Você não preenche o score, só responde as 4 perguntas — e ainda dá pra olhar cada característica separada, pra ver o que a maioria dos seus leads tem (ou não tem) em comum. **Prioridade de abordagem** — combina score de fit com o grupo (quão aquecida está a relação). Uma pessoa com fit médio no Grupo 1 pode ter prioridade maior do que uma com fit alto no Grupo 5. Não é só sobre quem encaixa na persona — é sobre quem você consegue abordar de forma natural agora. **Perfil** — uma palavra registrada depois de você ler o perfil da pessoa (bio, posts, linguagem): Conectora, Analista ou Diretiva. Essa coluna informa diretamente como você vai escrever a mensagem de abordagem. A Aula 7 ensina como chegar nesse perfil.
 
 Aplicação: preencha o Rastreador antes da próxima aula. Objetivo: ter uma lista visível e priorizada — não perfeita. Mas aqui já consigo imaginar uma pergunta que vai surgir: *"Karol, e se a minha lista for pequena e não conseguir preencher o Rastreador?"* Boa pergunta — e é o que a gente vai ver na próxima aula.
 
 ---
 
-Onde: arquivo **Meu Rastreador de Leads** no seu Drive — já vem com os 6 grupos, as colunas de score e um guia de critérios baseado em P1. Seu trabalho é preencher, não criar do zero. Quando: antes da A6 — o Rastreador completo é o input da A7 (leitura de lead) e da A8 (abordagem).
+Onde: arquivo **Meu Rastreador de Leads** no seu Drive — já vem com os 6 grupos, as 4 perguntas de fit, o score automático e um guia de critérios baseado em P1. Seu trabalho é preencher, não criar do zero. Quando: antes da A6 — o Rastreador completo é o input da A7 (leitura de lead) e da A8 (abordagem).
 
 ---
 
