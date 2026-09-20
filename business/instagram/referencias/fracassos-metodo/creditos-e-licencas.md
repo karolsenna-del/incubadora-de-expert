@@ -10,6 +10,11 @@ Imagens selecionadas para uso editorial no carrossel. Manter os créditos abaixo
   - Fonte: https://commons.wikimedia.org/wiki/File:Niklas_Hed_at_Electronic_Entertainment_Expo_2010.jpg
   - Licença: https://creativecommons.org/licenses/by/2.0
 
+- **Mikael Hed e Niklas Hed (Rovio) + Angry Birds** — composição editorial
+  - Foto: Jon Jordan — CC BY 2.0 — https://commons.wikimedia.org/wiki/File:Mikael_Hed_and_Niklas_Hed_of_Rovio_Mobile_at_Pocket_Gamer%27s_GDC_2010_party.jpg
+  - Logotipo Angry Birds: Rovio Entertainment — domínio público como logotipo textual; marca registrada — https://commons.wikimedia.org/wiki/File:Angry_Birds_logo_2015.png
+  - Arquivo derivado: `rovio-angry-birds.jpg`
+
 - **Sara Blakely** — Gillian Zoe Segal — CC BY-SA 4.0
   - Fonte: https://commons.wikimedia.org/wiki/File:Sara_Blakely.jpg
   - Licença: https://creativecommons.org/licenses/by-sa/4.0
