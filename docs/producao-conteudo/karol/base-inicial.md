@@ -275,6 +275,7 @@ O que domina os virais de vendas/empreendedorismo/infoprodutos NÃO é trend nem
    - Categoria: Momentos de vida + Comportamentos-
    - Por que é forte: ⭐ validação DUPLA — Aria achou o padrão de confronto+vulnerabilidade nos posts da semana (3,11%-3,41%), e tendência gringa 2026 confirma de fora (founders que postam "pior mês" engajam mais que quem posta resultado). Ângulo diferente do post `oito-lancamentos-60-segundos` já feito (aquele era autoridade condensada; esse é confronto)
    - Fonte: Aria (relatório 09/08) + tendência de hooks 2026
+   - **Status (20/09):** ✅ usado com 3º ângulo — Rota100k Semana 08, Terça 22/09 12h. Ângulo novo (nem autoridade condensada, nem confronto genérico): o mecanismo específico foi seguir a moda de lançar sem ter os pré-requisitos dos grandes players (audiência, resultado, skin in the game), sem analisar o próprio contexto.
 
 5. **"Você não precisa de milhares de seguidores — precisa de uma lista pequena e certa"**
    - Formato: Carrossel de Dor
@@ -474,6 +475,27 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - Ganchos candidatos: “Ela queria ir ao maior evento da profissão. A chefe não deixou porque a agenda estava cheia.”; “Duas manicures foram para a imersão. A terceira ficou atendendo porque não podia decidir.”; “Empreender pode ser o rolê que for, mas devolve uma coisa: a decisão sobre o seu futuro.”
 - Fonte: vídeo de 1 minuto enviado pela Karol em 09/09/2026. Transcrição revisada em `transcricoes/2026-09-09-liberdade-empreender-manicure.md`; há um trecho pouco claro entre 16s e 21s, mantido sem invenção. Anonimizar profissionais e salão.
 
+**K. "Venda Secreta pra validar produto novo com quem já tem audiência"** *(registrado em 20/09/2026)*
+- Status: **usada** — Rota100k Semana 08, Terça 22/09 17h.
+- Causo: Karol deu uma aula bônus pra todos os alunos da Voomp Anhanguera (empresa de certificação oficial do MEC). Eram profissionais que já tinham audiência e produto validado, mas iam lançar uma novidade — a certificação oficial que estavam tirando (pós/extensão). Em vez de expor a novidade direto pra audiência toda, Karol ensinou a validar oferta, narrativa e preço via Venda Secreta primeiro (exposição mínima, risco controlado).
+- Moral: testar uma novidade sem se queimar é investir o mínimo possível pra conhecê-la antes de comprometer a audiência inteira — mesmo mecanismo da Venda Secreta aplicado a lançamento de produto, não só a vendas 1:1.
+- Liga com: seção "Vender exige ambição, técnica e gestão emocional" (Vendas Secretas) acima.
+- Fonte: vivência da Karol (aula bônus).
+
+**L. "Funil fraco geralmente não é falta de técnica, é falta de volume" — aprendizado de Caio Carneiro** *(registrado em 20/09/2026)*
+- Status: **usada** — Rota100k Semana 08, Quarta 23/09 12h.
+- Causo: no mesmo curso *Estabilidade Não Existe* (Flávio Augusto), Caio Carneiro disse que muitas vezes achamos que o funil tá fraco ou que a venda não sai, quando na real o que falta é volume de gente entrando no funil — resolvido com prospecção. Desde essa aula, Karol prospecta todos os dias, no mínimo 1 pessoa, nem que seja um contato comercial.
+- Moral: antes de reconstruir o funil, checar se o problema não é simplesmente volume de entrada.
+- Liga com: item 1 do "Funil de vendas — principais ações para validar o método" (prospecção diária) já registrado acima — agora com fonte + prova de aplicação real.
+- Fonte: vivência da Karol (curso Estabilidade Não Existe, Flávio Augusto + Caio Carneiro).
+- Reserva: o aprendizado dos "3 pilares de venda" do Flávio Augusto (ambição + técnica + gestão emocional) ficou guardado — Karol ainda não aplicou isso nas Vendas Secretas, não usar até ela confirmar.
+
+**M. "Quase recriei uma novidade na hora — e travei quando lembrei da atualização que vem por aí"** *(registrado em 20/09/2026)*
+- Status: **usada** — Rota100k Semana 08, Quarta 23/09 17h.
+- Causo: Karol viu um programa que ilustrava narração e criava conteúdo dinâmico, e quis criar um igual pra ela na hora. Lembrou que vem uma atualização do squad de conteúdo dela e que criar aquilo agora viraria retrabalho depois. Pausou e usou o tempo pra algo de impacto maior no negócio.
+- Moral: aplicar uma novidade que você viu por aí exige checar o timing antes — nem toda ideia boa vale a pena executar agora.
+- Fonte: vivência da Karol, mesmo dia (20/09/2026).
+
 ### 🌟 QUENTES / EMERGENTES (2 temas)
 
 10. **"Vem aí lei que regulamenta influenciador digital como profissão — o que muda pra quem vende conhecimento"**
@@ -526,6 +548,7 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - 21/08 — @sage-teorico: **2 histórias novas guardadas, sem virar teoria/roteiro ainda** (a pedido explícito da Karol — aguardar Desafio Rota100k Semana 04, a partir de domingo). (1) TRF1 derruba regra de HOF por dentistas (19/08) — registrado em `temas-do-momento.md` (radar diário 21/08) com fatos verificados e fontes, caso pessoal confirmado (Karol lançou uma dentista que segue atuando em HOF hoje). (2) Menu de travesseiros do resort — causo padrão-vs-personalização, registrado no Banco de Causos Reais acima. Ambos disponíveis pra quando a Karol quiser encaixar nos ganchos da semana que vem.
 - 28/08 — @sage-teorico: **3 histórias novas registradas, sem virar teoria/roteiro ainda** (a pedido explícito da Karol — só registrar por enquanto). Ver seção HISTÓRIAS/REFLEXÕES REGISTRADAS acima: (A) feedback dado ao próprio mentor sobre 2 efeitos colaterais de ferramenta de IA poderosa em mentoria (alunos somem dos encontros humanizados / produzem muito mas não vendem — Karol se inclui nesse segundo efeito); (B) reunião com pessoa capaz que preferiu tentar sozinha com IA em vez de aplicar as ideias dadas — questão de timing perdido; (C) caso de aluna (regularização de imóveis) que queria pular direto pro curso técnico antes de validar o método principal — risco de canibalização de posicionamento/clientes. Disponíveis pra quando a Karol quiser encaixar.
 - 28/08 — @karol: **Confirmado (história A):** generalizar no roteiro, sem nomear Auroq/Euriler — o feedback real foi sobre o Auroq, mas o conteúdo fala de "ferramenta de IA poderosa"/"minha mentoria" de forma genérica.
+- 20/09 — @iris-pesquisador + @sage-teorico + @rico-roteirista: **Desafio Rota100k Semana 08 (21-27/09) — Segunda a Quarta fechados com a Karol, item a item.** 15h vira slot de Radar (assunto do momento, publicar em até 48h). Temas do radar cravados: Seg 21 (Anthropic/OpenAI/Musk pedem desacelerar IA, Trump discorda — fato citado sem opinar politicamente), Qua 23 (Meta One, paralelo com o case Ruhama de ecossistema). Ter 22 15h segue em aberto (aguardando vídeo/post de outro criador). Slots de 09h/12h/17h/20h de Seg-Qua usaram material do banco (F, I, G, D — reflexões já registradas) + cases de mentoria (Analia) + 3 histórias novas dessa sessão (K: Venda Secreta/Voomp Anhanguera, L: Caio Carneiro/prospecção, M: pausa antes de aplicar novidade) + refinamento de ângulo do tema 4 (8 lançamentos/moda sem pré-requisito) + checklist e lista de fundamento x modismo ditados diretamente pela Karol. Plano completo em `desafio-rota100k-semana08-plano.md`. Quinta-domingo seguem pendentes.
 - 09/08 a 10/08 — @sage-teorico + @rico-roteirista + @carrossel-chief/@producer: **`nigro-parceria-que-completa` produzido e entregue.** Tema 14 do pool (Thiago Nigro/parcerias) cravado, Carrossel de Alcance, CTA GRUPO. Teoria com pesquisa interna (Jornada360 + Agente do Portfólio Estratégico — mecanismo já documentado no método, achado sem re-interrogar a Karol) + externa (EY Barometer 97%, HBR 85% inovação, University of Kansas). Capa passou por 5 iterações de hook até fechar ("O maior erro que todo mundo comete quando começa..." — banco "+100 Ganchos" do Afonso, categoria Polêmicos/Contraintuitivos) — correção importante no meio do processo: cortada a claim absoluta "ele nunca lançou nada sem parceiro" (não verificável) por pedido da Karol, virou "sabe o caminho certo — dá pra aprender com ele". 2 bancos de ganchos novos incorporados à KB do squad nesse processo: `knowledge/swipe-files/hooks-virais/banco-ganchos-rota100k-semana01.md` (40 ganchos) e `banco-ganchos-afonso-100-emocionais.md` (96 ganchos, extraídos do Notion do Afonso via Playwright). Produção: imagem real (book "Do Mil ao Milhão") adicionada no slide 1 a pedido da Karol. 7 slides + legenda.txt entregues em `business/instagram/fila/nigro-parceria-que-completa/` — completo, pronto pro insta-scheduler agendar.
 
 ---
