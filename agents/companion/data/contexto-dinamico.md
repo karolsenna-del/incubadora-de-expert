@@ -143,6 +143,31 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 19/09 — Reconciliacao de 6 dias sem sessao formal do Companion (14-19/09):**
+Contexto-dinamico e cockpit ficaram parados no checkpoint da weekly de 13/09 enquanto bastante trabalho real aconteceu (reconstituido via git log, ~65 commits, sem sessao formal do Companion no periodo):
+
+- **Euriler — parceria de Black Friday RECUSADA (16/09):** Euriler nao aceitou a proposta. Proposta encerrada e mantida fora do CRM. Cockpit ja reflete isso (linha Comercial).
+- **Mentoria Individual — REPRECIFICADA (16/09, ver log-decisoes):** sai do modelo composto (R$10.000 base + add-ons, ~R$12.500 total) e vira **preco unico R$15.000 referencia / R$13.500 condicao atual** (pix ou 12x R$1.350,01), com ferramentas/agente de IA/paginas+trafego agora inclusos, garantia de aderencia de 30 dias nova, escassez reposicionada como agenda (nao urgencia de preco). Contrato Individual e paginas de venda ja atualizados. Preco da continuacao pos-Sprint (6 meses) segue pendente de decisao nova.
+- **Black Expert (Grupo 2026) — nova campanha de Black Friday ABERTA (18/09):** oferta relampago de 1 dia pra base existente, R$2.500 (50% off), cronograma de 15 dias (rascunho v1.1, Squad LPago Arcane). Disparo #1 aprovado e escrito (Echo). Reaproveita o grupo de WhatsApp da BF anterior. Base confirmada: 150 contatos no CRM. **Meta numerica de vendas ainda em aberto — decisao pendente da Karol.**
+- **Novo agente: Vendedor Secreto (mente sintetica, 14/09)** — fusao Tomas + Lourival + Karol via Mind Forge, roteiriza e conduz a sessao de venda 1:1 de alto ticket. Instalado em `agents/vendedor-secreto/`, ativa com `/vendedor-secreto`. **Isso destrava o item de backlog "Agente de Roteiro de Validacao"** que estava esperando o merge da KB Sessao Estrategica (a decisao de 14/09 dizia esperar o VOL-05 — o merge fechou e o agente ja nasceu).
+- **Jornada 360º — recrutamento de Parceiros migrado (19/09, madrugada):** saiu do Google Forms e virou 2 formularios nativos (triagem 10 perguntas + completo 24 perguntas) na identidade visual da marca, planilha unica com 2 abas, links publicados no Central Incubadora. REGRA-022 nova (confirmar conta Google ativa antes de criar recurso via browser automation).
+- **Sprint do Metodo — bug de e-mail corrigido (19/09):** causa raiz achada — Apps Script preso no runtime legado (Rhino) fazia o `MailApp.sendEmail` falhar silenciosamente mesmo com resposta salva certinha na planilha (achado depois que Karol reportou que o e-mail do cliente Vagner nao chegou). Corrigido ativando V8. Diagnostico do Expert tambem migrado pro formulario nativo (redirect que ja estava commitado mas nunca tinha sido implantado). **Novo cliente do Sprint do Metodo em pipeline: Vagner Teixeira** (pasta `business/campanhas/sprint-do-metodo/clientes/vagner-teixeira/` criada, ainda nao commitada).
+- **Mentoria — 5 casos novos documentados + pivot da Vanessa (19/09):** Roberto (fotografo->ferramenteiro), Aldo (dentista/live secreta), Ruhama (comunidade por assinatura), Mariana (comunidade escolar), Danielle (livro de familia com IA). Vanessa registrou a **3a virada de posicionamento** (studio manicure -> ferramenteira -> IA pra mulheres -> IA pra secretarias) em `docs/producao-conteudo/karol/historias-mentorias-atendidas.md`.
+- **Automacao de Stories — DESATIVADA desde 14/09 (achado 16/09):** workflow `instagram-stories-scheduler.yml` parado (RULE-10, erro 9004 recorrente da Meta API) — **5 sequencias acumuladas na fila sem publicar**. Fora do escopo do worker Expert-Stories (e MCP/workflow, do Ops/Gestor de Infra) — so documentado ate agora, ninguem reativou.
+- **Expert360º (M3):** sem progresso real de gravacao/edicao desde 26/08 (~24 dias) — weeklys de 02/09 e 13/09 so confirmaram status quo, nenhuma leva nova publicada (segue 3/13 na Area de Membros). Bate no padrao ja conhecido (`padroes-observados.md`): nao e blocker tecnico, e gargalo de tempo/energia da Karol pra gravar/editar sozinha.
+- **Rota100k:** Semana 07 seguiu rodando, carrosseis ja agendados ate 28/09 (Semana 08 em preparo).
+- **Estado do git no momento deste registro:** working tree com `.synapse/metrics/hook-metrics.json` (rotina) e `mentoria/alunas/milena-gehrke/M3.5 - Meu Rastreador de Leads.xlsx` (edicao da propria Milena) modificados + `business/campanhas/sprint-do-metodo/clientes/` (novo cliente Vagner) nao rastreado, ainda sem commit.
+
+**Weekly review rodada nesta mesma sessao (adiantada de 20/09 pra 19/09, a pedido da Karol):**
+DO-CONFIRM passado pelos 3 ativos + blockers + comercial. Karol confirmou manter tudo como esta, sem novas decisoes forcadas:
+- Expert360 M3: segue como esta, sem bloco de tempo dedicado nem leva menor definida agora.
+- Stories desativado: fica pra depois, sem rotear pro Gestor de Infra Arcane ainda.
+- Black Expert (Grupo): meta numerica fica pendente, disparos seguem sem travar.
+- Biblioteca de IA: segue aberta, sem pacote/preco/prazo fechado.
+Fila vazia, Inbox vazio — nada pra classificar. Proximo review: 26/09/2026.
+
+Retomar com: `/expert-companion` — proxima conversa deve (1) commitar hook-metrics.json + xlsx da Milena + pasta do Vagner via Ops, (2) reabrir os 4 itens acima se a Karol sinalizar que quer decidir (meta Black Expert, Stories, M3, Biblioteca de IA) — nao cobrar de novo por iniciativa propria antes disso, (3) weekly review 26/09.
+
 **Sessao 13/09 — Weekly review (Companion):**
 - Weekly review feita (previa 02/09, atrasada — 11 dias sem review formal). Proximo review: 20/09.
 - **Expert360 (M3):** Karol confirmou — ainda falta gravar e editar o resto. Nenhuma leva nova publicada desde 26/08 (segue 3/13 na Area de Membros). Tracker parado 11 dias so por falta de tempo, nao ha blocker tecnico. Next action mantida sem mudanca de escopo.

@@ -4,8 +4,8 @@
 > Mantido pelo Companion. Expert valida.
 > Regra: max 3 ativos. Sem excecao.
 
-**Ultima atualizacao:** 13/09/2026 (Companion — weekly review)
-**Proximo review:** 20/09/2026
+**Ultima atualizacao:** 19/09/2026 (Companion — weekly review, adiantada de 20/09)
+**Proximo review:** 26/09/2026
 
 ---
 
@@ -49,11 +49,11 @@
 
 | Operacao | Responsavel | Status | Onde acompanhar |
 |----------|-------------|--------|-----------------|
-| Instagram / Conteudo | Karol | Ativa — Desafio Rota100k Semana 07 roteirizada/produzida/programada (12/09). **SOP-022 APROVADO pela Meta (13/09)** — verificacao de Provedor de Tecnologia liberada; falta testar comentario->Direct de verdade com conta de fora | contexto-dinamico.md — prioridades do momento |
-| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 30 roteiro pronto: "Seu conhecimento é suficiente para se tornar método" (CTA AUTORIDADE, pendente link da planilha bônus). Live Black For You (Voomp+Anhanguera, 15/09) com 3 reels de divulgação prontos + aula bônus roteirizada (15/09) pra quem entrar na Black da Voomp, pendente gravação | business/campanhas/lives-semanais/ |
-| Mentoria (6 alunas) | Karol | Ativa — Mentoria Individual formalizada. Proxima leva confirmada em 02/09: fechar o contrato de 12 meses, atualizar a mensagem de boas-vindas e definir as regras de uso do WhatsApp. Fonte de verdade das alunas segue sendo o Drive de cada uma | [checklist](campanhas/incubadora-de-expert-individual/checklist-producao.md) |
+| Instagram / Conteudo | Karol | Ativa (parcial) — Desafio Rota100k rodando, carrosseis agendados ate 28/09. **Automacao de Stories DESATIVADA desde 14/09** (erro 9004 recorrente, RULE-10) — 5 sequencias acumuladas na fila sem publicar, precisa Ops/Gestor de Infra reativar. SOP-022 (comentario->Direct) segue com App Review formal em andamento na Meta | contexto-dinamico.md — prioridades do momento |
+| Lives semanais (grupo fechado) | Karol + /expert-em-lives | Ativa — Live 30 roteirizada e realizada ("Seu conhecimento é suficiente para se tornar método"). Aula bônus Black For You (Voomp+Anhanguera) roteirizada e entregue pra gravação (deadline 18/09 — confirmar se foi enviada) | business/campanhas/lives-semanais/ |
+| Mentoria (6+ alunas) | Karol | Ativa — Mentoria Individual reprecificada em 16/09 (R$13.500 tudo incluso). Novo agente **Vendedor Secreto** (`/vendedor-secreto`) apoia a sessao de venda 1:1. 5 casos novos documentados + pivot da Vanessa (19/09). Fonte de verdade das alunas segue sendo o Drive de cada uma | [checklist](campanhas/incubadora-de-expert-individual/checklist-producao.md) |
 | Funil mini treinamento (LP → WhatsApp) | Karol | Ativa mas **sem resultado** (flagado 14/08 pela Karol: "nunca deu resultado", precisa ser otimizado) | business/campanhas/lp-minitreinamento/ |
-| Comercial — CRM + contatos quentes | Karol | Ativa — foco confirmado no weekly de 02/09: seguir a reativacao pessoal pelo CRM e acompanhar Nanny. Nanny ainda esta pensando na parceria. Euriler recusou a parceria de Black Friday em 16/09; proposta encerrada e mantida fora do CRM. | [CRM](campanhas/crm-reativacao-leads/tracker.md) · [proposta Euriler](propostas/proposta-black-friday-euriler.md) |
+| Comercial — CRM + Black Expert + Sprint do Metodo | Karol | Ativa — Euriler recusou parceria de Black Friday (16/09), proposta encerrada. **Black Expert (Grupo 2026)** aberto (18/09): oferta relampago 1 dia, R$2.500, Disparo #1 aprovado, base 150 contatos — **meta numerica ainda pendente da Karol**. Sprint do Metodo com cliente novo em pipeline (Vagner Teixeira). Nanny ainda pensando na parceria. | [CRM](campanhas/crm-reativacao-leads/tracker.md) · [Black Expert](campanhas/black-friday-grupo-2026/) |
 
 ---
 
