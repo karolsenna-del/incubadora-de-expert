@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "source": "C:/Users/karol/OneDrive/Documentos/Incubadora-de-expert/videos-editados/clip-expert/live-24/tmp/corte-08-raw.mp4",
+    "duration": 40.5,
+    "zoom_levels": {
+      "normal": 1.0,
+      "emphasis": 1.18,
+      "critical": 1.43
+    },
+    "total_sections": 1
+  },
+  "sections": [
+    {
+      "start": 0.0,
+      "end": 40.5,
+      "label": "normal",
+      "text": ""
+    }
+  ]
+}
