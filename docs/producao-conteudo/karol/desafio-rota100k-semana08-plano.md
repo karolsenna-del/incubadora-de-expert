@@ -64,6 +64,11 @@ Me segue que eu ensino a construir esse repertório.
 **Assunto:** Dario Amodei (Anthropic), Sam Altman (OpenAI) e Elon Musk (xAI) pediram publicamente pra desacelerar o desenvolvimento de IA. Trump discordou: "quem vencer a IA, vence" — citando a corrida com a China. Nesta semana, saiu até um processo alegando acordo ilegal entre as empresas pra coordenar a desaceleração.
 **Leitura técnica (falado, até 40s):** "Os donos da própria IA — Anthropic, OpenAI, Musk — pediram pra pisar no freio. Trump discordou publicamente. Eu não vou opinar em quem tá certo nessa queda de braço, isso não é meu campo. O que importa pra você que usa IA no seu método é outro: ninguém vai esperar você aprender a aplicar a ferramenta depois que a poeira baixar lá em cima."
 **Fecho + convite:** "Independente de quem ganha esse debate, a pergunta que fica é: você já tá usando o que existe hoje, ou tá esperando ficar 'mais seguro' pra começar? Comenta o próximo assunto que você quer que eu explique."
+**Legenda:**
+Anthropic, OpenAI e até o dono da xAI pedindo pra desacelerar a própria criação — e ainda assim ninguém vai esperar a poeira baixar pra aprender a aplicar.
+Não entro na discussão de quem tá certo nessa disputa. Não é meu campo.
+O que importa pro seu método é outro: a ferramenta já tá disponível hoje, com ou sem acordo entre os donos dela.
+Comenta o próximo assunto do setor que você quer que eu leia tecnicamente.
 
 ### 17h · Reels YAP
 **Tema:** como filtrar informação boa de ruim.
@@ -87,6 +92,12 @@ Me segue que eu ensino a filtrar isso sem virar refém de nenhuma fonte.
 6. **Fonte duvidosa — sinal 2:** ninguém consegue explicar o porquê, só o "funciona". Se a pessoa não sabe te explicar o mecanismo, ela também não domina.
 7. **Checklist rápido:** de onde veio? já foi testado? alguém consegue explicar o porquê? faz sentido no seu contexto?
 8. **CTA + assinatura:** "Antes de aplicar a próxima dica que você viu, passa pelo checklist. Comenta se quer que eu analise alguma fonte específica que você tá em dúvida."
+
+**Legenda:**
+Toda semana aparece uma dica nova prometendo resultado rápido.
+A diferença entre fundamento e modismo raramente tá no quanto viralizou — tá em de onde veio.
+Separei os critérios que eu uso pra decidir em quem confiar antes de aplicar qualquer coisa no meu método.
+Me segue que essa semana eu separo fundamento de modismo, todo dia.
 
 ---
 
@@ -153,6 +164,12 @@ Me segue que eu ensino a Venda Secreta.
 7. **Por que isso importa:** foi não fazer essas 4 perguntas que me custou 8 lançamentos ruins seguidos.
 8. **CTA + assinatura:** "Salva esse checklist. Comenta qual novidade você tá em dúvida se deve aderir agora."
 
+**Legenda:**
+Toda novidade promete resolver rápido o que o fundamento resolve devagar.
+Eu não decido se adiro só porque virou febre — respondo 4 perguntas antes.
+Foi não fazer isso que me custou 8 lançamentos ruins seguidos, no passado.
+Me segue que essa semana eu separo contexto de tendência cega, todo dia.
+
 ---
 
 ## DIA 3 — Quarta, 23/09
@@ -195,6 +212,11 @@ Me segue que eu mostro minha rotina de prospecção.
 **Assunto:** a Meta lançou oficialmente o **Meta One** (~15-16/09/2026) — assinatura única que junta Facebook, Instagram, WhatsApp e Meta AI num só pacote, com IA, recursos de criador e de empresa.
 **Leitura técnica (falado, até 40s):** "A Meta parou de vender WhatsApp Plus, Instagram Plus e Facebook Plus separados. Juntou tudo numa assinatura única, pra dar experiência melhor pro usuário. É a mesma correção que eu apontei pra uma mentorada essa semana — ela tinha vários produtos soltos, sem elo entre eles. A solução foi a mesma: juntar tudo numa assinatura única, com trilhas organizadas. Só que a Meta faz isso em escala bilionária."
 **Fecho + convite:** "Se até a Meta parou de vender produto solto, talvez seja hora de olhar pra sua própria esteira. Comenta o próximo assunto que você quer que eu explique."
+**Legenda:**
+A Meta parou de vender WhatsApp, Instagram e Facebook como produtos separados — juntou tudo numa assinatura única.
+É a mesma correção que eu apontei essa semana pra uma mentorada: produtos soltos, sem elo entre eles.
+A diferença é escala. Ela ajusta a própria esteira, a Meta ajusta um ecossistema bilionário. A lógica é igual.
+Comenta o próximo assunto do setor que você quer que eu leia tecnicamente.
 
 ### 17h · Reels YAP
 **Tema:** como aplicar hoje algo que você viu por aí.
@@ -211,14 +233,97 @@ Me segue que eu mostro como eu decido isso.
 ### 20h · Carrossel neutro
 **Tema:** "Fundamento x modismo"
 1. **Capa:** "Fundamento x modismo: o que guardar e o que ignorar."
-2. **Reforço do hook:** Um lado do slide dura. O outro some em 6 meses. Se você só estudar a coluna da esquerda, já tá bem.
+2. **Reforço do hook:** Separei em dois blocos. Um dura. O outro some em 6 meses. Se você só guardar o primeiro, já tá bem.
 3. **FUNDAMENTO (dura):** Persona clara antes de qualquer ferramenta.
 4. **FUNDAMENTO (dura):** Processo autoral validado — não conteúdo solto.
 5. **FUNDAMENTO (dura):** A Ordem Certa — método, depois venda, depois prova, depois escala.
 6. **FUNDAMENTO (dura):** Autoridade construída com prova real, não volume de post.
-7. **MODISMO (some):** comprar seguidor. Gancho viral do momento. Curso gigante de 40 módulos (quanto mais horas-aula, melhor). "Me segue que eu sigo de volta."
-8. **CTA + assinatura:** "Salva e consulta sempre que aparecer uma novidade. Comenta se quer que eu classifique alguma moda específica que você tá vendo agora."
+7. **MODISMO (some):** Comprar seguidor.
+8. **MODISMO (some):** Gancho viral do momento.
+9. **MODISMO (some):** Curso gigante de 40 módulos (quanto mais horas-aula, melhor).
+10. **MODISMO (some):** "Me segue que eu sigo de volta."
+11. **CTA + assinatura:** "Salva e consulta sempre que aparecer uma novidade. Comenta se quer que eu classifique alguma moda específica que você tá vendo agora."
+
+**Legenda:**
+Separei em dois blocos: um dura, o outro some em 6 meses.
+Se você só guardar o que sustenta, já tá na frente de quem corre atrás de toda ferramenta nova.
+A Meta lançando o Meta One essa semana só confirmou o que eu já ensino: ecossistema integrado vence produto solto.
+Me segue que eu separo fundamento de modismo até domingo.
 
 ---
 
-**Status:** Segunda a Quarta fechados item a item com a Karol (21 a 23/09). Quinta a domingo (24-27/09) seguem pendentes — inclui o Radar de Sexta (25/09, aguardando referência de criador) e a produção visual/gravação de Mack pros 3 dias já fechados.
+**Status:** Segunda a Quarta fechados item a item com a Karol (21 a 23/09). Quinta a domingo (24-27/09) seguem pendentes nos slots de 07h/09h/12h/15h/17h — inclui o Radar de Terça e Sexta (aguardando referência de criador) e a produção visual/gravação de Mack pros 3 dias já fechados.
+
+---
+
+## 20h · Carrosséis — Quinta a Domingo (adiantados, resto do dia ainda pendente)
+
+> Esses 4 são formato lista/checklist (igual Terça e Quarta 20h) — não causo/história. Puxam do Banco de 40 Ganchos do desafio e dos temas de Radar já cravados na semana.
+
+### Quinta 24/09 · 20h · Carrossel neutro
+**Tema:** "Perguntas que furam qualquer hype"
+1. **Capa:** "5 perguntas que furam qualquer hype."
+2. **Reforço do hook:** Salve essas 5 perguntas para não ser enganado por fake news.
+3. **Pergunta 1:** Quem lucra se eu acreditar nisso?
+4. **Pergunta 2:** Isso já foi testado por quanto tempo?
+5. **Pergunta 3:** Quem vende a solução é a melhor fonte sobre o problema?
+6. **Pergunta 4:** Se é tão bom, por que é tão novo?
+7. **Pergunta 5:** Se a resposta for evasiva, o que isso já me diz?
+8. **CTA + assinatura:** "Salva esse post. Comenta a próxima promessa que você quer que eu analise com essas 5 perguntas."
+
+**Legenda:**
+Fake news e hype têm o mesmo ponto fraco: não sobrevivem à pergunta certa.
+Separei as 5 perguntas que eu uso antes de acreditar em qualquer promessa nova do setor.
+Não é ceticismo por ceticismo — é filtro antes de gastar tempo ou dinheiro em cima de fumaça.
+Me segue que eu ensino a furar hype antes de cair nele. Comenta a próxima promessa que você quer que eu analise.
+
+### Sexta 25/09 · 20h · Carrossel neutro
+**Tema:** "O que eu ando estudando"
+1. **Capa:** "O que eu ando estudando agora."
+2. **Reforço do hook:** Nem tudo aqui é de graça — mas nada é patrocinado.
+3. **Referência 1:** curso *Estabilidade Não Existe*, do Flávio Augusto. O aprendizado que já apliquei: Caio Carneiro disse que funil fraco geralmente é falta de volume, não de técnica — resolvido com prospecção. Desde essa aula, prospecto todos os dias.
+4. **Referência 2:** aperfeiçoando marketing com IA — como criar ferramentas interativas e dinâmicas que fazem o aluno se comprometer com o método e se apaixonar pelo processo.
+5. **Referência 3:** funis discretos — vender sem precisar de lançamento ou exposição pública.
+6. **Por que isso importa:** estudar não é acumular curso — é aplicar rápido o que rende resultado prático (foi o que aconteceu com a prospecção).
+7. **CTA + assinatura:** "Se você quer evoluir na sua área, começa por essa lista. Salva e volta quando tiver tempo."
+
+**Legenda:**
+Estudar não é acumular curso guardado — é aplicar rápido o que rende resultado prático.
+Separei as 3 referências que tão na minha mesa essa semana, e o que eu já apliquei de cada uma.
+Nem tudo aqui é de graça. Nada aqui é patrocinado.
+Me segue que eu mostro o que estou estudando e aplicando, sem enrolação.
+
+### Sábado 26/09 · 20h · Carrossel neutro
+**Tema:** "O que rolou no setor essa semana" (recap dos radares de Segunda a Sexta)
+⚠️ Terça e Sexta 15h ainda estão em aberto (aguardando referência de criador) — esse recap fica completo só depois de fechar os dois.
+1. **Capa:** "O resumo da semana no seu setor."
+2. **Reforço do hook:** Um slide por assunto, com a minha leitura. Se você não acompanhou, tá tudo aqui.
+3. **Segunda:** Anthropic, OpenAI e Musk pediram pra desacelerar a IA. Trump discordou publicamente — e ainda saiu processo sobre isso na mesma semana.
+4. **Terça:** ⚠️ em aberto.
+5. **Quarta:** Meta lançou o Meta One — assinatura única juntando Facebook, Instagram, WhatsApp e Meta AI. Mesma lógica de ecossistema que eu ensino pros meus mentorados.
+6. **Quinta:** Método Brazilian Face virou referência internacional — prova de que método com nome vira ativo que escala.
+7. **Sexta:** ⚠️ em aberto.
+8. **CTA + assinatura:** "Salva: resumo semanal sem enrolação. Comenta qual desses assuntos você quer que eu aprofunde."
+
+**Legenda:**
+Um slide por assunto, com a minha leitura técnica de cada um.
+Se você não acompanhou os radares dessa semana, esse post resume tudo num lugar só.
+Não é opinião solta — é o que aconteceu no setor, lido pela ótica de quem aplica método.
+Me segue que toda semana eu faço esse resumo. Comenta qual desses assuntos você quer que eu aprofunde.
+
+### Domingo 27/09 · 20h · Carrossel neutro
+**Tema:** "O radar da semana" (prospectivo — o que observar, não repete o que já foi dito no Sábado)
+⚠️ Mesma dependência do Sábado — fecha de verdade só com Terça e Sexta preenchidos.
+1. **Capa:** "3 pontos pra acompanhar nos próximos dias."
+2. **Reforço do hook:** Isso não é resumo do que já rolou — isso foi sábado. É o que eu vou ficar de olho a partir de agora.
+3. **Ponto 1 (IA):** se as empresas de IA realmente desacelerarem, quem já domina a ferramenta hoje sai na frente enquanto o resto espera "ficar mais seguro" pra começar. Vou acompanhar quem trava por medo da mudança de regra.
+4. **Ponto 2 (Meta One):** a Meta fazendo isso já sinaliza a importância do ecossistema e da jornada do aluno integrada — mesmo que nenhuma outra plataforma siga esse caminho, é isso que eu já ensino aqui.
+5. **Ponto 3 (Brazilian Face):** vou acompanhar se aparecem mais casos de método com nome próprio virando ativo internacional — é sinal de que posicionamento autoral compensa mais que técnica solta, tendência que deve crescer.
+6. **Guarda esse post:** confere de novo daqui a um mês pra ver qual desses 3 pontos se confirmou.
+7. **CTA + assinatura:** "Salva e marca esse post. Comenta qual desses 3 pontos você acha que vai se confirmar primeiro."
+
+**Legenda:**
+Isso aqui não é resumo do que já rolou — isso foi sábado.
+São os 3 pontos que eu vou ficar de olho a partir de agora, e por quê.
+Guarda esse post e confere de novo daqui a um mês pra ver o que se confirmou.
+Me segue que eu acompanho o setor de perto, toda semana. Comenta qual desses 3 pontos você acha que vai se confirmar primeiro.
