@@ -10,6 +10,27 @@
 **Impacto:** [o que muda]
 -->
 
+## 21/09/2026 — Causa raiz da letra pequena no celular: faltava meta viewport (RESOLVIDO)
+
+**Contexto:** Karol reportou letra pequena no celular no Diagnostico do Expert. Um primeiro
+ajuste de font-size no CSS mobile nao resolveu — ela confirmou que continuava pequeno mesmo
+depois do deploy.
+**Decisao/Achado:** A causa real era estrutural, nao de CSS: os 4 arquivos (Diagnostico do
+Expert, DNA do Expert, Kit de Ferramentas, Sprint do Metodo) nao tinham `<!DOCTYPE html>` nem
+`<meta name="viewport" content="width=device-width, initial-scale=1.0">`. Sem isso, o navegador
+mobile renderiza a pagina inteira como se fosse desktop (~980px de largura virtual) e encolhe
+tudo pra caber na tela — qualquer aumento de font-size fica sem efeito visivel porque a pagina
+toda esta reduzida. Corrigido nos 4 arquivos (doctype + viewport + fechamento de html/body) e
+republicado nos 4 projetos Vercel. **Confirmado pela Karol que ficou certo.**
+**Racional:** Bug estrutural raro de aparecer em testes de desktop (so afeta renderizacao
+mobile), por isso passou despercebido ate agora.
+**Impacto:** Fica registrado como CHECKLIST pra qualquer pagina nova construida nesse mesmo
+molde (self-paced diagnostico interativo) — sempre conferir doctype + viewport antes de
+declarar pronto pra mobile. Achado colateral (nao corrigido ainda, so registrado no backlog):
+mais 6 arquivos no repo tem o mesmo padrao sem viewport — a maioria sao copias de referencia em
+pastas `materiais/` (nao servidas ao vivo), exceto `business/campanhas/metodo-em-1-hora/index.html`
+que nao tem projeto Vercel proprio (status de publicacao incerto).
+
 ## 21/09/2026 — Radar do Expert criado; sincronizacao do pre-diagnostico e manual, sob pedido
 
 **Contexto:** Karol usava uma planilha do Google Sheets pra pontuar os 5Ps na Sessao Estrategica
