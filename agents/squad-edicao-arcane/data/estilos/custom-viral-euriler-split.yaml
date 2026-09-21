@@ -1,0 +1,24 @@
+# Estilo CUSTOM-VIRAL-EURILER-SPLIT — variacao do viral-euriler pro formato
+# split-screen do Clip Expert (webcam em cima 0-960px, slide embaixo 960-1920px
+# num composite 1080x1920). Criado 21/09/2026 porque o y_pos:0.60 do estilo
+# original cairia em cima do slide — aqui a legenda fica no vao entre os dois
+# blocos (960-1139px), sem cobrir nem o rosto nem o conteudo do slide.
+# NAO edita o viral-euriler.yaml original (regra do Stylist: preset fixo nunca
+# muda, custom vai em arquivo separado).
+
+nome: "custom-viral-euriler-split"
+descricao: "Variacao do viral-euriler pro formato split-screen (webcam+slide) do Clip Expert — legenda menor e mais alta, no vao entre os dois blocos."
+font: "Bebas Neue"
+fontsize: 64
+ref_width: 1080
+fontcolor: "white"
+borderw: 4
+bordercolor: "black"
+y_pos: 0.50
+mode: "split_60_40_color"
+linha_2_color: "yellow"
+shadow: false
+max_chars: 26
+max_chars_per_line: 28
+max_words: 5
+max_dur: 2.4

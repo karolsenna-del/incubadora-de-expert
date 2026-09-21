@@ -140,6 +140,7 @@ O script não pontua sozinho — ele só estrutura o cálculo da média ponderad
 - **Trecho sem nenhuma CTA implícita ou gancho de continuidade** — não invalida sozinho (nem todo corte precisa de CTA explícita), mas um trecho que só informa sem nenhuma tensão de "e agora?" tende a ficar mais fraco no Eixo 3.
 - **Depender de contexto externo pra fazer sentido** ("como eu disse antes...", "voltando naquele ponto...") — se o trecho exige ter visto outra parte da live, ele não sustenta como corte isolado.
 - **Complexidade técnica sem tradução** — jargão que só faz sentido pra quem já está na mentoria (não pro público frio do Reels) derruba a nota mesmo que o conteúdo seja tecnicamente correto.
+- **Abertura/boas-vindas da live, mesmo com gancho retórico forte** — "sejam bem-vindos", "hoje vamos falar sobre X", pergunta retórica de aquecimento. Reprovado manualmente pela Karol na calibração inicial (Live 24, corte "abertura-oferta-perfeita", nota automática 8.05 — ela rejeitou: "pegou eu dando boas-vindas no início da live, sem conteúdo de valor"). **Lição:** o Eixo 1 (Abertura) pontua bem um gancho isolado, mas Eixo 2/3 precisam refletir se o trecho **entrega** alguma coisa (história, dado, virada) dentro da própria janela — introduzir o tema não é entregar valor. Um trecho que só anuncia o que vai ser discutido, sem chegar no conteúdo em si, deve pontuar baixo em Sustentação e Fechamento mesmo com abertura forte.
 
 ---
 
