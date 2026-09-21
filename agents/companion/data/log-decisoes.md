@@ -10,6 +10,27 @@
 **Impacto:** [o que muda]
 -->
 
+## 21/09/2026 — Radar do Expert criado; sincronizacao do pre-diagnostico e manual, sob pedido
+
+**Contexto:** Karol usava uma planilha do Google Sheets pra pontuar os 5Ps na Sessao Estrategica
+(radar de Persona/Promessa/Processo/Proposta/Posicionamento). Pediu pra virar ferramenta
+interativa e perguntou se as respostas do pre-diagnostico (que o lead preenche antes da sessao)
+poderiam alimentar a pontuacao automaticamente.
+**Decisao:** Criado o artifact **Radar do Expert**
+(`https://claude.ai/artifact/AgwbWdzWbfo5QWgxuy9wVb`) com banco de dados proprio (historico de
+leads). A sincronizacao do pre-diagnostico pra dentro dele **e manual, sob pedido** — nao existe
+automacao ponta a ponta porque o formulario do pre-diagnostico roda fora do Claude (site +
+Apps Script) e o banco do artifact so aceita escrita de dentro da propria ferramenta, nunca de
+um servidor externo. Karol pede ("importa o pre-diagnostico da Fulana") e o Claude le a planilha
+e grava no artifact via ArtifactData.
+**Racional:** Limitacao de plataforma (nao ha endpoint publico pro banco do artifact) — nao e
+falta de esforco, e arquitetura. O caminho manual ainda assim elimina o trabalho de re-digitar
+tudo na hora da sessao.
+**Impacto:** Processo documentado em
+`business/processos/sincronizar-pre-diagnostico-radar-expert.md`. Testado com a lead Marcelli
+(marcellistrobel@gmail.com) — nesse teste foi achado que a resposta dela caiu numa planilha
+**antiga**, diferente da linkada como oficial na Central Incubadora (ver item no backlog).
+
 ## 17/09/2026 — Sequencia oficial do Vendas Secretas e VENDER -> VALIDAR -> CRESCER (nao validar->vender->crescer)
 
 **Contexto:** Revisando o roteiro da aula bonus da Voomp (Black For You), a Karol corrigiu a ordem
