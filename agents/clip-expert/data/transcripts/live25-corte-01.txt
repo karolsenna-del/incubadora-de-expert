@@ -1,0 +1,31 @@
+[00:00:00.000 --> 00:00:01.350]   Eu vim para o digital para
+[00:00:01.350 --> 00:00:03.440]   vender gestão de empresa. Gestão
+[00:00:03.440 --> 00:00:04.810]   de empresa não serve para
+[00:00:04.810 --> 00:00:06.000]   qualquer empresa?
+[00:00:06.000 --> 00:00:07.370]   A padaria precisa de gestão de
+[00:00:07.370 --> 00:00:08.850]   empresa, a Coca-Cola precisa de
+[00:00:08.850 --> 00:00:10.000]   gestão de empresa.
+[00:00:10.000 --> 00:00:11.500]   Você acha que eu consigo comunicar
+[00:00:11.500 --> 00:00:12.730]   no digital com a padaria aqui
+[00:00:12.730 --> 00:00:15.000]   da esquina com a Coca-Cola? Não.
+[00:00:15.000 --> 00:00:16.040]   Por quê? Porque seu método é
+[00:00:16.040 --> 00:00:17.240]   diferente, sua história é
+[00:00:17.240 --> 00:00:18.210]   diferente, as ferramentas, um
+[00:00:18.210 --> 00:00:20.210]   precisa de um Excel, o outro
+[00:00:20.210 --> 00:00:21.000]   precisa de um caderninho,
+[00:00:21.000 --> 00:00:23.260]   o outro precisa de um CRM sofisticado
+[00:00:23.260 --> 00:00:25.160]   para usar na Coca-Cola no mundo
+[00:00:25.160 --> 00:00:26.000]   inteiro.
+[00:00:26.000 --> 00:00:28.240]   Então seu método tem que ser
+[00:00:28.240 --> 00:00:30.230]   pensado no tipo de pessoa para
+[00:00:30.230 --> 00:00:32.010]   você entender qual é a ferramenta
+[00:00:32.010 --> 00:00:33.340]   que ela precisa, o que ela usa
+[00:00:33.340 --> 00:00:34.000]   no dia a dia,
+[00:00:34.000 --> 00:00:35.820]   o que vai fazer a vida dela,
+[00:00:35.820 --> 00:00:37.360]   faz sentido colocar um agente
+[00:00:37.360 --> 00:00:40.000]   de A se a minha persona é semi-alfabeta?
+[00:00:40.000 --> 00:00:41.840]   Se ela mora no rural que não
+[00:00:41.840 --> 00:00:44.330]   tem internet? Não adianta de
+[00:00:44.330 --> 00:00:46.210]   nada ter o Cloud Code se a
+[00:00:46.210 --> 00:00:47.850]   minha persona mora na área
+[00:00:47.850 --> 00:00:50.000]   rural sem internet, entendeu?

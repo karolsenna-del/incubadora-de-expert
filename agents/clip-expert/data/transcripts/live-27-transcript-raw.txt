@@ -1,0 +1,1189 @@
+
+[00:00:00.000 --> 00:00:05.000]   Começamos. Sejam muito bem-vindas
+[00:00:05.000 --> 00:00:07.360]   à nossa Live Expert360.
+[00:00:07.360 --> 00:00:09.960]   Hoje é a live de número 27. O
+[00:00:09.960 --> 00:00:11.790]   projeto começou em fevereiro e
+[00:00:11.790 --> 00:00:12.600]   está com tudo.
+[00:00:12.600 --> 00:00:14.140]   E hoje eu vou trazer para vocês
+[00:00:14.140 --> 00:00:16.700]   uma estrutura de como desenhar
+[00:00:16.700 --> 00:00:17.920]   um infoproduto,
+[00:00:17.920 --> 00:00:20.530]   que eu faço isso para cada infoproduto,
+[00:00:20.530 --> 00:00:22.720]   e quais são os erros que eu cometi
+[00:00:22.720 --> 00:00:24.620]   para vocês não cometerem desde
+[00:00:24.620 --> 00:00:26.560]   o começo dessa minha jornada.
+[00:00:26.560 --> 00:00:28.530]   E vocês vão perceber que para
+[00:00:28.530 --> 00:00:30.490]   criar um infoproduto vocês
+[00:00:30.490 --> 00:00:31.160]   precisam responder
+[00:00:31.160 --> 00:00:33.920]   cinco perguntas em todo o infoproduto,
+[00:00:33.920 --> 00:00:36.800]   seja um e-book, uma mentoria ou
+[00:00:36.800 --> 00:00:36.840]   um
+[00:00:36.840 --> 00:00:39.440]   produto curso gravado. Enfim,
+[00:00:39.440 --> 00:00:41.630]   sempre você precisa responder
+[00:00:41.630 --> 00:00:43.120]   para ter uma base e uma
+[00:00:43.120 --> 00:00:44.780]   clareza do que vai ser vendido
+[00:00:44.780 --> 00:00:47.050]   e para quem. Ok? E aí vem
+[00:00:47.050 --> 00:00:48.600]   aquela grande pergunta, né?
+[00:00:48.600 --> 00:00:50.580]   Quantas vezes você já teve uma
+[00:00:50.580 --> 00:00:52.910]   boa ideia de infoproduto e travou
+[00:00:52.910 --> 00:00:53.960]   na hora de tirar
+[00:00:53.960 --> 00:00:55.880]   do papel? Porque a ideia parecia
+[00:00:55.880 --> 00:00:57.890]   lógica, fazia sentido, mas você
+[00:00:57.890 --> 00:00:58.840]   fala "tá, como que eu
+[00:00:58.840 --> 00:01:00.640]   entrego tudo isso?" Não porque
+[00:01:00.640 --> 00:01:02.120]   a ideia era ruim, mas porque
+[00:01:02.120 --> 00:01:03.600]   você não sabia qual é a
+[00:01:03.600 --> 00:01:05.130]   primeira parte que eu desenho
+[00:01:05.130 --> 00:01:06.560]   de um infoproduto. É o que a
+[00:01:06.560 --> 00:01:06.920]   gente vai
+[00:01:06.920 --> 00:01:09.520]   conversar aqui hoje. Antes eu vim
+[00:01:09.520 --> 00:01:11.550]   trazer o meu erro maior que
+[00:01:11.550 --> 00:01:12.200]   quando eu cheguei no
+[00:01:12.200 --> 00:01:14.190]   digital. Meu grande erro era o
+[00:01:14.190 --> 00:01:16.290]   que? Eu sabia muita coisa.
+[00:01:16.290 --> 00:01:17.680]   Então eu tinha várias
+[00:01:17.680 --> 00:01:19.450]   informações, administradora,
+[00:01:19.450 --> 00:01:20.820]   contradora. Quando eu fui
+[00:01:20.820 --> 00:01:22.160]   auditora, eu passei várias
+[00:01:22.160 --> 00:01:23.930]   empresas. Então eu ia para frigorífico,
+[00:01:23.930 --> 00:01:26.090]   eu ia para Unimed, eu ia para
+[00:01:26.090 --> 00:01:26.520]   Santa Casa,
+[00:01:26.520 --> 00:01:28.240]   depois eu fui para a área de
+[00:01:28.240 --> 00:01:30.450]   couro. Ou seja, a gente começa
+[00:01:30.450 --> 00:01:31.760]   a criar um know-how
+[00:01:31.760 --> 00:01:33.790]   muito grande. E aí eu falei "tá,
+[00:01:33.790 --> 00:01:35.120]   agora eu quero vir para o
+[00:01:35.120 --> 00:01:36.720]   digital" e eu sei um monte de
+[00:01:36.720 --> 00:01:38.220]   coisa. O que você começa a
+[00:01:38.220 --> 00:01:40.130]   fazer? No geral, um grande erro.
+[00:01:40.130 --> 00:01:41.960]   Criar o produto e
+[00:01:41.960 --> 00:01:43.610]   depois encaixar os alunos
+[00:01:43.610 --> 00:01:45.890]   dentro. E óbvio que não fazia
+[00:01:45.890 --> 00:01:47.560]   sentido isso. Hoje eu
+[00:01:47.560 --> 00:01:49.050]   entendo. Por quê? Como eu falava
+[00:01:49.050 --> 00:01:50.550]   "pô, as pessoas precisam
+[00:01:50.550 --> 00:01:51.840]   aprender isso aqui, vou
+[00:01:51.840 --> 00:01:53.400]   criar esse produto", porque é óbvio
+[00:01:53.400 --> 00:01:54.960]   que as pessoas precisam atender.
+[00:01:54.960 --> 00:01:56.080]   E aí eu criava
+[00:01:56.080 --> 00:01:57.600]   e quem era essa pessoa? Que
+[00:01:57.600 --> 00:01:59.960]   pessoa é essa que precisa atender?
+[00:01:59.960 --> 00:02:00.200]   Então quando a
+[00:02:00.200 --> 00:02:01.360]   gente não tem clareza da
+[00:02:01.360 --> 00:02:02.800]   persona, a gente sai criando
+[00:02:02.800 --> 00:02:04.360]   produtos. E como eu tinha
+[00:02:04.360 --> 00:02:06.110]   conhecimento em várias áreas,
+[00:02:06.110 --> 00:02:07.760]   eu criava produtos aleatórios
+[00:02:07.760 --> 00:02:08.320]   achando que
+[00:02:08.320 --> 00:02:09.900]   venderia porque era óbvio que
+[00:02:09.900 --> 00:02:11.770]   aquele produto era eficiente. E
+[00:02:11.770 --> 00:02:12.720]   ele até podia ser,
+[00:02:12.720 --> 00:02:14.440]   mas ele era mal desenhado, mal
+[00:02:14.440 --> 00:02:16.220]   estruturado e não tinha clareza
+[00:02:16.220 --> 00:02:16.480]   de
+[00:02:16.480 --> 00:02:17.980]   comunicação. Então hoje eu
+[00:02:17.980 --> 00:02:19.760]   tenho uma certeza muito grande
+[00:02:19.760 --> 00:02:21.200]   que para a gente
+[00:02:21.200 --> 00:02:23.780]   ser visto e compreendido,
+[00:02:23.780 --> 00:02:25.700]   porque é clareza que vende, a
+[00:02:25.700 --> 00:02:27.160]   gente precisa ter a
+[00:02:27.160 --> 00:02:28.490]   certeza de com quem a gente
+[00:02:28.490 --> 00:02:29.920]   fala, o que a gente resolve e
+[00:02:29.920 --> 00:02:31.480]   não tentar atender o
+[00:02:31.480 --> 00:02:33.020]   mundo todo. Então o que eu faço
+[00:02:33.020 --> 00:02:34.680]   hoje? Eu pego esse monte de
+[00:02:34.680 --> 00:02:35.000]   conhecimento
+[00:02:35.000 --> 00:02:37.170]   misturado que eu tive ao longo
+[00:02:37.170 --> 00:02:39.250]   da vida e jogo tudo do método
+[00:02:39.250 --> 00:02:40.480]   só para um tipo de
+[00:02:40.480 --> 00:02:42.580]   pessoa. E obviamente, não é
+[00:02:42.580 --> 00:02:43.820]   todo o seu conhecimento que
+[00:02:43.820 --> 00:02:45.640]   entra no seu método. É
+[00:02:45.640 --> 00:02:47.300]   o que faz sentido para essa
+[00:02:47.300 --> 00:02:49.730]   jornada. Mas, quanto mais impulso
+[00:02:49.730 --> 00:02:50.920]   a gente tem dentro da
+[00:02:50.920 --> 00:02:52.280]   nossa cabeça, mais a gente
+[00:02:52.280 --> 00:02:54.270]   consegue ajudar numa mentoria.
+[00:02:54.270 --> 00:02:55.560]   Então a Elaine pode
+[00:02:55.560 --> 00:02:58.080]   vir com o trabalho dela, o Leandro
+[00:02:58.080 --> 00:02:59.600]   dela. E como a gente tem uma
+[00:02:59.600 --> 00:03:00.520]   carga de
+[00:03:00.520 --> 00:03:01.880]   conhecimento de várias áreas,
+[00:03:01.880 --> 00:03:03.120]   fala "já conheci isso, já
+[00:03:03.120 --> 00:03:04.000]   trabalhei com isso, já
+[00:03:04.000 --> 00:03:05.360]   conheci esse nicho", então a
+[00:03:05.360 --> 00:03:06.680]   gente consegue ser um mentor
+[00:03:06.680 --> 00:03:08.560]   melhor por ter uma boa bagagem.
+[00:03:08.560 --> 00:03:11.160]   Mas não é todo o seu conhecimento
+[00:03:11.160 --> 00:03:13.190]   que vai dentro do seu produto e
+[00:03:13.190 --> 00:03:13.800]   nem do seu
+[00:03:13.800 --> 00:03:16.590]   método. Então, o grande erro é
+[00:03:16.590 --> 00:03:19.270]   o que? Vender o que elas precisam.
+[00:03:19.270 --> 00:03:19.880]   A gente precisa
+[00:03:19.880 --> 00:03:21.750]   vender o que elas querem. Então
+[00:03:21.750 --> 00:03:23.810]   não adiantava falar "você
+[00:03:23.810 --> 00:03:24.640]   precisa aprender
+[00:03:24.640 --> 00:03:27.230]   iá, você precisa aprender iá".
+[00:03:27.230 --> 00:03:29.240]   Elas não querem iá. Aconteceu
+[00:03:29.240 --> 00:03:30.520]   isso na minha sessão
+[00:03:30.520 --> 00:03:32.190]   da semana passada, que uma
+[00:03:32.190 --> 00:03:33.840]   especialista em moda, ela está
+[00:03:33.840 --> 00:03:35.660]   apaixonada por iá. E ela
+[00:03:35.660 --> 00:03:37.010]   falou "agora eu queria tudo com
+[00:03:37.010 --> 00:03:38.620]   iá". O Instagram dela chama "moda
+[00:03:38.620 --> 00:03:39.720]   com iá" e ela
+[00:03:39.720 --> 00:03:40.940]   vende para representantes, para
+[00:03:40.940 --> 00:03:42.320]   indústria, pessoas que faturam
+[00:03:42.320 --> 00:03:43.560]   milhões. Você acha que eles
+[00:03:43.560 --> 00:03:45.790]   querem aprender iá? Não, eles
+[00:03:45.790 --> 00:03:47.590]   querem um ebook, um ebook da
+[00:03:47.590 --> 00:03:49.000]   moda com iá. Não
+[00:03:49.000 --> 00:03:50.330]   querem gastar com vitrine,
+[00:03:50.330 --> 00:03:51.930]   porque a iá faz. Elas querem o
+[00:03:51.930 --> 00:03:53.440]   resultado da iá. Então a
+[00:03:53.440 --> 00:03:55.270]   nossa comunicação, a comunicação
+[00:03:55.270 --> 00:03:57.480]   dela no caso, não é iá. Olha o
+[00:03:57.480 --> 00:03:58.160]   resultado como eu
+[00:03:58.160 --> 00:04:00.050]   faço em 15 minutos. Olha como
+[00:04:00.050 --> 00:04:01.940]   eu economizo 30 mil reais, que
+[00:04:01.940 --> 00:04:03.080]   é o que ela economizou de
+[00:04:03.080 --> 00:04:04.880]   fazer um todo um ebook de nova
+[00:04:04.880 --> 00:04:07.010]   estação para uma loja, que ela
+[00:04:07.010 --> 00:04:07.960]   gastaria 30 mil e ela
+[00:04:07.960 --> 00:04:10.010]   gastou 10 minutos com uma iá. É
+[00:04:10.010 --> 00:04:11.550]   isso que eles querem. Então a
+[00:04:11.550 --> 00:04:12.640]   gente tem que enxergar
+[00:04:12.640 --> 00:04:15.190]   a nossa persona, vender o que
+[00:04:15.190 --> 00:04:16.840]   quer e aí sim eu entrego o que
+[00:04:16.840 --> 00:04:18.280]   precisa. Ou seja, só
+[00:04:18.280 --> 00:04:19.670]   quando entra que eu falo "pois
+[00:04:19.670 --> 00:04:21.450]   é". É isso que você quer? Você
+[00:04:21.450 --> 00:04:23.160]   quer que a gente usa 30 mil
+[00:04:23.160 --> 00:04:23.360]   nesse
+[00:04:23.360 --> 00:04:24.760]   ebook? Você tem que aprender iá.
+[00:04:24.760 --> 00:04:26.150]   Não tem jeito. É a mesma coisa
+[00:04:26.150 --> 00:04:27.160]   que o Hérrico Rocha fez a
+[00:04:27.160 --> 00:04:29.060]   vida inteira. Ele só vende o 6
+[00:04:29.060 --> 00:04:31.040]   em 7. Ele não vende a fórmula
+[00:04:31.040 --> 00:04:31.880]   de lançamento, porque
+[00:04:31.880 --> 00:04:34.070]   ninguém quer fórmula de lançamento.
+[00:04:34.070 --> 00:04:36.310]   Ela é difícil, complexa, gigante.
+[00:04:36.310 --> 00:04:36.720]   Tem que saber
+[00:04:36.720 --> 00:04:38.560]   mil e uma coisas. Ninguém quer
+[00:04:38.560 --> 00:04:40.150]   passar pelo processo. Então a
+[00:04:40.150 --> 00:04:41.240]   gente não vende o
+[00:04:41.240 --> 00:04:42.500]   processo. A gente tem que
+[00:04:42.500 --> 00:04:44.360]   entender quem é a sua persona.
+[00:04:44.360 --> 00:04:46.200]   Por isso que tudo parte da
+[00:04:46.200 --> 00:04:48.800]   nossa persona. E aí, mantendo
+[00:04:48.800 --> 00:04:50.800]   aqui minha linha de esteira
+[00:04:50.800 --> 00:04:52.400]   totalmente aleatória e
+[00:04:52.400 --> 00:04:54.070]   por isso que eu flopei tanto, o
+[00:04:54.070 --> 00:04:55.560]   primeiro que eu cheguei no
+[00:04:55.560 --> 00:04:57.320]   digital com um mês, eu
+[00:04:57.320 --> 00:04:58.660]   fiz um curso que falava "como
+[00:04:58.660 --> 00:05:00.310]   criar seu curso online". E aí
+[00:05:00.310 --> 00:05:01.960]   eu fiz o que? Ah, gestão
+
+[00:05:00.000 --> 00:05:01.760]   E aí eu fiz o quê? Ah, gestão
+[00:05:01.760 --> 00:05:03.200]   financeira para autônomos. Eu
+[00:05:03.200 --> 00:05:04.000]   era concursada, tá?
+[00:05:04.000 --> 00:05:05.160]   Aqui que eu sabia de autônomo,
+[00:05:05.160 --> 00:05:06.250]   eu não conheço ninguém autônomo,
+[00:05:06.250 --> 00:05:08.000]   minha família era de concursado.
+[00:05:08.000 --> 00:05:09.980]   Mas eu acho assim, ah, manicure,
+[00:05:09.980 --> 00:05:12.140]   vendedor, prestador de serviço,
+[00:05:12.140 --> 00:05:14.860]   eles precisam de uma gestão, de
+[00:05:14.860 --> 00:05:16.000]   um fluxo de caixa.
+[00:05:16.000 --> 00:05:17.430]   Aí eu criei um curso de gestão
+[00:05:17.430 --> 00:05:19.430]   financeira para autônomos. Óbvio,
+[00:05:19.430 --> 00:05:21.000]   gente. Quem que queria?
+[00:05:21.000 --> 00:05:22.450]   Você acha que esse cara que tem
+[00:05:22.450 --> 00:05:23.600]   que ir o rolê todo pra pagar as
+[00:05:23.600 --> 00:05:25.040]   contas, quer parar e falar "vou
+[00:05:25.040 --> 00:05:26.000]   preencher um Excel com fluxo de
+[00:05:26.000 --> 00:05:26.000]   caixa"?
+[00:05:26.000 --> 00:05:28.100]   Ele quer ver o dinheiro entrando.
+[00:05:28.100 --> 00:05:30.000]   Só que eu não entendia isso.
+[00:05:30.000 --> 00:05:31.410]   Por quê? Porque eu não vivia,
+[00:05:31.410 --> 00:05:32.450]   eu nem sabia quem era essa
+[00:05:32.450 --> 00:05:33.000]   persona.
+[00:05:33.000 --> 00:05:34.700]   Então, meu primeiro curso demorei
+[00:05:34.700 --> 00:05:36.350]   tempão. Eu tenho até umas fotos
+[00:05:36.350 --> 00:05:38.120]   gravando, eu tava todo na piscina,
+[00:05:38.120 --> 00:05:39.000]   que era dezembro,
+[00:05:39.000 --> 00:05:40.920]   e eu lá gravando o meu curso, óbvio
+[00:05:40.920 --> 00:05:42.450]   que não vendeu. E eu vendia,
+[00:05:42.450 --> 00:05:44.030]   era 40 reais, fez lá, fiz 10
+[00:05:44.030 --> 00:05:45.000]   vendas, foi muito.
+[00:05:45.000 --> 00:05:46.350]   Aí eu fui "não, agora eu vou
+[00:05:46.350 --> 00:05:47.940]   para gestão de empresa", que é
+[00:05:47.940 --> 00:05:49.430]   autônomo que não quer saber as
+[00:05:49.430 --> 00:05:50.000]   coisas.
+[00:05:50.000 --> 00:05:51.470]   Criei um curso de gestão de
+[00:05:51.470 --> 00:05:53.180]   empresa muito mais profundo,
+[00:05:53.180 --> 00:05:54.950]   falava de gestão financeira,
+[00:05:54.950 --> 00:05:57.210]   estratégica, de clientes,
+[00:05:57.210 --> 00:05:58.000]   marketing,
+[00:05:58.000 --> 00:05:59.230]   de gestão de pessoas, eram
+[00:05:59.230 --> 00:06:01.050]   cinco passos. Eu era concursada
+[00:06:01.050 --> 00:06:02.430]   ainda, tá? O que eu sabia de
+[00:06:02.430 --> 00:06:03.000]   gestão de empresa? Nada.
+[00:06:03.000 --> 00:06:05.570]   E aí, como que eu ia ensinar
+[00:06:05.570 --> 00:06:08.000]   tudo isso de forma aprofundada?
+[00:06:08.000 --> 00:06:09.000]   Ensinava.
+[00:06:09.000 --> 00:06:10.880]   Então era um curso superficial,
+[00:06:10.880 --> 00:06:12.530]   longo, com pouca ferramenta e
+[00:06:12.530 --> 00:06:15.000]   zero solução e nenhum skin-the-game.
+[00:06:15.000 --> 00:06:16.830]   Mais um produto que eu fiz, que
+[00:06:16.830 --> 00:06:18.890]   as pessoas precisavam, porque
+[00:06:18.890 --> 00:06:20.000]   na minha cabeça, quem é que, Ergament,
+[00:06:20.000 --> 00:06:22.140]   quem é que não precisa de gestão?
+[00:06:22.140 --> 00:06:23.450]   Todo mundo. A Coca-Cola precisa
+[00:06:23.450 --> 00:06:25.000]   de gestão, o bar da Espinna
+[00:06:25.000 --> 00:06:26.000]   precisa de gestão,
+[00:06:26.000 --> 00:06:27.150]   a padaria precisa de gestão,
+[00:06:27.150 --> 00:06:28.580]   todos precisam de gestão. Mas
+[00:06:28.580 --> 00:06:30.200]   como que eu venderia isso sem
+[00:06:30.200 --> 00:06:32.000]   eu saber viver a gestão?
+[00:06:32.000 --> 00:06:33.870]   Então eu sou da área contábil,
+[00:06:33.870 --> 00:06:35.930]   fui auditor, eu entendo de gestão,
+[00:06:35.930 --> 00:06:38.000]   mas eu nunca tinha vivido gestão.
+[00:06:38.000 --> 00:06:39.830]   Eu só vivia gestão só do lado
+[00:06:39.830 --> 00:06:41.930]   de relatórios. É assim que você
+[00:06:41.930 --> 00:06:43.330]   tem que fazer, viu? É assim que
+[00:06:43.330 --> 00:06:44.000]   você tem que fazer.
+[00:06:44.000 --> 00:06:46.160]   Lógico que não dava certo. Aí
+[00:06:46.160 --> 00:06:47.930]   não deu certo. Aí eu fui pra
+[00:06:47.930 --> 00:06:49.000]   produtividade.
+[00:06:49.000 --> 00:06:50.800]   Ah, então agora, produzirar pra
+[00:06:50.800 --> 00:06:52.400]   mães de bebês, porque eu tive
+[00:06:52.400 --> 00:06:54.000]   uma filha e eu era produtiva.
+[00:06:54.000 --> 00:06:55.860]   Então eu vou criar, produzirar
+[00:06:55.860 --> 00:06:58.170]   pra mãe e bebê. Então eu cria o
+[00:06:58.170 --> 00:07:01.000]   produto e ia caçando os clientes.
+[00:07:01.000 --> 00:07:02.330]   Eu cria o produto e caçava os
+[00:07:02.330 --> 00:07:04.000]   clientes. Tá errado, porque o
+[00:07:04.000 --> 00:07:05.210]   produto foi feito pra que
+[00:07:05.210 --> 00:07:06.000]   cliente?
+[00:07:06.000 --> 00:07:07.400]   Não sei, da minha cabeça. Eu
+[00:07:07.400 --> 00:07:09.000]   não tinha essa persona definida.
+[00:07:09.000 --> 00:07:11.320]   Eu só tinha uma demanda da
+[00:07:11.320 --> 00:07:12.000]   minha cabeça
+[00:07:12.000 --> 00:07:13.860]   e um conhecimento da toda minha
+[00:07:13.860 --> 00:07:16.000]   vivência e eu criava produtos.
+[00:07:16.000 --> 00:07:17.580]   Então pra mim sempre foi muito
+[00:07:17.580 --> 00:07:19.370]   fácil criar produtos. Então se
+[00:07:19.370 --> 00:07:20.640]   vocês me derem o que vocês
+[00:07:20.640 --> 00:07:21.650]   fazem é que eu crio produtos
+[00:07:21.650 --> 00:07:22.000]   pra vocês.
+[00:07:22.000 --> 00:07:23.440]   Não cria não, de graça não, né?
+[00:07:23.440 --> 00:07:24.460]   Mas tá bom. Que hoje virou
+[00:07:24.460 --> 00:07:25.000]   minha profissão isso.
+[00:07:25.000 --> 00:07:26.540]   Como eu sou tão boa em criar
+[00:07:26.540 --> 00:07:28.330]   produtos, eu virei uma mentora
+[00:07:28.330 --> 00:07:30.130]   de criação de produtos, mas
+[00:07:30.130 --> 00:07:31.360]   antes eu saia criando produtos
+[00:07:31.360 --> 00:07:32.000]   aleatórios.
+[00:07:32.000 --> 00:07:33.700]   Criei produto quando eu comecei
+[00:07:33.700 --> 00:07:35.270]   a dar mentoria pra uma turma de
+[00:07:35.270 --> 00:07:38.130]   empreendedores da Agilterra,
+[00:07:38.130 --> 00:07:39.000]   que eu fiz uma parceria lá.
+[00:07:39.000 --> 00:07:40.400]   E aí eu criei um produto também
+[00:07:40.400 --> 00:07:42.000]   pra empreendedores da Doutera.
+[00:07:42.000 --> 00:07:43.000]   Eu já tinha vendido Doutera?
+[00:07:43.000 --> 00:07:44.640]   Não, não sabia nada de óleos
+[00:07:44.640 --> 00:07:45.000]   essenciais.
+[00:07:45.000 --> 00:07:47.590]   Mas eu tava lá vendendo. Olha
+[00:07:47.590 --> 00:07:49.540]   como eu era aleatória. E todos
+[00:07:49.540 --> 00:07:51.660]   partiam do quê? De tudo que eu
+[00:07:51.660 --> 00:07:52.000]   sabia.
+[00:07:52.000 --> 00:07:53.620]   E não do que a persona quer, do
+[00:07:53.620 --> 00:07:55.060]   que o público quer ou da sua
+[00:07:55.060 --> 00:07:57.630]   audiência. Não é assim que se cria
+[00:07:57.630 --> 00:07:59.000]   aqui no digital.
+[00:07:59.000 --> 00:07:59.760]   Por quê? Porque eu não conseguia
+[00:07:59.760 --> 00:08:00.510]   comunicar, não conseguia chegar
+[00:08:00.510 --> 00:08:01.800]   nessas pessoas. Eu nem era
+[00:08:01.800 --> 00:08:03.000]   essas pessoas.
+[00:08:03.000 --> 00:08:04.650]   Eu nunca tinha vivido que essas
+[00:08:04.650 --> 00:08:06.410]   pessoas estavam vivendo. Então
+[00:08:06.410 --> 00:08:08.320]   o meu erro foi muito primitivo,
+[00:08:08.320 --> 00:08:10.000]   mas eu acredito que acontece
+[00:08:10.000 --> 00:08:11.000]   com muita frequência.
+[00:08:11.000 --> 00:08:12.470]   Quando você tem o conhecimento
+[00:08:12.470 --> 00:08:13.540]   fala "vou criar um produto
+[00:08:13.540 --> 00:08:15.230]   disso aqui". Mas pra quem? Pra
+[00:08:15.230 --> 00:08:17.170]   alguém. Pra alguém que alguém
+[00:08:17.170 --> 00:08:18.000]   precisa disso.
+[00:08:18.000 --> 00:08:20.070]   Sabe como é aleatório? Esses
+[00:08:20.070 --> 00:08:22.010]   foram os produtos aleatórios
+[00:08:22.010 --> 00:08:24.190]   que eu criei, até entender que
+[00:08:24.190 --> 00:08:26.100]   a coisa não estava muito bem
+[00:08:26.100 --> 00:08:27.000]   definida.
+[00:08:27.000 --> 00:08:28.680]   E aí eu percebi, quando eu
+[00:08:28.680 --> 00:08:30.930]   entrei pra área de metodologia,
+[00:08:30.930 --> 00:08:32.210]   que você precisa de um
+[00:08:32.210 --> 00:08:33.000]   blueprint.
+[00:08:33.000 --> 00:08:35.590]   Que é o quê? Um mapinha do que
+[00:08:35.590 --> 00:08:37.460]   você precisa preencher pra que
+[00:08:37.460 --> 00:08:40.000]   esse produto tenha um esqueleto,
+[00:08:40.000 --> 00:08:41.000]   ele tenha uma clareza.
+[00:08:41.000 --> 00:08:43.040]   Senão ele fica só na ideia. Ou
+[00:08:43.040 --> 00:08:44.930]   na ideia, ou um produto
+[00:08:44.930 --> 00:08:46.000]   realmente capengo.
+[00:08:46.000 --> 00:08:47.480]   Então hoje eu vou te passar 5
+[00:08:47.480 --> 00:08:49.040]   perguntas que tem que responder
+[00:08:49.040 --> 00:08:50.430]   em cada produto que você vai
+[00:08:50.430 --> 00:08:51.000]   fazer.
+[00:08:51.000 --> 00:08:52.270]   Vai fazer um ebook? Essas
+[00:08:52.270 --> 00:08:53.980]   perguntas. Vai fazer mentoria?
+[00:08:53.980 --> 00:08:55.480]   Essas perguntas. Vai fazer um
+[00:08:55.480 --> 00:08:57.000]   curso? Essas perguntas.
+[00:08:57.000 --> 00:08:58.890]   Mesmo que sejam 2, vou trazer
+[00:08:58.890 --> 00:09:00.930]   aqui vários formatos diferentes
+[00:09:00.930 --> 00:09:03.170]   de info-produto, mas mesmo que
+[00:09:03.170 --> 00:09:05.090]   você fizer 2 cursos onlines,
+[00:09:05.090 --> 00:09:06.000]   eles tem que responder.
+[00:09:06.000 --> 00:09:08.000]   Porque você não vai fazer 2 iguais.
+[00:09:08.000 --> 00:09:09.930]   Então as 5 perguntas servem pra
+[00:09:09.930 --> 00:09:11.520]   cada info-produto que você for
+[00:09:11.520 --> 00:09:14.000]   criar daqui pra frente. Combinado?
+[00:09:14.000 --> 00:09:17.650]   O que é esse blueprint do info-produto?
+[00:09:17.650 --> 00:09:20.170]   É você definir o que é esse
+[00:09:20.170 --> 00:09:23.080]   produto, o formato que ele
+[00:09:23.080 --> 00:09:25.130]   entrega, qual é a concepção
+[00:09:25.130 --> 00:09:26.450]   desse produto que você vai
+[00:09:26.450 --> 00:09:27.000]   criar.
+[00:09:27.000 --> 00:09:28.620]   Então se você tem 6 produtos,
+[00:09:28.620 --> 00:09:30.140]   você tem que ter 6 blueprints
+[00:09:30.140 --> 00:09:31.600]   preenchidos. Por quê? Porque
+[00:09:31.600 --> 00:09:33.000]   eles vão dar clareza de comunicação.
+[00:09:33.000 --> 00:09:34.910]   Ele serve pra você comunicar
+[00:09:34.910 --> 00:09:37.130]   pra parceiros, pra você colocar
+[00:09:37.130 --> 00:09:39.270]   no seu cloud code, ele te ensinar
+[00:09:39.270 --> 00:09:41.400]   a criar página de vendas, criar
+[00:09:41.400 --> 00:09:43.090]   toda a estrutura que você
+[00:09:43.090 --> 00:09:45.000]   precisa de comunicação.
+[00:09:45.000 --> 00:09:46.350]   Você entender com quem você
+[00:09:46.350 --> 00:09:48.000]   fala, passar pra social media.
+[00:09:48.000 --> 00:09:50.320]   Por quê? Cada info-produto tem
+[00:09:50.320 --> 00:09:52.100]   uma comunicação diferente e a
+[00:09:52.100 --> 00:09:53.800]   persona no geral, eu recomendo
+[00:09:53.800 --> 00:09:55.000]   que seja a mesma.
+[00:09:55.000 --> 00:09:58.290]   mesma, mas não é o ponto de
+[00:09:58.290 --> 00:10:01.360]   partida diferente, elas têm uma
+[00:10:01.360 --> 00:10:03.500]   forma de trabalhar diferente,
+
+[00:10:00.000 --> 00:10:01.450]   O porquê você criou esse
+[00:10:01.450 --> 00:10:22.140]   produto, o porquê você criou
+[00:10:22.140 --> 00:10:23.400]   seu produto?
+[00:10:23.400 --> 00:10:26.030]   Aí vem o pra quem? Essa vem a
+[00:10:26.030 --> 00:10:28.360]   sua persona, mas um ponto
+[00:10:28.360 --> 00:10:30.960]   específico de porquê que foi um
+[00:10:30.960 --> 00:10:33.200]   infoproduto para essa trava.
+[00:10:33.200 --> 00:10:35.280]   Porque também a mesma persona
+[00:10:35.280 --> 00:10:37.290]   pode ser para mentoria, pode
+[00:10:37.290 --> 00:10:39.790]   ser para consultoria, pode, mas
+[00:10:39.790 --> 00:10:41.250]   elas têm necessidades
+[00:10:41.250 --> 00:10:42.200]   diferentes.
+[00:10:42.200 --> 00:10:43.600]   Mesmo que seja a mesma persona
+[00:10:43.600 --> 00:10:45.170]   que trabalha com a mesma coisa,
+[00:10:45.170 --> 00:10:46.910]   que tenha a mesma faixa etária,
+[00:10:46.910 --> 00:10:48.370]   elas têm necessidades
+[00:10:48.370 --> 00:10:49.200]   diferentes.
+[00:10:49.200 --> 00:10:50.780]   E para necessidades diferentes
+[00:10:50.780 --> 00:10:52.380]   nós precisamos de infoprodutos
+[00:10:52.380 --> 00:10:53.600]   diferentes, tá?
+[00:10:53.600 --> 00:10:56.380]   E partindo de onde? É intermediário,
+[00:10:56.380 --> 00:10:58.300]   é avançado, é inicial, ela já
+[00:10:58.300 --> 00:11:00.060]   sabe alguma coisa, ela não sabe
+[00:11:00.060 --> 00:11:00.400]   nada.
+[00:11:00.400 --> 00:11:02.490]   Qual a consciência da solução
+[00:11:02.490 --> 00:11:04.330]   que ela tem, do problema que
+[00:11:04.330 --> 00:11:05.000]   ela tem?
+[00:11:05.000 --> 00:11:06.190]   Então muitas vezes a gente
+[00:11:06.190 --> 00:11:07.600]   trabalha com pessoas que não
+[00:11:07.600 --> 00:11:09.130]   têm nem, ela nem sabe que o seu
+[00:11:09.130 --> 00:11:10.940]   produto existe, que a sua solução
+[00:11:10.940 --> 00:11:11.400]   existe.
+[00:11:11.400 --> 00:11:13.080]   Por exemplo, quando você entra
+[00:11:13.080 --> 00:11:14.640]   no infoproduto, no mercado de
+[00:11:14.640 --> 00:11:16.000]   criar novas profissões.
+[00:11:16.000 --> 00:11:18.570]   Então vou te ensinar a ser uma
+[00:11:18.570 --> 00:11:20.000]   professora de yoga, tá?
+[00:11:20.000 --> 00:11:23.670]   Eu sou mentora de produtos, mas
+[00:11:23.670 --> 00:11:26.480]   eu sou, adoro fazer yoga e
+[00:11:26.480 --> 00:11:29.000]   estou estressada.
+[00:11:29.000 --> 00:11:30.440]   Aí a Elaine vem em mim, uma
+[00:11:30.440 --> 00:11:32.280]   persona falou "pô, ela já gosta
+[00:11:32.280 --> 00:11:34.000]   de yoga e vive estressada".
+[00:11:34.000 --> 00:11:35.400]   Se ela se tornar uma profissional
+[00:11:35.400 --> 00:11:36.650]   de yoga, porque ela vai fazer
+[00:11:36.650 --> 00:11:38.020]   algo que ela gosta, vai ganhar
+[00:11:38.020 --> 00:11:39.200]   dinheiro e vai sair dessa vida
+[00:11:39.200 --> 00:11:40.780]   de mentora de infoprodutos que
+[00:11:40.780 --> 00:11:41.800]   ela está estressada.
+[00:11:41.800 --> 00:11:43.450]   Então ela entendeu que eu sou
+[00:11:43.450 --> 00:11:44.830]   uma persona para ela pelo
+[00:11:44.830 --> 00:11:46.640]   problema que ela resolve, mas
+[00:11:46.640 --> 00:11:48.000]   partindo de onde?
+[00:11:48.000 --> 00:11:49.920]   A Carol não tem consciência
+[00:11:49.920 --> 00:11:51.910]   nenhuma e nem o momento da
+[00:11:51.910 --> 00:11:53.730]   minha vida passou pela minha
+[00:11:53.730 --> 00:11:55.920]   cabeça que eu queria, o que eu
+[00:11:55.920 --> 00:11:57.550]   quero, o que eu vou ser professora
+[00:11:57.550 --> 00:12:00.000]   de yoga, mas ela viu uma lacuna.
+[00:12:00.000 --> 00:12:02.550]   Então isso acontece no geral,
+[00:12:02.550 --> 00:12:04.790]   todo mundo que ensina uma profissão
+[00:12:04.790 --> 00:12:07.020]   nova você está disputando com
+[00:12:07.020 --> 00:12:09.080]   milhares de experts em outras
+[00:12:09.080 --> 00:12:11.300]   áreas aleatórias que querem a
+[00:12:11.300 --> 00:12:12.600]   mesma pessoa.
+[00:12:12.600 --> 00:12:14.200]   Porque a Elaine pode ensinar
+[00:12:14.200 --> 00:12:15.930]   yoga para a Carol estressada,
+[00:12:15.930 --> 00:12:17.330]   mas a Sandra pode ensinar
+[00:12:17.330 --> 00:12:19.600]   tecnologia para a Carol estressada,
+[00:12:19.600 --> 00:12:21.690]   o Leandro pode ensinar religião
+[00:12:21.690 --> 00:12:23.640]   para a Carol estressada, todo
+[00:12:23.640 --> 00:12:25.600]   mundo querendo a Carol estressada.
+[00:12:25.600 --> 00:12:27.140]   E por que isso é tão importante
+[00:12:27.140 --> 00:12:28.690]   para vocês saberem? Porque a
+[00:12:28.690 --> 00:12:30.120]   Carol tem um dinheiro só, eu
+[00:12:30.120 --> 00:12:31.770]   tenho 10 mil para gastar com
+[00:12:31.770 --> 00:12:32.810]   mentoria e cada um tem um
+[00:12:32.810 --> 00:12:34.780]   produto de 10 mil, então eu só
+[00:12:34.780 --> 00:12:36.200]   tenho um 10 mil para dar.
+[00:12:36.200 --> 00:12:37.800]   E para qual que eu vou escolher?
+[00:12:37.800 --> 00:12:40.130]   Para qual entender melhor o meu
+[00:12:40.130 --> 00:12:41.670]   contexto, falar mais das minhas
+[00:12:41.670 --> 00:12:43.610]   dores, entender mais e mostrar
+[00:12:43.610 --> 00:12:45.640]   que a sua mudança de profissão
+[00:12:45.640 --> 00:12:47.840]   é mais fácil, mais lucrativa,
+[00:12:47.840 --> 00:12:48.800]   mais rápida.
+[00:12:48.800 --> 00:12:50.260]   E aí vira a chavinha da Carol
+[00:12:50.260 --> 00:12:51.830]   que não tinha consciência
+[00:12:51.830 --> 00:12:53.610]   nenhuma de mudar de profissão,
+[00:12:53.610 --> 00:12:55.250]   mas estava estressada e estava
+[00:12:55.250 --> 00:12:56.860]   insatisfeita que ela estava,
+[00:12:56.860 --> 00:12:59.000]   que você sim é a melhor solução.
+[00:12:59.000 --> 00:13:00.370]   Porque a Carol vai seguir a
+[00:13:00.370 --> 00:13:01.960]   Elaine, o Leandro, a Sandra, eu
+[00:13:01.960 --> 00:13:03.430]   vou seguir várias pessoas,
+[00:13:03.430 --> 00:13:04.900]   quais delas que eu vou escolher
+[00:13:04.900 --> 00:13:06.580]   para gastar os meus únicos 10
+[00:13:06.580 --> 00:13:07.200]   mil?
+[00:13:07.200 --> 00:13:09.800]   Essa é a grande confecção que a
+[00:13:09.800 --> 00:13:12.050]   gente tem no mercado, você não
+[00:13:12.050 --> 00:13:14.410]   concorre com yoga com yoga, TTI
+[00:13:14.410 --> 00:13:16.630]   com TTI, não é isso, a gente
+[00:13:16.630 --> 00:13:18.820]   concorre com o mesmo dinheiro
+[00:13:18.820 --> 00:13:21.070]   da persona que ela tem disponível
+[00:13:21.070 --> 00:13:22.400]   para gastar com alguém.
+[00:13:22.400 --> 00:13:23.960]   E aí eu vou gastar com você ou
+[00:13:23.960 --> 00:13:25.810]   com ela? Mesmo que vocês tenham
+[00:13:25.810 --> 00:13:27.790]   soluções diferentes, totalmente
+[00:13:27.790 --> 00:13:29.820]   diferentes, mas trabalham a dor
+[00:13:29.820 --> 00:13:31.600]   central que é a mesma que é
+[00:13:31.600 --> 00:13:33.630]   Carol estressada, que talvez
+[00:13:33.630 --> 00:13:35.230]   pode mudar de profissão, mas
+[00:13:35.230 --> 00:13:36.600]   ela nem tem consciência disso.
+[00:13:36.600 --> 00:13:37.760]   Ou eu sou uma funcionária
+[00:13:37.760 --> 00:13:39.590]   pública que quero mudar de profissão,
+[00:13:39.590 --> 00:13:41.190]   mas não sei qual ainda, então a
+[00:13:41.190 --> 00:13:42.770]   Carol primeira não tinha nem
+[00:13:42.770 --> 00:13:44.010]   consciência que ela queria
+[00:13:44.010 --> 00:13:45.200]   mudar de profissão.
+[00:13:45.200 --> 00:13:46.680]   Então tem conteúdos que vocês
+[00:13:46.680 --> 00:13:47.800]   têm que, que tal você mudar de
+[00:13:47.800 --> 00:13:49.170]   profissão? Olha como o conteúdo
+[00:13:49.170 --> 00:13:50.400]   vai trazendo a consciência.
+[00:13:50.400 --> 00:13:51.640]   Agora a outra Carol que já quer
+[00:13:51.640 --> 00:13:53.000]   mudar e fazer transição, mas
+[00:13:53.000 --> 00:13:54.330]   não sabe para onde isso fala,
+[00:13:54.330 --> 00:13:55.200]   olha como mudar para cá é
+[00:13:55.200 --> 00:13:56.340]   melhor, mais fácil, mais
+[00:13:56.340 --> 00:13:58.050]   simples, mais rentável, você
+[00:13:58.050 --> 00:13:59.220]   tem tempo para ficar com a sua
+[00:13:59.220 --> 00:14:00.600]   filha, ou ela vai ficando mais
+[00:14:00.600 --> 00:14:01.200]   atrativa.
+[00:14:01.200 --> 00:14:02.720]   Então olha como o nosso
+[00:14:02.720 --> 00:14:04.290]   conteúdo vai mudando e o
+[00:14:04.290 --> 00:14:06.600]   conteúdo de conscientização e a
+[00:14:06.600 --> 00:14:09.120]   partida de onde está o seu infoproduto
+[00:14:09.120 --> 00:14:11.200]   de acordo com a sua persona.
+[00:14:11.200 --> 00:14:12.820]   Por que muda isso? Porque muda
+[00:14:12.820 --> 00:14:14.200]   seu primeiro módulo, seu
+[00:14:14.200 --> 00:14:16.000]   primeiro módulo introdutório,
+[00:14:16.000 --> 00:14:17.560]   tem que trazer conceitos, eu
+[00:14:17.560 --> 00:14:18.720]   posso falar de parte mais
+[00:14:18.720 --> 00:14:20.400]   técnica, eu nem entro nisso.
+[00:14:20.400 --> 00:14:22.290]   Que tamanho da jornada que você
+[00:14:22.290 --> 00:14:23.830]   promete? Aqui é o tamanho da
+[00:14:23.830 --> 00:14:25.310]   sua jornada. Que tamanho de
+[00:14:25.310 --> 00:14:27.600]   jornada você promete no seu infoproduto?
+[00:14:27.600 --> 00:14:30.200]   Carol, eu, quando eu comecei,
+[00:14:30.200 --> 00:14:32.070]   eu comecei o que? Te ensino a
+[00:14:32.070 --> 00:14:33.540]   te preparar para o lançamento,
+[00:14:33.540 --> 00:14:34.870]   mas você nem está no digital
+[00:14:34.870 --> 00:14:35.400]   ainda.
+[00:14:35.400 --> 00:14:36.960]   Então eu tenho que te ensinar a
+[00:14:36.960 --> 00:14:38.640]   criar método, criar produto,
+[00:14:38.640 --> 00:14:40.260]   criar esteira, criar página e
+[00:14:40.260 --> 00:14:41.980]   ir para lançamento. Olha que
+[00:14:41.980 --> 00:14:43.460]   loucura, é muito grande essa
+[00:14:43.460 --> 00:14:44.000]   jornada.
+[00:14:44.000 --> 00:14:46.040]   Érico Rocha, ele ensina o que?
+[00:14:46.040 --> 00:14:48.630]   Do zero aos dois milhões. Obviamente,
+[00:14:48.630 --> 00:14:50.470]   ele é um gigante e eu não tenho
+[00:14:50.470 --> 00:14:52.460]   como me comparar, ele tem provas
+[00:14:52.460 --> 00:14:54.100]   de pessoas dos zero aos dois
+[00:14:54.100 --> 00:14:56.090]   milhões, só que é uma jornada
+[00:14:56.090 --> 00:14:57.970]   muito mais longa. E aí quando
+[00:14:57.970 --> 00:14:59.150]   eu estava na mentoria da Arcana,
+[00:14:59.150 --> 00:15:00.550]   ele falou, corta a parte de
+[00:15:00.550 --> 00:15:03.290]   lançamento e foca em metodologia,
+[00:15:03.290 --> 00:15:04.600]   que as pessoas não sabem nisso.
+
+[00:15:00.000 --> 00:15:02.110]   a parte de lançamento e foca em
+[00:15:02.110 --> 00:15:03.930]   metodologia que as pessoas não
+[00:15:03.930 --> 00:15:06.180]   sabem nisso e esse é o seu
+[00:15:06.180 --> 00:15:06.520]   grande
+[00:15:06.520 --> 00:15:08.420]   resultado é em criação de produtos.
+[00:15:08.420 --> 00:15:09.890]   Eu tenho facilidade, acabei de
+[00:15:09.890 --> 00:15:12.320]   mostrar pra vocês que a facilidade
+[00:15:12.320 --> 00:15:13.320]   em criar produtos é pra
+[00:15:13.320 --> 00:15:14.920]   mim a parte mais fácil. Então
+[00:15:14.920 --> 00:15:16.570]   pra que que eu ia até o lançamento
+[00:15:16.570 --> 00:15:17.880]   que é uma jornada muito mais
+[00:15:17.880 --> 00:15:20.370]   longa? Aí o que a gente pode
+[00:15:20.370 --> 00:15:22.190]   fazer? Outro infoproduto que
+[00:15:22.190 --> 00:15:24.480]   esse ponto de partida começa no
+[00:15:24.480 --> 00:15:24.960]   ponto de
+[00:15:24.960 --> 00:15:26.430]   chegada do outro e aí vem
+[00:15:26.430 --> 00:15:28.390]   aquela tal da esteira, terminei
+[00:15:28.390 --> 00:15:31.130]   aqui, entro no próximo produto
+[00:15:31.130 --> 00:15:31.640]   que inicia
+[00:15:31.640 --> 00:15:34.240]   onde isso terminou. Cria o
+[00:15:34.240 --> 00:15:36.150]   próximo, muito mais fácil a
+[00:15:36.150 --> 00:15:38.630]   gente cortar o nosso produto em
+[00:15:38.630 --> 00:15:39.000]   mini
+[00:15:39.000 --> 00:15:40.750]   infoprodutos pra que a gente
+[00:15:40.750 --> 00:15:42.930]   consiga provas mais rápido.
+[00:15:42.930 --> 00:15:45.170]   Então muitas vezes vocês estão
+[00:15:45.170 --> 00:15:45.520]   com a
+[00:15:45.520 --> 00:15:47.470]   metodologia muito longa, não
+[00:15:47.470 --> 00:15:49.450]   conseguem ter o começo meio fim
+[00:15:49.450 --> 00:15:51.200]   porque a clareza é muito mais
+[00:15:51.200 --> 00:15:53.800]   difícil de vender, de entregar
+[00:15:53.800 --> 00:15:55.880]   e do seu aluno ter resultado e
+[00:15:55.880 --> 00:15:58.610]   aí sim vocês começam a desistir
+[00:15:58.610 --> 00:15:58.840]   e
+[00:15:58.840 --> 00:16:01.810]   achar complicado demais. Possivelmente
+[00:16:01.810 --> 00:16:03.980]   a persona não tá bem definida e
+[00:16:03.980 --> 00:16:05.760]   esse ponto de partida também
+[00:16:05.760 --> 00:16:08.280]   não e a jornada fica muito longa.
+[00:16:08.280 --> 00:16:09.690]   Quem já passou por isso aí
+[00:16:09.690 --> 00:16:11.510]   conta pra mim. E eu quero pra
+[00:16:11.510 --> 00:16:11.760]   deixar
+[00:16:11.760 --> 00:16:13.410]   muito claro na hora que vocês
+[00:16:13.410 --> 00:16:15.110]   forem definir os seus pontos de
+[00:16:15.110 --> 00:16:16.840]   partida e chegada que eles não
+[00:16:16.840 --> 00:16:19.360]   tenham um ponto aleatório ou
+[00:16:19.360 --> 00:16:21.880]   subjetivo. Eu quero que eles sejam
+[00:16:21.880 --> 00:16:24.160]   checkpoints, que você consiga
+[00:16:24.160 --> 00:16:26.760]   responder sim ou não. Ou seja,
+[00:16:26.760 --> 00:16:28.590]   quando a gente vem aqui no
+[00:16:28.590 --> 00:16:30.760]   ponto de partida é essa pessoa
+[00:16:30.760 --> 00:16:31.320]   é iniciante?
+[00:16:31.320 --> 00:16:33.920]   Sim ou não? A gente consegue
+[00:16:33.920 --> 00:16:35.480]   responder de forma objetiva
+[00:16:35.480 --> 00:16:37.990]   qual é o ponto de partida. Ela
+[00:16:37.990 --> 00:16:39.120]   é iniciante,
+[00:16:39.120 --> 00:16:40.790]   ela nunca entrou no digital,
+[00:16:40.790 --> 00:16:42.530]   ela tem Instagram fechado, ela
+[00:16:42.530 --> 00:16:44.560]   tem vergonha de gravar vídeo.
+[00:16:44.560 --> 00:16:45.360]   Tudo
+[00:16:45.360 --> 00:16:46.760]   que ela faz assim sim sim e aí
+[00:16:46.760 --> 00:16:48.300]   eu entendi quem é o ponto de
+[00:16:48.300 --> 00:16:49.930]   partida. O ponto de chegada é a
+[00:16:49.930 --> 00:16:50.080]   mesma
+[00:16:50.080 --> 00:16:51.760]   coisa. Ela gravou o primeiro
+[00:16:51.760 --> 00:16:53.740]   vídeo, ela criou o produto dela,
+[00:16:53.740 --> 00:16:55.480]   ela fez um lançamento e ela fez
+[00:16:55.480 --> 00:16:55.560]   a
+[00:16:55.560 --> 00:16:57.310]   primeira venda e validou o método.
+[00:16:57.310 --> 00:16:58.950]   Check, check, check. Eu consigo
+[00:16:58.950 --> 00:17:00.760]   dar checks. Então seu ponto de
+[00:17:00.760 --> 00:17:02.030]   partida e o ponto de chegada
+[00:17:02.030 --> 00:17:03.700]   não são subjetivos. Por isso
+[00:17:03.700 --> 00:17:05.560]   que quem trabalha com desenvolvimento
+[00:17:05.560 --> 00:17:08.650]   pessoal tem que trazer checkpoints
+[00:17:08.650 --> 00:17:11.210]   pra quem tanto você prove que
+[00:17:11.210 --> 00:17:13.680]   entregou a promessa quanto a
+[00:17:13.680 --> 00:17:13.960]   pessoa
+[00:17:13.960 --> 00:17:15.720]   pergunta. Porque às vezes o
+[00:17:15.720 --> 00:17:17.610]   sentimento é tão subjetivo que
+[00:17:17.610 --> 00:17:19.360]   eu não consigo interpretar,
+[00:17:19.360 --> 00:17:21.210]   transparecer. E aí você fala
+[00:17:21.210 --> 00:17:23.250]   você tá mais estressada e menos
+[00:17:23.250 --> 00:17:25.160]   estressada? Difícil isso. Agora
+[00:17:25.160 --> 00:17:26.630]   você fala assim parei de roer a
+[00:17:26.630 --> 00:17:28.570]   unha, não como mais por compulsão.
+[00:17:28.570 --> 00:17:30.400]   Olha como eu tô trazendo algo
+[00:17:30.400 --> 00:17:32.010]   objetivo. Parei de roer a unha?
+[00:17:32.010 --> 00:17:33.660]   É fácil, só olhar pra unha. Tô
+[00:17:33.660 --> 00:17:35.720]   roendo, não tô roendo. Parei de
+[00:17:35.720 --> 00:17:36.600]   comer mais
+[00:17:36.600 --> 00:17:38.100]   do que deveria? Parei de comer
+[00:17:38.100 --> 00:17:39.700]   até ficar explodindo? Então
+[00:17:39.700 --> 00:17:41.720]   você consegue transformar o que
+[00:17:41.720 --> 00:17:41.840]   era
+[00:17:41.840 --> 00:17:43.670]   importante pra ela em atitudes
+[00:17:43.670 --> 00:17:45.760]   que ela tinha, que é o ponto de
+[00:17:45.760 --> 00:17:47.240]   partida, pra atitudes que ela
+[00:17:47.240 --> 00:17:47.840]   deixa de
+[00:17:47.840 --> 00:17:49.420]   ter, que é o ponto de chegada.
+[00:17:49.420 --> 00:17:50.770]   E aí sim, mesmo que seja um
+[00:17:50.770 --> 00:17:52.880]   desenvolvimento pessoal, nós
+[00:17:52.880 --> 00:17:54.080]   tangibilizamos
+[00:17:54.080 --> 00:17:56.340]   as entregas dos seus infoprodutos.
+[00:17:56.340 --> 00:17:58.170]   Pra quê? Pra que eles tenham
+[00:17:58.170 --> 00:18:00.520]   esses checkpoints, tá? Você
+[00:18:00.520 --> 00:18:01.040]   precisa
+[00:18:01.040 --> 00:18:03.560]   acompanhar, tá chegando e não
+[00:18:03.560 --> 00:18:05.270]   tá chegando, tanto pra ele
+[00:18:05.270 --> 00:18:07.540]   quanto pra você, tá? Não é
+[00:18:07.540 --> 00:18:08.320]   sentir que
+[00:18:08.320 --> 00:18:10.890]   tem algo. Por isso que eu falo
+[00:18:10.890 --> 00:18:12.610]   muitas vezes com vocês que vêm
+[00:18:12.610 --> 00:18:15.100]   nas lives, que assistem aulas,
+[00:18:15.100 --> 00:18:15.280]   que
+[00:18:15.280 --> 00:18:17.120]   são alunos incríveis, que que
+[00:18:17.120 --> 00:18:19.170]   vocês estão fazendo com esse
+[00:18:19.170 --> 00:18:20.750]   monte de teoria. Então hoje eu
+[00:18:20.750 --> 00:18:20.840]   vou
+[00:18:20.840 --> 00:18:22.700]   disponibilizar um arquivo pra
+[00:18:22.700 --> 00:18:24.770]   vocês preencherem o blueprint
+[00:18:24.770 --> 00:18:26.490]   de vocês, que não vai servir
+[00:18:26.490 --> 00:18:27.360]   pra nada se
+[00:18:27.360 --> 00:18:29.960]   vocês não preencherem. Não adianta
+[00:18:29.960 --> 00:18:31.790]   ficarem só "olha, aprendi uma
+[00:18:31.790 --> 00:18:33.920]   coisa muito legal, senti que eu
+[00:18:33.920 --> 00:18:35.780]   fui". Nunca isso vai trazer
+[00:18:35.780 --> 00:18:38.110]   algum resultado aqui, ok? Então
+[00:18:38.110 --> 00:18:40.800]   eu trouxe três blueprints preenchidos,
+[00:18:40.800 --> 00:18:43.380]   que são formas de produtos ou
+[00:18:43.380 --> 00:18:45.790]   serviços diferentes. Vocês vão
+[00:18:45.790 --> 00:18:48.080]   entender, eles estão dentro do
+[00:18:48.080 --> 00:18:48.160]   meu
+[00:18:48.160 --> 00:18:50.720]   ecossistema de produtos e aí eu
+[00:18:50.720 --> 00:18:52.480]   tenho um curso online. O curso
+[00:18:52.480 --> 00:18:54.570]   online, todos são pra mesma
+[00:18:54.570 --> 00:18:55.360]   persona, tá?
+[00:18:55.360 --> 00:18:57.230]   Quem é a minha persona? Quem
+[00:18:57.230 --> 00:18:59.290]   tem muito conhecimento, tá no
+[00:18:59.290 --> 00:19:01.110]   offline, quer vir pro digital
+[00:19:01.110 --> 00:19:02.040]   ou tá naquele
+[00:19:02.040 --> 00:19:03.510]   digital, olha como a foto de
+[00:19:03.510 --> 00:19:05.040]   partida muda, ou já está no
+[00:19:05.040 --> 00:19:06.920]   digital, mas está derrapando,
+[00:19:06.920 --> 00:19:08.240]   não consegue
+[00:19:08.240 --> 00:19:10.540]   estruturar todo o seu conhecimento
+[00:19:10.540 --> 00:19:12.520]   e método e transformar isso em
+[00:19:12.520 --> 00:19:14.680]   realmente um produto e validar.
+[00:19:14.680 --> 00:19:17.280]   Eu vendo a minha promessa que
+[00:19:17.280 --> 00:19:20.000]   você valide o seu produto com venda
+[00:19:20.000 --> 00:19:22.560]   real em até quatro meses. Então
+[00:19:22.560 --> 00:19:23.960]   essa é a grande estrutura que
+[00:19:23.960 --> 00:19:25.360]   eu trago, porque eu preparo o
+[00:19:25.360 --> 00:19:27.120]   especialista, especialista que
+[00:19:27.120 --> 00:19:27.280]   tem
+[00:19:27.280 --> 00:19:28.900]   controle, especialista que não
+[00:19:28.900 --> 00:19:30.590]   tem segurança, especialista que
+[00:19:30.590 --> 00:19:32.080]   já tem tanto conhecimento no
+[00:19:32.080 --> 00:19:32.560]   off, que
+[00:19:32.560 --> 00:19:34.200]   não quer chegar aqui na bolha
+[00:19:34.200 --> 00:19:35.700]   do digital e gaguejar e não
+[00:19:35.700 --> 00:19:37.600]   saber se expressar, porque ele
+[00:19:37.600 --> 00:19:38.440]   pode ter muito
+[00:19:38.440 --> 00:19:39.970]   conhecimento no off como um
+[00:19:39.970 --> 00:19:41.830]   dentista, mas não ser nada como
+[00:19:41.830 --> 00:19:43.840]   professor, como especialista,
+[00:19:43.840 --> 00:19:44.920]   com didática
+[00:19:44.920 --> 00:19:47.090]   de ensinar. Então a incubadora,
+[00:19:47.090 --> 00:19:48.850]   ela serve pra isso. Eu não
+[00:19:48.850 --> 00:19:51.280]   prometo a escala de milhões, aí
+[00:19:51.280 --> 00:19:51.680]   você vai
+[00:19:51.680 --> 00:19:53.080]   pro próximo produto, pra
+[00:19:53.080 --> 00:19:54.410]   próxima esteira de outro
+[00:19:54.410 --> 00:19:56.160]   especialista. Entende que o meu
+[00:19:56.160 --> 00:19:57.120]   ponto de chegada é
+[00:19:57.120 --> 00:19:58.730]   partida eu enxuguei pra eu
+[00:19:58.730 --> 00:20:00.360]   ficar muito boa pra essa
+[00:20:00.360 --> 00:20:01.160]   persona que não tem
+
+[00:20:00.000 --> 00:20:01.390]   Para essa persona que não tem
+[00:20:01.390 --> 00:20:02.970]   segurança, ela nem quer falar
+[00:20:02.970 --> 00:20:04.630]   para ela "te ajudo, te ensina a
+[00:20:04.630 --> 00:20:05.930]   faturar um milhão", você fala "que
+[00:20:05.930 --> 00:20:07.080]   faturar um milhão? Eu não faturo
+[00:20:07.080 --> 00:20:08.300]   nada, eu tenho muito conhecimento,
+[00:20:08.300 --> 00:20:09.380]   eu nem sei o que fazer com isso".
+[00:20:09.380 --> 00:20:10.880]   Então se você promete algo
+[00:20:10.880 --> 00:20:12.530]   muito longe, a pessoa fala que
+[00:20:12.530 --> 00:20:14.110]   é tão longe para ela, que ela
+[00:20:14.110 --> 00:20:15.480]   não te escolhe, porque ela fala
+[00:20:15.480 --> 00:20:16.640]   "é inviável isso para mim, isso
+[00:20:16.640 --> 00:20:17.770]   aí é para quem está muito mais
+[00:20:17.770 --> 00:20:19.390]   avançado, por isso que você tem
+[00:20:19.390 --> 00:20:20.330]   que escolher quem é a sua
+[00:20:20.330 --> 00:20:21.440]   persona e o ponto de partida
+[00:20:21.440 --> 00:20:21.900]   dela".
+[00:20:21.900 --> 00:20:23.480]   Então a minha pessoa quer vir
+[00:20:23.480 --> 00:20:24.870]   para o digital ou ela está
+[00:20:24.870 --> 00:20:26.940]   começando, está derrapando, não
+[00:20:26.940 --> 00:20:28.680]   tem resultado, tem um método
+[00:20:28.680 --> 00:20:30.590]   capengo, não está validado, não
+[00:20:30.590 --> 00:20:32.320]   tem esteira de produtos, não
+[00:20:32.320 --> 00:20:33.020]   tem funil.
+[00:20:33.020 --> 00:20:35.090]   Essa é a minha persona, mas
+[00:20:35.090 --> 00:20:37.260]   elas são diferentes ao longo
+[00:20:37.260 --> 00:20:39.800]   das necessidades, ou seja, o
+[00:20:39.800 --> 00:20:42.100]   Expert360 é um curso online
+[00:20:42.100 --> 00:20:43.860]   para quem quer fazer sozinho,
+[00:20:43.860 --> 00:20:46.140]   no seu tempo, sem pressão, mais
+[00:20:46.140 --> 00:20:46.920]   barato.
+[00:20:46.920 --> 00:20:49.520]   E aí o que é? Um curso completo
+[00:20:49.520 --> 00:20:51.650]   que ela faz sozinha, tem dentro
+[00:20:51.650 --> 00:20:53.910]   todos os meus módulos, tem um
+[00:20:53.910 --> 00:20:56.030]   agente de IA, então inicialmente
+[00:20:56.030 --> 00:20:57.340]   eu ia vender o curso só com a
+[00:20:57.340 --> 00:20:59.360]   teoria, só que hoje eu, Carol,
+[00:20:59.360 --> 00:21:01.830]   no mundo que nós estamos atualmente,
+[00:21:01.830 --> 00:21:03.840]   não acredito mais em produtos
+[00:21:03.840 --> 00:21:05.060]   sem IA nenhuma.
+[00:21:05.060 --> 00:21:07.660]   Então se você está criando
+[00:21:07.660 --> 00:21:09.920]   agora qualquer produto, tem que
+[00:21:09.920 --> 00:21:12.270]   ter uma IA, o seu PDF, envia um
+[00:21:12.270 --> 00:21:14.620]   PDF que ensine a usar a IA, não
+[00:21:14.620 --> 00:21:16.680]   consigo mais imaginar um
+[00:21:16.680 --> 00:21:18.980]   produto sem nenhuma entrega de
+[00:21:18.980 --> 00:21:21.280]   IA, não vejo valor, não acredito
+[00:21:21.280 --> 00:21:22.560]   que seja competitivo,
+[00:21:22.560 --> 00:21:24.270]   principalmente se você está
+[00:21:24.270 --> 00:21:25.000]   chegando agora.
+[00:21:25.000 --> 00:21:26.770]   Pensa, você está chegando agora,
+[00:21:26.770 --> 00:21:28.410]   você não tem nome, você não mal
+[00:21:28.410 --> 00:21:30.340]   tem seguidores, não tem audiência,
+[00:21:30.340 --> 00:21:31.850]   se você chega com um produto só
+[00:21:31.850 --> 00:21:33.410]   um curso gravado igual o tiozinho
+[00:21:33.410 --> 00:21:35.080]   lá que tem um monte, um grande
+[00:21:35.080 --> 00:21:36.350]   player, por que eu vou escolher
+[00:21:36.350 --> 00:21:36.740]   você?
+[00:21:36.740 --> 00:21:38.540]   Agora não, você é pequeno, mas
+[00:21:38.540 --> 00:21:40.150]   você já vem com seis agentes de
+[00:21:40.150 --> 00:21:41.720]   IA, um para cada módulo, por
+[00:21:41.720 --> 00:21:44.150]   quê? Porque a minha teoria do
+[00:21:44.150 --> 00:21:46.360]   curso é a base para entender,
+[00:21:46.360 --> 00:21:48.080]   mas a IA que faz com ele, a
+[00:21:48.080 --> 00:21:49.740]   gente vai te conduzindo.
+[00:21:49.740 --> 00:21:51.510]   Eu te trago o quê? A base de
+[00:21:51.510 --> 00:21:53.670]   conhecimento para você entender
+[00:21:53.670 --> 00:21:55.350]   o que a gente faz e conseguir
+[00:21:55.350 --> 00:21:57.310]   também ajustar, senão a gente
+[00:21:57.310 --> 00:21:58.820]   fica largado na mão do agente,
+[00:21:58.820 --> 00:22:00.240]   a gente segue do jeito dele,
+[00:22:00.240 --> 00:22:01.360]   por isso que é importante a
+[00:22:01.360 --> 00:22:02.570]   gente ter o conhecimento, é por
+[00:22:02.570 --> 00:22:03.660]   isso que eu falo que o ser
+[00:22:03.660 --> 00:22:05.520]   humano não vai ser substituído
+[00:22:05.520 --> 00:22:05.880]   pela IA.
+[00:22:05.880 --> 00:22:07.450]   Quem que vai dar as orientações,
+[00:22:07.450 --> 00:22:08.820]   sei isso que eu quero, sei isso
+[00:22:08.820 --> 00:22:10.310]   que eu não quero? Você tem sua
+[00:22:10.310 --> 00:22:12.050]   vivência, você tem sua história,
+[00:22:12.050 --> 00:22:13.400]   ela tem um monte de conhecimento
+[00:22:13.400 --> 00:22:14.590]   da internet e ela aprendeu a
+[00:22:14.590 --> 00:22:16.150]   usar isso, mas você fala, não,
+[00:22:16.150 --> 00:22:17.620]   traz mais para cá, não, traz
+[00:22:17.620 --> 00:22:19.010]   mais para cá, então tudo que eu
+[00:22:19.010 --> 00:22:21.080]   faço com a IA, eu acabo corrigindo
+[00:22:21.080 --> 00:22:22.690]   ela mesmo que a IA faça coisas
+[00:22:22.690 --> 00:22:24.280]   maravilhosas para a gente.
+[00:22:24.280 --> 00:22:25.680]   E aí por que eu criei o info
+[00:22:25.680 --> 00:22:27.740]   produto expert 360? Porque ele
+[00:22:27.740 --> 00:22:29.610]   é um método completo que você
+[00:22:29.610 --> 00:22:31.270]   faz no seu ritmo, sem depender
+[00:22:31.270 --> 00:22:32.880]   de agenda, tem gente que não
+[00:22:32.880 --> 00:22:34.910]   consegue participar nas sessões,
+[00:22:34.910 --> 00:22:37.110]   as minhas sessões são à tarde,
+[00:22:37.110 --> 00:22:38.280]   então ela não depende de agenda,
+[00:22:38.280 --> 00:22:40.580]   é mais barato, quer estudar sozinha,
+[00:22:40.580 --> 00:22:42.370]   é um orçamento mais barato,
+[00:22:42.370 --> 00:22:44.880]   para essa pessoa, quem é ela?
+[00:22:44.880 --> 00:22:46.440]   Não tem estrutura de método
+[00:22:46.440 --> 00:22:48.720]   definido, porque é desde o zero.
+[00:22:48.720 --> 00:22:51.320]   Aqui, ela faz as primeiras vendas,
+[00:22:51.320 --> 00:22:52.720]   só com o curso online ela
+[00:22:52.720 --> 00:22:54.590]   consegue fazer as primeiras
+[00:22:54.590 --> 00:22:56.440]   vendas que eu tenho dentro da
+[00:22:56.440 --> 00:22:58.810]   metodologia, o roteiro das vendas
+[00:22:58.810 --> 00:23:00.910]   secretas, como ela faz as vendas
+[00:23:00.910 --> 00:23:02.970]   secretas para validar o produto
+[00:23:02.970 --> 00:23:03.920]   dela.
+[00:23:03.920 --> 00:23:05.780]   Aí agora não, quero fazer em
+[00:23:05.780 --> 00:23:07.850]   grupo, temos o fazemos juntos,
+[00:23:07.850 --> 00:23:09.670]   e dentro da mentoria, eu tenho
+[00:23:09.670 --> 00:23:11.330]   duas mentorias, em grupo e
+[00:23:11.330 --> 00:23:13.360]   individual, o que que muda? As
+[00:23:13.360 --> 00:23:15.540]   duas têm jornada de 12 meses,
+[00:23:15.540 --> 00:23:16.760]   uma em grupo e a outra é
+[00:23:16.760 --> 00:23:18.840]   individual, todas têm agente de
+[00:23:18.840 --> 00:23:21.380]   IA, existe por que? Para validar
+[00:23:21.380 --> 00:23:23.240]   com pessoas ao seu lado, porque
+[00:23:23.240 --> 00:23:25.510]   apesar desses agentes serem os
+[00:23:25.510 --> 00:23:27.460]   mesmos, todas as vezes a gente
+[00:23:27.460 --> 00:23:29.570]   tem alguém de, tá certo mesmo?
+[00:23:29.570 --> 00:23:30.650]   Você concorda com a resposta do
+[00:23:30.650 --> 00:23:32.330]   agente? Ele montou essa persona,
+[00:23:32.330 --> 00:23:33.280]   o que você acha?
+[00:23:33.280 --> 00:23:35.300]   Para onde eu vejo? Porque como
+[00:23:35.300 --> 00:23:37.210]   eu tenho mais vivência de método,
+[00:23:37.210 --> 00:23:38.650]   você vai ter uma visão da Carol
+[00:23:38.650 --> 00:23:40.390]   sobre o seu resultado com o agente,
+[00:23:40.390 --> 00:23:42.320]   senão você vai fazer sozinha.
+[00:23:42.320 --> 00:23:43.880]   Para quem? Para quem trava,
+[00:23:43.880 --> 00:23:45.570]   para quem não tem certeza, para
+[00:23:45.570 --> 00:23:47.140]   pessoas inseguras, para quem
+[00:23:47.140 --> 00:23:48.520]   quer que eu valido, porque
+[00:23:48.520 --> 00:23:49.840]   antes de você ir para a sua
+[00:23:49.840 --> 00:23:52.240]   primeira venda, eu faço validação.
+[00:23:52.240 --> 00:23:53.960]   E a minha validação, eu falo
+[00:23:53.960 --> 00:23:56.360]   validação, mas não é a validação,
+[00:23:56.360 --> 00:23:58.170]   eu faço aprovação, porque a
+[00:23:58.170 --> 00:23:59.990]   única forma de você validar é
+[00:23:59.990 --> 00:24:01.870]   pessoas pagando e eu não pedindo
+[00:24:01.870 --> 00:24:03.860]   para os meus alunos, eu falo,
+[00:24:03.860 --> 00:24:05.310]   tá coerente, tá aprovado, vai
+[00:24:05.310 --> 00:24:06.900]   para o campo, e aí um cliente
+[00:24:06.900 --> 00:24:08.370]   real tem que validar, só o
+[00:24:08.370 --> 00:24:10.350]   mercado valida, não acredite em
+[00:24:10.350 --> 00:24:12.060]   nada, uma IA nenhuma vai validar
+[00:24:12.060 --> 00:24:13.870]   o seu produto, só o mercado vai
+[00:24:13.870 --> 00:24:14.480]   validar.
+[00:24:14.480 --> 00:24:16.010]   E o que faço também dentro da
+[00:24:16.010 --> 00:24:17.640]   mentoria, é olhar para as suas
+[00:24:17.640 --> 00:24:19.580]   sessões que você fez, falar, oh,
+[00:24:19.580 --> 00:24:21.260]   aqui errou aqui, faltou aqui,
+[00:24:21.260 --> 00:24:23.000]   que tal fazer isso? A gente vai
+[00:24:23.000 --> 00:24:24.570]   melhorando juntos esse momento
+[00:24:24.570 --> 00:24:26.240]   de validação secreta dela.
+[00:24:26.240 --> 00:24:27.900]   E aí ela chega na primeira venda
+[00:24:27.900 --> 00:24:29.310]   em quatro meses, e o resto a
+[00:24:29.310 --> 00:24:30.970]   gente trabalha depois que você
+[00:24:30.970 --> 00:24:32.600]   validou, aí a gente trabalha
+[00:24:32.600 --> 00:24:34.700]   escala, novas criações de produtos,
+[00:24:34.700 --> 00:24:36.690]   novos funícios, mas a minha
+[00:24:36.690 --> 00:24:38.880]   promessa é a validação.
+[00:24:38.880 --> 00:24:40.780]   Ou seja, essa pessoa segue o roteiro
+[00:24:40.780 --> 00:24:42.530]   certinho, dentro da mentoria,
+[00:24:42.530 --> 00:24:44.090]   em quatro meses ela alcançou o
+[00:24:44.090 --> 00:24:46.290]   resultado do método, a continuação
+[00:24:46.290 --> 00:24:46.720]   é o quê?
+[00:24:46.720 --> 00:24:48.520]   Se posicionar, criar conteúdo,
+[00:24:48.520 --> 00:24:50.130]   escalar, ganhar audiência,
+[00:24:50.130 --> 00:24:51.820]   outros funícios, aí é ganhar
+[00:24:51.820 --> 00:24:53.500]   dinheiro de verdade, eu não
+[00:24:53.500 --> 00:24:54.920]   prometo o ganho de dinheiro de
+[00:24:54.920 --> 00:24:56.540]   verdade, mas eu entrego o ganho
+[00:24:56.540 --> 00:24:57.990]   de dinheiro de verdade depois
+[00:24:57.990 --> 00:24:58.800]   que ser valida.
+[00:24:58.800 --> 00:25:00.000]   Mas a minha preocupação com a
+[00:25:00.000 --> 00:25:01.440]   persona hoje aqui ó, vou
+[00:25:01.440 --> 00:25:02.730]   começar, não adianta falar em
+[00:25:02.730 --> 00:25:04.480]   milhões ou em centenas de milhar
+[00:25:04.480 --> 00:25:05.380]   se vocês não fizeram o primeiro
+[00:25:05.380 --> 00:25:06.950]   um real, a primeira venda com
+[00:25:06.950 --> 00:25:08.880]   produto com método estruturado,
+[00:25:08.880 --> 00:25:09.040]   entendeu?
+
+[00:25:00.000 --> 00:25:01.410]   a minha persona hoje, aqui ó,
+[00:25:01.410 --> 00:25:02.740]   vou começar. Não adianta falar
+[00:25:02.740 --> 00:25:04.680]   em milhões ou centenas de milhar
+[00:25:04.680 --> 00:25:05.780]   se vocês não fizeram o primeiro
+[00:25:05.780 --> 00:25:07.280]   um real, a primeira venda com
+[00:25:07.280 --> 00:25:08.500]   produto com método estruturado,
+[00:25:08.500 --> 00:25:09.000]   entendeu?
+[00:25:09.000 --> 00:25:10.670]   Então a nossa comunicação, eu
+[00:25:10.670 --> 00:25:12.270]   enxugo a comunicação mesmo que
+[00:25:12.270 --> 00:25:13.790]   eu entregue mais, mas o meu foco
+[00:25:13.790 --> 00:25:15.000]   não é essa persona.
+[00:25:15.000 --> 00:25:16.840]   E a diferença entre mentoria em
+[00:25:16.840 --> 00:25:18.880]   grupo para individual tá dentro
+[00:25:18.880 --> 00:25:20.420]   da minha persona. A minha
+[00:25:20.420 --> 00:25:22.240]   persona do individual, ela é
+[00:25:22.240 --> 00:25:24.000]   uma pessoa mais reservada.
+[00:25:24.000 --> 00:25:25.690]   No geral ela tem mais, ela é
+[00:25:25.690 --> 00:25:27.930]   mais velha, tem acima de 50,
+[00:25:27.930 --> 00:25:29.500]   ela já tem mais autoridade no
+[00:25:29.500 --> 00:25:31.440]   off, ou seja, ela tem mais
+[00:25:31.440 --> 00:25:33.000]   resistência em se expor.
+[00:25:33.000 --> 00:25:34.520]   E ela não quer ser amadora nem
+[00:25:34.520 --> 00:25:35.990]   no grupo de alunos, ela não
+[00:25:35.990 --> 00:25:37.660]   quer participar de grupo, não
+[00:25:37.660 --> 00:25:39.250]   quer, ela quer só resolver os
+[00:25:39.250 --> 00:25:40.000]   BO dela aqui.
+[00:25:40.000 --> 00:25:41.940]   E aí eu criei outra muito parecida
+[00:25:41.940 --> 00:25:43.930]   para mentoria individual, para
+[00:25:43.930 --> 00:25:45.660]   essa persona, que é o sprint do
+[00:25:45.660 --> 00:25:47.140]   método que eu faço para a
+[00:25:47.140 --> 00:25:48.000]   pessoa.
+[00:25:48.000 --> 00:25:49.690]   Então as pessoas que não têm
+[00:25:49.690 --> 00:25:51.840]   tempo, não têm prioridade, não
+[00:25:51.840 --> 00:25:53.850]   querem aprender método, não querem
+[00:25:53.850 --> 00:25:55.550]   nada da base de conhecimento de
+[00:25:55.550 --> 00:25:57.000]   perso, não quer nada.
+[00:25:57.000 --> 00:25:58.170]   Ela quer o produto dela porque
+[00:25:58.170 --> 00:25:59.700]   ela sabe ensinar. Eu sou dentista,
+[00:25:59.700 --> 00:26:00.960]   eu quero ensinar a tirar dente,
+[00:26:00.960 --> 00:26:02.000]   é isso que eu quero.
+[00:26:02.000 --> 00:26:03.160]   Carol, eu não quero aprender
+[00:26:03.160 --> 00:26:04.600]   como fazer método, eu quero ensinar
+[00:26:04.600 --> 00:26:05.000]   dente.
+[00:26:05.000 --> 00:26:07.600]   Então eu faço para a pessoa
+[00:26:07.600 --> 00:26:09.820]   toda a metodologia, toda a
+[00:26:09.820 --> 00:26:13.020]   persona, a promessa, a estrutura
+[00:26:13.020 --> 00:26:15.420]   da mentoria dela ou do curso
+[00:26:15.420 --> 00:26:16.000]   online.
+[00:26:16.000 --> 00:26:17.370]   E ela só vai se encontrando
+[00:26:17.370 --> 00:26:19.000]   comigo a cada semana validando.
+[00:26:19.000 --> 00:26:21.640]   Ok, ok, ok. Então em cinco
+[00:26:21.640 --> 00:26:23.000]   semanas eu construo a estrutura
+[00:26:23.000 --> 00:26:24.030]   para ela ter um produto pronto,
+[00:26:24.030 --> 00:26:25.000]   vai lá vender.
+[00:26:25.000 --> 00:26:26.830]   Só que o sprint do método não
+[00:26:26.830 --> 00:26:29.000]   tem essa parte de continuação.
+[00:26:29.000 --> 00:26:30.790]   Não faço validação, não dou suporte,
+[00:26:30.790 --> 00:26:32.000]   não dou acompanhamento.
+[00:26:32.000 --> 00:26:33.920]   Eu emprego, eu te tomo a estrutura,
+[00:26:33.920 --> 00:26:36.000]   você tem seu produto pronto, tchau,
+[00:26:36.000 --> 00:26:38.000]   seja muito bem, tenha sucesso.
+[00:26:38.000 --> 00:26:39.480]   Então no geral, pessoas que fecham
+[00:26:39.480 --> 00:26:40.590]   essa, ao final desse produto,
+[00:26:40.590 --> 00:26:41.930]   falam "tá, eu vou continuar sozinha",
+[00:26:41.930 --> 00:26:43.000]   não, quero a Carol.
+[00:26:43.000 --> 00:26:44.400]   E acaba entrando na mentoria,
+[00:26:44.400 --> 00:26:45.810]   por quê? Porque ela quer o
+[00:26:45.810 --> 00:26:47.480]   acompanhamento de "vamos testar,
+[00:26:47.480 --> 00:26:48.950]   funil, tentar isso, não deu
+[00:26:48.950 --> 00:26:51.000]   certo, vai, volta, vai, volta".
+[00:26:51.000 --> 00:26:52.410]   Então essa aqui é para pessoas
+[00:26:52.410 --> 00:26:53.940]   que não tem tempo, não tem clareza,
+[00:26:53.940 --> 00:26:54.940]   tem um monte de conhecimento
+[00:26:54.940 --> 00:26:56.540]   misturado e não sabe, não quer
+[00:26:56.540 --> 00:26:58.660]   ficar assistindo aula, não quer
+[00:26:58.660 --> 00:26:59.000]   nada.
+[00:26:59.000 --> 00:27:00.470]   E aí o projeto nunca sai do
+[00:27:00.470 --> 00:27:02.150]   papel e essa pessoa quer e não
+[00:27:02.150 --> 00:27:04.000]   faz as coisas acontecerem.
+[00:27:04.000 --> 00:27:05.890]   Então quem ela está partindo,
+[00:27:05.890 --> 00:27:07.910]   ela não tem nada, mas também
+[00:27:07.910 --> 00:27:09.320]   não tem tempo e nem saco para
+[00:27:09.320 --> 00:27:10.000]   fazer.
+[00:27:10.000 --> 00:27:11.530]   Então ela paga, eu faço e
+[00:27:11.530 --> 00:27:13.480]   acabou. Ela vai com a fundação
+[00:27:13.480 --> 00:27:15.320]   pronta e eu ainda entrego um agente
+[00:27:15.320 --> 00:27:17.000]   de arco com base no método dela.
+[00:27:17.000 --> 00:27:18.960]   Todo o método alimenta o agente
+[00:27:18.960 --> 00:27:20.930]   de arco, que ela cria como se
+[00:27:20.930 --> 00:27:22.000]   fosse o suporte.
+[00:27:22.000 --> 00:27:23.400]   Ela não precisa mais contratar
+[00:27:23.400 --> 00:27:24.970]   um suporte para dúvidas técnicas
+[00:27:24.970 --> 00:27:26.680]   para o método dela, para o método
+[00:27:26.680 --> 00:27:28.170]   dela já sai muito melhor que
+[00:27:28.170 --> 00:27:29.000]   muitos por aí.
+[00:27:29.000 --> 00:27:31.600]   Então o que eu quero que você
+[00:27:31.600 --> 00:27:34.320]   responda? Estas cinco perguntas
+[00:27:34.320 --> 00:27:36.780]   e se você não conseguir fazer
+[00:27:36.780 --> 00:27:39.420]   isso, quer dizer que você não
+[00:27:39.420 --> 00:27:42.000]   está, você não tem a clareza
+[00:27:42.000 --> 00:27:44.000]   para criar esse produto.
+[00:27:44.000 --> 00:27:45.850]   Ele está na sua cabeça e ele
+[00:27:45.850 --> 00:27:47.930]   nunca vai sair de forma coerente
+[00:27:47.930 --> 00:27:50.170]   e estruturada, enquanto você
+[00:27:50.170 --> 00:27:52.250]   não definir para quem é, em que
+[00:27:52.250 --> 00:27:54.090]   ponto ela está, em que ponto
+[00:27:54.090 --> 00:27:56.080]   você vai, o que vai ser entregue
+[00:27:56.080 --> 00:27:57.000]   a partir disso.
+[00:27:57.000 --> 00:27:59.940]   Faz sentido? Então eu quero,
+[00:27:59.940 --> 00:28:02.200]   vou colocar aqui um link para
+[00:28:02.200 --> 00:28:04.000]   vocês preencherem.
+[00:28:04.000 --> 00:28:07.930]   Link, perdi o link, vou achar o
+[00:28:07.930 --> 00:28:10.170]   link aqui. É um canvas que eu
+[00:28:10.170 --> 00:28:12.260]   fiz, um modelo que vocês só viram
+[00:28:12.260 --> 00:28:14.000]   um modelo preenchível.
+[00:28:14.000 --> 00:28:20.170]   Então vocês preenchem, pega o
+[00:28:20.170 --> 00:28:26.010]   link, guarda aí, vocês fazem
+[00:28:26.010 --> 00:28:33.320]   depois. Cadê o meu link? Vou
+[00:28:33.320 --> 00:28:39.000]   colocar aqui no chat.
+[00:28:39.000 --> 00:28:40.850]   Coloquei no chat, vocês copiam
+[00:28:40.850 --> 00:28:42.530]   o modelo, preenchem, me dê a
+[00:28:42.530 --> 00:28:44.500]   retorno lá no grupo. Quero ver
+[00:28:44.500 --> 00:28:46.410]   vocês realmente colocando a mão
+[00:28:46.410 --> 00:28:47.000]   na massa.
+[00:28:47.000 --> 00:28:48.480]   Partindo de onde? Dois straight
+[00:28:48.480 --> 00:28:50.050]   checks, que são essas estruturas
+[00:28:50.050 --> 00:28:51.310]   que eu falei, o que tem, o que
+[00:28:51.310 --> 00:28:53.240]   não tem. Sim, não, sim, não,
+[00:28:53.240 --> 00:28:54.000]   sim, não.
+[00:28:54.000 --> 00:28:55.350]   Onde ela chega? Chegou, não
+[00:28:55.350 --> 00:28:56.940]   chegou, chegou, não chegou,
+[00:28:56.940 --> 00:28:58.430]   chegou, não chegou. Eu quero
+[00:28:58.430 --> 00:28:59.940]   que vocês realmente coloquem
+[00:28:59.940 --> 00:29:01.000]   isso em prática.
+[00:29:01.000 --> 00:29:02.550]   Me dê um retorno, se estão
+[00:29:02.550 --> 00:29:04.930]   fazendo, se fizeram, se isso clareou,
+[00:29:04.930 --> 00:29:06.480]   que eu tenho certeza que muitas
+[00:29:06.480 --> 00:29:08.160]   vezes estão criando produtos
+[00:29:08.160 --> 00:29:10.220]   aleatórios sem essa clareza de
+[00:29:10.220 --> 00:29:11.000]   jornada.
+[00:29:11.000 --> 00:29:12.160]   E a jornada do seu método, ele
+[00:29:12.160 --> 00:29:13.600]   está aqui dentro, tá? Daqui que
+[00:29:13.600 --> 00:29:15.630]   vem os módulos, quantos módulos,
+[00:29:15.630 --> 00:29:18.000]   quantas alas, quantos entregáveis,
+[00:29:18.000 --> 00:29:20.220]   que é de onde ela está até onde
+[00:29:20.220 --> 00:29:21.000]   ela vai.
+[00:29:21.000 --> 00:29:22.460]   Todo mundo fala "Como criar o
+[00:29:22.460 --> 00:29:24.200]   método?" Ele fala "Ai, da onde
+[00:29:24.200 --> 00:29:25.620]   está o A e o B?" Esse é o A e o
+[00:29:25.620 --> 00:29:27.360]   B. Mas sem isso aqui, ó, o pra
+[00:29:27.360 --> 00:29:29.090]   que é em que nível que ela está,
+[00:29:29.090 --> 00:29:31.080]   seu produto vai ficar capengo,
+[00:29:31.080 --> 00:29:32.000]   confie em mim.
+[00:29:32.000 --> 00:29:35.060]   Então, se você vai tentar, tentou,
+[00:29:35.060 --> 00:29:37.320]   não conseguir, eu quero que
+[00:29:37.320 --> 00:29:39.470]   você tenha a certeza que não é
+[00:29:39.470 --> 00:29:40.850]   por falta de ideia, não é por
+[00:29:40.850 --> 00:29:42.660]   falta de conhecimento, é falta
+[00:29:42.660 --> 00:29:44.000]   de estrutura.
+[00:29:44.000 --> 00:29:46.600]   Então vocês talvez não consigam
+[00:29:46.600 --> 00:29:48.950]   colocar todo esse conhecimento
+[00:29:48.950 --> 00:29:51.100]   de uma forma clara. E muitas
+[00:29:51.100 --> 00:29:53.250]   vezes essa falta de clareza é
+[00:29:53.250 --> 00:29:55.230]   falta de definição da sua
+[00:29:55.230 --> 00:29:57.000]   persona de forma mais aprofundada
+[00:29:57.000 --> 00:30:00.130]   pra você enxergar esses contextos
+[00:30:00.130 --> 00:30:01.000]   todos.
+
+[00:30:00.000 --> 00:30:02.600]   e Contextos Todos. Então quanto
+[00:30:02.600 --> 00:30:03.400]   melhor você for em contexto,
+[00:30:03.400 --> 00:30:05.280]   mais você ganha da sua concorrência.
+[00:30:05.280 --> 00:30:06.440]   Lembra que eu expliquei sobre a
+[00:30:06.440 --> 00:30:08.220]   concorrência? Você não concorre
+[00:30:08.220 --> 00:30:10.600]   só com o seu nicho. Você concorre
+[00:30:10.600 --> 00:30:12.260]   com o único 10 mil que eu tenho
+[00:30:12.260 --> 00:30:13.880]   para escolher entre todos vocês
+[00:30:13.880 --> 00:30:15.230]   que tem o produto do mesmo
+[00:30:15.230 --> 00:30:15.400]   valor.
+[00:30:15.400 --> 00:30:16.980]   Então se eu só tenho um 10 mil
+[00:30:16.980 --> 00:30:18.170]   para gastar e cada um tem um
+[00:30:18.170 --> 00:30:20.480]   produto de 10 mil aqui e tem a
+[00:30:20.480 --> 00:30:21.000]   Karol como
+[00:30:21.000 --> 00:30:23.120]   persona, quem vai ganhar Karol?
+[00:30:23.120 --> 00:30:24.930]   Quem entender mais do meu
+[00:30:24.930 --> 00:30:26.680]   contexto e falar é mais fácil,
+[00:30:26.680 --> 00:30:27.400]   é mais rápido,
+[00:30:27.400 --> 00:30:30.000]   é mais simples? Eu criei especificamente
+[00:30:30.000 --> 00:30:31.600]   para você ferramentas que cabem
+[00:30:31.600 --> 00:30:32.920]   no seu dia a dia, que
+[00:30:32.920 --> 00:30:35.010]   facilitam o seu dia a dia. Aí
+[00:30:35.010 --> 00:30:36.950]   sim isso vai fazendo sentido
+[00:30:36.950 --> 00:30:38.670]   para as pessoas e aí eu te
+[00:30:38.670 --> 00:30:39.960]   escolho, tá bom?
+[00:30:39.960 --> 00:30:41.520]   Então se você não conseguiu
+[00:30:41.520 --> 00:30:43.360]   responder, não tem cloreza, não
+[00:30:43.360 --> 00:30:45.050]   tem tempo, não tem saco. Eu
+[00:30:45.050 --> 00:30:45.600]   tenho
+[00:30:45.600 --> 00:30:47.500]   certeza que o sprint do método
+[00:30:47.500 --> 00:30:49.530]   é a sua melhor saída, melhor
+[00:30:49.530 --> 00:30:51.240]   solução no momento que eu vou
+[00:30:51.240 --> 00:30:52.650]   construir para você, sua
+[00:30:52.650 --> 00:30:54.240]   persona, sua promessa, o seu
+[00:30:54.240 --> 00:30:56.700]   meta, seu hipoproduto, os roteiros
+[00:30:56.700 --> 00:30:57.120]   do que
+[00:30:57.120 --> 00:30:58.700]   você vai fazer, se vai ser uma
+[00:30:58.700 --> 00:31:00.500]   mentoria, o roteiro da mentoria,
+[00:31:00.500 --> 00:31:02.520]   estrutura da mentoria, quais
+[00:31:02.520 --> 00:31:02.920]   são
+[00:31:02.920 --> 00:31:04.470]   todas as ferramentas que você
+[00:31:04.470 --> 00:31:06.110]   vai usar da mentoria, você sai
+[00:31:06.110 --> 00:31:07.920]   com a sua oferta linda e pronta.
+[00:31:07.920 --> 00:31:08.800]   E ainda
+[00:31:08.800 --> 00:31:10.450]   eu te dou até o roteiro de como
+[00:31:10.450 --> 00:31:12.110]   fazer as suas vendas secretas
+[00:31:12.110 --> 00:31:14.120]   para você validar. A gente só
+[00:31:14.120 --> 00:31:14.300]   vai se
+[00:31:14.300 --> 00:31:15.550]   encontrando toda semana e você
+[00:31:15.550 --> 00:31:16.900]   vai falando Karol, tá dando
+[00:31:16.900 --> 00:31:18.230]   certo, Karol, esse é o caminho,
+[00:31:18.230 --> 00:31:18.600]   Karol,
+[00:31:18.600 --> 00:31:20.700]   gostei, Karol, ajusta aqui. Eu
+[00:31:20.700 --> 00:31:23.080]   faço para você no sprint do método.
+[00:31:23.080 --> 00:31:24.680]   Então o que fica dessa live
+[00:31:24.680 --> 00:31:27.170]   hoje que eu quero que você leve
+[00:31:27.170 --> 00:31:29.240]   para cá? Que o infoproduto não
+[00:31:29.240 --> 00:31:31.960]   nasce nem só da sua ideia e nem
+[00:31:31.960 --> 00:31:33.530]   todos os seus conhecimentos,
+[00:31:33.530 --> 00:31:35.890]   não é aleatório. Você precisa
+[00:31:35.890 --> 00:31:37.440]   responder a essas cinco perguntas.
+[00:31:37.440 --> 00:31:39.370]   O partido de chegada tem que
+[00:31:39.370 --> 00:31:42.070]   ter checkpoints, objetivos. Saiu
+[00:31:42.070 --> 00:31:44.280]   daqui, chegou aqui. Se não vai
+[00:31:44.280 --> 00:31:45.740]   ser uma descrição vaga, você
+[00:31:45.740 --> 00:31:47.220]   não vai ter prova, as pessoas
+[00:31:47.220 --> 00:31:49.080]   não vão sentir a evolução do
+[00:31:49.080 --> 00:31:49.320]   seu
+[00:31:49.320 --> 00:31:51.870]   produto e cada oferta, cada
+[00:31:51.870 --> 00:31:53.870]   produto, ele tem que ter um porquê,
+[00:31:53.870 --> 00:31:56.100]   um ponto de partida ou um ponto
+[00:31:56.100 --> 00:31:56.160]   de
+[00:31:56.160 --> 00:31:58.060]   chegada diferente, mesmo que
+[00:31:58.060 --> 00:32:00.090]   seja a mesma persona e eu prefiro
+[00:32:00.090 --> 00:32:01.960]   que você trabalhe com a mesma
+[00:32:01.960 --> 00:32:02.520]   persona.
+[00:32:02.520 --> 00:32:04.350]   E sem um blueprint, você não
+[00:32:04.350 --> 00:32:06.450]   sabe se está transformando
+[00:32:06.450 --> 00:32:08.690]   alguém de verdade, dificulta
+[00:32:08.690 --> 00:32:08.840]   muito
+[00:32:08.840 --> 00:32:11.380]   mais as suas vendas. Se fez
+[00:32:11.380 --> 00:32:12.770]   sentido para vocês, vamos
+[00:32:12.770 --> 00:32:15.010]   comentar sprint, nós vamos
+[00:32:15.010 --> 00:32:16.080]   conversar sobre
+[00:32:16.080 --> 00:32:17.890]   essa metodologia, esse serviço
+[00:32:17.890 --> 00:32:19.490]   que eu passo por vocês. Agora
+[00:32:19.490 --> 00:32:21.680]   eu vou parar de compartilhar e
+[00:32:21.680 --> 00:32:22.040]   abrindo
+[00:32:22.040 --> 00:32:23.660]   para quem quiser conversar,
+[00:32:23.660 --> 00:32:25.320]   tirar uma dúvida ou falar o que
+[00:32:25.320 --> 00:32:27.120]   achou dessa aula, se aprendeu,
+[00:32:27.120 --> 00:32:29.680]   se fez sentido. Alguém quer
+[00:32:29.680 --> 00:32:31.750]   falar? Leandro, você que está
+[00:32:31.750 --> 00:32:34.110]   inaugurando aqui hoje, a Sandra
+[00:32:34.110 --> 00:32:34.840]   vem toda
+[00:32:34.840 --> 00:32:36.570]   semana. E você, o que você achou
+[00:32:36.570 --> 00:32:37.980]   da aula? Como que está o seu
+[00:32:37.980 --> 00:32:38.880]   infoproduto?
+[00:32:38.880 --> 00:32:42.810]   Então, então eu estou construindo
+[00:32:42.810 --> 00:32:45.270]   ainda dentro da metodologia,
+[00:32:45.270 --> 00:32:49.560]   dentro da mentoria, as ferramentas,
+[00:32:49.560 --> 00:32:51.830]   né? E aí eu estou na última ferramenta
+[00:32:51.830 --> 00:32:53.490]   de metodologia entrando para
+[00:32:53.490 --> 00:32:54.960]   produtos, e aí vê o que
+[00:32:54.960 --> 00:32:56.770]   você falou aqui, com, sabe,
+[00:32:56.770 --> 00:32:58.650]   reduzindo, às vezes a gente vai
+[00:32:58.650 --> 00:33:01.320]   naquele monte de informação, de
+[00:33:01.320 --> 00:33:01.600]   forma,
+[00:33:01.600 --> 00:33:04.100]   você vai se perdendo e você vai
+[00:33:04.100 --> 00:33:06.280]   se apaixonando pela técnica,
+[00:33:06.280 --> 00:33:08.380]   pelo lado profissional e a
+[00:33:08.380 --> 00:33:08.640]   pessoa

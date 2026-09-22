@@ -42,6 +42,12 @@ nomes_corretos:
 correcoes_automaticas:
   # - errado: "Sue Nome"     # como whisper transcreveu errado
   #   correto: "Seu Nome"
+  - errado: "Carol"          # whisper ouve "Karol" e escreve foneticamente errado
+    correto: "Karol"
+  - errado: "lojas âmparas"  # achado 21/09 (Live 24) — termo real e "lojas âncora"
+    correto: "lojas âncora"
+  - errado: "H&R"            # achado 21/09 (Live 24) — contexto de roupa, e H&M mesmo
+    correto: "H&M"
 
 # Correcoes de acentuacao recorrentes (whisper as vezes esquece acento em pt-BR).
 # O @scribe varre o transcript e aplica essas. As 2 abaixo sao quase universais
