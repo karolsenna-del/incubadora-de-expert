@@ -1,0 +1,56 @@
+critical_audit:
+  frameworks:
+    total_in_mapa: 4
+    found_in_output: 4
+    missing: []
+    coverage: "100.0%"
+
+  cardinal_rules:
+    total_in_mapa: 7
+    total_in_scope: 6
+    found_in_volumes: 6
+    found_in_regras_doc: 6
+    missing_from_volumes: []
+    missing_from_regras: []
+    out_of_scope: ["Preco nao e o primeiro criterio de decisao de compra (unica evidencia no bloco de Q&A, descartado do plano de volumes)"]
+    correction_applied: "Regra 'Preco nao e o primeiro criterio' estava incorretamente atribuida ao Passo 3 em REGRAS-CARDINAIS.md (item 14) — na verdade sua unica evidencia esta no bloco de Q&A, fora do escopo aprovado. Removida do REGRAS-CARDINAIS.md e marcada como fora de escopo no MAPA-TERRITORIAL.md, secao 5."
+    coverage: "100.0% (6/6 regras em escopo)"
+
+  glossary_terms:
+    total_in_mapa: 12
+    found_in_glossary: 12
+    missing: []
+    coverage: "100.0%"
+
+  cross_volume:
+    concepts_in_multiple_volumes: 0
+    contradictions: 0
+    contradiction_details: []
+    invalid_cross_refs: 0
+    note: "KB de volume unico — nao ha risco de contradicao entre volumes."
+
+  actionable_artifacts:
+    total_in_mapa: 7
+    found_in_volumes: 7
+    found_in_repertorio: 7
+    missing_from_volumes: []
+    missing_from_repertorio: []
+    by_type:
+      templates: "0/0"
+      formulas: "0/0"
+      benchmarks: "2/2"
+      checklists: "1/1"
+      workflows: "1/1"
+      scripts: "4/4"
+      swipes: "0/0"
+      reference_tables: "2/2"
+    coverage: "100.0%"
+
+  repertorio_completeness:
+    sections_present: "11/11"
+    items_with_provenance: "17/17"
+    items_with_cross_ref: "17/17"
+    orphan_items: 0
+
+  overall_verdict: "PASS"
+  critical_missing: []

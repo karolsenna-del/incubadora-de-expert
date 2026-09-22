@@ -17,11 +17,25 @@
     "phase_4": "completed",
     "phase_5": "completed"
   },
-  "sources": ["agents/etlmaker/kbs/sessao-estrategica/"],
-  "total_kfs": 41,
+  "sources": ["agents/etlmaker/kbs/sessao-estrategica/", "agents/etlmaker/kbs/os-7-passos-da-venda-dani-martins/"],
+  "total_kfs": 55,
   "domains_identified": 9,
   "quality_gates_passed": ["QG-MF-001", "QG-MF-002", "QG-MF-003", "QG-MF-004", "QG-MF-005"],
-  "playback_summary": "Usuaria validou o mapa com 3 ajustes: (1) nome padrao 'Sessao de Vendas Secretas', (2) framework de sessao fundido em 5 etapas proprio (nao escolha de 1 dos 3), (3) novo dominio core 'Qualificacao de Lead Pre-Sessao' com 3 KFs adicionados. Aprovacao final: 'perfeito, siga'.",
+  "playback_summary": "Usuaria validou o mapa original com 3 ajustes: (1) nome padrao 'Sessao de Vendas Secretas', (2) framework de sessao fundido em 5 etapas proprio (nao escolha de 1 dos 3), (3) novo dominio core 'Qualificacao de Lead Pre-Sessao' com 3 KFs adicionados. Aprovacao final: 'perfeito, siga'.",
+  "update_22_09_2026": {
+    "reason": "Usuaria pediu para adicionar Dani Martins como 4o expert fundido (KB 'Os 7 Passos da Venda', processada pelo ETLmaker na mesma sessao)",
+    "status": "completed",
+    "kfs_added": 14,
+    "new_total_kfs": 55,
+    "tensions_resolvidas": [
+      "DISC simplificado pra eixo de ritmo, convivendo com Leitura de Lead de Karol por MOMENTO (pre-sessao vs ao vivo)",
+      "Objecao fundida em sequencia: acolhe (Dani) -> pergunta (Karol) -> tabela de objecoes",
+      "SPIN adotado como tecnica-padrao de diagnostico, RX de Lourival mantido como framework de sessao"
+    ],
+    "vocabulario_decidido": "so 'SPIN' ativo; ZOPA/DISC-completo/dissonancia cognitiva excluidos por pedido da usuaria",
+    "artefatos_atualizados": ["knowledge-facets.yaml", "domain-map.yaml", "voice-profile.yaml", "source-manifest.yaml", "04-forged/agents/vendedor-secreto.md", "04-forged/data/vendedor-secreto-kb.md", "04-forged/config.yaml", "04-forged/tasks/copiloto-conducao.md", "e copias sincronizadas em agents/vendedor-secreto/"],
+    "version_bump": "1.0.0 -> 2.0.0"
+  },
   "completed_at": "2026-09-14",
   "installed": {
     "path": "agents/vendedor-secreto/",

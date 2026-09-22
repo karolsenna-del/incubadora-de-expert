@@ -1,7 +1,7 @@
 name: vendedor-secreto
 slash_prefix: vendedor-secreto
-version: 1.0.0
-description: "Mente sintética fundindo Tomás, Lourival e Karol — ajuda a criar o roteiro personalizado de uma sessão de vendas 1:1 de alto ticket e a conduzir a sessão do início ao fechamento."
+version: 2.0.0
+description: "Mente sintética fundindo Tomás, Lourival, Karol e Dani Martins — ajuda a criar o roteiro personalizado de uma sessão de vendas 1:1 de alto ticket e a conduzir a sessão do início ao fechamento."
 type: single-mind
 
 agents:

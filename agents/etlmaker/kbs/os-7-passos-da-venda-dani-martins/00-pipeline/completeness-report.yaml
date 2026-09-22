@@ -1,0 +1,58 @@
+completeness_report:
+  version: "3.0"
+  kb_name: "Os 7 Passos da Venda — Dani Martins"
+  kb_slug: "os-7-passos-da-venda-dani-martins"
+  generated_at: "2026-09-22T01:00:00-03:00"
+  generated_by: "ETLmaker v3.0"
+
+  source:
+    author: "Dani Martins"
+    total_sources: 1
+    total_words: 12646
+    formats: ["transcricao (video ao vivo)"]
+
+  pipeline:
+    phase_0_setup: "completed"
+    phase_1_territorial: "completed"
+    phase_2_composition: "completed"
+    phase_3_integration: "completed"
+    phase_4_validation: "completed"
+
+  volumes:
+    - id: "VOL-01"
+      title: "Os 7 Passos da Venda: Framework Completo"
+      file: "VOL-01-framework-completo.md"
+      lines: 312
+      tables: 8
+      examples: 6
+      provenance_refs: 49
+      domains: ["Framework dos 7 Passos", "Perfil comportamental (DISC)", "SPIN Selling aplicado", "Psicologia da decisao de compra", "Tratamento de objecoes", "Negociacao e fechamento", "Indicacao/recomendacao", "Mentalidade do vendedor"]
+      qg_003_pass: true
+
+  transversal_docs:
+    readme: true
+    regras_cardinais: true
+    repertorio: true
+    glossario: true
+
+  quality_gates:
+    QG-ETL-000: "PASSED"
+    QG-ETL-001: "PASSED"
+    QG-ETL-002: "PASSED"
+    QG-ETL-003: "PASSED"
+    QG-ETL-004: "PASSED"
+    QG-ETL-005: "PASSED"
+
+  totals:
+    total_volumes: 1
+    total_lines: 312
+    total_tables: 8
+    total_examples: 6
+    total_provenance_refs: 49
+
+  scope_notes:
+    - "Bloco de Q&A da turma (proposto como VOL-02) descartado a pedido do expert em 22/09/2026 — permanece disponivel apenas na fonte normalizada."
+    - "Modulo complementar 'como decifrar o perfil do cliente' (DISC aprofundado), referenciado na aula, nao faz parte desta fonte e nao esta incluido nesta KB."
+
+  verdict: "APPROVED"
+  verdict_notes: "Validacao final concluida. Camada 2 (auditoria exaustiva): PASS apos 1 correcao (regra cardinal mal atribuida, removida). Camada 3 (6-passes estatisticos): score agregado 99.2%, fidelidade 100% (15/15 claims), 0 invencoes. Ver critical-audit-report.yaml e validation-report.yaml."

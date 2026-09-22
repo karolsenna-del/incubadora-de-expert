@@ -1,0 +1,14 @@
+ingestion_manifest:
+  kb_slug: "os-7-passos-da-venda-dani-martins"
+  total_sources: 1
+  total_words: 12646
+  total_sections: 10
+  total_paragraphs: 46
+  sources:
+    - id: "SRC-os-7-passos-da-venda-dani-martins-001"
+      title: "Os 7 Passos da Venda"
+      words: 12646
+      sections: 10
+      paragraphs: 46
+      format: "transcricao (video ao vivo)"
+  timestamp: "2026-09-22T00:10:00-03:00"

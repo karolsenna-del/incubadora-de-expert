@@ -1,0 +1,79 @@
+validation_report:
+  kb_slug: "os-7-passos-da-venda-dani-martins"
+  timestamp: "2026-09-22T01:30:00-03:00"
+  version: "3.0"
+
+  layer_2_verdict: "PASS"
+
+  pass_1_coverage:
+    total_domains_approved_scope: 8
+    domains_covered: 8
+    subtopics_coverage: 100.0
+    uncovered: []
+    note: "Coverage medida contra o plano de volumes APROVADO (MAPA secao 8, pos-ajuste de 22/09/2026). Os dominios 'Posicionamento e precificacao completo' e 'Casos aplicados por segmento' nunca fizeram parte do escopo do VOL-01 — eram integralmente do VOL-02 (Q&A), descartado a pedido do expert. Nao contam como gap."
+    verdict: "PASS"
+
+  pass_2_fidelity:
+    total_checks: 5
+    correct: 5
+    distorted: 0
+    invented: 0
+    fidelity_score: 100.0
+    issues: []
+    note: "Um rotulo nao sustentado pela fonte foi identificado e corrigido ANTES desta verificacao final: a 4a categoria do SPIN estava rotulada como 'N — Geracao de valor / necessidade', mas a instrutora nunca nomeia essa letra explicitamente (diferente de Situacao/Problema/Implicacao, que sao ditas literalmente). Rotulo corrigido para 'Geracao de valor' (sem a letra 'N') em VOL-01."
+    verdict: "PASS"
+
+  pass_2_fidelity_layer_1_combined:
+    camada_1_spot_check: "10/10 correct, 0 invented (ver PLANO-ETL.md log)"
+    camada_3_pass_2: "5/5 correct, 0 invented"
+    combined_fidelity: "15/15 = 100.0%"
+
+  pass_3_richness:
+    volumes:
+      - id: "VOL-01"
+        lines: 312
+        tables: 8
+        examples: 6
+        provenance_refs: 49
+        cardinal_rules: 11
+        metaphors: 1
+        headers: 18
+        lists: 5
+        all_criteria_met: true
+    all_pass: true
+    verdict: "PASS"
+
+  pass_4_voice:
+    consistency_score: 92.0
+    issues: []
+    notes: "Catchphrases ('beleza', 'gente', 'cara', 'deixa eu te falar') preservadas via citacoes diretas verbatim. Terminologia tecnica da autora (SPIN, ZOPA, DISC, dissonancia cognitiva, cebola de objecoes) mantida sem substituicao por linguagem 'mais formal'. Score nao e 100% porque o corpo do texto entre citacoes usa prosa levemente mais organizada/escrita do que a fala coloquial original — esperado e desejado num documento de referencia."
+    verdict: "PASS"
+
+  pass_5_consistency:
+    contradictions: 0
+    cross_refs_valid: true
+    notes: "KB de volume unico. REGRAS-CARDINAIS.md (13 regras), GLOSSARIO.md (16 termos) e REPERTORIO.md (11 secoes, 17 itens) auditados linha a linha contra VOL-01 e a fonte normalizada — 0 inconsistencias encontradas apos correcao da regra 14 (ver critical-audit-report.yaml)."
+    verdict: "PASS"
+
+  pass_6_integrity:
+    volumes_planned: 1
+    volumes_present: 1
+    transversal_planned: 4
+    transversal_present: 4
+    completeness_report_present: true
+    plano_etl_updated: true
+    orphan_files: 0
+    verdict: "PASS"
+
+  aggregate:
+    coverage: 100.0
+    fidelity: 100.0
+    richness: 100.0
+    voice: 92.0
+    consistency: 100.0
+    integrity: 100.0
+    score: 99.2
+    verdict: "APPROVED"
+
+  revision_items: []
+  revision_cycle: 0

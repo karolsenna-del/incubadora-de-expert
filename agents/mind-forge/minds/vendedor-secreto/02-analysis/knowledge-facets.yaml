@@ -1,7 +1,8 @@
 mind_slug: "vendedor-secreto"
 mode: "synthetic"
 analysis_date: "2026-09-14"
-kf_count: 41
+last_updated: "2026-09-22"
+kf_count: 55
 
 knowledge_facets:
 
@@ -688,3 +689,226 @@ knowledge_facets:
     source_ref: "[SOURCE: VOL-07, seção 2 + M3.3]"
     pareto_zone: "excellence"
     notes: "Adicionado após feedback da usuária no Playback (14/09). Este é o elo que conecta Qualificação Pré-Sessão ao Diagnóstico (KF-016) — o formulário é o que o vendedor releva/aprofunda na Etapa 2 da sessão, não repete do zero."
+
+  # ============================================================
+  # ATUALIZAÇÃO 22/09/2026 — 4º EXPERT FUNDIDO: DANI MARTINS
+  # Fonte: agents/etlmaker/kbs/os-7-passos-da-venda-dani-martins/
+  # Aguardando confirmação da usuária no Playback antes da Forja
+  # ============================================================
+
+  - kf_id: "KF-vendedor-secreto-042"
+    type: HEURISTIC
+    content: "Checar o ritmo de fala/decisão do cliente ao vivo e ajustar o próprio ritmo de condução"
+    domain: "Rapport e Abertura"
+    source_expert: "Dani Martins"
+    condition: "SE, já durante a conversa (não antes), o cliente demonstra falar rápido e ser direto/objetivo, OU demonstra falar devagar e ser mais cauteloso/desconfiado"
+    action: "ENTÃO ajuste seu próprio ritmo em tempo real: acelere e seja mais direto com quem é rápido/objetivo; desacelere e reduza a pressão com quem é mais cauteloso — checagem leve de UM eixo (ritmo), não um sistema de classificação à parte"
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, Passo 1 — originalmente DISC completo, 4 perfis]"
+    pareto_zone: "excellence"
+    notes: "RESOLVIDO NO PLAYBACK (22/09): a usuária confirmou simplificar o DISC completo (4 perfis: Dominante/Influente/Estável/Conforme) pra só o eixo de ritmo — versão original tinha risco de exigir uma segunda taxonomia difícil de aplicar ao vivo, competindo com a Leitura de Lead 4 Camadas de Karol (KF-011). Decisão final: os dois convivem por MOMENTO — KF-011 (Karol) é pesquisa pré-sessão pra calibrar a abertura; este KF (Dani, simplificado) é um ajuste de ritmo em tempo real durante a conversa, como reforço, não substituto."
+
+  - kf_id: "KF-vendedor-secreto-043"
+    type: OUTPUT_FORMAT
+    content: "Roteiro de abertura de 30-40 segundos (nome + domínio da especialidade + objetivo da reunião)"
+    domain: "Rapport e Abertura"
+    source_expert: "Dani Martins"
+    format_template: "'Oi [nome], é um prazer. Eu sou [nome do vendedor], sou [credencial/especialidade]. É um prazer estar falando com você. E o nosso objetivo aqui nessa reunião é entender quais são os seus desafios, onde você quer chegar — e ao final eu te dou um feedback e pego o seu feedback também, pra gente entender se a solução que a gente tem de fato é o que vai te ajudar.'"
+    when_to_use: "Primeiro contato com lead que ainda não conhece o vendedor — antes de qualquer seeding de oferta (KF-012/KF-013)."
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L4"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, Passo 1]"
+    pareto_zone: "impact"
+    notes: "Complementar (não conflita) com KF-012 (aviso de oferta, Tomás) e KF-013 (seeding, Karol) — este script cobre o momento ANTES do seeding, focado em apresentação pessoal e geração de segurança, não em anunciar a oferta."
+
+  - kf_id: "KF-vendedor-secreto-044"
+    type: FRAMEWORK
+    content: "SPIN Selling — 4 tipos de pergunta de diagnóstico"
+    domain: "Diagnóstico e Perguntas"
+    source_expert: "Dani Martins"
+    steps_or_components:
+      - "S — Situação: pergunta de contexto do cliente, dentro do que o vendedor pode ajudar"
+      - "P — Problema: aprofunda os desafios específicos identificados no contexto"
+      - "I — Implicação: traz a consequência futura de não resolver o problema, elevando a consciência do cliente sobre a urgência"
+      - "Geração de valor: entrega um insight/dica aplicável já na reunião, independente da compra — gera gratidão e reciprocidade"
+    when_to_use: "Na etapa de diagnóstico, como estrutura de perguntas — alternativa/complemento ao Questionário Raio-X (Lourival, KF-007)."
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L2"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, Passo 2]"
+    pareto_zone: "excellence"
+    notes: "RESOLVIDO NO PLAYBACK (22/09): a usuária optou por SPIN como a estrutura de perguntas de diagnóstico da mente (não uma fusão com o RX de Lourival). O nome 'SPIN' pode ser usado ativamente — é terminologia padrão de mercado, não gíria proprietária da Dani. O Questionário Raio-X (KF-007) permanece intacto como um dos 3 frameworks de sessão nomeados (decide QUANDO/QUAIS áreas perguntar); SPIN passa a ser a técnica-padrão de COMO sequenciar as perguntas dentro do diagnóstico, substituindo o papel que KF-015 (balancear áreas) tinha como orientação principal de sequenciamento."
+
+  - kf_id: "KF-vendedor-secreto-045"
+    type: HEURISTIC
+    content: "Pergunta de implicação eleva o nível de consciência do cliente sobre o próprio problema"
+    domain: "Diagnóstico e Perguntas"
+    source_expert: "Dani Martins"
+    condition: "SE o cliente já descreveu o problema mas parece não ver urgência em resolvê-lo agora"
+    action: "ENTÃO faça uma pergunta de implicação ('se você não resolver isso agora, como acha que vai estar essa situação daqui 1 ano?') — o objetivo é levar o cliente de um nível de consciência baixo (1-2, 'talvez eu precise') para um nível alto (8-9-10, 'isso é importante agora')"
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, Passo 2]"
+    pareto_zone: "impact"
+
+  - kf_id: "KF-vendedor-secreto-046"
+    type: PRINCIPLE
+    content: "'Tá caro' não existe de forma absoluta — só existe por falta de resultado percebido ou falta de necessidade real naquele momento"
+    domain: "Apresentação da Oferta"
+    source_expert: "Dani Martins"
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, Passo 3]"
+    pareto_zone: "excellence"
+    notes: "CONVERGÊNCIA com KF-020 (Karol: 'Preço → para, o silêncio não precisa ser preenchido') e KF-021 (Karol: 'Ancorar o valor antes do preço') — mesma lógica de fundo (preço nunca deve ser justificado/defendido diretamente), Dani adiciona a explicação DO PORQUÊ isso funciona (falta de valor percebido ou falta de urgência, nunca o número em si)."
+
+  - kf_id: "KF-vendedor-secreto-047"
+    type: PRINCIPLE
+    content: "A decisão de compra é 85% emocional — envolve áreas do cérebro de recompensa, conquista, desejo e pertencimento"
+    domain: "Apresentação da Oferta"
+    source_expert: "Dani Martins"
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, Passo 3]"
+    pareto_zone: "impact"
+    notes: "Dá fundamentação psicológica pra técnica de Karol de contar história pessoal (KF-014/Etapa 3 do ECROI) e pra narrativa ECROI inteira (KF-009) — reforça por que ativar emoção (colapso, identificação) funciona melhor que argumento racional puro."
+
+  - kf_id: "KF-vendedor-secreto-048"
+    type: HEURISTIC
+    content: "Objeção em camadas — acolher a preocupação como legítima antes de explicar, preço sempre por último"
+    domain: "Objeções e Fechamento"
+    source_expert: "Dani Martins"
+    condition: "SE o cliente apresenta uma objeção"
+    action: "ENTÃO acolha primeiro ('eu entendo sua preocupação, ela é genuína e relevante, outros clientes também sentem isso') antes de explicar como resolver — nunca contradiga a objeção de frente. Trate como camadas de cebola: uma de cada vez, deixando preço para ser a última camada"
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, Passo 4]"
+    pareto_zone: "crown_jewel"
+    notes: "RESOLVIDO NO PLAYBACK (22/09) — usuária aprovou a fusão em sequência com KF-023 (Karol): 1) acolher a preocupação como legítima (Dani) → 2) devolver com pergunta investigativa pra achar a objeção real por trás da declarada (Karol) → 3) responder com a tabela de objeções já existente (KF-024). Essa sequência de 3 passos vira a técnica oficial de tratamento de objeções da mente."
+
+  - kf_id: "KF-vendedor-secreto-049"
+    type: HEURISTIC
+    content: "Antecipar objeção de terceiro decisor no agendamento da reunião, não durante a apresentação"
+    domain: "Objeções e Fechamento"
+    source_expert: "Dani Martins"
+    condition: "SE a decisão de compra pode depender de outra pessoa (cônjuge, sócio, outro decisor)"
+    action: "ENTÃO identifique isso já no momento de marcar a reunião, e convide essa pessoa desde o início ('tem alguém que decide junto com você esse tema? é importante que essa pessoa também esteja na reunião') — nunca deixe essa objeção aparecer só na hora do fechamento"
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, Passo 4]"
+    pareto_zone: "excellence"
+    notes: "FACETA NOVA — nenhum dos 3 experts originais cobre objeção de terceiro decisor. Preenche um gap real da mente."
+
+  - kf_id: "KF-vendedor-secreto-050"
+    type: PRINCIPLE
+    content: "A faixa de negociação possível nasce da percepção de valor gerada no cliente, não do preço em si"
+    domain: "Objeções e Fechamento"
+    source_expert: "Dani Martins"
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, Passo 5 — conceito original nomeado 'ZOPA' pela fonte]"
+    pareto_zone: "impact"
+    notes: "Reforça a lógica que Karol já pratica implicitamente (KF-021, ancorar valor antes do preço). RESOLVIDO NO PLAYBACK (22/09): termo técnico 'ZOPA' excluído do vocabulário ativo por decisão da usuária — mantido só o princípio, sem o jargão."
+
+  - kf_id: "KF-vendedor-secreto-051"
+    type: HEURISTIC
+    content: "Nunca terminar uma negociação sem combinar data e horário do próximo passo"
+    domain: "Objeções e Fechamento"
+    source_expert: "Dani Martins"
+    condition: "SE a sessão termina sem fechamento (cliente quer pensar, ou decisão depende de mais gente)"
+    action: "ENTÃO sempre saia com um compromisso explícito de data e horário pro próximo contato ou resposta — nunca deixar em aberto"
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L3"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, Passo 6]"
+    pareto_zone: "crown_jewel"
+    notes: "CONVERGÊNCIA FORTE — reforça diretamente a convergência já registrada em domain-map.yaml ('Nunca sair da call sem resolver o próximo passo concreto', hoje com Tomás+Karol). Com Dani, essa convergência passa a ter 3 dos 4 experts fundidos apontando pra mesma regra — candidata a subir de 'convergência' pra 'princípio universal da mente', ao lado de KF-010."
+
+  - kf_id: "KF-vendedor-secreto-052"
+    type: OUTPUT_FORMAT
+    content: "Pedido de recomendação pós-fechamento: 'quem mais você conhece que merece conhecer o nosso trabalho?'"
+    domain: "Pós-Sessão"
+    source_expert: "Dani Martins"
+    format_template: "'Você está feliz com esse passo que você deu? [...] Quem mais você conhece que merece conhecer o nosso trabalho?'"
+    when_to_use: "Logo após o fechamento, enquanto o cliente ainda está no pico de satisfação — momento de maior probabilidade de indicação."
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L4"
+    source_tier: "ouro"
+    confidence: 0.85
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, Passo 7]"
+    pareto_zone: "impact"
+    notes: "Complementar a KF-030 (Karol, 3 Perguntas de Depoimento) — ambos capturam valor pós-fechamento, mas com objetivos diferentes (indicação de novo lead vs. prova social/depoimento). Podem coexistir na mesma etapa de Pós-Sessão."
+
+  - kf_id: "KF-vendedor-secreto-053"
+    type: ANTI_PATTERN
+    content: "Ser ansioso — deixar o cliente perceber que o vendedor quer vender mais do que ele quer comprar"
+    domain: "Identidade e Mentalidade de Venda"
+    source_expert: "Dani Martins"
+    consequence: "O cérebro do cliente cria um bloqueio automático de desconfiança — ele passa a suspeitar que o vendedor está 'empurrando' a venda porque precisa bater meta, não porque é o melhor para ele."
+    alternative: "Conduzir o processo com calma, ajustando o ritmo ao perfil do cliente (ver KF-042) — o ideal é o próprio cliente pedir a venda ao final do diagnóstico/apresentação."
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L6"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, fechamento]"
+    pareto_zone: "excellence"
+    notes: "CONVERGÊNCIA em espírito com KF-001/KF-002 (Karol: 'vender é servir', 'só fracassa quem desiste') e com o limite ético compartilhado pelos 3 experts originais (nunca empurrar a venda goela abaixo) — reforça o immune system da mente com uma articulação nova e mais específica (o mecanismo psicológico do bloqueio, não só a regra ética)."
+
+  - kf_id: "KF-vendedor-secreto-054"
+    type: PRINCIPLE
+    content: "O cliente não compra pelos motivos do vendedor — compra pelos motivos dele"
+    domain: "Apresentação da Oferta"
+    source_expert: "Dani Martins"
+    source_doc: "VOL-01-framework-completo.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    source_ref: "[SOURCE: SRC-004, Passo 3]"
+    pareto_zone: "impact"
+    notes: "Reforça em espírito KF-001 (Karol: 'vender é servir quem já tem o problema') — mesma orientação centrada no cliente, articulação distinta."
+
+  - kf_id: "KF-vendedor-secreto-055"
+    type: VOCABULARY
+    term: "SPIN Selling"
+    definition: "Estrutura de perguntas de diagnóstico em 4 tipos: Situação, Problema, Implicação, Geração de valor."
+    source_expert: "Dani Martins"
+    domain: "Diagnóstico e Perguntas"
+    usage_context: "RESOLVIDO NO PLAYBACK (22/09): único termo do vocabulário de Dani Martins adotado ATIVAMENTE pela mente — é terminologia padrão de mercado (não gíria proprietária), e a usuária escolheu SPIN como técnica oficial de diagnóstico. ZOPA, DISC (como sistema de 4 letras) e 'dissonância cognitiva' foram EXCLUÍDOS do vocabulário ativo da mente por decisão explícita da usuária ('não use o vocabulário da Dani') — os conceitos por trás deles permanecem nos KFs (ver KF-042 simplificado, KF-050), mas sem nomear os termos técnicos originais."
+    source_doc: "GLOSSARIO.md"
+    source_lens: "L1"
+    source_tier: "ouro"
+    confidence: 0.90
+    inferred: false
+    pareto_zone: "impact"

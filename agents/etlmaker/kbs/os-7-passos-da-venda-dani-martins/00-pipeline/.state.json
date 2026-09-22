@@ -1,0 +1,21 @@
+{
+  "kb_slug": "os-7-passos-da-venda-dani-martins",
+  "kb_name": "Os 7 Passos da Venda — Dani Martins",
+  "mode": "full",
+  "version": "3.0.0",
+  "current_phase": 4,
+  "phase_status": {
+    "phase_0": "completed",
+    "phase_1": "completed",
+    "phase_2": "completed",
+    "phase_3": "completed",
+    "phase_4": "completed"
+  },
+  "sources": ["SRC-os-7-passos-da-venda-dani-martins-001"],
+  "volumes_composed": 1,
+  "volumes_planned": 1,
+  "validation_score": 99.2,
+  "verdict": "APPROVED",
+  "quality_gates_passed": ["QG-ETL-000", "QG-ETL-001", "QG-ETL-002", "QG-ETL-003", "QG-ETL-004", "QG-ETL-005"],
+  "started_at": "2026-09-22T00:00:00-03:00"
+}

@@ -1,0 +1,16 @@
+source:
+  id: "SRC-os-7-passos-da-venda-dani-martins-001"
+  original_path: "https://prosperusclub.com.br/app/v/kScGiYTL3hlwoqbftVW6qsW8"
+  format: "transcricao (video ao vivo, transcrita via Whisper a partir de gravacao em audio)"
+  title: "Os 7 Passos da Venda"
+  author: "Dani Martins"
+  date: "2026-02-04"
+  platform: "Prosperus Club"
+  duration_min: 80
+  acquisition_method: "Gravacao de audio da sessao (OBS Studio) + transcricao local via Whisper (modelo small, pt-BR). Video original protegido por token assinado (Bunny Stream / mediadelivery.net), sem transcricao nativa disponivel na plataforma."
+  total_sections: 10
+  total_paragraphs: 46
+  total_words: 12646
+  normalized_path: "00-pipeline/sources/aula-7-passos-venda-normalized.md"
+  raw_transcript_path: "00-pipeline/sources/aula-7-passos-venda-transcricao-raw.txt"
+  notes: "Transcricao automatica (STT) pode conter pequenos artefatos/erros pontuais em trechos de fala rapida. Conteudo revisado e reorganizado em paragrafos e secoes com base nos marcadores verbais explicitos da propria instrutora (ex: 'Passo 1', 'Passo numero dois'). Nenhum conteudo foi adicionado ou inferido alem do que foi dito na aula."

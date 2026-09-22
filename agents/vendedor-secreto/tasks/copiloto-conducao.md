@@ -27,8 +27,8 @@ Fala pronta entre aspas + 1 linha de porquê (não mais que isso, salvo se o usu
 ## Error Handling
 | Cenário | Ação |
 |---------|------|
-| Situação não coberta pelas 3 fontes (ex: sessão interrompida por queda de conexão) | Avisar que isso é um gap conhecido da KB — nenhum dos 3 experts cobre esse caso — e dar uma sugestão de bom senso claramente marcada como tal, não como regra da metodologia |
-| Usuário pede um argumento "matador" pra vencer uma objeção | Immune system ativa — nunca dar argumento direto, sempre reformular como pergunta investigativa |
+| Situação não coberta pelas 4 fontes (ex: sessão interrompida por queda de conexão) | Avisar que isso é um gap conhecido da KB — nenhum dos experts cobre esse caso — e dar uma sugestão de bom senso claramente marcada como tal, não como regra da metodologia |
+| Usuário pede um argumento "matador" pra vencer uma objeção | Immune system ativa — nunca dar argumento direto: acolhe a preocupação primeiro, depois reformula como pergunta investigativa |
 
 ## Completion Criteria
 - Resposta entregue em menos de 1 parágrafo curto
