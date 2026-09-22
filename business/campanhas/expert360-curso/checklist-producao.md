@@ -31,7 +31,7 @@
 
 | # | Item | Status |
 |---|---|---|
-| M01 | Criar biblioteca de templates (8–10 modelos Canva/Notion/Google Sheets) | ✅ Concluído (14/07/2026) — 10 templates genéricos + índice em `biblioteca-templates/`. Moldes reaproveitáveis (checklist, diagnóstico, roteiro, scripts, rastreamento, planner, worksheet, mapa, calculadora, template de conteúdo). Duplo uso: entregável do curso + produto low ticket avulso. Falta só o design visual (formatação Sheets / capa Canva). |
+| M01 | Criar biblioteca de templates (8–10 modelos Canva/Notion/Google Sheets) | ✅ Concluído (14/07/2026) — 10 templates genéricos + índice em `biblioteca-templates/`. Moldes reaproveitáveis (checklist, diagnóstico, roteiro, scripts, rastreamento, planner, worksheet, mapa, calculadora, template de conteúdo). Duplo uso: entregável do curso + produto low ticket avulso. Biblioteca 100% pronta, com os 10 modelos finalizados (confirmado pela Karol em 22/09/2026). |
 | M02 | Revisar e finalizar materiais do Drive (M0.1 a M4.7, incl. M2.4 novo) | Pendente — verificar prontidão para entrega |
 | M03 | Organizar Drive com estrutura de pastas por módulo | ✅ Concluído (30/06/2026) — G:\Meu Drive\PRODUTOS\Curso Expert360\Materiais\ organizado em M0-M4 |
 
@@ -70,6 +70,12 @@
 | D01 | Atualizar PRD: encontros mensais removidos → agente de suporte na Hotmart | ✅ Concluído (01/07/2026) |
 | D02 | Atualizar PRD: corrigir módulos (sem Transição, com Módulo de Orientações) | ✅ Concluído (01/07/2026) |
 | D03 | Atualizar PRD: Agente do Portfólio Estratégico → M2 Aula 7 | ✅ Concluído (01/07/2026) |
+| V01 | Rework M3 (22/09/2026): antiga A9 dividida em A9 "O Funil das Vendas Secretas" (3 telas + CTA de ferramentas) + A10 "Exercício: Montando seu Roteiro com o Agente Vendedor Secreto"; pós-sessão vira A11 — roteiros aprovados, M3.4 atualizado, Drive espelhado | ✅ Concluído (22/09/2026) |
+| V02 | Criar versão do Agente Vendedor Secreto pra aluna (7º agente — GPT via /gpt-publisher). Sem citar nomes dos experts de origem, sem vocabulário interno. A A10 do M3 depende do link | ⬜ Pendente — bloqueia a A10 |
+| V03 | Adicionar link do Agente Vendedor Secreto na Biblioteca de IAs (template + cópias das alunas) | ⬜ Pendente — depende de V02 |
+| V04 | Voomp (/course-publisher): M3 passa de 12 pra 13 aulas — criar slot da nova A10 e renumerar pós-sessão pra A11 | ⬜ Pendente |
+| V05 | Descrição da A9 do M3 na Voomp: incluir link do suporte (CTA do funil de vendas secretas completo feito pela Karol: página, pré-diagnóstico, radar e roteiro personalizado) | ⬜ Pendente |
+| V06 | Descrição da A11 do M3 (pós-sessão) na Voomp: incluir link do suporte (CTA análise da sessão gravada) — oferta = Mentoria Express (1h, R$300), definida pela Karol em 22/09/2026 | ⬜ Pendente (só o link na descrição) |
 
 ---
 

@@ -1,8 +1,8 @@
 # Expert360º — Roteiros Módulo 3: Vendas Secretas
-Versão: 3.0 (teleprompter de fala livre) | Base: v2.0 aprovada (QG-CC-006) | Data: 09/07/2026
+Versão: 3.4 (teleprompter de fala livre) | Base: v2.0 aprovada (QG-CC-006) | Data: 22/09/2026 — antiga A9 dividida em A9 (Funil das Vendas Secretas) + A10 (Exercício com o Agente Vendedor Secreto), ambas aprovadas (QG-CC-006 PASS); pós-sessão vira A11
 Status: bullets pra gravar falando livre — o script em prosa completo foi movido pro fim do arquivo (SCRIPTS DE REFERÊNCIA), só como consulta.
 
-**Aulas:** 12 (Introdução + A1–A10 + Encerramento)
+**Aulas:** 13 (Introdução + A1–A11 + Encerramento)
 
 ## COMO LER OS BULLETS
 - **⚓ = fala EXATO** — número, nome de framework ou frase de impacto que não pode sair errada.
@@ -187,7 +187,7 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
       ⚓ O critério não é o pitch mais elaborado — é o mais verdadeiro que você diz com naturalidade.
 ▸ Ponto 3 — o que sai (output)
    - P4 documentado: sua Proposta Validada com tudo pra apresentar numa conversa real.
-   - Vai direto pro Rastreador (A5), pro roteiro da sessão (A9) e alimenta o M4. Salve em Minha Proposta Validada (P4) no Drive.
+   - Vai direto pro Rastreador (A5), pro roteiro da sessão (A10) e alimenta o M4. Salve em Minha Proposta Validada (P4) no Drive.
 
 **ONDE E QUANDO**
 - Agente da Proposta Validada no painel + P1, P2 e P3 no Drive + rascunho do que quer oferecer.
@@ -347,50 +347,114 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 
 **TRANSIÇÃO**
 - Rastreador preenchido, perfil lido, roteiro internalizado. Agora é campo.
-- Gancho A9: a sessão em si — como abrir, diagnosticar, apresentar a oferta e fechar.
+- Gancho A9: o que acontece entre o sim e o fim da chamada — o funil das vendas secretas, por dentro.
 
 ---
 ---
 
-## AULA 9 — O ROTEIRO DA SESSÃO DE VENDAS SECRETAS
-*Estimativa: 12–15 minutos*
+## AULA 9 — O FUNIL DAS VENDAS SECRETAS
+*Estimativa: 8–10 minutos (com 3 telas compartilhadas)*
 
 **ABERTURA**
-- Você abordou, mandou a mensagem certa no tom certo pra pessoa certa. E ela disse sim.
-- Agora você tem 30 a 40 minutos com ela. Essa conversa tem estrutura — não é improv, é método. E a diferença entre fechar e "vou pensar" não está na técnica de fechamento; está no que acontece antes.
+- Você abordou, e ela disse sim. Entre esse sim e a venda existe um caminho — e cada passo dele aumenta ou diminui o valor que ela enxerga em você.
+- Pensa assim: a venda secreta é o seu lançamento pra uma pessoa só. Tudo que um lançamento testa — narrativa, preço, entregáveis, objeções, oferta — você testa aqui, sem ninguém ver, e ajusta antes de mostrar pro mundo.
+   ⚓ A venda secreta é o seu lançamento pra uma pessoa só.
+- Hoje eu abro o meu caminho inteiro, com as ferramentas que eu uso de verdade nas minhas sessões.
 
 **O QUE E POR QUÊ**
-- Tema: o roteiro completo da sessão — as 5 etapas, a lógica da sequência e o que determina se fecha.
-- Importa agora porque o erro que a maioria comete é chegar com a oferta antes de ter entendido de verdade. O roteiro inverte isso: quando a oferta aparece depois do diagnóstico, não é pitch, é resposta.
+- Tema: o funil das vendas secretas — do sim da abordagem até o fechamento — mostrado nas minhas próprias telas.
+- Importa agora porque a venda não acontece só na sessão. Ela começa antes, no que a lead vê e responde antes de entrar na chamada.
+   ⚓ A lead decide se a sessão tem valor antes da sessão começar.
 
 **COMO**
-▸ Ponto 1 — a ordem que faz tudo funcionar + etapas 1 e 2
-   - A lógica: primeiro você ouve → depois faz a ponte → depois apresenta. A oferta aparece como solução natural do problema que ela mesma articulou.
-   - Etapa 1 — Boas-vindas (3–5 min): entra com presença, alinha o que vai acontecer ("vou fazer algumas perguntas, depois te apresento o que faço, pode ser?"). Remove a ambiguidade e ela relaxa.
-   - Etapa 2 — Diagnóstico (10–12 min): vai mais fundo que o formulário, nas perguntas do SEU método — cada fase tem uma pergunta que revela se ela passou ou travou. Anote as palavras que ela usa; voltam na apresentação como espelho. Você monta essas perguntas no arquivo Roteiro da Sessão 1:1 (seção em branco).
-▸ Ponto 2 — etapas 3 e 4: História + Oferta ECROI
-   - Etapa 3 — História (5 min): compartilhe o trecho da sua história que espelha o que ela descreveu — cria identificação ("eu já fui como você").
-   - Etapa 4 — Oferta com narrativa ECROI (12–15 min): não é pitch, é narrativa. C — Colapso (derruba a crença que a prende, com lógica, ataca a premissa não a pessoa); R — Reenquadramento (a causa real, revelação); O — Ordem (a sequência certa = seu método, o programa aparece como consequência lógica); I — Inevitabilidade (o resultado como conclusão natural).
-   - Depois da narrativa, concretiza: o que é / imagine / pra quem é / pra quem não é / entregáveis / duração / âncora de valor antes do preço ("quanto vale pra você chegar em [ponto B]?").
-      ⚓ Preço → para. O silêncio não precisa ser preenchido.
-▸ Ponto 3 — etapa 5: Fechamento + objeções
-   - O fechamento não é onde você convence — é onde você convida. CTA 1 (sinal de interesse: "faz sentido pra você?" → para, espera, não preenche o silêncio); escassez só se for real; CTA 2 emocional.
-   - Objeções: "vou pensar" → "o que especificamente você está considerando?"; "está caro" → "quanto está custando ficar no ponto A?"; "não tenho tempo" → "quantas horas por semana conseguiria?". Regra de ouro: nunca rebata direto, pergunta primeiro — objeção declarada ≠ objeção real.
-   - O que determina se fecha não é a técnica, é a sequência: ela fala → você entende o gargalo → cria identificação → constrói lógica → concretiza → convida.
-   - Grave todas as sessões (com permissão): matéria-prima pra revisão e pros cortes de autoridade no M4. Se precisar, peça análise de sessão pelo suporte.
+▸ Ponto 1 — O caminho inteiro
+   - Funil aqui não é conceito de marketing — é estratégia de venda: o caminho que a pessoa percorre até decidir comprar.
+   - São 4 passos: a abordagem (que você já aprendeu na aula anterior) → a página da sessão com o pré-diagnóstico → a sessão → o pós-sessão (que fecha o módulo).
+   - Hoje o foco é o miolo: o que acontece entre o sim e o fim da chamada.
+▸ Ponto 2 — Antes da sessão: a página + o pré-diagnóstico
+   🖥️ TELA: diagnostico.incubadoradeexpert.com.br
+   - Quando a lead aceita, ela recebe este link. A página mostra como a sessão funciona: pré-diagnóstico de uns 10 minutos, sessão individual de 45, e um próximo passo claro no final.
+   - Mostra também pra quem é e pra quem não é. Quando ela lê "não é pra quem procura fórmula mágica", ela entende que ali tem critério.
+   - Função: ela não chega numa "call de venda" — chega numa sessão que ela já sabe que vale. E o aviso de que existe um próximo passo já está dado.
+   - O pré-diagnóstico ela responde por ali. Você entra na chamada sabendo onde ela está.
+▸ Ponto 3 — Durante a sessão: o radar
+   🖥️ TELA: Radar do Expert
+   - As áreas que eu investigo no diagnóstico são as fases do meu método: os 5 Ps — Persona, Promessa, Processo, Proposta e Posicionamento. Cada um tem de 2 a 4 perguntas que eu pontuo de 0 a 10 enquanto ela fala.
+   - O que ela já respondeu no pré-diagnóstico chega pré-marcado — eu não repergunto o que ela já disse.
+   - O radar cresce em tempo real e me mostra o ponto mais travado. É ali que eu aprofundo.
+   - O que isso causa: ela vê o próprio gargalo desenhado na tela. Quando a oferta chegar, não é argumento meu — é resposta ao que ela acabou de ver.
+      ⚓ Diagnóstico sempre antes da oferta. Sempre.
+▸ Ponto 4 — O roteiro por trás da sessão
+   🖥️ TELA: meu Roteiro da Sessão (rolar só até a Etapa 3 — ver nota de gravação)
+   - Antes de cada sessão eu preparo 3 coisas a partir do pré-diagnóstico: o gancho de abertura com as palavras dela, o gargalo provável, e a hipótese de oferta.
+   - Depois, a sessão em 5 etapas: abertura já avisando que vai ter um próximo passo → diagnóstico → ponte de identificação (minha história ou o futuro dela já resolvido) → oferta → fechamento.
+   - Na próxima aula você monta as suas 5 etapas, uma por uma, com o agente.
+▸ Ponto 5 — O conjunto
+   - Repara no conjunto: a página, o radar, o roteiro. A lead sente que está diante de alguém com método antes mesmo de ouvir a oferta. Isso não é detalhe — é o que faz uma sessão valer o que ela custa.
+   - Esse funil é do MEU método. O seu segue as fases do SEU. Se você quiser o seu funil de vendas secretas completo construído comigo — a página da sua sessão, o seu pré-diagnóstico, o seu radar com as fases do seu método e o roteiro da sessão personalizado — fala com o suporte: o link está na descrição desta aula.
+      ⚓ Ferramenta não é enfeite. É o que faz a lead enxergar o valor antes do preço.
 
 **ONDE E QUANDO**
-- Arquivo Roteiro da Sessão 1:1 no Drive — preencher a seção de perguntas do diagnóstico com as perguntas do seu método, antes da primeira sessão.
-- Agora — antes de confirmar a sessão com o lead que aceitou.
+- Nesta aula você só observa o caminho. O seu roteiro nasce na próxima, com o Agente Vendedor Secreto.
 
 **TRANSIÇÃO**
-- A sessão tem estrutura, o roteiro está na sua mão.
-- Gancho A10: o pós-sessão — "sim", "não" ou "vou pensar" + como transformar a conversa em prova pro M4.
+- Você viu o funil de fora. Agora você monta o seu por dentro.
+- Gancho A10: exercício — o roteiro da sua sessão com o Agente Vendedor Secreto.
+
+**NOTAS DE GRAVAÇÃO (não falar)**
+- Radar: gravar com um diagnóstico de demonstração (nome fictício). NÃO abrir a aba Histórico — tem nome e dados de leads reais.
+- Roteiro: a Etapa 4 e o Direcionamento mostram os preços das suas ofertas. Parar a rolagem na Etapa 3, ou gravar com uma cópia sem preços — regra do curso: preço não aparece nos vídeos.
+- Descrição da aula: incluir o link do suporte (CTA do funil de vendas secretas completo: página, pré-diagnóstico, radar e roteiro personalizado).
 
 ---
 ---
 
-## AULA 10 — PÓS-SESSÃO: O FOLLOW-UP E O DEPOIMENTO
+## AULA 10 — EXERCÍCIO: MONTANDO SEU ROTEIRO COM O AGENTE VENDEDOR SECRETO
+*Estimativa: 10–12 minutos (vídeo) + tempo com o agente*
+
+**ABERTURA**
+- Você viu o meu funil por dentro: a página, o radar, o roteiro.
+- Agora você monta o seu roteiro — com o seu método, na sua voz.
+
+**O QUE E POR QUÊ**
+- Tema: exercício — construir o roteiro da sua sessão com o Agente Vendedor Secreto.
+- Importa agora porque a sessão é onde a venda acontece, e roteiro genérico soa genérico. O agente monta as 5 etapas em cima do SEU método, da SUA persona e da SUA oferta.
+
+**COMO**
+▸ Ponto 1 — O que entra (inputs)
+   - Quatro documentos: P1 (Persona, M1 A4), P2 (Promessa, M1 A6), P3 (Método, M2 A5) e P4 (Proposta Validada, M3 A4).
+   - E a sua História Real (M0) — se você for usar a sua história como ponte.
+▸ Ponto 2 — O que o agente monta com você (as 5 etapas)
+   - Etapa 1 — Abertura: começa com algo que ela escreveu no pré-diagnóstico e já avisa que, no final, você mostra o próximo passo. Quem é avisado relaxa; quem é pego de surpresa se defende.
+   - Etapa 2 — Diagnóstico: as áreas são as fases do seu método. Em cada uma, as perguntas seguem a ordem Situação → Problema → Implicação ("se nada mudar, como você vai estar daqui a 1 ano?") → e você entrega um insight que ela já pode usar. Anote as palavras exatas dela.
+   - Etapa 3 — Ponte: o agente te pergunta qual caminho combina com você — a sua história ou o Bloco de Sonhos (ela visualiza o futuro já resolvido).
+   - Etapa 4 — Oferta: pede licença antes, depois a narrativa ECROI com as fases do seu método, os detalhes concretos e a âncora de valor antes do preço.
+      ⚓ Preço → para. O silêncio não precisa ser preenchido.
+   - Etapa 5 — Fechamento: "faz sentido pra você?" e as respostas às objeções do seu nicho, sempre em 3 passos.
+      ⚓ Acolhe → pergunta → responde.
+   - Uma objeção de cada vez, preço por último. Disse sim: o pagamento se resolve ainda na chamada. Não fechou: nunca termina sem data e horário do próximo contato.
+▸ Ponto 3 — Três posturas pra rodar bem
+   - Leve os documentos prontos — quanto mais claro o seu método, mais preciso o roteiro.
+   - Se alguma fala não soar você, diga. O agente ajusta. O roteiro precisa parecer você falando, não um script.
+   - Não pule o diagnóstico nem se ela "já souber o que você vende". Sem diagnóstico, a oferta vira pitch.
+      ⚓ Não seja ansiosa. Se ela percebe que você quer vender mais do que ela quer comprar, ela trava.
+▸ Ponto 4 — O que sai (output) + o agente depois do roteiro
+   - O roteiro completo das 5 etapas, com as falas prontas pra ajustar. Salve no arquivo Roteiro da Sessão 1 a 1 no Drive e deixe aberto durante a chamada.
+   - O agente não some depois: no dia da sessão, se travar numa objeção, pergunta "ela disse X, o que eu respondo?"; depois da sessão, conta o que aconteceu e ele te ajuda a revisar e a montar o follow-up.
+   - Grave todas as sessões (com permissão): revisão e matéria-prima dos cortes do M4.
+
+**ONDE E QUANDO**
+- Agente Vendedor Secreto no painel de agentes + P1, P2, P3 e P4 no Drive → resultado no arquivo Roteiro da Sessão 1 a 1.
+- Agora — roteiro pronto antes da primeira sessão confirmada.
+
+**TRANSIÇÃO**
+- Roteiro pronto, na sua voz, com o seu método.
+- Gancho A11: o pós-sessão — "sim", "não" ou "vou pensar" + como transformar a conversa em prova pro M4.
+
+---
+---
+
+## AULA 11 — PÓS-SESSÃO: O FOLLOW-UP E O DEPOIMENTO
 *Estimativa: 10–12 minutos*
 
 **ABERTURA**
@@ -413,6 +477,8 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 ▸ Ponto 3 — ela disse não + documentar sempre + o que vira no M4
    - Um não não é veredicto — o campo produz resultados variados; fala sobre essa pessoa nesse momento, não sobre o seu método. Encerre com generosidade e arquive como lead fria (pausa, não descarte).
    - Independente do resultado, antes de dormir: três perguntas, uma linha cada — o que funcionou? o que travou? o que eu diria diferente? (um ajuste, não dez). Sem registro, cada sessão começa do zero; com ele, começa mais avançada.
+   - Quer um segundo olhar? Me manda a gravação: eu assisto a sua sessão e te mostro exatamente onde ajustar — narrativa, preço, entregáveis, objeções, oferta. É a análise do seu lançamento pra uma pessoa só. O link pra falar com o suporte está na descrição desta aula.
+      ⚓ Depois do lançamento, vem a análise do lançamento.
    - Tudo vai pro M4: o depoimento (o ativo mais valioso), o pitch que funcionou na prática, e as objeções reais (você cria conteúdo que as responde antes da conversa). As sessões do M3 não são só vendas — são pesquisa de mercado que você recebeu pra fazer.
 
 **ONDE E QUANDO**
@@ -755,7 +821,7 @@ Aplicação: eu usei o agente para construir a Proposta da Incubadora — e o do
 
 Ideia: ao final, você vai ter P4 documentado — sua Proposta Validada com tudo que precisa para apresentar numa conversa real.
 
-Exemplo: o documento que o agente produz vai diretamente para o Rastreador de Leads (A5), para o roteiro da sessão de vendas (A9), e vai alimentar o M4 quando você construir o posicionamento público. P4 é a base de tudo que vem depois.
+Exemplo: o documento que o agente produz vai diretamente para o Rastreador de Leads (A5), para o roteiro da sessão de vendas (A10), e vai alimentar o M4 quando você construir o posicionamento público. P4 é a base de tudo que vem depois.
 
 Aplicação: salve P4 no arquivo **Minha Proposta Validada (P4)** no Drive.
 
@@ -1008,71 +1074,147 @@ O Rastreador está preenchido. O perfil lido. O roteiro internalizado.
 
 Agora é campo.
 
-Na próxima aula, a gente entra na sessão em si — o que acontece quando ela aceita e você tem 30 a 40 minutos com ela. A estrutura da conversa: como abrir, como fazer o diagnóstico, como apresentar a oferta, e como chegar no fechamento.
+Na próxima aula, eu abro o meu funil das vendas secretas por dentro — o que acontece entre o sim dela e o fim da chamada, com as ferramentas que eu uso de verdade.
 
 ---
 
-## AULA 9 — O ROTEIRO DA SESSÃO DE VENDAS SECRETAS
-*Estimativa: 12–15 minutos*
-*Fontes: ECROI (framework autoral) + estrutura de sessão high ticket + VOL — Vendas com Tráfego (Alcateia)*
+## AULA 9 — O FUNIL DAS VENDAS SECRETAS
+*Estimativa: 8–10 minutos (com 3 telas compartilhadas)*
+*Fontes: ferramentas reais da Karol (página do Diagnóstico do Expert, Radar do Expert, Roteiro da Sessão de Vendas Secretas da Incubadora)*
 
 ---
 
-Você abordou. Você mandou a mensagem certa, no tom certo, para a pessoa certa.
+Você abordou. E ela disse sim.
 
-E ela disse sim.
+Entre esse sim e a venda existe um caminho. E cada passo desse caminho aumenta — ou diminui — o valor que ela enxerga em você.
 
-Agora você tem 30 a 40 minutos com ela. Uma conversa. Só as duas.
+Pensa assim: a venda secreta é o seu lançamento pra uma pessoa só. Tudo que um lançamento testa — narrativa, preço, entregáveis, objeções, oferta — você testa aqui, sem ninguém ver. E ajusta antes de mostrar pro mundo.
 
-Essa conversa tem estrutura. Não é improv, não é sorte, não é feeling — é método. E a diferença entre uma conversa que fecha e uma que termina com "vou pensar" não está na técnica de fechamento. Está no que acontece antes.
-
----
-
-O tema de hoje é o roteiro completo da sessão de vendas — as 5 etapas, a lógica que sustenta a sequência, e o que determina se fecha.
-
-Isso importa agora porque a maior parte das pessoas que tenta vender numa conversa 1:1 comete um erro que nem percebe: chega com a oferta antes de ter entendido de verdade. O roteiro que você vai aprender inverte essa ordem — e quando a oferta aparece depois do diagnóstico, não é pitch. É resposta.
+Hoje eu vou abrir o meu caminho inteiro. Com as ferramentas que eu uso de verdade nas minhas sessões.
 
 ---
 
-**Ponto 1 — A ordem que faz tudo funcionar + etapas 1 e 2.**
+O tema de hoje é o funil das vendas secretas — do sim da abordagem até o fechamento — mostrado nas minhas próprias telas.
 
-Ideia: a lógica que sustenta tudo: **primeiro você ouve → depois você faz a ponte → depois você apresenta.** Quando você apresenta o que faz depois de ter escutado o gargalo dela, a oferta aparece como a solução natural para o problema que ela mesma acabou de articular.
-
-Exemplo: **Etapa 1 — Boas-vindas (3–5 min).** Você entra com presença, não com ansiedade. Alinha o que vai acontecer: *"Obrigada por reservar esse tempo. Li o que você preencheu no formulário. Como vai funcionar: vou fazer algumas perguntas sobre a sua situação — porque o que eu ofereço precisa fazer sentido pro seu momento real. Depois te apresento o que faço. Pode ser?"* Isso remove a ambiguidade e faz ela relaxar. Pessoa relaxada ouve, responde e decide com mais clareza. **Etapa 2 — Diagnóstico (10–12 min).** O formulário de pré-diagnóstico te deu o contexto geral. O diagnóstico da sessão vai mais fundo — nas perguntas específicas **do seu método**. Para cada fase do seu método, existe uma pergunta que revela se ela já passou ou ainda está travada. O diagnóstico percorre o método e encontra onde a jornada travou. Você vai montá-las no arquivo **Roteiro da Sessão 1:1** no Drive — que tem uma seção em branco exatamente para isso. Enquanto ela fala: anote as palavras que ela usa. Elas voltam na apresentação como espelho.
-
-Aplicação: antes de abrir a oferta, você já sabe o gargalo exato dela. Isso personaliza a apresentação — porque você vai apontar diretamente para aquele ponto.
-
-**Ponto 2 — Etapas 3 e 4: História + Oferta com narrativa ECROI.**
-
-Ideia: **Etapa 3 — História (5 min).** Antes de apresentar a oferta, você compartilha o trecho da sua história que espelha o que ela acabou de descrever. Função: criar identificação — "eu já fui como você." **Etapa 4 — Oferta com narrativa ECROI (12–15 min).** O ECROI não é um pitch. É uma narrativa. Cada letra monta uma peça do raciocínio que leva a lead da identificação à decisão.
-
-Exemplo: **C — Colapso:** derruba a crença que está mantendo ela presa, com lógica, não com julgamento. *"O que o mercado te diz que você precisa: [crença]. E pra quem está no seu estágio, essa lógica chega na ordem errada."* Não ataca a pessoa — ataca a premissa. **R — Reenquadramento:** a causa real. *"A causa real não é [o que ela acha]. É [a causa raiz que o seu método trata]."* Revelação, não julgamento. **O — Ordem:** a sequência correta = o seu método. *"A ordem certa é: [fase 1] → [fase 2] → [fase 3]. Isso é o [nome do programa]."* O programa aparece como consequência lógica da ordem que você acabou de mostrar. **I — Inevitabilidade:** o resultado prometido como conclusão natural. *"Quando você tem [resultado da fase 1], [fase 2] e [fase 3], você não aparece tentando provar que funciona. Aparece mostrando o que já está provado."* Depois da narrativa, concretiza: o que é / imagine (visualização) / para quem é / para quem não é / entregáveis / duração / âncora de valor antes do preço (*"Quanto vale pra você chegar em [ponto B]?"* → pausa) / **Preço → para. Silêncio não precisa ser preenchido.**
-
-Aplicação: a oferta que aparece depois do diagnóstico e da narrativa não é argumento. É resposta à pergunta que ela estava fazendo por dentro.
-
-**Ponto 3 — Etapa 5: Fechamento + objeções + o que determina se fecha.**
-
-Ideia: o fechamento não é o lugar onde você convence. É o lugar onde você convida.
-
-Exemplo: **CTA 1 — sinal de interesse:** *"Faz sentido pra você? Isso é o que você está procurando?"* Para. Espera. Não preenche o silêncio. Se ela mostrou abertura → **Escassez** (só se for real): *"Trabalho com [número] por turma. Hoje tenho [X] vaga."* **CTA 2 — emocional:** *"Você veio aqui porque algo não fechou antes. O [programa] é o diferente. E você sabe onde quer estar em [prazo que ela mencionou]."* Objeções: *"Vou pensar"* → *"O que especificamente você está considerando?"* — descobre a objeção real. *"Está caro"* → *"Quanto está custando ficar no ponto A — em tempo, em oportunidade, em desgaste?"* *"Não tenho tempo"* → *"Quantas horas por semana você conseguiria dedicar? O programa foi desenhado para [perfil dela]."* **Regra de ouro:** nunca rebata direto. Pergunta primeiro. Objeção declarada ≠ objeção real. O que determina se fecha não é a técnica — é a sequência: ela fala primeiro → você entende o gargalo → cria identificação → constrói lógica → concretiza a oferta → convida. Nessa ordem, é resposta.
-
-Duas coisas que vão acelerar o aprendizado: **Grave todas as sessões** (com permissão: *"Posso gravar? É para eu poder revisar e continuar melhorando."*). Por quê: cada gravação é matéria-prima — para revisão própria e para o M4 (cortes de você no ato de fazer o que diz que faz = autoridade em movimento). **Segunda:** se sentir que precisa de segunda visão, peça análise de sessão pelo time de suporte — recurso da mentoria.
-
-Aplicação: o roteiro completo está no arquivo **Roteiro da Sessão 1:1** no Drive — com as seções de personalização em branco para preencher com o seu método.
+Isso importa agora porque a venda não acontece só na sessão. Ela começa antes — no que a lead vê e responde antes de entrar na chamada. A lead decide se a sessão tem valor antes da sessão começar.
 
 ---
 
-Onde: arquivo **Roteiro da Sessão 1:1** no Drive — preencher a seção de perguntas do diagnóstico com as perguntas do seu método (antes da primeira sessão). Quando: agora — antes de confirmar a sessão com o lead que aceitou.
+**Ponto 1 — O caminho inteiro.**
+
+Ideia: funil aqui não é conceito de marketing. É estratégia de venda — o caminho que a pessoa percorre até decidir comprar.
+
+Exemplo: são 4 passos. A abordagem, que você aprendeu na aula anterior. A página da sessão, com o pré-diagnóstico. A sessão. E o pós-sessão, que fecha o módulo.
+
+Aplicação: hoje o foco é o miolo — o que acontece entre o sim dela e o fim da chamada.
+
+**Ponto 2 — Antes da sessão: a página + o pré-diagnóstico.** *[TELA: diagnostico.incubadoradeexpert.com.br]*
+
+Ideia: quando a lead aceita, antes de qualquer conversa, ela recebe este link. A página mostra como a sessão funciona: um pré-diagnóstico de uns 10 minutos, uma sessão individual de 45, e um próximo passo claro no final.
+
+Exemplo: repara que a página também diz pra quem é — e pra quem não é. Quando ela lê "não é pra quem procura fórmula mágica", ela entende que ali tem critério. Ela não chega numa "call de venda". Chega numa sessão que ela já sabe que vale. E o aviso de que existe um próximo passo já está dado — antes de você abrir a boca.
+
+Aplicação: o pré-diagnóstico ela responde por ali mesmo. Você entra na chamada sabendo onde ela está — e não gasta os primeiros 10 minutos perguntando o que já poderia saber.
+
+**Ponto 3 — Durante a sessão: o radar.** *[TELA: Radar do Expert]*
+
+Ideia: as áreas que eu investigo no diagnóstico são as fases do meu método — os 5 Ps: Persona, Promessa, Processo, Proposta e Posicionamento. Cada um tem de 2 a 4 perguntas, que eu pontuo de 0 a 10 enquanto ela fala.
+
+Exemplo: o que ela já respondeu no pré-diagnóstico chega pré-marcado — eu não repergunto o que ela já disse. E o radar cresce em tempo real, na frente dela. No final, ele me mostra o ponto mais travado. É ali que eu aprofundo.
+
+Aplicação: o que isso causa é o mais importante. Ela vê o próprio gargalo desenhado na tela. Quando a oferta chegar, não é argumento meu — é resposta ao que ela acabou de ver. Diagnóstico sempre antes da oferta. Sempre.
+
+**Ponto 4 — O roteiro por trás da sessão.** *[TELA: meu Roteiro da Sessão — até a Etapa 3]*
+
+Ideia: nada disso é improviso. Por trás da sessão tem um roteiro.
+
+Exemplo: antes de cada sessão, eu preparo 3 coisas a partir do pré-diagnóstico: o gancho de abertura, com as palavras dela; o gargalo provável; e a hipótese de oferta. Depois, a sessão acontece em 5 etapas: a abertura, já avisando que vai ter um próximo passo; o diagnóstico; a ponte de identificação — a minha história, ou o futuro dela já resolvido; a oferta; e o fechamento.
+
+Aplicação: na próxima aula, você monta as suas 5 etapas, uma por uma, com o agente.
+
+**Ponto 5 — O conjunto.**
+
+Ideia: repara no conjunto. A página, o radar, o roteiro. A lead sente que está diante de alguém com método antes mesmo de ouvir a oferta. Isso não é detalhe — é o que faz uma sessão valer o que ela custa. Ferramenta não é enfeite. É o que faz a lead enxergar o valor antes do preço.
+
+Exemplo: esse funil que você viu é do meu método. O seu segue as fases do seu.
+
+Aplicação: se você quiser o seu funil de vendas secretas completo construído comigo — a página da sua sessão, o seu pré-diagnóstico, o seu radar com as fases do seu método e o roteiro da sessão personalizado — fala com o suporte. O link está na descrição desta aula.
 
 ---
 
-A sessão tem estrutura. O roteiro está na sua mão.
+Onde: nesta aula você só observa o caminho. Quando: o seu roteiro nasce na próxima aula, com o Agente Vendedor Secreto.
+
+---
+
+Você viu o funil de fora. Agora você monta o seu por dentro.
+
+Na próxima aula: o roteiro da sua sessão, construído com o Agente Vendedor Secreto.
+
+---
+
+## AULA 10 — EXERCÍCIO: MONTANDO SEU ROTEIRO COM O AGENTE VENDEDOR SECRETO
+*Estimativa: 10–12 minutos (vídeo) + tempo com o agente*
+*Fontes: Agente Vendedor Secreto v2.0 (Roteiro da Sessão de Vendas Secretas) + ECROI (framework autoral)*
+
+---
+
+Você viu o meu funil por dentro. A página, o radar, o roteiro.
+
+Agora você monta o seu roteiro — com o seu método, na sua voz.
+
+---
+
+O tema de hoje é um exercício: construir o roteiro da sua sessão com o **Agente Vendedor Secreto**.
+
+Isso importa agora porque a sessão é onde a venda acontece — e roteiro genérico soa genérico. O agente monta as 5 etapas em cima do seu método, da sua persona e da sua oferta.
+
+---
+
+**Ponto 1 — O que entra (inputs).**
+
+Ideia: o agente precisa conhecer o seu negócio pra montar um roteiro que pareça seu.
+
+Exemplo: leve quatro documentos — **Minha Persona Compradora (P1)**, do M1, Aula 4; **Minha Promessa Transformadora (P2)**, do M1, Aula 6; **Meu Processo Autoral (P3)**, do M2, Aula 5; e **Minha Proposta Validada (P4)**, do M3, Aula 4. E a sua **História Real**, do M0 — se você for usar a sua história como ponte.
+
+Aplicação: separe os documentos antes de abrir o agente. Quanto mais claro o seu método, mais preciso o roteiro.
+
+**Ponto 2 — O que o agente monta com você (as 5 etapas).**
+
+Ideia: o agente percorre as 5 etapas da sessão com você — e em cada uma existe uma regra que você precisa levar pra chamada.
+
+Exemplo: **Etapa 1 — Abertura.** Começa com algo que ela escreveu no pré-diagnóstico, e já avisa que, no final, você mostra o próximo passo. Quem é avisado relaxa. Quem é pego de surpresa se defende. **Etapa 2 — Diagnóstico.** As áreas são as fases do seu método. Em cada uma, as perguntas seguem uma ordem: Situação — como está hoje; Problema — o que mais incomoda; Implicação — *"se nada mudar, como você vai estar daqui a 1 ano?"*; e você fecha entregando um insight que ela já pode usar, comprando ou não. Anote as palavras exatas dela — elas voltam na oferta como espelho. **Etapa 3 — Ponte.** O agente te pergunta qual caminho combina com você: a sua história, ou o Bloco de Sonhos, em que ela visualiza o futuro já resolvido. **Etapa 4 — Oferta.** Você pede licença antes — *"posso te mostrar como funciona o meu trabalho?"* — e aí vem a narrativa ECROI com as fases do seu método, os detalhes concretos, e a âncora de valor antes do preço. Preço → para. O silêncio não precisa ser preenchido. **Etapa 5 — Fechamento.** *"Faz sentido pra você?"* E as respostas às objeções do seu nicho, sempre em 3 passos: acolhe, pergunta, responde. Uma objeção de cada vez, preço por último.
+
+Aplicação: se ela disse sim, o pagamento se resolve ainda na chamada — "depois eu resolvo" é onde a venda esfria. Se não fechou, você nunca termina a sessão sem data e horário do próximo contato combinados.
+
+**Ponto 3 — Três posturas pra rodar bem.**
+
+Ideia: o agente monta o roteiro, mas quem vai falar é você.
+
+Exemplo: **Primeira: leve os documentos prontos.** Quanto mais claro o método, mais preciso o roteiro. **Segunda: se alguma fala não soar você, diga.** O agente ajusta. O roteiro precisa parecer você falando — não um script. **Terceira: não pule o diagnóstico**, nem quando ela "já souber o que você vende". Sem diagnóstico, a oferta vira pitch.
+
+Aplicação: e uma coisa que vale pra sessão inteira — não seja ansiosa. Se ela percebe que você quer vender mais do que ela quer comprar, ela trava.
+
+**Ponto 4 — O que sai (output) + o agente depois do roteiro.**
+
+Ideia: no final, você tem o roteiro completo das 5 etapas, com as falas prontas pra ajustar.
+
+Exemplo: e o agente não some depois do roteiro. No dia da sessão, se você travar numa objeção, pergunta pra ele: *"ela disse X, o que eu respondo?"*. Depois da sessão, conta o que aconteceu — ele te ajuda a revisar e a montar o follow-up.
+
+Aplicação: salve o roteiro no arquivo **Roteiro da Sessão 1 a 1** no Drive e deixe aberto durante a chamada. E grave todas as sessões, com permissão — é revisão pra você e matéria-prima dos cortes de autoridade no M4.
+
+---
+
+Onde: **Agente Vendedor Secreto** no seu painel de agentes + P1, P2, P3 e P4 no Drive → resultado no arquivo **Roteiro da Sessão 1 a 1**. Quando: agora — o roteiro precisa estar pronto antes da primeira sessão confirmada.
+
+---
+
+Roteiro pronto. Na sua voz, com o seu método.
 
 Na próxima aula, a gente entra no que acontece depois da chamada — seja ela um "sim", um "não", ou um "vou pensar". O pós-sessão, o follow-up, e como transformar a primeira conversa em prova para o M4.
 
 ---
 
-## AULA 10 — PÓS-SESSÃO: O FOLLOW-UP E O DEPOIMENTO
+## AULA 11 — PÓS-SESSÃO: O FOLLOW-UP E O DEPOIMENTO
 *Estimativa: 10–12 minutos*
 
 ---
@@ -1114,6 +1256,8 @@ Aplicação: vai pro Rastreador: lead fria — razão, data. Quando você aparec
 Ideia: ela não comprou. E foi clara nisso. Primeira coisa — e precisa estar no corpo, não só na cabeça: **isso não é veredicto.** Campo produz resultados variados. Um não não fala sobre o seu método. Fala sobre essa pessoa, nesse momento específico.
 
 Exemplo: encerrar com generosidade: *"Tudo bem. Entendo que o momento precisa estar certo dos dois lados. Se em algum ponto você quiser retomar, estou aqui."* Curto. Limpo. Sem porta batida. Vai pro Rastreador: lead fria — razão, data. Não é descarte — é pausa. Independente do resultado (sim, não, vai pensar): antes de dormir nesse dia, três perguntas — uma linha cada. **O que funcionou?** (qual parte do roteiro gerou abertura?) **O que travou?** (onde a conversa perdeu ritmo?) **O que você diria diferente?** (um ajuste — não dez). Guardar e ler antes da próxima conversa. Sem esse registro, cada sessão começa do mesmo ponto. Com ele, cada sessão começa mais avançada.
+
+E se você quiser um segundo olhar: me manda a gravação. Eu assisto a sua sessão e te mostro exatamente onde ajustar — narrativa, preço, entregáveis, objeções, oferta. É a análise do seu lançamento pra uma pessoa só. O link pra falar com o suporte está na descrição desta aula.
 
 Aplicação: tudo que você coletou no M3 vai para o M4 com você. **O depoimento** — prova com as palavras da sua aluna: o ativo mais valioso quando aparecer publicamente. **O pitch que funcionou** — não o planejado, o que você usou na prática. Calibra a comunicação no M4. **As objeções reais** — cada objeção ouvida numa sessão existe no mercado. No M4 você cria conteúdo que responde essas objeções antes da conversa acontecer. Quando você entrar no M4, não vai construir o posicionamento do zero. Vai construir a partir do que as conversas de verdade revelaram. É por isso que as sessões do M3 não são só vendas. São pesquisa de mercado que você recebeu para fazer.
 
