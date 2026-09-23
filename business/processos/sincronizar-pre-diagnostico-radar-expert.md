@@ -71,7 +71,8 @@ Fala em linguagem natural com o Companion ou o Claude, ex:
 | Meta/Desejo como Infoprodutor | `meta` | card de contexto |
 | O Que Já Tentou | `jaTentou` | card de contexto |
 | Resultado Esperado da Sessão | `resultadoEsperado` | card de contexto |
-| Visão Geral / História do Negócio | `visaoGeral`, `historiaNegocio` | guardado no doc, não exibido ainda (contexto extra se precisar) |
+| Visão Geral do Negócio | `visaoGeral` | card de contexto — primeiro item, largura total (exibido desde 23/09/2026) |
+| História do Negócio | `historiaNegocio` | card de contexto — logo abaixo da visão geral, largura total (exibido desde 23/09/2026; base da conexão na sessão) |
 
 Os pré-preenchimentos de P1/P2 só entram se o slider ainda estiver em 0 — não sobrescrevem
 pontuação que a Karol já tenha ajustado na hora.
