@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cronograma · Vagner</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
+<style>
+:root{
+  --bg:#F4F4F5; --surface:#FFFFFF; --surface-2:#EDEDF0;
+  --ink:#0B0B0C; --ink-soft:#71717A; --line:#D4D4D8;
+  --accent:#FF6B1A; --accent-strong:#E85A0D; --accent-soft:rgba(255,107,26,.10);
+  --warn:#71717A; --warn-soft:#F4F4F5;
+  --font-display:'Sora',-apple-system,'Segoe UI',sans-serif;
+  --font-body:-apple-system,'Segoe UI',Roboto,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:14px;}
+.page{max-width:960px;margin:0 auto;padding:28px 20px 64px;}
+.hero{padding-block:6px 22px;border-bottom:1px solid var(--line);margin-bottom:22px;}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+.hero h1{font-family:var(--font-display);font-size:clamp(26px,5vw,38px);margin:6px 0 4px;text-wrap:balance;font-weight:600;}
+.hero .meta{color:var(--ink-soft);font-size:14px;display:flex;flex-wrap:wrap;gap:6px 16px;}
+
+/* week tab bar */
+.weektabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;}
+.weektab{flex:1;min-width:120px;background:var(--surface);border:1.5px solid var(--line);border-radius:12px;
+  padding:10px 12px;cursor:pointer;text-align:left;font-family:var(--font-body);transition:all .15s ease;color:var(--ink);}
+.weektab:hover{border-color:var(--accent);}
+.weektab .wk-num{font-family:var(--font-display);font-size:13px;color:var(--ink-soft);font-weight:600;}
+.weektab .wk-title{font-size:12.5px;font-weight:600;margin-top:2px;line-height:1.25;}
+.weektab.active{border-color:var(--accent);background:var(--accent-soft);}
+.weektab.active .wk-num{color:var(--accent-strong);}
+@media (max-width:640px){
+  .weektabs{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;}
+  .weektab{min-width:104px;}
+}
+
+[data-week]{display:none;}
+[data-week].active{display:block;}
+
+.placeholder-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px 26px;}
+.placeholder-card h2{font-family:var(--font-display);font-size:22px;margin:0 0 6px;font-weight:600;}
+.placeholder-card .deliver-label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;
+  color:var(--accent-strong);margin-bottom:6px;}
+.placeholder-card p{font-size:14.5px;line-height:1.6;margin:0;}
+
+/* ===== S1 mind map ===== */
+.progress{display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:13px;color:var(--ink-soft);}
+.progress-track{flex:1;height:6px;background:var(--surface-2);border-radius:99px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;transition:width .3s ease;border-radius:99px;}
+.progress-count{font-variant-numeric:tabular-nums;white-space:nowrap;}
+.hint{font-size:12.5px;color:var(--ink-soft);text-align:center;margin-bottom:8px;}
+
+.mindmap-wrap{position:relative;width:100%;max-width:600px;margin:0 auto 8px;aspect-ratio:1/0.92;}
+.mindmap-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;}
+.mindmap-svg line{stroke:var(--line);stroke-width:1.5;transition:stroke .2s ease,stroke-width .2s ease;}
+.mindmap-svg line.active{stroke:var(--accent);stroke-width:2.5;}
+
+.hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  background:var(--accent);color:#0B0B0C;font-family:var(--font-display);font-weight:700;
+  font-size:13px;text-align:center;line-height:1.25;padding:14px 16px;border-radius:50%;
+  width:104px;height:104px;display:flex;align-items:center;justify-content:center;z-index:2;
+  box-shadow:0 2px 16px rgba(255,107,26,.25);}
+.node-btn{position:absolute;transform:translate(-50%,-50%);z-index:2;
+  display:flex;align-items:center;gap:7px;background:var(--surface);border:2px solid var(--line);
+  border-radius:99px;padding:8px 14px 8px 8px;font-size:12.5px;font-weight:600;color:var(--ink);
+  cursor:pointer;white-space:nowrap;transition:all .15s ease;font-family:var(--font-body);}
+.node-btn:hover{border-color:var(--accent);}
+.node-btn .num{width:22px;height:22px;border-radius:50%;background:var(--surface-2);color:var(--ink-soft);
+  display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;font-family:var(--font-display);}
+.node-btn.active{border-color:var(--accent);background:var(--accent-soft);}
+.node-btn.active .num{background:var(--accent);color:var(--surface);}
+.node-btn.done .num{background:var(--accent-strong);color:var(--surface);}
+.node-btn.done .num::after{content:"✓";}
+.node-btn.done.active .num::after{content:"✓";}
+
+@media (max-width:480px){
+  .node-btn{padding:6px 10px 6px 6px;font-size:11px;gap:5px;}
+  .node-btn .num{width:18px;height:18px;font-size:9px;}
+  .hub{width:84px;height:84px;font-size:11px;padding:10px;}
+}
+
+.detail-wrap{margin-top:20px;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;}
+.card-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px;}
+.card-head h2{font-family:var(--font-display);font-size:20px;margin:0;font-weight:600;}
+.time{font-size:12px;color:var(--ink-soft);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.card-sub{font-size:13px;color:var(--ink-soft);margin:0 0 14px;}
+.mark-done{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-soft);
+  cursor:pointer;user-select:none;margin-top:16px;}
+.mark-done input{accent-color:var(--accent);width:14px;height:14px;}
+
+.bullets{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px;}
+.bullets li{font-size:14px;line-height:1.5;padding-left:16px;position:relative;}
+.bullets li::before{content:"—";position:absolute;left:0;color:var(--ink-soft);}
+
+.hypothesis{background:var(--accent-soft);border:1px solid var(--accent);border-radius:10px;padding:12px 14px;
+  font-size:13.5px;line-height:1.5;margin-bottom:14px;}
+.hypothesis b{color:var(--accent-strong);}
+
+.checklist{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none;}
+.checklist li{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;line-height:1.4;padding:6px 8px;
+  border-radius:8px;transition:background .15s ease;}
+.checklist li:hover{background:var(--surface-2);}
+.checklist input{accent-color:var(--accent);width:15px;height:15px;margin-top:2px;flex-shrink:0;}
+.checklist li.checked span{color:var(--ink-soft);text-decoration:line-through;text-decoration-color:var(--line);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media (max-width:560px){.two-col{grid-template-columns:1fr;}}
+.col-label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;color:var(--ink-soft);
+  margin-bottom:8px;}
+
+.weeks{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+.week-chip{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12.5px;
+  white-space:nowrap;}
+.week-chip b{color:var(--accent-strong);}
+
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media (max-width:560px){.scope{grid-template-columns:1fr;}}
+.scope-box{border-radius:10px;padding:14px 16px;border:1px solid var(--line);}
+.scope-box.yes{background:var(--accent-soft);border-color:var(--accent);}
+.scope-box.no{background:var(--warn-soft);border-color:var(--warn);}
+.scope-box h3{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;}
+.scope-box.yes h3{color:var(--accent-strong);}
+.scope-box.no h3{color:var(--warn);}
+.scope-box ul{margin:0;padding-left:16px;font-size:13.5px;line-height:1.6;}
+
+.foot{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-soft);
+  line-height:1.6;}
+
+[data-panel]{display:none;}
+[data-panel].active{display:block;}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="hero">
+    <div class="eyebrow">Sprint do Método</div>
+    <h1>Cronograma — Vagner Teixeira</h1>
+    <div class="meta">
+      <span>6 semanas · 1 sessão por semana</span>
+      <span>·</span>
+      <span>Canal entre sessões: WhatsApp</span>
+    </div>
+  </div>
+
+  <div class="weektabs" id="weektabs">
+    <button class="weektab" data-tab="1"><div class="wk-num">S1</div><div class="wk-title">Imersão</div></button>
+    <button class="weektab" data-tab="2"><div class="wk-num">S2</div><div class="wk-title">Persona + Promessa</div></button>
+    <button class="weektab" data-tab="3"><div class="wk-num">S3</div><div class="wk-title">Processo Autoral</div></button>
+    <button class="weektab" data-tab="4"><div class="wk-num">S4</div><div class="wk-title">Ferramentas</div></button>
+    <button class="weektab" data-tab="5"><div class="wk-num">S5</div><div class="wk-title">Proposta + Vendas</div></button>
+    <button class="weektab" data-tab="6"><div class="wk-num">S6</div><div class="wk-title">Agente de IA + Handoff</div></button>
+  </div>
+
+  <!-- ============ SESSÃO 1 ============ -->
+  <div data-week="1">
+
+    <div class="progress">
+      <span class="progress-count" id="progress-count">0/6 blocos</span>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    </div>
+    <p class="hint">Clique em cada bloco pra abrir o conteúdo</p>
+
+    <div class="mindmap-wrap">
+      <svg class="mindmap-svg" viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="Mapa mental com 6 blocos da sessão ao redor de um nó central">
+        <line data-line="1" x1="50" y1="50" x2="50" y2="10"></line>
+        <line data-line="2" x1="50" y1="50" x2="82.9" y2="30"></line>
+        <line data-line="3" x1="50" y1="50" x2="82.9" y2="70"></line>
+        <line data-line="4" x1="50" y1="50" x2="50" y2="90"></line>
+        <line data-line="5" x1="50" y1="50" x2="17.1" y2="70"></line>
+        <line data-line="6" x1="50" y1="50" x2="17.1" y2="30"></line>
+      </svg>
+
+      <div class="hub">SESSÃO 1<br>VAGNER</div>
+
+      <button class="node-btn" data-node="1" style="left:50%;top:10%;"><span class="num">1</span>Abertura</button>
+      <button class="node-btn" data-node="2" style="left:82.9%;top:30%;"><span class="num">2</span>Diagnóstico</button>
+      <button class="node-btn" data-node="3" style="left:82.9%;top:70%;"><span class="num">3</span>Persona+Promessa</button>
+      <button class="node-btn" data-node="4" style="left:50%;top:90%;"><span class="num">4</span>Serviço+Escopo</button>
+      <button class="node-btn" data-node="5" style="left:17.1%;top:70%;"><span class="num">5</span>Expectativas</button>
+      <button class="node-btn" data-node="6" style="left:17.1%;top:30%;"><span class="num">6</span>Fechamento</button>
+    </div>
+
+    <div class="detail-wrap">
+
+      <div class="card" data-panel="1">
+        <div class="card-head"><h2>Abertura</h2><span class="time">5 min</span></div>
+        <ul class="bullets">
+          <li>Esta não é uma aula — é a sessão que constrói a base de tudo que vem depois</li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="1"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="2">
+        <div class="card-head"><h2>Aprofundar diagnóstico</h2><span class="time">25–35 min</span></div>
+        <p class="card-sub">Partindo do que você já respondeu no diagnóstico.</p>
+        <ul class="bullets">
+          <li>"Acelerar de forma estruturada pra não queimar oportunidade" — o que trava especificamente? Qual o medo por trás?</li>
+          <li>Nome do método: as 3 opções que você trouxe ficam em aberto — essa decisão a gente constrói junto e fecha na Sessão 3</li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="2"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="3">
+        <div class="card-head"><h2>Coleta pra Persona + Promessa</h2><span class="time">20–30 min</span></div>
+        <p class="card-sub">O bloco mais importante — insumo direto pra Sessão 2.</p>
+
+        <div class="hypothesis">
+          <b>Hipótese pra validar juntos:</b> não são 4 tipos de cliente — é <b>uma pessoa só</b> numa cascata: sem propósito no negócio → caixa vai mal → não expõe pra esposa → angústia sem paz. Isso bate com o que você vê na prática?
+        </div>
+
+        <div class="two-col">
+          <div>
+            <div class="col-label">Persona Compradora — 7 dimensões</div>
+            <ul class="checklist">
+              <li><input type="checkbox"><span>Quem é ela — pessoa real, a cascata bate?</span></li>
+              <li><input type="checkbox"><span>Situação atual — negócio, fase, faturamento; já comentou em casa?</span></li>
+              <li><input type="checkbox"><span>Desejo profundo — paz? não estar sozinho? provar pra família?</span></li>
+              <li><input type="checkbox"><span>Dor principal — frase exata dela; fala isso em casa também?</span></li>
+              <li><input type="checkbox"><span>Medo/objeção — medo de admitir pra família?</span></li>
+              <li><input type="checkbox"><span>Já tentou — banco, outro consultor, sozinha; por que não resolveu?</span></li>
+              <li><input type="checkbox"><span>O que precisa ouvir — frase que alivia</span></li>
+            </ul>
+          </div>
+          <div>
+            <div class="col-label">Promessa Transformadora — 4 elementos</div>
+            <ul class="checklist">
+              <li><input type="checkbox"><span>Resultado externo concreto e mensurável</span></li>
+              <li><input type="checkbox"><span>O que muda por dentro — propósito + parar de esconder</span></li>
+              <li><input type="checkbox"><span>Diferencial — EVO na causa raiz vs. banco/consultor no sintoma</span></li>
+              <li><input type="checkbox"><span>Medo/objeção que a frase precisa eliminar</span></li>
+            </ul>
+          </div>
+        </div>
+        <label class="mark-done"><input type="checkbox" data-block-check="3"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="4">
+        <div class="card-head"><h2>Explicar o serviço + escopo</h2><span class="time">10 min</span></div>
+
+        <div class="weeks">
+          <span class="week-chip"><b>S1</b> Imersão</span>
+          <span class="week-chip"><b>S2</b> Persona+Promessa</span>
+          <span class="week-chip"><b>S3</b> Processo Autoral</span>
+          <span class="week-chip"><b>S4</b> Ferramentas</span>
+          <span class="week-chip"><b>S5</b> Proposta+Vendas Secretas</span>
+          <span class="week-chip"><b>S6</b> Agente de IA+Handoff</span>
+        </div>
+
+        <div class="scope">
+          <div class="scope-box yes">
+            <h3>O que entrega</h3>
+            <ul>
+              <li>A fundação do método: persona, promessa, processo com nome próprio</li>
+              <li>Ferramentas personalizadas, prontas pra usar</li>
+              <li>Proposta de venda + roteiros de Vendas Secretas</li>
+              <li>Agente de IA do método — pessoal e intransferível</li>
+            </ul>
+          </div>
+          <div class="scope-box no">
+            <h3>O que não entrega</h3>
+            <ul>
+              <li>Posicionamento de escala</li>
+              <li>Páginas / criação de site</li>
+              <li>Tráfego / anúncios</li>
+              <li>Criação de conteúdo</li>
+            </ul>
+          </div>
+        </div>
+        <label class="mark-done"><input type="checkbox" data-block-check="4"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="5">
+        <div class="card-head"><h2>Setar expectativas</h2><span class="time">10 min</span></div>
+        <ul class="bullets">
+          <li>Ritmo: 1 sessão por semana, 6 semanas · Canal entre sessões: WhatsApp</li>
+          <li>O que sai pronto no fim: agente de IA de uso pessoal e intransferível</li>
+          <li>Fundação pronta ≠ já vender no digital — isso vem na etapa seguinte</li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="5"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="6">
+        <div class="card-head"><h2>Fechamento</h2><span class="time">5 min</span></div>
+        <ul class="bullets">
+          <li>Próximo passo concreto antes da Sessão 2</li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="6"> Marcar bloco como feito</label>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ SESSÃO 2 ============ -->
+  <div data-week="2">
+    <div class="placeholder-card">
+      <div class="deliver-label">Entrega desta semana</div>
+      <h2>Persona + Promessa</h2>
+      <p>Você recebe o documento de Persona Compradora e Promessa Transformadora <b>já prontos</b>, construídos a partir do que coletamos na Sessão 1. Seu papel aqui é validar e ajustar, não construir do zero.</p>
+    </div>
+  </div>
+
+  <!-- ============ SESSÃO 3 ============ -->
+  <div data-week="3">
+    <div class="placeholder-card">
+      <div class="deliver-label">Entrega desta semana</div>
+      <h2>Processo Autoral</h2>
+      <p>Definição do seu método, a partir da sua própria história — o processo que entrega a promessa transformadora que a sua persona deseja. É aqui que fechamos o nome do método, entre as 3 opções que você trouxe.</p>
+    </div>
+  </div>
+
+  <!-- ============ SESSÃO 4 ============ -->
+  <div data-week="4">
+    <div class="placeholder-card">
+      <div class="deliver-label">Entrega desta semana</div>
+      <h2>Ferramentas</h2>
+      <p>Ferramentas personalizadas pro seu método — prontas pra usar, não um esqueleto genérico pra você preencher sozinho.</p>
+    </div>
+  </div>
+
+  <!-- ============ SESSÃO 5 ============ -->
+  <div data-week="5">
+    <div class="placeholder-card">
+      <div class="deliver-label">Entrega desta semana</div>
+      <h2>Proposta + Roteiros de Venda</h2>
+      <p>Proposta de venda pronta + roteiros reais das ligações de Vendas Secretas — prontos pra você usar quando for validar no mercado.</p>
+    </div>
+  </div>
+
+  <!-- ============ SESSÃO 6 ============ -->
+  <div data-week="6">
+    <div class="placeholder-card">
+      <div class="deliver-label">Entrega desta semana</div>
+      <h2>Agente de IA + Handoff</h2>
+      <p>Agente de IA do seu método, montado e treinado — uso pessoal e intransferível — mais a reunião de handoff pra você seguir com autonomia.</p>
+    </div>
+  </div>
+
+  <div class="foot">
+    Sprint do Método — 6 semanas. Cliente: Vagner Alexandre Teixeira.
+  </div>
+</div>
+
+<script>
+(function(){
+  var STORAGE_KEY_TAB = 'cronograma-vagner-tab';
+  var STORAGE_KEY_S1 = 'sessao1-vagner-progress-v2';
+
+  var tabs = document.querySelectorAll('.weektab');
+  var weeks = document.querySelectorAll('[data-week]');
+
+  function setTab(id){
+    tabs.forEach(function(t){ t.classList.toggle('active', t.getAttribute('data-tab')===id); });
+    weeks.forEach(function(w){ w.classList.toggle('active', w.getAttribute('data-week')===id); });
+    try{ localStorage.setItem(STORAGE_KEY_TAB, id); }catch(e){}
+  }
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){ setTab(t.getAttribute('data-tab')); });
+  });
+
+  var savedTab = '1';
+  try{ savedTab = localStorage.getItem(STORAGE_KEY_TAB) || '1'; }catch(e){}
+  setTab(savedTab);
+
+  var nodeBtns = document.querySelectorAll('.node-btn');
+  var panels = document.querySelectorAll('[data-panel]');
+  var lines = document.querySelectorAll('[data-line]');
+  var blockChecks = document.querySelectorAll('[data-block-check]');
+  var subChecks = document.querySelectorAll('.checklist input[type="checkbox"]');
+
+  function loadS1State(){
+    try{
+      var raw = localStorage.getItem(STORAGE_KEY_S1);
+      return raw ? JSON.parse(raw) : {blocks:{}, subs:[], active:'1'};
+    }catch(e){ return {blocks:{}, subs:[], active:'1'}; }
+  }
+  function saveS1State(state){
+    try{ localStorage.setItem(STORAGE_KEY_S1, JSON.stringify(state)); }catch(e){}
+  }
+  var s1state = loadS1State();
+
+  function setActiveNode(id){
+    s1state.active = id;
+    nodeBtns.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-node')===id); });
+    panels.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-panel')===id); });
+    lines.forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-line')===id); });
+    saveS1State(s1state);
+  }
+
+  nodeBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){ setActiveNode(btn.getAttribute('data-node')); });
+  });
+
+  function updateS1Progress(){
+    var done = document.querySelectorAll('[data-block-check]:checked').length;
+    document.getElementById('progress-count').textContent = done + '/6 blocos';
+    document.getElementById('progress-fill').style.width = (done/6*100) + '%';
+  }
+
+  blockChecks.forEach(function(cb){
+    var blockNum = cb.getAttribute('data-block-check');
+    cb.checked = !!s1state.blocks[blockNum];
+    var btn = document.querySelector('.node-btn[data-node="'+blockNum+'"]');
+    if(cb.checked && btn) btn.classList.add('done');
+    cb.addEventListener('change', function(){
+      s1state.blocks[blockNum] = cb.checked;
+      if(btn) btn.classList.toggle('done', cb.checked);
+      saveS1State(s1state);
+      updateS1Progress();
+    });
+  });
+
+  subChecks.forEach(function(cb, i){
+    cb.checked = !!s1state.subs[i];
+    var li = cb.closest('li');
+    if(cb.checked) li.classList.add('checked');
+    cb.addEventListener('change', function(){
+      s1state.subs[i] = cb.checked;
+      li.classList.toggle('checked', cb.checked);
+      saveS1State(s1state);
+    });
+  });
+
+  setActiveNode(s1state.active || '1');
+  updateS1Progress();
+})();
+</script>
+
+</body>
+</html>
