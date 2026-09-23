@@ -129,6 +129,15 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
 .foot{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-soft);
   line-height:1.6;}
 
+.answer{display:block;width:100%;margin-top:6px;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;
+  padding:8px 10px;font-family:var(--font-body);font-size:13.5px;line-height:1.45;color:var(--ink);resize:none;overflow:hidden;min-height:36px;}
+.answer:focus{outline:2px solid var(--accent);outline-offset:1px;background:var(--surface);}
+.answer:disabled{opacity:.6;}
+.checklist .q{flex:1;min-width:0;}
+.bullets li .answer, .hypothesis .answer{margin-top:8px;}
+.save-status{font-size:12px;color:var(--ink-soft);white-space:nowrap;min-width:64px;text-align:right;}
+.save-status.err{color:var(--accent-strong);}
+
 [data-panel]{display:none;}
 [data-panel].active{display:block;}
 </style>
@@ -161,6 +170,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
     <div class="progress">
       <span class="progress-count" id="progress-count">0/6 blocos</span>
       <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <span class="save-status" id="save-status"></span>
     </div>
     <p class="hint">Clique em cada bloco pra abrir o conteúdo</p>
 
@@ -198,8 +208,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
         <div class="card-head"><h2>Aprofundar diagnóstico</h2><span class="time">25–35 min</span></div>
         <p class="card-sub">Partindo do que você já respondeu no diagnóstico.</p>
         <ul class="bullets">
-          <li>"Acelerar de forma estruturada pra não queimar oportunidade" — o que trava especificamente? Qual o medo por trás?</li>
-          <li>Nome do método: as 3 opções que você trouxe ficam em aberto — essa decisão a gente constrói junto e fecha na Sessão 3</li>
+          <li>"Acelerar de forma estruturada pra não queimar oportunidade" — o que trava especificamente? Qual o medo por trás?<textarea class="answer" data-key="s1-diag-1" rows="1" placeholder="Anotar resposta"></textarea></li>
+          <li>Nome do método: as 3 opções que você trouxe ficam em aberto — essa decisão a gente constrói junto e fecha na Sessão 3<textarea class="answer" data-key="s1-diag-2" rows="1" placeholder="Anotar resposta"></textarea></li>
         </ul>
         <label class="mark-done"><input type="checkbox" data-block-check="2"> Marcar bloco como feito</label>
       </div>
@@ -210,28 +220,29 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
 
         <div class="hypothesis">
           <b>Hipótese pra validar juntos:</b> não são 4 tipos de cliente — é <b>uma pessoa só</b> numa cascata: sem propósito no negócio → caixa vai mal → não expõe pra esposa → angústia sem paz. Isso bate com o que você vê na prática?
+          <textarea class="answer" data-key="s1-hipotese" rows="1" placeholder="Anotar resposta"></textarea>
         </div>
 
         <div class="two-col">
           <div>
             <div class="col-label">Persona Compradora — 7 dimensões</div>
             <ul class="checklist">
-              <li><input type="checkbox"><span>Quem é ela — pessoa real, a cascata bate?</span></li>
-              <li><input type="checkbox"><span>Situação atual — negócio, fase, faturamento; já comentou em casa?</span></li>
-              <li><input type="checkbox"><span>Desejo profundo — paz? não estar sozinho? provar pra família?</span></li>
-              <li><input type="checkbox"><span>Dor principal — frase exata dela; fala isso em casa também?</span></li>
-              <li><input type="checkbox"><span>Medo/objeção — medo de admitir pra família?</span></li>
-              <li><input type="checkbox"><span>Já tentou — banco, outro consultor, sozinha; por que não resolveu?</span></li>
-              <li><input type="checkbox"><span>O que precisa ouvir — frase que alivia</span></li>
+              <li><input type="checkbox"><div class="q"><span>Quem é ela — pessoa real, a cascata bate?</span><textarea class="answer" data-key="s1-persona-1" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+              <li><input type="checkbox"><div class="q"><span>Situação atual — negócio, fase, faturamento; já comentou em casa?</span><textarea class="answer" data-key="s1-persona-2" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+              <li><input type="checkbox"><div class="q"><span>Desejo profundo — paz? não estar sozinho? provar pra família?</span><textarea class="answer" data-key="s1-persona-3" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+              <li><input type="checkbox"><div class="q"><span>Dor principal — frase exata dela; fala isso em casa também?</span><textarea class="answer" data-key="s1-persona-4" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+              <li><input type="checkbox"><div class="q"><span>Medo/objeção — medo de admitir pra família?</span><textarea class="answer" data-key="s1-persona-5" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+              <li><input type="checkbox"><div class="q"><span>Já tentou — banco, outro consultor, sozinha; por que não resolveu?</span><textarea class="answer" data-key="s1-persona-6" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+              <li><input type="checkbox"><div class="q"><span>O que precisa ouvir — frase que alivia</span><textarea class="answer" data-key="s1-persona-7" rows="1" placeholder="Anotar resposta"></textarea></div></li>
             </ul>
           </div>
           <div>
             <div class="col-label">Promessa Transformadora — 4 elementos</div>
             <ul class="checklist">
-              <li><input type="checkbox"><span>Resultado externo concreto e mensurável</span></li>
-              <li><input type="checkbox"><span>O que muda por dentro — propósito + parar de esconder</span></li>
-              <li><input type="checkbox"><span>Diferencial — EVO na causa raiz vs. banco/consultor no sintoma</span></li>
-              <li><input type="checkbox"><span>Medo/objeção que a frase precisa eliminar</span></li>
+              <li><input type="checkbox"><div class="q"><span>Resultado externo concreto e mensurável</span><textarea class="answer" data-key="s1-promessa-1" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+              <li><input type="checkbox"><div class="q"><span>O que muda por dentro — propósito + parar de esconder</span><textarea class="answer" data-key="s1-promessa-2" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+              <li><input type="checkbox"><div class="q"><span>Diferencial — EVO na causa raiz vs. banco/consultor no sintoma</span><textarea class="answer" data-key="s1-promessa-3" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+              <li><input type="checkbox"><div class="q"><span>Medo/objeção que a frase precisa eliminar</span><textarea class="answer" data-key="s1-promessa-4" rows="1" placeholder="Anotar resposta"></textarea></div></li>
             </ul>
           </div>
         </div>
@@ -286,7 +297,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
       <div class="card" data-panel="6">
         <div class="card-head"><h2>Fechamento</h2><span class="time">5 min</span></div>
         <ul class="bullets">
-          <li>Próximo passo concreto antes da Sessão 2</li>
+          <li>Próximo passo concreto antes da Sessão 2<textarea class="answer" data-key="s1-proximo-passo" rows="1" placeholder="Anotar resposta"></textarea></li>
         </ul>
         <label class="mark-done"><input type="checkbox" data-block-check="6"> Marcar bloco como feito</label>
       </div>
@@ -426,6 +437,65 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
 
   setActiveNode(s1state.active || '1');
   updateS1Progress();
+
+  /* ===== respostas da sessão (db) ===== */
+  var answers = document.querySelectorAll('.answer');
+  var saveStatus = document.getElementById('save-status');
+  var answerDoc = null;
+  var saveTimer = null;
+  var saving = false;
+  var dirty = false;
+
+  function autoGrow(el){ el.style.height = 'auto'; el.style.height = el.scrollHeight + 'px'; }
+  function collectAnswers(){
+    var out = {};
+    answers.forEach(function(a){ if (a.value.trim()) out[a.getAttribute('data-key')] = a.value; });
+    return out;
+  }
+  function setStatus(txt, err){ saveStatus.textContent = txt; saveStatus.className = 'save-status' + (err ? ' err' : ''); }
+
+  async function flush(){
+    if (!answerDoc || saving || !dirty) return;
+    saving = true; dirty = false;
+    setStatus('Salvando...');
+    try {
+      await answerDoc.set({ respostas: collectAnswers(), atualizadoEm: new Date().toISOString() });
+      setStatus(dirty ? 'Salvando...' : 'Salvo');
+    } catch(e){
+      dirty = true;
+      setStatus('Não salvou', true);
+    }
+    saving = false;
+    if (dirty) scheduleSave();
+  }
+  function scheduleSave(){ clearTimeout(saveTimer); saveTimer = setTimeout(flush, 800); }
+
+  answers.forEach(function(a){
+    a.disabled = true;
+    a.addEventListener('input', function(){ autoGrow(a); dirty = true; setStatus('...'); scheduleSave(); });
+    a.addEventListener('blur', function(){ if (dirty) { clearTimeout(saveTimer); flush(); } });
+  });
+  document.querySelectorAll('.node-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ answers.forEach(autoGrow); });
+  });
+
+  (async function initAnswers(){
+    var db = null;
+    try { db = window.claude && window.claude.use ? await window.claude.use('db') : null; } catch(e){ db = null; }
+    if (!db){ setStatus('Respostas indisponíveis aqui', true); return; }
+    answerDoc = db.doc('sessoes/s1');
+    answers.forEach(function(a){ a.disabled = false; });
+    answerDoc.onSnapshot(function(snap){
+      if (snap.metadata.hasPendingWrites) return;
+      var r = (snap.exists && snap.data().respostas) || {};
+      answers.forEach(function(a){
+        if (a === document.activeElement) return;
+        var v = r[a.getAttribute('data-key')] || '';
+        if (a.value !== v){ a.value = v; autoGrow(a); }
+      });
+      if (!saveStatus.textContent) setStatus(snap.exists ? 'Salvo' : '');
+    }, function(){ setStatus('Sem conexão', true); });
+  })();
 })();
 </script>
 
