@@ -136,7 +136,8 @@ o que está travando, e o que precisa acontecer primeiro.
 **Passo 03 — Você sai com o próximo passo claro**
 Clareza do que focar primeiro — sua, mesmo que você decida
 seguir sozinho. E se fizer sentido pros dois lados, a Karol
-te apresenta a mentoria Incubadora de Expert.
+te apresenta o caminho que recomenda pra você seguir — e como
+pode te ajudar nele.
 
 *Nota de voz (04/07, apontado pela Karol): a página inteira fala DA Karol em 3ª pessoa (narrador te apresenta ela); o forms fala em 1ª pessoa (assinado por ela). Nunca misturar as duas na mesma frase — "mesmo que a gente nunca mais se fale" era deslize de 1ª pessoa e foi trocado por "mesmo que você decida seguir sozinho" (mesmo efeito de desarme, voz consistente).*
 
