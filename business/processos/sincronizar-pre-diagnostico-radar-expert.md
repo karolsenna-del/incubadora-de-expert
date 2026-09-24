@@ -4,6 +4,8 @@
 > da ferramenta **Radar do Expert**, antes da Sessão Estratégica. Criado 21/09/2026, testado
 > com a lead Marcelli (marcellistrobel@gmail.com, sessão de 22/09).
 
+> **24/09/2026:** cada critério do Radar agora tem um campo de observações (salvo junto com o diagnóstico no campo `notes`, visível no Histórico). Esse sync de pré-diagnóstico não preenche esse campo — as observações são só da Karol, feitas ao vivo.
+
 ---
 
 ## O que é
