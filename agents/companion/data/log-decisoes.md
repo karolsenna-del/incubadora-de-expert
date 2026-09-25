@@ -513,3 +513,17 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Racional:** Consolidar num preço único o que já era entregue de fato (ferramentas, agente de IA, páginas/tráfego), em vez de manter como add-ons fragmentados — alinhado ao diferencial já mapeado na Fase 1 de que o mercado gringo sempre cobra a implementação técnica separada da mentoria.
 
 **Impacto:** Atualizados `business/campanhas/incubadora-de-expert-individual/prd.md`, `empacotamento.md` (v2.0), `checklist-producao.md` (v2.0 — revisado item a item com a Karol; 5 dos 10 itens originais já resolvidos desde 29/08) e `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md` (fonte oficial de preços). Documento original guardado em `business/campanhas/incubadora-de-expert-individual/proposta-validada-2026-09.md`. Commitado em `78a3a07`.
+
+## 24/09/2026 — Onboarding do Metodo VIP: primeiro passo e um diagnostico proprio
+
+**Contexto:** O Metodo VIP (R$1.500, 3 encontros) era o unico produto de alto contato sem mensagem de boas-vindas nem etapa de preparo antes do Encontro 1.
+**Decisao:** Primeiro passo da cliente VIP e responder um diagnostico replicado do "Crie seu Metodo em 1 Hora" — sem a pergunta final de interesse (ja comprou), mantendo o bloco de ferramentas. Mensagem no padrao Sprint, com o texto "ja sabendo como te orientar melhor nos proximos passos" (ajuste da Karol).
+**Racional:** O Encontro 1 do VIP analisa persona/promessa/metodo — exatamente o que esse diagnostico coleta.
+**Impacto:** `onboarding-pos-compra.md` secao 4; diagnostico no ar em vendas.incubadoradeexpert.com.br/metodo-vip/diagnostico/.
+
+## 25/09/2026 — Diagnosticos pos-venda passam a coletar dados para contrato
+
+**Contexto:** Karol quer os dados de contrato ja no onboarding, sem pedir separado.
+**Decisao:** Bloco "DADOS PARA CONTRATO" (nome completo, RG, CPF, endereco, CEP) no FIM dos diagnosticos pos-venda: Sprint, Metodo VIP, DNA do Expert, Kit de Ferramentas e Agente de IA.
+**Impacto:** Execucao com o Gestor de Infra (em andamento 25/09).
+

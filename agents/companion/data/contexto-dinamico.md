@@ -143,6 +143,15 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 24-25/09 — Onboarding do Metodo VIP + auditoria dos avisos por e-mail (Companion → Gestor de Infra → Ops):**
+- **Metodo VIP ganhou onboarding completo:** mensagem de boas-vindas (secao 4 de `business/processos/onboarding-pos-compra.md`, texto ajustado pela Karol) + diagnostico proprio no ar em `vendas.incubadoradeexpert.com.br/metodo-vip/diagnostico/` (replica do Metodo em 1 Hora, sem a pergunta de interesse, mantendo o bloco de ferramentas) + planilha "Diagnóstico do Método VIP — Respostas" com identidade visual da Incubadora + card na Central. Testado ponta a ponta (planilha + e-mail).
+- **Preco da Individual** na mensagem de onboarding atualizado pra R$13.500.
+- **Metodo em 1 Hora:** correcao de celular (mesma de 21/09 nos outros diagnosticos) publicada.
+- **ACHADO GRAVE — 4 diagnosticos passaram semanas sem avisar a Karol por e-mail:** Diagnostico do Expert, Kit de Ferramentas, Agente de IA e Sprint nunca tinham recebido a permissao "Enviar e-mail como voce" do Google. As respostas foram salvas nas planilhas, so o aviso falhava em silencio. Corrigido e testado (REGRA-024 do Gestor de Infra). **Correcao do historico:** o e-mail do Vagner (18/09) falhou por isso, nao pelo runtime antigo. **Pendente Karol:** olhar as planilhas do Kit, Agente de IA e Sprint pra ver quem respondeu sem aviso.
+- **Radar do Expert v9:** agora busca o pre-diagnostico sozinho na planilha (via Google Drive da Karol) quando ela digita o e-mail; dados do lead passam por escape de HTML (falha de seguranca corrigida). Importacao manual vira plano B. Primeiro uso real ainda nao testado.
+- **Lives 29-31:** Karol compartilhou a pasta do Drive (25/09). Falta rodar o Course Publisher. Pasta do Encontro de 24/08 e separada.
+- **Proximo:** bloco "DADOS PARA CONTRATO" (nome completo, RG, CPF, endereco, CEP) no fim dos 4 diagnosticos pos-venda (Sprint, VIP, DNA, Kit + Agente de IA) — pedido da Karol 25/09.
+
 **Sessao 19/09 — Reconciliacao de 6 dias sem sessao formal do Companion (14-19/09):**
 Contexto-dinamico e cockpit ficaram parados no checkpoint da weekly de 13/09 enquanto bastante trabalho real aconteceu (reconstituido via git log, ~65 commits, sem sessao formal do Companion no periodo):
 

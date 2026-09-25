@@ -6,6 +6,15 @@
 
 > **24/09/2026:** cada critério do Radar agora tem um campo de observações (salvo junto com o diagnóstico no campo `notes`, visível no Histórico). Esse sync de pré-diagnóstico não preenche esse campo — as observações são só da Karol, feitas ao vivo.
 
+> **25/09/2026 — AGORA É AUTOMÁTICO (versão 9 do Radar):** ao digitar o e-mail do lead e sair do
+> campo, o Radar procura primeiro no próprio banco; se não achar, lê a planilha direto do Google Drive
+> de quem está usando (conector "Google Drive", ferramenta `download_file_content` exportando CSV —
+> planilha oficial primeiro, a antiga só por garantia), mostra o card e grava o lead em
+> `prediagnosticos` pra próxima vez ser instantânea. Na primeira busca o Claude pede pra liberar o
+> Google Drive pra página. O passo a passo manual abaixo continua valendo como plano B (conector
+> desconectado, página aberta fora do claude.ai, etc.). A decisão de 21/09 ("não dá pra automatizar")
+> valia pra escrita vinda de fora; a solução foi inverter: a página busca, em vez de alguém empurrar.
+
 ---
 
 ## O que é
@@ -88,6 +97,13 @@ que está linkada como oficial na Central Incubadora. Provável causa: o Apps Sc
 está *bound* (contêiner-vinculado) à planilha antiga, e a nova só existe como referência solta
 sem script rodando nela. **Não corrigido ainda** — registrado em `demandas-backlog.md`.
 Até corrigir, checar as duas planilhas neste processo.
+
+> **25/09/2026:** as 2 respostas reais de 24-25/09 caíram na planilha
+> **oficial** (`1VWthq...`), que é a vinculada ao script "Recebe Diagnóstico do Expert"
+> (`sheetUrl` no código aponta pra ela). Sinal de que o problema das 2 planilhas não afeta mais as
+> respostas novas — seguir checando a antiga só por garantia até confirmar com mais casos. Na
+> mesma data, o aviso por e-mail desse formulário foi consertado (permissão de envio nunca tinha
+> sido concedida — ver REGRA-024 do Gestor de Infra).
 
 ## Resultado esperado
 
