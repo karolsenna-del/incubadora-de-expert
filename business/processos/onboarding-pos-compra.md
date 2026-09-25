@@ -68,7 +68,10 @@ mantido só como referência histórica das perguntas originais, não como o pro
 
 ---
 
-## 2. Individual — R$10.000/12m (3x R$1.035 no cartão ou à vista)
+## 2. Individual — R$13.500/12m (12x R$1.350,01 no cartão ou à vista no pix — referência R$15.000)
+
+> Preço atualizado em 25/09 conforme a reprecificação de 16/09 (log-decisoes). O texto da mensagem
+> abaixo não cita preço, então não precisou mudar.
 
 **Quando enviar:** assim que o pagamento/contrato for confirmado (Voomp, produto `individual`,
 checkout `/16367` — ou fechamento manual via PIX/contrato quando for o caso, já que é venda
@@ -162,6 +165,51 @@ Parabéns pela decisão!
   que não existe nesse produto.
 - Sem link de diagnóstico — o Expert360º não tem etapa de diagnóstico prévio, o aluno entra
   direto no curso.
+
+---
+
+## 4. Método VIP — R$1.500 (3x R$500 no pix)
+
+**Quando enviar:** assim que o pagamento (1ª parcela do pix) for confirmado — venda fechada no
+1:1, sem checkout automatizado.
+
+**Pré-requisito:** diagnóstico do Método VIP no ar. **Decisão da Karol (24/09):** o primeiro
+passo da cliente VIP é responder um diagnóstico — réplica do "Crie seu Método em 1 Hora"
+(`business/campanhas/metodo-em-1-hora/`, publicado em `metodo1h.incubadoradeexpert.com.br`).
+Encaixa com o Encontro 1 do VIP (análise de persona/promessa/método — fonte:
+`00-documento-mestre-ofertas.md`), que é exatamente o que esse diagnóstico coleta.
+**Link:** `https://vendas.incubadoradeexpert.com.br/metodo-vip/diagnostico/` (réplica criada em
+24-25/09 pelo Gestor de Infra Arcane — setup em `business/campanhas/metodo-vip/materiais/setup-planilha-automatica.md`).
+
+**MENSAGEM (WhatsApp):**
+```
+Seja bem-vinda(o) ao Método VIP! Que bom te ter aqui.
+
+Antes do nosso primeiro encontro, preciso que você responda um diagnóstico —
+é nele que você me conta sua persona, sua promessa e o caminho do seu método.
+É com essas respostas que eu chego no Encontro 1 já sabendo como te orientar
+melhor nos próximos passos. Se precisar parar no meio, fica salvo sozinho, pode
+continuar depois de onde parou.
+
+Responde aqui: https://vendas.incubadoradeexpert.com.br/metodo-vip/diagnostico/
+
+Assim que você finalizar, eu recebo suas respostas e entro em contato pra
+agendarmos nosso primeiro encontro.
+
+Parabéns pela decisão!
+```
+
+**Por que esse formato:**
+- Mesmo esqueleto do Sprint (1 coisa só pra fazer → "eu entro em contato pra agendarmos" →
+  "Parabéns pela decisão!"), padrão confirmado pela Karol em 14/09.
+- **Ajuste da Karol (24/09):** o rascunho dizia "já sabendo onde corrigir sua rota" — trocado
+  por "já sabendo como te orientar melhor nos próximos passos".
+- **Réplica do diagnóstico (decisão da Karol, 24/09):** sem a pergunta final de interesse
+  ("quer ajuda individual? Sim/Não" — não faz sentido pra quem já comprou); mantém o bloco
+  "Hora de pensar nas suas ferramentas" (base pro Encontro 1).
+- Sem link da Área de Membros — o VIP não tem matrícula/conteúdo na plataforma hoje.
+- "Fica salvo sozinho" só vale se a réplica mantiver o salvamento automático (`STORAGE_KEY`) do
+  original — conferir na publicação.
 
 ---
 
