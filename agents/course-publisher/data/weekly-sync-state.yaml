@@ -9,7 +9,23 @@ live_expert360:
   ultimo_processado_titulo: "Live Expert360 - 2026/09/02 13:54 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-09-02T19:03:33.374Z"  # createdTime do arquivo no Drive (Live 28)
   proximo_numero: 29
-  ultima_execucao: "2026-09-17"
+  ultima_execucao: "2026-09-24"
+  # 24/09/2026 (missão #29, 2ª execução no dia via /course-publisher + weekly-sync.md, REGRA-015):
+  # busca global retornou as mesmas gravações da #28, nada novo. Permissões da pasta Live
+  # (1MOmJg3...) e Encontro (1efQbtw...) continuam só "owner" karolsenna; share_file na pasta Live
+  # repetiu "The caller does not have permission". State não avançou.
+  # 24/09/2026 (missão #28, disparo autônomo REGRA-015 via /course-publisher + weekly-sync.md):
+  # busca global (sem parentId) achou 1 gravação NOVA na série — "Live Expert360 - 2026/09/23
+  # 13:59 GMT-04:00 - Recording" (477MB, id 1RyPLFW59qRgimKDKE8smpvAct8xFLejD, createdTime
+  # 2026-09-23T19:24:13.179Z, mesma pasta "Live Expert360 (recurring)" 1MOmJg3RpaZmHwaagfXlz2vjOcYNB2FxS
+  # — sem rotação nova de pasta desta vez). Será a Live 31 (depois de 29 e 30). Roteiro:
+  # `live-31-roteiro.md`, título do H1 → nome final pronto "31 - Como minha mentoria foi de R$1.500
+  # a R$15.000 — e como você faz o mesmo com a sua". `get_file_permissions` nas Lives 29, 30, 31 e
+  # na pasta: só "owner" karolsenna; `share_file` pra karol.franzini@gmail.com tentado no arquivo
+  # novo e na pasta — mesmo erro "The caller does not have permission". SELECT em
+  # encontros_mentoria (data_encontro >= 2026-08-20) confirmou que só Lives 27 e 28 estão lá — 29,
+  # 30 e 31 genuinamente pendentes, nada processado por fora (lição da #17 aplicada).
+  # `ultimo_processado_data`/`proximo_numero` NÃO avançaram. Pendência da Live 31 adicionada abaixo.
   # 17/09/2026 (missão #27, 2ª execução no mesmo dia — disparada diretamente via /course-publisher
   # + task weekly-sync.md, execução autônoma sem confirmação, pedido explícito): reexecutei a busca
   # global e o get_file_permissions em Live 29 (1_KXnxRGKra_jzwYl5G9SQ9v8ImG86l6q) e Live 30
@@ -110,7 +126,12 @@ live_expert360:
 mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/03 14:00 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-03T22:34:41Z"  # createdTime do arquivo no Drive
-  ultima_execucao: "2026-09-17"
+  ultima_execucao: "2026-09-24"
+  # 24/09/2026 (missão #28, disparo autônomo REGRA-015): busca global não achou nenhum Encontro
+  # Incubadora novo além do de 24/08 (1WyOceWlsGylWtzA-GKX7I9J1b6ElfS5E) — nenhuma gravação de
+  # segunda-feira em 31/08, 07/09, 14/09 ou 21/09. `get_file_permissions` segue só "owner"
+  # karolsenna; `share_file` na pasta 1efQbtw1mAK2dFE-EulATEMLMj83qcnuf, mesmo erro de sempre.
+  # Confirmado via SELECT que não está em encontros_mentoria. Pendência mantida.
   # 17/09/2026 (missão #27, 2ª execução no mesmo dia — disparada diretamente via /course-publisher
   # + task weekly-sync.md, execução autônoma sem confirmação): reexecutei a busca e o
   # get_file_permissions no Encontro de 24/08 (1WyOceWlsGylWtzA-GKX7I9J1b6ElfS5E) — segue só "owner"
@@ -167,7 +188,11 @@ mentoria_em_grupo:
 encontros_individuais:
   ultimo_processado_titulo: null
   ultimo_processado_data: null
-  ultima_execucao: "2026-09-17"
+  ultima_execucao: "2026-09-24"
+  # 24/09/2026 (missão #28, disparo autônomo REGRA-015): busca global por título contendo
+  # "Individual -" — nenhum vídeo com esse prefixo (só docs/pastas não relacionados, ex.
+  # "individual-quinta-2026-09-17", "05-individual.md" — nenhum mp4). Achado da missão #17 sobre
+  # nomenclatura das pastas 1:1 do Meet segue pendente de decisão.
   # 17/09/2026 (missão #27, 2ª execução no mesmo dia — disparada diretamente via /course-publisher
   # + task weekly-sync.md): busca global por título contendo "Individual -" repetida, sem filtro de
   # data — nenhum resultado, mesmo achado da missão #26. Achado da missão #17 sobre nomenclatura de
@@ -225,7 +250,7 @@ pendencias:
       com karol.franzini@gmail.com.
     link: "https://drive.google.com/drive/folders/1MOmJg3RpaZmHwaagfXlz2vjOcYNB2FxS"
     registrado_em: "2026-09-10 (missão #24)"
-    reconfirmado_em: "2026-09-17 (missão #27) — sem mudança"
+    reconfirmado_em: "2026-09-24 (missões #28 e #29) — sem mudança"
   - tipo: "acesso_drive_bloqueado"
     serie: "live_expert360"
     detalhe: >
@@ -237,7 +262,18 @@ pendencias:
       duas Lives pendentes (29 e 30) de uma vez, já que estão na mesma pasta.
     link: "https://drive.google.com/drive/folders/1MOmJg3RpaZmHwaagfXlz2vjOcYNB2FxS"
     registrado_em: "2026-09-17 (missão #26)"
-    reconfirmado_em: "2026-09-17 (missão #27) — sem mudança"
+    reconfirmado_em: "2026-09-24 (missões #28 e #29) — sem mudança"
+  - tipo: "acesso_drive_bloqueado"
+    serie: "live_expert360"
+    detalhe: >
+      Live 31 (23/09/2026, arquivo 1RyPLFW59qRgimKDKE8smpvAct8xFLejD) encontrada e com título pronto
+      ("31 - Como minha mentoria foi de R$1.500 a R$15.000 — e como você faz o mesmo com a sua"),
+      mas download bloqueado — mesma pasta "Live Expert360 (recurring)" das Lives 29 e 30, só
+      "owner" karolsenna, share_file retornou "The caller does not have permission". Compartilhar
+      essa pasta com karol.franzini@gmail.com resolve as 3 Lives (29, 30, 31) de uma vez.
+    link: "https://drive.google.com/drive/folders/1MOmJg3RpaZmHwaagfXlz2vjOcYNB2FxS"
+    registrado_em: "2026-09-24 (missão #28)"
+    reconfirmado_em: "2026-09-24 (missão #29) — sem mudança"
   - tipo: "acesso_drive_bloqueado"
     serie: "mentoria_em_grupo"
     detalhe: >
@@ -249,7 +285,7 @@ pendencias:
       compartilhar manualmente.
     link: "https://drive.google.com/drive/folders/1efQbtw1mAK2dFE-EulATEMLMj83qcnuf"
     registrado_em: "2026-09-10 (missão #24)"
-    reconfirmado_em: "2026-09-17 (missão #27) — sem mudança"
+    reconfirmado_em: "2026-09-24 (missões #28 e #29) — sem mudança"
 # 20/08/2026 (missão #17): pendência "acesso_drive_bloqueado" (registrada nas missões #15/#16)
 # RESOLVIDA — Karol recompartilhou a pasta "Live Expert360 (recurring)" (confirmado: permissão
 # "anyone:writer" apareceu via get_file_permissions, e o perfil karol.franzini@gmail.com acessou
