@@ -415,7 +415,8 @@ main#stage{
   var SECTIONS = [
     {num:"01", title:"Sobre você", note:"Pra eu te chamar certo."},
     {num:"02", title:"Seu Kit de Ferramentas começa agora", note:"Primeiro preciso conhecer um pouco de você e da sua persona."},
-    {num:"03", title:"Hora de pensar nas suas ferramentas", note:"O método é a teoria que vai trazer a clareza pro seu aluno de como alcançar os resultados desejados — mas é utilizando as ferramentas, na prática, que ele chegará aonde você prometeu."}
+    {num:"03", title:"Hora de pensar nas suas ferramentas", note:"O método é a teoria que vai trazer a clareza pro seu aluno de como alcançar os resultados desejados — mas é utilizando as ferramentas, na prática, que ele chegará aonde você prometeu."},
+    {num:"04", title:"Dados para contrato", note:"Pra eu preparar seu contrato. Esses dados ficam guardados só na planilha da Karol — não vão por e-mail nem ficam salvos neste navegador depois que você envia."}
   ];
 
   var QUESTIONS = [
@@ -462,7 +463,17 @@ main#stage{
     {id:"parcerias", section:2, type:"essay", required:true,
       label:"Defina 3 profissionais que podem complementar o seu método para tornar a jornada do aluno mais eficiente (possíveis parcerias)"},
     {id:"brainstorm_500mil", section:2, type:"essay", required:true,
-      label:"Se o aluno te pagasse R$500 mil, o que você faria para ele chegar mais rápido e mais fácil ao resultado? (deixe a imaginação voar/brainstorming)"}
+      label:"Se o aluno te pagasse R$500 mil, o que você faria para ele chegar mais rápido e mais fácil ao resultado? (deixe a imaginação voar/brainstorming)"},
+    {id:"contrato_nome", section:3, type:"text", required:true,
+      label:"Nome completo (como está no seu documento)"},
+    {id:"contrato_rg", section:3, type:"text", required:true,
+      label:"RG (número e órgão emissor)", placeholder:"Ex: 12.345.678-9 SSP/SP"},
+    {id:"contrato_cpf", section:3, type:"text", required:true,
+      label:"CPF", placeholder:"000.000.000-00"},
+    {id:"contrato_endereco", section:3, type:"text", required:true,
+      label:"Endereço completo (rua, número, complemento, bairro, cidade/UF)"},
+    {id:"contrato_cep", section:3, type:"text", required:true,
+      label:"CEP", placeholder:"00000-000"}
   ];
 
   var steps = [{type:"intro"}];
@@ -929,6 +940,8 @@ function hexRgb(hex){
       if(!state.submitted){
         sendToSheet();
         state.submitted = true;
+        // dados de contrato ja foram pra planilha — nao ficam guardados no navegador
+        ["contrato_nome","contrato_rg","contrato_cpf","contrato_endereco","contrato_cep"].forEach(function(k){ delete state.answers[k]; });
         saveState();
       }
       screen = buildOutro();

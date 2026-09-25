@@ -388,7 +388,8 @@ main#stage{
     {num:"03", title:"Dores e contexto", note:"O que te trouxe até aqui — sem filtro."},
     {num:"04", title:"Minha História Real", note:"A matéria-prima mais importante do seu método. Sem filtro, sem se preocupar com o que vai virar depois — só o que é verdadeiro. Pode ir aos poucos, o que você escrever fica salvo."},
     {num:"05", title:"Meu Ikigai", note:"\"Razão de ser\": a interseção entre o que você ama, o que sabe fazer bem e o que o mundo pede de você. Puxa da história que você acabou de contar."},
-    {num:"06", title:"Logística do Sprint", note:"Só falta combinar os detalhes práticos."}
+    {num:"06", title:"Logística do Sprint", note:"Só falta combinar os detalhes práticos."},
+    {num:"07", title:"Dados para contrato", note:"Pra eu preparar seu contrato. Esses dados ficam guardados só na planilha da Karol — não vão por e-mail nem ficam salvos neste navegador depois que você envia."}
   ];
 
   var QUESTIONS = [
@@ -475,7 +476,17 @@ main#stage{
 
     {id:"horario", section:5, type:"textarea", required:true,
       label:"Qual o melhor dia e horário pra suas sessões semanais nas próximas 6 semanas?",
-      placeholder:"Ex.: terças de manhã, ou depois das 19h nos dias de semana..."}
+      placeholder:"Ex.: terças de manhã, ou depois das 19h nos dias de semana..."},
+    {id:"contrato_nome", section:6, type:"text", required:true,
+      label:"Nome completo (como está no seu documento)"},
+    {id:"contrato_rg", section:6, type:"text", required:true,
+      label:"RG (número e órgão emissor)", placeholder:"Ex: 12.345.678-9 SSP/SP"},
+    {id:"contrato_cpf", section:6, type:"text", required:true,
+      label:"CPF", placeholder:"000.000.000-00"},
+    {id:"contrato_endereco", section:6, type:"text", required:true,
+      label:"Endereço completo (rua, número, complemento, bairro, cidade/UF)"},
+    {id:"contrato_cep", section:6, type:"text", required:true,
+      label:"CEP", placeholder:"00000-000"}
   ];
 
   var steps = [{type:"intro"}];
@@ -931,6 +942,8 @@ main#stage{
       if(!state.submitted){
         sendToSheet();
         state.submitted = true;
+        // dados de contrato ja foram pra planilha — nao ficam guardados no navegador
+        ["contrato_nome","contrato_rg","contrato_cpf","contrato_endereco","contrato_cep"].forEach(function(k){ delete state.answers[k]; });
         saveState();
       }
       screen = buildOutro();

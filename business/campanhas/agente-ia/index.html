@@ -371,7 +371,8 @@ main#stage{
     {num:"04", title:"Como ele conduz a conversa", note:"O fluxo que ele segue quando alguém fala com ele."},
     {num:"05", title:"Tom de voz", note:"Como ele deve soar pra parecer seu, não genérico."},
     {num:"06", title:"Regras e limites", note:"Onde ele para e o que ele nunca faz."},
-    {num:"07", title:"Exemplos reais", note:"O que mais ajuda a acertar de primeira. Pode pular o que não tiver à mão agora."}
+    {num:"07", title:"Exemplos reais", note:"O que mais ajuda a acertar de primeira. Pode pular o que não tiver à mão agora."},
+    {num:"08", title:"Dados para contrato", note:"Pra eu preparar seu contrato. Esses dados ficam guardados só na planilha da Karol — não vão por e-mail nem ficam salvos neste navegador depois que você envia."}
   ];
 
   var MAX_FILE_SIZE = 15 * 1024 * 1024;
@@ -448,7 +449,17 @@ main#stage{
       help:"Ex: um print transcrito ou um trecho de conversa real com um cliente."},
     {id:"teste_chatgpt", section:6, type:"essay", required:false,
       label:"Se já testou algo parecido no ChatGPT (mesmo que malfeito), cola aqui",
-      help:"Ex: o texto da conversa que você teve testando, ou o link se ainda estiver salvo."}
+      help:"Ex: o texto da conversa que você teve testando, ou o link se ainda estiver salvo."},
+    {id:"contrato_nome", section:7, type:"text", required:true,
+      label:"Nome completo (como está no seu documento)"},
+    {id:"contrato_rg", section:7, type:"text", required:true,
+      label:"RG (número e órgão emissor)", placeholder:"Ex: 12.345.678-9 SSP/SP"},
+    {id:"contrato_cpf", section:7, type:"text", required:true,
+      label:"CPF", placeholder:"000.000.000-00"},
+    {id:"contrato_endereco", section:7, type:"text", required:true,
+      label:"Endereço completo (rua, número, complemento, bairro, cidade/UF)"},
+    {id:"contrato_cep", section:7, type:"text", required:true,
+      label:"CEP", placeholder:"00000-000"}
   ];
 
   var steps = [{type:"intro"}];
@@ -927,6 +938,8 @@ main#stage{
       if(!state.submitted){
         sendToSheet();
         state.submitted = true;
+        // dados de contrato ja foram pra planilha — nao ficam guardados no navegador
+        ["contrato_nome","contrato_rg","contrato_cpf","contrato_endereco","contrato_cep"].forEach(function(k){ delete state.answers[k]; });
         saveState();
       }
       screen = buildOutro();

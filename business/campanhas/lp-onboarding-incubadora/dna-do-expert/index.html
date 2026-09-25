@@ -413,20 +413,21 @@ main#stage{
   var STORAGE_KEY = "dna-do-expert-v1";
 
   var SECTIONS = [
-    {num:"01", title:"Seus dados", note:"Pra gente montar seu contrato e registro."},
+    {num:"01", title:"Sobre você", note:"Pra eu te conhecer e te chamar certo."},
     {num:"02", title:"Seu negócio hoje", note:"O que já existe, pra quem, e como está indo."},
     {num:"03", title:"Desafios e objetivos", note:"Onde você trava e onde quer chegar até dezembro de 2026."},
     {num:"04", title:"Autoconhecimento", note:"Como você enxerga seus pontos fortes e seu propósito."},
-    {num:"05", title:"Seu compromisso", note:"Pra fecharmos combinados antes da nossa 1ª sessão."}
+    {num:"05", title:"Seu compromisso", note:"Pra fecharmos combinados antes da nossa 1ª sessão."},
+    {num:"06", title:"Dados para contrato", note:"Pra eu preparar seu contrato. Esses dados ficam guardados só na planilha da Karol — não vão por e-mail nem ficam salvos neste navegador depois que você envia."}
   ];
 
   var QUESTIONS = [
-    {id:"nome", section:0, type:"text", required:true,
-      label:"Nome completo"},
-    {id:"cpf", section:0, type:"text", required:true,
-      label:"CPF"},
-    {id:"endereco", section:0, type:"text", required:true,
-      label:"Endereço completo (Rua, bairro, nº, CEP, Cidade/Estado)"},
+    {id:"nome", section:5, type:"text", required:true,
+      label:"Nome completo (como está no seu documento)"},
+    {id:"cpf", section:5, type:"text", required:true,
+      label:"CPF", placeholder:"000.000.000-00"},
+    {id:"endereco", section:5, type:"text", required:true,
+      label:"Endereço completo (rua, número, complemento, bairro, cidade/UF)"},
     {id:"email", section:0, type:"text", required:true, inputType:"email",
       label:"Seu melhor e-mail"},
     {id:"idade", section:0, type:"choice", required:true,
@@ -489,7 +490,11 @@ main#stage{
 
     {id:"modalidade_mentoria", section:0, type:"choice", required:true,
       label:"Você é da mentoria em Grupo ou Individual?",
-      options:["Grupo","Individual"]}
+      options:["Grupo","Individual"]},
+    {id:"rg", section:5, type:"text", required:true,
+      label:"RG (número e órgão emissor)", placeholder:"Ex: 12.345.678-9 SSP/SP"},
+    {id:"cep", section:5, type:"text", required:true,
+      label:"CEP", placeholder:"00000-000"}
   ];
 
   var steps = [{type:"intro"}];
@@ -959,6 +964,8 @@ main#stage{
       if(!state.submitted){
         sendToSheet();
         state.submitted = true;
+        // dados de contrato ja foram pra planilha — nao ficam guardados no navegador
+        ["rg","cpf","endereco","cep"].forEach(function(k){ delete state.answers[k]; });
         saveState();
       }
       screen = buildOutro();
