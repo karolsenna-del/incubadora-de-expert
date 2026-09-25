@@ -395,17 +395,17 @@ function buildOutro(){
 
   s.appendChild(el("p", {class:"lede", text:"Guarda essa leitura — quando você se tornar mentorada, o Diagnóstico completo da Sessão 1 vai comparar exatamente com o que você respondeu hoje, pra mostrar sua evolução desde o primeiro contato."}));
 
-  var sendState = {sent:false};
-  var sendBtn = el("button", {class:"btn btn-primary", type:"button", text:"Enviar e agendar minha sessão →", style:"width:100%;"});
-  sendBtn.addEventListener("click", function(){
-    if(sendState.sent) return;
-    sendState.sent = true;
-    sendBtn.textContent = "Enviado ✓";
-    sendBtn.disabled = true;
+  // Grava sozinho quando o resultado aparece (25/09): antes so gravava no clique do botao
+  // e quem lia a leitura e fechava a pagina nunca chegava na planilha.
+  if(!state.enviado){
     sendToSheet(Object.assign({}, state.values, {_form: "pre_diagnostico", trava_sinalizada: empatados.length>=2 ? empatados.join("+") : pior}));
-  });
+    state.enviado = true;
+    saveState();
+  }
+  var sendBtn = el("button", {class:"btn btn-primary", type:"button", text:"Enviado ✓", style:"width:100%;"});
+  sendBtn.disabled = true;
   s.appendChild(sendBtn);
-  s.appendChild(el("p", {class:"footer-note", text:"Depois de enviar, a Milena entra em contato pra confirmar o melhor horário pra sua sessão estratégica."}));
+  s.appendChild(el("p", {class:"footer-note", text:"Suas respostas já chegaram pra Milena. Ela entra em contato pra confirmar o melhor horário pra sua sessão estratégica."}));
   return s;
 }
 

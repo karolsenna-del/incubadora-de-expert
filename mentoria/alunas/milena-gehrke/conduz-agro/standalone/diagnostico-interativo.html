@@ -666,24 +666,24 @@ function buildResult(){
 
   s.appendChild(el("p", {class:"footer-note", text:"Esse resultado é o ponto de partida da sua jornada no Conduz Agro — vamos aprofundar cada trava juntas nas próximas sessões."}));
 
-  var sendState = {sent:false};
-  var sendBtn = el("button", {class:"btn btn-primary", type:"button", text:"Enviar resultado e continuar →", style:"width:100%;margin-top:22px;"});
-  sendBtn.addEventListener("click", function(){
-    if(sendState.sent) return;
-    sendState.sent = true;
-    sendBtn.textContent = "Enviado ✓";
-    sendBtn.disabled = true;
+  // Grava sozinho quando o resultado aparece (25/09): antes so gravava no clique do botao
+  // e quem via o resultado e fechava a pagina nunca chegava na planilha.
+  if(!state.enviado){
     sendToSheet({
-      _form: "diagnostico_completo",
-      nome: state.identity.nome || "",
-      email: state.identity.email || "",
-      indice_geral: geral,
-      tecnica: pT, emocional: pE, conducao: pC,
-      trava_principal: travaPrincipal.nome, trava_secundaria: travaSecundaria.nome, forca_principal: forcaPrincipal.nome,
-      perfil: perfil ? perfil.nome : "",
-      respostas: state.answers
-    });
+    _form: "diagnostico_completo",
+    nome: state.identity.nome || "",
+    email: state.identity.email || "",
+    indice_geral: geral,
+    tecnica: pT, emocional: pE, conducao: pC,
+    trava_principal: travaPrincipal.nome, trava_secundaria: travaSecundaria.nome, forca_principal: forcaPrincipal.nome,
+    perfil: perfil ? perfil.nome : "",
+    respostas: state.answers
   });
+    state.enviado = true;
+    saveState();
+  }
+  var sendBtn = el("button", {class:"btn btn-primary", type:"button", text:"Resultado enviado ✓", style:"width:100%;margin-top:22px;"});
+  sendBtn.disabled = true;
   s.appendChild(sendBtn);
 
   var restartArmed = false, restartTimer = null;
