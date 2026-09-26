@@ -263,6 +263,7 @@ O que domina os virais de vendas/empreendedorismo/infoprodutos NÃO é trend nem
    - Por que é forte: caso real vivido pela Karol como lançadora — autoridade de bastidor, não teoria. Aprofunda o tema já validado pela Aria essa semana ("problema é o formato do infoproduto", 3,41%)
    - ⚠️ Anonimizar a expert citada (pessoa real não-pública) na hora de roteirizar
    - Fonte: vivência da Karol
+   - **Status (25/09):** ✅ usado — Rota100k Semana 08, Domingo 27/09 12h
 
 3. **"Autoridade silenciosa: quem grita menos no digital, vende mais"**
    - Formato: Carrossel de Dor ou Reels falado
@@ -282,6 +283,7 @@ O que domina os virais de vendas/empreendedorismo/infoprodutos NÃO é trend nem
    - Categoria: Crenças
    - Por que é forte: confirmação externa de que lista pequena engajada > milhão de seguidor — exatamente a Venda Secreta
    - Fonte: tendência de hooks/course creators 2026
+   - **Status (25/09):** ✅ usado — Rota100k Semana 08, Domingo 27/09 09h
 
 6. **"De 40 módulos pra 6: por que curso gigante não vende mais"**
    - Formato: Carrossel de Alcance (usa case real de aluno)
@@ -335,14 +337,14 @@ O que domina os virais de vendas/empreendedorismo/infoprodutos NÃO é trend nem
     - Categoria: Momentos de vida + Crenças
     - Por que é forte: causo real já com moral pronta, dada pela própria Karol — leiga fica chocada/encantada com conhecimento que não tinha ideia que existia → liga direto com "digital é oceano azul, tem demanda pra toda oferta, você só precisa ter clareza do que vende e da jornada do aluno". Encaixa no formato "causo informal fora do escritório" — 5 dos 8 melhores posts dos últimos 9 dias (relatório 12/08) usam essa estrutura
     - Fonte: vivência da Karol (amiga especialista em milhas/pontos Livelo)
-    - Status: disponível no pool, não usado ainda
+    - Status: ✅ usado — Rota100k Semana 08, Sábado 26/09 12h (25/09)
 
 ### 🗂️ BANCO DE CAUSOS REAIS (formato causo informal + moral — validado 12-13/08)
 
 Registro centralizado dos causos reais da Karol nesse formato, usados ou não, pra não se perder e não repetir sem querer.
 
 - **Menu de travesseiros do resort** ("amiga hospedada num resort achou um 'menu de travesseiros' — 8 opções pra escolher, ficou encantada. Moral: padrão e personalização não são opostos — padrão bem feito é o que permite personalizar sem reinventar a roda em cada aluno. Quebra a crença de terapeuta/desenvolvimento pessoal de que 'cada pessoa é única, não dá pra ter método padrão'") — status: **disponível** (registrado 21/08, aguardando encaixe no Desafio Rota100k Semana 04)
-- **Livelo/milhas** (tema 16 acima) — status: **disponível**
+- **Livelo/milhas** (tema 16 acima) — status: **usado** — Rota100k Semana 08, Sábado 26/09 12h
 - **Shein/amiga consultora de imagem** ("comprei roupa sem saber olhar tecido/descrição, ela é especialista, eu sou leiga — óbvio pra quem sabe não é óbvio pra quem não sabe") — status: **usado** — Rota100k Sábado 15/08 17h (`desafio-rota100k-semana02-plano.md`)
 - **Tráfego/infra/automação — tempo x dinheiro** ("perdia tempo tentando aprender sozinha sem resultado, até entender que delegar é foco, não preguiça — hoje faz parte sozinha com IA mas levou tempo") — status: **usado** — Rota100k Domingo 16/08 09h, seeding Sprint do Método (`desafio-rota100k-semana02-plano.md`)
 - **Diarista/produto de limpeza** ("já postado 06/08, reel 'Você também pode ser burro'") — status: **usado** — post original, ⚠️ não reusar de novo tão cedo (só voltou a cogitar reuso em 13/08 e foi trocado por Shein pra não repetir)

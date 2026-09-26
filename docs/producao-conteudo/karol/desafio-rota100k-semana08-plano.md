@@ -274,3 +274,7 @@ Me segue que eu mostro como eu decido isso.
 6. **Se acontecer [X]:** ⚠️ preencher depois de fechar Terça/Sexta — normalmente esse ponto usa o assunto mais volátil da semana como alerta de atenção.
 7. **Guarda esse post:** confere de novo daqui a um mês pra ver o que ainda se sustentou.
 8. **CTA + assinatura:** "Salva o resumo semanal num lugar só. Comenta o assunto que você quer que eu cubra semana que vem."
+
+---
+
+**Status (25/09):** Quinta a domingo roteirizados e aprovados em arquivos separados: `desafio-rota100k-semana08-roteiros-qui-sex.md` e `desafio-rota100k-semana08-roteiros-sab-dom.md`. Pendente: slides do carrossel de sábado 20h (squad de carrossel).
