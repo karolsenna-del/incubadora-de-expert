@@ -208,7 +208,7 @@ modules:
         youtube_id: "jWJvBgpiHms"
         # 26/08/2026: gravado/editado, upado como Nao listado (Area de Membros, nao Voomp)
 
-      - hotmart_name: "A1 — Vendas Secretas: Conceito"
+      - hotmart_name: "A1 — Identidade de Vendas antes da Técnica"
         video: "01-vendas-secretas-conceito.mp4"
         descricao_slug: "01-vendas-secretas-conceito"
         hotmart_lesson_url: ""
@@ -225,7 +225,7 @@ modules:
         youtube_id: "G27FO-emYaY"
         # 26/08/2026: gravado/editado, upado como Nao listado (Area de Membros, nao Voomp)
 
-      - hotmart_name: "A3 — A Oferta de Lançamento"
+      - hotmart_name: "A3 — O que Você Está Vendendo"
         video: null
         descricao_slug: "03-oferta-de-lancamento"
         hotmart_lesson_url: ""
@@ -255,27 +255,30 @@ modules:
         hotmart_lesson_url: ""
         voomp_lesson_id: "213998"
 
-      - hotmart_name: "A8 — Roteiro de Abordagem"
+      - hotmart_name: "A8 — Script de Abordagem e Cadência Pré-Sessão"
         video: null
         descricao_slug: "08-roteiro-de-abordagem"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213999"
 
-      - hotmart_name: "A9 — Roteiro da Sessão"
+      - hotmart_name: "A9 — O Funil das Vendas Secretas"
         video: null
-        descricao_slug: "09-roteiro-da-sessao"
+        descricao_slug: "09-funil-vendas-secretas"
+        # 25/09/2026: roteiro M3 v3.4 — antiga "Roteiro da Sessão" dividida em A9 (Funil) + A10
+        # (Agente Vendedor Secreto); "A11 — A Escala Secreta" removida (não existia em nenhum roteiro).
+        # voomp_lesson_id mantido só como histórico (curso migrou pra Área de Membros)
         hotmart_lesson_url: ""
         voomp_lesson_id: "214000"
 
-      - hotmart_name: "A10 — Pós-Sessão"
+      - hotmart_name: "A10 — Exercício: Agente Vendedor Secreto"
         video: null
-        descricao_slug: "10-pos-sessao"
+        descricao_slug: "10-agente-vendedor-secreto"
         hotmart_lesson_url: ""
         voomp_lesson_id: "214001"
 
-      - hotmart_name: "A11 — A Escala Secreta"
+      - hotmart_name: "A11 — Pós-Sessão: Follow-up e Depoimento"
         video: null
-        descricao_slug: "11-escala-secreta"
+        descricao_slug: "11-pos-sessao"
         hotmart_lesson_url: ""
         voomp_lesson_id: "214002"
 

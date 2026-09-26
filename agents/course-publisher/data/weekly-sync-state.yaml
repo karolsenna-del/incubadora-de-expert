@@ -6,10 +6,15 @@
 # sem período em paralelo (decisão da Karol).
 
 live_expert360:
-  ultimo_processado_titulo: "Live Expert360 - 2026/09/02 13:54 GMT-04:00 - Recording"
-  ultimo_processado_data: "2026-09-02T19:03:33.374Z"  # createdTime do arquivo no Drive (Live 28)
-  proximo_numero: 29
-  ultima_execucao: "2026-09-24"
+  ultimo_processado_titulo: "Live Expert360 - 2026/09/23 13:59 GMT-04:00 - Recording"
+  ultimo_processado_data: "2026-09-23T19:24:13.179Z"  # createdTime do arquivo no Drive (Live 31)
+  proximo_numero: 32
+  ultima_execucao: "2026-09-25"
+  # 25/09/2026 (missão #30, disparada pela Karol na conversa): pasta 1MOmJg3... passou a ter
+  # karol.franzini@gmail.com como writer (Karol compartilhou). Lives 29, 30 e 31 baixadas via
+  # Playwright, upadas no YouTube Não listado (dAfHNMOfUCo, tqJWgVuHxMI, qqM3z56298w) e inseridas
+  # em encontros_mentoria (7715543d..., fe49d320..., 50ae2c68...). Título no formato real da
+  # tabela: "Live N — Título" (não "N - Título" como o weekly-sync.md diz). Pendências 29-31 removidas.
   # 24/09/2026 (missão #29, 2ª execução no dia via /course-publisher + weekly-sync.md, REGRA-015):
   # busca global retornou as mesmas gravações da #28, nada novo. Permissões da pasta Live
   # (1MOmJg3...) e Encontro (1efQbtw...) continuam só "owner" karolsenna; share_file na pasta Live
@@ -124,9 +129,12 @@ live_expert360:
   # processado fora desta automação.
 
 mentoria_em_grupo:
-  ultimo_processado_titulo: "Encontro Incubadora - 2026/08/03 14:00 GMT-04:00 - Recording"
-  ultimo_processado_data: "2026-08-03T22:34:41Z"  # createdTime do arquivo no Drive
-  ultima_execucao: "2026-09-24"
+  ultimo_processado_titulo: "Encontro Incubadora - 2026/08/24 14:24 GMT-04:00 - Recording"
+  ultimo_processado_data: "2026-08-24T20:43:47.651Z"  # createdTime do arquivo no Drive
+  ultima_execucao: "2026-09-25"
+  # 25/09/2026 (missão #31, Karol na conversa, autorizou acesso ao Supabase): Encontro de 24/08
+  # baixado (873MB), YouTube Não listado NXv8H48xn_k, inserido em encontros_mentoria
+  # (a60bfe33-107a-4666-9dc7-7421375b95ed) — 1º registro tipo 'incubadora' da tabela.
   # 24/09/2026 (missão #28, disparo autônomo REGRA-015): busca global não achou nenhum Encontro
   # Incubadora novo além do de 24/08 (1WyOceWlsGylWtzA-GKX7I9J1b6ElfS5E) — nenhuma gravação de
   # segunda-feira em 31/08, 07/09, 14/09 ou 21/09. `get_file_permissions` segue só "owner"
@@ -239,53 +247,6 @@ encontros_individuais:
   # processar nada mesmo que a Karol grave 1:1s.
 
 pendencias:
-  - tipo: "acesso_drive_bloqueado"
-    serie: "live_expert360"
-    detalhe: >
-      Live 29 (09/09/2026) encontrada e com título pronto ("29 - O Custo Invisível de Fazer Tudo
-      Sozinha (mesmo com IA)"), mas download bloqueado. Pasta "Live Expert360 (recurring)" (4ª
-      rotação) só tem "owner" karolsenna@incubadoradeexpert.com.br — share_file pra
-      karol.franzini@gmail.com retornou "The caller does not have permission" no arquivo, na pasta
-      e na raiz "Google Meet" nova. Pedir Karol compartilhar manualmente (role reader ou writer)
-      com karol.franzini@gmail.com.
-    link: "https://drive.google.com/drive/folders/1MOmJg3RpaZmHwaagfXlz2vjOcYNB2FxS"
-    registrado_em: "2026-09-10 (missão #24)"
-    reconfirmado_em: "2026-09-24 (missões #28 e #29) — sem mudança"
-  - tipo: "acesso_drive_bloqueado"
-    serie: "live_expert360"
-    detalhe: >
-      Live 30 (16/09/2026) encontrada e com título pronto ("30 - Seu conhecimento é suficiente
-      para se tornar método"), mas download bloqueado — mesmo padrão da Live 29 acima (mesma pasta
-      "Live Expert360 (recurring)", só "owner" karolsenna, share_file pra
-      karol.franzini@gmail.com retornou "The caller does not have permission"). Pedir Karol
-      compartilhar manualmente (role reader ou writer) com karol.franzini@gmail.com — resolve as
-      duas Lives pendentes (29 e 30) de uma vez, já que estão na mesma pasta.
-    link: "https://drive.google.com/drive/folders/1MOmJg3RpaZmHwaagfXlz2vjOcYNB2FxS"
-    registrado_em: "2026-09-17 (missão #26)"
-    reconfirmado_em: "2026-09-24 (missões #28 e #29) — sem mudança"
-  - tipo: "acesso_drive_bloqueado"
-    serie: "live_expert360"
-    detalhe: >
-      Live 31 (23/09/2026, arquivo 1RyPLFW59qRgimKDKE8smpvAct8xFLejD) encontrada e com título pronto
-      ("31 - Como minha mentoria foi de R$1.500 a R$15.000 — e como você faz o mesmo com a sua"),
-      mas download bloqueado — mesma pasta "Live Expert360 (recurring)" das Lives 29 e 30, só
-      "owner" karolsenna, share_file retornou "The caller does not have permission". Compartilhar
-      essa pasta com karol.franzini@gmail.com resolve as 3 Lives (29, 30, 31) de uma vez.
-    link: "https://drive.google.com/drive/folders/1MOmJg3RpaZmHwaagfXlz2vjOcYNB2FxS"
-    registrado_em: "2026-09-24 (missão #28)"
-    reconfirmado_em: "2026-09-24 (missão #29) — sem mudança"
-  - tipo: "acesso_drive_bloqueado"
-    serie: "mentoria_em_grupo"
-    detalhe: >
-      Encontro Incubadora de 24/08/2026 encontrado e com tema pronto ("24.08.26 - Portfólio
-      Estratégico e Ferramentas NR01 (Rosiani)"), mas download bloqueado. Pasta "Encontro
-      Incubadora (recurring)" (primeira vez que existe) só tem "owner"
-      karolsenna@incubadoradeexpert.com.br — mesmo erro "The caller does not have permission" ao
-      tentar share_file pra karol.franzini@gmail.com no arquivo e na pasta. Pedir Karol
-      compartilhar manualmente.
-    link: "https://drive.google.com/drive/folders/1efQbtw1mAK2dFE-EulATEMLMj83qcnuf"
-    registrado_em: "2026-09-10 (missão #24)"
-    reconfirmado_em: "2026-09-24 (missões #28 e #29) — sem mudança"
 # 20/08/2026 (missão #17): pendência "acesso_drive_bloqueado" (registrada nas missões #15/#16)
 # RESOLVIDA — Karol recompartilhou a pasta "Live Expert360 (recurring)" (confirmado: permissão
 # "anyone:writer" apareceu via get_file_permissions, e o perfil karol.franzini@gmail.com acessou

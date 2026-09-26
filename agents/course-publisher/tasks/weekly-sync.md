@@ -89,7 +89,7 @@ comando exato). Usar paths estilo `C:/Users/...` (não `/c/...`) no arquivo de l
   4. **Se não achar roteiro correspondente:** NÃO inventar título, NÃO subir essa aula. Registrar
      como pendência no relatório final ("Live {N} sem roteiro encontrado — aguardando Karol
      escrever/indicar o roteiro") e seguir para a próxima gravação.
-  5. Título final: `{N} - {Título}` (mesmo padrão das Lives 13 em diante — espaço antes do traço).
+  5. Título final: `Live {N} — {Título}` (formato real das linhas em `encontros_mentoria`, Lives 23-31 — corrigido 25/09, missão #30).
 
 - **"Encontro Incubadora - ..."** → série Mentoria em Grupo (`tipo: 'incubadora'`)
   1. Data = extrair do título do arquivo (`YYYY/MM/DD`), formatar como `DD.MM.AA`.

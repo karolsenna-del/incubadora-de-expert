@@ -62,17 +62,17 @@ const ROTEIRO_EXPERT360 = {
       id: 'm3', numero: 'M3', titulo: 'Vendas Secretas', subtitulo: '3 vendas reais antes de aparecer',
       aulas: [
         { titulo: 'Boas-vindas ao M3', concluida: false, youtube_id: 'jWJvBgpiHms' },
-        { titulo: 'A1 — Vendas Secretas: Conceito', concluida: false, youtube_id: 'RralsyVgAtA' },
+        { titulo: 'A1 — Identidade de Vendas antes da Técnica', concluida: false, youtube_id: 'RralsyVgAtA' },
         { titulo: 'A2 — Feito é Melhor que Perfeito', concluida: false, youtube_id: 'G27FO-emYaY' },
-        { titulo: 'A3 — A Oferta de Lançamento', concluida: false },
+        { titulo: 'A3 — O que Você Está Vendendo', concluida: false },
         { titulo: 'A4 — Exercício: Agente da Proposta Validada', concluida: false },
         { titulo: 'A5 — Rastreador de Leads Quentes', concluida: false },
         { titulo: 'A6 — Social Selling', concluida: false },
         { titulo: 'A7 — Lendo seu Lead', concluida: false },
-        { titulo: 'A8 — Roteiro de Abordagem', concluida: false },
-        { titulo: 'A9 — Roteiro da Sessão', concluida: false },
-        { titulo: 'A10 — Pós-Sessão', concluida: false },
-        { titulo: 'A11 — A Escala Secreta', concluida: false },
+        { titulo: 'A8 — Script de Abordagem e Cadência Pré-Sessão', concluida: false },
+        { titulo: 'A9 — O Funil das Vendas Secretas', concluida: false },
+        { titulo: 'A10 — Exercício: Agente Vendedor Secreto', concluida: false },
+        { titulo: 'A11 — Pós-Sessão: Follow-up e Depoimento', concluida: false },
         { titulo: 'Quem Você se Tornou no M3', concluida: false }
       ]
     },
