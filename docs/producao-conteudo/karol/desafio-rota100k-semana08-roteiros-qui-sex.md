@@ -170,8 +170,8 @@ Me segue que eu mostro como adaptar isso pra quem tem conhecimento pra ensinar.
 ## Carrossel de sábado 26/09 (20h) — texto fechado v2 (23/09)
 ⚠️ **Não está agendado.** Pelo `agendamentos.md`, os slides ainda não foram gerados. A legenda continua a mesma do plano.
 
-1. **Capa:** "O resumo da semana no seu setor."
-2. **Reforço do hook:** Um slide por assunto, com a minha leitura. Se você não acompanhou, tá tudo aqui.
+1. **Capa (v3, 25/09):** "Essa semana eu discordei, em público, de um dos maiores nomes do lançamento no Brasil." *(antes: "O resumo da semana no seu setor." — Karol achou fraco como gancho)*
+2. **Reforço do hook (v3, 25/09):** Se você não acompanhou nada essa semana, esse post te atualiza em 1 minuto. Um assunto por slide, com a minha leitura.
 3. **Segunda:** Anthropic, OpenAI e Musk pediram pra desacelerar a IA. Trump discordou publicamente, e ainda saiu processo sobre isso na mesma semana.
 4. **Terça:** morreu o cantor Rick, da dupla Rick & Renner, num acidente de helicóptero em Santa Catarina. Me fez pensar: esperar o momento certo pode fazer ele nunca chegar. E o conhecimento que você guarda não vira legado.
 5. **Quarta:** Meta lançou o Meta One, uma assinatura única juntando Facebook, Instagram, WhatsApp e Meta AI. Mesma lógica de ecossistema que eu ensino pros meus mentorados.
