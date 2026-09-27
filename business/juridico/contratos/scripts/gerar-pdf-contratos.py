@@ -194,7 +194,7 @@ def build_signature_block(contratante_label="CONTRATANTE") -> str:
     <div class="assinatura">
       <div class="campos-local-data">
         <p class="campo-linha">Local: <span class="campo-branco"></span></p>
-        <p class="campo-linha">Data: <span class="campo-branco"></span></p>
+        <p class="campo-linha">Data: conforme registro das assinaturas eletrônicas</p>
       </div>
       <div class="assinaturas-grid">
         <div class="bloco-assinatura">

@@ -29,7 +29,9 @@ Têm entre si justo e contratado o presente instrumento, regido pelas cláusulas
 
 1.1. Prestação de serviço intensivo de construção da fundação do método autoral do CONTRATANTE, conduzida diretamente pela CONTRATADA, ao longo de 6 (seis) semanas, com o CONTRATANTE validando/aprovando cada etapa.
 
-1.2. **Não incluído:** validação de campo do método (prospecção e testes reais com leads/clientes do CONTRATANTE) — essa etapa não cabe no prazo de 6 semanas e pode ser objeto de contratação futura (ver Cláusula 6).
+1.2. **Natureza do serviço:** o Sprint do Método é serviço de execução — a CONTRATADA produz os entregáveis e o CONTRATANTE os aprova (Cláusula 3.1 dos Termos Gerais).
+
+1.3. **Não incluído:** validação de campo do método (prospecção e testes reais com leads/clientes do CONTRATANTE) — essa etapa não cabe no prazo de 6 semanas e pode ser objeto de contratação futura (ver Cláusula 6).
 
 ## 2. ENTREGÁVEIS, SEMANA A SEMANA
 
@@ -46,7 +48,7 @@ Têm entre si justo e contratado o presente instrumento, regido pelas cláusulas
 
 3.1. O serviço tem duração de 6 (seis) semanas corridas, com início a partir da data de agendamento da sessão de imersão.
 
-3.2. **A execução depende de disponibilidade de agenda da CONTRATADA no momento da contratação**, que informará ao CONTRATANTE a data de início possível antes da confirmação do pagamento.
+3.2. **A data de início e o agendamento das sessões são definidos em comum acordo entre as Partes**, conciliando a agenda da CONTRATADA e a do CONTRATANTE.
 
 ## 4. INVESTIMENTO E FORMA DE PAGAMENTO
 
@@ -56,7 +58,7 @@ Têm entre si justo e contratado o presente instrumento, regido pelas cláusulas
 
 ## 5. PROPRIEDADE DO AGENTE DE IA ENTREGUE
 
-5.1. O agente de IA do método do CONTRATANTE, entregue na Semana 6, é de uso pessoal e intransferível do CONTRATANTE, nos termos da Cláusula 6 dos Termos Gerais, permanecendo a estrutura/framework subjacente de titularidade da CONTRATADA.
+5.1. O agente de IA do método do CONTRATANTE, entregue na Semana 6, é de propriedade do CONTRATANTE, que pode utilizá-lo livremente e sem restrições, nos termos da Cláusula 6.4 dos Termos Gerais.
 
 ## 6. DA CONTINUAÇÃO (OPCIONAL)
 
@@ -66,7 +68,7 @@ Têm entre si justo e contratado o presente instrumento, regido pelas cláusulas
 
 Local: _____________________________________________
 
-Data: _____________________________________________
+Data: conforme registro das assinaturas eletrônicas
 
 _______________________________________
 CONTRATADA — Gestão pra Tudo - Karoline Franzini de Carvalho Senna

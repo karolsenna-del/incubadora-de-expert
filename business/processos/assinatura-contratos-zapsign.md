@@ -39,7 +39,8 @@ Expert360º **não usa este fluxo** — é o Termo de Compra (`07-expert360-term
 
 1. Criar novo documento no ZapSign, upload do PDF escolhido no passo 2 (o mesmo arquivo-modelo serve pra qualquer cliente daquela oferta).
 2. Adicionar dois signatários: CONTRATADA (Karol) e CONTRATANTE (cliente) — nome + e-mail e/ou WhatsApp do cliente, conforme o que estiver no CRM.
-3. Usar a ferramenta **Texto** do ZapSign pra clicar em cada linha em branco do bloco "CONTRATANTE" (nome completo, CPF, endereço, e-mail, telefone) e do "Local/Data" no fim, digitando os dados reais do cliente ali — as linhas já estão no PDF exatamente pra isso.
+3. Usar a ferramenta **Texto** do ZapSign pra clicar em cada linha em branco do bloco "CONTRATANTE" (nome completo, CPF, endereço, e-mail, telefone) e do "Local" no fim, digitando os dados reais do cliente ali — as linhas já estão no PDF exatamente pra isso. A **Data não se preenche** (decisão 26/09): o contrato diz "conforme registro das assinaturas eletrônicas" — vale o carimbo de data/hora que o ZapSign grava no relatório de assinaturas.
+   - **Fluxo padrão (decisão Karol, 26/09):** a Karol sempre passa os dados do cliente pro Companion, que gera o contrato já preenchido (dados em texto corrido no preâmbulo) em `business/juridico/contratos-clientes/{ano}/{cliente}-{oferta}.md` — fora do git — e roda `business/juridico/contratos/scripts/gerar-contrato-cliente.py` pro PDF. No ZapSign só sobe o PDF pronto e marca as assinaturas. Preencher linha a linha no ZapSign vira plano B.
 4. Marcar os campos de assinatura de cada parte (posicionar sobre os dois blocos de assinatura no fim do documento).
 5. Enviar. O ZapSign notifica o cliente automaticamente (e-mail ou WhatsApp, conforme configurado).
 

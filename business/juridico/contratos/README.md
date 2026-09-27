@@ -10,6 +10,14 @@ Estes documentos foram redigidos por IA como **ponto de partida estruturado**, n
 2. **Todos os colchetes fixos e as 3 decisões de negócio já estão fechados** (endereço da sede, foro, parcelamento da Individual, prazo do cashback do Diagnóstico, prazo de acesso do Expert360 — todos preenchidos 07/08, decisões da Karol). Os dados do CLIENTE (nome, CPF, endereço, e-mail, telefone) continuam como linhas em branco preenchidas na hora, direto no ZapSign, por quem monta o envio (ver seção "Versão branded" abaixo) — isso é intencional, não pendência.
 3. **1 pendência menor ainda em aberto**, não bloqueia o resto: prazo de liberação de acesso do Expert360º após o pagamento (`07-expert360-termos-de-compra.md`, cláusula 3.1 — hoje com exemplo "24 horas úteis" entre colchetes). Baixo risco, dá pra confirmar quando quiser.
 
+## Revisões
+
+- **26/09/2026 (decisão Karol, no contrato do Vagner):** três melhorias nos Termos Gerais, valendo pra todos os contratos, sem cláusulas contraditórias entre anexo e contrato específico:
+  1. **Uso de imagem/case (Cl. 7):** assinar o contrato já autoriza usar nome, imagem, voz, depoimento e resultados como case/prova/conteúdo, sem autorização por peça (8.1 e 8.2 ajustadas pra não conflitar).
+  2. **Agente de IA do método do cliente (Cl. 6.4):** é propriedade do cliente, uso livre e sem restrição (pode dar pros alunos dele). Os agentes próprios da Karol (ex.: 6 agentes do Grupo, agentes do Expert360º) continuam dela.
+  3. **Natureza do serviço (Cl. 3.1):** mentoria/consultoria por padrão; **Sprint do Método é serviço de execução** (Karol faz, cliente aprova). Nenhum serviço garante resultado financeiro.
+- **Contratos preenchidos por cliente** (com CPF/endereço) ficam em `business/juridico/contratos-clientes/{ano}/`, fora do git (`.gitignore`). Dados do cliente em texto corrido no preâmbulo, igual ao da CONTRATADA.
+
 ## Estrutura
 
 - **`00-termos-gerais-prestacao-servicos.md`** — Anexo I, cláusulas comuns a todos os contratos de mentoria abaixo (obrigações, propriedade intelectual, LGPD, cancelamento, foro). Todo contrato específico referencia este documento em vez de repetir as cláusulas.

@@ -57,7 +57,7 @@ b) Parcelado em até 12x (doze vezes) de R$ 517,12 (quinhentos e dezessete reais
 
 Local: _____________________________________________
 
-Data: _____________________________________________
+Data: conforme registro das assinaturas eletrônicas
 
 _______________________________________
 CONTRATADA — Gestão pra Tudo - Karoline Franzini de Carvalho Senna

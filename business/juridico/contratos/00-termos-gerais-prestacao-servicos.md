@@ -24,7 +24,7 @@
 
 ## CLÁUSULA 3 — DA NATUREZA DO SERVIÇO
 
-3.1. O serviço contratado tem natureza de **orientação, mentoria e consultoria** — não é serviço de execução terceirizada nem garantia de resultado financeiro.
+3.1. O serviço contratado tem natureza de **orientação, mentoria e consultoria**, salvo quando o Instrumento Particular o definir como **serviço de execução** (caso do Sprint do Método, em que a CONTRATADA produz os entregáveis e o CONTRATANTE os aprova). Em nenhuma hipótese o serviço constitui garantia de resultado financeiro.
 
 3.2. A CONTRATADA se compromete a empregar seus melhores esforços, conhecimento técnico e metodologia própria na condução do serviço, mas **não garante faturamento, número de vendas, número de alunos/clientes ou qualquer resultado financeiro específico** para o CONTRATANTE, uma vez que o resultado depende de fatores fora do controle da CONTRATADA (execução do CONTRATANTE, mercado, nicho, precificação, entre outros).
 
@@ -52,31 +52,33 @@
 
 5.3. Efetuar o pagamento na forma e nos prazos definidos no Instrumento Particular.
 
-5.4. Não reproduzir, revender, redistribuir ou repassar a terceiros os materiais, roteiros, ferramentas e/ou acesso a agentes de IA entregues, nos termos da Cláusula 6.
+5.4. Não reproduzir, revender, redistribuir ou repassar a terceiros os materiais, roteiros, ferramentas e/ou acesso a agentes de IA de propriedade da CONTRATADA, nos termos da Cláusula 6 — o que não se aplica ao agente de IA do método do CONTRATANTE (Cláusula 6.4).
 
 ---
 
 ## CLÁUSULA 6 — DA PROPRIEDADE INTELECTUAL
 
-6.1. A metodologia "Incubadora de Expert", seus materiais, roteiros, frameworks, templates e agentes de IA são de autoria e propriedade exclusiva da CONTRATADA, protegidos pela Lei nº 9.610/1998 (Lei de Direitos Autorais).
+6.1. A metodologia "Incubadora de Expert", seus materiais, roteiros, frameworks, templates e agentes de IA próprios (como os agentes de apoio do método disponibilizados aos alunos) são de autoria e propriedade exclusiva da CONTRATADA, protegidos pela Lei nº 9.610/1998 (Lei de Direitos Autorais).
 
 6.2. O CONTRATANTE recebe **licença de uso pessoal e intransferível** dos materiais entregues, exclusivamente para aplicação em seu próprio negócio/método, vedada a reprodução, revenda, distribuição ou uso para ensinar/formar terceiros sem autorização expressa e por escrito da CONTRATADA.
 
 6.3. Documentos, roteiros e ferramentas personalizados **para o caso concreto do CONTRATANTE** (ex.: sua persona, sua promessa, seu processo autoral) são de uso exclusivo do CONTRATANTE quanto ao conteúdo aplicado ao seu negócio, mas a estrutura/framework subjacente permanece de titularidade da CONTRATADA.
 
+6.4. O **agente de IA do método do CONTRATANTE**, quando previsto como entregável no Instrumento Particular, é de propriedade do CONTRATANTE, que pode utilizá-lo livremente e sem restrições — inclusive disponibilizá-lo a seus alunos e clientes —, não se aplicando a ele as restrições dos itens 5.4 e 6.2.
+
 ---
 
 ## CLÁUSULA 7 — DO USO DE IMAGEM E DEPOIMENTO
 
-7.1. A CONTRATADA poderá solicitar ao CONTRATANTE autorização específica para uso de depoimento, resultado obtido ou imagem em materiais de divulgação. **Nenhum uso ocorre sem autorização expressa e específica do CONTRATANTE para cada peça**, revogável a qualquer momento mediante aviso por escrito.
+7.1. Ao aceitar este contrato, o CONTRATANTE autoriza a CONTRATADA, de forma gratuita e **sem necessidade de autorização específica para cada peça**, a utilizar seu nome, imagem, voz, depoimentos, a história do seu processo e os resultados obtidos com o serviço como case, prova social e conteúdo, em redes sociais, aulas, lives, páginas de venda e demais materiais de divulgação da CONTRATADA.
 
 ---
 
 ## CLÁUSULA 8 — DA CONFIDENCIALIDADE E DA LGPD
 
-8.1. As Partes se comprometem a manter sigilo sobre informações confidenciais trocadas em razão deste contrato, incluindo dados de negócio, financeiros e estratégicos, não podendo divulgá-las a terceiros sem autorização prévia, salvo obrigação legal.
+8.1. As Partes se comprometem a manter sigilo sobre informações confidenciais trocadas em razão deste contrato, incluindo dados de negócio, financeiros e estratégicos, não podendo divulgá-las a terceiros sem autorização prévia, salvo obrigação legal e o uso autorizado na Cláusula 7.
 
-8.2. Dados pessoais do CONTRATANTE coletados para a execução do serviço são tratados pela CONTRATADA em conformidade com a Lei nº 13.709/2018 (LGPD), sendo utilizados exclusivamente para a finalidade da prestação do serviço contratado e comunicação relacionada, podendo o CONTRATANTE solicitar acesso, correção ou eliminação de seus dados a qualquer momento, nos termos da lei.
+8.2. Dados pessoais do CONTRATANTE coletados para a execução do serviço são tratados pela CONTRATADA em conformidade com a Lei nº 13.709/2018 (LGPD), sendo utilizados exclusivamente para a finalidade da prestação do serviço contratado, comunicação relacionada e os usos autorizados na Cláusula 7, podendo o CONTRATANTE solicitar acesso, correção ou eliminação de seus dados a qualquer momento, nos termos da lei.
 
 ---
 

@@ -1,5 +1,9 @@
 # Dados sensíveis do expert
 business/vault/
+
+# Contratos com dados pessoais de clientes (CPF, endereço) — nunca versionar
+business/juridico/contratos-clientes/
+business/juridico/contratos-assinados/
 agents/*/data/vault.yaml
 agents/*/data/vault.md
 agents/*/data/*vault*.yaml

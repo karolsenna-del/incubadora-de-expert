@@ -44,7 +44,7 @@ CPF: _____________________________________________
 
 Local: _____________________________________________
 
-Data: _____________________________________________
+Data: conforme registro das assinaturas eletrônicas
 
 _______________________________________
 CONTRATADA — Gestão pra Tudo - Karoline Franzini de Carvalho Senna
