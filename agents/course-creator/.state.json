@@ -64,7 +64,8 @@
       "Aula 8 — O script de abordagem e a cadência pré-sessão",
       "Aula 9 — O Funil das Vendas Secretas",
       "Aula 10 — Exercício: Montando seu Roteiro com o Agente Vendedor Secreto",
-      "Aula 11 — Pós-sessão: o follow-up e o depoimento",
+      "Aula 11 — Conduzindo a Sessão ao Vivo",
+      "Aula 12 — Pós-sessão: o follow-up e o depoimento",
       "Aula Encerramento — Quem Você Se Tornou"
     ],
     "M4": [
@@ -99,11 +100,11 @@
     "business/campanhas/expert360-curso/materiais/M4.5 - Meus Posts Fixados.md — 3 prompts (Pinned 1/2/3) com placeholder para Pinned 3 sem oferta pronta (M4 Aula 4)",
     "business/campanhas/expert360-curso/materiais/M4.6 - Minha Linha Editorial.md — prompt de IA (chat geral) gera 3 pilares nomeados + banco de ~30 temas a partir do relatório da Tríplice; grade semanal fixa; calendário de 4 semanas (M4 Aula 5)",
     "business/campanhas/expert360-curso/materiais/M4.7 - Meus Roteiros.md — 4 prompts interativos reutilizáveis: 2 de Carrossel (História de Alcance / Situação de Identificação) + 2 de Reels (Narrativo com Metáfora / Didático Direto) (M4 Aula 6)",
-    "business/campanhas/expert360-curso/materiais/M3.5 - Meu Rastreador de Leads.csv — planilha Google Sheets (mini-CRM): identificação, Grupo (6 opções), qualificação (Score/Prioridade/Perfil), pipeline (Status/datas/próxima ação), fechamento (Fechou?/Valor/Depoimento), Observações (M3 Aula 5)",
-    "business/campanhas/expert360-curso/materiais/M3.5 - Meu Rastreador de Leads.md — guia explicando colunas e dropdowns do Rastreador (M3 Aula 5)"
+    "business/campanhas/expert360-curso/materiais/M3/M3.5 - Rastreador de Leads Qualificados.csv — planilha Google Sheets (mini-CRM): identificação, Grupo (6 opções), qualificação (Score/Prioridade/Perfil), pipeline (Status/datas/próxima ação), fechamento (Fechou?/Valor/Depoimento), Observações (M3 Aula 5)",
+    "business/campanhas/expert360-curso/materiais/M3/M3.5 - Rastreador de Leads Qualificados.md — guia explicando colunas e dropdowns do Rastreador (M3 Aula 5)"
   ],
   "modulo_atual": "M4",
-  "aula_atual": "M4 COMPLETO — todas as aulas + Encerramento aprovados (QG-CC-006 PASS). Próxima fase: Fase 6 — Branding (/brand-architect)",
+  "aula_atual": "M3 COMPLETO (14 aulas) — A11 nova aprovada 26/09 (QG-CC-006 PASS). Pipeline DONE.",
   "formato_roteiro": "v3.0 (09/07/2026): roteiros de GRAVAÇÃO em bullets de fala livre (teleprompter) — cada linha um conceito inteiro, blocos Abertura→O Que e Por Quê→Como→Onde e Quando→Transição, âncoras ⚓ marcam o que precisa sair exato (números, nomes de framework, frases de impacto). Script em prosa completo movido pro fim de cada arquivo (# SCRIPTS DE REFERÊNCIA). Aplicado em M2, M3, M4 e Módulo de Orientações. M0 e M1 NÃO convertidos (já gravados). Motivo: Karol gravou M0/M1 e sentiu que leu demais o roteiro.",
   "branding_aprovado": true,
   "branding": {
@@ -180,7 +181,7 @@
     "parcelamento": "12x com juros para o cliente",
     "suporte": "Agente de IA dentro da Hotmart (sem encontros mensais ao vivo)",
     "acesso": "Total no primeiro dia — 1 ano",
-    "plataforma": "Hotmart",
+    "plataforma": "Área de membros própria da Karol (membros.incubadoradeexpert.com.br) — NÃO está na Voomp (correção da Karol 26/09/2026)",
     "nota_benchmark": "Benchmark mantido como referência interna — sem comparação direta com FL/VTSD em copy ou pitch",
     "gate": "QG-CC-008 PASS"
   },
@@ -191,7 +192,7 @@
   "decisao_estrutura_modulos": "Cada módulo tem Aula de Introdução + aulas de conteúdo + Aula de Encerramento. +2 aulas por módulo, total ~42 aulas.",
   "decisao_formulario_pre_diagnostico": "Quando a sessão é agendada, a aluna envia o link do Formulário de Pré-Diagnóstico (Google Forms). 12 perguntas: perfil (nome, profissão, experiência, modo de atuação), situação atual (descrição, histórico digital, desafio), contexto econômico (faixa de renda, histórico de investimento), contexto da sessão (motivação, resultado esperado, dúvidas). A aluna lê as respostas antes da sessão — poupa 10 minutos de aquecimento.",
   "aulas_completas_atualizacao": "Aula 2 M0: ajuste retroativo — instrução do Drive aplicada (uma linha).",
-  "ultima_sessao": "2026-09-22",
+  "ultima_sessao": "2026-09-26",
   "drive_path": "G:\\Meu Drive\\PRODUTOS\\Curso Expert360\\",
   "modulo_orientacoes": {
     "status": "roteiros_completos",
@@ -264,6 +265,11 @@
     "Biblioteca de Templates confirmada 100% pronta pela Karol (22/09/2026) — 10 modelos finalizados; não é mais pendência.",
     "Rework M3 A9 (22/09/2026, QG-CC-006 PASS): antiga 'Aula 9 — O roteiro da sessão de vendas secretas' dividida em A9 'O Funil das Vendas Secretas' (8–10 min; 3 telas: página diagnostico.incubadoradeexpert.com.br, Radar do Expert, roteiro da sessão da Karol; analogia aprovada 'a venda secreta é o seu lançamento pra uma pessoa só' — analogia, NÃO nome: Vendas Secretas segue como mecanismo proprietário; 'funil' mantido no título por decisão da Karol — ensinado como estratégia de venda, não conceito marketeiro; CTA seeding no fim: Karol constrói página/radar da aluna → link do suporte na descrição, oferta por trás = Diagnóstico Ferramentas, sem nome/preço no vídeo) + A10 'Exercício: Montando seu Roteiro com o Agente Vendedor Secreto' (10–12 min; formato igual à A4; 5 etapas do Roteiro da Sessão de Vendas Secretas do agente v2.0). Não rejustifica o 1:1 (já na A3, gravada). Pós-sessão vira A11; M3 = 13 aulas. Nomes Tomás/Lourival/Dani Martins NÃO aparecem no curso. Vendedor Secreto vira 7º agente da aluna (GPT ainda a criar — checklist V02). M3.4 virou placeholder do resultado do agente + cola rápida das 5 etapas. Notas de gravação: Radar com demo e sem aba Histórico; roteiro da Karol só até Etapa 3 (preços). A8 e A11 (terceiro decisor / pedido de indicação) NÃO alteradas — sem decisão da Karol. Drive espelhado (m3-roteiros.md + M3.4).",
     "Convites de mentoria no M3 (22/09/2026, decisão da Karol): Introdução mantém Mentoria VIP (3 encontros); A9 (Funil) oferece o serviço do funil de vendas secretas completo feito pela Karol — página, pré-diagnóstico, radar e roteiro da sessão personalizado; A11 (Pós-sessão) oferece análise da sessão gravada ('análise do seu lançamento pra uma pessoa só'); Encerramento mantém Mentoria Express. Nenhum convite cita nome/preço no vídeo — suporte (link na descrição) apresenta a oferta. Oferta/preço da análise pós-sessão ainda não definida (checklist V06). Frase de análise de sessão da antiga A9 (removida no rework) substituída por esse convite na A11. Drive espelhado.",
-    "Oferta da análise pós-sessão (convite da A11 do M3) = Mentoria Express (1h, R$300) — decisão da Karol 22/09/2026. Registrado no checklist (V06) e no ecossistema-ofertas-jul2026.md, pro suporte saber o que apresentar."
+    "Oferta da análise pós-sessão (convite da A11 do M3) = Mentoria Express (1h, R$300) — decisão da Karol 22/09/2026. Registrado no checklist (V06) e no ecossistema-ofertas-jul2026.md, pro suporte saber o que apresentar.",
+    "Rework M3 (26/09/2026): (1) Linguagem neutra — Karol: nada no feminino em lugar nenhum. Varredura no m3-roteiros.md SÓ da A9 em diante (Intro–A8 já gravadas): ela/a lead → o lead/a pessoa; lead fria → lead frio; ansiosa/presa/juntas/aluna reformulados. Rastreador (master, _template, milena-gehrke, rosiani-bezerra e Drive \"M3.5 - Rastreador de Leads Qualificados.xlsx\" — nome dado pela Karol no Drive, arquivo dela preservado, edição direta no XML): Fui prospectada → Veio até mim; Não abordada/Abordada → Sem abordagem/Abordagem feita; Lead fria → Lead frio; Conectora/Analista/Diretiva → Conector/Analista/Diretivo (concorda com \"perfil\"); exemplo Mariana Lopes → Nome do lead; Drive: amigas próximas → amizades próximas. Guia M3.5.md neutralizado. (2) Nova A11 \"Conduzindo a Sessão ao Vivo\" entre A10 e pós-sessão (vira A12); M3 = 14 aulas. Ideia adaptada do Mapa de Reconhecimento Rápido do Júlio Azevedo SEM citar o nome dele nem copiar conceitos/nomes (sem Triangulação 3D, pare-olhe-escute, venda cega/surda, chave mestra, prazos de follow-up por perfil): mantém os 3 perfis da A7 e usa só as lentes ver/ouvir pra condução ao vivo. Karol NÃO quer mudar os perfis da A7 (já gravada).",
+    "26/09/2026 (cont.): A11 \"Conduzindo a Sessão ao Vivo\" APROVADA (QG-CC-006 PASS), m3-roteiros.md v3.5 espelhado no Drive. Rastreador: adotado o nome que a Karol deu no Drive (\"M3.5 - Rastreador de Leads Qualificados.xlsx\") — git mv no master, _template, milena-gehrke, rosiani-bezerra + guia .md; PRD atualizado. Aba \"Como usar\" reescrita completa e didática (39 linhas: pra que serve, passo a passo em 7 passos, coluna por coluna em 5 blocos, rotina de uso) — corrigiu G6 truncado. Roteiro A5 (gravado) ainda fala \"Meu Rastreador de Leads\" — não alterado. Plataforma: curso só na área de membros própria (membros.incubadoradeexpert.com.br), não na Voomp.",
+    "26/09/2026 (cont.): M3 A11 Ponto 4 — bullet do pedido de desconto reescrito a pedido da Karol (estava abstrato: não dizia COMO dar o que faltou depois do preço apresentado). Nova lógica: desconto = objeção disfarçada → acolhe + pergunta \"o que faria isso ser um sim fácil pra você?\" → Conector: acolhimento (palavras dele + como é o acompanhamento); Analista: retorno (o que cada fase entrega x custo de ficar como está + tempo com data); Diretivo: autonomia = sentir que ele decide → escolhas dentro do mesmo preço (pagamento, parcelamento, data de início — só opções que já existem na P4). Falta real de dinheiro = fit, não objeção → Lead frio com data. Âncora: \"Desconto responde a pergunta errada. Descubra o que faltou e entregue isso — o preço fica.\" Bullets + prosa atualizados, Drive espelhado.",
+    "26/09/2026 (cont.): pergunta do pedido de desconto (A11 Ponto 4) trocada — de \"o que faria isso ser um sim fácil pra você?\" (trazia o preço de volta e soava jargão de fechamento) para \"o que está pesando mais pra você: o valor em si ou alguma outra coisa?\" + pergunta de confirmação \"se o valor não fosse uma questão, você entraria?\" (sim → escolhas de pagamento; ainda não cabe → fit → Lead frio). Bullets + prosa, Drive espelhado. PONTO DE ATENÇÃO pro V02: a KB do Vendedor Secreto (linhas 202/355) usa \"à vista com desconto\" como opção de pagamento — decidir com a Karol se o GPT da aluna mantém isso ou alinha com a aula (\"escolhas dentro do mesmo preço\").",
+    "26/09/2026 (cont.): Karol esclareceu que desconto à vista é normal em high ticket — fica. A11 Ponto 4 ajustado: diretivo recebe as CONDIÇÕES que já existem na oferta (à vista com desconto, parcelado, data de início) e escolhe; distinção ensinada = condição de pagamento (regra da oferta, vale pra todo mundo) x desconto negociado (preço que cedeu porque a pessoa pediu). Âncora nova: \"Condição de pagamento é regra da oferta. Desconto negociado é preço que cedeu.\" Alerta do V02 removido — KB do Vendedor Secreto (à vista c/ desconto → 12x) é compatível. Drive espelhado."
   ]
 }

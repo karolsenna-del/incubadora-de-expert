@@ -1,8 +1,8 @@
 # Expert360º — Roteiros Módulo 3: Vendas Secretas
-Versão: 3.4 (teleprompter de fala livre) | Base: v2.0 aprovada (QG-CC-006) | Data: 22/09/2026 — antiga A9 dividida em A9 (Funil das Vendas Secretas) + A10 (Exercício com o Agente Vendedor Secreto), ambas aprovadas (QG-CC-006 PASS); pós-sessão vira A11
+Versão: 3.5 (teleprompter de fala livre) | Base: v2.0 aprovada (QG-CC-006) | Data: 26/09/2026 — nova A11 (Conduzindo a Sessão ao Vivo) entre o exercício do roteiro e o pós-sessão (que vira A12); linguagem neutra da A9 em diante (A1–A8 já gravadas, não tocadas)
 Status: bullets pra gravar falando livre — o script em prosa completo foi movido pro fim do arquivo (SCRIPTS DE REFERÊNCIA), só como consulta.
 
-**Aulas:** 13 (Introdução + A1–A11 + Encerramento)
+**Aulas:** 14 (Introdução + A1–A12 + Encerramento)
 
 ## COMO LER OS BULLETS
 - **⚓ = fala EXATO** — número, nome de framework ou frase de impacto que não pode sair errada.
@@ -356,15 +356,15 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 *Estimativa: 8–10 minutos (com 3 telas compartilhadas)*
 
 **ABERTURA**
-- Você abordou, e ela disse sim. Entre esse sim e a venda existe um caminho — e cada passo dele aumenta ou diminui o valor que ela enxerga em você.
+- Você abordou, e o lead disse sim. Entre esse sim e a venda existe um caminho — e cada passo dele aumenta ou diminui o valor que a pessoa enxerga em você.
 - Pensa assim: a venda secreta é o seu lançamento pra uma pessoa só. Tudo que um lançamento testa — narrativa, preço, entregáveis, objeções, oferta — você testa aqui, sem ninguém ver, e ajusta antes de mostrar pro mundo.
    ⚓ A venda secreta é o seu lançamento pra uma pessoa só.
 - Hoje eu abro o meu caminho inteiro, com as ferramentas que eu uso de verdade nas minhas sessões.
 
 **O QUE E POR QUÊ**
 - Tema: o funil das vendas secretas — do sim da abordagem até o fechamento — mostrado nas minhas próprias telas.
-- Importa agora porque a venda não acontece só na sessão. Ela começa antes, no que a lead vê e responde antes de entrar na chamada.
-   ⚓ A lead decide se a sessão tem valor antes da sessão começar.
+- Importa agora porque a venda não acontece só na sessão. Ela começa antes, no que o lead vê e responde antes de entrar na chamada.
+   ⚓ O lead decide se a sessão tem valor antes da sessão começar.
 
 **COMO**
 ▸ Ponto 1 — O caminho inteiro
@@ -373,26 +373,26 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
    - Hoje o foco é o miolo: o que acontece entre o sim e o fim da chamada.
 ▸ Ponto 2 — Antes da sessão: a página + o pré-diagnóstico
    🖥️ TELA: diagnostico.incubadoradeexpert.com.br
-   - Quando a lead aceita, ela recebe este link. A página mostra como a sessão funciona: pré-diagnóstico de uns 10 minutos, sessão individual de 45, e um próximo passo claro no final.
-   - Mostra também pra quem é e pra quem não é. Quando ela lê "não é pra quem procura fórmula mágica", ela entende que ali tem critério.
-   - Função: ela não chega numa "call de venda" — chega numa sessão que ela já sabe que vale. E o aviso de que existe um próximo passo já está dado.
-   - O pré-diagnóstico ela responde por ali. Você entra na chamada sabendo onde ela está.
+   - Quando o lead aceita, recebe este link. A página mostra como a sessão funciona: pré-diagnóstico de uns 10 minutos, sessão individual de 45, e um próximo passo claro no final.
+   - Mostra também pra quem é e pra quem não é. Quando a pessoa lê "não é pra quem procura fórmula mágica", entende que ali tem critério.
+   - Função: o lead não chega numa "call de venda" — chega numa sessão que já sabe que vale. E o aviso de que existe um próximo passo já está dado.
+   - O pré-diagnóstico é respondido por ali. Você entra na chamada sabendo onde o lead está.
 ▸ Ponto 3 — Durante a sessão: o radar
    🖥️ TELA: Radar do Expert
-   - As áreas que eu investigo no diagnóstico são as fases do meu método: os 5 Ps — Persona, Promessa, Processo, Proposta e Posicionamento. Cada um tem de 2 a 4 perguntas que eu pontuo de 0 a 10 enquanto ela fala.
-   - O que ela já respondeu no pré-diagnóstico chega pré-marcado — eu não repergunto o que ela já disse.
+   - As áreas que eu investigo no diagnóstico são as fases do meu método: os 5 Ps — Persona, Promessa, Processo, Proposta e Posicionamento. Cada um tem de 2 a 4 perguntas que eu pontuo de 0 a 10 enquanto a pessoa fala.
+   - O que o lead já respondeu no pré-diagnóstico chega pré-marcado — eu não repergunto o que já foi dito.
    - O radar cresce em tempo real e me mostra o ponto mais travado. É ali que eu aprofundo.
-   - O que isso causa: ela vê o próprio gargalo desenhado na tela. Quando a oferta chegar, não é argumento meu — é resposta ao que ela acabou de ver.
+   - O que isso causa: o lead vê o próprio gargalo desenhado na tela. Quando a oferta chegar, não é argumento meu — é resposta ao que acabou de ver.
       ⚓ Diagnóstico sempre antes da oferta. Sempre.
 ▸ Ponto 4 — O roteiro por trás da sessão
    🖥️ TELA: meu Roteiro da Sessão (rolar só até a Etapa 3 — ver nota de gravação)
-   - Antes de cada sessão eu preparo 3 coisas a partir do pré-diagnóstico: o gancho de abertura com as palavras dela, o gargalo provável, e a hipótese de oferta.
-   - Depois, a sessão em 5 etapas: abertura já avisando que vai ter um próximo passo → diagnóstico → ponte de identificação (minha história ou o futuro dela já resolvido) → oferta → fechamento.
+   - Antes de cada sessão eu preparo 3 coisas a partir do pré-diagnóstico: o gancho de abertura com as palavras do lead, o gargalo provável, e a hipótese de oferta.
+   - Depois, a sessão em 5 etapas: abertura já avisando que vai ter um próximo passo → diagnóstico → ponte de identificação (minha história ou o futuro do lead já resolvido) → oferta → fechamento.
    - Na próxima aula você monta as suas 5 etapas, uma por uma, com o agente.
 ▸ Ponto 5 — O conjunto
-   - Repara no conjunto: a página, o radar, o roteiro. A lead sente que está diante de alguém com método antes mesmo de ouvir a oferta. Isso não é detalhe — é o que faz uma sessão valer o que ela custa.
+   - Repara no conjunto: a página, o radar, o roteiro. O lead sente que está diante de alguém com método antes mesmo de ouvir a oferta. Isso não é detalhe — é o que faz uma sessão valer o que ela custa.
    - Esse funil é do MEU método. O seu segue as fases do SEU. Se você quiser o seu funil de vendas secretas completo construído comigo — a página da sua sessão, o seu pré-diagnóstico, o seu radar com as fases do seu método e o roteiro da sessão personalizado — fala com o suporte: o link está na descrição desta aula.
-      ⚓ Ferramenta não é enfeite. É o que faz a lead enxergar o valor antes do preço.
+      ⚓ Ferramenta não é enfeite. É o que faz o lead enxergar o valor antes do preço.
 
 **ONDE E QUANDO**
 - Nesta aula você só observa o caminho. O seu roteiro nasce na próxima, com o Agente Vendedor Secreto.
@@ -425,9 +425,9 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
    - Quatro documentos: P1 (Persona, M1 A4), P2 (Promessa, M1 A6), P3 (Método, M2 A5) e P4 (Proposta Validada, M3 A4).
    - E a sua História Real (M0) — se você for usar a sua história como ponte.
 ▸ Ponto 2 — O que o agente monta com você (as 5 etapas)
-   - Etapa 1 — Abertura: começa com algo que ela escreveu no pré-diagnóstico e já avisa que, no final, você mostra o próximo passo. Quem é avisado relaxa; quem é pego de surpresa se defende.
-   - Etapa 2 — Diagnóstico: as áreas são as fases do seu método. Em cada uma, as perguntas seguem a ordem Situação → Problema → Implicação ("se nada mudar, como você vai estar daqui a 1 ano?") → e você entrega um insight que ela já pode usar. Anote as palavras exatas dela.
-   - Etapa 3 — Ponte: o agente te pergunta qual caminho combina com você — a sua história ou o Bloco de Sonhos (ela visualiza o futuro já resolvido).
+   - Etapa 1 — Abertura: começa com algo que o lead escreveu no pré-diagnóstico e já avisa que, no final, você mostra o próximo passo. Quem é avisado relaxa; quem é pego de surpresa se defende.
+   - Etapa 2 — Diagnóstico: as áreas são as fases do seu método. Em cada uma, as perguntas seguem a ordem Situação → Problema → Implicação ("se nada mudar, como você vai estar daqui a 1 ano?") → e você entrega um insight que a pessoa já pode usar. Anote as palavras exatas do lead.
+   - Etapa 3 — Ponte: o agente te pergunta qual caminho combina com você — a sua história ou o Bloco de Sonhos (o lead visualiza o futuro já resolvido).
    - Etapa 4 — Oferta: pede licença antes, depois a narrativa ECROI com as fases do seu método, os detalhes concretos e a âncora de valor antes do preço.
       ⚓ Preço → para. O silêncio não precisa ser preenchido.
    - Etapa 5 — Fechamento: "faz sentido pra você?" e as respostas às objeções do seu nicho, sempre em 3 passos.
@@ -436,11 +436,11 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 ▸ Ponto 3 — Três posturas pra rodar bem
    - Leve os documentos prontos — quanto mais claro o seu método, mais preciso o roteiro.
    - Se alguma fala não soar você, diga. O agente ajusta. O roteiro precisa parecer você falando, não um script.
-   - Não pule o diagnóstico nem se ela "já souber o que você vende". Sem diagnóstico, a oferta vira pitch.
-      ⚓ Não seja ansiosa. Se ela percebe que você quer vender mais do que ela quer comprar, ela trava.
+   - Não pule o diagnóstico nem se o lead "já souber o que você vende". Sem diagnóstico, a oferta vira pitch.
+      ⚓ Não entre com ansiedade. Quando você quer vender mais do que o outro quer comprar, a conversa trava.
 ▸ Ponto 4 — O que sai (output) + o agente depois do roteiro
    - O roteiro completo das 5 etapas, com as falas prontas pra ajustar. Salve no arquivo Roteiro da Sessão 1 a 1 no Drive e deixe aberto durante a chamada.
-   - O agente não some depois: no dia da sessão, se travar numa objeção, pergunta "ela disse X, o que eu respondo?"; depois da sessão, conta o que aconteceu e ele te ajuda a revisar e a montar o follow-up.
+   - O agente não some depois: no dia da sessão, se travar numa objeção, pergunta "o lead disse X, o que eu respondo?"; depois da sessão, conta o que aconteceu e ele te ajuda a revisar e a montar o follow-up.
    - Grave todas as sessões (com permissão): revisão e matéria-prima dos cortes do M4.
 
 **ONDE E QUANDO**
@@ -449,33 +449,84 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 
 **TRANSIÇÃO**
 - Roteiro pronto, na sua voz, com o seu método.
-- Gancho A11: o pós-sessão — "sim", "não" ou "vou pensar" + como transformar a conversa em prova pro M4.
+- Gancho A11: conduzindo a sessão ao vivo — como ler o perfil em tempo real e ajustar cada etapa do roteiro.
 
 ---
 ---
 
-## AULA 11 — PÓS-SESSÃO: O FOLLOW-UP E O DEPOIMENTO
+## AULA 11 — CONDUZINDO A SESSÃO AO VIVO
+*Estimativa: 10–12 minutos*
+
+**ABERTURA**
+- Roteiro pronto, sessão marcada, pré-diagnóstico respondido. Falta a parte que nenhum documento resolve: a hora em que a câmera liga.
+- O roteiro diz o que falar. Esta aula é sobre como conduzir — e a condução muda conforme a pessoa do outro lado.
+
+**O QUE E POR QUÊ**
+- Tema: conduzir a sessão ao vivo — o preparo, a leitura do perfil em tempo real e o ajuste de cada etapa do roteiro pra quem está na sua frente.
+- Importa agora porque o mesmo roteiro, conduzido do mesmo jeito pra todo mundo, abre uma pessoa e fecha outra.
+   ⚓ Roteiro é o que você fala. Condução é como você fala — pra quem está na sua frente.
+
+**COMO**
+▸ Ponto 1 — os 10 minutos antes
+   - Releia o pré-diagnóstico e separe as palavras exatas do lead — elas abrem a sessão e voltam na oferta.
+   - Abra o Rastreador e confira o perfil que você anotou antes da abordagem: conector, analista ou diretivo. Isso é hipótese, não certeza — a sessão confirma.
+   - Deixe aberto o Roteiro da Sessão 1 a 1 e um lugar pra anotar. Nos primeiros minutos: peça permissão pra gravar e combine o tempo da conversa.
+▸ Ponto 2 — as duas lentes: o que você vê e o que você ouve
+   - Online você leu o que a pessoa escolheu mostrar. Ao vivo aparece o que não dá pra controlar tão bem: postura, expressão, ritmo e tom de voz.
+   - Lente 1 — o que você vê: postura, gestos, expressão, o quanto a pessoa se aproxima ou se afasta da câmera. Lente 2 — o que você ouve: ritmo da fala, tom e as palavras escolhidas.
+   - Nos primeiros 5 minutos você confirma ou corrige a leitura do Rastreador. Se mudou, ajusta a condução ali mesmo — e corrige a coluna Perfil depois da chamada.
+      ⚓ Um sinal sozinho não define ninguém. O que vale é o conjunto.
+▸ Ponto 3 — conduzindo cada perfil
+   - Perfil conector. Vê: sorri fácil, gesticula, expressão viva. Ouve: fala solta, cheia de histórias, puxa assunto pessoal antes do negócio. Conduz: não corte o papo do começo — é ali que a confiança nasce; na ponte, a sua história funciona muito bem; na oferta, fale do impacto nas pessoas que esse lead atende. Trava quando você pula direto pros números ou fica frio e técnico.
+   - Perfil analista. Vê: reservado, poucos gestos, anota, observa antes de falar. Ouve: fala pouco e com precisão, faz pausas, pergunta detalhe, pede exemplo. Conduz: perguntas específicas no diagnóstico e espaço pro silêncio; na oferta, a lógica fase por fase do seu método, com exemplos concretos; no fechamento, ofereça tempo pra analisar — com data marcada pro retorno. Trava com entusiasmo sem substância ("confia, vai dar certo") ou pressão pra decidir na hora.
+   - Perfil diretivo. Vê: postura firme, olhar direto, pouca paciência com rodeio. Ouve: frases curtas, tom firme, interrompe pra chegar ao ponto, pergunta cedo "como funciona" ou "quanto é". Conduz: abertura curta, diagnóstico objetivo, oferta começando pelo resultado — mostre o caminho e deixe a decisão com o lead. Trava com explicação longa ou com você tentando convencer por que o lead precisa disso.
+      ⚓ O erro mais comum é vender pro outro do jeito que você gostaria de comprar.
+▸ Ponto 4 — quando a sessão sai do roteiro
+   - Pergunta o preço cedo: "já chego nisso — antes, quero entender se faz sentido pra você". Diagnóstico antes da oferta, sempre.
+   - Fala demais e a conversa escapa: recapitule o que ouviu, com as palavras do lead, e volte pra próxima pergunta.
+   - Não se abre: perguntas menores e mais concretas, e você fala menos — silêncio dá espaço.
+   - Pede desconto: quase nunca é sobre dinheiro — é objeção disfarçada. Acolha e pergunte: "o que está pesando mais pra você: o valor em si ou alguma outra coisa?". Se for outra coisa, a resposta mostra o que faltou:
+      · Conector: faltou se sentir acolhido → volte às palavras dele no diagnóstico e mostre como é o acompanhamento.
+      · Analista: faltou enxergar o retorno → refaça a conta: o que cada fase entrega x o custo de continuar como está. Dê tempo, com data de retorno.
+      · Diretivo: faltou sentir que ele decide → apresente as condições que já existem na sua oferta (à vista com desconto, parcelado, data de início) e deixe a escolha com ele.
+   - Se for o valor, confirme: "se o valor não fosse uma questão, você entraria?". Sim → apresente as condições de pagamento da oferta. Mesmo assim não cabe → é fit, não objeção: "talvez não seja o momento" → Lead frio com data pra retomar.
+      ⚓ Condição de pagamento é regra da oferta. Desconto negociado é preço que cedeu.
+
+**ONDE E QUANDO**
+- Antes de cada chamada: pré-diagnóstico + Rastreador (coluna Perfil) + Roteiro da Sessão 1 a 1 abertos. Depois: corrija o Perfil no Rastreador se a leitura mudou.
+
+**TRANSIÇÃO**
+- A chamada terminou. O que você faz a partir daqui decide se essa conversa vira venda, prova ou só uma boa conversa.
+- Gancho A12: o pós-sessão — "sim", "não" ou "vou pensar".
+
+**NOTAS DE GRAVAÇÃO (não falar)**
+- Se tiver uma sessão real que ilustre a troca de condução (perfil que parecia um online e era outro ao vivo), contar aqui — sem nome do lead.
+
+---
+---
+
+## AULA 12 — PÓS-SESSÃO: O FOLLOW-UP E O DEPOIMENTO
 *Estimativa: 10–12 minutos*
 
 **ABERTURA**
 - A chamada fechou: você diagnosticou, contou sua história, construiu a lógica, apresentou, convidou — e existe um resultado, sim ou não.
-- Antes de cada caminho, o que vale pros dois: a sessão não termina quando a chamada fecha. O que você faz nas próximas horas e dias decide se ela fica só nela ou alimenta todas as próximas.
+- Antes de cada caminho, o que vale pros dois: a sessão não termina quando a chamada fecha. O que você faz nas próximas horas e dias decide se a conversa fica só nela ou alimenta todas as próximas.
 
 **O QUE E POR QUÊ**
 - Tema: o pós-sessão — o que fazer em cada um dos três resultados, como coletar o depoimento, e o que tudo isso vira no M4.
 - Importa agora porque é aqui que as primeiras sessões viram ativos: prova, pitch calibrado, objeções mapeadas — que determinam a qualidade do posicionamento no M4.
 
 **COMO**
-▸ Ponto 1 — ela disse sim: próximos passos + depoimento
+▸ Ponto 1 — o lead disse sim: próximos passos + depoimento
    - Não encerre sem o próximo passo concreto. Antes do tchau, feche três pontos ainda na chamada: forma de pagamento, próxima data, canal — porque entre o sim e o pagamento existe uma janela em que o entusiasmo esfria. Atualize o Rastreador (status → cliente).
    - O depoimento não vem no dia seguinte ao sim — vem depois do resultado. Mas agora você pede a permissão pra documentar ("conforme a gente trabalha, quero documentar o que você está construindo; no final, se valer, adoraria o depoimento com as suas palavras. Topa?").
-   - Quando pedir de verdade: no encerramento do trabalho ou quando ela mencionar resultado. Três perguntas que produzem o depoimento certo: "como estava a sua situação antes?", "o que mudou?", "pra quem você indicaria?".
-▸ Ponto 2 — ela foi pensar: a cadência de 5 toques
+   - Quando pedir de verdade: no encerramento do trabalho ou quando o cliente mencionar resultado. Três perguntas que produzem o depoimento certo: "como estava a sua situação antes?", "o que mudou?", "pra quem você indicaria?".
+▸ Ponto 2 — o lead foi pensar: a cadência de 5 toques
    - O resultado mais comum nas primeiras sessões: nem sim, nem não — "vou pensar". Pra ticket alto a decisão não acontece em 24h; você precisa de presença, não pressão.
-   - T1 (24–48h): personalizado, referência a algo que ela disse, sem pergunta de fechamento. T2 (4–5 dias): valor puro, sem mencionar a oferta. T3 (8–10 dias): pergunta aberta ("ficou alguma dúvida?"). T4 (12–14 dias): custo do status quo. T5 (18–21 dias): encerramento gracioso.
-   - Vai pro Rastreador como lead fria. Quando você aparecer no M4 com prova, algumas voltam — não porque você insistiu, porque a prova eliminou a objeção.
-▸ Ponto 3 — ela disse não + documentar sempre + o que vira no M4
-   - Um não não é veredicto — o campo produz resultados variados; fala sobre essa pessoa nesse momento, não sobre o seu método. Encerre com generosidade e arquive como lead fria (pausa, não descarte).
+   - T1 (24–48h): personalizado, referência a algo que o lead disse, sem pergunta de fechamento. T2 (4–5 dias): valor puro, sem mencionar a oferta. T3 (8–10 dias): pergunta aberta ("ficou alguma dúvida?"). T4 (12–14 dias): custo do status quo. T5 (18–21 dias): encerramento gracioso.
+   - Vai pro Rastreador como lead frio. Quando você aparecer no M4 com prova, algumas voltam — não porque você insistiu, porque a prova eliminou a objeção.
+▸ Ponto 3 — o lead disse não + documentar sempre + o que vira no M4
+   - Um não não é veredicto — o campo produz resultados variados; fala sobre essa pessoa nesse momento, não sobre o seu método. Encerre com generosidade e arquive como lead frio (pausa, não descarte).
    - Independente do resultado, antes de dormir: três perguntas, uma linha cada — o que funcionou? o que travou? o que eu diria diferente? (um ajuste, não dez). Sem registro, cada sessão começa do zero; com ele, começa mais avançada.
    - Quer um segundo olhar? Me manda a gravação: eu assisto a sua sessão e te mostro exatamente onde ajustar — narrativa, preço, entregáveis, objeções, oferta. É a análise do seu lançamento pra uma pessoa só. O link pra falar com o suporte está na descrição desta aula.
       ⚓ Depois do lançamento, vem a análise do lançamento.
@@ -507,7 +558,7 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
       ⚓ Conhecimento sobre vender e ter vendido são duas pessoas diferentes — e a segunda só existe depois que a primeira se arrisca.
    - Sobre o número 3: se você ainda não fechou as 3, isso não te trava. 3 é o número de referência do curso, não o seu — cada negócio tem o seu número, e não existe número errado. E isso é dado: quando for investir em tráfego, é muito mais fácil decidir quanto sabendo "de cada X conversas, fecho 1".
 ▸ Ponto 2 — o que você construiu neste módulo
-   - P4 (oferta com nome, formato, promessa e preço), Rastreador (mapa de quem tem mais propensão de comprar agora, por grupo/prioridade/perfil), abordagem calibrada (social selling + leitura de perfil), roteiro completo da sessão (narrativa ECROI, oferta como resposta) e pós-sessão (follow-up, "sim" em compromisso e depoimento, "vou pensar" numa sequência que respeita o tempo).
+   - P4 (oferta com nome, formato, promessa e preço), Rastreador (mapa de quem tem mais propensão de comprar agora, por grupo/prioridade/perfil), abordagem calibrada (social selling + leitura de perfil), roteiro completo da sessão (narrativa ECROI, oferta como resposta), condução ao vivo (leitura do perfil em tempo real) e pós-sessão (follow-up, "sim" em compromisso e depoimento, "vou pensar" numa sequência que respeita o tempo).
    - Não é módulo de teoria — é onde você aprendeu, na prática, a vender o que construiu.
 ▸ Ponto 3 — o que essas conversas significam + o que muda no M4
    - Você não é mais alguém que "tem um método e queria vender" — é alguém que apresentou pra pessoas reais, ouviu objeções reais e descobriu na prática o que faz sentido pro outro lado. Esse tipo de identidade se constrói fazendo, não lendo.
@@ -518,7 +569,7 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 - P4, Rastreador, Roteiro da Sessão 1:1, depoimento em construção — tudo no Drive. Acompanha você no M4 como inputs centrais do posicionamento público.
 
 **CTA — Mentoria Express**
-- Se você ficou presa num ponto específico e seguiu sem resolver: a Mentoria Express é uma hora comigo focada exatamente no que trava — sem pauta ampla, sem volta ao zero. Link do suporte na descrição.
+- Se você travou num ponto específico e seguiu sem resolver: a Mentoria Express é uma hora comigo focada exatamente no que trava — sem pauta ampla, sem volta ao zero. Link do suporte na descrição.
 
 **TRANSIÇÃO**
 - Você foi a campo, testou sua oferta com gente de verdade, e saiu diferente de quem entrou.
@@ -1084,9 +1135,9 @@ Na próxima aula, eu abro o meu funil das vendas secretas por dentro — o que a
 
 ---
 
-Você abordou. E ela disse sim.
+Você abordou. E o lead disse sim.
 
-Entre esse sim e a venda existe um caminho. E cada passo desse caminho aumenta — ou diminui — o valor que ela enxerga em você.
+Entre esse sim e a venda existe um caminho. E cada passo desse caminho aumenta — ou diminui — o valor que a pessoa enxerga em você.
 
 Pensa assim: a venda secreta é o seu lançamento pra uma pessoa só. Tudo que um lançamento testa — narrativa, preço, entregáveis, objeções, oferta — você testa aqui, sem ninguém ver. E ajusta antes de mostrar pro mundo.
 
@@ -1096,7 +1147,7 @@ Hoje eu vou abrir o meu caminho inteiro. Com as ferramentas que eu uso de verdad
 
 O tema de hoje é o funil das vendas secretas — do sim da abordagem até o fechamento — mostrado nas minhas próprias telas.
 
-Isso importa agora porque a venda não acontece só na sessão. Ela começa antes — no que a lead vê e responde antes de entrar na chamada. A lead decide se a sessão tem valor antes da sessão começar.
+Isso importa agora porque a venda não acontece só na sessão. Ela começa antes — no que o lead vê e responde antes de entrar na chamada. O lead decide se a sessão tem valor antes da sessão começar.
 
 ---
 
@@ -1106,35 +1157,35 @@ Ideia: funil aqui não é conceito de marketing. É estratégia de venda — o c
 
 Exemplo: são 4 passos. A abordagem, que você aprendeu na aula anterior. A página da sessão, com o pré-diagnóstico. A sessão. E o pós-sessão, que fecha o módulo.
 
-Aplicação: hoje o foco é o miolo — o que acontece entre o sim dela e o fim da chamada.
+Aplicação: hoje o foco é o miolo — o que acontece entre o sim do lead e o fim da chamada.
 
 **Ponto 2 — Antes da sessão: a página + o pré-diagnóstico.** *[TELA: diagnostico.incubadoradeexpert.com.br]*
 
-Ideia: quando a lead aceita, antes de qualquer conversa, ela recebe este link. A página mostra como a sessão funciona: um pré-diagnóstico de uns 10 minutos, uma sessão individual de 45, e um próximo passo claro no final.
+Ideia: quando o lead aceita, antes de qualquer conversa, recebe este link. A página mostra como a sessão funciona: um pré-diagnóstico de uns 10 minutos, uma sessão individual de 45, e um próximo passo claro no final.
 
-Exemplo: repara que a página também diz pra quem é — e pra quem não é. Quando ela lê "não é pra quem procura fórmula mágica", ela entende que ali tem critério. Ela não chega numa "call de venda". Chega numa sessão que ela já sabe que vale. E o aviso de que existe um próximo passo já está dado — antes de você abrir a boca.
+Exemplo: repara que a página também diz pra quem é — e pra quem não é. Quando a pessoa lê "não é pra quem procura fórmula mágica", entende que ali tem critério. O lead não chega numa "call de venda". Chega numa sessão que já sabe que vale. E o aviso de que existe um próximo passo já está dado — antes de você abrir a boca.
 
-Aplicação: o pré-diagnóstico ela responde por ali mesmo. Você entra na chamada sabendo onde ela está — e não gasta os primeiros 10 minutos perguntando o que já poderia saber.
+Aplicação: o pré-diagnóstico é respondido por ali mesmo. Você entra na chamada sabendo onde o lead está — e não gasta os primeiros 10 minutos perguntando o que já poderia saber.
 
 **Ponto 3 — Durante a sessão: o radar.** *[TELA: Radar do Expert]*
 
-Ideia: as áreas que eu investigo no diagnóstico são as fases do meu método — os 5 Ps: Persona, Promessa, Processo, Proposta e Posicionamento. Cada um tem de 2 a 4 perguntas, que eu pontuo de 0 a 10 enquanto ela fala.
+Ideia: as áreas que eu investigo no diagnóstico são as fases do meu método — os 5 Ps: Persona, Promessa, Processo, Proposta e Posicionamento. Cada um tem de 2 a 4 perguntas, que eu pontuo de 0 a 10 enquanto a pessoa fala.
 
-Exemplo: o que ela já respondeu no pré-diagnóstico chega pré-marcado — eu não repergunto o que ela já disse. E o radar cresce em tempo real, na frente dela. No final, ele me mostra o ponto mais travado. É ali que eu aprofundo.
+Exemplo: o que o lead já respondeu no pré-diagnóstico chega pré-marcado — eu não repergunto o que já foi dito. E o radar cresce em tempo real, na frente do lead. No final, ele me mostra o ponto mais travado. É ali que eu aprofundo.
 
-Aplicação: o que isso causa é o mais importante. Ela vê o próprio gargalo desenhado na tela. Quando a oferta chegar, não é argumento meu — é resposta ao que ela acabou de ver. Diagnóstico sempre antes da oferta. Sempre.
+Aplicação: o que isso causa é o mais importante. O lead vê o próprio gargalo desenhado na tela. Quando a oferta chegar, não é argumento meu — é resposta ao que acabou de ver. Diagnóstico sempre antes da oferta. Sempre.
 
 **Ponto 4 — O roteiro por trás da sessão.** *[TELA: meu Roteiro da Sessão — até a Etapa 3]*
 
 Ideia: nada disso é improviso. Por trás da sessão tem um roteiro.
 
-Exemplo: antes de cada sessão, eu preparo 3 coisas a partir do pré-diagnóstico: o gancho de abertura, com as palavras dela; o gargalo provável; e a hipótese de oferta. Depois, a sessão acontece em 5 etapas: a abertura, já avisando que vai ter um próximo passo; o diagnóstico; a ponte de identificação — a minha história, ou o futuro dela já resolvido; a oferta; e o fechamento.
+Exemplo: antes de cada sessão, eu preparo 3 coisas a partir do pré-diagnóstico: o gancho de abertura, com as palavras do lead; o gargalo provável; e a hipótese de oferta. Depois, a sessão acontece em 5 etapas: a abertura, já avisando que vai ter um próximo passo; o diagnóstico; a ponte de identificação — a minha história, ou o futuro do lead já resolvido; a oferta; e o fechamento.
 
 Aplicação: na próxima aula, você monta as suas 5 etapas, uma por uma, com o agente.
 
 **Ponto 5 — O conjunto.**
 
-Ideia: repara no conjunto. A página, o radar, o roteiro. A lead sente que está diante de alguém com método antes mesmo de ouvir a oferta. Isso não é detalhe — é o que faz uma sessão valer o que ela custa. Ferramenta não é enfeite. É o que faz a lead enxergar o valor antes do preço.
+Ideia: repara no conjunto. A página, o radar, o roteiro. O lead sente que está diante de alguém com método antes mesmo de ouvir a oferta. Isso não é detalhe — é o que faz uma sessão valer o que ela custa. Ferramenta não é enfeite. É o que faz o lead enxergar o valor antes do preço.
 
 Exemplo: esse funil que você viu é do meu método. O seu segue as fases do seu.
 
@@ -1182,23 +1233,23 @@ Aplicação: separe os documentos antes de abrir o agente. Quanto mais claro o s
 
 Ideia: o agente percorre as 5 etapas da sessão com você — e em cada uma existe uma regra que você precisa levar pra chamada.
 
-Exemplo: **Etapa 1 — Abertura.** Começa com algo que ela escreveu no pré-diagnóstico, e já avisa que, no final, você mostra o próximo passo. Quem é avisado relaxa. Quem é pego de surpresa se defende. **Etapa 2 — Diagnóstico.** As áreas são as fases do seu método. Em cada uma, as perguntas seguem uma ordem: Situação — como está hoje; Problema — o que mais incomoda; Implicação — *"se nada mudar, como você vai estar daqui a 1 ano?"*; e você fecha entregando um insight que ela já pode usar, comprando ou não. Anote as palavras exatas dela — elas voltam na oferta como espelho. **Etapa 3 — Ponte.** O agente te pergunta qual caminho combina com você: a sua história, ou o Bloco de Sonhos, em que ela visualiza o futuro já resolvido. **Etapa 4 — Oferta.** Você pede licença antes — *"posso te mostrar como funciona o meu trabalho?"* — e aí vem a narrativa ECROI com as fases do seu método, os detalhes concretos, e a âncora de valor antes do preço. Preço → para. O silêncio não precisa ser preenchido. **Etapa 5 — Fechamento.** *"Faz sentido pra você?"* E as respostas às objeções do seu nicho, sempre em 3 passos: acolhe, pergunta, responde. Uma objeção de cada vez, preço por último.
+Exemplo: **Etapa 1 — Abertura.** Começa com algo que o lead escreveu no pré-diagnóstico, e já avisa que, no final, você mostra o próximo passo. Quem é avisado relaxa. Quem é pego de surpresa se defende. **Etapa 2 — Diagnóstico.** As áreas são as fases do seu método. Em cada uma, as perguntas seguem uma ordem: Situação — como está hoje; Problema — o que mais incomoda; Implicação — *"se nada mudar, como você vai estar daqui a 1 ano?"*; e você fecha entregando um insight que a pessoa já pode usar, comprando ou não. Anote as palavras exatas do lead — elas voltam na oferta como espelho. **Etapa 3 — Ponte.** O agente te pergunta qual caminho combina com você: a sua história, ou o Bloco de Sonhos, em que o lead visualiza o futuro já resolvido. **Etapa 4 — Oferta.** Você pede licença antes — *"posso te mostrar como funciona o meu trabalho?"* — e aí vem a narrativa ECROI com as fases do seu método, os detalhes concretos, e a âncora de valor antes do preço. Preço → para. O silêncio não precisa ser preenchido. **Etapa 5 — Fechamento.** *"Faz sentido pra você?"* E as respostas às objeções do seu nicho, sempre em 3 passos: acolhe, pergunta, responde. Uma objeção de cada vez, preço por último.
 
-Aplicação: se ela disse sim, o pagamento se resolve ainda na chamada — "depois eu resolvo" é onde a venda esfria. Se não fechou, você nunca termina a sessão sem data e horário do próximo contato combinados.
+Aplicação: se o lead disse sim, o pagamento se resolve ainda na chamada — "depois eu resolvo" é onde a venda esfria. Se não fechou, você nunca termina a sessão sem data e horário do próximo contato combinados.
 
 **Ponto 3 — Três posturas pra rodar bem.**
 
 Ideia: o agente monta o roteiro, mas quem vai falar é você.
 
-Exemplo: **Primeira: leve os documentos prontos.** Quanto mais claro o método, mais preciso o roteiro. **Segunda: se alguma fala não soar você, diga.** O agente ajusta. O roteiro precisa parecer você falando — não um script. **Terceira: não pule o diagnóstico**, nem quando ela "já souber o que você vende". Sem diagnóstico, a oferta vira pitch.
+Exemplo: **Primeira: leve os documentos prontos.** Quanto mais claro o método, mais preciso o roteiro. **Segunda: se alguma fala não soar você, diga.** O agente ajusta. O roteiro precisa parecer você falando — não um script. **Terceira: não pule o diagnóstico**, nem quando o lead "já souber o que você vende". Sem diagnóstico, a oferta vira pitch.
 
-Aplicação: e uma coisa que vale pra sessão inteira — não seja ansiosa. Se ela percebe que você quer vender mais do que ela quer comprar, ela trava.
+Aplicação: e uma coisa que vale pra sessão inteira — não entre com ansiedade. Quando você quer vender mais do que o outro quer comprar, a conversa trava.
 
 **Ponto 4 — O que sai (output) + o agente depois do roteiro.**
 
 Ideia: no final, você tem o roteiro completo das 5 etapas, com as falas prontas pra ajustar.
 
-Exemplo: e o agente não some depois do roteiro. No dia da sessão, se você travar numa objeção, pergunta pra ele: *"ela disse X, o que eu respondo?"*. Depois da sessão, conta o que aconteceu — ele te ajuda a revisar e a montar o follow-up.
+Exemplo: e o agente não some depois do roteiro. No dia da sessão, se você travar numa objeção, pergunta pra ele: *"o lead disse X, o que eu respondo?"*. Depois da sessão, conta o que aconteceu — ele te ajuda a revisar e a montar o follow-up.
 
 Aplicação: salve o roteiro no arquivo **Roteiro da Sessão 1 a 1** no Drive e deixe aberto durante a chamada. E grave todas as sessões, com permissão — é revisão pra você e matéria-prima dos cortes de autoridade no M4.
 
@@ -1210,20 +1261,89 @@ Onde: **Agente Vendedor Secreto** no seu painel de agentes + P1, P2, P3 e P4 no 
 
 Roteiro pronto. Na sua voz, com o seu método.
 
-Na próxima aula, a gente entra no que acontece depois da chamada — seja ela um "sim", um "não", ou um "vou pensar". O pós-sessão, o follow-up, e como transformar a primeira conversa em prova para o M4.
+Na próxima aula, a gente entra na chamada em si: como conduzir a sessão ao vivo — ler o perfil de quem está na sua frente e ajustar cada etapa do roteiro.
 
 ---
 
-## AULA 11 — PÓS-SESSÃO: O FOLLOW-UP E O DEPOIMENTO
+## AULA 11 — CONDUZINDO A SESSÃO AO VIVO
+*Estimativa: 10–12 minutos*
+
+---
+
+Roteiro pronto. Sessão marcada. Pré-diagnóstico respondido.
+
+Falta a parte que nenhum documento resolve: a hora em que a câmera liga.
+
+O roteiro diz o que falar. Esta aula é sobre como conduzir — e a condução muda conforme a pessoa do outro lado.
+
+---
+
+O tema de hoje é conduzir a sessão ao vivo — o preparo, a leitura do perfil em tempo real e o ajuste de cada etapa do roteiro pra quem está na sua frente.
+
+Isso importa agora porque o mesmo roteiro, conduzido do mesmo jeito pra todo mundo, abre uma pessoa e fecha outra. Roteiro é o que você fala. Condução é como você fala — pra quem está na sua frente.
+
+---
+
+**Ponto 1 — Os 10 minutos antes.**
+
+Ideia: a sessão começa antes da chamada. Dez minutos de preparo mudam o tom da conversa inteira.
+
+Exemplo: releia o pré-diagnóstico e separe as palavras exatas do lead — elas abrem a sessão e voltam na oferta. Abra o Rastreador e confira o perfil que você anotou antes da abordagem: conector, analista ou diretivo. Isso é hipótese, não certeza. A sessão confirma.
+
+Aplicação: deixe aberto o **Roteiro da Sessão 1 a 1** e um lugar pra anotar. Nos primeiros minutos da chamada, peça permissão pra gravar e combine o tempo da conversa.
+
+**Ponto 2 — As duas lentes: o que você vê e o que você ouve.**
+
+Ideia: online, você leu o que a pessoa escolheu mostrar — a bio, os posts, a linguagem. Ao vivo aparece o que não dá pra controlar tão bem: postura, expressão, ritmo, tom de voz.
+
+Exemplo: durante a chamada você usa duas lentes. **A primeira é o que você vê:** a postura, os gestos, a expressão, o quanto a pessoa se aproxima ou se afasta da câmera. **A segunda é o que você ouve:** o ritmo da fala, o tom, e as palavras escolhidas.
+
+Aplicação: nos primeiros 5 minutos, você confirma ou corrige a leitura do Rastreador. Se mudou, ajusta a condução ali mesmo — e corrige a coluna Perfil depois da chamada. Um sinal sozinho não define ninguém. O que vale é o conjunto.
+
+**Ponto 3 — Conduzindo cada perfil.**
+
+Ideia: cada perfil decide de um jeito. A sua condução acompanha.
+
+Exemplo: **Perfil conector.** O que você vê: sorri fácil, gesticula, tem a expressão viva. O que você ouve: fala solta, cheia de histórias, puxa assunto pessoal antes do negócio. Como conduzir: não corte o papo do começo — é ali que a confiança nasce. Na ponte, a sua história funciona muito bem. Na oferta, fale do impacto nas pessoas que esse lead atende. O que trava: pular direto pros números, ou ficar frio e técnico.
+
+**Perfil analista.** O que você vê: reservado, poucos gestos, anota, observa antes de falar. O que você ouve: fala pouco e com precisão, faz pausas, pergunta detalhe, pede exemplo. Como conduzir: perguntas específicas no diagnóstico, e espaço pro silêncio. Na oferta, mostre a lógica — fase por fase do seu método, com exemplos concretos. No fechamento, ofereça tempo pra analisar, com data marcada pro retorno. O que trava: entusiasmo sem substância — *"confia, vai dar certo"* — ou pressão pra decidir na hora.
+
+**Perfil diretivo.** O que você vê: postura firme, olhar direto, pouca paciência com rodeio. O que você ouve: frases curtas, tom firme, interrompe pra chegar ao ponto, pergunta cedo *"como funciona?"* ou *"quanto é?"*. Como conduzir: abertura curta, diagnóstico objetivo, oferta começando pelo resultado. Mostre o caminho e deixe a decisão com o lead. O que trava: explicação longa, ou você tentando convencer por que o lead precisa disso.
+
+Aplicação: o erro mais comum é vender pro outro do jeito que você gostaria de comprar. Quem tem perfil conector tende a encher o analista de história. Quem tem perfil analista tende a encher o conector de dados. Conduza pelo perfil de quem está do outro lado, não pelo seu.
+
+**Ponto 4 — Quando a sessão sai do roteiro.**
+
+Ideia: toda sessão sai do roteiro em algum momento. O que importa é saber voltar.
+
+Exemplo: **o lead pergunta o preço cedo** — *"já chego nisso; antes, quero entender se faz sentido pra você"*. Diagnóstico antes da oferta, sempre. **Fala demais e a conversa escapa** — recapitule o que ouviu, com as palavras do lead, e volte pra próxima pergunta. **Não se abre** — perguntas menores e mais concretas, e você fala menos. Silêncio dá espaço. **Pede desconto** — quase nunca é sobre dinheiro. É objeção disfarçada. Acolha e pergunte: *"o que está pesando mais pra você: o valor em si ou alguma outra coisa?"*. Se for outra coisa, a resposta mostra o que faltou. No perfil conector, costuma faltar se sentir acolhido — volte às palavras dele no diagnóstico e mostre como é o acompanhamento, onde você está junto. No perfil analista, costuma faltar enxergar o retorno — refaça a conta com os números dele: o que cada fase entrega, e quanto custa continuar como está. E dê tempo pra analisar, com data de retorno marcada. No perfil diretivo, costuma faltar sentir que ele decide — apresente as condições que já existem na sua oferta: à vista com desconto, parcelado, data de início. *"Tenho duas formas: à vista, com desconto, ou parcelado. Qual funciona melhor pra você?"* Ele escolhe, continua no controle — e a oferta não muda.
+
+Aplicação: se a resposta for o valor, confirme antes de concluir: *"se o valor não fosse uma questão, você entraria?"*. Se a pessoa disser que sim, apresente as condições de pagamento da oferta. Se mesmo assim não couber, aí não é objeção — é fit. *"Entendo. Talvez não seja o momento."* Vai pro Rastreador como Lead frio, com data pra retomar. Baixar o preço na hora desvaloriza a oferta que você acabou de validar. Condição de pagamento é regra da oferta, vale pra todo mundo. Desconto negociado é preço que cedeu.
+
+---
+
+Onde: antes de cada chamada — pré-diagnóstico, Rastreador (coluna Perfil) e **Roteiro da Sessão 1 a 1** abertos. Quando: depois de cada sessão, corrija o Perfil no Rastreador se a leitura mudou.
+
+---
+
+A chamada terminou.
+
+O que você faz a partir daqui decide se essa conversa vira venda, prova — ou só uma boa conversa.
+
+Na próxima aula: o pós-sessão. O "sim", o "não" e o "vou pensar".
+
+---
+
+## AULA 12 — PÓS-SESSÃO: O FOLLOW-UP E O DEPOIMENTO
 *Estimativa: 10–12 minutos*
 
 ---
 
 A chamada fechou.
 
-Você passou 30 a 40 minutos com ela. Diagnosticou. Contou sua história. Construiu a lógica. Apresentou a oferta. Convidou.
+Você passou 30 a 40 minutos com o lead. Diagnosticou. Contou sua história. Construiu a lógica. Apresentou a oferta. Convidou.
 
-E existe um resultado. Ela disse sim — ou disse não.
+E existe um resultado. O lead disse sim — ou disse não.
 
 Mas antes de entrar em cada caminho, uma coisa que vale para os dois: **a sessão não termina quando a chamada fecha.** O que você faz nas próximas horas — e nos próximos dias — determina se essa conversa fica só nessa conversa, ou alimenta todas as que vêm depois.
 
@@ -1235,31 +1355,31 @@ Isso importa agora porque é aqui que as primeiras sessões se transformam em at
 
 ---
 
-**Ponto 1 — Ela disse sim: próximos passos + o depoimento.**
+**Ponto 1 — O lead disse sim: próximos passos + o depoimento.**
 
-Ideia: quando ela diz sim, não encerre a chamada sem o próximo passo concreto. Não "ótimo, te mando os detalhes depois." Antes do tchau: três pontos fechados ainda na chamada.
+Ideia: quando o lead diz sim, não encerre a chamada sem o próximo passo concreto. Não "ótimo, te mando os detalhes depois." Antes do tchau: três pontos fechados ainda na chamada.
 
-Exemplo: **Forma de pagamento** (como e quando). **Próxima data** (quando começa o trabalho juntas). **Canal** (onde vão se comunicar). Por quê: entre o sim e o pagamento existe uma janela — o entusiasmo esfria, a rotina volta, a decisão vacila. Você fecha essa janela confirmando os próximos passos enquanto a pessoa ainda está com você e ainda está no estado emocional certo. Atualiza o Rastreador: status → cliente, data, valor, próximo passo. Sobre o depoimento: não vem no dia seguinte ao sim. Vem depois do resultado. Mas existe algo que você pede agora — nas primeiras horas depois do sim. Não o depoimento. A permissão para documentar: *"Posso te pedir uma coisa? Conforme a gente for trabalhando juntas, quero documentar o que você está construindo. No final, se você sentir que o processo valeu, adoraria ter o depoimento com as suas palavras. Topa?"* A maioria diz sim — e já fica mentalmente preparada para dar o depoimento quando chegar a hora. Quando pedir de verdade: no encerramento do trabalho, ou quando ela mencionar resultado espontaneamente. Três perguntas que produzem o depoimento certo: *"Antes de começar, como estava a sua situação?"* / *"O que mudou?"* / *"Para quem você indicaria?"* Depoimento genérico não funciona — precisa descrever a transformação nas palavras dela.
+Exemplo: **Forma de pagamento** (como e quando). **Próxima data** (quando começa o trabalho). **Canal** (onde vão se comunicar). Por quê: entre o sim e o pagamento existe uma janela — o entusiasmo esfria, a rotina volta, a decisão vacila. Você fecha essa janela confirmando os próximos passos enquanto a pessoa ainda está com você e ainda está no estado emocional certo. Atualiza o Rastreador: status → cliente, data, valor, próximo passo. Sobre o depoimento: não vem no dia seguinte ao sim. Vem depois do resultado. Mas existe algo que você pede agora — nas primeiras horas depois do sim. Não o depoimento. A permissão para documentar: *"Posso te pedir uma coisa? Conforme a gente for trabalhando, quero documentar o que você está construindo. No final, se você sentir que o processo valeu, adoraria ter o depoimento com as suas palavras. Topa?"* A maioria diz sim — e já se prepara mentalmente para dar o depoimento quando chegar a hora. Quando pedir de verdade: no encerramento do trabalho, ou quando o cliente mencionar resultado espontaneamente. Três perguntas que produzem o depoimento certo: *"Antes de começar, como estava a sua situação?"* / *"O que mudou?"* / *"Para quem você indicaria?"* Depoimento genérico não funciona — precisa descrever a transformação nas palavras do cliente.
 
 Aplicação: o depoimento que vai facilitar todas as vendas futuras — o mais genuíno, o mais específico, com as palavras da sua persona — nasce de uma relação real, não de um lançamento em massa.
 
-**Ponto 2 — Ela foi pensar: a cadência de 5 toques.**
+**Ponto 2 — O lead foi pensar: a cadência de 5 toques.**
 
-Ideia: existe um terceiro resultado que ninguém fala — e que é o mais comum nas primeiras sessões. Ela não disse sim. Não disse não. Disse que vai pensar. Para mentoria de ticket alto, a decisão não acontece em 24 horas. Você precisa de presença — não pressão.
+Ideia: existe um terceiro resultado que ninguém fala — e que é o mais comum nas primeiras sessões. O lead não disse sim. Não disse não. Disse que vai pensar. Para mentoria de ticket alto, a decisão não acontece em 24 horas. Você precisa de presença — não pressão.
 
-Exemplo: 5 toques, cada um com função diferente. **Toque 1 (24–48h)** — personalizado, referência a algo específico que ela disse na conversa, sem pergunta de fechamento: *"[Nome], fiquei pensando no que você falou sobre [algo real]. Isso me fez lembrar de [conexão]. Só queria trazer isso."* Presença, não cobrança. **Toque 2 (4–5 dias)** — valor puro: algo útil relacionado ao problema dela, sem mencionar a oferta. Quem entrega valor antes do sim é lembrada diferente. **Toque 3 (8–10 dias)** — pergunta aberta: *"Você ficou com alguma dúvida? Às vezes o que trava não é a decisão — é uma dúvida que ficou sem resposta."* **Toque 4 (12–14 dias)** — custo do status quo: *"Enquanto você pensa, o que essa situação está custando — em tempo, em oportunidade, em desgaste?"* **Toque 5 (18–21 dias)** — encerramento gracioso: *"Não quero ficar aparecendo no seu WhatsApp sem necessidade. Se o momento certo chegar, estou aqui. Cuida bem."*
+Exemplo: 5 toques, cada um com função diferente. **Toque 1 (24–48h)** — personalizado, referência a algo específico que o lead disse na conversa, sem pergunta de fechamento: *"[Nome], fiquei pensando no que você falou sobre [algo real]. Isso me fez lembrar de [conexão]. Só queria trazer isso."* Presença, não cobrança. **Toque 2 (4–5 dias)** — valor puro: algo útil relacionado ao problema do lead, sem mencionar a oferta. Valor entregue antes do sim fica na memória de outro jeito. **Toque 3 (8–10 dias)** — pergunta aberta: *"Você ficou com alguma dúvida? Às vezes o que trava não é a decisão — é uma dúvida que ficou sem resposta."* **Toque 4 (12–14 dias)** — custo do status quo: *"Enquanto você pensa, o que essa situação está custando — em tempo, em oportunidade, em desgaste?"* **Toque 5 (18–21 dias)** — encerramento gracioso: *"Não quero ficar aparecendo no seu WhatsApp sem necessidade. Se o momento certo chegar, estou aqui. Cuida bem."*
 
-Aplicação: vai pro Rastreador: lead fria — razão, data. Quando você aparecer no M4 com o primeiro depoimento publicado, com prova real — essa pessoa vai ver. Algumas vão voltar. Não porque você insistiu. Porque a prova eliminou a objeção que ela tinha.
+Aplicação: vai pro Rastreador: lead frio — razão, data. Quando você aparecer no M4 com o primeiro depoimento publicado, com prova real — essa pessoa vai ver. Algumas vão voltar. Não porque você insistiu. Porque a prova eliminou a objeção que existia.
 
-**Ponto 3 — Ela disse não + documentar independente do resultado + o que vira no M4.**
+**Ponto 3 — O lead disse não + documentar independente do resultado + o que vira no M4.**
 
-Ideia: ela não comprou. E foi clara nisso. Primeira coisa — e precisa estar no corpo, não só na cabeça: **isso não é veredicto.** Campo produz resultados variados. Um não não fala sobre o seu método. Fala sobre essa pessoa, nesse momento específico.
+Ideia: o lead não comprou. E deixou isso claro. Primeira coisa — e precisa estar no corpo, não só na cabeça: **isso não é veredicto.** Campo produz resultados variados. Um não não fala sobre o seu método. Fala sobre essa pessoa, nesse momento específico.
 
-Exemplo: encerrar com generosidade: *"Tudo bem. Entendo que o momento precisa estar certo dos dois lados. Se em algum ponto você quiser retomar, estou aqui."* Curto. Limpo. Sem porta batida. Vai pro Rastreador: lead fria — razão, data. Não é descarte — é pausa. Independente do resultado (sim, não, vai pensar): antes de dormir nesse dia, três perguntas — uma linha cada. **O que funcionou?** (qual parte do roteiro gerou abertura?) **O que travou?** (onde a conversa perdeu ritmo?) **O que você diria diferente?** (um ajuste — não dez). Guardar e ler antes da próxima conversa. Sem esse registro, cada sessão começa do mesmo ponto. Com ele, cada sessão começa mais avançada.
+Exemplo: encerrar com generosidade: *"Tudo bem. Entendo que o momento precisa estar certo dos dois lados. Se em algum ponto você quiser retomar, estou aqui."* Curto. Limpo. Sem porta batida. Vai pro Rastreador: lead frio — razão, data. Não é descarte — é pausa. Independente do resultado (sim, não, vai pensar): antes de dormir nesse dia, três perguntas — uma linha cada. **O que funcionou?** (qual parte do roteiro gerou abertura?) **O que travou?** (onde a conversa perdeu ritmo?) **O que você diria diferente?** (um ajuste — não dez). Guardar e ler antes da próxima conversa. Sem esse registro, cada sessão começa do mesmo ponto. Com ele, cada sessão começa mais avançada.
 
 E se você quiser um segundo olhar: me manda a gravação. Eu assisto a sua sessão e te mostro exatamente onde ajustar — narrativa, preço, entregáveis, objeções, oferta. É a análise do seu lançamento pra uma pessoa só. O link pra falar com o suporte está na descrição desta aula.
 
-Aplicação: tudo que você coletou no M3 vai para o M4 com você. **O depoimento** — prova com as palavras da sua aluna: o ativo mais valioso quando aparecer publicamente. **O pitch que funcionou** — não o planejado, o que você usou na prática. Calibra a comunicação no M4. **As objeções reais** — cada objeção ouvida numa sessão existe no mercado. No M4 você cria conteúdo que responde essas objeções antes da conversa acontecer. Quando você entrar no M4, não vai construir o posicionamento do zero. Vai construir a partir do que as conversas de verdade revelaram. É por isso que as sessões do M3 não são só vendas. São pesquisa de mercado que você recebeu para fazer.
+Aplicação: tudo que você coletou no M3 vai para o M4 com você. **O depoimento** — prova com as palavras de quem comprou: o ativo mais valioso quando aparecer publicamente. **O pitch que funcionou** — não o planejado, o que você usou na prática. Calibra a comunicação no M4. **As objeções reais** — cada objeção ouvida numa sessão existe no mercado. No M4 você cria conteúdo que responde essas objeções antes da conversa acontecer. Quando você entrar no M4, não vai construir o posicionamento do zero. Vai construir a partir do que as conversas de verdade revelaram. É por isso que as sessões do M3 não são só vendas. São pesquisa de mercado que você recebeu para fazer.
 
 ---
 
@@ -1308,7 +1428,7 @@ Aplicação: o que importa é: você esteve em campo. Você testou. Cada sessão
 
 Ideia: olha rápido pra trás.
 
-Exemplo: **P4 — Proposta Validada:** uma oferta com nome, formato, promessa e preço definidos, pronta para ser apresentada sem gaguejar. **Rastreador de Leads Quentes:** não uma lista qualquer, mas um mapa de quem tem mais propensão de comprar de você agora, organizado por grupo, prioridade e perfil. **Abordagem calibrada:** social selling e leitura de perfil fazendo cada conversa soar natural, não roteirizada. **Roteiro completo da sessão de vendas:** estrutura testada com narrativa ECROI guiando a apresentação da oferta como resposta, não como pitch. **Pós-sessão:** como conduzir o follow-up, transformar "sim" em compromisso e depoimento, e "vou pensar" numa sequência que respeita o tempo de decisão.
+Exemplo: **P4 — Proposta Validada:** uma oferta com nome, formato, promessa e preço definidos, pronta para ser apresentada sem gaguejar. **Rastreador de Leads Quentes:** não uma lista qualquer, mas um mapa de quem tem mais propensão de comprar de você agora, organizado por grupo, prioridade e perfil. **Abordagem calibrada:** social selling e leitura de perfil fazendo cada conversa soar natural, não roteirizada. **Roteiro completo da sessão de vendas:** estrutura testada com narrativa ECROI guiando a apresentação da oferta como resposta, não como pitch. **Condução ao vivo:** ler o perfil de quem está na sua frente e ajustar cada etapa do roteiro em tempo real. **Pós-sessão:** como conduzir o follow-up, transformar "sim" em compromisso e depoimento, e "vou pensar" numa sequência que respeita o tempo de decisão.
 
 Aplicação: isso não é um módulo de teoria. É o módulo onde você aprendeu — na prática — a vender o que construiu.
 
@@ -1330,6 +1450,6 @@ Você foi a campo. Testou sua oferta com gente de verdade. E saiu desse módulo 
 
 Agora é hora de pegar tudo isso — as conversas, os "sins", os "vou pensar", as gravações — e transformar em prova que abre portas.
 
-Antes de ir — se em algum momento desse módulo você ficou presa num ponto específico e seguiu em frente sem resolver, tem um jeito de destravar. A Mentoria Express é uma hora comigo focada exatamente no que está travando. Sem pauta ampla, sem volta ao zero — uma hora, um ponto, uma saída. O link pra entrar em contato com o suporte está na descrição dessa aula.
+Antes de ir — se em algum momento desse módulo você travou num ponto específico e seguiu em frente sem resolver, tem um jeito de destravar. A Mentoria Express é uma hora comigo focada exatamente no que está travando. Sem pauta ampla, sem volta ao zero — uma hora, um ponto, uma saída. O link pra entrar em contato com o suporte está na descrição dessa aula.
 
 Vejo você no Módulo 4.

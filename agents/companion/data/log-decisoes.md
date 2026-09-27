@@ -527,3 +527,23 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisao:** Bloco "DADOS PARA CONTRATO" (nome completo, RG, CPF, endereco, CEP) no FIM dos diagnosticos pos-venda: Sprint, Metodo VIP, DNA do Expert, Kit de Ferramentas e Agente de IA.
 **Impacto:** Execucao com o Gestor de Infra (em andamento 25/09).
 
+## 26/09/2026 — Expert360º sem feminino: linguagem neutra em todo material do curso
+
+**Contexto:** Materiais, planilhas e roteiros do M3 usavam feminino ("ela", "a lead", "Conectora", "Fui prospectada"), mas ~40% dos alunos são homens.
+**Decisao:** Nada no feminino em lugar nenhum do curso — linguagem neutra; masculino genérico só quando não houver forma neutra (ex.: perfis Conector/Analista/Diretivo, concordando com "perfil"). Aulas já gravadas (Intro–A8 do M3) não são reescritas.
+**Racional:** Público misto; feminino exclui parte dos alunos.
+**Impacto:** Roteiro M3 da A9 em diante, Rastreador de Leads Qualificados (todas as cópias), guia M3.5, agente Vendedor Secreto v2.1.0.
+
+## 26/09/2026 — Pedido de desconto: condição de pagamento é regra da oferta, desconto negociado não entra
+
+**Contexto:** Nova A11 do M3 ensina como responder quando o lead pede desconto na sessão.
+**Decisao:** Pergunta separadora ("o que está pesando mais: o valor em si ou alguma outra coisa?") → resposta por perfil → se for o valor, confirmar ("se o valor não fosse uma questão, você entraria?"). Desconto à vista continua como condição de pagamento (normal em high ticket); o que não entra é reduzir o preço porque a pessoa pediu.
+**Racional:** Desconto negociado desvaloriza a oferta validada; condição de pagamento vale pra todo mundo.
+**Impacto:** M3 A11 e KB do Vendedor Secreto (seção 8.1).
+
+## 26/09/2026 — Expert360º está só na área de membros própria (não na Voomp)
+
+**Contexto:** Checklist e PRD ainda citavam Voomp como plataforma do curso.
+**Decisao:** Correção da Karol — o curso está só em membros.incubadoradeexpert.com.br, publicado via course-publisher. Menções à Voomp são histórico.
+**Impacto:** Checklist de produção (P4 e V04–V06) corrigido; tarefas de plataforma do curso ficam com o course-publisher.
+

@@ -79,7 +79,7 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 
 **Ferramentas:**
 - [ ] Biblioteca de templates (8–10 modelos: Canva/Notion/Google Sheets) — entregue na aula 7 do M2, usada para transformar ideias do portfólio em produtos reais
-- [x] Meu Rastreador de Leads (mini-CRM, Google Sheets) — M3, Aula 5
+- [x] Rastreador de Leads Qualificados (mini-CRM, Google Sheets) — M3, Aula 5
 - [x] Plano de Conteúdo 30 dias — entregue como grade semanal repetível em Minha Linha Editorial (M4, Aula 5)
 
 **Agentes planejados (a criar via Worker Forge):**
@@ -154,7 +154,7 @@ Pré-marketing. O único curso que resolve o que vem ANTES do lançamento. Os co
 - Agente constrói com a aluna — não valida nem confere
 - Exemplo: "Antes de começar este módulo, confirme que você tem X, Y e Z do módulo anterior"
 
-### Meu Rastreador de Leads (mini-CRM)
+### Rastreador de Leads Qualificados (mini-CRM)
 
 **Formato de entrega:** template em Google Sheets (não Docs) + aula (M3, Aula 5, sem agente) — permite filtrar, ordenar e gerar gráfico
 **Modelo:** inspirado no Rastreador de Sucesso da doTERRA (pipeline com prospectos priorizados), adaptado — sem os estágios específicos de MLM

@@ -12,7 +12,7 @@
 | C03 | Gravar M0 — 5 aulas | ✅ Gravado e editado |
 | C04 | Gravar M1 — 8 aulas | ✅ Gravado e editado |
 | C05 | Gravar M2 — 9 aulas | Pendente |
-| C06 | Gravar M3 — 12 aulas | Pendente |
+| C06 | Gravar M3 — 14 aulas (Intro + A1–A12 + Encerramento). Intro–A8 já gravadas; faltam A9–A12 + Encerramento | Pendente — A9 em diante |
 | C07 | Gravar M4 — 10 aulas | Pendente |
 
 ---
@@ -37,9 +37,9 @@
 
 ---
 
-## P4 — PLATAFORMA (Voomp)
+## P4 — PLATAFORMA (Área de Membros — membros.incubadoradeexpert.com.br)
 
-**Nota:** troca de plataforma — Hotmart bloqueou, curso migrado pra Voomp Play. Existe um agente dedicado, `course-publisher`, que já cuida da estrutura na Voomp (`agents/course-publisher/`) — os itens abaixo refletem o que ele já fez, não é trabalho do course-creator.
+**Correção (26/09/2026, Karol):** o curso NÃO está na Voomp — está só na área de membros personalizada da Karol (membros.incubadoradeexpert.com.br), publicada via `course-publisher`. Itens H abaixo que citam Voomp são histórico. **Nota anterior:** troca de plataforma — Hotmart bloqueou, curso migrado pra Voomp Play. Existe um agente dedicado, `course-publisher`, que já cuida da estrutura na Voomp (`agents/course-publisher/`) — os itens abaixo refletem o que ele já fez, não é trabalho do course-creator.
 
 | # | Item | Status |
 |---|---|---|
@@ -71,11 +71,12 @@
 | D02 | Atualizar PRD: corrigir módulos (sem Transição, com Módulo de Orientações) | ✅ Concluído (01/07/2026) |
 | D03 | Atualizar PRD: Agente do Portfólio Estratégico → M2 Aula 7 | ✅ Concluído (01/07/2026) |
 | V01 | Rework M3 (22/09/2026): antiga A9 dividida em A9 "O Funil das Vendas Secretas" (3 telas + CTA de ferramentas) + A10 "Exercício: Montando seu Roteiro com o Agente Vendedor Secreto"; pós-sessão vira A11 — roteiros aprovados, M3.4 atualizado, Drive espelhado | ✅ Concluído (22/09/2026) |
-| V02 | Criar versão do Agente Vendedor Secreto pra aluna (7º agente — GPT via /gpt-publisher). Sem citar nomes dos experts de origem, sem vocabulário interno. A A10 do M3 depende do link | ⬜ Pendente — bloqueia a A10 |
+| V02 | Criar versão do Agente Vendedor Secreto pra aluna (7º agente — GPT via /gpt-publisher). Sem citar nomes dos experts de origem, sem vocabulário interno. Base: Vendedor Secreto v2.1.0 (26/09 — já alinhado com A11: leitura ao vivo, condução por perfil, pedido de desconto). A A10 do M3 depende do link | ⬜ Pendente — bloqueia a A10 |
 | V03 | Adicionar link do Agente Vendedor Secreto na Biblioteca de IAs (template + cópias das alunas) | ⬜ Pendente — depende de V02 |
-| V04 | Voomp (/course-publisher): M3 passa de 12 pra 13 aulas — criar slot da nova A10 e renumerar pós-sessão pra A11 | ⬜ Pendente |
-| V05 | Descrição da A9 do M3 na Voomp: incluir link do suporte (CTA do funil de vendas secretas completo feito pela Karol: página, pré-diagnóstico, radar e roteiro personalizado) | ⬜ Pendente |
-| V06 | Descrição da A11 do M3 (pós-sessão) na Voomp: incluir link do suporte (CTA análise da sessão gravada) — oferta = Mentoria Express (1h, R$300), definida pela Karol em 22/09/2026 | ⬜ Pendente (só o link na descrição) |
+| V04 | Área de Membros (/course-publisher): M3 passa pra 14 aulas — A9 e A10 já no ar (25/09); falta criar da nova A10 (exercício Vendedor Secreto) e da nova A11 (Conduzindo a Sessão ao Vivo), e renumerar pós-sessão pra A12 | ⬜ Pendente |
+| V05 | Descrição da A9 do M3 na Área de Membros: incluir link do suporte (CTA do funil de vendas secretas completo feito pela Karol: página, pré-diagnóstico, radar e roteiro personalizado) | ⬜ Pendente |
+| V06 | Descrição da A12 do M3 (pós-sessão) na Área de Membros: incluir link do suporte (CTA análise da sessão gravada) — oferta = Mentoria Express (1h, R$300), definida pela Karol em 22/09/2026 | ⬜ Pendente (só o link na descrição) |
+| V07 | Rework M3 (26/09/2026): nova A11 "Conduzindo a Sessão ao Vivo" (preparo, lentes ver/ouvir, condução dos 3 perfis, quando a sessão sai do roteiro); pós-sessão vira A12; linguagem neutra da A9 em diante + Rastreador (5 cópias) e guia M3.5 | ✅ Concluído (26/09/2026) — QG-CC-006 PASS; Drive espelhado (m3-roteiros.md); Rastreador renomeado pra "Rastreador de Leads Qualificados" (nome dado pela Karol no Drive) com aba "Como usar" reescrita, espelhado em repo, template e cópias das alunas |
 
 ---
 
