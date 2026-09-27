@@ -5,7 +5,7 @@
 // ============================================
 
 // Roteiro do Expert360º — nomes de módulo REAIS (course-publisher-kb.md). Orientações + M0-M2 têm
-// título+youtube_id reais (fonte: agents/course-publisher/data/config.yaml). M3 parcial (3/13, 26/08).
+// título+youtube_id reais (fonte: agents/course-publisher/data/config.yaml). M3 parcial (6/14, 26/09).
 // M4 ainda placeholder — vídeo não gravado.
 const ROTEIRO_EXPERT360 = {
   id: 'expert360',
@@ -58,21 +58,22 @@ const ROTEIRO_EXPERT360 = {
       ]
     },
     {
-      // Currículo real via course-publisher config.yaml — 3/13 aulas com vídeo (26/08), resto aguarda gravação
+      // Currículo real via course-publisher config.yaml — 6/14 aulas com vídeo (A0-A5, 26/09), resto aguarda gravação
       id: 'm3', numero: 'M3', titulo: 'Vendas Secretas', subtitulo: '3 vendas reais antes de aparecer',
       aulas: [
         { titulo: 'Boas-vindas ao M3', concluida: false, youtube_id: 'jWJvBgpiHms' },
         { titulo: 'A1 — Identidade de Vendas antes da Técnica', concluida: false, youtube_id: 'RralsyVgAtA' },
         { titulo: 'A2 — Feito é Melhor que Perfeito', concluida: false, youtube_id: 'G27FO-emYaY' },
-        { titulo: 'A3 — O que Você Está Vendendo', concluida: false },
-        { titulo: 'A4 — Exercício: Agente da Proposta Validada', concluida: false },
-        { titulo: 'A5 — Rastreador de Leads Quentes', concluida: false },
+        { titulo: 'A3 — O que Você Está Vendendo', concluida: false, youtube_id: 't8XhopGMhfM' },
+        { titulo: 'A4 — Exercício: Agente da Proposta Validada', concluida: false, youtube_id: 'HX1lbWENB_A' },
+        { titulo: 'A5 — Rastreador de Leads Qualificados', concluida: false, youtube_id: 'tG27mqfuZIo' },
         { titulo: 'A6 — Social Selling', concluida: false },
         { titulo: 'A7 — Lendo seu Lead', concluida: false },
         { titulo: 'A8 — Script de Abordagem e Cadência Pré-Sessão', concluida: false },
         { titulo: 'A9 — O Funil das Vendas Secretas', concluida: false },
         { titulo: 'A10 — Exercício: Agente Vendedor Secreto', concluida: false },
-        { titulo: 'A11 — Pós-Sessão: Follow-up e Depoimento', concluida: false },
+        { titulo: 'A11 — Conduzindo a Sessão ao Vivo', concluida: false },
+        { titulo: 'A12 — Pós-Sessão: Follow-up e Depoimento', concluida: false },
         { titulo: 'Quem Você se Tornou no M3', concluida: false }
       ]
     },

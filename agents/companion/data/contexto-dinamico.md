@@ -21,7 +21,9 @@ Variaveis:
 
 **Expert360º (Curso)** — Em producao e publicacao na Area de Membros
 - M0-M4 estruturados e roteirizados; 6 de 6 agentes existentes
-- Orientacoes 2/2 e M3 3/13 publicados na Area de Membros
+- Orientacoes 2/2 publicadas; M3 passou a 14 aulas (nova A11 "Conduzindo a Sessao ao Vivo") — 6/14 com video no ar (A0-A5, 26/09); A6+ em edicao
+- 26/09: descricoes de aula reescritas (M3) e revisadas pra linguagem neutra; Area de Membros agora exibe a descricao de cada aula, com link do suporte (wa.me) nas aulas de CTA
+- Semana 21-26/09: Karol focou em prospeccao diaria (1+/dia) → R$5 mil na semana + 6 aulas do curso gravadas (registrado em historias-trajetoria.md #19)
 - Next action confirmado na weekly de 02/09: fechar uma leva objetiva do M3; quantidade da leva nao definida
 - Tracker: `business/campanhas/expert360-curso/tracker.md`
 - PRD: `business/campanhas/expert360-curso/prd.md`

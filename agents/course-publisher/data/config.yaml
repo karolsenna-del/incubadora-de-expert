@@ -226,22 +226,30 @@ modules:
         # 26/08/2026: gravado/editado, upado como Nao listado (Area de Membros, nao Voomp)
 
       - hotmart_name: "A3 — O que Você Está Vendendo"
-        video: null
+        video: "03-oferta-de-lancamento.mp4"
         descricao_slug: "03-oferta-de-lancamento"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213994"
+        youtube_id: "t8XhopGMhfM"
+        # 26/09/2026: arquivo CapCut "M3- Aula 3 — Por que começa pelo 1x1.mp4" (= roteiro Aula 3);
+        # upado como Nao listado (Area de Membros)
 
       - hotmart_name: "A4 — Exercício: Agente da Proposta Validada"
-        video: null
+        video: "04-agente-proposta-validada.mp4"
         descricao_slug: "04-agente-proposta-validada"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213995"
+        youtube_id: "HX1lbWENB_A"
+        # 26/09/2026: upado como Nao listado (Area de Membros)
 
-      - hotmart_name: "A5 — Rastreador de Leads Quentes"
-        video: null
+      - hotmart_name: "A5 — Rastreador de Leads Qualificados"
+        video: "05-rastreador-de-leads.mp4"
         descricao_slug: "05-rastreador-de-leads"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213996"
+        youtube_id: "tG27mqfuZIo"
+        # 26/09/2026: renomeada "Quentes" → "Qualificados" (nome da ferramenta no Drive, rework V07);
+        # upado como Nao listado (Area de Membros)
 
       - hotmart_name: "A6 — Social Selling"
         video: null
@@ -276,15 +284,22 @@ modules:
         hotmart_lesson_url: ""
         voomp_lesson_id: "214001"
 
-      - hotmart_name: "A11 — Pós-Sessão: Follow-up e Depoimento"
+      - hotmart_name: "A11 — Conduzindo a Sessão ao Vivo"
         video: null
-        descricao_slug: "11-pos-sessao"
+        descricao_slug: "11-conduzindo-sessao-ao-vivo"
+        hotmart_lesson_url: ""
+        # 26/09/2026: aula nova do rework V07 (roteiro M3, 14 aulas); pós-sessão passou a ser A12.
+        # Sem entrada em descricoes.md ainda (Course Creator)
+
+      - hotmart_name: "A12 — Pós-Sessão: Follow-up e Depoimento"
+        video: null
+        descricao_slug: "12-pos-sessao"
         hotmart_lesson_url: ""
         voomp_lesson_id: "214002"
 
       - hotmart_name: "Quem Você se Tornou no M3"
         video: null
-        descricao_slug: "12-quem-voce-se-tornou"
+        descricao_slug: "13-quem-voce-se-tornou"
         hotmart_lesson_url: ""
         voomp_lesson_id: "214003"
 

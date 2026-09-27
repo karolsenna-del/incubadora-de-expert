@@ -725,10 +725,26 @@ function selecionarAula(modulo, idx) {
       </button>
       <button class="btn-modo-foco" id="btn-modo-foco">${modoFoco ? '↩ Sair do modo foco' : '⛶ Modo foco'}</button>
     </div>
+    ${renderDescricaoAula(modulo, aula)}
   `;
 
   document.getElementById('btn-marcar-concluida').addEventListener('click', () => toggleAulaConcluida(modulo, idx));
   document.getElementById('btn-modo-foco').addEventListener('click', toggleModoFoco);
+}
+
+// Descrição da aula (js/descricoes-aulas.js, gerado de descricoes.md). Busca pelo vídeo; sem vídeo, pelo título.
+function renderDescricaoAula(modulo, aula) {
+  if (typeof DESCRICOES_AULAS === 'undefined') return '';
+  const texto = (aula.youtube_id && DESCRICOES_AULAS.porYoutube[aula.youtube_id])
+    || DESCRICOES_AULAS.porTitulo[`${modulo.id}|${aula.titulo}`];
+  if (!texto) return '';
+  const escapar = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const paragrafos = texto.split(/\n\s*\n/).map(p => {
+    const html = escapar(p.trim()).replace(/https?:\/\/[^\s<]+[^\s<.,;:!?)]/g,
+      url => `<a href="${url}" target="_blank" rel="noopener">${url.replace(/^https?:\/\//, '')}</a>`);
+    return `<p>${html}</p>`;
+  }).join('');
+  return `<div class="conteudo-descricao"><span class="conteudo-descricao-label">Sobre esta aula</span>${paragrafos}</div>`;
 }
 
 function toggleModoFoco() {

@@ -115,6 +115,10 @@ body.app-body { background: var(--preto); color: var(--branco); }
 .btn-concluir.feita:hover { background: #26a862; }
 
 .conteudo-acoes { display: flex; gap: 10px; flex-wrap: wrap; }
+.conteudo-descricao { margin-top: 28px; max-width: 760px; font-size: 0.95rem; color: var(--cinza-700); }
+.conteudo-descricao p { margin: 0 0 12px; overflow-wrap: anywhere; }
+.conteudo-descricao a { color: var(--laranja); font-weight: 600; }
+.conteudo-descricao-label { display: block; font-family: var(--display); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--cinza-500); margin-bottom: 8px; }
 .btn-modo-foco { background: none; border: 1px solid var(--preto-3); color: var(--cinza-300); font-family: var(--texto); font-weight: 600; font-size: 0.85rem; padding: 13px 20px; border-radius: 10px; }
 .btn-modo-foco:hover { border-color: var(--laranja); color: var(--branco); }
 

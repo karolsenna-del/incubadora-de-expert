@@ -25,6 +25,7 @@
 12. [SOP-018] Implementar pagina de vendas estatica a partir de copy aprovada (reuso template Karol)
 13. [SOP-019] Trocar CTA de WhatsApp por checkout (Voomp/Hotmart/etc) + icone flutuante de WhatsApp pra duvidas
 14. [SOP-020] Publicar LP estatica na Vercel + subdominio (Registro.br)
+15. [SOP-023] Atualizar descrições de aula na Área de Membros (gerador + deploy)
 
 > **Fora do escopo:** Setup inicial do pipeline (instalar n8n + Chatwoot, criar tabelas Supabase + RPCs, configurar Meta Business Manager, gerar System User Token, importar os workflows core WF-INBOUND/AGENT-CORE/OUTBOUND). Isso e responsabilidade do **agente de setup** — outro agente dedicado. Este squad so opera o pipeline ja instalado.
 
@@ -1137,6 +1138,22 @@ clicar "Enviar para análise" (aguardando confirmação explícita da Karol ante
   sintaxe ESM que não sobrevive à compilação pra CommonJS dessa Vercel
 
 ---
+
+### [SOP-023] Atualizar descrições de aula na Área de Membros
+
+**Quando usar:** mudou texto em `business/producao/expert360/descricoes.md` ou aula/slug/youtube_id em `agents/course-publisher/data/config.yaml`.
+
+**Como funciona:** `js/descricoes-aulas.js` do site é GERADO (não editar à mão). `renderDescricaoAula()` em `js/app.js` busca a descrição pelo `youtube_id` da aula; sem vídeo, pela chave `{moduloId}|{titulo}` (título do `data.js` tem que ser igual ao `hotmart_name` do config). URLs no texto viram link clicável; linha em branco separa parágrafos.
+
+**Passos:**
+1. `python agents/course-publisher/scripts/gerar-descricoes-site.py` — o script avisa se algum slug do config não tem texto em `descricoes.md`
+2. `node --check business/campanhas/area-de-membros/site/js/descricoes-aulas.js`
+3. Deploy: `cd business/campanhas/area-de-membros/site && vercel --prod` (auto mode bloqueia — Karol roda via `!`)
+4. Verificar: `curl -s https://membros.incubadoradeexpert.com.br/js/descricoes-aulas.js | grep <trecho novo>`
+
+**Troubleshooting:**
+- Aula sem descrição no site: título no `data.js` diferente do `hotmart_name` do config e sem `youtube_id` — alinhar título ou subir o vídeo
+- Módulo novo: adicionar em `MODULO_SITE` no script (id do config → id do data.js)
 
 ## Template de SOP
 
