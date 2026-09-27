@@ -166,6 +166,56 @@ RECOMENDAÇÃO: ENTRAR / avaliar
 - **Encaixe:** autoridade máxima vinda de um método com dono. Aspiracional.
 - **Ângulo:** "Reconhecimento mundial não vem de saber muito. Vem de ter um método que resolve — e ser dono dele."
 
+> **Consolidado do Radar diário (rascunhos do Gmail, 17/07 a 26/09/2026).** 71 rascunhos varridos em 26/09;
+> só os itens de ACERVO foram arquivados — as pautas quentes do período já passaram da janela (2-3 dias).
+
+### 2.11 ★ Raquel Mendes — "Lei dos Quatro Dinheiros" (ex-servidora pública) · Radar 01/08
+- **Link:** https://revistapegn.globo.com/conteudo-de-marca/pulse-brand/noticia/2026/07/exservidora-publica-raquel-mendes-lanca-metodo-de-educacao-financeira-1.ghtml
+- **Encaixe:** A Minha História + A Identidade Apagada.
+- **Ângulo:** "Ela também era servidora pública e trocou a estabilidade por um método com nome próprio. Currículo de servidor não vende. Método com nome, sim."
+- **Obs.:** paralelo direto com a trajetória da própria Karol (ex-servidora) — dá post de "A Minha História" comparando as duas, não só react. ⚠️ É "conteúdo de marca" (publieditorial) na PEGN.
+
+### 2.12 ★ Carolina Rocha — liderou vendas na Microsoft, criou método contra burnout · Radar 05/09
+- **Link:** https://exame.com/carreira/ela-liderou-vendas-na-microsoft-e-criou-um-metodo-contra-o-burnout-depois-de-pedalar-ate-o-everest/
+- **Encaixe:** A Minha História + A Identidade Apagada (carreira corporativa de peso escondendo o esgotamento).
+- **Ângulo:** "Currículo pesado não bastou pra sustentar ela por dentro. O método nasceu da história, não do currículo. Método sem história é commodity; ela tem as duas coisas."
+
+### 2.13 ★ Psicóloga que virou agente Fifa com método próprio (Left Sports Women) · Radar 28/07
+- **Link:** https://www.lance.com.br/futebol-feminino/conheca-a-psicologa-que-virou-agente-fifa-e-criou-metodo-proprio-na-left-sports-women.html
+- **Encaixe:** A Identidade Apagada / A Especialista Invisível — consolidada numa área, virou referência em outra por método, não por diploma.
+- **Ângulo:** "O diploma dela era de psicóloga. Virou agente Fifa porque transformou o que sabia em método com nome. Currículo abre porta, método constrói autoridade."
+
+### 2.14 Petúnya Rébuli — empresária com deficiência cria método de posicionamento · Radar 16/09
+- **Link:** https://www.segs.com.br/seguros/455470-empresaria-com-deficiencia-cria-metodo-para-posicionar-marcas-lideradas-por-mulheres/amp
+- **Encaixe:** A Minha História / A Identidade Apagada.
+- **Ângulo:** "O que o mercado trataria como limitação virou o próprio método. Aqui a história não ilustra o método — ela É o método."
+
+### 2.15 Kumon — Julio Segala conta como um pai criou o método e virou rede mundial · Radar 28/07
+- **Link:** https://economia.uol.com.br/noticias/redacao/2026/07/27/julio-segala-conta-como-um-pai-criou-o-kumon-e-transformou-o-metodo-em-uma-rede-mundial.ghtm
+- **Encaixe:** A Ordem Certa / A Minha História. Aspiracional (escala industrial).
+- **Ângulo:** "O Kumon não começou com anúncio, começou com método. Primeiro o método, depois o negócio."
+
+### 2.16 Pedro Pimenta — perdeu os 4 membros e criou clínica com método próprio · Radar 11/08
+- **Link:** https://economia.uol.com.br/empreendedorismo/noticias/redacao/2026/08/10/pedro-pimenta-tetra-amputado-clinicas-reabilitacao.ghtm
+- **Encaixe:** A Minha História.
+- **Ângulo:** "Ele não inventou o conceito. Viveu a perda, trouxe a ideia de fora e estruturou do jeito dele. História real dentro do método."
+
+### 2.17 Empresária cria comunidade de +20 mil e só depois lança método · Radar 29/07
+- **Link:** https://sopacultural.com/empresaria-que-criou-uma-comunidade-com-mais-de-20-mil-participantes-lanca-metodo-para-construir-marcas-desejadas-no-mercado-digital/
+- **Encaixe:** A Ordem Certa — prova/validação antes do produto.
+- **Ângulo:** "A ordem certa não é criar o método e torcer pra alguém confiar. É construir a prova — e o método nasce validado por dentro dela."
+
+### 2.18 Dr. Maurício Alves — "Método Brazilian Face" ganha projeção internacional · Radar 18/09
+- **Link:** https://jornaldebrasilia.com.br/entretenimento/katia-flavia/metodo-brazilian-face-tecnica-criada-em-brasilia-por-dr-mauricio-alves-ganha-projecao-internacional/
+- **Encaixe:** A Ordem Certa — técnica com nome vira ativo e escala pra fora.
+- **Ângulo:** "Ele não virou referência ensinando harmonização genérica. Deu nome ao próprio jeito de fazer. Técnica solta você copia; método tem dono."
+- **Obs.:** conversa com o tema do TRF1/harmonização (Radar 21/08) — cuidado pra não misturar os dois ângulos.
+
+### 2.19 "Metamodelo para Criação" — brasileiro cria método de gestão em 3 fases · Radar 25/07
+- **Link:** https://www.acritica.com/economia/brasileiro-cria-metodo-de-gest-o-para-reduc-o-de-falhas-corporativas-em-inovac-o-1.410685
+- **Encaixe:** A Ordem Certa (método com nome e fases). Mais B2B/corporativo — encaixe fraco com a Laura.
+- **Ângulo:** "Ele não vendeu tendência — estruturou um método com nome e fases. Método antes de qualquer coisa, inclusive antes de vender."
+
 ### CASOS PRA USAR COM CUIDADO (contraexemplos / polêmica — bons pro "problema impostor"):
 
 ### 2.9 Mariana Rios — curso "Basta Sentir" (Lei da Atração) criticado pelo preço
@@ -176,6 +226,12 @@ RECOMENDAÇÃO: ENTRAR / avaliar
 ### 2.10 Tiago Brunet — Método Destiny (imersão, 12 princípios)
 - **Link:** https://metododestiny.com.br/
 - **Uso:** exemplo de método bem empacotado (nome forte, princípios claros, imersão). Bom pra mostrar estrutura, não conteúdo.
+
+### 2.20 John Vitor Jarschel — método autoral em saúde complementar · Radar 15/09
+- **Link:** https://1news.correiobraziliense.com.br/noticia/883205/especiais/john-vitor-jarschel-consolida-trajetoria-de-destaque-na-saude-complementar-com-metodo-autoral-e-impacto-internacional-14092026
+- **Uso:** texto com cara de press-release ("consolida trajetória de destaque"). Checar substância antes de usar como prova forte — mesmo cuidado do caso Tiago Brunet.
+
+> Descartados pelo Radar no período, por decisão consciente: necrológio do diretor do Colégio Átrio (06/08 — não usar morte como gancho comercial); método de agência B2B "Skinbo" (06/08); harmonização facial em imersão VIP (28/08); Elemar Jr. e método M.A.N.Á./TikTok Shop (09/09) — não espelham a Laura.
 
 **Ângulo padrão dos cases:** "Mais um especialista que virou referência. Repara: não foi audiência primeiro. Foi método com nome, com história, com estrutura. A ordem certa: método → venda → validação → presença → escala."
 

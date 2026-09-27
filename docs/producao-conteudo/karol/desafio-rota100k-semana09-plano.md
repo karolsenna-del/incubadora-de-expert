@@ -1,0 +1,591 @@
+# Desafio Rota100K · Semana 09 (28/09 a 04/10) — Plano Completo v1 (42 posts, 6/dia)
+
+> Squad: Conteúdo Arcane (Aria — análise · Iris — temas · Rico — roteiro · Mack — produção)
+> Fonte do desafio: `DESAFIO-ROTA100K-Semana-09-28-09-a-04-10.pdf` (Downloads).
+> **Formato novo da semana:** o slot das 15h vira **Envio** — conteúdo feito pra pessoa mandar pra outra. Regras do guia: falar com quem RECEBE (não com quem assiste), dar permissão pra mandar, nunca acusar, 20 a 35 segundos, CTA explícito "marca quem precisa ver".
+> **Métrica da semana:** compartilhamentos (não views). Comparar o 15h com o 09h do mesmo dia.
+> CTA oficial: **seguir**, sempre amarrado ao tema. No 15h, o fecho é marcar alguém.
+> Fato só o documentado (`historias-trajetoria.md`, `historias-mentorias-atendidas.md`, `base-inicial.md`) ou dito pela Karol. ⚠️ = precisa de confirmação antes de gravar/publicar.
+> **v1 — 25/09/2026. Aguardando revisão item a item com a Karol.**
+
+---
+
+## Como a análise da Aria (25/09) entrou nessa semana
+
+Relatório: `analises/2026-09-25/relatorio-batch-10dias.md`.
+
+| Achado da Aria | Como virou decisão na Semana 09 |
+|---|---|
+| Gancho piorou na Semana 08 (14% dos Reels acima de 50% de retenção em 3s) | Nenhum YAP abre com instrução de método. Toda abertura é causo, confissão ou fato concreto ("Eu passei 8 anos reclamando...", "Postei 6x por dia e perdi seguidor"). |
+| Gancho que abre ensinando ("Essa estratégia evita...") ficou no fundo | Instrução só entra DEPOIS da virada, nunca nos 3 primeiros segundos. |
+| 7s sem fala é o formato que mais alcança | Mantido todo dia às 07h, com gancho curto e legenda que carrega o conteúdo. |
+| Pergunta binária de cotidiano foi a única coisa que gerou comentário (4 janelas seguidas) | 🧪 **Teste 20%: 1 pergunta binária por dia** na legenda de um post (marcado com 🧪 abaixo). |
+| Legado teve o maior tempo médio (13,9s) | Sábado 12h ("um dia qualquer que mudou tudo") e o fio "não esperar o momento certo" atravessam a semana. |
+| Causo pessoal/vulnerável é o padrão que performa desde julho | 8 histórias do banco que nunca viraram post entram agora (venda fantasma, Faixa Preta, "você não veste a camisa", 8 anos reclamando, Receita Federal, missa, "rainha do método", costureiras). |
+| Save quase zero nos carrosséis, mesmo pedindo "salva" | Carrosséis viram material útil de verdade (frases pra mandar, plano de 90 dias, respostas pra família) — conteúdo que se guarda porque serve, não porque pediu. |
+| Radar com notícia de empresa perdeu, ângulo humano ganhou | Slot de Radar saiu pelo próprio guia. Nenhum post depende de notícia. |
+
+---
+
+## A semana em uma tabela
+
+| Dia | Tema do dia | 15h — Envio (pra quem) |
+|---|---|---|
+| Seg 28/09 | O recado que ninguém te deu | Pra quem segura a borda há anos |
+| Ter 29/09 | O que quase todo expert esconde | Pra quem é bom e não é reconhecido |
+| Qua 30/09 | Fechamento de setembro | Pra quem sempre diz "mês que vem" |
+| Qui 01/10 | Abertura de outubro — 3 meses | Pra fazer junto (1 conversa por dia) |
+| Sex 02/10 | Frases que ficam | Pra quem está quase desistindo |
+| Sáb 03/10 | Explicar o que você faz | Pra família ver |
+| Dom 04/10 | Fechamento da semana de compartilhamento | O melhor da semana pra repassar |
+
+**Produção — Mack (vale pra semana toda):**
+- **07h 7s:** fundo liso, gancho na tela do 1º ao último frame, música de fundo (sempre a mesma), "leia a legenda" nos 3s finais.
+- **15h Envio:** selfie, olhando pra câmera, tom de conversa (como quem grava um áudio pra alguém). 20 a 35 segundos — cronometrar antes de postar. Texto na tela nos 3 primeiros segundos igual ao falado.
+- **20h Carrossel:** template card-tweet, 6 a 8 slides, texto grande.
+
+---
+
+## DIA 1 — Segunda, 28/09
+**Tema do dia:** o recado que ninguém te deu.
+
+### 07h · Reels 7s · sem fala
+**Gancho de tela:** "Alguém precisa ler isso hoje."
+
+**Legenda:**
+Estudei 4 anos pra um concurso da Receita Federal.
+Era meu plano de fuga do emprego público.
+Até eu entender que ia trocar 6 por meia dúzia.
+Bater ponto, politicagem, puxar saco pra conseguir cargo: isso existia em qualquer órgão.
+Eu não queria outro cargo. Queria outro jeito de trabalhar.
+Às vezes o plano de fuga é a mesma cela com outro nome.
+Se você conhece alguém estudando pra sair de um lugar e cair em outro igual, manda pra essa pessoa.
+Me segue que eu mostro a saída que não depende de concurso.
+
+### 09h · Reels YAP
+**Opinião:** o conselho que eu recebi e ignorei.
+**Abertura (0-3s, falado + na tela):** "O conselho que mais ia me poupar dinheiro, eu recebi. E ignorei."
+**Contexto:** Em 2021, eu e meu irmão entramos numa mentoria de R$50 mil. Lançamos copiando estratégia de outros players — um lançamento Frankenstein. Investimos R$10 mil e não vendemos nada. Na análise, uma mentora que já tinha faturado R$2 milhões avisou: "você é concursada vendendo pra empresário, isso não vai dar certo."
+**Virada:** A gente foi petulante e arrogante. E não foi a única vez: em outro lançamento, outra mentora me avisou que a minha persona não queria o que eu vendia. Teimei de novo. Conselho de quem já chegou lá não é opinião — é atalho. O problema é que ele quase sempre contraria o plano que a gente ama.
+**Fecha (CTA falado):** "Me segue que eu te conto os erros que eu paguei pra você não pagar."
+**Legenda:**
+Em 2021, uma mentora que já tinha faturado R$2 milhões me avisou que meu lançamento não ia dar certo. Eu ignorei. Investimos R$10 mil e não vendemos nada.
+Conselho de quem já chegou lá não é opinião. É atalho.
+Me segue que eu te conto os erros que eu paguei pra você não pagar.
+
+⚠️ Confirmar que pode citar o valor da mentoria (R$50 mil) e o irmão. Não citar o nome do Érico nem do programa.
+
+### 12h · Reels YAP
+**História:** 8 anos reclamando.
+**Abertura (0-3s):** "Eu passei 8 anos reclamando de um lugar que eu podia ter deixado."
+**Contexto:** Foram 13 anos numa empresa pública. Em 8 deles eu já queria sair. Em 2023 virei assessora, com salário de quase R$20 mil. Cargo, prestígio, poder. E mesmo assim eu queria sair.
+**Virada:** Eu esperava o momento em que sair ficasse fácil. Esse momento não veio. O que veio foi um telefonema, nas minhas férias, avisando da exoneração. A vida decidiu o que eu vinha adiando.
+**Fecha (CTA falado):** "Me segue que eu mostro como começar antes de a vida decidir por você."
+**Legenda:**
+13 anos numa empresa pública. 8 deles querendo sair. Saí no auge, ganhando quase R$20 mil — e só porque um telefonema decidiu por mim.
+O momento em que sair fica fácil não chega.
+Me segue que eu mostro como começar antes de a vida decidir por você.
+
+### 15h · Reels ENVIO — pra quem segura a borda
+**Texto na tela (0-3s):** "Esse vídeo é pra você mandar, não pra você assistir."
+**Fala (≈30s, pra quem recebe):** "Se alguém te mandou esse vídeo, não é indireta. É carinho. Essa pessoa já te ouviu falar do domingo à noite, do trabalho que não cabe mais, do projeto que você vive adiando. Ninguém tá te pedindo pra largar tudo amanhã. Dá pra começar pequeno, testando sua ideia em conversa, sem se expor e sem pedir demissão. Só não deixa passar mais um ano. E pra quem mandou: obrigada por cuidar."
+**CTA:** "Marca quem precisa ouvir isso de alguém."
+**Legenda:**
+Tem gente que você ama segurando a borda há anos.
+Você não precisa convencer. Só manda.
+Marca quem precisa ouvir isso de alguém.
+*(Seeding implícito: Vendas Secretas — começar em conversa, sem exposição.)*
+
+### 17h · Reels YAP prático
+**Prático:** como avisar alguém sem ofender.
+**Abertura (0-3s):** "Uma aluna me mostrou a página do evento dela. Tava genérica. Eu não disse isso."
+**Contexto:** Dizer "tá ruim" fecha a pessoa. Ela passa a defender o que fez em vez de ouvir.
+**Virada:** Eu perguntei por que ela queria ensinar aquilo. Ela contou que é secretária e faz em 2 horas, com IA, o que levava 2 semanas. Pronto: a persona estava na história dela, não na página. Não fale do erro — faça a pergunta que deixa a pessoa enxergar sozinha.
+**Aplicação:** (1) pergunta antes de opinião; (2) fala da consequência, não da falha ("desse jeito, quem você quer atingir não se reconhece"); (3) termina com um próximo passo concreto.
+**Fecha (CTA falado):** "Me segue que eu ensino a ter conversa difícil sem estragar a relação."
+**Legenda:**
+Não fale do erro. Faça a pergunta que deixa a pessoa enxergar sozinha — e fale da consequência, não da falha.
+Me segue que eu ensino a ter conversa difícil sem estragar a relação.
+🧪 E você: avisar um amigo do erro é sinceridade ou intromissão? Comenta.
+
+*(Caso Vanessa, sessão de 19/09 — anônimo, só "uma aluna".)*
+
+### 20h · Carrossel neutro
+**Tema:** "Manda pra quem precisa" — recados pra quem ainda segura a borda.
+1. **Capa:** "4 coisas que alguém que você conhece precisa ler."
+2. **Reforço do hook:** Se você não consegue falar, manda esse post. Cada slide é um recado.
+3. **Recado 1:** "Você só aprende a nadar soltando a mão da borda."
+4. **Recado 2:** "Empreender pode ser o rolê que for, mas devolve uma coisa: a decisão sobre o seu futuro."
+5. **Recado 3:** "Você não precisa se sentir pronto. Prontidão não é um estado, é hábito de repetição."
+6. **Recado 4:** "Testar em conversa não é esconder fracasso. É não se expor antes da hora."
+7. **CTA + assinatura:** "Salva e manda pra quem estiver passando por isso."
+
+---
+
+## DIA 2 — Terça, 29/09
+**Tema do dia:** o que quase todo expert esconde.
+
+### 07h · Reels 7s · sem fala
+**Gancho de tela:** "Você acha que é só com você. Não é."
+
+**Legenda:**
+Minha entrega nunca esteve tão boa.
+E eu nunca vendi tão pouco.
+Agentes de IA, área de membros, método atualizado.
+E pouca gente do outro lado recebendo.
+Demorei pra admitir: produzir não é vender.
+A ferramenta resolve o como.
+Não resolve a conversa que só você pode ter com quem vai comprar.
+Se isso acontece com você, você não está sozinho.
+Me segue que eu mostro como sair da caverna e ir vender.
+
+⚠️ Reflexão A da base (28/08). Confirmar se a Karol ainda se reconhece nisso e topa expor agora.
+
+### 09h · Reels YAP
+**Opinião:** o fracasso que todo mundo esconde.
+**Abertura (0-3s):** "Eu fiz um lançamento inteiro e vendi uma vaga. A aluna nunca entrou."
+**Contexto:** Quase todo expert tem um lançamento que não conta. O meu foi um curso de produtividade pra mães de bebê. Uma venda, no último dia do carrinho, faltando uma hora. Uma lead fria que eu nem entendia de onde tinha vindo. Fui atrás algumas vezes. Ela nunca entrou na plataforma.
+**Virada:** A gente esconde por vergonha. Mas foi ali que eu entendi: venda aleatória não é validação. Lançar pro vazio dá resultado aleatório, não negócio.
+**Fecha (CTA falado):** "Me segue que eu mostro o que eu faço hoje em vez de lançar pro vazio."
+**Legenda:**
+Um lançamento inteiro. Uma venda, na última hora do carrinho. A aluna nunca entrou na plataforma.
+Venda aleatória não é validação.
+Me segue que eu mostro o que eu faço hoje em vez de lançar pro vazio.
+🧪 Contar um fracasso em público: coragem ou exposição? Comenta.
+
+### 12h · Reels YAP
+**História que se repete:** "você não veste a camisa".
+**Abertura (0-3s):** "Me disseram que eu não vestia a camisa da empresa. Anos depois, ouvi a mesma história de uma aluna."
+**Contexto:** Eu dominava a metodologia, representava a empresa pro Governo do Estado, dava curso de gestão pra empresa toda. Nunca virei cargo. Quando substituí minha gerente, fui pressionada a assinar um estudo claramente errado. Me recusei. A partir dali, fiquei de fora de qualquer oportunidade.
+**Virada:** Hoje eu atendo uma servidora pública que vive o mesmo: é boa, não faz politicagem e é boicotada por isso. Muda o nome, muda a cidade, o enredo é idêntico. O que ela descobriu é o que eu descobri: conhecimento não basta pra ser reconhecida ali dentro — mas pode virar um negócio em que ser íntegra é o diferencial, não o problema.
+**Fecha (CTA falado):** "Me segue que eu mostro como transformar o que te trava em posicionamento."
+**Legenda:**
+Fui colocada de lado por me recusar a assinar um estudo errado. Anos depois, atendi uma aluna vivendo a mesma história.
+Conhecimento não basta pra ser reconhecido num lugar que premia politicagem.
+Me segue que eu mostro como transformar isso em posicionamento.
+
+*(Caso Milena — anônimo. Não citar Conduz Agro.)*
+
+### 15h · Reels ENVIO — pra quem é bom e não é reconhecido
+**Texto na tela (0-3s):** "Se você pensou em alguém agora, manda."
+**Fala (≈30s):** "Se alguém te mandou esse vídeo, é porque sabe que você é bom no que faz — e que isso não tem sido suficiente aí dentro. Não é falta de competência. Às vezes é só um lugar que não recompensa quem não entra no jogo. Isso não te obriga a sair amanhã. Mas vale saber: o que você sabe pode valer mais fora daí do que dentro. Eu transformei isso num negócio. E ajudo outras pessoas a fazer o mesmo."
+**CTA:** "Marca quem está nessa fase agora."
+**Legenda:**
+Ser bom e não ser reconhecido não é falta de competência.
+O que você sabe pode valer mais fora daí.
+Marca quem está nessa fase agora.
+
+### 17h · Reels YAP prático
+**Prático:** o que fazer quando ninguém entende o seu caminho.
+**Abertura (0-3s):** "Quem nunca empreendeu vai ter opinião sobre o seu negócio. Não é com essa pessoa que você decide."
+**Contexto:** Quando você começa algo novo, todo mundo em volta opina. E opinião de quem nunca passou por isso pesa como se fosse aviso.
+**Virada:** Procure quem já passou, não quem tem opinião. O conselho que mais teria me poupado dinheiro veio de alguém que já tinha faturado R$2 milhões fazendo o que eu queria fazer — e foi justamente o que eu ignorei.
+**Aplicação:** (1) pare de explicar pra quem não vai mudar de ideia; (2) procure alguém dois passos à frente no caminho que você quer; (3) em vez de argumento, mostre um resultado pequeno.
+**Fecha (CTA falado):** "Me segue que eu te mostro quem ouvir e quem deixar falando."
+**Legenda:**
+Opinião de quem nunca fez não é aviso. Procure quem já passou pelo caminho que você quer.
+Me segue que eu te mostro quem ouvir.
+
+### 20h · Carrossel neutro
+**Tema:** "Você não está sozinho nisso."
+1. **Capa:** "5 coisas que quase todo expert passa e ninguém conta."
+2. **Reforço do hook:** Se você marcar 3 dessas, é mais comum do que imagina. Eu vivi as 5.
+3. **1.** Fazer um lançamento inteiro e vender uma vaga só.
+4. **2.** Ignorar o conselho de quem já tinha chegado lá — e pagar caro por isso.
+5. **3.** Insistir numa persona que não queria o que você vendia.
+6. **4.** Aceitar um projeto com salário fixo que te afastou do seu próprio negócio.
+7. **5.** Ter a melhor entrega da sua vida e quase ninguém comprando.
+8. **CTA + assinatura:** "Compartilha com quem acha que é só com ele."
+
+*(Todos os 5 documentados em `historias-trajetoria.md` — #3, #15, #16, #10 e reflexão A.)*
+
+---
+
+## DIA 3 — Quarta, 30/09
+**Tema do dia:** fechamento de setembro.
+
+### 07h · Reels 7s · sem fala
+**Gancho de tela:** "Último dia do mês. Faz o balanço."
+
+**Legenda:**
+Setembro acabou.
+Antes de prometer tudo pra outubro, responde 3 coisas.
+O que você começou e manteve?
+O que você começou e largou?
+O que você nem começou?
+A terceira resposta costuma doer mais.
+E é ela que decide como você fecha o ano.
+🧪 Setembro: você começou ou adiou? Comenta.
+Me segue que amanhã eu mostro como usar os últimos 3 meses.
+
+### 09h · Reels YAP
+**O que setembro me ensinou:** vulnerabilidade com dado real.
+**Abertura (0-3s):** "Postei seis vezes por dia em setembro. Terminei o mês com menos seguidores do que comecei."
+**Contexto:** Seis posts por dia, todo dia. E o número parado — desceu, na verdade.
+**Virada:** O que setembro me ensinou não veio do Instagram. Veio de uma aula: muitas vezes a gente acha que o funil tá fraco, quando o que falta é volume de gente entrando nele. E isso se resolve com prospecção, não com mais post. Desde então eu prospecto todo dia, pelo menos uma pessoa. Conteúdo constrói. Conversa vende.
+**Fecha (CTA falado):** "Me segue que eu mostro como eu prospecto uma pessoa por dia."
+**Legenda:**
+6 posts por dia em setembro. Menos seguidores no fim do mês.
+O que eu aprendi: funil fraco quase sempre é falta de volume. E volume vem de conversa, não de post.
+Me segue que eu mostro como eu prospecto uma pessoa por dia.
+
+⚠️ Dado real das métricas: 6.833 seguidores em 02/09 → 6.828 em 25/09. **Conferir o número de 30/09 antes de gravar** e confirmar que a Karol topa expor.
+
+### 12h · Reels YAP
+**O que sempre acontece no último trimestre.**
+**Abertura (0-3s):** "De outubro em diante, muita gente começa a falar em janeiro."
+**Contexto:** "Em janeiro eu lanço." "Ano que vem eu começo." O último trimestre vira sala de espera do ano seguinte.
+**Virada:** Janeiro não tem nada de diferente. Você chega nele com as mesmas dúvidas e três meses a menos de teste. Quem conversa com 10 pessoas do seu público até dezembro chega em janeiro sabendo o que vender. Quem espera chega sabendo o mesmo que sabe hoje.
+**Fecha (CTA falado):** "Me segue que eu mostro como usar esses 3 meses a seu favor."
+**Legenda:**
+Janeiro não muda nada sozinho. Você chega nele com três meses a menos de teste.
+Quem se antecipa no trimestre chega em janeiro sabendo o que vender.
+Me segue que eu mostro como usar esses 3 meses.
+
+⚠️ Confirmar se a Karol vê esse padrão nas conversas dela ("em janeiro eu começo") — se não, reescrever como opinião pura.
+
+### 15h · Reels ENVIO — pra quem sempre diz "mês que vem"
+**Texto na tela (0-3s):** "Manda pra quem vive dizendo que vai começar mês que vem."
+**Fala (≈30s):** "Se alguém te mandou esse vídeo, é porque já te ouviu dizer 'mês que vem eu começo'. Tá tudo bem. Todo mundo já disse. Mas amanhã começa outubro, e até dezembro são três meses — dá pra testar uma ideia inteira nesse tempo. Não precisa de lançamento, nem de site pronto. Precisa de uma primeira conversa com quem tem o problema que você resolve. Começa por ela. E pra quem mandou: cobra essa pessoa amanhã."
+**CTA:** "Marca aquela pessoa que adia desde janeiro."
+**Legenda:**
+Três meses dão pra testar uma ideia inteira.
+Não precisa de lançamento. Precisa da primeira conversa.
+Marca aquela pessoa que adia desde janeiro — e cobra ela amanhã.
+
+### 17h · Reels YAP prático
+**Prático:** como não deixar pra dezembro.
+**Abertura (0-3s):** "Dezembro não é mês de começar nada."
+**Contexto:** Com IA, quase tudo virou possível de fazer. E aí a lista de outubro tem vinte coisas.
+**Virada:** Capacidade não é prioridade. Eu divido tudo em quatro: só eu posso fazer e gera resultado → faço; precisa acontecer mas não depende de mim → delego; não muda o resultado agora → deixo pra depois; ocupa o lugar de venda, família ou descanso → corto.
+**Aplicação:** lista tudo que você quer até dezembro, passa pelas quatro colunas. Do que sobrar em "faço", escolhe um.
+**Fecha (CTA falado):** "Me segue que eu te ajudo a escolher o que fica."
+**Legenda:**
+Faço, delego, deixo pra depois, corto. Passa sua lista de fim de ano por essas quatro colunas — e escolhe um do "faço".
+Me segue que eu te ajudo a escolher o que fica.
+
+### 20h · Carrossel neutro
+**Tema:** "O plano dos últimos 3 meses."
+1. **Capa:** "Outubro, novembro e dezembro: um objetivo pra cada."
+2. **Reforço do hook:** Quem tenta tudo no último trimestre chega em dezembro cansado e sem resultado. Um objetivo por mês cabe.
+3. **Antes de tudo:** passa sua lista por 4 colunas — faço, delego, deixo pra depois, corto.
+4. **Outubro — clareza:** pra quem você vende, qual transformação promete, e uma lista de pessoas com esse problema pra conversar.
+5. **Novembro — conversa:** sessões com quem tem o problema. Anota toda objeção.
+6. **Dezembro — decisão:** fechar, entregar e ouvir o primeiro resultado.
+7. **No último dia de cada mês:** o que eu mantive, o que eu larguei, o que eu nem comecei.
+8. **CTA + assinatura:** "Salva e revisa no fim de cada mês. Manda pra quem quer virar o ano com resultado."
+
+---
+
+## DIA 4 — Quinta, 01/10
+**Tema do dia:** abertura de outubro — três meses dá tempo.
+
+### 07h · Reels 7s · sem fala
+**Gancho de tela:** "Outubro. Três meses. Dá tempo."
+
+**Legenda:**
+Três meses dá pra muita coisa.
+Dá pra definir pra quem você vende.
+Dá pra conversar com quem tem o problema que você resolve.
+Dá pra fazer a primeira venda do seu método.
+Não dá é pra esperar janeiro e fazer tudo isso em dezembro.
+Mês novo não muda nada sozinho.
+O que você faz hoje aparece em dezembro.
+Me segue que eu te acompanho nesses 3 meses.
+
+### 09h · Reels YAP
+**Opinião:** o erro de recomeçar do zero todo mês.
+**Abertura (0-3s):** "Meu método nunca ficou pronto. E eu parei de esperar que ficasse."
+**Contexto:** Todo começo de mês a gente apaga e recomeça: planner novo, ideia nova, nicho novo.
+**Virada:** Prontidão não é um estado, é hábito de repetição. Produto meu de 2024 já está defasado com a velocidade da IA. Então eu não recomeço — continuo, e melhoro a cada reunião, cada venda, cada post, cada aluno. Recomeçar parece produtivo e é o oposto: zera o que você aprendeu.
+**Fecha (CTA falado):** "Me segue que eu mostro como continuar sem ficar pronto."
+**Legenda:**
+Você não precisa recomeçar. Precisa continuar.
+Prontidão não é um estado — é hábito de repetição.
+Me segue que eu mostro como continuar sem ficar pronto.
+
+### 12h · Reels YAP ⚠️ PENDENTE
+**O que eu faço em outubro todo ano / meu ritual de virada de trimestre.**
+⚠️ **Não existe ritual documentado da Karol.** Não roteirizar sem ela ditar. Duas saídas:
+- **(a) Karol dita o ritual real** → Rico roteiriza na hora.
+- **(b) Se não houver ritual:** trocar o ângulo pra "o que eu vou fazer nesse outubro" — por exemplo, dar nota de 0 a 2 pra cada uma das 7 etapas do funil de validação (framework dela, já usado na S07 domingo 17h) e corrigir só a menor. Abertura candidata: "Esse outubro eu vou dar nota pro meu próprio funil. A menor nota ganha o trimestre."
+
+### 15h · Reels ENVIO — pra fazer junto
+**Texto na tela (0-3s):** "Marca a pessoa que vai fazer isso com você."
+**Fala (≈25s):** "Se alguém te marcou nesse vídeo, é porque quer fazer isso com você. A proposta é simples: durante outubro, cada um conversa com uma pessoa por dia sobre o problema que resolve. Só uma. No fim do dia, um manda pro outro: 'fiz'. Sozinho a gente começa. Acompanhado a gente termina. Aceita?"
+**CTA:** "Marca a pessoa que vai fazer isso com você."
+**Legenda:**
+Desafio de outubro: uma conversa por dia com quem tem o problema que você resolve. No fim do dia, manda "fiz" pra sua dupla.
+Sozinho começa. Acompanhado termina.
+Marca a pessoa que vai fazer isso com você.
+
+*(Prática real da Karol: prospecta pelo menos 1 pessoa por dia desde a aula do Caio Carneiro, set/2026.)*
+
+### 17h · Reels YAP prático
+**Prático:** como escolher uma meta pra 3 meses.
+**Abertura (0-3s):** "Meta que você não controla não é meta. É torcida."
+**Contexto:** Faturamento e seguidor dependem de coisa que não está na sua mão — algoritmo, mercado, timing.
+**Virada:** Meta de 3 meses tem que ser de ação: quantas conversas, quantas sessões, quantos follow-ups. Se não cabe em 90 dias, diminui. Escreve a meta e a data. Só isso.
+**Fecha (CTA falado):** "Me segue que eu te ajudo a montar a sua."
+**Legenda:**
+Meta de 3 meses boa é meta de ação: conversas, sessões, follow-ups. Se não cabe em 90 dias, diminui.
+Me segue que eu te ajudo a montar a sua.
+🧪 Meta de ação ou meta de resultado: qual você usa? Comenta.
+
+### 20h · Carrossel neutro
+**Tema:** "90 dias, semana a semana" (continuação do carrossel de ontem: ontem o mês, hoje a semana).
+1. **Capa:** "Os próximos 90 dias, fase por fase, até 31/12."
+2. **Reforço do hook:** Sem promessa milagrosa. É o caminho que eu uso pra validar método vendendo.
+3. **Semanas 1-2 — persona e promessa:** pra quem, e qual transformação.
+4. **Semanas 3-5 — prospecção e qualificação:** uma pessoa por dia. De 3 a 5 perguntas pra ver se ela é a sua persona.
+5. **Semanas 6-9 — sessões:** responde três dúvidas — "isso é verdade?", "o que eu ganho?", "serve pra mim?".
+6. **Semanas 10-11 — follow-up e negociação:** toda conversa termina com o próximo passo marcado.
+7. **Semanas 12-13 — fechamento e pós-venda:** entrega, satisfação, indicação.
+8. **CTA + assinatura:** "Se você quer terminar o ano diferente, salva. Manda pra quem vai fazer junto."
+
+---
+
+## DIA 5 — Sexta, 02/10
+**Tema do dia:** frases que ficam.
+
+### 07h · Reels 7s · sem fala
+**Gancho de tela:** "Anota: diploma é o que você estudou. Método é o que você viveu."
+
+**Legenda:**
+Essa frase está dentro do meu método por um motivo.
+Muita gente chega achando que precisa de mais um curso pra ter autoridade.
+Mais um certificado. Mais uma pós.
+Só que o que te diferencia não é o que você estudou.
+É o que você viveu, errou, resolveu e consegue ensinar.
+Diploma todo mundo pode ter igual.
+Vivência, não.
+Guarda essa frase pro dia em que você duvidar de si.
+Me segue que eu te ajudo a transformar vivência em método.
+
+### 09h · Reels YAP
+**Opinião:** a frase que eu repito desde 2025.
+**Abertura (0-3s):** "Tem uma frase que eu repito desde 2025."
+**Contexto:** "Não acredito em método nascendo agora sem entregável feito com IA."
+**Virada:** Produto feito em 2024 ou 2025 sem atualização já fica defasado. O conhecimento continua valendo; a entrega, não. Quem não atualiza a entrega fica pra trás, mesmo com conhecimento bom. E IA não é o que você promete — é o que você entrega.
+**Fecha (CTA falado):** "Me segue que eu mostro como a IA entra no meu método sem virar promessa."
+**Legenda:**
+Não acredito em método nascendo agora sem entregável feito com IA. O conhecimento continua valendo — a entrega desatualizada fica pra trás.
+Me segue que eu mostro como a IA entra no método sem virar promessa.
+*(Seeding implícito: Biblioteca de Agentes de IA.)*
+
+### 12h · Reels YAP
+**História:** o elogio que mais me marcou.
+**Abertura (0-3s):** "O elogio que mudou meu posicionamento começou com uma crítica."
+**Contexto:** Quando a Incubadora nasceu, eu queria ensinar especialista a lançar — repetindo meu caminho de lançadora. Meu mentor foi direto: eu não tinha resultado pra competir com os grandes do mercado de lançamento.
+**Virada:** E completou: isso não importava, porque o meu diferencial era outro — eu era "a rainha do método". Auditoria, gestão e planejamento estratégico me faziam enxergar método como modelo de negócio. Foi nesse dia que eu entendi o meu trabalho.
+**Fecha (CTA falado):** "Me segue que eu te ajudo a achar o diferencial que você não está vendo."
+**Legenda:**
+Meu mentor me disse que eu não tinha resultado pra competir com os grandes. E que isso não importava — meu diferencial era outro.
+Às vezes quem vê o seu diferencial é alguém de fora.
+Me segue que eu te ajudo a achar o seu.
+
+⚠️ Confirmar com a Karol que esse é o elogio que mais marcou (história #18). Não nomear o mentor.
+
+### 15h · Reels ENVIO — pra quem está quase desistindo
+**Texto na tela (0-3s):** "Manda pra quem está quase desistindo."
+**Fala (≈30s):** "Se alguém te mandou isso, é porque percebeu que você está quase desistindo. Não vou te dar sermão. Só um lembrete: o 'não' que você ouviu não prova que você não serve. Faz parte do trabalho, como o sangue pro médico e a graxa pro mecânico. Ninguém gosta. Todo mundo que chegou lá passou por ele. Só fracassa quem desiste. Então hoje não desiste. Amanhã você decide de novo."
+**CTA:** "Marca aquela pessoa que precisa de um empurrão hoje."
+**Legenda:**
+O "não" faz parte do trabalho, como o sangue pro médico e a graxa pro mecânico.
+Só fracassa quem desiste.
+Marca aquela pessoa que precisa de um empurrão hoje.
+
+### 17h · Reels YAP prático
+**Prático:** como voltar depois de parar.
+**Abertura (0-3s):** "Você não perdeu tudo quando parou. Perdeu o embalo."
+**Contexto:** Quem para uma semana sente que precisa recomeçar do zero. E é aí que desiste de vez.
+**Virada:** Retomar não é compensar os dias perdidos. É fazer a menor ação que devolve o movimento — no meu caso, uma conversa com uma pessoa. Não conta os dias perdidos. Conta o de hoje.
+**Aplicação:** (1) escolhe a menor ação do seu processo; (2) faz hoje, antes de planejar; (3) só depois reorganiza a semana.
+**Fecha (CTA falado):** "Me segue que eu te ajudo a voltar sem recomeçar."
+**Legenda:**
+Parou? Não recomeça. Faz a menor ação que devolve o movimento — hoje, antes de planejar.
+Me segue que eu te ajudo a voltar sem recomeçar.
+🧪 Voltar depois de parar: segunda-feira ou agora? Comenta.
+
+### 20h · Carrossel neutro
+**Tema:** "Frases pra guardar" — método e venda.
+1. **Capa:** "5 frases sobre método e venda pra guardar."
+2. **Reforço do hook:** Print, salva, manda. Uma por slide — escolhe a sua.
+3. **Frase 1:** "O 'não' está para o vendedor como o sangue para o médico e a graxa para o mecânico."
+4. **Frase 2:** "IA é o que você entrega, não o que você promete."
+5. **Frase 3:** "Método não é despejar tudo o que você sabe."
+6. **Frase 4:** "Curso técnico antes do método validado não é atalho. É concorrência com você mesmo."
+7. **Frase 5:** "Validar não termina no interesse. Termina no pós-venda."
+8. **CTA + assinatura:** "Compartilha a que mais te representa."
+
+---
+
+## DIA 6 — Sábado, 03/10
+**Tema do dia:** explicar o que você faz (pra família, pros outros e pra você).
+
+### 07h · Reels 7s · sem fala
+**Gancho de tela:** "Comenta a frase que te pegou essa semana."
+
+**Legenda:**
+Essa semana foi de frases pra mandar pra alguém.
+"Você só aprende a nadar soltando a mão da borda."
+"Diploma é o que você estudou. Método é o que você viveu."
+"Só fracassa quem desiste."
+"IA é o que você entrega, não o que você promete."
+Qual delas te pegou?
+🧪 Comenta a frase.
+E se você mandou algum vídeo meu pra alguém, me conta: funcionou?
+Me segue que semana que vem tem mais.
+
+### 09h · Reels YAP
+**Opinião:** o que eu faço diferente do resto — decisão combinada antes.
+**Abertura (0-3s):** "Eu não fico correndo atrás de lead depois da reunião. Combino a decisão antes."
+**Contexto:** O comum em venda é terminar a conversa com "vou pensar" e passar semanas mandando mensagem.
+**Virada:** Na minha sessão, depois que a pessoa reconhece que precisa de ajuda, eu faço um acordo: vou explicar tudo, você tira todas as dúvidas, e no fim me diz sim ou não. Se não fizer sentido, tudo bem — eu não fico insistindo. Isso não é pressão. É transparência, e respeita o direito da pessoa de dizer não. Só funciona com quem já foi qualificado antes.
+**Fecha (CTA falado):** "Me segue que eu ensino como conduzir essa conversa."
+**Legenda:**
+Em vez de "vou pensar" e semanas de follow-up, eu combino a decisão antes de apresentar a proposta. Sim ou não — e os dois estão bem.
+Me segue que eu ensino como conduzir essa conversa.
+*(Seeding implícito: Sessão de Vendas Secretas com Decisão Imediata.)*
+
+⚠️ Confirmar que a Karol usa o acordo de decisão imediata nas sessões dela hoje (está documentado como método, em `base-inicial.md`).
+
+### 12h · Reels YAP
+**História:** um dia qualquer que mudou tudo. *(tema legado — maior tempo médio da janela anterior)*
+**Abertura (0-3s):** "A decisão mais importante da minha vida começou num scroll qualquer."
+**Contexto:** Uma frase no feed: "você só aprende a nadar soltando a mão da borda". No dia seguinte, na missa, ela não saía da minha cabeça. Coração acelerado. Eu chorava sem parar.
+**Virada:** No dia seguinte eu avisei minha gerente que ia sair em 3 meses. Não teve nada de especial naquele dia. Às vezes a virada acontece num dia comum. Se você está esperando o momento certo, ele pode ser só o dia em que você decide.
+**Fecha (CTA falado):** "Me segue se hoje for o seu dia comum."
+**Legenda:**
+Uma frase num scroll qualquer. Uma missa. No dia seguinte, eu avisei que ia sair.
+Não teve nada de especial naquele dia. E mudou tudo.
+Me segue se hoje for o seu dia comum.
+
+*(História #8 — Karol fala dela com frequência, liberada pra reforço.)*
+
+### 15h · Reels ENVIO — pra família ver
+**Texto na tela (0-3s):** "Manda pro grupo da família."
+**Fala (≈30s):** "Se alguém da sua família te mandou esse vídeo, é porque essa pessoa trabalha com internet e cansou de explicar. Então eu explico: ela não fica 'mexendo no celular'. Ela pega o que aprendeu em anos de profissão, organiza num método e ensina outras pessoas a chegar no mesmo resultado, mais rápido. Isso é trabalho. Tem cliente, tem entrega, tem responsabilidade. Você não precisa entender tudo. Só precisa apoiar."
+**CTA:** "Manda pro grupo da família."
+**Legenda:**
+Não é "mexer no celular". É pegar anos de profissão, organizar num método e ensinar outras pessoas.
+Isso é trabalho.
+Manda pro grupo da família.
+
+### 17h · Reels YAP prático
+**Prático:** como explicar sua decisão pros outros.
+**Abertura (0-3s):** "Se você precisa de cinco minutos pra explicar o que faz, o problema não é a sua família."
+**Contexto:** Quem trabalha com conhecimento costuma explicar demais — cursos, certificações, ferramentas, o processo inteiro.
+**Virada:** O teste que eu uso: explica o que você faz como se estivesse na fila do pão, em 10 segundos. Estrutura: "eu ajudo [quem] a [resultado] sem [o que ele não quer passar]". Se não cabe, o que falta é clareza de posicionamento. Você não deve satisfação — mas pode facilitar.
+**Fecha (CTA falado):** "Me segue que eu te ajudo a caber em 10 segundos."
+**Legenda:**
+Teste da fila do pão: explica o que você faz em 10 segundos. "Eu ajudo [quem] a [resultado] sem [o que ele não quer passar]."
+Se não cabe, falta clareza — não é culpa de quem não entende.
+Me segue que eu te ajudo a caber em 10 segundos.
+
+### 20h · Carrossel neutro
+**Tema:** "Pra mostrar pra quem não entende."
+1. **Capa:** "5 respostas pras perguntas que quem trabalha com conhecimento cansou de ouvir."
+2. **Reforço do hook:** Manda no grupo da família e encerra o assunto.
+3. **"Mas isso dá dinheiro?"** — Dá quando tem pra quem vender, o que prometer e como entregar. Sem isso, nenhum negócio dá.
+4. **"Você não tem medo de largar a estabilidade?"** — Tenho. Por isso eu não largo nada no escuro: testo em conversa antes, sem me expor.
+5. **"Mas já tem tanta gente ensinando isso."** — Tem muita gente ensinando receita. Ninguém ensina com a sua experiência.
+6. **"Você vai virar influenciador?"** — Não. Autoridade não é influência. Dá pra ser referência no que você sabe sem virar blogueiro.
+7. **"E se não der certo?"** — Só fracassa quem desiste. O resto é teste.
+8. **CTA + assinatura:** "Salva pra próxima vez que te questionarem."
+
+---
+
+## DIA 7 — Domingo, 04/10
+**Tema do dia:** fechamento da semana de compartilhamento.
+
+### 07h · Reels 7s · sem fala
+**Gancho de tela:** "Obrigada a quem mandou meus vídeos pra alguém."
+
+**Legenda:**
+Essa semana eu pedi uma coisa diferente.
+Não pedi like. Pedi pra você mandar pra alguém.
+Pra quem segura a borda.
+Pra quem é bom e não é reconhecido.
+Pra quem sempre diz "mês que vem".
+Pra família que não entende o que você faz.
+Se você mandou algum, obrigada.
+Conteúdo bom se passa adiante.
+Me segue e manda pra mais uma pessoa hoje.
+
+### 09h · Reels YAP ⚠️ PREENCHER COM DADO REAL
+**O que aconteceu quando vocês compartilharam.**
+⚠️ **Preencher no sábado à noite** com os compartilhamentos reais da semana (métricas em `business/instagram/metricas/`). Referência: 21 a 25/09 teve **1 compartilhamento** no total.
+**Abertura (0-3s):** "Semana passada, 1 pessoa compartilhou um vídeo meu. Essa semana, [X]."
+**Contexto:** Eu pedi de propósito, todo dia, às 15h: manda pra alguém.
+**Virada:** [o que o dado mostrou — qual post mais circulou e o que ele tinha de diferente]. Quando alguém manda seu vídeo, ele chega pra uma pessoa que não te segue, com a recomendação de alguém em quem ela confia.
+**Fecha (CTA falado):** "Me segue — e obrigada a quem passou adiante."
+*(Se o número não subir, a abertura muda pra honestidade: "Pedi a semana toda pra vocês compartilharem. Olha o que aconteceu." — e a Aria lê o motivo.)*
+
+### 12h · Reels YAP
+**História:** quem me acompanha desde o começo.
+**Abertura (0-3s):** "Tem gente aqui desde quando esse perfil falava de produtividade pra mãe de bebê."
+**Contexto:** Meu primeiro curso foi esse. Fiz poucas vendas. Eu tinha filha única, rede de apoio e babá. Minhas alunas eram costureiras que cuidavam dos outros, da casa, ajudavam a sustentar a família e ainda tinham que ser produtivas.
+**Virada:** Eu não tinha o skin in the game delas — meu método não cabia na realidade delas. Esse perfil mudou muito desde então. Se você está aqui desde lá, você viu o erro e a virada. Obrigada.
+**Fecha (CTA falado):** "Comenta há quanto tempo você me acompanha."
+**Legenda:**
+Esse perfil já falou de produtividade pra mãe de bebê. Eu errei a persona: minha realidade não era a das minhas alunas.
+Se você está aqui desde lá, viu o erro e a virada.
+Comenta há quanto tempo você me acompanha.
+
+⚠️ Confirmar que o curso de produtividade foi divulgado **neste** perfil (@karolsenna._). Se não foi, trocar a abertura por "Esse perfil mudou muito — e eu errei bastante antes de chegar aqui."
+
+### 15h · Reels ENVIO — o melhor da semana pra repassar
+**Texto na tela (0-3s):** "Se você só mandar um vídeo meu essa semana, manda esse."
+**Fala (≈30s):** "Se você só mandar um vídeo meu essa semana, manda esse. Três coisas pra quem quer transformar o que sabe num negócio. Primeiro: o que você viveu vale mais do que o que você estudou. Segundo: você não precisa largar tudo — dá pra testar em conversa, sem se expor. Terceiro: o 'não' faz parte do trabalho. Só fracassa quem desiste. É curto, é direto e serve pra qualquer um."
+**CTA:** "Marca quem você quer que veja isso."
+**Legenda:**
+A semana em 30 segundos: vivência vale mais que diploma, dá pra testar sem se expor, e o "não" faz parte.
+Marca quem você quer que veja isso.
+
+⚠️ Versão padrão. Se algum 15h da semana circular muito mais que os outros, trocar o conteúdo pelo resumo dele.
+
+### 17h · Reels YAP prático
+**Prático:** como escolher uma coisa pra semana.
+**Abertura (0-3s):** "Segunda começa amanhã. Se você escolher cinco prioridades, não faz nenhuma."
+**Contexto:** Domingo à noite a gente monta uma lista que nem uma semana de 10 dias daria conta.
+**Virada:** Escolhe uma coisa só — a menor tarefa que cabe em qualquer semana. No meu caso: uma conversa por dia com quem tem o problema que eu resolvo. Anota na segunda. Cobra de você na sexta.
+**Fecha (CTA falado):** "Me segue que eu te lembro na sexta."
+**Legenda:**
+Uma coisa pra semana. A menor tarefa que cabe em qualquer rotina. Anota na segunda, cobra na sexta.
+Me segue que eu te lembro na sexta.
+🧪 Planejar a semana: domingo à noite ou segunda cedo? Comenta.
+
+### 20h · Carrossel neutro
+**Tema:** "A semana inteira em um post."
+1. **Capa:** "A semana inteira em um post: 6 lições."
+2. **Segunda:** conselho de quem já chegou lá não é opinião. É atalho.
+3. **Terça:** o fracasso que você esconde é o que mais ensina.
+4. **Quarta e quinta:** três meses dão pra testar uma ideia inteira — com meta de ação, não de torcida.
+5. **Sexta:** diploma é o que você estudou. Método é o que você viveu.
+6. **Sábado:** combina a decisão antes, e ninguém precisa correr atrás de ninguém depois.
+7. **Domingo:** uma conversa por dia vale mais que cinco prioridades.
+8. **CTA + assinatura:** "Se você perdeu algum dia, está tudo aqui. Salva e manda pra uma pessoa."
+
+---
+
+## Pendências pra validar antes de ir pra fila
+
+| # | Slot | O que falta |
+|---|---|---|
+| 1 | Seg 09h | Pode citar R$50 mil da mentoria e o irmão? |
+| 2 | Ter 07h | Karol ainda se reconhece em "minha entrega nunca esteve tão boa e eu nunca vendi tão pouco"? Topa expor? |
+| 3 | Qua 09h | Conferir seguidores em 30/09 e confirmar que topa expor a queda. |
+| 4 | Qua 12h | Ela vê o padrão "em janeiro eu começo" nas conversas? |
+| 5 | **Qui 12h** | **Ritual de virada de trimestre — precisa ser ditado pela Karol** (ou trocar pro ângulo b). |
+| 6 | Sex 12h | "Rainha do método" é o elogio que mais marcou? |
+| 7 | Sáb 09h | Usa hoje o acordo de decisão imediata nas sessões? |
+| 8 | Dom 09h | Preencher com os compartilhamentos reais (sábado à noite). |
+| 9 | Dom 12h | O curso de produtividade pra mães foi divulgado neste perfil? |
+| 10 | Dom 15h | Trocar pelo resumo do Envio que mais circulou, se houver destaque. |
+
+**Teste da semana (Aria):** 🧪 1 pergunta binária por dia na legenda (Seg 17h, Ter 09h, Qua 07h, Qui 17h, Sex 17h, Sáb 07h, Dom 17h). Aria mede comentários desses 7 contra o resto no próximo relatório.
+
+## LOG
+- 25/09 — @aria-analista: relatório 15-25/09 (`analises/2026-09-25/relatorio-batch-10dias.md`) usado como base das decisões da semana.
+- 25/09 — @rico-roteirista: v1 dos 42 posts escrita a partir do PDF da Semana 09 + banco de histórias. 10 pendências marcadas com ⚠️.
