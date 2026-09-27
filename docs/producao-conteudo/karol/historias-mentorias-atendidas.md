@@ -191,6 +191,13 @@
 **Método que nasceu disso:**
 - **Conduz Agro** — trata de inteligência emocional, posicionamento e condução do relacionamento com o produtor rural, pra profissionais não entrarem em guerra de preço
 
+**ATUALIZAÇÃO (26/09/2026, palavras da Karol) — a ansiedade pelo conteúdo:**
+- "Todo aluno meu fica ansioso para chegar o Posicionamento e criação de conteúdo." Milena está nessa fase: **método criado e mentoria pronta pra ser testada** — e agora quer correr pra criar conteúdo.
+- Karol entende a ansiedade, mas Milena **já atua na área** de regularização, **já participa de grupos** dessa área, **já atende produtor rural** e **tem até alunos na parte técnica**.
+- Orientação da Karol: ela **não precisa criar conteúdo agora nem ganhar seguidor**. Precisa **qualificar os contatos que já tem no network**, **alimentar o rastreador de leads** e fazer **muitas sessões de Vendas Secretas** — pra vender, treinar o pitch, melhorar a oferta e **conhecer os números de conversão** ("a cada x sessões, y vendas").
+- Frase da Karol: "isso é que vai tornar método em negócio... o verdadeiro significado de 'seguidor não paga boleto' mora nessa fase."
+- Uso: Rota100k Semana 09, Quarta 30/09 09h (anônima, "uma aluna").
+
 **Status:** matéria-prima, ainda não usada em roteiro. ⚠️ Nota: Milena é aluna ativa com projeto de mentoria em andamento (`mentoria/alunas/milena-gehrke/`) — usar a história dela como prova social no Instagram é trabalho do squad de conteúdo, mas não confundir com os documentos do projeto Conduz Agro em si (arquivos separados, não mexer).
 
 ---

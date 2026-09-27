@@ -595,6 +595,14 @@ Registro centralizado dos causos reais da Karol nesse formato, usados ou não, p
 - [Best Hooks for Instagram Carousel — Resont](https://resont.com/blog/top-instagram-carousel-hooks/)
 - [Instagram Trends — June 2026](https://blog.mean.ceo/instagram-trends-june-2026/)
 
+## Persona compradora × persona dos sonhos (Karol, 26/09/2026)
+
+- **Persona compradora:** quem está pronto pra comprar agora.
+- **Persona dos sonhos:** quem está na missão de vida da Karol — o propósito dela no digital: **libertar profissionais que ficam presos em empregos pela estabilidade e pela segurança**.
+- Como aparece na prática: quando ela ouve a história de alguém competente, boicotado ou travado num emprego estável (ex.: servidora boa que não faz politicagem), **reconhece na hora a persona dos sonhos**.
+- Uso em conteúdo: as duas podem coexistir — a compradora sustenta a venda de agora; a dos sonhos dá direção de propósito e de narrativa. Primeira aplicação: Rota100k Semana 09, Terça 29/09 12h.
+- Gênero: masculino genérico no conteúdo ("presos"), conforme regra de vocabulário da persona.
+
 ## Persona não é só identificação: é a interseção entre história, prova e mercado
 
 - **Origem:** análise real de uma página de vendas feita por Karol em 11/09/2026. Especialista mantida anônima até autorização.

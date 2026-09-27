@@ -60,7 +60,7 @@ Relatório: `analises/2026-09-25/relatorio-batch-10dias.md`.
 
 ---
 
-## DIA 1 — Segunda, 28/09
+## DIA 1 — Segunda, 28/09 ✅ APROVADO (26/09)
 **Tema do dia:** o recado que ninguém te deu.
 
 ### 07h · Reels 7s · sem fala
@@ -82,23 +82,27 @@ Me segue que eu mostro a saída que não depende de concurso.
 **Contexto:** Em 2021, eu e meu irmão entramos numa mentoria de R$50 mil. Lançamos copiando estratégia de outros players — um lançamento Frankenstein. Investimos R$10 mil e não vendemos nada. Na análise, uma mentora que já tinha faturado R$2 milhões avisou: "você é concursada vendendo pra empresário, isso não vai dar certo."
 **Virada:** A gente foi petulante e arrogante. E não foi a única vez: em outro lançamento, outra mentora me avisou que a minha persona não queria o que eu vendia. Teimei de novo. Conselho de quem já chegou lá não é opinião — é atalho. O problema é que ele quase sempre contraria o plano que a gente ama.
 **Fecha (CTA falado):** "Me segue que eu te conto os erros que eu paguei pra você não pagar."
-**Legenda:**
-Em 2021, uma mentora que já tinha faturado R$2 milhões me avisou que meu lançamento não ia dar certo. Eu ignorei. Investimos R$10 mil e não vendemos nada.
-Conselho de quem já chegou lá não é opinião. É atalho.
+**Legenda (v2 — complementa, não repete o vídeo):**
+Pensa rápido: qual foi o último conselho que te irritou?
+Às vezes é exatamente esse que você precisava ouvir.
+Eu paguei R$10 mil pra aprender isso. Você não precisa.
 Me segue que eu te conto os erros que eu paguei pra você não pagar.
 
-⚠️ Confirmar que pode citar o valor da mentoria (R$50 mil) e o irmão. Não citar o nome do Érico nem do programa.
+✅ Karol liberou citar R$50 mil e o irmão (26/09). Não citar o nome do Érico nem do programa.
 
 ### 12h · Reels YAP
 **História:** 8 anos reclamando.
 **Abertura (0-3s):** "Eu passei 8 anos reclamando de um lugar que eu podia ter deixado."
 **Contexto:** Foram 13 anos numa empresa pública. Em 8 deles eu já queria sair. Em 2023 virei assessora, com salário de quase R$20 mil. Cargo, prestígio, poder. E mesmo assim eu queria sair.
-**Virada:** Eu esperava o momento em que sair ficasse fácil. Esse momento não veio. O que veio foi um telefonema, nas minhas férias, avisando da exoneração. A vida decidiu o que eu vinha adiando.
+**Virada:** Eu esperava o momento em que sair ficasse fácil. Esse momento não veio. O que veio foi um telefonema, nas minhas férias, avisando da exoneração. Um rápido desespero. E, ao mesmo tempo, a sensação de que tinha chegado a minha hora. Não espera o telefonema pra decidir o que você já sabe.
 **Fecha (CTA falado):** "Me segue que eu mostro como começar antes de a vida decidir por você."
-**Legenda:**
-13 anos numa empresa pública. 8 deles querendo sair. Saí no auge, ganhando quase R$20 mil — e só porque um telefonema decidiu por mim.
-O momento em que sair fica fácil não chega.
-Me segue que eu mostro como começar antes de a vida decidir por você.
+**Legenda (v2):**
+Tem gente que chama isso de estabilidade. Eu chamo de sala de espera.
+Se você reclama do mesmo lugar há mais de um ano, a pergunta não é se vai sair.
+É quem vai decidir: você ou a vida.
+Me segue que eu mostro como começar antes.
+
+*(v2: a virada não diz mais que "o telefonema decidiu por mim" — a decisão de sair veio junto com a história da missa, contada no sábado 12h. Frase do desespero/"chegou minha hora" é da própria Karol, história #13.)*
 
 ### 15h · Reels ENVIO — pra quem segura a borda
 **Texto na tela (0-3s):** "Esse vídeo é pra você mandar, não pra você assistir."
@@ -117,43 +121,50 @@ Marca quem precisa ouvir isso de alguém.
 **Virada:** Eu perguntei por que ela queria ensinar aquilo. Ela contou que é secretária e faz em 2 horas, com IA, o que levava 2 semanas. Pronto: a persona estava na história dela, não na página. Não fale do erro — faça a pergunta que deixa a pessoa enxergar sozinha.
 **Aplicação:** (1) pergunta antes de opinião; (2) fala da consequência, não da falha ("desse jeito, quem você quer atingir não se reconhece"); (3) termina com um próximo passo concreto.
 **Fecha (CTA falado):** "Me segue que eu ensino a ter conversa difícil sem estragar a relação."
-**Legenda:**
-Não fale do erro. Faça a pergunta que deixa a pessoa enxergar sozinha — e fale da consequência, não da falha.
-Me segue que eu ensino a ter conversa difícil sem estragar a relação.
+**Legenda (v2):**
+A gente acha que ser sincero é falar tudo de uma vez.
+Sinceridade que fecha a pessoa não ajuda ninguém — só alivia quem falou.
 🧪 E você: avisar um amigo do erro é sinceridade ou intromissão? Comenta.
+Me segue que eu ensino a ter conversa difícil sem estragar a relação.
 
 *(Caso Vanessa, sessão de 19/09 — anônimo, só "uma aluna".)*
+✅ Abertura mantida pela Karol (26/09).
 
 ### 20h · Carrossel neutro
 **Tema:** "Manda pra quem precisa" — recados pra quem ainda segura a borda.
-1. **Capa:** "4 coisas que alguém que você conhece precisa ler."
-2. **Reforço do hook:** Se você não consegue falar, manda esse post. Cada slide é um recado.
+1. **Capa (v2):** "4 recados pra quem vive dizendo que um dia vai sair do emprego."
+2. **Reforço do hook (v2):** Se você conhece alguém assim e não consegue falar, manda esse post. Cada slide é um recado.
 3. **Recado 1:** "Você só aprende a nadar soltando a mão da borda."
 4. **Recado 2:** "Empreender pode ser o rolê que for, mas devolve uma coisa: a decisão sobre o seu futuro."
 5. **Recado 3:** "Você não precisa se sentir pronto. Prontidão não é um estado, é hábito de repetição."
 6. **Recado 4:** "Testar em conversa não é esconder fracasso. É não se expor antes da hora."
 7. **CTA + assinatura:** "Salva e manda pra quem estiver passando por isso."
 
+**Legenda (v2 — faltava):**
+Tem conversa que a gente não consegue ter com quem ama. Aí o post fala por você.
+Escolhe o recado que essa pessoa mais precisa ouvir — e manda.
+Me segue que toda semana eu escrevo o que você não consegue falar.
+
 ---
 
-## DIA 2 — Terça, 29/09
+## DIA 2 — Terça, 29/09 ✅ APROVADO (26/09 — R$5 mil confirmados na semana de 21 a 26/09)
 **Tema do dia:** o que quase todo expert esconde.
 
 ### 07h · Reels 7s · sem fala
-**Gancho de tela:** "Você acha que é só com você. Não é."
+**Gancho de tela (v2):** "Parei de melhorar meu método. E vendi R$5 mil em uma semana."
+*(Alternativa do guia, se preferir identificação: "Você acha que é só com você. Não é.")*
 
-**Legenda:**
-Minha entrega nunca esteve tão boa.
-E eu nunca vendi tão pouco.
-Agentes de IA, área de membros, método atualizado.
-E pouca gente do outro lado recebendo.
-Demorei pra admitir: produzir não é vender.
-A ferramenta resolve o como.
-Não resolve a conversa que só você pode ter com quem vai comprar.
-Se isso acontece com você, você não está sozinho.
-Me segue que eu mostro como sair da caverna e ir vender.
+**Legenda (v2):**
+Por meses eu fiquei melhorando o método.
+Mais uma ferramenta. Mais um ajuste. Mais uma versão.
+E a sensação era de não sair do lugar.
+Semana passada eu fiz o contrário: fui destravar o que eu vinha adiando.
+Pelo menos uma conversa de venda por dia.
+Resultado: R$5 mil vendidos na semana e 6 aulas gravadas de um curso que estava travado.
+Quando você faz tudo ao mesmo tempo e só melhora o método, não enxerga evolução nenhuma.
+Me segue que eu mostro como destravar o que você está adiando.
 
-⚠️ Reflexão A da base (28/08). Confirmar se a Karol ainda se reconhece nisso e topa expor agora.
+*(v2 — fato novo dado pela Karol em 26/09: semana de 21 a 26/09, prospecção de no mínimo 1 por dia, R$5 mil faturados, 6 aulas do Expert360 gravadas. Meta: repetir e expandir. Registrado em `historias-trajetoria.md` #19.)*
 
 ### 09h · Reels YAP · 🖤 BLACK EXPERT (1/6 — abertura, T-15)
 **Opinião/alerta:** não esconder a venda. *(Imersão Ferrari [01:25:50–01:28:29])*
@@ -161,9 +172,9 @@ Me segue que eu mostro como sair da caverna e ir vender.
 **Contexto:** O comum é passar semanas "aquecendo" calado e, do nada, aparecer com uma oferta. Quem recebe se sente pego de surpresa — e desconfia.
 **Virada:** Numa imersão de Black Friday com o Leandro Ferrari, uma lição me pegou: não esconde a venda. Assume o movimento antes de abrir. Então eu assumo: dia 14 de outubro tem Black Expert. Uma condição que eu não vou repetir, nem antes nem depois. Os detalhes eu conto primeiro num grupo criado só pra isso.
 **Fecha (CTA falado):** "Comenta BLACK que eu te mando o link do grupo."
-**Legenda:**
-Esconder a venda até o último dia faz a oferta parecer emboscada. Por isso eu aviso antes: dia 14/10 tem Black Expert — uma condição que não repete.
-Os detalhes eu conto primeiro no grupo.
+**Legenda (v2):**
+Você já se sentiu emboscado por uma oferta que apareceu do nada?
+Eu faço o contrário: aviso antes, conto tudo primeiro no grupo, e você decide com calma.
 Comenta BLACK que eu te mando o link.
 
 *(Mesmo dia do Disparo #1 da campanha — WhatsApp, e-mail e Stories. O post do feed conversa com eles sem repetir a copy.)*
@@ -172,14 +183,15 @@ Comenta BLACK que eu te mando o link.
 **História que se repete:** "você não veste a camisa".
 **Abertura (0-3s):** "Me disseram que eu não vestia a camisa da empresa. Anos depois, ouvi a mesma história de uma aluna."
 **Contexto:** Eu dominava a metodologia, representava a empresa pro Governo do Estado, dava curso de gestão pra empresa toda. Nunca virei cargo. Quando substituí minha gerente, fui pressionada a assinar um estudo claramente errado. Me recusei. A partir dali, fiquei de fora de qualquer oportunidade.
-**Virada:** Hoje eu atendo uma servidora pública que vive o mesmo: é boa, não faz politicagem e é boicotada por isso. Muda o nome, muda a cidade, o enredo é idêntico. O que ela descobriu é o que eu descobri: conhecimento não basta pra ser reconhecida ali dentro — mas pode virar um negócio em que ser íntegra é o diferencial, não o problema.
+**Virada (v2):** Hoje eu atendo uma servidora pública que vive o mesmo: é boa, não faz politicagem e é boicotada por isso. Muda o nome, muda a cidade, o enredo é idêntico. E quando eu ouço uma história assim, eu reconheço na hora a minha persona dos sonhos. A persona compradora é quem está pronto pra comprar agora. A persona dos sonhos é a da minha missão de vida — o meu propósito no digital: libertar profissionais que ficam presos em empregos pela estabilidade e pela segurança.
 **Fecha (CTA falado):** "Me segue que eu mostro como transformar o que te trava em posicionamento."
-**Legenda:**
-Fui colocada de lado por me recusar a assinar um estudo errado. Anos depois, atendi uma aluna vivendo a mesma história.
-Conhecimento não basta pra ser reconhecido num lugar que premia politicagem.
-Me segue que eu mostro como transformar isso em posicionamento.
+**Legenda (v2):**
+Integridade tem preço num lugar que premia politicagem.
+Fora dele, ela vira o seu maior diferencial.
+Se você já ouviu que "não veste a camisa", talvez a camisa é que não te servia.
+Me segue se você também quer sair daí sem largar tudo no escuro.
 
-*(Caso Milena — anônimo. Não citar Conduz Agro.)*
+*(Caso Milena — anônimo, sem citar Conduz Agro. ✅ Karol aprovou em 26/09 e acrescentou a distinção persona compradora × persona dos sonhos — registrada em `base-inicial.md`.)*
 
 ### 15h · Reels ENVIO — pra quem é bom e não é reconhecido
 **Texto na tela (0-3s):** "Se você pensou em alguém agora, manda."
@@ -197,10 +209,11 @@ Marca quem está nessa fase agora.
 **Virada:** Procure quem já passou, não quem tem opinião. O conselho que mais teria me poupado dinheiro veio de alguém que já tinha faturado R$2 milhões fazendo o que eu queria fazer — e foi justamente o que eu ignorei.
 **Aplicação:** (1) pare de explicar pra quem não vai mudar de ideia; (2) procure alguém dois passos à frente no caminho que você quer; (3) em vez de argumento, mostre um resultado pequeno.
 **Fecha (CTA falado):** "Me segue que eu te mostro quem ouvir e quem deixar falando."
-**Legenda:**
-Opinião de quem nunca fez não é aviso. Procure quem já passou pelo caminho que você quer.
-Me segue que eu te mostro quem ouvir.
+**Legenda (v2):**
+Explicar sua escolha pra quem nunca fez nada parecido cansa — e raramente convence.
+Guarda essa energia pra quem já trilhou o caminho.
 🧪 Seguir conselho de família ou de quem já fez: qual pesa mais pra você? Comenta.
+Me segue que eu te mostro quem ouvir.
 
 ### 20h · Carrossel neutro
 **Tema:** "Você não está sozinho nisso."
@@ -212,6 +225,12 @@ Me segue que eu te mostro quem ouvir.
 6. **4.** Aceitar um projeto com salário fixo que te afastou do seu próprio negócio.
 7. **5.** Ter a melhor entrega da sua vida e quase ninguém comprando.
 8. **CTA + assinatura:** "Compartilha com quem acha que é só com ele."
+
+**Legenda (v2 — faltava):**
+Eu vivi as cinco. E por muito tempo achei que era só comigo.
+Não era: é o caminho de quase todo mundo que resolve transformar o que sabe em negócio.
+Marca quem precisa saber que não está sozinho.
+Me segue que eu conto o que eu fiz depois de cada uma.
 
 *(Todos os 5 documentados em `historias-trajetoria.md` — #3, #15, #16, #10 e reflexão A.)*
 
@@ -235,17 +254,19 @@ E é ela que decide como você fecha o ano.
 Me segue que amanhã eu mostro como usar os últimos 3 meses.
 
 ### 09h · Reels YAP
-**O que setembro me ensinou:** vulnerabilidade com dado real.
-**Abertura (0-3s):** "Postei seis vezes por dia em setembro. Terminei o mês com menos seguidores do que comecei."
-**Contexto:** Seis posts por dia, todo dia. E o número parado — desceu, na verdade.
-**Virada:** O que setembro me ensinou não veio do Instagram. Veio de uma aula: muitas vezes a gente acha que o funil tá fraco, quando o que falta é volume de gente entrando nele. E isso se resolve com prospecção, não com mais post. Desde então eu prospecto todo dia, pelo menos uma pessoa. Conteúdo constrói. Conversa vende.
-**Fecha (CTA falado):** "Me segue que eu mostro como eu prospecto uma pessoa por dia."
+**O que setembro me ensinou (v3):** o verdadeiro significado de "seguidor não paga boleto".
+**Abertura (0-3s):** "Todo aluno meu fica ansioso pra chegar na parte de conteúdo. E é aí que eu mais seguro."
+**Contexto:** Uma aluna minha chegou nessa fase agora: método criado, mentoria pronta pra ser testada. E ela quer correr pra criar conteúdo. Eu entendo a ansiedade. Mas ela já trabalha na área, já participa dos grupos desse mercado, já atende o cliente que quer atender e ainda tem alunos na parte técnica.
+**Virada:** Ela não precisa de seguidor agora. Precisa qualificar os contatos que já tem, alimentar o rastreador de leads e fazer muitas sessões de venda — pra vender, treinar a apresentação, melhorar a oferta e descobrir os números dela: a cada tantas conversas, tantas vendas. É isso que transforma método em negócio. Seguidor não paga boleto. E é nessa fase que essa frase faz sentido de verdade.
+**Fecha (CTA falado):** "Me segue que eu mostro como vender o seu método sem precisar de audiência."
 **Legenda:**
-6 posts por dia em setembro. Menos seguidores no fim do mês.
-O que eu aprendi: funil fraco quase sempre é falta de volume. E volume vem de conversa, não de post.
-Me segue que eu mostro como eu prospecto uma pessoa por dia.
+Conteúdo é importante. Só não é o próximo passo de todo mundo.
+Se você já tem network, cliente e gente que te conhece, seu atalho não tá no feed — tá na sua lista de contatos.
+Você sabe quantas conversas precisa ter pra fazer uma venda? Se não sabe, é por aí que começa.
+Me segue que eu mostro como vender sem precisar de audiência.
+*(Seeding: Sessões de Vendas Secretas + Rastreador de Leads Qualificados do Expert360 — nome mantido no vídeo a pedido da Karol, 26/09: "é um nome curioso, todos entendem e desejam rastrear leads".)*
 
-⚠️ Dado real das métricas: 6.833 seguidores em 02/09 → 6.828 em 25/09. **Conferir o número de 30/09 antes de gravar** e confirmar que a Karol topa expor.
+*(v3 — caso Milena contado pela Karol em 26/09, registrado em `historias-mentorias-atendidas.md` #9. Anônima, sem Conduz Agro. A mesma aluna aparece anônima na terça 12h por outro ângulo (boicote no emprego). O dado de queda de seguidores saiu — os R$5 mil ficam só na terça 07h.)*
 
 ### 12h · Reels YAP · 🖤 BLACK EXPERT (2/6)
 **O que sempre acontece no último trimestre:** Black Fraud. *(Imersão Ferrari [00:03:05–00:03:52])*
@@ -253,9 +274,9 @@ Me segue que eu mostro como eu prospecto uma pessoa por dia.
 **Contexto:** Preço inflado na véspera pra dar desconto grande, bônus empilhado que ninguém vai usar, condição que volta na semana seguinte. É o que mais aparece quando chega o fim do ano.
 **Virada:** Foi a crítica mais forte que eu ouvi na imersão do Leandro Ferrari: a condição precisa ser expressiva, justificável e coerente. Se você não consegue explicar por que ela existe, não é Black Friday — é fraude com outro nome. Na minha Black Expert, dia 14/10, a condição é real, dura um dia e não volta depois.
 **Fecha (CTA falado):** "Comenta BLACK que eu te mando o link do grupo onde eu conto tudo primeiro."
-**Legenda:**
-Condição de Black Friday precisa ser expressiva, justificável e coerente. Se não dá pra explicar por que ela existe, é Black Fraud.
-Dia 14/10 tem Black Expert: um dia, condição real, não repete.
+**Legenda (v2):**
+Se o desconto precisa de preço inflado na véspera pra parecer grande, ele não é desconto.
+Na Black Expert, o preço de sempre continua o mesmo o ano todo — a condição do dia 14/10 é que é única.
 Comenta BLACK que eu te mando o link do grupo.
 
 ### 15h · Reels ENVIO — pra quem sempre diz "mês que vem"
@@ -274,8 +295,10 @@ Marca aquela pessoa que adia desde janeiro — e cobra ela amanhã.
 **Virada:** Capacidade não é prioridade. Eu divido tudo em quatro: só eu posso fazer e gera resultado → faço; precisa acontecer mas não depende de mim → delego; não muda o resultado agora → deixo pra depois; ocupa o lugar de venda, família ou descanso → corto.
 **Aplicação:** lista tudo que você quer até dezembro, passa pelas quatro colunas. Do que sobrar em "faço", escolhe um.
 **Fecha (CTA falado):** "Me segue que eu te ajudo a escolher o que fica."
-**Legenda:**
-Faço, delego, deixo pra depois, corto. Passa sua lista de fim de ano por essas quatro colunas — e escolhe um do "faço".
+**Legenda (v2):**
+Todo fim de ano tem a mesma cena: lista enorme em outubro, quase nada feito em dezembro.
+Esse ano, experimenta cortar antes de acrescentar.
+O que você vai tirar da sua lista hoje?
 Me segue que eu te ajudo a escolher o que fica.
 
 ### 20h · Carrossel neutro
@@ -288,6 +311,11 @@ Me segue que eu te ajudo a escolher o que fica.
 6. **Dezembro — decisão:** fechar, entregar e ouvir o primeiro resultado.
 7. **No último dia de cada mês:** o que eu mantive, o que eu larguei, o que eu nem comecei.
 8. **CTA + assinatura:** "Salva e revisa no fim de cada mês. Manda pra quem quer virar o ano com resultado."
+
+**Legenda (v2 — faltava):**
+Não precisa de um plano perfeito pra fechar o ano. Precisa de três objetivos que caibam.
+Salva, escolhe o seu de outubro hoje e volta aqui no dia 31.
+Me segue que eu te acompanho mês a mês.
 
 ---
 
@@ -596,7 +624,7 @@ Me segue que eu te lembro na sexta.
 |---|---|---|
 | 1 | Seg 09h | Pode citar R$50 mil da mentoria e o irmão? |
 | 2 | Ter 07h | Karol ainda se reconhece em "minha entrega nunca esteve tão boa e eu nunca vendi tão pouco"? Topa expor? |
-| 3 | Qua 09h | Conferir seguidores em 30/09 e confirmar que topa expor a queda. |
+| 3 | Qua 09h | ✅ Resolvido (26/09) — virou o caso da aluna ansiosa pelo conteúdo; saiu o dado de seguidores. |
 | 4 | Qui 12h 🖤 | As 3 perguntas de prontidão deram "sim" pra Black Expert? |
 | 5 | Sex 12h | "Rainha do método" é o elogio que mais marcou? |
 | 6 | Dom 09h | Preencher com os compartilhamentos reais (sábado à noite). |

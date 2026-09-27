@@ -29,6 +29,7 @@
 - [16. Ela não tinha o skin in the game das próprias alunas](#16-ela-não-tinha-o-skin-in-the-game-das-próprias-alunas-babá-x-costureira-sobrecarregada)
 - [17. 45 dias de férias na Austrália — o negócio na mão de outra pessoa](#17-45-dias-de-férias-na-austrália--o-negócio-na-mão-de-outra-pessoa)
 - [18. A guinada pro método — "seja a rainha do método"](#18-a-guinada-pro-método--seja-a-rainha-do-método-euriler)
+- [19. A semana em que eu parei de melhorar o método — R$5 mil + 6 aulas](#19-a-semana-em-que-eu-parei-de-melhorar-o-método-21-a-26092026) — 🆕 26/09
 
 **⚠️ Material sensível — não usar sem autorização explícita da Karol, caso a caso:**
 - [S1. A babá Jaqueline (trauma de infância)](#s1-a-babá-jaqueline-trauma-de-infância)
@@ -283,6 +284,22 @@
 **Leitura da squad:** história de origem do posicionamento atual — explica de forma concreta por que ela é "a do método" e não "a do lançamento", com uma feedback honesta e específica de mentor como gatilho da virada (não epifania sozinha).
 
 **Status:** 🆕 disponível, nunca usada como causo próprio
+
+---
+
+## 19. A semana em que eu parei de melhorar o método (21 a 26/09/2026)
+
+**Fatos (palavras da Karol, 26/09/2026):**
+- Vinha sentindo que a entrega estava ótima e a venda baixa (ver reflexão A em `base-inicial.md`, 28/08)
+- Na semana de 21 a 26/09 **fez o contrário**: decidiu focar na **prospecção diária, pelo menos 1 por dia**
+- Resultado: **faturou R$5 mil na semana**. Meta: **repetir e expandir**
+- Na mesma semana **gravou 6 aulas do curso que estava travado** (Expert360)
+- Nas palavras dela: "essa semana eu decidi destravar o que eu estava procrastinando e deu muito resultado, além da satisfação de ver as coisas andando"
+- Leitura dela: "quando fazemos muitas coisas ao mesmo tempo e ficamos melhorando o método, parece que não vemos evolução real"
+
+**Leitura da squad:** virada concreta e recente da reflexão A ("minha entrega nunca esteve tão boa e eu nunca vendi tão pouco") — agora com número real. Liga com o aprendizado do Caio Carneiro (funil fraco = falta de volume) e com o critério fazer/delegar/adiar/cortar.
+
+**Status:** usada — Rota100k Semana 09, Terça 29/09 07h (ângulo "parei de melhorar o método") e Quarta 30/09 09h (ângulo "seguidor × venda").
 
 ---
 
