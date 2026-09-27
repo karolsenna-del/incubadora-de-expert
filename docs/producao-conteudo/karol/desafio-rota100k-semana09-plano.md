@@ -7,6 +7,20 @@
 > CTA oficial: **seguir**, sempre amarrado ao tema. No 15h, o fecho é marcar alguém.
 > Fato só o documentado (`historias-trajetoria.md`, `historias-mentorias-atendidas.md`, `base-inicial.md`) ou dito pela Karol. ⚠️ = precisa de confirmação antes de gravar/publicar.
 > **v1 — 25/09/2026. Aguardando revisão item a item com a Karol.**
+> **v1.1 — 26/09/2026:** entra a antecipação da **Black Expert (14/10)** — 1 post por dia, de terça 29/09 a domingo 04/10, com um aprendizado da imersão de Black Friday do Leandro Ferrari (fonte: `business/propostas/proposta-black-friday-euriler.md`, seção "Fontes da imersão", com os minutos da transcrição) e CTA **"Comenta BLACK que eu te mando o link do grupo"**. Regras da campanha respeitadas (`business/campanhas/black-friday-grupo-2026/`): nome "Black Expert", escassez só de tempo (1 dia, não repete), sem preço e sem bônus antes da data de reveal, grupo tratado como espaço criado só pra essa campanha.
+
+## 🖤 Black Expert na semana (1 por dia, marcados com 🖤)
+
+| Dia | Slot | Aprendizado da imersão | Alinhado com |
+|---|---|---|---|
+| Ter 29/09 | 09h | Não esconder a venda — assumir o movimento antes | Disparo #1 (T-15) |
+| Qua 30/09 | 12h | Black Fraud — condição expressiva, justificável e coerente | — |
+| Qui 01/10 | 12h | Nem toda operação deve fazer Black: 3 perguntas de prontidão | — |
+| Sex 02/10 | 09h | A minha Black do ano passado foi improvisada | Disparo #2 (T-12) |
+| Sáb 03/10 | 09h | Implementação vale mais que horas de curso | — |
+| Dom 04/10 | 12h | 15 dias antes pra base próxima, 30 pra público novo | T-10 |
+
+⚠️ **CTA "comenta BLACK":** a automação comentário → Direct (SOP-022) ainda está em App Review na Meta. Até liberar, alguém precisa responder cada comentário manualmente com o link `chat.whatsapp.com/D150ioiZPgfGuYgsSNIwBH` — ou a Karol deixa o link também na bio/Stories.
 
 ---
 
@@ -141,17 +155,18 @@ Me segue que eu mostro como sair da caverna e ir vender.
 
 ⚠️ Reflexão A da base (28/08). Confirmar se a Karol ainda se reconhece nisso e topa expor agora.
 
-### 09h · Reels YAP
-**Opinião:** o fracasso que todo mundo esconde.
-**Abertura (0-3s):** "Eu fiz um lançamento inteiro e vendi uma vaga. A aluna nunca entrou."
-**Contexto:** Quase todo expert tem um lançamento que não conta. O meu foi um curso de produtividade pra mães de bebê. Uma venda, no último dia do carrinho, faltando uma hora. Uma lead fria que eu nem entendia de onde tinha vindo. Fui atrás algumas vezes. Ela nunca entrou na plataforma.
-**Virada:** A gente esconde por vergonha. Mas foi ali que eu entendi: venda aleatória não é validação. Lançar pro vazio dá resultado aleatório, não negócio.
-**Fecha (CTA falado):** "Me segue que eu mostro o que eu faço hoje em vez de lançar pro vazio."
+### 09h · Reels YAP · 🖤 BLACK EXPERT (1/6 — abertura, T-15)
+**Opinião/alerta:** não esconder a venda. *(Imersão Ferrari [01:25:50–01:28:29])*
+**Abertura (0-3s):** "Quase todo expert esconde que vai vender até o último dia. Eu vou te contar agora."
+**Contexto:** O comum é passar semanas "aquecendo" calado e, do nada, aparecer com uma oferta. Quem recebe se sente pego de surpresa — e desconfia.
+**Virada:** Numa imersão de Black Friday com o Leandro Ferrari, uma lição me pegou: não esconde a venda. Assume o movimento antes de abrir. Então eu assumo: dia 14 de outubro tem Black Expert. Uma condição que eu não vou repetir, nem antes nem depois. Os detalhes eu conto primeiro num grupo criado só pra isso.
+**Fecha (CTA falado):** "Comenta BLACK que eu te mando o link do grupo."
 **Legenda:**
-Um lançamento inteiro. Uma venda, na última hora do carrinho. A aluna nunca entrou na plataforma.
-Venda aleatória não é validação.
-Me segue que eu mostro o que eu faço hoje em vez de lançar pro vazio.
-🧪 Contar um fracasso em público: coragem ou exposição? Comenta.
+Esconder a venda até o último dia faz a oferta parecer emboscada. Por isso eu aviso antes: dia 14/10 tem Black Expert — uma condição que não repete.
+Os detalhes eu conto primeiro no grupo.
+Comenta BLACK que eu te mando o link.
+
+*(Mesmo dia do Disparo #1 da campanha — WhatsApp, e-mail e Stories. O post do feed conversa com eles sem repetir a copy.)*
 
 ### 12h · Reels YAP
 **História que se repete:** "você não veste a camisa".
@@ -185,6 +200,7 @@ Marca quem está nessa fase agora.
 **Legenda:**
 Opinião de quem nunca fez não é aviso. Procure quem já passou pelo caminho que você quer.
 Me segue que eu te mostro quem ouvir.
+🧪 Seguir conselho de família ou de quem já fez: qual pesa mais pra você? Comenta.
 
 ### 20h · Carrossel neutro
 **Tema:** "Você não está sozinho nisso."
@@ -231,18 +247,16 @@ Me segue que eu mostro como eu prospecto uma pessoa por dia.
 
 ⚠️ Dado real das métricas: 6.833 seguidores em 02/09 → 6.828 em 25/09. **Conferir o número de 30/09 antes de gravar** e confirmar que a Karol topa expor.
 
-### 12h · Reels YAP
-**O que sempre acontece no último trimestre.**
-**Abertura (0-3s):** "De outubro em diante, muita gente começa a falar em janeiro."
-**Contexto:** "Em janeiro eu lanço." "Ano que vem eu começo." O último trimestre vira sala de espera do ano seguinte.
-**Virada:** Janeiro não tem nada de diferente. Você chega nele com as mesmas dúvidas e três meses a menos de teste. Quem conversa com 10 pessoas do seu público até dezembro chega em janeiro sabendo o que vender. Quem espera chega sabendo o mesmo que sabe hoje.
-**Fecha (CTA falado):** "Me segue que eu mostro como usar esses 3 meses a seu favor."
+### 12h · Reels YAP · 🖤 BLACK EXPERT (2/6)
+**O que sempre acontece no último trimestre:** Black Fraud. *(Imersão Ferrari [00:03:05–00:03:52])*
+**Abertura (0-3s):** "Desconto inventado só pra ter o que postar tem nome: Black Fraud."
+**Contexto:** Preço inflado na véspera pra dar desconto grande, bônus empilhado que ninguém vai usar, condição que volta na semana seguinte. É o que mais aparece quando chega o fim do ano.
+**Virada:** Foi a crítica mais forte que eu ouvi na imersão do Leandro Ferrari: a condição precisa ser expressiva, justificável e coerente. Se você não consegue explicar por que ela existe, não é Black Friday — é fraude com outro nome. Na minha Black Expert, dia 14/10, a condição é real, dura um dia e não volta depois.
+**Fecha (CTA falado):** "Comenta BLACK que eu te mando o link do grupo onde eu conto tudo primeiro."
 **Legenda:**
-Janeiro não muda nada sozinho. Você chega nele com três meses a menos de teste.
-Quem se antecipa no trimestre chega em janeiro sabendo o que vender.
-Me segue que eu mostro como usar esses 3 meses.
-
-⚠️ Confirmar se a Karol vê esse padrão nas conversas dela ("em janeiro eu começo") — se não, reescrever como opinião pura.
+Condição de Black Friday precisa ser expressiva, justificável e coerente. Se não dá pra explicar por que ela existe, é Black Fraud.
+Dia 14/10 tem Black Expert: um dia, condição real, não repete.
+Comenta BLACK que eu te mando o link do grupo.
 
 ### 15h · Reels ENVIO — pra quem sempre diz "mês que vem"
 **Texto na tela (0-3s):** "Manda pra quem vive dizendo que vai começar mês que vem."
@@ -304,11 +318,18 @@ Você não precisa recomeçar. Precisa continuar.
 Prontidão não é um estado — é hábito de repetição.
 Me segue que eu mostro como continuar sem ficar pronto.
 
-### 12h · Reels YAP ⚠️ PENDENTE
-**O que eu faço em outubro todo ano / meu ritual de virada de trimestre.**
-⚠️ **Não existe ritual documentado da Karol.** Não roteirizar sem ela ditar. Duas saídas:
-- **(a) Karol dita o ritual real** → Rico roteiriza na hora.
-- **(b) Se não houver ritual:** trocar o ângulo pra "o que eu vou fazer nesse outubro" — por exemplo, dar nota de 0 a 2 pra cada uma das 7 etapas do funil de validação (framework dela, já usado na S07 domingo 17h) e corrigir só a menor. Abertura candidata: "Esse outubro eu vou dar nota pro meu próprio funil. A menor nota ganha o trimestre."
+### 12h · Reels YAP · 🖤 BLACK EXPERT (3/6)
+**O que eu fiz nesse outubro:** o diagnóstico de prontidão antes da Black. *(Imersão Ferrari [00:17:27–00:18:14])*
+**Abertura (0-3s):** "Antes de decidir fazer Black Friday esse ano, eu respondi três perguntas."
+**Contexto:** Black Friday não é pra todo mundo. Depende do momento do produto, da base e da oferta — foi a ficha que caiu na imersão do Leandro Ferrari.
+**Virada:** Um: eu tenho um produto que já vendeu? Dois: tenho uma base que me conhece, mesmo pequena? Três: a minha oferta é ousada o suficiente pra justificar a data? Se alguma resposta é não, a data não resolve — melhor aquecer e fazer valendo no ano que vem. As minhas três deram sim. Por isso, dia 14/10, tem Black Expert.
+**Fecha (CTA falado):** "Comenta BLACK que eu te mando o link do grupo."
+**Legenda:**
+Produto que já vendeu, base que te conhece, oferta ousada. Sem os três, Black Friday vira desespero disfarçado de tática.
+As minhas três deram sim: dia 14/10 tem Black Expert.
+Comenta BLACK que eu te mando o link do grupo.
+
+⚠️ Confirmar que as três respostas da Karol são "sim" (Mentoria em Grupo já vendeu; base de 150 contatos; 50% real num preço que não muda o ano todo). Resolve a antiga pendência do "ritual de outubro".
 
 ### 15h · Reels ENVIO — pra fazer junto
 **Texto na tela (0-3s):** "Marca a pessoa que vai fazer isso com você."
@@ -362,16 +383,18 @@ Vivência, não.
 Guarda essa frase pro dia em que você duvidar de si.
 Me segue que eu te ajudo a transformar vivência em método.
 
-### 09h · Reels YAP
-**Opinião:** a frase que eu repito desde 2025.
-**Abertura (0-3s):** "Tem uma frase que eu repito desde 2025."
-**Contexto:** "Não acredito em método nascendo agora sem entregável feito com IA."
-**Virada:** Produto feito em 2024 ou 2025 sem atualização já fica defasado. O conhecimento continua valendo; a entrega, não. Quem não atualiza a entrega fica pra trás, mesmo com conhecimento bom. E IA não é o que você promete — é o que você entrega.
-**Fecha (CTA falado):** "Me segue que eu mostro como a IA entra no meu método sem virar promessa."
+### 09h · Reels YAP · 🖤 BLACK EXPERT (4/6 — alinhado ao Disparo #2, T-12)
+**Alerta:** a minha Black do ano passado foi improvisada.
+**Abertura (0-3s):** "A minha Black do ano passado foi improvisada. E a oferta era fraca."
+**Contexto:** Entrei na data sem campanha estruturada. Achei que a data ia fazer o trabalho por mim.
+**Virada:** A data, sozinha, não corrigiu o que faltava na estratégia. Esse ano é diferente: comecei a preparar com antecedência, com uma condição de verdade e um grupo só pra isso. Dia 14/10.
+**Fecha (CTA falado):** "Comenta BLACK que eu te mando o link do grupo."
 **Legenda:**
-Não acredito em método nascendo agora sem entregável feito com IA. O conhecimento continua valendo — a entrega desatualizada fica pra trás.
-Me segue que eu mostro como a IA entra no método sem virar promessa.
-*(Seeding implícito: Biblioteca de Agentes de IA.)*
+Ano passado eu entrei na Black sem campanha e com oferta fraca. A data não salvou nada.
+Esse ano eu preparei antes: dia 14/10 tem Black Expert.
+Comenta BLACK que eu te mando o link do grupo.
+
+*(Fato documentado em `live-28-roteiro.md`, dito pela própria Karol na live 28. Mesmo dia do Disparo #2 — ângulo de vulnerabilidade.)*
 
 ### 12h · Reels YAP
 **História:** o elogio que mais me marcou.
@@ -437,18 +460,18 @@ Qual delas te pegou?
 E se você mandou algum vídeo meu pra alguém, me conta: funcionou?
 Me segue que semana que vem tem mais.
 
-### 09h · Reels YAP
-**Opinião:** o que eu faço diferente do resto — decisão combinada antes.
-**Abertura (0-3s):** "Eu não fico correndo atrás de lead depois da reunião. Combino a decisão antes."
-**Contexto:** O comum em venda é terminar a conversa com "vou pensar" e passar semanas mandando mensagem.
-**Virada:** Na minha sessão, depois que a pessoa reconhece que precisa de ajuda, eu faço um acordo: vou explicar tudo, você tira todas as dúvidas, e no fim me diz sim ou não. Se não fizer sentido, tudo bem — eu não fico insistindo. Isso não é pressão. É transparência, e respeita o direito da pessoa de dizer não. Só funciona com quem já foi qualificado antes.
-**Fecha (CTA falado):** "Me segue que eu ensino como conduzir essa conversa."
+### 09h · Reels YAP · 🖤 BLACK EXPERT (5/6)
+**O que eu faço diferente do resto:** implementação, não mais horas de aula. *(Imersão Ferrari [04:26:53–04:29:21])*
+**Abertura (0-3s):** "Eu não vendo mais horas de aula. Vendo implementação."
+**Contexto:** O mercado compete por quem entrega mais módulo, mais aula, mais bônus. E o aluno termina com mais conteúdo guardado e o mesmo negócio parado.
+**Virada:** Na imersão do Leandro Ferrari isso apareceu com todas as letras: praticidade e implementação valem mais que empilhar horas de curso. É o que eu já faço — método, documentos e ferramentas prontos, com acompanhamento, pra você sair do planejamento. E é isso que vai estar na Black Expert, dia 14/10.
+**Fecha (CTA falado):** "Comenta BLACK que eu te mando o link do grupo."
 **Legenda:**
-Em vez de "vou pensar" e semanas de follow-up, eu combino a decisão antes de apresentar a proposta. Sim ou não — e os dois estão bem.
-Me segue que eu ensino como conduzir essa conversa.
-*(Seeding implícito: Sessão de Vendas Secretas com Decisão Imediata.)*
+Mais horas de aula não tiram ninguém do planejamento. Implementação tira.
+Dia 14/10, na Black Expert, eu abro uma condição pra fazer isso comigo.
+Comenta BLACK que eu te mando o link do grupo.
 
-⚠️ Confirmar que a Karol usa o acordo de decisão imediata nas sessões dela hoje (está documentado como método, em `base-inicial.md`).
+⚠️ Não citar bônus (Desafio 5 dias, Central do Mentor, Agente do Método) — o reveal é no Disparo #6, dia 11/10.
 
 ### 12h · Reels YAP
 **História:** um dia qualquer que mudou tudo. *(tema legado — maior tempo médio da janela anterior)*
@@ -522,18 +545,16 @@ Me segue e manda pra mais uma pessoa hoje.
 **Fecha (CTA falado):** "Me segue — e obrigada a quem passou adiante."
 *(Se o número não subir, a abertura muda pra honestidade: "Pedi a semana toda pra vocês compartilharem. Olha o que aconteceu." — e a Aria lê o motivo.)*
 
-### 12h · Reels YAP
-**História:** quem me acompanha desde o começo.
-**Abertura (0-3s):** "Tem gente aqui desde quando esse perfil falava de produtividade pra mãe de bebê."
-**Contexto:** Meu primeiro curso foi esse. Fiz poucas vendas. Eu tinha filha única, rede de apoio e babá. Minhas alunas eram costureiras que cuidavam dos outros, da casa, ajudavam a sustentar a família e ainda tinham que ser produtivas.
-**Virada:** Eu não tinha o skin in the game delas — meu método não cabia na realidade delas. Esse perfil mudou muito desde então. Se você está aqui desde lá, você viu o erro e a virada. Obrigada.
-**Fecha (CTA falado):** "Comenta há quanto tempo você me acompanha."
+### 12h · Reels YAP · 🖤 BLACK EXPERT (6/6 — T-10)
+**Bastidor:** por que eu comecei a falar da Black 15 dias antes. *(Imersão Ferrari [02:06:10–02:08:58])*
+**Abertura (0-3s):** "Faltam 10 dias pra minha Black Expert. Eu comecei a falar dela 15 dias antes — de propósito."
+**Contexto:** Muita gente anuncia Black Friday na véspera e estranha quando ninguém compra.
+**Virada:** Na imersão do Leandro Ferrari, a referência foi: pra quem vende pra base que já te conhece, uns 15 dias antes; pra quem capta público novo, uns 30. Não é regra fixa — é o tempo que a pessoa precisa pra conhecer a proposta, confiar e se organizar pra decidir. Quem está no grupo já está sabendo antes de todo mundo.
+**Fecha (CTA falado):** "Comenta BLACK que eu te mando o link do grupo."
 **Legenda:**
-Esse perfil já falou de produtividade pra mãe de bebê. Eu errei a persona: minha realidade não era a das minhas alunas.
-Se você está aqui desde lá, viu o erro e a virada.
-Comenta há quanto tempo você me acompanha.
-
-⚠️ Confirmar que o curso de produtividade foi divulgado **neste** perfil (@karolsenna._). Se não foi, trocar a abertura por "Esse perfil mudou muito — e eu errei bastante antes de chegar aqui."
+Anunciar Black Friday na véspera é pedir decisão sem dar tempo de confiar.
+Faltam 10 dias pra Black Expert — e quem está no grupo sabe de tudo primeiro.
+Comenta BLACK que eu te mando o link do grupo.
 
 ### 15h · Reels ENVIO — o melhor da semana pra repassar
 **Texto na tela (0-3s):** "Se você só mandar um vídeo meu essa semana, manda esse."
@@ -560,10 +581,10 @@ Me segue que eu te lembro na sexta.
 **Tema:** "A semana inteira em um post."
 1. **Capa:** "A semana inteira em um post: 6 lições."
 2. **Segunda:** conselho de quem já chegou lá não é opinião. É atalho.
-3. **Terça:** o fracasso que você esconde é o que mais ensina.
+3. **Terça:** não esconda a venda. Assumir o movimento antes gera confiança, não rejeição.
 4. **Quarta e quinta:** três meses dão pra testar uma ideia inteira — com meta de ação, não de torcida.
 5. **Sexta:** diploma é o que você estudou. Método é o que você viveu.
-6. **Sábado:** combina a decisão antes, e ninguém precisa correr atrás de ninguém depois.
+6. **Sábado:** mais horas de aula não tiram ninguém do planejamento. Implementação tira.
 7. **Domingo:** uma conversa por dia vale mais que cinco prioridades.
 8. **CTA + assinatura:** "Se você perdeu algum dia, está tudo aqui. Salva e manda pra uma pessoa."
 
@@ -576,16 +597,23 @@ Me segue que eu te lembro na sexta.
 | 1 | Seg 09h | Pode citar R$50 mil da mentoria e o irmão? |
 | 2 | Ter 07h | Karol ainda se reconhece em "minha entrega nunca esteve tão boa e eu nunca vendi tão pouco"? Topa expor? |
 | 3 | Qua 09h | Conferir seguidores em 30/09 e confirmar que topa expor a queda. |
-| 4 | Qua 12h | Ela vê o padrão "em janeiro eu começo" nas conversas? |
-| 5 | **Qui 12h** | **Ritual de virada de trimestre — precisa ser ditado pela Karol** (ou trocar pro ângulo b). |
-| 6 | Sex 12h | "Rainha do método" é o elogio que mais marcou? |
-| 7 | Sáb 09h | Usa hoje o acordo de decisão imediata nas sessões? |
-| 8 | Dom 09h | Preencher com os compartilhamentos reais (sábado à noite). |
-| 9 | Dom 12h | O curso de produtividade pra mães foi divulgado neste perfil? |
-| 10 | Dom 15h | Trocar pelo resumo do Envio que mais circulou, se houver destaque. |
+| 4 | Qui 12h 🖤 | As 3 perguntas de prontidão deram "sim" pra Black Expert? |
+| 5 | Sex 12h | "Rainha do método" é o elogio que mais marcou? |
+| 6 | Dom 09h | Preencher com os compartilhamentos reais (sábado à noite). |
+| 7 | Dom 15h | Trocar pelo resumo do Envio que mais circulou, se houver destaque. |
+| 8 | 🖤 todos | Quem responde os comentários "BLACK" com o link enquanto a automação não libera? |
 
-**Teste da semana (Aria):** 🧪 1 pergunta binária por dia na legenda (Seg 17h, Ter 09h, Qua 07h, Qui 17h, Sex 17h, Sáb 07h, Dom 17h). Aria mede comentários desses 7 contra o resto no próximo relatório.
+**Teste da semana (Aria):** 🧪 1 pergunta binária por dia na legenda (Seg 17h, Ter 17h, Qua 07h, Qui 17h, Sex 17h, Sáb 07h, Dom 17h). Aria mede comentários desses 7 contra o resto no próximo relatório — e, à parte, quantos "BLACK" cada post 🖤 gerou.
+
+## Reserva (saíram pra dar lugar à Black — prontos pra semana 10)
+
+- **Venda fantasma** (ex-Ter 09h) — "Eu fiz um lançamento inteiro e vendi uma vaga. A aluna nunca entrou." História #3.
+- **A frase que eu repito desde 2025** (ex-Sex 09h) — "Não acredito em método nascendo agora sem entregável feito com IA." História #5.
+- **Decisão combinada antes** (ex-Sáb 09h) — Sessão de Vendas Secretas com Decisão Imediata. ⚠️ confirmar uso atual. Encaixa bem no Disparo #5 (mecanismo, 09/10).
+- **Quem me acompanha desde o começo** (ex-Dom 12h) — produtividade pra mães / costureiras. ⚠️ confirmar se foi neste perfil.
+- **Janeiro não muda nada sozinho** (ex-Qua 12h) — ⚠️ confirmar se ela vê o padrão.
 
 ## LOG
 - 25/09 — @aria-analista: relatório 15-25/09 (`analises/2026-09-25/relatorio-batch-10dias.md`) usado como base das decisões da semana.
 - 25/09 — @rico-roteirista: v1 dos 42 posts escrita a partir do PDF da Semana 09 + banco de histórias. 10 pendências marcadas com ⚠️.
+- 26/09 — @rico-roteirista: v1.1 — 6 posts 🖤 da antecipação da Black Expert (29/09 a 04/10) com aprendizados da imersão Ferrari e CTA "comenta BLACK". 5 posts foram pra reserva.
