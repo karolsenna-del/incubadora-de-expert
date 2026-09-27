@@ -912,3 +912,81 @@ knowledge_facets:
     confidence: 0.90
     inferred: false
     pareto_zone: "impact"
+
+  - kf_id: "KF-vendedor-secreto-056"
+    type: FRAMEWORK
+    content: "Leitura ao Vivo em 2 Lentes: o que você vê (postura, gestos, expressão, aproximação da câmera) e o que você ouve (ritmo, tom, palavras) — confirma ou corrige nos primeiros 5 minutos o perfil lido online"
+    domain: "Rapport e Leitura de Lead"
+    source_expert: "Karol"
+    source_doc: "m3-roteiros.md"
+    source_tier: "ouro"
+    confidence: 0.95
+    inferred: false
+    source_ref: "[SOURCE: SRC-005, M3 A11]"
+    pareto_zone: "impact"
+    notes: "RESOLVE TENSÃO com KF-042 (checagem de ritmo, Dani Martins): o ritmo passa a ser um dos sinais da lente 'o que você ouve' — convivem, não competem. Leitura online (4 camadas) = hipótese; leitura ao vivo = confirmação."
+
+  - kf_id: "KF-vendedor-secreto-057"
+    type: FRAMEWORK
+    content: "Condução por Perfil: Conector (não cortar o papo inicial; ponte com história; oferta pelo impacto nas pessoas), Analista (perguntas específicas + silêncio; lógica fase a fase; tempo com data), Diretivo (abertura curta; oferta pelo resultado; decisão com o lead) — cada um com o que trava"
+    domain: "Rapport e Leitura de Lead"
+    source_expert: "Karol"
+    source_doc: "m3-roteiros.md"
+    source_tier: "ouro"
+    confidence: 0.95
+    inferred: false
+    source_ref: "[SOURCE: SRC-005, M3 A11]"
+    pareto_zone: "impact"
+    notes: ""
+
+  - kf_id: "KF-vendedor-secreto-058"
+    type: HEURISTIC
+    content: "SE a sessão sai do roteiro ENTÃO: preço cedo → 'já chego nisso — antes, quero entender se faz sentido pra você'; fala demais → recapitular com as palavras do lead e voltar; não se abre → perguntas menores e mais concretas, falar menos"
+    domain: "Frameworks de Sessão"
+    source_expert: "Karol"
+    source_doc: "m3-roteiros.md"
+    source_tier: "ouro"
+    confidence: 0.95
+    inferred: false
+    source_ref: "[SOURCE: SRC-005, M3 A11]"
+    pareto_zone: "impact"
+    notes: ""
+
+  - kf_id: "KF-vendedor-secreto-059"
+    type: FRAMEWORK
+    content: "Protocolo do Pedido de Desconto: acolhe + 'o que está pesando mais pra você: o valor em si ou alguma outra coisa?' → outra coisa = resposta por perfil (acolhimento / retorno / condições da oferta) → valor = 'se o valor não fosse uma questão, você entraria?' (sim: condições de pagamento; não cabe: fit → Lead frio com data)"
+    domain: "Objeções e Fechamento"
+    source_expert: "Karol"
+    source_doc: "m3-roteiros.md"
+    source_tier: "ouro"
+    confidence: 0.95
+    inferred: false
+    source_ref: "[SOURCE: SRC-005, M3 A11]"
+    pareto_zone: "impact"
+    notes: "CONVERGÊNCIA com KF de Linhas de Negociação (Tomás): as 'condições que já existem na oferta' são exatamente essas linhas — desconto à vista mantido. Estende a sequência acolhe→pergunta→responde (Crown Jewel 2.2)."
+
+  - kf_id: "KF-vendedor-secreto-060"
+    type: PRINCIPLE
+    content: "Condição de pagamento é regra da oferta; desconto negociado é preço que cedeu — nunca reduzir o preço porque o lead pediu"
+    domain: "Objeções e Fechamento"
+    source_expert: "Karol"
+    source_doc: "m3-roteiros.md"
+    source_tier: "ouro"
+    confidence: 0.95
+    inferred: false
+    source_ref: "[SOURCE: SRC-005, M3 A11]"
+    pareto_zone: "impact"
+    notes: "Decisão da Karol 26/09: desconto à vista é normal em high ticket e continua como condição de pagamento; o que se evita é o desconto concedido na hora, sob pedido."
+
+  - kf_id: "KF-vendedor-secreto-061"
+    type: HEURISTIC
+    content: "SE a sessão terminou ENTÃO confira se o perfil anotado no Rastreador se confirmou ao vivo — se não, corrija a coluna Perfil; o próximo contato segue o perfil real"
+    domain: "Pós-Sessão"
+    source_expert: "Karol"
+    source_doc: "m3-roteiros.md"
+    source_tier: "ouro"
+    confidence: 0.95
+    inferred: false
+    source_ref: "[SOURCE: SRC-005, M3 A11]"
+    pareto_zone: "impact"
+    notes: ""

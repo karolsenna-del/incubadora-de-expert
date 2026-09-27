@@ -70,6 +70,20 @@ sources:
       - "Psicologia da decisao de compra (dor e desejo, 85% emocional, preco x valor)"
     notes: "Ja passou por ETL completo (ETLmaker v3.0, validacao final 99.2%, APPROVED). Expert convidado (guest) — nao faz parte do Expert360/mentoria da Karol, e uma aula externa (Prosperus Club) trazida pela usuaria pra enriquecer a mente. Framework de venda consultiva generalista (nao especifico de sessao 1:1 de alto ticket) — entra como 4o expert fundido a pedido explicito da usuaria em 22/09/2026, apos ETLmaker concluir a KB. Bloco de Q&A da aula original foi descartado no ETLmaker e NAO esta disponivel aqui."
 
+  - id: SRC-005
+    path: "business/campanhas/expert360-curso/roteiros/m3-roteiros.md"
+    type: "roteiro-de-aula"
+    tier: "ouro"
+    tier_weight: 1.0
+    expert: "Karol"
+    sections: 3
+    quality: "deep"
+    key_sections:
+      - "M3 A7 — Lendo seu lead antes do primeiro contato (3 perfis, leitura online em 4 camadas)"
+      - "M3 A11 — Conduzindo a Sessão ao Vivo (2 lentes, condução por perfil, sessão fora do roteiro, pedido de desconto)"
+      - "M3 A12 — Pós-sessão (correção do perfil no Rastreador)"
+    notes: "Adicionada em 26/09/2026 (update 2.1.0). Conteúdo aprovado pela Karol no Course Creator (QG-CC-006 PASS). Ideia de leitura ao vivo inspirada num material externo, adaptada sem citar autor nem conceitos proprietários dele (decisão da Karol)."
+
 readme_docs_transversais:
   - "agents/etlmaker/kbs/sessao-estrategica/README.md"
   - "agents/etlmaker/kbs/sessao-estrategica/REGRAS-CARDINAIS.md"

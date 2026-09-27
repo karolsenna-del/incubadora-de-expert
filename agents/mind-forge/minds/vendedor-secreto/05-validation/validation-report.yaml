@@ -32,3 +32,15 @@ decisoes_de_design_da_usuaria:
   - "Framework de sessão: fusão própria em 5 etapas (não escolha de 1 dos 3 originais)"
   - "Rigor do pitch: seeding no início + execução garantida depois do diagnóstico"
   - "Domínio 'Qualificação de Lead Pré-Sessão' adicionado como core, a pedido da usuária"
+
+validacao_update_2_1_0:
+  data: "2026-09-26"
+  versao: "2.0.0 -> 2.1.0"
+  escopo: "Alinhamento com Expert360º M3 A7/A11/A12 (leitura ao vivo, condução por perfil, pedido de desconto, sessão fora do roteiro, revisor confere perfil, linguagem neutra)"
+  testes:
+    teste_1_pedido_de_desconto: "PASS — pergunta separadora + resposta por perfil + confirmação do valor; não cede preço; desconto à vista mantido como condição"
+    teste_2_perfil_divergente_ao_vivo: "PASS — lê pelas 2 lentes (Analista online → Conector ao vivo), conduz pelo perfil real, manda corrigir o Rastreador"
+    teste_3_preco_cedo: "PASS — segura o preço ('já chego nisso'), mantém diagnóstico antes da oferta, cruza com perfil Diretivo"
+  integridade: "knowledge-facets.yaml restaurado do git após truncamento acidental no script de update; 55 KFs originais + 6 novos = 61, YAML válido; .state.json sem chaves perdidas; fonte (04-forged) == instalada (agents/vendedor-secreto)"
+  user_approved: true
+  approved_at: "2026-09-26"

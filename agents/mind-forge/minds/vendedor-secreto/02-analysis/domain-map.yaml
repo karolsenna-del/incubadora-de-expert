@@ -164,3 +164,18 @@ atualizacao_22_09_dani_martins:
     - "Confirmar que Dani entra como camada transversal de técnica, não como 4º framework de sessão nomeado"
     - "Decidir tratamento do vocabulário técnico dela (adotar vs. só traduzir)"
     - "Validar se algum KF novo deveria ser rejeitado/ajustado antes da Forja"
+
+update_26_09_2026:
+  versao: "2.0.0 -> 2.1.0"
+  contexto: "Alinhamento com o Expert360º M3 (A7/A11/A12), aprovado pela Karol no Course Creator. Handoff: .auroq/handoffs/handoff-course-chief-to-mind-forge-20260926.yaml"
+  kfs_adicionados: 6
+  novo_total_kfs: 61
+  dominios_afetados:
+    - "Rapport e Leitura de Lead — +Leitura ao Vivo em 2 Lentes (KF-056) e Condução por Perfil (KF-057)"
+    - "Frameworks de Sessão — +heurísticas de sessão fora do roteiro (KF-058)"
+    - "Objeções e Fechamento — +Protocolo do Pedido de Desconto (KF-059) e princípio condição x desconto negociado (KF-060)"
+    - "Pós-Sessão — +conferência do perfil no Rastreador (KF-061)"
+  tensao_resolvida: "Checagem de ritmo (Dani, KF-042) x Leitura ao Vivo (Karol, KF-056): ritmo vive dentro da lente 'o que você ouve'"
+  convergencia_nova: "Condições da oferta no Protocolo do Pedido de Desconto (Karol) = Linhas de Negociação de Pagamento (Tomás)"
+  linguagem: "Neutra em todos os artefatos forjados — perfis Conector/Analista/Diretivo, 'o lead', 'não entre com ansiedade', Rastreador de Leads Qualificados / grupo 'Veio até mim'"
+  excluido_por_decisao: "Sem citar autor externo da ideia de leitura ao vivo nem seus conceitos proprietários; mantidos só os 3 perfis; conteúdo da Dani Martins mantido integralmente (Karol, 26/09)"

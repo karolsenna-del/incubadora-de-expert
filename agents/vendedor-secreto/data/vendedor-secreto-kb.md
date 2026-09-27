@@ -23,7 +23,7 @@ Estes 3 princípios são **Crown Jewels** — convergência de múltiplos expert
 
 ### 2.1 Diagnóstico sempre antes da oferta
 
-Os 3 frameworks de sessão, apesar de nomes e estruturas diferentes, seguem exatamente a mesma lógica: **primeiro ouvir/diagnosticar → depois construir a ponte → só então apresentar a oferta.** Quando a oferta aparece depois do diagnóstico, não é pitch — é resposta à pergunta que a lead já estava fazendo por dentro.
+Os 3 frameworks de sessão, apesar de nomes e estruturas diferentes, seguem exatamente a mesma lógica: **primeiro ouvir/diagnosticar → depois construir a ponte → só então apresentar a oferta.** Quando a oferta aparece depois do diagnóstico, não é pitch — é resposta à pergunta que o lead já estava fazendo por dentro.
 
 - Tomás faz mapeamento de dores (Bloco 2) antes da solução (Bloco 3)
 - Lourival aplica o RX inteiro antes do pitch
@@ -34,7 +34,7 @@ Os 3 frameworks de sessão, apesar de nomes e estruturas diferentes, seguem exat
 
 Sequência de 3 passos pra qualquer objeção ("vou pensar", "está caro", "não tenho tempo"):
 
-1. **Acolhe** (Dani Martins) — valide a preocupação como legítima antes de qualquer explicação: "eu entendo sua preocupação, ela é genuína e relevante, outros clientes também sentem isso." Nunca contradiga a objeção de frente.
+1. **Acolhe** (Dani Martins) — valide a preocupação como legítima antes de qualquer explicação: "eu entendo sua preocupação, é genuína e relevante, outros clientes também sentem isso." Nunca contradiga a objeção de frente.
 2. **Pergunta** (Karol, "Regra de Ouro") — devolva com uma pergunta que investiga a causa real. Objeção declarada ≠ objeção real.
 3. **Responde** (Tabela de Objeções, seção 8.1) — só depois de acolher e investigar, use a resposta específica.
 
@@ -46,10 +46,10 @@ Tomás fecha o pagamento ainda na câmera; Karol confirma 3 pontos (pagamento/da
 
 ### Outros princípios de identidade (mentalidade base)
 
-- **Vender é servir quem já tem o problema** (Karol) — recuar por medo de parecer vendedora prejudica quem já precisa da solução.
+- **Vender é servir quem já tem o problema** (Karol) — recuar por medo de parecer que está só vendendo prejudica quem já precisa da solução.
 - **Só fracassa quem desiste** (Karol) — não quem ouve um não, não quem conduz uma sessão que não fecha.
 - **100% integridade** (Lourival) / **seja justo, não empurre goela abaixo** (Tomás) — os experts tratam venda ética como pré-requisito, não como tática.
-- **Não seja ansiosa** (Dani Martins) — se a lead perceber que você quer vender mais do que ela quer comprar, o cérebro dela cria um bloqueio de desconfiança automático. O ideal é a lead pedir a venda, não ser empurrada até ela.
+- **Não entre com ansiedade** (Dani Martins) — quando você quer vender mais do que o outro quer comprar, o cérebro de quem compra cria um bloqueio de desconfiança automático. O ideal é o lead pedir a venda, não ser empurrado até ela.
 - **O cliente compra pelos motivos dele, não pelos seus** (Dani Martins) — reforça em espírito o princípio de Karol acima, com outra articulação.
 
 ---
@@ -60,7 +60,7 @@ Tomás fecha o pagamento ainda na câmera; Karol confirma 3 pontos (pagamento/da
 
 ### 3.1 Frameworks
 
-**Formulário de Pré-Diagnóstico** (Karol) — 4 seções, 12 perguntas, preenchido pela lead assim que a sessão é confirmada: Sobre Você → Sua Situação Atual → Contexto Econômico → Para a Nossa Conversa. Isso economiza os primeiros minutos da sessão, porque o vendedor já entra sabendo o contexto básico.
+**Formulário de Pré-Diagnóstico** (Karol) — 4 seções, 12 perguntas, preenchido pelo lead assim que a sessão é confirmada: Sobre Você → Sua Situação Atual → Contexto Econômico → Para a Nossa Conversa. Isso economiza os primeiros minutos da sessão, porque o vendedor já entra sabendo o contexto básico.
 
 ### 3.2 Heurísticas (SE/ENTÃO)
 
@@ -82,7 +82,7 @@ Tomás fecha o pagamento ainda na câmera; Karol confirma 3 pontos (pagamento/da
 | Etapa | O que acontece | Contribuição de cada expert |
 |---|---|---|
 | **1. Abertura + Seeding** | Rapport + aviso explícito de que, após o diagnóstico, virá uma oferta | Comum aos 3 — formalização do "seeding" vem de Karol |
-| **2. Diagnóstico Estruturado** | Perguntas por categoria de potencial/dificuldade, alimentadas pelo Formulário de Pré-Diagnóstico já respondido; anotar as palavras exatas que a lead usa | Estrutura de categorias: Lourival (RX). Técnica de anotar pra espelhar: Karol |
+| **2. Diagnóstico Estruturado** | Perguntas por categoria de potencial/dificuldade, alimentadas pelo Formulário de Pré-Diagnóstico já respondido; anotar as palavras exatas que o lead usa | Estrutura de categorias: Lourival (RX). Técnica de anotar pra espelhar: Karol |
 | **3. Ponte de Identificação** | A mente oferece 2 estilos e pergunta qual combina: História pessoal do vendedor OU Bloco de Sonhos (visualização do futuro resolvido) | História: Karol. Bloco de Sonhos: Tomás |
 | **4. Oferta com Narrativa ECROI** | Colapso → Reenquadramento → Ordem → Inevitabilidade, com o detalhamento concreto de como mostrar o programa | Estrutura ECROI: Karol (única com retórica nomeada). Detalhamento concreto: Tomás |
 | **5. Fechamento** | Tabela de objeções + linhas de negociação de pagamento por perfil financeiro + disciplina de executar o pitch sempre | Objeções: Karol. Negociação de pagamento: Tomás. "Sempre executa": Lourival |
@@ -97,8 +97,11 @@ Tomás fecha o pagamento ainda na câmera; Karol confirma 3 pontos (pagamento/da
 - **SE** o diagnóstico acabou de terminar, **ENTÃO** não pule direto pra oferta — insira a Ponte de Identificação (Etapa 3) antes de abrir a apresentação. *(Implícito, confirmado nos 3 roteiros — confiança 0.6)*
 - **SE** acabou de dizer o preço da oferta, **ENTÃO** pare de falar — o silêncio não precisa ser preenchido (Karol).
 - **SE** está prestes a revelar o preço, **ENTÃO** ancore o valor antes: "quanto vale pra você chegar em [resultado]?" (Karol).
-- **SE** terminou o diagnóstico, mesmo que pareça que a lead não vai comprar, **ENTÃO** execute o pitch de qualquer forma — a decisão de "aprovar" é feita depois, nunca antes de apresentar (Lourival).
+- **SE** terminou o diagnóstico, mesmo que pareça que o lead não vai comprar, **ENTÃO** execute o pitch de qualquer forma — a decisão de "aprovar" é feita depois, nunca antes de apresentar (Lourival).
 - **SE** vai avisar que haverá oferta, **ENTÃO** faça isso já na Abertura (seeding), nunca pule direto pro Diagnóstico sem avisar (Tomás + Karol).
+- **SE** o lead pergunta o preço antes do diagnóstico, **ENTÃO** responda "já chego nisso — antes, quero entender se faz sentido pra você" e siga o diagnóstico (Karol, M3 A11).
+- **SE** o lead fala demais e a conversa escapa, **ENTÃO** recapitule o que ouviu, com as palavras dele, e volte pra próxima pergunta (Karol, M3 A11).
+- **SE** o lead não se abre, **ENTÃO** faça perguntas menores e mais concretas, e fale menos — silêncio dá espaço (Karol, M3 A11).
 
 ### 4.3 Anti-padrões
 
@@ -111,22 +114,41 @@ Tomás fecha o pagamento ainda na câmera; Karol confirma 3 pontos (pagamento/da
 
 ### 5.1 Frameworks
 
-**Leitura de Lead em 4 Camadas + 3 Perfis** (Karol): antes de qualquer contato, ler Bio, Tipo de Conteúdo, Linguagem e Energia do perfil, classificando em 1 de 3 perfis:
+**Leitura de Lead em 4 Camadas + 3 Perfis** (Karol): antes de qualquer contato (leitura online — hipótese que a sessão confirma), ler Bio, Tipo de Conteúdo, Linguagem e Energia do perfil, classificando em 1 de 3 perfis:
 
 | Perfil | Sinal | Como abrir |
 |---|---|---|
-| **Conectora** | Bio de impacto/comunidade, posts de histórias/rostos, linguagem calorosa | Algo específico e genuíno que você notou no trabalho dela |
+| **Conector** | Bio de impacto/comunidade, posts de histórias/rostos, linguagem calorosa | Algo específico e genuíno que você notou no trabalho da pessoa |
 | **Analista** | Bio de números/certificações, posts de dados/frameworks, linguagem precisa | Substância na primeira frase — algo concreto |
-| **Diretiva** | Bio de títulos/conquistas, posts poucos e de impacto, linguagem objetiva | Valor em uma linha, direto ao ponto |
+| **Diretivo** | Bio de títulos/conquistas, posts poucos e de impacto, linguagem objetiva | Valor em uma linha, direto ao ponto |
 
 *Quando o perfil é misto: bio e linguagem são os sinais mais decisivos.*
+
+**Leitura ao Vivo — 2 Lentes** (Karol, Expert360º M3 A11): a leitura online é hipótese; a sessão confirma. Nos primeiros 5 minutos da chamada, use duas lentes:
+
+- **O que você vê** — postura, gestos, expressão, o quanto a pessoa se aproxima ou se afasta da câmera.
+- **O que você ouve** — ritmo da fala, tom, as palavras escolhidas. A checagem de ritmo de Dani Martins (acelera/desacelera) vive dentro desta lente.
+
+Se a leitura mudou, ajuste a condução ali mesmo e corrija a coluna Perfil no Rastreador depois da chamada. *Um sinal sozinho não define ninguém — o que vale é o conjunto.*
+
+**Condução por Perfil** (Karol, Expert360º M3 A11):
+
+| Perfil | O que você vê | O que você ouve | Como conduzir | O que trava |
+|---|---|---|---|---|
+| **Conector** | Sorri fácil, gesticula, expressão viva | Fala solta, cheia de histórias, puxa assunto pessoal antes do negócio | Não corte o papo do começo — é ali que a confiança nasce. Na ponte, a sua história funciona muito bem. Na oferta, fale do impacto nas pessoas que esse lead atende | Pular direto pros números, ficar frio e técnico |
+| **Analista** | Reservado, poucos gestos, anota, observa antes de falar | Fala pouco e com precisão, faz pausas, pergunta detalhe, pede exemplo | Perguntas específicas no diagnóstico e espaço pro silêncio. Na oferta, a lógica fase por fase do método, com exemplos concretos. No fechamento, tempo pra analisar — com data de retorno | Entusiasmo sem substância ("confia, vai dar certo"), pressão pra decidir na hora |
+| **Diretivo** | Postura firme, olhar direto, pouca paciência com rodeio | Frases curtas, tom firme, interrompe pra chegar ao ponto, pergunta cedo "como funciona?" ou "quanto é?" | Abertura curta, diagnóstico objetivo, oferta começando pelo resultado. Mostre o caminho e deixe a decisão com o lead | Explicação longa, tentar convencer por que precisa disso |
+
+*O erro mais comum é vender pro outro do jeito que você gostaria de comprar — conduza pelo perfil de quem está do outro lado, não pelo seu.*
 
 ### 5.2 Heurísticas (SE/ENTÃO)
 
 - **SE** está no bloco de abertura da sessão, **ENTÃO** já avise explicitamente que no final vai apresentar uma oferta ("seeding" — Karol/Tomás).
-- **SE** o perfil da lead for "Conectora", **ENTÃO** não abra com pitch nem elogio vago — abra com algo específico e real que você notou nela.
-- **SE**, já durante a conversa, a lead fala rápido e é direta/objetiva, **ENTÃO** acelere seu próprio ritmo e seja mais direta também (Dani Martins). **SE** ela fala devagar e parece mais cautelosa, **ENTÃO** desacelere e reduza a pressão. *(Checagem leve de ritmo, ao vivo — reforça a Leitura de Lead acima, não a substitui.)*
-- **SE** é o primeiro contato e a lead ainda não te conhece, **ENTÃO** use um roteiro de abertura de 30-40s: seu nome + sua especialidade/domínio + o objetivo da reunião (Dani Martins) — primeiro pessoa, depois empresa, nunca o contrário.
+- **SE** o perfil do lead for "Conector", **ENTÃO** não abra com pitch nem elogio vago — abra com algo específico e real que você notou no trabalho da pessoa.
+- **SE**, já durante a conversa, o lead fala rápido e vai direto ao ponto, **ENTÃO** acelere seu próprio ritmo e seja mais objetivo também (Dani Martins). **SE** fala devagar e com mais cautela, **ENTÃO** desacelere e reduza a pressão. *(Checagem de ritmo — um dos sinais da lente "o que você ouve" da Leitura ao Vivo.)*
+- **SE** está nos primeiros 5 minutos da sessão, **ENTÃO** use as 2 lentes (o que você vê / o que você ouve) pra confirmar ou corrigir o perfil anotado no Rastreador — e ajuste a condução pelo quadro de Condução por Perfil (Karol).
+- **SE** o perfil ao vivo não bate com a leitura online, **ENTÃO** conduza pelo que está vendo e ouvindo agora, e corrija a coluna Perfil no Rastreador depois da chamada (Karol).
+- **SE** é o primeiro contato e o lead ainda não te conhece, **ENTÃO** use um roteiro de abertura de 30-40s: seu nome + sua especialidade/domínio + o objetivo da reunião (Dani Martins) — primeiro pessoa, depois empresa, nunca o contrário.
 
 ---
 
@@ -141,20 +163,20 @@ Ver Questionário RX (seção 4.1) pra decidir QUAIS áreas perguntar. Pra decid
 | **S — Situação** | Entender o contexto, dentro do que você pode ajudar | "Me conta um pouco sobre [contexto relevante ao seu método]" |
 | **P — Problema** | Aprofundar nos desafios específicos | "O que mais te incomoda hoje em relação a isso?" |
 | **I — Implicação** | Trazer a consequência de não resolver agora | "Se você não resolver isso, como acha que vai estar daqui 1 ano?" |
-| **Geração de valor** | Entregar um insight aplicável já na conversa, independente da compra | Uma dica real que ela já possa aplicar, mesmo sem fechar |
+| **Geração de valor** | Entregar um insight aplicável já na conversa, independente da compra | Uma dica real que a pessoa já possa aplicar, mesmo sem fechar |
 
-Complementado pela técnica de Karol de **anotar literalmente as palavras que a lead usa** — elas voltam na apresentação da oferta como espelho, criando a sensação de oferta feita sob medida.
+Complementado pela técnica de Karol de **anotar literalmente as palavras que o lead usa** — elas voltam na apresentação da oferta como espelho, criando a sensação de oferta feita sob medida.
 
 ### 6.2 Heurísticas (SE/ENTÃO)
 
 - **SE** está montando as perguntas de diagnóstico, **ENTÃO** balanceie áreas de potencial e de dificuldade (nem poucas, nem muitas — ex: 4 e 3) e não passe de ~7 áreas no total (Lourival).
 - **SE** está dentro de uma área do diagnóstico, **ENTÃO** sequencie as perguntas como SPIN: Situação → Problema → Implicação → Geração de valor (Dani Martins).
-- **SE** a lead está descrevendo a própria situação, **ENTÃO** anote as palavras exatas dela, não parafraseie mentalmente (Karol).
-- **SE** a lead descreveu o problema mas não parece ver urgência, **ENTÃO** faça uma pergunta de Implicação pra elevar a consciência dela sobre o próprio problema (Dani Martins).
+- **SE** o lead está descrevendo a própria situação, **ENTÃO** anote as palavras exatas, não parafraseie mentalmente (Karol).
+- **SE** o lead descreveu o problema mas não parece ver urgência, **ENTÃO** faça uma pergunta de Implicação pra elevar a consciência dele sobre o próprio problema (Dani Martins).
 
 ### 6.3 Anti-padrões
 
-- Perguntar pouco e superficial, tipo o "médico que mal olhou e já receitou" — a lead sente a diferença entre pergunta de verdade e formalidade, e isso decide se ela confia na oferta depois.
+- Perguntar pouco e superficial, tipo o "médico que mal olhou e já receitou" — o lead sente a diferença entre pergunta de verdade e formalidade, e isso decide se confia na oferta depois.
 
 ---
 
@@ -169,12 +191,13 @@ Ver Narrativa ECROI (seção 4.1).
 - **SE** terminou o diagnóstico e vai abrir a oferta, **ENTÃO** peça confirmação explícita antes: "Posso te apresentar [o método], se fizer sentido pra você conhecer?" — só avance com um sim claro (Tomás).
 - **SE** disse o preço, **ENTÃO** pare — silêncio não precisa ser preenchido (Karol).
 - **SE** vai revelar o preço, **ENTÃO** ancore o valor antes com uma pergunta (Karol).
-- **SE** a lead reagir como se estivesse caro, **ENTÃO** lembre: "caro" nunca é sobre o número — é falta de resultado percebido ou falta de urgência real naquele momento (Dani Martins). Reforce valor, não desconto.
+- **SE** o lead reagir como se estivesse caro, **ENTÃO** lembre: "caro" nunca é sobre o número — é falta de resultado percebido ou falta de urgência real naquele momento (Dani Martins). Reforce valor, não negocie o preço.
+- **SE** o lead pedir desconto, **ENTÃO** aplique o Protocolo do Pedido de Desconto (seção 8.1) — nunca reduza o preço na hora (Karol, M3 A11).
 
 ### 7.3 Por que isso funciona (psicologia por trás)
 
 - A decisão de compra é majoritariamente emocional — envolve recompensa, conquista, desejo e pertencimento, não só lógica (Dani Martins). É por isso que a História/Ponte de Identificação (Etapa 3) e a narrativa ECROI funcionam melhor que argumento racional puro.
-- O cliente não compra pelos motivos de quem vende — compra pelos motivos dele (Dani Martins). Reforça por que ancorar valor a partir do que a LEAD descreveu no diagnóstico (não do que você acha impressionante no seu método) é o que faz a oferta ressoar.
+- O cliente não compra pelos motivos de quem vende — compra pelos motivos dele (Dani Martins). Reforça por que ancorar valor a partir do que o LEAD descreveu no diagnóstico (não do que você acha impressionante no seu método) é o que faz a oferta ressoar.
 
 ### 7.4 Anti-padrões
 
@@ -203,11 +226,24 @@ Ver Narrativa ECROI (seção 4.1).
 | Sem cartão / nome sujo | Entrada PIX + restante no boleto |
 | Quer, mas "sem limite agora" | Entrada pequena PIX + cobrança no mês seguinte |
 
+**Protocolo do Pedido de Desconto** (Karol, Expert360º M3 A11) — o pedido de desconto quase nunca é sobre dinheiro: é objeção disfarçada. Segue a sequência acolhe → pergunta → responde, com uma pergunta que separa os dois caminhos:
+
+1. **Acolhe** e pergunta: *"O que está pesando mais pra você: o valor em si ou alguma outra coisa?"*
+2. **Se for outra coisa**, a resposta mostra o que faltou — e cada perfil costuma travar numa coisa diferente:
+   - **Conector** — faltou se sentir acolhido → volte às palavras dele no diagnóstico e mostre como é o acompanhamento, onde você está junto.
+   - **Analista** — faltou enxergar o retorno → refaça a conta: o que cada fase entrega x quanto custa continuar como está. Dê tempo, com data de retorno.
+   - **Diretivo** — faltou sentir que ele decide → apresente as condições que já existem na oferta (à vista com desconto, parcelado, data de início) e deixe a escolha com ele.
+3. **Se for o valor**, confirme: *"Se o valor não fosse uma questão, você entraria?"* Sim → apresente as condições de pagamento da oferta (Linhas de Negociação de Tomás, abaixo). Mesmo assim não cabe → é fit, não objeção: *"Entendo. Talvez não seja o momento."* → Lead frio no Rastreador, com data pra retomar.
+
+**Condição de pagamento x desconto negociado:** condição de pagamento é regra da oferta, definida antes, vale pra todo mundo (o desconto à vista é uma delas). Desconto negociado é preço que cedeu porque a pessoa pediu — desvaloriza a oferta que acabou de ser validada. *Condição de pagamento é regra da oferta. Desconto negociado é preço que cedeu.*
+
 ### 8.2 Heurísticas (SE/ENTÃO)
 
-- **SE** a lead apresenta uma objeção, **ENTÃO** siga a sequência de 3 passos (ver Princípio Universal 2.2): acolhe (Dani) → pergunta a causa real (Karol, "Regra de Ouro") → responde com a Tabela de Objeções. **Crown Jewel.**
+- **SE** o lead apresenta uma objeção, **ENTÃO** siga a sequência de 3 passos (ver Princípio Universal 2.2): acolhe (Dani) → pergunta a causa real (Karol, "Regra de Ouro") → responde com a Tabela de Objeções. **Crown Jewel.**
 - **SE** a objeção declarada envolve preço, **ENTÃO** trate por último, depois de esgotar as demais camadas da objeção (Dani Martins, "objeção em camadas") — nunca negocie preço como primeira resposta.
-- **SE** a decisão da lead pode depender de outra pessoa (cônjuge, sócio), **ENTÃO** identifique isso já no AGENDAMENTO da reunião, não na hora do fechamento — convide essa pessoa desde o início (Dani Martins). Evita a objeção reaparecer sem controle depois.
+- **SE** o lead pede desconto, **ENTÃO** pergunte "o que está pesando mais pra você: o valor em si ou alguma outra coisa?" e siga o Protocolo do Pedido de Desconto (seção 8.1) — a resposta de cada perfil é diferente (Karol, M3 A11).
+- **SE** o problema é mesmo o valor, **ENTÃO** confirme com "se o valor não fosse uma questão, você entraria?" — sim: condições de pagamento; não cabe: é fit, vai pra Lead frio com data (Karol, M3 A11).
+- **SE** a decisão do lead pode depender de outra pessoa (cônjuge, sócio), **ENTÃO** identifique isso já no AGENDAMENTO da reunião, não na hora do fechamento — convide essa pessoa desde o início (Dani Martins). Evita a objeção reaparecer sem controle depois.
 - **SE** o cliente decide comprar durante a sessão, **ENTÃO** conduza o pagamento ainda na câmera — nunca deixe desligar "pra fazer depois"; se surgir desculpa técnica, continue negociando, geralmente esconde objeção não resolvida (Tomás).
 - **SE** a sessão não fechar no fim, **ENTÃO** sempre saia com data e horário combinados pro próximo passo — nunca deixe em aberto (Dani Martins, reforça Princípio Universal 2.3).
 
@@ -216,6 +252,7 @@ Ver Narrativa ECROI (seção 4.1).
 - Aceitar "depois eu resolvo o pagamento" sem insistir educadamente — a janela entre o sim e o pagamento é onde a venda esfria.
 - Contradizer a objeção de frente ("não, não é assim", "você entendeu errado") — ativa defensividade e quebra a conexão construída no rapport (Dani Martins).
 - Tratar preço como primeira camada da objeção — sempre existe algo por trás que precisa ser acolhido e investigado antes.
+- Dar desconto negociado porque o lead pediu — desvaloriza a oferta validada. Condição de pagamento (inclusive desconto à vista) é regra da oferta, não concessão.
 
 ---
 
@@ -227,7 +264,7 @@ Ver Narrativa ECROI (seção 4.1).
 
 | Toque | Prazo | Função |
 |---|---|---|
-| T1 | 24-48h | Presença, referência a algo específico que ela disse |
+| T1 | 24-48h | Presença, referência a algo específico que o lead disse |
 | T2 | 4-5 dias | Valor puro, sem mencionar a oferta |
 | T3 | 8-10 dias | Pergunta aberta ("ficou alguma dúvida?") |
 | T4 | 12-14 dias | Custo do status quo |
@@ -235,9 +272,10 @@ Ver Narrativa ECROI (seção 4.1).
 
 ### 9.2 Heurísticas (SE/ENTÃO)
 
-- **SE** a lead disse sim, **ENTÃO** feche 3 pontos concretos ainda na chamada antes do tchau: forma de pagamento, próxima data, canal (Karol).
+- **SE** o lead disse sim, **ENTÃO** feche 3 pontos concretos ainda na chamada antes do tchau: forma de pagamento, próxima data, canal (Karol).
+- **SE** a sessão terminou, **ENTÃO** confira se o perfil anotado no Rastreador se confirmou ao vivo — se não, corrija a coluna Perfil (Karol, M3 A11).
 - **SE** vai conduzir qualquer sessão, **ENTÃO** grave a call inteira, com permissão — proteção contratual (Tomás) e matéria-prima de revisão/prova (Karol).
-- **SE** a lead disse não, **ENTÃO** encerre com generosidade e arquive como lead fria — pausa, não descarte, "um não não é veredicto" (Karol).
+- **SE** o lead disse não, **ENTÃO** encerre com generosidade e arquive como Lead frio — pausa, não descarte, "um não não é veredicto" (Karol).
 
 ### 9.3 Output Format — 3 Perguntas de Depoimento
 
@@ -245,7 +283,7 @@ Ver Narrativa ECROI (seção 4.1).
 
 ### 9.4 Output Format — Pedido de Recomendação (Dani Martins)
 
-Logo após o fechamento, ainda no pico de satisfação da lead: "Você está feliz com esse passo que você deu? [...] Quem mais você conhece que merece conhecer o nosso trabalho?" — complementar às 3 Perguntas de Depoimento (objetivos diferentes: indicação de novo lead vs. prova social), pode usar as duas na mesma etapa de pós-sessão.
+Logo após o fechamento, ainda no pico de satisfação do cliente: "Você está feliz com esse passo que você deu? [...] Quem mais você conhece que merece conhecer o nosso trabalho?" — complementar às 3 Perguntas de Depoimento (objetivos diferentes: indicação de novo lead vs. prova social), pode usar as duas na mesma etapa de pós-sessão.
 
 ---
 
@@ -255,7 +293,7 @@ Logo após o fechamento, ainda no pico de satisfação da lead: "Você está fel
 
 - **3 Funis** (Tomás): Social Selling, Webinar Semanal/Sala Secreta, Funil de Isca Gratuita.
 - **4 Canais + Bônus Kinder Ovo** (Lourival): consultoria gratuita embutida num produto de entrada mais barato, convite de audiência, tráfego pago, tráfego orgânico/indicação.
-- **Rastreador de Leads** (Karol): 6 grupos (Círculo Íntimo, Colegas, Clientes/ex-clientes, Seguidores engajados, Conexões frias qualificadas, Fui Prospectada) × 3 colunas (Score de Fit, Prioridade, Perfil).
+- **Rastreador de Leads Qualificados** (Karol): 6 grupos (Círculo Íntimo, Colegas, Clientes/ex-clientes, Seguidores engajados, Conexões frias qualificadas, Veio até mim) × qualificação (4 perguntas de fit → Score de Fit automático, Prioridade, Perfil Conector/Analista/Diretivo) + pipeline (Status, próxima ação com data) + fechamento. O Perfil é lido online (A7) e confirmado ao vivo (A11).
 
 ---
 
@@ -266,14 +304,18 @@ Logo após o fechamento, ainda no pico de satisfação da lead: "Você está fel
 | Preciso saber se um lead merece uma sessão | Lead Scoring A/B/C + checklist "Cara de PIX" | Tomás |
 | Preciso coletar contexto antes da sessão | Formulário de Pré-Diagnóstico (4 seções, 12 perguntas) | Karol |
 | Preciso calibrar o tom da abordagem | Leitura de Lead em 4 Camadas → 3 Perfis | Karol |
+| Preciso confirmar o perfil durante a sessão | Leitura ao Vivo — 2 Lentes (o que você vê / o que você ouve) | Karol |
+| Preciso ajustar a condução ao perfil | Quadro de Condução por Perfil (Conector/Analista/Diretivo) | Karol |
 | Preciso montar as perguntas de diagnóstico | Questionário RX (categorias balanceadas) | Lourival |
 | Preciso sequenciar as perguntas dentro de uma área | SPIN — Situação → Problema → Implicação → Valor | Dani Martins |
-| Preciso ajustar o ritmo em tempo real na conversa | Checagem de ritmo (acelera/desacelera) | Dani Martins |
+| Preciso ajustar o ritmo em tempo real na conversa | Checagem de ritmo (acelera/desacelera) — dentro da lente "o que você ouve" | Dani Martins |
 | Preciso criar identificação antes da oferta | História pessoal OU Bloco de Sonhos | Karol / Tomás |
 | Preciso estruturar a apresentação da oferta | Narrativa ECROI | Karol |
 | Preciso responder uma objeção | Acolhe → Pergunta → Tabela de Objeções | Dani Martins + Karol |
 | Preciso antecipar objeção de terceiro decisor | Convidar a pessoa já no agendamento | Dani Martins |
 | Preciso negociar forma de pagamento | Linhas de Negociação por perfil financeiro | Tomás |
+| O lead pediu desconto | Protocolo do Pedido de Desconto (pergunta separadora → resposta por perfil → confirmação do valor) | Karol |
+| A sessão saiu do roteiro (preço cedo, fala demais, não se abre) | Heurísticas de sessão fora do roteiro (seção 4.2) | Karol |
 | A sessão terminou em "vou pensar" | Cadência de 5 Toques | Karol |
 | Preciso coletar um depoimento | 3 Perguntas de Depoimento | Karol |
 | Preciso pedir indicação pós-fechamento | "Quem mais você conhece que merece conhecer nosso trabalho?" | Dani Martins |
@@ -283,20 +325,20 @@ Logo após o fechamento, ainda no pico de satisfação da lead: "Você está fel
 ## 12. HEURÍSTICAS MESTRAS — Top 20
 
 1. **SE** vai fazer qualquer coisa nesta metodologia, **ENTÃO** diagnostique antes de ofertar — sempre, sem exceção. *(Crown Jewel)*
-2. **SE** a lead objeta, **ENTÃO** acolha a preocupação como legítima primeiro, depois pergunte a causa real — nunca contradiga de frente. *(Crown Jewel)*
+2. **SE** o lead objeta, **ENTÃO** acolha a preocupação como legítima primeiro, depois pergunte a causa real — nunca contradiga de frente. *(Crown Jewel)*
 3. **SE** a sessão termina sem fechamento, **ENTÃO** sempre combine data e horário do próximo passo — nunca deixe em aberto. *(Crown Jewel)*
 4. **SE** está avaliando convidar um lead, **ENTÃO** rode o checklist "Cara de PIX" antes de gastar a agenda com ele.
 5. **SE** a sessão foi confirmada, **ENTÃO** envie o Formulário de Pré-Diagnóstico antes de começar.
-6. **SE** vai abordar alguém, **ENTÃO** leia o perfil em 4 camadas e calibre o tom pelo perfil (Conectora/Analista/Diretiva).
-7. **SE** já está na conversa ao vivo, **ENTÃO** cheque o ritmo de fala da lead e ajuste o seu — reforço em tempo real da leitura acima.
+6. **SE** vai abordar alguém, **ENTÃO** leia o perfil em 4 camadas e calibre o tom pelo perfil (Conector/Analista/Diretivo).
+7. **SE** já está na conversa ao vivo, **ENTÃO** use as 2 lentes (o que você vê / o que você ouve) pra confirmar o perfil e conduza pelo perfil de quem está do outro lado, não pelo seu.
 8. **SE** está no rapport inicial, **ENTÃO** avise (seeding) que haverá oferta ao final.
 9. **SE** é o primeiro contato, **ENTÃO** abra com um roteiro de 30-40s: seu nome, sua especialidade, o objetivo da reunião.
 10. **SE** está montando perguntas de diagnóstico, **ENTÃO** balanceie potencial e dificuldade (RX), sem passar de ~7 áreas.
 11. **SE** está dentro de uma área do diagnóstico, **ENTÃO** sequencie as perguntas como SPIN: Situação → Problema → Implicação → Valor.
-12. **SE** a lead está falando na etapa de diagnóstico, **ENTÃO** anote as palavras exatas dela.
+12. **SE** o lead está falando na etapa de diagnóstico, **ENTÃO** anote as palavras exatas.
 13. **SE** o diagnóstico terminou, **ENTÃO** insira uma ponte (história ou bloco de sonhos) antes da oferta.
 14. **SE** vai apresentar a oferta, **ENTÃO** peça confirmação explícita de interesse antes de abrir.
-15. **SE** disse o preço, **ENTÃO** pare de falar — não preencha o silêncio; "caro" é sempre falta de valor percebido ou de urgência, nunca o número em si.
+15. **SE** disse o preço, **ENTÃO** pare de falar — não preencha o silêncio; "caro" é sempre falta de valor percebido ou de urgência, nunca o número em si. Se pedir desconto: pergunte o que está pesando mais — o valor ou outra coisa — e nunca ceda o preço (condição de pagamento é regra da oferta).
 16. **SE** o diagnóstico terminou, mesmo pessimista, **ENTÃO** execute o pitch de qualquer forma.
 17. **SE** a decisão pode depender de outra pessoa, **ENTÃO** antecipe isso no agendamento, convidando-a desde o início.
 18. **SE** o cliente disser sim, **ENTÃO** feche pagamento, data e canal ainda na câmera.
@@ -328,8 +370,8 @@ Perguntas por área (adaptadas ao seu método Base/Ponte/Consultório Cheio):
 - Potencial: "O que te fez decidir montar consultório próprio agora?"
 - Potencial: "Quantas pacientes você já atenderia hoje, se pudesse?"
 - Dificuldade: "O que te trava de sair do CLT hoje?"
-- Dificuldade: "Já tentou monetizar sozinha antes? O que aconteceu?"
-[Anote as palavras exatas dela — vão voltar na Etapa 4]
+- Dificuldade: "Você já tentou monetizar por conta própria antes? O que aconteceu?"
+[Anote as palavras exatas — vão voltar na Etapa 4]
 
 ETAPA 3 — Ponte de Identificação — escolha 1:
 (a) História: "Eu também fiquei anos no CLT com medo de sair..."
@@ -357,7 +399,7 @@ Pagamento: à vista c/ desconto → 12x → PIX+boleto conforme perfil.
 
 ### 13.2 Exemplo — Modo Copiloto de Condução
 
-**Input:** "Estou numa sessão agora, a lead acabou de dizer 'nossa, tá caro', o que eu falo?"
+**Input:** "Estou numa sessão agora, o lead acabou de dizer 'nossa, tá caro', o que eu falo?"
 
 **Output:**
 
@@ -370,10 +412,10 @@ pessoas sente isso nessa hora."
 2. Pergunta (Regra de Ouro): "Quanto está custando ficar onde você
 está hoje — em tempo, em oportunidade, em desgaste?"
 
-Deixe ela responder por inteiro antes de voltar a falar de preço.
+Deixe a pessoa responder por inteiro antes de voltar a falar de preço.
 
-3. Se ela continuar hesitante, use a âncora de valor: "quanto vale
-pra você chegar em [resultado que ela mesma descreveu no
+3. Se continuar a hesitação, use a âncora de valor: "quanto vale
+pra você chegar em [resultado que a própria pessoa descreveu no
 diagnóstico]?" — e pare de falar. O silêncio trabalha por você.
 Lembre: "caro" nunca é sobre o número, é falta de valor percebido
 ou de urgência real.
@@ -381,13 +423,13 @@ ou de urgência real.
 
 ### 13.3 Exemplo — Modo Revisor Pós-Sessão
 
-**Input:** "Tive uma sessão ontem, ela disse que ia pensar. Conversamos bem, mas travei um pouco na hora de falar o preço."
+**Input:** "Tive uma sessão ontem, o lead disse que ia pensar. Conversamos bem, mas travei um pouco na hora de falar o preço."
 
 **Output:**
 
 ```
 3 PERGUNTAS DE APRENDIZADO
-- O que funcionou? A conversa fluiu, ela se abriu no diagnóstico.
+- O que funcionou? A conversa fluiu, o lead se abriu no diagnóstico.
 - O que travou? A hora do preço — você quebrou o silêncio antes da
   hora, provavelmente pra aliviar o desconforto.
 - O que fazer diferente? Na próxima, depois de falar o preço, conte
@@ -396,11 +438,35 @@ ou de urgência real.
 
 RESULTADO: "Vou pensar" → ativa Cadência de 5 Toques.
 
-TOQUE 1 (envie em 24-48h, referenciando algo que ela disse):
+TOQUE 1 (envie em 24-48h, referenciando algo que o lead disse):
 "[Nome], fiquei pensando no que você falou sobre [algo específico
 da conversa]. Isso me fez lembrar de [conexão]. Só queria trazer
 isso."
 
 Não mencione a oferta neste toque. Guarde os Toques 2-5 (KB seção
 9.1) pros próximos dias, sem pressionar.
+```
+
+### 13.4 Exemplo — Modo Copiloto de Condução (pedido de desconto)
+
+**Input:** "Apresentei o preço e o lead perguntou se eu faço um desconto. Pelo perfil é Diretivo."
+
+**Output:**
+
+```
+Não negocie o preço — descubra o que está por trás.
+
+1. Acolhe + pergunta: "Entendo. O que está pesando mais pra você:
+o valor em si ou alguma outra coisa?"
+
+2. Se for outra coisa: perfil Diretivo costuma querer sentir que
+decide. Apresente as condições que já existem: "Tenho duas formas:
+à vista, com desconto, ou parcelado. Qual funciona melhor pra você?"
+
+3. Se for o valor: "Se o valor não fosse uma questão, você entraria?"
+Sim → condições de pagamento. Não cabe mesmo → "Talvez não seja o
+momento" + data pra retomar.
+
+Por quê: condição de pagamento é regra da oferta; desconto negociado
+é preço que cedeu.
 ```
