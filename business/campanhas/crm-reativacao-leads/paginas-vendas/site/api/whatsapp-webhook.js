@@ -32,6 +32,46 @@ function textFromMessage(message) {
   return null;
 }
 
+function safeWebhookDiagnostic(req, payload, accepted, syncs, rpcResults, outcome) {
+  if (process.env.WEBHOOK_SAFE_DIAGNOSTICS !== '1') return;
+  const changes = [];
+  for (const entry of payload.entry || []) {
+    for (const change of entry.changes || []) {
+      const value = change.value || {};
+      const messages = value.messages || [];
+      const echoes = value.message_echoes || [];
+      const statuses = value.statuses || [];
+      changes.push({
+        field: change.field || null,
+        waba_id: entry.id || null,
+        phone_number_id: value.metadata && value.metadata.phone_number_id || null,
+        messages: messages.length,
+        message_echoes: echoes.length,
+        statuses: statuses.length,
+        history_chunks: (value.history || []).length,
+        state_sync_items: (value.state_sync || []).length,
+        message_types: [...new Set(messages.concat(echoes).map(item => item.type || 'unknown'))],
+        messages_with_from: messages.filter(item => Boolean(item.from)).length,
+        messages_with_from_user_id: messages.filter(item => Boolean(item.from_user_id)).length,
+        messages_with_user_id: messages.filter(item => Boolean(item.user_id)).length,
+        contacts_with_wa_id: (value.contacts || []).filter(item => Boolean(item.wa_id)).length,
+        contacts_with_user_id: (value.contacts || []).filter(item => Boolean(item.user_id)).length,
+        echoes_with_to: echoes.filter(item => Boolean(item.to)).length,
+        echoes_with_to_user_id: echoes.filter(item => Boolean(item.to_user_id)).length
+      });
+    }
+  }
+  console.info('[whatsapp-webhook] safe-diagnostic', JSON.stringify({
+    request_id: req.headers && (req.headers['x-vercel-id'] || req.headers['x-request-id']) || crypto.randomUUID(),
+    object: payload.object || null,
+    changes,
+    accepted,
+    syncs: syncs.length,
+    rpc_results: rpcResults,
+    outcome
+  }));
+}
+
 async function postRpc(name, body) {
   const url = process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -47,7 +87,12 @@ async function postRpc(name, body) {
     body: JSON.stringify(body)
   });
 
-  if (!response.ok) throw new Error(`supabase rpc failed (${response.status})`);
+  if (!response.ok) {
+    const error = new Error(`supabase rpc failed (${response.status})`);
+    error.rpcResult = { name, status: response.status, ok: false };
+    throw error;
+  }
+  return { name, status: response.status, ok: true };
 }
 
 async function ingestEvent(event) {
@@ -211,9 +256,10 @@ async function handler(req, res) {
     const payload = req.body;
     if (!validateTenant(payload)) return res.status(403).json({ ok: false, error: 'invalid tenant' });
 
+    const events = [];
+    const syncs = [];
+    const rpcResults = [];
     try {
-      const events = [];
-      const syncs = [];
       for (const entry of payload.entry) {
         for (const change of entry.changes || []) {
           if (change.field === 'messages') events.push(...eventsFromMessages(change.value || {}));
@@ -229,13 +275,16 @@ async function handler(req, res) {
         }
       }
       if (events.length === 1) {
-        await ingestEvent(events[0]);
+        rpcResults.push(await ingestEvent(events[0]));
       } else if (events.length > 1) {
-        await postRpc('crm_ingest_whatsapp_events', { p_events: events });
+        rpcResults.push(await postRpc('crm_ingest_whatsapp_events', { p_events: events }));
       }
-      for (const sync of syncs) await postRpc('crm_record_whatsapp_sync', sync);
+      for (const sync of syncs) rpcResults.push(await postRpc('crm_record_whatsapp_sync', sync));
+      safeWebhookDiagnostic(req, payload, events.length, syncs, rpcResults, 'accepted');
       return res.status(200).json({ ok: true, accepted: events.length });
     } catch (error) {
+      if (error.rpcResult) rpcResults.push(error.rpcResult);
+      safeWebhookDiagnostic(req, payload, events.length, syncs, rpcResults, 'processing_failed');
       console.error('[whatsapp-webhook] processing failed');
       return res.status(500).json({ ok: false, error: 'processing failed' });
     }

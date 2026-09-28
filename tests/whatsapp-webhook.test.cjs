@@ -6,6 +6,7 @@ const messagesFixture = require('./fixtures/dualhook/messages.json');
 const echoesFixture = require('./fixtures/dualhook/smb-message-echoes.json');
 const historyFixture = require('./fixtures/dualhook/history.json');
 const contactsFixture = require('./fixtures/dualhook/smb-app-state-sync.json');
+const bsuidOnlyFixture = require('./fixtures/dualhook/messages-bsuid-only.json');
 
 const handler = require('../business/campanhas/crm-reativacao-leads/paginas-vendas/site/api/whatsapp-webhook.js');
 
@@ -278,4 +279,58 @@ test('POST agrupa múltiplas mensagens de history em um RPC', async (t) => {
   const bulkCalls = calls.filter(call => call.url.endsWith('crm_ingest_whatsapp_events'));
   assert.equal(bulkCalls.length, 1);
   assert.equal(bulkCalls[0].body.p_events.length, 2);
+});
+
+test('POST persiste mensagem Meta identificada somente por BSUID', { skip: 'aguarda metadados do novo POST real' }, async (t) => {
+  delete process.env.META_APP_SECRET;
+  process.env.META_WEBHOOK_INGRESS_TOKEN = 'ingresso-secreto';
+  process.env.META_EXPECTED_WABA_ID = 'waba-123';
+  process.env.META_EXPECTED_PHONE_NUMBER_ID = 'phone-123';
+  process.env.SUPABASE_URL = 'https://supabase.example';
+  process.env.SUPABASE_SERVICE_ROLE_KEY = 'service-role-de-teste';
+  const calls = [];
+  t.mock.method(global, 'fetch', async (url, options) => {
+    calls.push({ url, body: JSON.parse(options.body) });
+    return { ok: true };
+  });
+  const res = response();
+
+  await handler({ method: 'POST', query: { token: 'ingresso-secreto' }, body: bsuidOnlyFixture }, res);
+
+  assert.equal(res.statusCode, 200);
+  assert.equal(res.body.accepted, 1);
+  assert.equal(calls.length, 1);
+});
+
+test('POST registra diagnóstico seguro da ramificação e do RPC sem conteúdo nem telefone', async (t) => {
+  delete process.env.META_APP_SECRET;
+  process.env.WEBHOOK_SAFE_DIAGNOSTICS = '1';
+  t.after(() => delete process.env.WEBHOOK_SAFE_DIAGNOSTICS);
+  process.env.META_WEBHOOK_INGRESS_TOKEN = 'ingresso-secreto';
+  process.env.META_EXPECTED_WABA_ID = 'waba-123';
+  process.env.META_EXPECTED_PHONE_NUMBER_ID = 'phone-123';
+  process.env.SUPABASE_URL = 'https://supabase.example';
+  process.env.SUPABASE_SERVICE_ROLE_KEY = 'service-role-de-teste';
+  t.mock.method(global, 'fetch', async () => ({ ok: true, status: 200 }));
+  const logs = [];
+  t.mock.method(console, 'info', (...parts) => logs.push(parts.join(' ')));
+  const res = response();
+
+  await handler({
+    method: 'POST',
+    query: { token: 'ingresso-secreto' },
+    headers: { 'x-vercel-id': 'safe-request-id' },
+    body: messagesFixture
+  }, res);
+
+  assert.equal(res.statusCode, 200);
+  assert.equal(logs.length, 1);
+  assert.match(logs[0], /safe-request-id/);
+  assert.match(logs[0], /"field":"messages"/);
+  assert.match(logs[0], /"messages":1/);
+  assert.match(logs[0], /"accepted":1/);
+  assert.match(logs[0], /"name":"crm_ingest_whatsapp_event","status":200,"ok":true/);
+  assert.doesNotMatch(logs[0], /Quero entender a mentoria/);
+  assert.doesNotMatch(logs[0], /5511987654321/);
+  assert.doesNotMatch(logs[0], /ingresso-secreto/);
 });

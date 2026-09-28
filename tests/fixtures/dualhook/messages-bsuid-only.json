@@ -1,0 +1,21 @@
+{
+  "object": "whatsapp_business_account",
+  "entry": [{
+    "id": "waba-123",
+    "changes": [{
+      "field": "messages",
+      "value": {
+        "messaging_product": "whatsapp",
+        "metadata": { "display_phone_number": "5567992324690", "phone_number_id": "phone-123" },
+        "contacts": [{ "profile": { "name": "Lead BSUID" }, "user_id": "BR.EXAMPLEBSUID123456789" }],
+        "messages": [{
+          "from_user_id": "BR.EXAMPLEBSUID123456789",
+          "id": "wamid.bsuid-inbound-1",
+          "timestamp": "1790576172",
+          "type": "text",
+          "text": { "body": "Mensagem de fixture" }
+        }]
+      }
+    }]
+  }]
+}
