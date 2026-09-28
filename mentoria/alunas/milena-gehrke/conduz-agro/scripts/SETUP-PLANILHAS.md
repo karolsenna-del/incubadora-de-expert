@@ -4,6 +4,11 @@ Conecta os 4 formulários interativos (`diagnostico-interativo.html`, `pre-diagn
 
 > **Addendum 23/08/2026:** `ficha-inscricao.html` (Fase 9, ferramenta do Destrava Condução) foi adicionado ao mesmo script/planilha, numa 3ª aba ("Ficha de Inscrição").
 > **Addendum 24/08/2026:** `raio-x-conversa.html` (Raio-X da Conversa com o Produtor, uso dentro do programa) foi adicionado numa 4ª aba ("Raio-X de Conversas"), com uma coluna "Status da Análise" que começa em "Pendente" — muda pra "Feito" na mão depois de analisar, funciona como fila de trabalho da Milena. O formulário aceita **print(s) da conversa** (até 5, 6MB cada) além de texto colado — copiar e colar de WhatsApp/Direct raramente sai formatado direito, então print virou a opção principal. Os prints são salvos automaticamente numa pasta do Drive ("Conduz Agro — Prints do Raio-X", criada sozinha no primeiro envio) e o link de cada um cai na planilha, na coluna "Prints (links)".
+> **Addendum 27/09/2026:** as 4 abas passaram a ter como cabeçalho o **texto exato de cada pergunta**, na ordem do formulário, e as múltiplas escolhas são gravadas com o **texto da opção escolhida** (não mais pontos/códigos). Tudo configurado no objeto `FORMS` do `.gs`.
+> - **Pré-Diagnóstico:** as 3 perguntas de múltipla escolha (Técnica, Emocional, Condução) antes eram enviadas pelo formulário mas ignoradas pelo script — envios anteriores a 27/09 (Diego, 26/09) ficam com essas 3 em branco.
+> - **Diagnóstico Completo:** o antigo "Respostas (JSON)" virou uma coluna por pergunta (30); percentuais/trava/perfil ficam no fim como "Resultado — ...".
+> - **Ficha de Inscrição / Raio-X:** só cabeçalhos e texto das opções (1º/2º uso, urgência); Raio-X reordenado na ordem do formulário, "Status da Análise" segue no fim.
+> - Migração feita com `migrarTodasAsAbas` (implantação versão 4, mesma URL). Se mudar pergunta/opção num HTML, mudar também em `FORMS`.
 > Se a planilha e o Apps Script já estavam implantados antes desses addendums, siga a seção "Quando atualizar o script" abaixo pra colar a versão nova do `.gs` e reimplantar — a URL não muda.
 
 ## 1. Criar a planilha
