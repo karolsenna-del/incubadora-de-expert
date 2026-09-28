@@ -1,5 +1,5 @@
 # Documento Mestre — Black Expert (Grupo 2026)
-Versão: 1.2 (rascunho) | Data: 18/09/2026 | Status: Em construção — cronograma fechado, Echo escrevendo copies (Disparo #1 em aprovação)
+Versão: 1.3 (APROVADA 27/09 — ver seção "Revisão v1.3" no fim) | Data original: 18/09/2026 | Status: Em construção — cronograma fechado, Echo escrevendo copies (Disparo #1 em aprovação)
 
 **Nome oficial da campanha: "Black Expert"** — usar em toda copy (WhatsApp, e-mail, Instagram, página). Pasta do projeto mantém o nome técnico `black-friday-grupo-2026` só como identificador interno.
 
@@ -102,3 +102,41 @@ Confirmado: você vai criar uma **página nova "Black Expert"** com essa oferta 
 ---
 
 **Próximo passo:** confirma o item do contador de vagas acima (é o único bloqueador real pra virar copy — sem saber se dá pra mostrar em tempo real, o Quill não sabe como redigir a escassez), e eu já chamo o Echo (cronograma de disparos) e o Quill (página Black Expert) em paralelo.
+
+---
+
+## Revisão v1.3 — ✅ APROVADA pela Karol em 27/09/2026 (Atlas + Karol)
+
+> Revisão aberta a partir do handoff do Companion (6 riscos). **Esta seção prevalece sobre os Blocos 1-7 acima onde houver conflito.** Meta segue em aberto, mas não bloqueia copy/página (só entra no check de 07/10).
+
+**Decidido pela Karol (27/09):**
+- **Antecipação = captação pro grupo.** Métrica que manda: entradas no grupo/dia. Fontes: CRM (WA individual + e-mail), grupo antigo, Instagram "comenta BLACK" (Karol responde na mão), **Live 32**, Instagram Semana 10.
+- **Live 32 → quinta 01/10, 15h (Brasília)** (Karol em evento presencial ter 29 e qua 30). CTA = entrar no grupo da Black Expert. Avisar a mudança de dia no grupo das lives + Story na segunda 28/09.
+- **Disparo #1 antecipado pra segunda 28/09 à noite** (T-16) — precisa sair antes do Reels de abertura de terça 09h ("vim avisar antes de qualquer post"). 2 Reels da Black de ter/qua gravados na segunda. Quem entrar na lista depois recebe convite individual em ondas até quinta.
+- **Cronograma de entregas aprovado:** escopo Central do Mentor 03/10 · copy da página (Quill) 06/10 · página oculta + checkout R$2.500 testado 09/10 · roteiro + slides da live de fechamento prontos 11/10 · disparos #2-#11 agendados 10/10 · teste ponta a ponta 12/10.
+- **Sprint do Método FORA de toda comunicação da Black Expert** (RC-017 — uma oferta só). Sprint segue vendendo no 1:1 e na página dele.
+- **Pós-14/10 (RC-014/RC-013):** oferta de continuidade = **Expert360º**. Hoje R$497; em outubro sobe pra R$697 (entram novos agentes); página mostra "de R$997 por R$697". Nada do Expert360º aparece em material da Black até 14/10 23h59.
+- **Desafio "Seu Método em 5 Dias" (19-23/10) mantido** — formato mão na massa + revisão ao vivo (funciona com turma pequena ou grande). Mentoria em Grupo passa a ser **quinzenal**; semana de 19/10 é só o Desafio.
+
+- **Peça de venda do dia 14 = LIVE às 15h (Brasília), não VSL** — é a live semanal de quarta virando a live da Black. Motivo: edição de vídeo é o gargalo recorrente da Karol; live não tem edição e é o formato forte dela (Aula de 8 Blocos). Replay até 23h59. Karol em mentoria das 20h às 21h30 → disparos das 20h e 23h59 **agendados**.
+- **Expert360º sobe pra R$697 em 01/10.** No pós-Black (15-21/10) ele é vendido no preço regular novo (página "de R$997 por R$697").
+
+- **Tema da Live 32 (qui 01/10, 15h) — decidido 28/09:** "Parei de melhorar o método e vendi R$5 mil numa semana" — vender antes de ter audiência (Sequência do Expert Seguro + semana 21-26/09, `historias-trajetoria.md` #19) + **organização de rotina pro expert incluir a prospecção diária** e chegar nas primeiras vendas. CTA = entrar no grupo da Black Expert. Não revelar que a condição é na Mentoria em Grupo (só no Disparo #3, 05/10). Roteiro com o Expert em Lives, pronto até seg 28/09.
+
+**Cronograma do dia 14/10 (substitui "VSL libera 8h"):**
+
+| Hora | O quê |
+|---|---|
+| 08h00 | Carrinho + página abertos, mensagem de abertura (agendada) |
+| 14h00 | Lembrete "daqui 1h, ao vivo" |
+| 15h00 | Live de fechamento (pitch Mentoria em Grupo) — replay até 23h59 |
+| 20h00 | Última chamada (agendada — Karol em mentoria) |
+| 23h59 | Carrinho fecha + encerramento (agendado) |
+
+**Ajustes no cronograma de disparos (Bloco 3):** #1 sai **28/09 à noite** (não 29/09) · #8 convida pra live das 15h · #9 vira lembrete 14h "daqui 1h" · #10 última chamada 20h com replay.
+
+**Pós-14/10:** 15-21/10, oferta Expert360º R$697 pra quem não comprou (2-3 mensagens do Echo). Nada de Expert360º em material da Black até 14/10 23h59.
+
+**Em aberto (não bloqueia):**
+- Meta de vendas — Karol rastreando leads do WhatsApp; estimar por temperatura (A aluno/ex-aluno ~10% ref. renovação 2025 = 2/20 · B/C/D sem histórico). Check de ritmo do grupo em 07/10.
+- Escopo da Central do Mentor (até 03/10) e temas dos 5 dias do Desafio (até 09/10) — necessários pro Disparo #6.

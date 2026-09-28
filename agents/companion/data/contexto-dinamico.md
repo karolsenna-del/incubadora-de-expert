@@ -412,4 +412,11 @@ Retomar com: `/expert-companion`
 - Em aberto: meta numerica da Black Expert; cruzamento grupo antigo de WhatsApp × CRM dos 150.
 - Proximo review: 04/10.
 
-*Ultima atualizacao: 27/09/2026 (Weekly review — cockpit, decisoes Black Expert/Biblioteca)*
+**Sessao 27-28/09 — Black Expert revisada + Live 32 roteirizada:**
+- Squad LPago (Atlas) revisou a campanha: doc mestre **v1.3 APROVADO** — antecipacao = captacao pro grupo; Disparo #1 sai seg 28/09 a noite; Live 32 na qui 01/10 15h (Karol em evento ter/qua); dia 14 com **live de fechamento as 15h** (sem VSL); Sprint fora da comunicacao; pos-Black 15-21/10 com Expert360º (sobe pra R$697 em 01/10, pagina "de R$997 por R$697"); Mentoria em Grupo passa a quinzenal; Desafio 5 Dias 19-23/10 (Persona/Promessa/Processo/Kit de Ferramentas/Proposta, pre-requisito Historia+Ikigai fixado no grupo de alunos).
+- Echo: disparos #2 a #7 **aprovados** (prova social = Anália, Rosiani e Emilly, alunas da Mentoria em Grupo) + convite da Live 32 pronto. Falta: dia 14 (#8-#11), fixada Historia/Ikigai, pos-Black. Depois Quill (pagina).
+- Expert em Lives: Live 32 roteirizada ("A rotina de prospeccao que me fez vender R$5 mil em uma semana") — 4 pendencias da Karol (horario da prospeccao, print Elaine, 5 afirmacoes, bonus "Rotina da Venda Primeiro").
+- Em aberto: meta de vendas (Karol rastreando leads do WhatsApp; ref. 2/20 = renovacao 2025).
+- Segunda 28/09 da Karol: aviso da live + Stories, gravar/programar posts de ter/qua, Disparo #1 a noite.
+
+*Ultima atualizacao: 28/09/2026 (Black Expert v1.3 + Live 32)*

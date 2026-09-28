@@ -5,6 +5,8 @@
 > Catalogado em: 09/07/2026 · Origem: pasta "Provas" enviada pela Karol.
 > Depoimentos resumidos também em `../depoimentos.md`.
 
+> **Confirmado pela Karol (27/09/2026):** Anália, Rosiani e Emilly são alunas da **Mentoria em Grupo** — usar como prova social do Grupo.
+
 ## Estrutura
 
 - `imagens/` — prints (PNG/JPG). Leves, versionados no git, usáveis direto como asset de lâmina.
