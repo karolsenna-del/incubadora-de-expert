@@ -40,3 +40,4 @@
 | 24/09/2026 | chamada-grupo-lives-segunda-2026-09-21 | 6 | 17990533832852710, 18115476631949481, 18089563355230181, 17872852581636077, 18407785606093783, 17981445608900312 | sim (ver log de execucao) |
 | 25/09/2026 | diagnostico-ferramentas-quinta-2026-09-24 | 1 | 18149638849528192 | sim (ver log de execucao) |
 | 26/09/2026 | diagnostico-ferramentas-terca-2026-09-22 | 1 | 18347115298267573 | sim (ver log de execucao) |
+| 27/09/2026 | expert360-domingo-2026-09-27 | 1 | 18344480794267232 | sim (ver log de execucao) |
