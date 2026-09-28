@@ -1,4 +1,4 @@
-# Desafio Rota100K · Semana 09 (28/09 a 04/10) — Plano Completo v1 (42 posts, 6/dia)
+# Desafio Rota100K · Semana 09 (28/09 a 04/10) — Plano Completo v2 APROVADO (42 posts, 6/dia)
 
 > Squad: Conteúdo Arcane (Aria — análise · Iris — temas · Rico — roteiro · Mack — produção)
 > Fonte do desafio: `DESAFIO-ROTA100K-Semana-09-28-09-a-04-10.pdf` (Downloads).
@@ -6,7 +6,7 @@
 > **Métrica da semana:** compartilhamentos (não views). Comparar o 15h com o 09h do mesmo dia.
 > CTA oficial: **seguir**, sempre amarrado ao tema. No 15h, o fecho é marcar alguém.
 > Fato só o documentado (`historias-trajetoria.md`, `historias-mentorias-atendidas.md`, `base-inicial.md`) ou dito pela Karol. ⚠️ = precisa de confirmação antes de gravar/publicar.
-> **v1 — 25/09/2026. Aguardando revisão item a item com a Karol.**
+> **v1 — 25/09/2026.** · **v2 — 27/09/2026: todos os 7 dias revisados e aprovados item a item pela Karol.**
 > **v1.1 — 26/09/2026:** entra a antecipação da **Black Expert (14/10)** — 1 post por dia, de terça 29/09 a domingo 04/10, com um aprendizado da imersão de Black Friday do Leandro Ferrari (fonte: `business/propostas/proposta-black-friday-euriler.md`, seção "Fontes da imersão", com os minutos da transcrição) e CTA **"Comenta BLACK que eu te mando o link do grupo"**. Regras da campanha respeitadas (`business/campanhas/black-friday-grupo-2026/`): nome "Black Expert", escassez só de tempo (1 dia, não repete), sem preço e sem bônus antes da data de reveal, grupo tratado como espaço criado só pra essa campanha.
 
 ## 🖤 Black Expert na semana (1 por dia, marcados com 🖤)
@@ -574,7 +574,7 @@ Me segue que eu te ajudo a defender a sua escolha sem briga.
 
 ---
 
-## DIA 7 — Domingo, 04/10
+## DIA 7 — Domingo, 04/10 ✅ APROVADO (27/09)
 **Tema do dia:** fechamento da semana de compartilhamento.
 
 ### 07h · Reels 7s · sem fala
@@ -593,6 +593,10 @@ Me segue e manda pra alguém hoje.
 **Contexto:** Eu pedi de propósito, todo dia, às 15h: manda pra alguém.
 **Virada:** [o que o dado mostrou — qual post mais circulou e o que ele tinha de diferente]. Quando alguém manda seu vídeo, ele chega pra uma pessoa que não te segue, com a recomendação de alguém em quem ela confia.
 **Fecha (CTA falado):** "Me segue — e obrigada a quem passou adiante."
+**Legenda (funciona com qualquer resultado):**
+Curtida some no feed. Compartilhamento chega em quem você nunca alcançaria sozinho.
+Se algum vídeo meu fez sentido pra você essa semana, manda pra uma pessoa hoje.
+Me segue — e obrigada a quem passou adiante.
 *(Se o número não subir, a abertura muda pra honestidade: "Pedi a semana toda pra vocês compartilharem. Olha o que aconteceu." — e a Aria lê o motivo.)*
 
 ### 12h · Reels YAP · 🖤 BLACK EXPERT (6/6 — T-10)
@@ -648,20 +652,18 @@ Me segue que eu te mostro o resto.
 
 ---
 
-## Pendências pra validar antes de ir pra fila
+## Pendências (depois da aprovação de 27/09)
 
 | # | Slot | O que falta |
 |---|---|---|
-| 1 | Seg 09h | Pode citar R$50 mil da mentoria e o irmão? |
-| 2 | Ter 07h | Karol ainda se reconhece em "minha entrega nunca esteve tão boa e eu nunca vendi tão pouco"? Topa expor? |
-| 3 | Qua 09h | ✅ Resolvido (26/09) — virou o caso da aluna ansiosa pelo conteúdo; saiu o dado de seguidores. |
-| 4 | Qui 12h 🖤 | As 3 perguntas de prontidão deram "sim" pra Black Expert? |
-| 5 | Sex 12h | "Rainha do método" é o elogio que mais marcou? |
-| 6 | Dom 09h | Preencher com os compartilhamentos reais (sábado à noite). |
-| 7 | Dom 15h | Trocar pelo resumo do Envio que mais circulou, se houver destaque. |
-| 8 | 🖤 todos | Quem responde os comentários "BLACK" com o link enquanto a automação não libera? |
+| 1 | Dom 09h | Preencher com os compartilhamentos reais no sábado à noite (03/10). |
+| 2 | Dom 15h | Se algum Envio da semana circular muito mais que os outros, trocar o conteúdo pelo resumo dele. |
+| 3 | 🖤 todos | Quem responde os comentários "BLACK" com o link enquanto a automação comentário → Direct não libera? |
+| 4 | 20h todos | Carrosséis ainda sem slides — produzir no Squad Carrossel e colocar na fila com a legenda. |
 
-**Teste da semana (Aria):** 🧪 1 pergunta binária por dia na legenda (Seg 17h, Ter 17h, Qua 07h, Qui 17h, Sex 17h, Sáb 07h, Dom 17h). Aria mede comentários desses 7 contra o resto no próximo relatório — e, à parte, quantos "BLACK" cada post 🖤 gerou.
+Resolvidas na revisão: R$50 mil e irmão liberados (Seg 09h); Ter 07h virou a semana dos R$5 mil; Qua 09h virou o caso da aluna ansiosa pelo conteúdo; 3 perguntas de prontidão confirmadas (Qui 12h); Sex 12h é orientação estratégica, não elogio; 5 perguntas do carrossel de sábado confirmadas.
+
+**Teste da semana (Aria):** 🧪 1 pergunta binária por dia na legenda (Seg 17h, Ter 17h, Qua 07h, Qui 17h, Sex 17h, Sáb 07h, Dom 07h). Aria mede comentários desses 7 contra o resto no próximo relatório — e, à parte, quantos "BLACK" cada post 🖤 gerou.
 
 ## Reserva (saíram pra dar lugar à Black — prontos pra semana 10)
 
@@ -675,3 +677,4 @@ Me segue que eu te mostro o resto.
 - 25/09 — @aria-analista: relatório 15-25/09 (`analises/2026-09-25/relatorio-batch-10dias.md`) usado como base das decisões da semana.
 - 25/09 — @rico-roteirista: v1 dos 42 posts escrita a partir do PDF da Semana 09 + banco de histórias. 10 pendências marcadas com ⚠️.
 - 26/09 — @rico-roteirista: v1.1 — 6 posts 🖤 da antecipação da Black Expert (29/09 a 04/10) com aprendizados da imersão Ferrari e CTA "comenta BLACK". 5 posts foram pra reserva.
+- 26-27/09 — @rico-roteirista: revisão item a item com a Karol, dia a dia. Todas as legendas reescritas pra complementar o vídeo (não repetir), legendas dos 7 carrosséis criadas, ganchos ajustados pra não seguidores. Fatos novos registrados: semana dos R$5 mil (história #19), persona compradora × persona dos sonhos (base-inicial), caso Milena ansiosa pelo conteúdo (mentorias #9). **Semana 09 aprovada.**
