@@ -298,6 +298,12 @@
 - Na mesma semana **gravou 6 aulas do curso que estava travado** (Expert360)
 - Nas palavras dela: "essa semana eu decidi destravar o que eu estava procrastinando e deu muito resultado, além da satisfação de ver as coisas andando"
 - Leitura dela: "quando fazemos muitas coisas ao mesmo tempo e ficamos melhorando o método, parece que não vemos evolução real"
+- **A tarde da tempestade (acrescentado 28/09):** caiu o wifi com a tempestade, ficou sem trabalhar no notebook e passou a tarde prospectando — **falou com 14 pessoas, agendou 6 sessões, saiu 1 venda de R$1.500**. Ângulo dela: "o que fazer com o tempo ocioso — rolar o feed, fingir pesquisa de conteúdo/concorrência que quase nunca leva a nada, ou ir atrás de venda? Fui pelo segundo caminho."
+- **O que ela destravou (Karol, 28/09):** as duas coisas que vivia procrastinando e repetindo em voz alta — "gravar curso é chato" e "eu não gosto de vender". Leitura dela: "se palavra tem poder, isso estava entrando no meu subconsciente" — parou de repetir e destravou as duas.
+- **Rotina fixa:** prospecção às **14h, primeira atividade do expediente**
+- **Antes × depois (Karol, 28/09):** em **agosto/2026 faturou R$1.500 no mês** (época do "nunca vendi tão pouco") → em **setembro/2026 faturou R$10 mil no mês**, sendo R$5 mil em uma semana (21-26/09)
+- A venda de R$1.500 da tarde da tempestade é **uma das vendas que compõem os R$5 mil** (confirmado 28/09)
+- **Lead pelo perfil pessoal (mesma semana):** Karol tem 2 perfis no IG — o pessoal (aberto em 2011, privado, muita memória) e o profissional Karol Senna; **não aconselha ninguém a ter dois**, só mantém pelo valor afetivo do antigo. Usando o **Rastreador de Leads** (networking por categorias, qualificando), viu no pessoal uma conhecida das antigas (que também a segue no profissional) produzindo conteúdo técnico de segurança patrimonial pra imigrantes nos EUA → comentou no post "esse conhecimento daria um baita infoproduto" → ela chamou na hora → sessão de diagnóstico marcada pra 28/09, **remarcada pela Laís pra sexta 02/10** (lead: Laís Daltrozo; resultado pendente). Lição dela: "depois que você identifica quem é sua persona, começa a enxergá-la por onde passa — qualquer pessoa ao seu redor pode ser seu lead."
 
 **Leitura da squad:** virada concreta e recente da reflexão A ("minha entrega nunca esteve tão boa e eu nunca vendi tão pouco") — agora com número real. Liga com o aprendizado do Caio Carneiro (funil fraco = falta de volume) e com o critério fazer/delegar/adiar/cortar.
 

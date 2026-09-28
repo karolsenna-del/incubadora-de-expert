@@ -558,3 +558,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** Antecipação vira captação pro grupo; Disparo #1 em 28/09 à noite; Live 32 na quinta 01/10 15h (Karol em evento ter/qua); dia 14 com live de fechamento às 15h no lugar da VSL; Sprint fora da comunicação; pós-Black 15-21/10 com Expert360º; Expert360º sobe de R$497 pra R$697 em 01/10 (página "de R$997 por R$697"); Mentoria em Grupo passa a quinzenal; Desafio 5 Dias (19-23/10) mão na massa.
 **Racional:** Edição de vídeo é o gargalo recorrente — live elimina edição do caminho crítico; RC-017 (uma oferta só); RC-013/014 (downsell só depois, pós-evento vende).
 **Impacto:** Echo, Quill, Expert em Lives, Squad Conteúdo e Gestor de Infra com entregas até 12/10. Doc: `business/campanhas/black-friday-grupo-2026/documento-mestre.md` (seção Revisão v1.3).
+
+## 28/09/2026 — Black Expert ganha identidade visual própria
+**Contexto:** Montagem do deck da Live 32 (porta de entrada do grupo da Black Expert). A campanha não tinha nenhum padrão visual.
+**Decisão:** Identidade "Incubadora em modo evento": mesma paleta da marca com preto dominante, nome em letra (BLACK branco / EXPERT laranja), chama desenhada em traço (nunca emoji 🔥), selo 14.10 e faixa laranja inclinada. Na Live 32, só o Bloco 8 vira Black (Blocos 1-7 ficam no visual Live Expert360).
+**Racional:** Uma identidade só pra deck, stories, grupo, página e live de fechamento. Sem cor nova pra não virar "Black genérica"; virada só no pitch pra aula não parecer venda.
+**Impacto:** Guia em `business/campanhas/black-friday-grupo-2026/identidade-visual.md` — usar em todas as peças da campanha (Quill na página, stories, live do dia 14).

@@ -1,4 +1,6 @@
-# Live 32 — "A rotina de prospecção que me fez vender R$5 mil em uma semana"
+# Live 32 — "A rotina que me fez faturar 5k na semana"
+> Título escolhido pela Karol (28/09): a palavra "prospecção" NÃO aparece no tema nem no Acordo —
+> é revelada só no Bloco 5, junto com a história da tempestade.
 > Tema: vender antes de ter audiência. A Laura acha que o que falta é mais seguidor, mais conteúdo
 > ou um método mais bonito. Na prática, o que falta quase sempre é conversa de venda todo dia.
 > Âncora real: semana de 21 a 26/09/2026 — a Karol parou de melhorar o método, prospectou pelo
@@ -7,7 +9,7 @@
 > Sequência do Expert Seguro (`business/campanhas/incubadora-de-expert-individual/proposta-validada-2026-09.md` §7);
 > critério fazer/delegar/adiar/cortar (`base-inicial.md` item H); 6 grupos do Rastreador (M3).
 > Data: **quinta, 01/10/2026, 15h (Brasília)** — mudou de quarta porque a Karol está em evento presencial ter/qua.
-> Duração estimada: ~38 min
+> Duração estimada: ~41 min
 > Modelo: Aula de 8 Blocos (Funil de Zoom) — sem bloco de prática ao vivo
 > Fonte da fórmula: `agents/etlmaker/kbs/alcateia-implementacao/VOL-funil-vendas.md` seção 13
 > Oferta do Bloco 8: **Grupo da Black Expert** (entrada gratuita — é a porta pra condição de 14/10).
@@ -35,15 +37,15 @@ Se no final você sair daqui sabendo o que fazer amanhã de manhã, eu cumpri o 
 
 "Antes de qualquer coisa, eu sei a pergunta que tá na sua cabeça: 'isso funciona pro meu caso?'
 
-Deixa eu te mostrar duas situações bem diferentes.
+Deixa eu te mostrar o meu antes e depois.
 
-A primeira é a minha. Eu tenho produto, tenho método, tenho curso em gravação. E mesmo assim, tinha semana que eu olhava e pensava: 'a minha entrega nunca esteve tão boa, e eu nunca vendi tão pouco.' O problema não era o que eu vendia.
+Em agosto, eu tinha produto, tinha método, tinha curso em gravação. E faturei R$1.500 no mês inteiro. Eu olhava pra minha semana e pensava: 'a minha entrega nunca esteve tão boa, e eu nunca vendi tão pouco.'
 
-A segunda é da Elaine, que trabalha com terapias e burnout. Ela me mandou essa mensagem: *'comecei a divulgar meu produto segunda e hoje tem apenas 3 vagas, já já fecho.'* Não foi viral. Foi ela indo atrás das pessoas certas.
+Em setembro, com o mesmo produto e o mesmo método, eu faturei R$10 mil no mês. E R$5 mil disso veio de uma semana só. O que eu vendo não mudou. O que mudou foi a rotina que eu vou te mostrar hoje.
 
 Terapeuta, médica, advogado, contadora, consultor — não importa a área. Se você tem conhecimento e tem gente que precisa dele, isso funciona. O que muda é pra quem você fala, não se funciona."
 
-> ⚠️ Print da Elaine: `docs/knowledge/expert-business/provas/imagens/produto-elaine.png` — confirmar se pode mostrar na tela.
+> Ajuste da Karol (28/09): Bloco 2 virou o antes × depois dela (agosto: "nunca vendi tão pouco", `base-inicial.md` reflexão A, 28/08 → setembro: R$5 mil na semana) no lugar do caso da Elaine. A Elaine saiu da live (é da Arcane; print não seria mostrado de qualquer jeito).
 
 ---
 
@@ -59,7 +61,7 @@ Terapeuta, médica, advogado, contadora, consultor — não importa a área. Se 
 
 **Caminho 4: esperar estar pronto.** Esse é o mais silencioso. Não tem data. Só tem 'quando eu estiver pronto'. E esse dia não chega, porque prontidão não aparece antes da primeira conversa. Ela aparece depois.
 
-Os quatro têm uma coisa em comum: te mantêm longe da conversa de venda."
+Os quatro têm uma coisa em comum: te mantêm longe do que te faz vender. E longe do resultado."
 
 ---
 
@@ -75,7 +77,7 @@ Existe um caminho mais direto. Eu testei ele na semana passada, e é isso que eu
 
 ---
 
-## BLOCO 5 — AUTORIDADE IMEDIATA / MÉTODO (~9 min)
+## BLOCO 5 — AUTORIDADE IMEDIATA / MÉTODO (~12 min)
 
 "Eu chamo isso de **Sequência do Expert Seguro**. É a ordem que eu ensino no meu método:
 
@@ -85,9 +87,21 @@ Primeiro você organiza o que veio vender. Depois você vende — de forma contr
 
 Agora deixa eu te contar o que aconteceu comigo.
 
-Na semana de 21 a 26 de setembro, eu fiz o contrário do que vinha fazendo. Parei de melhorar o método. E decidi uma coisa só: prospectar pelo menos uma pessoa por dia.
+Na semana de 21 a 26 de setembro, eu decidi destravar tudo o que eu estava procrastinando. E eu sabia exatamente o que era. Gravar o meu curso, que eu vivia repetindo que é chato. E vender. Eu sempre falei: 'eu não gosto de vender.'
 
-Resultado: R$5 mil naquela semana. E, de brinde, eu destravei seis aulas do meu curso que estavam paradas havia semanas. Porque quando a gente para de fazer mil coisas ao mesmo tempo, sobra energia pro que importa.
+Se palavra tem poder, isso estava entrando no meu subconsciente. Então eu parei de repetir, parei de melhorar o método e decidi uma coisa só: prospectar pelo menos uma pessoa por dia.
+
+E teve um dia dessa semana que explica tudo. Deu uma tempestade aqui, caiu o wifi, e eu fiquei sem conseguir trabalhar no notebook. Uma tarde inteira 'perdida'.
+
+E aí eu tive que escolher o que fazer com aquele tempo. Porque todo mundo tem esse tempo ocioso — e quase sempre ele vai pra três lugares: rolar o feed, 'fazer pesquisa de conteúdo' ou 'olhar a concorrência'. Sendo bem sincera: isso quase nunca leva a nada. É o jeito mais confortável de parecer que tá trabalhando.
+
+Eu fui pelo outro caminho. Peguei o celular e fui atrás de venda. Passei a tarde conversando com gente. Falei com 14 pessoas. Agendei 6 sessões. E uma venda de R$1.500 saiu dali — uma das vendas que fizeram os meus R$5 mil daquela semana.
+
+Sem wifi. Sem post. Sem tráfego. Só conversa.
+
+Lembra de agosto? Em agosto, R$1.500 no mês. Em setembro, R$1.500 numa tarde.
+
+Resultado da semana inteira: R$5 mil.
 
 Isso veio de uma frase que eu ouvi do Caio Carneiro: muitas vezes a gente acha que o funil tá fraco, quando na verdade o que falta é volume de gente entrando nele. Desde essa aula, eu prospecto todo dia. Nem que seja um contato comercial.
 
@@ -98,13 +112,20 @@ Você não tem tempo sobrando. Ninguém tem. Então a prospecção não entra po
 
 **Movimento 2 — Uma conversa por dia, na agenda.**
 Não é 'quando sobrar tempo'. É compromisso marcado, igual consulta. Uma conversa por dia, no mínimo.
-⚠️ [Karol: em que momento do dia você fazia a sua prospecção nessa semana? Se tiver, é aqui que entra — "eu fazia a minha às ___".]
+A minha é às 14h. É a primeira coisa do meu expediente — antes de abrir e-mail, antes de mexer em conteúdo, antes de melhorar qualquer aula. Venda primeiro. O resto depois.
 
 **Movimento 3 — Saber na véspera com quem você vai falar.**
 O que trava a prospecção não é a conversa. É abrir o WhatsApp e não saber pra quem mandar. Então a lista fica pronta antes. E você começa pelos mais quentes: gente que já te conhece, clientes e ex-clientes, e quem já veio até você sozinho.
 
+Eu uso uma ferramenta minha pra isso, o **Rastreador de Leads**. Você coloca ali as pessoas do seu networking, separadas por categoria, e vai qualificando quem faz sentido chamar.
+
+E deixa eu te contar o que aconteceu nessa mesma semana. Eu tenho dois perfis no Instagram: o pessoal, que eu abri em 2011, tem muita história minha e hoje é privado, e o profissional, o Karol Senna. Hoje eu não aconselho ninguém a fazer isso, tá? Eu só mantenho porque o meu pessoal é muito antigo e tem muita memória minha lá.
+
+Eu entrei no pessoal e vi uma pessoa das antigas, da minha vida pessoal, que hoje também me acompanha no profissional. Ela tá produzindo conteúdo técnico de segurança patrimonial pra imigrantes nos Estados Unidos. E o que eu fiz? Comentei no post dela: 'esse conhecimento daria um baita infoproduto!'. Na hora ela me chamou, e a gente marcou uma sessão de diagnóstico. É nessa conversa que a venda acontece.
+
+Repara: eu não fui atrás de estranho. Não impulsionei post. Eu só enxerguei. Porque depois que você sabe quem é a sua persona, você começa a ver ela por onde passa. Qualquer pessoa ao seu redor pode ser o seu lead.
 **Movimento 4 — Uma linha depois de cada conversa.**
-Terminou, escreve uma linha: o que a pessoa disse, onde ela travou, qual é o próximo passo. Em uma semana, você tem mais informação sobre o seu cliente do que em um ano de post.
+Terminou, escreve uma linha: o que a pessoa disse, onde ela travou, qual é o próximo passo. Assim, cada conversa te ensina alguma coisa sobre o seu cliente.
 
 Repara que eu te falei o que fazer. O como — o que falar em cada conversa, como qualificar, como conduzir até a decisão — é o que a gente trabalha junto, passo a passo."
 
@@ -121,7 +142,7 @@ Repara que eu te falei o que fazer. O como — o que falar em cada conversa, com
 "Eu sei o que tá passando pela sua cabeça agora. Então deixa eu responder antes de você perguntar.
 
 **1. 'Eu não tenho tempo.'**
-Uma conversa leva menos tempo do que um post que ninguém vê. Você não precisa de mais horas. Precisa trocar o que não vende pelo que vende.
+Você tem. Você tem tempo ocioso — ele só tá indo pro feed, pra 'pesquisa de conteúdo', pra olhar a concorrência. Lembra da minha tarde sem wifi? Não precisei de mais horas. Precisei escolher pra onde elas iam.
 
 **2. 'Meu método ainda não tá pronto.'**
 Ele nunca vai estar, se você não vender. É a conversa que te mostra o que falta. Eu vendi antes de ter tudo pronto — e construí a entrega junto com quem comprou.
@@ -143,13 +164,13 @@ Você não precisa de script perfeito. Precisa ouvir mais do que falar. A primei
 
 Uma conversa por dia. Em 15 dias, são 15 conversas. Em 30 dias, 30 conversas. Em 90 dias, 90 conversas com pessoas que têm o problema que você resolve.
 
-Eu não sei quantas vão virar venda pra você. Ninguém sabe. Mas eu sei o que aconteceu comigo em cinco dias: R$5 mil. E eu sei que, em 90 conversas, você vai saber exatamente quem é o seu cliente, o que ele quer ouvir e quanto ele paga.
+Eu não sei quantas vão virar venda pra você. Ninguém sabe. Mas eu sei o que aconteceu comigo numa tarde sem wifi: 14 conversas, 6 sessões agendadas, uma venda. E em cinco dias: R$5 mil. E eu sei que, em 90 conversas, você vai saber exatamente quem é o seu cliente, o que ele quer ouvir e quanto ele paga.
 
 Agora o outro lado. Se você não fizer nada disso: daqui a 15 dias você vai estar melhorando o método. Daqui a 30, pensando em como crescer o Instagram. Daqui a 90, no mesmo lugar em que você está hoje — só que com mais três meses de 'quando eu estiver pronto'.
 
 A diferença entre os dois cenários não é talento. É uma conversa por dia."
 
-> Número real usado: R$5 mil em 21-26/09 (Karol). Projeção dos 15/30/90 dias = só aritmética de conversas, sem estimar venda (regra: nunca inventar número).
+> Números reais usados: R$5 mil em 21-26/09 + tarde da tempestade (14 conversas → 6 sessões → 1 venda de R$1.500), ambos da Karol (28/09). Projeção dos 15/30/90 dias = só aritmética de conversas, sem estimar venda (regra: nunca inventar número).
 
 ---
 
@@ -164,10 +185,11 @@ E é por isso que eu quero te contar sobre a **Black Expert**. Dia 14 de outubro
 "É pra você que tem conhecimento de verdade e quer vender antes de ter audiência. Não é pra quem quer fórmula de viralizar ou dinheiro fácil. É pra quem topa conversar com gente todo dia."
 
 **3. Como funciona agora**
-"Eu criei um grupo de WhatsApp só pra Black Expert. É lá que eu conto os detalhes primeiro — antes do feed, antes de qualquer post. É lá que eu apareço com bastidor e respondo dúvida direto. E no dia 14, às 8h, é lá que a condição abre."
+"Eu criei um grupo de WhatsApp só pra Black Expert. É lá que eu conto os detalhes primeiro — antes do feed, antes de qualquer post. É lá que eu apareço com bastidor e respondo dúvida direto. E no dia 14, às 8h, é lá que a condição abre.
 
-**4. Bônus único**
-⚠️ [Proposta — Karol decide: quem entrar no grupo recebe a **Rotina da Venda Primeiro** em uma página — os quatro movimentos de hoje, pra imprimir e colar do lado do computador. Se não quiser criar esse material, o bônus sai e fica só a entrada no grupo.]
+E tem mais: vai ter bônus incríveis pra quem chegar primeiro. Então quem tá no grupo fica sabendo antes — e sai na frente."
+
+> Sem bônus nesta live (decisão Karol, 28/09 — proposta "Rotina da Venda Primeiro" achada fraca). O motivo pra entrar no grupo é a própria condição de 14/10 abrindo lá primeiro + **bônus pros primeiros compradores** (teaser pedido pela Karol em 28/09 — existem no doc mestre Bloco 4, mas NÃO nomear quais: o reveal é o Disparo #6, 11/10).
 
 **Fechamento — Decisão Mais Inteligente**
 "Você tem dois caminhos agora. Pode pegar tudo o que eu te mostrei e tentar sozinho — e se fizer uma conversa por dia, já vai estar muito à frente de quem só assistiu. Ou pode tomar a decisão mais inteligente: entrar no grupo e saber em primeira mão como fazer isso comigo do lado.
@@ -182,8 +204,9 @@ O link tá aqui no chat. Entra agora, enquanto a gente conversa."
 
 ## CHECKLIST PRÉ-LIVE
 
-- [ ] Confirmar os 3 pontos ⚠️: print da Elaine na tela · horário da sua prospecção (Bloco 5) · bônus "Rotina da Venda Primeiro" sim/não (Bloco 8)
-- [ ] Validar as 5 afirmações do Bloco 6 (ou trocar alguma)
+- [x] Bloco 2 trocado pro antes × depois da Karol, Elaine saiu (28/09) · horário 14h (28/09) · afirmação 1 trocada pro "tempo ocioso" (28/09)
+- [x] Bônus do Bloco 8: removido (28/09)
+- [x] História da Laís fecha no agendamento da sessão (remarcada pra sexta 02/10, depois da live — decisão Karol 28/09)
 - [ ] Link do grupo da Black Expert copiado pra colar no chat
 - [ ] Link do Meet no grupo das lives (mensagens da manhã e 14h45 no `copies.md` da Black Expert)
 - [ ] Mensagem pós-live pra quem não assistiu (E, no `copies.md`)

@@ -77,6 +77,7 @@
 > "Karol, obrigada pela guiança, comecei a divulgar meu produto segunda e hoje tem apenas 3 vagas,
 > já já fecho! Duas tigresas aqui já estão comigo no processo."
 - **Uso:** RESULTADO concreto (produto vendendo, vagas fechando). Nicho terapias/burnout.
+- **Contexto (Karol, 28/09):** a Elaine é da **Arcane** — conseguiu as clientes com um desafio que a Karol ajudou a montar lá. O print tem vocabulário da Arcane ("tigresas"), então em conteúdo próprio da Incubadora contar a história em palavras, sem mostrar o print.
 
 ### Lives / Expert360
 
