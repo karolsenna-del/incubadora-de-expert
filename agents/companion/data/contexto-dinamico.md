@@ -43,7 +43,7 @@ O metodo da Karol nasceu dos fracassos — autoridade visceral construida na der
 
 Prioridades imediatas (weekly 02/09):
 1. Fechar uma leva objetiva do M3 do Expert360º
-2. Priorizar a Biblioteca de IA para a Black Friday, sem presumir pacote, preco ou prazo de acesso
+2. ~~Priorizar a Biblioteca de IA para a Black Friday~~ — **congelada ate 15/10** (weekly 27/09, foco na Black Expert de 14/10)
 3. Comercial: seguir CRM e contatos quentes Nanny e Euriler
 
 **Base de producao completa (04/07/2026):** Iris (Squad Conteudo Arcane) integrou 2 fontes externas de formatos virais — Trello ReelsPro (18 modelos) e Arsenal Viral/Venda Todo Santo Dia (47 formatos criativos + 134 referencias garimpadas dos nichos adjacentes).
@@ -404,4 +404,12 @@ Retomar com: `/expert-companion`
 - **Incidente ativo:** pipeline automatico de publicacao (GitHub Actions) com erro 9004 recorrente e nao resolvido (8+ casos investigados, causa raiz desconhecida — ver `agents/insta-scheduler/data/insta-scheduler-rules.md` RULE-4 a RULE-8). Por isso os 7 carrosseis da Semana 07 foram **programados manualmente pela Karol via app** (20h, nao pelo pipeline automatico) — registrado em `business/instagram/agendamentos.md`.
 - Pendencias que a Karol ainda precisa validar no plano da Semana 07: qual cliente do Sprint mostrar em cada Demonstracao, se nomeia Helio/Bruno, e qual e o "erro real" dela pro fechamento de domingo (deixado em aberto de proposito).
 
-*Ultima atualizacao: 13/09/2026 (Sessao Rota100k Semana 07 — analise Aria + roteiro + carrosseis programados)*
+**Weekly review 27/09 (1 dia atrasada):**
+- Cockpit atualizado: Rota100k passa pra Semana 09 (28/09-04/10, formato "Envio" as 15h, metrica = compartilhamentos, 6 posts de antecipacao da Black Expert).
+- Decisao: Biblioteca de IA (Area de Membros) **congelada ate 15/10** — foco na Black Expert (14/10).
+- Decisao: comentarios "BLACK" no Instagram — **Karol responde na mao** com o link do grupo (SOP-022 segue em App Review).
+- Confirmado pela Karol: aula bonus Black For You (Voomp+Anhanguera) foi **enviada**; **Stories estao saindo automaticos** (o registro de "desativado desde 14/09" estava desatualizado — nao ha doc no repo de quando voltou).
+- Em aberto: meta numerica da Black Expert; cruzamento grupo antigo de WhatsApp × CRM dos 150.
+- Proximo review: 04/10.
+
+*Ultima atualizacao: 27/09/2026 (Weekly review — cockpit, decisoes Black Expert/Biblioteca)*

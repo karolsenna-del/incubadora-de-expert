@@ -99,6 +99,7 @@ Ver [briefing.md](briefing.md) pro desenho completo (publico, telas, vitrine, de
 
 > Mais recente primeiro.
 
+- 27/09 — @companion: weekly review — **Biblioteca de IA congelada até 15/10** (decisão da Karol: foco na Black Expert de 14/10). Em 15/10 retoma com Karol fechando o pacote. Suporte à publicação das aulas do Expert360º segue normal.
 - 26/09 — @gestor-infra: Área de Membros passa a exibir a descrição de cada aula ("Sobre esta aula", abaixo do player) — `js/descricoes-aulas.js` gerado de descricoes.md + config.yaml (SOP-023), links clicáveis (suporte wa.me na A9/A12/Encerramento M3). Testado em node; deploy feito pela Karol (dpl_6p6cmnMGCmBDr6Xenm1Y8mgpfqeM), arquivos conferidos via curl no domínio. Checklist V05/V06 do Expert360º fechados.
 - 26/09 — @course-publisher: M3 na Área de Membros passa pra 14 aulas — incluída "A11 — Conduzindo a Sessão ao Vivo" (sem vídeo ainda), pós-sessão virou A12. config.yaml + data.js atualizados; deploy feito pela Karol (dpl_2kYc7P4by4kVTox8cXntiyxh9Fd2), confirmado via curl.
 - 26/09 — @course-publisher: M3 A3, A4 e A5 publicadas na Área de Membros (YouTube Não listado: A3 `t8XhopGMhfM`, A4 `HX1lbWENB_A`, A5 `tG27mqfuZIo`) — 6/14 aulas do M3 com vídeo. A5 renomeada pra "Rastreador de Leads Qualificados". config.yaml + data.js atualizados; deploy feito pela Karol (dpl_95585rE6td4JgMKW2YRHVastQJQv), confirmado via curl no domínio. Pendente: lista do M3 no data.js/config.yaml ainda tem 13 aulas (sem a nova A11 "Conduzindo a Sessão ao Vivo").

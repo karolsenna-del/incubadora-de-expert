@@ -34,3 +34,9 @@
 **Recomendacao:** No boot/weekly, nao tratar isso como alerta urgente igual um blocker de infra — e esperado dado o formato do projeto. Focar a pergunta em "quer ajuda pra destravar essa etapa especifica?" (ex: bloco de tempo dedicado, quebrar em leva menor) em vez de repetir "por que ta parado?".
 
 **Confirmado/estendido em 24/08/2026:** o mesmo vale mesmo quando o trabalho da aluna acontece dentro do proprio repo (ex: pipeline completo do Conduz Agro/Milena Gehrke, construido via squads entre 20-23/08). Companion tentou adicionar ao INBOX do cockpit pra decisao — Karol vetou direto: "Milena nao entra no meu cockpit". Entregavel de mentee (mesmo volumoso, mesmo produzido com apoio de squad) fica na pasta da aluna (`mentoria/alunas/{aluna}/`), nunca no cockpit. Nao repetir a pergunta pra outras alunas/entregaveis futuros do mesmo tipo.
+
+## Status de automacao fica desatualizado no repo quando Karol resolve fora dele
+
+**Observado em:** weekly 27/09 — cockpit dizia "Stories DESATIVADOS desde 14/09, 5 na fila"; Karol confirmou que ja estao saindo automaticos. Nenhum commit/doc registrou a volta.
+
+**Recomendacao:** No boot/weekly, antes de escalar alerta de automacao parada (Stories, carrossel, SOP-022), perguntar rapido "isso ainda ta parado?" em vez de tratar o registro como verdade. Quando ela confirmar que voltou, registrar a data.

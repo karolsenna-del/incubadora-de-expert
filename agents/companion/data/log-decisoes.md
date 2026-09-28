@@ -547,3 +547,14 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisao:** Correção da Karol — o curso está só em membros.incubadoradeexpert.com.br, publicado via course-publisher. Menções à Voomp são histórico.
 **Impacto:** Checklist de produção (P4 e V04–V06) corrigido; tarefas de plataforma do curso ficam com o course-publisher.
 
+## 27/09/2026 — Biblioteca de IA congelada até 15/10; comentários "BLACK" respondidos à mão
+**Contexto:** Weekly review. Biblioteca de IA (Área de Membros) parada 8 dias esperando o pacote; Black Expert em 14/10 com Disparo #1 em 29/09 e automação comentário→Direct (SOP-022) ainda em App Review na Meta.
+**Decisão:** (1) Congelar a comercialização da Biblioteca de IA até 15/10. (2) Karol responde manualmente cada comentário "BLACK" com o link do grupo da Black Expert enquanto a automação não libera.
+**Racional:** Proteger o foco na Black Expert (única janela de venda com data fixa nas próximas 2 semanas); Biblioteca ainda chega a tempo da Black Friday de novembro. Resposta manual mantém o CTA planejado da Semana 09 sem reescrever legendas.
+**Impacto:** Cockpit #3 em pausa comercial até 15/10. Karol reserva tempo diário pra responder comentários de 29/09 a 04/10 (e além, se o CTA seguir).
+
+## 27/09/2026 — Black Expert: plano v1.3 aprovado (live às 15h, Sprint fora, Expert360º R$697)
+**Contexto:** Revisão do documento mestre da Black Expert com o Atlas (Squad LPago), faltando 17 dias.
+**Decisão:** Antecipação vira captação pro grupo; Disparo #1 em 28/09 à noite; Live 32 na quinta 01/10 15h (Karol em evento ter/qua); dia 14 com live de fechamento às 15h no lugar da VSL; Sprint fora da comunicação; pós-Black 15-21/10 com Expert360º; Expert360º sobe de R$497 pra R$697 em 01/10 (página "de R$997 por R$697"); Mentoria em Grupo passa a quinzenal; Desafio 5 Dias (19-23/10) mão na massa.
+**Racional:** Edição de vídeo é o gargalo recorrente — live elimina edição do caminho crítico; RC-017 (uma oferta só); RC-013/014 (downsell só depois, pós-evento vende).
+**Impacto:** Echo, Quill, Expert em Lives, Squad Conteúdo e Gestor de Infra com entregas até 12/10. Doc: `business/campanhas/black-friday-grupo-2026/documento-mestre.md` (seção Revisão v1.3).

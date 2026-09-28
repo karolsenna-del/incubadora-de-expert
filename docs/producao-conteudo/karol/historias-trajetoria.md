@@ -281,6 +281,8 @@
 - Ele a convidou pra ser **mentora de método** dentro da própria mentoria dele — o que ajudou a posicioná-la
 - Fez sentido pelo histórico dela: **auditoria + gestão + planejamento estratégico** = enxergar método como modelo de negócio, ver o produto/persona que dá mais lucro pro expert
 
+**Nota da Karol (27/09/2026):** não foi elogio — foi uma **orientação estratégica do mentor sobre o talento dela**. Não enquadrar como elogio em conteúdo.
+
 **Leitura da squad:** história de origem do posicionamento atual — explica de forma concreta por que ela é "a do método" e não "a do lançamento", com uma feedback honesta e específica de mentor como gatilho da virada (não epifania sozinha).
 
 **Status:** 🆕 disponível, nunca usada como causo próprio
