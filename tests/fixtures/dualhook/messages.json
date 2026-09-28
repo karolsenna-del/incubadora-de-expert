@@ -1,0 +1,21 @@
+{
+  "object": "whatsapp_business_account",
+  "entry": [{
+    "id": "waba-123",
+    "changes": [{
+      "field": "messages",
+      "value": {
+        "messaging_product": "whatsapp",
+        "metadata": { "display_phone_number": "5567992324690", "phone_number_id": "phone-123" },
+        "contacts": [{ "profile": { "name": "Lead Exemplo" }, "wa_id": "5511987654321" }],
+        "messages": [{
+          "from": "5511987654321",
+          "id": "wamid.inbound-1",
+          "timestamp": "1735939200",
+          "type": "text",
+          "text": { "body": "Quero entender a mentoria" }
+        }]
+      }
+    }]
+  }]
+}
