@@ -29,3 +29,10 @@ Sem segredos no repositório; sem conteúdo de mensagem em logs; sem envio de me
 - Verificação pós-aplicação: 3 colunas em `crm_leads`, tabelas `crm_whatsapp_events` e `crm_whatsapp_sync_state` com RLS, 3 funções de ingestão/sync e permissões (`public` revogado; `service_role` autorizado).
 - Teste controlado idempotente aprovado: duas ingestões da mesma mensagem fictícia produziram 1 evento e 1 lead; sync repetido concluiu em 100%; todos os dados fictícios foram removidos e a limpeza foi confirmada com contagem zero.
 - Pronto para configurar o webhook no Dualhook. Antes da importação em massa, fazer teste controlado com uma conversa.
+
+## Incidente pós-onboarding — 28/09/2026
+
+- Causa raiz confirmada: o Webhook Override salvo no Dualhook/Meta estava sem `?token=...`; o GET de verificação funcionava porque usa somente o verify token, mas todo POST normal era rejeitado com 403 pelo segredo de ingresso ausente.
+- Evidência: diagnóstico autenticado do Dualhook mostrou Coexistence ativo, app inscrito e override apontando para a rota base; logs Vercel não tiveram POST no teste de 00:37–00:39 e mostraram POSTs 403 posteriores; POST controlado pela URL privada percorreu Vercel → RPC → Supabase com 200.
+- Correção: URL completa do vault salva no Webhook Override sem trocar segredos; leitura posterior da resposta Meta confirmou o parâmetro `token` e o mesmo hash do vault. Allowlist de WABA e phone number adicionada à produção e redeploy `dpl_5MsnJ9acUNoeeRKVovhzzn8uzRi4` ficou `Ready`.
+- Verificação final: fixture sem dado pessoal retornou 200, criou 1 evento e 1 lead no Supabase; ambos foram removidos e a contagem final voltou a zero.
