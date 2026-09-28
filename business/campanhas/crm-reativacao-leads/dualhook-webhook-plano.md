@@ -25,4 +25,7 @@ Sem segredos no repositório; sem conteúdo de mensagem em logs; sem envio de me
 - Suíte geral: 14/17; 3 falhas alheias a esta mudança (`fs-extra` ausente no worktree e colisão preexistente de `squad-edicao-arcane`).
 - Variáveis de produção cadastradas e verificadas na Vercel; valores somente no vault privado.
 - Deploy de produção ficou `Ready`; GET challenge público respondeu 200 e token inválido respondeu 403.
-- Migration não aplicada: as tentativas seguras pela Management API ficaram bloqueadas aguardando aprovação do executor. Não conectar o número antes de aplicá-la.
+- Migration aplicada no Supabase real em 27/09/2026 pela Management API, de forma atômica e sem expor credenciais.
+- Verificação pós-aplicação: 3 colunas em `crm_leads`, tabelas `crm_whatsapp_events` e `crm_whatsapp_sync_state` com RLS, 3 funções de ingestão/sync e permissões (`public` revogado; `service_role` autorizado).
+- Teste controlado idempotente aprovado: duas ingestões da mesma mensagem fictícia produziram 1 evento e 1 lead; sync repetido concluiu em 100%; todos os dados fictícios foram removidos e a limpeza foi confirmada com contagem zero.
+- Pronto para configurar o webhook no Dualhook. Antes da importação em massa, fazer teste controlado com uma conversa.
