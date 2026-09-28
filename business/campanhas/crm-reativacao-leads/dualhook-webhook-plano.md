@@ -24,4 +24,5 @@ Sem segredos no repositório; sem conteúdo de mensagem em logs; sem envio de me
 - Validação híbrida: passou, 41 comandos.
 - Suíte geral: 14/17; 3 falhas alheias a esta mudança (`fs-extra` ausente no worktree e colisão preexistente de `squad-edicao-arcane`).
 - Variáveis de produção cadastradas e verificadas na Vercel; valores somente no vault privado.
-- Migration não aplicada: duas chamadas seguras à Management API ficaram bloqueadas aguardando aprovação do executor. Não conectar o número antes de aplicá-la.
+- Deploy de produção ficou `Ready`; GET challenge público respondeu 200 e token inválido respondeu 403.
+- Migration não aplicada: as tentativas seguras pela Management API ficaram bloqueadas aguardando aprovação do executor. Não conectar o número antes de aplicá-la.
