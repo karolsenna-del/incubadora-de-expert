@@ -281,14 +281,31 @@ Se o desconto precisa de preço inflado na véspera pra parecer grande, ele não
 Na Black Expert, o preço de sempre continua o mesmo o ano todo — a condição do dia 14/10 é que é única.
 Comenta BLACK que eu te mando o link do grupo.
 
-### 15h · Reels ENVIO — pra quem sempre diz "mês que vem"
-**Texto na tela (0-3s):** "Manda pra quem vive dizendo que vai começar mês que vem."
-**Fala (≈30s):** "Se alguém te mandou esse vídeo, é porque já te ouviu dizer 'mês que vem eu começo'. Tá tudo bem. Todo mundo já disse. Mas amanhã começa outubro, e até dezembro são três meses — dá pra testar uma ideia inteira nesse tempo. Não precisa de lançamento, nem de site pronto. Precisa de uma primeira conversa com quem tem o problema que você resolve. Começa por ela. E pra quem mandou: cobra essa pessoa amanhã."
-**CTA:** "Marca aquela pessoa que adia desde janeiro."
+### 15h · Reels ENVIO — pra quem sempre diz "mês que vem" · PROPOSTA v3 (28/09, não aprovada)
+**Adaptação:** commentary a partir do carrossel da Ticto (@tictobrasil), com atribuição na legenda. A distinção "começar pequeno não é improvisar" vira um teste de validação próprio da Karol; nenhuma formulação distintiva foi copiada.
+
+**Texto na tela (0-3s):** "Manda pra quem está esperando janeiro pra começar."
+
+**Fala (≈30s):** "Manda pra quem está esperando janeiro pra começar. Se alguém te mandou este vídeo, talvez você ache que precisa ter tudo pronto. Não precisa. Três meses dão pra testar uma ideia, mas pequeno não é improvisado. Escolhe uma pessoa com um problema específico, conversa, faz uma oferta enxuta, combina uma entrega possível e anota as dúvidas. Você não precisa chegar em janeiro em escala. Precisa chegar com experiência e dado real."
+
+**Camada autoral:** a conversa produz a narrativa que vende; registrar problema, objeções, oferta e entrega transforma tentativa em método. **Narrativa vende; método sustenta a entrega e o resultado.**
+
+**CTA falado:** "Marca quem precisa trocar a promessa de janeiro por uma conversa esta semana."
+
 **Legenda:**
-Três meses dão pra testar uma ideia inteira.
-Não precisa de lançamento. Precisa da primeira conversa.
-Marca aquela pessoa que adia desde janeiro — e cobra ela amanhã.
+Um carrossel da @tictobrasil fez uma distinção importante: começar pequeno não é começar improvisado.
+
+No meu trabalho, o teste mínimo tem cinco peças: uma pessoa, um problema específico, uma conversa, uma oferta enxuta e uma entrega que você consegue cumprir. Depois, registre as dúvidas e objeções. É assim que a tentativa vira método.
+
+Você não precisa chegar em janeiro em escala. Precisa chegar com experiência e dados reais.
+
+Marca quem precisa trocar a promessa de janeiro por uma conversa esta semana.
+
+**Produção — Mack:** selfie, tom de áudio enviado a alguém; 20–35s; texto na tela idêntico ao primeiro período; sem exibir o carrossel-fonte. Cronometrar antes de gravar.
+
+**Fonte e análise completa:** `referencias-conteudo/2026-09-28-ticto-comecar-pequeno-sem-improvisar.md`.
+
+*(A proposta substitui somente a redação do slot de quarta 15h se a Karol aprovar. Não altera os carrosséis de quarta e quinta já agendados.)*
 
 ### 17h · Reels YAP prático
 **Prático (v2):** como entrar em outubro com uma prioridade só.
