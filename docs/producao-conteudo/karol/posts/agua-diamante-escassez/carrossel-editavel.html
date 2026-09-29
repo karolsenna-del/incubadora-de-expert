@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Água x Diamante — Karol Senna</title>
+<style>
+@font-face{font-family:MontserratKS;src:url('../../../../../agents/squad-edicao-arcane/data/fontes/Montserrat-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+:root{--black:#090a0b;--black2:#151517;--white:#f6f6f6;--muted:#b8b8bc;--orange:#ff6b1a;--line:#353538}
+*{box-sizing:border-box}html,body{margin:0;background:#242427;color:var(--white);font-family:Arial,Helvetica,sans-serif}.deck{display:grid;gap:32px;justify-content:center;padding:32px}.slide{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--black);isolation:isolate}.slide::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.035);z-index:20}.chrome{position:absolute;left:78px;right:78px;top:62px;display:flex;align-items:center;justify-content:space-between;z-index:12}.brand,.count,.eyebrow{font-family:MontserratKS,Arial,sans-serif;text-transform:uppercase;letter-spacing:.16em}.brand{font-size:22px}.brand b{color:var(--orange)}.count{font-size:18px;color:var(--muted)}.rule{position:absolute;left:78px;right:78px;top:112px;height:1px;background:rgba(255,255,255,.24);z-index:12}.content{position:absolute;inset:156px 78px 78px;z-index:10}.eyebrow{font-size:21px;color:var(--orange);margin-bottom:30px}.display{font-family:MontserratKS,Arial,sans-serif;font-size:88px;line-height:.99;letter-spacing:-.047em;margin:0;text-wrap:balance}.display .accent,.body .accent{color:var(--orange)}.body{font-size:47px;line-height:1.24;letter-spacing:-.028em;margin:0;color:var(--white);text-wrap:balance}.body strong{font-family:MontserratKS,Arial,sans-serif}.note{font-size:29px;line-height:1.35;color:var(--muted)}
+/* 01 — composição fotográfica real */
+.s1{background:#050505}.s1 .photos{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr}.s1 .photo{position:relative;background-size:cover;background-position:center}.s1 .water{background-image:linear-gradient(90deg,rgba(9,10,11,.08),rgba(9,10,11,.22)),url('assets/agua-huso-zhu.jpg');background-position:46% center}.s1 .diamond{background-image:linear-gradient(90deg,rgba(9,10,11,.1),rgba(9,10,11,.25)),url('assets/diamantes-bas-van-den-eijkhof.jpg');background-position:47% center}.s1 .photos::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,10,11,.38) 0%,rgba(9,10,11,.06) 32%,rgba(9,10,11,.94) 72%,#090a0b 100%)}.s1 .versus{position:absolute;top:365px;left:50%;transform:translateX(-50%);width:94px;height:94px;border-radius:50%;display:grid;place-items:center;background:var(--orange);font-family:MontserratKS;font-size:28px;color:#090a0b;z-index:9}.s1 .labels{position:absolute;top:302px;left:78px;right:78px;display:flex;justify-content:space-between;font-family:MontserratKS;text-transform:uppercase;font-size:27px;letter-spacing:.13em;z-index:9}.s1 .covercopy{position:absolute;left:78px;right:78px;bottom:92px;z-index:10}.s1 .covercopy h1{font-family:MontserratKS,Arial,sans-serif;font-size:76px;line-height:.98;letter-spacing:-.052em;margin:0;max-width:930px;text-wrap:balance}.s1 .covercopy h1 span{color:var(--orange)}
+/* 02 */
+.s2 .content{display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:end}.s2 .water-panel{height:760px;background:url('assets/agua-huso-zhu.jpg') 48% center/cover no-repeat;position:relative}.s2 .water-panel::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(9,10,11,.72))}.s2 .water-panel::after{content:"INDISPENSÁVEL";position:absolute;bottom:32px;left:34px;font-family:MontserratKS;font-size:18px;letter-spacing:.13em}.s2 .copy{padding-bottom:34px}.s2 .copy .display{font-size:79px;margin-bottom:36px}.s2 .copy .body{font-size:42px}
+/* 03 */
+.s3 .content{display:flex;flex-direction:column}.s3 .display{max-width:820px}.s3 .diamond-window{position:absolute;left:78px;right:78px;bottom:78px;height:510px;background:url('assets/diamantes-bas-van-den-eijkhof.jpg') center 54%/cover no-repeat}.s3 .diamond-window::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,10,11,.72),transparent 52%)}.s3 .stamp{position:absolute;left:42px;bottom:42px;font-family:MontserratKS;font-size:25px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
+/* 04 */
+.s4 .content{display:flex;flex-direction:column;justify-content:center}.s4 .equation{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0;margin:62px 0 44px;display:grid;grid-template-columns:1fr 110px 1fr;align-items:center}.s4 .term{font-family:MontserratKS;font-size:53px;line-height:1;text-transform:uppercase}.s4 .term:last-child{color:var(--orange);text-align:right}.s4 .neq{font-family:Georgia,serif;font-size:78px;text-align:center;color:var(--muted)}.s4 .body{max-width:840px}
+/* 05 */
+.s5 .content{display:flex;flex-direction:column;justify-content:space-between}.s5 .display{font-size:104px;max-width:850px}.s5 .diploma-line{border-top:1px solid var(--line);padding-top:46px;display:grid;grid-template-columns:250px 1fr;gap:42px;align-items:start}.s5 .seal{width:210px;height:210px;border:2px solid var(--orange);border-radius:50%;display:grid;place-items:center;text-align:center;font-family:MontserratKS;font-size:20px;line-height:1.15;letter-spacing:.08em;color:var(--orange)}.s5 .body{font-size:43px}
+/* 06 */
+.s6 .content{display:flex;flex-direction:column}.s6 .display{max-width:900px}.s6 .flow{margin-top:auto;margin-bottom:48px}.s6 .step{display:grid;grid-template-columns:84px 1fr;align-items:center;border-top:1px solid var(--line);padding:28px 0;font-family:MontserratKS;font-size:43px}.s6 .step span{color:var(--orange);font-size:23px;letter-spacing:.12em}.s6 .result{margin-top:22px;background:var(--orange);color:#090a0b;padding:31px 40px;font-family:MontserratKS;font-size:51px;display:flex;justify-content:space-between;align-items:center}.s6 .result small{font-size:18px;letter-spacing:.14em;text-transform:uppercase}
+/* 07 */
+.s7 .content{display:grid;grid-template-rows:auto 1fr auto}.s7 .display{font-size:81px;max-width:920px}.s7 .cross{align-self:center;display:grid;grid-template-columns:1fr 90px 1fr;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:54px 0}.s7 .cross div{font-family:MontserratKS;font-size:58px;text-transform:uppercase}.s7 .cross div:last-child{text-align:right;color:var(--orange)}.s7 .x{text-align:center!important;font-size:35px!important;color:var(--muted)!important}.s7 .body{font-size:42px;max-width:860px}
+/* 08 */
+.s8{background:var(--orange);color:#090a0b}.s8 .chrome .brand,.s8 .count{color:#090a0b}.s8 .brand b{color:#090a0b}.s8 .rule{background:rgba(9,10,11,.35)}.s8 .content{display:flex;flex-direction:column;justify-content:space-between}.s8 .eyebrow{color:#090a0b}.s8 .display{font-size:96px;max-width:930px}.s8 .keyword{border-top:3px solid #090a0b;border-bottom:3px solid #090a0b;padding:35px 0;font-family:MontserratKS;font-size:142px;line-height:.9;letter-spacing:-.06em}.s8 .body{color:#090a0b;font-size:42px;max-width:880px}.s8 .handle{font-family:MontserratKS;font-size:23px;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:1120px){.deck{transform-origin:top left}}
+@media print{body{background:#fff}.deck{padding:0;gap:0}.slide{page-break-after:always}}
+</style>
+</head>
+<body>
+<main class="deck">
+<section class="slide s1" data-slide="1" aria-label="Capa">
+  <div class="photos"><div class="photo water"></div><div class="photo diamond"></div></div>
+  <div class="chrome"><div class="brand">Karol <b>Senna</b></div><div class="count">01 / 08</div></div><div class="rule"></div>
+  <div class="labels"><span>Água</span><span>Diamante</span></div><div class="versus">X</div>
+  <div class="covercopy"><h1>Importância é menos valorizado do que <span>escassez</span></h1></div>
+</section>
+<section class="slide s2" data-slide="2">
+  <div class="chrome"><div class="brand">Karol <b>Senna</b></div><div class="count">02 / 08</div></div><div class="rule"></div>
+  <div class="content"><div class="water-panel"></div><div class="copy"><div class="eyebrow">Primeiro, o óbvio</div><h2 class="display">Água é <span class="accent">vida.</span></h2><p class="body">Ela é <strong>indispensável à sobrevivência.</strong> Sua importância não precisa de defesa.</p></div></div>
+</section>
+<section class="slide s3" data-slide="3">
+  <div class="chrome"><div class="brand">Karol <b>Senna</b></div><div class="count">03 / 08</div></div><div class="rule"></div>
+  <div class="content"><div class="eyebrow">Agora, o contraste</div><h2 class="display">Diamante não é indispensável para <span class="accent">viver.</span></h2><div class="diamond-window"><div class="stamp">Desejado. Raro. Disputado.</div></div></div>
+</section>
+<section class="slide s4" data-slide="4">
+  <div class="chrome"><div class="brand">Karol <b>Senna</b></div><div class="count">04 / 08</div></div><div class="rule"></div>
+  <div class="content"><div class="eyebrow">Mesmo assim...</div><h2 class="display">O diamante é mais bem pago.</h2><div class="equation"><div class="term">Importância</div><div class="neq">≠</div><div class="term">Preço</div></div><p class="body">O mercado não remunera só o que importa. Remunera o que é percebido como <strong class="accent">escasso.</strong></p></div>
+</section>
+<section class="slide s5" data-slide="5">
+  <div class="chrome"><div class="brand">Karol <b>Senna</b></div><div class="count">05 / 08</div></div><div class="rule"></div>
+  <div class="content"><div><div class="eyebrow">E aqui entra o diploma</div><h2 class="display">Tem valor. Mas, sozinho, já não <span class="accent">diferencia.</span></h2></div><div class="diploma-line"><div class="seal">FORMAÇÃO<br>IMPORTA</div><p class="body">Quando muita gente tem a mesma credencial, ela deixa de ser escassa — e <strong>não paga boleto sozinha.</strong></p></div></div>
+</section>
+<section class="slide s6" data-slide="6">
+  <div class="chrome"><div class="brand">Karol <b>Senna</b></div><div class="count">06 / 08</div></div><div class="rule"></div>
+  <div class="content"><div class="eyebrow">O que não vem pronto</div><h2 class="display">Método autoral é <span class="accent">escasso.</span></h2><div class="flow"><div class="step"><span>01</span> Sua trajetória</div><div class="step"><span>02</span> Suas decisões</div><div class="step"><span>03</span> Seu processo</div><div class="result"><small>Isso vira</small>MÉTODO AUTORAL</div></div></div>
+</section>
+<section class="slide s7" data-slide="7">
+  <div class="chrome"><div class="brand">Karol <b>Senna</b></div><div class="count">07 / 08</div></div><div class="rule"></div>
+  <div class="content"><div><div class="eyebrow">E mentoria também é escolha</div><h2 class="display">Ter Karol como mentora é acessar um olhar <span class="accent">escasso.</span></h2></div><div class="cross"><div>Método</div><div class="x">×</div><div>Negócio</div></div><p class="body">Um olhar que estrutura o que você sabe e enxerga <strong>como isso vira oferta, posicionamento e entrega.</strong></p></div>
+</section>
+<section class="slide s8" data-slide="8">
+  <div class="chrome"><div class="brand">Karol <b>Senna</b></div><div class="count">08 / 08</div></div><div class="rule"></div>
+  <div class="content"><div><div class="eyebrow">A sua escassez já existe</div><h2 class="display">Falta transformar o que só você sabe fazer em algo que o mercado reconheça.</h2></div><div class="keyword">MÉTODO</div><p class="body">Se seu conhecimento ainda parece “mais do mesmo”, escreva <strong>MÉTODO</strong> no direct. Eu te mostro onde está a sua diferença.</p><div class="handle">@karolsenna._</div></div>
+</section>
+</main>
+<script>
+const p=new URLSearchParams(location.search),n=p.get('slide');
+if(n){document.querySelectorAll('.slide').forEach(el=>el.style.display=el.dataset.slide===n?'block':'none');document.querySelector('.deck').style.padding='0';document.querySelector('.deck').style.gap='0';document.body.style.background='#090a0b'}
+</script>
+</body>
+</html>
