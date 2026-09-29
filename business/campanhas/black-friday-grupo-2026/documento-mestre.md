@@ -140,3 +140,15 @@ Confirmado: você vai criar uma **página nova "Black Expert"** com essa oferta 
 **Em aberto (não bloqueia):**
 - Meta de vendas — Karol rastreando leads do WhatsApp; estimar por temperatura (A aluno/ex-aluno ~10% ref. renovação 2025 = 2/20 · B/C/D sem histórico). Check de ritmo do grupo em 07/10.
 - Escopo da Central do Mentor (até 03/10) e temas dos 5 dias do Desafio (até 09/10) — necessários pro Disparo #6.
+
+---
+
+## Infra de disparo — definida 28/09 (Gestor de Infra Arcane)
+
+- **E-mail = Resend Broadcasts** (plano free, domínio `incubadoradeexpert.com.br` verificado). Segmento **"Black Expert 2026"** com **121 contatos** (106 CRM + 8 alunos + 12 LP do grupo de lives, sem suporte/Karol). Remetente `Karol Senna <karol@incubadoradeexpert.com.br>`, respostas → `karolsenna@`. Descadastro automático em todo e-mail. Padrão: botão laranja (#f85627) + "Oi {nome}". HTMLs em `emails/`. Procedimento: Playbook SOP-024 do Gestor de Infra.
+- **E-mail #1 ENVIADO 28/09 às 18h05 (Cuiabá)** pros 121. Caiu em Promoções no teste → P.P.S. pedindo resposta. Karol respondeu o teste pra checar se os próximos vão pra Principal.
+- **Base real:** CRM tem 213 leads (não 150) — 107 só com telefone recebem só WhatsApp.
+- **WhatsApp individual = lista de transmissão manual** (sem API — Z-API arrisca bloqueio do número às vésperas da Black; Cloud API não fica pronta a tempo). 203 contatos "BX " no Google Contatos pessoal da Karol (marcador "Black Expert 2026"). Quem não recebe a transmissão (não salvou o número) → 1:1 em ondas até quinta. Controle: `business/vault/black-expert-2026/controle-convite-wa.csv`.
+- **Próximos e-mails:** #2 (02/10), #3 (05/10), #4 (07/10), #5 (09/10), #7 (13/10), #8 (14/10 08h), #11 (14/10 23h59) — agendar até 10/10 após aprovação de cada copy, sempre com teste antes.
+- **28/09, 22h — WhatsApp do #1 NÃO saiu hoje** (sync de contatos no iPhone falhou; Karol sem tempo — curso presencial 29 e 30/09). Replanejado: mensagem no grupo LIVE EXPERT360 (alcança grupo E) + 1:1 só A+B (75) via `business/vault/black-expert-2026/convite-whatsapp-black-expert.html` (WhatsApp Web, link pronto por contato) — Karol decide se ela ou o Leandro dispara. O e-mail #1 já cobriu os 121 com e-mail.
+- **Atualização 28-29/09 — listas de transmissão PRONTAS:** sync do iPhone resolvido (desligar/ligar Contatos da conta Gmail → reautenticar). Limite do WhatsApp Business = 100 por lista → listas "Black Expert" divididas; **172 contatos alcançáveis** (os demais sem WhatsApp ou já receberam 1:1). Texto da transmissão = #1 sem {nome} ("Oi, tudo bem?"). Karol envia o #1 pelas listas antes do curso (29/09). Karol adicionou **51 contatos manuais** às listas → cadastrados no CRM (`origem='black_expert_manual'`, 49 novos + 2 mesclados com dualhook). **CRM agora: 266 leads.**

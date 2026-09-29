@@ -26,6 +26,7 @@
 13. [SOP-019] Trocar CTA de WhatsApp por checkout (Voomp/Hotmart/etc) + icone flutuante de WhatsApp pra duvidas
 14. [SOP-020] Publicar LP estatica na Vercel + subdominio (Registro.br)
 15. [SOP-023] Atualizar descrições de aula na Área de Membros (gerador + deploy)
+16. [SOP-024] Campanha de e-mail via Resend Broadcasts (lista, segmento, teste, envio/agendamento)
 
 > **Fora do escopo:** Setup inicial do pipeline (instalar n8n + Chatwoot, criar tabelas Supabase + RPCs, configurar Meta Business Manager, gerar System User Token, importar os workflows core WF-INBOUND/AGENT-CORE/OUTBOUND). Isso e responsabilidade do **agente de setup** — outro agente dedicado. Este squad so opera o pipeline ja instalado.
 
@@ -1154,6 +1155,30 @@ clicar "Enviar para análise" (aguardando confirmação explícita da Karol ante
 **Troubleshooting:**
 - Aula sem descrição no site: título no `data.js` diferente do `hotmart_name` do config e sem `youtube_id` — alinhar título ou subir o vídeo
 - Módulo novo: adicionar em `MODULO_SITE` no script (id do config → id do data.js)
+
+## SOP-024: Campanha de e-mail via Resend Broadcasts
+
+**Criado:** 2026-09-28 (Black Expert, Disparo #1) | **Credencial:** vault `[Email] Resend` — Key 2 "Resend Full" (`op://Claude/Resend Full/password`)
+
+**Quando usar:** qualquer disparo de e-mail pra base (campanha, lancamento, aviso). Plano Free: broadcasts ilimitados ate 1.000 contatos/mes.
+
+**Passos:**
+1. **Montar lista** a partir do Supabase (`crm_leads` + `pessoas` + `leads_live_expert360` + `auth.users` + `matriculas`), dedup por e-mail. Excluir: suporte (Leandro — 3 e-mails) e e-mails da propria Karol. Salvar em `business/vault/{campanha}/` (gitignored — dado pessoal).
+2. **Importar contatos — a Karol faz, no painel, pelo EDGE.** (a) Auto mode BLOQUEIA o agente de enviar nome/e-mail de terceiros pro Resend via API — nao contornar. (b) O importador CSV do Resend da "Something went wrong" no Chrome controlado por automacao (faixa "controlado por software de teste") — no Edge funciona. Caminho: resend.com/audience → aba Contacts → Import contacts. CSV simples: `email,first_name` (UTF-8, sem acento no nome evita dor).
+3. **Segmento:** criar segmento da campanha e vincular os contatos via API (`POST /segments`, `POST /contacts/{id}/segments/{segment_id}`) — isso o agente pode fazer (dado ja esta no Resend). Segmento "Teste Karol" (id `ae7709ba...` e contato karol.franzini@gmail.com) ja existe pra testes.
+4. **HTML** em `business/campanhas/{campanha}/emails/email-NN.html`. Nome: `{{{contact.first_name|}}}`. Descadastro OBRIGATORIO: `{{{RESEND_UNSUBSCRIBE_URL}}}`. Remetente `Karol Senna <karol@incubadoradeexpert.com.br>`, reply-to `karolsenna@incubadoradeexpert.com.br`. Karol prefere **botao** (cor da campanha) a link texto.
+5. **Teste:** broadcast pro segmento "Teste Karol" com assunto `[TESTE]` → Karol confere caixa, nome, botao, remetente.
+6. **Envio:** so com ok explicito da Karol. `POST /broadcasts` (segment_id, from, reply_to, subject, html, name) → `POST /broadcasts/{id}/send` (body `{}` = agora; `{"scheduled_at": "..."}` = agendado). Conferir `GET /broadcasts/{id}` ate `status: sent`.
+
+**Troubleshooting:**
+- Caiu em Promocoes: normal pra remetente novo + link de descadastro. P.P.S. pedindo resposta ("me responde com um eu") melhora os proximos.
+- `op read .../senha` falha: o campo do item "Resend Full" e `password`.
+
+**Anexo — lista de transmissao WhatsApp (convite 1:1 em massa, sem API):**
+1. Gerar CSV Google Contacts com nome prefixado "BX " + marcador da campanha (`business/vault/{campanha}/contatos-google-*.csv`) e importar em contacts.google.com na conta **karol.franzini@gmail.com** (a que sincroniza com o iPhone — a conta de trabalho NAO).
+2. **iPhone nao puxa contatos importados em lote sozinho.** Fix que funcionou (28/09): Ajustes → Apps → Contatos → Contas → Gmail → **desligar Contatos e ligar de novo** → iPhone pede pra reautenticar a sessao do Gmail → puxa na hora. (vCard pelo WhatsApp/Arquivos e import no iCloud pelo Chrome automatizado NAO funcionaram.)
+3. WhatsApp → nova transmissao → buscar "BX" → selecionar todos (limite 256/lista). So chega pra quem salvou o numero da Karol.
+4. Alternativa sem salvar contato: pagina local com links `web.whatsapp.com/send?phone=...&text=...` (`convite-whatsapp-black-expert.html`) — funciona, mas e 1 clique por pessoa: a Karol opera sozinha e achou inviavel pra 200.
 
 ## Template de SOP
 

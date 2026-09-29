@@ -50,7 +50,14 @@ Te vejo lá.
 
 P.S.: Se você já pensou em entrar na Mentoria em Grupo algum dia, vale
 esperar até a Black Expert antes de decidir qualquer coisa.
+
+P.P.S.: Se esse e-mail caiu na aba Promoções, você quase perdeu a chance
+de saber da Black Expert. Pra não acontecer de novo: me responde com um
+"eu" (ou arrasta ele pra caixa Principal). Assim os próximos avisos
+chegam direto pra você.
 ```
+
+> 28/09 — P.P.S. pedindo resposta adicionado a pedido da Karol (entregabilidade: resposta tira da aba Promoções/spam nos e-mails seguintes). Link do grupo vira botão laranja (#f85627) no e-mail — preferência da Karol. HTML final: `emails/email-01.html`.
 
 ### Instagram (Stories)
 
