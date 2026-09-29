@@ -1,7 +1,9 @@
 # Design de Entregáveis — Incubadora de Expert (Mentoria Individual)
-Versão: 1.0 (Aprovado) | Fase 5 do Mentoring Creator | Gate: QG-MC-006 ✅
+Versão: 2.0 | Revisão: 29/09/2026 | Status: alinhado à oferta em 4 macrofases
 
-> Grande parte disso já roda de fato (com Milena e David) — aqui formalizei o que existe e fechei as decisões pendentes com a Karol.
+> Grande parte disso já roda de fato. A revisão preserva onboarding, suporte e offboarding e reorganiza os ativos em Método → Validação → Posicionamento → Escala.
+
+**Regra de produto:** antes das primeiras vendas são produzidos somente a oferta inicial e os ativos da Mentoria Mínima Vendável. Jornada, sessões, ferramentas e materiais definitivos são fechados depois das conversas, primeiras vendas e primeiras entregas.
 
 ---
 
@@ -30,7 +32,7 @@ Karol trouxe duas referências reais (28/08):
 **PDF "Onboarding Simplificado V1"** (`C:\Users\karol\Downloads\ONBOARDING SIMPLIFICADO V1 .pdf.pdf`): deck completo de 14 slides — o que é a mentoria, jornada visual (Entrar → Boas-vindas → Questionário → Instruções → Encontros → Criar método → Feedback → Validar → Portfólio), DNA do Expert, período de acesso, Drive, FAQ, horário de atendimento, SLA. **Não está claro se esse PDF ainda é enviado hoje**, ou se a mensagem de WhatsApp (mais enxuta) substituiu ele na prática.
 
 **Desatualizado no PDF, vs. o que já aprovamos nas Fases 3-4:**
-- Slide "Encontros Individuais" mostra só 3 encontros (Onboarding / Validação do método / Criação do Portfólio) — não bate com as 14 sessões / 5 fases (F0-F4) aprovadas
+- Slide "Encontros Individuais" mostra só 3 encontros (Onboarding / Validação do método / Criação do Portfólio) — não bate com as 14 sessões / 4 macrofases atuais
 - Slide "Período de Acesso" mostra uma tabela com "4 Ps do lançamento" e "Venda de High Ticket" — nomenclatura antiga, não bate com os 5Ps (Persona/Promessa/Processo/Proposta/Posicionamento) nem com Vendas Secretas
 - "6 ou 12 meses de acesso, a depender da contratação" — o PRD atual fala em 12 meses fixos; conferir se a opção de 6 meses ainda existe
 
@@ -65,7 +67,7 @@ Karol trouxe duas referências reais (28/08):
 | Diagnóstico de entrada | ✅ | Trio História Real + Ikigai + (Lista de Fracassos opcional) — já coberto na Fase 4 (Sessão 1) |
 | Diagnóstico de saída | ✅ | Comparação DNA do Expert/baseline (M0) vs. estado final — feita na Sessão 14 (ver seção 2) |
 | Frameworks proprietários | ✅ | Os 5Ps + agentes de IA correspondentes (M0-M4), já mapeados na Fase 2 e usados sessão a sessão (Fase 4) |
-| Templates que o aluno usa | ✅ | Biblioteca de Templates (10 moldes genéricos) + Portfólio Estratégico (15-20 ferramentas específicas do método de cada aluno, construídas em F2) |
+| Templates que o aluno usa | ✅ | Biblioteca de Templates + Portfólio Estratégico. Antes da validação, o portfólio é mapa priorizado; as ferramentas definitivas são produzidas após dados das primeiras vendas/entregas. |
 | Ferramentas externas (agentes de IA) | ✅ | 6 Custom GPTs — já existem, listados em `0- Biblioteca de IAs.md` de cada aluno (não fazem parte de `agents/`, são GPTs externos — registrado em memória do sistema) |
 
 ---
@@ -92,19 +94,26 @@ Karol trouxe duas referências reais (28/08):
 
 ---
 
-## 6. Validação contra o PRD
+## 6. Entregáveis por macrofase
 
-| Entregável comprometido no PRD | Coberto? |
+| Macrofase | Entregáveis |
 |---|---|
-| Método autoral com nome próprio (P3) | ✅ Fase 4, Sessão 4 |
-| Persona + Promessa (P1+P2) | ✅ Fase 4, Sessões 2-3 |
-| Proposta Validada + roteiros + Vendas Secretas (P4) | ✅ Fase 4, Sessões 6-8 |
-| Autoridade Tríplice + Frase-Tese + Narrativa (P5) | ✅ Fase 4, Sessão 9 |
-| Sessões semanais/mensais 12 meses | ✅ Fase 3 + Fase 4 |
-| Acompanhamento via `_mentor/` | ✅ Seção 1 acima |
-| Add-on ferramentas + agente de IA | 🟡 Ainda a precificar/detalhar — não é escopo desta fase (é comercial, cabe na Fase 7 — Empacotamento) |
-| Add-on páginas + tráfego | 🟡 Idem — Fase 7 |
+| Método | DNA/baseline, Persona, Promessa, Processo Autoral e mapa priorizado do Portfólio Estratégico |
+| Validação | oferta inicial, Mentoria Mínima Vendável, Kit de Scripts, Rastreador, acompanhamento antes/durante/depois das Vendas Secretas, Raio-X e produto definitivo baseado no mercado real |
+| Posicionamento | Autoridade Tríplice, narrativa, mensagem central, perfil, conteúdo-base e página de venda |
+| Escala | funil, automações, geração/organização de leads, 1 Agente de IA do Método, tráfego configurado, métricas iniciais e Expert Plan |
+
+Página, IA, funil, automações e tráfego fazem parte da solução; não são bônus nem add-ons.
+
+## 7. Responsabilidades e limites
+
+- **Karol:** conduz as 14 sessões, decide, valida e realiza o Raio-X das conversas disponibilizadas.
+- **Squads/agentes:** aceleram pesquisa, scripts e produção dos ativos aprovados.
+- **Aluno:** fornece insumos/acessos, executa conversas, follow-up e primeiras entregas, mantém registros e aprova ativos.
+- **Tráfego:** inclui configuração e leitura das métricas iniciais; não inclui gestão contínua ou otimização mensal recorrente.
+- **IA:** inclui 1 Agente de IA do Método Autoral; agentes adicionais ficam fora.
+- **Não existe:** comunidade, promessa de leads/vendas/faturamento ou operação diária pelo time.
 
 ---
 
-*Fase 5 do Mentoring Creator — aprovada pela Karol em 28/08/2026 (QG-MC-006).*
+*Versão original aprovada em 28/08/2026 (QG-MC-006). Revisão comercial aprovada em 29/09/2026.*

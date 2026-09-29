@@ -1,143 +1,176 @@
 # PRD — Incubadora de Expert (Mentoria Individual)
-Versão: 1.1 | Data: 28/08/2026 | Status: Aprovado (QG-MC-002, QG-MC-003) | Fase atual: Fase 2 completa — metodologia mapeada e validada
+
+Versão: 2.0 | Data: 29/09/2026 | Status: arquitetura comercial aprovada
 
 ---
 
-## 1. Visão Geral
+## 1. Visão geral
 
 **Nome:** Incubadora de Expert
-**Modo:** Individual (1:1)
-**Esteira:** Expert360º (curso, escala) → **Incubadora de Expert** (mentoria, high ticket)
 
-**Público-alvo:** Laura — mesma persona do Expert360º (especialista mulher, 35–45 anos, 10+ anos de carreira consolidada no offline). Na mentoria, é o perfil que quer suporte e acompanhamento — não quer fazer sozinha, e paga mais por isso (vs. quem compra o curso pra fazer sozinha e pagar menos). Alunos ativos hoje: David e Milena. Ricardo teve passagem também. Rodrigo, Ricardo e Helio já finalizaram o período de acesso.
+**Modo:** individual, online, DWY
 
-**Transformação:**
+**Duração:** 12 meses
 
-Ponto A — Especialista offline, invisível no digital, sem método nem validação. **Mesmo ponto de partida do curso** — curso e mentoria não se diferenciam pelo ponto A, e sim pelo perfil de consumo (fazer sozinha vs. ter suporte).
+**Sessões:** 14 encontros 1:1
 
-Ponto B — Método autoral com nome próprio, validado com **vendas reais no 1:1 (Vendas Secretas)** antes de qualquer exposição pública — o expert se sente seguro pra se expor de verdade no digital. A partir daí começa a continuação da jornada: posicionamento e escala de autoridade (não é a promessa central, é o que vem depois dela).
+**Metodologia:** Expert360º, com 5Ps como arquitetura didática interna
 
-**Promessa central:** Estruturar o conhecimento do expert em método autoral, baseado na história real dele — validado com vendas reais antes de qualquer exposição pública.
+**Narrativa comercial:** Método → Validação → Posicionamento → Escala
 
-**O que NÃO é a promessa:** Posicionamento e autoridade digital. Isso é continuação da jornada, tratado nos meses finais (7–12), não o motivo pelo qual alguém compra a mentoria.
+**Público:** profissional experiente, com repertório e carreira consolidada, que quer transformar conhecimento em propriedade intelectual, oferta, produto e negócio digital com acompanhamento próximo.
 
----
+**Ponto A:** conhecimento e experiência dispersos, sem método, oferta validada ou estrutura comercial.
 
-## 2. Contexto de Mercado
+**Ponto B:** método autoral, oferta testada, produto estruturado com base no mercado real, posicionamento construído e estrutura comercial inicial configurada para começar a escalar.
 
-**Concorrentes mapeados:**
+**Promessa:** transformar experiência e conhecimento em método autoral, validar uma oferta mínima com compradores reais antes da exposição pública e construir, em 12 meses, o produto, o posicionamento e a estrutura comercial necessários para iniciar a escala no digital.
 
-| Player | Preço | Foco | O que não resolve |
-|--------|-------|------|-------------------|
-| Fórmula de Lançamento (Érico Rocha) | R$1.997–R$9.500 | Lançar infoprodutos | Assume que o método já existe. Exige exposição total antes de qualquer prova de venda. |
-| VTSD (Leandro Ladeira) | R$2.500 | Vender e escalar produtos digitais | Assume que o produto existe. Foco em tráfego e copy, requer audiência. |
-| Mentorias high ticket BR genéricas (posicionamento/autoridade) | R$3.000–R$50.000 | Proximidade + personalização, acesso ao mentor | Vendem posicionamento como promessa central — pulam a etapa de validar o método com vendas reais antes de expor |
-| Coaching + funil "done for you" (mercado gringo) | US$3.000–6.000 (add-on, separado do coaching) | Implementação técnica (funil, site, tráfego) | Sempre vendido separado da mentoria — nunca embutido no preço base. **Decisão local diverge desse benchmark:** desde 16/09 a Incubadora inclui ferramentas/páginas/tráfego no preço único, como diferencial vs. esse padrão de mercado |
-| Arcane (Euriler Jube) | High ticket | Mesma lógica de mentoria 1:1 de alto contato | Formato de referência mais próximo — mecanismo proprietário diferente |
-
-**Gaps de mercado:**
-1. Nenhum player (BR ou gringo) valida o método com vendas reais no 1:1 ANTES de exigir exposição pública — todos pulam direto pra posicionamento/tráfego
-2. Mentorias high ticket genéricas vendem "autoridade" como promessa — a Incubadora de Expert vende **segurança validada em campo**, autoridade é consequência
-3. Ferramentas/funil/tráfego no mercado gringo são add-on pago à parte — nenhum concorrente brasileiro do nicho formalizou isso como oferta clara
-
-**Posicionamento escolhido:** Arquitetura de método e infoprodutos — não mentoria de posicionamento. A validação secreta (vendas reais no 1:1) é o mecanismo proprietário que separa a Incubadora de Expert de todo o mercado de "mentoria high ticket".
-
-**Frase-tese (herdada do Expert360º):** "Diploma é o que você estudou. Método é o que você viveu."
+A promessa não inclui faturamento, volume de leads, vendas garantidas nem gestão operacional contínua.
 
 ---
 
-## 3. Parâmetros do Programa
+## 2. Mecanismo e ordem
+
+### Sequência do Expert Seguro
+
+**Método → Validação → Posicionamento → Escala**
+
+O diferencial é a ordem: clareza e Vendas Secretas antes de exposição, audiência e tráfego.
+
+### Regra da Mentoria Mínima Vendável
+
+Antes das primeiras vendas, existe apenas uma versão mínima vendável: transformação, escopo e entrega suficientes para vender e atender com responsabilidade. A estrutura completa do produto é definida depois das conversas, primeiras vendas e primeiras entregas.
+
+Isso altera a produção, não a metodologia: Persona, Promessa, Processo, Proposta e Posicionamento permanecem os 5Ps da Expert360º.
+
+---
+
+## 3. Parâmetros comerciais
 
 | Dimensão | Definição |
-|----------|-----------|
-| Formato | 1:1, encontros semanais (~1 por P do método) |
-| Duração | 12 meses (roteiro já existente: Mês 1 = M0+M1 · Meses 2-3 = M2+campo · Meses 4-6 = M3+campo · Meses 7-12 = M4+escala) |
-| Nível de entrega | DWY (done-with-you) — aluno executa com apoio de agentes de IA entre sessões, Karol conduz e valida em sessão |
-| Preço | R$15.000 (referência) / **R$13.500 à vista (pix) ou 12x R$1.350,01 no cartão** — tudo incluso, sem add-ons separados |
-| Ferramentas + Agente de IA do método | **Incluso no preço** (era add-on de ~R$1.000 até a reprecificação de 16/09) |
-| Páginas + configuração de tráfego | **Incluso no preço** (era add-on de R$1.500 até a reprecificação de 16/09) — escopo continua sendo configurar e deixar rodando, **não inclui gestão contínua nem análise de métricas mensal** |
-| Garantia | 30 dias de aderência |
-| Escassez | Agenda individual (capacidade de acompanhamento), não urgência artificial de preço |
+|---|---|
+| Formato | Individual, online, ao vivo |
+| Duração | 12 meses |
+| Sessões | 14 sessões 1:1, cadência concentrada no início e espaçada para campo/implementação |
+| Entrega | DWY — Karol e aluno constroem juntos; squads/agentes aceleram ativos aprovados |
+| Preço | R$ 15.000 de referência; R$ 13.500 à vista (pix) ou 12x de R$ 1.350,01 no cartão |
+| Garantia | 30 dias de aderência, conforme contrato |
+| Suporte | WhatsApp, dias úteis 9h–18h, SLA de até 24h úteis |
+| Gravações | disponibilizadas em até 48h úteis |
+| Escassez | capacidade real da agenda individual, sem urgência artificial |
+| Tráfego | configuração e métricas iniciais; sem gestão contínua |
 
-**Nota de reprecificação (16/09/2026):** o preço-base saiu de R$10.000 + add-ons (~R$12.500 total) para R$13.500 all-in (referência R$15.000), formalizado no documento "Proposta Validada" trazido pela Karol. Ver `empacotamento.md` v2.0 para o racional completo.
-
----
-
-## 4. Entregáveis Comprometidos
-
-**Núcleo (incluso no preço de R$13.500 — tudo incluso, sem add-ons):**
-- [ ] Método autoral com nome próprio (P3)
-- [ ] Persona Compradora (P1) + Promessa Transformadora (P2)
-- [ ] Proposta Validada (P4) + roteiro de abordagem + roteiro de sessão 1:1 + vendas reais no 1:1 (Vendas Secretas)
-- [ ] Autoridade Tríplice + Frase-Tese Autoral + Narrativa de Posicionamento (P5)
-- [ ] Sessões 1:1 ao longo de 12 meses (14 sessões, cadência front-loaded — ver `estrutura-programa.md`)
-- [ ] Acompanhamento individual via `_mentor/` (cadastro, contexto, negócio, perfil, roteiro) — já em uso
-- [ ] Ferramentas do método construídas + 1 Agente de IA do Método Autoral (era add-on ~R$1.000 — incluso desde 16/09)
-- [ ] Páginas + configuração de tráfego, sem gestão contínua (era add-on R$1.500 — incluso desde 16/09)
-- [ ] Garantia de aderência de 30 dias
-
-**Resolvido (29/08 — Fase 8):**
-- [x] Pasta formal de acompanhamento pro David — `mentoria/alunas/david-rose/` criada com a estrutura padrão do `_template/`. Falta preencher dados reais (contato, progresso, pasta no Drive) — não inventado, deixado em branco pra Karol completar.
+Preço preservado; não é o argumento central da oferta.
 
 ---
 
-## 5. Metodologia
+## 4. Entregáveis comprometidos
 
-**Nome:** Expert360º (metodologia proprietária da Karol) — aplicada na mentoria sob a marca **Incubadora de Expert**. Cada aluno sai com **seu próprio método nomeado** (ex: Milena → Conduz Agro; o "Método IAP" foi apenas o rascunho inicial antes de fechar o P3). Expert360º é o meta-método — o processo que ensina a construir o método autoral de cada um, não o nome que o aluno usa.
+### Método
+- DNA do Expert, História Real e Ikigai;
+- Persona Compradora;
+- Promessa Transformadora;
+- Processo Autoral nomeado;
+- Portfólio Estratégico mapeado e priorizado.
 
-### Arquitetura (3 camadas em paralelo)
-- **3 Pilares** (o que se desenvolve): Identidade Autoral · Método Estruturado · Estratégia de Mercado
-- **3 Princípios** (como se constrói): Autoria · Ordem · Prova — nenhuma fase abre sem evidência concreta da anterior ("sinto que estou pronta" não vale; o critério é sempre verificável)
-- **3 Mecanismos proprietários** (o incopiável): Narrativa do Método · **Vendas Secretas** · Autoridade Tríplice
+### Validação
+- oferta inicial e Mentoria Mínima Vendável;
+- Kit de Scripts de Vendas Secretas;
+- Rastreador de Leads;
+- acompanhamento antes, durante e depois das Vendas Secretas;
+- Raio-X de sessões de venda gravadas com autorização;
+- análise das primeiras vendas e entregas;
+- produto definitivo estruturado com base em dados reais.
 
-### 5 Fases (jornada psicológica — o que o aluno se torna)
-1. Do Currículo à Autoridade — desbloqueio: a história é o diferencial, não o currículo
-2. Do Conhecimento à Narrativa — sabe quem serve e o que tem de único
-3. Do Caos ao Método Autoral — tem método com nome e história dentro
-4. Da Promessa à Venda Secreta — tem prova real (vendas no 1:1)
-5. Da Invisibilidade à Autoridade — aparece com clareza, sem desconforto
+### Posicionamento
+- Autoridade Tríplice;
+- Frase-Tese, narrativa e mensagem central;
+- perfil, bio, pilares, linha editorial e conteúdo-base;
+- página de venda da oferta principal.
 
-### 5Ps (jornada didática — o que se constrói)
-P1 Persona Compradora → P2 Promessa Transformadora → P3 Processo Autoral → *[transição: Portfólio Estratégico — 15-20 ferramentas do método]* → P4 Proposta Validada (**Vendas Secretas**: 3 vendas reais no 1:1) → P5 Posicionamento de Autoridade (**Autoridade Tríplice**: Expert + Persona + Produto)
+### Escala
+- funil inicial e automações necessárias;
+- processo de geração/organização de leads;
+- 1 Agente de IA do Método Autoral;
+- configuração inicial de tráfego;
+- acompanhamento das métricas iniciais;
+- assessment final e Expert Plan.
 
-### A metáfora central
-Constrói a casa por dentro antes de abrir pro mundo: Fundação (crença) → Estrutura (P1+P2+P3) → Acabamento interno (P4, Vendas Secretas) → Fachada (P5). Posicionamento é fachada, não fundação — consistente com a correção da Fase 1 (a promessa central não é posicionamento).
-
-### Como se aplica na mentoria (diferença-chave individual vs. grupo)
-- **Individual:** Karol responde o agente de IA **junto com o aluno, dentro da sessão** — a sessão É o momento de construção do P
-- **Grupo:** o aluno responde o agente **sozinho, antes da sessão**, e traz pronto para Karol revisar/ajustar em sessão
-
-### Conexão com o add-on de ferramentas/tráfego (Fase 1)
-A metodologia já apontava esse caminho, ainda não construído: o "Gap 3" do framework registra que a Biblioteca de Templates (que vira ferramentas/produtos) estava planejada "para a Incubadora 2.0", e a tabela de entregáveis do P5 já lista **"funis discretos ativos"** como parte da Autoridade Tríplice. O add-on de ferramentas/páginas/tráfego formaliza e precifica o que a metodologia já previa como próximo passo — não é escopo novo.
-
-**Docs fonte:**
-- `docs/knowledge/expert-business/metodologia/expert360-framework-completo.md`
-- `docs/knowledge/expert-business/metodologia/expert360-mecanismo-unico.md`
-- `mentoria/alunas/milena-gehrke/_mentor/` (cadastro, contexto, negócio, perfil, roteiro — caso de referência real)
-
----
-
-## 6. Critérios de Qualidade
-
-**Produto pronto quando:**
-- Aluno sai com o método autoral nomeado e validado por vendas reais no 1:1
-- Vendas Secretas documentadas (quantas vendas, roteiro usado, depoimento)
-- Autoridade Tríplice e presença digital estruturadas ao final dos 12 meses
-- Add-on de ferramentas/páginas/tráfego (quando contratado) entregue configurado e funcionando — sem exigir gestão contínua da Karol
+Página, agente de IA, funil, automações, estrutura comercial e tráfego integram a solução; não são bônus nem add-ons.
 
 ---
 
-## 7. Restrições e Decisões
+## 5. Metodologia preservada
 
-**O que NÃO faz parte do escopo:**
-- Gestão contínua de tráfego ou análise de métricas mensal (mesmo com add-on contratado)
-- Posicionamento/autoridade digital como promessa central — é continuação da jornada, não o motivo da compra
+**Expert360º** é o meta-método usado para construir o método próprio de cada aluno.
 
-**Decisões tomadas:**
+### 5Ps
 
-| Decisão | Justificativa |
-|---------|---------------|
-| Curso e mentoria partem do mesmo Ponto A | Diferença está no perfil de consumo (sozinha vs. suporte), não no nível de conhecimento prévio |
-| Ferramentas/funil/tráfego ficam fora do preço-base | Mercado gringo confirma: implementação técnica é add-on, não faz parte do coaching/mentoria em si |
-| Configurar tráfego, não gerir | Karol não quer virar gestora de tráfego nem assumir análise de métricas contínua |
-| Posicionamento não é a promessa central | A validação secreta (vendas reais) é o mecanismo proprietário — autoridade é consequência, não o gancho de venda |
+P1 Persona Compradora → P2 Promessa Transformadora → P3 Processo Autoral → Portfólio Estratégico → P4 Proposta Validada / Vendas Secretas → P5 Posicionamento de Autoridade.
+
+### Mecanismos proprietários
+
+- Narrativa do Método;
+- Vendas Secretas;
+- Autoridade Tríplice.
+
+### Mapa para as 4 macrofases
+
+| Macrofase | 5Ps / camada | Sessões |
+|---|---|---:|
+| Método | M0 + P1 + P2 + P3 + mapa do Portfólio | 1–5 |
+| Validação | P4 + Vendas Secretas + produto definitivo | 6–8 |
+| Posicionamento | P5 | 9–11 |
+| Escala | aplicação pós-5Ps | 12–14 |
+
+A meta operacional histórica das Vendas Secretas é buscar 3 vendas reais. É meta de campo, não promessa comercial.
+
+---
+
+## 6. Responsabilidades
+
+**Karol:** conduz, decide e valida; faz o Raio-X; aprova método, oferta, produto, posicionamento e implementação.
+
+**Squads/agentes:** apoiam pesquisa, síntese e produção de scripts, materiais, página, funil, automações, Agente de IA e tráfego inicial, sob direção da Karol.
+
+**Aluno:** fornece insumos/acessos, participa, executa conversas, follow-up e primeiras entregas, mantém registros, obtém consentimento de gravação e aprova ativos.
+
+---
+
+## 7. Critérios de qualidade
+
+O programa cumpre o escopo quando:
+- 14 sessões são realizadas ao longo dos 12 meses;
+- 5Ps e decisões ficam documentados;
+- Vendas Secretas acontecem antes da exposição ampliada;
+- produto definitivo nasce de dados de conversas e primeiras entregas;
+- posicionamento e página refletem o que foi validado;
+- funil, automações, agente de IA e tráfego inicial estão configurados dentro do escopo;
+- métricas iniciais são verificadas e o Expert Plan é entregue.
+
+Resultado comercial depende da execução do aluno e do mercado; não é garantido.
+
+---
+
+## 8. Restrições
+
+Não inclui:
+- comunidade ou alumni network;
+- conteúdo complementar gravado além das gravações das sessões;
+- produção/postagem contínua de conteúdo;
+- operação diária de vendas;
+- gestão contínua de tráfego ou análise mensal recorrente;
+- verba de mídia;
+- promessa de quantidade de leads, vendas ou faturamento;
+- agentes adicionais além de 1 Agente de IA do Método;
+- manutenção indefinida de página, funil e automações;
+- execução integral sem participação do aluno.
+
+---
+
+## 9. Decisão registrada — 29/09/2026
+
+Karol aprovou as 4 macrofases como narrativa comercial da Incubadora Individual, sem substituir Expert360º nem os 5Ps. Também aprovou a regra de não construir o produto completo antes das primeiras vendas/entregas, a explicitação de responsabilidades e o total oficial de 14 sessões. Preço e duração permanecem inalterados.
+
+Documento comercial detalhado: `oferta-comercial-4-macrofases.md`.
