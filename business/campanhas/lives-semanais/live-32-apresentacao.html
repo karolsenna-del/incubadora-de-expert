@@ -55,6 +55,7 @@
   .cards{display:grid; gap:1.6vw; margin-top:2vw; width:100%; max-width:70vw;}
   .cards.c2{grid-template-columns:repeat(2,1fr); max-width:62vw;}
   .cards.c4{grid-template-columns:repeat(4,1fr); max-width:80vw;}
+  .cards.c5{grid-template-columns:repeat(5,1fr); max-width:88vw; gap:1.2vw;}
   .card{background:rgba(9,10,11,.045); border:1px solid rgba(9,10,11,.12); border-radius:14px; padding:1.6vw 1.4vw; display:flex; flex-direction:column; gap:.9vw; min-width:0;}
   [data-bg="preto"] .card{background:rgba(252,252,252,.06); border-color:rgba(252,252,252,.16);}
   .card .icn{width:2.4vw; min-width:30px; height:2.4vw; min-height:30px; color:var(--laranja);}
@@ -183,7 +184,7 @@
   }
   @media (max-width:760px){
     .slide{padding:14vw 16px 18vw;}
-    .cards.c2,.cards.c4,.cols,.grid4,.bx-paths{grid-template-columns:1fr; max-width:100%;}
+    .cards.c2,.cards.c4,.cards.c5,.cols,.grid4,.bx-paths{grid-template-columns:1fr; max-width:100%;}
     .tl{grid-template-columns:1fr 1fr; max-width:100%;}
     .chain{flex-direction:column; max-width:100%;}
     .chain-arrow{transform:rotate(90deg);}
@@ -406,12 +407,13 @@
 <!-- 14: BLOCO 5 — 4 MOVIMENTOS -->
 <section class="slide" data-bg="branco">
   <span class="eyebrow">Pra caber no dia</span>
-  <h2 class="head">A rotina em 4 movimentos</h2>
-  <div class="cards c4">
+  <h2 class="head">A rotina em 5 movimentos</h2>
+  <div class="cards c5">
     <div class="card"><span class="tag">1</span><h3>Cortar antes de somar</h3><p>A venda entra no lugar de alguma coisa.</p></div>
     <div class="card"><span class="tag">2</span><h3>Uma conversa por dia, na agenda</h3><p>Compromisso marcado, igual consulta.</p></div>
     <div class="card"><span class="tag">3</span><h3>Saber na véspera com quem falar</h3><p>A lista fica pronta antes.</p></div>
-    <div class="card"><span class="tag">4</span><h3>Uma linha depois de cada conversa</h3><p>O que disse, onde travou, próximo passo.</p></div>
+    <div class="card"><span class="tag">4</span><h3>Falar do que você faz por onde passa</h3><p>Não espera te perguntarem.</p></div>
+    <div class="card"><span class="tag">5</span><h3>Uma linha depois de cada conversa</h3><p>O que disse, onde travou, próximo passo.</p></div>
   </div>
   <div class="foot"><span>Bloco 5 · Autoridade / Método</span><span class="count tabular"></span></div>
   <div class="logo"></div>
@@ -471,9 +473,38 @@
   <div class="logo"></div>
 </section>
 
-<!-- 19: MOVIMENTO 4 -->
+<!-- 18b: MOVIMENTO 4 — academia -->
 <section class="slide" data-bg="branco">
-  <span class="chip">Movimento 4 · Uma linha depois de cada conversa</span>
+  <span class="chip">Movimento 4 · Falar do que você faz por onde passa</span>
+  <h2 class="head">Eu não era do tipo que conta o que faz. Nem na academia.</h2>
+  <div class="cols" style="max-width:74vw;">
+    <div class="col wait">
+      <h3>Antes</h3>
+      <p class="lead" style="font-size:clamp(1rem,1.35vw,1.2rem);">Academia, salão, serviço público: as pessoas sabiam o básico da minha vida. Não sabiam o que eu fazia.</p>
+    </div>
+    <div class="col act">
+      <h3>Nessa semana, na academia</h3>
+      <p class="lead" style="font-size:clamp(1rem,1.35vw,1.2rem);">Me perguntaram o que eu fazia. Uma aluna da academia, contadora por 25 anos e fora do mercado há 3: "tô com vontade de trabalhar de novo, de usar a minha experiência." E começou a me seguir.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Bloco 5 · Movimento 4</span><span class="count tabular"></span></div>
+  <div class="logo"></div>
+</section>
+
+<!-- 18c: MOVIMENTO 4 — persona espalhada -->
+<section class="slide" data-bg="preto">
+  <div class="deco-ring" style="width:40vw;height:40vw;top:-16vw;right:-12vw;"></div>
+  <span class="eyebrow">A sua persona está espalhada por todos os cantos</span>
+  <h2 class="head">Sabe que tem potencial. Falta coragem. <span class="accent">Mas a vontade continua ali.</span></h2>
+  <p class="lead">Quando ela ouve alguém dizendo que ensina a fazer isso, o interesse volta. Meu funil é longo: pra ela é um projeto paralelo, do coração. Mas tem faíscas que eu vou acender.</p>
+  <p class="big-line" style="font-size:clamp(1.3rem,2.4vw,2rem); margin-top:1.6vw;">Não espera te perguntarem. Aparece. Ajuda. Doa o seu conhecimento.</p>
+  <div class="foot"><span>Bloco 5 · Movimento 4</span><span class="count tabular"></span></div>
+  <div class="logo"></div>
+</section>
+
+<!-- 19: MOVIMENTO 5 -->
+<section class="slide" data-bg="branco">
+  <span class="chip">Movimento 5 · Uma linha depois de cada conversa</span>
   <h2 class="head">Cada conversa te ensina alguma coisa sobre o seu cliente</h2>
   <div class="chain" style="max-width:70vw;">
     <div class="chain-node"><h4>O que disse</h4></div>
@@ -483,7 +514,7 @@
     <div class="chain-node best"><h4>Próximo passo</h4></div>
   </div>
   <p class="small" style="margin-top:1.8vw;">Eu te mostrei o que fazer. O como (o que falar, como qualificar, como conduzir até a decisão) é o que a gente trabalha junto.</p>
-  <div class="foot"><span>Bloco 5 · Movimento 4</span><span class="count tabular"></span></div>
+  <div class="foot"><span>Bloco 5 · Movimento 5</span><span class="count tabular"></span></div>
   <div class="logo"></div>
 </section>
 
@@ -533,7 +564,7 @@
     <div class="recap-row"><span class="recap-num tabular">1</span><p>Venda vem antes de audiência: Método → Venda → Validação → Presença → Escala.</p></div>
     <div class="recap-row"><span class="recap-num tabular">2</span><p>O tempo existe. A pergunta é pra onde ele vai: feed ou conversa.</p></div>
     <div class="recap-row"><span class="recap-num tabular">3</span><p>Uma conversa por dia, na agenda, com a lista pronta na véspera.</p></div>
-    <div class="recap-row"><span class="recap-num tabular">4</span><p>Sua persona já está perto de você. Comece pelos mais quentes.</p></div>
+    <div class="recap-row"><span class="recap-num tabular">4</span><p>Sua persona já está perto de você. Comece pelos mais quentes e fale do que você faz por onde passa.</p></div>
   </div>
   <div class="foot"><span>Resumo</span><span class="count tabular"></span></div>
   <div class="logo"></div>

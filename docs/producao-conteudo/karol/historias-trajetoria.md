@@ -311,6 +311,23 @@
 
 ---
 
+## 20. Falar do que eu faço por onde passo — a contadora da academia (setembro/2026)
+
+**Fatos (palavras da Karol, 29/09/2026):**
+- Tinha ouvido há muito tempo que a gente deve falar do nosso serviço por onde passa, mas **não é do tipo que conversa onde vai** — na academia, no salão, no emprego público, as pessoas sabiam só o básico da vida dela
+- A rotina de prospecção diária (ver #19) **mudou isso também** e já surtiu efeito
+- **Na academia, nessa semana:** comentou que estaria no curso presencial do FHT ("falei até que eu estranho fazer algo presencial") → perguntaram o que ela fazia → explicou o serviço → uma aluna da academia, **contadora por 25 anos e fora do mercado de trabalho há 3**, disse: *"tô com vontade de trabalhar de novo, usar minha experiência"* — e começou a segui-la
+- **Leitura dela sobre a persona:** "a minha persona está espalhada por todos os cantos" — milhares de pessoas que sabem que têm potencial, que podiam fazer mais da vida, que o conhecimento serve pra mais do que estão alocando; algumas já têm consciência do dinheiro perdido. **Mas falta coragem**, medo de sair da zona de conforto, não sabem nada de digital e ficam assustadas, "não querem achar sarna pra se coçar" — mas a vontade permeia o coração. Quando ouvem alguém dizendo que ensina a fazer isso, o interesse aflora de novo
+- **O que ela faz agora:** sempre que há oportunidade, toca no assunto; se ouve alguém falando do tema, complementa; nos grupos que participa, responde dúvida → surge interesse pela capacidade dela, depois pelo serviço → começam a segui-la; alguns já marcam sessão de vendas, outros "ficam stalkeando por um tempo"
+- **Funil longo:** a persona tem a vida estável e isso seria um projeto paralelo — "do coração, com propósito, uma virada de chave" — e isso leva tempo. "Tem gente que vai morrer com essa vontade e não vai fazer nada. Alguns vão me seguir e sentir que é muito difícil, mas tem algumas faíscas que eu vou acender."
+- **Lição:** mais uma forma de prospecção — "falar do que você faz sempre que tiver oportunidade, não esperem te perguntar, apareça, esteja presente, ajude, doe seu conhecimento"
+
+**Leitura da squad:** prospecção offline/relacional — complementa o #19 (prospecção ativa diária) e o caso do perfil pessoal (enxergar a persona ao redor). A reflexão do "funil longo" explica a persona da Laura melhor que muito dossiê: vida estável, desejo guardado, medo — e por que Vendas Secretas (conversa) converte mais que conteúdo frio.
+
+**Status:** usada — Live 32 (01/10), Bloco 5, Movimento 4 da rotina.
+
+---
+
 ## ⚠️ Material sensível — não usar sem autorização explícita da Karol, caso a caso
 
 > Registrado aqui só pra não se perder, mas NÃO entra no fluxo normal de produção. Squad não sugere isso como pauta por conta própria — só se a Karol pedir explicitamente, e mesmo assim, com o roteiro validado por ela linha a linha antes de produzir.

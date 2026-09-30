@@ -55,4 +55,5 @@ Opcional: brilho laranja bem suave (radial, ~16% de opacidade) num canto do fund
 
 | Data | Peça | Detalhe |
 |------|------|---------|
+| 28/09 | Foto do grupo do WhatsApp | `logo-grupo-whatsapp.png` (1080×1080): chama + BLACK/EXPERT + pílula 14.10 dentro do anel laranja — tudo dentro do círculo que o WhatsApp recorta |
 | 28/09 | Deck Live 32 — Bloco 8 (slides 23-26) | Virada de chave: Blocos 1-7 no visual Live Expert360, Bloco 8 muda pro preto com faixa, selo e chama |

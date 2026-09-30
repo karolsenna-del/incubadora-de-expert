@@ -137,6 +137,8 @@ Confirmado: você vai criar uma **página nova "Black Expert"** com essa oferta 
 
 **Pós-14/10:** 15-21/10, oferta Expert360º R$697 pra quem não comprou (2-3 mensagens do Echo). Nada de Expert360º em material da Black até 14/10 23h59.
 
+**Infra de e-mail (28/09):** disparos de e-mail saem pelo **Resend Broadcasts** (domínio `incubadoradeexpert.com.br`), montado pela Karol com o Gestor de Infra — procedimento em `agents/gestor-infra-arcane/data/gestor-infra-playbook.md` SOP-024.
+
 **Em aberto (não bloqueia):**
 - Meta de vendas — Karol rastreando leads do WhatsApp; estimar por temperatura (A aluno/ex-aluno ~10% ref. renovação 2025 = 2/20 · B/C/D sem histórico). Check de ritmo do grupo em 07/10.
 - Escopo da Central do Mentor (até 03/10) e temas dos 5 dias do Desafio (até 09/10) — necessários pro Disparo #6.

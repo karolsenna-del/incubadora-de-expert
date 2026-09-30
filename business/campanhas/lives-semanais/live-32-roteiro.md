@@ -9,7 +9,7 @@
 > Sequência do Expert Seguro (`business/campanhas/incubadora-de-expert-individual/proposta-validada-2026-09.md` §7);
 > critério fazer/delegar/adiar/cortar (`base-inicial.md` item H); 6 grupos do Rastreador (M3).
 > Data: **quinta, 01/10/2026, 15h (Brasília)** — mudou de quarta porque a Karol está em evento presencial ter/qua.
-> Duração estimada: ~41 min
+> Duração estimada: ~44 min
 > Modelo: Aula de 8 Blocos (Funil de Zoom) — sem bloco de prática ao vivo
 > Fonte da fórmula: `agents/etlmaker/kbs/alcateia-implementacao/VOL-funil-vendas.md` seção 13
 > Oferta do Bloco 8: **Grupo da Black Expert** (entrada gratuita — é a porta pra condição de 14/10).
@@ -77,7 +77,7 @@ Existe um caminho mais direto. Eu testei ele na semana passada, e é isso que eu
 
 ---
 
-## BLOCO 5 — AUTORIDADE IMEDIATA / MÉTODO (~12 min)
+## BLOCO 5 — AUTORIDADE IMEDIATA / MÉTODO (~15 min)
 
 "Eu chamo isso de **Sequência do Expert Seguro**. É a ordem que eu ensino no meu método:
 
@@ -105,7 +105,7 @@ Resultado da semana inteira: R$5 mil.
 
 Isso veio de uma frase que eu ouvi do Caio Carneiro: muitas vezes a gente acha que o funil tá fraco, quando na verdade o que falta é volume de gente entrando nele. Desde essa aula, eu prospecto todo dia. Nem que seja um contato comercial.
 
-Mas 'prospecta todo dia' é fácil de falar. O difícil é caber no dia. Então eu vou te mostrar a rotina — o que fazer, em quatro movimentos.
+Mas 'prospecta todo dia' é fácil de falar. O difícil é caber no dia. Então eu vou te mostrar a rotina — o que fazer, em cinco movimentos.
 
 **Movimento 1 — Cortar antes de somar.**
 Você não tem tempo sobrando. Ninguém tem. Então a prospecção não entra por cima de tudo — ela entra no lugar de alguma coisa. Olha pra sua semana e separa: o que só você pode fazer e gera resultado, você faz. O que precisa acontecer mas não depende de você, você delega. O que não muda o resultado agora, fica pra depois. E o que ocupa o lugar da venda, da família ou do descanso sem retorno, você corta.
@@ -124,7 +124,23 @@ E deixa eu te contar o que aconteceu nessa mesma semana. Eu tenho dois perfis no
 Eu entrei no pessoal e vi uma pessoa das antigas, da minha vida pessoal, que hoje também me acompanha no profissional. Ela tá produzindo conteúdo técnico de segurança patrimonial pra imigrantes nos Estados Unidos. E o que eu fiz? Comentei no post dela: 'esse conhecimento daria um baita infoproduto!'. Na hora ela me chamou, e a gente marcou uma sessão de diagnóstico. É nessa conversa que a venda acontece.
 
 Repara: eu não fui atrás de estranho. Não impulsionei post. Eu só enxerguei. Porque depois que você sabe quem é a sua persona, você começa a ver ela por onde passa. Qualquer pessoa ao seu redor pode ser o seu lead.
-**Movimento 4 — Uma linha depois de cada conversa.**
+
+**Movimento 4 — Falar do que você faz por onde passa.**
+Faz muito tempo que eu ouvi que a gente tem que falar do nosso serviço por onde passa. E eu não era assim. Eu não sou do tipo que puxa conversa onde vai. Na academia, no salão, no serviço público, as pessoas sabiam o básico da minha vida. Não sabiam o que eu fazia.
+
+Essa rotina mudou isso também. E já surtiu efeito.
+
+Nessa semana, na academia, eu comentei que ia estar num curso presencial. Falei até que eu estranho fazer coisa presencial. Aí me perguntaram o que eu fazia, e eu expliquei. Uma aluna da academia, que foi contadora por 25 anos e está fora do mercado há 3, me falou: 'tô com vontade de trabalhar de novo, de usar a minha experiência.' E começou a me seguir.
+
+Sabe por quê? A sua persona está espalhada por todos os cantos. Tem milhares de pessoas que sabem que têm potencial, que sabem que poderiam fazer mais da vida, que o conhecimento delas serve pra mais do que estão usando hoje. Tem gente que já tem consciência do dinheiro que está perdendo. Mas falta coragem. Tem medo de sair da zona de conforto, não sabe nada de digital, fica assustada, não quer arrumar sarna pra se coçar. Só que a vontade continua ali. E quando essa pessoa ouve alguém dizendo que ensina a fazer isso, o interesse volta.
+
+Então agora, sempre que tem oportunidade, eu toco no assunto. Se ouço alguém falando disso, eu complemento. Nos grupos que eu participo, se alguém tem dúvida, eu respondo. Primeiro surge o interesse pela minha capacidade. Depois, pelo meu serviço. Tem gente que começa a me seguir, tem quem já marque sessão, e tem quem fique me acompanhando de longe por um tempo.
+
+O meu funil é mais longo, mais demorado. Porque a minha persona está com a vida estável, e isso seria um projeto paralelo. Do coração, com propósito, uma virada de chave. E isso leva tempo. Tem gente que vai morrer com essa vontade e não vai fazer nada. Tem gente que vai me seguir e sentir que é difícil demais. Mas tem algumas faíscas que eu vou acender.
+
+Então não espera te perguntarem. Aparece. Esteja presente. Ajuda. Doa o seu conhecimento.
+
+**Movimento 5 — Uma linha depois de cada conversa.**
 Terminou, escreve uma linha: o que a pessoa disse, onde ela travou, qual é o próximo passo. Assim, cada conversa te ensina alguma coisa sobre o seu cliente.
 
 Repara que eu te falei o que fazer. O como — o que falar em cada conversa, como qualificar, como conduzir até a decisão — é o que a gente trabalha junto, passo a passo."
