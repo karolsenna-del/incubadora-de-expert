@@ -12,6 +12,10 @@
 
 ---
 
+## Handoffs pendentes
+
+- **Convite Black Expert por WhatsApp:** ler `business/campanhas/black-friday-grupo-2026/handoff-whatsapp-convite.md`. A fila com dados pessoais fica somente no vault privado local e não acompanha clones do Git.
+
 | # | Data | Missao | Resultado | SOP Criado? | Observacoes |
 |---|------|--------|-----------|-------------|-------------|
 | 77 | 2026-09-26 | Área de Membros exibir descrição de cada aula (handoff do Course Creator, fecha V05/V06 do checklist do Expert360º) | ok — no ar (deploy da Karol dpl_6p6cmnMGCmBDr6Xenm1Y8mgpfqeM, conferido via curl) | sim — SOP-023 | Novo `js/descricoes-aulas.js` gerado por `agents/course-publisher/scripts/gerar-descricoes-site.py` (fonte única: descricoes.md + config.yaml; 30 chaves por youtube_id, 48 por título). `app.js`: `renderDescricaoAula()` abaixo dos botões da aula ("Sobre esta aula"), HTML escapado + URLs clicáveis; `app.html` carrega o script; CSS `.conteudo-descricao`. Teste em node com data.js real: todas as aulas de Orientações e M0-M3 têm descrição; só as 10 placeholders do M4 ficam sem. Link do suporte (wa.me/556792324690) sai clicável na A9, A12 e Encerramento do M3. Gap: descrições antigas (M1, M2, M4, Orientações) abrem com "Bem-vinda" — agora visíveis pras alunas; texto é do Course Creator. |
