@@ -30,7 +30,7 @@ Versão: 1.0 (Aprovado) | Fase 6 do Mentoring Creator | Gate: QG-MC-007 ✅
 - **5 Fases** (jornada psicológica): Do Currículo à Autoridade → Do Conhecimento à Narrativa → Do Caos ao Método Autoral → Da Promessa à Venda Secreta → Da Invisibilidade à Autoridade
 - **3 Mecanismos proprietários:** Narrativa do Método · Vendas Secretas · Autoridade Tríplice
 
-**Checagem que fiz (e não virou problema):** cheguei a achar que os labels de fase da Estrutura do Programa (F0 Fundação, F1 Estrutura Inicial, F2 Método Autoral, F3 Vendas Secretas, F4 Autoridade e Escala) deveriam virar os nomes da jornada psicológica (Do Currículo à Autoridade, etc.). Karol corrigiu: são camadas diferentes — a jornada psicológica descreve **a transformação que o aluno vive**, não é rótulo operacional de módulo/cronograma. Mantém os labels de F0-F4 como estão (funcionais, operacionais); a jornada psicológica segue como camada narrativa própria (usada em copy/posicionamento), sem precisar bater 1:1 com a estrutura do programa.
+**Atualização aprovada em 29/09/2026:** a oferta passa a usar 4 macrofases comerciais — Método, Validação, Posicionamento e Escala. Os 5Ps e a jornada psicológica permanecem como camadas da Expert360º; os antigos labels F0-F4 ficam como histórico operacional e não devem orientar a copy comercial atual.
 
 ---
 
@@ -68,7 +68,7 @@ Verificado contra o que já foi construído (Fases 3-5):
 | Nome "Incubadora de Expert" | ✅ Usado em todos os documentos |
 | 5Ps / mecanismos proprietários | ✅ Usados em `design-sessoes.md` |
 | Frase-tese | ✅ Não contradiz nada do que foi desenhado |
-| Nomes das 5 fases do programa | ✅ Sem inconsistência real — jornada psicológica e labels operacionais são camadas distintas (ver seção 2) |
+| 4 macrofases comerciais | ✅ Método → Validação → Posicionamento → Escala; 5Ps preservados internamente |
 | Vocabulário (DNA do Expert, Rastreador de Leads, etc.) | ✅ Usado consistentemente em `design-entregaveis.md` |
 
 ---

@@ -1,7 +1,7 @@
 # Empacotamento — Incubadora de Expert (Mentoria Individual)
-Versão: 2.0 (Aprovado) | Fase 7 do Mentoring Creator | Gate: QG-MC-008 ✅
+Versão: 3.0 | Revisão: 29/09/2026 | Status: arquitetura comercial aprovada
 
-> v2.0 substitui a v1.0 (29/08) por decisão de reprecificação de 16/09/2026, formalizada no documento "Proposta Validada — Mentoria Individual" trazido pela Karol. Mudança central: sai do modelo preço-base + add-ons e vira **preço único, tudo incluso**. Ver histórico da v1.0 no final deste documento.
+> A v3.0 preserva preço, duração e modelo all-in da v2.0 e reorganiza a narrativa da oferta em 4 macrofases. Expert360º e os 5Ps permanecem como arquitetura didática interna.
 
 ---
 
@@ -28,10 +28,10 @@ Versão: 2.0 (Aprovado) | Fase 7 do Mentoring Creator | Gate: QG-MC-008 ✅
 |---|---|
 | Método autoral com nome próprio (P3) | Para de repetir framework genérico dos outros — vira A referência do próprio nicho, com nome que ninguém mais pode usar |
 | Persona + Promessa fechadas (P1+P2) | Para de tentar agradar todo mundo e não vender pra ninguém — sabe exatamente pra quem falar e o que prometer |
-| Vendas Secretas — 3 vendas reais no 1:1 (P4) | Não lança no vácuo torcendo pra dar certo — sai com prova concreta de que o método vende, antes de qualquer exposição |
+| Vendas Secretas acompanhadas antes, durante e depois (P4) | Não constrói no escuro: testa uma Mentoria Mínima Vendável, aprende com conversas e primeiras entregas e só então fecha o produto definitivo. A meta histórica de 3 vendas é operacional, não promessa |
 | Autoridade Tríplice + Narrativa (P5) | Aparece no digital com clareza, sem forçar uma persona que não é ele |
 | Sessões construídas JUNTO com a Karol (não sozinho) | Não trava tentando preencher um framework sozinho — resolve na hora, com quem já fez isso antes |
-| Portfólio Estratégico + Rastreador de Leads prontos | Sai com as ferramentas montadas, não só o conceito — começa a rodar no dia seguinte |
+| Portfólio Estratégico + Rastreador de Leads | Prioriza o mínimo antes da validação e produz os ativos definitivos com base no que o mercado mostrou |
 | Agente de IA do Método Autoral **incluso** | Não precisa negociar um add-on depois de já ter pago o principal — o ativo tecnológico já nasce dentro da entrega |
 | Páginas + configuração de tráfego **inclusas** | Não sai da mentoria com método validado e trava de novo por não saber montar a parte técnica — sai com o negócio já configurado pra rodar |
 | Garantia de aderência de 30 dias | Decide sem medo de "investir alto e descobrir que não faz sentido" — testa a dinâmica antes de estar 100% comprometido |
@@ -72,6 +72,15 @@ Versão: 2.0 (Aprovado) | Fase 7 do Mentoring Creator | Gate: QG-MC-008 ✅
 | Garantia | 30 dias de aderência — sem transformar em barreira burocrática, critério simples de vivência da metodologia |
 | Escassez | Agenda individual de acompanhamento — comunicada como limite de capacidade, não como urgência de preço |
 
+### Arquitetura comercial da entrega
+
+1. **Método:** Persona, Promessa, Processo Autoral e Portfólio Estratégico.
+2. **Validação:** oferta inicial, Mentoria Mínima Vendável, Vendas Secretas, Raio-X, primeiras vendas/entregas e estrutura definitiva do produto.
+3. **Posicionamento:** narrativa, Autoridade Tríplice, mensagem central, perfil, conteúdo e página.
+4. **Escala:** funil, automações, Agente de IA do Método, geração de leads, tráfego configurado e métricas iniciais.
+
+Página, agente de IA, funil, estrutura comercial e tráfego são partes da solução, não bônus. A execução é DWY: Karol decide e valida, squads/agentes aceleram a produção e o aluno executa campo, fornece dados e aprova.
+
 **Resolvido (29/08, ainda válido):** o "Mod 6M" é uma variante real, mas de um produto diferente — **Sprint do Método** (DFY) seguido de **6 meses de Incubadora de Expert**. Fora do escopo deste pipeline.
 
 ---
@@ -91,9 +100,9 @@ Versão: 2.0 (Aprovado) | Fase 7 do Mentoring Creator | Gate: QG-MC-008 ✅
 - **Importância na jornada:** É o degrau entre "sabe muito, mas não sabe vender isso" e "tem um negócio digital de verdade rodando" — não é sobre aparecer, é sobre ter prova antes de aparecer
 
 ## Como faz
-- **Estrutura:** 5 fases ao longo de 12 meses — Fundação (M0) → Estrutura Inicial: Persona+Promessa (M1) → Método Autoral: Processo+Portfólio (M2) → Vendas Secretas: Proposta+3 vendas reais (M3) → Autoridade e Escala: Posicionamento+presença digital (M4). Nenhuma fase abre sem prova concreta da anterior.
+- **Estrutura comercial:** 4 macrofases — Método → Validação → Posicionamento → Escala. Internamente, M0 e os 5Ps preservam a sequência didática da Expert360º.
 - **Experiência:** 14 sessões 1:1 — semanais no mês 1 (construção intensa junto com a Karol), espaçando pra dar tempo de campo (meses 2-6), mensais na fase de escala (meses 7-12)
-- **Entregáveis:** DNA do Expert (intake) → Persona+Promessa → Método nomeado + Portfólio Estratégico (15-20 ferramentas) + Rastreador de Leads → Proposta+roteiros+Vendas Secretas (com depoimento capturado no fechamento) → Autoridade Tríplice+Narrativa+presença digital → Agente de IA do Método Autoral → Páginas+configuração de tráfego → Assessment final + Expert Plan (plano de continuidade)
+- **Entregáveis:** DNA → Persona+Promessa → Método+mapa do Portfólio → Mentoria Mínima Vendável+scripts+Rastreador → Vendas Secretas+Raio-X → produto definitivo após primeiras vendas/entregas → Autoridade Tríplice+mensagem+perfil+conteúdo+página → funil+automações+Agente de IA+tráfego inicial → métricas iniciais+Expert Plan
 
 ## Proposta de valor
 - **Vale a pena porque:** sai com segurança real pra se expor — vendas verdadeiras fechadas antes de qualquer exposição pública — e com o negócio já configurado pra rodar (ferramentas, agente de IA, páginas, tráfego), não só um método no papel

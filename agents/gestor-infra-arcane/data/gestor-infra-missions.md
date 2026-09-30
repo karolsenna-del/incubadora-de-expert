@@ -12,6 +12,10 @@
 
 ---
 
+## Handoffs pendentes
+
+- **Convite Black Expert por WhatsApp:** ler `business/campanhas/black-friday-grupo-2026/handoff-whatsapp-convite.md`. A fila com dados pessoais fica somente no vault privado local e não acompanha clones do Git.
+
 | # | Data | Missao | Resultado | SOP Criado? | Observacoes |
 |---|------|--------|-----------|-------------|-------------|
 | 78 | 2026-09-28 | Infra de e-mail da Black Expert (handoff do Squad LPago/Atlas) + lista de WhatsApp pro Disparo #1 | ok — **e-mail #1 ENVIADO 28/09 18h05 (Cuiabá) pra 121 contatos** (broadcast `979ab9be...`, status sent) | sim (SOP-024) | Resend Broadcasts (free, 1.000 contatos). Lista: 106 CRM + 8 alunos + 12 LP grupo de lives = 126, -5 (suporte Leandro + Karol) = 121. Key nova Full access "Resend Full" (vault). Import de contatos via API BLOQUEADO pelo auto mode (dado pessoal de terceiro → servico externo) — Karol importou no painel; no Chrome automatizado o import falhava, no Edge funcionou. Segmentos: "Black Expert 2026" `93dd5353...` e "Teste Karol". 3 testes (v1 botao, v2 texto, v3 final). Karol preferiu botao; P.P.S. sobre aba Promocoes. WhatsApp: 203 contatos "BX " importados no Google Contatos pessoal (karol.franzini@gmail.com, marcador "Black Expert 2026") pra lista de transmissao; controle em `business/vault/black-expert-2026/controle-convite-wa.csv`. Gap achado: LP do grupo de lives nao grava no CRM (backlog Companion). CRM tem 213 leads (doc mestre dizia 150). |

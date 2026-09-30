@@ -2,6 +2,8 @@
 
 > Origem: `5) Proposta Validada — Mentoria Individual.docx`, trazido pela Karol em 16/09/2026 como o resultado final da oferta (item 5 dos 6 agentes de IA do método: Persona → Promessa → Processo Autoral → Portfólio Estratégico → **Proposta Validada** → Autoridade Tríplice). Guardado aqui como fonte de verdade da reprecificação — motivou a atualização de `prd.md` e `empacotamento.md` (v2.0) no mesmo dia.
 
+> **Decisão posterior aprovada em 29/09/2026:** preço e condições abaixo permanecem válidos. A narrativa comercial atual passa a ser **Método → Validação → Posicionamento → Escala**, com 14 sessões 1:1 em 12 meses. Expert360º e os 5Ps continuam como arquitetura didática. Antes das primeiras vendas existe apenas a Mentoria Mínima Vendável; o produto completo é estruturado depois das conversas, primeiras vendas e primeiras entregas. Fonte atual: `oferta-comercial-4-macrofases.md`.
+
 ---
 
 A Mentoria Individual ocupa o topo do ecossistema da Incubadora porque não entrega apenas método, ferramentas ou acompanhamento. Ela entrega 12 meses de construção conjunta, em que você participa diretamente das decisões e da criação dos ativos do negócio do expert.
@@ -101,37 +103,19 @@ Isso reduz dois riscos:
 o expert ficar meses tentando descobrir tudo sozinho;
 ou receber tudo pronto de uma consultoria sem entender o raciocínio por trás das decisões.
 
-10. Jornada dos 12 meses
-Fase 1 — Autoridade e Método
-Vocês escavam:
-história, experiência, conhecimento, fracassos, resultados, padrões e diferenciais.
-Da matéria-prima surge o Método Autoral.
-Saída da fase:
-método autoral estruturado e comunicável.
+10. Jornada dos 12 meses — arquitetura comercial atual
 
-Fase 2 — Oferta e Vendas Secretas
-O método se transforma em proposta comercial.
-Vocês constroem:
-persona, promessa, oferta, escopo, formato, preço, abordagem e roteiro de vendas.
-Depois começam as conversas reais.
-Saída da fase:
-oferta validada ou ajustada a partir de dados reais de mercado.
+**Fase 1 — Método**
+Persona, Promessa, Processo Autoral e mapa do Portfólio Estratégico. Saída: método comunicável e base da oferta inicial.
 
-Fase 3 — Estruturação do Produto
-Depois de saber que existe aderência comercial, começa uma fase que diferencia fortemente a Mentoria Individual.
-Vocês transformam o método em uma experiência de entrega.
-Podem ser construídos:
-arquitetura da mentoria;
-jornada do cliente;
-etapas e encontros;
-roteiro das sessões;
-ferramentas do método;
-materiais de apoio;
-lógica de acompanhamento;
-experiência do aluno;
-organização da entrega.
-Saída da fase:
-produto estruturado para ser vendido e entregue com consistência.
+**Fase 2 — Validação**
+Oferta inicial, Mentoria Mínima Vendável, scripts, Vendas Secretas, Raio-X, primeiras vendas e primeiras entregas. A estrutura completa do produto só é fechada aqui, com dados do mercado real. Saída: proposta validada ou ajustada e produto definitivo estruturado.
+
+**Fase 3 — Posicionamento**
+Narrativa, Autoridade Tríplice, mensagem central, perfil, conteúdo e página de venda. Saída: autoridade visível e comunicação coerente com a oferta validada.
+
+**Fase 4 — Escala**
+Funil, automações, Agente de IA do Método, geração/organização de leads, configuração de tráfego e métricas iniciais. Saída: estrutura comercial inicial pronta para operar, sem gestão contínua de tráfego.
 
 11. Agente de IA personalizado do Método Autoral
 Como parte da Mentoria Individual, o expert recebe a criação de:

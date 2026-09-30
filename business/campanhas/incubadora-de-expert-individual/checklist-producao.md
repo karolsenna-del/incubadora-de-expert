@@ -1,39 +1,91 @@
-# Checklist de Produção — Incubadora de Expert (Mentoria Individual)
-Versão: 2.0 (Aprovado) | Fase 9 do Mentoring Creator | Gate: QG-MC-010 ✅
+# Checklist de Implementação — Incubadora de Expert Individual
 
-> v2.0 substitui a v1.0 (29/08) após revisão item a item com a Karol em 16/09/2026, motivada pela reprecificação (R$10.000+add-ons → R$13.500 tudo incluso, ver `empacotamento.md` v2.0). 4 dos 10 itens originais já foram resolvidos; entram itens novos derivados da reprecificação.
+Versão: 3.0 | Data: 29/09/2026 | Status: oferta documentada; implementação operacional pendente
 
----
-
-## P1 — Bloqueia (afeta a entrada de um novo aluno agora)
-
-- [x] Nova página de onboarding — `onboarding.incubadoradeexpert.com.br` (31/08) — origem: Fase 5
-- [x] Confirmar e documentar o novo link do formulário de diagnóstico — `dna.incubadoradeexpert.com.br` (30/08) — origem: Fase 5
-- [x] Mensagem de boas-vindas atualizada com os links de onboarding e área de membros — resolvido desde a v1.0 — origem: Fase 5
-- [ ] **Atualizar o contrato de 12 meses pro preço novo** — o contrato já existe (resolveu o gap da v1.0), mas ainda não reflete R$15.000 referência / R$13.500 tudo incluso — origem: Fase 7 (reprecificação 16/09)
-- [x] **Definir a parcela do cartão 12x sobre R$13.500** — fechado: 12x R$1.350,01 — origem: Fase 7 (reprecificação 16/09)
-
-## P2 — Importante (não trava o dia 1, mas precisa existir antes de alguém chegar lá)
-
-- [ ] Melhorar a planilha Expert Plan (usada na Sessão 14) — link: https://docs.google.com/spreadsheets/d/1T8hHRb1IRXDuRElpUwNKa8tHWuVxWp_g6gyPUB5vHpE/edit — origem: Fase 7
-- [ ] Preencher dados reais da pasta do David (`mentoria/alunas/david-rose/`) — contato, progresso atual, caminho da pasta no Drive — origem: Fase 8
-- [ ] Definir regras de uso do canal WhatsApp — além do horário já fechado (dias úteis, 9h-18h), falta decidir o que pode ser mandado por lá vs. o que espera a próxima sessão — origem: Fase 5
-- [x] Criar o arquivo M3.5 (Rastreador de Leads) no `_template/` — resolvido desde a v1.0 — origem: Fase 4
-
-## P3 — Nice to Have
-
-- [ ] Revisar a logo — ícone de foguete comunica lançamento público, em tensão com o mecanismo real (validação em segredo) — origem: Fase 6
-- [ ] Formalizar "Incubadora de Expert — 6 meses" como produto próprio pra clientes pós-Sprint do Método **+ reprecificar essa variante** — o valor antigo (R$5.000) estava ancorado nos R$10.000 da Individual do zero, que agora é R$13.500. Não inventar número novo — decisão da Karol. Ver `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md` (seção Pendências) — origem: Fase 7
+> A arquitetura comercial Método → Validação → Posicionamento → Escala foi aprovada sem alteração de preço. Este checklist separa o que foi concluído nesta revisão das pendências reais.
 
 ---
 
-## Resumo
+## A. Oferta e documentação
 
-- Total de itens: 10 (5 resolvidos, 5 em aberto)
-- P1 (bloqueiam): 1 em aberto (3 resolvidos)
-- P2 (importantes): 3 em aberto (1 resolvido)
-- P3 (nice to have): 2 em aberto
+- [x] Criar oferta comercial em arquivo próprio — `oferta-comercial-4-macrofases.md`
+- [x] Preservar Expert360º e os 5Ps como arquitetura didática
+- [x] Mapear 4 macrofases × 5Ps × 14 sessões
+- [x] Oficializar 14 sessões 1:1 em 12 meses
+- [x] Registrar a Mentoria Mínima Vendável antes do produto completo
+- [x] Explicitar acompanhamento antes, durante e depois das Vendas Secretas
+- [x] Integrar Raio-X, scripts, página, funil, IA e tráfego à solução, sem tratá-los como bônus
+- [x] Definir responsabilidades de Karol, squads/agentes e aluno
+- [x] Registrar limites: sem comunidade, promessas de leads/vendas/faturamento ou gestão contínua de tráfego
+- [x] Preservar os valores vigentes
+
+## B. P1 — antes da próxima venda/entrada
+
+- [ ] **Atualizar o contrato da Individual** com: 14 sessões, 4 macrofases, DWY, responsabilidades, Mentoria Mínima Vendável, escopo de página/funil/IA/tráfego, limites e preço vigente.
+- [ ] **Atualizar a apresentação/roteiro comercial da Individual** para as 4 macrofases e remover referências operacionais antigas de 5 fases ou construção completa antes da validação.
+- [ ] **Atualizar a página de venda em ambiente de edição**, sem publicar, usando a nova promessa, 4 fases, responsabilidades, limites e 14 sessões.
+- [ ] **Definir capacidade simultânea da agenda individual** para a escassez real deixar de ser apenas qualitativa. Não inventar número.
+
+## C. P2 — antes de o próximo aluno chegar à fase correspondente
+
+### Método e Validação
+
+- [ ] Adaptar o Roteiro do Expert/template do aluno para 4 macrofases e 14 sessões.
+- [ ] Criar ou consolidar o template da **Mentoria Mínima Vendável**.
+- [ ] Consolidar o **Kit de Scripts de Vendas Secretas**: abordagem, diagnóstico, proposta, objeções, fechamento e follow-up.
+- [ ] Formalizar o protocolo do **Raio-X de vendas**: consentimento de gravação, envio, critérios de análise, registro do feedback e proteção de dados.
+- [ ] Criar registro de **primeiras entregas** para capturar uso, dúvidas, valor percebido e mudanças necessárias no produto.
+- [ ] Ajustar o Portfólio Estratégico para trabalhar primeiro como mapa/priorização, sem exigir produção completa antes das vendas.
+
+### Posicionamento e Escala
+
+- [ ] Formalizar o escopo de **página de venda**: entrada, aprovação, publicação, domínio e limite de revisões.
+- [ ] Formalizar o escopo do **funil e automações**: ferramentas, acessos, integrações e handoff ao aluno.
+- [ ] Formalizar o escopo do **Agente de IA do Método**: insumos, plataforma, teste, entrega e limite de manutenção.
+- [ ] Formalizar o escopo de **tráfego configurado**: conta, pixel/eventos, campanha inicial, verba do aluno, métricas verificadas e ponto exato de encerramento.
+- [ ] Definir quais **métricas iniciais** serão acompanhadas sem virar gestão contínua.
+- [ ] Melhorar a planilha Expert Plan usada na Sessão 14.
+
+### Suporte e operação
+
+- [ ] Definir o que pode ser tratado no WhatsApp e o que aguarda a próxima sessão; manter SLA de 24h úteis e atendimento em dias úteis, 9h–18h.
+- [ ] Definir handoff e responsáveis entre Karol e squads/agentes para página, funil, automações, IA e tráfego.
+- [ ] Preencher dados reais pendentes da pasta de David (`mentoria/alunas/david-rose/`): contato, progresso e caminho do Drive.
+
+## D. P3 — evolução e prova
+
+- [ ] Documentar casos ponta a ponta desde o baseline até a estrutura de escala, com autorização.
+- [ ] Revisar o desenho das sessões 9–14 depois do primeiro ciclo completo com dados reais.
+- [ ] Revisar a logo do foguete, que segue em tensão com a validação discreta.
+- [ ] Formalizar e reprecificar separadamente a variante de 6 meses pós-Sprint; não inventar valor.
 
 ---
 
-*Fase 9 do Mentoring Creator — v1.0 aprovada pela Karol em 29/08/2026 (QG-MC-010). v2.0 revisada e aprovada em 16/09/2026, após reprecificação (v2.0 do empacotamento).*
+## Itens já resolvidos e preservados
+
+- [x] página de onboarding: `onboarding.incubadoradeexpert.com.br`
+- [x] formulário DNA do Expert: `dna.incubadoradeexpert.com.br`
+- [x] mensagem de boas-vindas com onboarding e área de membros
+- [x] Rastreador de Leads no template
+- [x] parcela vigente: 12x de R$ 1.350,01
+- [x] garantia de aderência de 30 dias
+- [x] suporte: 24h úteis; gravações: 48h úteis
+
+---
+
+## Validação cruzada da oferta
+
+- [x] 4 fases: Método, Validação, Posicionamento e Escala
+- [x] 14 sessões 1:1
+- [x] 12 meses
+- [x] modelo DWY
+- [x] Vendas Secretas antes da exposição ampliada
+- [x] produto completo somente após primeiras vendas/entregas
+- [x] tráfego configurado com métricas iniciais, sem gestão contínua
+- [x] preço inalterado: R$ 15.000 de referência; R$ 13.500 à vista ou 12x de R$ 1.350,01
+- [x] sem comunidade inventada
+- [x] sem promessa de quantidade de leads, vendas ou faturamento
+
+---
+
+*Substitui o checklist v2.0 como fonte atual de implementação. O histórico de reprecificação permanece em `empacotamento.md`.*
