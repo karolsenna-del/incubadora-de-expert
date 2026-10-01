@@ -81,3 +81,7 @@ A infraestrutura só estará pronta quando houver rota de saída real documentad
 - Motivos das falhas: **131026 Message undeliverable (75%)** · 130472 número em experimento da Meta (12,5%) · 131049 limite de marketing por pessoa (12,5%).
 - **9 respostas** recebidas em 30 min (crm_whatsapp_events, direção entrada) → `revisao_pendente` no CRM.
 - **Gap:** o safe-diagnostic não registra o id da mensagem (wamid), então não dá pra saber QUEM falhou. Pra próximos envios: incluir `statuses[].id` no diagnóstico (não é dado pessoal) e cruzar com o log de envio.
+
+## Página 1:1 atualizada — 01/10, 09h25
+
+`business/vault/black-expert-2026/convite-whatsapp-black-expert.html` (privada, fora do git) regenerada com quem ficou de fora da API: **102 contatos** — adicionados pela Karol 49 · grupo/comunidade (decida você) 42 · relação incerta (decida você) 8 · clientes atuais/renovação 3. Excluídos: enviados pela API, já convidados no 1:1, opt-out, telefone inválido, próprio número, não lead. Mensagem = modelo v2 (nome + data em negrito). Marcações em localStorage `bx2`. Falhas de entrega da API não entram (sem wamid no diagnóstico → não dá pra saber quem).
