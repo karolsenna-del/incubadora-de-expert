@@ -26,6 +26,7 @@
 13. [SOP-019] Trocar CTA de WhatsApp por checkout (Voomp/Hotmart/etc) + icone flutuante de WhatsApp pra duvidas
 14. [SOP-020] Publicar LP estatica na Vercel + subdominio (Registro.br)
 15. [SOP-023] Atualizar descrições de aula na Área de Membros (gerador + deploy)
+17. [SOP-025] Envio 1:1 por WhatsApp via Dualhook Runtime API (modelo Meta + script idempotente)
 16. [SOP-024] Campanha de e-mail via Resend Broadcasts (lista, segmento, teste, envio/agendamento)
 
 > **Fora do escopo:** Setup inicial do pipeline (instalar n8n + Chatwoot, criar tabelas Supabase + RPCs, configurar Meta Business Manager, gerar System User Token, importar os workflows core WF-INBOUND/AGENT-CORE/OUTBOUND). Isso e responsabilidade do **agente de setup** — outro agente dedicado. Este squad so opera o pipeline ja instalado.
@@ -1179,6 +1180,18 @@ clicar "Enviar para análise" (aguardando confirmação explícita da Karol ante
 2. **iPhone nao puxa contatos importados em lote sozinho.** Fix que funcionou (28/09): Ajustes → Apps → Contatos → Contas → Gmail → **desligar Contatos e ligar de novo** → iPhone pede pra reautenticar a sessao do Gmail → puxa na hora. (vCard pelo WhatsApp/Arquivos e import no iCloud pelo Chrome automatizado NAO funcionaram.)
 3. WhatsApp → nova transmissao → buscar "BX" → selecionar todos (limite 256/lista). So chega pra quem salvou o numero da Karol.
 4. Alternativa sem salvar contato: pagina local com links `web.whatsapp.com/send?phone=...&text=...` (`convite-whatsapp-black-expert.html`) — funciona, mas e 1 clique por pessoa: a Karol opera sozinha e achou inviavel pra 200.
+
+## SOP-025: Envio 1:1 por WhatsApp via Dualhook Runtime API
+
+**Criado:** 2026-09-30 (Black Expert, convite pro grupo) | **Credencial:** `op://Claude/Dualhook API/password` (dh_live_) | WABA 624446197295808 · phone 663604156841540
+
+1. **Pré-requisitos:** cartão vinculado à WABA (business.facebook.com → Cobrança → Contas do WhatsApp Business — a Karol faz). Esperar alguns minutos após cadastrar: envios logo depois são aceitos e falham na entrega.
+2. **Modelo:** `POST /{WABA}/message_templates` (MARKETING, pt_BR). Link de WhatsApp (chat.whatsapp.com) NÃO pode em botão URL — vai no corpo. Fazer versão com `{{1}}` (nome) e versão sem variável pra contatos sem nome. Karol: "Olá {nome}", assinatura sem hífen.
+3. **Script modelo:** `business/campanhas/black-friday-grupo-2026/scripts/enviar-convite-whatsapp.py` (dry-run padrão, teste, envio só com confirmação literal, log idempotente no vault, exclusões, 1 msg/2s).
+4. **Teste** pro número pessoal da Karol (5567992337681) → conferir status no log da Vercel: `vercel logs --no-branch --environment production --since 5m --no-follow -x` e procurar `status_values` / `status_errors` (sent → delivered = ok).
+5. **Envio real** só com horário e lista aprovados explicitamente pela Karol.
+
+**Troubleshooting:** 1 status só sem delivered = falha; ver `status_errors`. 131042 pagamento · 131049 limite de marketing por usuário · 131026 não entregável · 131050 opt-out.
 
 ## Template de SOP
 
