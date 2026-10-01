@@ -72,3 +72,12 @@ A infraestrutura só estará pronta quando houver rota de saída real documentad
 - **Teste:** 2 tentativas às 08h12/08h39 falharam (1 status só — provável cartão recém-cadastrado). Às 21h57 o teste foi **sent → delivered**, sem erro, categoria marketing.
 - **Observabilidade:** webhook republicado (dpl_Br5HevVaLSnEu2CNveP1gbfKzABJ, Karol rodou o deploy) a partir do commit publicado 78d3992 + 3 campos no safe-diagnostic (`status_values`, `status_errors` código/título, `status_pricing`) — sem telefone/texto. **Essa mudança ainda NÃO está commitada no branch `feat/dualhook-webhook`** (cópia em scratchpad da sessão) — replicar no branch antes do próximo deploy.
 - **Pendente da Karol:** novo horário (11h de 30/09 passou sem envio). Proposta: 01/10 09h, antes da Live 32. Aprovação condicional já dada: enviar se o teste fosse entregue.
+
+## Envio real — 01/10/2026, 09h00–09h09 (Cuiabá)
+
+- Dry-run: 124 pendentes, 4 modelos APPROVED → usados os **v2 com negrito**: `black_expert_convite_grupo_v2` (91, com nome) e `black_expert_convite_grupo_sem_nome_v2` (33).
+- API: **124 aceitos, 0 erros** (log `business/vault/black-expert-2026/envios-whatsapp-log.csv`).
+- Webhook (eventos de status, 20 min): sent 198 · delivered 144 · read 27 · **failed 72** — contagem de EVENTOS (a Meta repete status), não de pessoas. Estimativa: ~2/3 entregues, ~1/3 falharam.
+- Motivos das falhas: **131026 Message undeliverable (75%)** · 130472 número em experimento da Meta (12,5%) · 131049 limite de marketing por pessoa (12,5%).
+- **9 respostas** recebidas em 30 min (crm_whatsapp_events, direção entrada) → `revisao_pendente` no CRM.
+- **Gap:** o safe-diagnostic não registra o id da mensagem (wamid), então não dá pra saber QUEM falhou. Pra próximos envios: incluir `statuses[].id` no diagnóstico (não é dado pessoal) e cruzar com o log de envio.
