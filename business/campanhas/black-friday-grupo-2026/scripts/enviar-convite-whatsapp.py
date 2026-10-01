@@ -29,8 +29,11 @@ LOG = os.path.join(VAULT, "envios-whatsapp-log.csv")
 API = "https://api.dualhook.com/v25.0"
 WABA_ID = "624446197295808"
 PHONE_NUMBER_ID = "663604156841540"
-MODELO_COM_NOME = "black_expert_convite_grupo"
-MODELO_SEM_NOME = "black_expert_convite_grupo_sem_nome"
+# Ordem de preferencia: v2 (com negrito, pedido da Karol 30/09) -> v1. Usa o primeiro APPROVED.
+PREF_COM_NOME = ["black_expert_convite_grupo_v2", "black_expert_convite_grupo"]
+PREF_SEM_NOME = ["black_expert_convite_grupo_sem_nome_v2", "black_expert_convite_grupo_sem_nome"]
+MODELO_COM_NOME = None  # definido em escolher_modelos()
+MODELO_SEM_NOME = None
 IDIOMA = "pt_BR"
 PAUSA_S = 2.0
 ERROS_QUE_PARAM = {0, 3, 10, 190, 200, 368, 131031, 131042, 131048, 131056, 130429, 133010}
@@ -93,8 +96,16 @@ def status_modelos(k):
     return {t["name"]: t["status"] for t in d.get("data", [])}
 
 
+def escolher_modelos(st):
+    """Primeiro modelo APPROVED de cada lista. Sem modelo com nome aprovado, todos vao com o sem nome (decisao Karol 30/09)."""
+    global MODELO_COM_NOME, MODELO_SEM_NOME
+    MODELO_COM_NOME = next((m for m in PREF_COM_NOME if st.get(m) == "APPROVED"), None)
+    MODELO_SEM_NOME = next((m for m in PREF_SEM_NOME if st.get(m) == "APPROVED"), None)
+    print("Usando -> com nome: %s | sem nome: %s" % (MODELO_COM_NOME, MODELO_SEM_NOME))
+
+
 def montar(tel, nome):
-    pn = primeiro_nome(nome)
+    pn = primeiro_nome(nome) if MODELO_COM_NOME else None
     tpl = {"name": MODELO_COM_NOME if pn else MODELO_SEM_NOME, "language": {"code": IDIOMA}}
     if pn:
         tpl["components"] = [{"type": "body", "parameters": [{"type": "text", "text": pn}]}]
@@ -122,12 +133,13 @@ def main():
     k = chave_api()
     st = status_modelos(k)
     print("Modelos:", st)
+    escolher_modelos(st)
+    if not MODELO_SEM_NOME:
+        sys.exit("Nenhum modelo sem nome aprovado pela Meta.")
 
     if a.teste:
-        if st.get(MODELO_COM_NOME) != "APPROVED":
-            sys.exit("Modelo ainda nao aprovado pela Meta.")
         s, wamid, erro, modelo = enviar(k, re.sub(r"\D", "", a.teste), a.nome_teste)
-        print("Teste:", s, erro or wamid)
+        print("Teste (%s):" % modelo, s, erro or wamid)
         return
 
     fora = telefones(QUARENTENA) | telefones(BLOQUEADOS) | telefones(JA_RECEBEU)
@@ -140,15 +152,11 @@ def main():
         pendentes = pendentes[: a.limite]
 
     if not a.enviar:
-        com = sum(1 for r in pendentes if primeiro_nome(r["nome"]))
+        com = sum(1 for r in pendentes if MODELO_COM_NOME and primeiro_nome(r["nome"]))
         print("DRY-RUN: enviaria %d (com nome: %d, sem nome: %d). Nada foi enviado." % (len(pendentes), com, len(pendentes) - com))
         return
     if a.confirmo != "BLACK-EXPERT":
         sys.exit("Envio real exige --confirmo BLACK-EXPERT (depois do ok explicito da Karol).")
-    for nome_modelo in (MODELO_COM_NOME, MODELO_SEM_NOME):
-        if st.get(nome_modelo) != "APPROVED":
-            sys.exit("Modelo %s ainda nao aprovado (%s)." % (nome_modelo, st.get(nome_modelo)))
-
     ok = err = 0
     for r in pendentes:
         tel = r["telefone_e164"].lstrip("+")
