@@ -88,6 +88,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
 .card-head h2{font-family:var(--font-display);font-size:20px;margin:0;font-weight:600;}
 .time{font-size:12px;color:var(--ink-soft);white-space:nowrap;font-variant-numeric:tabular-nums;}
 .card-sub{font-size:13px;color:var(--ink-soft);margin:0 0 14px;}
+.card-sub a{color:var(--accent-strong);font-weight:600;}
+.checklist .q span{display:block;}
 .mark-done{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-soft);
   cursor:pointer;user-select:none;margin-top:16px;}
 .mark-done input{accent-color:var(--accent);width:14px;height:14px;}
@@ -165,12 +167,12 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
   </div>
 
   <!-- ============ SESSÃO 1 ============ -->
-  <div data-week="1">
+  <div data-week="1" data-session="s1">
 
     <div class="progress">
-      <span class="progress-count" id="progress-count">0/6 blocos</span>
-      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
-      <span class="save-status" id="save-status"></span>
+      <span class="progress-count">0/6 blocos</span>
+      <div class="progress-track"><div class="progress-fill"></div></div>
+      <span class="save-status"></span>
     </div>
     <p class="hint">Clique em cada bloco pra abrir o conteúdo</p>
 
@@ -306,11 +308,107 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
   </div>
 
   <!-- ============ SESSÃO 2 ============ -->
-  <div data-week="2">
-    <div class="placeholder-card">
-      <div class="deliver-label">Entrega desta semana</div>
-      <h2>Persona + Promessa</h2>
-      <p>Você recebe o documento de Persona Compradora e Promessa Transformadora <b>já prontos</b>, construídos a partir do que coletamos na Sessão 1. Seu papel aqui é validar e ajustar, não construir do zero.</p>
+  <div data-week="2" data-session="s2">
+
+    <div class="progress">
+      <span class="progress-count">0/6 blocos</span>
+      <div class="progress-track"><div class="progress-fill"></div></div>
+      <span class="save-status"></span>
+    </div>
+    <p class="hint">Clique em cada bloco pra abrir o conteúdo</p>
+
+    <div class="mindmap-wrap">
+      <svg class="mindmap-svg" viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="Mapa mental com 6 blocos da sessão ao redor de um nó central">
+        <line data-line="1" x1="50" y1="50" x2="50" y2="10"></line>
+        <line data-line="2" x1="50" y1="50" x2="82.9" y2="30"></line>
+        <line data-line="3" x1="50" y1="50" x2="82.9" y2="70"></line>
+        <line data-line="4" x1="50" y1="50" x2="50" y2="90"></line>
+        <line data-line="5" x1="50" y1="50" x2="17.1" y2="70"></line>
+        <line data-line="6" x1="50" y1="50" x2="17.1" y2="30"></line>
+      </svg>
+
+      <div class="hub">SESSÃO 2<br>VAGNER</div>
+
+      <button class="node-btn" data-node="1" style="left:50%;top:10%;"><span class="num">1</span>Persona</button>
+      <button class="node-btn" data-node="2" style="left:82.9%;top:30%;"><span class="num">2</span>Promessa</button>
+      <button class="node-btn" data-node="3" style="left:82.9%;top:70%;"><span class="num">3</span>Experiências</button>
+      <button class="node-btn" data-node="4" style="left:50%;top:90%;"><span class="num">4</span>Mercado</button>
+      <button class="node-btn" data-node="5" style="left:17.1%;top:70%;"><span class="num">5</span>Imagem+Prazo</button>
+      <button class="node-btn" data-node="6" style="left:17.1%;top:30%;"><span class="num">6</span>Suas ideias</button>
+    </div>
+
+    <div class="detail-wrap">
+
+      <div class="card" data-panel="1">
+        <div class="card-head"><h2>Validar a Persona Compradora</h2><span class="time">15–20 min</span></div>
+        <p class="card-sub">Construída a partir do que você trouxe na Sessão 1. Seu papel aqui é validar e ajustar, não construir do zero. <a href="https://docs.google.com/document/d/1LaLA1G4njCcb7qVZB8EBVJNARFs5jg6hunPtdRRFCsU/edit" target="_blank" rel="noopener">Abrir o Dossiê da Persona</a></p>
+        <div class="hypothesis">
+          <b>Marcelo, ~42 anos:</b> pequeno empresário com negócio em operação, faturando cerca de R$ 360 mil por ano. Trabalha muito, mas o esforço não vira resultado financeiro. Vive preso ao operacional, evita controles e planejamento, e já sente os impactos da empresa no sono, na família e na própria confiança. Quer recuperar lucro, controle, tranquilidade e tempo, sem abrir mão dos seus valores.
+        </div>
+        <ul class="checklist">
+          <li><input type="checkbox"><div class="q"><span>O Marcelo é a pessoa que você atende? O que não bate?</span><textarea class="answer" data-key="s2-persona-1" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span>Das 10 dores, quais são as 3 que você mais ouve dos clientes?</span><textarea class="answer" data-key="s2-persona-2" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span>Objeção principal: "Como alguém de fora vai saber mais do que eu do meu próprio negócio?" É essa mesmo? Como você responde hoje?</span><textarea class="answer" data-key="s2-persona-3" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span>Baixo alinhamento: quem só quer crédito rápido e rejeita mudar o comportamento. Você recusaria esse cliente?</span><textarea class="answer" data-key="s2-persona-4" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span>Ajustes no dossiê</span><textarea class="answer" data-key="s2-persona-ajustes" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="1"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="2">
+        <div class="card-head"><h2>Validar a Promessa Transformadora</h2><span class="time">15–20 min</span></div>
+        <p class="card-sub"><a href="https://docs.google.com/document/d/17ekCtmnW0J8QdZl_tn_BiP5MH6BFzMMl9FggJkrjLeo/edit" target="_blank" rel="noopener">Abrir a Promessa Transformadora</a></p>
+        <div class="hypothesis">
+          <b>Headline curta:</b> Acesse o crédito certo, alivie o caixa e torne-se um empresário blindado para conduzir seu negócio com mais segurança.<br><br>
+          <b>Headline impactante:</b> Em até 6 meses, estruture sua empresa para aumentar as chances de acesso ao crédito, recuperar o fôlego financeiro e se tornar um empresário blindado para não voltar ao ciclo das dívidas.
+        </div>
+        <ul class="checklist">
+          <li><input type="checkbox"><div class="q"><span>Qual headline te representa mais? O que você mudaria?</span><textarea class="answer" data-key="s2-promessa-1" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span>"Empresário blindado" é uma expressão que você usaria com o cliente?</span><textarea class="answer" data-key="s2-promessa-2" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span>"Em até 6 meses": esse prazo é realista pro resultado de acesso ao crédito?</span><textarea class="answer" data-key="s2-promessa-3" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span>Qual das 3 bios (Direta, Blindagem, Inspiradora) vai pro Instagram?</span><textarea class="answer" data-key="s2-promessa-4" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="2"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="3">
+        <div class="card-head"><h2>Experiências e formações</h2><span class="time">20–25 min</span></div>
+        <p class="card-sub">Daqui em diante é a base do seu método, que a gente constrói na Sessão 3.</p>
+        <ul class="bullets">
+          <li>Quais experiências suas, pessoais e profissionais, e quais formações, acadêmicas ou não, você acredita que contribuem para sua metodologia?<textarea class="answer" data-key="s2-exp-1" rows="1" placeholder="Anotar resposta"></textarea></li>
+          <li>Quais mentores, livros ou outros métodos influenciaram seu jeito de resolver? O que você absorveu de cada um?<textarea class="answer" data-key="s2-exp-2" rows="1" placeholder="Anotar resposta"></textarea></li>
+          <li>O que você descobriu trabalhando, atendendo e testando que ninguém te ensinou? Quais são seus próprios insights e conexões?<textarea class="answer" data-key="s2-exp-3" rows="1" placeholder="Anotar resposta"></textarea></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="3"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="4">
+        <div class="card-head"><h2>Pesquisa de mercado</h2><span class="time">5–10 min</span></div>
+        <ul class="bullets">
+          <li>Que palavras o Marcelo digitaria no Google ou no Instagram pra procurar ajuda com caixa, dívida ou crédito?<textarea class="answer" data-key="s2-mercado-1" rows="1" placeholder="Anotar palavras-chave"></textarea></li>
+          <li>Que nomes você daria pro serviço que você presta?<textarea class="answer" data-key="s2-mercado-2" rows="1" placeholder="Anotar palavras-chave"></textarea></li>
+          <li>Quem você já vê oferecendo algo parecido pra esse empresário? Pode ser consultor, perfil, empresa ou banco.<textarea class="answer" data-key="s2-mercado-3" rows="1" placeholder="Anotar nomes"></textarea></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="4"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="5">
+        <div class="card-head"><h2>Framework visual + jornada</h2><span class="time">10–15 min</span></div>
+        <ul class="bullets">
+          <li>Qual imagem ou metáfora representa melhor o caminho do Marcelo, do caos financeiro até o empresário que acessa crédito e decide com segurança?<textarea class="answer" data-key="s2-visual-1" rows="1" placeholder="Anotar resposta"></textarea></li>
+          <li>Em quanto tempo esse método deve ser aplicado? (3 meses, 6 meses, 1 ano ou outro período)<textarea class="answer" data-key="s2-jornada-1" rows="1" placeholder="Anotar resposta"></textarea></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="5"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="6">
+        <div class="card-head"><h2>Suas ideias sobre o método</h2><span class="time">10 min</span></div>
+        <ul class="bullets">
+          <li>Você já tem ideias sobre o método: estrutura, ordem, fases?<textarea class="answer" data-key="s2-ideias-1" rows="1" placeholder="Anotar resposta"></textarea></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="6"> Marcar bloco como feito</label>
+      </div>
+
     </div>
   </div>
 
@@ -358,7 +456,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
 <script>
 (function(){
   var STORAGE_KEY_TAB = 'cronograma-vagner-tab';
-  var STORAGE_KEY_S1 = 'sessao1-vagner-progress-v2';
+  var STORAGE_KEYS = { s1: 'sessao1-vagner-progress-v2', s2: 'sessao2-vagner-progress-v1' };
 
   var tabs = document.querySelectorAll('.weektab');
   var weeks = document.querySelectorAll('[data-week]');
@@ -367,134 +465,142 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
     tabs.forEach(function(t){ t.classList.toggle('active', t.getAttribute('data-tab')===id); });
     weeks.forEach(function(w){ w.classList.toggle('active', w.getAttribute('data-week')===id); });
     try{ localStorage.setItem(STORAGE_KEY_TAB, id); }catch(e){}
+    document.querySelectorAll('[data-week="'+id+'"] .answer').forEach(autoGrow);
   }
   tabs.forEach(function(t){
     t.addEventListener('click', function(){ setTab(t.getAttribute('data-tab')); });
+  });
+
+  function autoGrow(el){ el.style.height = 'auto'; el.style.height = el.scrollHeight + 'px'; }
+
+  var sessions = [];
+
+  /* ===== mapa mental de cada sessão ===== */
+  document.querySelectorAll('[data-session]').forEach(function(root){
+    var sid = root.getAttribute('data-session');
+    var storageKey = STORAGE_KEYS[sid] || ('sessao-' + sid + '-vagner');
+    var nodeBtns = root.querySelectorAll('.node-btn');
+    var panels = root.querySelectorAll('[data-panel]');
+    var lines = root.querySelectorAll('[data-line]');
+    var blockChecks = root.querySelectorAll('[data-block-check]');
+    var subChecks = root.querySelectorAll('.checklist input[type="checkbox"]');
+    var total = blockChecks.length;
+
+    function loadState(){
+      try{
+        var raw = localStorage.getItem(storageKey);
+        return raw ? JSON.parse(raw) : {blocks:{}, subs:[], active:'1'};
+      }catch(e){ return {blocks:{}, subs:[], active:'1'}; }
+    }
+    function saveState(){ try{ localStorage.setItem(storageKey, JSON.stringify(state)); }catch(e){} }
+    var state = loadState();
+
+    function setActiveNode(id){
+      state.active = id;
+      nodeBtns.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-node')===id); });
+      panels.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-panel')===id); });
+      lines.forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-line')===id); });
+      root.querySelectorAll('[data-panel="'+id+'"] .answer').forEach(autoGrow);
+      saveState();
+    }
+    nodeBtns.forEach(function(btn){
+      btn.addEventListener('click', function(){ setActiveNode(btn.getAttribute('data-node')); });
+    });
+
+    function updateProgress(){
+      var done = root.querySelectorAll('[data-block-check]:checked').length;
+      root.querySelector('.progress-count').textContent = done + '/' + total + ' blocos';
+      root.querySelector('.progress-fill').style.width = (done/total*100) + '%';
+    }
+
+    blockChecks.forEach(function(cb){
+      var blockNum = cb.getAttribute('data-block-check');
+      cb.checked = !!state.blocks[blockNum];
+      var btn = root.querySelector('.node-btn[data-node="'+blockNum+'"]');
+      if(cb.checked && btn) btn.classList.add('done');
+      cb.addEventListener('change', function(){
+        state.blocks[blockNum] = cb.checked;
+        if(btn) btn.classList.toggle('done', cb.checked);
+        saveState();
+        updateProgress();
+      });
+    });
+
+    subChecks.forEach(function(cb, i){
+      cb.checked = !!state.subs[i];
+      var li = cb.closest('li');
+      if(cb.checked) li.classList.add('checked');
+      cb.addEventListener('change', function(){
+        state.subs[i] = cb.checked;
+        li.classList.toggle('checked', cb.checked);
+        saveState();
+      });
+    });
+
+    setActiveNode(state.active || '1');
+    updateProgress();
+
+    /* ===== respostas da sessão (db) ===== */
+    var s = {
+      sid: sid,
+      answers: root.querySelectorAll('.answer'),
+      saveStatus: root.querySelector('.save-status'),
+      doc: null, timer: null, saving: false, dirty: false
+    };
+    sessions.push(s);
+
+    function setStatus(txt, err){ s.saveStatus.textContent = txt; s.saveStatus.className = 'save-status' + (err ? ' err' : ''); }
+    s.setStatus = setStatus;
+    function collect(){
+      var out = {};
+      s.answers.forEach(function(a){ if (a.value.trim()) out[a.getAttribute('data-key')] = a.value; });
+      return out;
+    }
+    async function flush(){
+      if (!s.doc || s.saving || !s.dirty) return;
+      s.saving = true; s.dirty = false;
+      setStatus('Salvando...');
+      try {
+        await s.doc.set({ respostas: collect(), atualizadoEm: new Date().toISOString() });
+        setStatus(s.dirty ? 'Salvando...' : 'Salvo');
+      } catch(e){
+        s.dirty = true;
+        setStatus('Não salvou', true);
+      }
+      s.saving = false;
+      if (s.dirty) schedule();
+    }
+    function schedule(){ clearTimeout(s.timer); s.timer = setTimeout(flush, 800); }
+
+    s.answers.forEach(function(a){
+      a.disabled = true;
+      a.addEventListener('input', function(){ autoGrow(a); s.dirty = true; setStatus('...'); schedule(); });
+      a.addEventListener('blur', function(){ if (s.dirty) { clearTimeout(s.timer); flush(); } });
+    });
   });
 
   var savedTab = '1';
   try{ savedTab = localStorage.getItem(STORAGE_KEY_TAB) || '1'; }catch(e){}
   setTab(savedTab);
 
-  var nodeBtns = document.querySelectorAll('.node-btn');
-  var panels = document.querySelectorAll('[data-panel]');
-  var lines = document.querySelectorAll('[data-line]');
-  var blockChecks = document.querySelectorAll('[data-block-check]');
-  var subChecks = document.querySelectorAll('.checklist input[type="checkbox"]');
-
-  function loadS1State(){
-    try{
-      var raw = localStorage.getItem(STORAGE_KEY_S1);
-      return raw ? JSON.parse(raw) : {blocks:{}, subs:[], active:'1'};
-    }catch(e){ return {blocks:{}, subs:[], active:'1'}; }
-  }
-  function saveS1State(state){
-    try{ localStorage.setItem(STORAGE_KEY_S1, JSON.stringify(state)); }catch(e){}
-  }
-  var s1state = loadS1State();
-
-  function setActiveNode(id){
-    s1state.active = id;
-    nodeBtns.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-node')===id); });
-    panels.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-panel')===id); });
-    lines.forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-line')===id); });
-    saveS1State(s1state);
-  }
-
-  nodeBtns.forEach(function(btn){
-    btn.addEventListener('click', function(){ setActiveNode(btn.getAttribute('data-node')); });
-  });
-
-  function updateS1Progress(){
-    var done = document.querySelectorAll('[data-block-check]:checked').length;
-    document.getElementById('progress-count').textContent = done + '/6 blocos';
-    document.getElementById('progress-fill').style.width = (done/6*100) + '%';
-  }
-
-  blockChecks.forEach(function(cb){
-    var blockNum = cb.getAttribute('data-block-check');
-    cb.checked = !!s1state.blocks[blockNum];
-    var btn = document.querySelector('.node-btn[data-node="'+blockNum+'"]');
-    if(cb.checked && btn) btn.classList.add('done');
-    cb.addEventListener('change', function(){
-      s1state.blocks[blockNum] = cb.checked;
-      if(btn) btn.classList.toggle('done', cb.checked);
-      saveS1State(s1state);
-      updateS1Progress();
-    });
-  });
-
-  subChecks.forEach(function(cb, i){
-    cb.checked = !!s1state.subs[i];
-    var li = cb.closest('li');
-    if(cb.checked) li.classList.add('checked');
-    cb.addEventListener('change', function(){
-      s1state.subs[i] = cb.checked;
-      li.classList.toggle('checked', cb.checked);
-      saveS1State(s1state);
-    });
-  });
-
-  setActiveNode(s1state.active || '1');
-  updateS1Progress();
-
-  /* ===== respostas da sessão (db) ===== */
-  var answers = document.querySelectorAll('.answer');
-  var saveStatus = document.getElementById('save-status');
-  var answerDoc = null;
-  var saveTimer = null;
-  var saving = false;
-  var dirty = false;
-
-  function autoGrow(el){ el.style.height = 'auto'; el.style.height = el.scrollHeight + 'px'; }
-  function collectAnswers(){
-    var out = {};
-    answers.forEach(function(a){ if (a.value.trim()) out[a.getAttribute('data-key')] = a.value; });
-    return out;
-  }
-  function setStatus(txt, err){ saveStatus.textContent = txt; saveStatus.className = 'save-status' + (err ? ' err' : ''); }
-
-  async function flush(){
-    if (!answerDoc || saving || !dirty) return;
-    saving = true; dirty = false;
-    setStatus('Salvando...');
-    try {
-      await answerDoc.set({ respostas: collectAnswers(), atualizadoEm: new Date().toISOString() });
-      setStatus(dirty ? 'Salvando...' : 'Salvo');
-    } catch(e){
-      dirty = true;
-      setStatus('Não salvou', true);
-    }
-    saving = false;
-    if (dirty) scheduleSave();
-  }
-  function scheduleSave(){ clearTimeout(saveTimer); saveTimer = setTimeout(flush, 800); }
-
-  answers.forEach(function(a){
-    a.disabled = true;
-    a.addEventListener('input', function(){ autoGrow(a); dirty = true; setStatus('...'); scheduleSave(); });
-    a.addEventListener('blur', function(){ if (dirty) { clearTimeout(saveTimer); flush(); } });
-  });
-  document.querySelectorAll('.node-btn').forEach(function(btn){
-    btn.addEventListener('click', function(){ answers.forEach(autoGrow); });
-  });
-
   (async function initAnswers(){
     var db = null;
     try { db = window.claude && window.claude.use ? await window.claude.use('db') : null; } catch(e){ db = null; }
-    if (!db){ setStatus('Respostas indisponíveis aqui', true); return; }
-    answerDoc = db.doc('sessoes/s1');
-    answers.forEach(function(a){ a.disabled = false; });
-    answerDoc.onSnapshot(function(snap){
-      if (snap.metadata.hasPendingWrites) return;
-      var r = (snap.exists && snap.data().respostas) || {};
-      answers.forEach(function(a){
-        if (a === document.activeElement) return;
-        var v = r[a.getAttribute('data-key')] || '';
-        if (a.value !== v){ a.value = v; autoGrow(a); }
-      });
-      if (!saveStatus.textContent) setStatus(snap.exists ? 'Salvo' : '');
-    }, function(){ setStatus('Sem conexão', true); });
+    if (!db){ sessions.forEach(function(s){ s.setStatus('Respostas indisponíveis aqui', true); }); return; }
+    sessions.forEach(function(s){
+      s.doc = db.doc('sessoes/' + s.sid);
+      s.answers.forEach(function(a){ a.disabled = false; });
+      s.doc.onSnapshot(function(snap){
+        if (snap.metadata.hasPendingWrites) return;
+        var r = (snap.exists && snap.data().respostas) || {};
+        s.answers.forEach(function(a){
+          if (a === document.activeElement) return;
+          var v = r[a.getAttribute('data-key')] || '';
+          if (a.value !== v){ a.value = v; autoGrow(a); }
+        });
+        if (!s.saveStatus.textContent) s.setStatus(snap.exists ? 'Salvo' : '');
+      }, function(){ s.setStatus('Sem conexão', true); });
+    });
   })();
 })();
 </script>
