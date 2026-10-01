@@ -10,6 +10,13 @@
 **Impacto:** [o que muda]
 -->
 
+## 01/10/2026 — Meta de vendas da Black Expert: 4 vendas
+
+**Contexto:** Black Expert (Grupo 2026), oferta relâmpago de 1 dia em 14/10, R$2.500. Meta numérica estava pendente desde 18/09. Convite 1:1 pelo WhatsApp oficial saiu hoje pra 124 contatos.
+**Decisão:** meta de 4 vendas.
+**Racional:** definido pela Karol.
+**Impacto:** 4 x R$2.500 = R$10.000 de faturamento-alvo. Item "meta pendente" sai do cockpit.
+
 ## 21/09/2026 — Causa raiz da letra pequena no celular: faltava meta viewport (RESOLVIDO)
 
 **Contexto:** Karol reportou letra pequena no celular no Diagnostico do Expert. Um primeiro
