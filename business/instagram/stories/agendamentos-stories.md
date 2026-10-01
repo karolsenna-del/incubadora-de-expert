@@ -42,3 +42,5 @@
 | 26/09/2026 | diagnostico-ferramentas-terca-2026-09-22 | 1 | 18347115298267573 | sim (ver log de execucao) |
 | 27/09/2026 | expert360-domingo-2026-09-27 | 1 | 18344480794267232 | sim (ver log de execucao) |
 | 29/09/2026 | aviso-mudanca-live-32-2026-09-28 | 2 | 18114308317997215, 18037651508832462 | sim (ver log de execucao) |
+| 30/09/2026 | caixinha-2026-09-28 | 1 | 18410235202093053 | sim (ver log de execucao) |
+| 01/10/2026 | expert360-terca-2026-09-29 | 1 | 17960341551228176 | sim (ver log de execucao) |
