@@ -70,6 +70,11 @@
   [data-bg="laranja"] .quote-mark{color:var(--preto); opacity:.35;}
   .quote-text{font-family:'Sora',system-ui,sans-serif; font-weight:700; font-size:clamp(1.6rem,3.2vw,2.5rem); line-height:1.3; max-width:32ch; text-wrap:balance;}
   .quote-by{margin-top:1.4vw; font-size:.95rem; opacity:.8; font-weight:600;}
+  .funil-split{display:grid; grid-template-columns:1.25fr 1fr; gap:4vw; align-items:center; position:relative;}
+  .funil-svg{width:100%; max-height:62vh; display:block;}
+  .rastreador-link{align-self:flex-start; margin-top:2vw; display:inline-flex; align-items:center; gap:.5em; padding:.8em 1.4em; border-radius:999px; background:var(--laranja); color:var(--branco); font-family:'Sora',system-ui,sans-serif; font-weight:700; font-size:clamp(.95rem,1.2vw,1.15rem); text-decoration:none; position:relative; z-index:2;}
+  .rastreador-link:hover{background:var(--preto);}
+  .rastreador-link:focus-visible{outline:3px solid var(--preto); outline-offset:3px;}
 
   /* riscados */
   .struck{display:flex; flex-direction:column; gap:1vw; margin:1.6vw 0 2vw;}
@@ -187,6 +192,8 @@
     .cards.c2,.cards.c4,.cards.c5,.cols,.grid4,.bx-paths{grid-template-columns:1fr; max-width:100%;}
     .tl{grid-template-columns:1fr 1fr; max-width:100%;}
     .chain{flex-direction:column; max-width:100%;}
+    .funil-split{grid-template-columns:1fr; gap:6vw;}
+    .funil-svg{max-height:40vh;}
     .chain-arrow{transform:rotate(90deg);}
     .obj-row{grid-template-columns:1fr; gap:.3rem;}
     .obj-row .arrow{display:none;}
@@ -198,7 +205,6 @@
 </style>
 </head>
 <body>
-
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -341,7 +347,7 @@
     <div class="chain-arrow">→</div>
     <div class="chain-node"><h4>Validação</h4><span>ajusta</span></div>
     <div class="chain-arrow">→</div>
-    <div class="chain-node"><h4>Presença</h4><span>amplia</span></div>
+    <div class="chain-node"><h4>Posicionamento</h4><span>amplia</span></div>
     <div class="chain-arrow">→</div>
     <div class="chain-node"><h4>Escala</h4></div>
   </div>
@@ -397,9 +403,38 @@
 <!-- 13: BLOCO 5 — Caio Carneiro -->
 <section class="slide" data-bg="laranja">
   <div class="deco-arc" style="width:44vw;height:44vw;top:-18vw;right:-12vw;"></div>
-  <div class="quote-mark">"</div>
-  <p class="quote-text">Muitas vezes a gente acha que o funil tá fraco, quando o que falta é volume de gente entrando nele.</p>
-  <p class="quote-by">Aprendizado do Caio Carneiro · desde então, prospecto todo dia</p>
+  <div class="funil-split">
+    <div>
+      <div class="quote-mark">"</div>
+      <p class="quote-text">Muitas vezes a gente acha que o funil tá fraco, quando o que falta é volume de gente entrando nele.</p>
+      <p class="quote-by">Aprendizado do Caio Carneiro · desde então, prospecto todo dia</p>
+    </div>
+    <svg class="funil-svg" viewBox="0 0 360 400" role="img" aria-label="Desenho de um funil de vendas: muita gente entrando no topo, passando por conversa e sessão, até a venda na ponta">
+      <!-- gente entrando -->
+      <g fill="#fcfcfc">
+        <circle cx="70" cy="22" r="7"/><circle cx="105" cy="12" r="7"/><circle cx="140" cy="26" r="7"/><circle cx="178" cy="10" r="7"/><circle cx="214" cy="24" r="7"/><circle cx="250" cy="12" r="7"/><circle cx="288" cy="22" r="7"/>
+        <circle cx="88" cy="44" r="7" opacity=".75"/><circle cx="160" cy="46" r="7" opacity=".75"/><circle cx="198" cy="42" r="7" opacity=".75"/><circle cx="270" cy="46" r="7" opacity=".75"/>
+      </g>
+      <g stroke="#fcfcfc" stroke-width="3" stroke-linecap="round" opacity=".7">
+        <line x1="122" y1="52" x2="122" y2="64"/><line x1="236" y1="52" x2="236" y2="64"/>
+      </g>
+      <!-- funil -->
+      <path d="M30 76 H330 L250 196 H110 Z" fill="#090a0b"/>
+      <path d="M110 204 H250 L210 290 H150 Z" fill="#090a0b" opacity=".82"/>
+      <path d="M150 298 H210 L196 350 H164 Z" fill="#090a0b" opacity=".64"/>
+      <!-- etapas -->
+      <g font-family="Sora,system-ui,sans-serif" font-weight="700" fill="#fcfcfc" text-anchor="middle">
+        <text x="180" y="132" font-size="22">Gente entrando</text>
+        <text x="180" y="156" font-size="13" font-weight="600" opacity=".7">volume todo dia</text>
+        <text x="180" y="254" font-size="18">Conversa</text>
+        <text x="180" y="330" font-size="13">Sessão</text>
+      </g>
+      <!-- venda -->
+      <circle cx="180" cy="378" r="18" fill="#fcfcfc"/>
+      <text x="180" y="384" font-family="Sora,system-ui,sans-serif" font-weight="800" font-size="15" fill="#f85627" text-anchor="middle">R$</text>
+      <text x="212" y="384" font-family="Sora,system-ui,sans-serif" font-weight="700" font-size="16" fill="#090a0b">Venda</text>
+    </svg>
+  </div>
   <div class="foot"><span>Bloco 5 · Autoridade / Método</span><span class="count tabular"></span></div>
   <div class="logo"></div>
 </section>
@@ -414,8 +449,7 @@
     <div class="card"><span class="tag">3</span><h3>Saber na véspera com quem falar</h3><p>A lista fica pronta antes.</p></div>
     <div class="card"><span class="tag">4</span><h3>Falar do que você faz por onde passa</h3><p>Não espera te perguntarem.</p></div>
     <div class="card"><span class="tag">5</span><h3>Uma linha depois de cada conversa</h3><p>O que disse, onde travou, próximo passo.</p></div>
-  </div>
-  <div class="foot"><span>Bloco 5 · Autoridade / Método</span><span class="count tabular"></span></div>
+  </div>  <div class="foot"><span>Bloco 5 · Autoridade / Método</span><span class="count tabular"></span></div>
   <div class="logo"></div>
 </section>
 
@@ -454,6 +488,7 @@
     <div class="card"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h13M12 6l6 6-6 6"/></svg><h3>Quem veio até você sozinho</h3></div>
   </div>
   <p class="small" style="margin-top:1.6vw;">Eu uso o meu <b>Rastreador de Leads</b>: networking separado por categoria, qualificando quem faz sentido chamar. Começa pelos mais quentes.</p>
+  <a class="rastreador-link" href="https://docs.google.com/spreadsheets/d/1Z_jaMNQeoFdYq30eUvJJS4Q5W23lCoqE/edit?gid=161681230#gid=161681230" target="_blank" rel="noopener">Abrir o Rastreador de Leads <span aria-hidden="true">↗</span></a>
   <div class="foot"><span>Bloco 5 · Movimento 3</span><span class="count tabular"></span></div>
   <div class="logo"></div>
 </section>
@@ -495,9 +530,9 @@
 <section class="slide" data-bg="preto">
   <div class="deco-ring" style="width:40vw;height:40vw;top:-16vw;right:-12vw;"></div>
   <span class="eyebrow">A sua persona está espalhada por todos os cantos</span>
-  <h2 class="head">Sabe que tem potencial. Falta coragem. <span class="accent">Mas a vontade continua ali.</span></h2>
-  <p class="lead">Quando ela ouve alguém dizendo que ensina a fazer isso, o interesse volta. Meu funil é longo: pra ela é um projeto paralelo, do coração. Mas tem faíscas que eu vou acender.</p>
-  <p class="big-line" style="font-size:clamp(1.3rem,2.4vw,2rem); margin-top:1.6vw;">Não espera te perguntarem. Aparece. Ajuda. Doa o seu conhecimento.</p>
+  <h2 class="head" style="max-width:40ch;">Sabe que tem potencial. Falta coragem. <span class="accent">Mas a vontade continua ali.</span></h2>
+  <p class="lead" style="max-width:80ch;">Quando ela ouve alguém dizendo que ensina a fazer isso, o interesse volta. Meu funil é longo: pra ela é um projeto paralelo, do coração. Mas tem faíscas que eu vou acender.</p>
+  <p class="big-line" style="font-size:clamp(1.3rem,2.4vw,2rem); margin-top:1.6vw; max-width:none;">Não espera te perguntarem. Aparece. Ajuda. Doa o seu conhecimento.</p>
   <div class="foot"><span>Bloco 5 · Movimento 4</span><span class="count tabular"></span></div>
   <div class="logo"></div>
 </section>
@@ -561,7 +596,7 @@
   <span class="eyebrow">O que fazer amanhã</span>
   <h2 class="head">O que você leva dessa live</h2>
   <div class="recap">
-    <div class="recap-row"><span class="recap-num tabular">1</span><p>Venda vem antes de audiência: Método → Venda → Validação → Presença → Escala.</p></div>
+    <div class="recap-row"><span class="recap-num tabular">1</span><p>Venda vem antes de audiência: Método → Venda → Validação → Posicionamento → Escala.</p></div>
     <div class="recap-row"><span class="recap-num tabular">2</span><p>O tempo existe. A pergunta é pra onde ele vai: feed ou conversa.</p></div>
     <div class="recap-row"><span class="recap-num tabular">3</span><p>Uma conversa por dia, na agenda, com a lista pronta na véspera.</p></div>
     <div class="recap-row"><span class="recap-num tabular">4</span><p>Sua persona já está perto de você. Comece pelos mais quentes e fale do que você faz por onde passa.</p></div>
@@ -581,7 +616,6 @@
   <div class="seal">
     <svg class="flame-anim"><use href="#flame"/></svg>
     <span class="d">14.10</span>
-    <span class="h">abre às 8h</span>
   </div>
   <div class="foot"><span>Bloco 8 · Black Expert</span><span class="count tabular"></span></div>
   <div class="logo"></div>
@@ -608,14 +642,14 @@
     <div class="bx-list" style="max-width:48vw;">
       <div class="bx-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v11H9l-5 4V5z"/></svg><span>Os detalhes saem lá primeiro, antes do feed e de qualquer post.</span></div>
       <div class="bx-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/></svg><span>Bastidor e dúvida respondida direto por mim.</span></div>
-      <div class="bx-item"><svg viewBox="0 0 24 24"><use href="#flame"/></svg><span>Dia 14, às 8h, é lá que a condição abre.</span></div>
+      <div class="bx-item"><svg viewBox="0 0 24 24"><use href="#flame"/></svg><span>Dia 14, é lá que a condição abre.</span></div>
       <div class="bx-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="1.5"/><path d="M12 8v13M3 12h18M12 8c-1.5-3-5-3.5-5-1.2C7 8 9.5 8 12 8zM12 8c1.5-3 5-3.5 5-1.2C17 8 14.5 8 12 8z"/></svg><span><b class="accent">Bônus incríveis pra quem chegar primeiro.</b> Quem tá no grupo fica sabendo antes.</span></div>
     </div>
   </div>
   <div class="seal">
     <svg><use href="#flame"/></svg>
     <span class="d">14.10</span>
-    <span class="h">8h · no grupo</span>
+    <span class="h">no grupo</span>
   </div>
   <div class="foot"><span>Bloco 8 · Black Expert</span><span class="count tabular"></span></div>
   <div class="logo"></div>
@@ -662,5 +696,4 @@
   paintCounts();
 </script>
 
-</body>
-</html>
+</body></html>
