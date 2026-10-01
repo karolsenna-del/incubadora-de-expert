@@ -1,0 +1,82 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "metodo-lindo-ninguem-aplicava",
+  "_nota": "slide 1 (capa com foto) é renderizado à parte (capa.html) e sobrescreve slide-01.png",
+  "slides": [
+    {
+      "numero": "",
+      "texto": "capa — substituída",
+      "modifiers": [
+        "sem-numero"
+      ]
+    },
+    {
+      "numero": "",
+      "texto": "Sou a Karol Senna. Hoje eu ajudo profissionais com anos de experiência a transformar o que sabem em método e vender sem se expor.<br><br>Mas antes disso eu errei <strong>4 vezes do mesmo jeito.</strong> E só na quarta eu entendi por quê.",
+      "modifiers": [
+        "sem-numero"
+      ]
+    },
+    {
+      "numero": "",
+      "texto": "<small style=\"color:#8a8a86;font-family:Inter;font-weight:800;letter-spacing:2px\">TENTATIVA 1 · 2021</small><br>Eu ensinava gestão pra empresários. Lancei com meu irmão: no primeiro lançamento, <strong>R$10 mil investidos e zero vendas.</strong> No segundo, uma venda.<br><br><em>O que me disseram: \"você é empregada pública vendendo pra empresário. Você não vive a vida deles.\"</em> Doeu. Era verdade.",
+      "modifiers": [
+        "sem-numero",
+        "bg-branco"
+      ]
+    },
+    {
+      "numero": "",
+      "texto": "<small style=\"color:#8a8a86;font-family:Inter;font-weight:800;letter-spacing:2px\">TENTATIVA 2 · 2022</small><br>Minha filha tinha poucos meses. Pensei: \"agora eu sou a persona.\" Fui ensinar produtividade pra mães de bebê.<br><br>Só que minhas alunas trabalhavam pra pagar a janta, e <strong>eu tinha babá e rede de apoio.</strong> Poucas vendas, e quase ninguém aplicava.",
+      "modifiers": [
+        "sem-numero",
+        "bg-branco"
+      ]
+    },
+    {
+      "numero": "",
+      "texto": "<small style=\"color:#8a8a86;font-family:Inter;font-weight:800;letter-spacing:2px\">TENTATIVA 3</small><br>Mudei de lado e virei lançadora. Lancei uma expert que não tinha audiência nem clareza do que ia ensinar.<br><br><strong>3 vendas.</strong> E adivinha: as alunas dela também não executavam.",
+      "modifiers": [
+        "sem-numero",
+        "bg-branco"
+      ]
+    },
+    {
+      "numero": "",
+      "texto": "<small style=\"color:#8a8a86;font-family:Inter;font-weight:800;letter-spacing:2px\">TENTATIVA 4</small><br>Peguei uma expert com <b style=\"color:inherit\">170 mil seguidores.</b> O primeiro lançamento deu certo, e cada um depois foi pior que o anterior.<br><br>Ouvi do Érico Rocha: \"troca de expert\". Quando ela tirou férias e parou de postar o link, caiu a ficha: <strong>meu faturamento estava na mão de outra pessoa.</strong>",
+      "modifiers": [
+        "sem-numero",
+        "bg-branco"
+      ]
+    },
+    {
+      "numero": "",
+      "texto": "Aí eu fiz o que sei fazer de melhor: auditei os meus próprios 4 anos de erro.<br><br>O padrão estava ali o tempo todo. <strong>O método era lindo, mas era feito pra outra pessoa.</strong> E ninguém estava pronto pra ser lançado: nem eu, nem as experts que eu lancei.",
+      "modifiers": [
+        "sem-numero"
+      ]
+    },
+    {
+      "numero": "",
+      "texto": "Muito profissional bom desiste do digital não por falta de conhecimento.<br><br>Desiste porque se lança antes de ter a fundação: <strong>pra quem fala, o que promete e como ensina.</strong> Aí vem a exposição, o lançamento que flopa, e a sensação de ser iniciante de novo.",
+      "modifiers": [
+        "sem-numero"
+      ]
+    },
+    {
+      "numero": "",
+      "texto": "Foi daí que nasceu a <strong>Incubadora de Expert:</strong> primeiro a fundação, depois a venda.<br><br>Em conversas 1 a 1, sem lançamento e sem exposição amadora. Você testa preço, oferta e método antes de aparecer pra todo mundo, e o seu método nasce com a sua história dentro. Por isso ninguém copia.",
+      "modifiers": [
+        "sem-numero",
+        "bg-branco"
+      ]
+    },
+    {
+      "numero": "",
+      "texto": "<b style=\"font-family:Inter;font-weight:800\">Método bom não é o mais bonito. É o que cabe na vida de quem vai aplicar.</b><br><br><span style=\"display:block;font-size:0.72em;line-height:1.4\">Se você tem anos de experiência e trava na hora de virar produto, <strong>comenta BLACK</strong> que eu te mando o link do grupo.</span><br><span style=\"display:block;font-size:0.6em;color:#8a8a86\">@karolsenna._</span>",
+      "modifiers": [
+        "sem-numero"
+      ]
+    }
+  ]
+}
