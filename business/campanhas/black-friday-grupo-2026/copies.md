@@ -5,6 +5,367 @@ Status (27/09): #1 + fixada APROVADOS · #2 a #7 **APROVADOS** · convite Live 3
 
 ---
 
+## 🔁 REVISÃO v2 02/10 — Disparos #3 a #9 reescritos: dores e desejos, NADA da oferta antes da live (EM APROVAÇÃO)
+
+> Decisão da Karol (02/10): **nada da oferta antes da live de 14/10, às 15h**. Isso vale pra produto, entregáveis, bônus, preço e a palavra "condição". A copy cutuca dores e mostra desejos usando as perguntas do **Diagnóstico do Expert por Fases v3** (`../incubadora-de-expert-individual/sessoes-estrategicas/radar-fases-perguntas.md`).
+> Mecânica: cada disparo traz 1 ou 2 perguntas do Diagnóstico pra pessoa se dar uma nota de 0 a 10. No grupo ela responde com o número, e as notas viram termômetro pra live. Ordem: Método → Validação → Posicionamento → Escala → Expert (véspera).
+> Substitui as versões de 27/09 e a revisão v1 de 02/10 dos #3, #5 e #6. O #4 também foi refeito (era prova social com o nome do produto e "condição").
+> CTA único até as 15h do dia 14: **a live** (e o grupo, pra quem está no e-mail).
+> Fatos usados (todos já documentados): 8 lançamentos fracassados; 13 anos no serviço público; semana de 21-26/09 com R$5 mil; frase da Hilda (`grupo-briefing-copy.md` §4); ruminação "alguém menos experiente vendendo" (`grupo-briefing-copy.md` §3).
+
+### Disparo #3 — seg 05/10 (T-9) — MÉTODO
+
+**Grupo WA**
+
+```
+Bom dia, pessoal 🖤
+
+Hoje eu quero te fazer uma pergunta. Responde aqui só com um número, de 0 a 10:
+
+Quanto você consegue explicar o que faz em uma frase, sem começar pelo currículo?
+
+Zero é "eu começo falando da minha formação".
+Dez é "a pessoa entende na hora e quer saber mais".
+
+Eu pergunto porque é aqui que quase todo especialista experiente trava. Sabe muito, tem anos de resultado. Mas quando alguém pergunta "o que você faz?", sai o diploma, não o método.
+
+Diploma é o que você estudou. Método é o que você viveu.
+
+Manda a sua nota aqui embaixo 👇
+No dia 14, às 15h, ao vivo, eu mostro o que separa quem dá 3 pra si mesmo de quem dá 10.
+
+— Karol
+```
+
+**E-mail (ângulo: o conhecimento que ainda não virou método)**
+
+```
+[Subject] 4 anos estudando pra criar um produto
+[Preheader] O problema não era falta de conhecimento.
+
+Oi {nome},
+
+Uma aluna me escreveu uma frase que eu nunca esqueci:
+
+"Tem 4 anos que estudo para conseguir desenvolver um produto e não acredito que consegui, com um método que tem nome da minha empresa."
+
+Quatro anos. E não foi por falta de conhecimento. Faltava um caminho organizado pra transformar o que ela já sabia em algo que outra pessoa consegue comprar.
+
+Faz esse teste comigo. Dá uma nota de 0 a 10:
+
+- Quanto está claro o resultado que você entrega, de onde a pessoa sai e aonde ela chega?
+- Quanto já está estruturado o caminho que você usa pra levar a pessoa até esse resultado?
+
+Se alguma nota ficou abaixo de 7, o seu problema não é conhecimento. É conhecimento que ainda não virou método.
+
+No dia 14/10, às 15h, eu faço uma live na Black Expert sobre isso. O link sai primeiro no grupo:
+{link_grupo}
+
+— Karol
+
+P.S.: Me responde esse e-mail com as suas duas notas. Eu leio todas.
+```
+
+**Stories**
+
+```
+Story 1: "pergunta rápida pra quem é especialista 👇"
+Story 2 (sticker slider 0-10): "quanto você consegue explicar o que faz em uma frase, sem começar pelo currículo?"
+Story 3: "diploma é o que você estudou. método é o que você viveu"
+Story 4 (link do grupo): "14/10, 15h, ao vivo. o link sai primeiro no grupo"
+```
+
+---
+
+### Disparo #4 — qua 07/10 (T-7) — VALIDAÇÃO
+
+**Grupo WA**
+
+```
+Pergunta de hoje 👇 De 0 a 10:
+
+Quanto você tem certeza de que existe gente disposta a pagar pelo que você quer oferecer?
+
+Vou ser sincera: durante muito tempo eu dava 2 pra essa pergunta. E nem sabia.
+
+Fiz 8 lançamentos que não deram certo. Em todos, a ordem era a mesma: eu construía tudo primeiro e só depois perguntava pro mercado se alguém queria.
+
+O que mudou não foi o conteúdo. Foi a ordem.
+
+Manda a sua nota aqui. E se quiser, me conta: você já criou alguma coisa que ninguém comprou?
+
+— Karol
+```
+
+**E-mail (ângulo: o medo da conversa de venda)**
+
+```
+[Subject] Uma conversa por dia
+[Preheader] O que aconteceu quando eu parei de melhorar o meu método.
+
+Oi {nome},
+
+Responde de 0 a 10, só pra você:
+
+Quanto você se sente seguro pra conduzir uma conversa de venda até o pagamento?
+
+Se a sua nota foi baixa, eu te entendo. Eu passei 13 anos no serviço público. Venda, pra mim, era quase uma palavra feia.
+
+E por muito tempo eu fiz o que muita gente faz: quando a venda não vinha, eu melhorava o método mais um pouco. Mais uma aula, mais um material, mais um ajuste.
+
+De 21 a 26 de setembro eu fiz o contrário. Parei de melhorar e fui conversar: pelo menos uma conversa de venda por dia. Sem palco, sem lançamento, sem post viral.
+
+Resultado: R$5 mil naquela semana.
+
+Não foi talento. Foi parar de esconder o meu trabalho atrás de "ainda não está pronto".
+
+No dia 14/10, às 15h, eu conto ao vivo como isso funciona. O link sai primeiro no grupo:
+{link_grupo}
+
+— Karol
+```
+
+**Stories**
+
+```
+Story 1 (sticker slider 0-10): "quanto você tem certeza de que alguém pagaria pelo que você quer oferecer?"
+Story 2: "eu fiz 8 lançamentos que não deram certo. em todos eu construí primeiro e perguntei depois"
+Story 3 (link do grupo): "14/10, 15h, ao vivo. conto o que mudou"
+```
+
+---
+
+### Disparo #5 — sex 09/10 (T-5) — POSICIONAMENTO
+
+**Grupo WA**
+
+```
+Faz um teste agora, sério 👇
+
+Abre o seu Instagram como se você fosse um desconhecido.
+Conta 5 segundos.
+
+De 0 a 10: quanto essa pessoa entendeu o que você faz e pra quem?
+
+Muito especialista bom tem um perfil bonito que não diz nada. Foto boa, bio com a formação, post de vez em quando. E fica a sensação de que está aparecendo e ninguém está vendo.
+
+Não é falta de post. É falta de mensagem.
+
+Manda a sua nota aqui 👇
+
+— Karol
+```
+
+**E-mail (ângulo: quem sabe menos e vende mais)**
+
+```
+[Subject] Quando alguém menos experiente vende mais que você
+[Preheader] E a pergunta que vem depois.
+
+Oi {nome},
+
+Talvez você já tenha pensado isso:
+
+"Quando eu vejo alguém menos experiente vendendo, fico brava. Mas aí me pergunto: será que o problema sou eu?"
+
+Não é você. É uma pergunta que ainda não tem resposta clara. Dá uma nota de 0 a 10:
+
+Quanto está claro por que alguém escolheria você e não o seu principal concorrente?
+
+Quem vende mais nem sempre sabe mais. Muitas vezes só deixou mais claro pra quem é e por que é diferente.
+
+A sua experiência já existe. O que falta é ela aparecer do jeito certo.
+
+No dia 14/10, às 15h, eu falo disso ao vivo na Black Expert. O link sai primeiro no grupo:
+{link_grupo}
+
+— Karol
+```
+
+**Stories**
+
+```
+Story 1: "teste: abre o seu perfil como se fosse um desconhecido. 5 segundos"
+Story 2 (sticker slider 0-10): "quanto ele entendeu o que você faz e pra quem?"
+Story 3: "não é falta de post. é falta de mensagem"
+Story 4 (link do grupo): "14/10, 15h, ao vivo"
+```
+
+---
+
+### Disparo #6 — dom 11/10 (T-3) — ESCALA
+
+**Grupo WA**
+
+```
+Pergunta de domingo, com calma 🖤 De 0 a 10:
+
+Quanto a sua renda continua entrando se você parar de atender por 30 dias?
+
+Essa pergunta incomoda, eu sei.
+
+Muita gente com anos de carreira, agenda cheia e bons clientes ainda vive uma realidade simples: se parar, para tudo. Férias viram prejuízo. Um mês difícil vira medo.
+
+Não é falta de competência. É um modelo que depende 100% da sua hora.
+
+Manda a sua nota aqui 👇
+Quarta, 15h, ao vivo, eu falo sobre isso.
+
+— Karol
+```
+
+**E-mail (ângulo: anúncio antes da hora)**
+
+```
+[Subject] Antes de colocar dinheiro em anúncio
+[Preheader] A pergunta que eu faria antes.
+
+Oi {nome},
+
+Duas notas de 0 a 10, só pra você:
+
+- Quanto você tem um jeito previsível de gerar contatos novos toda semana?
+- Quanto você está perto do faturamento que quer ter com o que sabe?
+
+Quando essas notas estão baixas, a primeira ideia costuma ser "preciso de anúncio".
+
+Só que anúncio não conserta oferta confusa. Ele só faz mais gente ver a confusão, e mais rápido. Aí o dinheiro vai embora e fica a conclusão errada: "digital não funciona pra mim".
+
+Antes de acelerar, precisa existir algo que já vende devagar.
+
+Quarta, 14/10, às 15h, eu falo disso ao vivo. O link sai primeiro no grupo:
+{link_grupo}
+
+— Karol
+```
+
+**Stories**
+
+```
+Story 1 (sticker slider 0-10): "quanto da sua renda continua se você parar de atender por 30 dias?"
+Story 2: "se parar, para tudo? não é falta de competência. é o modelo"
+Story 3 (link do grupo): "quarta, 15h, ao vivo"
+```
+
+---
+
+### Disparo #7 — ter 13/10 (T-1) — EXPERT + véspera
+
+**Grupo WA**
+
+```
+Amanhã é o dia 🖤
+
+Última pergunta antes da live. De 0 a 10:
+
+Quanto você se sente pronto pra começar, sem esperar ter mais tempo, mais estudo ou mais coragem?
+
+Se deu nota baixa, você não está sozinho. "Ainda não estou pronto" é a frase que mais segura gente competente no mesmo lugar.
+
+Amanhã, quarta, 14/10:
+🕒 15h: ao vivo comigo
+🔗 o link sai aqui no grupo
+
+Leva a sua maior dúvida. Eu respondo ao vivo.
+
+Ativa as notificações pra não perder.
+
+— Karol
+```
+
+**E-mail (ângulo: legado)**
+
+```
+[Subject] Se você parasse amanhã
+[Preheader] O que ficaria do que você sabe?
+
+Oi {nome},
+
+Uma última pergunta antes de amanhã. De 0 a 10:
+
+Quanto do seu conhecimento ficaria pra outras pessoas usarem se você parasse de trabalhar amanhã?
+
+Pra muita gente experiente, a resposta é quase zero. Anos de prática, de casos resolvidos, de jeito próprio de fazer, e tudo isso mora só na cabeça. Não vira método, não vira produto, não fica.
+
+Não precisa ser assim. O que você viveu pode virar algo que ajuda gente que você nunca vai atender pessoalmente.
+
+Amanhã, 14/10, às 15h, eu faço a live da Black Expert. O link sai primeiro no grupo:
+{link_grupo}
+
+— Karol
+
+P.S.: Se tem uma pergunta travando você, leva ela pra live. Eu respondo ao vivo.
+```
+
+**Stories**
+
+```
+Story 1 (sticker slider 0-10): "quanto você se sente pronto pra começar, sem esperar mais tempo, estudo ou coragem?"
+Story 2: "'ainda não estou pronto' segura muita gente competente no mesmo lugar"
+Story 3 (link do grupo): "amanhã, 15h, ao vivo. Black Expert"
+```
+
+---
+
+### Disparo #8 — qua 14/10, 08h — Dia da live (sem oferta)
+
+**Grupo WA**
+
+```
+Hoje é o dia 🖤
+
+Nas últimas duas semanas eu te fiz perguntas sobre método, venda, posicionamento, renda e sobre você mesmo.
+
+Hoje, às 15h, eu junto tudo ao vivo: o que fica entre a nota que você se deu e o 10.
+
+🕒 15h (horário de Brasília)
+🔗 {link_live}
+
+Até lá.
+
+— Karol
+```
+
+**E-mail**
+
+```
+[Subject] Hoje, 15h
+[Preheader] Ao vivo, Black Expert.
+
+Oi {nome},
+
+Hoje é a Black Expert. Às 15h eu entro ao vivo.
+
+Se em algum dos e-mails dessas duas semanas você se deu uma nota baixa, essa live é pra você.
+
+🔗 {link_live}
+
+— Karol
+```
+
+**Stories**
+
+```
+Story 1: "hoje, 15h, ao vivo. Black Expert 🖤"
+Story 2 (link da live): "o link tá aqui"
+```
+
+### Disparo #9 — qua 14/10, 14h — "Daqui 1h"
+
+**Grupo WA**
+
+```
+Daqui 1 hora eu entro ao vivo 🔴
+
+🔗 {link_live}
+
+— Karol
+```
+
+> #10 (20h) e #11 (23h59) ficam pra depois de definir como a oferta aparece na live. São as únicas mensagens que falam da oferta, porque saem depois das 15h.
+
+---
+
 ## ✅ APROVADO — Disparo #1 (sai seg 28/09 à noite — antecipado na v1.3) — Teaser + Convite pro Grupo
 
 Canais: Instagram (Stories) + WhatsApp individual + E-mail
@@ -104,7 +465,7 @@ Qualquer dúvida, pode perguntar aqui mesmo — eu leio.
 
 ---
 
-## ✅ APROVADO — Disparos #2 a #7 (27/09, Echo · doc mestre v1.3)
+## ✅ APROVADO — Disparos #2 a #7 (27/09, Echo · doc mestre v1.3) — ⚠️ #3 a #7 SUBSTITUÍDOS pela REVISÃO v2 (topo do arquivo). Só o #2 segue valendo
 
 > Fontes dos fatos: Black do ano passado → `live-28-roteiro.md` (palavras da Karol) · Mentoria em Grupo → `00-documento-mestre-ofertas.md` §4 + decisão 27/09 (encontros quinzenais) · Semana dos R$5 mil → `historias-trajetoria.md` #19 · Nanny → `historias-mentorias-atendidas.md` #13 · Sequência do Expert Seguro → `proposta-validada-2026-09.md` §7.
 > Regras aplicadas: sem Sprint, sem Expert360º, sem preço antes de 14/10 08h, escassez pública só de tempo, WhatsApp e e-mail com ângulos diferentes.

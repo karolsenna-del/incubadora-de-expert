@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acelerador de Carreira · Grupo</title>
+<style>
+  :root{--bg:#ffffff;--ink:#141414;--muted:#6b6b6b;--card:#f4f4f4;--orange:#f85627;--soft:#fff0ea;--dark:#141414}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;background:#1b1b1b;font-family:"Segoe UI",Inter,system-ui,-apple-system,sans-serif;color:var(--ink)}
+  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+  .slide{display:none;width:min(100vw,177.78vh);height:min(56.25vw,100vh);background:var(--bg);position:relative;overflow:hidden;padding:5.2% 6%;flex-direction:column;justify-content:center}
+  .slide.on{display:flex}
+  .slide.dark{background:var(--dark);color:#fff}
+  .slide.orange{background:var(--orange);color:#fff}
+  .bar{width:70px;height:6px;background:var(--orange);border-radius:3px;margin-bottom:22px}
+  .dark .bar{background:var(--orange)} .orange .bar{background:#fff}
+  .kicker{font-size:clamp(11px,1.3vw,18px);letter-spacing:3px;text-transform:uppercase;font-weight:800;color:var(--orange);margin-bottom:12px}
+  .orange .kicker{color:#fff;opacity:.85}
+  h1{font-size:clamp(30px,5.6vw,84px);font-weight:900;line-height:1.02;letter-spacing:-1px}
+  h2{font-size:clamp(22px,3.4vw,52px);font-weight:900;line-height:1.08;letter-spacing:-.5px;margin-bottom:3%}
+  h1 span,h2 span{color:var(--orange)}
+  .dark h2 span{color:var(--orange)}
+  .lead{font-size:clamp(14px,1.8vw,26px);color:var(--muted);margin-top:18px;max-width:80%}
+  .dark .lead{color:#cfcfcf}
+  .frame{font-size:clamp(16px,2.15vw,32px);line-height:1.65;font-weight:300;color:#8a8a8a;max-width:88%;letter-spacing:-.1px}
+  .frame b{font-weight:400;color:var(--ink)}
+  .frame b.accent{color:var(--orange);font-weight:400}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:3%}
+  .box{background:var(--card);border-radius:18px;padding:4% 4.5%}
+  .dark .box{background:#262626}
+  .box h3{font-size:clamp(13px,1.5vw,22px);text-transform:uppercase;letter-spacing:2px;color:var(--orange);margin-bottom:14px}
+  .box ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .box li{font-size:clamp(13px,1.55vw,23px);padding-left:30px;position:relative;line-height:1.3}
+  .box li::before{content:"";position:absolute;left:4px;top:.45em;width:10px;height:10px;border-radius:50%;background:var(--orange)}
+  .x li::before{content:"✕";background:none;color:var(--orange);font-weight:900;top:0;left:2px;width:auto;height:auto;font-size:1em}
+  .ok li::before{content:"✓";background:none;color:var(--orange);font-weight:900;top:0;left:2px;width:auto;height:auto;font-size:1em}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 2.4%}
+  .item{display:flex;gap:14px;align-items:flex-start;background:var(--card);border-radius:14px;padding:1.6% 2%}
+  .item.star{background:var(--soft);border:2px solid var(--orange)}
+  .item .ic{flex:0 0 auto;width:clamp(26px,2.6vw,40px);height:clamp(26px,2.6vw,40px);border-radius:50%;background:var(--orange);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:clamp(12px,1.3vw,19px)}
+  .item b{display:block;font-size:clamp(13px,1.45vw,22px);line-height:1.2}
+  .item small{display:block;font-size:clamp(11px,1.2vw,18px);color:var(--muted);margin-top:3px;line-height:1.3}
+  .item small::before{content:"→ ";color:var(--orange);font-weight:900}
+  .who{display:grid;grid-template-columns:1fr 1fr;gap:4%;align-items:center}
+  .side{border-left:6px solid var(--orange);padding-left:4%}
+  .side h3{font-size:clamp(14px,1.7vw,24px);text-transform:uppercase;letter-spacing:2px;color:var(--orange);margin-bottom:8px}
+  .side p{font-size:clamp(14px,1.75vw,26px);line-height:1.35}
+  .with{margin-top:4%;font-size:clamp(18px,2.4vw,36px);font-weight:800}
+  .with span{color:var(--orange)}
+  .journey{display:grid;grid-template-columns:repeat(6,1fr);gap:1.4%;margin-top:2%}
+  .step{background:var(--card);border-radius:14px;padding:6% 7%;text-align:center}
+  .step.a{background:#2a2a2a;color:#fff}
+  .step.z{background:var(--soft);border:2px solid var(--orange)}
+  .step .n{font-size:clamp(10px,1.05vw,15px);font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--orange)}
+  .step h4{font-size:clamp(14px,1.75vw,26px);font-weight:900;margin:6px 0}
+  .step p{font-size:clamp(10px,1.12vw,16px);color:var(--muted);line-height:1.3}
+  .step.a p{color:#cfcfcf}
+  .price{display:grid;grid-template-columns:1.2fr 1fr;gap:4%;align-items:center}
+  .big{font-size:clamp(40px,7vw,108px);font-weight:900;letter-spacing:-2px;line-height:1}
+  .big small{font-size:.35em;font-weight:700;letter-spacing:0}
+  .alt{font-size:clamp(16px,2.2vw,32px);font-weight:700;margin-top:10px}
+  .ref{font-size:clamp(13px,1.6vw,22px);color:var(--muted);text-decoration:line-through;margin-bottom:6px}
+  .note{margin-top:14px;display:inline-block;background:var(--soft);color:var(--ink);border:2px solid var(--orange);border-radius:999px;padding:6px 16px;font-weight:700;font-size:clamp(12px,1.4vw,20px)}
+  .facts{display:flex;flex-direction:column;gap:12px}
+  .fact{background:var(--card);border-radius:14px;padding:3% 5%;font-size:clamp(13px,1.55vw,22px)}
+  .fact b{color:var(--orange);display:block;font-size:.75em;text-transform:uppercase;letter-spacing:2px}
+  .cta{display:inline-block;background:#fff;color:var(--orange);font-weight:900;border-radius:999px;padding:1.4% 3.2%;font-size:clamp(16px,2.2vw,32px);margin-top:3%;text-decoration:none}
+  .link{font-size:clamp(13px,1.6vw,22px);margin-top:14px;opacity:.9;word-break:break-all}
+  .pay{display:flex;gap:3%;margin-top:3%}
+  .pay div{background:rgba(255,255,255,.14);border:2px solid #fff;border-radius:16px;padding:2.4% 3.4%;font-size:clamp(14px,1.9vw,28px);font-weight:800}
+  .pay small{display:block;font-weight:500;font-size:.7em;opacity:.9;margin-top:4px}
+  .faq{display:grid;grid-template-columns:1fr 1fr;gap:16px 3%}
+  .faq div{background:#262626;border-radius:14px;padding:3% 4%}
+  .faq b{display:block;color:var(--orange);font-size:clamp(14px,1.6vw,24px);margin-bottom:6px}
+  .faq p{font-size:clamp(12px,1.35vw,20px);color:#e6e6e6;line-height:1.35}
+  .brand{position:absolute;bottom:3.4%;left:6%;font-size:clamp(9px,1vw,14px);letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+  .dark .brand{color:#8a8a8a} .orange .brand{color:#fff;opacity:.8}
+  .pg{position:absolute;bottom:3.4%;right:6%;font-size:clamp(9px,1vw,14px);color:var(--muted)}
+  .dark .pg{color:#8a8a8a} .orange .pg{color:#fff}
+  .hud{position:fixed;top:10px;right:12px;display:flex;gap:6px;z-index:9;opacity:.25;transition:opacity .2s}
+  .hud:hover{opacity:1}
+  .hud button{border:0;background:#fff;color:#141414;font-weight:700;padding:6px 12px;border-radius:999px;cursor:pointer;font-size:12px}
+  .hud button.on{background:var(--orange);color:#fff}
+  .hint{position:fixed;bottom:8px;left:50%;transform:translateX(-50%);color:#777;font-size:11px;z-index:9}
+  @media print{.hud,.hint{display:none}.stage{position:static;display:block}.slide{display:flex!important;page-break-after:always;width:100vw;height:56.25vw}}
+</style>
+</head>
+<body>
+<div class="hint">← → navega · F tela cheia</div>
+
+<div class="stage">
+
+  <!-- 1 CAPA -->
+  <section class="slide dark">
+    <div class="bar"></div>
+    <div class="kicker">Incubadora de Expert</div>
+    <h1>Acelerador de Carreira<br><span>no Digital</span></h1>
+    <p class="lead">Do conhecimento que você já tem a um negócio autoral, validado e vendendo.</p>
+    <div class="brand">Karol Senna</div>
+  </section>
+
+  <!-- 2 FRAMEWORK — GRUPO -->
+  <section class="slide" data-only="grupo">
+    <div class="bar"></div>
+    <div class="kicker">O que é</div>
+    <p class="frame">Um <b class="accent">Acelerador de Carreira no Digital</b> para <b>profissionais experientes</b> que querem <b>transformar o que já sabem em um negócio autoral, validado e vendendo, sem começar pela exposição</b>. Nesse programa você terá <b>oficinas ao vivo, 8 sessões individuais comigo e agentes de IA</b> para <b>criar seu Método, validar sua oferta, posicionar sua autoridade e escalar suas vendas</b> durante <b>12 meses</b>.</p>
+  </section>
+
+
+  <!-- 3 QUEM CONDUZ -->
+  <section class="slide">
+    <div class="bar"></div>
+    <div class="kicker">Quem caminha com você</div>
+    <h2>Imagine ter do seu lado alguém que <span>já viveu os dois lados</span></h2>
+    <div class="who">
+      <div class="side"><h3>Carreira tradicional</h3><p>13 anos no serviço público. Contadora e administradora, com carreira em auditoria, planejamento e controladoria. Eu sei que estabilidade é pouco.</p></div>
+      <div class="side"><h3>Digital</h3><p>Eu vivi fracassos: 8 lançamentos até acertar a ordem. Eles me provaram que conhecimento não é suficiente pro digital. Desde então, já criei muitos métodos, o meu e o dos meus alunos.</p></div>
+    </div>
+    <p class="lead" style="margin-top:5.5%;max-width:100%">Hoje eu sou <b style="color:var(--ink)">expert e estrategista</b>: sei criar método e sei como o mercado funciona.</p>
+    <p class="with" data-only-inline="grupo">Eu vou fazer muita coisa <span>com você</span>.</p>
+    </section>
+
+  <!-- 4 PRA QUEM É -->
+  <section class="slide">
+    <div class="bar"></div>
+    <div class="kicker">Pra quem é</div>
+    <h2>Pra quem já tem conhecimento <span>e ainda não tem estrutura</span></h2>
+    <div class="cols">
+      <div class="box x"><h3>Hoje você sente</h3><ul>
+        <li>Sensação de estar desperdiçando potencial e oportunidades</li>
+        <li>Medo de ser visto como blogueira ou charlatão</li>
+        <li>Perdido e sem direção para começar</li>
+        <li>Eu sei muito, só não sei organizar</li>
+        <li>Não se sente pronto para se expor no digital</li>
+      </ul></div>
+      <div class="box ok"><h3>O que você quer</h3><ul>
+        <li>Segurança pra tomar uma decisão profissional consistente</li>
+        <li>Ser reconhecido e cobrar o que vale</li>
+        <li>Uma nova possibilidade sem largar a carreira de uma vez</li>
+        <li>Uma renda que não dependa só da sua hora</li>
+        <li>Deixar o que você viveu como legado</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <!-- 5 PRA QUEM NÃO É -->
+  <section class="slide dark">
+    <div class="bar"></div>
+    <div class="kicker">Pra quem não é</div>
+    <h2>Esse programa <span>não é pra você</span> se você:</h2>
+    <div class="box x" style="max-width:78%"><ul>
+      <li>Não está disposto a fazer a sua parte</li>
+      <li>Espera milagre ou fórmula rápida</li>
+      <li>Não segue processo</li>
+      <li>Não está aberto a receber feedback</li>
+    </ul></div>
+  </section>
+
+  <!-- 6 JORNADA -->
+  <section class="slide">
+    <div class="bar"></div>
+    <div class="kicker">A jornada</div>
+    <h2>Do <span>conhecimento solto</span> ao negócio autoral</h2>
+    <div class="journey">
+      <div class="step a"><div class="n">Antes</div><h4>Hoje</h4><p>Muito conhecimento, nenhuma estrutura</p></div>
+      <div class="step"><div class="n">Fase 1</div><h4>Método</h4><p>Persona, promessa, processo autoral e portfólio</p></div>
+      <div class="step"><div class="n">Fase 2</div><h4>Validação</h4><p>Vendas Secretas: vender antes de se expor</p></div>
+      <div class="step"><div class="n">Fase 3</div><h4>Posicionamento</h4><p>Autoridade, narrativa, perfil e conteúdo</p></div>
+      <div class="step"><div class="n">Fase 4</div><h4>Escala</h4><p data-only-inline="grupo">Funil de lives e plano de faturamento</p></div>
+      <div class="step z"><div class="n">Chegada</div><h4>Negócio autoral</h4><p>Método, oferta validada e autoridade</p></div>
+    </div>
+  </section>
+
+  <!-- 7 ENTREGÁVEIS GRUPO 1 -->
+  <section class="slide" data-only="grupo">
+    <div class="bar"></div>
+    <div class="kicker">O que você recebe · acompanhamento</div>
+    <h2>Eu entro <span>a cada entrega sua</span></h2>
+    <div class="grid">
+      <div class="item"><span class="ic">1</span><div><b>Sessão de Diagnóstico + Roteiro do Expert</b><small>você sabe exatamente por onde começar</small></div></div>
+      <div class="item"><span class="ic">8</span><div><b>8 sessões individuais comigo</b><small>atenção individual na hora em que você termina uma etapa, sem agenda presa</small></div></div>
+      <div class="item"><span class="ic">4</span><div><b>4 oficinas ao vivo</b><small>você sai de cada encontro com a etapa pronta, não com aula pra assistir</small></div></div>
+      <div class="item"><span class="ic">3</span><div><b>Raio-X de 3 vendas</b><small>cada conversa vira aprendizado, não julgamento</small></div></div>
+      <div class="item"><span class="ic">✓</span><div><b>Antes, durante e depois da venda</b><small>Checkup da oferta antes de ir a campo e estruturação do produto com as vendas reais</small></div></div>
+      <div class="item"><span class="ic">12</span><div><b>12 meses de acesso</b><small>você anda no seu ritmo</small></div></div>
+    </div>
+  </section>
+
+  <!-- 8 ENTREGÁVEIS GRUPO 2 -->
+  <section class="slide" data-only="grupo">
+    <div class="bar"></div>
+    <div class="kicker">O que você recebe · ferramentas</div>
+    <h2>Ferramentas pra <span>não travar sozinho</span></h2>
+    <div class="grid">
+      <div class="item"><span class="ic">IA</span><div><b>6 agentes de IA do método</b><small>a IA faz o trabalho pesado de construir persona, promessa, processo e proposta</small></div></div>
+      <div class="item"><span class="ic">⚡</span><div><b>Agente Vendedor Secreto</b><small>seu copiloto no meio da conversa de venda</small></div></div>
+      <div class="item"><span class="ic">◎</span><div><b>Simulador de Conversas de Venda</b><small>treina as respostas às objeções antes de ir a campo</small></div></div>
+      <div class="item star"><span class="ic">★</span><div><b>Studio de Ensaio do Expert</b><small>grava 3 vezes, avalia e mede a evolução. Aparece sem medo de parecer amador</small></div></div>
+      <div class="item"><span class="ic">↗</span><div><b>Funil de Lives Semanais</b><small>o modelo que eu uso pra vender toda semana</small></div></div>
+      <div class="item"><span class="ic">R$</span><div><b>Expert Plan</b><small>seu plano de escala: quantas sessões de venda fazer pra bater a sua meta</small></div></div>
+    </div>
+  </section>
+
+
+
+  <!-- 9 INVESTIMENTO GRUPO -->
+  <section class="slide" data-only="grupo">
+    <div class="bar"></div>
+    <div class="kicker">Investimento</div>
+    <h2>Acelerador de Carreira <span>· Grupo</span></h2>
+    <div class="price">
+      <div>
+        <div class="big"><small>12x de</small> R$500 <small>no cartão</small></div>
+        <div class="alt">ou R$5.000 à vista no pix</div>
+        <div class="note">A partir de 15/10, o programa passa a custar R$7.500</div>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>Duração</b>12 meses de acesso</div>
+        <div class="fact"><b>Garantia</b>15 dias de aderência</div>
+        <div class="fact"><b>Como entrar</b>Eu te mando o link agora. Pagou, você já recebe o acesso e agenda o seu Diagnóstico.</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 10 FECHAMENTO -->
+  <section class="slide orange">
+    <div class="bar"></div>
+    <div class="kicker">Vamos começar?</div>
+    <h1>Como fica melhor pra você?</h1>
+    <div class="pay" data-only-flex="grupo">
+      <div>Cartão em 12x<small>12x de R$500</small></div>
+      <div>Pix à vista<small>R$5.000</small></div>
+    </div>
+  </section>
+
+  <!-- 11 DÚVIDAS -->
+  <section class="slide dark">
+    <div class="bar"></div>
+    <div class="kicker">Dúvidas comuns</div>
+    <h2>Talvez você esteja <span>pensando nisso</span></h2>
+    <div class="faq">
+      <div><b>"Não sei se o meu conhecimento é suficiente"</b><p>Você não precisa chegar sabendo qual é o seu método. Isso é parte da construção. Diploma é o que você estudou. Método é o que você viveu.</p></div>
+      <div><b>"Ainda não sei se é a hora"</b><p>Entrar não significa largar a sua carreira amanhã. O processo existe pra construir e validar essa possibilidade antes de qualquer decisão maior.</p></div>
+      <div data-only-block="grupo"><b>"Não tenho tempo"</b><p>Não tem encontro fixo te esperando. Você anda no seu ritmo durante 12 meses, e eu entro quando você entrega.</p></div>
+      <div><b>"Tenho medo de investir e não conseguir"</b><p>Você não fica sozinho com um material pronto. A gente avança junto, e você tem garantia de aderência pra viver a dinâmica.</p></div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  var product = "grupo";
+  var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
+  var idx = 0;
+  function visible(){ return slides.filter(function(s){ var o = s.getAttribute("data-only"); return !o || o === product; }); }
+  function applyProduct(){
+    document.querySelectorAll("[data-only-inline]").forEach(function(e){ e.style.display = e.getAttribute("data-only-inline") === product ? "" : "none"; });
+    document.querySelectorAll("[data-only-flex]").forEach(function(e){ e.style.display = e.getAttribute("data-only-flex") === product ? "flex" : "none"; });
+    document.querySelectorAll("[data-only-block]").forEach(function(e){ e.style.display = e.getAttribute("data-only-block") === product ? "" : "none"; });
+    document.querySelectorAll(".hud button").forEach(function(b){ b.classList.toggle("on", b.dataset.p === product); });
+  }
+  function render(){
+    var v = visible();
+    if (idx >= v.length) idx = v.length - 1;
+    slides.forEach(function(s){ s.classList.remove("on"); var p = s.querySelector(".pg"); if (p) p.remove(); });
+    var cur = v[idx]; cur.classList.add("on");
+    var pg = document.createElement("div"); pg.className = "pg"; pg.textContent = (idx + 1) + " / " + v.length; cur.appendChild(pg);
+  }
+  function setProduct(p){ var cur = visible()[idx]; product = p; applyProduct(); var v = visible(); var k = v.indexOf(cur); idx = k >= 0 ? k : Math.min(idx, v.length - 1); render(); }
+  document.addEventListener("keydown", function(e){
+    if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") { idx = Math.min(idx + 1, visible().length - 1); render(); }
+    else if (e.key === "ArrowLeft" || e.key === "PageUp") { idx = Math.max(idx - 1, 0); render(); }
+    else if (e.key === "f" || e.key === "F") { if (!document.fullscreenElement) document.documentElement.requestFullscreen(); else document.exitFullscreen(); }
+  });
+  document.querySelector(".stage").addEventListener("click", function(e){ if (e.clientX > window.innerWidth / 2) idx = Math.min(idx + 1, visible().length - 1); else idx = Math.max(idx - 1, 0); render(); });
+  applyProduct(); render();
+</script>
+</body>
+</html>

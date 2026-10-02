@@ -154,3 +154,24 @@ Confirmado: você vai criar uma **página nova "Black Expert"** com essa oferta 
 - **Próximos e-mails:** #2 (02/10), #3 (05/10), #4 (07/10), #5 (09/10), #7 (13/10), #8 (14/10 08h), #11 (14/10 23h59) — agendar até 10/10 após aprovação de cada copy, sempre com teste antes.
 - **28/09, 22h — WhatsApp do #1 NÃO saiu hoje** (sync de contatos no iPhone falhou; Karol sem tempo — curso presencial 29 e 30/09). Replanejado: mensagem no grupo LIVE EXPERT360 (alcança grupo E) + 1:1 só A+B (75) via `business/vault/black-expert-2026/convite-whatsapp-black-expert.html` (WhatsApp Web, link pronto por contato) — Karol decide se ela ou o Leandro dispara. O e-mail #1 já cobriu os 121 com e-mail.
 - **Atualização 28-29/09 — listas de transmissão PRONTAS:** sync do iPhone resolvido (desligar/ligar Contatos da conta Gmail → reautenticar). Limite do WhatsApp Business = 100 por lista → listas "Black Expert" divididas; **172 contatos alcançáveis** (os demais sem WhatsApp ou já receberam 1:1). Texto da transmissão = #1 sem {nome} ("Oi, tudo bem?"). Karol envia o #1 pelas listas antes do curso (29/09). Karol adicionou **51 contatos manuais** às listas → cadastrados no CRM (`origem='black_expert_manual'`, 49 novos + 2 mesclados com dualhook). **CRM agora: 266 leads.**
+
+---
+
+## Revisão v1.4 — decisões da Karol em 02/10/2026 (prevalece sobre v1.3 onde houver conflito)
+
+> Origem: redesenho da Mentoria em Grupo no Mentoring Creator — `business/campanhas/incubadora-de-expert-grupo/setup-fase0.md`.
+
+- **Preço na Black: R$5.000** (não mais R$2.500). Pagamento em pix à vista ou cartão em 12x.
+- **Preço do Grupo a partir de 15/10: R$7.500** (versão nova, praticada de verdade, não é preço "de" fictício).
+- **Meta: 4 vendas de R$5.000 = R$20 mil.**
+- **A condição que não se repete é a OFERTA (entregáveis + bônus do dia), não só o preço.**
+- **Nada da oferta é apresentado antes de 14/10, às 8h:** sem detalhar entregáveis, bônus nem preço nos disparos #3 a #7.
+- **Bônus do dia 14 (novo desenho):**
+  - Desafio "Seu Método em 5 Dias" (19-23/10): todos, com **premiação** pro vencedor (10 ferramentas da Biblioteca personalizadas pro método dele)
+  - **Funil de Vendas Secretas montado:** 3 primeiros
+  - **Central do Mentor personalizada:** quem paga à vista (escopo novo: do "sim" em diante — onboarding, diagnóstico e acompanhamento do aluno, mapa do mentor, painel de alunos)
+  - Agente do Método Autoral: 1º **[confirmar]**
+- **Mentoria em Grupo não é mais quinzenal** (substitui a decisão de 27/09): sessões com a Karol acionadas por entregas + oficinas ao vivo.
+- **Disparos a reescrever:** #3 (05/10), #5 (09/10, e-mail diz "custa o mesmo o ano inteiro" — deixa de ser verdade), #6 (11/10, deixa de revelar bônus). #8 passa a revelar R$5.000 (e R$7.500 a partir de 15/10).
+
+**Ajuste v1.4b (02/10, Karol):** NADA da oferta antes da **live de 14/10, às 15h** (não mais "antes das 8h"). Os disparos #3 a #9 viram sequência de dores e desejos com as perguntas do Diagnóstico do Expert, e o CTA único é a live. O #8 (8h) só convida pra live. Oferta, preço e bônus aparecem pela primeira vez **na live**. **[Decidir: carrinho/página abrem às 15h, junto com a live, em vez de 8h?]**
