@@ -206,8 +206,10 @@ Fase 1, não repetido aqui).
 1. Studio → Configurações → Padrões de envio → Visibilidade: Não listado (fazer 1x por canal)
 2. Criar → Enviar vídeos → selecionar os .mp4 em lote (upload paralelo, ~1min/GB)
 3. Vídeos ficam como RASCUNHO — publicar cada um: Editar rascunho → etapa Visibilidade → Não listado → Salvar → fechar modal "Vídeo publicado"
+   - 02/10/2026: o rascunho veio com "Público" pré-marcado mesmo com o padrão configurado. NUNCA confiar no padrão: clicar Não listado em todo vídeo e conferir na lista (coluna Visibilidade) no final. Se aparecer o modal "Ainda estamos verificando seu conteúdo", clicar "Publicar mesmo assim" (conteúdo próprio).
    - Automação Playwright: cliques REAIS (browser_click) em `ytcp-uploads-dialog #step-badge-3`, `tp-yt-paper-radio-button[name="UNLISTED"]`, `#done-button`. Cliques sintéticos (JS .click()) marcam o radio mas NÃO salvam.
-4. Coletar IDs: lista de conteúdo → href de cada row (`/video/{id}`) → registrar `youtube_id` no config.yaml
+4. Capa: gerar com `business/producao/expert360/assets/gerar-thumbs-youtube.py` (lê títulos do data.js) e aplicar em Studio → /video/{id}/edit → "Enviar arquivo" (miniatura) → Salvar → toast "Alterações salvas". Conferir pela miniatura pública. Em lote via run_code: o MCP enfileira filechoosers como modal; limpar com browser_close no final e reconferir quem falhou.
+5. Coletar IDs: lista de conteúdo → href de cada row (`/video/{id}`) → registrar `youtube_id` no config.yaml
 
 **Fase 2 — Voomp (API api.voompplay.com.br, token = header `authorization` de qualquer chamada do app logado):**
 1. Thumb: `POST /media` multipart (`file` + `title`) → retorna `id` (custom_thumb) 

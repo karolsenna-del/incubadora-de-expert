@@ -9,7 +9,14 @@ live_expert360:
   ultimo_processado_titulo: "Live Expert360 - 2026/09/23 13:59 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-09-23T19:24:13.179Z"  # createdTime do arquivo no Drive (Live 31)
   proximo_numero: 32
-  ultima_execucao: "2026-09-25"
+  ultima_execucao: "2026-10-01"
+  # 01/10/2026 (missão #34, 2ª execução no dia): busca global repetida — só a Live 31 (já
+  # processada) volta; Live 32 (30/09) segue ausente do Drive. Nada novo nas 3 séries.
+  # 01/10/2026 (missão #33, disparo autônomo REGRA-015): busca global sem parentId
+  # (createdTime > 2026-08-24) só devolveu gravações já processadas (Lives 27-31). Nenhuma
+  # "Live Expert360 -" de 30/09 no Drive (busca ampla por qualquer vídeo criado desde 24/09 também
+  # não achou) — ou não houve live/gravação ontem, ou o Meet ainda não terminou de gerar o arquivo.
+  # Próxima rodada reencontra se aparecer. State não avançou (nada novo); proximo_numero segue 32.
   # 25/09/2026 (missão #30, disparada pela Karol na conversa): pasta 1MOmJg3... passou a ter
   # karol.franzini@gmail.com como writer (Karol compartilhou). Lives 29, 30 e 31 baixadas via
   # Playwright, upadas no YouTube Não listado (dAfHNMOfUCo, tqJWgVuHxMI, qqM3z56298w) e inseridas
@@ -131,7 +138,9 @@ live_expert360:
 mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/24 14:24 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-24T20:43:47.651Z"  # createdTime do arquivo no Drive
-  ultima_execucao: "2026-09-25"
+  ultima_execucao: "2026-10-01"
+  # 01/10/2026 (missão #33, disparo autônomo REGRA-015): nenhum "Encontro Incubadora -" novo
+  # depois do de 24/08 (já processado). Nada a fazer.
   # 25/09/2026 (missão #31, Karol na conversa, autorizou acesso ao Supabase): Encontro de 24/08
   # baixado (873MB), YouTube Não listado NXv8H48xn_k, inserido em encontros_mentoria
   # (a60bfe33-107a-4666-9dc7-7421375b95ed) — 1º registro tipo 'incubadora' da tabela.
@@ -196,7 +205,12 @@ mentoria_em_grupo:
 encontros_individuais:
   ultimo_processado_titulo: null
   ultimo_processado_data: null
-  ultima_execucao: "2026-09-24"
+  ultima_execucao: "2026-10-01"
+  # 01/10/2026 (missão #33, disparo autônomo REGRA-015): nenhum mp4 com prefixo "Individual -".
+  # Drive tem 3 gravações 1:1 novas fora do padrão ("Tasso - 2026/09/24", "Izack - 2026/09/25",
+  # "Vagner - 2026/09/23") — mesmo achado da #17 (Meet nomeia pelo nome do participante); não
+  # processadas, filtro do protocolo não cobre e não há como saber se são alunas da mentoria
+  # (Vagner é cliente do Sprint do Método). Decisão sobre ajustar filtro segue pendente.
   # 24/09/2026 (missão #28, disparo autônomo REGRA-015): busca global por título contendo
   # "Individual -" — nenhum vídeo com esse prefixo (só docs/pastas não relacionados, ex.
   # "individual-quinta-2026-09-17", "05-individual.md" — nenhum mp4). Achado da missão #17 sobre

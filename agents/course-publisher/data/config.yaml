@@ -252,22 +252,28 @@ modules:
         # upado como Nao listado (Area de Membros)
 
       - hotmart_name: "A6 — Social Selling"
-        video: null
+        video: "06-social-selling.mp4"
         descricao_slug: "06-social-selling"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213997"
+        youtube_id: "_OMsU9pM7XQ"
+        # 02/10/2026: upado como Nao listado (Area de Membros)
 
       - hotmart_name: "A7 — Lendo seu Lead"
-        video: null
+        video: "07-lendo-seu-lead.mp4"
         descricao_slug: "07-lendo-seu-lead"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213998"
+        youtube_id: "lOKrLaZZ-1s"
+        # 02/10/2026: upado como Nao listado (Area de Membros)
 
       - hotmart_name: "A8 — Script de Abordagem e Cadência Pré-Sessão"
-        video: null
+        video: "08-roteiro-de-abordagem.mp4"
         descricao_slug: "08-roteiro-de-abordagem"
         hotmart_lesson_url: ""
         voomp_lesson_id: "213999"
+        youtube_id: "Zzix9hl8Cw8"
+        # 02/10/2026: upado como Nao listado (Area de Membros)
 
       - hotmart_name: "A9 — O Funil das Vendas Secretas"
         video: null
