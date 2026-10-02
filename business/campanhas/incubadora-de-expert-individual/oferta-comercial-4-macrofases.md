@@ -1,6 +1,6 @@
 # Oferta Comercial — Incubadora de Expert Individual
 
-Versão: 3.0 | Data: 29/09/2026 | Status: arquitetura comercial aprovada
+Versão: 3.1 | Data: 02/10/2026 | Status: arquitetura comercial aprovada · preço atualizado para R$ 15.000
 
 > Fonte comercial atual da Incubadora Individual. As 4 macrofases organizam a narrativa de venda. A metodologia continua sendo Expert360º, com os 5Ps como arquitetura didática interna.
 
@@ -227,17 +227,18 @@ Não inclui:
 - manutenção operacional indefinida de página, funil e automações;
 - execução sem participação, dados, acessos e aprovações do aluno.
 
-## 11. Condições preservadas
+## 11. Condições
 
 - duração: 12 meses;
 - formato: individual, online, ao vivo;
 - 14 sessões 1:1;
-- preço de referência: R$ 15.000;
-- condição atual: R$ 13.500 à vista (pix) ou 12x de R$ 1.350,01 no cartão;
+- preço: **R$ 15.000 à vista (pix) ou 12x de R$ 1.500 no cartão** (decisão de 02/10/2026; a condição anterior de R$ 13.500 / 12x de R$ 1.350,01 deixa de valer);
+- checkout: `https://pay.voompcreators.com.br/16367/offer/waPZk3`;
+- bônus para pagamento à vista: a Karol participa junto da 1ª sessão de Venda Secreta do aluno;
 - garantia: 30 dias de aderência;
 - escassez real: capacidade da agenda individual, sem urgência artificial.
 
-O preço foi preservado e não é usado como argumento central da oferta.
+O preço não é usado como argumento central da oferta. Na sessão, o parcelado (12x de R$ 1.500) aparece em destaque e o valor à vista vem depois.
 
 ## 12. Resultado final
 
