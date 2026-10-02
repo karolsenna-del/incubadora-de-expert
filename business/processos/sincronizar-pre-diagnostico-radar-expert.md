@@ -4,6 +4,8 @@
 > da ferramenta **Radar do Expert**, antes da Sessão Estratégica. Criado 21/09/2026, testado
 > com a lead Marcelli (marcellistrobel@gmail.com, sessão de 22/09).
 
+> **02/10/2026 — Radar virou DIAGNÓSTICO DO EXPERT (versão 10, mesmo link):** 5 áreas pelas fases da Incubadora em vez dos 5Ps. A busca automática e o card do pré-diagnóstico continuam iguais, mas **nenhuma nota é mais pré-marcada** (o lead dá todas as notas ao vivo). O mapa de campos abaixo segue valendo pro card; as colunas "pré-marca P1/P2" não se aplicam mais.
+
 > **24/09/2026:** cada critério do Radar agora tem um campo de observações (salvo junto com o diagnóstico no campo `notes`, visível no Histórico). Esse sync de pré-diagnóstico não preenche esse campo — as observações são só da Karol, feitas ao vivo.
 
 > **25/09/2026 — AGORA É AUTOMÁTICO (versão 9 do Radar):** ao digitar o e-mail do lead e sair do

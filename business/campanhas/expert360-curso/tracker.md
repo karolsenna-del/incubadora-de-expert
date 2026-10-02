@@ -60,6 +60,7 @@
 ## LOG
 
 > Mais recente primeiro.
+- 02/10 — @companion: Karol informou que editou as aulas A6, A7 e A8 do M3. Publicação na Área de Membros vai ser feita em outro chat (course-publisher).
 - 26/09 — @course-creator: descricoes.md revisado pra linguagem do curso (aprovado pela Karol) — 4 "Bem-vinda" → "Boas-vindas" (Orientações, M1, M2, M4), aluna → aluno no M2 (3 Jornadas, Portfólio), "ela responde" → "o lead responde" (M3 A8). descricoes-aulas.js do site regenerado; deploy feito pela Karol (dpl_4hRLpqRYB3LG9ws9ARNWF9AFFFdW), conferido via curl.
 - 26/09 — @gestor-infra: Área de Membros exibe a descrição de cada aula (fonte descricoes.md) — CTAs de suporte da A9/A12/Encerramento M3 no ar. Checklist V05/V06 ✅.
 - 26/09 — @course-creator: descricoes.md do M3 alinhado ao roteiro de 14 aulas (aprovado pela Karol) — A5 corrigida (Qualificados, 6 grupos), A9/A10/A11 novas, A12 e encerramento atualizados com CTA do suporte (wa.me/556792324690), Roteiro da Sessão e Escala Secreta removidas, intro do M3 em linguagem neutra. Slugs do config.yaml alinhados (12-pos-sessao, 13-quem-voce-se-tornou). Pendente: Área de Membros não exibe descrição de aula (V05/V06).

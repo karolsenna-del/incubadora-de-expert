@@ -423,4 +423,12 @@ Retomar com: `/expert-companion`
 - **Atualizacao 28/09 (Karol):** roteiro + apresentacao da Live 32 montados por ela; **aviso da mudanca de data (qua → qui 01/10 15h) ja enviado**. E-mails da Black Expert saem pelo **Resend Broadcasts**, montado com o Gestor de Infra (SOP-024 no playbook dele; chave "Resend Full" no 1Password; plano Free = ate 1.000 contatos/mes nos Broadcasts).
 - **Arquivo editavel com todas as mensagens:** `business/campanhas/black-friday-grupo-2026/mensagens-black-expert.docx` (gerado de `copies.md`, por data e canal). Karol pode editar no Word — **ao voltar, trazer as edicoes dela de volta pro `copies.md`** (fonte da campanha) sem sobrescrever o que ela mudou.
 
-*Ultima atualizacao: 28/09/2026 (Black Expert v1.3 + Live 32)*
+**Sessao 02/10:**
+- **Live 32 realizada (01/10) com sucesso**, segundo a Karol. Tem entrado gente no grupo da Black Expert.
+- Expert360º: Karol editou as aulas A6-A8 do M3; vai publicar em outro chat.
+- Plano da Semana 09 tinha sido re-salvo em UTF-16 (01/10 19h); convertido de volta pra UTF-8, sem diferenca de conteudo em relacao ao ultimo commit.
+- Foco da sessao: Radar do Expert + sessao com a Laís (02/10) aplicando o que a Karol aprendeu na imersao FHT (origem do diagnostico e sessao de vendas 1:1).
+- **Feito:** Radar virou **Diagnostico do Expert v10** (5 areas pelas fases + Expert, 25 notas ditas pelo lead, radar final ao lado do ideal 10, sem pre-marcacao) — https://claude.ai/artifact/AgwbWdzWbfo5QWgxuy9wVb. Roteiro da sessao v3 em SPIN — https://claude.ai/artifact/WeV7CVV38uBV7YTjvDzmc4. Formulario do lead renomeado pra pre-diagnostico (LP + Central no ar). Ver log-decisoes 02/10.
+- **Pendente:** personalizacao da Laís (28/09) ainda fala em P1/P2/P4/P5; Karol testar o card do pre-diagnostico dela no Diagnostico antes da sessao.
+
+*Ultima atualizacao: 02/10/2026*

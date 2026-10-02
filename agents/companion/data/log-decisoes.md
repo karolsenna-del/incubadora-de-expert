@@ -578,3 +578,10 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** Identidade "Incubadora em modo evento": mesma paleta da marca com preto dominante, nome em letra (BLACK branco / EXPERT laranja), chama desenhada em traço (nunca emoji 🔥), selo 14.10 e faixa laranja inclinada. Na Live 32, só o Bloco 8 vira Black (Blocos 1-7 ficam no visual Live Expert360).
 **Racional:** Uma identidade só pra deck, stories, grupo, página e live de fechamento. Sem cor nova pra não virar "Black genérica"; virada só no pitch pra aula não parecer venda.
 **Impacto:** Guia em `business/campanhas/black-friday-grupo-2026/identidade-visual.md` — usar em todas as peças da campanha (Quill na página, stories, live do dia 14).
+
+## 02/10/2026 — Radar do Expert vira Diagnóstico do Expert por fases
+**Contexto:** Karol voltou da imersão FHT (origem do diagnóstico e sessão de vendas 1:1) e quis que a ferramenta da sessão fizesse aflorar a necessidade com dores reais da persona, não critérios de aula.
+**Decisão:** Os 5Ps saem do Radar; entram 5 áreas (Método, Validação, Posicionamento, Escala — fases da Incubadora — + Expert), 25 perguntas de situação vivida, nota de 0 a 10 dita pelo lead (10 = fácil/resolvido), sem pré-marcação. Radar final ao lado do ideal nota 10. A ferramenta se chama Diagnóstico do Expert e o formulário do lead passa a se chamar pré-diagnóstico. A sessão inteira segue SPIN (o Diagnóstico é o S); vontade de transição vira pergunta falada, fora do gráfico; pedido de indicação em todo fechamento.
+**Racional:** Pergunta de "quanto você sabe" puxa pra solução "vou aprender" (curso) e mexe com o ego; pergunta de situação vivida faz o lead se ver. Escala única evita confusão no gráfico. As fases conectam o buraco direto ao que a Incubadora entrega.
+**Impacto:** Perguntas em `business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/radar-fases-perguntas.md`; roteiro da sessão v3 (https://claude.ai/artifact/WeV7CVV38uBV7YTjvDzmc4); ferramenta v10 no mesmo link (https://claude.ai/artifact/AgwbWdzWbfo5QWgxuy9wVb); LP do pré-diagnóstico e Central renomeadas e no ar.
+
