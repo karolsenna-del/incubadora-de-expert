@@ -10,6 +10,13 @@
 **Impacto:** [o que muda]
 -->
 
+## 02/10/2026 — Sprint do Método sobe de R$3.000 pra R$5.000
+
+**Contexto:** O Sprint do Método era vendido a R$3.000 (12x R$300 na página). Na prática a Karol monta toda a estrutura e entrega pronta. O cliente só valida em cada etapa.
+**Decisão:** Novo preço-base de R$5.000 à vista ou 12x de R$500. Checkout Voomp no formato novo (`pay.voompcreators.com.br/oLLZMsigRPz811l1/offer/60AOYt`, mesma oferta do produto 16365). Página de vendas atualizada e publicada em 02/10.
+**Racional:** Pelo trabalho entregue (estrutura feita por ela e entregue pronta), R$3.000 não fazia sentido. A Karol também pretende passar a entregar o **funil de Vendas Secretas pronto**, e não só os roteiros, o que aumenta ainda mais o valor entregue.
+**Impacto:** Contrato modelo (cláusula 4.1), vitrine da Área de Membros, Central da Incubadora e docs internos ainda citam R$3.000. Cascata pendente, ver tracker do CRM de reativação. Clientes que já fecharam (ex.: Vagner) seguem no valor contratado. **Atualização (mesmo dia):** o funil entrou no escopo e o Sprint passou de 6 pra **8 semanas** ("mais folgado e real"). O funil ocupa as S6-S7 e vai da abordagem do lead, questionário de diagnóstico e roteiro da sessão até a apresentação da oferta; a plataforma o cliente escolhe. A página deixa explícito que é **prestação de serviço**: não inclui mentoria, acompanhamento da implementação, análise de casos e vendas reais nem tráfego pago. Página publicada. O contrato ainda precisa refletir isso.
+
 ## 01/10/2026 — Meta de vendas da Black Expert: 4 vendas
 
 **Contexto:** Black Expert (Grupo 2026), oferta relâmpago de 1 dia em 14/10, R$2.500. Meta numérica estava pendente desde 18/09. Convite 1:1 pelo WhatsApp oficial saiu hoje pra 124 contatos.
