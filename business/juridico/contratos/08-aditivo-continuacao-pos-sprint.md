@@ -1,5 +1,7 @@
 # ADITIVO CONTRATUAL — CONTINUAÇÃO PÓS-SPRINT DO MÉTODO
 
+> ⚠️ **NÃO USAR ANTES DE REVISAR (02/10/2026):** o Sprint passou de R$3.000 pra R$5.000 e a Individual de R$10.000 pra R$15.000. Os valores de continuação abaixo foram calculados com os preços antigos e precisam ser redefinidos pela Karol.
+
 > Aplicável apenas ao CONTRATANTE que já concluiu o **Sprint do Método** (`03-sprint-do-metodo.md`) e deseja continuar a jornada para validação, posicionamento e escala, na modalidade Grupo ou Individual, com condição comercial diferenciada por já ter a fundação pronta.
 
 Pelo presente Aditivo, vinculado ao Instrumento Particular de Prestação de Serviços do Sprint do Método celebrado entre as Partes em:

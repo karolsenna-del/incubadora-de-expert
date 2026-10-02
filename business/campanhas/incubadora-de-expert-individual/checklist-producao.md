@@ -21,7 +21,7 @@ Versão: 3.0 | Data: 29/09/2026 | Status: oferta documentada; implementação op
 
 ## B. P1 — antes da próxima venda/entrada
 
-- [ ] **Atualizar o contrato da Individual** com: 14 sessões, 4 macrofases, DWY, responsabilidades, Mentoria Mínima Vendável, escopo de página/funil/IA/tráfego, limites e preço vigente.
+- [ ] **Atualizar o contrato da Individual** com: 14 sessões, 4 macrofases, DWY, responsabilidades, Mentoria Mínima Vendável, escopo de página/funil/IA/tráfego, limites e preço vigente. *(02/10: preço já corrigido em `business/juridico/contratos/05-individual.md`; o resto segue pendente.)*
 - [ ] **Atualizar a apresentação/roteiro comercial da Individual** para as 4 macrofases e remover referências operacionais antigas de 5 fases ou construção completa antes da validação.
 - [ ] **Atualizar a página de venda em ambiente de edição**, sem publicar, usando a nova promessa, 4 fases, responsabilidades, limites e 14 sessões.
 - [ ] **Definir capacidade simultânea da agenda individual** para a escassez real deixar de ser apenas qualitativa. Não inventar número.
@@ -67,7 +67,7 @@ Versão: 3.0 | Data: 29/09/2026 | Status: oferta documentada; implementação op
 - [x] formulário DNA do Expert: `dna.incubadoradeexpert.com.br`
 - [x] mensagem de boas-vindas com onboarding e área de membros
 - [x] Rastreador de Leads no template
-- [x] parcela vigente: 12x de R$ 1.350,01
+- [x] parcela vigente: 12x de R$ 1.500 (atualizado 02/10/2026)
 - [x] garantia de aderência de 30 dias
 - [x] suporte: 24h úteis; gravações: 48h úteis
 
@@ -82,7 +82,7 @@ Versão: 3.0 | Data: 29/09/2026 | Status: oferta documentada; implementação op
 - [x] Vendas Secretas antes da exposição ampliada
 - [x] produto completo somente após primeiras vendas/entregas
 - [x] tráfego configurado com métricas iniciais, sem gestão contínua
-- [x] preço inalterado: R$ 15.000 de referência; R$ 13.500 à vista ou 12x de R$ 1.350,01
+- [x] preço atualizado em 02/10/2026: R$ 15.000 à vista ou 12x de R$ 1.500 (página e checkout publicados)
 - [x] sem comunidade inventada
 - [x] sem promessa de quantidade de leads, vendas ou faturamento
 

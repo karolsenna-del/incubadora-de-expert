@@ -56,7 +56,7 @@ Extraído diretamente do CSS da página de vendas real
 
 Fonte: https://vendas-incubadora.vercel.app/sprint-do-metodo/
 
-- **Serviço:** Sprint do Método — 6 semanas, R$3.000 à vista (PIX)
+- **Serviço:** Sprint do Método — 6 semanas, R$5.000 à vista (PIX) ou 12x de R$500 (preço desde 02/10/2026)
 - **Semana 01 — Levantamento estratégico:** Imersão: levantamento completo da
   história, dores e contexto do cliente.
 - **Semana 02 — Persona + Promessa:** Documento preenchido com dados específicos

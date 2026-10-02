@@ -1,5 +1,7 @@
 # Arsenal de Vendas — Closer (CRM Reativação de Leads)
 
+> **Atualização de preços 02/10/2026 (decisão da Karol, ver `agents/companion/data/log-decisoes.md`):** Individual **R$15.000 à vista ou 12x de R$1.500**; Sprint do Método **R$5.000** (inclui a criação do Funil de Vendas Secretas); Grupo **R$5.000** (passa a **R$7.500 a partir de 15/10**). Continuações pós-Sprint em revisão.
+
 > Documento de apoio pro comercial/closer contratado pela Karol reativar leads do CRM (sessão estratégica, webinar, compradores de outro produto, grupo do WhatsApp).
 > Produtos e preços: `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md` (fonte oficial — se este arsenal e aquele documento divergirem em preço, o de produto vale).
 > Posicionamento completo: `docs/knowledge/expert-business/posicionamento.md`. Provas completas: `docs/knowledge/expert-business/provas/README.md` e `depoimentos.md`.
@@ -86,11 +88,11 @@ Vem das lives semanais — engajamento de conteúdo, não contato comercial. Mui
 | 3 | Expert360º (funil) | Vender | Self-paced | R$497 | Curso gravado, sem contato pessoal |
 | 3 | Expert360º (plataforma) | Vender | Self-paced | R$697 | Curso gravado, sem contato pessoal |
 | 4 | Método VIP | Vender | 3 encontros | R$1.500 (3x R$500 pix) | Orientação — cliente executa, ela adapta o foco |
-| 5 | Sprint do Método | Vender | 6 semanas | R$3.000 | Fundação pronta feita por ela, sem validação. Depende de agenda dela abrir |
-| 6a | → Continuação Grupo (pós-Sprint) | Vender | 6 meses | R$2.000 | Total Sprint+continuação = R$5.000, igual ao Grupo do zero |
-| 6b | → Continuação Individual (pós-Sprint) | Vender | 6 meses | R$5.000 | Total Sprint+continuação = R$8.000 — R$2.000 mais barato que a Individual do zero |
+| 5 | Sprint do Método | Vender | 6 semanas | R$5.000 (inclui Funil de Vendas Secretas) | Fundação pronta feita por ela, sem validação. Depende de agenda dela abrir |
+| 6a | → Continuação Grupo (pós-Sprint) | Vender | 6 meses | ⚠️ em revisão (era R$2.000 com o Sprint a R$3.000) | Não ofertar sem a Karol definir o valor novo |
+| 6b | → Continuação Individual (pós-Sprint) | Vender | 6 meses | ⚠️ em revisão (era R$5.000, ancorado na Individual a R$10.000) | Não ofertar sem a Karol definir o valor novo |
 | 7 | Grupo (do zero) | Vender | 12 meses (única duração) | R$5.000 | Jornada completa, atenção dividida |
-| 8 | Individual (do zero) | Vender | 12 meses | R$10.000 | Jornada completa 1:1, entrega mais garantida em agenda |
+| 8 | Individual (do zero) | Vender | 12 meses | R$15.000 ou 12x R$1.500 | Jornada completa 1:1, entrega mais garantida em agenda |
 
 Fonte oficial (se este arsenal desatualizar, esse arquivo vale): `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md`.
 
@@ -118,9 +120,9 @@ Antes de empurrar qualquer produto, descubra uma coisa: **o lead já tem um mét
 | Só quer clareza pontual num ponto específico, orçamento baixo | Método Express *(oferta em teste — ver nota abaixo)* | R$300 |
 | Tem orçamento baixo, tempo disponível, prefere estudar sozinha | Expert360º (curso) | R$497-697 |
 | Quer fazer ela mesma mas precisa de direção e ajuste no caminho | Método VIP | R$1.500 (3x R$500 pix) |
-| **Já tentou e não conseguiu, ou não sabe nada de marketing/tecnologia — trava por falta de tempo E clareza** | **Sprint do Método** | R$3.000 |
+| **Já tentou e não conseguiu, ou não sabe nada de marketing/tecnologia — trava por falta de tempo E clareza** | **Sprint do Método** | R$5.000 |
 | Quer jornada completa (validação incluída), topa grupo, ticket menor | Grupo | R$5.000 (12 meses) |
-| Quer jornada completa 1:1, quer o acompanhamento mais garantido | Individual | R$10.000 (12 meses) |
+| Quer jornada completa 1:1, quer o acompanhamento mais garantido | Individual | R$15.000 (12 meses) |
 
 **Nota — Método Express nunca foi vendido.** Se for oferecer, deixe claro internamente (não precisa avisar o lead) que é uma oferta nova sendo testada. Avise a Karol como foi a primeira venda, se acontecer.
 
@@ -218,9 +220,9 @@ Manda o link certo conforme a oferta que você indicou na ligação (não manda 
 |---|---|
 | Método Express (R$300) | https://vendas.incubadoradeexpert.com.br/metodo-express/ |
 | Método VIP (R$1.500) | https://vendas.incubadoradeexpert.com.br/metodo-vip/ |
-| Sprint do Método (R$3.000) | https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/ |
+| Sprint do Método (R$5.000) | https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/ |
 | Grupo (R$5.000/12m) | https://vendas.incubadoradeexpert.com.br/grupo/ |
-| Individual (R$10.000/12m) | https://vendas.incubadoradeexpert.com.br/individual/ |
+| Individual (R$15.000/12m) | https://vendas.incubadoradeexpert.com.br/individual/ |
 | Expert360º (R$497) | https://vendas.incubadoradeexpert.com.br/expert360/ |
 | Diagnóstico Ferramentas (R$97) | https://vendas.incubadoradeexpert.com.br/diagnostico-ferramentas/ |
 
@@ -235,5 +237,5 @@ Manda o link certo conforme a oferta que você indicou na ligação (não manda 
 ## 11. Pendências (não inventar, perguntar à Karol)
 
 - Parcelamento da Individual e do Grupo já confirmados nas páginas — se o lead perguntar algo além disso (ex: outras formas de pagamento), confirmar com a Karol antes de prometer.
-- Parcelamento da Individual (o material antigo trazia 12x R$1.035 no cartão) — confirmar se continua valendo.
+- ~~Parcelamento da Individual~~ — resolvido em 02/10/2026: 12x de R$1.500 no cartão.
 - Método Express: primeira venda real ainda não aconteceu — reportar como foi.

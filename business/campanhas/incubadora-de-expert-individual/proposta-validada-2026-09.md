@@ -1,4 +1,5 @@
-# Proposta Validada — Incubadora de Expert | Mentoria Individual
+
+# Proposta Validada — Incubadora de Expert | Mentoria Individual
 
 > Origem: `5) Proposta Validada — Mentoria Individual.docx`, trazido pela Karol em 16/09/2026 como o resultado final da oferta (item 5 dos 6 agentes de IA do método: Persona → Promessa → Processo Autoral → Portfólio Estratégico → **Proposta Validada** → Autoridade Tríplice). Guardado aqui como fonte de verdade da reprecificação — motivou a atualização de `prd.md` e `empacotamento.md` (v2.0) no mesmo dia.
 
@@ -260,11 +261,10 @@ A função é neutralizar:
 “E se eu fizer um investimento alto e descobrir que esse projeto não faz sentido para mim?”
 
 22. Investimento
-Valor de referência
-R$ 15.000
-Condição atual de entrada
-R$ 13.500
-Essa é a condição comercial que você está praticando neste momento para a Mentoria Individual.
+Investimento
+R$ 15.000 à vista ou 12x de R$ 1.500
+Bônus para pagamento à vista: você participa junto da 1ª Venda Secreta do aluno.
+(Atualizado em 02/10/2026. A condição anterior de R$ 13.500 deixou de valer.)
 Não existe necessidade de criar cronômetro, “só hoje” ou uma janela falsa de 24 horas.
 Sua persona precisa tomar uma decisão de alto envolvimento com segurança.
 O investimento também reflete algo que as ofertas inferiores não possuem:
@@ -280,7 +280,7 @@ Por isso:
 as entradas dependem da disponibilidade real da sua agenda individual.
 Quando a capacidade de acompanhamento estiver preenchida, novas pessoas precisam aguardar disponibilidade.
 Uma forma natural de comunicar isso:
-“Eu não trabalho com urgência artificial nesta mentoria. A condição atual é R$ 13.500. O que realmente é limitado é a minha agenda, porque durante 12 meses eu participo diretamente da construção do projeto. Então a entrada depende de eu ainda ter capacidade para assumir um novo acompanhamento.”
+“Eu não trabalho com urgência artificial nesta mentoria. O investimento é R$ 15.000. O que realmente é limitado é a minha agenda, porque durante 12 meses eu participo diretamente da construção do projeto. Então a entrada depende de eu ainda ter capacidade para assumir um novo acompanhamento.”
 Essa escassez reforça, em vez de contradizer, o valor segurança.
 
 24. Principais objeções
@@ -310,7 +310,7 @@ A construção acontece durante os 12 meses.
 Nós avançamos juntas.
 
 25. Follow-up da sessão
-“Quero reforçar uma coisa importante: entrar nessa mentoria não significa decidir hoje abandonar sua carreira ou apostar tudo no digital. O processo existe justamente para construir e validar essa nova possibilidade antes de você precisar tomar decisões maiores. A condição atual da Mentoria Individual é R$ 13.500. Não trabalho com urgência artificial, mas minha agenda para acompanhamentos individuais é limitada porque participo diretamente da construção durante 12 meses. Se fizer sentido para você, avançamos enquanto houver disponibilidade.”
+“Quero reforçar uma coisa importante: entrar nessa mentoria não significa decidir hoje abandonar sua carreira ou apostar tudo no digital. O processo existe justamente para construir e validar essa nova possibilidade antes de você precisar tomar decisões maiores. O investimento da Mentoria Individual é R$ 15.000, ou 12x de R$ 1.500. Não trabalho com urgência artificial, mas minha agenda para acompanhamentos individuais é limitada porque participo diretamente da construção durante 12 meses. Se fizer sentido para você, avançamos enquanto houver disponibilidade.”
 
 26. Escada completa de ofertas
 Curso Online
@@ -340,9 +340,9 @@ Raio-X integrado
 Sem agente personalizado
 Pode ser ação rápida
 Agente do Método Autoral incluído
-R$ 497 atual
-R$ 5.000 oficial
-R$ 15.000 referência / R$ 13.500 atual
+R$ 697 atual
+R$ 5.000 oficial (R$ 7.500 a partir de 15/10/2026)
+R$ 15.000 (12x de R$ 1.500)
 A progressão fica muito clara:
 Curso
 “Quero fazer sozinha com uma metodologia.”
@@ -369,10 +369,10 @@ Qualidade dos Bônus
 A oferta não depende de uma pilha de bônus; ferramentas e Jornada360 complementam sem roubar o protagonismo do 1:1.
 Eficácia da Garantia
 9,0
-Os 30 dias reduzem o risco de uma decisão de R$ 13,5 mil sem prometer resultado financeiro.
+Os 30 dias reduzem o risco de uma decisão de R$ 15 mil sem prometer resultado financeiro.
 Coerência de Precificação
 9,5
-R$ 15 mil de referência e R$ 13,5 mil atual refletem 12 meses de construção individual e diferenciam bem o grupo.
+R$ 15 mil reflete 12 meses de construção individual e diferenciam bem o grupo.
 SCORE GERAL: 9,1/10
 Pontos fortes
 O maior diferencial é preencher e construir cada etapa junto com o expert, em vez de apenas revisar entregas.

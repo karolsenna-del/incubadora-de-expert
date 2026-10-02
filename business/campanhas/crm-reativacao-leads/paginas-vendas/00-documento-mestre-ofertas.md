@@ -1,5 +1,7 @@
 # Documento Mestre Condensado — 7 Páginas de Venda (Closer)
 
+> **Atualização de preços 02/10/2026 (decisão da Karol, ver `agents/companion/data/log-decisoes.md`):** Individual **R$15.000 à vista ou 12x de R$1.500**; Sprint do Método **R$5.000** (inclui a criação do Funil de Vendas Secretas); Grupo **R$5.000** (passa a **R$7.500 a partir de 15/10**). Continuações pós-Sprint em revisão.
+
 > Squad LPago Arcane — Atlas (Estrategista-Chief). Versão adaptada: SEM Blocos 3-6 (Calculadora Arcane / orçamento / cronograma de disparos / metas ROAS) — não se aplica, não é lançamento com evento/ingresso/ads. Só Bloco 1 (Tese e Proposta) + Bloco 2 (Público) por oferta, condensados a partir de material já existente.
 > Fontes: `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md` (produto/preço) + `business/campanhas/crm-reativacao-leads/arsenal-vendas-closer.md` (público/objeções/provas).
 > Aprovado por: Karol (01/08/2026) — caminho adaptado confirmado, documento em construção pra aprovação final antes de handoff pro Quill.
@@ -53,14 +55,14 @@
 
 ---
 
-## 3. Sprint do Método — R$3.000
+## 3. Sprint do Método — R$5.000 (desde 02/10/2026; era R$3.000)
 
 **Público principal:** Laura (trava dupla — falta tempo E clareza ao mesmo tempo; já tentou e não conseguiu, ou não sabe nada de marketing/ferramentas/tecnologia). Secundário: Ricardo (quando o problema dele é agenda, não dinheiro — "não tenho tempo" é objeção real dele também).
 **Conhecimento atual:** Projeto nunca sai do papel — sabe o que quer fazer no fundo, mas cada tentativa esbarra em falta de tempo ou de saber por onde começar.
 **Problema:** Paralisia por sobrecarga dupla (tempo + clareza) — não é preguiça, é estar sem estrutura E sem hora do dia pra construir sozinha.
 **Solução:** 6 semanas, a Karol constrói a fundação pronta com o cliente validando em cada etapa — não constrói sozinha no vácuo, cliente participa e aprova, mas o trabalho pesado é dela.
 **Peça que faltava:** Nome do mecanismo = **Sprint do Método** — 6 entregas semanais fixas (semana 1 imersão, semana 2 persona+promessa, semana 3 processo autoral, semana 4 ferramentas personalizadas, semana 5 proposta+roteiros de validação, semana 6 agente de IA do método + handoff). Processo e Ferramentas separados em 2 semanas (decisão 14/09 — muita informação pro cliente assimilar e validar numa semana só). Não inclui validação de campo (fica pra depois — a continuação existe pra isso).
-**Preço/pagamento:** R$3.000 pix à vista.
+**Preço/pagamento:** R$5.000 à vista no pix ou 12x de R$500 no cartão. Inclui a criação do Funil de Vendas Secretas (02/10/2026).
 **Ruminações a puxar:** "Não tenho tempo pra mais uma coisa." + "Já tentei sozinha e não consegui." (Ricardo: "Não tenho tempo.")
 
 ---
@@ -69,7 +71,7 @@
 
 **Público principal:** Laura, exclusivamente (Ricardo explicitamente NÃO — "Grupo não é para mim", direcionar ele pra Individual ou Sprint+continuação).
 **Conhecimento atual:** Quer a jornada completa (fundação + validação + posicionamento), topa dividir atenção com outros alunos em troca de ticket menor que a Individual.
-**Problema:** Quer o caminho inteiro do zero até vender, mas não tem R$10.000 nem precisa do 1:1 total — quer estrutura e comunidade, não exclusividade.
+**Problema:** Quer o caminho inteiro do zero até vender, mas não tem R$15.000 nem precisa do 1:1 total — quer estrutura e comunidade, não exclusividade.
 **Solução:** Jornada completa coached em grupo, 12 meses, incluindo validação com vendas reais. Acesso aos 6 agentes de IA do método (persona, promessa, processo, portfólio, proposta, autoridade — já existem e funcionam, mesmos que os alunos do Expert360 usam hoje).
 **Peça que faltava:** Não é curso gravado (isso é o Expert360) nem 1:1 caro (isso é a Individual) — é o meio-termo real: acompanhamento humano + arsenal de IA, em grupo. **Nota Quill:** pode prometer os 2 agentes em construção (Roteiro de Validação, Feedback de Portfólio) — Karol confirma que estarão prontos até o aluno chegar nessa etapa da jornada.
 **Preço/pagamento:** R$5.000 pix à vista, ou 12x R$517,12 no cartão.
@@ -78,14 +80,14 @@
 
 ---
 
-## 5. Individual (do zero) — R$10.000 (12 meses)
+## 5. Individual (do zero) — R$15.000 (12 meses) (desde 02/10/2026)
 
 **Público principal:** Ricardo (quer personalização total, decide rápido quando confia, não quer se misturar com iniciantes). Secundário: Laura de ticket mais alto, que quer o acompanhamento mais garantido possível.
 **Conhecimento atual:** Já é reconhecido no offline, não sente dor urgente — sente oportunidade estratégica de não ficar pra trás.
 **Problema:** Relevância e legado, não sobrevivência financeira — "o que eu vejo mudando no mercado ao redor de mim, e eu não posso ficar de fora."
 **Solução:** Jornada completa coached 1:1, 12 meses. Fundação personalizada (mês 1-3, igual ao Sprint no ritmo coached) → roteiros reais de venda + validação (mês 4-6) → agente de IA do método + página/LP construída (Squad LPago Arcane) + funil de automação (Gestor de Infra Arcane) + tráfego pronto pra rodar (Tráfego Arcane) na fase de escala (mês 7-12).
 **Peça que faltava:** Única oferta que entrega infraestrutura pronta de verdade (página, funil, tráfego configurado), não só orientação — é a diferença entre "te ensino" e "eu construo contigo até rodar".
-**Preço/pagamento:** R$10.000 pix à vista, ou 12x R$1.035 no cartão.
+**Preço/pagamento:** R$15.000 à vista no pix, ou 12x de R$1.500 no cartão. Bônus à vista: Karol junto na 1ª Venda Secreta.
 **Promessa de tempo (correção 01/08):** mesma lógica do Grupo — headline promete validação/primeira venda em ATÉ 4 MESES, os 12 meses de acesso são pra quem quer chegar até a infraestrutura pronta (fase de escala).
 **Ruminações a puxar:** "Preciso confiar muito." + "Só entro se for personalizado." + "Não vejo urgência" (responder com pergunta sobre relevância, não pressão).
 
@@ -119,7 +121,7 @@
 
 1. ~~Forma de pagamento do Sprint do Método~~ — pix à vista, sem parcelamento.
 2. ~~Forma de pagamento do Grupo~~ — pix à vista ou 12x R$517,12 no cartão.
-3. ~~Parcelamento da Individual~~ — confirmado, 12x R$1.035 no cartão continua válido.
+3. ~~Parcelamento da Individual~~ — confirmado em 01/08 (12x R$1.035); substituído em 02/10/2026 por 12x R$1.500.
 4. ~~Expert360: R$497 ou R$697?~~ — R$497 na página de reativação.
 5. ~~Grupo: pode prometer os 2 agentes em construção?~~ — Sim, Karol confirma que estarão prontos antes do aluno chegar nessa etapa.
 

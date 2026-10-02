@@ -1,4 +1,6 @@
-# Briefing + Copy Redigida — Página Sprint do Método (R$3.000)
+# Briefing + Copy Redigida — Página Sprint do Método (R$5.000)
+
+> **Atualização 02/10/2026:** Sprint passa a R$5.000 (12x de R$500 no cartão) e inclui a criação do Funil de Vendas Secretas. A página publicada já mostra R$5.000.
 
 > Squad LPago Arcane — Quill (Copy & Página). Fonte: `00-documento-mestre-ofertas.md`.
 > Estrutura: 13 seções, mesmo padrão das páginas Individual/Grupo (12 padrão + "Para quem é / Para quem não é" — justificada, R$3.000 é high-ticket).
@@ -163,7 +165,7 @@ pra você assumir com autonomia.
 ```
 [H2] Sprint do Método — 6 semanas, fundação pronta
 
-R$3.000 à vista no pix
+R$5.000 à vista no pix
 
 Inclui:
 - 6 semanas de construção guiada, uma entrega por semana
@@ -295,7 +297,7 @@ deixar pela metade — é feito com você.
 
 QUERO MEU SPRINT DO MÉTODO
 
-R$3.000 à vista no pix
+R$5.000 à vista no pix
 ```
 
 ---

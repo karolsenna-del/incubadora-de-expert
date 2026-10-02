@@ -1,4 +1,6 @@
-# Briefing + Copy Redigida — Página Individual (R$13.500 — tudo incluso)
+# Briefing + Copy Redigida — Página Individual (R$15.000 — tudo incluso)
+
+> **Atualização 02/10/2026:** preço R$15.000 à vista ou 12x R$1.500, checkout `https://pay.voompcreators.com.br/16367/offer/waPZk3` — já publicado na página.
 
 > Squad LPago Arcane — Quill (Copy & Página). Fonte: `00-documento-mestre-ofertas.md` (Bloco 1+2 aprovado por Atlas/Karol em 01/08/2026).
 > **Atualização 17/09/2026:** reprecificação de R$10.000 pra R$15.000 referência / R$13.500 condição atual (tudo incluso, sem add-ons), formalizada em `business/campanhas/incubadora-de-expert-individual/empacotamento.md` v2.0 e `proposta-validada-2026-09.md`. Ver Seção 6 (Oferta) e nova Seção 6b (Escassez). Aprovado por Karol em chat, ainda **não publicado no page builder**.
@@ -182,8 +184,8 @@ play quando o método já estiver validado.
 ```
 [H2] Individual — 12 meses, 1:1, do zero à venda validada
 
-R$ 13.500 à vista no pix
-ou 12x de R$ 1.350,01 no cartão
+12x de R$ 1.500 no cartão
+ou R$ 15.000 à vista no pix
 (valor de referência: R$ 15.000)
 
 Preço único. Tudo incluso. Sem add-on escondido depois.
@@ -328,7 +330,7 @@ fundação está pronta. A infraestrutura completa (site, funil,
 tráfego) entra na fase de escala, meses 7-12.
 
 Posso parcelar?
-Sim — 12x de R$1.350,01 no cartão, ou R$13.500 à vista no pix.
+Sim — 12x de R$1.500 no cartão, ou R$15.000 à vista no pix.
 
 Preciso já ter produto definido?
 Não. A fundação (persona, promessa, processo) é construída com
@@ -354,7 +356,7 @@ construir a infraestrutura completa e escalar.
 
 QUERO CONVERSAR SOBRE A INDIVIDUAL
 
-R$13.500 à vista ou 12x R$1.350,01
+R$15.000 à vista ou 12x R$1.500
 ```
 
 ---

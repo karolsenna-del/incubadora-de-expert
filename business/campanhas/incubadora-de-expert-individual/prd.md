@@ -54,7 +54,7 @@ Isso altera a produção, não a metodologia: Persona, Promessa, Processo, Propo
 | Duração | 12 meses |
 | Sessões | 14 sessões 1:1, cadência concentrada no início e espaçada para campo/implementação |
 | Entrega | DWY — Karol e aluno constroem juntos; squads/agentes aceleram ativos aprovados |
-| Preço | R$ 15.000 de referência; R$ 13.500 à vista (pix) ou 12x de R$ 1.350,01 no cartão |
+| Preço | R$ 15.000 à vista (pix) ou 12x de R$ 1.500 no cartão (02/10/2026; antes R$ 13.500 / 12x R$ 1.350,01) |
 | Garantia | 30 dias de aderência, conforme contrato |
 | Suporte | WhatsApp, dias úteis 9h–18h, SLA de até 24h úteis |
 | Gravações | disponibilizadas em até 48h úteis |

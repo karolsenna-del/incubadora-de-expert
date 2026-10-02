@@ -8,7 +8,7 @@
 
 ---
 
-## 1. Sprint do Método — R$3.000
+## 1. Sprint do Método — R$5.000
 
 **Quando enviar:** assim que o pagamento aparecer confirmado (Voomp, produto `sprint-do-metodo`,
 checkout `/16365`).
@@ -68,7 +68,7 @@ mantido só como referência histórica das perguntas originais, não como o pro
 
 ---
 
-## 2. Individual — R$13.500/12m (12x R$1.350,01 no cartão ou à vista no pix — referência R$15.000)
+## 2. Individual — R$15.000/12m (12x R$1.500 no cartão ou à vista no pix)
 
 > Preço atualizado em 25/09 conforme a reprecificação de 16/09 (log-decisoes). O texto da mensagem
 > abaixo não cita preço, então não precisou mudar.

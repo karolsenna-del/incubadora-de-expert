@@ -44,7 +44,7 @@ Versão: 3.0 | Revisão: 29/09/2026 | Status: arquitetura comercial aprovada
 
 ## Passo 3: Precificação
 
-**Preço atual: R$15.000 (referência) / R$13.500 (condição atual de entrada) — tudo incluso, sem add-ons separados.**
+**Preço atual (02/10/2026): R$15.000 à vista ou 12x de R$1.500 — tudo incluso, sem add-ons separados.** A condição de entrada de R$13.500 (16/09) deixou de valer.
 
 | Fator | Análise |
 |---|---|
@@ -113,8 +113,8 @@ Página, agente de IA, funil, estrutura comercial e tráfego são partes da solu
 *(ver Passo 2 completo acima)*
 
 ## Comercial
-- **Preço de referência:** R$15.000
-- **Condição atual de entrada:** R$13.500 à vista (pix) ou 12x R$1.350,01 no cartão — tudo incluso (método, ferramentas, agente de IA, páginas, tráfego)
+- **Preço:** R$15.000 à vista (pix) ou 12x R$1.500 no cartão — tudo incluso (método, ferramentas, agente de IA, páginas, tráfego). Atualizado em 02/10/2026; antes R$13.500 / 12x R$1.350,01
+- **Bônus para pagamento à vista:** a Karol participa junto da 1ª sessão de Venda Secreta do aluno
 - **Garantia:** 30 dias de aderência
 - **Escassez:** agenda individual de acompanhamento (não urgência artificial de preço)
 - **Condições:** parcelado ao longo dos 12 meses

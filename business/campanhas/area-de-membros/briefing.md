@@ -41,9 +41,9 @@ Decisão de 11/08: a vitrine mostra o ecossistema inteiro, não só "próximo n�
 | Expert360º (curso) | R$497 | /expert360/ |
 | Método Express | R$300 | /metodo-express/ |
 | Método VIP | R$1.500 | /metodo-vip/ |
-| Sprint do Método | R$3.000 | /sprint-do-metodo/ |
+| Sprint do Método | R$5.000 | /sprint-do-metodo/ |
 | Grupo | R$5.000/12m | /grupo/ |
-| Individual | R$10.000/12m | /individual/ |
+| Individual | R$15.000/12m | /individual/ |
 
 Cada card da vitrine aponta pra página de vendas correspondente. Cada aluno vê a oferta que já tem marcada (acesso liberado) e as que ainda não tem como "próximo passo".
 
