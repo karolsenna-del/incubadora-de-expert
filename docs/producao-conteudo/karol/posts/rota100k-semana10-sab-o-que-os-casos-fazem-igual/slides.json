@@ -1,0 +1,52 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "rota100k-semana10-sab-o-que-os-casos-fazem-igual",
+  "slides": [
+    {
+      "numero": "5",
+      "texto": "<strong>coisas</strong> que os profissionais que dão certo no digital fazem igual.",
+      "modifiers": [
+        "numero-topo"
+      ]
+    },
+    {
+      "numero": "",
+      "texto": "Não é o perfil, nem a idade, nem o dinheiro. São atitudes. <strong>Compara com você: quantas você já faz?</strong>",
+      "modifiers": [
+        "sem-numero"
+      ]
+    },
+    {
+      "numero": "1",
+      "texto": "<strong>Contam a própria história</strong> antes de criar qualquer coisa.",
+      "modifiers": []
+    },
+    {
+      "numero": "2",
+      "texto": "<strong>Escolhem uma pessoa,</strong> não um público.",
+      "modifiers": []
+    },
+    {
+      "numero": "3",
+      "texto": "<strong>Conversam antes de construir.</strong> Descobrem o que vender ouvindo, não adivinhando.",
+      "modifiers": []
+    },
+    {
+      "numero": "4",
+      "texto": "<strong>Aceitam ajustar a ideia,</strong> quantas vezes precisar. Mudar de ideia é processo, não fracasso.",
+      "modifiers": []
+    },
+    {
+      "numero": "5",
+      "texto": "<strong>Não param no “não”.</strong> O não faz parte do trabalho.",
+      "modifiers": []
+    },
+    {
+      "numero": "",
+      "texto": "Salva e <strong>comenta quantas você já faz</strong>.\n\n<small>Karol Senna · Incubadora de Expert</small>",
+      "modifiers": [
+        "sem-numero"
+      ]
+    }
+  ]
+}

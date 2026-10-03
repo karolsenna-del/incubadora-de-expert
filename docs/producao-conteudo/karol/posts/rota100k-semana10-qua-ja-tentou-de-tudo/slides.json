@@ -1,0 +1,50 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "rota100k-semana10-qua-ja-tentou-de-tudo",
+  "slides": [
+    {
+      "numero": "6",
+      "texto": "Pensando em <strong>desistir do seu negócio</strong>? Confere essas 6 coisas antes. É a lista que eu uso com quem chega dizendo que já tentou de tudo.",
+      "modifiers": [
+        "numero-topo"
+      ]
+    },
+    {
+      "numero": "1",
+      "texto": "<strong>Pra quem é?</strong> Se a resposta é “pra quem quiser”, não é pra ninguém.",
+      "modifiers": []
+    },
+    {
+      "numero": "2",
+      "texto": "<strong>O que você promete?</strong> Um resultado, ou uma lista do que você sabe?",
+      "modifiers": []
+    },
+    {
+      "numero": "3",
+      "texto": "<strong>Você perguntou antes de construir?</strong> Construir primeiro e perguntar depois foi o meu erro em 8 lançamentos.",
+      "modifiers": []
+    },
+    {
+      "numero": "4",
+      "texto": "<strong>A sua história está no seu método?</strong> Sem ela, é mais um método igual aos outros.",
+      "modifiers": []
+    },
+    {
+      "numero": "5",
+      "texto": "<strong>Você está conversando com quem pode comprar?</strong> Post não substitui conversa.",
+      "modifiers": []
+    },
+    {
+      "numero": "6",
+      "texto": "<strong>Você parou cedo demais?</strong> Tem gente que desiste exatamente antes de funcionar. Não é falta de esforço. É falta de direção.",
+      "modifiers": []
+    },
+    {
+      "numero": "",
+      "texto": "Salva e <strong>manda pra quem está desanimado</strong> com o próprio negócio.\n\n<small>Karol Senna · Incubadora de Expert</small>",
+      "modifiers": [
+        "sem-numero"
+      ]
+    }
+  ]
+}

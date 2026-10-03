@@ -13,14 +13,14 @@
 - [4. Geliane — especialista em terapia (gêmeo sobrevivente)](#4-geliane--especialista-em-terapia-psicologia-pré-perinatal) — disponível
 - [5. Vanessa — manicure com formação em dados](#5-vanessa--manicure-com-formação-em-dados-e-paixão-por-inteligência-emocional) — disponível (pivotou de novo em 19/09, ver atualização)
 - [6. David — bartender que virava "show"](#6-david--bartender-que-virava-show) — ✅ usada (`posts/bartendershow-david/`)
-- [7. Analia — nutróloga integrativa (banho de luz vermelha)](#7-analia--nutróloga-integrativa-banho-de-luz-vermelha) — disponível
+- [7. Analia — nutróloga integrativa (banho de luz vermelha)](#7-analia--nutróloga-integrativa-banho-de-luz-vermelha) — 📝 roteirizada (Rota100k S10, Dom 11/10 15h, anônima)
 - [8. Rosiani — NR01 e a genialidade neurodivergente nas empresas](#8-rosiani--nr01-e-a-genialidade-neurodivergente-nas-empresas) — disponível
 - [9. Milena — regularização de imóveis rurais (Conduz Agro)](#9-milena--regularização-de-imóveis-rurais-conduz-agro) — disponível
 - [10. Hélio — advogado que virou investidor de leilão](#10-hélio--advogado-que-virou-investidor-de-leilão) — disponível
 - [11. Bruno — contador que dá paz ao empresário](#11-bruno--contador-que-dá-paz-ao-empresário) — disponível
 - [12. Rodrigo — consultor financeiro que criou método pra esteira de produtos](#12-rodrigo--consultor-financeiro-que-criou-método-pra-esteira-de-produtos) — disponível
-- [13. Nanny Faggiano — de 7 mil pra 1 milhão de seguidores](#13-nanny-faggiano--de-7-mil-pra-1-milhão-de-seguidores) — ⭐ disponível, case mais forte do banco, tem prints de prova
-- [14. Roberto — fotógrafo institucional (Itália, 20 anos) vira ferramenteiro pra experts](#14-roberto--fotógrafo-institucional-itália-20-anos-vira-ferramenteiro-pra-experts) — disponível
+- [13. Nanny Faggiano — de 7 mil pra 1 milhão de seguidores](#13-nanny-faggiano--de-7-mil-pra-1-milhão-de-seguidores) — ⛔ NÃO usar como case (Karol, 03/10: não foi ela quem fez a Nanny viralizar)
+- [14. Roberto — fotógrafo institucional (Itália, 20 anos) vira ferramenteiro pra experts](#14-roberto--fotógrafo-institucional-itália-20-anos-vira-ferramenteiro-pra-experts) — 📝 roteirizado (Rota100k S10, Qui 08/10 15h, anônimo)
 - [15. Aldo — dentista que ensina dentistas, funil de live secreta](#15-aldo--dentista-que-ensina-dentistas-funil-de-live-secreta) — disponível
 - [16. Ruhama — rotina pra mães, virada de low ticket pra comunidade por assinatura](#16-ruhama--rotina-pra-mães-virada-de-low-ticket-pra-comunidade-por-assinatura) — disponível
 - [17. Mariana — pedagoga/matemática/computação, comunidade escolar](#17-mariana--pedagogamatemáticacomputação-comunidade-escolar) — disponível
@@ -264,7 +264,7 @@
 
 **Leitura da squad:** é o case mais forte do banco inteiro — nome público, real, verificável (1M de seguidores, livro publicado, evento próprio), com prova documental (prints das conversas). Diferente dos outros 12 casos (alunos privados/anônimos), Nanny é figura pública — antes de publicar qualquer coisa que credite a Karol pela virada de posicionamento dela, vale confirmar alinhamento/autorização com a Nanny, já que é a narrativa de marca de outra pessoa pública, não uma aluna anônima.
 
-**Status:** ⭐ disponível, nunca usada como causo próprio. Prints das conversas existem — perguntar pra Karol onde estão salvos quando for produzir.
+**Status:** ⛔ **NÃO usar como case.** Karol, 03/10/2026: "nanny não a fiz viralizar.. não tem pq falar dessa história". O crescimento da Nanny não é resultado do trabalho da Karol — contar como case seria claim falsa sobre terceiro. Não sugerir de novo.
 
 ---
 

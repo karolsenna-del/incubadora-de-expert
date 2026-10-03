@@ -329,6 +329,8 @@
 
 **Status:** usada — Live 32 (01/10), Bloco 5, Movimento 4 da rotina.
 
+**⚠️ Não serve pra formato "história com antes/virada/depois" (Karol, 03/10):** não tem final — a contadora só começou a segui-la. Usar só como exemplo de prospecção offline, nunca como caso de transformação.
+
 ---
 
 ## 21. A origem da Incubadora — narrativa completa de ponta a ponta (01/10)

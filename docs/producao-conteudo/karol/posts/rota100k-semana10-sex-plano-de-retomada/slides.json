@@ -1,0 +1,52 @@
+{
+  "template": "diagnostico-tipografico",
+  "name": "rota100k-semana10-sex-plano-de-retomada",
+  "slides": [
+    {
+      "numero": "5",
+      "texto": "<strong>passos</strong> pra voltar ao seu negócio depois de parar, <strong>sem culpa</strong>.",
+      "modifiers": [
+        "numero-topo"
+      ]
+    },
+    {
+      "numero": "",
+      "texto": "Se você parou, esse post é o seu caminho de volta. Salva e usa na próxima vez que travar.",
+      "modifiers": [
+        "sem-numero"
+      ]
+    },
+    {
+      "numero": "1",
+      "texto": "<strong>Não conta os dias parados.</strong> Conta o de hoje.",
+      "modifiers": []
+    },
+    {
+      "numero": "2",
+      "texto": "<strong>Volta pelo que ficou aberto.</strong> Quem disse “vou pensar” é o seu primeiro contato.",
+      "modifiers": []
+    },
+    {
+      "numero": "3",
+      "texto": "<strong>Escolhe uma coisa só pra essa semana.</strong> A menor tarefa que cabe em qualquer semana.",
+      "modifiers": []
+    },
+    {
+      "numero": "4",
+      "texto": "<strong>Marca um horário fixo.</strong> O meu é 14h, primeira coisa do expediente.",
+      "modifiers": []
+    },
+    {
+      "numero": "5",
+      "texto": "<strong>Conta pra alguém que você voltou.</strong> Combina com um amigo que você vai prospectar 1 pessoa todos os dias e manda “fiz” pra ele, pra prestar contas.",
+      "modifiers": []
+    },
+    {
+      "numero": "",
+      "texto": "Errar não apaga o que você já construiu. <strong>Manda pra quem largou no meio.</strong>\n\n<small>Karol Senna · Incubadora de Expert</small>",
+      "modifiers": [
+        "sem-numero"
+      ]
+    }
+  ]
+}
