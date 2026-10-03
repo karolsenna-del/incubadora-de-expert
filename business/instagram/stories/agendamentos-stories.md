@@ -45,3 +45,5 @@
 | 30/09/2026 | caixinha-2026-09-28 | 1 | 18410235202093053 | sim (ver log de execucao) |
 | 01/10/2026 | expert360-terca-2026-09-29 | 1 | 17960341551228176 | sim (ver log de execucao) |
 | 01/10/2026 | expert360-quinta-2026-10-01 | 1 | 18114252053149353 | sim (ver log de execucao) |
+| 02/10/2026 | inimigo-comum-diagnostico-2026-09-21 | 1 | 18112370606164146 | sim (ver log de execucao) |
+| 03/10/2026 | isca-digital-diagnostico-2026-09-25 | 1 | 18089136461235338 | sim (ver log de execucao) |
