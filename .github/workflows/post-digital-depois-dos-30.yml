@@ -1,0 +1,89 @@
+name: Post digital-depois-dos-30
+
+on:
+  schedule:
+    - cron: '0 14 8 10 *'   # 08/10 às 14:00 UTC = 11h BRT
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publicar carrossel via Meta Graph API
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: "17841437530973593"
+          CAPTION: |
+            Entrar no digital depois dos 30 tem um peso que pouca gente fala. Você já construiu uma carreira, já resolveu problemas reais e já acumulou experiência. E, de repente, abre o Instagram e vê alguém com menos experiência vendendo todos os dias enquanto você ainda pensa: “Como ela conseguiu… e eu não?”
+
+            Talvez o problema não seja falta de capacidade. É desconfortável voltar a se sentir iniciante depois de passar anos ficando boa no que faz.
+
+            Mas lembre disso: você é iniciante no canal. Não na sua profissão.
+
+            Você não precisa jogar fora tudo que construiu para entrar no digital. Precisa aprender a transformar sua experiência em método, oferta e posicionamento.
+
+            Se você tem conhecimento, mas ainda não sabe como transformar isso em algo vendável, comenta “AULA” que eu te envio o link do mini treinamento.
+        run: |
+          python3 - <<'EOF'
+          import os, time, requests, urllib.parse as up
+
+          TOKEN   = os.environ["META_TOKEN"]
+          IG_ID   = os.environ["IG_USER_ID"]
+          CAPTION = os.environ["CAPTION"].strip()
+          BASE    = "https://graph.facebook.com/v21.0"
+
+          SLIDES = [
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1791061731/instagram-carrosseis/digital-depois-dos-30/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1791061738/instagram-carrosseis/digital-depois-dos-30/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1791061741/instagram-carrosseis/digital-depois-dos-30/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1791061744/instagram-carrosseis/digital-depois-dos-30/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1791061747/instagram-carrosseis/digital-depois-dos-30/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1791061751/instagram-carrosseis/digital-depois-dos-30/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1791061754/instagram-carrosseis/digital-depois-dos-30/slide-07.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1791061756/instagram-carrosseis/digital-depois-dos-30/slide-08.png"
+          ]
+
+          def meta_post(path, data):
+            r = requests.post(f"{BASE}/{path}", params={"access_token": TOKEN},
+                              data=up.urlencode(data).encode("utf-8"),
+                              headers={"Content-Type": "application/x-www-form-urlencoded"})
+            print(f"{path}: {r.status_code} {r.text[:200]}")
+            r.raise_for_status()
+            return r.json()
+
+          print("Criando item containers...")
+          item_ids = []
+          for i, url in enumerate(SLIDES):
+            resp = meta_post(f"{IG_ID}/media", {"image_url": url, "is_carousel_item": "true"})
+            item_ids.append(resp["id"])
+            if i < len(SLIDES) - 1:
+              time.sleep(2)
+          print(f"{len(item_ids)} containers criados")
+
+          print("Criando carousel container...")
+          resp = meta_post(f"{IG_ID}/media", {
+            "media_type": "CAROUSEL",
+            "children":   ",".join(item_ids),
+            "caption":    CAPTION,
+            "published":  "false",
+          })
+          carousel_id = resp["id"]
+          print(f"carousel_id: {carousel_id}")
+
+          print("Aguardando container ficar pronto...")
+          for tentativa in range(20):
+            r = requests.get(f"{BASE}/{carousel_id}", params={"fields": "status_code", "access_token": TOKEN})
+            status = r.json().get("status_code", "UNKNOWN")
+            if status == "FINISHED":
+              print(f"container pronto ({tentativa+1} checagens)")
+              break
+            if status == "ERROR":
+              raise RuntimeError("Container falhou com status ERROR")
+            time.sleep(5)
+          else:
+            raise RuntimeError("Container não ficou FINISHED após 100s")
+
+          print("Publicando...")
+          resp = meta_post(f"{IG_ID}/media_publish", {"creation_id": carousel_id})
+          print(f"PUBLICADO: {resp}")
+          EOF
