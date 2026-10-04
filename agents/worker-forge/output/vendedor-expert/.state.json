@@ -1,0 +1,37 @@
+{
+  "worker_slug": "vendedor-expert",
+  "worker_name": "Vendedor Expert",
+  "current_phase": 5,
+  "phase_status": {
+    "phase_0": "completed",
+    "phase_1": "completed",
+    "phase_2": "completed",
+    "phase_3": "completed",
+    "phase_4": "completed",
+    "phase_5": "in_progress"
+  },
+  "tools_identified": [
+    "google-drive-connector (CRM sheet read)",
+    "instagram-direct (Karol sends)",
+    "whatsapp (Karol sends)"
+  ],
+  "domains_identified": [
+    "prospeccao",
+    "conducao",
+    "fechamento",
+    "follow-up",
+    "reativacao",
+    "levantada-de-mao",
+    "roteamento-de-oferta"
+  ],
+  "quality_gates_passed": [
+    "QG-WF-001",
+    "QG-WF-002",
+    "QG-WF-003",
+    "QG-WF-004"
+  ],
+  "started_at": "2026-10-03",
+  "paused_at": "",
+  "worker_path": "agents/vendedor-expert/",
+  "smoke_test": "03/10: lote CRM 3 leads OK apos trocar read_file_content por download+script; aguarda aprovacao da Karol (QG-WF-005)"
+}

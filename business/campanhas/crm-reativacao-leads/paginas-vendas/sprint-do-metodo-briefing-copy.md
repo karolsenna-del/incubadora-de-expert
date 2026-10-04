@@ -278,7 +278,7 @@ Sim — ela é a única entregando o Sprint hoje, as vagas são
 limitadas pela disponibilidade dela.
 
 Tem garantia?
-Sim — 30 dias de garantia.
+Sim — 7 dias corridos de garantia incondicional antes da Semana 1 começar, com devolução integral. Depois que a construção começa, reembolso proporcional às semanas ainda não entregues. (Atualizado 03/10/2026 — alinhado com a página publicada; antes dizia 30 dias.)
 
 Como começo?
 Uma conversa rápida pra confirmar que faz sentido pro seu momento
