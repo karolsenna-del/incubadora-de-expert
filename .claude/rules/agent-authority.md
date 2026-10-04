@@ -1,96 +1,35 @@
 # Agent Authority — Auroq OS
 
-## Delegation Matrix
+## Exclusivo do Ops
 
-### Ops — Operacoes Exclusivas
+`git push --force` · Pull Request (`gh pr create` / `gh pr merge`) · MCP add/remove/configure ·
+environment bootstrap · `*update`. Nenhum outro agente executa isso — delegar pro Ops.
 
-| Operacao | Exclusivo? | Outros Agentes |
-|----------|-----------|--------------|
-| `git push` / `git push --force` | SIM | BLOQUEADO |
-| `gh pr create` / `gh pr merge` | SIM | BLOQUEADO |
-| MCP add/remove/configure | SIM | BLOQUEADO |
-| Environment bootstrap | SIM | BLOQUEADO |
-| Commit inteligente (ritual completo) | SIM | Outros agentes delegam |
+**Salvar, entregar e puxar NAO sao exclusivos.** O Ops e o dono do ritual, mas qualquer
+agente ativo o executa quando o expert pede, sem troca de agente (`rules/puxar-e-entregar.md`).
 
-### Companion — Cerebro do Sistema
+## Quem faz o que
 
-| Operacao | Exclusivo? |
-|----------|-----------|
-| Situacao diaria (boot + briefing) | SIM |
-| Sistema de memoria (contexto, decisoes, padroes) | SIM |
-| Sistema de projetos (cockpit, trackers, escalacao) | SIM |
-| Weekly review | SIM |
-| Roteamento para agente adequado | SIM |
-| Criacao de projetos | SIM |
+| Agente | Escopo proprio |
+|--------|----------------|
+| **Companion** | Situacao diaria, memoria (contexto, decisoes, padroes), projetos e trackers, weekly review, roteamento, criacao de projetos |
+| **Organizer** | Diagnostico de organizacao, mover/renomear pra organizar, limpeza de duplicados e temporarios, backup espelhado, nomenclatura (mudanca em disco sempre com aprovacao do expert) |
+| **Workers** | Executar tasks operacionais e atualizar documentos de trabalho |
+| **Squads** | Rodar pipeline completo com quality gates, produzir outputs, atualizar KBs e skills |
 
-### Organizer — Organizacao e Higiene do Sistema
+Workers e squads nao criam agentes (isso e dos Meta Squads) nem tomam decisao
+estrategica (isso e do expert).
 
-| Operacao | Exclusivo? |
-|----------|-----------|
-| Diagnostico de organizacao | SIM |
-| Mover/renomear arquivos pra organizar | SIM (com aprovacao do expert) |
-| Limpeza de temporarios e duplicados | SIM (com aprovacao do expert) |
-| Backup espelhado pro Google Drive | SIM |
-| Consultoria de nomenclatura e estrutura | SIM |
+## Meta Squads — criacao de agentes
 
-### Meta Squads — Criacao de Agentes
+`/squad-forge` squads multi-agente · `/mind-forge` mentes sinteticas e consultores ·
+`/worker-forge` workers · `/clone-forge` clones de mentes reais · `/etlmaker` KBs.
 
-| Squad | Operacao Exclusiva |
-|-------|--------------------|
-| Squad Forge (`/squad-forge`) | Criar squads multi-agente a partir de processos |
-| Mind Forge (`/mind-forge`) | Criar mentes sinteticas e consultores |
-| Worker Forge (`/worker-forge`) | Criar workers especializados |
-| Clone Forge (`/clone-forge`) | Clonar mentes reais em agentes digitais |
-| ETLmaker (`/etlmaker`) | Extrair e estruturar conhecimento em KBs |
+Fluxo: expert pede → Meta Squad adequado cria → expert valida.
 
-### Workers — Execucao
+## Escalation
 
-| Permitido | Bloqueado |
-|---------|---------|
-| `git add`, `git commit`, `git status` | `git push` (delegar pra Ops) |
-| `git branch`, `git checkout` (local) | `gh pr create/merge` (delegar pra Ops) |
-| Execucao de tasks operacionais | Criar novos agentes (delegar pro Meta Squad adequado) |
-| Atualizacao de documentos de trabalho | Decisoes estrategicas (delegar pro Expert) |
-
-### Squads — Processos Complexos
-
-| Permitido | Bloqueado |
-|---------|---------|
-| Executar pipeline completo com quality gates | `git push` (delegar pra Ops) |
-| Criar documentos de output | Criar novos agentes (delegar pro Meta Squad adequado) |
-| Atualizar KBs e skills | Decisoes fora do escopo do squad |
-
-## Cross-Agent Delegation
-
-### Git Push Flow
-```
-QUALQUER agente → Ops (*commit / *push)
-```
-
-### Novo Agente Flow
-```
-Expert pede → Meta Squad adequado cria → Expert valida
-  Squads → /squad-forge
-  Minds  → /mind-forge
-  Workers → /worker-forge
-  Clones → /clone-forge
-  KBs    → /etlmaker
-```
-
-### Projeto Novo Flow
-```
-Expert pede → Companion cria (*novo-projeto) → Expert valida
-```
-
-### Memoria Flow
-```
-QUALQUER agente detecta trigger → salva (ou pergunta) conforme rule memoria-inteligente
-Companion consolida no weekly review
-```
-
-## Escalation Rules
-
-1. Agente nao consegue completar task → Informar expert com contexto
-2. Quality gate falha → Retornar pro executor com feedback especifico
-3. Violacao constitucional detectada → BLOCK, corrigir antes de prosseguir
-4. Conflito de boundary → Constitution Art. II resolve (cada um faz o seu)
+1. Agente nao consegue completar a task → informar o expert com contexto
+2. Quality gate falha → volta pro executor com feedback especifico
+3. Violacao constitucional → BLOCK, corrigir antes de prosseguir
+4. Conflito de fronteira → Constitution Art. II resolve (cada um faz o seu)

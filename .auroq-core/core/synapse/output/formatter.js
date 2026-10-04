@@ -120,7 +120,7 @@ function formatAgent(result) {
   if (result.rules.length > 0) {
     lines.push('  RULES:');
     result.rules.forEach((rule, i) => {
-      lines.push(`    ${i}. ${rule}`);
+      lines.push(`    ${i + 1}. ${rule}`);
     });
   }
 
@@ -146,7 +146,7 @@ function formatWorkflow(result) {
   if (result.rules.length > 0) {
     lines.push('  RULES:');
     result.rules.forEach((rule, i) => {
-      lines.push(`    ${i}. ${rule}`);
+      lines.push(`    ${i + 1}. ${rule}`);
     });
   }
 
@@ -234,7 +234,7 @@ function formatStarCommands(result) {
   ];
 
   result.rules.forEach((rule, i) => {
-    lines.push(`  ${i}. ${rule}`);
+    lines.push(`  ${i + 1}. ${rule}`);
   });
 
   lines.push('============================================================');
@@ -366,7 +366,12 @@ function formatSummary(results, _metrics) {
   for (const result of results) {
     if (!result || !result.rules || result.rules.length === 0) continue;
     const meta = result.metadata || {};
-    const source = (meta.source || meta.domain || 'unknown').toUpperCase();
+    // Layers may report a single `source` or a list of `sources` (e.g. L1
+    // combines global + context). Accept both so the summary never says UNKNOWN.
+    const rawSource = Array.isArray(meta.sources) && meta.sources.length > 0
+      ? meta.sources.join('+')
+      : (meta.source || meta.domain || 'unknown');
+    const source = String(rawSource).toUpperCase();
     const reason = meta.activationReason || meta.reason || 'active layer';
     lines.push(`    [${source}] ${reason} (${result.rules.length} rules)`);
   }

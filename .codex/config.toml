@@ -16,3 +16,16 @@ args = [
     "--browser",
     "firefox",
 ]
+
+[mcp_servers.arcane]
+command = "npx"
+args = ["-y", "arcane-mcp@0.7.0"]
+# Primeira abertura baixa o pacote (ate 1-2 min no Windows); o padrao do Codex sao 10s.
+startup_timeout_sec = 120
+# Codex no Windows abre o MCP sem as variaveis basicas do sistema; sem elas nao ha DNS. AUROQ_OS_VERSION = versao do motor desta pasta.
+env = { SystemRoot = 'C:\Windows', windir = 'C:\Windows', COMSPEC = 'C:\Windows\system32\cmd.exe', SystemDrive = 'C:', APPDATA = 'C:\Users\karol\AppData\Roaming', LOCALAPPDATA = 'C:\Users\karol\AppData\Local', ProgramData = 'C:\ProgramData', ProgramFiles = 'C:\Program Files', HOMEDRIVE = 'C:', HOMEPATH = '\Users\karol', USERPROFILE = 'C:\Users\karol', TEMP = 'C:\Users\karol\AppData\Local\Temp', TMP = 'C:\Users\karol\AppData\Local\Temp', NODE_USE_SYSTEM_CA = '1', AUROQ_OS_VERSION = '2.6.6' }
+[windows]
+sandbox = "unelevated"
+
+[features]
+daemon_auto_start = false

@@ -6,23 +6,27 @@ const fs = require('fs');
 const DEFAULT_STALE_TTL_HOURS = 168; // 7 days
 
 /**
- * Read stale session TTL from core-config.yaml.
- * Falls back to DEFAULT_STALE_TTL_HOURS (168h = 7 days).
+ * Read optional project configuration without disclosing parse failures.
  *
  * @param {string} cwd - Working directory
- * @returns {number} TTL in hours
+ * @returns {object} Configuration or an empty object
  */
-function getStaleSessionTTL(cwd) {
+function loadCoreConfig(cwd) {
   try {
-    const yaml = require('js-yaml');
     const configPath = path.join(cwd, '.auroq-core', 'core-config.yaml');
-    if (!fs.existsSync(configPath)) return DEFAULT_STALE_TTL_HOURS;
+    if (!fs.existsSync(configPath)) return {};
+    const yaml = require('js-yaml');
     const config = yaml.load(fs.readFileSync(configPath, 'utf8'));
-    const ttl = config && config.synapse && config.synapse.session && config.synapse.session.staleTTLHours;
-    return typeof ttl === 'number' && ttl > 0 ? ttl : DEFAULT_STALE_TTL_HOURS;
+    return config && typeof config === 'object' ? config : {};
   } catch (_err) {
-    return DEFAULT_STALE_TTL_HOURS;
+    // YAML errors can contain configuration values; never log their text.
+    return {};
   }
+}
+
+function getStaleSessionTTL(config) {
+  const ttl = config && config.synapse && config.synapse.session && config.synapse.session.staleTTLHours;
+  return typeof ttl === 'number' && ttl > 0 ? ttl : DEFAULT_STALE_TTL_HOURS;
 }
 
 /**
@@ -46,7 +50,7 @@ function resolveHookRuntime(input) {
   if (!fs.existsSync(synapsePath)) return null;
 
   try {
-    const { loadSession, cleanStaleSessions } = require(
+    const { loadSession, createSession, cleanStaleSessions } = require(
       path.join(cwd, '.auroq-core', 'core', 'synapse', 'session', 'session-manager.js'),
     );
     const { SynapseEngine } = require(
@@ -54,13 +58,21 @@ function resolveHookRuntime(input) {
     );
 
     const sessionsDir = path.join(synapsePath, 'sessions');
-    const session = loadSession(sessionId, sessionsDir) || { prompt_count: 0 };
-    const engine = new SynapseEngine(synapsePath);
+    let session = sessionId ? loadSession(sessionId, sessionsDir) : null;
+    // loadSession validates the ID before we use it as a filename. Create only
+    // a missing session: an unreadable/corrupt existing file is kept intact.
+    if (!session && sessionId && !fs.existsSync(path.join(sessionsDir, `${sessionId}.json`))) {
+      session = createSession(sessionId, cwd, sessionsDir);
+    }
+    const shouldCleanStaleSessions = session?.prompt_count === 0;
+    session = session || { prompt_count: 0 };
+    const coreConfig = loadCoreConfig(cwd);
+    const engine = new SynapseEngine(synapsePath, { synapse: coreConfig.synapse || {} });
 
     // AC3: Run cleanup on first prompt only (fire-and-forget)
-    if (session.prompt_count === 0) {
+    if (shouldCleanStaleSessions) {
       try {
-        const ttlHours = getStaleSessionTTL(cwd);
+        const ttlHours = getStaleSessionTTL(coreConfig);
         const removed = cleanStaleSessions(sessionsDir, ttlHours);
         if (removed > 0 && process.env.DEBUG === '1') {
           console.error(`[hook-runtime] Cleaned ${removed} stale session(s) (TTL: ${ttlHours}h)`);
@@ -73,7 +85,7 @@ function resolveHookRuntime(input) {
     return { engine, session, sessionId, sessionsDir, cwd };
   } catch (error) {
     if (process.env.DEBUG === '1') {
-      console.error(`[hook-runtime] Failed to resolve runtime: ${error.message}`);
+      console.error('[hook-runtime] SYNAPSE_RUNTIME_FAILED');
     }
     return null;
   }
@@ -81,12 +93,18 @@ function resolveHookRuntime(input) {
 
 /**
  * Normalize hook output payload shape.
+ *
+ * `hookEventName` is REQUIRED by Claude Code — without it the whole payload is
+ * rejected and `additionalContext` never reaches the model.
+ *
  * @param {string} xml
- * @returns {{hookSpecificOutput: {additionalContext: string}}}
+ * @param {string} [eventName] - Hook event name (default: 'UserPromptSubmit')
+ * @returns {{hookSpecificOutput: {hookEventName: string, additionalContext: string}}}
  */
-function buildHookOutput(xml) {
+function buildHookOutput(xml, eventName) {
   return {
     hookSpecificOutput: {
+      hookEventName: eventName || 'UserPromptSubmit',
       additionalContext: xml || '',
     },
   };

@@ -14,6 +14,8 @@ const requiredPaths = [
   '.auroq-core/constitution.md',
   '.auroq-core/core-config.yaml',
   '.claude/CLAUDE.md',
+  '.claude/output-styles/direto.md',
+  '.claude/rules/operacao-autonoma.md',
   '.claude/commands',
   '.claude/rules',
   '.synapse/manifest',

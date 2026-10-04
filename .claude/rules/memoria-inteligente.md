@@ -2,7 +2,7 @@
 
 > Todo agente no Auroq OS segue este protocolo de memoria. Nao e opcional.
 
-## 6 Triggers — Quando Salvar
+## 5 Triggers — Quando Salvar
 
 ### 1. Decisao Tomada
 SE o expert decidiu algo significativo (estrategia, preco, foco, prioridade, cancelamento):
@@ -35,10 +35,8 @@ SE expert indica que vai fechar ou pede commit final:
 → Ops verifica no ritual de commit: contexto e trackers atualizados?
 → Atualizar `agents/companion/data/contexto-dinamico.md` com onde paramos
 
-### 6. Autocompact Iminente
-SE sessao longa e contexto pode ser compactado:
-→ SALVAR ESTADO IMEDIATAMENTE no documento de trabalho
-→ Atualizar contexto-dinamico se nao fez ainda
+> Salvar estado antes de compactacao de contexto e responsabilidade do
+> `dna-operacional.md` (Session Management) — nao repetir aqui.
 
 ## Onde Cada Coisa Vai
 

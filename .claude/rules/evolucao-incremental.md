@@ -1,23 +1,23 @@
 # Evolucao Incremental — Rules
 
 > Constitution Art. VI: Nunca do zero. REUSE > ADAPT > CREATE.
+> Carve-out Arcane: conteúdo de Companion, Consultor, forjas e Pack se busca no MCP `arcane`, não em `agents/`.
 
 ## Hierarquia de Verificacao
 
-Antes de criar QUALQUER artefato (documento, agente, processo, template):
+Antes de criar QUALQUER artefato:
 
 ### Gate 1: REUSE — Ja existe?
-- Buscar no Exocortex (docs/knowledge/)
-- Buscar nos squads instalados (agents/)
-- Buscar nos processos documentados (business/processos/)
-- Buscar nos templates de campanha (business/campanhas/_template/)
+- Buscar no Exocortex do aluno (`docs/knowledge/`)
+- Buscar conteúdo Arcane no MCP `arcane` (`catalogo_listar`, `busca`)
+- Buscar nos processos documentados (`business/processos/`)
+- Buscar nos templates de campanha (`business/campanhas/_template/`)
 
 SE encontrou algo que resolve → USAR direto. Nao recriar.
 
 ### Gate 2: ADAPT — Existe algo parecido?
-- Buscar por artefato similar que pode ser adaptado
+- Artefato similar que pode ser adaptado
 - Template que pode ser preenchido
-- KB de dominio adjacente que pode ser reutilizada
 - Processo de outra campanha que pode ser copiado
 
 SE encontrou algo parecido → ADAPTAR. Nao criar do zero.
@@ -25,19 +25,7 @@ SE encontrou algo parecido → ADAPTAR. Nao criar do zero.
 ### Gate 3: CREATE — Nao existe nada?
 - So agora criar do zero
 - Ao criar: documentar para futuro reuso
-- Usar templates padrao quando disponiveis
-
-## Aplicacoes Praticas
-
-| Situacao | REUSE | ADAPT | CREATE |
-|----------|-------|-------|--------|
-| Nova campanha | Copiar _template/ | Ajustar campanha anterior | So se for modelo novo |
-| Novo processo | Verificar se ja tem SOP | Adaptar SOP similar | Documentar apos fazer |
-| Novo agente | Verificar se ja existe squad/worker | Adaptar agente existente | Criar via Meta Squad adequado (/squad-forge, /mind-forge, /worker-forge, /clone-forge) |
-| Novo documento | Verificar biblioteca-pmi/ | Adaptar doc existente | Criar e adicionar a biblioteca |
 
 ## Regra de Ouro
 
-**Cada artefato criado deve ser reusavel.** Se criou um processo, documente como SOP. Se criou um template, coloque em _template/. Se criou um documento, adicione a biblioteca.
-
-O sistema fica mais rico a cada uso — nao mais poluido.
+Nunca varrer `agents/` atrás de persona, KB ou forja Arcane. Isso agora chega ao vivo.

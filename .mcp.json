@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "arcane": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "arcane-mcp@0.7.0"
+      ],
+      "env": {
+        "AUROQ_OS_VERSION": "2.6.6"
+      }
+    }
+  }
+}

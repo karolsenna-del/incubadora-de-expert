@@ -1,0 +1,22 @@
+# ── Trava do Auroq OS: a pasta do negocio nao vai ao ar (adicionada automaticamente) ──
+.claude/
+.codex/
+.agents/
+.synapse/
+.auroq-core/
+.auroq/
+.git/
+agents/
+business/
+docs/
+memoria/
+memory/
+squads/
+AGENTS.md
+CLAUDE.md
+*.md
+.env
+.env.*
+*.key
+*.pem
+.npmrc

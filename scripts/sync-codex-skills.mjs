@@ -61,10 +61,46 @@ function summaryFromMarkdown(file) {
   return output.join(' ').replace(/\s+/g, ' ').replaceAll('"', "'") || 'Agente do Auroq OS.';
 }
 
+const avisos = [];
+
+// Comando oficial = `auroq-<nome>.md` ou o Ops. Numa colisao de nome ele vence; o
+// outro comando continua valendo no Claude/Grok e so fica sem skill no Codex.
+const oficial = (file) => /^auroq-/.test(path.basename(file)) || relative(file).startsWith('.claude/commands/AuroqOS/');
+
 function registerSkill(name, commandFile) {
-  if (!/^[a-z0-9-]+$/.test(name)) throw new Error(`Nome de skill invalido: ${name}`);
-  if (skills.has(name)) throw new Error(`Colisao de nome '${name}': ${relative(skills.get(name))} e ${relative(commandFile)}`);
+  if (!/^[a-z0-9-]+$/.test(name)) {
+    avisos.push(`Comando ${relative(commandFile)} ignorado no Codex: nome de skill invalido '${name}'.`);
+    return;
+  }
+  if (skills.has(name)) {
+    // Uma colisao (ex: companion.md de antes do prefixo auroq- ao lado de auroq-companion.md)
+    // derrubava o sync inteiro — e junto a skill $companion, que a manutencao exige.
+    const atual = skills.get(name);
+    const [fica, sai] = oficial(commandFile) && !oficial(atual) ? [commandFile, atual] : [atual, commandFile];
+    skills.set(name, fica);
+    avisos.push(`Colisao de nome '${name}': usando ${relative(fica)}; ${relative(sai)} continua valendo no Claude, sem skill propria no Codex.`);
+    return;
+  }
   skills.set(name, commandFile);
+}
+
+// O aluno da um nome ao Companion no bootstrap (FASE 10 do Ops: /atlas-companion).
+// Se o comando base sumiu, $companion continua existindo, apontando pro comando dele.
+function comandoDoCompanion(file) {
+  try {
+    const texto = fs.readFileSync(file, 'utf8');
+    return /recurso_id\s*`?companion`?/.test(texto) || /agents\/companion\//.test(texto);
+  } catch {
+    return false;
+  }
+}
+
+function garantirAliasCompanion() {
+  if (skills.has('companion')) return;
+  const candidatos = [...skills.entries()]
+    .filter(([name, file]) => name.endsWith('-companion') && comandoDoCompanion(file))
+    .sort(([a], [b]) => a.localeCompare(b));
+  if (candidatos.length) skills.set('companion', candidatos[0][1]);
 }
 
 function collectSkills() {
@@ -74,6 +110,10 @@ function collectSkills() {
   for (const entry of fs.readdirSync(commandRoot, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) {
     if (!entry.isFile() || !entry.name.endsWith('.md')) continue;
     const basename = entry.name.replace(/\.md$/, '');
+    // Aposentar distribuicao nao apaga comandos vitalicios. Se as duas grafias
+    // oficiais coexistem, a ponte usa a antiga preservada; nao mascara outras colisoes.
+    const legacyAlias = { 'clone-forge': 'cloneForge', 'mind-forge': 'mindForge', 'squad-forge': 'squadForge', 'worker-forge': 'workerForge' }[basename.replace(/^auroq-/, '')];
+    if (legacyAlias && fs.existsSync(path.join(commandRoot, `${legacyAlias}.md`))) continue;
     const name = kebab(basename.replace(/^auroq-/, ''));
     registerSkill(name, path.join(commandRoot, entry.name));
   }
@@ -84,10 +124,17 @@ function collectSkills() {
       registerSkill(kebab(file.replace(/\.md$/, '')), path.join(coreAgents, file));
     }
   }
+  garantirAliasCompanion();
 }
 
 function skillContent(name, commandFile, outRoot) {
   const commandRef = sourceRef(commandFile, outRoot);
+  // Casca de MCP: mandar o Codex "resolver em agents/" faz ele varrer pasta vazia
+  // e improvisar. Quando o comando ja aponta pro MCP, a skill tem que dizer o mesmo.
+  let viaMcp = false;
+  try {
+    viaMcp = /MCP `arcane`/.test(fs.readFileSync(commandFile, 'utf8'));
+  } catch { /* comando ilegivel = trata como local */ }
   const agentsRef = sourceRef(path.join(root, 'agents'), outRoot);
   const agentsMdRef = sourceRef(path.join(root, 'AGENTS.md'), outRoot);
   const description = `Ativa o agente Auroq '${name}' no Codex CLI. Use quando o usuario digitar $${name}, /${name}, /auroq-${name}, @${name}, pedir o agente '${name}', ou solicitar seu fluxo de trabalho. Fonte de verdade: ${commandRef}.`;
@@ -105,7 +152,9 @@ ${summaryFromMarkdown(commandFile)}
 
 - Leia \`${commandRef}\` por completo.
 - Siga as instrucoes CRITICAL exatamente como escritas, incluindo persona, task, dependencias e exit behavior.
-- Resolva referencias relativas a partir de \`${root.replaceAll('\\', '/')}\`; agentes e squads ficam em \`${agentsRef}\`.
+${viaMcp
+  ? '- O conteudo deste agente vem pelo MCP `arcane`. Nao procurar em `' + agentsRef + '` — la nao ha nada deste agente.'
+  : '- Resolva referencias relativas a partir de `' + root.replaceAll('\\', '/') + '`; agentes e squads ficam em `' + agentsRef + '`.'}
 - Carregue KBs, tasks e assets apenas quando o comando ou pedido exigir.
 - Mantenha a persona ativa ate \`*exit\` ou troca explicita.
 
@@ -127,13 +176,20 @@ function readOwner(dir) {
     // Mesma pasta de projeto = mesmo dono, mesmo que o name do package tenha
     // mudado depois (ex: marcador gerado antes do package.json existir).
     if (data.sourceRoot && path.resolve(data.sourceRoot) === root) return { kind: 'owned', data };
+    // .agents/skills mora DENTRO do projeto: marcador do nosso gerador com outro caminho
+    // e a mesma pasta de negocio movida, copiada ou vinda de outra maquina. Tratar como
+    // estranho travava o sync inteiro (e com ele a skill $companion) pra sempre.
+    if (path.dirname(dir) === localOut && data.schema === 2 && data.projectId) return { kind: 'owned', data, movido: true };
     return { kind: 'foreign', data };
   } catch {
     return { kind: 'foreign', data: { invalidMarker: true } };
   }
 }
 
-function assertNoCollisions(outRoot) {
+// Local: pasta de skill sem o nosso marcador e do aluno — fica como esta, com aviso,
+// e o resto do sync segue. Global (~/.agents/skills, dividido entre projetos): recusa tudo.
+function collisions(outRoot) {
+  const preservadas = new Set();
   for (const [name, commandFile] of skills) {
     const dir = path.join(outRoot, name);
     if (!fs.existsSync(dir)) continue;
@@ -143,8 +199,15 @@ function assertNoCollisions(outRoot) {
     if (adoptLegacy && owner.kind === 'foreign' && owner.data?.projectName === projectName) continue;
     const existing = path.join(dir, 'SKILL.md');
     if (owner.kind === 'legacy' && fs.existsSync(existing) && fs.readFileSync(existing, 'utf8') === skillContent(name, commandFile, outRoot)) continue;
+    if (outRoot === localOut && owner.kind === 'legacy') continue;
+    if (outRoot === localOut) {
+      preservadas.add(name);
+      continue;
+    }
     throw new Error(`Recusando sobrescrever ${dir}; ownership: ${owner.kind}.`);
   }
+  for (const name of preservadas) avisos.push(`Skill ${name} em ${relative(path.join(outRoot, name))} nao foi gerada por este sync: mantida como esta.`);
+  return preservadas;
 }
 
 function inspect(outRoot) {
@@ -156,7 +219,9 @@ function inspect(outRoot) {
       issues.push(`Skill ausente: ${name}`);
       continue;
     }
-    if (readOwner(dir).kind !== 'owned') issues.push(`Ownership invalido: ${name}`);
+    const owner = readOwner(dir);
+    if (outRoot === localOut && owner.kind === 'unmanaged') continue; // skill do aluno, preservada
+    if (owner.kind !== 'owned' || owner.movido) issues.push(`Ownership invalido: ${name}`);
     const file = path.join(dir, 'SKILL.md');
     if (!fs.existsSync(file) || fs.readFileSync(file, 'utf8') !== skillContent(name, commandFile, outRoot)) {
       issues.push(`Drift de conteudo: ${name}`);
@@ -171,16 +236,18 @@ function inspect(outRoot) {
 
 function sync(outRoot) {
   ensureDir(outRoot);
-  assertNoCollisions(outRoot);
+  const preservadas = collisions(outRoot);
   const stage = fs.mkdtempSync(path.join(outRoot, '.auroq-stage-'));
   try {
     for (const [name, commandFile] of skills) {
+      if (preservadas.has(name)) continue;
       const dir = path.join(stage, name);
       ensureDir(dir);
       fs.writeFileSync(path.join(dir, markerFile), marker, 'utf8');
       fs.writeFileSync(path.join(dir, 'SKILL.md'), skillContent(name, commandFile, outRoot), 'utf8');
     }
     for (const name of skills.keys()) {
+      if (preservadas.has(name)) continue;
       const target = path.join(outRoot, name);
       fs.rmSync(target, { recursive: true, force: true });
       fs.renameSync(path.join(stage, name), target);
@@ -225,6 +292,11 @@ Padrao      gera skills locais em .agents/skills (recomendado)
 collectSkills();
 if (targets.includes(localOut)) cleanLegacyLocalLocation();
 
+const mostrarAvisos = () => {
+  for (const aviso of new Set(avisos)) console.error(`Aviso: ${aviso}`);
+  avisos.length = 0;
+};
+
 for (const target of targets) {
   if (check) {
     const issues = inspect(target);
@@ -235,10 +307,11 @@ for (const target of targets) {
       console.log(`Auroq: ${skills.size} skills verificadas em ${target}`);
     }
   } else if (dryRun) {
-    if (fs.existsSync(target)) assertNoCollisions(target);
+    if (fs.existsSync(target)) collisions(target);
     console.log(`Auroq: ${skills.size} skills validadas para ${target}`);
   } else {
     sync(target);
     console.log(`Auroq: ${skills.size} skills sincronizadas em ${target}`);
   }
+  mostrarAvisos();
 }

@@ -2,6 +2,10 @@
 
 Extrai conhecimento de fontes brutas e estrutura em knowledge bases.
 
-CRITICAL: First, read and adopt the persona defined in `agents/etlmaker/agents/etl-chief.md`.
-Then, read and execute the task defined in `agents/etlmaker/tasks/start.md`.
-Follow ALL instructions exactly as written. Those files are your single source of truth.
+Todo conteúdo desta forja vem pelo MCP `arcane` (catálogo `auroq-core`). Chame a tool `forja_bundle` com forge_id `etlmaker` e a fase atual. Enquanto o servidor responder, nunca procurar arquivo local desta forja.
+
+Ao ativar, mostre o selo de acesso que a tool devolver (as duas primeiras linhas) antes de qualquer outra coisa — é como o aluno vê que a licença dele foi conferida agora.
+
+Se a tool recusar (acesso vencido, cancelado, suspenso ou encerrado) ou falhar: confira se a pasta `agents/etlmaker/` existe no disco com arquivos. Se existir, avise em UMA linha — "O servidor não liberou o conteúdo ao vivo; seguindo com a versão que já está no seu computador." — e siga com o conteúdo dessa pasta como fonte da verdade, mostrando a mensagem do servidor junto. Se não existir, mostre a mensagem exatamente como veio, com o contato do suporte da Arcane, e pare. Nunca improvisar de memória, nunca tentar de novo sozinho. O que já estava no computador do aluno antes da migração continua dele.
+
+CRITICAL: While the MCP `arcane` answers, do not read `agents/etlmaker/**`. Read that folder only after the MCP refused or failed and it exists on disk.

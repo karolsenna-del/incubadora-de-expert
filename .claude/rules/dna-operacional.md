@@ -28,12 +28,10 @@ SEMPRE que for executar:
 
 ## Handoff entre Agentes
 
-SEMPRE que trocar de agente:
-
-1. Documento de trabalho deve estar atualizado com estado atual
-2. Gerar handoff artifact compacto (~379 tokens): de quem, pra quem, decisoes, proxima acao
-3. Armazenar em `.auroq/handoffs/`
-4. Novo agente le documento + handoff antes de comecar
+Ao trocar de agente, o que entra e o novo agente carrega e **so o resumo**, nunca a
+persona inteira do anterior: documento de trabalho atualizado + de quem pra quem, o que
+foi decidido, arquivos mexidos, blockers e proxima acao. O agente que sai nao leva junto
+comandos, dependencias nem greeting do anterior.
 
 ## Anti-Entropia
 
@@ -47,7 +45,10 @@ SEMPRE:
 
 ## Session Management
 
-1. Antes de autocompact iminente: salvar estado no documento de trabalho
-2. Apos autocompact: reativar agente (rele arquivos + resumo da sessao)
-3. Antes de trocar de sessao: commit (commit = botao salvar)
+O contexto de uma conversa longa e compactado sem aviso — o que nao estiver em arquivo
+se perde. Por isso:
+
+1. Sessao longa ou operacao demorada pela frente: salvar estado no documento de trabalho ANTES, nao depois
+2. Apos compactacao: reativar agente (rele arquivos + resumo da sessao)
+3. Antes de trocar de sessao: salvar (commit = botao salvar, ver `puxar-e-entregar.md`)
 4. Em novo chat: ativar agente → apontar pro documento de trabalho → continuar

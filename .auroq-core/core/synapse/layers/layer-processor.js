@@ -34,6 +34,7 @@ class LayerProcessor {
     this.name = name;
     this.layer = layer;
     this.timeout = timeout;
+    this._lastError = null;
   }
 
   /**
@@ -65,6 +66,7 @@ class LayerProcessor {
    */
   _safeProcess(context) {
     const start = Date.now();
+    this._lastError = null;
     try {
       const result = this.process(context);
       const elapsed = Date.now() - start;
@@ -72,10 +74,17 @@ class LayerProcessor {
         console.warn(`[synapse:${this.name}] Warning: Layer exceeded timeout (${elapsed}ms > ${this.timeout}ms)`);
       }
       return result;
-    } catch (error) {
-      console.warn(`[synapse:${this.name}] Error: ${error.message}`);
+    } catch (_error) {
+      // Raw error messages/stacks can contain prompt or domain content.
+      this._lastError = new Error('SYNAPSE_LAYER_FAILED');
+      console.warn(`[synapse:${this.name}] SYNAPSE_LAYER_FAILED`);
       return null;
     }
+  }
+
+  /** Return a content-free failure marker for the engine's metrics. */
+  getLastError() {
+    return this._lastError;
   }
 }
 

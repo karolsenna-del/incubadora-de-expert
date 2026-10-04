@@ -22,6 +22,7 @@ const {
   needsHandoffWarning,
 } = require('./context/context-tracker');
 const { buildLayerContext } = require('./context/context-builder');
+const { parseManifest } = require('./domain/domain-loader');
 
 const { formatSynapseRules } = require('./output/formatter');
 const { MemoryBridge } = require('./memory/memory-bridge');
@@ -122,9 +123,8 @@ class PipelineMetrics {
    * Record that a layer encountered an error.
    *
    * @param {string} name - Layer name
-   * @param {Error} error - The error object
    */
-  errorLayer(name, error) {
+  errorLayer(name) {
     const existing = this.layers[name] || {};
     if (existing.start) {
       const endTime = process.hrtime.bigint();
@@ -134,7 +134,7 @@ class PipelineMetrics {
     this.layers[name] = {
       ...existing,
       status: 'error',
-      error: error && error.message ? error.message : String(error),
+      errorCode: 'SYNAPSE_LAYER_FAILED',
     };
   }
 
@@ -169,8 +169,27 @@ class PipelineMetrics {
 // SynapseEngine
 // ---------------------------------------------------------------------------
 
-/** Hard pipeline timeout in milliseconds. */
+/** Cooperative budget between layers; synchronous work cannot be interrupted. */
 const PIPELINE_TIMEOUT_MS = 100;
+// Keep substantial headroom below the outer hook's 5000 ms safety timeout.
+const MAX_PIPELINE_TIMEOUT_MS = 1000;
+const SYNAPSE_PIPELINE_TIMEOUT_ENV = 'AUROQ_SYNAPSE_PIPELINE_TIMEOUT_MS';
+
+/** Resolve a short pipeline budget. Invalid values preserve the safe default. */
+function resolvePipelineTimeoutMs(config = {}) {
+  const fromEnv = process.env[SYNAPSE_PIPELINE_TIMEOUT_ENV];
+  const value = fromEnv !== undefined && fromEnv !== ''
+    ? fromEnv
+    : config.synapse?.pipelineTimeoutMs;
+  if (value === undefined || value === null) return PIPELINE_TIMEOUT_MS;
+  const timeout = typeof value === 'number' || typeof value === 'string' ? Number(value) : NaN;
+  if (!Number.isInteger(timeout) || timeout <= 0 || timeout > MAX_PIPELINE_TIMEOUT_MS) {
+    // Do not echo invalid values: environment/config may contain private text.
+    console.warn('[synapse:engine] SYNAPSE_INVALID_PIPELINE_TIMEOUT');
+    return PIPELINE_TIMEOUT_MS;
+  }
+  return timeout;
+}
 
 /**
  * NOG-18: Default active layers (L0-L2 only).
@@ -196,7 +215,22 @@ class SynapseEngine {
    */
   constructor(synapsePath, config = {}) {
     this.synapsePath = synapsePath;
-    this.config = config;
+
+    // The manifest is what L2/L5 use to resolve an active agent/squad to its
+    // domain file. When the caller does not pass one (the hook never did),
+    // parse it here — otherwise those layers silently produce nothing.
+    let manifest = config.manifest;
+    if (!manifest || Object.keys(manifest).length === 0) {
+      try {
+        const parsed = parseManifest(path.join(synapsePath, 'manifest'));
+        manifest = parsed;
+      } catch (err) {
+        console.warn(`[synapse:engine] Failed to parse manifest: ${err.message}`);
+        manifest = {};
+      }
+    }
+
+    this.config = { ...config, manifest };
 
     /** @type {Array<import('./layers/layer-processor')>} */
     this.layers = [];
@@ -234,8 +268,13 @@ class SynapseEngine {
   async process(prompt, session, processConfig) {
     const safeProcessConfig = (processConfig && typeof processConfig === 'object') ? processConfig : {};
     const mergedConfig = { ...this.config, ...safeProcessConfig };
+    mergedConfig.synapse = { ...(this.config.synapse || {}), ...(safeProcessConfig.synapse || {}) };
+    const pipelineTimeoutMs = resolvePipelineTimeoutMs(mergedConfig);
+    const pipelineNow = typeof safeProcessConfig.nowNs === 'function'
+      ? safeProcessConfig.nowNs
+      : process.hrtime.bigint;
     const metrics = new PipelineMetrics();
-    metrics.totalStart = process.hrtime.bigint();
+    metrics.totalStart = pipelineNow();
 
     // 1. Calculate bracket (or use fixed layers in non-legacy mode)
     const promptCount = (session && session.prompt_count) || 0;
@@ -250,7 +289,7 @@ class SynapseEngine {
 
       // Guard: no layer config (invalid bracket — should not happen)
       if (!layerConfig) {
-        metrics.totalEnd = process.hrtime.bigint();
+        metrics.totalEnd = pipelineNow();
         return { xml: '', metrics: metrics.getSummary() };
       }
       activeLayers = layerConfig.layers;
@@ -275,8 +314,8 @@ class SynapseEngine {
         continue;
       }
 
-      // Check hard pipeline timeout (convert hrtime to ms for comparison)
-      if (Number(process.hrtime.bigint() - metrics.totalStart) / 1e6 > PIPELINE_TIMEOUT_MS) {
+      // Cooperative check between layers; the host owns interruption of a stuck process.
+      if (Number(pipelineNow() - metrics.totalStart) / 1e6 >= pipelineTimeoutMs) {
         // Log remaining layers as skipped
         const remaining = this.layers.slice(this.layers.indexOf(layer));
         for (const r of remaining) {
@@ -298,14 +337,28 @@ class SynapseEngine {
         previousLayers,
       });
 
-      const result = layer._safeProcess(context);
+      let result;
+      try {
+        result = layer._safeProcess(context);
+      } catch (_error) {
+        metrics.errorLayer(layer.name);
+        continue;
+      }
 
       if (result && Array.isArray(result.rules)) {
         metrics.endLayer(layer.name, result.rules.length);
         results.push(result);
         previousLayers.push(result);
       } else if (result === null || result === undefined) {
-        metrics.skipLayer(layer.name, 'Returned null');
+        try {
+          if (typeof layer.getLastError === 'function' && layer.getLastError()) {
+            metrics.errorLayer(layer.name);
+          } else {
+            metrics.skipLayer(layer.name, 'Returned null');
+          }
+        } catch (_error) {
+          metrics.errorLayer(layer.name);
+        }
       } else {
         metrics.skipLayer(layer.name, 'Invalid result format');
       }
@@ -325,8 +378,9 @@ class SynapseEngine {
       }
     }
 
-    metrics.totalEnd = process.hrtime.bigint();
+    metrics.totalEnd = pipelineNow();
     const summary = metrics.getSummary();
+    summary.pipeline_timeout_ms = pipelineTimeoutMs;
 
     // Persist hook metrics (fire-and-forget)
     this._persistHookMetrics(summary, bracket, mergedConfig);
@@ -366,6 +420,7 @@ class SynapseEngine {
       const hookBootMs = hookBootTime ? Number(process.hrtime.bigint() - hookBootTime) / 1e6 : 0;
       const data = {
         totalDuration: summary.total_ms,
+        pipelineTimeoutMs: summary.pipeline_timeout_ms,
         hookBootMs,
         bracket,
         layersLoaded: summary.layers_loaded,
@@ -381,6 +436,7 @@ class SynapseEngine {
           duration: info.duration || 0,
           status: info.status || 'unknown',
           rules: info.rules || 0,
+          ...(info.errorCode ? { errorCode: info.errorCode } : {}),
         };
       }
       fs.writeFileSync(
@@ -397,4 +453,7 @@ module.exports = {
   SynapseEngine,
   PipelineMetrics,
   PIPELINE_TIMEOUT_MS,
+  MAX_PIPELINE_TIMEOUT_MS,
+  SYNAPSE_PIPELINE_TIMEOUT_ENV,
+  resolvePipelineTimeoutMs,
 };
