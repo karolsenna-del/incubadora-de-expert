@@ -63,11 +63,11 @@ O worker **redige**. Quem envia, liga, grava áudio e mexe no CRM é a Karol.
 | Oficinas ao vivo | — | — | — | — | 4 | — |
 | Método autoral (4 Ps) | destrava 1 ponto | você constrói | analisado e ajustado | construído pela Karol | ✓ | ✓ |
 | 6 agentes de IA do método | — | ✓ | — | — | ✓ | ✓ |
-| Materiais de aplicação | — | você monta (M2) | sugestões | feitos pela Karol | Kit de Ferramentas | ✓ |
+| Materiais de aplicação | — | você monta (M2) | sugestões | feitos pela Karol | Kit de Ferramentas | feitos pelo time |
 | Proposta da mentoria pronta | — | — | — | ✓ | ✓ | ✓ |
 | Vendas Secretas | — | ensinado no M3 | plano de validação | funil completo | oficina | ✓ |
 | Funil de Vendas Secretas montado | — | — | — | completo, pela Karol | você monta na oficina | pelo time |
-| Kit de Scripts de Vendas Secretas | — | — | — | roteiro da sessão | — | ✓ |
+| Kit de Scripts de Vendas Secretas | — | — | — | roteiro da sessão | templates pra adaptar | feitos pelo time |
 | Checkup da oferta | — | — | — | — | ✓ | ✓ |
 | Raio-X das vendas | 1 sessão gravada, se for o ponto | — | — | — | 3 vendas | integrado |
 | Agente Vendedor Secreto | — | — | — | — | ✓ | ✓ |
@@ -75,10 +75,11 @@ O worker **redige**. Quem envia, liga, grava áudio e mexe no CRM é a Karol.
 | Produto estruturado com vendas reais | — | — | — | — | ✓ | ✓ |
 | Autoridade Tríplice, narrativa, perfil | — | ensinado no M4 | — | — | na oficina | construído junto |
 | Studio de Ensaio do Expert | — | — | — | — | ✓ | ✓ |
-| Funil de Lives Semanais | — | — | — | — | você monta | ✓ |
+| Agentes de IA de conteúdo (live semanal, reels, stories) | — | — | — | — | ✓ (3) | ✓ (3) |
+| Funil de Lives Semanais | — | — | — | — | você monta | feito pelo time |
 | Página de venda · funil e automações · tráfego | — | — | — | — | — | ✓ (time) |
 | Agente de IA do seu método | — | — | — | ✓ | — | ✓ |
-| Expert Plan | — | — | — | — | ✓ | ✓ |
+| Expert Plan | — | ensinado no módulo de escala | — | — | ✓ | ✓ |
 
 Uso no copo d'água: na Condução, citar **só** a linha desta tabela que responde à dor que a pessoa trouxe ("você disse que não tem tempo → no Sprint a Karol constrói e você só aprova"). Nunca colar a tabela inteira pra lead.
 Sprint não inclui: mentoria, acompanhamento da implementação, análise de vendas reais e tráfego pago.

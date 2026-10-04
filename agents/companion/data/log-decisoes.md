@@ -10,6 +10,12 @@
 **Impacto:** [o que muda]
 -->
 
+## 04/10/2026 — Mentorias ganham 3 agentes de IA de conteúdo; Grupo recebe Kit de Scripts em template
+**Contexto:** Revisão da aba "Comparar tudo" da Jornada do Aluno (artifact WrMZHw5ZpDfSYYZYGPTjak).
+**Decisão:** **3 agentes de IA de criação de conteúdo** (live semanal, reels e stories), entregues na fase de Posicionamento, **exclusivos de Grupo e Individual**. **Grupo:** Kit de Scripts de Vendas Secretas como **templates pra adaptar**. **Individual:** materiais de aplicação, Kit de Scripts e Funil de Lives Semanais **feitos pelo time**. **Expert360º:** ensina o Expert Plan no módulo de escala.
+**Racional:** Definido pela Karol.
+**Impacto:** Jornada do Aluno v5, KB do Vendedor Expert, ecossistema e arsenal do closer atualizados. Os 3 agentes de conteúdo precisam existir antes de o aluno chegar no Posicionamento. O status de construção deles não está documentado.
+
 ## 03/10/2026 — Expert360º a R$697, Studio exclusivo das mentorias, VIP com 7 dias, Sprint com funil completo
 **Contexto:** Revisão da Jornada do Aluno com todas as ofertas (artifact WrMZHw5ZpDfSYYZYGPTjak) e da comparação lado a lado. Apareceram pontos em aberto em preço, bônus e garantia.
 **Decisão:** Expert360º passa a **R$697 à vista ou 12x R$69,70** (sai o R$497). **Studio de Ensaio sai do Expert360º** e fica exclusivo de Grupo e Individual. **Método VIP: garantia de 7 dias.** **Método Express: R$300 à vista ou 12x R$30.** **Sprint do Método entrega o Funil de Vendas Secretas completo**: captar leads, abordagem, pré-diagnóstico, agenda da sessão, diagnóstico, oferta, fechamento, onboarding (sim) e follow-up 5x (não).

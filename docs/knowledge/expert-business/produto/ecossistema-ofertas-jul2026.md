@@ -1,5 +1,7 @@
 # Ecossistema de Ofertas — Incubadora de Expert
 
+> **Atualização 04/10/2026 (Karol):** **3 agentes de IA de criação de conteúdo** (live semanal, reels e stories), entregues no Posicionamento e **só nas 2 mentorias** (Grupo e Individual). Grupo recebe o **Kit de Scripts de Vendas Secretas como templates pra adaptar**. Na Individual, materiais de aplicação, Kit de Scripts e Funil de Lives Semanais são **feitos pelo time**. O Expert360º **ensina o Expert Plan** no módulo de escala.
+
 > **Atualização 03/10/2026 — tarde (Karol):** Expert360º passa a **R$697 à vista ou 12x R$69,70** (sai o R$497) e o **Studio de Ensaio sai do curso** (fica exclusivo de Grupo e Individual). Método VIP: **garantia de 7 dias**. Método Express: **R$300 à vista ou 12x R$30**. Sprint do Método: o funil entregue é o **Funil de Vendas Secretas completo** (captar leads → abordagem → pré-diagnóstico → agenda sessão → aplica diagnóstico → oferta → fechamento → sim: onboarding / não: follow-up 5x).
 
 > **Atualização de preços 02/10/2026 (decisão da Karol, ver `agents/companion/data/log-decisoes.md`):** Individual **R$15.000 à vista ou 12x de R$1.500**; Sprint do Método **R$5.000** (inclui a criação do Funil de Vendas Secretas); Grupo **R$5.000** (passa a **R$7.500 a partir de 15/10**). Continuações pós-Sprint em revisão.

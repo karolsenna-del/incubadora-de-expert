@@ -1,5 +1,7 @@
 # Arsenal de Vendas — Closer (CRM Reativação de Leads)
 
+> **Atualização 04/10/2026 (Karol):** **3 agentes de IA de criação de conteúdo** (live semanal, reels e stories), entregues no Posicionamento e **só nas 2 mentorias** (Grupo e Individual). Grupo recebe o **Kit de Scripts de Vendas Secretas como templates pra adaptar**. Na Individual, materiais de aplicação, Kit de Scripts e Funil de Lives Semanais são **feitos pelo time**. O Expert360º **ensina o Expert Plan** no módulo de escala.
+
 > **Atualização 03/10/2026 — tarde (Karol):** Expert360º passa a **R$697 à vista ou 12x R$69,70** (sai o R$497) e **perde o Studio de Ensaio** (vira exclusivo de Grupo e Individual). Método VIP: **garantia de 7 dias**. Método Express: **R$300 à vista ou 12x R$30**. Sprint: o Funil de Vendas Secretas entregue é o **funil completo** (captação → abordagem → pré-diagnóstico → agenda → diagnóstico → oferta → fechamento → onboarding ou follow-up 5x). Mapa visual de todas as ofertas pra mandar ao lead: https://claude.ai/artifact/WrMZHw5ZpDfSYYZYGPTjak
 
 > **Atualização 03/10/2026 (Karol):** Sprint do Método = **8 semanas**, **R$5.000 à vista ou 12x R$500**, **garantia de 7 dias** (antes da Semana 1). Grupo: **nada da oferta antes da live de 14/10, 15h** (Black Expert); R$7.500 a partir de 15/10. Nanny Faggiano **não** é usada como prova. Bônus por oferta na seção 4.1.
