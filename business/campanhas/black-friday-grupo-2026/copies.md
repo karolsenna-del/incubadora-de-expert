@@ -15,6 +15,8 @@ Status (27/09): #1 + fixada APROVADOS · #2 a #7 **APROVADOS** · convite Live 3
 
 ### Disparo #3 — seg 05/10 (T-9) — MÉTODO
 
+> ✅ **APROVADO pela Karol em 04/10** (e-mail + grupo). E-mail agendado no Resend pra seg 05/10 às 9h (Cuiabá) — HTML em `emails/email-03.html`. Grupo: Karol envia (texto com o ajuste dela de 04/10: "...anos de resultado, mas ... sai o diploma, a experiência, não o método.").
+
 **Grupo WA**
 
 ```
@@ -27,7 +29,7 @@ Quanto você consegue explicar o que faz em uma frase, sem começar pelo curríc
 Zero é "eu começo falando da minha formação".
 Dez é "a pessoa entende na hora e quer saber mais".
 
-Eu pergunto porque é aqui que quase todo especialista experiente trava. Sabe muito, tem anos de resultado. Mas quando alguém pergunta "o que você faz?", sai o diploma, não o método.
+Eu pergunto porque é aqui que quase todo especialista experiente trava. Sabe muito, tem anos de resultado, mas quando alguém pergunta "o que você faz?", sai o diploma, a experiência, não o método.
 
 Diploma é o que você estudou. Método é o que você viveu.
 
@@ -906,3 +908,4 @@ Aguardando a Karol revisar os 2 primeiros antes de eu seguir. Ordem do cronogram
 2. **Copy diferente entre WhatsApp e e-mail** — nunca a mesma mensagem reescrita; ângulos diferentes
 3. Grupo é **espaço exclusivo criado só pra essa campanha** — nunca dizer "mesmo espaço que uso todo ano" ou frase que sugira reaproveitamento
 4. Escassez pública = **só tempo** (janela de 1 dia). Bônus em camada (3 vagas Central do Mentor / 1 vaga Agente do Método) são reais mas com controle manual, sem contador ao vivo
+

@@ -155,6 +155,9 @@ Confirmado: você vai criar uma **página nova "Black Expert"** com essa oferta 
 - **28/09, 22h — WhatsApp do #1 NÃO saiu hoje** (sync de contatos no iPhone falhou; Karol sem tempo — curso presencial 29 e 30/09). Replanejado: mensagem no grupo LIVE EXPERT360 (alcança grupo E) + 1:1 só A+B (75) via `business/vault/black-expert-2026/convite-whatsapp-black-expert.html` (WhatsApp Web, link pronto por contato) — Karol decide se ela ou o Leandro dispara. O e-mail #1 já cobriu os 121 com e-mail.
 - **Atualização 28-29/09 — listas de transmissão PRONTAS:** sync do iPhone resolvido (desligar/ligar Contatos da conta Gmail → reautenticar). Limite do WhatsApp Business = 100 por lista → listas "Black Expert" divididas; **172 contatos alcançáveis** (os demais sem WhatsApp ou já receberam 1:1). Texto da transmissão = #1 sem {nome} ("Oi, tudo bem?"). Karol envia o #1 pelas listas antes do curso (29/09). Karol adicionou **51 contatos manuais** às listas → cadastrados no CRM (`origem='black_expert_manual'`, 49 novos + 2 mesclados com dualhook). **CRM agora: 266 leads.**
 
+- **04/10 — e-mail #2 (02/10) NUNCA saiu pelo Resend** (só o #1 foi pra base; os outros broadcasts eram teste). Karol decidiu seguir sem ele.
+- **04/10 — e-mail #3 (v2, MÉTODO) agendado** pro segmento "Black Expert 2026" em **seg 05/10, 9h Cuiabá** (broadcast `02dfeb61`, status scheduled). Teste conferido e aprovado pela Karol.
+
 ---
 
 ## Revisão v1.4 — decisões da Karol em 02/10/2026 (prevalece sobre v1.3 onde houver conflito)
