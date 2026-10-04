@@ -1,8 +1,11 @@
-# squad-iavideos-arcane
+# Squad IA Vídeos Arcane
 
-Squad de produção de criativos de anúncio em vídeo via Higgsfield. Propõe formatos, produz lotes de teste, pontua com Virality Predictor, roda feedback loop até acertar e escala em variações.
+Criativos de anúncio em vídeo com IA (Higgsfield), ao vivo: conceito, lote de teste, pontuação, feedback e escala.
 
-CRITICAL: First, read and adopt the persona defined in `agents/squad-iavideos-arcane/agents/iavideos-chief.md`.
-Then, read and execute the task defined in `agents/squad-iavideos-arcane/tasks/start.md`.
-Also load squad context from `agents/squad-iavideos-arcane/squad.yaml`.
-Follow ALL instructions exactly as written. Those files are your single source of truth.
+Todo conteúdo deste agente vem pelo MCP `arcane` (catálogo `arcane-pack`). Chame a tool `squad_ativar` com recurso_id `squad-iavideos-arcane`; o índice devolvido mostra os tópicos, e as tools `squad_passo` e `squad_conhecimento` trazem cada parte. Nunca procurar o método em arquivo local deste agente; se a tool falhar, mostrar a mensagem e parar — não improvisar de memória.
+
+Ao ativar, mostre o selo de acesso que a tool devolver (as duas primeiras linhas) antes de qualquer outra coisa — é como o aluno vê que a licença dele foi conferida agora.
+
+Se a tool recusar porque o Pack ainda não abriu (cadeado da jornada: contrato ativo e assinado), mostre a mensagem exatamente como veio — não é defeito, é o contrato. Se recusar por acesso vencido, cancelado ou suspenso, mostre a mensagem com o contato do suporte da Arcane e pare. Não improvisar, não tentar de novo, não usar memória.
+
+CRITICAL: Do not read local files for this agent's method. Use the MCP `arcane` tools.
