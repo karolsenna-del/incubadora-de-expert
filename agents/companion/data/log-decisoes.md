@@ -14,7 +14,7 @@
 **Contexto:** Revisão da aba "Comparar tudo" da Jornada do Aluno (artifact WrMZHw5ZpDfSYYZYGPTjak).
 **Decisão:** **3 agentes de IA de criação de conteúdo** (live semanal, reels e stories), entregues na fase de Posicionamento, **exclusivos de Grupo e Individual**. **Grupo:** Kit de Scripts de Vendas Secretas como **templates pra adaptar**. **Individual:** materiais de aplicação, Kit de Scripts e Funil de Lives Semanais **feitos pelo time**. **Expert360º:** ensina o Expert Plan no módulo de escala.
 **Racional:** Definido pela Karol.
-**Impacto:** Jornada do Aluno v5, KB do Vendedor Expert, ecossistema e arsenal do closer atualizados. Os 3 agentes de conteúdo precisam existir antes de o aluno chegar no Posicionamento. O status de construção deles não está documentado.
+**Impacto:** Jornada do Aluno v5, KB do Vendedor Expert, ecossistema e arsenal do closer atualizados. Status dos 3 agentes de conteúdo (Karol, 04/10): já existem pro uso dela e vão virar Custom GPTs no ChatGPT pros alunos, no mesmo formato dos 6 agentes do método. Precisam estar prontos antes de o primeiro aluno chegar no Posicionamento.
 
 ## 03/10/2026 — Expert360º a R$697, Studio exclusivo das mentorias, VIP com 7 dias, Sprint com funil completo
 **Contexto:** Revisão da Jornada do Aluno com todas as ofertas (artifact WrMZHw5ZpDfSYYZYGPTjak) e da comparação lado a lado. Apareceram pontos em aberto em preço, bônus e garantia.
