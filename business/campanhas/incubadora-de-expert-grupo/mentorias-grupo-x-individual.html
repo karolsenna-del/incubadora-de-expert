@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grupo ou Individual</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#141414; --muted:#6b6b6b; --line:#e4e4e4; --card:#f6f6f6;
+    --orange:#f85627; --orange-soft:#fff0ea; --dark:#141414;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:"Segoe UI",Inter,system-ui,-apple-system,sans-serif;line-height:1.4;padding:32px 16px 48px}
+  .wrap{max-width:1480px;margin:0 auto}
+  header{text-align:center;margin-bottom:24px}
+  .bar{width:56px;height:5px;background:var(--orange);border-radius:3px;margin:0 auto 14px}
+  h1{font-size:clamp(26px,4vw,42px);font-weight:900;letter-spacing:-.5px}
+  h1 span{color:var(--orange)}
+  .sub{color:var(--muted);margin-top:6px;font-size:15px}
+  .tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:18px 0 8px}
+  .tabs button{border:2px solid var(--dark);background:#fff;color:var(--dark);font-weight:700;padding:8px 16px;border-radius:999px;cursor:pointer;font-size:14px}
+  .tabs button.on{background:var(--dark);color:#fff}
+  .tabs button.cmpb{border-color:var(--orange);color:var(--orange)}
+  .tabs button.cmpb.on{background:var(--orange);color:#fff}
+  .legend{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;font-size:13px;color:var(--muted);margin:10px 0 22px}
+  .legend i{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;margin-right:6px;font-style:normal;font-size:12px;font-weight:900;vertical-align:middle}
+  .k-check{background:var(--orange);color:#fff}
+  .k-live{background:var(--dark);color:#fff}
+  .k-tool{background:#e9e9e9;color:#141414}
+  .k-you{background:#fff;border:2px solid var(--muted);color:var(--muted)}
+  .track{display:grid;grid-template-columns:repeat(var(--cols,7),minmax(0,1fr));gap:12px;position:relative}
+  .track::before{content:"";position:absolute;left:4%;right:4%;top:22px;height:3px;background:var(--orange);opacity:.35;z-index:0}
+  .phase{position:relative;z-index:1;display:flex;flex-direction:column}
+  .num{width:44px;height:44px;border-radius:50%;background:var(--dark);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:16px;border:4px solid #fff}
+  .phase.final .num{background:var(--orange)}
+  .card{background:var(--card);border-radius:14px;padding:14px 12px;flex:1;display:flex;flex-direction:column;gap:10px}
+  .phase.final .card{background:var(--orange-soft);border:2px solid var(--orange)}
+  .phase.before .num{background:#9a9a9a}
+  .phase.before .card{background:#2a2a2a;color:#fff}
+  .phase.before .tag{color:#bdbdbd}
+  .phase.before .goal{color:#cfcfcf}
+  .phase.before .blk li::before{content:"✕";background:none;color:var(--orange);font-size:11px;font-weight:900;top:0;left:0;width:auto;height:auto}
+  .phase.before .blk li{padding-left:16px}
+  .phase.before em{color:#fff;font-style:italic}
+  .tag{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--orange);font-weight:800;text-align:center}
+  h2{font-size:18px;font-weight:900;text-align:center;line-height:1.15}
+  .goal{font-size:12.5px;color:var(--muted);text-align:center}
+  .blk{font-size:12.5px}
+  .blk b{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:4px}
+  .blk ul{list-style:none;display:flex;flex-direction:column;gap:3px}
+  .blk li{padding-left:14px;position:relative}
+  .blk li::before{content:"";position:absolute;left:2px;top:7px;width:6px;height:6px;border-radius:50%;background:var(--ink)}
+  .live{display:flex;gap:8px;align-items:flex-start;background:#fff;border-radius:10px;padding:8px;font-size:12.5px}
+  .tool{display:flex;gap:8px;align-items:flex-start;background:#fff;border:2px dashed #b5b5b5;border-radius:10px;padding:8px;font-size:12.5px}
+  .tool strong{display:block;font-size:12.5px}
+  .tool small{color:var(--muted);font-size:11.5px}
+  .tool.star{border:2px solid var(--orange);background:var(--orange-soft)}
+  .tool.star .ico.t{background:var(--orange);color:#fff}
+  .hl{display:inline-block;background:var(--orange);color:#fff;font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:2px 7px;border-radius:999px;margin-bottom:4px}
+  .ico.t{background:#e9e9e9;color:var(--ink)}
+  .sess{display:flex;gap:8px;align-items:flex-start;background:#fff;border:2px solid var(--orange);border-radius:10px;padding:8px;font-size:12.5px}
+  .sess strong,.live strong{display:block;font-size:12.5px}
+  .sess small,.live small{color:var(--muted);font-size:11.5px}
+  .ico{flex:0 0 22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px}
+  .ico.c{background:var(--orange);color:#fff}
+  .ico.l{background:var(--dark);color:#fff}
+  .sub3{display:flex;flex-direction:column;gap:6px}
+  .when{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-top:2px}
+  .soon{font-size:11px;color:var(--muted);font-style:italic;text-align:center}
+  .foot{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .foot div{background:var(--dark);color:#fff;border-radius:14px;padding:14px 16px;font-size:13px}
+  .foot b{color:var(--orange);display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+  .count{text-align:center;margin-top:18px;font-size:14px}
+  .count b{color:var(--orange)}
+  .brand{text-align:center;color:var(--muted);font-size:12px;margin-top:22px;letter-spacing:1px;text-transform:uppercase}
+  [hidden]{display:none!important}
+
+  /* ===== comparação ===== */
+  .cmp{margin:30px auto 0;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-top:14px}
+  table.ct{width:100%;max-width:1080px;margin:0 auto;border-collapse:separate;border-spacing:0;font-size:13.5px}
+  .ct th,.ct td{padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+  .ct td:first-child,.ct th:first-child{position:sticky;left:0;background:#fff;z-index:2;text-align:left;font-weight:600;width:40%;min-width:150px}
+  .ct td:first-child small{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px}
+  .ct td.v{text-align:center;width:30%}
+  .ct .ind{background:#f3f3f3}
+  .ct th.grp{text-align:left;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);padding:18px 10px 8px;border-bottom:2px solid var(--line);background:#fff}
+  .ct thead th{border-bottom:none;vertical-align:bottom}
+  .plan{border-radius:14px 14px 0 0;padding:16px 10px 14px;text-align:center;position:relative;background:var(--card);font-weight:400}
+  .plan.i{background:var(--dark);color:#fff}
+  .plan .pn{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:var(--orange)}
+  .plan h3{font-size:16px;font-weight:900;margin:4px 0 6px;line-height:1.15}
+  .plan .tg{font-size:12px;color:var(--muted);min-height:32px}
+  .plan.i .tg{color:#cfcfcf}
+  .plan .pr{margin-top:10px;font-size:20px;font-weight:900}
+  .plan .pr small{font-size:12px;font-weight:600}
+  .plan .pv{font-size:12px;color:var(--muted)}
+  .plan.i .pv{color:#bdbdbd}
+  .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
+  .ck{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--orange);color:#fff;font-weight:900;font-size:12px}
+  .no{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#ececec;color:#a5a5a5;font-weight:900;font-size:12px}
+  .ct .note{display:block;font-size:11.5px;color:var(--muted);margin-top:3px}
+  .ct tfoot td{border-bottom:none;font-size:12.5px;text-align:center;padding:14px 10px;background:var(--card);border-radius:0 0 14px 14px}
+  .ct tfoot td.ind{background:var(--dark);color:#fff}
+  .ct tfoot td:first-child{background:#fff}
+  .hint{text-align:center;font-size:12px;color:var(--muted);margin-top:10px}
+  @media (min-width:1100px){ .hint{display:none} }
+
+  /* ===== capa (mapa de portas) ===== */
+  .pm{max-width:920px;margin:0 auto}
+  .pm-tese{border-left:3px solid var(--orange);padding-left:14px;margin:6px auto 26px;max-width:640px;font-size:16px;font-weight:700}
+  .pm-tese span{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:4px}
+  .pm-hint{text-align:center;font-size:12.5px;color:var(--muted);margin-bottom:6px}
+  .pm-wrap{position:relative;width:100%;max-width:560px;margin:0 auto 6px;aspect-ratio:1/0.94}
+  .pm-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+  .pm-svg line{stroke:var(--line);stroke-width:1.5}
+  .pm-svg line.active{stroke:var(--orange);stroke-width:2.5}
+  .pm-hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:118px;height:118px;border-radius:50%;background:var(--dark);color:#fff;border:3px solid var(--orange);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .pm-hub b{font-size:15px;font-weight:900}
+  .pm-hub small{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.8;margin-top:3px}
+  .pm-node{position:absolute;transform:translate(-50%,-50%);z-index:2;display:flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--line);border-radius:99px;padding:7px 14px 7px 7px;cursor:pointer;white-space:nowrap;font-family:inherit}
+  .pm-node:hover{border-color:var(--orange)}
+  .pm-node .n{width:22px;height:22px;border-radius:50%;background:var(--card);color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0}
+  .pm-node .l{display:flex;flex-direction:column;line-height:1.15;text-align:left}
+  .pm-node .l b{font-size:12.5px;color:var(--ink)}
+  .pm-node .l em{font-style:normal;font-size:10.5px;color:var(--muted)}
+  .pm-node.active{border-color:var(--orange);background:var(--orange-soft)}
+  .pm-node.active .n{background:var(--orange);color:#fff}
+  .pm-detail{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+  .pm-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--orange);background:var(--orange-soft);padding:4px 10px;border-radius:99px;margin-bottom:10px}
+  .pm-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .pm-head h3{font-size:21px;font-weight:900}
+  .pm-price{text-align:right}
+  .pm-price b{font-size:20px;color:var(--orange);display:block}
+  .pm-price span{font-size:11.5px;color:var(--muted)}
+  .pm-rows{display:flex;flex-direction:column;gap:14px;margin-top:16px}
+  .pm-rows .k{font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:800;color:var(--muted);margin-bottom:3px}
+  .pm-rows .v{font-size:14px;line-height:1.55}
+  .pm-go{margin-top:18px;border:0;background:var(--dark);color:#fff;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;cursor:pointer;font-family:inherit}
+  .pm-go:hover{background:var(--orange)}
+  .pick{margin-top:36px}
+  .pick h3{text-align:center;font-size:22px;font-weight:900;margin-bottom:4px}
+  .pick > p{text-align:center;color:var(--muted);font-size:14px;margin-bottom:14px}
+  .pick-list{display:flex;flex-direction:column;gap:8px}
+  .pick-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--card);border-radius:12px;padding:12px 14px;font-size:14px;cursor:pointer;border:2px solid transparent;text-align:left;font-family:inherit;color:inherit;width:100%}
+  .pick-row:hover{border-color:var(--orange)}
+  .pick-row b{color:var(--ink);white-space:nowrap}
+  .pick-row b small{display:block;font-weight:600;color:var(--orange);font-size:12px;text-align:right}
+  .pick-out{margin-top:14px;background:var(--dark);color:#fff;border-radius:12px;padding:14px 16px;font-size:13.5px}
+  .pick-out b{color:var(--orange)}
+  @media (max-width:480px){
+    .pm-node{padding:5px 10px 5px 5px;gap:6px}
+    .pm-node .n{width:18px;height:18px;font-size:9px}
+    .pm-node .l b{font-size:11px}
+    .pm-node .l em{font-size:9.5px}
+    .pm-hub{width:92px;height:92px}
+    .pm-hub b{font-size:12px}
+    .pick-row{grid-template-columns:1fr}
+    .pick-row b small{text-align:left}
+  }
+
+  @media (max-width:1200px){
+    .track{grid-template-columns:repeat(2,1fr)}
+    .track::before{display:none}
+  }
+  @media (max-width:560px){ .track{grid-template-columns:1fr} }
+  @media print{ .tabs{display:none} body{padding:12px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="bar"></div>
+    <h1 id="h1">Jornada do Aluno na <span>Mentoria em Grupo</span></h1>
+    <p class="sub" id="subt">12 meses de acesso · você constrói, eu entro a cada entrega</p>
+  </header>
+
+  <div class="tabs">
+    <button class="on" data-v="grupo">Mentoria em Grupo</button>
+    <button data-v="individual">Mentoria Individual</button>
+    <button class="cmpb" data-v="comparar">Comparar Grupo × Individual</button>
+  </div>
+
+  <!-- ===================== GRUPO ===================== -->
+  <section id="grupo">
+    <div class="legend">
+      <span><i class="k-check">✓</i>Sessão individual com a Karol (8 no total)</span>
+      <span><i class="k-live">●</i>Oficina ao vivo (em grupo)</span>
+      <span><i class="k-you">↑</i>Sua entrega destrava a sessão</span>
+      <span><i class="k-tool">◎</i>Ferramenta de treino ou agente de IA</span>
+    </div>
+    <div class="track">
+      <div class="phase before">
+        <div class="num">✕</div>
+        <div class="card">
+          <div class="tag">Antes</div>
+          <h2>Como você está hoje</h2>
+          <p class="goal">Conhecimento de sobra, estrutura nenhuma</p>
+          <div class="blk"><ul>
+            <li>Sensação de estar desperdiçando potencial e oportunidades</li>
+            <li>Medo de ser visto como blogueira ou charlatão</li>
+            <li>Perdido e sem direção para começar</li>
+            <li>Eu sei muito, só não sei organizar</li>
+            <li>Não se sente pronto para se expor no digital</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">0</div>
+        <div class="card">
+          <div class="tag">Entrada</div>
+          <h2>Diagnóstico</h2>
+          <p class="goal">Onde você está hoje e qual é o seu caminho</p>
+          <div class="blk"><b>Você entrega</b><ul><li>DNA do Expert</li></ul></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Sessão 1 · Diagnóstico + Roteiro do Expert</strong><small>1:1, até 1h · seu plano personalizado</small></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">1</div>
+        <div class="card">
+          <div class="tag">Fase 1</div>
+          <h2>Método</h2>
+          <p class="goal">Seu conhecimento vira método</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Oficina: Seu Método em 5 Dias</strong><small>mão na massa, revisão ao vivo</small></div></div>
+          <div class="blk"><b>Você entrega</b><ul><li>Persona</li><li>Promessa</li><li>Processo Autoral</li><li>Kit de Ferramentas</li><li>Proposta inicial</li></ul></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Sessão 2 · Revisão do Método</strong><small>destravada pela sua entrega</small></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">2</div>
+        <div class="card">
+          <div class="tag">Fase 2</div>
+          <h2>Validação</h2>
+          <p class="goal">Vendas Secretas: vender antes de se expor</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Oficina: Vendas Secretas</strong><small>você monta o seu funil de venda</small></div></div>
+          <div class="blk"><b>Você entrega</b><ul><li>Oferta + Mentoria Mínima Vendável</li><li>Funil e Rastreador de Leads</li><li>Gravações das vendas</li><li>Primeiras vendas e entregas</li></ul></div>
+          <div class="sub3">
+            <div class="when">Antes</div>
+            <div class="tool"><span class="ico t">◎</span><div><strong>Simulador de Conversas de Venda</strong><small>treina a conversa antes de ir a campo</small></div></div>
+            <div class="sess"><span class="ico c">✓</span><div><strong>Sessão 3 · Checkup da Oferta</strong><small>antes de ir a campo</small></div></div>
+            <div class="when">Durante</div>
+            <div class="live"><span class="ico l">⚡</span><div><strong>Agente Vendedor Secreto</strong><small>copiloto no meio da conversa</small></div></div>
+            <div class="when">Depois</div>
+            <div class="sess"><span class="ico c">✓</span><div><strong>Sessão 4 · Raio-X de Venda</strong><small>3 vendas analisadas</small></div></div>
+            <div class="sess"><span class="ico c">✓</span><div><strong>Sessão 5 · Estruturação do Produto</strong><small>com base nas vendas reais</small></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">3</div>
+        <div class="card">
+          <div class="tag">Fase 3</div>
+          <h2>Posicionamento</h2>
+          <p class="goal">Sua autoridade fica visível</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Oficina: Posicionamento</strong><small>narrativa, mensagem, perfil</small></div></div>
+          <div class="blk"><b>Você entrega</b><ul><li>Autoridade Tríplice</li><li>Narrativa e mensagem central</li><li>Perfil e bio</li><li>Linha editorial e conteúdo</li></ul></div>
+          <div class="tool star"><span class="ico t">◎</span><div><span class="hl">Destaque</span><strong>Studio de Ensaio do Expert</strong><small>ensaie história, método e convite: grave 3 vezes, avalie as 3 e meça a sua evolução. Pode chamar alguém pra avaliar junto</small></div></div>
+          <div class="tool"><span class="ico t">◎</span><div><strong>3 agentes de IA de conteúdo</strong><small>pra criar sua live semanal, seus reels e seus stories</small></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Sessão 6 · Revisão de Posicionamento</strong><small>destravada pela sua entrega</small></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">4</div>
+        <div class="card">
+          <div class="tag">Fase 4</div>
+          <h2>Escala</h2>
+          <p class="goal">Um funil pra continuar vendendo</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Oficina: Funil de Lives Semanais</strong><small>o modelo que eu uso</small></div></div>
+          <div class="blk"><b>Você entrega</b><ul><li>Sua 1ª live gravada</li><li>Expert Plan de faturamento</li><li>Meta de sessões de venda</li></ul></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Sessão 7 · Raio-X da Live</strong><small>destravada pela sua entrega</small></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Sessão 8 · Fechamento</strong><small>Expert Plan + próximos passos</small></div></div>
+        </div>
+      </div>
+
+      <div class="phase final">
+        <div class="num">★</div>
+        <div class="card">
+          <div class="tag">Chegada</div>
+          <h2>Seu negócio autoral</h2>
+          <p class="goal">Você entra com conhecimento solto e sai com:</p>
+          <div class="blk"><ul><li>Método autoral com nome</li><li>Oferta validada em vendas reais</li><li>Produto estruturado pelo mercado</li><li>Posicionamento de autoridade</li><li>Funil de lives rodando</li><li>Plano de faturamento</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="count"><b>8 sessões individuais</b> + <b>3 vendas analisadas</b> + <b>4 oficinas ao vivo</b>, no seu ritmo, durante 12 meses</p>
+
+    <div class="foot">
+      <div><b>Sem plantão fixo</b>Você não fica preso a dia e hora. Quando conclui uma etapa, a sessão comigo é liberada.</div>
+      <div><b>IA do seu lado</b>6 agentes do método pra construir cada etapa + o Vendedor Secreto durante as suas vendas.</div>
+      <div><b>Garantia de 15 dias</b>Você vive a dinâmica da mentoria antes de seguir.</div>
+    </div>
+  </section>
+
+  <!-- ===================== INDIVIDUAL ===================== -->
+  <section id="individual" hidden>
+    <div class="legend">
+      <span><i class="k-check">✓</i>Sessão individual com a Karol (14 no total)</span>
+      <span><i class="k-live">●</i>Construído pelo time sob a minha direção</span>
+      <span><i class="k-tool">◎</i>Ferramenta de treino ou agente de IA</span>
+    </div>
+    <div class="track">
+      <div class="phase before">
+        <div class="num">✕</div>
+        <div class="card">
+          <div class="tag">Antes</div>
+          <h2>Como você está hoje</h2>
+          <p class="goal">Conhecimento de sobra, estrutura nenhuma</p>
+          <div class="blk"><ul>
+            <li>Sensação de estar desperdiçando potencial e oportunidades</li>
+            <li>Medo de ser visto como blogueira ou charlatão</li>
+            <li>Perdido e sem direção para começar</li>
+            <li>Eu sei muito, só não sei organizar</li>
+            <li>Não se sente pronto para se expor no digital</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">0</div>
+        <div class="card">
+          <div class="tag">Entrada</div>
+          <h2>Fundação</h2>
+          <p class="goal">Sua trajetória vira matéria-prima</p>
+          <div class="blk"><b>Construímos</b><ul><li>DNA do Expert</li><li>História Real</li><li>Ikigai e baseline</li></ul></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Sessão 1</strong><small>Fundação do Expert</small></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">1</div>
+        <div class="card">
+          <div class="tag">Fase 1</div>
+          <h2>Método</h2>
+          <p class="goal">Seu conhecimento vira propriedade intelectual</p>
+          <div class="blk"><b>Construímos</b><ul><li>Persona Compradora</li><li>Promessa Transformadora</li><li>Processo Autoral</li><li>Mapa do Portfólio</li></ul></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Sessões 2 a 5</strong><small>uma por construção</small></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">2</div>
+        <div class="card">
+          <div class="tag">Fase 2</div>
+          <h2>Validação</h2>
+          <p class="goal">Vendas Secretas antes da exposição</p>
+          <div class="blk"><b>Construímos</b><ul><li>Oferta + Mentoria Mínima Vendável</li><li>Kit de Scripts</li><li>Rastreador de Leads</li><li>Produto definitivo</li></ul></div>
+          <div class="sub3">
+            <div class="when">Antes</div>
+            <div class="tool"><span class="ico t">◎</span><div><strong>Simulador de Conversas de Venda</strong><small>treina a conversa antes de ir a campo</small></div></div>
+            <div class="sess"><span class="ico c">✓</span><div><strong>Sessão 6</strong><small>oferta + preparação</small></div></div>
+            <div class="when">Durante</div>
+            <div class="sess"><span class="ico c">✓</span><div><strong>Sessão 7</strong><small>conversas + Raio-X</small></div></div>
+            <div class="when">Depois</div>
+            <div class="sess"><span class="ico c">✓</span><div><strong>Sessão 8</strong><small>vendas reais → produto</small></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">3</div>
+        <div class="card">
+          <div class="tag">Fase 3</div>
+          <h2>Posicionamento</h2>
+          <p class="goal">Autoridade visível e coerente</p>
+          <div class="blk"><b>Construímos</b><ul><li>Autoridade Tríplice</li><li>Narrativa e Frase-Tese</li><li>Perfil, bio e linha editorial</li></ul></div>
+          <div class="live"><span class="ico l">●</span><div><strong>Página de venda</strong><small>construída pelo time</small></div></div>
+          <div class="tool star"><span class="ico t">◎</span><div><span class="hl">Destaque</span><strong>Studio de Ensaio do Expert</strong><small>ensaie história, método e convite: grave 3 vezes, avalie as 3 e meça a sua evolução. Pode chamar alguém pra avaliar junto</small></div></div>
+          <div class="tool"><span class="ico t">◎</span><div><strong>3 agentes de IA de conteúdo</strong><small>pra criar sua live semanal, seus reels e seus stories</small></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Sessões 9 a 11</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">4</div>
+        <div class="card">
+          <div class="tag">Fase 4</div>
+          <h2>Escala</h2>
+          <p class="goal">Operação comercial configurada</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Funil + automações</strong><small>construídos pelo time</small></div></div>
+          <div class="live"><span class="ico l">●</span><div><strong>Agente de IA do seu Método</strong></div></div>
+          <div class="live"><span class="ico l">●</span><div><strong>Tráfego configurado</strong><small>+ métricas iniciais</small></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Sessões 12 a 14</strong><small>com Expert Plan</small></div></div>
+        </div>
+      </div>
+
+      <div class="phase final">
+        <div class="num">★</div>
+        <div class="card">
+          <div class="tag">Chegada</div>
+          <h2>Pronto pra escalar</h2>
+          <p class="goal">Você entra com experiência e sai com:</p>
+          <div class="blk"><ul><li>Método autoral</li><li>Oferta validada</li><li>Produto estruturado</li><li>Posicionamento de autoridade e página</li><li>Funil, automações e IA</li><li>Tráfego configurado</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="count"><b>14 sessões individuais</b> comigo · construção conjunta durante 12 meses</p>
+
+    <div class="foot">
+      <div><b>A gente constrói junto</b>Cada decisão é tomada com você, sessão a sessão. Não é curso nem agência.</div>
+      <div><b>Time executando</b>Página, funil, automações, agente de IA e tráfego feitos sob a minha direção.</div>
+      <div><b>Garantia de 30 dias</b>Você vive a dinâmica individual antes de seguir.</div>
+    </div>
+  </section>
+
+  <!-- ===================== COMPARAR ===================== -->
+  <section id="comparar" hidden>
+    <div class="cmp">
+      <table class="ct">
+        <thead>
+          <tr>
+            <th></th>
+            <th><div class="plan"><div class="pn">Grupo</div><h3>Faça com orientação</h3><div class="tg">Oficinas + sessões a cada entrega</div><div class="pr"><small>12x de</small> R$500</div><div class="pv">ou R$5.000 à vista</div></div></th>
+            <th><div class="plan i"><span class="badge">Mais completo</span><div class="pn">Individual</div><h3>Vamos construir juntos</h3><div class="tg">Construção conjunta + equipe</div><div class="pr"><small>12x de</small> R$1.500</div><div class="pv">ou R$15.000 à vista</div></div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th class="grp" colspan="3">Como funciona</th></tr>
+          <tr><td>Duração</td><td class="v">12 meses de acesso</td><td class="v ind">12 meses</td></tr>
+          <tr><td>Sessões individuais com a Karol</td><td class="v"><b>8</b><span class="note">acionadas pela sua entrega</span></td><td class="v ind"><b>14</b><span class="note">construção conjunta</span></td></tr>
+          <tr><td>Oficinas ao vivo em grupo</td><td class="v"><span class="ck">✓</span><span class="note">4 oficinas</span></td><td class="v ind"><span class="no">✕</span></td></tr>
+          <tr><td>Quem constrói</td><td class="v">Você, com oficinas, IA e revisão da Karol</td><td class="v ind">Nós juntos, e a equipe executa</td></tr>
+
+          <tr><th class="grp" colspan="3">Método</th></tr>
+          <tr><td>Diagnóstico ou análise inicial</td><td class="v"><span class="ck">✓</span><span class="note">+ Roteiro do Expert</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Método autoral<small>Persona, Promessa, Processo e Portfólio</small></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>6 agentes de IA do método</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Materiais de aplicação do seu método</td><td class="v"><span class="ck">✓</span><span class="note">Kit de Ferramentas</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feitos pelo time</span></td></tr>
+          <tr><td>Proposta da mentoria pronta</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+
+          <tr><th class="grp" colspan="3">Validação</th></tr>
+          <tr><td>Vendas Secretas<small>vender 1:1, sem lançamento</small></td><td class="v"><span class="ck">✓</span><span class="note">oficina</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Funil de Vendas Secretas montado</td><td class="v"><span class="ck">✓</span><span class="note">você monta na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">montado pelo time</span></td></tr>
+          <tr><td>Kit de Scripts de Vendas Secretas</td><td class="v"><span class="ck">✓</span><span class="note">templates pra adaptar</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feitos pelo time</span></td></tr>
+          <tr><td>Checkup da oferta antes de ir a campo</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Raio-X das suas vendas</td><td class="v"><span class="ck">✓</span><span class="note">3 vendas analisadas</span></td><td class="v ind"><span class="ck">✓</span><span class="note">integrado ao acompanhamento</span></td></tr>
+          <tr><td>Agente Vendedor Secreto<small>copiloto durante a venda</small></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Simulador de Conversas de Venda</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Produto estruturado com as vendas reais</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+
+          <tr><th class="grp" colspan="3">Posicionamento e Escala</th></tr>
+          <tr><td>Autoridade Tríplice, narrativa e perfil</td><td class="v"><span class="ck">✓</span><span class="note">na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">construído junto</span></td></tr>
+          <tr><td>⭐ Studio de Ensaio do Expert</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Agentes de IA de criação de conteúdo<small>live semanal, reels e stories</small></td><td class="v"><span class="ck">✓</span><span class="note">3 agentes</span></td><td class="v ind"><span class="ck">✓</span><span class="note">3 agentes</span></td></tr>
+          <tr><td>Funil de Lives Semanais</td><td class="v"><span class="ck">✓</span><span class="note">você monta na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feito pelo time</span></td></tr>
+          <tr><td>Página de venda</td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feita pelo time</span></td></tr>
+          <tr><td>Funil e automações</td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feitos pelo time</span></td></tr>
+          <tr><td>Agente de IA do seu Método</td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Tráfego configurado + métricas iniciais</td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Expert Plan (seu plano de escala)</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+
+          <tr><th class="grp" colspan="3">Condições</th></tr>
+          <tr><td>Garantia</td><td class="v">15 dias</td><td class="v ind">30 dias</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td></td><td>Pra quem topa fazer com orientação</td><td class="ind">Pra quem quer construir junto, com a equipe executando</td></tr>
+        </tfoot>
+      </table>
+    </div>
+    
+  </section>
+
+  <p class="brand">Incubadora de Expert · Karol Senna</p>
+</div>
+
+<script>
+  var meta = {
+    grupo: ['Jornada do Aluno na <span>Mentoria em Grupo</span>', "12 meses de acesso · você constrói, eu entro a cada entrega"],
+    individual: ['Jornada do Aluno na <span>Mentoria Individual</span>', "12 meses · 14 sessões 1:1 · construímos juntos"],
+    comparar: ['Grupo <span>ou</span> Individual?', "O que cada mentoria entrega, lado a lado"]
+  };
+  var ids = Object.keys(meta);
+  function show(v){
+    document.querySelectorAll(".tabs button").forEach(function(x){ x.classList.toggle("on", x.dataset.v === v); });
+    ids.forEach(function(id){ document.getElementById(id).hidden = v !== id; });
+    document.getElementById("h1").innerHTML = meta[v][0];
+    document.getElementById("subt").textContent = meta[v][1];
+  }
+  document.querySelectorAll(".tabs button").forEach(function(b){
+    b.addEventListener("click", function(){ show(b.dataset.v); });
+  });
+</script>
+</body>
+</html>
