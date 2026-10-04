@@ -1,5 +1,7 @@
 # Documento Mestre Condensado — 7 Páginas de Venda (Closer)
 
+> **Atualização 03/10/2026 — tarde (Karol):** Expert360º passa a **R$697 à vista ou 12x R$69,70** (sai o R$497) e o **Studio de Ensaio sai do curso** (fica exclusivo de Grupo e Individual). Método VIP: **garantia de 7 dias**. Método Express: **R$300 à vista ou 12x R$30**. Sprint do Método: o funil entregue é o **Funil de Vendas Secretas completo** (captar leads → abordagem → pré-diagnóstico → agenda sessão → aplica diagnóstico → oferta → fechamento → sim: onboarding / não: follow-up 5x).
+
 > **Atualização de preços 02/10/2026 (decisão da Karol, ver `agents/companion/data/log-decisoes.md`):** Individual **R$15.000 à vista ou 12x de R$1.500**; Sprint do Método **R$5.000** (inclui a criação do Funil de Vendas Secretas); Grupo **R$5.000** (passa a **R$7.500 a partir de 15/10**). Continuações pós-Sprint em revisão.
 
 > Squad LPago Arcane — Atlas (Estrategista-Chief). Versão adaptada: SEM Blocos 3-6 (Calculadora Arcane / orçamento / cronograma de disparos / metas ROAS) — não se aplica, não é lançamento com evento/ingresso/ads. Só Bloco 1 (Tese e Proposta) + Bloco 2 (Público) por oferta, condensados a partir de material já existente.
@@ -74,7 +76,7 @@
 **Problema:** Quer o caminho inteiro do zero até vender, mas não tem R$15.000 nem precisa do 1:1 total — quer estrutura e comunidade, não exclusividade.
 **Solução:** Jornada completa coached em grupo, 12 meses, incluindo validação com vendas reais. Acesso aos 6 agentes de IA do método (persona, promessa, processo, portfólio, proposta, autoridade — já existem e funcionam, mesmos que os alunos do Expert360 usam hoje).
 **Peça que faltava:** Não é curso gravado (isso é o Expert360) nem 1:1 caro (isso é a Individual) — é o meio-termo real: acompanhamento humano + arsenal de IA, em grupo. **Nota Quill:** pode prometer os 2 agentes em construção (Roteiro de Validação, Feedback de Portfólio) — Karol confirma que estarão prontos até o aluno chegar nessa etapa da jornada.
-**Preço/pagamento:** R$5.000 pix à vista, ou 12x R$517,12 no cartão.
+**Preço/pagamento:** R$5.000 pix à vista, ou 12x R$500 no cartão (atualizado 03/10/2026; antes 12x R$517,12). R$7.500 a partir de 15/10.
 **Promessa de tempo (correção 01/08):** headline e CTA prometem validação/primeira venda em ATÉ 4 MESES (não os 12 meses de acesso) — 12 meses é a duração do acesso pra quem quer ir até posicionamento+escala, não o prazo até o primeiro resultado.
 **Ruminações a puxar:** "Eu já sei o suficiente, só não sei organizar." + "Será que ainda dá tempo pra mim?"
 
@@ -120,7 +122,7 @@
 ## Pendências — RESOLVIDAS (01/08/2026)
 
 1. ~~Forma de pagamento do Sprint do Método~~ — pix à vista, sem parcelamento.
-2. ~~Forma de pagamento do Grupo~~ — pix à vista ou 12x R$517,12 no cartão.
+2. ~~Forma de pagamento do Grupo~~ — pix à vista ou 12x R$500 no cartão (atualizado 03/10/2026).
 3. ~~Parcelamento da Individual~~ — confirmado em 01/08 (12x R$1.035); substituído em 02/10/2026 por 12x R$1.500.
 4. ~~Expert360: R$497 ou R$697?~~ — R$497 na página de reativação.
 5. ~~Grupo: pode prometer os 2 agentes em construção?~~ — Sim, Karol confirma que estarão prontos antes do aluno chegar nessa etapa.

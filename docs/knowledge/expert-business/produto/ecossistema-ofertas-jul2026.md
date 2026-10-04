@@ -1,6 +1,10 @@
 # Ecossistema de Ofertas — Incubadora de Expert
 
+> **Atualização 03/10/2026 — tarde (Karol):** Expert360º passa a **R$697 à vista ou 12x R$69,70** (sai o R$497) e o **Studio de Ensaio sai do curso** (fica exclusivo de Grupo e Individual). Método VIP: **garantia de 7 dias**. Método Express: **R$300 à vista ou 12x R$30**. Sprint do Método: o funil entregue é o **Funil de Vendas Secretas completo** (captar leads → abordagem → pré-diagnóstico → agenda sessão → aplica diagnóstico → oferta → fechamento → sim: onboarding / não: follow-up 5x).
+
 > **Atualização de preços 02/10/2026 (decisão da Karol, ver `agents/companion/data/log-decisoes.md`):** Individual **R$15.000 à vista ou 12x de R$1.500**; Sprint do Método **R$5.000** (inclui a criação do Funil de Vendas Secretas); Grupo **R$5.000** (passa a **R$7.500 a partir de 15/10**). Continuações pós-Sprint em revisão.
+
+> **Atualização 03/10/2026 (Karol):** Sprint do Método passa a ser **8 semanas**, **R$5.000 à vista no Pix ou 12x de R$500 no cartão** (alinhado com a página de vendas). **Bônus por oferta:** Expert360º ganha **1 sessão individual gratuita de Perfil do Expert**. Individual já tinha bônus pra pagamento à vista (Karol participa da 1ª Venda Secreta do aluno). Bônus das demais ofertas: a definir pela Karol (ela vai montar um arquivo com todos os produtos). **Garantia do Sprint: 7 dias** corridos, incondicional, antes da Semana 1 começar (confirmado pela Karol 03/10; vale o texto da página — depois que a construção começa, reembolso proporcional às semanas não entregues).
 
 > Fonte oficial de produtos e preços atuais. Substitui a tabela de preços de `ferramenta-produto-arcane-mai2026.md`
 > (aquele documento é uma análise/proposta de maio — mantido como histórico de raciocínio, não como preço vigente).
@@ -20,23 +24,26 @@ Pra quem ainda não tem método/produto validado, do desbloqueio inicial até a 
 
 | Produto | Duração | Preço | Pra quem serve | Entrega |
 |---|---|---|---|---|
-| **Expert360º** (curso) | Self-paced | R$497 (funil) / R$697 (plataforma) | Tem tempo, orçamento baixo, quer estudar sozinha | Curso gravado (M0-M4) + agentes de IA genéricos pros exercícios. Sem contato pessoal com a Karol |
-| **Método Express** | 1 encontro (1h) | R$300 | Trava pontual e específica num dos 5Ps — sabe exatamente qual é o buraco | Diagnóstico focado + plano de ação daquele ponto. Também é a oferta da **análise de sessão de vendas secretas gravada** (convite da Aula 11 do M3 do Expert360º, definido em 22/09/2026). **Nunca foi vendido — tratar como oferta em teste até validar com lead real** |
-| **Método VIP** | 3 encontros | R$1.500 (parcelado 3x R$500 no pix) | Quer fazer ela mesma, mas precisa de direção e ajuste ao longo do caminho | Encontro 1: análise de persona/promessa/método + sugestões de produto e ferramentas. Encontro 2: plano de ação de validação (sem precisar lançar/se expor ainda). Encontro 3: acompanhamento e correção do plano. Grava e transcreve cada sessão. Na prática, o foco frequentemente pesa mais pra posicionamento/conteúdo — a Karol adapta ao que o lead realmente precisa |
-| **Sprint do Método** | 6 semanas | R$5.000 (desde 02/10/2026; inclui a criação do Funil de Vendas Secretas) | Travada por falta de tempo **e** clareza ao mesmo tempo — já tentou sozinha e não conseguiu, ou não sabe nada de marketing/ferramentas/tecnologia. Projeto nunca sai do papel | A Karol constrói a fundação pronta (persona, promessa, processo autoral, proposta, ferramentas personalizadas, roteiros de validação, agente de IA do método) — o cliente só valida/aprova em cada etapa. **Não inclui validação de campo** (isso exige o próprio cliente prospectar/testar, o que não cabe em 6 semanas). Depende da agenda da Karol abrir — hoje ela é a única entregando |
-| **Grupo** (do zero) | 12 meses (única duração — 6 meses não dá tempo de validar e posicionar) | R$5.000 (à vista) ou 12x R$517,12 no cartão | Quer a jornada completa (fundação + validação + posicionamento), topa atenção dividida em grupo, prefere ticket menor que a Individual | Jornada completa coached em grupo, incluindo validação com vendas reais. Ver seção "Entregáveis por agente de IA (Grupo)" abaixo |
+| **Expert360º** (curso) | Self-paced | R$697 à vista ou 12x R$69,70 (desde 03/10/2026; antes R$497 funil / R$697 plataforma) | Tem tempo, orçamento baixo, quer estudar sozinha | Curso gravado (M0-M4) + agentes de IA genéricos pros exercícios. Sem contato pessoal com a Karol |
+| **Método Express** | 1 encontro (1h) | R$300 à vista ou 12x R$30 (parcelamento desde 03/10/2026) | Trava pontual e específica num dos 5Ps — sabe exatamente qual é o buraco | Diagnóstico focado + plano de ação daquele ponto. Também é a oferta da **análise de sessão de vendas secretas gravada** (convite da Aula 11 do M3 do Expert360º, definido em 22/09/2026). **Nunca foi vendido — tratar como oferta em teste até validar com lead real** |
+| **Método VIP** | 3 encontros | R$1.500 (parcelado 3x R$500 no pix) · garantia de 7 dias | Quer fazer ela mesma, mas precisa de direção e ajuste ao longo do caminho | Encontro 1: análise de persona/promessa/método + sugestões de produto e ferramentas. Encontro 2: plano de ação de validação (sem precisar lançar/se expor ainda). Encontro 3: acompanhamento e correção do plano. Grava e transcreve cada sessão. Na prática, o foco frequentemente pesa mais pra posicionamento/conteúdo — a Karol adapta ao que o lead realmente precisa |
+| **Sprint do Método** | 8 semanas (desde 03/10/2026; antes 6) | R$5.000 à vista no Pix ou 12x R$500 no cartão (desde 02-03/10/2026; inclui a criação do Funil de Vendas Secretas) | Travada por falta de tempo **e** clareza ao mesmo tempo — já tentou sozinha e não conseguiu, ou não sabe nada de marketing/ferramentas/tecnologia. Projeto nunca sai do papel | A Karol constrói a fundação pronta (persona, promessa, processo autoral, proposta, ferramentas personalizadas, roteiros de validação, agente de IA do método) — o cliente só valida/aprova em cada etapa. **Não inclui validação de campo** (isso exige o próprio cliente prospectar/testar, o que não cabe em 8 semanas). Depende da agenda da Karol abrir — hoje ela é a única entregando |
+| **Grupo** (do zero) | 12 meses (única duração — 6 meses não dá tempo de validar e posicionar) | R$5.000 (à vista) ou 12x R$500 no cartão (desde 03/10/2026; antes 12x R$517,12) — R$7.500 a partir de 15/10 | Quer a jornada completa (fundação + validação + posicionamento), topa atenção dividida em grupo, prefere ticket menor que a Individual | Jornada completa coached em grupo, incluindo validação com vendas reais. Ver seção "Entregáveis por agente de IA (Grupo)" abaixo |
 | **Individual** (do zero) | 12 meses | **R$15.000 à vista (pix) ou 12x R$1.500 no cartão** (desde 02/10/2026) — tudo incluso | Quer a jornada completa 1:1, com acompanhamento total | Jornada completa coached individualmente — fundação + validação + posicionamento + escala + ferramentas + agente de IA + páginas/tráfego, todos inclusos no preço (sem add-ons separados desde 16/09/2026). Ver quadro "Entregáveis da Individual por fase" abaixo e `business/campanhas/incubadora-de-expert-individual/empacotamento.md` v2.0 pro racional completo. Inclui garantia de aderência de 30 dias. É o produto mais caro e o com entrega mais garantida em agenda |
 
 ### Entregáveis do Sprint do Método, semana a semana
 
+> Atualizado 03/10/2026 para 8 semanas, conforme a página de vendas (`business/campanhas/crm-reativacao-leads/paginas-vendas/site/sprint-do-metodo/`).
+
 | Semana | Entregável |
 |---|---|
-| 1 | Sessão de imersão (levantamento: história real, dores, contexto) |
-| 2 | Documento de Persona + Promessa, já preenchido com o caso do cliente |
-| 3 | Processo autoral estruturado |
-| 4 | Ferramentas personalizadas pro método dele |
-| 5 | Proposta de venda + roteiros reais das ligações de Vendas Secretas |
-| 6 | Agente de IA do método dele, montado e treinado + reunião de handoff |
+| 1 | Imersão (levantamento: história real, dores, contexto) |
+| 2 | Pra quem é + o que resolve (Persona + Promessa), escrito com o caso do cliente |
+| 3 | Seu método (processo autoral estruturado) |
+| 4 | Materiais de aplicação (ferramentas personalizadas pro método dele) |
+| 5 | Proposta da mentoria, pronta pra apresentar |
+| 6–7 | Funil de Vendas Secretas completo montado: captação de leads, abordagem, pré-diagnóstico, agendamento da sessão, diagnóstico, oferta, fechamento, onboarding (sim) e follow-up 5x (não). Cliente escolhe a plataforma entre as opções disponíveis (atualizado 03/10/2026) |
+| 8 | Assistente de IA treinado no conhecimento dele + reunião de entrega final |
 
 ### Entregáveis da Individual, por fase (12 meses)
 
@@ -85,7 +92,7 @@ Serve tanto quem está criando um curso do zero (entrega roteiros + ferramentas 
 
 ## Pagamento (confirmado 01/08/2026)
 
-Pix é sempre à vista. Cartão parcelado em 12x só nas 2 mentorias (Grupo e Individual) — as demais ofertas (Expert360, Método Express, Método VIP, Sprint do Método, Diagnóstico Ferramentas) fecham à vista no pix.
+Pix é sempre à vista. Cartão parcelado em 12x nas 2 mentorias (Grupo e Individual) e, desde 03/10/2026, também no **Sprint do Método (12x R$500)**, no **Expert360º (12x R$69,70)** e no **Método Express (12x R$30)**. Método VIP: 3x R$500 no pix. Diagnóstico Ferramentas fecha à vista no pix.
 
 ## Pendências
 

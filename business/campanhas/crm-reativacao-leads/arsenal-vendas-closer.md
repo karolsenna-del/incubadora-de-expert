@@ -1,5 +1,9 @@
 # Arsenal de Vendas — Closer (CRM Reativação de Leads)
 
+> **Atualização 03/10/2026 — tarde (Karol):** Expert360º passa a **R$697 à vista ou 12x R$69,70** (sai o R$497) e **perde o Studio de Ensaio** (vira exclusivo de Grupo e Individual). Método VIP: **garantia de 7 dias**. Método Express: **R$300 à vista ou 12x R$30**. Sprint: o Funil de Vendas Secretas entregue é o **funil completo** (captação → abordagem → pré-diagnóstico → agenda → diagnóstico → oferta → fechamento → onboarding ou follow-up 5x). Mapa visual de todas as ofertas pra mandar ao lead: https://claude.ai/artifact/WrMZHw5ZpDfSYYZYGPTjak
+
+> **Atualização 03/10/2026 (Karol):** Sprint do Método = **8 semanas**, **R$5.000 à vista ou 12x R$500**, **garantia de 7 dias** (antes da Semana 1). Grupo: **nada da oferta antes da live de 14/10, 15h** (Black Expert); R$7.500 a partir de 15/10. Nanny Faggiano **não** é usada como prova. Bônus por oferta na seção 4.1.
+
 > **Atualização de preços 02/10/2026 (decisão da Karol, ver `agents/companion/data/log-decisoes.md`):** Individual **R$15.000 à vista ou 12x de R$1.500**; Sprint do Método **R$5.000** (inclui a criação do Funil de Vendas Secretas); Grupo **R$5.000** (passa a **R$7.500 a partir de 15/10**). Continuações pós-Sprint em revisão.
 
 > Documento de apoio pro comercial/closer contratado pela Karol reativar leads do CRM (sessão estratégica, webinar, compradores de outro produto, grupo do WhatsApp).
@@ -64,7 +68,7 @@ Conhece a Karol só de conteúdo/palestra — nunca teve conversa 1:1, nunca foi
 Já pagou algo à Karol antes — a barreira de confiança pra pagar de novo é menor. Mas o produto que comprou não é sobre método/vendas, é sobre outra coisa — não assuma que ela já entende a oferta da mentoria.
 
 - Primeira pergunta que direciona tudo: **ela já criou o método a partir do workshop?**
-  - **Se já criou mas ainda não valida/vende** → ela já mostrou que executa sozinha — **Sprint do Método** (6 semanas, fundação pronta + roteiros de validação) é o caminho natural, sem precisar dos passos mais lentos (Express/VIP).
+  - **Se já criou mas ainda não valida/vende** → ela já mostrou que executa sozinha — **Sprint do Método** (8 semanas, fundação pronta + Funil de Vendas Secretas montado) é o caminho natural, sem precisar dos passos mais lentos (Express/VIP).
   - **Se não criou nada ainda** → segue a tabela padrão do Eixo 1 pelo perfil dela (seção 5).
 - Cuidado pra não confundir com quem já é **aluna da própria mentoria** (`status_geral = aluno_ativo`, comprou o Combo Incubadora) — esse caso raro não é reativação de mentoria nova, é a oferta de Diagnóstico Ferramentas (Eixo 2, seção 5).
 
@@ -84,25 +88,38 @@ Vem das lives semanais — engajamento de conteúdo, não contato comercial. Mui
 | # | Produto | Eixo | Duração | Preço | Observação |
 |---|---------|------|---------|-------|------------|
 | 1 | Diagnóstico Ferramentas | Manter/escalar | 1 sessão | R$97 (cashback se contratar construção) | Só pra quem já tem produto/método rodando |
-| 2 | Método Express | Vender | 1 encontro (1h) | R$300 | **Nunca vendido — oferta em teste** |
-| 3 | Expert360º (funil) | Vender | Self-paced | R$497 | Curso gravado, sem contato pessoal |
-| 3 | Expert360º (plataforma) | Vender | Self-paced | R$697 | Curso gravado, sem contato pessoal |
-| 4 | Método VIP | Vender | 3 encontros | R$1.500 (3x R$500 pix) | Orientação — cliente executa, ela adapta o foco |
-| 5 | Sprint do Método | Vender | 6 semanas | R$5.000 (inclui Funil de Vendas Secretas) | Fundação pronta feita por ela, sem validação. Depende de agenda dela abrir |
+| 2 | Método Express | Vender | 1 encontro (1h) | R$300 à vista ou 12x R$30 | **Nunca vendido — oferta em teste** |
+| 3 | Expert360º (curso) | Vender | Self-paced | R$697 à vista ou 12x R$69,70 (desde 03/10; antes R$497) | Curso gravado, sem contato pessoal. Garantia 7 dias |
+| 4 | Método VIP | Vender | 3 encontros | R$1.500 (3x R$500 pix) | Orientação — cliente executa, ela adapta o foco. Garantia 7 dias |
+| 5 | Sprint do Método | Vender | 8 semanas | R$5.000 à vista ou 12x R$500 (inclui Funil de Vendas Secretas) | Fundação + funil feitos por ela, sem validação de campo. Garantia 7 dias. Depende de agenda dela abrir |
 | 6a | → Continuação Grupo (pós-Sprint) | Vender | 6 meses | ⚠️ em revisão (era R$2.000 com o Sprint a R$3.000) | Não ofertar sem a Karol definir o valor novo |
 | 6b | → Continuação Individual (pós-Sprint) | Vender | 6 meses | ⚠️ em revisão (era R$5.000, ancorado na Individual a R$10.000) | Não ofertar sem a Karol definir o valor novo |
-| 7 | Grupo (do zero) | Vender | 12 meses (única duração) | R$5.000 | Jornada completa, atenção dividida |
+| 7 | Grupo (do zero) | Vender | 12 meses (única duração) | R$5.000 à vista ou 12x R$500 (**R$7.500 a partir de 15/10**) | Jornada completa, atenção dividida. **Oferta só revelada na live de 14/10, 15h** — antes disso, só convidar pra live |
 | 8 | Individual (do zero) | Vender | 12 meses | R$15.000 ou 12x R$1.500 | Jornada completa 1:1, entrega mais garantida em agenda |
 
 Fonte oficial (se este arsenal desatualizar, esse arquivo vale): `docs/knowledge/expert-business/produto/ecossistema-ofertas-jul2026.md`.
 
 ### O que cada oferta entrega de verdade (pra usar na ligação)
 
-**Sprint do Método (6 semanas)** — semana 1: sessão de imersão. Semana 2: persona+promessa documentados. Semana 3: processo autoral. Semana 4: ferramentas personalizadas. Semana 5: proposta + roteiros reais das ligações de venda. Semana 6: agente de IA do método dele, pronto + handoff. Não inclui validar com vendas reais — isso é a continuação.
+**Sprint do Método (8 semanas)** — semana 1: imersão. Semana 2: pra quem é + o que resolve (persona + promessa). Semana 3: o método dele. Semana 4: materiais de aplicação (ferramentas personalizadas). Semana 5: proposta pronta. Semanas 6-7: Funil de Vendas Secretas completo montado (captação de leads, abordagem, pré-diagnóstico, agendamento da sessão, diagnóstico, oferta, fechamento, onboarding de quem compra e follow-up em 5 contatos pra quem não fecha). Semana 8: assistente de IA treinado no conhecimento dele + entrega final. É prestação de serviço: não inclui mentoria, acompanhamento da implementação nem validação com vendas reais. Garantia de 7 dias antes da Semana 1.
 
 **Individual (12 meses)** — meses 1-3: fundação personalizada (igual ao Sprint, no ritmo coached). Meses 4-6: roteiros reais de venda pro caso dele + validação. Meses 7-12: agente de IA do método + página construída + funil de automação configurado + tráfego pronto pra rodar. É a única oferta que entrega infraestrutura pronta (página, funil, tráfego), não só orientação.
 
-**Grupo (12 meses)** — acesso aos 6 agentes do método (persona, promessa, processo, portfólio, proposta, autoridade — **já existem e funcionam**, mesmos que os alunos do Expert360 usam), jornada completa coached em grupo. **Ainda não tem** o agente de roteiro de validação nem o agente de feedback de portfólio — não prometa esses dois, ainda estão em construção.
+**Grupo (12 meses)** — redesenhado em 02/10/2026: sem plantão fixo. **8 sessões individuais acionadas pela entrega do aluno** (Diagnóstico + Roteiro do Expert, Revisão do Método, Checkup da Oferta, Raio-X de Venda, Estruturação do Produto, Revisão de Posicionamento, Raio-X da Live, Fechamento), **4 oficinas ao vivo** (Método = Desafio 5 Dias, Vendas Secretas, Posicionamento, Funil de Lives), Raio-X de 3 vendas, acesso aos 6 agentes do método. No Grupo o aluno faz com oficina e revisão; na Individual constrói junto e o time executa. **Até a live de 14/10, 15h, nada disso é apresentado a lead** (Black Expert) — só convite pra live. Fonte: log de decisões 02/10/2026.
+
+### 4.1 Bônus e garantias por oferta (03/10/2026)
+
+| Oferta | Bônus | Garantia |
+|---|---|---|
+| Expert360º | 1 sessão individual gratuita de Perfil do Expert (Studio de Ensaio saiu em 03/10 — não oferecer) | 7 dias |
+| Sprint do Método | a definir pela Karol | 7 dias, incondicional, antes da Semana 1 |
+| Individual | Karol participa junto da 1ª Venda Secreta do aluno (só à vista) | 30 dias de aderência |
+| Grupo | Bônus da Black Expert só revelados na live de 14/10, 15h | conforme página |
+| Método VIP | a definir pela Karol | 7 dias |
+| Express | a definir pela Karol | 100% de volta se não ficar satisfeito com a sessão |
+| Diagnóstico Ferramentas | a definir pela Karol | conforme página |
+
+**Regra:** bônus fora desta tabela só com aprovação da Karol, caso a caso. Bônus de decisão rápida tem que ser real e ligado à dor que a pessoa contou.
 
 ---
 
@@ -117,18 +134,17 @@ Antes de empurrar qualquer produto, descubra uma coisa: **o lead já tem um mét
 
 | Se o lead... | Ofereça | Preço |
 |---|---|---|
-| Só quer clareza pontual num ponto específico, orçamento baixo | Método Express *(oferta em teste — ver nota abaixo)* | R$300 |
-| Tem orçamento baixo, tempo disponível, prefere estudar sozinha | Expert360º (curso) | R$497-697 |
+| Só quer clareza pontual num ponto específico, orçamento baixo | Método Express *(oferta em teste — ver nota abaixo)* | R$300 à vista ou 12x R$30 |
+| Tem orçamento baixo, tempo disponível, prefere estudar sozinha | Expert360º (curso) | R$697 à vista ou 12x R$69,70 |
 | Quer fazer ela mesma mas precisa de direção e ajuste no caminho | Método VIP | R$1.500 (3x R$500 pix) |
-| **Já tentou e não conseguiu, ou não sabe nada de marketing/tecnologia — trava por falta de tempo E clareza** | **Sprint do Método** | R$5.000 |
-| Quer jornada completa (validação incluída), topa grupo, ticket menor | Grupo | R$5.000 (12 meses) |
+| **Já tentou e não conseguiu, ou não sabe nada de marketing/tecnologia — trava por falta de tempo E clareza** | **Sprint do Método** | R$5.000 à vista ou 12x R$500 |
+| Quer jornada completa (validação incluída), topa grupo, ticket menor | Grupo | R$5.000 (12 meses) — R$7.500 a partir de 15/10; oferta só na live de 14/10 |
 | Quer jornada completa 1:1, quer o acompanhamento mais garantido | Individual | R$15.000 (12 meses) |
 
 **Nota — Método Express nunca foi vendido.** Se for oferecer, deixe claro internamente (não precisa avisar o lead) que é uma oferta nova sendo testada. Avise a Karol como foi a primeira venda, se acontecer.
 
 **Se o lead já fez o Sprint do Método antes** (ou está decidindo entre Sprint e continuar depois): a continuação é mais barata que entrar direto, porque a fundação já está pronta —
-- Continuação → Grupo: R$2.000 (6 meses)
-- Continuação → Individual: R$5.000 (6 meses) — R$2.000 de desconto vs. Individual do zero
+- ⚠️ **Preços das continuações (Grupo e Individual pós-Sprint) estão em revisão** desde as reprecificações de 16/09 e 02/10 — **não ofertar** até a Karol definir. Os valores antigos (R$2.000 / R$5.000) não valem mais.
 
 ### Eixo 2 — já tem produto rodando
 
@@ -169,7 +185,7 @@ Bom pra quem já fechou antes (ex: leads `aluno_ativo` do Hotmart — Combo Incu
 | "Se for pra fazer, tem que ser bem feito." | É por isso que a Individual e o Sprint do Método são 1:1 — nada de fórmula genérica de grupo. Ferramentas e agente são construídos sob medida pra ele. |
 | "Não tenho tempo." | Sprint do Método é literalmente pra isso: ela constrói, ele só valida em pontos específicos. |
 | "Grupo não é para mim." | Certo — não ofereça Grupo pra esse perfil. Direcione pra Individual ou Sprint do Método + continuação Individual. |
-| "Preciso confiar muito." | Use prova de reconhecimento por pares, não depoimento de iniciante — indicação espontânea de outra criadora (metodo-nanny.png), ou prova de quem já é estabelecido (Lua Azevedo, live-expert360-lua.png). |
+| "Preciso confiar muito." | Use prova de reconhecimento por pares, não depoimento de iniciante — prova de quem já é estabelecido (Lua Azevedo, live-expert360-lua.png). **Não usar a Nanny Faggiano** (decisão da Karol 03/10/2026). |
 | "Já estou bem financeiramente." | Não é sobre necessidade financeira — é sobre relevância e legado. Pergunte o que ele vê no mercado mudando ao redor dele. |
 | "Não quero depender de algoritmo." | Vendas Secretas é exatamente um funil discreto, sem depender de audiência ou algoritmo. |
 | "Digital é instável." | Não é pra ele virar influenciador. É um ativo estruturado e documentado — método, não sorte de viral. |
@@ -196,7 +212,7 @@ Isso é verdade sobre o momento atual do ecossistema: antes só existia Grupo/In
 
 Não é a mesma coisa que o diagnóstico não converter — aqui ela **tentou executar sozinha** e travou. A ponte é sobre o formato, não sobre a oferta:
 
-> "O workshop te deu o caminho, mas era pra fazer por conta própria — e boa parte do que trava não é falta de conteúdo, é não ter alguém junto pra decidir com você. O Sprint do Método é literalmente isso: a fundação sai construída COM você em 6 semanas, não é mais um material pra você aplicar sozinha."
+> "O workshop te deu o caminho, mas era pra fazer por conta própria — e boa parte do que trava não é falta de conteúdo, é não ter alguém junto pra decidir com você. O Sprint do Método é literalmente isso: a fundação e o funil saem construídos COM você em 8 semanas, não é mais um material pra você aplicar sozinha."
 
 Se ela disser que nem chegou a tentar (comprou e não usou), não empurre o Sprint de cara — volta pra pergunta padrão da seção 3 (já criou o método ou não) e trata pelo Eixo 1 normal.
 
@@ -223,7 +239,7 @@ Manda o link certo conforme a oferta que você indicou na ligação (não manda 
 | Sprint do Método (R$5.000) | https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/ |
 | Grupo (R$5.000/12m) | https://vendas.incubadoradeexpert.com.br/grupo/ |
 | Individual (R$15.000/12m) | https://vendas.incubadoradeexpert.com.br/individual/ |
-| Expert360º (R$497) | https://vendas.incubadoradeexpert.com.br/expert360/ |
+| Expert360º (R$697) ⚠️ página ainda mostra R$497 até ser atualizada | https://vendas.incubadoradeexpert.com.br/expert360/ |
 | Diagnóstico Ferramentas (R$97) | https://vendas.incubadoradeexpert.com.br/diagnostico-ferramentas/ |
 
 **Atualizado 13/08:** as 7 páginas agora vivem em domínio próprio (`vendas.incubadoradeexpert.com.br`); o link antigo (`vendas-incubadora.vercel.app`) continua no ar em paralelo, mas manda sempre o novo daqui pra frente. Todos os 7 botões já abrem o checkout real na própria página (Voomp Creators) — o lead pode fechar sozinho, sem precisar de link separado nem de você. Antes só Grupo/Individual/Expert360º tinham isso; Express, VIP, Sprint e Diagnóstico foram migrados nesta data (VIP e Sprint corrigiram um bug — apontavam pro checkout errado desde 12/08; Grupo e Individual também trocaram de Hotmart pra Voomp, aprovado pela Karol).

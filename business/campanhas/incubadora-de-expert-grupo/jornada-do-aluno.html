@@ -17,16 +17,18 @@
   h1{font-size:clamp(26px,4vw,42px);font-weight:900;letter-spacing:-.5px}
   h1 span{color:var(--orange)}
   .sub{color:var(--muted);margin-top:6px;font-size:15px}
-  .tabs{display:flex;justify-content:center;gap:8px;margin:18px 0 8px}
-  .tabs button{border:2px solid var(--dark);background:#fff;color:var(--dark);font-weight:700;padding:8px 18px;border-radius:999px;cursor:pointer;font-size:14px}
+  .tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:18px 0 8px}
+  .tabs button{border:2px solid var(--dark);background:#fff;color:var(--dark);font-weight:700;padding:8px 16px;border-radius:999px;cursor:pointer;font-size:14px}
   .tabs button.on{background:var(--dark);color:#fff}
+  .tabs button.cmpb{border-color:var(--orange);color:var(--orange)}
+  .tabs button.cmpb.on{background:var(--orange);color:#fff}
   .legend{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;font-size:13px;color:var(--muted);margin:10px 0 22px}
   .legend i{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;margin-right:6px;font-style:normal;font-size:12px;font-weight:900;vertical-align:middle}
   .k-check{background:var(--orange);color:#fff}
   .k-live{background:var(--dark);color:#fff}
   .k-tool{background:#e9e9e9;color:#141414}
   .k-you{background:#fff;border:2px solid var(--muted);color:var(--muted)}
-  .track{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;position:relative}
+  .track{display:grid;grid-template-columns:repeat(var(--cols,7),minmax(0,1fr));gap:12px;position:relative}
   .track::before{content:"";position:absolute;left:4%;right:4%;top:22px;height:3px;background:var(--orange);opacity:.35;z-index:0}
   .phase{position:relative;z-index:1;display:flex;flex-direction:column}
   .num{width:44px;height:44px;border-radius:50%;background:var(--dark);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:16px;border:4px solid #fff}
@@ -64,48 +66,101 @@
   .ico.l{background:var(--dark);color:#fff}
   .sub3{display:flex;flex-direction:column;gap:6px}
   .when{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-top:2px}
-  .foot{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .soon{font-size:11px;color:var(--muted);font-style:italic;text-align:center}
+  .foot{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
   .foot div{background:var(--dark);color:#fff;border-radius:14px;padding:14px 16px;font-size:13px}
   .foot b{color:var(--orange);display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
   .count{text-align:center;margin-top:18px;font-size:14px}
   .count b{color:var(--orange)}
   .brand{text-align:center;color:var(--muted);font-size:12px;margin-top:22px;letter-spacing:1px;text-transform:uppercase}
   [hidden]{display:none!important}
-  .cmp{max-width:1080px;margin:30px auto 0}
-  .plans{display:grid;grid-template-columns:1.5fr 1fr 1fr;align-items:end}
-  .plan{border-radius:16px 16px 0 0;padding:18px 16px 16px;text-align:center}
-  .plan.g{background:var(--card)}
-  .plan.i{background:var(--dark);color:#fff;position:relative}
-  .plan .pn{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:var(--orange)}
-  .plan h3{font-size:22px;font-weight:900;margin:4px 0 6px}
-  .plan .tg{font-size:13px;color:var(--muted)}
-  .plan.i .tg{color:#cfcfcf}
-  .plan .pr{margin-top:12px;font-size:26px;font-weight:900}
-  .plan .pr small{font-size:13px;font-weight:600}
-  .plan .pv{font-size:12.5px;color:var(--muted)}
-  .plan.i .pv{color:#bdbdbd}
-  .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:4px 12px;border-radius:999px;white-space:nowrap}
-  table.ct{width:100%;border-collapse:collapse;font-size:14px}
-  table.ct col.c1{width:42.857%} table.ct col.c2,table.ct col.c3{width:28.571%}
-  .ct th.grp{text-align:left;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);padding:18px 12px 8px;border-bottom:2px solid var(--line)}
-  .ct td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
-  .ct td:first-child{font-weight:600}
+
+  /* ===== comparação ===== */
+  .cmp{margin:30px auto 0;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-top:14px}
+  table.ct{width:100%;min-width:1060px;border-collapse:separate;border-spacing:0;font-size:13.5px}
+  .ct th,.ct td{padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+  .ct td:first-child,.ct th:first-child{position:sticky;left:0;background:#fff;z-index:2;text-align:left;font-weight:600;width:22%;min-width:190px}
   .ct td:first-child small{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px}
-  .ct td.v{text-align:center}
-  .ct td.v.ind{background:#fafafa}
+  .ct td.v{text-align:center;width:13%}
+  .ct .ind{background:#f3f3f3}
+  .ct th.grp{text-align:left;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);padding:18px 10px 8px;border-bottom:2px solid var(--line);background:#fff}
+  .ct thead th{border-bottom:none;vertical-align:bottom}
+  .plan{border-radius:14px 14px 0 0;padding:16px 10px 14px;text-align:center;position:relative;background:var(--card);font-weight:400}
+  .plan.i{background:var(--dark);color:#fff}
+  .plan .pn{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800;color:var(--orange)}
+  .plan h3{font-size:16px;font-weight:900;margin:4px 0 6px;line-height:1.15}
+  .plan .tg{font-size:12px;color:var(--muted);min-height:32px}
+  .plan.i .tg{color:#cfcfcf}
+  .plan .pr{margin-top:10px;font-size:20px;font-weight:900}
+  .plan .pr small{font-size:12px;font-weight:600}
+  .plan .pv{font-size:12px;color:var(--muted)}
+  .plan.i .pv{color:#bdbdbd}
+  .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
   .ck{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--orange);color:#fff;font-weight:900;font-size:12px}
   .no{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#ececec;color:#a5a5a5;font-weight:900;font-size:12px}
-  .ct .note{display:block;font-size:12px;color:var(--muted);margin-top:3px}
-  .cmp-foot{display:grid;grid-template-columns:1.5fr 1fr 1fr}
-  .cmp-foot div{padding:14px 12px;text-align:center;font-size:13px}
-  .cmp-foot .g{background:var(--card);border-radius:0 0 16px 16px}
-  .cmp-foot .i{background:var(--dark);color:#fff;border-radius:0 0 16px 16px}
-  @media (max-width:760px){ .plans,.cmp-foot{grid-template-columns:1fr 1fr} .plans>div:first-child,.cmp-foot>div:first-child{display:none} .ct{font-size:12.5px} }
+  .ct .note{display:block;font-size:11.5px;color:var(--muted);margin-top:3px}
+  .ct tfoot td{border-bottom:none;font-size:12.5px;text-align:center;padding:14px 10px;background:var(--card);border-radius:0 0 14px 14px}
+  .ct tfoot td.ind{background:var(--dark);color:#fff}
+  .ct tfoot td:first-child{background:#fff}
+  .hint{text-align:center;font-size:12px;color:var(--muted);margin-top:10px}
+  @media (min-width:1100px){ .hint{display:none} }
+
+  /* ===== capa (mapa de portas) ===== */
+  .pm{max-width:920px;margin:0 auto}
+  .pm-tese{border-left:3px solid var(--orange);padding-left:14px;margin:6px auto 26px;max-width:640px;font-size:16px;font-weight:700}
+  .pm-tese span{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:4px}
+  .pm-hint{text-align:center;font-size:12.5px;color:var(--muted);margin-bottom:6px}
+  .pm-wrap{position:relative;width:100%;max-width:560px;margin:0 auto 6px;aspect-ratio:1/0.94}
+  .pm-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+  .pm-svg line{stroke:var(--line);stroke-width:1.5}
+  .pm-svg line.active{stroke:var(--orange);stroke-width:2.5}
+  .pm-hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:118px;height:118px;border-radius:50%;background:var(--dark);color:#fff;border:3px solid var(--orange);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .pm-hub b{font-size:15px;font-weight:900}
+  .pm-hub small{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.8;margin-top:3px}
+  .pm-node{position:absolute;transform:translate(-50%,-50%);z-index:2;display:flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--line);border-radius:99px;padding:7px 14px 7px 7px;cursor:pointer;white-space:nowrap;font-family:inherit}
+  .pm-node:hover{border-color:var(--orange)}
+  .pm-node .n{width:22px;height:22px;border-radius:50%;background:var(--card);color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0}
+  .pm-node .l{display:flex;flex-direction:column;line-height:1.15;text-align:left}
+  .pm-node .l b{font-size:12.5px;color:var(--ink)}
+  .pm-node .l em{font-style:normal;font-size:10.5px;color:var(--muted)}
+  .pm-node.active{border-color:var(--orange);background:var(--orange-soft)}
+  .pm-node.active .n{background:var(--orange);color:#fff}
+  .pm-detail{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+  .pm-tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--orange);background:var(--orange-soft);padding:4px 10px;border-radius:99px;margin-bottom:10px}
+  .pm-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .pm-head h3{font-size:21px;font-weight:900}
+  .pm-price{text-align:right}
+  .pm-price b{font-size:20px;color:var(--orange);display:block}
+  .pm-price span{font-size:11.5px;color:var(--muted)}
+  .pm-rows{display:flex;flex-direction:column;gap:14px;margin-top:16px}
+  .pm-rows .k{font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:800;color:var(--muted);margin-bottom:3px}
+  .pm-rows .v{font-size:14px;line-height:1.55}
+  .pm-go{margin-top:18px;border:0;background:var(--dark);color:#fff;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;cursor:pointer;font-family:inherit}
+  .pm-go:hover{background:var(--orange)}
+  .pick{margin-top:36px}
+  .pick h3{text-align:center;font-size:22px;font-weight:900;margin-bottom:4px}
+  .pick > p{text-align:center;color:var(--muted);font-size:14px;margin-bottom:14px}
+  .pick-list{display:flex;flex-direction:column;gap:8px}
+  .pick-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--card);border-radius:12px;padding:12px 14px;font-size:14px;cursor:pointer;border:2px solid transparent;text-align:left;font-family:inherit;color:inherit;width:100%}
+  .pick-row:hover{border-color:var(--orange)}
+  .pick-row b{color:var(--ink);white-space:nowrap}
+  .pick-row b small{display:block;font-weight:600;color:var(--orange);font-size:12px;text-align:right}
+  .pick-out{margin-top:14px;background:var(--dark);color:#fff;border-radius:12px;padding:14px 16px;font-size:13.5px}
+  .pick-out b{color:var(--orange)}
+  @media (max-width:480px){
+    .pm-node{padding:5px 10px 5px 5px;gap:6px}
+    .pm-node .n{width:18px;height:18px;font-size:9px}
+    .pm-node .l b{font-size:11px}
+    .pm-node .l em{font-size:9.5px}
+    .pm-hub{width:92px;height:92px}
+    .pm-hub b{font-size:12px}
+    .pick-row{grid-template-columns:1fr}
+    .pick-row b small{text-align:left}
+  }
 
   @media (max-width:1200px){
     .track{grid-template-columns:repeat(2,1fr)}
     .track::before{display:none}
-    .foot{grid-template-columns:1fr}
   }
   @media (max-width:560px){ .track{grid-template-columns:1fr} }
   @media print{ .tabs{display:none} body{padding:12px} }
@@ -115,30 +170,421 @@
 <div class="wrap">
   <header>
     <div class="bar"></div>
-    <h1 id="h1">Jornada do Aluno na <span id="ttl">Mentoria em Grupo</span></h1>
-    <p class="sub" id="subt">12 meses de acesso · você constrói, eu entro a cada entrega</p>
+    <h1 id="h1">As <span>portas de entrada</span> pro método</h1>
+    <p class="sub" id="subt">Escolha por onde começar e veja a jornada completa de cada formato</p>
   </header>
 
   <div class="tabs">
-    <button class="on" data-v="grupo">Mentoria em Grupo</button>
+    <button class="on" data-v="capa">Visão geral</button>
+    <button data-v="express">Método Express</button>
+    <button data-v="curso">Curso Expert360º</button>
+    <button data-v="vip">Método VIP</button>
+    <button data-v="sprint">Sprint do Método</button>
+    <button data-v="grupo">Mentoria em Grupo</button>
     <button data-v="individual">Mentoria Individual</button>
-    <button data-v="comparar">Comparar Grupo × Individual</button>
+    <button class="cmpb" data-v="comparar">Comparar tudo</button>
   </div>
 
-  <div class="legend" id="legend-g">
-    <span><i class="k-check">✓</i>Sessão individual com a Karol (8 no total)</span>
-    <span><i class="k-live">●</i>Oficina ao vivo (em grupo)</span>
-    <span><i class="k-you">↑</i>Sua entrega destrava a sessão</span>
-    <span><i class="k-tool">◎</i>Ferramenta de treino</span>
-  </div>
-  <div class="legend" id="legend-i" hidden>
-    <span><i class="k-check">✓</i>Sessão individual com a Karol (14 no total)</span>
-    <span><i class="k-live">●</i>Construído pelo time sob a minha direção</span>
-    <span><i class="k-tool">◎</i>Ferramenta de treino</span>
-  </div>
+  <!-- ===================== CAPA ===================== -->
+  <section id="capa">
+    <div class="pm">
+      <p class="pm-tese">"Diploma é o que você estudou. Método é o que você viveu."<span>Toda oferta entrega o mesmo método. Muda só o quanto de mão na massa da Karol vem junto.</span></p>
+      <p class="pm-hint">↓ toque numa oferta</p>
+      <div class="pm-wrap">
+        <svg class="pm-svg" viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="O método no centro e as 6 ofertas ao redor"></svg>
+        <div class="pm-hub"><b>O MÉTODO</b><small>Expert360º</small></div>
+      </div>
+      <div class="pm-detail" id="pm-detail"></div>
+
+      <div class="pick">
+        <h3>Qual é a sua porta?</h3>
+        <p>Encontre a frase que mais parece com o seu momento</p>
+        <div class="pick-list">
+          <button class="pick-row" data-go="express"><span>Já sei boa parte do método e travei num ponto específico</span><b>Método Express<small>R$300</small></b></button>
+          <button class="pick-row" data-go="curso"><span>Tenho tempo, prefiro estudar sozinho e no meu ritmo</span><b>Curso Expert360º<small>R$697</small></b></button>
+          <button class="pick-row" data-go="vip"><span>Quero fazer eu mesmo, mas com direção e correção de rota</span><b>Método VIP<small>3x R$500</small></b></button>
+          <button class="pick-row" data-go="sprint"><span>Já tentei e não consegui: me falta tempo e clareza ao mesmo tempo</span><b>Sprint do Método<small>R$5.000</small></b></button>
+          <button class="pick-row" data-go="grupo"><span>Quero a jornada completa, com validação, e topo fazer com orientação</span><b>Mentoria em Grupo<small>R$5.000</small></b></button>
+          <button class="pick-row" data-go="individual"><span>Quero a jornada completa 1:1, construída junto, com a equipe executando</span><b>Mentoria Individual<small>R$15.000</small></b></button>
+        </div>
+        <div class="pick-out"><b>Já tem curso ou mentoria rodando?</b> Se o seu problema é aluno abandonando no meio ou pouco engajado, a porta é outra: o <b>Diagnóstico de Ferramentas</b> (R$97, vira cashback se você seguir pra construção das ferramentas).</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPRESS ===================== -->
+  <section id="express" hidden>
+    <div class="legend">
+      <span><i class="k-check">✓</i>Sessão individual com a Karol (1 hora)</span>
+      <span><i class="k-you">↑</i>Você executa o plano</span>
+    </div>
+    <div class="track" style="--cols:5">
+      <div class="phase before">
+        <div class="num">✕</div>
+        <div class="card">
+          <div class="tag">Antes</div>
+          <h2>Como você está hoje</h2>
+          <p class="goal">Você sabe boa parte, mas um ponto trava tudo</p>
+          <div class="blk"><ul>
+            <li>Eu já sei o suficiente, só não sei organizar</li>
+            <li>Já tentou entender sozinho e travou num ponto</li>
+            <li>Não sabe qual dos 5 Ps está travando, ou sabe e não consegue destravar</li>
+            <li>Não tenho tempo pra mais uma coisa</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">1</div>
+        <div class="card">
+          <div class="tag">Antes da sessão</div>
+          <h2>Você traz a trava</h2>
+          <p class="goal">Chega com a dúvida que já tem</p>
+          <div class="blk"><ul><li>Não precisa saber qual dos 5 Ps está travando: isso faz parte do diagnóstico</li></ul></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">2</div>
+        <div class="card">
+          <div class="tag">Durante · 1 hora</div>
+          <h2>Diagnóstico focado</h2>
+          <p class="goal">Cirurgia num ponto só</p>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Sessão de 1 hora com a Karol</strong><small>diagnóstico dentro dos 5 Ps do método</small></div></div>
+          <div class="blk"><b>O ponto pode ser</b><ul><li>Persona</li><li>Promessa</li><li>Processo</li><li>Proposta</li><li>Posicionamento</li><li>ou a análise de uma sessão de Vendas Secretas gravada</li></ul></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">3</div>
+        <div class="card">
+          <div class="tag">Depois</div>
+          <h2>Plano de ação</h2>
+          <p class="goal">O que fazer, em que ordem, pra destravar</p>
+          <div class="blk"><b>Você recebe</b><ul><li>Plano de ação por escrito daquele ponto</li></ul></div>
+        </div>
+      </div>
+
+      <div class="phase final">
+        <div class="num">★</div>
+        <div class="card">
+          <div class="tag">Chegada</div>
+          <h2>Ponto destravado</h2>
+          <p class="goal">Você entra travado e sai com:</p>
+          <div class="blk"><ul><li>Clareza de qual ponto travava</li><li>Plano de ação por escrito</li><li>Próximo passo definido</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="count"><b>1 sessão de 1 hora</b> · <b>1 ponto resolvido</b> · plano de ação por escrito</p>
+
+    <div class="foot">
+      <div><b>Cirurgia, não programa</b>Não é mentoria longa. Resolve um ponto específico do seu método.</div>
+      <div><b>Plano por escrito</b>Você sai da hora sabendo o que fazer e em que ordem.</div>
+      <div><b>Garantia de satisfação</b>Se você não ficar satisfeito com a sessão, recebe 100% do valor de volta.</div>
+    </div>
+  </section>
+
+  <!-- ===================== CURSO ===================== -->
+  <section id="curso" hidden>
+    <div class="legend">
+      <span><i class="k-live">▶</i>Módulo gravado, no seu ritmo</span>
+      <span><i class="k-tool">◎</i>Agente de IA</span>
+      <span><i class="k-check">✓</i>Sessão individual com a Karol (bônus)</span>
+    </div>
+    <div class="track" style="--cols:7">
+      <div class="phase before">
+        <div class="num">✕</div>
+        <div class="card">
+          <div class="tag">Antes</div>
+          <h2>Como você está hoje</h2>
+          <p class="goal">Sabe que precisa de estrutura e quer aprender no seu tempo</p>
+          <div class="blk"><ul>
+            <li>Eu já sei o suficiente, só não sei organizar</li>
+            <li>Preciso estudar mais antes de agir</li>
+            <li>Não quer depender de encontro marcado</li>
+            <li>Prefere estudar sozinho, no próprio ritmo</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">0</div>
+        <div class="card">
+          <div class="tag">Módulo 0</div>
+          <h2>Desbloqueio</h2>
+          <p class="goal">Sai do "preciso estudar mais antes de agir"</p>
+          <div class="live"><span class="ico l">▶</span><div><strong>5 aulas</strong><small>o ponto de partida de quem trava antes de começar</small></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Bônus · Sessão de Perfil do Expert</strong><small>1 sessão individual gratuita</small></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">1</div>
+        <div class="card">
+          <div class="tag">Módulo 1</div>
+          <h2>Persona + Promessa</h2>
+          <p class="goal">Pra quem é e o que resolve</p>
+          <div class="live"><span class="ico l">▶</span><div><strong>8 aulas</strong></div></div>
+          <div class="blk"><b>Você constrói</b><ul><li>Documento de persona</li><li>Documento de promessa</li></ul></div>
+          <div class="tool"><span class="ico t">◎</span><div><strong>Agentes de IA da Persona e da Promessa</strong><small>constroem os documentos com você</small></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">2</div>
+        <div class="card">
+          <div class="tag">Módulo 2</div>
+          <h2>Processo Autoral</h2>
+          <p class="goal">Seu conhecimento vira método</p>
+          <div class="live"><span class="ico l">▶</span><div><strong>9 aulas</strong></div></div>
+          <div class="blk"><b>Você constrói</b><ul><li>Seu método estruturado</li><li>As ferramentas que vão junto com ele</li></ul></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">3</div>
+        <div class="card">
+          <div class="tag">Módulo 3</div>
+          <h2>Vendas Secretas</h2>
+          <p class="goal">Vender 1:1, sem lançamento</p>
+          <div class="live"><span class="ico l">▶</span><div><strong>14 aulas</strong><small>roteiros e prática de conversa de venda</small></div></div>
+          <p class="soon">liberação progressiva</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">4</div>
+        <div class="card">
+          <div class="tag">Módulo 4</div>
+          <h2>Autoridade</h2>
+          <p class="goal">Sua vitrine e seu posicionamento</p>
+          <div class="live"><span class="ico l">▶</span><div><strong>10 aulas</strong><small>vitrine, posicionamento e Autoridade Tríplice</small></div></div>
+          <p class="soon">liberação progressiva</p>
+        </div>
+      </div>
+
+      <div class="phase final">
+        <div class="num">★</div>
+        <div class="card">
+          <div class="tag">Chegada</div>
+          <h2>Método no seu ritmo</h2>
+          <p class="goal">Você entra com conhecimento solto e sai com:</p>
+          <div class="blk"><ul><li>Persona e promessa definidas</li><li>Método autoral estruturado</li><li>Como vender 1:1 sem lançamento</li><li>Posicionamento e Autoridade Tríplice</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="count"><b>5 módulos</b> + <b>6 agentes de IA do método</b>, no seu ritmo, sem prazo de turma</p>
+
+    <div class="foot">
+      <div><b>No seu ritmo</b>Curso gravado, sem turma e sem agenda. Você estuda quando puder.</div>
+      <div><b>IA do seu lado</b>Os 6 agentes de IA do método, os mesmos usados pelos alunos da mentoria.</div>
+      <div><b>Bônus</b>1 sessão individual de Perfil do Expert e Jornada360 (aulas complementares com outros profissionais).</div>
+      <div><b>Garantia de 7 dias</b>Você conhece o curso antes de seguir.</div>
+    </div>
+  </section>
+
+  <!-- ===================== VIP ===================== -->
+  <section id="vip" hidden>
+    <div class="legend">
+      <span><i class="k-check">✓</i>Encontro individual com a Karol (3 no total)</span>
+      <span><i class="k-you">↑</i>Você aplica entre um encontro e outro</span>
+    </div>
+    <div class="track" style="--cols:5">
+      <div class="phase before">
+        <div class="num">✕</div>
+        <div class="card">
+          <div class="tag">Antes</div>
+          <h2>Como você está hoje</h2>
+          <p class="goal">Quer fazer você mesmo, mas com direção</p>
+          <div class="blk"><ul>
+            <li>Será que o que eu tô fazendo faz sentido?</li>
+            <li>Já tentei sozinho e não consegui</li>
+            <li>Será que ainda dá tempo pra mim?</li>
+            <li>Não quer começar do zero, quer correção de rota</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">1</div>
+        <div class="card">
+          <div class="tag">Encontro 1</div>
+          <h2>Análise</h2>
+          <p class="goal">Onde você está e o que ajustar</p>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Análise de persona, promessa e método</strong><small>com sugestões de produto e ferramentas pro seu caso</small></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">2</div>
+        <div class="card">
+          <div class="tag">Encontro 2</div>
+          <h2>Plano de validação</h2>
+          <p class="goal">Validar sem precisar lançar ou se expor ainda</p>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Plano de ação de validação</strong><small>você sai sabendo o próximo passo</small></div></div>
+          <div class="blk"><b>Você faz</b><ul><li>Coloca o plano em prática</li></ul></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">3</div>
+        <div class="card">
+          <div class="tag">Encontro 3</div>
+          <h2>Correção de rota</h2>
+          <p class="goal">Ajuste depois da prática</p>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Acompanhamento e correção do plano</strong><small>com base no que você já aplicou</small></div></div>
+        </div>
+      </div>
+
+      <div class="phase final">
+        <div class="num">★</div>
+        <div class="card">
+          <div class="tag">Chegada</div>
+          <h2>Direção certa</h2>
+          <p class="goal">Você entra inseguro e sai com:</p>
+          <div class="blk"><ul><li>Persona, promessa e método analisados</li><li>Plano de validação</li><li>Rota corrigida depois da prática</li><li>3 sessões gravadas e transcritas</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="count"><b>3 encontros individuais</b> · gravados e transcritos</p>
+
+    <div class="foot">
+      <div><b>Foco que se adapta</b>O foco de cada encontro se ajusta ao que você realmente precisa.</div>
+      <div><b>Você executa, eu corrijo</b>Entre os encontros você aplica e chega no seguinte com o resultado.</div>
+      <div><b>Garantia de 7 dias</b>Você vive os encontros antes de seguir.</div>
+    </div>
+  </section>
+
+  <!-- ===================== SPRINT ===================== -->
+  <section id="sprint" hidden>
+    <div class="legend">
+      <span><i class="k-live">●</i>Construído pela Karol</span>
+      <span><i class="k-check">✓</i>Você valida e aprova a etapa</span>
+    </div>
+    <div class="track" style="--cols:9">
+      <div class="phase before">
+        <div class="num">✕</div>
+        <div class="card">
+          <div class="tag">Antes</div>
+          <h2>Como você está hoje</h2>
+          <p class="goal">Falta tempo e falta clareza, ao mesmo tempo</p>
+          <div class="blk"><ul>
+            <li>Não tenho tempo pra mais uma coisa</li>
+            <li>Já tentei sozinho e não consegui</li>
+            <li>O projeto nunca sai do papel</li>
+            <li>Não sabe por onde começar com marketing e tecnologia</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">1</div>
+        <div class="card">
+          <div class="tag">Semana 1</div>
+          <h2>Imersão</h2>
+          <p class="goal">Levantamento completo</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Sua história real, suas dores, seu contexto</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">2</div>
+        <div class="card">
+          <div class="tag">Semana 2</div>
+          <h2>Pra quem é + o que resolve</h2>
+          <p class="goal">Persona e Promessa</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Escrito com o seu caso</strong><small>não um modelo genérico</small></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Você valida</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">3</div>
+        <div class="card">
+          <div class="tag">Semana 3</div>
+          <h2>Seu método</h2>
+          <p class="goal">Processo autoral</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Organizado a partir da sua experiência</strong></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Você valida</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">4</div>
+        <div class="card">
+          <div class="tag">Semana 4</div>
+          <h2>Materiais de aplicação</h2>
+          <p class="goal">Ferramentas do seu método</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Ferramentas personalizadas</strong><small>prontas pra usar com seus clientes</small></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Você valida</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">5</div>
+        <div class="card">
+          <div class="tag">Semana 5</div>
+          <h2>Proposta</h2>
+          <p class="goal">A oferta da sua mentoria</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Pronta pra apresentar</strong></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Você valida</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">6·7</div>
+        <div class="card">
+          <div class="tag">Semanas 6 e 7</div>
+          <h2>Funil de Vendas Secretas</h2>
+          <p class="goal">O caminho até a venda, montado</p>
+          <div class="blk"><b>A Karol monta o funil todo</b><ul><li>Captação de leads</li><li>Abordagem</li><li>Pré-diagnóstico</li><li>Agendamento da sessão</li><li>Diagnóstico</li><li>Oferta</li><li>Fechamento</li><li>Sim: onboarding</li><li>Não: follow-up em 5 contatos</li></ul></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Você escolhe a plataforma e valida</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">8</div>
+        <div class="card">
+          <div class="tag">Semana 8</div>
+          <h2>Assistente de IA + entrega</h2>
+          <p class="goal">Tudo nas suas mãos</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Assistente de IA treinado no seu conhecimento</strong></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Reunião de entrega final</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase final">
+        <div class="num">★</div>
+        <div class="card">
+          <div class="tag">Chegada</div>
+          <h2>Mentoria pronta pra vender</h2>
+          <p class="goal">Pronto, não esboçado:</p>
+          <div class="blk"><ul><li>Pra quem é e o que resolve, em uma frase</li><li>Método organizado</li><li>Materiais de aplicação</li><li>Proposta pronta</li><li>Funil de Vendas Secretas completo</li><li>Assistente de IA</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="count"><b>8 semanas</b> · <b>entregas semanais</b> · você valida cada etapa</p>
+
+    <div class="foot">
+      <div><b>Feito pra você</b>É um serviço: a Karol constrói, você entra pra validar e aprovar.</div>
+      <div><b>Funil completo</b>Da captação do lead ao fechamento, com onboarding de quem compra e 5 follow-ups pra quem não fecha na hora.</div>
+      <div><b>Não inclui</b>Mentoria, acompanhamento da implementação, análise de vendas reais e tráfego pago. Isso fica pra continuação.</div>
+      <div><b>Garantia de 7 dias</b>Incondicional, antes da Semana 1 começar.</div>
+    </div>
+  </section>
 
   <!-- ===================== GRUPO ===================== -->
-  <section id="grupo">
+  <section id="grupo" hidden>
+    <div class="legend">
+      <span><i class="k-check">✓</i>Sessão individual com a Karol (8 no total)</span>
+      <span><i class="k-live">●</i>Oficina ao vivo (em grupo)</span>
+      <span><i class="k-you">↑</i>Sua entrega destrava a sessão</span>
+      <span><i class="k-tool">◎</i>Ferramenta de treino</span>
+    </div>
     <div class="track">
       <div class="phase before">
         <div class="num">✕</div>
@@ -248,6 +694,11 @@
 
   <!-- ===================== INDIVIDUAL ===================== -->
   <section id="individual" hidden>
+    <div class="legend">
+      <span><i class="k-check">✓</i>Sessão individual com a Karol (14 no total)</span>
+      <span><i class="k-live">●</i>Construído pelo time sob a minha direção</span>
+      <span><i class="k-tool">◎</i>Ferramenta de treino</span>
+    </div>
     <div class="track">
       <div class="phase before">
         <div class="num">✕</div>
@@ -352,45 +803,64 @@
     </div>
   </section>
 
+  <!-- ===================== COMPARAR ===================== -->
   <section id="comparar" hidden>
     <div class="cmp">
-      <div class="plans">
-        <div></div>
-        <div class="plan g"><div class="pn">Grupo</div><h3>Faça com orientação</h3><div class="tg">Oficinas ao vivo + sessões a cada entrega sua</div><div class="pr"><small>12x de</small> R$500</div><div class="pv">ou R$5.000 à vista</div></div>
-        <div class="plan i"><span class="badge">Mais completo</span><div class="pn">Individual</div><h3>Vamos construir juntas</h3><div class="tg">Construção conjunta + equipe executando</div><div class="pr"><small>12x de</small> R$1.500</div><div class="pv">ou R$15.000 à vista</div></div>
-      </div>
       <table class="ct">
-        <colgroup><col class="c1"><col class="c2"><col class="c3"></colgroup>
-        <tr><th class="grp" colspan="3">Como funciona</th></tr>
-        <tr><td>Duração</td><td class="v ">12 meses de acesso</td><td class="v ind">12 meses</td></tr>
-        <tr><td>Sessões individuais com a Karol</td><td class="v "><b>8</b><span class="note">acionadas pela sua entrega</span></td><td class="v ind"><b>14</b><span class="note">construção conjunta</span></td></tr>
-        <tr><td>Oficinas ao vivo em grupo</td><td class="v "><span class="ck">✓</span><span class="note">4 oficinas</span></td><td class="v ind"><span class="no">✕</span></td></tr>
-        <tr><td>Diagnóstico inicial + Roteiro do Expert</td><td class="v "><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><td>Quem constrói</td><td class="v ">Você, com oficinas, IA e revisão da Karol</td><td class="v ind">Nós juntas, e a equipe executa</td></tr>
-        <tr><th class="grp" colspan="3">Método e Validação</th></tr>
-        <tr><td>Método autoral<small>Persona, Promessa, Processo e Portfólio</small></td><td class="v "><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><td>6 agentes de IA do método</td><td class="v "><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><td>Funil de Vendas Secretas</td><td class="v "><span class="ck">✓</span><span class="note">você monta na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">montado pelo time</span></td></tr>
-        <tr><td>Kit de Scripts de Vendas Secretas</td><td class="v "><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><td>Checkup da oferta antes de ir a campo</td><td class="v "><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><td>Raio-X das suas vendas</td><td class="v "><span class="ck">✓</span><span class="note">3 vendas analisadas</span></td><td class="v ind"><span class="ck">✓</span><span class="note">integrado ao acompanhamento</span></td></tr>
-        <tr><td>Agente Vendedor Secreto<small>copiloto durante a venda</small></td><td class="v "><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><td>Simulador de Conversas de Venda</td><td class="v "><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><td>Produto estruturado com as vendas reais</td><td class="v "><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><th class="grp" colspan="3">Posicionamento e Escala</th></tr>
-        <tr><td>Autoridade Tríplice, narrativa e perfil</td><td class="v "><span class="ck">✓</span><span class="note">na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">construído junto</span></td></tr>
-        <tr><td>⭐ Studio de Ensaio do Expert</td><td class="v "><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><td>Funil de Lives Semanais</td><td class="v "><span class="ck">✓</span><span class="note">você monta na oficina</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><td>Página de venda</td><td class="v "><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feita pelo time</span></td></tr>
-        <tr><td>Funil e automações</td><td class="v "><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feitos pelo time</span></td></tr>
-        <tr><td>Agente de IA do seu Método</td><td class="v "><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><td>Tráfego configurado + métricas iniciais</td><td class="v "><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><td>Expert Plan (seu plano de escala)</td><td class="v "><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-        <tr><th class="grp" colspan="3">Condições</th></tr>
-        <tr><td>Garantia de aderência</td><td class="v ">15 dias</td><td class="v ind">30 dias</td></tr>
+        <thead>
+          <tr>
+            <th></th>
+            <th><div class="plan"><div class="pn">Express</div><h3>Destrave 1 ponto</h3><div class="tg">1 sessão de 1 hora</div><div class="pr"><small>12x de</small> R$30</div><div class="pv">ou R$300 à vista</div></div></th>
+            <th><div class="plan"><div class="pn">Curso</div><h3>Aprenda no seu ritmo</h3><div class="tg">Expert360º gravado + IA</div><div class="pr"><small>12x de</small> R$69,70</div><div class="pv">ou R$697 à vista</div></div></th>
+            <th><div class="plan"><div class="pn">VIP</div><h3>Faça com direção</h3><div class="tg">3 encontros de correção de rota</div><div class="pr"><small>3x de</small> R$500</div><div class="pv">no pix · R$1.500</div></div></th>
+            <th><div class="plan"><div class="pn">Sprint</div><h3>Feito pra você</h3><div class="tg">8 semanas, a Karol constrói</div><div class="pr"><small>12x de</small> R$500</div><div class="pv">ou R$5.000 à vista</div></div></th>
+            <th><div class="plan"><div class="pn">Grupo</div><h3>Faça com orientação</h3><div class="tg">Oficinas + sessões a cada entrega</div><div class="pr"><small>12x de</small> R$500</div><div class="pv">ou R$5.000 à vista</div></div></th>
+            <th><div class="plan i"><span class="badge">Mais completo</span><div class="pn">Individual</div><h3>Vamos construir juntos</h3><div class="tg">Construção conjunta + equipe</div><div class="pr"><small>12x de</small> R$1.500</div><div class="pv">ou R$15.000 à vista</div></div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th class="grp" colspan="7">Como funciona</th></tr>
+          <tr><td>Duração</td><td class="v">1 hora</td><td class="v">No seu ritmo<span class="note">sem prazo de turma</span></td><td class="v">3 encontros</td><td class="v">8 semanas</td><td class="v">12 meses de acesso</td><td class="v ind">12 meses</td></tr>
+          <tr><td>Sessões individuais com a Karol</td><td class="v"><b>1</b></td><td class="v"><b>1</b><span class="note">bônus: Perfil do Expert</span></td><td class="v"><b>3</b><span class="note">gravadas e transcritas</span></td><td class="v">Validação<span class="note">a cada etapa</span></td><td class="v"><b>8</b><span class="note">acionadas pela sua entrega</span></td><td class="v ind"><b>14</b><span class="note">construção conjunta</span></td></tr>
+          <tr><td>Oficinas ao vivo em grupo</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">4 oficinas</span></td><td class="v ind"><span class="no">✕</span></td></tr>
+          <tr><td>Quem constrói</td><td class="v">Você, com o plano da Karol</td><td class="v">Você, com aulas e IA</td><td class="v">Você, com direção e correção da Karol</td><td class="v">A Karol constrói, você aprova</td><td class="v">Você, com oficinas, IA e revisão da Karol</td><td class="v ind">Nós juntos, e a equipe executa</td></tr>
+
+          <tr><th class="grp" colspan="7">Método</th></tr>
+          <tr><td>Diagnóstico ou análise inicial</td><td class="v"><span class="ck">✓</span><span class="note">do ponto travado</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">persona, promessa e método</span></td><td class="v"><span class="ck">✓</span><span class="note">imersão</span></td><td class="v"><span class="ck">✓</span><span class="note">+ Roteiro do Expert</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Método autoral<small>Persona, Promessa, Processo e Portfólio</small></td><td class="v"><span class="no">✕</span><span class="note">destrava 1 ponto</span></td><td class="v"><span class="ck">✓</span><span class="note">você constrói com as aulas</span></td><td class="v"><span class="ck">✓</span><span class="note">analisado e ajustado</span></td><td class="v"><span class="ck">✓</span><span class="note">construído pela Karol</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>6 agentes de IA do método</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Materiais de aplicação do seu método</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">você monta (M2)</span></td><td class="v"><span class="no">✕</span><span class="note">sugestões de ferramentas</span></td><td class="v"><span class="ck">✓</span><span class="note">feitos pela Karol</span></td><td class="v"><span class="ck">✓</span><span class="note">Kit de Ferramentas</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Proposta da mentoria pronta</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+
+          <tr><th class="grp" colspan="7">Validação</th></tr>
+          <tr><td>Vendas Secretas<small>vender 1:1, sem lançamento</small></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">ensinado no M3</span></td><td class="v"><span class="ck">✓</span><span class="note">plano de validação</span></td><td class="v"><span class="ck">✓</span><span class="note">funil completo</span></td><td class="v"><span class="ck">✓</span><span class="note">oficina</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Funil de Vendas Secretas montado</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">completo, pela Karol</span></td><td class="v"><span class="ck">✓</span><span class="note">você monta na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">montado pelo time</span></td></tr>
+          <tr><td>Kit de Scripts de Vendas Secretas</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">roteiro da sessão</span></td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Checkup da oferta antes de ir a campo</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Raio-X das suas vendas</td><td class="v"><span class="ck">✓</span><span class="note">1 sessão gravada, se for o seu ponto</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">3 vendas analisadas</span></td><td class="v ind"><span class="ck">✓</span><span class="note">integrado ao acompanhamento</span></td></tr>
+          <tr><td>Agente Vendedor Secreto<small>copiloto durante a venda</small></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Simulador de Conversas de Venda</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Produto estruturado com as vendas reais</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+
+          <tr><th class="grp" colspan="7">Posicionamento e Escala</th></tr>
+          <tr><td>Autoridade Tríplice, narrativa e perfil</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">ensinado no M4</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">construído junto</span></td></tr>
+          <tr><td>⭐ Studio de Ensaio do Expert</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Funil de Lives Semanais</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">você monta na oficina</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Página de venda</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feita pelo time</span></td></tr>
+          <tr><td>Funil e automações</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feitos pelo time</span></td></tr>
+          <tr><td>Agente de IA do seu Método</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">assistente treinado no seu conhecimento</span></td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Tráfego configurado + métricas iniciais</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Expert Plan (seu plano de escala)</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+
+          <tr><th class="grp" colspan="7">Condições</th></tr>
+          <tr><td>Garantia</td><td class="v">100% se não ficar satisfeito</td><td class="v">7 dias</td><td class="v">7 dias</td><td class="v">7 dias<span class="note">antes da Semana 1</span></td><td class="v">15 dias</td><td class="v ind">30 dias</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td></td><td>Pra quem trava num ponto específico</td><td>Pra quem quer estudar sozinho, no próprio ritmo</td><td>Pra quem quer fazer, mas com supervisão</td><td>Pra quem não tem tempo e quer pronto</td><td>Pra quem topa fazer com orientação</td><td class="ind">Pra quem quer construir junto, com a equipe executando</td></tr>
+        </tfoot>
       </table>
-      <div class="cmp-foot"><div></div><div class="g">Pra quem topa fazer com orientação</div><div class="i">Pra quem quer construir junto, com a equipe executando</div></div>
     </div>
+    <p class="hint">Arraste a tabela pro lado pra ver todas as opções →</p>
   </section>
 
   <p class="brand">Incubadora de Expert · Karol Senna</p>
@@ -398,21 +868,89 @@
 
 <script>
   var meta = {
-    grupo: ['Jornada do Aluno na <span id="ttl">Mentoria em Grupo</span>', "12 meses de acesso · você constrói, eu entro a cada entrega"],
-    individual: ['Jornada do Aluno na <span id="ttl">Mentoria Individual</span>', "12 meses · 14 sessões 1:1 · construímos juntas"],
-    comparar: ['Grupo <span id="ttl">ou</span> Individual?', "O que cada mentoria entrega, lado a lado"]
+    capa: ['As <span>portas de entrada</span> pro método', "Escolha por onde começar e veja a jornada completa de cada formato"],
+    express: ['Jornada do <span>Método Express</span>', "1 sessão de 1 hora · um ponto do seu método destravado"],
+    curso: ['Jornada do <span>Curso Expert360º</span>', "5 módulos gravados + 6 agentes de IA · no seu ritmo"],
+    vip: ['Jornada do <span>Método VIP</span>', "3 encontros individuais · direção e correção de rota"],
+    sprint: ['Jornada do <span>Sprint do Método</span>', "8 semanas · a Karol constrói, você valida cada etapa"],
+    grupo: ['Jornada do Aluno na <span>Mentoria em Grupo</span>', "12 meses de acesso · você constrói, eu entro a cada entrega"],
+    individual: ['Jornada do Aluno na <span>Mentoria Individual</span>', "12 meses · 14 sessões 1:1 · construímos juntos"],
+    comparar: ['Qual é o <span>seu</span> caminho?', "O que cada formato entrega, lado a lado"]
   };
+  var ids = Object.keys(meta);
+  function show(v){
+    document.querySelectorAll(".tabs button").forEach(function(x){ x.classList.toggle("on", x.dataset.v === v); });
+    ids.forEach(function(id){ document.getElementById(id).hidden = v !== id; });
+    document.getElementById("h1").innerHTML = meta[v][0];
+    document.getElementById("subt").textContent = meta[v][1];
+  }
   document.querySelectorAll(".tabs button").forEach(function(b){
-    b.addEventListener("click", function(){
-      var v = b.dataset.v;
-      document.querySelectorAll(".tabs button").forEach(function(x){ x.classList.toggle("on", x === b); });
-      ["grupo","individual","comparar"].forEach(function(id){ document.getElementById(id).hidden = v !== id; });
-      document.getElementById("legend-g").hidden = v !== "grupo";
-      document.getElementById("legend-i").hidden = v !== "individual";
-      document.getElementById("h1").innerHTML = meta[v][0];
-      document.getElementById("subt").textContent = meta[v][1];
-    });
+    b.addEventListener("click", function(){ show(b.dataset.v); });
   });
+  document.querySelectorAll("[data-go]").forEach(function(b){
+    b.addEventListener("click", function(){ show(b.dataset.go); window.scrollTo({top:0,behavior:"smooth"}); });
+  });
+
+  /* ===== capa: mapa de portas ===== */
+  var OFERTAS = [
+    { id:'express', tag:'Sessão pontual · 1 hora', title:'Método Express', price:'R$300', priceSub:'à vista ou 12x R$30',
+      publico:'Já sabe boa parte do método e trava num ponto específico: persona, promessa, processo, proposta ou posicionamento.',
+      problema:'Falta clareza pontual, não o método inteiro. O oposto de "preciso aprender tudo de novo".',
+      solucao:'1 sessão de 1 hora: diagnóstico focado no ponto exato + plano de ação por escrito daquele ponto.',
+      diferencial:'Cirurgia num ponto só, sem programa longo. Se você não ficar satisfeito com a sessão, recebe 100% do valor de volta.' },
+    { id:'curso', tag:'Curso gravado · no seu ritmo', title:'Curso Expert360º', price:'R$697', priceSub:'à vista ou 12x R$69,70',
+      publico:'Quer aprender o método completo no próprio ritmo, sem depender de agenda.',
+      problema:'Sabe que precisa de estrutura, mas quer estudar sozinho, com um investimento menor.',
+      solucao:'5 módulos gravados (Desbloqueio, Persona + Promessa, Processo Autoral, Vendas Secretas e Autoridade) + os 6 agentes de IA do método.',
+      diferencial:'Não é curso genérico de marketing: é o mesmo método aplicado na mentoria. Bônus: 1 sessão individual de Perfil do Expert. Garantia de 7 dias.' },
+    { id:'vip', tag:'3 encontros · supervisão', title:'Método VIP', price:'R$1.500', priceSub:'3x R$500 no pix',
+      publico:'Quer construir por conta própria, mas com direção e correção de rota.',
+      problema:'Insegurança de estar no caminho certo: "será que o que eu tô fazendo faz sentido?"',
+      solucao:'3 encontros gravados e transcritos: análise de persona, promessa e método; plano de validação sem precisar se expor; correção de rota depois da prática.',
+      diferencial:'Orientação viva: o foco se ajusta ao que você realmente precisa, não a um roteiro engessado. Garantia de 7 dias.' },
+    { id:'sprint', tag:'Serviço · 8 semanas', title:'Sprint do Método', price:'R$5.000', priceSub:'à vista no pix ou 12x R$500',
+      publico:'Falta tempo e clareza ao mesmo tempo. O projeto nunca sai do papel.',
+      problema:'Não é preguiça: é não ter estrutura nem hora do dia pra construir sozinho.',
+      solucao:'A Karol constrói e você valida cada etapa: imersão, persona + promessa, método, materiais de aplicação, proposta, funil de Vendas Secretas completo (da captação ao follow-up) e assistente de IA.',
+      diferencial:'Sua mentoria e o funil de vendas prontos em 8 semanas, não esboçados. É serviço: não inclui mentoria nem análise de vendas reais. Garantia de 7 dias.' },
+    { id:'grupo', tag:'Mentoria em grupo · 12 meses', title:'Mentoria em Grupo', price:'R$5.000', priceSub:'à vista no pix ou 12x R$500',
+      publico:'Quer a jornada completa, do método à escala, e topa fazer com orientação.',
+      problema:'Quer o caminho inteiro até vender, sem pagar um acompanhamento individual.',
+      solucao:'4 oficinas ao vivo + 8 sessões individuais acionadas pela sua entrega + Raio-X de 3 vendas + 6 agentes de IA e o Vendedor Secreto.',
+      diferencial:'Sem plantão fixo: quando você entrega, a sessão é liberada. Garantia de 15 dias.' },
+    { id:'individual', tag:'Mentoria 1:1 · 12 meses', title:'Mentoria Individual', price:'R$15.000', priceSub:'à vista no pix ou 12x R$1.500',
+      publico:'Já é reconhecido no offline, decide rápido quando confia e quer tudo personalizado.',
+      problema:'Relevância e legado: "não posso ficar de fora do que está mudando ao meu redor."',
+      solucao:'14 sessões 1:1 de construção conjunta + equipe executando página, funil, automações, agente de IA do seu método e tráfego configurado.',
+      diferencial:'A única com infraestrutura pronta de verdade: não é "te ensino", é "eu construo contigo até rodar". Garantia de 30 dias.' }
+  ];
+  var svg = document.querySelector('.pm-svg'), wrap = document.querySelector('.pm-wrap'), det = document.getElementById('pm-detail');
+  OFERTAS.forEach(function(o, i){
+    var th = (i / OFERTAS.length) * 2 * Math.PI, x = 50 + 40 * Math.sin(th), y = 50 - 40 * Math.cos(th);
+    var ln = document.createElementNS('http://www.w3.org/2000/svg','line');
+    ln.setAttribute('x1',50); ln.setAttribute('y1',50); ln.setAttribute('x2',x); ln.setAttribute('y2',y); ln.setAttribute('data-line',o.id);
+    svg.appendChild(ln);
+    var b = document.createElement('button');
+    b.className = 'pm-node'; b.setAttribute('data-node', o.id); b.style.left = x + '%'; b.style.top = y + '%';
+    b.innerHTML = '<span class="n">' + (i+1) + '</span><span class="l"><b>' + o.title + '</b><em>' + o.price + '</em></span>';
+    b.addEventListener('click', function(){ pick(o.id); });
+    wrap.appendChild(b);
+  });
+  function pick(id){
+    var o = OFERTAS.filter(function(x){ return x.id === id; })[0];
+    document.querySelectorAll('.pm-node').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-node') === id); });
+    document.querySelectorAll('[data-line]').forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-line') === id); });
+    det.innerHTML = '<span class="pm-tag">' + o.tag + '</span>' +
+      '<div class="pm-head"><h3>' + o.title + '</h3><div class="pm-price"><b>' + o.price + '</b><span>' + o.priceSub + '</span></div></div>' +
+      '<div class="pm-rows">' +
+        '<div><div class="k">Pra quem é</div><div class="v">' + o.publico + '</div></div>' +
+        '<div><div class="k">O problema</div><div class="v">' + o.problema + '</div></div>' +
+        '<div><div class="k">O que entrega</div><div class="v">' + o.solucao + '</div></div>' +
+        '<div><div class="k">O diferencial</div><div class="v">' + o.diferencial + '</div></div>' +
+      '</div><button class="pm-go" data-to="' + o.id + '">Ver a jornada completa →</button>';
+    det.querySelector('.pm-go').addEventListener('click', function(){ show(id); window.scrollTo({top:0,behavior:"smooth"}); });
+  }
+  pick('express');
 </script>
 </body>
 </html>

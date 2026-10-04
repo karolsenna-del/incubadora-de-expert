@@ -10,6 +10,12 @@
 **Impacto:** [o que muda]
 -->
 
+## 03/10/2026 — Expert360º a R$697, Studio exclusivo das mentorias, VIP com 7 dias, Sprint com funil completo
+**Contexto:** Revisão da Jornada do Aluno com todas as ofertas (artifact WrMZHw5ZpDfSYYZYGPTjak) e da comparação lado a lado. Apareceram pontos em aberto em preço, bônus e garantia.
+**Decisão:** Expert360º passa a **R$697 à vista ou 12x R$69,70** (sai o R$497). **Studio de Ensaio sai do Expert360º** e fica exclusivo de Grupo e Individual. **Método VIP: garantia de 7 dias.** **Método Express: R$300 à vista ou 12x R$30.** **Sprint do Método entrega o Funil de Vendas Secretas completo**: captar leads, abordagem, pré-diagnóstico, agenda da sessão, diagnóstico, oferta, fechamento, onboarding (sim) e follow-up 5x (não).
+**Racional:** Definido pela Karol. Studio exclusivo reforça a diferença entre curso e mentoria.
+**Impacto:** Jornada do Aluno v3, Portas do Método v3, arsenal do closer, ecossistema de ofertas e documento mestre atualizados. **Pendente:** a página do Expert360º no ar ainda mostra R$497, 12x R$49,70 e o Studio (conferido via curl em 03/10). O checkout da Voomp e a vitrine da Área de Membros precisam ser conferidos.
+
 ## 02/10/2026 — Sprint do Método sobe de R$3.000 pra R$5.000
 
 **Contexto:** O Sprint do Método era vendido a R$3.000 (12x R$300 na página). Na prática a Karol monta toda a estrutura e entrega pronta. O cliente só valida em cada etapa.
@@ -602,3 +608,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** Mentoria Individual sai de R$13.500 pra **R$15.000 à vista ou 12x de R$1.500** (checkout `pay.voompcreators.com.br/16367/offer/waPZk3`). Bônus pra quem paga à vista: **a Karol participa junto da 1ª Venda Secreta do aluno** (desafio em grupo descartado: quem compra a Individual não quer grupo; gestão de tráfego descartada: benefício muito distante). Sprint do Método passa de R$3.000 pra **R$5.000** e inclui a criação do Funil de Vendas Secretas. Leitura da Karol: Individual = Sprint (feito junto) + acompanhamento de Posicionamento e Escala. Nome comercial nas apresentações: "Acelerador de Carreira no Digital".
 **Racional:** A Individual entrega construção conjunta + execução do time; o preço reflete isso. O bônus à vista é exclusivo, individual e cai no momento de maior medo.
 **Impacto:** Página da Individual publicada com o preço novo; `oferta-comercial-4-macrofases.md` v3.1; fichas de oferta, apresentações (Grupo e Individual) e mapa da jornada com comparativo Grupo × Individual em `incubadora-de-expert-grupo/` e `incubadora-de-expert-individual/`. Conferir página e checkout do Sprint com o valor novo.
+
+## 03/10/2026 — Toda oferta terá bônus; Expert360º ganha sessão de Perfil do Expert
+**Contexto:** Criação do agente Venda Sem Call (Worker Forge). O método prevê o "bônus de decisão rápida" (Script 23) e a Karol não tinha bônus definido pra maioria das ofertas. Também apareceu divergência no Sprint (documento de ofertas dizia 6 semanas/à vista; página dizia 8 semanas/12x R$500).
+**Decisão:** Cada oferta pode ter um bônus. **Expert360º: 1 sessão individual gratuita de Perfil do Expert.** Individual mantém o bônus à vista (Karol na 1ª Venda Secreta do aluno). Demais ofertas: a Karol vai definir ao montar um arquivo único com todos os produtos. Sprint confirmado: **8 semanas, R$5.000 à vista ou 12x R$500** (o documento de ofertas foi alinhado com a página).
+**Racional:** Dar ao agente (e à Karol) um motivo real pra decisão no dia, sem inventar urgência.
+**Impacto:** `ecossistema-ofertas-jul2026.md` atualizado (Sprint 8 semanas + parcelamento + bônus). O agente Venda Sem Call só oferece bônus que estiverem documentados. Pendente: arquivo de produtos da Karol com os bônus de Express, VIP, Sprint, Grupo (fora da Black) e Diagnóstico Ferramentas.
