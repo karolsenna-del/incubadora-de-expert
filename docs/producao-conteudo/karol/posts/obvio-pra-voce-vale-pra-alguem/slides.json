@@ -1,0 +1,15 @@
+{
+  "template": "card-tweet",
+  "name": "obvio-pra-voce-vale-pra-alguem",
+  "_nota": "slide 1 (capa foto-frase, foto Minhas fotos/3.png) é renderizado à parte (capa.html) e sobrescreve slide-01.png",
+  "slides": [
+    { "text": "capa — substituída", "image": null },
+    { "text": "Alguém te pergunta como resolver um problema. Você responde em 10 minutos, sem roteiro, sem pesquisar, quase no automático. E depois pensa: <strong>“Mas isso qualquer pessoa sabe.”</strong><br><br>Não. <strong>Você sabe.</strong>", "image": null },
+    { "text": "O problema de passar anos ficando boa em alguma coisa é esquecer como era <strong>não saber aquilo.</strong><br><br>Você olha para o resultado, mas não percebe mais os anos de tentativa, erro, prática, decisões e experiência que fizeram aquilo parecer simples hoje.", "image": null },
+    { "text": "A virada acontece quando você para de perguntar: <strong>“O que eu sei que é extraordinário?”</strong> e começa a observar: <strong>“O que ficou fácil para mim porque eu fiz tantas vezes?”</strong><br><br>Porque talvez seu conhecimento mais valioso esteja escondido justamente nas coisas que você faz sem perceber.", "image": null },
+    { "text": "Seu cliente não precisa comprar algo que seja novo <strong>para você.</strong> Ele precisa de algo que resolva um problema <strong>para ele.</strong><br><br>Você pode estar procurando uma grande ideia revolucionária enquanto ignora um caminho que sua experiência já encurtou.", "image": null },
+    { "text": "Faça um inventário da sua experiência: <strong>Que problema as pessoas sempre me pedem ajuda para resolver? O que eu faço hoje com facilidade? Que erros eu consigo antecipar? Que caminho eu consigo tornar mais claro para alguém?</strong><br><br>A matéria-prima do seu método pode estar aí.", "image": null },
+    { "text": "Talvez seu conhecimento não pareça valioso para você porque você já pagou o preço para adquiri-lo.<br><br><strong>Anos de prática fizeram parecer óbvio o que um dia também foi difícil para você. Não confunda familiaridade com falta de valor.</strong>", "image": null },
+    { "text": "Eu liberei um <strong>mini treinamento</strong> mostrando:<br>• como estruturar seu método;<br>• como fazer suas primeiras vendas, sem exposição amadora ou insegura, em 90 dias.<br><br>Esse é o mesmo modelo que meus alunos da Incubadora de Expert seguem.<br><br>Para ter acesso, comente <strong>“AULA”</strong> que eu te mando o link no Direct, gratuitamente.", "image": null }
+  ]
+}

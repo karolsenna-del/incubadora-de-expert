@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Slide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 1080px;
+    height: 1350px;
+    background: #1a1a1a;
+    overflow: hidden;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: linear-gradient(135deg, #4a4a4a 0%, #1a1a1a 100%);
+    overflow: hidden;
+  }
+
+  /* foto do slide — substitua image.png. Se nao existir, mostra o gradiente de fundo */
+  .photo {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('image.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* gradiente escuro pra legibilidade do texto */
+  .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.65) 45%, rgba(0,0,0,0) 72%);
+  }
+
+  .handle {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    z-index: 2;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    color: #F7F7F5;
+    background: rgba(0,0,0,0.35);
+    padding: 12px 28px;
+    border-radius: 100px;
+  }
+
+  .content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    padding: 0 70px;
+    z-index: 2;
+  }
+
+  .accent-rule {
+    width: 90px;
+    height: 8px;
+    background: #F05A28;
+    margin-bottom: 30px;
+    border-radius: 2px;
+  }
+
+  .headline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 66px;
+    line-height: 1.05;
+    color: #F7F7F5;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .subline strong { color: #F05A28; font-weight: 700; }
+  .subline {
+    line-height: 1.3;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #F7F7F5;
+    opacity: 0.9;
+  }
+
+  /* MODIFIER CTA — frase corrida (sem all-caps), sem subline */
+  .slide.cta .headline {
+    text-transform: none;
+    font-size: 58px;
+    line-height: 1.35;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  .slide.cta .subline {
+    display: none;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="photo"></div>
+  <div class="overlay"></div>
+
+  <div class="handle">@karolsenna._</div>
+
+  <div class="content">
+    <div class="accent-rule"></div>
+    <div class="headline">A maior mentira que contaram para profissionais experientes sobre o digital:</div>
+    <div class="subline"><strong>“Antes de começar, você precisa aprender marketing.”</strong><br><span style="font-size:38px">E isso fez muita gente competente passar tempo demais se preparando para começar.</span></div>
+  </div>
+</div>
+</body>
+</html>

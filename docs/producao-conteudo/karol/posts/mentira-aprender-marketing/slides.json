@@ -1,0 +1,15 @@
+{
+  "template": "card-tweet",
+  "name": "mentira-aprender-marketing",
+  "_nota": "slide 1 (capa foto-frase, foto Minhas-fotos-4/21.png, headline 66px, sombra reforçada) é renderizado à parte (capa.html) e sobrescreve slide-01.png",
+  "slides": [
+    { "text": "capa — substituída", "image": null },
+    { "text": "Talvez você já tenha pensado: <strong>“Preciso aprender mais marketing.” “Preciso entender Instagram.” “Preciso estudar mais um pouco antes de começar.”</strong><br><br>Então você compra mais um curso, assiste mais uma aula, salva mais um conteúdo… <strong>e continua exatamente no mesmo lugar.</strong>", "image": null },
+    { "text": "Porque quanto mais você estuda, mais coisas descobre que “precisa” fazer: conteúdo, funil, tráfego, copy, automação, lançamento, página, e-mail…<br><br>De repente, transformar seu conhecimento em uma oferta parece exigir uma nova profissão. <strong>E você conclui que ainda não está pronta.</strong>", "image": null },
+    { "text": "Só que talvez você esteja aprendendo na ordem errada. Antes de dominar marketing, você precisa conseguir responder com clareza: <strong>“Quem eu ajudo? Qual problema eu resolvo? Qual transformação consigo entregar? E como organizo minha experiência para chegar até ela?”</strong><br><br>Sem isso, marketing só aumenta o volume de uma mensagem que ainda não está clara.", "image": null },
+    { "text": "Você não precisa virar especialista em Instagram para começar a vender sua experiência. <strong>Você precisa transformar aquilo em que já é especialista em uma oferta que outra pessoa consiga entender e desejar.</strong><br><br>Marketing entra para comunicar e distribuir essa oferta. <strong>Não para substituir a falta dela.</strong>", "image": null },
+    { "text": "Mude a ordem: <strong>EXPERIÊNCIA → PROBLEMA → MÉTODO → OFERTA → VALIDAÇÃO → MARKETING.</strong><br><br>Primeiro descubra o que do seu conhecimento pode resolver um problema específico. Depois teste essa solução com pessoas reais. <strong>Aí você aprende o marketing necessário para ampliar aquilo que começou a funcionar.</strong>", "image": null },
+    { "text": "Talvez não esteja faltando mais um curso. Talvez você esteja tentando aprender tudo sobre vender antes de definir claramente <strong>o que tem para vender.</strong><br><br>Você não precisa dominar o digital inteiro para começar. <strong>Precisa parar de usar o aprendizado como pré-requisito infinito para agir.</strong>", "image": null },
+    { "text": "Se você já estudou marketing, salvou centenas de conteúdos e mesmo assim ainda não conseguiu transformar seu conhecimento em algo vendável, comenta <strong>“AULA”</strong>.<br><br>Eu te envio o link do mini treinamento para entender como começar a <strong>organizar o que você já sabe em um método e uma oferta.</strong>", "image": null }
+  ]
+}

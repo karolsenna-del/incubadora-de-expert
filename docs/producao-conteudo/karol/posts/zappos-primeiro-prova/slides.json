@@ -1,0 +1,14 @@
+{
+  "template": "card-tweet-dark",
+  "name": "zappos-primeiro-prova",
+  "slides": [
+    { "text": "A <strong>ZAPPOS</strong> virou um negócio bilionário sem começar com estoque.<br><br>No início, ela só precisava provar uma coisa: <strong>alguém compraria sapato pela internet?</strong>", "image": "C:/Users/karol/Downloads/zappos-primeiro-prova-fotos/card1-capa.jpg" },
+    { "text": "Em 1999, Nick Swinmurn teve a ideia de vender sapatos online.<br><br>Mas antes de investir pesado, fez algo simples: <strong>fotografou sapatos de lojas físicas</strong> e colocou as fotos na internet.", "image": null },
+    { "text": "Quando alguém comprava, ele voltava à loja, comprava o par e enviava para o cliente. Era manual, pouco escalável, nada sofisticado.<br><br>Mas respondia a pergunta mais importante: <strong>existe demanda real?</strong>", "image": null },
+    { "text": "Só depois de perceber que pessoas realmente compravam, fazia sentido investir em estoque, operação e crescimento.<br><br>O primeiro modelo não precisava ser perfeito. Precisava gerar <strong>PROVA.</strong>", "image": null },
+    { "text": "Anos depois, a Zappos se tornou uma das maiores referências em venda online de calçados.<br><br>Em 2009, foi adquirida pela Amazon em uma operação que chegou a cerca de <strong>US$ 1,2 bilhão</strong> no fechamento.", "image": null },
+    { "text": "É aqui que muitos especialistas fazem o contrário. Querem criar primeiro: o método perfeito, todas as ferramentas, todas as aulas, todos os materiais.<br><br><strong>E só depois descobrir se alguém compra.</strong>", "image": null },
+    { "text": "Na minha incubadora, eu ensino o caminho inverso.<br><br>Você cria uma primeira versão, vende para poucas pessoas, acompanha de perto e usa os resultados para melhorar o método.<br><br><strong>A primeira versão serve para aprender.</strong>", "image": null },
+    { "text": "Seu primeiro método não precisa impressionar o mercado inteiro. Precisa funcionar para pessoas reais.<br><br>Porque cada venda traz informação. Cada feedback melhora a solução. Cada resultado aumenta sua segurança.<br><br><strong>Primeiro prova. Depois aperfeiçoa.</strong>", "image": null }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "template": "card-tweet",
+  "name": "desperdicio-mais-caro-carreira",
+  "_nota": "slide 1 (capa foto-frase, foto Minhas-fotos-4/23.png) é renderizado à parte (capa.html) e sobrescreve slide-01.png",
+  "slides": [
+    { "text": "capa — substituída", "image": null },
+    { "text": "Você trabalha, resolve problemas, ganha experiência e fica cada vez melhor no que faz.<br><br>Mas chega no fim de mais um ano e percebe: <strong>seu conhecimento cresceu. Seu projeto próprio, não.</strong>", "image": null },
+    { "text": "Você pensa que está esperando o momento certo. Mais tempo, mais clareza, mais segurança. Só que, enquanto espera, existe algo que também está passando: <strong>tempo.</strong><br><br>E conhecimento parado não constrói método, não valida uma oferta e não faz sua primeira venda.", "image": null },
+    { "text": "A virada acontece quando você para de perguntar <strong>“Será que eu já sei o suficiente?”</strong> e começa a perguntar: <strong>“Quanto do que eu já sei poderia estar resolvendo o problema de alguém hoje?”</strong><br><br>Porque talvez você não esteja começando do zero. <strong>Está começando de anos de experiência.</strong>", "image": null },
+    { "text": "O maior risco não é apenas tentar algo e não funcionar. Existe outro risco que quase ninguém calcula: <strong>passar mais 2 anos se preparando e continuar exatamente com a mesma ideia guardada.</strong><br><br>Você pode recuperar dinheiro. Pode ajustar uma oferta. Pode mudar um método. <strong>Mas não consegue comprar de volta o tempo que adiou.</strong>", "image": null },
+    { "text": "Não tente transformar toda a sua carreira em um produto. Escolha <strong>um problema que você sabe resolver, uma pessoa que precisa dessa solução e uma transformação clara que você consegue entregar.</strong><br><br>Estruture. Ofereça. Valide. Depois melhore.", "image": null },
+    { "text": "Seu conhecimento não precisa ficar maior para começar a ter valor comercial. <strong>Ele precisa sair da sua cabeça, ganhar estrutura e encontrar o mercado.</strong><br><br>Porque potencial guardado continua sendo apenas potencial.", "image": null },
+    { "text": "Se você sente que já sabe demais para continuar apenas adiando, comenta <strong>“AULA”</strong>.<br><br>Eu te envio o link do meu mini treinamento para você entender como começar a <strong>transformar seu conhecimento em algo seu.</strong>", "image": null }
+  ]
+}

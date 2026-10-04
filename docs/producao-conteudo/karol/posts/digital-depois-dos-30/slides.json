@@ -1,0 +1,15 @@
+{
+  "template": "card-tweet",
+  "name": "digital-depois-dos-30",
+  "_nota": "slide 1 (capa foto-frase, foto Minhas fotos/8.png, headline 72px) é renderizado à parte (capa.html) e sobrescreve slide-01.png",
+  "slides": [
+    { "text": "capa — substituída", "image": null },
+    { "text": "Você abre o Instagram. Vê alguém com menos experiência, menos formação e menos resultados vendendo todos os dias.<br><br>E uma pergunta te atravessa: <strong>“Como ela conseguiu… e eu não?”</strong>", "image": null },
+    { "text": "Só que você não tem medo de aprender a fazer Reels, usar uma plataforma ou entender marketing. <strong>Você tem medo de parecer iniciante em público depois de passar anos sendo boa no que faz.</strong><br><br>Porque fora do digital você já construiu reputação, experiência e segurança. Aqui, parece que precisa provar tudo de novo.", "image": null },
+    { "text": "É aí que muita gente com experiência comete o pior erro: tenta entrar no digital imitando quem nasceu nele. Muda a forma de falar, segue fórmulas, tenta virar criadora de conteúdo.<br><br>Quando deveria fazer o contrário: <strong>usar o digital para amplificar a autoridade que já construiu fora dele.</strong>", "image": null },
+    { "text": "A pessoa que você vê vendendo todos os dias pode saber mais sobre Instagram. <strong>Mas isso não apaga os anos que você passou resolvendo problemas reais.</strong><br><br>Você não precisa competir pela atenção sendo a pessoa mais jovem, mais descolada ou que mais posta. Precisa transformar sua experiência em uma solução que o mercado consiga entender.", "image": null },
+    { "text": "Não comece perguntando: <strong>“O que eu preciso postar?”</strong> Comece perguntando: <strong>“Que problema eu aprendi a resolver tão bem que poderia criar um método para ajudar outras pessoas a resolvê-lo?”</strong><br><br>Depois transforme essa experiência em <strong>método, oferta, posicionamento e validação.</strong>", "image": null },
+    { "text": "Entrar no digital depois dos 30 não significa jogar sua carreira fora e começar novamente.<br><br><strong>Você é iniciante no canal. Não na sua profissão.</strong><br><br>Seu erro é entrar aqui olhando para tudo que ainda não sabe… e esquecer o valor de tudo que já viveu.", "image": null },
+    { "text": "Se você tem experiência, sabe que poderia transformar seu conhecimento em algo seu, mas ainda não sabe por onde começar, comenta <strong>“AULA”</strong>.<br><br>Eu te envio o link do mini treinamento para entender como começar a <strong>transformar o que você já sabe em um método vendável.</strong>", "image": null }
+  ]
+}

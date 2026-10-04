@@ -1,0 +1,15 @@
+{
+  "template": "card-tweet",
+  "name": "vendas-secretas-sem-seguidores",
+  "_nota": "slide 1 (capa foto-frase, foto Minhas fotos/10.png, headline 68px, sombra reforçada) é renderizado à parte (capa.html) e sobrescreve slide-01.png",
+  "slides": [
+    { "text": "capa — substituída", "image": null },
+    { "text": "Você olha para o seu perfil e pensa: <strong>“Quando eu tiver mais seguidores, vai ficar mais fácil vender.”</strong><br><br>Então posta mais, tenta crescer, estuda conteúdo e espera a audiência chegar. Enquanto isso, sua oferta continua sem ser apresentada para ninguém.", "image": null },
+    { "text": "O que impede você de vender não é necessariamente ter pouca audiência. <strong>É não conseguir responder claramente: “Por que alguém deveria escolher você?”</strong><br><br>Quando essa resposta não existe, nem 100 mil seguidores resolvem. <strong>Mais alcance só coloca uma mensagem confusa na frente de mais pessoas.</strong>", "image": null },
+    { "text": "Foi aí que eu percebi que existe outro caminho. Enquanto todo mundo tenta conquistar a atenção de milhares de pessoas no feed, você pode conquistar algo muito mais precioso no começo: <strong>o tempo e a atenção exclusiva de uma pessoa que tem o problema que você resolve.</strong><br><br>É aqui que entram as <strong>Vendas Secretas.</strong>", "image": null },
+    { "text": "Nas Vendas Secretas, você não espera ter audiência para vender. <strong>Você cria oportunidades de conversa no 1 a 1 com potenciais clientes.</strong><br><br>E existe uma diferença enorme: no feed, você disputa segundos de atenção. Em uma conversa, você pode ouvir o problema, entender o contexto e apresentar sua solução diretamente.", "image": null },
+    { "text": "Você não precisa falar com 10 mil pessoas para começar. Precisa encontrar <strong>as pessoas certas, abrir conversas, entender suas dores e apresentar sua solução quando houver encaixe.</strong><br><br>E cada conversa ainda revela algo valioso: <strong>o que seu cliente deseja, como descreve o problema, quais objeções possui e o que faria ele considerar sua oferta.</strong>", "image": null },
+    { "text": "Talvez você esteja esperando seguidores para conseguir clientes… quando poderia usar conversas para conquistar seus primeiros clientes <strong>antes da audiência existir.</strong><br><br>Conteúdo te dá alcance. <strong>O 1 a 1 te dá tempo, atenção e a oportunidade de apresentar sua solução.</strong>", "image": null },
+    { "text": "Se você quer entender como transformar seu conhecimento em uma oferta e começar a vender <strong>mesmo sem uma grande audiência</strong>, comenta <strong>“AULA”</strong>.<br><br>Eu te envio o link do mini treinamento.", "image": null }
+  ]
+}

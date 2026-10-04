@@ -1,0 +1,15 @@
+{
+  "template": "card-tweet",
+  "name": "mercado-nao-entende-escolher-voce",
+  "_nota": "slide 1 (capa foto-frase, foto Minhas fotos/6.png) é renderizado à parte (capa.html) e sobrescreve slide-01.png",
+  "slides": [
+    { "text": "capa — substituída", "image": null },
+    { "text": "Você fala da sua formação, dos anos de experiência, das técnicas que domina e de tudo que estudou. As pessoas até reconhecem: <strong>“Nossa, você sabe muito.”</strong><br><br>Mas admiração não vira necessariamente compra. E você começa a pensar: <strong>“Talvez eu não tenha autoridade suficiente.”</strong>", "image": null },
+    { "text": "O problema pode não ser falta de autoridade. Pode ser que sua autoridade esteja sendo comunicada do jeito errado.<br><br><strong>O mercado não compra conhecimento. O mercado compra transformação.</strong> E quando sua comunicação fala apenas sobre o que você sabe, as pessoas não conseguem enxergar <strong>o que podem conquistar com você.</strong>", "image": null },
+    { "text": "A virada acontece quando você para de comunicar <strong>“Olha tudo que eu sei”</strong> e começa a comunicar <strong>“Olha o problema que eu consigo te ajudar a resolver.”</strong><br><br>Sua experiência continua importante. Mas agora ela deixa de ser o centro da mensagem e passa a ser <strong>a razão para acreditar que você consegue entregar a transformação.</strong>", "image": null },
+    { "text": "Seu cliente não acorda pensando: <strong>“Preciso encontrar alguém com 15 anos de experiência.”</strong> Ele acorda pensando no problema que ainda não conseguiu resolver.<br><br>Sua formação explica quem você é. <strong>A transformação mostra por que ele deveria prestar atenção.</strong>", "image": null },
+    { "text": "Troque uma comunicação baseada em currículo por uma comunicação baseada em destino. Em vez de começar por <strong>“Eu sou especialista em…”</strong>, deixe claro: <strong>quem você ajuda, qual problema resolve, qual transformação entrega e qual caminho utiliza para chegar lá.</strong><br><br>Faça o cliente olhar para sua mensagem e pensar: <strong>“É exatamente isso que eu quero resolver.”</strong>", "image": null },
+    { "text": "Você pode ser excelente no que faz e continuar difícil de comprar. Porque <strong>competência sem clareza pode gerar admiração, mas não necessariamente decisão.</strong><br><br>Não basta o mercado perceber que você sabe muito. <strong>Ele precisa entender o que muda na vida dele quando escolhe você.</strong>", "image": null },
+    { "text": "Se você sabe que tem experiência, mas ainda sente dificuldade para transformar isso em uma oferta que as pessoas entendam e desejem, comenta <strong>“AULA”</strong>.<br><br>Eu te envio o link do mini treinamento para entender como começar a transformar seu conhecimento em <strong>método, oferta e posicionamento.</strong>", "image": null }
+  ]
+}
