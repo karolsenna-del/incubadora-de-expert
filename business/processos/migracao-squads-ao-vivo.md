@@ -35,6 +35,14 @@ Comparação versão local × ao vivo (squad-config e hashes dos arquivos oficia
 
 **Decisão da Karol (04/10):** Conteúdo, Carrossel e Posicionamento ficam locais (são iguais ao ao vivo + ajustes dela). Edição Arcane fica como está — o Clip Expert depende dos scripts corrigidos. Só revisitar se ela quiser a legenda karaokê / portão de entrega da 1.3.0, ou se o Clip Expert quebrar (aí juntar a 1.3.0 com os fixes e testar num corte real). Tráfego trocado pro ao vivo. **Migração encerrada.**
 
+## Etapa 3 — resto do Pack (04/10)
+
+- **Trocados pro ao vivo** (sem nenhum ajuste da Karol): `/consultor-gpmaster`, `/mentoring-creator`, `/slide-forge` (agora iguais aos atalhos camelCase, que já eram ao vivo), `/bootstrap3`, `/instalacaoBia`.
+- **Ficam locais — guardam trabalho da Karol na pasta:** Course Creator (`/course-creator` — todo o histórico do Expert360º; o `/courseCreator` ao vivo NÃO enxerga esse estado) e Gestor Infra (`/gestor-infra-arcane` e `/techOps` — SOPs, missões e registro das automações dela).
+- **Fora do catálogo da Arcane** (saíram do Pack, seguem com a cópia local): LP Dash Engineer, Data Engineer.
+
+**Conferência de versão dos que ficaram locais (04/10):** Conteúdo 1.0.1=1.0.1, Carrossel arquivos=14/08, Posicionamento 1.0.0=1.0.0, Course Creator 2.0.0=2.0.0, Gestor Infra 1.0.0=1.0.0 → nada perdido. Só a Edição Arcane está atrás (1.1.1 × 1.3.0). Comparação feita pelo número de versão que a Arcane declara: se ela lançar versão nova de algum desses, refazer a conferência.
+
 Obs.: Edição Euriliana (`/squad-edicao-euriliana`) é outro squad, já nasceu ao vivo, sem relação com o Clip Expert.
 
 ## Etapa 2 — plano original (superado pelo diagnóstico acima)
