@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grupo ou Individual</title>
+<title>Sprint, Grupo ou Individual</title>
 <style>
   :root{
     --bg:#ffffff; --ink:#141414; --muted:#6b6b6b; --line:#e4e4e4; --card:#f6f6f6;
@@ -79,9 +79,9 @@
   .cmp{margin:30px auto 0;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-top:14px}
   table.ct{width:100%;max-width:1080px;margin:0 auto;border-collapse:separate;border-spacing:0;font-size:13.5px}
   .ct th,.ct td{padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
-  .ct td:first-child,.ct th:first-child{position:sticky;left:0;background:#fff;z-index:2;text-align:left;font-weight:600;width:40%;min-width:150px}
+  .ct td:first-child,.ct th:first-child{position:sticky;left:0;background:#fff;z-index:2;text-align:left;font-weight:600;width:34%;min-width:150px}
   .ct td:first-child small{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px}
-  .ct td.v{text-align:center;width:30%}
+  .ct td.v{text-align:center;width:20%}
   .ct .ind{background:#f3f3f3}
   .ct th.grp{text-align:left;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);padding:18px 10px 8px;border-bottom:2px solid var(--line);background:#fff}
   .ct thead th{border-bottom:none;vertical-align:bottom}
@@ -175,10 +175,130 @@
   </header>
 
   <div class="tabs">
+    <button data-v="sprint">Sprint do Método</button>
     <button class="on" data-v="grupo">Mentoria em Grupo</button>
     <button data-v="individual">Mentoria Individual</button>
-    <button class="cmpb" data-v="comparar">Comparar Grupo × Individual</button>
+    <button class="cmpb" data-v="comparar">Comparar os 3</button>
   </div>
+
+  <!-- ===================== SPRINT ===================== -->
+  <section id="sprint" hidden>
+    <div class="legend">
+      <span><i class="k-live">●</i>Construído pela Karol</span>
+      <span><i class="k-check">✓</i>Você valida e aprova a etapa</span>
+    </div>
+    <div class="track" style="--cols:9">
+      <div class="phase before">
+        <div class="num">✕</div>
+        <div class="card">
+          <div class="tag">Antes</div>
+          <h2>Como você está hoje</h2>
+          <p class="goal">Falta tempo e falta clareza, ao mesmo tempo</p>
+          <div class="blk"><ul>
+            <li>Não tenho tempo pra mais uma coisa</li>
+            <li>Já tentei sozinho e não consegui</li>
+            <li>O projeto nunca sai do papel</li>
+            <li>Não sabe por onde começar com marketing e tecnologia</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">1</div>
+        <div class="card">
+          <div class="tag">Semana 1</div>
+          <h2>Imersão</h2>
+          <p class="goal">Levantamento completo</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Sua história real, suas dores, seu contexto</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">2</div>
+        <div class="card">
+          <div class="tag">Semana 2</div>
+          <h2>Pra quem é + o que resolve</h2>
+          <p class="goal">Persona e Promessa</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Escrito com o seu caso</strong><small>não um modelo genérico</small></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Você valida</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">3</div>
+        <div class="card">
+          <div class="tag">Semana 3</div>
+          <h2>Seu método</h2>
+          <p class="goal">Processo autoral</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Organizado a partir da sua experiência</strong></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Você valida</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">4</div>
+        <div class="card">
+          <div class="tag">Semana 4</div>
+          <h2>Materiais de aplicação</h2>
+          <p class="goal">Ferramentas do seu método</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Ferramentas personalizadas</strong><small>prontas pra usar com seus clientes</small></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Você valida</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">5</div>
+        <div class="card">
+          <div class="tag">Semana 5</div>
+          <h2>Proposta</h2>
+          <p class="goal">A oferta da sua mentoria</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Pronta pra apresentar</strong></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Você valida</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">6·7</div>
+        <div class="card">
+          <div class="tag">Semanas 6 e 7</div>
+          <h2>Funil de Vendas Secretas</h2>
+          <p class="goal">O caminho até a venda, montado</p>
+          <div class="blk"><b>A Karol monta o funil todo</b><ul><li>Captação de leads</li><li>Abordagem</li><li>Pré-diagnóstico</li><li>Agendamento da sessão</li><li>Diagnóstico</li><li>Oferta</li><li>Fechamento</li><li>Sim: onboarding</li><li>Não: follow-up em 5 contatos</li></ul></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Você escolhe a plataforma e valida</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="num">8</div>
+        <div class="card">
+          <div class="tag">Semana 8</div>
+          <h2>Assistente de IA + entrega</h2>
+          <p class="goal">Tudo nas suas mãos</p>
+          <div class="live"><span class="ico l">●</span><div><strong>Assistente de IA treinado no seu conhecimento</strong></div></div>
+          <div class="sess"><span class="ico c">✓</span><div><strong>Reunião de entrega final</strong></div></div>
+        </div>
+      </div>
+
+      <div class="phase final">
+        <div class="num">★</div>
+        <div class="card">
+          <div class="tag">Chegada</div>
+          <h2>Mentoria pronta pra vender</h2>
+          <p class="goal">Pronto, não esboçado:</p>
+          <div class="blk"><ul><li>Pra quem é e o que resolve, em uma frase</li><li>Método organizado</li><li>Materiais de aplicação</li><li>Proposta pronta</li><li>Funil de Vendas Secretas completo</li><li>Assistente de IA</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="count"><b>8 semanas</b> · <b>entregas semanais</b> · você valida cada etapa</p>
+
+    <div class="foot">
+      <div><b>Feito pra você</b>É um serviço: a Karol constrói, você entra pra validar e aprovar.</div>
+      <div><b>Funil completo</b>Da captação do lead ao fechamento, com onboarding de quem compra e 5 follow-ups pra quem não fecha na hora.</div>
+      <div><b>Não inclui</b>Mentoria, acompanhamento da implementação, análise de vendas reais e tráfego pago. Isso fica pra continuação.</div>
+      <div><b>Garantia de 7 dias</b>Incondicional, antes da Semana 1 começar.</div>
+    </div>
+  </section>
 
   <!-- ===================== GRUPO ===================== -->
   <section id="grupo">
@@ -415,54 +535,55 @@
         <thead>
           <tr>
             <th></th>
+            <th><div class="plan"><div class="pn">Sprint</div><h3>Feito pra você</h3><div class="tg">8 semanas, a Karol constrói</div><div class="pr"><small>12x de</small> R$500</div><div class="pv">ou R$5.000 à vista</div></div></th>
             <th><div class="plan"><div class="pn">Grupo</div><h3>Faça com orientação</h3><div class="tg">Oficinas + sessões a cada entrega</div><div class="pr"><small>12x de</small> R$500</div><div class="pv">ou R$5.000 à vista</div></div></th>
             <th><div class="plan i"><span class="badge">Mais completo</span><div class="pn">Individual</div><h3>Vamos construir juntos</h3><div class="tg">Construção conjunta + equipe</div><div class="pr"><small>12x de</small> R$1.500</div><div class="pv">ou R$15.000 à vista</div></div></th>
           </tr>
         </thead>
         <tbody>
-          <tr><th class="grp" colspan="3">Como funciona</th></tr>
-          <tr><td>Duração</td><td class="v">12 meses de acesso</td><td class="v ind">12 meses</td></tr>
-          <tr><td>Sessões individuais com a Karol</td><td class="v"><b>8</b><span class="note">acionadas pela sua entrega</span></td><td class="v ind"><b>14</b><span class="note">construção conjunta</span></td></tr>
-          <tr><td>Oficinas ao vivo em grupo</td><td class="v"><span class="ck">✓</span><span class="note">4 oficinas</span></td><td class="v ind"><span class="no">✕</span></td></tr>
-          <tr><td>Quem constrói</td><td class="v">Você, com oficinas, IA e revisão da Karol</td><td class="v ind">Nós juntos, e a equipe executa</td></tr>
+          <tr><th class="grp" colspan="4">Como funciona</th></tr>
+          <tr><td>Duração</td><td class="v">8 semanas</td><td class="v">12 meses de acesso</td><td class="v ind">12 meses</td></tr>
+          <tr><td>Sessões individuais com a Karol</td><td class="v">Validação<span class="note">a cada etapa</span></td><td class="v"><b>8</b><span class="note">acionadas pela sua entrega</span></td><td class="v ind"><b>14</b><span class="note">construção conjunta</span></td></tr>
+          <tr><td>Oficinas ao vivo em grupo</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">4 oficinas</span></td><td class="v ind"><span class="no">✕</span></td></tr>
+          <tr><td>Quem constrói</td><td class="v">A Karol constrói, você aprova</td><td class="v">Você, com oficinas, IA e revisão da Karol</td><td class="v ind">Nós juntos, e a equipe executa</td></tr>
 
-          <tr><th class="grp" colspan="3">Método</th></tr>
-          <tr><td>Diagnóstico ou análise inicial</td><td class="v"><span class="ck">✓</span><span class="note">+ Roteiro do Expert</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-          <tr><td>Método autoral<small>Persona, Promessa, Processo e Portfólio</small></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-          <tr><td>6 agentes de IA do método</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-          <tr><td>Materiais de aplicação do seu método</td><td class="v"><span class="ck">✓</span><span class="note">Kit de Ferramentas</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feitos pelo time</span></td></tr>
-          <tr><td>Proposta da mentoria pronta</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><th class="grp" colspan="4">Método</th></tr>
+          <tr><td>Diagnóstico ou análise inicial</td><td class="v"><span class="ck">✓</span><span class="note">imersão</span></td><td class="v"><span class="ck">✓</span><span class="note">+ Roteiro do Expert</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Método autoral<small>Persona, Promessa, Processo e Portfólio</small></td><td class="v"><span class="ck">✓</span><span class="note">construído pela Karol</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>6 agentes de IA do método</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Materiais de aplicação do seu método</td><td class="v"><span class="ck">✓</span><span class="note">feitos pela Karol</span></td><td class="v"><span class="ck">✓</span><span class="note">Kit de Ferramentas</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feitos pelo time</span></td></tr>
+          <tr><td>Proposta da mentoria pronta</td><td class="v"><span class="ck">✓</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
 
-          <tr><th class="grp" colspan="3">Validação</th></tr>
-          <tr><td>Vendas Secretas<small>vender 1:1, sem lançamento</small></td><td class="v"><span class="ck">✓</span><span class="note">oficina</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-          <tr><td>Funil de Vendas Secretas montado</td><td class="v"><span class="ck">✓</span><span class="note">você monta na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">montado pelo time</span></td></tr>
-          <tr><td>Kit de Scripts de Vendas Secretas</td><td class="v"><span class="ck">✓</span><span class="note">templates pra adaptar</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feitos pelo time</span></td></tr>
-          <tr><td>Checkup da oferta antes de ir a campo</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-          <tr><td>Raio-X das suas vendas</td><td class="v"><span class="ck">✓</span><span class="note">3 vendas analisadas</span></td><td class="v ind"><span class="ck">✓</span><span class="note">integrado ao acompanhamento</span></td></tr>
-          <tr><td>Agente Vendedor Secreto<small>copiloto durante a venda</small></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-          <tr><td>Simulador de Conversas de Venda</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-          <tr><td>Produto estruturado com as vendas reais</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><th class="grp" colspan="4">Validação</th></tr>
+          <tr><td>Vendas Secretas<small>vender 1:1, sem lançamento</small></td><td class="v"><span class="ck">✓</span><span class="note">funil completo</span></td><td class="v"><span class="ck">✓</span><span class="note">oficina</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Funil de Vendas Secretas montado</td><td class="v"><span class="ck">✓</span><span class="note">completo, pela Karol</span></td><td class="v"><span class="ck">✓</span><span class="note">você monta na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">montado pelo time</span></td></tr>
+          <tr><td>Kit de Scripts de Vendas Secretas</td><td class="v"><span class="ck">✓</span><span class="note">roteiro da sessão</span></td><td class="v"><span class="ck">✓</span><span class="note">templates pra adaptar</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feitos pelo time</span></td></tr>
+          <tr><td>Checkup da oferta antes de ir a campo</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Raio-X das suas vendas</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">3 vendas analisadas</span></td><td class="v ind"><span class="ck">✓</span><span class="note">integrado ao acompanhamento</span></td></tr>
+          <tr><td>Agente Vendedor Secreto<small>copiloto durante a venda</small></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Simulador de Conversas de Venda</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Produto estruturado com as vendas reais</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
 
-          <tr><th class="grp" colspan="3">Posicionamento e Escala</th></tr>
-          <tr><td>Autoridade Tríplice, narrativa e perfil</td><td class="v"><span class="ck">✓</span><span class="note">na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">construído junto</span></td></tr>
-          <tr><td>⭐ Studio de Ensaio do Expert</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-          <tr><td>Agentes de IA de criação de conteúdo<small>live semanal, reels e stories</small></td><td class="v"><span class="ck">✓</span><span class="note">3 agentes</span></td><td class="v ind"><span class="ck">✓</span><span class="note">3 agentes</span></td></tr>
-          <tr><td>Funil de Lives Semanais</td><td class="v"><span class="ck">✓</span><span class="note">você monta na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feito pelo time</span></td></tr>
-          <tr><td>Página de venda</td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feita pelo time</span></td></tr>
-          <tr><td>Funil e automações</td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feitos pelo time</span></td></tr>
-          <tr><td>Agente de IA do seu Método</td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-          <tr><td>Tráfego configurado + métricas iniciais</td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
-          <tr><td>Expert Plan (seu plano de escala)</td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><th class="grp" colspan="4">Posicionamento e Escala</th></tr>
+          <tr><td>Autoridade Tríplice, narrativa e perfil</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">construído junto</span></td></tr>
+          <tr><td>⭐ Studio de Ensaio do Expert</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Agentes de IA de criação de conteúdo<small>live semanal, reels e stories</small></td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">3 agentes</span></td><td class="v ind"><span class="ck">✓</span><span class="note">3 agentes</span></td></tr>
+          <tr><td>Funil de Lives Semanais</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span><span class="note">você monta na oficina</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feito pelo time</span></td></tr>
+          <tr><td>Página de venda</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feita pelo time</span></td></tr>
+          <tr><td>Funil e automações</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span><span class="note">feitos pelo time</span></td></tr>
+          <tr><td>Agente de IA do seu Método</td><td class="v"><span class="ck">✓</span><span class="note">assistente treinado no seu conhecimento</span></td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Tráfego configurado + métricas iniciais</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="no">✕</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
+          <tr><td>Expert Plan (seu plano de escala)</td><td class="v"><span class="no">✕</span></td><td class="v"><span class="ck">✓</span></td><td class="v ind"><span class="ck">✓</span></td></tr>
 
-          <tr><th class="grp" colspan="3">Condições</th></tr>
-          <tr><td>Garantia</td><td class="v">15 dias</td><td class="v ind">30 dias</td></tr>
+          <tr><th class="grp" colspan="4">Condições</th></tr>
+          <tr><td>Garantia</td><td class="v">7 dias<span class="note">antes da Semana 1</span></td><td class="v">15 dias</td><td class="v ind">30 dias</td></tr>
         </tbody>
         <tfoot>
-          <tr><td></td><td>Pra quem topa fazer com orientação</td><td class="ind">Pra quem quer construir junto, com a equipe executando</td></tr>
+          <tr><td></td><td>Pra quem não tem tempo e quer pronto</td><td>Pra quem topa fazer com orientação</td><td class="ind">Pra quem quer construir junto, com a equipe executando</td></tr>
         </tfoot>
       </table>
     </div>
-    
+    <p class="hint">Arraste a tabela pro lado pra ver todas as opções →</p>
   </section>
 
   <p class="brand">Incubadora de Expert · Karol Senna</p>
@@ -470,9 +591,10 @@
 
 <script>
   var meta = {
+    sprint: ['Jornada do <span>Sprint do Método</span>', "8 semanas · a Karol constrói, você valida cada etapa"],
     grupo: ['Jornada do Aluno na <span>Mentoria em Grupo</span>', "12 meses de acesso · você constrói, eu entro a cada entrega"],
     individual: ['Jornada do Aluno na <span>Mentoria Individual</span>', "12 meses · 14 sessões 1:1 · construímos juntos"],
-    comparar: ['Grupo <span>ou</span> Individual?', "O que cada mentoria entrega, lado a lado"]
+    comparar: ['Sprint, Grupo <span>ou</span> Individual?', "O que cada formato entrega, lado a lado"]
   };
   var ids = Object.keys(meta);
   function show(v){
