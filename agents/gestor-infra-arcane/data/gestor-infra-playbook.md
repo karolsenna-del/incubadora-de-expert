@@ -1177,6 +1177,7 @@ clicar "Enviar para análise" (aguardando confirmação explícita da Karol ante
 - `urllib` do Python leva **403** na API do Resend (bloqueio por user-agent). Usar `curl` com `--data-binary @arquivo.json` (montar o JSON com Python, mandar com curl).
 - Agendamento: `scheduled_at` em UTC. Cuiabá = UTC-4 (9h Cuiabá = `T13:00:00Z`). Conferir `status: scheduled` no GET.
 - Antes de cada disparo, listar `GET /broadcasts` e conferir se o anterior saiu de fato (04/10: o #2 nunca tinha sido criado e ninguém percebeu).
+- **Rastreio de abertura/clique (05/10):** estava DESLIGADO — #1 e #3 sairam sem dado de abertura/clique. Ligado via `PATCH /domains/f0b4361d-...` com `{"open_tracking":true,"click_tracking":true,"tracking_subdomain":"links"}`. So vale depois que o CNAME `links` → `links2.resend-dns.com` for criado no Registro.br (manual pela Karol) e verificado — antes disso o Resend nao aplica. **CNAME criado pela Karol e dominio verificado em 05/10 (rastreio valendo a partir do #4).** Incluso em todos os planos (sem custo). Ler resultado: `GET /emails` (paginar com `after`) e contar `last_event` (`opened`/`clicked`) pelo assunto do disparo. Abertura em iPhone vem inflada (Apple Mail Privacy).
 
 **Anexo — lista de transmissao WhatsApp (convite 1:1 em massa, sem API):**
 1. Gerar CSV Google Contacts com nome prefixado "BX " + marcador da campanha (`business/vault/{campanha}/contatos-google-*.csv`) e importar em contacts.google.com na conta **karol.franzini@gmail.com** (a que sincroniza com o iPhone — a conta de trabalho NAO).

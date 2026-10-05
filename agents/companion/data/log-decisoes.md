@@ -620,3 +620,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** Cada oferta pode ter um bônus. **Expert360º: 1 sessão individual gratuita de Perfil do Expert.** Individual mantém o bônus à vista (Karol na 1ª Venda Secreta do aluno). Demais ofertas: a Karol vai definir ao montar um arquivo único com todos os produtos. Sprint confirmado: **8 semanas, R$5.000 à vista ou 12x R$500** (o documento de ofertas foi alinhado com a página).
 **Racional:** Dar ao agente (e à Karol) um motivo real pra decisão no dia, sem inventar urgência.
 **Impacto:** `ecossistema-ofertas-jul2026.md` atualizado (Sprint 8 semanas + parcelamento + bônus). O agente Venda Sem Call só oferece bônus que estiverem documentados. Pendente: arquivo de produtos da Karol com os bônus de Express, VIP, Sprint, Grupo (fora da Black) e Diagnóstico Ferramentas.
+
+## 05/10/2026 — Weekly: carrinho da Black às 15h, Agente do Método pros 5 primeiros, M3 pausado até 15/10
+**Contexto:** Weekly review (adiada de 04/10), a 9 dias da Black Expert, com 6 entregas da campanha na semana.
+**Decisão:** (1) Carrinho e página da Black abrem às **15h de Brasília**, junto com a live de fechamento. (2) **Agente do Método Autoral vira bônus dos 5 primeiros** (antes: 1º, a confirmar). Funil de Vendas Secretas segue nos 3 primeiros até a Karol revisar a oferta. (3) **Gravação/edição do M3 do Expert360º (A9-A13) pausada até 15/10.** (4) Gerador Social Lead não congela — Karol quer usar como ferramenta de apresentação; papel na Black a definir.
+**Racional:** Coerência com "nada da oferta antes da live"; proteger o tempo da Karol pra fechar oferta, página e roteiro antes de 14/10.
+**Impacto:** Doc mestre da Black ganha a seção v1.5. Cockpit #1 em pausa até 15/10. Próximo passo: levantar a oferta completa.

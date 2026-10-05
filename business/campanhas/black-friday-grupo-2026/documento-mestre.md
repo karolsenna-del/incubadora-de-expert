@@ -178,3 +178,13 @@ Confirmado: você vai criar uma **página nova "Black Expert"** com essa oferta 
 - **Disparos a reescrever:** #3 (05/10), #5 (09/10, e-mail diz "custa o mesmo o ano inteiro" — deixa de ser verdade), #6 (11/10, deixa de revelar bônus). #8 passa a revelar R$5.000 (e R$7.500 a partir de 15/10).
 
 **Ajuste v1.4b (02/10, Karol):** NADA da oferta antes da **live de 14/10, às 15h** (não mais "antes das 8h"). Os disparos #3 a #9 viram sequência de dores e desejos com as perguntas do Diagnóstico do Expert, e o CTA único é a live. O #8 (8h) só convida pra live. Oferta, preço e bônus aparecem pela primeira vez **na live**. **[Decidir: carrinho/página abrem às 15h, junto com a live, em vez de 8h?]**
+
+---
+
+## Revisão v1.5 — decisões da Karol na weekly de 05/10/2026 (prevalece sobre v1.4 onde houver conflito)
+
+- **Carrinho e página abrem às 15h de Brasília (14h Cuiabá), junto com a live de fechamento** — não às 8h. Resolve o "[Decidir]" da v1.4b. O disparo das 8h só convida pra live.
+- **Agente do Método Autoral: bônus pros 5 primeiros** (não mais "1º [confirmar]").
+- **Funil de Vendas Secretas montado:** segue registrado como bônus dos **3 primeiros** (v1.4). Karol tinha na memória que era o bônus do 1º — vai revisar ao levantar a oferta inteira.
+- **Gerador Social Lead (GSL)** — conceito de 29/09 (`gsl-gerador-social-lead/documento-conceito.md`): Karol vê como "ferramenta incrível pra apresentar". Papel na Black (bônus? demonstração na live?) **a definir** no levantamento da oferta.
+- **Próximos passos da Karol (ordem):** (1) levantar e fechar a oferta completa (entregáveis + bônus + preço + escassez); (2) criar a página; (3) roteiro da live de fechamento.

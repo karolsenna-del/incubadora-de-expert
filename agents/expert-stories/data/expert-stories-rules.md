@@ -7,6 +7,16 @@
 
 ## Regras Ativas
 
+## [05/10/2026] — Day Off de sábado: a Karol posta direto, o worker não pede nem registra pendência
+**Origem:** Missões autônomas vinham commitando "Day Off de sábado segue aguardando input da
+Karol" (6 sábados seguidos) e o Companion levou isso pro briefing como pendência. Karol: "eu
+envio direto os day off, não tem por que mandar algo aqui".
+**Regra:** Sábado (Day Off) é postado pela própria Karol, direto no Instagram. O worker NÃO gera
+Story de sábado, NÃO pede foto/input, NÃO registra "aguardando input" no Mission Log, commit ou
+fila, e não trata a ausência de material como pendência. O sábado simplesmente fica fora da fila
+automática.
+**Aplica quando:** Planejando ou executando a missão de qualquer sábado (ou qualquer Day Off).
+
 ## [09/09/2026] — CTA da chamada pro grupo das lives usa a palavra LIVE, não GRUPO
 **Origem:** Executando a chamada pré-live de quarta (regra 08/09/2026) pela primeira vez, ao
 conferir `gatilhos-direct.json` antes de escrever o CTA (passo obrigatório da regra 23/08),

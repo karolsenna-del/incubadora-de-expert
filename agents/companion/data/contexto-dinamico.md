@@ -21,7 +21,7 @@ Variaveis:
 
 **Expert360º (Curso)** — Em producao e publicacao na Area de Membros
 - M0-M4 estruturados e roteirizados; 6 de 6 agentes existentes
-- Orientacoes 2/2 publicadas; M3 passou a 14 aulas (nova A11 "Conduzindo a Sessao ao Vivo") — 6/14 com video no ar (A0-A5, 26/09); A6+ em edicao
+- Orientacoes 2/2 publicadas; M3 passou a 14 aulas (nova A11 "Conduzindo a Sessao ao Vivo") — 9/14 com video no ar (A0-A8; A6-A8 em 02/10); A9+ pendente. Preco R$697 desde 01/10, bonus = sessao de Perfil do Expert
 - 26/09: descricoes de aula reescritas (M3) e revisadas pra linguagem neutra; Area de Membros agora exibe a descricao de cada aula, com link do suporte (wa.me) nas aulas de CTA
 - Semana 21-26/09: Karol focou em prospeccao diaria (1+/dia) → R$5 mil na semana + 6 aulas do curso gravadas (registrado em historias-trajetoria.md #19)
 - Next action confirmado na weekly de 02/09: fechar uma leva objetiva do M3; quantidade da leva nao definida
@@ -144,6 +144,14 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 - Criativos
 
 ## Onde Parou
+
+**Sessao 05/10 — Reconciliacao 27/09-05/10 (Companion), antes da weekly:**
+- **Black Expert (14/10, live de fechamento 15h):** v1.4 — R$5.000 (pix ou 12x), Grupo sobe pra R$7.500 a partir de 15/10, meta 4 vendas = R$20 mil (a decisao de 01/10 de "R$10 mil" foi superada pela v1.4 de 02/10). Oferta so revelada na live. E-mail #1 ok (28/09); **#2 nunca saiu** (Karol seguiu sem ele); **#3 saiu 05/10 13:00 UTC (9h Cuiaba), conferido no Resend**. Convite WhatsApp oficial pra 124 contatos (01/10, 9 respostas na 1a meia hora) + pagina 1:1 pros 102 fora da API. Live 32 realizada 01/10.
+- **Ofertas (02-03/10, ver log-decisoes):** Individual R$15.000; Sprint R$5.000/8 semanas; Grupo redesenhado sem plantao; Metodo VIP vira consultoria pontual; toda oferta com bonus (falta o arquivo unico de produtos da Karol). Radar → Diagnostico do Expert por fases. Agente novo **Vendedor Expert** (venda sem call). Mentorias ganham agentes de conteudo como Custom GPTs + Kit de Scripts no Grupo (04/10).
+- **Conteudo:** Semana 10 do Rota100k agendada (05-11/10, 20h) + leva de 12 carrosseis das 11h (04-16/10). **Cron do GitHub atrasando ~3-4h** nos posts das 11h (04/10 saiu 13h52 Cuiaba; 05/10 ainda nao tinha saido as 13h47). Workflow nao tem trava contra post duplicado — disparo manual so com o agendado desligado.
+- **Setup (04/10):** Auroq OS v2.6.6; agentes Arcane rodando ao vivo pelo MCP.
+- **Day Off:** Karol posta direto — nao e pendencia (regra nova no Expert-Stories).
+- Weekly de 04/10 adiada pra hoje (05/10), a pedido da Karol.
 
 **Sessao 24-25/09 — Onboarding do Metodo VIP + auditoria dos avisos por e-mail (Companion → Gestor de Infra → Ops):**
 - **Metodo VIP ganhou onboarding completo:** mensagem de boas-vindas (secao 4 de `business/processos/onboarding-pos-compra.md`, texto ajustado pela Karol) + diagnostico proprio no ar em `vendas.incubadoradeexpert.com.br/metodo-vip/diagnostico/` (replica do Metodo em 1 Hora, sem a pergunta de interesse, mantendo o bloco de ferramentas) + planilha "Diagnóstico do Método VIP — Respostas" com identidade visual da Incubadora + card na Central. Testado ponta a ponta (planilha + e-mail).
@@ -425,6 +433,7 @@ Retomar com: `/expert-companion`
 
 **Sessao 02/10:**
 - **Live 32 realizada (01/10) com sucesso**, segundo a Karol. Tem entrado gente no grupo da Black Expert.
+- **Live 33 roteirizada (05/10)** — qua 07/10 15h: "O funil que eu uso pra vender sem lançamento e sem audiência — vou te mostrar ele inteiro". Funil de Vendas Secretas completo (9 etapas do infográfico) aberto num artifact interativo que a Karol monta; mostra o quê, não o como. Bloco 8: pergunta "e se eu te entregasse esse funil prontinho?" como medidor de interesse (sem chamar de bônus), CTA grupo da Black Expert ("melhor oferta da Incubadora de Expert" só no grupo). Afirmações escolhidas: sem lead, tecnologia (comecei no Google Forms), método sem fases, oferta avisada no início da sessão, call que vira aula. Pendente: confirmar Bloco 2 (trajetória de preço da Individual), palavra do chat, Roteiro: `business/campanhas/lives-semanais/live-33-roteiro.md`. LP do grupo atualizada e no ar (05/10).
 - Expert360º: Karol editou as aulas A6-A8 do M3; vai publicar em outro chat.
 - Plano da Semana 09 tinha sido re-salvo em UTF-16 (01/10 19h); convertido de volta pra UTF-8, sem diferenca de conteudo em relacao ao ultimo commit.
 - Foco da sessao: Radar do Expert + sessao com a Laís (02/10) aplicando o que a Karol aprendeu na imersao FHT (origem do diagnostico e sessao de vendas 1:1).
