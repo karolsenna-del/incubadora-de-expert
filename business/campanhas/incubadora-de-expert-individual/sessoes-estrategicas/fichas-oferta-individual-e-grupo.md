@@ -32,6 +32,7 @@ Frase-ponte: *"Grupo: você faz com orientação. Individual: a gente constrói 
 
 **Como a Karol enxerga a Individual (02/10):** Individual = **Sprint do Método** (fazendo juntos, agora com a criação do Funil de Vendas Secretas incluída) + **acompanhamento de Posicionamento e Escala**. Sprint avulso passou de R$3.000 pra R$5.000.
 Comparativo visual Grupo × Individual: aba "Comparar" em `../../incubadora-de-expert-grupo/jornada-do-aluno.html`.
+Mapa Sprint → Individual (06/10): `../../sprint-do-metodo/materiais/mapa-sprint-individual.html`. Mostra o caminho completo e onde o Sprint termina. Usar quando a oferta é o Sprint: mostra o mapa, vende um passo; a Individual aparece como continuação, sem preço.
 
 ---
 
