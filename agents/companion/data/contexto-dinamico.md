@@ -149,7 +149,8 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 - Novo cliente do Metodo VIP (3 encontros), contratado em 24/09. Foco: Hunt Imoveis, persona = comprador de imovel; corretor/marketplace/Grana Curta ficam pra depois.
 - Encontro 1 montado como artifact compartilhavel na tela (https://claude.ai/artifact/ES2XRAy496vamtApzb5VMJ), com campos de observacao salvos no banco do artifact (colecao `notas`). Fonte: `business/campanhas/metodo-vip/clientes/tasso-ramalho/encontro-1.html`.
 - Canal entre encontros: WhatsApp do suporte.
-- Encontro 2: entregar o modelo de negocio da Hunt no formato Canvas (9 blocos), no mesmo formato de pagina, montado a partir das notas do Encontro 1.
+- Encontro 2: entregar o modelo de negocio da Hunt no formato Canvas (9 blocos), no mesmo formato de pagina, montado a partir das notas do Encontro 1. **Decisao Karol (06/10): construir o E2 so depois de fechar o E1.**
+- Direcao estrategica (servico ao comprador como chamariz pra corretores → marketplace local) registrada em `business/campanhas/metodo-vip/clientes/tasso-ramalho/plano-encontros.md` — documento de trabalho do cliente.
 
 **Sessao 05/10 — Reconciliacao 27/09-05/10 (Companion), antes da weekly:**
 - **Black Expert (14/10, live de fechamento 15h):** v1.4 — R$5.000 (pix ou 12x), Grupo sobe pra R$7.500 a partir de 15/10, meta 4 vendas = R$20 mil (a decisao de 01/10 de "R$10 mil" foi superada pela v1.4 de 02/10). Oferta so revelada na live. E-mail #1 ok (28/09); **#2 nunca saiu** (Karol seguiu sem ele); **#3 saiu 05/10 13:00 UTC (9h Cuiaba), conferido no Resend**. Convite WhatsApp oficial pra 124 contatos (01/10, 9 respostas na 1a meia hora) + pagina 1:1 pros 102 fora da API. Live 32 realizada 01/10.
