@@ -49,3 +49,4 @@
 | 03/10/2026 | isca-digital-diagnostico-2026-09-25 | 1 | 18089136461235338 | sim (ver log de execucao) |
 | 04/10/2026 | expert360-domingo-2026-10-04 | 1 | 18336879364272047 | sim (ver log de execucao) |
 | 05/10/2026 | chamada-grupo-lives-segunda-2026-10-05 | 6 | 17905806474596767, 18639636583059796, 18094983080392909, 18119789519516933, 18436004170179195, 17959659639240546 | sim (ver log de execucao) |
+| 06/10/2026 | expert360-terca-2026-10-06 | 1 | 18092503631185449 | sim (ver log de execucao) |
