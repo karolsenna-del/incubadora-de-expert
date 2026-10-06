@@ -1,0 +1,476 @@
+<title>Encontro 1 do Tasso</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
+<style>
+/* Layout: mapa mental de 6 blocos ao redor do encontro; o bloco ativo abre num cartão logo abaixo */
+:root{
+  --bg:#F4F4F5; --surface:#FFFFFF; --surface-2:#EDEDF0;
+  --ink:#0B0B0C; --ink-soft:#5F5F68; --line:#D4D4D8;
+  --accent:#FF6B1A; --accent-strong:#C94A08; --accent-soft:rgba(255,107,26,.10);
+  --on-accent:#0B0B0C;
+  --font-display:'Sora',-apple-system,'Segoe UI',sans-serif;
+  --font-body:-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111113; --surface:#1A1A1D; --surface-2:#242428;
+    --ink:#F4F4F5; --ink-soft:#A1A1AA; --line:#3A3A40;
+    --accent:#FF7A2E; --accent-strong:#FF9A5C; --accent-soft:rgba(255,122,46,.14);
+    --on-accent:#0B0B0C; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111113; --surface:#1A1A1D; --surface-2:#242428;
+  --ink:#F4F4F5; --ink-soft:#A1A1AA; --line:#3A3A40;
+  --accent:#FF7A2E; --accent-strong:#FF9A5C; --accent-soft:rgba(255,122,46,.14);
+  --on-accent:#0B0B0C; color-scheme:dark;
+}
+*{box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
+.page{max-width:920px;margin:0 auto;padding:28px 20px 64px;}
+.hero{padding-block:6px 22px;border-bottom:1px solid var(--line);margin-bottom:22px;}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-strong);font-weight:600;}
+.hero h1{font-family:var(--font-display);font-size:clamp(26px,5vw,38px);margin:6px 0 4px;text-wrap:balance;font-weight:600;}
+.hero .meta{color:var(--ink-soft);font-size:14px;display:flex;flex-wrap:wrap;gap:6px 16px;}
+
+.progress{display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:13px;color:var(--ink-soft);}
+.progress-track{flex:1;height:6px;background:var(--surface-2);border-radius:99px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;transition:width .3s ease;border-radius:99px;}
+.progress-count{font-variant-numeric:tabular-nums;white-space:nowrap;}
+.hint{font-size:12.5px;color:var(--ink-soft);text-align:center;margin-bottom:8px;}
+
+.mindmap-wrap{position:relative;width:100%;max-width:600px;margin:0 auto 8px;aspect-ratio:1/0.92;}
+.mindmap-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;}
+.mindmap-svg line{stroke:var(--line);stroke-width:1.5;transition:stroke .2s ease,stroke-width .2s ease;}
+.mindmap-svg line.active{stroke:var(--accent);stroke-width:2.5;}
+.hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  background:var(--accent);color:var(--on-accent);font-family:var(--font-display);font-weight:700;
+  font-size:13px;text-align:center;line-height:1.25;padding:14px 16px;border-radius:50%;
+  width:104px;height:104px;display:flex;align-items:center;justify-content:center;z-index:2;
+  box-shadow:0 2px 16px rgba(255,107,26,.25);}
+.node-btn{position:absolute;transform:translate(-50%,-50%);z-index:2;
+  display:flex;align-items:center;gap:7px;background:var(--surface);border:2px solid var(--line);
+  border-radius:99px;padding:8px 14px 8px 8px;font-size:12.5px;font-weight:600;color:var(--ink);
+  cursor:pointer;white-space:nowrap;transition:all .15s ease;font-family:var(--font-body);}
+.node-btn:hover{border-color:var(--accent);}
+.node-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.node-btn .num{width:22px;height:22px;border-radius:50%;background:var(--surface-2);color:var(--ink-soft);
+  display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;font-family:var(--font-display);}
+.node-btn.active{border-color:var(--accent);background:var(--accent-soft);}
+.node-btn.active .num{background:var(--accent);color:var(--on-accent);}
+.node-btn.done .num{background:var(--accent-strong);color:var(--surface);font-size:0;}
+.node-btn.done .num::after{content:"✓";font-size:11px;}
+@media (max-width:480px){
+  .node-btn{padding:6px 10px 6px 6px;font-size:11px;gap:5px;}
+  .node-btn .num{width:18px;height:18px;font-size:9px;}
+  .hub{width:84px;height:84px;font-size:11px;padding:10px;}
+}
+
+.detail-wrap{margin-top:20px;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;}
+.card-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px;}
+.card-head h2{font-family:var(--font-display);font-size:20px;margin:0;font-weight:600;text-wrap:balance;}
+.time{font-size:12px;color:var(--ink-soft);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.card-sub{font-size:13px;color:var(--ink-soft);margin:0 0 14px;}
+.card h3.sec{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;color:var(--ink-soft);margin:18px 0 8px;}
+.mark-done{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-soft);cursor:pointer;user-select:none;margin-top:18px;}
+.mark-done input{accent-color:var(--accent);width:14px;height:14px;}
+
+.bullets{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px;}
+.bullets li{font-size:14px;line-height:1.5;padding-left:16px;position:relative;}
+.bullets li::before{content:"—";position:absolute;left:0;color:var(--ink-soft);}
+.bullets q{font-style:italic;}
+
+.hypothesis{background:var(--accent-soft);border:1px solid var(--accent);border-radius:10px;padding:12px 14px;font-size:13.5px;line-height:1.5;margin-bottom:14px;}
+.hypothesis b{color:var(--accent-strong);}
+
+.checklist{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none;}
+.checklist li{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;line-height:1.4;padding:6px 8px;border-radius:8px;transition:background .15s ease;}
+.checklist li:hover{background:var(--surface-2);}
+.checklist input{accent-color:var(--accent);width:15px;height:15px;margin-top:2px;flex-shrink:0;}
+.checklist li.checked span{color:var(--ink-soft);text-decoration:line-through;text-decoration-color:var(--line);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.two-col > div{min-width:0;}
+@media (max-width:560px){.two-col{grid-template-columns:1fr;}}
+.col-label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;color:var(--ink-soft);margin-bottom:8px;}
+
+.answers{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none;}
+.answers li{font-size:13.5px;line-height:1.45;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);}
+.answers li b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin-bottom:2px;}
+
+.warning-box{background:var(--accent-soft);border:1px solid var(--accent);border-radius:10px;padding:12px 14px;font-size:13.5px;line-height:1.5;margin-bottom:16px;color:var(--ink);}
+.warning-box b{color:var(--accent-strong);}
+
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:6px;}
+.step-chip{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12.5px;}
+.step-chip b{color:var(--accent-strong);margin-right:4px;font-variant-numeric:tabular-nums;}
+.flow .arrow{color:var(--ink-soft);font-size:12px;}
+.flow-note{font-size:12.5px;color:var(--ink-soft);margin:0 0 4px;}
+
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scope > div{min-width:0;}
+@media (max-width:560px){.scope{grid-template-columns:1fr;}}
+.scope-box{border-radius:10px;padding:14px 16px;border:1px solid var(--line);}
+.scope-box.yes{background:var(--accent-soft);border-color:var(--accent);}
+.scope-box.no{background:var(--surface-2);}
+.scope-box h3{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;}
+.scope-box.yes h3{color:var(--accent-strong);}
+.scope-box.no h3{color:var(--ink-soft);}
+.scope-box ul{margin:0;padding-left:16px;font-size:13.5px;line-height:1.6;}
+
+.encontros{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px;}
+.enc-chip{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12.5px;}
+.enc-chip b{color:var(--accent-strong);}
+.enc-chip.now{border-color:var(--accent);background:var(--accent-soft);}
+
+.checklist li{flex-wrap:wrap;}
+.checklist li > span{flex:1;min-width:0;}
+.note{display:block;width:100%;min-height:44px;resize:vertical;font:13px/1.45 var(--font-body);color:var(--ink);
+  background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:7px 10px;margin-top:4px;}
+.checklist .note{margin-left:23px;width:calc(100% - 23px);}
+.note:focus{outline:none;border-style:solid;border-color:var(--accent);}
+.note::placeholder{color:var(--ink-soft);}
+.block-note{margin-top:18px;}
+.block-note .col-label{margin-bottom:4px;}
+.save-state{font-size:12px;color:var(--ink-soft);text-align:right;min-height:16px;margin-top:6px;}
+.foot{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-soft);line-height:1.6;}
+
+[data-panel]{display:none;}
+[data-panel].active{display:block;}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;}}
+</style>
+
+<div class="page">
+  <div class="hero">
+    <div class="eyebrow">Método VIP · Encontro 1 — Diagnóstico e primeiros passos</div>
+    <h1>Tasso Ramalho</h1>
+    <div class="meta">
+      <span>Hunt Imóveis</span>
+      <span>·</span>
+      <span>Conversa inicial 24/09</span>
+      <span>·</span>
+      <span>Diagnóstico recebido 30/09</span>
+    </div>
+  </div>
+
+  <div class="progress">
+    <span class="progress-count" id="progress-count">0/6 blocos</span>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  </div>
+  <p class="hint">Clique em cada bloco pra abrir o conteúdo</p>
+
+  <div class="mindmap-wrap">
+    <svg class="mindmap-svg" viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="Mapa mental com 6 blocos do encontro ao redor de um nó central">
+      <line data-line="1" x1="50" y1="50" x2="50" y2="10"></line>
+      <line data-line="2" x1="50" y1="50" x2="82.9" y2="30"></line>
+      <line data-line="3" x1="50" y1="50" x2="82.9" y2="70"></line>
+      <line data-line="4" x1="50" y1="50" x2="50" y2="90"></line>
+      <line data-line="5" x1="50" y1="50" x2="17.1" y2="70"></line>
+      <line data-line="6" x1="50" y1="50" x2="17.1" y2="30"></line>
+    </svg>
+    <div class="hub">ENCONTRO 1<br>TASSO</div>
+    <button class="node-btn" id="node-1" data-node="1" style="left:50%;top:10%;"><span class="num">1</span>Abertura</button>
+    <button class="node-btn" id="node-2" data-node="2" style="left:82.9%;top:30%;"><span class="num">2</span>O que você já tem</button>
+    <button class="node-btn" id="node-3" data-node="3" style="left:82.9%;top:70%;"><span class="num">3</span>Persona+Promessa</button>
+    <button class="node-btn" id="node-4" data-node="4" style="left:50%;top:90%;"><span class="num">4</span>Jornada+Ferramentas</button>
+    <button class="node-btn" id="node-5" data-node="5" style="left:17.1%;top:70%;"><span class="num">5</span>Foco</button>
+    <button class="node-btn" id="node-6" data-node="6" style="left:17.1%;top:30%;"><span class="num">6</span>Primeiros passos</button>
+  </div>
+
+  <div class="detail-wrap">
+
+    <div class="card" data-panel="1">
+      <div class="card-head"><h2>Abertura</h2><span class="time">5 min</span></div>
+      <p class="card-sub">O que já ficou combinado na nossa conversa de 24/09.</p>
+      <ul class="bullets">
+        <li>Decisões da conversa inicial: foco na <b>Hunt Imóveis</b>, persona = <b>cliente comprador</b>. O low ticket ficou de fora. Grana Curta fica como projeto filantrópico pro futuro, num repositório separado.</li>
+        <li>Como funciona o Método VIP: hoje é diagnóstico, persona, promessa, ferramentas e primeiros passos. No Encontro 2 a gente monta o plano de negócio. O Encontro 3 é correção de rota depois de 30 a 40 dias executando.</li>
+      </ul>
+      <div class="encontros" style="margin-top:14px;">
+        <span class="enc-chip now"><b>E1</b> Diagnóstico + primeiros passos (hoje)</span>
+        <span class="enc-chip"><b>E2</b> Plano de negócio</span>
+        <span class="enc-chip"><b>E3</b> Correção de rota (após 30–40 dias)</span>
+      </div>
+      <label class="mark-done"><input type="checkbox" id="done-1" data-block-check="1"> Marcar bloco como feito</label>
+    </div>
+
+    <div class="card" data-panel="2">
+      <div class="card-head"><h2>O que você já tem</h2><span class="time">15–20 min</span></div>
+      <p class="card-sub">O que já está construído e o que ainda precisa ser definido.</p>
+      <div class="two-col">
+        <div>
+          <div class="col-label">Ativos que já existem</div>
+          <ul class="bullets">
+            <li>Administração com especialização em finanças e custos; 20 anos de SAP, mais de 10 implementações</li>
+            <li>Hunt Imóveis existe desde 2013 e foi reestruturada em 2018–19 com foco no comprador, no modelo americano de <i>hunting</i> (assessoria paga por comissão)</li>
+            <li>MVP concluído: um ciclo completo, da compra à venda, e <q>atendi muitas pessoas para validar</q></li>
+            <li>Experiência própria com <i>house flipping</i> e leilão</li>
+            <li>Tráfego no imóvel que você vendeu: 250 leads, contra uma média de 15 a 20 dos corretores</li>
+            <li>Versões da Hunt em inglês, pra atendimento internacional</li>
+            <li>Parceiros possíveis já mapeados: advogado, despachante, corretor</li>
+            <li>Texto do site novo já estruturado: 5 serviços (Hunting, Leilão, Assessoria Jurídica, Avaliação com laudo CNAI, Counseling), atendendo no Rio de Janeiro: Centro, Tijuca, Zona Sul, Barra e Recreio</li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-label">O que está em aberto no diagnóstico</div>
+          <ul class="answers">
+            <li><b>Persona</b>"Homens, mulheres ou casais a partir de 20 anos que podem desejar comprar um imóvel" — ainda é um mercado, falta chegar numa pessoa</li>
+            <li><b>Ponto de partida</b>"Não entendi"</li>
+            <li><b>Passos / módulos</b>"Não sei informar"</li>
+            <li><b>Travas</b>"Nunca pensei nisso"</li>
+            <li><b>Mecanismo</b>"Foco, dedicação e IA" — precisa mostrar o que só a Hunt tem</li>
+            <li><b>Cobrança</b>CRECI diz que quem contrata paga, mas o mercado cobra do vendedor. Fecha no plano de negócio (E2)</li>
+            <li><b>Site</b>5 serviços e 2 públicos (moradia e investimento) lado a lado. Ainda falta organizar os serviços num método</li>
+          </ul>
+        </div>
+      </div>
+      <h3 class="sec">Pra aprofundar</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="q2-1"><span>No seu MVP, quantas pessoas você atendeu? Quantas compraram? Quanto você recebeu, e quem pagou?</span></li>
+        <li><input type="checkbox" id="q2-2"><span>Desses 250 leads, quem eram essas pessoas? O que procuravam? O que aconteceu com elas depois?</span></li>
+        <li><input type="checkbox" id="q2-3"><span>No site você lista Centro, Tijuca, Zona Sul, Barra e Recreio. De qual dessas regiões vieram os seus clientes do MVP?</span></li>
+        <li><input type="checkbox" id="q2-4"><span>Da tecnologia da Hunt, o que já está pronto e funcionando, e o que ainda é ideia?</span></li>
+        <li><input type="checkbox" id="q2-5"><span>O site fala em "nossos Hunters" e "nossa equipe de advogados". Hoje você tem equipe, ou trabalha sozinho com parceiros?</span></li>
+        <li><input type="checkbox" id="q2-6"><span>Dos 5 serviços do site, quais você já vendeu de verdade? Por quanto?</span></li>
+      </ul>
+      <label class="mark-done"><input type="checkbox" id="done-2" data-block-check="2"> Marcar bloco como feito</label>
+    </div>
+
+    <div class="card" data-panel="3">
+      <div class="card-head"><h2>Persona + Promessa</h2><span class="time">25–30 min</span></div>
+      <p class="card-sub">A base do plano de negócio do Encontro 2.</p>
+      <div class="hypothesis">
+        <b>Hipótese a validar:</b> o desejo que você escreveu (<i>"tirar o cliente do sofá só pra confirmar o imóvel e fazer o PIX"</i>) descreve alguém <b>com dinheiro e sem tempo</b>, que paga pra não lidar com dezenas de corretores. Testar com os clientes reais do MVP.
+      </div>
+      <div class="hypothesis">
+        <b>Escolha a fazer:</b> o site fala com quem compra pra <b>morar</b> e com quem compra pra <b>investir</b> (leilão com desconto, estratégia de rentabilidade). São desejos diferentes. Definir qual dos dois é a persona da primeira fase, pelos dados do MVP.
+      </div>
+      <div class="two-col">
+        <div>
+          <div class="col-label">Persona Compradora — 7 dimensões</div>
+          <ul class="checklist">
+            <li><input type="checkbox" id="p-1"><span>Quem é: pensa no seu melhor cliente do MVP. Qual o nome, a idade, a profissão dele?</span></li>
+            <li><input type="checkbox" id="p-2"><span>Situação atual: ele estava comprando o primeiro imóvel ou investindo? Qual a faixa de valor? À vista ou financiado?</span></li>
+            <li><input type="checkbox" id="p-3"><span>Desejo profundo: por trás de "achar rápido", o que ele queria de verdade? Não errar? Ganhar tempo? Não ser enganado?</span></li>
+            <li><input type="checkbox" id="p-4"><span>Dor principal: qual a frase exata que você escuta do comprador quando ele fala dos corretores?</span></li>
+            <li><input type="checkbox" id="p-5"><span>Medo/objeção: o que faz ele hesitar? É pagar por um serviço que ele acha que o corretor faz "de graça"?</span></li>
+            <li><input type="checkbox" id="p-6"><span>Já tentou: antes de chegar em você, o que ele já tinha tentado? Portais, vários corretores, sozinho? Por que não resolveu?</span></li>
+            <li><input type="checkbox" id="p-7"><span>O que precisa ouvir: qual frase, se você dissesse pra ele, faria ele respirar aliviado?</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-label">Promessa Transformadora — 4 elementos</div>
+          <ul class="checklist">
+            <li><input type="checkbox" id="pr-1"><span>Resultado externo: hoje sua promessa é "Compre seu imóvel com segurança e a simplicidade de uma única ligação". Em quanto tempo você entrega isso? Com que garantia?</span></li>
+            <li><input type="checkbox" id="pr-2"><span>O que muda por dentro: como o seu cliente se sente depois de comprar com você? É a tranquilidade de saber que não caiu em armadilha?</span></li>
+            <li><input type="checkbox" id="pr-3"><span>Diferencial: "foco, dedicação e IA" qualquer um pode dizer. O que só a Hunt tem? Trabalhar do lado do comprador, com dados, MVP próprio e rede de parceiros? Seu site já tem uma imagem forte pra isso: "é praticamente a encomenda de um imóvel"</span></li>
+            <li><input type="checkbox" id="pr-4"><span>Objeção: você mesmo listou "entender a forma de pagamento". Como a promessa já responde "como eu pago isso?"</span></li>
+            <li><input type="checkbox" id="pr-5"><span>Seu site abre com "a primeira startup do Brasil especializada na compra de imóveis". Você tem como provar isso? Se não tiver, que tal trocar por algo que você já comprova, como o MVP ou os 250 leads?</span></li>
+          </ul>
+        </div>
+      </div>
+      <label class="mark-done"><input type="checkbox" id="done-3" data-block-check="3"> Marcar bloco como feito</label>
+    </div>
+
+    <div class="card" data-panel="4">
+      <div class="card-head"><h2>Jornada + Ferramentas</h2><span class="time">20 min</span></div>
+      <p class="card-sub">Os passos que levam o comprador do ponto de partida ao imóvel comprado. Vamos desenhar juntos.</p>
+      <ul class="bullets">
+        <li><b>Ponto de partida</b> é onde o comprador está no dia em que chega na Hunt. Exemplo: perdido em portal, falando com vários corretores ao mesmo tempo.</li>
+      </ul>
+      <h3 class="sec">Rascunho da jornada (pra validar)</h3>
+      <p class="flow-note">Montado a partir do que você descreveu: contrato, diagnóstico, resultado, parceiros.</p>
+      <div class="flow">
+        <span class="step-chip"><b>1</b>Diagnóstico do comprador</span><span class="arrow">→</span>
+        <span class="step-chip"><b>2</b>Contrato de assessoria</span><span class="arrow">→</span>
+        <span class="step-chip"><b>3</b>Busca ativa (portais + networking + tecnologia)</span><span class="arrow">→</span>
+        <span class="step-chip"><b>4</b>Curadoria e visitas</span><span class="arrow">→</span>
+        <span class="step-chip"><b>5</b>Checagem jurídica e documental</span><span class="arrow">→</span>
+        <span class="step-chip"><b>6</b>Negociação</span><span class="arrow">→</span>
+        <span class="step-chip"><b>7</b>Fechamento</span>
+      </div>
+      <h3 class="sec">Ferramentas</h3>
+      <ul class="bullets">
+        <li><b>Primeira ferramenta: Diagnóstico do Comprador.</b> É o questionário da Sessão Secreta que combinamos em 24/09: entende o perfil e mostra perfis de imóveis compatíveis, sem entregar dados que deixem o cliente fechar sozinho com outro corretor.</li>
+        <li><b>Travas:</b> onde o seu comprador empaca no meio do caminho? Documento, financiamento, medo de golpe? Cada trava vira uma ferramenta ou um parceiro (advogado, despachante).</li>
+        <li><b>Os serviços do site viram etapas da jornada, não produtos soltos:</b> Hunting é o centro (passos 3 e 4); Avaliação entra na negociação (preço justo); Assessoria Jurídica é o passo 5; Leilão é um caminho alternativo de busca, pra quem compra pra investir. Counseling (o exemplo do site é herança) atende quem já tem imóvel, ou seja, outro público.</li>
+        <li><b>Pequenas vitórias</b> que você já listou (assinar o contrato, preencher o diagnóstico, receber resultado na hora) acontecem nos passos 1 e 2. O comprador sai do diagnóstico já com um primeiro resultado na mão. Qual vem primeiro: o diagnóstico ou o contrato?</li>
+      </ul>
+      <label class="mark-done"><input type="checkbox" id="done-4" data-block-check="4"> Marcar bloco como feito</label>
+    </div>
+
+    <div class="card" data-panel="5">
+      <div class="card-head"><h2>Foco: o que entra agora e o que espera</h2><span class="time">10 min</span></div>
+      <div class="warning-box">
+        <b>Da nossa conversa de 24/09:</b> muitas alternativas ao mesmo tempo paralisam, e ficar na "caverna" refinando tecnologia com IA atrasa o MVP. O marketplace nasce da base de compradores: sem comprador, não tem o que conectar.
+      </div>
+      <div class="scope">
+        <div class="scope-box yes">
+          <h3>Agora</h3>
+          <ul>
+            <li>Hunt Imóveis, persona comprador</li>
+            <li>Diagnóstico do Comprador + Sessão Secreta</li>
+            <li>Primeiros contratos de assessoria</li>
+            <li>Modelo de cobrança (fecha no E2)</li>
+            <li>Site: ajustar o texto só depois de fechar persona e promessa</li>
+          </ul>
+        </div>
+        <div class="scope-box no">
+          <h3>Depois</h3>
+          <ul>
+            <li>Persona corretor: comunidade com mensalidade</li>
+            <li>Marketplace e ecossistema (leilão, reforma, investimento)</li>
+            <li>Atendimento internacional</li>
+            <li>Counseling (quem herdou ou já tem imóvel)</li>
+            <li>Grana Curta</li>
+          </ul>
+        </div>
+      </div>
+      <label class="mark-done"><input type="checkbox" id="done-5" data-block-check="5"> Marcar bloco como feito</label>
+    </div>
+
+    <div class="card" data-panel="6">
+      <div class="card-head"><h2>Primeiros passos + fechamento</h2><span class="time">10 min</span></div>
+      <p class="card-sub">Tarefas até o Encontro 2.</p>
+      <ul class="checklist">
+        <li><input type="checkbox" id="t-1"><span>Listar os clientes que atendeu no MVP: quem eram, o que buscavam, o que aconteceu</span></li>
+        <li><input type="checkbox" id="t-2"><span>Escrever o passo a passo do ciclo que fez no MVP, do primeiro contato ao fechamento</span></li>
+        <li><input type="checkbox" id="t-3"><span>Trazer o que já sabe da regra do CRECI pra cobrança do comprador (base do plano de negócio)</span></li>
+        <li><input type="checkbox" id="t-4"><span>Separar os primeiros compradores pra conversar no formato Sessão Secreta</span></li>
+        <li><input type="checkbox" id="t-5"><span>Criar o repositório novo da Hunt, separado do Grana Curta (combinado em 24/09)</span></li>
+        <li><input type="checkbox" id="t-6"><span>Marcar a data do Encontro 2. Entre os encontros, a gente conversa pelo WhatsApp do suporte</span></li>
+      </ul>
+      <h3 class="sec">O que eu trago no Encontro 2</h3>
+      <ul class="bullets">
+        <li>Persona e Promessa organizadas a partir das respostas de hoje, pra você validar</li>
+        <li>Roteiro de ferramentas e estrutura do ecossistema do comprador (combinado em 24/09)</li>
+        <li>Modelo de negócio da Hunt no formato Canvas, com fontes de receita e forma de cobrança</li>
+      </ul>
+      <label class="mark-done"><input type="checkbox" id="done-6" data-block-check="6"> Marcar bloco como feito</label>
+    </div>
+
+  </div>
+
+  <div class="foot">
+    Baseado nas anotações da conversa de 24/09 (Google Meet) e no Diagnóstico do Método VIP respondido em 30/09 e no documento "Novo Site Hunt — Estrutura e Conteúdo". Marcações de progresso ficam salvas só neste navegador.
+  </div>
+</div>
+
+<script>
+(function(){
+  var STORAGE_KEY = 'encontro1-tasso-progress-v1';
+  var nodeBtns = document.querySelectorAll('.node-btn');
+  var panels = document.querySelectorAll('[data-panel]');
+  var lines = document.querySelectorAll('[data-line]');
+  var blockChecks = document.querySelectorAll('[data-block-check]');
+  var subChecks = document.querySelectorAll('.checklist input[type="checkbox"]');
+  var total = blockChecks.length;
+
+  function loadState(){
+    try{ var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : {blocks:{}, subs:[], active:'1'}; }
+    catch(e){ return {blocks:{}, subs:[], active:'1'}; }
+  }
+  function saveState(s){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }catch(e){} }
+  var state = loadState();
+  state.blocks = state.blocks || {}; state.subs = state.subs || [];
+
+  function setActive(id){
+    state.active = id;
+    nodeBtns.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-node')===id); });
+    panels.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-panel')===id); });
+    lines.forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-line')===id); });
+    saveState(state);
+  }
+  nodeBtns.forEach(function(btn){ btn.addEventListener('click', function(){ setActive(btn.getAttribute('data-node')); }); });
+
+  function updateProgress(){
+    var done = document.querySelectorAll('[data-block-check]:checked').length;
+    document.getElementById('progress-count').textContent = done + '/' + total + ' blocos';
+    document.getElementById('progress-fill').style.width = (done/total*100) + '%';
+  }
+  blockChecks.forEach(function(cb){
+    var n = cb.getAttribute('data-block-check');
+    var btn = document.querySelector('.node-btn[data-node="'+n+'"]');
+    cb.checked = !!state.blocks[n];
+    if(cb.checked && btn) btn.classList.add('done');
+    cb.addEventListener('change', function(){
+      state.blocks[n] = cb.checked;
+      if(btn) btn.classList.toggle('done', cb.checked);
+      saveState(state); updateProgress();
+    });
+  });
+  subChecks.forEach(function(cb, i){
+    var li = cb.closest('li');
+    cb.checked = !!state.subs[i];
+    if(cb.checked) li.classList.add('checked');
+    cb.addEventListener('change', function(){
+      state.subs[i] = cb.checked;
+      li.classList.toggle('checked', cb.checked);
+      saveState(state);
+    });
+  });
+  setActive(state.active || '1');
+  updateProgress();
+})();
+</script>
+<script>
+/* Observações: uma por tópico + uma por bloco, salvas no banco do artifact (fallback: este navegador) */
+(function(){
+  var LOCAL_KEY='encontro1-tasso-notas-v1';
+  var fields={};
+  document.querySelectorAll('.checklist li').forEach(function(li){
+    var cb=li.querySelector('input[type="checkbox"]'); if(!cb||!cb.id) return;
+    var ta=document.createElement('textarea');
+    ta.className='note'; ta.id='nota-'+cb.id; ta.rows=1; ta.placeholder='Observações';
+    ta.setAttribute('aria-label','Observações');
+    li.appendChild(ta); fields[ta.id]=ta;
+  });
+  document.querySelectorAll('.card[data-panel]').forEach(function(card){
+    var n=card.getAttribute('data-panel');
+    var wrap=document.createElement('div'); wrap.className='block-note';
+    var lab=document.createElement('label'); lab.className='col-label'; lab.htmlFor='nota-bloco-'+n; lab.textContent='Observações do bloco';
+    var ta=document.createElement('textarea'); ta.className='note'; ta.id='nota-bloco-'+n; ta.rows=3; ta.placeholder='Anotações gerais deste bloco';
+    var st=document.createElement('div'); st.className='save-state'; st.setAttribute('aria-live','polite');
+    wrap.appendChild(lab); wrap.appendChild(ta); wrap.appendChild(st);
+    var md=card.querySelector('.mark-done'); card.insertBefore(wrap, md);
+    fields[ta.id]=ta;
+  });
+  function stateEl(ta){ var c=ta.closest('.card'); return c?c.querySelector('.save-state'):null; }
+  function show(ta,msg){ var e=stateEl(ta); if(e) e.textContent=msg; }
+
+  var local={}; try{ local=JSON.parse(localStorage.getItem(LOCAL_KEY)||'{}'); }catch(e){ local={}; }
+  Object.keys(fields).forEach(function(k){ if(local[k]) fields[k].value=local[k]; });
+  function saveLocal(k,v){ local[k]=v; try{ localStorage.setItem(LOCAL_KEY, JSON.stringify(local)); }catch(e){} }
+
+  var col=null, timers={}, last={};
+  function persist(k){
+    var ta=fields[k], v=ta.value;
+    saveLocal(k,v);
+    if(!col){ show(ta,'Salvo neste navegador'); return; }
+    if(last[k]===v) return;
+    show(ta,'Salvando…');
+    col.doc(k).set({texto:v, atualizado:new Date().toISOString()}).then(function(){
+      last[k]=v; show(ta,'Salvo');
+    }).catch(function(){ show(ta,'Não salvou no servidor — ficou salvo neste navegador'); });
+  }
+  Object.keys(fields).forEach(function(k){
+    var ta=fields[k];
+    ta.addEventListener('input',function(){ clearTimeout(timers[k]); timers[k]=setTimeout(function(){ persist(k); },900); });
+    ta.addEventListener('blur',function(){ clearTimeout(timers[k]); persist(k); });
+  });
+
+  if(window.claude && window.claude.use){
+    window.claude.use('db').then(function(db){
+      if(!db) return;
+      col=db.collection('notas');
+      col.onSnapshot(function(snap){
+        snap.docs.forEach(function(d){
+          var ta=fields[d.id]; if(!ta) return;
+          var body=d.data()||{}; var v=typeof body.texto==='string'?body.texto:'';
+          last[d.id]=v;
+          if(document.activeElement!==ta && ta.value!==v){ ta.value=v; saveLocal(d.id,v); }
+        });
+      });
+    }).catch(function(){});
+  }
+})();
+</script>
