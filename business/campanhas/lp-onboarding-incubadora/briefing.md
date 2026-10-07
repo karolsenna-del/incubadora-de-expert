@@ -1,4 +1,7 @@
 # Briefing — Página de Onboarding (Incubadora de Expert)
+
+> **v2 (06/10/2026) — duas versões, um arquivo só.** `index.html` mostra a versão do Grupo em `/grupo` e a Individual em `/` e `/individual` (rotas no `vercel.json`, troca feita por classe `plano-grupo` no `<html>`; marcar blocos com `so-grupo` / `so-individual`). Fases e entregáveis da Jornada do Aluno (artifact https://claude.ai/artifact/WrMZHw5ZpDfSYYZYGPTjak) + oferta aprovada (`crm-reativacao-leads/paginas-vendas/00-documento-mestre-ofertas.md`, `incubadora-de-expert-grupo/setup-fase0.md`). Versão anterior: histórico do git. Status: preview, aguardando aprovação da Karol pra produção.
+> **Conferir antes de publicar (Grupo):** suporte de conteúdo sem grupo de WhatsApp; como o aluno pede a sessão depois da entrega; gravações em 48h úteis; Simulador, Studio e Vendedor Secreto (versão aluno) ainda em construção — a página diz que entram na fase em que serão usados. As 2 alunas atuais do Grupo entraram no formato antigo.
 Montado por Atlas (Squad LPago Arcane) | 29/08/2026
 Status: Publicada (31/08/2026) — https://onboarding.incubadoradeexpert.com.br
 Variante adaptada, fora do fluxo padrão de documento mestre (ver seção 0)

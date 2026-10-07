@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/grupo", "destination": "/index.html" },
+    { "source": "/grupo/", "destination": "/index.html" },
+    { "source": "/individual", "destination": "/index.html" },
+    { "source": "/individual/", "destination": "/index.html" }
+  ]
+}

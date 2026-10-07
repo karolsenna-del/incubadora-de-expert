@@ -293,16 +293,39 @@
       box-shadow: none;
     }
     @media (min-width: 768px) { .barra-mobile { display: none; } }
+
+    /* ===== DUAS VERSÕES (Individual / Grupo) num arquivo só ===== */
+    /* Sem JS, mostra a Individual (link antigo continua igual) */
+    html:not(.plano-grupo) .so-grupo { display: none !important; }
+    html.plano-grupo .so-individual { display: none !important; }
+
+    /* ===== FASES DETALHADAS ===== */
+    .fase ul { list-style: none; display: grid; gap: 4px; margin-top: 10px; }
+    .fase li { font-size: 0.92rem; color: var(--cinza-700); padding-left: 18px; position: relative; }
+    .fase li::before { content: ""; position: absolute; left: 4px; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--laranja); }
+    .fase .rotulo { display: block; margin-top: 12px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cinza-500); }
+    .fase .sessao { display: inline-block; margin-top: 12px; background: var(--preto); color: var(--branco); font-size: 0.82rem; font-weight: 600; border-radius: 8px; padding: 6px 12px; }
+    .fase .sessao + .sessao { margin-left: 6px; }
+    .fase.chegada { border: 2px solid var(--laranja); background: #FFF4EC; }
+
+    /* ===== FERRAMENTAS ===== */
+    .card .quando-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--laranja); margin-bottom: 8px; }
+    .card.destaque-card { background: #FFF4EC; border-top-color: var(--preto); }
   </style>
+  <script>
+    // /grupo mostra a versão do Grupo; qualquer outro endereço mostra a Individual
+    if (/^\/grupo(\/|$)/.test(location.pathname)) document.documentElement.classList.add('plano-grupo');
+  </script>
 </head>
 <body>
 
-  <!-- ============ SEÇÃO 1 — CAPA + BOAS-VINDAS ============ -->
+  <!-- ============ CAPA + BOAS-VINDAS ============ -->
   <header class="hero">
     <div class="container">
-      <span class="eyebrow">Incubadora de Expert · Onboarding</span>
+      <span class="eyebrow so-individual">Mentoria Individual · Onboarding</span>
+      <span class="eyebrow so-grupo">Mentoria em Grupo · Onboarding</span>
       <h1>Seja bem-vindo à <span class="destaque">Incubadora de Expert</span></h1>
-      <p class="sub">Aqui começa a jornada de transformar o que você já sabe fazer num método autoral — com nome próprio, validado por vendas reais, antes de qualquer exposição pública.</p>
+      <p class="sub">Aqui começa a jornada de transformar o que você já sabe fazer num método autoral, com nome próprio, validado por vendas reais antes de qualquer exposição pública.</p>
       <p class="sub">Nesta página você encontra tudo que precisa pra dar o primeiro passo.</p>
       <div class="assinatura">
         Vamos juntos. 🚀
@@ -311,7 +334,7 @@
     </div>
   </header>
 
-  <!-- ============ COMECE POR AQUI — ÁREA DE MEMBROS + DNA DO EXPERT (lado a lado) ============ -->
+  <!-- ============ COMECE POR AQUI ============ -->
   <section style="padding-top: 0;">
     <div class="container-wide">
       <h2 class="reveal">Comece por aqui</h2>
@@ -323,140 +346,310 @@
         </div>
         <div class="checkin reveal">
           <h3 style="margin-bottom: 12px; font-size: 1.1rem;">2. DNA do Expert</h3>
-          <p style="font-size: 0.95rem;">Preencha antes do nosso primeiro encontro — é o que destrava o agendamento da sua 1ª sessão.</p>
+          <p style="font-size: 0.95rem;" class="so-individual">Preencha antes do nosso primeiro encontro. É o que destrava o agendamento da sua 1ª sessão.</p>
+          <p style="font-size: 0.95rem;" class="so-grupo">É a sua primeira entrega. Assim que você preenche, sua Sessão 1 (Diagnóstico + Roteiro do Expert) é liberada.</p>
           <a class="cta" href="https://dna.incubadoradeexpert.com.br" target="_blank" rel="noopener">PREENCHER O DNA DO EXPERT</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ SEÇÃO 2 — O QUE É A INCUBADORA DE EXPERT ============ -->
+  <!-- ============ O QUE É ============ -->
   <section>
     <div class="container">
       <div class="frase-bandeira reveal">
         Diploma é o que você estudou.
         <span class="destaque">Método é o que você viveu.</span>
       </div>
-      <h2 class="reveal">O que é a Incubadora de Expert</h2>
-      <div class="tese-texto reveal">
-        <p>A Incubadora de Expert <strong>não é um curso</strong> — é um acompanhamento personalizado, 1:1, ao longo de 12 meses.</p>
-        <p>Aqui, você não recebe um framework pronto pra preencher sozinho. Você constrói o seu método autoral junto com a Karol, sessão por sessão — e só avança pra próxima etapa quando tem prova concreta de que a anterior funcionou.</p>
-        <p>O centro de tudo é a <strong>Vendas Secretas</strong>: você valida seu método com vendas reais, no 1:1, antes de qualquer exposição pública. Segurança de verdade, não teoria.</p>
+
+      <div class="so-individual">
+        <h2 class="reveal">Como funciona a sua Mentoria Individual</h2>
+        <div class="tese-texto reveal">
+          <p>A Mentoria Individual <strong>não é um curso nem uma agência</strong>. É um acompanhamento 1:1 de 12 meses em que a gente constrói o seu método junto, sessão por sessão.</p>
+          <p>Cada decisão é tomada com você. E o que dá trabalho técnico (<strong>página de venda, funil, automações, agente de IA e tráfego</strong>) o time executa sob a minha direção.</p>
+          <p>O centro de tudo é a <strong>Vendas Secretas</strong>: você valida seu método com vendas reais, no 1:1, antes de qualquer exposição pública.</p>
+        </div>
+      </div>
+
+      <div class="so-grupo">
+        <h2 class="reveal">Como funciona a sua Mentoria em Grupo</h2>
+        <div class="tese-texto reveal">
+          <p>A Mentoria em Grupo <strong>não é curso gravado nem plantão de dúvidas</strong>. É a jornada completa do método, em 12 meses: você aprende nas oficinas ao vivo, constrói com os agentes de IA e a Karol revisa cada etapa em sessões individuais.</p>
+          <p>A regra é simples: <strong>a sua entrega libera a sua sessão</strong>. Não tem dia nem hora fixos. Concluiu a etapa, a sessão com a Karol é liberada. Assim você recebe atenção no momento certo, no seu ritmo.</p>
+          <p>O centro de tudo é a <strong>Vendas Secretas</strong>: você valida seu método com vendas reais, no 1:1, antes de qualquer exposição pública.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ SEÇÃO 3 — SUA JORNADA ============ -->
-  <section style="background: var(--cinza-100);">
+  <!-- ============ SUA JORNADA — INDIVIDUAL ============ -->
+  <section class="so-individual" style="background: var(--cinza-100);">
     <div class="container-wide">
-      <h2 class="reveal">Sua jornada — 12 meses</h2>
+      <h2 class="reveal">Sua jornada: 12 meses</h2>
       <div class="jornada">
+        <div class="fase reveal">
+          <span class="marcador">00</span>
+          <div>
+            <span class="quando">Entrada</span>
+            <h3>Fundação</h3>
+            <p>Sua trajetória vira matéria-prima.</p>
+            <span class="rotulo">Construímos</span>
+            <ul><li>DNA do Expert</li><li>História Real</li><li>Ikigai e baseline</li></ul>
+            <span class="sessao">Sessão 1 · Fundação do Expert</span>
+          </div>
+        </div>
         <div class="fase reveal">
           <span class="marcador">01</span>
           <div>
-            <span class="quando">Mês 1</span>
-            <h3>Fundação</h3>
-            <p>Sua história real e o que te torna único — a matéria-prima de tudo que vem depois.</p>
+            <span class="quando">Fase 1</span>
+            <h3>Método</h3>
+            <p>Seu conhecimento vira propriedade intelectual.</p>
+            <span class="rotulo">Construímos</span>
+            <ul><li>Persona Compradora</li><li>Promessa Transformadora</li><li>Processo Autoral</li><li>Mapa do Portfólio</li></ul>
+            <span class="sessao">Sessões 2 a 5 · uma por construção</span>
           </div>
         </div>
         <div class="fase reveal">
           <span class="marcador">02</span>
           <div>
-            <span class="quando">Mês 1</span>
-            <h3>Persona e Promessa</h3>
-            <p>Pra quem você fala, e o que promete a essa pessoa. Sem isso, nada mais se sustenta.</p>
+            <span class="quando">Fase 2</span>
+            <h3>Validação</h3>
+            <p>Vendas Secretas: vender de verdade, no 1:1, antes de se expor.</p>
+            <span class="rotulo">Construímos</span>
+            <ul><li>Oferta + Mentoria Mínima Vendável</li><li>Kit de Scripts</li><li>Rastreador de Leads</li><li>Produto definitivo, a partir das vendas reais</li></ul>
+            <span class="rotulo">Como acontece</span>
+            <ul><li>Antes de ir a campo: treino no Simulador de Conversas de Venda</li><li>Durante: o Agente Vendedor Secreto como copiloto da conversa</li><li>Depois: Raio-X das suas vendas, integrado ao acompanhamento</li></ul>
+            <span class="sessao">Sessão 6 · oferta e preparação</span>
+            <span class="sessao">Sessão 7 · conversas + Raio-X</span>
+            <span class="sessao">Sessão 8 · vendas reais → produto</span>
           </div>
         </div>
         <div class="fase reveal">
           <span class="marcador">03</span>
           <div>
-            <span class="quando">Meses 2-3</span>
-            <h3>Método Autoral</h3>
-            <p>Seu processo ganha nome. Você constrói o Portfólio Estratégico — as ferramentas do seu método.</p>
+            <span class="quando">Fase 3</span>
+            <h3>Posicionamento</h3>
+            <p>Sua autoridade fica visível e coerente.</p>
+            <span class="rotulo">Construímos</span>
+            <ul><li>Autoridade Tríplice</li><li>Narrativa e Frase-Tese</li><li>Perfil, bio e linha editorial</li><li>Página de venda, feita pelo time</li></ul>
+            <span class="sessao">Sessões 9 a 11</span>
           </div>
         </div>
         <div class="fase reveal">
           <span class="marcador">04</span>
           <div>
-            <span class="quando">Meses 4-6</span>
-            <h3>Vendas Secretas</h3>
-            <p>Você vende de verdade, no 1:1 — 3 vendas reais antes de qualquer exposição pública. É aqui que seu método vira prova, não promessa.</p>
+            <span class="quando">Fase 4</span>
+            <h3>Escala</h3>
+            <p>Sua operação comercial configurada.</p>
+            <span class="rotulo">Feito pelo time</span>
+            <ul><li>Funil e automações</li><li>Funil de Lives Semanais</li><li>Agente de IA do seu Método</li><li>Tráfego configurado + métricas iniciais</li></ul>
+            <span class="sessao">Sessões 12 a 14 · com o seu Expert Plan</span>
+          </div>
+        </div>
+        <div class="fase chegada reveal">
+          <span class="marcador">★</span>
+          <div>
+            <span class="quando">Chegada</span>
+            <h3>Pronto pra escalar</h3>
+            <ul><li>Método autoral</li><li>Oferta validada em vendas reais</li><li>Produto estruturado</li><li>Posicionamento de autoridade e página</li><li>Funil, automações e IA</li><li>Tráfego configurado</li></ul>
+          </div>
+        </div>
+      </div>
+      <p class="jornada-nota reveal">14 sessões individuais comigo, em construção conjunta durante os 12 meses.</p>
+    </div>
+  </section>
+
+  <!-- ============ SUA JORNADA — GRUPO ============ -->
+  <section class="so-grupo" style="background: var(--cinza-100);">
+    <div class="container-wide">
+      <h2 class="reveal">Sua jornada: 12 meses</h2>
+      <div class="jornada">
+        <div class="fase reveal">
+          <span class="marcador">00</span>
+          <div>
+            <span class="quando">Entrada</span>
+            <h3>Diagnóstico</h3>
+            <p>Onde você está hoje e qual é o seu caminho.</p>
+            <span class="rotulo">Você entrega</span>
+            <ul><li>DNA do Expert</li></ul>
+            <span class="sessao">Sessão 1 · Diagnóstico + Roteiro do Expert</span>
           </div>
         </div>
         <div class="fase reveal">
-          <span class="marcador">05</span>
+          <span class="marcador">01</span>
           <div>
-            <span class="quando">Meses 7-12</span>
-            <h3>Autoridade e Escala</h3>
-            <p>Com a prova em mãos, você constrói sua presença digital com segurança — e sai com um plano pra continuar sozinho.</p>
+            <span class="quando">Fase 1</span>
+            <h3>Método</h3>
+            <p>Seu conhecimento vira método.</p>
+            <span class="rotulo">Oficina ao vivo</span>
+            <ul><li>Seu Método em 5 Dias: mão na massa, com revisão ao vivo</li></ul>
+            <span class="rotulo">Você entrega</span>
+            <ul><li>Persona</li><li>Promessa</li><li>Processo Autoral</li><li>Kit de Ferramentas</li><li>Proposta inicial</li></ul>
+            <span class="sessao">Sessão 2 · Revisão do Método</span>
+          </div>
+        </div>
+        <div class="fase reveal">
+          <span class="marcador">02</span>
+          <div>
+            <span class="quando">Fase 2</span>
+            <h3>Validação</h3>
+            <p>Vendas Secretas: vender de verdade, no 1:1, antes de se expor.</p>
+            <span class="rotulo">Oficina ao vivo</span>
+            <ul><li>Vendas Secretas: você monta o seu funil de venda</li></ul>
+            <span class="rotulo">Você entrega</span>
+            <ul><li>Oferta + Mentoria Mínima Vendável</li><li>Funil e Rastreador de Leads</li><li>Gravações das suas vendas</li><li>Primeiras vendas e entregas</li></ul>
+            <span class="rotulo">Como acontece</span>
+            <ul><li>Antes de ir a campo: treino no Simulador de Conversas de Venda + Checkup da Oferta</li><li>Durante: o Agente Vendedor Secreto como copiloto da conversa</li><li>Depois: Raio-X de 3 vendas suas, analisadas pela Karol</li></ul>
+            <span class="sessao">Sessão 3 · Checkup da Oferta</span>
+            <span class="sessao">Sessão 4 · Raio-X de Venda</span>
+            <span class="sessao">Sessão 5 · Estruturação do Produto</span>
+          </div>
+        </div>
+        <div class="fase reveal">
+          <span class="marcador">03</span>
+          <div>
+            <span class="quando">Fase 3</span>
+            <h3>Posicionamento</h3>
+            <p>Sua autoridade fica visível.</p>
+            <span class="rotulo">Oficina ao vivo</span>
+            <ul><li>Posicionamento: narrativa, mensagem e perfil</li></ul>
+            <span class="rotulo">Você entrega</span>
+            <ul><li>Autoridade Tríplice</li><li>Narrativa e mensagem central</li><li>Perfil e bio</li><li>Linha editorial e conteúdo</li></ul>
+            <span class="sessao">Sessão 6 · Revisão de Posicionamento</span>
+          </div>
+        </div>
+        <div class="fase reveal">
+          <span class="marcador">04</span>
+          <div>
+            <span class="quando">Fase 4</span>
+            <h3>Escala</h3>
+            <p>Um funil pra continuar vendendo.</p>
+            <span class="rotulo">Oficina ao vivo</span>
+            <ul><li>Funil de Lives Semanais: o modelo que eu uso</li></ul>
+            <span class="rotulo">Você entrega</span>
+            <ul><li>Sua 1ª live gravada</li><li>Expert Plan de faturamento</li><li>Meta de sessões de venda</li></ul>
+            <span class="sessao">Sessão 7 · Raio-X da Live</span>
+            <span class="sessao">Sessão 8 · Fechamento</span>
+          </div>
+        </div>
+        <div class="fase chegada reveal">
+          <span class="marcador">★</span>
+          <div>
+            <span class="quando">Chegada</span>
+            <h3>Seu negócio autoral</h3>
+            <ul><li>Método autoral com nome</li><li>Oferta validada em vendas reais</li><li>Produto estruturado pelo mercado</li><li>Posicionamento de autoridade</li><li>Funil de lives rodando</li><li>Plano de faturamento</li></ul>
           </div>
         </div>
       </div>
-      <p class="jornada-nota reveal">14 encontros individuais ao longo do caminho — mais frequentes no início (quando construímos juntos), espaçando conforme você ganha autonomia em campo.</p>
+      <p class="jornada-nota reveal">8 sessões individuais + 3 vendas analisadas + 4 oficinas ao vivo, no seu ritmo, durante 12 meses.</p>
     </div>
   </section>
 
-  <!-- ============ SEÇÃO 4 — COMO FUNCIONAM OS ENCONTROS ============ -->
-  <section style="background: var(--cinza-100);">
+  <!-- ============ COMO FUNCIONAM OS ENCONTROS ============ -->
+  <section>
     <div class="container">
       <h2 class="reveal">Como funcionam os encontros</h2>
-      <div class="tese-texto reveal">
-        <p>Os encontros são <strong>individuais (1:1), ao vivo, e gravados</strong> — você pode rever qualquer sessão quando quiser.</p>
-        <p>No começo, a gente se encontra toda semana: é quando construímos junto, ao vivo, cada peça do seu método. Conforme você ganha autonomia e vai pro campo validar, os encontros espaçam — até ficarem mensais, na fase de consolidar sua presença digital.</p>
+      <div class="tese-texto reveal so-individual">
+        <p>São <strong>14 sessões individuais (1:1), ao vivo e gravadas</strong>. Você pode rever qualquer sessão quando quiser.</p>
+        <p>No começo os encontros são mais próximos: é quando construímos juntos, ao vivo, cada peça do seu método. Conforme você ganha autonomia e vai pro campo validar, eles espaçam.</p>
         <p>Cada sessão parte de onde a anterior parou. Nada se perde: seu <strong>Roteiro da Jornada</strong> registra o que já foi feito e o que vem a seguir.</p>
+      </div>
+      <div class="tese-texto reveal so-grupo">
+        <p><strong>Oficinas ao vivo (em grupo):</strong> são 4, uma por fase. Na oficina você sai com a etapa feita, não só com a dúvida respondida. Ficam gravadas pra quem entrar depois.</p>
+        <p><strong>Sessões individuais com a Karol:</strong> são 8, liberadas pela sua entrega. Concluiu o que a fase pede, a sessão daquela etapa fica disponível pra você agendar.</p>
+        <p>As sessões valem pelos 12 meses de acesso. Cada uma você pede no seu tempo, sem atraso e sem pressa.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ SEÇÃO 5 — PERÍODO DE ACESSO ============ -->
+  <!-- ============ FERRAMENTAS E MATERIAIS ============ -->
+  <section style="background: var(--cinza-100);">
+    <div class="container-wide">
+      <h2 class="reveal">Suas ferramentas</h2>
+      <p class="reveal" style="text-align: center; margin: -20px auto 32px; color: var(--cinza-700);">Cada ferramenta entra na fase em que você vai usar.</p>
+      <div class="cards">
+        <div class="card reveal">
+          <span class="quando-tag">Desde o início</span>
+          <h3>6 agentes de IA do método</h3>
+          <p>Persona, Promessa, Processo, Portfólio, Proposta e Autoridade: te ajudam a construir cada etapa.</p>
+        </div>
+        <div class="card reveal so-individual">
+          <span class="quando-tag">Desde o início</span>
+          <h3>Roteiro da Jornada</h3>
+          <p>Seu plano personalizado, com o status de cada entrega: o que já foi feito e o que falta.</p>
+        </div>
+        <div class="card reveal so-grupo">
+          <span class="quando-tag">Sessão 1</span>
+          <h3>Roteiro do Expert</h3>
+          <p>Seu plano personalizado, montado no Diagnóstico a partir do seu DNA do Expert.</p>
+        </div>
+        <div class="card reveal so-individual">
+          <span class="quando-tag">Fase 1</span>
+          <h3>Materiais de aplicação do seu método</h3>
+          <p>As ferramentas específicas do SEU método, feitas pelo time.</p>
+        </div>
+        <div class="card reveal so-grupo">
+          <span class="quando-tag">Fase 1</span>
+          <h3>Kit de Ferramentas</h3>
+          <p>As ferramentas do seu método, que você monta na Oficina do Método.</p>
+        </div>
+        <div class="card reveal">
+          <span class="quando-tag">Fase 2</span>
+          <h3>Kit de Scripts de Vendas Secretas</h3>
+          <p class="so-individual">Os roteiros das suas conversas de venda, feitos pelo time.</p>
+          <p class="so-grupo">Templates de roteiro pra você adaptar às suas conversas de venda.</p>
+        </div>
+        <div class="card reveal">
+          <span class="quando-tag">Fase 2</span>
+          <h3>Simulador de Conversas de Venda</h3>
+          <p>Treina o que falar antes de ir a campo.</p>
+        </div>
+        <div class="card reveal">
+          <span class="quando-tag">Fase 2</span>
+          <h3>Agente Vendedor Secreto</h3>
+          <p>Seu copiloto no meio da conversa de venda.</p>
+        </div>
+        <div class="card destaque-card reveal">
+          <span class="quando-tag">Fase 3 · Destaque</span>
+          <h3>⭐ Studio de Ensaio do Expert</h3>
+          <p>Ensaie história, método e convite: grave 3 vezes, avalie as 3 e meça a sua evolução. Pode chamar alguém pra avaliar junto.</p>
+        </div>
+        <div class="card reveal">
+          <span class="quando-tag">Fase 3</span>
+          <h3>3 agentes de IA de conteúdo</h3>
+          <p>Pra criar sua live semanal, seus reels e seus stories.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERÍODO DE ACESSO ============ -->
   <section>
     <div class="container">
       <h2 class="reveal">Período de acesso</h2>
       <div class="tese-texto reveal" style="text-align: center; margin: 0 auto;">
-        <p>Seu acesso à Incubadora de Expert é de <strong>12 meses</strong> — o tempo real que leva pra construir, validar em campo e consolidar seu método com segurança.</p>
+        <p class="so-individual">Seu acesso à Incubadora de Expert é de <strong>12 meses</strong>: o tempo real pra construir, validar em campo e deixar sua operação pronta pra escalar.</p>
+        <p class="so-grupo">Seu acesso é de <strong>12 meses</strong>. As 8 sessões, as oficinas e as ferramentas valem durante todo esse período.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ SEÇÃO 6 — SEU DRIVE E MATERIAIS ============ -->
-  <section style="background: var(--cinza-100);">
-    <div class="container-wide">
-      <h2 class="reveal">Seus materiais</h2>
-      <p class="reveal" style="text-align: center; margin: -20px auto 32px; color: var(--cinza-700);">Tudo que você vai usar ao longo da jornada fica organizado na sua pasta no Google Drive.</p>
-      <div class="cards">
-        <div class="card reveal">
-          <h3>📁 Biblioteca de IAs</h3>
-          <p>Os agentes de inteligência artificial que te ajudam a construir cada etapa do método.</p>
-        </div>
-        <div class="card reveal">
-          <h3>📁 Roteiro da Jornada</h3>
-          <p>Seu plano personalizado, com status de cada entrega — o que já foi feito, o que falta.</p>
-        </div>
-        <div class="card reveal">
-          <h3>📁 Biblioteca de Templates</h3>
-          <p>Ferramentas prontas pra adaptar ao seu método.</p>
-        </div>
-        <div class="card reveal">
-          <h3>📁 Portfólio Estratégico</h3>
-          <p>As ferramentas específicas do SEU método, construídas com você a partir do Mês 2.</p>
-        </div>
-      </div>
-      <p class="jornada-nota reveal">O link da sua pasta chega junto com a confirmação da sua primeira sessão.</p>
-    </div>
-  </section>
-
-  <!-- ============ SEÇÃO 7 — SUPORTE ============ -->
+  <!-- ============ SUPORTE ============ -->
   <section class="secao-escura">
     <div class="container">
       <h2 class="reveal">Suporte</h2>
       <div class="suporte-grid">
-        <div class="suporte-canal reveal">
+        <div class="suporte-canal reveal so-individual">
           <h3>Dúvida de conteúdo</h3>
-          <p>Grupo de WhatsApp — a Karol responde em até <strong style="color: var(--branco);">24h úteis</strong>.</p>
+          <p>Grupo de WhatsApp: a Karol responde em até <strong style="color: var(--branco);">24h úteis</strong>.</p>
+        </div>
+        <div class="suporte-canal reveal so-grupo">
+          <h3>Dúvida de conteúdo</h3>
+          <p>Os agentes de IA do método respondem na hora. O que precisa da Karol vai pras oficinas e pras suas sessões.</p>
         </div>
         <div class="suporte-canal reveal">
-          <h3>Acesso, calendário, financeiro ou contrato</h3>
-          <p>Canal específico — o Whats do Suporte.</p>
+          <h3>Acesso, agenda, financeiro ou contrato</h3>
+          <p>Canal específico: o Whats do Suporte.</p>
         </div>
       </div>
       <div class="suporte-fecho reveal">
@@ -466,30 +659,42 @@
     </div>
   </section>
 
-  <!-- ============ SEÇÃO 8 — FAQ + PRÓXIMO PASSO ============ -->
+  <!-- ============ FAQ ============ -->
   <section>
     <div class="container">
       <h2 class="reveal">Perguntas frequentes</h2>
       <div class="faq reveal">
         <div class="faq-item">
           <h3>Acabei de entrar. O que eu faço primeiro?</h3>
-          <p>Preenche o DNA do Expert (link acima) — é o que destrava o agendamento da sua primeira sessão.</p>
+          <p>Preenche o DNA do Expert (link acima). É o que libera a sua primeira sessão.</p>
         </div>
         <div class="faq-item">
           <h3>Quanto tempo eu tenho de acesso?</h3>
           <p>12 meses, contados a partir da sua entrada.</p>
         </div>
-        <div class="faq-item">
+        <div class="faq-item so-individual">
           <h3>Tenho uma dúvida entre os encontros. Como faço?</h3>
-          <p>Manda no grupo de WhatsApp — a Karol responde em até 24h úteis.</p>
+          <p>Manda no grupo de WhatsApp: a Karol responde em até 24h úteis.</p>
+        </div>
+        <div class="faq-item so-grupo">
+          <h3>Como eu libero a próxima sessão?</h3>
+          <p>Concluindo a entrega da etapa. Cada sessão está ligada a uma entrega sua, e você pede no seu tempo, dentro dos 12 meses.</p>
+        </div>
+        <div class="faq-item so-grupo">
+          <h3>Perdi uma oficina ao vivo. E agora?</h3>
+          <p>As oficinas ficam gravadas. Você assiste e faz a entrega da etapa do mesmo jeito.</p>
+        </div>
+        <div class="faq-item so-individual">
+          <h3>Quem faz a página, o funil e o tráfego?</h3>
+          <p>O time, sob a direção da Karol, nas fases de Posicionamento e Escala. Você participa das decisões e aprova.</p>
         </div>
         <div class="faq-item">
           <h3>Os encontros ficam gravados?</h3>
-          <p>Sim. Disponíveis em até 48h úteis após cada sessão.</p>
+          <p>Sim. Disponíveis em até 48h úteis.</p>
         </div>
         <div class="faq-item">
           <h3>Como acesso a área de membros?</h3>
-          <p><a href="https://membros.incubadoradeexpert.com.br" target="_blank" rel="noopener" style="color: var(--laranja);">membros.incubadoradeexpert.com.br</a> — usa o mesmo e-mail da compra.</p>
+          <p><a href="https://membros.incubadoradeexpert.com.br" target="_blank" rel="noopener" style="color: var(--laranja);">membros.incubadoradeexpert.com.br</a>, com o mesmo e-mail da compra.</p>
         </div>
       </div>
     </div>
@@ -501,7 +706,7 @@
       <h2 class="reveal">Próximo passo</h2>
       <div class="reveal">
         <a class="cta" href="https://dna.incubadoradeexpert.com.br" target="_blank" rel="noopener">PREENCHER O DNA DO EXPERT</a>
-        <span class="cta-micro">Assim que preencher, a gente agenda sua primeira sessão — e a jornada começa de verdade.</span>
+        <span class="cta-micro">Assim que preencher, sua primeira sessão é liberada e a jornada começa de verdade.</span>
       </div>
       <div class="assinatura reveal">
         Estou aqui com você. 🚀
@@ -513,7 +718,7 @@
   <!-- ============ RODAPÉ ============ -->
   <footer>
     Incubadora de Expert · CNPJ 38.431.977/0001-36<br>
-    Página de onboarding — uso exclusivo de alunos ativos
+    Página de onboarding: uso exclusivo de alunos ativos
   </footer>
 
   <!-- ============ BARRA MOBILE ============ -->
