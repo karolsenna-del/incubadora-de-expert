@@ -1,7 +1,9 @@
 # Briefing — Página de Onboarding (Incubadora de Expert)
 
 > **v2 (06/10/2026) — duas versões, um arquivo só.** `index.html` mostra a versão do Grupo em `/grupo` e a Individual em `/` e `/individual` (rotas no `vercel.json`, troca feita por classe `plano-grupo` no `<html>`; marcar blocos com `so-grupo` / `so-individual`). Fases e entregáveis da Jornada do Aluno (artifact https://claude.ai/artifact/WrMZHw5ZpDfSYYZYGPTjak) + oferta aprovada (`crm-reativacao-leads/paginas-vendas/00-documento-mestre-ofertas.md`, `incubadora-de-expert-grupo/setup-fase0.md`). Versão anterior: histórico do git. Status: preview, aguardando aprovação da Karol pra produção.
-> **Conferir antes de publicar (Grupo):** suporte de conteúdo sem grupo de WhatsApp; como o aluno pede a sessão depois da entrega; gravações em 48h úteis; Simulador, Studio e Vendedor Secreto (versão aluno) ainda em construção — a página diz que entram na fase em que serão usados. As 2 alunas atuais do Grupo entraram no formato antigo.
+> **Respostas da Karol (07/10), já aplicadas:** (1) Grupo tem um grupo de WhatsApp por aluno, com Karol + suporte, pra dúvidas — não existe mais grupo de alunos (até ter volume); (2) sessão é pedida pelo "canal oficial de solicitação de agendamento" (nome provisório; virar formulário em artifact na área de membros); (3) gravações 48h úteis e atendimento 9h-18h valem pro Grupo; (4) ferramentas em construção ficam como "entram na fase em que você vai usar".
+> **Publicada em produção (07/10)** — `/`, `/individual` e `/grupo` conferidos. Rosiani e Analia (formato antigo do Grupo) **não recebem** o link `/grupo` (decisão da Karol, 07/10).
+> **Pendente:** dar nome definitivo ao "canal oficial de solicitação de agendamento" e criar o formulário (artifact) na área de membros.
 Montado por Atlas (Squad LPago Arcane) | 29/08/2026
 Status: Publicada (31/08/2026) — https://onboarding.incubadoradeexpert.com.br
 Variante adaptada, fora do fluxo padrão de documento mestre (ver seção 0)
