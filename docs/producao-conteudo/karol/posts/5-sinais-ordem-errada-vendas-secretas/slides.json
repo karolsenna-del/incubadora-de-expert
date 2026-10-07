@@ -15,6 +15,7 @@
     { "number": "02", "type": "signal", "title": "Você está esperando mais seguidores.", "body": "Venda não começa com audiência. Começa com uma conversa com alguém que já reconhece o problema." },
     { "number": "03", "type": "signal", "title": "Você está montando um lançamento antes de validar a oferta.", "body": "Lançamento amplifica. Se a oferta ainda não foi provada, ele amplifica a dúvida." },
     { "number": "04", "type": "signal", "title": "Você quer pagar anúncio antes da primeira venda.", "body": "Tráfego acelera o que já converte. Não ensina o mercado a querer o que ele ainda não pediu." },
-    { "number": "05", "type": "signal", "title": "Você nunca fez uma oferta para quem já confia em você.", "body": "Ex-aluna, contato, quem responde story: a validação começa perto. Isso é Vendas Secretas." }
+    { "number": "05", "type": "signal", "title": "Você nunca fez uma oferta para quem já confia em você.", "body": "Ex-aluna, contato, quem responde story: a validação começa perto. Isso é Vendas Secretas." },
+    { "number": "CTA", "type": "cta", "title": "Comente LIVE que eu vou ensinar o funil de Vendas Secretas hoje.", "highlight": "LIVE" }
   ]
 }
