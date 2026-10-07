@@ -36,7 +36,7 @@ function screenshot(url, target, width, height) {
 }
 
 const baseUrl = pathToFileURL(htmlPath).href;
-for (let i = 1; i <= 6; i += 1) {
+for (let i = 1; i <= 7; i += 1) {
   const filename = `slide-${String(i).padStart(2, '0')}.png`;
   const target = path.join(outDir, filename);
   screenshot(`${baseUrl}?slide=${i}`, target, 1080, 1350);
@@ -44,20 +44,20 @@ for (let i = 1; i <= 6; i += 1) {
 }
 
 const boardPath = path.join(root, 'prancha-revisao.html');
-const cards = Array.from({ length: 6 }, (_, i) => {
+const cards = Array.from({ length: 7 }, (_, i) => {
   const n = String(i + 1).padStart(2, '0');
   return `<figure><img src="laminas/slide-${n}.png" alt="Lâmina ${n}"><figcaption>LÂMINA ${n}</figcaption></figure>`;
 }).join('');
-fs.writeFileSync(boardPath, `<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Prancha de revisão</title><style>*{box-sizing:border-box}body{margin:0;width:1800px;height:1520px;overflow:hidden;background:#171719;color:#f7f7f4;font-family:Arial,sans-serif;padding:54px 60px}header{display:flex;justify-content:space-between;align-items:end;margin-bottom:34px}h1{font-size:34px;margin:0}p{margin:0;color:#aaa;font-size:18px}.grid{display:grid;grid-template-columns:repeat(3,480px);gap:34px 70px}figure{margin:0}img{display:block;width:480px;height:600px;object-fit:cover;box-shadow:0 16px 35px #0008}figcaption{font-size:15px;letter-spacing:.14em;color:#ff6b1a;margin-top:12px;font-weight:bold}</style><body><header><h1>5 sinais — ordem errada</h1><p>Card Black · 6 lâminas · 1080 × 1350</p></header><main class="grid">${cards}</main></body></html>`);
+fs.writeFileSync(boardPath, `<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Prancha de revisão</title><style>*{box-sizing:border-box}body{margin:0;width:1800px;height:2210px;overflow:hidden;background:#171719;color:#f7f7f4;font-family:Arial,sans-serif;padding:54px 60px}header{display:flex;justify-content:space-between;align-items:end;margin-bottom:34px}h1{font-size:34px;margin:0}p{margin:0;color:#aaa;font-size:18px}.grid{display:grid;grid-template-columns:repeat(3,480px);gap:34px 70px}figure{margin:0}img{display:block;width:480px;height:600px;object-fit:cover;box-shadow:0 16px 35px #0008}figcaption{font-size:15px;letter-spacing:.14em;color:#ff6b1a;margin-top:12px;font-weight:bold}</style><body><header><h1>5 sinais — ordem errada</h1><p>Card Black · 7 lâminas · 1080 × 1350</p></header><main class="grid">${cards}</main></body></html>`);
 
 const boardTarget = path.join(root, 'prancha-revisao.png');
-screenshot(pathToFileURL(boardPath).href, boardTarget, 1800, 1520);
+screenshot(pathToFileURL(boardPath).href, boardTarget, 1800, 2210);
 fs.copyFileSync(boardTarget, path.join(downloadsDir, 'prancha-revisao.png'));
 for (const file of ['legenda.txt', 'carrossel-editavel.html', 'slides.json', 'roteiro.md', 'render.mjs']) {
   fs.copyFileSync(path.join(root, file), path.join(downloadsDir, file));
 }
 fs.cpSync(path.join(root, 'assets'), path.join(downloadsDir, 'assets'), { recursive: true });
 
-console.log(`OK: 6 slides em ${outDir}`);
+console.log(`OK: 7 slides em ${outDir}`);
 console.log(`OK: cópia de entrega em ${downloadsDir}`);
 console.log(`OK: prancha em ${boardTarget}`);

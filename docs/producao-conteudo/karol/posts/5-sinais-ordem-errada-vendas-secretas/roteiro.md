@@ -1,6 +1,6 @@
 # Carrossel — 5 sinais de que você está tentando vender conhecimento na ordem errada
 
-**Formato:** Card Black · 1080 × 1350 px · 6 lâminas · sem foto  
+**Formato:** Card Black · 1080 × 1350 px · 7 lâminas · sem foto
 **Identidade:** fundo preto `#090A0B` / `#0B0B0C`, texto branco, destaque laranja `#FF6B1A`, fonte Sora, assinatura `@karolsenna._`.
 
 ## Lâmina 1 — Capa
@@ -36,6 +36,12 @@ Tráfego acelera o que já converte. Não ensina o mercado a querer o que ele ai
 **Você nunca fez uma oferta para quem já confia em você.**
 
 Ex-aluna, contato, quem responde story: a validação começa perto. Isso é **Vendas Secretas**.
+
+## Lâmina 7 — CTA
+
+**Comente LIVE que eu vou ensinar o funil de Vendas Secretas hoje.**
+
+`LIVE` recebe o maior destaque visual da lâmina. Fechamento sem data ou horário.
 
 ## Direção criativa
 
