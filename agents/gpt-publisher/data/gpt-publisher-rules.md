@@ -21,3 +21,14 @@
 - Não insistir tentando outro seletor ou outro navegador do MCP — o bloqueio é do Google, não do site
 - Pedir pra Karol: (a) logar manualmente antes de eu automatizar, ou (b) colar o conteúdo/publicar ela mesma quando o pacote estiver aprovado
 - Documentar no registro da missão que a publicação final foi manual, não via Playwright
+
+## Regra 3 — Conta pessoal (Plus) não compartilha mais GPT novo; Custom GPTs serão aposentados
+
+**Contexto:** Em 06/10/2026, ao publicar a LIA Agro na conta Plus da Karol, o GPT Builder só ofereceu "Apenas eu" com o aviso "Já não é possível partilhar GPTs publicamente". A Central de Ajuda da OpenAI (artigo 8554397, "Creating and editing GPTs") diz: contas pessoais (Free, Go, Plus, Pro) não podem criar nem publicar GPTs novos; GPTs existentes continuam usáveis e editáveis. A OpenAI vai aposentar Custom GPTs em favor de **Plugins** — o editor mostra "Migre os seus GPTs para plugins até 11 de dezembro; os não migrados deixarão de estar disponíveis".
+**Motivo:** O fluxo "criar GPT novo e mandar o link" deixou de existir pra conta pessoal, e todo GPT (inclusive os 6 do Expert360º e o ExpertViral) tem prazo pra virar plugin.
+**Checklist:**
+- Antes de prometer link pra aluna/cliente, avisar que GPT novo em conta pessoal fica só pra própria Karol
+- Não tentar contornar (outra conta, outro navegador) sem decisão da Karol
+- GPT existente ainda pode ser editado (Instructions/Knowledge) — atualizações dos 6 GPTs legados seguem possíveis até a aposentadoria
+- Migração pra plugins até 11/12: decisão de produto da Karol, registrar no backlog
+- **Plugin não resolve compartilhamento em conta pessoal (checado 06/10/2026):** a ajuda da OpenAI ("Hosting a plugin with ChatGPT Sites", artigo 20001547) diz que usuários Pro e de conta pessoal não conseguem compartilhar plugin com outras pessoas, nem por convite nem por link. Compartilhar plugin só funciona entre membros de um workspace Business ou Enterprise, e depende da permissão "Share plugins". A migração GPT → plugin transforma as Instructions numa skill e leva o Knowledge, mas não leva o compartilhamento, e o plugin migrado começa privado.
