@@ -145,6 +145,13 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 08/10 — Mentoria em Grupo redesenhada pra Black Expert (Mentoring Creator):**
+- Grupo: 12 Oficinas **Destrava Expert** mensais (2h), ciclo comeca em nov (Proposta Validada) porque o Desafio cobre o Metodo. Desafio **Seu Metodo em 5 Dias** ao vivo 19-23/10 (D1 Historia/Ikigai, D2 Persona, D3 Promessa, D4 Processo, D5 Portfolio).
+- **Funil de Vendas Secretas montado vira entregavel do Grupo** (tambem a R$7.500 pos-14/10). Escassez da Black = preco R$5.000 + Central (a vista) + Agente (5 primeiros) + Desafio com premiacao (5 ferramentas universais; entrega ate 25/10, anuncio na live de 28/10). Garantia 15 dias mantida.
+- Prova: Milena Gehrke — Venda Secreta montada pela Karol 23/09 → 30/09 vendeu 1a mentoria R$2.500 (2 sessoes, comprou uma ex-aluna); funil completo so em 06/10.
+- Camada obrigatoria de ferramentas salva em `docs/knowledge/expert-business/metodologia/camada-obrigatoria-ferramentas.md`.
+- Em aberto pra fechar a oferta: papel do Gerador Social Lead; copy da pagina do aluno entra no Grupo? Pendentes depois: moldes 11/12, Forms de pre-diagnostico copiavel, downsell do Desafio R$197, atualizar ficha do Grupo. Doc: `business/campanhas/incubadora-de-expert-grupo/setup-fase0.md`.
+
 **Sessao 05/10 (tarde) — Metodo VIP do Tasso Ramalho (Hunt Imoveis):**
 - Novo cliente do Metodo VIP (3 encontros), contratado em 24/09. Foco: Hunt Imoveis, persona = comprador de imovel; corretor/marketplace/Grana Curta ficam pra depois.
 - Encontro 1 montado como artifact compartilhavel na tela (https://claude.ai/artifact/ES2XRAy496vamtApzb5VMJ), com campos de observacao salvos no banco do artifact (colecao `notas`). Fonte: `business/campanhas/metodo-vip/clientes/tasso-ramalho/encontro-1.html`.

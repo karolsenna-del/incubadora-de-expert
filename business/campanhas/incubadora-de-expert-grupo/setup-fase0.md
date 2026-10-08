@@ -55,7 +55,31 @@ As 4 fases são as mesmas (Método → Validação → Posicionamento → Escala
 - **Nada da oferta é apresentado antes de 14/10** (impacta os Disparos #3 e #6 — ver seção 8).
 - **Preço na Black:** Karol quer manter R$5.000 em vez de R$2.500. Em análise (seção 10).
 
-## 5. Critérios da premiação do Desafio (proposta)
+## 4b. Funil de Vendas Secretas montado — revisão 08/10
+
+- **Karol quer dar o Funil montado pra TODOS que entrarem até 14/10, 23h59** (não mais só os 3 primeiros). Motivo dela: foi fácil replicar o funil dela pra uma aluna, e o funil é o grande diferencial da mentoria.
+- Montagem acontece quando o aluno chega na Validação com a Proposta pronta (regra do Grupo) → carga diluída.
+- **Provas documentadas no repo:** Karol ago/26 R$1.500 → set/26 R$10 mil; R$5 mil em 21-26/09 com prospecção diária às 14h; tarde da tempestade 14 conversas → 6 sessões → 1 venda de R$1.500 (`historias-trajetoria.md` #19). **Caso de aluna (Karol, 08/10):** Karol montou o funil pra **Milena Gehrke (Conduz Agro)** — ela fez **2 sessões e vendeu 1 mentoria, a primeira da vida dela, de R$2.500** (mentoria do método Conduz Agro, criado com a Karol nos meses anteriores). Persona dela: técnico de regularização de imóveis rurais. **Liberado citar nome e valor (Karol, 08/10).**
+  - **Linha do tempo CORRIGIDA (Karol, 08/10):** método Conduz Agro criado com a Karol nos meses anteriores · **23/09 Karol entregou a estratégia de Vendas Secretas montada: oferta + roteiro da sessão + pré-diagnóstico** · **30/09 vendeu R$2.500** (7 dias, 2 sessões) · **06/10 Karol entregou o funil completo** (rastreador, abordagem, follow-ups) — DEPOIS da venda.
+  - **2 sessões com 2 leads → 1 comprou** (50%). Quem comprou **já tinha sido aluna da Milena no passado** — corrobora a tese da Karol: as primeiras vendas vêm de pessoas próximas (círculo/ex-clientes, grupos 1-3 do Rastreador).
+  - **O que vendeu foi a estratégia de Vendas Secretas que a Karol montou pra ela**, não o funil completo (ainda sem resultado próprio).
+  - Frase honesta: "Eu montei a Venda Secreta dela — oferta, roteiro da sessão e pré-diagnóstico — no dia 23. No dia 30 ela vendeu a primeira mentoria da vida dela: R$2.500, em duas sessões. Agora entreguei o funil completo pra ela repetir isso todo mês." Não atribuir a venda ao funil completo.
+- **DECIDIDO (Karol, 08/10): o Grupo INCLUI o Funil montado, também depois de 14/10 (R$7.500).** O Funil deixa de ser bônus e vira entregável central do Grupo. Consequências:
+  - Na Black, o que não se repete = **preço R$5.000** (vs R$7.500) + bônus do dia (Central do Mentor à vista, Agente do Método 5 primeiros, Desafio com premiação). O Funil não pode ser apresentado como "só hoje".
+  - Frase da Milena na live: "quem entrar no Grupo recebe o seu montado também" (sem "até 23h59").
+  - A atualizar: ficha do Grupo (`fichas-oferta-individual-e-grupo.md`, "Não inclui" cita funil como da Individual), doc mestre da Black (pilha de bônus) e página do Grupo após 14/10.
+
+## 5. Premiação do Desafio — revisão 08/10 (prevalece sobre a proposta abaixo)
+
+- **Prêmio:** as **5 ferramentas universais** personalizadas pro método do vencedor (não mais as 10 da Biblioteca — nem todas cabem em qualquer método).
+- **Camada obrigatória pra todo método (decisão da Karol):** 1. Diagnóstico inicial · 2. Plano de ação personalizado · 3. Acompanhamento de progresso · 4. Feedback com critérios claros · 5. Direcionamento do próximo passo. A validação da oferta começa só com elas (pra não travar o expert criando ferramenta); as outras nascem durante a entrega, a partir das travas reais. Karol vai alterar o Agente do Portfólio pra sempre incluir as 5 no kit sugerido.
+- **Moldes da Biblioteca:** 1 → 02 Diagnóstico · 2 → 03 Roteiro do Aluno · 3 → 05 Planilha de Rastreamento. **4 e 5 não têm molde:** criar moldes 11 e 12 depois (decisão Karol 08/10 — não agora; precisam existir antes de personalizar o prêmio). Regra salva em `docs/knowledge/expert-business/metodologia/camada-obrigatoria-ferramentas.md`.
+- **Entrega:** aluno preenche nos documentos do Drive dele; Karol avalia lá. **Prazo: até dom 25/10** (confirmado).
+- **Critérios (0-5 cada, total 25):** Persona específica · Promessa testável · Processo autoral · Portfólio coerente com o processo · Coerência total (história → portfólio). Desempate: quem entregou primeiro. Julgamento: Karol.
+- **Anúncio: na live geral de quarta 28/10** (decisão Karol 08/10).
+- **Comunidade:** sem grupo VIP. Canal do aluno + suporte + Karol.
+
+## 5b. Critérios da premiação do Desafio (proposta original de 02/10 — substituída)
 
 **Pra concorrer:** entregar os 5 dias dentro do prazo (até [data]), no lugar indicado.
 
@@ -100,6 +124,7 @@ As 4 fases são as mesmas (Método → Validação → Posicionamento → Escala
 
 - Oficinas como lançamento pago aberto ao público, com os alunos do Grupo entrando de graça. Decidir depois da Black (limite de 3 projetos ativos no cockpit).
 - Passar a regra "entregável aciona sessão" pra Individual (sessões 5-14).
+- **Desafio Seu Método em 5 Dias como downsell R$197 (ideia da Karol, 08/10):** pra quem não fecha nem mentoria nem o Expert360º. Pensar a estratégia. ⚠️ Cruzar com a Black: o Desafio é bônus do dia 14, e a comunicação promete que a condição não se repete.
 
 ## 10. Preço da Black — análise (02/10)
 
@@ -129,5 +154,18 @@ As 4 fases são as mesmas (Método → Validação → Posicionamento → Escala
 - [ ] Construir o Studio de Ensaio + a ficha de avaliação das 3 gravações (critérios de 0 a 10, iguais nas 3)
 - [ ] Testar se o Vendedor Secreto no ChatGPT avalia tom de voz por áudio: mesma fala gravada insegura × firme. Se avaliar, rever a divisão
 - [ ] Decidir se o Studio sai do Expert360º (fica exclusivo das mentorias)
+
+## 13. Oficinas mensais "Destrava Expert" (08/10 — em construção)
+
+- **Grupo promete 12 oficinas mensais** (substitui as 4 oficinas por fase). **Nome decidido (08/10): Oficina Destrava Expert.**
+- **Nome do Desafio: "Seu Método em 5 Dias"** — ao vivo, todo mundo junto (decisão da Karol 08/10). Gravações viram a base de Método pra quem entra depois.
+- **Garantia de 15 dias mantida.** Bônus personalizados (Funil, Central, Agente) seguem a regra do Grupo: são montados quando o aluno chega na etapa com a entrega pronta — na prática, depois dos 15 dias (ninguém tem material pronto antes). Não precisa de cláusula extra.
+- **DNA do Expert não é oficina:** é o diagnóstico de entrada que destrava a Sessão 1 e gera o Roteiro do Expert.
+- **História Real + Ikigai não é oficina** (pessoal demais pra expor em grupo): é a **1ª tarefa** apresentada junto com o Roteiro, com a aula do Expert360º explicando. As mentorias têm acesso à metodologia do Expert360º e seguem os mesmos arquivos.
+- **Ciclo começa de onde o Desafio termina** (evita repetir Persona logo depois de 19-23/10). Desafio gravado = base de Método pra quem entra depois. Proposta de calendário (aguarda aprovação; ajustada 08/10 porque o Desafio termina no Portfólio): Nov Proposta Validada · Dez VS1 · Jan VS2 · Fev Estruturação do Produto · Mar Autoridade Tríplice · Abr Perfil/mensagem/linha editorial · Mai [Studio de Ensaio ao vivo OU hot seat de vendas] · Jun Funil de Lives · Jul Expert Plan · Ago Persona (revisitada com dados de venda) · Set Promessa · Out Processo + Portfólio.
+- **Desafio Seu Método em 5 Dias (19-23/10) — temas confirmados pela Karol (08/10):** D1 História e Ikigai · D2 Persona · D3 Promessa · D4 Processo · D5 Portfólio Estratégico. ⚠️ Proposta não está no Desafio → critério "Pronto pra campo" da premiação (seção 5) precisa ser revisto, e a 1ª Destrava pós-Desafio passa a ser Proposta Validada.
+- **Destrava de dezembro (VS1) — desenho da Karol (08/10):** preencher o Rastreador de Leads JUNTO (alunos procrastinam), criar as mensagens de abordagem, montar o pré-diagnóstico. Tarefa: abordar 5 pessoas e agendar. Materiais que já existem no Expert360º: M3.5 Rastreador (xlsx pronto), M3.2 Roteiro de Abordagem, M3.3 Pré-Diagnóstico (hoje é modelo pra montar no Google Forms pergunta a pergunta — falta versão pronta pra copiar). **Duração: 2h por oficina (confirmado 08/10).**
+- **PENDENTE (depois):** criar Google Forms de pré-diagnóstico pronto pro aluno copiar e adaptar, incorporando perguntas qualificadoras deste post: https://www.instagram.com/p/DeHT1YBFlM7/ (Karol também quer atualizar o pré-diagnóstico dela com base nele). Testar se link de cópia funciona no Forms.
+- Risco anotado: data fixa mensal → toda oficina gravada e autocontida; sessões individuais seguem acionadas por entrega.
 
 Materiais pras sessões de venda: `../incubadora-de-expert-individual/sessoes-estrategicas/fichas-oferta-individual-e-grupo.md` + `jornada-do-aluno.html`.
