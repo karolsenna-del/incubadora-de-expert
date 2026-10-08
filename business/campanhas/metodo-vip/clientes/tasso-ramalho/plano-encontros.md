@@ -11,7 +11,7 @@
 
 | # | Tema | Status | Onde |
 |---|------|--------|------|
-| E1 | Diagnóstico + persona/promessa/ferramentas + primeiros passos | Roteiro pronto (05/10) | `encontro-1.html` · https://claude.ai/artifact/ES2XRAy496vamtApzb5VMJ (notas salvas na coleção `notas` do artifact) |
+| E1 | Diagnóstico + persona/promessa/ferramentas + primeiros passos | **Realizado 06/10.** Registro da sessão (a partir das notas) no Drive em 08/10 | `encontro-1.html` · https://claude.ai/artifact/ES2XRAy496vamtApzb5VMJ (notas salvas na coleção `notas` do artifact) · registro: https://docs.google.com/document/d/1Y2W2GgxwfjP_Ghg8TXwZMp7aLkx8_qCJmMYzi6vpOzE/edit (pasta "Tasso Ramalho" no Drive; inclui o escopo aprovado — seção Foco) |
 | E2 | Modelo de negócio no formato Canvas (9 blocos), mesmo formato de página do E1 | **Construir só depois de fechar o E1**, a partir das notas do E1 | — |
 | E3 | Correção de rota após 30–40 dias de execução | — | — |
 
