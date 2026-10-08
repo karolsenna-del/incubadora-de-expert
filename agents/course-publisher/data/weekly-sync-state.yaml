@@ -283,6 +283,7 @@ pendencias:
     aberta_em: "2026-10-08"
     descricao: "Lives 32 (01/10) e 33 (07/10) achadas, roteiros prontos, mas a pasta nova 'Live Expert360 (recurring)' não está compartilhada com karol.franzini@gmail.com — API não consegue compartilhar (bloqueio do Workspace)."
     acao_karol: "Compartilhar a pasta com karol.franzini@gmail.com: https://drive.google.com/drive/folders/1daoDIiffLgLsXISfEbMO5UVhj8EmCQtN"
+    atualizacao_2026_10_08: "Karol compartilhou a pasta em 08/10 (não verificado pela API). Publicação das Lives 32 e 33 adiada por decisão dela (tokens no fim) — fica pra próxima sync/pedido. Ao retomar: conferir acesso antes de baixar."
 # 20/08/2026 (missão #17): pendência "acesso_drive_bloqueado" (registrada nas missões #15/#16)
 # RESOLVIDA — Karol recompartilhou a pasta "Live Expert360 (recurring)" (confirmado: permissão
 # "anyone:writer" apareceu via get_file_permissions, e o perfil karol.franzini@gmail.com acessou
