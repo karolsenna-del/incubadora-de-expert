@@ -9,7 +9,21 @@ live_expert360:
   ultimo_processado_titulo: "Live Expert360 - 2026/09/23 13:59 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-09-23T19:24:13.179Z"  # createdTime do arquivo no Drive (Live 31)
   proximo_numero: 32
-  ultima_execucao: "2026-10-01"
+  ultima_execucao: "2026-10-08"
+  # 08/10/2026 (missão #37, disparo autônomo REGRA-015): busca global achou 2 gravações NOVAS —
+  # "Live Expert360 - 2026/10/01 13:58 GMT-04:00 - Recording" (685MB, id
+  # 1nAdBjzUCySDg6c8hIiSZ7W2si81hc85T, createdTime 2026-10-01T19:30:26.790Z) = Live 32 (a live
+  # foi na quinta 01/10, não na quarta 30/09 — por isso as missões #33/#34 da manhã de 01/10 não
+  # acharam) e "Live Expert360 - 2026/10/07 14:01 GMT-04:00 - Recording" (568MB, id
+  # 130L-9f9RrnnHthEOyvIphSvgIrsZmS51, createdTime 2026-10-07T19:26:47.819Z) = Live 33.
+  # 5ª ROTAÇÃO de pasta: nova raiz "Google Meet" 1ORVmGX5JfM7YkrbKnIoapHmy3hy1wcj8 (criada
+  # 25/09) com nova "Live Expert360 (recurring)" 1daoDIiffLgLsXISfEbMO5UVhj8EmCQtN (criada 01/10).
+  # Roteiros prontos: live-32-roteiro.md → "Live 32 — A rotina que me fez faturar 5k na semana";
+  # live-33-roteiro.md → "Live 33 — O funil que eu uso pra vender sem lançamento e sem audiência —
+  # vou te mostrar ele inteiro". Download BLOQUEADO: permissões da pasta, da raiz e dos 2 arquivos
+  # só "owner" karolsenna; share_file (reader → karol.franzini@gmail.com) nas 4 camadas, mesmo erro
+  # "The caller does not have permission". SELECT em encontros_mentoria (data >= 20/09) só
+  # devolve a Live 31 — 32 e 33 genuinamente pendentes. State NÃO avançou; pendência abaixo.
   # 01/10/2026 (missão #34, 2ª execução no dia): busca global repetida — só a Live 31 (já
   # processada) volta; Live 32 (30/09) segue ausente do Drive. Nada novo nas 3 séries.
   # 01/10/2026 (missão #33, disparo autônomo REGRA-015): busca global sem parentId
@@ -138,7 +152,8 @@ live_expert360:
 mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/24 14:24 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-24T20:43:47.651Z"  # createdTime do arquivo no Drive
-  ultima_execucao: "2026-10-01"
+  ultima_execucao: "2026-10-08"
+  # 08/10/2026 (missão #37): nenhum "Encontro Incubadora -" novo depois de 24/08. Nada a fazer.
   # 01/10/2026 (missão #33, disparo autônomo REGRA-015): nenhum "Encontro Incubadora -" novo
   # depois do de 24/08 (já processado). Nada a fazer.
   # 25/09/2026 (missão #31, Karol na conversa, autorizou acesso ao Supabase): Encontro de 24/08
@@ -205,7 +220,10 @@ mentoria_em_grupo:
 encontros_individuais:
   ultimo_processado_titulo: null
   ultimo_processado_data: null
-  ultima_execucao: "2026-10-01"
+  ultima_execucao: "2026-10-08"
+  # 08/10/2026 (missão #37): nenhum mp4 "Individual -". Gravações 1:1 fora do padrão desde 01/10:
+  # Alessandro (02/10 e 05/10), Lais (02/10), Vagner (02/10 e 07/10), Tasso (06/10), Milena
+  # (07/10) — não processadas, filtro não cobre. Decisão sobre ajustar filtro segue pendente.
   # 01/10/2026 (missão #33, disparo autônomo REGRA-015): nenhum mp4 com prefixo "Individual -".
   # Drive tem 3 gravações 1:1 novas fora do padrão ("Tasso - 2026/09/24", "Izack - 2026/09/25",
   # "Vagner - 2026/09/23") — mesmo achado da #17 (Meet nomeia pelo nome do participante); não
@@ -261,6 +279,10 @@ encontros_individuais:
   # processar nada mesmo que a Karol grave 1:1s.
 
 pendencias:
+  - id: lives_32_33_pasta_nao_compartilhada
+    aberta_em: "2026-10-08"
+    descricao: "Lives 32 (01/10) e 33 (07/10) achadas, roteiros prontos, mas a pasta nova 'Live Expert360 (recurring)' não está compartilhada com karol.franzini@gmail.com — API não consegue compartilhar (bloqueio do Workspace)."
+    acao_karol: "Compartilhar a pasta com karol.franzini@gmail.com: https://drive.google.com/drive/folders/1daoDIiffLgLsXISfEbMO5UVhj8EmCQtN"
 # 20/08/2026 (missão #17): pendência "acesso_drive_bloqueado" (registrada nas missões #15/#16)
 # RESOLVIDA — Karol recompartilhou a pasta "Live Expert360 (recurring)" (confirmado: permissão
 # "anyone:writer" apareceu via get_file_permissions, e o perfil karol.franzini@gmail.com acessou
