@@ -65,7 +65,7 @@ Os meses são quando a oficina acontece ao vivo. Quem entra depois tem toda a te
 - **6 agentes de IA do método:** Persona, Promessa, Processo Autoral, Portfólio, Proposta Validada, Autoridade.
 - **Agente Vendedor Secreto:** treina a conversa antes e sopra a fala durante a venda. [versão do aluno em construção — "recebe quando chegar na Validação"]
 - **⭐ Studio de Ensaio do Expert** (Posicionamento): grava a mesma fala 3x, avalia as 3 com os mesmos critérios e mede a evolução. "Ninguém precisa estrear sem ensaiar." [a construir — "recebe quando chegar no Posicionamento"]
-- **Taxa reduzida na Voomp:** 5,99% + R$1,00 por venda [confirmar com a Voomp] — vs tabela pública Voomp 7,99% + R$1,00 · Hubla 8,9% + R$2,49 · Hotmart 9,9% + R$2,49 (páginas oficiais, 09/10). Numa venda de R$2.500: R$150,75 vs R$249,99 na Hotmart. Condições direto com a Voomp.
+- **Taxa reduzida na Voomp:** 5,99% + R$1,00 por venda (fechado pela Karol, 09/10) — vs tabela pública Voomp 7,99% + R$1,00 · Hubla 8,9% + R$2,49 · Hotmart 9,9% + R$2,49 (páginas oficiais, 09/10). Numa venda de R$2.500: R$150,75 vs R$249,99 na Hotmart. Condições direto com a Voomp.
 - **Canal do aluno + suporte + Karol.** Sem grupo VIP.
 
 ## Garantia
@@ -89,6 +89,6 @@ Página de venda (nem copy, nem criação) · agente do método e tráfego feito
 - **Milena Gehrke (Conduz Agro):** Karol montou a Venda Secreta dela (oferta + roteiro da sessão + pré-diagnóstico) em 23/09 → em 30/09 vendeu a 1ª mentoria da vida dela, R$2.500, em 2 sessões. Quem comprou foi uma ex-aluna dela. Funil completo entregue depois, em 06/10. Não atribuir a venda ao funil completo; não falar em "% de conversão".
 
 ## Pendências antes do dia 14
-- [ ] Confirmar taxa da Voomp pra aluno (5,99% + R$1?) — por escrito
+- [x] Taxa da Voomp pra aluno: 5,99% + R$1,00 (fechado 09/10)
 - [ ] Tema da oficina de maio
 - [ ] Atualizar ficha de venda do Grupo (`../incubadora-de-expert-individual/sessoes-estrategicas/fichas-oferta-individual-e-grupo.md`) com esta versão
