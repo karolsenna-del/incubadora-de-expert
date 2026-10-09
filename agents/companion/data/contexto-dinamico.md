@@ -145,6 +145,8 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 09/10 — Oferta do Grupo consolidada (Mentoring Creator):** `business/campanhas/incubadora-de-expert-grupo/oferta-grupo-v2.md` = fonte da oferta. Incubadora apresentada como **programa de aceleracao de carreira digital** (foco no expert; 4 pilares Metodo → Validacao → Posicionamento → Escala; primeira venda = validacao pessoal/profissional). 8 sessoes individuais (2 Raio-X de Venda, React da 1a Live, ultima = Expert Plan). Central do Mentor = conducao de leads + alunos num link (pix). GSL fora da Black. Simulador fundido no Vendedor Secreto. Taxa reduzida Voomp 5,99% + R$1 [confirmar com a Voomp]. Dia 14 abre com economia de R$2.500. Pagina de venda do aluno nao entra no Grupo. Falta: confirmar Voomp, atualizar ficha de venda, depois pagina + roteiro da live de 14/10.
+
 **Sessao 08/10 — Mentoria em Grupo redesenhada pra Black Expert (Mentoring Creator):**
 - Grupo: 12 Oficinas **Destrava Expert** mensais (2h), ciclo comeca em nov (Proposta Validada) porque o Desafio cobre o Metodo. Desafio **Seu Metodo em 5 Dias** ao vivo 19-23/10 (D1 Historia/Ikigai, D2 Persona, D3 Promessa, D4 Processo, D5 Portfolio).
 - **Funil de Vendas Secretas montado vira entregavel do Grupo** (tambem a R$7.500 pos-14/10). Escassez da Black = preco R$5.000 + Central (a vista) + Agente (5 primeiros) + Desafio com premiacao (5 ferramentas universais; entrega ate 25/10, anuncio na live de 28/10). Garantia 15 dias mantida.

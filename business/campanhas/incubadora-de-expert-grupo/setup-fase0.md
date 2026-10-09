@@ -69,6 +69,15 @@ As 4 fases são as mesmas (Método → Validação → Posicionamento → Escala
   - Frase da Milena na live: "quem entrar no Grupo recebe o seu montado também" (sem "até 23h59").
   - A atualizar: ficha do Grupo (`fichas-oferta-individual-e-grupo.md`, "Não inclui" cita funil como da Individual), doc mestre da Black (pilha de bônus) e página do Grupo após 14/10.
 
+## 4c. Decisões de 09/10 (Karol)
+
+- **GSL fora da Black** (conceito ainda sem fonte de dados/IA/LGPD resolvidas; serve pra Escala, não pra 1ª venda). Próximo passo dele = protótipo de 50 perfis, depois da Black.
+- **Central do Mentor mantida** como bônus do pix. **Novo escopo (09/10):** num link centralizado (site, modelo Central Conduz da Milena) = **condução dos leads** (Funil de Vendas Secretas) + **condução dos alunos** (5 ferramentas universais). Diferença pros demais: todo aluno do Grupo recebe o Funil montado e o vencedor do Desafio recebe as 5 ferramentas **no Drive dele** (arquivos); a Central junta tudo num link só, bonito e organizado. Sem sobreposição com a premiação.
+- **Página de venda NÃO entra no Grupo** — nem copy, nem criação. Fica só na Individual. (Resolve o ⚠️ da ficha.)
+- **Raio-X da Live renomeado: "React da 1ª Live"** — análise da 1ª live do aluno seguindo o Funil de Lives Semanais, apontando ajustes de roteiro, comportamento e condução.
+- **Simulador de Conversas SAI como ferramenta separada** — vira modo de treino do **Vendedor Secreto** (uma ferramenta só: treina antes + sopra durante). Pendência de construir o Simulador genérico (§12) passa a ser "modo treino do Vendedor Secreto".
+- **Benefício novo (Karol, 09/10): checkout na Voomp com taxa de 5,99% pra aluno da Karol** (comparativo dela: Hotmart 9,99%, Hubla 8,90%). **Enquadramento (Karol, 09/10):** "taxa reduzida/diferenciada" — Karol não garante taxa de terceiro; detalhes o aluno vê direto com a Voomp. **Taxas públicas conferidas em 09/10:** Hotmart 9,9% + R$2,49 por venda (valor da página oficial e da central de ajuda; Karol confirmou usar esse fixo, 09/10); Hubla 8,9% + R$2,49 por venda (central de ajuda oficial). **Voomp pública (voompcreators.com.br/#tarifas, print da Karol 09/10): 7,99% + R$1,00 por venda + R$4,99 por saque.** Taxa do aluno provavelmente 5,99% + R$1,00 (suposição da Karol) — [confirmar com a Voomp antes da live]. Âncora mais forte: "2 pontos abaixo da tabela pública da própria Voomp".
+
 ## 5. Premiação do Desafio — revisão 08/10 (prevalece sobre a proposta abaixo)
 
 - **Prêmio:** as **5 ferramentas universais** personalizadas pro método do vencedor (não mais as 10 da Biblioteca — nem todas cabem em qualquer método).
