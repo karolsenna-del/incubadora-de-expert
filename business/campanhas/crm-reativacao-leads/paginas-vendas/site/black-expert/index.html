@@ -50,6 +50,7 @@
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
+  html,body{overflow-x:clip;}
   body{margin:0; background:var(--preto); color:var(--branco); font-family:var(--texto); font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;}
   h1,h2,h3{font-family:var(--display); margin:0; text-wrap:balance;}
   p{margin:0;}
@@ -127,6 +128,28 @@
   .pilar h3{font-size:1.12rem; font-weight:700; margin-top:4px;}
   .pilar p{color:var(--cinza); font-size:.96rem; margin-top:8px;}
 
+  /* ---------- jornada ---------- */
+  .jornada-wrap{max-width:1040px;}
+  .jornada{list-style:none; margin:34px 0 0; padding:0; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:18px; position:relative;}
+  .jornada::before{content:""; position:absolute; left:10%; right:10%; top:15px; height:2px; background:linear-gradient(90deg, var(--linha), var(--laranja) 40%, var(--laranja) 50%, var(--linha));}
+  .parada{position:relative; display:flex; flex-direction:column; align-items:flex-start; min-width:0;}
+  .parada .dot{position:relative; z-index:1; width:32px; height:32px; border-radius:50%; background:var(--preto); border:2px solid var(--apoio); display:flex; align-items:center; justify-content:center;}
+  .parada.ponta .dot{border-style:dashed;}
+  .parada.marco .dot{border-color:var(--laranja); background:var(--laranja); width:40px; height:40px; margin-top:-4px;}
+  .parada.marco .dot .flame{width:20px; height:20px; color:var(--preto);}
+  .parada .rotulo{margin-top:14px; font-family:var(--display); font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--apoio);}
+  .parada.marco .rotulo{color:var(--laranja);}
+  .parada h3{font-size:1.04rem; font-weight:700; margin-top:4px;}
+  .parada p{color:var(--cinza); font-size:.9rem; margin-top:6px;}
+  .parada.marco{background:var(--laranja-suave); border:1px solid var(--laranja); border-radius:14px; padding:14px; margin:-18px -6px 0;}
+  @media (max-width:720px){
+    .jornada{grid-template-columns:minmax(0,1fr); gap:0; padding-left:18px;}
+    .jornada::before{left:33px; right:auto; top:16px; bottom:16px; width:2px; height:auto; background:linear-gradient(180deg, var(--linha), var(--laranja) 40%, var(--laranja) 50%, var(--linha));}
+    .parada{display:grid; grid-template-columns:32px minmax(0,1fr); column-gap:14px; padding-bottom:22px;}
+    .parada .dot{grid-row:1 / span 3;}
+    .parada .rotulo{margin-top:6px;}
+    .parada.marco{margin:0 0 22px -10px; padding:12px 10px; grid-template-columns:40px minmax(0,1fr);}
+  }
   /* ---------- como funciona ---------- */
   .fatos{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:28px;}
   .fato{border:1px solid var(--linha); border-radius:14px; padding:18px;}
@@ -152,10 +175,24 @@
   .numero{background:var(--preto-2); border-radius:14px; padding:18px;}
   .numero .v{font-family:var(--display); font-weight:800; font-size:1.7rem; line-height:1.1;}
   .numero p{font-size:.88rem; color:var(--apoio); margin-top:6px;}
+  .historia{display:grid; gap:0; margin-top:28px; border-left:2px solid var(--linha); padding-left:22px;}
+  .passo{position:relative; padding-bottom:22px;}
+  .passo::before{content:""; position:absolute; left:-29px; top:6px; width:12px; height:12px; border-radius:50%; background:var(--preto); border:2px solid var(--apoio);}
+  .passo.virou::before{border-color:var(--laranja); background:var(--laranja);}
+  .passo .quando{font-family:var(--display); font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--apoio);}
+  .passo.virou .quando{color:var(--laranja);}
+  .passo .v{display:block; font-family:var(--display); font-weight:800; font-size:1.7rem; line-height:1.15; margin-top:2px;}
+  .passo p{color:var(--cinza); font-size:.97rem; margin-top:6px; max-width:58ch;}
   .caso{margin-top:22px; border:1px solid var(--laranja); border-radius:14px; padding:22px; background:var(--laranja-suave);}
   .caso .eyebrow{color:var(--laranja);}
   .caso blockquote{margin:10px 0 0; font-size:1.04rem; line-height:1.55;}
   .caso p{color:var(--apoio); font-size:.88rem; margin-top:10px;}
+  .videos{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:26px;}
+  .video{margin:0;}
+  .video video{display:block; width:100%; aspect-ratio:1/1; max-width:100%; border-radius:14px; background:var(--preto-2); border:1px solid var(--linha); object-fit:cover;}
+  .video figcaption{font-size:.85rem; color:var(--apoio); margin-top:8px;}
+  .video figcaption b{color:var(--branco);}
+  @media (max-width:720px){ .videos{grid-template-columns:minmax(0,1fr);} }
   .depos{display:grid; gap:14px; margin-top:22px;}
   .depo{border-left:2px solid var(--linha); padding-left:16px; color:var(--cinza); font-size:.97rem;}
   .depo cite{display:block; font-style:normal; font-weight:700; color:var(--branco); font-size:.86rem; margin-top:6px;}
@@ -322,17 +359,20 @@
   </div>
 </section>
 
-<!-- 4. PILARES -->
+<!-- 4. JORNADA -->
 <section>
   <div class="wrap">
-    <span class="eyebrow">Os 4 pilares</span>
+    <span class="eyebrow">A jornada</span>
     <h2>Conhecimento é o que você estudou. Método é o que você viveu.</h2>
-    <div class="pilares">
-      <div class="pilar"><span class="fase">Fase 1</span><h3>Método Autoral</h3><p>Você no centro. A persona nasce da sua história, e o método é seu porque traz o que você viveu, usou e aprendeu.</p></div>
-      <div class="pilar"><span class="fase">Fase 2</span><h3>Validação</h3><p>Com as Vendas Secretas, você testa a sua oferta, ganha segurança pra conduzir a conversa e faz as primeiras vendas em conversas reservadas, antes de se expor.</p></div>
-      <div class="pilar"><span class="fase">Fase 3</span><h3>Posicionamento</h3><p>Aparecer no digital com a autoridade que você já tem, depois de ensaiar e já com prova.</p></div>
-      <div class="pilar"><span class="fase">Fase 4</span><h3>Escala</h3><p>Seu conhecimento virou um negócio. É hora de criar novos funis, novos produtos e faturar mais.</p></div>
-    </div>
+  </div>
+  <div class="wrap jornada-wrap">
+    <ol class="jornada">
+      <li class="parada ponta"><span class="dot"></span><span class="rotulo">Hoje</span><h3>Muito conhecimento</h3><p>e nenhuma estrutura pra vender.</p></li>
+      <li class="parada"><span class="dot"></span><span class="rotulo">Fase 1</span><h3>Método Autoral</h3><p>A persona nasce da sua história, e o método traz o que você viveu, usou e aprendeu.</p></li>
+      <li class="parada marco"><span class="dot"><svg class="flame"><use href="#chama"/></svg></span><span class="rotulo">Fase 2 · Mês 4</span><h3>Validação</h3><p>Vendas Secretas: você testa a oferta em conversas reservadas e faz a <b>sua primeira venda no digital</b>.</p></li>
+      <li class="parada"><span class="dot"></span><span class="rotulo">Fase 3</span><h3>Posicionamento</h3><p>Você aparece com a autoridade que já tem, depois de ensaiar e já com prova.</p></li>
+      <li class="parada"><span class="dot"></span><span class="rotulo">Fase 4</span><h3>Escala</h3><p>Seu conhecimento virou um negócio. Novos funis, novos produtos e mais faturamento.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -380,22 +420,35 @@
   <div class="wrap">
     <span class="eyebrow">Prova</span>
     <h2>O que acontece quando a conversa começa</h2>
-    <div class="numeros">
-      <div class="numero"><span class="v tabular">R$1.500</span><p>meu faturamento em agosto</p></div>
-      <div class="numero"><span class="v tabular accent">R$10 mil</span><p>meu faturamento em setembro</p></div>
-      <div class="numero"><span class="v tabular">R$5 mil</span><p>só entre 21 e 26/09</p></div>
+    <div class="historia">
+      <div class="passo">
+        <span class="quando">Agosto</span>
+        <span class="v tabular">R$1.500</span>
+        <p>Foi o meu faturamento no mês. A minha entrega nunca tinha estado tão boa, e eu nunca tinha vendido tão pouco. Eu passava os dias melhorando o método.</p>
+      </div>
+      <div class="passo virou">
+        <span class="quando">A virada</span>
+        <span class="v">14h, todo dia</span>
+        <p>Parei de melhorar o método e coloquei a venda em primeiro lugar. Todo dia, às 14h, antes de qualquer outra tarefa, eu chamo gente pra conversar e levo pra uma sessão de Vendas Secretas.</p>
+      </div>
+      <div class="passo">
+        <span class="quando">Setembro</span>
+        <span class="v tabular accent">R$10 mil</span>
+        <p>Foi o faturamento do mês seguinte. Só na semana de 21 a 26/09, foram R$5 mil.</p>
+      </div>
     </div>
-    <p class="lead">O que mudou de um mês pro outro não foi audiência nem lançamento. Eu passei a reservar todo dia às 14h pra prospectar: chamar gente pra conversar e levar pra uma sessão de Vendas Secretas. Numa única tarde, 14 conversas viraram 6 sessões e 1 venda de R$1.500.</p>
+    <p class="lead">Numa dessas tardes, uma tempestade derrubou a internet e eu fiquei sem trabalhar no computador. Em vez de esperar voltar, passei a tarde prospectando: conversei com 14 pessoas, marquei 6 sessões e fechei uma venda de R$1.500.</p>
     <div class="caso">
       <span class="eyebrow">Milena Gehrke · Conduz Agro</span>
-      <blockquote>Eu montei a Venda Secreta da Milena: oferta, roteiro da sessão e pré-diagnóstico. Uma semana depois, ela vendeu a primeira mentoria da vida dela: <b>R$2.500, em duas sessões.</b></blockquote>
+      <blockquote>Eu montei a Venda Secreta da Milena: oferta, roteiro da sessão e pré-diagnóstico. Uma semana depois, ela vendeu a primeira mentoria de 12 meses da vida dela: <b>R$2.500, em duas sessões.</b></blockquote>
     </div>
-    <div class="caso">
-      <span class="eyebrow">Milena Gehrke · Conduz Agro</span>
-      <blockquote>"Eu montei a Venda Secreta dela (oferta, roteiro da sessão e pré-diagnóstico) no dia 23/09. No dia 30 ela vendeu a primeira mentoria da vida dela: R$2.500, em duas sessões. Depois entreguei o funil completo pra ela repetir isso todo mês."</blockquote>
-      <p>Mentoria do método Conduz Agro, construído com a Karol nos meses anteriores.</p>
+    <div class="videos">
+      <figure class="video"><video controls preload="none" playsinline poster="vagner-capa.jpg"><source src="vagner-depoimento.mp4" type="video/mp4"></video><figcaption><b>Vagner</b> · especialista em acesso a crédito para empresários</figcaption></figure>
+      <figure class="video"><video controls preload="none" playsinline poster="tasso-capa.jpg"><source src="tasso-depoimento.mp4" type="video/mp4"></video><figcaption><b>Tasso Ramalho</b> · Hunt Imóveis</figcaption></figure>
     </div>
     <div class="depos">
+      <p class="depo">"Você conseguiu me colocar numa estratégia muito mais focada. Eu não entendia por que não avançava sozinho: eu queria entregar tudo de uma vez. Agora é por partes."<cite>Vagner, especialista em acesso a crédito para empresários</cite></p>
+      <p class="depo">"Tenho certeza que ficou um método muito coerente e muito forte. E ficou muito autoral."<cite>Vagner</cite></p>
       <p class="depo">"Fiquei conversando com teu agente e estou sentindo o esclarecimento que desejava há 9 anos! [...] Sinto que agora tenho ferramentas e recursos para desenvolver meu infoproduto de forma legal e ética."<cite>Anália, médica</cite></p>
       <p class="depo">"Até chorei emocionada aqui depois de escrever o formulário. Tem 4 anos que estudo para conseguir desenvolver um produto e não acredito que consegui, com um método que tem nome da minha empresa."<cite>Hilda</cite></p>
       <p class="depo">"Todas as aulas têm sido um divisor de águas [...] A interação da sala é sensacional, é um 'tipo de mentoria' um a um."<cite>Claudia Barreto</cite></p>
