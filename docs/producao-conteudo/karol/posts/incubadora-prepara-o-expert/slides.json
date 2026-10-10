@@ -1,0 +1,16 @@
+{
+  "template": "card-tweet",
+  "name": "incubadora-prepara-o-expert",
+  "_nota": "slide 1 (capa foto-frase, foto Minhas fotos/2.png) é renderizado à parte (capa.html) e sobrescreve slide-01.png",
+  "slides": [
+    { "text": "capa — substituída", "image": null },
+    { "text": "Você é bom no que faz. Anos de profissão, gente que te procura pra resolver. <strong>E mesmo assim, quando pensa em vender o seu conhecimento no digital, trava.</strong><br><br>Não por falta de conhecimento. Por medo de se expor e não dar conta.", "image": null },
+    { "text": "Te disseram que o problema é organizar o seu método. Só que hoje a IA te ajuda a montar um método numa tarde, e o seu concorrente também monta.<br><br><strong>O que ninguém monta por você é o profissional pronto pra apresentar esse método e vender.</strong>", "image": null },
+    { "text": "É pra isso que serve a primeira venda. Numa conversa 1 a 1, sem plateia e sem depender de seguidor, <strong>você treina o que nenhum curso treina:</strong> explicar o que você faz em poucos minutos, sustentar o seu preço, ouvir \"tá caro\" sem travar e conduzir uma negociação até o sim.", "image": null },
+    { "text": "É ali que você ganha postura, oratória e segurança pra aparecer, inclusive naquele vídeo que você vive adiando.<br><br><strong>E sim, é ali também que entram os seus primeiros clientes.</strong> A venda secreta é ensaio e é venda ao mesmo tempo.", "image": null },
+    { "text": "E você não precisa largar a sua profissão pra isso. Não precisa do dinheiro pra ontem.<br><br><strong>É justamente por isso que dá pra fazer do jeito certo: cada conversa vira treino, não desespero.</strong>", "image": null },
+    { "text": "Eu já vi de perto o caminho contrário, dos dois lados do lançamento, como expert e como estrategista: gente boa se expondo antes de estar pronta.<br><br><strong>Lançamento é intenso e cansativo, e um resultado ruim pode abalar a autoconfiança e a autoridade que você levou anos pra construir.</strong>", "image": null },
+    { "text": "Incubar um expert não é sobre a sua ideia. <strong>É sobre você: preparar o profissional pro digital antes do palco.</strong><br><br>Primeiro o ensaio, depois as vendas, depois o plano pra transição, se esse for o seu desejo, ou pra uma nova fonte de renda.", "image": null },
+    { "text": "Comenta <strong>\"BLACK\"</strong> que eu te mando o link do grupo.<br><br><strong>Dia 14, às 15h, ao vivo.</strong>", "image": null }
+  ]
+}
