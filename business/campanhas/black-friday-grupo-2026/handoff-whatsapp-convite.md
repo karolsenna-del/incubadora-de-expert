@@ -85,3 +85,13 @@ A infraestrutura só estará pronta quando houver rota de saída real documentad
 ## Página 1:1 atualizada — 01/10, 09h25
 
 `business/vault/black-expert-2026/convite-whatsapp-black-expert.html` (privada, fora do git) regenerada com quem ficou de fora da API: **102 contatos** — adicionados pela Karol 49 · grupo/comunidade (decida você) 42 · relação incerta (decida você) 8 · clientes atuais/renovação 3. Excluídos: enviados pela API, já convidados no 1:1, opt-out, telefone inválido, próprio número, não lead. Mensagem = modelo v2 (nome + data em negrito). Marcações em localStorage `bx2`. Falhas de entrega da API não entram (sem wamid no diagnóstico → não dá pra saber quem).
+
+## Migração Dualhook → Meta direto — 10/10 (em andamento)
+
+- **Motivo:** teste grátis do Dualhook acaba 11/10; Karol quer cancelar. Envio do dia 14/10 vai pra TODOS os convidados (124 da API + os do 1:1), pelo chip atual (+55 67 9232-4690).
+- **Feito:** script ganhou `--rota meta|dualhook` (padrão `meta` = graph.facebook.com, chave `op://Claude/Meta WhatsApp/password`, prefixo `EA`). Dry-run para na falta da chave — esperado.
+- **Falta:** (1) Karol gera token de Usuário do Sistema (whatsapp_business_messaging + management, WABA 624446197295808) e salva no 1Password como "Meta WhatsApp"; (2) teste pro número da Karol pela rota meta; (3) só então cancelar Dualhook e repetir o teste; (4) modelo novo do dia 14 aprovado na Meta; (5) lista do 1:1 — marcações estão só no localStorage do navegador da Karol (`bx2`), precisa exportar.
+- **Não confirmado:** se cancelar o Dualhook mexe no registro do número/coexistência. Respostas pro CRM dependem do webhook do Dualhook — sem ele, chegam só no app.
+- **10/10 17h:** token "Meta whatsapp" (1Password, app "Incubadora WhatsApp", usuário do sistema) validado — lê número (GREEN, CONNECTED) e modelos. Teste rota meta pro número pessoal da Karol: **entregue**. Karol cancelando Dualhook (repetir teste depois).
+- **Webhook:** só o app Dualhook está inscrito na WABA, com override pro NOSSO endpoint (`vendas.../api/whatsapp-webhook`). Pós-cancelamento: inscrever o app novo com o mesmo override (checar se o endpoint valida assinatura do app Dualhook).
+- **Modelos do dia 14 (submetidos 10/10, PENDING):** `black_expert_dia_live` (id 1990515491632584, {{1}} nome, {{2}} link) e `black_expert_dia_live_sem_nome` (id 2075203829789801, {{1}} link). Texto aprovado pela Karol. Envio: **14/10 10h Brasília (9h Cuiabá)**, 1 mensagem só, pra todos os convidados (124 API + marcados no 1:1). Link da live: Karol vai criar.

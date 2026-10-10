@@ -26,7 +26,12 @@ BLOQUEADOS = os.path.join(VAULT, "fila-api-dry-run", "bloqueados.csv")
 JA_RECEBEU = os.path.join(VAULT, "fila-api-dry-run", "ja-recebeu-manual.csv")
 LOG = os.path.join(VAULT, "envios-whatsapp-log.csv")
 
-API = "https://api.dualhook.com/v25.0"
+# Rotas de saida (mesma WABA/numero). "meta" = Cloud API direto, sem intermediario (escolhido 10/10 pra cancelar o Dualhook).
+ROTAS = {
+    "meta": ("https://graph.facebook.com/v23.0", "op://Claude/Meta WhatsApp/password", "EA"),
+    "dualhook": ("https://api.dualhook.com/v25.0", "op://Claude/Dualhook API/password", "dh_live_"),
+}
+API, SEGREDO, PREFIXO = ROTAS["meta"]
 WABA_ID = "624446197295808"
 PHONE_NUMBER_ID = "663604156841540"
 # Ordem de preferencia: v2 (com negrito, pedido da Karol 30/09) -> v1. Usa o primeiro APPROVED.
@@ -40,10 +45,10 @@ ERROS_QUE_PARAM = {0, 3, 10, 190, 200, 368, 131031, 131042, 131048, 131056, 1304
 
 
 def chave_api():
-    r = subprocess.run(["op", "read", "op://Claude/Dualhook API/password"], capture_output=True, text=True)
+    r = subprocess.run(["op", "read", SEGREDO], capture_output=True, text=True)
     k = r.stdout.strip()
-    if not k.startswith("dh_live_"):
-        sys.exit("Nao consegui ler a chave do Dualhook no 1Password.")
+    if not k.startswith(PREFIXO):
+        sys.exit("Nao consegui ler a chave da API no 1Password (%s)." % SEGREDO)
     return k
 
 
@@ -128,7 +133,10 @@ def main():
     ap.add_argument("--enviar", action="store_true")
     ap.add_argument("--limite", type=int, default=0)
     ap.add_argument("--confirmo", default="")
+    ap.add_argument("--rota", choices=sorted(ROTAS), default="meta")
     a = ap.parse_args()
+    global API, SEGREDO, PREFIXO
+    API, SEGREDO, PREFIXO = ROTAS[a.rota]
 
     k = chave_api()
     st = status_modelos(k)
