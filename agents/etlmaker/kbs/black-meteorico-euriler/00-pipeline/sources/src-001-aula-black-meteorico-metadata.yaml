@@ -1,0 +1,10 @@
+source:
+  id: "SRC-black-meteorico-euriler-001"
+  original_path: "https://arcane.arka.education/replays?categoria=aulas-extraordinarias&sub=ae-vendas (vídeo 02)"
+  format: "transcricao (video -> whisper small pt)"
+  title: "Euriler - Lançamento Black Friday Meteórico"
+  author: "Euriler Jube"
+  duration: "01:16:14"
+  total_words: 12937
+  normalized_path: "00-pipeline/sources/src-001-aula-black-meteorico-normalized.md"
+  apoio_visual: "mapa mental 'Black Euriliana' (MindMeister) mostrado na tela; frames 1/min capturados até 00:55"
