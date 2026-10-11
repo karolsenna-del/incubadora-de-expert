@@ -54,3 +54,4 @@
 | 08/10/2026 | live-33-funil-2026-10-07 | 3 | 17905694784572023, 18132515251604216, 18106059164251498 | sim (ver log de execucao) |
 | 08/10/2026 | expert360-quinta-2026-10-08 | 1 | 18050068085607415 | sim (ver log de execucao) |
 | 09/10/2026 | dominando-mente-expert360-2026-10-09 | 1 | 17888149191685304 | sim (ver log de execucao) |
+| 11/10/2026 | individual-domingo-2026-10-11 | 1 | 18144637720600629 | sim (ver log de execucao) |
