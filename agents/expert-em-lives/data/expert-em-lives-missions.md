@@ -33,3 +33,11 @@
 **Executada em:** aguardando (01/10).
 **Ajustes ao vivo:** registrar depois da live.
 **Aprendizado:** registrar depois da live — incluir quantas pessoas entraram no grupo da Black Expert a partir da live.
+
+## Live da Black Expert — 14/10/2026
+**Tema:** história + oferta da Incubadora (Mentoria em Grupo), condição só do dia 14 (12x R$500 / R$5.000 pix; R$7.500 a partir de 15/10).
+**Modelo:** live de oferta em 11 blocos (briefing v1.1 do ETLmaker, base VOL-04 + ECROI), não Aula de 8 Blocos — aprovado pela Karol 11/10. Sem prompt das 5 Afirmações (objeções já mapeadas no briefing).
+**Entregue em:** 11/10/2026 — `business/campanhas/black-friday-grupo-2026/roteiro-live-black-expert.md`. Aguardando aprovação.
+**Ajustes da Karol (11/10):** abertura assume a oferta de frente (sem gancho de curiosidade — todos sabem que é live de oferta); prova de setembro = "tem gente esperando a sua oferta, mas você precisa oferecer" (não "foi rápido"); projeto paralelo é como executa, não a promessa — decisão principal/renda extra na Escala; link black.incubadoradeexpert.com.br; "quem comprou avisa aqui" fora.
+**Executada em:** aguardando (14/10).
+**Aprendizado:** registrar depois da live (vendas na live vs. no resto da noite).

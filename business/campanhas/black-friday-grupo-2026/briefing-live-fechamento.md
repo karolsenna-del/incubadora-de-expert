@@ -1,6 +1,6 @@
 # Briefing — Live de Fechamento da Black Expert (14/10, 15h)
 
-Versão: 1.1 | Data: 11/10/2026 | Status: **PENDÊNCIAS RESOLVIDAS** (Karol, 11/10). Próximo passo: o Expert em Lives escreve a fala
+Versão: 1.1 | Data: 11/10/2026 | Status: **PENDÊNCIAS RESOLVIDAS** (Karol, 11/10). **Roteiro falado escrito em 11/10:** `roteiro-live-black-expert.md` · **Deck:** `live-black-expert-apresentacao.html` (47 slides, https://claude.ai/artifact/Qb2c6aQEv4yk2RzQFqMd68), vídeos cortados em `live-black-expert-videos/` (fora do git)
 Responsável: ETLmaker (pesquisa e estrutura). O texto falado do roteiro é do Expert em Lives, a partir deste briefing.
 
 > **O que é:** a ordem da live e o material de cada bloco, tirado dos registros da Karol. Nenhum fato novo. Onde falta decisão: **[DECISÃO DA KAROL]**.
@@ -271,6 +271,8 @@ Regra do Ícaro (VOL-04 §7.6): não deixar vídeo longo cortar o ritmo. Recomen
 **Proposta da Karol (11/10): sala de espera com as provas.** Do horário marcado até ela entrar, os vídeos rodam inteiros, em sequência: Anália (2min04), Emilly sem o trecho dos encontros semanais (~1min20), Vagner (38s) e Tasso (37s), ~5 min no total. Durante a live, a prova volta em menções curtas ("a Anália, que vocês viram no começo...") e um único vídeo: o final da Anália no carrinho aberto (~10s). A linha do tempo e a Milena entram na fala, como print. Quem chegou depois de os vídeos rodarem ainda ouve a prova.
 
 **Decidido (11/10):** live no Google Meet; a Karol corta a Emilly. Corte: de **0:47,0 a 0:48,4** ("Então, a gente tem encontros semanais,"). Fica: "...tem todo o acompanhamento com ela. Ela tira as nossas dúvidas, dá sugestões...". Minutagem por palavra no Whisper, com margem de ~0,2s.
+
+**Feito (11/10):** corte ajustado no silêncio de 47,13s a 48,43s → `docs/knowledge/expert-business/provas/videos/incubadora-emilly-sem-encontros.mp4` (1:30, H.264, original intocado). Emenda conferida por transcrição: "...tem todo o acompanhamento com ela. Ela tira as nossas dúvidas, dá sugestões...".
 
 ---
 
