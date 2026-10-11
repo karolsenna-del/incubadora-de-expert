@@ -1197,6 +1197,17 @@ clicar "Enviar para análise" (aguardando confirmação explícita da Karol ante
 
 **Troubleshooting:** 1 status só sem delivered = falha; ver `status_errors`. 131042 pagamento · 131049 limite de marketing por usuário · 131026 não entregável · 131050 opt-out.
 
+## SOP-026: Pré-checkout (nome + WhatsApp) antes do checkout Voomp
+
+**Criado:** 2026-10-10 (Black Expert) | **Modelo:** `business/campanhas/crm-reativacao-leads/paginas-vendas/site/black-expert/` (`api/precheckout.js` + `<dialog class="pre">` no `index.html`)
+
+1. **Onde grava:** `crm_leads` do Supabase "incubadora-de-expert" (sem tabela nova) — `origem` própria da página (ex: `black_expert_precheckout`), `origem_detalhe` com UTMs, `status` default `a_reativar`. Já cai no CRM que a Karol usa.
+2. **Endpoint:** função Vercel `api/precheckout.js` com service_role via env var (`SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` no projeto Vercel da página). Normaliza telefone (REGRA-013) e não duplica (busca o número com e sem o nono dígito na mesma origem → atualiza em vez de inserir).
+3. **Página:** botões `.js-checkout` abrem o modal; envio com `keepalive` e corrida de 1,5s → segue pro checkout mesmo se a API falhar. Lembra o lead no `localStorage` (preenche de novo). Navegador sem `<dialog>` vai direto.
+4. **Testar:** rodar o handler localmente com lead "TESTE GESTOR INFRA", conferir a linha e apagar. Depois do deploy, POST de teste na URL pública + apagar.
+5. **Deploy e env vars:** o classificador bloqueia o agente de gravar a service_role na Vercel e de rodar `vercel --prod`. A Karol roda os 2 comandos (ver Mission Log #89).
+6. **Complemento:** a Voomp também tem o evento **Checkout** (abandono de quem preencheu o formulário da Voomp) em Produto > Entregas. O pré-checkout pega quem desistiu ANTES de chegar lá.
+
 ## Template de SOP
 
 ### [SOP-XXX] {Nome do Processo}

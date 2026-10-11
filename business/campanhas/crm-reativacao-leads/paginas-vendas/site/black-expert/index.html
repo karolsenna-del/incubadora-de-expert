@@ -155,7 +155,10 @@
   .fato{border:1px solid var(--linha); border-radius:14px; padding:18px;}
   .fato .num{font-family:var(--display); font-weight:800; font-size:2.2rem; line-height:1; color:var(--laranja);}
   .fato p{font-size:.93rem; color:var(--cinza); margin-top:8px;}
-  .sessoes{list-style:none; padding:0; margin:26px 0 0; display:grid; gap:0; border:1px solid var(--linha); border-radius:14px; overflow:hidden;}
+  /* As 8 sessões como subgrupo do card "8": recuadas e ligadas por uma linha laranja. */
+  .sessoes-titulo{margin:22px 0 0 32px; font-family:var(--display); font-size:.74rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--laranja);}
+  .sessoes::before{content:""; position:absolute; left:-18px; top:-34px; bottom:0; width:2px; background:rgba(248,86,39,.45); border-radius:2px;}
+  .sessoes{position:relative; list-style:none; padding:0; margin:12px 0 0 32px; display:grid; gap:0; border:1px solid var(--linha); border-radius:14px;}
   .sessoes li{display:grid; grid-template-columns:52px minmax(0,1fr); gap:8px; padding:13px 16px; border-top:1px solid var(--linha); font-size:.97rem;}
   .sessoes li:first-child{border-top:0;}
   .sessoes .s{font-family:var(--display); font-weight:800; color:var(--laranja);}
@@ -250,6 +253,7 @@
     .fatos,.numeros{grid-template-columns:minmax(0,1fr);}
     .fato,.numero{display:grid; grid-template-columns:auto minmax(0,1fr); gap:14px; align-items:center;}
     .fato p,.numero p{margin-top:0;}
+    .fato .num{min-width:2ch;} /* "8" ocupa o mesmo espaço que "12": textos alinhados */
     .sobre img{max-width:220px;}
     .barra{display:flex;}
   }
@@ -263,6 +267,22 @@
     .marca-selo-mobile .selo .d{font-size:.62rem; padding:1px 8px; margin-top:4px;}
     .marca-selo-mobile p{font-size:.86rem; color:var(--apoio); line-height:1.4;}
   }
+  /* ---------- pré-checkout ---------- */
+  .pre{width:min(440px, calc(100vw - 32px)); padding:0; border:1px solid var(--laranja); border-radius:16px; background:var(--preto-2); color:var(--branco);}
+  .pre::backdrop{background:rgba(0,0,0,.72); backdrop-filter:blur(3px);}
+  .pre form{display:grid; gap:14px; padding:26px 22px 22px;}
+  .pre h3{font-size:1.3rem; font-weight:800; line-height:1.2; padding-right:28px;}
+  .pre .pre-sub{color:var(--cinza); font-size:.95rem;}
+  .pre label{display:grid; gap:6px; font-size:.82rem; font-weight:600; color:var(--cinza);}
+  .pre input{width:100%; min-height:50px; padding:12px 14px; border-radius:10px; border:1px solid var(--linha); background:var(--preto); color:var(--branco); font:inherit; font-size:16px;}
+  .pre input:focus{outline:2px solid var(--laranja); outline-offset:1px; border-color:transparent;}
+  .pre .cta{width:100%; border:0; cursor:pointer;}
+  .pre .cta[disabled]{opacity:.7; cursor:wait;}
+  .pre .pre-erro{color:var(--laranja); font-size:.85rem; min-height:1.2em;}
+  .pre .pre-fechar{position:absolute; top:10px; right:10px; width:40px; height:40px; border:0; border-radius:50%; background:transparent; color:var(--apoio); font-size:1.5rem; line-height:1; cursor:pointer;}
+  .pre .pre-fechar:hover{color:var(--branco);}
+  .pre .pre-nota{font-size:.74rem; color:var(--apoio); text-align:center;}
+
   @media (prefers-reduced-motion:reduce){
     .tape span{animation:none;}
     .cta{transition:none;}
@@ -369,7 +389,7 @@
     <ol class="jornada">
       <li class="parada ponta"><span class="dot"></span><span class="rotulo">Hoje</span><h3>Muito conhecimento</h3><p>e nenhuma estrutura pra vender.</p></li>
       <li class="parada"><span class="dot"></span><span class="rotulo">Fase 1</span><h3>Método Autoral</h3><p>A persona nasce da sua história, e o método traz o que você viveu, usou e aprendeu.</p></li>
-      <li class="parada marco"><span class="dot"><svg class="flame"><use href="#chama"/></svg></span><span class="rotulo">Fase 2 · Mês 4</span><h3>Validação</h3><p>Vendas Secretas: você testa a oferta em conversas reservadas e faz a <b>sua primeira venda no digital</b>.</p></li>
+      <li class="parada marco"><span class="dot"><svg class="flame"><use href="#chama"/></svg></span><span class="rotulo">Fase 2</span><h3>Validação</h3><p>Vendas Secretas: você testa a oferta em conversas reservadas e faz a <b>sua primeira venda no digital</b>.</p></li>
       <li class="parada"><span class="dot"></span><span class="rotulo">Fase 3</span><h3>Posicionamento</h3><p>Você aparece com a autoridade que já tem, depois de ensaiar e já com prova.</p></li>
       <li class="parada"><span class="dot"></span><span class="rotulo">Fase 4</span><h3>Escala</h3><p>Seu conhecimento virou um negócio. Novos funis, novos produtos e mais faturamento.</p></li>
     </ol>
@@ -386,12 +406,13 @@
       <div class="fato"><span class="num tabular">12</span><p>Oficinas Destrava Expert, pra trabalhar as principais travas de profissionais que estão chegando no digital: a estruturação do método, as vendas e a escala</p></div>
       <div class="fato"><span class="num tabular">8</span><p>sessões individuais comigo</p></div>
     </div>
+    <p class="sessoes-titulo">Como são as 8 sessões</p>
     <ol class="sessoes">
       <li><span class="s tabular">S1</span><span>Diagnóstico + Roteiro do Expert<span class="q">você sai sabendo exatamente por onde começar</span></span></li>
-      <li><span class="s tabular">S2</span><span>Revisão do Método<span class="q">seu método revisado comigo, pronto pra ir pro mercado</span></span></li>
-      <li><span class="s tabular">S3</span><span>Checkup da Oferta<span class="q">sua oferta ajustada pra você vender com segurança</span></span></li>
-      <li><span class="s tabular">S4·S5</span><span>Raio-X de Venda<span class="q">cada conversa de venda vira aprendizado, não julgamento</span></span></li>
-      <li><span class="s tabular">S6</span><span>Revisão de Posicionamento<span class="q">sua autoridade clara no perfil e na mensagem</span></span></li>
+      <li><span class="s tabular">S2</span><span>Aprovação do Método<span class="q">seu método aprovado comigo, pronto pra ir pro mercado</span></span></li>
+      <li><span class="s tabular">S3</span><span>Checkup da Oferta<span class="q">análise da sua oferta antes da sua 1ª sessão de Vendas Secretas</span></span></li>
+      <li><span class="s tabular">S4·S5</span><span>Raio-X de Venda<span class="q">análise depois de cada sessão de venda, pra melhorar e aprender</span></span></li>
+      <li><span class="s tabular">S6</span><span>Revisão de Posicionamento<span class="q">sua comunicação nas redes alinhada pra te posicionar como autoridade</span></span></li>
       <li><span class="s tabular">S7</span><span>React da sua 1ª Live<span class="q">ajustes de roteiro, comportamento e condução pra sua live vender</span></span></li>
       <li><span class="s tabular">S8</span><span>Expert Plan<span class="q">o plano de escala do seu negócio, montado comigo</span></span></li>
     </ol>
@@ -408,7 +429,7 @@
       <li><svg class="flame"><use href="#chama"/></svg><div><b>Metodologia completa do Expert360º</b><span>Aulas e arquivos.</span></div></li>
       <li><svg class="flame"><use href="#chama"/></svg><div><b>Os 6 agentes de IA do método</b><span>Persona, Promessa, Processo Autoral, Portfólio, Proposta Validada e Posicionamento.</span></div></li>
       <li><svg class="flame"><use href="#chama"/></svg><div><b>Agente Vendedor Secreto</b><span>Monta o roteiro das suas Vendas Secretas.</span></div></li>
-      <li><svg class="flame"><use href="#chama"/></svg><div><b>Studio de Ensaio do Expert</b><span>Você grava a mesma fala 3 vezes, avalia as 3 com os mesmos critérios e mede a sua evolução. Ninguém precisa estrear sem ensaiar.</span></div></li>
+      <li><svg class="flame"><use href="#chama"/></svg><div><b>Studio de Ensaio do Expert</b><span>Treine a sua fala de venda e a quebra de objeções antes das sessões de verdade. Você chega na conversa com o lead sabendo o que dizer.</span></div></li>
       <li><svg class="flame"><use href="#chama"/></svg><div><b>Taxa reduzida na Voomp pra vender os seus produtos</b><span>5,99% + R$1 por venda. A tabela pública da Voomp é 7,99% + R$1. Condições direto com a Voomp.</span></div></li>
       <li><svg class="flame"><use href="#chama"/></svg><div><b>Canal exclusivo: você, eu e o suporte</b><span>Não é grupo com a turma toda. É um canal só seu, comigo e com o suporte que te acompanha em toda a jornada.</span></div></li>
     </ul>
@@ -437,7 +458,6 @@
         <p>Foi o faturamento do mês seguinte. Só na semana de 21 a 26/09, foram R$5 mil.</p>
       </div>
     </div>
-    <p class="lead">Numa dessas tardes, uma tempestade derrubou a internet e eu fiquei sem trabalhar no computador. Em vez de esperar voltar, passei a tarde prospectando: conversei com 14 pessoas, marquei 6 sessões e fechei uma venda de R$1.500.</p>
     <div class="caso">
       <span class="eyebrow">Milena Gehrke · Conduz Agro</span>
       <blockquote>Eu montei a Venda Secreta da Milena: oferta, roteiro da sessão e pré-diagnóstico. Uma semana depois, ela vendeu a primeira mentoria de 12 meses da vida dela: <b>R$2.500, em duas sessões.</b></blockquote>
@@ -447,11 +467,9 @@
       <figure class="video"><video controls preload="none" playsinline poster="tasso-capa.jpg"><source src="tasso-depoimento.mp4" type="video/mp4"></video><figcaption><b>Tasso Ramalho</b> · Hunt Imóveis</figcaption></figure>
     </div>
     <div class="depos">
-      <p class="depo">"Você conseguiu me colocar numa estratégia muito mais focada. Eu não entendia por que não avançava sozinho: eu queria entregar tudo de uma vez. Agora é por partes."<cite>Vagner, especialista em acesso a crédito para empresários</cite></p>
-      <p class="depo">"Tenho certeza que ficou um método muito coerente e muito forte. E ficou muito autoral."<cite>Vagner</cite></p>
       <p class="depo">"Fiquei conversando com teu agente e estou sentindo o esclarecimento que desejava há 9 anos! [...] Sinto que agora tenho ferramentas e recursos para desenvolver meu infoproduto de forma legal e ética."<cite>Anália, médica</cite></p>
-      <p class="depo">"Até chorei emocionada aqui depois de escrever o formulário. Tem 4 anos que estudo para conseguir desenvolver um produto e não acredito que consegui, com um método que tem nome da minha empresa."<cite>Hilda</cite></p>
-      <p class="depo">"Todas as aulas têm sido um divisor de águas [...] A interação da sala é sensacional, é um 'tipo de mentoria' um a um."<cite>Claudia Barreto</cite></p>
+      <p class="depo">"Até chorei emocionada aqui depois de escrever o formulário. Tem 4 anos que estudo para conseguir desenvolver um produto e não acredito que consegui, com um método que tem nome da minha empresa."<cite>Hilda, HCSER Treinamentos Gerencial e Profissional</cite></p>
+      <p class="depo">"Você conseguiu me colocar numa estratégia muito mais focada. Eu não entendia por que não avançava sozinho: eu queria entregar tudo de uma vez. Agora é por partes."<cite>Vagner, especialista em acesso a crédito para empresários</cite></p>
     </div>
   </div>
 </section>
@@ -515,7 +533,7 @@
       <details><summary>A Central do Mentor vale no cartão?</summary><p>Não. Ela é bônus de quem paga à vista no pix.</p></details>
       <details><summary>Posso parcelar?</summary><p>Sim, em 12x de R$500 no cartão. Ou R$5.000 à vista no pix.</p></details>
       <details><summary>Tem garantia?</summary><p>Sim, Garantia de Aderência de 15 dias.</p></details>
-      <details><summary>O time faz a minha página ou o meu tráfego?</summary><p>Não. Isso é da mentoria Individual. Na Incubadora você constrói com oficina e sessão, e eu reviso.</p></details>
+      <details><summary>O time faz a minha página ou o meu tráfego?</summary><p>Não. Isso faz parte do escopo da mentoria Individual.</p></details>
     </div>
   </div>
 </section>
@@ -543,6 +561,23 @@
   </div>
 </footer>
 
+<dialog class="pre js-pre" aria-labelledby="pre-titulo">
+  <form method="dialog" novalidate>
+    <button type="button" class="pre-fechar js-pre-fechar" aria-label="Fechar">×</button>
+    <h3 id="pre-titulo">Falta só um passo</h3>
+    <p class="pre-sub">Deixa seu nome e WhatsApp antes de ir pro pagamento. Se travar alguma coisa, a gente te chama.</p>
+    <label>Seu nome
+      <input type="text" name="nome" autocomplete="name" required maxlength="120">
+    </label>
+    <label>Seu WhatsApp (com DDD)
+      <input type="tel" name="celular" autocomplete="tel" inputmode="tel" placeholder="(65) 99999-9999" required maxlength="20">
+    </label>
+    <p class="pre-erro js-pre-erro" role="alert"></p>
+    <button type="submit" class="cta">CONTINUAR PARA O PAGAMENTO</button>
+    <p class="pre-nota">Seus dados ficam só com a Incubadora.</p>
+  </form>
+</dialog>
+
 <div class="barra">
   <div class="t">Fecha em<b class="tabular js-relogio">--:--:--</b></div>
   <a class="cta js-checkout" href="https://pay.voompcreators.com.br/16366">QUERO ENTRAR · 12x R$500</a>
@@ -552,13 +587,34 @@
   (function () {
     // Fechamento real do carrinho: 14/10/2026, 23h59 de Brasília.
     var FECHA = new Date('2026-10-14T23:59:00-03:00').getTime();
+    // Depois de FECHA: se tiver link aqui, os botões trocam pro checkout novo (R$7.500);
+    // vazio = botões desativados ("Black Expert encerrada"). A Karol pode estar dormindo às 23h59.
+    var CHECKOUT_DEPOIS = '';
+    var TEXTO_DEPOIS = 'QUERO ENTRAR · R$7.500';
     var relogios = document.querySelectorAll('.js-relogio');
+    var fechou = false;
+    function encerrar() {
+      fechou = true;
+      document.querySelectorAll('.js-checkout').forEach(function (a) {
+        if (CHECKOUT_DEPOIS) {
+          a.href = CHECKOUT_DEPOIS;
+          a.textContent = TEXTO_DEPOIS;
+        } else {
+          a.removeAttribute('href');
+          a.classList.add('encerrado');
+          a.textContent = 'BLACK EXPERT ENCERRADA';
+          a.style.opacity = '0.5';
+          a.style.cursor = 'default';
+        }
+      });
+    }
     function dois(n) { return String(n).padStart(2, '0'); }
     function tick() {
       var falta = FECHA - Date.now();
       var txt;
       if (falta <= 0) {
         txt = 'encerrado';
+        if (!fechou) encerrar();
       } else {
         var s = Math.floor(falta / 1000);
         var d = Math.floor(s / 86400);
@@ -575,7 +631,7 @@
     var params = new URLSearchParams(window.location.search);
     var chaves = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'];
     document.querySelectorAll('.js-checkout').forEach(function (a) {
-      if (a.getAttribute('href').charAt(0) === '#') return;
+      if (!a.getAttribute('href') || a.getAttribute('href').charAt(0) === '#') return;
       var url = new URL(a.href);
       chaves.forEach(function (k) { if (params.has(k)) url.searchParams.set(k, params.get(k)); });
       a.href = url.toString();
@@ -583,12 +639,97 @@
   })();
 </script>
 <script>
-  document.querySelectorAll('.js-checkout').forEach(function (a) {
-    a.addEventListener('click', function () {
-      if (typeof fbq === 'function') fbq('track', 'InitiateCheckout');
-      if (typeof gtag === 'function') gtag('event', 'begin_checkout');
+  // Pré-checkout: pede nome + WhatsApp antes de mandar pra Voomp (recuperação de venda).
+  // Gravação nunca trava a compra — se a API falhar ou demorar, segue pro checkout mesmo assim.
+  (function () {
+    var pre = document.querySelector('.js-pre');
+    var form = pre && pre.querySelector('form');
+    var erro = pre && pre.querySelector('.js-pre-erro');
+    var destino = null;
+    var CHAVE = 'black-expert-pre';
+
+    function lerSalvo() {
+      try { return JSON.parse(localStorage.getItem(CHAVE)) || null; } catch (e) { return null; }
+    }
+    function salvar(d) {
+      try { localStorage.setItem(CHAVE, JSON.stringify(d)); } catch (e) {}
+    }
+    function digitos(v) { return String(v || '').replace(/\D/g, ''); }
+
+    function mascara(v) {
+      var d = digitos(v).slice(0, 11);
+      if (d.length <= 2) return d.length ? '(' + d : '';
+      if (d.length <= 6) return '(' + d.slice(0, 2) + ') ' + d.slice(2);
+      if (d.length <= 10) return '(' + d.slice(0, 2) + ') ' + d.slice(2, 6) + '-' + d.slice(6);
+      return '(' + d.slice(0, 2) + ') ' + d.slice(2, 7) + '-' + d.slice(7);
+    }
+
+    function irPro(url) { window.location.href = url; }
+
+    document.querySelectorAll('.js-checkout').forEach(function (a) {
+      a.addEventListener('click', function (ev) {
+        if (a.classList.contains('encerrado')) { ev.preventDefault(); return; }
+        if (typeof fbq === 'function') fbq('track', 'InitiateCheckout');
+        if (typeof gtag === 'function') gtag('event', 'begin_checkout');
+        if (!pre || typeof pre.showModal !== 'function') return; // navegador sem suporte: vai direto
+        ev.preventDefault();
+        destino = a.href;
+        var salvo = lerSalvo();
+        if (salvo) {
+          form.nome.value = salvo.nome || '';
+          form.celular.value = mascara(salvo.celular || '');
+        }
+        erro.textContent = '';
+        pre.showModal();
+        (form.nome.value ? form.celular : form.nome).focus();
+      });
     });
-  });
+
+    if (!pre) return;
+
+    form.celular.addEventListener('input', function () {
+      form.celular.value = mascara(form.celular.value);
+    });
+    // Voltou do checkout pelo "voltar" do navegador: destrava o botão.
+    window.addEventListener('pageshow', function () {
+      var botao = form.querySelector('button[type="submit"]');
+      botao.disabled = false;
+      botao.textContent = 'CONTINUAR PARA O PAGAMENTO';
+      if (pre.open) pre.close();
+    });
+    pre.querySelector('.js-pre-fechar').addEventListener('click', function () { pre.close(); });
+    pre.addEventListener('click', function (ev) { if (ev.target === pre) pre.close(); });
+
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var nome = form.nome.value.trim();
+      var cel = digitos(form.celular.value);
+      if (nome.length < 2) { erro.textContent = 'Coloca seu nome pra continuar.'; form.nome.focus(); return; }
+      if (cel.length < 10 || cel.length > 11) { erro.textContent = 'Confere o WhatsApp com DDD.'; form.celular.focus(); return; }
+      erro.textContent = '';
+      salvar({ nome: nome, celular: cel });
+
+      var params = new URLSearchParams(window.location.search);
+      var utms = {};
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) {
+        if (params.has(k)) utms[k] = params.get(k);
+      });
+
+      var botao = form.querySelector('button[type="submit"]');
+      botao.disabled = true;
+      botao.textContent = 'INDO PRO PAGAMENTO…';
+
+      var url = destino;
+      var envio = fetch('/api/precheckout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome: nome, celular: cel, utms: utms }),
+        keepalive: true
+      }).catch(function () {});
+      var limite = new Promise(function (r) { setTimeout(r, 1500); });
+      Promise.race([envio, limite]).then(function () { irPro(url); });
+    });
+  })();
   document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
     a.addEventListener('click', function () { if (typeof fbq === 'function') fbq('track', 'Contact'); });
   });
