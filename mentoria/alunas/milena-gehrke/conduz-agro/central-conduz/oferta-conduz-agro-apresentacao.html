@@ -54,6 +54,16 @@
   .side{border-left:6px solid var(--ouro);padding-left:4%}
   .side h3{font-size:clamp(14px,1.6vw,23px);text-transform:uppercase;letter-spacing:2px;color:var(--oliva);margin-bottom:8px}
   .side p{font-size:clamp(13px,1.6vw,24px);line-height:1.4}
+  .who.long{grid-template-columns:1fr 1.55fr;gap:3.5%}
+  .who.long .side p{font-size:clamp(11px,1.22vw,18px);line-height:1.38}
+  .who.long .side p+p{margin-top:.7em}
+  .who.long + .with{margin-top:2.6%;font-size:clamp(15px,1.9vw,28px)}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:2%}
+  .pillar{background:var(--card);border-radius:16px;padding:3% 3.2%;border-top:6px solid var(--oliva)}
+  .pillar .n{font-size:clamp(10px,1.05vw,15px);font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ouro)}
+  .pillar h4{font-family:var(--display);font-size:clamp(14px,1.65vw,24px);font-weight:700;margin:6px 0 8px;line-height:1.12}
+  .pillar p{font-size:clamp(11px,1.12vw,17px);color:var(--tinta-2);line-height:1.38}
+  .motto{margin-top:3%;max-width:80%;font-family:var(--display);font-style:italic;font-size:clamp(14px,1.7vw,25px);line-height:1.35}
   .with{margin-top:4%;font-family:var(--display);font-size:clamp(18px,2.3vw,34px);font-weight:700}
   .with span{color:var(--oliva);font-style:italic}
   /* infográfico: técnica → condução → valor */
@@ -125,7 +135,7 @@
     <div class="bar"></div>
     <div class="kicker">Conduz Agro</div>
     <h1>Mentoria Individual<br><span>Conduz Agro</span></h1>
-    <p class="lead">Transforme conhecimento técnico em autoridade pra conduzir produtores rurais com segurança, e pare de depender só de preço.</p>
+    <p class="lead">Transforme seu conhecimento técnico em segurança, reconheça seu valor e aprenda a conduzir pessoas para destravar situações e se destacar no agro.</p>
     <div class="brand">Milena Gehrke</div>
   </section>
 
@@ -156,11 +166,25 @@
     <div class="bar"></div>
     <div class="kicker">Quem caminha com você</div>
     <h2>Alguém que <span>já sentou do outro lado da mesa</span></h2>
-    <div class="who">
-      <div class="side"><h3>A técnica</h3><p>Engenheira Agrícola, com pós-graduação em georreferenciamento, avaliações rurais e regularização imobiliária rural. Atuo com regularização, avaliações, Incra, CCIR e ITR.</p></div>
-      <div class="side"><h3>A condução</h3><p>Anos atendendo produtor desconfiado, decisão de patrimônio e conflito de família em cima da mesa. Aprendi na prática que dominar a técnica não bastava: o que mudava tudo era conduzir a pessoa até a decisão.</p></div>
+    <div class="who long">
+      <div class="side"><h3>A técnica</h3><p>Engenheira Agrícola, com pós-graduação em georreferenciamento, avaliações rurais e regularização imobiliária rural, e pós-graduação em Mediação de Conflitos, Inteligência Emocional e Neurovendas. Atuo com regularização, avaliações, Incra, CCIR e ITR.</p></div>
+      <div class="side"><h3>A condução</h3><p>Anos atendendo produtores desconfiados, decisões patrimoniais e conflitos familiares em cima da mesa. Aprendi, na prática, que dominar a técnica não bastava. Era preciso entender as pessoas, enxergar o que estava por trás de cada situação, compreender seus medos, interesses e preocupações para, então, conduzi-las até uma decisão com mais clareza e segurança.</p><p>Percebi que, muitas vezes, o problema não estava apenas na documentação ou na solução técnica, mas na forma como cada pessoa enxergava e vivenciava aquela realidade.</p><p>Foi assim que entendi que ser um profissional diferenciado no agro vai além de saber fazer. É saber ouvir, compreender diferentes perspectivas e conduzir cada situação respeitando as pessoas envolvidas.</p></div>
     </div>
-    <p class="with">Eu vou conduzir isso <span>com você, nos seus casos</span>.</p>
+    <p class="with">Porque, antes de resolver um problema, <span>precisamos entender quem está vivendo aquela situação.</span></p>
+  </section>
+
+  <!-- 4b TRÊS PILARES -->
+  <section class="slide">
+    <div class="bar"></div>
+    <div class="kicker">Como a mentoria é estruturada</div>
+    <h2>Três pilares <span>complementares</span></h2>
+    <p class="lead" style="max-width:100%;margin:0 0 2.4%">Foi a partir dessa percepção que estruturei a mentoria em três pilares:</p>
+    <div class="pillars">
+      <div class="pillar"><div class="n">1 · Técnica</div><h4>Saber o que fazer</h4><p>Fortalecer sua base técnica por meio de dúvidas pontuais sobre regularização de imóveis rurais e crédito rural, com acompanhamento personalizado de um caso seu, além de analisar situações reais e te mostrar como construir caminhos práticos para a resolução de cada problema.</p></div>
+      <div class="pillar"><div class="n">2 · Emocional</div><h4>Desenvolver segurança de dentro para fora</h4><p>Trabalhar autoconhecimento, inteligência emocional e segurança interna para lidar com inseguranças, medo de errar, tomada de decisões e posicionamento profissional, agindo com mais clareza e confiança.</p></div>
+      <div class="pillar"><div class="n">3 · Condução</div><h4>Saber como agir em cada situação</h4><p>Desenvolver a capacidade de compreender o produtor e seu contexto, investigar a demanda real, identificar riscos e conduzir o atendimento estrategicamente, desde o primeiro contato até a definição dos próximos passos.</p></div>
+    </div>
+    <p class="with" style="font-size:clamp(14px,1.75vw,26px);margin-top:3%">A Técnica te ajuda a saber o que fazer. O Emocional te prepara para agir com segurança. <span>A Condução te ensina a transformar conhecimento em valor para o cliente.</span></p>
   </section>
 
   <!-- 5 PRA QUEM É -->
@@ -192,7 +216,7 @@
     <div class="kicker">Pra quem não é</div>
     <h2>Essa mentoria <span>não é pra você</span> se você:</h2>
     <div class="box x" style="max-width:80%"><ul>
-      <li>Quer aprender regularização: aqui você entra com a técnica</li>
+      <li>Quer aprender regularização com teoria, sem a parte prática</li>
       <li>Espera fórmula pronta ou resultado sem aplicar</li>
       <li>Não topa trazer seus casos reais pras sessões</li>
       <li>Não está aberto a receber feedback</li>
@@ -221,7 +245,7 @@
     <h2>12 meses. 24 encontros. <span>Da raiz à colheita.</span></h2>
     <div class="timeline">
       <div class="phases">
-        <div class="phase p1"><div class="n">Meses 1 a 4 · 8 encontros</div><h4>Aplicação Rápida</h4><p>O ciclo inteiro do método logo de cara, com 1º resultado comercial até o mês 4.</p></div>
+        <div class="phase p1"><div class="n">Meses 1 a 4 · 8 encontros</div><h4>Aplicação Rápida</h4><p>Os 3 pilares aplicados desde o 1º encontro, nos seus casos reais, com o 1º resultado comercial até o mês 4.</p></div>
         <div class="phase p2"><div class="n">Meses 5 a 12 · 16 encontros</div><h4>Segurança, Autoridade e Consolidação</h4><p>Aprofunda inteligência emocional, casos complexos, posicionamento e preço.</p></div>
       </div>
       <div class="marks">
@@ -289,6 +313,7 @@
       <b>Bônus Atendimento Conduzido</b>
       <p>Confirmando a entrada em até 24h, você escolhe um atendimento real pra eu conduzir com você, do início ao fim.</p>
     </div>
+    <p class="motto">Na Conduz Agro não desenvolvemos apenas profissionais que sabem executar. Desenvolvemos profissionais que aprendem a pensar, se posicionar e conduzir.</p>
     <div class="brand">Milena Gehrke · Engenheira Agrícola</div>
   </section>
 
