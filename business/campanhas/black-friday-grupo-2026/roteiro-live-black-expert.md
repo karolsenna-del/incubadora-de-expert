@@ -1,5 +1,5 @@
 # Live da Black Expert
-> Data: **terça, 14/10/2026, 15h (Brasília)** · Google Meet (https://meet.google.com/zun-dyuu-fqe)
+> Data: **quarta, 14/10/2026, 15h (Brasília)** · Google Meet (https://meet.google.com/zun-dyuu-fqe)
 > Formato: história + oferta, sem conteúdo. Carrinho abre no fim da live e vai até 23h59.
 > Duração estimada: ~60 min (+ ~5 min de sala de espera com os vídeos)
 > Modelo: **live de oferta em 11 blocos** (briefing v1.1, base VOL-04 + ECROI da sessão de Vendas
