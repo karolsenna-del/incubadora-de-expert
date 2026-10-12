@@ -44,6 +44,7 @@
     --apoio:#a9a9ab;
     --laranja:#f85627;
     --laranja-suave:rgba(248,86,39,.12);
+    --verde:#22c55e; /* só no botão de compra: contraste com o laranja da página; texto preto = 8,9:1 */
     --display:'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;
     --texto:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
     color-scheme:dark;
@@ -94,8 +95,8 @@
   .preco-obs{color:var(--cinza); font-size:.95rem;}
   .depois{font-size:.92rem; color:var(--apoio);}
   .depois s{color:var(--cinza);}
-  .cta{display:flex; align-items:center; justify-content:center; gap:10px; min-height:56px; padding:14px 22px; border-radius:12px; background:var(--laranja); color:var(--preto); font-family:var(--display); font-weight:800; font-size:1rem; letter-spacing:.04em; text-decoration:none; text-align:center; transition:transform .15s ease, box-shadow .15s ease;}
-  .cta:hover{transform:translateY(-1px); box-shadow:0 10px 30px rgba(248,86,39,.28);}
+  .cta{display:flex; align-items:center; justify-content:center; gap:10px; min-height:56px; padding:14px 22px; border-radius:12px; background:var(--verde); color:var(--preto); font-family:var(--display); font-weight:800; font-size:1rem; letter-spacing:.04em; text-decoration:none; text-align:center; transition:transform .15s ease, box-shadow .15s ease;}
+  .cta:hover{transform:translateY(-1px); box-shadow:0 10px 30px rgba(34,197,94,.3);}
   .cta:focus-visible{outline:3px solid var(--branco); outline-offset:3px;}
   .relogio{display:flex; align-items:center; gap:10px; font-size:.9rem; color:var(--cinza);}
   .relogio b{font-family:var(--display); font-weight:800; color:var(--branco); font-size:1.02rem;}
@@ -283,6 +284,56 @@
   .pre .pre-fechar:hover{color:var(--branco);}
   .pre .pre-nota{font-size:.74rem; color:var(--apoio); text-align:center;}
 
+  /* ---------- cena lateral: fixa na borda direita, se forma conforme a página rola ----------
+     Computador (≥1180px): cena completa na margem. Celular/tablet: faixa fina de 40px com a versão
+     miniatura; o texto ganha recuo à direita pra faixa não encostar. */
+  .cena-lateral{position:fixed; top:0; right:0; z-index:1; height:100vh; pointer-events:none;}
+  .cena-lateral canvas{display:block; width:100%; height:100%;}
+  @media (min-width:1180px){
+    .cena-lateral{width:min(300px, calc((100vw - 760px) / 2 - 24px));}
+  }
+  @media (max-width:1179px){
+    .cena-lateral{width:40px; background:rgba(19,20,22,.9); border-left:1px solid var(--linha);}
+    .wrap{padding-right:56px;}
+  }
+  @media (max-width:720px){
+    .cena-lateral{height:auto; bottom:calc(71px + env(safe-area-inset-bottom, 0px));} /* acima da barra fixa */
+  }
+  /* ---------- animações de entrada ----------
+     Só valem com a classe .anima no <html>, que o script põe quando o navegador suporta e a
+     pessoa não pediu "reduzir movimento". Sem ela, a página fica estática como antes.
+     Cada bloco anima uma vez, quando entra na tela (.visto). Botão, preço e relógio não animam. */
+  /* 1. bônus: cada cartão sobe quando entra na tela (o script escalona os que entram juntos),
+     o número "estoura" e o Fura-Fila fica respirando um brilho laranja enquanto está na tela */
+  .anima .bonus-item{opacity:0; transform:translateY(40px) scale(.96); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1);}
+  .anima .bonus-item.visto{opacity:1; transform:none;}
+  .anima .bonus-item .n{display:inline-block; opacity:0; transform:scale(.3); transition:opacity .4s ease .25s, transform .5s cubic-bezier(.3,1.6,.5,1) .25s;}
+  .anima .bonus-item.visto .n{opacity:1; transform:none;}
+  .anima .bonus-item.destaque.visto{animation:respira 2.4s ease-in-out .7s infinite;}
+  @keyframes respira{0%,100%{box-shadow:0 0 0 0 rgba(248,86,39,0), 0 0 0 0 rgba(248,86,39,0);} 50%{box-shadow:0 0 0 2px rgba(248,86,39,.55), 0 0 34px 4px rgba(248,86,39,.35);}}
+
+  /* 2. jornada: a linha se desenha e as paradas acendem; a chama da Validação pulsa uma vez */
+  .anima .jornada::before{transform:scaleX(0); transform-origin:left center; transition:transform 1.6s cubic-bezier(.4,0,.2,1);}
+  .anima .jornada.visto::before{transform:none;}
+  .anima .parada{opacity:.2; transition:opacity .5s ease;}
+  .anima .jornada.visto .parada{opacity:1;}
+  .anima .jornada.visto .parada:nth-child(2){transition-delay:.35s;}
+  .anima .jornada.visto .parada:nth-child(3){transition-delay:.7s;}
+  .anima .jornada.visto .parada:nth-child(4){transition-delay:1.05s;}
+  .anima .jornada.visto .parada:nth-child(5){transition-delay:1.4s;}
+  .anima .jornada.visto .parada.marco .dot{animation:pulsa 1s ease .8s 1;}
+  @keyframes pulsa{0%{box-shadow:0 0 0 0 rgba(248,86,39,.7); transform:scale(1);} 35%{transform:scale(1.18);} 100%{box-shadow:0 0 0 18px rgba(248,86,39,0); transform:scale(1);}}
+  @media (max-width:720px){
+    .anima .jornada::before{transform:scaleY(0); transform-origin:center top;}
+    .anima .jornada.visto::before{transform:none;}
+  }
+
+  /* 3. prova: os passos entram em sequência e o R$10 mil sobe contando (o script conta) */
+  .anima .passo{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease;}
+  .anima .historia.visto .passo{opacity:1; transform:none;}
+  .anima .historia.visto .passo:nth-child(2){transition-delay:.35s;}
+  .anima .historia.visto .passo:nth-child(3){transition-delay:.7s;}
+
   @media (prefers-reduced-motion:reduce){
     .tape span{animation:none;}
     .cta{transition:none;}
@@ -291,6 +342,8 @@
 </style>
 </head>
 <body>
+
+<div class="cena-lateral js-cena-lateral" aria-hidden="true"><canvas></canvas></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="chama" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M12 2.5c1 3.5 5.5 6 5.5 11a5.5 5.5 0 0 1-11 0c0-2.7 1.5-4.5 2.8-5.7.2 1.8 1 3 2.2 3.5-.5-3.1-.3-6.3.5-8.8z"/><path d="M12 20a2.6 2.6 0 0 1-2.6-2.6c0-1.6 1.4-2.6 2.6-4.4 1.2 1.8 2.6 2.8 2.6 4.4A2.6 2.6 0 0 1 12 20z"/></g></symbol>
@@ -316,11 +369,10 @@
       </div>
     </div>
 
+
     <div class="compra">
       <span class="eyebrow">Só hoje, até 23h59</span>
-      <div class="preco-linha"><span class="preco tabular">12x de R$500</span><span class="preco-obs">ou R$5.000 no pix</span></div>
-      <p class="depois">A partir de amanhã: <s class="tabular">R$7.500</s></p>
-      <a class="cta js-checkout" href="https://pay.voompcreators.com.br/16366">QUERO ENTRAR NA INCUBADORA</a>
+      <a class="cta js-checkout" href="https://pay.voompcreators.com.br/16366">QUERO CRIAR MEU MÉTODO</a>
       <p class="relogio"><svg class="flame"><use href="#chama"/></svg><span>O carrinho fecha em <b class="tabular js-relogio">--:--:--</b></span></p>
     </div>
 
@@ -454,7 +506,7 @@
       </div>
       <div class="passo">
         <span class="quando">Setembro</span>
-        <span class="v tabular accent">R$10 mil</span>
+        <span class="v tabular accent js-conta" data-de="1500" data-ate="10000">R$10 mil</span>
         <p>Foi o faturamento do mês seguinte. Só na semana de 21 a 26/09, foram R$5 mil.</p>
       </div>
     </div>
@@ -580,7 +632,7 @@
 
 <div class="barra">
   <div class="t">Fecha em<b class="tabular js-relogio">--:--:--</b></div>
-  <a class="cta js-checkout" href="https://pay.voompcreators.com.br/16366">QUERO ENTRAR · 12x R$500</a>
+  <a class="cta js-checkout" href="https://pay.voompcreators.com.br/16366">QUERO CRIAR MEU MÉTODO</a>
 </div>
 
 <script>
@@ -590,7 +642,7 @@
     // Depois de FECHA: se tiver link aqui, os botões trocam pro checkout novo (R$7.500);
     // vazio = botões desativados ("Black Expert encerrada"). A Karol pode estar dormindo às 23h59.
     var CHECKOUT_DEPOIS = 'https://pay.voompcreators.com.br/16366/offer/skk6c1';
-    var TEXTO_DEPOIS = 'QUERO ENTRAR · R$7.500';
+    var TEXTO_DEPOIS = 'QUERO CRIAR MEU MÉTODO';
     var relogios = document.querySelectorAll('.js-relogio');
     var fechou = false;
     function encerrar() {
@@ -733,6 +785,326 @@
   document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
     a.addEventListener('click', function () { if (typeof fbq === 'function') fbq('track', 'Contact'); });
   });
+</script>
+<script>
+  // Animações de entrada (bônus, jornada, prova). Sem suporte ou com "reduzir movimento",
+  // não liga nada e a página fica estática. O texto final do contador já está no HTML.
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var alvos = document.querySelectorAll('.bonus-item, .jornada, .historia');
+    if (!alvos.length) return;
+    document.documentElement.classList.add('anima');
+
+    function contar(el) {
+      var de = +el.dataset.de, ate = +el.dataset.ate, final = el.textContent, dur = 1400, t0 = null;
+      function passo(t) {
+        if (t0 === null) t0 = t;
+        var p = Math.min((t - t0) / dur, 1);
+        var v = Math.round(de + (ate - de) * (1 - Math.pow(1 - p, 3)));
+        el.textContent = p < 1 ? 'R$' + v.toLocaleString('pt-BR') : final;
+        if (p < 1) requestAnimationFrame(passo);
+      }
+      el.textContent = 'R$' + de.toLocaleString('pt-BR');
+      setTimeout(function () { requestAnimationFrame(passo); }, 800); // espera o 3º passo aparecer
+    }
+
+    var io = new IntersectionObserver(function (entradas) {
+      var fila = 0;
+      entradas.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        // cartões de bônus que entram juntos sobem um atrás do outro
+        if (e.target.classList.contains('bonus-item')) e.target.style.transitionDelay = (fila++ * 0.15) + 's';
+        e.target.classList.add('visto');
+        var c = e.target.querySelector('.js-conta');
+        if (c) contar(c);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -15% 0px' });
+    alvos.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+<script>
+  // Cena lateral fixa (margem direita no computador, faixa fina de 40px no celular): uma história só, de cima pra baixo, guiada pela rolagem da página.
+  // Topo da coluna: a pessoa, a mente acende. Rolando: o conhecimento sai e desce, a arquiteta risca a planta
+  // e ele vira os 4 blocos do método. Perto do fim da página: o método entra no computador e as vendas aparecem.
+  // Com "reduzir movimento", a cena aparece montada e parada.
+  (function () {
+    var box = document.querySelector('.js-cena-lateral');
+    if (!box) return;
+    var cv = box.querySelector('canvas'), cx = cv.getContext('2d');
+    if (!cx) return;
+    var W = 240, H = 900, esc = 1, ox = 0, oy = 0, relogio = 0;
+    var LAR = '248,86,39', VERDE = '#22c55e';
+    var reduz = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var ativa = window.matchMedia('(min-width: 1180px)'); // computador: cena completa; senão: faixa
+    var pessoa = new Path2D('M120 34 C150 34 162 58 161 84 C160 104 154 122 142 132 C134 139 127 142 120 142 C113 142 106 139 98 132 C86 122 80 104 79 84 C78 58 90 34 120 34 Z');
+    var orelhas = new Path2D('M81 78 C69 75 66 99 82 102 Z M159 78 C171 75 174 99 158 102 Z');
+    var chama = new Path2D('M12 2.5c1 3.5 5.5 6 5.5 11a5.5 5.5 0 0 1-11 0c0-2.7 1.5-4.5 2.8-5.7.2 1.8 1 3 2.2 3.5-.5-3.1-.3-6.3.5-8.8z');
+
+    function cl(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+    function seg(t, a, b) { return cl((t - a) / (b - a)); }
+    function io(p) { return p < .5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2; }
+    function oo(p) { return 1 - Math.pow(1 - p, 3); }
+    function lerp(a, b, p) { return a + (b - a) * p; }
+    function rnd(a, b) { return a + Math.random() * (b - a); }
+    function rr(x, y, w, h, r) {
+      cx.beginPath(); cx.moveTo(x + r, y); cx.arcTo(x + w, y, x + w, y + h, r); cx.arcTo(x + w, y + h, x, y + h, r);
+      cx.arcTo(x, y + h, x, y, r); cx.arcTo(x, y, x + w, y, r); cx.closePath();
+    }
+    function linhas(ls, p) { // traços em sequência, como se alguém estivesse riscando
+      var f = p * ls.length;
+      for (var i = 0; i < ls.length; i++) {
+        var q = cl(f - i); if (q <= 0) break; var l = ls[i];
+        cx.beginPath(); cx.moveTo(l[0], l[1]); cx.lineTo(lerp(l[0], l[2], q), lerp(l[1], l[3], q)); cx.stroke();
+      }
+    }
+    function rotulo(txt, y, a) {
+      if (a <= 0) return;
+      cx.globalAlpha = a; cx.fillStyle = 'rgb(' + LAR + ')';
+      cx.font = '700 11px Sora, system-ui, sans-serif'; cx.textAlign = 'center';
+      if ('letterSpacing' in cx) cx.letterSpacing = '2px';
+      cx.fillText(txt, W / 2, y);
+    }
+
+    // 64 partículas = 4 blocos de 16 (as 4 fases do método)
+    var ps = [];
+    for (var i = 0; i < 64; i++) {
+      var b = Math.floor(i / 16), k = i % 16, sx = 64 + (k % 8) * 16, sy = 598 - b * 42 + Math.floor(k / 8) * 16;
+      ps.push({ b: b, d: Math.random(), hx: rnd(106, 134), hy: rnd(62, 92), mx: rnd(40, 200), my: rnd(230, 400), ph: rnd(0, 6.3),
+        sx: sx, sy: sy, tx: 46 + (sx - 56) * 0.32, ty: 724 + (sy - 464) * 0.32, branca: Math.random() < 0.25, k: 1, amp: 30, wb: 7 });
+    }
+    function pos(p, t) {
+      var e0 = 1.6 + p.d * 0.9, e1 = e0 + 1.2, m0 = 3.6 + p.b * 0.3 + p.d * 0.25, m1 = m0 + 1, f0 = 6.3 + p.d * 0.5, f1 = f0 + 1;
+      if (t < e0) return null;
+      var wob = p.wb * (1 - seg(t, m0, m1)), wx = Math.sin(relogio * 2.1 + p.ph) * wob, wy = Math.cos(relogio * 1.7 + p.ph) * wob, q;
+      if (t < m0) { // desce da cabeça fazendo uma curva
+        q = oo(seg(t, e0, e1));
+        var curva = Math.sin(q * Math.PI) * p.amp * (p.ph > 3.15 ? 1 : -1);
+        return { x: lerp(p.hx, p.mx, q) + curva + wx * q, y: lerp(p.hy, p.my, q) + wy * q, s: lerp(2, 4.5, q) * p.k, a: q, solta: 1 };
+      }
+      if (t < f0) { q = io(seg(t, m0, m1)); return { x: lerp(p.mx + wx, p.sx, q), y: lerp(p.my + wy, p.sy, q), s: lerp(4.5, 12, q) * p.k, a: 1, solta: 1 - q }; }
+      q = io(seg(t, f0, f1)); return { x: lerp(p.sx, p.tx, q), y: lerp(p.sy, p.ty, q), s: lerp(12, 4, q) * p.k, a: 1, solta: 0 };
+    }
+
+    function quadro(t) {
+      cx.setTransform(1, 0, 0, 1, 0, 0);
+      cx.clearRect(0, 0, cv.width, cv.height);
+      cx.setTransform(esc, 0, 0, esc, ox, oy);
+      var x, y, q;
+
+      // fio guia da cabeça ao computador: vai ficando laranja conforme a pessoa rola
+      cx.globalAlpha = seg(t, 0.3, 1.2); cx.lineWidth = 1;
+      cx.strokeStyle = 'rgba(252,252,252,.12)'; cx.setLineDash([3, 6]);
+      // (dois trechos: cabeça → planta e planta → computador, sem cruzar os rótulos)
+      cx.beginPath(); cx.moveTo(W / 2, 190); cx.lineTo(W / 2, 412); cx.moveTo(W / 2, 670); cx.lineTo(W / 2, 690); cx.stroke(); cx.setLineDash([]);
+      var fioA = seg(t, 1.6, 3.6), fioB = seg(t, 6.0, 6.6);
+      cx.strokeStyle = 'rgba(' + LAR + ',.45)'; cx.lineWidth = 1.5;
+      if (fioA > 0) { cx.beginPath(); cx.moveTo(W / 2, 190); cx.lineTo(W / 2, lerp(190, 412, fioA)); cx.stroke(); }
+      if (fioB > 0) { cx.beginPath(); cx.moveTo(W / 2, 670); cx.lineTo(W / 2, lerp(670, 690, fioB)); cx.stroke(); }
+
+      // pessoa
+      cx.globalAlpha = seg(t, 0, 0.8);
+      cx.fillStyle = '#1d1e21'; cx.strokeStyle = 'rgba(' + LAR + ',.6)'; cx.lineWidth = 1.5;
+      cx.fill(orelhas); cx.stroke(orelhas); cx.fill(pessoa); cx.stroke(pessoa);
+      var luz = seg(t, 0.4, 1.4) * (1 - seg(t, 4.2, 5.4)) * (0.75 + 0.25 * Math.sin(relogio * 5));
+      if (luz > 0) {
+        var gr = cx.createRadialGradient(120, 78, 0, 120, 78, 56);
+        gr.addColorStop(0, 'rgba(' + LAR + ',' + (.6 * luz) + ')'); gr.addColorStop(1, 'rgba(' + LAR + ',0)');
+        cx.globalAlpha = 1; cx.fillStyle = gr; cx.beginPath(); cx.arc(120, 78, 56, 0, 6.283); cx.fill();
+      }
+      rotulo('SEU CONHECIMENTO', 176, seg(t, 0.8, 1.6));
+
+      // a arquiteta risca a planta do método
+      var bp = seg(t, 3.3, 4.9), bpa = 1 - seg(t, 6.4, 7.2);
+      if (bp > 0 && bpa > 0) {
+        cx.globalAlpha = bpa; cx.lineWidth = 1;
+        cx.strokeStyle = 'rgba(252,252,252,.32)'; cx.setLineDash([4, 4]);
+        linhas([[36, 420, 204, 420], [204, 420, 204, 632], [204, 632, 36, 632], [36, 632, 36, 420]], bp);
+        cx.setLineDash([]);
+        cx.strokeStyle = 'rgba(' + LAR + ',.6)';
+        linhas([[26, 462, 26, 624], [21, 462, 31, 462], [21, 624, 31, 624]], seg(t, 3.9, 5.1));
+        q = seg(t, 4.1, 5.3);
+        if (q > 0) { cx.beginPath(); cx.arc(204, 420, 34, Math.PI / 2, Math.PI / 2 + Math.PI / 2 * q); cx.stroke(); }
+        for (var b = 0; b < 4; b++) {
+          q = seg(t, 4.5 + b * 0.3, 5.0 + b * 0.3) * bpa;
+          if (q > 0) { cx.globalAlpha = q; cx.strokeStyle = 'rgba(' + LAR + ',.9)'; cx.lineWidth = 1.5; cx.strokeRect(53, 588 - b * 42, 134, 36); }
+        }
+        q = seg(t, 5.3, 5.8) * bpa;
+        if (q > 0) {
+          cx.save(); cx.globalAlpha = q; cx.translate(106, 426); cx.scale(1.15, 1.15);
+          cx.fillStyle = 'rgba(' + LAR + ',.25)'; cx.fill(chama);
+          cx.strokeStyle = 'rgb(' + LAR + ')'; cx.lineWidth = 1.6; cx.stroke(chama); cx.restore();
+        }
+        rotulo('ARQUITETADO EM MÉTODO', 660, seg(t, 5.0, 5.6) * bpa);
+      }
+
+      // computador
+      cx.globalAlpha = seg(t, 0.3, 1.1);
+      rr(24, 694, 192, 132, 8); cx.fillStyle = '#16171a'; cx.fill();
+      cx.strokeStyle = 'rgba(252,252,252,.35)'; cx.lineWidth = 2; cx.stroke();
+      cx.beginPath(); cx.moveTo(6, 832); cx.lineTo(234, 832); cx.lineTo(222, 844); cx.lineTo(18, 844); cx.closePath();
+      cx.fillStyle = '#232428'; cx.fill(); cx.lineWidth = 1.5; cx.stroke();
+      var lig = seg(t, 6.0, 6.6);
+      if (lig > 0) {
+        cx.globalAlpha = lig;
+        cx.fillStyle = 'rgba(252,252,252,.05)'; cx.fillRect(32, 702, 176, 116);
+        cx.fillStyle = 'rgba(252,252,252,.16)'; cx.fillRect(32, 702, 176, 9);
+        cx.fillStyle = 'rgba(' + LAR + ',.9)'; cx.beginPath(); cx.arc(38, 706.5, 2, 0, 6.283); cx.fill();
+        var vg = seg(t, 7.4, 8.2);
+        if (vg > 0) {
+          var gv = cx.createRadialGradient(120, 760, 0, 120, 760, 140);
+          gv.addColorStop(0, 'rgba(34,197,94,' + (.24 * vg * (0.85 + 0.15 * Math.sin(relogio * 3))) + ')'); gv.addColorStop(1, 'rgba(34,197,94,0)');
+          cx.globalAlpha = 1; cx.fillStyle = gv; cx.beginPath(); cx.arc(120, 760, 140, 0, 6.283); cx.fill();
+        }
+      }
+
+      // partículas
+      for (var i = 0; i < ps.length; i++) {
+        var p = ps[i], o = pos(p, t);
+        if (!o) continue;
+        cx.globalAlpha = o.a;
+        cx.shadowColor = 'rgba(' + LAR + ',.9)'; cx.shadowBlur = 8 * o.solta * esc;
+        cx.fillStyle = p.branca ? 'rgba(252,252,252,.92)' : 'rgb(' + LAR + ')';
+        rr(o.x - o.s / 2, o.y - o.s / 2, o.s, o.s, Math.min(2.5, o.s / 3)); cx.fill();
+      }
+      cx.shadowBlur = 0;
+
+      // as vendas entram
+      for (var n = 0; n < 3; n++) {
+        var n0 = 7.4 + n * 0.7; q = oo(seg(t, n0, n0 + 0.45));
+        if (q <= 0) continue;
+        x = 102 + (1 - q) * 24; y = 718 + n * 32;
+        cx.globalAlpha = q;
+        rr(x, y, 98, 26, 5); cx.fillStyle = 'rgba(34,197,94,.14)'; cx.fill();
+        cx.strokeStyle = 'rgba(34,197,94,.7)'; cx.lineWidth = 1; cx.stroke();
+        cx.fillStyle = VERDE; cx.beginPath(); cx.arc(x + 13, y + 13, 7.5, 0, 6.283); cx.fill();
+        cx.strokeStyle = '#090a0b'; cx.lineWidth = 2; cx.beginPath();
+        cx.moveTo(x + 9.5, y + 13); cx.lineTo(x + 12.5, y + 16); cx.lineTo(x + 17, y + 10); cx.stroke();
+        cx.fillStyle = 'rgba(252,252,252,.8)'; cx.fillRect(x + 26, y + 7, 50, 4);
+        cx.fillStyle = 'rgba(252,252,252,.35)'; cx.fillRect(x + 26, y + 15, 32, 4);
+        var pu = seg(t, n0, n0 + 0.9);
+        if (pu < 1) { cx.globalAlpha = 1 - pu; cx.strokeStyle = VERDE; cx.lineWidth = 2; cx.beginPath(); cx.arc(x + 13, y + 13, 7.5 + pu * 14, 0, 6.283); cx.stroke(); }
+      }
+      rotulo('VENDIDO NO DIGITAL', 874, seg(t, 8.0, 8.8));
+      cx.globalAlpha = 1;
+    }
+
+    // ---- faixa do celular (40px): mesma história em miniatura, desenhada em px de tela ----
+    var SW = 40, SH = 700, dpr = 1, faixa = false, ps2 = [];
+    function montarFaixa() {
+      var hy = SH * 0.065, B0 = SH * 0.47, LY = SH - 46;
+      ps2 = [];
+      for (var i = 0; i < 24; i++) {
+        var b = Math.floor(i / 6), k = i % 6, col = k % 3, row = Math.floor(k / 3);
+        ps2.push({ b: b, d: Math.random(), hx: rnd(17, 23), hy: hy + rnd(-3, 3), mx: rnd(6, 34), my: rnd(SH * 0.17, SH * 0.40), ph: rnd(0, 6.3),
+          sx: 11 + col * 9, sy: B0 + (3 - b) * 22 + row * 9 + 4, tx: 8 + col * 4, ty: LY + 5 + (3 - b) * 4 + row * 2,
+          branca: Math.random() < 0.25, k: 0.5, amp: 5, wb: 2.5 });
+      }
+    }
+    function mini(t) {
+      var hy = SH * 0.065, B0 = SH * 0.47, LY = SH - 46, q;
+      cx.setTransform(1, 0, 0, 1, 0, 0); cx.clearRect(0, 0, cv.width, cv.height);
+      cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      // fio de progresso da página inteira
+      cx.globalAlpha = 1; cx.lineWidth = 1; cx.strokeStyle = 'rgba(252,252,252,.14)'; cx.setLineDash([2, 4]);
+      cx.beginPath(); cx.moveTo(20, hy + 16); cx.lineTo(20, LY - 6); cx.stroke(); cx.setLineDash([]);
+      var prog = seg(t, 1.6, 9.9);
+      if (prog > 0) { cx.strokeStyle = 'rgba(' + LAR + ',.55)'; cx.lineWidth = 1.5; cx.beginPath(); cx.moveTo(20, hy + 16); cx.lineTo(20, lerp(hy + 16, LY - 6, prog)); cx.stroke(); }
+      // cabeça e a mente acesa
+      cx.globalAlpha = seg(t, 0, 0.8);
+      cx.beginPath(); cx.ellipse(12, hy + 1, 2, 3, 0, 0, 6.283); cx.moveTo(30, hy + 1); cx.ellipse(28, hy + 1, 2, 3, 0, 0, 6.283);
+      cx.moveTo(29, hy); cx.ellipse(20, hy, 8.5, 10.5, 0, 0, 6.283);
+      cx.fillStyle = '#1d1e21'; cx.fill(); cx.strokeStyle = 'rgba(' + LAR + ',.7)'; cx.lineWidth = 1; cx.stroke();
+      var luz = seg(t, 0.4, 1.4) * (1 - seg(t, 4.2, 5.4)) * (0.75 + 0.25 * Math.sin(relogio * 5));
+      if (luz > 0) {
+        var gr = cx.createRadialGradient(20, hy, 0, 20, hy, 18);
+        gr.addColorStop(0, 'rgba(' + LAR + ',' + (.75 * luz) + ')'); gr.addColorStop(1, 'rgba(' + LAR + ',0)');
+        cx.globalAlpha = 1; cx.fillStyle = gr; cx.beginPath(); cx.arc(20, hy, 18, 0, 6.283); cx.fill();
+      }
+      // planta e os 4 blocos
+      var bp = seg(t, 3.3, 4.9), bpa = 1 - seg(t, 6.4, 7.2);
+      if (bp > 0 && bpa > 0) {
+        cx.globalAlpha = bpa; cx.lineWidth = 1; cx.strokeStyle = 'rgba(252,252,252,.35)'; cx.setLineDash([2, 2]);
+        var y0 = B0 - 6, y1 = B0 + 4 * 22 + 4;
+        linhas([[3, y0, 37, y0], [37, y0, 37, y1], [37, y1, 3, y1], [3, y1, 3, y0]], bp);
+        cx.setLineDash([]);
+        for (var b = 0; b < 4; b++) {
+          q = seg(t, 4.5 + b * 0.3, 5.0 + b * 0.3) * bpa;
+          if (q > 0) { cx.globalAlpha = q; cx.strokeStyle = 'rgba(' + LAR + ',.9)'; cx.strokeRect(5.5, B0 + (3 - b) * 22 - 0.5, 29, 19); }
+        }
+      }
+      // computador
+      cx.globalAlpha = seg(t, 0.3, 1.1);
+      rr(4, LY, 32, 22, 3); cx.fillStyle = '#16171a'; cx.fill(); cx.strokeStyle = 'rgba(252,252,252,.4)'; cx.lineWidth = 1; cx.stroke();
+      cx.fillStyle = '#2a2b2f'; cx.fillRect(1, LY + 24, 38, 3);
+      var lig = seg(t, 6.0, 6.6), vg = seg(t, 7.4, 8.2);
+      if (vg > 0) {
+        var gv = cx.createRadialGradient(20, LY + 11, 0, 20, LY + 11, 34);
+        gv.addColorStop(0, 'rgba(34,197,94,' + (.35 * vg * (0.85 + 0.15 * Math.sin(relogio * 3))) + ')'); gv.addColorStop(1, 'rgba(34,197,94,0)');
+        cx.globalAlpha = 1; cx.fillStyle = gv; cx.beginPath(); cx.arc(20, LY + 11, 34, 0, 6.283); cx.fill();
+      }
+      if (lig > 0) { cx.globalAlpha = lig; cx.fillStyle = 'rgba(252,252,252,.07)'; cx.fillRect(6, LY + 2, 28, 18); }
+      // partículas
+      for (var i = 0; i < ps2.length; i++) {
+        var p = ps2[i], o = pos(p, t);
+        if (!o) continue;
+        cx.globalAlpha = o.a; cx.shadowColor = 'rgba(' + LAR + ',.9)'; cx.shadowBlur = 5 * o.solta * dpr;
+        cx.fillStyle = p.branca ? 'rgba(252,252,252,.92)' : 'rgb(' + LAR + ')';
+        cx.fillRect(o.x - o.s / 2, o.y - o.s / 2, o.s, o.s);
+      }
+      cx.shadowBlur = 0;
+      // vendas: 3 pontinhos verdes com pulso
+      for (var n = 0; n < 3; n++) {
+        var n0 = 7.4 + n * 0.7; q = oo(seg(t, n0, n0 + 0.45));
+        if (q <= 0) continue;
+        cx.globalAlpha = q; cx.fillStyle = VERDE; cx.beginPath(); cx.arc(28, LY + 5.5 + n * 5.5, 2.2, 0, 6.283); cx.fill();
+        var pu = seg(t, n0, n0 + 0.9);
+        if (pu < 1) { cx.globalAlpha = 1 - pu; cx.strokeStyle = VERDE; cx.lineWidth = 1; cx.beginPath(); cx.arc(28, LY + 5.5 + n * 5.5, 2.2 + pu * 9, 0, 6.283); cx.stroke(); }
+      }
+      cx.globalAlpha = 1;
+    }
+    function desenhar(t) { faixa ? mini(t) : quadro(t); }
+    function medir() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2); var w = cv.clientWidth, h = cv.clientHeight;
+      if (!w || !h) return false;
+      cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+      faixa = !ativa.matches;
+      if (faixa && (h !== SH || !ps2.length)) { SH = h; SW = w; montarFaixa(); }
+      esc = Math.min(cv.width / W, cv.height / H) * 0.94;
+      ox = (cv.width - W * esc) / 2; oy = (cv.height - H * esc) / 2;
+      return true;
+    }
+    // Progresso da página: 0 no topo, 1 um pouco antes do rodapé (as vendas aparecem junto do fechamento).
+    function alvo() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var p = max > 0 ? cl(window.scrollY / (max * 0.94)) : 1;
+      return lerp(1.6, 9.9, p);
+    }
+
+    if (reduz) {
+      var parado = function () { if (medir()) desenhar(9.9); };
+      parado();
+      window.addEventListener('resize', parado);
+      return;
+    }
+    var t = 0, abertura = 0, rodando = false, raf = 0, ultimo = null;
+    function frame(agora) {
+      var dt = ultimo === null ? 0 : Math.min((agora - ultimo) / 1000, 0.05);
+      ultimo = agora; relogio += dt;
+      var al;
+      if (abertura < 1) { abertura = Math.min(1, abertura + dt / 1.6); al = Math.max(1.6 * io(abertura), window.scrollY > 2 ? alvo() : 0); }
+      else al = alvo();
+      t += (al - t) * Math.min(1, dt * 6); // segue a rolagem com suavidade
+      desenhar(t);
+      raf = requestAnimationFrame(frame);
+    }
+    function tocar() { if (rodando || document.hidden) return; if (!medir()) return; rodando = true; ultimo = null; raf = requestAnimationFrame(frame); }
+    function parar() { rodando = false; cancelAnimationFrame(raf); }
+    window.addEventListener('resize', function () { medir(); tocar(); });
+    document.addEventListener('visibilitychange', function () { document.hidden ? parar() : tocar(); });
+    tocar();
+  })();
 </script>
 </body>
 </html>
