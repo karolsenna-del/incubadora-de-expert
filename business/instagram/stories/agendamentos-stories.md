@@ -55,3 +55,4 @@
 | 08/10/2026 | expert360-quinta-2026-10-08 | 1 | 18050068085607415 | sim (ver log de execucao) |
 | 09/10/2026 | dominando-mente-expert360-2026-10-09 | 1 | 17888149191685304 | sim (ver log de execucao) |
 | 11/10/2026 | individual-domingo-2026-10-11 | 1 | 18144637720600629 | sim (ver log de execucao) |
+| 12/10/2026 | chamada-grupo-lives-segunda-2026-10-12 | 6 | 18094388528172005, 17947554483085092, 18371916184209089, 18001355445041562, 18109343627185843, 18246231052311617 | sim (ver log de execucao) |
