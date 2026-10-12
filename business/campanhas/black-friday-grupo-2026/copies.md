@@ -5,6 +5,314 @@ Status (27/09): #1 + fixada APROVADOS · #2 a #7 **APROVADOS** · convite Live 3
 
 ---
 
+## 🆕 DIA 14 — Protocolo do Euriler (Black Meteórico) adaptado ao formato da Karol — EM APROVAÇÃO (10/10)
+
+> **Fonte:** aula "Lançamento Black Friday Meteórico" (Euriler), transcrição em `agents/etlmaker/kbs/black-meteorico-euriler/00-pipeline/sources/` — protocolo do dia da live (50:05–54:30) e quarta-feira hora a hora (01:01:00–01:07:45).
+> **Adaptação decidida pela Karol (10/10):** o Euriler revela num dia e abre o carrinho no outro (9h–19h). A Karol mantém **live + carrinho no mesmo dia, 15h às 23h59**. A contagem regressiva dele foi recalculada pro fechamento às 23h59.
+> **Regras do Euriler mantidas:** toda mensagem depois que o carrinho abre leva o link de compra · mensagem de inscrições abertas FIXADA · nome do grupo muda a cada etapa · grupo fechado pra mensagens até a live acabar; abre pra dúvidas depois.
+> **Fora (Karol, 10/10):** "quem comprou avisa aqui" — com meta de 4-5 vendas, expor o número no grupo joga contra.
+> **Regras da Karol mantidas:** copy sem gênero · vagas do Agente do Método NUNCA no grupo (aviso individual) · 12x de R$500 em destaque · bônus pelo benefício.
+> **Horários em Brasília** (Cuiabá = 1h a menos). Link de compra: https://black.incubadoradeexpert.com.br
+
+### Sequência do grupo (WhatsApp)
+
+| Brasília | Cuiabá | Mensagem | Nome do grupo |
+|---|---|---|---|
+| 08h | 07h | #8 "Hoje é o dia" (versão editada pela Karol) | 🖤 É HOJE, 15H |
+| 14h | 13h | #9 "Daqui 1 hora" | — |
+| 14h45 | 13h45 | G1 Faltam 15 minutos | 🔴 AO VIVO ÀS 15H |
+| 15h | 14h | G2 Estamos ao vivo | 🔴 AO VIVO AGORA |
+| 15h15–15h20 | 14h15–14h20 | G3 Ainda dá tempo (só no grupo) | — |
+| ponto alto | — | G4 Momento da oferta (grupo + individual) | — |
+| fim da live | — | G5 INSCRIÇÕES ABERTAS (fixar + abrir o grupo) | 🖤 INSCRIÇÕES ABERTAS |
+| 17h | 16h | G6 Por onde começa | — |
+| 18h | 17h | G7 Fura-Fila | — |
+| 19h30 | 18h30 | G8 Metade do tempo | ⏳ 50% DO TEMPO ESGOTADO |
+| 20h | 19h | G9 Últimas 4 horas | ⏳ ÚLTIMAS 4 HORAS |
+| 21h | 20h | G10 Últimas 3 horas | ⏳ ÚLTIMAS 3 HORAS |
+| 22h | 21h | G11 Últimas 2 horas | ⏳ ÚLTIMAS 2 HORAS |
+| 23h | 22h | G12 Última hora | ❗ÚLTIMA HORA |
+| 23h30 | 22h30 | G13 Últimos 30 minutos | ❗ÚLTIMOS 30 MIN |
+| 23h45 | 22h45 | G14 Últimos 15 minutos | ❗ÚLTIMOS 15 MIN |
+| 23h50 | 22h50 | G15 Reta final | ❗RETA FINAL |
+| 00h10 | 23h10 | G16 Tempo esgotado (fechar o grupo pra mensagens) | TEMPO ESGOTADO |
+
+**G1 — 14h45 — Faltam 15 minutos**
+```
+Faltam 15 minutos 🔴
+
+A sala já está aberta, pode entrar:
+🔗 https://meet.google.com/zun-dyuu-fqe
+
+— Karol
+```
+
+**G2 — 15h — Estamos ao vivo**
+```
+ESTAMOS AO VIVO 🔴
+
+Entra agora:
+🔗 https://meet.google.com/zun-dyuu-fqe
+```
+
+**G3 — 15h15 a 15h20 — Ainda dá tempo (só no grupo)**
+```
+Ainda não entrou? A live já começou, mas ainda dá tempo 🏃
+
+🔗 https://meet.google.com/zun-dyuu-fqe
+```
+
+**G4 — Ponto alto (na hora em que a Karol vai abrir a oferta) — grupo**
+```
+Chegou a hora 🖤
+
+Estou abrindo agora, ao vivo, a oferta da Black Expert. Ela só vale hoje.
+
+Vem que ainda dá tempo 👇
+🔗 https://meet.google.com/zun-dyuu-fqe
+```
+
+**G5 — Fim da live — INSCRIÇÕES ABERTAS (fixar)**
+```
+INSCRIÇÕES ABERTAS 🖤
+
+A Black Expert vale até hoje, 23h59.
+
+Incubadora de Expert: em 4 meses, do conhecimento que você já tem à sua primeira venda no digital.
+
+Só hoje:
+💰 12x de R$500 (ou R$5.000 no pix). A partir de amanhã, R$7.500
+🎁 Fura-Fila, com a Karol do lado: pro 1º a entrar
+🤖 Agente do Método Autoral: pros 5 primeiros
+🏆 Desafio Seu Método em 5 Dias, ao vivo, com premiação: pra todo mundo
+🖥️ Central do Mentor personalizada: pra quem paga no pix
+
+Tudo aqui 👇
+🔗 https://black.incubadoradeexpert.com.br
+
+Ficou com dúvida? Pode perguntar aqui, o grupo está aberto.
+
+— Karol
+```
+
+**G6 — 17h — Por onde começa**
+```
+A pergunta que mais chegou até agora: "se eu entrar hoje, por onde começo?"
+
+Pelo Desafio Seu Método em 5 Dias, ao vivo, de 19 a 23/10. Em 5 dias você sai com a base do seu método, e o melhor trabalho ainda ganha premiação.
+
+Até 23h59: 12x de R$500.
+🔗 https://black.incubadoradeexpert.com.br
+```
+> ⚠️ Só usar "a pergunta que mais chegou" se essa pergunta chegou de verdade. Se não, trocar a 1ª linha por: "Se você entrar hoje, por onde começa?"
+
+**G7 — 18h — Fura-Fila**
+```
+Um bônus que eu nunca ofereci antes 👇
+
+Fura-Fila, com a Karol do lado: depois do Desafio, eu monto a sua Venda Secreta e entro com você na sua primeira sessão de venda.
+
+É de quem entrar primeiro.
+
+🔗 https://black.incubadoradeexpert.com.br
+```
+> ⚠️ Se o Fura-Fila já tiver dono às 18h, trocar por: "O Fura-Fila já tem dono 🖤 Os outros bônus de hoje seguem valendo até 23h59." + link. Agente do Método: nunca falar de vagas aqui.
+
+**G8 — 19h30 — Metade do tempo**
+```
+⏳ Metade do tempo já foi.
+
+Às 23h59 a Black Expert fecha. Amanhã a Incubadora continua aberta, mas por R$7.500 e sem os bônus de hoje.
+
+🔗 https://black.incubadoradeexpert.com.br
+```
+
+**G9 — 20h — Últimas 4 horas**
+```
+⏳ ÚLTIMAS 4 HORAS
+
+Se você se deu nota baixa em alguma das perguntas dessas duas semanas, é aqui que isso começa a mudar.
+
+12x de R$500 só até 23h59.
+🔗 https://black.incubadoradeexpert.com.br
+```
+
+**G10 — 21h — Últimas 3 horas**
+```
+⏳ ÚLTIMAS 3 HORAS
+
+Método Autoral, Vendas Secretas e o seu funil montado. Tudo isso por 12x de R$500, só hoje.
+
+🔗 https://black.incubadoradeexpert.com.br
+```
+
+**G11 — 22h — Últimas 2 horas**
+```
+⏳ ÚLTIMAS 2 HORAS
+
+Conhecimento você já tem. O que falta é estrutura.
+
+🔗 https://black.incubadoradeexpert.com.br
+```
+
+**G12 — 23h — Última hora**
+```
+❗ ÚLTIMA HORA ❗
+
+Às 23h59 o preço sobe pra R$7.500 e os bônus de hoje saem da mesa.
+
+🔗 https://black.incubadoradeexpert.com.br
+```
+
+**G13 — 23h30 — Últimos 30 minutos**
+```
+❗ ÚLTIMOS 30 MINUTOS
+
+🔗 https://black.incubadoradeexpert.com.br
+```
+
+**G14 — 23h45 — Últimos 15 minutos**
+```
+❗ ÚLTIMOS 15 MINUTOS
+
+Se é pra entrar, é agora.
+🔗 https://black.incubadoradeexpert.com.br
+```
+
+**G15 — 23h50 — Reta final**
+```
+❗ RETA FINAL ❗
+
+10 minutos. Bora 🖤
+🔗 https://black.incubadoradeexpert.com.br
+```
+
+**G16 — 00h10 — Tempo esgotado (depois, fechar o grupo pra mensagens)**
+```
+TEMPO ESGOTADO 🖤
+
+A Black Expert acabou. Obrigada a cada pessoa que esteve aqui nessas duas semanas.
+
+Quem entrou, nos vemos no Desafio, dia 19.
+
+— Karol
+```
+
+### Mensagens individuais (API do WhatsApp) — precisam de modelo aprovado na Meta
+
+> O Euriler manda 2 mensagens individuais durante a live, além do convite da manhã (já submetido: `black_expert_dia_live`, 10h Brasília). Padrão dos modelos da Karol: "Olá {nome}", assinatura "Karol Senna" sem travessão.
+
+**API1 — 5 a 10 min depois do "Estamos ao vivo" (15h05–15h10) — "Cadê você?"**
+```
+Olá {{1}}, cadê você?
+
+A live da Black Expert já começou e o negócio está quente.
+
+Entra aqui: {{2}}
+
+Karol Senna
+```
+
+**API2 — Ponto alto (junto com o G4)**
+```
+Olá {{1}}, chegou a hora: estou abrindo agora, ao vivo, a oferta da Black Expert. Ela só vale hoje.
+
+Ainda dá tempo de entrar: {{2}}
+
+Karol Senna
+```
+
+### E-mails do dia 14 (Resend, segmento "Black Expert 2026")
+
+**E-mail 15h (Brasília) — Começou** (pedido da Karol 10/10 · `emails/email-08b.html`)
+```
+[Subject] Começou 🔴
+[Preheader] Estou ao vivo agora. Ainda dá tempo.
+
+Oi {nome},
+
+Começou. Estou ao vivo agora na Black Expert.
+
+Entra pelo botão, ainda dá tempo:
+[Botão] Entrar na live agora → https://meet.google.com/zun-dyuu-fqe
+
+— Karol
+```
+
+**E-mail 18h (Brasília) — Carrinho aberto com a oferta**
+```
+[Subject] A Black Expert está aberta até 23h59
+[Preheader] 12x de R$500 só hoje. Amanhã, R$7.500.
+
+Oi {nome},
+
+A live acabou e a Black Expert está aberta. Vale até hoje, 23h59.
+
+Nos e-mails dessas duas semanas eu te pedi algumas notas: sobre método, venda, renda e sobre o que fica do que você sabe. A Incubadora de Expert existe pra levar essas notas pra cima.
+
+Em 4 meses, do conhecimento que você já tem à sua primeira venda no digital. Com Método Autoral, Vendas Secretas e o seu funil montado.
+
+Só hoje:
+- 12x de R$500 (ou R$5.000 no pix). A partir de amanhã, R$7.500.
+- Fura-Fila, com a Karol do lado (1º a entrar): depois do Desafio, eu monto a sua Venda Secreta e entro com você na sua primeira sessão de venda.
+- Agente do Método Autoral (5 primeiros): um agente de IA treinado no seu método.
+- Desafio Seu Método em 5 Dias, ao vivo, com premiação (pra todo mundo): de 19 a 23/10.
+- Central do Mentor personalizada (pagamento no pix): a condução dos seus leads e da sua turma num link só.
+
+[Botão] Quero entrar na Incubadora → https://black.incubadoradeexpert.com.br
+
+Amanhã a Incubadora continua aberta, com outro preço e sem esses bônus.
+
+— Karol
+
+P.S.: Ficou com dúvida? Responde este e-mail.
+```
+
+**#10 — 20h (Brasília) — Últimas 4 horas**
+```
+[Subject] Últimas 4 horas
+[Preheader] Às 23h59 a Black Expert fecha.
+
+Oi {nome},
+
+Faltam 4 horas pra Black Expert fechar.
+
+Até 23h59, a Incubadora de Expert sai por 12x de R$500 (ou R$5.000 no pix), com o Desafio Seu Método em 5 Dias, a Central do Mentor pra quem paga no pix e os bônus de quem entra primeiro.
+
+Amanhã ela continua aberta, mas por R$7.500 e sem esses bônus.
+
+[Botão] Quero entrar na Incubadora → https://black.incubadoradeexpert.com.br
+
+— Karol
+```
+
+**#11 — 23h (Brasília) — Última hora** (era 23h59 no cronograma antigo; às 23h59 o carrinho já fecha)
+```
+[Subject] Última hora
+[Preheader] Fecha às 23h59.
+
+Oi {nome},
+
+Última hora da Black Expert.
+
+Às 23h59 o preço sobe pra R$7.500 e os bônus de hoje saem da mesa.
+
+Se essa decisão ficou pra depois, o depois termina daqui a uma hora.
+
+[Botão] Quero entrar na Incubadora → https://black.incubadoradeexpert.com.br
+
+— Karol
+```
+
+### Pontos operacionais em aberto
+1. ✅ **G2, G3 e G4 durante a live: o marido da Karol envia** (decisão 10/10).
+2. **API1 e API2: Karol decidiu enviar (10/10)** — precisam de modelo aprovado na Meta, submeter até 11/10.
+3. **Checkout depois das 23h59:** Karol NÃO quer deixar o de R$5.000 aberto (pode estar dormindo). Página programada (10/10): às 23h59 de Brasília os botões viram "BLACK EXPERT ENCERRADA" sozinhos; se o link do checkout de R$7.500 for colocado em `CHECKOUT_DEPOIS` (index.html), trocam pra ele. O link direto 16366 continua aberto na Voomp até a Karol desativar.
+5. **Arquivos prontos (10/10):** e-mails `emails/email-08.html` (8h), `email-09.html` (18h, oferta), `email-10.html` (20h), `email-11.html` (23h) · modelos Meta: `scripts/submeter-modelos-live.py`.
+4. **Vídeo resumo:** o Euriler manda um vídeo resumindo a oferta pra quem não viu a live. Opcional — a página já cumpre esse papel em parte.
+
+---
+
 ## 🔁 REVISÃO v2 02/10 — Disparos #3 a #9 reescritos: dores e desejos, NADA da oferta antes da live (EM APROVAÇÃO)
 
 > Decisão da Karol (02/10): **nada da oferta antes da live de 14/10, às 15h**. Isso vale pra produto, entregáveis, bônus, preço e a palavra "condição". A copy cutuca dores e mostra desejos usando as perguntas do **Diagnóstico do Expert por Fases v3** (`../incubadora-de-expert-individual/sessoes-estrategicas/radar-fases-perguntas.md`).
@@ -81,6 +389,8 @@ Story 4 (link do grupo): "14/10, 15h, ao vivo. o link sai primeiro no grupo"
 
 ### Disparo #4 — qua 07/10 (T-7) — VALIDAÇÃO
 
+> ⛔ **NÃO SAIU** — nem e-mail nem grupo (confirmado 10/10). Karol não vai reaproveitar.
+
 **Grupo WA**
 
 ```
@@ -138,6 +448,8 @@ Story 3 (link do grupo): "14/10, 15h, ao vivo. conto o que mudou"
 ---
 
 ### Disparo #5 — sex 09/10 (T-5) — POSICIONAMENTO
+
+> ⛔ E-mail **NÃO SAIU** (e não será agendado). **Grupo: Karol envia na seg 12/10** (decisão 10/10).
 
 **Grupo WA**
 
@@ -197,6 +509,8 @@ Story 4 (link do grupo): "14/10, 15h, ao vivo"
 
 ### Disparo #6 — dom 11/10 (T-3) — ESCALA
 
+> ✅ **E-mail AGENDADO (10/10)** no Resend pra dom 11/10 9h Cuiabá (broadcast `cad5f502`, HTML `emails/email-06.html`). Grupo: Karol envia no domingo.
+
 **Grupo WA**
 
 ```
@@ -253,6 +567,8 @@ Story 3 (link do grupo): "quarta, 15h, ao vivo"
 
 ### Disparo #7 — ter 13/10 (T-1) — EXPERT + véspera
 
+> ✅ **E-mail AGENDADO (10/10)** no Resend pra ter 13/10 9h Cuiabá (broadcast `921c56c4`, HTML `emails/email-07.html`). Grupo: Karol envia na terça.
+
 **Grupo WA**
 
 ```
@@ -269,8 +585,6 @@ Amanhã, quarta, 14/10:
 🔗 o link sai aqui no grupo
 
 Leva a sua maior dúvida. Eu respondo ao vivo.
-
-Ativa as notificações pra não perder.
 
 — Karol
 ```
@@ -316,12 +630,10 @@ Story 3 (link do grupo): "amanhã, 15h, ao vivo. Black Expert"
 ```
 Hoje é o dia 🖤
 
-Nas últimas duas semanas eu te fiz perguntas sobre método, venda, posicionamento, renda e sobre você mesmo.
-
-Hoje, às 15h, eu junto tudo ao vivo: o que fica entre a nota que você se deu e o 10.
+Às 15h, eu vou te mostrar como estruturar seu conhecimento em um método autoral, baseado na sua história e fazer as primeiras vendas, sem lançamento ou exposição amadora.
 
 🕒 15h (horário de Brasília)
-🔗 {link_live}
+🔗 https://meet.google.com/zun-dyuu-fqe
 
 Até lá.
 
@@ -340,7 +652,7 @@ Hoje é a Black Expert. Às 15h eu entro ao vivo.
 
 Se em algum dos e-mails dessas duas semanas você se deu uma nota baixa, essa live é pra você.
 
-🔗 {link_live}
+🔗 https://meet.google.com/zun-dyuu-fqe
 
 — Karol
 ```
@@ -359,7 +671,7 @@ Story 2 (link da live): "o link tá aqui"
 ```
 Daqui 1 hora eu entro ao vivo 🔴
 
-🔗 {link_live}
+🔗 https://meet.google.com/zun-dyuu-fqe
 
 — Karol
 ```
@@ -792,7 +1104,7 @@ Se você ainda não está no grupo, é lá que eu mando o link primeiro:
 P.S.: Amanhã às 15h eu respondo qualquer dúvida ao vivo. Se tem uma pergunta travando sua decisão, leva ela.
 ```
 
-**Variáveis:** `{nome}` · `{link_grupo}` = https://chat.whatsapp.com/D150ioiZPgfGuYgsSNIwBH · `{link_live}` (entra no #8, dia 14)
+**Variáveis:** `{nome}` · `{link_grupo}` = https://chat.whatsapp.com/D150ioiZPgfGuYgsSNIwBH · `https://meet.google.com/zun-dyuu-fqe` (entra no #8, dia 14)
 
 ---
 
@@ -801,7 +1113,7 @@ P.S.: Amanhã às 15h eu respondo qualquer dúvida ao vivo. Se tem uma pergunta 
 > Contexto (doc mestre v1.3): Live 32 muda de quarta pra **quinta 01/10, 15h (Brasília)** porque a Karol está em evento presencial ter 29 e qua 30. O CTA da live é **entrar no grupo da Black Expert**.
 > Canal: **grupo das lives** (não o grupo da Black). O CTA falado dentro da live é do roteiro (Expert em Lives), não daqui.
 > Regra aplicada: não revelar que a condição é na Mentoria em Grupo antes do Disparo #3 (05/10), nem preço, nem Sprint/Expert360º.
-> Variáveis: `{link_live}` = link do Meet (TBD) · `{link_grupo}` = https://chat.whatsapp.com/D150ioiZPgfGuYgsSNIwBH
+> Variáveis: `https://meet.google.com/zun-dyuu-fqe` = link do Meet (TBD) · `{link_grupo}` = https://chat.whatsapp.com/D150ioiZPgfGuYgsSNIwBH
 
 ---
 
@@ -836,7 +1148,7 @@ Story 2: "terça e quarta tô num evento presencial. na quinta eu conto tudo �
 Hoje tem live! 🖤
 
 🕒 15h (horário de Brasília)
-🔗 {link_live}
+🔗 https://meet.google.com/zun-dyuu-fqe
 
 Hoje eu vou contar sobre a Black Expert, e quem quiser saber os detalhes primeiro vai ter um lugar só pra isso.
 
@@ -850,7 +1162,7 @@ Te vejo às 15h.
 ```
 Começamos em 15 minutos 🔴
 
-{link_live}
+https://meet.google.com/zun-dyuu-fqe
 ```
 
 ### E) Qui 01/10, depois da live — grupo das lives — pra quem não conseguiu assistir

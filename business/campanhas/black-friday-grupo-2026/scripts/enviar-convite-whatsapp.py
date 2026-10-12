@@ -8,6 +8,9 @@ Uso:
   python enviar-convite-whatsapp.py --teste 5567...    # envia 1 mensagem so pro numero informado
   python enviar-convite-whatsapp.py --enviar --limite 20 --confirmo BLACK-EXPERT
                                                        # envio real (lote), exige confirmacao explicita
+  --mensagem convite|dia_live|live_cade_voce|live_oferta  (padrao: convite)
+      dia_live/live_*: vai pra fila + ja-recebeu-manual (+ convidados-1a1.csv do vault, se existir),
+      com chave de idempotencia propria por mensagem (quem recebeu o convite recebe estas tambem).
 
 Regras:
 - so envia se o modelo estiver APPROVED na Meta;
@@ -24,6 +27,7 @@ FILA = os.path.join(VAULT, "fila-api-dry-run", "fila-revisao.csv")
 QUARENTENA = os.path.join(VAULT, "fila-api-dry-run", "quarentena.csv")
 BLOQUEADOS = os.path.join(VAULT, "fila-api-dry-run", "bloqueados.csv")
 JA_RECEBEU = os.path.join(VAULT, "fila-api-dry-run", "ja-recebeu-manual.csv")
+CONVIDADOS_1A1 = os.path.join(VAULT, "convidados-1a1.csv")  # export das marcacoes da pagina 1:1 (telefone_e164,nome)
 LOG = os.path.join(VAULT, "envios-whatsapp-log.csv")
 
 # Rotas de saida (mesma WABA/numero). "meta" = Cloud API direto, sem intermediario (escolhido 10/10 pra cancelar o Dualhook).
@@ -37,6 +41,15 @@ PHONE_NUMBER_ID = "663604156841540"
 # Ordem de preferencia: v2 (com negrito, pedido da Karol 30/09) -> v1. Usa o primeiro APPROVED.
 PREF_COM_NOME = ["black_expert_convite_grupo_v2", "black_expert_convite_grupo"]
 PREF_SEM_NOME = ["black_expert_convite_grupo_sem_nome_v2", "black_expert_convite_grupo_sem_nome"]
+LINK_LIVE = "https://meet.google.com/zun-dyuu-fqe"
+# mensagem -> (preferencia com nome, preferencia sem nome, parametros extras depois do nome, pausa em s)
+MENSAGENS = {
+    "convite": (PREF_COM_NOME, PREF_SEM_NOME, [], 2.0),
+    "dia_live": (["black_expert_dia_live"], ["black_expert_dia_live_sem_nome"], [LINK_LIVE], 1.0),
+    "live_cade_voce": (["black_expert_live_cade_voce"], ["black_expert_live_cade_voce_sem_nome"], [], 0.5),
+    "live_oferta": (["black_expert_live_oferta"], ["black_expert_live_oferta_sem_nome"], [], 0.5),
+}
+MENSAGEM = "convite"
 MODELO_COM_NOME = None  # definido em escolher_modelos()
 MODELO_SEM_NOME = None
 IDIOMA = "pt_BR"
@@ -97,23 +110,25 @@ def registrar(linha):
 
 
 def status_modelos(k):
-    d = api(k, "GET", "/%s/message_templates?limit=50" % WABA_ID)
+    d = api(k, "GET", "/%s/message_templates?limit=200&fields=name,status" % WABA_ID)
     return {t["name"]: t["status"] for t in d.get("data", [])}
 
 
 def escolher_modelos(st):
     """Primeiro modelo APPROVED de cada lista. Sem modelo com nome aprovado, todos vao com o sem nome (decisao Karol 30/09)."""
     global MODELO_COM_NOME, MODELO_SEM_NOME
-    MODELO_COM_NOME = next((m for m in PREF_COM_NOME if st.get(m) == "APPROVED"), None)
-    MODELO_SEM_NOME = next((m for m in PREF_SEM_NOME if st.get(m) == "APPROVED"), None)
+    com, sem = MENSAGENS[MENSAGEM][0], MENSAGENS[MENSAGEM][1]
+    MODELO_COM_NOME = next((m for m in com if st.get(m) == "APPROVED"), None)
+    MODELO_SEM_NOME = next((m for m in sem if st.get(m) == "APPROVED"), None)
     print("Usando -> com nome: %s | sem nome: %s" % (MODELO_COM_NOME, MODELO_SEM_NOME))
 
 
 def montar(tel, nome):
     pn = primeiro_nome(nome) if MODELO_COM_NOME else None
     tpl = {"name": MODELO_COM_NOME if pn else MODELO_SEM_NOME, "language": {"code": IDIOMA}}
-    if pn:
-        tpl["components"] = [{"type": "body", "parameters": [{"type": "text", "text": pn}]}]
+    valores = ([pn] if pn else []) + MENSAGENS[MENSAGEM][2]
+    if valores:
+        tpl["components"] = [{"type": "body", "parameters": [{"type": "text", "text": v} for v in valores]}]
     return {"messaging_product": "whatsapp", "to": tel, "type": "template", "template": tpl}
 
 
@@ -134,8 +149,11 @@ def main():
     ap.add_argument("--limite", type=int, default=0)
     ap.add_argument("--confirmo", default="")
     ap.add_argument("--rota", choices=sorted(ROTAS), default="meta")
+    ap.add_argument("--mensagem", choices=sorted(MENSAGENS), default="convite")
     a = ap.parse_args()
-    global API, SEGREDO, PREFIXO
+    global API, SEGREDO, PREFIXO, MENSAGEM, PAUSA_S
+    MENSAGEM = a.mensagem
+    PAUSA_S = MENSAGENS[MENSAGEM][3]
     API, SEGREDO, PREFIXO = ROTAS[a.rota]
 
     k = chave_api()
@@ -150,9 +168,26 @@ def main():
         print("Teste (%s):" % modelo, s, erro or wamid)
         return
 
-    fora = telefones(QUARENTENA) | telefones(BLOQUEADOS) | telefones(JA_RECEBEU)
-    feitos = ja_enviados()
     fila = [r for r in csv.DictReader(open(FILA, encoding="utf-8-sig"))]
+    if MENSAGEM == "convite":
+        fora = telefones(QUARENTENA) | telefones(BLOQUEADOS) | telefones(JA_RECEBEU)
+    else:
+        # dia 14: todos os convidados (API + 1:1). Quarentena/bloqueados seguem fora.
+        # Quem a Karol convidou 1:1 (conferido no WhatsApp em 11/10) sai da quarentena/bloqueio.
+        fora = (telefones(QUARENTENA) | telefones(BLOQUEADOS)) - telefones(CONVIDADOS_1A1)
+        vistos = {r["telefone_e164"].lstrip("+") for r in fila}
+        for extra in (JA_RECEBEU, CONVIDADOS_1A1):
+            if os.path.exists(extra):
+                for r in csv.DictReader(open(extra, encoding="utf-8-sig")):
+                    tel = re.sub(r"\D", "", r.get("telefone_e164", ""))
+                    if tel and tel not in vistos:
+                        vistos.add(tel)
+                        fila.append({"lead_id": r.get("lead_id", ""), "nome": r.get("nome", ""), "telefone_e164": tel,
+                                     "chave_idempotencia": "black-expert-2026:" + tel})
+        for r in fila:
+            r["chave_idempotencia"] = r["chave_idempotencia"] + "|" + MENSAGEM
+        print("Convidados 1:1 exportados:", "sim" if os.path.exists(CONVIDADOS_1A1) else "NAO (so API + manuais)")
+    feitos = ja_enviados()
     pendentes = [r for r in fila if r["chave_idempotencia"] not in feitos and r["telefone_e164"].lstrip("+") not in fora]
     print("Fila: %d | ja enviados: %d | excluidos por quarentena/bloqueio: %d | pendentes: %d"
           % (len(fila), len(feitos), sum(1 for r in fila if r["telefone_e164"].lstrip("+") in fora), len(pendentes)))
