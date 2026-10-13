@@ -194,7 +194,7 @@ for i, (k, v) in enumerate((("Profissional", "[ ]"), ("Data", "[ ]"), ("Diagnós
     run(p, v, SANS, 10.5, italic=(v == "[ ]"), color=PH if v == "[ ]" else INK)
 
 # ---------- 1. PRE-DIAGNOSTICO ----------
-section(1, "Seu Pré-Diagnóstico")
+section(1, "Seu Diagnóstico")
 body(doc, "A partir da nossa conversa, identificamos os principais pontos que hoje influenciam sua atuação profissional.", 10, INK_SOFT)
 
 for pilar in ("Técnica", "Emocional", "Condução"):
