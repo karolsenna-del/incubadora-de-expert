@@ -66,6 +66,15 @@
   .accent{color:var(--laranja);}
   .flame{width:1em; height:1em; color:var(--laranja); flex:none;}
 
+  /* ---------- dobras com fundo de outra cor (contraste entre seções) ----------
+     As cores da página são variáveis: dentro da dobra, elas são trocadas e os componentes se ajustam sozinhos.
+     .claro = fundo branco, texto preto, laranja escurecido pra ler bem no branco.
+     .laranja = fundo laranja, texto e destaques em preto. */
+  section.claro{--preto:#fcfcfc; --preto-2:#efeff0; --branco:#090a0b; --cinza:#2e2f33; --apoio:#5c5d62; --linha:rgba(9,10,11,.14); --laranja:#c93f14; --laranja-suave:rgba(201,63,20,.08);}
+  section.laranja{--preto:#f85627; --preto-2:rgba(9,10,11,.08); --branco:#090a0b; --cinza:#1c1d1f; --apoio:#2e2f33; --linha:rgba(9,10,11,.22); --laranja:#090a0b; --laranja-suave:rgba(9,10,11,.08);}
+  section.claro, section.laranja{background:var(--preto); color:var(--branco); border-top:0;}
+  section.claro + section, section.laranja + section{border-top:0;}
+
   /* ---------- faixa ---------- */
   .tape{position:relative; z-index:2; margin:0 -40px; height:34px; background:var(--laranja); color:var(--preto); transform:rotate(-1.6deg); display:flex; align-items:center; overflow:hidden; white-space:nowrap; font-family:var(--display); font-weight:800; font-size:.78rem; letter-spacing:.22em;}
   .tape span{display:inline-block; padding-left:24px; animation:corre 40s linear infinite;}
@@ -197,6 +206,19 @@
   .video figcaption{font-size:.85rem; color:var(--apoio); margin-top:8px;}
   .video figcaption b{color:var(--branco);}
   @media (max-width:720px){ .videos{grid-template-columns:minmax(0,1fr);} }
+  /* Depoimentos escritos em formato de print de WhatsApp (texto e hora dos prints reais em
+     docs/knowledge/expert-business/provas/imagens/). Cores do app no modo claro: saltam do fundo preto. */
+  .zaps{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; align-items:start; margin-top:26px;}
+  .zap{margin:0; border-radius:16px; overflow:hidden; background:#efeae2; box-shadow:0 18px 40px rgba(0,0,0,.35);}
+  .zap-topo{display:flex; align-items:center; gap:10px; padding:10px 14px; background:#008069; color:#fff;}
+  .zap-av{flex:none; width:36px; height:36px; border-radius:50%; background:#dfe5e7; color:#54656f; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.95rem;}
+  .zap-nome{display:block; font-weight:600; font-size:.95rem; line-height:1.2;}
+  .zap-sub{display:block; font-size:.74rem; opacity:.85; line-height:1.3;}
+  .zap-chat{padding:16px 14px 18px; background-color:#efeae2; background-image:radial-gradient(rgba(84,101,111,.09) 1.2px, transparent 1.3px); background-size:18px 18px;}
+  .balao{position:relative; max-width:94%; padding:8px 10px 6px; border-radius:0 10px 10px 10px; background:#fff; color:#111b21; font-size:.95rem; line-height:1.45; box-shadow:0 1px .5px rgba(11,20,26,.13);}
+  .balao::before{content:""; position:absolute; left:-8px; top:0; border-top:10px solid #fff; border-left:8px solid transparent;}
+  .balao .hora{float:right; margin:8px 0 -4px 12px; font-size:.68rem; color:#667781;}
+  @media (max-width:720px){ .zaps{grid-template-columns:minmax(0,1fr);} }
   .depos{display:grid; gap:14px; margin-top:22px;}
   .depo{border-left:2px solid var(--linha); padding-left:16px; color:var(--cinza); font-size:.97rem;}
   .depo cite{display:block; font-style:normal; font-weight:700; color:var(--branco); font-size:.86rem; margin-top:6px;}
@@ -290,7 +312,10 @@
   .cena-lateral{position:fixed; top:0; right:0; z-index:1; height:100vh; pointer-events:none;}
   .cena-lateral canvas{display:block; width:100%; height:100%;}
   @media (min-width:1180px){
-    .cena-lateral{width:min(300px, calc((100vw - 760px) / 2 - 24px));}
+    /* cartão escuro flutuante: a cena é desenhada pra fundo escuro e passa por cima das dobras brancas e laranja */
+    .cena-lateral{top:24px; right:24px; height:calc(100vh - 48px); width:min(300px, calc((100vw - 760px) / 2 - 48px));
+      background:#131416; border:1px solid rgba(252,252,252,.12); border-radius:20px; overflow:hidden;
+      box-shadow:0 24px 60px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.2);}
   }
   @media (max-width:1179px){
     .cena-lateral{width:40px; background:rgba(19,20,22,.9); border-left:1px solid var(--linha);}
@@ -415,7 +440,7 @@
 </section>
 
 <!-- 3. IDENTIFICAÇÃO -->
-<section>
+<section class="claro">
   <div class="wrap">
     <span class="eyebrow">Pra quem já tem conhecimento e ainda não tem estrutura</span>
     <h2>Hoje você sente:</h2>
@@ -449,7 +474,7 @@
 </section>
 
 <!-- 5. O QUE VOCÊ GANHA -->
-<section>
+<section class="claro">
   <div class="wrap">
     <span class="eyebrow">Acompanhamento</span>
     <h2>O que você ganha durante a mentoria</h2>
@@ -472,7 +497,7 @@
 </section>
 
 <!-- 6. ENTREGÁVEIS -->
-<section>
+<section class="laranja">
   <div class="wrap">
     <span class="eyebrow">O que vem com a Incubadora</span>
     <h2>Tudo o que você usa do método à escala</h2>
@@ -518,16 +543,24 @@
       <figure class="video"><video controls preload="none" playsinline poster="vagner-capa.jpg"><source src="vagner-depoimento.mp4" type="video/mp4"></video><figcaption><b>Vagner</b> · especialista em acesso a crédito para empresários</figcaption></figure>
       <figure class="video"><video controls preload="none" playsinline poster="tasso-capa.jpg"><source src="tasso-depoimento.mp4" type="video/mp4"></video><figcaption><b>Tasso Ramalho</b> · Hunt Imóveis</figcaption></figure>
     </div>
+    <div class="zaps">
+      <figure class="zap" aria-label="Mensagem de WhatsApp da Anália, médica">
+        <div class="zap-topo"><span class="zap-av" aria-hidden="true">A</span><span><span class="zap-nome">Anália</span><span class="zap-sub">médica</span></span></div>
+        <div class="zap-chat"><p class="balao">Karol, fiquei conversando com teu agente e estou sentindo o esclarecimento que desejava há 9 anos! [...] Sinto que agora tenho ferramentas e recursos para desenvolver meu infoproduto de forma legal e ética.<span class="hora tabular">17:45</span></p></div>
+      </figure>
+      <figure class="zap" aria-label="Mensagem de WhatsApp da Hilda, HCSER Treinamentos">
+        <div class="zap-topo"><span class="zap-av" aria-hidden="true">H</span><span><span class="zap-nome">Hilda</span><span class="zap-sub">HCSER Treinamentos Gerencial e Profissional</span></span></div>
+        <div class="zap-chat"><p class="balao">Até chorei emocionada aqui depois de escrever o formulário.. tem 4 anos que estudo para conseguir desenvolver um produto e não acredito que consegui com um método que tem nome da minha empresa e consegui colocar nele módulos de como eu penso.<span class="hora tabular">16:18</span></p></div>
+      </figure>
+    </div>
     <div class="depos">
-      <p class="depo">"Fiquei conversando com teu agente e estou sentindo o esclarecimento que desejava há 9 anos! [...] Sinto que agora tenho ferramentas e recursos para desenvolver meu infoproduto de forma legal e ética."<cite>Anália, médica</cite></p>
-      <p class="depo">"Até chorei emocionada aqui depois de escrever o formulário. Tem 4 anos que estudo para conseguir desenvolver um produto e não acredito que consegui, com um método que tem nome da minha empresa."<cite>Hilda, HCSER Treinamentos Gerencial e Profissional</cite></p>
       <p class="depo">"Você conseguiu me colocar numa estratégia muito mais focada. Eu não entendia por que não avançava sozinho: eu queria entregar tudo de uma vez. Agora é por partes."<cite>Vagner, especialista em acesso a crédito para empresários</cite></p>
     </div>
   </div>
 </section>
 
 <!-- 8. SOBRE -->
-<section>
+<section class="claro">
   <div class="wrap">
     <span class="eyebrow">Quem conduz</span>
     <h2>Karol Senna</h2>
@@ -555,7 +588,7 @@
 </section>
 
 <!-- 10. PRA QUEM -->
-<section>
+<section class="claro">
   <div class="wrap">
     <h2>Pra quem é a Incubadora</h2>
     <div class="paraquem">
