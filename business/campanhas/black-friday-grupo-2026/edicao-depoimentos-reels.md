@@ -35,7 +35,22 @@ Zip `Downloads/WhatsApp Unknown 2026-10-10 at 16.59.47.zip` → `brutos/` (4 cor
 - Ritmo Vagner 2 conferido: OK pro nível 2 (troca média 1,05s, cobertura 81%).
 - PAROU: `conferir.py quadros` foi interrompido pelo Claude Code por falta de memória na máquina. Retomar com: ritmo + quadros de tasso e vagner-1, quadros de vagner-2 → olhar folhas → render.
 
+## Conferência (11/10, noite)
+- Ritmo OK nos três (Tasso 1,14s/94% · Vagner 1 0,82s/75% · Vagner 2 1,05s/81%).
+- Quadros conferidos (`<trabalho>/qa/folha_*.jpg`, escala 0,25 pra caber na memória). Ajustes feitos:
+  - Cartão do nome descia no rosto (y 990) → y 1420 (peito) nos três.
+  - Tasso: headline cobria o topo da tela compartilhada → tela desceu (y 640), aluno menor (600px, y 1310), legenda em 1600; headline quebrada em 4 linhas equilibradas; Whisper perdeu o "100" de "100% dentro do que eu gostaria" → `tasso/fix_palavras.py` (rodar depois de todo `cortar.py`).
+  - Vagner 1: comparação estourava a lateral ("COM ALGUÉM JUNTO" grande demais) → título "JUNTO".
+  - Vagner 2: cartão "Vagner" aparecia sobre a Karol (0–1,05s a câmera do Meet mostra ela) → cartão começa em 1,15s.
+- Karol aparece na tela (troca de câmera do Meet, áudio é do Vagner): Vagner 2 0–1,05s (primeiro quadro do Reel) e Vagner 1 50,6–51,5s (rindo, sob "preciso de ajuda"). Mantido; perguntar se ela quer cobrir.
+- Render em `<trabalho>/saida/<nome>.mp4` (concurrency 2).
+
+## Entregue (11/10, 23h30)
+- `depoimentos-black/{tasso,vagner-1,vagner-2}/saida/<nome>.mp4` — 1080x1920, H.264. Tasso 35,3s · Vagner 1 55,9s · Vagner 2 29,6s (com vinheta).
+- Conferência final: volume -13,9 a -15 LUFS, legenda sincronizada (±0,05s), fala 90–97% igual ao roteiro.
+- Vagner 1: o corte comia o fim de "faz sentido" (39s) → trecho "junto" estendido até 51,72 no roteiro, `cortar.py --refaz`, cenas a partir de 39s deslocadas +0,272s. (Lição: mudou roteiro → `cortar.py --refaz`, senão a mídia não é regravada.)
+- Vagner 2: alerta do "por partes" no fim era falso (medido: a voz está inteira).
+- Detalhe menor que ficou: na comparação do Vagner 1, "Discernimento" e "Direcionamento" quebram a linha do marcador.
+
 ## Próximo
-1. Com a máquina mais livre, rodar `conferir.py ritmo|quadros` um vídeo por vez (tasso, vagner-1, depois quadros do vagner-2) e olhar as folhas em `<trabalho>/qa/`.
-2. Ajustar e renderizar (`npx remotion render ... --concurrency=2` pela memória) → `conferir.py final`.
-3. Entrega: avisar os cortes de fala do Vagner 1 e que o chat "O que ele ouvia" é encenação.
+- Karol assiste e aprova; decidir se cobre os ~1s em que ela aparece (Vagner 2 abertura, Vagner 1 ~51s).
