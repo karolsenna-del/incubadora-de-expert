@@ -32,3 +32,13 @@
 - Vídeo de depoimento → 1 slide-deixa por vídeo, **colado na dor, objeção ou desejo que está sendo falado naquele momento — nunca vários vídeos em sequência** (Karol, 11/10). A deixa mostra o rótulo do momento ("VÍDEO · A DOR", "VÍDEO · DÁ PRA FAZER SOZINHO"), nome grande, quem é (profissão/empresa), duração e nome do arquivo. A Karol compartilha a guia do vídeo; o deck não embute o vídeo. Pra escolher o lugar, transcrever o vídeo antes.
 - Corte curto (~20-40s) pronto numa pasta ao lado do deck, com volume equalizado entre os vídeos.
 - "O que você recebe" em vários slides: 1 destaque por entregável forte (número gigante ou frase grande) + mapa da jornada, nunca uma lista única.
+
+## Regra 5 — Print de prova fica DENTRO do slide do assunto
+
+**Contexto:** Live da Black Expert (13/10). O primeiro pedido virou 8 slides só de print, com fala de leitura. A Karol corrigiu: "não quer ler os prints, quero ir falando do assunto X e deixar o print na tela para as pessoas lerem".
+**Motivo:** slide só de print quebra o ritmo e obriga a ler em voz alta. O print é apoio visual do argumento que já está na tela.
+**Checklist:**
+- Print entra no slide do assunto: coluna da direita (`.wp`) quando o print é alto, embaixo do conteúdo (`.prow`) quando é largo. Nunca slide próprio, a menos que a Karol peça.
+- Cartão branco (`.pcard`) com legenda "Nome · quem é". Recorte sem telefone, sem nome de grupo e sem "Arcane" no nome do contato.
+- Print de formulário é pequeno: ampliar por largura e recortar só o trecho que prova. Conferir legibilidade em 1280×720 antes de publicar.
+- Vídeo continua como slide-deixa (Regra 4). Print não.

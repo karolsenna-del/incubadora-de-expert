@@ -11,28 +11,27 @@
 > Linguagem: sem gênero pra quem assiste. Feminino só quando a Karol fala dela e nos casos reais.
 > ⚠️ = ponto pra Karol confirmar antes de gravar.
 > 🎬 = deixa de operação (mensagem no grupo, tela, vídeo).
-> 🖼️ = print de prova na tela: slide novo no deck, logo depois do slide indicado (P1 a P8).
+> 🖼️ = print de prova na tela, DENTRO do slide do assunto. Fica lá enquanto você fala; não precisa ler.
 
 ## PROVAS NA TELA (prints, 13/10)
 
 > Prints: `docs/knowledge/expert-business/provas/imagens/` · transcrições: `docs/knowledge/expert-business/provas/README.md`.
 > Numeração dos slides = deck atual (`live-black-expert-apresentacao.html`, 47 slides).
 
-Regras pro live-deck-builder:
-- Um print por vez, colado na fala que ele prova. É a mesma lógica dos vídeos.
-- Recortar SEMPRE: sem telefone, sem nome de grupo e sem a palavra "Arcane" no nome do contato.
-- Slide de print: fundo carvão, print centralizado e grande, rótulo curto embaixo (nome + quem é) e
-  rodapé do bloco igual aos outros slides. Sem título grande competindo com o print.
-- A Karol lê em voz alta só o trecho marcado e volta pro roteiro. São ~20-30s por print, ~+3 min no total.
+Como ficou no deck (13/10, Version 6):
+- Cada print está dentro do slide do assunto, num cartão branco com legenda "nome · quem é". Nenhum slide novo:
+  o deck continua com 47.
+- Recortes sem telefone, sem nome de grupo e sem a palavra "Arcane" no nome do contato.
+- Você fala do assunto e o print fica na tela pras pessoas lerem. Não muda o tempo da live.
 
-| # | Entra depois do slide | Bloco | Print | Rótulo no slide |
+| # | Dentro do slide | Bloco | Print | Legenda no slide |
 |---|---|---|---|---|
 | P1 | 11 · "Seja a rainha do método" | 2 História | `live-expert360-lua.png` | Lua Azevedo · acompanha minhas lives semanais |
 | P2 | 14 · "O que setembro me confirmou" | 2 História | `incubadora-dalvelyn.png` | Dalvelyn · no formulário de entrada da Incubadora |
 | P3 | 17 · "A causa real" | 4 Reenquadramento | `workshop-rodrigo-teixeira.png` | Rodrigo · participante do Workshop |
 | P4 | 20 · "A ordem certa" | 5 Ordem | `incubadora-analia.png` | Anália · médica, aluna da Mentoria em Grupo |
 | P5 | 27 · "Três caminhos" | 8 Apoteose | `metodo-hilda.png` | Hilda · depois da sessão de diagnóstico do método |
-| P6 | 29 · faixa antes do "Imagina" | 9 Oferta | `incubadora-rosiani.png` | Rosiani · aluna da Mentoria em Grupo |
+| P6 | 29 · "Incubadora de Expert" (abertura da oferta) | 9 Oferta | `incubadora-rosiani.png` | Rosiani · aluna da Mentoria em Grupo |
 | P7 | 35 · "12 Oficinas Destrava Expert" | 9 Oferta | `live-expert360-claudia-barreto.png` + `live-expert360-sandra-melo.jpeg` | Claudia Barreto e Sandra Mello · depois de uma das minhas lives semanais |
 | P8 | 37 · "IA do seu lado" | 9 Oferta | `agente-persona-analia.png` | Anália · médica, conversando com o agente do método |
 
@@ -158,15 +157,7 @@ mostrou onde eu devia jogar. Isso eu não ia enxergar sozinha. Eu passei anos se
 E é por isso que hoje eu faço o que eu faço: eu olho pra sua história e te mostro onde você tem que
 jogar."
 
-🖼️ **P1 · depois do slide 11 · Lua** · `live-expert360-lua.png`. Recorte: só o balão de texto dela, sem o
-vídeo de cima e sem o topo da conversa.
-
-"Olha o que a Lua me escreveu. Ela assiste às minhas lives toda semana e já estava há tempo no mercado, com muita coisa estruturada: *'através
-do seu olhar tenho conseguido observar alguns pontos que estavam passando batido, reestruturando pilares
-importantíssimos [...] um passo pra trás para muitos pra frente.'*"
-
-> Confirmado (13/10): a Lua assiste às lives semanais da Karol. Os "encontros" do print são as lives.
-> Não citar a Arcane na fala nem no rótulo.
+🖼️ **P1 · print dentro do slide 11 ("Seja a rainha do método") · Lua Azevedo** · fica na tela enquanto você fala do assunto. Não precisa ler.
 
 **A prova (#19): o que mudou foi comportamento**
 
@@ -188,12 +179,7 @@ conhecimento resolve. Mas ela não vai te achar sozinha. Você precisa oferecer.
 🎬 Na tela, enquanto fala: a linha do tempo da página (agosto R$1.500 → 14h todo dia → setembro
 R$10 mil).
 
-🖼️ **P2 · depois do slide 14 · Dalvelyn** · `incubadora-dalvelyn.png`. Recorte: só o 2º parágrafo da 1ª
-resposta ("Pude acompanhar de perto a sua transição...").
-
-"E quem acompanhou essa virada de perto viu. A Dalvelyn escreveu isso quando entrou: *'você não apenas
-fala sobre evolução, mas realmente vive isso. Sua jornada me prova que não se trata mais de "se" você vai
-emplacar, mas sim "quando".'*"
+🖼️ **P2 · print dentro do slide 14 ("Tem gente esperando a sua oferta") · Dalvelyn** · fica na tela enquanto você fala do assunto. Não precisa ler.
 
 "Eu já estive onde você está. Com conhecimento, com vontade, e travada na mesma ordem errada. E é
 essa ordem que eu quero te mostrar agora."
@@ -232,14 +218,9 @@ preço a cada lançamento e continuei sem vender."
 
 ## BLOCO 4 — REENQUADRAMENTO: A CAUSA REAL (~3 min)
 
-"Então a causa real não é falta de conhecimento. É conhecimento que ainda não virou método."
+🖼️ **P3 · print dentro do slide 17 ("A causa real") · Rodrigo** · fica na tela enquanto você fala do assunto. Não precisa ler.
 
-🖼️ **P3 · depois do slide 17 · Rodrigo** · `workshop-rodrigo-teixeira.png`. Recorte: só o balão longo, sem
-a barra de status do celular. (Prova masculina: o público é 40% homem.)
-
-"O Rodrigo chegou achando que só ia confirmar o que já sabia: *'minha expectativa [era] validar que eu já
-sabia como montar o meu curso, mas a realidade era que apesar do meu conhecimento eu não sabia como fazer
-da maneira correta.'* Conhecimento ele tinha. Faltava virar método.
+"Então a causa real não é falta de conhecimento. É conhecimento que ainda não virou método.
 
 E tem mais uma coisa. Conhecimento você já tem. Organizar em método, hoje a IA ajuda qualquer um a
 fazer. O que ninguém faz por você é preparar o expert: testar, treinar, ganhar segurança pra
@@ -256,6 +237,8 @@ O problema nunca foi você. Foi a ordem."
 
 ## BLOCO 5 — ORDEM: AS 4 FASES (~5 min)
 
+🖼️ **P4 · print dentro do slide 20 (a jornada das 4 fases, embaixo da linha) · Anália** · fica na tela enquanto você fala do assunto. Não precisa ler.
+
 "A ordem certa tem 4 fases.
 
 **Fase 1: Método Autoral.** Conhecimento é o que você estudou. Método é o que você viveu. A persona
@@ -263,15 +246,7 @@ nasce da sua história, e o método traz o que você viveu, usou e aprendeu. Por
 
 **Fase 2: Validação.** As Vendas Secretas. Você testa a sua oferta em conversas reservadas, antes de
 qualquer exposição. É o ensaio geral: você treina a fala, ganha segurança, aprende a conduzir a
-negociação. E faz a sua primeira venda no digital."
-
-🖼️ **P4 · depois do slide 20 (na Fase 2) · Anália** · `incubadora-analia.png`. Recorte: só a 2ª pergunta,
-1º parágrafo ("A segurança da autovalidação... na minha parte como expert."). A 1ª pergunta fica de fora
-porque cita a Arcane. Melhor ainda se o live-deck quebrar o slide 20 em dois (Fases 1-2 / Fases 3-4) e
-colocar o print no meio.
-
-"A Anália, que é médica, resumiu isso numa frase: *'a segurança da autovalidação ao se lançar num mundo tão
-novo.'* Ela passou anos tentando estruturar e vender o curso dela, e sempre pareceu impossível.
+\1
 
 **Fase 3: Posicionamento.** Aí sim você aparece, com a autoridade que já tem, depois de ensaiar e já
 com prova.
@@ -330,22 +305,14 @@ grupo, é com você que eu estou falando agora."
 
 ## BLOCO 8 — APOTEOSE: AS 3 OPÇÕES (~3 min)
 
+🖼️ **P5 · print dentro do slide 27 (os três caminhos, embaixo dos cards) · Hilda** · fica na tela enquanto você fala do assunto. Não precisa ler. Rótulo neutro: a Hilda fez a sessão de diagnóstico do método, não é aluna da Incubadora.
+
 "A partir daqui você tem três caminhos.
 
 **O primeiro: não fazer nada.** Continuar onde está. Só que não tentar também dói. É uma dor quieta,
 mais fácil de esconder. Tem gente que vai morrer com essa vontade e não vai fazer nada.
 
-**O segundo: fazer por conta própria.** Dá pra fazer. A Hilda estudou 4 anos sozinha."
-
-🖼️ **P5 · depois do slide 27 (no caminho 2) · Hilda** · `metodo-hilda.png`. Recorte: só a mensagem da
-Hilda, sem a resposta da Karol embaixo. Rótulo neutro: a Hilda não é aluna da Incubadora, o depoimento
-veio da sessão de diagnóstico do método. Nunca chamar de "quem está na Incubadora".
-
-"Olha o que ela me mandou depois: *'tem 4 anos que estudo para conseguir desenvolver um produto e não
-acredito que consegui, com um método que tem nome da minha empresa.'* Quatro anos sozinha. Com direção,
-destravou.
-
-Eu fiz 8 lançamentos sozinha. Custa tempo, dinheiro e muita confiança no caminho.
+**O segundo: fazer por conta própria.** Dá pra fazer. \1 \2 Custa tempo, dinheiro e muita confiança no caminho.
 
 **O terceiro: deixar que eu faça o trabalho pesado com você.** Depois do Desafio, eu monto a sua Venda
 Secreta e entro com você na sua primeira sessão de venda. Você recebe o seu funil montado. E ninguém
@@ -366,6 +333,8 @@ você tem alguém junto [...] você tem clareza."
 
 "O que é**
 
+🖼️ **P6 · print dentro do slide 29 ("Incubadora de Expert", a abertura da oferta) · Rosiani** · fica na tela enquanto você fala do assunto. Não precisa ler.
+
 "A Incubadora de Expert é um programa de aceleração de carreira digital para profissionais reconhecidos
 no que fazem. Nele você tem oficinas ao vivo, sessões individuais comigo e o seu funil de vendas
 montado pra construir o seu Método Autoral, validar com as suas primeiras vendas, se posicionar como
@@ -377,13 +346,6 @@ na Escala, você decide se isso vira o seu negócio principal ou continua como r
 > Decisão da Karol (11/10): projeto paralelo é como o mentorado executa, não a promessa central. A
 > promessa é método + escala como negócio digital. A escolha entre negócio principal e renda extra
 > acontece na fase de Escala.
-
-🖼️ **P6 · depois do slide 29 (antes do "Imagina") · Rosiani** · `incubadora-rosiani.png`. Recorte: só a
-2ª pergunta ("O que mais me atraiu na Mentoria Incubadora de Expert...").
-
-"A Rosiani, que está na Mentoria em Grupo, contou por que entrou: *'a clareza, a firmeza e a eficiência do
-método [...] realmente capaz de transformar minha autoridade em um negócio sólido, escalável e
-profissional.'*"
 
 **Imagine**
 
@@ -425,17 +387,7 @@ negócio."
 "**12 Oficinas Destrava Expert,** ao vivo e gravadas, pra trabalhar as travas de quem está chegando no
 digital: o método, as vendas e a escala. A primeira é o Desafio, de 19 a 23/10."
 
-🖼️ **P7 · depois do slide 35 · Claudia + Sandra, lado a lado** · `live-expert360-claudia-barreto.png` +
-`live-expert360-sandra-melo.jpeg`. Recorte: Claudia só com o balão, sem o topo do grupo ("INFO EXPERT" +
-nomes) e sem "Arcane" no nome dela. Sandra só com o 1º balão ("Aula maravilhosa! ... esclarecedora."),
-sem telefone e sem a citação de cima.
-
-"É isso que acontece numa aula ao vivo comigo, igual às lives que você assiste toda semana. A Claudia: *'hoje foi um destravar de ideias, de crenças
-limitantes.'* A Sandra: *'em menos de uma hora, encontrei respostas [...] (o que a IA não estava
-conseguindo).'*"
-
-> Confirmado (13/10): Claudia e Sandra assistem às lives semanais da Karol. Os prints são de lives,
-> não de oficina da Incubadora: a fala diz "numa aula ao vivo comigo". Não citar a Arcane.
+🖼️ **P7 · print dentro do slide 35 ("12 Oficinas Destrava Expert") · Claudia Barreto e Sandra Mello, lado a lado** · fica na tela enquanto você fala do assunto. Não precisa ler. As duas assistem às suas lives semanais.
 
 "O seu **Funil de Vendas Secretas montado.** Do primeiro contato ao fechamento, tudo pronto pra você
 vender sem depender de audiência nem de lançamento."
@@ -445,12 +397,7 @@ Proposta Validada e Posicionamento), o **Vendedor Secreto**, que monta o roteiro
 Secretas, e o **Studio de Ensaio do Expert**, onde você treina a fala de venda e a quebra de objeções
 antes das sessões de verdade."
 
-🖼️ **P8 · depois do slide 37 · Anália e o agente** · `agente-persona-analia.png`. Recorte: só o balão
-branco dela, sem o topo (o nome do contato tem "Arcane") e sem as respostas da Karol.
-
-"E não é IA genérica. A Anália, de novo: *'fiquei conversando com teu agente e estou sentindo o
-esclarecimento que desejava há 9 anos!'* Ela é médica, e o que travava ela eram as restrições legais de
-divulgação. Saiu com ferramenta pra fazer *'de forma legal e ética'*."
+🖼️ **P8 · print dentro do slide 37 ("IA do seu lado") · Anália conversando com o agente do método** · fica na tela enquanto você fala do assunto. Não precisa ler.
 
 "E mais: a **metodologia completa do Expert360º**, a **taxa reduzida na Voomp** (5,99% + R$1 por venda;
 a tabela pública é 7,99% + R$1) e um **canal exclusivo**: você, eu e o suporte. Não é grupo com a turma
@@ -612,6 +559,5 @@ Obrigada por ficar até aqui. Até o Desafio."
 | 10 Carrinho aberto | 10 | 60 |
 | 11 Encerramento | 2 | 62 |
 
-Os 8 prints somam ~3 min (P1-P5 antes da oferta, ~2 min). Com eles, a oferta abre perto do minuto 42,
-ainda dentro da janela do Ícaro pra uma live de 60 min (entre o 30 e o
+Os prints ficam dentro dos slides e não mudam o tempo: a oferta abre perto do minuto 40, dentro da janela do Ícaro pra uma live de 60 min (entre o 30 e o
 40).
