@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mensagens de Onboarding</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap');
+/* Fonte das mensagens: business/processos/onboarding-pos-compra.md (atualizar lá e aqui juntos) */
+:root{
+  --ink:#0B0B0C; --paper:#FFFFFF; --fog:#F4F4F5; --mist:#D4D4D8; --ash:#71717A;
+  --ember:#FF6B1A; --ember-dark:#E85A0D;
+  --display:'Sora',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --text:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--fog); color:var(--ink); font-family:var(--text); min-height:100vh; display:flex; flex-direction:column; align-items:center; padding:48px 16px 80px;}
+.wrap{width:100%; max-width:760px;}
+.back{font-size:.85rem; color:var(--ash); text-decoration:none;}
+.back:hover{color:var(--ember-dark);}
+.brand-name{font-family:var(--display); font-weight:800; font-size:1.1rem; margin-top:16px;}
+.brand-name span{color:var(--ember);}
+h1{font-family:var(--display); font-weight:800; font-size:1.8rem; margin:12px 0 8px; letter-spacing:-0.02em;}
+.lede{font-size:1rem; line-height:1.6; color:var(--ash); margin:0 0 20px;}
+.index{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 32px;}
+.index a{font-size:.82rem; font-weight:600; text-decoration:none; color:var(--ink); background:var(--paper); border:1px solid var(--mist); border-radius:999px; padding:6px 12px;}
+.index a:hover{border-color:var(--ember);}
+.index a.pend{color:var(--ash); border-style:dashed;}
+.prod{background:var(--paper); border:1px solid var(--mist); border-radius:16px; padding:22px 22px 20px; margin:0 0 16px; scroll-margin-top:16px;}
+.prod-head{display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap;}
+.prod h2{font-family:var(--display); font-weight:800; font-size:1.2rem; margin:0;}
+.tag{display:inline-block; font-size:.66rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--ember-dark);}
+.tag.pend{color:var(--ash);}
+.when{font-size:.88rem; color:var(--ash); line-height:1.5; margin:8px 0 14px;}
+.links{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 14px;}
+.lnk{display:inline-flex; align-items:center; gap:6px; font-size:.82rem; font-weight:600; text-decoration:none; color:var(--ink); border:1px solid var(--mist); border-radius:10px; padding:8px 12px; background:var(--fog); word-break:break-all;}
+.lnk:hover{border-color:var(--ember);}
+.lnk b{color:var(--ember-dark); font-weight:700; white-space:nowrap;}
+.msg{overflow-wrap:anywhere; position:relative; background:#FAFAFA; border:1px solid var(--mist); border-radius:12px; padding:16px 16px 14px; white-space:pre-wrap; font-family:var(--text); font-size:.95rem; line-height:1.55; margin:0;}
+.copy{display:inline-flex; align-items:center; gap:6px; margin-top:10px; font-family:var(--display); font-weight:700; font-size:.85rem; color:#fff; background:var(--ember); border:0; border-radius:10px; padding:10px 16px; cursor:pointer;}
+.copy:hover{background:var(--ember-dark);}
+.copy:focus-visible{outline:3px solid var(--ink); outline-offset:2px;}
+.copy.ok{background:var(--ink);}
+.note{font-size:.85rem; color:var(--ash); line-height:1.5; margin:0; padding:12px 14px; border:1px dashed var(--mist); border-radius:10px;}
+.note b{color:var(--ink);}
+.section-title{font-family:var(--display); font-size:.75rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--ash); margin:36px 0 12px;}
+.tbl{width:100%; border-collapse:collapse; background:var(--paper); border:1px solid var(--mist); border-radius:14px; overflow:hidden; font-size:.85rem;}
+.tbl th,.tbl td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--fog); vertical-align:top;}
+.tbl th{font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ash);}
+.tbl a{color:var(--ember-dark); word-break:break-all;}
+.tbl{table-layout:fixed;} .tbl td{overflow-wrap:anywhere;}
+@media (max-width:560px){.tbl th:nth-child(2),.tbl td:nth-child(2){display:none;}}
+footer{margin-top:48px; font-size:.78rem; color:var(--ash); text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← Central da Incubadora</a>
+  <div class="brand-name">Incubadora <span>de Expert</span></div>
+  <h1>Mensagens de onboarding</h1>
+  <p class="lede">A mensagem de boas-vindas de cada produto, pronta pra copiar e colar no WhatsApp assim que o pagamento cair, com o link do diagnóstico que o aluno responde primeiro.</p>
+
+  <nav class="index" aria-label="Produtos">
+    <a href="#sprint">Sprint do Método</a>
+    <a href="#individual">Individual</a>
+    <a href="#grupo">Grupo</a>
+    <a href="#vip">Método VIP</a>
+    <a href="#expert360">Expert360º</a>
+    <a href="#express" class="pend">Método Express</a>
+    <a href="#ferramentas" class="pend">Diagnóstico Ferramentas</a>
+  </nav>
+
+  <!-- SPRINT -->
+  <section class="prod" id="sprint">
+    <div class="prod-head"><h2>Sprint do Método</h2><span class="tag">Mensagem pronta</span></div>
+    <p class="when">Quando o pagamento aparecer confirmado na Voomp (checkout /16365). O diagnóstico já cobre contexto de negócio, História Real e Ikigai, não precisa anexar nada.</p>
+    <div class="links">
+      <a class="lnk" href="https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/diagnostico/" target="_blank" rel="noopener"><b>Diagnóstico</b> vendas.incubadoradeexpert.com.br/sprint-do-metodo/diagnostico/</a>
+    </div>
+    <pre class="msg" id="m-sprint">Seja bem-vinda(o) ao Sprint do Método! Que bom te ter aqui.
+
+Antes da nossa primeira sessão (Semana 1 — Imersão), preciso que você responda um diagnóstico rápido — ele já cobre tudo que eu preciso saber: seu contexto de negócio, sua história real e seu ikigai. É num único lugar, e se precisar parar no meio fica salvo sozinho, pode continuar depois de onde parou.
+
+Responde aqui: https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/diagnostico/
+
+Assim que você finalizar, eu recebo suas respostas e entro em contato pra agendarmos nossa Semana 1.
+
+Parabéns pela decisão!</pre>
+    <button class="copy" data-target="m-sprint">Copiar mensagem</button>
+  </section>
+
+  <!-- INDIVIDUAL -->
+  <section class="prod" id="individual">
+    <div class="prod-head"><h2>Mentoria Individual</h2><span class="tag">Mensagem pronta</span></div>
+    <p class="when">Quando o pagamento ou o contrato for confirmado (checkout /16367, ou pix/contrato direto). A página de onboarding explica a jornada e tem o link do DNA do Expert.</p>
+    <div class="links">
+      <a class="lnk" href="https://dna.incubadoradeexpert.com.br" target="_blank" rel="noopener"><b>Diagnóstico</b> DNA do Expert · dna.incubadoradeexpert.com.br</a>
+      <a class="lnk" href="https://onboarding.incubadoradeexpert.com.br" target="_blank" rel="noopener"><b>Página</b> onboarding.incubadoradeexpert.com.br</a>
+      <a class="lnk" href="https://membros.incubadoradeexpert.com.br" target="_blank" rel="noopener"><b>Membros</b> membros.incubadoradeexpert.com.br</a>
+    </div>
+    <pre class="msg" id="m-individual">Seja bem-vinda(o) à Incubadora de Expert! Você está começando uma jornada de 12 meses — do método autoral validado até as primeiras vendas reais.
+
+Antes da nossa primeira sessão, dá uma passada pela página de onboarding — ela explica como funciona a jornada, os encontros e o suporte:
+
+https://onboarding.incubadoradeexpert.com.br
+
+Seu acesso à Área de Membros já está liberado (usa o mesmo e-mail da compra pra entrar):
+
+https://membros.incubadoradeexpert.com.br
+
+A única coisa que falta antes de eu marcar nossa 1ª sessão é você responder o DNA do Expert (o link também está na página de onboarding) — assim que eu receber suas respostas, entro em contato pra agendarmos.
+
+Parabéns pela decisão!</pre>
+    <button class="copy" data-target="m-individual">Copiar mensagem</button>
+  </section>
+
+  <!-- GRUPO -->
+  <section class="prod" id="grupo">
+    <div class="prod-head"><h2>Mentoria em Grupo</h2><span class="tag">Mensagem pronta</span></div>
+    <p class="when">Quando o pagamento aparecer confirmado na Voomp (checkout /16366, ou pix direto). A página de onboarding do Grupo (/grupo) explica a jornada, as oficinas e as sessões, e tem o link do DNA do Expert.</p>
+    <div class="links">
+      <a class="lnk" href="https://dna.incubadoradeexpert.com.br" target="_blank" rel="noopener"><b>Diagnóstico</b> DNA do Expert · dna.incubadoradeexpert.com.br</a>
+      <a class="lnk" href="https://onboarding.incubadoradeexpert.com.br/grupo" target="_blank" rel="noopener"><b>Página</b> onboarding.incubadoradeexpert.com.br/grupo</a>
+      <a class="lnk" href="https://membros.incubadoradeexpert.com.br" target="_blank" rel="noopener"><b>Membros</b> membros.incubadoradeexpert.com.br</a>
+    </div>
+    <pre class="msg" id="m-grupo">Seja bem-vinda(o) à Mentoria em Grupo da Incubadora de Expert! Você está começando uma jornada de 12 meses — do método autoral validado até as primeiras vendas reais.
+
+Antes de tudo, dá uma passada pela página de onboarding — ela explica como funciona a jornada, as oficinas ao vivo, as sessões comigo e o suporte:
+
+https://onboarding.incubadoradeexpert.com.br/grupo
+
+Seu acesso à Área de Membros já está liberado (usa o mesmo e-mail da compra pra entrar):
+
+https://membros.incubadoradeexpert.com.br
+
+Sua primeira entrega é responder o DNA do Expert (o link também está na página de onboarding) — assim que eu receber suas respostas, entro em contato pra agendarmos sua Sessão 1.
+
+Parabéns pela decisão!</pre>
+    <button class="copy" data-target="m-grupo">Copiar mensagem</button>
+  </section>
+
+  <!-- VIP -->
+  <section class="prod" id="vip">
+    <div class="prod-head"><h2>Método VIP</h2><span class="tag">Mensagem pronta</span></div>
+    <p class="when">Quando a 1ª parcela do pix for confirmada (venda fechada no 1:1).</p>
+    <div class="links">
+      <a class="lnk" href="https://vendas.incubadoradeexpert.com.br/metodo-vip/diagnostico/" target="_blank" rel="noopener"><b>Diagnóstico</b> vendas.incubadoradeexpert.com.br/metodo-vip/diagnostico/</a>
+    </div>
+    <pre class="msg" id="m-vip">Seja bem-vinda(o) ao Método VIP! Que bom te ter aqui.
+
+Antes do nosso primeiro encontro, preciso que você responda um diagnóstico — é nele que você me conta sua persona, sua promessa e o caminho do seu método. É com essas respostas que eu chego no Encontro 1 já sabendo como te orientar melhor nos próximos passos. Se precisar parar no meio, fica salvo sozinho, pode continuar depois de onde parou.
+
+Responde aqui: https://vendas.incubadoradeexpert.com.br/metodo-vip/diagnostico/
+
+Assim que você finalizar, eu recebo suas respostas e entro em contato pra agendarmos nosso primeiro encontro.
+
+Parabéns pela decisão!</pre>
+    <button class="copy" data-target="m-vip">Copiar mensagem</button>
+  </section>
+
+  <!-- EXPERT360 -->
+  <section class="prod" id="expert360">
+    <div class="prod-head"><h2>Expert360º</h2><span class="tag">Mensagem pronta · sem diagnóstico</span></div>
+    <p class="when">Quando o pagamento aparecer confirmado (checkout /15514). O aluno entra direto no curso, não tem diagnóstico antes.</p>
+    <div class="links">
+      <a class="lnk" href="https://membros.incubadoradeexpert.com.br" target="_blank" rel="noopener"><b>Membros</b> membros.incubadoradeexpert.com.br</a>
+    </div>
+    <pre class="msg" id="m-expert360">Seja bem-vinda(o) ao Expert360º! Seu acesso já está liberado na Área de Membros — usa o mesmo e-mail da compra pra entrar:
+
+https://membros.incubadoradeexpert.com.br
+
+O curso é no seu ritmo: 5 módulos (M0 a M4), com um agente de IA te acompanhando em cada etapa.
+
+Parabéns pela decisão!</pre>
+    <button class="copy" data-target="m-expert360">Copiar mensagem</button>
+  </section>
+
+  <!-- EXPRESS -->
+  <section class="prod" id="express">
+    <div class="prod-head"><h2>Método Express</h2><span class="tag pend">Mensagem ainda não escrita</span></div>
+    <p class="note"><b>Falta escrever</b> a mensagem e definir se tem diagnóstico de entrada.</p>
+  </section>
+
+  <!-- FERRAMENTAS -->
+  <section class="prod" id="ferramentas">
+    <div class="prod-head"><h2>Diagnóstico Ferramentas</h2><span class="tag pend">Mensagem ainda não escrita</span></div>
+    <p class="note"><b>Falta escrever</b> a mensagem. O diagnóstico do Kit de Ferramentas (abaixo, na lista) é o intake de quem compra o Kit. Confira se é o mesmo produto antes de usar.</p>
+  </section>
+
+  <div class="section-title">Todos os diagnósticos</div>
+  <table class="tbl">
+    <thead><tr><th>Diagnóstico</th><th>Quem responde</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr><td>Sprint do Método</td><td>Quem comprou o Sprint</td><td><a href="https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/diagnostico/" target="_blank" rel="noopener">vendas.incubadoradeexpert.com.br/sprint-do-metodo/diagnostico/</a></td></tr>
+      <tr><td>DNA do Expert</td><td>Quem entrou na Individual ou no Grupo</td><td><a href="https://dna.incubadoradeexpert.com.br" target="_blank" rel="noopener">dna.incubadoradeexpert.com.br</a></td></tr>
+      <tr><td>Método VIP</td><td>Quem comprou o VIP</td><td><a href="https://vendas.incubadoradeexpert.com.br/metodo-vip/diagnostico/" target="_blank" rel="noopener">vendas.incubadoradeexpert.com.br/metodo-vip/diagnostico/</a></td></tr>
+      <tr><td>Kit de Ferramentas</td><td>Quem comprou o Kit de Ferramentas</td><td><a href="https://kit-de-ferramentas.vercel.app" target="_blank" rel="noopener">kit-de-ferramentas.vercel.app</a></td></tr>
+      <tr><td>Pré-diagnóstico</td><td>Lead, antes da Sessão Estratégica</td><td><a href="https://diagnostico.incubadoradeexpert.com.br" target="_blank" rel="noopener">diagnostico.incubadoradeexpert.com.br</a></td></tr>
+      <tr><td>Crie seu Método em 1 Hora</td><td>Bônus de aula</td><td><a href="https://metodo1h.incubadoradeexpert.com.br" target="_blank" rel="noopener">metodo1h.incubadoradeexpert.com.br</a></td></tr>
+    </tbody>
+  </table>
+
+  <footer>Central da Incubadora — uso pessoal da Karol · fonte: business/processos/onboarding-pos-compra.md</footer>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const text = document.getElementById(btn.dataset.target).textContent;
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (e) {
+      const ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (_) {}
+      ta.remove();
+    }
+    const old = btn.textContent;
+    btn.textContent = 'Copiada ✓'; btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = old; btn.classList.remove('ok'); }, 1800);
+  });
+});
+</script>
+</body>
+</html>

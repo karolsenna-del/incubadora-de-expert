@@ -5,6 +5,9 @@
 > Formato: 1 seção por produto, igual ao padrão do `00-documento-mestre-ofertas.md`.
 > Iniciado 14/09/2026, começando pelo Sprint do Método — demais produtos entram conforme forem
 > adaptados.
+> **Cópia de uso rápido (13/10):** `business/central-incubadora/mensagens-onboarding.html`, no ar em
+> https://central-incubadora.vercel.app/mensagens-onboarding.html (card "Mensagens de onboarding" na
+> Central), com botão de copiar. Mudou uma mensagem aqui? Atualizar lá também.
 
 ---
 
@@ -125,13 +128,51 @@ e-mail automático quando o aluno termina, não depende de aviso manual.
 `incubadora-de-expert-individual/checklist-producao.md` linha 13. Ao aprovar esta mensagem,
 esse item pode ser marcado como concluído.
 
-**Grupo (R$5.000/12m) — ADIADO DE PROPÓSITO (decisão da Karol, 14/09).** A página de onboarding
-atual descreve especificamente o formato **1:1** ("programa personalizado 1:1", "14 sessões
-1:1") — não serve pro Grupo sem ajuste, e o Grupo já tem 2 alunas reais (Rosiani, Analia). A
-Karol decidiu: (1) terminar as mensagens dos outros produtos primeiro, (2) só depois construir
-uma página de onboarding própria pro Grupo (rotear pro Squad LPago Arcane ou adaptar a existente
-— decidir na hora), (3) escrever a mensagem do Grupo depois que a página existir. Não escrever
-essa mensagem agora — ficaria presa numa página que descreve a experiência errada.
+---
+
+## 2b. Mentoria em Grupo — R$5.000/12m (12x R$500), R$7.500 a partir de 15/10
+
+> Histórico: adiada em 14/09 porque a página de onboarding só descrevia o 1:1. Destravou quando a
+> página ganhou a versão do Grupo em `onboarding.incubadoradeexpert.com.br/grupo` (commits a845f45
+> e b330258). Escrita em 13/10, véspera da Live da Black Expert, seguindo a mensagem da Individual
+> (pedido da Karol).
+
+**Quando enviar:** assim que o pagamento aparecer confirmado (Voomp, produto `grupo`, checkout
+`/16366` — ou pix direto).
+
+**Pré-requisito:** nenhum arquivo pra anexar. A página `/grupo` explica a jornada de 12 meses, as
+4 oficinas ao vivo, as 8 sessões liberadas pela entrega, o suporte e tem o link do DNA do Expert.
+O webhook da Voomp já libera a Área de Membros pro Grupo (`'grupo': ['expert360', 'mentoria']`).
+
+**MENSAGEM (WhatsApp):**
+```
+Seja bem-vinda(o) à Mentoria em Grupo da Incubadora de Expert! Você está
+começando uma jornada de 12 meses — do método autoral validado até as
+primeiras vendas reais.
+
+Antes de tudo, dá uma passada pela página de onboarding — ela explica como
+funciona a jornada, as oficinas ao vivo, as sessões comigo e o suporte:
+
+https://onboarding.incubadoradeexpert.com.br/grupo
+
+Seu acesso à Área de Membros já está liberado (usa o mesmo e-mail da compra
+pra entrar):
+
+https://membros.incubadoradeexpert.com.br
+
+Sua primeira entrega é responder o DNA do Expert (o link também está na
+página de onboarding) — assim que eu receber suas respostas, entro em contato
+pra agendarmos sua Sessão 1.
+
+Parabéns pela decisão!
+```
+
+**O que muda em relação à Individual:**
+- Link da página aponta pra `/grupo` (sem o `/grupo` a pessoa cai na versão 1:1).
+- "os encontros" virou "as oficinas ao vivo, as sessões comigo" — o formato do Grupo.
+- "A única coisa que falta antes de eu marcar nossa 1ª sessão" virou "Sua primeira entrega" — no
+  Grupo a regra é "a sua entrega libera a sua sessão", e a página chama o DNA de primeira entrega.
+- Mantido o fechamento padrão: "entro em contato pra agendarmos" + "Parabéns pela decisão!".
 
 ---
 
@@ -227,6 +268,5 @@ API, ou pelo menos um alerta pra Karol saber que precisa mandar). Este arquivo j
 como fonte das mensagens por produto quando isso for construído.
 
 **Próximo passo combinado:** adaptar esse mesmo formato pros demais produtos (Método Express,
-Método VIP, Expert360º, Diagnóstico Ferramentas, Grupo) — cada um entra numa seção nova aqui,
-mesma lógica: só o que muda de fato entre eles. Grupo provavelmente reaproveita quase 100% da
-seção do Individual (ver nota lá).
+Diagnóstico Ferramentas) — cada um entra numa seção nova aqui, mesma lógica: só o que muda de
+fato entre eles. (VIP, Expert360º e Grupo já feitos.)
