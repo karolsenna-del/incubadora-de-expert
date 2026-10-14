@@ -57,3 +57,4 @@
 | 11/10/2026 | individual-domingo-2026-10-11 | 1 | 18144637720600629 | sim (ver log de execucao) |
 | 12/10/2026 | chamada-grupo-lives-segunda-2026-10-12 | 6 | 18094388528172005, 17947554483085092, 18371916184209089, 18001355445041562, 18109343627185843, 18246231052311617 | sim (ver log de execucao) |
 | 13/10/2026 | enquete-positiva-travas-2026-10-12 | 1 | 17893357485435930 | sim (ver log de execucao) |
+| 14/10/2026 | individual-terca-2026-10-13 | 1 | 17886859047492422 | sim (ver log de execucao) |
