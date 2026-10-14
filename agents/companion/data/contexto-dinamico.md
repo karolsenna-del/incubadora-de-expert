@@ -153,6 +153,7 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 - Roteiro com as 47 trocas de slide marcadas (▶ SLIDE NN) pro teleprompter; 3 trechos quebrados na edicao de 13/10 recuperados.
 - Videos e trilha ficam so local (.gitignore *.mp4/*.mp3) — nao mover a pasta `live-black-expert-videos`.
 - Pendentes: ensaio com o Meet no celular; weekly sugerida pra 15/10; 3 Reels de depoimento aguardando aprovacao.
+- **14/10 (dia da live):** videos do deck passaram certinho com o som da guia. Voz da Karol saiu duplicada porque o celular tambem estava na reuniao com microfone/som — resolvido tirando o celular. Regra pra proximas lives: celular so entra pelo modo Companheiro (sem microfone/som).
 
 **Sessao 09/10 — Oferta do Grupo consolidada (Mentoring Creator):** `business/campanhas/incubadora-de-expert-grupo/oferta-grupo-v2.md` = fonte da oferta. Incubadora apresentada como **programa de aceleracao de carreira digital** (foco no expert; 4 pilares Metodo → Validacao → Posicionamento → Escala; primeira venda = validacao pessoal/profissional). 8 sessoes individuais (2 Raio-X de Venda, React da 1a Live, ultima = Expert Plan). Central do Mentor = conducao de leads + alunos num link (pix). GSL fora da Black. Simulador fundido no Vendedor Secreto. Taxa reduzida Voomp 5,99% + R$1 [confirmar com a Voomp]. Dia 14 abre com economia de R$2.500. Pagina de venda do aluno nao entra no Grupo. Falta: confirmar Voomp, atualizar ficha de venda, depois pagina + roteiro da live de 14/10.
 

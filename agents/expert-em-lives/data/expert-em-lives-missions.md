@@ -41,3 +41,5 @@
 **Ajustes da Karol (11/10):** abertura assume a oferta de frente (sem gancho de curiosidade — todos sabem que é live de oferta); prova de setembro = "tem gente esperando a sua oferta, mas você precisa oferecer" (não "foi rápido"); projeto paralelo é como executa, não a promessa — decisão principal/renda extra na Escala; link black.incubadoradeexpert.com.br; "quem comprou avisa aqui" fora.
 **Executada em:** aguardando (14/10).
 **Aprendizado:** registrar depois da live (vendas na live vs. no resto da noite).
+
+- 14/10 — Live da Black Expert (ajuste no dia): ancoragem de valor no slide 39 (8 sessões R$4.000 + funil montado R$2.000 só na Black + 12 oficinas R$2.364 = R$8.364; agente R$500 no bônus), funil montado só na Black (depois, com o Vendedor Secreto), temas das oficinas fora. Cortes de conteúdo antes da oferta (borda/missa, 3 lançamentos, 5 crenças, 4 fases detalhadas) — fala antes da virada caiu de ~1.600 pra ~1.100 palavras. Aprendizado: live de oferta só leva história que vende a oferta.

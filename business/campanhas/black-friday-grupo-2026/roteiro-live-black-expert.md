@@ -110,7 +110,11 @@ compara [...] eleva em muitos níveis."
 
 ---
 
-## BLOCO 2 — HISTÓRIA: O HERÓI RELUTANTE (~11 min)
+## BLOCO 2 — HISTÓRIA: O HERÓI RELUTANTE (~7 min)
+
+> Cortes de 14/10 (decisão da Karol: nada de conteúdo antes da oferta). Ficam as histórias que vendem
+> a oferta: não gosto de vender, rainha do método, agosto → setembro. Slides 7 e 9 continuam no deck,
+> com fala de uma linha: passa rápido.
 
 **▶ SLIDE 06** · Minha história · o auge
 
@@ -128,18 +132,10 @@ tem uma vontade aí dentro que não cabe nessa rotina."
 
 **▶ SLIDE 07** · Você só aprende a nadar soltando a mão da borda
 
-**A saída: a borda (#8)**
+**A saída: a borda (#8)** · passa rápido
 
-"Um dia, num scroll qualquer, eu vi a frase: *'você só aprende a nadar soltando a mão da borda.'*
-
-No dia seguinte eu fui à missa e a frase não saía da minha cabeça. O coração acelerava, eu chorava
-sem parar. Pra mim, foi como se Deus estivesse falando: *'vai, solta a mão.'*
-
-E eu entendi ali que fazia anos que eu estava segurando a borda. Arriscando pouco. A cada erro, eu
-voltava pra rotina, porque a rotina era segura.
-
-É isso que a gente faz o tempo todo, né? A gente segura a estabilidade, segura a segurança, e não sai
-da zona de conforto. No dia seguinte, eu avisei a minha gerente que ia sair."
+"Um dia eu vi a frase: *'você só aprende a nadar soltando a mão da borda.'* No dia seguinte, eu avisei a
+minha gerente que ia sair."
 
 **▶ SLIDE 08** · "Eu não gosto de vender."
 
@@ -150,21 +146,10 @@ pessoa da planilha. E o meu plano no digital era exatamente esse: ensinar e não
 
 **▶ SLIDE 09** · 8 lançamentos que não deram certo
 
-**As tentativas: cada lançamento foi um erro diferente**
+**As tentativas** · passa rápido
 
-"Eu fiz 8 lançamentos que não deram certo. E não foi o mesmo erro 8 vezes. Cada um foi um erro
-diferente.
-
-No primeiro, eu ensinava gestão pra empresários. Na análise do lançamento, uma mentora experiente me
-avisou: *'você é concursada vendendo pra empresário, isso não vai dar certo.'* Eu não vivia o que eu
-vendia e não conhecia a minha persona de verdade. E eu ignorei.
-
-Depois, eu fui ensinar produtividade pra mães de bebê. A cada lançamento que não vendia, eu baixava o
-preço: de R$797 pra R$497.
-
-E teve a venda fantasma. Um lançamento inteiro, uma venda só, na última hora do carrinho. A aluna
-nunca entrou na plataforma. Eu fui atrás e nunca tive resposta. O meu método era geral demais, e
-venda aleatória não é validação.
+"Eu fiz 8 lançamentos que não deram certo. E não foi o mesmo erro 8 vezes: cada um foi um erro
+diferente. E a cada lançamento que não vendia, eu baixava o preço.
 
 **▶ SLIDE 10** · Não era o número. Era a crença.
 
@@ -216,39 +201,27 @@ conhecimento resolve. Mas ela não vai te achar sozinha. Você precisa oferecer.
 "Eu já estive onde você está. Com conhecimento, com vontade, e travada na mesma ordem errada. E é
 essa ordem que eu quero te mostrar agora."
 
+> Fora da história (14/10): borda/missa contada em detalhe, os 3 lançamentos (gestão pra empresário,
+> mães de bebê, venda fantasma).
 > Fora da história (decisão 11/10): FHT/Black Infinita, "venda era palavra feia", tempestade,
 > Austrália/agência, "largou antes de estar pronta", "saiu com 2 clientes".
 
 ---
 
-## BLOCO 3 — COLAPSO: AS CRENÇAS QUE CAEM (~6 min)
+## BLOCO 3 — COLAPSO: AS CRENÇAS QUE CAEM (~1 min)
+
+> 14/10: as 5 crenças saíram da fala (eram conteúdo antes da oferta). Os 2 slides ficam no deck:
+> uma linha em cada, passa rápido.
 
 **▶ SLIDE 15** · O que o mercado diz que você precisa (1 de 2)
 
-"Eu vou te falar das coisas que o mercado diz que você precisa. Todas fazem sentido. Só que, pra quem
-está começando no digital, elas chegam na ordem errada.
-
-**'Eu ainda não estou pronto. Preciso estudar mais antes.'**
-Essa é a frase que mais segura gente competente no mesmo lugar. Você já sabe o suficiente. O que falta
-é método e conversa com gente de verdade. Prontidão não é um estado. É hábito de repetição.
-
-**'Se a venda não vem, eu melhoro o método.'**
-Eu fiz isso. Agosto inteiro. Melhorar o método parece trabalho, mas é o lugar mais confortável do
-mundo, porque ali ninguém te diz não. Quando eu parei de melhorar e fui conversar, a venda veio.
-
-**'Eu preciso de mais post. Preciso de anúncio.'**
-Não é falta de post, é falta de mensagem. E anúncio não conserta oferta confusa. Ele só faz mais gente
-ver a confusão, e mais rápido.
+"O mercado vai te dizer que falta estudar mais, melhorar o método, postar mais, fazer anúncio. Tudo
+isso faz sentido, só que, pra quem está começando no digital, chega na ordem errada.
 
 **▶ SLIDE 16** · O que o mercado diz que você precisa (2 de 2)
 
-**'Alguém menos experiente vende, então o problema sou eu.'**
-Quem vende mais nem sempre sabe mais. Muitas vezes, só deixou mais claro pra quem é e por que é
-diferente.
-
-**'Meu público não tem dinheiro pra pagar.'**
-O medo de cobrar não é informação sobre o mercado. É informação sobre como você se vê. Eu baixei o meu
-preço a cada lançamento e continuei sem vender."
+E não, o problema não é o seu público não ter dinheiro. Eu baixei o meu preço a cada lançamento e
+continuei sem vender."
 
 ---
 
@@ -277,29 +250,16 @@ O problema nunca foi você. Foi a ordem."
 
 ---
 
-## BLOCO 5 — ORDEM: AS 4 FASES (~5 min)
+## BLOCO 5 — ORDEM: AS 4 FASES (~1 min)
+
+> 14/10: as fases são mostradas por dentro no mapa da jornada (slide 34). Aqui, só a frase.
 
 🖼️ **P4 · print dentro do slide 20 (a jornada das 4 fases, embaixo da linha) · Anália** · fica na tela enquanto você fala do assunto. Não precisa ler.
 
 **▶ SLIDE 20** · A ordem certa · a jornada das 4 fases
 
-"A ordem certa tem 4 fases.
-
-**Fase 1: Método Autoral.** Conhecimento é o que você estudou. Método é o que você viveu. A persona
-nasce da sua história, e o método traz o que você viveu, usou e aprendeu. Por isso ninguém copia.
-
-**Fase 2: Validação.** As Vendas Secretas. Você testa a sua oferta em conversas reservadas, antes de
-qualquer exposição. É o ensaio geral: você treina a fala, ganha segurança, aprende a conduzir a
-negociação. E faz a sua primeira venda no digital."
-
-**Fase 3: Posicionamento.** Aí sim você aparece, com a autoridade que já tem, depois de ensaiar e já
-com prova.
-
-**Fase 4: Escala.** O seu conhecimento virou um negócio. Hora de novos funis, novos produtos e mais
-faturamento. E é aqui que você decide: fazer disso o seu negócio principal ou continuar tratando como
-renda extra.
-
-Essa é a jornada da Incubadora de Expert. Primeiro o método, depois a conversa, depois o palco."
+"A ordem certa tem 4 fases: **Método Autoral, Validação, Posicionamento e Escala.** Primeiro o
+método, depois a conversa, depois o palco. Daqui a pouco eu te mostro essa jornada por dentro."
 
 ---
 
@@ -318,7 +278,7 @@ vende pela primeira vez.
 
 Eu vi isso acontecer com a Milena, da Conduz Agro. Eu montei a Venda Secreta dela: oferta, roteiro da
 sessão e pré-diagnóstico. Uma semana depois, ela vendeu a primeira mentoria de 12 meses da vida dela.
-R$2.500, em duas sessões."
+R$2.500, em duas sessões. É isso que eu faço pra quem entra hoje."
 
 > Regra: não falar em "% de conversão", não atribuir a venda da Milena ao funil completo, não
 > prometer venda. A primeira venda é um caminho desenhado, não garantia.
@@ -337,9 +297,9 @@ R$2.500, em duas sessões."
 redesenhei tudo:
 - **8 encontros individuais comigo.** Uma mentoria muito mais personalizada: cada sessão olha pro seu
   método, pra sua oferta e pras suas vendas.
-- **O seu Funil de Vendas Secretas sai montado.** Do primeiro contato ao fechamento.
-- **12 Oficinas Destrava Expert,** pra trabalhar as travas de quem está chegando no digital: o método,
-  as vendas e a escala.
+- **O seu Funil de Vendas Secretas sai montado.** Do primeiro contato ao fechamento. Só pra quem entra
+  na Black.
+- **12 Oficinas Destrava Expert,** uma por mês, ao vivo e gravadas.
 
 **▶ SLIDE 25** · Recado 2 · Último dia antes do preço novo
 
@@ -454,10 +414,11 @@ negócio."
 
 **▶ SLIDE 35** · 12 Oficinas Destrava Expert
 
-"**12 Oficinas Destrava Expert,** uma por mês, ao vivo e gravadas. Na Validação: Proposta Validada,
-Vendas Secretas 1 e 2 e Estruturação do Produto. No Posicionamento: Autoridade Tríplice e perfil, bio e
-linha editorial. Na Escala: funil de lives, venda por mensagem, Expert Plan de faturamento, novos
-produtos, conteúdo de Reels e Stories e hot seat de vendas. E começa com o Desafio, de 19 a 23/10."
+"**12 Oficinas Destrava Expert,** uma por mês, ao vivo e gravadas. E começa com o Desafio, de 19 a
+23/10."
+
+> 14/10: temas das oficinas saíram do deck e da fala (decisão da Karol). Se o funil é montado pra cada
+> aluno, não faz sentido anunciar oficina de construção de Vendas Secretas.
 
 🖼️ **P7 · print dentro do slide 35 ("12 Oficinas Destrava Expert") · Claudia Barreto e Sandra Mello, lado a lado** · fica na tela enquanto você fala do assunto. Não precisa ler. As duas assistem à Live Expert360º.
 
@@ -465,7 +426,11 @@ produtos, conteúdo de Reels e Stories e hot seat de vendas. E começa com o Des
 
 "O seu **Funil de Vendas Secretas montado.** Do primeiro contato ao fechamento, tudo pronto pra você
 vender sem depender de audiência nem de lançamento: captar leads, abordagem, pré-diagnóstico, agenda a
-sessão, diagnóstico, oferta e fechamento. Disse sim, vai pro onboarding. Disse não, entra no follow-up."
+sessão, diagnóstico, oferta e fechamento. Disse sim, vai pro onboarding. Disse não, entra no follow-up.
+
+E presta atenção: **eu monto o seu funil só na Black.** Montar um por um pra todo mundo é impraticável,
+e é exatamente por isso que existe o **Vendedor Secreto**, o agente que cria o roteiro das suas vendas.
+Quem entrar em outra data monta junto com o agente. Quem entra hoje recebe montado por mim."
 
 **▶ SLIDE 37** · IA do seu lado
 
@@ -482,11 +447,16 @@ antes das sessões de verdade."
 a tabela pública é 7,99% + R$1) e um **canal exclusivo**: você, eu e o suporte. Não é grupo com a turma
 toda."
 
-**▶ SLIDE 39** · Quanto vale pra você…
+**▶ SLIDE 39** · Se fosse contratar separado (âncora) + Quanto vale pra você…
 
-**Âncora**
+**Âncora** (valores da Karol, 14/10)
 
-"Agora eu quero que você pense numa coisa. Quanto vale pra você fazer a sua primeira venda no digital,
+"Se você fosse contratar tudo isso separado: as minhas **8 sessões individuais**, a R$500 cada, já
+dariam **R$4.000**. O **funil montado por mim**, que eu cobro **R$2.000** pra criar, só na Black. E as
+**12 oficinas**, que eu poderia cobrar facilmente R$197 cada, mais **R$2.364**. Só essas três entregas
+somam **R$8.364**, fora os agentes, o Vendedor Secreto, o Studio e o canal exclusivo.
+
+Agora eu quero que você pense numa coisa. Quanto vale pra você fazer a sua primeira venda no digital,
 com o seu método, sem precisar se expor antes da hora?"
 
 *(pausa)*
@@ -511,7 +481,8 @@ E quem entra hoje leva também:
 
 1. **Fura-Fila, com a Karol do lado,** pra quem entrar primeiro. Depois do Desafio, eu monto a sua Venda
    Secreta e entro com você na sua primeira sessão de venda.
-2. **Agente do Método Autoral,** pros 5 primeiros. Um agente de IA treinado no seu método.
+2. **Agente do Método Autoral,** pros 5 primeiros. Um agente de IA treinado no seu método. Eu cobro
+   R$500 pra criar um desse.
 3. **Desafio Seu Método em 5 Dias,** ao vivo, de 19 a 23/10, com premiação, pra todo mundo. O melhor
    trabalho ganha as 5 ferramentas essenciais pra uma mentoria estruturada e de alto valor,
    personalizadas pro próprio método.
