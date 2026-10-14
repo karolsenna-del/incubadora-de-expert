@@ -145,6 +145,15 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 13/10 — Vespera da live da Black Expert (Companion → Gestor de Infra):**
+- Teste ponta a ponta ok (pagina, pre-checkout → CRM, checkout R$5.000, oferta R$7.500 ja ativa, troca dos botoes 23h59 de 14/10). E-mails #8 a #11 agendados no Resend pra 14-15/10.
+- Convite do Meet enviado pra 91 contatos (sala de 100 do Business Starter); 30 mais frios + 8 invalidos fora.
+- **Deck da live virou a operacao inteira** (`business/campanhas/black-friday-grupo-2026/live-black-expert-apresentacao.html`): videos dentro dos slides (uma guia so no Meet, com audio da guia), F = tela cheia sem barra, slide 1 = capa + musica (M) + video de abertura com nome de quem fala ao lado; video final da Analia recortado de novo com a voz dela (slide 44, antes das duvidas); duvidas com QR; oficinas atualizadas (oferta-grupo-v2, sem meses); fluxo do funil no slide 36; "Pague R$2.500 a menos hoje" nos bonus; "hoje nao e desconto" saiu.
+- Legendas: profissao das alunas (Analia medica nutrologa, Emilly consultora de imagem, Dalvelyn e Rosiani advogadas, Milena engenheira, Rodrigo consultor financeiro — todos alunos da Incubadora); Vagner e Tasso = clientes de outros produtos; "live semanal" → Live Expert360º.
+- Roteiro com as 47 trocas de slide marcadas (▶ SLIDE NN) pro teleprompter; 3 trechos quebrados na edicao de 13/10 recuperados.
+- Videos e trilha ficam so local (.gitignore *.mp4/*.mp3) — nao mover a pasta `live-black-expert-videos`.
+- Pendentes: ensaio com o Meet no celular; weekly sugerida pra 15/10; 3 Reels de depoimento aguardando aprovacao.
+
 **Sessao 09/10 — Oferta do Grupo consolidada (Mentoring Creator):** `business/campanhas/incubadora-de-expert-grupo/oferta-grupo-v2.md` = fonte da oferta. Incubadora apresentada como **programa de aceleracao de carreira digital** (foco no expert; 4 pilares Metodo → Validacao → Posicionamento → Escala; primeira venda = validacao pessoal/profissional). 8 sessoes individuais (2 Raio-X de Venda, React da 1a Live, ultima = Expert Plan). Central do Mentor = conducao de leads + alunos num link (pix). GSL fora da Black. Simulador fundido no Vendedor Secreto. Taxa reduzida Voomp 5,99% + R$1 [confirmar com a Voomp]. Dia 14 abre com economia de R$2.500. Pagina de venda do aluno nao entra no Grupo. Falta: confirmar Voomp, atualizar ficha de venda, depois pagina + roteiro da live de 14/10.
 
 **Sessao 08/10 — Mentoria em Grupo redesenhada pra Black Expert (Mentoring Creator):**
