@@ -201,7 +201,7 @@ function criarAbaAtividades_(ss, total) {
   sh.setColumnWidth(6, 520);
   sh.setHiddenGridlines(true);
 
-  sh.getRange("A1:F1").merge().setValue("DIÁRIO DE APLICAÇÃO — CONDUZ AGRO")
+  sh.getRange("A1:F1").merge().setValue("PLANO DE APLICAÇÃO DIÁRIA — CONDUZ AGRO")
     .setBackground(COR_OLIVE_DEEP).setFontColor(COR_PAPER).setFontWeight("bold").setFontSize(14)
     .setHorizontalAlignment("center").setVerticalAlignment("middle");
   sh.setRowHeight(1, 34);
