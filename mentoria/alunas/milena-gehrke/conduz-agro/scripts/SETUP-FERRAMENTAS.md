@@ -66,6 +66,12 @@ Cada planilha recebe **só o script dela** (são independentes):
 2. Clica em **Executar** (▶), autoriza se pedir
 3. Aparece a aba **"Plano de Aplicação Diária"** com as 24 semanas (1 por sessão) × 5 atividades — Etapa 1 (semanas 1-8) com fundo claro, Etapa 2 (semanas 9-24) com fundo esverdeado. Cada atividade tem um ícone de tipo (🎧 áudio de mentalidade · ✍️ escrita · 🪞 treino no espelho · 🎯 desafio rápido · 🧪 teste/autoavaliação · 👥 avaliação com terceiros · 🎭 simulação · 💭 reflexão) — legenda fica na linha 3 da própria aba. **Todo o conteúdo das atividades é rascunho meu** — precisa de revisão da Milena antes de ir pro aluno (mesma ressalva de todo conteúdo de fala/script deste squad)
 
+**Diário de Aplicação** *(novo, 16/10 — arquivo do ALUNO, 1 cópia por aluno)* — **já criado e rodado em 16/10:** https://docs.google.com/spreadsheets/d/1IZjtrStImmCEq6qJnqzcxcAry0wIxvx4ZH2fo6RU1vE/edit (pasta "Ferramentas - Conduz Agro"). Passos abaixo só se precisar recriar:
+1. Cria uma planilha nova em branco ("Diário de Aplicação — Conduz Agro") → Extensões → Apps Script → cola `apps-script-diario-aplicacao.gs`
+2. Confirma que a função selecionada é `criarDiarioAplicacao` → **Executar** (▶), autoriza se pedir
+3. Aparecem 2 abas: **"Atividades"** (as 120 atividades do Plano de Aplicação Diária, texto idêntico, com quadradinho de ✓, contador "X de 120 feitas" no topo e linha riscada quando marcada) e **"Dia a dia"** (agrupada por semana: Data · Atividade · **O que anotar** · Minha anotação). A coluna "O que anotar" diz o formato de cada registro (lista de 3, frase, antes x depois…) — **rascunho meu, validar com a Milena**
+4. Essa planilha vira o modelo: pra cada aluno novo, **Arquivo → Fazer uma cópia** e compartilha a cópia com ele como editor. Entra junto com o Plano de Aplicação Diária, no fechamento da S1
+
 **Mapa Pessoal de Padrões** (tabela única, sem MODELO):
 1. Confirma que a função selecionada é `criarMapaPadroes`
 2. Clica em **Executar** (▶), autoriza se pedir
