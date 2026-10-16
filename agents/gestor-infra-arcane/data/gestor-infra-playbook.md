@@ -25,9 +25,13 @@
 12. [SOP-018] Implementar pagina de vendas estatica a partir de copy aprovada (reuso template Karol)
 13. [SOP-019] Trocar CTA de WhatsApp por checkout (Voomp/Hotmart/etc) + icone flutuante de WhatsApp pra duvidas
 14. [SOP-020] Publicar LP estatica na Vercel + subdominio (Registro.br)
-15. [SOP-023] Atualizar descrições de aula na Área de Membros (gerador + deploy)
-17. [SOP-025] Envio 1:1 por WhatsApp via Dualhook Runtime API (modelo Meta + script idempotente)
-16. [SOP-024] Campanha de e-mail via Resend Broadcasts (lista, segmento, teste, envio/agendamento)
+15. [SOP-021] Publicar Stories automaticamente (insta-scheduler)
+16. [SOP-022] Automação de Direct por palavra-gatilho (estilo ManyChat)
+17. [SOP-023] Atualizar descrições de aula na Área de Membros (gerador + deploy)
+18. [SOP-024] Campanha de e-mail via Resend Broadcasts (lista, segmento, teste, envio/agendamento)
+19. [SOP-025] Envio 1:1 por WhatsApp via Dualhook Runtime API (modelo Meta + script idempotente)
+20. [SOP-026] Pré-checkout (nome + WhatsApp) antes do checkout Voomp
+21. [SOP-027] Ferramenta em Google Sheets com Apps Script (planilha-modelo + link de cópia pro aluno)
 
 > **Fora do escopo:** Setup inicial do pipeline (instalar n8n + Chatwoot, criar tabelas Supabase + RPCs, configurar Meta Business Manager, gerar System User Token, importar os workflows core WF-INBOUND/AGENT-CORE/OUTBOUND). Isso e responsabilidade do **agente de setup** — outro agente dedicado. Este squad so opera o pipeline ja instalado.
 
@@ -1207,6 +1211,24 @@ clicar "Enviar para análise" (aguardando confirmação explícita da Karol ante
 4. **Testar:** rodar o handler localmente com lead "TESTE GESTOR INFRA", conferir a linha e apagar. Depois do deploy, POST de teste na URL pública + apagar.
 5. **Deploy e env vars:** o classificador bloqueia o agente de gravar a service_role na Vercel e de rodar `vercel --prod`. A Karol roda os 2 comandos (ver Mission Log #89).
 6. **Complemento:** a Voomp também tem o evento **Checkout** (abandono de quem preencheu o formulário da Voomp) em Produto > Entregas. O pré-checkout pega quem desistiu ANTES de chegar lá.
+
+## SOP-027: Ferramenta em Google Sheets com Apps Script (planilha-modelo + link de cópia pro aluno)
+
+**Criado:** 2026-10-16 (revisão mensal — padrão repetido nas ~16 ferramentas da Conduz Agro e nos diagnósticos) | **Modelo:** `mentoria/alunas/milena-gehrke/conduz-agro/scripts/` (`.gs` + `SETUP-FERRAMENTAS.md`) | **Missões:** #55, #56, #98, #99
+
+1. **Script no repo primeiro:** o `.gs` mora no repo e é a fonte. Fórmula escrita por `setFormula` não leva separador de argumento (REGRA-025).
+2. **Criar a planilha já na pasta certa:** Drive MCP `create_file` (mimeType planilha) com `parentId` da pasta. Nasce na conta e na pasta certas, sem depender da sessão do Chrome (dispensa a REGRA-022 nesse passo).
+3. **Colar o código:** planilha → Extensões → Apps Script. Copia o `.gs` pro clipboard do Windows (`Set-Clipboard`) e dá Ctrl+A + Ctrl+V no editor. Confere com `.length` do modelo do Monaco contra o arquivo local (REGRA-020).
+4. **Rodar:** seleciona a função no dropdown (confere com zoom) → Executar. O pop-up de OAuth abre fora do grupo de abas do Claude in Chrome, então a Karol aprova (pedir o ok antes). Se faltar escopo, ver REGRA-024.
+5. **Testar de verdade:** marcar/desmarcar 1 caixa, conferir contador e formatação condicional e desfazer. Ao digitar numa célula, clicar NA CÉLULA e conferir a caixa de nome antes de digitar. Clique na caixa de nome pode não pegar e o texto cair na célula ativa (#99: apagou 2 checkboxes; desfeito com Ctrl+Z).
+6. **Entrega pro aluno (padrão Central do Aluno):** permissão "Qualquer pessoa com o link: Leitor" + card apontando pra `.../d/{id}/copy`. Mudar o acesso geral é bloqueado pro agente (Permission Grant), então a Karol clica e o agente confere com `get_file_permissions` (`type: anyone, role: reader`). Só depois publica o site, senão o aluno toma "acesso negado".
+7. **Publicar o hub:** `vercel --prod --yes` dentro da pasta (`central-alunos/` ou `central-conduz/`, conferir `pwd`, REGRA-016) e confirmar por curl que o ID novo está no ar e o antigo saiu.
+8. **Documentar:** link no `SETUP-FERRAMENTAS.md` + linha no Mission Log. Repo, planilha, site e artifact não sincronizam sozinhos (memória `project_conduz_agro_apps_script_sync`).
+
+**Troubleshooting:**
+- "Erro de análise de fórmula" / `#ERROR!` → separador de localidade (REGRA-025).
+- "Não é possível remover todas as páginas" → criar aba vazia temporária antes de rodar a função que recria a aba.
+- Ferramenta cumulativa (CRM, Banco de Comunicação…) → conferir se tem dado real antes de rodar a função que apaga e recria.
 
 ## Template de SOP
 

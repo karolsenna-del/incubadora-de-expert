@@ -356,6 +356,16 @@ automação também estiver travada do lado dela (aconteceu 1x, resolveu na hora
 
 ---
 
+## REGRA-025: Fórmula gravada por script em planilha pt-BR não pode depender de separador
+
+**Contexto:** No Diário/Plano de Aplicação Diária da Conduz Agro (16/10, missão #98), o contador `setFormula('=COUNTIF(A5:A124,TRUE)&" de 120 · "&TEXT(...,"0%")')` virou `#ERROR!` ("Erro de análise de fórmula"). A planilha em pt-BR espera `;` como separador de argumento, e a vírgula quebra a fórmula, sem erro no script.
+**Regra:**
+- Em fórmula gravada por Apps Script (ou CSV), preferir construção SEM separador de argumento: `SUMPRODUCT(faixa*1)` pra contar checkbox, `INT(x*100/total)&"%"` no lugar de `TEXT(...)`. Funciona em qualquer localidade (mesma linha da memória `reference_csv_google_sheets`).
+- Se precisar de função com 2+ argumentos: usar `setFormulaR1C1`/`setFormula` com a sintaxe em inglês só depois de conferir a localidade (`SpreadsheetApp.getActive().getSpreadsheetLocale()`), ou gravar o valor calculado no script.
+- Depois de rodar, sempre olhar a célula da fórmula no screenshot. O script termina "Execução concluída" mesmo com a fórmula quebrada.
+
+---
+
 ## Registro de Incidentes
 
 | # | O que aconteceu | Fix | Regra criada |
