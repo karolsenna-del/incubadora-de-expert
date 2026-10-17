@@ -25,3 +25,9 @@ outras rules. Exemplos:
 ## Suas regras
 
 <!-- Escreva abaixo. Apague estes exemplos quando colocar as suas. -->
+
+### Gestor de Infra: uma pasta só
+
+- `/techOps` e `/gestor-infra-arcane` são o MESMO agente. A pasta canônica é `agents/gestor-infra-arcane/` (vault, regras, playbook e Mission Log reais). Os dois atalhos (`.claude/commands/techOps.md`, `.claude/commands/gestor-infra-arcane.md` e os espelhos em `.agents/skills/source-command-*`) apontam pra ela.
+- Atualização do Pack Arcane costuma recriar `agents/gestor-infra/` (cópia de fábrica, vault vazio) e repontar o `/techOps` pra lá — já aconteceu em 14/08/2026. Depois de qualquer update do Pack, conferir: se o `/techOps` voltou a apontar pra `agents/gestor-infra/`, repontar pra `agents/gestor-infra-arcane/` e remover a cópia de fábrica (antes, comparar se ela trouxe SOP/regra nova que valha mesclar na canônica).
+- Nunca registrar credencial, missão ou SOP em `agents/gestor-infra/`.
