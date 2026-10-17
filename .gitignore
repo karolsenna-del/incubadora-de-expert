@@ -66,3 +66,6 @@ __pycache__/
 
 # Garimpeiro de Leads — rodadas com dado pessoal de prospect (LGPD), nunca commitar
 agents/garimpeiro-leads-instagram/rodadas/
+
+# ETL angulos-copy-anuncios: material do curso pago fica so local (repo publico)
+agents/etlmaker/kbs/angulos-copy-anuncios/00-pipeline/sources/
