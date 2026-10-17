@@ -1,0 +1,23 @@
+critical_audit:
+  kb_slug: "angulos-copy-anuncios"
+  timestamp: "2026-10-17"
+  frameworks: {total_in_mapa: 16, found_in_output: 16, missing: [], coverage: "100%"}
+  cardinal_rules: {total_in_mapa: 15, found_in_volumes: 15, found_in_regras_doc: 15, missing_from_volumes: [], missing_from_regras: [], coverage: "100%"}
+  glossary_terms:
+    total_in_mapa: 37
+    found_in_glossary: 37
+    corrected_in_audit: ["Testemunha adversa (adicionado ao GLOSSARIO e ao VOL-02)", "Escala lateralizada (termo explicitado no VOL-08)"]
+    coverage: "100% após correção"
+  cross_volume:
+    contradictions_internal_kb: 0
+    author_contradictions_registered: 7
+    note: "As contradições são do próprio autor entre aulas; aparecem lado a lado nos volumes, em REGRAS-CARDINAIS e no MAPA §10, sem resolução"
+    invalid_cross_refs: 0
+  actionable_artifacts:
+    total_in_mapa: 28
+    found_in_volumes: 28
+    found_in_repertorio: 28
+    by_type: {templates: "7/7", formulas: "1/1", benchmarks: "1/1", checklists: "3/3", workflows: "6/6", scripts: "3/3", reference_tables: "7/7"}
+    coverage: "100%"
+  repertorio_completeness: {sections_present: "11/11", orphan_items: 0}
+  overall_verdict: "PASS"

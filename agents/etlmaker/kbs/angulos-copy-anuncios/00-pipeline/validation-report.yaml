@@ -1,0 +1,42 @@
+validation_report:
+  kb_slug: "angulos-copy-anuncios"
+  timestamp: "2026-10-17"
+  version: "3.0"
+  layer_2_verdict: "PASS"
+  pass_1_coverage:
+    total_domains: 10
+    domains_covered: 10
+    subtopics_coverage: 97.0
+    uncovered: ["Conteúdo das bibliotecas vendidas à parte (formatos, ganchos, headlines, roteiros, CTAs) — fora do material recebido", "Vídeos dos 36 links de exemplo no Instagram — só URL"]
+    verdict: "PASS"
+  pass_2_fidelity:
+    method: "Verificação automática de TODAS as citações entre aspas (≥25 caracteres) dos 8 volumes + REPERTORIO + REGRAS contra o texto das 14 fontes, com revisão manual das não localizadas"
+    total_checks: 950
+    not_located_automatic: 40
+    false_positives: 28
+    distorted_corrected: 12
+    invented: 0
+    fidelity_score: 98.7
+    issues_fixed: ["citações parafraseadas apresentadas como literais (VOL-01, 02, 04, 05, 06, 07, REGRAS, REPERTORIO) reescritas na letra da fonte ou sem aspas"]
+    verdict: "PASS"
+  pass_3_richness:
+    volumes: {VOL-01: 541, VOL-02: 797, VOL-03: 771, VOL-04: 439, VOL-05: 355, VOL-06: 435, VOL-07: 401, VOL-08: 562}
+    all_pass: true
+    verdict: "PASS"
+  pass_4_voice:
+    consistency_score: 90.0
+    notes: "Falas do autor preservadas em citação (entendeu?, Lego/Megazord, time campeão, cara de propaganda, cutucar a ferida); texto de ligação em português neutro"
+    verdict: "PASS"
+  pass_5_consistency: {contradictions: 0, cross_refs_valid: true, verdict: "PASS"}
+  pass_6_integrity: {volumes_planned: 8, volumes_present: 8, transversal_planned: 4, transversal_present: 4, completeness_report: true, verdict: "PASS"}
+  aggregate:
+    coverage: 97.0
+    fidelity: 98.7
+    richness: 100.0
+    voice: 90.0
+    consistency: 100.0
+    integrity: 100.0
+    score: 98.0
+    verdict: "APPROVED"
+  revision_items: []
+  revision_cycle: 1

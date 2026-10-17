@@ -1,0 +1,65 @@
+completeness_report:
+  version: "3.0"
+  kb_name: "Ângulos de Copy para Anúncios"
+  kb_slug: "angulos-copy-anuncios"
+  generated_at: "2026-10-17"
+  generated_by: "ETLmaker v3.0"
+  source:
+    author: "Renan Matheus (@renanmsap)"
+    total_sources: 14
+    total_words: 74828
+    formats: ["transcrição de vídeo (legenda nativa)", "planilha", "documento"]
+  pipeline:
+    phase_0_setup: "completed"
+    phase_1_territorial: "completed"
+    phase_2_composition: "completed"
+    phase_3_integration: "completed"
+    phase_4_validation: "completed"
+  volumes:
+    - file: "VOL-01-fundamentos-angulo-consciencia-alavancas.md"
+      lines: 541
+      tables: 15
+      provenance_refs: 82
+      qg_003_pass: true
+    - file: "VOL-02-catalogo-angulos-problema-solucao.md"
+      lines: 791
+      tables: 6
+      provenance_refs: 118
+      qg_003_pass: true
+    - file: "VOL-03-catalogo-angulos-produto-oferta-genericos.md"
+      lines: 771
+      tables: 5
+      provenance_refs: 107
+      qg_003_pass: true
+    - file: "VOL-04-anatomia-do-anuncio-estruturas.md"
+      lines: 439
+      tables: 18
+      provenance_refs: 76
+      qg_003_pass: true
+    - file: "VOL-05-provas-e-objecoes.md"
+      lines: 355
+      tables: 17
+      provenance_refs: 27
+      qg_003_pass: true
+    - file: "VOL-06-mecanismo-unico-10-tipos-forja.md"
+      lines: 435
+      tables: 6
+      provenance_refs: 46
+      qg_003_pass: true
+    - file: "VOL-07-formatos-e-ganchos.md"
+      lines: 401
+      tables: 13
+      provenance_refs: 68
+      qg_003_pass: true
+    - file: "VOL-08-maquina-producao-campanha-metricas.md"
+      lines: 562
+      tables: 13
+      provenance_refs: 66
+      qg_003_pass: true
+  transversal_docs: {readme: true, regras_cardinais: true, repertorio: true, glossario: true}
+  counts: {angulos: 78, provas: 34, objecoes: 24, tipos_mecanismo: 10, regras_cardinais: 15, termos_glossario: 47}
+  quality_gates: {QG-ETL-000: PASSED, QG-ETL-001: PASSED, QG-ETL-002: PASSED, QG-ETL-003: PASSED, QG-ETL-004: PASSED, QG-ETL-005: PASSED}
+  totals: {total_volumes: 8, total_lines: 4295, total_tables: 93, total_provenance_refs: 590}
+  cross_references: "0 links quebrados (README, REGRAS-CARDINAIS, REPERTORIO → VOL-01..08)"
+  verdict: "APPROVED"
+  validation_score: 98.0
