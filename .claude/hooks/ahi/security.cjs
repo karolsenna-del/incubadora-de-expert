@@ -53,11 +53,15 @@ function safePath(file) {
     cursor = path.dirname(cursor);
   }
 }
-function powershell(script, input) {
+// Windows only. The vault logic lives in win-vault.ps1, shipped as plain readable text next to this file:
+// no encoded command, no script text built here. Data goes through stdin as UTF-8; the answer is hex on stdout.
+// The script is started by relative name from its own folder, so quotes, brackets or apostrophes in the
+// student's folder names never reach the PowerShell command line.
+function powershell(action, input) {
   // Windows PowerShell 5.1 must build its own module path when launched through Node/pwsh 7.
   // Keep the caller's environment unchanged, including differently cased Windows names.
   const env = Object.fromEntries(Object.entries(process.env).filter(([name]) => name.toLowerCase() !== 'psmodulepath'));
-  const result = spawnSync('powershell.exe', ['-NoLogo', '-NoProfile', '-NonInteractive', '-EncodedCommand', Buffer.from(`$ErrorActionPreference='Stop'; $PSModuleAutoLoadingPreference='None'; ${script}`, 'utf16le').toString('base64')], { input, env, encoding: 'utf8', timeout: 5000, windowsHide: true, maxBuffer: 65536 });
+  const result = spawnSync('powershell.exe', ['-NoLogo', '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-File', '.\\win-vault.ps1', action], { cwd: __dirname, input, env, encoding: 'utf8', timeout: 5000, windowsHide: true, maxBuffer: 65536 });
   if (result.status !== 0 || result.error) throw new Error('SECURE_STORAGE_UNAVAILABLE');
   return result.stdout.trim();
 }
@@ -65,10 +69,10 @@ function protectMany(dirs) {
   const unique = [...new Set(dirs)]; if (!unique.length) return;
   for (const dir of unique) { safePath(dir); fs.mkdirSync(dir, { recursive: true, mode: 0o700 }); }
   if (process.platform === 'win32') {
-    // Core .NET APIs avoid the variable cold cost of preparing PowerShell cmdlet modules.
+    // Core .NET APIs (win-vault.ps1) avoid the variable cold cost of preparing PowerShell cmdlet modules.
     // Keep the exact same private DACL: current owner + SYSTEM, no inherited external access.
-    const encoded = unique.map(dir => `'${Buffer.from(dir).toString('base64')}'`).join(',');
-    powershell(`$sid=[Security.Principal.WindowsIdentity]::GetCurrent().User; foreach($encoded in @(${encoded})){ $p=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($encoded)); $acl=[Security.AccessControl.DirectorySecurity]::new(); $acl.SetOwner($sid); $acl.SetAccessRuleProtection($true,$false); foreach($s in @($sid,[Security.Principal.SecurityIdentifier]::new('S-1-5-18'))){ $rule=[Security.AccessControl.FileSystemAccessRule]::new($s,[Security.AccessControl.FileSystemRights]::FullControl,[Security.AccessControl.InheritanceFlags]'ContainerInherit,ObjectInherit',[Security.AccessControl.PropagationFlags]::None,[Security.AccessControl.AccessControlType]::Allow); [void]$acl.AddAccessRule($rule) }; [void][IO.Directory]::SetAccessControl($p,$acl) }`);
+    // The script confirms with "ok <count>": an empty or truncated .ps1 exits 0 without doing anything, and must not pass for success.
+    if (powershell('protect', unique.map(dir => path.resolve(dir)).join('\n')) !== `ok ${unique.length}`) throw new Error('SECURE_STORAGE_UNAVAILABLE');
   } else {
     for (const dir of unique) {
       fs.chmodSync(dir, 0o700);
@@ -119,14 +123,19 @@ function keyFor(ctx, create = false) {
     const file = path.join(ctx.accountDir, 'key.dpapi');
     if (!fs.existsSync(file)) {
       if (!create) throw new Error('SECURE_STORAGE_UNAVAILABLE');
-      const wrapped = powershell("[void][Reflection.Assembly]::Load('System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'); $b=[byte[]]::new(32); $rng=[Security.Cryptography.RandomNumberGenerator]::Create(); try { $rng.GetBytes($b); [Console]::Write([Convert]::ToBase64String([Security.Cryptography.ProtectedData]::Protect($b,$null,[Security.Cryptography.DataProtectionScope]::CurrentUser))) } finally { $rng.Dispose(); [Array]::Clear($b,0,$b.Length) }");
+      const created = powershell('create-key');
+      if (!/^(?:[a-f0-9]{2})+$/.test(created)) throw new Error('SECURE_STORAGE_UNAVAILABLE');
+      const wrapped = Buffer.from(created, 'hex').toString('base64');
       if (!/^[A-Za-z0-9+/]+={0,2}$/.test(wrapped) || Buffer.from(wrapped, 'base64').length < 32) throw new Error('SECURE_STORAGE_UNAVAILABLE');
       try { atomic(file, wrapped, true); } catch (e) { if (e.code !== 'EEXIST') throw e; }
     }
     safePath(file);
-    const wrapped = fs.readFileSync(file, 'utf8');
-    const raw = powershell("[void][Reflection.Assembly]::Load('System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'); $b=[Convert]::FromBase64String([Console]::In.ReadToEnd().Trim()); $plain=[Security.Cryptography.ProtectedData]::Unprotect($b,$null,[Security.Cryptography.DataProtectionScope]::CurrentUser); try { [Console]::Write([Convert]::ToBase64String($plain)) } finally { [Array]::Clear($plain,0,$plain.Length) }", wrapped);
-    const key = Buffer.from(raw, 'base64'); if (key.length !== 32) throw new Error('SECURE_STORAGE_UNAVAILABLE'); return key;
+    // key.dpapi keeps its original format: the DPAPI blob as base64 text. Only hex goes through the PowerShell side.
+    const wrapped = fs.readFileSync(file, 'utf8').trim();
+    if (wrapped.length % 4 !== 0 || !/^[A-Za-z0-9+/]+={0,2}$/.test(wrapped)) throw new Error('SECURE_STORAGE_UNAVAILABLE');
+    const raw = powershell('open-key', Buffer.from(wrapped, 'base64').toString('hex'));
+    if (!/^[a-f0-9]{64}$/.test(raw)) throw new Error('SECURE_STORAGE_UNAVAILABLE');
+    return Buffer.from(raw, 'hex');
   }
   throw new Error('UNSUPPORTED_OS_KEYSTORE');
 }

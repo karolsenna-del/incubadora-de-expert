@@ -132,12 +132,17 @@ proprio pacote.
 ## Historico de uso (AHI)
 
 `auroq-os historico status` mostra captura comprovada, fila pendente, ultimo ACK,
-exclusoes e problemas. So ha registro para quem marcou "sim" na pergunta unica da
-plataforma Arcane (caixa desmarcada = nao), e so quando a sessao usa o MCP Arcane
-com conta autenticada e licenca validada pelo servidor. Para nao guardar, basta
-deixar a caixa desmarcada; quem ja marcou pode tirar a autorizacao pelo proprio
-agente (ele registra o "nao") ou pelo e-mail euriler@arka.education. Nao e preciso
-desligar o MCP nem os hooks. Instalar ou apenas abrir o projeto nao prova captura.
+exclusoes e problemas. O registro das sessoes com os squads da Arcane esta previsto
+nos Termos de Uso e na Politica de Privacidade da plataforma: vem ligado para quem
+aceita os termos (aviso na plataforma) e so acontece quando a sessao usa o MCP Arcane
+com conta autenticada e licenca validada pelo servidor. Quem ja tinha dito "nao"
+continua sem gravar: aceitar os termos nao desfaz essa recusa. Para desligar, entre
+em Minha Conta (arcane.arka.education/conta) e desligue "Guardar minhas conversas",
+ou peca ao proprio agente (ele registra o "nao"). Religar so pela plataforma. Se a
+pasta do seu negocio tem dados de clientes, desligue. Para pedir a exclusao do que ja
+foi guardado, use os comandos de exclusao abaixo ou o e-mail euriler@arka.education.
+Nao e preciso desligar o MCP nem os hooks. Instalar ou apenas abrir o projeto nao
+prova captura.
 
 O adaptador `ahi-hooks-v2` registra mensagens e entradas/saidas de ferramentas
 que os hooks visiveis do Claude Code/Codex disponibilizam. A cobertura e parcial:
@@ -188,7 +193,10 @@ as paginas do mesmo recorte e grava um novo arquivo privado em
 `~/.arcane/ahi-exports/`; uma falha nunca e apresentada como exportacao completa.
 Direitos de consulta/exclusao continuam disponiveis com autenticacao mesmo sem
 licenca de captura. Para apagar o historico da conta inteira, o escopo explicito
-exigido e `excluir --account --confirm-delete`.
+exigido e `excluir --account --confirm-delete`. Apagar o historico da conta inteira
+(`excluir --account`) tambem encerra a gravacao nessa conta (marca de exclusao
+permanente); para voltar a gravar, escreva para euriler@arka.education. Excluir uma
+sessao nao encerra a gravacao.
 
 A atualizacao do coletor exige a manutencao no projeto (peca ao Ops "atualiza o sistema")
 e reabrir o host. O aviso de nova versao ao iniciar o Claude Code nao instala essa correcao.
@@ -246,13 +254,13 @@ agents/             → Seu exercito (companion, workers, minds, squads)
 
 ## Observabilidade e integridade do motor
 
-Apos publicacao, `npx -y auroq-os@2.6.6 doctor` mostra a fila local segura e os comandos pinados de
-manutencao/diagnostico. `npx -y auroq-os@2.6.6 manutencao` preserva o caminho existente
+Apos publicacao, `npx -y auroq-os@2.6.10 doctor` mostra a fila local segura e os comandos pinados de
+manutencao/diagnostico. `npx -y auroq-os@2.6.10 manutencao` preserva o caminho existente
 de consentimento legado, studentFiles, customizacoes e dados do negocio. Nao ha
 migracao forcada. O registro MCP aponta para `arcane-mcp@0.7.0` — o pin mora no campo
 `arcaneMcpPin` do package.json (fonte unica; o servidor le o mesmo campo no npm).
 `npm run release:verify` recusa publicar com um pin que o npm nao resolva.
-Os instaladores do repositorio ficam preparados para 2.6.6; as copias publicas so recebem
+Os instaladores do repositorio ficam preparados para 2.6.10; as copias publicas so recebem
 a versao apos os gates nativos e a verificacao do tarball publicado.
 O pacote inclui `lib/runtime-integrity.json`: inventario SHA-256 gerado depois da montagem da casca, verificavel com `npm run integrity:verify` dentro do pacote extraido. Ele comprova consistencia do conteudo; nao e uma assinatura de autoria.
 
