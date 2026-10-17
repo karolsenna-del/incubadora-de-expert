@@ -48,6 +48,8 @@ MENSAGENS = {
     "dia_live": (["black_expert_dia_live"], ["black_expert_dia_live_sem_nome"], [LINK_LIVE], 1.0),
     "live_cade_voce": (["black_expert_live_cade_voce"], ["black_expert_live_cade_voce_sem_nome"], [], 0.5),
     "live_oferta": (["black_expert_live_oferta"], ["black_expert_live_oferta_sem_nome"], [], 0.5),
+    "inscricoes_abertas": (["black_expert_inscricoes_abertas"], ["black_expert_inscricoes_abertas_sem_nome"], [], 0.5),
+    "pesquisa_pos": (["black_expert_pesquisa_pos"], ["black_expert_pesquisa_pos_sem_nome"], [], 0.5),
 }
 MENSAGEM = "convite"
 MODELO_COM_NOME = None  # definido em escolher_modelos()

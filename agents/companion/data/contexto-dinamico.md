@@ -466,4 +466,12 @@ Retomar com: `/expert-companion`
 - **Feito:** Radar virou **Diagnostico do Expert v10** (5 areas pelas fases + Expert, 25 notas ditas pelo lead, radar final ao lado do ideal 10, sem pre-marcacao) — https://claude.ai/artifact/AgwbWdzWbfo5QWgxuy9wVb. Roteiro da sessao v3 em SPIN — https://claude.ai/artifact/WeV7CVV38uBV7YTjvDzmc4. Formulario do lead renomeado pra pre-diagnostico (LP + Central no ar). Ver log-decisoes 02/10.
 - **Pendente:** personalizacao da Laís (28/09) ainda fala em P1/P2/P4/P5; Karol testar o card do pre-diagnostico dela no Diagnostico antes da sessao.
 
-*Ultima atualizacao: 02/10/2026*
+**Sessao 14-17/10 — Resultado da Black Expert (Companion):**
+- **Black Expert fechou com 0 vendas** (meta era 4 × R$5.000). Funil: 226 convidados por WhatsApp individual → 47 no grupo da Black (+80 no grupo de lives, que também recebeu tudo) → 20 na live → 16 no pitch → **0 cliques em comprar** (pré-checkout funcionando, testado). Grupo passou pra R$7.500 em 15/10 e a Black NÃO foi estendida.
+- Envios individuais pela API da Meta em 14/10 (dia da live, cadê você, oferta, inscrições abertas 17h11) e pesquisa "o que pesou?" em 15/10 9h, todos com 226 aceitos e 0 erros. Infra e modelos em `business/campanhas/black-friday-grupo-2026/handoff-whatsapp-convite.md`.
+- **Retro:** `business/campanhas/black-friday-grupo-2026/retro-black-expert.md`. Motivo mais citado nas 8 conversas foi valor ou momento. Karol avalia (sem decisão) uma oferta mais enxuta: Validação em 6 meses, mais barata.
+- **Em aberto:** Vagner (aluno do Sprint) com proposta de continuação de 6 meses por R$3.000, aguardando resposta. Aline com contato em 17/10. Girleine precisa da explicação de como funciona. Expert360º (curso gravado) oferecido pra Franciele e Camila (colega da agência, cadastrada no CRM em 17/10).
+- **Achados de infra pro Gestor:** (1) a página da Black mede no GA4 errado (`G-NB7W76T3RX`, "Gestão pra Tudo"); (2) o CRM não recebe eventos de WhatsApp desde 02/10; (3) a sincronização planilha → CRM não grava a coluna "Observação" desde 22/09 (as notas ficam paradas na planilha).
+- Regra de auto mode adicionada pela Karol em `.claude/settings.local.json`: liberado editar células das planilhas Google dela pelo Chrome quando ela pedir.
+
+*Ultima atualizacao: 17/10/2026*

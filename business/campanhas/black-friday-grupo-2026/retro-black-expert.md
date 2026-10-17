@@ -63,6 +63,8 @@ Fonte: planilha operacional do CRM (coluna Observação), preenchida pela Karol 
 - A lead 1 já tinha recebido uma oferta de R$1.500 em fevereiro e também não comprou. O ticket mais baixo sozinho não destravou.
 - A Karol já está improvisando uma versão menor na conversa: recorte da Validação (2), proposta menor prometida (7), continuação de 6 meses por R$3.000 (8).
 
+**16/10:** Karol ofereceu o curso gravado Expert360º pra lead 2 (Franciele) e pra lead 7 (Camila, colega da agência). Camila foi cadastrada no CRM em 17/10 como lead própria, e as duas ofertas ficaram registradas no histórico.
+
 **Ponto a conferir:** a anotação da lead 7 está na única linha `black_expert_precheckout` da planilha, com nome "Karol". Pelo conferido em 14/10 às 22h45, essa é a linha do teste de 10/10. Outro agente provavelmente usou essa linha pra anotar a conversa. O funil fica em **0 cliques**, a não ser que a colega também se chame Karol e tenha clicado. Arrumar o CRM: tirar a anotação da linha de teste e cadastrar a colega com a origem certa.
 
 ## As 3 perguntas da retro
