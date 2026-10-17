@@ -1,0 +1,38 @@
+critical_audit:
+  date: "2026-10-16"
+  frameworks:
+    total_in_mapa: 10
+    found_in_output: 10
+    missing: []
+    coverage: "100%"
+  cardinal_rules:
+    total_in_mapa: 9
+    found_in_volumes: 9
+    found_in_regras_doc: 9   # REGRAS-CARDINAIS tem 10 (inclui "abertura em 2 padrões")
+    missing_from_volumes: []
+    missing_from_regras: []
+    coverage: "100%"
+  glossary_terms:
+    total_in_mapa: 21
+    found_in_glossary: 21
+    missing: []
+    fixed_during_audit: ["Estrutura Mestre (faltava no GLOSSARIO; adicionado)"]
+    coverage: "100%"
+  cross_volume:
+    concepts_in_multiple_volumes: 7   # Estrutura Mestre, Small Yes, mini VSL, primeira etapa, captura, briefing, funil cego
+    contradictions: 0
+    contradiction_details: []
+    source_contradiction_registered: "perda entre etapas 2% x 5% (Aula 1.8) — registrada, não resolvida"
+    invalid_cross_refs: 0
+  actionable_artifacts:
+    total_in_mapa: 17
+    found_in_volumes: 17
+    found_in_repertorio: 17
+    missing_from_volumes: []
+    missing_from_repertorio: []
+    coverage: "100%"
+  repertorio_completeness:
+    sections_present: "11/11"
+    orphan_items: 0
+  overall_verdict: "PASS"
+  critical_missing: []

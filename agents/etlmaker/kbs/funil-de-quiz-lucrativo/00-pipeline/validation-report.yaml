@@ -1,0 +1,76 @@
+validation_report:
+  kb_slug: "funil-de-quiz-lucrativo"
+  timestamp: "2026-10-16"
+  version: "3.0"
+  layer_2_verdict: "PASS"
+
+  pass_1_coverage:
+    total_domains: 8
+    domains_covered: 8
+    subtopics_coverage: 100.0
+    uncovered: []
+    verdict: "PASS"
+
+  pass_2_fidelity:
+    total_checks: 15
+    checks:
+      - "6.300 resultados para inlead.digital (1.6, 00:57) — CORRECT"
+      - "Julio Balestrin 18 anúncios ativos (1.6, 01:23) — CORRECT"
+      - "Taxa de interação 47%, mín 40%, ideal 50% (1.8) — CORRECT"
+      - "36 mil acessos → 11 mil na última etapa (1.8, 01:33) — CORRECT"
+      - "Queda 13% etapa 21→22 com captura (1.8) — CORRECT"
+      - "Estrutura Mestre: mapeamento → identificação → confirmação (1.3) — CORRECT"
+      - "Small Yes baseado em As Armas da Persuasão, 3 sins (1.3, 09:15) — CORRECT"
+      - "Regra low ticket 17–97 sem VSL (1.3, 05:11) — CORRECT"
+      - "Exemplo R$ 47 sem VSL / se fosse R$ 247 iria pra VSL (1.3, 06:15) — CORRECT"
+      - "Conservador troca palavras; turbinado procura lacunas (1.7) — CORRECT"
+      - "Clona de Inlead ou XQuiz (1.7, 00:21) — CORRECT"
+      - "Teste A/B até 5 variantes, 50/50, mesma URL (1.8) — CORRECT"
+      - "Prompt da imagem-gatilho (1.5, 00:21) — CORRECT"
+      - "Mecanismo único 'protocolo de exposição gradual sensorial' (1.4, 07:00) — CORRECT"
+      - "Quiz gerado com 20 etapas (1.4, 10:02) — CORRECT"
+    correct: 15
+    distorted: 0
+    invented: 0
+    fidelity_score: 100.0
+    issues: []
+    verdict: "PASS"
+
+  pass_3_richness:
+    volumes:
+      - { id: VOL-01, lines: 404, tables: 5, refs: 82, pass: true }
+      - { id: VOL-02, lines: 350, tables: 4, refs: 66, pass: true }
+      - { id: VOL-03, lines: 317, tables: 6, refs: 49, pass: true }
+    all_pass: true
+    verdict: "PASS"
+
+  pass_4_voice:
+    consistency_score: 90.0
+    issues: ["Catchphrases aparecem sobretudo em citações; texto de ligação é neutro (escolha deliberada pra legibilidade)"]
+    verdict: "PASS"
+
+  pass_5_consistency:
+    contradictions: 0
+    cross_refs_valid: true
+    verdict: "PASS"
+
+  pass_6_integrity:
+    volumes_planned: 3
+    volumes_present: 3
+    transversal_planned: 4
+    transversal_present: 4
+    verdict: "PASS"
+
+  aggregate:
+    coverage: 100.0
+    fidelity: 100.0
+    richness: 100.0
+    voice: 90.0
+    consistency: 100.0
+    integrity: 100.0
+    score: 99.0
+    verdict: "APPROVED"
+
+  revision_items: []
+  revision_cycle: 0
+  nota: "Validação feita pelo mesmo agente que compôs (não há auditor separado nesta sessão). Spot-checks corrigiram 4 itens durante a composição antes desta fase."

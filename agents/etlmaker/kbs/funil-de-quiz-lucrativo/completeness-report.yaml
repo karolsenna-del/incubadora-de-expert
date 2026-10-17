@@ -1,0 +1,68 @@
+completeness_report:
+  version: "3.0"
+  kb_name: "Funil de Quiz Lucrativo"
+  kb_slug: "funil-de-quiz-lucrativo"
+  generated_at: "2026-10-16"
+  generated_by: "ETLmaker v3.0"
+
+  source:
+    author: "Henrique Melo"
+    total_sources: 8
+    total_words: 11164
+    formats: ["transcricao (Tella, palavra a palavra)"]
+    origin: "https://quizlucrativo.memberapp.pro/cursos/funil-de-quiz"
+
+  pipeline:
+    phase_0_setup: "completed"
+    phase_1_territorial: "completed"
+    phase_2_composition: "completed"
+    phase_3_integration: "completed"
+    phase_4_validation: "completed"
+
+  volumes:
+    - id: "VOL-01"
+      title: "Fundamentos e Estrutura Mestre"
+      file: "VOL-01-fundamentos-e-estrutura-mestre.md"
+      lines: 404
+      tables: 5
+      provenance_refs: 82
+      domains: ["D1", "D2", "D3", "D8"]
+      qg_003_pass: true
+    - id: "VOL-02"
+      title: "Construção e Personalização"
+      file: "VOL-02-construcao-e-personalizacao.md"
+      lines: 350
+      tables: 4
+      provenance_refs: 66
+      domains: ["D4", "D5"]
+      qg_003_pass: true
+    - id: "VOL-03"
+      title: "Referências, Modelagem e Otimização"
+      file: "VOL-03-referencias-modelagem-e-otimizacao.md"
+      lines: 317
+      tables: 6
+      provenance_refs: 49
+      domains: ["D6", "D7"]
+      qg_003_pass: true
+
+  transversal_docs:
+    readme: true
+    regras_cardinais: true   # 10 regras
+    repertorio: true         # 11 seções
+    glossario: true          # 38 termos
+
+  quality_gates:
+    QG-ETL-000: "PASSED"
+    QG-ETL-001: "PASSED"
+    QG-ETL-002: "PASSED"   # aprovado pela Karol em 16/10
+    QG-ETL-003: "PASSED"
+    QG-ETL-004: "PASSED"
+    QG-ETL-005: "PASSED"
+
+  totals:
+    total_volumes: 3
+    total_lines: 1071
+    total_provenance_refs: 197
+
+  verdict: "APPROVED"
+  verdict_notes: "Validação final: agregado 99%, 0 invenções, Camada 2 PASS."
