@@ -87,6 +87,8 @@
 
 ## Backlog (quando tiver tempo)
 
+- **Envio de direct pros leads aprovados do Garimpo** (17/10): Karol quer que os aprovados da aba Garimpo recebam direct. Antes de construir: (1) a API oficial do Instagram so deixa mensagem pra quem escreveu primeiro (janela de 24h) — direct "frio" automatico so por automacao de navegador na conta dela, que fere os termos e arrisca bloqueio da conta; (2) quem escreve copy de direct hoje e o Vendedor Expert (Vendedor Secreto e de call). Decidir com a Karol o formato (fila pronta pra ela enviar vs. automacao com risco) antes de qualquer agente.
+
 <!-- Gancho "Expert em fracassar no digital" — elevado para posicionamento central em 28/05. Ver log-decisoes.md. -->
 
 - **Diagnóstico do Expert — perguntas de qualificação por oferta** (12/08): adicionar perguntas ao diagnóstico atual (tempo disponível/semana, facilidade com IA/ChatGPT, renda geral do negócio — não só digital, prefere aprender/fazer junto/receber pronto) pra indicar qual das 7 ofertas o lead mais se encaixa antes da sessão estratégica. Afeta `diagnostico.incubadoradeexpert.com.br`.

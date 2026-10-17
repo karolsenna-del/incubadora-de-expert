@@ -1,0 +1,41 @@
+{
+  "id": "karol",
+  "nome": "Karol Senna — Incubadora de Expert",
+  "publico_alvo": "Quem tem profissão ou experiência de carreira (liberal, CLT ou servidor) e ainda não vende o próprio método. Persona Laura.",
+  "sinais_positivos": [
+    "bio cita a profissão",
+    "link de agendamento, WhatsApp ou 'consultoria' na bio",
+    "posta sobre a própria área de atuação"
+  ],
+  "sinais_positivos_servidor_clt": [
+    "carreira clara na bio (cargo, órgão, área, anos de experiência)",
+    "fala de transição, sair do emprego, projeto paralelo ou empreender (bio ou posts)",
+    "posta sobre a rotina/dor do trabalho com tom de quem quer mudar"
+  ],
+  "regua_servidor_clt": "Servidor/CLT não vende serviço ainda — não exigir link de agenda. Alta = carreira clara + sinal de querer sair/empreender. Média = carreira clara sem sinal de transição. Concurseiro (ainda estudando, sem cargo) = baixa ou descarte. Aprovado pela Karol 17/10/2026.",
+  "descartes": [
+    "blogueira",
+    "afiliado",
+    "achadinhos",
+    "quem compartilha rotina (lifestyle)",
+    "quem já vende curso grande",
+    "perfil de loja",
+    "coach com mentoria própria",
+    "estrangeiro (bio em outro idioma, sem sinal de ser brasileiro)"
+  ],
+  "nacionalidade": "Brasileiro morando em qualquer país está DENTRO (Karol já teve vários alunos no exterior). Estrangeiro sai. Sinais de brasileiro: bio em português do Brasil, 'brasileira em ...', bandeira do Brasil, CRP/CRM/OAB/CRC brasileiro, WhatsApp +55. DDI estrangeiro sozinho NÃO descarta. Português de Portugal sem sinal de brasileiro: baixa, com nota pra Karol decidir.",
+  "descartes_palavras_nota": "Filtro mecânico conservador: só palavra que sozinha já descarta. 'rotina', 'mãe de', 'publi' ficam pro julgamento do agente (cortariam nutricionista, mãe-profissional, publicitária).",
+  "descartes_palavras": [
+    "blogueira", "blogger", "afiliad", "achadinho", "cupom", "loja", "store",
+    "frete", "atacado", "varejo", "lifestyle", "mentoria", "mentor", "coach"
+  ],
+  "faixa_seguidores": { "min": 500, "max": 20000 },
+  "destino": {
+    "planilha": "1BD4L6toolVi17Of1PrwmNFnRQprk8obV6wWN_lLatn0",
+    "aba": "Garimpo"
+  },
+  "dedup_crm_karol": true,
+  "copy": "vendedor-expert",
+  "nao_abordar": [],
+  "aprovado_em": "2026-10-17"
+}

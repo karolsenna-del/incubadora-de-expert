@@ -63,3 +63,6 @@ agents/squad-edicao-arcane/.venv/
 agents/squad-edicao-arcane/bin/
 agents/squad-edicao-arcane/models/
 __pycache__/
+
+# Garimpeiro de Leads — rodadas com dado pessoal de prospect (LGPD), nunca commitar
+agents/garimpeiro-leads-instagram/rodadas/

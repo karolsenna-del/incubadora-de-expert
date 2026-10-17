@@ -1,0 +1,31 @@
+{
+  "worker_slug": "garimpeiro-leads-instagram",
+  "worker_name": "Garimpeiro de Leads no Instagram",
+  "current_phase": 5,
+  "phase_status": {
+    "phase_0": "done",
+    "phase_1": "done",
+    "phase_2": "done",
+    "phase_3": "done (Karol aprovou 17/10)",
+    "phase_4": "done (instalado em agents/garimpeiro-leads-instagram)",
+    "phase_5": "done — missao/documentacao/diagnostico PASS; Karol aprovou 17/10"
+  },
+  "tools_identified": [
+    "Apify",
+    "Google Sheets",
+    "1Password CLI"
+  ],
+  "domains_identified": [
+    "prospeccao ativa Instagram",
+    "social selling"
+  ],
+  "quality_gates_passed": [
+    "QG-WF-001",
+    "QG-WF-002 (KB 279 linhas, abaixo do alvo)",
+    "QG-WF-003",
+    "QG-WF-004 (self-check; validator sem ajv)",
+    "QG-WF-005"
+  ],
+  "started_at": "2026-10-17",
+  "paused_at": ""
+}
