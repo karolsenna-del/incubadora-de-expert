@@ -1,4 +1,4 @@
-# Desafio Rota100K · Semana 12 (19/10 a 25/10) — Plano v1 (42 posts, 6/dia) — EM REVISÃO
+# Desafio Rota100K · Semana 12 (19/10 a 25/10) — Plano v2 (42 posts, 6/dia) — EM REVISÃO
 
 > Squad: Conteúdo Arcane (Iris: temas · Rico: roteiro · Aria: o que levar da semana anterior).
 > Fonte do desafio: `Downloads/DESAFIO-ROTA100K-Semana-12-19-a-25-10.pdf`.
@@ -6,7 +6,22 @@
 > CTA oficial: **seguir**. No teste das 15h: palpite nos comentários + seguir.
 > **Ângulos:** KB `agents/etlmaker/kbs/angulos-copy-anuncios/` (78 ângulos, Renan Matheus, ETL de 17/10). Cada post leva 1 ângulo (número entre colchetes).
 > Fato só o documentado (`historias-trajetoria.md`, `analises/2026-10-17/relatorio-batch-10dias.md`, `temas-do-momento.md` de 17/10, planos anteriores) ou dito pela Karol. ⚠️ = confirmar antes de gravar/publicar.
-> **v1 — 17/10/2026.**
+> **v1 — 17/10/2026. v2 — 18/10/2026** (filme, 2 reacts, carrossel inspirado, camada de retenção).
+
+## O que mudou na v2 (18/10, pedidos da Karol)
+
+| Pedido | Onde entrou | O que saiu |
+|---|---|---|
+| Filme *The Runner* (advogada: 99% dos casos ganhos são narrativa, 1% inocência) + a tese dela "narrativa vende mais que método" | **Sáb 09h** (dia de derrubar mitos) | O 09h do mito dos seguidores (o mesmo mito continua no carrossel de sábado, slide 4) |
+| React 1 — palestrante: "metodologia pra tudo" (casamento) | **Qui 09h** (dia de testar direito: o método mostra o que vem primeiro) | O 09h "larguei o concurso e deu certo" (resolve a pendência da agência, que já aparece no 12h de quarta) |
+| React 2 — palestrante: ratoeira e queijo | **Sex 09h** (dia de "pra quem serve": pensar como o cliente) | O 09h "lançar ou vender no um a um" (repetia o carrossel de segunda e o mito 4 de sábado) |
+| Post inspiração: "5 sinais de que você já tem um produto" | **Qua 20h** como carrossel comparativo **favor x produto** (continua o 09h da renda extra que "fica guardada") | O ranking "de onde vem o primeiro cliente" vai pra reserva da Semana 13 |
+| Retenção (fraqueza da Karol): carrossel das 31 formas de recuperar a atenção | Regras novas do Mack + tabela "Retenção por Reel" no fim | — |
+| (v2.1) Posicionamento político pra quem está chegando no digital, com headline "escolher um lado ou ser isentão" | **Sáb 17h**, véspera do 2º turno | "Propaganda de renda extra fácil" foi pra **quarta 17h** (v2.2); o "Quando o caro compensa" de quarta foi pra reserva da Semana 13 |
+| (v2.3) Carrossel de @conradoadolpho sobre desconto e valor percebido | **Qui 20h**, como comparativo "desconto x valor" (continua o 12h de quinta, sobre testar preço em cada sessão) | O carrossel "roteiro de um teste honesto em 5 passos" vai pra reserva da Semana 13 (repetia o 17h de quinta) |
+| Radar de Pautas | Conferido: rascunhos de 15 a 18/10 vieram **vazios** (só política e ruído). Nenhuma pauta nova | — |
+
+**Arco novo de quinta a sábado (ponta solta, retenção #30):** quinta mostra que conhecimento não é método → sexta mostra o método virando promessa ("as pessoas compram promessas") → sábado derruba o mito: método sozinho não vende, a narrativa é que faz a pessoa acreditar. Cada post fecha puxando o do dia seguinte, mas cada um se entende sozinho.
 
 ## Decisões que vieram da Karol (17/10)
 
@@ -57,7 +72,17 @@
 - **09h, 12h e 17h YAP:** abre (0-3s, falado e escrito igual) → contexto → virada → CTA de seguir.
 - **15h Teste:** a disputa "[A] x [B]" fica na tela o vídeo inteiro. Critério falado e escrito. Números na tela quando aparecem. Até 40s, cronometrar.
 - **20h Carrossel:** 7 slides (capa + 5 + CTA), fundo liso, texto grande, cada slide desenvolvido (o item + o porquê + exemplo, em texto corrido compacto).
+- **09h REACT (qui e sex):** trecho do vídeo primeiro (0-3s é a fala dele, com legenda em português queimada), corte seco pra Karol. Crédito "Motiversity" na tela. Os vídeos estão em inglês: legendar os trechos usados.
 - **Métrica pra anotar:** comentários de cada teste das 15h (o guia pede print no grupo do Facebook quando performar).
+
+**Retenção — regras do Mack (fonte: carrossel "31 formas de recuperar a atenção", @lucureau; numeração dela):**
+- **Uma mudança por bloco.** Cada Reel falado tem 4 blocos (abertura, contexto, virada, fecho). Em cada passagem de bloco muda alguma coisa na tela: corte com zoom (#24), texto grande (#31), b-roll real (#22) ou troca de ângulo (#21). Nunca dois blocos seguidos com o mesmo enquadramento.
+- **O "mas" na virada (#2).** Toda virada começa com uma quebra falada: "Só que…", "Mas tem um porém…". É onde o vídeo mais perde gente.
+- **Segurar a resposta (#13).** Nos testes das 15h, o veredito só sai depois do teste, nunca na abertura.
+- **Texto grande no número (#11 + #31).** Todo número falado aparece grande na tela no mesmo segundo.
+- **Retomar o gancho no fim (#29).** A última frase antes do CTA volta à imagem da abertura.
+- **Ponta solta (#30).** O CTA de seguir já está ligado ao post do dia seguinte. Manter.
+- Cada Reel tem os 2 recursos dele na tabela **Retenção por Reel**, no fim do plano.
 
 ---
 
@@ -159,15 +184,15 @@ Me segue que hoje tem teste às 15h.
 
 ### 09h · Reels YAP · [16 Urgência de contexto + 75 Opinião impopular]
 **Opinião:** o fim da 6x1.
-**Abertura (0-3s):** "O Senado aprovou duas folgas por semana. E eu tenho uma pergunta incômoda."
-**Contexto:** A proposta que acaba com a escala 6x1 passou no Senado com 75 votos a 1. Jornada de 40 horas e duas folgas por semana. Pra muita gente, vai mudar a vida.
+**Abertura (0-3s):** "Agora é lei: duas folgas por semana. E eu tenho uma pergunta incômoda."
+**Contexto:** Na sexta, o Congresso promulgou o fim da escala 6x1. Jornada de até 40 horas e duas folgas por semana, com transição de uns dois meses. Pra muita gente, vai mudar a vida.
 **Virada:** A minha pergunta é outra: e o que você vai fazer com esse dia? Eu conheço muita gente que tem duas folgas há anos, tem estabilidade, tem férias, e continua esperando a aposentadoria pra começar a viver. A lei pode te dar o tempo. Ninguém te dá a direção.
 **Fecha (CTA falado):** "Me segue que essa semana eu te ajudo a testar o que fazer com ele."
 **Legenda:**
 Se você ganhasse um dia livre por semana, o que faria com ele? Comenta.
 Me segue.
 
-*(Fatos: `temas-do-momento.md`, 17/10 (Conjur, Forbes, Gazeta do Povo). ⚠️ Semana de 2º turno: falar da vida, nunca de governo, partido ou candidato. ⚠️ Se a promulgação sair antes da gravação, trocar "aprovou" por "promulgou".)*
+*(Fatos: `temas-do-momento.md`, 17/10 (Conjur, Forbes, Gazeta do Povo). ⚠️ Semana de 2º turno: falar da vida, nunca de governo, partido ou candidato. Promulgação em 16/10 conferida em 18/10 (O Tempo, 16/10/2026): 5x2 em 60 dias, até 8h/dia e 40h/semana, sem redução de salário. Fonte única: se quiser cravar o prazo na tela, conferir no DOU.)*
 
 ### 12h · Reels YAP · bastidor · [6 Sintoma → causa raiz]
 **Achei que era essencial. Não era.**
@@ -275,20 +300,38 @@ Qual foi o maior valor que você já pagou pra aprender a vender? Comenta.
 
 *(Histórias #15 e #19. Não citar o nome da mentoria nem do mentor (regra do teste: não citar marca pra destruir). O "me avisaram e eu não ouvi" tira a culpa do terceiro, como nas palavras da Karol: "fomos muito petulantes e arrogantes".)*
 
-### 17h · Reels YAP · prático · [37 Permissão]
-**Quando o caro compensa.**
-**Abertura (0-3s):** "A mentoria que mais me valeu foi a que me disse o que eu não queria ouvir."
-**Contexto:** Em 2025 eu entrei numa mentoria querendo ser lançadora de outros experts. O meu mentor olhou o meu histórico e disse: você nunca teve grandes resultados com lançamento. O seu talento é outro, é criar método.
-**Virada:** Doeu, e foi a orientação mais certeira da minha carreira. O caro compensa quando te faz mudar de rota, não quando te dá mais conteúdo. "Antes de pagar, pergunta: essa pessoa vai olhar o meu caso e me dizer a verdade, ou vai me dar mais aula?"
-**Fecha (CTA falado):** "Me segue que eu te mostro como eu olho o caso de cada aluno."
+### 17h · Reels YAP · prático · [50 Anti-venda] — **MOVIDO NA v2.2 (era sábado 17h)**
+**Como não cair em propaganda de renda extra fácil.**
+**Abertura (0-3s):** "Três sinais de que aquela promessa de renda extra é propaganda."
+**Contexto:** Seis em cada dez brasileiros já têm renda extra. Nunca teve tanta promessa fácil no seu feed.
+**Virada:** "Um: fala do valor e nunca fala do esforço. Dois: só mostra o resultado, nunca o que deu errado no meio. Três: pede que você largue tudo agora. Renda extra de verdade começa pequena, com o que você já sabe, sem largar o que te sustenta."
+**Fecha (CTA falado):** "Me segue que eu mostro como começar pequeno."
 **Legenda:**
-Mais aula você acha de graça. Alguém olhando o seu caso e dizendo a verdade, não.
-Qual foi o conselho mais duro que você já recebeu? Comenta.
+Valor sem esforço, resultado sem erro e pressa pra largar tudo: três sinais de propaganda.
+Qual desses você já viu no seu feed? Comenta.
 Me segue.
 
-*(Histórias #18 e #21. Karol pediu (27/09) pra não enquadrar como elogio: é orientação estratégica sobre o talento dela.)*
+*(Fecha o arco de quarta: 09h mostra que a renda extra mais comum não usa o que você estudou (Serasa) → 17h ensina a não cair na promessa fácil → 20h mostra que o produto já está no que você faz de graça. Dado dos "seis em cada dez": Serasa/Opinion Box, `temas-do-momento.md` de 17/10.)*
 
-### 20h · Carrossel neutro · [24 Comparação de métodos]
+### 20h · Carrossel neutro · [13 Diagnóstico] — **NOVO NA v2**
+**Tema:** "5 sinais de que você já tem um produto e ainda chama de favor." Comparativo **favor x produto** em cada slide (mantém a regra da Aria: carrossel com motivo pra salvar).
+1. **Capa:** "Você já tem um produto. Só ainda chama de favor. 5 sinais pra conferir agora."
+2. **Sinal 1 — Te pedem conselho de graça o tempo todo.** No intervalo do trabalho, no grupo da família, no áudio de cinco minutos. Como favor, você responde e esquece. Como produto, você percebe que é sempre o mesmo tipo de pergunta, e que é isso que as pessoas pagariam pra resolver de vez.
+3. **Sinal 2 — Você explica a mesma coisa toda semana, pra gente diferente.** Como favor, você começa do zero toda vez. Como produto, você escreve a explicação uma vez, na ordem certa, e ela vira o primeiro passo do seu método.
+4. **Sinal 3 — Você ouve a mesma reclamação e já sabe o que fazer.** Como favor, você dá a dica e a pessoa some. Como produto, você organiza o caminho do problema até a solução em etapas que outra pessoa consegue seguir sem você do lado.
+5. **Sinal 4 — Quem você ajudou volta perguntando o que mais você faz.** Como favor, você diz "nada, foi só uma ajuda". Como produto, você entende que essa pergunta é o pedido de compra mais claro que existe, e tem uma resposta com nome e preço.
+6. **Sinal 5 — Te indicam como "a pessoa que entende disso".** Como favor, você fica sem graça. Como produto, você percebe que os outros já fizeram o seu posicionamento. Só falta você assumir.
+7. **CTA:** "Marcou três ou mais? O produto já existe. O próximo passo é uma conversa, não mais um curso. Salva e manda pra quem vive fazendo favor."
+
+**Legenda:**
+Favor ninguém valoriza. Nem você.
+Em quantos sinais você se reconheceu? Comenta o número.
+Me segue.
+
+*(Inspirado no post "5 sinais claros que você já tem um produto e não percebeu" (@matheuscarmopqv, `instagram.com/p/DeJ6Jctucw7`). Os 5 sinais foram reescritos na voz da Karol e viraram comparativo favor x produto; nenhuma frase copiada. Continua o 09h do mesmo dia (o que você estudou "fica guardado").)*
+
+#### Reserva pra Semana 13 (saiu da v1)
+**Ranking do primeiro cliente** · [24 Comparação de métodos]
 **Tema:** "O ranking honesto: os jeitos de achar o primeiro cliente, do melhor ao pior (pra quem está começando)."
 1. **Capa:** "Do melhor ao pior: de onde vem o primeiro cliente de quem está começando. Nenhuma marca pagou pra estar aqui."
 2. **1º — A sua lista de contatos.** Quem já te conhece confia antes de você abrir a boca. O meu segundo cliente estudou contabilidade comigo em 2010. Abre o WhatsApp e filtra: quem tem o problema, quem pode pagar, quem você chamaria hoje.
@@ -322,18 +365,28 @@ Se o item 2 é zero, você não precisa sair. Precisa testar em paralelo, com o 
 Medir não te obriga a nada. Só te tira do achismo.
 Me segue que hoje às 15h tem teste.
 
-### 09h · Reels YAP · [7 Crença falsa + 50 Anti-venda]
-**Opinião:** por que a maioria dos "larguei o concurso e deu certo" não vale como prova.
-**Abertura (0-3s):** "A maioria dos 'larguei o concurso e hoje faturo X' que você vê não conta a parte que importa."
-**Contexto:** Não conta quanto tempo levou, quanto tinha guardado, quantas vezes quase voltou, nem quem pagava as contas no meio do caminho.
-**Virada:** Eu conto a minha: saí em 2024 com renda fixa garantida, uma expert grande pra lançar e uma proposta de agência. Parecia o jeito perfeito. Em sete meses, os dois foram embora. O teste honesto mostra o que deu errado também, senão é propaganda.
-**Fecha (CTA falado):** "Me segue que eu mostro o meu, com os erros."
-**Legenda:**
-Se só tem resultado e nenhum erro, desconfia.
-O que você gostaria que contassem antes de você sair? Comenta.
+### 09h · Reels REACT · [6 Sintoma → causa raiz] — **NOVO NA v2 · REACT 1**
+**Vídeo:** `Downloads/WhatsApp Video 2026-10-18 at 16.42.53.mp4` (palestrante no palco, canal Motiversity, ~1 min, em inglês).
+**Texto na tela (fixo):** "CONHECIMENTO ≠ MÉTODO"
+**[0-3s · trecho dele]** "Divórcio nos Estados Unidos é cerca de 50%." *(Legenda em português. Texto grande por cima: "O que divórcio tem a ver com o seu negócio?" — segura a resposta, #13.)*
+**[3-20s · trecho dele]** "No namoro a gente tem um método pra conquistar: cinema, perfume, abre a porta. Aí casa… e muda o método. Eu sou casado há 23 anos. Eu tenho metodologia." *(Corte seco aqui.)*
+**[20s-fim · Karol, texto dela]**
+É exatamente isso.
+Quando você tem um método, você não precisa começar do zero toda vez que aparece um novo problema.
+E é aqui que muita gente confunde conhecimento com metodologia.
+Você pode saber MUITO sobre o seu assunto. Pode ter 10, 15, 20 anos de experiência.
+Mas se, diante de cada novo cliente ou aluno, você precisa parar e pensar: "Tá, e agora? O que eu faço primeiro?"
+Você tem conhecimento. Mas ainda não estruturou um método.
+O método organiza a sua experiência em uma lógica. Ele mostra o que vem primeiro, o que vem depois e qual decisão tomar em cada etapa.
+Por isso eu digo: criar um método não é inventar algo do zero. É descobrir a lógica que já existe por trás daquilo que você sabe fazer.
+**Fecha (CTA falado, sugestão):** "Me segue que amanhã eu te mostro um método explicado em 30 segundos."
+
+**Legenda (complementa, não repete):**
+Faz o teste com o seu último cliente: você sabia exatamente o que fazer primeiro, ou foi improvisando?
+Comenta "sabia" ou "improvisei".
 Me segue.
 
-*(Cronologia de 09/10 (#21). ⚠️ NÃO enquadrar como "saiu antes de estar pronta": a lição é depender dos outros. "Os dois foram embora" é resumo de: expert rompeu em 09/2024 e a agência virou "6 por meia dúzia". ⚠️ A Karol pode preferir não falar da agência aqui, porque o Reel de quarta já toca nela.)*
+*(Texto falado = react 1 da Karol, sem alteração. Transcrição do trecho feita em 18/10 (Whisper). Retenção: #13 na abertura, #31 em "CONHECIMENTO" e "MÉTODO" quando ela falar, #24 zoom em "O que eu faço primeiro?". O CTA puxa o react de sexta (#30).)*
 
 ### 12h · Reels YAP · bastidor · [42 Bastidores / como é feito]
 **Como eu monto um teste.**
@@ -371,8 +424,25 @@ Me segue que amanhã tem teste de mesário.
 Três conversas. Uma pergunta sobre como a pessoa resolve hoje. Um valor dito em voz alta.
 Faz e me manda o resultado nos comentários.
 
-### 20h · Carrossel neutro · [26 Simplicidade]
-**Tema:** "O roteiro de um teste honesto: validar a sua ideia em paralelo, em 5 passos."
+### 20h · Carrossel neutro · [41 Feature → benefício] — **NOVO NA v2.3 · PREÇO**
+**Tema:** "Desconto x valor: o que fazer antes de baixar o seu preço." Comparativo em cada slide (mantém a regra da Aria).
+1. **Capa:** "Eu não dou desconto. Faço outra coisa no lugar. Desconto x valor: o que fazer quando o cliente diz 'tá caro'."
+2. **"Tá caro" nunca é sobre o número.** É caro comparado com alguma coisa: ninguém acha caro no vácuo. Com desconto, você baixa o número e a comparação continua a mesma. Com valor, você muda aquilo com que ele está te comparando.
+3. **Desconto vicia.** Quem comprou com desconto uma vez espera o próximo, e quem pagou o preço cheio se sente bobo. Por isso eu sou contra. Com valor, o preço fica onde está e quem compra sai sentindo que fez um bom negócio.
+4. **Escolhe com quem você quer ser comparado.** Se você é "mais uma consultora", te comparam com a mais barata que aparece na busca. Se você é "a pessoa que ajuda servidora a montar o próprio negócio sem largar o cargo", quase não sobra com quem comparar.
+5. **Diagnóstico antes do preço.** Com desconto, você manda o preço e torce. Com valor, você faz um diagnóstico que já vale por si: na conversa, a pessoa entende onde está, o que trava e o que muda se resolver. Quando a oferta e o preço aparecem, chegam naturalmente, como a solução do que ela acabou de descobrir. É isso que eu ensino nas Vendas Secretas.
+6. **Downsell no lugar de desconto.** Se o valor não cabe agora, eu não baixo o preço da mesma entrega. Ofereço uma entrega menor, que cabe no bolso e no momento da pessoa. Foi pra isso que eu criei a Incubadora Express: acompanhamento individual comigo por 6 meses, pra quem quer fazer com ajuda, mas ainda não é a hora do programa completo.
+7. **CTA:** "Desconto é o remédio errado pra valor baixo. Salva pra ler antes de responder o próximo 'tá caro'. Manda pra quem vive dando desconto."
+
+**Legenda:**
+Desconto ensina o cliente a esperar a próxima promoção. Uma oferta menor respeita o momento dele sem desvalorizar o seu trabalho.
+Qual foi o maior desconto que você já deu pra fechar uma venda? Comenta.
+Me segue.
+
+*(Inspirado no carrossel de @conradoadolpho sobre desconto e valor percebido (`instagram.com/p/DemZuwMEb45`). Reescrito na voz da Karol. Os exemplos dele (garrafa de azeite e vinho, Volvo e FedEx) NÃO entram. O exemplo do slide 4 é ilustrativo, da persona da Karol. Slides 5 e 6 trazem a posição da Karol (18/10): o diagnóstico das Vendas Secretas faz a oferta aparecer como solução, e ela é contra desconto e a favor do downsell. Incubadora Express (log-decisoes 17/10): 5 sessões individuais em 6 meses + Expert360º + agentes, sem oficinas. Entra como seeding: sem preço e sem CTA de compra (regra da Aria: nada de venda direta). ⚠️ O checkout #17442 estava em análise na Voomp em 17/10 e o acesso ainda não tinha sido publicado: confirmar que está no ar antes de quinta, caso alguém pergunte. Continua o 12h de quinta ("em cada sessão eu testo um preço").)*
+
+#### Reserva pra Semana 13 (saiu da quinta 20h na v2.3)
+**Tema:** "O roteiro de um teste honesto: validar a sua ideia em paralelo, em 5 passos." *(Saiu porque repetia as 3 regras do 17h de quinta.)*
 1. **Capa:** "Como testar se o seu conhecimento vende, sem largar o emprego. O roteiro que eu uso, em 5 passos."
 2. **Passo 1 — Mapeia.** Lista quem você conhece que tem o problema que você resolve. Filtra: quem pode pagar e quem você chamaria sem precisar de desculpa. Quem passa nos três é o começo.
 3. **Passo 2 — Conversa antes de oferecer.** Pergunta como a pessoa resolve hoje, o que já tentou e o que mais incomoda. Você não está vendendo ainda: está descobrindo as palavras que ela usa.
@@ -406,18 +476,27 @@ Me segue que hoje às 15h tem teste de mesário.
 
 *(Coerente com a regra da Incubadora: paralelo é execução, não promessa. Sair ou não se decide na Escala.)*
 
-### 09h · Reels YAP · [24 Comparação de métodos]
-**Opinião:** não existe melhor, existe melhor pra você.
-**Abertura (0-3s):** "Parem de me perguntar se é melhor lançar ou vender no um a um."
-**Contexto:** A resposta depende de três coisas: quanta gente já te conhece, se alguém já pagou pelo que você sabe e o quanto você aguenta se expor.
-**Virada:** Se você tem audiência, já vendeu e aguenta a intensidade, o lançamento pode fazer sentido. Se falta qualquer um dos três, começa no um a um. Eu fiz oito lançamentos antes de entender isso. Quem responde sem te perguntar nada está chutando.
-**Fecha (CTA falado):** "Me segue que eu te dou o critério, não a resposta pronta."
-**Legenda:**
-Audiência, venda anterior e estômago pra exposição. Você tem os três?
-Comenta quantos você tem.
+### 09h · Reels REACT · [26 Simplicidade] — **NOVO NA v2 · REACT 2**
+**Vídeo:** `Downloads/WhatsApp Video 2026-10-18 at 16.43.04.mp4` (mesmo palestrante, Motiversity, ~1m55, em inglês).
+**Texto na tela (fixo):** "RATOEIRA E QUEIJO"
+**[0-3s · trecho dele]** "Pra montar uma boa ratoeira, você precisa de um bom queijo." *(Legenda em português + texto grande: "A explicação de venda mais simples que eu já vi.")*
+**[3-35s · trecho dele]** "O meu queijo: todo organizador de evento quer um palestrante divertido, dinâmico e com conteúdo bom. Então todo o meu material diz isso. Quando alguém começa a beliscar o queijo, eu entro com o fechamento. As pessoas compram promessas. Não pensa como você. Pensa como o seu cliente." *(Corte antes de "o que me fez multimilionário": não entra.)*
+**[35s-fim · Karol, texto dela]**
+Percebeu o que ele acabou de fazer?
+Ele não falou: "Eu sou muito bom em vendas." Ele conseguiu explicar COMO ele vende.
+Ele deu um nome para aquilo. Criou uma lógica. Usou uma metáfora para facilitar o entendimento. Definiu o que precisa acontecer primeiro e o que acontece depois.
+Isso é transformar experiência em método. E esse é um dos maiores ativos que um especialista pode construir.
+Porque enquanto o seu conhecimento existe apenas na sua cabeça, ele depende de você.
+Quando você consegue estruturar esse conhecimento em um processo que outra pessoa entende, aplica e consegue repetir… você começa a ter um método autoral.
+E é aí que o seu conhecimento deixa de ser apenas experiência e começa a virar produto.
+**Fecha (CTA falado, sugestão):** "Mas método sozinho não vende. Me segue que amanhã eu te conto o que vende."
+
+**Legenda (complementa, não repete):**
+Qual é o seu queijo? Em uma frase: o que o seu cliente quer ouvir antes de comprar de você.
+Comenta aqui.
 Me segue.
 
-*("Oito lançamentos que não deram certo": Semana 11, Ter 09h.)*
+*(Texto falado = react 2 da Karol, sem alteração. Transcrição feita em 18/10 (Whisper). Retenção: #14 (a metáfora já está no trecho), #31 com os 4 itens aparecendo um a um quando ela listar (NOME · LÓGICA · METÁFORA · ORDEM), #30 no CTA (ponta solta pro sábado). ⚠️ Nos nomes dos arquivos, o react 1 combina com o vídeo das 16.42.53 (casamento) e o react 2 com o das 16.43.04 (ratoeira), invertido em relação à ordem em que foram mandados.)*
 
 ### 12h · Reels YAP · bastidor · [34 Demonstração]
 **O que eu uso no meu dia a dia.**
@@ -495,18 +574,24 @@ Comenta a sua escolha. Me segue.
 
 *(Histórias #9 e #1 (domingo triste). ⚠️ "Teve mês difícil" é resumo honesto de agosto/2026 (R$1.500, #19). Confirmar se a Karol topa expor o salário de assessora.)*
 
-### 09h · Reels YAP · [7 Mito / crença falsa]
-**O mito que eu quero derrubar.**
-**Abertura (0-3s):** "Dizem que pra vender no digital precisa de muito seguidor. Eu tenho menos de 7 mil."
-**Contexto:** E tem gente com 100 mil seguidores que não vende nada. Seguidor mede quem te vê, não quem confia em você.
-**Virada:** Em setembro eu faturei R$10 mil com essa mesma conta pequena. A venda não veio do post: veio da conversa. O post serve pra pessoa confirmar quem você é quando você chama ela.
-**Fecha (CTA falado):** "Me segue que eu mostro de onde veio cada venda."
-**Legenda:**
-Seguidor mede alcance. Conversa mede confiança.
-Quantos seguidores você acha que precisa pra começar? Comenta.
+### 09h · Reels YAP · react de filme · [10 Contra-intuitivo] — **NOVO NA v2 · FILME**
+**Tese (frase obrigatória):** **"Narrativa vende mais que método."** É a tese da Karol e a da advogada do filme.
+**Texto na tela (gancho, 0-3s):** "99% NARRATIVA. 1%…" *(o 1% fica em aberto de propósito: a resposta só aparece no contexto, #13)*
+**Abertura (0-3s, falada sobre o trecho do filme):** "Essa advogada diz que 99% é narrativa. E o outro 1% você não vai acreditar." *(Trecho de* The Runner*, Prime Video, filmado da TV.)*
+*Alternativas de gancho (reserva):*
+- *A (opinião):* "Minha opinião: o melhor método perde pra melhor história. Até num tribunal."
+- *B (dilema, puxa comentário):* "Se você fosse réu: ia querer ser inocente ou ter a advogada que conta a melhor história?"
+- *C (confissão da personagem):* "Ela admitiu o que nenhum advogado fala: 99% de uma defesa é a história."
+**Contexto:** 99% de uma defesa é contar a história certa. O outro 1%? Ser inocente. *(Texto completa na tela: "99% NARRATIVA. 1% SER INOCENTE.")* É filme, é ficção. Mas ela disse em voz alta a minha tese: narrativa vende mais que método. *(A partir daqui, o texto fixo na tela vira "NARRATIVA VENDE MAIS QUE MÉTODO".)* O júri não decide pelo que é verdade. Decide pelo que faz sentido pra ele.
+**Virada:** Só que ninguém está falando de mentir. Com o seu cliente é igual: ele não compra o melhor método. Primeiro ele se identifica com você. Depois concorda com a sua tese. Só aí ele acredita que a sua solução faz sentido pra ele, e a venda sai. Eu vejo especialista com método impecável que não vende, porque pula as duas primeiras etapas. O método entrega o resultado. A narrativa faz a pessoa te deixar entregar.
+**Fecha (CTA falado):** "Por isso eu repito: narrativa vende mais que método. O seu cliente também é júri. Me segue que eu te mostro como contar a sua história."
+
+**Legenda (complementa, não repete):**
+Narrativa vende mais que método. Não porque método não importa, mas porque ninguém compra o que ainda não entendeu que precisa.
+Identificação, tese, solução. Qual das três você pula quando vai vender? Comenta.
 Me segue.
 
-*(6.841 seguidores em 16/10, `historico-conta.csv`. Setembro R$10 mil: #19. ⚠️ "Tem gente com 100 mil que não vende nada" é generalização ilustrativa: se quiser prova, usar a expert de 170 mil que, depois dos primeiros lançamentos, passou a vender cada vez menos (#21).)*
+*(Tese da Karol (18/10): "narrativa vende mais do que método; a pessoa precisa se identificar, concordar com a tese e acreditar que a solução faz sentido pra ela". Filme:* The Runner *(Prime Video, estreia em 02/09/2026, Gal Gadot como advogada). ✅ Fala conferida em 18/10 na transcrição do filme (scrapsfromtheloft.com): logo no começo, numa ligação enquanto corre, a Maia diz que 99% de se defender é contar a história certa e controlar a narrativa. A Flora pergunta qual é o outro 1%, e ela responde: ser inocente. Original em inglês: "telling the right story. Controlling the narrative." **Trecho pro react:** o filme é recente e ainda não está no Yarn nem no PlayPhrase (buscado em 18/10). Caminho: dar play no Prime Video, no começo do filme, e filmar a tela da TV com o celular (gravar a tela do app costuma sair preto por causa da proteção). Usar no máximo 5 a 8 segundos, com a Karol comentando por cima. Retenção: #2 ("Só que ninguém está falando de mentir"), #31 nas três etapas (IDENTIFICAÇÃO → TESE → SOLUÇÃO, uma por vez), #29 (retoma os 99% no fim). Fecha o arco quinta → sexta → sábado: método organiza, promessa vende, narrativa faz acreditar. O mito dos seguidores, que saiu daqui, continua no carrossel das 20h, slide 4.)*
 
 ### 12h · Reels YAP · bastidor · [27 Contra-mainstream]
 **O que quem vende lançamento não te conta.**
@@ -534,16 +619,34 @@ Você acredita nesse mito? Comenta sim ou não.
 
 *(História #1. ⚠️ Não dizer que ela passou na Receita (nunca passou; o plano foi abandonado). Se segunda já falou do ISS, aqui fica só a Receita.)*
 
-### 17h · Reels YAP · prático · [13 Diagnóstico]
-**Como não cair em propaganda de renda extra fácil.**
-**Abertura (0-3s):** "Três sinais de que aquela promessa de renda extra é propaganda."
-**Contexto:** Com seis em cada dez pessoas buscando renda extra, nunca teve tanta promessa fácil no seu feed.
-**Virada:** "Um: fala do valor e nunca fala do esforço. Dois: só mostra o resultado, nunca o que deu errado no meio. Três: pede que você largue tudo agora. Renda extra de verdade começa pequena, com o que você já sabe, sem largar o que te sustenta."
-**Fecha (CTA falado):** "Me segue que eu mostro como começar pequeno."
-**Legenda:**
-Valor sem esforço, resultado sem erro e pressa pra largar tudo: três sinais de propaganda.
-Qual desses você já viu essa semana? Comenta.
+### 17h · Reels YAP · opinião · [8 Dilema] — **NOVO NA v2.1 · ELEIÇÃO**
+**Escolher um lado ou ser isentão?**
+**Texto na tela (fixo):** "ESCOLHER UM LADO OU SER ISENTÃO?"
+**Abertura (0-3s):** "Amanhã tem eleição. Se você está chegando no digital: escolhe um lado ou fica isentão?"
+**Contexto:** Todo ano de eleição alguém diz que quem não se posiciona é covarde. E alguém diz que quem se posiciona perde cliente. Os dois falam como se a regra servisse pra todo mundo.
+**Virada:** Só que tem uma pergunta antes: isso faz sentido pro seu público e pro seu produto? Se faz, se posicionar é parte do seu trabalho. Se não faz, pensa duas vezes. Quem é pequeno não é formador de opinião a ponto de mudar o resultado. E pode afastar gente que nem chegou a te conhecer. Mais perde do que ganha.
+**Fecha (retoma o gancho + CTA falado):** "Então a minha resposta não é lado nem isentão. É foco. Olha pro seu umbigo agora e valida o seu método. Ganhe quem ganhar, quem vai pagar as suas contas no ano que vem é o seu negócio. Me segue."
+
+**Legenda (complementa, não repete):**
+Posicionamento político não é obrigação nem pecado. É estratégia: só faz sentido quando conversa com o seu público e o seu produto.
+Pra quem está começando, a decisão mais importante dessa semana não está na urna: é o que você vai validar até o fim do ano.
+Você acha que quem é pequeno deve se posicionar? Comenta sim ou não.
 Me segue.
+
+*(Opinião da Karol, 18/10. Sem candidato, partido ou voto, coerente com a regra do domingo e com a persona (sem ângulo partidário). Publicar no sábado, véspera do 2º turno. Retenção: #7 (tela dividida "LADO" x "ISENTÃO" na abertura), #2 ("Só que tem uma pergunta antes"), #29 (o fecho responde a pergunta da abertura). ⚠️ Os comentários podem virar briga política: a Karol decide se modera ou fixa um comentário reforçando "aqui a gente fala do seu negócio".)*
+
+#### Reserva pra Semana 13 (saiu da quarta 17h na v2.2)
+**Quando o caro compensa.** · [37 Permissão]
+**Abertura (0-3s):** "A mentoria que mais me valeu foi a que me disse o que eu não queria ouvir."
+**Contexto:** Em 2025 eu entrei numa mentoria querendo ser lançadora de outros experts. O meu mentor olhou o meu histórico e disse: você nunca teve grandes resultados com lançamento. O seu talento é outro, é criar método.
+**Virada:** Doeu, e foi a orientação mais certeira da minha carreira. O caro compensa quando te faz mudar de rota, não quando te dá mais conteúdo. "Antes de pagar, pergunta: essa pessoa vai olhar o meu caso e me dizer a verdade, ou vai me dar mais aula?"
+**Fecha (CTA falado):** "Me segue que eu te mostro como eu olho o caso de cada aluno."
+**Legenda:**
+Mais aula você acha de graça. Alguém olhando o seu caso e dizendo a verdade, não.
+Qual foi o conselho mais duro que você já recebeu? Comenta.
+Me segue.
+
+*(Histórias #18 e #21. Karol pediu (27/09) pra não enquadrar como elogio: é orientação estratégica sobre o talento dela. Saiu porque quarta já fala de mentoria cara no teste das 15h.)*
 
 ### 20h · Carrossel neutro · [7 Mito / crença falsa]
 **Tema:** "5 mitos de quem quer sair do concurso, testados na minha vida."
@@ -640,17 +743,63 @@ Me segue.
 
 ## ⚠️ Pendências antes de gravar
 
-1. **Folgas de mesário:** conferir a regra no TSE (sexta 15h e domingo 07h).
-2. **6x1:** se a promulgação sair antes da gravação, ajustar o verbo (terça 09h).
+1. ~~**Folgas de mesário**~~ ✅ 18/10: confere. 2 dias por turno (art. 98 da Lei 9.504/97) + 2 pelo treinamento (Res. TSE 23.751/2026) = até 6 nos dois turnos, sem desconto. Várias reportagens citando a lei e a resolução (Diário do Nordeste, A Crítica, InvestNews); a íntegra da resolução não foi aberta. O texto da sexta 15h e do domingo 07h fica como está.
+2. ~~**6x1**~~ ✅ 18/10: promulgada em 16/10. Terça 09h já ajustada ("Agora é lei").
 3. **Salário do ISS** (segunda 12h) e **salário de assessora** (sábado 07h): a Karol topa expor os números?
 4. **Exoneração por telefone** (quarta 07h): confirmar o termo (exoneração do cargo de assessora?).
 5. **Big four** (quinta 15h): falar o termo ou só "auditoria"?
-6. **Parceria com a expert de 170 mil** (sábado 12h) e **agência** (quinta 09h): ok falar em público?
+6. **Parceria com a expert de 170 mil** (sábado 12h): ok falar em público? *(A parte da agência saiu junto com o antigo 09h de quinta.)*
 7. **Domingo 12h:** o que a Karol vai testar em novembro.
 8. **Terça 15h:** repetir os números de agosto/setembro em formato teste ou trocar pelo teste "anúncio na abertura x opinião".
 9. **Sexta 20h, caso 5:** manter ou tirar (encosta em saúde mental).
+10. ~~**Filme (sábado 09h):** conferir a cena~~ ✅ 18/10: a fala está na transcrição (começo do filme, ligação durante a corrida). Falta só a Karol capturar o trecho no Prime Video (não está no Yarn nem no PlayPhrase).
+11. **Reacts (quinta e sexta 09h):** legendar em português os trechos em inglês, creditar Motiversity e confirmar qual vídeo vai com qual texto (ver nota no react 2).
+
+## Retenção por Reel (2 recursos por vídeo, numeração do carrossel @lucureau)
+
+Os 7s das 07h não têm fala: a retenção deles é o gancho fixo + "leia a legenda" (sem mudança).
+
+| Dia | Slot | Recursos | Onde entra |
+|---|---|---|---|
+| Seg | 09h | #11 número + #2 impedimento | "TRÊS PÓS" grande na abertura · virada abre com "Só que certificado prova que você estudou…" |
+| Seg | 12h | #3 antecipação + #5 reviravolta | Antes das anuladas: "e aí aconteceu uma coisa que eu não esperava" · "caí pra 90º" grande |
+| Seg | 15h | #4 prova visual + #29 retoma gancho | Print do Insights na tela · fecho: "E o seu palpite? Acertou?" |
+| Seg | 17h | #31 texto grande + #18 exceção | "1", "2", "3" grandes · "a não ser que a resposta da terceira seja 'construir tudo primeiro'" |
+| Ter | 09h | #22 b-roll + #12 desafio | Manchete da promulgação na tela · "Sabe a pergunta que ninguém está fazendo?" |
+| Ter | 12h | #8 vulnerabilidade + #21 troca de ângulo | A história já é confissão · troca de ângulo em "As minhas alunas eram costureiras" |
+| Ter | 15h | #13 segura resposta + #11 número | Valor só depois do teste · R$1.500 e R$10 mil grandes |
+| Ter | 17h | #31 texto grande + #20 benefício rápido | "CONVERSA → ENTREGA → ANÚNCIO" · "e o primeiro nem custa nada" |
+| Qua | 09h | #11 número + #7 contraste | "59%" grande · tela dividida: bico x o que você estudou |
+| Qua | 12h | (roteiro da Karol) #24 zoom | Só zoom in em "estudou contabilidade comigo em 2010". O resto como ela escreveu |
+| Qua | 15h | #7 contraste + #5 reviravolta | Tela dividida R$60 mil x 1 tarde · "aí caiu a internet" |
+| Qua | 17h | #31 texto grande + #10 alerta | "1 · 2 · 3" grandes · "Jamais largue o que te sustenta pra testar" no fecho |
+| Qui | 09h | #13 + #31 | Ver o react 1 |
+| Qui | 12h | #26 troca de formato + #9 processo/resultado | Corta pra tela do caderno ou planilha de anotação da sessão |
+| Qui | 15h | #31 texto grande + #13 | Os 3 nomes (AUDITORIA · EMPRESA PÚBLICA · NEGÓCIO) entram um a um, veredito no fim |
+| Qui | 17h | #31 + #10 alerta | "1-2-3" grandes · "Jamais diga o valor antes de perguntar como a pessoa resolve hoje" |
+| Sex | 09h | #14 + #31 + #30 | Ver o react 2 |
+| Sex | 12h | #26 gravação de tela + #20 | Tela do Claude Code · "e o melhor é o bônus" antes do agente do aluno |
+| Sex | 15h | #16 aumenta o que vem depois + #13 | "E piora: ele virou PJ" · placar "6 x 0" só no veredito |
+| Sex | 17h | #31 + #29 | Perguntas grandes · fecho volta pra "antes de pedir exoneração" |
+| Sáb | 09h | #2 + #31 + #29 | Ver o roteiro do filme |
+| Sáb | 12h | #5 reviravolta + #3 antecipação | "O primeiro deu certo." pausa. "Os outros foram piorando." · "na análise a gente descobriu o porquê" |
+| Sáb | 15h | #13 + #29 | Veredito só no fim · volta pro "seis por meia dúzia" |
+| Sáb | 17h | #7 + #2 + #29 | Ver o roteiro da eleição |
+| Dom | 09h | #9 processo/resultado + #31 | Os seis testes passam rápido na tela, um por corte |
+| Dom | 12h | (falta o fato) | Fecha quando o roteiro existir |
+| Dom | 15h | #1 som + transição + #31 | "Woosh" entre os vereditos, um por tela |
+| Dom | 17h | #19 bola de cristal + #31 | "Em janeiro você vai saber se o que você sabe vende" · NOVEMBRO / DEZEMBRO grandes |
 
 ## LOG
 - 17/10 — @iris: pesquisa de temas quentes (mesário, 6x1, Serasa) registrada em `temas-do-momento.md`.
 - 17/10 — @rico: teste "Mesário CLT x PJ" (história do irmão) escrito.
 - 17/10 — @rico: plano v1 dos 42 posts com o ETL de ângulos (Renan Matheus), em revisão.
+- 18/10 — @iris: pendências 1 (folgas de mesário) e 2 (6x1 promulgada) checadas na web; terça 09h ajustada. Faltam 7 respostas da Karol.
+- 18/10 — @rico: v2 com filme *The Runner* (sáb 09h), react 1 (qui 09h), react 2 (sex 09h), carrossel favor x produto (qua 20h, inspirado em @matheuscarmopqv). Ranking do primeiro cliente foi pra reserva da Semana 13.
+- 18/10 — @mack: camada de retenção (31 formas, @lucureau) aplicada como regras de produção + tabela por Reel.
+- 18/10 — @iris: Radar de Pautas de 15 a 18/10 conferido, sem pauta aproveitável.
+- 18/10 — @rico: v2.1 — sábado 09h com a frase "Narrativa vende mais que método" na abertura, na tela e no fecho; sábado 17h vira "Escolher um lado ou ser isentão?" (eleição).
+- 18/10 — @rico: gancho do filme mais curioso ("o melhor método perde pra melhor história") + 2 alternativas; a frase-tese passou pro contexto e pro fecho (gancho com aforismo de método foi o pior da conta em 13/10).
+- 18/10 — @rico: v2.2 — gancho do filme vira "99% NARRATIVA. 1%…" (1% em aberto); renda extra volta pra quarta 17h; "Quando o caro compensa" vai pra reserva da Semana 13.
+- 18/10 — @rico: v2.3 — quinta 20h vira o carrossel "Desconto x valor" (inspirado em @conradoadolpho, reescrito); "roteiro do teste honesto" vai pra reserva.
+- 18/10 — @rico: carrossel de preço ajustado com a posição da Karol: capa "Eu não dou desconto", slide 5 = diagnóstico das Vendas Secretas, slide 6 = downsell com a Incubadora Express (seeding, sem preço).
