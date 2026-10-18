@@ -91,4 +91,7 @@ Fonte: planilha operacional do CRM (coluna Observação), preenchida pela Karol 
 - [x] Registrar o aprendizado no log de decisões (16/10)
 - [x] **18/10 (com o Clone Euriler):** Sessão Estratégica como método único, nenhum funil novo por 60 dias, meta de 3 sessões por semana, só 2 opções na sessão (Sprint R$5.000 pra quem não tem tempo · Incubadora Express R$2.500). Detalhe em `log-decisoes.md` (18/10)
 - [ ] Oferecer a Incubadora Express às 3 leads combinadas, incluindo a 7, até 23/10 (lead 8: continuação do Sprint já oferecida · lead 2: Expert360º + sessão avulsa já oferecidos)
-- [ ] Leads 1, 3, 5 e 6: definir o que oferecer (a lead 5 quer apoio pra executar, que é o perfil do Sprint)
+- [x] Lead 5: página do Sprint enviada (18/10). Nova conversa combinada pro fim do ano (marcar data exata no CRM)
+- [ ] Leads 1, 3 e 6: entram na lista de convites 1 a 1
+- [ ] Convites 1 a 1 pra base: 5 por dia útil a partir de 19/10. Na sexta, 23/10, contar quantos viraram sessão e recalibrar
+- [ ] Tráfego pago: nada até 30/10. Nessa data, decidir com os números de 2 semanas de convite. Só entra se a base acabar antes das 3 sessões por semana ou se as sessões começarem a fechar venda. Se entrar, o anúncio leva pro mini-treinamento → WhatsApp → sessão (sem funil novo). Antes: assistir à trilha de Tráfego
