@@ -315,7 +315,7 @@ São simples. E é por isso que funcionam.
 Quais você já segue? Comenta o número.
 Me segue que amanhã tem outra aula.
 
-⚠️ A Karol está em mentoria das 20h às 21h30: carrossel agendado. Regras 1, 2, 4 e 5 são documentadas (tese, 14h, Narrativa do Método, Vendas Secretas). Regra 6 vem do carrossel da semana 10 ("anota cada objeção"). Confirmar se as 6 são dela.
+⚠️ A Karol está em mentoria das 20h às 21h30: carrossel agendado. As 5 regras confirmadas pela Karol em 11/10.
 
 ---
 
@@ -397,10 +397,10 @@ Me segue.
 
 **Legenda:**
 Quase ninguém confere. E é aí que está a diferença.
-Salva e faz as 6 hoje. Comenta quantas passaram.
+Salva e faz as 4 hoje. Comenta quantas passaram.
 Me segue que amanhã tem outra aula.
 
-⚠️ Checagens 5 e 6 são do Rico (bom senso de perfil, não estão nos documentos). Confirmar se a Karol usa.
+*(v1.3: checagens 5 e 6 saíram pra caber em 7 slides.)*
 
 ---
 
@@ -669,7 +669,7 @@ Salva e me segue.
 | # | Slot | O que falta |
 |---|---|---|
 | 1 | Qui 20h | Checagens 5 (últimos 9 posts) e 6 (quem gostou sabe como te chamar) saíram pra caber em 7 slides. Voltam se a Karol quiser. |
-| 2 | 20h todos | Carrosséis sem render: produzir no Squad Carrossel e colocar na fila com a legenda. |
+| 2 | 20h todos | Renderizados em 11/10 (`Downloads/rota100k-s11-*`, com `legenda.txt`). Falta: Karol revisar e colocar na fila. |
 
 **Resolvidas na v1.1 (11/10):** Qua 17h vai **sem preço** · Ter 12h (R$1.500 → R$10 mil) e Qui 12h (venda fantasma) liberadas como estão · Sáb 15h reescrita · Domingo virou "6 passos que destravam as primeiras vendas no digital".
 
@@ -685,3 +685,4 @@ Salva e me segue.
 - 11/10 — @rico-roteirista: Seg 12h confirmado ("entregando o ouro", principalmente nas lives do Expert360º de quarta). Dom 17h sem "eu te cobro na sexta". Roteiro da live corrigido pra quarta, 14/10.
 - 11/10 — @rico-roteirista: v1.2 dos 7 carrosséis das 20h. A Karol achou superficial (uma frase por slide não leva a salvar). Cada slide agora tem o passo, o porquê, o como fazer e um exemplo (documentado ou marcado como ilustrativo). Sex 20h ganhou o 6º erro (melhorar o método quando a venda não vem). Qui 20h: checagem 6 reescrita ("quem gostou sabe como te chamar?").
 - 11/10 — @rico-roteirista: v1.3, carrosséis com 7 slides (capa + 5 + CTA), mantendo o texto desenvolvido. Qua 20h: 5 regras (produto + validar juntas; regra 3 confirmada pela Karol = "persona, não só público-alvo"). Qui 20h: 4 checagens + "falhou em várias?". Sex 20h: 5 erros (construir e postar juntos). Sáb e Dom: "por que" e frase final entraram na capa/CTA.
+- 11/10 — @producer (Squad Carrossel): 7 carrosséis renderizados, 7 slides cada, em `~/Downloads/rota100k-s11-*`. Seg no card-tweet branco; Ter a Dom no diagnóstico-tipográfico fundo branco (número no fundo, capa com o número grande). Legenda em `legenda.txt` de cada pasta.
