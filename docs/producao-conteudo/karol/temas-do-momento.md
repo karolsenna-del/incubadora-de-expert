@@ -281,3 +281,56 @@ FATOS VERIFICADOS (Sage, 21/08): TRF1, 8ª Turma, 19/08/2026, placar 3x2, anulou
 JANELA: 1-2 semanas (vira notícia velha rápido — se for além disso, reposicionar como "aniversário de 1 ano da decisão" ou tema perene sobre teto de vidro de profissão regulamentada)
 FONTES: [Migalhas](https://www.migalhas.com.br/quentes/462893/trf-1-anula-norma-que-autorizava-harmonizacao-facial-por-dentistas) · [Correio Braziliense](https://www.correiobraziliense.com.br/brasil/2026/08/7484248-harmonizacao-facial-nao-e-especialidade-odontologica-define-justica.html) · [CREMERJ News](https://news.cremerj.org.br/2026/08/20/tribunal-regional-federal-anula-resolucao-que-autorizava-dentistas-a-realizar-harmonizacao-orofacial/)
 RECOMENDAÇÃO: ENTRAR — mas só quando a batelada da semana entrar em produção (Karol pediu pra esperar Rota100k Semana 04)
+
+---
+
+## Pesquisa Iris — 17/10/2026 (pra Semana 12 do Rota100k, 19-25/10)
+
+*(pedido da Karol: "pesquise conteúdos quentes para react e opinião" enquanto o ETL de ângulos não fica pronto. Foco: persona dos sonhos = servidora pública presa à estabilidade e sem coragem de arriscar o concurso + última semana de eleição (2º turno 25/10). Radar do Gmail de 11 a 17/10 veio vazio (só ruído), então a busca foi direta na web. Os temas da semana NÃO foram criados: esperam o ETL de ângulos.)*
+
+🔥 TEMA DO MOMENTO: "Mesário no 2º turno: até 6 dias de folga"
+STATUS: quentíssimo — 2º turno em 25/10; a regra das folgas circula na imprensa e em sites de RH
+DNA: bate (servidor/CLT preso ao ponto — mesmo tema do Reel "Não é ilegal, mas é triste", maior peça de 07-16/10 com 82,8% em 3s e comentário de uma mesária discordando)
+VISÃO ÚNICA: você tem (não é sobre a folga, é sobre o que a folga revela: a pessoa trabalha um domingo inteiro de graça pra comprar dias de liberdade. Responder a própria mesária que comentou "pra ganhar folga, eu amo ser mesária" — sem julgar quem faz, perguntando o que ela faria se tivesse esses dias o ano todo)
+FATOS: 2 dias de folga por dia trabalhado + 2 pelo treinamento; quem trabalha nos 2 turnos acumula até 6 dias, sem desconto no salário; datas combinadas com o empregador. Fonte de imprensa/RH, não do TSE — conferir no TSE antes de cravar número na tela.
+JANELA: até 25/10 (domingo) + a semana seguinte, quando as folgas começam a ser usadas
+FONTES: [Diário do Nordeste](https://diariodonordeste.verdesmares.com.br/pontopoder/como-funciona-a-folga-eleitoral-e-quais-os-direitos-dos-mesarios-na-eleicao-de-2026-1.3791351) · [Genyo (RH)](https://genyo.com.br/mesarios-nas-eleicoes-direitos-folgas/) · [O Povo](https://www.opovo.com.br/noticias/politica/eleicoes/2026/07/27/amp/guia-do-mesario-nas-eleicoes-2026-tudo-o-que-voce-precisa-saber.html)
+RECOMENDAÇÃO: ENTRAR — prioridade 1 da semana
+
+🔥 TEMA DO MOMENTO: "Fim da escala 6x1 aprovado no Senado"
+STATUS: quentíssimo — Senado aprovou em 14/10 (75 a 1), mantendo o texto da Câmara; segue pra promulgação, que pode sair na própria semana 19-25/10
+DNA: bate (tempo livre x vida presa — a persona já tem 5x2 e continua presa; mais folga não resolve quem não sabe o que fazer com ela)
+VISÃO ÚNICA: você tem ("Dois dias de folga garantidos por lei. E aí, vai fazer o quê com eles?" — a lei dá tempo, não dá direção. Servidora tem 5x2 há anos e continua esperando a aposentadoria pra começar a viver)
+FATOS: jornada máxima cai de 44h pra 40h semanais, com pelo menos 2 folgas por semana (uma de preferência no domingo); vale 60 dias após a promulgação.
+CUIDADO: tema com cor política em semana de 2º turno — falar da vida da pessoa, nunca de governo ou candidato
+JANELA: 1 semana (pico na promulgação)
+FONTES: [Conjur](https://conjur.com.br/2026-out-15/senado-aprova-fim-da-escala-6x1-e-reducao-da-jornada-de-trabalho/) · [Forbes](https://forbes.com.br/carreira/2026/10/senado-aprova-fim-da-escala-de-trabalho-6x1/) · [Gazeta do Povo](https://www.gazetadopovo.com.br/economia/senado-aprova-pec-do-fim-da-escala-6x1/) · [Senado Notícias](https://www12.senado.leg.br/noticias/materias/2026/10/13/pec-do-fim-da-6x1-pode-ser-votada-nesta-quarta-apos-quinta-sessao-de-discussao)
+RECOMENDAÇÃO: ENTRAR
+
+🔥 TEMA DO MOMENTO: "6 em cada 10 brasileiros têm renda extra — e pra 59% virou permanente"
+STATUS: em alta — pesquisa Serasa/Opinion Box divulgada em 15/10 (campo feito em fevereiro/2026, 1.406 entrevistas, margem de 2,6 p.p.)
+DNA: bate (renda extra com o que você sabe x bico; a promessa da Incubadora é método + escala, rodando em paralelo sem queimar a ponte)
+VISÃO ÚNICA: você tem (renda extra virou regra, mas a maioria faz bico, e quase ninguém usa o que levou 15 anos pra aprender. A servidora que dá aula de reforço ou vende bolo tem um método inteiro guardado na gaveta)
+FATOS: 39% fazem de forma regular e 21% ocasional; 58% ganham até R$ 1 mil por mês com isso; 28% buscam pra sair de dívida. Pesquisa Ipsos-Ipec em 10 capitais (set/2026) achou 60% fazendo bico nos últimos 12 meses.
+JANELA: 3-5 dias
+FONTES: [Grupo A Hora](https://grupoahora.net.br/conteudos/2026/10/15/seis-em-cada-dez-brasileiros-tem-alguma-fonte-de-renda-extra-revela-serasa/) · [Tribuna do Agreste](https://www.tribunadoagreste.com.br/variedades/2026/10/15/997735-6-em-cada-10-brasileiros-tem-alguma-fonte-de-renda-extra-revela-serasa) · [O Hoje (Ipsos-Ipec)](https://ohoje.com/2026/09/20/economia-dos-bicos-cresce-e-61-dos-brasileiros-buscam-renda-extra/)
+RECOMENDAÇÃO: ENTRAR
+
+TEMA "Estabilidade do servidor em jogo na reforma administrativa (PEC 38/2025) e no 2º turno"
+STATUS: debate vivo (análise do Pacto pelo Serviço Público sobre o 2º turno), mas sem notícia nova de tramitação em outubro
+DNA: bate em cheio com a persona (o medo de perder a estabilidade)
+NÃO RECOMENDO ENTRAR AGORA porque:
+- é tema partidário na semana do 2º turno; qualquer ângulo vira leitura de voto
+- usar o medo de perder a estabilidade como gancho soa como terrorismo com a persona que a gente quer acolher
+GUARDAR pra depois de 25/10, com o ângulo "segurança que depende de uma votação que você não controla"
+FONTES: [Pacto pelo Serviço Público](https://pactopublico.org/segundo-turno/analises/reforma-administrativa-e-estabilidade) · [LBS Advogados](https://lbs.adv.br/conteudos/reforma-administrativa-acaba-com-estabilidade-dos-servidores-e-com-o-rju-alertam-especialistas/) · [Proifes (Dweck)](https://proifes.org.br/reforma-administrativa-nao-mudara-estabilidade-de-servidor-diz-dweck/)
+
+TEMA "CNU: edital de vagas remanescentes anulado (Edital Enap 273, publicado 06/10)"
+STATUS: já com 11 dias; janela fechando
+DNA: bate parcialmente (vida em espera por edital), mas fala com concurseiro, não com quem já está dentro
+NÃO RECOMENDO ENTRAR porque a janela está fechando e a persona dos sonhos já passou no concurso
+FONTES: [NC News](https://ncnews.com.br/2026/10/06/cnu-anula-edital-260-2026-suspende-concurso-nacional/) · [Gran Cursos](https://blog.grancursosonline.com.br/cnu-edital-260-2026-anulado/)
+
+ACERVO (perene, sem janela):
+- **Vacância x exoneração.** O TJGO garantiu a um servidor estável o direito de voltar ao cargo antigo enquanto faz estágio probatório no novo (09/10). Mostra que existe "porta de volta" em alguns casos, um ângulo pro medo de "se eu sair, perdi tudo". Conferir as regras de licença do cargo da pessoa antes de prometer qualquer coisa. [Jusbrasil](https://www.jusbrasil.com.br/artigos/servidor-publico-de-goiania-que-pediu-exoneracao-consegue-na-justica-direito-de-retornar-ao-cargo/927136412)
+- **Burnout no serviço público.** Revisões acadêmicas de 2026 apontam burocracia, baixa autonomia e falta de reconhecimento como causas. Sem dado nacional novo, então serve de pano de fundo, não de react. [REASE](https://periodicorease.pro.br/rease/article/view/26194)
