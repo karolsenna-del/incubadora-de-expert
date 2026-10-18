@@ -71,7 +71,7 @@ uma trava específica (ver `crm-reativacao-leads/arsenal-vendas-closer.md`, seç
 toda trava é assunto de Story de rotina. **Ciclo de 5 semanas**, focado na Incubadora de
 Expert (Grupo e Individual), Sprint do Método, Diagnóstico Ferramentas e Expert360º — Domingo
 define a oferta da semana, Terça e Quinta reforçam com ângulo diferente. **Método VIP e
-Método Express ficam de fora da rotina fixa** — a Karol oferece no direct ou como downsell
+Destrava Expert - Sessão única ficam de fora da rotina fixa** — a Karol oferece no direct ou como downsell
 quando perceber que cabe pro momento da pessoa, caso a caso.
 
 Ordem sugerida (do ticket mais leve pro mais completo, seguindo a lógica de trava do Eixo 1 do
@@ -206,7 +206,7 @@ devia) pra gerar.
    Sexta descartada ("ninguém quer comprar nada")
 3. ~~Reaproveitar histórias já usadas em carrossel/Reels~~ — **pode repetir**, sem problema
 4. ~~Quais das 7 ofertas entram na rotina fixa~~ — **5 entram** (Diagnóstico Ferramentas,
-   Expert360º, Sprint do Método, Grupo, Individual); **Método VIP e Método Express ficam de
+   Expert360º, Sprint do Método, Grupo, Individual); **Método VIP e Destrava Expert - Sessão única ficam de
    fora** — Karol oferece no direct/downsell quando perceber que cabe, sem forçar na rotina
 
 ## Pendência restante antes de rodar a rotina

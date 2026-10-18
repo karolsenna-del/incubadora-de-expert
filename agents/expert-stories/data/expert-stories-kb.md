@@ -65,7 +65,7 @@ específica (fonte: `crm-reativacao-leads/arsenal-vendas-closer.md`, seção 5),
 | 4 | Grupo | Jornada completa com validação, ticket menor, topa formato em grupo |
 | 5 | Individual | Jornada completa 1:1, acompanhamento mais garantido |
 
-**Método VIP e Método Express ficam de fora do ciclo fixo** — a Karol oferece no direct ou
+**Método VIP e Destrava Expert - Sessão única ficam de fora do ciclo fixo** — a Karol oferece no direct ou
 como downsell quando percebe que cabe pro momento da pessoa, caso a caso. Não forçar esses 2
 na rotina de Levantada de Mão.
 
