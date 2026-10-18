@@ -1,4 +1,9 @@
-{
+{"autoMode": {
+    "allow": [
+      "$defaults",
+      "Editar células (digitar, apagar conteúdo, mudar status/observação) nas planilhas Google da própria Karol pelo Claude in Chrome, quando ela pedir na conversa. Não inclui excluir abas/planilhas nem compartilhar."
+    ]
+  },
   "permissions": {
     "allow": [],
     "deny": []
