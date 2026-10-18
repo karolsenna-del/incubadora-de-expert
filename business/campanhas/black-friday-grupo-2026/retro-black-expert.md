@@ -83,9 +83,12 @@ Fonte: planilha operacional do CRM (coluna Observação), preenchida pela Karol 
 ## Decisões a tomar (dia 15 ou depois)
 
 - [x] O que fazer com quem demonstrou interesse. **Decidido 16/10:** antes de redesenhar o Grupo, testar no 1:1 um formato menor (Validação, 6 meses) com as leads quentes (2, 7 e 8, mais quem fizer sentido). O Grupo a R$7.500 fica como está até o teste dar resposta.
-- [ ] Definir o formato do teste: o que entra, duração e preço (Karol)
-- [ ] Mandar a explicação da mentoria pra lead 4, que não viu a live
-- [ ] Arrumar a linha de teste do CRM que recebeu a anotação da lead 7
+- [x] Definir o formato do teste: o que entra, duração e preço (Karol) — Incubadora Express, 17/10
+- [x] Mandar a explicação da mentoria pra lead 4, que não viu a live (confirmado na weekly 18/10)
+- [x] Arrumar a linha de teste do CRM que recebeu a anotação da lead 7 (confirmado na weekly 18/10)
 - [ ] Corrigir o GA4 da página (Gestor de Infra)
 - [ ] Religar o webhook do WhatsApp no CRM (Gestor de Infra)
-- [ ] Registrar o aprendizado no log de decisões
+- [x] Registrar o aprendizado no log de decisões (16/10)
+- [x] **18/10 (com o Clone Euriler):** Sessão Estratégica como método único, nenhum funil novo por 60 dias, meta de 3 sessões por semana, só 2 opções na sessão (Sprint R$5.000 pra quem não tem tempo · Incubadora Express R$2.500). Detalhe em `log-decisoes.md` (18/10)
+- [ ] Oferecer a Incubadora Express às 3 leads combinadas, incluindo a 7, até 23/10 (lead 8: continuação do Sprint já oferecida · lead 2: Expert360º + sessão avulsa já oferecidos)
+- [ ] Leads 1, 3, 5 e 6: definir o que oferecer (a lead 5 quer apoio pra executar, que é o perfil do Sprint)
