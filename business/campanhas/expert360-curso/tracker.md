@@ -60,6 +60,7 @@
 ## LOG
 
 > Mais recente primeiro.
+- 18/10 — @companion: weekly — pausa da Black encerrada. Prazo novo: M3 A9-A13 gravadas, editadas e publicadas até 31/10 (o aluno da Incubadora Express depende delas).
 - 02/10 — @companion: Karol informou que editou as aulas A6, A7 e A8 do M3. Publicação na Área de Membros vai ser feita em outro chat (course-publisher).
 - 26/09 — @course-creator: descricoes.md revisado pra linguagem do curso (aprovado pela Karol) — 4 "Bem-vinda" → "Boas-vindas" (Orientações, M1, M2, M4), aluna → aluno no M2 (3 Jornadas, Portfólio), "ela responde" → "o lead responde" (M3 A8). descricoes-aulas.js do site regenerado; deploy feito pela Karol (dpl_4hRLpqRYB3LG9ws9ARNWF9AFFFdW), conferido via curl.
 - 26/09 — @gestor-infra: Área de Membros exibe a descrição de cada aula (fonte descricoes.md) — CTAs de suporte da A9/A12/Encerramento M3 no ar. Checklist V05/V06 ✅.

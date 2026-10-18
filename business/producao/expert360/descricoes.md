@@ -134,7 +134,7 @@ Quer um segundo olhar? Me manda a gravação da sua sessão e eu te mostro exata
 ### 13-quem-voce-se-tornou
 Nomear o que foi construído no M3: P4, Rastreador, abordagem calibrada, roteiro da sessão, condução ao vivo e pós-sessão. A virada de especialista com método para especialista com prova, e por que 3 vendas é a referência do curso, não uma régua: cada negócio tem o seu número, e esse número vira dado pro que vem depois.
 
-Travou num ponto específico e seguiu sem resolver? A Mentoria Express é uma hora comigo focada exatamente nisso. Fale com o suporte: https://wa.me/556792324690
+Travou num ponto específico e seguiu sem resolver? A Destrava Expert - Sessão única é uma hora comigo focada exatamente nisso. Fale com o suporte: https://wa.me/556792324690
 
 ---
 
