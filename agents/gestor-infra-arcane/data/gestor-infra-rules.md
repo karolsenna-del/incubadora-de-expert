@@ -366,6 +366,16 @@ automação também estiver travada do lado dela (aconteceu 1x, resolveu na hora
 
 ---
 
+## REGRA-026: Deploy "Ready" não prova que a versão nova está no ar — conferir a página e usar `--force` se vier antigo
+
+**Contexto:** Em 17/10 (missão #103), `vercel --prod` do `vendas-incubadora` (CLI v52) terminou "Ready", com os domínios certos, mas publicou as versões ANTIGAS dos arquivos: a pasta nova `destrava-expert/` deu 404 e as páginas editadas continuaram iguais (o `Last-Modified` era o do deploy novo, ou seja, o conteúdo errado estava DENTRO do deploy, não era cache). Os arquivos estavam certos no disco e o terminal da Karol os enxergava. `vercel --prod --force` resolveu na hora.
+**Regra:**
+- Depois de todo deploy de página, conferir no ar com `curl` (título/trecho alterado + a URL nova) em vez de confiar no "Ready".
+- Se vier conteúdo antigo: refazer com `vercel --prod --force` antes de investigar outra causa.
+- A CLI da Karol está em v52 (atual v64). Se o problema voltar mesmo com `--force`, atualizar a CLI (`npm i -g vercel@latest`).
+
+---
+
 ## Registro de Incidentes
 
 | # | O que aconteceu | Fix | Regra criada |

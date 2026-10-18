@@ -1,0 +1,704 @@
+[
+  {
+    "musica": "Pieces (Solo Piano Version)",
+    "artista": "Danilo Stankovic",
+    "emocao": "emocionante",
+    "por_que": "Piano melancólico que passou de 21 bilhões de views no TikTok; o próprio autor viu atletas contando a história de superação com ela",
+    "trecho": "peça curta (~1:25), piano solo do começo ao fim",
+    "instrumental": true,
+    "fonte": "https://wien.orf.at/stories/3122437/"
+  },
+  {
+    "musica": "Snowfall",
+    "artista": "Øneheart & Reidenshi",
+    "emocao": "emocionante",
+    "por_que": "Ambiente escuro e lento que entrou em mais de 500 mil vídeos do TikTok; fica por baixo de história pessoal sem brigar com a voz",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://en.wikipedia.org/wiki/Snowfall_(song)"
+  },
+  {
+    "musica": "Another Love",
+    "artista": "Tom Odell",
+    "emocao": "emocionante",
+    "por_que": "Voltou às paradas da Europa por causa do TikTok, virou trilha de vídeos de luta e resistência; reconhecível nos primeiros acordes",
+    "trecho": "refrão 'And if somebody hurts you, I wanna fight' (o pedaço que viralizou)",
+    "instrumental": false,
+    "fonte": "https://www.taiwannews.com.tw/news/4735505"
+  },
+  {
+    "musica": "Daylight",
+    "artista": "David Kushner",
+    "emocao": "emocionante",
+    "por_que": "Viralizou no TikTok em 2023 (trend 'You look happier'), mais de 230 mil vídeos; balada orquestral com peso de virada de vida",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://en.wikipedia.org/wiki/Daylight_(David_Kushner_song)"
+  },
+  {
+    "musica": "Trem-Bala",
+    "artista": "Ana Vilela",
+    "emocao": "emocionante",
+    "por_que": "Clássico brasileiro de família e gratidão que volta todo ano no Reels (homenagem a mãe e pai)",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Oh Mãe",
+    "artista": "MC Vine7, Matheuszin DJ",
+    "emocao": "emocionante",
+    "por_que": "Em alta no Reels para histórias da relação mãe e filho; funciona em relato de família e de onde a pessoa veio",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Iris",
+    "artista": "Goo Goo Dolls",
+    "emocao": "emocionante",
+    "por_que": "Trend do Instagram (dez/2025) para clipes emocionantes e transformações",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Let Down",
+    "artista": "Radiohead",
+    "emocao": "emocionante",
+    "por_que": "Uma das músicas mais usadas do TikTok em 2025 (top 20 global), trilha de edits emocionantes; tom de cansaço com esperança",
+    "trecho": "introdução de guitarra antes da voz",
+    "instrumental": false,
+    "fonte": "https://editorial.americansongwriter.com/a-28-year-old-song-by-radiohead-just-became-a-surprise-charting-hit-in-2025/"
+  },
+  {
+    "musica": "Sparks",
+    "artista": "Coldplay",
+    "emocao": "emocionante",
+    "por_que": "Ressurgiu no TikTok em 2025 (mais de 500 mil vídeos, top 20 global do ano); clima íntimo de admitir erro e seguir",
+    "trecho": "verso 'And I know I was wrong / But I won't let you down'",
+    "instrumental": false,
+    "fonte": "https://consequence.net/2025/06/coldplay-sparks-hot-100-viral-tiktok"
+  },
+  {
+    "musica": "Experience",
+    "artista": "Ludovico Einaudi",
+    "emocao": "inspirador",
+    "por_que": "Quase 7 milhões de vídeos e 15 bilhões de views no TikTok com a trend de 'manifestar' o futuro; casa com visão de futuro",
+    "trecho": "piano do começo; as cordas crescem até o clímax para a frase de virada",
+    "instrumental": true,
+    "fonte": "https://www.musicweek.com/digital/read/ludovico-einaudi-goes-viral-on-tiktok-with-7m-video-creations-for-catalogue-track-experience/085076"
+  },
+  {
+    "musica": "Legend",
+    "artista": "Beast Inside Beats",
+    "emocao": "inspirador",
+    "por_que": "Em alta no Reels para conquista e triunfo motivacional; batida épica",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Don't Tell Your Dreams",
+    "artista": "STOSLIV",
+    "emocao": "inspirador",
+    "por_que": "Trend do Instagram (jul/2026) para motivação, evolução na academia e marcos de negócio",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Oh Yeah",
+    "artista": "Steve Lacy",
+    "emocao": "inspirador",
+    "por_que": "Trend do Instagram (ago/2026) para vídeo motivacional sobre progresso e disciplina",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "You're Gonna Go Far",
+    "artista": "Noah Kahan",
+    "emocao": "inspirador",
+    "por_que": "Trend do Instagram (fev/2026) para motivação de quem está cansado no trabalho e segue",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Human Nature",
+    "artista": "Michael Jackson",
+    "emocao": "inspirador",
+    "por_que": "Trend do Instagram (mai/2026) nos vídeos 'hopecore', de esperança",
+    "trecho": "introdução de sintetizador antes da voz",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Inspirar",
+    "artista": "Lil Whaner",
+    "emocao": "inspirador",
+    "por_que": "Em alta no Reels brasileiro para conteúdo motivacional e mensagem positiva",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Acredita",
+    "artista": "Mc Paulin da Capital",
+    "emocao": "inspirador",
+    "por_que": "Em alta no Reels brasileiro para superação e conquista pessoal",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Sahara",
+    "artista": "Hensonn",
+    "emocao": "tensao",
+    "por_que": "Um dos phonks mais virais da internet; abertura sombria que segura a tensão até o drop",
+    "trecho": "abertura escura antes do drop de grave (drop no momento da revelação)",
+    "instrumental": true,
+    "fonte": "https://www.last.fm/music/Hensonn/+wiki"
+  },
+  {
+    "musica": "Can You Hear the Music",
+    "artista": "Ludwig Göransson",
+    "emocao": "tensao",
+    "por_que": "Trilha de Oppenheimer que viralizou no TikTok (2023) nos vídeos de 'me sinto sobrecarregado'; cordas crescentes de peso e revelação",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://knowyourmeme.com/memes/oppenheimer-fancams-can-you-hear-the-music"
+  },
+  {
+    "musica": "Little Dark Age",
+    "artista": "MGMT",
+    "emocao": "tensao",
+    "por_que": "Viralizou no TikTok a partir de 2020 em edits sombrios e de crítica; clima de mistério",
+    "trecho": "versão lenta (slowed) da introdução de sintetizador",
+    "instrumental": false,
+    "fonte": "https://knowyourmeme.com/memes/little-dark-age"
+  },
+  {
+    "musica": "The Blood Theme",
+    "artista": "Daniel Licht",
+    "emocao": "tensao",
+    "por_que": "Tema de Dexter em alta no Instagram (jan/2026) para dramatizar 'pequenos horrores'; serve para erro caro e alerta",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Die On This Hill",
+    "artista": "SIENNA SPIRO",
+    "emocao": "tensao",
+    "por_que": "1,2 milhão de vídeos no TikTok (abr/2026) para defender opinião e posicionamento; casa com polêmica",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://www.kontentino.com/blog/trending-tiktok-sounds-right-now/"
+  },
+  {
+    "musica": "white rabbit's bells",
+    "artista": "Tomb Gazer",
+    "emocao": "tensao",
+    "por_que": "Começando a subir no TikTok (out/2026) em vídeos de 'fato perturbador' com texto na tela; quieto e inquietante",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://www.socialpilot.co/blog/tiktok-trends"
+  },
+  {
+    "musica": "Beat Automotivo Tan Tan Tan Viral",
+    "artista": "WZ Beat",
+    "emocao": "energia",
+    "por_que": "Som mais usado da história do TikTok (93,2 milhões de vídeos), funk brasileiro; ótimo para transição e lista rápida",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://routenote.com/blog/most-used-tiktok-tracks/"
+  },
+  {
+    "musica": "Passo Bem Solto",
+    "artista": "ATLXS",
+    "emocao": "energia",
+    "por_que": "Brazilian phonk que trilhou milhões de vídeos no TikTok, Reels e Shorts em 2025",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://en.wikipedia.org/wiki/Passo_Bem_Solto"
+  },
+  {
+    "musica": "Montagem - PR Funk",
+    "artista": "S3BZS, MC GW, MC Menor da Alvorada",
+    "emocao": "energia",
+    "por_que": "Brazilian phonk viral no TikTok (143 milhões de streams, Billboard Dance); batida acelerada para hype",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://billboard.com.br/brazilian-phonk-conheca-a-variacao-gringa-do-funk-que-e-viral-no-tik-tok/"
+  },
+  {
+    "musica": "Bonde das Oncinhas",
+    "artista": "DJ LK da Escócia",
+    "emocao": "energia",
+    "por_que": "Hit do verão 2025 no TikTok, ganhou coreografias em outros países",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://billboard.com.br/tiktok-divulga-dados-sobre-o-impacto-do-funk-brasileiro-na-plataforma/"
+  },
+  {
+    "musica": "Descer",
+    "artista": "DJ LK da Escócia",
+    "emocao": "energia",
+    "por_que": "Hit do Carnaval 2025 no TikTok, também com versões de dança lá fora",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://billboard.com.br/tiktok-divulga-dados-sobre-o-impacto-do-funk-brasileiro-na-plataforma/"
+  },
+  {
+    "musica": "APT.",
+    "artista": "ROSÉ & Bruno Mars",
+    "emocao": "energia",
+    "por_que": "Entre as 10 músicas mais usadas do TikTok em 2025; refrão grudento para trend",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://www.cnnbrasil.com.br/pop/musica/tiktok-revela-musicas-mais-usadas-em-2025-e-1o-lugar-surpreende-veja-lista/"
+  },
+  {
+    "musica": "Rock That Body",
+    "artista": "Black Eyed Peas",
+    "emocao": "energia",
+    "por_que": "3ª música mais usada do TikTok em 2025",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://www.cnnbrasil.com.br/pop/musica/tiktok-revela-musicas-mais-usadas-em-2025-e-1o-lugar-surpreende-veja-lista/"
+  },
+  {
+    "musica": "Timber",
+    "artista": "Pitbull feat. Kesha",
+    "emocao": "energia",
+    "por_que": "De volta no Instagram (ago/2026) para edição de corte rápido",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Mimosa 2000",
+    "artista": "Furacão 2000",
+    "emocao": "energia",
+    "por_que": "Funk brasileiro em alta no Instagram para momentos animados e de alta energia",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Drive Forever",
+    "artista": "Sergio Valentino",
+    "emocao": "confiante",
+    "por_que": "O 'tema do sigma': batida dos vídeos de mentalidade, ambição e grindset no TikTok e no Instagram",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://knowyourmeme.com/sensitive/memes/sergio-valentinos-drive-forever-sigma-male-theme-song"
+  },
+  {
+    "musica": "Prayer Instrumental",
+    "artista": "VOIDKRUZER",
+    "emocao": "confiante",
+    "por_que": "Em alta no Instagram (jul/2026) para edits dramáticos e estilo de vida de luxo",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Murder In My Mind",
+    "artista": "Kordhell",
+    "emocao": "confiante",
+    "por_que": "Phonk que trilhou mais de 1 milhão de vídeos no TikTok; grave pesado de quem chegou lá",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://en.wikipedia.org/wiki/Mick_Kenney"
+  },
+  {
+    "musica": "After Dark",
+    "artista": "Mr.Kitty",
+    "emocao": "confiante",
+    "por_que": "Viralizou no TikTok e YouTube (2022) em edits estilosos e misteriosos",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://knowyourmeme.com/memes/mr-kittys-after-dark"
+  },
+  {
+    "musica": "Big Dawgs",
+    "artista": "Hanumankind",
+    "emocao": "confiante",
+    "por_que": "Mais de 1 milhão de posts no TikTok (2024); rap de atitude",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://en.wikipedia.org/wiki/Big_Dawgs"
+  },
+  {
+    "musica": "Million Dollar Baby",
+    "artista": "Tommy Richman",
+    "emocao": "confiante",
+    "por_que": "Recorde de 7 semanas em 1º no TikTok Billboard Top 50 (2024); clima de resultado e celebração",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://www.billboard.com/music/chart-beat/tommy-richman-million-dollar-baby-breaks-tiktok-billboard-top-50-record-1235717962"
+  },
+  {
+    "musica": "My Way",
+    "artista": "Frank Sinatra",
+    "emocao": "confiante",
+    "por_que": "Trend do Instagram (fev/2026) para assumir as próprias escolhas com entrega dramática",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Jus' Know",
+    "artista": "BlackMayo",
+    "emocao": "confiante",
+    "por_que": "Em alta no Instagram para mostrar fatos, resultados e transformações",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Lush Life",
+    "artista": "Zara Larsson",
+    "emocao": "confiante",
+    "por_que": "4,6 milhões de vídeos no TikTok (abr/2026) em conteúdo de autoconfiança e virada",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://www.kontentino.com/blog/trending-tiktok-sounds-right-now/"
+  },
+  {
+    "musica": "Quebradas 2",
+    "artista": "L7nnon, MC Paulin da Capital",
+    "emocao": "confiante",
+    "por_que": "Em alta no Reels brasileiro para conquista e ostentação de resultado",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Aesthetic",
+    "artista": "Tollan Kim",
+    "emocao": "leve",
+    "por_que": "Instrumental tranquilo usado em 23 milhões de vídeos do TikTok, trilha clássica de rotina e 'dia comigo'",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://tokchart.com/sounds/tollan-kim-aesthetic_7072513628145977346"
+  },
+  {
+    "musica": "Love You So",
+    "artista": "The King Khan & BBQ Show",
+    "emocao": "leve",
+    "por_que": "Som mais tocado do TikTok no 1º semestre de 2022, 29 milhões de vídeos; leve e reconhecível",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://knowyourmeme.com/memes/love-you-so-by-the-king-khan-bbq-show"
+  },
+  {
+    "musica": "Married Life",
+    "artista": "Michael Giacchino",
+    "emocao": "leve",
+    "por_que": "Valsa do filme Up que virou trend de vida a dois no TikTok; doce e conhecida, boa para rotina e bastidor",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://www.buzzfeed.com/daily/wifetok-real-or-just-trolling-us"
+  },
+  {
+    "musica": "Golden Hour (Piano Instrumental)",
+    "artista": "Chilled Pig",
+    "emocao": "leve",
+    "por_que": "Piano em alta no Instagram (jun/2026) para estilo de vida e paisagem",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Olha o Que o Amor Me Faz (Piano)",
+    "artista": "Eliezer Soares",
+    "emocao": "leve",
+    "por_que": "Versão em piano em alta no Reels brasileiro para demonstração; cabe por baixo de tutorial",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Slow Living",
+    "artista": "Stereogully",
+    "emocao": "leve",
+    "por_que": "Trend do Instagram (ago/2026) para rotina calma e gratidão",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "A Sprinkle of Happiness",
+    "artista": "Asa Palette Cafe",
+    "emocao": "leve",
+    "por_que": "Trend do Instagram (jul/2026) para manhã tranquila, cozinha e momentos bons",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Carefree Days",
+    "artista": "Peaceful Reveries",
+    "emocao": "leve",
+    "por_que": "Trend do Instagram (nov/2025) para rotina da manhã e conteúdo calmo",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Put Your Records On",
+    "artista": "Corinne Bailey Rae",
+    "emocao": "leve",
+    "por_que": "Em alta no Reels para rotina tranquila e relaxamento",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Monkeys Spinning Monkeys",
+    "artista": "Kevin MacLeod",
+    "emocao": "divertido",
+    "por_que": "Um dos sons mais usados da história do TikTok (32 milhões de vídeos), a trilha oficial do vídeo bobo",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://www.npr.org/2024/09/24/g-s1-23951/monkeys-spinning-youtube-tiktok-viral-social-media-music"
+  },
+  {
+    "musica": "Oh No",
+    "artista": "Kreepa (sample de Capone)",
+    "emocao": "divertido",
+    "por_que": "Trend do TikTok de mostrar o segundo antes do desastre; ótimo para 'o erro que todo mundo comete'",
+    "trecho": "o 'oh no' com congelamento e zoom no momento do erro",
+    "instrumental": false,
+    "fonte": "https://www.dexerto.com/entertainment/best-of-tiktoks-viral-oh-no-trend-1449537/"
+  },
+  {
+    "musica": "Fluffing a Duck",
+    "artista": "Kevin MacLeod",
+    "emocao": "divertido",
+    "por_que": "Tuba alegre usada em vídeo cômico no TikTok, explodiu de novo em 2024",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://knowyourmeme.com/memes/fluffing-a-duck-by-kevin-macleod"
+  },
+  {
+    "musica": "Sneaky Snitch",
+    "artista": "Kevin MacLeod",
+    "emocao": "divertido",
+    "por_que": "Uso em massa no TikTok desde o fim de 2022; clima de 'aprontando' para ironia",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://amp.knowyourmeme.com/memes/everybody-wanna-be-a-superstar-young-thug-x-kevin-macleods-sneaky-snitch"
+  },
+  {
+    "musica": "Hold My Hand",
+    "artista": "Jess Glynne",
+    "emocao": "divertido",
+    "por_que": "2ª mais usada do TikTok em 2025 (6,6 milhões de vídeos) na trend irônica 'Nothing beats a Jet2 holiday' de coisa dando errado",
+    "trecho": "abertura com o 'Nothing beats a Jet2 holiday' e o começo do refrão",
+    "instrumental": false,
+    "fonte": "https://www.netinfluencer.com/hold-my-hand-earns-tiktok-uk-song-of-the-year-following-viral-jet2-holiday-trend/"
+  },
+  {
+    "musica": "A Thousand Miles",
+    "artista": "Vanessa Carlton",
+    "emocao": "divertido",
+    "por_que": "Trend do Instagram (abr/2026) de humor corporativo e situação de trabalho",
+    "trecho": "riff de piano da abertura",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Easy",
+    "artista": "Commodores",
+    "emocao": "divertido",
+    "por_que": "Trend do Instagram (jan/2026) para ironia e humor seco",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Péssimo Negócio (Ao Vivo)",
+    "artista": "Márcia Fellipe",
+    "emocao": "divertido",
+    "por_que": "Em alta no Reels brasileiro para humor de situação do dia a dia",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Não Fosse Tão Tarde (MTG Remix)",
+    "artista": "Lou Garcia, DJ Luan Gomes",
+    "emocao": "divertido",
+    "por_que": "Remix brasileiro em alta no Reels para meme e humor viral",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Cornfield Chase (versão piano)",
+    "artista": "Dorian Marko (tema de Hans Zimmer, Interstellar)",
+    "emocao": "nostalgico",
+    "por_que": "1,5 milhão de vídeos no TikTok como 'trilha das memórias marcantes'; transforma lembrança comum em cena de filme",
+    "trecho": "piano do começo; melhor com a voz por cima e eco leve",
+    "instrumental": true,
+    "fonte": "https://www.gigwise.com/features/3415893/15-second-charts--cats-and-dogs--teenage-heartbreak---core-memories"
+  },
+  {
+    "musica": "End of Beginning",
+    "artista": "Djo",
+    "emocao": "nostalgico",
+    "por_que": "6,3 milhões de vídeos no TikTok (abr/2026) para atualização de vida, virada de carreira e bastidor; casa com 'como tudo começou'",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://www.kontentino.com/blog/trending-tiktok-sounds-right-now/"
+  },
+  {
+    "musica": "Pretty Little Baby",
+    "artista": "Connie Francis",
+    "emocao": "nostalgico",
+    "por_que": "Música de 1962 que foi a mais usada do TikTok em 2025 (28 milhões de vídeos) e passou de 3 milhões de Reels",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://www.nbcnews.com/pop-culture/music/pretty-little-baby-tiktok-connie-francis-rcna210802"
+  },
+  {
+    "musica": "Ribs",
+    "artista": "Lorde",
+    "emocao": "nostalgico",
+    "por_que": "800 mil vídeos no TikTok sobre crescer e o tempo passando; voltou às paradas em 2025",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://www.rollingstone.com/music/music-features/lorde-ribs-pure-heroine-tumblr-1234830823/"
+  },
+  {
+    "musica": "Someday We Will Dream About Today",
+    "artista": "The Sways",
+    "emocao": "nostalgico",
+    "por_que": "No pico do Instagram agora (set–out/2026) para momentos do dia a dia contados como lembrança",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://www.socialpilot.co/blog/instagram-reels-trends"
+  },
+  {
+    "musica": "Piano Man × Silver Springs (mashup)",
+    "artista": "Billy Joel / Fleetwood Mac",
+    "emocao": "nostalgico",
+    "por_que": "Trend do Instagram (dez/2025) de conselho ao eu mais novo; casa com começo da jornada",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Forever Young",
+    "artista": "Alphaville",
+    "emocao": "nostalgico",
+    "por_que": "Clássico dos anos 80 em alta no Reels para narrativa de transformação",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Nosso Rock (Ao Vivo em Santos)",
+    "artista": "Restart",
+    "emocao": "nostalgico",
+    "por_que": "Nostalgia brasileira dos anos 2000 em alta no Reels",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Bondade de Deus",
+    "artista": "Isaías Saad",
+    "emocao": "fe",
+    "por_que": "Virou declaração nacional dos cristãos; os Reels do próprio Isaías passaram de 20 milhões de plays",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://istoe.com.br/bondade-de-deus-de-isaias-saad-se-mantem-ha-6-semanas-no-top-do-youtube"
+  },
+  {
+    "musica": "Lindo Momento",
+    "artista": "Julliany Souza",
+    "emocao": "fe",
+    "por_que": "Maior hit gospel de 2025, mais de 500 mil vídeos nas redes",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://portaldeprefeitura.com.br/religiao/top-10-hits-gospel-de-2025-as-musicas-que-dominaram-o-ano/610856/"
+  },
+  {
+    "musica": "Deus de Obras Completas",
+    "artista": "Kemilly Santos",
+    "emocao": "fe",
+    "por_que": "2º maior hit gospel de 2025, 400 mil vídeos nas redes",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://portaldeprefeitura.com.br/religiao/top-10-hits-gospel-de-2025-as-musicas-que-dominaram-o-ano/610856/"
+  },
+  {
+    "musica": "É Ele",
+    "artista": "Ministério Drops",
+    "emocao": "fe",
+    "por_que": "Top 3 gospel de 2025, 260 mil vídeos nas redes",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://portaldeprefeitura.com.br/religiao/top-10-hits-gospel-de-2025-as-musicas-que-dominaram-o-ano/610856/"
+  },
+  {
+    "musica": "Deserto",
+    "artista": "Maria Marçal",
+    "emocao": "fe",
+    "por_que": "Viralizou nas plataformas em 2022 e lançou a carreira da cantora; tema de travessia difícil com Deus",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://istoe.com.br/fenomeno-do-gospel-maria-marcal-ultrapassa-15-bilhao-em-plataformas-musicais"
+  },
+  {
+    "musica": "Espontâneo One (Piano Instrumental)",
+    "artista": "Wandinho Nonato",
+    "emocao": "fe",
+    "por_que": "Piano de adoração em alta no Reels para fundo calmo e meditativo; não briga com a voz",
+    "trecho": "",
+    "instrumental": true,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Love of God (Live)",
+    "artista": "Brandon Lake, Phil Wickham",
+    "emocao": "fe",
+    "por_que": "Em alta no Reels para emoção gospel e gratidão",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "WE PRAY",
+    "artista": "Coldplay, Little Simz, Burna Boy, Elyanna, TINI",
+    "emocao": "fe",
+    "por_que": "Em alta no Reels para fé, esperança e conexão espiritual",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://herospark.com/blog/musicas-em-alta-no-reels-hoje/"
+  },
+  {
+    "musica": "Everything Hallelujah",
+    "artista": "Justin Bieber",
+    "emocao": "fe",
+    "por_que": "Trend do Instagram (mai/2026) para gratidão e listas do que agradecer",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://socialbee.com/blog/trending-instagram-songs/"
+  },
+  {
+    "musica": "Your Way's Better",
+    "artista": "Forrest Frank",
+    "emocao": "fe",
+    "por_que": "Worship que entrou no Top 50 do TikTok em 2025 com dança viral, 250 mil vídeos; fé alegre e leve",
+    "trecho": "",
+    "instrumental": false,
+    "fonte": "https://crosswalk.com/headlines/contributors/michael-foust/christian-artist-forrest-frank-hits-tiktoks-top-50-thanks-to-dance-craze.html"
+  }
+]

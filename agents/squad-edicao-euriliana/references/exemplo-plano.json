@@ -1,0 +1,540 @@
+{
+ "tema": {
+  "fonte_titulo": "Bebas Neue",
+  "fonte_texto": "Inter",
+  "fonte_ui": "Space Grotesk"
+ },
+ "legenda": {
+  "estilo": "palavra",
+  "tamanho": 112
+ },
+ "trilha": {
+  "src": "media/trilha.mp3",
+  "volume": 0.075,
+  "volume_cheia": 0.2
+ },
+ "rosto": {
+  "zoom": [
+   1,
+   1.05
+  ]
+ },
+ "sfx": [
+  {
+   "em": 0,
+   "som": "rise",
+   "vol": 0.5
+  },
+  {
+   "em": "ia_autonoma",
+   "som": "pop"
+  },
+  {
+   "em": "squad",
+   "som": "pop"
+  },
+  {
+   "em": "sistema",
+   "som": "pop"
+  },
+  {
+   "em": "arcano",
+   "som": "pop"
+  },
+  {
+   "em": "salva",
+   "som": "click",
+   "vol": 0.6
+  },
+  {
+   "em": "salva+0.15",
+   "som": "ding",
+   "vol": 0.35
+  },
+  {
+   "em": "euriler_day",
+   "som": "pop"
+  },
+  {
+   "em": "comando",
+   "som": "click",
+   "vol": 0.6
+  },
+  {
+   "em": "comece",
+   "som": "pop"
+  },
+  {
+   "em": "claude",
+   "som": "pop"
+  },
+  {
+   "em": "auroq",
+   "som": "pop"
+  },
+  {
+   "em": "equipe",
+   "som": "pop"
+  },
+  {
+   "em": "ferrari-1.3",
+   "som": "rise",
+   "vol": 0.45
+  },
+  {
+   "em": "nave",
+   "som": "impacto",
+   "vol": 0.4
+  },
+  {
+   "em": "viver",
+   "som": "pop"
+  },
+  {
+   "em": "progresso+0.5",
+   "som": "ding",
+   "vol": 0.35
+  },
+  {
+   "em": "conectado",
+   "som": "pop"
+  }
+ ],
+ "cenas": [
+  {
+   "janela": "abertura",
+   "layout": "rosto"
+  },
+  {
+   "de": 0,
+   "ate": 1.6,
+   "layout": "cheia",
+   "tipo": "video",
+   "props": {
+    "src": "assets/tiger-roar.mp4",
+    "inicio": 0.33,
+    "zoom": [
+     1.15,
+     1.3
+    ],
+    "sem_legenda": true,
+    "textos": [
+     {
+      "texto": "BEM-VINDO",
+      "em": 0.13
+     },
+     {
+      "texto": "À ARCANE",
+      "em": 0.4,
+      "cor": "#06B6D4"
+     }
+    ]
+   }
+  },
+  {
+   "janela": "programa",
+   "layout": "dividida",
+   "tipo": "imagem",
+   "props": {
+    "src": "assets/card-arcane.jpg",
+    "titulo": "Programa avançado Arcane",
+    "chips": [
+     {
+      "texto": "IA autônoma",
+      "em": "ia_autonoma",
+      "cor": "#06B6D4"
+     },
+     {
+      "texto": "Squads",
+      "em": "squad",
+      "cor": "#3B82F6"
+     },
+     {
+      "texto": "Sistema operacional",
+      "em": "sistema",
+      "cor": "#A78BFA"
+     }
+    ]
+   }
+  },
+  {
+   "janela": "plataforma",
+   "layout": "dividida",
+   "tipo": "tela",
+   "props": {
+    "src": "telas/arka-home.png",
+    "natural": [
+     1338,
+     896
+    ],
+    "url": "arka.education",
+    "de": {
+     "x": 60,
+     "y": 30,
+     "w": 1100
+    },
+    "para": {
+     "x": 150,
+     "y": 330,
+     "w": 900
+    },
+    "etiqueta": "Sua área de membros"
+   }
+  },
+  {
+   "janela": "arcano",
+   "layout": "dividida",
+   "tipo": "tela",
+   "props": {
+    "src": "telas/arcane-home.png",
+    "natural": [
+     1338,
+     896
+    ],
+    "url": "arka.education/mentoria",
+    "de": {
+     "x": 200,
+     "y": 60,
+     "w": 1000
+    },
+    "para": {
+     "x": 1030,
+     "y": 590,
+     "w": 240
+    },
+    "zoom_ate": "arcano",
+    "brilho_em": "arcano",
+    "etiqueta": "Arcano · suporte de IA 24h"
+   }
+  },
+  {
+   "janela": "arcano-parceiro",
+   "layout": "pip",
+   "tipo": "chat",
+   "props": {
+    "avatar": {
+     "src": "assets/mascote.webm",
+     "transparente": true
+    },
+    "mensagens": [
+     {
+      "lado": "dir",
+      "texto": "Travei na instalação. E agora?",
+      "em": "parceiro-0.2"
+     },
+     {
+      "lado": "esq",
+      "texto": "Me mostra o erro que eu te guio, passo a passo.",
+      "em": "escudeiro"
+     }
+    ],
+    "selo": {
+     "texto": "Destravado",
+     "em": "destravar"
+    }
+   }
+  },
+  {
+   "janela": [
+    "suporte",
+    "salva-numero"
+   ],
+   "layout": "dividida",
+   "tipo": "contato",
+   "props": {
+    "avatar": "assets/euriler-atendimento.jpg",
+    "titulo": "Mentoria Arcane - Euriler Atendimento",
+    "subtitulo": "WhatsApp exclusivo dos alunos",
+    "destaque": "+55 11 93621-4486",
+    "botao": {
+     "texto": "Salvar contato",
+     "depois": "Contato salvo",
+     "clique": "salva"
+    }
+   }
+  },
+  {
+   "janela": "calendario",
+   "layout": "dividida",
+   "tipo": "custom",
+   "props": {
+    "componente": "Calendario",
+    "mes": "OUTUBRO",
+    "dia": 6,
+    "vazios": 4,
+    "dias": 25,
+    "rodape": "Próximo encontro · Mentoria com Euriler · 6/10, 16h",
+    "selo": {
+     "titulo": "EURILER DAY",
+     "sub": "1 dia em São Paulo comigo",
+     "em": "euriler_day"
+    }
+   }
+  },
+  {
+   "janela": [
+    "comando",
+    "jornada"
+   ],
+   "layout": "pip",
+   "tipo": "tela",
+   "props": {
+    "src": "telas/arcane-home.png",
+    "natural": [
+     1338,
+     896
+    ],
+    "url": "arka.education/mentoria",
+    "de": {
+     "x": 150,
+     "y": 80,
+     "w": 830
+    },
+    "para": {
+     "x": 228,
+     "y": 420,
+     "w": 330
+    },
+    "cursor": {
+     "alvo": [
+      321,
+      526
+     ],
+     "clique": "comando"
+    },
+    "troca": {
+     "src": "telas/jornada.png",
+     "natural": [
+      1338,
+      896
+     ],
+     "em": "jornada-1.7",
+     "de": {
+      "x": 330,
+      "y": 60,
+      "w": 680
+     },
+     "para": {
+      "x": 150,
+      "y": 60,
+      "w": 900
+     },
+     "etiqueta": "Minha Jornada"
+    },
+    "etiqueta": "Página inicial da Arcane"
+   }
+  },
+  {
+   "janela": "comece-aqui",
+   "layout": "dividida",
+   "tipo": "tela",
+   "props": {
+    "src": "telas/jornada.png",
+    "natural": [
+     1338,
+     896
+    ],
+    "url": "arka.education/jornada",
+    "de": {
+     "x": 150,
+     "y": 60,
+     "w": 900
+    },
+    "para": {
+     "x": 160,
+     "y": 395,
+     "w": 300
+    },
+    "zoom_ate": "comece",
+    "brilho_em": "comece",
+    "etiqueta": "Passo 1 · Comece aqui",
+    "etiqueta_cor": "#A78BFA"
+   }
+  },
+  {
+   "janela": "instalar",
+   "ate": "auroq-0.3",
+   "layout": "dividida",
+   "tipo": "tela",
+   "props": {
+    "src": "assets/terminal-auroq.png",
+    "natural": [
+     1600,
+     830
+    ],
+    "moldura": "janela",
+    "de": {
+     "x": 0,
+     "y": 20,
+     "w": 720
+    },
+    "para": {
+     "x": 60,
+     "y": 20,
+     "w": 680
+    },
+    "etiqueta": "Claude Code · Codex",
+    "etiqueta_cor": "#F97316"
+   }
+  },
+  {
+   "janela": "instalar",
+   "de": "auroq-0.3",
+   "layout": "dividida",
+   "tipo": "tela",
+   "props": {
+    "src": "telas/auroq.png",
+    "natural": [
+     1338,
+     896
+    ],
+    "url": "arka.education/auroq",
+    "de": {
+     "x": 225,
+     "y": 195,
+     "w": 760
+    },
+    "para": {
+     "x": 225,
+     "y": 205,
+     "w": 560
+    },
+    "etiqueta": "Auroq OS · meu sistema operacional"
+   }
+  },
+  {
+   "janela": "squads",
+   "layout": "dividida",
+   "tipo": "tela",
+   "props": {
+    "src": "telas/auroq.png",
+    "natural": [
+     1338,
+     896
+    ],
+    "url": "arka.education/auroq",
+    "de": {
+     "x": 228,
+     "y": 490,
+     "w": 380
+    },
+    "para": {
+     "x": 600,
+     "y": 600,
+     "w": 380
+    },
+    "etiqueta": "Sua equipe de marketing",
+    "etiqueta_cor": "#A78BFA"
+   }
+  },
+  {
+   "janela": "nave",
+   "layout": "cheia",
+   "tipo": "hiperespaco",
+   "props": {
+    "textos": [
+     {
+      "texto": "ESSA FERRARI",
+      "em": "ferrari-0.1"
+     },
+     {
+      "texto": "ESSA NAVE",
+      "em": "nave",
+      "cor": "#06B6D4"
+     }
+    ]
+   }
+  },
+  {
+   "janela": "viver",
+   "layout": "dividida",
+   "tipo": "lista",
+   "props": {
+    "titulo": "Sua jornada, passo a passo",
+    "itens": [
+     "Comece aqui",
+     "Instale a máquina",
+     "Conheça seus squads",
+     "Pilote a nave"
+    ],
+    "em": "simples",
+    "passo": 0.4,
+    "final": {
+     "linhas": [
+      "É SÓ VIVER",
+      "O PROCESSO"
+     ],
+     "em": "viver",
+     "botao": "Comece agora →",
+     "botao_em": "agora-0.3"
+    }
+   }
+  },
+  {
+   "janela": "progresso",
+   "layout": "dividida",
+   "tipo": "numero",
+   "props": {
+    "rotulo": "Seu progresso",
+    "ate": 100,
+    "sufixo": "%",
+    "barra": true,
+    "em": 0.07,
+    "duracao": 1.3
+   }
+  },
+  {
+   "janela": "comunidade",
+   "layout": "dividida",
+   "tipo": "telefone",
+   "props": {
+    "src": "assets/whatsapp-comunidade-exemplo.webp",
+    "etiqueta": "Comunidade Arcane",
+    "cor": "#22C55E"
+   }
+  },
+  {
+   "janela": "conectado",
+   "layout": "pip",
+   "tipo": "rede",
+   "props": {
+    "centro": "VOCÊ",
+    "texto": "CONECTADO",
+    "em": "conectado"
+   }
+  },
+  {
+   "janela": "fechamento",
+   "layout": "pip",
+   "tipo": "titulo",
+   "props": {
+    "fundo": {
+     "imagem": "assets/card-arcane.jpg",
+     "escurece": 0.45
+    },
+    "alinhar": "topo",
+    "linhas": [
+     {
+      "texto": "BEM-VINDO",
+      "em": 0.07,
+      "tamanho": 210
+     },
+     {
+      "texto": "À ARCANE",
+      "em": 0.27,
+      "cor": "#06B6D4",
+      "tamanho": 260
+     },
+     {
+      "texto": "ARKA.EDUCATION",
+      "em": 0.53,
+      "tamanho": 40,
+      "fonte": "texto",
+      "cor": "#94A3B8"
+     }
+    ],
+    "sem_legenda": true
+   }
+  }
+ ]
+}

@@ -6,10 +6,16 @@
 # sem período em paralelo (decisão da Karol).
 
 live_expert360:
-  ultimo_processado_titulo: "Live Expert360 - 2026/09/23 13:59 GMT-04:00 - Recording"
-  ultimo_processado_data: "2026-09-23T19:24:13.179Z"  # createdTime do arquivo no Drive (Live 31)
-  proximo_numero: 32
-  ultima_execucao: "2026-10-08"
+  ultimo_processado_titulo: "Live Expert360 - 2026/10/07 14:01 GMT-04:00 - Recording"
+  ultimo_processado_data: "2026-10-07T19:26:47.819Z"  # createdTime do arquivo no Drive (Live 33)
+  proximo_numero: 34
+  ultima_execucao: "2026-10-15"
+  # 15/10/2026 (missão #38, disparo autônomo REGRA-015): pasta 1daoDIif... agora com
+  # karol.franzini@gmail.com como writer (confirmado via get_file_permissions). Lives 32 e 33
+  # baixadas via Playwright (tamanhos batem com o Drive), upadas no YouTube Não listado
+  # (a1ovU1vnU4w, XDOzpCR7x_k) e inseridas em encontros_mentoria (a643b286..., 48adf715...).
+  # Nenhuma "Live Expert360 -" nova depois de 07/10 (sem Live 34 no Drive; a única gravação
+  # nova de 13/10 é "Ensaio Black", fora do filtro). Pendência lives_32_33 removida.
   # 08/10/2026 (missão #37, disparo autônomo REGRA-015): busca global achou 2 gravações NOVAS —
   # "Live Expert360 - 2026/10/01 13:58 GMT-04:00 - Recording" (685MB, id
   # 1nAdBjzUCySDg6c8hIiSZ7W2si81hc85T, createdTime 2026-10-01T19:30:26.790Z) = Live 32 (a live
@@ -152,7 +158,8 @@ live_expert360:
 mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/24 14:24 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-24T20:43:47.651Z"  # createdTime do arquivo no Drive
-  ultima_execucao: "2026-10-08"
+  ultima_execucao: "2026-10-15"
+  # 15/10/2026 (missão #38): nenhum "Encontro Incubadora -" novo depois de 24/08. Nada a fazer.
   # 08/10/2026 (missão #37): nenhum "Encontro Incubadora -" novo depois de 24/08. Nada a fazer.
   # 01/10/2026 (missão #33, disparo autônomo REGRA-015): nenhum "Encontro Incubadora -" novo
   # depois do de 24/08 (já processado). Nada a fazer.
@@ -220,7 +227,9 @@ mentoria_em_grupo:
 encontros_individuais:
   ultimo_processado_titulo: null
   ultimo_processado_data: null
-  ultima_execucao: "2026-10-08"
+  ultima_execucao: "2026-10-15"
+  # 15/10/2026 (missão #38): nenhum mp4 "Individual -". Desde 08/10 só "Vagner - 2026/10/07
+  # 18:58" (1:1 fora do padrão, cliente do Sprint) — não processada, filtro não cobre.
   # 08/10/2026 (missão #37): nenhum mp4 "Individual -". Gravações 1:1 fora do padrão desde 01/10:
   # Alessandro (02/10 e 05/10), Lais (02/10), Vagner (02/10 e 07/10), Tasso (06/10), Milena
   # (07/10) — não processadas, filtro não cobre. Decisão sobre ajustar filtro segue pendente.
@@ -278,12 +287,9 @@ encontros_individuais:
   # reconhecer esse padrão novo, ou renomear as pastas manualmente. Sem isso, esta série nunca vai
   # processar nada mesmo que a Karol grave 1:1s.
 
-pendencias:
-  - id: lives_32_33_pasta_nao_compartilhada
-    aberta_em: "2026-10-08"
-    descricao: "Lives 32 (01/10) e 33 (07/10) achadas, roteiros prontos, mas a pasta nova 'Live Expert360 (recurring)' não está compartilhada com karol.franzini@gmail.com — API não consegue compartilhar (bloqueio do Workspace)."
-    acao_karol: "Compartilhar a pasta com karol.franzini@gmail.com: https://drive.google.com/drive/folders/1daoDIiffLgLsXISfEbMO5UVhj8EmCQtN"
-    atualizacao_2026_10_08: "Karol compartilhou a pasta em 08/10 (não verificado pela API). Publicação das Lives 32 e 33 adiada por decisão dela (tokens no fim) — fica pra próxima sync/pedido. Ao retomar: conferir acesso antes de baixar."
+pendencias: []
+# 15/10/2026 (missão #38): pendência "lives_32_33_pasta_nao_compartilhada" (aberta 08/10)
+# RESOLVIDA — acesso writer confirmado via API, Lives 32 e 33 publicadas nesta missão.
 # 20/08/2026 (missão #17): pendência "acesso_drive_bloqueado" (registrada nas missões #15/#16)
 # RESOLVIDA — Karol recompartilhou a pasta "Live Expert360 (recurring)" (confirmado: permissão
 # "anyone:writer" apareceu via get_file_permissions, e o perfil karol.franzini@gmail.com acessou
