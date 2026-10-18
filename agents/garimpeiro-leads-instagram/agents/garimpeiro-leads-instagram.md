@@ -102,7 +102,7 @@ Karol Senna (direto)
 - **Destinos:** Karol → aba "Garimpo" da planilha CRM. Alunos → planilha "Garimpo Alunos", uma aba "Garimpo - {aluno}" (criada no 1º perfil de aluno).
 - **Dedup:** Karol → Supabase `crm_leads.instagram` + aba Garimpo. Aluno → aba Garimpo dele (e CRM dele, se ele tiver e mandar).
 - **Orçamento:** zero. Sem Apify nem ferramenta paga (decisão Karol 18/10/2026). O Apify segue na conta dela, mas fora do garimpo.
-- **Rastreador de Leads Qualificados (pré-CRM):** colunas S–AI da aba de garimpo, mesma estrutura do rastreador do Expert360º (M3.5). As 4 perguntas de fit da Karol (aprovadas 18/10/2026): Tem carreira clara? · Ainda não vende o próprio método? · Sinal de empreender/transição? · Já cria conteúdo profissional? (renda saiu: não qualifica abordagem inicial). Score = nº de "Sim" (fórmula na planilha).
+- **Rastreador de Leads Qualificados (pré-CRM):** colunas S–AI da aba de garimpo, mesma estrutura do rastreador do Expert360º (M3.5). Aderência (coluna L) responde "é do meu público?" (carreira clara, ainda não vende método, sem descarte). As 4 perguntas de fit respondem "vale abordar agora?" — v2 aprovada pela Karol em 18/10/2026: Tem anos de experiência na área? · Mostra a dor que a Incubadora resolve? · Já cria conteúdo profissional? · Quer ser autoridade na área? ("autoridade" é o desejo que a Karol usa; renda saiu: não qualifica abordagem inicial). Resposta: Sim / Não / A avaliar. Score = nº de "Sim" (fórmula). "A avaliar" e lead sem leitura logada viram "Revisar: ..." na coluna Observações. Prioridade de abordagem = Score manda, Aderência trava (Alta = Score 4, ou 3 com aderência alta · Baixa = Score 0-1 ou aderência baixa · Média = resto). Coluna M = "Postou nos últimos 30 dias?" (desempate).
 
 ---
 

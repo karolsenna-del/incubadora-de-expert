@@ -11,6 +11,7 @@
 //   node planilha.mjs listar --perfil karol
 //   node planilha.mjs preparar --perfil karol   → cabeçalho do rastreador + menus suspensos + fórmula do Score (idempotente)
 //   node planilha.mjs migrar --perfil karol     → preenche o rastreador das linhas antigas (só onde "Grupo" está vazio)
+//   node planilha.mjs recalcular --perfil karol → régua mudou: reescreve fit, prioridade, "postou 30 dias" e "Revisar:" das rodadas locais
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
@@ -25,14 +26,23 @@ const MAX_POR_RODADA = 50;
 
 export const COLUNAS = [
   'Data rodada', 'Cliente', 'Termo', 'Nome', '@', 'Link do perfil', 'Bio', 'Link externo', 'Seguidores',
-  'Categoria', 'Sinais', 'Aderência', 'Prioridade', 'Motivo da nota', 'Fato-gancho', 'Fonte do gancho',
+  'Categoria', 'Sinais', 'Aderência', 'Postou nos últimos 30 dias?', 'Motivo da nota', 'Fato-gancho', 'Fonte do gancho',
   'Status revisão', 'Copy',
 ];
 
+// Perguntas de fit (v2, Karol 18/10/2026). Aderência (coluna L) diz "é do público?"; o fit diz "vale abordar agora?".
+// Carreira clara e "ainda não vende método" saíram do fit: são peneira da Aderência.
+export const FITS = [
+  { coluna: 'Tem anos de experiência na área?', campo: 'fit_experiencia', revisar: 'anos de experiência não aparecem no perfil' },
+  { coluna: 'Mostra a dor que a Incubadora resolve?', campo: 'fit_dor', revisar: 'dor não aparece no perfil' },
+  { coluna: 'Já cria conteúdo profissional?', campo: 'fit_conteudo', revisar: 'sem posts suficientes pra avaliar o conteúdo' },
+  { coluna: 'Quer ser autoridade na área?', campo: 'fit_autoridade', revisar: 'desejo de autoridade não aparece no perfil' },
+];
+export const A_AVALIAR = 'A avaliar';
+
 // Bloco do rastreador (começa na coluna S). Ordem = ordem das colunas.
 export const RASTREADOR = [
-  'Grupo', 'Tem carreira clara?', 'Ainda não vende o próprio método?', 'Sinal de empreender/transição?',
-  'Já cria conteúdo profissional?', 'Score de Fit (0-4)', 'Prioridade de abordagem', 'Perfil', 'Status',
+  'Grupo', ...FITS.map((f) => f.coluna), 'Score de Fit (0-4)', 'Prioridade de abordagem', 'Perfil', 'Status',
   'Data Última Interação', 'Próxima Ação', 'Data Próxima Ação', 'Fechou?', 'Valor', 'Data Fechamento',
   'Depoimento', 'Observações',
 ];
@@ -42,10 +52,8 @@ const SIM_NAO = ['Sim', 'Não'];
 const MENUS = {
   // "Seguidor sem interação" (Karol, 18/10/2026): segue mas nunca comentou/respondeu — não é "Seguidores engajados".
   'Grupo': ['Círculo íntimo', 'Colegas da área', 'Já me pediu ajuda', 'Seguidores engajados', 'Seguidor sem interação', 'Conexões frias qualificadas', 'Veio até mim'],
-  'Tem carreira clara?': SIM_NAO,
-  'Ainda não vende o próprio método?': SIM_NAO,
-  'Sinal de empreender/transição?': SIM_NAO,
-  'Já cria conteúdo profissional?': SIM_NAO,
+  ...Object.fromEntries(FITS.map((f) => [f.coluna, [...SIM_NAO, A_AVALIAR]])),
+  'Postou nos últimos 30 dias?': SIM_NAO,
   'Prioridade de abordagem': ['Alta', 'Média', 'Baixa'],
   'Perfil': ['Conector', 'Analista', 'Diretivo'],
   'Status': ['Sem abordagem', 'Abordagem feita', 'Respondeu', 'Sessão agendada', 'Sessão realizada', 'Proposta enviada', 'Cliente', 'Vai pensar', 'Lead frio'],
@@ -53,7 +61,32 @@ const MENUS = {
   'Depoimento': ['Pendente', 'Solicitado', 'Recebido'],
   'Status revisão': ['aprovado', 'descartado'],
 };
-const PRIORIDADE_ABORDAGEM = { alta: 'Alta', media: 'Média', média: 'Média', baixa: 'Baixa' };
+
+// Prioridade de abordagem (Karol, 18/10/2026): Score manda, Aderência trava.
+//   Alta = Score 4, ou Score 3 com aderência alta · Baixa = Score 0-1 ou aderência baixa · Média = o resto
+export function prioridadeAbordagem(p) {
+  const score = FITS.filter((f) => p[f.campo] === 'Sim').length;
+  const ad = String(p.aderencia || '').toLowerCase().replace('é', 'e');
+  if (ad === 'baixa' || score <= 1) return 'Baixa';
+  if (score === 4 || (score === 3 && ad === 'alta')) return 'Alta';
+  return 'Média';
+}
+
+// Postou nos últimos 30 dias (a contar da data da rodada) — desempate entre leads da mesma prioridade.
+export function postouRecente(p, dataRodada) {
+  const ref = new Date(dataRodada || Date.now()).getTime();
+  const datas = [p.post_da_hashtag?.data, ...(p.posts_recentes || []).map((x) => x.data)].filter(Boolean).map((d) => new Date(d).getTime());
+  if (!datas.length) return '';
+  return datas.some((d) => ref - d <= 30 * 864e5) ? 'Sim' : 'Não';
+}
+
+// Observação automática pra Karol revisar: fit que não deu pra avaliar + lead sem leitura logada.
+export function observacaoRevisao(p) {
+  const itens = FITS.filter((f) => p[f.campo] === A_AVALIAR).map((f) => f.revisar);
+  if (p.fase === 2) itens.push('sem leitura logada (avaliado só pela bio)');
+  if (p.observacao_revisao) itens.push(p.observacao_revisao);
+  return itens.length ? `Revisar: ${itens.join('; ')}` : '';
+}
 
 export function letra(indice) {
   let s = '', n = indice + 1;
@@ -64,8 +97,8 @@ const colunaDe = (nome) => {
   const i = COLUNAS.indexOf(nome);
   return letra(i >= 0 ? i : COL_INICIO_RASTREADOR + RASTREADOR.indexOf(nome));
 };
-const COL_FIT_1 = colunaDe('Tem carreira clara?');
-const COL_FIT_4 = colunaDe('Já cria conteúdo profissional?');
+const COL_FIT_1 = colunaDe(FITS[0].coluna);
+const COL_FIT_4 = colunaDe(FITS[FITS.length - 1].coluna);
 const COL_SCORE = colunaDe('Score de Fit (0-4)');
 const COL_FIM = letra(COL_INICIO_RASTREADOR + RASTREADOR.length - 1);
 // Sem separador de argumento — funciona em planilha pt-BR e en (REGRA-025 do Gestor de Infra).
@@ -127,16 +160,14 @@ async function escreverScores(destino, totalLinhas) {
 function blocoRastreador(p) {
   const v = {
     'Grupo': p.grupo || 'Conexões frias qualificadas',
-    'Tem carreira clara?': p.fit_carreira || '',
-    'Ainda não vende o próprio método?': p.fit_nao_vende || '',
-    'Sinal de empreender/transição?': p.fit_transicao || '',
-    'Já cria conteúdo profissional?': p.fit_conteudo || '',
+    ...Object.fromEntries(FITS.map((f) => [f.coluna, p[f.campo] || ''])),
     'Score de Fit (0-4)': '',
-    'Prioridade de abordagem': PRIORIDADE_ABORDAGEM[p.aderencia] || '',
+    'Prioridade de abordagem': prioridadeAbordagem(p),
     'Perfil': p.perfil_leitura || '',
     'Status': 'Sem abordagem',
     'Fechou?': 'Em aberto',
     'Depoimento': 'Pendente',
+    'Observações': observacaoRevisao(p),
   };
   return RASTREADOR.map((c) => v[c] ?? '');
 }
@@ -147,16 +178,18 @@ async function enviar(caminhoRodada) {
   const classificados = (rodada.para_classificar || []).filter((p) => p.aderencia && p.aderencia !== 'descarte');
   const semGancho = classificados.filter((p) => !p.fato_gancho || !p.fonte_gancho);
   if (semGancho.length) throw new Error(`${semGancho.length} perfil(s) sem fato-gancho ou fonte — classificação incompleta`);
-  const semFit = classificados.filter((p) => !p.fit_carreira || !p.fit_nao_vende || !p.fit_transicao);
-  if (semFit.length) throw new Error(`${semFit.length} perfil(s) sem as perguntas de fit 1-3 — classificação incompleta`);
-  const ordem = { alta: 0, media: 1, média: 1, baixa: 2 };
-  classificados.sort((a, b) => (a.prioridade - b.prioridade) || (ordem[a.aderencia] - ordem[b.aderencia]));
+  // Sem resposta ≠ "A avaliar": toda pergunta precisa de Sim, Não ou A avaliar (essa vira observação pra Karol).
+  const semFit = classificados.filter((p) => FITS.some((f) => !p[f.campo]));
+  if (semFit.length) throw new Error(`${semFit.length} perfil(s) com pergunta de fit sem resposta (use "${A_AVALIAR}" quando não der pra avaliar)`);
+  const ordem = { Alta: 0, Média: 1, Baixa: 2 };
+  const recente = (p) => (postouRecente(p, rodada.data) === 'Sim' ? 0 : 1);
+  classificados.sort((a, b) => (ordem[prioridadeAbordagem(a)] - ordem[prioridadeAbordagem(b)]) || (recente(a) - recente(b)));
   const lote = classificados.slice(0, MAX_POR_RODADA);
 
   const jaNaAba = new Set((await listarAba(perfil.destino)).map((l) => String(l['@']).toLowerCase()));
   const linhas = lote.filter((p) => !jaNaAba.has(p['@'])).map((p) => [
     rodada.data, perfil.nome, p.termo || '', p.nome, p['@'], p.link_perfil, p.bio, p.link_externo,
-    String(p.seguidores), p.categoria || '', p.sinais || '', p.aderencia, String(p.prioridade),
+    String(p.seguidores), p.categoria || '', p.sinais || '', p.aderencia, postouRecente(p, rodada.data),
     p.motivo_nota || '', p.fato_gancho, p.fonte_gancho, '', '',
     ...blocoRastreador(p),
   ]);
@@ -168,7 +201,7 @@ async function enviar(caminhoRodada) {
 
 async function preparar(destino) {
   const valores = await lerValores(destino);
-  await atualizar(destino, `${letra(COL_INICIO_RASTREADOR)}1:${COL_FIM}1`, [RASTREADOR]);
+  await atualizar(destino, `A1:${COL_FIM}1`, [[...COLUNAS, ...RASTREADOR]]);
   const regras = Object.entries(MENUS).map(([nome, opcoes]) => ({ coluna: colunaDe(nome), opcoes }));
   await chamar({ acao: 'validacao', planilha: destino.planilha, aba: destino.aba, regras });
   await escreverScores(destino, valores.length - 1);
@@ -195,7 +228,7 @@ async function migrar(perfil) {
     const atual = RASTREADOR.map((_, j) => l[COL_INICIO_RASTREADOR + j] ?? '');
     if (atual[0]) return atual; // já tem Grupo → linha já é do rastreador; não mexe no que a Karol editou
     const p = locais.get(String(l[iArroba] || '').toLowerCase()) || { aderencia: String(l[COLUNAS.indexOf('Aderência')] || '').toLowerCase() };
-    if (!p.fit_carreira) semClassificacao++;
+    if (FITS.some((f) => !p[f.campo])) semClassificacao++;
     preenchidas++;
     return blocoRastreador(p);
   });
@@ -209,6 +242,47 @@ async function migrar(perfil) {
   console.log(JSON.stringify({ linhas: linhas.length, preenchidas, sem_perguntas_de_fit: semClassificacao }));
 }
 
+// Quando a régua muda: reescreve, a partir das rodadas locais, "Postou nos últimos 30 dias?", as 4 perguntas de fit,
+// a Prioridade de abordagem e a observação automática ("Revisar: ..."). Observação escrita pela Karol não é tocada.
+// Linha sem rodada local fica como está.
+async function recalcular(perfil) {
+  const [cab = [], ...linhas] = await lerValores(perfil.destino);
+  if (cab[COL_INICIO_RASTREADOR] !== RASTREADOR[0]) throw new Error('Cabeçalho do rastreador ausente — rodar "preparar" antes.');
+  const locais = classificacoesLocais(perfil.id);
+  const datas = rodadasPorArroba(perfil.id);
+  const idx = (nome) => { const i = COLUNAS.indexOf(nome); return i >= 0 ? i : COL_INICIO_RASTREADOR + RASTREADOR.indexOf(nome); };
+  const [iM, iFit1, iY, iObs, iArroba] = [idx('Postou nos últimos 30 dias?'), idx(FITS[0].coluna), idx('Prioridade de abordagem'), idx('Observações'), idx('@')];
+  let recalculadas = 0;
+  const novo = linhas.map((l) => {
+    const atual = { m: l[iM] ?? '', fits: FITS.map((_, k) => l[iFit1 + k] ?? ''), y: l[iY] ?? '', obs: l[iObs] ?? '' };
+    const a = String(l[iArroba] || '').toLowerCase();
+    const p = locais.get(a);
+    if (!p || FITS.some((f) => !p[f.campo])) return atual;
+    recalculadas++;
+    const obsKarol = atual.obs && !atual.obs.startsWith('Revisar:');
+    return { m: postouRecente(p, datas.get(a)), fits: FITS.map((f) => p[f.campo]), y: prioridadeAbordagem(p), obs: obsKarol ? atual.obs : observacaoRevisao(p) };
+  });
+  if (!novo.length) return console.log('Aba sem linhas.');
+  const fim = linhas.length + 1;
+  await atualizar(perfil.destino, `${letra(iM)}2:${letra(iM)}${fim}`, novo.map((n) => [n.m]));
+  await atualizar(perfil.destino, `${letra(iFit1)}2:${letra(iFit1 + FITS.length - 1)}${fim}`, novo.map((n) => n.fits));
+  await atualizar(perfil.destino, `${letra(iY)}2:${letra(iY)}${fim}`, novo.map((n) => [n.y]));
+  await atualizar(perfil.destino, `${letra(iObs)}2:${letra(iObs)}${fim}`, novo.map((n) => [n.obs]));
+  await escreverScores(perfil.destino, linhas.length);
+  const conta = (k) => novo.reduce((m, n) => ({ ...m, [n[k]]: (m[n[k]] || 0) + 1 }), {});
+  console.log(JSON.stringify({ linhas: linhas.length, recalculadas, prioridade: conta('y'), postou_30d: conta('m'), com_revisar: novo.filter((n) => n.obs.startsWith('Revisar:')).length }));
+}
+
+function rodadasPorArroba(perfilId) {
+  const mapa = new Map();
+  if (!existsSync(PASTA_RODADAS)) return mapa;
+  for (const f of readdirSync(PASTA_RODADAS).filter((n) => n.endsWith(`-${perfilId}.json`)).sort()) {
+    const r = JSON.parse(readFileSync(join(PASTA_RODADAS, f), 'utf8'));
+    for (const p of r.para_classificar || []) mapa.set(String(p['@']).toLowerCase(), r.data);
+  }
+  return mapa;
+}
+
 const [cmd, ...resto] = process.argv.slice(2);
 const opt = Object.fromEntries(resto.reduce((acc, v, i, a) => (v.startsWith('--') ? [...acc, [v.slice(2), a[i + 1]]] : acc), []));
 if (process.argv[1]?.endsWith('planilha.mjs')) {
@@ -218,7 +292,8 @@ if (process.argv[1]?.endsWith('planilha.mjs')) {
     else if (cmd === 'listar') console.log(JSON.stringify(await listarAba(perfil().destino), null, 2));
     else if (cmd === 'preparar') await preparar(perfil().destino);
     else if (cmd === 'migrar') await migrar(perfil());
-    else if (cmd) console.log('Comandos: enviar | listar | preparar | migrar');
+    else if (cmd === 'recalcular') await recalcular(perfil());
+    else if (cmd) console.log('Comandos: enviar | listar | preparar | migrar | recalcular');
   } catch (e) {
     console.error('ERRO:', e.message);
     process.exit(1);

@@ -46,8 +46,13 @@ Karol revisa → (Karol) Vendedor Expert escreve copy | (aluno) entrega para no 
 
 ### 1.4 Rastreador de Leads Qualificados na aba (desde 18/10/2026)
 Estrutura do "M3.5) Rastreador de leads qualificados" do Expert360º, com as perguntas de fit da Karol. Colunas S–AI:
-Grupo · Tem carreira clara? · Ainda não vende o próprio método? · Sinal de empreender/transição? · Já cria conteúdo profissional? · Score de Fit (0-4) · Prioridade de abordagem · Perfil · Status · Data Última Interação · Próxima Ação · Data Próxima Ação · Fechou? · Valor · Data Fechamento · Depoimento · Observações.
-- O Garimpeiro preenche: Grupo ("Conexões frias qualificadas"), 4 fits, Prioridade de abordagem (da aderência), Perfil, Status "Sem abordagem", Fechou? "Em aberto", Depoimento "Pendente". O resto é da Karol.
+Grupo · Tem anos de experiência na área? · Mostra a dor que a Incubadora resolve? · Já cria conteúdo profissional? · Quer ser autoridade na área? · Score de Fit (0-4) · Prioridade de abordagem · Perfil · Status · Data Última Interação · Próxima Ação · Data Próxima Ação · Fechou? · Valor · Data Fechamento · Depoimento · Observações.
+- **Divisão de papéis (Karol, 18/10/2026):** Aderência (L) = "é do meu público?" · fit = "vale abordar agora?". As perguntas v1 da manhã (carreira clara / não vende método / sinal de transição / conteúdo) repetiam a Aderência e foram trocadas; as respostas v1 ficaram em `fit_v1` nas rodadas locais.
+- Fit: Sim / Não / A avaliar. "A avaliar" e lead sem fase 3 → "Revisar: ..." em Observações (automático).
+- Prioridade de abordagem: Alta = Score 4, ou 3 com aderência alta · Baixa = Score 0-1 ou aderência baixa · Média = resto.
+- Coluna M virou "Postou nos últimos 30 dias?" (Sim/Não, a contar da data da rodada) — desempate. A prioridade 1-3 antiga segue só no JSON.
+- O Garimpeiro preenche: Grupo, 4 fits, Prioridade de abordagem, Perfil, Status "Sem abordagem", Fechou? "Em aberto", Depoimento "Pendente", Observações "Revisar: ...". O resto é da Karol.
+- **1ª aplicação (37 leads de 17/10):** Score 0 = 16 · 1 = 3 · 2 = 13 · 3 = 4 · 4 = 1 → Alta 4, Média 14, Baixa 19; 26 com "Revisar". Experiência e dor quase nunca aparecem explícitas no perfil — esperar muito "A avaliar" nessas duas.
 - Score = `=SUMPRODUCT((T{n}:W{n}="Sim")*1)` — sem separador de argumento, funciona em pt-BR (REGRA-025 do Gestor de Infra).
 - Menus suspensos em todas as colunas de opção (e em "Status revisão").
 - "Renda que permite investir?" do modelo original saiu: não qualifica abordagem inicial (Karol, 18/10/2026).

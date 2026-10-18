@@ -58,9 +58,8 @@ O script faz: dedup (CRM + aba de garimpo + rodadas anteriores + `nao_abordar`) 
 
 Se aparecer "o Instagram parou de mostrar perfil público": é bloqueio temporário por volume. Seguir com o que foi lido; os demais ficam em `nao_lidos` pra outra rodada.
 
-**Classificação da fase 2 (o agente):** pra cada item de `para_classificar`, só com nome + bio + seguidores:
-- `fit_carreira`, `fit_nao_vende`, `fit_transicao` → "Sim"/"Não" (régua abaixo)
-- `fit_carreira` = "Não" ou descarte claro pela bio → `aderencia: "descarte"` (não vai pra fase 3)
+**Peneira da fase 2 (o agente):** pra cada item de `para_classificar`, só com nome + bio + seguidores:
+- Sem carreira/profissão clara, já vende método próprio, ou bateu num descarte → `aderencia: "descarte"` (não vai pra fase 3)
 - Os demais seguem pra fase 3 (sem `aderencia` final ainda)
 
 ### 4. Fase 3 — Aprofundamento logado (só quem passou)
@@ -76,11 +75,13 @@ Pra CADA item não descartado de `para_classificar`, completar no próprio item:
 | Campo | Regra |
 |-------|-------|
 | `aderencia` | `alta` / `media` / `baixa` / `descarte` — régua da KB §3.3 + descartes do perfil |
-| `prioridade` | 1 / 2 / 3 — KB §3.3 |
-| `fit_carreira` | **Tem carreira clara?** Sim = profissão liberal, cargo CLT ou carreira de servidor visível. Concurseiro sem cargo = Não |
-| `fit_nao_vende` | **Ainda não vende o próprio método?** Sim = sem curso, mentoria, formação, guia ou produto digital próprio. Atender 1:1 (agenda, consultoria) pode |
-| `fit_transicao` | **Sinal de empreender/transição?** Sim = fala em sair do emprego, projeto paralelo, transição, empreender; ou já atende/vende serviço próprio (liberal com agenda); ou posta a dor da rotina com tom de quem quer mudar |
-| `fit_conteudo` | **Já cria conteúdo profissional?** Sim = a maioria dos últimos posts é sobre a própria área (dica, caso, bastidor do trabalho), não vida pessoal. Sem fase 3 → deixar vazio |
+| `prioridade` | 1 / 2 / 3 — KB §3.3 (uso interno; a aba mostra "Postou nos últimos 30 dias?" e a Prioridade de abordagem, calculados pelo script) |
+| `fit_experiencia` | **Tem anos de experiência na área?** Sim = bio/posts mostram tempo de carreira ("15 anos de..."), especialização, casos acumulados, carreiras anteriores. Recém-nomeado/recém-formado = Não. Não aparece = A avaliar |
+| `fit_dor` | **Mostra a dor que a Incubadora resolve?** Sim = fala de cansaço do emprego, de valer mais do que ganha, de querer renda com o que sabe, de não ser reconhecido(a), de história de carreira travada. Falar da dor do PÚBLICO dela não conta. Sinal fraco/ambíguo = A avaliar |
+| `fit_conteudo` | **Já cria conteúdo profissional?** Sim = a maioria dos últimos posts é sobre a própria área (dica, caso, bastidor do trabalho), não vida pessoal. Sem posts pra ler = A avaliar |
+| `fit_autoridade` | **Quer ser autoridade na área?** Sim = ensina, dá aula, palestra, se apresenta como especialista, fala em autoridade/posicionamento. Não aparece = Não (A avaliar só se houver sinal ambíguo) |
+
+Toda pergunta precisa de resposta (Sim / Não / A avaliar) — o `enviar` recusa vazio. "A avaliar" e lead que não passou pela fase 3 viram automaticamente "Revisar: ..." na coluna Observações pra Karol olhar.
 | `perfil_leitura` | `Conector` (família, comunidade, propósito, escreve com calor) · `Analista` (formação, registro, explicação técnica, precisão) · `Diretivo` (cargo, anos de mercado, posta pouco e direto) |
 | `sinais` | sinais públicos encontrados, curto ("bio: psicóloga clínica · link de agenda") |
 | `motivo_nota` | 1 frase: por que essa nota |
@@ -92,15 +93,16 @@ Regras de julgamento:
 - Já vende curso/mentoria/formação própria (link de checkout, "turma", "inscrições abertas", "método X") → descarte.
 - Servidor/CLT: usar a régua própria (KB §3.3 e `regua_servidor_clt` do perfil) — não exigir link de agenda.
 - Perfil privado → no máximo `baixa`.
-- Na dúvida entre duas notas, a menor. Na dúvida num fit, "Não".
+- Na dúvida entre duas notas, a menor. Na dúvida num fit, "A avaliar" (vira observação pra Karol), nunca "Sim".
 - Nunca deduzir o que não está escrito.
 
 Gravar o JSON editado (Edit/Write no próprio arquivo da rodada).
 
 ### 6. Enviar
 `node agents/garimpeiro-leads-instagram/tools/planilha.mjs enviar --rodada agents/garimpeiro-leads-instagram/rodadas/{arquivo}.json`
-- Ordena por prioridade e aderência, corta em 50, pula quem já está na aba, recusa item sem fato-gancho ou sem fit 1-3.
-- Preenche o rastreador: Grupo = "Conexões frias qualificadas", 4 fits, Prioridade de abordagem (alta→Alta, média→Média, baixa→Baixa), Perfil, Status = "Sem abordagem", Fechou? = "Em aberto", Depoimento = "Pendente". Score de Fit é fórmula.
+- Ordena por Prioridade de abordagem e por quem postou nos últimos 30 dias, corta em 50, pula quem já está na aba, recusa item sem fato-gancho ou com fit sem resposta.
+- Preenche o rastreador: Grupo (busca = "Conexões frias qualificadas", seguidores = "Seguidor sem interação"), 4 fits, Prioridade de abordagem (Score manda, Aderência trava), Perfil, Status = "Sem abordagem", Fechou? = "Em aberto", Depoimento = "Pendente", Observações = "Revisar: ..." quando houver. Score de Fit é fórmula.
+- Régua mudou? `planilha.mjs recalcular --perfil {cliente}` reescreve fit/prioridade/observação a partir das rodadas locais (não toca observação escrita pela Karol).
 
 ### 7. Relatório (pro cliente)
 ```
@@ -120,7 +122,7 @@ Pra Karol: lembrar que os aprovados vão pro Vendedor Expert escrever a mensagem
 - Se houve incidente → regra nova em rules.
 
 ## Veto
-- Entregar perfil sem fato-gancho/fonte ou sem fit 1-3
+- Entregar perfil sem fato-gancho/fonte ou com pergunta de fit sem resposta
 - Abrir logado quem foi descartado na fase 2, passar do teto, ou insistir depois de 401/403/429
 - Usar outra conta que não a `referenciasgpt`
 - Escrever fora de aba "Garimpo*"

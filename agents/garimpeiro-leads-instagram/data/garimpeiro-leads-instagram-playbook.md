@@ -72,6 +72,7 @@ Ver `tasks/perfil-cliente.md`. Primeira vez: Gestor de Infra cria a planilha "Ga
 | 17/10/2026 | karol | Estrangeiro = descarte; brasileiro no exterior = dentro | Rodada teste trouxe perfis do México/Espanha | Karol |
 | 17/10/2026 | karol | Régua própria pra servidor/CLT (carreira + sinal de transição; sem exigir link de agenda) | Servidora não vende serviço — cairia toda em média | Karol |
 | 18/10/2026 | karol | 4 perguntas de fit do rastreador: carreira clara · ainda não vende método · sinal de empreender/transição · já cria conteúdo profissional | Juntar o Rastreador de Leads Qualificados na aba; renda saiu (não qualifica abordagem inicial) | Karol |
+| 18/10/2026 | karol | Fit v2: anos de experiência · mostra a dor · já cria conteúdo · quer ser autoridade (Sim/Não/A avaliar + "Revisar:" automático). Prioridade de abordagem = Score + trava de Aderência. Coluna M = "Postou nos últimos 30 dias?" | v1 repetia a Aderência; Aderência = "é do público?", fit = "vale abordar agora?" | Karol |
 
 ---
 
