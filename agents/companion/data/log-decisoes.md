@@ -10,6 +10,12 @@
 **Impacto:** [o que muda]
 -->
 
+## 18/10/2026 — 60 dias sem funil novo: Sessão Estratégica como único método, meta de 3 conversas por semana
+**Contexto:** A Black Expert (live de 14/10, só público quente) teve 0 vendas: 226 convidados, 47 no grupo, 20 na live, 16 no pitch e 0 cliques em comprar. A Karol tem histórico de lançamentos que não venderam e hoje só vende por sessão estratégica. Estava cogitando funil de quiz, VSL e mini-treinamento. Decisão tomada com o Clone Euriler.
+**Decisão:** (1) **Nenhum funil novo por 60 dias** (quiz, VSL e lançamento parados até ~17/12). Método único: **Sessão Estratégica**. (2) Na sessão, só duas opções: **Sprint do Método (R$5.000)** pra quem não tem tempo nem clareza, e **Incubadora Express (R$2.500)** pra quem quer fazer com acompanhamento e sente o peso do valor. O resto do portfólio sai da vitrine e só aparece se a pessoa pedir. (3) Meta: **3 sessões estratégicas por semana**. (4) Como o gargalo é falta de gente, a conversa passa a ser aberta pela Karol: convite 1 a 1 pra base existente (226 contatos, grupo de lives, grupo da Black, quem comenta AULA). Premissa provisória: 5 convites por dia útil na 1ª semana, recalibrar pelo que virar sessão.
+**Racional:** A live segurou o público (80% ficou até a oferta). O gargalo é o volume e o encaixe do ticket, não falta de funil. A conversa 1 a 1 é o único canal que já gerou receita, e é o perfil dela. 8 portas de entrada pra uma base pequena dispersam a escolha. As leads quentes pediram oferta menor e acompanhada, e a Incubadora Express (criada em 17/10) já é essa oferta.
+**Impacto:** Conteúdo (desafio de 6 posts por dia) passa a ser fonte de convite, medido por conversas abertas e não por seguidores. CTA migra de "comenta AULA" pra conversa. Leads quentes da retro: continuação do Sprint oferecida à lead 8, Expert360º + sessão avulsa quando travar oferecidos à lead 2, Incubadora Express a oferecer a 3 leads (incluindo a 7) até 23/10.
+
 ## 04/10/2026 — Mentorias ganham 3 agentes de IA de conteúdo; Grupo recebe Kit de Scripts em template
 **Contexto:** Revisão da aba "Comparar tudo" da Jornada do Aluno (artifact WrMZHw5ZpDfSYYZYGPTjak).
 **Decisão:** **3 agentes de IA de criação de conteúdo** (live semanal, reels e stories), entregues na fase de Posicionamento, **exclusivos de Grupo e Individual**. **Grupo:** Kit de Scripts de Vendas Secretas como **templates pra adaptar**. **Individual:** materiais de aplicação, Kit de Scripts e Funil de Lives Semanais **feitos pelo time**. **Expert360º:** ensina o Expert Plan no módulo de escala.
@@ -632,3 +638,15 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** Não redesenhar o Grupo agora. Primeiro testar no 1:1 um formato menor (Validação, 6 meses) com as leads quentes da Black. O Grupo a R$7.500 segue como está até o teste responder.
 **Racional:** A amostra é pequena (16 no pitch, uma live só, grupo montado em 15 dias). A persona já comprou ticket alto da Karol no 1:1 (Sprint do Vagner, VIP do Tasso), e uma lead que recebeu o VIP de R$1.500 em fevereiro também não comprou. Então o preço pode não ser a única causa. Testar no 1:1 separa "não cabe no orçamento" de "não vê retorno".
 **Impacto:** A retro em `business/campanhas/black-friday-grupo-2026/retro-black-expert.md` fica com as próximas ações. Falta a Karol definir o formato do teste (escopo, duração e preço).
+
+## 17/10/2026 — Nasce a Incubadora Express (R$2.500, 6 meses); Método Express vira Destrava Expert - Sessão única
+**Contexto:** A retro da Black Expert decidiu testar no 1:1 um formato menor antes de redesenhar o Grupo.
+**Decisão:** Produto novo **Incubadora Express**: R$2.500, 6 meses de acesso, 5 sessões individuais liberadas pela entrega (S1 Diagnóstico + Roteiro, S2 Revisão do Método, S3 Checkup da Oferta, S4/S5 Raio-X de Venda), Expert360º e os agentes do método mais o Vendedor Secreto. **Sem oficinas** (eram da oferta da Black, que não vendeu) e **sem Funil de Vendas Secretas montado** (contratação à parte). A Karol grava o M3 (A9 a A13) a tempo. O antigo **Método Express** (sessão única) passa a se chamar **Destrava Expert - Sessão única**.
+**Racional:** Testar se o preço era a barreira com uma oferta que a Karol entrega sozinha, sem prometer turma.
+**Impacto:** Escopo em `business/campanhas/incubadora-de-expert-grupo/recorte-validacao-6-meses.md`. Gestor de Infra cria o produto e checkout na Voomp e o acesso de 6 meses. A troca de nome do Método Express precisa passar por páginas, contratos, Central, onboarding e KBs dos agentes de venda. Grupo segue a R$7.500.
+
+## 18/10/2026 — Parceria com a Nanny em stand-by; garantia da Incubadora Express em 15 dias
+**Contexto:** Weekly pós-Black. A Nanny tinha ficado de responder sobre a parceria em outubro. A Incubadora Express estava sem contrato e com garantia de 7 dias na Voomp.
+**Decisão:** (1) Nanny em stand-by, sem acompanhamento ativo. (2) Garantia da Incubadora Express = 15 dias, devolução integral por qualquer motivo, mesmo com a S1 feita.
+**Racional:** (1) A parceria seria um projeto paralelo, não uma aluna. Poderia dar dinheiro, mas tiraria o foco de fazer a Incubadora dar certo. (2) Fica igual à garantia que o Grupo já usa.
+**Impacto:** Contrato em `business/juridico/contratos/09-incubadora-express.md` + PDF. Falta trocar a garantia do produto #17442 na Voomp. Nanny sai das pendências comerciais.

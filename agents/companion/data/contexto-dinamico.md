@@ -145,6 +145,16 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 18/10 — Weekly pos-Black (Companion):**
+- Black Expert fechada com 0 vendas (retro 16/10). Teste da **Incubadora Express** (R$2.500, 6 meses) fica dentro do Comercial, sem ocupar vaga de projeto. Leads 2 e 7 ja receberam a oferta; lead 4 recebeu a explicacao; linha de teste do CRM corrigida.
+- **Expert360:** M3 A9-A13 gravadas, editadas e publicadas ate **31/10**.
+- **Biblioteca de IA:** segue congelada ate o teste da Express responder.
+- **Rota100k:** Semana 11 fechada; Semana 12 com 42 roteiros prontos.
+- **Contrato da Express pronto** (`business/juridico/contratos/09-incubadora-express.md` + PDF), garantia de 15 dias.
+- **Nanny em stand-by:** seria projeto paralelo (nao aluna) e tiraria o foco da Incubadora. Nao cobrar.
+- Em aberto: trocar garantia na Voomp de 7 pra 15 dias; publicar acesso de 6 meses; WhatsApp sem chegar no CRM desde 02/10 (Gestor de Infra). GA4 da Black apontava pro Gestao pra Tudo (negocio antigo, parado) — baixa prioridade.
+- Proximo review: 25/10.
+
 **Sessao 13/10 — Vespera da live da Black Expert (Companion → Gestor de Infra):**
 - Teste ponta a ponta ok (pagina, pre-checkout → CRM, checkout R$5.000, oferta R$7.500 ja ativa, troca dos botoes 23h59 de 14/10). E-mails #8 a #11 agendados no Resend pra 14-15/10.
 - Convite do Meet enviado pra 91 contatos (sala de 100 do Business Starter); 30 mais frios + 8 invalidos fora.
