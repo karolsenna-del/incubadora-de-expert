@@ -1,15 +1,18 @@
 #!/usr/bin/env node
-// Garimpo de leads no Instagram — coleta (Apify), enriquecimento, dedup e filtro mecânico.
-// A leitura de bio, a nota de aderência e o fato-gancho ficam com o agente (não com este script).
+// Garimpo de leads no Instagram — fases 1 e 2, sem custo e sem login.
+//   Fase 1 (descoberta): o agente busca na web (WebSearch, site:instagram.com) e grava os @ num arquivo.
+//   Fase 2 (perfil público): este script lê a página pública de cada @ (nome, bio, seguidores, posts),
+//   faz dedup e filtro mecânico. A leitura de bio, as perguntas de fit e o fato-gancho ficam com o agente.
+//   Fase 3 (logada, só quem passou da fase 2): tools/logado.mjs.
 //
 // Uso:
-//   node garimpo.mjs coletar --perfil karol --termos "psicologa,nutricionista" [--modo hashtag|busca|ambos] [--limite 60] [--estimar]
-//   node garimpo.mjs saldo
+//   node garimpo.mjs coletar --perfil karol --candidatos rodadas/candidatos-{data}.txt
+//   node garimpo.mjs coletar --perfil karol --arrobas "fulana,ciclana" [--termo "servidora pública"]
 //
+// Arquivo de candidatos: uma linha por perfil, "@arroba<TAB>termo de busca" (o termo é opcional).
 // Saída: agents/garimpeiro-leads-instagram/rodadas/{AAAA-MM-DD}-{HHMM}-{perfil}.json  (pasta no .gitignore — dado pessoal)
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
-import { execSync } from 'node:child_process';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -21,7 +24,8 @@ const RAIZ_REPO = (() => {
   return d;
 })();
 const PASTA_RODADAS = join(RAIZ_WORKER, 'rodadas');
-const PRECO = { hashtag: 0.0026, busca: 0.0027, perfil: 0.0026 }; // US$ por item, faixa FREE (conferido 17/10/2026)
+const PAUSA_PUBLICA_MS = 2500; // entre páginas públicas — devagar pra não levar bloqueio temporário
+const MAX_POR_RODADA = 150;
 
 // ---------- utilitários ----------
 function args() {
@@ -51,42 +55,47 @@ function semAcento(s) {
   return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 }
 
-function tokenApify() {
-  if (process.env.APIFY_TOKEN) return process.env.APIFY_TOKEN;
-  return execSync('op read "op://Claude/Apify/credential"', { encoding: 'utf8' }).trim();
+const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
+
+function decodificar(s) {
+  return String(s || '')
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
+    .replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#039;|&apos;/g, "'");
 }
 
-async function apify(caminho, { metodo = 'GET', corpo, timeout } = {}) {
-  const url = `https://api.apify.com/v2${caminho}${timeout ? (caminho.includes('?') ? '&' : '?') + 'timeout=' + timeout : ''}`;
-  const r = await fetch(url, {
-    method: metodo,
-    headers: { Authorization: `Bearer ${tokenApify()}`, 'Content-Type': 'application/json' },
-    body: corpo ? JSON.stringify(corpo) : undefined,
-  });
-  const txt = await r.text();
-  if (!r.ok) throw new Error(`Apify ${r.status} em ${caminho}: ${txt.slice(0, 300)}`);
-  return JSON.parse(txt);
+// "1,234" / "12K" / "1.2M" / "3 mil" → número
+function numero(txt) {
+  const t = String(txt).trim().toLowerCase().replace(/\s/g, '');
+  const m = t.match(/^([\d.,]+)(k|m|mil|mi)?$/);
+  if (!m) return null;
+  let base = m[1];
+  if (m[2]) return Math.round(parseFloat(base.replace(',', '.')) * (m[2] === 'k' || m[2] === 'mil' ? 1e3 : 1e6));
+  return Number(base.replace(/[.,]/g, ''));
 }
 
-// Roda o ator e devolve os itens. Usa execução assíncrona + espera, pra não perder a run se passar de 300s.
-async function rodarAtor(ator, input) {
-  const run = (await apify(`/acts/${ator}/runs`, { metodo: 'POST', corpo: input })).data;
-  let estado = run;
-  const inicio = Date.now();
-  while (!['SUCCEEDED', 'FAILED', 'ABORTED', 'TIMED-OUT'].includes(estado.status)) {
-    if (Date.now() - inicio > 15 * 60 * 1000) throw new Error(`Run ${run.id} passou de 15 min — conferir no painel, não rodar de novo`);
-    estado = (await apify(`/actor-runs/${run.id}?waitForFinish=60`)).data;
-  }
-  if (estado.status !== 'SUCCEEDED') throw new Error(`Run ${run.id} terminou ${estado.status}`);
-  const itens = await apify(`/datasets/${estado.defaultDatasetId}/items?clean=true&format=json`);
-  return { itens, custo: estado.usageTotalUsd ?? null, runId: run.id };
-}
-
-async function saldo() {
-  const d = (await apify('/users/me/limits')).data;
-  const teto = d.limits?.maxMonthlyUsageUsd ?? 0;
-  const usado = d.current?.monthlyUsageUsd ?? 0;
-  return { teto, usado, livre: +(teto - usado).toFixed(4), fimCiclo: d.monthlyUsageCycle?.endAt };
+// Página pública (sem login). A meta "description" traz: "{seg} Followers, {seg} Following, {n} Posts - {Nome} (@user) on Instagram: "{bio}""
+export async function perfilPublico(arroba) {
+  const r = await fetch(`https://www.instagram.com/${arroba}/`, { headers: { 'User-Agent': 'Mozilla/5.0' }, redirect: 'manual' });
+  if (r.status === 404) return { status: 'nao_existe' };
+  if (r.status >= 300 && r.status < 400) return { status: 'bloqueio', detalhe: `redirecionou (${r.status}) — Instagram pediu login` };
+  if (!r.ok) return { status: 'erro', detalhe: `HTTP ${r.status}` };
+  const html = await r.text();
+  const desc = (html.match(/<meta content="([^"]*)" name="description"/) || html.match(/<meta name="description" content="([^"]*)"/) || [])[1];
+  const titulo = (html.match(/<meta property="og:title" content="([^"]*)"/) || [])[1];
+  if (!desc) return { status: html.includes('login') ? 'bloqueio' : 'nao_existe', detalhe: 'página sem dados públicos' };
+  const d = decodificar(desc);
+  const m = d.match(/^([\d.,]+\s*[KkMm]?(?:il|i)?)\s+\S+,\s*([\d.,]+\s*[KkMm]?)\s+\S+,\s*([\d.,]+\s*[KkMm]?)\s+\S+\s+-\s+(.*?)\s*\(@([^)]+)\)(?:[^:]*:\s*"([\s\S]*)")?\s*$/);
+  if (!m) return { status: 'erro', detalhe: 'formato da página mudou', bruto: d.slice(0, 200) };
+  const nomeTitulo = decodificar(titulo || '').replace(/\s*\(@[^)]*\).*$/, '').trim();
+  return {
+    status: 'ok',
+    seguidores: numero(m[1]),
+    seguindo: numero(m[2]),
+    posts: numero(m[3]),
+    nome: (m[4] || nomeTitulo || '').trim(),
+    bio: (m[6] || '').trim(),
+  };
 }
 
 function lerPerfil(nome) {
@@ -115,7 +124,7 @@ async function arrobasDoGarimpo(perfil) {
 }
 
 function arrobasDasRodadasLocais(perfil) {
-  // Descartados nunca vão pra aba — sem isso, o mesmo perfil seria pago e descartado de novo na próxima rodada.
+  // Descartados nunca vão pra aba — sem isso, o mesmo perfil seria lido e descartado de novo na próxima rodada.
   const vistos = new Set();
   if (!existsSync(PASTA_RODADAS)) return vistos;
   for (const f of readdirSync(PASTA_RODADAS).filter((n) => n.endsWith(`-${perfil.id}.json`))) {
@@ -127,60 +136,38 @@ function arrobasDasRodadasLocais(perfil) {
 
 // ---------- filtro mecânico ----------
 function filtroMecanico(p, perfil) {
-  const bio = semAcento(`${p.fullName || ''} ${p.biography || ''} ${p.businessCategoryName || ''}`);
+  const bio = semAcento(`${p.nome || ''} ${p.bio || ''}`);
   const desc = perfil.descartes_palavras.find((w) => bio.includes(semAcento(w)));
-  if (desc) return `descarte: "${desc}" no nome/bio/categoria`;
-  const seg = p.followersCount ?? null;
+  if (desc) return `descarte: "${desc}" no nome/bio`;
+  const seg = p.seguidores ?? null;
   if (seg !== null && (seg < perfil.faixa_seguidores.min || seg > perfil.faixa_seguidores.max)) return `fora da faixa de seguidores (${seg})`;
-  if (!p.biography) return 'bio vazia';
+  if (!p.bio) return 'bio vazia';
   return null;
 }
 
 // ---------- comandos ----------
+function lerCandidatos(o) {
+  const lista = new Map(); // arroba -> termo
+  if (o.candidatos) {
+    for (const linha of readFileSync(resolve(o.candidatos), 'utf8').split(/\r?\n/)) {
+      const [a, termo] = linha.split('\t');
+      const n = normalizarArroba(a);
+      if (n && !lista.has(n)) lista.set(n, (termo || '').trim());
+    }
+  }
+  if (o.arrobas) for (const a of String(o.arrobas).split(',')) {
+    const n = normalizarArroba(a);
+    if (n && !lista.has(n)) lista.set(n, String(o.termo || '').trim());
+  }
+  return lista;
+}
+
 async function coletar(o) {
   const perfil = lerPerfil(o.perfil || 'karol');
-  const termos = String(o.termos || '').split(',').map((t) => t.trim().replace(/^#/, '')).filter(Boolean);
-  if (!termos.length) throw new Error('Passe --termos "termo1,termo2"');
-  const modo = o.modo || 'hashtag';
-  const limite = Number(o.limite || 60); // por termo
+  const candidatos = lerCandidatos(o);
+  if (!candidatos.size) throw new Error('Passe --candidatos {arquivo} ou --arrobas "a,b"');
 
-  const coletaMax = termos.length * limite * (modo === 'ambos' ? 2 : 1);
-  const estimativa = +(coletaMax * PRECO.hashtag + coletaMax * PRECO.perfil).toFixed(2); // teto (cada coletado vira perfil)
-  const s = await saldo();
-  console.log(`Saldo Apify: US$${s.livre} livre de US$${s.teto} (ciclo até ${s.fimCiclo?.slice(0, 10)}). Teto estimado da rodada: US$${estimativa}`);
-  if (o.estimar) return;
-  if (estimativa > s.livre && !o['aprovado-acima-do-saldo']) {
-    throw new Error('Rodada pode passar do saldo do mês. Reduza --limite ou peça OK da Karol (nível 3).');
-  }
-  // Custo real = diferença do uso mensal antes/depois. O `usageTotalUsd` da run NÃO inclui as cobranças por
-  // evento (pay-per-event) — na rodada de 17/10 ele marcou US$0,15 contra US$0,70 reais.
-  const usoAntes = s.usado;
-
-  // 1) candidatos
-  const candidatos = new Map(); // arroba -> {termo, origem}
-  let custo = 0;
-  if (modo === 'hashtag' || modo === 'ambos') {
-    for (const t of termos) {
-      const { itens, custo: c } = await rodarAtor('apify~instagram-hashtag-scraper', { hashtags: [t], resultsType: 'posts', resultsLimit: limite });
-      custo += c || 0;
-      for (const it of itens) {
-        const a = normalizarArroba(it.ownerUsername);
-        if (a && !candidatos.has(a)) candidatos.set(a, { termo: `#${t}`, origem: 'hashtag', post: { data: it.timestamp, legenda: (it.caption || '').slice(0, 400), url: it.url } });
-      }
-    }
-  }
-  if (modo === 'busca' || modo === 'ambos') {
-    for (const t of termos) {
-      const { itens, custo: c } = await rodarAtor('apify~instagram-search-scraper', { search: t, searchType: 'user', searchLimit: limite });
-      custo += c || 0;
-      for (const it of itens) {
-        const a = normalizarArroba(it.username);
-        if (a && !candidatos.has(a)) candidatos.set(a, { termo: t, origem: 'busca' });
-      }
-    }
-  }
-
-  // 2) dedup
+  // 1) dedup
   const jaVistos = new Set();
   if (perfil.dedup_crm_karol) for (const a of await arrobasDoCrmKarol()) jaVistos.add(a);
   try { for (const a of await arrobasDoGarimpo(perfil)) jaVistos.add(a); }
@@ -189,37 +176,35 @@ async function coletar(o) {
   const bloqueio = new Set((perfil.nao_abordar || []).map(normalizarArroba));
   const duplicados = [], novos = [];
   for (const a of candidatos.keys()) (jaVistos.has(a) || bloqueio.has(a) ? duplicados : novos).push(a);
+  const lote = novos.slice(0, MAX_POR_RODADA);
 
-  // 3) enriquecimento
-  let perfis = [];
-  if (novos.length) {
-    const { itens, custo: c } = await rodarAtor('apify~instagram-profile-scraper', { usernames: novos });
-    custo += c || 0;
-    perfis = itens;
-  }
-
-  // 4) filtro mecânico
-  const aprovadosFiltro = [], descartados = [];
-  for (const p of perfis) {
-    const a = normalizarArroba(p.username);
+  // 2) perfil público + filtro mecânico
+  const aprovadosFiltro = [], descartados = [], naoLidos = [];
+  let parouPorBloqueio = false;
+  for (const [i, a] of lote.entries()) {
+    if (i) await esperar(PAUSA_PUBLICA_MS);
+    const p = await perfilPublico(a);
+    if (p.status === 'bloqueio') { parouPorBloqueio = true; naoLidos.push(...lote.slice(i)); break; }
+    const base = { '@': a, nome: p.nome || '', termo: candidatos.get(a) };
+    if (p.status === 'nao_existe') { descartados.push({ ...base, motivo: 'perfil não existe' }); continue; }
+    if (p.status !== 'ok') { naoLidos.push(a); continue; }
     const motivo = filtroMecanico(p, perfil);
-    const base = { '@': a, nome: p.fullName || '', termo: candidatos.get(a)?.termo, motivo };
-    if (motivo) { descartados.push(base); continue; }
+    if (motivo) { descartados.push({ ...base, motivo }); continue; }
     aprovadosFiltro.push({
       '@': a,
       link_perfil: `https://instagram.com/${a}`,
-      nome: p.fullName || 'não público',
-      bio: p.biography || 'não público',
-      link_externo: p.externalUrl || (p.externalUrls || [])[0]?.url || 'não público',
-      seguidores: p.followersCount ?? 'não público',
-      posts: p.postsCount ?? null,
-      categoria: p.businessCategoryName || '',
-      conta_comercial: !!p.isBusinessAccount,
-      privado: !!p.private,
-      termo: candidatos.get(a)?.termo,
-      origem: candidatos.get(a)?.origem,
-      post_da_hashtag: candidatos.get(a)?.post || null,
-      posts_recentes: (p.latestPosts || []).slice(0, 4).map((x) => ({ data: x.timestamp, legenda: (x.caption || '').slice(0, 300), url: x.url })),
+      nome: p.nome || 'não público',
+      bio: p.bio,
+      link_externo: '',
+      seguidores: p.seguidores ?? 'não público',
+      posts: p.posts ?? null,
+      categoria: '',
+      termo: candidatos.get(a),
+      ...(String(candidatos.get(a) || '').startsWith('seguidor de @')
+        ? { origem: 'seguidores', grupo: 'Seguidor sem interação' }
+        : { origem: 'busca web', grupo: 'Conexões frias qualificadas' }),
+      fase: 2,
+      posts_recentes: [],
     });
   }
 
@@ -227,25 +212,31 @@ async function coletar(o) {
   const hoje = new Date().toISOString().slice(0, 10);
   const hora = new Date().toTimeString().slice(0, 5).replace(':', '');
   const arq = join(PASTA_RODADAS, `${hoje}-${hora}-${perfil.id}.json`); // hora evita sobrescrever 2 rodadas no mesmo dia
-  await new Promise((r) => setTimeout(r, 5000)); // uso mensal demora alguns segundos pra refletir
-  const usoDepois = (await saldo()).usado;
+  const termos = [...new Set([...candidatos.values()].filter(Boolean))];
   const saida = {
-    perfil: perfil.id, data: hoje, termos, modo, limite_por_termo: limite,
-    custo_usd: +Math.max(usoDepois - usoAntes, custo).toFixed(4),
-    contagem: { candidatos: candidatos.size, duplicados: duplicados.length, enriquecidos: perfis.length, descartados_filtro: descartados.length, para_classificar: aprovadosFiltro.length },
+    perfil: perfil.id, data: hoje, termos, modo: 'busca web + perfil público', custo_usd: 0,
+    contagem: {
+      candidatos: candidatos.size, duplicados: duplicados.length, fora_do_lote: novos.length - lote.length,
+      lidos: lote.length - naoLidos.length, nao_lidos: naoLidos.length, descartados_filtro: descartados.length,
+      para_classificar: aprovadosFiltro.length,
+    },
     para_classificar: aprovadosFiltro,
     descartados,
+    nao_lidos: naoLidos,
   };
   writeFileSync(arq, JSON.stringify(saida, null, 2));
-  console.log(JSON.stringify({ arquivo: arq, custo_usd: saida.custo_usd, ...saida.contagem }, null, 2));
+  console.log(JSON.stringify({ arquivo: arq, ...saida.contagem }, null, 2));
+  if (parouPorBloqueio) console.warn(`AVISO: o Instagram parou de mostrar perfil público (pediu login). ${naoLidos.length} perfil(s) ficaram em "nao_lidos" — tentar de novo mais tarde.`);
 }
 
 const o = args();
-try {
-  if (o.cmd === 'coletar') await coletar(o);
-  else if (o.cmd === 'saldo') console.log(await saldo());
-  else console.log('Comandos: coletar | saldo');
-} catch (e) {
-  console.error('ERRO:', e.message);
-  process.exit(1);
+if (process.argv[1]?.endsWith('garimpo.mjs')) {
+  try {
+    if (o.cmd === 'coletar') await coletar(o);
+    else if (o.cmd === 'publico') console.log(await perfilPublico(normalizarArroba(o.arroba)));
+    else console.log('Comandos: coletar | publico --arroba X');
+  } catch (e) {
+    console.error('ERRO:', e.message);
+    process.exit(1);
+  }
 }

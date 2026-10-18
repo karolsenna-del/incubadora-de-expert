@@ -8,22 +8,23 @@
 
 ## Tier 1 — Recorrentes
 
-### [SOP-001] Rodada de garimpo
-**Criado em:** 17/10/2026
-**Última execução:** 17/10/2026 (teste de 9 termos de servidora — US$0,70 real, 35 entregues)
-**Trigger:** "garimpa", "busca leads com #X"
-**Tempo estimado:** 10–20 min (coleta Apify 2–8 min + classificação)
-**Ferramentas:** `tools/garimpo.mjs`, `tools/planilha.mjs`, Apify, webhook n8n
-**Regras obrigatórias:** REGRA-001, REGRA-002, REGRA-003
+### [SOP-001] Rodada de garimpo (v2 — custo zero, 3 fases)
+**Criado em:** 17/10/2026 · **Reescrito em:** 18/10/2026 (sem Apify + rastreador na aba)
+**Última execução:** 17/10/2026 (versão Apify — teste de 9 termos de servidora, US$0,70, 35 entregues). v2 ainda sem rodada real.
+**Trigger:** "garimpa", "busca leads de X"
+**Tempo estimado:** 30–50 min (busca web ~10 min · perfil público ~6 min pra 150 · fase logada ~4 min pra 15 · classificação)
+**Ferramentas:** WebSearch, `tools/garimpo.mjs`, `tools/logado.mjs`, `tools/planilha.mjs`, webhook n8n
+**Regras obrigatórias:** REGRA-001, REGRA-002, REGRA-003, REGRA-004
 
 **Pré-requisitos:**
 - Perfil do cliente em `data/perfis/{cliente}.json`
 - Termos da rodada
+- Sessão `referenciasgpt` ativa (`logado.mjs conferir`) — só pra fase 3
 
-**Passos:** ver `tasks/rodada-garimpo.md` (estimar → coletar → classificar → enviar → relatório → documentar)
-- Verificar: aba recebeu as linhas (`planilha.mjs listar`) e o relatório bate com `contagem` do JSON
+**Passos:** ver `tasks/rodada-garimpo.md` (descobrir → perfil público → fit 1-3 → aprofundar logado → classificar → enviar → relatório → documentar)
+- Verificar: aba recebeu as linhas (`planilha.mjs listar`), Score calculando, relatório bate com `contagem` do JSON
 
-**Output esperado:** até 50 linhas na aba + relatório + linha no Mission Log
+**Output esperado:** até 50 linhas na aba (garimpo + rastreador) + relatório + linha no Mission Log
 
 **Troubleshooting:** KB §5
 
@@ -57,6 +58,12 @@ Ver `tasks/perfil-cliente.md`. Primeira vez: Gestor de Infra cria a planilha "Ga
 | 17/10/2026 | karol | #auditorafiscal | hashtag (20) | 12 | 2 (0 alta) | ~0,08 | teste · RUIM: cursinho, órgão, concurseira — não usar |
 | 17/10/2026 | karol | #enfermeiraconcursada | hashtag (20) | 1 | 0 | ~0,08 | teste · quase nada volta — não usar |
 
+## Consultas que funcionam (busca web, fase 1)
+
+| Data | Cliente | Consulta | Perfis úteis / resultados | Obs |
+|------|---------|----------|---------------------------|-----|
+| 18/10/2026 | karol | `site:instagram.com "servidora pública" "transição de carreira"` | ~1/8 (teste) | traz muito mentor de carreira, sindicato e portal — testar com cidade/UF e cargo |
+
 ## Histórico de régua (perfil de busca)
 
 | Data | Cliente | Mudança | Motivo | Aprovado por |
@@ -64,6 +71,7 @@ Ver `tasks/perfil-cliente.md`. Primeira vez: Gestor de Infra cria a planilha "Ga
 | 17/10/2026 | karol | Perfil inicial | Discovery do Worker Forge | Karol |
 | 17/10/2026 | karol | Estrangeiro = descarte; brasileiro no exterior = dentro | Rodada teste trouxe perfis do México/Espanha | Karol |
 | 17/10/2026 | karol | Régua própria pra servidor/CLT (carreira + sinal de transição; sem exigir link de agenda) | Servidora não vende serviço — cairia toda em média | Karol |
+| 18/10/2026 | karol | 4 perguntas de fit do rastreador: carreira clara · ainda não vende método · sinal de empreender/transição · já cria conteúdo profissional | Juntar o Rastreador de Leads Qualificados na aba; renda saiu (não qualifica abordagem inicial) | Karol |
 
 ---
 

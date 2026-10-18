@@ -26,10 +26,25 @@
   "nacionalidade": "Brasileiro morando em qualquer país está DENTRO (Karol já teve vários alunos no exterior). Estrangeiro sai. Sinais de brasileiro: bio em português do Brasil, 'brasileira em ...', bandeira do Brasil, CRP/CRM/OAB/CRC brasileiro, WhatsApp +55. DDI estrangeiro sozinho NÃO descarta. Português de Portugal sem sinal de brasileiro: baixa, com nota pra Karol decidir.",
   "descartes_palavras_nota": "Filtro mecânico conservador: só palavra que sozinha já descarta. 'rotina', 'mãe de', 'publi' ficam pro julgamento do agente (cortariam nutricionista, mãe-profissional, publicitária).",
   "descartes_palavras": [
-    "blogueira", "blogger", "afiliad", "achadinho", "cupom", "loja", "store",
-    "frete", "atacado", "varejo", "lifestyle", "mentoria", "mentor", "coach"
+    "blogueira",
+    "blogger",
+    "afiliad",
+    "achadinho",
+    "cupom",
+    "loja",
+    "store",
+    "frete",
+    "atacado",
+    "varejo",
+    "lifestyle",
+    "mentoria",
+    "mentor",
+    "coach"
   ],
-  "faixa_seguidores": { "min": 500, "max": 20000 },
+  "faixa_seguidores": {
+    "min": 500,
+    "max": 20000
+  },
   "destino": {
     "planilha": "1BD4L6toolVi17Of1PrwmNFnRQprk8obV6wWN_lLatn0",
     "aba": "Garimpo"
@@ -37,5 +52,7 @@
   "dedup_crm_karol": true,
   "copy": "vendedor-expert",
   "nao_abordar": [],
-  "aprovado_em": "2026-10-17"
+  "aprovado_em": "2026-10-17",
+  "instagram_proprio": "karolsenna._",
+  "seguidores_nota": "Lista de seguidores lida pela referenciasgpt (logado.mjs seguidores), 300/dia, ATÉ O FIM — não cortar seguidor antigo pela data. Conta de 06/2020, Incubadora desde 12/2024; mais da metade da base veio dos nichos antigos, mas tem seguidor antigo que hoje quer transformar conhecimento em método (Karol 18/10/2026). Quem decide é o fit da bio, não a época. Grupo no rastreador: \"Seguidor sem interação\" — nunca \"Seguidores engajados\"."
 }

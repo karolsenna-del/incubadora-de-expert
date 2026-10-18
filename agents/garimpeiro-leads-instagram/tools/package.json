@@ -1,0 +1,8 @@
+{
+  "name": "garimpeiro-leads-instagram-tools",
+  "private": true,
+  "description": "Ferramentas do Garimpeiro: coleta grátis (perfil público) e aprofundamento logado (Playwright + Chrome).",
+  "dependencies": {
+    "playwright": "1.56.1"
+  }
+}

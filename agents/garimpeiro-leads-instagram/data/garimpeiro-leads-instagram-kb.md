@@ -5,27 +5,58 @@
 
 ---
 
-## 1. Visão do fluxo
+## 1. Visão do fluxo (v2 — custo zero, desde 18/10/2026)
 
 ```
 Perfil de busca (por cliente: Karol ou aluno)
-   ↓ palavras-chave/hashtags da rodada
-[1] Coleta de candidatos (Apify — hashtag ou busca de usuário)
-   ↓ lista de @ únicos
-[2] Enriquecimento (Apify — Profile Scraper: nome, bio, link, seguidores, categoria)
+   ↓ termos da rodada
+[1] Descoberta — WebSearch site:instagram.com (agente), sem login
+   ↓ lista de @ (rodadas/candidatos-*.txt)
+[2] Dedup (CRM + aba + rodadas) → página pública (nome, bio, seguidores, posts) → filtro mecânico
+   ↓ agente responde fit 1-3 pela bio; fit 1 = Não → descarte
+[3] Aprofundamento logado (referenciasgpt, Playwright + Chrome, teto 15/rodada) — só quem passou
+   ↓ bio completa, link, categoria, últimos 6 posts → fit 4, Perfil, fato-gancho
+[4] Classificação final: aderência/prioridade + 4 fits + Perfil + fato-gancho com fonte
    ↓
-[3] Deduplicação (CRM da Karol: Supabase crm_leads.instagram)
-   ↓
-[4] Filtro de descarte + classificação de aderência/prioridade (critérios do perfil de busca)
-   ↓
-[5] Entrega: aba "Garimpo" (até 50 aprovados) + fato-gancho por linha
+[5] Entrega: aba "Garimpo" (até 50) — bloco garimpo (A–R) + bloco rastreador (S–AI)
    ↓
 Karol revisa → (Karol) Vendedor Expert escreve copy | (aluno) entrega para no fato-gancho
 ```
 
+### 1.1 O que a página pública mostra sem login (testado 18/10/2026)
+- `GET https://www.instagram.com/{arroba}/` com `User-Agent: Mozilla/5.0` → meta `description`:
+  `"{seg} Followers, {seg} Following, {n} Posts - {Nome} (@{arroba}) on Instagram: "{bio}""`.
+  Dá nome, bio, seguidores, seguindo e nº de posts. NÃO dá posts, link externo, categoria nem se é privado.
+- Com User-Agent de Chrome completo a resposta veio vazia no teste — usar o curto (`Mozilla/5.0`).
+- `i.instagram.com/api/v1/users/web_profile_info` sem login → 401 (fechado). Logado (de dentro da página, com `x-ig-app-id`) devolve tudo, incluindo os 12 últimos posts — é o que a fase 3 usa.
+- Busca por hashtag (`/explore/tags/`) sem login → redireciona pro login.
+- Volume: pausa de 2,5s entre perfis públicos. Se a página parar de trazer a meta, é bloqueio temporário → parar e tentar horas depois.
+
+### 1.2 Descoberta grátis — o que funcionou (18/10/2026)
+- WebSearch do Claude com `allowed_domains: ["instagram.com"]` devolve ~8 perfis por consulta. Vem sujeira (sindicato, cursinho, mentor de carreira) — o filtro e a classificação limpam.
+- DuckDuckGo HTML (`html.duckduckgo.com`) devolveu só 1 perfil por consulta e o Bing não respondeu pra curl — não usar.
+- Rende mais variando a consulta (cidade/UF, cargo + "servidora", frase de dor) do que repetindo o termo.
+
+### 1.3 Fase 3 — sessão logada
+- `tools/logado.mjs` usa o pacote `playwright` (instalado em `tools/`, `node_modules` gitignorado) com `channel: 'chrome'` (Chrome instalado da Karol — não baixa navegador).
+- Sessão persistente em `~/.auroq/garimpeiro/sessao-instagram` (fora do repo e do OneDrive). Conta: `referenciasgpt` (conferida por `ds_user_id` → `/api/v1/users/{id}/info/`).
+- Janela visível de propósito (Chrome headless é mais fácil de ser marcado como robô).
+- **18/10/2026, logo após o 1º login da referenciasgpt:** `/api/v1/users/{id}/info/` e `/api/v1/users/web_profile_info/` responderam **429** (excesso de pedidos); `/api/v1/accounts/edit/web_form_data/` respondeu 200 com o username → é por ele que o script confere a conta. Fase 3 depende do `web_profile_info`: testar com 1 perfil no dia seguinte antes de rodar lote. Se o 429 persistir, plano B = abrir a página do perfil logado e ler os posts da própria página (menos chamadas de API).
+- Lista de seguidores (desde 18/10/2026): `/api/v1/friendships/{id}/followers/?count=50&search_surface=follow_list_page&max_id={cursor}`, de dentro da página logada. Devolve `users[]` (username, full_name, is_private) e `next_max_id` — sem bio e sem data de quando a pessoa passou a seguir. Costuma vir dos mais recentes pros mais antigos (comportamento comum, não documentado). Karol (@karolsenna._): 6.837 seguidores em 18/10/2026 → ~23 dias a 300/dia.
+
+### 1.4 Rastreador de Leads Qualificados na aba (desde 18/10/2026)
+Estrutura do "M3.5) Rastreador de leads qualificados" do Expert360º, com as perguntas de fit da Karol. Colunas S–AI:
+Grupo · Tem carreira clara? · Ainda não vende o próprio método? · Sinal de empreender/transição? · Já cria conteúdo profissional? · Score de Fit (0-4) · Prioridade de abordagem · Perfil · Status · Data Última Interação · Próxima Ação · Data Próxima Ação · Fechou? · Valor · Data Fechamento · Depoimento · Observações.
+- O Garimpeiro preenche: Grupo ("Conexões frias qualificadas"), 4 fits, Prioridade de abordagem (da aderência), Perfil, Status "Sem abordagem", Fechou? "Em aberto", Depoimento "Pendente". O resto é da Karol.
+- Score = `=SUMPRODUCT((T{n}:W{n}="Sim")*1)` — sem separador de argumento, funciona em pt-BR (REGRA-025 do Gestor de Infra).
+- Menus suspensos em todas as colunas de opção (e em "Status revisão").
+- "Renda que permite investir?" do modelo original saiu: não qualifica abordagem inicial (Karol, 18/10/2026).
+
 ---
 
 ## 2. Plataformas e Ferramentas
+
+> **Histórico (até 17/10/2026):** as seções 2.1–2.5 e 10.1 descrevem a coleta via Apify, desligada em 18/10/2026 (REGRA-002). Ficam como referência caso a Karol decida voltar a pagar.
 
 ### 2.1 Apify — visão geral
 **O que é:** plataforma de "atores" (robôs prontos) que coletam dados públicos da web e devolvem em dataset JSON.
@@ -213,23 +244,32 @@ Distribuição: ~70% OURO · ~20% PRATA · ~10% BRONZE.
 
 ## 10. Ferramentas do worker (`tools/`)
 
-### 10.1 `garimpo.mjs`
+### 10.1 `garimpo.mjs` (v2, 18/10/2026 — sem Apify)
 | Comando | O que faz |
 |---------|-----------|
-| `saldo` | `GET /v2/users/me/limits` → teto, usado, livre, fim do ciclo |
-| `coletar --perfil X --termos "a,b" [--modo hashtag\|busca\|ambos] [--limite N] [--estimar]` | Pipeline coleta → dedup → enriquecimento → filtro mecânico → JSON da rodada |
-| `--aprovado-acima-do-saldo` | Só com OK explícito da Karol (nível 3) |
+| `coletar --perfil X --candidatos {arquivo.txt}` | Fase 2: dedup → página pública → filtro mecânico → JSON da rodada (máx. 150 candidatos) |
+| `coletar --perfil X --arrobas "a,b" [--termo T]` | Mesmo, com @ passados direto |
+| `publico --arroba X` | Testa a leitura pública de um perfil |
 
-- Execução assíncrona com espera (`/runs` + `waitForFinish=60` em loop, teto 15 min) — não perde a run se passar de 300s.
-- Custo real da rodada = soma de `usageTotalUsd` das runs (vem no JSON em `custo_usd`).
-- Estimativa é TETO (supõe que todo coletado vira perfil enriquecido). O real costuma ser menor porque posts repetem dono e duplicados não são enriquecidos.
+- Arquivo de candidatos: `@arroba<TAB>termo` por linha, em `rodadas/` (gitignorada).
+- Bloqueio temporário (página sem meta / redirect pro login) → para e lista em `nao_lidos`.
 - Dedup da Karol lê `business/vault/supabase.md` (chave secreta) — a chave nunca é impressa.
+- A versão com Apify está no histórico do git (até o commit de 17/10/2026).
+
+### 10.1b `logado.mjs` (fase 3)
+| Comando | O que faz |
+|---------|-----------|
+| `login` | Abre o Chrome na sessão do Garimpeiro; a Karol entra na `referenciasgpt` à mão; confere a conta |
+| `conferir` | `{sessao_ativa, conta, conta_certa}` (sai com erro se não for a referenciasgpt) |
+| `aprofundar --rodada X [--teto 15]` | Não descartados e ainda sem fase 3 → bio, link, categoria, privado, 6 posts; salva a cada perfil; para em 401/403/429 (exit 2) |
 
 ### 10.2 `planilha.mjs`
 | Comando | O que faz |
 |---------|-----------|
 | `listar --perfil X` | Lê a aba de destino (cria aba + cabeçalho se não existir) |
-| `enviar --rodada {arquivo}` | Valida fato-gancho/fonte, ordena (prioridade, aderência), corta em 50, pula quem já está na aba, anexa |
+| `enviar --rodada {arquivo}` | Valida fato-gancho/fonte e fit 1-3, ordena (prioridade, aderência), corta em 50, pula quem já está na aba, anexa A–AI e reescreve a fórmula do Score |
+| `preparar --perfil X` | Cabeçalho S1:AI1 + menus suspensos + fórmula do Score (pode rodar de novo sem estrago) |
+| `migrar --perfil X` | Preenche o rastreador das linhas antigas a partir das rodadas locais — só onde "Grupo" está vazio |
 
 ### 10.3 Formato do JSON da rodada (`rodadas/{data}-{hora}-{cliente}.json`, gitignorado)
 ```json
@@ -242,6 +282,9 @@ Distribuição: ~70% OURO · ~20% PRATA · ~10% BRONZE.
       "posts": 0, "categoria": "...", "conta_comercial": true, "privado": false, "termo": "#psicologa",
       "origem": "hashtag", "post_da_hashtag": { "data": "...", "legenda": "...", "url": "..." },
       "posts_recentes": [ { "data": "...", "legenda": "...", "url": "..." } ],
+      "fase": 2, "aprofundado_em": "(fase 3)",
+      "fit_carreira": "Sim|Não", "fit_nao_vende": "Sim|Não", "fit_transicao": "Sim|Não", "fit_conteudo": "Sim|Não|vazio",
+      "perfil_leitura": "Conector|Analista|Diretivo",
       "aderencia": "(agente)", "prioridade": "(agente)", "sinais": "(agente)", "motivo_nota": "(agente)",
       "fato_gancho": "(agente)", "fonte_gancho": "(agente)" }
   ],
@@ -257,13 +300,14 @@ Distribuição: ~70% OURO · ~20% PRATA · ~10% BRONZE.
 - **URL:** `POST https://webhook.karolsenna.com.br/webhook/garimpo`
 - **Auth:** header `X-Garimpo-Token` — valor em `op://Claude/Garimpo - webhook n8n/credential` (credencial n8n `Garimpo - webhook token`, id `nG6NUQwEV9EdUZKV`). Sem token → 403.
 - **Google:** usa a credencial OAuth "Google Sheets account" (`m2KgTQc2hm6x4Ob7`) — a mesma dos workflows do CRM.
-- **Ações (corpo JSON):** `{acao: "abas"|"listar"|"criar_aba"|"anexar", planilha, aba, linhas}`.
-- **Travas:** só planilhas da lista `PLANILHAS_PERMITIDAS` (hoje: CRM da Karol); só abas cujo nome começa com "Garimpo"; `anexar` com 1–200 linhas; grava com `valueInputOption=RAW` (bio que começa com "=" não vira fórmula).
+- **Ações (corpo JSON):** `{acao: "abas"|"listar"|"criar_aba"|"anexar", planilha, aba, linhas}`. Desde 18/10/2026 (v2): `atualizar` (`intervalo` tipo `S1:AI1`, `linhas`, `formula`) e `validacao` (`regras: [{coluna, opcoes}]` → menus suspensos; o nó "Montar validacao" lê o sheetId da aba e só aplica em aba "Garimpo*"). `listar` lê `A1:AI5000`.
+- **Travas:** só planilhas da lista `PLANILHAS_PERMITIDAS` (hoje: CRM da Karol); só abas cujo nome começa com "Garimpo"; `anexar` com 1–200 linhas; grava com `valueInputOption=RAW` (bio que começa com "=" não vira fórmula). `atualizar` com `formula: true` só aceita a fórmula do Score (`=SUMPRODUCT((X1:Y1="Sim")*1)`), o resto é RAW.
 - **Não interfere no CRM:** os workflows `KEhDYSTPogtNSuuP` e `iLjCuQWklJsHJSQc` leem só `CRM!A2:P2000`/`CRM!A2:R2000`.
 - **Testes de aceite (17/10):** sem token 403 · planilha fora da lista 500 · anexar na aba CRM 500 · listar abas 200.
 
 ### Colunas da aba
-Data rodada · Cliente · Termo · Nome · @ · Link do perfil · Bio · Link externo · Seguidores · Categoria · Sinais · Aderência · Prioridade · Motivo da nota · Fato-gancho · Fonte do gancho · **Status revisão** (Karol: aprovado/descartado) · **Copy** (Vendedor Expert)
+A–R: Data rodada · Cliente · Termo · Nome · @ · Link do perfil · Bio · Link externo · Seguidores · Categoria · Sinais · Aderência · Prioridade · Motivo da nota · Fato-gancho · Fonte do gancho · **Status revisão** (Karol: aprovado/descartado) · **Copy** (Vendedor Expert)
+S–AI: bloco do rastreador de leads qualificados (ver §1.4)
 
 ---
 
