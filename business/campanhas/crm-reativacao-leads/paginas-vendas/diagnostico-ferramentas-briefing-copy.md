@@ -270,7 +270,7 @@ Política de privacidade · Termos de uso
 **RCs:** RC-002 OK · RC-005 OK · RC-015 não aplicável.
 **Tom:** sem "masterclass exclusiva", sem vocabulário de estágio Arcane — OK.
 
-**Pendências:** nenhuma — garantia confirmada (02/08/2026): mesma regra do Método Express (100% devolução), já que a página cobre só o diagnóstico, não a construção das ferramentas (etapa separada, orçada à parte).
+**Pendências:** nenhuma — garantia confirmada (02/08/2026): mesma regra do Destrava Expert - Sessão única (100% devolução), já que a página cobre só o diagnóstico, não a construção das ferramentas (etapa separada, orçada à parte).
 
 ---
 

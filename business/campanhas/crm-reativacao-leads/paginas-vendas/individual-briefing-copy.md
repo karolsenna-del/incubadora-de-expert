@@ -303,7 +303,7 @@ antes de decidir qualquer coisa.
 [H3] Pra quem NÃO é
 
 ✗ Você quer testar se gosta antes de se comprometer — comece pelo
-  Método Express ou o Sprint do Método
+  Destrava Expert - Sessão única ou o Sprint do Método
 ✗ Você prefere ritmo de grupo e ticket menor — o Grupo entrega
   jornada parecida, com atenção dividida
 ✗ Você quer decidir sozinho, sem conversar antes — aqui a decisão

@@ -2,7 +2,7 @@
 
 > Squad LPago Arcane — Quill (Copy & Página). Fonte: `00-documento-mestre-ofertas.md`.
 > **Atualização 17/09/2026 (aprovada por Karol em chat, ainda não publicada):** ancoragem de preço (R$997 → R$497), 2 bônus novos (Studio de Ensaio do Expert + Jornada360), seção de diferenciação vs. Mentoria em Grupo, e garantia reduzida de 30 pra **7 dias** (regra da esteira: Individual 30 / Grupo 15 / Curso 7). Ver Seção 6, novas Seções 6b/6c e FAQ.
-> Estrutura: **12 seções padrão** — R$497 fica abaixo do corte de R$500 pra variante "Para quem é/não é", mesma lógica aplicada no Método Express.
+> Estrutura: **12 seções padrão** — R$497 fica abaixo do corte de R$500 pra variante "Para quem é/não é", mesma lógica aplicada no Destrava Expert - Sessão única.
 > Público-alvo: Laura — recorte de orçamento mais baixo, tem tempo, prefere estudar sozinha, sem depender de agenda/contato pessoal com a Karol.
 > **Decisão de prontidão do produto (02/08/2026):** M3 e M4 ainda não foram gravados (tracker: M0 completo, M1 6/8, M2 5/9, M3-M4 aguardando gravação). Karol confirmou vender como curso completo mesmo assim — quem compra hoje recebe M0-M2 já disponíveis e M3/M4 chegam por entrega progressiva conforme forem gravados/publicados. Página trata isso com honestidade na seção de FAQ, sem alarmar.
 

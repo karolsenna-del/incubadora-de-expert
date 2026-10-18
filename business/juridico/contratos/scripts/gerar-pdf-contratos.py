@@ -26,7 +26,7 @@ ANEXO_I_PATH = BASE_DIR / "00-termos-gerais-prestacao-servicos.md"
 # (arquivo, titulo do documento, subtitulo/servico, funde Anexo I?)
 DOCUMENTOS = [
     ("00-termos-gerais-prestacao-servicos.md", "Termos e Condições Gerais", "Anexo I — Prestação de Serviços", False),
-    ("01-metodo-express.md", "Contrato de Prestação de Serviços", "Método Express", True),
+    ("01-metodo-express.md", "Contrato de Prestação de Serviços", "Destrava Expert - Sessão única", True),
     ("02-metodo-vip.md", "Contrato de Prestação de Serviços", "Método VIP", True),
     ("03-sprint-do-metodo.md", "Contrato de Prestação de Serviços", "Sprint do Método", True),
     ("04-grupo.md", "Contrato de Prestação de Serviços", "Mentoria Grupo", True),
@@ -34,6 +34,7 @@ DOCUMENTOS = [
     ("06-diagnostico-ferramentas.md", "Contrato de Prestação de Serviços", "Diagnóstico Ferramentas", True),
     ("07-expert360-termos-de-compra.md", "Termos de Compra e Licença de Uso", "Curso Expert360º", False),
     ("08-aditivo-continuacao-pos-sprint.md", "Aditivo Contratual", "Continuação pós-Sprint do Método", True),
+    ("09-incubadora-express.md", "Contrato de Prestação de Serviços", "Incubadora Express", True),
 ]
 
 INLINE_PATTERN = re.compile(r"(\*\*.+?\*\*|\*.+?\*|`.+?`)")

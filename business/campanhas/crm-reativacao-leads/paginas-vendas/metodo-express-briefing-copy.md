@@ -1,4 +1,4 @@
-# Briefing + Copy Redigida — Página Método Express (R$300)
+# Briefing + Copy Redigida — Página Destrava Expert - Sessão única (R$300)
 
 > Squad LPago Arcane — Quill (Copy & Página). Fonte: `00-documento-mestre-ofertas.md`.
 > Estrutura: **12 seções padrão** — sem a variante "Para quem é / Para quem não é" usada nas 3 páginas anteriores: essa variante só se justifica em high-ticket (>R$500), e R$300 fica abaixo do corte. Mantendo a regra do squad em vez de copiar o padrão por inércia.
@@ -47,7 +47,7 @@ Processo, Proposta ou Posicionamento. Na maioria das vezes não é o
 método inteiro que está errado — é UM ponto específico que
 contamina todo o resto.
 
-O Método Express é 1 encontro de 1 hora focado em achar esse ponto
+O Destrava Expert - Sessão única é 1 encontro de 1 hora focado em achar esse ponto
 (se você ainda não sabe qual é) e resolver ele com um plano de ação
 concreto — não uma conversa genérica de "dicas".
 ```
@@ -106,7 +106,7 @@ insights. Ajuda em tudo: estrutura, copy e até precificação."
 — Evelyn
 ```
 
-**Validação:** 2 depoimentos reais sobre sessão de diagnóstico/estratégia — mesma modalidade do Método Express (não depoimento específico do produto, que ainda não tem histórico de venda).
+**Validação:** 2 depoimentos reais sobre sessão de diagnóstico/estratégia — mesma modalidade do Destrava Expert - Sessão única (não depoimento específico do produto, que ainda não tem histórico de venda).
 
 ---
 
@@ -140,7 +140,7 @@ que ordem, pra destravar.
 **COPY REDIGIDA:**
 
 ```
-[H2] Método Express — 1 encontro, 1 hora, 1 ponto resolvido
+[H2] Destrava Expert - Sessão única — 1 encontro, 1 hora, 1 ponto resolvido
 
 R$300 à vista no pix
 
@@ -167,7 +167,7 @@ anos no serviço público. Foram 8 lançamentos fracassados até eu
 entender onde realmente travava — e, depois disso, comecei a
 reconhecer esse mesmo padrão em outros especialistas rapidinho.
 
-O Método Express existe porque nem todo problema precisa de um
+O Destrava Expert - Sessão única existe porque nem todo problema precisa de um
 programa inteiro. Às vezes falta só um olhar de fora, no ponto
 certo.
 ```

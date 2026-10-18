@@ -99,6 +99,7 @@ Ver [briefing.md](briefing.md) pro desenho completo (publico, telas, vitrine, de
 
 > Mais recente primeiro.
 
+- 18/10 — @companion: weekly — Biblioteca de IA segue congelada até o teste da Incubadora Express responder. Foco do projeto: publicar o acesso de 6 meses da Express (produto Voomp #17442, programado em 17/10) e as aulas M3 A9-A13 até 31/10.
 - 27/09 — @companion: weekly review — **Biblioteca de IA congelada até 15/10** (decisão da Karol: foco na Black Expert de 14/10). Em 15/10 retoma com Karol fechando o pacote. Suporte à publicação das aulas do Expert360º segue normal.
 - 26/09 — @gestor-infra: Área de Membros passa a exibir a descrição de cada aula ("Sobre esta aula", abaixo do player) — `js/descricoes-aulas.js` gerado de descricoes.md + config.yaml (SOP-023), links clicáveis (suporte wa.me na A9/A12/Encerramento M3). Testado em node; deploy feito pela Karol (dpl_6p6cmnMGCmBDr6Xenm1Y8mgpfqeM), arquivos conferidos via curl no domínio. Checklist V05/V06 do Expert360º fechados.
 - 26/09 — @course-publisher: M3 na Área de Membros passa pra 14 aulas — incluída "A11 — Conduzindo a Sessão ao Vivo" (sem vídeo ainda), pós-sessão virou A12. config.yaml + data.js atualizados; deploy feito pela Karol (dpl_2kYc7P4by4kVTox8cXntiyxh9Fd2), confirmado via curl.

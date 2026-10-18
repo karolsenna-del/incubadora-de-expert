@@ -287,7 +287,7 @@ pública.
 ✗ Você só decide se for 100% personalizado, sem dividir atenção com
   ninguém — isso é a Individual
 ✗ Você quer testar antes de se comprometer com 12 meses — comece
-  pelo Método Express ou o Sprint do Método
+  pelo Destrava Expert - Sessão única ou o Sprint do Método
 ✗ Você já tem produto rodando e a dor é reter/engajar aluno, não
   validar um método novo — isso é o Diagnóstico Ferramentas
 ```

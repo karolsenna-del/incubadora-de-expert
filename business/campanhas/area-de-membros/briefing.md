@@ -39,7 +39,7 @@ Decisão de 11/08: a vitrine mostra o ecossistema inteiro, não só "próximo n�
 |--------|-------|--------|
 | Diagnóstico Ferramentas | R$97 | /diagnostico-ferramentas/ |
 | Expert360º (curso) | R$497 | /expert360/ |
-| Método Express | R$300 | /metodo-express/ |
+| Destrava Expert - Sessão única | R$300 | /metodo-express/ |
 | Método VIP | R$1.500 | /metodo-vip/ |
 | Sprint do Método | R$5.000 | /sprint-do-metodo/ |
 | Grupo | R$5.000/12m | /grupo/ |
@@ -65,7 +65,7 @@ Reaproveita a IV já validada nas páginas de venda: preto `#0B0B0C`, laranja `#
 - **Vídeo:** continua no YouTube não-listado, sem re-hospedagem — a plataforma só embeda.
 - **Banco:** Supabase, reaproveitando `pessoas`/`capturas`/`compras` + tabela nova de matrícula/progresso por produto.
 - **Deploy:** Vercel (mesmo padrão das LPs já publicadas).
-- **Pendência decorrente:** as 7 páginas de vendas em `vendas-incubadora.vercel.app` têm CTAs desatualizados (Método Express/Diagnóstico → WhatsApp; Grupo/Individual → Hotmart) — precisam apontar pro checkout Voomp assim que Karol passar os links. Rotear pro Gestor de Infra Arcane quando os links estiverem prontos.
+- **Pendência decorrente:** as 7 páginas de vendas em `vendas-incubadora.vercel.app` têm CTAs desatualizados (Destrava Expert - Sessão única/Diagnóstico → WhatsApp; Grupo/Individual → Hotmart) — precisam apontar pro checkout Voomp assim que Karol passar os links. Rotear pro Gestor de Infra Arcane quando os links estiverem prontos.
 - **Automações a redirecionar:** hoje "Encontros da Incubadora" e "Lives Expert360º" já sobem automaticamente pra Hotmart — essas automações vão precisar apontar pra plataforma nova em vez da Hotmart.
 
 ## Perguntas em aberto (precisam de decisão da Karol antes de fechar o escopo)
@@ -76,9 +76,9 @@ Reaproveita a IV já validada nas páginas de venda: preto `#0B0B0C`, laranja `#
 
 ## Trilha "Consultorias" (fechado 12/08)
 
-Terceira trilha de conteúdo, ao lado de Expert360º e Mentoria — cobre as consultorias individuais mais curtas: **Método VIP, Método Express, Sprint do Método e Diagnóstico Ferramentas** (Grupo e Individual continuam na trilha Mentoria — são as mentorias 1:1 de 12 meses, roteiro fixo já desenhado).
+Terceira trilha de conteúdo, ao lado de Expert360º e Mentoria — cobre as consultorias individuais mais curtas: **Método VIP, Destrava Expert - Sessão única, Sprint do Método e Diagnóstico Ferramentas** (Grupo e Individual continuam na trilha Mentoria — são as mentorias 1:1 de 12 meses, roteiro fixo já desenhado).
 
-- **Checklist fixo por oferta (12/08):** cada consultoria tem um número definido de encontros, no mesmo formato visual do Mapa da Jornada (check verde = tem material). Definido pela Karol: Método VIP = 3 encontros, Método Express = 1, Sprint do Método = 5, Diagnóstico Ferramentas = 2 (1 do diagnóstico em si + 1 "Outros encontros", balde de tamanho variável pra construção da ferramenta). O check fica verde quando existe material em `materiais_consultoria` com aquele título — não é a aluna que marca, é reflexo do que foi entregue.
+- **Checklist fixo por oferta (12/08):** cada consultoria tem um número definido de encontros, no mesmo formato visual do Mapa da Jornada (check verde = tem material). Definido pela Karol: Método VIP = 3 encontros, Destrava Expert - Sessão única = 1, Sprint do Método = 5, Diagnóstico Ferramentas = 2 (1 do diagnóstico em si + 1 "Outros encontros", balde de tamanho variável pra construção da ferramenta). O check fica verde quando existe material em `materiais_consultoria` com aquele título — não é a aluna que marca, é reflexo do que foi entregue.
 - **Compartilhamento por reciprocidade (modelo Erico Rocha):** por padrão, o material de cada aluna é privado (só ela + Karol). Se ela optar por compartilhar as próprias sessões, destrava o acesso ao repositório de quem também compartilhou. Quem não compartilha, não vê as dos outros. Regra imposta na própria RLS do banco (função `eu_compartilhei_algo()`), não só na tela.
 - **O que é compartilhado:** a gravação bruta da sessão (decisão de 12/08 — sem curadoria/edição, por ser mais trabalho).
 - **Como a aluna decide:** popup explicando a regra, com as opções "Quero compartilhar" ou "Prefiro manter exclusivo" — decisão única (fica salva no perfil dela), não por sessão.

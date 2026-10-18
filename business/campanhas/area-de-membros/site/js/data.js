@@ -112,13 +112,18 @@ const ROTEIRO_MENTORIA = {
 // a densidade da composição, crescente com o tier da oferta (mais arcos/camadas = oferta mais funda).
 const VITRINE_OFERTAS = [
   { slug: 'diagnostico-ferramentas', nome: 'Diagnóstico Ferramentas', preco: 'R$97', desc: 'Diagnóstico rápido de onde você está no método', intensidade: 1 },
-  { slug: 'metodo-express', nome: 'Método Express', preco: 'R$300', desc: 'Sessão única, resultado rápido', intensidade: 2 },
-  { slug: 'expert360', nome: 'Expert360º', preco: 'R$497', desc: 'Curso completo — estruture seu método autoral', intensidade: 3, logo: 'img/logo-expert360-preto.png' },
+  { slug: 'metodo-express', nome: 'Destrava Expert - Sessão única', preco: 'R$300', desc: 'Sessão única, resultado rápido', intensidade: 2 },
+  { slug: 'expert360', nome: 'Expert360º', preco: 'R$697', desc: 'Curso completo — estruture seu método autoral', intensidade: 3, logo: 'img/logo-expert360-preto.png' },
   { slug: 'metodo-vip', nome: 'Método VIP', preco: 'R$1.500', desc: 'Acompanhamento próximo, ritmo acelerado', intensidade: 4 },
-  { slug: 'sprint-do-metodo', nome: 'Sprint do Método', preco: 'R$3.000', desc: '6 semanas, fundação construída junto', intensidade: 5 },
-  { slug: 'grupo', nome: 'Grupo', preco: 'R$5.000/12m', desc: 'Mentoria em grupo, jornada completa até validar', intensidade: 6 },
-  { slug: 'individual', nome: 'Individual', preco: 'R$10.000/12m', desc: '1:1 do zero até escalar, tudo personalizado', intensidade: 7 }
+  // Sem página de vendas própria (17/10): o card leva direto pro checkout da Voomp.
+  { slug: 'incubadora-express', nome: 'Incubadora Express', preco: 'R$2.500/6m', desc: '6 meses, 5 sessões individuais até as primeiras vendas', intensidade: 5, link: 'https://pay.voompcreators.com.br/17442' },
+  { slug: 'sprint-do-metodo', nome: 'Sprint do Método', preco: 'R$5.000', desc: '8 semanas, fundação construída junto', intensidade: 5 },
+  { slug: 'grupo', nome: 'Grupo', preco: 'R$7.500/12m', desc: 'Mentoria em grupo, jornada completa até validar', intensidade: 6 },
+  { slug: 'individual', nome: 'Individual', preco: 'R$15.000/12m', desc: '1:1 do zero até escalar, tudo personalizado', intensidade: 7 }
 ];
+
+// Ofertas sem card na Vitrine — nome exibido no bloco de Consultorias.
+const NOME_OFERTA_FORA_VITRINE = {};
 
 // Matrícula do aluno logado — valor abaixo é só o fallback do modo preview (sem sessão real).
 // Com sessão real, `carregarMatriculaReal()` (app.js) sobrescreve isso com a leitura de verdade
@@ -139,7 +144,10 @@ const TRILHA_POR_OFERTA = {
   'metodo-vip': ['consultorias'],
   'metodo-express': ['consultorias'],
   'sprint-do-metodo': ['consultorias'],
-  'diagnostico-ferramentas': ['consultorias']
+  'diagnostico-ferramentas': ['consultorias'],
+  // Incubadora Express (17/10): 6 meses — Expert360º + 5 sessões no checklist de Consultorias. Prazo gravado
+  // em `matriculas.expira_em` pelo webhook. Card na Vitrine aponta pro checkout (sem página de vendas).
+  'incubadora-express': ['expert360', 'consultorias']
 };
 
 // Trilha "Consultorias" — ao contrário de Expert360º/Mentoria, não tem módulos/aulas fixos no data.js: o
@@ -155,7 +163,8 @@ const ENCONTROS_POR_OFERTA = {
   'sprint-do-metodo': ['Encontro 1', 'Encontro 2', 'Encontro 3', 'Encontro 4', 'Encontro 5'],
   // Diagnóstico Ferramentas: 1 encontro fixo do diagnóstico em si + 1 "balde" pros encontros de construção
   // da ferramenta, que variam de quantidade — "Outros encontros" pode ter 0, 1 ou vários materiais dentro.
-  'diagnostico-ferramentas': ['Diagnóstico', 'Outros encontros']
+  'diagnostico-ferramentas': ['Diagnóstico', 'Outros encontros'],
+  'incubadora-express': ['S1 · Diagnóstico + Roteiro do Expert', 'S2 · Revisão do Método', 'S3 · Checkup da Oferta', 'S4 · Raio-X de Venda', 'S5 · Raio-X de Venda']
 };
 
 // Frases motivacionais do standby — PLACEHOLDER. Karol decidiu (12/08) não usar o banco extraído de PDFs

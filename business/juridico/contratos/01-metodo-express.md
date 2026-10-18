@@ -1,5 +1,5 @@
 # INSTRUMENTO PARTICULAR DE CONTRATO DE PRESTAÇÃO DE SERVIÇOS
-## Serviço: Método Express
+## Serviço: Destrava Expert - Sessão única
 
 > ⚠️ Este serviço nunca foi vendido — é oferta em fase de teste. Ver `business/campanhas/crm-reativacao-leads/arsenal-vendas-closer.md`, seção 5.
 

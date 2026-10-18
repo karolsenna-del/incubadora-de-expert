@@ -1,7 +1,7 @@
 # TERMOS E CONDIÇÕES GERAIS DE PRESTAÇÃO DE SERVIÇOS
 ## Incubadora de Expert / Gestão pra Tudo - Karoline Franzini de Carvalho Senna
 
-> Este documento é o **Anexo I** de todo Instrumento Particular de Contrato de Prestação de Serviços celebrado entre a CONTRATADA e um CONTRATANTE, para qualquer um dos serviços do ecossistema da Incubadora de Expert (Método Express, Método VIP, Sprint do Método, Grupo, Individual, Diagnóstico Ferramentas).
+> Este documento é o **Anexo I** de todo Instrumento Particular de Contrato de Prestação de Serviços celebrado entre a CONTRATADA e um CONTRATANTE, para qualquer um dos serviços do ecossistema da Incubadora de Expert (Destrava Expert - Sessão única, Método VIP, Sprint do Método, Grupo, Individual, Diagnóstico Ferramentas).
 > O contrato específico de cada serviço (objeto, prazo, valor, forma de pagamento e entregáveis) faz referência a este Anexo I e prevalece sobre ele em caso de conflito direto quanto a esses pontos específicos.
 
 ---

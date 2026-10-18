@@ -2,7 +2,7 @@
 
 > **Atualização 04/10/2026 (Karol):** **3 agentes de IA de criação de conteúdo** (live semanal, reels e stories), entregues no Posicionamento e **só nas 2 mentorias** (Grupo e Individual). Grupo recebe o **Kit de Scripts de Vendas Secretas como templates pra adaptar**. Na Individual, materiais de aplicação, Kit de Scripts e Funil de Lives Semanais são **feitos pelo time**. O Expert360º **ensina o Expert Plan** no módulo de escala.
 
-> **Atualização 03/10/2026 — tarde (Karol):** Expert360º passa a **R$697 à vista ou 12x R$69,70** (sai o R$497) e **perde o Studio de Ensaio** (vira exclusivo de Grupo e Individual). Método VIP: **garantia de 7 dias**. Método Express: **R$300 à vista ou 12x R$30**. Sprint: o Funil de Vendas Secretas entregue é o **funil completo** (captação → abordagem → pré-diagnóstico → agenda → diagnóstico → oferta → fechamento → onboarding ou follow-up 5x). Mapa visual de todas as ofertas pra mandar ao lead: https://claude.ai/artifact/WrMZHw5ZpDfSYYZYGPTjak
+> **Atualização 03/10/2026 — tarde (Karol):** Expert360º passa a **R$697 à vista ou 12x R$69,70** (sai o R$497) e **perde o Studio de Ensaio** (vira exclusivo de Grupo e Individual). Método VIP: **garantia de 7 dias**. Destrava Expert - Sessão única: **R$300 à vista ou 12x R$30**. Sprint: o Funil de Vendas Secretas entregue é o **funil completo** (captação → abordagem → pré-diagnóstico → agenda → diagnóstico → oferta → fechamento → onboarding ou follow-up 5x). Mapa visual de todas as ofertas pra mandar ao lead: https://claude.ai/artifact/WrMZHw5ZpDfSYYZYGPTjak
 
 > **Atualização 03/10/2026 (Karol):** Sprint do Método = **8 semanas**, **R$5.000 à vista ou 12x R$500**, **garantia de 7 dias** (antes da Semana 1). Grupo: **nada da oferta antes da live de 14/10, 15h** (Black Expert); R$7.500 a partir de 15/10. Nanny Faggiano **não** é usada como prova. Bônus por oferta na seção 4.1.
 
@@ -90,7 +90,7 @@ Vem das lives semanais — engajamento de conteúdo, não contato comercial. Mui
 | # | Produto | Eixo | Duração | Preço | Observação |
 |---|---------|------|---------|-------|------------|
 | 1 | Diagnóstico Ferramentas | Manter/escalar | 1 sessão | R$97 (cashback se contratar construção) | Só pra quem já tem produto/método rodando |
-| 2 | Método Express | Vender | 1 encontro (1h) | R$300 à vista ou 12x R$30 | **Nunca vendido — oferta em teste** |
+| 2 | Destrava Expert - Sessão única | Vender | 1 encontro (1h) | R$300 à vista ou 12x R$30 | **Nunca vendido — oferta em teste** |
 | 3 | Expert360º (curso) | Vender | Self-paced | R$697 à vista ou 12x R$69,70 (desde 03/10; antes R$497) | Curso gravado, sem contato pessoal. Garantia 7 dias |
 | 4 | Método VIP | Vender | 3 encontros | R$1.500 (3x R$500 pix) | Orientação — cliente executa, ela adapta o foco. Garantia 7 dias |
 | 5 | Sprint do Método | Vender | 8 semanas | R$5.000 à vista ou 12x R$500 (inclui Funil de Vendas Secretas) | Fundação + funil feitos por ela, sem validação de campo. Garantia 7 dias. Depende de agenda dela abrir |
@@ -136,14 +136,14 @@ Antes de empurrar qualquer produto, descubra uma coisa: **o lead já tem um mét
 
 | Se o lead... | Ofereça | Preço |
 |---|---|---|
-| Só quer clareza pontual num ponto específico, orçamento baixo | Método Express *(oferta em teste — ver nota abaixo)* | R$300 à vista ou 12x R$30 |
+| Só quer clareza pontual num ponto específico, orçamento baixo | Destrava Expert - Sessão única *(oferta em teste — ver nota abaixo)* | R$300 à vista ou 12x R$30 |
 | Tem orçamento baixo, tempo disponível, prefere estudar sozinha | Expert360º (curso) | R$697 à vista ou 12x R$69,70 |
 | Quer fazer ela mesma mas precisa de direção e ajuste no caminho | Método VIP | R$1.500 (3x R$500 pix) |
 | **Já tentou e não conseguiu, ou não sabe nada de marketing/tecnologia — trava por falta de tempo E clareza** | **Sprint do Método** | R$5.000 à vista ou 12x R$500 |
 | Quer jornada completa (validação incluída), topa grupo, ticket menor | Grupo | R$5.000 (12 meses) — R$7.500 a partir de 15/10; oferta só na live de 14/10 |
 | Quer jornada completa 1:1, quer o acompanhamento mais garantido | Individual | R$15.000 (12 meses) |
 
-**Nota — Método Express nunca foi vendido.** Se for oferecer, deixe claro internamente (não precisa avisar o lead) que é uma oferta nova sendo testada. Avise a Karol como foi a primeira venda, se acontecer.
+**Nota — Destrava Expert - Sessão única nunca foi vendido.** Se for oferecer, deixe claro internamente (não precisa avisar o lead) que é uma oferta nova sendo testada. Avise a Karol como foi a primeira venda, se acontecer.
 
 **Se o lead já fez o Sprint do Método antes** (ou está decidindo entre Sprint e continuar depois): a continuação é mais barata que entrar direto, porque a fundação já está pronta —
 - ⚠️ **Preços das continuações (Grupo e Individual pós-Sprint) estão em revisão** desde as reprecificações de 16/09 e 02/10 — **não ofertar** até a Karol definir. Os valores antigos (R$2.000 / R$5.000) não valem mais.
@@ -206,7 +206,7 @@ Duas origens carregam a mesma objeção de fundo — "já tive contato com você
 
 Não se justifique demais — use como ponte de volta pra dor. Sugestão de abordagem:
 
-> "Na época você teve o diagnóstico, mas talvez o passo seguinte parecesse grande demais pra decidir de cara. Hoje existe um caminho mais leve pra começar — não precisa decidir a mentoria completa de uma vez. [Apresentar Método Express, VIP ou Sprint do Método conforme o perfil.] A pergunta que importa é: aquela dor que te fez marcar o diagnóstico — ainda tá aí?"
+> "Na época você teve o diagnóstico, mas talvez o passo seguinte parecesse grande demais pra decidir de cara. Hoje existe um caminho mais leve pra começar — não precisa decidir a mentoria completa de uma vez. [Apresentar Destrava Expert - Sessão única, VIP ou Sprint do Método conforme o perfil.] A pergunta que importa é: aquela dor que te fez marcar o diagnóstico — ainda tá aí?"
 
 Isso é verdade sobre o momento atual do ecossistema: antes só existia Grupo/Individual (ticket alto), agora há degraus de entrada mais baratos — é argumento real, não script vazio.
 
@@ -236,7 +236,7 @@ Manda o link certo conforme a oferta que você indicou na ligação (não manda 
 
 | Oferta | Link |
 |---|---|
-| Método Express (R$300) | https://vendas.incubadoradeexpert.com.br/metodo-express/ |
+| Destrava Expert - Sessão única (R$300) | https://vendas.incubadoradeexpert.com.br/destrava-expert/ |
 | Método VIP (R$1.500) | https://vendas.incubadoradeexpert.com.br/metodo-vip/ |
 | Sprint do Método (R$5.000) | https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/ |
 | Grupo (R$5.000/12m) | https://vendas.incubadoradeexpert.com.br/grupo/ |
@@ -256,4 +256,4 @@ Manda o link certo conforme a oferta que você indicou na ligação (não manda 
 
 - Parcelamento da Individual e do Grupo já confirmados nas páginas — se o lead perguntar algo além disso (ex: outras formas de pagamento), confirmar com a Karol antes de prometer.
 - ~~Parcelamento da Individual~~ — resolvido em 02/10/2026: 12x de R$1.500 no cartão.
-- Método Express: primeira venda real ainda não aconteceu — reportar como foi.
+- Destrava Expert - Sessão única: primeira venda real ainda não aconteceu — reportar como foi.

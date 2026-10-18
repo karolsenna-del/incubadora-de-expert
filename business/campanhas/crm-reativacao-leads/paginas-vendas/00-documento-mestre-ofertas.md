@@ -1,6 +1,6 @@
 # Documento Mestre Condensado — 7 Páginas de Venda (Closer)
 
-> **Atualização 03/10/2026 — tarde (Karol):** Expert360º passa a **R$697 à vista ou 12x R$69,70** (sai o R$497) e o **Studio de Ensaio sai do curso** (fica exclusivo de Grupo e Individual). Método VIP: **garantia de 7 dias**. Método Express: **R$300 à vista ou 12x R$30**. Sprint do Método: o funil entregue é o **Funil de Vendas Secretas completo** (captar leads → abordagem → pré-diagnóstico → agenda sessão → aplica diagnóstico → oferta → fechamento → sim: onboarding / não: follow-up 5x).
+> **Atualização 03/10/2026 — tarde (Karol):** Expert360º passa a **R$697 à vista ou 12x R$69,70** (sai o R$497) e o **Studio de Ensaio sai do curso** (fica exclusivo de Grupo e Individual). Método VIP: **garantia de 7 dias**. Destrava Expert - Sessão única: **R$300 à vista ou 12x R$30**. Sprint do Método: o funil entregue é o **Funil de Vendas Secretas completo** (captar leads → abordagem → pré-diagnóstico → agenda sessão → aplica diagnóstico → oferta → fechamento → sim: onboarding / não: follow-up 5x).
 
 > **Atualização de preços 02/10/2026 (decisão da Karol, ver `agents/companion/data/log-decisoes.md`):** Individual **R$15.000 à vista ou 12x de R$1.500**; Sprint do Método **R$5.000** (inclui a criação do Funil de Vendas Secretas); Grupo **R$5.000** (passa a **R$7.500 a partir de 15/10**). Continuações pós-Sprint em revisão.
 
@@ -31,7 +31,7 @@
 
 ---
 
-## 1. Método Express — R$300
+## 1. Destrava Expert - Sessão única — R$300
 
 **Público principal:** Laura (recorte: já sabe exatamente qual é o buraco, só trava num ponto específico dos 5Ps).
 **Conhecimento atual:** Já tentou entender sozinha, sabe boa parte do método, mas tem UM ponto travando (persona, promessa, processo, proposta ou posicionamento — não sabe qual dos 5, ou sabe e não consegue destravar sozinha).

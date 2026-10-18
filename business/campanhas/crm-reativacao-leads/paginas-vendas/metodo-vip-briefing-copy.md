@@ -224,7 +224,7 @@ precisa dominar nada disso pra aproveitar os 3 encontros.
 ✗ Você quer alguém construindo tudo por você, não só corrigindo —
   considere o Sprint do Método
 ✗ Você só precisa de clareza pontual num ponto específico —
-  considere o Método Express
+  considere o Destrava Expert - Sessão única
 ```
 
 ---

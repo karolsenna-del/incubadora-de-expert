@@ -251,7 +251,7 @@ dominar nada disso.
 ✗ Você quer validar vendas reais dentro do mesmo programa — o
   Sprint não inclui isso (existe a continuação pra essa etapa)
 ✗ Você só precisa de clareza pontual num ponto específico — considere
-  o Método Express
+  o Destrava Expert - Sessão única
 ```
 
 ---

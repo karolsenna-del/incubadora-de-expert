@@ -21,8 +21,9 @@ Estes documentos foram redigidos por IA como **ponto de partida estruturado**, n
 ## Estrutura
 
 - **`00-termos-gerais-prestacao-servicos.md`** — Anexo I, cláusulas comuns a todos os contratos de mentoria abaixo (obrigações, propriedade intelectual, LGPD, cancelamento, foro). Todo contrato específico referencia este documento em vez de repetir as cláusulas.
-- **`01` a `06`** — um contrato por serviço de mentoria/consultoria (Método Express, Método VIP, Sprint do Método, Grupo, Individual, Diagnóstico Ferramentas). Cada um traz só o que muda: objeto, entregáveis, prazo e valor.
+- **`01` a `06`** — um contrato por serviço de mentoria/consultoria (Destrava Expert - Sessão única, Método VIP, Sprint do Método, Grupo, Individual, Diagnóstico Ferramentas). Cada um traz só o que muda: objeto, entregáveis, prazo e valor.
 - **`07-expert360-termos-de-compra.md`** — formato diferente dos demais: como o Expert360º é vendido por checkout automatizado (sem contato pessoal antes da compra), é um Termo de Compra e Licença de Uso, pensado pra ir na própria página de vendas/checkout com aceite por checkbox, não um contrato assinado nos dois lados.
+- **`09-incubadora-express.md`** — Incubadora Express (R$2.500, 6 meses, 5 sessões liberadas pela entrega). Garantia própria de 15 dias, que prevalece sobre os 7 dias da Cl. 9.1 dos Termos Gerais (decisão Karol, 18/10).
 - **`08-aditivo-continuacao-pos-sprint.md`** — aditivo pra quem já fez o Sprint do Método e quer continuar pro Grupo ou Individual, com o desconto acordado.
 
 ## Por que esse formato (1 base + 1 por serviço)

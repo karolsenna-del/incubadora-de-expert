@@ -21,13 +21,14 @@ Os contratos já estão prontos, formatados na identidade visual, em `business/j
 
 | Oferta fechada | Arquivo (`pdf/`) |
 |---|---|
-| Método Express | `01-metodo-express.pdf` |
+| Destrava Expert - Sessão única | `01-metodo-express.pdf` |
 | Método VIP | `02-metodo-vip.pdf` |
 | Sprint do Método | `03-sprint-do-metodo.pdf` |
 | Grupo (do zero) | `04-grupo.pdf` |
 | Individual (do zero) | `05-individual.pdf` |
 | Diagnóstico Ferramentas | `06-diagnostico-ferramentas.pdf` |
 | Continuação pós-Sprint (Grupo ou Individual) | `08-aditivo-continuacao-pos-sprint.pdf` |
+| Incubadora Express | `09-incubadora-express.pdf` |
 
 Expert360º **não usa este fluxo** — é o Termo de Compra (`07-expert360-termos-de-compra.pdf`), aceito por checkbox no próprio checkout, sem envio individual pra assinatura.
 

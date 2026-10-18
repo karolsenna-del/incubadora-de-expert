@@ -43,7 +43,7 @@ O worker **redige**. Quem envia, liga, grava áudio e mexe no CRM é a Karol.
 | Oferta | Preço | Pagamento | Formato | Quem constrói | Pra quem (frase da página) | Garantia | Página de vendas |
 |--------|-------|-----------|---------|---------------|----------------------------|----------|------------------|
 | Diagnóstico Ferramentas | R$97 (vira cashback se seguir pra construção) | Pix | Questionário + reunião | — | Já tem curso/mentoria rodando e aluno abandona no meio | conforme página | /diagnostico-ferramentas/ |
-| Método Express | R$300 | À vista no Pix ou 12x R$30 (Karol, 03/10) | 1 sessão de 1h | Você, com o plano da Karol | "Já sei boa parte do método e travei num ponto específico" | 100% se não ficar satisfeito | /metodo-express/ |
+| Destrava Expert - Sessão única | R$300 | À vista no Pix ou 12x R$30 (Karol, 03/10) | 1 sessão de 1h | Você, com o plano da Karol | "Já sei boa parte do método e travei num ponto específico" | 100% se não ficar satisfeito | /metodo-express/ |
 | Curso Expert360º | R$697 | À vista ou 12x R$69,70 | 5 módulos gravados + 6 agentes de IA, no seu ritmo | Você, com aulas e IA | "Tenho tempo, prefiro estudar sozinho e no meu ritmo" | 7 dias | /expert360/ |
 | Método VIP | R$1.500 | 3x R$500 no Pix | 3 encontros 1:1 gravados e transcritos | Você, com direção e correção da Karol | "Quero fazer eu mesmo, mas com direção e correção de rota" | 7 dias | /metodo-vip/ |
 | Sprint do Método | R$5.000 | À vista no Pix ou 12x R$500 | 8 semanas, serviço | A Karol constrói, você aprova | "Já tentei e não consegui: me falta tempo e clareza ao mesmo tempo" | 7 dias, antes da Semana 1 | /sprint-do-metodo/ |
@@ -105,7 +105,7 @@ Quando a conversa travar numa objeção e não houver bônus documentado (ou o d
 | Item | O que é | Quebra qual objeção | Onde existe |
 |------|---------|---------------------|-------------|
 | Sessão de Perfil do Expert | Sessão individual gratuita de diagnóstico de perfil | "Não sei se dou conta" · "Não sei por onde começar" · "Será que serve pra mim?" | Bônus oficial do Expert360º (03/10) |
-| Sessão do Método Express | 1 encontro de 1h focado num ponto travado dos 5Ps | "Tenho medo de comprar e ficar travado sozinho" (Expert360/VIP) | Oferta R$300 (em teste) |
+| Sessão do Destrava Expert - Sessão única | 1 encontro de 1h focado num ponto travado dos 5Ps | "Tenho medo de comprar e ficar travado sozinho" (Expert360/VIP) | Oferta R$300 (em teste) |
 | Moldes da Biblioteca de Templates | 10 moldes reaproveitáveis do Expert360 | "Não tenho tempo" · "Parece complicado" | Biblioteca pronta (22/09) |
 | Acesso a 1 dos 6 agentes do método | Custom GPT (Persona, Promessa, Processo Autoral, Portfólio, Proposta Validada, Autoridade Tríplice) | "Não sou bom com tecnologia" · "Tenho tudo na cabeça mas não sai do papel" | Já atendem alunos do Expert360 |
 | Desafio 5 Dias | Oficina de método do Grupo | "Preciso de um empurrão pra começar" | Oficina do Grupo (02/10) — confirmar turma disponível |
@@ -121,7 +121,7 @@ Os bônus que a Karol aprovar com frequência viram candidatos a bônus oficial 
 
 | Oferta | Garantia |
 |--------|----------|
-| Método Express | 100% do valor de volta se não ficar satisfeito com a sessão |
+| Destrava Expert - Sessão única | 100% do valor de volta se não ficar satisfeito com a sessão |
 | Curso Expert360º | 7 dias |
 | Método VIP | 7 dias |
 | Sprint do Método | **7 dias** corridos, incondicional, antes da Semana 1 (confirmado pela Karol 03/10). Depois que a construção começa: reembolso proporcional às semanas não entregues |
@@ -155,7 +155,7 @@ O worker checa a data de hoje antes de aplicar qualquer regra desta tabela.
 
 | Sinal na conversa/ficha | Oferta candidata |
 |--------------------------|------------------|
-| Trava pontual, sabe exatamente qual é o buraco, orçamento baixo | Método Express (avisar Karol: oferta em teste) |
+| Trava pontual, sabe exatamente qual é o buraco, orçamento baixo | Destrava Expert - Sessão única (avisar Karol: oferta em teste) |
 | Orçamento baixo, tem tempo, prefere estudar sozinho | Expert360º |
 | Quer fazer ele mesmo, mas precisa de direção e ajuste | Método VIP |
 | Já tentou e não conseguiu; não sabe nada de marketing/tecnologia; falta tempo E clareza; "faz pra mim" | Sprint do Método |
@@ -354,7 +354,7 @@ Não é regra "ticket alto = call": a Karol decidiu que **todas** as ofertas pod
 |-----|---------|------|
 | Arquivo único de produtos (Karol vai montar) | Bônus de Express/VIP/Sprint/Diagnóstico/Grupo pós-Black indefinidos | Trocar ponteiro de §0 quando existir |
 | Material "por dentro" (vídeos/tours) por oferta | Script 13 usa a página de vendas | Karol mapear |
-| Método Express nunca vendido | Pode faltar confiança na entrega | Avisar Karol a cada vez que for sugerido |
+| Destrava Expert - Sessão única nunca vendido | Pode faltar confiança na entrega | Avisar Karol a cada vez que for sugerido |
 | ~~Arsenal desatualizado~~ | — | Resolvido 03/10: Arsenal atualizado (Sprint 8 semanas/12x/7 dias, Grupo redesenhado + regra da live, continuações sem preço, Nanny removida, seção 4.1 de bônus) |
 | Agente do Método pro 1º da Black "a confirmar" | Não citar até a live | — |
 

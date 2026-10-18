@@ -267,6 +267,6 @@ Parabéns pela decisão!
 API, ou pelo menos um alerta pra Karol saber que precisa mandar). Este arquivo já fica pronto
 como fonte das mensagens por produto quando isso for construído.
 
-**Próximo passo combinado:** adaptar esse mesmo formato pros demais produtos (Método Express,
+**Próximo passo combinado:** adaptar esse mesmo formato pros demais produtos (Destrava Expert - Sessão única,
 Diagnóstico Ferramentas) — cada um entra numa seção nova aqui, mesma lógica: só o que muda de
 fato entre eles. (VIP, Expert360º e Grupo já feitos.)

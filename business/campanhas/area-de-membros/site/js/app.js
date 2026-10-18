@@ -484,7 +484,7 @@ function criarBlocoOferta(slug, materiaisProprios) {
 
   const titulo = document.createElement('div');
   titulo.className = 'fase-titulo';
-  titulo.textContent = oferta ? oferta.nome : slug;
+  titulo.textContent = oferta ? oferta.nome : (NOME_OFERTA_FORA_VITRINE[slug] || slug);
   fase.appendChild(titulo);
 
   const sub = document.createElement('div');
@@ -789,7 +789,7 @@ async function toggleAulaConcluida(modulo, idx) {
 function criarCardProduto(oferta, jaTem) {
   const card = document.createElement('a');
   card.className = 'produto-card-grande';
-  card.href = `${CONFIG.vendasBaseUrl}/${oferta.slug}/`;
+  card.href = oferta.link || `${CONFIG.vendasBaseUrl}/${oferta.slug}/`;
   card.target = '_blank';
   card.rel = 'noopener';
 

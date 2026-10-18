@@ -14,8 +14,22 @@ const TRILHA_POR_OFERTA = {
   'metodo-vip': ['consultorias'],
   'metodo-express': ['consultorias'],
   'sprint-do-metodo': ['consultorias'],
-  'diagnostico-ferramentas': ['consultorias']
+  'diagnostico-ferramentas': ['consultorias'],
+  'incubadora-express': ['expert360', 'consultorias']
 };
+
+// Prazo de acesso por oferta, em meses (decisão 17/10). Oferta fora daqui = vitalício (expira_em NULL).
+const MESES_DE_ACESSO = {
+  'incubadora-express': 6
+};
+
+function calcularExpiraEm(produtoSlug) {
+  const meses = MESES_DE_ACESSO[produtoSlug];
+  if (!meses) return null;
+  const data = new Date();
+  data.setMonth(data.getMonth() + meses);
+  return data.toISOString();
+}
 
 // IDs de produto na Voomp Creators (ver business/vault/supabase.md / gestor-infra-vault.md, missão #30)
 const PRODUTO_POR_ID = {
@@ -25,7 +39,8 @@ const PRODUTO_POR_ID = {
   16365: 'sprint-do-metodo',
   16366: 'grupo',
   16367: 'individual',
-  16368: 'diagnostico-ferramentas'
+  16368: 'diagnostico-ferramentas',
+  17442: 'incubadora-express'
 };
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
@@ -106,7 +121,7 @@ async function inserirMatricula(email, produtoSlug, trilhaId) {
       'Content-Type': 'application/json',
       Prefer: 'return=minimal'
     },
-    body: JSON.stringify({ email, produto_slug: produtoSlug, trilha_id: trilhaId, origem: 'voomp_webhook', ativo: true })
+    body: JSON.stringify({ email, produto_slug: produtoSlug, trilha_id: trilhaId, origem: 'voomp_webhook', ativo: true, expira_em: calcularExpiraEm(produtoSlug) })
   });
   if (!resp.ok) {
     const texto = await resp.text();
