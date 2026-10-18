@@ -434,18 +434,12 @@ main#stage{
     {id:"idade", section:0, type:"choice", required:true,
       label:"Qual sua idade?",
       options:["Até 25 anos","De 26 a 35 anos","De 36 a 45 anos","De 46 a 55 anos","Acima de 55 anos"]},
+    {id:"acompanha", section:0, type:"choice", required:true,
+      label:"Há quanto tempo você acompanha o trabalho da Karol?",
+      options:["Conheci agora","Menos de 3 meses","De 3 meses a 1 ano","Mais de 1 ano"]},
 
     {id:"instagram", section:1, type:"text", required:true,
       label:"Coloque o @ do seu Instagram", placeholder:"@seuusuario"},
-    {id:"seguidores", section:1, type:"choice", required:true,
-      label:"Quantos seguidores tem nessa rede social mais forte?",
-      options:["Até 5.000","De 5.000 a 10.000","De 10.001 a 30.000","De 30.001 a 100.000","De 100.001 a 1.000.000","Acima de 1.000.000","Ainda não tenho seguidores"]},
-    {id:"visualizacoes", section:1, type:"choice", required:true,
-      label:"Média de visualizações nos últimos 5 vídeos",
-      options:["Até 100","De 101 a 1000","De 1.001 a 5.000","Acima de 5.000","Ainda não tenho conteúdo"]},
-    {id:"comentarios", section:1, type:"choice", required:true,
-      label:"Quantidade de comentários nos últimos 5 vídeos",
-      options:["Até 10","De 101 a 1000","De 1.001 a 5.000","Acima de 5.000","Ainda não tenho conteúdo"]},
     {id:"tempo_especialista", section:1, type:"choice", required:true,
       label:"A quanto tempo você é especialista no que pretende lançar?",
       options:["Até 1 ano","De 1 a 3 anos","De 3 a 6 anos","Acima de 6 anos"]},
@@ -454,12 +448,12 @@ main#stage{
       label:"Dê uma visão geral do seu negócio"},
     {id:"historia_negocio", section:2, type:"textarea", required:true,
       label:"Qual a história por trás do seu negócio?"},
+    {id:"concorrentes", section:2, type:"textarea", required:true,
+      label:"Quem são seus principais concorrentes?"},
     {id:"faturamento", section:2, type:"choice", required:true,
-      label:"Qual é seu faturamento mensal?",
-      options:["Ainda nada","Até R$2000","De 2001 a R$5000","De 5001 a R$10.000","R$10.001 a R$20.000","Acima de R$20.000"]},
-    {id:"lista", section:2, type:"choice", required:true,
-      label:"Você possui lista de e-mails ou grupo de WhatsApp?",
-      options:["Apenas e-mail","Apenas WhatsApp","Tenho e-mail e whats","Não tenho nenhuma lista"]},
+      label:"Qual é a sua renda mensal hoje?",
+      help:"Some tudo o que você ganha com o seu trabalho: consultório, emprego, clientes, serviços. Não é só o que entra pelo digital.",
+      options:["Sem renda no momento","Até R$2000","De 2001 a R$5000","De 5001 a R$10.000","R$10.001 a R$20.000","Acima de R$20.000"]},
 
     {id:"perfil_cliente", section:3, type:"choice", required:true,
       label:"Você tem definido o perfil do seu cliente?",
@@ -473,6 +467,9 @@ main#stage{
 
     {id:"urgencia", section:4, type:"scale", required:true, min:1, max:10,
       label:"Numa escala de 1 a 10, qual sua urgência em resolver isso?"},
+    {id:"prazo", section:4, type:"choice", required:true,
+      label:"Você já tem um prazo em mente pra resolver isso?",
+      options:["Nos próximos 30 dias","Em até 3 meses","Em até 6 meses","Ainda não tenho prazo"]},
     {id:"dificuldade", section:4, type:"textarea", required:true,
       label:"Qual sua principal dificuldade?"},
     {id:"meta", section:4, type:"textarea", required:true,
@@ -480,7 +477,22 @@ main#stage{
     {id:"ja_tentou", section:4, type:"textarea", required:true,
       label:"O que você já tentou?"},
     {id:"resultado_esperado", section:4, type:"textarea", required:true,
-      label:"Qual resultado esperado dessa sessão?"}
+      label:"Qual resultado esperado dessa sessão?"},
+    {id:"decisao", section:4, type:"choice", required:true,
+      label:"Quem mais participa da decisão de investir no seu negócio?",
+      options:["Só eu decido","Decido junto com cônjuge/família","Decido junto com sócio(a)","Outra pessoa"]}
+  ];
+
+  // Ordem das colunas da planilha (independe da ordem na tela).
+  // Perguntas novas entram sempre no FIM, pra não desalinhar as colunas antigas.
+  // Pergunta removida continua aqui (vai em branco): seguidores/visualizacoes/comentarios/lista saíram em 18/10.
+  var SHEET_COLUMNS = [
+    "email","nome","celular","sexo","idade",
+    "instagram","seguidores","visualizacoes","comentarios","tempo_especialista",
+    "visao_geral","historia_negocio","faturamento","lista",
+    "perfil_cliente","promessa","provas",
+    "urgencia","dificuldade","meta","ja_tentou","resultado_esperado",
+    "acompanha","prazo","decisao","concorrentes"
   ];
 
   var steps = [{type:"intro"}];
@@ -876,7 +888,10 @@ main#stage{
     var mm = String(today.getMonth()+1).padStart(2,"0");
     var yyyy = today.getFullYear();
     var row = [dd + "/" + mm + "/" + yyyy];
-    QUESTIONS.forEach(function(q){ row.push(answerText(q)); });
+    SHEET_COLUMNS.forEach(function(id){
+      var q = QUESTIONS.filter(function(x){return x.id===id;})[0];
+      row.push(q ? answerText(q) : "");
+    });
     return row;
   }
 

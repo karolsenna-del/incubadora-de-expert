@@ -12,6 +12,20 @@ porque é um formulário diferente (leads do topo de funil, não clientes pagant
 > reimplantar** (Implantar → Gerenciar implantações → ✏️ na implantação ativa → Nova
 > versão → Implantar). Não precisa criar planilha nova nem mudar a URL.
 
+> **Atualização 2026-10-17 — perguntas de qualificação:** o formulário ganhou 3 perguntas
+> (há quanto tempo acompanha a Karol, prazo pra resolver, quem participa da decisão), com
+> base no carrossel do Alfredo Soares sobre qualificação de lead. Na tela elas aparecem no
+> meio, mas na planilha entram SEMPRE no fim (colunas X, Y, Z), porque a ordem das colunas
+> vem da lista `SHEET_COLUMNS` do `diagnostico/index.html`, não da ordem na tela. Pergunta
+> nova futura: acrescentar no fim de `SHEET_COLUMNS` e um cabeçalho novo no fim da linha 1.
+> Como a planilha já tem cabeçalho, o script não regrava a linha 1: os 3 títulos novos
+> precisam ser digitados à mão em X1, Y1 e Z1.
+>
+> **2026-10-18:** saíram as perguntas de seguidores, visualizações e comentários (não servem
+> pra persona atual), e também a de lista de e-mail/WhatsApp. As colunas H, I, J e O continuam
+> na planilha e passam a chegar em branco —
+> não apagar essas colunas, senão as respostas de depois delas desalinham.
+
 ---
 
 ## Passo 1 — Criar a planilha
@@ -38,7 +52,9 @@ function doPost(e) {
     "Faturamento Mensal","Lista de E-mail/WhatsApp",
     "Perfil do Cliente Definido","Promessa Transformadora","Provas de Resultados",
     "Urgência (1-10)","Principal Dificuldade","Meta/Desejo como Infoprodutor",
-    "O Que Já Tentou","Resultado Esperado da Sessão"
+    "O Que Já Tentou","Resultado Esperado da Sessão",
+    "Há Quanto Tempo Acompanha","Prazo pra Resolver","Quem Participa da Decisão",
+    "Principais Concorrentes"
   ];
 
   if (sheet.getLastRow() === 0) {
