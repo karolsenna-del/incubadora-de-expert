@@ -10,6 +10,12 @@
 - **De A para B:** sai de "tenho conhecimento, mas não sei se alguém paga" e chega a "fiz minhas primeiras vendas e meu produto está estruturado".
 - **Leads do teste:** a lead que mora fora e a colega da agência (retro, leads 2 e 7). O Vagner fica fora: recebe a continuação do Sprint por R$3.000.
 
+## Promessa e ritmo (Karol, 19/10 — sessão com o Clone Euriler)
+- **Promessa:** "Em 30 dias, o que você sabe vira um método com o seu nome e você faz a sua primeira Venda Secreta — numa conversa, sem lançamento, sem exposição amadora." (Karol, 19/10: "sem palco" trocado por "sem exposição amadora")
+- **Como os 30 dias entram:** meta de ritmo, não garantia. Escopo e contrato não mudam. Na S1 o aluno sai com a data da 1ª Venda Secreta marcada com alguém do rastreador dele (~dia 30); S2 e S3 acontecem antes dessa data.
+- **Por quê:** os alunos anteriores desistiam montando método e ferramentas e nunca chegavam na Venda Secreta. A data marcada com uma pessoa real é o que transforma um projeto paralelo em prioridade (caso Milena: Venda Secreta montada em 23/09, venda de R$2.500 em 30/09).
+- **Prova na sessão:** caso da Milena logo depois da história da Karol (Etapa 3 do roteiro).
+
 ## O que entra (Karol, 17/10)
 - **5 sessões individuais com a Karol, liberadas pela entrega do aluno:**
   1. S1 · Diagnóstico + Roteiro do Expert
@@ -31,7 +37,7 @@
 - **Checkout:** https://pay.voompcreators.com.br/17442 (produto Voomp #17442, em análise da Voomp em 17/10).
 - **Acesso:** a compra libera, na Área de Membros, o Expert360º e o checklist das 5 sessões, com validade de 6 meses. Os agentes do método são entregues por link na pasta do aluno, como hoje.
 - **Contrato:** `business/juridico/contratos/09-incubadora-express.md` (+ PDF em `pdf/`). **Garantia: 15 dias** corridos da confirmação da compra, devolução integral por qualquer motivo, mesmo com a S1 feita (Karol, 18/10). Falta trocar a garantia do produto #17442 na Voomp, que ainda está em 7 dias.
-- **Lacuna do M3:** a Karol grava as aulas A9 a A13 a tempo (17/10). O aluno que entrar agora chega na Validação lá pelo 2º ou 3º mês.
+- **Lacuna do M3:** a Karol grava as aulas A9 a A13 a tempo (17/10). O aluno que entrar agora chega na Validação lá pelo 2º ou 3º mês. **Atualizado 19/10:** com a promessa de 30 dias, a meta é chegar na 1ª Venda Secreta por volta do dia 30. As aulas A9 a A13 continuam com prazo de 31/10.
 - [aberto] Preço do Funil de Vendas Secretas avulso, se for ofertado depois.
 
 ## Log
@@ -41,3 +47,5 @@
 - 17/10 — @mentoring-creator: nome Incubadora Express; Karol grava o M3 a tempo; produto Voomp + acesso de 6 meses vão pro Gestor de Infra; Método Express renomeado pra Destrava Expert - Sessão única.
 - 17/10 — @gestor-infra: produto #17442 criado na Voomp (12x R$250 / pix / boleto), webhook ligado, acesso de 6 meses programado na Área de Membros (falta publicar). Renomeação feita na Voomp e em 37 arquivos.
 - 18/10 — @companion: contrato fechado com garantia de 15 dias (Karol); PDF regerado. Pendente: garantia na Voomp de 7 → 15 dias.
+- 19/10 — @companion: promessa de 30 dias + data da 1ª Venda Secreta marcada na S1 (Karol, após sessão com o Clone Euriler). Roteiro da Sessão de Vendas Secretas v4 atualizado (artifact WeV7CVV38uBV7YTjvDzmc4): só Sprint e Express, caso Milena na Etapa 3, ECROI enxuto, sem aula na sessão. Garantia de 15 dias na Voomp já conferida (missão 110 do Gestor de Infra).
+- 19/10 — @companion: "sem palco" vira "sem exposição amadora" na promessa (Karol). Apresentação da oferta criada: `apresentacao-oferta-express.html` (11 slides, mesmo visual da Individual). Decisão registrada no log-decisoes.
