@@ -1,0 +1,21 @@
+{
+  "object": "whatsapp_business_account",
+  "entry": [{
+    "id": "waba-123",
+    "changes": [{
+      "field": "smb_message_echoes",
+      "value": {
+        "messaging_product": "whatsapp",
+        "metadata": { "display_phone_number": "5567992324690", "phone_number_id": "phone-123" },
+        "message_echoes": [{
+          "from": "5567992324690",
+          "to": "5511987654321",
+          "id": "wamid.echo-1",
+          "timestamp": "1739321024",
+          "type": "text",
+          "text": { "body": "Resposta enviada pela Karol" }
+        }]
+      }
+    }]
+  }]
+}

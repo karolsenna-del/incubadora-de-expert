@@ -1,0 +1,23 @@
+{
+  "object": "whatsapp_business_account",
+  "entry": [{
+    "id": "waba-123",
+    "changes": [{
+      "field": "smb_app_state_sync",
+      "value": {
+        "messaging_product": "whatsapp",
+        "metadata": { "display_phone_number": "5567992324690", "phone_number_id": "phone-123" },
+        "state_sync": [{
+          "type": "contact",
+          "contact": {
+            "full_name": "Contato Sincronizado",
+            "first_name": "Contato",
+            "phone_number": "5511977700011"
+          },
+          "action": "add",
+          "metadata": { "timestamp": "1739321024" }
+        }]
+      }
+    }]
+  }]
+}
