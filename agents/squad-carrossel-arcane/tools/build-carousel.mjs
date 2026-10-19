@@ -56,7 +56,7 @@ const id = {
   sizeImg: parseInt(meta('text_size_image', '44'), 10),
   sizeTxt: parseInt(meta('text_size_textonly', '48'), 10),
 };
-const avatarSrc = path.join(tdir, 'avatar.png');
+const avatarSrc = [path.join(tdir, 'avatar.png'), path.join(tdir, 'assets', 'avatar.png')].find(p => fs.existsSync(p)) || path.join(tdir, 'avatar.png');
 const hasAvatar = fs.existsSync(avatarSrc);
 
 // ---------- build dir ----------
@@ -141,19 +141,86 @@ function html(slide, imgRef) {
 }
 
 // ---------- resolve Chrome ----------
+// Chrome headless (Windows) recorta a janela sem preencher o viewport inteiro —
+// sobra uma barra preta (~18px direita, ~96px embaixo) quando o slide não é fundo
+// preto. Validado empiricamente em 10/08/2026 (constante, não escala com o tamanho).
+// Fix: renderiza maior que o alvo e corta a sobra de volta pro tamanho exato via ffmpeg.
+const WIN_BORDER_X = 18;
+const WIN_BORDER_Y = 96;
+
+function findFFmpeg() {
+  const candidates = ['ffmpeg', 'ffmpeg.exe'];
+  const winget = path.join(HOME, 'AppData/Local/Microsoft/WinGet/Packages');
+  if (fs.existsSync(winget)) {
+    for (const pkg of fs.readdirSync(winget)) {
+      if (!pkg.toLowerCase().includes('ffmpeg')) continue;
+      const pkgDir = path.join(winget, pkg);
+      const stack = [pkgDir];
+      while (stack.length) {
+        const dir = stack.pop();
+        for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+          const p = path.join(dir, entry.name);
+          if (entry.isDirectory()) stack.push(p);
+          else if (entry.name.toLowerCase() === 'ffmpeg.exe') candidates.push(p);
+        }
+      }
+    }
+  }
+  for (const c of candidates) {
+    try { execFileSync(c, ['-version'], { stdio: 'ignore' }); return c; } catch (e) { /* tenta próximo */ }
+  }
+  return null;
+}
+const FFMPEG = findFFmpeg();
+
+function screenshot(chromeArgsExtra, htmlPath, finalOutPath, w, h) {
+  if (!FFMPEG) {
+    execFileSync(CHROME, [
+      '--headless', '--disable-gpu', '--hide-scrollbars', '--no-sandbox',
+      `--window-size=${w},${h}`, '--virtual-time-budget=6000',
+      `--screenshot=${finalOutPath}`, ...chromeArgsExtra, `file://${htmlPath}`,
+    ], { stdio: 'ignore' });
+    return;
+  }
+  const rawPath = finalOutPath.replace(/\.png$/, '.raw.png');
+  execFileSync(CHROME, [
+    '--headless', '--disable-gpu', '--hide-scrollbars', '--no-sandbox',
+    `--window-size=${w + WIN_BORDER_X},${h + WIN_BORDER_Y}`, '--virtual-time-budget=6000',
+    `--screenshot=${rawPath}`, ...chromeArgsExtra, `file://${htmlPath}`,
+  ], { stdio: 'ignore' });
+  execFileSync(FFMPEG, ['-y', '-i', rawPath, '-vf', `crop=${w}:${h}:0:0`, finalOutPath], { stdio: 'ignore' });
+  fs.rmSync(rawPath, { force: true });
+}
+
 function findChrome() {
   const candidates = [];
-  const pw = path.join(HOME, 'Library/Caches/ms-playwright');
-  if (fs.existsSync(pw)) {
-    for (const d of fs.readdirSync(pw)) {
-      const p = path.join(pw, d, 'Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing');
+  const pwMac = path.join(HOME, 'Library/Caches/ms-playwright');
+  if (fs.existsSync(pwMac)) {
+    for (const d of fs.readdirSync(pwMac)) {
+      const p = path.join(pwMac, d, 'Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing');
       if (fs.existsSync(p)) candidates.push(p);
-      const p2 = path.join(pw, d, 'chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing');
+      const p2 = path.join(pwMac, d, 'chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing');
       if (fs.existsSync(p2)) candidates.push(p2);
     }
   }
   candidates.push('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome');
   candidates.push('/Applications/Chromium.app/Contents/MacOS/Chromium');
+
+  const pwWin = path.join(HOME, 'AppData/Local/ms-playwright');
+  if (fs.existsSync(pwWin)) {
+    for (const d of fs.readdirSync(pwWin)) {
+      if (!d.startsWith('chromium-')) continue;
+      const p = path.join(pwWin, d, 'chrome-win64', 'chrome.exe');
+      if (fs.existsSync(p)) candidates.push(p);
+      const p32 = path.join(pwWin, d, 'chrome-win', 'chrome.exe');
+      if (fs.existsSync(p32)) candidates.push(p32);
+    }
+  }
+  candidates.push('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe');
+  candidates.push('C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe');
+
+  candidates.push('/usr/bin/google-chrome', '/usr/bin/chromium-browser', '/usr/bin/chromium');
+
   return candidates.find(c => fs.existsSync(c));
 }
 const CHROME = findChrome();
@@ -175,12 +242,7 @@ cfg.slides.forEach((slide, i) => {
   }
   if (!imgRef) textOnly++;
   fs.writeFileSync(path.join(buildDir, `slide-${nn}.html`), html(slide, imgRef), 'utf8');
-  execFileSync(CHROME, [
-    '--headless', '--disable-gpu', '--hide-scrollbars',
-    '--window-size=1080,1350', '--virtual-time-budget=6000',
-    `--screenshot=${path.join(outDir, `slide-${nn}.png`)}`,
-    `file://${path.join(buildDir, `slide-${nn}.html`)}`,
-  ], { stdio: 'ignore' });
+  screenshot([], path.join(buildDir, `slide-${nn}.html`), path.join(outDir, `slide-${nn}.png`), 1080, 1350);
 });
 
 const total = fs.readdirSync(outDir).filter(f => /^slide-\d+\.png$/.test(f)).length;

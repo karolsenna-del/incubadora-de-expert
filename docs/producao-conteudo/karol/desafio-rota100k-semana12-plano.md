@@ -120,7 +120,7 @@ Eu já estava num emprego público quando estudava pra esse concurso. Era o meu 
 Se o seu plano de fuga também é outro concurso, vale perguntar: você quer outro cargo ou outra vida?
 Me segue.
 
-*(História #14. Fatos da Karol: 10h/dia, 3º no simulado, 6 questões anuladas, 90º de 7 mil, "6 por meia dúzia". ⚠️ Confirmar se o salário do ISS pode aparecer como "R$20 mil" no gancho (o arquivo diz "na faixa de R$20k").)*
+*(História #14. Fatos da Karol: 10h/dia, 3º no simulado, 6 questões anuladas, 90º de 7 mil, "6 por meia dúzia". Salário liberado pela Karol em 18/10.)*
 
 ### 15h · Reels TESTE · [11 Contraste + 34 Demonstração]
 **Disputa (0-3s, tela igual):** "Gancho de método x gancho de vida. Mesmo perfil, mesma semana."
@@ -151,12 +151,13 @@ Me segue.
 
 ### 20h · Carrossel neutro · [24 Comparação de métodos]
 **Tema:** "Lançamento x conteúdo x conversa 1:1: o comparativo honesto pra primeira venda."
-1. **Capa:** "Três jeitos de fazer a primeira venda no digital. Um slide por critério. Escolhe o seu."
-2. **Critério 1 — Exposição:** O lançamento te coloca na frente de todo mundo de uma vez: página, aula, contagem regressiva. O conteúdo expõe aos poucos, todo dia. A conversa 1:1 expõe pra uma pessoa por vez. Pra quem tem medo de se queimar, a diferença é enorme.
-3. **Critério 2 — Quanto custa:** Lançamento pede página, anúncio e às vezes equipe. Conteúdo pede tempo, todo dia, por meses. Conversa pede uma lista de contatos e uma hora livre. Eu já paguei os três preços.
-4. **Critério 3 — Tempo até a primeira venda:** O lançamento tem data, mas não garante venda. O conteúdo demora porque depende de audiência. A conversa pode render venda na mesma semana: numa tarde sem internet eu falei com 14 pessoas e saiu uma venda.
-5. **Critério 4 — O que você aprende:** No lançamento você descobre o resultado no fim, tudo de uma vez. Na conversa você ouve a objeção na hora e ajusta preço, oferta e jeito de falar na próxima.
-6. **Veredito:** Pra primeira venda, conversa. Conteúdo vem junto, pra quem te conhece confirmar quem você é. Lançamento faz sentido depois, quando você já sabe o que vende e pra quem.
+1. **Capa:** "3" grande em laranja + "jeitos de fazer a primeira venda." (sem repetir o 3 no texto)
+*(Layout 18/10, pedido da Karol: cada critério em 3 blocos separados, LANÇAMENTO / CONTEÚDO / CONVERSA, rótulo em tarja e linha entre eles; a conversa em laranja.)*
+2. **Exposição.** Lançamento: te coloca na frente de todo mundo de uma vez: página, aula, contagem regressiva. Conteúdo: expõe aos poucos, todo dia. Conversa: expõe pra uma pessoa por vez. Fecho: pra quem tem medo de se queimar, a diferença é enorme.
+3. **Quanto custa.** Lançamento: página, anúncio e às vezes equipe. Conteúdo: tempo, todo dia, por meses. Conversa: uma lista de contatos e uma hora livre. Fecho: eu já paguei os três preços.
+4. **Tempo até a primeira venda.** Lançamento: tem data, mas não garante venda. Conteúdo: demora, porque depende de audiência. Conversa: pode render venda na mesma semana. Numa tarde sem internet eu falei com 14 pessoas e saiu uma venda.
+5. **O que você aprende.** Lançamento: você descobre o resultado no fim, tudo de uma vez. Conteúdo: você vê o que as pessoas curtem e salvam, mas não ouve por que elas não compraram. *(linha nova: a copy original não tinha o conteúdo neste critério)* Conversa: você ouve a objeção na hora e ajusta preço, oferta e jeito de falar na próxima.
+6. **Matriz "Os 3 jeitos lado a lado"** (pedido da Karol, 18/10). Linhas = critérios, colunas = lançamento / conteúdo / conversa. Exposição: alta / média / baixa. Custo: alto / médio / baixo. Tempo até a 1ª venda: médio / longo / curto. Aprendizado: pouco / médio / muito. Coluna da conversa em laranja ("o melhor pra quem está começando"). Embaixo: "Veredito: conversa primeiro, conteúdo junto, lançamento depois, quando você já sabe o que vende e pra quem."
 7. **CTA:** "Salva antes de decidir como começar. Manda pra quem está montando lançamento sem nunca ter vendido."
 
 **Legenda:**
@@ -235,7 +236,7 @@ Me segue.
 
 ### 20h · Carrossel neutro · [41 Feature → benefício, adaptado]
 **Tema:** "Começando no digital: vale x não vale gastar. A lista honesta."
-1. **Capa:** "Vale x não vale gastar no começo do seu negócio de conhecimento. Um item por slide, com o veredito."
+1. **Capa:** "5" grande em laranja + "gastos no começo do seu negócio. Vale ou não vale?" (18/10: a capa anterior ficou confusa)
 2. **Logo e identidade visual — NÃO VALE (ainda).** Ninguém compra de você por causa da logo no começo. Compra porque confia em você. Deixa a identidade pra quando já tiver cliente e souber qual imagem passa a confiança certa.
 3. **Página de vendas antes da primeira venda — NÃO VALE.** Você ainda não sabe as palavras que o seu cliente usa. A página escrita depois de 10 conversas vende muito mais que a escrita no escuro.
 4. **Tráfego pago pra oferta não testada — NÃO VALE.** O anúncio só acelera o que já funciona. Se a oferta não converte numa conversa, não vai converter num anúncio. Você paga pra descobrir mais caro.
@@ -261,12 +262,12 @@ Me segue.
 **Legenda:**
 Eu estava de férias quando a minha chefe ligou: a gente ia ser exonerada.
 Treze anos de empresa pública. Eu estava no auge, como assessora, e reclamava de estar lá havia oito.
-Bateu um desespero rápido. E logo depois, um sentimento estranho: tinha chegado a minha hora.
+Bateu um desespero rápido. E logo depois, um sentimento estranho: tinha chegado a minha hora. Fui exonerada do cargo e, em seguida, pedi demissão.
 Às vezes a vida decide por você o que você já devia ter decidido sozinha.
 Se você está esperando um empurrão pra sair, talvez valha começar a se preparar antes que ele chegue.
 Me segue que hoje às 15h tem teste.
 
-*(Histórias #13 e #9. ⚠️ Confirmar com a Karol o termo: a exoneração era do cargo de assessora (comissionado)? A legenda usa as palavras dela, "a gente ia ser exonerada", sem detalhar.)*
+*(Histórias #13 e #9. Confirmado pela Karol em 18/10: foi exonerada do cargo de assessora e, em seguida, pediu demissão da empresa.)*
 
 ### 09h · Reels YAP · [16 Urgência de contexto + 19 Zeitgeist]
 **Opinião:** a renda extra mais comum não é a melhor.
@@ -314,14 +315,14 @@ Me segue.
 *(Fecha o arco de quarta: 09h mostra que a renda extra mais comum não usa o que você estudou (Serasa) → 17h ensina a não cair na promessa fácil → 20h mostra que o produto já está no que você faz de graça. Dado dos "seis em cada dez": Serasa/Opinion Box, `temas-do-momento.md` de 17/10.)*
 
 ### 20h · Carrossel neutro · [13 Diagnóstico] — **NOVO NA v2**
-**Tema:** "5 sinais de que você já tem um produto e ainda chama de favor." Comparativo **favor x produto** em cada slide (mantém a regra da Aria: carrossel com motivo pra salvar).
-1. **Capa:** "Você já tem um produto. Só ainda chama de favor. 5 sinais pra conferir agora."
-2. **Sinal 1 — Te pedem conselho de graça o tempo todo.** No intervalo do trabalho, no grupo da família, no áudio de cinco minutos. Como favor, você responde e esquece. Como produto, você percebe que é sempre o mesmo tipo de pergunta, e que é isso que as pessoas pagariam pra resolver de vez.
-3. **Sinal 2 — Você explica a mesma coisa toda semana, pra gente diferente.** Como favor, você começa do zero toda vez. Como produto, você escreve a explicação uma vez, na ordem certa, e ela vira o primeiro passo do seu método.
-4. **Sinal 3 — Você ouve a mesma reclamação e já sabe o que fazer.** Como favor, você dá a dica e a pessoa some. Como produto, você organiza o caminho do problema até a solução em etapas que outra pessoa consegue seguir sem você do lado.
-5. **Sinal 4 — Quem você ajudou volta perguntando o que mais você faz.** Como favor, você diz "nada, foi só uma ajuda". Como produto, você entende que essa pergunta é o pedido de compra mais claro que existe, e tem uma resposta com nome e preço.
-6. **Sinal 5 — Te indicam como "a pessoa que entende disso".** Como favor, você fica sem graça. Como produto, você percebe que os outros já fizeram o seu posicionamento. Só falta você assumir.
-7. **CTA:** "Marcou três ou mais? O produto já existe. O próximo passo é uma conversa, não mais um curso. Salva e manda pra quem vive fazendo favor."
+**Tema:** "5 sinais de que você já tem um produto e ainda chama de favor." Comparativo **favor x método** (18/10: era "produto"; trocado pra bater com a capa) em cada slide (mantém a regra da Aria: carrossel com motivo pra salvar).
+1. **Capa:** "5" grande em laranja + "sinais que você já tem um método." (texto da Karol, 18/10)
+2. **Sinal 1 — Te pedem conselho de graça o tempo todo.** No intervalo do trabalho, no grupo da família, no áudio de cinco minutos. Como favor, você responde e esquece. Como método, você percebe que é sempre o mesmo tipo de pergunta, e que é isso que as pessoas pagariam pra resolver de vez.
+3. **Sinal 2 — Você explica a mesma coisa toda semana, pra gente diferente.** Como favor, você começa do zero toda vez. Como método, você escreve a explicação uma vez, na ordem certa, e ela vira o primeiro passo dele.
+4. **Sinal 3 — Você ouve a mesma reclamação e já sabe o que fazer.** Como favor, você dá a dica e a pessoa some. Como método, você organiza o caminho do problema até a solução em etapas que outra pessoa consegue seguir sem você do lado.
+5. **Sinal 4 — Quem você ajudou volta perguntando o que mais você faz.** Como favor, você diz "nada, foi só uma ajuda". Como método, você entende que essa pergunta é o pedido de compra mais claro que existe, e tem uma resposta com nome e preço.
+6. **Sinal 5 — Te indicam como "a pessoa que entende disso".** Como favor, você fica sem graça. Como método, você percebe que os outros já fizeram o seu posicionamento. Só falta você assumir.
+7. **CTA:** "Marcou três ou mais? O método já existe. O próximo passo é uma conversa, não mais um curso. Salva e manda pra quem vive fazendo favor."
 
 **Legenda:**
 Favor ninguém valoriza. Nem você.
@@ -402,17 +403,17 @@ Me segue.
 *(Origem das Vendas Secretas e "testando preço, oferta, método, treinando pitch em cada sessão": história #21. "Lançamento pra 1 pessoa" é a analogia liberada na memória da squad.)*
 
 ### 15h · Reels TESTE · [11 Contraste + 73 Chamada ao avatar]
-**Disputa (0-3s, tela igual):** "Big four, empresa pública ou negócio próprio. Um critério só."
+**Disputa (0-3s, tela igual):** "Auditoria, empresa pública ou negócio próprio. Um critério só."
 **Critério:** "Quem decide quanto vale a minha hora."
 **Palpite:** "Comenta qual você acha que ganha."
-**O teste:** "Eu vivi os três. Na auditoria de big four, quem decidia era a firma. Na empresa pública, 13 anos, quem decidia era o plano de cargos e a diretoria. Eu fazia o melhor trabalho e via outro ganhar o cargo. No meu negócio, quem decide sou eu, inclusive quando o mês é ruim."
+**O teste:** "Eu vivi os três. Na auditoria, quem decidia era a firma. Na empresa pública, 13 anos, quem decidia era o plano de cargos e a diretoria. Eu fazia o melhor trabalho e via outro ganhar o cargo. No meu negócio, quem decide sou eu, inclusive quando o mês é ruim."
 **Veredito + pra quem:** "No meu critério, o negócio próprio ganha. O emprego ainda faz sentido pra quem quer previsibilidade e está em paz com outra pessoa decidindo. O problema é não estar em paz e continuar lá."
 **Fecha:** "Me segue."
 **Legenda:**
 Hoje, quem decide quanto vale a sua hora? Comenta: você, a empresa ou o plano de cargos.
 Me segue que amanhã tem teste de mesário.
 
-*(Big four: #21 ("auditora contábil em uma big four"). Empresa pública e o sentimento de injustiça: #9, #11, #12, #22. ⚠️ Confirmar se a Karol quer falar "big four" ou só "auditoria".)*
+*(Auditoria: #21. Empresa pública e o sentimento de injustiça: #9, #11, #12, #22. Karol escolheu "auditoria" em vez de "big four" (18/10): mais fácil de entender.)*
 
 ### 17h · Reels YAP · prático · [76 Desafio]
 **Como testar você mesmo, sem sair do emprego.**
@@ -541,7 +542,7 @@ Me segue.
 
 ### 20h · Carrossel neutro · [13 Diagnóstico]
 **Tema:** "Ficar, sair ou testar em paralelo: qual escolher em cada caso."
-1. **Capa:** "Ficar no emprego, sair ou testar em paralelo? Acha o seu caso e vê a recomendação."
+1. **Capa:** "5" grande em laranja + "casos: ficar no emprego, sair ou testar em paralelo?" (simplificada 18/10)
 2. **Caso 1 — Ninguém nunca te pagou fora do emprego.** Recomendação: fica e testa em paralelo. Você ainda não sabe se a sua ideia vende, e o salário é o que banca essa descoberta. Começa por três conversas com quem tem o problema que você resolve.
 3. **Caso 2 — Já vende de vez em quando, sem constância.** Recomendação: cria rotina antes de pensar em sair. Um horário fixo por dia pra conversar com quem pode comprar. Eu saí de R$1.500 pra R$10 mil num mês só fixando a hora.
 4. **Caso 3 — O negócio já paga parte da sua renda.** Recomendação: planeja a saída com data e número. Quanto o negócio precisa faturar por três meses seguidos pra você sair tranquilo? Escreve esse número.
@@ -572,7 +573,7 @@ Saí em 2024. Teve mês difícil no meu negócio, e eu não volto.
 Não estou dizendo que você deve fazer igual. Estou dizendo que salário alto não paga domingo à noite triste.
 Comenta a sua escolha. Me segue.
 
-*(Histórias #9 e #1 (domingo triste). ⚠️ "Teve mês difícil" é resumo honesto de agosto/2026 (R$1.500, #19). Confirmar se a Karol topa expor o salário de assessora.)*
+*(Histórias #9 e #1 (domingo triste). ⚠️ "Teve mês difícil" é resumo honesto de agosto/2026 (R$1.500, #19). Salário de assessora liberado pela Karol em 18/10.)*
 
 ### 09h · Reels YAP · react de filme · [10 Contra-intuitivo] — **NOVO NA v2 · FILME**
 **Tese (frase obrigatória):** **"Narrativa vende mais que método."** É a tese da Karol e a da advogada do filme.
@@ -604,7 +605,7 @@ O primeiro lançamento pode vender a espera, não o produto.
 Você já viu alguém lançar bem uma vez e sumir? Comenta.
 Me segue.
 
-*(História #21: expert de doula/fisio pélvica, 170 mil, "demanda reprimida". Sem nome dela. ⚠️ Confirmar se a Karol quer falar dessa parceria em público.)*
+*(História #21: expert de doula/fisio pélvica, 170 mil, "demanda reprimida". Sem nome dela. Parceria liberada pela Karol em 18/10, sem citar o nome.)*
 
 ### 15h · Reels TESTE · [7 Mito + 19 Zeitgeist]
 **Disputa (0-3s, tela igual):** "Mito: passar num concurso melhor resolve. Vamos testar."
@@ -650,11 +651,12 @@ Me segue.
 
 ### 20h · Carrossel neutro · [7 Mito / crença falsa]
 **Tema:** "5 mitos de quem quer sair do concurso, testados na minha vida."
-1. **Capa:** "5 mitos de quem quer sair do concurso. Testei os cinco. Verdadeiro ou falso, com o resultado de cada um."
+1. **Capa:** "5" grande em laranja + "mitos de quem quer sair do concurso." (simplificada 18/10)
 2. **Mito 1 — "Estabilidade traz paz." FALSO pra mim.** Eu ganhava quase R$20 mil, tinha cargo e prestígio, e reclamava havia oito anos. Estabilidade paga as contas. Não paga domingo à noite triste.
 3. **Mito 2 — "Um concurso melhor resolve." FALSO.** Estudei quatro anos pra Receita Federal e percebi que ia levar o ponto e a politicagem junto. Mudava o salário, não o sistema.
-4. **Mito 3 — "Precisa de muito seguidor pra vender." FALSO.** Com menos de 7 mil seguidores eu faturei R$10 mil em setembro. As vendas vieram de conversa, não de post.
-5. **Mito 4 — "Precisa lançar pra vender." FALSO pra quem está começando.** Eu fiz oito lançamentos que não deram certo. Hoje a primeira venda dos meus alunos vem de uma conversa, sem exposição.
+4. **Mito 3 — "Sair é jogar fora tudo o que eu construí." FALSO.** Foram 15 anos entre auditoria, planejamento e gestão, 13 deles no serviço público, onde eu ainda dava cursos internos de gestão. Nada disso ficou pra trás: virou o meu método. O olho de auditora que eu treinei lá dentro é o que eu uso hoje pra organizar o conhecimento dos meus alunos.
+5. **Mito 4 — "Com filho pequeno, não dá pra mudar de vida." FALSO pra mim.** Eu saí com uma filha de 1 ano, contra o que a minha família esperava. O medo não sumiu. Só parou de decidir por mim.
+*(18/10: mitos 3 e 4 trocados a pedido da Karol, os antigos (seguidores e lançamento) fugiam do tema de sair do concurso. Fonte: `minha-historia-real.md` (15 anos de carreira, 13 no serviço público, cursos internos, saída com a filha de 1 ano — corrigido pela Karol em 18/10, o arquivo dizia "recém-nascida" — contra a expectativa da família).)*
 6. **Mito 5 — "Tem que largar o emprego pra começar." FALSO.** Dá pra testar em paralelo, com o salário garantido. A conversa sobre sair fica pra quando o negócio pagar o seu dia.
 7. **CTA:** "Se você acreditava em pelo menos dois, bem-vindo ao clube. Salva e manda pra quem ainda repete isso."
 
@@ -694,12 +696,18 @@ Seis testes, um padrão: ganha quem conversa com gente de verdade.
 Qual teste te surpreendeu mais? Comenta.
 Me segue.
 
-### 12h · Reels YAP · bastidor · [76 Desafio] — ⚠️ PRECISA DA KAROL
-**O que eu vou testar no próximo mês.**
-**Abertura (0-3s):** "Já separei o que eu vou testar em novembro. E aceito sugestão."
-**Contexto + virada:** ⚠️ **Falta o fato:** o que a Karol vai testar em novembro (preço, oferta, formato, horário de prospecção, algo do Expert360º?). A squad não preenche. Assim que ela disser, o Rico fecha.
-**Fecha (CTA falado):** "Comenta o que você quer que eu coloque à prova."
-**Legenda:** (fecha junto com o roteiro)
+### 12h · Reels YAP · bastidor · [76 Desafio] — **FECHADO EM 18/10**
+**O meu próximo teste.**
+**Abertura (0-3s):** "Eu já sei qual é o meu próximo teste. E ele começa ainda esse mês."
+**Contexto:** Eu vendo em conversa. Uma pessoa por vez, sem lançamento. E o meu gargalo nunca foi fechar: é ter gente suficiente pra conversar.
+**Virada:** Só que eu não vou esperar o Instagram me trazer essas pessoas. Montei um garimpador de leads: uma ferramenta que procura no Instagram quem tem o perfil de quem eu atendo e me entrega uma lista pra eu revisar e convidar pra uma conversa. O teste é simples: isso enche a minha agenda de conversas? Se encher, eu penso em vender a ferramenta, ou a lista de leads pronta, pra quem vende do mesmo jeito que eu.
+**Fecha (CTA falado):** "Comenta: você usaria uma lista de leads pronta ou prefere garimpar sozinho? Me segue que eu conto o resultado."
+**Legenda:**
+O post não me traz cliente. A conversa traz. Então o meu próximo teste é aumentar o número de conversas.
+Você usaria uma lista de leads pronta ou prefere garimpar sozinho? Comenta.
+Me segue.
+
+*(Fato da Karol (18/10): o próximo teste, ainda em outubro, é o garimpador de leads pra trazer gente pro funil de Vendas Secretas; ela pretende vender a ferramenta ou listas de leads. Como funciona: `agents/garimpeiro-leads-instagram/README.md` (busca no Instagram, tira quem já está no CRM, entrega lista classificada pra revisão dela). "Gargalo é falta de gente": log-decisoes 18/10. A pergunta da legenda valida a demanda da ferramenta antes de construir a oferta. Retenção: #3 (antecipação na abertura) + #19 bola de cristal ("se encher, eu penso em vender").)*
 
 ### 15h · Reels TESTE · [43 Especificidade]
 **O resumo dos resultados.**
@@ -726,13 +734,15 @@ Me segue.
 
 ### 20h · Carrossel neutro · [43 Especificidade]
 **Tema:** "Todos os testes da semana, com o veredito."
-1. **Capa:** "Seis testes, seis vereditos. Os resultados num post só. Se você perdeu algum dia, está tudo aqui."
-2. **Gancho de método x gancho de vida.** Na minha conta, frase de método segurou de 32 a 46 pessoas em cada 100. Uma cena da vida segurou 83. Veredito: abre com a vida, guarda o método pro meio.
-3. **Com rotina x sem rotina.** Mesmo método. Sem horário fixo pra vender: R$1.500 no mês. Com uma conversa por dia às 14h: R$10 mil. Veredito: rotina antes de melhorar o método.
-4. **R$60 mil x uma tarde de conversa.** Mentoria + lançamento copiado: zero vendas. Tarde sem internet: 14 conversas, 6 sessões, 1 venda. Veredito: pra primeira venda, conversa.
-5. **Quem decide quanto vale a minha hora.** Big four, empresa pública e negócio próprio. Só no último a régua é minha. Veredito: o emprego serve pra quem está em paz com outra pessoa decidindo.
-6. **Mesário CLT x PJ e o mito do concurso melhor.** Seis dias de folga contra zero: PJ só compensa quando o negócio já paga o seu dia. E concurso melhor muda o salário, não o sistema. Veredito: começa a construir antes de sair.
-7. **CTA:** "Salva: é o resumo que vale o ano. Manda pra quem vai decidir se sai do emprego em 2027."
+1. **Capa:** "6" grande em laranja + "testes da semana, com o veredito de cada um." (simplificada 18/10)
+*(Refeito 18/10 a pedido da Karol: a versão anterior, com 5 slides corridos, ficou confusa. Agora são 8 slides: capa + 1 teste das 15h por slide + CTA. Cada slide traz o dia (tarja), a disputa (título) e 3 blocos: O QUE EU MEDI / RESULTADO / VEREDITO.)*
+2. **SEGUNDA · Gancho de método x gancho de vida.** Medi: de cada 100 pessoas, quantas passaram dos 3 primeiros segundos. Resultado: frase de método de 32 a 46, cena da vida 83. Veredito: abre com a vida; o método funciona no meio do vídeo, quando a pessoa já ficou.
+3. **TERÇA · Com rotina x sem rotina.** Medi: faturamento do mês, mesmo método. Resultado: sem horário fixo R$1.500; com uma conversa por dia às 14h, R$10 mil. Veredito: rotina antes de melhorar o método.
+4. **QUARTA · Mentoria de R$50 mil x uma tarde de conversas.** Medi: quanto cada um vendeu. Resultado: mentoria + R$10 mil num lançamento copiado, zero vendas; tarde sem internet, 14 conversas, 6 sessões, 1 venda. Veredito: pra primeira venda, conversa; mentoria cara compensa quando você já sabe o que vende.
+5. **QUINTA · Auditoria, empresa pública ou negócio próprio.** Medi: quem decide quanto vale a minha hora. Resultado: auditoria, a firma; empresa pública, o plano de cargos e a diretoria; meu negócio, eu. Veredito: negócio próprio; o emprego serve pra quem está em paz com outra pessoa decidindo.
+6. **SEXTA · Mesário CLT x mesário PJ.** Medi: dias livres depois da eleição. Resultado: CLT até 6 dias de folga nos dois turnos; PJ nenhum. Veredito: PJ só compensa quando o negócio já paga o seu dia; começa a construir antes de sair.
+7. **SÁBADO · "Passar num concurso melhor resolve".** Medi: se o que me sufocava ia embora. Resultado: na Receita ia ter ponto, politicagem e cargo por indicação; mudava o salário, o resto ficava. Veredito: mito derrubado; resolve o salário, não o sistema.
+8. **CTA:** "Salva: é o resumo que vale o ano. Manda pra quem vai decidir se sai do emprego em 2027."
 
 **Legenda:**
 Todos os testes da semana, com o veredito de cada um.
@@ -745,15 +755,17 @@ Me segue.
 
 1. ~~**Folgas de mesário**~~ ✅ 18/10: confere. 2 dias por turno (art. 98 da Lei 9.504/97) + 2 pelo treinamento (Res. TSE 23.751/2026) = até 6 nos dois turnos, sem desconto. Várias reportagens citando a lei e a resolução (Diário do Nordeste, A Crítica, InvestNews); a íntegra da resolução não foi aberta. O texto da sexta 15h e do domingo 07h fica como está.
 2. ~~**6x1**~~ ✅ 18/10: promulgada em 16/10. Terça 09h já ajustada ("Agora é lei").
-3. **Salário do ISS** (segunda 12h) e **salário de assessora** (sábado 07h): a Karol topa expor os números?
-4. **Exoneração por telefone** (quarta 07h): confirmar o termo (exoneração do cargo de assessora?).
-5. **Big four** (quinta 15h): falar o termo ou só "auditoria"?
-6. **Parceria com a expert de 170 mil** (sábado 12h): ok falar em público? *(A parte da agência saiu junto com o antigo 09h de quinta.)*
-7. **Domingo 12h:** o que a Karol vai testar em novembro.
-8. **Terça 15h:** repetir os números de agosto/setembro em formato teste ou trocar pelo teste "anúncio na abertura x opinião".
-9. **Sexta 20h, caso 5:** manter ou tirar (encosta em saúde mental).
-10. ~~**Filme (sábado 09h):** conferir a cena~~ ✅ 18/10: a fala está na transcrição (começo do filme, ligação durante a corrida). Falta só a Karol capturar o trecho no Prime Video (não está no Yarn nem no PlayPhrase).
+3. ~~**Salários**~~ ✅ 18/10: liberados (ISS e assessora).
+4. ~~**Exoneração**~~ ✅ 18/10: exonerada do cargo de assessora e, em seguida, pediu demissão. Legenda de quarta 07h ajustada.
+5. ~~**Big four**~~ ✅ 18/10: vira "auditoria" (quinta 15h e carrossel de domingo).
+6. ~~**Parceria com a expert de 170 mil**~~ ✅ 18/10: liberada, sem citar o nome.
+7. ~~**Domingo 12h**~~ ✅ 18/10: próximo teste = garimpador de leads (ainda em outubro). Roteiro fechado.
+8. **Terça 15h:** a Karol ainda vai ver. Padrão, se ela não mexer: **mantém** "com rotina x sem rotina" (R$1.500 x R$10 mil), porque o carrossel de sexta (caso 2) e os resumos de domingo usam os mesmos números.
+9. **Sexta 20h, caso 5:** a Karol ainda vai ver. Padrão, se ela não mexer: **mantém**, porque não dá diagnóstico nem orientação de saúde, só diz pra não decidir no limite.
+10. ~~**Filme (sábado 09h):** conferir a cena~~ ✅ 18/10: a fala está na transcrição (começo do filme, ligação durante a corrida). A Karol vai tentar capturar o trecho no Prime Video. **Se não conseguir:** usa o pôster/card do filme na tela durante o gancho, com o texto "99% NARRATIVA. 1%…" por cima.
 11. **Reacts (quinta e sexta 09h):** legendar em português os trechos em inglês, creditar Motiversity e confirmar qual vídeo vai com qual texto (ver nota no react 2).
+
+12. **Domingo 20h (carrossel):** ❌ reprovado pela Karol em 18/10 ("não gostei nenhum pouco"), nas duas versões (5 slides corridos e 8 slides com um teste por slide). Ela vai pensar no formato. Seg a sáb aprovados e sendo programados.
 
 ## Retenção por Reel (2 recursos por vídeo, numeração do carrossel @lucureau)
 
@@ -786,7 +798,7 @@ Os 7s das 07h não têm fala: a retenção deles é o gancho fixo + "leia a lege
 | Sáb | 15h | #13 + #29 | Veredito só no fim · volta pro "seis por meia dúzia" |
 | Sáb | 17h | #7 + #2 + #29 | Ver o roteiro da eleição |
 | Dom | 09h | #9 processo/resultado + #31 | Os seis testes passam rápido na tela, um por corte |
-| Dom | 12h | (falta o fato) | Fecha quando o roteiro existir |
+| Dom | 12h | #3 antecipação + #19 bola de cristal | "começa ainda esse mês" · "se encher, eu penso em vender" · gravação da tela da lista na virada (#26) |
 | Dom | 15h | #1 som + transição + #31 | "Woosh" entre os vereditos, um por tela |
 | Dom | 17h | #19 bola de cristal + #31 | "Em janeiro você vai saber se o que você sabe vende" · NOVEMBRO / DEZEMBRO grandes |
 
@@ -803,3 +815,15 @@ Os 7s das 07h não têm fala: a retenção deles é o gancho fixo + "leia a lege
 - 18/10 — @rico: v2.2 — gancho do filme vira "99% NARRATIVA. 1%…" (1% em aberto); renda extra volta pra quarta 17h; "Quando o caro compensa" vai pra reserva da Semana 13.
 - 18/10 — @rico: v2.3 — quinta 20h vira o carrossel "Desconto x valor" (inspirado em @conradoadolpho, reescrito); "roteiro do teste honesto" vai pra reserva.
 - 18/10 — @rico: carrossel de preço ajustado com a posição da Karol: capa "Eu não dou desconto", slide 5 = diagnóstico das Vendas Secretas, slide 6 = downsell com a Incubadora Express (seeding, sem preço).
+- 18/10 — @rico: respostas da Karol aplicadas (salários liberados, exoneração + demissão na quarta 07h, "auditoria" no lugar de "big four", parceria liberada sem nome, domingo 12h fechado com o garimpador de leads). Ficam 2 escolhas dela (terça 15h e caso 5 de sexta), com padrão "mantém".
+- 18/10 — @producer (Squad Carrossel): os 7 carrosséis das 20h renderizados em ~/Downloads/rota100k-s12-{dia}-*/ (7 PNGs + legenda.txt cada). Seg, ter, qua, sex, sáb e dom no diagnostico-tipografico branco (padrão da Semana 11, conteúdo em 56px); quinta (desconto x valor, opinião da Karol) em card-tweet. Motor build-carousel.mjs voltou a rodar no Windows (achar o Chrome + corte da borda, e avatar em assets/).
+- 18/10 — @producer: carrossel de segunda refeito a pedido da Karol: capa só com o tema; critérios em 3 blocos separados (lançamento / conteúdo / conversa) pra ficar claro que é comparação.
+- 18/10 — @producer: slide 6 de segunda vira matriz 4 critérios x 3 jeitos (alto/baixo, muito/pouco), com o veredito embaixo.
+- 18/10 — @producer: quarta 20h — capa "5 sinais que você já tem um método" (texto da Karol) e "produto" vira "método" nos slides e no CTA. Terça: capa simplificada ("5 gastos no começo do seu negócio. Vale ou não vale?"). Segunda: capa sem o 3 repetido.
+- 18/10 — @producer: quinta 20h — slides do card-tweet com título sozinho na 1ª linha e parágrafos espaçados (pedido da Karol: estava muito texto junto). Slide 5 perdeu o "naturalmente" pra caber.
+- 18/10 — @producer: quinta slide 5 com "com desconto" e "com valor" no mesmo parágrafo; capa de sexta simplificada.
+- 18/10 — @producer: sábado 20h — mitos 3 e 4 trocados por "sair é jogar fora o que construí" e "com filho pequeno não dá" (história real da Karol).
+- 18/10 — @producer: capas de sábado e domingo simplificadas (número grande + uma frase).
+- 18/10 — @producer: domingo 20h refeito: 8 slides, um teste das 15h por slide (dia + disputa + medi/resultado/veredito). Título da quarta corrigido pra R$50 mil (era "R$60 mil", que soma mentoria + lançamento).
+- 18/10 — @producer: carrossel de domingo reprovado; fica em aberto (pendência 12). Os outros 6 aprovados pra programar.
+- 19/10 — @insta-scheduler: carrosséis de seg a sáb agendados pras 20h (19 a 24/10) via GitHub Actions — 7 slides cada no Cloudinary (URLs 200 OK), workflows post-rota100k-semana12-*.yml, pastas em business/instagram/agendados/. Só valem depois do push. Domingo fora (pendência 12).

@@ -44,7 +44,7 @@ Há um tema que aparece em absolutamente todas as suas respostas: **transformar 
 *"Posso virar a noite falando sobre gestão de empresas, método, modelos de negócios, marketing digital. Fiz lançamento grávida de 8 meses."*
 
 **Territórios de Autoridade:**
-- Saída de emprego estável com filha recém-nascida
+- Saída de emprego estável com filha de 1 ano
 - Oito lançamentos que floparam
 - Tentação constante de aceitar projetos que pagam fixo mas matam o sonho
 - Solidão de quem vai contra a expectativa da família
@@ -70,7 +70,7 @@ Cada sofrimento construiu uma competência específica:
 - **Os 13 anos no serviço público** te deram compreensão visceral da dor da sua persona. Você não imagina o que ela sente — você viveu. Isso é autoridade que não se compra.
 - **Os 8 lançamentos que floparam** te ensinaram que conhecimento técnico sem preparo emocional é como um foguete sem combustível. Por isso nasceu a Incubadora — não como produto, mas como resposta a uma verdade que só quem fracassou pode ensinar: *"Não adianta ter conhecimento, se não estiver pronta para ser lançada."*
 - **Os projetos que aceitou por medo** te deram a experiência direta da armadilha que seus futuros alunos vão enfrentar.
-- **A saída do emprego público com filha recém-nascida** te deu a prova encarnada de que é possível.
+- **A saída do emprego público com filha de 1 ano** te deu a prova encarnada de que é possível.
 
 A medicina que só você pode oferecer ao mundo: **você não ensina apenas a criar infoprodutos. Você ensina a nascer de novo.**
 

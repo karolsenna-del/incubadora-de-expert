@@ -32,7 +32,7 @@ Saí do emprego público e, quando a imprevisibilidade financeira apertava, acei
 
 **Empreendedorismo digital:** vivi cada erro possível — nicho errado, persona vaga, não vivia o que vendia, ignorei mentores, fracassei 8 vezes antes de encontrar meu lugar. Essa trilha de erros é minha autoridade real.
 
-**Transição de carreira:** saí de 13 anos de emprego público, com filha recém-nascida, ganhando 10 mil reais com estabilidade total, para a imprevisibilidade do digital. Fui contra a expectativa da minha família. Essa transição é a prova encarnada do que ensino.
+**Transição de carreira:** saí de 13 anos de emprego público, com filha de 1 ano, ganhando 10 mil reais com estabilidade total, para a imprevisibilidade do digital. Fui contra a expectativa da minha família. Essa transição é a prova encarnada do que ensino.
 
 **Resiliência:** 6 anos postando, 8 fracassos, continua de pé. Nunca desisti porque sei que esse é meu lugar.
 
@@ -78,7 +78,7 @@ Os 8 lançamentos fracassados são a base de tudo. Cada flop ensinou algo que ne
 
 Estudei 4 anos para a Receita Federal. Rendia 90% nos estudos. A prova nunca aconteceu — um concurso do ISS aconteceu com questões anuladas. Na época parecia fracasso. Hoje vejo como destino me livrando: o salário seria o triplo do que eu ganhava, e eu teria ficado presa muito mais tempo.
 
-Sair com a minha filha recém-nascida. Ela ainda era bebê quando eu tomei essa decisão. Não foi impulsiva — foi a única decisão que fazia sentido com o tipo de vida que eu queria que ela visse a mãe vivendo.
+Sair com a minha filha de 1 ano. Ela ainda era bebê quando eu tomei essa decisão. Não foi impulsiva — foi a única decisão que fazia sentido com o tipo de vida que eu queria que ela visse a mãe vivendo.
 
 ---
 
