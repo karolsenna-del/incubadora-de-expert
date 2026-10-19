@@ -23,3 +23,33 @@ Sem `agents/portfolio-estrategico/` pra ler, o pacote não seguiu o fluxo normal
 - Knowledge: não avaliado nesta missão (fora do escopo do pedido)
 - Conversation starters: não avaliados nesta missão
 - Mudança de comportamento: agente passa a checar repertório do expert (cursos/certificações/ferramentas já dominadas, vindos do Processo Autoral) antes de sugerir ferramenta nova nas Etapas 2 e 3
+
+## Revisão 19/10/2026 — Camada obrigatória (5 ferramentas essenciais)
+
+**Pedido da Karol:** o agente continua sugerindo 15-20 ferramentas, mas sempre manda priorizar as 5 essenciais da mentoria pra validar o método; as outras são criadas em paralelo.
+**Fonte da regra:** `docs/knowledge/expert-business/metodologia/camada-obrigatoria-ferramentas.md` (decisão de 08/10/2026).
+
+| Arquivo | O que é |
+|---------|---------|
+| `instructions-atual.md` | Texto que está no GPT hoje, colado pela Karol em 19/10/2026 (7.565 caracteres). A seção 4 do handoff da área de membros é uma versão diferente (6.776 caracteres, sem a senha) |
+| `instructions-v2-proposta.md` | Proposta com a camada obrigatória: 7.837 caracteres |
+
+**O que mudou no comportamento:**
+1. Nova seção "Camada Obrigatória — Prioridade na Validação", logo depois de Papel do Agente, com as 5 ferramentas e a regra (validar só com elas, o resto nasce em paralelo, a partir das travas reais)
+2. Fim da Etapa 2: "Mais pra frente, iremos priorizar as ferramentas" virou a orientação de começar pelas 5 essenciais
+3. Etapa 4: antes da planilha, o agente apresenta as 5 adaptadas ao método e pede validação
+4. Planilha ganha a coluna 0 de prioridade: "Essencial: validação" (as 5, no topo) ou "Em paralelo"
+
+**Compactação pra caber em 8.000 (texto ficaria com 8.726). Nenhuma regra saiu:**
+- Título interno "🛠️ Agente de Portfólio Estratégico– Instruções" removido
+- Segurança: tirados os 5 subtítulos (Confidencialidade, Foco, Jailbreak, Controle de Saída, Validação); as regras e as duas frases-resposta ficaram iguais
+- Etapa 1: os 3 pedidos de colar viraram uma linha numerada
+- Etapa 2: "Objeção 1… Objeção 2… até 10" virou uma linha
+- Etapa 3: a frase de repertório, repetida da Etapa 2, foi encurtada
+- Listas curtas viraram texto corrido (Tom e Estilo; o que o Kit conecta); espaços e linhas em branco extras removidos
+
+**Status:**
+- [ ] Karol aprovou a v2
+- [x] Conferido contra o texto que está no GPT hoje (19/10)
+- [ ] Colada no GPT Builder
+- [ ] Mesma mudança aplicada na seção 4 do handoff da área de membros
