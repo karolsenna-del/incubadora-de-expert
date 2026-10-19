@@ -209,14 +209,16 @@ function eventsFromContactSync(entryId, value) {
 
 function validateTenant(payload) {
   if (!payload || payload.object !== 'whatsapp_business_account' || !Array.isArray(payload.entry)) return false;
-  const expectedWaba = process.env.META_EXPECTED_WABA_ID;
-  const expectedPhone = process.env.META_EXPECTED_PHONE_NUMBER_ID;
+  // Aceita mais de uma conta/número separados por vírgula (ex.: 4690 + 3543).
+  const list = value => (value || '').split(',').map(item => item.trim()).filter(Boolean);
+  const expectedWabas = list(process.env.META_EXPECTED_WABA_ID);
+  const expectedPhones = list(process.env.META_EXPECTED_PHONE_NUMBER_ID);
 
   return payload.entry.every(entry => {
-    if (expectedWaba && entry.id !== expectedWaba) return false;
+    if (expectedWabas.length && !expectedWabas.includes(entry.id)) return false;
     return (entry.changes || []).every(change => {
       const phoneId = change.value && change.value.metadata && change.value.metadata.phone_number_id;
-      return !expectedPhone || !phoneId || phoneId === expectedPhone;
+      return !expectedPhones.length || !phoneId || expectedPhones.includes(phoneId);
     });
   });
 }

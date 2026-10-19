@@ -101,6 +101,24 @@ test('POST registra mensagem recebida normalizada no RPC do CRM', async (t) => {
   });
 });
 
+test('POST aceita qualquer conta/número da lista e rejeita os de fora', async (t) => {
+  process.env.META_WEBHOOK_INGRESS_TOKEN = 'ingresso-secreto';
+  process.env.META_EXPECTED_WABA_ID = 'waba-antiga, waba-123';
+  process.env.META_EXPECTED_PHONE_NUMBER_ID = 'phone-antigo,phone-123';
+  process.env.SUPABASE_URL = 'https://supabase.example';
+  process.env.SUPABASE_SERVICE_ROLE_KEY = 'service-role-de-teste';
+  t.mock.method(global, 'fetch', async () => ({ ok: true, json: async () => ({ inserted: true }) }));
+
+  const aceito = response();
+  await handler({ method: 'POST', query: { token: 'ingresso-secreto' }, body: messagesFixture }, aceito);
+  assert.equal(aceito.statusCode, 200);
+
+  process.env.META_EXPECTED_WABA_ID = 'waba-antiga';
+  const recusado = response();
+  await handler({ method: 'POST', query: { token: 'ingresso-secreto' }, body: messagesFixture }, recusado);
+  assert.equal(recusado.statusCode, 403);
+});
+
 test('POST registra echo do WhatsApp Business como saída', async (t) => {
   process.env.META_WEBHOOK_INGRESS_TOKEN = 'ingresso-secreto';
   process.env.META_EXPECTED_WABA_ID = 'waba-123';
