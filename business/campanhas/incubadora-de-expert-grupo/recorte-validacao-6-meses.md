@@ -29,7 +29,7 @@
 
 ## O que não entra (Karol, 17/10)
 - **Oficinas ao vivo.** Eram da oferta da Black; sem turma vendida, a venda 1:1 não promete oficina.
-- **Funil de Vendas Secretas montado.** Se o aluno quiser, contrata à parte depois.
+- **Funil de Vendas Secretas montado.** Se o aluno quiser, contrata à parte depois. **Exceção (Karol, 19/10): bônus de ação rápida** — quem fecha na própria sessão ganha o Funil de Vendas Secretas montado pela Karol. É bônus de arrancada pra dar o efeito UAU agora; quando as sessões começarem a fechar venda, a Karol revê. Âncora na fala: o Sprint foi de R$3.000 pra R$5.000 quando o funil entrou (log-decisoes 02/10), então são R$2.000 de funil em cima dos R$2.500.
 - Posicionamento e Escala: agente de Autoridade, Studio de Ensaio, sessões S6 a S8.
 
 ## Em aberto
@@ -49,3 +49,4 @@
 - 18/10 — @companion: contrato fechado com garantia de 15 dias (Karol); PDF regerado. Pendente: garantia na Voomp de 7 → 15 dias.
 - 19/10 — @companion: promessa de 30 dias + data da 1ª Venda Secreta marcada na S1 (Karol, após sessão com o Clone Euriler). Roteiro da Sessão de Vendas Secretas v4 atualizado (artifact WeV7CVV38uBV7YTjvDzmc4): só Sprint e Express, caso Milena na Etapa 3, ECROI enxuto, sem aula na sessão. Garantia de 15 dias na Voomp já conferida (missão 110 do Gestor de Infra).
 - 19/10 — @companion: "sem palco" vira "sem exposição amadora" na promessa (Karol). Apresentação da oferta criada: `apresentacao-oferta-express.html` (11 slides, mesmo visual da Individual). Decisão registrada no log-decisoes.
+- 19/10 — @companion: apresentação ajustada (Karol): "O que é" vira Acelerador de Carreira no Digital; preço em destaque 12x de R$250 com R$2.500 à vista menor; bônus de ação rápida = Funil de Vendas Secretas montado pra quem fecha na sessão. Roteiro v4 atualizado com o bônus.
