@@ -33,10 +33,10 @@ export const COLUNAS = [
 // Perguntas de fit (v2, Karol 18/10/2026). Aderência (coluna L) diz "é do público?"; o fit diz "vale abordar agora?".
 // Carreira clara e "ainda não vende método" saíram do fit: são peneira da Aderência.
 export const FITS = [
-  { coluna: 'Tem anos de experiência na área?', campo: 'fit_experiencia', revisar: 'anos de experiência não aparecem no perfil' },
-  { coluna: 'Mostra a dor que a Incubadora resolve?', campo: 'fit_dor', revisar: 'dor não aparece no perfil' },
-  { coluna: 'Já cria conteúdo profissional?', campo: 'fit_conteudo', revisar: 'sem posts suficientes pra avaliar o conteúdo' },
-  { coluna: 'Quer ser autoridade na área?', campo: 'fit_autoridade', revisar: 'desejo de autoridade não aparece no perfil' },
+  { coluna: 'Tem anos de experiência na área?', campo: 'fit_experiencia', revisar: 'experiência: olhar destaques/posts antigos atrás de tempo de carreira, especialização ou cargo anterior' },
+  { coluna: 'Mostra a dor que a Incubadora resolve?', campo: 'fit_dor', revisar: 'dor: olhar legendas e stories atrás de cansaço do trabalho, sensação de valer mais do que ganha ou vontade de renda com o que sabe' },
+  { coluna: 'Já cria conteúdo profissional?', campo: 'fit_conteudo', revisar: 'conteúdo: abrir os últimos posts e ver se a maioria é da área dela ou vida pessoal' },
+  { coluna: 'Quer ser autoridade na área?', campo: 'fit_autoridade', revisar: 'autoridade: ver se dá aula, palestra ou se apresenta como especialista' },
 ];
 export const A_AVALIAR = 'A avaliar';
 
@@ -64,11 +64,17 @@ const MENUS = {
 
 // Prioridade de abordagem (Karol, 18/10/2026): Score manda, Aderência trava.
 //   Alta = Score 4, ou Score 3 com aderência alta · Baixa = Score 0-1 ou aderência baixa · Média = o resto
+// "A avaliar" não penaliza: a proporção de Sim é calculada só sobre as perguntas respondidas
+// (com as 4 respondidas, dá o mesmo que a régua original). Alta exige ao menos 3 respondidas.
 export function prioridadeAbordagem(p) {
-  const score = FITS.filter((f) => p[f.campo] === 'Sim').length;
+  const respondidas = FITS.filter((f) => p[f.campo] === 'Sim' || p[f.campo] === 'Não');
+  const sim = respondidas.filter((f) => p[f.campo] === 'Sim').length;
   const ad = String(p.aderencia || '').toLowerCase().replace('é', 'e');
-  if (ad === 'baixa' || score <= 1) return 'Baixa';
-  if (score === 4 || (score === 3 && ad === 'alta')) return 'Alta';
+  if (ad === 'baixa') return 'Baixa';
+  if (!respondidas.length) return 'Média';
+  const taxa = sim / respondidas.length;
+  if (taxa <= 0.25) return 'Baixa';
+  if ((taxa === 1 && respondidas.length >= 3) || (taxa >= 0.75 && ad === 'alta')) return 'Alta';
   return 'Média';
 }
 
@@ -82,8 +88,10 @@ export function postouRecente(p, dataRodada) {
 
 // Observação automática pra Karol revisar: fit que não deu pra avaliar + lead sem leitura logada.
 export function observacaoRevisao(p) {
-  const itens = FITS.filter((f) => p[f.campo] === A_AVALIAR).map((f) => f.revisar);
-  if (p.fase === 2) itens.push('sem leitura logada (avaliado só pela bio)');
+  const pendentes = FITS.filter((f) => p[f.campo] === A_AVALIAR);
+  const itens = pendentes.map((f) => f.revisar);
+  if (pendentes.length) itens.push(`prioridade calculada só com ${FITS.length - pendentes.length} de ${FITS.length} perguntas`);
+  if (p.fase === 2) itens.push('sem leitura logada, avaliado só pela bio: abrir o perfil e conferir os posts antes de abordar');
   if (p.observacao_revisao) itens.push(p.observacao_revisao);
   return itens.length ? `Revisar: ${itens.join('; ')}` : '';
 }

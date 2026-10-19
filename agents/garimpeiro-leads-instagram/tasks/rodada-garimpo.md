@@ -81,7 +81,7 @@ Pra CADA item não descartado de `para_classificar`, completar no próprio item:
 | `fit_conteudo` | **Já cria conteúdo profissional?** Sim = a maioria dos últimos posts é sobre a própria área (dica, caso, bastidor do trabalho), não vida pessoal. Sem posts pra ler = A avaliar |
 | `fit_autoridade` | **Quer ser autoridade na área?** Sim = ensina, dá aula, palestra, se apresenta como especialista, fala em autoridade/posicionamento. Não aparece = Não (A avaliar só se houver sinal ambíguo) |
 
-Toda pergunta precisa de resposta (Sim / Não / A avaliar) — o `enviar` recusa vazio. "A avaliar" e lead que não passou pela fase 3 viram automaticamente "Revisar: ..." na coluna Observações pra Karol olhar.
+Toda pergunta precisa de resposta (Sim / Não / A avaliar) — o `enviar` recusa vazio. "A avaliar" e lead que não passou pela fase 3 viram automaticamente "Revisar: ..." na coluna Observações, dizendo o que a Karol deve olhar no perfil. "A avaliar" não puxa a prioridade pra baixo: ela é calculada só com as perguntas respondidas (Alta exige ao menos 3 respondidas), e o Score continua contando só os Sim.
 | `perfil_leitura` | `Conector` (família, comunidade, propósito, escreve com calor) · `Analista` (formação, registro, explicação técnica, precisão) · `Diretivo` (cargo, anos de mercado, posta pouco e direto) |
 | `sinais` | sinais públicos encontrados, curto ("bio: psicóloga clínica · link de agenda") |
 | `motivo_nota` | 1 frase: por que essa nota |

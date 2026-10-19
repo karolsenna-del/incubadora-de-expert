@@ -48,7 +48,7 @@ Karol revisa → (Karol) Vendedor Expert escreve copy | (aluno) entrega para no 
 Estrutura do "M3.5) Rastreador de leads qualificados" do Expert360º, com as perguntas de fit da Karol. Colunas S–AI:
 Grupo · Tem anos de experiência na área? · Mostra a dor que a Incubadora resolve? · Já cria conteúdo profissional? · Quer ser autoridade na área? · Score de Fit (0-4) · Prioridade de abordagem · Perfil · Status · Data Última Interação · Próxima Ação · Data Próxima Ação · Fechou? · Valor · Data Fechamento · Depoimento · Observações.
 - **Divisão de papéis (Karol, 18/10/2026):** Aderência (L) = "é do meu público?" · fit = "vale abordar agora?". As perguntas v1 da manhã (carreira clara / não vende método / sinal de transição / conteúdo) repetiam a Aderência e foram trocadas; as respostas v1 ficaram em `fit_v1` nas rodadas locais.
-- Fit: Sim / Não / A avaliar. "A avaliar" e lead sem fase 3 → "Revisar: ..." em Observações (automático).
+- Fit: Sim / Não / A avaliar. "A avaliar" e lead sem fase 3 → "Revisar: ..." em Observações (automático), dizendo o que olhar no perfil. "A avaliar" não penaliza a prioridade: ela usa a proporção de Sim só entre as respondidas (Alta exige 3+ respondidas; com 4 respondidas é igual à régua original). O Score (fórmula) continua contando só os Sim.
 - Prioridade de abordagem: Alta = Score 4, ou 3 com aderência alta · Baixa = Score 0-1 ou aderência baixa · Média = resto.
 - Coluna M virou "Postou nos últimos 30 dias?" (Sim/Não, a contar da data da rodada) — desempate. A prioridade 1-3 antiga segue só no JSON.
 - O Garimpeiro preenche: Grupo, 4 fits, Prioridade de abordagem, Perfil, Status "Sem abordagem", Fechou? "Em aberto", Depoimento "Pendente", Observações "Revisar: ...". O resto é da Karol.
