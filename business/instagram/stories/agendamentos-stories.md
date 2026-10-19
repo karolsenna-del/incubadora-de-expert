@@ -61,3 +61,4 @@
 | 15/10/2026 | individual-quinta-2026-10-15 | 1 | 18114388463025652 | sim (ver log de execucao) |
 | 16/10/2026 | de-volta-ao-passado-skin-in-the-game-2026-10-16 | 1 | 18648810685002521 | sim (ver log de execucao) |
 | 18/10/2026 | diagnostico-ferramentas-domingo-2026-10-18 | 1 | 18117849337802230 | sim (ver log de execucao) |
+| 19/10/2026 | chamada-grupo-lives-segunda-2026-10-19 | 5 | 18133067485667463, 18017415449745292, 18140905849716208, 18013247135764756, 18177959281445982 | sim (ver log de execucao) |
