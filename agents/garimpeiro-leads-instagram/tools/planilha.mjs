@@ -12,6 +12,7 @@
 //   node planilha.mjs preparar --perfil karol   → cabeçalho do rastreador + menus suspensos + fórmula do Score (idempotente)
 //   node planilha.mjs migrar --perfil karol     → preenche o rastreador das linhas antigas (só onde "Grupo" está vazio)
 //   node planilha.mjs recalcular --perfil karol → régua mudou: reescreve fit, prioridade, "postou 30 dias" e "Revisar:" das rodadas locais
+//   node planilha.mjs copy --perfil karol --arquivo {json fora do repo: {"@arroba": "mensagem"}} [--sobrescrever] → grava a 1ª mensagem do Vendedor Expert na coluna Copy (só onde está vazia)
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
@@ -281,6 +282,26 @@ async function recalcular(perfil) {
   console.log(JSON.stringify({ linhas: linhas.length, recalculadas, prioridade: conta('y'), postou_30d: conta('m'), com_revisar: novo.filter((n) => n.obs.startsWith('Revisar:')).length }));
 }
 
+// Grava na coluna "Copy" as mensagens redigidas pelo Vendedor Expert. Por padrão não mexe em Copy já preenchida
+// (pode ter sido editada pela Karol). O arquivo de entrada tem dado de prospect: fica fora do repositório.
+async function gravarCopy(perfil, arquivo, sobrescrever) {
+  const copias = new Map(Object.entries(JSON.parse(readFileSync(resolve(arquivo), 'utf8'))).map(([a, m]) => [String(a).replace(/^@/, '').toLowerCase(), m]));
+  const [, ...linhas] = await lerValores(perfil.destino);
+  const [iArroba, iCopy] = [COLUNAS.indexOf('@'), COLUNAS.indexOf('Copy')];
+  let gravadas = 0, mantidas = 0;
+  const coluna = linhas.map((l) => {
+    const atual = l[iCopy] ?? '';
+    const nova = copias.get(String(l[iArroba] || '').replace(/^@/, '').toLowerCase());
+    if (!nova) return [atual];
+    if (atual && !sobrescrever) { mantidas++; return [atual]; }
+    gravadas++;
+    return [nova];
+  });
+  if (!coluna.length) return console.log('Aba sem linhas.');
+  await atualizar(perfil.destino, `${letra(iCopy)}2:${letra(iCopy)}${linhas.length + 1}`, coluna);
+  console.log(JSON.stringify({ gravadas, mantidas_ja_preenchidas: mantidas, nao_achadas_na_aba: copias.size - gravadas - mantidas }));
+}
+
 function rodadasPorArroba(perfilId) {
   const mapa = new Map();
   if (!existsSync(PASTA_RODADAS)) return mapa;
@@ -301,7 +322,8 @@ if (process.argv[1]?.endsWith('planilha.mjs')) {
     else if (cmd === 'preparar') await preparar(perfil().destino);
     else if (cmd === 'migrar') await migrar(perfil());
     else if (cmd === 'recalcular') await recalcular(perfil());
-    else if (cmd) console.log('Comandos: enviar | listar | preparar | migrar | recalcular');
+    else if (cmd === 'copy') await gravarCopy(perfil(), opt.arquivo, resto.includes('--sobrescrever'));
+    else if (cmd) console.log('Comandos: enviar | listar | preparar | migrar | recalcular | copy');
   } catch (e) {
     console.error('ERRO:', e.message);
     process.exit(1);

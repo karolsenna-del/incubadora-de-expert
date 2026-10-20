@@ -220,6 +220,7 @@ O Garimpeiro trabalha muitas vezes pra operações maiores (reativação/prospec
 | `tools/logado.mjs login` / `conferir` | Sessão da conta `referenciasgpt` (Karol faz o login à mão, 1 vez) |
 | `tools/logado.mjs aprofundar` | Fase 3: bio completa, link, categoria e últimos posts de quem passou da fase 2 |
 | `tools/planilha.mjs enviar` | Grava os classificados na aba do cliente, com o bloco do rastreador (corta em 50, pula quem já está na aba) |
+| `tools/planilha.mjs copy --arquivo {json}` | Grava na coluna Copy a 1ª mensagem do Vendedor Expert (só Karol; só onde está vazia; JSON fora do repo) |
 | `tools/planilha.mjs listar` | Lê a aba (inclui "Status revisão" e o rastreador) |
 | `tools/planilha.mjs preparar` / `migrar` | Cabeçalho + menus suspensos + fórmula do Score / preencher rastreador de linhas antigas |
 | Read/Edit | Ler e completar o JSON da rodada com a classificação |

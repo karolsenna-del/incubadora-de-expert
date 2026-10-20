@@ -63,6 +63,10 @@ Ver `tasks/perfil-cliente.md`. Primeira vez: Gestor de Infra cria a planilha "Ga
 | Data | Cliente | Consulta | Perfis úteis / resultados | Obs |
 |------|---------|----------|---------------------------|-----|
 | 18/10/2026 | karol | `site:instagram.com "servidora pública" "transição de carreira"` | ~1/8 (teste) | traz muito mentor de carreira, sindicato e portal — testar com cidade/UF e cargo |
+| 19/10/2026 | karol | `site:instagram.com "{profissão}" "anos de experiência"` ou `"{profissão} há" anos` (+ cidade) | ~4-8 perfis individuais/10 | MELHOR consulta da v2: traz liberal com tempo de carreira na bio (já responde "experiência"). Psicóloga, nutricionista, enfermeira, fisioterapeuta, advogada renderam |
+| 19/10/2026 | karol | `"servidora pública"/"concursada" "empreendedora"` | ~2-3/10 | traz servidora com negócio paralelo (regra nova da dor), mas muito perfil de loja/doceria |
+| 19/10/2026 | karol | `"transição de carreira"` + profissão, `"projeto paralelo"`, `"ex-professora"` | ~0-1/10 | RUIM: só mentor de carreira, universidade e instituição — não usar |
+| 19/10/2026 | karol | `"engenheira"/"assistente social"/"RH"/"farmacêutica"/"contadora" "anos de experiência"` | 0-2/10 | só empresa/escritório ou vazio |
 
 ## Histórico de régua (perfil de busca)
 
@@ -98,3 +102,4 @@ Ver `tasks/perfil-cliente.md`. Primeira vez: Gestor de Infra cria a planilha "Ga
 
 **Troubleshooting:**
 - {problema}: {solução}
+| 19/10/2026 | karol | "Mostra a dor?" = Sim também pra negócio paralelo próprio ou estudo voltado a mudar de rumo (não vale estudo pra outro concurso) | 1ª revisão: acerto Alta 4/4, Média 14/15; os 3 aprovados que caíram em Baixa tinham negócio paralelo/mestrado em negócios. Efeito: os 3 sobem pra Média | Karol |
