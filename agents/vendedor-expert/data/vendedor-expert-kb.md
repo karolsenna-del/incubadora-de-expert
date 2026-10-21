@@ -249,6 +249,33 @@ Tem que ser bem feito → 1:1, sob medida · Sem tempo → Sprint · Grupo não 
 - Comprador de workshop: "comprei e não consegui aplicar" → o que trava não é conteúdo, é não ter alguém junto → Sprint
 [Fonte: Arsenal §8]
 
+### 7.5 Frases de desarme e investigação — repertório complementar
+
+Use somente depois de identificar a etapa e repetir a objeção real da pessoa. Estas frases não substituem diagnóstico, prova nem explicação. Escolha **uma** por resposta e adapte ao contexto; não empilhe técnicas.
+
+| Situação | Frase-base | Uso correto |
+|----------|------------|-------------|
+| Reclamação sobre preço | “Eu também pensaria nisso.” | Validar sem concordar que está caro; em seguida investigar o que não fechou em valor, momento ou confiança |
+| Objeção vaga / “vou pensar” | “O que precisaria acontecer para você sair daqui com uma decisão?” | Fazer a pessoa nomear a trava real; aceitar “não” como decisão válida |
+| Fit ou momento duvidoso | “Talvez isso não seja para você agora.” | Usar apenas quando houver dúvida genuína de fit/prioridade; nunca como desafio para provocar reação |
+| Depois de uma objeção | “Posso te fazer uma pergunta?” | Pedir permissão antes de aprofundar; trocar pelo nome real quando disponível |
+| Abertura de diagnóstico | “O que te trouxe aqui hoje?” | Abrir a conversa quando a pessoa já pediu ajuda; não usar como primeira DM fria |
+| Descoberta de dor | “Se você pudesse mudar uma coisa hoje, qual seria?” | Priorizar o problema percebido pela pessoa antes de falar de oferta |
+| Lead relata pesquisa/comparação | “Que bom que você comparou. O que mais te chamou atenção?” | Descobrir critério de valor sem desqualificar concorrentes |
+| Fit confirmado pela fala | “Isso resolve exatamente o que você me contou.” | Só afirmar quando a ligação estiver demonstrada; citar a dor e o entregável real em seguida |
+| “Achei complicado” | “Complicado em qual parte?” | Localizar a trava sem se defender ou explicar tudo de uma vez |
+| Hesitação não verbalizada | “Parece que alguma coisa te deixou com o pé atrás. O que foi?” | Nomear a hesitação com cuidado e abrir espaço para correção |
+| Pedido de desconto | “Se o valor estivesse certo para você, fecharia hoje?” | Separar preço de outras objeções; não usar para pressionar nem prometer desconto |
+| Sumiu após proposta | “Posso encerrar seu atendimento por aqui?” | Última mensagem, somente na cadência permitida e sem tom de punição; respeitar silêncio e opt-out |
+| Medo de receber coisa genérica | “Vou te mostrar só o que faz sentido para o seu caso.” | Cumprir literalmente: apresentar apenas o necessário e documentado |
+| Pede opinião direta | “Se eu estivesse no seu lugar, considerando o que você me contou, eu faria assim...” | Dar recomendação condicionada aos fatos; deixar claro o critério e preservar a decisão da pessoa |
+| Pessoa irritada | “Você tem razão de estar chateado com isso.” | Validar a experiência antes de explicar; não admitir fato ou culpa que não foi verificado |
+| Decisão tomada, falta início | “Prefere começar esta semana ou na próxima?” | Pergunta de logística somente depois do sim e quando ambas as datas forem reais |
+
+**Guardrails:** não atribuir efeitos psicológicos garantidos (“faz o cérebro baixar a guarda”, “desperta vontade de provar o contrário”). Não usar desqualificação, falsa escolha, urgência inventada ou inversão para vencer a pessoa. A função é esclarecer a objeção e facilitar uma decisão informada — inclusive a decisão de não comprar.
+
+[Fonte complementar: carrossel “Frases que desarmam qualquer cliente em segundos”, Carol Iasmim, @carol.iasmim, consultado em 21/10/2026: https://www.instagram.com/p/DeufvnflmIv/. Adaptação e limites definidos pela Incubadora; não é fonte de verdade sobre ofertas nem substitui o método principal.]
+
 ---
 
 ## 8. Provas sociais (quando o script pede "[enviar print/depoimento]")
