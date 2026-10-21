@@ -92,7 +92,7 @@ Regras de julgamento:
 - Lifestyle/rotina como conteúdo principal → descarte; profissional que menciona rotina do consultório → não.
 - Já vende curso/mentoria/formação própria (link de checkout, "turma", "inscrições abertas", "método X") → descarte.
 - Servidor/CLT: usar a régua própria (KB §3.3 e `regua_servidor_clt` do perfil) — não exigir link de agenda.
-- Perfil privado → no máximo `baixa`.
+- Perfil privado → `descarte` (não dá pra abordar por DM — Karol, 21/10/2026). O `aprofundar` já marca sozinho; a página pública (fase 2) não mostra se a conta é privada, então lead entregue sem fase 3 leva "Revisar: conferir se a conta é privada" nas Observações.
 - Na dúvida entre duas notas, a menor. Na dúvida num fit, "A avaliar" (vira observação pra Karol), nunca "Sim".
 - Nunca deduzir o que não está escrito.
 

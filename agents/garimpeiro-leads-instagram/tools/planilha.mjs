@@ -92,7 +92,7 @@ export function observacaoRevisao(p) {
   const pendentes = FITS.filter((f) => p[f.campo] === A_AVALIAR);
   const itens = pendentes.map((f) => f.revisar);
   if (pendentes.length) itens.push(`prioridade calculada só com ${FITS.length - pendentes.length} de ${FITS.length} perguntas`);
-  if (p.fase === 2) itens.push('sem leitura logada, avaliado só pela bio: abrir o perfil e conferir os posts antes de abordar');
+  if (p.fase === 2) itens.push('sem leitura logada, avaliado só pela bio: abrir o perfil, ver se a conta não é privada e conferir os posts antes de abordar');
   if (p.observacao_revisao) itens.push(p.observacao_revisao);
   return itens.length ? `Revisar: ${itens.join('; ')}` : '';
 }

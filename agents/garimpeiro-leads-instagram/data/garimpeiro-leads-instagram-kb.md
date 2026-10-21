@@ -103,7 +103,7 @@ Preços mudam por plano (tabela escalonada: Free > Starter > Scale > Business). 
 ### 2.4 Enriquecimento (Profile Scraper)
 - Input: `{"usernames": ["@1","@2",...]}` em lote.
 - Campos usados: `username`, `fullName`, `biography`, `externalUrl`/`externalUrls`, `followersCount`, `followsCount`, `postsCount`, `isBusinessAccount`, `businessCategoryName`, `private`, `verified`, `latestPosts` (legendas recentes = fonte de fato-gancho).
-- Perfil privado: guardar só o que é público (nome, @, bio) e marcar "privado" — não entra como prioridade alta (não dá pra validar).
+- Perfil privado: descarte (desde 21/10/2026 — a Karol não consegue mandar DM pra abordar). Só a leitura logada (fase 3) e a lista de seguidores mostram se a conta é privada; a página pública não.
 
 ### 2.5 API Apify — padrão de chamada
 - Auth: header `Authorization: Bearer {token}`. Validar com `GET /v2/users/me`.

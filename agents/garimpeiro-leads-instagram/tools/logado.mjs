@@ -154,6 +154,8 @@ async function aprofundar(o) {
     const u = r.json?.data?.user;
     if (!u) { p.erro_fase3 = 'perfil não encontrado logado'; continue; }
     Object.assign(p, resumo(u), { fase: 3, aprofundado_em: new Date().toISOString().slice(0, 10) });
+    // Conta privada: a Karol não consegue mandar DM pra abordar (pedido dela, 21/10/2026) → descarte direto.
+    if (p.privado) Object.assign(p, { aderencia: 'descarte', motivo_nota: 'conta privada — não dá pra abordar por DM' });
     feitos++;
     writeFileSync(arq, JSON.stringify(rodada, null, 2)); // salva a cada perfil — se parar no meio, não perde
   }
@@ -212,7 +214,8 @@ async function seguidores(o) {
   writeFileSync(arqEstado, JSON.stringify(estado, null, 2));
   const hora = new Date().toTimeString().slice(0, 5).replace(':', '');
   const arqCand = join(PASTA_RODADAS, `candidatos-${hoje}-${hora}-${perfil.id}.txt`);
-  writeFileSync(arqCand, novos.map((n) => `${n.arroba}\tseguidor de @${alvo}`).join('\n') + '\n');
+  // Seguidor com conta privada não vira candidato: não dá pra abordar por DM (Karol, 21/10/2026).
+  writeFileSync(arqCand, novos.filter((n) => !n.privado).map((n) => `${n.arroba}\tseguidor de @${alvo}`).join('\n') + '\n');
   console.log(JSON.stringify({ candidatos: arqCand, lidos_agora: novos.length, privados: novos.filter((n) => n.privado).length, lidos_hoje: estado.lidos_hoje, lidos_total: estado.lidos_total, fim: !!estado.fim, parada }));
   if (parada) process.exit(2);
 }
