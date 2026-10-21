@@ -3,7 +3,7 @@
 **Link:** https://chatgpt.com/g/g-68eae9371f8481919ac18d9dbbf2ced1-portfolio-estrategico
 **Slug de origem:** nenhum — GPT publicado manualmente antes deste worker existir, sem mente forjada em `agents/`
 **Criado em:** anterior ao gpt-publisher (data desconhecida)
-**Última atualização de Instructions:** 21/08/2026
+**Última atualização de Instructions:** 21/10/2026 (v2, camada obrigatória)
 **Compartilhamento:** distribuído via `mentoria/alunas/{aluna}/0- Biblioteca de IAs.md` (não gerenciado por este worker)
 **Versão da mente publicada:** N/A — não há mente de origem; a Karol colou as Instructions atuais direto na conversa
 
@@ -49,7 +49,7 @@ Sem `agents/portfolio-estrategico/` pra ler, o pacote não seguiu o fluxo normal
 - Listas curtas viraram texto corrido (Tom e Estilo; o que o Kit conecta); espaços e linhas em branco extras removidos
 
 **Status:**
-- [ ] Karol aprovou a v2
+- [x] Karol aprovou a v2
 - [x] Conferido contra o texto que está no GPT hoje (19/10)
-- [ ] Colada no GPT Builder
-- [ ] Mesma mudança aplicada na seção 4 do handoff da área de membros
+- [x] Colada no GPT Builder pela Karol (confirmado em 21/10, manual)
+- [x] Mesma mudança aplicada na seção 4 do handoff da área de membros (21/10): só as 4 mudanças da camada obrigatória, mantendo o resto da seção 4 (que tem ajustes próprios, como "sim"/"ajustar"); 7.833 caracteres
