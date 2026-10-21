@@ -10,6 +10,12 @@
 **Impacto:** [o que muda]
 -->
 
+## 20/10/2026 — Agente da Autoridade Tríplice passa a entregar Frase-Tese e bio; vitrine fica nos materiais do M4
+**Contexto:** Revisando o GPT da Autoridade Tríplice, a Karol notou que a frase-tese não estava nele. Ela existia só na versão da área de membros (seção 4, Tese Autoral), nunca colada no GPT. O curso também definia frase-tese e bio de dois jeitos diferentes (M4.2 x área de membros; roteiro da Aula 4 x Agente da Promessa).
+**Decisão:** (1) O agente ganha a Tese Autoral e a bio do Instagram; destaques e posts fixados ficam fora e seguem nos materiais M4.4 e M4.5. (2) Frase-tese: critério "curta e memorável, a bandeira que a pessoa repete de cabeça". (3) Bio: modelo "Eu ajudo [persona] a conquistar [resultado], [atratividade]" + CTA, até 150 caracteres. (4) Sintoma, problema impostor e causa oculta são sugeridos pelo agente e o aluno confirma ou ajusta, porque as alunas travam ao escrever isso. v2 aprovada pela Karol.
+**Racional:** Frase-tese e bio fecham a tríplice e saem dela; destaques e posts pedem materiais que o agente não tem (História Real, depoimentos), alongariam a conversa e estourariam o limite de 8.000 caracteres do GPT.
+**Impacto:** `agents/gpt-publisher/output/autoridade-triplice/custom-gpt/Instructions-v2.txt` (7.888 caracteres) pronto pra colar no GPT. Course Creator precisa ajustar o M4 antes da gravação (Aulas 3 e 4, M4.1, M4.2, M4.5, descrição da A4), tarefa no tracker do curso. Seção 6 do handoff da área de membros fica pendente de receber as mesmas mudanças.
+
 ## 19/10/2026 — Incubadora Express promete a 1ª Venda Secreta em 30 dias, com a data marcada na S1
 **Contexto:** Análise de persona e produto com o Clone Euriler. A promessa da Incubadora só falava do medo da persona, a única prova de dinheiro (Milena: Venda Secreta montada em 23/09, venda de R$2.500 em 30/09) não aparecia na sessão, e os alunos anteriores desistiam montando método e ferramentas antes de chegar na Venda Secreta.
 **Decisão:** (1) Promessa da Express: "Em 30 dias, o que você sabe vira um método com o seu nome e você faz a sua primeira Venda Secreta — numa conversa, sem lançamento, sem exposição amadora." (2) Os 30 dias são meta de ritmo, não garantia; escopo e contrato não mudam. (3) Na S1 o aluno sai com a data da 1ª Venda Secreta marcada (~dia 30). (4) O caso Milena entra como prova em toda sessão, logo depois da história. (5) Na sessão, nada de ensinar: vontade de explicar vira "isso é o que a gente faz na sessão X".
