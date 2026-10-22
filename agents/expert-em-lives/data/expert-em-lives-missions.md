@@ -43,3 +43,14 @@
 **Aprendizado:** registrar depois da live (vendas na live vs. no resto da noite).
 
 - 14/10 — Live da Black Expert (ajuste no dia): ancoragem de valor no slide 39 (8 sessões R$4.000 + funil montado R$2.000 só na Black + 12 oficinas R$2.364 = R$8.364; agente R$500 no bônus), funil montado só na Black (depois, com o Vendedor Secreto), temas das oficinas fora. Cortes de conteúdo antes da oferta (borda/missa, 3 lançamentos, 5 crenças, 4 fases detalhadas) — fala antes da virada caiu de ~1.600 pra ~1.100 palavras. Aprendizado: live de oferta só leva história que vende a oferta.
+
+## Live 34 — Você não precisa largar a sua profissão pra vender o que sabe — 21/10/2026
+**Executada em:** 21/10/2026, 15h.
+**Resultado:** fraquíssima (Karol, 21/10). Apareceu 1 pessoa, a mesma que está sempre presente.
+**Aprendizado:** Karol quer temas mais práticos a partir da Live 35 (primeiro: Persona, com título mais atrativo que a Live 2). Comparecimento baixo também depende da divulgação, não só do tema: ainda não diagnosticado.
+
+## Live 35 — Em 30 minutos você vai saber quem compra de você e quem só curte — 28/10/2026 (a confirmar)
+**Tema:** Persona Compradora num ângulo prático: plateia × comprador, persona dos sonhos × compradora, filtro dos 3 critérios do Rastreador.
+**Entregue em:** 21/10/2026 — `business/campanhas/lives-semanais/live-35-roteiro.md` (v1, aguardando revisão).
+**Executada em:** aguardando.
+**Aprendizado:** registrar depois da live (comparecimento comparado com a 34).
