@@ -34,6 +34,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import plataforma as pf  # noqa: E402
+import bordas  # noqa: E402
 
 ALVOS = {"vertical": {"full": (1080, 1920), "half": (1080, 960)}, "horizontal": {"full": (1920, 1080), "half": (768, 1080)}}
 
@@ -64,16 +65,22 @@ def protege_palavras(sil, palavras):
     return out
 
 
-def fatiar(de, ate, sil, pausa_min, folga):
+def fatiar(de, ate, sil, pausa_min, folga, env=None):
     partes, ini = [], de
     for a, b in sil:
         if b - a < pausa_min or b <= de or a >= ate:
             continue
+        if env is not None:
+            # o silencedetect (-38 dB) marca como silêncio o rabo baixo da palavra ("s", "a" final): a pausa
+            # só começa onde o volume cai de verdade, no limiar medido nesta gravação
+            a, b = bordas.pausa_real(env, a, b)
+            if b - a < pausa_min:
+                continue
         fim = max(a + folga, ini)
-        if fim - ini > 0.25:
+        if fim - ini > 0.12:
             partes.append((ini, min(fim, ate)))
         ini = max(b - folga, ini)
-    if ate - ini > 0.25:
+    if ate - ini > 0.12:
         partes.append((ini, ate))
     return partes
 
@@ -122,16 +129,51 @@ def main():
     # das pausas). O normal é corrigir só o trecho que picotou, com {"folga": 0.15}, depois do conferir.py final.
     if roteiro.get("proteger_palavras"):
         sil = protege_palavras(sil, palavras)
+    # bordas pelo som: o fim escrito no roteiro é chute a partir do COMEÇO da última palavra e cortava a palavra
+    # no meio (18/10/2026, todos os vídeos do dia); aqui o fim vai para o começo do silêncio depois dela e o começo
+    # para o fim do silêncio antes da primeira. {"borda": "manual"} no trecho (ou no roteiro) desliga.
+    env = bordas.envelope(prep / "audio16k.wav")
     cortes, janelas, t = [], [], 0.0
     for tr in roteiro["trechos"]:
         de, ate, nome = tr[:3]
         op = tr[3] if len(tr) > 3 else {}
+        manual = op.get("borda", roteiro.get("borda", "som")) == "manual"
+        if not manual:
+            de2, w0 = bordas.ajustar_inicio(de, palavras, env)
+            ate2, w1 = bordas.ajustar_fim(ate, palavras, env)
+            # trava: o som pode corrigir o chute, não reescrever o roteiro (começo recua no máx. 0,15 s, fim avança no
+            # máx. 0,8 s) e um trecho nunca invade o vizinho do bruto
+            de2, ate2 = max(de2, de - 0.15), min(ate2, ate + 0.8)
+            for outro in roteiro["trechos"]:
+                if outro is tr:
+                    continue
+                # o vizinho também tem a borda achada pelo som: a fronteira entre dois trechos colados é a dele
+                o0 = max(bordas.ajustar_inicio(outro[0], palavras, env)[0], outro[0] - 0.15)
+                o1 = min(bordas.ajustar_fim(outro[1], palavras, env)[0], outro[1] + 0.8)
+                if o1 <= de + 0.02 and o1 > de2:
+                    de2 = o1
+                if o0 >= ate - 0.02 and o0 < ate2:
+                    ate2 = o0
+            if ate2 > de2:
+                if abs(de2 - de) > 0.04 or abs(ate2 - ate) > 0.04:
+                    print(f"borda: {nome} {de:.2f}-{ate:.2f} → {de2:.2f}-{ate2:.2f} (começa em '{w0}', termina depois de '{w1}')")
+                de, ate = de2, ate2
         ini = t
-        for a, b in fatiar(de, ate, sil, op.get("pausa_min", roteiro.get("pausa_min", 0.22)), op.get("folga", roteiro.get("folga", 0.07))):
+        for a, b in fatiar(de, ate, sil, op.get("pausa_min", roteiro.get("pausa_min", 0.22)), op.get("folga", roteiro.get("folga", 0.07)), None if manual else env):
             cortes.append({"de": round(a, 3), "ate": round(b, 3), "trecho": nome, "t0": round(t, 3), "t1": round(t + b - a, 3)})
             t += b - a
         janelas.append({"nome": nome, "t0": round(ini, 3), "t1": round(t, 3)})
     total = round(t, 3)
+    # corte diferente do anterior = vídeo e áudio precisam ser refeitos juntos (sem isso a imagem fica no corte
+    # velho e a voz no novo: legenda e boca dessincronizam)
+    _ant = trabalho / "cortes.json"
+    if not refaz and _ant.exists():
+        try:
+            if json.loads(_ant.read_text(encoding="utf-8")).get("cortes") != cortes:
+                refaz = True
+                print("corte mudou: refazendo vídeo e áudio")
+        except ValueError:
+            refaz = True
 
     def final(tb):
         melhor = None
@@ -312,6 +354,13 @@ def main():
         fim = max(fim, b)
     if info["duracao"] - fim > 0.3:
         saiu.append([round(fim, 2), round(info["duracao"], 2)])
+    # guarda o corte anterior: o remapear_plano.py leva os tempos soltos do plano para o corte novo
+    anterior = trabalho / "cortes.json"
+    if anterior.exists():
+        velho = anterior.read_text(encoding="utf-8")
+        if json.loads(velho).get("cortes") != cortes:
+            (trabalho / "cortes.anterior.json").write_text(velho, encoding="utf-8")
+            print("corte mudou: rode scripts/remapear_plano.py <trabalho> para levar os tempos soltos do plano junto")
     (trabalho / "cortes.json").write_text(json.dumps({"cortes": cortes, "removidos_do_bruto": saiu, "reordenado": [j["nome"] for j in janelas]}, ensure_ascii=False, indent=1), encoding="utf-8")
 
     print(f"{len(cortes)} cortes, {total:.1f}s, {len(pal)} palavras na legenda")

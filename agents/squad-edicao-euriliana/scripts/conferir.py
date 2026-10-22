@@ -243,6 +243,19 @@ def final(trab, video):
     for t0, w in faltas[:20]:
         print(f"  ~{t0:.1f}s: \"{w}\" (pode ser só o Whisper errando nome; ouça o trecho)")
     print(f"fala do vídeo final salva em qa/fala_final.txt ({len(ouvidas)} palavras)")
+    # palavra comida na borda: corte que cai com a voz ainda forte (o erro de 18/10/2026 em todos os vídeos do dia)
+    try:
+        import bordas
+        ruins, _env = bordas.cortes_em_voz(trab)
+        if ruins:
+            print(f"REPROVADO corte-em-voz: {len(ruins)} corte(s) caem no meio da fala (palavra comida):")
+            for r in ruins[:12]:
+                print(f"  trecho {r['trecho']}: {r['lado']} em {r['bruto']}s do bruto ({r['db']} dB)")
+            print("  rode o cortar.py de novo (bordas pelo som ligadas) e o remapear_plano.py; não entregue assim")
+        else:
+            print("  ok  corte-em-voz: nenhum corte no meio de palavra")
+    except Exception as e:  # noqa: BLE001
+        print(f"  ?   corte-em-voz: não deu para medir ({e})")
     # texto que aparece na tela (para o portão checar acento e travessão)
     visiveis = {"texto", "titulo", "etiqueta", "subtitulo", "destaque", "rotulo", "depois", "rodape", "sub", "mes", "autor", "centro", "botao", "linhas", "itens"}
     achados = []
@@ -269,7 +282,12 @@ def final(trab, video):
         # (pausas) ficam descritos no --plano para ele saber que ali só saiu silêncio.
         roteiro = json.loads((trab / "roteiro.json").read_text(encoding="utf-8"))
         partes, mantidos, off = [], [], 0.0
-        for de, ate, nome in roteiro["trechos"]:
+        for de, ate, nome, *_ in roteiro["trechos"]:
+            # a referência é o trecho com as bordas que o cortar.py achou pelo som (não as do roteiro): senão o
+            # portão acusa como "fala removida" o respiro entre o fim chutado e o fim real
+            dele = [c for c in cortes["cortes"] if c["trecho"] == nome]
+            if dele:
+                de, ate = min(c["de"] for c in dele), max(c["ate"] for c in dele)
             p = trab / f"qa/ref_{len(partes):03d}.wav"
             sh(["ffmpeg", "-v", "error", "-y", "-ss", f"{de:.3f}", "-t", f"{ate - de:.3f}", "-i", prep["bruto"], "-vn", "-ar", "48000", "-ac", "1", p])
             partes.append(pf.linha_concat(p))

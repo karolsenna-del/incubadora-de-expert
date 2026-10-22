@@ -18,6 +18,9 @@ Uso: python3 trilhas.py pastas                                   cria as pastas 
      python3 trilhas.py pagina [--copiar <pasta>] [--abrir]      página para ouvir tudo por emoção e marcar o que cortar
      python3 trilhas.py analisar                                 acha em que segundo cada música "fica boa" (parte forte)
      python3 trilhas.py marcar <numero> <segundo>                corrige à mão a parte forte de uma música
+     python3 trilhas.py buscar "<termos em inglês>" [--emocao e] [--quantos 6] [--baixar]
+                                                                 busca na internet (catálogo do Kevin MacLeod, uso livre com crédito)
+     python3 trilhas.py balanco <trabalho> [--aplicar]           mede voz x trilha e acerta o volume no plano.json
      python3 trilhas.py favorita <numero|emocao/arquivo> [...]   marca as preferidas (★ na lista; o squad escolhe entre elas primeiro)
      python3 trilhas.py cortar <numero|emocao/arquivo> [...]     tira da biblioteca (vai para _cortadas/, não baixa de novo)
 A música fica inteira na biblioteca; a parte forte é uma marca (marcas.json). No `usar`, sem pedir nada a música já
@@ -129,8 +132,10 @@ def baixar(emocao=None):
             mm = marcas()
             k = str(destino.relative_to(BIB))
             if not mm.get(k, {}).get("manual"):
-                mm[k] = {"forte_em": x["forte_em"], **({"manual": True} if x.get("forte_manual") else {})}
-                gravar_marcas(mm)
+                mm.setdefault(k, {}).update({"forte_em": x["forte_em"], **({"manual": True} if x.get("forte_manual") else {})})
+            if x.get("top"):
+                mm.setdefault(k, {})["top"] = True
+            gravar_marcas(mm)
         reg[str(destino.relative_to(BIB))] = {k: x.get(k) for k in ("nome", "autor", "pagina", "licenca", "lembra", "credito") if x.get(k)}
     creditos.write_text(json.dumps(reg, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"ok: {novos} baixada(s), {len(itens)} na lista; biblioteca em {BIB}")
@@ -187,7 +192,7 @@ def analisar(tudo=False):
         k = str(f.relative_to(BIB))
         if k in m and not tudo:
             continue
-        m[k] = {"forte_em": parte_forte(f)}
+        m.setdefault(k, {})["forte_em"] = parte_forte(f)
         n += 1
     gravar_marcas(m)
     print(f"ok: {n} música(s) analisada(s); marcas em {BIB / 'marcas.json'}")
@@ -198,7 +203,7 @@ def marcar(numero, segundo):
     if not f:
         sys.exit(f"não achei a trilha {numero}")
     m = marcas()
-    m[str(f.relative_to(BIB))] = {"forte_em": float(segundo), "manual": True}
+    m.setdefault(str(f.relative_to(BIB)), {}).update({"forte_em": float(segundo), "manual": True})
     gravar_marcas(m)
     print(f"ok: {nome(f)} fica boa em {float(segundo):.0f} s (marcado à mão)")
 
@@ -352,7 +357,8 @@ def listar(emocao=None):
             print(f"\n{e.upper()} — {EMOCOES.get(e, '')}")
         info = creditos().get(str(f.relative_to(BIB)), {})
         extra = (f"; lembra: {info['lembra']}" if info.get("lembra") else "") + ("; pede crédito na legenda" if info.get("credito") else "")
-        estrela = "★ " if marcas().get(str(f.relative_to(BIB)), {}).get("favorita") else ""
+        mk = marcas().get(str(f.relative_to(BIB)), {})
+        estrela = "★ " if mk.get("favorita") else ("☆ top da casa · " if mk.get("top") else "")
         print(f"  {n:>3}. {estrela}{info.get('nome') or nome(f)}  ({duracao(f):.0f} s{', liberada para anúncio' if livre(f) else ''}{extra})")
     virais(emocao)
 
@@ -405,8 +411,15 @@ def usar(trab, escolha, inicio=None, forte_no_video=None):
         # sem pedido: entra 2 s antes da parte forte; com --forte-em, a parte forte cai naquele segundo do vídeo
         alvo = 2.0 if forte_no_video is None else forte_no_video
         inicio, atraso = max(0.0, forte - alvo), max(0.0, alvo - forte) if forte_no_video is not None and forte > 0 else 0.0
+        # parte forte pedida bem depois da que a música tem: atrasar deixava o vídeo sem trilha por todo esse tempo
+        # (anúncio de 19/10 ficou 72 s sem música). Começa do início e avisa; para levar a virada mais longe, --inicio.
+        if atraso > 2.0:
+            print(f"aviso: a parte forte está em {forte:.0f} s da música; para cair em {alvo:.0f} s do vídeo a trilha ficaria muda por "
+                  f"{atraso:.0f} s. Começando do início (a parte forte cai em {forte:.0f} s); escolha outro trecho com --inicio")
+            inicio, atraso = 0.0, 0.0
     # aformat: sem ele o libmp3lame recusa alguns MP3 cortados com -ss ("inadequate AVFrame plane padding")
-    filtro = "aresample=44100,aformat=sample_fmts=s16p:channel_layouts=stereo,afade=t=in:d=0.5" + (f",adelay={int(atraso * 1000)}:all=1" if atraso > 0 else "")
+    # loudnorm: toda trilha sai no mesmo volume de referência (-16 LUFS), senão uma música vem 15 dB mais alta que outra
+    filtro = "aresample=44100,aformat=sample_fmts=s16p:channel_layouts=stereo,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=44100,afade=t=in:d=0.5" + (f",adelay={int(atraso * 1000)}:all=1" if atraso > 0 else "")
     sh([pf.FFMPEG, "-v", "error", "-y", "-ss", f"{inicio}", "-i", str(f), "-af", filtro, "-vn",
         "-c:a", "libmp3lame", "-q:a", "2", str(destino)])
     emocao = f.parent.name if f.parent.parent == BIB else "fora da biblioteca"
@@ -415,6 +428,99 @@ def usar(trab, escolha, inicio=None, forte_no_video=None):
     (trab / "trilha.json").write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"ok: {nome(f)} ({emocao}) em {destino}, começando em {inicio:.1f} s da música; a parte forte cai em {forte - inicio + atraso:.1f} s do vídeo"
           + ("" if livre(f) else "\naviso: não liberada para anúncio pago; vale para orgânico (ver references/trilhas.md)"))
+    cred = creditos().get(str(f.relative_to(BIB)) if f.is_relative_to(BIB) else "", {}).get("credito")
+    if cred:
+        print(f"crédito para a legenda: {cred}")
+    if (trab / "app/public/media/voz.wav").is_file():
+        balanco(trab, aplicar=True)
+
+
+def lufs(f):
+    r = subprocess.run([pf.FFMPEG, "-v", "info", "-nostats", "-i", str(f), "-af", "ebur128", "-f", "null", "-"],
+                       capture_output=True, text=True, **pf.UTF8)
+    import re
+    v = re.findall(r"I:\s+(-?[\d.]+) LUFS", r.stderr)
+    return float(v[-1]) if v else None
+
+
+# quantos dB a trilha fica abaixo da voz (fala) e nas cenas cheias, por pirotecnia
+FOLGA = {1: (24, 14), 2: (21, 12), 3: (18, 10)}
+
+
+def balanco(trab, aplicar=False):
+    """Mede o volume da voz e da trilha e calcula o volume da trilha no plano para ela ficar X dB abaixo da fala."""
+    trab = Path(trab)
+    voz, tri, plano = trab / "app/public/media/voz.wav", trab / "app/public/media/trilha.mp3", trab / "app/src/plano.json"
+    if not (voz.is_file() and tri.is_file()):
+        print("balanço: falta voz.wav ou trilha.mp3 no projeto")
+        return
+    lv, lt = lufs(voz), lufs(tri)
+    if lv is None or lt is None:
+        print("balanço: não consegui medir o volume")
+        return
+    pl = json.loads(plano.read_text(encoding="utf-8")) if plano.is_file() else {}
+    fala, cheia = FOLGA.get(int(pl.get("pirotecnia", 2) or 2), FOLGA[2])
+    vol = round(min(0.6, 10 ** ((lv - fala - lt) / 20)), 3)
+    vol_cheia = round(min(0.9, 10 ** ((lv - cheia - lt) / 20)), 3)
+    print(f"balanço: voz {lv:.1f} LUFS, trilha {lt:.1f} LUFS → volume {vol} sob a fala ({fala} dB abaixo) e {vol_cheia} nas cenas cheias")
+    if aplicar and plano.is_file():
+        t = pl.get("trilha") or {}
+        t.update({"src": t.get("src", "media/trilha.mp3"), "volume": vol, "volume_cheia": vol_cheia})
+        pl["trilha"] = t
+        plano.write_text(json.dumps(pl, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"balanço: gravado em {plano}")
+
+
+KM = "https://incompetech.com/music/royalty-free/"
+
+
+def buscar(termos, emocao=None, quantos=6, baixar_=False):
+    """Busca no catálogo do Kevin MacLeod (1.400+ músicas, Creative Commons BY: uso livre, até em anúncio, com crédito)."""
+    cache = BIB / "_cache" / "incompetech.json"
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    if not cache.is_file():
+        req = urllib.request.Request(KM + "pieces.json", headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            cache.write_bytes(r.read())
+    pecas = json.loads(cache.read_text(encoding="utf-8"))
+    ts = [t.lower() for t in termos.split() if len(t) > 2]
+
+    def nota(x):
+        campos = {"title": 3, "feel": 3, "genre": 2, "instruments": 2, "description": 1}
+        return sum(p for c, p in campos.items() for t in ts if t in str(x.get(c) or "").lower())
+
+    def seg(x):
+        try:
+            h, m, s_ = (str(x.get("length") or "0:0:0").split(":") + ["0", "0"])[:3]
+            return int(h) * 3600 + int(m) * 60 + int(s_)
+        except ValueError:
+            return 0
+    achadas = sorted([x for x in pecas if nota(x) and seg(x) >= 45], key=lambda x: -nota(x))[:quantos]
+    if not achadas:
+        print(f"nada para '{termos}' no catálogo; tente outras palavras (em inglês) ou gere uma sob medida")
+        return
+    destino_dir = BIB / (emocao or "internet")
+    reg = creditos()
+    for x in achadas:
+        linha = f"- {x['title']} ({x.get('length')}) · clima: {x.get('feel')} · instrumentos: {x.get('instruments')}"
+        if baixar_:
+            destino_dir.mkdir(parents=True, exist_ok=True)
+            arq = destino_dir / f"livre__{slug(x['title'])}-kevin-macleod.mp3"
+            if not arq.is_file():
+                req = urllib.request.Request(KM + "mp3-royaltyfree/" + urllib.request.quote(x["filename"]), headers={"User-Agent": "Mozilla/5.0"})
+                try:
+                    with urllib.request.urlopen(req, timeout=120) as r, open(arq, "wb") as o:
+                        shutil.copyfileobj(r, o)
+                except Exception as e:
+                    print(f"{linha}\n  falhou o download ({e})")
+                    continue
+            reg[str(arq.relative_to(BIB))] = {"nome": x["title"], "autor": "Kevin MacLeod", "pagina": "https://incompetech.com",
+                                              "licenca": "Creative Commons BY 4.0 (uso livre, inclusive comercial, com crédito)",
+                                              "credito": f'"{x["title"]}" Kevin MacLeod (incompetech.com), licença Creative Commons Atribuição 4.0'}
+            linha += f"\n  baixada: {arq.relative_to(BIB)}"
+        print(linha)
+    if baixar_:
+        (BIB / "fontes.json").write_text(json.dumps(reg, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def main():
@@ -436,6 +542,10 @@ def main():
         amostra(a[1], opc("--seg", 10.0), "--abrir" in a)
     elif a[0] == "usar" and len(a) > 2:
         usar(a[1], a[2], opc("--inicio", None), opc("--forte-em", None))
+    elif a[0] == "buscar" and len(a) > 1:
+        buscar(a[1], a[a.index("--emocao") + 1] if "--emocao" in a else None, int(opc("--quantos", 6)), "--baixar" in a)
+    elif a[0] == "balanco" and len(a) > 1:
+        balanco(a[1], "--aplicar" in a)
     elif a[0] == "analisar":
         analisar("--tudo" in a)
     elif a[0] == "favorita" and len(a) > 1:

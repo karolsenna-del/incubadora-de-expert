@@ -3,7 +3,7 @@
 (para o CTA não correr).
 
 Uso: python3 acelerar.py <entrada.mp4> <saida.mp4> <nivel|fator> [--cartao cartao.mp4]
-Níveis: normal (1,0x, sem acelerar) · pouco (1,10x) · medio (1,20x) · muito (1,25x); ou um número (ex.: 1.15).
+Níveis: normal (1,0x, sem acelerar) · pouco (1,05x) · medio (1,15x) · muito (1,20x); ou um número (ex.: 1.10). Baixados em 18/10/2026 (Euriler: "muito acelerados, um pouquinho menos").
 O cartão vem de uma composição à parte no mesmo projeto (ex.: npx remotion render src/index.ts Encerramento cartao.mp4).
 """
 import subprocess
@@ -23,7 +23,7 @@ def sh(cmd):
         sys.exit(r.stderr[-1200:])
 
 
-NIVEIS = {"normal": 1.0, "sem": 1.0, "pouco": 1.10, "medio": 1.20, "médio": 1.20, "muito": 1.25}
+NIVEIS = {"normal": 1.0, "sem": 1.0, "pouco": 1.05, "medio": 1.15, "médio": 1.15, "muito": 1.20}
 
 
 def main():
@@ -35,7 +35,7 @@ def main():
     rapido = sai if not cartao else sai + ".rapido.mp4"
     filtro = f"[0:v]setpts=PTS/{k},fps=30[v];[0:a]atempo={k}[a]" if k != 1 else "[0:v]fps=30[v];[0:a]anull[a]"
     sh(["ffmpeg", "-v", "error", "-y", "-i", ent, "-filter_complex", filtro,
-        "-map", "[v]", "-map", "[a]", *V, rapido])
+        "-map", "[v]", "-map", "[a]", *V, *([] if cartao else ["-movflags", "+faststart"]), rapido])
     if cartao:
         sh(["ffmpeg", "-v", "error", "-y", "-i", rapido, "-i", cartao, "-filter_complex",
             "[0:v][0:a][1:v][1:a]concat=n=2:v=1:a=1[v][a]", "-map", "[v]", "-map", "[a]", *V, "-movflags", "+faststart", sai])

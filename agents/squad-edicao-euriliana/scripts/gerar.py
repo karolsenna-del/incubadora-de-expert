@@ -332,7 +332,7 @@ def gerar(argv):
                  "params": extra, "custo": custo, "job": job_id, "status": "criado (cobrado)", "aprovado": None}
             lista.append(e)
             entradas.append(e)
-        reg.write_text(json.dumps(lista, ensure_ascii=False, indent=1), encoding="utf-8")
+        salvar_registro(reg, entradas)
         for e in entradas:
             res, erro = esperar_e_baixar(e["job"], cand_dir / e["nome"])
             if erro:
@@ -342,7 +342,7 @@ def gerar(argv):
             destino, url = res
             e.update({"arquivo": str(destino.relative_to(trab / "app/public")), "url": url, "status": "candidato"})
             baixados.append(destino)
-            reg.write_text(json.dumps(lista, ensure_ascii=False, indent=1), encoding="utf-8")
+            salvar_registro(reg, entradas)
     else:
         if "--custo" in argv:
             print({"codex": "sem custo extra (cota do ChatGPT)", "gemini": "cobrado na conta Google do aluno (centavos por imagem; vídeo por segundo)"}.get(fonte, "?"))
@@ -350,10 +350,12 @@ def gerar(argv):
         aspect = _opt(extra, "--aspect_ratio", "9:16")
         refs = [extra[k + 1] for k, a in enumerate(extra) if a in ("--image", "--image-references") and k + 1 < len(extra)]
         inicio = _opt(extra, "--start-image")
+        meus = []
         for v in range(1, variacoes + 1):
             e = {"nome": f"{nome}_v{v}", "base": nome, "fonte": fonte, "prompt_cena": prompt_cena, "prompt": prompt, "status": "pedido", "aprovado": None}
             lista.append(e)
-            reg.write_text(json.dumps(lista, ensure_ascii=False, indent=1), encoding="utf-8")
+            meus.append(e)
+            salvar_registro(reg, meus)
             try:
                 if fonte == "gemini" and video:
                     destino, mod = gemini_video(prompt, aspect, inicio, _opt(extra, "--duration", 6), cand_dir / e["nome"])
@@ -365,12 +367,12 @@ def gerar(argv):
                     sys.exit(f"a fonte {fonte} não faz {tipo}")
             except Exception as erro:
                 e["status"] = f"falhou: {str(erro)[:300]}"
-                reg.write_text(json.dumps(lista, ensure_ascii=False, indent=1), encoding="utf-8")
+                salvar_registro(reg, meus)
                 print(f"{e['nome']}: {e['status']}")
                 continue
             e.update({"modelo": mod, "arquivo": str(destino.relative_to(trab / "app/public")), "status": "candidato"})
             baixados.append(destino)
-            reg.write_text(json.dumps(lista, ensure_ascii=False, indent=1), encoding="utf-8")
+            salvar_registro(reg, meus)
     if not baixados:
         sys.exit("nenhuma variação saiu")
     lado = cand_dir / f"{nome}_lado-a-lado.jpg"
@@ -385,13 +387,68 @@ def gerar(argv):
               f"  python3 {__file__} aprovar {trab} <candidato> --nota N --porque \"...\"   (ou reprovar, e reescreva o prompt)")
 
 
+
+# assets.json é o recibo do gasto e vários gerar.py rodam em paralelo (um por imagem): cada processo grava só as
+# entradas dele, relendo o arquivo sob trava, para um não apagar o registro do outro (aconteceu em 18/10).
+def _trava(reg: Path):
+    import contextlib, uuid as _u
+    @contextlib.contextmanager
+    def cm():
+        lk = reg.with_suffix(".lock")
+        t0 = time.time()
+        while True:
+            try:
+                fd = os.open(str(lk), os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+                os.close(fd)
+                break
+            except FileExistsError:
+                try:
+                    velha = time.time() - lk.stat().st_mtime > 60
+                except FileNotFoundError:
+                    continue
+                if time.time() - t0 > 30 or velha:
+                    try:
+                        lk.unlink()
+                    except FileNotFoundError:
+                        pass
+                    t0 = time.time()
+                time.sleep(0.05)
+        try:
+            yield
+        finally:
+            try:
+                lk.unlink()
+            except FileNotFoundError:
+                pass
+    return cm()
+
+
+def salvar_registro(reg: Path, minhas: list):
+    """Junta as entradas deste processo ao assets.json do disco (pela chave "id"; entrada antiga sem id, pelo arquivo)."""
+    import uuid as _u
+    for e in minhas:
+        e.setdefault("id", _u.uuid4().hex[:12])
+    with _trava(reg):
+        disco = json.loads(reg.read_text(encoding="utf-8")) if reg.exists() else []
+        pos = {e.get("id") or ("arq:" + str(e.get("arquivo"))): i for i, e in enumerate(disco)}
+        for e in minhas:
+            k = e["id"] if e["id"] in pos else ("arq:" + str(e.get("arquivo")))
+            if k in pos and (e["id"] in pos or not disco[pos[k]].get("id")):
+                disco[pos[k]] = e
+            else:
+                disco.append(e)
+                pos[e["id"]] = len(disco) - 1
+        tmp = reg.with_suffix(".tmp")
+        tmp.write_text(json.dumps(disco, ensure_ascii=False, indent=1), encoding="utf-8")
+        os.replace(tmp, reg)
+
 def julgar(argv, aprovar):
     trab, cand = Path(argv[0]), argv[1]
     porque = argv[argv.index("--porque") + 1] if "--porque" in argv else ""
     nota = float(argv[argv.index("--nota") + 1]) if "--nota" in argv else None
     reg = trab / "assets.json"
     lista = json.loads(reg.read_text(encoding="utf-8"))
-    alvo = next((e for e in lista if e.get("arquivo") == cand or Path(e.get("arquivo", "")).name == Path(cand).name), None)
+    alvo = next((e for e in lista if e.get("arquivo") == cand or Path(e.get("arquivo") or "").name == Path(cand).name), None)
     if not alvo:
         sys.exit(f"candidato não encontrado em assets.json: {cand}")
     if aprovar:
@@ -405,7 +462,7 @@ def julgar(argv, aprovar):
     else:
         alvo.update({"aprovado": False, "nota": nota, "porque": porque})
         print(f"reprovado: {cand} ({porque})")
-    reg.write_text(json.dumps(lista, ensure_ascii=False, indent=1), encoding="utf-8")
+    salvar_registro(reg, [alvo])
 
 
 def main():

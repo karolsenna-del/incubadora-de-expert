@@ -86,6 +86,9 @@ const ESTILOS: Record<string, any> = {
   glitch: {estilo: 'bloco', componente: 'glitch', tamanho: 72, contorno: 0, fontes: []},
   tarja: {estilo: 'bloco', componente: 'tarja', tamanho: 72, contorno: 0, fontes: []},
   degrade: {estilo: 'bloco', componente: 'degrade', tamanho: 72, contorno: 0, fontes: []},
+  // glow-emoji (54, reel Db7dEmsoOzM, 12/10): uma palavra por vez com glow branco e emoji em cima; y_componente 1440 deixa o emoji abaixo
+  // do queixo e do pescoço; na cena dividida a palavra sobe para 850 (o padrão 890 encosta na emenda e o emoji cairia sobre o gráfico)
+  'glow-emoji': {estilo: 'bloco', componente: 'glow-emoji', tamanho: 72, contorno: 0, fontes: [], y_componente: 1440, posicao: {dividida: 850}},
   // faixa (template spotlight): até 5 palavras numa faixa escura translúcida arredondada, a falada em amarelo, as outras brancas;
   // y 1230 na abertura em tela cheia e 905 na janela e no painel. É a legenda padrão quando plano.template = "spotlight".
   faixa: {estilo: 'palavra', fonte: 'Hanken Grotesk', peso: 600, tamanho: 46, caixa_alta: false, pontuacao: true, max_palavras: 5, max_letras: 30,
@@ -102,11 +105,11 @@ export const NOMES_ESTILOS = Object.keys(ESTILOS);
 // numeração da folha de amostra (references/estilos-legenda.jpg) e da saudação: "legenda 13" = pinta; 2, 5, 6, 8–12, 14, 21, 23, 24, 26, 30 e 35 foram reprovadas (o número fica reservado)
 const NUMEROS = ['euriler', 'tiktok', 'premium', 'hormozi', 'amarela', 'minima', 'minimalist', 'pilula', 'viral', 'karaoke',
   'neon', 'slam', 'pinta', 'quique', 'bebas-pop', 'cresce', 'sublinhado', 'pilula-clara', 'atras',
-  // 20–53: a vitrine de 04/10 (20 = legenda do motor antigo, guardada para vídeo horizontal)
+  // 20–53: a vitrine de 04/10 (20 = legenda do motor antigo, guardada para vídeo horizontal); 54 = glow-emoji (reel Db7dEmsoOzM, 12/10)
   'ce-atual', 'weight-shift', 'emoji', 'destaque-rosa', 'karaoke-rosa', 'maquina', 'pulo', 'onda', 'brilho', 'digita-apaga',
   'pilula-azul', 'pisca', 'marca-texto', 'desfoque', 'arco-iris', 'escala', 'holofote', 'cortina',
   'editorial', 'inverte', 'impacto', 'emoji-pop', 'camadas', 'lava', 'pilula-cinza', 'camera', 'particulas', 'peso',
-  'neon-forte', 'matrix', 'acento', 'glitch', 'tarja', 'degrade'];
+  'neon-forte', 'matrix', 'acento', 'glitch', 'tarja', 'degrade', 'glow-emoji'];
 // sem número (variação): 'acento-emoji' = a 50 com emojis estourando em cima da frase
 const APELIDOS: Record<string, string> = {corrida: 'ce-atual'};
 // reprovadas pelo Euriler (04/10): saem do motor e ficam no depósito do laboratório
@@ -173,12 +176,13 @@ export const ehEnfase = (w: string) => ENFASE.has(limpa(w));
 // ---- técnica de dinâmica de legenda (ideia do Euriler, 04/10): o vídeo tem uma legenda de leitura tranquila e, no gancho
 // ou nos momentos de destaque, troca por uma legenda forte por alguns segundos. legenda.momentos:
 // [{"de": 0, "ate": 3.2, "estilo_visual": "lava"}, {"de": "virada", "ate": "virada+2", "estilo_visual": 40}]
-// (de/ate em segundos do vídeo final ou momentos-chave; o estilo do momento tem de ser um dos componentes, 22 a 53)
+// (de/ate em segundos do vídeo final ou momentos-chave; o estilo do momento tem de ser um dos componentes, 22 a 54)
 export type Momento = {de: number | string; ate: number | string; estilo_visual: string | number};
-export const MOMENTOS: {de: number | string; ate: number | string; componente: string}[] = ((PLANO.legenda?.momentos ?? []) as Momento[]).map((m) => {
+export const MOMENTOS: {de: number | string; ate: number | string; componente: string; y_componente?: number}[] = ((PLANO.legenda?.momentos ?? []) as Momento[]).map((m) => {
   const n = porNome(m.estilo_visual);
   if (REJEITADAS[n]) throw new Error(`legenda.momentos: a legenda ${n} foi reprovada pelo Euriler (${REJEITADAS[n]})`);
   const e = ESTILOS[n];
-  if (!e?.componente) throw new Error(`legenda.momentos: ${n} não serve para momento (use um dos estilos 22 a 53, como lava, impacto, camadas)`);
-  return {de: m.de, ate: m.ate, componente: e.componente};
+  if (!e?.componente) throw new Error(`legenda.momentos: ${n} não serve para momento (use um dos estilos 22 a 54, como lava, impacto, camadas)`);
+  // a altura do estilo do momento (ex.: glow-emoji, 1440) vale no trecho, a não ser que o plano peça outra em legenda.y_componente
+  return {de: m.de, ate: m.ate, componente: e.componente, y_componente: pedido.y_componente ?? e.y_componente};
 });

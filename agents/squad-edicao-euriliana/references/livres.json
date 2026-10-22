@@ -13,18 +13,6 @@
  },
  {
   "emocao": "emocionante",
-  "nome": "Sad - Sad Music",
-  "autor": "PaulYudin",
-  "mp3": "https://cdn.pixabay.com/download/audio/2026/02/16/audio_6b2cdc0e5a.mp3",
-  "pagina": "https://pixabay.com/music/solo-piano-sad-sad-music-485935/",
-  "segundos": 132,
-  "downloads": 55638,
-  "registro_direitos": true,
-  "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 0
- },
- {
-  "emocao": "emocionante",
   "nome": "Emotional Piano",
   "autor": "AtlasAudio",
   "mp3": "https://cdn.pixabay.com/download/audio/2026/03/28/audio_4ca3e03a16.mp3",
@@ -33,7 +21,8 @@
   "downloads": 29893,
   "registro_direitos": true,
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 0
+  "forte_em": 0,
+  "top": true
  },
  {
   "emocao": "emocionante",
@@ -45,7 +34,8 @@
   "downloads": 22966,
   "registro_direitos": true,
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 0
+  "forte_em": 0,
+  "top": true
  },
  {
   "emocao": "emocionante",
@@ -57,7 +47,8 @@
   "downloads": 14289,
   "registro_direitos": true,
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 42
+  "forte_em": 42,
+  "top": true
  },
  {
   "emocao": "emocionante",
@@ -81,7 +72,8 @@
   "downloads": 267881,
   "registro_direitos": true,
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 0
+  "forte_em": 0,
+  "top": true
  },
  {
   "emocao": "inspirador",
@@ -142,18 +134,6 @@
   "registro_direitos": true,
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
   "forte_em": 0
- },
- {
-  "emocao": "tensao",
-  "nome": "Suspense",
-  "autor": "NastelBom",
-  "mp3": "https://cdn.pixabay.com/download/audio/2026/03/13/audio_b49cc4c9ab.mp3",
-  "pagina": "https://pixabay.com/music/suspense-suspense-501709/",
-  "segundos": 104,
-  "downloads": 40741,
-  "registro_direitos": true,
-  "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 19
  },
  {
   "emocao": "tensao",
@@ -225,7 +205,8 @@
   "downloads": 41676,
   "registro_direitos": true,
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 13
+  "forte_em": 13,
+  "top": true
  },
  {
   "emocao": "energia",
@@ -249,7 +230,8 @@
   "downloads": 16472,
   "registro_direitos": true,
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 11
+  "forte_em": 11,
+  "top": true
  },
  {
   "emocao": "energia",
@@ -684,7 +666,8 @@
   "registro_direitos": true,
   "lembra": "clima de Interstellar (espaço, calmo)",
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 23
+  "forte_em": 23,
+  "top": true
  },
  {
   "emocao": "inspirador",
@@ -697,7 +680,8 @@
   "registro_direitos": true,
   "lembra": "clima de Time (Hans Zimmer)",
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 101
+  "forte_em": 101,
+  "top": true
  },
  {
   "emocao": "inspirador",
@@ -750,20 +734,8 @@
   "registro_direitos": false,
   "lembra": "fundo de discurso motivacional",
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 20
- },
- {
-  "emocao": "inspirador",
-  "nome": "Determination Motivational Speech Background Music",
-  "autor": "alex-morgan",
-  "mp3": "https://cdn.pixabay.com/download/audio/2026/08/17/audio_3bb5216691.mp3",
-  "pagina": "https://pixabay.com/music/build-up-scenes-determination-motivational-speech-background-music-587391/",
-  "segundos": 126,
-  "downloads": 2799,
-  "registro_direitos": false,
-  "lembra": "fundo de discurso motivacional",
-  "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 11
+  "forte_em": 20,
+  "top": true
  },
  {
   "emocao": "tensao",
@@ -776,7 +748,8 @@
   "registro_direitos": false,
   "lembra": "trilha de Oppenheimer",
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 7
+  "forte_em": 7,
+  "top": true
  },
  {
   "emocao": "tensao",
@@ -789,7 +762,8 @@
   "registro_direitos": false,
   "lembra": "clima de A Origem, versão eletrônica escura",
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 107
+  "forte_em": 107,
+  "top": true
  },
  {
   "emocao": "tensao",
@@ -802,7 +776,8 @@
   "registro_direitos": true,
   "lembra": "sintetizador de Stranger Things",
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 0
+  "forte_em": 0,
+  "top": true
  },
  {
   "emocao": "tensao",
@@ -815,7 +790,8 @@
   "registro_direitos": false,
   "lembra": "sintetizador de Stranger Things",
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 0
+  "forte_em": 0,
+  "top": true
  },
  {
   "emocao": "tensao",
@@ -945,7 +921,8 @@
   "registro_direitos": false,
   "lembra": "ambiente lento com eco (linha de Snowfall)",
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 20
+  "forte_em": 20,
+  "top": true
  },
  {
   "emocao": "nostalgico",
@@ -984,7 +961,8 @@
   "registro_direitos": false,
   "lembra": "Sonata ao Luar, de Beethoven (clássica, domínio público)",
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
-  "forte_em": 6
+  "forte_em": 6,
+  "top": true
  },
  {
   "emocao": "emocionante",
@@ -998,7 +976,8 @@
   "lembra": "Cânone em Ré, de Pachelbel (clássica, domínio público)",
   "licenca": "Pixabay Content License (uso livre, inclusive comercial e anúncio, sem crédito obrigatório)",
   "forte_em": 95.0,
-  "forte_manual": true
+  "forte_manual": true,
+  "top": true
  },
  {
   "emocao": "fe",

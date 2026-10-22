@@ -1,5 +1,5 @@
 // ARQUIVO GERADO: não edite. Fonte: arka1/packages/legendas-euriliana/src (monte com montar.mjs).
-// Estilos 22 a 53 da Edição Euriliana (captioneer e remotion-captions-kit: MIT; HyperFrames: Apache-2.0).
+// Estilos 22 a 54 da Edição Euriliana (captioneer e remotion-captions-kit: MIT; HyperFrames: Apache-2.0; o 54, glow-emoji, é da casa).
 /* eslint-disable */
 
 // packages/legendas-euriliana/src/estilos/c/bounce-emoji.tsx
@@ -1672,6 +1672,348 @@ var PillKaraoke = () => {
   }) }, li)) }) }) });
 };
 
+// packages/legendas-euriliana/src/estilos/d/glow-emoji.tsx
+import { useCurrentFrame as useCurrentFrame30 } from "remotion";
+import { loadFont as loadFont27 } from "@remotion/google-fonts/Montserrat";
+import { PLANO as PLANO4 } from "./contexto";
+
+// packages/legendas-euriliana/src/estilos/d/emojis-auto.ts
+var GE_VARIEDADE = 20;
+var GE_MIN_PALAVRAS = 3;
+var GE_VIS_MIN = 0.25;
+var geNormalizar = (w) => String(w ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+var GE_LIGACAO = new Set("a o as os um uma uns umas de do da dos das em no na nos nas por pelo pela pelos pelas para pra com sem sob sobre entre ate e ou mas porque que se como quando onde mais menos muito muita muitos muitas pouco ja ainda tambem so apenas nao sim eu tu ele ela voce voces eles elas me te lhe meu minha seu sua nosso nossa isso isto esse essa este esta aquilo aquele aquela aqui ali la ser sou eh era foi sao ta tava estao estou tem tinha teve ha ter vai vou vamos va ir fazer faz fez pode poder deve dever tudo todo toda todos todas cada outro outra mesmo mesma entao depois antes agora hoje ontem sempre nunca".split(" "));
+var GE_DICIONARIO = [
+  // emoções e estados
+  ["amor amo amar amei amou amando paixao apaixonado apaixonada", "❤️", 3],
+  ["coracao coracoes", "❤️", 3],
+  ["medo medos assustado assustada assusta assustou susto", "😱", 3],
+  ["raiva odio bravo brava irritado irritada", "😡", 3],
+  ["feliz felizes felicidade alegria alegre", "😄", 3],
+  ["triste tristeza", "😢", 3],
+  ["choro chorar chorou chorando", "😭", 3],
+  ["rir riu risada risadas riso gargalhada", "😂", 3],
+  ["surpresa surpreso chocado chocada", "😮", 3],
+  ["sono dormir dormi dormiu dormia dormindo", "😴", 3],
+  ["cansado cansada cansaco exausto exausta", "😩", 3],
+  ["vergonha", "😳", 3],
+  ["ansiedade ansioso ansiosa nervoso nervosa", "😰", 3],
+  ["sorte", "🍀", 3],
+  ["sonho sonhos sonhar sonhei", "💭", 2],
+  ["pensar pensei pensou pensamento pensamentos duvida duvidas", "🤔", 2],
+  ["festa festas comemorar comemorou celebrar celebrou parabens", "🎉", 3],
+  // números e valores
+  ["zero", "0️⃣", 3],
+  ["dois duas", "2️⃣", 3],
+  ["tres", "3️⃣", 3],
+  ["quatro", "4️⃣", 3],
+  ["cinco", "5️⃣", 3],
+  ["seis", "6️⃣", 3],
+  ["sete", "7️⃣", 3],
+  ["oito", "8️⃣", 3],
+  ["nove", "9️⃣", 3],
+  ["dez", "🔟", 3],
+  ["cem", "💯", 3],
+  ["reais dolares dolar euros", "💵", 3],
+  // dinheiro e negócio
+  ["dinheiro grana lucro lucros lucrar faturamento faturar faturei faturou rico rica riqueza salario salarios renda", "💰", 3],
+  ["venda vendas vender vendi vendeu vende vendem vendedor vendedora", "💸", 2],
+  ["cliente clientes parceria parcerias parceiro parceiros", "🤝", 2],
+  ["comprar compro comprei comprou compra compras carrinho", "🛒", 2],
+  ["pagar paguei pagou pagamento pagamentos cartao cartoes pix", "💳", 2],
+  ["oferta ofertas promocao promocoes desconto descontos barato barata preco precos", "🏷️", 2],
+  ["gratis gratuito gratuita", "🆓", 2],
+  ["loja lojas", "🏪", 3],
+  ["empresa empresas", "🏢", 3],
+  ["negocio negocios trabalho trabalhos emprego", "💼", 1.2],
+  ["entrega entregas pacote pacotes enviar enviei enviou", "📦", 2],
+  ["presente presentes brinde brindes bonus", "🎁", 3],
+  ["lancamento lancamentos lancar lancei lancou lancando decolar decolou", "🚀", 2],
+  ["marketing anuncio anuncios propaganda publicidade", "📣", 2],
+  ["meta metas objetivo objetivos alvo alvos foco", "🎯", 2],
+  // objetos e lugares
+  ["celular celulares smartphone telefone telefones app apps aplicativo aplicativos", "📱", 3],
+  ["digital", "📱", 2],
+  ["computador computadores notebook laptop", "💻", 3],
+  ["tecnologia", "💻", 2],
+  ["camera cameras filmar filmei filmou video videos", "🎥", 3],
+  ["gravar gravei gravou gravacao gravacoes", "🎥", 2],
+  ["foto fotos", "📸", 3],
+  ["microfone microfones podcast", "🎙️", 3],
+  ["livro livros ebook ebooks", "📚", 3],
+  ["curso cursos aula aulas estudar estudei estudou estudo aprender aprendi aprendeu aprendizado", "🎓", 2],
+  ["casa casas lar", "🏠", 3],
+  ["carro carros", "🚗", 3],
+  ["aviao avioes voar voei voou voo viagem viagens viajar viajei viajou", "✈️", 3],
+  ["foguete foguetes", "🚀", 3],
+  ["relogio relogios", "⏰", 3],
+  ["hora horas", "⏰", 2],
+  ["tempo", "⏰", 1.2],
+  ["calendario agenda prazo prazos", "📅", 2],
+  ["email emails", "📧", 3],
+  ["mensagem mensagens whatsapp zap chat conversa conversas", "💬", 3],
+  ["chave chaves senha senhas", "🔑", 3],
+  ["cadeado cadeados seguranca proteger protecao", "🔒", 2],
+  ["bomba bombas explosao explodir explodiu impacto quebrar quebrei quebrou", "💥", 2],
+  ["fogo queimar queimou", "🔥", 3],
+  ["agua", "💧", 3],
+  ["mundo planeta", "🌎", 2],
+  ["sol", "☀️", 3],
+  ["chuva", "🌧️", 3],
+  ["lua", "🌙", 3],
+  ["estrela estrelas", "⭐", 3],
+  ["comida comer comi comeu fome almoco jantar", "🍽️", 3],
+  ["cafe", "☕", 3],
+  ["pizza", "🍕", 3],
+  ["remedio remedios", "💊", 3],
+  ["hospital", "🏥", 3],
+  ["escola", "🏫", 3],
+  ["ideia ideias", "💡", 2],
+  ["grafico graficos crescer cresci cresceu cresce crescimento crescendo aumentar aumentou aumento", "📈", 2],
+  ["cair caiu queda quedas perder perdi perdeu perdendo", "📉", 2],
+  ["trofeu trofeus vencer venci venceu vitoria vitorias ganhar ganhei ganhou ganha campeao campea", "🏆", 2],
+  ["medalha medalhas", "🏅", 3],
+  ["coroa rei rainha", "👑", 3],
+  ["diamante diamantes", "💎", 3],
+  ["lupa pesquisar pesquisei pesquisou pesquisa buscar busquei busca procurar procurei", "🔍", 2],
+  ["ferramenta ferramentas", "🛠️", 3],
+  ["construir construi construiu construcao", "🏗️", 2],
+  ["internet site sites online link links", "🌐", 3],
+  ["youtube", "▶️", 3],
+  ["texto textos escrever escrevi escreveu", "✍️", 2],
+  ["ler li leu leitura", "📖", 2],
+  // pessoas, corpo e ideias
+  ["forca forte fortes fortalecer musculo musculos", "💪", 3],
+  ["energia raio", "⚡", 2],
+  ["gente pessoas pessoa publico audiencia comunidade equipe time seguidores multidao", "👥", 1.2],
+  ["familia familias filho filha filhos filhas", "👨‍👩‍👧‍👦", 3],
+  ["bebe bebes", "👶", 3],
+  ["cerebro inteligencia", "🧠", 3],
+  ["ia ias robo robos", "🤖", 3],
+  ["olho olhos olhar olhei olhou", "👀", 3],
+  ["ouvir ouvi ouviu escutar escutei ouvido", "👂", 3],
+  ["mao maos", "✋", 3],
+  ["segredo segredos secreto secreta escondido escondida", "🤫", 3],
+  ["pergunta perguntas perguntar perguntei", "❓", 2],
+  ["alerta alertas atencao cuidado perigo perigoso problema problemas risco riscos", "⚠️", 2],
+  ["erro erros errado errada errar errei falha falhas falhar", "❌", 2],
+  ["aprovado aprovada", "✅", 2],
+  ["parar pare parou", "🛑", 2],
+  ["proibido proibida", "🚫", 2],
+  ["novidade novidades", "🆕", 2],
+  ["brilho brilhar brilhou", "✨", 2],
+  ["correr corri correu correndo corrida", "🏃", 2],
+  ["treino treinos treinar treinei treinou academia malhar malhei", "🏋️", 2],
+  ["luta lutar lutei lutou batalha", "🥊", 2],
+  ["futebol bola gol", "⚽", 3],
+  ["musica musicas cantar cantei cantou som", "🎵", 3],
+  ["tigre", "🐯", 3],
+  ["leao", "🦁", 3],
+  ["aguia", "🦅", 3],
+  ["cachorro", "🐶", 3],
+  ["gato", "🐱", 3],
+  ["tubarao", "🦈", 3],
+  ["fantasma", "👻", 3],
+  // fé
+  ["deus oracao oracoes orar orei rezar gratidao agradecer obrigado obrigada", "🙏", 2],
+  ["jesus cristo cruz", "✝️", 3],
+  ["biblia", "📖", 3],
+  ["igreja", "⛪", 3],
+  ["paz", "🕊️", 2]
+];
+var GE_MAPA = /* @__PURE__ */ new Map();
+GE_DICIONARIO.forEach(([ps, emoji, carga]) => ps.split(" ").forEach((p) => GE_MAPA.set(p, { emoji, carga })));
+var GE_TAMANHO_DICIONARIO = GE_MAPA.size;
+var gePlural = (n) => {
+  const f = [];
+  if (n.length > 3 && n.endsWith("oes")) f.push(n.slice(0, -3) + "ao");
+  if (n.length > 3 && n.endsWith("aes")) f.push(n.slice(0, -3) + "ao");
+  if (n.length > 3 && n.endsWith("es")) f.push(n.slice(0, -2));
+  if (n.length > 2 && n.endsWith("s")) f.push(n.slice(0, -1));
+  return f;
+};
+var geFormas = (n) => {
+  const f = [n, ...gePlural(n)];
+  if (n.length > 3 && n.endsWith("a")) f.push(n.slice(0, -1) + "o");
+  if (n.length > 3 && n.endsWith("as")) f.push(n.slice(0, -2) + "o");
+  return f;
+};
+var geBusca = (n) => {
+  for (const f of geFormas(n)) {
+    const a = GE_MAPA.get(f);
+    if (a) return a;
+  }
+  return void 0;
+};
+var escolherEmojis = (ps, o) => {
+  const expl = /* @__PURE__ */ new Map();
+  const chaves = [];
+  const naoCasaram = [];
+  Object.entries(o.explicitos).forEach(([k, v]) => {
+    if (!v || typeof v !== "string") return;
+    if (/\s/.test(k.trim())) {
+      naoCasaram.push(`${k} (vale uma palavra só)`);
+      return;
+    }
+    const n = geNormalizar(k);
+    if (!n) return;
+    chaves.push({ orig: k, usada: false });
+    [n, ...gePlural(n)].forEach((f) => {
+      if (!expl.has(f)) expl.set(f, { emoji: v, chave: chaves.length - 1 });
+    });
+  });
+  const cands = [];
+  const descartados = [];
+  let pos = -1;
+  ps.forEach((p, i) => {
+    const n = geNormalizar(p.w);
+    if (!n) return;
+    pos++;
+    let emoji;
+    let base2 = 0;
+    let explicito = false;
+    for (const f of geFormas(n)) {
+      const e = expl.get(f);
+      if (e) {
+        emoji = e.emoji;
+        explicito = true;
+        base2 = 100;
+        chaves[e.chave].usada = true;
+        break;
+      }
+    }
+    if (!emoji && o.auto && !GE_LIGACAO.has(n)) {
+      const a = geBusca(n);
+      if (a) {
+        emoji = a.emoji;
+        base2 = a.carga;
+      }
+    }
+    if (!emoji) return;
+    if (p.vis !== void 0 && p.vis < GE_VIS_MIN) {
+      descartados.push({ i, w: p.w, emoji, motivo: `a palavra fica menos de ${GE_VIS_MIN} s na tela (o emoji piscaria)`, explicito });
+      return;
+    }
+    const prox = ps[i + 1];
+    let score = base2;
+    if (o.enfase?.has(n)) score += 2;
+    if (/[.,!?;:…]$/.test(String(p.w).trim()) || prox && prox.t0 - p.t1 > 0.3) score += 0.2;
+    if (n.length >= 6) score += 0.1;
+    cands.push({ i, w: p.w, emoji, score, t0: p.t0, explicito, pos });
+  });
+  chaves.forEach((c2) => {
+    if (!c2.usada) naoCasaram.push(c2.orig);
+  });
+  cands.sort(o.auto ? (a, b) => b.score - a.score || a.t0 - b.t0 : (a, b) => a.t0 - b.t0);
+  const aceitos = [];
+  for (const c2 of cands) {
+    const perto = aceitos.find((a) => Math.abs(a.t0 - c2.t0) < o.gap || Math.abs(a.pos - c2.pos) < GE_MIN_PALAVRAS);
+    const igual = aceitos.find((a) => a.emoji === c2.emoji && Math.abs(a.t0 - c2.t0) < GE_VARIEDADE);
+    if (perto || igual) {
+      descartados.push({ i: c2.i, w: c2.w, emoji: c2.emoji, motivo: perto ? `perto demais de "${perto.w}" (menos de ${o.gap} s ou ${GE_MIN_PALAVRAS} palavras)` : `${c2.emoji} já apareceu em "${igual.w}" há menos de ${GE_VARIEDADE} s`, explicito: c2.explicito });
+      continue;
+    }
+    aceitos.push(c2);
+  }
+  return { emojis: new Map(aceitos.map((a) => [a.i, a.emoji])), descartados, naoCasaram };
+};
+
+// packages/legendas-euriliana/src/estilos/d/glow-emoji.tsx
+import { Fragment as Fragment8, jsx as jsx30, jsxs as jsxs13 } from "react/jsx-runtime";
+var { fontFamily: fontFamily25, waitUntilDone: waitUntilDone8 } = loadFont27("normal", { weights: ["800"], subsets: ["latin", "latin-ext"] });
+var GE_FONTE_EMOJI = '"Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif';
+var GE_FILTRO = "glow-emoji-h";
+var GE_PLANO = PLANO4.legenda ?? {};
+var GE_K = (VERTICAL2 ? W : 0.75 * H) / 1080;
+var geNum = (v, padrao) => {
+  const n = typeof v === "string" && v.trim() !== "" ? Number(v) : v;
+  return typeof n === "number" && Number.isFinite(n) ? n : padrao;
+};
+var GE_EMOJI_LADO = geNum(GE_PLANO.emoji_tamanho, 120) * GE_K;
+var GE_EMOJI_FOLGA = geNum(GE_PLANO.emoji_folga, 12) * GE_K;
+var GE_NIVEIS = /* @__PURE__ */ new Map([["baixa", 7], ["media", 4], ["alta", 2.5]]);
+var GE_SEM_EMOJI = /* @__PURE__ */ new Set(["nenhuma", "nenhum", "sem", "zero", "off", "false"]);
+var geDens = GE_PLANO.emoji_densidade ?? GE_PLANO.emojiDensidade;
+var geDensNum = geNum(geDens, -1);
+var geDensNome = geNormalizar(String(geDens ?? "media"));
+var GE_DESLIGADO = geDens === false || GE_SEM_EMOJI.has(geDensNome);
+var GE_GAP = geDensNum >= 0 ? geDensNum : GE_NIVEIS.get(geDensNome) ?? 4;
+if (geDens !== void 0 && !GE_DESLIGADO && geDensNum < 0 && !GE_NIVEIS.has(geDensNome)) console.warn(`glow-emoji: emoji_densidade desconhecida (${geDens}); use baixa, media, alta, nenhuma ou um número de segundos. Ficou media.`);
+var GE_ALTURA = 600 * GE_K;
+var GE_MAX_W = 0.88 * (VERTICAL2 ? W : 0.75 * H);
+var GE_SOMBRA = [[12, 1], [36, 0.85], [90, 0.6]].map(([r, a]) => `0 0 ${r * GE_K}px rgba(255,255,255,${a})`).join(", ");
+var GE_CAPS = 0.7;
+var GE_ACENTO = 0.22;
+var GE_TEM_ACENTO = /[ÁÀÂÃÄÉÈÊËÍÌÎÏÓÒÔÕÖÚÙÛÜ]/;
+var geTexto = (w) => String(w ?? "").normalize("NFC").replace(/^[^\p{L}\p{N}$]+/u, "").replace(/[^\p{L}\p{N}%]+$/u, "").trim().toUpperCase();
+var GE_NF = Math.ceil(TOTAL * FPS);
+var GE_BRUTAS = PALAVRAS.map((p, i) => ({ i, p, txt: geTexto(p.w) })).filter((b) => b.txt);
+var geAnterior = -Infinity;
+var GE_ITENS = GE_BRUTAS.map((b, k) => {
+  const f0 = Math.max(Math.round(b.p.t0 * FPS), geAnterior + 2);
+  geAnterior = f0;
+  return { k, i: b.i, txt: b.txt, f0, f1: 0 };
+});
+GE_ITENS.forEach((it, k) => {
+  const prox = GE_ITENS[k + 1] ? GE_ITENS[k + 1].f0 : GE_NF;
+  it.f1 = Math.max(it.f0 + 1, Math.min(prox, Math.round((GE_BRUTAS[k].p.t1 + SEGURA) * FPS), GE_NF));
+});
+var geCache = null;
+var geEmojis = () => {
+  if (geCache) return geCache;
+  if (GE_DESLIGADO) return geCache = /* @__PURE__ */ new Map();
+  const explicitos = {};
+  Object.entries(GE_PLANO.emojis ?? {}).forEach(([k, v]) => {
+    if (typeof v === "string" && v) explicitos[k] = v;
+  });
+  const enfase = temEnfaseNoPlano ? new Set([...ENFASE_DO_PLANO].map(geNormalizar)) : null;
+  const r = escolherEmojis(
+    GE_BRUTAS.map((b, k) => ({ w: b.p.w, t0: b.p.t0, t1: b.p.t1, vis: (GE_ITENS[k].f1 - GE_ITENS[k].f0) / FPS })),
+    { explicitos, enfase, gap: GE_GAP, auto: Object.keys(explicitos).length === 0 }
+  );
+  r.descartados.filter((d) => d.explicito).forEach((d) => console.warn(`glow-emoji: o emoji ${d.emoji} de "${d.w}" ficou de fora: ${d.motivo} (legenda.emoji_densidade muda isso)`));
+  r.naoCasaram.forEach((c2) => console.warn(`glow-emoji: "${c2}" em legenda.emojis não casou com nenhuma palavra da fala`));
+  console.warn(`glow-emoji: emojis escolhidos (${Object.keys(explicitos).length ? "lista do plano" : "automático"}): ${[...r.emojis.entries()].map(([k, e]) => `${GE_BRUTAS[k].txt}${e}@${GE_BRUTAS[k].p.t0.toFixed(1)}s`).join(" ") || "nenhum"}`);
+  return geCache = r.emojis;
+};
+var geEfeito = (it, f) => {
+  const dur = it.f1 - it.f0;
+  const desde = f - it.f0;
+  const ate = it.f1 - 1 - f;
+  const lado = it.i % 2 === 0 ? -1 : 1;
+  if (dur >= 4 && desde === 0) return { sx: 28, dx: 0, op: 0.85 };
+  if (dur >= 4 && ate === 0) return { sx: 30, dx: lado * 22, op: 0.85 };
+  if (dur >= 9 && desde === 1 || dur < 4 && desde === 0) return { sx: 9, dx: 0, op: 1 };
+  if (dur >= 9 && ate === 1) return { sx: 15, dx: lado * 10, op: 1 };
+  return { sx: 0, dx: 0, op: 1 };
+};
+var GE_BASE = 0;
+var geTamanho = (t) => {
+  if (!GE_BASE) GE_BASE = Math.round(100 * 0.58 * (VERTICAL2 ? W : 0.75 * H) / mede("DAUGHTER", `800 100px "${fontFamily25}"`));
+  return cabe(t, GE_BASE, "800", fontFamily25, GE_MAX_W, "", 0, 0.3);
+};
+var GlowEmoji = () => {
+  const pronto = useFontes([waitUntilDone8]);
+  const f = useCurrentFrame30();
+  if (!pronto) return null;
+  let it;
+  for (const x of GE_ITENS) if (f >= x.f0 && f < x.f1) it = x;
+  if (!it) return null;
+  const emoji = geEmojis().get(it.k);
+  const { sx, dx, op } = geEfeito(it, f);
+  const fs2 = geTamanho(it.txt);
+  const topoLetras = Y_CENTRO - fs2 * (GE_CAPS / 2 + (GE_TEM_ACENTO.test(it.txt) ? GE_ACENTO : 0));
+  const caixaEmoji = { position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: GE_FONTE_EMOJI, fontSize: GE_EMOJI_LADO * 0.86, lineHeight: 1 };
+  return /* @__PURE__ */ jsxs13(Fragment8, { children: [
+    /* @__PURE__ */ jsx30("svg", { width: 0, height: 0, style: { position: "absolute" }, "aria-hidden": true, children: /* @__PURE__ */ jsx30("filter", { id: GE_FILTRO, x: "-15%", y: "-15%", width: "130%", height: "130%", colorInterpolationFilters: "sRGB", children: /* @__PURE__ */ jsx30("feGaussianBlur", { in: "SourceGraphic", stdDeviation: `${sx * GE_K} 0` }) }) }),
+    /* @__PURE__ */ jsx30("div", { style: { position: "absolute", left: 0, width: W, top: Y_CENTRO - GE_ALTURA / 2, height: GE_ALTURA, display: "flex", alignItems: "center", justifyContent: "center", opacity: op, transform: dx ? `translateX(${dx * GE_K}px)` : void 0, filter: sx ? `url(#${GE_FILTRO})` : void 0 }, children: /* @__PURE__ */ jsx30("div", { style: { fontFamily: fontFamily25, fontWeight: 800, fontSize: fs2, lineHeight: 1, color: "#FFFFFF", whiteSpace: "nowrap", textShadow: GE_SOMBRA }, children: it.txt }) }),
+    emoji ? /* @__PURE__ */ jsxs13("div", { style: { position: "absolute", left: (W - GE_EMOJI_LADO) / 2, top: topoLetras - GE_EMOJI_FOLGA - GE_EMOJI_LADO, width: GE_EMOJI_LADO, height: GE_EMOJI_LADO, opacity: op }, children: [
+      /* @__PURE__ */ jsx30("div", { style: { ...caixaEmoji, filter: `blur(${12 * GE_K}px)`, opacity: 0.7 }, children: emoji }),
+      /* @__PURE__ */ jsx30("div", { style: caixaEmoji, children: emoji })
+    ] }) : null
+  ] });
+};
+
 // packages/legendas-euriliana/src/index.ts
 var COMPONENTES = {
   "pilula-cinza": PillKaraoke,
@@ -1729,8 +2071,10 @@ var COMPONENTES = {
   // 51 · glitch-rgb
   tarja: Highlight,
   // 52 · highlight (cor da tarja: legenda.cor_destaque)
-  degrade: GradientFill
+  degrade: GradientFill,
   // 53 · gradient-fill
+  "glow-emoji": GlowEmoji
+  // 54 · feito na casa a partir do reel Db7dEmsoOzM (12/10): uma palavra com glow branco, borrão horizontal e emoji em cima
 };
 export {
   COMPONENTES

@@ -227,6 +227,19 @@ def avisar_saltos(prep):
                   "Rode de novo com --alvo <segundo em que só a pessoa principal aparece>.", flush=True)
 
 
+def avisar_deriva(bruto, wav):
+    """compara a duração do vídeo com a do áudio extraído: diferença grande = clipes emendados com áudio fora do lugar"""
+    def dur(arq, sel):
+        r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", sel, "-show_entries", "stream=duration:format=duration",
+                            "-of", "csv=p=0", str(arq)], capture_output=True, text=True, **pf.UTF8)
+        nums = [float(x) for x in r.stdout.replace(",", "\n").split() if x.replace(".", "", 1).isdigit()]
+        return nums[0] if nums else None
+    v, a = dur(bruto, "v:0"), dur(wav, "a:0")
+    if v and a and abs(v - a) > 0.15:
+        print(f"AVISO: áudio ({a:.2f}s) e vídeo ({v:.2f}s) com durações diferentes. Se o bruto é de clipes emendados, "
+              "junte de novo com o áudio alinhado (concat por filtro, com re-encode) antes de seguir: senão o corte come palavra.", flush=True)
+
+
 def silencios(prep):
     saida = prep / "silencios.json"
     if saida.exists():
@@ -256,7 +269,11 @@ def main():
     fonte = converter_cor(bruto, info, prep)
     info["fonte"] = str(fonte.resolve()) if not fonte.is_symlink() else str(fonte)
     if not (prep / "audio16k.wav").exists():
-        sh(["ffmpeg", "-v", "error", "-y", "-i", bruto, "-vn", "-ac", "1", "-ar", "16000", prep / "audio16k.wav"])
+        # aresample=async=1:first_pts=0 põe o áudio no relógio da imagem: bruto feito de clipes emendados (concat
+        # com -c copy) tem buracos no áudio, e o áudio corrido ia atrasando em relação ao vídeo; a transcrição e
+        # os silêncios saíam no tempo errado e o corte comia o fim das frases (vídeo da Mei, 18/10/2026)
+        sh(["ffmpeg", "-v", "error", "-y", "-i", bruto, "-vn", "-af", "aresample=async=1:first_pts=0", "-ac", "1", "-ar", "16000", prep / "audio16k.wav"])
+        avisar_deriva(bruto, prep / "audio16k.wav")
     palavras = transcrever(prep)
     rostos(fonte, prep, info)
     if alvo is not None:

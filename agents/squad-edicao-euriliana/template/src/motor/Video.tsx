@@ -223,8 +223,10 @@ const Legenda: React.FC = () => {
   if (componente) {
     const Comp = COMPONENTES[componente];
     if (!Comp) throw new Error(`legenda: componente ${componente} não está em motor/legendas-extra.js`);
-    const alvo = c?.props?.legenda_y ?? (lay === 'dividida' && VERTICAL ? POS_LEG.dividida : LEG.y_componente);
-    const sobe = alvo !== undefined ? alvo + 30 - 1250 : 0;
+    const yComp = mom ? mom.y_componente ?? LEG.y_componente : LEG.y_componente;
+    const alvoBruto = c?.props?.legenda_y ?? (lay === 'dividida' && VERTICAL ? POS_LEG.dividida : yComp);
+    const alvo = alvoBruto === undefined ? undefined : Number(alvoBruto);
+    const sobe = alvo !== undefined && Number.isFinite(alvo) ? alvo + 30 - 1250 : 0;
     return <AbsoluteFill style={{transform: `translateY(${VERTICAL ? sobe : 0}px)`}}><Comp /></AbsoluteFill>;
   }
   if (LEG.estilo === 'corrida') return <LegendaCorrida c={c} lay={lay} />;
