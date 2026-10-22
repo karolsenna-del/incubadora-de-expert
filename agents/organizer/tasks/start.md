@@ -28,7 +28,7 @@ Mostrar greeting definido no agent.
 
 ### Step 4: Aguardar Comando
 
-| Expert diz | Modo |
+| Aluno diz | Modo |
 |-----------|------|
 | "ta bagunçado", "avalia", "diagnostico" | *diagnose |
 | "organiza", "arruma", "cria estrutura" | *architect |

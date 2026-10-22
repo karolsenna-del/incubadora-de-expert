@@ -8,3 +8,4 @@ GLOBAL_RULE_4=Antes de criar algo novo, verificar se ja existe (REUSE > ADAPT > 
 GLOBAL_RULE_5=Salvar estado no documento de trabalho antes de operacoes longas
 GLOBAL_RULE_6=Atualizar documento de trabalho ao concluir etapas
 GLOBAL_RULE_7=Em troca de agente, gerar handoff artifact compacto
+GLOBAL_RULE_8=Ao concluir cada tarefa, salvar onde parou e as decisoes na memoria (rule memoria-inteligente) e avisar em uma linha

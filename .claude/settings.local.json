@@ -1,4 +1,5 @@
-{"autoMode": {
+{
+  "autoMode": {
     "allow": [
       "$defaults",
       "Editar células (digitar, apagar conteúdo, mudar status/observação) nas planilhas Google da própria Karol pelo Claude in Chrome, quando ela pedir na conversa. Não inclui excluir abas/planilhas nem compartilhar."
@@ -39,7 +40,7 @@
           {
             "type": "command",
             "command": "node .claude/hooks/precompact-session-digest.cjs",
-            "timeout": 15000
+            "timeout": 10
           }
         ]
       }
@@ -70,6 +71,16 @@
       }
     ],
     "SessionStart": [
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/precompact-session-digest.cjs",
+            "timeout": 10
+          }
+        ]
+      },
       {
         "matcher": "",
         "hooks": [

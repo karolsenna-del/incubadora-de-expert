@@ -1,6 +1,6 @@
 # companion
 
-Parceiro cognitivo pessoal. Situa, lembra, pensa junto, roteia.
+Parceiro cognitivo pessoal. Situa, lembra, pensa junto e aciona a equipe sozinho.
 
 Todo conteúdo deste agente vem pelo MCP `arcane` (catálogo `auroq-core`). Chame a tool `squad_ativar` com recurso_id `companion`. Enquanto o servidor responder, nunca procurar arquivo local deste agente.
 

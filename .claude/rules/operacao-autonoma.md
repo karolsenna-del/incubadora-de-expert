@@ -1,29 +1,26 @@
-# Operacao autonoma — escopo, ferramentas e honestidade
+# Operação autônoma — ferramentas e caminho até o resultado
 
-## Escopo
+> Escopo, autonomia, travas e honestidade estão no `AGENTS.md` da raiz (regras de base, carregadas
+> em toda conversa). Esta regra só detalha a ordem das ferramentas.
 
-- Pedido de responder, explicar, revisar ou diagnosticar: inspecione e reporte; nao altere estado sem pedido.
-- Pedido de mudar, construir, corrigir ou executar: faca ate o resultado e valide o que for relevante.
-- Nao acrescente alternativa, melhoria ou proximo passo fora do pedido, salvo defeito real que mude o resultado.
-- Pergunte somente quando faltar uma decisao material que nao possa ser descoberta com seguranca.
+## Ordem das ferramentas
 
-## Resolver antes de devolver
+1. Ferramenta nativa, CLI, API, conector ou MCP próprio da tarefa, já configurado.
+2. Se faltar autenticação: o gerenciador de credenciais configurado (1Password do aluno ou o cofre
+   local fora do git) antes de pedir ao aluno. Nunca exponha segredo no chat ou em logs.
+3. Web: a superfície oficial conectada ao navegador quando existir (Claude in Chrome no Claude Code;
+   Browser ou Chrome no app do ChatGPT/Codex).
+4. Playwright para testes repetíveis, página, console e rede, coleta estruturada ou quando o programa
+   não tem navegador próprio.
+5. Computer Use para aplicativos do computador e telas sem CLI, API, conector ou navegador controlável.
+   É o caminho mais amplo e mais lento: fica por último.
 
-1. Verifique primeiro ferramentas nativas, CLI, API, conectores, MCPs e scripts ja configurados.
-2. Se faltar autenticacao, use o gerenciador de credenciais ja configurado antes de pedir ao expert. Nunca exponha segredo no chat ou em logs.
-3. Para web, prefira a superficie oficial conectada ao browser quando disponivel: Claude in Chrome no Claude Code; Browser ou Chrome no app ChatGPT/Codex.
-4. Use Playwright para testes repetiveis, DOM/console/rede, scraping estruturado ou como fallback quando o runtime nao tiver browser nativo.
-5. Use Computer Use para aplicativos nativos e interfaces sem CLI, API, conector ou controle direto de browser. E a superficie mais ampla e mais lenta, portanto e o ultimo recurso de UI.
-6. Persista ate o desfecho e diagnostique a causa real. Pare apenas diante de bloqueio comprovado depois de esgotar caminhos seguros e pertinentes.
+Navegador integrado e Computer Use não existem em toda superfície ou plano. Confira antes de usar e
+nunca declare navegador, Computer Use, MCP, login ou integração configurados sem testar de verdade.
 
-Trabalho manual do expert fica restrito a senha pessoal, login, CAPTCHA,
-permissao do sistema, aprovacao consequencial ou decisao de negocio nao
-inferivel. Deixe tudo pronto ate esse ponto. Nao faca acao destrutiva, compra
-ou ampliacao material de escopo sem autorizacao explicita.
+## Até o desfecho
 
-## Honestidade operacional
-
-- Nao invente requisito, fato, prova ou conclusao para fechar a conta.
-- Antes de chamar algo de pronto, procure suposicao escondida, default preguiçoso, amostra insuficiente ou atalho.
-- Nunca declare browser, Computer Use, MCP, login ou integracao configurados sem executar o gate correspondente.
-- Se houver bloqueio real, diga o que foi comprovado, o que falta e por que as ferramentas disponiveis nao resolvem.
+- Diagnostique a causa real; não troque de solução no chute. Pare só diante de bloqueio comprovado,
+  depois de esgotar os caminhos seguros e pertinentes.
+- Trabalho manual do aluno fica restrito a senha pessoal, código do celular, CAPTCHA, permissão do
+  sistema, pagamento ou decisão de negócio. Deixe tudo pronto até esse ponto.

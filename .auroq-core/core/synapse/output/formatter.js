@@ -23,6 +23,18 @@ const { estimateTokens } = require('../utils/tokens');
  * Truncation removes from the END of this array first (SUMMARY, then
  * KEYWORD, then SQUAD, etc.) to preserve highest-priority sections.
  */
+/**
+ * Regras que mais escapam em conversa longa (2.7.0). O resto já está no AGENTS.md e nas rules;
+ * aqui fica só o que costuma sumir depois de muitas mensagens.
+ */
+const LEMBRETE_CONVERSA_LONGA = [
+  '[LEMBRETE: CONVERSA LONGA]',
+  '  1. Resposta que fez trabalho fecha com **Resumo:** e **Onde parou:**.',
+  '  2. Travas do AGENTS.md (dinheiro, mensagem ou post para outra pessoa, apagar, force push, senha): só com ordem do aluno para aquela ação.',
+  '  3. Tarefa concluída: salve onde parou e as decisões na memória (rule memoria-inteligente) antes de seguir.',
+  '  4. Companion aciona sozinho squads, skills e agentes, revisa e entrega; não manda o aluno chamar ninguém.',
+].join('\n');
+
 const SECTION_ORDER = [
   'CONTEXT_BRACKET',
   'CONSTITUTION',
@@ -400,7 +412,7 @@ function enforceTokenBudget(sections, sectionIds, tokenBudget) {
   }
 
   // Sections that should never be removed
-  const PROTECTED = new Set(['CONTEXT_BRACKET', 'CONSTITUTION', 'AGENT']);
+  const PROTECTED = new Set(['CONTEXT_BRACKET', 'CONSTITUTION', 'AGENT', 'CONVERSA_LONGA']);
 
   // Truncation priority: remove from end first
   const TRUNCATION_ORDER = [
@@ -531,9 +543,16 @@ function formatSynapseRules(results, bracket, contextPercent, session, devmode, 
     }
   }
 
+  // Conversa longa (2.7.0): do MODERATE em diante, as regras que mais escapam quando a conversa
+  // enche voltam a cada mensagem. Acréscimo: nada do que já era injetado sai.
+  if (bracket && bracket !== 'FRESH') {
+    sections.push(LEMBRETE_CONVERSA_LONGA);
+    sectionIds.push('CONVERSA_LONGA');
+  }
+
   // Handoff warning (CRITICAL bracket)
   if (showHandoffWarning) {
-    sections.push('[HANDOFF WARNING]\n  Context is nearly exhausted. Consider starting a new session to preserve quality.');
+    sections.push('[HANDOFF WARNING]\n  A conversa está quase cheia. Termine o passo atual, salve a memória e sugira ao aluno abrir uma conversa nova (ou /compact).');
     sectionIds.push('HANDOFF_WARNING');
   }
 
@@ -563,4 +582,5 @@ module.exports = {
   estimateTokens,
   SECTION_ORDER,
   LAYER_TO_SECTION,
+  LEMBRETE_CONVERSA_LONGA,
 };

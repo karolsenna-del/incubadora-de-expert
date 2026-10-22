@@ -204,7 +204,7 @@ Ativado por: `*store`, "guarda isso", "salva esse documento", "armazena", "coloc
 | Produto / esteira / oferta | `docs/knowledge/expert-business/produto/` | Esteira de produtos, oferta, precificacao, bonus |
 | Criacao original / teoria propria | `docs/knowledge/expert-business/criacoes/` | Teoria propria, framework original, conceito inedito |
 
-3. SE ambiguo: perguntar ao expert. "Isso e mais sobre quem voce E ou sobre o que voce FAZ?"
+3. SE ambiguo: perguntar ao aluno. "Isso e mais sobre quem voce E ou sobre o que voce FAZ?"
 4. Gerar nome do arquivo:
    - Slug descritivo em kebab-case (ex: `proposito-central.md`, `diagnostico-3d-abril-2026.md`, `esteira-produtos-v1.md`)
    - SE ja existe arquivo similar: perguntar "Ja existe {arquivo}. Atualizar ou criar novo?"
@@ -213,10 +213,10 @@ Ativado por: `*store`, "guarda isso", "salva esse documento", "armazena", "coloc
 7. SE o conteudo conecta com algo existente: avisar. "Isso complementa o {arquivo-existente}. Quer que eu atualize tambem?"
 
 **Regras:**
-- NUNCA salvar sem confirmar o destino com o expert (se houver duvida)
+- NUNCA salvar sem confirmar o destino com o aluno (se houver duvida)
 - NUNCA sobrescrever arquivo existente sem aprovacao
-- SE o expert cola texto bruto longo: organizar minimamente (titulo, secoes) antes de salvar
-- SE o expert manda algo que nao e documento de negocio (chave, login, senha): redirecionar pro vault
+- SE o aluno cola texto bruto longo: organizar minimamente (titulo, secoes) antes de salvar
+- SE o aluno manda algo que nao e documento de negocio (chave, login, senha): redirecionar pro vault
 
 ### Modo 6: LIMPAR (*clean)
 
@@ -230,8 +230,8 @@ Ativado por: `*clean`, "limpa", "remove lixo", "tira o que nao precisa"
    - .synapse/sessions/ antigas (>7 dias)
    - Pastas vazias sem proposito
    - Duplicados
-2. Listar tudo pro expert: "Encontrei {N} arquivos pra limpar ({tamanho total})"
-3. Expert aprova (tudo ou seleciona)
+2. Listar tudo pro aluno: "Encontrei {N} arquivos pra limpar ({tamanho total})"
+3. Aluno aprova (tudo ou seleciona)
 4. Remover aprovados
 5. Resumo: "Removidos {N} arquivos ({tamanho} liberados)"
 
@@ -250,7 +250,7 @@ Ativado por: `*backup`, "faz backup", "espelha no drive"
    - `agents/` (exercito de agentes)
    - `.claude/` (configuracao)
    - EXCLUIR: node_modules, .git, .synapse/sessions/, vault/
-3. Confirmar com expert: "Vou espelhar {N} pastas pro Google Drive. OK?"
+3. Confirmar com o aluno: "Vou espelhar {N} pastas pro Google Drive. OK?"
 4. Executar: `rclone sync {pasta} drive:auroq-backup/{pasta} --exclude node_modules/** --exclude .git/** --exclude vault/**`
 5. Verificar: `rclone check {pasta} drive:auroq-backup/{pasta}`
 6. Resumo: "Backup completo. {N} arquivos sincronizados com Google Drive."
@@ -270,7 +270,7 @@ Ativado por: `*backup`, "faz backup", "espelha no drive"
 9. **Tensoes sao features.** Quando experts discordam, preservar ambos os lados. (Organizer)
 10. **Colecionar nao e criar.** Se esta capturando mais do que criando, pare. (Forte + Milo)
 11. **Proteger vault e L1/L2.** NUNCA mexer no vault sem permissao. NUNCA modificar .auroq-core/. (Auroq OS)
-12. **Confirmar antes de mover/deletar.** NUNCA mover ou apagar sem aprovacao do expert. (Auroq OS)
+12. **Confirmar antes de mover/deletar.** NUNCA mover ou apagar sem aprovacao do aluno. (Auroq OS)
 
 ---
 

@@ -22,7 +22,7 @@ SEMPRE que for executar:
 
 1. Verificar se existe plano/briefing aprovado para o trabalho
 2. Executar DENTRO do escopo planejado
-3. Se perceber necessidade de mudar escopo: **PARAR e perguntar ao expert**
+3. Se perceber necessidade de mudar escopo: **PARAR e perguntar ao aluno**
 4. Nao adicionar features, melhorias ou conteudo nao solicitado
 5. Nao gerar dados, numeros ou fatos sem fonte verificada
 

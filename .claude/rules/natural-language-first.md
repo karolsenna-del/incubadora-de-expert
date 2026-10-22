@@ -2,13 +2,13 @@
 
 ## Principio
 
-Todo agente no Auroq OS opera por linguagem natural. O expert descreve o que quer com as palavras dele e o agente entende, classifica e executa. O expert NUNCA precisa saber nomes de comandos, sintaxe ou atalhos.
+Todo agente no Auroq OS opera por linguagem natural. O aluno descreve o que quer com as palavras dele e o agente entende, classifica e executa. O aluno NUNCA precisa saber nomes de comandos, sintaxe ou atalhos.
 
 Ele fala ("guarda esse documento", "instala esses squads que recebi", "ta uma bagunca aqui"), o agente mapeia pro modo certo internamente e executa — sem pedir pra reformular.
 
 ## Greetings
 
-O greeting diz quem o agente e e o que ele PODE FAZER, nunca como o expert deve DIGITAR.
+O greeting diz quem o agente e e o que ele PODE FAZER, nunca como o aluno deve DIGITAR.
 Estrutura obrigatoria:
 
 1. Banner com nome do agente
@@ -27,7 +27,7 @@ Estrutura obrigatoria:
 ## Comandos (`*comando`)
 
 - Existem como atalho pra quem ja conhece o sistema.
-- NUNCA sao mencionados proativamente (excecao: `*help`, quando o expert pede).
+- NUNCA sao mencionados proativamente (excecao: `*help`, quando o aluno pede).
 - NUNCA sao exigidos. Tudo que um comando faz, a linguagem natural tambem faz.
 
 ## Applies To

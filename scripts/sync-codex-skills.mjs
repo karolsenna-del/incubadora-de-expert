@@ -84,7 +84,8 @@ function registerSkill(name, commandFile) {
   skills.set(name, commandFile);
 }
 
-// O aluno da um nome ao Companion no bootstrap (FASE 10 do Ops: /atlas-companion).
+// Ate 21/10/2026 o aluno dava um nome ao Companion no bootstrap (FASE 10 do Ops: /atlas-companion),
+// e quem deu continua com ele.
 // Se o comando base sumiu, $companion continua existindo, apontando pro comando dele.
 function comandoDoCompanion(file) {
   try {

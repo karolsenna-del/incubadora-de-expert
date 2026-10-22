@@ -1,8 +1,8 @@
 # SYNAPSE Context Domain (L1)
 # Dynamic context loaded on every prompt
 
-CONTEXT_FRAMEWORK=Auroq OS — Sistema Operacional de IA para Experts
-CONTEXT_PHILOSOPHY=Pensar, Fazer e Lembrar com IA. Expert manda e julga, IA executa
+CONTEXT_FRAMEWORK=Auroq OS — Sistema Operacional de IA do negocio do aluno da Arcane
+CONTEXT_PHILOSOPHY=Pensar, Fazer e Lembrar com IA. O aluno pede, confere e aprova; a IA executa
 CONTEXT_FORMULA=Repertorio + IA = Resultado
 CONTEXT_CYCLE=Situar > Priorizar > Executar > Documentar > Refinar
-CONTEXT_TAXONOMY=4 categorias (Companion, Minds, Workers, Squads) x 3 funcoes (Mentora, Juiza, Executora)
+CONTEXT_EQUIPE=O Companion e o chefe da equipe: aciona sozinho squads, skills e agentes e entrega; o Ops e o tecnico. Mapa completo em .auroq-core/como-funciona.md

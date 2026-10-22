@@ -1,4 +1,4 @@
-# Auroq OS — Sistema Operacional de IA para Experts
+# Auroq OS — Sistema Operacional de IA para o negócio do aluno
 
 Transforma Claude Code, Codex CLI ou Grok Build num centro de comando inteligente para operar seu negocio digital.
 
@@ -242,7 +242,7 @@ agents/             → Seu exercito (companion, workers, minds, squads)
 ## Filosofia
 
 - **Repertorio + IA = Resultado**
-- Expert manda e julga. IA executa
+- O aluno pede, confere e aprova. A IA executa
 - Tudo documentado. Nada se perde
 - Evolucao incremental. Nunca do zero
 - Pain-first. Resolve a dor de agora
@@ -254,13 +254,13 @@ agents/             → Seu exercito (companion, workers, minds, squads)
 
 ## Observabilidade e integridade do motor
 
-Apos publicacao, `npx -y auroq-os@2.6.10 doctor` mostra a fila local segura e os comandos pinados de
-manutencao/diagnostico. `npx -y auroq-os@2.6.10 manutencao` preserva o caminho existente
+Apos publicacao, `npx -y auroq-os@2.8.0 doctor` mostra a fila local segura e os comandos pinados de
+manutencao/diagnostico. `npx -y auroq-os@2.8.0 manutencao` preserva o caminho existente
 de consentimento legado, studentFiles, customizacoes e dados do negocio. Nao ha
 migracao forcada. O registro MCP aponta para `arcane-mcp@0.7.0` — o pin mora no campo
 `arcaneMcpPin` do package.json (fonte unica; o servidor le o mesmo campo no npm).
 `npm run release:verify` recusa publicar com um pin que o npm nao resolva.
-Os instaladores do repositorio ficam preparados para 2.6.10; as copias publicas so recebem
+Os instaladores do repositorio ficam preparados para 2.8.0; as copias publicas so recebem
 a versao apos os gates nativos e a verificacao do tarball publicado.
 O pacote inclui `lib/runtime-integrity.json`: inventario SHA-256 gerado depois da montagem da casca, verificavel com `npm run integrity:verify` dentro do pacote extraido. Ele comprova consistencia do conteudo; nao e uma assinatura de autoria.
 

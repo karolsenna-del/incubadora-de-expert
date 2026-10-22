@@ -4,7 +4,8 @@
  * Auroq OS — Sync Hook
  *
  *   --session-start  (SessionStart)      checa o GitHub ao abrir; PUXA se for seguro; relata o que chegou
- *   --remind         (UserPromptSubmit)  lembra, com moderacao, de trabalho nao entregue
+ *   --remind         (UserPromptSubmit)  lembra, com moderacao, de trabalho nao entregue, e traz da
+ *                                        memoria do negocio (app Auroq OS) o que tem a ver com o pedido
  *
  * Regras de ouro:
  * - Nunca bloqueia a sessao (sempre exit 0) e fica em silencio quando nao ha o que dizer.
@@ -97,8 +98,23 @@ function versionNotice() {
   return `[Auroq update] Saiu versao nova do sistema: v${local} instalada → v${latest} disponivel. Na sua primeira resposta, avise o expert em 1 frase simples e pergunte: "Quer que eu atualize agora? Leva uns 5 minutos e voce nao precisa fazer nada." Se ele disser sim: a atualizacao e feita pelo Ops, sem o expert abrir terminal — chame a tool forja_bundle (MCP arcane) com forge_id "ops" e fase "manutencao" e siga aqueles passos a risca (e o mesmo que ele pedir ao Ops "atualiza o sistema"). Se ele disser nao, nao pergunte de novo nesta conversa.`;
 }
 
+// ─── Bilhete da memória (app Auroq OS, Fase 1 da memória do aluno) ───────────
+// O app refaz `agents/companion/data/nucleo.md` sozinho depois das conversas (teto de 3.000
+// caracteres). Toda conversa nova comeca com ele, no lugar de ler os arquivos inteiros da memoria.
+const NUCLEO = path.join('agents', 'companion', 'data', 'nucleo.md');
+const NUCLEO_MAX = 3000;
+
+function nucleoNotice() {
+  let texto;
+  try { texto = fs.readFileSync(path.join(CWD, NUCLEO), 'utf8'); } catch { return null; }
+  texto = texto.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').trim();
+  if (!texto) return null;
+  if (texto.length > NUCLEO_MAX) texto = `${texto.slice(0, NUCLEO_MAX - 1)}…`;
+  return `[Memoria do sistema] Bilhete da memoria deste negocio (${NUCLEO}, refeito sozinho pelo app Auroq OS a partir das conversas anteriores; vale para todo agente, squad e skill desta pasta, nao so o Companion). Use para saber quem e o aluno, onde voces pararam, o que ja foi decidido e o que esta pendente; nao leia para o aluno sem ele pedir. Detalhes em agents/companion/data/.\n${texto}`;
+}
+
 function sessionStart() {
-  const vNotice = versionNotice();
+  const vNotice = [nucleoNotice(), versionNotice()].filter(Boolean).join('\n') || null;
   if (!isRepo() || !hasRemote()) { emit('SessionStart', vNotice); return; }
   const up = upstream();
   if (!up) { emit('SessionStart', vNotice); return; }
@@ -139,8 +155,54 @@ function sessionStart() {
   emit('SessionStart', lines.join('\n'));
 }
 
-function remind() {
-  if (!isRepo()) return;
+// ─── Busca na memória a cada pedido (app Auroq OS, Fase 2 da memória do aluno) ─────
+// O app mantém um índice da memória do negócio; `auroq memoria busca --gancho` devolve até 3 trechos
+// (1.500 caracteres) que passam no filtro de relevância, ou nada. Pedido trivial não busca. Sem o app
+// (comando ausente, app fechado, demorou), segue em silêncio: a conversa nunca espera por isso.
+const MEMORIA = path.join('agents', 'companion', 'data');
+const TEMPO_DA_BUSCA_MS = 3500;
+const TRIVIAL = /^(?:oi|ola|olá|ok|blz|beleza|obrigad[oa]|valeu|sim|n[aã]o|pode|segue|continua|bom dia|boa tarde|boa noite|top|show|perfeito|certo|isso|entendi|bora|go)\b/i;
+
+function acharAuroq() {
+  const nomes = process.platform === 'win32' ? ['auroq.exe'] : ['auroq'];
+  const pastas = String(process.env.PATH || '').split(path.delimiter).filter(Boolean);
+  if (process.platform === 'darwin') pastas.push('/Applications/Auroq OS.app/Contents/Resources/bin');
+  for (const pasta of pastas) {
+    for (const nome of nomes) {
+      const alvo = path.join(pasta, nome);
+      try { if (fs.statSync(alvo).isFile()) return alvo; } catch { /* segue */ }
+    }
+  }
+  return null;
+}
+
+function pedidoDoAluno(entrada) {
+  try {
+    const dado = JSON.parse(entrada || '{}');
+    return typeof dado.prompt === 'string' ? dado.prompt : '';
+  } catch {
+    return '';
+  }
+}
+
+function buscaNaMemoria(pedido) {
+  const texto = String(pedido || '').replace(/\s+/g, ' ').trim();
+  if (texto.length < 8 || (texto.length < 30 && TRIVIAL.test(texto))) return null;
+  if (!fs.existsSync(path.join(CWD, MEMORIA))) return null;
+  const programa = acharAuroq();
+  if (!programa) return null;
+  try {
+    const saida = execFileSync(programa, ['memoria', 'busca', texto.slice(0, 600), '--gancho'], {
+      cwd: CWD, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], timeout: TEMPO_DA_BUSCA_MS, windowsHide: true,
+    }).trim();
+    return /^\[Memoria do (sistema|Companion)\]/.test(saida) ? saida.slice(0, 2500) : null;
+  } catch {
+    return null;
+  }
+}
+
+function lembrete() {
+  if (!isRepo()) return null;
   const dirty = dirtyFiles();
   const up = upstream();
   const ahead = up ? countRange(`${up}..HEAD`) : 0;
@@ -148,30 +210,37 @@ function remind() {
   const now = Date.now();
   if (dirty.length === 0 && ahead === 0) {
     if (st.dirtySince) { st.dirtySince = 0; writeState(st); }
-    return;
+    return null;
   }
-  if (!st.dirtySince) { st.dirtySince = now; writeState(st); return; }
-  if (now - st.dirtySince < REMIND_AFTER_MS) return;
-  if (st.lastRemind && now - st.lastRemind < REMIND_EVERY_MS) return;
+  if (!st.dirtySince) { st.dirtySince = now; writeState(st); return null; }
+  if (now - st.dirtySince < REMIND_AFTER_MS) return null;
+  if (st.lastRemind && now - st.lastRemind < REMIND_EVERY_MS) return null;
   st.lastRemind = now;
   writeState(st);
   const mins = Math.round((now - st.dirtySince) / 60000);
-  emit('UserPromptSubmit', `[Auroq lembrete] Ha trabalho nao entregue ha ~${mins} min (${dirty.length} arquivo(s) alterado(s)${ahead ? `, ${ahead} commit(s) sem push` : ''}). NAO interrompa o raciocinio atual. Ao fechar o bloco em andamento, ofereca em UMA linha: "quer que eu salve e entregue pro GitHub?". Nunca entregue sem o expert pedir.`);
+  return (`[Auroq lembrete] Ha trabalho nao entregue ha ~${mins} min (${dirty.length} arquivo(s) alterado(s)${ahead ? `, ${ahead} commit(s) sem push` : ''}). NAO interrompa o raciocinio atual. Ao fechar o bloco em andamento, ofereca em UMA linha: "quer que eu salve e entregue pro GitHub?". Nunca entregue sem o expert pedir.`);
+}
+
+function remind(entrada) {
+  const partes = [buscaNaMemoria(pedidoDoAluno(entrada)), lembrete()].filter(Boolean);
+  emit('UserPromptSubmit', partes.join('\n\n') || null);
 }
 
 let ran = false;
+let entrada = '';
 function main() {
   if (ran) return;
   ran = true;
-  try { if (MODE === '--remind') remind(); else sessionStart(); }
+  try { if (MODE === '--remind') remind(entrada); else sessionStart(); }
   catch (e) { console.error(`[auroq-sync] ${e.message}`); }
   process.exit(0);
 }
 
 // Consome o JSON que o Claude Code envia no stdin (nao depende dele) e roda no fim;
 // fallback por timer garante execucao mesmo se o stdin nao fechar.
+// O pedido do aluno (UserPromptSubmit) vem nesse JSON e é o que a busca da memória usa.
 process.stdin.resume();
-process.stdin.on('data', () => {});
+process.stdin.on('data', (pedaco) => { if (entrada.length < 200000) entrada += pedaco; });
 process.stdin.on('end', main);
 process.stdin.on('error', main);
 setTimeout(main, 400).unref();

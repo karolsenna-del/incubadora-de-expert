@@ -147,6 +147,10 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 22/10 — Infra (Ops):**
+- Node atualizado 24.15.0 → 24.22.1 (LTS); PHP 8.5.12 instalado do zero (winget, NTS).
+- Auroq OS atualizado pra 2.8.0 via manutencao local (MCP arcane ficou 30 min sem responder). Regras proprias e /techOps → gestor-infra-arcane preservados. Falta fechar e reabrir o Claude Code.
+
 **Sessao 18/10 — Weekly pos-Black (Companion):**
 - Black Expert fechada com 0 vendas (retro 16/10). Teste da **Incubadora Express** (R$2.500, 6 meses) fica dentro do Comercial, sem ocupar vaga de projeto. Leads 2 e 7 ja receberam a oferta; lead 4 recebeu a explicacao; linha de teste do CRM corrigida.
 - **Expert360:** M3 A9-A13 gravadas, editadas e publicadas ate **31/10**.
