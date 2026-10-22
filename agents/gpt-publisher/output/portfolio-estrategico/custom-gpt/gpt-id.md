@@ -3,7 +3,7 @@
 **Link:** https://chatgpt.com/g/g-68eae9371f8481919ac18d9dbbf2ced1-portfolio-estrategico
 **Slug de origem:** nenhum — GPT publicado manualmente antes deste worker existir, sem mente forjada em `agents/`
 **Criado em:** anterior ao gpt-publisher (data desconhecida)
-**Última atualização de Instructions:** 21/10/2026 (v2, camada obrigatória)
+**Última atualização de Instructions:** 22/10/2026 (v3, rastreabilidade de dores + 3 níveis de ferramenta)
 **Compartilhamento:** distribuído via `mentoria/alunas/{aluna}/0- Biblioteca de IAs.md` (não gerenciado por este worker)
 **Versão da mente publicada:** N/A — não há mente de origem; a Karol colou as Instructions atuais direto na conversa
 
@@ -53,3 +53,26 @@ Sem `agents/portfolio-estrategico/` pra ler, o pacote não seguiu o fluxo normal
 - [x] Conferido contra o texto que está no GPT hoje (19/10)
 - [x] Colada no GPT Builder pela Karol (confirmado em 21/10, manual)
 - [x] Mesma mudança aplicada na seção 4 do handoff da área de membros (21/10): só as 4 mudanças da camada obrigatória, mantendo o resto da seção 4 (que tem ajustes próprios, como "sim"/"ajustar"); 7.833 caracteres
+
+## Revisão 21/10/2026 — Rastreabilidade de dores + 3 níveis de ferramenta (v3)
+
+**Pedido da Karol:** acrescentar a diretriz "Rastreabilidade de dores, travas e objeções" (texto dela) e refletir a divisão de ferramentas: 5 essenciais da validação, 1 autoral por módulo (transformação principal) e contratação adicional (Karol trocou "Futura" por esse nome em 21/10).
+**Arquivo:** `instructions-v3-proposta.md`, 7.926 caracteres.
+
+**O que muda no comportamento:**
+1. Planilha ganha 3 colunas: Dores, Travas e Objeções Trabalhadas; Como a Ferramenta Resolve; Argumento de Valor para a Oferta
+2. Coluna Prioridade passa de 2 para 3 níveis: "Essencial: validação", "Autoral: módulo X", "Contratação adicional" (antes: "Em paralelo")
+3. Camada Obrigatória ganha a linha das autorais (1 por módulo) e das de contratação adicional; Etapa 4 apresenta as autorais junto com as 5 antes da planilha
+4. Etapas 2 e 3: se uma ferramenta já sugerida resolve a objeção, aponta a conexão em vez de criar outra; objeção citada com as palavras da persona
+5. Depois da planilha: checagem de cobertura (toda objeção com ferramenta ou etapa do método) + proibição de inventar dor, prometer resultado garantido ou vender ferramenta pra problema que ela não resolve
+
+**Compactação (ficaria com 8.399). Nenhuma regra saiu:**
+- Coluna 1 perdeu "relação com as dores da persona" (agora é a coluna 2 nova)
+- Lista da Etapa 3 e critérios do low ticket viraram texto corrido
+- Senha em 1 linha (mesma regra: aceita as duas grafias, sem dica)
+- Brainstorming R$500 mil, Tom e Estilo, Papel do Agente e regra do repertório reescritos mais curtos, mesmo conteúdo
+
+**Status:**
+- [x] Karol aprovou a v3 (21/10, com "Contratação adicional" no lugar de "Futura")
+- [x] Colada no GPT Builder pela Karol (confirmado em 22/10, manual)
+- [x] Mesma mudança aplicada na seção 4 do handoff da área de membros (22/10), mantendo os ajustes próprios da seção; 9.048 caracteres (system prompt via API, sem o limite de 8.000). A área de membros hoje abre o GPT por link (`modo: 'link'` em `site/js/data.js`), então já usa a v3
