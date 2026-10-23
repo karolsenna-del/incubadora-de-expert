@@ -49,3 +49,7 @@ Karol revisou os 11 pontos. Ajustes já aplicados no documento e no Canvas edit�
 - **Página única da sessão (formato do Vagner), pra usar no E2 em 24/10:** `cronograma-encontros.html` · https://claude.ai/artifact/DisG8Kk7Dv6VhkMqXe8o7y — abas E1/E2/E3; E2 com Canvas revisado, 14 aprovações (salvas na coleção `aprovacoes`), ajustes nos materiais e fechamento. Substitui o `encontro-2.html` (versão antiga) na sessão. Fechamento focado em ir a campo vender a assessoria (próximo passo combinado). Rastreador de leads já entregue ao Tasso (confirmado pela Karol em 23/10).
 
 **Pro Canvas do E2:** parceria com corretor no bloco Parcerias; divisão de comissão em Fontes de receita.
+
+## 23/10 — Valor da due diligence retirado
+
+O "R$2.500 da due diligence" veio de uma nota do Encontro 1 (06/10) que o Tasso não reconhece. Saiu do documento de aprovação, da página antiga do Encontro 2 e do Canvas (lá já estava "fazendo orçamento"). Valor real: a definir com o parceiro jurídico.

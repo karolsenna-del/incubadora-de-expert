@@ -674,3 +674,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** os 6 pilares são técnica, comunicação, condução, negociação, posicionamento e segurança. Na apresentação de vendas a Milena resume em 3 (técnica, emocional e condução). O pilar técnica não tem módulo: é coberto pelo Agente de IA Técnico e pelas lives de casos práticos.
 **Racional:** informado pela Karol; é o que o método trabalha por inteiro.
 **Impacto:** nomes colocados na atividade da S2 nos scripts `apps-script-diario-aplicacao.gs` e `apps-script-plano-aplicacao-diaria.gs`; scripts rodados nas duas planilhas em 23/10. Depois a Karol mandou excluir a planilha antiga "Plano de Aplicação Diária" (tabela única), que foi pra lixeira do Drive pra não confundir com a versão do aluno; os guias passaram a apontar só pra versão do aluno.
+
+## 23/10/2026 — Tasso: R$2.500 da due diligence sai de todo o material
+**Contexto:** O valor veio de uma nota digitada no Encontro 1 (06/10, nota-q2-5: "due diligence R$2500") e foi repetido no Encontro 2, no Canvas e no documento de aprovação. O Tasso diz que nunca falou esse valor; Apresentação e Manual não trazem preço.
+**Decisão:** Excluir o valor. Due diligence fica "em orçamento com o parceiro jurídico" até o Tasso informar.
+**Racional:** Número sem fonte confirmada não entra em material do cliente.
+**Impacto:** Canvas (já limpo ao vivo), documento de aprovação (5 trechos) e página antiga do Encontro 2 corrigidos. A nota original do E1 ficou como registro histórico.
