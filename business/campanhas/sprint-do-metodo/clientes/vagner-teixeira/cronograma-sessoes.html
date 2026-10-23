@@ -142,6 +142,28 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
 
 [data-panel]{display:none;}
 [data-panel].active{display:block;}
+.tarefa-fichas{margin-top:18px;border-color:var(--accent);}
+.ficha-how{background:var(--accent-soft);border-radius:10px;padding:12px 14px;font-size:13.5px;line-height:1.55;margin-bottom:14px;}
+.tag-sug{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent-strong);border:1px solid var(--accent);border-radius:999px;padding:0 7px;line-height:17px;vertical-align:1px;}
+.ficha{border:1px solid var(--line);border-radius:12px;margin-top:10px;background:var(--surface);}
+.ficha[open]{border-color:var(--accent);}
+.ficha summary{display:flex;align-items:center;gap:12px;padding:12px 14px;cursor:pointer;list-style:none;}
+.ficha summary::-webkit-details-marker{display:none;}
+.ficha summary::after{content:"+";margin-left:auto;font-size:18px;color:var(--ink-soft);}
+.ficha[open] summary::after{content:"−";}
+.ficha-num{font-family:var(--font-display);font-weight:600;color:var(--accent);font-size:15px;}
+.ficha-tit{font-family:var(--font-display);font-weight:600;font-size:14.5px;}
+.ficha-tit small{display:block;font-family:var(--font-body);font-weight:400;font-size:12px;color:var(--ink-soft);}
+.ficha-body{padding:0 16px 16px;border-top:1px solid var(--line);}
+.ficha-sec h4{margin:14px 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);}
+.ficha-sec p,.ficha-sec li{font-size:13.5px;line-height:1.55;}
+.ficha-sec p{margin:0 0 6px;}
+.ficha-sec ol,.ficha-sec ul{margin:0;padding-left:18px;}
+.ficha-sec.need{background:var(--accent-soft);border-radius:8px;padding:2px 12px 6px;margin-top:12px;}
+.ficha-sec.later p{color:var(--ink-soft);}
+.ficha-ok{margin-top:14px;}
+.ficha-field{display:block;font-size:13px;font-weight:600;margin-top:10px;}
+.ficha-foot{font-size:13px;color:var(--ink-soft);margin:14px 0 0;}
 </style>
 </head>
 <body>
@@ -683,14 +705,12 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
 
       <div class="card" data-panel="4">
         <div class="card-head"><h2>Aprovações</h2><span class="time">15–20 min</span></div>
-        <p class="card-sub">Marque o que está aprovado e anote o que muda. A partir daqui as ferramentas saem do protótipo e viram versão de uso.</p>
+        <p class="card-sub">Marque o que está aprovado e anote o que muda. Daqui sai a sua tarefa da semana: as fichas de conteúdo das 6 essenciais, logo abaixo. A versão de uso só começa depois que você devolver as fichas revisadas.</p>
         <ul class="checklist">
           <li><input type="checkbox"><div class="q"><span><b>As 6 essenciais</b> cobrem as 6 etapas do método? Falta alguma, sobra alguma?</span><textarea class="answer" data-key="s4-aprov-essenciais" rows="1" placeholder="Aprovado? O que mudaria?"></textarea></div></li>
           <li><input type="checkbox"><div class="q"><span><b>Nomes das ferramentas:</b> combinam com o jeito que você fala com o empresário?</span><textarea class="answer" data-key="s4-aprov-nomes" rows="1" placeholder="Aprovado? O que mudaria?"></textarea></div></li>
           <li><input type="checkbox"><div class="q"><span><b>Nome do Módulo 2:</b> a planilha diz “Coaching / nome em definição”; o método e a vitrine dizem “Ressignificar”. Qual fica?</span><textarea class="answer" data-key="s4-aprov-modulo2" rows="1" placeholder="Anotar decisão"></textarea></div></li>
           <li><input type="checkbox"><div class="q"><span><b>“Método EVO” no Raio-X:</b> você não tem certificação nem licença pra aplicar o EVO (Sessão 3). A vitrine já não reproduz DISC nem protocolo do EVO. Mantém o nome “inspirado no repertório EVO” ou tira o EVO do nome?</span><textarea class="answer" data-key="s4-aprov-evo" rows="1" placeholder="Anotar decisão"></textarea></div></li>
-          <li><input type="checkbox"><div class="q"><span><b>Simulador de Crédito:</b> as taxas da vitrine são de mentira. Na versão real, de onde vêm as taxas e as linhas: das propostas que você já recebe dos bancos, ou de uma lista que você mantém?</span><textarea class="answer" data-key="s4-aprov-taxas" rows="1" placeholder="Anotar resposta"></textarea></div></li>
-          <li><input type="checkbox"><div class="q"><span><b>Piloto Automático:</b> o Marcelo consegue exportar o extrato do banco em CSV ou Excel? Qual banco ele mais usa?</span><textarea class="answer" data-key="s4-aprov-extrato" rows="1" placeholder="Anotar resposta"></textarea></div></li>
           <li><input type="checkbox"><div class="q"><span><b>Ordem de construção:</b> qual das 6 você precisa pronta primeiro pra atender o primeiro cliente?</span><textarea class="answer" data-key="s4-aprov-ordem" rows="1" placeholder="Anotar ordem"></textarea></div></li>
           <li><input type="checkbox"><div class="q"><span><b>Modelo comercial:</b> as essenciais vão incluídas na mentoria, e as integrações avançadas e o Copiloto como serviço à parte. Faz sentido?</span><textarea class="answer" data-key="s4-aprov-comercial" rows="1" placeholder="Aprovado? O que mudaria?"></textarea></div></li>
         </ul>
@@ -738,10 +758,230 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
         <div class="card-head"><h2>Fechamento</h2><span class="time">5 min</span></div>
         <ul class="bullets">
           <li>Próximo passo concreto antes da Sessão 5<textarea class="answer" data-key="s4-proximo-passo" rows="1" placeholder="Anotar resposta"></textarea></li>
+          <li>Até quando você devolve as fichas das 6 ferramentas revisadas (tarefa logo abaixo)?<textarea class="answer" data-key="s4-fichas-prazo" rows="1" placeholder="Anotar data"></textarea></li>
         </ul>
         <label class="mark-done"><input type="checkbox" data-block-check="6"> Marcar bloco como feito</label>
       </div>
 
+    </div>
+
+    <!-- ===== TAREFA DA SEMANA: FICHAS DAS 6 ESSENCIAIS ===== -->
+    <div class="card tarefa-fichas">
+      <div class="card-head"><h2>Sua tarefa até a Sessão 5: revisar as fichas das 6 ferramentas</h2><span class="time">com calma</span></div>
+      <p class="card-sub">Cada ficha mostra o que vai dentro da ferramenta: o que o Marcelo preenche, o que ela calcula, a ordem das telas e o que aparece no final. É a planta antes da obra. O que você aprovar aqui é o que a gente constrói, sem retrabalho.</p>
+      <div class="ficha-how">
+        <b>Como revisar:</b> abra uma ficha por vez. Para cada uma, olhe três coisas: o <b>conteúdo</b> (as perguntas e as contas estão certas pro seu empresário?), a <b>estrutura</b> (a ordem das telas faz sentido?) e o <b>template</b> (o que o Marcelo recebe no final é o que você quer entregar?). Está bom, marque “aprovada como está”. Muda algo, escreve no campo. Tudo o que está marcado como <span class="tag-sug">sugestão</span> é proposta nossa e espera a sua palavra.
+      </div>
+
+      <details class="ficha">
+        <summary><span class="ficha-num">01</span><span class="ficha-tit">Diagnóstico de Blindagem Empresarial<small>Etapa 0 · Diagnosticar</small></span></summary>
+        <div class="ficha-body">
+          <div class="ficha-sec"><h4>Pra que serve</h4>
+            <p>Mostrar ao Marcelo o que de fato está levando a empresa ao vermelho e abrir o Plano de Ação Personalizado. Desmonta O1 “meu problema é vender mais, não gestão”, O4 “estou negativado, ninguém vai me dar crédito”, O5 “como alguém de fora vai saber mais do que eu” e O7 “deveria conseguir resolver sozinho”.</p></div>
+          <div class="ficha-sec"><h4>Quem usa e como chega</h4>
+            <p>O Marcelo responde por um link. Você vê tudo num painel privado. Ele recebe o diagnóstico com o primeiro foco.</p></div>
+          <div class="ficha-sec"><h4>Estrutura: as telas do formulário <span class="tag-sug">sugestão</span></h4>
+            <ol>
+              <li><b>A empresa:</b> ramo, tempo de mercado, número de funcionários, faturamento médio por mês hoje e no melhor momento.</li>
+              <li><b>Situação cadastral:</b> CPF negativado? CNPJ negativado? (sim, não, não sei) e o valor aproximado em atraso.</li>
+              <li><b>Dívidas:</b> uma linha por dívida: credor, saldo devedor, valor da parcela, taxa (se souber) e se está em atraso.</li>
+              <li><b>Preço, margem e custos:</b> custos fixos do mês, quanto do preço vai em custo variável (em %), e como ele forma o preço hoje.</li>
+              <li><b>Prazos:</b> em quantos dias recebe dos clientes, em quantos paga os fornecedores e quantos dias o estoque fica parado.</li>
+              <li><b>Hábitos de gestão:</b> os 5 pilares da vitrine, de 0 a 10: clareza dos números, organização do caixa, consciência nas decisões, abertura pra receber ajuda e constância na gestão. Mais: separa a conta da pessoa física da empresa?</li>
+            </ol></div>
+          <div class="ficha-sec"><h4>O que ela calcula</h4>
+            <ul>
+              <li><b>Índice de Blindagem (0 a 100):</b> soma dos 5 pilares × 2, como na vitrine. Faixas: abaixo de 40 “base precisa de atenção”, de 40 a 69 “blindagem em construção”, 70 ou mais “base consistente”.</li>
+              <li><b>Primeiro foco:</b> o pilar com a menor nota.</li>
+              <li><b>Peso das dívidas:</b> soma das parcelas ÷ faturamento do mês. <span class="tag-sug">sugestão</span></li>
+              <li><b>Ponto de equilíbrio:</b> custos fixos ÷ (1 − % de custo variável). Quanto ele precisa vender só pra empatar. <span class="tag-sug">sugestão</span></li>
+              <li><b>Ciclo financeiro:</b> dias de estoque + dias pra receber − dias pra pagar. Quantos dias a empresa financia as próprias vendas. <span class="tag-sug">sugestão</span></li>
+            </ul></div>
+          <div class="ficha-sec"><h4>Template: o que o Marcelo recebe</h4>
+            <p>O índice com a faixa, os 3 números principais (peso das dívidas, ponto de equilíbrio e ciclo financeiro) explicados numa frase cada, o primeiro foco e os próximos passos do Plano de Ação.</p>
+            <p><b>Só no seu painel:</b> todas as respostas e o Check de Aderência à Persona, que confere se ele é o empresário certo pra mentoria: por volta de R$ 360 mil por ano, já vendeu bem, caiu e não voltou, e hoje está sem caixa.</p></div>
+          <div class="ficha-sec need"><h4>Precisa vir de você</h4>
+            <p>Confirmar as perguntas (falta alguma que você sempre faz?), os critérios do Check de Aderência e o texto de cada faixa.</p></div>
+          <div class="ficha-sec later"><h4>Fica fora da 1ª versão</h4>
+            <p>Consulta automática de CPF e CNPJ: na 1ª versão, a negativação é o Marcelo quem informa.</p></div>
+          <ul class="checklist ficha-ok"><li><input type="checkbox"><div class="q"><span><b>Ficha 01 aprovada como está</b></span></div></li></ul>
+          <label class="ficha-field">Conteúdo: perguntas e contas<textarea class="answer" data-key="s4-ficha1-conteudo" rows="1" placeholder="O que muda, entra ou sai"></textarea></label>
+          <label class="ficha-field">Estrutura: ordem das telas<textarea class="answer" data-key="s4-ficha1-estrutura" rows="1" placeholder="O que muda na ordem"></textarea></label>
+          <label class="ficha-field">Template: o que o Marcelo recebe<textarea class="answer" data-key="s4-ficha1-template" rows="1" placeholder="O que muda no resultado"></textarea></label>
+          <label class="ficha-field">Critérios do Check de Aderência e textos das faixas<textarea class="answer" data-key="s4-ficha1-insumos" rows="1" placeholder="Anotar"></textarea></label>
+        </div>
+      </details>
+
+      <details class="ficha">
+        <summary><span class="ficha-num">02</span><span class="ficha-tit">Simulador de Crédito: 3 Caminhos<small>Etapa 1 · Aliviar</small></span></summary>
+        <div class="ficha-body">
+          <div class="ficha-sec"><h4>Pra que serve</h4>
+            <p>Comparar até 3 caminhos de crédito e gerar o Relatório Personalizado de Crédito e Sustentabilidade. Desmonta O3 “só preciso de crédito”, O4 “estou negativado, ninguém vai me dar crédito” e O9 “agora não posso gastar com isso”.</p></div>
+          <div class="ficha-sec"><h4>Quem usa e como chega</h4>
+            <p>Só você usa. O Marcelo recebe o relatório pronto.</p></div>
+          <div class="ficha-sec"><h4>Estrutura <span class="tag-sug">sugestão</span></h4>
+            <ol>
+              <li><b>Base do diagnóstico:</b> a ferramenta já traz a sobra do mês, as dívidas e a negativação que ele informou na Ficha 01.</li>
+              <li><b>Seus caminhos:</b> você cadastra até 3 propostas verificadas: instituição e linha, valor, prazo, taxa ao mês, CET, carência, garantia exigida e se aceita negativado.</li>
+              <li><b>Comparação:</b> os 3 lado a lado.</li>
+              <li><b>Sua recomendação:</b> um campo de texto seu, com o caminho indicado e o porquê.</li>
+              <li><b>Relatório:</b> gerado pro Marcelo.</li>
+            </ol></div>
+          <div class="ficha-sec"><h4>O que ela calcula</h4>
+            <ul>
+              <li><b>Parcela</b> pela Tabela Price, como na vitrine, além do total pago e de quanto custa o dinheiro (total pago − valor recebido).</li>
+              <li><b>Quanto da sobra a parcela consome</b>, em %. Acima do limite que você definir, o caminho fica em alerta. <span class="tag-sug">sugestão: limite de 30%</span></li>
+              <li><b>Quando nenhum caminho cabe na sobra,</b> o relatório indica renegociar antes de contratar crédito novo, como já diz a planilha.</li>
+            </ul></div>
+          <div class="ficha-sec"><h4>Template: o que o Marcelo recebe</h4>
+            <p>Os 3 caminhos lado a lado (parcela, total, custo, % da sobra e garantias), a sua recomendação, os próximos passos e um aviso fixo: a simulação não é oferta nem garante aprovação, que depende da instituição.</p></div>
+          <div class="ficha-sec need"><h4>Precisa vir de você</h4>
+            <p>De onde vêm as taxas e as linhas, o limite de comprometimento da sobra e o texto padrão da recomendação.</p></div>
+          <div class="ficha-sec later"><h4>Fica fora da 1ª versão</h4>
+            <p>O Radar do Crédito, a busca automática de linhas, que alimentaria o simulador no futuro.</p></div>
+          <ul class="checklist ficha-ok"><li><input type="checkbox"><div class="q"><span><b>Ficha 02 aprovada como está</b></span></div></li></ul>
+          <label class="ficha-field">Conteúdo: o que entra e o que calcula<textarea class="answer" data-key="s4-ficha2-conteudo" rows="1" placeholder="O que muda, entra ou sai"></textarea></label>
+          <label class="ficha-field">Estrutura: ordem das etapas<textarea class="answer" data-key="s4-ficha2-estrutura" rows="1" placeholder="O que muda na ordem"></textarea></label>
+          <label class="ficha-field">Template: o relatório do Marcelo<textarea class="answer" data-key="s4-ficha2-template" rows="1" placeholder="O que muda no relatório"></textarea></label>
+          <label class="ficha-field">As taxas e as linhas vêm das propostas que você já recebe dos bancos ou de uma lista que você mantém? Qual o limite da sobra?<textarea class="answer" data-key="s4-aprov-taxas" rows="1" placeholder="Anotar resposta"></textarea></label>
+        </div>
+      </details>
+
+      <details class="ficha">
+        <summary><span class="ficha-num">03</span><span class="ficha-tit">Raio-X do Empresário<small>Etapa 2 · Ressignificar (nome do módulo em decisão)</small></span></summary>
+        <div class="ficha-body">
+          <div class="ficha-sec"><h4>Pra que serve</h4>
+            <p>Entender a história, as crenças, os medos e as forças do empresário, pra usar no trabalho acompanhado. Desmonta O2 “o mercado é que está ruim”, O5 “como alguém de fora vai saber mais”, O6 “se for da vontade de Deus”, O7 “deveria resolver sozinho” e O10 “pedir ajuda parece admitir fracasso”.</p></div>
+          <div class="ficha-sec"><h4>Quem usa e como chega</h4>
+            <p>O Marcelo responde num ambiente privado, e todas as respostas são opcionais. Você usa as respostas nas sessões.</p></div>
+          <div class="ficha-sec"><h4>Estrutura: blocos do questionário <span class="tag-sug">sugestão</span></h4>
+            <ol>
+              <li><b>A história da empresa:</b> como era o melhor momento, quando começou a cair e o que aconteceu.</li>
+              <li><b>O que mais pesa hoje:</b> dores e urgências, o que tira o sono.</li>
+              <li><b>Sob pressão:</b> os 3 padrões da vitrine, de 0 a 10: reação sob pressão, dificuldade em delegar e peso do passado nas decisões.</li>
+              <li><b>Crenças:</b> frases pra ele dizer o quanto concorda (sobre dinheiro, mercado, pedir ajuda e dar conta de tudo sozinho).</li>
+              <li><b>Forças e valores:</b> o que já o tirou de crises antes e o que não negocia.</li>
+              <li><b>Família e apoio:</b> quem sabe da situação e com quem ele conta.</li>
+              <li><b>Fé:</b> bloco opcional, sem nota e sem tratar como problema.</li>
+            </ol></div>
+          <div class="ficha-sec"><h4>O que ela faz com as respostas</h4>
+            <p>Não dá nota de personalidade. Destaca o padrão com a maior nota, como na vitrine, e gera uma reflexão curta, uma ação pra semana e uma pergunta pra sessão (Contra-Ataque Consciente).</p></div>
+          <div class="ficha-sec"><h4>Template: o que o Marcelo recebe</h4>
+            <p>Um resumo do que ele contou, o padrão em destaque, a reflexão e a pergunta pra levar à sessão. <b>No seu painel:</b> as respostas completas.</p></div>
+          <div class="ficha-sec need"><h4>Precisa vir de você</h4>
+            <p>As perguntas que você já usa no coaching e os textos de reflexão pra cada padrão, na sua voz. Nome do módulo e EVO no nome ficam nas Aprovações.</p></div>
+          <div class="ficha-sec later"><h4>Cuidado que fica fixo</h4>
+            <p>Não é teste psicológico, não reproduz DISC nem protocolo do EVO.</p></div>
+          <ul class="checklist ficha-ok"><li><input type="checkbox"><div class="q"><span><b>Ficha 03 aprovada como está</b></span></div></li></ul>
+          <label class="ficha-field">Conteúdo: perguntas de cada bloco<textarea class="answer" data-key="s4-ficha3-conteudo" rows="1" placeholder="O que muda, entra ou sai"></textarea></label>
+          <label class="ficha-field">Estrutura: ordem dos blocos<textarea class="answer" data-key="s4-ficha3-estrutura" rows="1" placeholder="O que muda na ordem"></textarea></label>
+          <label class="ficha-field">Template: o que o Marcelo recebe<textarea class="answer" data-key="s4-ficha3-template" rows="1" placeholder="O que muda no resultado"></textarea></label>
+          <label class="ficha-field">Suas perguntas de coaching e textos de reflexão<textarea class="answer" data-key="s4-ficha3-insumos" rows="1" placeholder="Pode colar aqui ou dizer onde estão"></textarea></label>
+        </div>
+      </details>
+
+      <details class="ficha">
+        <summary><span class="ficha-num">04</span><span class="ficha-tit">Piloto Automático da Gestão<small>Etapa 3 · Organizar</small></span></summary>
+        <div class="ficha-body">
+          <div class="ficha-sec"><h4>Pra que serve</h4>
+            <p>Fazer o Marcelo parar de administrar pelo saldo do banco, sem passar horas preenchendo planilha. Desmonta O1 “meu problema é vender, não gestão” e O8 “não tenho tempo pra organizar a empresa”.</p></div>
+          <div class="ficha-sec"><h4>Quem usa e como chega</h4>
+            <p>O Marcelo importa os arquivos e confirma o que a ferramenta não souber classificar. Você acompanha pelo plano.</p></div>
+          <div class="ficha-sec"><h4>Estrutura</h4>
+            <ol>
+              <li><b>Importar:</b> extrato do banco em CSV ou Excel.</li>
+              <li><b>Classificar sozinho:</b> regras pelo texto do extrato separam em categorias. <span class="tag-sug">sugestão de categorias:</span> recebimentos de vendas, custos variáveis, despesas fixas, parcelas de dívidas, retirada do dono e gasto pessoal pago pela empresa.</li>
+              <li><b>Confirmar exceções:</b> o que ficou em dúvida aparece numa lista curta pra ele escolher a categoria. A escolha vira regra pro mês seguinte.</li>
+              <li><b>Painel do mês.</b></li>
+              <li><b>Ritual semanal:</b> as 4 tarefas da vitrine: conferir saldo e movimentações, revisar contas a pagar e a receber, separar retirada pessoal do caixa da empresa e definir uma ação pra semana.</li>
+              <li><b>Espelho da Gestão:</b> antes de ver o painel, ele diz quanto acha que sobrou. Depois compara com o número real.</li>
+            </ol></div>
+          <div class="ficha-sec"><h4>O que ela calcula</h4>
+            <ul>
+              <li>Recebimentos, pagamentos operacionais, parcelas e retirada do mês (os 4 números da vitrine).</li>
+              <li>Sobra ou déficit de caixa, o peso das parcelas sobre os recebimentos, a evolução mês a mês e as maiores despesas. <span class="tag-sug">sugestão</span></li>
+              <li>A % do ritual semanal cumprida, que alimenta o Radar.</li>
+            </ul></div>
+          <div class="ficha-sec"><h4>Template: o que o Marcelo vê</h4>
+            <p>Um painel com o resumo do mês numa frase (“sobrou R$ X, confira os próximos compromissos antes de usar” ou “faltou R$ X, revise saídas e prazos”), os números principais, o gráfico de evolução e o ritual da semana. É resumo de caixa, não demonstração contábil.</p></div>
+          <div class="ficha-sec need"><h4>Precisa vir de você</h4>
+            <p>Banco e formato do extrato do Marcelo, e se as categorias batem com o jeito que você ensina.</p></div>
+          <div class="ficha-sec later"><h4>Fica fora da 1ª versão</h4>
+            <p>Leitura de extrato em PDF e integração direta com banco (já previstos como serviço à parte).</p></div>
+          <ul class="checklist ficha-ok"><li><input type="checkbox"><div class="q"><span><b>Ficha 04 aprovada como está</b></span></div></li></ul>
+          <label class="ficha-field">Conteúdo: categorias e números<textarea class="answer" data-key="s4-ficha4-conteudo" rows="1" placeholder="O que muda, entra ou sai"></textarea></label>
+          <label class="ficha-field">Estrutura: ordem das etapas<textarea class="answer" data-key="s4-ficha4-estrutura" rows="1" placeholder="O que muda na ordem"></textarea></label>
+          <label class="ficha-field">Template: o painel do Marcelo<textarea class="answer" data-key="s4-ficha4-template" rows="1" placeholder="O que muda no painel"></textarea></label>
+          <label class="ficha-field">O Marcelo consegue exportar o extrato do banco em CSV ou Excel? Qual banco ele mais usa?<textarea class="answer" data-key="s4-aprov-extrato" rows="1" placeholder="Anotar resposta"></textarea></label>
+        </div>
+      </details>
+
+      <details class="ficha">
+        <summary><span class="ficha-num">05</span><span class="ficha-tit">Decisão Blindada<small>Etapa 4 · Blindar</small></span></summary>
+        <div class="ficha-body">
+          <div class="ficha-sec"><h4>Pra que serve</h4>
+            <p>Encarar a decisão que ele vem adiando com 3 caminhos possíveis, usando o Contra-Ataque Consciente e a Regra dos 3 Caminhos. Desmonta O2 “o mercado está ruim”, O7 “deveria resolver sozinho” e O10 “pedir ajuda é admitir fracasso”.</p></div>
+          <div class="ficha-sec"><h4>Quem usa e como chega</h4>
+            <p>O Marcelo acessa por link, escolhe a situação e recebe um plano de decisão.</p></div>
+          <div class="ficha-sec"><h4>Estrutura: as 5 etapas da planilha</h4>
+            <ol>
+              <li><b>Escolher a situação:</b> negociar com fornecedor, cobrar um compromisso, dar feedback, resolver um conflito, decisão trabalhista ou decisão financeira.</li>
+              <li><b>Parar:</b> descrever a decisão e o que ele sente sobre ela.</li>
+              <li><b>Observar:</b> separar fatos de medos e anotar o impacto no caixa.</li>
+              <li><b>Avaliar:</b> 3 caminhos, cada um com o lado bom, o risco e a consequência.</li>
+              <li><b>Escolher:</b> os 4 filtros da vitrine: conferi os fatos e o impacto no caixa, considerei pelo menos 3 caminhos, estou decidindo com consciência e não só pelo medo, defini responsável, prazo e quando revisar.</li>
+              <li><b>Agir:</b> o primeiro passo, o prazo e a data de revisão. Quando a decisão envolve outra pessoa, entra um roteiro curto pra preparar a conversa. <span class="tag-sug">sugestão</span></li>
+            </ol></div>
+          <div class="ficha-sec"><h4>O que ela faz</h4>
+            <p>Confere se a decisão está completa (situação descrita, 3 caminhos, 4 filtros) e aponta o que falta, como na vitrine. Não escolhe o caminho por ele.</p></div>
+          <div class="ficha-sec"><h4>Template: o que o Marcelo recebe</h4>
+            <p>O plano de decisão numa página: a decisão, os 3 caminhos, o caminho escolhido, o primeiro passo com prazo, a data de revisão e, quando houver, o roteiro da conversa.</p></div>
+          <div class="ficha-sec need"><h4>Precisa vir de você</h4>
+            <p>A lista final de situações, as perguntas do Contra-Ataque Consciente nas suas palavras e, se quiser, um roteiro de conversa pra cada situação.</p></div>
+          <ul class="checklist ficha-ok"><li><input type="checkbox"><div class="q"><span><b>Ficha 05 aprovada como está</b></span></div></li></ul>
+          <label class="ficha-field">Conteúdo: situações e perguntas<textarea class="answer" data-key="s4-ficha5-conteudo" rows="1" placeholder="O que muda, entra ou sai"></textarea></label>
+          <label class="ficha-field">Estrutura: ordem das etapas<textarea class="answer" data-key="s4-ficha5-estrutura" rows="1" placeholder="O que muda na ordem"></textarea></label>
+          <label class="ficha-field">Template: o plano de decisão<textarea class="answer" data-key="s4-ficha5-template" rows="1" placeholder="O que muda no plano"></textarea></label>
+          <label class="ficha-field">Perguntas do Contra-Ataque Consciente e roteiros de conversa<textarea class="answer" data-key="s4-ficha5-insumos" rows="1" placeholder="Pode colar aqui ou dizer onde estão"></textarea></label>
+        </div>
+      </details>
+
+      <details class="ficha">
+        <summary><span class="ficha-num">06</span><span class="ficha-tit">Radar de Blindagem<small>Etapa 5 · Sustentar</small></span></summary>
+        <div class="ficha-body">
+          <div class="ficha-sec"><h4>Pra que serve</h4>
+            <p>Mostrar os sinais de perigo antes do caixa ficar vermelho de novo. Desmonta O3 “só preciso de crédito” e O8 “não tenho tempo pra organizar”, e a trava de largar a gestão depois que o crédito sai.</p></div>
+          <div class="ficha-sec"><h4>Quem usa e como chega</h4>
+            <p>O Marcelo acompanha o painel e você confere a evolução. Os números vêm do Piloto Automático (Ficha 04), então o Radar depende dele.</p></div>
+          <div class="ficha-sec"><h4>Estrutura: o painel</h4>
+            <ol>
+              <li><b>Velocímetro do fôlego:</b> quantos dias o caixa aguenta sem entrar dinheiro novo.</li>
+              <li><b>Tendência:</b> melhorando, estável ou piorando em relação ao período anterior.</li>
+              <li><b>Sinais de blindagem:</b> fôlego do caixa, constância na rotina (% do ritual semanal cumprida) e peso das parcelas sobre os recebimentos.</li>
+              <li><b>Próximos vencimentos</b> que apertam o caixa. <span class="tag-sug">sugestão</span></li>
+              <li><b>Checklist de hábitos de blindagem</b> (o antigo Check de Blindagem). <span class="tag-sug">sugestão de itens:</span> conta da empresa separada da pessoal, ritual semanal feito, nenhuma conta em atraso, decisão difícil da semana registrada.</li>
+            </ol></div>
+          <div class="ficha-sec"><h4>O que ela calcula</h4>
+            <ul>
+              <li><b>Dias de fôlego</b> = saldo disponível ÷ (saídas do mês ÷ 30), como na vitrine.</li>
+              <li><b>Faixas da vitrine:</b> risco abaixo de 20 dias, atenção de 20 a 39 e seguro com 40 ou mais. Hoje são didáticas e precisam do seu número.</li>
+              <li><b>Rotina:</b> 80% ou mais “consistente”, de 50 a 79% “a fortalecer” e abaixo de 50% “retomar acompanhamento”.</li>
+            </ul></div>
+          <div class="ficha-sec"><h4>Template: o que o Marcelo vê</h4>
+            <p>O velocímetro com a faixa, a tendência, os sinais em semáforo e uma prioridade da semana. Exemplo do risco: “revisar vencimentos, proteger o caixa e falar com o mentor antes de assumir novas parcelas”. As prioridades entram no Plano de Ação.</p></div>
+          <div class="ficha-sec need"><h4>Precisa vir de você</h4>
+            <p>As faixas de dias que você usa na prática, os sinais de recaída que você mais vê nos empresários e os itens do checklist.</p></div>
+          <div class="ficha-sec later"><h4>Fica fora da 1ª versão</h4>
+            <p>Alertas no WhatsApp: isso é o Copiloto de Blindagem, previsto pro futuro.</p></div>
+          <ul class="checklist ficha-ok"><li><input type="checkbox"><div class="q"><span><b>Ficha 06 aprovada como está</b></span></div></li></ul>
+          <label class="ficha-field">Conteúdo: sinais, faixas e checklist<textarea class="answer" data-key="s4-ficha6-conteudo" rows="1" placeholder="O que muda, entra ou sai"></textarea></label>
+          <label class="ficha-field">Estrutura: o que aparece primeiro<textarea class="answer" data-key="s4-ficha6-estrutura" rows="1" placeholder="O que muda na ordem"></textarea></label>
+          <label class="ficha-field">Template: o painel do Marcelo<textarea class="answer" data-key="s4-ficha6-template" rows="1" placeholder="O que muda no painel"></textarea></label>
+          <label class="ficha-field">Suas faixas de dias e os sinais de recaída que você mais vê<textarea class="answer" data-key="s4-ficha6-insumos" rows="1" placeholder="Anotar"></textarea></label>
+        </div>
+      </details>
+
+      <p class="ficha-foot">Fichas revisadas, a construção começa pela ferramenta que você indicou como a primeira nas Aprovações.</p>
     </div>
   </div>
 

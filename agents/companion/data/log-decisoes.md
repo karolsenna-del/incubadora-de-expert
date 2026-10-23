@@ -10,6 +10,12 @@
 **Impacto:** [o que muda]
 -->
 
+## 23/10/2026 — Sprint do Vagner: ferramentas só são construídas depois que ele revisa as fichas de conteúdo
+**Contexto:** S4 do Vagner apresentava o Kit (planilha) e a vitrine (protótipo com dados fictícios) e já liberava a versão de uso nas Aprovações.
+**Decisao:** As 6 essenciais ganham uma ficha de conteúdo cada (pra que serve, quem usa, estrutura das telas, o que calcula, template do resultado, o que precisa vir dele, o que fica fora da 1ª versão). Revisar conteúdo, estrutura e template é a tarefa dele até a S5. A construção só começa com as fichas devolvidas.
+**Racional:** Karol quer construir sem retrabalho; o protótipo e a planilha não diziam o que vai dentro de cada ferramenta.
+**Impacto:** S4 do cronograma ganhou o bloco de tarefa com campos salvos (`s4-ficha1..6-*`, `s4-fichas-prazo`); as perguntas de taxas e extrato saíram das Aprovações e foram pras fichas 02 e 04 (mesmas chaves).
+
 ## 20/10/2026 — Agente da Autoridade Tríplice passa a entregar Frase-Tese e bio; vitrine fica nos materiais do M4
 **Contexto:** Revisando o GPT da Autoridade Tríplice, a Karol notou que a frase-tese não estava nele. Ela existia só na versão da área de membros (seção 4, Tese Autoral), nunca colada no GPT. O curso também definia frase-tese e bio de dois jeitos diferentes (M4.2 x área de membros; roteiro da Aula 4 x Agente da Promessa).
 **Decisão:** (1) O agente ganha a Tese Autoral e a bio do Instagram; destaques e posts fixados ficam fora e seguem nos materiais M4.4 e M4.5. (2) Frase-tese: critério "curta e memorável, a bandeira que a pessoa repete de cabeça". (3) Bio: modelo "Eu ajudo [persona] a conquistar [resultado], [atratividade]" + CTA, até 150 caracteres. (4) Sintoma, problema impostor e causa oculta são sugeridos pelo agente e o aluno confirma ou ajusta, porque as alunas travam ao escrever isso. v2 aprovada pela Karol.

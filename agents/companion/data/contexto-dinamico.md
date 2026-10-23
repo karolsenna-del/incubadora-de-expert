@@ -147,6 +147,10 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 23/10 — Sprint do Vagner, fichas das ferramentas (Companion):**
+- S4 do cronograma (https://claude.ai/artifact/66roHRBBNNEhNpoWXvEUvV, versao 19) ganhou a tarefa "revisar as fichas das 6 ferramentas" ate a S5: uma ficha por essencial com estrutura, calculos, template do resultado, insumos dele e o que fica fora da 1a versao; o que e proposta nossa esta marcado como "sugestao". Fonte: planilha do Kit + vitrine.
+- Construcao das ferramentas so comeca quando ele devolver as fichas. Prazo de devolucao combinado no Fechamento da S4 (campo `s4-fichas-prazo`).
+
 **Sessao 22-23/10 — Metodo VIP do Tasso, Encontro 2 (Companion):**
 - Material do E2 pronto, aguardando aprovacao do Tasso: Canvas da apresentacao (https://claude.ai/artifact/MnZykckEBnjQvdKBtK6X9n, ainda na versao anterior a revisao), Canvas editavel na identidade da Hunt (https://claude.ai/artifact/LhFmQPTVa9p51MPBWKXQeg, ja revisado) e documento aprofundado com 11 pontos pra aprovar + aba "Ajustes nos materiais" (https://claude.ai/artifact/FzF6Lg27d9m26jbY3B36LK).
 - Karol revisou os 11 pontos com o Companion (segmento com 2 motivacoes Seguranca/Agilidade, promessa 5 imoveis em ate 30 dias, comissao sem custo pra compradora, servicos avulsos, assessores por sinal, busca com IA). Resumo completo em `business/campanhas/metodo-vip/clientes/tasso-ramalho/plano-encontros.md`.
