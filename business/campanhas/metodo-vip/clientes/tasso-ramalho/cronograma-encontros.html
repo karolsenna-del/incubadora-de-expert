@@ -1,0 +1,591 @@
+<title>Método VIP · Tasso</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
+<style>
+/* Layout: abas por encontro (como o cronograma do Vagner). No Encontro 2, o quadro do Canvas entre Abertura e as etapas de fechamento; o bloco ativo abre num cartão abaixo */
+:root{
+  --bg:#F4F4F5; --surface:#FFFFFF; --surface-2:#EDEDF0;
+  --ink:#0B0B0C; --ink-soft:#5F5F68; --line:#D4D4D8;
+  --accent:#FF6B1A; --accent-strong:#C94A08; --accent-soft:rgba(255,107,26,.10);
+  --on-accent:#0B0B0C;
+  --font-display:'Sora',-apple-system,'Segoe UI',sans-serif;
+  --font-body:-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111113; --surface:#1A1A1D; --surface-2:#242428;
+    --ink:#F4F4F5; --ink-soft:#A1A1AA; --line:#3A3A40;
+    --accent:#FF7A2E; --accent-strong:#FF9A5C; --accent-soft:rgba(255,122,46,.14);
+    --on-accent:#0B0B0C; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111113; --surface:#1A1A1D; --surface-2:#242428;
+  --ink:#F4F4F5; --ink-soft:#A1A1AA; --line:#3A3A40;
+  --accent:#FF7A2E; --accent-strong:#FF9A5C; --accent-soft:rgba(255,122,46,.14);
+  --on-accent:#0B0B0C; color-scheme:dark;
+}
+*{box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
+.page{max-width:960px;margin:0 auto;padding-block:28px 64px;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));}
+.hero{padding-block:6px 22px;border-bottom:1px solid var(--line);margin-bottom:22px;}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-strong);font-weight:600;}
+.hero h1{font-family:var(--font-display);font-size:clamp(26px,5vw,38px);margin:6px 0 4px;text-wrap:balance;font-weight:600;}
+.hero .meta{color:var(--ink-soft);font-size:14px;display:flex;flex-wrap:wrap;gap:6px 16px;}
+
+.weektabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;}
+.weektab{flex:1;min-width:120px;background:var(--surface);border:1.5px solid var(--line);border-radius:12px;
+  padding:10px 12px;cursor:pointer;text-align:left;font-family:var(--font-body);transition:all .15s ease;color:var(--ink);}
+.weektab:hover{border-color:var(--accent);}
+.weektab .wk-num{font-family:var(--font-display);font-size:13px;color:var(--ink-soft);font-weight:600;}
+.weektab .wk-title{font-size:12.5px;font-weight:600;margin-top:2px;line-height:1.25;}
+.weektab.active{border-color:var(--accent);background:var(--accent-soft);}
+.weektab.active .wk-num{color:var(--accent-strong);}
+.weektab:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+@media (max-width:640px){.weektabs{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;}.weektab{min-width:110px;}}
+[data-week]{display:none;}
+[data-week].active{display:block;}
+
+.progress{display:flex;align-items:center;gap:12px;margin-bottom:16px;font-size:13px;color:var(--ink-soft);}
+.progress-track{flex:1;height:6px;background:var(--surface-2);border-radius:99px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;transition:width .3s ease;border-radius:99px;}
+.progress-count{font-variant-numeric:tabular-nums;white-space:nowrap;}
+.hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+
+.stage-btn{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:var(--surface);
+  border:2px solid var(--line);border-radius:12px;padding:10px 14px;cursor:pointer;color:var(--ink);
+  font:600 13.5px/1.3 var(--font-body);transition:border-color .15s ease,background .15s ease;}
+.stage-btn small{display:block;font-weight:400;color:var(--ink-soft);font-size:12.5px;margin-top:2px;}
+.stage-btn:hover{border-color:var(--accent);}
+.stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;}
+@media (max-width:860px){.stages{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:640px){.stages{grid-template-columns:1fr;}}
+
+.bmc{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));grid-template-rows:auto auto auto;gap:6px;margin-block:8px;}
+.cell{position:relative;display:flex;flex-direction:column;gap:6px;text-align:left;min-width:0;min-height:118px;
+  background:var(--surface);border:2px solid var(--line);border-radius:10px;padding:10px 11px;cursor:pointer;color:var(--ink);
+  font-family:var(--font-body);transition:border-color .15s ease,background .15s ease;}
+.cell:hover{border-color:var(--accent);}
+.cell-top{display:flex;align-items:center;gap:7px;}
+.num{width:22px;height:22px;border-radius:50%;background:var(--surface-2);color:var(--ink-soft);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font:600 11px var(--font-display);}
+.cell-title{font:600 12.5px/1.2 var(--font-display);}
+.cell-sum{font-size:12px;line-height:1.4;color:var(--ink-soft);}
+.c-parc{grid-column:1/3;grid-row:1/3;}
+.c-ativ{grid-column:3/5;grid-row:1;}
+.c-recu{grid-column:3/5;grid-row:2;}
+.c-prop{grid-column:5/7;grid-row:1/3;background:var(--accent-soft);}
+.c-rela{grid-column:7/9;grid-row:1;}
+.c-cana{grid-column:7/9;grid-row:2;}
+.c-segm{grid-column:9/11;grid-row:1/3;}
+.c-cust{grid-column:1/6;grid-row:3;min-height:84px;}
+.c-rece{grid-column:6/11;grid-row:3;min-height:84px;}
+@media (max-width:680px){
+  .bmc{grid-template-columns:1fr;}
+  .bmc .cell{grid-column:auto;grid-row:auto;min-height:0;}
+  .c-segm{order:1}.c-prop{order:2}.c-cana{order:3}.c-rela{order:4}.c-rece{order:5}
+  .c-recu{order:6}.c-ativ{order:7}.c-parc{order:8}.c-cust{order:9}
+}
+.cell:focus-visible,.stage-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.cell.active,.stage-btn.active{border-color:var(--accent);}
+.cell.active .num,.stage-btn.active .num{background:var(--accent);color:var(--on-accent);}
+.cell.done .num,.stage-btn.done .num{background:var(--accent-strong);color:var(--surface);font-size:0;}
+.cell.done .num::after,.stage-btn.done .num::after{content:"✓";font-size:11px;}
+
+.detail-wrap{margin-top:18px;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;}
+.card + .card{margin-top:12px;}
+.card-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px;}
+.card-head h2{font-family:var(--font-display);font-size:20px;margin:0;font-weight:600;text-wrap:balance;}
+.time{font-size:12px;color:var(--ink-soft);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.card-sub{font-size:13px;color:var(--ink-soft);margin:0 0 14px;max-width:70ch;}
+.card h3.sec{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;color:var(--ink-soft);margin:18px 0 8px;}
+.mark-done{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-soft);cursor:pointer;user-select:none;margin-top:18px;}
+.mark-done input{accent-color:var(--accent);width:14px;height:14px;}
+
+.bullets{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px;}
+.bullets li{font-size:14px;line-height:1.5;padding-left:16px;position:relative;max-width:74ch;}
+.bullets li::before{content:"—";position:absolute;left:0;color:var(--ink-soft);}
+.bullets li.pro::before{content:"◆";color:var(--accent);font-size:10px;top:4px;}
+.bullets q{font-style:italic;}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink-soft);margin:0 0 12px;}
+.legend span::before{margin-right:6px;}
+.legend .l-def::before{content:"—";}
+.legend .l-pro::before{content:"◆";color:var(--accent);}
+
+.hypothesis{background:var(--accent-soft);border:1px solid var(--accent);border-radius:10px;padding:12px 14px;font-size:13.5px;line-height:1.5;margin-bottom:12px;}
+.hypothesis b{color:var(--accent-strong);}
+
+.checklist{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none;}
+.checklist li{display:flex;flex-wrap:wrap;align-items:flex-start;gap:8px;font-size:13.5px;line-height:1.4;padding:6px 8px;border-radius:8px;transition:background .15s ease;}
+.checklist li:hover{background:var(--surface-2);}
+.checklist input[type=checkbox]{accent-color:var(--accent);width:15px;height:15px;margin-top:2px;flex-shrink:0;}
+.checklist li > span{flex:1;min-width:0;}
+.checklist li.checked span{color:var(--ink-soft);text-decoration:line-through;text-decoration-color:var(--line);}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.two-col > div{min-width:0;}
+@media (max-width:560px){.two-col{grid-template-columns:1fr;}}
+.col-label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;color:var(--ink-soft);margin-bottom:8px;}
+
+.tbl-wrap{overflow-x:auto;margin-bottom:8px;}
+table.t{border-collapse:collapse;width:100%;font-size:13px;line-height:1.45;min-width:520px;}
+table.t td:nth-child(2){color:var(--ink-soft);}
+table.t th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line);}
+table.t td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.t td:first-child{white-space:nowrap;font-weight:600;}
+
+.appr{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none;}
+.appr li{border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:grid;grid-template-columns:28px 1fr auto;gap:4px 10px;align-items:start;}
+.appr .a-n{font:600 12px var(--font-display);color:var(--ink-soft);padding-top:2px;font-variant-numeric:tabular-nums;}
+.appr .a-t{font-size:13.5px;line-height:1.45;min-width:0;}
+.appr .a-t b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin-bottom:2px;}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+.seg button{appearance:none;border:0;background:var(--surface);color:var(--ink-soft);font:600 11.5px var(--font-body);padding:6px 9px;cursor:pointer;}
+.seg button + button{border-left:1px solid var(--line);}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);}
+.seg button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;}
+.appr .note{grid-column:2/4;}
+@media (max-width:560px){.appr li{grid-template-columns:24px 1fr;}.appr .seg{grid-column:2;}.appr .note{grid-column:1/3;}}
+
+.encontros{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px;}
+.enc-chip{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12.5px;}
+.enc-chip b{color:var(--accent-strong);}
+.enc-chip.now{border-color:var(--accent);background:var(--accent-soft);}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:6px;}
+.step-chip{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12.5px;}
+.step-chip b{color:var(--accent-strong);margin-right:4px;font-variant-numeric:tabular-nums;}
+.flow .arrow{color:var(--ink-soft);font-size:12px;}
+.links a{color:var(--accent-strong);}
+.open-canvas{display:inline-block;background:var(--accent);color:var(--on-accent);font:600 14px var(--font-body);text-decoration:none;padding:10px 16px;border-radius:10px;}
+.open-canvas:hover{filter:brightness(1.05);}
+.open-canvas:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}
+
+.note{display:block;width:100%;min-height:44px;resize:vertical;font:13px/1.45 var(--font-body);color:var(--ink);
+  background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:7px 10px;margin-top:4px;}
+.checklist .note{margin-left:23px;width:calc(100% - 23px);}
+.note:focus{outline:none;border-style:solid;border-color:var(--accent);}
+.note::placeholder{color:var(--ink-soft);}
+.block-note{margin-top:18px;}
+.block-note .col-label{margin-bottom:4px;}
+.save-state{font-size:12px;color:var(--ink-soft);text-align:right;min-height:16px;margin-top:6px;}
+.foot{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-soft);line-height:1.6;}
+[data-panel]{display:none;}
+[data-panel].active{display:block;}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;}}
+</style>
+
+<div class="page">
+  <div class="hero">
+    <div class="eyebrow">Método VIP · 3 encontros</div>
+    <h1>Tasso Ramalho · Hunt Imóveis</h1>
+    <div class="meta"><span>Contratado em 24/09</span><span>·</span><span>Encontro 1 em 06/10</span><span>·</span><span>Encontro 2 em 24/10</span></div>
+  </div>
+
+  <div class="weektabs" role="tablist">
+    <button class="weektab" data-weektab="e1" role="tab"><div class="wk-num">Encontro 1</div><div class="wk-title">Diagnóstico e primeiros passos</div></button>
+    <button class="weektab" data-weektab="e2" role="tab"><div class="wk-num">Encontro 2</div><div class="wk-title">Modelo de negócio</div></button>
+    <button class="weektab" data-weektab="e3" role="tab"><div class="wk-num">Encontro 3</div><div class="wk-title">Correção de rota</div></button>
+  </div>
+
+  <!-- ================= ENCONTRO 1 ================= -->
+  <section data-week="e1">
+    <div class="card">
+      <div class="card-head"><h2>Encontro 1 · 06/10</h2><span class="time">Realizado</span></div>
+      <p class="card-sub">O que ficou definido. Registro completo, gravação e transcrição no documento do Drive.</p>
+      <div class="two-col">
+        <div>
+          <div class="col-label">Persona e promessa</div>
+          <ul class="bullets">
+            <li>Mulher acima dos 40, profissional, renda acima de R$30 mil por mês, compra pra morar, imóvel na faixa de R$800 mil, financiado</li>
+            <li>Quer segurança de não ser passada pra trás e um único corretor de confiança</li>
+            <li>Objeção: <q>Eu posso tentar sozinha e economizar esse dinheiro</q></li>
+            <li>Promessa: em 30 dias, uma lista de 5 imóveis pra ela escolher visitar</li>
+            <li>Posicionamento: <q>O Porto Seguro dos compradores de imóveis</q></li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-label">Foco aprovado</div>
+          <ul class="bullets">
+            <li><b>Agora:</b> Hunt Imóveis, persona comprador, Diagnóstico do Comprador + Sessão Secreta, primeiros contratos, modelo de cobrança</li>
+            <li><b>Depois:</b> persona corretor, marketplace, atendimento internacional, Counseling, Grana Curta</li>
+          </ul>
+        </div>
+      </div>
+      <h3 class="sec">Jornada do comprador validada</h3>
+      <div class="flow">
+        <span class="step-chip"><b>0</b>Pré-diagnóstico</span><span class="arrow">→</span><span class="step-chip"><b>1</b>Diagnóstico</span><span class="arrow">→</span><span class="step-chip"><b>2</b>Contrato</span><span class="arrow">→</span><span class="step-chip"><b>3</b>Busca ativa</span><span class="arrow">→</span><span class="step-chip"><b>4</b>Curadoria</span><span class="arrow">→</span><span class="step-chip"><b>5</b>Visitas</span><span class="arrow">→</span><span class="step-chip"><b>6</b>Negociação</span><span class="arrow">→</span><span class="step-chip"><b>7</b>Due diligence</span><span class="arrow">→</span><span class="step-chip"><b>8</b>Fechamento</span>
+      </div>
+      <p class="links" style="font-size:13px;margin:14px 0 0;"><a href="https://docs.google.com/document/d/1Y2W2GgxwfjP_Ghg8TXwZMp7aLkx8_qCJmMYzi6vpOzE/edit" target="_blank" rel="noopener">Registro do Encontro 1 no Drive</a></p>
+    </div>
+  </section>
+
+  <!-- ================= ENCONTRO 2 ================= -->
+  <section data-week="e2">
+    <div class="progress">
+      <span class="progress-count" id="progress-count">0/13 etapas</span>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    </div>
+    <p class="hint">Roteiro da sessão: abertura aqui, Canvas no arquivo oficial da Hunt, e de volta aqui pras aprovações, ajustes e próximos passos.</p>
+
+    <button class="stage-btn" data-node="0"><span class="num">0</span><span>Abertura: o que você trouxe desde o Encontro 1<small>Materiais novos e as tarefas do Encontro 1</small></span></button>
+
+    <div class="stages" style="margin-top:8px;">
+      <button class="stage-btn" data-node="c"><span class="num">1</span><span>Canvas da Hunt<small>Os 9 blocos, no Canvas oficial</small></span></button>
+      <button class="stage-btn" data-node="10"><span class="num">2</span><span>Aprovações<small>13 pontos pra você decidir</small></span></button>
+      <button class="stage-btn" data-node="11"><span class="num">3</span><span>Ajustes nos seus materiais<small>Apresentação e Manual de Vendas</small></span></button>
+      <button class="stage-btn" data-node="12"><span class="num">4</span><span>Fechamento<small>Próximos 30 a 40 dias</small></span></button>
+    </div>
+
+    <div class="detail-wrap">
+
+      <div class="card" data-panel="0">
+        <div class="card-head"><h2>Abertura: o que você trouxe</h2><span class="time">10 min</span></div>
+        <p class="card-sub">Depois do Encontro 1 você montou a Apresentação Institucional, o Manual de Vendas e mandou a planilha de leads. Eles já responderam várias perguntas que estavam em aberto.</p>
+        <ul class="bullets">
+          <li><b>Região:</b> atuação exclusiva na Zona Sul do Rio</li>
+          <li><b>Formalização:</b> CNPJ e atendimento por profissional com CRECI-RJ</li>
+          <li><b>Promessa:</b> curadoria de 5 imóveis visitados e avaliados antes de chegar à cliente</li>
+          <li><b>Cobrança:</b> comissão de 5%, sem custo adicional pra cliente</li>
+          <li><b>Processo:</b> 10 etapas com objetivo, duração e critério de saída</li>
+          <li><b>Base:</b> 218 leads de anúncios em Botafogo</li>
+        </ul>
+        <h3 class="sec">Tarefas do Encontro 1</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" id="a-1"><span>Lista dos leads do MVP: recebida (218 leads)</span></li>
+          <li><input type="checkbox" id="a-2"><span>Passo a passo do ciclo: virou o processo de 10 etapas do Manual</span></li>
+          <li><input type="checkbox" id="a-3"><span>Regra do CRECI: veio no Manual</span></li>
+          <li><input type="checkbox" id="a-4"><span>Primeiros compradores separados pra Venda Secreta: quem já foi chamado?</span></li>
+          <li><input type="checkbox" id="a-5"><span>Repositório novo da Hunt, separado do Grana Curta</span></li>
+          <li><input type="checkbox" id="a-6" checked><span>Rastreador de leads: entregue pela Karol</span></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="0"> Marcar etapa como feita</label>
+      </div>
+
+      <div class="card" data-panel="c">
+        <div class="card-head"><h2>Canvas da Hunt</h2><span class="time">40 min</span></div>
+        <p class="card-sub">Os 9 blocos ficam no Canvas oficial, na identidade da Hunt. É lá que você edita durante a conversa, e é ele que fica com você.</p>
+        <p style="margin:0 0 16px;"><a class="open-canvas" href="https://claude.ai/artifact/LhFmQPTVa9p51MPBWKXQeg" target="_blank" rel="noopener">Abrir o Canvas da Hunt</a></p>
+        <h3 class="sec">Ordem da conversa</h3>
+        <div class="flow">
+          <span class="step-chip"><b>1</b>Segmento</span><span class="arrow">→</span><span class="step-chip"><b>2</b>Proposta de valor</span><span class="arrow">→</span><span class="step-chip"><b>3</b>Canais</span><span class="arrow">→</span><span class="step-chip"><b>4</b>Relacionamento</span><span class="arrow">→</span><span class="step-chip"><b>5</b>Receita</span><span class="arrow">→</span><span class="step-chip"><b>6</b>Recursos</span><span class="arrow">→</span><span class="step-chip"><b>7</b>Atividades</span><span class="arrow">→</span><span class="step-chip"><b>8</b>Parcerias</span><span class="arrow">→</span><span class="step-chip"><b>9</b>Custos</span>
+        </div>
+        <p class="card-sub" style="margin-top:12px;">No Canvas, a bolinha azul marca o que já está definido e a dourada, o que é proposta pra aprovar. As perguntas em aberto de cada bloco estão na etapa Aprovações.</p>
+        <label class="mark-done"><input type="checkbox" data-block-check="c"> Marcar etapa como feita</label>
+      </div>
+
+      <div class="card" data-panel="10">
+        <div class="card-head"><h2>Aprovações</h2><span class="time">15 min</span></div>
+        <p class="card-sub">Tudo que precisa do seu OK. A decisão fica salva aqui.</p>
+        <ul class="appr" id="appr"></ul>
+        <h3 class="sec">Pra decidir: qual é a jornada oficial do serviço</h3>
+        <p class="card-sub">Hoje o serviço da Hunt aparece de três jeitos diferentes:</p>
+        <div class="tbl-wrap"><table class="t">
+          <thead><tr><th>Fonte</th><th>O que mostra</th><th>O que não fecha</th></tr></thead>
+          <tbody>
+            <tr><td>Jornada validada (Encontro 1)</td><td>Pré-diagnóstico, Diagnóstico, Contrato, Busca ativa, Curadoria, Visitas, Negociação, Due diligence, Fechamento</td><td>É a mais completa do lado da cliente, mas não aparece em nenhum material</td></tr>
+            <tr><td>Apresentação, slide 12</td><td>Apresentação, Diagnóstico, Curadoria, Avaliação, Due diligence, Negociação</td><td>Não tem contrato, visitas nem fechamento, e põe a due diligence antes da negociação</td></tr>
+            <tr><td>Manual, slide 20</td><td>7 etapas de venda + 3 de entrega</td><td>Mistura vender e entregar. A entrega, onde está o valor, fica em 3 etapas</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="checklist">
+          <li><input type="checkbox" id="j-1"><span><b>Jornada oficial:</b> a jornada validada vale pra tudo que a cliente vê e pro Canvas, e as 10 etapas ficam no Manual como processo de venda?</span></li>
+          <li><input type="checkbox" id="j-2"><span><b>Ordem:</b> a due diligence vem depois da proposta aceita e antes da Promessa de Compra e Venda, como na jornada, e o slide 12 é corrigido?</span></li>
+          <li><input type="checkbox" id="j-3"><span><b>Pós-venda:</b> a jornada ganha um último passo (indicação e depoimento), como já está no Manual e no Relacionamento?</span></li>
+        </ul>
+
+        <h3 class="sec">Pra confirmar no Canvas</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" id="s-1"><span><b>Segmento:</b> o que significa "Em atendimento" pros 213 leads? Quem são os 3 que visitaram?</span></li>
+          <li><input type="checkbox" id="v-2"><span><b>Proposta:</b> você já entrega por escrito à cliente a avaliação de cada imóvel da curadoria? A sugestão é que ela vire um documento da Hunt, com nome próprio (por exemplo: Raio-X do Imóvel, Dossiê Hunt ou Laudo de Curadoria). Como chamar?
+            <span style="display:block;margin-top:6px;color:var(--ink-soft);">Etapas de análise sugeridas: 1. Documentação do imóvel e do vendedor · 2. Estado real (estrutura, elétrica e quadro de disjuntores, acabamentos, ar-condicionado, piso) · 3. Custo de cada problema encontrado · 4. Preço justo, comparado ao preço de mercado · 5. Aderência ao que ela pediu no diagnóstico e ao orçamento.</span>
+            <span style="display:block;margin-top:4px;color:var(--ink-soft);">Relatório final, em uma página: vale visitar? Pontos de atenção, custo estimado dos ajustes e valor sugerido pra proposta.</span></span></li>
+          <li><input type="checkbox" id="c-1"><span><b>Canais:</b> quanto você investiu em tráfego pra gerar os 218 leads?</span></li>
+          <li><input type="checkbox" id="f-1"><span><b>Receita:</b> quando o vendedor não dá desconto e o corretor dele não divide, a Hunt absorve a diferença?</span></li>
+          <li><input type="checkbox" id="f-2"><span><b>Receita:</b> valor do "Já achei o imóvel", valor por imóvel na comparação, prazo do contrato de assessoria</span></li>
+          <li><input type="checkbox" id="k-1"><span><b>Recursos:</b> quanto de caixa você tem pra bancar a operação até a primeira comissão entrar, incluindo a due diligence, que a Hunt paga antes de receber?</span></li>
+          <li><input type="checkbox" id="p-1"><span><b>Parcerias:</b> o parceiro jurídico e o da avaliação técnica já estão fechados?</span></li>
+          <li><input type="checkbox" id="u-1"><span><b>Custos:</b> quanto custam a avaliação técnica e o despachante por compra?</span></li>
+          <li><input type="checkbox" id="u-2"><span><b>Ferramentas:</b> o rastreador de leads vira o seu CRM? E como o lead marca a reunião com você: link de agenda ou combinando no WhatsApp?</span></li>
+          <li><input type="checkbox" id="f-4"><span><b>Nota fiscal e documento da comissão:</b> validar com contador e jurídico</span></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="10"> Marcar etapa como feita</label>
+      </div>
+
+      <div class="card" data-panel="11">
+        <div class="card-head"><h2>Ajustes nos seus materiais</h2><span class="time">10 min</span></div>
+        <p class="card-sub">O que muda na Apresentação e no Manual pra ficarem iguais ao Canvas. Os textos novos já estão na linguagem das duas motivações e seguem a regra da Hunt (sem "te" e "pra").</p>
+        <h3 class="sec">Como falar com cada motivação</h3>
+        <div class="tbl-wrap"><table class="t">
+          <thead><tr><th></th><th>Segurança</th><th>Agilidade</th></tr></thead>
+          <tbody>
+            <tr><td>Tom</td><td>Acolhedor e explicativo: mostra o passo antes de ele acontecer</td><td>Direto e curto: mostra o que ele não vai precisar fazer</td></tr>
+            <tr><td>Precisa ouvir</td><td>"Nada é assinado antes de tudo ser verificado."</td><td>"A Hunt cuida de tudo. Você só participa das decisões."</td></tr>
+            <tr><td>Prova</td><td>Avaliação por escrito, due diligence, CRECI-RJ</td><td>5 imóveis em até 30 dias, um único contato</td></tr>
+            <tr><td>Evitar</td><td>Pressa, pressão pra decidir, jargão sem explicação</td><td>Etapas demais, reunião sem necessidade, texto longo</td></tr>
+          </tbody>
+        </table></div>
+
+        <h3 class="sec">Apresentação Institucional</h3>
+        <div class="tbl-wrap"><table class="t">
+          <thead><tr><th>Slide</th><th>Hoje</th><th>Proposta</th></tr></thead>
+          <tbody>
+            <tr><td>04 Quem somos</td><td>"Startup que traz ao Rio de Janeiro um modelo consolidado nos Estados Unidos"</td><td>"A Hunt traz ao Rio de Janeiro um modelo consolidado nos Estados Unidos: a assessoria de compra de imóveis, dedicada exclusivamente a quem compra." Abaixo de "Somos o porto seguro de quem compra", a promessa. Pra quem busca segurança, "startup" soa como empresa nova e arriscada.</td></tr>
+            <tr><td>05 O problema</td><td>Documentação? Golpes? Preço justo? Estado do imóvel?</td><td>Incluir "Tempo perdido?". Frase final: "O vendedor chega à negociação com uma equipe. Você chega sozinho, assumindo todos os riscos e todo o trabalho." Assim quem busca agilidade também se vê ali.</td></tr>
+            <tr><td>Novo, depois do 05</td><td>Não existe</td><td>Slide "Nossa promessa": "Em até 30 dias, 5 imóveis que cabem no seu orçamento, já visitados e avaliados, para você comprar com segurança e agilidade."</td></tr>
+            <tr><td>12 Seis etapas</td><td>Apresentação, Diagnóstico, Curadoria, Avaliação do imóvel, Due diligence, Negociação</td><td>Trocar pela jornada validada no Encontro 1: Pré-diagnóstico, Diagnóstico, Contrato, Busca ativa, Curadoria, Visitas, Negociação, Due diligence, Fechamento. Na Curadoria: "Em até 30 dias, apresentamos 5 imóveis já visitados e avaliados, que fazem sentido para você e para o seu orçamento." Alinhar a ordem: hoje o slide põe a due diligence antes da negociação.</td></tr>
+            <tr><td>13 Diferenciais</td><td>"Sem custo adicional. Tudo dentro do seu orçamento."</td><td>"Sem custo adicional. A comissão da Hunt sai da negociação com o lado vendedor. Você não paga nada a mais por ter alguém do seu lado."</td></tr>
+            <tr><td>16 O que você ganha</td><td>Segurança / Tempo / Preço certo / Clareza</td><td>Segurança / <b>Agilidade</b> / Preço certo / Clareza. Agilidade: "Um único especialista no lugar de dezenas de corretores, e 5 imóveis em até 30 dias."</td></tr>
+            <tr><td>17 Encerramento</td><td>"Quem vende tem corretor. Quem compra tem a Hunt."</td><td>Manter. Opcional: assinatura "Compre com segurança. Decida com agilidade."</td></tr>
+          </tbody>
+        </table></div>
+        <p class="card-sub">Ficam como estão: 06 Missão e visão, 07 Valores, 09 Assessoria de compra, 10 Os erros mais caros, 15 Confiança e 18 Contato.</p>
+
+        <h3 class="sec">Manual de Vendas</h3>
+        <div class="tbl-wrap"><table class="t">
+          <thead><tr><th>Slide</th><th>Hoje</th><th>Proposta</th></tr></thead>
+          <tbody>
+            <tr><td>08 Comissão</td><td>Dividida com o corretor do vendedor, paga pelo vendedor, paga pelo comprador</td><td>Tirar "paga pelo comprador". Incluir: "Se a negociação não cobrir os 5%, a Hunt absorve a diferença" e "A comissão fica escrita antes do fechamento: termo de divisão com o corretor do vendedor ou cláusula na proposta".</td></tr>
+            <tr><td>13 O que o assessor vende</td><td>Emoção, Transformação, Liberdade, Solução</td><td>Abrir com "O assessor vende segurança e agilidade" e mostrar os dois perfis: quem tem medo de entrar numa fria e quem quer resolver e delegar. Os quatro itens ficam como apoio.</td></tr>
+            <tr><td>17 Funil</td><td>"Busca financiamento" · "Apresentar 5 imóveis"</td><td>"Orienta o cliente a buscar o crédito no próprio banco" · "Apresentar 5 imóveis em até 30 dias".</td></tr>
+            <tr><td>18 Ferramentas</td><td>Prospecção sem material de captação</td><td>Incluir "Checklist da visita (material gratuito em troca do pré-diagnóstico)".</td></tr>
+            <tr><td>Novo, depois do 18</td><td>Não existe</td><td>Slide "Quem ainda não está pronto": separar no CRM quem está decidido de quem está aquecendo; data de retorno no prazo que a pessoa deu.</td></tr>
+            <tr><td>20 Dez etapas</td><td>Processo de vendas e entrega do serviço misturados numa lista só</td><td>Separar em duas partes. Etapas 01 a 07 = processo de venda, até o contrato. Depois do contrato, a jornada validada do serviço: Busca ativa, Curadoria, Visitas, Negociação, Due diligence, Fechamento, Recomendação.</td></tr>
+            <tr><td>22 Diagnóstico</td><td>Quem vai morar, orçamento, financiamento, bairros e prazo</td><td>Incluir: "Você toma essa decisão sozinho? Quem mais participa?" e "Você prefere acompanhar cada passo da busca ou que a Hunt resolva e chame você só nas decisões?". Registrar no CRM.</td></tr>
+            <tr><td>23 Fechamento</td><td>"Explique como a Hunt cobra"</td><td>Fala do assessor: "Você não paga nada a mais. A comissão da Hunt sai da negociação com o lado vendedor, e isso fica escrito no nosso contrato."</td></tr>
+            <tr><td>25 Fechamento da compra</td><td>"Inicie o processo de financiamento com o banco" · "Emita a nota fiscal da comissão da Hunt para o cliente"</td><td>"Acompanhe o financiamento que o cliente contratou com o banco dele" · "Emita a nota fiscal da comissão para quem paga: o corretor ou a imobiliária do vendedor, ou o vendedor".</td></tr>
+            <tr><td>25 Recomendação</td><td>Indicação e depoimento</td><td>Incluir contato no aniversário da compra e indicação de parceiros para mudança e reforma.</td></tr>
+            <tr><td>26 Linha do tempo</td><td>Reuniões, visitas e prazos</td><td>Incluir "Resumo semanal no formato que o cliente escolheu no diagnóstico".</td></tr>
+            <tr><td>29 Como a Hunt fala</td><td>Frases aprovadas</td><td>Incluir a promessa e "Compre com segurança. Decida com agilidade."</td></tr>
+            <tr><td>31 Objeções</td><td>"Já achei o imóvel" · "Prefiro procurar sozinho"</td><td>Em "Já achei o imóvel", oferecer o serviço avulso de mesmo nome. Em "Prefiro procurar sozinho", oferecer o checklist da visita.</td></tr>
+            <tr><td>34 Dia a dia do assessor</td><td>"CRM [a definir]" · "Agenda [a definir]"</td><td>Preencher com as ferramentas escolhidas.</td></tr>
+          </tbody>
+        </table></div>
+
+        <h3 class="sec">Manual, novo slide depois do 13: falas por motivação</h3>
+        <p class="card-sub">A Apresentação fala com os dois ao mesmo tempo. Na conversa, o assessor identifica a motivação no diagnóstico e muda a ênfase nos momentos que decidem a venda. Nos materiais, fala-se de motivação, nunca de gênero.</p>
+        <div class="tbl-wrap"><table class="t">
+          <thead><tr><th>Momento</th><th>Segurança</th><th>Agilidade</th></tr></thead>
+          <tbody>
+            <tr><td>Apresentação da Hunt</td><td>"Nada é assinado antes de tudo ser verificado."</td><td>"A Hunt cuida de tudo. Você só participa das decisões."</td></tr>
+            <tr><td>Fechamento</td><td>"Você não paga nada a mais, e isso fica escrito no contrato."</td><td>"Em até 30 dias, você tem 5 imóveis para escolher. O resto é com a gente."</td></tr>
+            <tr><td>"Preciso pensar"</td><td>Convidar para a próxima conversa a pessoa que ela consulta</td><td>Mostrar o custo de adiar: mais tempo procurando sozinho</td></tr>
+          </tbody>
+        </table></div>
+
+        <h3 class="sec">Materiais novos</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" id="m-5"><span><b>Relatório de curadoria</b> (nome a definir): comprova que o assessor visitou e avaliou os 5 imóveis e é entregue à cliente. Uma ficha por imóvel (data da visita, fotos, documentação, estado real, custo de cada problema, preço justo, aderência ao que ela pediu) e um resumo final em uma página: quais valem visitar, pontos de atenção e valor sugerido para a proposta</span></li>
+          <li><input type="checkbox" id="m-1"><span>Checklist da visita: cada item mostra o que olhar e quanto custa errar, e termina no convite pro diagnóstico (segurança) ou pra delegar (agilidade)</span></li>
+          <li><input type="checkbox" id="m-2"><span>Pré-diagnóstico de 6 perguntas: uso, bairros, valor, à vista ou financiado, prazo e motivação. A sexta: "O que pesa mais para você nessa compra: ter certeza de que não vai ter surpresa, ou resolver rápido, sem perder tempo?" A resposta diz se o lead busca segurança ou agilidade</span></li>
+          <li><input type="checkbox" id="m-3"><span>Apresentação dos serviços avulsos: Já achei o imóvel, Compare imóveis e Negociação</span></li>
+          <li><input type="checkbox" id="m-4"><span>Contrato de assessoria com a regra da comissão, a desistência sem cobrança e o termo de divisão</span></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="11"> Marcar etapa como feita</label>
+      </div>
+
+      <div class="card" data-panel="12">
+        <div class="card-head"><h2>Fechamento: próximos 30 a 40 dias</h2><span class="time">10 min</span></div>
+        <div class="hypothesis"><b>Próximo passo: ir a campo vender a assessoria.</b> A meta do ciclo é uma só: o primeiro contrato, conduzido por você. É esse caso que treina os assessores, convence os corretores e alimenta a busca com IA.</div>
+
+        <h3 class="sec">Antes de ir a campo (só o mínimo)</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" id="n-1"><span>Contrato de assessoria pronto, com a regra da comissão e da desistência. Sem ele não dá pra fechar na etapa 06</span></li>
+          <li><input type="checkbox" id="n-2"><span>Ajustar só o que aparece na conversa: na Apresentação, a promessa e os slides 05, 13 e 16; no Manual, a fala do fechamento sobre a comissão</span></li>
+          <li><input type="checkbox" id="n-3"><span>Passar os 218 leads pro rastreador de leads que você recebeu e registrar cada um: quem é, etapa e próximo passo com data. Criar no rastreador uma coluna "Motivação: segurança ou agilidade", preenchida pela resposta do pré-diagnóstico. É ela que define o tom de todo o resto: mensagens, reuniões, resumo semanal e fechamento</span></li>
+        </ul>
+
+        <h3 class="sec">Em campo (próximos 30 a 40 dias)</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" id="n-4"><span>Começar pelos mais quentes: os 3 que já visitaram e os 2 sem atendimento</span></li>
+          <li><input type="checkbox" id="n-5"><span>Retomar os outros leads da base: primeiro um vídeo curto seu (metade com o gancho de segurança, metade com o de agilidade), depois uma mensagem escrita convidando pra conversa</span></li>
+          <li><input type="checkbox" id="n-6"><span>Definir uma meta de conversas por semana e cumprir</span></li>
+          <li><input type="checkbox" id="n-7"><span>Conduzir as conversas pelo processo: introdução, apresentação, diagnóstico (com as 2 perguntas novas), proposta, validação e fechamento</span></li>
+          <li><input type="checkbox" id="n-8"><span>Pra quem diz "já achei o imóvel", oferecer o serviço avulso de mesmo nome</span></li>
+          <li><input type="checkbox" id="n-9"><span>Anotar de cada conversa: objeção, motivação e resultado. É o material do Encontro 3</span></li>
+          <li><input type="checkbox" id="n-10"><span>Fechar o primeiro contrato de assessoria</span></li>
+          <li><input type="checkbox" id="n-11"><span>Marcar a data do Encontro 3</span></li>
+        </ul>
+
+        <h3 class="sec">Fica pra depois do primeiro contrato</h3>
+        <ul class="bullets">
+          <li>Resto dos ajustes do Manual</li>
+          <li>Checklist da visita como isca: serve pra captar gente nova, e agora a base já existe</li>
+          <li>Produção de conteúdo e captação de leads: pauta do Encontro 3</li>
+          <li>Tráfego pago, busca com IA e assessores</li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="12"> Marcar etapa como feita</label>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ENCONTRO 3 ================= -->
+  <section data-week="e3">
+    <div class="card">
+      <div class="card-head"><h2>Encontro 3 · Correção de rota</h2><span class="time">Após 30–40 dias</span></div>
+      <p class="card-sub">Com base no que aconteceu depois do Encontro 2. Entra também o plano de produção de conteúdo e captação de leads.</p>
+      <ul class="bullets">
+        <li><b>Novo:</b> produção de conteúdo e captação de leads (onde, pra quem, com que frequência, e a isca do checklist)</li>
+        <li>Quantos leads responderam à retomada, e qual gancho funcionou melhor: segurança ou agilidade</li>
+        <li>Quantos diagnósticos e contratos de assessoria fechados</li>
+        <li>O que travou em cada etapa do processo</li>
+        <li>Serviços avulsos: o que vendeu e por quanto</li>
+        <li>Primeiros critérios de curadoria registrados pra busca com IA</li>
+        <li>Benefício pra quem indica: entra ou não</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="foot">
+    Montado a partir do Encontro 1 (06/10), da Apresentação Institucional e do Manual de Vendas da Hunt, da planilha de leads exportada em 09/10 e da revisão do modelo de negócio feita antes do Encontro 2. As observações e as decisões ficam salvas pra nós dois.
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY='tasso-encontros-v2';
+  var st; try{ st=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ st={}; }
+  st.blocks=st.blocks||{}; st.subs=st.subs||{};
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(st)); }catch(e){} }
+
+  var tabs=document.querySelectorAll('[data-weektab]'), weeks=document.querySelectorAll('[data-week]');
+  function setWeek(w){
+    st.week=w; save();
+    tabs.forEach(function(t){ var on=t.getAttribute('data-weektab')===w; t.classList.toggle('active',on); t.setAttribute('aria-selected',on); });
+    weeks.forEach(function(s){ s.classList.toggle('active', s.getAttribute('data-week')===w); });
+  }
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ setWeek(t.getAttribute('data-weektab')); }); });
+
+  var nodes=document.querySelectorAll('[data-node]'), panels=document.querySelectorAll('[data-panel]');
+  function setActive(id, scroll){
+    st.active=id; save();
+    nodes.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-node')===id); });
+    panels.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-panel')===id); });
+    if(scroll){ var p=document.querySelector('[data-panel="'+id+'"]'); if(p && p.scrollIntoView) p.scrollIntoView({behavior:'smooth',block:'start'}); }
+  }
+  nodes.forEach(function(b){ b.addEventListener('click', function(){ setActive(b.getAttribute('data-node'), true); }); });
+
+  var checks=document.querySelectorAll('[data-block-check]'), total=checks.length;
+  function upd(){
+    var d=document.querySelectorAll('[data-block-check]:checked').length;
+    document.getElementById('progress-count').textContent=d+'/'+total+' etapas';
+    document.getElementById('progress-fill').style.width=(d/total*100)+'%';
+  }
+  checks.forEach(function(cb){
+    var n=cb.getAttribute('data-block-check'), btn=document.querySelector('[data-node="'+n+'"]');
+    cb.checked=!!st.blocks[n]; if(cb.checked&&btn) btn.classList.add('done');
+    cb.addEventListener('change', function(){ st.blocks[n]=cb.checked; if(btn) btn.classList.toggle('done',cb.checked); save(); upd(); });
+  });
+  document.querySelectorAll('.checklist input[type="checkbox"]').forEach(function(cb){
+    var li=cb.closest('li'); if(cb.id in st.subs) cb.checked=!!st.subs[cb.id]; if(cb.checked) li.classList.add('checked');
+    cb.addEventListener('change', function(){ st.subs[cb.id]=cb.checked; li.classList.toggle('checked',cb.checked); save(); });
+  });
+  setWeek(st.week||'e2'); setActive(st.active||'0', false); upd();
+})();
+</script>
+<script>
+/* Aprovações + observações: salvas no banco do artifact (fallback: este navegador) */
+(function(){
+  var ITEMS=[
+    ['Segmento','Um perfil (40+, compra pra morar, Zona Sul) com duas motivações: segurança e agilidade. Começar por Botafogo'],
+    ['Promessa','"Em até 30 dias, 5 imóveis que cabem no seu orçamento, já visitados e avaliados, para você comprar com segurança e agilidade." Slogan abaixo'],
+    ['Canais','Os 218 leads antes de qualquer tráfego novo, com teste dos dois ganchos'],
+    ['Relacionamento','Três momentos: lead aquecendo, cliente em compra, cliente que comprou'],
+    ['Isca','Checklist da visita em troca do pré-diagnóstico de 6 perguntas, com a pergunta da motivação'],
+    ['Comissão','A compradora não paga nada; se a negociação não cobrir os 5%, a Hunt absorve'],
+    ['Comissão','Tirar "paga pelo comprador" do Manual; comissão escrita antes do fechamento; nota fiscal pra quem paga'],
+    ['Comissão','Divisão meio a meio com o corretor do vendedor como padrão'],
+    ['Comissão','Desistência sem compra não gera cobrança'],
+    ['Serviços avulsos','Já achei o imóvel, Compare imóveis e Negociação (50% do desconto)'],
+    ['Financiamento','A Hunt orienta e acompanha, não conduz'],
+    ['Custos','Due diligence incluída na comissão'],
+    ['Assessores','Entram quando a demanda passar da sua capacidade e o processo já tiver rodado numa compra real'],
+    ['Busca com IA','Recurso a construir a partir dos critérios das primeiras curadorias'],
+    ['Jornada do serviço','A jornada validada vira a oficial nos materiais e no Canvas; as 10 etapas ficam como processo de venda']
+  ];
+  var OPTS=['Aprovado','Ajustar','Não'];
+  var ul=document.getElementById('appr');
+  var dec={};
+  ITEMS.forEach(function(it,i){
+    var id='ap-'+(i+1);
+    var li=document.createElement('li');
+    var n=document.createElement('span'); n.className='a-n'; n.textContent=String(i+1).padStart(2,'0');
+    var t=document.createElement('div'); t.className='a-t'; var b=document.createElement('b'); b.textContent=it[0]; t.appendChild(b); t.appendChild(document.createTextNode(it[1]));
+    var seg=document.createElement('div'); seg.className='seg'; seg.setAttribute('role','group'); seg.setAttribute('aria-label','Decisão do ponto '+(i+1));
+    OPTS.forEach(function(o){ var bt=document.createElement('button'); bt.type='button'; bt.textContent=o; bt.setAttribute('aria-pressed','false'); bt.dataset.opt=o; seg.appendChild(bt); });
+    var ta=document.createElement('textarea'); ta.className='note'; ta.rows=1; ta.id='nota-'+id; ta.placeholder='Observações'; ta.setAttribute('aria-label','Observações do ponto '+(i+1));
+    li.appendChild(n); li.appendChild(t); li.appendChild(seg); li.appendChild(ta); ul.appendChild(li);
+    dec[id]=seg;
+  });
+
+  var LOCAL='tasso-encontros-notas-v1';
+  var fields={};
+  document.querySelectorAll('.checklist li').forEach(function(li){
+    var cb=li.querySelector('input[type="checkbox"]'); if(!cb||!cb.id) return;
+    var ta=document.createElement('textarea'); ta.className='note'; ta.id='nota-'+cb.id; ta.rows=1; ta.placeholder='Observações'; ta.setAttribute('aria-label','Observações');
+    li.appendChild(ta); fields[ta.id]=ta;
+  });
+  document.querySelectorAll('.appr textarea').forEach(function(ta){ fields[ta.id]=ta; });
+  document.querySelectorAll('.card[data-panel]').forEach(function(card){
+    var n=card.getAttribute('data-panel');
+    var wrap=document.createElement('div'); wrap.className='block-note';
+    var lab=document.createElement('label'); lab.className='col-label'; lab.htmlFor='nota-bloco-'+n; lab.textContent='Observações do bloco';
+    var ta=document.createElement('textarea'); ta.className='note'; ta.id='nota-bloco-'+n; ta.rows=3; ta.placeholder='Anotações gerais deste bloco';
+    var stt=document.createElement('div'); stt.className='save-state'; stt.setAttribute('aria-live','polite');
+    wrap.appendChild(lab); wrap.appendChild(ta); wrap.appendChild(stt);
+    card.insertBefore(wrap, card.querySelector('.mark-done')); fields[ta.id]=ta;
+  });
+  function show(el,msg){ var c=el.closest('.card'); var s=c&&c.querySelector('.save-state'); if(s) s.textContent=msg; }
+
+  var local={}; try{ local=JSON.parse(localStorage.getItem(LOCAL)||'{}'); }catch(e){ local={}; }
+  function saveLocal(k,v){ local[k]=v; try{ localStorage.setItem(LOCAL, JSON.stringify(local)); }catch(e){} }
+  Object.keys(fields).forEach(function(k){ if(local[k]) fields[k].value=local[k]; });
+  function paint(id,v){ dec[id].querySelectorAll('button').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.opt===v)); }); }
+  Object.keys(dec).forEach(function(id){ if(local['dec-'+id]) paint(id, local['dec-'+id]); });
+
+  var notas=null, aprov=null, timers={}, last={};
+  function persist(k){
+    var ta=fields[k], v=ta.value; saveLocal(k,v);
+    if(!notas){ show(ta,'Salvo neste navegador'); return; }
+    if(last[k]===v) return;
+    show(ta,'Salvando…');
+    notas.doc(k).set({texto:v, atualizado:new Date().toISOString()}).then(function(){ last[k]=v; show(ta,'Salvo'); })
+      .catch(function(){ show(ta,'Não salvou no servidor — ficou salvo neste navegador'); });
+  }
+  Object.keys(fields).forEach(function(k){
+    var ta=fields[k];
+    ta.addEventListener('input', function(){ clearTimeout(timers[k]); timers[k]=setTimeout(function(){ persist(k); },900); });
+    ta.addEventListener('blur', function(){ clearTimeout(timers[k]); persist(k); });
+  });
+  Object.keys(dec).forEach(function(id){
+    dec[id].addEventListener('click', function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      var v=b.getAttribute('aria-pressed')==='true' ? '' : b.dataset.opt;
+      paint(id,v); saveLocal('dec-'+id,v);
+      if(aprov) aprov.doc(id).set({decisao:v, atualizado:new Date().toISOString()}).catch(function(){ show(dec[id],'Não salvou no servidor — ficou salvo neste navegador'); });
+    });
+  });
+
+  if(window.claude && window.claude.use){
+    window.claude.use('db').then(function(db){
+      if(!db) return;
+      notas=db.collection('notas'); aprov=db.collection('aprovacoes');
+      notas.onSnapshot(function(snap){
+        snap.docs.forEach(function(d){
+          var ta=fields[d.id]; if(!ta) return;
+          var v=(d.data()||{}).texto; v=typeof v==='string'?v:''; last[d.id]=v;
+          if(document.activeElement!==ta && ta.value!==v){ ta.value=v; saveLocal(d.id,v); }
+        });
+      });
+      aprov.onSnapshot(function(snap){
+        snap.docs.forEach(function(d){
+          if(!dec[d.id]) return; var v=(d.data()||{}).decisao; v=typeof v==='string'?v:'';
+          paint(d.id,v); saveLocal('dec-'+d.id,v);
+        });
+      });
+    }).catch(function(){});
+  }
+})();
+</script>
