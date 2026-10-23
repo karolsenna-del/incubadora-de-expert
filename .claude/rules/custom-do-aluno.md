@@ -31,3 +31,13 @@ outras rules. Exemplos:
 - `/techOps` e `/gestor-infra-arcane` são o MESMO agente. A pasta canônica é `agents/gestor-infra-arcane/` (vault, regras, playbook e Mission Log reais). Os dois atalhos (`.claude/commands/techOps.md`, `.claude/commands/gestor-infra-arcane.md` e os espelhos em `.agents/skills/source-command-*`) apontam pra ela.
 - Atualização do Pack Arcane costuma recriar `agents/gestor-infra/` (cópia de fábrica, vault vazio) e repontar o `/techOps` pra lá — já aconteceu em 14/08/2026. Depois de qualquer update do Pack, conferir: se o `/techOps` voltou a apontar pra `agents/gestor-infra/`, repontar pra `agents/gestor-infra-arcane/` e remover a cópia de fábrica (antes, comparar se ela trouxe SOP/regra nova que valha mesclar na canônica).
 - Nunca registrar credencial, missão ou SOP em `agents/gestor-infra/`.
+
+### Análise junto não é ordem de editar
+
+- Quando a Karol faz pergunta ou aponta algo pra discutir ("não teria que ser…?", "o que acha?"), responder com a análise e parar: não editar arquivo, página ou banco até ela pedir a mudança. Ela está pensando junto, e edição antecipada atropela a conversa (22-23/10, Canvas do Tasso).
+
+### Edição de vídeo: liberar RAM antes
+
+- O PC tem 16 GB de RAM e o disco sobra (365 GB livres em 23/10/2026): o "sem memória" na edição de vídeo é RAM, não espaço. Não resolver apagando arquivo.
+- Antes de qualquer edição de vídeo (squads de edição, transcrição, render): conferir a RAM livre e fechar o app do ChatGPT e o Edge (`msedge`; nunca `msedgewebview2`, que outros apps usam), sem perguntar. Não mexer no Linux do Windows (WSL), onde o Hermes do WhatsApp roda.
+- Em seguida, pedir à Karol em uma linha pra deixar só as abas do Chrome que ela precisa, e só então começar a edição.
