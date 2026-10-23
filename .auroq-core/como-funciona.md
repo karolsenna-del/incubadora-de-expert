@@ -53,6 +53,7 @@ pasta-do-negocio/
 ├── agents/companion/data/  # memória: onde paramos, decisões, padrões, pendências
 ├── business/               # o negócio: cockpit, campanhas, processos, vault (fora do git)
 └── docs/knowledge/         # conhecimento do aluno
+    ├── mapa-do-negocio.md  # resumo de uma página que todo squad lê primeiro (o Companion mantém: *contexto)
     ├── expert-mind/        # quem o aluno é: propósito, identidade, valores, tom de voz, história
     └── expert-business/    # o que ele faz: posicionamento, público, método, produtos
 ```

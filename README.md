@@ -236,7 +236,8 @@ agents/             → Seu exercito (companion, workers, minds, squads)
 1. Ative o Ops (`/AuroqOS:agents:ops` no Claude/Grok ou `$ops` no Codex) e peca o Bootstrap 1.
 2. O Ops prepara browser oficial, Computer Use quando elegivel e Playwright como fallback, sempre com smoke test real.
 3. Ative o Companion (`/auroq-companion` no Claude/Grok ou `$companion` no Codex).
-4. Preencha os templates em `docs/knowledge/expert-mind/` e `docs/knowledge/expert-business/`.
+4. O Companion monta o seu Mapa do Negocio (`docs/knowledge/mapa-do-negocio.md`): le o material que voce tiver,
+   pergunta so o que faltou e completa o resto aos poucos (`*contexto`). Todo squad le esse resumo primeiro.
 5. Pronto — o sistema ja te conhece.
 
 ## Filosofia
@@ -254,13 +255,13 @@ agents/             → Seu exercito (companion, workers, minds, squads)
 
 ## Observabilidade e integridade do motor
 
-Apos publicacao, `npx -y auroq-os@2.8.0 doctor` mostra a fila local segura e os comandos pinados de
-manutencao/diagnostico. `npx -y auroq-os@2.8.0 manutencao` preserva o caminho existente
+Apos publicacao, `npx -y auroq-os@2.8.1 doctor` mostra a fila local segura e os comandos pinados de
+manutencao/diagnostico. `npx -y auroq-os@2.8.1 manutencao` preserva o caminho existente
 de consentimento legado, studentFiles, customizacoes e dados do negocio. Nao ha
 migracao forcada. O registro MCP aponta para `arcane-mcp@0.7.0` — o pin mora no campo
 `arcaneMcpPin` do package.json (fonte unica; o servidor le o mesmo campo no npm).
 `npm run release:verify` recusa publicar com um pin que o npm nao resolva.
-Os instaladores do repositorio ficam preparados para 2.8.0; as copias publicas so recebem
+Os instaladores do repositorio ficam preparados para 2.8.1; as copias publicas so recebem
 a versao apos os gates nativos e a verificacao do tarball publicado.
 O pacote inclui `lib/runtime-integrity.json`: inventario SHA-256 gerado depois da montagem da casca, verificavel com `npm run integrity:verify` dentro do pacote extraido. Ele comprova consistencia do conteudo; nao e uma assinatura de autoria.
 

@@ -28,6 +28,15 @@ Se alguma instrução antiga desta pasta contradisser estas regras, valem estas.
 8. Como o sistema funciona por dentro (tipos de agente, ciclos, conhecimento, projetos):
    `.auroq-core/como-funciona.md`. Leia só quando o aluno perguntar ou a tarefa precisar.
 
+## Mapa do Negócio: leia primeiro
+
+- Antes de trabalhar em qualquer coisa do negócio (texto, anúncio, site, oferta, conteúdo, plano), todo
+  agente, squad e skill lê `docs/knowledge/mapa-do-negocio.md`: quem é o aluno, o que vende e por quanto, para
+  quem, por onde vende, a meta dos 90 dias e o tom. O detalhe está nos arquivos que ele aponta.
+- O que está em "Ainda não sei" não é fato: não invente; pergunte só se a tarefa depender disso.
+- Fato novo de negócio na conversa (produto, preço, público, canal, meta) atualiza o Mapa pelo Companion
+  (`*contexto`), com a fonte. Dedução nunca vira fato sem o aluno confirmar.
+
 Se a ferramenta do MCP `arcane` falhar, mostre a mensagem como veio e pare. Exceções: pedido de
 atualizar o sistema ou consertar a conexão (o Ops roda a manutenção local) e servidor que recusou o
 acesso quando a pasta do agente existe em `agents/` (aí vale a versão local, avisando em uma linha).

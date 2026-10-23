@@ -106,6 +106,7 @@ copie o trecho para o lugar dele.
 | Onde estamos agora | `agents/companion/data/contexto-dinamico.md` |
 | Ideia ou pendencia | `agents/companion/data/demandas-backlog.md` |
 | Padrao recorrente | `agents/companion/data/padroes-observados.md` |
+| Fato do negócio (produto, preço, público, canal, meta) | Bloco do Mapa + `docs/knowledge/mapa-do-negocio.md` (Companion, `*contexto`; com fonte, dedução só confirmada) |
 | Conhecimento permanente | `docs/knowledge/{subpasta}/` |
 | Processo documentado | `business/processos/` |
 | Estado de trabalho (pre-autocompact) | Documento de trabalho do projeto |
