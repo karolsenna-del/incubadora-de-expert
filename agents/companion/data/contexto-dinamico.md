@@ -147,6 +147,22 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 22-23/10 — Metodo VIP do Tasso, Encontro 2 (Companion):**
+- Material do E2 pronto, aguardando aprovacao do Tasso: Canvas da apresentacao (https://claude.ai/artifact/MnZykckEBnjQvdKBtK6X9n, ainda na versao anterior a revisao), Canvas editavel na identidade da Hunt (https://claude.ai/artifact/LhFmQPTVa9p51MPBWKXQeg, ja revisado) e documento aprofundado com 11 pontos pra aprovar + aba "Ajustes nos materiais" (https://claude.ai/artifact/FzF6Lg27d9m26jbY3B36LK).
+- Karol revisou os 11 pontos com o Companion (segmento com 2 motivacoes Seguranca/Agilidade, promessa 5 imoveis em ate 30 dias, comissao sem custo pra compradora, servicos avulsos, assessores por sinal, busca com IA). Resumo completo em `business/campanhas/metodo-vip/clientes/tasso-ramalho/plano-encontros.md`.
+- Clone Euriler nao ativou (MCP arcane sem resposta em 2 tentativas, 22/10) — veredito pendente.
+- Proximo: Tasso aprova o Canvas → ajustar Apresentacao e Manual dele conforme a aba de ajustes. Data do E2 nao confirmada (previsto 20/10 no registro do E1).
+
+**Sessao 23/10 — Auroq OS 2.8.1 (Organizer → Ops):**
+- Atualizado 2.8.0 → 2.8.1 pelo MCP (17/17 checagens ok), salvo no commit 2baba64 (sem push). Novidade: Mapa do Negocio (`docs/knowledge/mapa-do-negocio.md` + 6 arquivos de apoio) veio VAZIO ("Ainda nao sei") — preencher pelo Companion (`*contexto`) quando a Karol quiser. Falta fechar e reabrir o Claude Code.
+
+**Sessao 22/10 — Sprint do Vagner, Sessao 4 preparada (Companion):**
+- Cronograma do Vagner (https://claude.ai/artifact/66roHRBBNNEhNpoWXvEUvV, fonte `business/campanhas/sprint-do-metodo/clientes/vagner-teixeira/cronograma-sessoes.html`) ganhou a S4 completa com 6 blocos e campos salvos (`sessoes/s4`): Kit de Ferramentas (planilha Google `1ARIOymd...`, 11 ferramentas = 6 essenciais + 3 em paralelo + 2 futuro), vitrine do prototipo (empresario-blindado-vitrine no Vercel), alem das essenciais (escolher a isca gratuita), aprovacoes e preparacao da S5 (preco, formato, 3-5 primeiros contatos, canal, caso real, garantia).
+- Pontos a decidir com ele na sessao: nome do Modulo 2 (planilha "Coaching" x metodo "Ressignificar"); "Metodo EVO" no nome do Raio-X sem certificacao (S3: "nenhuma"); de onde vem a taxa real do Simulador; ordem de construcao.
+- Contrato do Vagner (6 semanas) NAO inclui validacao de campo (clausula 1.3). Karol confirmou (22/10): ela nao acompanha a validacao. Na S5 ela entrega, seguindo Vendedor Secreto + Funil de Vendas Secretas: estrutura da mentoria de validacao (a partir da oferta), roteiro da sessao de vendas, apresentacao da oferta, copy de abordagem e agendamento e copy de follow-up, e explica como vender e entregar. Validacao e sempre INDIVIDUAL (metodo da Karol, nao escolha do cliente).
+- Bloco 5 da S4 coleta os insumos do agente da Proposta Validada (handoff-agentes-biblioteca-ia.md secao 5): publico delimitado, problema, beneficios, desejo dominante, crenca, mecanismo, ferramentas (propostos pra confirmar) + prova, 2-3 objecoes reais, bonus (max 2, ele sugere e a Karol propoe), preco, duas janelas de decisao, urgencia real, garantia, canal de abordagem.
+- S5 e S6 seguem como espaco reservado no cronograma.
+
 **Sessao 22/10 — Infra (Ops):**
 - Node atualizado 24.15.0 → 24.22.1 (LTS); PHP 8.5.12 instalado do zero (winget, NTS).
 - Auroq OS atualizado pra 2.8.0 via manutencao local (MCP arcane ficou 30 min sem responder). Regras proprias e /techOps → gestor-infra-arcane preservados. Falta fechar e reabrir o Claude Code.
@@ -490,4 +506,6 @@ Retomar com: `/expert-companion`
 - **Achados de infra pro Gestor:** (1) a página da Black mede no GA4 errado (`G-NB7W76T3RX`, "Gestão pra Tudo"); (2) o CRM não recebe eventos de WhatsApp desde 02/10; (3) a sincronização planilha → CRM não grava a coluna "Observação" desde 22/09 (as notas ficam paradas na planilha).
 - Regra de auto mode adicionada pela Karol em `.claude/settings.local.json`: liberado editar células das planilhas Google dela pelo Chrome quando ela pedir.
 
-*Ultima atualizacao: 17/10/2026*
+- 23/10 — Conduz Agro: 6 pilares definidos (técnica, comunicação, condução, negociação, posicionamento, segurança) e colocados na autoavaliação da S2; scripts rodados nas 2 planilhas (Plano de Aplicação Diária da Milena e o modelo do aluno), conferido na tela.
+
+*Ultima atualizacao: 23/10/2026*

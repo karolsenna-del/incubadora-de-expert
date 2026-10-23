@@ -41,7 +41,7 @@ var SEMANAS = [
   [2,"S2","Rota Personalizada Conduz Agro",[
     ["✍️ Releia seu plano de 12 meses e escreva a meta do mês 1 num post-it","A meta do mês 1 (a mesma do post-it)"],
     ["💭 Escreva o que \"condução\" significa pra você, com suas próprias palavras","Sua definição de condução, com suas palavras"],
-    ["🧪 Autoavaliação rápida — marque de 1 a 5 cada um dos 6 pilares do método","O nome de cada um dos 6 pilares e a sua nota de 1 a 5"],
+    ["🧪 Autoavaliação rápida — marque de 1 a 5 cada um dos 6 pilares do método (técnica, comunicação, condução, negociação, posicionamento e segurança)","A sua nota de 1 a 5 em cada pilar: técnica, comunicação, condução, negociação, posicionamento e segurança"],
     ["🎯 Agende na agenda física os horários das próximas 4 sessões","Data e horário das próximas 4 sessões"],
     ["🎧 Ouça um áudio curto sobre autoridade e condução, anote 1 frase que ficou","A frase que ficou com você · Por que ela marcou"]]],
   [3,"S3","Segurança interna essencial",[

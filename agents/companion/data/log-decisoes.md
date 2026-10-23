@@ -662,3 +662,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** (1) Nanny em stand-by, sem acompanhamento ativo. (2) Garantia da Incubadora Express = 15 dias, devolução integral por qualquer motivo, mesmo com a S1 feita.
 **Racional:** (1) A parceria seria um projeto paralelo, não uma aluna. Poderia dar dinheiro, mas tiraria o foco de fazer a Incubadora dar certo. (2) Fica igual à garantia que o Grupo já usa.
 **Impacto:** Contrato em `business/juridico/contratos/09-incubadora-express.md` + PDF. Falta trocar a garantia do produto #17442 na Voomp. Nanny sai das pendências comerciais.
+
+## 23/10/2026 — Conduz Agro: os 6 pilares do método definidos
+**Contexto:** a atividade de autoavaliação da S2 (Plano de Aplicação Diária) pedia nota nos "6 pilares", mas nenhum arquivo do programa listava quais eram.
+**Decisão:** os 6 pilares são técnica, comunicação, condução, negociação, posicionamento e segurança. Na apresentação de vendas a Milena resume em 3 (técnica, emocional e condução). O pilar técnica não tem módulo: é coberto pelo Agente de IA Técnico e pelas lives de casos práticos.
+**Racional:** informado pela Karol; é o que o método trabalha por inteiro.
+**Impacto:** nomes colocados na atividade da S2 nos scripts `apps-script-diario-aplicacao.gs` e `apps-script-plano-aplicacao-diaria.gs`; scripts rodados nas duas planilhas em 23/10. Depois a Karol mandou excluir a planilha antiga "Plano de Aplicação Diária" (tabela única), que foi pra lixeira do Drive pra não confundir com a versão do aluno; os guias passaram a apontar só pra versão do aluno.

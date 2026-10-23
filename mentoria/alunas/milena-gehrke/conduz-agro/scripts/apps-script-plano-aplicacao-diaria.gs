@@ -77,7 +77,7 @@ function criarPlanoAplicacaoDiaria() {
     [2,"S2","Rota Personalizada Conduz Agro",[
       "✍️ Releia seu plano de 12 meses e escreva a meta do mês 1 num post-it",
       "💭 Escreva o que \"condução\" significa pra você, com suas próprias palavras",
-      "🧪 Autoavaliação rápida — marque de 1 a 5 cada um dos 6 pilares do método",
+      "🧪 Autoavaliação rápida — marque de 1 a 5 cada um dos 6 pilares do método (técnica, comunicação, condução, negociação, posicionamento e segurança)",
       "🎯 Agende na agenda física os horários das próximas 4 sessões",
       "🎧 Ouça um áudio curto sobre autoridade e condução, anote 1 frase que ficou"]],
     [3,"S3","Segurança interna essencial",[
