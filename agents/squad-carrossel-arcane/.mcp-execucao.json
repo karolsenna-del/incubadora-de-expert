@@ -1,0 +1,8 @@
+{
+  "hashes": {
+    "templates-base/tweet-light/template.html": "54fb8cb8362c3d70e93df45db21c7880539466b05aafe9ba118309b4b70e7536",
+    "tools/build-cinema.mjs": "c21c17be06409fed43a0b16098197a3917496afed79fea1195c23898a50f4fc4",
+    "tools/build-carousel.mjs": "880e04614e0a2a3708f848158e92f2dd7ccc033b45de547c974b0c4fa52d2dd7",
+    "tools/render.sh": "9a8c087e7ac3428cf0dc13ebdf5357a133ad711131796627ed152d77d851f6bd"
+  }
+}

@@ -76,6 +76,10 @@ def fatiar(de, ate, sil, pausa_min, folga, env=None):
             a, b = bordas.pausa_real(env, a, b)
             if b - a < pausa_min:
                 continue
+        # pausa que não passa das duas folgas: o pedaço seguinte começaria antes do fim do anterior e o mesmo trecho
+        # de som e imagem tocaria duas vezes (gaguejada de 0,06 a 0,09 s em 4 a 6 emendas por vídeo, achada em 20/10)
+        if b - folga <= a + folga:
+            continue
         fim = max(a + folga, ini)
         if fim - ini > 0.12:
             partes.append((ini, min(fim, ate)))

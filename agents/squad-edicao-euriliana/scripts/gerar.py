@@ -59,8 +59,8 @@ ESTILO_VIDEO = (
     "no extra fingers, no CGI or video-game look, no glowing particles, no text on screen."
 )
 # clichês que denunciam banco de imagem ou IA genérica (prompt em inglês; também pega português)
-# CONTRATO: GENERICOS e trava_generico(prompt, modelo) são importados POR NOME pelo motor do catálogo de formatos
-# (laboratorio/experimentos/2026-09-25-catalogo-formatos/motor). Não renomeie nem mude a assinatura sem avisar
+# CONTRATO: GENERICOS e trava_generico(prompt, modelo) eram importados POR NOME pelo motor do catálogo de formatos
+# (arquivado em 21/10/2026: laboratorio/arquivo/2026-09-25-catalogo-formatos/motor). Se ele for reativado, não renomeie nem mude a assinatura sem avisar
 # a sessão desse motor; pode acrescentar itens à lista à vontade.
 GENERICOS = [
     r"business ?(people|man|woman|team)", r"handshake", r"shak(e|ing) hands", r"\bhologram", r"glowing brain", r"\brobot", r"futuristic",
@@ -120,7 +120,7 @@ def achar_url(j):
 
 def trava_generico(prompt_cena, modelo):
     """barra o prompt fraco ANTES de gastar crédito. Devolve a lista de problemas (vazia = passou).
-    CONTRATO: importada por nome pelo motor do catálogo de formatos; mantenha nome e assinatura."""
+    CONTRATO: importada por nome pelo motor do catálogo de formatos (arquivado em 21/10/2026); mantenha nome e assinatura se ele voltar."""
     if modelo == "sonilo_music":
         return []
     p = prompt_cena.lower()

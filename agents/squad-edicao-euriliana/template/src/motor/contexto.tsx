@@ -85,8 +85,11 @@ export const CENAS: Cena[] = (PLANO.cenas ?? []).map((c: any, i: number) => {
 }).sort((a: Cena, b: Cena) => a.t0 - b.t0);
 
 export const cenaEm = (t: number): Cena | undefined => {
+  // por quadro, com o mesmo arredondamento da Sequence de cada cena: comparando segundos soltos, na troca sobrava um quadro
+  // em que o layout ainda era o da cena que já tinha saído (tela de cima vazia por 1 quadro na dividida, achado em 20/10)
+  const q = f(t);
   let achou: Cena | undefined;
-  for (const c of CENAS) if (t >= c.t0 && t < c.t1) achou = c; // a última declarada vence
+  for (const c of CENAS) if (q >= f(c.t0) && q < f(c.t1)) achou = c; // a última declarada vence
   return achou;
 };
 export const layoutEm = (t: number): Layout => cenaEm(t)?.layout ?? 'rosto';

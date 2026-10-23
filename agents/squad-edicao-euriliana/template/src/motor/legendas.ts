@@ -1,6 +1,6 @@
 // Estilos prontos de legenda (plano.legenda.estilo_visual). Qualquer chave do plano.legenda vence o estilo.
 // premium e hormozi: pesquisa de legendas do catálogo de formatos
-// (laboratorio/experimentos/2026-09-25-catalogo-formatos/pesquisa-legendas/RELATORIO.md), medidos em 1080×1920.
+// (laboratorio/arquivo/2026-09-25-catalogo-formatos/pesquisa-legendas/RELATORIO.md; o catálogo foi arquivado em 21/10/2026), medidos em 1080×1920.
 // minimalist: squad de edição 3.0 (template Minimalist).
 // pinta, bebas-pop, cresce, sublinhado e pilula-clara: o cardápio animado do squad 3.0 (18/09),
 // reproduzido dos presets originais (remotion-captions-kit, remotion-captioneer e RemotionUI, todos MIT).

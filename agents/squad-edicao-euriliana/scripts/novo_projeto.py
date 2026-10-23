@@ -103,7 +103,8 @@ def main():
     if not (app / "node_modules").is_dir():
         if not shutil.which("npm"):
             sys.exit("não achei o npm: instale o Node 22 (https://nodejs.org) e rode de novo")
-        subprocess.run([*pf.comando("npm"), "install", "--no-audit", "--no-fund", "--loglevel=error"], cwd=app, check=True)
+        # --prefer-offline: usa o que já está no cache do npm (o Auroq OS deixa os pacotes deste template lá) sem perguntar à internet
+        subprocess.run([*pf.comando("npm"), "install", "--prefer-offline", "--no-audit", "--no-fund", "--loglevel=error"], cwd=app, check=True)
     elif not (app / "node_modules/lucide-react").is_dir():
         # projeto criado antes das cenas horizontais: falta a biblioteca de ícones
         subprocess.run([*pf.comando("npm"), "install", "lucide-react@1.21.0", "--no-audit", "--no-fund", "--loglevel=error"], cwd=app, check=True)

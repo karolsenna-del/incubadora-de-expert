@@ -462,10 +462,14 @@ def balanco(trab, aplicar=False):
     fala, cheia = FOLGA.get(int(pl.get("pirotecnia", 2) or 2), FOLGA[2])
     vol = round(min(0.6, 10 ** ((lv - fala - lt) / 20)), 3)
     vol_cheia = round(min(0.9, 10 ** ((lv - cheia - lt) / 20)), 3)
-    print(f"balanço: voz {lv:.1f} LUFS, trilha {lt:.1f} LUFS → volume {vol} sob a fala ({fala} dB abaixo) e {vol_cheia} nas cenas cheias")
+    # ducking (20/10): a trilha sobe quando ninguém fala e abaixa sozinha na fala, inclusive em cena cheia. Antes ela subia
+    # em toda cena cheia, e cena cheia com fala (agente de IA na tela falando) ficava com a música 8 a 10 dB abaixo da voz.
+    # volume_cheia fica para projeto antigo, cujo motor não conhece o ducking.
+    print(f"balanço: voz {lv:.1f} LUFS, trilha {lt:.1f} LUFS → volume {vol} sob a fala ({fala} dB abaixo) e {vol_cheia} sem fala "
+          f"({cheia} dB abaixo); a trilha abaixa sozinha quando alguém fala")
     if aplicar and plano.is_file():
         t = pl.get("trilha") or {}
-        t.update({"src": t.get("src", "media/trilha.mp3"), "volume": vol, "volume_cheia": vol_cheia})
+        t.update({"src": t.get("src", "media/trilha.mp3"), "volume": vol, "volume_cheia": vol_cheia, "volume_livre": vol_cheia, "ducking": True})
         pl["trilha"] = t
         plano.write_text(json.dumps(pl, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"balanço: gravado em {plano}")

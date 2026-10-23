@@ -390,6 +390,28 @@ const SeqCena: React.FC<{c: Cena}> = ({c}) => {
   );
 };
 
+// trilha que abaixa sozinha quando tem fala (trilha.ducking, 20/10): 1 = alguém falando, 0 = livre. Pausa curta (< 0,8 s) conta como
+// fala; a trilha desce rápido antes da palavra e sobe devagar depois dela, então a voz nunca disputa com a música.
+const FALA: Float32Array = (() => {
+  const n = Math.ceil(((DATA.total ?? 0) + 15) * FPS);
+  const a = new Float32Array(n);
+  for (const w of DATA.palavras ?? []) {
+    for (let q = Math.floor((w.t0 - 0.15) * FPS); q <= Math.ceil((w.t1 + 0.2) * FPS); q++) if (q >= 0 && q < n) a[q] = 1;
+  }
+  let ult = -1;
+  for (let q = 0; q < n; q++) {
+    if (a[q] !== 1) continue;
+    if (ult >= 0 && q - ult > 1 && q - ult < 0.8 * FPS) for (let k = ult + 1; k < q; k++) a[k] = 1;
+    ult = q;
+  }
+  const out = new Float32Array(n);
+  let v = 0;
+  for (let q = n - 1; q >= 0; q--) { v = Math.max(a[q], v * 0.7); out[q] = v; }   // desce ~3 quadros antes da fala
+  v = 0;
+  for (let q = 0; q < n; q++) { v = Math.max(out[q], v - 1 / (0.6 * FPS)); out[q] = v; } // sobe em ~0,6 s depois dela
+  return out;
+})();
+
 const Sfx: React.FC<{at: number; som: string; vol?: number}> = ({at, som, vol = 0.5}) => (
   <Sequence from={Math.max(0, f(at))} durationInFrames={90}><Audio src={staticFile(`sfx/${som}.wav`)} volume={vol} /></Sequence>
 );
@@ -419,6 +441,12 @@ export const Video: React.FC = () => {
       {layoutEm(t) === 'dividida' && (VERTICAL
         ? <div style={{position: 'absolute', top: 957, left: 0, width: 1080, height: 6, background: T.acento, boxShadow: `0 0 24px ${T.acento}`}} />
         : <div style={{position: 'absolute', top: 0, left: 1149, width: 6, height: 1080, background: T.acento, boxShadow: `0 0 24px ${T.acento}`}} />)}
+      {/* legenda.sombra_dividida (20/10): a legenda da cena dividida fica no topo do quadro do rosto; uma sombra escura atrás dela
+          deixa a letra branca legível mesmo na parede clara */}
+      {layoutEm(t) === 'dividida' && VERTICAL && PLANO.legenda?.sombra_dividida && (
+        <div style={{position: 'absolute', left: 0, top: 963, width: 1080, height: 300, pointerEvents: 'none',
+          background: 'linear-gradient(180deg, rgba(2,6,23,0.66) 0%, rgba(2,6,23,0.42) 45%, rgba(2,6,23,0) 100%)'}} />
+      )}
       <Headline />
       <Legenda />
       </AbsoluteFill>
@@ -429,7 +457,9 @@ export const Video: React.FC = () => {
       {tri?.src && (
         <Audio src={staticFile(tri.src)} loop volume={(q) => {
           const lay = layoutEm(q / FPS);
-          const base = lay === 'cheia' ? tri.volume_cheia ?? 0.18 : tri.volume ?? 0.07;
+          const base = tri.ducking
+            ? (tri.volume_livre ?? tri.volume_cheia ?? 0.18) + ((tri.volume ?? 0.07) - (tri.volume_livre ?? tri.volume_cheia ?? 0.18)) * (FALA[q] ?? 0)
+            : lay === 'cheia' ? tri.volume_cheia ?? 0.18 : tri.volume ?? 0.07;
           return base * interpolate(q, [0, 20, total - 45, total], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
         }} />
       )}
