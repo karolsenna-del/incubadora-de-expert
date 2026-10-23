@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Cronograma · Vagner</title>
+<title>Sprint do Método · Vagner</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
 <style>
 :root{
@@ -586,11 +586,162 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
   </div>
 
   <!-- ============ SESSÃO 4 ============ -->
-  <div data-week="4">
-    <div class="placeholder-card">
-      <div class="deliver-label">Entrega desta semana</div>
-      <h2>Ferramentas</h2>
-      <p>Ferramentas personalizadas pro seu método — prontas pra usar, não um esqueleto genérico pra você preencher sozinho.</p>
+  <div data-week="4" data-session="s4">
+
+    <div class="progress">
+      <span class="progress-count">0/6 blocos</span>
+      <div class="progress-track"><div class="progress-fill"></div></div>
+      <span class="save-status"></span>
+    </div>
+    <p class="hint">Clique em cada bloco pra abrir o conteúdo</p>
+
+    <div class="mindmap-wrap">
+      <svg class="mindmap-svg" viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="Mapa mental com 6 blocos da sessão ao redor de um nó central">
+        <line data-line="1" x1="50" y1="50" x2="50" y2="10"></line>
+        <line data-line="2" x1="50" y1="50" x2="82.9" y2="30"></line>
+        <line data-line="3" x1="50" y1="50" x2="82.9" y2="70"></line>
+        <line data-line="4" x1="50" y1="50" x2="50" y2="90"></line>
+        <line data-line="5" x1="50" y1="50" x2="17.1" y2="70"></line>
+        <line data-line="6" x1="50" y1="50" x2="17.1" y2="30"></line>
+      </svg>
+
+      <div class="hub">SESSÃO 4<br>VAGNER</div>
+
+      <button class="node-btn" data-node="1" style="left:50%;top:10%;"><span class="num">1</span>O Kit</button>
+      <button class="node-btn" data-node="2" style="left:82.9%;top:30%;"><span class="num">2</span>Vitrine</button>
+      <button class="node-btn" data-node="3" style="left:82.9%;top:70%;"><span class="num">3</span>Expansão</button>
+      <button class="node-btn" data-node="4" style="left:50%;top:90%;"><span class="num">4</span>Aprovações</button>
+      <button class="node-btn" data-node="5" style="left:17.1%;top:70%;"><span class="num">5</span>Prep. Validação</button>
+      <button class="node-btn" data-node="6" style="left:17.1%;top:30%;"><span class="num">6</span>Fechamento</button>
+    </div>
+
+    <div class="detail-wrap">
+
+      <div class="card" data-panel="1">
+        <div class="card-head"><h2>Kit de Ferramentas do Empresário Blindado</h2><span class="time">10 min</span></div>
+        <p class="card-sub">Seu Portfólio Estratégico: cada ferramenta nasce de uma objeção do Marcelo ou de um ponto onde ele trava no método. <a href="https://docs.google.com/spreadsheets/d/1ARIOymd2nLpDAZ96w3UZiN8aJIM0qaTVbJmyk0Z5JXk/edit" target="_blank" rel="noopener">Abrir o Kit de Ferramentas</a></p>
+        <div class="hypothesis">
+          <b>11 ferramentas em 3 níveis.</b> 6 são essenciais pra validação, uma pra cada etapa do método. 3 rodam em paralelo como isca ou produto de entrada. 2 ficam pro futuro, quando a operação crescer.
+        </div>
+        <div class="weeks">
+          <span class="week-chip"><b>0</b> Diagnóstico de Blindagem</span>
+          <span class="week-chip"><b>1</b> Simulador de Crédito — 3 Caminhos</span>
+          <span class="week-chip"><b>2</b> Raio-X do Empresário</span>
+          <span class="week-chip"><b>3</b> Piloto Automático da Gestão</span>
+          <span class="week-chip"><b>4</b> Decisão Blindada</span>
+          <span class="week-chip"><b>5</b> Radar de Blindagem</span>
+        </div>
+        <div class="col-label">Como ler a planilha</div>
+        <ul class="bullets">
+          <li><b>Dores e objeções:</b> qual frase do Marcelo a ferramenta desmonta (O1 a O10 são as 10 objeções do dossiê).</li>
+          <li><b>Como resolve + formato:</b> o que ela faz e onde roda (formulário, planilha, simulador).</li>
+          <li><b>Argumento de valor:</b> a frase pronta pra usar na oferta.</li>
+          <li><b>Modelo comercial:</b> o que vai incluído na mentoria e o que pode virar produto ou serviço à parte.</li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="1"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="2">
+        <div class="card-head"><h2>Vitrine: o protótipo das 6 essenciais</h2><span class="time">20–25 min</span></div>
+        <p class="card-sub">Uma ferramenta por etapa do método, pra você mexer e sentir como o Marcelo vai usar. Os dados são fictícios e nada é salvo ou enviado. <a href="https://empresario-blindado-vitrine-karol-sennas-projects.vercel.app/" target="_blank" rel="noopener">Abrir a vitrine</a></p>
+        <ul class="checklist">
+          <li><input type="checkbox"><div class="q"><span><b>01 Diagnosticar — Diagnóstico de Blindagem:</b> 5 pilares de 0 a 10 viram um índice e mostram o primeiro foco. Desmonta “meu problema é vender, não gestão” e “como alguém de fora vai saber mais do que eu”.</span><textarea class="answer" data-key="s4-vit-diagnostico" rows="1" placeholder="Reação do Vagner"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>02 Aliviar — Simulador de Crédito, 3 Caminhos:</b> compara 3 linhas e mostra quanto da sobra a parcela consome. Desmonta “só preciso de crédito” e “estou negativado, ninguém me empresta”.</span><textarea class="answer" data-key="s4-vit-credito" rows="1" placeholder="Reação do Vagner"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>03 Ressignificar — Raio-X do Empresário:</b> padrões de comportamento sob pressão viram uma reflexão e uma pergunta pra sessão. Desmonta “o mercado é que está ruim” e “pedir ajuda é admitir fracasso”.</span><textarea class="answer" data-key="s4-vit-evo" rows="1" placeholder="Reação do Vagner"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>04 Organizar — Piloto Automático da Gestão:</b> fechamento do mês e ritual semanal de 4 tarefas. Desmonta “não tenho tempo pra planilha” e “se sobrou na conta, tive lucro”.</span><textarea class="answer" data-key="s4-vit-piloto" rows="1" placeholder="Reação do Vagner"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>05 Blindar — Decisão Blindada:</b> uma decisão difícil, 3 caminhos e 4 filtros de consciência. É a Regra dos 3 Caminhos com o Contra-Ataque Consciente, na prática.</span><textarea class="answer" data-key="s4-vit-decisao" rows="1" placeholder="Reação do Vagner"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>06 Sustentar — Radar de Blindagem:</b> velocímetro de dias de fôlego do caixa com risco, atenção e seguro. Desmonta “a crise passou, posso parar de acompanhar”.</span><textarea class="answer" data-key="s4-vit-radar" rows="1" placeholder="Reação do Vagner"></textarea></div></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="2"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="3">
+        <div class="card-head"><h2>Além das essenciais</h2><span class="time">10 min</span></div>
+        <p class="card-sub">Não precisam estar prontas pra validar, mas já estão mapeadas.</p>
+        <div class="scope">
+          <div class="scope-box yes">
+            <h3>Em paralelo · isca ou low ticket</h3>
+            <ul>
+              <li><b>Calculadora do Custo do Vermelho</b> — “Quanto custa continuar no vermelho?” Funciona antes da compra, sem diagnóstico.</li>
+              <li><b>Raio-X do Ciclo de Caixa</b> — “Você vende, mas o dinheiro não sobra?” Mostra por quantos dias a empresa financia as próprias vendas.</li>
+              <li><b>Mapa do que Depende de Mim</b> — separa o que é mercado do que é decisão dele, e sai com 3 caminhos.</li>
+            </ul>
+          </div>
+          <div class="scope-box no">
+            <h3>Futuro · quando a operação crescer</h3>
+            <ul>
+              <li><b>Radar do Crédito</b> — sua central de linhas de crédito, critérios e fontes oficiais, que alimenta o Simulador.</li>
+              <li><b>Copiloto de Blindagem no WhatsApp</b> — alertas e prioridades no celular. Implantação paga e possível mensalidade.</li>
+            </ul>
+          </div>
+        </div>
+        <ul class="bullets" style="margin-top:16px;">
+          <li>Qual dessas vira a <b>ferramenta gratuita de atração</b> que a gente combinou na Sessão 2?<textarea class="answer" data-key="s4-isca" rows="1" placeholder="Anotar escolha"></textarea></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="3"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="4">
+        <div class="card-head"><h2>Aprovações</h2><span class="time">15–20 min</span></div>
+        <p class="card-sub">Marque o que está aprovado e anote o que muda. A partir daqui as ferramentas saem do protótipo e viram versão de uso.</p>
+        <ul class="checklist">
+          <li><input type="checkbox"><div class="q"><span><b>As 6 essenciais</b> cobrem as 6 etapas do método? Falta alguma, sobra alguma?</span><textarea class="answer" data-key="s4-aprov-essenciais" rows="1" placeholder="Aprovado? O que mudaria?"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>Nomes das ferramentas:</b> combinam com o jeito que você fala com o empresário?</span><textarea class="answer" data-key="s4-aprov-nomes" rows="1" placeholder="Aprovado? O que mudaria?"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>Nome do Módulo 2:</b> a planilha diz “Coaching / nome em definição”; o método e a vitrine dizem “Ressignificar”. Qual fica?</span><textarea class="answer" data-key="s4-aprov-modulo2" rows="1" placeholder="Anotar decisão"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>“Método EVO” no Raio-X:</b> você não tem certificação nem licença pra aplicar o EVO (Sessão 3). A vitrine já não reproduz DISC nem protocolo do EVO. Mantém o nome “inspirado no repertório EVO” ou tira o EVO do nome?</span><textarea class="answer" data-key="s4-aprov-evo" rows="1" placeholder="Anotar decisão"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>Simulador de Crédito:</b> as taxas da vitrine são de mentira. Na versão real, de onde vêm as taxas e as linhas: das propostas que você já recebe dos bancos, ou de uma lista que você mantém?</span><textarea class="answer" data-key="s4-aprov-taxas" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>Piloto Automático:</b> o Marcelo consegue exportar o extrato do banco em CSV ou Excel? Qual banco ele mais usa?</span><textarea class="answer" data-key="s4-aprov-extrato" rows="1" placeholder="Anotar resposta"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>Ordem de construção:</b> qual das 6 você precisa pronta primeiro pra atender o primeiro cliente?</span><textarea class="answer" data-key="s4-aprov-ordem" rows="1" placeholder="Anotar ordem"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>Modelo comercial:</b> as essenciais vão incluídas na mentoria, e as integrações avançadas e o Copiloto como serviço à parte. Faz sentido?</span><textarea class="answer" data-key="s4-aprov-comercial" rows="1" placeholder="Aprovado? O que mudaria?"></textarea></div></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="4"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="5">
+        <div class="card-head"><h2>Preparação pra Sessão 5 — Proposta Validada + Vendas Secretas</h2><span class="time">25–30 min</span></div>
+        <div class="hypothesis">
+          <b>O que você recebe na Sessão 5:</b> a estrutura da sua mentoria de validação, montada a partir da oferta. O roteiro da sessão de vendas e a apresentação da oferta. A copy de abordagem e de agendamento da sessão e a copy de follow-up. Tudo segue o método do Funil de Vendas Secretas. A validação é <b>individual</b>, uma pessoa por vez, numa conversa 1:1. Eu te mostro como vender e como entregar. As respostas abaixo alimentam a sua Proposta Validada.
+        </div>
+
+        <div class="col-label">Proposta Validada — confirmar o que já construímos</div>
+        <ul class="checklist">
+          <li><input type="checkbox"><div class="q"><span><b>Público delimitado:</b> pequeno empresário, cerca de R$ 360 mil/ano, que já vendeu bem, caiu e não voltou, e hoje está sem caixa. <b>Não é pra</b> quem só quer crédito rápido e rejeita mudar o comportamento. Faz sentido ou você ajustaria?</span><textarea class="answer" data-key="s4-pv-publico" rows="1" placeholder="Confirmar ou ajustar"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>Problema central:</b> não vende mais como antes, está sem caixa e acha que o problema é vender, quando o que falta é gestão de preço, margem e custos. É esse?</span><textarea class="answer" data-key="s4-pv-problema" rows="1" placeholder="Confirmar ou ajustar"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>Benefícios principais</b> pra quem aplica o Empresário Blindado até o fim. Sugestão, tirada do dossiê da persona:</span>
+            <span>1. Fôlego no caixa com o crédito certo, sem afundar em parcela que não cabe.<br>2. Saber quanto entra, quanto sai e quanto sobra de verdade.<br>3. Voltar a vender, e desta vez com lucro.<br>4. Recuperar o controle da empresa e parar de apagar incêndio.<br>5. Dormir tranquilo e voltar a ser o provedor sem esconder nada da esposa.<br>6. Resgatar a motivação e o propósito do início do negócio.<br>7. Não voltar ao vermelho, enxergando os sinais antes da crise.</span>
+            <span>Quais ficam, quais saem, o que falta?</span><textarea class="answer" data-key="s4-pv-beneficios" rows="1" placeholder="Confirmar ou ajustar"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>Desejo dominante:</b> é o benefício que puxa todos os outros e vira a promessa. Sugestão: <b>“acessar o crédito e nunca mais voltar ao vermelho”</b>, que é a frase que você escolheu na Sessão 2. Alternativa: “voltar a ter paz com o próprio negócio”. Qual pesa mais pro Marcelo?</span><textarea class="answer" data-key="s4-pv-desejo" rows="1" placeholder="Confirmar ou ajustar"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>Diferencial de abordagem:</b> a grande crença que te posiciona e conecta com o Marcelo. Sugestões:</span>
+            <span>A. “Por trás de todo CNPJ no vermelho existe um CPF angustiado.” (sua descoberta CPF + CNPJ)<br>B. “Crédito sem mudança de comportamento só adia a próxima crise.” (por que o banco sozinho não resolve)<br>C. “O problema não é vender mais. É saber se a venda dá lucro.” (derruba a objeção nº 1)</span>
+            <span>Qual é a sua? Pode ser uma combinação.</span><textarea class="answer" data-key="s4-pv-crenca" rows="1" placeholder="Escolher ou ajustar"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>Mecanismo único:</b> a sequência de ação do seu método, Diagnosticar → Aliviar → Ressignificar → Organizar → Blindar → Sustentar, com um nome próprio. Sugestões:</span>
+            <span>A. <b>Rota da Blindagem</b> — conversa com o Veículo Blindado.<br>B. <b>Protocolo CPF + CNPJ</b> — trata o empresário e a empresa juntos, que é o que ninguém faz.<br>C. <b>Protocolo dos 3 Tempos</b> — presente (crédito), passado (ressignificar), futuro (princípios), como você descreveu na Sessão 2.</span>
+            <span>Qual fica? O diferencial frente a banco e consultor: eles tratam só o sintoma (crédito ou planilha), você trata a cascata inteira.</span><textarea class="answer" data-key="s4-pv-mecanismo" rows="1" placeholder="Escolher ou ajustar"></textarea></div></li>
+          <li><input type="checkbox"><div class="q"><span><b>Ferramentas da oferta:</b> as que você aprovou no bloco 4 entram como entregáveis principais.</span><textarea class="answer" data-key="s4-pv-ferramentas" rows="1" placeholder="Confirmar lista"></textarea></div></li>
+        </ul>
+
+        <div class="col-label" style="margin-top:18px;">O que só você sabe</div>
+        <ul class="bullets">
+          <li><b>Prova:</b> você já tem resultado, caso, depoimento ou dado real de um empresário que você ajudou a acessar crédito ou sair do vermelho? Se ainda não tem, tudo bem: a proposta sai com esse espaço marcado.<textarea class="answer" data-key="s4-pv-prova" rows="1" placeholder="Anotar caso ou “ainda não tenho”"></textarea></li>
+          <li><b>Objeções reais:</b> quais 2 ou 3 você mais ouve dos empresários hoje? Sugestão do dossiê: “Meu problema é vender mais, não gestão.” · “Só preciso de crédito, o resto eu resolvo.” · “Agora não posso gastar com isso.”<textarea class="answer" data-key="s4-pv-objecoes" rows="1" placeholder="Confirmar ou trocar"></textarea></li>
+          <li><b>Bônus:</b> no máximo 2, cada um derrubando uma objeção que o método principal ainda não resolve. Sugestões: <b>Calculadora do Custo do Vermelho</b>, pra “agora não posso gastar com isso”, porque mostra quanto custa continuar parado. <b>Mapa do que Depende de Mim</b>, pra “se for da vontade de Deus, vai dar certo”, porque separa o que é do mercado do que é decisão dele. Você tem outra ideia?<textarea class="answer" data-key="s4-pv-bonus" rows="1" placeholder="Confirmar ou sugerir"></textarea></li>
+          <li><b>Preço:</b> você tem um valor em mente, ou alguma restrição de preço pra jornada de 6 meses?<textarea class="answer" data-key="s4-pv-preco" rows="1" placeholder="Anotar resposta"></textarea></li>
+          <li><b>Duas janelas de decisão:</b> uma condição especial pra quem fecha na sessão e uma um pouco menor pra quem fecha em até 24h. O que você topa oferecer em cada janela? (bônus, condição de pagamento, valor)<textarea class="answer" data-key="s4-pv-janelas" rows="1" placeholder="Anotar resposta"></textarea></li>
+          <li><b>Urgência real:</b> o que de verdade limita sua entrega? Vagas, horas por semana, agenda, prazo de um bônus…<textarea class="answer" data-key="s4-pv-urgencia" rows="1" placeholder="Anotar resposta"></textarea></li>
+          <li><b>Garantia:</b> que garantia você se sente seguro de oferecer? (ex.: Garantia de Aderência de N dias)<textarea class="answer" data-key="s4-pv-garantia" rows="1" placeholder="Anotar resposta"></textarea></li>
+          <li><b>Abordagem:</b> por onde você chega nesses empresários hoje (WhatsApp, indicação, banco, associação comercial, igreja…) e pra quem vão as primeiras mensagens?<textarea class="answer" data-key="s4-prep-canal" rows="1" placeholder="Canal e primeiros nomes"></textarea></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="5"> Marcar bloco como feito</label>
+      </div>
+
+      <div class="card" data-panel="6">
+        <div class="card-head"><h2>Fechamento</h2><span class="time">5 min</span></div>
+        <ul class="bullets">
+          <li>Próximo passo concreto antes da Sessão 5<textarea class="answer" data-key="s4-proximo-passo" rows="1" placeholder="Anotar resposta"></textarea></li>
+        </ul>
+        <label class="mark-done"><input type="checkbox" data-block-check="6"> Marcar bloco como feito</label>
+      </div>
+
     </div>
   </div>
 
@@ -599,7 +750,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
     <div class="placeholder-card">
       <div class="deliver-label">Entrega desta semana</div>
       <h2>Proposta + Roteiros de Venda</h2>
-      <p>Proposta de venda pronta + roteiros reais das ligações de Vendas Secretas — prontos pra você usar quando for validar no mercado.</p>
+      <p>Sua Proposta Validada e o kit de Vendas Secretas pra validar no individual: estrutura da mentoria de validação, roteiro da sessão de vendas, apresentação da oferta, copy de abordagem e agendamento e copy de follow-up.</p>
     </div>
   </div>
 
@@ -620,7 +771,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
 <script>
 (function(){
   var STORAGE_KEY_TAB = 'cronograma-vagner-tab';
-  var STORAGE_KEYS = { s1: 'sessao1-vagner-progress-v2', s2: 'sessao2-vagner-progress-v1', s3: 'sessao3-vagner-progress-v1' };
+  var STORAGE_KEYS = { s1: 'sessao1-vagner-progress-v2', s2: 'sessao2-vagner-progress-v1', s3: 'sessao3-vagner-progress-v1', s4: 'sessao4-vagner-progress-v1' };
 
   var tabs = document.querySelectorAll('.weektab');
   var weeks = document.querySelectorAll('[data-week]');
