@@ -1,0 +1,93 @@
+name: Post medo-de-cobrar-caro
+
+on:
+  schedule:
+    - cron: '0 23 29 10 *'   # 29/10 às 23:00 UTC = 20h BRT
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publicar carrossel via Meta Graph API
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: "17841437530973593"
+          CAPTION: |
+            Você já percebeu como consegue reconhecer o valor do trabalho de outras pessoas, mas trava quando precisa colocar preço no seu próprio conhecimento?
+
+            Você passou anos estudando, atendendo, resolvendo problemas e acumulando experiência. Mas, na hora de criar sua oferta, começa a pensar: “Será que alguém realmente pagaria isso por mim?”
+
+            Então você diminui o preço, acrescenta bônus, promete mais entregas e tenta compensar com quantidade aquilo que ainda não conseguiu comunicar com clareza.
+
+            Mas o problema talvez não seja quanto você cobra. É que você ainda não conseguiu mostrar o valor da transformação que entrega.
+
+            Seu cliente não compra os anos que você passou estudando. Ele compra a possibilidade de resolver um problema que importa para ele. Sua experiência sustenta a confiança, mas é uma oferta clara que ajuda a pessoa a entender por que vale a pena investir.
+
+            Você não precisa colocar tudo que sabe dentro de um produto para justificar seu preço. Precisa transformar o que sabe em um método que conduza alguém a um resultado específico.
+
+            Se você tem experiência, mas ainda não sabe como organizar seu conhecimento em uma oferta com valor percebido, comenta “AULA” que eu te envio o link do mini treinamento.
+        run: |
+          python3 - <<'EOF'
+          import os, time, requests, urllib.parse as up
+
+          TOKEN   = os.environ["META_TOKEN"]
+          IG_ID   = os.environ["IG_USER_ID"]
+          CAPTION = os.environ["CAPTION"].strip()
+          BASE    = "https://graph.facebook.com/v21.0"
+
+          SLIDES = [
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959525/instagram-carrosseis/medo-de-cobrar-caro/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959526/instagram-carrosseis/medo-de-cobrar-caro/slide-02.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959527/instagram-carrosseis/medo-de-cobrar-caro/slide-03.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959529/instagram-carrosseis/medo-de-cobrar-caro/slide-04.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959530/instagram-carrosseis/medo-de-cobrar-caro/slide-05.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959531/instagram-carrosseis/medo-de-cobrar-caro/slide-06.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959533/instagram-carrosseis/medo-de-cobrar-caro/slide-07.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959534/instagram-carrosseis/medo-de-cobrar-caro/slide-08.png"
+          ]
+
+          def meta_post(path, data):
+            r = requests.post(f"{BASE}/{path}", params={"access_token": TOKEN},
+                              data=up.urlencode(data).encode("utf-8"),
+                              headers={"Content-Type": "application/x-www-form-urlencoded"})
+            print(f"{path}: {r.status_code} {r.text[:200]}")
+            r.raise_for_status()
+            return r.json()
+
+          print("Criando item containers...")
+          item_ids = []
+          for i, url in enumerate(SLIDES):
+            resp = meta_post(f"{IG_ID}/media", {"image_url": url, "is_carousel_item": "true"})
+            item_ids.append(resp["id"])
+            if i < len(SLIDES) - 1:
+              time.sleep(2)
+          print(f"{len(item_ids)} containers criados")
+
+          print("Criando carousel container...")
+          resp = meta_post(f"{IG_ID}/media", {
+            "media_type": "CAROUSEL",
+            "children":   ",".join(item_ids),
+            "caption":    CAPTION,
+            "published":  "false",
+          })
+          carousel_id = resp["id"]
+          print(f"carousel_id: {carousel_id}")
+
+          print("Aguardando container ficar pronto...")
+          for tentativa in range(20):
+            r = requests.get(f"{BASE}/{carousel_id}", params={"fields": "status_code", "access_token": TOKEN})
+            status = r.json().get("status_code", "UNKNOWN")
+            if status == "FINISHED":
+              print(f"container pronto ({tentativa+1} checagens)")
+              break
+            if status == "ERROR":
+              raise RuntimeError("Container falhou com status ERROR")
+            time.sleep(5)
+          else:
+            raise RuntimeError("Container não ficou FINISHED após 100s")
+
+          print("Publicando...")
+          resp = meta_post(f"{IG_ID}/media_publish", {"creation_id": carousel_id})
+          print(f"PUBLICADO: {resp}")
+          EOF
