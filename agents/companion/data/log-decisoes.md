@@ -692,3 +692,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisao:** headline no meio da tela e sem legenda nos primeiros segundos; glow leve sempre (2 tentativas, se travar segue sem avisar antes); pirotecnia 2, legenda euriler, zoom misto como padrao.
 **Racional:** preferencia dela; o glow so caia por falta de RAM.
 **Impacto:** regra do glow em `.claude/rules/custom-do-aluno.md`; render longo feito em partes em primeiro plano.
+
+## 25/10/2026 — Conduz Agro: pré-diagnóstico com 2 perguntas novas
+**Contexto:** a Milena pediu pra ajustar as perguntas do Pré-Diagnóstico de Vendas.
+**Decisão:** a pergunta 7 virou "Quais são suas principais dificuldades e desafios na profissão hoje?". Em "Sobre você" entraram, depois da urgência, "Como você espera ser visto(a) pelo produtor rural daqui 1 ano?" (texto livre) e "Qual o faturamento pretendido com a sua profissão para daqui 1 ano?" (campo curto).
+**Racional:** a urgência fica colada na pergunta das dificuldades, porque pergunta sobre "resolver isso".
+**Impacto:** site milenagehrke.com.br/pre-diagnostico republicado; Apps Script na versão 5 (mesmo link), com 2 colunas novas abertas depois da Urgência sem mexer nas respostas antigas. Testado ponta a ponta e a linha de teste foi apagada.

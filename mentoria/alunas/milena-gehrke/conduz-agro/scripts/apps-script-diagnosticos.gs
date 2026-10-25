@@ -25,8 +25,10 @@ var FORMS = {
       {key: "atuacao", header: "Qual sua área de atuação?"},
       {key: "tempo", header: "Há quanto tempo você atua nesse mercado?"},
       {key: "faturamento", header: "Qual seu faturamento mensal aproximado hoje?"},
-      {key: "dificuldade", header: "Qual sua maior dificuldade hoje pra conduzir seus atendimentos?"},
+      {key: "dificuldade", header: "Quais são suas principais dificuldades e desafios na profissão hoje?"},
       {key: "urgencia", header: "Numa escala de 1 a 10, qual sua urgência em resolver isso?"},
+      {key: "visao_produtor", header: "Como você espera ser visto(a) pelo produtor rural daqui 1 ano?"},
+      {key: "faturamento_pretendido", header: "Qual o faturamento pretendido com a sua profissão para daqui 1 ano?"},
       {key: "t_fechada", header: "Você entende o processo completo de regularização de um imóvel rural?", opcoes: [
         "Sim, domino todas as etapas com segurança",
         "Tenho conhecimento, mas com dúvidas em algumas fases",
@@ -256,6 +258,26 @@ function migrarAba(ss, form) {
   sheet.getRange(1, 1, novas.length, novas[0].length).setValues(novas);
   sheet.getRange(1, 1, 1, novas[0].length).setFontWeight("bold").setWrap(true);
   sheet.setFrozenRows(1);
+}
+
+/**
+ * Rode uma vez manualmente (Executar → atualizarPreDiagnostico) ANTES de
+ * reimplantar o script com as perguntas de 25/10: abre 2 colunas depois da
+ * Urgência (visão pelo produtor e faturamento pretendido) e troca o cabeçalho
+ * da pergunta de dificuldade, sem mexer nas respostas já gravadas.
+ * Aba já atualizada é pulada.
+ */
+function atualizarPreDiagnostico() {
+  var form = FORMS.pre_diagnostico;
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(form.tab);
+  if (!sheet) return;
+  var header = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+  var novas = headersDe(form);
+  if (header.indexOf(novas[9]) !== -1) return; // já atualizada
+  var colUrgencia = header.indexOf("Numa escala de 1 a 10, qual sua urgência em resolver isso?") + 1;
+  if (colUrgencia !== 9) throw new Error("Cabeçalho fora do esperado — confira a aba antes de rodar.");
+  sheet.insertColumnsAfter(colUrgencia, 2);
+  sheet.getRange(1, 1, 1, novas.length).setValues([novas]).setFontWeight("bold").setWrap(true);
 }
 
 function getOrCreateSheet(ss, name, headers) {
