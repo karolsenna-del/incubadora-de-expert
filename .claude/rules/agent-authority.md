@@ -1,12 +1,15 @@
 # Agent Authority — Auroq OS
 
-## Exclusivo do Ops
+## O tecnico e do Companion (nao existe Ops desde 23/10/2026)
 
-`git push --force` · Pull Request (`gh pr create` / `gh pr merge`) · MCP add/remove/configure ·
-environment bootstrap · `*update`. Nenhum outro agente executa isso — delegar pro Ops.
+`git push --force` (so com ordem explicita do aluno) · Pull Request (`gh pr create` / `gh pr merge`) ·
+MCP add/remove/configure · configurar o computador · atualizar o sistema: o Companion faz, pelas skills
+tecnicas dele (`conserto-tecnico`, `salvar-e-sincronizar`, `publicar-site`, `atualizar-sistema`,
+`configurar-computador`). Squad ou worker que esbarrar nisso passa ao Companion; nunca manda o aluno a
+outro agente.
 
-**Salvar, entregar e puxar NAO sao exclusivos.** O Ops e o dono do ritual, mas qualquer
-agente ativo o executa quando o aluno pede, sem troca de agente (`rules/puxar-e-entregar.md`).
+**Salvar, entregar e puxar NAO sao exclusivos.** Qualquer agente ativo executa o ritual da skill
+`salvar-e-sincronizar` quando o aluno pede, sem troca de agente (`rules/puxar-e-entregar.md`).
 
 ## Quem faz o que
 

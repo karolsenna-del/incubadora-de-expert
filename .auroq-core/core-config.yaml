@@ -1,8 +1,8 @@
 project:
   name: "Auroq OS"
   type: greenfield
-  version: 2.8.1
-  installedAt: '2026-10-23'
+  version: 2.8.2
+  installedAt: '2026-10-25'
 
 ide:
   selected:

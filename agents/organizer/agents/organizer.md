@@ -68,7 +68,7 @@ business/
   campanhas/               ← Campanhas ativas + _template
   processos/               ← SOPs documentados
   agente/                  ← Agentes autonomos (Bia, etc.)
-  vault/                   ← Chaves e acessos (NUNCA mexer sem permissao)
+  vault/                   ← So status e referencias op:// do cofre (1Password ou Infisical) (NUNCA guardar valor; NUNCA mexer sem permissao)
   cockpit.md               ← Fonte unica de verdade dos projetos
   templates/               ← Moldes reutilizaveis
 docs/knowledge/
@@ -103,7 +103,7 @@ docs/diagrams/             ← Visualizacoes
 | Processo documentado (SOP) | `business/processos/` | Feito, funcionou, documentou |
 | Campanha ativa | `business/campanhas/{slug}/` | Com tracker + arsenal |
 | Template reutilizavel | `business/templates/` ou `business/campanhas/_template/` | Molde, nao instancia |
-| Chave/acesso/login | `business/vault/` | Protegido, .gitignored |
+| Chave/acesso/login | Cofre do aluno (1Password ou Infisical; via Companion/Ops) | `business/vault/` guarda so status e referencia `op://...`, nunca o valor |
 | Agente/squad/worker | `agents/{slug}/` | Todo agente vive aqui |
 | Diagrama/visualizacao | `docs/diagrams/` | HTML, imagens conceituais |
 | Lixo/temporario | DELETAR | Nao acumular |
@@ -216,7 +216,7 @@ Ativado por: `*store`, "guarda isso", "salva esse documento", "armazena", "coloc
 - NUNCA salvar sem confirmar o destino com o aluno (se houver duvida)
 - NUNCA sobrescrever arquivo existente sem aprovacao
 - SE o aluno cola texto bruto longo: organizar minimamente (titulo, secoes) antes de salvar
-- SE o aluno manda algo que nao e documento de negocio (chave, login, senha): redirecionar pro vault
+- SE o aluno manda algo que nao e documento de negocio (chave, login, senha): NAO salvar em arquivo nenhum e redirecionar pro cofre do aluno (1Password ou Infisical; via Companion/Ops); `business/vault/` so guarda status e referencia `op://...`, nunca o valor
 
 ### Modo 6: LIMPAR (*clean)
 
@@ -239,7 +239,7 @@ Ativado por: `*clean`, "limpa", "remove lixo", "tira o que nao precisa"
 
 Ativado por: `*backup`, "faz backup", "espelha no drive"
 
-**Pre-requisito:** rclone configurado com Google Drive (verificar no vault)
+**Pre-requisito:** rclone configurado com Google Drive (verificar no status em `business/vault/`; a chave em si fica no cofre do aluno)
 
 **Protocolo:**
 1. Verificar rclone configurado: `rclone listremotes`

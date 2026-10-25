@@ -20,11 +20,10 @@ a IA domina o **como**.
 
 | Tipo | O que é | Exemplo |
 |------|---------|---------|
-| **Companion** | Chefe da equipe e parceiro do aluno. Situa, lembra, pensa junto e chama quem faz | `/auroq-companion` |
+| **Companion** | Chefe da equipe e parceiro do aluno. Situa, lembra, pensa junto, chama quem faz e cuida do técnico (instala, atualiza, conserta, conecta) | `/auroq-companion` |
 | **Mentes** | Pensam e julgam: consultam, mentoram, avaliam | Clone, mente sintética, consultor |
 | **Workers** | Executam uma função (um cargo) | um worker de atendimento |
 | **Squads** | Vários agentes com etapas e conferência de qualidade | Squad de conteúdo, de anúncios |
-| **Ops** | O técnico: instala, atualiza, conserta, conecta | `/AuroqOS:agents:ops` |
 | **Forjas** | Criam agentes novos para o negócio do aluno | Squad Forge, Mind Forge, Worker Forge, Clone Forge, ETLmaker |
 
 Subtipos de mente: **Clone** (replica uma pessoa real), **Mente sintética** (junta vários
@@ -45,13 +44,13 @@ pasta-do-negocio/
 ├── .claude/
 │   ├── CLAUDE.md           # porta de entrada do Claude Code (importa o AGENTS.md)
 │   ├── rules/              # regras do sistema + custom-do-aluno.md (do aluno)
-│   ├── commands/           # atalhos dos agentes (/auroq-companion, /AuroqOS:agents:ops...)
+│   ├── commands/           # atalhos dos agentes (/auroq-companion, /auroq-consultor...)
 │   ├── output-styles/      # estilo de resposta Direto
 │   └── hooks/              # automações (Synapse, sincronização, histórico)
 ├── .auroq-core/            # núcleo do sistema (constitution, configuração) — não mexer
 ├── .synapse/               # lembretes curtos que o sistema injeta em cada conversa
 ├── agents/companion/data/  # memória: onde paramos, decisões, padrões, pendências
-├── business/               # o negócio: cockpit, campanhas, processos, vault (fora do git)
+├── business/               # o negócio: cockpit, campanhas, processos, vault (só status e referências do cofre de senhas, 1Password ou Infisical, fora do git)
 └── docs/knowledge/         # conhecimento do aluno
     ├── mapa-do-negocio.md  # resumo de uma página que todo squad lê primeiro (o Companion mantém: *contexto)
     ├── expert-mind/        # quem o aluno é: propósito, identidade, valores, tom de voz, história
@@ -69,7 +68,7 @@ Texto completo em `.auroq-core/constitution.md`.
 | Artigo | Princípio |
 |--------|-----------|
 | I | O terminal é o centro de comando: o negócio passa pela pasta, ferramentas externas são braços |
-| II | Cada um faz o seu: o técnico (push forçado, MCP, infraestrutura, atualização) é do Ops |
+| II | Cada um faz o seu: o técnico (push forçado, MCP, infraestrutura, atualização) é do Companion, pelas skills técnicas |
 | III | Documentar é investir: o que não está escrito se perde |
 | IV | Não inventar: fato, número e prova precisam de fonte |
 | V | Qualidade com julgamento: o aluno aprova as entregas importantes |

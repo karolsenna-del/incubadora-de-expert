@@ -16,9 +16,9 @@ SEMPRE preferir ferramentas nativas do Claude Code sobre MCP, **exceto** conteú
 
 ## MCP Governance
 
-Gestao de MCP servers (add/remove/configure) e **EXCLUSIVA do Ops**.
+Gestao de MCP servers (add/remove/configure) e do **Companion**, pelas skills `conserto-tecnico` e `configurar-computador`.
 
-Outros agentes sao **consumidores** de MCP, nao administradores. Se precisar de gestao MCP, delegar pro Ops.
+Outros agentes sao **consumidores** de MCP, nao administradores. Se precisar de gestao MCP, deixar com o Companion.
 
 ## Quando usar MCP
 

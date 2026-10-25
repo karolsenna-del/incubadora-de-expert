@@ -53,12 +53,45 @@ O caminho manual antigo foi aposentado. Use a instalacao guiada acima. Em negoci
 | `auroq-os doctor` | Diagnostico do suporte: arquivos, motor do sistema (e se o programa aberto pelo icone enxerga ele), registro do conteudo ao vivo, login e servidor |
 | `auroq-os register-mcp` | Reescreve o registro do conteudo ao vivo no projeto (use se o `doctor` apontar que ele falta) |
 | `auroq-os sync-codex` | Regenera e verifica as skills locais do Codex |
-| `auroq-os conectar-1password` | Conecta o 1Password CLI — le o token de Service Account direto do Ctrl+C (nunca digitado nem exposto), instala o `op` se faltar, valida online e salva permanente (Mac/Windows) |
+| `auroq-os conectar-1password` | Liga o 1Password ao Auroq sozinho (Mac/Windows): instala o `op` se faltar, cria o cofre `Claude` e uma conta de servico que so enxerga esse cofre (sem data de validade), guarda a chave no computador e testa. Voce so aprova no app do 1Password. O Ops roda isto por voce (`--agente`). Opcoes: `--conta "<e-mail>"` (escolhe a conta quando o app tem mais de uma), `--rotacionar` (cria uma chave nova), `--estado` (mostra em que etapa voce parou, sem falar com o 1Password; com `--agente` imprime a linha `AUROQ_ESTADO ...`). Pode ser retomado a qualquer hora: ele reconfere cada etapa e continua de onde parou. O Companion roda isto sozinho quando falta o cofre (skill `conectar-cofre`, que pergunta qual cofre) |
+| `auroq-os conectar-cofre` | Escolhe e liga o cofre de senhas: **1Password** (pago, uns US$ 3 por mes, confira o preco na tela, recomendado; preenche senha no navegador) ou **Infisical** (gratis, so guarda as chaves que o agente usa). Opcoes: `--cofre 1password\|infisical` (sem ela, pergunta qual), `--regiao us\|eu` (Infisical), `--estado` (em que etapa voce parou, sem falar com o cofre; com `--agente` imprime a linha `AUROQ_ESTADO ...`), `--rotacionar` (chave nova) e `--migrar` (passa as chaves do Infisical para o 1Password, sem apagar nada; so depois que todas passaram o 1Password vira o cofre ativo, e `--ignorar-fora-do-formato` deixa no Infisical as chaves com nome que o Auroq nao usa). Ligar o 1Password sozinho nao troca o cofre de quem ja usa o Infisical; ligar o Infisical com o 1Password ativo troca, e as chaves do 1Password nao sao levadas (continuam la, `segredo ler NOME --cofre 1password`). O Ops e o Companion rodam isto por voce (`--agente`) |
+| `auroq-os segredo` | Le e guarda credenciais no cofre que voce escolheu, igual nos dois: `segredo ler\|gravar\|listar\|apagar\|qual <referencia>`. O valor de `gravar` entra por stdin, nunca como argumento; `ler` imprime o valor, entao use sempre dentro do comando que o usa (`X="$(auroq-os segredo ler Item/campo)" && comando "$X"`), nunca sozinho; a referencia e `op://Claude/<Item>/<campo>` ou `cofre://<Item>/<campo>`. Com 1Password, `op read` direto continua valendo. Squads, skills e agentes usam este comando |
 
-> **Seguranca do token 1Password:** o token fica salvo no computador e qualquer programa seu consegue usa-lo.
-> Crie a Service Account com acesso a **um cofre so**, dedicado ao Auroq (o cofre `Claude`), sem senhas
-> pessoais, de banco ou da empresa. Permissao **so leitura**; libere escrita apenas nesse cofre se quiser
-> que o Auroq guarde ali as credenciais novas que voce conectar.
+> **Um cofre de senhas e obrigatorio** para guardar credenciais: senha, token e chave nunca ficam em arquivo do
+> projeto. Em `business/vault/` fica so o status e a referencia `op://...`, nunca o valor. Voce escolhe:
+>
+> - **1Password (recomendado, pago).** Quem nao tem e guiado pelo Ops (ou pelo Companion) a criar a conta (teste
+>   gratis de 14 dias, sem cartao; o plano Individual custa ~US$ 2,99 a 3,99/mes, confira o preco na tela). Voce so
+>   (1) cria a conta, (2) instala o app, (3) liga "Integrar com a CLI do 1Password" em Configuracoes >
+>   Desenvolvedor e (4) aprova com a digital (Mac) ou o Windows Hello. O resto o Ops faz. Preenche senha no
+>   navegador.
+> - **Infisical (gratis).** Para quem nao quer gastar nem 1 real. Voce so (1) cria a conta em
+>   https://app.infisical.com/signup (plano gratis; **nao** clique em "Start a free trial", que e o teste dos
+>   planos pagos e pede cartao) e (2) aprova o login que abre no navegador. O resto o Ops faz. Nao e tao bom: **nao
+>   preenche senha no navegador**, so guarda as chaves que o agente usa. Plano gratis (confira os limites na tela):
+>   5 vagas (voce e o agente Auroq; um segundo computador ganha chave nova mas nao gasta vaga), sem historico de versoes e sem registro de auditoria. Os termos do
+>   Infisical falam em uso profissional e o gratis pode mudar. Se um dia assinar o 1Password, `conectar-cofre
+>   --migrar` leva as chaves para la.
+>
+> Nao existe cofre de valores guardado em arquivo no computador, em nenhuma das duas rotas.
+
+> **Seguranca da chave 1Password:** o comando cria sozinho o cofre `Claude` e a conta de servico, e essa
+> chave **so enxerga o cofre `Claude`** (leitura e escrita), nunca suas senhas pessoais, de banco ou da empresa.
+> Ela nao expira. A chave fica salva no computador e qualquer programa seu consegue usa-la; por isso o cofre
+> `Claude` deve ter so o que o Auroq precisa. Em conta de empresa (Teams/Business), em geral so o dono ou
+> administrador cria conta de servico. Se um dia quiser trocar a chave, rode com `--rotacionar` e revogue a
+> antiga em 1password.com > Developer > Service accounts. Plano B escondido: `--manual`, para quem prefere
+> criar a conta de servico na mao e copiar o token (Cmd+C / Ctrl+C), sem colar em lugar nenhum: o comando le da
+> area de transferencia e a limpa depois.
+
+> **Seguranca da chave do Infisical:** o comando cria sozinho o projeto `Auroq` e uma chave do agente que **so
+> enxerga esse projeto** (leitura e escrita), sem data de validade. Ela fica salva no computador (arquivo so seu no
+> Mac, variavel do usuario no Windows) e qualquer programa seu consegue usa-la; por isso o projeto deve ter so o que
+> o Auroq precisa. Para trocar, rode com `--rotacionar` (depois do teste ele revoga as chaves antigas deste
+> computador, reconhecido por um codigo proprio e nao pelo nome, e tambem a chave que este computador usa agora;
+> se a revogacao falhar, ou se ele nao achar nenhuma chave antiga para revogar, avisa que a chave antiga ainda vale
+> e que voce deve apaga-la no painel do Infisical). A sessao do seu login no Infisical so existe durante a conexao e e encerrada no fim. A chave nunca
+> passa pela conversa.
 
 Dentro do projeto instalado, os mesmos checks ficam disponiveis como
 `npm run auroq:sync:codex`, `npm run auroq:sync:codex:check` e
@@ -76,12 +109,13 @@ npx auroq-os clone          # lista seus repos do GitHub e baixa o negocio intei
 cd meu-negocio
 claude
 /AuroqOS:agents:ops
-*conectar-1password         # reconectar o cofre (uma vez so nesta maquina)
+*conectar-cofre            # 1Password: reaproveita a chave que ja existe no seu cofre (uma vez so nesta maquina; so aprovar no app). Infisical gratis: cria uma chave nova so para esta maquina (voce aprova o login no navegador). Antes, ele pergunta qual cofre voce usa
+*conectar-1password        # atalho antigo, so para o 1Password
 ```
 
 Ritual diario em toda maquina: **abriu o `claude` → o sistema puxa sozinho o que mudou · terminou → diga "salva e entrega"** (qualquer agente executa o ritual do Ops; `*sync`/`*commit`/`*push` seguem como atalhos).
 Colaborador usa conta propria de tudo (GitHub via convite, assinatura Claude propria,
-cofre 1Password com escopo) — nunca a senha do dono. **Colaborador nao precisa ser
+cofre 1Password ou Infisical com escopo) — nunca a senha do dono. **Colaborador nao precisa ser
 aluno**: o acesso dele e o convite do GitHub (o `clone` nao pede login); quem atualiza
 o sistema e o dono, e o colaborador recebe as atualizacoes automaticamente ao abrir o `claude`.
 
@@ -255,13 +289,13 @@ agents/             → Seu exercito (companion, workers, minds, squads)
 
 ## Observabilidade e integridade do motor
 
-Apos publicacao, `npx -y auroq-os@2.8.1 doctor` mostra a fila local segura e os comandos pinados de
-manutencao/diagnostico. `npx -y auroq-os@2.8.1 manutencao` preserva o caminho existente
+Apos publicacao, `npx -y auroq-os@2.8.2 doctor` mostra a fila local segura e os comandos pinados de
+manutencao/diagnostico. `npx -y auroq-os@2.8.2 manutencao` preserva o caminho existente
 de consentimento legado, studentFiles, customizacoes e dados do negocio. Nao ha
-migracao forcada. O registro MCP aponta para `arcane-mcp@0.7.0` — o pin mora no campo
+migracao forcada. O registro MCP aponta para `arcane-mcp@0.7.1` — o pin mora no campo
 `arcaneMcpPin` do package.json (fonte unica; o servidor le o mesmo campo no npm).
 `npm run release:verify` recusa publicar com um pin que o npm nao resolva.
-Os instaladores do repositorio ficam preparados para 2.8.1; as copias publicas so recebem
+Os instaladores do repositorio ficam preparados para 2.8.2; as copias publicas so recebem
 a versao apos os gates nativos e a verificacao do tarball publicado.
 O pacote inclui `lib/runtime-integrity.json`: inventario SHA-256 gerado depois da montagem da casca, verificavel com `npm run integrity:verify` dentro do pacote extraido. Ele comprova consistencia do conteudo; nao e uma assinatura de autoria.
 

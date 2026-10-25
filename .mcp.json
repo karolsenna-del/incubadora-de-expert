@@ -4,10 +4,10 @@
       "command": "npx",
       "args": [
         "-y",
-        "arcane-mcp@0.7.0"
+        "arcane-mcp@0.7.1"
       ],
       "env": {
-        "AUROQ_OS_VERSION": "2.8.1"
+        "AUROQ_OS_VERSION": "2.8.2"
       }
     }
   }

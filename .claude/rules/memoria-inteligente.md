@@ -4,7 +4,7 @@
 
 ## Regra principal: fim de tarefa, memoria salva
 
-No fim de CADA tarefa concluida, o agente ativo (Companion, Ops, qualquer squad, skill ou a equipe que
+No fim de CADA tarefa concluida, o agente ativo (Companion, qualquer squad, skill ou a equipe que
 o Companion abre, no Claude ou no Codex) salva sem esperar pedido, antes da resposta final. Com o app
 Auroq OS aberto, a memoria tambem e consolidada sozinha a cada ~30 min e logo que um trabalho termina;
 sem o app (so no terminal), esta regra e o que garante a memoria:
@@ -45,7 +45,7 @@ SE o Companion percebe comportamento recorrente (so Companion faz isso):
 
 ### 5. Sessao Encerrando
 SE o aluno indica que vai fechar ou pede commit final:
-→ Ops verifica no ritual de commit: contexto e trackers atualizados?
+→ No ritual de salvar (skill `salvar-e-sincronizar`), conferir: contexto e trackers atualizados?
 → Atualizar `agents/companion/data/contexto-dinamico.md` com onde paramos
 
 ### 6. Tarefa Concluida

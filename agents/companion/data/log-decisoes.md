@@ -698,3 +698,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** a pergunta 7 virou "Quais são suas principais dificuldades e desafios na profissão hoje?". Em "Sobre você" entraram, depois da urgência, "Como você espera ser visto(a) pelo produtor rural daqui 1 ano?" (texto livre) e "Qual o faturamento pretendido com a sua profissão para daqui 1 ano?" (campo curto).
 **Racional:** a urgência fica colada na pergunta das dificuldades, porque pergunta sobre "resolver isso".
 **Impacto:** site milenagehrke.com.br/pre-diagnostico republicado; Apps Script na versão 5 (mesmo link), com 2 colunas novas abertas depois da Urgência sem mexer nas respostas antigas. Testado ponta a ponta e a linha de teste foi apagada.
+
+## 25/10/2026 — Node 26 e Python 3.14 como padrão
+**Contexto:** a Karol pediu Python e Node na versão mais recente e o motor do Auroq atualizado.
+**Decisão:** Node trocado do 24 LTS para o 26.12.1 (Current); Python 3.14.7 instalado ao lado do 3.12 e virou o padrão, com os mesmos pacotes reinstalados e testados.
+**Racional:** "mais recente" foi o pedido; o 3.12 ficou de reserva pra nada da edição de vídeo quebrar se algum pacote der problema no 3.14.
+**Impacto:** se algum script de vídeo/PDF falhar no 3.14, rodar com `py -3.12`. Auroq OS em 2.8.2.

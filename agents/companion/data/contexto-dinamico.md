@@ -147,6 +147,11 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 25/10 — Sistema e ferramentas atualizados:**
+- Auroq OS 2.8.1 → 2.8.2 (conexao 0.7.1). Falta fechar e abrir o Claude Code para concluir.
+- Node 24.22.1 (LTS) → 26.12.1 (Current, o mais novo). Vercel, Codex e Supabase globais seguem funcionando.
+- Python 3.14.7 instalado e virou o padrao (`python`), com os mesmos pacotes do 3.12 (torch, whisper, opencv, pdf etc.), testados. O 3.12 continua instalado (`py -3.12`) como reserva.
+
 **Sessao 24/10 — 3 Reels editados (Squad Edicao Euriliana):**
 - Prontos em `C:/Users/karol/Videos/edicao-euriliana/<curso|desmotivada|mentoria>/saida/<nome>-final.mp4` (1,05x, vertical): "Curso de vender curso" (58 s), "Desmotivada" (72 s), "Mentoria x personal" (57 s). 25/10: headline do "Curso de vender curso" refeita a pedido dela — caixa preta, letra branca, "PICARETAGEM" em laranja (a laranja ficou guardada como `curso-final-headline-laranja.mp4`).
 - Padrao aplicado: headline laranja no meio da tela sem legenda nos primeiros segundos, glow leve, pirotecnia 2, legenda euriler laranja, zoom misto, audio tratado, trilha da biblioteca liberada. So animacao (sem imagem nova); Desmotivada reaproveita as imagens aprovadas dos mesarios.

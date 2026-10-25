@@ -1,8 +1,8 @@
-# Salvar, Entregar e Puxar — Qualquer Agente Executa o Ritual do Ops
+# Salvar, Entregar e Puxar — Qualquer Agente Executa o Ritual
 
 > O aluno NUNCA precisa trocar de agente pra salvar, entregar ou puxar trabalho.
-> Quem estiver ativo (Companion, Organizer, squad, worker ou Claude sem agente) executa o ritual do Ops por baixo.
-> O Ops continua sendo o DONO do ritual; os outros agentes o executam.
+> Quem estiver ativo (Companion, Organizer, squad, worker ou Claude sem agente) executa o ritual por baixo.
+> O ritual mora na skill `salvar-e-sincronizar` do Companion (nao existe Ops desde 23/10/2026).
 
 ## Intents (linguagem natural → acao)
 
@@ -29,9 +29,9 @@ Exemplo: `progresso: NDF Workshop fase 1 concluida — LP, flows e criativos pro
 Momentos naturais de salvar: fim de sessao, troca de assunto, etapa de projeto
 concluida, decisao importante tomada, antes de fechar o computador.
 
-## O ritual — fonte da verdade: `.claude/commands/AuroqOS/agents/ops.md`
+## O ritual — fonte da verdade: skill `salvar-e-sincronizar` (`agents/companion/tasks/salvar-e-sincronizar.md`)
 
-Leia as secoes `*commit`, `*pre-push` e `*sync` do ops.md e execute os passos como estao. O minimo inegociavel:
+Leia as partes `*commit`, `*pre-push` e `*sync` da skill e execute os passos como estao. O minimo inegociavel:
 
 - **SALVAR:** revisar o que mudou → conferir tracker/contexto → mensagem em linguagem de negocio → **mostrar a lista do que vai entrar e ter o OK do aluno** (regra 7) → `git add` SO desses arquivos, um a um (NUNCA `git add -A`/`git add .`, NUNCA `business/vault/`, `.env`, chaves) → commit → confirmar ao aluno em 1 linha.
 - **ENTREGAR:** pre-push OBRIGATORIO (vault/.env fora do staging, `.gitignore` protege, nenhum arquivo gigante, branch certa) → `git push` → confirmar.
@@ -39,10 +39,10 @@ Leia as secoes `*commit`, `*pre-push` e `*sync` do ops.md e execute os passos co
 
 ## Regras
 
-1. Nao pedir troca de agente. Nao dizer "chama o Ops". Faca.
+1. Nao pedir troca de agente. Nao dizer "chama o tecnico". Faca.
 2. **Nunca entregar (push) sem o aluno pedir.** O sistema so PUXA sozinho (hook de abertura) — entregar e decisao dele.
 3. As travas do pre-push valem pra TODO agente — sao o que impede senha de subir pro GitHub.
-4. Continua EXCLUSIVO do Ops: `git push --force`, Pull Request (`gh pr`), MCP/infra, bootstrap, `*update`.
+4. Fica com o Companion (skills tecnicas): `git push --force` (so com ordem explicita do aluno), Pull Request (`gh pr`), MCP/infra, configurar o computador, atualizar o sistema.
 5. O hook de abertura (`.claude/hooks/auroq-sync.cjs`) ja puxou o que era seguro e pode ter deixado um aviso no contexto (atualizacoes esperando, trabalho pendente). Repasse ao aluno em 1-2 linhas, sem drama, e siga.
 6. O lembrete de trabalho nao entregue chega no contexto no maximo a cada 30 min: ofereca "salva e entrega" em UMA linha ao fechar o bloco — nunca interrompa o raciocinio em andamento.
 7. **A pasta e compartilhada; a conversa nao.** Outras janelas, agentes e squads escrevem
