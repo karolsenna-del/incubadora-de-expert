@@ -147,6 +147,17 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 
 ## Onde Parou
 
+**Sessao 24/10 — 3 Reels editados (Squad Edicao Euriliana):**
+- Prontos em `C:/Users/karol/Videos/edicao-euriliana/<curso|desmotivada|mentoria>/saida/<nome>-final.mp4` (1,05x, vertical): "Curso de vender curso" (58 s), "Desmotivada" (72 s), "Mentoria x personal" (57 s).
+- Padrao aplicado: headline laranja no meio da tela sem legenda nos primeiros segundos, glow leve, pirotecnia 2, legenda euriler laranja, zoom misto, audio tratado, trilha da biblioteca liberada. So animacao (sem imagem nova); Desmotivada reaproveita as imagens aprovadas dos mesarios.
+- Falta a Karol assistir e postar.
+
+**Sessao 23-24/10 — Reels "Mesarios" (Squad Edicao Euriliana):**
+- Video pronto: `C:/Users/karol/Videos/edicao-euriliana/mesarios/saida/mesarios-final.mp4` (82 s, 1,05x, vertical). Versao sem acelerar ao lado (`mesarios.mp4`).
+- Pirotecnia 2, legenda euriler laranja, zoom misto, sem glowup (tirado por falta de RAM). Audio tratado (voz/ruido 20 → 31 dB, -14,6 LUFS). Comentario da mesaria recriado como cartao sem @. 3 imagens geradas no ChatGPT (sem credito). Trilha de piano por baixo.
+- Conferencia final aprovada (legenda colada na fala, nenhum corte no meio de palavra). Falta so a Karol assistir e postar.
+- Licao tecnica: com 16 GB o Claude Code mata render em segundo plano; render em 4 partes em primeiro plano + audio separado funcionou.
+
 **Sessao 23/10 — Sprint do Vagner, fichas das ferramentas (Companion):**
 - S4 do cronograma (https://claude.ai/artifact/66roHRBBNNEhNpoWXvEUvV, versao 19) ganhou a tarefa "revisar as fichas das 6 ferramentas" ate a S5: uma ficha por essencial com estrutura, calculos, template do resultado, insumos dele e o que fica fora da 1a versao; o que e proposta nossa esta marcado como "sugestao". Fonte: planilha do Kit + vitrine.
 - Construcao das ferramentas so comeca quando ele devolver as fichas. Prazo de devolucao combinado no Fechamento da S4 (campo `s4-fichas-prazo`).

@@ -680,3 +680,15 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** Excluir o valor. Due diligence fica "em orçamento com o parceiro jurídico" até o Tasso informar.
 **Racional:** Número sem fonte confirmada não entra em material do cliente.
 **Impacto:** Canvas (já limpo ao vivo), documento de aprovação (5 trechos) e página antiga do Encontro 2 corrigidos. A nota original do E1 ficou como registro histórico.
+
+## 24/10/2026 — Reels Mesarios: edicao fechada
+**Contexto:** resposta ao comentario de uma mesaria, editada pelo Squad Edicao Euriliana (pirotecnia 2, legenda euriler, zoom misto).
+**Decisao:** sem glowup (pedido da Karol depois da falta de memoria); comentario recriado como cartao sem o @ da autora; "politicagem/corrupcao" tratado sem nenhuma imagem partidaria; velocidade 1,05x.
+**Racional:** proteger quem comentou, manter o tema servidor sem angulo partidario (persona dos sonhos) e caber na RAM do PC.
+**Impacto:** video final em `Videos/edicao-euriliana/mesarios/saida/mesarios-final.mp4`; render longo passa a ser feito em partes em primeiro plano.
+
+## 24/10/2026 — Padrao de edicao dos Reels da Karol
+**Contexto:** Karol mandou 3 videos de uma vez pra editar sozinha enquanto saia.
+**Decisao:** headline no meio da tela e sem legenda nos primeiros segundos; glow leve sempre (2 tentativas, se travar segue sem avisar antes); pirotecnia 2, legenda euriler, zoom misto como padrao.
+**Racional:** preferencia dela; o glow so caia por falta de RAM.
+**Impacto:** regra do glow em `.claude/rules/custom-do-aluno.md`; render longo feito em partes em primeiro plano.

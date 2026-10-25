@@ -41,3 +41,4 @@ outras rules. Exemplos:
 - O PC tem 16 GB de RAM e o disco sobra (365 GB livres em 23/10/2026): o "sem memória" na edição de vídeo é RAM, não espaço. Não resolver apagando arquivo.
 - Antes de qualquer edição de vídeo (squads de edição, transcrição, render): conferir a RAM livre e fechar o app do ChatGPT e o Edge (`msedge`; nunca `msedgewebview2`, que outros apps usam), sem perguntar. Não mexer no Linux do Windows (WSL), onde o Hermes do WhatsApp roda.
 - Em seguida, pedir à Karol em uma linha pra deixar só as abas do Chrome que ela precisa, e só então começar a edição.
+- Glowup: tentar 2 vezes, em primeiro plano. Se travar nas duas, seguir sem glow e avisar na entrega, sem esperar o ok dela (ela deixa a edição rodando sozinha, 24/10).
