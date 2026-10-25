@@ -14,10 +14,11 @@
 - [ ] `git check-ignore agents/garimpeiro-leads-instagram/rodadas/x.json` responde o caminho
 - [ ] Relatório no chat cita números, não lista de nomes (a lista está na aba)
 
-## REGRA-002: Custo zero — sem Apify nem ferramenta paga
+## REGRA-002: Apify só pra leitura, com teto de custo
 
-**Contexto:** decisão da Karol em 18/10/2026: o garimpo roda sem ferramenta paga (substitui a regra antiga de saldo do Apify, de 17/10).
-**Regra:** descoberta por busca na web, leitura por página pública, aprofundamento logado. Voltar a qualquer ferramenta paga = nível 3, só a Karol decide.
+**Contexto:** 18/10/2026 a Karol tirou o Apify (custo zero). 25/10/2026 ela o trouxe de volta só pra LER perfis: a página pública bloqueia depois de 5–8 leituras e a conta referenciasgpt levou 429 no 1º perfil em todas as tentativas (18, 19, 21 e 25/10).
+**Regra:** descoberta continua grátis (busca na web). Leitura: `coletar --fonte apify` (bio/seguidores, ~US$0,0013/perfil) → peneira da bio → `posts --rodada` (6 posts, ~US$0,016/perfil). Custo real da 1ª rodada: US$1,26 pra 101 perfis. Rodada acima de US$3 ou saldo do mês abaixo de US$1 = avisar a Karol antes. Nunca usar Apify pra busca por hashtag sem OK dela.
+**Nunca:** tentar fazer a automação "parecer humana" pra driblar bloqueio do Instagram (barrado em 25/10/2026). Bloqueio = parar.
 
 ## REGRA-004: Login no Instagram só na fase 3, só na conta referenciasgpt, com teto
 

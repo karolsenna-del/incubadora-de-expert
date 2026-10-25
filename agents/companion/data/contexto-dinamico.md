@@ -17,6 +17,10 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Garimpo de leads (25/10/2026)
+
+Apify de volta só pra ler perfil (plano grátis, US$5/mês, sem cartão). Pergunta "Mostra a dor?" trocada por "Vende só o próprio tempo?". Duas levas hoje (terapeuta, arquiteta, dentista, harmonização, esteticista, nutri, fisio, advogada, fono, psicóloga, psicopedagoga, enfermeira, TO): 111 perfis novos na aba Garimpo (156 no total). Profissional da beleza saiu dos termos. Esperando a revisão da Karol na coluna "Status revisão".
+
 ## Projeto Ativo Principal
 
 **Expert360º (Curso)** — Em producao e publicacao na Area de Membros

@@ -35,7 +35,9 @@ export const COLUNAS = [
 // Carreira clara e "ainda não vende método" saíram do fit: são peneira da Aderência.
 export const FITS = [
   { coluna: 'Tem anos de experiência na área?', campo: 'fit_experiencia', revisar: 'experiência: olhar destaques/posts antigos atrás de tempo de carreira, especialização ou cargo anterior' },
-  { coluna: 'Mostra a dor que a Incubadora resolve?', campo: 'fit_dor', revisar: 'dor: olhar legendas e stories atrás de cansaço do trabalho, sensação de valer mais do que ganha ou vontade de renda com o que sabe' },
+  // 25/10/2026: substitui "Mostra a dor que a Incubadora resolve?" (dava Não em quase todos — liberal posta a dor do cliente, não a própria).
+  // Sim = só ganha atendendo 1 a 1 (consulta, sessão, projeto) ou é CLT/servidor sem produto próprio. Não = já tem produto que vende sem ela.
+  { coluna: 'Vende só o próprio tempo?', campo: 'fit_tempo', revisar: 'tempo: abrir o link da bio e ver se ela já vende curso, e-book, desafio ou mentoria em grupo' },
   { coluna: 'Já cria conteúdo profissional?', campo: 'fit_conteudo', revisar: 'conteúdo: abrir os últimos posts e ver se a maioria é da área dela ou vida pessoal' },
   { coluna: 'Quer ser autoridade na área?', campo: 'fit_autoridade', revisar: 'autoridade: ver se dá aula, palestra ou se apresenta como especialista' },
 ];

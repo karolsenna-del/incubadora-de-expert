@@ -14,7 +14,7 @@
 
 Encontrar no Instagram perfis com aderência ao público de um cliente (Karol ou aluno dela), tirar quem já está no CRM ou já foi garimpado, e entregar até 50 aprovados por rodada — classificados, com as 4 perguntas de fit do Rastreador de Leads Qualificados respondidas e um fato-gancho real — pra revisão humana antes de qualquer abordagem.
 
-**Custo zero (decisão Karol 18/10/2026).** Pipeline em 3 fases:
+**Descoberta grátis, leitura pelo Apify (decisão Karol 25/10/2026 — a leitura grátis e a fase logada eram bloqueadas pelo Instagram).** Pipeline original em 3 fases (a 2 e a 3 hoje rodam por `coletar --fonte apify` + `posts`):
 1. **Descoberta** — busca na web (WebSearch, `site:instagram.com`), sem login
 2. **Perfil público** — nome, bio, seguidores e posts lidos da página pública, sem login → filtro + fit 1-3
 3. **Aprofundamento logado** — só quem passou da fase 2, pela conta `referenciasgpt` no Chrome (Playwright), com teto por rodada → posts recentes, fit 4, Perfil e fato-gancho
@@ -101,7 +101,7 @@ Karol Senna (direto)
 - **Depois da entrega:** Karol revisa na aba (coluna "Status revisão": aprovado/descartado). Aprovados dela → Vendedor Expert escreve a copy. Pra aluno, a entrega termina no fato-gancho (copy do Vendedor Expert é método de terceiro, uso exclusivo da Karol).
 - **Destinos:** Karol → aba "Garimpo" da planilha CRM. Alunos → planilha "Garimpo Alunos", uma aba "Garimpo - {aluno}" (criada no 1º perfil de aluno).
 - **Dedup:** Karol → Supabase `crm_leads.instagram` + aba Garimpo. Aluno → aba Garimpo dele (e CRM dele, se ele tiver e mandar).
-- **Orçamento:** zero. Sem Apify nem ferramenta paga (decisão Karol 18/10/2026). O Apify segue na conta dela, mas fora do garimpo.
+- **Orçamento:** descoberta grátis; leitura de bio e posts pelo Apify (decisão Karol 25/10/2026, ~US$1,26 por 100 perfis; acima de US$3 por rodada, avisar). Ver REGRA-002.
 - **Rastreador de Leads Qualificados (pré-CRM):** colunas S–AI da aba de garimpo, mesma estrutura do rastreador do Expert360º (M3.5). Aderência (coluna L) responde "é do meu público?" (carreira clara, ainda não vende método, sem descarte). As 4 perguntas de fit respondem "vale abordar agora?" — v2 aprovada pela Karol em 18/10/2026: Tem anos de experiência na área? · Mostra a dor que a Incubadora resolve? · Já cria conteúdo profissional? · Quer ser autoridade na área? ("autoridade" é o desejo que a Karol usa; renda saiu: não qualifica abordagem inicial). Resposta: Sim / Não / A avaliar. Score = nº de "Sim" (fórmula). "A avaliar" e lead sem leitura logada viram "Revisar: ..." na coluna Observações. Prioridade de abordagem = Score manda, Aderência trava (Alta = Score 4, ou 3 com aderência alta · Baixa = Score 0-1 ou aderência baixa · Média = resto). Coluna M = "Postou nos últimos 30 dias?" (desempate).
 
 ---

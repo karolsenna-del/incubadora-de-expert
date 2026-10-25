@@ -704,3 +704,15 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** Node trocado do 24 LTS para o 26.12.1 (Current); Python 3.14.7 instalado ao lado do 3.12 e virou o padrão, com os mesmos pacotes reinstalados e testados.
 **Racional:** "mais recente" foi o pedido; o 3.12 ficou de reserva pra nada da edição de vídeo quebrar se algum pacote der problema no 3.14.
 **Impacto:** se algum script de vídeo/PDF falhar no 3.14, rodar com `py -3.12`. Auroq OS em 2.8.2.
+
+## 25/10/2026 — Garimpeiro volta a usar o Apify só pra ler perfil
+**Contexto:** o garimpo grátis travava: o Instagram bloqueava a leitura pública depois de 5 perfis e a conta referenciasgpt levou bloqueio no 1º perfil em todas as tentativas.
+**Decisão:** Apify de volta só pra leitura de bio e posts (descoberta segue grátis pela busca no Google). Profissional da beleza sai dos termos (traz muita gente desqualificada).
+**Racional:** custa ~US$1,26 por 100 perfis e é o único caminho que entrega as 4 perguntas pelos posts e escala pros alunos. Disfarçar a conta logada de "pessoa" foi descartado (é driblar a proteção do Instagram).
+**Impacto:** rodada com teto de US$3 sem aviso; alunos usariam a conta Apify deles.
+
+## 25/10/2026 — Garimpeiro troca a pergunta "Mostra a dor?" por "Vende só o próprio tempo?"
+**Contexto:** a pergunta da dor dava "Não" em quase todo perfil (profissional liberal posta a dor do cliente, não a própria), então não separava ninguém.
+**Decisão:** no lugar dela entra "Vende só o próprio tempo?" (só atende 1 a 1, sem produto que venda sozinho).
+**Racional:** dá pra responder pela bio e pelo link quase sempre, e é exatamente o teto que a Incubadora resolve.
+**Impacto:** aba recalculada (Alta 6 → 37 na 1ª leva). Quem já vende e-book, desafio ou curso perde 1 ponto, mas não é descartado.

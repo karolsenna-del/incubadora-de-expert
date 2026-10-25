@@ -57,6 +57,7 @@ Ver `tasks/perfil-cliente.md`. Primeira vez: Gestor de Infra cria a planilha "Ga
 | 17/10/2026 | karol | #analistajudiciaria | hashtag (20) | 12 | 3 (1 alta) | ~0,08 | teste · muita concurseira |
 | 17/10/2026 | karol | #auditorafiscal | hashtag (20) | 12 | 2 (0 alta) | ~0,08 | teste · RUIM: cursinho, órgão, concurseira — não usar |
 | 17/10/2026 | karol | #enfermeiraconcursada | hashtag (20) | 1 | 0 | ~0,08 | teste · quase nada volta — não usar |
+| 25/10/2026 | karol | terapeuta/arquiteta/dentista/harmonização/esteticista + 51 antigos (busca web → Apify) | 116 → 62 classificados → 50 entregues | US$1,26 | 1ª rodada com Apify só pra leitura. Melhor rendimento: nutricionista, fisioterapeuta, advogada, fono (alta). Harmonização/estética: muito média. Dentista: muita clínica |
 
 ## Consultas que funcionam (busca web, fase 1)
 
@@ -67,6 +68,11 @@ Ver `tasks/perfil-cliente.md`. Primeira vez: Gestor de Infra cria a planilha "Ga
 | 19/10/2026 | karol | `"servidora pública"/"concursada" "empreendedora"` | ~2-3/10 | traz servidora com negócio paralelo (regra nova da dor), mas muito perfil de loja/doceria |
 | 19/10/2026 | karol | `"transição de carreira"` + profissão, `"projeto paralelo"`, `"ex-professora"` | ~0-1/10 | RUIM: só mentor de carreira, universidade e instituição — não usar |
 | 19/10/2026 | karol | `"engenheira"/"assistente social"/"RH"/"farmacêutica"/"contadora" "anos de experiência"` | 0-2/10 | só empresa/escritório ou vazio |
+| 25/10/2026 | karol | `"harmonização facial"/"harmonização orofacial" "Dra."` e `"esteticista" "biomédica esteta"` | ~6-8 individuais/10 | bom volume de profissional individual; vem clínica junto |
+| 25/10/2026 | karol | `"maquiadora"/"nail designer"/"designer de sobrancelhas" "anos de experiência"` | ~7-9/10 | NÃO USAR (Karol 25/10/2026: traz muita gente desqualificada) — maquiadora, cabeleireira, sobrancelha, unha |
+| 25/10/2026 | karol | `"terapeuta holística"/"integrativa"` ou `"thetahealing"` | ~5/10 | vem perfil em espanhol/francês e escola de terapeuta |
+| 25/10/2026 | karol | `"dentista" "anos de experiência"`, `"arquiteta" + cidade/CAU` | ~2-4/10 | dentista traz quase só clínica (muitas de Portugal/Espanha); arquiteta rende pouco, melhor com "interiores" + cidade |
+| 25/10/2026 | karol | `"esteticista" "anos de experiência"` / `"há" anos "atendimento"` | 0 | vazio — usar "biomédica esteta"/"cosmetóloga" |
 
 ## Histórico de régua (perfil de busca)
 

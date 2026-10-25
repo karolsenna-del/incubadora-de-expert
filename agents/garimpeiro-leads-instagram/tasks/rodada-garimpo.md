@@ -51,6 +51,13 @@ Quando o cliente pede "garimpa meus seguidores" (precisa de `instagram_proprio` 
 - Daí em diante, fase 2 e 3 iguais. Grupo no rastreador = "Seguidor sem interação" (nunca "Seguidores engajados" — esse é de quem comenta/responde; a Karol muda à mão quando a pessoa interagir).
 - Lista de seguidores e fase 3 usam a mesma conta no mesmo dia: rodar a fase 3 com teto 15 depois da leitura da lista, não antes.
 
+### 3–4 (padrão desde 25/10/2026). Leitura pelo Apify
+A página pública e a conta logada são bloqueadas pelo Instagram depois de poucos perfis. Caminho padrão (REGRA-002):
+1. `node agents/garimpeiro-leads-instagram/tools/garimpo.mjs coletar --perfil {cliente} --candidatos {arquivo} --fonte apify` → dedup + bio/seguidores + filtro mecânico (privado já sai).
+2. Peneira da bio (abaixo) → marcar `aderencia: "descarte"` no JSON.
+3. `node agents/garimpeiro-leads-instagram/tools/garimpo.mjs posts --rodada {arquivo}` → últimos 6 posts de quem passou (`fase: 3`).
+4. Seguir pro passo 5. Os passos 3 e 4 abaixo (página pública e conta logada) ficam de reserva, sem custo e com volume baixo.
+
 ### 3. Fase 2 — Perfil público (script, sem login)
 `node agents/garimpeiro-leads-instagram/tools/garimpo.mjs coletar --perfil {cliente} --candidatos agents/garimpeiro-leads-instagram/rodadas/candidatos-{data}-{cliente}.txt`
 
@@ -77,7 +84,7 @@ Pra CADA item não descartado de `para_classificar`, completar no próprio item:
 | `aderencia` | `alta` / `media` / `baixa` / `descarte` — régua da KB §3.3 + descartes do perfil |
 | `prioridade` | 1 / 2 / 3 — KB §3.3 (uso interno; a aba mostra "Postou nos últimos 30 dias?" e a Prioridade de abordagem, calculados pelo script) |
 | `fit_experiencia` | **Tem anos de experiência na área?** Sim = bio/posts mostram tempo de carreira ("15 anos de..."), especialização, casos acumulados, carreiras anteriores. Recém-nomeado/recém-formado = Não. Não aparece = A avaliar |
-| `fit_dor` | **Mostra a dor que a Incubadora resolve?** Sim = fala de cansaço do emprego, de valer mais do que ganha, de querer renda com o que sabe, de não ser reconhecido(a), de história de carreira travada. Também é Sim: já toca negócio paralelo próprio (marca, loja, serviço fora do cargo) ou estuda pra mudar de rumo (pós/mestrado em negócios, empreendedorismo) — calibração 19/10/2026. Estudar pra outro concurso não conta. Falar da dor do PÚBLICO dela não conta. Sinal fraco/ambíguo = A avaliar |
+| `fit_tempo` | **Vende só o próprio tempo?** (desde 25/10/2026, no lugar de "Mostra a dor?") Sim = só ganha atendendo 1 a 1 (consulta, sessão, projeto, orçamento) ou é CLT/servidor sem produto próprio. Não = já vende algo que roda sem ela (e-book, desafio, curso, ferramenta, loja, mentoria em grupo). A avaliar = escritório/estúdio com equipe ou link da bio sem clareza |
 | `fit_conteudo` | **Já cria conteúdo profissional?** Sim = a maioria dos últimos posts é sobre a própria área (dica, caso, bastidor do trabalho), não vida pessoal. Sem posts pra ler = A avaliar |
 | `fit_autoridade` | **Quer ser autoridade na área?** Sim = ensina, dá aula, palestra, se apresenta como especialista, fala em autoridade/posicionamento. Não aparece = Não (A avaliar só se houver sinal ambíguo) |
 
