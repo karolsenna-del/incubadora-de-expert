@@ -41,7 +41,10 @@ const tdir = path.join(TEMPLATES_DIR, cfg.template);
 if (!fs.existsSync(tdir)) { console.error(`ERRO: template não encontrado: ${tdir}`); process.exit(1); }
 const metaRaw = fs.readFileSync(path.join(tdir, 'meta.yaml'), 'utf8');
 const meta = (k, def) => {
-  const m = metaRaw.match(new RegExp(`^\\s*${k}\\s*:\\s*"?([^"#\\n]+?)"?\\s*(#.*)?$`, 'm'));
+  // valor entre aspas pode conter "#" (cor hex); sem aspas, "#" abre comentário
+  const q = metaRaw.match(new RegExp(`^\\s*${k}\\s*:\\s*"([^"\\n]*)"`, 'm'));
+  if (q) return q[1].trim();
+  const m = metaRaw.match(new RegExp(`^\\s*${k}\\s*:\\s*([^"#\\r\\n]+?)\\s*(#.*)?\\r?$`, 'm'));
   return m ? m[1].trim() : def;
 };
 const id = {
@@ -51,6 +54,7 @@ const id = {
   font:    meta('font', 'Open Sans'),
   bg:      meta('bg', '#FFFFFF'),
   text:    meta('text_color', '#0F1419'),
+  strong:  meta('strong_color', ''),
   side:    parseInt(meta('image_side_margin', '38'), 10),
   radius:  parseInt(meta('image_radius', '0'), 10),
   sizeImg: parseInt(meta('text_size_image', '44'), 10),
@@ -101,7 +105,7 @@ function html(slide, imgRef) {
   .verified { width:40px; height:40px; flex-shrink:0; }
   .username { font-weight:400; font-size:35px; color:#536471; margin-top:6px; }
   .text { font-weight:400; font-size:${startSize}px; line-height:1.38; color:${id.text}; letter-spacing:-0.3px; }
-  .text strong, .text b { font-weight:700; }
+  .text strong, .text b { font-weight:700;${id.strong ? ` color:${id.strong};` : ""} }
   .media { width:calc(100% + ${id.side * 2}px); margin:36px -${id.side}px 0; background:${id.bg};
     border-radius:${id.radius}px; overflow:hidden; }
   .media img { width:100%; height:auto; display:block; }

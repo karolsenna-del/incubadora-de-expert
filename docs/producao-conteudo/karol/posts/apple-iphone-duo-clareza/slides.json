@@ -1,0 +1,14 @@
+{
+  "template": "card-tweet",
+  "name": "carrossel-apple-iphone-duo",
+  "slides": [
+    { "text": "A APPLE acabou de lançar um iPhone que DOBRA. Mas ela não está vendendo uma dobradiça.<br><br>Está vendendo <strong>mais possibilidades no seu bolso.</strong>", "image": "C:/Users/karol/OneDrive/Documentos/Incubadora-de-expert/docs/producao-conteudo/karol/posts/apple-iphone-duo-clareza/card1-FINAL.jpg" },
+    { "text": "O iPhone Duo tem tela dobrável, chip A20 Pro, bateria dupla, titânio e uma nova arquitetura interna.<br><br>Só que o cliente não precisa entender toda essa engenharia. Ele precisa entender:<br><br><strong>“O que isso muda para mim?”</strong>", "image": null },
+    { "text": "A Apple traduziu a complexidade em uma ideia simples: a maior tela já colocada em um iPhone, que continua cabendo no bolso.<br><br><strong>A tecnologia é complexa. A promessa não precisa ser.</strong>", "image": null },
+    { "text": "<strong>É exatamente aqui que muitos especialistas erram.</strong><br><br>Sabem tanto que tentam colocar tudo na comunicação: ferramentas, técnicas, frameworks, módulos, bônus.<br><br>E o cliente continua sem entender o principal: <strong>“Onde isso vai me levar?”</strong>", "image": null },
+    { "text": "Seu aluno não compra tudo o que você sabe. <strong>Ele compra o resultado que acredita que pode alcançar com você.</strong><br><br>Seu conhecimento serve para construir o caminho. Não para complicar a decisão.", "image": null },
+    { "text": "Por isso um bom método não é uma biblioteca. <strong>É uma seleção.</strong><br><br>Você decide o que entra, o que sai e em qual ordem a pessoa precisa aprender.", "image": null },
+    { "text": "Quanto mais especialista você se torna, mais deveria conseguir simplificar.<br><br>Porque autoridade não é mostrar tudo o que você sabe. É saber exatamente <strong>o que a pessoa precisa para avançar.</strong>", "image": null },
+    { "text": "A Apple poderia vender chip, tela, bateria e dobradiça. Mas vende a transformação que tudo isso entrega.<br><br>Faça o mesmo com seu método.<br><br><strong>Não venda o que existe dentro dele. Venda com clareza onde ele leva.</strong>", "image": null }
+  ]
+}
