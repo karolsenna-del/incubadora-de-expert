@@ -5,6 +5,7 @@
 // A aba tem 2 blocos:
 //   A–R  garimpo (quem é, por que entrou, fato-gancho)
 //   S–AI rastreador de leads qualificados (pré-CRM: grupo, 4 perguntas de fit, score, perfil, status, follow-up, fechamento)
+//   AJ   Ordem (fórmula oculta usada pra ordenar por prioridade)
 //
 // Uso:
 //   node planilha.mjs enviar --rodada agents/garimpeiro-leads-instagram/rodadas/2026-10-17-karol.json
@@ -12,6 +13,7 @@
 //   node planilha.mjs preparar --perfil karol   → cabeçalho do rastreador + menus suspensos + fórmula do Score (idempotente)
 //   node planilha.mjs migrar --perfil karol     → preenche o rastreador das linhas antigas (só onde "Grupo" está vazio)
 //   node planilha.mjs recalcular --perfil karol → régua mudou: reescreve fit, prioridade, "postou 30 dias" e "Revisar:" das rodadas locais
+//   node planilha.mjs formatar --perfil karol   → aparência (cores por situação, colunas de sistema ocultas, ordem por prioridade) + aba Legenda (idempotente)
 //   node planilha.mjs copy --perfil karol --arquivo {json fora do repo: {"@arroba": "mensagem"}} [--sobrescrever] → grava a 1ª mensagem do Vendedor Expert na coluna Copy (só onde está vazia)
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
@@ -47,7 +49,7 @@ export const A_AVALIAR = 'A avaliar';
 export const RASTREADOR = [
   'Grupo', ...FITS.map((f) => f.coluna), 'Score de Fit (0-4)', 'Prioridade de abordagem', 'Perfil', 'Status',
   'Data Última Interação', 'Próxima Ação', 'Data Próxima Ação', 'Fechou?', 'Valor', 'Data Fechamento',
-  'Depoimento', 'Observações',
+  'Depoimento', 'Observações', 'Ordem',
 ];
 const COL_INICIO_RASTREADOR = COLUNAS.length; // índice 18 = coluna S
 
@@ -59,7 +61,7 @@ const MENUS = {
   'Postou nos últimos 30 dias?': SIM_NAO,
   'Prioridade de abordagem': ['Alta', 'Média', 'Baixa'],
   'Perfil': ['Conector', 'Analista', 'Diretivo'],
-  'Status': ['Sem abordagem', 'Abordagem feita', 'Respondeu', 'Sessão agendada', 'Sessão realizada', 'Proposta enviada', 'Cliente', 'Vai pensar', 'Lead frio'],
+  'Status': ['Sem abordagem', 'Abordagem feita', 'Em conversa', 'Respondeu', 'Sessão agendada', 'Sessão realizada', 'Proposta enviada', 'Cliente', 'Vai pensar', 'Lead frio'],
   'Fechou?': ['Sim', 'Não', 'Em aberto'],
   'Depoimento': ['Pendente', 'Solicitado', 'Recebido'],
   'Status revisão': ['aprovado', 'descartado'],
@@ -114,6 +116,12 @@ const COL_SCORE = colunaDe('Score de Fit (0-4)');
 const COL_FIM = letra(COL_INICIO_RASTREADOR + RASTREADOR.length - 1);
 // Sem separador de argumento — funciona em planilha pt-BR e en (REGRA-025 do Gestor de Infra).
 const formulaScore = (linha) => `=SUMPRODUCT((${COL_FIT_1}${linha}:${COL_FIT_4}${linha}="Sim")*1)`;
+// Ordem (coluna oculta, Karol 25/10/2026): Prioridade Alta → Média → Baixa; descartado, lead frio e "Fechou? Não" vão pro fim.
+const COL_ORDEM = colunaDe('Ordem');
+const [C_REV, C_STATUS, C_PRIO, C_FECHOU] = ['Status revisão', 'Status', 'Prioridade de abordagem', 'Fechou?'].map(colunaDe);
+// "reprovado"/"Reprovado" e "Em conversa": palavras que a Karol digita fora do menu — tratadas como descartado / perdido / em conversa.
+const formulaOrdem = (l) => `=($${C_REV}${l}="descartado")*10+($${C_REV}${l}="reprovado")*10+($${C_STATUS}${l}="Lead frio")*10+($${C_STATUS}${l}="Reprovado")*10+($${C_FECHOU}${l}="Não")*10`
+  + `+($${C_PRIO}${l}="Alta")*1+($${C_PRIO}${l}="Média")*2+($${C_PRIO}${l}="Baixa")*3`;
 
 function token() {
   if (process.env.GARIMPO_TOKEN) return process.env.GARIMPO_TOKEN;
@@ -160,11 +168,146 @@ async function atualizar(destino, intervalo, linhas, formula = false) {
   return chamar({ acao: 'atualizar', planilha: destino.planilha, aba: destino.aba, intervalo, linhas, formula });
 }
 
-// Fórmula do Score em todas as linhas de dado (a coluna é só fórmula — reescrever não perde nada).
+// Fórmulas do Score e da Ordem em todas as linhas de dado (as colunas são só fórmula — reescrever não perde nada).
 async function escreverScores(destino, totalLinhas) {
   if (totalLinhas < 1) return;
   const linhas = Array.from({ length: totalLinhas }, (_, i) => [formulaScore(i + 2)]);
   await atualizar(destino, `${COL_SCORE}2:${COL_SCORE}${totalLinhas + 1}`, linhas, true);
+  const ordem = Array.from({ length: totalLinhas }, (_, i) => [formulaOrdem(i + 2)]);
+  await atualizar(destino, `${COL_ORDEM}2:${COL_ORDEM}${totalLinhas + 1}`, ordem, true);
+}
+
+// ---- Aparência da aba (Karol 25/10/2026): identidade da Incubadora (preto, branco, cinza, laranja) ----
+const COR = {
+  preto: '#1A1A1A', branco: '#FFFFFF', laranja: '#F05A28', laranjaClaro: '#FCE4D6',
+  cinzaClaro: '#F2F2F2', cinza: '#D9D9D9', cinzaTexto: '#8C8C8C', linha: '#E6E6E6',
+};
+const rgb = (hex) => ({ red: parseInt(hex.slice(1, 3), 16) / 255, green: parseInt(hex.slice(3, 5), 16) / 255, blue: parseInt(hex.slice(5, 7), 16) / 255 });
+const indiceDe = (nome) => { const i = COLUNAS.indexOf(nome); return i >= 0 ? i : COL_INICIO_RASTREADOR + RASTREADOR.indexOf(nome); };
+const TOTAL_COLUNAS = COLUNAS.length + RASTREADOR.length;
+
+// O que a Karol usa fica à mostra, com largura; o resto (sistema, log, respostas que já viraram Score) fica oculto.
+const VISIVEIS = {
+  'Nome': 190, 'Link do perfil': 170, 'Bio': 260, 'Fato-gancho': 280, 'Status revisão': 105, 'Copy': 260,
+  'Score de Fit (0-4)': 60, 'Prioridade de abordagem': 95, 'Perfil': 85, 'Status': 140, 'Data Última Interação': 105,
+  'Próxima Ação': 180, 'Data Próxima Ação': 105, 'Fechou?': 80, 'Valor': 90, 'Data Fechamento': 105, 'Depoimento': 100, 'Observações': 280,
+};
+const DATAS = ['Data Última Interação', 'Data Próxima Ação', 'Data Fechamento'];
+// Em conversa e sem resposta: follow-up vence na "Data Próxima Ação" ou, sem ela, 3 dias depois da última interação.
+const EM_CONVERSA = ['Abordagem feita', 'Em conversa', 'Respondeu', 'Vai pensar', 'Proposta enviada', 'Sessão realizada'];
+const DIAS_FOLLOW_UP = 3;
+
+// Situações da linha, na ordem de prioridade das cores (a primeira que bate vale). Usada também na aba Legenda.
+function situacoes() {
+  const c = (nome) => `$${colunaDe(nome)}2`;
+  const [rev, st, ult, prox, fechou] = [c('Status revisão'), c('Status'), c('Data Última Interação'), c('Data Próxima Ação'), c('Fechou?')];
+  const conversa = EM_CONVERSA.map((s) => `(${st}="${s}")`).join('+');
+  // Sem separador de argumento (funciona em planilha pt-BR e en — REGRA-025 do Gestor de Infra).
+  return [
+    { nome: 'Descartado', quando: 'Você marcou "descartado" (ou "reprovado") na revisão', formula: `=(${rev}="descartado")+(${rev}="reprovado")>0`, fundo: COR.cinza, texto: COR.cinzaTexto, tachado: true },
+    { nome: 'Perdido', quando: 'Status "Lead frio" ou "Reprovado", ou Fechou? "Não"', formula: `=(${st}="Lead frio")+(${st}="Reprovado")+(${fechou}="Não")>0`, fundo: COR.cinza, texto: COR.cinzaTexto },
+    { nome: 'Cliente', quando: 'Status "Cliente" ou Fechou? "Sim"', formula: `=(${st}="Cliente")+(${fechou}="Sim")>0`, fundo: COR.preto, texto: COR.laranja, negrito: true },
+    { nome: 'Follow-up vencido', quando: `Em conversa e a Data Próxima Ação chegou (sem data: ${DIAS_FOLLOW_UP} dias depois da última interação)`, formula: `=(${conversa})*((${prox}<>"")*(${prox}<=TODAY())+(${prox}="")*(${ult}<>"")*(${ult}<=TODAY()-${DIAS_FOLLOW_UP}))>0`, fundo: COR.laranja, texto: COR.branco, negrito: true },
+    { nome: 'Em conversa', quando: 'Já abordado e o follow-up ainda não venceu', formula: `=(${st}<>"")*(${st}<>"Sem abordagem")>0`, fundo: COR.cinzaClaro, texto: COR.preto },
+    { nome: 'Pronto pra abordar', quando: 'Você aprovou e ainda não abordou', formula: `=(${rev}="aprovado")*((${st}="")+(${st}="Sem abordagem"))>0`, fundo: COR.laranjaClaro, texto: COR.preto },
+    { nome: 'A revisar', quando: 'Status revisão em branco: falta você aprovar ou descartar', formula: null, fundo: COR.branco, texto: COR.preto },
+  ];
+}
+
+const faixa = (r0, r1, c0, c1) => ({ sheetId: 0, startRowIndex: r0, endRowIndex: r1, startColumnIndex: c0, endColumnIndex: c1 });
+const formatoTexto = (s) => ({ backgroundColor: rgb(s.fundo), textFormat: { foregroundColor: rgb(s.texto), bold: !!s.negrito, strikethrough: !!s.tachado } });
+
+function pedidosAparencia(totalLinhas) {
+  const FIM = 5000;
+  const p = [];
+  // Corpo: letra 10, centralizado na altura, texto longo cortado (linha fica com uma altura só).
+  p.push({ repeatCell: { range: faixa(1, FIM, 0, TOTAL_COLUNAS), cell: { userEnteredFormat: { verticalAlignment: 'MIDDLE', wrapStrategy: 'CLIP', textFormat: { fontSize: 10, foregroundColor: rgb(COR.preto) } } }, fields: 'userEnteredFormat(verticalAlignment,wrapStrategy,textFormat)' } });
+  // Cabeçalho preto, letra branca em negrito.
+  p.push({ repeatCell: { range: faixa(0, 1, 0, TOTAL_COLUNAS), cell: { userEnteredFormat: { backgroundColor: rgb(COR.preto), horizontalAlignment: 'CENTER', verticalAlignment: 'MIDDLE', wrapStrategy: 'WRAP', textFormat: { fontSize: 10, bold: true, foregroundColor: rgb(COR.branco) } } }, fields: 'userEnteredFormat(backgroundColor,horizontalAlignment,verticalAlignment,wrapStrategy,textFormat)' } });
+  p.push({ updateDimensionProperties: { range: { sheetId: 0, dimension: 'ROWS', startIndex: 0, endIndex: 1 }, properties: { pixelSize: 44 }, fields: 'pixelSize' } });
+  p.push({ updateDimensionProperties: { range: { sheetId: 0, dimension: 'ROWS', startIndex: 1, endIndex: Math.max(totalLinhas + 1, 2) }, properties: { pixelSize: 21 }, fields: 'pixelSize' } }); // 1 linha só: bio com quebra de linha não aparece pela metade
+  // Colunas: mostra as da Karol com largura, esconde o resto.
+  for (let i = 0; i < TOTAL_COLUNAS; i++) {
+    const nome = i < COLUNAS.length ? COLUNAS[i] : RASTREADOR[i - COLUNAS.length];
+    const largura = VISIVEIS[nome];
+    p.push({ updateDimensionProperties: { range: { sheetId: 0, dimension: 'COLUMNS', startIndex: i, endIndex: i + 1 }, properties: largura ? { hiddenByUser: false, pixelSize: largura } : { hiddenByUser: true }, fields: largura ? 'hiddenByUser,pixelSize' : 'hiddenByUser' } });
+  }
+  // Colunas curtas centralizadas.
+  for (const nome of ['Status revisão', 'Score de Fit (0-4)', 'Prioridade de abordagem', 'Perfil', 'Fechou?', ...DATAS]) {
+    const i = indiceDe(nome);
+    p.push({ repeatCell: { range: faixa(1, FIM, i, i + 1), cell: { userEnteredFormat: { horizontalAlignment: 'CENTER' } }, fields: 'userEnteredFormat.horizontalAlignment' } });
+  }
+  // Datas com calendário (clique duplo) e formato dd/mm/aaaa; Valor em reais.
+  for (const nome of DATAS) {
+    const i = indiceDe(nome);
+    p.push({ repeatCell: { range: faixa(1, FIM, i, i + 1), cell: { userEnteredFormat: { numberFormat: { type: 'DATE', pattern: 'dd/mm/yyyy' } } }, fields: 'userEnteredFormat.numberFormat' } });
+    p.push({ setDataValidation: { range: faixa(1, FIM, i, i + 1), rule: { condition: { type: 'DATE_IS_VALID' }, strict: false, showCustomUi: true } } });
+  }
+  const iValor = indiceDe('Valor');
+  p.push({ repeatCell: { range: faixa(1, FIM, iValor, iValor + 1), cell: { userEnteredFormat: { numberFormat: { type: 'CURRENCY', pattern: '"R$" #,##0.00' } } }, fields: 'userEnteredFormat.numberFormat' } });
+  // Linhas finas entre os leads.
+  p.push({ updateBorders: { range: faixa(0, FIM, 0, TOTAL_COLUNAS), innerHorizontal: { style: 'SOLID', color: rgb(COR.linha) }, bottom: { style: 'SOLID', color: rgb(COR.linha) } } });
+  // Cor da linha pela situação.
+  situacoes().filter((s) => s.formula).forEach((s, index) => p.push({ addConditionalFormatRule: { index, rule: { ranges: [faixa(1, FIM, 0, TOTAL_COLUNAS)], booleanRule: { condition: { type: 'CUSTOM_FORMULA', values: [{ userEnteredValue: s.formula }] }, format: formatoTexto(s) } } } }));
+  // Cabeçalho e Nome/Link fixos ao rolar; filtro em todas as colunas; aba em laranja.
+  p.push({ updateSheetProperties: { properties: { sheetId: 0, gridProperties: { frozenRowCount: 1, frozenColumnCount: indiceDe('Link do perfil') + 1 }, tabColorStyle: { rgbColor: rgb(COR.laranja) } }, fields: 'gridProperties.frozenRowCount,gridProperties.frozenColumnCount,tabColorStyle' } });
+  p.push({ setBasicFilter: { filter: { range: faixa(0, FIM, 0, TOTAL_COLUNAS) } } });
+  return p;
+}
+
+// Prioridade decrescente (Alta → Baixa; descartados e perdidos no fim) e, dentro dela, Score maior primeiro.
+const pedidoOrdenar = (totalLinhas) => ({ sortRange: { range: faixa(1, totalLinhas + 1, 0, TOTAL_COLUNAS), sortSpecs: [
+  { dimensionIndex: indiceDe('Ordem'), sortOrder: 'ASCENDING' }, { dimensionIndex: indiceDe('Score de Fit (0-4)'), sortOrder: 'DESCENDING' },
+] } });
+
+async function formatarAba(destino, totalLinhas) {
+  await chamar({ acao: 'formatar', planilha: destino.planilha, aba: destino.aba, colunas: TOTAL_COLUNAS, pedidos: pedidosAparencia(totalLinhas) });
+}
+
+// Ordena e reescreve as fórmulas (depois da ordenação cada linha volta a apontar pra ela mesma).
+async function organizar(destino) {
+  const total = (await lerValores(destino)).length - 1;
+  if (total < 1) return 0;
+  await escreverScores(destino, total);
+  await chamar({ acao: 'formatar', planilha: destino.planilha, aba: destino.aba, colunas: TOTAL_COLUNAS, pedidos: [pedidoOrdenar(total)] });
+  await escreverScores(destino, total);
+  return total;
+}
+
+// Aba "Garimpo - Legenda": o que cada cor quer dizer, pintada com a mesma cor.
+async function escreverLegenda(destino) {
+  const leg = { planilha: destino.planilha, aba: `${destino.aba} - Legenda` };
+  const { sheets = [] } = await chamar({ acao: 'abas', planilha: leg.planilha });
+  if (!sheets.some((s) => s.properties.title === leg.aba)) await chamar({ acao: 'criar_aba', planilha: leg.planilha, aba: leg.aba });
+  const sit = situacoes();
+  const linhas = [
+    ['Cor da linha', 'O que quer dizer', 'O que fazer'],
+    ...sit.map((s) => [s.nome, s.quando, {
+      'Follow-up vencido': 'Fazer o follow-up hoje', 'Pronto pra abordar': 'Abordar (a Copy já está na linha)', 'A revisar': 'Aprovar ou descartar',
+      'Em conversa': 'Esperar; anotar a Data Próxima Ação', 'Cliente': 'Pedir depoimento', 'Perdido': 'Nada', 'Descartado': 'Nada',
+    }[s.nome]]),
+    [''], ['A aba Garimpo vem ordenada por Prioridade (Alta → Baixa), com descartados e perdidos no fim. Para ver só uma situação, use o filtro no cabeçalho.'],
+  ];
+  await atualizar(leg, `A1:C${linhas.length}`, linhas.map((l) => [...l, '', ''].slice(0, 3)));
+  const p = [
+    { repeatCell: { range: faixa(0, 1, 0, 3), cell: { userEnteredFormat: { backgroundColor: rgb(COR.preto), textFormat: { bold: true, foregroundColor: rgb(COR.branco) }, verticalAlignment: 'MIDDLE' } }, fields: 'userEnteredFormat(backgroundColor,textFormat,verticalAlignment)' } },
+    ...sit.map((s, i) => ({ repeatCell: { range: faixa(i + 1, i + 2, 0, 3), cell: { userEnteredFormat: { ...formatoTexto(s), verticalAlignment: 'MIDDLE', wrapStrategy: 'WRAP' } }, fields: 'userEnteredFormat(backgroundColor,textFormat,verticalAlignment,wrapStrategy)' } })),
+    { updateDimensionProperties: { range: { sheetId: 0, dimension: 'COLUMNS', startIndex: 0, endIndex: 1 }, properties: { pixelSize: 170 }, fields: 'pixelSize' } },
+    { updateDimensionProperties: { range: { sheetId: 0, dimension: 'COLUMNS', startIndex: 1, endIndex: 2 }, properties: { pixelSize: 420 }, fields: 'pixelSize' } },
+    { updateDimensionProperties: { range: { sheetId: 0, dimension: 'COLUMNS', startIndex: 2, endIndex: 3 }, properties: { pixelSize: 260 }, fields: 'pixelSize' } },
+    { updateDimensionProperties: { range: { sheetId: 0, dimension: 'ROWS', startIndex: 0, endIndex: sit.length + 1 }, properties: { pixelSize: 34 }, fields: 'pixelSize' } },
+    { updateSheetProperties: { properties: { sheetId: 0, tabColorStyle: { rgbColor: rgb(COR.preto) } }, fields: 'tabColorStyle' } },
+  ];
+  await chamar({ acao: 'formatar', planilha: leg.planilha, aba: leg.aba, pedidos: p });
+}
+
+async function formatar(destino) {
+  const valores = await lerValores(destino);
+  await formatarAba(destino, valores.length - 1); // antes do cabeçalho: cria a coluna da Ordem se a aba ainda não tem
+  await atualizar(destino, `A1:${COL_FIM}1`, [[...COLUNAS, ...RASTREADOR]]);
+  const total = await organizar(destino);
+  await escreverLegenda(destino);
+  console.log(JSON.stringify({ linhas: total, colunas_visiveis: Object.keys(VISIVEIS).length, colunas_ocultas: TOTAL_COLUNAS - Object.keys(VISIVEIS).length, situacoes: situacoes().map((s) => s.nome) }));
 }
 
 // Valores do rastreador pra um perfil classificado (sem o Score, que é fórmula).
@@ -206,7 +349,7 @@ async function enviar(caminhoRodada) {
   ]);
   if (!linhas.length) return console.log('Nada novo pra enviar.');
   await chamar({ acao: 'anexar', planilha: perfil.destino.planilha, aba: perfil.destino.aba, linhas });
-  await escreverScores(perfil.destino, (await lerValores(perfil.destino)).length - 1);
+  await organizar(perfil.destino);
   console.log(JSON.stringify({ enviados: linhas.length, aba: perfil.destino.aba, fora_do_corte: classificados.length - lote.length }));
 }
 
@@ -324,8 +467,9 @@ if (process.argv[1]?.endsWith('planilha.mjs')) {
     else if (cmd === 'preparar') await preparar(perfil().destino);
     else if (cmd === 'migrar') await migrar(perfil());
     else if (cmd === 'recalcular') await recalcular(perfil());
+    else if (cmd === 'formatar') await formatar(perfil().destino);
     else if (cmd === 'copy') await gravarCopy(perfil(), opt.arquivo, resto.includes('--sobrescrever'));
-    else if (cmd) console.log('Comandos: enviar | listar | preparar | migrar | recalcular | copy');
+    else if (cmd) console.log('Comandos: enviar | listar | preparar | migrar | recalcular | formatar | copy');
   } catch (e) {
     console.error('ERRO:', e.message);
     process.exit(1);

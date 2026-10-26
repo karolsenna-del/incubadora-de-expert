@@ -716,3 +716,15 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** no lugar dela entra "Vende só o próprio tempo?" (só atende 1 a 1, sem produto que venda sozinho).
 **Racional:** dá pra responder pela bio e pelo link quase sempre, e é exatamente o teto que a Incubadora resolve.
 **Impacto:** aba recalculada (Alta 6 → 37 na 1ª leva). Quem já vende e-book, desafio ou curso perde 1 ponto, mas não é descartado.
+
+## 25/10/2026 — Carrosséis de conteúdo passam a sair às 20h
+**Contexto:** agendamento dos 6 carrosséis do dia.
+**Decisão:** Karol pediu 20h, um por dia a partir de 26/10 (padrão do agendador era 12h).
+**Racional:** horário que ela já usava no Rota100K.
+**Impacto:** posts de 26 a 31/10 às 20h.
+
+## 25/10/2026 — Aba Garimpo com cores por situação e colunas de sistema ocultas
+**Contexto:** a Karol achou a aba Garimpo difícil de usar (feia, bagunçada, coluna demais).
+**Decisão:** linha colorida pela situação (follow-up vencido em laranja forte, pronto pra abordar em laranja claro, em conversa em cinza claro, cliente em preto, descartado/perdido em cinza riscado), ordem por Prioridade (Alta → Baixa, descartados no fim), 18 colunas de sistema ocultas, aba "Garimpo - Legenda". Follow-up vence na Data Próxima Ação ou 3 dias depois da última interação (suposição do agente, a Karol pode mudar).
+**Racional:** bater o olho e saber onde focar.
+**Impacto:** cada rodada nova do Garimpeiro já entra ordenada e colorida.
