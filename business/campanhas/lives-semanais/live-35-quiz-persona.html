@@ -1,0 +1,210 @@
+<title>Quanto Você Conhece a Sua Persona?</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Layout: uma pergunta por vez num cartão central, barra de progresso por bloco do dossiê,
+     resultado com termômetro pouco/médio/muito. Visual da marca Incubadora (preto, branco, cinza, laranja),
+     look único e claro de propósito: as cores são definidas explicitamente e não seguem o tema do visitante. */
+  :root{
+    --laranja:#f85627;
+    --laranja-suave:#fde3da;
+    --preto:#090a0b;
+    --branco:#fcfcfc;
+    --cinza:#ddddde;
+    --cinza-texto:#5c5d60;
+    --display:'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box;}
+  html,body{min-height:100%;}
+  body{margin:0; background:var(--branco); color:var(--preto); font-family:var(--body); font-size:16px; line-height:1.55;
+       padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px));}
+  .wrap{max-width:680px; margin:0 auto; padding-block:40px 56px; display:flex; flex-direction:column; gap:28px;}
+  .brand{font-family:var(--display); font-weight:700; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--cinza-texto);}
+  .brand b{color:var(--laranja);}
+  h1{font-family:var(--display); font-weight:800; font-size:clamp(1.8rem,5.5vw,2.6rem); line-height:1.1; margin:0; text-wrap:balance;}
+  h1 em{font-style:normal; color:var(--laranja);}
+  h2{font-family:var(--display); font-weight:700; font-size:clamp(1.3rem,4vw,1.7rem); line-height:1.25; margin:0; text-wrap:balance;}
+  p{margin:0;}
+  .lead{font-size:1.06rem; color:var(--cinza-texto); max-width:58ch;}
+  .card{background:#fff; border:1px solid var(--cinza); border-radius:18px; padding:28px 24px; display:flex; flex-direction:column; gap:20px;}
+  .meta{display:flex; justify-content:space-between; align-items:baseline; gap:12px; font-size:.82rem; color:var(--cinza-texto); font-variant-numeric:tabular-nums;}
+  .chip{font-family:var(--display); font-weight:700; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--laranja);}
+  .bar{height:6px; background:var(--cinza); border-radius:6px; overflow:hidden;}
+  .bar span{display:block; height:100%; background:var(--laranja); width:0; transition:width .3s ease;}
+  .hint{font-size:.92rem; color:var(--cinza-texto);}
+  .opts{display:grid; grid-template-columns:repeat(3,1fr); gap:10px;}
+  .opt{font-family:var(--display); font-weight:700; font-size:1rem; padding:16px 10px; border-radius:12px; border:1.5px solid var(--preto); background:#fff; color:var(--preto); cursor:pointer; transition:background .15s, color .15s, border-color .15s;}
+  .opt:hover{background:var(--preto); color:#fff;}
+  .opt:focus-visible,.btn:focus-visible,.back:focus-visible{outline:3px solid var(--laranja); outline-offset:2px;}
+  .opt.sel{background:var(--laranja); border-color:var(--laranja); color:#fff;}
+  .back{align-self:flex-start; background:none; border:0; padding:4px 0; color:var(--cinza-texto); font-size:.9rem; cursor:pointer; font-family:var(--body);}
+  .back[disabled]{visibility:hidden;}
+  .btn{display:inline-flex; justify-content:center; align-items:center; gap:8px; font-family:var(--display); font-weight:700; font-size:1.02rem; padding:16px 22px; border-radius:12px; border:0; background:var(--laranja); color:#fff; cursor:pointer; text-decoration:none; text-align:center;}
+  .btn.ghost{background:transparent; color:var(--preto); border:1.5px solid var(--preto);}
+  .list{display:flex; flex-direction:column; gap:8px; margin:0; padding:0; list-style:none;}
+  .list li{display:flex; gap:10px; font-size:.95rem; color:var(--cinza-texto);}
+  .list li::before{content:""; flex:none; width:8px; height:8px; margin-top:.55em; border-radius:50%; background:var(--laranja);}
+  /* resultado */
+  .gauge{display:grid; grid-template-columns:repeat(3,1fr); gap:6px;}
+  .gauge div{padding:12px 6px; border-radius:10px; background:var(--cinza); text-align:center; font-family:var(--display); font-weight:700; font-size:.9rem; color:var(--cinza-texto);}
+  .gauge div.on{background:var(--preto); color:#fff;}
+  .gauge div.on.top{background:var(--laranja);}
+  .score{font-family:var(--display); font-weight:800; font-size:clamp(2.6rem,9vw,3.6rem); line-height:1; color:var(--laranja); font-variant-numeric:tabular-nums;}
+  .score small{font-size:.4em; color:var(--cinza-texto); font-weight:600;}
+  .blocks{display:flex; flex-direction:column; gap:12px;}
+  .blk{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 12px; align-items:center;}
+  .blk .nm{font-size:.92rem; font-weight:600;}
+  .blk .vl{font-size:.85rem; color:var(--cinza-texto); font-variant-numeric:tabular-nums;}
+  .blk .bar{grid-column:1 / -1; height:5px;}
+  .cta-box{background:var(--preto); color:#fff; border-radius:18px; padding:28px 24px; display:flex; flex-direction:column; gap:16px;}
+  .cta-box .lead{color:#c9cacc;}
+  .foot{font-size:.8rem; color:var(--cinza-texto); text-align:center;}
+  [hidden]{display:none !important;}
+  @media (max-width:420px){ .opts{grid-template-columns:1fr;} .card,.cta-box{padding:22px 18px;} }
+  @media (prefers-reduced-motion:reduce){ .bar span,.opt{transition:none;} }
+</style>
+
+<div class="wrap">
+  <div class="brand">Incubadora de Expert · <b>Expert360º</b></div>
+
+  <!-- INÍCIO -->
+  <section id="intro" class="card">
+    <span class="chip">Material da Live 35</span>
+    <h1>Quanto você conhece a sua <em>persona compradora</em>?</h1>
+    <p class="lead">25 perguntas tiradas do dossiê da persona que a gente constrói no Expert360º. Responda com sinceridade: sim, não ou não sei. Leva uns 5 minutos.</p>
+    <button class="btn" id="start" type="button">Começar o diagnóstico</button>
+  </section>
+
+  <!-- PERGUNTA -->
+  <section id="quiz" class="card" hidden>
+    <div class="meta"><span class="chip" id="qblock"></span><span id="qcount"></span></div>
+    <div class="bar" aria-hidden="true"><span id="qbar"></span></div>
+    <h2 id="qtext"></h2>
+    <p class="hint" id="qhint"></p>
+    <div class="opts" role="group" aria-label="Respostas">
+      <button class="opt" type="button" data-v="sim">Sim</button>
+      <button class="opt" type="button" data-v="nao">Não</button>
+      <button class="opt" type="button" data-v="naosei">Não sei</button>
+    </div>
+    <button class="back" id="back" type="button">← Voltar</button>
+  </section>
+
+  <!-- RESULTADO -->
+  <section id="result" hidden>
+    <div class="card">
+      <span class="chip">O seu diagnóstico</span>
+      <div class="score" id="rscore"></div>
+      <div class="gauge" aria-hidden="true"><div id="g1">Pouco</div><div id="g2">Médio</div><div id="g3">Muito</div></div>
+      <h2 id="rtitle"></h2>
+      <p class="lead" id="rtext"></p>
+      <div class="blocks" id="rblocks"></div>
+      <p class="hint" id="rweak"></p>
+    </div>
+    <div class="cta-box" style="margin-top:20px;">
+      <h2>Quer olhar a sua persona comigo?</h2>
+      <p class="lead">Responda o Diagnóstico do Expert. Com as suas respostas, eu te chamo pra uma sessão e a gente vê o que falta pra sua persona virar venda.</p>
+      <a class="btn" href="https://diagnostico.incubadoradeexpert.com.br" target="_blank" rel="noopener">Responder o Diagnóstico do Expert</a>
+      <button class="btn ghost" id="again" type="button" style="color:#fff; border-color:#fff;">Refazer o quiz</button>
+    </div>
+  </section>
+
+  <p class="foot">Karol Senna · Incubadora de Expert</p>
+</div>
+
+<script>
+  // Cada pergunta corresponde a uma entrega do dossiê da persona (Expert360º, P1). As dicas (h) só explicam a pergunta, sem citar o dossiê nem o método.
+  const Q = [
+    {b:'Quem ela é', t:'Você consegue descrever a sua persona compradora em 4 linhas, sem usar idade, cidade ou renda?', h:'Falar das principais dores e desejos dela, em vez do perfil demográfico. Ex.: experiente no offline, mas insegura no digital. Sabe muito, mas não sabe transformar isso em método.'},
+    {b:'Quem ela é', t:'Você sabe a diferença entre a sua persona dos sonhos e a persona que compra de você hoje?', h:'A dos sonhos é quem você mais quer atender. A compradora é quem já está pronta pra pagar agora. Ex.: a dos sonhos é a servidora pública presa à estabilidade, que sabe que não quer mais aquilo, mas adia a mudança.'},
+    {b:'Quem ela é', t:'Você sabe de qual parte da sua história a sua persona vem?', h:'Muitas vezes, ela é quem você era dois ou três anos atrás. Ex.: a profissional experiente e desvalorizada, que sabe que está subutilizando o seu potencial no offline.'},
+    {b:'Dores, desejos e urgências', t:'Você consegue listar 10 dores da sua persona, com as palavras que ela mesma usa?', h:'Ex.: "Eu sei muito, mas não sei como estruturar."'},
+    {b:'Dores, desejos e urgências', t:'Você consegue listar 10 desejos da sua persona?', h:'Ex.: trazer o seu conhecimento pro digital sem parecer amadora.'},
+    {b:'Dores, desejos e urgências', t:'Você consegue listar 10 objeções que ela tem antes de comprar de você?', h:'Ex.: "Preciso aprender marketing digital."'},
+    {b:'Dores, desejos e urgências', t:'Você consegue listar 10 urgências ocultas da sua persona?', h:'Urgências ocultas são aqueles medos que tiram o sono dela e que ela não conta pra ninguém. Ela esconde e tenta fugir deles. Ex.: ver pessoas menos capacitadas se dando bem na internet, e ela não.'},
+    {b:'O que ela sente', t:'Você sabe o que ela vê no dia a dia que mais incomoda?', h:'Ex.: "Vejo fórmulas prontas que não combinam comigo."'},
+    {b:'O que ela sente', t:'Você sabe o que ela ouve das pessoas ao redor dela?', h:'Ex.: "Você deveria ensinar isso."'},
+    {b:'O que ela sente', t:'Você sabe o que ela pensa e sente, mas não fala em voz alta?', h:'Ex.: "Será que alguém pagaria pelo que eu sei?"'},
+    {b:'O que ela sente', t:'Você sabe o que ela fala e faz quando está adiando a decisão?', h:'Ex.: "Ainda não é o momento." E procrastina.'},
+    {b:'Como ela vive', t:'Você sabe onde ela trava hoje, no dia a dia?', h:'Ex.: consome conteúdo e fica ainda mais confusa.'},
+    {b:'Como ela vive', t:'Você sabe o impacto emocional que esse problema causa nela?', h:'Ex.: frustração ao ver colegas vendendo.'},
+    {b:'Como ela vive', t:'Você sabe o que ela já tentou pra resolver isso e não funcionou?', h:'Ex.: comprou curso e não aplicou.'},
+    {b:'Como ela vive', t:'Você sabe o que ela rejeita: promessas, formatos e tipos de profissional?', h:'Ex.: não quer virar influenciadora.'},
+    {b:'Como ela vive', t:'Você sabe qual transformação ela deseja, nas palavras dela?', h:'Ex.: "Quero estruturar com confiança."'},
+    {b:'Como ela vive', t:'Você sabe quem e o que influencia ela: quem ela segue, ouve e lê?', h:'Ex.: Instagram educacional, YouTube de empreendedorismo e podcasts de carreira.'},
+    {b:'Como ela compra', t:'Você sabe como ela decide uma compra e quem participa da decisão?', h:'Ex.: demora meses pra decidir e precisa conversar com o marido ou o sócio.'},
+    {b:'Como ela compra', t:'Você sabe o que ela espera de quem vai ajudar ela?', h:'Ex.: clareza antes de se expor.'},
+    {b:'Como ela compra', t:'Você sabe como ela se comporta antes de comprar?', h:'Ex.: participa de aulas ao vivo, mas raramente fala.'},
+    {b:'Como ela compra', t:'Você sabe qual legado ela quer deixar?', h:'Ex.: ser referência e transformar a sua vida e a de outras famílias por meio do seu conhecimento.'},
+    {b:'Como ela compra', t:'Você sabe o que tira o sono dela?', h:'Ex.: a insatisfação profissional que ela vive hoje e o medo de mudar de carreira.'},
+    {b:'Como ela compra', t:'Você sabe o que ela precisa ouvir pra acreditar que dessa vez é diferente?', h:'Ex.: que as primeiras vendas vão acontecer sem exposição, para pessoas que já estão prontas pra comprar dela, porque já a conhecem e confiam no seu conhecimento.'},
+    {b:'Testada com gente real', t:'A sua persona já foi confirmada em conversas de venda, e não só na sua cabeça?', h:''},
+    {b:'Testada com gente real', t:'Você atualiza o documento da sua persona quando aprende algo novo com quem compra?', h:'O que você sabe dela muda a cada venda. A pergunta é se você anota e ajusta. Ex.: um aluno novo conta um medo que você não tinha anotado, e ele entra no documento.'}
+  ];
+  const A = new Array(Q.length).fill(null);
+  let i = 0;
+  const $ = id => document.getElementById(id);
+
+  function show(id){ ['intro','quiz','result'].forEach(s => $(s).hidden = (s !== id)); window.scrollTo(0,0); }
+
+  function render(){
+    const q = Q[i];
+    $('qblock').textContent = q.b;
+    $('qcount').textContent = (i+1) + ' de ' + Q.length;
+    $('qbar').style.width = Math.round((i / Q.length) * 100) + '%';
+    $('qtext').textContent = q.t;
+    $('qhint').textContent = q.h;
+    $('qhint').hidden = !q.h;
+    document.querySelectorAll('.opt').forEach(b => b.classList.toggle('sel', b.dataset.v === A[i]));
+    $('back').disabled = (i === 0);
+  }
+
+  function result(){
+    const total = A.filter(v => v === 'sim').length;
+    let lvl, title, text;
+    if (total <= 10){
+      lvl = 1; title = 'Você conhece pouco a sua persona compradora.';
+      text = 'Hoje você fala com todo mundo, e quem poderia comprar não se reconhece no que você diz. A boa notícia: persona não se inventa, se constrói. E ela começa pela sua história.';
+    } else if (total <= 19){
+      lvl = 2; title = 'Você conhece a sua persona pela metade.';
+      text = 'Você já sabe com quem fala, mas faltam as peças que fazem ela pensar "isso foi feito pra mim". Quase sempre, o que falta só aparece em conversa de venda com gente real.';
+    } else {
+      lvl = 3; title = 'Você conhece bem a sua persona compradora.';
+      text = 'Agora o jogo é testar e atualizar. Persona é arquivo vivo: cada conversa de venda mostra o que manter e o que ajustar.';
+    }
+    $('rscore').innerHTML = total + ' <small>de ' + Q.length + ' com "sim"</small>';
+    ['g1','g2','g3'].forEach((g,k) => { $(g).classList.toggle('on', k+1 === lvl); $(g).classList.toggle('top', lvl === 3 && k === 2); });
+    $('rtitle').textContent = title;
+    $('rtext').textContent = text;
+
+    const blocks = [...new Set(Q.map(q => q.b))];
+    const box = $('rblocks'); box.innerHTML = '';
+    const weak = [];
+    blocks.forEach(b => {
+      const idx = Q.map((q,k) => q.b === b ? k : -1).filter(k => k >= 0);
+      const yes = idx.filter(k => A[k] === 'sim').length;
+      const pct = Math.round(yes / idx.length * 100);
+      if (pct < 50) weak.push(b.toLowerCase());
+      const row = document.createElement('div'); row.className = 'blk';
+      row.innerHTML = '<span class="nm"></span><span class="vl"></span><div class="bar"><span></span></div>';
+      row.querySelector('.nm').textContent = b;
+      row.querySelector('.vl').textContent = yes + ' de ' + idx.length;
+      row.querySelector('.bar span').style.width = pct + '%';
+      box.appendChild(row);
+    });
+    $('rweak').textContent = weak.length ? 'Onde começar: ' + weak.join(', ') + '.' : 'Nenhum bloco abaixo da metade. Continue testando.';
+    $('rweak').hidden = false;
+    show('result');
+  }
+
+  document.querySelectorAll('.opt').forEach(b => b.addEventListener('click', () => {
+    A[i] = b.dataset.v;
+    if (i < Q.length - 1){ i++; render(); } else { result(); }
+  }));
+  $('back').addEventListener('click', () => { if (i > 0){ i--; render(); } });
+  $('start').addEventListener('click', () => { i = 0; show('quiz'); render(); });
+  $('again').addEventListener('click', () => { A.fill(null); i = 0; show('quiz'); render(); });
+</script>

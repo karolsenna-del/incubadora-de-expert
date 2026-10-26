@@ -43,3 +43,13 @@ outras rules. Exemplos:
 - Em seguida, pedir à Karol em uma linha pra deixar só as abas do Chrome que ela precisa, e só então começar a edição.
 - Headline dos Reels: caixa preta com letra branca e só a palavra-chave em laranja, nunca a caixa toda laranja (ela não gostou, 25/10).
 - Glowup: tentar 2 vezes, em primeiro plano. Se travar nas duas, seguir sem glow e avisar na entrega, sem esperar o ok dela (ela deixa a edição rodando sozinha, 24/10).
+
+### Lives semanais
+
+- O Expert em Lives só escreve o roteiro: slides e PDF da live são de outro squad, nunca montar no mesmo trabalho (Karol, 25/10).
+- O spoiler do pitch vai na metade da live, como no ETL do Funil de Zoom (VOL-conteudo 11.4), nunca no Acordo (Karol, 25/10).
+- Não citar a Black (lista esgotada, resultado, "hora errada") em live nem conteúdo: ninguém precisa saber do resultado dela (Karol, 25/10).
+
+### Conceitos do Expert360º
+
+- Definir termo do método (urgência oculta, dores, desejos…) pelo jeito da Karol, não por material de terceiros como o Stories 10x. Urgência oculta = os medos que tiram o sono da persona, que ela não conta pra ninguém, esconde e tenta fugir. Em material de captação (ex.: quiz da Live 35), cada pergunta leva o exemplo mais forte do dossiê da Laura, pra quem responde se reconhecer como a persona da Karol (Karol, 26/10).

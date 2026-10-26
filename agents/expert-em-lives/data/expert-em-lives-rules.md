@@ -45,3 +45,8 @@ daquela live, nunca "Incubadora de Expert" genérico.
 **Regra:** [o que fazer / não fazer]
 **Aplica quando:** [condição]
 ```
+
+## [25/10/2026] — CTA padrão: MATERIAL no direct + spoiler do pitch no meio
+**Origem:** Karol, revisão da Live 35: a palavra no chat do Meet nunca foi usada; faltava desejo de chamar depois da live. E o spoiler do pitch, usado nas lives antes da Black, tinha sumido do modelo de 8 blocos.
+**Regra:** Bloco 8 fecha com "me chama no direct do Instagram com a palavra MATERIAL" e todo mundo que mandar recebe o material da live (slides/PDF); a conversa de venda nasce dali. Na metade da live (normalmente dentro do Bloco 5) entra o **spoiler do pitch**: 1-2 frases nomeando a oferta da live + "no final eu te mostro como entrar" (fonte: `agents/etlmaker/kbs/alcateia-implementacao/VOL-conteudo.md` 11.4, Regra Cardinal C6). Nunca no Acordo. O material (slides/PDF) é feito por outro squad, não por este worker: entra no checklist como pendente.
+**Aplica quando:** toda live de conteúdo, a partir da Live 35. Substitui a nota de 05/09 de que o spoiler não existia no modelo de 8 blocos.

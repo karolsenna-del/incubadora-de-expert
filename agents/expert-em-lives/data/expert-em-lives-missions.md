@@ -51,6 +51,12 @@
 
 ## Live 35 — Em 30 minutos você vai saber quem compra de você e quem só curte — 28/10/2026 (a confirmar)
 **Tema:** Persona Compradora num ângulo prático: plateia × comprador, persona dos sonhos × compradora, filtro dos 3 critérios do Rastreador.
-**Entregue em:** 21/10/2026 — `business/campanhas/lives-semanais/live-35-roteiro.md` (v1, aguardando revisão).
+**Entregue em:** 21/10/2026 — `business/campanhas/lives-semanais/live-35-roteiro.md` (v1). Revisado e fechado com a Karol em 25/10: data 28/10 15h, Incubadora Express, CTA MATERIAL no direct, spoiler do pitch no meio, 5 afirmações aprovadas.
 **Executada em:** aguardando.
 **Aprendizado:** registrar depois da live (comparecimento comparado com a 34).
+
+## Live 36 — Desde quando o Instagram virou juiz da sua competência? — 04/11/2026 (a confirmar)
+**Tema:** ferida de medir competência por visualização; trocar a régua da plateia pela da autoridade; P5 é a fachada, a venda vem antes (P4). Base: carrossel da Karol (25/10).
+**Entregue em:** 25/10/2026 — `business/campanhas/lives-semanais/live-36-roteiro.md` (v1, aguardando revisão).
+**Executada em:** aguardando.
+**Aprendizado:** registrar depois da live.
