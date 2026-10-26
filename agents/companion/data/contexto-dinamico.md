@@ -21,6 +21,10 @@ Variaveis:
 
 Apify de volta só pra ler perfil (plano grátis, US$5/mês, sem cartão). Pergunta "Mostra a dor?" trocada por "Vende só o próprio tempo?". Duas levas hoje (terapeuta, arquiteta, dentista, harmonização, esteticista, nutri, fisio, advogada, fono, psicóloga, psicopedagoga, enfermeira, TO): 111 perfis novos na aba Garimpo (156 no total). Profissional da beleza saiu dos termos. Esperando a revisão da Karol na coluna "Status revisão".
 
+## Agentes do método dos alunos (26/10/2026)
+
+GPTs vão ser aposentados (OpenAI) e Gems viram Skills a partir de 17/11 (Google). Karol decidiu o formato novo do entregável: página só do agente com código de acesso por aluno, IA por API, controle em planilha com limite mensal de mensagens. Nada construído ainda; detalhes e próximos passos em `demandas-backlog.md`. Aviso do Google sobre cliente OAuth "agêntico" (projeto smart-inn-500318-g4): nada a fazer, o n8n usa só a API comum do Sheets.
+
 ## Projeto Ativo Principal
 
 **Expert360º (Curso)** — Em producao e publicacao na Area de Membros
