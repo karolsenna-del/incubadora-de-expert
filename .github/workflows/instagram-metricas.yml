@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 10 * * *'   # todo dia às 10h UTC = 7h BRT
   workflow_dispatch:         # permite disparar manualmente para testar
+    inputs:
+      direct:
+        description: 'Levar a chave renovada pro Direct automático agora (normalmente só às segundas)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -45,6 +50,17 @@ jobs:
           IG_INSIGHTS_TOKEN: ${{ secrets.IG_INSIGHTS_TOKEN }}
           IG_TOKEN_OUT: ${{ runner.temp }}/ig-token-novo
         run: python .github/scripts/coletar_metricas.py
+
+      - name: Levar chave renovada pro Direct automático (segundas)
+        if: github.event_name == 'schedule' || github.event.inputs.direct == 'true'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          IG_TOKEN_OUT: ${{ runner.temp }}/ig-token-novo
+        run: |
+          if [ "${{ github.event.inputs.direct }}" != "true" ] && [ "$(date -u +%u)" != "1" ]; then
+            echo "hoje não é segunda — Direct fica pra segunda"; exit 0
+          fi
+          python .github/scripts/atualizar_chave_direct.py
 
       - name: Guardar token renovado
         env:
