@@ -2,7 +2,7 @@ name: Post steve-jobs-personalizar-oferta
 
 on:
   schedule:
-    - cron: '0 23 28 10 *'   # 28/10 às 23:00 UTC = 20h BRT
+    - cron: '0 23 31 10 *'   # 31/10 às 23:00 UTC = 20h BRT
   workflow_dispatch:
 
 jobs:

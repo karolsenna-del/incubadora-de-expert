@@ -2,7 +2,7 @@ name: Post rota100k-semana12-sab-5-mitos-sair-concurso
 
 on:
   schedule:
-    - cron: '0 23 24 10 *'   # 24/10 às 23:00 UTC = 20h BRT
+    - cron: '0 23 28 10 *'   # 28/10 às 23:00 UTC = 20h BRT
   workflow_dispatch:
 
 jobs:
