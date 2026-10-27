@@ -171,7 +171,7 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 **Sessao 26/10 — Coleta de métricas do Instagram religada (Gestor de Infra):**
 - Chave de métricas venceu 23/10; Karol gerou nova. 24-26/10 preenchidos; coleta rodou no GitHub com sucesso (27/10 03h UTC).
 - Robô agora renova a chave todo dia (vale até 25/12, renovando), avisa por issue/e-mail se falhar. Entregue no GitHub (73d9d71).
-- Direct automático PARADO: chave invalidada pela Meta. Precisa de chave nova (Karol gera, Gestor de Infra coloca na Vercel).
+- Direct automático: chave invalidada pela Meta trocada em 27/10 (validada, Vercel atualizada, site republicado). Testado: Karol recebeu o link no Direct, funcionando.
 
 **Sessao 25/10 — Sistema e ferramentas atualizados:**
 - Auroq OS 2.8.1 → 2.8.2 (conexao 0.7.1). Falta fechar e abrir o Claude Code para concluir.
