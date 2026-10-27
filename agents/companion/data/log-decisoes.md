@@ -758,3 +758,15 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** a Karol gerou uma chave nova. O robô passou a renovar a chave todo dia, guarda a versão renovada cifrada no GitHub e abre um aviso (issue, que chega por e-mail) quando falha.
 **Racional:** a chave vale 60 dias e nada renovava; a falha só aparecia na aba Actions.
 **Impacto:** 24 e 25/10 preenchidos (alcance e visitas; seguidores em branco). Chave valendo até 25/12 e renovando sozinha.
+
+## 27/10/2026 — Direct automático renova a própria chave
+**Contexto:** a chave do Direct automático foi invalidada pela Meta e o Direct parou; a Meta devolve uma chave nova a cada renovação, então renovar só no robô das métricas não chegava ao site.
+**Decisão:** Karol pediu pra colocar a renovação do Direct junto com a das métricas. Toda segunda o robô diário leva a chave renovada pra Vercel e republica o site da área de membros (autorização "robo-direct-instagram" criada pela Karol).
+**Racional:** sem isso a chave vence em 60 dias e o Direct para sem aviso.
+**Impacto:** Direct e métricas usam a mesma chave; se a renovação falhar, chega aviso por e-mail (issue no GitHub).
+
+## 27/10/2026 — Reels "prospecção" com a fala inteira
+**Contexto:** a 1ª edição tirava pausas e a frase "e também nas travas dos alunos", e a conferência final reprovou 4 cortes em cima da voz (fala contínua ali).
+**Decisão:** manter a fala inteira (0–110,6 s), cortando só o "ok?" e a repetição do CTA; Karol tinha liberado passar de 90 s.
+**Racional:** sem corte no meio da voz o vídeo passa na conferência; ficou ~2 s mais longo.
+**Impacto:** vídeo final 1min51s a 1,05x, legenda 1 euriler laranja, headline caixa preta com PROSPECTA em laranja.
