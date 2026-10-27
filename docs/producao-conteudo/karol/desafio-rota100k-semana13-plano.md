@@ -19,7 +19,7 @@ As histórias mais usadas até a Semana 12 (exonerada por telefone, concurso do 
 | Trecho do 1º lançamento, 08/07/2021 (vídeo e legenda da Karol, já prontos) | **Ter 09h** |
 | #23 "Isso não vai dar em nada" (roteiro da Karol, já programado) | **Ter 15h** |
 | #12 "Você não veste a camisa da empresa" | Qua 07h |
-| #21 "Meu método era lindo, mas não cabia na persona" | Qua 09h |
+| "Quem vende curso ensinando a vender curso é picareta?" (vídeo da Karol, já gravado) | **Qua 09h** |
 | #10 A agência: troquei seis por meia dúzia (2024) | Qua 12h |
 | #11 O troféu do prêmio que não veio | **Qua 15h** |
 | #19 Prospecção como primeiro bloco do dia | Qui 09h, 12h e 17h |
@@ -29,7 +29,8 @@ As histórias mais usadas até a Semana 12 (exonerada por telefone, concurso do 
 | #17 As férias da expert e o fim da parceria → nasce a Incubadora | **Sex 15h** |
 | 1º cliente veio de uma aula bônus no curso de outro especialista | Sex 17h |
 | #1 Quatro anos estudando pra Receita Federal | Sáb 09h |
-| #20 "Não sou do tipo que conversa onde vai" → o que mudou em 2026 | Sáb 12h |
+| React 2 da S12: "ele mostrou o método" (fala da Karol, gravada) | **Sáb 12h** |
+| React 1 da S12: "quem tem método sabe o próximo passo" (fala da Karol, gravada) | **Dom 12h** |
 | #4 e #21 Fomentar a educação · "pra ninguém errar como eu errei" | **Sáb 15h** |
 
 **Peça pra persona dos sonhos (a servidora presa à estabilidade), 1 por dia:** Ter 12h · Qua 07h · Qui 07h · Sex 07h · Sáb 09h · Dom 15h.
@@ -179,18 +180,27 @@ Me segue pra não perder.
 
 *(História #12. Sem "corrupta" e sem nenhum cargo ou nome que identifique a diretoria: o aprendizado, não a pessoa.)* **Persona dos sonhos.**
 
-### 09h · Reels YAP
-**No que eu acredito sobre o meu trabalho.**
-**Abertura (0-3s):** "Diploma é o que você estudou. Método é o que você viveu."
-**Contexto:** Eu fui auditora, coordenei um projeto premiado de gestão e dava curso interno numa empresa grande. Com tudo isso, o meu primeiro método no digital, de gestão pra empresários, não funcionou.
-**Virada:** Só que eu nunca tinha vivido a vida de um empresário. Eu sabia a teoria inteira. O meu método era lindo, mas não cabia na vida de quem comprava. Desde então, tudo que eu faço parte disso: o método nasce do que você viveu e tem que caber na vida de quem compra.
-**Fecha (CTA falado):** "Se você discorda disso, a gente não vai se entender. Se concorda, me segue."
+### 09h · Reels · ✅ gravado e programado pela Karol
+**Gancho de tela:** "Quem vende curso ensinando a vender curso é picareta?"
+
+**Roteiro (da Karol, já gravado):**
+Tem gente que fala mal de profissionais que vendem cursos ensinando outras pessoas a vender cursos.
+E eu concordo: se você já sabe fazer tudo isso, não compre.
+Se sabe transformar o seu conhecimento em uma jornada lógica, sequencial e didática, não precisa.
+Se sabe criar as ferramentas que ajudam o aluno a avançar, não desistir e ter resultado, não precisa.
+Se sabe montar um portfólio lucrativo para diferentes perfis de alunos, precificar cada produto e fazer o cliente continuar comprando de você, não precisa.
+Se sabe identificar quem realmente paga pela sua solução, em vez de só consumir conteúdo gratuito, também não precisa.
+Agora, se você tem conhecimento, mas não sabe transformar isso em método, produto e negócio…
+Você não precisa falar mal de quem ensina.
+Precisa me contratar.
 
 **Legenda:**
-O que você viveu que nenhum curso te ensinou? Comenta. É aí que mora o seu método.
-Me segue.
+Saber o assunto é uma coisa. Transformar o assunto em método, produto e negócio é outra profissão.
+Eu levei anos pra aprender a segunda, e paguei caro por ela.
+Você já travou na compra de um curso pensando "será que é picaretagem"? Comenta.
+Hoje às 15h tem live. Me segue pra não perder.
 
-*(Frase-tese do perfil de tom + #21: "meu método era lindo, mas não se adequava ao contexto da persona". Credenciais da #21. Prêmio citado como "projeto premiado de gestão", sem nome.)*
+*(Vídeo da Karol (27/10). Na quarta porque é o dia dos valores e da Live 35 (oferta Incubadora Express): o "precisa me contratar" aquece quem vai à live. "Anos" e "paguei caro": 2020 a 2024 no digital, R$50 mil no Insider (#15). Substitui o "No que eu acredito sobre o meu trabalho" (#21), que volta pra reserva; ele dizia "eu fui auditora", que fere a regra da trajetória: se voltar, corrigir pra contadora e administradora.)*
 
 ### 12h · Reels YAP · bastidor
 **O trabalho que parecia a grande oportunidade.**
@@ -275,20 +285,49 @@ Me segue.
 
 *(Memória: a Karol opera sozinha. #19: prospecção às 14h, primeira atividade do expediente.)* **Persona dos sonhos.**
 
-### 09h · Reels YAP
-**Como eu organizo o meu dia de verdade.**
-**Abertura (0-3s):** "O primeiro bloco do meu expediente não é conteúdo. É venda."
-**Abertura alternativa (responde um comentário do ISS):** "Me perguntaram como eu estudava dez horas por dia. Três de manhã, três à tarde e quatro à noite. Hoje a minha rotina é outra."
-**Contexto:** Quase todo mundo começa o dia pelo que é confortável: responder mensagem, fazer post, ajustar material. Venda fica pro fim do dia, e no fim do dia ela nunca acontece.
-**Virada:** Só que eu inverti. Às 14h, antes de qualquer outra coisa do trabalho, eu vou atrás de conversa com quem pode comprar. Não é inspirador, é repetitivo. Mas é o bloco que paga todos os outros.
-**Fecha (CTA falado):** "Se a sua rotina muda todo dia, o problema é esse. Me segue."
+### 09h · Reels · ✅ vídeo da Karol (em edição)
+**Gancho de tela:** "Você está vendendo pouco ou prospectando pouco?"
+
+**Roteiro (da Karol, sem alteração):**
+Quanto mais eu escuto especialistas reclamando que estão vendendo pouco, mais eu percebo uma coisa: *eles também estão prospectando pouco.*
+
+Eu sei que você queria apenas ensinar o que sabe, transformar vidas e deixar as vendas com outra pessoa.
+
+Mas vou te falar uma coisa que talvez você não queira ouvir:
+
+*Se você está começando no digital, delegar suas vendas pode ser um dos seus maiores erros.*
+
+E não é porque ninguém consegue vender melhor que você.
+
+É porque você ainda está aprendendo sobre o seu próprio negócio.
+
+É nas conversas comerciais que você descobre quem realmente compra, quais objeções aparecem, por que as pessoas desistem e o que precisa ajustar na sua oferta.
+
+*Cada conversa é uma pesquisa de mercado. Cada objeção é uma oportunidade de melhorar seu método.*
+
+E se você terceiriza tudo isso cedo demais, perde um aprendizado valioso.
+
+Então, aqui vai uma orientação prática:
+
+Reserve uma hora por dia para prospectar.
+
+Converse com novos seguidores, pessoas que interagem com seus conteúdos, respondem aos stories e leads que já demonstraram interesse.
+
+Sem sair oferecendo seu produto para todo mundo. Primeiro, entenda as pessoas.
+
+*Porque talvez o dinheiro que está faltando no seu negócio esteja nas conversas que você ainda não teve.*
+
+Depois que validar seu método e entender o processo comercial, aí sim faz sentido delegar.
+
+Me segue que eu te ensino a transformar seu conhecimento em método e seu método em modelo de negócio.
 
 **Legenda:**
-O segredo é chato: é sempre igual.
-Qual é a primeira coisa do seu dia de trabalho hoje? Comenta.
+Eu não terceirizo a minha prospecção. É o primeiro bloco do meu expediente, todo dia.
+Delegar venda antes de entender quem compra é pagar alguém pra repetir os seus erros.
+Quantas conversas você teve essa semana com quem pode comprar? Comenta o número.
 Me segue.
 
-*(#19: "rotina fixa: prospecção às 14h, primeira atividade do expediente".)*
+*(Vídeo da Karol (27/10). Na quinta 09h porque o dia é a rotina e o post que estava aqui era o mesmo assunto (prospecção como primeiro bloco, #19), agora na versão dela. Legenda: "primeiro bloco do expediente" vem da #19. A abertura alternativa que respondia o comentário do ISS ("como estudava dez horas por dia") sai junto e fica na reserva.)*
 
 ### 12h · Reels YAP · bastidor
 **O que eu deixo de fazer.**
@@ -483,19 +522,24 @@ Me segue.
 
 *(História #1 com a correção da squad: a Receita Federal nunca foi conquista, foi plano de fuga abandonado. Não dizer que passou nem que prestou a prova.)* **Persona dos sonhos.**
 
-### 12h · Reels YAP · bastidor
-**O que mudou em mim nesse ano.**
-**Abertura (0-3s):** "Eu sou uma pessoa diferente da que era em janeiro."
-**Contexto:** Eu nunca fui do tipo que conversa onde vai. Na academia, no salão, no trabalho, as pessoas sabiam só o básico da minha vida. E eu vivia repetindo: "eu não gosto de vender".
-**Virada:** Só que, quando eu parei de repetir essa frase e comecei a conversar com uma pessoa por dia, isso transbordou pra fora do trabalho. Hoje, se surge a oportunidade, eu falo do que eu faço. Se alguém está falando do assunto, eu complemento. Ninguém precisa me perguntar.
-**Fecha (CTA falado):** "Mudar de opinião sobre si mesmo também vale. Me segue."
+### 12h · Reels REACT · ✅ fala da Karol (gravado na S12, não postado)
+**React 2: ele não disse que é bom de vendas, ele mostrou o método.**
+**Gancho de tela:** "Ele não disse que é bom de vendas. Ele mostrou o método."
+**Fala da Karol depois do corte (sem alteração):**
+Percebeu? Ele não disse: “Eu sou bom de vendas.” Ele mostrou o método.
+Primeiro, deu um nome: Mousetrap.
+Depois, criou uma metáfora: rato, queijo e ratoeira.
+Em seguida, definiu o que o cliente quer, como a comunicação atrai e qual mecanismo fecha a venda.
+Isso é método: transformar uma habilidade que parecia intuitiva em um processo que alguém entende, aplica e consegue repetir.
+Quando você nomeia a lógica, as etapas e os critérios, o conhecimento deixa de depender apenas da sua cabeça e pode virar produto
 
 **Legenda:**
-A frase que eu mais repetia esse ano era "eu não gosto de vender". Era também a que mais me travava.
-O que você pensa hoje sobre você e não pensava há um ano? Comenta.
+Ninguém compra "eu sou bom nisso". Compra o caminho que você mostra.
+Nome, metáfora e etapas: é assim que uma habilidade vira produto. É isso que eu faço com os meus alunos.
+Se o seu método tivesse um nome hoje, qual seria? Comenta.
 Me segue.
 
-*(#20: "não é do tipo que conversa onde vai", "sempre que há oportunidade, toca no assunto". #19: "eu não gosto de vender". Sem o caso da contadora da academia, que não tem final.)*
+*(React da S12 que a Karol não postou (27/10). No sábado porque o dia é "quem eu sou, pra quem chegou agora": o react mostra o que ela faz. Substitui o "o que mudou em mim nesse ano" (#20), que volta pra reserva. Sem nomear a pessoa do vídeo: só o que está na fala.)*
 
 ### 15h · Reels PESSOAL
 **O que me move hoje.**
@@ -575,16 +619,24 @@ Me segue.
 
 *(Não cita resultado da semana: o post é escrito antes. ⚠️ "Três meses" = 13 semanas de desafio.)*
 
-### 12h · Reels YAP · bastidor
-**O que eu quero fazer nos próximos 2 meses.** ⚠️
-**Abertura (0-3s):** "Faltam dois meses e eu já sei o que quero fechar."
-**Contexto:** Uma coisa por mês, duas no total. Mais que isso vira lista de desejo.
-**Virada:** Só que eu vou falar em público, porque quando eu falo, eu cumpro. Em novembro: [⚠️ coisa 1 + por quê]. Em dezembro: [⚠️ coisa 2 + por quê].
-**Fecha (CTA falado):** "Me cobra em janeiro. Me segue."
+### 12h · Reels REACT · ✅ fala da Karol (gravado na S12, não postado)
+**React 1: quem tem método sabe o próximo passo.**
+**Gancho de tela:** "O que separa conhecimento de método."
+**Fala da Karol depois do corte (sem alteração):**
+É isso que separa conhecimento de método.
+Método não é decorar todas as respostas. É saber qual é o próximo passo quando o cenário muda.
+No placar 28 a 3, quem depende de improviso entra em pânico. Quem tem metodologia olha o que aconteceu, aplica os critérios e decide o que fazer.
+Na liderança, na cultura, nas vendas ou na entrega: se toda vez você começa do zero, ainda não tem um método. Tem experiência.
+Método é a lógica que organiza essa experiência para você — e outra pessoa — agir sem depender do susto.
+É por isso que método sustenta resultado.
 
 **Legenda:**
-Duas coisas, uma por mês. Escreve as suas aqui que eu te cobro também.
+Experiência é o que você já fez. Método é o que você consegue repetir quando o cenário muda.
+Se cada cliente novo te faz começar do zero, você ainda não tem um método.
+Abrindo novembro: qual parte do seu trabalho você ainda resolve no improviso? Comenta.
 Me segue.
+
+*(React da S12 que a Karol não postou (27/10). No domingo porque o dia é de planejar o que vem: "saber o próximo passo quando o cenário muda". Substitui o "o que eu quero fazer nos próximos 2 meses", que repetia a pergunta do 07h (nov/dez); o 07h segue com ela. Sem nomear o jogo nem os times na legenda: só o que está na fala.)*
 
 ### 15h · Reels PESSOAL
 **Onde eu quero estar daqui a um ano.** ⚠️ *precisa da sua resposta*
@@ -633,7 +685,7 @@ Me segue.
 ## O que falta da Karol antes de gravar
 
 1. **Quinta:** a sua rotina real, com horários (15h e 20h). O resto da quinta já está pronto.
-2. **Domingo:** uma coisa pra novembro, uma pra dezembro (07h e 12h) e onde você quer estar daqui a um ano (15h).
+2. **Domingo:** uma coisa pra novembro, uma pra dezembro (07h) e onde você quer estar daqui a um ano (15h).
 3. Leituras da squad pra confirmar (marcadas com ⚠️): Ter 12h ("continuar foi falta de alternativa"), Qua 15h (a lição do troféu), Sex 15h ("ela tinha direito às férias"), Sex 12h ("custou anos"), Qui 17h ("melhor dia da semana"), Sex 17h ("meses depois").
 
 ## Reservas que vieram da Semana 12
@@ -641,6 +693,9 @@ Me segue.
 Ficam guardadas: o tema da semana é pessoal e elas são de teste e comparação. Ranking "de onde vem o primeiro cliente", "Quando o caro compensa", carrossel "roteiro de um teste honesto em 5 passos".
 
 ## LOG
+- 27/10 — @rico: os 2 reacts da S12 entram: React 2 no Sáb 12h (#20 volta pra reserva), React 1 no Dom 12h (sai o "próximos 2 meses", que repetia o 07h). Legendas novas.
+- 27/10 — @rico: Qui 09h = vídeo da Karol "vendendo pouco = prospectando pouco" + legenda; "Como eu organizo o meu dia" volta pra reserva.
+- 27/10 — @rico: Qua 09h = vídeo da Karol "quem vende curso ensinando a vender curso é picareta?" + legenda; "No que eu acredito" volta pra reserva.
 - 27/10 — @rico: Ter 17h v2: abertura no print, ponte escrita na tela, legenda nova com seeding do acompanhamento.
 - 27/10 — @rico: Ter 17h refeito com o print da aluna ("testou 3x e já quer mudar") e o texto da Karol; #19 volta pra reserva.
 - 27/10 — @rico: Ter 07h com a legenda da própria Karol ("com a Karol, tudo é mais difícil").
