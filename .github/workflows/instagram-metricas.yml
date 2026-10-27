@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write              # abre aviso (issue) quando a coleta falha
 
 jobs:
   coletar:
@@ -23,16 +24,62 @@ jobs:
       - name: Instalar dependências
         run: pip install requests
 
+      # O token do Instagram vence em 60 dias se não for renovado (venceu em 23/10/2026).
+      # O script renova todo dia e o workflow guarda o token renovado cifrado no repo,
+      # com a chave IG_TOKEN_KEY (GitHub Secret).
+      - name: Abrir token salvo
+        env:
+          IG_TOKEN_KEY: ${{ secrets.IG_TOKEN_KEY }}
+        run: |
+          ARQ=.github/ig-token/insights.enc
+          if [ -n "$IG_TOKEN_KEY" ] && [ -f "$ARQ" ]; then
+            T="$(openssl enc -d -aes-256-cbc -pbkdf2 -pass env:IG_TOKEN_KEY -in "$ARQ" || true)"
+            if [ -n "$T" ]; then
+              echo "::add-mask::$T"
+              echo "IG_INSIGHTS_TOKEN_SALVO=$T" >> "$GITHUB_ENV"
+            fi
+          fi
+
       - name: Coletar métricas do Instagram
         env:
           IG_INSIGHTS_TOKEN: ${{ secrets.IG_INSIGHTS_TOKEN }}
+          IG_TOKEN_OUT: ${{ runner.temp }}/ig-token-novo
         run: python .github/scripts/coletar_metricas.py
+
+      - name: Guardar token renovado
+        env:
+          IG_TOKEN_KEY: ${{ secrets.IG_TOKEN_KEY }}
+        run: |
+          NOVO="${{ runner.temp }}/ig-token-novo"
+          if [ -n "$IG_TOKEN_KEY" ] && [ -s "$NOVO" ]; then
+            mkdir -p .github/ig-token
+            openssl enc -aes-256-cbc -pbkdf2 -salt -pass env:IG_TOKEN_KEY -in "$NOVO" -out .github/ig-token/insights.enc
+            rm -f "$NOVO"
+          fi
 
       - name: Commit das métricas
         run: |
           git config user.name "insta-metricas[bot]"
           git config user.email "bot@incubadoradeexpert.com.br"
           git add business/instagram/metricas/
+          [ -f .github/ig-token/insights.enc ] && git add .github/ig-token/insights.enc
           git diff --staged --quiet || git commit -m "campanha: métricas diárias do Instagram coletadas automaticamente"
           git pull --rebase
           git push
+
+      - name: Avisar falha
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          RUN="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          ABERTA="$(gh issue list --state open --search 'Coleta de métricas do Instagram falhou in:title' --json number --jq '.[0].number')"
+          if [ -n "$ABERTA" ]; then
+            gh issue comment "$ABERTA" --body "Falhou de novo em $(date -u +%d/%m/%Y): $RUN"
+          else
+            gh issue create --title "Coleta de métricas do Instagram falhou" \
+              --body "A coleta diária de métricas do Instagram falhou em $(date -u +%d/%m/%Y). Detalhe: $RUN
+
+          Causa mais comum: a chave de acesso do Instagram venceu. Peça ao Gestor de Infra pra renovar.
+          Os dias sem coleta são preenchidos sozinhos na próxima coleta que der certo."
+          fi

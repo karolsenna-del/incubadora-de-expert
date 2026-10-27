@@ -376,6 +376,16 @@ automação também estiver travada do lado dela (aconteceu 1x, resolveu na hora
 
 ---
 
+## REGRA-027: Token com validade precisa de renovação automática e aviso de falha no próprio robô
+
+**Contexto:** O `IG_INSIGHTS_TOKEN` (login do Instagram, 60 dias) venceu em 23/10/2026 e a coleta diária de métricas falhou 3 dias sem ninguém ver: o workflow nunca renovava o token e a falha só aparecia na aba Actions.
+**Regra:**
+- Todo robô que usa token com prazo renova o token no próprio fluxo (Instagram: `graph.instagram.com/refresh_access_token`, só aceita token com 24h+ de vida) e guarda o renovado (Secret não é gravável pelo `GITHUB_TOKEN`: arquivo cifrado com chave em Secret, padrão de `instagram-metricas.yml`).
+- Todo workflow agendado que importa abre issue no `if: failure()` (chega por e-mail).
+- Token de "Gerar token" no painel da Meta: o agente não consegue clicar (classificador barra). Karol gera e copia; o agente valida e grava no Secret direto da área de transferência (`Get-Clipboard | gh secret set`), sem o valor passar pela conversa.
+
+---
+
 ## Registro de Incidentes
 
 | # | O que aconteceu | Fix | Regra criada |
@@ -395,4 +405,5 @@ automação também estiver travada do lado dela (aconteceu 1x, resolveu na hora
 | 13 | Extensao do 1Password travou repetidamente cliques/digitacao em campos de texto no App Review da Meta (nada relacionado a senha) — screenshot e ate type paravam de responder | Escape logo apos o clique antes de digitar; se travar mesmo assim, Escape de novo + conferir texto parcial com get_page_text antes de continuar; fechar/reabrir aba se travar de vez | REGRA-021 |
 | 14 | Planilha + Apps Script de Parceiros criados numa sessao de conta Google errada (`/u/1/`, "Gestao Pra Tudo") em vez da conta certa (`/u/0/`, Karol) — Chrome com multiplas contas logadas nao usa a conta padrao automaticamente em aba nova | Movido pra lixeira (nao deletado), recriado com `?authuser=email@certo` na URL + confirmacao visual do avatar antes de prosseguir | REGRA-022 |
 | 15 | Apps Script "Recebe Diagnóstico Sprint" preso no runtime legado (Rhino) causou falha silenciosa em `MailApp.sendEmail` numa resposta real (Vagner, 18/09) — Karol nao recebeu a notificacao mesmo com a resposta salva certinha na planilha | Karol ativou "Ativar tempo de execucao do Chrome V8" + implantou nova versao | REGRA-023 |
+| 17 | Coleta de métricas do Instagram parada 24-26/10: token de 60 dias venceu e o workflow não renovava nem avisava | Token novo + renovação diária, token cifrado no repo, issue na falha, preenchimento dos dias perdidos | REGRA-027 |
 | 16 | Diagnóstico do Expert sem aviso por e-mail havia semanas — Web App falhando com "sem permissão para MailApp" apesar do escopo listado; reimplantar não resolveu | Função mínima só com MailApp rodada no editor forçou o consentimento; autorizado "Enviar e-mail como você" | REGRA-024 |

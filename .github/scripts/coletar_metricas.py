@@ -16,8 +16,25 @@ e segue sem quebrar o resto da coleta.
 import os, sys, csv, json, requests
 from datetime import date, datetime, timezone, timedelta
 
-TOKEN = os.environ["IG_INSIGHTS_TOKEN"]
 BASE  = "https://graph.instagram.com/v21.0"
+
+
+def escolher_token():
+    """Usa o token renovado guardado pelo próprio workflow (IG_INSIGHTS_TOKEN_SALVO) ou o do
+    GitHub Secret (IG_INSIGHTS_TOKEN), o que estiver valendo. Assim um token novo colado
+    no Secret à mão passa a valer sem precisar mexer no arquivo guardado."""
+    candidatos = [os.environ.get("IG_INSIGHTS_TOKEN_SALVO"), os.environ.get("IG_INSIGHTS_TOKEN")]
+    for t in [c.strip() for c in candidatos if c and c.strip()]:
+        r = requests.get(f"{BASE}/me", params={"fields": "id", "access_token": t}, timeout=60)
+        if "error" not in r.json():
+            return t
+    sys.exit("ERRO: nenhum token do Instagram valido (vencido ou revogado). "
+             "Gerar um novo no painel da Meta (app api > Instagram > Gerar token) "
+             "e salvar no Secret IG_INSIGHTS_TOKEN.")
+
+
+TOKEN = escolher_token()
+TOKEN_OUT = os.environ.get("IG_TOKEN_OUT")  # arquivo onde o workflow guarda o token renovado
 
 OUT_DIR       = "business/instagram/metricas"
 COMENT_DIR    = f"{OUT_DIR}/comentarios"
@@ -102,6 +119,51 @@ def comentarios_do_post(media_id):
         return None  # None = falha de permissao, diferente de [] = post sem comentarios
 
 
+def renovar_token():
+    """Renova o token long-lived (vale 60 dias a partir da renovação). Sem isso ele vence
+    sozinho, como em 23/10/2026. A Meta só aceita renovar token com mais de 24h de vida —
+    se recusar, segue com o atual. Retorna a data de vencimento (ou None)."""
+    global TOKEN
+    r = requests.get("https://graph.instagram.com/refresh_access_token",
+                     params={"grant_type": "ig_refresh_token", "access_token": TOKEN},
+                     timeout=60)
+    data = r.json()
+    if "access_token" not in data:
+        print(f"aviso: token nao renovado ({(data.get('error') or {}).get('message')})")
+        return None
+    TOKEN = data["access_token"]
+    if TOKEN_OUT:
+        with open(TOKEN_OUT, "w") as f:
+            f.write(TOKEN)
+    vence = date.today() + timedelta(seconds=data.get("expires_in", 0))
+    print(f"token renovado, vence em {vence.isoformat()}")
+    return vence
+
+
+def insights_conta_do_dia(dia):
+    """Alcance e visitas ao perfil de um dia fechado (BRT). Usado pra preencher dias
+    em que a coleta não rodou."""
+    inicio = int(datetime(dia.year, dia.month, dia.day, tzinfo=BRT).timestamp())
+    ins = get("me/insights", metric="reach,profile_views", period="day",
+              metric_type="total_value", since=inicio, until=inicio + 86400)
+    vals = {m["name"]: m["total_value"]["value"] for m in ins["data"]}
+    return vals.get("reach", ""), vals.get("profile_views", "")
+
+
+def dias_sem_coleta():
+    """Dias entre a última linha do histórico e hoje (exclusive) que ficaram sem coleta."""
+    if not os.path.exists(HIST_CSV):
+        return []
+    with open(HIST_CSV, encoding="utf-8") as f:
+        datas = [l.split(",")[0] for l in f.read().splitlines()[1:] if l]
+    if not datas:
+        return []
+    ultimo = date.fromisoformat(max(datas))
+    return [ultimo + timedelta(days=i) for i in range(1, (date.today() - ultimo).days)]
+
+
+token_vence = renovar_token()
+
 # ── 1. Conta ──────────────────────────────────────────────────────────────────
 conta = get("me", fields="username,followers_count,media_count")
 username   = conta["username"]
@@ -164,6 +226,7 @@ for m in midia:
 
 # ── 3. Snapshot markdown do dia ───────────────────────────────────────────────
 os.makedirs(OUT_DIR, exist_ok=True)
+faltando = dias_sem_coleta()
 
 linhas = [
     f"# Métricas Instagram — @{username} — {hoje}",
@@ -175,7 +238,14 @@ linhas = [
     f"- **Seguidores:** {seguidores}",
     f"- **Alcance (hoje):** {reach_dia}",
     f"- **Visitas ao perfil (hoje):** {visitas_dia}",
+    f"- **Chave de acesso vence em:** {token_vence.strftime('%d/%m/%Y') if token_vence else 'não renovada hoje'}",
     "",
+] + ([
+    f"> Dias sem coleta preenchidos no histórico (alcance e visitas do dia fechado, "
+    f"seguidores em branco): {', '.join(d.strftime('%d/%m') for d in faltando)}. "
+    f"Os posts desses dias estão na tabela abaixo, com métricas de hoje.",
+    "",
+] if faltando else []) + [
     f"## Posts dos últimos {JANELA_DIAS} dias — {len(posts)} peças (métricas lifetime)",
     "",
     "> Skip rate e tempo médio só existem pra Reels (métrica em desenvolvimento na API da Meta — pode vir vazia às vezes).",
@@ -201,11 +271,26 @@ with open(f"{OUT_DIR}/{hoje}.md", "w", encoding="utf-8") as f:
     f.write("\n".join(linhas) + "\n")
 
 # ── 4. Histórico acumulado da conta (1 linha por dia) ─────────────────────────
+# Dias que ficaram sem coleta entram com alcance/visitas do dia fechado; seguidores
+# fica vazio porque a API não devolve o total de seguidores de um dia passado.
 novo = not os.path.exists(HIST_CSV)
+if not novo:  # rodou mais de uma vez no dia: a linha de hoje é substituída, não duplicada
+    with open(HIST_CSV, encoding="utf-8") as f:
+        linhas_hist = f.read().splitlines()
+    with open(HIST_CSV, "w", newline="", encoding="utf-8") as f:
+        f.write("\n".join(l for l in linhas_hist if not l.startswith(f"{hoje},")) + "\n")
 with open(HIST_CSV, "a", newline="", encoding="utf-8") as f:
     w = csv.writer(f)
     if novo:
         w.writerow(["data", "seguidores", "alcance_dia", "visitas_perfil_dia"])
+    for dia in faltando:
+        try:
+            r_dia, v_dia = insights_conta_do_dia(dia)
+        except RuntimeError as e:
+            print(f"aviso: sem insights de {dia} ({e})")
+            r_dia = v_dia = ""
+        w.writerow([dia.isoformat(), "", r_dia, v_dia])
+        print(f"preenchido dia sem coleta: {dia} (alcance {r_dia}, visitas {v_dia})")
     w.writerow([hoje, seguidores, reach_dia, visitas_dia])
 
 # ── 5. Comentários do dia (texto completo, pronto pra Aria analisar) ──────────
