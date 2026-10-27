@@ -131,6 +131,7 @@ def renovar_token():
     if "access_token" not in data:
         print(f"aviso: token nao renovado ({(data.get('error') or {}).get('message')})")
         return None
+    print("renovacao devolveu " + ("a mesma chave" if data["access_token"] == TOKEN else "uma chave nova"))
     TOKEN = data["access_token"]
     if TOKEN_OUT:
         with open(TOKEN_OUT, "w") as f:
