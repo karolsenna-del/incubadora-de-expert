@@ -14,6 +14,7 @@
 - [4. A virada de nível dos entregáveis](#4-a-virada-de-nível-dos-entregáveis--google-formsvoomphotmart--experiência-premium-1308) — Rota100k S02
 - [6. O amaciante Ypê x L'Occitane](#6-o-amaciante-ypê-x-loccitane-poder-da-indicação-1608) — Rota100k S03
 - [7. O espumante que estragou](#7-o-espumante-que-estragou-timing-1608) — Rota100k S03
+- [23. "Isso não vai dar em nada" — a colega que eu achava desmotivada](#23-isso-não-vai-dar-em-nada--a-colega-que-eu-achava-desmotivada-2610) — Rota100k S13 (Ter 27/10 15h, programada pela Karol)
 
 **Disponíveis (nunca viraram post, ou podem ser reforçadas):**
 - [3. A venda fantasma](#3-a-venda-fantasma-lançamento-de-1-venda)
@@ -21,7 +22,7 @@
 - [8. A missa — "solta a borda"](#8-a-missa--solta-a-borda-fala-com-frequência-pode-reforçar) — fala com frequência, pode reforçar
 - [9. A assessora no auge — R$20k/mês](#9-a-assessora-no-auge--saiu-ganhando-quase-r20kmês)
 - [10. A sociedade na agência — funcionária disfarçada de novo](#10-a-sociedade-na-agência--funcionária-disfarçada-de-novo)
-- [11. O troféu do PNQS que não veio](#11-o-troféu-do-pnqs-que-não-veio-promessa-quebrada)
+- [11. O troféu do PNQS que não veio](#11-o-troféu-do-pnqs-que-não-veio-promessa-quebrada) — usada como 7s (07-16/10); pessoal na Rota100k S13 (Qua 28/10 15h)
 - [12. "Você não veste a camisa da empresa"](#12-você-não-veste-a-camisa-da-empresa--a-frase-que-revelou-o-jogo)
 - [13. Exonerada por telefone, de férias](#13-exonerada-por-telefone-de-férias)
 - [14. Concurso ISS Campo Grande — o "cerco de Jericó"](#14-concurso-iss-campo-grande--o-cerco-de-jericó)
@@ -239,6 +240,7 @@
 **Fatos (fonte: `Minhas histórias que convertem.md`, seção "Minha jornada no Digital"):**
 - 2021: entrou pro Insider do Érico Rocha com o irmão — **R$50k** (com desconto de R$57k), pagos com o valor de um terreno que o pai vendeu e doou
 - Lançaram copiando estratégias de outros players — **"lançamento Frankenstein"**: investiram **R$10k e não venderam nada**
+- **Correção da Karol (27/10/2026):** antes do Insider, em **07/2021**, ela fez sozinha o 1º lançamento, seguindo o curso Fórmula de Lançamento: **1 venda, pra tia** (doceira; mentoria de R$497; a tia desistiu e ia retomar ao se aposentar). O lançamento dentro do Insider foi em **09/2021**: R$50k na mentoria + **R$10k em tráfego e edição de vídeo (CPLs e curso gravado)**. Fala dela: "um grande erro gravar curso de cara assim". Por que a tia desistiu (legenda da Karol, 27/10): achou "muita coisa, muito difícil"; "eu tinha criado um método complexo e completo demais pra passar em mentorias com pessoas iniciantes". Erros: colocar tudo que sabe no método e criar método não orientado pra persona. Frase da mãe: "com a Karol, tudo é mais difícil".
 - Na análise de lançamento, a **Faixa Preta** (mentora que já tinha faturado R$2 milhões) avisou: **"você é concursada vendendo pra empresários, isso não vai dar certo"** — eles **ignoraram**
 - Nas palavras da própria Karol: **"fomos muito petulantes e arrogantes"**
 
@@ -380,7 +382,7 @@
 | Quando | O que aconteceu | Já existia? |
 |---|---|---|
 | 2020 | Entra no digital pra ensinar gestão de empresa | Parcial (#4 da história real) |
-| 2021 | Insider com o irmão: 1º lançamento 0 vendas (R$10k investidos), 2º lançamento 1 venda; alunos não executavam o método. Grávida; travam o programa por ~6 meses quando a Julia nasce (28/01/2022) | Parcial (#15) |
+| 2021 | 07/2021: 1º lançamento, sozinha, pelo curso Fórmula de Lançamento: 1 venda (a tia, mentoria R$497). 09/2021: Insider com o irmão: 1º lançamento do Insider 0 vendas (R$10k em tráfego e edição de CPLs e curso gravado; R$50k na mentoria), 2º lançamento 1 venda; alunos não executavam o método. Grávida; travam o programa por ~6 meses quando a Julia nasce (28/01/2022) | Parcial (#15) |
 | 2021 | Análises: "não escala": empregada pública vendendo pra empresário, sem skin in the game, não é nem atende a persona | Sim (#15, Faixa Preta) |
 | 07/2022 | Volta pro Insider sozinha: produtividade pra mães de bebê. "Agora sou a persona, vai dar certo" → vários lançamentos frustrados | Sim (#3, #16) |
 | Depois | Chamada pra ser lançadora; **Rafa Batista incentiva o caminho** | 🆕 |
@@ -410,7 +412,7 @@
 
 ### ✅ Divergências resolvidas (Karol, 01/10/2026)
 
-1. **Insider 2021 — 2 lançamentos:** 1º lançamento (o "Frankenstein") = **0 vendas com R$10k investidos**; 2º lançamento = **1 venda**. (O texto original "1 venda em cada" está impreciso — vale esta versão.)
+1. **Insider 2021 — 2 lançamentos:** 1º lançamento do Insider (o "Frankenstein", 09/2021) = **0 vendas com R$10k investidos**; 2º lançamento = **1 venda**. Antes do Insider, o 1º lançamento da vida dela foi solo, em 07/2021: 1 venda, pra tia (Karol, 27/10/2026). (O texto original "1 venda em cada" está impreciso — vale esta versão.)
 2. **Julia nasceu em 28/01/2022.** Então a gravidez foi durante o Insider de 2021 e, em 07/2022, a Julia tinha ~6 meses (os "4 meses" são aproximados — no roteiro, usar "bebê de poucos meses").
 3. **Prêmio:** é o **PNQS, concedido/ligado à FNQ** — as duas formas estão certas. No conteúdo, preferir "prêmio nacional de qualidade em gestão".
 4. **Fim da parceria com a expert de doula:** estavam brigando, mas **foi a expert quem anunciou primeiro que queria sair da parceria**.
@@ -428,7 +430,7 @@
    - ⚠️ **NÃO usar** "saiu do serviço público com 2 clientes" / "a Incubadora já tinha 2 clientes quando ela saiu" — está errado (a frase de `minha-historia-real.md` P4 gerou essa leitura).
 
 **Linha do tempo corrigida (o que importa pra roteiro):**
-2020 entra no digital (gestão de empresas) → 2021 Insider com o irmão, grávida: 0 vendas/R$10k, depois 1 venda → 28/01/2022 Julia nasce, programa travado ~6 meses → 07/2022 volta ao Insider sozinha (produtividade pra mães de bebê) → lançamentos frustrados → vira lançadora (Rafa Batista incentiva) → expert sem audiência: 3 vendas → expert de doula (170 mil): 1º lançamento bom, depois piorando ("demanda reprimida"); Érico: "troca de expert" → produto pra profissionais, férias da expert, briga, ela sai da parceria → 02/2024 sai do emprego público → 03 a 12/2024 agência, em paralelo nasce a Incubadora → 05/2024 imersão FHT → Black Infinita: estrutura a sessão 1:1 = Vendas Secretas → 2025 mentor: "foca em método, não em lançamento".
+2020 entra no digital (gestão de empresas) → 07/2021 1º lançamento solo (Fórmula de Lançamento): 1 venda, a tia → 09/2021 Insider com o irmão, grávida: 0 vendas/R$10k, depois 1 venda → 28/01/2022 Julia nasce, programa travado ~6 meses → 07/2022 volta ao Insider sozinha (produtividade pra mães de bebê) → lançamentos frustrados → vira lançadora (Rafa Batista incentiva) → expert sem audiência: 3 vendas → expert de doula (170 mil): 1º lançamento bom, depois piorando ("demanda reprimida"); Érico: "troca de expert" → produto pra profissionais, férias da expert, briga, ela sai da parceria → 02/2024 sai do emprego público → 03 a 12/2024 agência, em paralelo nasce a Incubadora → 05/2024 imersão FHT → Black Infinita: estrutura a sessão 1:1 = Vendas Secretas → 2025 mentor: "foca em método, não em lançamento".
 
 **Status:** em uso: carrossel `posts/metodo-lindo-ninguem-aplicava/` (V1, 01/10, ângulo "4 tentativas, o mesmo sintoma"). Continua disponível como versão-mestra pra Reels "minha história", bio, live e página de vendas, com outros ângulos.
 
@@ -457,6 +459,20 @@
 **Desfecho:** a Karol abriu mão do valor e não entrou com a ação (decisão do casal). Isso também é material: escolher a própria paz em vez de "ganhar" a briga, mesmo sentindo a injustiça.
 
 **Status:** 🆕 guardada, **sem lição definida** (Karol, 01/10: "não sei bem o sentimento que eu quero dessa história, mas quero falar dela em algum momento"). A squad não empurra a pauta. Ela volta quando a Karol trouxer o ângulo, ou quando aparecer um tema que encaixe (injustiça, reconhecimento, escolher a paz). A cena pode ser usada, **sem nenhum detalhe que identifique a diarista** e sem acusá-la de nada além do que aconteceu com a Karol. O lado "injustiça no emprego público" também está liberado.
+
+---
+
+## 23. "Isso não vai dar em nada" — a colega que eu achava desmotivada (26/10)
+
+**Fonte:** roteiro escrito e programado pela própria Karol pro pessoal de terça 27/10, 15h (Rota100k S13).
+
+**Fatos:** quando entrou no emprego público, a Karol dizia que queria mudar o mundo. Uma colega sempre respondia: "isso não vai dar em nada". Ela achava a colega desmotivada, acomodada. Com o tempo, ficou igual: não por deixar de se importar, mas por entender como o sistema funcionava (a vontade dela, sozinha, não produzia a mudança). Aí percebeu que tinha chegado a hora dela: "eu ainda queria mudar o mundo, mas precisava começar mudando o meu".
+
+**Ponte (fala dela):** no digital, transforma aquilo em que acredita em trabalho; cada aluno que ela ajuda a organizar o conhecimento, criar um método e construir algo próprio amplia o impacto da educação que ela sempre defendeu. Fecho: "Talvez eu não estivesse errada sobre querer mudar o mundo. Eu só ainda não tinha encontrado o meu lugar."
+
+**Headline:** "Eu achava que ela era desmotivada. Até me tornar igual."
+
+**Regras:** colega sem nome nem setor. Persona dos sonhos (servidora presa à estabilidade).
 
 ---
 

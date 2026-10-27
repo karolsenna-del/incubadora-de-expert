@@ -17,6 +17,10 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Rota100k Semana 13 (26/10/2026)
+
+Plano v1 com 36 posts (terça 27/10 a domingo 01/11; segunda fora, pedido da Karol) em `docs/producao-conteudo/karol/desafio-rota100k-semana13-plano.md`. Formato novo: Reels pessoal às 15h (a história dela com ponte pra quem assiste). Faltam da Karol: rotina real com horários (quinta 15h e 20h), plano de nov/dez e meta de 1 ano (domingo), nome do Euriler na sexta 09h e 4 leituras marcadas com ⚠️. v1.1: entraram 4 casos de mentoria de 26/10 (Jucinara, app do médico, dentista aposentada, Ludmila); Mariana Diniz fica pra S14. Casos novos registrados em `historias-mentorias-atendidas.md` (#19 a #23); a pedagoga da #17 é Mariana Rocha. Aria analisou 17-23/10 (`analises/2026-10-26/relatorio-semana12-pre-s13.md`): top 3 = histórias pessoais com cena (exoneração 14,6 mil views); +18 seguidores e recorde de visitas ao perfil em 21-22/10; pessoal sem ponte não passa de 450 views; 6 recomendações pra S13 esperando o ok da Karol. Coleta automática de métricas parada desde 23/10: o token IG_INSIGHTS_TOKEN da Meta venceu (23/10 14h22 PDT); renovar exige ordem da Karol (Casos de Uso → API do Instagram → Gerar tokens, playbook do Gestor de Infra). Recomendações da Aria aplicadas no plano (v1.2). v1.3: legendas dos 6 posts 7s em 10 linhas. v1.4: Karol liberou citar Jucinara, Ludmila e Euriler pelo nome. v1.5: Ter 15h é o Reels que a Karol já programou (história #23 "isso não vai dar em nada", registrada em historias-trajetoria); #3 venda fantasma volta pra reserva. v1.6 (27/10): Ter 09h pelo trecho do 1º lançamento 08/07/2021 com a legenda da Karol (venda pra tia, mentoria R$497); #16 volta pra reserva. Ordem confirmada pela Karol (27/10): 07/2021 1º lançamento solo (Fórmula de Lançamento), venda da tia; 09/2021 Insider, R$50k mentoria + R$10k tráfego/edição, zero venda. Registrado em historias-trajetoria #15/#21. v1.7: Ter 07h = vídeo da tia desistindo (método não cabia na rotina); 7s do Frankenstein volta pra reserva. Legenda do Ter 07h é a da Karol. Ter 17h = print da aluna "testou 3x e já quer mudar" (só fracassa quem desiste); #19 volta pra reserva.
+
 ## Garimpo de leads (25/10/2026)
 
 Apify de volta só pra ler perfil (plano grátis, US$5/mês, sem cartão). Pergunta "Mostra a dor?" trocada por "Vende só o próprio tempo?". Duas levas hoje (terapeuta, arquiteta, dentista, harmonização, esteticista, nutri, fisio, advogada, fono, psicóloga, psicopedagoga, enfermeira, TO): 111 perfis novos na aba Garimpo (156 no total). Profissional da beleza saiu dos termos. Esperando a revisão da Karol na coluna "Status revisão".
@@ -24,6 +28,14 @@ Apify de volta só pra ler perfil (plano grátis, US$5/mês, sem cartão). Pergu
 ## Agentes do método dos alunos (26/10/2026)
 
 GPTs vão ser aposentados (OpenAI) e Gems viram Skills a partir de 17/11 (Google). Karol decidiu o formato novo do entregável: página só do agente com código de acesso por aluno, IA por API, controle em planilha com limite mensal de mensagens. Nada construído ainda; detalhes e próximos passos em `demandas-backlog.md`. Aviso do Google sobre cliente OAuth "agêntico" (projeto smart-inn-500318-g4): nada a fazer, o n8n usa só a API comum do Sheets.
+
+## Carrossel "vendendo pouco / conversas com clientes" (26/10/2026)
+
+8 slides prontos em `~/Downloads/carrossel-vender-pouco-conversas-clientes/`: capa foto-frase com imagem de funil gerada no Codex (curtidas/seguidores entrando, 1 balão de conversa laranja saindo) + slides 2-8 em card-tweet branco, CTA "Me segue". Fonte em `docs/producao-conteudo/karol/posts/vender-pouco-conversas-clientes/`. 3ª frase do gancho ficou fora da capa (cobriria o funil). Agendamento preparado pra 01/11 20h (slides no Cloudinary, workflow `post-vender-pouco-conversas-clientes.yml`, legenda da Karol) — só dispara depois do push.
+
+## Sessão estratégica: Bruna (26/10/2026)
+
+Pré-diagnóstico da Bruna (brunalcamargo0208@hotmail.com, nutricionista formada em 2024, Campo Grande, sem renda, urgência 10, decide com cônjuge/família, prazo até 3 meses) importado no Diagnóstico do Expert. O card do Diagnóstico ainda não mostra "acompanha / prazo / quem decide / concorrentes" (campos novos do formulário); no cartão dela as respostas foram resumidas e prazo/decisão foram pra visão geral. Roteiro personalizado da sessão em `business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/bruna-camargo-sessao.md` (hipótese: Incubadora Express; data da sessão a confirmar).
 
 ## Projeto Ativo Principal
 
@@ -155,6 +167,11 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 - Criativos
 
 ## Onde Parou
+
+**Sessao 26/10 — Coleta de métricas do Instagram religada (Gestor de Infra):**
+- Chave de métricas venceu 23/10; Karol gerou nova. 24-26/10 preenchidos; coleta rodou no GitHub com sucesso (27/10 03h UTC).
+- Robô agora renova a chave todo dia (vale até 25/12, renovando), avisa por issue/e-mail se falhar. Entregue no GitHub (73d9d71).
+- Direct automático PARADO: chave invalidada pela Meta. Precisa de chave nova (Karol gera, Gestor de Infra coloca na Vercel).
 
 **Sessao 25/10 — Sistema e ferramentas atualizados:**
 - Auroq OS 2.8.1 → 2.8.2 (conexao 0.7.1). Falta fechar e abrir o Claude Code para concluir.

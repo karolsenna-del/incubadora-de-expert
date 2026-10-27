@@ -23,8 +23,13 @@
 - [14. Roberto — fotógrafo institucional (Itália, 20 anos) vira ferramenteiro pra experts](#14-roberto--fotógrafo-institucional-itália-20-anos-vira-ferramenteiro-pra-experts) — 📝 roteirizado (Rota100k S10, Qui 08/10 15h, anônimo)
 - [15. Aldo — dentista que ensina dentistas, funil de live secreta](#15-aldo--dentista-que-ensina-dentistas-funil-de-live-secreta) — disponível
 - [16. Ruhama — rotina pra mães, virada de low ticket pra comunidade por assinatura](#16-ruhama--rotina-pra-mães-virada-de-low-ticket-pra-comunidade-por-assinatura) — disponível
-- [17. Mariana — pedagoga/matemática/computação, comunidade escolar](#17-mariana--pedagogamatemáticacomputação-comunidade-escolar) — disponível
+- [17. Mariana Rocha — pedagoga/matemática/computação, comunidade escolar](#17-mariana-rocha--pedagogamatemáticacomputação-comunidade-escolar) — disponível
 - [18. Danielle — livro de família com IA (projeto Alzheimer da sogra)](#18-danielle--livro-de-família-com-ia-projeto-alzheimer-da-sogra) — disponível
+- [19. Jucinara — quiosques na praia: o sistema que ela já tem é o produto](#19-jucinara--quiosques-na-praia-o-sistema-que-ela-já-tem-é-o-produto) — 📝 roteirizada (Rota100k S13, Qua 28/10 17h, com nome)
+- [20. Juliana Pasqual — app do marido médico integrativo: método dentro do app](#20-juliana-pasqual--app-do-marido-médico-integrativo-método-dentro-do-app) — 📝 roteirizada (Rota100k S13, Qua 28/10 20h slide 5, anônima)
+- [21. Mariana Diniz — "Diretora Compartilhada" que não escala](#21-mariana-diniz--diretora-compartilhada-que-não-escala) — disponível 🆕 26/10
+- [22. Rosemary — ansiedade da mulher cristã: "tempo de Deus"](#22-rosemary--ansiedade-da-mulher-cristã-tempo-de-deus) — 📝 roteirizada (Rota100k S13, Sáb 31/10 17h, anônima)
+- [23. Ludmila — pré-diagnóstico antes da 1ª consulta: promessa que ninguém deseja](#23-ludmila--pré-diagnóstico-antes-da-1ª-consulta-promessa-que-ninguém-deseja) — 📝 roteirizada (Rota100k S13, Dom 01/11 20h slide 2, com nome)
 
 ---
 
@@ -323,7 +328,7 @@
 
 ---
 
-## 17. Mariana — pedagoga/matemática/computação, comunidade escolar
+## 17. Mariana Rocha — pedagoga/matemática/computação, comunidade escolar
 
 **Contexto:**
 - Formação em pedagogia, matemática e computação
@@ -343,6 +348,95 @@
 - Projeto nasceu por causa da sogra dela, que está com Alzheimer — forma de preservar lembrança
 
 **Leitura da squad:** case com carga emocional forte (memória, família, doença) — encaixa bem em "conteúdo notável"/prova de que IA serve pra propósito humano, não só produtividade. Checar com a Karol nível de detalhe autorizado antes de publicar (envolve terceira pessoa real com condição de saúde).
+
+**Status:** matéria-prima, ainda não usada em roteiro
+
+---
+
+## 19. Jucinara — quiosques na praia: o sistema que ela já tem é o produto
+
+**Contexto (Karol, 26/10/2026):**
+- Tem vários quiosques na praia, no litoral de SP
+- Criou sistemas e ferramentas pra organizar a gestão e o RH dos quiosques
+- Agora queria ajudar uma amiga esteticista a se posicionar no digital
+
+**Orientação dada pela Karol:**
+- Mandou parar na hora: ajudar a amiga tirava todo o foco e jogava fora o trabalho que ela já tinha executado
+- O dinheiro do negócio dela é oferecer essa solução de gestão pra outros quiosques (segundo ela, muitos controlam no caderninho)
+- Ordem: primeiro os quiosques vizinhos, pra ter provas; depois tráfego numa página de vendas
+
+**Leitura da squad:** o produto já existe e está rodando no próprio negócio dela; o desvio era ir atrás de um nicho que não é o dela. Liga com "o que você já resolveu pra você é o seu primeiro produto" e com vender pra quem está perto antes de anunciar.
+
+**Status:** matéria-prima, ainda não usada em roteiro
+
+---
+
+## 20. Juliana Pasqual — app do marido médico integrativo: método dentro do app
+
+**Contexto (Karol, 26/10/2026):**
+- Criou um aplicativo pro marido, que é médico integrativo
+- Não sabia como vender o app pra outros médicos
+- Pensava em vender a plataforma pra cada médico personalizar o próprio atendimento, "já que todos fazem as mesmas coisas"
+
+**Orientação dada pela Karol:**
+- Quebrou essa crença: recomendou colocar o método do médico dentro do aplicativo, pra fortalecer o posicionamento dele
+- Tese da Karol: **infoservice é o grande produto de 2026**
+- A partir daí ele pode criar um ecossistema de produtos, encontros presenciais de médicos integrativos e um portfólio estratégico e lucrativo: um negócio de verdade
+
+**Leitura da squad:** ferramenta genérica vira commodity; ferramenta com método dentro vira posicionamento. ⚠️ O caso envolve o marido dela (terceiro): checar com a Karol antes de usar com nome.
+
+**Status:** matéria-prima, ainda não usada em roteiro
+
+---
+
+## 21. Mariana Diniz — "Diretora Compartilhada" que não escala
+
+**Contexto (Karol, 26/10/2026):**
+- Consultora de marketing e vendas no varejo e no ramo alimentício
+- Hoje tem o serviço de "Diretora Compartilhada": ajuda empresários a tomar decisões estratégicas de marketing e produto
+- Assim está difícil escalar
+
+**Orientação dada pela Karol:**
+- Vender a metodologia como mentoria
+- Treinar a equipe da empresa
+- Depois, criar uma formação pra Diretores Compartilhados de consultores de marketing
+
+**Leitura da squad:** escada clássica de serviço → método: do tempo dela (serviço) pra método vendido (mentoria), depois a equipe do cliente executa, depois forma outros profissionais. Não confundir com a Mariana Rocha (#17, pedagoga).
+
+**Status:** matéria-prima, ainda não usada em roteiro
+
+---
+
+## 22. Rosemary — ansiedade da mulher cristã: "tempo de Deus"
+
+**Contexto (Karol, 26/10/2026):**
+- Dentista aposentada, passou por crise de ansiedade
+- Tem 5.000 inscritos no YouTube
+- Hoje ajuda mulheres cristãs a sair da ansiedade com teologia, coaching e acupuntura sem agulha
+
+**Orientação dada pela Karol:**
+- Mudar a promessa pra algo mais direcionado e específico pra persona cristã
+- Na sessão, a Rosemary contou que as alunas sentem culpa por serem ansiosas, por não esperarem o tempo de Deus
+- A Karol apontou: **"tempo de Deus" é a palavra mágica do método dela.** "Ansiedade" é genérico e muito usado; a dor específica é o que posiciona e comunica com força
+
+**Leitura da squad:** exemplo perfeito de "a palavra da persona vale mais que a palavra técnica" (a persona fala "tempo de Deus", o mercado fala "ansiedade"). A palavra mágica apareceu numa frase solta da própria expert.
+
+**Status:** matéria-prima, ainda não usada em roteiro
+
+---
+
+## 23. Ludmila — pré-diagnóstico antes da 1ª consulta: promessa que ninguém deseja
+
+**Contexto (Karol, 26/10/2026):**
+- Dentista que criou um método pra dentistas: enviar um pré-diagnóstico ao paciente antes da 1ª consulta
+- Com isso o dentista tem uma visão ampliada do paciente (ansiedade, comportamento), fica mais eficiente no tratamento e na comunicação, vende mais e se posiciona melhor
+
+**Orientação dada pela Karol:**
+- Melhorar a promessa do produto na página de vendas
+- A promessa estava: "aprenda a ampliar sua visão sobre o paciente antes da 1ª consulta"
+- Isso é o caminho, e ninguém deseja o caminho. Todo dentista deseja vender mais e fidelizar já na primeira consulta: isso sim é poderoso
+
+**Leitura da squad:** caso didático de "promessa = resultado desejado, não o mecanismo". O mecanismo (pré-diagnóstico) vira prova de como o resultado acontece.
 
 **Status:** matéria-prima, ainda não usada em roteiro
 

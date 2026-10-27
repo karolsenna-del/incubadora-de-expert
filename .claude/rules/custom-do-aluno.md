@@ -53,3 +53,7 @@ outras rules. Exemplos:
 ### Conceitos do Expert360º
 
 - Definir termo do método (urgência oculta, dores, desejos…) pelo jeito da Karol, não por material de terceiros como o Stories 10x. Urgência oculta = os medos que tiram o sono da persona, que ela não conta pra ninguém, esconde e tenta fugir. Em material de captação (ex.: quiz da Live 35), cada pergunta leva o exemplo mais forte do dossiê da Laura, pra quem responde se reconhecer como a persona da Karol (Karol, 26/10).
+
+### Legenda do Reels 7s
+
+- Legenda do 7s sem fala tem 10 linhas (frases curtas, uma por linha), não 3-5: o vídeo não fala, a legenda conta a história (Karol, 26/10).

@@ -728,3 +728,33 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** linha colorida pela situação (follow-up vencido em laranja forte, pronto pra abordar em laranja claro, em conversa em cinza claro, cliente em preto, descartado/perdido em cinza riscado), ordem por Prioridade (Alta → Baixa, descartados no fim), 18 colunas de sistema ocultas, aba "Garimpo - Legenda". Follow-up vence na Data Próxima Ação ou 3 dias depois da última interação (suposição do agente, a Karol pode mudar).
 **Racional:** bater o olho e saber onde focar.
 **Impacto:** cada rodada nova do Garimpeiro já entra ordenada e colorida.
+
+## 26/10/2026 — Conduz Agro: pré-diagnóstico com 6 perguntas novas no resultado
+**Contexto:** a Karol mandou mais perguntas da Milena pro Pré-Diagnóstico de Vendas (Emocional e Condução) e pediu que contassem no resultado final.
+**Decisão:** 4 Emocionais (reação quando o produtor fecha com outro técnico, escala 0-10 de decidir e agir, como se sente ao apresentar orçamento, se cobra o que vale) e 2 de Condução (adaptar a conversa ao perfil do produtor, perceber se ele entendeu a explicação técnica). A trava sinalizada agora é a média de cada esfera: múltipla escolha pela opção mais segura (não pela letra), escala como nota/10; a do orçamento é aberta e não pontua.
+**Racional:** as perguntas vieram com ordem de opção variada (às vezes a melhor é A, às vezes C), então a pontuação segue o sentido de cada resposta.
+**Impacto:** milenagehrke.com.br/pre-diagnostico republicado (22 perguntas, "uns 8 minutos"); Apps Script versão 6 (mesmo link), 6 colunas abertas no lugar certo sem mexer nas 5 respostas reais. Testado ponta a ponta e as linhas de teste foram apagadas.
+
+## 26/10/2026 — Agentes do método dos alunos saem do ChatGPT: página com código de acesso por aluno
+**Contexto:** a OpenAI vai aposentar os GPTs (conta pessoal já não cria nem publica GPT novo) e o Google troca os Gems por Skills a partir de 17/11, ainda sem compartilhamento. Skill do Claude não tem link aberto fora de Team/Enterprise e expõe o método.
+**Decisão:** o agente que a Karol entrega a cada aluno (pra ele compartilhar com os clientes dele) vira uma página só do agente, sem área de membros, com código de acesso por aluno e IA por API. Planilha controla código, vencimento e limite mensal de mensagens (trava no servidor, zera todo mês), mais teto de gasto na conta de IA do aluno.
+**Racional:** não depender de regra de plataforma, cliente final sem conta nem configuração, método escondido, e o aluno não paga o uso de quem já saiu (código vence).
+**Impacto:** entregável padrão novo pras ofertas; falta testar Haiku x Sonnet e construir o modelo. Detalhes em demandas-backlog.md.
+
+## 26/10/2026 — Diagnóstico do Expert: "concorrentes" vira pergunta de perfis de referência com @
+**Contexto:** "Quem são seus principais concorrentes?" voltava genérica (categoria, "não tenho").
+**Decisão:** "Quais perfis da sua área você acompanha ou vê como referência no Instagram?" + ajuda "Cite de 2 a 3 @: quem faz algo parecido com você, quem você admira ou com quem você sente que é comparada." + exemplo "@perfil1, @perfil2, @perfil3". Fica na seção do negócio.
+**Racional:** pegar com quem ela se compara, quem modela e nomes reais pra prospectar a Incubadora.
+**Impacto:** no ar em diagnostico.incubadoradeexpert.com.br/diagnostico/ (26/10, publicado pela Karol); mesmo campo `concorrentes`, mesma coluna AA da planilha.
+
+## 26/10/2026 — Rota100k Semana 13 sem a segunda-feira
+**Contexto:** guia da Semana 13 (26/10 a 01/11) chegou no próprio dia 26.
+**Decisão:** a Karol pulou a segunda; o plano cobre terça a domingo (36 posts).
+**Racional:** pedido da Karol (motivo não informado).
+**Impacto:** checklist do guia fica com 36 de 42; o pessoal das 15h usa histórias pouco usadas (venda fantasma, troféu, férias da expert, Receita Federal).
+
+## 26/10/2026 — Coleta de métricas do Instagram renova a própria chave
+**Contexto:** a chave de métricas do Instagram venceu em 23/10 e a coleta diária ficou parada de 24 a 26/10 sem ninguém perceber.
+**Decisão:** a Karol gerou uma chave nova. O robô passou a renovar a chave todo dia, guarda a versão renovada cifrada no GitHub e abre um aviso (issue, que chega por e-mail) quando falha.
+**Racional:** a chave vale 60 dias e nada renovava; a falha só aparecia na aba Actions.
+**Impacto:** 24 e 25/10 preenchidos (alcance e visitas; seguidores em branco). Chave valendo até 25/12 e renovando sozinha.
