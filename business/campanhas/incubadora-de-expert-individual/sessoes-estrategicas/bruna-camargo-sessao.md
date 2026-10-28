@@ -60,18 +60,27 @@ Se der, convide: "Se quiser, ele(a) pode sentar com a gente na parte final, quan
 
 ---
 
-## Etapa 2 — Diagnóstico com SPIN (20-25min)
+## Etapa 2 — Diagnóstico com SPIN, em conversa (20-25min)
 
-**S — as 25 notas** (como no seu doc). Não comente as notas no meio, só anote as palavras dela.
+**Sem radar na tela (decisão de 27/10).** Ela é leiga de tudo e as notas vão sair perto de zero. Com o medo de julgamento que ela repete, o desenho confirmaria o "estou muito atrás" e ela sairia assustada, não decidida. Faça as perguntas do diagnóstico como conversa e **anote as notas só pra você** (preencha o Diagnóstico do Expert depois da chamada).
 
-**Mostre o desenho:** "O maior buraco está em [área]." Deixe ela reagir.
+**S — Situação: a história dela, do automotivo à nutrição.**
+- "Me conta do automotivo: o que você fazia no dia a dia?"
+- "Em que você era boa lá? Quem te procurava pra resolver o quê?"
+- "E o que te fez escolher a nutrição lá em 2017?"
+Anote as palavras exatas: elas voltam no Reenquadramento.
 
-**P — Problema** (puxe pela área mais baixa; use a que encaixar):
-- "Se uma pessoa te procurasse amanhã pra uma consulta, o que você ofereceria a ela? Como seria o acompanhamento?" (Método)
-- "Que tipo de paciente você mais quer atender? Por quê essa pessoa?" (Método — persona)
-- "Quanto você cobraria hoje por uma consulta? Como chegou nesse valor?" (Validação) → **não ensine a precificar**: "isso é exatamente o que a gente faz no Checkup da Oferta".
-- "O que exatamente te dá medo quando você pensa em aparecer? Quem você imagina te julgando?" (Expert)
-- Pergunta nova de mercado: "Quais nutricionistas você acompanha ou vê como referência no Instagram? Me fala 2 ou 3 @." (No pré ela respondeu de forma genérica.)
+**P — Problema** (sem aula, só o que ela enxerga):
+- "Que tipo de paciente você mais quer atender? Por quê essa pessoa?" (persona) → se ela ficar genérica ou travar, é aqui que ela mesma percebe que falta persona. Não defina por ela.
+- "Se uma pessoa te procurasse amanhã pra uma consulta, o que você ofereceria a ela? Como seria o acompanhamento?" (método)
+- "O que exatamente te dá medo quando você pensa em aparecer? Quem você imagina te julgando?" (Expert). Acolha antes de seguir.
+- Mercado: "Quais nutricionistas você acompanha ou vê como referência no Instagram? Me fala 2 ou 3 @." (No pré ela respondeu de forma genérica.)
+- Preço da consulta: **não pergunte**. Pra quem nunca atendeu, essa pergunta só reforça o "não sei nada". Se ela trouxer, "isso a gente define no Checkup da Oferta".
+
+**Uma dose de valor, uma só** (o "Geração de valor" do SPIN):
+> "Repara numa coisa: [o que ela era boa no automotivo] + a nutrição + o que você vive hoje como mãe. Pouca gente tem essa combinação. Isso já é o começo do seu método."
+
+**Pare aí.** Mostre que o fio existe, sem puxar o fio pra ela. Se ela sair com ideia pra pensar sozinha, some.
 
 **I — Implicação:**
 - "Você está há 2 anos formada. Se nada mudar, daqui 6 meses como você vai estar?"
@@ -85,7 +94,10 @@ Se der, convide: "Se quiser, ele(a) pode sentar com a gente na parte final, quan
 - Tempo: "Com a sua filha pequena, quanto tempo por semana você consegue dedicar a isso de verdade? Não o ideal, o real."
 - Formato: "Você prefere ter alguém construindo COM você passo a passo, ou ter o caminho mapeado e ir no seu ritmo sozinha?"
 
-**Não dê aula.** Ela vai querer saber como se posicionar, precificar e atrair paciente. Toda vez: "isso é o que a gente faz na sessão X".
+**Mostre o caminho, não a solução** (fecha o diagnóstico e abre a ponte):
+> "Pelo que você me contou, faltam três coisas: saber quem você atende, transformar o seu jeito de atender num método com o seu nome e fechar o primeiro paciente numa conversa. Sozinha, parece muita coisa, e é. Comigo, é uma por vez."
+
+**Não dê aula: mostre o quê falta, nunca o como resolver.** Ela vai perguntar como definir a persona, se posicionar, precificar e atrair paciente. Toda vez: "isso é exatamente o que a gente faz na sessão X".
 
 ---
 
@@ -113,8 +125,8 @@ Ligue com ela: "E repara: ela não precisou virar blogueira pra isso. Foi numa c
 Peça licença: "Posso te mostrar como eu resolveria isso com você?"
 
 - **C — Colapso:** "O mercado manda a nutricionista recém-formada aparecer todo dia antes de ter o primeiro paciente, e é por isso que o medo de ser julgada trava tanto."
-- **R — Reenquadramento:** "A causa real não é falta de coragem: é que [palavras dela sobre o maior buraco] ainda não virou um atendimento com o seu nome que você saiba oferecer."
-- **O — Ordem:** "Primeiro o seu atendimento vira método, depois você fecha os primeiros pacientes numa conversa, e só então aparece."
+- **R — Reenquadramento:** "Você não está começando do zero. A causa real não é falta de coragem: é que tudo o que você já viveu, [palavras dela sobre o automotivo] e a maternidade, ainda não virou um atendimento com o seu nome que você saiba oferecer."
+- **O — Ordem:** "Primeiro a gente define quem você atende, depois o seu atendimento vira método, aí você fecha os primeiros pacientes numa conversa, e só então aparece."
 - **I — Inevitabilidade:** "Quando você aparece já com pacientes atendidos, você não aparece pedindo licença. Aparece mostrando o que já funciona. O julgamento perde força."
 
 **Se Incubadora Express (hipótese principal):**
@@ -142,6 +154,7 @@ Se ela sinalizar que quer: bônus de ação rápida (Funil de Vendas Secretas mo
 | "Preciso conversar com meu marido / minha família" | "Claro, faz todo sentido. O que você acha que ele(a) vai perguntar? [responda] Quer marcar 15 minutos comigo e com ele(a) amanhã?" Marque dia e hora antes de desligar. |
 | "Não tenho renda agora" | "Entendo. Por isso a Express é a porta de entrada: 12x de R$250, e ela foi desenhada pra você fazer a primeira venda em 30 dias. A sua primeira paciente começa a pagar o caminho." Não prometa que paga. |
 | "Tenho medo de me expor" | "É exatamente por isso que a primeira venda é numa conversa reservada. Você só aparece depois, já com resultado pra mostrar." |
+| "Parece muita coisa / não sei se dou conta" | "Entendo, olhando tudo de uma vez assusta mesmo. O que te parece mais difícil? [ouça] Por isso é uma etapa por sessão: você não precisa saber o caminho inteiro, só a próxima entrega." |
 | "Preciso estudar mais / fazer pós antes" | "Você estudou de 2017 a 2024. O que falta não é mais conteúdo, é um atendimento com o seu nome." |
 | "Não tenho tempo, minha filha é pequena" | "Quantas horas por semana você teria? As sessões são liberadas pela sua entrega, então você vai no seu ritmo." |
 | "Vou pensar" | "O que especificamente você está considerando?" |
@@ -160,6 +173,6 @@ Se ela sinalizar que quer: bônus de ação rápida (Funil de Vendas Secretas mo
 
 ## Depois
 
-- Salve o Diagnóstico do Expert e anote se o perfil (Analista com traço Conector) se confirmou.
+- Preencha o Diagnóstico do Expert com as notas que você anotou (o radar fica pra você, não foi mostrado a ela) e anote se o perfil (Analista com traço Conector) se confirmou.
 - Rastreador: sessão realizada, status, próximo passo, data.
 - Se "vou pensar" ou "vou falar com a família": peça ao Vendedor Secreto a Cadência de 5 Toques.
