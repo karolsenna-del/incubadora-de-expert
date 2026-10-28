@@ -2,7 +2,7 @@ name: Post amazon-reduzir-risco
 
 on:
   schedule:
-    - cron: '0 23 30 10 *'   # 30/10 às 23:00 UTC = 20h BRT
+    - cron: '0 23 2 11 *'   # 02/11 às 23:00 UTC = 20h BRT
   workflow_dispatch:
 
 jobs:

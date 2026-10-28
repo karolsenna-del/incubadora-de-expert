@@ -2,7 +2,7 @@ name: Post medo-de-cobrar-caro
 
 on:
   schedule:
-    - cron: '0 23 29 10 *'   # 29/10 às 23:00 UTC = 20h BRT
+    - cron: '0 23 1 11 *'   # 01/11 às 23:00 UTC = 20h BRT
   workflow_dispatch:
 
 jobs:
