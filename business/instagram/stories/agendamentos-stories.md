@@ -67,3 +67,4 @@
 | 21/10/2026 | live34-projeto-sem-data-2026-10-21 | 3 | 17931616602167546, 18127836140309653, 18375440362174293 | sim (ver log de execucao) |
 | 22/10/2026 | teste-demanda-roteiro-validacao-2026-10-19 | 1 | 18026080097875902 | sim (ver log de execucao) |
 | 22/10/2026 | diagnostico-ferramentas-quinta-2026-10-22 | 1 | 17982353292124516 | sim (ver log de execucao) |
+| 28/10/2026 | chamada-grupo-lives-quarta-2026-10-28 | 6 | 18396421321205200, 18574851010076493, 18160977952503251, 18139638361723124, 18119317981967001, 18164941855495748 | sim (ver log de execucao) |
