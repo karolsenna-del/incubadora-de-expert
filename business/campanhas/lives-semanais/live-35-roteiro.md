@@ -55,7 +55,7 @@ E não importa se você é advogado, nutricionista, terapeuta, servidor ou CLT. 
 
 "Agora deixa eu te mostrar os três jeitos que quase todo especialista usa pra tentar achar cliente. Eu já caí em vários.
 
-**Jeito 1: postar pra todo mundo e esperar o comprador aparecer.** Você cria conteúdo pra quem quiser ver. Cresce seguidor, e torce pra no meio deles ter alguém que compra. O problema é que conteúdo pra todo mundo atrai plateia. E plateia aplaude, mas não paga. Eu fiz oito lançamentos assim. Zero, uma, quatro vendas.
+**Jeito 1: postar pra todo mundo e esperar o comprador aparecer.** Você cria conteúdo pra quem quiser ver. Cresce seguidor, e torce pra no meio deles ter alguém que compra. O problema é que conteúdo pra todo mundo atrai plateia. E plateia aplaude, mas não paga. Quando eu lancei em gestão de empresa, eu cometi esse erro.
 
 **Jeito 2: a persona de formulário.** 'Mulheres de 25 a 45 anos, ensino superior, que querem crescer.' Isso não é persona, é público-alvo. É um recorte de quem *pode* comprar, não de com quem você está falando. Duas pessoas com esse mesmo perfil podem estar em lugares completamente diferentes: uma nem pensa em resolver isso, a outra já tentou duas vezes e ainda sente o incômodo. O que diz quem compra é o que a pessoa sente, o que ela teme e o que ela já tentou.
 
@@ -147,7 +147,7 @@ Então, se você está travado esperando ter a persona perfeita pra começar: el
 > Fonte: Karol, 25/10 (Garimpeiro → qualificação → abordagem → pré-diagnóstico e Venda Secreta confirmam; DNA do Expert valida quando vira aluna e atualiza o dossiê da persona; arquivo vivo; ciclo PDCA da validação). Só as etapas, sem ensinar como fazer cada uma.
 > Reforça a afirmação 5 do Bloco 6 ("e se eu escolher a persona errada?").
 
-> **Spoiler do pitch (~19 min, metade da live):** "É exatamente isso que a gente faz na **Incubadora Express**: achar a sua persona compradora e chegar na sua primeira Venda Secreta, comigo do lado. No final eu te mostro como entrar, e como pegar o material desta live."
+> **Spoiler do pitch (~19 min, metade da live):** "É exatamente isso que a gente faz na **Incubadora Express**: achar a sua persona compradora e chegar na sua primeira Venda Secreta, comigo do lado. No final eu te mostro como entrar."
 > Fonte: Spoiler do Pitch / Pitch Resumido (`VOL-conteudo.md` 11.4; Regra Cardinal C6): 1-2 frases, no meio, no pico de audiência, nomeando a oferta da live. Usado nas lives antes da Black (ex.: Live 25), retomado a pedido da Karol em 25/10.
 
 **E agora, o filtro: como reconhecer quem compra de você.**
@@ -228,6 +228,11 @@ Não é ter mais seguidor. É saber quem procurar."
 
 > Número real: 150 perfis encontrados pelo Garimpeiro, criado em outubro (Karol, 25/10). Sem taxa de conversão (não há dado). Garimpeiro busca e dá nota pela persona do dossiê (`agents/garimpeiro-leads-instagram`). Sem citar a Black nem o social selling pelo nome. O resto é projeção qualitativa; 30 dias = ritmo da Express, não garantia.
 
+**Quiz da persona (antes do resumo, slide 24)**
+"Quanto você conhece a sua persona compradora? Eu fiz um quiz pra você descobrir. Quem quiser, comenta **PERSONA** aqui que eu te mando."
+
+> CTA = **PERSONA** nos comentários (Karol, 28/10): substitui o MATERIAL no direct do Instagram. O deck só menciona o quiz, não apresenta ele por dentro; o link fica no slide pra Karol abrir à parte.
+
 ---
 
 ## BLOCO 8 — PITCH + OFERTA + Q&A (~5 min)
@@ -260,12 +265,7 @@ Junto vem o meu método inteiro, o Expert360º, e uma IA em cada etapa, começan
 **Fechamento: Decisão Mais Inteligente**
 "Você tem dois caminhos agora. Pode pegar as três perguntas de hoje, fazer a sua lista sozinho e chamar a primeira pessoa. Se fizer isso, já vai estar muito à frente de quem só assistiu.
 
-Ou pode tomar a decisão mais inteligente: fazer isso com alguém do seu lado, que já errou oito lançamentos antes de aprender a enxergar quem compra, e sabe o caminho até a primeira venda."
-
-"E o material que eu te prometi: me chama no direct do Instagram com a palavra **MATERIAL**. Eu te mando o material desta live, pra você rever o filtro com calma. E se fizer sentido pra você, a gente já conversa sobre o seu momento por lá."
-
-> CTA = **MATERIAL no direct do Instagram** (Karol, 25/10). Todo mundo que mandar recebe o material da live; a partir daí, conversa no privado. Nada de checkout. Bônus de 24h só na conversa, nunca na live.
-> ⚠️ O material precisa existir antes da live: a Live 35 ainda não tem slides nem PDF.
+Ou pode tomar a decisão mais inteligente: fazer isso com alguém do seu lado, que já aprendeu a enxergar quem compra e sabe o caminho até a primeira venda."
 
 **Q&A:** abrir pra perguntas. Respostas de reserva:
 - "Vender pra conhecido não é constrangedor?" → Constrangedor é empurrar. Venda Secreta é uma conversa sobre o problema dela; se não fizer sentido, ninguém compra e a amizade continua igual.
@@ -279,11 +279,11 @@ Ou pode tomar a decisão mais inteligente: fazer isso com alguém do seu lado, q
 - [x] Data e horário: qua 28/10, 15h (Karol, 25/10)
 - [x] Oferta = Incubadora Express (Karol, 25/10)
 - [x] 5 afirmações do Bloco 6 aprovadas (Karol, 25/10)
-- [x] CTA: MATERIAL no direct do Instagram, todos recebem o material (Karol, 25/10)
+- [x] CTA: PERSONA nos comentários, antes do resumo; quem comentar recebe o quiz (Karol, 28/10; antes era MATERIAL no direct)
 - [x] Deck pronto (https://claude.ai/artifact/MeiiKcJNbC9sjn7N9RMrqC). Slide 17 = espaço do looping da Karol.
 - [x] MATERIAL = quiz "Quanto você conhece a sua persona compradora?" (25 perguntas do dossiê, sim/não/não sei, diagnóstico pouco/médio/muito, link pro Diagnóstico do Expert): https://claude.ai/artifact/WG3iLvwqCk3Vw84393FhdH (`live-35-quiz-persona.html`). Karol preferiu quiz ao PDF dos slides (25/10).
-- [ ] ⚠️ Liberar o link do quiz pra quem não tem conta (menu Compartilhar do artifact) ou publicar no site da Incubadora
-- [ ] Depois da live: responder todo MATERIAL no direct com o material e puxar a conversa
+- [x] Quiz vai como arquivo HTML (`live-35-quiz-persona.html`): nada a liberar (Karol, 28/10)
+- [ ] Depois da live: mandar o quiz pra todo mundo que comentou PERSONA e puxar a conversa
 - [x] Conhecida do perfil pessoal: não fechou, fica só como exemplo (Karol, 25/10)
 - [x] Prova de aluno no Bloco 2: Milena (nova mentoria pra ex-aluna)
 - [ ] ⚠️ Opcional: história do "gestão pra tudo" no Bloco 3, só com detalhe seu
@@ -319,3 +319,4 @@ Ou pode tomar a decisão mais inteligente: fazer isso com alguém do seu lado, q
 - 25/10 — @expert-em-lives: Bloco 4 trocou agosto R$1.500 pela lista da Black (pessoa certa, hora errada); Bloco 7 trocou agosto→setembro pelo Garimpeiro (150 perfis, social selling). Decisão Karol (opção B).
 - 25/10 — @expert-em-lives: cortes pra 30-40 min (Karol pediu): saíram a Virada 2 (uma frase foi pro jeito 2), o jeito 4, o 2º cliente repetido depois do filtro; afirmações e "junto vem" encurtados. ~38 min.
 - 25/10 — @expert-em-lives: Black fora da live (Karol): Bloco 4 sem caso pessoal; Bloco 7 abre com "quando eu já tinha conversado com todo mundo da minha lista" e amarra o Garimpeiro no dossiê da persona; social selling sem nome. ~37 min.
+- 28/10 — @live-deck-builder: ajustes da Karol no deck: sem os 8 lançamentos no Jeito 1; looping desenhado no slide 17; slide 25 com o quiz e CTA PERSONA; MATERIAL saiu do fim.
