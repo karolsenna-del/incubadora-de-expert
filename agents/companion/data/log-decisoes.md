@@ -770,3 +770,41 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** manter a fala inteira (0–110,6 s), cortando só o "ok?" e a repetição do CTA; Karol tinha liberado passar de 90 s.
 **Racional:** sem corte no meio da voz o vídeo passa na conferência; ficou ~2 s mais longo.
 **Impacto:** vídeo final 1min51s a 1,05x, legenda 1 euriler laranja, headline caixa preta com PROSPECTA em laranja.
+
+## 27/10/2026 — Sessão da Bruna sem radar na tela
+**Contexto:** Bruna Camargo (nutricionista recém-formada, leiga de tudo, medo de ser julgada) teria notas perto de zero no radar do diagnóstico.
+**Decisão:** não mostrar o radar; diagnóstico em conversa (automotivo → nutrição → persona), notas anotadas só pela Karol; uma dose de valor só ("sua combinação já é o começo do método"); mostrar o quê falta, nunca o como.
+**Racional:** desenho zerado confirmaria o medo e a faria sair assustada; ideia demais a faria pensar sozinha e sumir.
+**Impacto:** roteiro em business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/bruna-camargo-sessao.md atualizado (Etapa 2, ECROI R/O, objeção "parece muita coisa").
+
+## 27/10/2026 — Sessão da Sandra Mello: radar na tela e Método VIP
+**Contexto:** Sandra Mello (servidora, aluna da Arcane, SSI de ChatGPT/Claude "aberta a todos", sem persona/promessa/prova) respondeu o pré-diagnóstico em 27/10.
+**Decisão:** mostrar o radar (o desenho torto, alto no fazer e baixo no Método, prova sozinho que falta direção); oferta Método VIP R$1.500 (3x R$500 pix, 7 dias de garantia).
+**Racional:** executar é fácil pra ela; falta direção. Dificuldade é tempo, e os 3 encontros pontuais cabem nos 30 dias que ela quer.
+**Impacto:** pré-diagnóstico importado no Diagnóstico do Expert; roteiro em business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/sandra-mello-sessao.md.
+
+## 27/10/2026 — Bruna no CRM aguardando pagamento; leitura da SSI da Sandra
+**Contexto:** Bruna Camargo disse na sessão que vai fechar. Para a Sandra, a Karol leu a SSI.
+**Decisão:** Bruna cadastrada no CRM (origem sessao_estrategica, status follow_up_marcado, próximo contato 28/10), aguardando pagamento. Na Sandra: a SSI serve para a empreendedora; vende quando mostra as possibilidades de ter uma SSI no próprio negócio, não o uso prático da IA para leigos.
+**Racional:** ensinar IA a leigo deixa a pessoa travada; mostrar a possibilidade gera vontade de contratar.
+**Impacto:** dica entrou no roteiro da Sandra (só para a Karol). Oferta da Bruna não confirmada no CRM (roteiro previa Express R.500).
+
+## 27/10/2026 — Apresentação da Incubadora Express publicada para envio
+**Contexto:** Karol quis mandar a apresentação da Express para a Bruna, que disse que vai fechar.
+**Decisão:** Versão de envio publicada em https://vendas.incubadoradeexpert.com.br/incubadora-express/ (noindex), com botão para o checkout Voomp 17442, leitura em rolagem no celular e sem o bônus de ação rápida ("fechando hoje, nesta conversa"), que só vale na sessão. A apresentação original da sessão ficou intacta.
+**Racional:** O texto da sessão falava em "fechando hoje" e "te mando o link agora", que não fazem sentido num link enviado depois.
+**Impacto:** Arquivo em business/campanhas/crm-reativacao-leads/paginas-vendas/site/incubadora-express/index.html (deploy dpl_BmGUKWrTTqimGxtXWrfasu9aqaNw). A Express ainda não tem mensagem de onboarding em business/processos/onboarding-pos-compra.md.
+
+## 27/10/2026 — Onboarding da Incubadora Express
+**Contexto:** Primeira venda da Express (Bruna) e o produto não tinha mensagem nem página de onboarding.
+**Decisão:** Mensagem nova (seção 2c de business/processos/onboarding-pos-compra.md) e versão /express na página de onboarding (mesmo arquivo da Individual e do Grupo): 5 sessões, ritmo de 30 dias, 6 meses, sem oficinas, Studio, Simulador nem Kit de Scripts. Primeira entrega = DNA do Expert, como no Grupo (suposição). Dúvidas e agendamento pelo WhatsApp da Karol.
+**Racional:** Reaproveitar a página e a mensagem do Grupo, tirando o que a Express não inclui.
+**Impacto:** Publicação da página bloqueada pela permissão de deploy, espera o ok da Karol. A Central (mensagens-onboarding.html) ainda não tem a Express.
+
+## 27/10/2026 — Onboarding da Express publicado
+**Decisão:** Karol autorizou. Página onboarding.incubadoradeexpert.com.br/express e Central (mensagens-onboarding.html, seção Incubadora Express) no ar, conferidas.
+
+## 28/10/2026 — Onboarding: promessa da Express e canal oficial do suporte
+**Contexto:** Karol revisou a página /express de onboarding.
+**Decisão:** promessa da Express passa a ser "30 dias até a sua primeira venda no digital" (sem "Secreta" na promessa; Venda Secreta segue como nome da etapa). WhatsApp (67) 99232-4690 é o suporte ao aluno e canal oficial de comunicação, em todas as versões da página (Individual, Grupo, Express). Topo da /express diz "Incubadora Express"; botões da Área e do DNA alinhados; Sessões 4 e 5 empilhadas.
+**Impacto:** mensagem da Express na Central e no processo de onboarding com a promessa nova. Publicado e conferido no ar em 28/10.
