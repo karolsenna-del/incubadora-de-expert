@@ -176,6 +176,48 @@ Parabéns pela decisão!
 
 ---
 
+## 2c. Incubadora Express — R$2.500/6m (12x R$250 ou à vista no pix/boleto)
+
+> Escrita em 27/10, pra Bruna Camargo (1ª venda da Express), seguindo a mensagem do Grupo.
+
+**Quando enviar:** assim que o pagamento aparecer confirmado (Voomp, produto #17442, checkout
+`pay.voompcreators.com.br/17442`).
+
+**Pré-requisito:** página `onboarding.incubadoradeexpert.com.br/express` publicada (versão Express
+criada em 27/10 no mesmo arquivo da Individual e do Grupo). O webhook da Voomp já libera a Área de
+Membros pro #17442 (Expert360º + checklist das 5 sessões, 6 meses).
+
+**MENSAGEM (WhatsApp):**
+```
+Seja bem-vinda(o) à Incubadora Express! Agora começa o nosso caminho até a
+sua primeira venda no digital, em 30 dias.
+
+Antes de tudo, dá uma passada pela página de onboarding. Ela explica como
+funcionam as 5 sessões comigo, o ritmo de 30 dias e as suas ferramentas:
+
+https://onboarding.incubadoradeexpert.com.br/express
+
+Seu acesso à Área de Membros já está liberado (usa o mesmo e-mail da compra
+pra entrar):
+
+https://membros.incubadoradeexpert.com.br
+
+Sua primeira entrega é responder o DNA do Expert (o link também está na
+página de onboarding). Assim que eu receber suas respostas, entro em contato
+pra agendarmos a sua Sessão 1, de onde você já sai com a data da sua primeira
+Venda Secreta.
+
+Parabéns pela decisão!
+```
+
+**O que muda em relação ao Grupo:**
+- Link da página aponta pra `/express`.
+- Sem oficinas: "as oficinas ao vivo, as sessões comigo" virou "as 5 sessões comigo, o ritmo de 30 dias".
+- A Sessão 1 já anuncia a data da 1ª Venda Secreta (promessa de 30 dias, decisão de 19/10).
+- Mantido o fechamento padrão: "entro em contato pra agendarmos" + "Parabéns pela decisão!".
+
+---
+
 ## 3. Expert360º — R$497 (funil) / R$697 (plataforma)
 
 **Quando enviar:** assim que o pagamento aparecer confirmado (Voomp, produto `expert360`,
