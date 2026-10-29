@@ -1,22 +1,27 @@
 # Auroq OS — Sistema Operacional de IA para o negócio do aluno
 
-Transforma Claude Code, Codex CLI ou Grok Build num centro de comando inteligente para operar seu negocio digital.
+O app **Auroq OS** (Mac e Windows) vira o centro de comando do seu negocio, com o Claude ou o ChatGPT (Codex)
+por dentro. Este pacote (`auroq-os`) e o motor que o app instala e atualiza na pasta do seu negocio.
 
 **Pensar. Fazer. Lembrar.** Tudo com IA.
 
 ## Instalacao
 
-### Pre-requisitos
-- Mac com Apple Silicon (recomendado)
-- Node.js 22+
-- Git
-- Claude Code, Codex CLI ou Grok Build (um deles basta)
+### O app Auroq OS (o caminho novo, chegando aos alunos)
 
-### Setup
+Baixe o app pelo link que a mentoria passa, abra e entre com o mesmo e-mail e senha da plataforma
+([arcane.arka.education](https://arcane.arka.education)). O app instala sozinho tudo o que precisa (Git, Node,
+Python, os programas do GitHub, da Vercel e do Supabase e este motor), cria a pasta do seu negocio e abre a
+primeira conversa com o Companion, que conhece voce e o seu negocio e conecta as suas contas. Voce nao abre
+terminal nem baixa programa nenhum.
 
-Cole **um endereco** no terminal (o de dentro do Claude Code ou do Codex serve).
-Ele instala o Git, o motor do sistema, faz o login da mentoria, cria a pasta do seu
-negocio e monta tudo — sem senha e sem voce baixar nada na mao:
+Ja usava o Auroq pelo terminal? Abra o app: ele acha a pasta do seu negocio sozinho, e o Companion faz a
+renovacao (atualiza, mostra o que mudou e liga o que falta). Nada do que voce construiu se perde.
+
+### Pelo terminal (o caminho que a plataforma ensina hoje, e o do Linux)
+
+Cole **um endereco** no terminal (o de dentro do Claude Code ou do Codex serve). Ele instala o Git, o motor,
+faz o login da mentoria, cria a pasta do seu negocio e monta tudo:
 
 ```bash
 # Mac
@@ -26,25 +31,24 @@ curl -fsSL https://arka.education/install.sh | bash
 irm https://arka.education/install.ps1 | iex
 ```
 
-Depois, **feche e abra** o Claude Code ou o Codex — senao ele nao enxerga o que
-acabou de ser instalado.
-
-O caminho manual antigo foi aposentado. Use a instalacao guiada acima. Em negocio existente, peca ao Ops "atualiza o sistema" (no Claude Code ou no Codex). Os agentes e squads chegam pelo MCP, sem instalacao ou atualizacao de Pack.
-
+Depois, **feche e abra** o Claude Code ou o Codex e chame o Companion (`/auroq-companion` ou `$companion`). Em
+negocio existente, peca ao Companion "atualiza o sistema" (em pasta de antes de 23/10/2026, o atalho do Ops
+ainda atende esse pedido). Os agentes e squads chegam ao vivo, sem instalar
+nem atualizar Pack.
 
 > **Grok:** nao precisa de `sync:codex`. Ele descobre `.claude/commands/`,
 > `.claude/rules/` e `AGENTS.md` sozinho. Use Claude/Grok com slash commands;
 > use Codex com `$nome` apos o sync de skills.
 
 > **Acesso exclusivo para alunos da Mentoria Arcane.** O instalador pede o mesmo email + senha
-> que voce usa em [mentoria-arcane.vercel.app](https://mentoria-arcane.vercel.app).
+> que voce usa em [arcane.arka.education](https://arcane.arka.education).
 > A sessao fica salva em `~/.arcane/credentials.json` e renova automaticamente.
 
 ### Comandos de sessao
 
 | Comando | O que faz |
 |---------|-----------|
-| `auroq-os manutencao` | Manutencao do motor no negocio existente; conteudo vem pelo MCP. **Caminho normal: pedir ao Ops "atualiza o sistema"** — ele roda `manutencao --agente` (sem perguntas; ultima linha `AUROQ_RESULTADO ...`). Rodar no terminal e so reserva |
+| `auroq-os manutencao` | Manutencao do motor no negocio existente; conteudo vem pelo MCP. **Caminho normal: pedir ao Companion "atualiza o sistema"** — ele roda `manutencao --agente` (sem perguntas; ultima linha `AUROQ_RESULTADO ...`). Rodar no terminal e so reserva |
 | `auroq-os clone` | Continua o SEU negocio em outra maquina (ou na maquina de um colaborador) — baixa tudo do GitHub, ja instalado |
 | `auroq-os fix-gitignore` | Garante as protecoes de segredo no .gitignore (vault, .env, midia) e destraqueia segredos versionados |
 | `auroq-os login` | Forca novo login (substitui credencial atual) |
@@ -53,21 +57,21 @@ O caminho manual antigo foi aposentado. Use a instalacao guiada acima. Em negoci
 | `auroq-os doctor` | Diagnostico do suporte: arquivos, motor do sistema (e se o programa aberto pelo icone enxerga ele), registro do conteudo ao vivo, login e servidor |
 | `auroq-os register-mcp` | Reescreve o registro do conteudo ao vivo no projeto (use se o `doctor` apontar que ele falta) |
 | `auroq-os sync-codex` | Regenera e verifica as skills locais do Codex |
-| `auroq-os conectar-1password` | Liga o 1Password ao Auroq sozinho (Mac/Windows): instala o `op` se faltar, cria o cofre `Claude` e uma conta de servico que so enxerga esse cofre (sem data de validade), guarda a chave no computador e testa. Voce so aprova no app do 1Password. O Ops roda isto por voce (`--agente`). Opcoes: `--conta "<e-mail>"` (escolhe a conta quando o app tem mais de uma), `--rotacionar` (cria uma chave nova), `--estado` (mostra em que etapa voce parou, sem falar com o 1Password; com `--agente` imprime a linha `AUROQ_ESTADO ...`). Pode ser retomado a qualquer hora: ele reconfere cada etapa e continua de onde parou. O Companion roda isto sozinho quando falta o cofre (skill `conectar-cofre`, que pergunta qual cofre) |
-| `auroq-os conectar-cofre` | Escolhe e liga o cofre de senhas: **1Password** (pago, uns US$ 3 por mes, confira o preco na tela, recomendado; preenche senha no navegador) ou **Infisical** (gratis, so guarda as chaves que o agente usa). Opcoes: `--cofre 1password\|infisical` (sem ela, pergunta qual), `--regiao us\|eu` (Infisical), `--estado` (em que etapa voce parou, sem falar com o cofre; com `--agente` imprime a linha `AUROQ_ESTADO ...`), `--rotacionar` (chave nova) e `--migrar` (passa as chaves do Infisical para o 1Password, sem apagar nada; so depois que todas passaram o 1Password vira o cofre ativo, e `--ignorar-fora-do-formato` deixa no Infisical as chaves com nome que o Auroq nao usa). Ligar o 1Password sozinho nao troca o cofre de quem ja usa o Infisical; ligar o Infisical com o 1Password ativo troca, e as chaves do 1Password nao sao levadas (continuam la, `segredo ler NOME --cofre 1password`). O Ops e o Companion rodam isto por voce (`--agente`) |
+| `auroq-os conectar-1password` | Liga o 1Password ao Auroq sozinho (Mac/Windows): instala o `op` se faltar, cria o cofre `Claude` e uma conta de servico que so enxerga esse cofre (sem data de validade), guarda a chave no computador e testa. Voce so aprova no app do 1Password. O Companion roda isto por voce (`--agente`). Opcoes: `--conta "<e-mail>"` (escolhe a conta quando o app tem mais de uma), `--rotacionar` (cria uma chave nova), `--instalar-app` (instala o app do 1Password: Windows pelo winget e, se ele falhar, pelo instalador oficial depois de conferir a assinatura; Mac pelo Homebrew), `--estado` (mostra em que etapa voce parou, sem falar com o 1Password; com `--agente` imprime a linha `AUROQ_ESTADO ...`). Pode ser retomado a qualquer hora: ele reconfere cada etapa e continua de onde parou. O Companion roda isto sozinho quando falta o cofre (skill `conectar-cofre`, que pergunta qual cofre) |
+| `auroq-os conectar-cofre` | Escolhe e liga o cofre de senhas: **1Password** (pago, uns US$ 3 por mes, confira o preco na tela, recomendado; preenche senha no navegador) ou **Infisical** (gratis, so guarda as chaves que o agente usa). Opcoes: `--cofre 1password\|infisical` (sem ela, pergunta qual), `--regiao us\|eu` (Infisical), `--estado` (em que etapa voce parou, sem falar com o cofre; com `--agente` imprime a linha `AUROQ_ESTADO ...`), `--rotacionar` (chave nova) e `--migrar` (passa as chaves do Infisical para o 1Password, sem apagar nada; so depois que todas passaram o 1Password vira o cofre ativo, e `--ignorar-fora-do-formato` deixa no Infisical as chaves com nome que o Auroq nao usa). Ligar o 1Password sozinho nao troca o cofre de quem ja usa o Infisical; ligar o Infisical com o 1Password ativo troca, e as chaves do 1Password nao sao levadas (continuam la, `segredo ler NOME --cofre 1password`). O Companion roda isto por voce (`--agente`) |
 | `auroq-os segredo` | Le e guarda credenciais no cofre que voce escolheu, igual nos dois: `segredo ler\|gravar\|listar\|apagar\|qual <referencia>`. O valor de `gravar` entra por stdin, nunca como argumento; `ler` imprime o valor, entao use sempre dentro do comando que o usa (`X="$(auroq-os segredo ler Item/campo)" && comando "$X"`), nunca sozinho; a referencia e `op://Claude/<Item>/<campo>` ou `cofre://<Item>/<campo>`. Com 1Password, `op read` direto continua valendo. Squads, skills e agentes usam este comando |
 
 > **Um cofre de senhas e obrigatorio** para guardar credenciais: senha, token e chave nunca ficam em arquivo do
 > projeto. Em `business/vault/` fica so o status e a referencia `op://...`, nunca o valor. Voce escolhe:
 >
-> - **1Password (recomendado, pago).** Quem nao tem e guiado pelo Ops (ou pelo Companion) a criar a conta (teste
+> - **1Password (recomendado, pago).** Quem nao tem e guiado pelo Companion a criar a conta (teste
 >   gratis de 14 dias, sem cartao; o plano Individual custa ~US$ 2,99 a 3,99/mes, confira o preco na tela). Voce so
 >   (1) cria a conta, (2) instala o app, (3) liga "Integrar com a CLI do 1Password" em Configuracoes >
->   Desenvolvedor e (4) aprova com a digital (Mac) ou o Windows Hello. O resto o Ops faz. Preenche senha no
+>   Desenvolvedor e (4) aprova com a digital (Mac) ou o Windows Hello. O resto o Companion faz. Preenche senha no
 >   navegador.
 > - **Infisical (gratis).** Para quem nao quer gastar nem 1 real. Voce so (1) cria a conta em
 >   https://app.infisical.com/signup (plano gratis; **nao** clique em "Start a free trial", que e o teste dos
->   planos pagos e pede cartao) e (2) aprova o login que abre no navegador. O resto o Ops faz. Nao e tao bom: **nao
+>   planos pagos e pede cartao) e (2) aprova o login que abre no navegador. O resto o Companion faz. Nao e tao bom: **nao
 >   preenche senha no navegador**, so guarda as chaves que o agente usa. Plano gratis (confira os limites na tela):
 >   5 vagas (voce e o agente Auroq; um segundo computador ganha chave nova mas nao gasta vaga), sem historico de versoes e sem registro de auditoria. Os termos do
 >   Infisical falam em uso profissional e o gratis pode mudar. Se um dia assinar o 1Password, `conectar-cofre
@@ -100,24 +104,19 @@ os comandos existentes do seu negocio.
 
 ### Segunda maquina (ou colaborador)
 
-O Auroq nao mora no computador — mora no GitHub. Pra trabalhar em outra maquina,
-**nao instale de novo**: clone o que ja existe.
+O Auroq nao mora so no computador: o app guarda uma copia do negocio no seu GitHub privado. Pra trabalhar em
+outra maquina, **nao instale um negocio novo**: instale o app nela, entre com a sua conta e use "Trazer projeto
+que ja existe" (do GitHub). Depois peca ao Companion "conecta meu cofre" se precisar das senhas nessa maquina.
 
-```bash
-# na maquina nova (Claude Code instalado e logado)
-npx auroq-os clone          # lista seus repos do GitHub e baixa o negocio inteiro
-cd meu-negocio
-claude
-/AuroqOS:agents:ops
-*conectar-cofre            # 1Password: reaproveita a chave que ja existe no seu cofre (uma vez so nesta maquina; so aprovar no app). Infisical gratis: cria uma chave nova so para esta maquina (voce aprova o login no navegador). Antes, ele pergunta qual cofre voce usa
-*conectar-1password        # atalho antigo, so para o 1Password
-```
+Sem o app: `npx auroq-os clone` lista seus repositorios do GitHub e baixa o negocio inteiro; depois abra o
+`claude` (ou `codex`) na pasta e chame o Companion.
 
-Ritual diario em toda maquina: **abriu o `claude` → o sistema puxa sozinho o que mudou · terminou → diga "salva e entrega"** (qualquer agente executa o ritual do Ops; `*sync`/`*commit`/`*push` seguem como atalhos).
+Com o app aberto, o trabalho e salvo e mandado para o GitHub sozinho (a cada 15 minutos, ao abrir e ao fechar).
+Sem o app, diga "salva e entrega" no fim do trabalho.
 Colaborador usa conta propria de tudo (GitHub via convite, assinatura Claude propria,
 cofre 1Password ou Infisical com escopo) — nunca a senha do dono. **Colaborador nao precisa ser
 aluno**: o acesso dele e o convite do GitHub (o `clone` nao pede login); quem atualiza
-o sistema e o dono, e o colaborador recebe as atualizacoes automaticamente ao abrir o `claude`.
+o sistema e o dono, e o colaborador recebe as atualizacoes automaticamente.
 
 ## Conteudo ao vivo
 
@@ -142,14 +141,13 @@ correcoes). Voce nao precisa vigiar nada: quando existe versao nova, o proprio s
 avisa — ao usar um squad ou agente do conteudo ao vivo e ao abrir o Claude Code no seu
 projeto — e pergunta se voce quer atualizar.
 
-Pra atualizar, e uma frase — dentro do Claude Code ou do Codex, com o Ops ativo
-(`/AuroqOS:agents:ops` ou `$ops`), ou respondendo "sim" ao aviso:
+Pra atualizar, e uma frase para o Companion (no app ou no terminal), ou responder "sim" ao aviso:
 
 ```
 atualiza o sistema
 ```
 
-Voce nao abre terminal nem digita comando: o Ops salva um ponto de restauracao (commit)
+Voce nao abre terminal nem digita comando: o Companion salva um ponto de restauracao (commit)
 se houver trabalho seu pendente, roda a manutencao e diz se precisa fechar e abrir o
 aplicativo. Se o login da plataforma tiver expirado, abre uma janela "Login Arcane" pra
 voce digitar o e-mail e a senha (nunca no chat). **Seus dados nunca sao tocados**:
@@ -157,7 +155,7 @@ memoria do Companion, documentos, cockpit, campanhas, squads que voce criou,
 personalizacoes e as suas permissoes do Claude Code ficam exatamente como estavam.
 O que se atualiza e so o framework.
 
-Reserva, so se o Ops nao abrir: na pasta do negocio, `npx -y auroq-os@latest manutencao`
+Reserva, so se o Companion nao conseguir: na pasta do negocio, `npx -y auroq-os@latest manutencao`
 (Windows: `npx.cmd`).
 
 O historico do que mudou em cada versao fica no arquivo `CHANGELOG.md`, dentro do
@@ -232,7 +230,7 @@ exigido e `excluir --account --confirm-delete`. Apagar o historico da conta inte
 permanente); para voltar a gravar, escreva para euriler@arka.education. Excluir uma
 sessao nao encerra a gravacao.
 
-A atualizacao do coletor exige a manutencao no projeto (peca ao Ops "atualiza o sistema")
+A atualizacao do coletor exige a manutencao no projeto (peca ao Companion "atualiza o sistema")
 e reabrir o host. O aviso de nova versao ao iniciar o Claude Code nao instala essa correcao.
 A publicacao do pacote tambem nao comprova que cada aluno ja atualizou.
 
@@ -249,10 +247,9 @@ agents/             → Seu exercito (companion, workers, minds, squads)
 
 ## Agentes Core
 
-| Agente | Comando | O que faz |
+| Agente | Como chamar | O que faz |
 |--------|---------|-----------|
-| Companion | `/auroq-companion` ou `$companion` | Parceiro cognitivo. Situa, lembra, pensa junto |
-| Ops | `/AuroqOS:agents:ops` ou `$ops` | Git, deploy, ambiente, install |
+| Companion | no app: conversa nova dentro do projeto; terminal: `/auroq-companion` ou `$companion` | Braco direito e chefe da equipe: pensa junto, lembra, chama os squads da Arcane e entrega; tambem instala, atualiza, conserta, conecta, salva e publica |
 | Organizer | `/auroq-organizer` ou `$organizer` | Organizacao, guarda documentos, limpeza, backup |
 
 ### Meta Squads (criadores de agentes)
@@ -267,12 +264,16 @@ agents/             → Seu exercito (companion, workers, minds, squads)
 
 ## Primeiro uso
 
-1. Ative o Ops (`/AuroqOS:agents:ops` no Claude/Grok ou `$ops` no Codex) e peca o Bootstrap 1.
-2. O Ops prepara browser oficial, Computer Use quando elegivel e Playwright como fallback, sempre com smoke test real.
-3. Ative o Companion (`/auroq-companion` no Claude/Grok ou `$companion` no Codex).
-4. O Companion monta o seu Mapa do Negocio (`docs/knowledge/mapa-do-negocio.md`): le o material que voce tiver,
-   pergunta so o que faltou e completa o resto aos poucos (`*contexto`). Todo squad le esse resumo primeiro.
-5. Pronto — o sistema ja te conhece.
+1. **No app:** a primeira conversa com o Companion abre sozinha no fim da instalacao. Ele le o material que voce
+   tiver, pergunta so o que faltou, monta o seu Mapa do Negocio (`docs/knowledge/mapa-do-negocio.md`, que todo
+   squad le primeiro), conecta GitHub, Vercel e Supabase e organiza os seus projetos.
+2. **Sem o app:** chame o Companion (`/auroq-companion` no Claude/Grok ou `$companion` no Codex). Ele confere o
+   computador (skill `configurar-computador`) e segue o mesmo caminho.
+3. Daqui pra frente: uma conversa com o Companion por assunto, quantas quiser. Ele chama a equipe; voce nao
+   precisa chamar squad nenhum.
+
+O Companion e Companion para todo mundo (nao tem nome personalizado). O antigo Ops foi aposentado para o aluno:
+a parte tecnica e com o Companion.
 
 ## Filosofia
 
@@ -289,13 +290,13 @@ agents/             → Seu exercito (companion, workers, minds, squads)
 
 ## Observabilidade e integridade do motor
 
-Apos publicacao, `npx -y auroq-os@2.8.2 doctor` mostra a fila local segura e os comandos pinados de
-manutencao/diagnostico. `npx -y auroq-os@2.8.2 manutencao` preserva o caminho existente
+Apos publicacao, `npx -y auroq-os@2.8.5 doctor` mostra a fila local segura e os comandos pinados de
+manutencao/diagnostico. `npx -y auroq-os@2.8.5 manutencao` preserva o caminho existente
 de consentimento legado, studentFiles, customizacoes e dados do negocio. Nao ha
 migracao forcada. O registro MCP aponta para `arcane-mcp@0.7.1` — o pin mora no campo
 `arcaneMcpPin` do package.json (fonte unica; o servidor le o mesmo campo no npm).
 `npm run release:verify` recusa publicar com um pin que o npm nao resolva.
-Os instaladores do repositorio ficam preparados para 2.8.2; as copias publicas so recebem
+Os instaladores do repositorio ficam preparados para 2.8.5; as copias publicas so recebem
 a versao apos os gates nativos e a verificacao do tarball publicado.
 O pacote inclui `lib/runtime-integrity.json`: inventario SHA-256 gerado depois da montagem da casca, verificavel com `npm run integrity:verify` dentro do pacote extraido. Ele comprova consistencia do conteudo; nao e uma assinatura de autoria.
 

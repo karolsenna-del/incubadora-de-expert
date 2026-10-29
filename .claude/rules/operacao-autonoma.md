@@ -13,7 +13,8 @@
    dentro do comando que usa o valor, numa variável (`X="$(npx -y auroq-os@latest segredo ler Item/campo)" && comando "$X"`),
    para o valor não voltar na conversa; para guardar, ligue por pipe a saída de quem gerou o valor. Nunca exponha segredo no chat ou em logs; `business/vault/` guarda só
    status e referência `op://...`, nunca o valor. Cofre ainda não conectado, ou `op`/`segredo` com erro de
-   autenticação: conecte você mesmo pela skill `conectar-cofre` (`agents/companion/tasks/conectar-cofre.md`) e
+   autenticação: conecte você mesmo pela skill `conectar-cofre` (`agents/companion/tasks/conectar-cofre.md`; MCP `arcane`, `squad_passo`
+   com recurso_id `companion` e passo `conectar-cofre`, cuja entrada diz qual das peças carregar) e
    retome a tarefa. Leia cada credencial uma vez por conversa e reaproveite o valor (a chave tem teto de leituras
    por hora, por minuto ou por dia, conforme o cofre); nunca rode `env`/`printenv` nem abra o arquivo de ambiente
    onde a chave fica.

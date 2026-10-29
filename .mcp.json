@@ -7,7 +7,7 @@
         "arcane-mcp@0.7.1"
       ],
       "env": {
-        "AUROQ_OS_VERSION": "2.8.2"
+        "AUROQ_OS_VERSION": "2.8.5"
       }
     }
   }

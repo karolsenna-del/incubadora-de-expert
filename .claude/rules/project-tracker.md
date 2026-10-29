@@ -26,7 +26,7 @@ Esta regra se aplica sempre que um agente trabalha em algo relacionado a um proj
 
 ### SE nao existe tracker
 
-- Se o projeto esta no cockpit mas nao tem tracker: avisar o Euriler ("Projeto X nao tem tracker. Quer que eu crie?")
+- Se o projeto esta no cockpit mas nao tem tracker: criar o tracker pelo modelo (`business/templates/tracker-template.md`) e avisar o aluno em uma linha ("Criei o acompanhamento do projeto X.")
 - Se o trabalho nao esta relacionado a nenhum projeto do cockpit: trabalhar normalmente sem tracker
 
 ## O que NAO fazer
@@ -34,7 +34,7 @@ Esta regra se aplica sempre que um agente trabalha em algo relacionado a um proj
 - NAO criar tracker sem o projeto estar no cockpit
 - NAO alterar tarefas de outros agentes (so atualizar as suas)
 - NAO remover entradas do log (log e append-only)
-- NAO mudar o objetivo ou fases do projeto (so o Euriler/Jarvis fazem isso)
+- NAO mudar o objetivo ou as fases do projeto sozinho (quem decide e o aluno; o Companion propoe)
 
 ## Formato do LOG
 

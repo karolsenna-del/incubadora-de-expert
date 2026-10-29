@@ -30,9 +30,9 @@
       {
         "hooks": [
           {
-            "type": "prompt",
-            "timeout": 20,
-            "prompt": "[auroq-ate-o-fim] Você confere a última resposta de uma IA para um aluno leigo, dono de um negócio, antes de ela chegar a ele. Dados da conversa (JSON): $ARGUMENTS\n\nResponda só com JSON, sem mais nada.\n\nSe \"stop_hook_active\" for true, responda {\"ok\": true}.\n\nLibere ({\"ok\": true}) quando a resposta: responde uma pergunta ou explica algo que o aluno perguntou; entrega o trabalho pedido; diz com clareza o que segue rodando em segundo plano; pede ao aluno só o que é dele de verdade (senha, código do celular, CAPTCHA, pagamento, autorizar mensagem para outra pessoa, apagar algo, ou uma decisão de negócio como \"Decide: A ou B?\"); dá um passo a passo que o próprio aluno pediu para fazer sozinho; é o relatório de uma IA da equipe (a conversa começou com \"BRIEFING DA EQUIPE\"); ou é conversa curta.\n\nSegure ({\"ok\": false, \"reason\": \"...\"}) só em dois casos:\n1. A resposta devolve ao aluno trabalho que a IA conseguiria fazer sozinha: comando para ele rodar, passo a passo para ele clicar ou configurar sem ele ter pedido, \"próximos passos\" que a própria IA poderia executar, ou pergunta de permissão para um passo de rotina (\"quer que eu...?\", \"posso seguir?\"). Use reason: \"Antes de responder: faça agora o que você devolveu para o aluno e que você mesmo consegue fazer; o que for de rotina, decida e diga a suposição em uma linha. Depois responda de novo, curto: o que ficou pronto, o que segue rodando e o que de fato depende dele. Não fale desta checagem.\"\n2. A resposta diz que um site, arquivo, publicação, conserto ou entrega está pronto, no ar ou funcionando sem dizer que conferiu (abriu, testou, viu funcionando). Use reason: \"Antes de responder: confira de verdade o que você disse que ficou pronto (abra o arquivo ou o site, rode o teste). Depois responda de novo, curto, só com o que a conferência mostrou; se não der para conferir, diga o que falta. Não fale desta checagem.\"\n\nNa dúvida, libere."
+            "type": "command",
+            "command": "node .claude/hooks/auroq-ate-o-fim.cjs",
+            "timeout": 10
           }
         ]
       }

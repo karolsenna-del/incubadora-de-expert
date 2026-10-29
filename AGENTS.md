@@ -128,6 +128,8 @@ mesma resposta que essa parte não foi feita e por quê; nunca pule em silêncio
 
 ## Salvar e entregar
 
+- Com o app Auroq OS aberto, o próprio app salva e entrega no GitHub privado sozinho, a cada 15 minutos, ao
+  abrir e ao fechar. As regras abaixo valem quando o aluno pede para salvar na hora e sem o app.
 - Qualquer agente salva, entrega e puxa quando o aluno pede ("salva", "entrega", "puxa"), sem mandar
   trocar de agente. O ritual completo está em `.claude/rules/puxar-e-entregar.md`.
 - Antes de salvar: `git status --short`, separe o que esta conversa mexeu, mostre a lista em linguagem

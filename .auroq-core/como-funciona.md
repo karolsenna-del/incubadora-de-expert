@@ -92,11 +92,20 @@ agora; a certeza vem do uso; nada volta para o zero.
 refinar (melhorar agentes e processos). Cada volta deixa o sistema mais forte.
 
 **Conversa:** o Companion carrega onde paramos, mostra o que importa, o aluno escolhe o foco, a
-equipe trabalha, no fim de cada tarefa a memória é salva e, quando o aluno pede, o trabalho é salvo
-e entregue no GitHub.
+equipe trabalha e, no fim de cada tarefa, a memória é salva. Com o app Auroq OS aberto, o trabalho é salvo e
+entregue no GitHub sozinho (a cada 15 minutos, ao abrir e ao fechar); sem o app, quando o aluno pede. O aluno
+abre quantas conversas quiser dentro do projeto, uma por assunto, todas com o Companion.
 
 **Semana:** sem revisão há 7 dias ou mais, o Companion propõe uma revisão de 20 minutos (cockpit,
 trackers, pendências, padrões).
+
+**Mês:** uma vez por mês, o Companion propõe a revisão do mês, também de uns 20 minutos: os números do
+mês, o que funcionou, se os projetos levam à meta dos 90 dias e o foco do mês que vem
+(`business/revisoes-do-mes.md`).
+
+**Ano:** o plano da empresa (`business/plano-da-empresa.md`) diz aonde o negócio quer chegar em 12 meses,
+em 4 trimestres. Cada trimestre é uma meta de 90 dias. O Companion propõe montar o plano na primeira
+revisão do mês e o refaz no fim do ano.
 
 **Projeto:** nasce no cockpit com tracker e fases → os agentes trabalham e atualizam o tracker →
 termina com uma retrospectiva de 3 perguntas e vai para o arquivo, abrindo vaga para o próximo.
@@ -154,6 +163,7 @@ concluída e conversa encerrando. Regra completa: `.claude/rules/memoria-intelig
 Commit aqui não é coisa de programador: é o ponto de restauração do negócio. A mensagem conta o que
 aconteceu (`progresso:`, `decisao:`, `processo:`, `agente:`, `conhecimento:`, `campanha:`, `fix:`,
 `setup:`), não o que mudou nos arquivos. Entregar (push) manda a cópia para o GitHub privado do aluno.
+Com o app aberto isso acontece sozinho a cada 15 minutos; o pedido "salva" continua valendo para salvar na hora.
 Ritual em `.claude/rules/puxar-e-entregar.md`.
 
 ## Volante
