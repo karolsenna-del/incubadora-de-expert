@@ -34,6 +34,9 @@ jobs:
       - name: Checkout repositório
         uses: actions/checkout@v4
         with:
+          # workflow_dispatch fica preso ao SHA do disparo; usar master aqui faz
+          # execucoes enfileiradas pela concurrency enxergarem a fila atualizada.
+          ref: master
           fetch-depth: 0
 
       - name: Instalar Python
