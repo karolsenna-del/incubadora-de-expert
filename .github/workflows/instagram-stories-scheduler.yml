@@ -1,7 +1,12 @@
 name: Instagram Stories Scheduler
 
 on:
-  workflow_dispatch:   # continua disponivel pra disparo manual/teste
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Slug exato da pasta em stories/fila (opcional)"
+        required: false
+        type: string
   schedule:
     - cron: '30 13 * * *'   # 09h30 America/Cuiaba (13h30 UTC) — 2h30 de folga apos o gatilho
                              # do Expert-Stories (07h America/Cuiaba, rotina trig_01KbSchvgTKq46LyG26SCM1a),
@@ -18,12 +23,18 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: instagram-stories-publisher
+  cancel-in-progress: false
+
 jobs:
   publicar:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repositório
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Instalar Python
         uses: actions/setup-python@v5
@@ -35,6 +46,7 @@ jobs:
 
       - name: Publicar Story(s) do dia
         env:
+          STORY_SLUG:             ${{ inputs.slug }}
           META_TOKEN:              ${{ secrets.META_TOKEN }}
           IG_USER_ID:              ${{ secrets.IG_USER_ID }}
           CLOUDINARY_CLOUD_NAME:   ${{ secrets.CLOUDINARY_CLOUD_NAME }}
@@ -47,5 +59,26 @@ jobs:
           git config user.name "insta-scheduler[bot]"
           git config user.email "bot@incubadoradeexpert.com.br"
           git add -f business/instagram/stories/
-          git diff --staged --quiet || git commit -m "campanha: story publicada automaticamente pelo insta-scheduler"
-          git push
+          if git diff --staged --quiet; then
+            echo "Nenhuma mudança de Story para enviar."
+            exit 0
+          fi
+
+          git commit -m "campanha: story publicada automaticamente pelo insta-scheduler"
+
+          for attempt in 1 2 3; do
+            echo "Tentativa ${attempt}/3 de sincronizar e enviar..."
+            git fetch origin master
+            if ! git rebase origin/master; then
+              git rebase --abort
+              echo "ERRO: rebase com origin/master falhou; push cancelado." >&2
+              exit 1
+            fi
+            if git push origin HEAD:master; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+
+          echo "ERRO: push falhou após 3 tentativas." >&2
+          exit 1
