@@ -42,6 +42,7 @@ outras rules. Exemplos:
 - Antes de qualquer edição de vídeo (squads de edição, transcrição, render): conferir a RAM livre e fechar o app do ChatGPT e o Edge (`msedge`; nunca `msedgewebview2`, que outros apps usam), sem perguntar. Não mexer no Linux do Windows (WSL), onde o Hermes do WhatsApp roda.
 - Em seguida, pedir à Karol em uma linha pra deixar só as abas do Chrome que ela precisa, e só então começar a edição.
 - Headline dos Reels: caixa preta com letra branca e só a palavra-chave em laranja, nunca a caixa toda laranja (ela não gostou, 25/10).
+- Headline dos Reels no topo, dentro da margem segura do feed (corte 4:5), nunca no meio da tela: no meio ela cobre o rosto da Karol (28/10).
 - Glowup: tentar 2 vezes, em primeiro plano. Se travar nas duas, seguir sem glow e avisar na entrega, sem esperar o ok dela (ela deixa a edição rodando sozinha, 24/10).
 
 ### Lives semanais
@@ -57,3 +58,7 @@ outras rules. Exemplos:
 ### Legenda do Reels 7s
 
 - Legenda do 7s sem fala tem 10 linhas (frases curtas, uma por linha), não 3-5: o vídeo não fala, a legenda conta a história (Karol, 26/10).
+
+### Diagnóstico do Expert
+
+- "Puxa as respostas do diagnóstico" = importar os pré-diagnósticos novos pra sessão, sem mexer no card da ferramenta. Card fica enxuto: sem acompanha/prazo/quem decide/perfis de referência e sem promessa/provas (Karol, 29/10).

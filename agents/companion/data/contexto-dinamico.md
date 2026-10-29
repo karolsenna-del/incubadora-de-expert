@@ -17,6 +17,18 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Diagnóstico do Expert — leads de 29/10 importados
+
+Pré-diagnósticos de Diogo Vinicius Kroetz (com Juliana Pasqual) e Arley Bastos importados pra sessão. Card ficou enxuto (versão 13): sem perguntas de qualificação e sem promessa/provas, a pedido da Karol. No card do Diogo, o texto completo foi trocado por um resumo (o original segue na planilha).
+
+## Sessão estratégica: Juliana Pasqual / Dr. Diogo (29/10/2026)
+
+Roteiro pronto em `business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/juliana-pasqual-sessao.md` (Vendedor Secreto). Juliana (esposa, aluna da Arcane, fez o app) faz a sessão; Diogo é o expert (pediatra integrativo, Método Presença). Oferta: Método VIP (R$1.500 pix ou 12x R$150). Pontos: perguntar onde ficou o app (no pré-diagnóstico ela não falou dele), Diogo entrar no fim (decide junto), perfil Diretivo como hipótese. Fala de que a sessão é fora da Arcane na abertura. Apresentação do Método VIP criada (`business/campanhas/metodo-vip/apresentacao-oferta-vip.html`, 10 telas no molde da Express, conteúdo da página do VIP, serve pra qualquer sessão). Sessão feita em 29/10: ofertado o VIP, ela disse que vai fechar; cadastrada no CRM (em_conversa, aguardando pagamento, próximo contato 30/10 11h).
+
+## Área de Membros — sync semanal das lives (29/10/2026)
+
+Rodada automática de 29/10: nada subiu. A Live 34 (21/10) segue parada porque a pasta nova do Meet não está compartilhada com karol.franzini@gmail.com (link: https://drive.google.com/drive/folders/1VY_QEjSVPO7LhqE3SFqtKsrnkPssxnvC); compartilhando, a próxima rodada sobe sozinha. A Live 35 (28/10) não tem gravação no Drive. Detalhe no Mission Log do course-publisher (#40).
+
 ## Deck da Live 35 (28/10/2026)
 
 Ajustes da Karol no deck (https://claude.ai/artifact/MeiiKcJNbC9sjn7N9RMrqC, 30 slides) e no roteiro, salvos e entregues: os "8 lançamentos" saíram de tudo (slide 7 virou "quando lancei em gestão de empresa, cometi esse erro"); slide 17 = roda do looping (Chutar → Definir → Testar → Corrigir, PDCA); slide 24 = quiz da persona com CTA "comenta PERSONA" (só menciona, quiz vai como HTML, nada a liberar); slide 25 = Resumo; CTA MATERIAL do Instagram saiu. Exemplo do Tasso (sonho x compradora) foi pedido e cancelado. Depois da live: mandar o quiz pra quem comentou PERSONA. Live 36 ainda sem deck.
@@ -573,3 +585,6 @@ Retomar com: `/expert-companion`
 - 25/10/2026: 6 carrosséis do dia AGENDADOS no Instagram, 20h BRT: 26/10 iPhone Duo, 27 Instagram juiz, 28 Steve Jobs, 29 medo de cobrar caro, 30 Amazon, 31 vender tudo que sabe (workflows ativos no GitHub, push feito). Fila: fracassos-viram-metodo segue sem legenda.
 
 - 25/10/2026 — Garimpeiro: aba Garimpo reformatada (cores por situação, ordem por prioridade, colunas de sistema ocultas, aba Legenda), conferida no navegador. 119 leads ainda esperando revisão da Karol.
+
+### 29/10/2026 — Reels "Especialista x generalista" editado
+- Pronto: `C:/Users/karol/Videos/edicao-euriliana/especialista-generalista/saida/especialista-generalista-final.mp4` (1,05x, 79 s, vertical). Conferência final ok (-14,6 LUFS, legenda no tempo, 97% da fala, 0 corte em voz). Headline no topo, dentro da margem do feed. Só animação, sem IA de imagem. Esperando a Karol assistir.

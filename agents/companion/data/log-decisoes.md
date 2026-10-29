@@ -808,3 +808,27 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Contexto:** Karol revisou a página /express de onboarding.
 **Decisão:** promessa da Express passa a ser "30 dias até a sua primeira venda no digital" (sem "Secreta" na promessa; Venda Secreta segue como nome da etapa). WhatsApp (67) 99232-4690 é o suporte ao aluno e canal oficial de comunicação, em todas as versões da página (Individual, Grupo, Express). Topo da /express diz "Incubadora Express"; botões da Área e do DNA alinhados; Sessões 4 e 5 empilhadas.
 **Impacto:** mensagem da Express na Central e no processo de onboarding com a promessa nova. Publicado e conferido no ar em 28/10.
+
+## 29/10/2026 — Headline dos Reels vai no topo
+**Contexto:** a headline de abertura ficava no meio da tela, em cima do rosto da Karol.
+**Decisão:** a headline fica no topo, dentro da margem segura do feed (corte 4:5), em 2 linhas. Continua com caixa preta, letra branca e a palavra-chave em laranja.
+**Racional:** aparecer no feed sem cobrir o rosto.
+**Impacto:** vale para todas as edições de Reels (anotado em custom-do-aluno.md).
+
+## 29/10/2026 — Card do Diagnóstico do Expert fica enxuto
+**Contexto:** a pedido de "puxar as respostas" pra sessão, o card ganhou as perguntas de qualificação; a Karol não queria isso.
+**Decisão:** card sem acompanha/prazo/quem decide/perfis de referência e sem promessa/provas (versão 13). Leads Diogo e Arley importados.
+**Racional:** ela só precisa das respostas carregadas pra conduzir a sessão.
+**Impacto:** mesmo link; processo atualizado em business/processos/sincronizar-pre-diagnostico-radar-expert.md.
+
+## 29/10/2026 — Sessão da Juliana Pasqual: Método VIP
+**Contexto:** Juliana (aluna da Arcane, esposa do Dr. Diogo, pediatra integrativo com o Método Presença) respondeu o pré-diagnóstico em 29/10.
+**Decisão:** ofertar o Método VIP (a Karol decidiu): ela só precisa de direção e prioridade, a execução fica com o Auroq.
+**Racional:** método com nome, tecnologia (app) e execução já existem; falta a ordem do que vem primeiro, e o Diogo tem pouco tempo.
+**Impacto:** roteiro em business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/juliana-pasqual-sessao.md.
+
+## 29/10/2026 — Juliana Pasqual no CRM aguardando pagamento do Método VIP
+**Contexto:** sessão de vendas de 29/10 com a Juliana (pelo Dr. Diogo); ofertado o Método VIP.
+**Decisão:** ela disse que vai fechar; lead cadastrado no CRM (origem sessao_estrategica, status em_conversa, mesmo padrão da Bruna), próximo contato 30/10 às 11h.
+**Racional:** pedido da Karol.
+**Impacto:** follow-up registrado; atualizar pra "fechou" quando o pagamento cair.
