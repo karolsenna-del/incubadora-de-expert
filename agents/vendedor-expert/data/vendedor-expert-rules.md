@@ -69,4 +69,12 @@
 
 ---
 
-*Novas regras: numerar R-008 em diante, sempre com contexto, motivo e checklist.*
+## R-008 — Reler a abordagem antes da próxima mensagem
+
+**Contexto:** 29/10/2026, lead do Garimpo respondeu "sim" à pergunta da abordagem (ensinar outros profissionais) e a resposta seguinte perguntou de novo o público.
+**Motivo:** repetir pergunta respondida mostra que ninguém leu a conversa e esfria o lead.
+**Checklist:**
+- [ ] Li a mensagem que a Karol mandou antes (Copy do Garimpo, ficha do CRM ou print)?
+- [ ] A pergunta nova parte do que a lead já respondeu, sem refazer a anterior?
+
+*Novas regras: numerar R-009 em diante, sempre com contexto, motivo e checklist.*

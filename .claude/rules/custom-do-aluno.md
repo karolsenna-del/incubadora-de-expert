@@ -62,3 +62,7 @@ outras rules. Exemplos:
 ### Diagnóstico do Expert
 
 - "Puxa as respostas do diagnóstico" = importar os pré-diagnósticos novos pra sessão, sem mexer no card da ferramenta. Card fica enxuto: sem acompanha/prazo/quem decide/perfis de referência e sem promessa/provas (Karol, 29/10).
+
+### Conversa de venda (Vendedor Expert)
+
+- Antes de escrever a próxima mensagem, reler a abordagem já enviada e o que a lead respondeu: nunca perguntar de novo o que ela já respondeu (Karol, 29/10: a abordagem perguntava sobre ensinar profissionais, ela disse sim, e a resposta perguntou "profissionais ou gestantes?").

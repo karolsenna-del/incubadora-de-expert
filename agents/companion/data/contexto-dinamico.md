@@ -25,6 +25,10 @@ Pré-diagnósticos de Diogo Vinicius Kroetz (com Juliana Pasqual) e Arley Bastos
 
 Roteiro pronto em `business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/juliana-pasqual-sessao.md` (Vendedor Secreto). Juliana (esposa, aluna da Arcane, fez o app) faz a sessão; Diogo é o expert (pediatra integrativo, Método Presença). Oferta: Método VIP (R$1.500 pix ou 12x R$150). Pontos: perguntar onde ficou o app (no pré-diagnóstico ela não falou dele), Diogo entrar no fim (decide junto), perfil Diretivo como hipótese. Fala de que a sessão é fora da Arcane na abertura. Apresentação do Método VIP criada (`business/campanhas/metodo-vip/apresentacao-oferta-vip.html`, 10 telas no molde da Express, conteúdo da página do VIP, serve pra qualquer sessão). Sessão feita em 29/10: ofertado o VIP, ela disse que vai fechar; cadastrada no CRM (em_conversa, aguardando pagamento, próximo contato 30/10 11h).
 
+## Garimpo: lote de 29/10/2026
+
+20 aprovados do Garimpo abordados pela Karol (11 mensagens novas escritas pelo Vendedor Expert + 9 já prontas); todos como "Abordagem feita" na aba Garimpo. 1 respondeu (tem vontade de ensinar outros profissionais, falta tempo); follow-up pra 30/10 anotado na linha dela.
+
 ## Área de Membros — sync semanal das lives (29/10/2026)
 
 Rodada automática de 29/10: nada subiu. A Live 34 (21/10) segue parada porque a pasta nova do Meet não está compartilhada com karol.franzini@gmail.com (link: https://drive.google.com/drive/folders/1VY_QEjSVPO7LhqE3SFqtKsrnkPssxnvC); compartilhando, a próxima rodada sobe sozinha. A Live 35 (28/10) não tem gravação no Drive. Detalhe no Mission Log do course-publisher (#40).
