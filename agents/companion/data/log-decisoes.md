@@ -832,3 +832,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** ela disse que vai fechar; lead cadastrado no CRM (origem sessao_estrategica, status em_conversa, mesmo padrão da Bruna), próximo contato 30/10 às 11h.
 **Racional:** pedido da Karol.
 **Impacto:** follow-up registrado; atualizar pra "fechou" quando o pagamento cair.
+
+## 30/10/2026 — Hunt (Tasso, Método VIP): materiais reposicionados como assessoria de compra paga pelo comprador
+**Contexto:** no Encontro 2 (23/10) a promessa "sem custo adicional para a compradora" caiu por risco de propaganda enganosa.
+**Decisão:** a aba "Ajustes nos seus materiais" da página do Tasso foi refeita: 5% sobre o valor de compra, pagos pelo comprador no sinal, só se comprar; due diligence incluída; reforma e mudança fora da conta. Slides novos de Investimento e "Como você acompanha", falas de fechamento e objeções do preço.
+**Racional:** pedido da Karol, com base no encontro.
+**Impacto:** https://claude.ai/artifact/DisG8Kk7Dv6VhkMqXe8o7y (versão 16). Em aberto: se a Hunt divide algo com o corretor do vendedor.
