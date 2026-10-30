@@ -3,6 +3,28 @@
 > Decisoes importantes registradas com racional e contexto. Append-only.
 
 <!-- Formato:
+
+## 30/10/2026 — Juliana Pasqual fechou o Método VIP
+
+**Contexto:** Sessão de vendas de 29/10 (Juliana pelo Dr. Diogo), ofertado o Método VIP (R$1.500 pix ou 12x R$150).
+**Decisão:** Venda fechada (Karol, 30/10). Forma de pagamento não informada.
+**Racional:** Confirmação da Karol.
+**Impacto:** CRM marcado como "fechou". Próximo passo é o onboarding do VIP.
+
+## 30/10/2026 — Meta de 1 ano: R$50 mil/mês em meio período
+
+**Contexto:** Pergunta do post de domingo 01/11 (Rota100k): onde a Karol quer estar daqui a um ano.
+**Decisão:** Novembro de 2027 faturando R$50.000/mês, trabalhando meio período.
+**Racional:** Meta declarada pela Karol (30/10).
+**Impacto:** Vira compromisso público no Reels de domingo 15h; referência pra planejamento de 2027.
+
+## 30/10/2026 — Novembro: foco total em comercial
+
+**Contexto:** Meta de 1 abordagem por dia deu resultado; em outubro a meta subiu pra 3 sessões de Vendas Secretas por semana. Mentoria redonda e produtos prontos.
+**Decisão:** Novembro é foco total em comercial (rotina comercial como coração do negócio).
+**Racional:** Antes, sem produto pronto, nem a Karol tinha clareza do que oferecer e o lead não entendia a jornada dele no produto; agora o timing chegou.
+**Impacto:** Conteúdo de novembro abre com isso (Rota100k Dom 01/11 07h). Prioridade do mês é a rotina comercial.
+
 ## [DATA] — [TITULO DA DECISAO]
 **Contexto:** [o que estava acontecendo]
 **Decisao:** [o que foi decidido]
@@ -838,3 +860,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** a aba "Ajustes nos seus materiais" da página do Tasso foi refeita: 5% sobre o valor de compra, pagos pelo comprador no sinal, só se comprar; due diligence incluída; reforma e mudança fora da conta. Slides novos de Investimento e "Como você acompanha", falas de fechamento e objeções do preço.
 **Racional:** pedido da Karol, com base no encontro.
 **Impacto:** https://claude.ai/artifact/DisG8Kk7Dv6VhkMqXe8o7y (versão 16). Em aberto: se a Hunt divide algo com o corretor do vendedor.
+
+## 30/10/2026 — Materiais da Milena no padrão atual do Expert360º, com o M4 puxando do relatório da Autoridade Tríplice
+**Contexto:** a pasta da Milena tinha os materiais antigos, em branco e sem os prompts. O Agente da Autoridade Tríplice agora entrega Frase-Tese, bio, pilares editoriais, quadros, banco de ideias e roteiros-modelo.
+**Decisão:** arquivos da Milena trocados pelos do curso, mantendo o que ela já tinha. No M4, Frase-Tese e bio registradas direto do relatório (sem o prompt das 5 opções), e a Linha Editorial usa os 5 pilares do relatório em vez de gerar 3 novos. M2.4 (3 Jornadas) fica de fora porque o agente do Processo Autoral já cria.
+**Racional:** pedido da Karol; o relatório já traz esses resultados.
+**Impacto:** a Milena tem os prompts prontos do M4.3 ao M4.7. Os outros alunos e o `_template` continuam na versão antiga.

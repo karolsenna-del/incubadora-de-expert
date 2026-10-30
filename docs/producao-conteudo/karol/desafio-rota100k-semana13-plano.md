@@ -589,22 +589,24 @@ Responde a terceira nos comentários. Me segue.
 
 ## DIA 7: Domingo, 01/11 · abre novembro
 
-> ⚠️ **O domingo depende de duas respostas suas:** (1) qual é a sua "uma coisa por mês" em novembro e em dezembro; (2) onde você quer estar daqui a um ano. Os rascunhos abaixo usam o que está nos arquivos (abordagem dos 150 perfis do Garimpeiro começou em outubro; o módulo 3 do curso fecha em 31/10). Troca o que não for o seu plano.
+> ✅ **Domingo com as respostas da Karol (30/10):** novembro = foco total em comercial (07h); daqui a um ano = R$50 mil/mês trabalhando meio período (15h). Os rascunhos abaixo usam o que está nos arquivos (abordagem dos 150 perfis do Garimpeiro começou em outubro; o módulo 3 do curso fecha em 31/10). Troca o que não for o seu plano.
 
 ### 07h · Reels 7s · sem fala
-**Gancho de tela:** "Novembro. Dois meses até 31/12. Eu já sei o que vou fechar."
+**Gancho de tela:** "Novembro. Foco total em uma coisa só: vender."
 
 **Legenda:**
-Faltam 60 dias pro ano acabar.
-Eu não vou começar nada novo.
-Vou escolher uma coisa por mês e terminar.
-Novembro: [⚠️ ex.: conversar com todos os perfis que o meu garimpo de clientes encontrou].
-Dezembro: [⚠️ a sua escolha].
-Só isso. Duas coisas, terminadas.
-Terminar uma coisa vale mais do que começar dez.
-Falei em público pra me comprometer.
-E você, o que fecha até 31/12? Comenta.
-Me segue.
+Em setembro, a minha meta era uma abordagem por dia. Deu resultado.
+Em outubro, eu subi pra três sessões de venda por semana.
+Rotina comercial é o coração do negócio. Eu sempre ouvi isso e nunca apliquei.
+Antes não adiantava: eu não tinha produto pronto pra entregar.
+E sem produto pronto, nem eu tinha clareza do que estava oferecendo.
+O lead não deixava de comprar por falta de interesse no meu conhecimento.
+Ele não entendia como ia ser a jornada dele dentro do produto.
+Hoje a mentoria está redonda e os produtos estão prontos.
+Então novembro é foco total em comercial.
+Cada especialista tem o seu tempo. O seu está em qual etapa? Comenta.
+
+*(Texto da Karol (30/10): meta de 1 abordagem/dia que deu resultado → em outubro 3 sessões de Vendas Secretas por semana; só agora, com produto pronto, foco total em comercial. "Vendas Secretas" fica fora do público (é analogia, não nome): virou "sessões de venda". Ficou só novembro: o dezembro saiu do post.)*
 
 ### 09h · Reels YAP
 **O que essa semana de histórias mostrou.**
@@ -639,14 +641,15 @@ Me segue.
 *(React da S12 que a Karol não postou (27/10). No domingo porque o dia é de planejar o que vem: "saber o próximo passo quando o cenário muda". Substitui o "o que eu quero fazer nos próximos 2 meses", que repetia a pergunta do 07h (nov/dez); o 07h segue com ela. Sem nomear o jogo nem os times na legenda: só o que está na fala.)*
 
 ### 15h · Reels PESSOAL
-**Onde eu quero estar daqui a um ano.** ⚠️ *precisa da sua resposta*
-**1. O momento (0-5s):** "Daqui a um ano, em novembro de 2027, eu quero [⚠️]."
-**2. O que eu sinto:** "Não é meta de número. É [⚠️]."
-**3. O que mudou:** "Há dois anos, a minha meta era só sair da empresa pública. Hoje é [⚠️]."
+**Onde eu quero estar daqui a um ano.**
+**1. O momento (0-5s):** "Daqui a um ano, em novembro de 2027, eu quero faturar 50 mil por mês trabalhando meio período."
+**2. O que eu sinto:** "O número eu falo fácil. O que eu quero de verdade é o meio período." ⚠️ *leitura da squad, confirma*
+**3. O que mudou:** "Há dois anos, a minha meta era só sair da empresa pública. Hoje é ter um negócio que não precisa de mim o dia inteiro."
 **4. A ponte (escrita na tela):** "Se você ainda está no emprego e não sabe onde quer estar daqui a um ano, começa por onde você não quer estar. Foi assim comigo."
 **5. O convite:** "Comenta onde você quer estar daqui a um ano. Se der errado, eu volto aqui e conto."
 
 **Legenda:**
+Novembro de 2027: 50 mil por mês, trabalhando meio período.
 Falo em público pra me comprometer.
 Onde você quer estar daqui a um ano? Comenta.
 Me segue.
@@ -685,7 +688,7 @@ Me segue.
 ## O que falta da Karol antes de gravar
 
 1. **Quinta:** a sua rotina real, com horários (15h e 20h). O resto da quinta já está pronto.
-2. **Domingo:** uma coisa pra novembro, uma pra dezembro (07h) e onde você quer estar daqui a um ano (15h).
+2. ~~**Domingo:**~~ pronto (30/10): 07h com o novembro e 15h com a meta de 1 ano. Só confirmar a leitura do 15h ("o que eu quero de verdade é o meio período").
 3. Leituras da squad pra confirmar (marcadas com ⚠️): Ter 12h ("continuar foi falta de alternativa"), Qua 15h (a lição do troféu), Sex 15h ("ela tinha direito às férias"), Sex 12h ("custou anos"), Qui 17h ("melhor dia da semana"), Sex 17h ("meses depois").
 
 ## Reservas que vieram da Semana 12
@@ -693,6 +696,8 @@ Me segue.
 Ficam guardadas: o tema da semana é pessoal e elas são de teste e comparação. Ranking "de onde vem o primeiro cliente", "Quando o caro compensa", carrossel "roteiro de um teste honesto em 5 passos".
 
 ## LOG
+- 30/10 — @companion: Dom 15h preenchido com a meta de 1 ano da Karol (R$50 mil/mês, meio período).
+- 30/10 — @companion: Dom 07h reescrito com o texto da Karol sobre novembro (foco total em comercial; produto pronto antes de vender). Só novembro, sem dezembro.
 - 27/10 — @rico: os 2 reacts da S12 entram: React 2 no Sáb 12h (#20 volta pra reserva), React 1 no Dom 12h (sai o "próximos 2 meses", que repetia o 07h). Legendas novas.
 - 27/10 — @rico: Qui 09h = vídeo da Karol "vendendo pouco = prospectando pouco" + legenda; "Como eu organizo o meu dia" volta pra reserva.
 - 27/10 — @rico: Qua 09h = vídeo da Karol "quem vende curso ensinando a vender curso é picareta?" + legenda; "No que eu acredito" volta pra reserva.

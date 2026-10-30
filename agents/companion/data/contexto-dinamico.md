@@ -17,13 +17,21 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Milena Gehrke — materiais do Expert360º atualizados com os prompts (30/10)
+
+Os arquivos M0–M4 da pasta da Milena estavam na versão antiga (sem prompts). Agora seguem o modelo atual do curso, com o que ela já tinha mantido. M4.1 tem o relatório completo da Autoridade Tríplice (Conduz Agro); M4.2 tem a Frase-Tese "Técnica gera entrega. Condução gera autoridade." e a bio; M4.6 tem os 5 pilares do relatório e um prompt que gera o banco de temas e encaixa os pilares na grade semanal. M2.4 (3 Jornadas) ficou de fora: o agente do Processo Autoral já cria. Em aberto: as outras alunas e o `_template` seguem na versão antiga; os materiais do M4 do curso ainda não acompanham a v2 do agente (tarefa pendente no tracker do curso).
+
+## Novembro = foco total em comercial (30/10/2026)
+
+Karol definiu: novembro é foco total em comercial (meta de 3 sessões de Vendas Secretas por semana, vinda de outubro). Post de domingo 01/11 07h (Rota100k S13) reescrito com o texto dela. Domingo 15h preenchido com a meta de 1 ano dela: R$50 mil/mês trabalhando meio período (nov/2027). Live 34: pasta compartilhada com karol.franzini em 30/10 (confirmado); próxima rodada do sync sobe. Live 35: sem gravação no Drive dela; às 15h de 28/10 a única gravação é a sessão da Milena.
+
 ## Diagnóstico do Expert — leads de 29/10 importados
 
 Pré-diagnósticos de Diogo Vinicius Kroetz (com Juliana Pasqual) e Arley Bastos importados pra sessão. Card ficou enxuto (versão 13): sem perguntas de qualificação e sem promessa/provas, a pedido da Karol. No card do Diogo, o texto completo foi trocado por um resumo (o original segue na planilha).
 
 ## Sessão estratégica: Juliana Pasqual / Dr. Diogo (29/10/2026)
 
-Roteiro pronto em `business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/juliana-pasqual-sessao.md` (Vendedor Secreto). Juliana (esposa, aluna da Arcane, fez o app) faz a sessão; Diogo é o expert (pediatra integrativo, Método Presença). Oferta: Método VIP (R$1.500 pix ou 12x R$150). Pontos: perguntar onde ficou o app (no pré-diagnóstico ela não falou dele), Diogo entrar no fim (decide junto), perfil Diretivo como hipótese. Fala de que a sessão é fora da Arcane na abertura. Apresentação do Método VIP criada (`business/campanhas/metodo-vip/apresentacao-oferta-vip.html`, 10 telas no molde da Express, conteúdo da página do VIP, serve pra qualquer sessão). Sessão feita em 29/10: ofertado o VIP, ela disse que vai fechar; cadastrada no CRM (em_conversa, aguardando pagamento, próximo contato 30/10 11h).
+Roteiro pronto em `business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/juliana-pasqual-sessao.md` (Vendedor Secreto). Juliana (esposa, aluna da Arcane, fez o app) faz a sessão; Diogo é o expert (pediatra integrativo, Método Presença). Oferta: Método VIP (R$1.500 pix ou 12x R$150). Pontos: perguntar onde ficou o app (no pré-diagnóstico ela não falou dele), Diogo entrar no fim (decide junto), perfil Diretivo como hipótese. Fala de que a sessão é fora da Arcane na abertura. Apresentação do Método VIP criada (`business/campanhas/metodo-vip/apresentacao-oferta-vip.html`, 10 telas no molde da Express, conteúdo da página do VIP, serve pra qualquer sessão). Sessão feita em 29/10: ofertado o VIP, ela disse que vai fechar; cadastrada no CRM. **30/10: Juliana fechou o Método VIP** (confirmado pela Karol; CRM marcado como "fechou").
 
 ## Garimpo: lote de 29/10/2026
 
@@ -592,3 +600,12 @@ Retomar com: `/expert-companion`
 
 ### 29/10/2026 — Reels "Especialista x generalista" editado
 - Pronto: `C:/Users/karol/Videos/edicao-euriliana/especialista-generalista/saida/especialista-generalista-final.mp4` (1,05x, 79 s, vertical). Conferência final ok (-14,6 LUFS, legenda no tempo, 97% da fala, 0 corte em voz). Headline no topo, dentro da margem do feed. Só animação, sem IA de imagem. Esperando a Karol assistir.
+
+## 29/10/2026 — Diagnóstico dos carrosséis parados (postador)
+- Causa: o Facebook derrubou a sessão do token (troca de senha/segurança). Falharam: sex-ficar-sair (24/10), sab-5-mitos (25/10), apple-iphone (26/10).
+- Já corrigido em 27/10 (token novo + agenda empurrada, commit f5e89d2). Saíram 27/10 e 28/10.
+- Agenda atual 20h: apple 29/10 (atrasado no GitHub às 21h), juiz 30/10, steve-jobs 31/10, medo-cobrar 01/11, amazon 02/11, vender-tudo 03/11, vender-pouco 04/11.
+- Fila: fracassos-viram-metodo tem 8 slides, falta legenda.txt.
+- Legenda do fracassos-viram-metodo escrita (CTA AULA) e salva na fila; aguarda OK da Karol pra agendar 05/11 20h.
+- Convite preto da live (slide 9) + CTA AULA na legenda colocados nos 7 carrosséis agendados (29/10 a 04/11) e no fracassos-viram-metodo; no GitHub (commit 4b378cb).
+- 30/10: Apple publicado com 9 slides (convite) às 23h20; fracassos-viram-metodo agendado 05/11 20h e no GitHub.
