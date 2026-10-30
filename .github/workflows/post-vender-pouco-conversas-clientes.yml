@@ -26,7 +26,7 @@ jobs:
 
             Talvez você não precise de mais audiência agora. Precise aproveitar melhor as oportunidades de conversa que já existem.
 
-            Me segue que eu te ensino a transformar seu conhecimento em método e seu método em um modelo de negócio.
+            Se você quer aprender a transformar seu conhecimento em método e seu método em um modelo de negócio, comenta “AULA” que eu te envio o link do mini treinamento.
         run: |
           python3 - <<'EOF'
           import os, time, requests, urllib.parse as up
@@ -44,7 +44,8 @@ jobs:
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1793069696/instagram-carrosseis/vender-pouco-conversas-clientes/slide-05.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1793069697/instagram-carrosseis/vender-pouco-conversas-clientes/slide-06.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1793069698/instagram-carrosseis/vender-pouco-conversas-clientes/slide-07.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1793069700/instagram-carrosseis/vender-pouco-conversas-clientes/slide-08.png"
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1793069700/instagram-carrosseis/vender-pouco-conversas-clientes/slide-08.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1793325388/instagram-carrosseis/convites/convite-live-expert360-preto.png"
           ]
 
           def meta_post(path, data):

@@ -42,7 +42,8 @@ jobs:
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959551/instagram-carrosseis/vender-tudo-que-sabe/slide-05.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959552/instagram-carrosseis/vender-tudo-que-sabe/slide-06.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959554/instagram-carrosseis/vender-tudo-que-sabe/slide-07.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959555/instagram-carrosseis/vender-tudo-que-sabe/slide-08.png"
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959555/instagram-carrosseis/vender-tudo-que-sabe/slide-08.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1793325388/instagram-carrosseis/convites/convite-live-expert360-preto.png"
           ]
 
           def meta_post(path, data):

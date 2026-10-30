@@ -44,7 +44,8 @@ jobs:
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959530/instagram-carrosseis/medo-de-cobrar-caro/slide-05.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959531/instagram-carrosseis/medo-de-cobrar-caro/slide-06.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959533/instagram-carrosseis/medo-de-cobrar-caro/slide-07.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959534/instagram-carrosseis/medo-de-cobrar-caro/slide-08.png"
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959534/instagram-carrosseis/medo-de-cobrar-caro/slide-08.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1793325388/instagram-carrosseis/convites/convite-live-expert360-preto.png"
           ]
 
           def meta_post(path, data):

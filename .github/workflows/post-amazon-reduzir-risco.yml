@@ -29,6 +29,8 @@ jobs:
             Isso dá mais segurança pra quem compra e pra quem vende.
 
             Menos pressão. Mais segurança.
+
+            Se você quer aprender a validar sua oferta com poucas pessoas antes de se expor, comenta “AULA” que eu te envio o link do mini treinamento.
         run: |
           python3 - <<'EOF'
           import os, time, requests, urllib.parse as up
@@ -46,7 +48,8 @@ jobs:
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959541/instagram-carrosseis/amazon-reduzir-risco/slide-05.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959542/instagram-carrosseis/amazon-reduzir-risco/slide-06.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959544/instagram-carrosseis/amazon-reduzir-risco/slide-07.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959545/instagram-carrosseis/amazon-reduzir-risco/slide-08.png"
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959545/instagram-carrosseis/amazon-reduzir-risco/slide-08.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1793325388/instagram-carrosseis/convites/convite-live-expert360-preto.png"
           ]
 
           def meta_post(path, data):

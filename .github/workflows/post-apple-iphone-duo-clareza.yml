@@ -39,6 +39,8 @@ jobs:
             Não venda tudo o que existe dentro do método.
 
             Venda com clareza onde ele leva.
+
+            Se você quer aprender a transformar o que sabe em um método claro e vendável, comenta “AULA” que eu te envio o link do mini treinamento.
         run: |
           python3 - <<'EOF'
           import os, time, requests, urllib.parse as up
@@ -56,7 +58,8 @@ jobs:
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959498/instagram-carrosseis/apple-iphone-duo-clareza/slide-05.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959500/instagram-carrosseis/apple-iphone-duo-clareza/slide-06.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959501/instagram-carrosseis/apple-iphone-duo-clareza/slide-07.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959502/instagram-carrosseis/apple-iphone-duo-clareza/slide-08.png"
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959502/instagram-carrosseis/apple-iphone-duo-clareza/slide-08.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1793325388/instagram-carrosseis/convites/convite-live-expert360-preto.png"
           ]
 
           def meta_post(path, data):

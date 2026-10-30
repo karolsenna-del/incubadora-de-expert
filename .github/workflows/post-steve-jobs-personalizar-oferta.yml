@@ -37,6 +37,8 @@ jobs:
             Quando existe padrão, fica mais fácil explicar, vender, entregar e melhorar.
 
             Personalize a experiência. Não reinvente a oferta.
+
+            Se você quer montar uma oferta com uma espinha dorsal clara, sem reinventar tudo a cada cliente, comenta “AULA” que eu te envio o link do mini treinamento.
         run: |
           python3 - <<'EOF'
           import os, time, requests, urllib.parse as up
@@ -54,7 +56,8 @@ jobs:
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959520/instagram-carrosseis/steve-jobs-personalizar-oferta/slide-05.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959521/instagram-carrosseis/steve-jobs-personalizar-oferta/slide-06.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959522/instagram-carrosseis/steve-jobs-personalizar-oferta/slide-07.png",
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959524/instagram-carrosseis/steve-jobs-personalizar-oferta/slide-08.png"
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1792959524/instagram-carrosseis/steve-jobs-personalizar-oferta/slide-08.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1793325388/instagram-carrosseis/convites/convite-live-expert360-preto.png"
           ]
 
           def meta_post(path, data):
