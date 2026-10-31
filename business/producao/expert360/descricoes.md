@@ -150,10 +150,10 @@ A distinção que muda como você usa o Instagram: influência vs autoridade. In
 O Funil de Consciência: os 3 estágios da sua persona (Topo, Meio e Fundo) e que tipo de conteúdo fala com ela em cada estágio. Por que criar só conteúdo de Fundo (vender direto) não converte a maioria da audiência — e o calendário mínimo viável pra cobrir os 3.
 
 ### 03-relatorio-autoridade
-Exercício guiado: rodar o Agente da Autoridade Tríplice com P1, P2 e P3 para gerar o Relatório da Autoridade Tríplice — o documento que unifica quem você é, para quem fala e como entrega. Base de tudo que vem nas próximas quatro aulas.
+Exercício guiado: rodar o Agente da Autoridade Tríplice com P1, P2 e P3 para gerar o Relatório da Autoridade Tríplice — o documento que unifica quem você é, para quem fala e como entrega, e já traz pronta a sua Frase-Tese Autoral e a sua bio do Instagram. Base de tudo que vem nas próximas quatro aulas.
 
 ### 04-montando-sua-vitrine
-Aula prática com o Instagram aberto: montar as 6 peças da vitrine (foto, bio, frase-tese, narrativa de posicionamento, destaques e posts fixados) a partir do Relatório da Tríplice. Vale para quem está criando o perfil do zero ou ajustando o que já existe.
+Aula prática com o Instagram aberto: montar as 6 peças da vitrine a partir do Relatório da Tríplice: foto, bio e frase-tese (que já vêm prontas do relatório), narrativa de posicionamento, destaques e posts fixados. Vale para quem está criando o perfil do zero ou ajustando o que já existe.
 
 ### 05-linha-editorial
 Construir a linha editorial com 3 pilares nomeados, banco de ~30 temas e a grade semanal fixa que se repete por 4 semanas. O "plano de 30 dias" que não significa 30 posts prontos — significa uma estrutura que você consegue sustentar sem travar.

@@ -866,3 +866,14 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** arquivos da Milena trocados pelos do curso, mantendo o que ela já tinha. No M4, Frase-Tese e bio registradas direto do relatório (sem o prompt das 5 opções), e a Linha Editorial usa os 5 pilares do relatório em vez de gerar 3 novos. M2.4 (3 Jornadas) fica de fora porque o agente do Processo Autoral já cria.
 **Racional:** pedido da Karol; o relatório já traz esses resultados.
 **Impacto:** a Milena tem os prompts prontos do M4.3 ao M4.7. Os outros alunos e o `_template` continuam na versão antiga.
+
+## 30/10/2026 — M4 do curso: frase-tese e bio saem do Agente da Autoridade Tríplice
+**Contexto:** a v2 do agente (20/10) entrega Tese Autoral com Frase-Tese e Bio; o M4 ainda mandava gerar 5 frases polarizadoras e bio em 3 linhas.
+**Decisão:** M4.2 vira registro da frase-tese e da bio do relatório (com teste da voz alta); roteiro A3/A4, M4.1, M4.5 e descrições acompanham. Linha editorial e roteiros continuam gerados pelos prompts (o agente padrão não entrega pilares nem roteiros; o relatório da Milena traz porque a conversa dela foi além).
+**Racional:** pedido da Karol ("atualiza o M4 do curso"), seguindo o mapa do handoff de 20/10.
+**Impacto:** M4 pronto pra gravar com o agente atual. Falta publicar o site da área de membros com as descrições novas.
+
+## 30/10/2026 — Modelo das alunas alinhado ao curso
+**Contexto:** o `_template` e os M4 do David no repo estavam com a versão antiga, sem os prompts.
+**Decisão:** o `_template` agora usa os materiais do curso (M0–M4, mais a planilha do M2.2 e o M3.5). Os M4 do David, que estavam em branco, viraram a versão do curso. Os alunos da estrutura antiga (Analía, Helio, Ricardo e Rodrigo) e os Drives deles ficaram como estavam, porque usam outro currículo.
+**Impacto:** aluna nova já começa com os prompts. As descrições novas da A3 e da A4 do M4 só aparecem na área de membros depois do deploy.

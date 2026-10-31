@@ -99,6 +99,7 @@ Ver [briefing.md](briefing.md) pro desenho completo (publico, telas, vitrine, de
 
 > Mais recente primeiro.
 
+- 30/10 — @companion: Descrições da A3 e da A4 do M4 atualizadas em `js/descricoes-aulas.js` (Agente da Autoridade Tríplice v2: frase-tese e bio saem prontas do relatório). `node -c` OK. Deploy feito pela Karol (dpl_Ahx2Hbocnajc3mm2DieAWKzg2YqT), confirmado via curl no domínio.
 - 21/10 — @gpt-publisher: Seção 4 (Portfólio Estratégico) de `handoff-agentes-biblioteca-ia.md` recebeu a camada obrigatória das 5 ferramentas essenciais, mesma mudança da v2 já colada no GPT.
 - 20/10 — @gpt-publisher: Seção 6 (Autoridade Tríplice) de `handoff-agentes-biblioteca-ia.md` atualizada com a v2 publicada no GPT hoje: Tese Autoral com sintoma/causa oculta sugeridos pelo agente, Frase-Tese "memorável" e nova Seção 5 (bio "Eu ajudo…" até 150 caracteres + CTA). Texto pronto pra quando o `AGENTES_CONFIG` for preenchido.
 - 18/10 — @companion: weekly — Biblioteca de IA segue congelada até o teste da Incubadora Express responder. Foco do projeto: publicar o acesso de 6 meses da Express (produto Voomp #17442, programado em 17/10) e as aulas M3 A9-A13 até 31/10.

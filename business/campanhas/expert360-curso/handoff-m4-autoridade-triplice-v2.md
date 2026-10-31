@@ -28,3 +28,7 @@ Texto do agente: `agents/gpt-publisher/output/autoridade-triplice/custom-gpt/Ins
 | `business/producao/expert360/descricoes.md` l. 156 e `business/campanhas/area-de-membros/site/js/descricoes-aulas.js` l. 80 | Descrição da A4 | Cita frase-tese entre as peças montadas na aula |
 
 O que fazer com o M4.2 (remover, ou virar só o espaço de registro da frase-tese) e como a Aula 4 fica é decisão do course-creator com a Karol.
+
+## Resolvido em 30/10/2026
+
+Todos os trechos do mapa foram ajustados (decisão: M4.2 fica como registro da frase-tese e da bio). O site da área de membros ainda não foi publicado com as descrições novas.

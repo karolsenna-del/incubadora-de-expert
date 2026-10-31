@@ -203,7 +203,7 @@ Portfólio de ferramentas foi movido para o M2 (Bloco do Ecossistema). Rastreado
 
 | # | Aula | Objetivo | Com o que sai |
 |---|------|----------|---------------|
-| 4 | Montando sua Vitrine: Perfil, Bio, Destaques e Posts Fixados | A partir do relatório da Autoridade Tríplice (Aula 3): foto de perfil, bio em 3 linhas, frase-tese autoral, narrativa de posicionamento (parte da história dela e do método, M0+M2 — não precisa de prova de aluno), os 3 destaques fixos e os 3 posts fixados (frase-tese vira Pinned 2, narrativa vira Destaque 1 + Pinned 1). | Perfil completo: foto + bio publicável + tese autoral + narrativa + 3 destaques roteirizados + 3 posts fixados roteirizados |
+| 4 | Montando sua Vitrine: Perfil, Bio, Destaques e Posts Fixados | A partir do relatório da Autoridade Tríplice (Aula 3): foto de perfil, bio e frase-tese autoral (já vêm prontas do relatório — o M4.2 só registra), narrativa de posicionamento (parte da história dela e do método, M0+M2 — não precisa de prova de aluno), os 3 destaques fixos e os 3 posts fixados (frase-tese vira Pinned 2, narrativa vira Destaque 1 + Pinned 1). | Perfil completo: foto + bio publicável + tese autoral + narrativa + 3 destaques roteirizados + 3 posts fixados roteirizados |
 
 ### Bloco de Conteúdo
 

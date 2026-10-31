@@ -1,5 +1,5 @@
 # Expert360º — Roteiros Módulo 4: Autoridade
-Versão: 3.0 (teleprompter de fala livre) | Base: v2.3 aprovada (QG-CC-006) | Data: 09/07/2026
+Versão: 3.1 (teleprompter de fala livre) | Base: v2.3 aprovada (QG-CC-006) | Data: 09/07/2026 | 30/10/2026: A3 e A4 ajustadas à v2 do Agente da Autoridade Tríplice (frase-tese e bio saem do agente)
 Status: bullets pra gravar falando livre — o script em prosa completo foi movido pro fim do arquivo (SCRIPTS DE REFERÊNCIA), só como consulta.
 
 **Aulas:** 10 (Introdução + A1–A6 + Queimar a Ponte + Turbinar + Encerramento)
@@ -148,10 +148,11 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
    - Separe P1, P2 e P3 antes de começar; sem os opcionais, o agente entrega o relatório completo do mesmo jeito.
 ▸ Ponto 2 — como rodar
    - É conversa, não formulário: abra o Agente da Autoridade Tríplice no painel e leve P1, P2, P3 (e opcionais).
-   - O agente conduz — pergunta, aprofunda, ajusta — e ao final devolve o Relatório da Autoridade Tríplice em 3 frentes.
+   - O agente conduz — pergunta, aprofunda, ajusta, sugere e pede sua confirmação — e ao final devolve o Relatório da Autoridade Tríplice completo.
    - Salve o resultado no arquivo M4.1 - Relatório da Autoridade Tríplice no Drive — é a base das próximas três aulas, vale fazer a conversa com atenção.
 ▸ Ponto 3 — o que sai (output)
-   - O Relatório em 3 frentes: Posicionamento do Expert (quem você é), da Persona (pra quem fala) e do Produto/Método (como entrega, o que diferencia).
+   - O Relatório em 5 partes: Posicionamento do Expert (quem você é), da Persona (pra quem fala), do Produto/Método (como entrega, o que diferencia), sua Tese Autoral e sua Bio do Instagram.
+      ⚓ Sua Frase-Tese Autoral já sai pronta daqui: curta e memorável, a bandeira que você repete de cabeça. A bio também: até 150 caracteres, com CTA.
    - Na sequência ele vira seu perfil (A4), depois a linha editorial (A5), depois os prompts de conteúdo (A6). Guarde à mão — você volta a ele nas próximas 4 aulas.
 
 **ONDE E QUANDO**
@@ -159,7 +160,7 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 - Agora — antes de seguir, porque a próxima aula já parte do relatório.
 
 **TRANSIÇÃO**
-- Com o relatório em mãos, você tem num documento só quem você é, pra quem fala e como entrega.
+- Com o relatório em mãos, você tem num documento só quem você é, pra quem fala, como entrega, a sua tese e a sua bio.
 - Gancho A4: esse relatório vira a sua vitrine — o que qualquer pessoa vê quando chega no seu perfil, novo ou existente.
 
 ---
@@ -181,12 +182,13 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 **COMO**
 ▸ Ponto 1 — identidade: foto e bio
    - Foto de perfil: rosto visível, boa luz (natural resolve), olhando pra câmera, fundo neutro, expressão genuína.
-   - Bio em 3 linhas: quem você é + pra quem (linha 1), como entrega (linha 2), CTA (linha 3).
-   - Se já tem foto e bio, revise com os olhos de quem acabou de ler o Relatório. Foto inadequada vira pendência até a A7. Pra bio, dá pra pedir ajuda ao chat de IA a partir do relatório. Ajuste a bio agora, direto no Instagram — é exercício curto, sem material próprio.
+   - Bio: já veio pronta no Relatório (A3).
+      ⚓ Modelo: "Eu ajudo [persona] a conquistar [resultado], [atratividade]" + CTA, até 150 caracteres.
+   - Se já tem foto e bio, revise com os olhos de quem acabou de ler o Relatório. Foto inadequada vira pendência até a A7. Copie a bio escolhida no Relatório pro material Minha Frase-Tese Autoral e cole agora, direto no Instagram.
 ▸ Ponto 2 — sua voz: frase-tese e narrativa
-   - Frase-tese: uma frase curta, até 15 palavras, que só você poderia ter dito — vem de como você trabalha, não do que vende.
+   - Frase-tese: também já veio pronta no Relatório — curta e memorável, a bandeira que você repete de cabeça. Registre no material Minha Frase-Tese Autoral e teste em voz alta: se não soar com a sua voz, ajuste com o próprio agente.
    - Narrativa de posicionamento: sua história em 4 movimentos (quem eu era / o que mudou / o que construí / quem sirvo agora), 150–250 palavras.
-   - O material Minha Frase-Tese Autoral tem prompt que gera 5 opções a partir do Relatório; Minha Narrativa de Posicionamento usa História Real (M0) + Relatório (A3) — sem depoimento externo, o processo que você viveu é a prova.
+   - Minha Narrativa de Posicionamento tem o prompt: usa História Real (M0) + Relatório (A3) — sem depoimento externo, o processo que você viveu é a prova.
    - Mesmo com perfil existente, essas duas peças provavelmente nunca foram escritas com essa clareza. A frase-tese vira base do Post Fixado 2; a narrativa vira base do Destaque "Sobre Mim" e do Post Fixado 1.
 ▸ Ponto 3 — a vitrine em ação: destaques e posts fixados
    - 3 destaques (Sobre Mim, Produto Principal, Depoimentos) — as bolinhas fixas, a primeira navegação de quem visita.
@@ -195,7 +197,7 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
    - Ordem: destaques primeiro (dependem menos), depois fixados (Pinned 1 e 2 usam o que você escreveu no Ponto 2). Comece pelo Pinned 1 — é Reels, mais rápido de gravar.
 
 **ONDE E QUANDO**
-- M4.2 - Minha Frase-Tese → M4.3 - Minha Narrativa → M4.4 - Meus Destaques → M4.5 - Meus Posts Fixados, nessa ordem (as duas primeiras alimentam as duas últimas).
+- M4.2 - Minha Frase-Tese (registro da frase-tese e da bio que vieram do Relatório) → M4.3 - Minha Narrativa → M4.4 - Meus Destaques → M4.5 - Meus Posts Fixados, nessa ordem (as duas primeiras alimentam as duas últimas).
 - Nesta aula, com o Instagram aberto — é prática.
 
 **TRANSIÇÃO**
@@ -613,15 +615,15 @@ Aplicação: separe P1, P2 e P3 antes de começar. Se ainda não tiver os opcion
 
 Ideia: é uma conversa, não um formulário — abra o **Agente da Autoridade Tríplice** no seu painel de agentes e leve P1, P2, P3 (e os opcionais, se tiver).
 
-Exemplo: o agente conduz a conversa — pergunta, aprofunda, ajusta. Ao final, ele devolve o Relatório da Autoridade Tríplice em 3 frentes.
+Exemplo: o agente conduz a conversa — pergunta, aprofunda, ajusta, sugere e pede sua confirmação. Ao final, ele devolve o Relatório da Autoridade Tríplice completo.
 
 Aplicação: abra o arquivo **M4.1 - Relatório da Autoridade Tríplice** no seu Drive e salve o resultado ali. Ele é a base de tudo que vem nas próximas três aulas — vale o tempo de fazer essa conversa com atenção.
 
 **Ponto 3 — O que sai (output).**
 
-Ideia: o Relatório da Autoridade Tríplice, organizado em 3 frentes — Posicionamento do Expert (quem você é), Posicionamento da Persona (pra quem você fala) e Posicionamento do Produto/Método (como você entrega, o que te diferencia).
+Ideia: o Relatório da Autoridade Tríplice, organizado em 5 partes — Posicionamento do Expert (quem você é), Posicionamento da Persona (pra quem você fala), Posicionamento do Produto/Método (como você entrega, o que te diferencia), sua Tese Autoral (com a Frase-Tese Autoral) e sua Bio do Instagram.
 
-Exemplo: na próxima aula, esse relatório vira seu perfil do Instagram — bio, frase-tese, narrativa, destaques, posts fixados. Depois, vira sua linha editorial. Depois, vira os prompts que você usa pra criar conteúdo.
+Exemplo: sua Frase-Tese Autoral já sai pronta daqui — curta e memorável, a bandeira que você repete de cabeça. A bio também, com até 150 caracteres e um CTA. Na próxima aula, esse relatório vira seu perfil do Instagram — bio, frase-tese, narrativa, destaques, posts fixados. Depois, vira sua linha editorial. Depois, vira os prompts que você usa pra criar conteúdo.
 
 Aplicação: guarde o relatório à mão — você volta a ele nas próximas 4 aulas.
 
@@ -631,7 +633,7 @@ Onde: o arquivo **M4.1 - Relatório da Autoridade Tríplice** no seu Drive + o *
 
 ---
 
-Com o relatório em mãos, você tem, organizado num documento só, quem você é, pra quem fala e como entrega.
+Com o relatório em mãos, você tem, organizado num documento só, quem você é, pra quem fala, como entrega, a sua tese e a sua bio.
 
 Na próxima aula, esse relatório vira a sua vitrine — o que qualquer pessoa vê quando chega no seu perfil, seja ele novo ou já existente. Vem comigo.
 
@@ -661,17 +663,17 @@ Tenha à mão: seu Relatório da Autoridade Tríplice (Aula 3), sua História Re
 
 **Ponto 1 — Identidade: foto e bio.**
 
-Ideia: foto de perfil — rosto visível, boa iluminação (luz natural resolve), você olhando pra câmera, fundo neutro ou relacionado ao seu trabalho, expressão genuína. Bio em 3 linhas — quem você é + pra quem (linha 1), como você entrega (linha 2), CTA (linha 3).
+Ideia: foto de perfil — rosto visível, boa iluminação (luz natural resolve), você olhando pra câmera, fundo neutro ou relacionado ao seu trabalho, expressão genuína. A bio você já tem: ela veio pronta no Relatório da Tríplice, no modelo "Eu ajudo [persona] a conquistar [resultado], [atratividade]", com um CTA e até 150 caracteres.
 
-Exemplo: se você já tem foto e bio, revise com os olhos de quem acabou de ler o Relatório da Tríplice — ainda batem com o que você descobriu sobre si? Se a foto não estiver adequada, isso fica como ação pendente até a Aula 7. Pra bio, se quiser ajuda, peça pro chat de IA: "com base nesse relatório, escreva minha bio do Instagram em 3 linhas, seguindo a estrutura: quem sou + pra quem / como entrego / CTA."
+Exemplo: se você já tem foto e bio, revise com os olhos de quem acabou de ler o Relatório da Tríplice — ainda batem com o que você descobriu sobre si? Se a foto não estiver adequada, isso fica como ação pendente até a Aula 7. A bio antiga dá lugar à que você escolheu com o agente.
 
-Aplicação: ajuste a bio agora, direto no campo do Instagram — é exercício curto, sem material próprio. Escreva, edite, salve. Bio pronta — ajustada ou criada.
+Aplicação: copie a bio do Relatório pro material **Minha Frase-Tese Autoral** e cole agora, direto no campo do Instagram. Salve. Bio pronta — ajustada ou criada.
 
 **Ponto 2 — Sua voz: frase-tese e narrativa.**
 
-Ideia: frase-tese — uma frase curta, até 15 palavras, que só você poderia ter dito, porque vem de como você trabalha, não do que vende. Narrativa de posicionamento — sua história em 4 movimentos (quem eu era / o que mudou / o que construí / quem sirvo agora), entre 150 e 250 palavras.
+Ideia: frase-tese — ela também já veio pronta no Relatório da Tríplice: curta e memorável, a bandeira que você repete de cabeça. Narrativa de posicionamento — sua história em 4 movimentos (quem eu era / o que mudou / o que construí / quem sirvo agora), entre 150 e 250 palavras.
 
-Exemplo: o material **Minha Frase-Tese Autoral** tem um prompt pronto — você cola seu Relatório da Tríplice, o chat devolve 5 opções (cada uma explicando de onde vem e por que é polarizadora), você escolhe ou combina duas. O material **Minha Narrativa de Posicionamento** pede dois materiais — sua História Real (M0) e o Relatório (A3) — e devolve a narrativa em primeira pessoa. Sem depoimento, sem prova externa: o processo que você viveu é a prova.
+Exemplo: no material **Minha Frase-Tese Autoral** você registra a frase-tese e a bio que vieram do Relatório e faz o teste da voz alta — se não soar com a sua voz, volte no agente e peça o ajuste ali mesmo. O material **Minha Narrativa de Posicionamento** pede dois materiais — sua História Real (M0) e o Relatório (A3) — e devolve a narrativa em primeira pessoa. Sem depoimento, sem prova externa: o processo que você viveu é a prova.
 
 Aplicação: essas duas peças são novas — mesmo que seu perfil já exista, frase-tese e narrativa provavelmente nunca foram escritas com essa clareza. Guarde as duas: a frase-tese vira base do **Post Fixado 2**; a narrativa vira base do **Destaque "Sobre Mim"** e do **Post Fixado 1**.
 
@@ -685,7 +687,7 @@ Aplicação: produza ou ajuste os 6, na ordem 1→2→3 em cada material — des
 
 ---
 
-Onde: M4.2 - Minha Frase-Tese Autoral.md → M4.3 - Minha Narrativa de Posicionamento.md → M4.4 - Meus Destaques.md → M4.5 - Meus Posts Fixados.md, nessa ordem — porque as duas primeiras alimentam as duas últimas. Quando: nesta aula, com o Instagram aberto — é aula prática.
+Onde: M4.2 - Minha Frase-Tese Autoral.md (registro da frase-tese e da bio do Relatório) → M4.3 - Minha Narrativa de Posicionamento.md → M4.4 - Meus Destaques.md → M4.5 - Meus Posts Fixados.md, nessa ordem — porque as duas primeiras alimentam as duas últimas. Quando: nesta aula, com o Instagram aberto — é aula prática.
 
 ---
 
