@@ -292,7 +292,7 @@ Ou pode tomar a decisão mais inteligente: fazer isso com alguém do seu lado, q
 - [ ] ⚠️ "20%" falado como estimativa sua, nunca como dado (slide e corte também)
 - [x] Tema da semana trocado no arquivo da LP do grupo (31/10)
 - [x] LP do grupo republicada com o tema da Live 36 (31/10, autorizada pela Karol; conferida no ar em grupo.incubadoradeexpert.com.br)
-- [ ] Material (slides/PDF) com o squad de slides
+- [x] Deck pronto, aguardando aprovação (https://claude.ai/artifact/TCRJYCXaaefvsDLUecLJg1, `live-36-apresentacao.html`, 34 slides)
 - [ ] NÃO falar preço; bônus de 24h só no WhatsApp
 - [ ] Link do Meet no grupo das lives
 - [ ] Celular só no modo Companheiro, sem microfone e sem som
@@ -319,3 +319,4 @@ Ou pode tomar a decisão mais inteligente: fazer isso com alguém do seu lado, q
 - 31/10 — @expert-em-lives: v3 com o texto da Karol: Bloco 5 reorganizado nas 5 perguntas (quem é você, o que o mercado prega, que problema resolve, por que faz diferente, por que é o mais indicado pra persona), com o Érico como concorrente, Fórmula de Lançamento como referência do que não fazer, 20/80 como estimativa dela, timing e não capacidade, Vendas Secretas, profundidade na persona, "quem se identificou? escreve EU", origem da tese, concorrência desaparece e a função do aluno. Acordo e fechamento falam em alinhar, não em "três peças".
 - 31/10 — @expert-em-lives: data, oferta e 5 afirmações confirmadas pela Karol. Quiz do diferencial criado (25 perguntas dos agentes do Processo Autoral e da Autoridade Tríplice, exemplos da Karol), revisado pelo Codex e publicado; CTA = DIFERENCIAL. LP do grupo republicada com o tema da 36.
 - 31/10 — @expert-em-lives: Bloco 7 reescrito com o texto da Karol (sem diferencial = mais um, invisível, perde venda pra quem demonstra valores; com diferencial = narrativa alinhada, bio que o feed entrega, lado humano gera identificação e o profissional gera reconhecimento). Caso opcional do Bloco 7 descartado.
+- 31/10 — @live-deck-builder: deck de 34 slides montado na base da Live 35, fio condutor "um entre iguais"; publicado pra aprovação.
