@@ -17,9 +17,13 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Expert-IAs no ar na Área de Membros (30/10)
+
+A aba "Biblioteca de IA" virou **Expert-IAs**, liberada pra todo aluno do Expert360º (curso, Grupo, Individual, Incubadora Express). Os 6 agentes conversam dentro da área (OpenAI, gpt-4.1-mini, chave da Karol na org wthub, custo por uso). Falta só a Karol fazer 1 conversa logada com o e-mail karolsenna@ pra confirmar ponta a ponta.
+
 ## Conduz Agro: LIA e REGIA viraram skills do Claude (30/10)
 
-Os GPTs saem do ar; a Milena não quer pagar créditos nem conta do Claude, então a saída é skill no plano grátis (cada aluno sobe o ZIP na própria conta; o método fica legível pra quem abrir o arquivo, aceito). Prontas em `mentoria/alunas/milena-gehrke/conduz-agro/skills-claude/`: `lia-agro.zip`, `regia.zip` e o guia `como-instalar-lia-e-regia.md` pra mandar aos alunos. Conteúdo = os mesmos agentes do GPT (rascunhos que a Milena ainda não validou; em 30/10 os critérios técnicos que a Milena respondeu no roteiro (Google Docs, 9 blocos) entraram na REGIA como seção 10 da base; prazo do geo (Decreto 12.689/2025, 21/10/2029) conferido; a tolerância de área ela não respondeu). Karol decidiu (30/10) mandar como está pra Milena testar: `teste-e-revisao-milena.docx` (8 testes + pontos de atenção: tom de ChatGPT nas respostas do roteiro, tolerância de área sem resposta, prazo do geo, limites, validação da LIA, método visível, limite do plano grátis). Esperando a Karol enviar e a Milena devolver.
+Os GPTs saem do ar; a Milena não quer pagar créditos nem conta do Claude, então a saída é skill no plano grátis (cada aluno sobe o ZIP na própria conta; o método fica legível pra quem abrir o arquivo, aceito). Prontas em `mentoria/alunas/milena-gehrke/conduz-agro/skills-claude/`: `lia-agro.zip`, `regia.zip` e o guia `como-instalar-lia-e-regia.md` pra mandar aos alunos. Conteúdo = os mesmos agentes do GPT (rascunhos que a Milena ainda não validou; em 30/10 os critérios técnicos que a Milena respondeu no roteiro (Google Docs, 9 blocos) entraram na REGIA como seção 10 da base; prazo do geo (Decreto 12.689/2025, 21/10/2029) conferido; a tolerância de área ela não respondeu). Karol decidiu (30/10) mandar como está pra Milena testar: `teste-e-revisao-milena.docx` (8 testes + pontos de atenção: tom de ChatGPT nas respostas do roteiro, tolerância de área sem resposta, prazo do geo, limites, validação da LIA, método visível, limite do plano grátis). Vídeo tutorial de instalação (1min17, legendas, sem dado pessoal) em `skills-claude/tutorial-instalar-lia-e-regia.mp4`, gravado na conta da Karol; as duas skills ficaram instaladas no Claude dela e passaram na verificação; teste rápido da REGIA respondeu com o menu e usou a base. Tudo copiado em Downloads/LIA-e-REGIA-para-Milena. Esperando a Karol enviar e a Milena devolver.
 
 ## Milena Gehrke — materiais do Expert360º atualizados com os prompts (30/10)
 

@@ -877,3 +877,15 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Contexto:** o `_template` e os M4 do David no repo estavam com a versão antiga, sem os prompts.
 **Decisão:** o `_template` agora usa os materiais do curso (M0–M4, mais a planilha do M2.2 e o M3.5). Os M4 do David, que estavam em branco, viraram a versão do curso. Os alunos da estrutura antiga (Analía, Helio, Ricardo e Rodrigo) e os Drives deles ficaram como estavam, porque usam outro currículo.
 **Impacto:** aluna nova já começa com os prompts. As descrições novas da A3 e da A4 do M4 só aparecem na área de membros depois do deploy.
+
+## 30/10/2026 — Agentes da Conduz Agro saem do ChatGPT para skill do Claude
+**Contexto:** GPTs vão ser aposentados; o formato decidido em 26/10 (página com código e IA por API) tem custo de API.
+**Decisão:** LIA e REGIA viram skills do Claude, instaladas por cada aluno no plano grátis da própria conta.
+**Racional:** a Milena não quer gastar com créditos nem com conta do Claude agora.
+**Impacto:** custo zero; o método fica legível pra quem abrir o arquivo; sem controle de acesso. A página com código continua sendo o caminho se ela quiser proteger o método depois.
+
+## 30/10/2026 — Biblioteca de IA vira Expert-IAs, liberada pro Expert360º com chat interno
+**Contexto:** a biblioteca dos 6 agentes estava pronta mas trancada (produto à parte que nunca foi vendido) e abria o ChatGPT por link.
+**Decisão:** a área se chama Expert-IAs, todo aluno do Expert360º (curso, Grupo, Individual, Incubadora Express) tem acesso, e os agentes conversam dentro da área.
+**Racional:** link do GPT fica com o aluno pra sempre; chat interno acaba junto com a matrícula.
+**Impacto:** custo por uso na conta OpenAI da Karol (org wthub); a ideia de vender a biblioteca à parte na Black sai de cena para esses alunos.

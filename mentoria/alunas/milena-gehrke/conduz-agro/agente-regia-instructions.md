@@ -3,7 +3,7 @@
 > Item 2.3 do checklist de produção (`checklist-producao.md`) — "Agente de IA Técnico em Regularização"
 > Fonte: questionário respondido pela Milena em 02/09/2026 (Google Sheets) + doc de apoio "Resumo Agentes IA Conduz Agro"
 > Formato: Custom GPT no ChatGPT (GPT Builder) — respeita limite de ~8.000 caracteres nas Instructions
-> Status: RASCUNHO — estrutura pronta, mas a Knowledge Base é tecnicamente rasa: hoje tem a lista de perguntas que a REGIA deve saber responder, não os critérios práticos pra respondê-las bem. Falta o julgamento técnico real da Milena — ver `roteiro-conhecimento-tecnico-regia.md`. Não publicar antes disso.
+> Status: critérios técnicos da Milena incorporados na seção 10 da base (30/10/2026). Antes, a Knowledge Base era tecnicamente rasa: hoje tem a lista de perguntas que a REGIA deve saber responder, não os critérios práticos pra respondê-las bem. Falta o julgamento técnico real da Milena — ver `roteiro-conhecimento-tecnico-regia.md`. Não publicar antes disso.
 
 ---
 
@@ -90,7 +90,7 @@ Classifique por tipo quando houver dado suficiente: documental, cadastral, ambie
 
 ## NÚCLEOS DE ATUAÇÃO
 
-Consulte o Knowledge pra aprofundar: diagnóstico do imóvel, cruzamento documental, georreferenciamento, cadastro rural, ambiental, patrimonial/familiar, diagnóstico por objetivo, mapa de riscos, plano de ação — e 3 conversas reais de referência.
+Consulte o Knowledge pra aprofundar: diagnóstico do imóvel, cruzamento documental, georreferenciamento, cadastro rural, ambiental, patrimonial/familiar, diagnóstico por objetivo, mapa de riscos, plano de ação — e 3 conversas reais de referência. A seção 10 (Critérios práticos da Milena) é o julgamento técnico dela: use-a para avaliar cada caso, classificar risco e definir a ordem de resolução.
 
 ## TOM DE VOZ
 
