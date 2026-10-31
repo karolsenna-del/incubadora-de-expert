@@ -9,7 +9,7 @@
 // M4 ainda placeholder — vídeo não gravado.
 const ROTEIRO_EXPERT360 = {
   id: 'expert360',
-  nome: 'Expert360º',
+  nome: 'Método',
   modulos: [
     {
       id: 'orientacoes', numero: 'OR', titulo: 'Módulo de Orientações', subtitulo: 'Antes de começar',
@@ -84,27 +84,15 @@ const ROTEIRO_EXPERT360 = {
   ]
 };
 
-// Roteiro da Mentoria — estrutura descrita no briefing (business/campanhas/area-de-membros/briefing.md). Conteúdo placeholder.
-// Teoria do método (Expert360º) NÃO é módulo daqui — é acesso direto à trilha 'expert360' (ver TRILHA_POR_OFERTA,
-// decisão 14/08: dar acesso em vez de duplicar conteúdo — fonte única de verdade pro vídeo).
+// "Aulas gravadas" (31/10, antes "Mentoria") — o que o aluno assiste: Lives (todo aluno do Expert360º, curso
+// incluso) e Encontros em grupo (só mentoria — o RLS de encontros_mentoria decide quem recebe cada tipo).
+// id interno segue 'mentoria' de propósito: o progresso já marcado (tabela progresso) está gravado com ele.
+// Módulos montados em runtime por carregarEncontrosMentoria() — só aparece o que tem gravação de verdade.
+// Oficinas/aulas extras: entram aqui como módulo novo quando existirem.
 const ROTEIRO_MENTORIA = {
   id: 'mentoria',
-  nome: 'Mentoria',
-  modulos: [
-    {
-      id: 'encontros-incubadora', numero: '01', titulo: 'Encontros da Incubadora',
-      aulas: Array.from({ length: 3 }, (_, i) => ({ titulo: `Encontro ${i + 1}`, concluida: false })) // PLACEHOLDER
-    },
-    {
-      id: 'lives', numero: '02', titulo: 'Lives Expert360º',
-      aulas: Array.from({ length: 3 }, (_, i) => ({ titulo: `Live ${i + 1}`, concluida: false })) // PLACEHOLDER
-    },
-    {
-      id: 'individuais', numero: '03', titulo: 'Encontros Individuais',
-      aulas: [], // PLACEHOLDER — populado automaticamente conforme as sessões 1:1 são gravadas (ver briefing.md)
-      vazio_msg: 'Suas sessões individuais aparecem aqui automaticamente depois de gravadas.'
-    }
-  ]
+  nome: 'Aulas gravadas',
+  modulos: []
 };
 
 // Vitrine — as 7 ofertas REAIS do ecossistema (links já publicados em vendas-incubadora.vercel.app)
@@ -153,14 +141,29 @@ const TRILHA_POR_OFERTA = {
 // Trilha "Consultorias" — ao contrário de Expert360º/Mentoria, não tem módulos/aulas fixos no data.js: o
 // conteúdo real vem da tabela `materiais_consultoria` no Supabase (ver app.js renderConsultorias()).
 // Fica como um "trilha vazia" aqui só pra entrar no mesmo mecanismo de abas/matrícula das outras duas.
-const TRILHA_CONSULTORIAS = { id: 'consultorias', nome: 'Consultorias', modulos: [] };
+// "Encontros" (31/10, antes "Consultorias") — todo encontro do aluno com a Karol, de qualquer produto: sessões
+// das consultorias/Express (checklist) + sessões individuais gravadas da mentoria. Aparece pra todo aluno; sem
+// encontro nenhum, mostra o convite pra agendar pelo WhatsApp comercial. id interno segue 'consultorias'.
+const TRILHA_CONSULTORIAS = { id: 'consultorias', nome: 'Encontros', modulos: [] };
+
+// Encontros individuais da mentoria anual por produto (Karol, 31/10). Grupo = encontros individuais + oficinas
+// em grupo (as oficinas são gravações em "Aulas gravadas").
+const ENCONTROS_MENTORIA = { individual: 14, grupo: 8 };
+
+// Lives como bônus temporário pros serviços (Karol, 31/10): VIP, Destrava e Sprint veem "Aulas gravadas" (só Lives)
+// por 90 dias a partir da compra (matriculas.liberado_em). Mesma regra no RLS (policy aluno_metodo_le_live).
+const PRODUTOS_LIVES_TEMPORARIAS = ['metodo-vip', 'metodo-express', 'sprint-do-metodo'];
+const DIAS_LIVES_SERVICOS = 90;
+
+// WhatsApp comercial (separado do suporte 4690 em 19/10) — convite pra agendar sessão na aba Encontros.
+const WHATSAPP_COMERCIAL = '5567996474726';
 
 // Quantidade e rótulo dos encontros por consultoria (definido pela Karol, 12/08) — cada rótulo vira 1 check
 // no checklist da aluna; fica "concluído" quando existe material em `materiais_consultoria` com esse título.
 const ENCONTROS_POR_OFERTA = {
   'metodo-vip': ['Encontro 1', 'Encontro 2', 'Encontro 3'],
   'metodo-express': ['Encontro único'],
-  'sprint-do-metodo': ['Encontro 1', 'Encontro 2', 'Encontro 3', 'Encontro 4', 'Encontro 5'],
+  'sprint-do-metodo': ['Encontro 1', 'Encontro 2', 'Encontro 3', 'Encontro 4', 'Encontro 5', 'Encontro 6', 'Encontro 7', 'Encontro 8'], // 8 encontros (Karol, 31/10)
   // Diagnóstico Ferramentas: 1 encontro fixo do diagnóstico em si + 1 "balde" pros encontros de construção
   // da ferramenta, que variam de quantidade — "Outros encontros" pode ter 0, 1 ou vários materiais dentro.
   'diagnostico-ferramentas': ['Diagnóstico', 'Outros encontros'],

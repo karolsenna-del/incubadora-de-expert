@@ -13,6 +13,8 @@ let sessaoAtual = null;
 // `expira_em` (29/08): NULL = acesso vitalício (comportamento de sempre); com data preenchida, uma
 // linha expirada é tratada exatamente como "nunca comprou" — não entra em MATRICULA_EXEMPLO, então
 // tudo que já filtra por essa lista (Vitrine, Roteiro, Biblioteca de IA) fica protegido automaticamente.
+// Lives temporárias dos serviços (VIP/Destrava/Sprint): data até quando ainda vale, ou null.
+let livesServicoAte = null;
 async function carregarMatriculaReal() {
   const userId = sessaoAtual && sessaoAtual.user && sessaoAtual.user.id;
   const email = sessaoAtual && sessaoAtual.user && sessaoAtual.user.email;
@@ -20,7 +22,7 @@ async function carregarMatriculaReal() {
 
   const { data, error } = await getSupabase()
     .from('matriculas')
-    .select('produto_slug, expira_em')
+    .select('produto_slug, expira_em, liberado_em')
     .eq('email', email)
     .eq('ativo', true);
 
@@ -28,6 +30,12 @@ async function carregarMatriculaReal() {
 
   const agora = new Date();
   MATRICULA_EXEMPLO.length = 0;
+  livesServicoAte = null;
+  (data || []).forEach(row => {
+    if (!PRODUTOS_LIVES_TEMPORARIAS.includes(row.produto_slug) || !row.liberado_em) return;
+    const ate = new Date(new Date(row.liberado_em).getTime() + DIAS_LIVES_SERVICOS * 86400000);
+    if (ate > agora && (!livesServicoAte || ate > livesServicoAte)) livesServicoAte = ate;
+  });
   (data || []).forEach(row => {
     if (row.expira_em && new Date(row.expira_em) <= agora) return; // expirado, trata como sem acesso
     if (!MATRICULA_EXEMPLO.includes(row.produto_slug)) MATRICULA_EXEMPLO.push(row.produto_slug);
@@ -44,10 +52,22 @@ function temAcessoBibliotecaIA() {
 }
 
 // ---------- TRILHAS LIBERADAS (por matrícula) ----------
-// Vitrine mostra as 7 ofertas; Roteiro só mostra a(s) trilha(s) de conteúdo que a matrícula libera (TRILHA_POR_OFERTA).
+// Vitrine mostra as 7 ofertas; Roteiro mostra Método / Aulas gravadas / Encontros (31/10):
+// - Método: quem tem a trilha expert360 (TRILHA_POR_OFERTA)
+// - Aulas gravadas: quem tem Método ou mentoria (Lives pra todos; Encontros em grupo o RLS só entrega pra mentoria)
+// - Encontros: todo aluno — sem encontro, vira convite pra agendar sessão
 function trilhasDoAluno() {
   const idsLiberados = new Set(MATRICULA_EXEMPLO.flatMap(slug => TRILHA_POR_OFERTA[slug] || []));
-  return TRILHAS.filter(t => idsLiberados.has(t.id));
+  const temGravadas = idsLiberados.has('expert360') || idsLiberados.has('mentoria') || !!livesServicoAte;
+  return TRILHAS.filter(t => {
+    if (t.id === 'mentoria') return temGravadas;
+    if (t.id === 'consultorias') return true;
+    return idsLiberados.has(t.id);
+  });
+}
+
+function temMentoria() {
+  return MATRICULA_EXEMPLO.some(slug => (TRILHA_POR_OFERTA[slug] || []).includes('mentoria'));
 }
 
 // ---------- AUTH GUARD ----------
@@ -397,7 +417,7 @@ function renderHome() {
   // Progresso por trilha
   const grid = document.getElementById('home-progresso-grid');
   grid.innerHTML = '';
-  trilhasDoAluno().forEach(trilha => {
+  trilhasDoAluno().filter(t => t.id !== 'consultorias').forEach(trilha => {
     const { pct } = calcularProgresso(trilha);
     const card = document.createElement('div');
     card.className = 'home-progresso-card';
@@ -470,9 +490,12 @@ async function carregarProgresso() {
   });
 }
 
-// ---------- ENCONTROS DA MENTORIA (tabela `encontros_mentoria` — populada pela automação weekly-sync do course-publisher) ----------
-// Substitui os módulos placeholder "Encontros da Incubadora"/"Lives Expert360º" por dado real quando existir.
-// Sem sessão real (modo preview) ou sem linha na tabela ainda: mantém o placeholder do data.js.
+// ---------- AULAS GRAVADAS + ENCONTROS INDIVIDUAIS (tabela `encontros_mentoria`, populada pelo weekly-sync do course-publisher) ----------
+// O RLS decide o que cada aluno recebe (31/10): 'live' pra quem tem a trilha expert360 (curso, Grupo, Individual,
+// Express), 'incubadora' (encontros em grupo) só pra mentoria, 'individual' só a própria aluna. Módulo só aparece
+// com gravação real. Ids de módulo ('lives', 'encontros-incubadora') e ordem por data mantidos: o progresso já
+// marcado é indexado por eles.
+let gravacoesIndividuais = [];
 async function carregarEncontrosMentoria() {
   const userId = sessaoAtual && sessaoAtual.user && sessaoAtual.user.id;
   if (!userId) return;
@@ -480,21 +503,23 @@ async function carregarEncontrosMentoria() {
   const { data, error } = await getSupabase()
     .from('encontros_mentoria')
     .select('tipo, titulo, youtube_id, data_encontro')
-    .in('tipo', ['incubadora', 'live'])
+    .in('tipo', ['incubadora', 'live', 'individual'])
     .order('data_encontro', { ascending: true });
 
-  if (error) { console.error('Erro ao carregar encontros da mentoria:', error); return; }
-  if (!data || !data.length) return; // RLS sem matrícula na mentoria, ou tabela ainda vazia — mantém placeholder
+  if (error) { console.error('Erro ao carregar aulas gravadas:', error); return; }
 
-  const porTipo = { incubadora: [], live: [] };
-  data.forEach(row => { if (porTipo[row.tipo]) porTipo[row.tipo].push(row); });
+  const porTipo = { incubadora: [], live: [], individual: [] };
+  (data || []).forEach(row => { if (porTipo[row.tipo]) porTipo[row.tipo].push(row); });
 
-  const mapaModulo = { incubadora: 'encontros-incubadora', live: 'lives' };
-  Object.entries(mapaModulo).forEach(([tipo, moduloId]) => {
-    if (!porTipo[tipo].length) return; // sem gravação real desse tipo ainda — mantém placeholder
-    const modulo = ROTEIRO_MENTORIA.modulos.find(m => m.id === moduloId);
-    if (modulo) modulo.aulas = porTipo[tipo].map(row => ({ titulo: row.titulo, concluida: false, youtube_id: row.youtube_id }));
-  });
+  const paraAula = row => ({ titulo: row.titulo, concluida: false, youtube_id: row.youtube_id });
+  ROTEIRO_MENTORIA.modulos = [];
+  if (porTipo.live.length) {
+    ROTEIRO_MENTORIA.modulos.push({ id: 'lives', numero: String(ROTEIRO_MENTORIA.modulos.length + 1).padStart(2, '0'), titulo: 'Lives Expert360º', aulas: porTipo.live.map(paraAula) });
+  }
+  if (porTipo.incubadora.length) {
+    ROTEIRO_MENTORIA.modulos.push({ id: 'encontros-incubadora', numero: String(ROTEIRO_MENTORIA.modulos.length + 1).padStart(2, '0'), titulo: 'Oficinas em grupo', aulas: porTipo.incubadora.map(paraAula) });
+  }
+  gravacoesIndividuais = porTipo.individual;
 }
 
 async function salvarProgresso(trilhaId, moduloId, aulaIdx, concluida) {
@@ -622,6 +647,50 @@ function criarBlocoOferta(slug, materiaisProprios) {
   return fase;
 }
 
+// Sessões gravadas da mentoria anual — bloco com o nome do produto, igual às consultorias (Karol, 31/10).
+// Quem tem Individual vê "Mentoria Individual"; só Grupo vê "Mentoria em Grupo" (um bloco só, sem repetir).
+function nomeBlocoMentoria() {
+  return MATRICULA_EXEMPLO.includes('individual') ? 'Mentoria Individual' : 'Mentoria em Grupo';
+}
+
+function criarBlocoIndividuais() {
+  // Checklist fixo por produto (Karol, 31/10): Individual = 14 encontros, Grupo = 8 (individuais — o Grupo
+  // tem encontros individuais + oficinas em grupo, que ficam em Aulas gravadas). A gravação de número i
+  // (por data, vinda do weekly-sync) preenche o "Encontro i" e abre no player ao clicar.
+  const total = MATRICULA_EXEMPLO.includes('individual') ? ENCONTROS_MENTORIA.individual : ENCONTROS_MENTORIA.grupo;
+  const feitas = Math.min(gravacoesIndividuais.length, total);
+  const fase = document.createElement('div');
+  fase.className = 'fase';
+  fase.innerHTML = `
+    <div class="fase-marker ${feitas === total ? 'completa' : (feitas > 0 ? 'parcial' : '')}">${feitas === total ? '✓' : total}</div>
+    <div class="fase-titulo">${nomeBlocoMentoria()}</div>
+    <div class="fase-subtitulo">${feitas}/${total} encontros</div>
+  `;
+  const aulasSub = document.createElement('div');
+  aulasSub.className = 'aulas-sub';
+  for (let i = 0; i < Math.max(total, gravacoesIndividuais.length); i++) {
+    const row = gravacoesIndividuais[i];
+    const linha = document.createElement('div');
+    linha.className = 'aula-row';
+    linha.innerHTML = `<div class="check ${row ? 'concluida' : ''}">${row ? '✓' : ''}</div><div class="titulo ${row ? 'concluida' : ''}">Encontro ${i + 1}</div>`;
+    if (row) linha.addEventListener('click', () => abrirGravacaoIndividual(row));
+    aulasSub.appendChild(linha);
+  }
+  fase.appendChild(aulasSub);
+  return fase;
+}
+
+function abrirGravacaoIndividual(row) {
+  const col = document.getElementById('conteudo-col');
+  col.innerHTML = `
+    <span class="conteudo-eyebrow">${nomeBlocoMentoria()}</span>
+    <h1 class="conteudo-titulo"></h1>
+    <div class="player-box embed"><iframe id="player-aula" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(row.youtube_id)}?enablejsapi=1&cc_load_policy=0&rel=0&origin=${encodeURIComponent(location.origin)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  `;
+  col.querySelector('.conteudo-titulo').textContent = row.titulo;
+  desligarLegendaAutomatica('player-aula');
+}
+
 function criarCardMaterial(m, mostrarAutor) {
   const card = document.createElement('div');
   card.className = 'material-card';
@@ -639,7 +708,7 @@ function criarCardMaterial(m, mostrarAutor) {
 }
 
 async function renderConsultorias() {
-  document.getElementById('jornada-titulo').textContent = 'Consultorias';
+  document.getElementById('jornada-titulo').textContent = 'Seus encontros';
   document.getElementById('jornada-logo-slot').innerHTML = '';
   document.getElementById('progresso-fill').style.width = '0%';
   document.getElementById('progresso-pct').textContent = '';
@@ -658,17 +727,26 @@ async function renderConsultorias() {
   const secaoPropria = document.createElement('div');
   secaoPropria.className = 'consultoria-secao';
   secaoPropria.innerHTML = '<h3>Suas sessões</h3>';
-  if (!ofertasConsultoria.length) {
-    secaoPropria.innerHTML += '<div class="fase-vazio">Nenhuma consultoria liberada ainda.</div>';
-  } else {
-    ofertasConsultoria.forEach(slug => secaoPropria.appendChild(criarBlocoOferta(slug, proprios)));
+  const mentoria = temMentoria();
+  if (!ofertasConsultoria.length && !mentoria) {
+    // Nenhum encontro em produto nenhum — convite pro WhatsApp comercial (Karol, 31/10).
+    const msg = encodeURIComponent('Olá, Karol! Sou aluno da área de membros e quero agendar uma sessão com você.');
+    secaoPropria.innerHTML += `
+      <div class="encontros-convite">
+        <p>Você ainda não tem encontros comigo. Quer uma sessão individual pra destravar o seu método?</p>
+        <a class="btn-concluir" href="https://wa.me/${WHATSAPP_COMERCIAL}?text=${msg}" target="_blank" rel="noopener">Agendar uma sessão pelo WhatsApp</a>
+      </div>`;
+    timeline.appendChild(secaoPropria);
+    return; // sem sessão própria não há o que compartilhar nem casos reais pra destravar
   }
+  ofertasConsultoria.forEach(slug => secaoPropria.appendChild(criarBlocoOferta(slug, proprios)));
+  if (mentoria) secaoPropria.appendChild(criarBlocoIndividuais());
   timeline.appendChild(secaoPropria);
 
   const secaoCasos = document.createElement('div');
   secaoCasos.className = 'consultoria-secao';
   if (compartilha) {
-    secaoCasos.innerHTML = '<h3>Casos Reais — outras consultorias</h3>';
+    secaoCasos.innerHTML = '<h3>Casos reais de outros alunos</h3>';
     timeline.appendChild(secaoCasos);
     if (!casosReais.length) {
       const vazio = document.createElement('div');
@@ -681,7 +759,7 @@ async function renderConsultorias() {
   } else {
     secaoCasos.className = 'consultoria-secao consultoria-bloqueado';
     secaoCasos.innerHTML = `
-      <h3>Casos Reais — outras consultorias</h3>
+      <h3>Casos reais de outros alunos</h3>
       <div class="fase-vazio">Compartilhe suas sessões pra destravar o acesso aos casos reais de outros alunos.</div>
       <button class="btn-concluir" id="btn-abrir-compartilhar">Saber como funciona</button>
     `;
@@ -726,7 +804,7 @@ function renderJornada() {
     return;
   }
 
-  document.getElementById('jornada-titulo').textContent = `Mapa da Jornada — ${trilha.nome}`;
+  document.getElementById('jornada-titulo').textContent = trilha.id === 'expert360' ? `Mapa da Jornada — ${trilha.nome}` : trilha.nome;
 
   const logoSlot = document.getElementById('jornada-logo-slot');
   logoSlot.innerHTML = trilha.id === 'expert360'
@@ -740,6 +818,18 @@ function renderJornada() {
   const timeline = document.getElementById('timeline');
   timeline.className = 'timeline';
   timeline.innerHTML = '';
+
+  if (!trilha.modulos.length) {
+    timeline.innerHTML = '<div class="fase-vazio">As gravações aparecem aqui assim que forem publicadas.</div>';
+  }
+  // Quem só tem as Lives por causa de um serviço vê até quando vale o acesso.
+  const idsTrilha = new Set(MATRICULA_EXEMPLO.flatMap(slug => TRILHA_POR_OFERTA[slug] || []));
+  if (trilha.id === 'mentoria' && livesServicoAte && !idsTrilha.has('expert360') && !idsTrilha.has('mentoria')) {
+    const aviso = document.createElement('div');
+    aviso.className = 'fase-vazio';
+    aviso.textContent = `Bônus do seu serviço: acesso às Lives até ${livesServicoAte.toLocaleDateString('pt-BR')}.`;
+    timeline.appendChild(aviso);
+  }
 
   trilha.modulos.forEach(modulo => {
     const total = modulo.aulas.length;
@@ -817,7 +907,7 @@ function selecionarAula(modulo, idx) {
     <span class="conteudo-eyebrow">${modulo.titulo}</span>
     <h1 class="conteudo-titulo">${aula.titulo}</h1>
     ${aula.youtube_id
-      ? `<div class="player-box embed"><iframe src="https://www.youtube-nocookie.com/embed/${aula.youtube_id}" title="${aula.titulo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+      ? `<div class="player-box embed"><iframe id="player-aula" src="https://www.youtube-nocookie.com/embed/${aula.youtube_id}?enablejsapi=1&cc_load_policy=0&rel=0&origin=${encodeURIComponent(location.origin)}" title="${aula.titulo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
       : `<div class="player-box">▶ ${aula.titulo}</div>`}
     <div class="conteudo-acoes">
       <button class="btn-concluir ${aula.concluida ? 'feita' : ''}" id="btn-marcar-concluida">
@@ -830,6 +920,42 @@ function selecionarAula(modulo, idx) {
 
   document.getElementById('btn-marcar-concluida').addEventListener('click', () => toggleAulaConcluida(modulo, idx));
   document.getElementById('btn-modo-foco').addEventListener('click', toggleModoFoco);
+  if (aula.youtube_id) desligarLegendaAutomatica('player-aula');
+}
+
+// ---------- LEGENDA AUTOMÁTICA DO YOUTUBE (desligada sempre) ----------
+// As aulas já têm legenda gravada na imagem. O YouTube gera sozinho uma faixa automática (e às vezes
+// regera depois que a gente limpa) que aparece por cima pra quem tem CC ligado no navegador — a
+// "legenda dupla" (27/08 e de novo 31/10). Em vez de limpar vídeo por vídeo no Studio, o player
+// descarrega o módulo de legendas ao ficar pronto e de novo a cada play (o CC volta ao dar play).
+let ytApiPronta = null;
+function carregarYouTubeApi() {
+  if (ytApiPronta) return ytApiPronta;
+  ytApiPronta = new Promise(resolve => {
+    if (window.YT && window.YT.Player) return resolve();
+    const anterior = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => { if (anterior) anterior(); resolve(); };
+    const s = document.createElement('script');
+    s.src = 'https://www.youtube.com/iframe_api';
+    document.head.appendChild(s);
+  });
+  return ytApiPronta;
+}
+
+function desligarLegendaAutomatica(iframeId) {
+  carregarYouTubeApi().then(() => {
+    if (!document.getElementById(iframeId)) return; // aluno já trocou de aula
+    const desligar = (p) => {
+      try { p.unloadModule('captions'); p.unloadModule('cc'); } catch (e) {}
+    };
+    new YT.Player(iframeId, {
+      events: {
+        onReady: (ev) => desligar(ev.target),
+        onStateChange: (ev) => { if (ev.data === YT.PlayerState.PLAYING || ev.data === YT.PlayerState.BUFFERING) desligar(ev.target); },
+        onApiChange: (ev) => desligar(ev.target)
+      }
+    });
+  }).catch(() => {});
 }
 
 // Descrição da aula (js/descricoes-aulas.js, gerado de descricoes.md). Busca pelo vídeo; sem vídeo, pelo título.

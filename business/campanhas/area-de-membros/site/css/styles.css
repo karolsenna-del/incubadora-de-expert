@@ -244,3 +244,8 @@ a.material-card .link { display: inline-block; margin-top: 8px; color: var(--lar
   .topbar-v2 { padding: 16px 20px; }
   .vitrine-view { padding: 28px 22px; }
 }
+
+/* Aba Encontros — convite pra agendar sessão (31/10) */
+.encontros-convite { background: var(--preto-2); border: 1px solid var(--preto-3); border-radius: 12px; padding: 20px; margin-top: 8px; }
+.encontros-convite p { margin: 0 0 14px; color: var(--cinza-300); line-height: 1.5; }
+.encontros-convite .btn-concluir { display: inline-block; text-decoration: none; }

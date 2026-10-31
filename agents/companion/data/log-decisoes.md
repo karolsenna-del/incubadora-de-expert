@@ -895,3 +895,21 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisao:** Live Expert, Expert Viral (renomeado de Reels Virais), Stories Expert e Vendedor Secreto entram na Expert-IAs, com o mesmo acesso dos 6 (todo aluno do Expert360º).
 **Racional:** são os agentes feitos para o aluno usar com a persona, a promessa e o método dele; os demais são do negócio da Karol ou vieram prontos da Arcane.
 **Impacto:** Expert-IAs passa de 6 para 10 agentes; os nomes dos experts terceiros que inspiraram os métodos não aparecem pro aluno (suposição do Companion, pra proteger a Karol).
+
+## 31/10/2026 — Área de Membros reorganizada em Método / Aulas gravadas / Encontros
+**Contexto:** a aba "Mentoria" misturava lives, encontros em grupo e sessões individuais; consultorias ficavam numa aba à parte.
+**Decisão:** Método (Expert360º) / Aulas gravadas (Lives pra todo aluno do curso; encontros em grupo só mentoria) / Encontros (todo encontro com a Karol, de qualquer produto; sem encontro → convite pro WhatsApp comercial). A gravação em grupo de 24/08 saiu da área; as próximas entram em Aulas gravadas.
+**Racional:** o aluno entende na hora o que estudar, o que assistir e onde estão os encontros dele.
+**Impacto:** aluno só do curso passa a ver as Lives; aba Consultorias deixa de existir.
+
+## 31/10/2026 — Encontros da mentoria anual por produto
+**Contexto:** montagem da aba Encontros da área de membros.
+**Decisão:** Mentoria Individual = 14 encontros individuais; Mentoria em Grupo = 8 encontros individuais + oficinas em grupo; Incubadora Express = 5 sessões.
+**Racional:** fato de produto informado pela Karol.
+**Impacto:** checklist de encontros na área de membros; oficinas em grupo ficam em Aulas gravadas. Vale levar pro Mapa do Negócio.
+
+## 31/10/2026 — Lives como bônus de 90 dias pros serviços; Sprint com 8 encontros
+**Contexto:** a área de membros entregava pouco pra quem compra só VIP, Destrava ou Sprint (o material deles fica no Drive).
+**Decisão:** clientes de VIP, Destrava e Sprint veem as Lives na área por 90 dias a partir da compra. O Sprint passa a ter 8 encontros.
+**Racional:** manter o cliente de serviço consumindo conteúdo e perto das ofertas maiores (Express, mentoria).
+**Impacto:** Diagnóstico Ferramentas fica fora do bônus. Vale levar o Sprint de 8 encontros pro Mapa do Negócio e pra página de vendas, se ela citar outro número.
