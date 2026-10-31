@@ -889,3 +889,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** a área se chama Expert-IAs, todo aluno do Expert360º (curso, Grupo, Individual, Incubadora Express) tem acesso, e os agentes conversam dentro da área.
 **Racional:** link do GPT fica com o aluno pra sempre; chat interno acaba junto com a matrícula.
 **Impacto:** custo por uso na conta OpenAI da Karol (org wthub); a ideia de vender a biblioteca à parte na Black sai de cena para esses alunos.
+
+## 31/10/2026 — 4 agentes da Karol entram na Expert-IAs
+**Contexto:** Karol revisou todos os agentes que criou para decidir quais abrir aos alunos na área de membros.
+**Decisao:** Live Expert, Expert Viral (renomeado de Reels Virais), Stories Expert e Vendedor Secreto entram na Expert-IAs, com o mesmo acesso dos 6 (todo aluno do Expert360º).
+**Racional:** são os agentes feitos para o aluno usar com a persona, a promessa e o método dele; os demais são do negócio da Karol ou vieram prontos da Arcane.
+**Impacto:** Expert-IAs passa de 6 para 10 agentes; os nomes dos experts terceiros que inspiraram os métodos não aparecem pro aluno (suposição do Companion, pra proteger a Karol).

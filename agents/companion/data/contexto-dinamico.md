@@ -17,9 +17,13 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Expert-IAs com 10 agentes no ar (31/10)
+
+Karol mandou subir pra área os 4 agentes que ela criou pra aluno: Live Expert, Expert Viral (nome novo do Reels Virais), Stories Expert e Vendedor Secreto. Testados com aluno simulado e publicados em 31/10 (deploy da Karol); conferido no domínio: 10 cards e os 4 novos respondendo no servidor. Prompts em `business/campanhas/area-de-membros/handoff-agentes-biblioteca-ia.md` (seções 7-10).
+
 ## Expert-IAs no ar na Área de Membros (30/10)
 
-A aba "Biblioteca de IA" virou **Expert-IAs**, liberada pra todo aluno do Expert360º (curso, Grupo, Individual, Incubadora Express). Os 6 agentes conversam dentro da área (OpenAI, gpt-4.1-mini, chave da Karol na org wthub, custo por uso). Falta só a Karol fazer 1 conversa logada com o e-mail karolsenna@ pra confirmar ponta a ponta.
+A aba "Biblioteca de IA" virou **Expert-IAs**, liberada pra todo aluno do Expert360º (curso, Grupo, Individual, Incubadora Express). Os 6 agentes conversam dentro da área (OpenAI, gpt-4.1-mini, chave da Karol na org wthub, custo por uso). Cada resposta tem Copiar e Baixar resultado (.doc); histórico fica só no navegador do aluno. Confirmado ponta a ponta pela Karol em 31/10. Fechado.
 
 ## Conduz Agro: LIA e REGIA viraram skills do Claude (30/10)
 
