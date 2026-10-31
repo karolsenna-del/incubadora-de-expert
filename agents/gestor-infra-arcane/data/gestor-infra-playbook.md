@@ -28,6 +28,7 @@
 15. [SOP-021] Publicar Stories automaticamente (insta-scheduler)
 16. [SOP-022] Automação de Direct por palavra-gatilho (estilo ManyChat)
 17. [SOP-023] Atualizar descrições de aula na Área de Membros (gerador + deploy)
+18. [SOP-024] Expert-IAs — atualizar prompt, adicionar agente ou mudar acesso
 18. [SOP-024] Campanha de e-mail via Resend Broadcasts (lista, segmento, teste, envio/agendamento)
 19. [SOP-025] Envio 1:1 por WhatsApp via Dualhook Runtime API (modelo Meta + script idempotente)
 20. [SOP-026] Pré-checkout (nome + WhatsApp) antes do checkout Voomp
@@ -1250,3 +1251,20 @@ clicar "Enviar para análise" (aguardando confirmação explícita da Karol ante
 
 **Troubleshooting:**
 - {problema}: {solucao}
+
+---
+
+### [SOP-024] Expert-IAs — atualizar prompt, adicionar agente ou mudar acesso
+**Criado:** 30/10/2026 (missão #114)
+**Onde:** `business/campanhas/area-de-membros/site/` — `api/chat-agente.js` (prompts + acesso no servidor), `js/data.js` (`BIBLIOTECA_IA_AGENTES`, cards), `js/app.js` (`PRODUTOS_COM_ACESSO_IAS`).
+**Fonte dos prompts:** `business/campanhas/area-de-membros/handoff-agentes-biblioteca-ia.md` (mantido pelo gpt-publisher). `AGENTES_CONFIG` é JSON gerado a partir dele — nunca editar prompt à mão no endpoint.
+
+**Passos:**
+1. Prompt mudou: extrair os blocos ``` de cada seção "## N. id — Nome" do handoff e regravar `AGENTES_CONFIG` (JSON.stringify, um agente por chave = agenteId). Conferir que os textos batem 100% com o handoff.
+2. Agente novo: seção nova no handoff + linha em `BIBLIOTECA_IA_AGENTES` (`modo: 'chat'`) + nome exato na lista de nomes dentro de `NOTA_PLATAFORMA`.
+3. Acesso mudou: trocar a lista nos DOIS lugares (`PRODUTOS_COM_ACESSO` no endpoint e `PRODUTOS_COM_ACESSO_IAS` no app.js).
+4. `node --check` (copiar o endpoint pra .mjs antes) + teste direto na API: abrir conversa ("Olá! Quero começar.") e responder "Ainda não tenho isso pronto" — o agente tem que mandar pro agente certo, não criar o documento.
+5. Deploy: `vercel --prod --yes` na pasta `site` (classificador bloqueia — Karol roda via `!`). Conferir no domínio (REGRA-026).
+
+**Chave/modelo:** `op://Claude/OpenAI API/password` (org wthub, sem validade) → env `OPENAI_API_KEY` (Production). Modelo padrão gpt-4.1-mini; trocar por env `OPENAI_MODEL`. Erro `credit_balance_exhausted` = sem crédito na OpenAI (Karol recarrega em Billing).
+

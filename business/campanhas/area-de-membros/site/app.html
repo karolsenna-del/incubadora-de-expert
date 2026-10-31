@@ -16,7 +16,7 @@
       <button class="topbar-tab ativo" id="nav-home">Início</button>
       <button class="topbar-tab" id="nav-roteiro">Meu Roteiro</button>
       <button class="topbar-tab" id="nav-vitrine">Vitrine</button>
-      <button class="topbar-tab" id="nav-biblioteca-ia">Biblioteca de IA</button>
+      <button class="topbar-tab" id="nav-biblioteca-ia">Expert-IAs</button>
     </nav>
     <div class="topbar-user">
       <span class="email" id="user-email"></span>
@@ -67,9 +67,9 @@
       <div id="vitrine-view-slot"></div>
     </section>
 
-    <!-- VIEW: BIBLIOTECA DE AGENTES DE IA -->
+    <!-- VIEW: EXPERT-IAs (ex-Biblioteca de Agentes de IA) -->
     <section id="view-biblioteca-ia" class="biblioteca-ia-view" style="display:none">
-      <h1>Biblioteca de Agentes de IA</h1>
+      <h1>Expert-IAs</h1>
       <p class="biblioteca-ia-sub">Agentes prontos pra te ajudar a construir cada entregável do método.</p>
       <div id="biblioteca-ia-slot"></div>
     </section>
@@ -107,7 +107,7 @@
     </div>
   </div>
 
-  <!-- CHAT INTERNO (Biblioteca de Agentes de IA) -->
+  <!-- CHAT INTERNO (Expert-IAs) -->
   <div class="modal-overlay" id="modal-chat-agente">
     <div class="modal-card chat-card">
       <span class="eyebrow" id="chat-agente-titulo">Agente</span>
@@ -117,6 +117,7 @@
         <button class="btn-concluir" id="btn-chat-enviar">Enviar</button>
       </div>
       <div class="modal-acoes">
+        <button class="btn-secundario" id="btn-chat-nova">Nova conversa</button>
         <button class="btn-secundario" id="btn-chat-fechar">Fechar</button>
       </div>
     </div>
@@ -136,6 +137,8 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
   <script src="js/config.js"></script>
   <script src="js/supabase-client.js"></script>
   <script src="js/data.js"></script>

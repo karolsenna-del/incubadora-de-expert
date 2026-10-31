@@ -34,9 +34,13 @@ async function carregarMatriculaReal() {
   });
 }
 
-// ---------- BIBLIOTECA DE AGENTES DE IA (mesma matrícula, produto_slug 'biblioteca-ia') ----------
+// ---------- EXPERT-IAs (ex-Biblioteca de Agentes de IA) ----------
+// Acesso (decidido pela Karol 30/10): todo aluno do Expert360º — oferta que inclui a trilha Expert360º
+// (curso, Grupo, Individual, Incubadora Express) ou o produto avulso 'biblioteca-ia'.
+// Mesma lista de PRODUTOS_COM_ACESSO em api/chat-agente.js (que valida de novo no servidor) — mudar nos dois.
+const PRODUTOS_COM_ACESSO_IAS = ['expert360', 'grupo', 'individual', 'incubadora-express', 'biblioteca-ia'];
 function temAcessoBibliotecaIA() {
-  return MATRICULA_EXEMPLO.includes('biblioteca-ia');
+  return MATRICULA_EXEMPLO.some(slug => PRODUTOS_COM_ACESSO_IAS.includes(slug));
 }
 
 // ---------- TRILHAS LIBERADAS (por matrícula) ----------
@@ -123,7 +127,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('btn-nao-compartilhar').addEventListener('click', () => decidirCompartilhar(false));
 
   document.getElementById('btn-chat-fechar').addEventListener('click', fecharChatAgente);
-  document.getElementById('btn-chat-enviar').addEventListener('click', enviarMensagemChat);
+  document.getElementById('btn-chat-nova').addEventListener('click', novaConversaChat);
+  document.getElementById('btn-chat-enviar').addEventListener('click', () => enviarMensagemChat());
   document.getElementById('chat-input').addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); enviarMensagemChat(); }
   });
@@ -134,7 +139,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   iniciarStandby();
 });
 
-// ---------- NAV (Início / Roteiro / Vitrine / Biblioteca de IA) ----------
+// ---------- NAV (Início / Roteiro / Vitrine / Expert-IAs) ----------
 function trocarView(view) {
   document.getElementById('view-home').style.display = view === 'home' ? 'block' : 'none';
   document.getElementById('view-roteiro').style.display = view === 'roteiro' ? 'grid' : 'none';
@@ -148,7 +153,7 @@ function trocarView(view) {
   if (view === 'biblioteca-ia') renderBibliotecaIA();
 }
 
-// ---------- BIBLIOTECA DE AGENTES DE IA (view dedicada) ----------
+// ---------- EXPERT-IAs (view dedicada) ----------
 function renderBibliotecaIA() {
   const container = document.getElementById('biblioteca-ia-slot');
   container.innerHTML = '';
@@ -157,7 +162,7 @@ function renderBibliotecaIA() {
     container.innerHTML = `
       <div class="material-card">
         <div class="material-titulo">🔒 Ainda não faz parte do seu acesso</div>
-        <p class="material-desc">A Biblioteca de Agentes de IA é uma oferta à parte — em breve você vai poder liberar isso.</p>
+        <p class="material-desc">A Expert-IAs faz parte do Expert360º. Quem tem o curso ou a mentoria conversa com os agentes aqui.</p>
       </div>
     `;
     return;
@@ -195,18 +200,45 @@ function renderBibliotecaIA() {
 }
 
 // ---------- CHAT INTERNO (api/chat-agente.js) ----------
-// Histórico fica só na memória da sessão (não persiste no banco) — cada conversa começa do zero
-// ao reabrir. MVP: se a Karol quiser guardar histórico depois, é uma tabela nova (fora de escopo agora).
+// Histórico fica no navegador do aluno (localStorage, uma conversa por agente e por usuário) — fechar o
+// chat ou recarregar a página não perde a conversa, que costuma ser longa. "Nova conversa" zera.
+// Não vai pro banco: se a Karol quiser ver as conversas depois, é uma tabela nova.
 let chatAgenteAtual = null;
 let chatHistorico = [];
+let chatEnviando = false;
+const CHAT_ABERTURA = 'Olá! Quero começar.';
+
+function chaveChat(agente) {
+  const userId = (sessaoAtual && sessaoAtual.user && sessaoAtual.user.id) || 'anon';
+  return `expert-ias:${userId}:${agente.agenteId}`;
+}
+
+function salvarChat() {
+  if (!chatAgenteAtual) return;
+  try { localStorage.setItem(chaveChat(chatAgenteAtual), JSON.stringify(chatHistorico)); } catch (e) {}
+}
 
 function abrirChatAgente(agente) {
   chatAgenteAtual = agente;
   chatHistorico = [];
+  try { chatHistorico = JSON.parse(localStorage.getItem(chaveChat(agente)) || '[]'); } catch (e) { chatHistorico = []; }
+  if (!Array.isArray(chatHistorico)) chatHistorico = [];
   document.getElementById('chat-agente-titulo').textContent = agente.titulo;
   document.getElementById('chat-mensagens').innerHTML = '';
   document.getElementById('chat-input').value = '';
+  // A mensagem automática de abertura não aparece na tela — só a resposta do agente.
+  chatHistorico.forEach((m, i) => { if (!(i === 0 && m.role === 'user' && m.content === CHAT_ABERTURA)) adicionarMensagemChat(m.role, m.content); });
   document.getElementById('modal-chat-agente').classList.add('visivel');
+  // Conversa nova: o agente abre a conversa (como o Custom GPT faz ao receber o primeiro "oi").
+  if (chatHistorico.length === 0) enviarMensagemChat(CHAT_ABERTURA);
+}
+
+function novaConversaChat() {
+  if (!chatAgenteAtual || chatEnviando) return;
+  chatHistorico = [];
+  try { localStorage.removeItem(chaveChat(chatAgenteAtual)); } catch (e) {}
+  document.getElementById('chat-mensagens').innerHTML = '';
+  enviarMensagemChat(CHAT_ABERTURA);
 }
 
 function fecharChatAgente() {
@@ -217,19 +249,79 @@ function fecharChatAgente() {
 function adicionarMensagemChat(role, texto) {
   const div = document.createElement('div');
   div.className = `chat-msg chat-msg-${role}`;
-  div.textContent = texto;
+  // Resposta do agente vem em markdown (tabelas do Canvas, listas, negrito) — renderiza sanitizado.
+  if (role === 'assistant' && window.marked && window.DOMPurify) {
+    div.classList.add('md');
+    div.innerHTML = DOMPurify.sanitize(marked.parse(texto || ''));
+  } else {
+    div.textContent = texto;
+  }
+  if (role === 'assistant') div.appendChild(criarAcoesResposta(texto, div.innerHTML));
   document.getElementById('chat-mensagens').appendChild(div);
   div.scrollIntoView({ block: 'end' });
 }
 
-async function enviarMensagemChat() {
-  const input = document.getElementById('chat-input');
-  const texto = input.value.trim();
-  if (!texto || !chatAgenteAtual) return;
+// Botões "Copiar" e "Baixar" em cada resposta do agente — o aluno guarda o resultado (Dossiê, Promessa,
+// Canvas…) no Drive dele sem precisar selecionar a conversa. Copia como HTML + texto, pra tabela colar
+// inteira no Google Docs/Word; baixa como .doc (HTML que Word e Google Docs abrem com a tabela).
+function criarAcoesResposta(texto, html) {
+  const acoes = document.createElement('div');
+  acoes.className = 'chat-acoes';
 
-  input.value = '';
+  const btnCopiar = document.createElement('button');
+  btnCopiar.type = 'button';
+  btnCopiar.textContent = 'Copiar';
+  btnCopiar.addEventListener('click', async () => {
+    try {
+      if (window.ClipboardItem) {
+        await navigator.clipboard.write([new ClipboardItem({
+          'text/html': new Blob([html], { type: 'text/html' }),
+          'text/plain': new Blob([texto], { type: 'text/plain' })
+        })]);
+      } else {
+        await navigator.clipboard.writeText(texto);
+      }
+      btnCopiar.textContent = 'Copiado ✓';
+    } catch (e) {
+      btnCopiar.textContent = 'Não deu pra copiar';
+    }
+    setTimeout(() => { btnCopiar.textContent = 'Copiar'; }, 2000);
+  });
+
+  const btnBaixar = document.createElement('button');
+  btnBaixar.type = 'button';
+  btnBaixar.textContent = 'Baixar resultado';
+  btnBaixar.addEventListener('click', () => {
+    const titulo = chatAgenteAtual ? chatAgenteAtual.titulo : 'Expert-IAs';
+    const data = new Date().toISOString().slice(0, 10);
+    const doc = `<html><head><meta charset="utf-8"><title>${titulo}</title>
+<style>body{font-family:Arial,sans-serif;font-size:11pt;line-height:1.5}table{border-collapse:collapse}th,td{border:1px solid #999;padding:6px;vertical-align:top}</style>
+</head><body><h2>${titulo}</h2><p style="color:#777">Expert-IAs · Incubadora de Expert · ${data.split('-').reverse().join('/')}</p>${html}</body></html>`;
+    const url = URL.createObjectURL(new Blob(['﻿', doc], { type: 'application/msword' }));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${titulo} - ${data}.doc`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+
+  acoes.append(btnCopiar, btnBaixar);
+  return acoes;
+}
+
+async function enviarMensagemChat(textoAutomatico) {
+  const input = document.getElementById('chat-input');
+  const automatico = typeof textoAutomatico === 'string';
+  const texto = automatico ? textoAutomatico : input.value.trim();
+  if (!texto || !chatAgenteAtual || chatEnviando) return;
+
+  chatEnviando = true;
+  document.getElementById('btn-chat-enviar').disabled = true;
+  if (!automatico) input.value = '';
   chatHistorico.push({ role: 'user', content: texto });
-  adicionarMensagemChat('user', texto);
+  if (!automatico) adicionarMensagemChat('user', texto);
   adicionarMensagemChat('carregando', 'Pensando...');
 
   const accessToken = sessaoAtual && sessaoAtual.access_token;
@@ -242,14 +334,22 @@ async function enviarMensagemChat() {
     const data = await resp.json();
     document.querySelector('.chat-msg-carregando')?.remove();
     if (!resp.ok) {
+      chatHistorico.pop(); // mensagem não respondida sai do histórico — aluno reenvia
+      if (!automatico) input.value = texto;
       adicionarMensagemChat('erro', data.error || 'Erro ao falar com o agente.');
       return;
     }
     chatHistorico.push({ role: 'assistant', content: data.resposta });
+    salvarChat();
     adicionarMensagemChat('assistant', data.resposta);
   } catch (err) {
     document.querySelector('.chat-msg-carregando')?.remove();
+    chatHistorico.pop();
+    if (!automatico) input.value = texto;
     adicionarMensagemChat('erro', 'Erro de conexão com o agente.');
+  } finally {
+    chatEnviando = false;
+    document.getElementById('btn-chat-enviar').disabled = false;
   }
 }
 
