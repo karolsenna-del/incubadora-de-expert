@@ -913,3 +913,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** clientes de VIP, Destrava e Sprint veem as Lives na área por 90 dias a partir da compra. O Sprint passa a ter 8 encontros.
 **Racional:** manter o cliente de serviço consumindo conteúdo e perto das ofertas maiores (Express, mentoria).
 **Impacto:** Diagnóstico Ferramentas fica fora do bônus. Vale levar o Sprint de 8 encontros pro Mapa do Negócio e pra página de vendas, se ela citar outro número.
+
+## 31/10/2026 — Live 36 troca de tema: diferencial de mercado
+**Contexto:** a Live 36 estava roteirizada sobre "Desde quando o Instagram virou juiz da sua competência?".
+**Decisão:** Karol descartou esse tema. A nova Live 36 é "Como ser escolhido no meio de tanta gente com a mesma formação que você" (posicionamento, mecanismo único, frase-tese, alinhamento de narrativa, Autoridade Tríplice). "Formação" no título, não "diploma" (diploma fica pra frase-tese).
+**Racional:** diferencial de mercado é mais atrativo pra persona do que a ferida do Instagram.
+**Impacto:** roteiro novo em `live-36-roteiro.md`; o antigo guardado como `live-36-v1-instagram-descartada.md`; tema da LP do grupo trocado no arquivo, falta republicar.

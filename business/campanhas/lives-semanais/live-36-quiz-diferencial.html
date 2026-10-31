@@ -1,0 +1,212 @@
+<title>Quanto Você Conhece o Seu Diferencial?</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Layout: uma pergunta por vez num cartão central, barra de progresso por bloco do posicionamento,
+     resultado com termômetro pouco/médio/muito. Visual da marca Incubadora (preto, branco, cinza, laranja),
+     look único e claro de propósito: as cores são definidas explicitamente e não seguem o tema do visitante. */
+  :root{
+    --laranja:#f85627;
+    --laranja-suave:#fde3da;
+    --preto:#090a0b;
+    --branco:#fcfcfc;
+    --cinza:#ddddde;
+    --cinza-texto:#5c5d60;
+    --display:'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box;}
+  html,body{min-height:100%;}
+  body{margin:0; background:var(--branco); color:var(--preto); font-family:var(--body); font-size:16px; line-height:1.55;
+       padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px));}
+  .wrap{max-width:680px; margin:0 auto; padding-block:40px 56px; display:flex; flex-direction:column; gap:28px;}
+  .brand{font-family:var(--display); font-weight:700; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--cinza-texto);}
+  .brand b{color:var(--laranja);}
+  h1{font-family:var(--display); font-weight:800; font-size:clamp(1.8rem,5.5vw,2.6rem); line-height:1.1; margin:0; text-wrap:balance;}
+  h1 em{font-style:normal; color:var(--laranja);}
+  h2{font-family:var(--display); font-weight:700; font-size:clamp(1.3rem,4vw,1.7rem); line-height:1.25; margin:0; text-wrap:balance;}
+  p{margin:0;}
+  .lead{font-size:1.06rem; color:var(--cinza-texto); max-width:58ch;}
+  .card{background:#fff; border:1px solid var(--cinza); border-radius:18px; padding:28px 24px; display:flex; flex-direction:column; gap:20px;}
+  .meta{display:flex; justify-content:space-between; align-items:baseline; gap:12px; font-size:.82rem; color:var(--cinza-texto); font-variant-numeric:tabular-nums;}
+  .chip{font-family:var(--display); font-weight:700; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--laranja);}
+  .bar{height:6px; background:var(--cinza); border-radius:6px; overflow:hidden;}
+  .bar span{display:block; height:100%; background:var(--laranja); width:0; transition:width .3s ease;}
+  .hint{font-size:.92rem; color:var(--cinza-texto);}
+  .opts{display:grid; grid-template-columns:repeat(3,1fr); gap:10px;}
+  .opt{font-family:var(--display); font-weight:700; font-size:1rem; padding:16px 10px; border-radius:12px; border:1.5px solid var(--preto); background:#fff; color:var(--preto); cursor:pointer; transition:background .15s, color .15s, border-color .15s;}
+  .opt:hover{background:var(--preto); color:#fff;}
+  .opt:focus-visible,.btn:focus-visible,.back:focus-visible{outline:3px solid var(--laranja); outline-offset:2px;}
+  .opt.sel{background:var(--laranja); border-color:var(--laranja); color:#fff;}
+  .back{align-self:flex-start; background:none; border:0; padding:4px 0; color:var(--cinza-texto); font-size:.9rem; cursor:pointer; font-family:var(--body);}
+  .back[disabled]{visibility:hidden;}
+  .btn{display:inline-flex; justify-content:center; align-items:center; gap:8px; font-family:var(--display); font-weight:700; font-size:1.02rem; padding:16px 22px; border-radius:12px; border:0; background:var(--laranja); color:#fff; cursor:pointer; text-decoration:none; text-align:center;}
+  .btn.ghost{background:transparent; color:var(--preto); border:1.5px solid var(--preto);}
+  .list{display:flex; flex-direction:column; gap:8px; margin:0; padding:0; list-style:none;}
+  .list li{display:flex; gap:10px; font-size:.95rem; color:var(--cinza-texto);}
+  .list li::before{content:""; flex:none; width:8px; height:8px; margin-top:.55em; border-radius:50%; background:var(--laranja);}
+  /* resultado */
+  .gauge{display:grid; grid-template-columns:repeat(3,1fr); gap:6px;}
+  .gauge div{padding:12px 6px; border-radius:10px; background:var(--cinza); text-align:center; font-family:var(--display); font-weight:700; font-size:.9rem; color:var(--cinza-texto);}
+  .gauge div.on{background:var(--preto); color:#fff;}
+  .gauge div.on.top{background:var(--laranja);}
+  .score{font-family:var(--display); font-weight:800; font-size:clamp(2.6rem,9vw,3.6rem); line-height:1; color:var(--laranja); font-variant-numeric:tabular-nums;}
+  .score small{font-size:.4em; color:var(--cinza-texto); font-weight:600;}
+  .blocks{display:flex; flex-direction:column; gap:12px;}
+  .blk{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 12px; align-items:center;}
+  .blk .nm{font-size:.92rem; font-weight:600;}
+  .blk .vl{font-size:.85rem; color:var(--cinza-texto); font-variant-numeric:tabular-nums;}
+  .blk .bar{grid-column:1 / -1; height:5px;}
+  .cta-box{background:var(--preto); color:#fff; border-radius:18px; padding:28px 24px; display:flex; flex-direction:column; gap:16px;}
+  .cta-box .lead{color:#c9cacc;}
+  .foot{font-size:.8rem; color:var(--cinza-texto); text-align:center;}
+  [hidden]{display:none !important;}
+  @media (max-width:420px){ .opts{grid-template-columns:1fr;} .card,.cta-box{padding:22px 18px;} }
+  @media (prefers-reduced-motion:reduce){ .bar span,.opt{transition:none;} }
+</style>
+
+<div class="wrap">
+  <div class="brand">Incubadora de Expert · <b>Expert360º</b></div>
+
+  <!-- INÍCIO -->
+  <section id="intro" class="card">
+    <span class="chip">Material da Live 36</span>
+    <h1>Quanto você conhece o seu <em>diferencial no mercado</em>?</h1>
+    <p class="lead">25 perguntas tiradas do que a gente trabalha no posicionamento do Expert360º. Responda com sinceridade: sim, não ou não sei. Leva uns 5 minutos.</p>
+    <button class="btn" id="start" type="button">Começar o diagnóstico</button>
+  </section>
+
+  <!-- PERGUNTA -->
+  <section id="quiz" class="card" hidden>
+    <div class="meta"><span class="chip" id="qblock"></span><span id="qcount"></span></div>
+    <div class="bar" aria-hidden="true"><span id="qbar"></span></div>
+    <h2 id="qtext"></h2>
+    <p class="hint" id="qhint"></p>
+    <div class="opts" role="group" aria-label="Respostas">
+      <button class="opt" type="button" data-v="sim">Sim</button>
+      <button class="opt" type="button" data-v="nao">Não</button>
+      <button class="opt" type="button" data-v="naosei">Não sei</button>
+    </div>
+    <button class="back" id="back" type="button">← Voltar</button>
+  </section>
+
+  <!-- RESULTADO -->
+  <section id="result" hidden>
+    <div class="card">
+      <span class="chip">O seu diagnóstico</span>
+      <div class="score" id="rscore"></div>
+      <div class="gauge" aria-hidden="true"><div id="g1">Pouco</div><div id="g2">Médio</div><div id="g3">Muito</div></div>
+      <h2 id="rtitle"></h2>
+      <p class="lead" id="rtext"></p>
+      <div class="blocks" id="rblocks"></div>
+      <p class="hint" id="rweak"></p>
+    </div>
+    <div class="cta-box" style="margin-top:20px;">
+      <h2>Quer olhar o seu diferencial comigo?</h2>
+      <p class="lead">Responda o Diagnóstico do Expert. Com as suas respostas, eu te chamo pra uma sessão e a gente vê o que falta pro seu diferencial ficar claro pra quem compra de você.</p>
+      <a class="btn" href="https://diagnostico.incubadoradeexpert.com.br" target="_blank" rel="noopener">Responder o Diagnóstico do Expert</a>
+      <button class="btn ghost" id="again" type="button" style="color:#fff; border-color:#fff;">Refazer o quiz</button>
+    </div>
+  </section>
+
+  <p class="foot">Karol Senna · Incubadora de Expert</p>
+</div>
+
+<script>
+  // Perguntas tiradas do Agente do Processo Autoral (história, experiências, influências, descobertas, pesquisa de mercado)
+  // e do Agente da Autoridade Tríplice (expert, persona, produto, tese autoral, bio). Mede o quanto a pessoa conhece
+  // o próprio diferencial; não ensina a descobrir. Os exemplos (h) são todos do posicionamento da Karol.
+  const Q = [
+    {b:"Quem é você", t:"Você consegue contar a sua história em 2 minutos, ligando o que viveu ao problema que resolve hoje?", h:"Ex.: \"Eu fracassei nos lançamentos porque não entendia que precisava falar com uma persona só, ter uma promessa clara e um método com skin in the game. Hoje é isso que eu ensino.\""},
+    {b:"Quem é você", t:"Você sabe quais experiências, além da sua formação, sustentam o seu jeito de trabalhar?", h:"Ex.: 13 anos no serviço público, auditoria e gestão de processos, anos como lançadora de outros experts. Tudo isso faz parte do meu método hoje."},
+    {b:"Quem é você", t:"Você sabe quais mentores, livros ou métodos influenciaram o seu jeito, e o que você pegou de cada um?", h:"Ex.: a sessão de Vendas Secretas é baseada num livro, numa imersão e na administração."},
+    {b:"Quem é você", t:"Você consegue dizer o que descobriu na prática que nenhum curso te ensinou?", h:"Ex.: que o especialista precisa vender antes de se expor, e não sair criando conteúdo desalinhado."},
+    {b:"Quem é você", t:"Você sabe qual parte da sua história faz a sua persona confiar em você?", h:"Ex.: quem já tentou lançar e não conseguiu confia em mim porque eu também passei por isso."},
+    {b:"Que problema você resolve", t:"Você sabe qual é o sintoma que a sua persona sente no dia a dia?", h:"Ex.: ela sabe muito, mas não consegue organizar e vender o que sabe."},
+    {b:"Que problema você resolve", t:"Você sabe o que a sua persona acha que é o problema dela?", h:"Ex.: ela acha que precisa aprender marketing digital."},
+    {b:"Que problema você resolve", t:"Você sabe qual é o problema real por trás disso, que quase ninguém vê?", h:"Ex.: ela está tentando vender técnica, quando o mercado compra transformação. E transformação só é crível quando tem uma história real por trás e uma estrutura lógica da jornada."},
+    {b:"Que problema você resolve", t:"Você sabe o quanto a sua persona já tem consciência do problema que você resolve?", h:"Ex.: ela já sabe que tem um problema, mas ainda acha que precisa fazer mais um curso e se preparar mais."},
+    {b:"O que o mercado prega", t:"Você sabe quem são os seus principais concorrentes e o que cada um promete?", h:"Ex.: o meu maior concorrente promete R$100.000 em 7 dias pra qualquer profissional, quando a gente sabe que não é bem assim que as coisas funcionam."},
+    {b:"O que o mercado prega", t:"Você sabe o que quase todo mundo da sua área ensina igual?", h:"Ex.: \"Poste muito conteúdo, cresça a sua audiência e depois venda o que ela desejar\", e não necessariamente o seu conhecimento."},
+    {b:"O que o mercado prega", t:"Você sabe por que o que o mercado oferece não serve pra sua persona, ou serve só em parte?", h:"Ex.: lançamento funciona pra quem tem audiência qualificada e prova do método. Pra quem está começando, a exposição e os fracassos fazem muita gente boa desistir."},
+    {b:"O que o mercado prega", t:"Você sabe o formato e a faixa de preço do que os seus concorrentes vendem?", h:"Ex.: curso gravado, mentoria em grupo, mentoria individual, e quanto cada um cobra."},
+    {b:"O que o mercado prega", t:"Você sabe qual crença do seu mercado você combate?", h:"Ex.: a crença de que diploma e certificado vendem sozinhos."},
+    {b:"Por que você faz diferente", t:"Você consegue dizer em uma frase o que faz de diferente do seu maior concorrente?", h:"Ex.: \"Ele ensina a lançar. Eu preparo o especialista pra vender antes de se expor.\""},
+    {b:"Por que você faz diferente", t:"O seu jeito diferente de chegar no resultado tem um nome?", h:"Ex.: Vendas Secretas."},
+    {b:"Por que você faz diferente", t:"Você consegue explicar como o seu jeito diferente leva a pessoa ao resultado, sem usar termo técnico?", h:"Ex.: \"A primeira venda acontece numa conversa individual, antes de qualquer exposição. Assim você valida o método e ganha segurança.\""},
+    {b:"Por que você faz diferente", t:"Você sabe de que parte da sua história o seu diferencial nasceu?", h:"Ex.: as Vendas Secretas nasceram dos meus lançamentos frustrados e de ver tanta gente boa desistindo do digital por isso, ou nem entrando por medo de fracassar."},
+    {b:"Por que serve pra sua persona", t:"Você sabe o que você e a sua persona têm em comum: valores, jeito de pensar, visão?", h:"Ex.: eu era empregada pública, com muito conhecimento e desvalorizada no offline. Sabia que o meu potencial estava subutilizado e que precisava criar o meu espaço pra deixar o meu legado."},
+    {b:"Por que serve pra sua persona", t:"Você sabe por que o seu diferencial faz sentido na vida real da sua persona, e não só no papel?", h:"Ex.: a primeira venda faz a minha persona ter certeza de que o conhecimento dela tem valor. Aí ela enxerga que é possível vir pro digital, porque se sente segura."},
+    {b:"Por que serve pra sua persona", t:"Você tem uma frase que diz de cabeça e que contraria uma crença do seu mercado?", h:"Ex.: \"Diploma é o que você estudou. Método é o que você viveu.\""},
+    {b:"Por que serve pra sua persona", t:"Você consegue completar: \"Eu ajudo ___ a ___ através de ___\"?", h:"Ex.: \"Eu ajudo especialistas a transformar o que viveram em método e fazer as primeiras vendas sem lançamento, através das Vendas Secretas.\""},
+    {b:"Por que serve pra sua persona", t:"A sua bio, o seu conteúdo e a sua oferta contam a mesma história?", h:"Ex.: a bio, os posts fixados e o pitch falam a mesma coisa: primeiras vendas sem lançamento."},
+    {b:"Testado com gente real", t:"Algum cliente já te disse, com as palavras dele, por que escolheu você e não outro profissional?", h:""},
+    {b:"Testado com gente real", t:"Você já explicou o seu diferencial numa conversa de venda e a pessoa entendeu na hora o que você faz de diferente?", h:""}
+  ];
+  const A = new Array(Q.length).fill(null);
+  let i = 0;
+  const $ = id => document.getElementById(id);
+
+  function show(id){ ['intro','quiz','result'].forEach(s => $(s).hidden = (s !== id)); window.scrollTo(0,0); }
+
+  function render(){
+    const q = Q[i];
+    $('qblock').textContent = q.b;
+    $('qcount').textContent = (i+1) + ' de ' + Q.length;
+    $('qbar').style.width = Math.round((i / Q.length) * 100) + '%';
+    $('qtext').textContent = q.t;
+    $('qhint').textContent = q.h;
+    $('qhint').hidden = !q.h;
+    document.querySelectorAll('.opt').forEach(b => b.classList.toggle('sel', b.dataset.v === A[i]));
+    $('back').disabled = (i === 0);
+  }
+
+  function result(){
+    const total = A.filter(v => v === 'sim').length;
+    let lvl, title, text;
+    if (total <= 10){
+      lvl = 1; title = 'Você conhece pouco o seu diferencial.';
+      text = 'Pra quem procura alguém da sua área, ainda pode ser difícil enxergar o que te faz diferente. Não é falta de competência: o seu diferencial costuma estar na sua história, esperando um nome e uma frase.';
+    } else if (total <= 19){
+      lvl = 2; title = 'Você conhece o seu diferencial pela metade.';
+      text = 'Você já sabe parte do que te faz diferente, mas as peças ainda não contam a mesma história. Quase sempre, o que falta aparece quando você explica o seu diferencial numa conversa de venda com gente real.';
+    } else {
+      lvl = 3; title = 'Você conhece bem o seu diferencial.';
+      text = 'Agora o jogo é alinhar e repetir: bio, conteúdo e oferta contando a mesma história. Quando tudo conta a mesma história, fica mais fácil o cliente entender por que escolher você.';
+    }
+    $('rscore').innerHTML = total + ' <small>de ' + Q.length + ' com "sim"</small>';
+    ['g1','g2','g3'].forEach((g,k) => { $(g).classList.toggle('on', k+1 === lvl); $(g).classList.toggle('top', lvl === 3 && k === 2); });
+    $('rtitle').textContent = title;
+    $('rtext').textContent = text;
+
+    const blocks = [...new Set(Q.map(q => q.b))];
+    const box = $('rblocks'); box.innerHTML = '';
+    const weak = [];
+    blocks.forEach(b => {
+      const idx = Q.map((q,k) => q.b === b ? k : -1).filter(k => k >= 0);
+      const yes = idx.filter(k => A[k] === 'sim').length;
+      const pct = Math.round(yes / idx.length * 100);
+      if (pct < 50) weak.push(b.toLowerCase());
+      const row = document.createElement('div'); row.className = 'blk';
+      row.innerHTML = '<span class="nm"></span><span class="vl"></span><div class="bar"><span></span></div>';
+      row.querySelector('.nm').textContent = b;
+      row.querySelector('.vl').textContent = yes + ' de ' + idx.length;
+      row.querySelector('.bar span').style.width = pct + '%';
+      box.appendChild(row);
+    });
+    $('rweak').textContent = weak.length ? 'Onde começar: ' + weak.join(', ') + '.' : 'Nenhum bloco abaixo da metade. Continue testando.';
+    $('rweak').hidden = false;
+    show('result');
+  }
+
+  document.querySelectorAll('.opt').forEach(b => b.addEventListener('click', () => {
+    A[i] = b.dataset.v;
+    if (i < Q.length - 1){ i++; render(); } else { result(); }
+  }));
+  $('back').addEventListener('click', () => { if (i > 0){ i--; render(); } });
+  $('start').addEventListener('click', () => { i = 0; show('quiz'); render(); });
+  $('again').addEventListener('click', () => { A.fill(null); i = 0; show('quiz'); render(); });
+</script>

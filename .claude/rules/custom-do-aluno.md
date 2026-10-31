@@ -50,6 +50,7 @@ outras rules. Exemplos:
 - O Expert em Lives só escreve o roteiro: slides e PDF da live são de outro squad, nunca montar no mesmo trabalho (Karol, 25/10).
 - O spoiler do pitch vai na metade da live, como no ETL do Funil de Zoom (VOL-conteudo 11.4), nunca no Acordo (Karol, 25/10).
 - Não citar a Black (lista esgotada, resultado, "hora errada") em live nem conteúdo: ninguém precisa saber do resultado dela (Karol, 25/10).
+- Para explicar um conceito do método numa live (posicionamento, narrativa, diferencial), usar um caso só, o da Karol, do começo ao fim, sem misturar com mentorado: assim ela explica e vende ao mesmo tempo (Karol, 31/10).
 
 ### Conceitos do Expert360º
 
