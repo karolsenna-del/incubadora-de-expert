@@ -185,7 +185,7 @@ const FRASES_MOTIVACIONAIS = [
 const PERGUNTAS_POPUP_MODULO = [
   { tipo: 'nota', pergunta: 'De 0 a 10, o quanto esse módulo te aproximou do resultado que você busca?' },
   { tipo: 'texto', pergunta: 'O que mudou pra você depois desse módulo?' },
-  { tipo: 'texto', pergunta: '(Opcional) Quer deixar um print, depoimento ou prova do que você construiu?' }
+  { tipo: 'texto', pergunta: '(Opcional) Quer deixar um depoimento ou o link do que você construiu?' }
 ];
 
 // Biblioteca de Agentes de IA — produto novo (29/08, ideia da imersão de Black Friday: vitalício no
