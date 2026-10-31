@@ -10,6 +10,7 @@ Conecta os 4 formulários interativos (`diagnostico-interativo.html`, `pre-diagn
 > - **Ficha de Inscrição / Raio-X:** só cabeçalhos e texto das opções (1º/2º uso, urgência); Raio-X reordenado na ordem do formulário, "Status da Análise" segue no fim.
 > - Migração feita com `migrarTodasAsAbas` (implantação versão 4, mesma URL). Se mudar pergunta/opção num HTML, mudar também em `FORMS`.
 > **Addendum 25/10/2026:** no Pré-Diagnóstico, a pergunta de dificuldade mudou de texto e entraram 2 perguntas depois da Urgência (visão pelo produtor daqui 1 ano e faturamento pretendido). A aba ganhou 2 colunas com `atualizarPreDiagnostico` (implantação versão 5, mesma URL).
+> **Addendum 26/10/2026:** no Pré-Diagnóstico entraram 4 perguntas Emocionais (depois da aberta Emocional) e 2 de Condução (depois da aberta Condução); as de múltipla escolha gravam o texto da opção e entram na trava sinalizada. A aba ganhou 6 colunas com `atualizarPreDiagnostico2610` (implantação versão 6, mesma URL).
 > Se a planilha e o Apps Script já estavam implantados antes desses addendums, siga a seção "Quando atualizar o script" abaixo pra colar a versão nova do `.gs` e reimplantar — a URL não muda.
 
 ## 1. Criar a planilha

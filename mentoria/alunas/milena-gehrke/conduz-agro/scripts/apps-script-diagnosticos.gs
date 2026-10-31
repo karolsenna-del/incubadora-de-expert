@@ -39,11 +39,17 @@ var FORMS = {
         "Às vezes, dependendo da complexidade, fico um pouco inseguro",
         "Na maioria das vezes sinto-me inseguro. Fico com receio de entregar algo incorreto para o produtor."]},
       {key: "e_aberta", header: "Qual foi a última vez que você sentiu essa insegurança com um produtor? O que rolou?"},
+      {key: "e_reacao_perda", header: "Quando um produtor rural, que veio primeiramente até você, fecha com outro técnico, como você reage?"},
+      {key: "e_decide_age", header: "Numa escala de 0 a 10, quanto você DECIDE e AGE no seu negócio sem adiar esperando mais segurança?"},
+      {key: "e_orcamento", header: "Quando você apresenta o orçamento do seu serviço ao produtor, como você se sente?"},
+      {key: "e_cobra_valor", header: "Você sente que cobra o que seu trabalho vale?"},
       {key: "c_fechada", header: "Na sua comunicação com o produtor, você explica a regularização como obrigação ou como oportunidade?", opcoes: [
         "Explico como oportunidade, conectando com ganhos financeiros e segurança patrimonial",
         "Às vezes explico como oportunidade, mas ainda foco muito no lado obrigatório",
         "Explico mais como obrigação, cumprimento de exigências ou burocracia"]},
       {key: "c_aberta", header: "Pensa na sua última conversa sobre isso com um produtor — como foi? O que você sentiu que travou ou funcionou?"},
+      {key: "c_perfil", header: "Como você costuma identificar o perfil do produtor e adaptar sua forma de conversar para facilitar o entendimento e a condução do atendimento?"},
+      {key: "c_explicacao", header: "Como você se sente ao explicar uma questão técnica ao produtor? Você consegue perceber se ele realmente entendeu o que foi explicado?"},
       {key: "trava_sinalizada", header: "Trava sinalizada (leitura automática do formulário)"}
     ],
     antigo: {
@@ -277,6 +283,27 @@ function atualizarPreDiagnostico() {
   var colUrgencia = header.indexOf("Numa escala de 1 a 10, qual sua urgência em resolver isso?") + 1;
   if (colUrgencia !== 9) throw new Error("Cabeçalho fora do esperado — confira a aba antes de rodar.");
   sheet.insertColumnsAfter(colUrgencia, 2);
+  sheet.getRange(1, 1, 1, novas.length).setValues([novas]).setFontWeight("bold").setWrap(true);
+}
+
+/**
+ * Rode uma vez manualmente (Executar → atualizarPreDiagnostico2610) ANTES de
+ * reimplantar o script com as perguntas de 26/10: abre 4 colunas depois da
+ * aberta Emocional e 2 depois da aberta Condução, sem mexer nas respostas já
+ * gravadas. Aba já atualizada é pulada.
+ */
+function atualizarPreDiagnostico2610() {
+  var form = FORMS.pre_diagnostico;
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(form.tab);
+  if (!sheet) return;
+  var header = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+  var novas = headersDe(form);
+  if (header.indexOf(novas[15]) !== -1) return; // já atualizada
+  var colEAberta = header.indexOf("Qual foi a última vez que você sentiu essa insegurança com um produtor? O que rolou?") + 1;
+  var colCAberta = header.indexOf("Pensa na sua última conversa sobre isso com um produtor — como foi? O que você sentiu que travou ou funcionou?") + 1;
+  if (colEAberta !== 15 || colCAberta !== 17) throw new Error("Cabeçalho fora do esperado — confira a aba antes de rodar.");
+  sheet.insertColumnsAfter(colCAberta, 2);
+  sheet.insertColumnsAfter(colEAberta, 4);
   sheet.getRange(1, 1, 1, novas.length).setValues([novas]).setFontWeight("bold").setWrap(true);
 }
 

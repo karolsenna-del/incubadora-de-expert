@@ -156,6 +156,41 @@ var TEASER = [
    openLabel:"Pensa na sua última conversa sobre isso com um produtor — como foi? O que você sentiu que travou ou funcionou?"}
 ];
 
+/* ---------------- EXTRAS (26/10): perguntas a mais por esfera, depois do par dela ----------------
+   choice: grava o texto da opção; p = pontos (3 = melhor, 1 = pior) pra leitura final.
+   scale: 0 a 10, entra na leitura como v/10. textarea: só contexto, não pontua. */
+var EXTRAS = {
+  emocional: [
+    {id:"e_reacao_perda", type:"choice",
+     q:"Quando um produtor rural, que veio primeiramente até você, fecha com outro técnico, como você reage?",
+     o:[{t:"Entendo que o produtor fez sua escolha e sigo para o próximo atendimento, sem analisar muito o que aconteceu.", p:1},
+        {t:"Fico frustrado ou em dúvida sobre o que poderia ter feito diferente, mas nem sempre consigo identificar o motivo.", p:2},
+        {t:"Analiso o que pode ter influenciado a decisão e identifico o que posso melhorar.", p:3}]},
+    {id:"e_decide_age", type:"scale", min:0,
+     q:"Numa escala de 0 a 10, quanto você DECIDE e AGE no seu negócio sem adiar esperando mais segurança?",
+     low:"Adio esperando mais segurança", high:"Decido e ajo sem adiar"},
+    {id:"e_orcamento", type:"textarea",
+     q:"Quando você apresenta o orçamento do seu serviço ao produtor, como você se sente?"},
+    {id:"e_cobra_valor", type:"choice",
+     q:"Você sente que cobra o que seu trabalho vale?",
+     o:[{t:"Cobro com segurança e consigo justificar o valor do meu serviço.", p:3},
+        {t:"Tenho dúvidas se estou cobrando o valor adequado e, às vezes, sinto dificuldade em justificar meu preço.", p:2},
+        {t:"Costumo cobrar menos do que gostaria por receio de perder o cliente ou por dificuldade em demonstrar o valor do meu trabalho e pelos preços dos concorrentes.", p:1}]}
+  ],
+  conducao: [
+    {id:"c_perfil", type:"choice",
+     q:"Como você costuma identificar o perfil do produtor e adaptar sua forma de conversar para facilitar o entendimento e a condução do atendimento?",
+     o:[{t:"Geralmente explico da mesma forma, independentemente do perfil do produtor.", p:1},
+        {t:"Tento adaptar minha comunicação, mas nem sempre sei como fazer isso.", p:2},
+        {t:"Consigo identificar o perfil e adaptar minha comunicação com facilidade.", p:3}]},
+    {id:"c_explicacao", type:"choice",
+     q:"Como você se sente ao explicar uma questão técnica ao produtor? Você consegue perceber se ele realmente entendeu o que foi explicado?",
+     o:[{t:"Sinto-me seguro e consigo perceber se ele compreendeu.", p:3},
+        {t:"Explico com segurança, mas fico em dúvida se ele realmente entendeu.", p:2},
+        {t:"Tenho dificuldade para simplificar a explicação e confirmar se ele compreendeu.", p:1}]}
+  ]
+};
+
 var ESFERA_NOME = {tecnica:"Técnica", emocional:"Emocional", conducao:"Condução"};
 var ESFERA_COR = {tecnica:"var(--gold-soft)", emocional:"var(--rust)", conducao:"var(--olive)"};
 var ESFERA_LEITURA = {
@@ -170,10 +205,14 @@ FIELDS.forEach(function(f){ steps.push({type:"field", f:f}); });
 TEASER.forEach(function(t){
   steps.push({type:"teaser-closed", t:t});
   steps.push({type:"teaser-open", t:t});
+  (EXTRAS[t.esfera] || []).forEach(function(x){ steps.push({type:"extra", x:x, esfera:t.esfera}); });
 });
 steps.push({type:"outro"});
 
-var totalSteps = FIELDS.length + (TEASER.length*2);
+var ALL_EXTRAS = [];
+Object.keys(EXTRAS).forEach(function(k){ ALL_EXTRAS = ALL_EXTRAS.concat(EXTRAS[k]); });
+
+var totalSteps = FIELDS.length + (TEASER.length*2) + ALL_EXTRAS.length;
 document.getElementById("stepTotal").textContent = totalSteps;
 
 var state = {stepIndex:0, values:{}};
@@ -216,7 +255,14 @@ function isAnswerable(step){
   }
   if(step.type === "teaser-closed") return typeof state.values[step.t.closedId] === "number";
   if(step.type === "teaser-open") return typeof state.values[step.t.openId] === "string" && state.values[step.t.openId].trim().length > 0;
+  if(step.type === "extra") return extraRespondida(step.x);
   return true;
+}
+
+function extraRespondida(x){
+  var v = state.values[x.id];
+  if(x.type === "scale") return typeof v === "number";
+  return typeof v === "string" && v.trim().length > 0;
 }
 
 function updateChrome(step){
@@ -245,7 +291,7 @@ function buildIntro(){
     ])
   ]));
   s.appendChild(el("h1", {class:"display", text:"Pré-Diagnóstico Conduz Agro", style:"font-size:1.6rem;margin-bottom:14px;"}));
-  s.appendChild(el("p", {class:"lede", text:"Antes da nossa conversa, quero entender rapidinho sua situação — assim a gente já chega direto no que importa, sem perder tempo explicando o básico. Leva uns 6 minutos."}));
+  s.appendChild(el("p", {class:"lede", text:"Antes da nossa conversa, quero entender rapidinho sua situação — assim a gente já chega direto no que importa, sem perder tempo explicando o básico. Leva uns 8 minutos."}));
   s.appendChild(el("p", {class:"small-note", text:"Suas respostas ficam salvas sozinhas — se fechar a página, você continua de onde parou.", style:"margin-bottom:26px;"}));
   var btn = el("button", {class:"btn btn-primary", type:"button", text:"Começar →", onclick:function(){ go(1); }});
   s.appendChild(btn);
@@ -355,13 +401,82 @@ function buildTeaserOpen(step){
   return s;
 }
 
+function buildExtra(step){
+  var x = step.x;
+  var s = el("div", {class:"card"});
+  s.style.setProperty("--esfera-color", ESFERA_COR[step.esfera]);
+  s.appendChild(el("div", {class:"eyebrow", text: ESFERA_NOME[step.esfera]}));
+  s.appendChild(el("h2", {class:"q-title", text:x.q}));
+
+  var nav = el("div", {class:"nav"});
+  nav.appendChild(el("button", {class:"btn btn-ghost", type:"button", text:"← Voltar", onclick:function(){ go(-1); }}));
+  var next;
+  function refreshBtn(){ next.disabled = !isAnswerable(step); }
+
+  if(x.type === "choice"){
+    var opts = el("div", {class:"options"});
+    x.o.forEach(function(op){
+      var selected = state.values[x.id] === op.t;
+      var btn = el("button", {type:"button", class:"opt"+(selected?" selected":"")}, [el("span",{class:"opt-dot"}), el("span",{text:op.t})]);
+      btn.addEventListener("click", function(){ state.values[x.id] = op.t; saveState(); go(1); });
+      opts.appendChild(btn);
+    });
+    s.appendChild(opts);
+    s.appendChild(nav);
+    return s;
+  }
+
+  if(x.type === "scale"){
+    var scale = el("div", {class:"scale", style:"margin-top:18px;"});
+    for(var i=x.min;i<=10;i++){
+      (function(n){
+        var b = el("button", {type:"button", text:String(n), class: state.values[x.id]===n ? "selected" : ""});
+        b.addEventListener("click", function(){ state.values[x.id] = n; saveState(); render(); });
+        scale.appendChild(b);
+      })(i);
+    }
+    s.appendChild(scale);
+    s.appendChild(el("div", {class:"scale-labels"}, [el("span",{text:x.low}), el("span",{text:x.high})]));
+  } else {
+    var ta = el("textarea", {style:"margin-top:18px;"});
+    ta.value = state.values[x.id] || "";
+    ta.addEventListener("input", function(){ state.values[x.id] = ta.value; saveState(); refreshBtn(); });
+    s.appendChild(ta);
+    setTimeout(function(){ ta.focus(); }, 50);
+  }
+
+  next = el("button", {class:"btn btn-primary", type:"button", text:"Continuar →"});
+  next.addEventListener("click", function(){ if(isAnswerable(step)) go(1); });
+  refreshBtn();
+  nav.appendChild(next);
+  s.appendChild(nav);
+  return s;
+}
+
+/* Nota de 0 a 1 por esfera: média da pergunta fechada do par (3/2/1) com as extras
+   que pontuam (múltipla escolha pelos pontos da opção, escala 0-10 como v/10). */
+function notaEsfera(esfera){
+  var t = TEASER.filter(function(t){ return t.esfera === esfera; })[0];
+  var notas = [(state.values[t.closedId] - 1) / 2];
+  (EXTRAS[esfera] || []).forEach(function(x){
+    var v = state.values[x.id];
+    if(x.type === "scale") notas.push(v / 10);
+    else if(x.type === "choice"){
+      var op = x.o.filter(function(o){ return o.t === v; })[0];
+      if(op) notas.push((op.p - 1) / 2);
+    }
+  });
+  var soma = notas.reduce(function(a,b){ return a+b; }, 0);
+  return Math.round((soma / notas.length) * 1000) / 1000;
+}
+
 function buildOutro(){
   var allAnswered = FIELDS.every(function(f){
     var v = state.values[f.id];
     return f.type === "scale" ? typeof v === "number" : (typeof v === "string" && v.trim().length>0);
   }) && TEASER.every(function(t){
     return typeof state.values[t.closedId] === "number" && typeof state.values[t.openId] === "string" && state.values[t.openId].trim().length>0;
-  });
+  }) && ALL_EXTRAS.every(extraRespondida);
 
   var s = el("div", {class:"card center"});
   if(!allAnswered){
@@ -371,7 +486,7 @@ function buildOutro(){
     return s;
   }
 
-  var pts = {tecnica: state.values.t_fechada, emocional: state.values.e_fechada, conducao: state.values.c_fechada};
+  var pts = {tecnica: notaEsfera("tecnica"), emocional: notaEsfera("emocional"), conducao: notaEsfera("conducao")};
   var pior = Object.keys(pts).sort(function(a,b){ return pts[a]-pts[b]; })[0];
   var empatados = Object.keys(pts).filter(function(k){ return pts[k] === pts[pior]; });
 
@@ -420,6 +535,7 @@ function render(){
   else if(step.type === "field") screen = buildField(step);
   else if(step.type === "teaser-closed") screen = buildTeaserClosed(step);
   else if(step.type === "teaser-open") screen = buildTeaserOpen(step);
+  else if(step.type === "extra") screen = buildExtra(step);
   else screen = buildOutro();
   stage.appendChild(screen);
   window.scrollTo({top:0, behavior:"auto"});
