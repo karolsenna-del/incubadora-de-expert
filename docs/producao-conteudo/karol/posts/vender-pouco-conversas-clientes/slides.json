@@ -1,0 +1,15 @@
+{
+  "template": "card-tweet",
+  "name": "carrossel-vender-pouco-conversas-clientes",
+  "_nota": "slide 1 (capa foto-frase com imagem de funil, card1-FINAL.png) é renderizado à parte (capa.html) e sobrescreve slide-01.png",
+  "slides": [
+    { "text": "capa — substituída", "image": null },
+    { "text": "Você entrou no digital para ensinar o que sabe, transformar vidas e viver da sua experiência. Não para ficar prospectando, puxando conversa e tentando vender.<br><br><strong>No fundo, queria que alguém cuidasse das vendas enquanto você fazia o que ama.</strong>", "image": null },
+    { "text": "Mas existe um erro que pode custar caro para quem está começando: <strong>delegar as vendas antes de entender como seu próprio negócio vende.</strong><br><br>Não porque ninguém consiga vender melhor que você, mas porque você ainda está descobrindo quem compra, por que compra e o que faz alguém desistir.", "image": null },
+    { "text": "A virada acontece quando você entende que uma conversa comercial não serve apenas para fechar uma venda. <strong>Ela também é uma pesquisa de mercado.</strong><br><br>É ali que você descobre as dores reais, escuta objeções, identifica desejos e percebe o que precisa ajustar na sua oferta.", "image": null },
+    { "text": "Enquanto você procura mais uma estratégia para ganhar seguidores, talvez esteja ignorando pessoas que já demonstraram interesse no que você faz.<br><br><strong>Você quer alcançar milhares de desconhecidos, mas ainda não conversou com quem respondeu ao seu story ontem.</strong>", "image": null },
+    { "text": "Faça um teste: <strong>reserve uma hora por dia para prospectar.</strong> Converse com novos seguidores, pessoas que interagem com seus conteúdos e leads que já demonstraram interesse.<br><br>Mas não comece oferecendo seu produto. <strong>Comece entendendo o problema da pessoa e descubra se existe uma oportunidade real de ajudá-la.</strong>", "image": null },
+    { "text": "Talvez o dinheiro que está faltando no seu negócio esteja nas conversas que você ainda não teve. <strong>Antes de delegar suas vendas, aprenda com elas.</strong><br><br>Depois de validar seu método, entender as objeções e construir um processo comercial, delegar passa a ser uma decisão muito mais consciente.", "image": null },
+    { "text": "<strong>Você não precisa esperar uma grande audiência para começar a vender seu conhecimento.</strong> Precisa de uma oferta clara e de conversas com as pessoas certas.<br><br><strong>Me segue</strong> que eu te ensino a transformar seu conhecimento em método e seu método em modelo de negócio.", "image": null }
+  ]
+}
