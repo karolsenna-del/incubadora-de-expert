@@ -23,7 +23,7 @@ Os arquivos M0–M4 da pasta da Milena estavam na versão antiga (sem prompts). 
 
 ## Novembro = foco total em comercial (30/10/2026)
 
-Karol definiu: novembro é foco total em comercial (meta de 3 sessões de Vendas Secretas por semana, vinda de outubro). Post de domingo 01/11 07h (Rota100k S13) reescrito com o texto dela. Domingo 15h preenchido com a meta de 1 ano dela: R$50 mil/mês trabalhando meio período (nov/2027). Live 34: pasta compartilhada com karol.franzini em 30/10 (confirmado); próxima rodada do sync sobe. Live 35: sem gravação no Drive dela; às 15h de 28/10 a única gravação é a sessão da Milena.
+Karol definiu: novembro é foco total em comercial (meta de 3 sessões de Vendas Secretas por semana, vinda de outubro). Post de domingo 01/11 07h (Rota100k S13) reescrito com o texto dela. Domingo 15h preenchido com a meta de 1 ano dela: R$50 mil/mês trabalhando meio período (nov/2027). Live 34: pasta compartilhada com karol.franzini em 30/10 (confirmado); próxima rodada do sync sobe. Live 35: não foi gravada (Karol confirmou em 30/10). Aulas M3 A9-A13: prazo prorrogado pra 06/11. Juliana (VIP): contrato e 1ª sessão só depois que ela responder o diagnóstico do VIP. Lead Marli (Garimpo): parou de responder após a pergunta repetida; follow-up de reparo pronto na coluna Observações.
 
 ## Diagnóstico do Expert — leads de 29/10 importados
 

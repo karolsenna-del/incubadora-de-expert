@@ -62,6 +62,7 @@
 
 > Mais recente primeiro.
 
+- 30/10 — @companion: Karol prorrogou o prazo das aulas M3 A9-A13 (gravar, editar e publicar) de 31/10 pra sexta 06/11.
 - 30/10 — @companion: M4 ajustado à v2 do Agente da Autoridade Tríplice — roteiro A3/A4 (bullets e prosa, v3.1), M4.1 (relatório em 5 partes), M4.2 vira registro da frase-tese e da bio (sai o prompt das 5 opções), M4.5 Pinned 2, cabeçalho do prompt do M4.6, estrutura-modulos e descrições da A3/A4 (descricoes.md e descricoes-aulas.js, sem deploy). Espelhado no Drive (Materiais/M4 e Roteiros).
 - 20/10 — @gpt-publisher: Karol decidiu que o Agente da Autoridade Tríplice passa a entregar Frase-Tese Autoral (critério "memorável") e bio "Eu ajudo…" de até 150 caracteres com CTA. Roteiro e materiais do M4 (ainda não gravado) precisam acompanhar: tarefa nova pro Course Creator em TAREFAS, mapa dos trechos em `handoff-m4-autoridade-triplice-v2.md`.- 18/10 — @companion: weekly — pausa da Black encerrada. Prazo novo: M3 A9-A13 gravadas, editadas e publicadas até 31/10 (o aluno da Incubadora Express depende delas).
 - 02/10 — @companion: Karol informou que editou as aulas A6, A7 e A8 do M3. Publicação na Área de Membros vai ser feita em outro chat (course-publisher).

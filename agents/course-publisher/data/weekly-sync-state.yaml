@@ -9,7 +9,14 @@ live_expert360:
   ultimo_processado_titulo: "Live Expert360 - 2026/10/07 14:01 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-10-07T19:26:47.819Z"  # createdTime do arquivo no Drive (Live 33)
   proximo_numero: 34
-  ultima_execucao: "2026-10-22"
+  ultima_execucao: "2026-10-29"
+  # 29/10/2026 (missão #40, disparo autônomo REGRA-015): busca global (mp4, createdTime > 24/08,
+  # prefixos Live/Encontro/Individual) não trouxe nada novo além da Live 34. Pasta 1VY_QEjS... e
+  # arquivo 1IvI9Ou6... seguem só com owner karolsenna; share_file (reader) nos dois → "The caller
+  # does not have permission". Live 35 (roteiro live-35-roteiro.md, quarta 28/10 15h) NÃO tem
+  # gravação no Drive — busca ampla por qualquer vídeo criado desde 21/10 só achou Reels e 1:1
+  # (Bruna, Sandra, Milena, Vagner, Tasso). Ou não foi gravada, ou o Meet ainda não gerou: a
+  # próxima rodada reencontra se aparecer. State NÃO avançou (proximo_numero segue 34).
   # 22/10/2026 (missão #39, disparo autônomo REGRA-015): busca global achou 1 gravação NOVA —
   # "Live Expert360 - 2026/10/21 14:01 GMT-04:00 - Recording" (655MB, id
   # 1IvI9Ou6r_O_E4UWlcTZCwT280yex6KhI, createdTime 2026-10-21T20:41:55.162Z) = Live 34 (roteiro
@@ -169,7 +176,7 @@ live_expert360:
 mentoria_em_grupo:
   ultimo_processado_titulo: "Encontro Incubadora - 2026/08/24 14:24 GMT-04:00 - Recording"
   ultimo_processado_data: "2026-08-24T20:43:47.651Z"  # createdTime do arquivo no Drive
-  ultima_execucao: "2026-10-22"
+  ultima_execucao: "2026-10-29"
   # 22/10/2026 (missão #39): nenhum "Encontro Incubadora -" novo depois de 24/08. Nada a fazer.
   # 15/10/2026 (missão #38): nenhum "Encontro Incubadora -" novo depois de 24/08. Nada a fazer.
   # 08/10/2026 (missão #37): nenhum "Encontro Incubadora -" novo depois de 24/08. Nada a fazer.
@@ -239,7 +246,7 @@ mentoria_em_grupo:
 encontros_individuais:
   ultimo_processado_titulo: null
   ultimo_processado_data: null
-  ultima_execucao: "2026-10-22"
+  ultima_execucao: "2026-10-29"
   # 22/10/2026 (missão #39): nenhum mp4 "Individual -". Nenhuma gravação 1:1 nova desde 15/10
   # (fora do padrão, segue só "Vagner - 2026/10/07 18:58", já registrada).
   # 15/10/2026 (missão #38): nenhum mp4 "Individual -". Desde 08/10 só "Vagner - 2026/10/07
@@ -310,6 +317,9 @@ pendencias:
     titulo_final: "Live 34 — Você Não Precisa Largar a Sua Profissão pra Vender o que Sabe (mas Precisa Parar de Engavetar)"
     data_encontro: "2026-10-21"
     acao_karol: "Compartilhar https://drive.google.com/drive/folders/1VY_QEjSVPO7LhqE3SFqtKsrnkPssxnvC com karol.franzini@gmail.com"
+    ultima_checagem: "2026-10-30"  # Karol compartilhou; karol.franzini confirmado como writer na pasta (30/10)
+# 30/10/2026: Live 35 (28/10) NÃO foi gravada (Karol confirmou). Não procurar mais; a próxima
+# "Live Expert360 -" depois da 34 recebe o número 36.
 # 22/10/2026 (missão #39): pendência live_34_pasta_nao_compartilhada aberta (6ª rotação de pasta).
 # 15/10/2026 (missão #38): pendência "lives_32_33_pasta_nao_compartilhada" (aberta 08/10)
 # RESOLVIDA — acesso writer confirmado via API, Lives 32 e 33 publicadas nesta missão.
