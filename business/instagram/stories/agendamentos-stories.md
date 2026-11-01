@@ -72,3 +72,4 @@
 | 29/10/2026 | expert360-domingo-2026-10-25 | 1 | 18211394176366546 | sim (ver log de execucao) |
 | 29/10/2026 | expert360-quinta-2026-10-29 | 1 | 18133064761748400 | sim (ver log de execucao) |
 | 30/10/2026 | caixinha-2026-10-30 | 1 | 18162644665546138 | sim (ver log de execucao) |
+| 01/11/2026 | sprint-metodo-domingo-2026-11-01 | 1 | 18121002818107145 | sim (ver log de execucao) |
