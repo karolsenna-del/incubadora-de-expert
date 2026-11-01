@@ -1,97 +1,17 @@
-mind_slug: "vendedor-secreto"
-mode: "synthetic"
-ingestion_date: "2026-09-14"
-last_updated: "2026-09-22"
-total_sources: 4
-total_words: 44918
+mind_slug: vendedor-secreto
+mode: synthetic (atualização da v2.1.0)
+ingestion_date: 2026-10-31
+total_sources: 7
+total_words: 12396
 ouro_ratio: 1.0
-
 sources:
-  - id: SRC-001
-    path: "agents/etlmaker/kbs/sessao-estrategica/VOL-01-fundamentos-modelo-negocio.md, VOL-02-geracao-demanda.md, VOL-03-processo-comercial-time.md, VOL-04-sessao-estrategica-4-blocos.md"
-    type: "kb"
-    tier: "ouro"
-    tier_weight: 1.0
-    expert: "Tomas"
-    word_count: 18917
-    sections: 4
-    quality: "deep"
-    key_sections:
-      - "Modelo de Negocio do Funil de Sessao Estrategica (VOL-01)"
-      - "Geracao de Demanda — 3 Funis (VOL-02)"
-      - "Processo Comercial, Time e Precificacao (VOL-03)"
-      - "Estrutura de 4 Blocos da Call — Diagnostico e Fechamento (VOL-04)"
-    notes: "Ja passou por ETL completo (ETLmaker v3.0), com spot-check de fidelidade e validacao final (98.2% na 1a rodada). Framework de sessao: 4 Blocos (rapport -> mapeamento de dores/NEPQ -> apresentacao da solucao -> bloco de sonhos/pitch/negociacao). Demonstracao ao vivo completa com aluno voluntario (Thiago) preservada no VOL-04."
-
-  - id: SRC-002
-    path: "agents/etlmaker/kbs/sessao-estrategica/VOL-05-sessao-a1-metodo-fht.md"
-    type: "kb"
-    tier: "ouro"
-    tier_weight: 1.0
-    expert: "Lourival"
-    word_count: 4998
-    sections: 1
-    quality: "deep"
-    key_sections:
-      - "Geracao de Leads para Sessao A1 (4 canais)"
-      - "Estrutura e Etapas da Sessao A1"
-      - "Questionario Raio-X (RX) — areas de potencial e dificuldade"
-    notes: "Ja passou por ETL completo. Fonte original transcrita via ASR com modelo whisper 'small' (confiabilidade menor que as demais) — o Composer ja tratou isso com paraphrase defensiva e nota de fidelidade explicita no volume; o Vendedor Secreto deve herdar a mesma cautela ao citar numeros/exemplos deste expert especificamente. Framework de sessao: Questionario Raio-X (RX) — perguntas investigativas por areas de potencial/dificuldade, balanceadas, antes do pitch."
-
-  - id: SRC-003
-    path: "agents/etlmaker/kbs/sessao-estrategica/VOL-06-identidade-oferta-leads.md, VOL-07-abordagem-sessao-ecroi.md"
-    type: "kb"
-    tier: "ouro"
-    tier_weight: 1.0
-    expert: "Karol"
-    word_count: 8357
-    sections: 2
-    quality: "deep"
-    key_sections:
-      - "Identidade de Vendas e Proposta Validada/P4 (VOL-06)"
-      - "Geracao de Leads — Rastreador de 6 Grupos (VOL-06)"
-      - "Leitura de Lead em 4 Camadas — Conectora/Analista/Diretiva (VOL-07)"
-      - "Roteiro ECROI da Sessao — Colapso/Reenquadramento/Ordem/Inevitabilidade (VOL-07)"
-      - "Pos-Venda — Follow-up e Depoimento (VOL-07)"
-    notes: "Autora e dona do repositorio — autoridade primaria desta mente, nao so mais um expert fundido. Fonte de maior confiabilidade da KB (prosa escrita e revisada, QG-CC-006 — nao e transcricao de ASR). Framework de sessao: ECROI. Este e o expert cuja perspectiva deve prevalecer em caso de tensao irreconciliavel entre os 3 (ver Fase 3 — Playback)."
-
-  - id: SRC-004
-    path: "agents/etlmaker/kbs/os-7-passos-da-venda-dani-martins/VOL-01-framework-completo.md"
-    type: "kb"
-    tier: "ouro"
-    tier_weight: 1.0
-    expert: "Dani Martins"
-    word_count: 12646
-    sections: 1
-    quality: "deep"
-    key_sections:
-      - "Os 7 Passos da Venda — framework completo (Abertura/Conexao, SPIN Selling, Apresentacao, Feedback/Objecoes, Negociacao/ZOPA, Fechamento, Recomendacao)"
-      - "Perfil comportamental DISC (Dominante/Influente/Estavel/Conforme)"
-      - "Psicologia da decisao de compra (dor e desejo, 85% emocional, preco x valor)"
-    notes: "Ja passou por ETL completo (ETLmaker v3.0, validacao final 99.2%, APPROVED). Expert convidado (guest) — nao faz parte do Expert360/mentoria da Karol, e uma aula externa (Prosperus Club) trazida pela usuaria pra enriquecer a mente. Framework de venda consultiva generalista (nao especifico de sessao 1:1 de alto ticket) — entra como 4o expert fundido a pedido explicito da usuaria em 22/09/2026, apos ETLmaker concluir a KB. Bloco de Q&A da aula original foi descartado no ETLmaker e NAO esta disponivel aqui."
-
-  - id: SRC-005
-    path: "business/campanhas/expert360-curso/roteiros/m3-roteiros.md"
-    type: "roteiro-de-aula"
-    tier: "ouro"
-    tier_weight: 1.0
-    expert: "Karol"
-    sections: 3
-    quality: "deep"
-    key_sections:
-      - "M3 A7 — Lendo seu lead antes do primeiro contato (3 perfis, leitura online em 4 camadas)"
-      - "M3 A11 — Conduzindo a Sessão ao Vivo (2 lentes, condução por perfil, sessão fora do roteiro, pedido de desconto)"
-      - "M3 A12 — Pós-sessão (correção do perfil no Rastreador)"
-    notes: "Adicionada em 26/09/2026 (update 2.1.0). Conteúdo aprovado pela Karol no Course Creator (QG-CC-006 PASS). Ideia de leitura ao vivo inspirada num material externo, adaptada sem citar autor nem conceitos proprietários dele (decisão da Karol)."
-
-readme_docs_transversais:
-  - "agents/etlmaker/kbs/sessao-estrategica/README.md"
-  - "agents/etlmaker/kbs/sessao-estrategica/REGRAS-CARDINAIS.md"
-  - "agents/etlmaker/kbs/sessao-estrategica/REPERTORIO.md"
-  - "agents/etlmaker/kbs/sessao-estrategica/GLOSSARIO.md"
-  - "agents/etlmaker/kbs/os-7-passos-da-venda-dani-martins/README.md"
-  - "agents/etlmaker/kbs/os-7-passos-da-venda-dani-martins/REGRAS-CARDINAIS.md"
-  - "agents/etlmaker/kbs/os-7-passos-da-venda-dani-martins/REPERTORIO.md"
-  - "agents/etlmaker/kbs/os-7-passos-da-venda-dani-martins/GLOSSARIO.md"
-
-notes_gerais: "As 4 fontes ja sao uma KB curada pelo ETLmaker v3.0 (validacao final 98.81%, APPROVED) — nao e material bruto. Isso significa que a Fase 2 (Analise) pode se apoiar fortemente no MAPA-TERRITORIAL.md (agents/etlmaker/kbs/sessao-estrategica/00-pipeline/MAPA-TERRITORIAL.md) e no REGRAS-CARDINAIS.md/REPERTORIO.md/GLOSSARIO.md ja existentes, que ja cumprem boa parte do trabalho de domain-mapping e extracao de frameworks/regras/termos por autor. O trabalho do knowledge-miner aqui e reprocessar esse material JA estruturado no formato de Knowledge Facets (KFs) do Mind Forge, nao extrair do zero de fonte crua."
+  - {id: SRC-001, path: agents/vendedor-secreto/agents/vendedor-secreto.md, type: kb, tier: ouro, expert: fusão (Karol âncora), notes: mente atual v2.1.0}
+  - {id: SRC-002, path: agents/vendedor-secreto/data/vendedor-secreto-kb.md, type: kb, tier: ouro, expert: Tomás/Lourival/Karol/Dani Martins, notes: KB atual}
+  - {id: SRC-003, path: "business/campanhas/expert360-curso/materiais/M3/M3.2 - Roteiro de Abordagem.md", type: course, tier: ouro, expert: Karol, notes: "abordagem em 3 etapas, abertura por perfil, convite, confirmação da sessão, cadência de não resposta — NOVO na mente"}
+  - {id: SRC-004, path: "business/campanhas/expert360-curso/materiais/M3/M3.3 - Formulário de Pré-Diagnóstico.md", type: course, tier: ouro, expert: Karol, notes: já resumido na KB}
+  - {id: SRC-005, path: "business/campanhas/expert360-curso/materiais/M3/M3.4 - Roteiro da Sessão 1 a 1.md", type: course, tier: ouro, expert: Karol, notes: cola rápida das 5 etapas, já coberto}
+  - {id: SRC-006, path: "business/campanhas/expert360-curso/materiais/M3/M3.5 - Rastreador de Leads Qualificados.md", type: course, tier: ouro, expert: Karol, notes: "4 critérios de fit + status do funil — reforça qualificação antes da abordagem"}
+  - {id: SRC-007, path: "business/processos/onboarding-pos-compra.md (seção 4, Método VIP)", type: kb, tier: ouro, expert: Karol, notes: "modelo de onboarding escolhido pela Karol em 31/10"}
+gaps:
+  - "Agendamento: lembrete, falta (no-show) e reagendamento sem fonte — copies a criar com a Karol"
+  - "Sinais sessão x venda direta: sem resultado medido; só a decisão de que toda oferta pode fechar sem call (KB do Vendedor Expert §10)"

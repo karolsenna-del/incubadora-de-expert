@@ -77,4 +77,18 @@
 - [ ] Li a mensagem que a Karol mandou antes (Copy do Garimpo, ficha do CRM ou print)?
 - [ ] A pergunta nova parte do que a lead já respondeu, sem refazer a anterior?
 
-*Novas regras: numerar R-009 em diante, sempre com contexto, motivo e checklist.*
+---
+
+## R-009 — Ler os sinais de sessão ou venda direta nas respostas do pré-diagnóstico
+
+**Contexto:** 31/10/2026, a Karol aprovou a hipótese de sinais que decide se o lead vai pra sessão (Vendedor Secreto) ou pra venda direta (este agente). Ela sempre manda as respostas do pré-diagnóstico pro agente e quer que ele interprete os sinais. Mesma tabela da KB do Vendedor Secreto, seção 3.6.
+**Motivo:** a qualificação decide o caminho da conversa; ler os sinais antes de responder evita forçar sessão em quem já quer comprar e evita vender por mensagem um caso que precisa de conversa.
+**Checklist:**
+- [ ] Listei os sinais encontrados, com as palavras do lead?
+- [ ] Sessão: caso complexo que não cabe em mensagem · lead pede pra conversar · outra pessoa decide junto · perfil Analista que quer tempo e detalhe
+- [ ] Venda direta: já sabe o que quer e pergunta "como funciona?"/"quanto é?" · trava pontual e nomeada · oferta de entrada
+- [ ] Sinais misturados → sessão. Recomendação dada antes da próxima mensagem
+- [ ] É hipótese em teste: registrar no aprendizado (task `registrar-aprendizado`) qual caminho foi e se fechou, pra validar ou corrigir a tabela
+- [ ] Agendamento pela Karol: só depois do pré-diagnóstico respondido; uma remarcação, depois a sessão é paga (R$97)
+
+*Novas regras: numerar R-010 em diante, sempre com contexto, motivo e checklist.*

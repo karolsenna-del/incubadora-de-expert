@@ -919,3 +919,17 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** Karol descartou esse tema. A nova Live 36 é "Como ser escolhido no meio de tanta gente com a mesma formação que você" (posicionamento, mecanismo único, frase-tese, alinhamento de narrativa, Autoridade Tríplice). "Formação" no título, não "diploma" (diploma fica pra frase-tese).
 **Racional:** diferencial de mercado é mais atrativo pra persona do que a ferida do Instagram.
 **Impacto:** roteiro novo em `live-36-roteiro.md`; o antigo guardado como `live-36-v1-instagram-descartada.md`; tema da LP do grupo trocado no arquivo, falta republicar.
+
+## 31/10/2026 — Migração dos GPTs para plugin em 01/12
+
+**Contexto:** A OpenAI desliga os Custom GPTs em 11/12; GPT migrado vira só leitura e o plugin não pode ser compartilhado em conta pessoal.
+**Decisão:** Migrar em 01/12 (evento na agenda da Karol, 9h). Plugin fica só pra ela; alunos usam a Expert-IAs da área de membros.
+**Racional:** Até lá o GPT segue recebendo melhorias pra quem ainda usa o link; 10 dias de margem antes do prazo.
+**Impacto:** Em 01/12 também trocar os links do ChatGPT da "Biblioteca de IAs" dos alunos pela área de membros.
+
+## 31/10/2026 — Funil de Vendas Secretas: pré-diagnóstico antes de agendar e 1 remarcação só
+
+**Contexto:** Melhoria do Vendedor Secreto (v3.0.0) pra cobrir o funil inteiro: qualificar, abordar, pré-diagnóstico, agendar, sessão, fechamento, follow-up, onboarding.
+**Decisão:** (1) O lead responde o pré-diagnóstico ANTES de agendar; as respostas são pré-requisito. (2) Remarcação só uma vez; na segunda falta ou pedido, o diagnóstico é pago (Karol: R$97; aluno define o dele). (3) Sinais de sessão x venda direta (hipótese) viram regra no Vendedor Secreto e no Vendedor Expert (R-009). (4) Onboarding do aluno = mensagem do Método VIP: só o diagnóstico de início, sem página de onboarding.
+**Racional:** "Se não se comprometem com isso, não vão se comprometer no restante." A Karol manda as respostas do pré-diagnóstico pro agente e quer que ele leia os sinais.
+**Impacto:** Mente local e prompt da área atualizados e testados; falta publicar a área. O material M3.2 do curso ainda traz a ordem antiga (pré-diagnóstico depois de confirmar a sessão).

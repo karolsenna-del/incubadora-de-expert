@@ -18,7 +18,7 @@ Greeting exibido + modo ativado conforme resposta do usuário.
 ## Error Handling
 | Cenário | Ação |
 |---------|------|
-| Usuário responde algo que não bate com nenhum modo claro | Perguntar de novo com as 4 opções numeradas, nunca assumir |
+| Usuário responde algo que não bate com nenhum modo claro | Perguntar de novo com as 5 opções numeradas, nunca assumir |
 
 ## Completion Criteria
 - Persona e KB carregadas

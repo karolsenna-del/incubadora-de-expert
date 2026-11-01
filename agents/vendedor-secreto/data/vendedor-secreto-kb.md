@@ -54,15 +54,38 @@ Tomás fecha o pagamento ainda na câmera; Karol confirma 3 pontos (pagamento/da
 
 ---
 
-## 3. DOMÍNIO — Qualificação de Lead Pré-Sessão
+## 3. DOMÍNIO — Antes da Sessão: Qualificação, Abordagem, Pré-Diagnóstico e Agendamento
 
-*O que decide se/como um lead chega à sessão, e o que coletar dele antes de começar.*
+*O que decide se/como um lead chega à sessão, como convidá-lo e o que precisa acontecer antes de marcar.*
+
+### 3.0 O Funil de Vendas Secretas (Karol, 31/10/2026)
+
+```
+QUALIFICAR → ABORDAR → PRÉ-DIAGNÓSTICO → AGENDAR → SESSÃO (5 etapas) → FECHAMENTO → FOLLOW-UP → ONBOARDING
+```
+
+Cada etapa tem um objetivo só:
+- **Qualificar:** decidir se o lead merece o convite pra sessão (fit), antes de qualquer mensagem.
+- **Abordar:** conseguir a conversa, não vender.
+- **Pré-diagnóstico:** o lead responde ANTES de agendar. As respostas informam a sessão e testam o compromisso. Sem respostas, não tem agendamento.
+- **Agendar:** marcar com data, horário e canal; avisar que dá pra remarcar uma vez.
+- **Sessão / Fechamento:** as 5 etapas do Roteiro (seção 4).
+- **Follow-up:** dois tipos — de abordagem (quem não respondeu, seção 3.4) e de "vou pensar" (Cadência de 5 Toques, seção 9).
+- **Onboarding:** a mensagem de boas-vindas com o diagnóstico de início (seção 9.5).
+
+Status no Rastreador: Sem abordagem → Abordagem feita → Respondeu → Sessão agendada → Sessão realizada → Proposta enviada → Cliente → Vai pensar → Lead frio.
+
+Fronteira com a venda direta: este agente cuida do funil COM sessão. A venda sem sessão (por mensagem) é outro caminho, ainda em teste pela Karol; os sinais que separam um do outro estão na seção 3.6.
 
 ### 3.1 Frameworks
 
-**Formulário de Pré-Diagnóstico** (Karol) — 4 seções, 12 perguntas, preenchido pelo lead assim que a sessão é confirmada: Sobre Você → Sua Situação Atual → Contexto Econômico → Para a Nossa Conversa. Isso economiza os primeiros minutos da sessão, porque o vendedor já entra sabendo o contexto básico.
+**Formulário de Pré-Diagnóstico** (Karol) — 4 seções, 12 perguntas: Sobre Você → Sua Situação Atual → Contexto Econômico → Para a Nossa Conversa. É enviado assim que o lead aceita o convite, e **as respostas são pré-requisito pra agendar** (decisão da Karol, 31/10/2026 — substitui a ordem antiga do material M3.2, que mandava o formulário depois de confirmar a sessão). Duas funções: o vendedor entra na sessão sabendo o contexto básico, e quem não se compromete a responder 12 perguntas não vai se comprometer com o resto.
+
+**Qualificação pelo Rastreador** (Karol, M3.5) — 4 perguntas Sim/Não tiradas da Persona Compradora (P1), que somam o Score de Fit (0-4): especialista com experiência consolidada? tentando entrar no digital? renda que permite investir? não quer aparecer de forma amadora? *(Os 4 critérios são os da persona da Karol; o aluno troca pelos 4 critérios da persona DELE.)* Prioridade = score + grupo (alguém com fit médio no Círculo Íntimo pode vir antes de alguém com fit alto numa conexão fria).
 
 ### 3.2 Heurísticas (SE/ENTÃO)
+
+- **SE** vai abordar um lead, **ENTÃO** qualifique ANTES (Score de Fit + leitura do perfil). A qualificação decide se o convite é pra sessão; sem fit, o lead vai pra conteúdo, aula em grupo ou isca antes (Karol, 31/10).
 
 - **SE** um lead chega e precisa ser direcionado antes da sessão, **ENTÃO** classifique-o em Lead Scoring A/B/C (Tomás): A = muito qualificado, vai direto pro closer/expert principal; intermediário = qualificado com reserva, vai pro closer; C = pouco qualificado/frio, vai pro webinar antes de merecer uma sessão 1:1.
 - **SE** está avaliando se vale convidar um lead específico pra sessão, **ENTÃO** confira o checklist "Cara de PIX" (Tomás): posicionamento profissional na bio? sinais de poder aquisitivo? identidade compatível com o público-alvo? interação genuína (não hostil)? já usa o digital pra gerar renda?
@@ -70,6 +93,93 @@ Tomás fecha o pagamento ainda na câmera; Karol confirma 3 pontos (pagamento/da
 ### 3.3 Anti-padrões
 
 - Convidar qualquer lead pra sessão sem nenhum crivo — desperdiça a agenda mais escassa do negócio (o tempo do vendedor/expert) com quem não tem fit real.
+- Agendar antes de receber o pré-diagnóstico — a sessão começa às cegas e o lead que não respondeu costuma ser o que falta.
+- Remarcar indefinidamente — ensina o lead que o compromisso é negociável, e ele leva isso pro resto da jornada.
+
+### 3.4 Abordagem — Roteiro em 3 Etapas (Karol, M3.2)
+
+**Objetivo:** marcar a conversa (30 a 40 minutos pra entender a situação da pessoa e ver se dá pra ajudar). A venda acontece na sessão; a abordagem só busca a conversa.
+
+```
+ABERTURA GENUÍNA → CONEXÃO AO PROBLEMA → O CONVITE
+```
+
+1. **Abertura genuína** — começa com o lead, não com você. Algo específico do perfil que você leu.
+2. **Conexão ao problema** — uma frase que espelha a dor dele antes de oferecer qualquer coisa. Não é pitch: é mostrar que você entende de onde ele está.
+3. **O convite** — o pedido da conversa, simples, uma pergunta que ele responde com uma palavra.
+
+**Abertura por perfil** (modelos da Karol; o aluno troca o problema pela dor da persona DELE):
+
+| Perfil | Abre pra quem... | Abertura-modelo | Conexão ao problema (exemplo da Karol) | NÃO começa com |
+|---|---|---|---|---|
+| Conector | vê o trabalho dele de verdade | "[Nome], tenho acompanhado o que você está construindo. Tem uma coisa específica no seu trabalho que me chamou atenção: a forma como você [algo concreto]. Tenho uma pergunta pra te fazer. Você topa uma conversa de 30 minutos essa semana?" | "Eu sei que pra quem tem tanto a contribuir mas ainda não encontrou o formato certo, a invisibilidade pesa de um jeito que vai além do financeiro." | elogio genérico, pitch, "tenho algo pra te oferecer" |
+| Analista | chega com substância | "[Nome], estou trabalhando com especialistas que têm trajetória parecida com a sua: [detalhe específico]. Tenho visto algo acontecer nesse perfil que pode ser relevante pra você. Faria sentido a gente trocar 30 minutos?" | "O que eu vejo com frequência em especialistas com trajetória sólida é o gap entre o que já provou no offline e como isso aparece, ou não aparece, no digital." | "como você está?", entusiasmo sem referência, abertura sem preparo |
+| Diretivo | respeita o tempo dele | "[Nome], vi que você está em [contexto específico]. Tenho algo que pode ser relevante pra sua situação. Consigo te mostrar em 30 minutos?" | "Especialistas no seu nível costumam já ter o método. O que falta é a estrutura que faz ele se transformar em oferta real." | contexto longo, história, abordagem emocional |
+
+**Convites-modelo:** "Consigo te pegar 30 minutos essa semana?" · "Faria sentido a gente trocar uma ideia sobre isso?" · "Você topa uma conversa rápida pra eu entender melhor a sua situação?"
+
+**Follow-up de abordagem (não respondeu):**
+- **Toque 2 (24-48h)** — ângulo diferente, não repetição: "[Nome], minha mensagem pode ter se perdido. Pergunta direta: você está passando por [conexão ao problema]? Pergunto porque acho que tenho algo relevante pra te contar."
+- **Toque 3 (mais 24h)** — encerramento gracioso: "Tudo bem, [Nome]. Entendo que o momento pode não ser agora. Se em algum ponto você quiser trocar uma ideia, é só me chamar."
+- Rastreador: **Lead frio — [data]**. Lead frio não é lead perdido: o contato fica guardado pro próximo lançamento.
+
+**Regra de Ouro da abordagem:** a intenção por trás das palavras vale mais que o roteiro. "Preciso marcar essa sessão" → tom tenso, a pessoa sente. "Ele está carregando algo que eu sei como resolver" → mensagem natural, convite leve. A abordagem começa no lugar de quem tem algo que o outro precisa, não de quem precisa de algo do outro.
+
+### 3.5 Pré-Diagnóstico e Agendamento — mensagens (decisões da Karol, 31/10/2026)
+
+*Texto montado pelo forge a partir das decisões da Karol; adaptar à voz do aluno. [valor] = o valor que o ALUNO cobra pela sessão depois da remarcação: se ele não disse, perguntar antes; nunca usar os R$97 da Karol como valor dele.*
+
+**A) Lead aceitou o convite → manda o pré-diagnóstico (ainda não agenda):**
+> "Que bom, [Nome]! Antes de marcarmos, preciso que você responda um pré-diagnóstico rápido. É com ele que eu preparo a nossa conversa, pra ela valer a pena pra você: [link]. Assim que suas respostas chegarem, te mando os horários."
+
+**B) Não respondeu o pré-diagnóstico (24-48h) → cobra as respostas pra agendar:**
+> "Oi, [Nome]! Suas respostas do pré-diagnóstico ainda não chegaram aqui. É com elas que eu preparo a nossa conversa, por isso só agendo depois que você responder: [link]. Me avisa quando terminar?"
+
+**C) Respondeu → agenda (com a regra de remarcação já dita):**
+> "Recebi suas respostas, valeu! Já deu pra ver [algo específico que ele respondeu]. Tenho [dia/hora] ou [dia/hora], qual fica melhor? A conversa é por [canal] e dura uns 30 a 40 minutos. Se precisar, dá pra remarcar uma vez."
+
+Se a decisão pode depender de outra pessoa (cônjuge, sócio), convide essa pessoa aqui, no agendamento (Dani Martins).
+
+**D) Lembrete na véspera:**
+> "Oi, [Nome]! Passando pra lembrar da nossa conversa amanhã, [hora], por [canal]. Já estou com as suas respostas aqui e vou chegar com tudo preparado. Até amanhã!"
+
+**E) Faltou (1ª vez) → remarca uma vez e avisa a regra:**
+> "Oi, [Nome], te esperei hoje às [hora] e imagino que algo apertou aí. Dá pra remarcar uma vez: tenho [dia/hora] ou [dia/hora]. Se precisar mudar de novo depois disso, a sessão passa a ser paga ([valor]), porque esse horário fica reservado só pra você."
+
+**F) Pediu pra remarcar (1ª vez):**
+> "Claro! Fica melhor [dia/hora] ou [dia/hora]? Só te aviso: essa é a remarcação que dá pra fazer. Se precisar mudar de novo, a sessão passa a ser paga ([valor])."
+
+**G) Faltou ou pediu pra remarcar de novo (2ª vez) → sessão paga:**
+> "Entendo, [Nome]. Como a gente já remarcou uma vez, a partir de agora a sessão de diagnóstico é paga: [valor]. Se fizer sentido pra você, te mando o link de pagamento e já marcamos."
+
+**Política de remarcação (Karol, 31/10/2026):** remarca **uma vez só**. Na segunda falta ou no segundo pedido de remarcação, a sessão de diagnóstico passa a ser paga. Racional da Karol: "se não se comprometem com isso, não vão se comprometer no restante". Vale tanto pra quem faltou quanto pra quem pediu pra remarcar.
+
+### 3.6 Sinais: Sessão ou Venda Direta (hipótese aprovada pela Karol, 31/10/2026)
+
+Leia os sinais nas **respostas do pré-diagnóstico** e na conversa até ali. É uma hipótese em teste: ainda não há resultado medido da venda direta. Regra de base da Karol: toda oferta pode fechar sem sessão; a sessão entra quando a conversa pede, não é etapa obrigatória.
+
+| Sinal | Aponta pra |
+|---|---|
+| O caso é complexo, não cabe em mensagem (várias travas, contexto longo, dúvida sobre se o método serve) | Sessão |
+| O lead pede pra conversar / ligar | Sessão |
+| Outra pessoa decide junto (cônjuge, sócio) | Sessão (convidar a pessoa no agendamento) |
+| Perfil Analista: quer tempo, detalhe e lógica fase a fase antes de decidir | Sessão |
+| O lead já sabe o que quer e pergunta "como funciona?" ou "quanto é?" (comum no Diretivo) | Venda direta |
+| A trava é pontual e ele sabe exatamente qual é | Venda direta |
+| A oferta é de entrada (ticket baixo) | Venda direta |
+
+Como ler: vale o conjunto, não um sinal sozinho. Sinais misturados → sessão (é o caminho padrão deste funil). Ao entregar a leitura, diga quais sinais apareceram, com as palavras do lead, e a recomendação.
+
+Se apontar pra venda direta: não force a sessão. O diagnóstico já aconteceu (o pré-diagnóstico + a conversa), então a oferta pode ir por mensagem, mantendo os princípios: oferta com as palavras do lead, preço dito e pausa, objeção acolhe → pergunta → responde, condição de pagamento da oferta, pagamento combinado na conversa. O passo a passo completo de venda sem sessão ainda não faz parte deste agente.
+
+### 3.7 Heurísticas do Funil Antes da Sessão (SE/ENTÃO)
+
+- **SE** o lead aceitou o convite, **ENTÃO** mande o pré-diagnóstico e só agende depois das respostas.
+- **SE** o pré-diagnóstico não voltou em 24-48h, **ENTÃO** cobre as respostas dizendo que o agendamento depende delas (mensagem B).
+- **SE** o lead faltou ou pediu pra remarcar pela 1ª vez, **ENTÃO** remarque uma vez e avise que a próxima mudança torna a sessão paga.
+- **SE** é a 2ª falta ou o 2º pedido de remarcação, **ENTÃO** a sessão passa a ser paga — não remarque de graça de novo.
+- **SE** chegaram as respostas do pré-diagnóstico, **ENTÃO** leia os sinais (seção 3.6) e recomende sessão ou venda direta antes de agendar.
+- **SE** o lead não respondeu a abordagem, **ENTÃO** Toque 2 com ângulo novo; sem resposta, Toque 3 de encerramento e Lead frio.
 
 ---
 
@@ -106,7 +216,7 @@ Tomás fecha o pagamento ainda na câmera; Karol confirma 3 pontos (pagamento/da
 ### 4.3 Anti-padrões
 
 - Fazer diagnóstico e oferta "na mesma respiração", sem transição — quebra o efeito de "resposta ao invés de pitch" que sustenta a venda consultiva.
-- Revelar o preço fora da sessão (Instagram, site, conteúdo público) — elimina a função do diagnóstico como etapa obrigatória de valor (Tomás).
+- Revelar o preço fora da sessão (Instagram, site, conteúdo público) — elimina a função do diagnóstico como etapa obrigatória de valor (Tomás). Exceção: quando os sinais apontam venda direta (seção 3.6), o preço vai em conversa privada, depois do pré-diagnóstico — nunca em público.
 
 ---
 
@@ -256,7 +366,7 @@ Ver Narrativa ECROI (seção 4.1).
 
 ---
 
-## 9. DOMÍNIO — Pós-Sessão
+## 9. DOMÍNIO — Pós-Sessão e Onboarding
 
 ### 9.1 Frameworks
 
@@ -287,6 +397,32 @@ Logo após o fechamento, ainda no pico de satisfação do cliente: "Você está 
 
 ---
 
+### 9.5 Onboarding — Mensagem de Boas-Vindas (Karol, modelo do Método VIP, 31/10/2026)
+
+**Quando:** assim que o pagamento é confirmado (depois dos 3 pontos fechados na chamada).
+
+**Regra:** uma coisa só pra fazer — responder o **diagnóstico de início** antes do 1º encontro. Sem página de onboarding, sem lista de tarefas, sem outros links. Todo aluno que segue o método tem esse diagnóstico (a Karol ensina a montar no Forms e dá um modelo no Drive pra adaptar). Se o aluno ainda não montou o dele, o próximo passo é montar a partir desse modelo — o agente não inventa as perguntas.
+
+**Esqueleto** (o que não pode faltar, na ordem):
+1. Boas-vindas com o nome do produto + "que bom te ter aqui"
+2. O pedido: responder o diagnóstico antes do primeiro encontro
+3. O porquê: é com essas respostas que você chega no 1º encontro já sabendo como orientar
+4. "Se precisar parar no meio, fica salvo" — só se o aluno confirmar que o formulário dele salva o progresso; na dúvida, tirar a frase
+5. O link
+6. "Assim que você finalizar, eu recebo suas respostas e entro em contato pra agendarmos" — quem puxa o agendamento é o expert, depois de ver as respostas
+7. "Parabéns pela decisão!"
+
+**Modelo da Karol (Método VIP):**
+> "Seja bem-vinda(o) ao Método VIP! Que bom te ter aqui.
+> Antes do nosso primeiro encontro, preciso que você responda um diagnóstico — é nele que você me conta sua persona, sua promessa e o caminho do seu método. É com essas respostas que eu chego no Encontro 1 já sabendo como te orientar melhor nos próximos passos. Se precisar parar no meio, fica salvo sozinho, pode continuar depois de onde parou.
+> Responde aqui: [link]
+> Assim que você finalizar, eu recebo suas respostas e entro em contato pra agendarmos nosso primeiro encontro.
+> Parabéns pela decisão!"
+
+**Anti-padrões:** mandar várias tarefas de uma vez; pedir pro cliente "me chamar quando terminar" (o expert é avisado pelas respostas); perguntar "qual seu melhor horário" se o diagnóstico já pergunta; explicar o produto de novo (o cliente acabou de comprar).
+
+---
+
 ## 10. DOMÍNIO — Geração de Leads e Preparação (suporte)
 
 *Periférico ao propósito central da mente (roteirizar e conduzir a sessão), mas relevante pra quem está montando a agenda.*
@@ -302,8 +438,14 @@ Logo após o fechamento, ainda no pico de satisfação do cliente: "Você está 
 | Situação | Ferramenta/Ação | Fonte |
 |---|---|---|
 | Preciso saber se um lead merece uma sessão | Lead Scoring A/B/C + checklist "Cara de PIX" | Tomás |
-| Preciso coletar contexto antes da sessão | Formulário de Pré-Diagnóstico (4 seções, 12 perguntas) | Karol |
+| Preciso coletar contexto antes da sessão | Formulário de Pré-Diagnóstico (4 seções, 12 perguntas) — respondido ANTES de agendar | Karol |
 | Preciso calibrar o tom da abordagem | Leitura de Lead em 4 Camadas → 3 Perfis | Karol |
+| Preciso escrever a mensagem de abordagem | Roteiro em 3 Etapas + abertura por perfil (seção 3.4) | Karol |
+| O lead não respondeu a abordagem | Toque 2 (ângulo novo) → Toque 3 (encerramento gracioso) → Lead frio | Karol |
+| O lead aceitou o convite / não mandou o pré-diagnóstico | Mensagens A e B (seção 3.5) — agenda só com as respostas | Karol |
+| Preciso agendar, lembrar, remarcar ou o lead faltou | Mensagens C a G + política de 1 remarcação (seção 3.5) | Karol |
+| Chegaram as respostas do pré-diagnóstico | Leitura de sinais: sessão ou venda direta (seção 3.6) | Karol |
+| O cliente pagou | Mensagem de onboarding com o diagnóstico de início (seção 9.5) | Karol |
 | Preciso confirmar o perfil durante a sessão | Leitura ao Vivo — 2 Lentes (o que você vê / o que você ouve) | Karol |
 | Preciso ajustar a condução ao perfil | Quadro de Condução por Perfil (Conector/Analista/Diretivo) | Karol |
 | Preciso montar as perguntas de diagnóstico | Questionário RX (categorias balanceadas) | Lourival |
@@ -328,7 +470,7 @@ Logo após o fechamento, ainda no pico de satisfação do cliente: "Você está 
 2. **SE** o lead objeta, **ENTÃO** acolha a preocupação como legítima primeiro, depois pergunte a causa real — nunca contradiga de frente. *(Crown Jewel)*
 3. **SE** a sessão termina sem fechamento, **ENTÃO** sempre combine data e horário do próximo passo — nunca deixe em aberto. *(Crown Jewel)*
 4. **SE** está avaliando convidar um lead, **ENTÃO** rode o checklist "Cara de PIX" antes de gastar a agenda com ele.
-5. **SE** a sessão foi confirmada, **ENTÃO** envie o Formulário de Pré-Diagnóstico antes de começar.
+5. **SE** o lead aceitou o convite, **ENTÃO** envie o Formulário de Pré-Diagnóstico e só agende depois das respostas; leia nelas os sinais de sessão ou venda direta (seção 3.6). Remarcação: uma vez só, depois a sessão é paga.
 6. **SE** vai abordar alguém, **ENTÃO** leia o perfil em 4 camadas e calibre o tom pelo perfil (Conector/Analista/Diretivo).
 7. **SE** já está na conversa ao vivo, **ENTÃO** use as 2 lentes (o que você vê / o que você ouve) pra confirmar o perfil e conduza pelo perfil de quem está do outro lado, não pelo seu.
 8. **SE** está no rapport inicial, **ENTÃO** avise (seeding) que haverá oferta ao final.
@@ -469,4 +611,37 @@ momento" + data pra retomar.
 
 Por quê: condição de pagamento é regra da oferta; desconto negociado
 é preço que cedeu.
+```
+
+### 13.5 Exemplo — Modo Funil Antes da Sessão (leitura do pré-diagnóstico)
+
+**Input:** "A lead respondeu o pré-diagnóstico. Ela é nutricionista CLT, diz que 'já sabe que quer o programa de 90 dias, só quer saber como funciona o pagamento', o marido não participa das decisões do consultório e a trava é 'não sei montar a oferta'. Agendo a sessão?"
+
+**Output:**
+
+```
+LEITURA DOS SINAIS
+
+Apontam pra venda direta:
+- "já sei que quero o programa, só quero saber como funciona o pagamento"
+  → ela já decidiu o quê, pergunta o como (sinal Diretivo)
+- trava pontual e nomeada: "não sei montar a oferta"
+- decide sozinha (sem terceiro decisor)
+
+Apontam pra sessão: nenhum.
+
+RECOMENDAÇÃO: venda direta, sem forçar a sessão. O diagnóstico já
+aconteceu no pré-diagnóstico. Mande a oferta por mensagem usando as
+palavras dela:
+
+"[Nome], li suas respostas com calma. Você falou que a trava é montar
+a oferta, e é exatamente isso que a gente resolve nas primeiras semanas
+do programa: [o que a fase 1 entrega]. O investimento é [preço], em
+[condições de pagamento da oferta]. Quer que eu te mande o link?"
+
+Preço dito, pare. Se vier objeção: acolhe → pergunta → responde.
+
+Próximo passo: enviar a mensagem hoje e anotar no Rastreador
+"Proposta enviada — [data]". Se ela pedir pra conversar, aí sim agende
+a sessão (mensagem C).
 ```

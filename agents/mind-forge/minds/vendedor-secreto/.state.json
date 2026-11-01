@@ -1,26 +1,9 @@
 {
   "mind_slug": "vendedor-secreto",
-  "mind_name": "Vendedor Secreto",
+  "mind_name": "Vendedor Secreto v3 (funil completo de Vendas Secretas)",
   "mode": "synthetic",
-  "purpose": "Ajudar a aluna do Expert360 (ou cliente de mentoria individual) a criar o roteiro personalizado da sua sessao de vendas 1:1 e conduzir a sessao inteira do inicio ao fechamento. Entregavel do curso, tambem personalizado como servico da Karol.",
-  "experts_fundidos": [
-    {
-      "nome": "Tomas",
-      "fonte": "VOL-01 a VOL-04",
-      "framework_de_sessao": "Estrutura de 4 Blocos (rapport -> dores/NEPQ -> solucao -> bloco de sonhos/pitch)"
-    },
-    {
-      "nome": "Lourival",
-      "fonte": "VOL-05",
-      "framework_de_sessao": "Questionario Raio-X (RX) por areas de potencial/dificuldade"
-    },
-    {
-      "nome": "Karol",
-      "fonte": "VOL-06 e VOL-07",
-      "framework_de_sessao": "ECROI (Colapso->Reenquadramento->Ordem->Inevitabilidade)",
-      "nota": "autora e dona do repositorio, autoridade primaria"
-    }
-  ],
+  "operation": "update",
+  "base_version": "2.1.0",
   "current_phase": 5,
   "phase_status": {
     "phase_0": "completed",
@@ -31,81 +14,21 @@
     "phase_5": "completed"
   },
   "sources": [
-    "agents/etlmaker/kbs/sessao-estrategica/",
-    "agents/etlmaker/kbs/os-7-passos-da-venda-dani-martins/"
+    "agents/vendedor-secreto/agents/vendedor-secreto.md",
+    "agents/vendedor-secreto/data/vendedor-secreto-kb.md",
+    "business/campanhas/expert360-curso/materiais/M3/M3.2 - Roteiro de Abordagem.md",
+    "business/campanhas/expert360-curso/materiais/M3/M3.3 - Formulário de Pré-Diagnóstico.md",
+    "business/campanhas/expert360-curso/materiais/M3/M3.4 - Roteiro da Sessão 1 a 1.md",
+    "business/campanhas/expert360-curso/materiais/M3/M3.5 - Rastreador de Leads Qualificados.md",
+    "business/processos/onboarding-pos-compra.md#4-metodo-vip"
   ],
-  "total_kfs": 61,
-  "domains_identified": 9,
   "quality_gates_passed": [
     "QG-MF-001",
     "QG-MF-002",
     "QG-MF-003",
     "QG-MF-004",
-    "QG-MF-005"
+    "QG-MF-005 (smoke tests; aprovação final da Karol pendente)"
   ],
-  "playback_summary": "Usuaria validou o mapa original com 3 ajustes: (1) nome padrao 'Sessao de Vendas Secretas', (2) framework de sessao fundido em 5 etapas proprio (nao escolha de 1 dos 3), (3) novo dominio core 'Qualificacao de Lead Pre-Sessao' com 3 KFs adicionados. Aprovacao final: 'perfeito, siga'.",
-  "update_22_09_2026": {
-    "reason": "Usuaria pediu para adicionar Dani Martins como 4o expert fundido (KB 'Os 7 Passos da Venda', processada pelo ETLmaker na mesma sessao)",
-    "status": "completed",
-    "kfs_added": 14,
-    "new_total_kfs": 55,
-    "tensions_resolvidas": [
-      "DISC simplificado pra eixo de ritmo, convivendo com Leitura de Lead de Karol por MOMENTO (pre-sessao vs ao vivo)",
-      "Objecao fundida em sequencia: acolhe (Dani) -> pergunta (Karol) -> tabela de objecoes",
-      "SPIN adotado como tecnica-padrao de diagnostico, RX de Lourival mantido como framework de sessao"
-    ],
-    "vocabulario_decidido": "so 'SPIN' ativo; ZOPA/DISC-completo/dissonancia cognitiva excluidos por pedido da usuaria",
-    "artefatos_atualizados": [
-      "knowledge-facets.yaml",
-      "domain-map.yaml",
-      "voice-profile.yaml",
-      "source-manifest.yaml",
-      "04-forged/agents/vendedor-secreto.md",
-      "04-forged/data/vendedor-secreto-kb.md",
-      "04-forged/config.yaml",
-      "04-forged/tasks/copiloto-conducao.md",
-      "e copias sincronizadas em agents/vendedor-secreto/"
-    ],
-    "version_bump": "1.0.0 -> 2.0.0"
-  },
-  "completed_at": "2026-09-14",
-  "installed": {
-    "path": "agents/vendedor-secreto/",
-    "slash_command": "/vendedor-secreto"
-  },
-  "started_at": "2026-09-14",
-  "paused_at": "",
-  "resumed_at": "",
-  "update_26_09_2026": {
-    "reason": "Alinhar a mente com o Expert360º M3 A7/A11/A12 aprovados pela Karol (handoff do Course Creator)",
-    "status": "completed",
-    "kfs_added": 6,
-    "new_total_kfs": 61,
-    "sources_added": [
-      "SRC-005 — business/campanhas/expert360-curso/roteiros/m3-roteiros.md"
-    ],
-    "mudancas": [
-      "Leitura ao Vivo em 2 Lentes",
-      "Condução por Perfil",
-      "Protocolo do Pedido de Desconto (desconto à vista mantido)",
-      "Sessão fora do roteiro",
-      "Revisor confere perfil no Rastreador",
-      "Rastreador de Leads Qualificados / 'Veio até mim'",
-      "Linguagem neutra em todos os artefatos"
-    ],
-    "artefatos_atualizados": [
-      "source-manifest.yaml",
-      "knowledge-facets.yaml",
-      "domain-map.yaml",
-      "04-forged/agents/vendedor-secreto.md",
-      "04-forged/data/vendedor-secreto-kb.md",
-      "04-forged/tasks/copiloto-conducao.md",
-      "04-forged/tasks/revisor-pos-sessao.md",
-      "04-forged/config.yaml",
-      "cópias sincronizadas em agents/vendedor-secreto/"
-    ],
-    "version_bump": "2.0.0 -> 2.1.0",
-    "user_approved": true,
-    "validation": "3/3 PASS (05-validation/validation-report.yaml)"
-  }
+  "started_at": "2026-10-31",
+  "notes": "Atualização pedida pela Karol em 31/10: cobrir o funil inteiro (abordagem, agendamento, sessão, oferta, fechamento, follow-up, onboarding). Agendamento: copies a construir junto com a Karol. Onboarding: modelo = mensagem do Método VIP (só o diagnóstico antes do 1º encontro). Fronteira: Secreto = funil COM sessão; venda direta é do Vendedor Expert (em teste, sem resultado ainda). Sinais sessão x venda direta: hipóteses a validar."
 }

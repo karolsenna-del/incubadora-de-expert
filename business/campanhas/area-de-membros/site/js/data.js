@@ -210,5 +210,5 @@ const BIBLIOTECA_IA_AGENTES = [
   { agenteId: 'live-expert', modo: 'chat', titulo: 'Agente Live Expert', descricao: 'Roteiro da sua live semanal nos 8 blocos, com tema, objeções quebradas e pitch, na sua voz.' },
   { agenteId: 'expert-viral', modo: 'chat', titulo: 'Agente Expert Viral', descricao: 'Transforme suas ideias em Reels com gancho forte e CTA, roteiros prontos e diagnóstico do que não performou.' },
   { agenteId: 'stories-expert', modo: 'chat', titulo: 'Agente Stories Expert', descricao: 'Escreve suas sequências de Stories no seu tom, com sua persona e seu método, prontas pra gravar.' },
-  { agenteId: 'vendedor-secreto', modo: 'chat', titulo: 'Agente Vendedor Secreto', descricao: 'Monte o roteiro da sua sessão de vendas, conduza ao vivo e revise depois, com a sua oferta e o seu preço.' }
+  { agenteId: 'vendedor-secreto', modo: 'chat', titulo: 'Agente Vendedor Secreto', descricao: 'Do primeiro contato ao onboarding: abordagem, agendamento, roteiro da sessão, condução ao vivo e follow-up, com a sua oferta e o seu preço.' }
 ];
