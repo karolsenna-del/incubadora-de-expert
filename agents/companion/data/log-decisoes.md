@@ -11,6 +11,12 @@
 **Impacto:** [o que muda]
 -->
 
+## 02/11/2026 — Financeiro: saldo do painel = saldo real da conta PJ, repasse mês a mês
+**Contexto:** Karol: o saldo acumulado não existe, ela passa tudo da PJ pra PF no fim de cada mês; hoje a conta tem R$700,49.
+**Decisão:** Repasse lançado no último dia de cada mês (11/2025–10/2026) = o que entrou − o que saiu da conta no mês; mês negativo = aporte dela. 'Saldo acumulado' do painel virou 'Saldo na conta PJ', pelo caixa. Daqui pra frente, lançar o repasse do mês no painel.
+**Racional:** O painel tem que mostrar o saldo real do banco.
+**Impacto:** Saldo zero todo fim de mês; hoje R$700,49. Substitui o repasse único lançado antes.
+
 ## 02/11/2026 — Financeiro: repasse da PJ pra Karol entra no saldo
 **Contexto:** Karol: a conta PJ tem R$700,49 hoje (com os R$700 da Milena de nov); o resto já foi repassado pra PF.
 **Decisão:** Lançar o repasse acumulado (R$20.788,27) como transferência PJ → PF em 02/11; repasse sai do saldo acumulado; painel ganha 'Na conta PJ hoje' pelo caixa.
