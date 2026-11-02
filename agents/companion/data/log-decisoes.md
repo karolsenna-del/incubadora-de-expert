@@ -4,6 +4,25 @@
 
 <!-- Formato:
 
+## [DATA] — [TITULO DA DECISAO]
+**Contexto:** [o que estava acontecendo]
+**Decisao:** [o que foi decidido]
+**Racional:** [por que]
+**Impacto:** [o que muda]
+-->
+
+## 01/11/2026 — Expert-IAs: mês de medição antes de fixar o limite de uso
+**Contexto:** Karol pediu limite de uso nos agentes (principalmente conteúdo e lives); o servidor não contava nada e não havia dado de uso real.
+**Decisão:** (1) Limitar por custo e por abuso. (2) Medir 1 mês (01/11 a 01/12) contando mensagens por aluno, agente e dia, só com teto folgado de segurança (80/dia por agente no curso). (3) Mentoria (Grupo, Individual, Incubadora Express) tem o dobro (160/dia).
+**Racional:** Número fixado no chute pode travar aluno bom ou não segurar custo; com 1 mês de uso real o limite sai do dado.
+**Impacto:** Tabela `uso_agentes` + função `registrar_uso_agente` (business/campanhas/area-de-membros/sql/) e servidor do chat atualizado. Em 01/12: rodar `sql/relatorio-uso-agentes.sql` e definir o limite final.
+
+## 01/11/2026 — Weekly review: aulas M3 adiadas, funil do mini treinamento congelado, S14 no ritmo da S13
+**Contexto:** Weekly atrasado 14 dias (último 18/10). Novembro é foco total em comercial; pelo registro só a A9 do M3 está gravada, prazo era 06/11.
+**Decisão:** (1) Prazo de 06/11 das aulas M3 A10-A13 adiado; nova data 15/11 (Karol, 01/11). (2) Funil do mini treinamento (LP → WhatsApp) congelado: sai das operações ativas, página fica no ar sem manutenção. (3) Rota100k Semana 14 no ritmo da S13 (~36 posts, ter-dom, convites pra conversa).
+**Racional:** Comercial vem primeiro em novembro; o funil não dá resultado desde agosto e a regra é não mexer em funil até ~17/12; o conteúdo é a fonte de convites pras sessões.
+**Impacto:** Cockpit atualizado; próximo review 08/11.
+
 ## 30/10/2026 — Juliana Pasqual fechou o Método VIP
 
 **Contexto:** Sessão de vendas de 29/10 (Juliana pelo Dr. Diogo), ofertado o Método VIP (R$1.500 pix ou 12x R$150).
@@ -24,13 +43,6 @@
 **Decisão:** Novembro é foco total em comercial (rotina comercial como coração do negócio).
 **Racional:** Antes, sem produto pronto, nem a Karol tinha clareza do que oferecer e o lead não entendia a jornada dele no produto; agora o timing chegou.
 **Impacto:** Conteúdo de novembro abre com isso (Rota100k Dom 01/11 07h). Prioridade do mês é a rotina comercial.
-
-## [DATA] — [TITULO DA DECISAO]
-**Contexto:** [o que estava acontecendo]
-**Decisao:** [o que foi decidido]
-**Racional:** [por que]
-**Impacto:** [o que muda]
--->
 
 ## 23/10/2026 — Sprint do Vagner: ferramentas só são construídas depois que ele revisa as fichas de conteúdo
 **Contexto:** S4 do Vagner apresentava o Kit (planilha) e a vitrine (protótipo com dados fictícios) e já liberava a versão de uso nas Aprovações.
@@ -933,3 +945,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** (1) O lead responde o pré-diagnóstico ANTES de agendar; as respostas são pré-requisito. (2) Remarcação só uma vez; na segunda falta ou pedido, o diagnóstico é pago (Karol: R$97; aluno define o dele). (3) Sinais de sessão x venda direta (hipótese) viram regra no Vendedor Secreto e no Vendedor Expert (R-009). (4) Onboarding do aluno = mensagem do Método VIP: só o diagnóstico de início, sem página de onboarding.
 **Racional:** "Se não se comprometem com isso, não vão se comprometer no restante." A Karol manda as respostas do pré-diagnóstico pro agente e quer que ele leia os sinais.
 **Impacto:** Mente local e prompt da área atualizados e testados; falta publicar a área. O material M3.2 do curso ainda traz a ordem antiga (pré-diagnóstico depois de confirmar a sessão).
+
+## 2026-11-01 — Diagnóstico do Método VIP salva rascunho no servidor
+**Contexto:** uma aluna perdeu as respostas 2x quando a bateria acabou; a página só guardava no navegador do celular.
+**Decisão:** (Karol, opção A) rascunho guardado também no banco (Supabase), com recuperação por nome + WhatsApp na tela inicial e confirmação no "recomeçar". Dados de contrato não entram no rascunho.
+**Racional:** nada se perde ao trocar de app, de navegador ou de celular.
+**Impacto:** o envio final continua indo pra planilha como antes.

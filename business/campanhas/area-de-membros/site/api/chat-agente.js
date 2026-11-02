@@ -77,6 +77,24 @@ async function validarAcesso(accessToken) {
   return Array.isArray(rows) && rows.some(r => !r.expira_em || new Date(r.expira_em) > agora);
 }
 
+async function registrarUso(accessToken, agenteId) {
+  try {
+    const resp = await fetch(`${SUPABASE_URL}/rest/v1/rpc/registrar_uso_agente`, {
+      method: 'POST',
+      headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${accessToken}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ p_agente: agenteId })
+    });
+    if (!resp.ok) {
+      console.error('[chat-agente] contagem de uso falhou:', resp.status, await resp.text());
+      return null;
+    }
+    return await resp.json();
+  } catch (err) {
+    console.error('[chat-agente] contagem de uso falhou:', err.message);
+    return null;
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'method not allowed' });
@@ -99,6 +117,15 @@ export default async function handler(req, res) {
   const temAcesso = await validarAcesso(accessToken);
   if (!temAcesso) {
     res.status(403).json({ error: 'Seu acesso não inclui a Expert-IAs.' });
+    return;
+  }
+
+  // Contagem de uso (Karol, 01/11): conta cada mensagem por aluno/agente/dia em `uso_agentes`
+  // (sql/uso-agentes.sql). Mês de medição com teto folgado; mentoria tem o dobro.
+  // Se a contagem falhar, o aluno não fica sem resposta: segue e só registra o erro no log.
+  const uso = await registrarUso(accessToken, agenteId);
+  if (uso && uso.permitido === false && uso.limite) {
+    res.status(429).json({ error: `Você chegou ao limite de ${uso.limite} mensagens de hoje com o ${agente.nome}. Amanhã libera de novo, e esta conversa fica salva aqui.` });
     return;
   }
 

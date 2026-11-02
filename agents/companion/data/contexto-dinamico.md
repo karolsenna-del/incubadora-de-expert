@@ -17,6 +17,18 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Expert-IAs: contagem de uso (01/11)
+
+Karol decidiu medir 1 mês antes de fixar limite (custo + abuso); mentoria tem o dobro. Teto de segurança: 80 mensagens/dia por agente (curso), 160 (mentoria). Prontos: `business/campanhas/area-de-membros/sql/uso-agentes.sql` (+ `aplicar-uso-agentes.sh`) e `site/api/chat-agente.js` (se a contagem falhar, o chat segue respondendo). No ar desde 01/11: banco aplicado pela Karol (conferido: tabela protegida, função só pra aluno logado) e servidor publicado (dpl_CkWZrA9Vw3rZQtQqEjjATSJH8T9K, domínio ok, chat recusa sem login). Testado logado em 01/11: mensagens da Karol no Expert Viral contadas (plano mentoria). Fechado até o relatório de 01/12. 01/12: rodar `sql/relatorio-uso-agentes.sql` e fixar o limite.
+
+## Weekly review 01/11
+
+Feito. Aulas M3 A10-A13: prazo passou de 06/11 pra 15/11. Funil do mini treinamento congelado. Rota100k S14 no ritmo da S13. WhatsApp → CRM já estava religado desde 19/10. Garantia da Express na Voomp já está em 15 dias (conferido no painel, 01/11). Achado: a aba do checkout da Voomp mostra "GESTAO PRA TUDO" no título (nome do negócio antigo), não corrigido. Próximo review: 08/11.
+
+## Painel de projetos atualizado (01/11)
+
+Cockpit sincronizado com o estado de 18/10 a 01/11: Rota100k na S13 (fecha hoje, S14 a planejar), Área de Membros ativa com Expert-IAs (10 agentes; falta a regra de limite de uso), Expert360º com A9-A13 urgente até 06/11, Live 36 (04/11) com deck aguardando aprovação, comercial com foco de novembro. Coleta de métricas do Instagram voltou desde 27/10 (o aviso de token vencido abaixo ficou velho). Weekly review segue atrasado (último 18/10).
+
 ## GPTs → plugin e limite de uso dos agentes (31/10)
 
 - Migração dos GPTs pra plugin: Karol decidiu fazer em 01/12 (margem antes de 11/12, quando os GPTs saem do ar). Evento na agenda dela em 01/12 às 9h. Plugin fica só pra ela; alunos usam a Expert-IAs da área de membros. Na mesma data, trocar os links do ChatGPT da "Biblioteca de IAs" das alunas pela área.
@@ -631,3 +643,5 @@ Retomar com: `/expert-companion`
 - Legenda do fracassos-viram-metodo escrita (CTA AULA) e salva na fila; aguarda OK da Karol pra agendar 05/11 20h.
 - Convite preto da live (slide 9) + CTA AULA na legenda colocados nos 7 carrosséis agendados (29/10 a 04/11) e no fracassos-viram-metodo; no GitHub (commit 4b378cb).
 - 30/10: Apple publicado com 9 slides (convite) às 23h20; fracassos-viram-metodo agendado 05/11 20h e no GitHub.
+
+- 01/11 — Diagnóstico do Método VIP com rascunho no servidor (recupera respostas por nome + WhatsApp): no ar e conferido. Falta só a aluna que perdeu as respostas recomeçar.
