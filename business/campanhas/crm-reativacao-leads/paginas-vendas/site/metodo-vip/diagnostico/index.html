@@ -367,6 +367,9 @@ main#stage{
   margin-top:10px;
 }
 .status-msg.ok{color:var(--ember);}
+.recover{margin-top:28px;}
+.recover-form .field-text{margin-bottom:12px;}
+.recover-form .btn-primary{margin-top:4px;}
 
 .error-msg{
   font-size:0.8125rem;
@@ -418,6 +421,8 @@ main#stage{
 
   var SHEETS_ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbyiETzYFB-3IzmS2diYfP6ASy66MxXffyObFcAo64so38o5kP0_YGb4pAz7wes4G-QB/exec";
   var STORAGE_KEY = "diagnostico-metodo-vip-v1";
+  var DRAFT_ENDPOINT = "/api/rascunho-diagnostico";
+  var FORM_ID = "metodo-vip";
 
   var SECTIONS = [
     {num:"01", title:"Sobre você", note:"Pra eu te chamar certo."},
@@ -505,14 +510,67 @@ main#stage{
   var stepCount = document.getElementById("stepCount");
   var restartBtn = document.getElementById("restartBtn");
 
+  function novoId(){
+    if(window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c){
+      var r = Math.random()*16|0; return (c === "x" ? r : (r&0x3|0x8)).toString(16);
+    });
+  }
+  if(!state.draftId) state.draftId = novoId();
+
+  // "recomeçar" pede um segundo toque antes de apagar
+  var restartArmed = null;
   restartBtn.addEventListener("click", function(){
+    if(!restartArmed){
+      restartBtn.textContent = "toque de novo pra apagar tudo";
+      restartArmed = setTimeout(function(){ restartArmed = null; restartBtn.textContent = "recomeçar"; }, 4000);
+      return;
+    }
+    clearTimeout(restartArmed); restartArmed = null;
+    restartBtn.textContent = "recomeçar";
     try{ localStorage.removeItem(STORAGE_KEY); }catch(e){}
-    state = {stepIndex:0, answers:{}};
+    state = {stepIndex:0, answers:{}, draftId: novoId()};
     render();
+  });
+
+  // Rascunho também no servidor: sobrevive a bateria acabando, app trocado ou outro celular
+  function draftPayload(acao){
+    var respostas = {};
+    Object.keys(state.answers).forEach(function(k){
+      if(k.indexOf("contrato_") !== 0) respostas[k] = state.answers[k];
+    });
+    return JSON.stringify({
+      acao: acao, formulario: FORM_ID, id: state.draftId,
+      nome: state.answers.nome || "", whats: state.answers.whats || "",
+      etapa: state.stepIndex, respostas: respostas
+    });
+  }
+  function canSyncDraft(){
+    var w = String(state.answers.whats || "").replace(/\D/g, "");
+    return !!(String(state.answers.nome || "").trim() && w.length >= 10);
+  }
+  var draftTimer = null;
+  function pushDraft(acao){
+    if(!canSyncDraft()) return;
+    try{
+      fetch(DRAFT_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json"},
+        body: draftPayload(acao || "salvar"), keepalive:true}).catch(function(){});
+    }catch(e){}
+  }
+  function scheduleDraft(){
+    if(state.submitted) return;
+    clearTimeout(draftTimer);
+    draftTimer = setTimeout(function(){ pushDraft("salvar"); }, 1500);
+  }
+  document.addEventListener("visibilitychange", function(){
+    if(document.visibilityState === "hidden" && !state.submitted){
+      clearTimeout(draftTimer); pushDraft("salvar");
+    }
   });
 
   function saveState(){
     try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){}
+    scheduleDraft();
   }
 
   function el(tag, attrs, children){
@@ -580,7 +638,47 @@ main#stage{
     var btn = el("button", {class:"btn-primary", type:"button", text:"Começar meu diagnóstico →"});
     btn.addEventListener("click", function(){ go(1); });
     s.appendChild(btn);
+    if(!String(state.answers.nome || "").trim()) s.appendChild(buildRecover());
     return s;
+  }
+
+  function buildRecover(){
+    var box = el("div", {class:"recover"});
+    var toggle = el("button", {class:"btn-ghost", type:"button", text:"Já comecei antes e minhas respostas sumiram"});
+    var form = el("div", {class:"recover-form"});
+    form.style.display = "none";
+    form.appendChild(el("p", {class:"lede small", text:"Digite o mesmo nome e WhatsApp que você colocou no começo. Eu busco o que você já tinha escrito."}));
+    var nomeIn = el("input", {class:"field-text", type:"text", placeholder:"Seu nome"});
+    var whatsIn = el("input", {class:"field-text", type:"tel", placeholder:"(DD) 9XXXX-XXXX"});
+    var go2 = el("button", {class:"btn-primary", type:"button", text:"Buscar minhas respostas"});
+    var msg = el("p", {class:"status-msg"});
+    form.appendChild(nomeIn); form.appendChild(whatsIn); form.appendChild(go2); form.appendChild(msg);
+    toggle.addEventListener("click", function(){
+      form.style.display = "block"; toggle.style.display = "none"; nomeIn.focus();
+    });
+    go2.addEventListener("click", function(){
+      if(!nomeIn.value.trim() || whatsIn.value.replace(/\D/g, "").length < 10){
+        msg.className = "status-msg"; msg.textContent = "Preencha o nome e o WhatsApp com DDD."; return;
+      }
+      go2.disabled = true; msg.className = "status-msg"; msg.textContent = "Buscando...";
+      fetch(DRAFT_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({acao:"recuperar", formulario:FORM_ID, nome:nomeIn.value, whats:whatsIn.value})})
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          go2.disabled = false;
+          if(d && d.achou){
+            state = {stepIndex: Math.min(Math.max(d.etapa || 1, 1), steps.length - 2),
+              answers: d.respostas || {}, draftId: d.id};
+            try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){}
+            render();
+          } else {
+            msg.textContent = "Não achei respostas com esse nome e WhatsApp. Confere se é o mesmo número que você usou.";
+          }
+        })
+        .catch(function(){ go2.disabled = false; msg.textContent = "Não consegui buscar agora. Tenta de novo em instantes."; });
+    });
+    box.appendChild(toggle); box.appendChild(form);
+    return box;
   }
 
   function buildSection(step){
@@ -947,6 +1045,8 @@ function hexRgb(hex){
     else {
       if(!state.submitted){
         sendToSheet();
+        clearTimeout(draftTimer);
+        pushDraft("concluir");
         state.submitted = true;
         // dados de contrato ja foram pra planilha — nao ficam guardados no navegador
         ["contrato_nome","contrato_rg","contrato_cpf","contrato_endereco","contrato_cep"].forEach(function(k){ delete state.answers[k]; });
