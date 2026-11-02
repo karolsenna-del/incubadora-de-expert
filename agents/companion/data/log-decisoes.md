@@ -11,6 +11,24 @@
 **Impacto:** [o que muda]
 -->
 
+## 02/11/2026 — Financeiro: repasse da PJ pra Karol entra no saldo
+**Contexto:** Karol: a conta PJ tem R$700,49 hoje (com os R$700 da Milena de nov); o resto já foi repassado pra PF.
+**Decisão:** Lançar o repasse acumulado (R$20.788,27) como transferência PJ → PF em 02/11; repasse sai do saldo acumulado; painel ganha 'Na conta PJ hoje' pelo caixa.
+**Racional:** O saldo do painel tem que bater com o banco.
+**Impacto:** Na conta PJ hoje = R$700,49; saldo acumulado nov = R$528,39 (já desconta o DAS de out e nov). Se a Karol quiser, dá pra quebrar o repasse por mês.
+
+## 02/11/2026 — Financeiro: faturas da Caixa e parcela de cartão no mês da fatura
+**Contexto:** Faturas do cartão Caixa (5376 e 4049) jan–out/2026, misturando PF e PJ.
+**Decisão:** (1) PJ: anúncios Meta, cursos (Fórmula de Lançamento, O Novo Mercado, FIRE, Hubla, Hotmart, Kaffka), ferramentas (Adapta, Kiwify, MeisterLabs, AWS, Microsoft 365, Google, Joinz), Dell e MAV. Buzzcrush, internet BMB e Hotels.com ficam PF. (2) Parcela de compra no cartão entra como despesa no mês da fatura (não na data da compra).
+**Racional:** Decisão da Karol (02/11). Pelo mês da fatura, a despesa do ano mostra o que saiu no ano.
+**Impacto:** 80 despesas PJ, R$10.258,48, já acertadas (jan–out). Despesas PJ 2026: R$15.800,47.
+
+## 02/11/2026 — Financeiro: Consultoria Elider é faturamento recorrente
+**Contexto:** Os 5 pagamentos da Elider (jan–mai/2026) estavam como venda parcelada, com R$15.799,55 de faturamento em jan.
+**Decisão:** Faturamento recorrente: cada pagamento é o faturamento do próprio mês. Venda parcelada (Dalvelyn, Milena, Karen) segue com o valor cheio no mês da venda.
+**Racional:** Decisão da Karol (02/11).
+**Impacto:** Faturamento jan–mai redistribuído; total 2026 igual (R$36.098,82); teto MEI não muda (já é pelo caixa).
+
 ## 02/11/2026 — Financeiro: teto do MEI conta pelo caixa; Voomp é conta; pix é meio
 **Contexto:** Ajustes do painel financeiro com a Karol e lançamento da Individual da Milena (12x R$700 por pix, venda 02/07/2026, valor diferenciado por ter sido aluna do Grupo).
 **Decisão:** (1) Teto do MEI pelo caixa (o que entrou no ano), não pela data da venda. (2) Voomp segue como conta (carteira até o saque); saques vão pra conta PJ. (3) Pix não é conta, é meio. (4) Venda parcelada conta como 1 venda.

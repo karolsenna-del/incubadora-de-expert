@@ -293,9 +293,12 @@ function finSaldoConta(lancs, conta, hoje) {
   return { disponivel: finArred(disponivel), aLiberar: finArred(aLiberar) };
 }
 
+// Repasse da PJ pra Karol (distribuição de lucro): transferência pra conta_pf que não é reembolso de despesa (Karol, 02/11)
+const finEhRepasse = l => l.natureza === 'transferencia' && l.dono === 'PJ' && l.conta_destino === 'conta_pf' && !String(l.origem_id || '').startsWith('reembolso-');
+
 function finResumo(lancs, ano, hoje) {
   const z = () => Array(12).fill(0);
-  const r = { faturamento: z(), recebido: z(), aReceber: z(), despesas: z(), resultado: z() };
+  const r = { faturamento: z(), recebido: z(), aReceber: z(), despesas: z(), resultado: z(), repasse: z() };
   lancs.forEach(l => {
     const sinal = l.natureza === 'receita' ? 1 : l.natureza === 'estorno' ? -1 : 0;
     if (sinal) {
@@ -307,14 +310,16 @@ function finResumo(lancs, ano, hoje) {
       }
     } else if (l.natureza === 'despesa' && l.dono === 'PJ' && finAno(l.data_competencia) === ano) {
       r.despesas[finMes(l.data_competencia)] += fn(l.valor_bruto);
+    } else if (finEhRepasse(l) && l.data_caixa && l.data_caixa <= hoje && finAno(l.data_caixa) === ano) {
+      r.repasse[finMes(l.data_caixa)] += fn(l.valor_bruto);
     }
   });
   for (let m = 0; m < 12; m++) {
-    ['faturamento', 'recebido', 'aReceber', 'despesas'].forEach(k => r[k][m] = finArred(r[k][m]));
+    ['faturamento', 'recebido', 'aReceber', 'despesas', 'repasse'].forEach(k => r[k][m] = finArred(r[k][m]));
     r.resultado[m] = finArred(r.recebido[m] - r.despesas[m]);
   }
   const soma = a => finArred(a.reduce((x, y) => x + y, 0));
-  r.totais = { faturamento: soma(r.faturamento), recebido: soma(r.recebido), despesas: soma(r.despesas), resultado: soma(r.resultado) };
+  r.totais = { faturamento: soma(r.faturamento), recebido: soma(r.recebido), despesas: soma(r.despesas), resultado: soma(r.resultado), repasse: soma(r.repasse) };
   // Saldo acumulado (Karol, 01/11): resultado dos anos anteriores + resultado de cada mês somado ao anterior.
   // Mês que ainda não chegou fica vazio (null).
   const inicioAno = ano + '-01-01';
@@ -322,14 +327,27 @@ function finResumo(lancs, ano, hoje) {
     const sinal = l.natureza === 'receita' ? 1 : l.natureza === 'estorno' ? -1 : 0;
     if (sinal && l.data_caixa && l.data_caixa <= hoje && l.data_caixa < inicioAno) return s + sinal * fn(l.valor_liquido);
     if (l.natureza === 'despesa' && l.dono === 'PJ' && l.data_competencia < inicioAno) return s - fn(l.valor_bruto);
+    if (finEhRepasse(l) && l.data_caixa && l.data_caixa < inicioAno) return s - fn(l.valor_bruto);
     return s;
   }, 0));
   const mesHoje = finAno(hoje) === ano ? finMes(hoje) : finAno(hoje) > ano ? 11 : -1;
   let acum = r.saldoInicial;
-  r.saldo = r.resultado.map((v, m) => { acum = finArred(acum + v); return m <= mesHoje ? acum : null; });
+  r.saldo = r.resultado.map((v, m) => { acum = finArred(acum + v - r.repasse[m]); return m <= mesHoje ? acum : null; });
   r.totais.saldo = mesHoje >= 0 ? r.saldo[mesHoje] : r.saldoInicial;
   // a receber (cartão): tudo que ainda não caiu, de qualquer ano
   r.voomp = finSaldoConta(lancs, 'voomp', hoje);
+  // Na conta PJ hoje (caixa): o que entrou − despesas PJ já pagas (no cartão/conta PF: na data do reembolso) − repasses − o que ainda está na Voomp
+  r.contaPJ = finArred(lancs.reduce((s, l) => {
+    const sinal = l.natureza === 'receita' ? 1 : l.natureza === 'estorno' ? -1 : 0;
+    if (sinal) return l.data_caixa && l.data_caixa <= hoje ? s + sinal * fn(l.valor_liquido) : s;
+    if (l.natureza === 'despesa' && l.dono === 'PJ') {
+      const pf = l.conta === 'cartao_pf' || l.conta === 'conta_pf';
+      const saiu = pf ? l.reembolso_em : l.data_caixa;
+      return saiu && saiu <= hoje ? s - fn(l.valor_bruto) : s;
+    }
+    if (finEhRepasse(l) && l.data_caixa && l.data_caixa <= hoje) return s - fn(l.valor_bruto);
+    return s;
+  }, 0) - r.voomp.disponivel);
   // Teto do MEI pelo caixa (Karol, 02/11): valor bruto das receitas PJ pela data em que o dinheiro entrou, menos estornos.
   // usado = o que já entrou até hoje; previsto = usado + o que ainda vai entrar neste ano.
   r.teto = { usado: 0, previsto: 0 };
@@ -477,7 +495,7 @@ if (typeof document !== 'undefined') {
         '<div class="fin-cartoes">' +
         cartao('Faturamento do ano', r.totais.faturamento) + cartao('Recebido do ano', r.totais.recebido) +
         cartao('Despesas PJ do ano', r.totais.despesas) + cartao('A receber (total)', r.totais.aReceber) +
-        cartao('Saldo acumulado', r.totais.saldo) +
+        cartao('Saldo acumulado', r.totais.saldo) + cartao('Na conta PJ hoje', r.contaPJ) +
         '<div class="fin-cartao"><small>Saldo na Voomp (pra sacar)</small><b>' + esc(finBRL(r.voomp.disponivel)) + '</b><small>a liberar ' + esc(finBRL(r.voomp.aLiberar)) + '</small></div>' + '</div>' +
         '<div class="fin-teto ' + cor + '"><div class="fin-teto-topo"><b>Teto do MEI</b><button class="fin-btn fin-btn-mini" id="btn-teto" type="button">Editar teto</button></div>' +
         '<div class="fin-teto-barra"><div style="width:' + Math.min(100, pct) + '%"></div></div>' +
@@ -491,9 +509,9 @@ if (typeof document !== 'undefined') {
         '<div class="fin-rolagem"><table class="fin-tabela"><thead><tr><th></th>' + MESES.map(m => '<th>' + m + '</th>').join('') + '<th>Ano</th></tr></thead><tbody>' +
         linha('Faturamento', r.faturamento, r.totais.faturamento) + linha('Recebido', r.recebido, r.totais.recebido) +
         linha('A receber', r.aReceber, soma(r.aReceber)) + linha('Despesas PJ', r.despesas, r.totais.despesas) +
-        linha('Resultado', r.resultado, r.totais.resultado, 'fin-linha-total') +
+        linha('Resultado', r.resultado, r.totais.resultado, 'fin-linha-total') + linha('Repasse pra você (PF)', r.repasse, r.totais.repasse) +
         linha('Saldo acumulado', r.saldo, r.totais.saldo, 'fin-linha-total') + '</tbody></table></div>' +
-        '<p class="fin-nota">Faturamento = valor bruto na data da venda. Recebido = líquido, só o que já caiu até hoje. Resultado = recebido − despesas PJ. Saldo acumulado = resultado do mês somado ao saldo do mês anterior' + (r.saldoInicial ? ' (começa o ano com ' + esc(finBRL(r.saldoInicial)) + ' dos anos anteriores)' : '') + '; na coluna Ano, o saldo de hoje. Transferências (saque, reembolso) não entram.</p>';
+        '<p class="fin-nota">Faturamento = valor bruto na data da venda. Recebido = líquido, só o que já caiu até hoje. Resultado = recebido − despesas PJ. Saldo acumulado = resultado do mês − repasse pra você, somado ao saldo do mês anterior' + (r.saldoInicial ? ' (começa o ano com ' + esc(finBRL(r.saldoInicial)) + ' dos anos anteriores)' : '') + '; na coluna Ano, o saldo de hoje. Saque e reembolso de despesa não entram. Na conta PJ hoje = pelo caixa (despesa conta quando foi paga; o saldo acumulado já desconta o DAS do mês).</p>';
       $('#res-ano').onchange = e => { estado.ano = Number(e.target.value); renderResumo(); };
       $('#btn-teto').onclick = editarTeto;
     }

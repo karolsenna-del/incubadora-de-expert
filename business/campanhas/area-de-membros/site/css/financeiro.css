@@ -64,6 +64,10 @@
 .fin-tabela thead th { background: #0B0B0C; color: #fff; font-size: 12px; }
 .fin-tabela tbody th { text-align: left; font-weight: 600; }
 .fin-tabela td:nth-child(2), .fin-tabela td:nth-child(5) { text-align: left; }
+/* Primeira coluna congelada ao arrastar a tabela pro lado (Karol, 02/11) */
+.fin-tabela th:first-child, .fin-tabela td:first-child { position: sticky; left: 0; z-index: 1; background: #fff; box-shadow: inset -1px 0 0 #E4E4E7; }
+.fin-tabela thead th:first-child { background: #0B0B0C; z-index: 2; }
+.fin-linha-total th:first-child, .fin-linha-total td:first-child { background: #F4F4F5; }
 .fin-tabela .neg { color: #D94A12; }
 .fin-linha-total th, .fin-linha-total td { background: #F4F4F5; font-weight: 700; }
 .fin-ja { opacity: .5; }
