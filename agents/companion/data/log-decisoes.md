@@ -11,6 +11,18 @@
 **Impacto:** [o que muda]
 -->
 
+## 02/11/2026 — Financeiro: teto do MEI conta pelo caixa; Voomp é conta; pix é meio
+**Contexto:** Ajustes do painel financeiro com a Karol e lançamento da Individual da Milena (12x R$700 por pix, venda 02/07/2026, valor diferenciado por ter sido aluna do Grupo).
+**Decisão:** (1) Teto do MEI pelo caixa (o que entrou no ano), não pela data da venda. (2) Voomp segue como conta (carteira até o saque); saques vão pra conta PJ. (3) Pix não é conta, é meio. (4) Venda parcelada conta como 1 venda.
+**Racional:** Decisões da Karol (contadora). Pelo caixa, parcelas de 2027 não pesam no teto de 2026.
+**Impacto:** 2026 usou R$9.302,27 do teto (11,5%), previsto R$13.002,27 até dezembro. Faturamento por competência segue em R$17.202,27.
+
+## 01/11/2026 — Controle financeiro: painel próprio na área, reembolso mensal PJ → Karol
+**Contexto:** Karol quer controlar fluxo de caixa (faturamento x recebimento), separar PF e PJ (paga despesas da empresa no cartão pessoal) e ver vendas por produto. Não existia nenhum controle financeiro na pasta.
+**Decisão:** (1) Painel na área de membros, só com o e-mail dela. (2) Despesa da empresa no cartão pessoal é marcada PJ e a PJ reembolsa a Karol no fim do mês. (3) Empresa é MEI; o painel mostra o teto anual usado (R$81 mil, configurável). (4) Vendas pelo extrato da Voomp + lançamento à mão do que é pago fora dela. (5) Monta agora como operação (Financeiro), sem ocupar vaga de projeto.
+**Racional:** Decisões da Karol (01/11). Teto do MEI é risco material: uma Individual (R$15 mil) é ~19% do teto anual; PLP 186/2026 (R$140 mil) aguardava sanção em 20/10.
+**Impacto:** `business/financeiro/controle-financeiro.md` (doc de trabalho), `sql/financeiro.sql` e página `financeiro.html` na área. Vendas da Incubadora na Voomp em 2026: 6 (5 reais + 1 teste reembolsado).
+
 ## 01/11/2026 — Expert-IAs: mês de medição antes de fixar o limite de uso
 **Contexto:** Karol pediu limite de uso nos agentes (principalmente conteúdo e lives); o servidor não contava nada e não havia dado de uso real.
 **Decisão:** (1) Limitar por custo e por abuso. (2) Medir 1 mês (01/11 a 01/12) contando mensagens por aluno, agente e dia, só com teto folgado de segurança (80/dia por agente no curso). (3) Mentoria (Grupo, Individual, Incubadora Express) tem o dobro (160/dia).

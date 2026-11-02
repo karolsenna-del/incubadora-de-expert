@@ -107,3 +107,4 @@
 ---
 
 *Ultima atualizacao: 12/08/2026*
+- [ ] Janeiro/2027 — Financeiro: lançar as 12 guias do DAS MEI de 2027 no painel (2026 = R$86,05/mês; conferir valor novo). Ver `business/financeiro/controle-financeiro.md` (anotado 02/11/2026)
