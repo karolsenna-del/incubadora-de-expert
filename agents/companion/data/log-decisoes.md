@@ -1006,3 +1006,21 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** Lucro = faturamento − despesas (data da venda e da compra); saldo financeiro = entradas − pagamentos na conta PJ ± transferências (repasse).
 **Racional:** regra contábil da Karol: lucro é competência, saldo é caixa.
 **Impacto:** 2026 lucro R$27.298,10; saldo na conta PJ hoje R$700,49.
+
+## 03/11/2026 — Rota100k S14: convite da live e palavras do direct
+**Contexto:** confirmações pendentes do plano da Semana 14.
+**Decisão:** convite da live no 7s = "Comente LIVE pra eu enviar o link do grupo exclusivo da live Expert360º" (não "me segue"); uma palavra do direct por dia nos 12h (PLANO B, DIFERENCIAL, ELO, DOR, CONVERSA, MÉTODO); mentorada da "diretora compartilhada" aparece só como "Mariana".
+**Racional:** a live acontece no grupo; a palavra por dia mostra qual tema abre mais conversa.
+**Impacto:** plano S14 pronto pra gravar; mesmo CTA LIVE serve de modelo pros próximos convites.
+
+## 03/11/2026 — Página de vendas própria da Incubadora Express
+**Contexto:** a /incubadora-express/ no ar era a apresentação da sessão adaptada, com um botão de compra só no fim.
+**Decisão:** Karol escolheu uma página de vendas própria (opção B), só benefício, 12x de R$250 em destaque, garantia de 15 dias, 6 botões pro checkout Voomp 17442, sem bônus de ação rápida.
+**Racional:** a página tem que servir pra mandar ao lead depois da sessão e vender sozinha.
+**Impacto:** a página nova está em site/incubadora-express/index.html e a apresentação antiga foi copiada pra site/incubadora-express/apresentacao/. Ainda não foi publicada: espera a Karol olhar.
+
+## 2026-11-03 — Venda da Voomp entra sozinha no financeiro
+**Contexto:** a Karol não quer mais mandar o extrato da Voomp pra lançar venda.
+**Decisão:** o aviso de venda paga da Voomp grava a venda no painel; cada aviso fica guardado cru pra conferir os campos na 1ª venda real. Saque segue manual.
+**Racional:** o aviso já existia pra liberar acesso; só e-mail e produto estavam conferidos, então valor/taxa/liberação ficam marcados como estimados até a conferência.
+**Impacto:** depois da 1ª venda conferida, o extrato mensal da Voomp vira só conferência.
