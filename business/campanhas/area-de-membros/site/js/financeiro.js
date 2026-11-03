@@ -317,7 +317,7 @@ function finRepasseLiq(l, hoje) {
 
 function finResumo(lancs, ano, hoje) {
   const z = () => Array(12).fill(0);
-  const r = { faturamento: z(), recebido: z(), aReceber: z(), despesas: z(), resultado: z(), movPJ: z(), repasse: z() };
+  const r = { faturamento: z(), recebido: z(), aReceber: z(), despesas: z(), lucro: z(), entradasPJ: z(), pagamentosPJ: z(), movPJ: z(), repasse: z() };
   const inicioAno = ano + '-01-01';
   r.saldoInicial = 0;
   lancs.forEach(l => {
@@ -333,16 +333,17 @@ function finResumo(lancs, ano, hoje) {
       r.despesas[finMes(l.data_competencia)] += fn(l.valor_bruto);
     }
     const mv = finMovPJ(l, hoje), rp = finRepasseLiq(l, hoje);
-    if (mv) { if (mv.data < inicioAno) r.saldoInicial += mv.valor; else if (finAno(mv.data) === ano) r.movPJ[finMes(mv.data)] += mv.valor; }
+    if (mv) { if (mv.data < inicioAno) r.saldoInicial += mv.valor; else if (finAno(mv.data) === ano) { const mm = finMes(mv.data); r.movPJ[mm] += mv.valor; if (mv.valor >= 0) r.entradasPJ[mm] += mv.valor; else r.pagamentosPJ[mm] -= mv.valor; } }
     if (rp) { if (rp.data < inicioAno) r.saldoInicial -= rp.valor; else if (finAno(rp.data) === ano) r.repasse[finMes(rp.data)] += rp.valor; }
   });
   r.saldoInicial = finArred(r.saldoInicial);
   for (let m = 0; m < 12; m++) {
-    ['faturamento', 'recebido', 'aReceber', 'despesas', 'movPJ', 'repasse'].forEach(k => r[k][m] = finArred(r[k][m]));
-    r.resultado[m] = finArred(r.recebido[m] - r.despesas[m]);
+    ['faturamento', 'recebido', 'aReceber', 'despesas', 'entradasPJ', 'pagamentosPJ', 'movPJ', 'repasse'].forEach(k => r[k][m] = finArred(r[k][m]));
+    // Lucro (Karol, 02/11): competência pura = faturamento (data da venda) − despesas (data da compra). Caixa fica nas linhas da conta PJ.
+    r.lucro[m] = finArred(r.faturamento[m] - r.despesas[m]);
   }
   const soma = a => finArred(a.reduce((x, y) => x + y, 0));
-  r.totais = { faturamento: soma(r.faturamento), recebido: soma(r.recebido), despesas: soma(r.despesas), resultado: soma(r.resultado), movPJ: soma(r.movPJ), repasse: soma(r.repasse) };
+  r.totais = { faturamento: soma(r.faturamento), recebido: soma(r.recebido), despesas: soma(r.despesas), lucro: soma(r.lucro), entradasPJ: soma(r.entradasPJ), pagamentosPJ: soma(r.pagamentosPJ), movPJ: soma(r.movPJ), repasse: soma(r.repasse) };
   // Saldo na conta PJ (Karol, 02/11): saldo do mês anterior + movimento da conta − repasse pra ela. Mês que não chegou fica vazio.
   const mesHoje = finAno(hoje) === ano ? finMes(hoje) : finAno(hoje) > ano ? 11 : -1;
   let acum = r.saldoInicial;
@@ -491,11 +492,12 @@ if (typeof document !== 'undefined') {
       const barras = MESES.map((m, i) => '<div class="fin-barra-col"><div class="fin-barras"><span class="fin-b-fat" style="height:' + Math.max(0, r.faturamento[i] / max * 100) + '%" title="Faturamento ' + esc(finBRL(r.faturamento[i])) + '"></span><span class="fin-b-rec" style="height:' + Math.max(0, r.recebido[i] / max * 100) + '%" title="Recebido ' + esc(finBRL(r.recebido[i])) + '"></span></div><small>' + m + '</small></div>').join('');
       const linha = (nome, arr, tot, cls) => '<tr class="' + (cls || '') + '"><th>' + nome + '</th>' + arr.map(v => v === null ? '<td>—</td>' : '<td class="' + (v < 0 ? 'neg' : '') + '">' + esc(finBRL(v)) + '</td>').join('') + '<td><b>' + esc(finBRL(tot)) + '</b></td></tr>';
       const soma = a => finArred(a.reduce((x, y) => x + y, 0));
+      const secao = t => '<tr class="fin-secao"><th>' + t + '</th>' + MESES.map(() => '<td></td>').join('') + '<td></td></tr>';
       $('#aba-resumo').innerHTML =
         '<div class="fin-filtros"><label>Ano <select id="res-ano">' + selAnos(estado.ano) + '</select></label></div>' +
         '<div class="fin-cartoes">' +
         cartao('Faturamento do ano', r.totais.faturamento) + cartao('Recebido do ano', r.totais.recebido) +
-        cartao('Despesas PJ do ano', r.totais.despesas) + cartao('A receber (total)', r.totais.aReceber) +
+        cartao('Despesas PJ do ano', r.totais.despesas) + cartao('Lucro do ano', r.totais.lucro) + cartao('A receber (total)', r.totais.aReceber) +
         cartao('Saldo na conta PJ', r.totais.saldo) +
         '<div class="fin-cartao"><small>Saldo na Voomp (pra sacar)</small><b>' + esc(finBRL(r.voomp.disponivel)) + '</b><small>a liberar ' + esc(finBRL(r.voomp.aLiberar)) + '</small></div>' + '</div>' +
         '<div class="fin-teto ' + cor + '"><div class="fin-teto-topo"><b>Teto do MEI</b><button class="fin-btn fin-btn-mini" id="btn-teto" type="button">Editar teto</button></div>' +
@@ -508,12 +510,16 @@ if (typeof document !== 'undefined') {
         (estado.config.teto_mei_obs ? '<small>' + esc(estado.config.teto_mei_obs) + '</small>' : '') + '</div>' +
         '<h3>Mês a mês</h3><div class="fin-grafico">' + barras + '</div><p class="fin-legenda"><span class="fin-b-fat"></span> Faturamento <span class="fin-b-rec"></span> Recebido</p>' +
         '<div class="fin-rolagem"><table class="fin-tabela"><thead><tr><th></th>' + MESES.map(m => '<th>' + m + '</th>').join('') + '<th>Ano</th></tr></thead><tbody>' +
-        linha('Faturamento', r.faturamento, r.totais.faturamento) + linha('Recebido', r.recebido, r.totais.recebido) +
-        linha('A receber', r.aReceber, soma(r.aReceber)) + linha('Despesas PJ', r.despesas, r.totais.despesas) +
-        linha('Resultado', r.resultado, r.totais.resultado, 'fin-linha-total') +
-        linha('Movimento na conta PJ', r.movPJ, r.totais.movPJ) + linha('Repasse pra você (PF)', r.repasse, r.totais.repasse) +
-        linha('Saldo na conta PJ', r.saldo, r.totais.saldo, 'fin-linha-total') + '</tbody></table></div>' +
-        '<p class="fin-nota">Faturamento = valor bruto na data da venda. Recebido = líquido, só o que já caiu até hoje. Resultado = recebido − despesas PJ. Movimento na conta PJ = o que entrou na conta (vendas fora da Voomp e saques) − despesas PJ pagas (no cartão pessoal, no dia do reembolso). Saldo na conta PJ = saldo do mês anterior + movimento − repasse pra você' + (r.saldoInicial ? ' (começa o ano com ' + esc(finBRL(r.saldoInicial)) + ')' : '') + '; na coluna Ano, o saldo de hoje. Repasse negativo = você cobriu despesa da empresa do seu bolso. O dinheiro na Voomp fica de fora até o saque.</p>';
+        secao('Lucro (data da venda e da compra)') +
+        linha('Faturamento', r.faturamento, r.totais.faturamento) + linha('Despesas PJ', r.despesas, r.totais.despesas) +
+        linha('Lucro', r.lucro, r.totais.lucro, 'fin-linha-total') +
+        secao('Caixa da conta PJ (entrada e saída de dinheiro)') +
+        linha('Entradas na conta PJ', r.entradasPJ, r.totais.entradasPJ) + linha('Pagamentos PJ', r.pagamentosPJ.map(v => -v), -r.totais.pagamentosPJ) +
+        linha('Movimento do mês', r.movPJ, r.totais.movPJ) + linha('Repasse pra você (PF)', r.repasse.map(v => -v), -r.totais.repasse) +
+        linha('Saldo na conta PJ', r.saldo, r.totais.saldo, 'fin-linha-total') +
+        secao('Recebimentos (todas as contas)') +
+        linha('Recebido', r.recebido, r.totais.recebido) + linha('A receber', r.aReceber, soma(r.aReceber)) + '</tbody></table></div>' +
+        '<p class="fin-nota">Lucro = faturamento (valor bruto na data da venda) − despesas PJ (na data da compra; parcela do cartão no mês da fatura). Caixa da conta PJ: entradas (vendas fora da Voomp e saques da Voomp) − pagamentos (despesas PJ; as do cartão pessoal no dia do reembolso) = movimento do mês. Saldo na conta PJ = saldo do mês anterior + movimento − repasse pra você' + (r.saldoInicial ? ' (começa o ano com ' + esc(finBRL(r.saldoInicial)) + ')' : '') + '; na coluna Ano, o saldo de hoje. Repasse negativo = você cobriu despesa da empresa do seu bolso. O dinheiro na Voomp fica de fora até o saque. Recebido = líquido, só o que já caiu até hoje, em qualquer conta (Voomp, PJ e PF).</p>';
       $('#res-ano').onchange = e => { estado.ano = Number(e.target.value); renderResumo(); };
       $('#btn-teto').onclick = editarTeto;
     }

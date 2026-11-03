@@ -993,3 +993,16 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** entra como faturamento e recebimento da PJ (conta no teto do MEI), mas fora do saldo da conta PJ.
 **Racional:** é venda da empresa, mas o dinheiro nunca passou pela conta PJ.
 **Impacto:** teto 2026 usado R$43.198,57; previsto até dez R$46.898,57.
+
+## 02/11/2026 — Sessões da Fernanda e do Ronaldo sem radar, com Express
+**Contexto:** Duas sessões seguidas em 03/11 com leads muito crus no digital (Fernanda Martelli, advogada; Ronaldo Peixoto, engenheiro).
+**Decisão:** Karol mandou conduzir como na Bruna: diagnóstico em conversa, sem radar na tela, e ofertar só a Incubadora Express (R$2.500 ou 12x R$250, 15 dias de garantia, bônus do Funil fechando na sessão).
+**Racional:** com notas perto de zero, o radar assustaria; a Express entrega a primeira venda numa conversa, que é o que falta aos dois.
+**Impacto:** roteiros em business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/ (fernanda-martelli-sessao.md, ronaldo-peixoto-sessao.md).
+
+
+## 2026-11-02 — Lucro e caixa separados no painel
+**Contexto:** a linha "Resultado" fazia recebido − despesas pela data da compra (misturava caixa com competência).
+**Decisão:** Lucro = faturamento − despesas (data da venda e da compra); saldo financeiro = entradas − pagamentos na conta PJ ± transferências (repasse).
+**Racional:** regra contábil da Karol: lucro é competência, saldo é caixa.
+**Impacto:** 2026 lucro R$27.298,10; saldo na conta PJ hoje R$700,49.
