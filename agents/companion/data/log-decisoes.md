@@ -987,3 +987,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** (Karol, opção A) rascunho guardado também no banco (Supabase), com recuperação por nome + WhatsApp na tela inicial e confirmação no "recomeçar". Dados de contrato não entram no rascunho.
 **Racional:** nada se perde ao trocar de app, de navegador ou de celular.
 **Impacto:** o envio final continua indo pra planilha como antes.
+
+## 2026-11-02 — Receita da PJ que cai na conta PF
+**Contexto:** o David (Incubadora Individual) pagou R$6.999,75 de fev a jul/2026 direto na conta PF da Karol.
+**Decisão:** entra como faturamento e recebimento da PJ (conta no teto do MEI), mas fora do saldo da conta PJ.
+**Racional:** é venda da empresa, mas o dinheiro nunca passou pela conta PJ.
+**Impacto:** teto 2026 usado R$43.198,57; previsto até dez R$46.898,57.
