@@ -303,7 +303,7 @@ const finEhAporte = l => l.natureza === 'transferencia' && l.dono === 'PJ' && l.
 function finMovPJ(l, hoje) {
   const sinal = l.natureza === 'receita' ? 1 : l.natureza === 'estorno' ? -1 : 0;
   let data = null, valor = 0;
-  if (sinal && l.conta !== 'voomp') { data = l.data_caixa; valor = sinal * fn(l.valor_liquido); }
+  if (sinal && l.conta !== 'voomp' && l.conta !== 'conta_pf') { data = l.data_caixa; valor = sinal * fn(l.valor_liquido); }
   else if (l.natureza === 'despesa' && l.dono === 'PJ' && l.conta !== 'voomp') {
     data = (l.conta === 'cartao_pf' || l.conta === 'conta_pf') ? l.reembolso_em : l.data_caixa; valor = -fn(l.valor_bruto);
   } else if (l.natureza === 'transferencia' && l.conta_destino === 'conta_pj' && l.conta !== 'conta_pf') { data = l.data_caixa; valor = fn(l.valor_bruto); }
