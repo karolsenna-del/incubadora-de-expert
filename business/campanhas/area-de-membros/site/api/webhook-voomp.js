@@ -129,6 +129,94 @@ async function inserirMatricula(email, produtoSlug, trilhaId) {
   }
 }
 
+
+// ---------- Financeiro (Karol, 03/11/2026): venda paga entra sozinha no painel financeiro ----------
+// Só e-mail e product.id foram conferidos no payload real (14/08). Os campos de id da venda, valor, taxa,
+// meio e data de liberação abaixo são CANDIDATOS: o 1º que existir vale. Todo aviso fica guardado cru em
+// fin_voomp_avisos; na 1ª venda real, conferir contra o extrato da Voomp e fixar os campos certos aqui.
+// Taxa e liberação que não vierem no aviso são estimadas e marcadas na observação (extrato corrige).
+const NOME_PRODUTO = {
+  'expert360': 'Expert360º', 'metodo-express': 'Destrava Expert - Sessão única', 'metodo-vip': 'Método VIP',
+  'sprint-do-metodo': 'Sprint do Método', 'grupo': 'Grupo', 'individual': 'Individual',
+  'diagnostico-ferramentas': 'Diagnóstico Ferramentas', 'incubadora-express': 'Incubadora Express'
+};
+const TAXA_ESTIMADA = 90.85 / 1500; // taxa real das vendas do Método VIP no extrato (~6,06%)
+
+function pegar(obj, caminhos) {
+  for (const c of caminhos) {
+    const v = c.split('.').reduce((o, k) => (o == null ? undefined : o[k]), obj);
+    if (v !== undefined && v !== null && v !== '') return v;
+  }
+  return undefined;
+}
+const numero = v => {
+  if (typeof v === 'number') return v;
+  if (typeof v !== 'string') return NaN;
+  const t = v.replace(/[^\d,.-]/g, '');
+  return Number(t.includes(',') ? t.replace(/\./g, '').replace(',', '.') : t);
+};
+const diaCuiaba = d => new Date(new Date(d).getTime() - 4 * 3600 * 1000).toISOString().slice(0, 10);
+const somaDias = (dia, n) => { const d = new Date(dia + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+
+function vendaDoAviso(payload, produtoSlug) {
+  const vendaId = pegar(payload, ['sale.id', 'sale.code', 'sale.transaction_id', 'sale.transaction', 'transaction.id', 'transaction', 'id']);
+  const bruto = numero(pegar(payload, ['sale.price', 'sale.value', 'sale.amount', 'sale.total', 'sale.total_price', 'sale.full_price', 'price', 'value', 'amount', 'product.price']));
+  if (!vendaId || !(bruto > 0)) return { erro: 'aviso sem id da venda ou valor reconhecido' };
+  let taxa = numero(pegar(payload, ['sale.fee', 'sale.fees', 'sale.tax', 'sale.taxes', 'sale.platform_fee', 'fee']));
+  const liquido = numero(pegar(payload, ['sale.net', 'sale.net_value', 'sale.net_amount', 'sale.liquid_value', 'sale.producer_value', 'sale.commission', 'net']));
+  const avisos = [];
+  if (!(taxa >= 0) && liquido > 0 && liquido <= bruto) taxa = bruto - liquido;
+  if (!(taxa >= 0)) { taxa = bruto * TAXA_ESTIMADA; avisos.push('taxa estimada'); }
+  const meioCru = String(pegar(payload, ['sale.payment_method', 'sale.payment.method', 'sale.payment_type', 'payment.method', 'payment_method']) || '').toLowerCase();
+  const meio = /pix/.test(meioCru) ? 'pix' : /bol|bill|ticket/.test(meioCru) ? 'boleto' : /card|cart|credit/.test(meioCru) ? 'cartao' : null;
+  const pagoEm = pegar(payload, ['sale.paid_at', 'sale.approved_at', 'sale.payment_date', 'sale.updated_at', 'sale.created_at', 'sale.date']);
+  const diaVenda = diaCuiaba(pagoEm && !isNaN(new Date(pagoEm)) ? pagoEm : Date.now());
+  const liberaCru = pegar(payload, ['sale.release_date', 'sale.available_at', 'sale.available_date', 'sale.released_at', 'release_date']);
+  let disponivel = liberaCru && !isNaN(new Date(liberaCru)) ? diaCuiaba(liberaCru) : null;
+  if (!disponivel) { disponivel = somaDias(diaVenda, meio === 'cartao' ? 30 : 2); avisos.push('liberação estimada (' + (meio === 'cartao' ? 'cartão D+30' : 'pix/boleto D+2') + ')'); }
+  const parcelas = pegar(payload, ['sale.installments', 'sale.installment', 'payment.installments']);
+  const obs = ['via aviso da Voomp'];
+  if (parcelas && Number(parcelas) > 1) obs.push(parcelas + 'x');
+  if (avisos.length) obs.push(avisos.join(', ') + ' — conferir no extrato');
+  return {
+    vendaId: String(vendaId),
+    linha: {
+      natureza: 'receita', dono: 'PJ', data_competencia: diaVenda, data_caixa: disponivel,
+      descricao: 'Venda Voomp #' + vendaId, produto: NOME_PRODUTO[produtoSlug] || null, categoria: null,
+      conta: 'voomp', meio, valor_bruto: Math.round(bruto * 100) / 100, taxa: Math.round(taxa * 100) / 100,
+      origem: 'voomp', origem_id: String(vendaId), observacao: obs.join('; ')
+    }
+  };
+}
+
+async function supabasePost(tabela, corpo, prefer) {
+  const resp = await fetch(`${SUPABASE_URL}/rest/v1/${tabela}`, {
+    method: 'POST',
+    headers: { apikey: SERVICE_ROLE_KEY, Authorization: `Bearer ${SERVICE_ROLE_KEY}`, 'Content-Type': 'application/json', Prefer: prefer || 'return=minimal' },
+    body: JSON.stringify(corpo)
+  });
+  if (!resp.ok) throw new Error(`${tabela} (${resp.status}): ${await resp.text()}`);
+}
+
+// Nunca derruba o webhook: o acesso da aluna vem primeiro; erro fica no aviso guardado e no log.
+async function registrarNoFinanceiro(payload, produtoSlug) {
+  let venda = { erro: null }, lancado = false;
+  try {
+    if (payload.trigger === 'salePaid') {
+      venda = vendaDoAviso(payload, produtoSlug);
+      if (venda.linha) {
+        // on_conflict = mesmo id do extrato: se a venda já foi lançada, não duplica
+        await supabasePost('fin_lancamentos?on_conflict=origem,origem_id', venda.linha, 'resolution=ignore-duplicates,return=minimal');
+        lancado = true;
+      }
+    }
+  } catch (err) { venda.erro = err.message; }
+  try {
+    await supabasePost('fin_voomp_avisos', { trigger: payload.trigger || null, venda_id: venda.vendaId || null, payload, lancado, erro: venda.erro || null });
+  } catch (err) { console.error('[webhook-voomp] guardar aviso falhou:', err.message); }
+  if (venda.erro) console.error('[webhook-voomp] financeiro:', venda.erro);
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'method not allowed' });
@@ -137,6 +225,9 @@ export default async function handler(req, res) {
 
   const payload = req.body || {};
   console.log('[webhook-voomp] payload recebido:', JSON.stringify(payload));
+
+  const slugDoAviso = PRODUTO_POR_ID[payload.product && payload.product.id];
+  await registrarNoFinanceiro(payload, slugDoAviso);
 
   if (payload.trigger !== 'salePaid') {
     console.log(`[webhook-voomp] trigger "${payload.trigger}" ainda não tratado — só logando, matriculas não tocada`);
