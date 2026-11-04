@@ -1042,3 +1042,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** lançadas as 48 parcelas já no painel (principal abate a dívida, juros vira despesa); IOF como despesa no dia da contratação.
 **Racional:** juros e IOF são custo da empresa (entram no lucro); o principal não é despesa nem faturamento.
 **Impacto:** total pago R$25.739,04 = R$15.496,24 de principal + R$10.242,80 de juros. Lucro de 2026 cai pelo IOF e pelos juros de dez.
+
+## 2026-11-03 — Correção: empréstimo é de maio/2025 (mentoria Arcane)
+**Contexto:** a Karol esclareceu que o empréstimo foi pego em maio/2025 pra pagar a mentoria Arcane do Euriler, com carência e 1ª parcela em 07/2025; hoje só há as parcelas.
+**Decisão:** empréstimo, IOF e mentoria (R$15.000, Educação) lançados em maio/2025; parcelas de 07/2025 a 06/2029 saindo da conta PJ; repasses nov/25–out/26 refeitos (cada mês R$536,23 menor).
+**Racional:** a parcela sai da conta PJ antes do repasse; sem isso o repasse pra PF ficava maior do que foi.
+**Impacto:** dívida hoje R$12.057,64; saldo da conta PJ continua R$700,49; repasse 2026 total menor e a PF recebe menos da PJ.
