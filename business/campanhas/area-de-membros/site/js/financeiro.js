@@ -2,12 +2,13 @@
 // Site estático: HTML + JS puro + Supabase JS. Tabelas: fin_lancamentos, fin_regras, fin_config.
 
 const FIN_EMAIL = 'karolsenna@incubadoradeexpert.com.br';
-const FIN_CATEGORIAS = ['Ferramentas e software', 'Tráfego e anúncios', 'Equipe e serviços', 'Taxas e tarifas', 'Impostos (DAS)', 'Educação', 'Outros PJ'];
+const FIN_CATEGORIAS = ['Ferramentas e software', 'Tráfego e anúncios', 'Equipe e serviços', 'Taxas e tarifas', 'Impostos (DAS)', 'Educação', 'Juros e encargos', 'Outros PJ'];
 // Categorias da vida pessoal (aba Pessoal, Karol 03/11)
 const FIN_CATEGORIAS_PF = ['Mercado', 'Alimentação', 'Casa e contas', 'Saúde', 'Beleza e cuidados', 'Filhos', 'Roupas e compras', 'Transporte', 'Viagens', 'Assinaturas', 'Educação', 'Presentes', 'Juros e tarifas', 'Outros PF'];
 const FIN_PRODUTOS = ['Método VIP', 'Sprint do Método', 'Incubadora Express', 'Grupo', 'Individual', 'Expert360º', 'Diagnóstico Ferramentas', 'Método Express/Destrava Expert', 'Comissões de afiliada', 'Outros'];
 // Conta = onde o dinheiro está; pix/cartão/boleto vão no campo Meio (Karol, 01/11)
-const FIN_CONTAS = ['voomp', 'conta_pj', 'conta_pf', 'cartao_pf'];
+// emprestimo_pj = dívida da empresa; investimentos e vicentinos = reservas da PF (Karol, 03/11)
+const FIN_CONTAS = ['voomp', 'conta_pj', 'conta_pf', 'cartao_pf', 'emprestimo_pj', 'investimentos', 'vicentinos'];
 const MESES = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
 const MESES_LONGO = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
@@ -298,6 +299,7 @@ function finSaldoConta(lancs, conta, hoje) {
 // Repasse da PJ pra Karol (Karol, 02/11): ela zera a conta PJ no fim de cada mês.
 // Repasse = transferência PJ → conta_pf que não é reembolso de despesa. Aporte = transferência conta_pf → PJ (cobriu do bolso).
 const finEhRepasse = l => l.natureza === 'transferencia' && l.dono === 'PJ' && l.conta_destino === 'conta_pf' && !String(l.origem_id || '').startsWith('reembolso-');
+const finEhEmprestimo = l => l.natureza === 'transferencia' && (l.conta === 'emprestimo_pj' || l.conta_destino === 'emprestimo_pj');
 const finEhAporte = l => l.natureza === 'transferencia' && l.dono === 'PJ' && l.conta === 'conta_pf' && l.conta_destino === 'conta_pj';
 
 // Movimento na conta PJ (caixa), fora repasse/aporte: { data, valor } ou null.
@@ -309,6 +311,7 @@ function finMovPJ(l, hoje) {
   else if (l.natureza === 'despesa' && l.dono === 'PJ' && l.conta !== 'voomp') {
     data = (l.conta === 'cartao_pf' || l.conta === 'conta_pf') ? l.reembolso_em : l.data_caixa; valor = -fn(l.valor_bruto);
   } else if (l.natureza === 'transferencia' && l.conta_destino === 'conta_pj' && l.conta !== 'conta_pf') { data = l.data_caixa; valor = fn(l.valor_bruto); }
+  else if (l.natureza === 'transferencia' && l.conta === 'conta_pj' && l.conta_destino === 'emprestimo_pj') { data = l.data_caixa; valor = -fn(l.valor_bruto); }
   return data && data <= hoje ? { data, valor } : null;
 }
 // Repasse líquido (repasse − aporte) já acontecido: { data, valor } ou null
@@ -319,7 +322,7 @@ function finRepasseLiq(l, hoje) {
 
 function finResumo(lancs, ano, hoje) {
   const z = () => Array(12).fill(0);
-  const r = { faturamento: z(), recebido: z(), aReceber: z(), despesas: z(), lucro: z(), entradasPJ: z(), pagamentosPJ: z(), movPJ: z(), repasse: z() };
+  const r = { faturamento: z(), recebido: z(), aReceber: z(), despesas: z(), lucro: z(), entradasPJ: z(), pagamentosPJ: z(), emprestimo: z(), movPJ: z(), repasse: z() };
   const inicioAno = ano + '-01-01';
   r.saldoInicial = 0;
   lancs.forEach(l => {
@@ -335,23 +338,25 @@ function finResumo(lancs, ano, hoje) {
       r.despesas[finMes(l.data_competencia)] += fn(l.valor_bruto);
     }
     const mv = finMovPJ(l, hoje), rp = finRepasseLiq(l, hoje);
-    if (mv) { if (mv.data < inicioAno) r.saldoInicial += mv.valor; else if (finAno(mv.data) === ano) { const mm = finMes(mv.data); r.movPJ[mm] += mv.valor; if (mv.valor >= 0) r.entradasPJ[mm] += mv.valor; else r.pagamentosPJ[mm] -= mv.valor; } }
+    if (mv) { if (mv.data < inicioAno) r.saldoInicial += mv.valor; else if (finAno(mv.data) === ano) { const mm = finMes(mv.data); r.movPJ[mm] += mv.valor; if (finEhEmprestimo(l)) r.emprestimo[mm] += mv.valor; else if (mv.valor >= 0) r.entradasPJ[mm] += mv.valor; else r.pagamentosPJ[mm] -= mv.valor; } }
     if (rp) { if (rp.data < inicioAno) r.saldoInicial -= rp.valor; else if (finAno(rp.data) === ano) r.repasse[finMes(rp.data)] += rp.valor; }
   });
   r.saldoInicial = finArred(r.saldoInicial);
   for (let m = 0; m < 12; m++) {
-    ['faturamento', 'recebido', 'aReceber', 'despesas', 'entradasPJ', 'pagamentosPJ', 'movPJ', 'repasse'].forEach(k => r[k][m] = finArred(r[k][m]));
+    ['faturamento', 'recebido', 'aReceber', 'despesas', 'entradasPJ', 'pagamentosPJ', 'emprestimo', 'movPJ', 'repasse'].forEach(k => r[k][m] = finArred(r[k][m]));
     // Lucro (Karol, 02/11): competência pura = faturamento (data da venda) − despesas (data da compra). Caixa fica nas linhas da conta PJ.
     r.lucro[m] = finArred(r.faturamento[m] - r.despesas[m]);
   }
   const soma = a => finArred(a.reduce((x, y) => x + y, 0));
-  r.totais = { faturamento: soma(r.faturamento), recebido: soma(r.recebido), despesas: soma(r.despesas), lucro: soma(r.lucro), entradasPJ: soma(r.entradasPJ), pagamentosPJ: soma(r.pagamentosPJ), movPJ: soma(r.movPJ), repasse: soma(r.repasse) };
+  r.totais = { faturamento: soma(r.faturamento), recebido: soma(r.recebido), despesas: soma(r.despesas), lucro: soma(r.lucro), entradasPJ: soma(r.entradasPJ), pagamentosPJ: soma(r.pagamentosPJ), emprestimo: soma(r.emprestimo), movPJ: soma(r.movPJ), repasse: soma(r.repasse) };
   // Saldo na conta PJ (Karol, 02/11): saldo do mês anterior + movimento da conta − repasse pra ela. Mês que não chegou fica vazio.
   const mesHoje = finAno(hoje) === ano ? finMes(hoje) : finAno(hoje) > ano ? 11 : -1;
   let acum = r.saldoInicial;
   r.saldo = r.movPJ.map((v, m) => { acum = finArred(acum + v - r.repasse[m]); return m <= mesHoje ? acum : null; });
   r.totais.saldo = mesHoje >= 0 ? r.saldo[mesHoje] : r.saldoInicial;
   r.voomp = finSaldoConta(lancs, 'voomp', hoje);
+  // Saldo devedor do empréstimo = recebido − principal pago, até hoje
+  r.divida = finArred(lancs.reduce((t, l) => !finEhEmprestimo(l) || !l.data_caixa || l.data_caixa > hoje ? t : t + (l.conta === 'emprestimo_pj' ? 1 : -1) * fn(l.valor_bruto), 0));
   // Teto do MEI pelo caixa (Karol, 02/11): valor bruto das receitas PJ pela data em que o dinheiro entrou, menos estornos.
   // usado = o que já entrou até hoje; previsto = usado + o que ainda vai entrar neste ano.
   r.teto = { usado: 0, previsto: 0 };
@@ -392,9 +397,23 @@ function finVendasPorProduto(lancs, ano, mes /* 0-11 ou null */) {
 // pagas no cartão pessoal não entra: é dinheiro da empresa que passa pela PF e sai na fatura.
 function finResumoPF(lancs, ano, hoje) {
   const z = () => Array(12).fill(0);
-  const r = { repasse: z(), vendaPJ: z(), outras: z(), entradas: z(), gastos: z(), sobra: z(), acumulada: z(), cats: {} };
+  const r = { repasse: z(), vendaPJ: z(), outras: z(), entradas: z(), gastos: z(), sobra: z(), acumulada: z(), investido: z(), naConta: z(), cats: {}, saldoInvest: 0, saldoVicentinos: 0, vicentinos: [] };
   const noAno = d => d && d <= hoje && finAno(d) === ano;
   lancs.forEach(l => {
+    const dc = l.data_caixa || l.data_competencia;
+    if (dc && dc <= hoje) {
+      if (l.conta_destino === 'investimentos') r.saldoInvest += fn(l.valor_bruto);
+      if (l.conta === 'investimentos') r.saldoInvest += (l.natureza === 'receita' ? 1 : -1) * fn(l.valor_liquido);
+      if (l.conta_destino === 'vicentinos') r.saldoVicentinos += fn(l.valor_bruto);
+      if (l.conta === 'vicentinos') r.saldoVicentinos -= fn(l.valor_bruto);
+    }
+    if ((l.conta === 'vicentinos' || l.conta_destino === 'vicentinos') && dc && finAno(dc) === ano) r.vicentinos.push(l);
+    if (l.conta === 'vicentinos' || l.conta_destino === 'vicentinos') return;
+    if (noAno(dc)) {
+      if (l.natureza === 'transferencia' && l.conta_destino === 'investimentos') r.investido[finMes(dc)] += fn(l.valor_bruto);
+      else if (l.natureza === 'transferencia' && l.conta === 'investimentos') r.investido[finMes(dc)] -= fn(l.valor_bruto);
+      else if (l.natureza === 'receita' && l.dono === 'PF' && l.conta === 'investimentos') r.investido[finMes(dc)] += fn(l.valor_liquido);
+    }
     const rp = finRepasseLiq(l, hoje);
     if (rp) { if (finAno(rp.data) === ano) r.repasse[finMes(rp.data)] += rp.valor; return; }
     const dia = l.data_caixa || l.data_competencia;
@@ -411,15 +430,18 @@ function finResumoPF(lancs, ano, hoje) {
   let acum = 0;
   const mesHoje = finAno(hoje) === ano ? finMes(hoje) : finAno(hoje) > ano ? 11 : -1;
   for (let m = 0; m < 12; m++) {
-    ['repasse', 'vendaPJ', 'outras', 'gastos'].forEach(k => r[k][m] = finArred(r[k][m]));
+    ['repasse', 'vendaPJ', 'outras', 'gastos', 'investido'].forEach(k => r[k][m] = finArred(r[k][m]));
     Object.keys(r.cats).forEach(c => r.cats[c][m] = finArred(r.cats[c][m]));
     r.entradas[m] = finArred(r.repasse[m] + r.vendaPJ[m] + r.outras[m]);
     r.sobra[m] = finArred(r.entradas[m] - r.gastos[m]);
+    r.naConta[m] = finArred(r.sobra[m] - r.investido[m]);
     acum = finArred(acum + r.sobra[m]);
     r.acumulada[m] = m <= mesHoje ? acum : null;
   }
   const soma = a => finArred(a.reduce((x, y) => x + (y || 0), 0));
-  r.totais = { repasse: soma(r.repasse), vendaPJ: soma(r.vendaPJ), outras: soma(r.outras), entradas: soma(r.entradas), gastos: soma(r.gastos), sobra: soma(r.sobra) };
+  r.totais = { repasse: soma(r.repasse), vendaPJ: soma(r.vendaPJ), outras: soma(r.outras), entradas: soma(r.entradas), gastos: soma(r.gastos), sobra: soma(r.sobra), investido: soma(r.investido), naConta: soma(r.naConta) };
+  r.saldoInvest = finArred(r.saldoInvest); r.saldoVicentinos = finArred(r.saldoVicentinos);
+  r.vicentinos.sort((a, b) => (b.data_caixa || b.data_competencia).localeCompare(a.data_caixa || a.data_competencia));
   r.totaisCat = {}; Object.keys(r.cats).forEach(c => r.totaisCat[c] = soma(r.cats[c]));
   r.ordemCats = Object.keys(r.cats).sort((a, b) => r.totaisCat[b] - r.totaisCat[a]);
   return r;
@@ -550,7 +572,7 @@ if (typeof document !== 'undefined') {
         '<div class="fin-cartoes">' +
         cartao('Faturamento do ano', r.totais.faturamento) + cartao('Recebido do ano', r.totais.recebido) +
         cartao('Despesas PJ do ano', r.totais.despesas) + cartao('Lucro do ano', r.totais.lucro) + cartao('A receber (total)', r.totais.aReceber) +
-        cartao('Saldo na conta PJ', r.totais.saldo) +
+        cartao('Saldo na conta PJ', r.totais.saldo) + (r.divida ? cartao('Empréstimo a pagar', r.divida) : '') +
         '<div class="fin-cartao"><small>Saldo na Voomp (pra sacar)</small><b>' + esc(finBRL(r.voomp.disponivel)) + '</b><small>a liberar ' + esc(finBRL(r.voomp.aLiberar)) + '</small></div>' + '</div>' +
         '<div class="fin-teto ' + cor + '"><div class="fin-teto-topo"><b>Teto do MEI</b><button class="fin-btn fin-btn-mini" id="btn-teto" type="button">Editar teto</button></div>' +
         '<div class="fin-teto-barra"><div style="width:' + Math.min(100, pct) + '%"></div></div>' +
@@ -560,6 +582,8 @@ if (typeof document !== 'undefined') {
         (pct > 100 ? '<p class="fin-teto-aviso">Atenção: passou do teto do MEI.</p>' : pctPrev > 100 ? '<p class="fin-teto-aviso">Com o que ainda entra este ano, passa do teto do MEI.</p>' : pct > 80 ? '<p class="fin-teto-aviso">Já passou de 80% do teto.</p>' : '') +
         '<small>Conta pelo caixa: valor bruto das vendas pela data em que o dinheiro entrou, menos reembolsos.</small><br>' +
         (estado.config.teto_mei_obs ? '<small>' + esc(estado.config.teto_mei_obs) + '</small>' : '') + '</div>' +
+        '<section class="fin-bloco"><h3>Empréstimo da PJ</h3><p>Falta pagar: <b>' + esc(finBRL(r.divida)) + '</b>. O dinheiro do empréstimo entra no caixa da conta PJ, mas não é faturamento (não conta no teto do MEI nem no lucro). Na parcela, só os juros viram despesa.</p>' +
+        '<div class="fin-acoes"><button class="fin-btn fin-btn-primario" id="e-entra" type="button">Lançar empréstimo recebido</button><button class="fin-btn" id="e-paga" type="button">Lançar parcela paga</button></div></section>' +
         '<h3>Mês a mês</h3><div class="fin-grafico">' + barras + '</div><p class="fin-legenda"><span class="fin-b-fat"></span> Faturamento <span class="fin-b-rec"></span> Recebido</p>' +
         '<div class="fin-rolagem"><table class="fin-tabela"><thead><tr><th></th>' + MESES.map(m => '<th>' + m + '</th>').join('') + '<th>Ano</th></tr></thead><tbody>' +
         secao('Lucro (data da venda e da compra)') +
@@ -567,6 +591,7 @@ if (typeof document !== 'undefined') {
         linha('Lucro', r.lucro, r.totais.lucro, 'fin-linha-total') +
         secao('Caixa da conta PJ (entrada e saída de dinheiro)') +
         linha('Entradas na conta PJ', r.entradasPJ, r.totais.entradasPJ) + linha('Pagamentos PJ', r.pagamentosPJ.map(v => -v), -r.totais.pagamentosPJ) +
+        linha('Empréstimo (recebido − parcelas)', r.emprestimo, r.totais.emprestimo) +
         linha('Movimento do mês', r.movPJ, r.totais.movPJ) + linha('Repasse pra você (PF)', r.repasse.map(v => -v), -r.totais.repasse) +
         linha('Saldo na conta PJ', r.saldo, r.totais.saldo, 'fin-linha-total') +
         secao('Recebimentos (todas as contas)') +
@@ -574,6 +599,8 @@ if (typeof document !== 'undefined') {
         '<p class="fin-nota">Lucro = faturamento (valor bruto na data da venda) − despesas PJ (na data da compra; parcela do cartão no mês da fatura). Caixa da conta PJ: entradas (vendas fora da Voomp e saques da Voomp) − pagamentos (despesas PJ; as do cartão pessoal no dia do reembolso) = movimento do mês. Saldo na conta PJ = saldo do mês anterior + movimento − repasse pra você' + (r.saldoInicial ? ' (começa o ano com ' + esc(finBRL(r.saldoInicial)) + ')' : '') + '; na coluna Ano, o saldo de hoje. Repasse negativo = você cobriu despesa da empresa do seu bolso. O dinheiro na Voomp fica de fora até o saque. Recebido = líquido, só o que já caiu até hoje, em qualquer conta (Voomp, PJ e PF).</p>';
       $('#res-ano').onchange = e => { estado.ano = Number(e.target.value); renderResumo(); };
       $('#btn-teto').onclick = editarTeto;
+      $('#e-entra').onclick = () => lancRapido('Empréstimo recebido', { dono: 'PJ', conta: 'emprestimo_pj', conta_destino: 'conta_pj', descricao: 'Empréstimo — ' }, 'Valor que caiu na conta PJ. Na descrição, ponha o banco ou de quem é o empréstimo.');
+      $('#e-paga').onclick = () => lancRapido('Parcela do empréstimo paga', { dono: 'PJ', conta: 'conta_pj', conta_destino: 'emprestimo_pj', descricao: 'Parcela empréstimo — ' }, 'Valor total da parcela que saiu da conta PJ. Informe quanto dele é juros: só essa parte vira despesa.', true);
     }
     const cartao = (t, v) => '<div class="fin-cartao"><small>' + t + '</small><b>' + esc(finBRL(v)) + '</b></div>';
 
@@ -586,6 +613,28 @@ if (typeof document !== 'undefined') {
       const v = finNumero(r.teto);
       if (isNaN(v) || v <= 0) { await aviso('Valor inválido', 'Digite o teto em reais, por exemplo 81000.'); return; }
       const { error } = await sb.from('fin_config').upsert([{ chave: 'teto_mei_anual', valor: String(v) }, { chave: 'teto_mei_obs', valor: r.obs || '' }], { onConflict: 'chave' });
+      if (error) { await aviso('Não salvou', error.message); return; }
+      await recarregar();
+    }
+
+    // Lançamento rápido: só data, valor e descrição (empréstimo, investimento, caixinha)
+    async function lancRapido(titulo, base, ajuda, comJuros) {
+      const r = await modal(titulo, (ajuda ? '<p>' + esc(ajuda) + '</p>' : '') + '<div class="fin-form">' +
+        '<label class="fin-campo">Data<input type="date" name="data" value="' + esc(hoje) + '"></label>' +
+        '<label class="fin-campo">Valor (R$)<input name="valor" inputmode="decimal"></label>' +
+        (comJuros ? '<label class="fin-campo">Desse valor, quanto é juros (R$)<input name="juros" inputmode="decimal" placeholder="0"></label>' : '') +
+        '<label class="fin-campo fin-larga">Descrição<input name="descricao" value="' + esc(base.descricao || '') + '"></label></div>',
+        [{ texto: 'Cancelar', valor: null }, { texto: 'Salvar', valor: 'coletar', primario: true }]);
+      if (!r) return;
+      const valor = finNumero(r.valor), juros = comJuros && r.juros && r.juros.trim() ? finNumero(r.juros) : 0;
+      if (!r.data || isNaN(valor) || valor <= 0 || isNaN(juros) || juros < 0 || juros > valor || !r.descricao.trim()) { await aviso('Confira os campos', 'Data, valor e descrição são obrigatórios' + (comJuros ? '; os juros não podem passar do valor da parcela' : '') + '.'); return; }
+      const linha = (extra) => ({ natureza: 'transferencia', dono: base.dono, data_competencia: r.data, data_caixa: r.data, descricao: r.descricao.trim(), produto: null, categoria: null, conta: null, conta_destino: null, meio: null, taxa: 0, origem: 'manual', origem_id: null, observacao: null, ...extra });
+      const rows = [];
+      if (comJuros) {
+        if (valor - juros > 0) rows.push(linha({ conta: base.conta, conta_destino: base.conta_destino, valor_bruto: finArred(valor - juros), observacao: 'Parcela do empréstimo (principal)' }));
+        if (juros > 0) rows.push(linha({ natureza: 'despesa', categoria: 'Juros e encargos', conta: base.conta, descricao: 'Juros — ' + r.descricao.trim(), valor_bruto: finArred(juros) }));
+      } else rows.push(linha({ natureza: base.natureza || 'transferencia', conta: base.conta, conta_destino: base.conta_destino, valor_bruto: finArred(valor) }));
+      const { error } = await sb.from('fin_lancamentos').insert(rows);
       if (error) { await aviso('Não salvou', error.message); return; }
       await recarregar();
     }
@@ -630,7 +679,14 @@ if (typeof document !== 'undefined') {
         '<div class="fin-filtros"><label>Ano <select id="p-ano">' + selAnos(estado.pAno) + '</select></label></div>' +
         '<div class="fin-acoes"><button class="fin-btn fin-btn-primario" id="p-gasto" type="button">Lançar gasto (pix)</button><button class="fin-btn" id="p-receita" type="button">Lançar receita (pix)</button></div>' +
         '<div class="fin-cartoes">' + cartao('Entrou no ano', r.totais.entradas) + cartao('Gastou no ano', r.totais.gastos) + cartao('Sobrou no ano', r.totais.sobra) +
-        cartao('Veio da PJ', finArred(r.totais.repasse + r.totais.vendaPJ)) + '</div>' +
+        cartao('Veio da PJ', finArred(r.totais.repasse + r.totais.vendaPJ)) + cartao('Investimentos (saldo)', r.saldoInvest) + '</div>' +
+        '<section class="fin-bloco"><h3>Investimentos</h3><p>Saldo guardado: <b>' + esc(finBRL(r.saldoInvest)) + '</b>. É dinheiro seu: aplicar não é gasto, só muda de lugar.</p>' +
+        '<div class="fin-acoes"><button class="fin-btn fin-btn-primario" id="i-aplicar" type="button">Aplicar</button><button class="fin-btn" id="i-resgatar" type="button">Resgatar</button><button class="fin-btn" id="i-rend" type="button">Lançar rendimento</button></div></section>' +
+        '<section class="fin-bloco"><h3>Caixinha dos Vicentinos</h3><p>Saldo guardado da conferência: <b>' + esc(finBRL(r.saldoVicentinos)) + '</b>. Não é seu: fica fora do que entrou, do que você gastou e da sua sobra.</p>' +
+        '<div class="fin-acoes"><button class="fin-btn fin-btn-primario" id="v-entra" type="button">Guardar na caixinha</button><button class="fin-btn" id="v-sai" type="button">Usar da caixinha</button></div>' +
+        (r.vicentinos.length ? '<div class="fin-rolagem"><table class="fin-tabela"><thead><tr><th>Data</th><th>Descrição</th><th>Entrou</th><th>Saiu</th></tr></thead><tbody>' +
+          r.vicentinos.map(l => '<tr><td>' + finDataBR(l.data_caixa || l.data_competencia) + '</td><td>' + esc(l.descricao) + '</td><td>' + (l.conta_destino === 'vicentinos' ? esc(finBRL(l.valor_bruto)) : '') + '</td><td>' + (l.conta === 'vicentinos' ? esc(finBRL(l.valor_bruto)) : '') + '</td></tr>').join('') + '</tbody></table></div>' : '<p class="fin-nota">Nenhum movimento neste ano.</p>') +
+        '</section>' +
         pizzaHTML(r) +
         '<div class="fin-rolagem"><table class="fin-tabela"><thead><tr><th></th>' + MESES.map(m => '<th>' + m + '</th>').join('') + '<th>Ano</th></tr></thead><tbody>' +
         secao('Entrou') +
@@ -640,11 +696,16 @@ if (typeof document !== 'undefined') {
         r.ordemCats.map(c => linha(c, r.cats[c], r.totaisCat[c])).join('') +
         linha('Total gasto', r.gastos, r.totais.gastos, 'fin-linha-total') +
         secao('Sobra') +
-        linha('Sobra do mês', r.sobra, r.totais.sobra) + linha('Sobra acumulada', r.acumulada, acHoje.length ? acHoje[acHoje.length - 1] : null, 'fin-linha-total') +
+        linha('Sobra do mês', r.sobra, r.totais.sobra) + linha('Foi pra investimentos', r.investido, r.totais.investido) + linha('Ficou na conta', r.naConta, r.totais.naConta) + linha('Sobra acumulada', r.acumulada, acHoje.length ? acHoje[acHoje.length - 1] : null, 'fin-linha-total') +
         '</tbody></table></div>' +
         '<p class="fin-nota">Pelo dia em que o dinheiro entrou ou saiu: cartão no vencimento da fatura, pix no dia. Repasse da PJ já desconta o que você cobriu da empresa do seu bolso. O reembolso das despesas da empresa pagas no seu cartão não entra aqui: é dinheiro da empresa que só passa pela sua conta. Pra trocar a categoria de um gasto, edite na aba Lançamentos (Dono = PF). Gasto no cartão entra pela fatura (aba PF x PJ, marcando PF).</p>';
       $('#p-ano').onchange = e => { estado.pAno = Number(e.target.value); renderPessoal(); };
       $('#p-mes').onchange = e => { estado.pMes = e.target.value; renderPessoal(); };
+      $('#i-aplicar').onclick = () => lancRapido('Aplicar em investimento', { dono: 'PF', conta: 'conta_pf', conta_destino: 'investimentos', descricao: 'Aplicação' });
+      $('#i-resgatar').onclick = () => lancRapido('Resgatar investimento', { dono: 'PF', conta: 'investimentos', conta_destino: 'conta_pf', descricao: 'Resgate' });
+      $('#i-rend').onclick = () => lancRapido('Rendimento do investimento', { dono: 'PF', natureza: 'receita', conta: 'investimentos', descricao: 'Rendimento' }, 'Conta como receita sua e aumenta o saldo dos investimentos.');
+      $('#v-entra').onclick = () => lancRapido('Guardar na caixinha dos Vicentinos', { dono: 'PF', conta: null, conta_destino: 'vicentinos', descricao: 'Coleta da conferência' });
+      $('#v-sai').onclick = () => lancRapido('Usar da caixinha dos Vicentinos', { dono: 'PF', conta: 'vicentinos', conta_destino: null, descricao: '' });
       $('#p-gasto').onclick = () => formLancamento(null, novo('Gasto pessoal', 'despesa'));
       $('#p-receita').onclick = () => formLancamento(null, novo('Receita pessoal', 'receita'));
     }

@@ -1030,3 +1030,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** aba "Pessoal (PF)" no painel financeiro, pelo caixa, com os gastos PF das faturas jan–out já lançados e categorias automáticas.
 **Racional:** mesmo login, mesmo banco e mesma importação de fatura; o repasse já lançado vira a receita da PF sem lançar duas vezes.
 **Impacto:** 2026 até out: entrou R$25.788,02 (da PJ), gastou R$36.816,00 no cartão. Outras receitas e gastos no pix ainda não lançados.
+
+## 2026-11-03 — Empréstimo da PJ, investimentos e caixinha dos Vicentinos
+**Contexto:** a Karol pediu entrada e pagamento de empréstimo na PJ e, na PF, separar investimentos e a caixinha dos Vicentinos (dinheiro da conferência que ela guarda).
+**Decisão:** empréstimo entra no caixa da PJ mas não é faturamento; da parcela, só os juros são despesa. Investimento é dinheiro dela que muda de lugar (não é gasto); rendimento é receita. A caixinha dos Vicentinos não é dela: fica fora de entradas, gastos e sobra, só com saldo próprio.
+**Racional:** teto do MEI e lucro não podem ser inflados por dívida; sobra pessoal não pode misturar dinheiro de terceiros.
+**Impacto:** novos botões no Resumo (empréstimo) e na aba Pessoal (aplicar, resgatar, rendimento, caixinha).
