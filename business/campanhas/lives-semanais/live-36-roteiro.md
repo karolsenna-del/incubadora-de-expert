@@ -320,3 +320,5 @@ Ou pode tomar a decisão mais inteligente: fazer isso com alguém do seu lado, q
 - 31/10 — @expert-em-lives: data, oferta e 5 afirmações confirmadas pela Karol. Quiz do diferencial criado (25 perguntas dos agentes do Processo Autoral e da Autoridade Tríplice, exemplos da Karol), revisado pelo Codex e publicado; CTA = DIFERENCIAL. LP do grupo republicada com o tema da 36.
 - 31/10 — @expert-em-lives: Bloco 7 reescrito com o texto da Karol (sem diferencial = mais um, invisível, perde venda pra quem demonstra valores; com diferencial = narrativa alinhada, bio que o feed entrega, lado humano gera identificação e o profissional gera reconhecimento). Caso opcional do Bloco 7 descartado.
 - 31/10 — @live-deck-builder: deck de 34 slides montado na base da Live 35, fio condutor "um entre iguais"; publicado pra aprovação.
+
+- 04/11 — @live-deck-builder: slide 7 do deck sem "Eu já tentei dois" (título só "3 caminhos."), republicado no mesmo link

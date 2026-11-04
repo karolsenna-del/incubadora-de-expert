@@ -84,3 +84,5 @@
 | 15.5 | 28/10/2026 | Live 35 — ajuste (slide 30) | 30 | (mesmo) | https://claude.ai/artifact/MeiiKcJNbC9sjn7N9RMrqC | Karol: tirar os "oito lançamentos" da Decisão Mais Inteligente (deck e roteiro). Conferido no Chrome: slides 17 (looping) e 25 (quiz) no ar; aba antiga dela mostrava versão velha. |
 | 15.6 | 28/10/2026 | Live 35 — ajuste (ordem 24/25) | 30 | (mesmo) | https://claude.ai/artifact/MeiiKcJNbC9sjn7N9RMrqC | Karol: quiz vira o slide 24 e o Resumo o 25 (resumo continua antes da oferta). Roteiro acompanhou. |
 | 16 | 31/10/2026 | Live 36 — Como ser escolhido no meio de tanta gente com a mesma formação que você | 34 | "Um entre iguais" (fileira de profissionais idênticos, só um em laranja; slides 3 e 9) | https://claude.ai/artifact/TCRJYCXaaefvsDLUecLJg1 | aguardando aprovação |
+
+- 04/11/2026 — Live 36: ajuste pontual no slide 7, título virou só "3 caminhos." (saiu "Eu já tentei dois."), a pedido da Karol. Mesmo link.
