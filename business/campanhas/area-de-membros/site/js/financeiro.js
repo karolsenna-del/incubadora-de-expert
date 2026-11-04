@@ -3,6 +3,8 @@
 
 const FIN_EMAIL = 'karolsenna@incubadoradeexpert.com.br';
 const FIN_CATEGORIAS = ['Ferramentas e software', 'Tráfego e anúncios', 'Equipe e serviços', 'Taxas e tarifas', 'Impostos (DAS)', 'Educação', 'Outros PJ'];
+// Categorias da vida pessoal (aba Pessoal, Karol 03/11)
+const FIN_CATEGORIAS_PF = ['Mercado', 'Alimentação', 'Casa e contas', 'Saúde', 'Beleza e cuidados', 'Filhos', 'Roupas e compras', 'Transporte', 'Viagens', 'Assinaturas', 'Educação', 'Presentes', 'Juros e tarifas', 'Outros PF'];
 const FIN_PRODUTOS = ['Método VIP', 'Sprint do Método', 'Incubadora Express', 'Grupo', 'Individual', 'Expert360º', 'Diagnóstico Ferramentas', 'Método Express/Destrava Expert', 'Comissões de afiliada', 'Outros'];
 // Conta = onde o dinheiro está; pix/cartão/boleto vão no campo Meio (Karol, 01/11)
 const FIN_CONTAS = ['voomp', 'conta_pj', 'conta_pf', 'cartao_pf'];
@@ -368,6 +370,7 @@ function finVendasPorProduto(lancs, ano, mes /* 0-11 ou null */) {
   const mapa = {};
   lancs.forEach(l => {
     if (l.natureza !== 'receita' && l.natureza !== 'estorno') return;
+    if (l.dono !== 'PJ') return;
     if (finAno(l.data_competencia) !== ano) return;
     if (mes !== null && mes !== undefined && finMes(l.data_competencia) !== mes) return;
     const s = l.natureza === 'receita' ? 1 : -1;
@@ -384,6 +387,44 @@ function finVendasPorProduto(lancs, ano, mes /* 0-11 ou null */) {
   return { lista, total };
 }
 
+// Pessoal (PF), pelo caixa (Karol, 03/11): entra = repasse da PJ (menos aporte) + venda da PJ que caiu na conta PF
+// + receita PF lançada; sai = gastos PF (cartão no vencimento da fatura, pix no dia). O reembolso das despesas PJ
+// pagas no cartão pessoal não entra: é dinheiro da empresa que passa pela PF e sai na fatura.
+function finResumoPF(lancs, ano, hoje) {
+  const z = () => Array(12).fill(0);
+  const r = { repasse: z(), vendaPJ: z(), outras: z(), entradas: z(), gastos: z(), sobra: z(), acumulada: z(), cats: {} };
+  const noAno = d => d && d <= hoje && finAno(d) === ano;
+  lancs.forEach(l => {
+    const rp = finRepasseLiq(l, hoje);
+    if (rp) { if (finAno(rp.data) === ano) r.repasse[finMes(rp.data)] += rp.valor; return; }
+    const dia = l.data_caixa || l.data_competencia;
+    if (!noAno(dia)) return;
+    const m = finMes(dia), sinal = l.natureza === 'receita' ? 1 : l.natureza === 'estorno' ? -1 : 0;
+    if (sinal && l.dono === 'PJ' && l.conta === 'conta_pf') r.vendaPJ[m] += sinal * fn(l.valor_liquido);
+    else if (sinal && l.dono === 'PF') r.outras[m] += sinal * fn(l.valor_liquido);
+    else if (l.natureza === 'despesa' && l.dono === 'PF') {
+      const c = l.categoria || 'Outros PF';
+      (r.cats[c] = r.cats[c] || z())[m] += fn(l.valor_bruto);
+      r.gastos[m] += fn(l.valor_bruto);
+    }
+  });
+  let acum = 0;
+  const mesHoje = finAno(hoje) === ano ? finMes(hoje) : finAno(hoje) > ano ? 11 : -1;
+  for (let m = 0; m < 12; m++) {
+    ['repasse', 'vendaPJ', 'outras', 'gastos'].forEach(k => r[k][m] = finArred(r[k][m]));
+    Object.keys(r.cats).forEach(c => r.cats[c][m] = finArred(r.cats[c][m]));
+    r.entradas[m] = finArred(r.repasse[m] + r.vendaPJ[m] + r.outras[m]);
+    r.sobra[m] = finArred(r.entradas[m] - r.gastos[m]);
+    acum = finArred(acum + r.sobra[m]);
+    r.acumulada[m] = m <= mesHoje ? acum : null;
+  }
+  const soma = a => finArred(a.reduce((x, y) => x + (y || 0), 0));
+  r.totais = { repasse: soma(r.repasse), vendaPJ: soma(r.vendaPJ), outras: soma(r.outras), entradas: soma(r.entradas), gastos: soma(r.gastos), sobra: soma(r.sobra) };
+  r.totaisCat = {}; Object.keys(r.cats).forEach(c => r.totaisCat[c] = soma(r.cats[c]));
+  r.ordemCats = Object.keys(r.cats).sort((a, b) => r.totaisCat[b] - r.totaisCat[a]);
+  return r;
+}
+
 function finCSVRelatorio(linhas) {
   const esc = v => { const s = String(v == null ? '' : v); return /[;"\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
   const cab = ['Data da compra', 'Descrição', 'Categoria', 'Valor (R$)', 'Fatura (vencimento)', 'Reembolsado em'];
@@ -394,7 +435,7 @@ function finCSVRelatorio(linhas) {
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { finNumero, finData, finBRL, finDataBR, parseOFX, parseCSV, finNormalizarSinal, finSepararFatura, finPadrao, finAcharRegra, finIdsFatura, parseVoomp, voompParaLancamento, finResumo, finVendasPorProduto, finCSVRelatorio, finLinhasDoCSV };
+  module.exports = { finNumero, finData, finBRL, finDataBR, parseOFX, parseCSV, finNormalizarSinal, finSepararFatura, finPadrao, finAcharRegra, finIdsFatura, parseVoomp, voompParaLancamento, finResumo, finResumoPF, finVendasPorProduto, finCSVRelatorio, finLinhasDoCSV };
 }
 
 // =====================================================================
@@ -409,7 +450,7 @@ if (typeof document !== 'undefined') {
     const anoAtual = Number(hoje.slice(0, 4));
 
     let sb = null;
-    const estado = { lancs: [], regras: [], config: {}, fatura: null, voomp: null, ano: anoAtual, vAno: anoAtual, vMes: '', fAno: anoAtual, fMes: '', fNat: '', fDono: '' };
+    const estado = { lancs: [], regras: [], config: {}, fatura: null, voomp: null, ano: anoAtual, vAno: anoAtual, vMes: '', fAno: anoAtual, fMes: '', fNat: '', fDono: '', pAno: anoAtual };
 
     // ---------- modal próprio (nada de alert/confirm/prompt) ----------
     function modal(titulo, corpoHtml, botoes) {
@@ -538,6 +579,34 @@ if (typeof document !== 'undefined') {
       await recarregar();
     }
 
+    // ---------- PESSOAL (PF) ----------
+    function renderPessoal() {
+      const r = finResumoPF(estado.lancs, estado.pAno, hoje);
+      const linha = (nome, arr, tot, cls) => '<tr class="' + (cls || '') + '"><th>' + esc(nome) + '</th>' + arr.map(v => v === null ? '<td>—</td>' : '<td class="' + (v < 0 ? 'neg' : '') + '">' + esc(finBRL(v)) + '</td>').join('') + '<td><b>' + esc(tot === null ? '—' : finBRL(tot)) + '</b></td></tr>';
+      const secao = t => '<tr class="fin-secao"><th>' + t + '</th>' + MESES.map(() => '<td></td>').join('') + '<td></td></tr>';
+      const acHoje = r.acumulada.filter(v => v !== null);
+      const novo = (titulo, natureza) => ({ titulo, natureza, dono: 'PF', data_competencia: hoje, data_caixa: hoje, descricao: '', produto: '', categoria: '', conta: 'conta_pf', meio: 'pix', valor_bruto: '', taxa: 0, observacao: '' });
+      $('#aba-pessoal').innerHTML =
+        '<div class="fin-filtros"><label>Ano <select id="p-ano">' + selAnos(estado.pAno) + '</select></label></div>' +
+        '<div class="fin-acoes"><button class="fin-btn fin-btn-primario" id="p-gasto" type="button">Lançar gasto (pix)</button><button class="fin-btn" id="p-receita" type="button">Lançar receita (pix)</button></div>' +
+        '<div class="fin-cartoes">' + cartao('Entrou no ano', r.totais.entradas) + cartao('Gastou no ano', r.totais.gastos) + cartao('Sobrou no ano', r.totais.sobra) +
+        cartao('Veio da PJ', finArred(r.totais.repasse + r.totais.vendaPJ)) + '</div>' +
+        '<div class="fin-rolagem"><table class="fin-tabela"><thead><tr><th></th>' + MESES.map(m => '<th>' + m + '</th>').join('') + '<th>Ano</th></tr></thead><tbody>' +
+        secao('Entrou') +
+        linha('Repasse da PJ', r.repasse, r.totais.repasse) + linha('Venda da PJ paga na sua conta', r.vendaPJ, r.totais.vendaPJ) + linha('Outras receitas', r.outras, r.totais.outras) +
+        linha('Total que entrou', r.entradas, r.totais.entradas, 'fin-linha-total') +
+        secao('Gastou') +
+        r.ordemCats.map(c => linha(c, r.cats[c], r.totaisCat[c])).join('') +
+        linha('Total gasto', r.gastos, r.totais.gastos, 'fin-linha-total') +
+        secao('Sobra') +
+        linha('Sobra do mês', r.sobra, r.totais.sobra) + linha('Sobra acumulada', r.acumulada, acHoje.length ? acHoje[acHoje.length - 1] : null, 'fin-linha-total') +
+        '</tbody></table></div>' +
+        '<p class="fin-nota">Pelo dia em que o dinheiro entrou ou saiu: cartão no vencimento da fatura, pix no dia. Repasse da PJ já desconta o que você cobriu da empresa do seu bolso. O reembolso das despesas da empresa pagas no seu cartão não entra aqui: é dinheiro da empresa que só passa pela sua conta. Pra trocar a categoria de um gasto, edite na aba Lançamentos (Dono = PF). Gasto no cartão entra pela fatura (aba PF x PJ, marcando PF).</p>';
+      $('#p-ano').onchange = e => { estado.pAno = Number(e.target.value); renderPessoal(); };
+      $('#p-gasto').onclick = () => formLancamento(null, novo('Gasto pessoal', 'despesa'));
+      $('#p-receita').onclick = () => formLancamento(null, novo('Receita pessoal', 'receita'));
+    }
+
     // ---------- 2. VENDAS POR PRODUTO ----------
     function renderVendas() {
       const { lista, total } = finVendasPorProduto(estado.lancs, estado.vAno, estado.vMes === '' ? null : Number(estado.vMes));
@@ -593,7 +662,7 @@ if (typeof document !== 'undefined') {
       const ids = finIdsFatura(sep.validas);
       f.itens = sep.validas.map((l, i) => {
         const regra = finAcharRegra(l.descricao, estado.regras);
-        return { ...l, origem_id: ids[i], dono: regra ? regra.dono : null, categoria: regra && regra.dono === 'PJ' ? (regra.categoria || 'Outros PJ') : 'Outros PJ', daRegra: !!regra };
+        return { ...l, origem_id: ids[i], dono: regra ? regra.dono : null, categoria: regra ? (regra.categoria || (regra.dono === 'PF' ? 'Outros PF' : 'Outros PJ')) : 'Outros PJ', daRegra: !!regra };
       });
     }
 
@@ -626,12 +695,12 @@ if (typeof document !== 'undefined') {
         '<div class="fin-rolagem"><table class="fin-tabela"><thead><tr><th>Data</th><th>Descrição</th><th>Valor</th><th>PJ ou PF</th><th>Categoria</th></tr></thead><tbody>' +
         f.itens.map((it, i) => '<tr><td>' + finDataBR(it.data) + '</td><td>' + esc(it.descricao) + (it.daRegra ? ' <small class="fin-tag">regra</small>' : '') + '</td><td>' + esc(finBRL(it.valor)) + '</td>' +
           '<td class="fin-pjpf"><button type="button" class="fin-btn fin-btn-mini' + (it.dono === 'PJ' ? ' fin-btn-primario' : '') + '" data-i="' + i + '" data-d="PJ">PJ</button><button type="button" class="fin-btn fin-btn-mini' + (it.dono === 'PF' ? ' fin-btn-primario' : '') + '" data-i="' + i + '" data-d="PF">PF</button></td>' +
-          '<td><select data-cat="' + i + '"' + (it.dono === 'PJ' ? '' : ' disabled') + '>' + opts(FIN_CATEGORIAS, it.categoria) + '</select></td></tr>').join('') +
+          '<td><select data-cat="' + i + '"' + (it.dono ? '' : ' disabled') + '>' + opts(it.dono === 'PF' ? FIN_CATEGORIAS_PF : FIN_CATEGORIAS, it.categoria) + '</select></td></tr>').join('') +
         '</tbody></table></div>' +
-        '<p><b>' + marcados.length + '</b> marcadas como PJ, total <b>' + esc(finBRL(totalPJ)) + '</b>.</p>' +
+        '<p><b>' + marcados.length + '</b> marcadas como PJ, total <b>' + esc(finBRL(totalPJ)) + '</b> · <b>' + f.itens.filter(i => i.dono === 'PF').length + '</b> como PF (vão pra aba Pessoal).</p>' +
         '<button class="fin-btn fin-btn-primario" id="f-salvar" type="button">Salvar fatura</button>';
       area.innerHTML = html;
-      area.querySelectorAll('button[data-d]').forEach(b => b.onclick = () => { f.itens[b.dataset.i].dono = b.dataset.d; renderPreviaFatura(); });
+      area.querySelectorAll('button[data-d]').forEach(b => b.onclick = () => { const it = f.itens[b.dataset.i]; if (it.dono !== b.dataset.d) { it.dono = b.dataset.d; const lista = it.dono === 'PF' ? FIN_CATEGORIAS_PF : FIN_CATEGORIAS; if (!lista.includes(it.categoria)) it.categoria = it.dono === 'PF' ? 'Outros PF' : 'Outros PJ'; } renderPreviaFatura(); });
       area.querySelectorAll('select[data-cat]').forEach(s => s.onchange = () => { f.itens[s.dataset.cat].categoria = s.value; });
       $('#f-venc').onchange = e => { f.vencimento = e.target.value; };
       $('#f-inv').onchange = e => { f.inverter = e.target.checked; montarItensFatura(); renderPreviaFatura(); };
@@ -645,15 +714,16 @@ if (typeof document !== 'undefined') {
       const pfs = f.itens.filter(i => i.dono === 'PF');
       const naoMarcadas = f.itens.filter(i => !i.dono).length;
       if (!marcados.length && !pfs.length) { await aviso('Nada marcado', 'Marque PJ ou PF em pelo menos uma compra.'); return; }
-      const ok = await confirmar('Salvar fatura', marcados.length + ' despesas PJ serão gravadas (' + finBRL(marcados.reduce((s, i) => s + i.valor, 0)) + '). ' + (naoMarcadas ? naoMarcadas + ' compras sem marcação ficam de fora. ' : '') + 'As marcações PJ/PF viram regras para as próximas faturas.', 'Salvar');
+      const ok = await confirmar('Salvar fatura', marcados.length + ' despesas PJ (' + finBRL(marcados.reduce((s, i) => s + i.valor, 0)) + ') e ' + pfs.length + ' gastos pessoais (' + finBRL(pfs.reduce((s, i) => s + i.valor, 0)) + ') serão gravados. ' + (naoMarcadas ? naoMarcadas + ' compras sem marcação ficam de fora. ' : '') + 'As marcações PJ/PF viram regras para as próximas faturas.', 'Salvar');
       if (!ok) return;
-      if (marcados.length) {
-        const rows = marcados.map(i => ({ natureza: 'despesa', dono: 'PJ', data_competencia: i.data, data_caixa: f.vencimento, descricao: i.descricao, produto: null, categoria: i.categoria, conta: 'cartao_pf', meio: 'cartao', valor_bruto: finArred(i.valor), taxa: 0, origem: 'fatura', origem_id: i.origem_id, observacao: null }));
+      if (marcados.length || pfs.length) {
+        // PF também é gravado (aba Pessoal, Karol 03/11); id com pf- pra nunca bater com o da PJ
+        const rows = marcados.concat(pfs).map(i => ({ natureza: 'despesa', dono: i.dono, data_competencia: i.data, data_caixa: f.vencimento, descricao: i.descricao, produto: null, categoria: i.categoria, conta: 'cartao_pf', meio: 'cartao', valor_bruto: finArred(i.valor), taxa: 0, origem: 'fatura', origem_id: i.dono === 'PF' ? 'pf-' + i.origem_id : i.origem_id, observacao: null }));
         const { error } = await sb.from('fin_lancamentos').upsert(rows, { onConflict: 'origem,origem_id', ignoreDuplicates: true });
         if (error) { await aviso('Não salvou as despesas', error.message); return; }
       }
       const mapaRegras = {};
-      f.itens.filter(i => i.dono).forEach(i => { const p = finPadrao(i.descricao); if (p) mapaRegras[p] = { padrao: p, dono: i.dono, categoria: i.dono === 'PJ' ? i.categoria : null, atualizado_em: new Date().toISOString() }; });
+      f.itens.filter(i => i.dono).forEach(i => { const p = finPadrao(i.descricao); if (p) mapaRegras[p] = { padrao: p, dono: i.dono, categoria: i.categoria || null, atualizado_em: new Date().toISOString() }; });
       const regras = Object.values(mapaRegras);
       if (regras.length) {
         const { error } = await sb.from('fin_regras').upsert(regras, { onConflict: 'padrao' });
@@ -662,7 +732,7 @@ if (typeof document !== 'undefined') {
       estado.fatura = null;
       $('#f-arquivo').value = '';
       await recarregar();
-      await aviso('Fatura salva', marcados.length + ' despesas PJ gravadas. Veja o reembolso logo abaixo.');
+      await aviso('Fatura salva', marcados.length + ' despesas PJ e ' + pfs.length + ' gastos pessoais gravados. Veja o reembolso logo abaixo.');
     }
 
     // reembolso
@@ -755,8 +825,8 @@ if (typeof document !== 'undefined') {
       renderPreviaVoomp();
     }
 
-    async function formLancamento(l) {
-      const v = l || { natureza: 'receita', dono: 'PJ', data_competencia: hoje, data_caixa: '', descricao: '', produto: '', categoria: '', conta: 'conta_pj', meio: 'pix', valor_bruto: '', taxa: 0, observacao: '' };
+    async function formLancamento(l, padrao) {
+      const v = l || padrao || { natureza: 'receita', dono: 'PJ', data_competencia: hoje, data_caixa: '', descricao: '', produto: '', categoria: '', conta: 'conta_pj', meio: 'pix', valor_bruto: '', taxa: 0, observacao: '' };
       const num = x => x === '' || x == null ? '' : String(x).replace('.', ',');
       const corpo =
         '<div class="fin-form">' +
@@ -773,15 +843,15 @@ if (typeof document !== 'undefined') {
         '<label class="fin-campo">Valor bruto (R$)<input name="valor_bruto" inputmode="decimal" value="' + esc(num(v.valor_bruto)) + '"></label>' +
         '<label class="fin-campo">Taxa (R$)<input name="taxa" inputmode="decimal" value="' + esc(num(v.taxa)) + '"></label>' +
         '<label class="fin-campo fin-larga">Observação<textarea name="observacao" rows="2">' + esc(v.observacao || '') + '</textarea></label></div>';
-      const r = await modal(l ? 'Editar lançamento' : 'Novo lançamento', corpo, [{ texto: 'Cancelar', valor: null }, { texto: 'Salvar', valor: 'coletar', primario: true }]);
+      const r = await modal(l && l.id ? 'Editar lançamento' : (v.titulo || 'Novo lançamento'), corpo, [{ texto: 'Cancelar', valor: null }, { texto: 'Salvar', valor: 'coletar', primario: true }]);
       if (!r) return;
       const bruto = finNumero(r.valor_bruto), taxa = r.taxa.trim() ? finNumero(r.taxa) : 0;
       if (!r.descricao.trim() || !r.data_competencia || isNaN(bruto) || bruto < 0 || isNaN(taxa) || taxa < 0) {
         await aviso('Confira os campos', 'Descrição, data da venda/compra e valor bruto são obrigatórios; valores não podem ser negativos.');
-        return formLancamento({ ...v, ...r, valor_bruto: r.valor_bruto, taxa: r.taxa });
+        return formLancamento(l ? { ...v, ...r, valor_bruto: r.valor_bruto, taxa: r.taxa } : null, { ...v, ...r, valor_bruto: r.valor_bruto, taxa: r.taxa });
       }
       const dados = { natureza: r.natureza, dono: r.dono, data_competencia: r.data_competencia, data_caixa: r.data_caixa || null, descricao: r.descricao.trim(), produto: r.produto.trim() || null, categoria: r.categoria.trim() || null, conta: r.conta || null, conta_destino: r.natureza === 'transferencia' ? (r.conta_destino || null) : null, meio: r.meio.trim() || null, valor_bruto: finArred(bruto), taxa: finArred(taxa), observacao: r.observacao.trim() || null };
-      const q = l ? sb.from('fin_lancamentos').update(dados).eq('id', l.id) : sb.from('fin_lancamentos').insert({ ...dados, origem: 'manual', origem_id: null });
+      const q = l && l.id ? sb.from('fin_lancamentos').update(dados).eq('id', l.id) : sb.from('fin_lancamentos').insert({ ...dados, origem: 'manual', origem_id: null });
       const { error } = await q;
       if (error) { await aviso('Não salvou', error.message); return; }
       await recarregar();
@@ -863,16 +933,16 @@ if (typeof document !== 'undefined') {
 
     // ---------- geral ----------
     function renderTudo() {
-      renderResumo(); renderVendas(); renderLanc();
+      renderResumo(); renderVendas(); renderLanc(); renderPessoal();
       const pf = $('#aba-pfpj');
       if (pf && pf.querySelector('#reembolso-area')) renderReembolso(); else renderPfPj();
     }
 
     function montarEsqueleto() {
       $('#fin-raiz').innerHTML =
-        '<nav class="fin-abas"><button class="fin-aba ativa" data-aba="resumo" type="button">Resumo</button><button class="fin-aba" data-aba="vendas" type="button">Vendas por produto</button><button class="fin-aba" data-aba="pfpj" type="button">PF x PJ</button><button class="fin-aba" data-aba="lanc" type="button">Lançamentos</button></nav>' +
-        '<section class="fin-painel" id="aba-resumo"></section><section class="fin-painel" id="aba-vendas" hidden></section><section class="fin-painel" id="aba-pfpj" hidden></section><section class="fin-painel" id="aba-lanc" hidden></section>' +
-        '<datalist id="lista-produtos">' + FIN_PRODUTOS.map(p => '<option value="' + esc(p) + '">').join('') + '</datalist><datalist id="lista-categorias">' + FIN_CATEGORIAS.map(p => '<option value="' + esc(p) + '">').join('') + '</datalist>';
+        '<nav class="fin-abas"><button class="fin-aba ativa" data-aba="resumo" type="button">Resumo</button><button class="fin-aba" data-aba="vendas" type="button">Vendas por produto</button><button class="fin-aba" data-aba="pfpj" type="button">PF x PJ</button><button class="fin-aba" data-aba="lanc" type="button">Lançamentos</button><button class="fin-aba" data-aba="pessoal" type="button">Pessoal (PF)</button></nav>' +
+        '<section class="fin-painel" id="aba-resumo"></section><section class="fin-painel" id="aba-vendas" hidden></section><section class="fin-painel" id="aba-pfpj" hidden></section><section class="fin-painel" id="aba-lanc" hidden></section><section class="fin-painel" id="aba-pessoal" hidden></section>' +
+        '<datalist id="lista-produtos">' + FIN_PRODUTOS.map(p => '<option value="' + esc(p) + '">').join('') + '</datalist><datalist id="lista-categorias">' + FIN_CATEGORIAS.concat(FIN_CATEGORIAS_PF).map(p => '<option value="' + esc(p) + '">').join('') + '</datalist>';
       document.querySelectorAll('.fin-aba').forEach(b => b.onclick = () => abrirAba(b.dataset.aba));
     }
 

@@ -1024,3 +1024,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** o aviso de venda paga da Voomp grava a venda no painel; cada aviso fica guardado cru pra conferir os campos na 1ª venda real. Saque segue manual.
 **Racional:** o aviso já existia pra liberar acesso; só e-mail e produto estavam conferidos, então valor/taxa/liberação ficam marcados como estimados até a conferência.
 **Impacto:** depois da 1ª venda conferida, o extrato mensal da Voomp vira só conferência.
+
+## 2026-11-03 — Controle financeiro PF como aba do mesmo painel
+**Contexto:** a Karol quer acompanhar a PF (gastos dos cartões que não são PJ + pix; receitas = repasse da PJ + pix).
+**Decisão:** aba "Pessoal (PF)" no painel financeiro, pelo caixa, com os gastos PF das faturas jan–out já lançados e categorias automáticas.
+**Racional:** mesmo login, mesmo banco e mesma importação de fatura; o repasse já lançado vira a receita da PF sem lançar duas vezes.
+**Impacto:** 2026 até out: entrou R$25.788,02 (da PJ), gastou R$36.816,00 no cartão. Outras receitas e gastos no pix ainda não lançados.
