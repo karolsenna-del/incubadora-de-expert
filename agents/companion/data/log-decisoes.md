@@ -1060,3 +1060,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** aba "Financeiro" no topo da área de membros visível só pra ela; lançar empréstimo e parcela fica junto dos outros botões na aba Lançamentos.
 **Racional:** um lugar só pra lançar; alunos não veem o financeiro.
 **Impacto:** Resumo só mostra a dívida; publicação pendente (deploy da Karol).
+
+## 04/11/2026 — Financeiro: atalho na Central, não na área de membros
+**Contexto:** a aba Financeiro tinha ido pra área de membros; a Karol preferiu a Central da Incubadora.
+**Decisão:** opção A: card na Central abre o painel, que continua hospedado na área de membros (com login); a aba da área de membros saiu.
+**Racional:** a Central não tem senha; o painel fica atrás do login e com um caminho só.
+**Impacto:** publicar os dois sites.

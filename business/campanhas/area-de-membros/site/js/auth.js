@@ -111,7 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    window.location.href = 'app.html';
+    // Veio do financeiro (atalho da Central): volta pra ele depois do login
+    window.location.href = new URLSearchParams(window.location.search).get('volta') === 'financeiro' ? 'financeiro.html' : 'app.html';
   });
 
   btnReenviar.addEventListener('click', async () => {

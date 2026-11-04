@@ -1150,7 +1150,7 @@ if (typeof document !== 'undefined') {
       sb = getSupabase();
       const raiz = $('#fin-raiz');
       const { data: { session } } = await sb.auth.getSession();
-      if (!session) { window.location.href = 'index.html'; return; }
+      if (!session) { window.location.href = 'index.html?volta=financeiro'; return; }
       if ((session.user.email || '').toLowerCase() !== FIN_EMAIL) {
         raiz.innerHTML = '<div class="fin-restrita"><h1>Página restrita</h1></div>';
         return;
