@@ -458,6 +458,33 @@ function finPizzaPF(r, mes) {
   return { fatias: top, total };
 }
 
+// Despesas recorrentes (Karol, 03/11): gera os meses que faltam, de "gerado_ate" (exclusivo) até o mês de hoje.
+// Devolve as linhas novas e o que atualizar em cada recorrente (gerado_ate e, se o parcelado acabou, ativo=false).
+function finGerarRecorrentes(recs, hoje) {
+  const rows = [], atualizar = [];
+  const mesDe = d => { const [a, m] = d.slice(0, 7).split('-').map(Number); return a * 12 + (m - 1); };
+  const isoMes = n => Math.floor(n / 12) + '-' + String(n % 12 + 1).padStart(2, '0');
+  const fim = mesDe(hoje);
+  (recs || []).forEach(rc => {
+    if (!rc.ativo) return;
+    const ini = mesDe(rc.inicio);
+    let m = Math.max(ini, rc.gerado_ate ? mesDe(rc.gerado_ate) + 1 : ini), ultimo = null, acabou = false;
+    for (; m <= fim; m++) {
+      const n = rc.parcela_inicial ? rc.parcela_inicial + (m - ini) : null;
+      if (rc.parcelas_total && n > rc.parcelas_total) { acabou = true; break; }
+      const [a, mm] = isoMes(m).split('-').map(Number);
+      const dia = Math.min(rc.dia, new Date(Date.UTC(a, mm, 0)).getUTCDate());
+      const data = isoMes(m) + '-' + String(dia).padStart(2, '0');
+      const sufixo = n ? ' (parcela ' + String(n).padStart(2, '0') + '/' + String(rc.parcelas_total || '?').padStart(2, '0') + ')' : '';
+      rows.push({ natureza: 'despesa', dono: rc.dono, data_competencia: data, data_caixa: data, descricao: rc.descricao + sufixo, produto: null, categoria: rc.categoria || null, conta: rc.conta || null, meio: rc.meio || null, valor_bruto: finArred(Number(rc.valor)), taxa: 0, origem: 'recorrente', origem_id: 'rec-' + rc.id + '-' + isoMes(m), observacao: 'Despesa recorrente (o painel lança sozinho todo mês)' });
+      ultimo = m;
+      if (rc.parcelas_total && n >= rc.parcelas_total) { acabou = true; break; }
+    }
+    if (ultimo !== null || acabou) atualizar.push({ id: rc.id, gerado_ate: ultimo !== null ? isoMes(ultimo) + '-01' : rc.gerado_ate, ativo: !acabou });
+  });
+  return { rows, atualizar };
+}
+
 function finCSVRelatorio(linhas) {
   const esc = v => { const s = String(v == null ? '' : v); return /[;"\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
   const cab = ['Data da compra', 'Descrição', 'Categoria', 'Valor (R$)', 'Fatura (vencimento)', 'Reembolsado em'];
@@ -468,7 +495,7 @@ function finCSVRelatorio(linhas) {
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { finNumero, finData, finBRL, finDataBR, parseOFX, parseCSV, finNormalizarSinal, finSepararFatura, finPadrao, finAcharRegra, finIdsFatura, parseVoomp, voompParaLancamento, finResumo, finResumoPF, finPizzaPF, finVendasPorProduto, finCSVRelatorio, finLinhasDoCSV };
+  module.exports = { finNumero, finData, finBRL, finDataBR, parseOFX, parseCSV, finNormalizarSinal, finSepararFatura, finPadrao, finAcharRegra, finIdsFatura, parseVoomp, voompParaLancamento, finResumo, finResumoPF, finPizzaPF, finGerarRecorrentes, finVendasPorProduto, finCSVRelatorio, finLinhasDoCSV };
 }
 
 // =====================================================================
@@ -483,7 +510,7 @@ if (typeof document !== 'undefined') {
     const anoAtual = Number(hoje.slice(0, 4));
 
     let sb = null;
-    const estado = { lancs: [], regras: [], config: {}, fatura: null, voomp: null, ano: anoAtual, vAno: anoAtual, vMes: '', fAno: anoAtual, fMes: '', fNat: '', fDono: '', pAno: anoAtual, pMes: '' };
+    const estado = { lancs: [], regras: [], recorrentes: [], config: {}, fatura: null, voomp: null, ano: anoAtual, vAno: anoAtual, vMes: '', fAno: anoAtual, fMes: '', fNat: '', fDono: '', pAno: anoAtual, pMes: '' };
 
     // ---------- modal próprio (nada de alert/confirm/prompt) ----------
     function modal(titulo, corpoHtml, botoes) {
@@ -517,7 +544,7 @@ if (typeof document !== 'undefined') {
       [{ texto: 'Cancelar', valor: null }, { texto: 'Confirmar', valor: 'coletar', primario: true }]).then(r => (r && r.data) ? r.data : null);
 
     // ---------- dados ----------
-    async function carregarTudo() {
+    async function carregarTudo(jaGerou) {
       let todos = [], de = 0;
       for (;;) {
         const { data, error } = await sb.from('fin_lancamentos').select('*').order('data_competencia', { ascending: false }).range(de, de + 999);
@@ -527,6 +554,9 @@ if (typeof document !== 'undefined') {
         de += 1000;
       }
       estado.lancs = todos;
+      const rr = await sb.from('fin_recorrentes').select('*').order('descricao');
+      estado.recorrentes = rr.error ? [] : rr.data;
+      if (!rr.error && !jaGerou && await gerarRecorrentes()) return carregarTudo(true);
       const r1 = await sb.from('fin_regras').select('*');
       if (r1.error) throw r1.error;
       estado.regras = r1.data;
@@ -535,6 +565,18 @@ if (typeof document !== 'undefined') {
       estado.config = {};
       r2.data.forEach(c => { estado.config[c.chave] = c.valor; });
     }
+    // Lança os meses que faltam das despesas recorrentes; true se gravou algo (aí recarrega)
+    async function gerarRecorrentes() {
+      const { rows, atualizar } = finGerarRecorrentes(estado.recorrentes, hoje);
+      if (!atualizar.length) return false;
+      if (rows.length) {
+        const { error } = await sb.from('fin_lancamentos').upsert(rows, { onConflict: 'origem,origem_id', ignoreDuplicates: true });
+        if (error) { console.error('recorrentes:', error.message); return false; }
+      }
+      for (const a of atualizar) await sb.from('fin_recorrentes').update({ gerado_ate: a.gerado_ate, ativo: a.ativo }).eq('id', a.id);
+      return rows.length > 0;
+    }
+
     async function recarregar() {
       try { await carregarTudo(); } catch (e) { await aviso('Não consegui carregar', e.message || String(e)); }
       renderTudo();
@@ -912,7 +954,7 @@ if (typeof document !== 'undefined') {
         '<label>Tipo <select id="l-nat"><option value="">Todos</option>' + Object.keys(NAT_NOME).map(n => '<option value="' + n + '"' + (estado.fNat === n ? ' selected' : '') + '>' + NAT_NOME[n] + '</option>').join('') + '</select></label>' +
         '<label>Dono <select id="l-dono"><option value="">Todos</option><option value="PJ"' + (estado.fDono === 'PJ' ? ' selected' : '') + '>PJ</option><option value="PF"' + (estado.fDono === 'PF' ? ' selected' : '') + '>PF</option></select></label></div>' +
         '<div class="fin-acoes"><button class="fin-btn fin-btn-primario" id="l-novo" type="button">Novo lançamento</button><button class="fin-btn" id="l-voomp" type="button">Colar extrato da Voomp</button></div>' +
-        '<div id="voomp-area"></div>' +
+        '<div id="voomp-area"></div>' + recorrentesHTML() +
         '<p>' + lista.length + ' lançamentos.</p>' +
         '<div class="fin-rolagem"><table class="fin-tabela"><thead><tr><th>Data</th><th>Caixa</th><th>Tipo</th><th>Dono</th><th>Descrição</th><th>Produto / categoria</th><th>Bruto</th><th>Taxa</th><th>Líquido</th><th></th></tr></thead><tbody>' +
         (lista.length ? lista.map(l => '<tr><td>' + finDataBR(l.data_competencia) + '</td><td>' + finDataBR(l.data_caixa) + '</td><td>' + NAT_NOME[l.natureza] + '</td><td>' + l.dono + '</td><td>' + esc(l.descricao) + '</td><td>' + esc(l.produto || l.categoria || '') + '</td><td>' + esc(finBRL(l.valor_bruto)) + '</td><td>' + esc(finBRL(l.taxa)) + '</td><td>' + esc(finBRL(l.valor_liquido)) + '</td><td class="fin-acoes-linha"><button class="fin-btn fin-btn-mini" type="button" data-ed="' + l.id + '">Editar</button><button class="fin-btn fin-btn-mini fin-btn-perigo" type="button" data-ex="' + l.id + '">Excluir</button></td></tr>').join('') : '<tr><td colspan="10">Nenhum lançamento nesse filtro.</td></tr>') +
@@ -922,10 +964,66 @@ if (typeof document !== 'undefined') {
       $('#l-nat').onchange = e => { estado.fNat = e.target.value; renderLanc(); };
       $('#l-dono').onchange = e => { estado.fDono = e.target.value; renderLanc(); };
       $('#l-novo').onclick = () => formLancamento(null);
+      $('#r-nova').onclick = () => formRecorrente(null);
+      document.querySelectorAll('[data-red]').forEach(b => b.onclick = () => formRecorrente(estado.recorrentes.find(x => x.id === b.dataset.red)));
+      document.querySelectorAll('[data-renc]').forEach(b => b.onclick = () => encerrarRecorrente(estado.recorrentes.find(x => x.id === b.dataset.renc)));
       $('#l-voomp').onclick = () => { renderVoompEntrada(); };
       document.querySelectorAll('[data-ed]').forEach(b => b.onclick = () => formLancamento(estado.lancs.find(l => l.id === b.dataset.ed)));
       document.querySelectorAll('[data-ex]').forEach(b => b.onclick = () => excluirLanc(estado.lancs.find(l => l.id === b.dataset.ex)));
       renderPreviaVoomp();
+    }
+
+    // ---------- despesas recorrentes ----------
+    const mesBR = iso => iso ? MESES[Number(iso.slice(5, 7)) - 1] + '/' + iso.slice(0, 4) : '';
+    function proximoMes(rc) {
+      if (!rc.ativo) return null;
+      const base = rc.gerado_ate && rc.gerado_ate >= rc.inicio ? rc.gerado_ate : null;
+      if (!base) return rc.inicio;
+      const [a, m] = base.split('-').map(Number);
+      return (m === 12 ? a + 1 : a) + '-' + String(m === 12 ? 1 : m + 1).padStart(2, '0') + '-01';
+    }
+    function recorrentesHTML() {
+      const lista = estado.recorrentes;
+      return '<section class="fin-bloco"><h3>Despesas recorrentes</h3><p class="fin-nota">O painel lança sozinho, todo mês, quando você abre. Apagar um lançamento gerado não faz ele voltar. Parcelado para na última parcela.</p>' +
+        '<div class="fin-acoes"><button class="fin-btn fin-btn-primario" id="r-nova" type="button">Nova recorrente</button></div>' +
+        (lista.length ? '<div class="fin-rolagem"><table class="fin-tabela"><thead><tr><th>Descrição</th><th>Dono</th><th>Valor</th><th>Dia</th><th>Parcelas</th><th>Próximo mês</th><th></th></tr></thead><tbody>' +
+          lista.map(rc => '<tr class="' + (rc.ativo ? '' : 'fin-ja') + '"><td>' + esc(rc.descricao) + '</td><td>' + rc.dono + '</td><td>' + esc(finBRL(rc.valor)) + '</td><td>' + rc.dia + '</td><td>' + (rc.parcelas_total ? rc.parcela_inicial + ' a ' + rc.parcelas_total : 'sem fim') + '</td><td>' + (rc.ativo ? mesBR(proximoMes(rc)) : 'encerrada') + '</td>' +
+            '<td class="fin-acoes-linha"><button class="fin-btn fin-btn-mini" type="button" data-red="' + rc.id + '">Editar</button>' + (rc.ativo ? '<button class="fin-btn fin-btn-mini fin-btn-perigo" type="button" data-renc="' + rc.id + '">Encerrar</button>' : '') + '</td></tr>').join('') +
+          '</tbody></table></div>' : '<p>Nenhuma despesa recorrente.</p>') + '</section>';
+    }
+    async function formRecorrente(rc) {
+      const v = rc || { descricao: '', dono: 'PF', categoria: '', conta: 'cartao_pf', meio: 'cartao', valor: '', dia: 15, inicio: hoje.slice(0, 8) + '01', parcela_inicial: '', parcelas_total: '' };
+      const corpo = '<div class="fin-form">' +
+        '<label class="fin-campo fin-larga">Descrição<input name="descricao" value="' + esc(v.descricao) + '"></label>' +
+        '<label class="fin-campo">Dono<select name="dono"><option' + (v.dono === 'PJ' ? ' selected' : '') + '>PJ</option><option' + (v.dono === 'PF' ? ' selected' : '') + '>PF</option></select></label>' +
+        '<label class="fin-campo">Categoria<input name="categoria" list="lista-categorias" value="' + esc(v.categoria || '') + '"></label>' +
+        '<label class="fin-campo">Conta<select name="conta">' + opts(['cartao_pf', 'conta_pj', 'conta_pf'], v.conta) + '</select></label>' +
+        '<label class="fin-campo">Meio<input name="meio" placeholder="cartao, pix, boleto" value="' + esc(v.meio || '') + '"></label>' +
+        '<label class="fin-campo">Valor (R$)<input name="valor" inputmode="decimal" value="' + esc(String(v.valor).replace('.', ',')) + '"></label>' +
+        '<label class="fin-campo">Dia do mês (cartão: dia do vencimento)<input name="dia" inputmode="numeric" value="' + esc(v.dia) + '"></label>' +
+        '<label class="fin-campo">Começa em<input type="month" name="inicio" value="' + esc(String(v.inicio).slice(0, 7)) + '"></label>' +
+        '<label class="fin-campo">Parcelado: parcela desse 1º mês<input name="parcela_inicial" inputmode="numeric" placeholder="vazio = sem fim" value="' + esc(v.parcela_inicial || '') + '"></label>' +
+        '<label class="fin-campo">Parcelado: total de parcelas<input name="parcelas_total" inputmode="numeric" value="' + esc(v.parcelas_total || '') + '"></label></div>';
+      const r = await modal(rc ? 'Editar recorrente' : 'Nova despesa recorrente', corpo, [{ texto: 'Cancelar', valor: null }, { texto: 'Salvar', valor: 'coletar', primario: true }]);
+      if (!r) return;
+      const valor = finNumero(r.valor), dia = Number(r.dia), pi = r.parcela_inicial.trim() ? Number(r.parcela_inicial) : null, pt = r.parcelas_total.trim() ? Number(r.parcelas_total) : null;
+      if (!r.descricao.trim() || isNaN(valor) || valor <= 0 || !(dia >= 1 && dia <= 31) || !/^\d{4}-\d{2}$/.test(r.inicio) || (pi === null) !== (pt === null) || (pi !== null && (!(pi >= 1) || pt < pi))) {
+        await aviso('Confira os campos', 'Descrição, valor, dia (1 a 31) e mês de início são obrigatórios. Parcelado: preencha a parcela do 1º mês e o total (total não pode ser menor).');
+        return formRecorrente(rc ? { ...rc, ...r } : { ...v, ...r, id: undefined });
+      }
+      const dados = { descricao: r.descricao.trim(), dono: r.dono, categoria: r.categoria.trim() || null, conta: r.conta, meio: r.meio.trim() || null, valor: finArred(valor), dia, inicio: r.inicio + '-01', parcela_inicial: pi, parcelas_total: pt };
+      const q = rc && rc.id ? sb.from('fin_recorrentes').update(dados).eq('id', rc.id) : sb.from('fin_recorrentes').insert({ ...dados, ativo: true, gerado_ate: null });
+      const { error } = await q;
+      if (error) { await aviso('Não salvou', error.message); return; }
+      await recarregar();
+    }
+    async function encerrarRecorrente(rc) {
+      if (!rc) return;
+      const ok = await confirmar('Encerrar recorrente', '"' + rc.descricao + '" para de ser lançada a partir do próximo mês. O que já foi lançado fica.', 'Encerrar');
+      if (!ok) return;
+      const { error } = await sb.from('fin_recorrentes').update({ ativo: false }).eq('id', rc.id);
+      if (error) { await aviso('Não salvou', error.message); return; }
+      await recarregar();
     }
 
     async function formLancamento(l, padrao) {
