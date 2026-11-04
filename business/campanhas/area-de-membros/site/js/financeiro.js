@@ -425,6 +425,17 @@ function finResumoPF(lancs, ano, hoje) {
   return r;
 }
 
+// Pizza das despesas pessoais (Karol, 03/11): 6 maiores categorias + o resto junto, para as cores não se repetirem.
+function finPizzaPF(r, mes) {
+  const val = c => mes === null || mes === undefined ? r.totaisCat[c] : (r.cats[c][mes] || 0);
+  const lista = r.ordemCats.map(c => ({ nome: c, valor: finArred(val(c)) })).filter(x => x.valor > 0).sort((a, b) => b.valor - a.valor);
+  const top = lista.slice(0, 6), resto = lista.slice(6);
+  if (resto.length) top.push({ nome: 'Outras categorias', valor: finArred(resto.reduce((t, x) => t + x.valor, 0)), detalhe: resto.map(x => x.nome).join(', ') });
+  const total = finArred(top.reduce((t, x) => t + x.valor, 0));
+  top.forEach(x => { x.pct = total ? x.valor / total * 100 : 0; });
+  return { fatias: top, total };
+}
+
 function finCSVRelatorio(linhas) {
   const esc = v => { const s = String(v == null ? '' : v); return /[;"\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
   const cab = ['Data da compra', 'Descrição', 'Categoria', 'Valor (R$)', 'Fatura (vencimento)', 'Reembolsado em'];
@@ -435,7 +446,7 @@ function finCSVRelatorio(linhas) {
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { finNumero, finData, finBRL, finDataBR, parseOFX, parseCSV, finNormalizarSinal, finSepararFatura, finPadrao, finAcharRegra, finIdsFatura, parseVoomp, voompParaLancamento, finResumo, finResumoPF, finVendasPorProduto, finCSVRelatorio, finLinhasDoCSV };
+  module.exports = { finNumero, finData, finBRL, finDataBR, parseOFX, parseCSV, finNormalizarSinal, finSepararFatura, finPadrao, finAcharRegra, finIdsFatura, parseVoomp, voompParaLancamento, finResumo, finResumoPF, finPizzaPF, finVendasPorProduto, finCSVRelatorio, finLinhasDoCSV };
 }
 
 // =====================================================================
@@ -450,7 +461,7 @@ if (typeof document !== 'undefined') {
     const anoAtual = Number(hoje.slice(0, 4));
 
     let sb = null;
-    const estado = { lancs: [], regras: [], config: {}, fatura: null, voomp: null, ano: anoAtual, vAno: anoAtual, vMes: '', fAno: anoAtual, fMes: '', fNat: '', fDono: '', pAno: anoAtual };
+    const estado = { lancs: [], regras: [], config: {}, fatura: null, voomp: null, ano: anoAtual, vAno: anoAtual, vMes: '', fAno: anoAtual, fMes: '', fNat: '', fDono: '', pAno: anoAtual, pMes: '' };
 
     // ---------- modal próprio (nada de alert/confirm/prompt) ----------
     function modal(titulo, corpoHtml, botoes) {
@@ -580,6 +591,35 @@ if (typeof document !== 'undefined') {
     }
 
     // ---------- PESSOAL (PF) ----------
+    // Cores das fatias: ordem fixa de 6 tons validados para daltonismo + cinza para "Outras categorias"
+    const CORES_PIZZA = ['#2a78d6', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#008300'];
+    function pizzaHTML(r) {
+      const { fatias, total } = finPizzaPF(r, estado.pMes === '' ? null : Number(estado.pMes));
+      const titulo = 'Pra onde foi o dinheiro' + (estado.pMes === '' ? ' em ' + estado.pAno : ' em ' + MESES_LONGO[Number(estado.pMes)] + ' de ' + estado.pAno);
+      const filtro = '<label>Período <select id="p-mes"><option value="">Ano todo</option>' + MESES_LONGO.map((m, i) => '<option value="' + i + '"' + (String(i) === String(estado.pMes) ? ' selected' : '') + '>' + m + '</option>').join('') + '</select></label>';
+      if (!total) return '<section class="fin-bloco"><div class="fin-pizza-topo"><h3>' + esc(titulo) + '</h3>' + filtro + '</div><p>Nenhum gasto pessoal nesse período.</p></section>';
+      const R = 90, r0 = 54, cx = 100, cy = 100;
+      const ponto = (a, raio) => [cx + raio * Math.sin(a), cy - raio * Math.cos(a)];
+      let ang = 0;
+      const fatiasSvg = fatias.map((f, i) => {
+        const cor = f.nome === 'Outras categorias' ? '#a1a1aa' : CORES_PIZZA[i];
+        const a0 = ang, a1 = ang + f.valor / total * 2 * Math.PI; ang = a1;
+        const dica = f.nome + ': ' + finBRL(f.valor) + ' (' + f.pct.toFixed(1).replace('.', ',') + '%)' + (f.detalhe ? ' — ' + f.detalhe : '');
+        if (fatias.length === 1) return '<circle cx="' + cx + '" cy="' + cy + '" r="' + ((R + r0) / 2) + '" fill="none" stroke="' + cor + '" stroke-width="' + (R - r0) + '"><title>' + esc(dica) + '</title></circle>';
+        const g = a1 - a0 > Math.PI ? 1 : 0;
+        const [x0, y0] = ponto(a0, R), [x1, y1] = ponto(a1, R), [x2, y2] = ponto(a1, r0), [x3, y3] = ponto(a0, r0);
+        return '<path class="fin-fatia" d="M' + x0.toFixed(2) + ' ' + y0.toFixed(2) + ' A' + R + ' ' + R + ' 0 ' + g + ' 1 ' + x1.toFixed(2) + ' ' + y1.toFixed(2) + ' L' + x2.toFixed(2) + ' ' + y2.toFixed(2) + ' A' + r0 + ' ' + r0 + ' 0 ' + g + ' 0 ' + x3.toFixed(2) + ' ' + y3.toFixed(2) + ' Z" fill="' + cor + '"><title>' + esc(dica) + '</title></path>';
+      }).join('');
+      const legenda = fatias.map((f, i) => {
+        const cor = f.nome === 'Outras categorias' ? '#a1a1aa' : CORES_PIZZA[i];
+        return '<li><span class="fin-pizza-cor" style="background:' + cor + '"></span><span class="fin-pizza-nome">' + esc(f.nome) + (f.detalhe ? '<small>' + esc(f.detalhe) + '</small>' : '') + '</span><b>' + esc(finBRL(f.valor)) + '</b><span class="fin-pizza-pct">' + f.pct.toFixed(1).replace('.', ',') + '%</span></li>';
+      }).join('');
+      return '<section class="fin-bloco"><div class="fin-pizza-topo"><h3>' + esc(titulo) + '</h3>' + filtro + '</div>' +
+        '<div class="fin-pizza"><svg viewBox="0 0 200 200" role="img" aria-label="' + esc(titulo + ': total ' + finBRL(total)) + '">' + fatiasSvg +
+        '<text x="100" y="96" text-anchor="middle" class="fin-pizza-rot">Total gasto</text><text x="100" y="116" text-anchor="middle" class="fin-pizza-val">' + esc(finBRL(total)) + '</text></svg>' +
+        '<ul class="fin-pizza-legenda">' + legenda + '</ul></div></section>';
+    }
+
     function renderPessoal() {
       const r = finResumoPF(estado.lancs, estado.pAno, hoje);
       const linha = (nome, arr, tot, cls) => '<tr class="' + (cls || '') + '"><th>' + esc(nome) + '</th>' + arr.map(v => v === null ? '<td>—</td>' : '<td class="' + (v < 0 ? 'neg' : '') + '">' + esc(finBRL(v)) + '</td>').join('') + '<td><b>' + esc(tot === null ? '—' : finBRL(tot)) + '</b></td></tr>';
@@ -591,6 +631,7 @@ if (typeof document !== 'undefined') {
         '<div class="fin-acoes"><button class="fin-btn fin-btn-primario" id="p-gasto" type="button">Lançar gasto (pix)</button><button class="fin-btn" id="p-receita" type="button">Lançar receita (pix)</button></div>' +
         '<div class="fin-cartoes">' + cartao('Entrou no ano', r.totais.entradas) + cartao('Gastou no ano', r.totais.gastos) + cartao('Sobrou no ano', r.totais.sobra) +
         cartao('Veio da PJ', finArred(r.totais.repasse + r.totais.vendaPJ)) + '</div>' +
+        pizzaHTML(r) +
         '<div class="fin-rolagem"><table class="fin-tabela"><thead><tr><th></th>' + MESES.map(m => '<th>' + m + '</th>').join('') + '<th>Ano</th></tr></thead><tbody>' +
         secao('Entrou') +
         linha('Repasse da PJ', r.repasse, r.totais.repasse) + linha('Venda da PJ paga na sua conta', r.vendaPJ, r.totais.vendaPJ) + linha('Outras receitas', r.outras, r.totais.outras) +
@@ -603,6 +644,7 @@ if (typeof document !== 'undefined') {
         '</tbody></table></div>' +
         '<p class="fin-nota">Pelo dia em que o dinheiro entrou ou saiu: cartão no vencimento da fatura, pix no dia. Repasse da PJ já desconta o que você cobriu da empresa do seu bolso. O reembolso das despesas da empresa pagas no seu cartão não entra aqui: é dinheiro da empresa que só passa pela sua conta. Pra trocar a categoria de um gasto, edite na aba Lançamentos (Dono = PF). Gasto no cartão entra pela fatura (aba PF x PJ, marcando PF).</p>';
       $('#p-ano').onchange = e => { estado.pAno = Number(e.target.value); renderPessoal(); };
+      $('#p-mes').onchange = e => { estado.pMes = e.target.value; renderPessoal(); };
       $('#p-gasto').onclick = () => formLancamento(null, novo('Gasto pessoal', 'despesa'));
       $('#p-receita').onclick = () => formLancamento(null, novo('Receita pessoal', 'receita'));
     }

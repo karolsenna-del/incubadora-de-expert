@@ -90,6 +90,21 @@
 .fin-form .fin-larga { grid-column: 1 / -1; }
 .fin-campo input, .fin-campo select { width: 100%; }
 
+/* Pizza das despesas pessoais (03/11) */
+.fin-pizza-topo { display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; flex-wrap: wrap; }
+.fin-pizza-topo label { display: flex; flex-direction: column; font-size: 12px; font-weight: 600; gap: 4px; color: #3F3F46; }
+.fin-pizza { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+.fin-pizza svg { width: 220px; max-width: 100%; height: auto; flex: 0 0 auto; }
+.fin-fatia { stroke: #fff; stroke-width: 2; stroke-linejoin: round; }
+.fin-fatia:hover { opacity: .85; }
+.fin-pizza-rot { font-size: 11px; fill: #71717A; }
+.fin-pizza-val { font-size: 15px; font-weight: 700; fill: #0B0B0C; }
+.fin-pizza-legenda { list-style: none; padding: 0; margin: 0; flex: 1 1 260px; min-width: 0; }
+.fin-pizza-legenda li { display: grid; grid-template-columns: 12px 1fr auto 52px; gap: 8px; align-items: center; padding: 6px 0; border-bottom: 1px solid #F0F0F2; font-size: 13px; }
+.fin-pizza-cor { width: 12px; height: 12px; border-radius: 3px; }
+.fin-pizza-nome small { display: block; color: #71717A; font-size: 11px; }
+.fin-pizza-pct { text-align: right; color: #71717A; }
+
 @media (max-width: 520px) {
   .fin-form { grid-template-columns: 1fr; }
   .fin-main { padding: 10px 10px 60px; }
