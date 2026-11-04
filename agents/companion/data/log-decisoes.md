@@ -1036,3 +1036,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** empréstimo entra no caixa da PJ mas não é faturamento; da parcela, só os juros são despesa. Investimento é dinheiro dela que muda de lugar (não é gasto); rendimento é receita. A caixinha dos Vicentinos não é dela: fica fora de entradas, gastos e sobra, só com saldo próprio.
 **Racional:** teto do MEI e lucro não podem ser inflados por dívida; sobra pessoal não pode misturar dinheiro de terceiros.
 **Impacto:** novos botões no Resumo (empréstimo) e na aba Pessoal (aplicar, resgatar, rendimento, caixinha).
+
+## 2026-11-03 — Empréstimo da PJ contratado
+**Contexto:** empréstimo de R$15.496,24 (R$15.000 líquido + IOF R$496,24) em 48x de R$536,23, dia 05; 2,25% a.m., CET 33,02%.
+**Decisão:** lançadas as 48 parcelas já no painel (principal abate a dívida, juros vira despesa); IOF como despesa no dia da contratação.
+**Racional:** juros e IOF são custo da empresa (entram no lucro); o principal não é despesa nem faturamento.
+**Impacto:** total pago R$25.739,04 = R$15.496,24 de principal + R$10.242,80 de juros. Lucro de 2026 cai pelo IOF e pelos juros de dez.
