@@ -17,9 +17,21 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Sessões estratégicas de 03/11: Fernanda Martelli e Ronaldo Peixoto (02/11)
+
+Roteiros prontos (Vendedor Secreto), no mesmo jeito da Bruna: diagnóstico em conversa, sem radar na tela, oferta Incubadora Express. Arquivos em `business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/` (`fernanda-martelli-sessao.md`, `ronaldo-peixoto-sessao.md`), com cópias no Bloco de Notas em `Downloads/sessoes-03-11/`. Fernanda (advogada "de tudo", 5-10 mil/mês pelo boca a boca, sem prazo, hipótese Conector): o ponto é escolher a área pelo que ela já resolve; cuidado com a regra de publicidade da OAB. Ronaldo (engenheiro de telecom, 5 assuntos testados e parados, quer "demanda por consultoria", hipótese Analista): prova principal é a Milena (engenheira); fora cripto e "sistema". Instagram dos dois não foi aberto. Depois das sessões: Diagnóstico do Expert, CRM e onboarding da Express se fechar.
+
+## Rota100k Semana 14 planejada (02/11, confirmada 03/11)
+
+Plano v1 com 36 posts (ter 03/11 a dom 08/11; segunda fora, pedido da Karol): `docs/producao-conteudo/karol/desafio-rota100k-semana14-plano.md`. Mudança do guia: carrossel de impacto às 15h (branco/preto, 4-6 slides, compartilhar) + carrossel educativo às 20h. Aprendizados da Aria aplicados (molde "eu + cena + dilema", pauta do servidor técnico, CTA com motivo pro perfil). Quarta aquece a Live 36 (15h sai às 16h30; 17h traz as 5 perguntas e CTA DIFERENCIAL). Revisado pelo Codex (13 ajustes de fato). Confirmações da Karol aplicadas em 03/11: uma palavra do direct por dia, advogado é corretor (CRECI), "Mariana" só pelo primeiro nome, convite da live no 07h de quarta = "Comente LIVE pra eu enviar o link do grupo exclusivo da live Expert360º", ok nas 3 frases da squad. Sex 07h trocado pela história nova da portaria da promoção que nunca saiu (03/11, guardada como #24 no banco de histórias). Plano pronto pra gravar. Trava: compartilhar o link do quiz do diferencial antes das 17h de quarta.
+
+## Análise da Semana 13 (02/11)
+
+Aria analisou 24/10-01/11: `docs/producao-conteudo/karol/analises/2026-11-02/relatorio-semana13.md`. S13: +1 seguidor, visitas 11-50/dia; o Reels pessoal não converteu. Top foi o 7s da assinatura (15 mil views, 77% em 3s, 18 comentários, conversa com servidor técnico de fora da rede). Eleição (25-26/10) deu o maior alcance e +45 seguidores. Achados pra Karol decidir: série de Reels das 11h e 15h (Black/método, 17 peças, 18% em 3s, legenda com descrição interna, origem não achada no repo) e 7s de 30/10 publicado com o cabeçalho do roteiro na legenda. Próximo: S14 com o molde "eu + cena + dilema" e 1 tema do momento.
+
 ## Controle financeiro no ar (01-02/11)
 
-Painel só da Karol: membros.incubadoradeexpert.com.br/financeiro.html. Resumo com fluxo de caixa, saldo acumulado, saldo na Voomp (bate com a Voomp) e teto do MEI pelo CAIXA; Vendas por produto (parcelada conta 1 venda); PF x PJ (fatura do cartão + reembolso mensal PJ → Karol); Lançamentos. 2026 em 02/11: teto MEI usado R$36.198,82 (44,7%), previsto até dez R$39.898,82; faturamento por competência R$36.098,82. Receitas fora da Voomp lançadas (Milena 12x R$700, Dalvelyn 10x R$1.000, Elider R$15.799,55, Karen, 80 20, Renata). Faturas do cartão jan–out lançadas: Bradesco (57 despesas PJ, R$5.309,92) e Caixa (80, R$10.258,48; parcela entra no mês da fatura), já acertadas; Elider virou faturamento mensal; reembolso conta a partir de nov). DAS 2026 lançado. Saldo acumulado 2026: R$31.575,14. Rotina mensal: fatura + extrato Voomp. PLP 186/2026 (teto R$140 mil) a conferir. Doc: `business/financeiro/controle-financeiro.md`.
+Painel só da Karol: membros.incubadoradeexpert.com.br/financeiro.html. Resumo com fluxo de caixa, saldo na conta PJ (zera no fim de cada mês com o repasse pra PF; R$700,49 em 02/11), saldo na Voomp (bate com a Voomp) e teto do MEI pelo CAIXA; Vendas por produto (parcelada conta 1 venda); PF x PJ (fatura do cartão + reembolso mensal PJ → Karol); Lançamentos. 2026 em 02/11: teto MEI usado R$36.198,82 (44,7%), previsto até dez R$39.898,82; faturamento por competência R$36.098,82. Receitas fora da Voomp lançadas (Milena 12x R$700, Dalvelyn 10x R$1.000, Elider R$15.799,55, Karen, 80 20, Renata). Faturas do cartão jan–out lançadas: Bradesco (57 despesas PJ, R$5.309,92) e Caixa (80, R$10.258,48; parcela entra no mês da fatura), já acertadas; Elider virou faturamento mensal; reembolso conta a partir de nov). DAS 2026 lançado. Repasses mensais nov/25–out/26 lançados (jun e out = aporte da Karol). Rotina mensal: fatura + extrato Voomp + lançar o repasse PJ → PF do mês. PLP 186/2026 (teto R$140 mil) a conferir. Doc: `business/financeiro/controle-financeiro.md`.
 ## Expert-IAs: contagem de uso (01/11)
 
 Karol decidiu medir 1 mês antes de fixar limite (custo + abuso); mentoria tem o dobro. Teto de segurança: 80 mensagens/dia por agente (curso), 160 (mentoria). Prontos: `business/campanhas/area-de-membros/sql/uso-agentes.sql` (+ `aplicar-uso-agentes.sh`) e `site/api/chat-agente.js` (se a contagem falhar, o chat segue respondendo). No ar desde 01/11: banco aplicado pela Karol (conferido: tabela protegida, função só pra aluno logado) e servidor publicado (dpl_CkWZrA9Vw3rZQtQqEjjATSJH8T9K, domínio ok, chat recusa sem login). Testado logado em 01/11: mensagens da Karol no Expert Viral contadas (plano mentoria). Fechado até o relatório de 01/12. 01/12: rodar `sql/relatorio-uso-agentes.sql` e fixar o limite.
@@ -648,3 +660,10 @@ Retomar com: `/expert-companion`
 - 30/10: Apple publicado com 9 slides (convite) às 23h20; fracassos-viram-metodo agendado 05/11 20h e no GitHub.
 
 - 01/11 — Diagnóstico do Método VIP com rascunho no servidor (recupera respostas por nome + WhatsApp): no ar e conferido. Falta só a aluna que perdeu as respostas recomeçar.
+
+## Página de vendas da Incubadora Express (03/11)
+- Feita e revisada: business/campanhas/crm-reativacao-leads/paginas-vendas/site/incubadora-express/index.html (a apresentação antiga está em /apresentacao/).
+- No ar desde 03/11 (dpl_BYb6P3gS9QPCBfooVPp9fMKzcvXL), conferida: 6 botões pro 17442, apresentação antiga em /incubadora-express/apresentacao/. Não vista num celular de verdade.
+
+- 03/11 — Folder da live 04/11 ("Como ser escolhido") animado em câmera lenta (10s, 4:5, sem áudio): Downloads/Como ser escolhido - animado.mp4; projeto em Videos/edicao-euriliana/folder-live-escolhido.
+- 03/11 — Versão com só o ícone animado: Downloads/Como ser escolhido - icone animado.mp4 (Karol preferiu o resto parado).
