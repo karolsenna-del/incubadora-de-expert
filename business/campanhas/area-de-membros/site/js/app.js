@@ -79,6 +79,13 @@ async function checarSessao() {
     return null;
   }
   document.getElementById('user-email').textContent = session.user.email;
+  // Controle financeiro: aba só pra Karol (a página também barra quem não é ela)
+  if ((session.user.email || '').toLowerCase() === 'karolsenna@incubadoradeexpert.com.br' && !document.getElementById('nav-financeiro')) {
+    const a = document.createElement('a');
+    a.className = 'topbar-tab'; a.id = 'nav-financeiro'; a.href = 'financeiro.html'; a.textContent = 'Financeiro';
+    a.style.textDecoration = 'none';
+    document.querySelector('.topbar-tabs').appendChild(a);
+  }
   return session;
 }
 

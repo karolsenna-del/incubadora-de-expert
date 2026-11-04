@@ -1048,3 +1048,15 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** empréstimo, IOF e mentoria (R$15.000, Educação) lançados em maio/2025; parcelas de 07/2025 a 06/2029 saindo da conta PJ; repasses nov/25–out/26 refeitos (cada mês R$536,23 menor).
 **Racional:** a parcela sai da conta PJ antes do repasse; sem isso o repasse pra PF ficava maior do que foi.
 **Impacto:** dívida hoje R$12.057,64; saldo da conta PJ continua R$700,49; repasse 2026 total menor e a PF recebe menos da PJ.
+
+## 04/11/2026 — Sessão do Dr. Benício: Método VIP como direção da captação
+**Contexto:** Benício de Oliveira Júnior (cirurgião plástico, 35+ anos, acima de R$20 mil/mês) respondeu o pré-diagnóstico em 29/10: quer pacientes de cirurgia de alto ticket e diz que não é infoprodutor.
+**Decisão:** ofertar o Método VIP (a Karol decidiu). Os 3 encontros viram direção da captação: paciente certa e promessa (E1), plano do caminho até ela (E2), correção de rota (E3).
+**Racional:** a apresentação do VIP já diz que o foco de cada encontro se ajusta ao caso; ele tem equipe e renda pra executar, falta a ordem.
+**Impacto:** pré-diagnóstico importado no Diagnóstico do Expert; roteiro em business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/benicio-oliveira-sessao.md.
+
+## 04/11/2026 — Financeiro dentro da área de membros
+**Contexto:** a Karol queria o controle acessível pela área de membros e achou redundante ter botões de empréstimo separados no Resumo.
+**Decisão:** aba "Financeiro" no topo da área de membros visível só pra ela; lançar empréstimo e parcela fica junto dos outros botões na aba Lançamentos.
+**Racional:** um lugar só pra lançar; alunos não veem o financeiro.
+**Impacto:** Resumo só mostra a dívida; publicação pendente (deploy da Karol).

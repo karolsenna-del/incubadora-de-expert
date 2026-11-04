@@ -624,8 +624,7 @@ if (typeof document !== 'undefined') {
         (pct > 100 ? '<p class="fin-teto-aviso">Atenção: passou do teto do MEI.</p>' : pctPrev > 100 ? '<p class="fin-teto-aviso">Com o que ainda entra este ano, passa do teto do MEI.</p>' : pct > 80 ? '<p class="fin-teto-aviso">Já passou de 80% do teto.</p>' : '') +
         '<small>Conta pelo caixa: valor bruto das vendas pela data em que o dinheiro entrou, menos reembolsos.</small><br>' +
         (estado.config.teto_mei_obs ? '<small>' + esc(estado.config.teto_mei_obs) + '</small>' : '') + '</div>' +
-        '<section class="fin-bloco"><h3>Empréstimo da PJ</h3><p>Falta pagar: <b>' + esc(finBRL(r.divida)) + '</b>. O dinheiro do empréstimo entra no caixa da conta PJ, mas não é faturamento (não conta no teto do MEI nem no lucro). Na parcela, só os juros viram despesa.</p>' +
-        '<div class="fin-acoes"><button class="fin-btn fin-btn-primario" id="e-entra" type="button">Lançar empréstimo recebido</button><button class="fin-btn" id="e-paga" type="button">Lançar parcela paga</button></div></section>' +
+        '<section class="fin-bloco"><h3>Empréstimo da PJ</h3><p>Falta pagar: <b>' + esc(finBRL(r.divida)) + '</b>. O dinheiro do empréstimo entra no caixa da conta PJ, mas não é faturamento (não conta no teto do MEI nem no lucro). Na parcela, só os juros viram despesa. Pra lançar entrada ou parcela, use a aba Lançamentos.</p></section>' +
         '<h3>Mês a mês</h3><div class="fin-grafico">' + barras + '</div><p class="fin-legenda"><span class="fin-b-fat"></span> Faturamento <span class="fin-b-rec"></span> Recebido</p>' +
         '<div class="fin-rolagem"><table class="fin-tabela"><thead><tr><th></th>' + MESES.map(m => '<th>' + m + '</th>').join('') + '<th>Ano</th></tr></thead><tbody>' +
         secao('Lucro (data da venda e da compra)') +
@@ -641,8 +640,6 @@ if (typeof document !== 'undefined') {
         '<p class="fin-nota">Lucro = faturamento (valor bruto na data da venda) − despesas PJ (na data da compra; parcela do cartão no mês da fatura). Caixa da conta PJ: entradas (vendas fora da Voomp e saques da Voomp) − pagamentos (despesas PJ; as do cartão pessoal no dia do reembolso) = movimento do mês. Saldo na conta PJ = saldo do mês anterior + movimento − repasse pra você' + (r.saldoInicial ? ' (começa o ano com ' + esc(finBRL(r.saldoInicial)) + ')' : '') + '; na coluna Ano, o saldo de hoje. Repasse negativo = você cobriu despesa da empresa do seu bolso. O dinheiro na Voomp fica de fora até o saque. Recebido = líquido, só o que já caiu até hoje, em qualquer conta (Voomp, PJ e PF).</p>';
       $('#res-ano').onchange = e => { estado.ano = Number(e.target.value); renderResumo(); };
       $('#btn-teto').onclick = editarTeto;
-      $('#e-entra').onclick = () => lancRapido('Empréstimo recebido', { dono: 'PJ', conta: 'emprestimo_pj', conta_destino: 'conta_pj', descricao: 'Empréstimo — ' }, 'Valor que caiu na conta PJ. Na descrição, ponha o banco ou de quem é o empréstimo.');
-      $('#e-paga').onclick = () => lancRapido('Parcela do empréstimo paga', { dono: 'PJ', conta: 'conta_pj', conta_destino: 'emprestimo_pj', descricao: 'Parcela empréstimo — ' }, 'Valor total da parcela que saiu da conta PJ. Informe quanto dele é juros: só essa parte vira despesa.', true);
     }
     const cartao = (t, v) => '<div class="fin-cartao"><small>' + t + '</small><b>' + esc(finBRL(v)) + '</b></div>';
 
@@ -953,7 +950,7 @@ if (typeof document !== 'undefined') {
         '<div class="fin-filtros"><label>Ano <select id="l-ano">' + selAnos(estado.fAno) + '</select></label><label>Mês <select id="l-mes">' + selMeses(estado.fMes) + '</select></label>' +
         '<label>Tipo <select id="l-nat"><option value="">Todos</option>' + Object.keys(NAT_NOME).map(n => '<option value="' + n + '"' + (estado.fNat === n ? ' selected' : '') + '>' + NAT_NOME[n] + '</option>').join('') + '</select></label>' +
         '<label>Dono <select id="l-dono"><option value="">Todos</option><option value="PJ"' + (estado.fDono === 'PJ' ? ' selected' : '') + '>PJ</option><option value="PF"' + (estado.fDono === 'PF' ? ' selected' : '') + '>PF</option></select></label></div>' +
-        '<div class="fin-acoes"><button class="fin-btn fin-btn-primario" id="l-novo" type="button">Novo lançamento</button><button class="fin-btn" id="l-voomp" type="button">Colar extrato da Voomp</button></div>' +
+        '<div class="fin-acoes"><button class="fin-btn fin-btn-primario" id="l-novo" type="button">Novo lançamento</button><button class="fin-btn" id="e-entra" type="button">Empréstimo recebido</button><button class="fin-btn" id="e-paga" type="button">Parcela do empréstimo</button><button class="fin-btn" id="l-voomp" type="button">Colar extrato da Voomp</button></div>' +
         '<div id="voomp-area"></div>' + recorrentesHTML() +
         '<p>' + lista.length + ' lançamentos.</p>' +
         '<div class="fin-rolagem"><table class="fin-tabela"><thead><tr><th>Data</th><th>Caixa</th><th>Tipo</th><th>Dono</th><th>Descrição</th><th>Produto / categoria</th><th>Bruto</th><th>Taxa</th><th>Líquido</th><th></th></tr></thead><tbody>' +
@@ -964,6 +961,8 @@ if (typeof document !== 'undefined') {
       $('#l-nat').onchange = e => { estado.fNat = e.target.value; renderLanc(); };
       $('#l-dono').onchange = e => { estado.fDono = e.target.value; renderLanc(); };
       $('#l-novo').onclick = () => formLancamento(null);
+      $('#e-entra').onclick = () => lancRapido('Empréstimo recebido', { dono: 'PJ', conta: 'emprestimo_pj', conta_destino: 'conta_pj', descricao: 'Empréstimo — ' }, 'Valor que caiu na conta PJ. Na descrição, ponha o banco ou de quem é o empréstimo.');
+      $('#e-paga').onclick = () => lancRapido('Parcela do empréstimo paga', { dono: 'PJ', conta: 'conta_pj', conta_destino: 'emprestimo_pj', descricao: 'Parcela empréstimo — ' }, 'Valor total da parcela que saiu da conta PJ. Informe quanto dele é juros: só essa parte vira despesa.', true);
       $('#r-nova').onclick = () => formRecorrente(null);
       document.querySelectorAll('[data-red]').forEach(b => b.onclick = () => formRecorrente(estado.recorrentes.find(x => x.id === b.dataset.red)));
       document.querySelectorAll('[data-renc]').forEach(b => b.onclick = () => encerrarRecorrente(estado.recorrentes.find(x => x.id === b.dataset.renc)));
