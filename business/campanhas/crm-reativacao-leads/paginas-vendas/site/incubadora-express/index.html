@@ -1,268 +1,411 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Incubadora Express</title>
-<meta name="robots" content="noindex">
-<style>
-  :root{--bg:#ffffff;--ink:#141414;--muted:#6b6b6b;--card:#f4f4f4;--orange:#f85627;--soft:#fff0ea;--dark:#141414}
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%;background:#1b1b1b;font-family:"Segoe UI",Inter,system-ui,-apple-system,sans-serif;color:var(--ink)}
-  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
-  .slide{display:none;width:min(100vw,177.78vh);height:min(56.25vw,100vh);background:var(--bg);position:relative;overflow:hidden;padding:5.2% 6%;flex-direction:column;justify-content:center}
-  .slide.on{display:flex}
-  .slide.dark{background:var(--dark);color:#fff}
-  .slide.orange{background:var(--orange);color:#fff}
-  .bar{width:70px;height:6px;background:var(--orange);border-radius:3px;margin-bottom:22px}
-  .orange .bar{background:#fff}
-  .kicker{font-size:clamp(11px,1.3vw,18px);letter-spacing:3px;text-transform:uppercase;font-weight:800;color:var(--orange);margin-bottom:12px}
-  .orange .kicker{color:#fff;opacity:.85}
-  h1{font-size:clamp(30px,5.6vw,84px);font-weight:900;line-height:1.02;letter-spacing:-1px}
-  h2{font-size:clamp(22px,3.4vw,52px);font-weight:900;line-height:1.08;letter-spacing:-.5px;margin-bottom:3%}
-  h1 span,h2 span{color:var(--orange)}
-  .lead{font-size:clamp(14px,1.8vw,26px);color:var(--muted);margin-top:18px;max-width:80%}
-  .dark .lead{color:#cfcfcf}
-  .frame{font-size:clamp(16px,2.15vw,32px);line-height:1.65;font-weight:300;color:#8a8a8a;max-width:88%;letter-spacing:-.1px}
-  .frame b{font-weight:400;color:var(--ink)}
-  .frame b.accent{color:var(--orange);font-weight:400}
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:3%}
-  .box{background:var(--card);border-radius:18px;padding:4% 4.5%}
-  .dark .box{background:#262626}
-  .box h3{font-size:clamp(13px,1.5vw,22px);text-transform:uppercase;letter-spacing:2px;color:var(--orange);margin-bottom:14px}
-  .box ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-  .box li{font-size:clamp(13px,1.55vw,23px);padding-left:30px;position:relative;line-height:1.3}
-  .x li::before{content:"✕";position:absolute;color:var(--orange);font-weight:900;top:0;left:2px}
-  .ok li::before{content:"✓";position:absolute;color:var(--orange);font-weight:900;top:0;left:2px}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 2.4%}
-  .item{display:flex;gap:14px;align-items:flex-start;background:var(--card);border-radius:14px;padding:1.6% 2%}
-  .item.star{background:var(--soft);border:2px solid var(--orange)}
-  .item .ic{flex:0 0 auto;width:clamp(26px,2.6vw,40px);height:clamp(26px,2.6vw,40px);border-radius:50%;background:var(--orange);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:clamp(12px,1.3vw,19px)}
-  .item b{display:block;font-size:clamp(13px,1.45vw,22px);line-height:1.2}
-  .item small{display:block;font-size:clamp(11px,1.2vw,18px);color:var(--muted);margin-top:3px;line-height:1.3}
-  .item small::before{content:"→ ";color:var(--orange);font-weight:900}
-  .who{display:grid;grid-template-columns:1fr 1fr;gap:4%;align-items:center}
-  .side{border-left:6px solid var(--orange);padding-left:4%}
-  .side h3{font-size:clamp(14px,1.7vw,24px);text-transform:uppercase;letter-spacing:2px;color:var(--orange);margin-bottom:8px}
-  .side p{font-size:clamp(14px,1.75vw,26px);line-height:1.35}
-  .with{margin-top:4%;font-size:clamp(18px,2.4vw,36px);font-weight:800}
-  .with span{color:var(--orange)}
-  .proof{display:grid;grid-template-columns:1fr 1fr;gap:4%;margin-top:2%}
-  .proof .dt{font-size:clamp(28px,4.6vw,70px);font-weight:900;color:var(--orange);letter-spacing:-1px;line-height:1}
-  .proof p{font-size:clamp(14px,1.75vw,26px);line-height:1.35;margin-top:10px;color:#e6e6e6}
-  .journey{display:grid;grid-template-columns:repeat(6,1fr);gap:1.4%;margin-top:2%}
-  .step{background:var(--card);border-radius:14px;padding:6% 7%;text-align:center}
-  .step.z{background:var(--soft);border:2px solid var(--orange)}
-  .step .n{font-size:clamp(10px,1.05vw,15px);font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--orange)}
-  .step h4{font-size:clamp(14px,1.6vw,24px);font-weight:900;margin:6px 0}
-  .step p{font-size:clamp(10px,1.12vw,16px);color:var(--muted);line-height:1.3}
-  .foot{font-size:clamp(12px,1.35vw,20px);color:var(--muted);margin-top:3%}
-  .price{display:grid;grid-template-columns:1.2fr 1fr;gap:4%;align-items:center}
-  .big{font-size:clamp(40px,7vw,108px);font-weight:900;letter-spacing:-2px;line-height:1}
-  .big small{font-size:.35em;font-weight:700;letter-spacing:0}
-  .alt{font-size:clamp(16px,2.2vw,32px);font-weight:700;margin-top:10px}
-  .note{margin-top:14px;display:inline-block;background:var(--soft);color:var(--ink);border:2px solid var(--orange);border-radius:999px;padding:6px 16px;font-weight:700;font-size:clamp(12px,1.4vw,20px)}
-  .facts{display:flex;flex-direction:column;gap:12px}
-  .fact{background:var(--card);border-radius:14px;padding:3% 5%;font-size:clamp(13px,1.55vw,22px)}
-  .fact b{color:var(--orange);display:block;font-size:.75em;text-transform:uppercase;letter-spacing:2px}
-  .pay{display:flex;gap:3%;margin-top:3%}
-  .pay div{background:rgba(255,255,255,.14);border:2px solid #fff;border-radius:16px;padding:2.4% 3.4%;font-size:clamp(14px,1.9vw,28px);font-weight:800}
-  .pay small{display:block;font-weight:500;font-size:.7em;opacity:.9;margin-top:4px}
-  .faq{display:grid;grid-template-columns:1fr 1fr;gap:16px 3%}
-  .faq div{background:#262626;border-radius:14px;padding:3% 4%}
-  .faq b{display:block;color:var(--orange);font-size:clamp(14px,1.6vw,24px);margin-bottom:6px}
-  .faq p{font-size:clamp(12px,1.35vw,20px);color:#e6e6e6;line-height:1.35}
-  .brand{position:absolute;bottom:3.4%;left:6%;font-size:clamp(9px,1vw,14px);letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-  .dark .brand{color:#8a8a8a} .orange .brand{color:#fff;opacity:.8}
-  .pg{position:absolute;bottom:3.4%;right:6%;font-size:clamp(9px,1vw,14px);color:var(--muted)}
-  .dark .pg{color:#8a8a8a} .orange .pg{color:#fff}
-  .hint{position:fixed;bottom:8px;left:50%;transform:translateX(-50%);color:#777;font-size:11px;z-index:9}
-  .cta{display:inline-block;margin-top:4%;background:#fff;color:var(--orange);font-weight:900;text-decoration:none;border-radius:999px;padding:1.6% 4%;font-size:clamp(16px,2.2vw,32px)}
-  @media (max-width:820px) and (orientation:portrait){
-    html,body{height:auto;background:#1b1b1b}
-    .stage{position:static;display:block}
-    .slide{display:flex!important;width:100%;height:auto;min-height:80vh;padding:56px 22px 64px;border-bottom:1px solid #2a2a2a}
-    .cols,.grid,.who,.proof,.price,.faq{grid-template-columns:1fr;gap:14px}
-    .journey{grid-template-columns:1fr 1fr;gap:10px}
-    .frame,.lead{max-width:100%}
-    .box[style]{max-width:100%!important}
-    .pay{flex-direction:column;gap:12px}
-    .pg,.hint{display:none}
-    .item{padding:12px}
-    .cta{padding:14px 22px}
-  }
-  @media print{.hint{display:none}.stage{position:static;display:block}.slide{display:flex!important;page-break-after:always;width:100vw;height:56.25vw}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incubadora Express | Incubadora de Expert</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Em 30 dias, a sua primeira venda no digital. 6 meses, 5 sessões individuais com a Karol Senna e os agentes de IA do método. 12x de R$250.">
+
+  <meta property="og:title" content="Incubadora Express — 30 dias até a sua primeira venda no digital">
+  <meta property="og:description" content="5 sessões individuais com a Karol, 6 meses de acesso e os agentes de IA do método.">
+  <meta property="og:type" content="website">
+
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4188654601446070');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4188654601446070&ev=PageView&noscript=1"
+  /></noscript>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NB7W76T3RX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NB7W76T3RX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --preto: #0B0B0C; --preto-2: #151517; --branco: #FFFFFF;
+      --cinza-100: #F4F4F5; --cinza-300: #D4D4D8; --cinza-500: #71717A; --cinza-700: #3F3F46;
+      --laranja: #FF6B1A; --laranja-escuro: #E85A0D;
+      --display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --texto: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--texto); color: var(--preto); background: var(--branco); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    .container-wide { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 72px 0; }
+    h1, h2, h3 { font-family: var(--display); line-height: 1.2; }
+    h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 700; text-align: center; margin-bottom: 40px; letter-spacing: -0.02em; }
+    p { max-width: 62ch; }
+    strong { font-weight: 700; }
+    .destaque { color: var(--laranja); }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visivel { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+    .cta { display: inline-block; background: var(--laranja); color: var(--branco); font-family: var(--display); font-weight: 700; font-size: 1.05rem; text-decoration: none; text-align: center; padding: 18px 40px; border-radius: 12px; letter-spacing: 0.01em; transition: transform .15s ease, background .15s ease, box-shadow .15s ease; box-shadow: 0 8px 24px rgba(255, 107, 26, 0.35); }
+    .cta:hover { background: var(--laranja-escuro); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255, 107, 26, 0.45); }
+    .cta-micro { display: block; margin-top: 12px; font-size: 0.85rem; color: var(--cinza-500); max-width: 46ch; margin-left: auto; margin-right: auto; }
+    .cta-wrap { text-align: center; margin-top: 40px; }
+    .hero { background: var(--preto); color: var(--branco); padding: 48px 0 64px; text-align: center; }
+    .eyebrow { display: inline-block; font-family: var(--display); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--laranja); border: 1px solid rgba(255, 107, 26, 0.4); border-radius: 100px; padding: 8px 18px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(1.9rem, 5.5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; max-width: 24ch; margin: 0 auto 16px; }
+    .hero .sub { font-size: clamp(1rem, 2.5vw, 1.15rem); color: var(--cinza-300); max-width: 54ch; margin: 0 auto 28px; }
+    .hero .cta-micro { color: var(--cinza-300); font-style: italic; }
+    .hero-bullets { list-style: none; text-align: left; max-width: 560px; margin: 40px auto 0; display: grid; gap: 14px; }
+    .hero-bullets li { padding-left: 32px; position: relative; color: var(--cinza-300); font-size: 0.98rem; }
+    .hero-bullets li::before { content: "→"; position: absolute; left: 0; color: var(--laranja); font-weight: 700; }
+    .hero-bullets strong { color: var(--branco); }
+    .secao-escura { background: var(--preto); color: var(--branco); }
+    .secao-escura h2 { color: var(--branco); }
+    .ruminacoes { display: grid; gap: 16px; max-width: 640px; margin: 0 auto 40px; }
+    .ruminacao { background: var(--preto-2); border-left: 3px solid var(--laranja); border-radius: 0 12px 12px 0; padding: 20px 24px; font-size: 1.02rem; color: var(--cinza-300); font-style: italic; }
+    .identificacao-fecho { max-width: 560px; margin: 0 auto; text-align: left; color: var(--cinza-300); display: grid; gap: 18px; }
+    .identificacao-fecho strong { color: var(--branco); }
+    .tese-texto { display: grid; gap: 18px; color: var(--cinza-700); max-width: 640px; margin: 0 auto; }
+    .tese-texto strong { color: var(--preto); }
+    .cards4 { display: grid; gap: 20px; grid-template-columns: 1fr; }
+    @media (min-width: 640px) { .cards4 { grid-template-columns: repeat(2, 1fr); } }
+    .card4 { background: var(--branco); border: 1px solid var(--cinza-300); border-radius: 16px; padding: 24px 22px; }
+    .card4 .num { font-family: var(--display); font-size: 0.78rem; font-weight: 700; color: var(--laranja); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 8px; }
+    .card4 h3 { font-size: 1.02rem; margin-bottom: 10px; }
+    .card4 p { font-size: 0.92rem; color: var(--cinza-700); }
+    .destaque-box { max-width: 680px; margin: 32px auto 0; background: var(--cinza-100); border-radius: 14px; padding: 22px 24px; text-align: center; font-size: 0.95rem; color: var(--cinza-700); }
+    .depoimentos { display: grid; gap: 20px; }
+    @media (min-width: 768px) { .depoimentos { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .depoimentos.tres { grid-template-columns: repeat(3, 1fr); } }
+    .depoimento { background: var(--cinza-100); border-radius: 16px; padding: 28px 26px; }
+    .depoimento p { font-size: 0.98rem; color: var(--cinza-700); font-style: italic; }
+    .depoimento .autor { display: block; margin-top: 16px; font-family: var(--display); font-weight: 700; font-style: normal; font-size: 0.9rem; color: var(--preto); }
+    .depoimento .autor::before { content: "— "; color: var(--laranja); }
+    .sobre-grid { display: grid; gap: 36px; align-items: center; }
+    @media (min-width: 768px) { .sobre-grid { grid-template-columns: 320px 1fr; } }
+    .sobre-foto { aspect-ratio: 4 / 5; background: var(--preto-2); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: var(--cinza-500); font-size: 0.85rem; overflow: hidden; }
+    .sobre-foto img { width: 100%; height: 100%; object-fit: cover; }
+    .sobre-texto { display: grid; gap: 16px; color: var(--cinza-300); }
+    .sobre-texto strong { color: var(--branco); }
+    .oferta-card { max-width: 560px; margin: 0 auto; background: var(--cinza-100); border: 2px solid var(--laranja); border-radius: 20px; padding: 40px 32px; text-align: center; }
+    .oferta-preco { font-family: var(--display); font-size: clamp(2rem, 6vw, 2.6rem); font-weight: 800; color: var(--preto); margin-bottom: 4px; }
+    .oferta-preco span { font-size: 0.9rem; font-weight: 600; color: var(--cinza-500); display: block; }
+    .oferta-lista { list-style: none; text-align: left; max-width: 380px; margin: 28px auto; display: grid; gap: 12px; }
+    .oferta-lista li { padding-left: 28px; position: relative; font-size: 0.95rem; color: var(--cinza-700); }
+    .oferta-lista li::before { content: "✓"; position: absolute; left: 0; color: var(--laranja); font-weight: 800; }
+    .objecoes { display: grid; gap: 16px; max-width: 680px; margin: 0 auto; }
+    .objecao { background: var(--branco); border: 1px solid var(--cinza-300); border-radius: 14px; padding: 22px 24px; }
+    .objecao h3 { font-size: 1rem; margin-bottom: 8px; }
+    .objecao p { font-size: 0.95rem; color: var(--cinza-700); }
+    .faq-lista { display: grid; gap: 18px; max-width: 680px; margin: 0 auto; }
+    .faq-item h3 { font-size: 1rem; margin-bottom: 6px; }
+    .faq-item p { font-size: 0.95rem; color: var(--cinza-700); }
+    .paraquem-grid { display: grid; gap: 32px; max-width: 800px; margin: 0 auto; }
+    @media (min-width: 768px) { .paraquem-grid { grid-template-columns: 1fr 1fr; } }
+    .paraquem-col h3 { font-size: 1.05rem; margin-bottom: 16px; text-align: center; }
+    .paraquem-lista { list-style: none; display: grid; gap: 12px; }
+    .paraquem-lista li { padding-left: 28px; position: relative; font-size: 0.95rem; color: var(--cinza-700); }
+    .paraquem-si li::before { content: "✓"; position: absolute; left: 0; color: var(--laranja); font-weight: 800; }
+    .paraquem-nao { color: var(--cinza-500); }
+    .paraquem-nao li::before { content: "✗"; position: absolute; left: 0; color: var(--cinza-500); font-weight: 800; }
+    .final { text-align: center; }
+    .final h2 { max-width: 28ch; margin-left: auto; margin-right: auto; }
+    .final-bullets { list-style: none; max-width: 520px; margin: 0 auto 40px; display: grid; gap: 12px; text-align: left; }
+    .final-bullets li { padding-left: 30px; position: relative; font-weight: 600; }
+    .final-bullets li::before { content: "✓"; position: absolute; left: 0; color: var(--laranja); font-weight: 800; }
+    .suporte { text-align: center; font-size: 0.9rem; color: var(--cinza-500); padding: 0 24px 48px; }
+    .suporte a { color: var(--laranja); font-weight: 600; text-decoration: none; }
+    footer { background: var(--preto); color: var(--cinza-500); text-align: center; padding: 40px 24px; font-size: 0.8rem; line-height: 2; }
+    .barra-mobile { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(11, 11, 12, 0.95); backdrop-filter: blur(8px); padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); z-index: 100; transform: translateY(100%); transition: transform .3s ease; }
+    .barra-mobile.ativa { transform: none; }
+    .barra-mobile .cta { display: block; width: 100%; padding: 14px; font-size: 0.95rem; box-shadow: none; }
+    @media (min-width: 768px) { .barra-mobile { display: none; } }
+
+    .whats-flutuante {
+      position: fixed;
+      right: 20px;
+      bottom: 24px;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.28);
+      z-index: 101;
+      transition: bottom .3s ease, transform .15s ease;
+    }
+    .whats-flutuante:hover { transform: scale(1.08); }
+    .whats-flutuante svg { width: 28px; height: 28px; }
+    .whats-flutuante.subiu { bottom: 88px; }
+  
+    .preco-linha { display: inline-block; font-family: var(--display); font-weight: 800; color: var(--branco); font-size: clamp(1.6rem, 6vw, 2.2rem); margin: 4px 0 6px; }
+    .preco-linha .destaque { color: var(--laranja); }
+    .preco-vista { display: block; font-size: 0.9rem; color: var(--cinza-300); margin-bottom: 22px; }
+    .oferta-preco .vista { font-size: 0.9rem; font-weight: 600; color: var(--cinza-500); display: block; margin-top: 6px; }
+    .garantia { max-width: 640px; margin: 0 auto; background: var(--preto); color: var(--branco); border-radius: 20px; padding: 36px 28px; text-align: center; border: 2px solid var(--laranja); }
+    .garantia .selo { display: inline-block; font-family: var(--display); font-weight: 800; font-size: 2.4rem; color: var(--laranja); line-height: 1; margin-bottom: 8px; }
+    .garantia h2 { color: var(--branco); margin-bottom: 16px; }
+    .garantia p { color: var(--cinza-300); margin: 0 auto; }
+    .prova-caso { max-width: 640px; margin: 0 auto 32px; background: var(--cinza-100); border-radius: 16px; padding: 28px 26px; }
+    .prova-caso h3 { font-size: 1.05rem; margin-bottom: 10px; }
+    .prova-caso p { color: var(--cinza-700); font-size: 0.98rem; margin-bottom: 8px; }
+    @media (max-width: 480px) { .cta { padding: 16px 20px; width: 100%; } section { padding: 56px 0; } }
+  </style>
 </head>
 <body>
-<div class="hint">← → ou toque nas laterais pra navegar</div>
 
-<div class="stage">
-
-  <!-- 1 CAPA -->
-  <section class="slide dark">
-    <div class="bar"></div>
-    <div class="kicker">Incubadora de Expert</div>
-    <h1>Incubadora<br><span>Express</span></h1>
-    <p class="lead">Em 30 dias, o que você sabe vira um método com o seu nome e você faz a sua primeira Venda Secreta. Numa conversa, sem lançamento, sem exposição amadora.</p>
-    <div class="brand">Karol Senna</div>
-  </section>
-
-  <!-- 2 O QUE É -->
-  <section class="slide">
-    <div class="bar"></div>
-    <div class="kicker">O que é</div>
-    <p class="frame">Um <b class="accent">Acelerador de Carreira no Digital</b> de <b>6 meses</b> para <b>profissionais experientes</b> que querem <b>transformar o que já sabem em um método com nome e fazer as primeiras vendas sem lançamento</b>. Você <b class="accent">constrói com as suas mãos</b>, com a <b>metodologia do Expert360º</b> e os <b>agentes de IA do método</b>, e eu fico do seu lado em <b>5 sessões individuais</b>.</p>
-  </section>
-
-  <!-- 3 QUEM CONDUZ -->
-  <section class="slide">
-    <div class="bar"></div>
-    <div class="kicker">Quem caminha com você</div>
-    <h2>Imagine ter do seu lado alguém que <span>já viveu os dois lados</span></h2>
-    <div class="who">
-      <div class="side"><h3>Carreira tradicional</h3><p>13 anos no serviço público. Contadora e administradora, com carreira em auditoria, planejamento e controladoria. Eu sei que estabilidade é pouco.</p></div>
-      <div class="side"><h3>Digital</h3><p>Eu vivi fracassos: 8 lançamentos até acertar a ordem. Eles me provaram que conhecimento não é suficiente pro digital. Desde então, já criei muitos métodos, o meu e o dos meus alunos.</p></div>
-    </div>
-    <p class="with">Você constrói. <span>Eu fico do seu lado.</span></p>
-  </section>
-
-  <!-- 4 PROVA -->
-  <section class="slide dark">
-    <div class="bar"></div>
-    <div class="kicker">Foi assim com a Milena</div>
-    <h2>Engenheira, funcionária pública, <span>muito técnica e desvalorizada</span></h2>
-    <div class="proof">
-      <div><div class="dt">23/09</div><p>A gente montou a Venda Secreta dela.</p></div>
-      <div><div class="dt">30/09</div><p>Ela vendeu a primeira mentoria dela, de R$2.500, numa conversa.</p></div>
-    </div>
-  </section>
-
-  <!-- 5 PRA QUEM É -->
-  <section class="slide">
-    <div class="bar"></div>
-    <div class="kicker">Pra quem é</div>
-    <h2>Pra quem já tem conhecimento <span>e ainda não tem estrutura</span></h2>
-    <div class="cols">
-      <div class="box x"><h3>Hoje você sente</h3><ul>
-        <li>Sensação de estar desperdiçando potencial e oportunidades</li>
-        <li>Medo de ser visto como blogueiro ou charlatão</li>
-        <li>Eu sei muito, só não sei organizar</li>
-        <li>Não se sente pronto para se expor no digital</li>
-      </ul></div>
-      <div class="box ok"><h3>O que você quer</h3><ul>
-        <li>Ser reconhecido e cobrar o que vale</li>
-        <li>Uma nova possibilidade sem largar a carreira de uma vez</li>
-        <li>Construir com as próprias mãos, com alguém do lado</li>
-        <li>A primeira venda antes de qualquer exposição</li>
-      </ul></div>
-    </div>
-  </section>
-
-  <!-- 6 PRA QUEM NÃO É -->
-  <section class="slide dark">
-    <div class="bar"></div>
-    <div class="kicker">Pra quem não é</div>
-    <h2>Esse programa <span>não é pra você</span> se você:</h2>
-    <div class="box x" style="max-width:78%"><ul>
-      <li>Não consegue reservar tempo pra construir, nem com ajuda</li>
-      <li>Espera milagre ou fórmula rápida</li>
-      <li>Não segue processo</li>
-      <li>Não está aberto a receber feedback</li>
-    </ul></div>
-  </section>
-
-  <!-- 7 O RITMO -->
-  <section class="slide">
-    <div class="bar"></div>
-    <div class="kicker">O ritmo</div>
-    <h2>Uma data marcada <span>desde a primeira sessão</span></h2>
-    <div class="journey">
-      <div class="step"><div class="n">Sessão 1</div><h4>Diagnóstico</h4><p>Roteiro do Expert e a data da sua 1ª Venda Secreta marcada</p></div>
-      <div class="step"><div class="n">Sessão 2</div><h4>Método</h4><p>Revisão do seu método com nome</p></div>
-      <div class="step"><div class="n">Sessão 3</div><h4>Oferta</h4><p>Checkup da oferta antes da conversa</p></div>
-      <div class="step z"><div class="n">Por volta do dia 30</div><h4>1ª Venda Secreta</h4><p>Uma conversa, uma pessoa da sua lista</p></div>
-      <div class="step"><div class="n">Sessão 4</div><h4>Raio-X</h4><p>Análise da sua 1ª sessão de venda gravada</p></div>
-      <div class="step"><div class="n">Sessão 5</div><h4>Raio-X</h4><p>Análise da sua 2ª sessão de venda gravada</p></div>
-    </div>
-    <p class="foot">Cada sessão é liberada quando você entrega a etapa anterior. Os 30 dias são o ritmo que a gente combina: a data depende da sua entrega.</p>
-  </section>
-
-  <!-- 8 O QUE VOCÊ RECEBE -->
-  <section class="slide">
-    <div class="bar"></div>
-    <div class="kicker">O que você recebe</div>
-    <h2>Tudo pra você construir <span>sem ficar sozinho</span></h2>
-    <div class="grid">
-      <div class="item"><span class="ic">5</span><div><b>5 sessões individuais comigo</b><small>cada uma liberada a cada entrega sua</small></div></div>
-      <div class="item star"><span class="ic">★</span><div><b>Data da 1ª Venda Secreta marcada</b><small>você sai da primeira sessão com ela na agenda</small></div></div>
-      <div class="item"><span class="ic">✓</span><div><b>Metodologia do Expert360º</b><small>aulas e arquivos pra construir cada etapa</small></div></div>
-      <div class="item"><span class="ic">IA</span><div><b>Agentes de IA do método</b><small>Persona, Promessa, Processo Autoral, Portfólio, Proposta Validada e Vendedor Secreto</small></div></div>
-      <div class="item"><span class="ic">✓</span><div><b>2 Raio-X das suas sessões de venda</b><small>cada conversa vira ajuste, não tentativa e erro</small></div></div>
-      <div class="item"><span class="ic">6</span><div><b>6 meses de acesso</b><small>tempo pra construir, vender e ajustar</small></div></div>
-    </div>
-  </section>
-
-  <!-- 9 INVESTIMENTO -->
-  <section class="slide">
-    <div class="bar"></div>
-    <div class="kicker">Investimento</div>
-    <h2>Incubadora <span>Express</span></h2>
-    <div class="price">
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Incubadora de Expert · Express</span>
+      <h1>30 dias até a sua <span class="destaque">primeira venda</span> no digital</h1>
+      <p class="sub">Você transforma o que já sabe em um método com o seu nome e vende numa conversa, sem lançamento. Com 5 sessões individuais comigo.</p>
+      <span class="preco-linha"><span class="destaque">12x de R$250</span> no cartão</span>
+      <span class="preco-vista">ou R$2.500 à vista no pix ou boleto</span>
       <div>
-        <div class="big"><small>12x de</small> R$250 <small>no cartão</small></div>
-        <div class="alt">ou R$2.500 à vista no pix ou boleto</div>
-              </div>
-      <div class="facts">
-        <div class="fact"><b>Duração</b>6 meses · 5 sessões individuais</div>
-        <div class="fact"><b>Garantia</b>15 dias, devolução integral, mesmo depois da primeira sessão</div>
-        <div class="fact"><b>Como entrar</b>Pagou, a gente já agenda a sua primeira sessão.</div>
+        <a class="cta cta-checkout" href="https://pay.voompcreators.com.br/17442">QUERO ENTRAR NA INCUBADORA EXPRESS</a>
+        <span class="cta-micro">Garantia de 15 dias, com devolução integral.</span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="reveal">Você já sabe muito. Falta transformar isso em negócio.</h2>
+      <div class="tese-texto reveal">
+        <p>A Incubadora Express é um acelerador de 6 meses para profissionais experientes que querem transformar o que já sabem em um <strong>método com nome</strong> e fazer as primeiras vendas, <strong>sem lançamento</strong>.</p>
+        <p>Você constrói com as suas mãos, com a metodologia do Expert360º e os agentes de IA do método. E eu fico do seu lado, em <strong>5 sessões individuais</strong>.</p>
+      </div>
+      <div class="cta-wrap reveal"><a class="cta cta-checkout" href="https://pay.voompcreators.com.br/17442">QUERO ENTRAR NA INCUBADORA EXPRESS</a></div>
+    </div>
+  </section>
+
+  <section class="secao-escura">
+    <div class="container">
+      <h2 class="reveal">Talvez você se reconheça aqui</h2>
+      <div class="ruminacoes">
+        <div class="ruminacao reveal">"Sinto que estou desperdiçando potencial e oportunidades."</div>
+        <div class="ruminacao reveal">"Eu sei muito. Só não sei organizar."</div>
+        <div class="ruminacao reveal">"Tenho medo de ser visto como blogueiro ou charlatão."</div>
+        <div class="ruminacao reveal">"Ainda não me sinto pronto para me expor no digital."</div>
+      </div>
+      <div class="identificacao-fecho reveal">
+        <p>O que falta não é conhecimento. <strong>É estrutura, e alguém do lado</strong> enquanto você constrói.</p>
+        <p>Aqui você quer ser reconhecido, cobrar o que vale e ter a <strong>primeira venda antes de qualquer exposição</strong>.</p>
       </div>
     </div>
   </section>
 
-  <!-- 10 FECHAMENTO -->
-  <section class="slide orange">
-    <div class="bar"></div>
-    <div class="kicker">Vamos começar?</div>
-    <h1>Como fica melhor pra você?</h1>
-    <div class="pay">
-      <div>Cartão em 12x<small>12x de R$250</small></div>
-      <div>Pix ou boleto à vista<small>R$2.500</small></div>
-    </div>
-    <a class="cta" href="https://pay.voompcreators.com.br/17442" target="_blank" rel="noopener">Quero entrar na Incubadora Express</a>
-  </section>
-
-  <!-- 11 DÚVIDAS -->
-  <section class="slide dark">
-    <div class="bar"></div>
-    <div class="kicker">Dúvidas comuns</div>
-    <h2>Talvez você esteja <span>pensando nisso</span></h2>
-    <div class="faq">
-      <div><b>"Não sei se o meu conhecimento é suficiente"</b><p>Você não precisa chegar sabendo qual é o seu método. Isso é parte da construção. Diploma é o que você estudou. Método é o que você viveu.</p></div>
-      <div><b>"Ainda não sei se é a hora"</b><p>Entrar não significa largar a sua carreira amanhã. A primeira venda acontece numa conversa, sem expor você antes da hora.</p></div>
-      <div><b>"Minha rotina é cheia"</b><p>A data marcada na primeira sessão vira o seu prazo. Cada sessão abre quando você entrega, então você avança no ritmo que combinamos.</p></div>
-      <div><b>"Tenho medo de investir e não conseguir"</b><p>Você tem 15 dias de garantia, com devolução integral, mesmo depois da primeira sessão.</p></div>
+  <section>
+    <div class="container-wide">
+      <h2 class="reveal">Quem já passou por aqui</h2>
+      <div class="prova-caso reveal">
+        <h3>Foi assim com a Milena</h3>
+        <p>Engenheira, funcionária pública, muito técnica e desvalorizada.</p>
+        <p><strong>23/09:</strong> a gente montou a venda dela.</p>
+        <p><strong>30/09:</strong> ela vendeu a primeira mentoria dela, de R$2.500, numa conversa.</p>
+      </div>
+      <div class="depoimentos" style="max-width:640px; margin:0 auto;">
+        <div class="depoimento reveal" style="grid-column: 1 / -1;">
+          <p>"Quando me inscrevi, minha expectativa era validar que eu já sabia como montar o meu curso. Mas a realidade era que, apesar do meu conhecimento, eu não sabia como fazer da maneira correta. Estou indo por outro caminho, este sim feito profissionalmente com a ajuda da Karol."</p>
+          <span class="autor">Rodrigo Teixeira</span>
+        </div>
+      </div>
     </div>
   </section>
 
-</div>
+  <section style="background: var(--cinza-100);">
+    <div class="container-wide">
+      <h2 class="reveal">O que você recebe</h2>
+      <div class="cards4">
+        <div class="card4 reveal"><span class="num">5 sessões</span><h3>Individuais comigo</h3><p>Eu do seu lado, olhando o seu caso, não uma turma.</p></div>
+        <div class="card4 reveal"><span class="num">Desde o início</span><h3>Data da sua 1ª venda marcada</h3><p>Você sai da primeira sessão com ela na agenda.</p></div>
+        <div class="card4 reveal"><span class="num">Expert360º</span><h3>Metodologia completa</h3><p>Aulas e arquivos para construir cada etapa do seu método.</p></div>
+        <div class="card4 reveal"><span class="num">IA</span><h3>Agentes de IA do método</h3><p>Persona, Promessa, Processo Autoral, Portfólio, Proposta Validada e Vendedor Secreto.</p></div>
+        <div class="card4 reveal"><span class="num">2 análises</span><h3>Raio-X das suas vendas</h3><p>Cada conversa vira ajuste, não tentativa e erro.</p></div>
+        <div class="card4 reveal"><span class="num">6 meses</span><h3>De acesso</h3><p>Tempo para construir, vender e ajustar.</p></div>
+      </div>
+      <div class="cta-wrap reveal"><a class="cta cta-checkout" href="https://pay.voompcreators.com.br/17442">QUERO ENTRAR NA INCUBADORA EXPRESS</a></div>
+    </div>
+  </section>
 
-<script>
-  var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
-  var idx = 0;
-  function render(){
-    slides.forEach(function(s){ s.classList.remove("on"); var p = s.querySelector(".pg"); if (p) p.remove(); });
-    var cur = slides[idx]; cur.classList.add("on");
-    var pg = document.createElement("div"); pg.className = "pg"; pg.textContent = (idx + 1) + " / " + slides.length; cur.appendChild(pg);
-  }
-  document.addEventListener("keydown", function(e){
-    if (e.key === "ArrowRight" || e.key === " " || e.key === "PageDown") { idx = Math.min(idx + 1, slides.length - 1); render(); }
-    else if (e.key === "ArrowLeft" || e.key === "PageUp") { idx = Math.max(idx - 1, 0); render(); }
-    else if (e.key === "f" || e.key === "F") { if (!document.fullscreenElement) document.documentElement.requestFullscreen(); else document.exitFullscreen(); }
-  });
-  document.querySelector(".stage").addEventListener("click", function(e){ if (e.target.closest("a")) return; if (window.matchMedia("(max-width:820px) and (orientation:portrait)").matches) return; if (e.clientX > window.innerWidth / 2) idx = Math.min(idx + 1, slides.length - 1); else idx = Math.max(idx - 1, 0); render(); });
-  render();
-</script>
+  <section>
+    <div class="container">
+      <h2 class="reveal">Incubadora Express</h2>
+      <div class="oferta-card reveal">
+        <div class="oferta-preco"><span class="destaque">12x de R$250</span> <span style="font-size:0.9rem;font-weight:600;color:var(--cinza-500);display:inline;">no cartão</span><span class="vista">ou R$2.500 à vista no pix ou boleto</span></div>
+        <ul class="oferta-lista">
+          <li>5 sessões individuais com a Karol</li>
+          <li>Data da 1ª venda marcada já na primeira sessão</li>
+          <li>Metodologia do Expert360º</li>
+          <li>Agentes de IA do método</li>
+          <li>2 Raio-X das suas conversas de venda</li>
+          <li>6 meses de acesso</li>
+          <li>Garantia de 15 dias, com devolução integral</li>
+        </ul>
+        <a class="cta cta-checkout" href="https://pay.voompcreators.com.br/17442">QUERO ENTRAR NA INCUBADORA EXPRESS</a>
+        <span class="cta-micro">Pagou, a gente já agenda a sua primeira sessão.</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--cinza-100);">
+    <div class="container">
+      <div class="garantia reveal">
+        <span class="selo">15 dias</span>
+        <h2>Garantia com devolução integral</h2>
+        <p>Você entra, tem a primeira sessão comigo e, se sentir que não é pra você, pede a devolução de tudo que pagou em até 15 dias da compra. Vale mesmo depois da primeira sessão.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="reveal">Pra quem é a Express</h2>
+      <div class="paraquem-grid">
+        <div class="paraquem-col">
+          <h3>✓ É pra você se</h3>
+          <ul class="paraquem-lista paraquem-si">
+            <li>Você tem conhecimento e ainda não tem estrutura</li>
+            <li>Você quer construir com as próprias mãos, com alguém do lado</li>
+            <li>Você quer ser reconhecido e cobrar o que vale</li>
+            <li>Você quer a primeira venda antes de qualquer exposição</li>
+          </ul>
+        </div>
+        <div class="paraquem-col">
+          <h3>✗ Não é pra você se</h3>
+          <ul class="paraquem-lista paraquem-nao">
+            <li>Você não consegue reservar tempo para construir, nem com ajuda</li>
+            <li>Você espera milagre ou fórmula rápida</li>
+            <li>Você não segue processo</li>
+            <li>Você não está aberto a receber feedback</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--cinza-100);">
+    <div class="container">
+      <h2 class="reveal">O que costuma travar antes de decidir</h2>
+      <div class="objecoes">
+        <div class="objecao reveal"><h3>"Não sei se o meu conhecimento é suficiente."</h3><p>Você não precisa chegar sabendo qual é o seu método. Isso é parte da construção. Diploma é o que você estudou. Método é o que você viveu.</p></div>
+        <div class="objecao reveal"><h3>"Minha rotina é cheia."</h3><p>A data marcada na primeira sessão vira o seu prazo, e você avança no ritmo que combinamos.</p></div>
+        <div class="objecao reveal"><h3>"Tenho medo de investir e não conseguir."</h3><p>Você tem 15 dias de garantia, com devolução integral, mesmo depois da primeira sessão.</p></div>
+        <div class="objecao reveal"><h3>"Não me sinto pronto para me expor."</h3><p>A primeira venda acontece numa conversa, com uma pessoa, sem expor você antes da hora.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao-escura">
+    <div class="container-wide">
+      <h2 class="reveal">Diploma é o que você estudou. Método é o que você viveu.</h2>
+      <div class="sobre-grid">
+        <div class="sobre-foto reveal"><img src="../karol.jpg" alt="Karol Senna" loading="lazy"></div>
+        <div class="sobre-texto reveal">
+          <p>Antes de ajudar especialistas a venderem no digital, eu passei 13 anos no serviço público. Formação em Contabilidade e Administração, com carreira em auditoria, planejamento e controladoria.</p>
+          <p>Foram 8 lançamentos fracassados até eu acertar a ordem das coisas. <strong>Hoje eu fico do seu lado enquanto você constrói o seu método e faz a sua primeira venda.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="reveal">Perguntas frequentes</h2>
+      <div class="faq-lista">
+        <div class="faq-item reveal"><h3>Quanto custa?</h3><p>12x de R$250 no cartão, ou R$2.500 à vista no pix ou boleto.</p></div>
+        <div class="faq-item reveal"><h3>Quanto tempo dura?</h3><p>6 meses de acesso, com 5 sessões individuais comigo.</p></div>
+        <div class="faq-item reveal"><h3>Tem garantia?</h3><p>Sim. 15 dias, com devolução integral, mesmo depois da primeira sessão.</p></div>
+        <div class="faq-item reveal"><h3>Como eu entro?</h3><p>Pagou, a gente já agenda a sua primeira sessão. Use o mesmo e-mail da compra para fazer login na Área de Membros.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="container">
+      <h2 class="reveal">30 dias até a sua primeira venda no digital</h2>
+      <ul class="final-bullets reveal">
+        <li>5 sessões individuais comigo</li>
+        <li>Agentes de IA do método</li>
+        <li>Garantia de 15 dias, com devolução integral</li>
+      </ul>
+      <div class="reveal">
+        <a class="cta cta-checkout" href="https://pay.voompcreators.com.br/17442">QUERO ENTRAR NA INCUBADORA EXPRESS</a>
+        <span class="cta-micro"><strong>12x de R$250</strong> no cartão, ou R$2.500 à vista no pix ou boleto</span>
+      </div>
+    </div>
+  </section>
+
+  <p class="suporte">Dúvidas antes de decidir? Fala direto no WhatsApp: <a href="https://wa.me/5567996474726">+55 67 99647-4726</a></p>
+
+  <footer>
+    Incubadora de Expert · CNPJ 38.431.977/0001-36<br>
+    Este site não faz parte do Google ou do Facebook (Meta Inc.).<br>
+    Política de privacidade · Termos de uso
+  </footer>
+
+  <div class="barra-mobile" id="barraMobile">
+    <a class="cta cta-checkout" href="https://pay.voompcreators.com.br/17442">QUERO ENTRAR</a>
+  </div>
+
+  <a class="whats-flutuante" id="whatsFlutuante" href="https://wa.me/5567996474726?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Incubadora%20Express." target="_blank" rel="noopener" aria-label="Falar no WhatsApp pra tirar dúvida">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.362.687 4.564 1.877 6.417L4 29l7.86-1.837A11.9 11.9 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3zm0 21.7c-2.02 0-3.92-.55-5.55-1.51l-.397-.235-4.66 1.09 1.114-4.55-.258-.42A9.65 9.65 0 0 1 6.3 15c0-5.354 4.35-9.7 9.704-9.7 5.354 0 9.7 4.346 9.7 9.7 0 5.354-4.346 9.7-9.7 9.7zm5.316-7.264c-.29-.145-1.716-.847-1.983-.944-.266-.097-.46-.145-.653.146-.194.29-.75.944-.92 1.138-.17.194-.34.218-.63.073-.29-.145-1.222-.45-2.328-1.436-.86-.767-1.44-1.716-1.61-2.006-.17-.29-.018-.447.152-.605.145-.145.34-.377.508-.567.17-.19.226-.324.34-.54.113-.218.056-.4-.037-.567-.097-.17-.87-2.093-1.19-2.865-.243-.582-.5-.503-.688-.512l-.586-.01c-.194 0-.508.073-.775.363-.266.29-1.02.997-1.02 2.43 0 1.436 1.05 2.822 1.194 3.014.145.19 2.006 3.06 4.86 4.166 2.855 1.105 2.855.737 3.372.69.516-.048 1.717-.7 1.96-1.377.243-.678.243-1.26.17-1.377-.073-.12-.267-.19-.556-.335z"/></svg>
+  </a>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'];
+      var forward = new URLSearchParams();
+      utmKeys.forEach(function (k) { if (params.has(k)) forward.set(k, params.get(k)); });
+      if (!Array.from(forward.keys()).length) return;
+      document.querySelectorAll('.cta-checkout').forEach(function (a) {
+        var url = new URL(a.href);
+        forward.forEach(function (v, k) { url.searchParams.set(k, v); });
+        a.href = url.toString();
+      });
+    })();
+    document.querySelectorAll('.cta-checkout').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (typeof fbq === 'function') fbq('track', 'InitiateCheckout');
+        if (typeof gtag === 'function') gtag('event', 'begin_checkout');
+      });
+    });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('visivel'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+    var whatsFlutuante = document.getElementById('whatsFlutuante');
+    if (whatsFlutuante) {
+      whatsFlutuante.addEventListener('click', function () { if (typeof fbq === 'function') fbq('track', 'Contact'); });
+    }
+    var hero = document.querySelector('.hero');
+    var barra = document.getElementById('barraMobile');
+    var heroObserver = new IntersectionObserver(function (entries) {
+      var mobileAtiva = !entries[0].isIntersecting;
+      barra.classList.toggle('ativa', mobileAtiva);
+      if (whatsFlutuante) whatsFlutuante.classList.toggle('subiu', mobileAtiva && window.innerWidth < 768);
+    }, { threshold: 0 });
+    heroObserver.observe(hero);
+  </script>
 </body>
 </html>
