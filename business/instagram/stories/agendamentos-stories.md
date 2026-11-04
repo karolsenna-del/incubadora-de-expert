@@ -74,3 +74,4 @@
 | 30/10/2026 | caixinha-2026-10-30 | 1 | 18162644665546138 | sim (ver log de execucao) |
 | 01/11/2026 | sprint-metodo-domingo-2026-11-01 | 1 | 18121002818107145 | sim (ver log de execucao) |
 | 03/11/2026 | sprint-metodo-terca-2026-11-03 | 1 | 18350421937248755 | sim (ver log de execucao) |
+| 04/11/2026 | chamada-grupo-lives-quarta-2026-11-04 | 6 | 18000532283823092, 18107189965993843, 17910220617327126, 18134844202790334, 18219606511351668, 18058589126809731 | sim (ver log de execucao) |
