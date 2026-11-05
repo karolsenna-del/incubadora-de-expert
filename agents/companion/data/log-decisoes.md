@@ -1066,3 +1066,43 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** opção A: card na Central abre o painel, que continua hospedado na área de membros (com login); a aba da área de membros saiu.
 **Racional:** a Central não tem senha; o painel fica atrás do login e com um caminho só.
 **Impacto:** publicar os dois sites.
+
+## 04/11/2026 — Sessões da Dianessa (Express, sem radar) e da Bianca (com radar)
+**Contexto:** duas sessões novas agendadas; pré-diagnósticos de 04/11.
+**Decisão:** Dianessa (crua no digital, área da Milena) sem radar, prova Milena, oferta Express (suposição pelo padrão das cruas). Bianca com radar e Senacop como quebra-gelo; leitura da Karol: vender pro fornecedor do governo (promessa de faturamento) é melhor que pro servidor (não ganha nada, compra passa por setor de compras, diretoria e RH). No roteiro, isso guia as perguntas sem ser entregue. Oferta da Bianca: Método VIP (suposição, Karol não disse).
+**Racional:** pedido da Karol; o radar zerado assusta quem é crua; a Bianca precisa chegar sozinha à escolha do público.
+**Impacto:** roteiros dianessa-martins-sessao.md e bianca-moscarelli-sessao.md; Dr. Benício no CRM com o toque de 05/11.
+
+## 04/11/2026 — Expert Plan vira o M5 (Escala) do Expert360º
+**Contexto:** Course Creator. Expert Plan (planilha de escala, já usada nas mentorias) precisava virar aula; Expert360º terminava no M4.
+**Decisão:** M5 Escala dentro do Expert360º (não curso separado), ferramenta antes dos roteiros. Planilha: meta total → funil x produto → conta operacional → rotina semanal → acompanhamento. Funis em estágios (Vendas Secretas → Lives Secretas → Mini-treinamento → Venda por mensagem → VSL só com curso gravado/low ticket); Vendas Secretas perdem peso conforme os outros entram. Sempre taxa pessimista (comparecimento 80%, fechamento na sessão 25%). Não existe oficina de nenhum funil: Lives, Mini, Mensagem e VSL serão ensinados no M5.
+**Racional:** Aluno passa da meta e fica feliz; quem chega na escala está no fim do acesso → renovação pra continuar e melhorar a conversão (Karol).
+**Impacto:** `business/campanhas/expert360-curso/materiais/M5/M5.1 - Meu Expert Plan.xlsx` (v2, aguardando aprovação). Próximo: estrutura das aulas do M5.
+
+## 05/11/2026 — Expert Plan: cada venda pede a sua sessão
+**Contexto:** no exemplo com as 3 mentorias, a planilha pediu 8 sessões/semana (limite 6) e surgiu a dúvida se VIP e Destrava saem como downsell da mesma sessão.
+**Decisão:** não é downsell. O pré-diagnóstico já direciona o lead pra completa ou VIP antes da sessão, pela necessidade dele. A planilha mantém 1 sessão por venda.
+**Racional:** é como a Karol vende hoje.
+**Impacto:** a conta de sessões do Operacional fica como está; o aviso de agenda cheia é real e ensina o aluno a voltar um estágio ou ajustar a distribuição.
+
+## 05/11/2026 — Expert Plan: tipo "Ao vivo" e follow-up na rotina
+**Decisão:** o tipo de produto "Principal" passa a se chamar "Ao vivo". A taxa de fechamento das sessões (25%) conta quem fecha na hora ou no follow-up, e a Rotina semanal ganha a linha fixa "Fazer follow-up de quem não fechou na sessão".
+**Racional:** produto acima de R$1.000 quase nunca fecha sem follow-up, e é a parte que os experts mais deixam de lado (Karol).
+**Impacto:** no exemplo, a rotina pede 5 follow-ups por semana, além das 8 sessões.
+
+## 05/11/2026 — Expert Plan: Tático mostra produto por produto
+**Decisão:** as linhas de vendas do Tático puxam os produtos da coluna A do Estratégico (o que estiver ativo lá aparece aqui), com as vendas de cada um divididas pelos funis do estágio.
+**Racional:** "7 vendas" sem produto parecia 7 × R$5.000 (Karol).
+**Impacto:** faturamento por funil = vendas de cada produto × preço.
+
+## 05/11/2026 — Sandra Mello: Encontro 1 do Método VIP no modelo do Tasso
+**Contexto:** Sandra fechou o Método VIP e respondeu o diagnóstico do VIP em 05/11. Karol pediu o 1º encontro no modelo do Tasso.
+**Decisão:** página do E1 com os mesmos 6 blocos do Tasso (abertura, o que já tem, persona+promessa, jornada+ferramentas, foco, primeiros passos), montada das anotações do Gemini da sessão de 27/10 e do diagnóstico. O que ficou decidido em 27/10 entra como combinado (produto físico, sócia pronta em vez de aula de IA, assinatura mensal); o que o diagnóstico reabriu entra como pergunta (serviços na persona, app x WhatsApp, preço, prazo da promessa).
+**Racional:** mesmo formato que funcionou com o Tasso; a sessão de 27/10 já tinha decidido parte da direção.
+**Impacto:** https://claude.ai/artifact/WZRGRz7CekgixMJbnHJSvy; documento da cliente em business/campanhas/metodo-vip/clientes/sandra-mello/plano-encontros.md.
+
+## 05/11/2026 — Central da Incubadora em 3 frentes
+**Contexto:** a Central tinha 12 seções soltas.
+**Decisão:** Comercial (tudo do lead: CRM, diagnósticos de lead, páginas, checkouts, funil, live, apresentações de venda, parceiros), Operação (área de membros, onboarding, diagnósticos e respostas dos alunos, teleprompter) e Gestão (financeiro e painéis). Entrou o CRM (planilha dos leads); saiu a Black Expert.
+**Racional:** achar o link pelo momento do negócio.
+**Impacto:** só a página da Central; a página da Black continua no site, só sem botão.

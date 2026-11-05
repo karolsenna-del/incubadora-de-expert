@@ -48,6 +48,11 @@ h1{font-size:1.8rem; margin:12px 0 8px; letter-spacing:-0.02em;}
   color:var(--ash); margin:36px 0 12px;
 }
 .section-title:first-of-type{margin-top:0;}
+.cat{margin:56px 0 4px; padding-top:20px; border-top:2px solid var(--ink);}
+.cat:first-of-type{margin-top:0;}
+.cat-nome{font-family:var(--display); font-weight:800; font-size:1.35rem; letter-spacing:.04em; text-transform:uppercase;}
+.cat-desc{font-size:.85rem; color:var(--ash); margin-top:2px;}
+.cat + .section-title{margin-top:16px;}
 .grid{display:flex; flex-direction:column; gap:10px;}
 .grid.cols2{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
 @media (max-width:560px){.grid.cols2{grid-template-columns:1fr;}}
@@ -79,72 +84,21 @@ footer{margin-top:48px; font-size:.78rem; color:var(--ash); text-align:center;}
   </div>
 
   <h1>Central da Incubadora</h1>
-  <p class="lede">Todos os seus links num lugar só — páginas, checkouts, diagnósticos, ferramentas e área de membros.</p>
+  <p class="lede">Todos os seus links num lugar só, em três frentes: Comercial, Operação e Gestão.</p>
   <p class="sub-lede">Link pessoal, não divulgado pra ninguém. Não tem senha, mas também não aparece em nenhum lugar público — só quem recebe direto de você chega aqui.</p>
 
-  <div class="section-title">Área de Membros</div>
+  <div class="cat"><div class="cat-nome">Comercial</div><div class="cat-desc">Tudo do lead: da captação ao checkout.</div></div>
+  <div class="section-title">CRM e leads</div>
   <div class="grid">
-    <a class="card" href="https://membros.incubadoradeexpert.com.br" target="_blank" rel="noopener">
-      <span class="tag">Membros</span>
-      <h2>Área de Membros</h2>
-      <p>Login das alunas, todas as trilhas (Expert360º, Mentoria, Consultorias, Biblioteca de IA).</p>
+    <a class="card" href="https://docs.google.com/spreadsheets/d/1BD4L6toolVi17Of1PrwmNFnRQprk8obV6wWN_lLatn0/edit" target="_blank" rel="noopener">
+      <span class="tag">CRM</span>
+      <h2>CRM — Leads</h2>
+      <p>Planilha de acompanhamento dos leads: status, follow-up e próximo passo.</p>
     </a>
-  </div>
-
-  <div class="section-title">Black Expert</div>
-  <div class="grid">
-    <a class="card" href="black-expert-dia-14.html">
-      <span class="tag">Campanha</span>
-      <h2>Black Expert — programação do dia 14</h2>
-      <p>Horário de cada mensagem do grupo, o nome que o grupo ganha em cada etapa e as mensagens prontas pra copiar.</p>
-    </a>
-  </div>
-
-  <div class="section-title">Onboarding</div>
-  <div class="grid">
-    <a class="card" href="mensagens-onboarding.html">
-      <span class="tag">Onboarding</span>
-      <h2>Mensagens de onboarding — todos os produtos</h2>
-      <p>Mensagem de boas-vindas de cada produto, pronta pra copiar, com o link do diagnóstico que o aluno responde primeiro.</p>
-    </a>
-    <a class="card" href="https://onboarding.incubadoradeexpert.com.br" target="_blank" rel="noopener">
-      <span class="tag">Onboarding</span>
-      <h2>Página de Onboarding — Individual</h2>
-      <p>Jornada de 12 meses, encontros 1:1, suporte e link do DNA do Expert — manda pra quem acabou de entrar na Individual.</p>
-    </a>
-    <a class="card" href="https://onboarding.incubadoradeexpert.com.br/grupo" target="_blank" rel="noopener">
-      <span class="tag">Onboarding</span>
-      <h2>Página de Onboarding — Grupo</h2>
-      <p>Jornada de 12 meses, oficinas ao vivo, sessões liberadas pela entrega, suporte e link do DNA do Expert — manda pra quem acabou de entrar no Grupo.</p>
-    </a>
-  </div>
-
-  <div class="section-title">Diagnósticos</div>
-  <div class="grid">
     <a class="card" href="https://diagnostico.incubadoradeexpert.com.br" target="_blank" rel="noopener">
       <span class="tag">Topo de funil</span>
       <h2>Pré-diagnóstico — Leads</h2>
       <p>LP → pré-diagnóstico interativo → agenda a Sessão Estratégica de 45 min.</p>
-    </a>
-    <a class="card" href="https://dna.incubadoradeexpert.com.br" target="_blank" rel="noopener">
-      <span class="tag">Onboarding</span>
-      <h2>DNA do Expert</h2>
-      <p>Pra quem já comprou — preenche antes da 1ª sessão da Incubadora.</p>
-    </a>
-    <a class="card" href="https://kit-de-ferramentas.vercel.app" target="_blank" rel="noopener">
-      <span class="tag">Produto</span>
-      <h2>Kit de Ferramentas — Diagnóstico</h2>
-      <p>Intake de quem compra o Kit de Ferramentas.</p>
-    </a>
-    <a class="card" href="https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/diagnostico/" target="_blank" rel="noopener">
-      <span class="tag">Produto</span>
-      <h2>Sprint do Método — Diagnóstico</h2>
-      <p>História Real + Ikigai de quem entra no Sprint.</p>
-    </a>
-    <a class="card" href="https://vendas.incubadoradeexpert.com.br/metodo-vip/diagnostico/" target="_blank" rel="noopener">
-      <span class="tag">Produto</span>
-      <h2>Método VIP — Diagnóstico</h2>
-      <p>Persona, promessa e método de quem comprou o VIP — preenche antes do Encontro 1.</p>
     </a>
     <a class="card" href="https://metodo1h.incubadoradeexpert.com.br" target="_blank" rel="noopener">
       <span class="tag">Bônus</span>
@@ -152,53 +106,17 @@ footer{margin-top:48px; font-size:.78rem; color:var(--ash); text-align:center;}
       <p>Diagnóstico bônus de aula — monta o método em 1h, com pergunta final de interesse em ajuda individual.</p>
     </a>
   </div>
-
-  <div class="section-title">Parceiros — Jornada 360º</div>
-  <div class="grid">
-    <a class="card" href="https://triagem-blush.vercel.app" target="_blank" rel="noopener">
-      <span class="tag">Triagem</span>
-      <h2>Triagem de Parceiros</h2>
-      <p>Pré-triagem rápida (10 perguntas) antes do formulário completo.</p>
-    </a>
-    <a class="card" href="https://formulario-completo-peach.vercel.app" target="_blank" rel="noopener">
-      <span class="tag">Formulário completo</span>
-      <h2>Seja Parceiro — Formulário Completo</h2>
-      <p>Aplicação completa (24 perguntas) pra quem passou na triagem.</p>
-    </a>
-  </div>
-
-  <div class="section-title">Respostas dos diagnósticos (planilhas)</div>
+  <div class="section-title">Respostas dos leads (planilhas)</div>
   <div class="grid">
     <a class="card" href="https://docs.google.com/spreadsheets/d/1VWthqPmKdb2U5KK_oMQJzz4ucjZHyY-jjmgZoyahMXI/edit" target="_blank" rel="noopener">
       <span class="tag">Planilha</span>
       <h2>Pré-diagnóstico — Respostas</h2>
     </a>
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1fsEp51aXkXg3d-iHJ_R5sp6IyGlL5_Jy2MBv2TkhXw4/edit" target="_blank" rel="noopener">
-      <span class="tag">Planilha</span>
-      <h2>DNA do Expert — Respostas</h2>
-    </a>
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1zdYw6usODuphCAVZbQpi-9qQmIusGLOs9dt7IzNgPRc/edit" target="_blank" rel="noopener">
-      <span class="tag">Planilha</span>
-      <h2>Kit de Ferramentas — Respostas</h2>
-    </a>
-    <a class="card" href="https://docs.google.com/spreadsheets/d/1v2wfmWFTmGwcV7ueEa0L0ZEUPDvuuh9vM-cNhPvSm1M/edit" target="_blank" rel="noopener">
-      <span class="tag">Planilha</span>
-      <h2>Sprint do Método — Respostas</h2>
-    </a>
     <a class="card" href="https://docs.google.com/spreadsheets/d/13fWJ5dB4otd0FAFYGS3zugdwgIL57GwR0rdWAI_YKCg/edit" target="_blank" rel="noopener">
       <span class="tag">Planilha</span>
       <h2>Crie seu Método em 1 Hora — Respostas</h2>
     </a>
-    <a class="card" href="https://docs.google.com/spreadsheets/d/17OdPN6cjyfZGYKZBnvmNJKYc-dx645i1cCMZrP2w9MI/edit#gid=0" target="_blank" rel="noopener">
-      <span class="tag">Planilha</span>
-      <h2>Parceiros — Triagem (Respostas)</h2>
-    </a>
-    <a class="card" href="https://docs.google.com/spreadsheets/d/17OdPN6cjyfZGYKZBnvmNJKYc-dx645i1cCMZrP2w9MI/edit#gid=948431101" target="_blank" rel="noopener">
-      <span class="tag">Planilha</span>
-      <h2>Parceiros — Formulário Completo (Respostas)</h2>
-    </a>
   </div>
-
   <div class="section-title">Páginas de venda</div>
   <div class="grid cols2">
     <a class="card" href="https://vendas.incubadoradeexpert.com.br/expert360/" target="_blank" rel="noopener">
@@ -230,7 +148,6 @@ footer{margin-top:48px; font-size:.78rem; color:var(--ash); text-align:center;}
       <p>R$97</p>
     </a>
   </div>
-
   <div class="section-title">Checkouts diretos (Voomp)</div>
   <div class="grid cols2">
     <a class="card" href="https://pay.voompcreators.com.br/15514" target="_blank" rel="noopener">
@@ -255,7 +172,6 @@ footer{margin-top:48px; font-size:.78rem; color:var(--ash); text-align:center;}
       <h2>Diagnóstico Ferramentas</h2>
     </a>
   </div>
-
   <div class="section-title">Funil de treinamento</div>
   <div class="grid cols2">
     <a class="card" href="https://treinamento.incubadoradeexpert.com.br" target="_blank" rel="noopener">
@@ -265,7 +181,6 @@ footer{margin-top:48px; font-size:.78rem; color:var(--ash); text-align:center;}
       <h2>Mini Treinamento (B)</h2>
     </a>
   </div>
-
   <div class="section-title">Live Expert360º — Grupo</div>
   <div class="grid cols2">
     <a class="card" href="https://grupo.incubadoradeexpert.com.br" target="_blank" rel="noopener">
@@ -279,14 +194,8 @@ footer{margin-top:48px; font-size:.78rem; color:var(--ash); text-align:center;}
       <p>Acesso direto ao grupo fechado da live.</p>
     </a>
   </div>
-
-  <div class="section-title">Ferramentas</div>
+  <div class="section-title">Apresentações de venda</div>
   <div class="grid">
-    <a class="card" href="https://claude.ai/artifact/PMnjWD88WMhbFhYgq7gB22" target="_blank" rel="noopener">
-      <span class="tag">Gravação</span>
-      <h2>Teleprompter</h2>
-      <p>Cola o roteiro, ajusta velocidade e tamanho da letra, grava com scroll automático.</p>
-    </a>
     <a class="card" href="https://claude.ai/artifact/PSFnVNxWVK7yZWGNQ4WiqR" target="_blank" rel="noopener">
       <span class="tag">Apresentação</span>
       <h2>Método 5 Ps — Mapa Mental</h2>
@@ -298,7 +207,101 @@ footer{margin-top:48px; font-size:.78rem; color:var(--ash); text-align:center;}
       <p>Expert360º no centro, as 7 ofertas ao redor — clica em cada uma pra ver público, problema e preço.</p>
     </a>
   </div>
-
+  <div class="section-title">Parceiros — Jornada 360º</div>
+  <div class="grid">
+    <a class="card" href="https://triagem-blush.vercel.app" target="_blank" rel="noopener">
+      <span class="tag">Triagem</span>
+      <h2>Triagem de Parceiros</h2>
+      <p>Pré-triagem rápida (10 perguntas) antes do formulário completo.</p>
+    </a>
+    <a class="card" href="https://formulario-completo-peach.vercel.app" target="_blank" rel="noopener">
+      <span class="tag">Formulário completo</span>
+      <h2>Seja Parceiro — Formulário Completo</h2>
+      <p>Aplicação completa (24 perguntas) pra quem passou na triagem.</p>
+    </a>
+    <a class="card" href="https://docs.google.com/spreadsheets/d/17OdPN6cjyfZGYKZBnvmNJKYc-dx645i1cCMZrP2w9MI/edit#gid=0" target="_blank" rel="noopener">
+      <span class="tag">Planilha</span>
+      <h2>Parceiros — Triagem (Respostas)</h2>
+    </a>
+    <a class="card" href="https://docs.google.com/spreadsheets/d/17OdPN6cjyfZGYKZBnvmNJKYc-dx645i1cCMZrP2w9MI/edit#gid=948431101" target="_blank" rel="noopener">
+      <span class="tag">Planilha</span>
+      <h2>Parceiros — Formulário Completo (Respostas)</h2>
+    </a>
+  </div>
+  <div class="cat"><div class="cat-nome">Operação</div><div class="cat-desc">Acompanhamento de quem já é aluno.</div></div>
+  <div class="section-title">Área de Membros</div>
+  <div class="grid">
+    <a class="card" href="https://membros.incubadoradeexpert.com.br" target="_blank" rel="noopener">
+      <span class="tag">Membros</span>
+      <h2>Área de Membros</h2>
+      <p>Login das alunas, todas as trilhas (Expert360º, Mentoria, Consultorias, Biblioteca de IA).</p>
+    </a>
+  </div>
+  <div class="section-title">Onboarding</div>
+  <div class="grid">
+    <a class="card" href="mensagens-onboarding.html">
+      <span class="tag">Onboarding</span>
+      <h2>Mensagens de onboarding — todos os produtos</h2>
+      <p>Mensagem de boas-vindas de cada produto, pronta pra copiar, com o link do diagnóstico que o aluno responde primeiro.</p>
+    </a>
+    <a class="card" href="https://onboarding.incubadoradeexpert.com.br" target="_blank" rel="noopener">
+      <span class="tag">Onboarding</span>
+      <h2>Página de Onboarding — Individual</h2>
+      <p>Jornada de 12 meses, encontros 1:1, suporte e link do DNA do Expert — manda pra quem acabou de entrar na Individual.</p>
+    </a>
+    <a class="card" href="https://onboarding.incubadoradeexpert.com.br/grupo" target="_blank" rel="noopener">
+      <span class="tag">Onboarding</span>
+      <h2>Página de Onboarding — Grupo</h2>
+      <p>Jornada de 12 meses, oficinas ao vivo, sessões liberadas pela entrega, suporte e link do DNA do Expert — manda pra quem acabou de entrar no Grupo.</p>
+    </a>
+  </div>
+  <div class="section-title">Diagnósticos dos produtos</div>
+  <div class="grid">
+    <a class="card" href="https://dna.incubadoradeexpert.com.br" target="_blank" rel="noopener">
+      <span class="tag">Onboarding</span>
+      <h2>DNA do Expert</h2>
+      <p>Pra quem já comprou — preenche antes da 1ª sessão da Incubadora.</p>
+    </a>
+    <a class="card" href="https://kit-de-ferramentas.vercel.app" target="_blank" rel="noopener">
+      <span class="tag">Produto</span>
+      <h2>Kit de Ferramentas — Diagnóstico</h2>
+      <p>Intake de quem compra o Kit de Ferramentas.</p>
+    </a>
+    <a class="card" href="https://vendas.incubadoradeexpert.com.br/sprint-do-metodo/diagnostico/" target="_blank" rel="noopener">
+      <span class="tag">Produto</span>
+      <h2>Sprint do Método — Diagnóstico</h2>
+      <p>História Real + Ikigai de quem entra no Sprint.</p>
+    </a>
+    <a class="card" href="https://vendas.incubadoradeexpert.com.br/metodo-vip/diagnostico/" target="_blank" rel="noopener">
+      <span class="tag">Produto</span>
+      <h2>Método VIP — Diagnóstico</h2>
+      <p>Persona, promessa e método de quem comprou o VIP — preenche antes do Encontro 1.</p>
+    </a>
+  </div>
+  <div class="section-title">Respostas dos alunos (planilhas)</div>
+  <div class="grid">
+    <a class="card" href="https://docs.google.com/spreadsheets/d/1fsEp51aXkXg3d-iHJ_R5sp6IyGlL5_Jy2MBv2TkhXw4/edit" target="_blank" rel="noopener">
+      <span class="tag">Planilha</span>
+      <h2>DNA do Expert — Respostas</h2>
+    </a>
+    <a class="card" href="https://docs.google.com/spreadsheets/d/1zdYw6usODuphCAVZbQpi-9qQmIusGLOs9dt7IzNgPRc/edit" target="_blank" rel="noopener">
+      <span class="tag">Planilha</span>
+      <h2>Kit de Ferramentas — Respostas</h2>
+    </a>
+    <a class="card" href="https://docs.google.com/spreadsheets/d/1v2wfmWFTmGwcV7ueEa0L0ZEUPDvuuh9vM-cNhPvSm1M/edit" target="_blank" rel="noopener">
+      <span class="tag">Planilha</span>
+      <h2>Sprint do Método — Respostas</h2>
+    </a>
+  </div>
+  <div class="section-title">Gravação</div>
+  <div class="grid">
+    <a class="card" href="https://claude.ai/artifact/PMnjWD88WMhbFhYgq7gB22" target="_blank" rel="noopener">
+      <span class="tag">Gravação</span>
+      <h2>Teleprompter</h2>
+      <p>Cola o roteiro, ajusta velocidade e tamanho da letra, grava com scroll automático.</p>
+    </a>
+  </div>
+  <div class="cat"><div class="cat-nome">Gestão</div><div class="cat-desc">Ferramentas e números do negócio.</div></div>
   <div class="section-title">Painéis e administração</div>
   <div class="grid">
     <a class="card" href="https://membros.incubadoradeexpert.com.br/financeiro.html" target="_blank" rel="noopener">
@@ -322,7 +325,6 @@ footer{margin-top:48px; font-size:.78rem; color:var(--ash); text-align:center;}
       <p>Banco de dados da Área de Membros.</p>
     </a>
   </div>
-
   <footer>Central da Incubadora — uso pessoal da Karol</footer>
 </div>
 </body>
