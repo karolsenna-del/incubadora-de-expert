@@ -1,0 +1,475 @@
+<title>Encontro 1 da Sandra</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
+<style>
+/* Layout: mapa mental de 6 blocos ao redor do encontro; o bloco ativo abre num cartão logo abaixo */
+:root{
+  --bg:#F4F4F5; --surface:#FFFFFF; --surface-2:#EDEDF0;
+  --ink:#0B0B0C; --ink-soft:#5F5F68; --line:#D4D4D8;
+  --accent:#FF6B1A; --accent-strong:#C94A08; --accent-soft:rgba(255,107,26,.10);
+  --on-accent:#0B0B0C;
+  --font-display:'Sora',-apple-system,'Segoe UI',sans-serif;
+  --font-body:-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111113; --surface:#1A1A1D; --surface-2:#242428;
+    --ink:#F4F4F5; --ink-soft:#A1A1AA; --line:#3A3A40;
+    --accent:#FF7A2E; --accent-strong:#FF9A5C; --accent-soft:rgba(255,122,46,.14);
+    --on-accent:#0B0B0C; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111113; --surface:#1A1A1D; --surface-2:#242428;
+  --ink:#F4F4F5; --ink-soft:#A1A1AA; --line:#3A3A40;
+  --accent:#FF7A2E; --accent-strong:#FF9A5C; --accent-soft:rgba(255,122,46,.14);
+  --on-accent:#0B0B0C; color-scheme:dark;
+}
+*{box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
+.page{max-width:920px;margin:0 auto;padding:28px 20px 64px;}
+.hero{padding-block:6px 22px;border-bottom:1px solid var(--line);margin-bottom:22px;}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-strong);font-weight:600;}
+.hero h1{font-family:var(--font-display);font-size:clamp(26px,5vw,38px);margin:6px 0 4px;text-wrap:balance;font-weight:600;}
+.hero .meta{color:var(--ink-soft);font-size:14px;display:flex;flex-wrap:wrap;gap:6px 16px;}
+
+.progress{display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:13px;color:var(--ink-soft);}
+.progress-track{flex:1;height:6px;background:var(--surface-2);border-radius:99px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;transition:width .3s ease;border-radius:99px;}
+.progress-count{font-variant-numeric:tabular-nums;white-space:nowrap;}
+.hint{font-size:12.5px;color:var(--ink-soft);text-align:center;margin-bottom:8px;}
+
+.mindmap-wrap{position:relative;width:100%;max-width:600px;margin:0 auto 8px;aspect-ratio:1/0.92;}
+.mindmap-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;}
+.mindmap-svg line{stroke:var(--line);stroke-width:1.5;transition:stroke .2s ease,stroke-width .2s ease;}
+.mindmap-svg line.active{stroke:var(--accent);stroke-width:2.5;}
+.hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  background:var(--accent);color:var(--on-accent);font-family:var(--font-display);font-weight:700;
+  font-size:13px;text-align:center;line-height:1.25;padding:14px 16px;border-radius:50%;
+  width:104px;height:104px;display:flex;align-items:center;justify-content:center;z-index:2;
+  box-shadow:0 2px 16px rgba(255,107,26,.25);}
+.node-btn{position:absolute;transform:translate(-50%,-50%);z-index:2;
+  display:flex;align-items:center;gap:7px;background:var(--surface);border:2px solid var(--line);
+  border-radius:99px;padding:8px 14px 8px 8px;font-size:12.5px;font-weight:600;color:var(--ink);
+  cursor:pointer;white-space:nowrap;transition:all .15s ease;font-family:var(--font-body);}
+.node-btn:hover{border-color:var(--accent);}
+.node-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.node-btn .num{width:22px;height:22px;border-radius:50%;background:var(--surface-2);color:var(--ink-soft);
+  display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;font-family:var(--font-display);}
+.node-btn.active{border-color:var(--accent);background:var(--accent-soft);}
+.node-btn.active .num{background:var(--accent);color:var(--on-accent);}
+.node-btn.done .num{background:var(--accent-strong);color:var(--surface);font-size:0;}
+.node-btn.done .num::after{content:"✓";font-size:11px;}
+@media (max-width:480px){
+  .node-btn{padding:6px 10px 6px 6px;font-size:11px;gap:5px;}
+  .node-btn .num{width:18px;height:18px;font-size:9px;}
+  .hub{width:84px;height:84px;font-size:11px;padding:10px;}
+}
+
+.detail-wrap{margin-top:20px;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;}
+.card-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px;}
+.card-head h2{font-family:var(--font-display);font-size:20px;margin:0;font-weight:600;text-wrap:balance;}
+.time{font-size:12px;color:var(--ink-soft);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.card-sub{font-size:13px;color:var(--ink-soft);margin:0 0 14px;}
+.card h3.sec{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;color:var(--ink-soft);margin:18px 0 8px;}
+.mark-done{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-soft);cursor:pointer;user-select:none;margin-top:18px;}
+.mark-done input{accent-color:var(--accent);width:14px;height:14px;}
+
+.bullets{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px;}
+.bullets li{font-size:14px;line-height:1.5;padding-left:16px;position:relative;}
+.bullets li::before{content:"—";position:absolute;left:0;color:var(--ink-soft);}
+.bullets q{font-style:italic;}
+
+.hypothesis{background:var(--accent-soft);border:1px solid var(--accent);border-radius:10px;padding:12px 14px;font-size:13.5px;line-height:1.5;margin-bottom:14px;}
+.hypothesis b{color:var(--accent-strong);}
+
+.checklist{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none;}
+.checklist li{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;line-height:1.4;padding:6px 8px;border-radius:8px;transition:background .15s ease;}
+.checklist li:hover{background:var(--surface-2);}
+.checklist input{accent-color:var(--accent);width:15px;height:15px;margin-top:2px;flex-shrink:0;}
+.checklist li.checked span{color:var(--ink-soft);text-decoration:line-through;text-decoration-color:var(--line);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.two-col > div{min-width:0;}
+@media (max-width:560px){.two-col{grid-template-columns:1fr;}}
+.col-label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:600;color:var(--ink-soft);margin-bottom:8px;}
+
+.answers{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none;}
+.answers li{font-size:13.5px;line-height:1.45;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);}
+.answers li b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin-bottom:2px;}
+
+.warning-box{background:var(--accent-soft);border:1px solid var(--accent);border-radius:10px;padding:12px 14px;font-size:13.5px;line-height:1.5;margin-bottom:16px;color:var(--ink);}
+.warning-box b{color:var(--accent-strong);}
+
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:6px;}
+.step-chip{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12.5px;}
+.step-chip b{color:var(--accent-strong);margin-right:4px;font-variant-numeric:tabular-nums;}
+.flow .arrow{color:var(--ink-soft);font-size:12px;}
+.flow-note{font-size:12.5px;color:var(--ink-soft);margin:0 0 4px;}
+
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scope > div{min-width:0;}
+@media (max-width:560px){.scope{grid-template-columns:1fr;}}
+.scope-box{border-radius:10px;padding:14px 16px;border:1px solid var(--line);}
+.scope-box.yes{background:var(--accent-soft);border-color:var(--accent);}
+.scope-box.no{background:var(--surface-2);}
+.scope-box h3{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;}
+.scope-box.yes h3{color:var(--accent-strong);}
+.scope-box.no h3{color:var(--ink-soft);}
+.scope-box ul{margin:0;padding-left:16px;font-size:13.5px;line-height:1.6;}
+
+.encontros{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px;}
+.enc-chip{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12.5px;}
+.enc-chip b{color:var(--accent-strong);}
+.enc-chip.now{border-color:var(--accent);background:var(--accent-soft);}
+
+.checklist li{flex-wrap:wrap;}
+.checklist li > span{flex:1;min-width:0;}
+.note{display:block;width:100%;min-height:44px;resize:vertical;font:13px/1.45 var(--font-body);color:var(--ink);
+  background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:7px 10px;margin-top:4px;}
+.checklist .note{margin-left:23px;width:calc(100% - 23px);}
+.note:focus{outline:none;border-style:solid;border-color:var(--accent);}
+.note::placeholder{color:var(--ink-soft);}
+.block-note{margin-top:18px;}
+.block-note .col-label{margin-bottom:4px;}
+.save-state{font-size:12px;color:var(--ink-soft);text-align:right;min-height:16px;margin-top:6px;}
+.foot{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-soft);line-height:1.6;}
+
+[data-panel]{display:none;}
+[data-panel].active{display:block;}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;}}
+</style>
+
+<div class="page">
+  <div class="hero">
+    <div class="eyebrow">Método VIP · Encontro 1 — Diagnóstico e primeiros passos</div>
+    <h1>Sandra Mello</h1>
+    <div class="meta">
+      <span>Sua Sócia Invisível</span>
+      <span>·</span>
+      <span>Sessão estratégica 27/10</span>
+      <span>·</span>
+      <span>Diagnóstico recebido 05/11</span>
+    </div>
+  </div>
+
+  <div class="progress">
+    <span class="progress-count" id="progress-count">0/6 blocos</span>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  </div>
+  <p class="hint">Clique em cada bloco pra abrir o conteúdo</p>
+
+  <div class="mindmap-wrap">
+    <svg class="mindmap-svg" viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="Mapa mental com 6 blocos do encontro ao redor de um nó central">
+      <line data-line="1" x1="50" y1="50" x2="50" y2="10"></line>
+      <line data-line="2" x1="50" y1="50" x2="82.9" y2="30"></line>
+      <line data-line="3" x1="50" y1="50" x2="82.9" y2="70"></line>
+      <line data-line="4" x1="50" y1="50" x2="50" y2="90"></line>
+      <line data-line="5" x1="50" y1="50" x2="17.1" y2="70"></line>
+      <line data-line="6" x1="50" y1="50" x2="17.1" y2="30"></line>
+    </svg>
+    <div class="hub">ENCONTRO 1<br>SANDRA</div>
+    <button class="node-btn" id="node-1" data-node="1" style="left:50%;top:10%;"><span class="num">1</span>Abertura</button>
+    <button class="node-btn" id="node-2" data-node="2" style="left:82.9%;top:30%;"><span class="num">2</span>O que você já tem</button>
+    <button class="node-btn" id="node-3" data-node="3" style="left:82.9%;top:70%;"><span class="num">3</span>Persona+Promessa</button>
+    <button class="node-btn" id="node-4" data-node="4" style="left:50%;top:90%;"><span class="num">4</span>Jornada+Ferramentas</button>
+    <button class="node-btn" id="node-5" data-node="5" style="left:17.1%;top:70%;"><span class="num">5</span>Foco</button>
+    <button class="node-btn" id="node-6" data-node="6" style="left:17.1%;top:30%;"><span class="num">6</span>Primeiros passos</button>
+  </div>
+
+  <div class="detail-wrap">
+
+    <div class="card" data-panel="1">
+      <div class="card-head"><h2>Abertura</h2><span class="time">5 min</span></div>
+      <p class="card-sub">O que já ficou combinado na nossa conversa de 27/10.</p>
+      <ul class="bullets">
+        <li>Persona: o <b>microempreendedor de produto físico</b>, com o negócio de pescados do Silvino como modelo e laboratório.</li>
+        <li>O produto deixa de ser aula de ChatGPT e Claude e vira a <b>sócia pronta</b>: uma ferramenta que cuida da parte administrativa (dinheiro, estoque, clientes) pra pessoa ter tempo de vender.</li>
+        <li>Cobrança pensada como <b>assinatura mensal</b> (falamos em R$97 a R$127 por mês), no lugar de um valor único baixo.</li>
+        <li>Grandes empresas ficam de fora: elas contratam grandes empresas de tecnologia. O pequeno negócio é o caminho mais direto.</li>
+        <li>Como funciona o Método VIP: hoje é diagnóstico, persona, promessa, ferramentas e primeiros passos. No Encontro 2 a gente monta o plano de negócio. O Encontro 3 é correção de rota depois de 30 a 40 dias executando.</li>
+      </ul>
+      <div class="encontros" style="margin-top:14px;">
+        <span class="enc-chip now"><b>E1</b> Diagnóstico + primeiros passos (hoje)</span>
+        <span class="enc-chip"><b>E2</b> Plano de negócio</span>
+        <span class="enc-chip"><b>E3</b> Correção de rota (após 30–40 dias)</span>
+      </div>
+      <label class="mark-done"><input type="checkbox" id="done-1" data-block-check="1"> Marcar bloco como feito</label>
+    </div>
+
+    <div class="card" data-panel="2">
+      <div class="card-head"><h2>O que você já tem</h2><span class="time">15–20 min</span></div>
+      <p class="card-sub">O que já está construído e o que ainda precisa ser definido.</p>
+      <div class="two-col">
+        <div>
+          <div class="col-label">Ativos que já existem</div>
+          <ul class="bullets">
+            <li>Anos de jurídico, 4 anos no administrativo e hoje <b>gestão de projetos estratégicos</b>: organizar processo e rotina é o seu dia a dia</li>
+            <li>Você monta sozinha: aplicativo, página, automação e IA</li>
+            <li>Um laboratório real em casa: o negócio de entrega de pescados do Silvino</li>
+            <li>Experiência anterior com aplicativos de uso doméstico e da paróquia</li>
+            <li>A sócia já desenhada em detalhe: diagnóstico de entrada, anotação como quem manda mensagem, o <q>Entendi assim</q> antes de gravar, resumo do dia, da semana e do mês, e perguntas sobre os próprios números</li>
+            <li>Um nome forte e fácil de lembrar: <b>Sua Sócia Invisível</b></li>
+            <li>Parceiros possíveis já mapeados: contador de MEI, consultor de precificação, especialista em vendas pelo Instagram e WhatsApp</li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-label">O que está em aberto no diagnóstico</div>
+          <ul class="answers">
+            <li><b>Persona</b>"Microempreendedor de produto físico ou de serviços, homem ou mulher". Em 27/10 ficou produto físico; no diagnóstico, serviço voltou a entrar</li>
+            <li><b>Por que essa persona</b>"Porque acho que é quem pode pagar. Ainda não atendi ninguém". É uma aposta, falta o primeiro cliente confirmar</li>
+            <li><b>Promessa</b>Clara no que a sócia faz, mas sem prazo e sem prova. E abre com "inteligência artificial" pra quem acha que tecnologia é coisa dos outros</li>
+            <li><b>Preço</b>Não aparece no diagnóstico. Em 27/10: assinatura de R$97 a R$127 por mês. Falta o custo por cliente pra fechar a conta</li>
+            <li><b>Onde a sócia mora</b>Em 27/10 combinamos aplicativo. No brainstorm, o ideal é ficar no WhatsApp, "sem abrir nenhum aplicativo"</li>
+            <li><b>Grau de conhecimento</b>Persona iniciante: "acha que tecnologia é coisa para os outros". Ela não vai comprar sozinha por uma página</li>
+          </ul>
+        </div>
+      </div>
+      <h3 class="sec">Pra aprofundar</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="q2-1"><span>Da sócia, o que já está pronto e funcionando hoje, e o que ainda é ideia? Me mostra a tela.</span></li>
+        <li><input type="checkbox" id="q2-2"><span>O Silvino já usa? Há quantos dias? O que ele anota sem esforço, e o que ele deixa de anotar?</span></li>
+        <li><input type="checkbox" id="q2-3"><span>A conversa com o Silvino sobre as dificuldades do negócio (combinada em 27/10) aconteceu? O que mais pesa pra ele no dia a dia?</span></li>
+        <li><input type="checkbox" id="q2-4"><span>Os aplicativos da paróquia não pegaram por falta de engajamento. O que você aprendeu ali sobre fazer alguém usar uma ferramenta todo dia?</span></li>
+        <li><input type="checkbox" id="q2-5"><span>Fora o Silvino, quais microempreendedores você conhece pelo nome? Quantos vendem produto físico?</span></li>
+        <li><input type="checkbox" id="q2-6"><span>Quanto custa manter uma sócia ativa por mês (IA, servidor, WhatsApp)? Mesmo uma estimativa ajuda a fechar o preço no Encontro 2.</span></li>
+      </ul>
+      <label class="mark-done"><input type="checkbox" id="done-2" data-block-check="2"> Marcar bloco como feito</label>
+    </div>
+
+    <div class="card" data-panel="3">
+      <div class="card-head"><h2>Persona + Promessa</h2><span class="time">25–30 min</span></div>
+      <p class="card-sub">A base do plano de negócio do Encontro 2.</p>
+      <div class="hypothesis">
+        <b>Hipótese a validar:</b> o Silvino é o retrato da persona. Trabalha por conta própria, vende e entrega sozinho, e as contas ficam de cabeça ou no papel. O desejo que você escreveu (<i>"ter o negócio sob controle sem precisar virar gestor"</i>) é dele. Testar com 3 a 5 pessoas parecidas com ele.
+      </div>
+      <div class="hypothesis">
+        <b>Escolha a fazer:</b> produto físico ou serviço? Os dois têm rotinas diferentes. Quem vende produto precisa de <b>estoque</b>; quem presta serviço precisa de <b>agenda</b>. Uma sócia que faz os dois começa mais lenta e mais difícil de explicar. Definir qual dos dois vem primeiro.
+      </div>
+      <div class="two-col">
+        <div>
+          <div class="col-label">Persona — 7 dimensões</div>
+          <ul class="checklist">
+            <li><input type="checkbox" id="p-1"><span>Quem é: pensando no Silvino e em quem é parecido com ele, qual a idade, o que vende, quanto fatura por mês, é MEI?</span></li>
+            <li><input type="checkbox" id="p-2"><span>Situação atual: onde as contas ficam hoje? Caderno, cabeça, planilha largada? Quando foi a última vez que ele soube quanto sobrou no mês?</span></li>
+            <li><input type="checkbox" id="p-3"><span>Desejo profundo: por trás de "saber quanto entra e quanto sai", o que ele quer de verdade? Parar de ter susto no fim do mês? Saber se o negócio dá lucro? Ter tempo com a família?</span></li>
+            <li><input type="checkbox" id="p-4"><span>Dor principal: qual a frase exata que você escuta do Silvino quando o assunto é dinheiro do negócio?</span></li>
+            <li><input type="checkbox" id="p-5"><span>Medo/objeção: você listou "não sei mexer com tecnologia" e "já larguei a planilha". Qual dos dois aparece primeiro numa conversa?</span></li>
+            <li><input type="checkbox" id="p-6"><span>Já tentou: caderno, planilha, aplicativo de banco, contador. Por que nenhum resolveu?</span></li>
+            <li><input type="checkbox" id="p-7"><span>O que precisa ouvir: qual frase, se você dissesse pra ele, faria ele respirar aliviado?</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-label">Promessa Transformadora — 4 elementos</div>
+          <ul class="checklist">
+            <li><input type="checkbox" id="pr-1"><span>Resultado externo: sua última pequena vitória já dá o prazo da promessa: "fechou o primeiro mês sabendo quanto sobrou". Que tal a promessa dizer isso, com o tempo?</span></li>
+            <li><input type="checkbox" id="pr-2"><span>O que muda por dentro: você escreveu "decisões tomadas com segurança, e não no escuro". Como a pessoa se sente no fim do primeiro mês?</span></li>
+            <li><input type="checkbox" id="pr-3"><span>Diferencial: o que só a sua sócia tem? Ela nasce de um diagnóstico do negócio da pessoa, anota por mensagem e confirma antes de gravar. E quem monta é alguém que organiza processo e projeto há anos</span></li>
+            <li><input type="checkbox" id="pr-4"><span>Objeção: "será que funciona pro meu tipo de negócio?" O teste rápido (a pessoa escreve uma venda dela e vê a sócia anotar e fazer a conta) pode virar parte da promessa</span></li>
+            <li><input type="checkbox" id="pr-5"><span>A promessa abre com "uma inteligência artificial". Pra quem acha que tecnologia é coisa dos outros, isso assusta ou atrai? Testar uma versão que começa pelo resultado e deixa a IA pra depois</span></li>
+          </ul>
+        </div>
+      </div>
+      <label class="mark-done"><input type="checkbox" id="done-3" data-block-check="3"> Marcar bloco como feito</label>
+    </div>
+
+    <div class="card" data-panel="4">
+      <div class="card-head"><h2>Jornada + Ferramentas</h2><span class="time">20 min</span></div>
+      <p class="card-sub">Os passos que levam o microempreendedor do caderno ao mês fechado. Os seus 5 passos já estão bons; vamos validar.</p>
+      <ul class="bullets">
+        <li><b>Ponto de partida</b> (nas suas palavras): faz tudo sozinho, as contas ficam de cabeça, em papel ou numa planilha que ele não tem energia pra preencher, e não sabe quanto sobrou.</li>
+      </ul>
+      <h3 class="sec">Jornada (do seu diagnóstico)</h3>
+      <div class="flow">
+        <span class="step-chip"><b>1</b>Diagnóstico do negócio</span><span class="arrow">→</span>
+        <span class="step-chip"><b>2</b>Primeiras anotações</span><span class="arrow">→</span>
+        <span class="step-chip"><b>3</b>Ler o dia e a semana</span><span class="arrow">→</span>
+        <span class="step-chip"><b>4</b>Conversar com a sócia</span><span class="arrow">→</span>
+        <span class="step-chip"><b>5</b>Fechar o mês</span>
+      </div>
+      <h3 class="sec">Ferramentas</h3>
+      <ul class="bullets">
+        <li><b>Primeira ferramenta: o Diagnóstico do Negócio.</b> Já está no seu desenho e faz duas coisas ao mesmo tempo: monta a sócia do jeito da pessoa e serve pra vender. Numa conversa de Vendas Secretas, a pessoa responde, escreve uma venda dela e vê a sócia anotar na hora.</li>
+        <li><b>Travas viram ferramentas</b> (você mesma já listou): procrastinação → lembrete no fim do dia; não sabe o que anotar → primeira anotação feita junto com você + lista de perguntas prontas; medo de errar → o <q>Entendi assim</q> antes de gravar.</li>
+        <li><b>O hábito é o produto.</b> Os aplicativos da paróquia mostraram que ferramenta boa sem uso não vale nada. A primeira semana (passos 2 e 3) decide se a pessoa fica ou cancela a assinatura.</li>
+        <li><b>Brainstorm de R$500 mil:</b> ir até o negócio da pessoa e a conversa semanal com você são acompanhamento, não ferramenta. Isso pode virar um plano mais caro, com você junto. Pix e cartão automáticos, estoque e preço sugerido são versões futuras da sócia.</li>
+        <li><b>Contador de MEI como parceiro:</b> além de receber os números prontos, ele pode indicar a sócia pros clientes dele. Pode ser o seu canal de venda mais barato.</li>
+      </ul>
+      <label class="mark-done"><input type="checkbox" id="done-4" data-block-check="4"> Marcar bloco como feito</label>
+    </div>
+
+    <div class="card" data-panel="5">
+      <div class="card-head"><h2>Foco: o que entra agora e o que espera</h2><span class="time">10 min</span></div>
+      <div class="warning-box">
+        <b>Da nossa conversa de 27/10:</b> o que vende é a sócia pronta, não aula de IA. E a primeira venda é o marco que dá segurança pra todo o resto. Antes de construir as funções do brainstorm, o básico precisa estar nas mãos de quem paga.
+      </div>
+      <div class="scope">
+        <div class="scope-box yes">
+          <h3>Agora</h3>
+          <ul>
+            <li>Microempreendedor de produto físico (modelo Silvino)</li>
+            <li>Sócia no básico: anotar, ver o que entra, sai e sobra, fechar o mês</li>
+            <li>Silvino + 3 a 5 microempreendedores usando</li>
+            <li>Primeira assinatura vendida numa conversa</li>
+            <li>Preço da assinatura e custo por cliente (fecha no E2)</li>
+          </ul>
+        </div>
+        <div class="scope-box no">
+          <h3>Depois</h3>
+          <ul>
+            <li>Prestador de serviço (agenda no lugar de estoque)</li>
+            <li>Pix e cartão entrando sozinhos</li>
+            <li>Aviso de estoque e preço sugerido</li>
+            <li>Plano com acompanhamento seu (visita e conversa semanal)</li>
+            <li>Palestras, mentorias e equipes de grandes empresas</li>
+            <li>Parte jurídica (contratos, prazos, garantias)</li>
+          </ul>
+        </div>
+      </div>
+      <label class="mark-done"><input type="checkbox" id="done-5" data-block-check="5"> Marcar bloco como feito</label>
+    </div>
+
+    <div class="card" data-panel="6">
+      <div class="card-head"><h2>Primeiros passos + fechamento</h2><span class="time">10 min</span></div>
+      <p class="card-sub">Tarefas até o Encontro 2.</p>
+      <ul class="checklist">
+        <li><input type="checkbox" id="t-1"><span>Colocar o Silvino pra usar a sócia por 7 dias e anotar o que ele usou, o que esqueceu e onde travou</span></li>
+        <li><input type="checkbox" id="t-2"><span>Listar 5 microempreendedores de produto físico que você conhece pelo nome</span></li>
+        <li><input type="checkbox" id="t-3"><span>Conversar com 3 deles: diagnóstico do negócio + teste rápido com uma venda deles. Gravar, se eles deixarem</span></li>
+        <li><input type="checkbox" id="t-4"><span>Decidir onde a primeira versão mora: aplicativo ou WhatsApp</span></li>
+        <li><input type="checkbox" id="t-5"><span>Levantar quanto custa manter uma sócia ativa por mês</span></li>
+        <li><input type="checkbox" id="t-6"><span>Marcar a data do Encontro 2. Entre os encontros, a gente conversa pelo WhatsApp do suporte</span></li>
+      </ul>
+      <h3 class="sec">O que eu trago no Encontro 2</h3>
+      <ul class="bullets">
+        <li>Persona e Promessa organizadas a partir das respostas de hoje, pra você validar</li>
+        <li>Modelo de negócio da Sócia Invisível no formato Canvas, com preço da assinatura, custos e parceiros</li>
+        <li>Roteiro da conversa de venda da sócia (Vendas Secretas), usando o diagnóstico do negócio como ferramenta</li>
+      </ul>
+      <label class="mark-done"><input type="checkbox" id="done-6" data-block-check="6"> Marcar bloco como feito</label>
+    </div>
+
+  </div>
+
+  <div class="foot">
+    Baseado na sessão estratégica de 27/10 (Google Meet), no pré-diagnóstico de 27/10 e no Diagnóstico do Método VIP respondido em 05/11. Marcações de progresso ficam salvas só neste navegador; as observações ficam salvas na página.
+  </div>
+</div>
+<script>
+(function(){
+  var STORAGE_KEY = 'encontro1-sandra-progress-v1';
+  var nodeBtns = document.querySelectorAll('.node-btn');
+  var panels = document.querySelectorAll('[data-panel]');
+  var lines = document.querySelectorAll('[data-line]');
+  var blockChecks = document.querySelectorAll('[data-block-check]');
+  var subChecks = document.querySelectorAll('.checklist input[type="checkbox"]');
+  var total = blockChecks.length;
+
+  function loadState(){
+    try{ var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : {blocks:{}, subs:[], active:'1'}; }
+    catch(e){ return {blocks:{}, subs:[], active:'1'}; }
+  }
+  function saveState(s){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }catch(e){} }
+  var state = loadState();
+  state.blocks = state.blocks || {}; state.subs = state.subs || [];
+
+  function setActive(id){
+    state.active = id;
+    nodeBtns.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-node')===id); });
+    panels.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-panel')===id); });
+    lines.forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-line')===id); });
+    saveState(state);
+  }
+  nodeBtns.forEach(function(btn){ btn.addEventListener('click', function(){ setActive(btn.getAttribute('data-node')); }); });
+
+  function updateProgress(){
+    var done = document.querySelectorAll('[data-block-check]:checked').length;
+    document.getElementById('progress-count').textContent = done + '/' + total + ' blocos';
+    document.getElementById('progress-fill').style.width = (done/total*100) + '%';
+  }
+  blockChecks.forEach(function(cb){
+    var n = cb.getAttribute('data-block-check');
+    var btn = document.querySelector('.node-btn[data-node="'+n+'"]');
+    cb.checked = !!state.blocks[n];
+    if(cb.checked && btn) btn.classList.add('done');
+    cb.addEventListener('change', function(){
+      state.blocks[n] = cb.checked;
+      if(btn) btn.classList.toggle('done', cb.checked);
+      saveState(state); updateProgress();
+    });
+  });
+  subChecks.forEach(function(cb, i){
+    var li = cb.closest('li');
+    cb.checked = !!state.subs[i];
+    if(cb.checked) li.classList.add('checked');
+    cb.addEventListener('change', function(){
+      state.subs[i] = cb.checked;
+      li.classList.toggle('checked', cb.checked);
+      saveState(state);
+    });
+  });
+  setActive(state.active || '1');
+  updateProgress();
+})();
+</script>
+<script>
+/* Observações: uma por tópico + uma por bloco, salvas no banco do artifact (fallback: este navegador) */
+(function(){
+  var LOCAL_KEY='encontro1-sandra-notas-v1';
+  var fields={};
+  document.querySelectorAll('.checklist li').forEach(function(li){
+    var cb=li.querySelector('input[type="checkbox"]'); if(!cb||!cb.id) return;
+    var ta=document.createElement('textarea');
+    ta.className='note'; ta.id='nota-'+cb.id; ta.rows=1; ta.placeholder='Observações';
+    ta.setAttribute('aria-label','Observações');
+    li.appendChild(ta); fields[ta.id]=ta;
+  });
+  document.querySelectorAll('.card[data-panel]').forEach(function(card){
+    var n=card.getAttribute('data-panel');
+    var wrap=document.createElement('div'); wrap.className='block-note';
+    var lab=document.createElement('label'); lab.className='col-label'; lab.htmlFor='nota-bloco-'+n; lab.textContent='Observações do bloco';
+    var ta=document.createElement('textarea'); ta.className='note'; ta.id='nota-bloco-'+n; ta.rows=3; ta.placeholder='Anotações gerais deste bloco';
+    var st=document.createElement('div'); st.className='save-state'; st.setAttribute('aria-live','polite');
+    wrap.appendChild(lab); wrap.appendChild(ta); wrap.appendChild(st);
+    var md=card.querySelector('.mark-done'); card.insertBefore(wrap, md);
+    fields[ta.id]=ta;
+  });
+  function stateEl(ta){ var c=ta.closest('.card'); return c?c.querySelector('.save-state'):null; }
+  function show(ta,msg){ var e=stateEl(ta); if(e) e.textContent=msg; }
+
+  var local={}; try{ local=JSON.parse(localStorage.getItem(LOCAL_KEY)||'{}'); }catch(e){ local={}; }
+  Object.keys(fields).forEach(function(k){ if(local[k]) fields[k].value=local[k]; });
+  function saveLocal(k,v){ local[k]=v; try{ localStorage.setItem(LOCAL_KEY, JSON.stringify(local)); }catch(e){} }
+
+  var col=null, timers={}, last={};
+  function persist(k){
+    var ta=fields[k], v=ta.value;
+    saveLocal(k,v);
+    if(!col){ show(ta,'Salvo neste navegador'); return; }
+    if(last[k]===v) return;
+    show(ta,'Salvando…');
+    col.doc(k).set({texto:v, atualizado:new Date().toISOString()}).then(function(){
+      last[k]=v; show(ta,'Salvo');
+    }).catch(function(){ show(ta,'Não salvou no servidor — ficou salvo neste navegador'); });
+  }
+  Object.keys(fields).forEach(function(k){
+    var ta=fields[k];
+    ta.addEventListener('input',function(){ clearTimeout(timers[k]); timers[k]=setTimeout(function(){ persist(k); },900); });
+    ta.addEventListener('blur',function(){ clearTimeout(timers[k]); persist(k); });
+  });
+
+  if(window.claude && window.claude.use){
+    window.claude.use('db').then(function(db){
+      if(!db) return;
+      col=db.collection('notas');
+      col.onSnapshot(function(snap){
+        snap.docs.forEach(function(d){
+          var ta=fields[d.id]; if(!ta) return;
+          var body=d.data()||{}; var v=typeof body.texto==='string'?body.texto:'';
+          last[d.id]=v;
+          if(document.activeElement!==ta && ta.value!==v){ ta.value=v; saveLocal(d.id,v); }
+        });
+      });
+    }).catch(function(){});
+  }
+})();
+</script>
