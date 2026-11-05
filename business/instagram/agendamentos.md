@@ -206,3 +206,4 @@
 | 26/10/2026 | vender-pouco-conversas-clientes | 01/11/2026 20h BRT | via GitHub Actions | agendado (workflow: post-vender-pouco-conversas-clientes.yml) — 8 slides no Cloudinary (URLs 200 OK) — 20h como os anteriores — no GitHub (commit ad20086) |
 | 29/10/2026 | 7 carrosséis agendados (apple a vender-pouco) | sem mudança de data | via GitHub Actions | ajuste: slide 9 = convite preto da live (Cloudinary convites/convite-live-expert360-preto.png) + legenda termina com CTA AULA — no GitHub |
 | 30/10/2026 | fracassos-viram-metodo | 05/11/2026 20h BRT | via GitHub Actions | agendado (workflow: post-fracassos-viram-metodo.yml) — 8 slides no Cloudinary (URLs 200 OK) + convite preto da live — legenda com CTA AULA — no GitHub |
+| 05/11/2026 | nao-faca-so-porque-todos-fazem | 05/11/2026 12h | 18637952740063867 | publicado automaticamente |
