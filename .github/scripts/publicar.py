@@ -23,6 +23,7 @@ SCHEDULE = {
     "2026-06-27": "medo-parecer-amadora",
     "2026-06-28": "nao-precisa-seguidores",
     "2026-06-29": "sabe-demais-paralisando",
+    "2026-11-05": "nao-faca-so-porque-todos-fazem",
 }
 
 # ── Paths ─────────────────────────────────────────────────────────────────────

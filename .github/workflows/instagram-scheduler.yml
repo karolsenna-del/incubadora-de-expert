@@ -2,6 +2,7 @@ name: Instagram Scheduler
 
 on:
   schedule:
+    - cron: '0 19 5 11 *'    # 05/11/2026 15h America/Cuiaba
     - cron: '0 15 25 6 *'   # 25/06 12h BRT — diploma-vs-vivencia
     - cron: '0 15 26 6 *'   # 26/06 12h BRT — duas-pos-graduacoes
     - cron: '0 15 27 6 *'   # 27/06 12h BRT — medo-parecer-amadora
@@ -11,6 +12,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: instagram-carousel-publisher
+  cancel-in-progress: false
 
 jobs:
   publicar:
