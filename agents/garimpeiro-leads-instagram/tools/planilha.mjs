@@ -14,7 +14,8 @@
 //   node planilha.mjs migrar --perfil karol     → preenche o rastreador das linhas antigas (só onde "Grupo" está vazio)
 //   node planilha.mjs recalcular --perfil karol → régua mudou: reescreve fit, prioridade, "postou 30 dias" e "Revisar:" das rodadas locais
 //   node planilha.mjs formatar --perfil karol   → aparência (cores por situação, colunas de sistema ocultas, ordem por prioridade) + aba Legenda (idempotente)
-//   node planilha.mjs copy --perfil karol --arquivo {json fora do repo: {"@arroba": "mensagem"}} [--sobrescrever] → grava a 1ª mensagem do Vendedor Expert na coluna Copy (só onde está vazia)
+//   node planilha.mjs copy --perfil karol --arquivo {json fora do repo: {"@arroba": "mensagem"}} [--sobrescrever] → grava a 1ª mensagem na coluna Copy (só onde está vazia)
+//   node planilha.mjs sincronizar --perfil karol → Status diferente de "Sem abordagem" vira "aprovado" na revisão (+ data de hoje se vazia); reordena (também roda no enviar e no formatar)
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
@@ -64,6 +65,8 @@ const MENUS = {
   'Status': ['Sem abordagem', 'Abordagem feita', 'Em conversa', 'Respondeu', 'Sessão agendada', 'Sessão realizada', 'Proposta enviada', 'Cliente', 'Vai pensar', 'Lead frio'],
   'Fechou?': ['Sim', 'Não', 'Em aberto'],
   'Depoimento': ['Pendente', 'Solicitado', 'Recebido'],
+  // Desde 05/11/2026 (Karol): a rodada já entrega a Copy; ela abre o perfil uma vez, envia e muda o Status
+  // (sai de "Sem abordagem"). O "aprovado" na revisão entra sozinho; ela só marca "descartado". "enviado" não existe mais.
   'Status revisão': ['aprovado', 'descartado'],
 };
 
@@ -135,7 +138,7 @@ async function chamar(corpo) {
     body: JSON.stringify(corpo),
   });
   const txt = await r.text();
-  if (!r.ok) throw new Error(`Webhook ${r.status}: ${txt.slice(0, 200)}`);
+  if (!r.ok) throw new Error(`Webhook ${r.status} (${corpo.acao}${corpo.intervalo ? " " + corpo.intervalo : ""}): ${txt.slice(0, 200)}`);
   const d = JSON.parse(txt);
   if (d.error) throw new Error(`Sheets: ${JSON.stringify(d.error).slice(0, 200)}`);
   return d;
@@ -208,9 +211,9 @@ function situacoes() {
     { nome: 'Perdido', quando: 'Status "Lead frio" ou "Reprovado", ou Fechou? "Não"', formula: `=(${st}="Lead frio")+(${st}="Reprovado")+(${fechou}="Não")>0`, fundo: COR.cinza, texto: COR.cinzaTexto },
     { nome: 'Cliente', quando: 'Status "Cliente" ou Fechou? "Sim"', formula: `=(${st}="Cliente")+(${fechou}="Sim")>0`, fundo: COR.preto, texto: COR.laranja, negrito: true },
     { nome: 'Follow-up vencido', quando: `Em conversa e a Data Próxima Ação chegou (sem data: ${DIAS_FOLLOW_UP} dias depois da última interação)`, formula: `=(${conversa})*((${prox}<>"")*(${prox}<=TODAY())+(${prox}="")*(${ult}<>"")*(${ult}<=TODAY()-${DIAS_FOLLOW_UP}))>0`, fundo: COR.laranja, texto: COR.branco, negrito: true },
-    { nome: 'Em conversa', quando: 'Já abordado e o follow-up ainda não venceu', formula: `=(${st}<>"")*(${st}<>"Sem abordagem")>0`, fundo: COR.cinzaClaro, texto: COR.preto },
-    { nome: 'Pronto pra abordar', quando: 'Você aprovou e ainda não abordou', formula: `=(${rev}="aprovado")*((${st}="")+(${st}="Sem abordagem"))>0`, fundo: COR.laranjaClaro, texto: COR.preto },
-    { nome: 'A revisar', quando: 'Status revisão em branco: falta você aprovar ou descartar', formula: null, fundo: COR.branco, texto: COR.preto },
+    { nome: 'Em conversa', quando: 'Já abordado (Status saiu de "Sem abordagem") e o follow-up ainda não venceu', formula: `=(${st}<>"")*(${st}<>"Sem abordagem")>0`, fundo: COR.cinzaClaro, texto: COR.preto },
+    { nome: 'Pronto pra abordar', quando: 'Linha antiga que você aprovou e ainda não abordou', formula: `=(${rev}="aprovado")*((${st}="")+(${st}="Sem abordagem"))>0`, fundo: COR.laranjaClaro, texto: COR.preto },
+    { nome: 'A revisar', quando: 'Status "Sem abordagem" e revisão em branco: a Copy já está na linha, falta você conferir o perfil e enviar ou descartar', formula: null, fundo: COR.branco, texto: COR.preto },
   ];
 }
 
@@ -264,10 +267,36 @@ async function formatarAba(destino, totalLinhas) {
   await chamar({ acao: 'formatar', planilha: destino.planilha, aba: destino.aba, colunas: TOTAL_COLUNAS, pedidos: pedidosAparencia(totalLinhas) });
 }
 
+// Status fora de "Sem abordagem" (Karol, 05/11/2026) = 1ª mensagem mandada, então a revisão vira "aprovado" sozinha
+// (nunca por cima de "descartado"). Linha antiga com "enviado" também vira "aprovado". Data Última Interação = hoje
+// quando vazia, pra cor de follow-up funcionar.
+async function sincronizarAprovados(destino, valores) {
+  const [, ...linhas] = valores;
+  const [iRev, iSt, iUlt] = ['Status revisão', 'Status', 'Data Última Interação'].map(indiceDe);
+  const hoje = new Date().toLocaleDateString('sv-SE', { timeZone: 'America/Campo_Grande' }); // AAAA-MM-DD: a planilha lê em qualquer idioma
+  // Escreve só nas linhas que mudaram (célula a célula): reescrever a coluna inteira devolveria as datas já
+  // existentes como texto formatado e poderia trocar dia e mês.
+  let marcadas = 0;
+  for (const [k, l] of linhas.entries()) {
+    const abordado = l[iSt] && l[iSt] !== 'Sem abordagem';
+    const rev = l[iRev] || '';
+    if (rev === 'descartado' || rev === 'reprovado') continue;
+    if (!(abordado && rev !== 'aprovado') && rev !== 'enviado') continue;
+    const linha = k + 2;
+    await atualizar(destino, `${letra(iRev)}${linha}:${letra(iRev)}${linha}`, [["aprovado"]]); // célula sozinha sem ":" dá erro 500 no n8n
+    if (abordado && !l[iUlt]) await atualizar(destino, `${letra(iUlt)}${linha}:${letra(iUlt)}${linha}`, [[hoje]], true);
+    marcadas++;
+  }
+  return marcadas;
+}
+
 // Ordena e reescreve as fórmulas (depois da ordenação cada linha volta a apontar pra ela mesma).
 async function organizar(destino) {
-  const total = (await lerValores(destino)).length - 1;
+  const valores = await lerValores(destino);
+  const total = valores.length - 1;
   if (total < 1) return 0;
+  const aprovados = await sincronizarAprovados(destino, valores);
+  if (aprovados) console.log(JSON.stringify({ viraram_aprovado: aprovados }));
   await escreverScores(destino, total);
   await chamar({ acao: 'formatar', planilha: destino.planilha, aba: destino.aba, colunas: TOTAL_COLUNAS, pedidos: [pedidoOrdenar(total)] });
   await escreverScores(destino, total);
@@ -283,10 +312,11 @@ async function escreverLegenda(destino) {
   const linhas = [
     ['Cor da linha', 'O que quer dizer', 'O que fazer'],
     ...sit.map((s) => [s.nome, s.quando, {
-      'Follow-up vencido': 'Fazer o follow-up hoje', 'Pronto pra abordar': 'Abordar (a Copy já está na linha)', 'A revisar': 'Aprovar ou descartar',
+      'Follow-up vencido': 'Fazer o follow-up hoje', 'Pronto pra abordar': 'Abordar e mudar o Status', 'A revisar': 'Abrir o perfil, mandar a Copy e mudar o Status (ou marcar "descartado")',
       'Em conversa': 'Esperar; anotar a Data Próxima Ação', 'Cliente': 'Pedir depoimento', 'Perdido': 'Nada', 'Descartado': 'Nada',
     }[s.nome]]),
     [''], ['A aba Garimpo vem ordenada por Prioridade (Alta → Baixa), com descartados e perdidos no fim. Para ver só uma situação, use o filtro no cabeçalho.'],
+    ['Cada lead já chega com a Copy (1ª mensagem). Abra o perfil uma vez: se fizer sentido, mande a mensagem e mude o Status (ex.: "Abordagem feita"); a revisão vira "aprovado" sozinha. Se não fizer sentido, marque "descartado".'],
   ];
   await atualizar(leg, `A1:C${linhas.length}`, linhas.map((l) => [...l, '', ''].slice(0, 3)));
   const p = [
@@ -335,6 +365,9 @@ async function enviar(caminhoRodada) {
   // Sem resposta ≠ "A avaliar": toda pergunta precisa de Sim, Não ou A avaliar (essa vira observação pra Karol).
   const semFit = classificados.filter((p) => FITS.some((f) => !p[f.campo]));
   if (semFit.length) throw new Error(`${semFit.length} perfil(s) com pergunta de fit sem resposta (use "${A_AVALIAR}" quando não der pra avaliar)`);
+  // Desde 05/11/2026 a rodada entrega a 1ª mensagem junto: lead sem Copy obrigaria a Karol a abrir o perfil duas vezes.
+  const semCopy = classificados.filter((p) => !String(p.copy || '').trim());
+  if (semCopy.length) throw new Error(`${semCopy.length} perfil(s) sem copy (1ª mensagem) — escrever no campo "copy" antes de enviar`);
   const ordem = { Alta: 0, Média: 1, Baixa: 2 };
   const recente = (p) => (postouRecente(p, rodada.data) === 'Sim' ? 0 : 1);
   classificados.sort((a, b) => (ordem[prioridadeAbordagem(a)] - ordem[prioridadeAbordagem(b)]) || (recente(a) - recente(b)));
@@ -344,7 +377,7 @@ async function enviar(caminhoRodada) {
   const linhas = lote.filter((p) => !jaNaAba.has(p['@'])).map((p) => [
     rodada.data, perfil.nome, p.termo || '', p.nome, p['@'], p.link_perfil, p.bio, p.link_externo,
     String(p.seguidores), p.categoria || '', p.sinais || '', p.aderencia, postouRecente(p, rodada.data),
-    p.motivo_nota || '', p.fato_gancho, p.fonte_gancho, '', '',
+    p.motivo_nota || '', p.fato_gancho, p.fonte_gancho, '', p.copy,
     ...blocoRastreador(p),
   ]);
   if (!linhas.length) return console.log('Nada novo pra enviar.');
@@ -469,7 +502,8 @@ if (process.argv[1]?.endsWith('planilha.mjs')) {
     else if (cmd === 'recalcular') await recalcular(perfil());
     else if (cmd === 'formatar') await formatar(perfil().destino);
     else if (cmd === 'copy') await gravarCopy(perfil(), opt.arquivo, resto.includes('--sobrescrever'));
-    else if (cmd) console.log('Comandos: enviar | listar | preparar | migrar | recalcular | formatar | copy');
+    else if (cmd === 'sincronizar') console.log(JSON.stringify({ linhas: await organizar(perfil().destino) }));
+    else if (cmd) console.log('Comandos: enviar | listar | preparar | migrar | recalcular | formatar | copy | sincronizar');
   } catch (e) {
     console.error('ERRO:', e.message);
     process.exit(1);

@@ -4,20 +4,23 @@ responsavel: "@garimpeiro-leads-instagram"
 responsavel_type: "agent"
 atomic_layer: "task"
 Entrada: "Cliente (karol ou aluno) + termos (profissões, cargos, frases de dor)"
-Saida: "Até 50 perfis classificados (aderência + 4 perguntas de fit + Perfil) na aba de garimpo do cliente + relatório da rodada"
+Saida: "Até 50 perfis classificados (aderência + 4 perguntas de fit + Perfil) e com a 1ª mensagem (Copy) pronta, na aba de garimpo do cliente + relatório da rodada"
 Checklist:
   - "Perfil do cliente carregado"
   - "Fase 1: candidatos descobertos por busca na web"
   - "Fase 2: perfil público lido, dedup + filtro mecânico, fit 1-3 respondido"
   - "Fase 3: quem passou foi aprofundado logado (teto respeitado)"
   - "Cada perfil com aderência, 4 perguntas de fit, Perfil e fato-gancho com fonte"
+  - "Cada perfil entregue com a Copy (1ª mensagem) escrita"
   - "Aba preenchida (garimpo + rastreador)"
   - "Relatório entregue"
   - "Mission Log + playbook atualizados"
 execution_type: "semantic"
 ---
 
-# Task: Rodada de Garimpo (v2 — custo zero, 18/10/2026)
+# Task: Rodada de Garimpo (v3 — garimpa, qualifica e escreve a copy, 05/11/2026)
+
+> **Processo desde 05/11/2026 (Karol):** o Garimpeiro garimpa, qualifica e já escreve a 1ª mensagem. A Karol abre cada perfil UMA vez: se aprovar, manda a Copy na hora e muda o Status (sai de "Sem abordagem"), e a revisão vira "aprovado" sozinha; se não, marca "descartado". "enviado" não existe mais. Nada de revisar num dia e voltar no perfil pra abordar depois.
 
 Pipeline completo pra um cliente. SOP base: Playbook SOP-001. Sem Apify, sem ferramenta paga.
 
@@ -105,6 +108,16 @@ Regras de julgamento:
 
 Gravar o JSON editado (Edit/Write no próprio arquivo da rodada).
 
+### 5b. Copy da 1ª abordagem (o agente — desde 05/11/2026)
+Pra CADA item não descartado, escrever a 1ª mensagem no campo `copy` do próprio item (o `enviar` recusa lead sem copy). É DM fria no Instagram, com a voz da Karol:
+- 3 linhas: `Oi, {primeiro nome}! Tudo bem?` · o fato-gancho dito com as palavras do perfil ("Vi que você...", "Cheguei no seu perfil e vi que...") · UMA pergunta aberta sobre ensinar/levar o que ela sabe pra mais gente além do atendimento 1 a 1.
+- Exemplo aprovado: "Oi, Eduarda! Tudo bem? / Cheguei no seu perfil e vi que você é especialista em TCC pela PUCRS e atende em Santa Rosa. / Fiquei curiosa: hoje você só atende ou já pensou em ensinar o que você faz pra outras pessoas?"
+- Sem pitch, sem link, sem preço, sem nome de produto, sem "mentoria". Nada de elogio genérico: o gancho é o fato concreto.
+- A pergunta conversa com o fit: servidor/CLT → o conhecimento da carreira; liberal → ir além do atendimento. Perfil `Analista` = mais objetiva; `Conector` = mais calorosa.
+- Gênero: não deduzir pelo nome (KB do Vendedor Expert §5). Flexionar só o que é da Karol ("curiosa") ou o que o próprio perfil usa ("psicóloga").
+- Nome: primeiro nome como aparece no perfil; sem nome claro → "Oi! Tudo bem?".
+- Ao escrever a próxima mensagem dessa lead, quem conduz é o Vendedor Expert (R-008: reler a Copy enviada antes).
+
 ### 6. Enviar
 `node agents/garimpeiro-leads-instagram/tools/planilha.mjs enviar --rodada agents/garimpeiro-leads-instagram/rodadas/{arquivo}.json`
 - Ordena por Prioridade de abordagem e por quem postou nos últimos 30 dias, corta em 50, pula quem já está na aba, recusa item sem fato-gancho ou com fit sem resposta.
@@ -119,9 +132,9 @@ Descobertos {N} → duplicados {N} → descartados {N} (principais motivos: ...)
 Aderência: alta {N} · média {N} · baixa {N} · Score de Fit: 4 = {N} · 3 = {N} · 2 ou menos = {N}
 Custo: zero
 Termo que rendeu melhor: ... · Termo fraco: ... (sugestão: ...)
-Lista na aba "{aba}". Revisa a coluna "Status revisão" (aprovado/descartado); o acompanhamento segue no bloco do rastreador.
+Lista na aba "{aba}", cada lead já com a Copy. Abre o perfil uma vez: manda a Copy e muda o Status (ex.: "Abordagem feita"), ou marca "descartado" na revisão.
 ```
-Pra Karol: lembrar que os aprovados vão pro Vendedor Expert escrever a mensagem (o Perfil ajuda a escolher o tom).
+Na rodada seguinte, o `enviar` (ou `planilha.mjs sincronizar`) marca "aprovado" na revisão de toda linha cujo Status saiu de "Sem abordagem" (nunca por cima de "descartado") e põe a data do dia se a Data Última Interação estiver vazia. Resposta da lead → Vendedor Expert conduz.
 
 ### 8. Documentar
 - Mission Log: 1 linha.
@@ -129,7 +142,7 @@ Pra Karol: lembrar que os aprovados vão pro Vendedor Expert escrever a mensagem
 - Se houve incidente → regra nova em rules.
 
 ## Veto
-- Entregar perfil sem fato-gancho/fonte ou com pergunta de fit sem resposta
+- Entregar perfil sem fato-gancho/fonte, com pergunta de fit sem resposta ou sem Copy
 - Abrir logado quem foi descartado na fase 2, passar do teto, ou insistir depois de 401/403/429
 - Usar outra conta que não a `referenciasgpt`
 - Escrever fora de aba "Garimpo*"

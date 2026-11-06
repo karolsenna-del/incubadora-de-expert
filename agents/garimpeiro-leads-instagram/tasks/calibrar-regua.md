@@ -13,7 +13,7 @@ execution_type: "semantic"
 ## Passos
 1. `node agents/garimpeiro-leads-instagram/tools/planilha.mjs listar --perfil {cliente}` → linhas com "Status revisão" preenchido desde a última calibração (data no Mission Log).
 2. Calcular:
-   - Acerto por prioridade: aprovados ÷ revisados (p1, p2, p3)
+   - Acerto por prioridade: aprovados ÷ revisados (p1, p2, p3). "aprovado" entra sozinho quando o Status sai de "Sem abordagem"; "enviado" antigo conta como aprovado
    - Acerto por termo
    - Padrões nos descartados da Karol (palavras na bio, categoria, faixa de seguidores)
 3. Se acerto da prioridade 1 ≥ 70% → registrar no Mission Log e seguir.
