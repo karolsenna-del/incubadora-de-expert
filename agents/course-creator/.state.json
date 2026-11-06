@@ -192,7 +192,34 @@
   "decisao_estrutura_modulos": "Cada módulo tem Aula de Introdução + aulas de conteúdo + Aula de Encerramento. +2 aulas por módulo, total ~42 aulas.",
   "decisao_formulario_pre_diagnostico": "Quando a sessão é agendada, a aluna envia o link do Formulário de Pré-Diagnóstico (Google Forms). 12 perguntas: perfil (nome, profissão, experiência, modo de atuação), situação atual (descrição, histórico digital, desafio), contexto econômico (faixa de renda, histórico de investimento), contexto da sessão (motivação, resultado esperado, dúvidas). A aluna lê as respostas antes da sessão — poupa 10 minutos de aquecimento.",
   "aulas_completas_atualizacao": "Aula 2 M0: ajuste retroativo — instrução do Drive aplicada (uma linha).",
-  "ultima_sessao": "2026-09-26",
+  "ultima_sessao": "2026-11-05",
+  "m5_escala": {
+    "status": "em_design — ferramenta Expert Plan antes dos roteiros (decisão da Karol 04/11/2026)",
+    "decisao": "Expert Plan vira M5 (Escala) do Expert360º, não curso separado",
+    "ferramenta_camadas": "Estratégico = meta de faturamento total; Tático = funil x produtos; Operacional = qtd de abordagens, leads, sessões e lives → rotina comercial semanal (previsibilidade e recorrência)",
+    "base": "planilha atual '6- Expert Plan' (Drive 1T8hHRb1IRXDuRElpUwNKa8tHWuVxWp_g6gyPUB5vHpE): Estratégico por produto/ano com renovação; Tático com funis por ano; Plano de Ação vazio",
+    "funis": "Vendas Secretas (1º funil, valida o método, abordagem de quem conhecemos, maior conversão), Lives Secretas, Mini-treinamento, VSL, Venda por mensagem",
+    "horizonte": "mês a mês, curto/médio prazo (12 meses)",
+    "taxas_decididas": "Comparecimento na sessão = 80% em todos os funis (Karol: nunca teve baixo comparecimento porque é ela quem faz todo o funil; cai quando equipe comercial aborda e faz a sessão). Lives Secretas: Karol tem 80 pessoas no grupo e já fechou venda — conta começa no grupo, não nos convidados. Vendas Secretas não pode pedir ~190 abordagens/venda (rede quente). Demais taxas em revisão.",
+    "taxas_aprovadas_04_11": "Karol aprovou ('tão bons'): VS abordagem→responde 50% → aceita sessão 30% → comparece 80% → fecha 25% (~33 abordagens/venda); Lives Secretas pessoa nova no grupo → assiste 40% → pede sessão 15% → comparece 80% → fecha 25%, convite→grupo 20%; Mini lead→agenda sessão pelo WhatsApp 3% → 80% → 25%, visitante→lead 30%; VSL visitante→compra 0,5%; Mensagem levantada de mão→conversa 50% → fecha 5%. Produto de cada funil fica livre (aba Tático, % por produto).",
+    "planilha_v1": "business/campanhas/expert360-curso/materiais/M5/M5.1 - Meu Expert Plan.xlsx (gerada por _gerar-expert-plan.py; fórmulas recalculadas e conferidas 04/11). Abas: Como usar, 1. Estratégico, 2. Tático, 3. Operacional, 4. Rotina semanal, 5. Acompanhamento. Exemplo: meta R$120k, Mentoria R$3.000 x2/mês, Curso R$497 x10/mês. Aguardando aprovação da Karol; Drive ainda não espelhado.",
+    "decisoes_04_11_v2": "(1) Funis entram em estágios na ordem: Vendas Secretas 100% → + Lives → + Mini → + Mensagem → + VSL (só com curso gravado ou low ticket). (2) Com mais funis, Vendas Secretas perdem peso (lives e mini também levam pra sessão; expert ganha tempo): produto Principal 100 / 60-40 / 40-35-25 / 30-30-20-20 / igual; produto Gravado (nome da Karol; ela é contra começar pelo gravado) no estágio 5 = 70% VSL + 30% Mensagem. (3) SEMPRE taxa pessimista — sem coluna 'sua taxa real' no cálculo; aluno passa da meta e fica feliz; taxas reais só aparecem comparadas no Acompanhamento. Racional: quem chega na escala está no fim do acesso → renovação pra continuar e melhorar conversão. (4) Não existe oficina de nenhum funil (ninguém entrou na oferta do Grupo) → Lives, Mini, Mensagem e VSL serão ensinados no M5; hoje o curso só ensina Vendas Secretas (M3). (5) Rotina semanal ganhou limite de sessões/semana com aviso.",
+    "planilha_v2": "mesmo arquivo, v2 04/11: tipo de produto (Principal/Gravado), seletor de estágio 1-5 no Tático, taxas fixas pior cenário, aviso de agenda. Conferida com recálculo nos estágios 1 e 5.",
+    "proximo": "ok da Karol → espelhar M5.1 no Drive → aulas do M5 (1ª aula: passagem do Rastreador do M3 pro Expert Plan + 4 colunas)",
+    "escada_produtos_karol": "O que a Karol faz e ensina hoje (04/11): Mentoria completa (individual e depois em grupo — nível avançado, estágio 5), Mentoria VIP 3 encontros (flexível: downsell ou entrada), Mentoria Destrava 1 sessão (1 ponto do método). Só depois disso grava alguma coisa. Exemplo da planilha trocado: meta R$100k, completa R$5.000 x1, VIP R$1.500 x2, Destrava R$300 x4, sem gravado, estágio 4. Achado: 7 vendas/mês todas por sessão = 8 sessões/semana (passa do limite de 6) — downsell sai da mesma sessão, a planilha ainda conta sessão separada (em decisão).",
+    "decisao_05_11_sessoes": "Cada venda tem sessão própria: o pré-diagnóstico já direciona o lead pra completa ou VIP antes da sessão (não é downsell, é a necessidade do lead). Planilha mantém 1 sessão por venda.",
+    "v3_em_construcao_05_11": {
+      "decisoes": [
+        "plano mês a mês (12 colunas: produtos, estágio, capacidade por mês; meses passados preservados)",
+        "Rastreador do M3 fica como gravado (validação); as 4 colunas (Funil de origem, Data da abordagem, Data da sessão, Produto vendido) só existem na aba Rastreador do Expert Plan (M5). Aluno cola as linhas A:S do M3 uma vez na 1ª aula do M5.",
+        "Acompanhamento puxa realizado do Rastreador por data (sem digitar de novo)",
+        "gráfico meta x realizado acumulado no mês",
+        "M3.5 revertido ao original (bate com a aula gravada)"
+      ],
+      "status": "pronta no repo, aguardando ok da Karol; Drive não espelhado (M5.1)"
+    },
+    "planilha_v3": "M5/M5.1 - Meu Expert Plan.xlsx: Como usar, Painel do mês (gráfico dia a dia), Rastreador de Leads (23 colunas), 1 Estratégico (produtos x 12 meses), 2 Tático (estágio por mês + produto por produto de 1 mês), 3 Operacional, 4 Rotina semanal, 5 Acompanhamento (realizado puxado do Rastreador + gráfico acumulado). Gerador: M5/_gerar-expert-plan.py (2º argumento: M3/M3.5 - Rastreador de Leads Qualificados.xlsx original; o gerador acrescenta as 4 colunas)."
+  },
   "drive_path": "G:\\Meu Drive\\PRODUTOS\\Curso Expert360\\",
   "modulo_orientacoes": {
     "status": "roteiros_completos",

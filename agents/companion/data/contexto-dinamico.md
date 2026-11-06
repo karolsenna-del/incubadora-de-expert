@@ -679,3 +679,35 @@ Retomar com: `/expert-companion`
 
 - 03/11 — Folder da live 04/11 ("Como ser escolhido") animado em câmera lenta (10s, 4:5, sem áudio): Downloads/Como ser escolhido - animado.mp4; projeto em Videos/edicao-euriliana/folder-live-escolhido.
 - 03/11 — Versão com só o ícone animado: Downloads/Como ser escolhido - icone animado.mp4 (Karol preferiu o resto parado).
+
+## 05/11/2026 — Expert360º M5: Expert Plan v3 (mês a mês + Rastreador)
+- Pronto no repo: M5/M5.1 - Meu Expert Plan.xlsx (Painel do mês, Rastreador, Estratégico x 12 meses, Tático, Operacional, Rotina, Acompanhamento com gráfico) ; o Rastreador do M3 voltou ao original (as 4 colunas de data só existem no M5).
+- Conferido no Excel com dados de teste: sem erros de fórmula; gráficos ok.
+- Espera a Karol: ok final → espelhar o M5.1 no Drive → aulas do M5.
+
+
+## Sessão da Juliani Hunemeyer (05/11): Incubadora Express, com radar
+- Pré-diagnóstico de 05/11 importado no radar (juliani.hunemeyer@gmail.com). Roteiro em `business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/juliani-hunemeyer-sessao.md`.
+- Psicoterapia + homeopatia, ex-controller e contadora (ponte com a história da Karol), sem renda, decide com o marido (convidar pros 15 min finais). Oferta assumida: Express (a Karol pode trocar pra VIP). Perfil provável: Conectora.
+- Ainda não está no CRM; registrar depois da sessão.
+- Ajuste da Karol (05/11): abertura pela origem em comum (contadora, pós FGV, onde a Karol conheceu o marido) e elogio à visão sistêmica da Juliani; o valor entregue na sessão é a direção de qual problema ela resolve (bloco novo na Etapa 2).
+
+
+## Garimpeiro: processo novo (05/11)
+- Pedido da Karol: ela entrava 2 vezes no mesmo perfil (revisar, depois abordar). Agora a rodada garimpa, qualifica e já escreve a Copy; ela abre o perfil uma vez, manda a mensagem e marca "enviado", ou "descartado".
+- Aplicado na aba Garimpo (menu, cores, legenda). "enviado" vira "Abordagem feita" com a data do dia na rodada seguinte (ou em `planilha.mjs sincronizar`).
+- Pendente: 73 leads antigos sem revisão e sem Copy (perguntado à Karol se escreve as copies deles). Escrita da data testar no 1º "enviado".
+- 05/11: Copy escrita e gravada nos 73 leads antigos que esperavam revisão (conferido na aba: 73 de 73). Agora é só a Karol abrir, mandar e marcar enviado/descartado.
+
+## 05/11 — Juliani: sessão feita
+- Sessão de vendas da Juliani Hunemeyer realizada. Ela adorou, está 90% certa e responde até segunda 09/11. CRM atualizado: status follow_up_marcado, lembrete pra segunda 09/11 às 9h, com nome completo, e-mail, WhatsApp e resumo. Oferta registrada: Incubadora Express (do roteiro; a Karol não confirmou se foi VIP).
+
+## 05/11 — Garimpo: revisão automática
+- Karol pediu: sem "enviado". Ela envia a Copy e muda o Status; a revisão vira "aprovado" sozinha (na próxima rodada, ou com sincronizar). Ela só marca "descartado". Aplicado na planilha: 1 linha (Aline Salumi) já virou aprovado. Corrigido erro 500 do n8n ao gravar célula sozinha.
+
+## 06/11 — Benício faltou de novo; Alessandro: 2ª sessão com Express
+- Benício não entrou na sessão de 06/11 10h (2ª falta). Karol não esperou até 10h30; mensagem de encerramento entregue (próxima remarcação paga, R$97). CRM do Benício: atualizar quando ela contar o desfecho.
+- Alessandro Costa: roteiro da 2ª sessão (Express, sem radar) em business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/alessandro-costa-sessao-2-express.md. Tese: provar o modelo antes de investir alto (a história da distribuidora x comissão). Ele não está no CRM: cadastrar após a sessão.
+- Benício: CRM atualizado em 06/11 (2ª falta, mensagem de encerramento enviada pela Karol, próxima sessão paga R$97). Lembrete pra rever em 13/11 se ele não responder.
+
+- 06/11 — Expert Plan M5.1 ganhou visual moderno: gráficos 3D, sem grade, menu de abas, seletor de mês no Painel, barras de progresso e cores de situação. Conferido no Excel; Google Sheets não testado (3D pode aparecer plano lá). Espera ok da Karol, decisão do exemplo de 4 Destrava/mês, depois espelho no Drive e aulas do M5.

@@ -1106,3 +1106,44 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** Comercial (tudo do lead: CRM, diagnósticos de lead, páginas, checkouts, funil, live, apresentações de venda, parceiros), Operação (área de membros, onboarding, diagnósticos e respostas dos alunos, teleprompter) e Gestão (financeiro e painéis). Entrou o CRM (planilha dos leads); saiu a Black Expert.
 **Racional:** achar o link pelo momento do negócio.
 **Impacto:** só a página da Central; a página da Black continua no site, só sem botão.
+
+## 05/11/2026 — Expert Plan mês a mês, ligado ao Rastreador de Leads
+**Contexto:** o plano era fixo e não acompanhava as mudanças do negócio ao longo do ano; o aluno teria de registrar tudo duas vezes.
+**Decisão:** plano com 12 colunas (produtos, estágio, lives e agenda por mês; mês passado não se mexe). O Rastreador de Leads (M3.5) vira aba do Expert Plan e ganha 4 colunas (Funil de origem, Data da abordagem, Data da sessão, Produto vendido). O Acompanhamento e o Painel do mês puxam o realizado do Rastreador, com gráfico de meta x realizado.
+**Racional:** um lugar só pra registrar, sem atrito; replanejamento todo fim de mês (Karol).
+**Impacto:** modelo M3.5 e guia atualizados no repo; Drive e cópias das alunas ainda não.
+
+
+## 05/11/2026 — Sessão da Juliani: Express com radar
+**Contexto:** Karol marcou sessão com a Juliani (crua, sem renda, sem promessa nem prova) e pediu roteiro com radar.
+**Decisão:** roteiro com radar na tela e oferta Incubadora Express (suposição pelo padrão: lead crua = Express).
+**Racional:** o radar mostra o buraco em método e venda; Express leva à primeira Venda Secreta em 30 dias.
+**Impacto:** se a Karol preferir o VIP, troca só a Etapa 4.
+
+## 05/11/2026 — Expert Plan segue o ano do calendário
+**Decisão:** mês 1 = janeiro; o aluno informa o ano do plano (exemplo 2027), e quem começa no meio do ano deixa os meses anteriores com zero. No ano seguinte, copia a planilha e troca o ano.
+**Racional:** contar a partir do mês de início deixa a leitura do resultado confusa com o tempo (Karol).
+
+## 05/11/2026 — Rastreador do M3 só valida; colunas de data entram na Escala
+**Decisão:** o Rastreador do M3 volta à versão gravada. As 4 colunas (Funil de origem, Data da abordagem, Data da sessão, Produto vendido) existem só na aba Rastreador do Expert Plan, no M5. Na 1ª aula do M5, o aluno cola as linhas do M3 uma vez.
+**Racional:** no M3 o foco é validar o método, não faturamento; a rotina comercial só se faz necessária na Escala, com o expert mais maduro e com audiência vinda do posicionamento (Karol).
+**Impacto:** vendas antigas entram pelo mês da Data Fechamento; abordagens e sessões contam a partir do M5.
+
+
+## 05/11/2026 — Garimpo: aprovar e enviar na mesma hora
+**Contexto:** a Karol revisava o perfil num momento e voltava nele pra abordar depois, com a copy escrita à parte.
+**Decisão:** o Garimpeiro garimpa, qualifica e escreve a 1ª mensagem na mesma rodada; a Karol abre o perfil uma vez e marca "enviado" (mandou) ou "descartado".
+**Racional:** um passo só por lead; a copy chega junto da qualificação.
+**Impacto:** `enviar` recusa lead sem copy; menu da revisão vira enviado/descartado; o rastreador passa a "Abordagem feita" sozinho.
+
+## 05/11/2026 — Garimpo: aprovado automático pelo Status
+**Contexto:** marcar "enviado" na revisão era um passo a mais.
+**Decisão:** "enviado" sai. Status diferente de "Sem abordagem" vira "aprovado" na revisão sozinho; Karol só marca "descartado".
+**Racional:** ela já muda o Status ao abordar; não precisa preencher duas colunas.
+**Impacto:** planilha.mjs (menu, sync, cores, legenda) e rodada-garimpo.md atualizados.
+
+## 06/11/2026 — Expert Plan (M5.1): visual moderno e interativo
+**Contexto:** Karol pediu gráfico mais bonito e moderno, em 3D, sem linhas de grade e mais interatividade.
+**Decisão:** gráficos de colunas 3D (Painel: % da meta por indicador; Acompanhamento: faturamento mês a mês), dia a dia em área + linha; sem linhas de grade; menu de abas clicável no topo; seletor "Ver o mês" no Painel; barras de progresso; cores automáticas de situação (verde ok, laranja alerta).
+**Racional:** deixar a planilha limpa e o expert enxergar rápido onde está atrás da meta.
+**Impacto:** só o visual e a navegação mudaram; as contas são as mesmas.
