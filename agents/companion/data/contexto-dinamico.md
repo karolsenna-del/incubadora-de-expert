@@ -711,3 +711,10 @@ Retomar com: `/expert-companion`
 - Benício: CRM atualizado em 06/11 (2ª falta, mensagem de encerramento enviada pela Karol, próxima sessão paga R$97). Lembrete pra rever em 13/11 se ele não responder.
 
 - 06/11 — Expert Plan M5.1 ganhou visual moderno: gráficos 3D, sem grade, menu de abas, seletor de mês no Painel, barras de progresso e cores de situação. Conferido no Excel; Google Sheets não testado (3D pode aparecer plano lá). Espera ok da Karol, decisão do exemplo de 4 Destrava/mês, depois espelho no Drive e aulas do M5.
+- Bianca (06/11): Karol decidiu VIP agora e automação (robô + funil) como proposta à parte depois do teste. Roteiro mantido. CRM dela: registrar após a sessão.
+- Bianca (06/11, na hora da sessão): Karol trocou pra Incubadora Express voltada a vendas (Raio-X das conversas como centro); VIP fica de reserva. Roteiro e Notes atualizados.
+- 06/11 — Expert Plan: tipo 'Por mensagem' (Destrava no WhatsApp, funil Venda por mensagem desde o estágio 1) + menu no Rastreador. Agenda do exemplo cabe em todos os meses. Espera ok final; depois Drive e aulas do M5.
+
+- 06/11 — Squad Conteúdo: 20 ideias nos 4 formatos simples (contraste, narração, lista com número, nome próprio), a partir do post do @lucureau. Arquivo: docs/producao-conteudo/karol/ideias-4-formatos-simples-2026-11-06.md. Pendente: Karol escolher quais entram na grade e confirmar #13 e #17.
+- PENDENTE (Karol, 06/11): acrescentar um slide com o desenho do Funil de Vendas Secretas (base: business/campanhas/lives-semanais/live-33-fluxo-funil.html) na apresentação da Express, entre as 5 sessões e os entregáveis dos 6 meses. Ordem da oferta: 5 sessões > funil > entregáveis > preço > bônus "monto o seu funil" (só depois do preço).
+- Alessandro (06/11): não apareceu na 2ª sessão. Karol mandou a página da Express e deixou a porta aberta (sem R$97). Cadastrado no CRM (follow_up_marcado, rever em 20/11).

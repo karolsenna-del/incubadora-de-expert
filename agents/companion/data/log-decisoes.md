@@ -1147,3 +1147,26 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** gráficos de colunas 3D (Painel: % da meta por indicador; Acompanhamento: faturamento mês a mês), dia a dia em área + linha; sem linhas de grade; menu de abas clicável no topo; seletor "Ver o mês" no Painel; barras de progresso; cores automáticas de situação (verde ok, laranja alerta).
 **Racional:** deixar a planilha limpa e o expert enxergar rápido onde está atrás da meta.
 **Impacto:** só o visual e a navegação mudaram; as contas são as mesmas.
+
+## 06/11/2026 — Bianca: VIP agora, automação depois
+**Contexto:** Bianca já tem método e quer vender; trava em atender WhatsApp e fechar. Karol pensou em oferecer robô de atendimento e montagem de funil.
+**Decisão:** ofertar o Método VIP (R$1.500) na sessão. Montagem de funil e atendimento automático fica como proposta à parte, depois do teste do VIP, com preço definido depois.
+**Racional:** automatizar antes de saber qual conversa fecha repete o erro do tráfego dela ("vendi pouco, não tinha conhecimento de vendas").
+**Impacto:** roteiro da Bianca mantido como está; a fala da automação só se ela puxar o assunto.
+
+## 06/11/2026 — Expert Plan: tipo de produto "Por mensagem"
+**Contexto:** a Destrava é vendida no WhatsApp, sem sessão, mas o plano contava cada venda como sessão e estourava a agenda.
+**Decisão:** opção B: novo tipo "Por mensagem". As vendas desse tipo vão sempre para o funil Venda por mensagem, desde o estágio 1, e não ocupam a agenda de sessões. Rastreador ganhou o menu de abas no topo.
+**Racional:** refletir como a venda acontece de verdade.
+**Impacto:** no exemplo, as sessões caíram para 2 a 5 por semana (cabe em todos os meses); a rotina passa a pedir ~40 levantadas de mão e ~20 conversas por semana.
+
+## 06/11/2026 — Painel do mês: ritmo em vez de meta diária
+**Contexto:** a meta acumulada dia a dia mostrava R$ 87 no dia 1, o que não faz sentido (venda é em blocos).
+**Decisão:** opção B: a linha virou "Ritmo pra bater a meta", a tabela dia a dia foi para uma aba escondida (Dados do painel) e "Falta por dia" virou "Falta por semana".
+**Impacto:** Painel mais limpo; ninguém lê valor diário quebrado como meta.
+
+## 06/11/2026 — Alessandro: sem cobrança de R$97 na 2ª falta
+**Contexto:** não apareceu na 2ª sessão (Express); o diagnóstico já tinha sido feito em outubro.
+**Decisão:** não cobrar R$97 nem correr atrás de data; mandar a página de vendas da Express e deixar ele chamar.
+**Racional:** a regra dos R$97 é pra diagnóstico; ele já fez. Página de vendas porque ele lê sozinho e pode comprar sem sessão.
+**Impacto:** CRM com lembrete em 20/11.
