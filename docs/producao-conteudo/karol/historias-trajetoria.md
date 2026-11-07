@@ -15,6 +15,7 @@
 - [6. O amaciante Ypê x L'Occitane](#6-o-amaciante-ypê-x-loccitane-poder-da-indicação-1608) — Rota100k S03
 - [7. O espumante que estragou](#7-o-espumante-que-estragou-timing-1608) — Rota100k S03
 - [23. "Isso não vai dar em nada" — a colega que eu achava desmotivada](#23-isso-não-vai-dar-em-nada--a-colega-que-eu-achava-desmotivada-2610) — Rota100k S13 (Ter 27/10 15h, programada pela Karol)
+- [24. A portaria da promoção que nunca saiu](#24-a-portaria-da-promoção-que-nunca-saiu-0311) — 🆕 03/11 (contada pela Karol)
 
 **Disponíveis (nunca viraram post, ou podem ser reforçadas):**
 - [3. A venda fantasma](#3-a-venda-fantasma-lançamento-de-1-venda)
@@ -33,6 +34,7 @@
 - [19. A semana em que eu parei de melhorar o método — R$5 mil + 6 aulas](#19-a-semana-em-que-eu-parei-de-melhorar-o-método-21-a-26092026) — 🆕 26/09
 - [20. Falar do que eu faço por onde passo — a contadora da academia](#20-falar-do-que-eu-faço-por-onde-passo--a-contadora-da-academia-setembro2026)
 - [21. A origem da Incubadora — narrativa completa de ponta a ponta](#21-a-origem-da-incubadora--narrativa-completa-de-ponta-a-ponta-0110) — 🆕 01/10 (versão-mestra contada pela Karol)
+- [25. O cargo de coordenadora que deram pra outra](#25-o-cargo-de-coordenadora-que-deram-pra-outra-0611) — 🆕 06/11 (contada pela Karol)
 - [22. A diarista que chamou a polícia — o sentimento de injustiça](#22-a-diarista-que-chamou-a-polícia--o-sentimento-de-injustiça-2809) — 🆕 01/10 · ⚠️ disputa em andamento, ver regras de uso
 
 **⚠️ Material sensível — não usar sem autorização explícita da Karol, caso a caso:**
@@ -204,6 +206,8 @@
 
 **Status:** 🆕 disponível, nunca usada como causo próprio
 
+
+**Complemento (palavras da Karol, 03/11):** "nunca vesti camisa da Diretoria que me pedia pra assinar errado… eu era muito mais pró-empresa do que eles. Era imparcial, técnica, olhava para os números e dava o meu parecer… só isso, mas para eles não bastava, tinha que aceitar as entrelinhas. Comigo não! Tenho meus valores, durmo com a consciência tranquila que dei o meu melhor com dignidade, mesmo que isso tenha prejudicado meu crescimento lá dentro. Acho que foi livramento." Dois anos depois questionaram o cálculo; "se o meu nome estivesse ali, a corda ia arrebentar pro meu lado".
 ---
 
 ## 13. Exonerada por telefone, de férias
@@ -473,6 +477,28 @@
 **Headline:** "Eu achava que ela era desmotivada. Até me tornar igual."
 
 **Regras:** colega sem nome nem setor. Persona dos sonhos (servidora presa à estabilidade).
+
+---
+
+## 24. A portaria da promoção que nunca saiu (03/11)
+
+**Fatos (palavras da Karol, 03/11):** "teve uma vez que recebi parabéns no corredor pela promoção, cheguei no almoço contando pra todo mundo lá em casa… e essa Portaria nunca foi publicada." Depois: "o sentimento de vergonha ao voltar pra casa e ter que falar que tudo que falei no almoço não se concretizou… sem ter um argumento, sem ter a explicação… sem eu mesma entender o porquê… além do de sempre: boicote."
+
+**Leitura da squad:** frustração do emprego público em que o crescimento depende de uma assinatura de outra pessoa. Primeiro uso: 7s da sexta 06/11 (Rota100k S14).
+
+**Regra de uso:** não ligar a portaria ao comentário de corredor sobre o Diretor (S2, sensível). Quando, cargo e por que não saiu: não documentado, perguntar antes de usar.
+
+---
+
+## 25. O cargo de coordenadora que deram pra outra (06/11)
+
+**Fatos (palavras da Karol, 06/11):** no emprego público, ela foi chamada pra trabalhar como assistente de um consultor que o governador enviou; seria o ponto focal entre esse consultor e a empresa pública. Ele a indicou pra controladoria, e ela ficou muito empolgada porque ia ganhar o cargo de coordenadora. "Simplesmente, da noite para o dia, a diretoria transferiu uma outra coordenadora para lá para que a gerência já tivesse coordenadora, e eu fui sem cargo nenhum." "Chorei muito, foi bizarra a condução, a puxada de tapete… me senti muito traída."
+
+**Leitura da squad:** mesma ferida da portaria (#24) e da assinatura: o crescimento dependia da decisão de outra pessoa, mesmo com indicação e trabalho entregue. Liga com a lição 2 da lista dos 13 anos ("não deixe seu crescimento depender da assinatura de outra pessoa").
+
+**Regra de uso:** sem nome da empresa, da diretoria nem da outra coordenadora; "um consultor do governo" basta. Não ligar ao Diretor (S2).
+
+**Desfecho (Karol, 06/11):** "foi muito pouco tempo depois disso… eu já estava na controladoria quando decidi sair… estudando pra Receita Federal em 2016." Ou seja: o tapete puxado foi o empurrão pra decidir sair, e a primeira saída que ela tentou foi outro concurso (a Receita, que ela hoje lê como trocar de prédio, não de sistema).
 
 ---
 

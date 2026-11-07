@@ -1182,3 +1182,38 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** nos cortes de sessão do Clip Expert a headline vai no meio da tela (Karol, 06/11); caixa preta, letra branca, destaque laranja. Trechos escolhidos pela régua do Expert Viral (nota mínima 7.0, 8 de 10 passaram).
 **Racional:** pedido direto da Karol na revisão.
 **Impacto:** regra em custom-do-aluno.md; script novo `agents/clip-expert/scripts/montar-corte-rosto.py` pra gravação 1:1 do Meet (rosto em tela cheia).
+
+## 06/11/2026 — Cortes da sessão Bruna: 7 aprovados, corte 06 reprovado
+**Contexto:** revisão dos 8 Reels da sessão com a Bruna.
+**Decisão:** aprovados 01-05, 07 e 08 (foram pra fila de Reels); 06 reprovado por citar o nome da antiga empresa da Karol.
+**Racional:** Karol não quer o nome do antigo empregador em conteúdo.
+**Impacto:** regra em custom-do-aluno.md; 7 cortes em business/instagram/fila-reels/, publicação manual.
+
+## 06/11/2026 — Postador passa a publicar Reels
+**Contexto:** Karol perguntou por que o Postador não posta Reels e pediu pra montar.
+**Decisão:** Reels entram no Postador pelo mesmo caminho do carrossel: vídeo sobe do PC pro Cloudinary e um workflow agendado publica (media_type REELS, aparece no feed).
+**Racional:** o .mp4 não vai pro GitHub; o padrão de workflow por post já funciona nos carrosséis.
+**Impacto:** SOP-005 no playbook do insta-scheduler; script agents/insta-scheduler/scripts/reel.py; teste real sem publicar aprovado com o corte 01.
+
+## 06/11/2026 — Semana 15: sem narração com b-roll
+**Contexto:** plano da S15 tinha as ideias 7 a 11 como narração com b-roll da rotina.
+**Decisão:** a Karol tirou o formato (trabalhoso demais); as 5 ideias viram vídeo falado pra câmera (YAP), mesma fala.
+**Racional:** caber no tempo dela, que opera sozinha.
+**Impacto:** arquivo de ideias e plano da S15 ajustados; produção fica em 4 blocos, falados das 09h/12h gravados juntos.
+
+## 06/11/2026 — Semana 15: perguntas das 22h no molde sim/não
+**Decisão:** as 7 perguntas das 22h viram pergunta de sim ou não que se entende sozinha, ligada à lista das 15h sem citá-la.
+**Racional:** "qual desses 5" não diz nada pra quem não viu a lista (post autocontido).
+**Impacto:** plano da S15 com as 7 perguntas trocadas.
+
+## 07/11/2026 — Semana 15: história do cargo de coordenadora na quinta 07h
+**Decisão:** história 25 (cargo de coordenadora dado a outra) vira o 7s de quinta 12/11; sociedade na agência vai pra S16; Receita Federal sai do 7s de quarta.
+**Impacto:** plano da S15 e banco de histórias atualizados.
+
+## 07/11/2026 — Semana 15: roteiros escritos
+**Decisão (squad, a confirmar):** quarta 07h vira ranking dos jeitos de vender (curso gravado, lançamentos, conversa); o concurso do ISS fica só no sábado 07h. Cerco de Jericó fora por padrão.
+**Impacto:** 49 roteiros prontos; 7 confirmações pendentes com a Karol.
+
+## 07/11/2026 — Reels da sessão Bruna: agenda
+**Decisão:** um Reel por dia às 10h (Cuiabá), de 07 a 13/11, por ordem de nota (Karol escolheu o horário).
+**Impacto:** 7 workflows reel-sessao-bruna-*.yml ativos no GitHub.

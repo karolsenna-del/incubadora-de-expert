@@ -17,9 +17,9 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
-## Cortes da sessão com a Bruna (27/10) prontos pra revisão (06/11)
+## Cortes da sessão com a Bruna (27/10): 7 aprovados e na fila (06/11)
 
-8 Reels verticais em `videos-editados/clip-expert/bruna-2026-10-27/` (corte-01 a 08 + legenda de post de cada um; lista e notas em `_trabalho.md`). Foco na Karol explicando (persona, promessa, primeiro lançamento, trajetória de servidora, 6 nãos). Headline no meio (pedido dela), legenda laranja. Pendente: refazer o enquadramento fino nos cortes 01-05, 07, 08 (o reprocessamento foi interrompido por falta de memória do PC; o 06 já está no novo); revisão e aprovação da Karol; nada foi pra fila do Postador.
+Karol aprovou 7 dos 8 Reels (06/11): cortes 01-05, 07 e 08 copiados pra `business/instagram/fila-reels/sessao-bruna-2026-10-27-corte-NN/` (video.mp4 + legenda.txt). Corte 06 reprovado: cita o nome da antiga empresa dela. Originais seguem em `videos-editados/clip-expert/bruna-2026-10-27/`. O Postador não publica Reels sozinho: a publicação é manual por ela. Enquadramento fino dos 7 não foi refeito (parou por falta de memória); ela aprovou como estão. Postador agora agenda Reels (06/11, SOP-005, `agents/insta-scheduler/scripts/reel.py`): os 7 vídeos já estão no Cloudinary e o corte 01 passou no teste do Instagram sem publicar. Agendados e ativos no GitHub (07/11): um por dia às 10h de Cuiabá, 07/11 corte 01, 08 corte 02, 09 corte 03, 10 corte 04, 11 corte 05, 12 corte 07, 13 corte 08. Conferir depois das 10h de 07/11 se o primeiro saiu.
 
 ## Método VIP da Sandra Mello: Encontro 1 pronto (05/11)
 
@@ -720,7 +720,10 @@ Retomar com: `/expert-companion`
 - 06/11 — Expert Plan: tipo 'Por mensagem' (Destrava no WhatsApp, funil Venda por mensagem desde o estágio 1) + menu no Rastreador. Agenda do exemplo cabe em todos os meses. Espera ok final; depois Drive e aulas do M5.
 
 - 06/11 — Squad Conteúdo: 20 ideias nos 4 formatos simples (contraste, narração, lista com número, nome próprio), a partir do post do @lucureau. Arquivo: docs/producao-conteudo/karol/ideias-4-formatos-simples-2026-11-06.md. Pendente: Karol escolher quais entram na grade e confirmar #13 e #17.
-- PENDENTE (Karol, 06/11): acrescentar um slide com o desenho do Funil de Vendas Secretas (base: business/campanhas/lives-semanais/live-33-fluxo-funil.html) na apresentação da Express, entre as 5 sessões e os entregáveis dos 6 meses. Ordem da oferta: 5 sessões > funil > entregáveis > preço > bônus "monto o seu funil" (só depois do preço).
+- FEITO no arquivo (06/11, noite): slide 8 "Funil de Vendas Secretas" (7 etapas + SIM Onboarding / NÃO Follow-up 5x, fundo escuro) entrou entre "O ritmo" e "O que você recebe"; conferido em 1600x900 e 1280x720. Bônus não aparece no slide (fica depois do preço, na fala). Publicado pela Karol (06/11) e conferido no link vendas.incubadoradeexpert.com.br/incubadora-express/apresentacao/. Commit 748d6d8 no GitHub.
+- (antigo) PENDENTE (Karol, 06/11): acrescentar um slide com o desenho do Funil de Vendas Secretas (base: business/campanhas/lives-semanais/live-33-fluxo-funil.html) na apresentação da Express, entre as 5 sessões e os entregáveis dos 6 meses. Ordem da oferta: 5 sessões > funil > entregáveis > preço > bônus "monto o seu funil" (só depois do preço).
 - Alessandro (06/11): não apareceu na 2ª sessão. Karol mandou a página da Express e deixou a porta aberta (sem R$97). Cadastrado no CRM (follow_up_marcado, rever em 20/11).
 - Bianca (06/11): sessão encerrada sem fechar (já comprou curso de vendas, sem dinheiro agora). Cadastrada no CRM (lead novo, Bianca Moscarelli; a "Bianca Rodrigues" de 21/09 é outra), retomar em 07/12.
 - 06/11 — Squad Conteúdo: plano da semana 15 do Rota100K (09-15/11, 49 posts) montado com as 23 ideias dos 4 formatos; 15h = listas com número (decisão da Karol). Arquivo: docs/producao-conteudo/karol/desafio-rota100k-semana15-plano.md. Pendente: Karol confirmar os itens marcados com ⚠️; depois roteiros e revisão.
+- 06/11: S15 sem narração com b-roll; ideias 7-11 viram falado pra câmera (plano e ideias ajustados).
+- 07/11: roteiros da S15 prontos (49 posts) em docs/producao-conteudo/karol/desafio-rota100k-semana15-roteiros.md, revisados pelo Codex; faltam os 7 itens ⚠️ da Karol antes de gravar.

@@ -43,6 +43,8 @@ outras rules. Exemplos:
 - Em seguida, pedir à Karol em uma linha pra deixar só as abas do Chrome que ela precisa, e só então começar a edição.
 - Headline dos Reels: caixa preta com letra branca e só a palavra-chave em laranja, nunca a caixa toda laranja (ela não gostou, 25/10).
 - Headline dos Reels no topo, dentro da margem segura do feed (corte 4:5), nunca no meio da tela: no meio ela cobre o rosto da Karol (28/10).
+- Exceção: nos cortes de sessão/encontro do Clip Expert, headline no meio da tela (Karol pediu em 06/11, cortes da sessão Bruna).
+- Nunca usar em corte ou conteúdo trecho em que a Karol cita o nome da antiga empresa dela (Sanesul): ela reprovou o corte 06 da sessão Bruna por isso (06/11).
 - Glowup: tentar 2 vezes, em primeiro plano. Se travar nas duas, seguir sem glow e avisar na entrega, sem esperar o ok dela (ela deixa a edição rodando sozinha, 24/10).
 
 ### Lives semanais
@@ -55,6 +57,10 @@ outras rules. Exemplos:
 ### Conceitos do Expert360º
 
 - Definir termo do método (urgência oculta, dores, desejos…) pelo jeito da Karol, não por material de terceiros como o Stories 10x. Urgência oculta = os medos que tiram o sono da persona, que ela não conta pra ninguém, esconde e tenta fugir. Em material de captação (ex.: quiz da Live 35), cada pergunta leva o exemplo mais forte do dossiê da Laura, pra quem responde se reconhecer como a persona da Karol (Karol, 26/10).
+
+### Formatos de vídeo
+
+- Não propor Reels de narração com b-roll (voz por cima de cenas da rotina): dá trabalho demais pra ela, que grava sozinha. Ideia desse tipo vira vídeo falado pra câmera (Karol, 06/11).
 
 ### Legenda do Reels 7s
 
