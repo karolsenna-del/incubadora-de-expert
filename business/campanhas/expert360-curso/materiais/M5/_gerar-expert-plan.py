@@ -91,7 +91,7 @@ titulo(cu, "EXPERT PLAN — o plano de escala do seu negócio",
        "Da meta de faturamento até a rotina comercial da sua semana, mês a mês")
 linhas = [
     ("NAVEGUE PELAS ABAS — clique pra ir direto (em toda aba tem o menu no topo)", None),
-    ("→ Painel do mês: quanto falta da meta do mês e quanto por dia", "LINK:Painel do mês"),
+    ("→ Painel do mês: quanto falta da meta do mês e quanto por semana", "LINK:Painel do mês"),
     ("→ Rastreador de Leads: onde você registra tudo o que faz", "LINK:Rastreador de Leads"),
     ("→ 1. Estratégico: a meta e os produtos", "LINK:1. Estratégico"),
     ("→ 2. Tático: de qual funil vem cada venda", "LINK:2. Tático"),
@@ -115,7 +115,7 @@ linhas = [
     ("O seu histórico: as vendas antigas entram no mês certo, porque já têm Data Fechamento. Abordagens e sessões antigas não têm data, então a contagem delas começa quando você passa a preencher as colunas novas. Se quiser, complete as datas das linhas antigas que você lembrar.", None),
     ("", None),
     ("PASSO A PASSO (no começo do plano)", None),
-    ("1. Aba 1. Estratégico — coloque o ano do plano, a meta de faturamento do ano e os seus produtos: nome, preço, tipo (Ao vivo = vendido em sessão ou conversa e entregue ao vivo, como mentoria; Gravado = curso gravado ou low ticket) e quantas vendas de cada um você planeja em cada mês. Produto que ainda não existe fica com zero até o mês em que entra. O plano vai sempre de janeiro a dezembro: se você começa no meio do ano, deixe os meses anteriores com zero.", None),
+    ("1. Aba 1. Estratégico — coloque o ano do plano, a meta de faturamento do ano e os seus produtos: nome, preço, tipo (Ao vivo = vendido numa sessão de venda e entregue ao vivo, como mentoria; Por mensagem = vendido direto no WhatsApp ou no direct, sem sessão, como uma sessão avulsa; Gravado = curso gravado ou low ticket) e quantas vendas de cada um você planeja em cada mês. Produto que ainda não existe fica com zero até o mês em que entra. O plano vai sempre de janeiro a dezembro: se você começa no meio do ano, deixe os meses anteriores com zero.", None),
     ("2. Aba 2. Tático — escolha o estágio de funis de cada mês (de 1 a 5). A planilha distribui as vendas entre os funis ativos naquele mês.", None),
     ("3. Aba 3. Operacional — a conta de trás pra frente: quantas abordagens, sessões, convites, leads e conversas cada funil pede em cada mês.", None),
     ("4. Aba 4. Rotina semanal — a semana-padrão de cada mês. É ela que vai pra sua agenda. Coloque quantas sessões de venda você consegue fazer por semana: a planilha avisa o mês em que o plano passa disso.", None),
@@ -131,6 +131,7 @@ linhas = [
     ("OS 5 ESTÁGIOS — os funis entram um de cada vez", None),
     ("Estágio 1 — só Vendas Secretas. É o primeiro funil, o que valida o método e o que mais converte.", None),
     ("Estágio 2 — + Lives Secretas. Estágio 3 — + Mini-treinamento. Estágio 4 — + Venda por mensagem.", None),
+    ("Produto do tipo Por mensagem é a exceção: ele é vendido na conversa desde o estágio 1, então as vendas dele vão sempre pro funil Venda por mensagem e não ocupam a sua agenda de sessões.", None),
     ("Estágio 5 — + VSL, só quando você tiver produto gravado (curso ou low ticket).", None),
     ("Não comece pelo produto gravado: ele só entra depois que o seu método já vende no 1:1 — por isso fica no último estágio.", None),
     ("A cada estágio, as Vendas Secretas pesam menos: lives e mini-treinamento também levam pra sessão, então você faz menos abordagens e ganha tempo pros outros funis.", None),
@@ -178,10 +179,10 @@ head_meses(es, 8, lambda i: f"=DATE($B$6,{i + 1},1)",
 exemplo = [
     ("Mentoria completa (exemplo)", 5000, "Ao vivo", [0] + [1] * 11),
     ("Mentoria VIP · 3 encontros (exemplo)", 1500, "Ao vivo", [1, 1, 1] + [2] * 9),
-    ("Mentoria Destrava · 1 sessão (exemplo)", 300, "Ao vivo", [4] * 12),
+    ("Mentoria Destrava · 1 sessão (exemplo)", 300, "Por mensagem", [4] * 12),
     (None, None, None, None), (None, None, None, None),
 ]
-dv = DataValidation(type="list", formula1='"Ao vivo,Gravado"', allow_blank=True); es.add_data_validation(dv)
+dv = DataValidation(type="list", formula1='"Ao vivo,Por mensagem,Gravado"', allow_blank=True); es.add_data_validation(dv)
 for i, (n, p, t, v) in enumerate(exemplo):
     rr = 9 + i
     cel(es, f"A{rr}", n, inp=True); cel(es, f"B{rr}", p, MOEDA, inp=True)
@@ -213,11 +214,14 @@ cel(es, "B23", '=IF(SUMPRODUCT((A9:A13<>"")*(C9:C13=""))>0,"Preencha o tipo de t
 faixa(es, 25, "CONTAS DE APOIO (usadas pelo Tático — não precisa mexer)", 15)
 cel(es, "A26", "Vendas no mês — produtos Ao vivo"); cel(es, "A27", "Vendas no mês — produtos Gravados")
 cel(es, "A28", "Faturamento no mês — Ao vivo"); cel(es, "A29", "Faturamento no mês — Gravado")
+cel(es, "A30", "Vendas no mês — produtos Por mensagem"); cel(es, "A31", "Faturamento no mês — Por mensagem")
 for L in MES:
     cel(es, f"{L}26", f'=SUMIF($C$9:$C$13,"Ao vivo",{L}9:{L}13)', NUM2)
     cel(es, f"{L}27", f'=SUMIF($C$9:$C$13,"Gravado",{L}9:{L}13)', NUM2)
     cel(es, f"{L}28", f'=SUMPRODUCT(($C$9:$C$13="Ao vivo")*$B$9:$B$13,{L}9:{L}13)', MOEDA0)
     cel(es, f"{L}29", f'=SUMPRODUCT(($C$9:$C$13="Gravado")*$B$9:$B$13,{L}9:{L}13)', MOEDA0)
+    cel(es, f"{L}30", f'=SUMIF($C$9:$C$13,"Por mensagem",{L}9:{L}13)', NUM2)
+    cel(es, f"{L}31", f'=SUMPRODUCT(($C$9:$C$13="Por mensagem")*$B$9:$B$13,{L}9:{L}13)', MOEDA0)
 larg_meses(es, 40, 14, 12, 10, (14, 18, 10))
 es.freeze_panes = "D9"
 
@@ -255,11 +259,13 @@ cel(ta, "A18", "Estágio 5", bold=True)
 for j, v in enumerate((0, 0, 0, 0.70, 0.30)):
     cel(ta, f"{get_column_letter(2 + j)}18", v, PCT, inp=True)
 cel(ta, "G18", "=SUM(B18:F18)", PCT, bold=True); cel(ta, "H18", '=IF(ROUND(G18,4)=1,"OK","Ajuste até dar 100%")')
+nota(ta, 19, "Produto Por mensagem (vendido no WhatsApp, sem sessão): as vendas vão todas pro funil Venda por mensagem, em qualquer estágio.")
 
 
-def por_funil(j, L, linha_avivo, linha_grav):
+def por_funil(j, L, linha_avivo, linha_grav, linha_msg):
     D = get_column_letter(2 + j)
-    return f"=IFERROR(INDEX(${D}$10:${D}$14,{L}$5)*{E}{L}{linha_avivo}+IF({L}$5=5,${D}$18*{E}{L}{linha_grav},0),0)"
+    msg = f"+{E}{L}{linha_msg}" if FUNIS[j] == "Venda por mensagem" else ""   # Por mensagem: sempre nesse funil
+    return f"=IFERROR(INDEX(${D}$10:${D}$14,{L}$5)*{E}{L}{linha_avivo}+IF({L}$5=5,${D}$18*{E}{L}{linha_grav},0){msg},0)"
 
 
 faixa(ta, 20, "VENDAS POR FUNIL — mês a mês", 16)
@@ -267,7 +273,7 @@ head(ta, 21, ["Funil", "", ""]); head_meses(ta, 21, None, ["No ano"])
 for j, f in enumerate(FUNIS):
     rr = 22 + j
     cel(ta, f"A{rr}", f, bold=True)
-    for L in MES: cel(ta, f"{L}{rr}", por_funil(j, L, 26, 27), NUM2)
+    for L in MES: cel(ta, f"{L}{rr}", por_funil(j, L, 26, 27, 30), NUM2)
     cel(ta, f"P{rr}", f"=SUM(D{rr}:O{rr})", NUM2, bold=True)
 cel(ta, "A27", "Vendas — total", bold=True, fill=CINZA)
 for L in MES + ["P"]: cel(ta, f"{L}27", f"=SUM({L}22:{L}26)", NUM2, bold=True, fill=CINZA)
@@ -276,7 +282,7 @@ head(ta, 30, ["Funil", "", ""]); head_meses(ta, 30, None, ["No ano"])
 for j, f in enumerate(FUNIS):
     rr = 31 + j
     cel(ta, f"A{rr}", f, bold=True)
-    for L in MES: cel(ta, f"{L}{rr}", por_funil(j, L, 28, 29), MOEDA0)
+    for L in MES: cel(ta, f"{L}{rr}", por_funil(j, L, 28, 29, 31), MOEDA0)
     cel(ta, f"P{rr}", f"=SUM(D{rr}:O{rr})", MOEDA0, bold=True)
 cel(ta, "A36", "Faturamento — total", bold=True, fill=CINZA)
 for L in MES + ["P"]: cel(ta, f"{L}36", f"=SUM({L}31:{L}35)", MOEDA0, bold=True, fill=CINZA)
@@ -293,7 +299,7 @@ for i in range(5):
     cel(ta, f"A{rr}", f'=IF({E}$A${er}="","",{E}$A${er})', bold=True)
     for j in range(5):
         D = get_column_letter(2 + j)
-        cel(ta, f"{D}{rr}", f'=IF({E}$A${er}="","",IFERROR(IF({E}$C${er}="Ao vivo",{VEN}*INDEX({D}$10:{D}$14,{STG}),IF(AND({E}$C${er}="Gravado",{STG}=5),{VEN}*{D}$18,0)),0))', NUM2)
+        cel(ta, f"{D}{rr}", f'=IF({E}$A${er}="","",IFERROR(IF({E}$C${er}="Ao vivo",{VEN}*INDEX({D}$10:{D}$14,{STG}),IF(AND({E}$C${er}="Gravado",{STG}=5),{VEN}*{D}$18,IF({E}$C${er}="Por mensagem",{VEN}*{1 if FUNIS[j] == "Venda por mensagem" else 0},0))),0))', NUM2)
     cel(ta, f"G{rr}", f'=IF(A{rr}="","",SUM(B{rr}:F{rr}))', NUM2, bold=True)
 cel(ta, "A46", "Vendas — total", bold=True, fill=CINZA); cel(ta, "A47", "Faturamento", bold=True, fill=CINZA)
 for j in range(6):
@@ -545,19 +551,22 @@ arruma(ch); ch.legend.position = "b"; ac.add_chart(ch, "A48")
 
 # ================= PAINEL DO MÊS =================
 pa = wb.create_sheet("Painel do mês", 1)
-titulo(pa, "PAINEL DO MÊS — quanto falta e quanto por dia", "Abre sozinho no mês de hoje. Quer ver outro mês? Escolha em \"Ver o mês\". Tudo vem do plano e do Rastreador de Leads.")
+titulo(pa, "PAINEL DO MÊS — quanto falta e quanto por semana", "Abre sozinho no mês de hoje. Quer ver outro mês? Escolha em \"Ver o mês\". Tudo vem do plano e do Rastreador de Leads.")
 NOMES_MES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
-faixa(pa, 59, "LISTA DO MENU \"VER O MÊS\" (não precisa mexer)", 3)
-for i, n in enumerate(["Mês atual"] + NOMES_MES): pa[f"A{60 + i}"] = n
+dp = wb.create_sheet("Dados do painel"); dp.sheet_state = "hidden"   # aba escondida: só alimenta o Painel
+PA = "'Painel do mês'!"; DP = "'Dados do painel'!"
+titulo(dp, "DADOS DO PAINEL — alimentam os gráficos e o menu do Painel do mês (não precisa mexer)")
+faixa(dp, 59, "LISTA DO MENU \"VER O MÊS\"", 3)
+for i, n in enumerate(["Mês atual"] + NOMES_MES): dp[f"A{60 + i}"] = n
 cel(pa, "A4", "Hoje", bold=True); cel(pa, "B4", "=TODAY()", DATA)
 cel(pa, "A5", "Ver o mês  ▼", bold=True); cel(pa, "B5", "Mês atual", inp=True, bold=True)
-dvm = DataValidation(type="list", formula1="=$A$60:$A$72", allow_blank=False); pa.add_data_validation(dvm); dvm.add("B5")
+dvm = DataValidation(type="list", formula1=f"={DP}$A$60:$A$72", allow_blank=False); pa.add_data_validation(dvm); dvm.add("B5")
 AUTO = f"IF(YEAR(B4)<{E}$B$6,1,IF(YEAR(B4)>{E}$B$6,12,MONTH(B4)))"
 cel(pa, "A6", "Mês", bold=True)
-cel(pa, "B6", f'=INDEX({E}$D$8:$O$8,IF(OR(B5="",B5="Mês atual"),{AUTO},MATCH(B5,$A$61:$A$72,0)))', MES_FMT, bold=True)
+cel(pa, "B6", f'=INDEX({E}$D$8:$O$8,IF(OR(B5="",B5="Mês atual"),{AUTO},MATCH(B5,{DP}$A$61:$A$72,0)))', MES_FMT, bold=True)
 cel(pa, "A7", "Dias que faltam no mês (contando hoje)", bold=True)
 cel(pa, "B7", "=MAX(0,MIN(DAY(DATE(YEAR(B6),MONTH(B6)+1,0)),DATE(YEAR(B6),MONTH(B6)+1,1)-B4))", NUM)
-head(pa, 9, ["", "Meta do mês", "Feito até hoje", "Falta", "% feito", "Falta por dia", "Progresso"])
+head(pa, 9, ["", "Meta do mês", "Feito até hoje", "Falta", "% feito", "Falta por semana", "Progresso"])
 pa.row_dimensions[9].height = 30
 painel = [("Faturamento", "H", "I", MOEDA0), ("Vendas", "F", "G", NUM2), ("Abordagens", "B", "C", NUM), ("Sessões realizadas", "D", "E", NUM)]
 for i, (n, cp, cr, fm) in enumerate(painel):
@@ -568,47 +577,48 @@ for i, (n, cp, cr, fm) in enumerate(painel):
     cel(pa, f"C{rr}", f"=INDEX('5. Acompanhamento'!${cr}$6:${cr}$17,MONTH($B$6))", fm).font = Font(bold=True, size=13)
     cel(pa, f"D{rr}", f"=MAX(0,B{rr}-C{rr})", fm, fill=CINZA).font = Font(bold=True, size=13, color=LARANJA)
     cel(pa, f"E{rr}", f"=IFERROR(C{rr}/B{rr},0)", PCT, bold=True)
-    cel(pa, f"F{rr}", f"=IF($B$7=0,D{rr},D{rr}/$B$7)", NUM2 if fm != MOEDA0 else MOEDA0, bold=True)
+    cel(pa, f"F{rr}", f"=IF($B$7=0,D{rr},D{rr}/MAX(1,$B$7/7))", NUM2 if fm != MOEDA0 else MOEDA0, bold=True)
     bar = f"ROUND(MIN(1,MAX(0,E{rr}))*10,0)"
     cel(pa, f"G{rr}", f'=REPT("█",{bar})&REPT("░",10-{bar})').font = Font(color=LARANJA, size=12)
     for col in "ABCDEFG": pa[f"{col}{rr}"].alignment = Alignment(vertical="center", horizontal="left" if col == "A" else "center")
 cel(pa, "A15", "Situação", bold=True)
 cel(pa, "B15", '=IF(B6>B4,"Mês ainda não começou",IF(C10>=B10,"Meta do mês batida!",IF(B7=0,"Mês encerrado abaixo da meta",IF(C10>=B10*(1-B7/DAY(DATE(YEAR(B6),MONTH(B6)+1,0))),"No ritmo","Abaixo do ritmo: acelere o que falta"))))', bold=True)
 pa.merge_cells("B15:G15"); pa["B15"].alignment = Alignment(horizontal="center", vertical="center"); pa.row_dimensions[15].height = 26; pa["A15"].alignment = Alignment(vertical="center")
-faixa(pa, 51, "DADOS DO GRÁFICO DE BARRAS (não precisa mexer)", 3)
-head(pa, 52, ["Indicador", "Meta", "Feito"])
+faixa(dp, 51, "DADOS DO GRÁFICO DE BARRAS", 3)
+head(dp, 52, ["Indicador", "Meta", "Feito"])
 for i, (n, *_r) in enumerate(painel):
-    cel(pa, f"A{53 + i}", n); cel(pa, f"B{53 + i}", 1, PCT); cel(pa, f"C{53 + i}", f"=E{10 + i}", PCT)
-faixa(pa, 17, "DADOS DO GRÁFICO (dia a dia do mês)", 3)
-head(pa, 18, ["Dia", "Meta acumulada", "Realizado acumulado"])
+    cel(dp, f"A{53 + i}", n); cel(dp, f"B{53 + i}", 1, PCT); cel(dp, f"C{53 + i}", f"={PA}E{10 + i}", PCT)
+faixa(dp, 17, "DADOS DO GRÁFICO (dia a dia do mês)", 3)
+head(dp, 18, ["Dia", "Ritmo pra bater a meta", "Realizado acumulado"])
+larguras(dp, [14, 22, 22])
 for d in range(31):
     rr = 19 + d
-    dia = f"$B$6+{d}"
-    cel(pa, f"A{rr}", f'=IF(MONTH({dia})=MONTH($B$6),{dia},"")', "dd/mm")
-    cel(pa, f"B{rr}", f'=IF(A{rr}="",NA(),$B$10*DAY(A{rr})/DAY(DATE(YEAR($B$6),MONTH($B$6)+1,0)))', MOEDA0)
-    cel(pa, f"C{rr}", f'=IF(OR(A{rr}="",A{rr}>$B$4),NA(),SUMPRODUCT(({rg("O")}="Sim")*({rg("Q")}>=$B$6)*({rg("Q")}<=A{rr}),{rg("P")}))', MOEDA0)
+    dia = f"{PA}$B$6+{d}"
+    cel(dp, f"A{rr}", f'=IF(MONTH({dia})=MONTH({PA}$B$6),{dia},"")', "dd/mm")
+    cel(dp, f"B{rr}", f'=IF(A{rr}="",NA(),{PA}$B$10*DAY(A{rr})/DAY(DATE(YEAR({PA}$B$6),MONTH({PA}$B$6)+1,0)))', MOEDA0)
+    cel(dp, f"C{rr}", f'=IF(OR(A{rr}="",A{rr}>{PA}$B$4),NA(),SUMPRODUCT(({rg("O")}="Sim")*({rg("Q")}>={PA}$B$6)*({rg("Q")}<=A{rr}),{rg("P")}))', MOEDA0)
 larguras(pa, [36, 16, 18, 16, 10, 16, 18])
 c3p = col3d("Quanto da meta do mês você já fez", 8, 18)
 c3p.y_axis.numFmt = '0%'; c3p.y_axis.scaling.min = 0
-c3p.add_data(Reference(pa, min_col=2, min_row=52, max_row=56), titles_from_data=True)
-c3p.add_data(Reference(pa, min_col=3, min_row=52, max_row=56), titles_from_data=True)
-c3p.set_categories(Reference(pa, min_col=1, min_row=53, max_row=56))
+c3p.add_data(Reference(dp, min_col=2, min_row=52, max_row=56), titles_from_data=True)
+c3p.add_data(Reference(dp, min_col=3, min_row=52, max_row=56), titles_from_data=True)
+c3p.set_categories(Reference(dp, min_col=1, min_row=53, max_row=56))
 cores(c3p, "D9D9D9", LARANJA); pa.add_chart(c3p, "I4")
 # dia a dia: meta em área cinza + realizado em linha laranja
-ch2 = AreaChart(); ch2.title = "Faturamento do mês, dia a dia — meta x realizado"; ch2.height = 9; ch2.width = 18
+ch2 = AreaChart(); ch2.title = "Faturamento do mês — ritmo pra bater a meta x realizado"; ch2.height = 9; ch2.width = 25
 ch2.y_axis.numFmt = '#,##0'
-ch2.add_data(Reference(pa, min_col=2, min_row=18, max_row=49), titles_from_data=True)
-ch2.set_categories(Reference(pa, min_col=1, min_row=19, max_row=49))
+ch2.add_data(Reference(dp, min_col=2, min_row=18, max_row=49), titles_from_data=True)
+ch2.set_categories(Reference(dp, min_col=1, min_row=19, max_row=49))
 ch2.series[0].graphicalProperties.solidFill = "EDEDED"; ch2.series[0].graphicalProperties.line.solidFill = "BFBFBF"
 ln = LineChart()
-ln.add_data(Reference(pa, min_col=3, min_row=18, max_row=49), titles_from_data=True)
+ln.add_data(Reference(dp, min_col=3, min_row=18, max_row=49), titles_from_data=True)
 ln.series[0].graphicalProperties.line.solidFill = LARANJA; ln.series[0].graphicalProperties.line.width = 38000; ln.series[0].smooth = False
 ln.series[0].marker.symbol = "circle"; ln.series[0].marker.size = 5
 ln.series[0].marker.graphicalProperties = GraphicalProperties(solidFill=LARANJA); ln.series[0].marker.graphicalProperties.line.solidFill = LARANJA
 ch2.x_axis.number_format = "dd/mm"; ch2.x_axis.delete = False; ch2.y_axis.delete = False; ch2.legend.position = "b"
 ch2.y_axis.majorGridlines.spPr = GraphicalProperties(); ch2.y_axis.majorGridlines.spPr.line.solidFill = "EDEDED"
 ch2 += ln
-pa.add_chart(ch2, "I19")
+pa.add_chart(ch2, "A17")
 
 # ================= RASTREADOR DE LEADS (cópia do M3.5 + as 4 colunas do plano) =================
 src = openpyxl.load_workbook(RASTREADOR_M3).worksheets[0]
@@ -639,7 +649,7 @@ for k, v in src.column_dimensions.items():
     ra.column_dimensions[k].width = v.width
 for k, w in {"T": 20, "U": 14, "V": 14, "W": 30}.items(): ra.column_dimensions[k].width = w
 for rh in src.row_dimensions: ra.row_dimensions[rh].height = src.row_dimensions[rh].height
-ra.merge_cells(f"A1:{get_column_letter(NCOL)}1"); ra.merge_cells(f"A2:{get_column_letter(NCOL)}2")
+ra.merge_cells("A1:C1"); ra.merge_cells(f"A2:{get_column_letter(NCOL)}2")
 ra.freeze_panes = src.freeze_panes
 for dvs in src.data_validations.dataValidation:
     novo = DataValidation(type=dvs.type, formula1=dvs.formula1, allow_blank=True)
@@ -662,7 +672,7 @@ ra["U4"] = None   # o exemplo não entra nas contas
 from openpyxl.formatting.rule import FormulaRule
 from openpyxl.styles import Font as _F
 ac.conditional_formatting.add("L6:L17", FormulaRule(formula=["ISNA(L6)"], font=_F(color="FFFFFF")))
-pa.conditional_formatting.add("B19:C49", FormulaRule(formula=["ISNA(B19)"], font=_F(color="FFFFFF")))
+dp.conditional_formatting.add("B19:C49", FormulaRule(formula=["ISNA(B19)"], font=_F(color="FFFFFF")))
 
 if TESTE:
     hoje = datetime.date.today()
@@ -686,16 +696,17 @@ ABAS = [("⌂ Início", "Como usar"), ("Painel", "Painel do mês"), ("Rastreador
         ("4. Rotina", "4. Rotina semanal"), ("5. Acompanh.", "5. Acompanhamento")]
 for _, nome in ABAS:
     ws = wb[nome]
-    if nome in ("Como usar", "Rastreador de Leads"): continue
+    if nome == "Como usar": continue
+    lin = 1 if nome == "Rastreador de Leads" else 3      # no Rastreador a linha 3 é o cabeçalho
     for k, (rot, alvo) in enumerate(ABAS):
-        c = ws.cell(row=3, column=4 + k, value=rot)
+        c = ws.cell(row=lin, column=4 + k, value=rot)
         atual = alvo == nome
         c.fill = PatternFill("solid", fgColor=LARANJA if atual else PRETO)
         c.font = Font(bold=True, size=9, color=BRANCO, underline=None if atual else "single")
         c.alignment = Alignment(horizontal="center", vertical="center", shrink_to_fit=True)
         c.border = Border(left=Side(style="thin", color=BRANCO), right=Side(style="thin", color=BRANCO))
         if not atual: c.hyperlink = Hyperlink(ref=c.coordinate, location=f"'{alvo}'!A1", display=rot)
-    ws.row_dimensions[3].height = 20
+    if lin == 3: ws.row_dimensions[3].height = 20
 for ws in wb.worksheets:
     ws.sheet_view.showGridLines = False
     ws.sheet_properties.tabColor = {"Painel do mês": LARANJA, "Rastreador de Leads": LARANJA, "Como usar": PRETO}.get(ws.title, "7F7F7F")

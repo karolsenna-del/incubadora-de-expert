@@ -17,6 +17,10 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Cortes da sessão com a Bruna (27/10) prontos pra revisão (06/11)
+
+8 Reels verticais em `videos-editados/clip-expert/bruna-2026-10-27/` (corte-01 a 08 + legenda de post de cada um; lista e notas em `_trabalho.md`). Foco na Karol explicando (persona, promessa, primeiro lançamento, trajetória de servidora, 6 nãos). Headline no meio (pedido dela), legenda laranja. Pendente: refazer o enquadramento fino nos cortes 01-05, 07, 08 (o reprocessamento foi interrompido por falta de memória do PC; o 06 já está no novo); revisão e aprovação da Karol; nada foi pra fila do Postador.
+
 ## Método VIP da Sandra Mello: Encontro 1 pronto (05/11)
 
 Sandra fechou o VIP (Karol, 05/11) e respondeu o diagnóstico do VIP em 05/11. Página do E1 no modelo do Tasso (mapa de 6 blocos com observações salvas): https://claude.ai/artifact/WZRGRz7CekgixMJbnHJSvy, arquivo `business/campanhas/metodo-vip/clientes/sandra-mello/encontro-1.html`; documento da cliente em `plano-encontros.md` na mesma pasta. Fontes: anotações do Gemini da sessão de 27/10 + diagnóstico. Pontos levados ao E1: persona voltou a incluir serviços, preço e custo por cliente, app x WhatsApp, promessa sem prazo. Data do E1 não registrada. Depois do E1: registro da sessão e material do E2 (Canvas + roteiro de venda da sócia).
@@ -718,3 +722,5 @@ Retomar com: `/expert-companion`
 - 06/11 — Squad Conteúdo: 20 ideias nos 4 formatos simples (contraste, narração, lista com número, nome próprio), a partir do post do @lucureau. Arquivo: docs/producao-conteudo/karol/ideias-4-formatos-simples-2026-11-06.md. Pendente: Karol escolher quais entram na grade e confirmar #13 e #17.
 - PENDENTE (Karol, 06/11): acrescentar um slide com o desenho do Funil de Vendas Secretas (base: business/campanhas/lives-semanais/live-33-fluxo-funil.html) na apresentação da Express, entre as 5 sessões e os entregáveis dos 6 meses. Ordem da oferta: 5 sessões > funil > entregáveis > preço > bônus "monto o seu funil" (só depois do preço).
 - Alessandro (06/11): não apareceu na 2ª sessão. Karol mandou a página da Express e deixou a porta aberta (sem R$97). Cadastrado no CRM (follow_up_marcado, rever em 20/11).
+- Bianca (06/11): sessão encerrada sem fechar (já comprou curso de vendas, sem dinheiro agora). Cadastrada no CRM (lead novo, Bianca Moscarelli; a "Bianca Rodrigues" de 21/09 é outra), retomar em 07/12.
+- 06/11 — Squad Conteúdo: plano da semana 15 do Rota100K (09-15/11, 49 posts) montado com as 23 ideias dos 4 formatos; 15h = listas com número (decisão da Karol). Arquivo: docs/producao-conteudo/karol/desafio-rota100k-semana15-plano.md. Pendente: Karol confirmar os itens marcados com ⚠️; depois roteiros e revisão.

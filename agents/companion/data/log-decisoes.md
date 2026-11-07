@@ -1170,3 +1170,15 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** não cobrar R$97 nem correr atrás de data; mandar a página de vendas da Express e deixar ele chamar.
 **Racional:** a regra dos R$97 é pra diagnóstico; ele já fez. Página de vendas porque ele lê sozinho e pode comprar sem sessão.
 **Impacto:** CRM com lembrete em 20/11.
+
+## 06/11/2026 — Semana 15: listas com número às 15h
+**Contexto:** desafio Rota100K S15 pede lista às 15h; 23 ideias novas dos 4 formatos simples.
+**Decisão:** às 15h vão as 7 listas com número (uma por dia); contrastes às 20h; narrações e nomes próprios nos Reels falados. Estatística só com fonte e sem manchete contra a Karol (vetado "57% dos criadores ganham pouco").
+**Racional:** as 7 listas casam com os 7 dias do guia; números reais protegem a autoridade.
+**Impacto:** plano em docs/producao-conteudo/karol/desafio-rota100k-semana15-plano.md.
+
+## 06/11/2026 — Cortes da sessão Bruna: headline no meio
+**Contexto:** Clip Expert cortou a sessão 1:1 com a Bruna (27/10) em 8 Reels com foco na Karol explicando.
+**Decisão:** nos cortes de sessão do Clip Expert a headline vai no meio da tela (Karol, 06/11); caixa preta, letra branca, destaque laranja. Trechos escolhidos pela régua do Expert Viral (nota mínima 7.0, 8 de 10 passaram).
+**Racional:** pedido direto da Karol na revisão.
+**Impacto:** regra em custom-do-aluno.md; script novo `agents/clip-expert/scripts/montar-corte-rosto.py` pra gravação 1:1 do Meet (rosto em tela cheia).
