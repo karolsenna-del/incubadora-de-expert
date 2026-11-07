@@ -4,6 +4,18 @@
 
 <!-- Formato:
 
+## 07/11/2026 — VIP da Juliana: persona = médicos integrativos (substitui "pediatra primeiro")
+**Contexto:** diagnóstico do VIP abriu a persona pra "médicos de diferentes especialidades"; a primeira versão do E1 recomendava pediatra primeiro.
+**Decisão:** Karol leva como sugestão pra discutir com a Juliana no E1 (não substitui as respostas dela): especificar médicos integrativos (de qualquer especialidade). O app deve mostrar: pedidos de exame, base hormonal, acompanhamento e ajuste de prescrição; leitura dos exames por parâmetros integrativos (diferentes das referências do laboratório); exames correlacionados por doença em gráfico; lembretes e facilidades pro paciente não desistir do tratamento.
+**Racional:** posicionamento mais forte; o médico integrativo identifica com facilidade pra que serve o app. É a área do Diogo (medicina integrativa pediátrica).
+**Impacto:** página do E1 mostra a resposta dela e, ao lado, a sugestão da Karol (blocos 3 e 4); foco e tarefas ficam neutros até a persona ser escolhida na reunião.
+
+## 07/11/2026 — Encontro 1 do VIP da Juliana: pediatra primeiro como recomendação
+**Contexto:** diagnóstico do VIP (06/11) abriu a persona pra médicos de várias especialidades e tirou o método clínico do Diogo da oferta.
+**Decisão:** a página do E1 leva como recomendação começar pelo pediatra experiente (modelo Diogo) e deixar outras especialidades pra depois; a escolha final é da Juliana na sessão.
+**Racional:** sessão de 29/10 priorizou o app pra médicos experientes; a rede e a autoridade do Diogo pesam com pediatras.
+**Impacto:** E1 em `business/campanhas/metodo-vip/clientes/juliana-pasqual/`.
+
 ## [DATA] — [TITULO DA DECISAO]
 **Contexto:** [o que estava acontecendo]
 **Decisao:** [o que foi decidido]
@@ -1217,3 +1229,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 ## 07/11/2026 — Reels da sessão Bruna: agenda
 **Decisão:** um Reel por dia às 10h (Cuiabá), de 07 a 13/11, por ordem de nota (Karol escolheu o horário).
 **Impacto:** 7 workflows reel-sessao-bruna-*.yml ativos no GitHub.
+
+## 07/11/2026 — Headline dos cortes de live/sessão
+**Contexto:** cortes da sessão Bruna tinham saído com a headline no meio.
+**Decisão:** corte com tela compartilhada → headline no centro; corte com o rosto em tela cheia → headline no topo (margem 4:5).
+**Racional:** pedido da Karol.
+**Impacto:** os 7 cortes da Bruna foram refeitos com a headline no topo e trocados nos mesmos links agendados (07-13/11, 10h); montar-corte-rosto.py usa o topo por padrão.

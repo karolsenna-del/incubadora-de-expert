@@ -17,7 +17,12 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Método VIP da Juliana Pasqual: Encontro 1 pronto (07/11)
+
+Diagnóstico do VIP respondido em 06/11 (linha 4 da planilha). Página do E1 no modelo da Sandra/Tasso (mapa de 6 blocos com observações salvas): https://claude.ai/artifact/F83AYDpn8LLEvR9x2uZA6w, arquivo `business/campanhas/metodo-vip/clientes/juliana-pasqual/encontro-1.html`; documento da cliente em `plano-encontros.md` na mesma pasta. Fontes: anotações do Gemini da sessão de 29/10 + diagnóstico. Pontos levados ao E1: persona abriu pra várias especialidades (sugestão da Karol pra discutir com a Juliana, 07/11: médicos integrativos; app com pedidos de exame, base hormonal, ajuste de prescrição, leitura de exames por parâmetros integrativos, exames correlacionados em gráfico e lembretes pro paciente não desistir), Método Presença virou só organização da jornada (perde o diferencial do Diogo), promessa sem prazo/número, preço e formato (app + implantação), agente da noite sumiu, LGPD, prova em número do consultório. Data do E1 não registrada.
+
 ## Cortes da sessão com a Bruna (27/10): 7 aprovados e na fila (06/11)
+- 07/11: os 7 refeitos com a headline no topo (regra nova: tela cheia = topo, tela compartilhada = centro) e trocados nos links agendados; agenda 07-13/11 10h mantida.
 
 Karol aprovou 7 dos 8 Reels (06/11): cortes 01-05, 07 e 08 copiados pra `business/instagram/fila-reels/sessao-bruna-2026-10-27-corte-NN/` (video.mp4 + legenda.txt). Corte 06 reprovado: cita o nome da antiga empresa dela. Originais seguem em `videos-editados/clip-expert/bruna-2026-10-27/`. O Postador não publica Reels sozinho: a publicação é manual por ela. Enquadramento fino dos 7 não foi refeito (parou por falta de memória); ela aprovou como estão. Postador agora agenda Reels (06/11, SOP-005, `agents/insta-scheduler/scripts/reel.py`): os 7 vídeos já estão no Cloudinary e o corte 01 passou no teste do Instagram sem publicar. Agendados e ativos no GitHub (07/11): um por dia às 10h de Cuiabá, 07/11 corte 01, 08 corte 02, 09 corte 03, 10 corte 04, 11 corte 05, 12 corte 07, 13 corte 08. Conferir depois das 10h de 07/11 se o primeiro saiu.
 

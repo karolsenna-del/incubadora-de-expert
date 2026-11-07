@@ -43,7 +43,7 @@ outras rules. Exemplos:
 - Em seguida, pedir à Karol em uma linha pra deixar só as abas do Chrome que ela precisa, e só então começar a edição.
 - Headline dos Reels: caixa preta com letra branca e só a palavra-chave em laranja, nunca a caixa toda laranja (ela não gostou, 25/10).
 - Headline dos Reels no topo, dentro da margem segura do feed (corte 4:5), nunca no meio da tela: no meio ela cobre o rosto da Karol (28/10).
-- Exceção: nos cortes de sessão/encontro do Clip Expert, headline no meio da tela (Karol pediu em 06/11, cortes da sessão Bruna).
+- Corte de live/sessão: se a Karol compartilha a tela no trecho, headline no centro; se o corte fica com o rosto em tela cheia, headline no topo (Karol, 07/11: refez os cortes da sessão Bruna com a headline no topo).
 - Nunca usar em corte ou conteúdo trecho em que a Karol cita o nome da antiga empresa dela (Sanesul): ela reprovou o corte 06 da sessão Bruna por isso (06/11).
 - Glowup: tentar 2 vezes, em primeiro plano. Se travar nas duas, seguir sem glow e avisar na entrega, sem esperar o ok dela (ela deixa a edição rodando sozinha, 24/10).
 
@@ -73,3 +73,7 @@ outras rules. Exemplos:
 ### Conversa de venda (Vendedor Expert)
 
 - Antes de escrever a próxima mensagem, reler a abordagem já enviada e o que a lead respondeu: nunca perguntar de novo o que ela já respondeu (Karol, 29/10: a abordagem perguntava sobre ensinar profissionais, ela disse sim, e a resposta perguntou "profissionais ou gestantes?").
+
+### Material de sessão com cliente
+
+- Orientação da Karol pra cliente entra no material como "minha sugestão pra conversarmos", ao lado da resposta da cliente, nunca no lugar dela: a decisão sai da reunião (Karol, 07/11, E1 da Juliana).
