@@ -1,0 +1,22 @@
+# Estilo CUSTOM-KAROL-LARANJA — variacao do viral-euriler pra cortes verticais
+# de rosto em tela cheia (sessoes/encontros 1:1 do Clip Expert). Criado 06/11/2026.
+# Mesma base do viral-euriler, mas a palavra-chave em laranja da marca (#F05A28,
+# paleta da Incubadora) e a legenda abaixo do rosto, dentro da margem segura 4:5.
+# NAO edita o viral-euriler.yaml original (regra do Stylist).
+
+nome: "custom-karol-laranja"
+descricao: "Bebas Neue branco + laranja #F05A28 na linha de destaque, abaixo do rosto, dentro do corte 4:5 do feed."
+font: "Bebas Neue"
+fontsize: 80
+ref_width: 1080
+fontcolor: "white"
+borderw: 5
+bordercolor: "black"
+y_pos: 0.66
+mode: "split_60_40_color"
+linha_2_color: "0xF05A28"
+shadow: false
+max_chars: 26
+max_chars_per_line: 26
+max_words: 5
+max_dur: 2.4

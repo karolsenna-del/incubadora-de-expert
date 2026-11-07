@@ -38,7 +38,7 @@ type: "free_text"
 
 Para cada corte aprovado: copiar vídeo + legenda sugerida pra `business/instagram/fila-reels/{live}-{corte}/`, seguindo a mesma convenção de pasta que o `insta-scheduler` já usa pra `business/instagram/fila/`.
 
-**Importante:** o Postador hoje só publica CAROUSEL e STORIES via Meta Graph API — REELS ainda não está implementado nele (ver `agents/insta-scheduler/data/insta-scheduler-kb.md`). Avisar isso explicitamente à Karol: o corte fica pronto e na fila, mas a publicação automática real depende de uma extensão futura do Postador ou de ela publicar manualmente enquanto isso não existe.
+**Atualizado 06/11/2026:** o Postador agora agenda Reels (SOP-005 do playbook do insta-scheduler, script `agents/insta-scheduler/scripts/reel.py`). Texto antigo: o Postador só publicava CAROUSEL e STORIES via Meta Graph API — REELS não estava implementado nele (ver `agents/insta-scheduler/data/insta-scheduler-kb.md`). Avisar isso explicitamente à Karol: o corte fica pronto e na fila, mas a publicação automática real depende de uma extensão futura do Postador ou de ela publicar manualmente enquanto isso não existe.
 
 ### Step 4: Preservar Não Aprovados
 

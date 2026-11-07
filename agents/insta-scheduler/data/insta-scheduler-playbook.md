@@ -45,6 +45,20 @@ Atualizar `data/vault.md`:
 
 ---
 
+### SOP-005: Agendar Reel (criado 06/11/2026)
+
+**Trigger:** Karol aprova corte do Clip Expert (pasta em `business/instagram/fila-reels/{slug}/` com `video.mp4` + `legenda.txt`)
+**Output:** `.github/workflows/reel-{slug}.yml` agendado; publica sozinho depois do push
+**Regras obrigatórias:** data e horário só com o ok da Karol; push só quando ela pedir.
+
+**Passos** (script `agents/insta-scheduler/scripts/reel.py`, Python do sistema, credenciais do vault em env):
+1. `reel.py subir <pasta>`: o .mp4 é ignorado pelo git, então sobe pro Cloudinary (`instagram-reels/{slug}`) e grava `video_url.txt`
+2. `reel.py testar <pasta>` (opcional): cria o container REELS e espera FINISHED sem publicar — validado 06/11 com o corte 01 da sessão Bruna
+3. `reel.py agendar <pasta> AAAA-MM-DD HH:MM` (horário de Cuiabá): gera o workflow com `media_type=REELS`, `share_to_feed=true`, legenda e espera de até 10 min de processamento
+4. Salvar e entregar (push) com o ok da Karol: o cron só vale depois do push
+
+---
+
 ## SOB DEMANDA
 
 ### SOP-003: Verificar Fila

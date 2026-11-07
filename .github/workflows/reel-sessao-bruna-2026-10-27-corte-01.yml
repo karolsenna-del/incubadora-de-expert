@@ -1,0 +1,46 @@
+name: Reel sessao-bruna-2026-10-27-corte-01
+
+on:
+  schedule:
+    - cron: '0 14 7 11 *'   # 07/11 10:00 (Cuiabá)
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publicar Reel via Meta Graph API
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: "17841437530973593"
+          VIDEO_URL: "https://res.cloudinary.com/drvy4cz5x/video/upload/v1794021832/instagram-reels/sessao-bruna-2026-10-27-corte-01.mp4"
+          CAPTION: |
+            Se o seu conteúdo de hoje não conversa com o de ontem, ninguém lembra de você amanhã.
+
+            Não é falta de criatividade. É falta de uma promessa que amarre tudo.
+
+            Quando a promessa está clara, até um post sobre água vira prova de que você resolve aquele problema.
+
+            Karol Senna, mentora da Incubadora de Expert.
+        run: |
+          python3 - <<'EOF'
+          import os, time, requests
+          T, IG, B = os.environ["META_TOKEN"], os.environ["IG_USER_ID"], "https://graph.facebook.com/v21.0"
+          r = requests.post(f"{B}/{IG}/media", params={"access_token": T}, data={
+              "media_type": "REELS", "video_url": os.environ["VIDEO_URL"],
+              "caption": os.environ["CAPTION"].strip(), "share_to_feed": "true"}, timeout=60)
+          print("container:", r.status_code, r.text[:200]); r.raise_for_status()
+          cid = r.json()["id"]
+          for i in range(60):
+              d = requests.get(f"{B}/{cid}", params={"fields": "status_code,status", "access_token": T}, timeout=30).json()
+              if d.get("status_code") == "FINISHED":
+                  break
+              if d.get("status_code") == "ERROR":
+                  raise RuntimeError(f"container ERROR: {d}")
+              time.sleep(10)
+          else:
+              raise RuntimeError("container não ficou FINISHED em 10 min")
+          r = requests.post(f"{B}/{IG}/media_publish", params={"access_token": T}, data={"creation_id": cid}, timeout=60)
+          print("publish:", r.status_code, r.text[:200]); r.raise_for_status()
+          print("PUBLICADO:", r.json())
+          EOF
