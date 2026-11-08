@@ -31,10 +31,11 @@ def subir(pasta):
     cloud, key, sec = env("CLOUDINARY_CLOUD_NAME"), env("CLOUDINARY_API_KEY"), env("CLOUDINARY_API_SECRET")
     public_id = f"instagram-reels/{slug}"
     ts = int(time.time())
-    sig = hashlib.sha1(f"overwrite=true&public_id={public_id}&timestamp={ts}{sec}".encode()).hexdigest()
+    # invalidate: ao refazer um vídeo já agendado, o link antigo passa a entregar o novo (07/11)
+    sig = hashlib.sha1(f"invalidate=true&overwrite=true&public_id={public_id}&timestamp={ts}{sec}".encode()).hexdigest()
     with open(os.path.join(pasta, "video.mp4"), "rb") as f:
         r = requests.post(f"https://api.cloudinary.com/v1_1/{cloud}/video/upload",
-                          data={"public_id": public_id, "overwrite": "true", "api_key": key,
+                          data={"public_id": public_id, "overwrite": "true", "invalidate": "true", "api_key": key,
                                 "timestamp": ts, "signature": sig},
                           files={"file": f}, timeout=600)
     if r.status_code != 200:

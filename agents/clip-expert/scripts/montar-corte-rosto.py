@@ -7,7 +7,9 @@ Pipeline (reaproveita os scripts do squad-edicao-arcane):
   1. corta o trecho do vídeo bruno (ffmpeg)
   2. video-reframe-vertical.py — crop 9:16 que acompanha o rosto de quem fala
   3. video-captions.py — legenda com o estilo pedido, SEM legenda enquanto a headline aparece
-  4. headline no MEIO da tela (Karol pediu em 06/11): caixa preta, letra branca,
+  4. headline: corte que fica com o rosto em tela cheia leva a headline no TOPO, dentro
+     da margem 4:5 (padrão, --hl-y 0.17); corte com tela compartilhada leva no MEIO
+     (--hl-y 0.44) — Karol, 07/11. Caixa preta, letra branca,
      palavra-chave em laranja (#F05A28) — padrão da Karol (25/10 e 28/10)
 
 uso:
@@ -36,7 +38,7 @@ p.add_argument("headline"); p.add_argument("saida")
 p.add_argument("--style", default="custom-karol-laranja")
 p.add_argument("--hl-dur", type=float, default=4.0)
 p.add_argument("--hl-size", type=int, default=88)
-p.add_argument("--hl-y", type=float, default=0.44)  # meio da tela (Karol, 06/11)
+p.add_argument("--hl-y", type=float, default=0.17)  # topo na margem 4:5 (tela cheia); 0.44 = meio (tela compartilhada) — Karol, 07/11
 a = p.parse_args()
 
 tmp = tempfile.mkdtemp(prefix="corte-")
