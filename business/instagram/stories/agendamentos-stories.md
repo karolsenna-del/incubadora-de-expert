@@ -78,3 +78,4 @@
 | 04/11/2026 | live36-concorrencia-desaparece-2026-11-04 | 3 | 18104503823328407, 17947806042359800, 18004769711798906 | sim (ver log de execucao) |
 | 05/11/2026 | sprint-metodo-quinta-2026-11-05 | 1 | 18092816081226392 | sim (ver log de execucao) |
 | 06/11/2026 | gerar-valor-persona-2026-11-06 | 1 | 18137159740672923 | sim (ver log de execucao) |
+| 08/11/2026 | grupo-domingo-2026-11-08 | 1 | 17900982663612121 | sim (ver log de execucao) |
