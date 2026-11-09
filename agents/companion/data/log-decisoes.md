@@ -1256,6 +1256,6 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 
 ## 09/11/2026 — Método VIP da Juliana: E1 entrega direção e prioridade; funil fica pro E2
 **Contexto:** a sessão já estava longa e, se a Juliana topar o integrativo, o app muda bastante; montar funil, roteiro e oferta no E1 sobrecarregaria.
-**Decisão:** E1 = direção (persona/produto) + prioridade (5 atividades pra fechar o app). E2 = Juliana apresenta o app pronto pras primeiras vendas, Karol ensina o funil de Vendas Secretas com rastreador e modelos, Diogo lista os médicos conhecidos. Conversas com médicos só depois do E2.
+**Decisão:** E1 = direção (persona/produto) + prioridade (5 atividades pra fechar o app). E2 = Juliana apresenta o app pronto pras primeiras vendas, Karol ensina o funil de Vendas Secretas com rastreador e modelos. Depois do E2, o Diogo lista os médicos conhecidos e começam as conversas.
 **Racional:** ela contratou direção e prioridade; vender só com o app pronto e com o funil.
 **Impacto:** página do E1 reorganizada (bloco 7 "Prioridade", Abertura, Foco e chips dos encontros).
