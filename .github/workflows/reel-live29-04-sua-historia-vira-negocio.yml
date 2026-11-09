@@ -1,0 +1,42 @@
+name: Reel live29-04-sua-historia-vira-negocio
+
+on:
+  schedule:
+    - cron: '0 17 12 11 *'   # 12/11 13:00 (Cuiabá)
+  workflow_dispatch:
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publicar Reel via Meta Graph API
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: "17841437530973593"
+          VIDEO_URL: "https://res.cloudinary.com/drvy4cz5x/video/upload/v1794171437/instagram-reels/live29-04-sua-historia-vira-negocio.mp4"
+          CAPTION: |
+            Uma experiência anterior pode revelar o público que você entende melhor. No exemplo da manicure que também estuda tecnologia, juntar essas vivências abre espaço para criar ferramentas para outras manicures. O que da sua história pode virar uma solução útil para alguém?
+
+            Comente LIVE para receber o link do grupo das lives semanais.
+        run: |
+          python3 - <<'EOF'
+          import os, time, requests
+          T, IG, B = os.environ["META_TOKEN"], os.environ["IG_USER_ID"], "https://graph.facebook.com/v21.0"
+          r = requests.post(f"{B}/{IG}/media", params={"access_token": T}, data={
+              "media_type": "REELS", "video_url": os.environ["VIDEO_URL"],
+              "caption": os.environ["CAPTION"].strip(), "share_to_feed": "true"}, timeout=60)
+          print("container:", r.status_code, r.text[:200]); r.raise_for_status()
+          cid = r.json()["id"]
+          for i in range(60):
+              d = requests.get(f"{B}/{cid}", params={"fields": "status_code,status", "access_token": T}, timeout=30).json()
+              if d.get("status_code") == "FINISHED":
+                  break
+              if d.get("status_code") == "ERROR":
+                  raise RuntimeError(f"container ERROR: {d}")
+              time.sleep(10)
+          else:
+              raise RuntimeError("container não ficou FINISHED em 10 min")
+          r = requests.post(f"{B}/{IG}/media_publish", params={"access_token": T}, data={"creation_id": cid}, timeout=60)
+          print("publish:", r.status_code, r.text[:200]); r.raise_for_status()
+          print("PUBLICADO:", r.json())
+          EOF
