@@ -1259,3 +1259,15 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** E1 = direção (persona/produto) + prioridade (5 atividades pra fechar o app). E2 = Juliana apresenta o app pronto pras primeiras vendas, Karol ensina o funil de Vendas Secretas com rastreador e modelos. Depois do E2, o Diogo lista os médicos conhecidos e começam as conversas.
 **Racional:** ela contratou direção e prioridade; vender só com o app pronto e com o funil.
 **Impacto:** página do E1 reorganizada (bloco 7 "Prioridade", Abertura, Foco e chips dos encontros).
+
+## 09/11/2026 — Agendamento dos Reels da Live 29 e carrosséis da Semana 15
+**Contexto:** 8 Reels da Live 29 (edição Euriliana) e 7 carrosséis da Rota100k Semana 15 prontos em Downloads.
+**Decisão:** Reels um por dia às 13h (Cuiabá), de 09 a 16/11, na ordem dos cortes; carrosséis às 20h (BRT, padrão dos carrosséis), de 09 a 15/11 (seg a dom).
+**Racional:** horário pedido pela Karol.
+**Impacto:** 15 posts no GitHub, publicam sozinhos. De 09 a 13/11 saem 2 Reels por dia (Bruna 10h + Live 29 13h).
+
+## 09/11/2026 — Tema da Live 37
+**Contexto:** Karol definiu a live da semana.
+**Decisão:** medo de cobrar / criar produto infinitamente pra não ouvir não; o não no 1x1 é o teste seguro e privado (Vendas Secretas). Caso único da Karol.
+**Racional:** pedido dela; diferencia da Live 34 (engavetar) pelo lado emocional do julgamento.
+**Impacto:** roteiro sai depois de ela confirmar data, oferta e as duas histórias pendentes.

@@ -24,7 +24,7 @@ Os 7 em ~/Downloads/rota100k-s15-{dia}-*, no modelo de contraste diagnostico-tip
 Aria analisou 01/11 à noite a 07/11 (coleta de 07/11): `docs/producao-conteudo/karol/analises/2026-11-08/relatorio-semana14.md`. Destaques: o Reels "Nessa época eu achava que iria ser promovida rapidinho" (01/11) fez 6.089 views, 82% em 3s e 25,5s de tempo médio, e no dia seguinte vieram 174 visitas e +8 seguidores. O molde "eu + cena do emprego público + dilema" ganhou pela 3ª semana. A série das 11h são os cortes de lives automáticos: a Karol decidiu manter (presença). O post da promoção era uma foto antiga dela no sofá da varanda com uma long neck, com legenda curta. A sugestão é repetir a receita 1x por semana. Nenhum carrossel foi compartilhado. Falta a Karol corrigir o "Ía" na legenda do 7s de 07/11.
 
 ## Reels "Meu erro" e "2 Caminhos" editados (07/11)
-Edição Euriliana no padrão da Karol (pirotecnia 2, legenda laranja, glowup leve, 1,05x, headline no topo com palavra-chave laranja, áudio tratado). Prontos em Videos/edicao-euriliana/meu-erro/saida/meu-erro-final.mp4 (1min53) e dois-caminhos/saida/dois-caminhos-final.mp4 (1min05). Falta só a Karol assistir e postar.
+Edição Euriliana no padrão da Karol (pirotecnia 2, legenda laranja, glowup leve, 1,05x, headline no topo com palavra-chave laranja, áudio tratado). Prontos em Videos/edicao-euriliana/meu-erro/saida/meu-erro-final.mp4 (1min53) e dois-caminhos/saida/dois-caminhos-final.mp4 (1min, refeito em 09/11 sem os tropeços "duas alternativas" e "se você sab"). Falta só a Karol assistir e postar.
 
 ## Método VIP da Juliana Pasqual: Encontro 1 pronto (07/11)
 
@@ -744,3 +744,9 @@ Retomar com: `/expert-companion`
 - 06/11 — Squad Conteúdo: plano da semana 15 do Rota100K (09-15/11, 49 posts) montado com as 23 ideias dos 4 formatos; 15h = listas com número (decisão da Karol). Arquivo: docs/producao-conteudo/karol/desafio-rota100k-semana15-plano.md. Pendente: Karol confirmar os itens marcados com ⚠️; depois roteiros e revisão.
 - 06/11: S15 sem narração com b-roll; ideias 7-11 viram falado pra câmera (plano e ideias ajustados).
 - 07/11: roteiros da S15 prontos (49 posts) em docs/producao-conteudo/karol/desafio-rota100k-semana15-roteiros.md, revisados pelo Codex; faltam os 7 itens ⚠️ da Karol antes de gravar.
+
+- 09/11 — Postador: 8 Reels da Live 29 agendados (13h Cuiabá, 09 a 16/11) e 7 carrosséis da Semana 15 (20h BRT, 09 a 15/11), já no GitHub. Pendente da edição: ninguém escutou os cortes da Live 29 com som.
+
+## Live 37 — tema em redefinição (09/11/2026)
+- Tema da Karol: medo de cobrar / produto infinito pra fugir do "não"; o não no 1x1 dói menos e ninguém precisa saber. Pauta em `business/campanhas/lives-semanais/live-37-pauta.md` (título, tese, caso único da Karol com histórias #3, #19, #21, 8 blocos). Data CONFIRMADA: qua 11/11 15h (09/11). Oferta Incubadora Express + CTA SECRETO CONFIRMADOS (09/11). Espera a Karol: história dela de medo do julgamento e um "não" real em sessão 1x1. Depois disso, roteiro pelo Expert em Lives.
+- ATUALIZAÇÃO 09/11: Karol DESCARTOU o tema do medo do não ("ficou ruim"); pauta arquivada em `live-37-v1-medo-do-nao-descartada.md`. Mantidos: qua 11/11 15h, Incubadora Express, CTA SECRETO. Novos temas propostos, esperando ela escolher. História nova #27 (o não que virou a jornada desenhada) em historias-trajetoria.md.
