@@ -1235,3 +1235,27 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** corte com tela compartilhada → headline no centro; corte com o rosto em tela cheia → headline no topo (margem 4:5).
 **Racional:** pedido da Karol.
 **Impacto:** os 7 cortes da Bruna foram refeitos com a headline no topo e trocados nos mesmos links agendados (07-13/11, 10h); montar-corte-rosto.py usa o topo por padrão.
+
+## 07/11/2026 — Render de vídeo com pouca memória
+**Contexto:** o render do "2 Caminhos" foi derrubado pelo sistema por falta de RAM (16 GB) com 2 processos em paralelo.
+**Decisão:** renderizar com concurrency=1 quando a RAM livre estiver abaixo de ~5 GB.
+**Racional:** com 1 processo o render terminou sem cair (~10 min para 66 s de vídeo).
+**Impacto:** vale para as próximas edições de Reels.
+
+## 08/11/2026 — Cortes de lives às 11h continuam
+**Contexto:** a análise da S14 mostrou que a série das 11h (cortes de lives, publicação automática) teve a pior retenção da semana (8% a 23% em 3s).
+**Decisão:** manter a série.
+**Racional:** mantém a Karol presente e vista sem trabalho de edição; é tudo automatizado.
+**Impacto:** a Aria não recomenda mais tirar a série; o número dela é só acompanhado, fora da régua dos posts do plano.
+
+## 09/11/2026 — E1 da Juliana: Recomendação do app integrativo antes da Persona
+**Contexto:** Karol quer levar a proposta de app imerso no mundo integrativo (não só organizador do médico); a Juliana respondeu o diagnóstico indo pro organizador.
+**Decisão:** na página do E1, a Recomendação vira o bloco 3, antes de Persona+Promessa; a Persona tem 2 versões (com e sem integrativo) pra seguir após a decisão da Juliana. Agente das 20h registrado como ideia da Karol, não implantado.
+**Racional:** escolher o integrativo muda dores e desejos da persona; preencher a persona antes faria perder metade do trabalho.
+**Impacto:** o encontro fica entre 90 e 105 min; Persona cai pra 15-20 min.
+
+## 09/11/2026 — Método VIP da Juliana: E1 entrega direção e prioridade; funil fica pro E2
+**Contexto:** a sessão já estava longa e, se a Juliana topar o integrativo, o app muda bastante; montar funil, roteiro e oferta no E1 sobrecarregaria.
+**Decisão:** E1 = direção (persona/produto) + prioridade (5 atividades pra fechar o app). E2 = Juliana apresenta o app pronto pras primeiras vendas, Karol ensina o funil de Vendas Secretas com rastreador e modelos, Diogo lista os médicos conhecidos. Conversas com médicos só depois do E2.
+**Racional:** ela contratou direção e prioridade; vender só com o app pronto e com o funil.
+**Impacto:** página do E1 reorganizada (bloco 7 "Prioridade", Abertura, Foco e chips dos encontros).

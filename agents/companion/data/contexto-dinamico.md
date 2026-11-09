@@ -17,9 +17,21 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Carrosséis das 20h da semana 15 montados (08/11)
+Os 7 em ~/Downloads/rota100k-s15-{dia}-*, no modelo de contraste diagnostico-tipografico (rótulo laranja "Lado A:" / "Lado B:", número ao fundo, explicação menor), alternando fundo: seg/qua/sex/dom preto, ter/qui/sáb branco. slides.json e legenda em docs/producao-conteudo/karol/posts/rota100k-s15-*. Domingo (7 listas) no mesmo modelo. Falta a Karol conferir e postar.
+
+## Análise da semana 14 do Rota100k pronta (08/11)
+Aria analisou 01/11 à noite a 07/11 (coleta de 07/11): `docs/producao-conteudo/karol/analises/2026-11-08/relatorio-semana14.md`. Destaques: o Reels "Nessa época eu achava que iria ser promovida rapidinho" (01/11) fez 6.089 views, 82% em 3s e 25,5s de tempo médio, e no dia seguinte vieram 174 visitas e +8 seguidores. O molde "eu + cena do emprego público + dilema" ganhou pela 3ª semana. A série das 11h são os cortes de lives automáticos: a Karol decidiu manter (presença). O post da promoção era uma foto antiga dela no sofá da varanda com uma long neck, com legenda curta. A sugestão é repetir a receita 1x por semana. Nenhum carrossel foi compartilhado. Falta a Karol corrigir o "Ía" na legenda do 7s de 07/11.
+
+## Reels "Meu erro" e "2 Caminhos" editados (07/11)
+Edição Euriliana no padrão da Karol (pirotecnia 2, legenda laranja, glowup leve, 1,05x, headline no topo com palavra-chave laranja, áudio tratado). Prontos em Videos/edicao-euriliana/meu-erro/saida/meu-erro-final.mp4 (1min53) e dois-caminhos/saida/dois-caminhos-final.mp4 (1min05). Falta só a Karol assistir e postar.
+
 ## Método VIP da Juliana Pasqual: Encontro 1 pronto (07/11)
 
 Diagnóstico do VIP respondido em 06/11 (linha 4 da planilha). Página do E1 no modelo da Sandra/Tasso (mapa de 6 blocos com observações salvas): https://claude.ai/artifact/F83AYDpn8LLEvR9x2uZA6w, arquivo `business/campanhas/metodo-vip/clientes/juliana-pasqual/encontro-1.html`; documento da cliente em `plano-encontros.md` na mesma pasta. Fontes: anotações do Gemini da sessão de 29/10 + diagnóstico. Pontos levados ao E1: persona abriu pra várias especialidades (sugestão da Karol pra discutir com a Juliana, 07/11: médicos integrativos; app com pedidos de exame, base hormonal, ajuste de prescrição, leitura de exames por parâmetros integrativos, exames correlacionados em gráfico e lembretes pro paciente não desistir), Método Presença virou só organização da jornada (perde o diferencial do Diogo), promessa sem prazo/número, preço e formato (app + implantação), agente da noite sumiu, LGPD, prova em número do consultório. Data do E1 não registrada.
+
+## Juliana: sugestões de funções do app integrativo pro E1 (08/11)
+E1 é segunda 09/11. Sugestões pra Karol levar como "minha sugestão pra conversarmos" (7 blocos: plano vivo com o método do Diogo, manipulados/farmácia com voucher pro paciente, exames com faixa ótima e gráficos correlacionados, radar do médico, gamificação e check-in com cobrança gentil, modo criança na pediatria, rede de profissionais) + começo sugerido em 3 funções + perguntas pro Diogo. Cuidados levantados: ética médica com farmácia (sem vantagem pro médico) e regra da Anvisa se o app diagnosticar. Arquivo em Downloads/juliana-e1-sugestoes-app.txt. Entrou na página do E1 como bloco 3 "Recomendação", antes da Persona, que ganhou 2 versões com botão (com e sem integrativo); Jornada e caso-modelo seguem o mesmo botão; entraram check-in por notificação + WhatsApp pra quem some e prêmios da vida real; E1 = direção + prioridade (5 atividades pra fechar o app), funil de Vendas Secretas no E2 com o Diogo listando médicos (09/11). Agente das 20h é ideia da Karol, não implantado.
 
 ## Cortes da sessão com a Bruna (27/10): 7 aprovados e na fila (06/11)
 - 07/11: os 7 refeitos com a headline no topo (regra nova: tela cheia = topo, tela compartilhada = centro) e trocados nos links agendados; agenda 07-13/11 10h mantida.

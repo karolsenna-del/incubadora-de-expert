@@ -1,7 +1,7 @@
 <title>Encontro 1 da Juliana</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
 <style>
-/* Layout: mapa mental de 6 blocos ao redor do encontro; o bloco ativo abre num cartão logo abaixo */
+/* Layout: mapa mental de 7 blocos ao redor do encontro; o bloco ativo abre num cartão logo abaixo */
 :root{
   --bg:#F4F4F5; --surface:#FFFFFF; --surface-2:#EDEDF0;
   --ink:#0B0B0C; --ink-soft:#5F5F68; --line:#D4D4D8;
@@ -134,6 +134,12 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
 .save-state{font-size:12px;color:var(--ink-soft);text-align:right;min-height:16px;margin-top:6px;}
 .foot{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-soft);line-height:1.6;}
 
+.variant-toggle{display:inline-flex;gap:3px;padding:3px;border:1px solid var(--line);border-radius:99px;background:var(--surface-2);margin-bottom:14px;}
+.variant-toggle button{border:0;background:transparent;padding:7px 14px;border-radius:99px;font:600 12.5px var(--font-body);color:var(--ink-soft);cursor:pointer;}
+.variant-toggle button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);}
+.variant-toggle button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+[data-variant-panel]{display:none;}
+[data-variant-panel].active{display:block;}
 [data-panel]{display:none;}
 [data-panel].active{display:block;}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;}}
@@ -141,7 +147,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
 
 <div class="page">
   <div class="hero">
-    <div class="eyebrow">Método VIP · Encontro 1 — Diagnóstico e primeiros passos</div>
+    <div class="eyebrow">Método VIP · Encontro 1 — Direção e prioridade</div>
     <h1>Juliana Pasqual</h1>
     <div class="meta">
       <span>Método Presença · Dr. Diogo</span>
@@ -153,27 +159,29 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
   </div>
 
   <div class="progress">
-    <span class="progress-count" id="progress-count">0/6 blocos</span>
+    <span class="progress-count" id="progress-count">0/7 blocos</span>
     <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
   </div>
   <p class="hint">Clique em cada bloco pra abrir o conteúdo</p>
 
   <div class="mindmap-wrap">
-    <svg class="mindmap-svg" viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="Mapa mental com 6 blocos do encontro ao redor de um nó central">
+    <svg class="mindmap-svg" viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="Mapa mental com 7 blocos do encontro ao redor de um nó central">
       <line data-line="1" x1="50" y1="50" x2="50" y2="10"></line>
-      <line data-line="2" x1="50" y1="50" x2="82.9" y2="30"></line>
-      <line data-line="3" x1="50" y1="50" x2="82.9" y2="70"></line>
-      <line data-line="4" x1="50" y1="50" x2="50" y2="90"></line>
-      <line data-line="5" x1="50" y1="50" x2="17.1" y2="70"></line>
-      <line data-line="6" x1="50" y1="50" x2="17.1" y2="30"></line>
+      <line data-line="2" x1="50" y1="50" x2="75.7" y2="25.1"></line>
+      <line data-line="7" x1="50" y1="50" x2="82.1" y2="58.9"></line>
+      <line data-line="3" x1="50" y1="50" x2="64.3" y2="86"></line>
+      <line data-line="4" x1="50" y1="50" x2="35.7" y2="86"></line>
+      <line data-line="5" x1="50" y1="50" x2="17.9" y2="58.9"></line>
+      <line data-line="6" x1="50" y1="50" x2="24.3" y2="25.1"></line>
     </svg>
     <div class="hub">ENCONTRO 1<br>JULIANA</div>
     <button class="node-btn" id="node-1" data-node="1" style="left:50%;top:10%;"><span class="num">1</span>Abertura</button>
-    <button class="node-btn" id="node-2" data-node="2" style="left:82.9%;top:30%;"><span class="num">2</span>O que você já tem</button>
-    <button class="node-btn" id="node-3" data-node="3" style="left:82.9%;top:70%;"><span class="num">3</span>Persona+Promessa</button>
-    <button class="node-btn" id="node-4" data-node="4" style="left:50%;top:90%;"><span class="num">4</span>Jornada+Ferramentas</button>
-    <button class="node-btn" id="node-5" data-node="5" style="left:17.1%;top:70%;"><span class="num">5</span>Foco</button>
-    <button class="node-btn" id="node-6" data-node="6" style="left:17.1%;top:30%;"><span class="num">6</span>Primeiros passos</button>
+    <button class="node-btn" id="node-2" data-node="2" style="left:75.7%;top:25.1%;"><span class="num">2</span>O que você já tem</button>
+    <button class="node-btn" id="node-7" data-node="7" style="left:82.1%;top:58.9%;"><span class="num">3</span>Recomendação</button>
+    <button class="node-btn" id="node-3" data-node="3" style="left:64.3%;top:86%;"><span class="num">4</span>Persona+Promessa</button>
+    <button class="node-btn" id="node-4" data-node="4" style="left:35.7%;top:86%;"><span class="num">5</span>Jornada+Ferramentas</button>
+    <button class="node-btn" id="node-5" data-node="5" style="left:17.9%;top:58.9%;"><span class="num">6</span>Foco</button>
+    <button class="node-btn" id="node-6" data-node="6" style="left:24.3%;top:25.1%;"><span class="num">7</span>Prioridade</button>
   </div>
 
   <div class="detail-wrap">
@@ -187,11 +195,11 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
         <li>Prioridade número um: <b>vender o aplicativo pra médicos experientes</b>. É o caminho mais rápido pra receita e o que menos depende do tempo do Diogo.</li>
         <li><b>Você é a especialista à frente</b> do projeto digital. O Diogo fica como mentor, em segundo plano, até estar pronto pra aparecer.</li>
         <li>A venda começa por conversa direta com médicos (Funil de Vendas Secretas), em 30 a 40 dias, sem esperar o Instagram crescer.</li>
-        <li>Como funciona o Método VIP: hoje é diagnóstico, persona, promessa, ferramentas e primeiros passos. No Encontro 2 a gente monta o plano de negócio. O Encontro 3 é correção de rota depois de 30 a 40 dias executando.</li>
+        <li>Como funciona o Método VIP: hoje eu te dou a <b>direção</b> (qual persona e qual produto seguir) e a <b>prioridade</b> (o que fechar no app). No Encontro 2 você me apresenta o app pronto pras primeiras vendas e eu te ensino o funil de Vendas Secretas. O Encontro 3 é correção de rota depois de 30 a 40 dias executando.</li>
       </ul>
       <div class="encontros" style="margin-top:14px;">
-        <span class="enc-chip now"><b>E1</b> Diagnóstico + primeiros passos (hoje)</span>
-        <span class="enc-chip"><b>E2</b> Plano de negócio</span>
+        <span class="enc-chip now"><b>E1</b> Direção + prioridade (hoje)</span>
+        <span class="enc-chip"><b>E2</b> App pronto + funil de Vendas Secretas</span>
         <span class="enc-chip"><b>E3</b> Correção de rota (após 30–40 dias)</span>
       </div>
       <label class="mark-done"><input type="checkbox" id="done-1" data-block-check="1"> Marcar bloco como feito</label>
@@ -221,7 +229,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
             <li><b>Diferencial</b>Você mesma escreveu: o que defende é "a combinação do método do Dr. Diogo com a jornada na plataforma". Se cada médico adapta o fluxo, o método do Diogo some da oferta</li>
             <li><b>Promessa</b>Clara no que o app faz, mas sem prazo e sem número: "reduza o tempo" quanto, em quanto tempo?</li>
             <li><b>Preço</b>Não aparece no diagnóstico. Assinatura do app? Implantação? Os dois?</li>
-            <li><b>Atendimento da noite</b>Na conversa falamos do agente de IA a partir das 20h pra triagem dos pais. Ele não aparece no diagnóstico</li>
+            <li><b>Atendimento da noite</b>Na conversa eu sugeri um agente de IA a partir das 20h pra triagem dos pais. Ainda não existe; está nas minhas recomendações</li>
           </ul>
         </div>
       </div>
@@ -230,7 +238,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
         <li><input type="checkbox" id="q2-1"><span>O que do aplicativo já funciona hoje no consultório do Diogo, e o que ainda é ideia? Me mostra a tela de um paciente em acompanhamento.</span></li>
         <li><input type="checkbox" id="q2-2"><span>Quantos pacientes estão em acompanhamento no app agora? Quem da equipe usa, e pra quê?</span></li>
         <li><input type="checkbox" id="q2-3"><span>Antes do app, quanto tempo o Diogo gastava fora da consulta com cada paciente (WhatsApp, exames, cobrar retorno)? E agora? Mesmo uma estimativa serve: é a prova que vai vender o app.</span></li>
-        <li><input type="checkbox" id="q2-4"><span>O agente de IA pra noite já existe dentro do app ou ainda é ideia?</span></li>
+        <li><input type="checkbox" id="q2-4"><span>Hoje, quem responde os pais à noite? Quantas mensagens chegam depois das 20h?</span></li>
         <li><input type="checkbox" id="q2-5"><span>O Diogo leu o diagnóstico? Ele concorda que o app saia pra outras especialidades?</span></li>
         <li><input type="checkbox" id="q2-6"><span>O app guarda dados de saúde de pacientes. Pra vender pra outros médicos, já foi visto o que a lei de proteção de dados (LGPD) exige? Quem cuida disso?</span></li>
       </ul>
@@ -238,14 +246,46 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
     </div>
 
     <div class="card" data-panel="3">
-      <div class="card-head"><h2>Persona + Promessa</h2><span class="time">25–30 min</span></div>
-      <p class="card-sub">A base do plano de negócio do Encontro 2.</p>
-      <div class="hypothesis">
-        <b>O que você respondeu:</b> "médicos de diferentes especialidades" (ginecologia, endocrinologia, pediatria, excesso de peso).<br><br>
-        <b>Minha sugestão pra conversarmos:</b> especificar <b>médicos integrativos</b>, dessas mesmas especialidades. Acho o posicionamento mais forte: o médico integrativo bate o olho e entende na hora pra quem o app foi feito, porque a rotina dele está ali. E é a área do Diogo (medicina integrativa pediátrica), então a autoridade dele vale na conversa. O que você acha?
+      <div class="card-head"><h2>Persona + Promessa</h2><span class="time">15–20 min</span></div>
+      <p class="card-sub">A base do plano de negócio do Encontro 2. Siga pelo caminho que você escolheu na Recomendação.</p>
+      <div class="variant-toggle" role="group" aria-label="Caminho da persona">
+        <button type="button" data-variant="int" aria-pressed="true">Com integrativo</button>
+        <button type="button" data-variant="orig" aria-pressed="false">Sem integrativo</button>
       </div>
+
+      <div data-variant-panel="int">
+        <div class="hypothesis">
+          <b>Rascunho meu pra validar:</b> sai das dores da Recomendação, não de dado de vocês. Você e o Diogo confirmam ou trocam cada ponto.<br><br>
+          <b>Retrato:</b> o médico integrativo (ginecologia, endocrinologia, pediatria, excesso de peso) que acompanha o paciente por meses. Ele pede muitos exames, trabalha a base hormonal, ajusta a prescrição a cada retorno e virou o <i>"painel humano de cada paciente"</i>, como você escreveu. E ainda perde paciente que desiste do tratamento no meio do caminho. Testar com 3 a 5 médicos integrativos que o Diogo conhece.
+        </div>
+        <div class="two-col">
+          <div>
+            <div class="col-label">Persona — 7 dimensões</div>
+            <ul class="checklist">
+              <li><input type="checkbox" id="pi-1"><span><b>Quem é.</b> Rascunho: médico integrativo de consultório particular, sem plano de saúde, que acompanha o paciente por meses e trabalha com nutricionista e outros profissionais. Confere? Idade, tempo de carreira, equipe?</span></li>
+              <li><input type="checkbox" id="pi-2"><span><b>Situação atual.</b> Rascunho: muitos pacientes em tratamento ao mesmo tempo, cada um com vários manipulados, exames e mudanças de prescrição. O acompanhamento entre as consultas acontece no WhatsApp e na cabeça dele. Quantos pacientes ao mesmo tempo?</span></li>
+              <li><input type="checkbox" id="pi-3"><span><b>Desejo profundo.</b> Rascunho: ver o paciente chegar ao resultado sem virar o "painel humano" de cada um, e ter "final de semana, sem estar preocupado" (palavras suas). É isso?</span></li>
+              <li><input type="checkbox" id="pi-4"><span><b>Dor principal.</b> Rascunho: o paciente que larga o tratamento no meio porque se perdeu na prescrição, o manipulado acabou ou ele não viu resultado. E o exame que o laboratório chama de normal e ele lê diferente. Qual a frase exata do Diogo sobre isso?</span></li>
+              <li><input type="checkbox" id="pi-5"><span><b>Medo/objeção.</b> Rascunho: "já faço pelo WhatsApp" e "meu paciente não vai usar app". Qual aparece primeiro numa conversa com um colega?</span></li>
+              <li><input type="checkbox" id="pi-6"><span><b>Já tentou.</b> Rascunho: prontuário eletrônico e WhatsApp, que guardam a consulta mas não acompanham o tratamento entre uma consulta e outra. Algum outro app?</span></li>
+              <li><input type="checkbox" id="pi-7"><span><b>O que precisa ouvir.</b> Rascunho: "esse app foi feito dentro de um consultório integrativo, pra quem trata o todo". Qual frase o Diogo diria a um colega?</span></li>
+            </ul>
+          </div>
+          <div>
+            <div class="col-label">Promessa Transformadora — 4 elementos</div>
+            <ul class="checklist">
+              <li><input type="checkbox" id="pri-1"><span><b>Resultado externo.</b> Rascunho: "seu paciente segue o tratamento até o fim, e você vê quem precisa de você antes da consulta". Falta número e prazo: quantos pacientes do Diogo concluem o tratamento hoje?</span></li>
+              <li><input type="checkbox" id="pri-2"><span><b>O que muda por dentro.</b> Rascunho: a tranquilidade de saber como cada paciente está sem precisar perguntar, e de ver o tratamento funcionar.</span></li>
+              <li><input type="checkbox" id="pri-3"><span><b>Diferencial.</b> Rascunho: o app feito dentro de um consultório integrativo, com o método de um pediatra com 64 mil atendimentos e a leitura integrativa dos exames.</span></li>
+              <li><input type="checkbox" id="pri-4"><span><b>Objeção.</b> Rascunho: "meu paciente não vai usar" → o check-in pela notificação, sem abrir o app, o WhatsApp pra quem some e os prêmios combinados na consulta fazem ele seguir, e o piloto com poucos pacientes e métricas combinadas antes mostra isso na prática.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div data-variant-panel="orig">
       <div class="hypothesis">
-        <b>Se for por esse caminho, um retrato pra validar:</b> o médico integrativo que acompanha o paciente por meses: pede muitos exames, trabalha a base hormonal, ajusta a prescrição a cada retorno e virou o <i>"painel humano de cada paciente"</i>, como você escreveu. E ainda perde paciente que desiste do tratamento no meio do caminho. Testar com 3 a 5 médicos integrativos que o Diogo conhece.
+        <b>O que você respondeu:</b> "médicos de diferentes especialidades" (ginecologia, endocrinologia, pediatria, excesso de peso). Seguimos com a sua persona.
       </div>
       <div class="two-col">
         <div>
@@ -270,12 +310,17 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
           </ul>
         </div>
       </div>
+      </div>
       <label class="mark-done"><input type="checkbox" id="done-3" data-block-check="3"> Marcar bloco como feito</label>
     </div>
 
     <div class="card" data-panel="4">
-      <div class="card-head"><h2>Jornada + Ferramentas</h2><span class="time">20 min</span></div>
+      <div class="card-head"><h2>Jornada + Ferramentas</h2><span class="time">10–15 min</span></div>
       <p class="card-sub">Os passos que levam o médico de "central de coordenação" a uma jornada que anda sem ele. Os seus 5 passos já estão bons; vamos validar.</p>
+      <div class="variant-toggle" role="group" aria-label="Caminho da persona (o mesmo botão da Persona)">
+        <button type="button" data-variant="int" aria-pressed="true">Com integrativo</button>
+        <button type="button" data-variant="orig" aria-pressed="false">Sem integrativo</button>
+      </div>
       <ul class="bullets">
         <li><b>Ponto de partida</b> (nas suas palavras): demandas chegando por vários WhatsApps, sem triagem de urgência; o médico lê, procura o histórico, decide e cobra cada etapa. Pacientes se perdem entre uma etapa e outra.</li>
       </ul>
@@ -287,19 +332,30 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
         <span class="step-chip"><b>4</b>Acompanhar com dados</span><span class="arrow">→</span>
         <span class="step-chip"><b>5</b>Revisar e concluir</span>
       </div>
-      <h3 class="sec">Minhas sugestões de funções (pra discutirmos)</h3>
-      <p class="card-sub">Se a persona for o médico integrativo, estas funções falam direto com a rotina dele.</p>
-      <ul class="bullets">
-        <li><b>Rotina do integrativo no app:</b> pedidos de exame, base hormonal, acompanhamento do tratamento e ajuste das prescrições, tudo na linha do tempo do paciente.</li>
-        <li><b>Leitura dos exames pelos parâmetros integrativos:</b> as faixas da saúde integrativa são diferentes das referências do laboratório. O app já mostra o resultado na régua que o médico usa.</li>
-        <li><b>Exames correlacionados por doença:</b> o app junta os exames que andam juntos no tratamento e mostra a relação em gráfico. Exemplo a confirmar com o Diogo: na obesidade, colesterol e açúcares lado a lado.</li>
-        <li><b>Do lado do paciente:</b> lembretes e facilidades pra ele não desistir do tratamento, o que é muito comum nessa área. O médico acompanha melhor e o paciente chega ao fim.</li>
-      </ul>
+      <div data-variant-panel="int">
+      <p class="flow-note">A organização que você montou fica nos passos 1 a 3. As funções integrativas entram no 4 (acompanhar com dados) e no 5 (revisar e concluir).</p>
+      <h3 class="sec">Funções integrativas na jornada</h3>
+      <p class="card-sub">As funções que eu sugiro estão no bloco 3, Recomendação. Aqui fica o que precisa confirmar pra encaixar cada uma nos seus 5 passos.</p>
       <ul class="checklist">
-        <li><input type="checkbox" id="f-1"><span>O que disso o app já faz hoje no consultório do Diogo, e o que ainda precisa ser construído?</span></li>
+        <li><input type="checkbox" id="f-1"><span>Das funções da Recomendação, o que o app já faz hoje no consultório do Diogo, e o que ainda precisa ser construído?</span></li>
         <li><input type="checkbox" id="f-2"><span>Quais parâmetros integrativos o Diogo usa na leitura dos exames? Pras outras especialidades, quem define os parâmetros?</span></li>
         <li><input type="checkbox" id="f-3"><span>Quais doenças e grupos de exames entram primeiro nos gráficos? Validar as correlações com o Diogo.</span></li>
         <li><input type="checkbox" id="f-4"><span>Hoje, quantos pacientes desistem do tratamento, e em que etapa? Que lembrete teria segurado esse paciente?</span></li>
+      </ul>
+      <h3 class="sec">Ferramentas</h3>
+      <ul class="bullets">
+        <li><b>Primeira ferramenta: a demonstração com um caso-modelo integrativo.</b> Um paciente em tratamento na tela: o plano vivo com o check do dia, o exame na faixa ótima ao lado da referência do laboratório, o gráfico dos exames correlacionados e o alerta pro médico de que ele parou de marcar. Numa conversa de Vendas Secretas, é a tela que faz o médico integrativo dizer "esse foi feito pra mim".</li>
+        <li><b>O caso do Diogo é a prova.</b> O tempo que ele gastava antes e depois do app, quantos pacientes acompanha hoje e quantos concluem o tratamento valem mais que qualquer argumento. Começar a anotar esses números agora.</li>
+        <li><b>Travas viram ferramentas:</b> falta de tempo → implantação por etapas, com checklist; não sabe adaptar → os protocolos do Diogo prontos e os papéis da equipe definidos; medo de não funcionar → piloto com poucos pacientes e métricas combinadas antes; <q>meu paciente não vai usar app</q> → o check-in pela notificação do celular (ele marca sem abrir o app), o WhatsApp pra quem some, os prêmios combinados na consulta, o modo família e o piloto mostrando o uso na prática.</li>
+        <li><b>Implantação com o jeito de tratar do médico:</b> treinar o médico e a equipe, ficar 30 dias junto e acompanhar por 6 meses (o seu brainstorm de R$500 mil), e ainda montar com ele os protocolos, as faixas ótimas e os painéis de exames. É o que justifica app + implantação, com preço bem acima de uma assinatura.</li>
+        <li><b>Coordenador da jornada como parceiro:</b> é o papel que faz o app funcionar sem o médico. Pode virar parte da implantação (você treina o coordenador da clínica).</li>
+      </ul>
+      </div>
+
+      <div data-variant-panel="orig">
+      <ul class="checklist">
+        <li><input type="checkbox" id="fo-1"><span>O que da jornada o app já faz hoje no consultório do Diogo, e o que ainda precisa ser construído?</span></li>
+        <li><input type="checkbox" id="fo-4"><span>Hoje, quantos pacientes desistem do acompanhamento, e em que etapa? Que lembrete teria segurado esse paciente?</span></li>
       </ul>
       <h3 class="sec">Ferramentas</h3>
       <ul class="bullets">
@@ -309,6 +365,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
         <li><b>Brainstorm de R$500 mil:</b> treinar o médico e a equipe, ficar 30 dias junto e acompanhar por 6 meses é <b>implantação</b>, não só app. Isso pode virar a oferta principal: app + implantação, com preço bem acima de uma assinatura.</li>
         <li><b>Coordenador da jornada como parceiro:</b> é o papel que faz o app funcionar sem o médico. Pode virar parte da implantação (você treina o coordenador da clínica).</li>
       </ul>
+      </div>
       <label class="mark-done"><input type="checkbox" id="done-4" data-block-check="4"> Marcar bloco como feito</label>
     </div>
 
@@ -322,16 +379,15 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
           <h3>Agora</h3>
           <ul>
             <li>Uma persona só, definida hoje (minha sugestão: médico integrativo)</li>
-            <li>Caso-modelo e números do consultório do Diogo</li>
-            <li>Demonstração do app pra usar na conversa de venda</li>
-            <li>3 a 5 médicos dessa persona, conhecidos do Diogo, ouvindo a proposta</li>
-            <li>Primeira venda do app numa conversa</li>
+            <li>As 5 atividades que fecham o app pras primeiras vendas (bloco 7)</li>
             <li>Preço e formato: assinatura, implantação ou os dois (fecha no E2)</li>
           </ul>
         </div>
         <div class="scope-box no">
           <h3>Depois</h3>
           <ul>
+            <li>Conversas com os médicos que o Diogo conhece: começam depois do Encontro 2, já com o funil</li>
+            <li>As outras funções da Recomendação (farmácias, rede de profissionais, atendimento da noite, modo criança)</li>
             <li>Os públicos que ficarem fora do recorte de hoje</li>
             <li>Mentoria pra residentes: "Começar a pediatria sem plano de saúde"</li>
             <li>Aulas do Método Presença na plataforma</li>
@@ -344,23 +400,129 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
     </div>
 
     <div class="card" data-panel="6">
-      <div class="card-head"><h2>Primeiros passos + fechamento</h2><span class="time">10 min</span></div>
-      <p class="card-sub">Tarefas até o Encontro 2.</p>
+      <div class="card-head"><h2>Prioridade + fechamento</h2><span class="time">10 min</span></div>
+      <p class="card-sub">A prioridade até o Encontro 2: fechar o app pronto pras primeiras vendas. As conversas com médicos começam depois do E2, já com o funil.</p>
+      <div class="variant-toggle" role="group" aria-label="Caminho da persona (o mesmo botão da Persona)">
+        <button type="button" data-variant="int" aria-pressed="true">Com integrativo</button>
+        <button type="button" data-variant="orig" aria-pressed="false">Sem integrativo</button>
+      </div>
+      <div data-variant-panel="int">
+        <div class="col-label">5 atividades pra fechar o app</div>
+        <ul class="checklist">
+          <li><input type="checkbox" id="ti-1"><span><b>Plano vivo com o protocolo do Diogo:</b> a rotina do paciente no app, com o check do dia e os prêmios combinados na consulta.</span></li>
+          <li><input type="checkbox" id="ti-2"><span><b>Check-in por notificação + WhatsApp pra quem some:</b> o lembrete do dia como notificação do app, com o botão "tomei", e o WhatsApp só depois de 2 ou 3 dias sem check (API oficial da Meta, conferindo o custo).</span></li>
+          <li><input type="checkbox" id="ti-3"><span><b>Exames com faixa ótima e gráficos:</b> o laudo lido pelo app, a faixa do laboratório ao lado da faixa ótima e os exames correlacionados no mesmo gráfico, nos painéis que o Diogo definir.</span></li>
+          <li><input type="checkbox" id="ti-4"><span><b>Pontos de atenção pro médico:</b> o resumo antes da consulta e a lista "quem precisa de mim esta semana".</span></li>
+          <li><input type="checkbox" id="ti-5"><span><b>Caso-modelo e números:</b> um paciente integrativo em tratamento, pronto pra demonstrar, e os números do consultório do Diogo (pacientes em acompanhamento, tempo antes e depois do app, quantos concluem o tratamento).</span></li>
+        </ul>
+      </div>
+      <div data-variant-panel="orig">
+        <div class="col-label">5 atividades pra fechar o app</div>
+        <ul class="checklist">
+          <li><input type="checkbox" id="to-1"><span><b>Jornada no app:</b> os seus 5 passos fechados, com o fluxo do Método Presença do Diogo.</span></li>
+          <li><input type="checkbox" id="to-2"><span><b>Lembretes por notificação do app + WhatsApp pra quem some,</b> pela API oficial da Meta, conferindo o custo.</span></li>
+          <li><input type="checkbox" id="to-3"><span><b>Painel do médico:</b> quem precisa de atenção, em que etapa está cada um e quem é o responsável.</span></li>
+          <li><input type="checkbox" id="to-4"><span><b>Caso-modelo:</b> a jornada de um paciente no app, do agendamento ao retorno, pronta pra demonstrar.</span></li>
+          <li><input type="checkbox" id="to-5"><span><b>Números do consultório do Diogo:</b> pacientes em acompanhamento, tempo fora da consulta antes e depois do app.</span></li>
+        </ul>
+      </div>
+      <h3 class="sec">Também até o Encontro 2</h3>
       <ul class="checklist">
-        <li><input type="checkbox" id="t-1"><span>Levantar os números do consultório do Diogo: pacientes em acompanhamento, tempo fora da consulta antes e depois do app</span></li>
-        <li><input type="checkbox" id="t-2"><span>Montar o caso-modelo: a jornada de um paciente no app, do agendamento ao retorno, pronta pra mostrar</span></li>
-        <li><input type="checkbox" id="t-3"><span>Listar com o Diogo 5 médicos da persona escolhida que ele conhece pelo nome</span></li>
-        <li><input type="checkbox" id="t-4"><span>Conversar com 3 deles: ouvir a rotina e mostrar o caso-modelo. Gravar, se eles deixarem</span></li>
         <li><input type="checkbox" id="t-5"><span>Conferir o que a LGPD exige pra vender um app com dados de pacientes pra outros médicos</span></li>
         <li><input type="checkbox" id="t-6"><span>Marcar a data do Encontro 2. Entre os encontros, a gente conversa pelo WhatsApp do suporte</span></li>
       </ul>
-      <h3 class="sec">O que eu trago no Encontro 2</h3>
+      <h3 class="sec">No Encontro 2</h3>
       <ul class="bullets">
-        <li>Persona e Promessa organizadas a partir das respostas de hoje, pra você validar</li>
-        <li>Modelo de negócio do app no formato Canvas, com preço, formato (assinatura e implantação), custos e parceiros</li>
-        <li>Roteiro da conversa de venda pra médicos (Vendas Secretas), usando a demonstração do caso-modelo como ferramenta</li>
+        <li><b>Você apresenta</b> a versão do app pronta pras primeiras vendas.</li>
+        <li><b>Eu te ensino o funil de Vendas Secretas,</b> com o rastreador de leads e os modelos pra você seguir.</li>
+        <li><b>O Dr. Diogo lista os médicos que ele conhece</b> pelo nome, pra começar as conversas.</li>
       </ul>
       <label class="mark-done"><input type="checkbox" id="done-6" data-block-check="6"> Marcar bloco como feito</label>
+    </div>
+
+    <div class="card" data-panel="7">
+      <div class="card-head"><h2>Recomendação: o app nascido no mundo integrativo</h2><span class="time">20–25 min</span></div>
+      <p class="card-sub">Minhas sugestões pra conversarmos. A decisão é sua e do Diogo, e ela define o caminho da Persona no próximo bloco.</p>
+      <div class="hypothesis">
+        <b>O que você respondeu:</b> "médicos de diferentes especialidades" (ginecologia, endocrinologia, pediatria, excesso de peso).<br><br>
+        <b>Minha sugestão pra conversarmos:</b> especificar <b>médicos integrativos</b>, dessas mesmas especialidades. Acho o posicionamento mais forte: o médico integrativo bate o olho e entende na hora pra quem o app foi feito, porque a rotina dele está ali. E é a área do Diogo (medicina integrativa pediátrica), então a autoridade dele vale na conversa.<br><br>
+        <b>Por que o nome pesa:</b> quanto mais o produto se explica sozinho, mais ele passa de colega pra colega. "App pro médico integrativo" alguém repete numa frase; "app pra médicos que fazem acompanhamento dos pacientes" ninguém lembra de repetir.
+      </div>
+      <div class="hypothesis">
+        <b>Sobre o app, o que você respondeu:</b> um app que organiza a jornada do paciente e tira o médico do papel de "central de coordenação", com os fluxos clínicos adaptados por cada médico.<br><br>
+        <b>Minha sugestão pra conversarmos:</b> a organização fica como base, porque sem ela nada anda. Mas eu não venderia por ela: todo app de consultório promete organizar. O que faz o médico integrativo dizer <i>"esse foi feito pra mim"</i> é o app entender o jeito dele de tratar. O tratamento integrativo mora na rotina do paciente, fora da consulta: manipulados, suplementos, alimentação, sono, movimento, terapias e exames de controle. É ali que o paciente se perde e desiste. Um app que mantém esse tratamento vivo entre uma consulta e outra vale muito mais que um organizador.<br><br>
+        <b>Vender o que ele quer, entregar o que ele precisa:</b> o médico precisa da organização, mas não é isso que ele quer comprar. Ele quer ver o paciente chegar ao resultado. A organização que você montou continua sendo a entrega; o integrativo é a vitrine.
+      </div>
+      <div class="warning-box">
+        <b>Em uma frase:</b> "Não é um app que organiza o consultório. É o app que mantém o tratamento integrativo vivo quando o paciente sai da consulta."
+      </div>
+
+      <h3 class="sec">O que só quem trata o todo vive</h3>
+      <ul class="bullets">
+        <li>A prescrição é grande e tem muitas frentes (vários manipulados, alimentação, sono, movimento, terapias). O paciente se confunde e larga.</li>
+        <li>O manipulado dá trabalho: achar a farmácia, fazer orçamento, esperar. Quando o pote acaba, ele não compra de novo.</li>
+        <li>Os exames vão além do básico e o médico lê por faixas ótimas, diferentes da referência do laboratório. O laudo diz "normal", e o paciente não entende por que tratar.</li>
+        <li>O resultado vem em meses. Como o paciente paga particular, ele precisa <b>ver</b> que está melhorando pra continuar.</li>
+        <li>Tem uma equipe em volta (nutri, psicólogo, fisio, acupuntura), e cada um trabalha no seu canto.</li>
+        <li>É muito dado pra cruzar de cabeça: sintomas, hábitos e exames ao longo do tempo.</li>
+      </ul>
+
+      <h3 class="sec">Funções que eu sugiro</h3>
+      <ul class="bullets">
+        <li><b>Plano de tratamento vivo:</b> o protocolo do médico vira a rotina diária do paciente (o que tomar e a que horas, alimentação, sono, água, movimento). O médico parte de modelos prontos, e o app já vem com o jeito do Diogo de tratar: é aqui que o Método Presença volta a ser o diferencial.</li>
+        <li><b>Manipulados e farmácia:</b> a receita vai direto pra farmácia que o paciente escolher, com orçamento das parceiras. O app avisa <q>seu manipulado acaba em 5 dias</q> e a recompra é com um toque, com voucher de desconto pro paciente. O médico vê o que foi comprado e tomado.</li>
+        <li><b>Exames que conversam entre si:</b> o paciente sobe a foto ou o PDF do laudo e o app lê os valores. Cada valor aparece com a faixa do laboratório ao lado da faixa ótima do médico. Os painéis por objetivo põem os exames correlacionados no mesmo gráfico (ex.: metabólico, tireoide, hormonal, inflamação, vitaminas e minerais; quais exames entram em cada um, o Diogo define). A linha do tempo mostra o exame, a mudança na prescrição e os sintomas juntos, e o app lembra o exame de controle na data certa.</li>
+        <li><b>Pontos de atenção pro médico:</b> antes de cada consulta, um resumo pronto (quanto do plano o paciente cumpriu, sintomas que pioraram, exames fora da faixa ótima). E a lista <q>quem precisa de mim esta semana</q>: o paciente que sumiu, o que está cumprindo cada vez menos, o exame que piorou, o sintoma novo. O médico escolhe os alertas que quer receber.</li>
+        <li><b>Paciente no jogo:</b> check do dia com um toque (tomei, comi, dormi, me mexi), diário rápido com carinhas (energia, sono, intestino, humor, dor), sequência de dias seguidos e uma barra com as fases da jornada, mostrando quanto falta pro próximo prêmio. Na tela "minha evolução", o antes e depois dos próprios exames e sintomas, e conteúdos curtos do médico liberados a cada fase.</li>
+        <li><b>Prêmios da vida real, combinados na consulta:</b> em vez de medalha que não significa nada, o paciente ganha algo da rotina dele que ele enxerga como prêmio. Exemplo: no tratamento de obesidade, 30 dias de check completos valem uma refeição livre ou um chope. O prêmio é combinado com o paciente na consulta, e o compromisso fica com o médico. Três cuidados: quem aprova o prêmio é o médico, dentro do plano (um chope não serve pra todo paciente); a meta principal é de constância (dias de check), que o paciente controla, e o marco clínico (quilos, exame melhor) entra como prêmio extra; na pediatria, o prêmio é combinado com os pais (um passeio, um programa em família).</li>
+        <li><b>Check-in pela notificação do celular:</b> o lembrete do dia a dia chega como notificação do app, que não custa nada por mensagem (<q>tomou sua fórmula da manhã?</q>), com os botões "tomei" e "ainda não" na própria notificação: o paciente marca o check sem abrir o app. No primeiro acesso, o app pede pra ativar as notificações, com o motivo claro: <q>é assim que seu médico acompanha seu tratamento</q>. Isso derruba a objeção <q>meu paciente não vai usar app</q>.</li>
+        <li><b>Sentir-se acompanhado:</b> esqueceu o check, chega outra notificação gentil no mesmo dia. Com 2 ou 3 dias sem check, ou se ele desligou as notificações, entra o WhatsApp: <q>seu médico está acompanhando sua evolução, tá tudo bem por aí?</q>, e o paciente vai pra lista de atenção do médico. Assim o WhatsApp, que é pago, fica só pra segurar quem está desistindo.</li>
+        <li><b>Modo família, pra pediatria:</b> uma visão pros pais e um modo criança, com personagem, figurinhas e "missões do dia" que a criança mesma marca.</li>
+        <li><b>Rede de cuidado num lugar só:</b> o médico convida os profissionais complementares do paciente, e cada um vê e registra só a sua parte do plano. A rede de parceiros do médico vem com voucher pro paciente, e tudo cai numa linha do tempo única.</li>
+        <li><b>Atendimento da noite, no mesmo WhatsApp:</b> o agente de IA do WhatsApp, o mesmo que fala com quem sumiu, responde às dúvidas dos pais a partir das 20h, faz a triagem e registra tudo no app. O paciente fala com um número só, o da clínica. O agente não diagnostica nem muda a prescrição: se parece urgente, avisa o médico e orienta procurar atendimento. Ainda não existe; é ideia minha pra vocês avaliarem.</li>
+        <li><b>Por baixo, o negócio do médico:</b> ele passa a vender acompanhamento (plano mensal) em vez de consulta avulsa, com o retorno já marcado pelo app.</li>
+      </ul>
+
+      <h3 class="sec">Por onde eu começaria</h3>
+      <div class="scope">
+        <div class="scope-box yes">
+          <h3>Primeiro (o que já faz brilhar o olho)</h3>
+          <ul>
+            <li>Plano vivo com check e prêmios</li>
+            <li>Check-in por notificação + WhatsApp pra quem some</li>
+            <li>Exames com faixa ótima e gráficos correlacionados</li>
+            <li>Pontos de atenção pro médico</li>
+          </ul>
+        </div>
+        <div class="scope-box no">
+          <h3>Na sequência</h3>
+          <ul>
+            <li>Farmácias e rede de profissionais (dependem de parceria)</li>
+            <li>Atendimento da noite</li>
+            <li>Modo criança</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="sec">Cuidados antes de vender</h3>
+      <ul class="bullets">
+        <li><b>Farmácia:</b> o Código de Ética Médica proíbe o médico de ter vantagem com farmácia ou de direcionar o paciente pra uma delas. O desconto é do paciente, a escolha é do paciente e o médico não ganha comissão. Se alguém paga pra estar na rede, é a farmácia que paga ao app. Conferir com advogado.</li>
+        <li><b>Custo do WhatsApp:</b> pela API oficial da Meta. Vale a oficial: os jeitos não oficiais saem mais baratos, mas o número da clínica pode ser bloqueado. Desde 01/10/2026 a Meta cobra também as mensagens dentro da janela de 24 horas, com as primeiras 1.000 do mês grátis por número; por isso o lembrete do dia a dia vai por notificação do app, que é grátis, e o WhatsApp fica só pra quem sumiu. O custo fica nas poucas mensagens que seguram quem está desistindo, e entra no preço do app. Conferir os valores do Brasil na página de preços da Meta antes de fechar a conta. O paciente precisa autorizar receber as mensagens (LGPD), e resultado de exame fica no app, não no WhatsApp.</li>
+        <li><b>O app aponta, o médico decide:</b> se o app "diagnosticar" sozinho, ele pode cair na regra da Anvisa de software médico. Os alertas seguem as regras que o médico definiu.</li>
+      </ul>
+
+      <h3 class="sec">Pra decidir com você e o Diogo</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="r-1"><span>Isso conversa com o que vocês imaginam pro app? O que mais brilha os seus olhos? E os do Diogo?</span></li>
+        <li><input type="checkbox" id="r-2"><span>Em que momento o paciente do Diogo costuma desistir? Qual destas funções teria segurado esse paciente?</span></li>
+        <li><input type="checkbox" id="r-3"><span>O que mais toma o tempo dele entre as consultas: dúvida no WhatsApp, recompra de manipulado, exame?</span></li>
+        <li><input type="checkbox" id="r-4"><span>Vocês já têm farmácia de manipulação parceira? E uma rede de profissionais complementares?</span></li>
+        <li><input type="checkbox" id="r-5"><span>O que faria um médico integrativo dizer "esse app foi feito pra mim"?</span></li>
+        <li><input type="checkbox" id="r-8"><span>O app é instalado pela loja ou abre no navegador? (No navegador, no iPhone, a notificação só chega se o paciente salvar o app na tela inicial.)</span></li>
+        <li><input type="checkbox" id="r-7"><span>Qual vai ser o nome do app? Ele se explica numa frase pra um médico integrativo?</span></li>
+        <li><input type="checkbox" id="r-6"><span><b>Decisão:</b> vamos pelo médico integrativo? Se sim, a Persona segue em "Com integrativo"; se não, em "Sem integrativo".</span></li>
+      </ul>
+      <label class="mark-done"><input type="checkbox" id="done-7" data-block-check="7"> Marcar bloco como feito</label>
     </div>
 
   </div>
@@ -427,6 +589,22 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
 })();
 </script>
 <script>
+/* Caminho da persona: com ou sem integrativo (lembrado neste navegador) */
+(function(){
+  var KEY='encontro1-juliana-variante-v1';
+  var btns=document.querySelectorAll('[data-variant]');
+  var panes=document.querySelectorAll('[data-variant-panel]');
+  function set(v){
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-variant')===v ? 'true':'false'); });
+    panes.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-variant-panel')===v); });
+    try{ localStorage.setItem(KEY,v); }catch(e){}
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ set(b.getAttribute('data-variant')); }); });
+  var saved='int'; try{ saved=localStorage.getItem(KEY)||'int'; }catch(e){}
+  set(saved);
+})();
+</script>
+<script>
 /* Observações: uma por tópico + uma por bloco, salvas no banco do artifact (fallback: este navegador) */
 (function(){
   var LOCAL_KEY='encontro1-juliana-notas-v1';
@@ -438,17 +616,27 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);}
     ta.setAttribute('aria-label','Observações');
     li.appendChild(ta); fields[ta.id]=ta;
   });
-  document.querySelectorAll('.card[data-panel]').forEach(function(card){
-    var n=card.getAttribute('data-panel');
+  function makeNote(id){
     var wrap=document.createElement('div'); wrap.className='block-note';
-    var lab=document.createElement('label'); lab.className='col-label'; lab.htmlFor='nota-bloco-'+n; lab.textContent='Observações do bloco';
-    var ta=document.createElement('textarea'); ta.className='note'; ta.id='nota-bloco-'+n; ta.rows=3; ta.placeholder='Anotações gerais deste bloco';
+    var lab=document.createElement('label'); lab.className='col-label'; lab.htmlFor=id; lab.textContent='Observações do bloco';
+    var ta=document.createElement('textarea'); ta.className='note'; ta.id=id; ta.rows=3; ta.placeholder='Anotações gerais deste bloco';
     var st=document.createElement('div'); st.className='save-state'; st.setAttribute('aria-live','polite');
     wrap.appendChild(lab); wrap.appendChild(ta); wrap.appendChild(st);
-    var md=card.querySelector('.mark-done'); card.insertBefore(wrap, md);
-    fields[ta.id]=ta;
+    fields[id]=ta; return wrap;
+  }
+  document.querySelectorAll('.card[data-panel]').forEach(function(card){
+    var n=card.getAttribute('data-panel');
+    var variants=card.querySelectorAll('div[data-variant-panel]');
+    if(variants.length){
+      variants.forEach(function(p){
+        var v=p.getAttribute('data-variant-panel');
+        p.appendChild(makeNote(v==='orig' ? 'nota-bloco-'+n : 'nota-bloco-'+n+'-'+v));
+      });
+      return;
+    }
+    var md=card.querySelector('.mark-done'); card.insertBefore(makeNote('nota-bloco-'+n), md);
   });
-  function stateEl(ta){ var c=ta.closest('.card'); return c?c.querySelector('.save-state'):null; }
+  function stateEl(ta){ var c=ta.closest('div[data-variant-panel]')||ta.closest('.card'); return c?c.querySelector('.save-state'):null; }
   function show(ta,msg){ var e=stateEl(ta); if(e) e.textContent=msg; }
 
   var local={}; try{ local=JSON.parse(localStorage.getItem(LOCAL_KEY)||'{}'); }catch(e){ local={}; }
