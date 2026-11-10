@@ -1271,3 +1271,21 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** medo de cobrar / criar produto infinitamente pra não ouvir não; o não no 1x1 é o teste seguro e privado (Vendas Secretas). Caso único da Karol.
 **Racional:** pedido dela; diferencia da Live 34 (engavetar) pelo lado emocional do julgamento.
 **Impacto:** roteiro sai depois de ela confirmar data, oferta e as duas histórias pendentes.
+
+## 10/11/2026 — Tema da Live 37 (redefinido)
+**Contexto:** Karol descartou o tema do medo do não (09/11) e pediu sugestões ao Expert em Lives.
+**Decisão:** opção 3, "Dá tempo de fazer sua primeira venda antes de 2027". Oferta Incubadora Express, CTA SECRETO, qua 11/11 15h.
+**Racional:** usa o fim de ano como prazo real; a primeira venda cabe em 7 semanas porque só pede pessoa, promessa e conversa.
+**Impacto:** roteiro v1 pronto; âncora = 1ª venda da Incubadora (11/2024), sem repetir o caso agosto→setembro.
+
+## 10/11/2026 — Live 37: 7 passos e plano de 7 semanas
+**Contexto:** roteiro da Live 37 ("primeira venda antes de 2027").
+**Decisão:** a live explica 7 passos (persona, problema, método, oferta, rastrear leads, chamar pra Venda Secreta, follow-up), um por semana até 31/12; quem escreve SECRETO recebe o plano semanal com atividades.
+**Racional:** pedido da Karol; o calendário de 7 semanas casa com os 7 passos e dá um material útil pra puxar a conversa.
+**Impacto:** roteiro v2 + plano publicado (privado), revisado pelo Codex.
+
+## 10/11/2026 — Envio das mensagens do garimpo: assistido, não automático
+**Contexto:** Karol queria que o Garimpeiro também enviasse as mensagens e organizasse os abordados na aba Geral do Direct.
+**Decisão:** opção A, envio assistido. Página local com a fila: copia a mensagem e abre o perfil, a Karol envia e clica "Enviei", e a planilha se atualiza sozinha.
+**Racional:** a API oficial não deixa puxar conversa fria, e um robô mandando mensagem na conta principal arrisca bloqueio.
+**Impacto:** Mover pra Geral fica no celular, porque a versão web do Instagram não tem a opção.

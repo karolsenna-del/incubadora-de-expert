@@ -108,7 +108,7 @@ Depois de fechar o título do roteiro (`# Live XX — [TÍTULO]`), atualizar a L
 grupo com o tema da semana:
 
 1. Abrir `business/campanhas/lives-semanais/lp-grupo-live/index.html`
-2. Localizar a linha `<strong id="temaSemana">...</strong>` (dentro do bloco `.tema-semana` do Hero)
+2. Localizar o `<span class="destaque" id="temaSemana">...</span>` dentro da manchete (h1) do Hero. Desde 10/11 a manchete mostra só a aula da semana (Karol): troca-se só o texto do span
 3. Substituir pelo título da live desta semana — formatado de forma objetiva/quantificável quando
    o roteiro tiver número ou resultado concreto (ex: "Como usar IA pra fazer em 3 dias o que
    levaria 3 meses" — sempre com o "em relação a quê", nunca só o número solto)
