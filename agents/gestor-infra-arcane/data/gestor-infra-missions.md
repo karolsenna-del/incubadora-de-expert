@@ -113,3 +113,4 @@ Ao final de cada missao (ou sessao de trabalho):
 ---
 
 *Mission Log inicializado. Registrar cada missao concluida aqui.*
+| — | 2026-11-10 | Envio assistido dos leads do garimpo + avaliar mover abordados pra aba Geral do Direct | ok (fila) / bloqueado (Geral) | Não (SOP no Garimpeiro: rodada-garimpo passo 7) | API oficial da Meta não abre conversa fria (só responde em 24h). Robô na conta principal descartado (REGRA-004 do Garimpeiro). Feito `fila-abordagem.mjs` (página local, copia + abre perfil, grava na aba Garimpo). Web do Instagram não tem "Mover para Geral" (menu: não lida, fixar, silenciar, pedidos ocultos, bloquear, eliminar) nem `ig.me/m/` no desktop |

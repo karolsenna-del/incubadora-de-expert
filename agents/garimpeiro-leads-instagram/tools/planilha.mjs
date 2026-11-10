@@ -126,7 +126,7 @@ const [C_REV, C_STATUS, C_PRIO, C_FECHOU] = ['Status revisão', 'Status', 'Prior
 const formulaOrdem = (l) => `=($${C_REV}${l}="descartado")*10+($${C_REV}${l}="reprovado")*10+($${C_STATUS}${l}="Lead frio")*10+($${C_STATUS}${l}="Reprovado")*10+($${C_FECHOU}${l}="Não")*10`
   + `+($${C_PRIO}${l}="Alta")*1+($${C_PRIO}${l}="Média")*2+($${C_PRIO}${l}="Baixa")*3`;
 
-function token() {
+export function token() {
   if (process.env.GARIMPO_TOKEN) return process.env.GARIMPO_TOKEN;
   return execSync('op read "op://Claude/Garimpo - webhook n8n/credential"', { encoding: 'utf8' }).trim();
 }
@@ -152,7 +152,7 @@ async function garantirAba(destino) {
   return true;
 }
 
-async function lerValores(destino) {
+export async function lerValores(destino) {
   await garantirAba(destino);
   const { values = [] } = await chamar({ acao: 'listar', planilha: destino.planilha, aba: destino.aba });
   return values;
@@ -167,7 +167,7 @@ function lerPerfil(nome) {
   return JSON.parse(readFileSync(join(RAIZ_WORKER, 'data', 'perfis', `${nome}.json`), 'utf8'));
 }
 
-async function atualizar(destino, intervalo, linhas, formula = false) {
+export async function atualizar(destino, intervalo, linhas, formula = false) {
   return chamar({ acao: 'atualizar', planilha: destino.planilha, aba: destino.aba, intervalo, linhas, formula });
 }
 
@@ -186,7 +186,7 @@ const COR = {
   cinzaClaro: '#F2F2F2', cinza: '#D9D9D9', cinzaTexto: '#8C8C8C', linha: '#E6E6E6',
 };
 const rgb = (hex) => ({ red: parseInt(hex.slice(1, 3), 16) / 255, green: parseInt(hex.slice(3, 5), 16) / 255, blue: parseInt(hex.slice(5, 7), 16) / 255 });
-const indiceDe = (nome) => { const i = COLUNAS.indexOf(nome); return i >= 0 ? i : COL_INICIO_RASTREADOR + RASTREADOR.indexOf(nome); };
+export const indiceDe = (nome) => { const i = COLUNAS.indexOf(nome); return i >= 0 ? i : COL_INICIO_RASTREADOR + RASTREADOR.indexOf(nome); };
 const TOTAL_COLUNAS = COLUNAS.length + RASTREADOR.length;
 
 // O que a Karol usa fica à mostra, com largura; o resto (sistema, log, respostas que já viraram Score) fica oculto.

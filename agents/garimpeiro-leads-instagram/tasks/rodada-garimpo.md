@@ -136,6 +136,8 @@ Lista na aba "{aba}", cada lead já com a Copy. Abre o perfil uma vez: manda a C
 ```
 Na rodada seguinte, o `enviar` (ou `planilha.mjs sincronizar`) marca "aprovado" na revisão de toda linha cujo Status saiu de "Sem abordagem" (nunca por cima de "descartado") e põe a data do dia se a Data Última Interação estiver vazia. Resposta da lead → Vendedor Expert conduz.
 
+**Fila de abordagem (desde 10/11/2026):** pra Karol enviar, rodar `node agents/garimpeiro-leads-instagram/tools/fila-abordagem.mjs` (abre http://127.0.0.1:4317). Um lead por vez, por prioridade: "Copiar mensagem e abrir perfil" → ela clica em "Enviar mensagem", cola e envia → "Enviei" grava Status "Abordagem feita" + "aprovado" + data (e a Copy, se ela ajustou). "Descartar" grava "descartado". A página nunca envia nada sozinha. Aba Geral do Direct: só pelo app do celular (segurar a conversa → Mover para Geral); a versão web não tem a opção.
+
 ### 8. Documentar
 - Mission Log: 1 linha.
 - Playbook → "Rendimento por termo" (termo, data, descobertos, entregues) e "Consultas que funcionam".
