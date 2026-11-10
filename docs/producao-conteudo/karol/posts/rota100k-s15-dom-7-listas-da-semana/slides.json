@@ -1,0 +1,55 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s15-dom-7-listas-da-semana",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "AS 7 LISTAS DA SEMANA EM UM POST\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">O item mais importante de cada uma.</span>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>Os 5 erros de quem cria curso</strong>\nNº 1: não ter um caminho com começo, meio e fim.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">63% de quem compra curso online acha o conteúdo superficial (CNDL/SPC Brasil, 2024).</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>5 coisas que eu faria depois de 13 anos no serviço público</strong>\nNº 1: começar a construir antes de precisar sair.",
+   "modifiers": []
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Os 5 blocos antes de aparecer</strong>\nNº 1: a Persona Compradora.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">O mercado vende o quinto primeiro.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>5 sinais de que você já tem um método</strong>\nNº 1: quem seguiu o que você disse teve resultado.",
+   "modifiers": []
+  },
+  {
+   "numero": "5",
+   "texto": "<strong>5 frases que afastam cliente da bio</strong>\nNº 1: terminar sem convite.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Diga o que a pessoa faz agora.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "6",
+   "texto": "<strong>5 coisas sobre validar um método</strong>\nNº 1: só o cartão de crédito do cliente valida a oferta.",
+   "modifiers": []
+  },
+  {
+   "numero": "7",
+   "texto": "<strong>5 perguntas sobre a persona</strong>\nNº 1: que medo tira o sono dela, que ela não conta pra ninguém?",
+   "modifiers": []
+  },
+  {
+   "numero": "",
+   "texto": "Salva: é o resumo que vale o mês.",
+   "modifiers": [
+    "sem-numero"
+   ]
+  }
+ ]
+}

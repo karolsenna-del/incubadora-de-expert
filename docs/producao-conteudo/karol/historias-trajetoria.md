@@ -35,6 +35,7 @@
 - [20. Falar do que eu faço por onde passo — a contadora da academia](#20-falar-do-que-eu-faço-por-onde-passo--a-contadora-da-academia-setembro2026)
 - [21. A origem da Incubadora — narrativa completa de ponta a ponta](#21-a-origem-da-incubadora--narrativa-completa-de-ponta-a-ponta-0110) — 🆕 01/10 (versão-mestra contada pela Karol)
 - [25. O cargo de coordenadora que deram pra outra](#25-o-cargo-de-coordenadora-que-deram-pra-outra-0611) — 🆕 06/11 (contada pela Karol)
+- [26. A única sem cargo na foto da premiação](#26-a-única-sem-cargo-na-foto-da-premiação-0811) — 🆕 08/11 (gravada pela Karol)
 - [22. A diarista que chamou a polícia — o sentimento de injustiça](#22-a-diarista-que-chamou-a-polícia--o-sentimento-de-injustiça-2809) — 🆕 01/10 · ⚠️ disputa em andamento, ver regras de uso
 
 **⚠️ Material sensível — não usar sem autorização explícita da Karol, caso a caso:**
@@ -498,6 +499,16 @@
 
 **Regra de uso:** sem nome da empresa, da diretoria nem da outra coordenadora; "um consultor do governo" basta. Não ligar ao Diretor (S2).
 
+---
+
+## 26. A única sem cargo na foto da premiação (08/11)
+
+**Fatos (palavras da Karol, 08/11):** foto dela na premiação da qualidade no emprego público, junto com Presidente, Diretores e gerentes, "a única sem cargo". Tinha 2 anos de empresa e certeza de que a promoção estava muito próxima; achava que era só trabalhar mais e entregar mais. "Quanto mais eu me aproximei da Diretoria, mais eu fui conhecendo como funciona o sistema, fui discordando da chefia e foi ladeira abaixo a minha possibilidade de crescimento lá dentro." Saiu da estabilidade e veio pro digital "falar o que eu acredito sem ser boicotada".
+
+**Primeiro uso:** história gravada pela Karol em 08/11, no mesmo jeito do post da promoção (foto antiga + esperança da época + o que veio depois).
+
+**Regra de uso:** "o sistema" sem apontar culpado, sem nome de empresa nem de pessoas da foto, sem ângulo político. Não ligar ao Diretor (S2). CTA dessa linha não empurra a pessoa a largar o cargo: começar no digital sem largar nada agora (decisão de 08/11).
+
 **Desfecho (Karol, 06/11):** "foi muito pouco tempo depois disso… eu já estava na controladoria quando decidi sair… estudando pra Receita Federal em 2016." Ou seja: o tapete puxado foi o empurrão pra decidir sair, e a primeira saída que ela tentou foi outro concurso (a Receita, que ela hoje lê como trocar de prédio, não de sistema).
 
 ---
@@ -517,6 +528,18 @@
 **Fatos (fonte: `Minhas histórias que convertem.md`):** colegas comentavam nos corredores que ela não conseguia promoção porque um Diretor específico (o mesmo do PNQS, história #11) "tinha dado em cima dela" e teria medo dela crescer a ponto de ameaçar o cargo dele.
 
 **Por que fica marcado como sensível:** é insinuação de assédio envolvendo uma pessoa real e identificável (ainda que não nomeada publicamente) — risco reputacional e jurídico pros dois lados se virar conteúdo sem cuidado extremo. Não é matéria-prima de post de crescimento — se a Karol quiser abordar isso um dia, é uma decisão à parte, não uma pauta de calendário.
+
+---
+
+## 27. O não que virou a jornada desenhada da Incubadora (09/11)
+
+**Fatos (palavras da Karol, 09/11/2026):**
+- "Recebi muitos nãos" nas sessões 1x1.
+- Um lead disse que não tinha ficado claro o programa dela.
+- Ela desenhou a jornada dentro da Incubadora, e "realmente ficou mais fácil de entender e vender".
+- Ela nunca se preocupou com julgamento de família ou conhecidos ao vender (não usar "medo do julgamento" como caso dela).
+
+**Status:** disponível. Detalhes ainda não confirmados (quando foi, como era a jornada antes e depois, venda que veio depois): perguntar antes de usar.
 
 ---
 

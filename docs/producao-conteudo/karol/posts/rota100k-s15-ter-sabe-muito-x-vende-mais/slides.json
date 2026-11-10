@@ -1,0 +1,58 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s15-ter-sabe-muito-x-vende-mais",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "ESPECIALISTA QUE SABE MUITO\n× <strong>ESPECIALISTA QUE VENDE MAIS</strong>",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>Sabe muito:</strong> faz mais uma pós.\n<strong>Vende mais:</strong> começa com o conhecimento que já tem.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">O que você já sabe resolve o problema de alguém hoje.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>Sabe muito:</strong> explica tudo o que sabe.\n<strong>Vende mais:</strong> mostra o caminho mais curto.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Quem compra quer chegar, não quer aprender tudo.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Sabe muito:</strong> acha que precisa lançar.\n<strong>Vende mais:</strong> abre conversa com as pessoas certas.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">A primeira venda vem de uma conversa, não de uma plateia.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>Sabe muito:</strong> bio de currículo.\n<strong>Vende mais:</strong> bio de resultado prometido.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Ninguém compra a sua formação. Compra o que ela faz pela pessoa.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "O cliente não compra tudo o que você sabe.\n\n<strong>Compra o caminho que você mostra pra ele.</strong>",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Salva e manda pra quem estuda demais.",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  }
+ ]
+}

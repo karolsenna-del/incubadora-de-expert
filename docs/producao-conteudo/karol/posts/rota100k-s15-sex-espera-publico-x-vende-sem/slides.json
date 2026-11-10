@@ -1,0 +1,47 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s15-sex-espera-publico-x-vende-sem",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "QUEM ESPERA TER PÚBLICO\n× <strong>QUEM VENDE SEM AUDIÊNCIA</strong>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>Espera público:</strong> planeja um lançamento.\n<strong>Vende sem:</strong> valida com 3 conversas.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Três conversas mostram o que um lançamento leva meses pra mostrar.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>Espera público:</strong> grava o curso antes de vender.\n<strong>Vende sem:</strong> vende antes de gravar.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Quem já pagou te diz o que precisa entrar no curso.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Espera público:</strong> posta e torce pra alguém chamar.\n<strong>Vende sem:</strong> chama quem tem o perfil do cliente.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Quem espera ser chamado espera muito.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>Espera público:</strong> mede seguidor.\n<strong>Vende sem:</strong> mede conversa aberta.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Seguidor não paga boleto. Conversa vira cliente.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "",
+   "texto": "A primeira venda não precisa de plateia.\n\n<strong>Precisa da pessoa certa.</strong>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Salva e manda pra quem acha que ainda não tem público.",
+   "modifiers": [
+    "sem-numero"
+   ]
+  }
+ ]
+}

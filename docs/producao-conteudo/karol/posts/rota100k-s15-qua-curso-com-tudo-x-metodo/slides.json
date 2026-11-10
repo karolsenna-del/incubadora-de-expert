@@ -1,0 +1,47 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s15-qua-curso-com-tudo-x-metodo",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "CURSO COM TUDO\n× <strong>MÉTODO COM O CAMINHO</strong>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>Curso com tudo:</strong> 40 aulas com tudo o que sabe.\n<strong>Método:</strong> 5 passos até o resultado.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Mais aula não é mais valor. É mais lugar pra se perder.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>Curso com tudo:</strong> começa pelo conteúdo.\n<strong>Método:</strong> começa pela transformação do cliente.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Primeiro aonde ele chega. Depois o que ele precisa aprender pra chegar.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Curso com tudo:</strong> nome genérico (“Curso de X”).\n<strong>Método:</strong> nome próprio do método.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Nome próprio faz você ser lembrado e indicado.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>Curso com tudo:</strong> aluno se perde no meio.\n<strong>Método:</strong> aluno sabe onde está e o que vem depois.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Quem sabe o próximo passo termina.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "",
+   "texto": "Método não é tudo o que você sabe.\n\n<strong>É o caminho mais curto pro seu cliente.</strong>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Salva e manda pra quem está gravando curso agora.",
+   "modifiers": [
+    "sem-numero"
+   ]
+  }
+ ]
+}

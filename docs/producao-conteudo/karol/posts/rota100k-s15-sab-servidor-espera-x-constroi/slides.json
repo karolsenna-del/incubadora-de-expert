@@ -1,0 +1,58 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s15-sab-servidor-espera-x-constroi",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "SERVIDOR PÚBLICO QUE ESPERA\n× <strong>SERVIDOR PÚBLICO QUE CONSTRÓI</strong>",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>Espera:</strong> “começo quando me aposentar”.\n<strong>Constrói:</strong> começa em paralelo, sem queimar a ponte.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">O tempo de construir é agora, com o salário entrando.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>Espera:</strong> acha que precisa pedir exoneração.\n<strong>Constrói:</strong> usa a estabilidade como base.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">A estabilidade é o que te deixa construir sem desespero.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Espera:</strong> faz mais um curso fora da área.\n<strong>Constrói:</strong> usa o que já sabe fazer no trabalho.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">O que você faz todo dia já resolve o problema de alguém.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>Espera:</strong> guarda o plano pra “ano que vem”.\n<strong>Constrói:</strong> testa com a primeira pessoa este mês.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Plano sem teste continua sendo só plano.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "<strong>A estabilidade é o chão, não o teto.</strong>",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Salva e manda pra um colega servidor.",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  }
+ ]
+}

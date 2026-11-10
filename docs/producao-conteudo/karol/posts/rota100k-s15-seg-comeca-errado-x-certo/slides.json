@@ -1,0 +1,52 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s15-seg-comeca-errado-x-certo",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "QUEM COMEÇA ERRADO NO DIGITAL\n× <strong>QUEM COMEÇA CERTO</strong>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>Errado:</strong> atende qualquer público.\n<strong>Certo:</strong> define a persona que compra.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Quem fala com todo mundo não é escolhido por ninguém.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>Errado:</strong> não tem clareza do resultado que entrega.\n<strong>Certo:</strong> define a promessa.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">O cliente compra o resultado, não o conteúdo.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Errado:</strong> ensina tudo o que sabe, sem ordem.\n<strong>Certo:</strong> organiza o processo autoral.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">O método com nome é o caminho que só você mostra.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>Errado:</strong> grava o curso antes de vender.\n<strong>Certo:</strong> valida a oferta em conversas.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Uma pessoa pagando vale mais que um curso pronto parado.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "5",
+   "texto": "<strong>Errado:</strong> cria conteúdo sem foco.\n<strong>Certo:</strong> só então se posiciona no digital.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Aí o conteúdo tem pra quem falar e o que vender.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "",
+   "texto": "Quem começa pelo conteúdo vive recomeçando.\n\n<strong>Quem começa pela persona constrói em cima do que já validou.</strong>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Salva e manda pra quem está começando.",
+   "modifiers": [
+    "sem-numero"
+   ]
+  }
+ ]
+}

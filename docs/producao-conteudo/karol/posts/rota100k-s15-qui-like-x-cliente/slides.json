@@ -1,0 +1,58 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s15-qui-like-x-cliente",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "CONTEÚDO QUE SÓ GANHA LIKE\n× <strong>CONTEÚDO QUE TRAZ CLIENTE</strong>",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>Só like:</strong> dica que qualquer um daria.\n<strong>Traz cliente:</strong> caso que só você viveu.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">A dica se esquece. O caso fica.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>Só like:</strong> fala com todo mundo.\n<strong>Traz cliente:</strong> fala com uma pessoa específica.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Quem se reconhece é quem compra.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Só like:</strong> termina em “gostou? curte”.\n<strong>Traz cliente:</strong> termina num convite pra conversa.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Curtida não abre conversa. Convite abre.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>Só like:</strong> tema da moda.\n<strong>Traz cliente:</strong> tema da dor do seu cliente.\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">A moda passa. A dor continua lá.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Like é aplauso.\n\n<strong>Cliente é quem se reconheceu no que você disse.</strong>",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Salva e manda pra quem posta todo dia e não vende.",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  }
+ ]
+}
