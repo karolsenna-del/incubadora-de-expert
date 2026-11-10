@@ -79,3 +79,4 @@
 | 05/11/2026 | sprint-metodo-quinta-2026-11-05 | 1 | 18092816081226392 | sim (ver log de execucao) |
 | 06/11/2026 | gerar-valor-persona-2026-11-06 | 1 | 18137159740672923 | sim (ver log de execucao) |
 | 08/11/2026 | grupo-domingo-2026-11-08 | 1 | 17900982663612121 | sim (ver log de execucao) |
+| 10/11/2026 | grupo-terca-2026-11-10 | 1 | 18390509290232496 | sim (ver log de execucao) |
