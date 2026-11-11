@@ -1,4 +1,4 @@
-# Live 37 — "Dá tempo de fazer sua primeira venda antes de 2027, mesmo que você não tenha nada estruturado hoje"
+# Live 37 — "Dá tempo de fazer sua primeira venda ainda em 2026, mesmo que você não tenha nada estruturado hoje"
 > Tema: o "ano que vem eu começo". A Laura (e o liberal, o CLT, o servidor) empurra a primeira venda pra 2027 porque acha que antes precisa de produto pronto, página, público e um começo de ano "limpo". A primeira venda pede 7 passos, e eles cabem nas 7 semanas que faltam: definir a persona, o problema que vai resolver, o caminho (método), montar a oferta (quantidade de encontros, ferramentas), rastrear leads, chamar pra Venda Secreta e fazer o follow-up. O resto (página, curso gravado, Instagram, lançamento) pode ficar pra 2027, porque no método a presença vem depois da venda.
 > **Os 7 passos e o plano de 7 semanas foram pedidos pela Karol (10/11).** Na live, os passos aparecem pelo quê (regra do Bloco 5); o plano semana a semana é o material de quem escreve PLANO.
 > **Formato:** um caso só, o da Karol (regra de 31/10). Âncora central: a primeira venda da Incubadora, em novembro de 2024, faz exatamente dois anos, com trabalho fixo e a Incubadora nascendo em paralelo.
@@ -306,8 +306,8 @@ Nos dois casos, o primeiro passo é o mesmo: escreve **PLANO** aqui no chat que 
 - [ ] ⚠️ Aprovar as 5 afirmações do Bloco 6
 - [ ] ⚠️ Confirmar as falas sinalizadas no Bloco 5 (#27 no Passo 3; "maioria desiste no follow-up" no Passo 7)
 - [ ] ⚠️ Confirmar a estrutura das 5 sessões da Express e o "30 dias / antes do Natal"
-- [x] Tema na LP do grupo: "Dá tempo de fazer sua primeira venda antes de 2027, mesmo que você não tenha nada estruturado hoje" (no ar, 10/11)
-- [ ] Slides da live: squad de slides (não é deste worker)
+- [x] Tema na LP do grupo: "Dá tempo de fazer sua primeira venda ainda em 2026, mesmo que você não tenha nada estruturado hoje" (no ar, 10/11)
+- [x] Deck: https://claude.ai/artifact/JemjaVoRkb1NZDLhkf3PqT (`live-37-apresentacao.html`, 33 slides, @live-deck-builder 10/11), aguardando aprovação
 - [ ] NÃO falar preço; bônus de 24h só no WhatsApp
 - [ ] NÃO citar a Black nem o caso agosto → setembro
 - [ ] Link do Meet no grupo das lives
@@ -334,3 +334,4 @@ Nos dois casos, o primeiro passo é o mesmo: escreve **PLANO** aqui no chat que 
 - 10/11 — @expert-em-lives: Karol escolheu a opção 3 ("Dá tempo de fazer sua primeira venda antes de 2027"). Roteiro v1 com âncora na primeira venda da Incubadora (11/2024), sem o caso agosto → setembro. 5 afirmações sugeridas, aguardando aprovação.
 - 10/11 — @expert-em-lives: v2 a pedido da Karol: Bloco 5 explica os 7 passos (persona, problema, caminho/método, oferta, rastrear leads, chamar pra Venda Secreta, follow-up), um por semana até 31/12, cada um com o caso dela. Material do CTA PLANO = plano de ação de 7 semanas com atividades marcáveis (artifact privado).
 - 10/11 — @expert-em-lives: v3 a pedido da Karol (entregava demais): plano sem as atividades do como, com uma pergunta de autoavaliação por semana, resultado "x de 7" + onde trava, e uma linha por semana de como a Express faz aquele passo. Bloco 5 enxugado nos passos 1 e 5 (sem dimensões da persona nem critérios do Rastreador).
+- 10/11 — @live-deck-builder: deck de 33 slides com a régua das 7 semanas como fio condutor; publicado pra aprovação.
