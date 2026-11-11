@@ -2,6 +2,6 @@
 # ao final de detectar-live-nova. Evita reprocessar a mesma live duas vezes.
 # Formato espelha o padrao ja usado em agents/course-publisher/data/weekly-sync-state.yaml.
 
-ultimo_processado_titulo: null
-ultimo_processado_data: null
-ultima_execucao: null
+ultimo_processado_titulo: "Live 29"
+ultimo_processado_data: null  # 8 Reels agendados 09-16/11 (commit 77d1a68)
+ultima_execucao: "2026-11-11"  # status: gravações novas no Drive = Live 34 (21/10) e Live 36 (04/11); Live 35 sem gravação

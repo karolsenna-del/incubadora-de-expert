@@ -1,0 +1,2 @@
+[00:20:05.000 --> 00:20:07.000]   teste de legenda aqui
+[00:20:07.000 --> 00:20:10.000]   na base do rosto agora
