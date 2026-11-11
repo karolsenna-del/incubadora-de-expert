@@ -12,11 +12,12 @@
 // Fecha sozinho depois de 2h sem uso ou pelo botão "Encerrar".
 
 import { createServer } from 'node:http';
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
+import { homedir } from 'node:os';
 import { exec } from 'node:child_process';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { lerValores, atualizar, letra, indiceDe, token } from './planilha.mjs';
+import { lerValores, atualizar, gravarData, letra, indiceDe, token } from './planilha.mjs';
 
 const RAIZ_WORKER = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const argv = process.argv.slice(2);
@@ -25,6 +26,27 @@ const perfil = JSON.parse(readFileSync(join(RAIZ_WORKER, 'data', 'perfis', `${op
 const destino = perfil.destino;
 const PORTA = Number(opt('porta', 4317));
 const OCIOSO_MS = 2 * 60 * 60 * 1000;
+// Contagem da sessão (Karol, 10/11/2026): vale até ela clicar em "Encerrar a fila", mesmo que a fila reinicie.
+const ARQ_SESSAO = join(homedir(), '.auroq', 'garimpeiro', 'fila-sessao.json');
+const lerSessao = () => { try { return JSON.parse(readFileSync(ARQ_SESSAO, 'utf8')); } catch { return { enviados: [], descartados: [] }; } };
+function registrarSessao(acao, arroba) {
+  const s = lerSessao();
+  const lista = acao === 'enviei' ? s.enviados : s.descartados;
+  if (!lista.includes(arroba)) lista.push(arroba);
+  mkdirSync(dirname(ARQ_SESSAO), { recursive: true });
+  writeFileSync(ARQ_SESSAO, JSON.stringify(s));
+  return s;
+}
+
+// Botão da Central da Incubadora (fila-garimpo://) pode ser clicado com a fila já aberta: só reabre a página.
+try {
+  const r = await fetch(`http://127.0.0.1:${PORTA}/sessao`, { signal: AbortSignal.timeout(1500) });
+  if (r.ok) {
+    exec(process.platform === 'win32' ? `start "" "http://127.0.0.1:${PORTA}"` : `open "http://127.0.0.1:${PORTA}"`);
+    setTimeout(() => process.exit(0), 500);
+    await new Promise(() => {});
+  }
+} catch { /* fila fechada: segue e abre */ }
 
 process.env.GARIMPO_TOKEN ||= token(); // lê o cofre uma vez só
 
@@ -68,7 +90,7 @@ async function marcar({ arroba, acao, copy }) {
   if (copy && copy.trim() && copy !== l[COL.Copy]) await atualizar(destino, cel('Copy'), [[copy]]); // guarda o texto que foi de fato
   await atualizar(destino, cel('Status'), [['Abordagem feita']]);
   await atualizar(destino, cel('Status revisão'), [['aprovado']]);
-  if (!l[COL['Data Última Interação']]) await atualizar(destino, cel('Data Última Interação'), [[hoje()]], true);
+  if (!l[COL['Data Última Interação']]) await gravarData(destino, linha, 'Data Última Interação', hoje());
   return { linha, acao };
 }
 
@@ -87,12 +109,14 @@ const servidor = createServer(async (req, res) => {
       return res.end(PAGINA);
     }
     if (req.method === 'GET' && req.url === '/fila') return json(res, 200, await fila());
+    if (req.method === 'GET' && req.url === '/sessao') return json(res, 200, lerSessao());
     if (req.method === 'POST' && req.url === '/marcar') {
       const pedido = await corpo(req);
       const feito = (fila_de_escrita = fila_de_escrita.catch(() => {}).then(() => marcar(pedido)));
-      return json(res, 200, await feito);
+      const r = await feito;
+      return json(res, 200, { ...r, sessao: registrarSessao(pedido.acao, String(pedido.arroba).toLowerCase()) });
     }
-    if (req.method === 'POST' && req.url === '/encerrar') { json(res, 200, { ok: true }); return setTimeout(() => process.exit(0), 200); }
+    if (req.method === 'POST' && req.url === '/encerrar') { if (existsSync(ARQ_SESSAO)) rmSync(ARQ_SESSAO); json(res, 200, { ok: true }); return setTimeout(() => process.exit(0), 200); }
     json(res, 404, { erro: 'não existe' });
   } catch (e) {
     json(res, 500, { erro: e.message });
@@ -135,7 +159,7 @@ const PAGINA = /* html */ `<!doctype html>
 <p style="margin-top:32px"><button id="encerrar">Encerrar a fila</button></p>
 </main>
 <script>
-let fila = [], i = 0, enviados = 0, descartados = 0;
+let fila = [], i = 0, sessao = { enviados: [], descartados: [] };
 const $ = (id) => document.getElementById(id);
 const aviso = (t, erro) => { $('aviso').textContent = t; $('aviso').className = 'aviso' + (erro ? ' erro' : ''); };
 const el = (tag, props = {}, ...filhos) => { const e = Object.assign(document.createElement(tag), props); filhos.forEach((f) => e.append(f)); return e; };
@@ -143,23 +167,23 @@ const el = (tag, props = {}, ...filhos) => { const e = Object.assign(document.cr
 async function carregar() {
   const r = await fetch('/fila'); const d = await r.json();
   if (!r.ok) return aviso('Não consegui ler a planilha: ' + d.erro, true);
+  sessao = await (await fetch('/sessao')).json();
   fila = d; desenhar();
 }
 
 function desenhar() {
-  $('conta').textContent = enviados + ' enviadas · ' + descartados + ' descartadas · ' + Math.max(fila.length - i, 0) + ' na fila';
+  $('conta').textContent = sessao.enviados.length + ' enviadas · ' + sessao.descartados.length + ' descartadas · ' + Math.max(fila.length - i, 0) + ' na fila';
   const area = $('area'); area.innerHTML = '';
   if (i >= fila.length) { area.append(el('div', { className: 'cartao fim' }, el('p', { className: 'nome', textContent: 'Fila zerada.' }), el('p', { className: 'arroba', textContent: 'Tudo marcado na planilha. Pode encerrar.' }))); return; }
   const l = fila[i];
   const texto = el('textarea', { value: l.copy, id: 'texto' });
   const copiar = el('button', { className: 'principal', textContent: '1. Copiar mensagem e abrir perfil' });
-  const enviei = el('button', { className: 'escuro', textContent: '2. Enviei', disabled: true });
+  const enviei = el('button', { className: 'escuro', textContent: '2. Enviei' }); // sempre ativo: ela pode ter enviado sem usar o botão laranja
   const descartar = el('button', { textContent: 'Descartar lead' });
   const pular = el('button', { textContent: 'Pular por agora' });
   copiar.onclick = async () => {
     try { await navigator.clipboard.writeText(texto.value); } catch { texto.select(); document.execCommand('copy'); }
     window.open(l.link, 'instagram');
-    enviei.disabled = false;
     aviso('Mensagem copiada. No Instagram: "Enviar mensagem" → Ctrl+V → Enter. Depois volte e clique em "Enviei".');
   };
   enviei.onclick = () => gravar('enviei', texto.value, [copiar, enviei, descartar, pular]);
@@ -180,7 +204,7 @@ async function gravar(acao, copy, botoes) {
   const r = await fetch('/marcar', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ arroba: fila[i].arroba, acao, copy }) });
   const d = await r.json();
   if (!r.ok) { botoes.forEach((b) => (b.disabled = false)); return aviso('Não marcou: ' + d.erro + '. Tente de novo.', true); }
-  acao === 'enviei' ? enviados++ : descartados++;
+  sessao = d.sessao;
   aviso((acao === 'enviei' ? 'Marcado como abordagem feita' : 'Marcado como descartado') + ' (linha ' + d.linha + ').');
   i++; desenhar();
 }

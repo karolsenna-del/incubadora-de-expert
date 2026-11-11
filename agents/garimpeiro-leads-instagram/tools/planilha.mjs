@@ -263,6 +263,20 @@ const pedidoOrdenar = (totalLinhas) => ({ sortRange: { range: faixa(1, totalLinh
   { dimensionIndex: indiceDe('Ordem'), sortOrder: 'ASCENDING' }, { dimensionIndex: indiceDe('Score de Fit (0-4)'), sortOrder: 'DESCENDING' },
 ] } });
 
+// Data de verdade numa célula (Karol, 10/11/2026). O webhook só aceita as fórmulas do Score e da Ordem, então
+// "atualizar" com formula=true recusa a data ("formula nao permitida") e RAW grava texto. O repeatCell da ação
+// "formatar" grava o número de série da data + formato dd/mm/aaaa, igual às datas que a Karol digita.
+export async function gravarData(destino, linha, nomeColuna, iso) {
+  const [a, m, d] = iso.split('-').map(Number);
+  const serie = (Date.UTC(a, m - 1, d) - Date.UTC(1899, 11, 30)) / 86400000;
+  const i = indiceDe(nomeColuna);
+  await chamar({ acao: 'formatar', planilha: destino.planilha, aba: destino.aba, colunas: TOTAL_COLUNAS, pedidos: [{ repeatCell: {
+    range: faixa(linha - 1, linha, i, i + 1),
+    cell: { userEnteredValue: { numberValue: serie }, userEnteredFormat: { numberFormat: { type: 'DATE', pattern: 'dd/mm/yyyy' } } },
+    fields: 'userEnteredValue,userEnteredFormat.numberFormat',
+  } }] });
+}
+
 async function formatarAba(destino, totalLinhas) {
   await chamar({ acao: 'formatar', planilha: destino.planilha, aba: destino.aba, colunas: TOTAL_COLUNAS, pedidos: pedidosAparencia(totalLinhas) });
 }
@@ -284,7 +298,7 @@ async function sincronizarAprovados(destino, valores) {
     if (!(abordado && rev !== 'aprovado') && rev !== 'enviado') continue;
     const linha = k + 2;
     await atualizar(destino, `${letra(iRev)}${linha}:${letra(iRev)}${linha}`, [["aprovado"]]); // célula sozinha sem ":" dá erro 500 no n8n
-    if (abordado && !l[iUlt]) await atualizar(destino, `${letra(iUlt)}${linha}:${letra(iUlt)}${linha}`, [[hoje]], true);
+    if (abordado && !l[iUlt]) await gravarData(destino, linha, 'Data Última Interação', hoje);
     marcadas++;
   }
   return marcadas;

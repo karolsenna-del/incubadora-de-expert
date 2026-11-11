@@ -17,6 +17,9 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Reels "Não crie conteúdo, venda" e "8 dos 13 anos" editados (11/11)
+Vídeo 1 pronto e conferido: Videos/edicao-euriliana/nao-crie-conteudo/saida/nao-crie-conteudo-final.mp4 (1min11). Vídeo 2 (cortado de 2min05 pra 1min42; "carga"→"cargo") renderizado, mas a conferência pegou 2 emendas coladas na fala; o roteiro já está corrigido e o refazer caiu por falta de memória. Falta rodar de novo (cortar → remapear → render → acelerar → conferir), quando a Karol mandar. Passo a passo em oito-de-treze/trabalho.md.
+
 ## Fila de abordagem dos leads do garimpo (10/11)
 Página local que mostra a fila (38 leads com mensagem pronta), copia a mensagem e abre o perfil; a Karol envia na mão e clica "Enviei" (marca Abordagem feita na aba Garimpo). Abrir: pedir "abre a fila de abordagem". Mover abordados pra aba Geral do Direct não dá pelo computador (o site não tem a opção): só no app do celular. Conferir a data na planilha depois do 1º envio real.
 
@@ -757,8 +760,11 @@ Retomar com: `/expert-companion`
 - ATUALIZAÇÃO 10/11 (2): Karol pediu os 7 passos na live (persona, problema, caminho/método, oferta, rastrear leads, chamar pra Venda Secreta, follow-up) e um plano semanal até 31/12 como material. Roteiro v2 feito (Bloco 5 com os 7 passos, um por semana, caso da Karol em cada). Material = plano de 7 semanas com atividades marcáveis: https://claude.ai/artifact/NDT4DBz5sEezrdLskR5N8z (`live-37-plano-7-semanas.html`), revisado pelo Codex, PRIVADO até a Karol liberar no Compartilhar. CTA SECRETO → recebe o plano. Falta da Karol: aprovar as 5 afirmações, confirmar 2 falas do Bloco 5 e as 5 sessões da Express. Depois: LP do grupo + slides (outro squad).
 - ATUALIZAÇÃO 10/11 (3): plano enxugado a pedido da Karol (entregava o como): agora é o quê + 1 pergunta de autoavaliação por semana, resultado "x de 7" e onde trava, e 1 linha por semana de como a Express faz o passo. Revisado de novo pelo Codex, conferido no celular. Bloco 5 sem dimensões da persona nem critérios do Rastreador. Mesmo link, ainda PRIVADO.
 - ATUALIZAÇÃO 10/11 (4): material virou quiz (21 perguntas, 1 por página, modelo das Lives 35/36) com nome + WhatsApp no fim e o resultado na tela; arquivo `business/campanhas/lives-semanais/lp-grupo-live/quiz-live-37.html`. Respostas vão pra planilha Google "QUIZZ das lives" (https://docs.google.com/spreadsheets/d/10ZCc-6IrIATP4VIwPlOpGDEhLSeQE50Jr9TkLgGE6XU/edit), 1 aba por quiz criada sozinha (campo "aba" no envio), via Apps Script "QUIZZ das lives - recebe respostas" (código em `lives-semanais/quizz-das-lives/apps-script.gs`). Testado ponta a ponta na prévia, linhas de teste apagadas. FALTA: OK da Karol pra publicar no grupo.incubadoradeexpert.com.br (deploy de produção bloqueado sem ordem dela). Link no grupo com ?o=grupo, pra quem escrever SECRETO com ?o=live.
+- 10/11 (8): deck da Live 37 pronto (33 slides, régua das 7 semanas): https://claude.ai/artifact/JemjaVoRkb1NZDLhkf3PqT, aguardando aprovação da Karol.
 - ATUALIZAÇÃO 10/11 (5): NO AR (conferido): quiz https://grupo.incubadoradeexpert.com.br/quiz-live-37.html e tema novo na LP do grupo ("...antes de 2027, mesmo que você não tenha nada estruturado hoje", título do roteiro também). Link único (sem ?o), mandado no grupo depois da live pra quem escreve PLANO. Pendentes da Karol: 5 objeções, 2 falas deduzidas, sessões da Express. Slides: outro squad.
 - 10/11 (6): LP do grupo sem a faixa do tema: a manchete agora é "Nesta quarta, às 15h de Brasília, aula ao vivo e gratuita: [tema da semana em laranja]" (aprovado pela Karol, no ar e conferido). Toda semana troca só o span#temaSemana.
 - 10/11 (7): gatilho da Live 37 é PLANO (não SECRETO), Karol. Roteiro atualizado. Link único do quiz, mandado no grupo depois da live.
 
 - 10/11: Folder da Live 11/11 (Expert360) animado com música (hip-hop da biblioteca, pasta confiante), saída em Downloads/Live_Expert360_11-11_animado.mp4. Feito com ffmpeg direto, sem squad (Karol sem acesso à Arcane; edições simples se fazem assim).
+
+- 11/11 — Gestor de Infra: Central da Incubadora (Comercial → CRM e leads) ganhou o botão "Fila de abordagem — Leads do Garimpo"; o clique liga a fila no PC da Karol (endereço fila-garimpo:// registrado no Windows). Publicado e testado (34 leads na fila).
