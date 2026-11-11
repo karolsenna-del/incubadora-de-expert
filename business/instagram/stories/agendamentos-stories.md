@@ -80,3 +80,4 @@
 | 06/11/2026 | gerar-valor-persona-2026-11-06 | 1 | 18137159740672923 | sim (ver log de execucao) |
 | 08/11/2026 | grupo-domingo-2026-11-08 | 1 | 17900982663612121 | sim (ver log de execucao) |
 | 10/11/2026 | grupo-terca-2026-11-10 | 1 | 18390509290232496 | sim (ver log de execucao) |
+| 11/11/2026 | chamada-grupo-lives-quarta-2026-11-11 | 6 | 18288841642295011, 18135858610663773, 18003335627812456, 18122279015051062, 18469588582143649, 18097666238480111 | sim (ver log de execucao) |
