@@ -90,6 +90,9 @@ comando exato). Usar paths estilo `C:/Users/...` (não `/c/...`) no arquivo de l
      como pendência no relatório final ("Live {N} sem roteiro encontrado — aguardando Karol
      escrever/indicar o roteiro") e seguir para a próxima gravação.
   5. Título final: `Live {N} — {Título}` (formato real das linhas em `encontros_mentoria`, Lives 23-31 — corrigido 25/09, missão #30).
+     O YouTube aceita no máximo 100 caracteres no título: se passar, no YouTube vai a versão
+     cortada no fim de uma frase/cláusula (sem inventar palavra) e no banco vai o título completo,
+     que é o que o site mostra (missão #41).
 
 - **"Encontro Incubadora - ..."** → série Mentoria em Grupo (`tipo: 'incubadora'`)
   1. Data = extrair do título do arquivo (`YYYY/MM/DD`), formatar como `DD.MM.AA`.
