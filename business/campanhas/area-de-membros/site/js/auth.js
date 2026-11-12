@@ -112,7 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Veio do financeiro (atalho da Central): volta pra ele depois do login
-    window.location.href = new URLSearchParams(window.location.search).get('volta') === 'financeiro' ? 'financeiro.html' : 'app.html';
+    // (Comercial também, 11/11/2026)
+    const volta = new URLSearchParams(window.location.search).get('volta');
+    window.location.href = volta === 'financeiro' ? 'financeiro.html' : volta === 'comercial' ? 'comercial.html' : 'app.html';
   });
 
   btnReenviar.addEventListener('click', async () => {
