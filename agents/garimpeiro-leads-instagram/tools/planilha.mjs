@@ -394,10 +394,45 @@ async function enviar(caminhoRodada) {
     p.motivo_nota || '', p.fato_gancho, p.fonte_gancho, '', p.copy,
     ...blocoRastreador(p),
   ]);
-  if (!linhas.length) return console.log('Nada novo pra enviar.');
+  // Painel Comercial (Karol, 11/11/2026): o lugar de trabalho dela é o painel; a aba fica como arquivo.
+  const painel = perfil.id === 'karol' ? await enviarAoPainel(rodada, lote) : null;
+  if (!linhas.length) return console.log(JSON.stringify({ enviados: 0, painel }));
   await chamar({ acao: 'anexar', planilha: perfil.destino.planilha, aba: perfil.destino.aba, linhas });
   await organizar(perfil.destino);
-  console.log(JSON.stringify({ enviados: linhas.length, aba: perfil.destino.aba, fora_do_corte: classificados.length - lote.length }));
+  console.log(JSON.stringify({ enviados: linhas.length, aba: perfil.destino.aba, fora_do_corte: classificados.length - lote.length, painel }));
+}
+
+// Grava os leads da rodada no CRM do painel comercial (Supabase crm_leads, etapa "novo"), sem duplicar por @.
+// Usa a API de gestão do Supabase com SUPABASE_ACCESS_TOKEN (variável da sessão do Claude Code).
+async function enviarAoPainel(rodada, lote) {
+  const tk = process.env.SUPABASE_ACCESS_TOKEN;
+  if (!tk) { console.error('AVISO: sem SUPABASE_ACCESS_TOKEN — leads NÃO foram pro painel comercial'); return { erro: 'sem token' }; }
+  const dados = lote.map((p) => {
+    const score = FITS.filter((f) => p[f.campo] === 'Sim').length;
+    const garimpo = {
+      'Data rodada': rodada.data, 'Termo': p.termo || '', 'Nome': p.nome, '@': p['@'], 'Link do perfil': p.link_perfil, 'Bio': p.bio,
+      'Link externo': p.link_externo, 'Seguidores': String(p.seguidores), 'Categoria': p.categoria || '', 'Sinais': p.sinais || '',
+      'Aderência': p.aderencia, 'Postou nos últimos 30 dias?': postouRecente(p, rodada.data), 'Motivo da nota': p.motivo_nota || '',
+      'Fato-gancho': p.fato_gancho, 'Fonte do gancho': p.fonte_gancho, 'Copy': p.copy,
+      ...Object.fromEntries(FITS.map((f) => [f.coluna, p[f.campo] || ''])),
+      'Score de Fit (0-4)': String(score), 'Prioridade de abordagem': prioridadeAbordagem(p), 'Perfil': p.perfil_leitura || '',
+      'Observações': observacaoRevisao(p),
+    };
+    return { insta: String(p['@']).replace(/^@/, '').toLowerCase(), nome: p.nome || null, detalhe: `Garimpo — rodada ${rodada.data}${p.termo ? ' (' + p.termo + ')' : ''}`, garimpo };
+  });
+  const json = JSON.stringify(dados);
+  if (json.includes('$gj$')) throw new Error('texto da rodada contém o marcador $gj$');
+  const query = `with d as (select * from jsonb_to_recordset($gj$${json}$gj$::jsonb) as x(insta text, nome text, detalhe text, garimpo jsonb)),
+    novos as (insert into crm_leads (nome, instagram, origem, origem_detalhe, status, etapa, etapa_fonte, garimpo)
+      select nome, insta, 'garimpo_instagram', detalhe, 'a_reativar', 'novo', 'garimpo', garimpo from d
+      where not exists (select 1 from crm_leads l where lower(l.instagram) = d.insta) returning 1)
+    select count(*)::int as inseridos from novos`;
+  const r = await fetch('https://api.supabase.com/v1/projects/pxnbcbhgoewrwyreohki/database/query', {
+    method: 'POST', headers: { Authorization: `Bearer ${tk}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ query }),
+  });
+  const txt = await r.text();
+  if (!r.ok) throw new Error(`Painel comercial (${r.status}): ${txt.slice(0, 200)}`);
+  return { inseridos: JSON.parse(txt)[0]?.inseridos ?? 0, ja_existiam: dados.length - (JSON.parse(txt)[0]?.inseridos ?? 0) };
 }
 
 async function preparar(destino) {

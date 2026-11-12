@@ -12,7 +12,7 @@
 // Fecha sozinho depois de 2h sem uso ou pelo botão "Encerrar".
 
 import { createServer } from 'node:http';
-import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, appendFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { exec } from 'node:child_process';
 import { dirname, join, resolve } from 'node:path';
@@ -51,10 +51,11 @@ try {
 process.env.GARIMPO_TOKEN ||= token(); // lê o cofre uma vez só
 
 const COL = Object.fromEntries(['@', 'Nome', 'Link do perfil', 'Fato-gancho', 'Copy', 'Status revisão', 'Status',
-  'Data Última Interação', 'Prioridade de abordagem', 'Score de Fit (0-4)'].map((c) => [c, indiceDe(c)]));
+  'Data Última Interação', 'Próxima Ação', 'Data Próxima Ação', 'Prioridade de abordagem', 'Score de Fit (0-4)'].map((c) => [c, indiceDe(c)]));
 const ORDEM_PRIO = { Alta: 1, 'Média': 2, Baixa: 3 };
 const norm = (s) => String(s || '').trim().replace(/^@/, '').toLowerCase();
 const hoje = () => new Date().toLocaleDateString('sv-SE', { timeZone: 'America/Cuiaba' }); // AAAA-MM-DD
+const PROXIMA_ACAO = 'Aguardar resposta';
 
 async function fila() {
   const [, ...linhas] = await lerValores(destino);
@@ -91,11 +92,21 @@ async function marcar({ arroba, acao, copy }) {
   await atualizar(destino, cel('Status'), [['Abordagem feita']]);
   await atualizar(destino, cel('Status revisão'), [['aprovado']]);
   if (!l[COL['Data Última Interação']]) await gravarData(destino, linha, 'Data Última Interação', hoje());
+  // Próxima ação (Karol, 11/11/2026): o mesmo "Aguardar resposta" que ela escrevia à mão, sem data
+  // (a cor "Follow-up vencido" já acende 3 dias depois da última interação). Nunca por cima do que ela já escreveu.
+  if (!(l[COL['Próxima Ação']] || '').trim()) await atualizar(destino, cel('Próxima Ação'), [[PROXIMA_ACAO]]);
   return { linha, acao };
 }
 
+// Diário da fila: aberta sem janela pelo botão da Central, o único rastro de erro ou fechamento fica aqui.
+const ARQ_LOG = join(homedir(), '.auroq', 'garimpeiro', 'fila.log');
+const log = (msg) => { try { mkdirSync(dirname(ARQ_LOG), { recursive: true }); appendFileSync(ARQ_LOG, `${new Date().toISOString()} ${msg}\n`); } catch {} };
+process.on('exit', (c) => log(`fechou (código ${c})`));
+process.on('uncaughtException', (e) => { log(`erro fatal: ${e.stack || e}`); process.exit(1); });
+process.on('unhandledRejection', (e) => log(`erro sem tratamento: ${e?.stack || e}`));
+
 let fim;
-const reiniciarOcioso = () => { clearTimeout(fim); fim = setTimeout(() => process.exit(0), OCIOSO_MS); };
+const reiniciarOcioso = () => { clearTimeout(fim); fim = setTimeout(() => { log('2h sem uso'); process.exit(0); }, OCIOSO_MS); };
 let fila_de_escrita = Promise.resolve(); // um clique por vez na planilha
 
 const corpo = (req) => new Promise((ok, erro) => { let d = ''; req.on('data', (c) => (d += c)); req.on('end', () => { try { ok(d ? JSON.parse(d) : {}); } catch (e) { erro(e); } }); });
@@ -119,6 +130,7 @@ const servidor = createServer(async (req, res) => {
     if (req.method === 'POST' && req.url === '/encerrar') { if (existsSync(ARQ_SESSAO)) rmSync(ARQ_SESSAO); json(res, 200, { ok: true }); return setTimeout(() => process.exit(0), 200); }
     json(res, 404, { erro: 'não existe' });
   } catch (e) {
+    log(`${req.method} ${req.url} falhou: ${e.message}`);
     json(res, 500, { erro: e.message });
   }
 });
@@ -126,6 +138,7 @@ const servidor = createServer(async (req, res) => {
 servidor.listen(PORTA, '127.0.0.1', () => {
   const url = `http://127.0.0.1:${PORTA}`;
   console.log(JSON.stringify({ fila_aberta: url }));
+  log('abriu');
   reiniciarOcioso();
   exec(process.platform === 'win32' ? `start "" "${url}"` : `open "${url}"`);
 });
@@ -201,8 +214,15 @@ function desenhar() {
 async function gravar(acao, copy, botoes) {
   botoes.forEach((b) => (b.disabled = true));
   aviso('Marcando na planilha…');
-  const r = await fetch('/marcar', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ arroba: fila[i].arroba, acao, copy }) });
-  const d = await r.json();
+  let r, d;
+  try {
+    r = await fetch('/marcar', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ arroba: fila[i].arroba, acao, copy }) });
+    d = await r.json();
+  } catch {
+    // Fila desligada (fecha sozinha depois de 2h parada): o clique não chegou na planilha.
+    botoes.forEach((b) => (b.disabled = false));
+    return aviso('A fila tinha desligado e este lead NÃO foi marcado. Clique de novo no botão da Central (a fila religa) e marque este lead outra vez.', true);
+  }
   if (!r.ok) { botoes.forEach((b) => (b.disabled = false)); return aviso('Não marcou: ' + d.erro + '. Tente de novo.', true); }
   sessao = d.sessao;
   aviso((acao === 'enviei' ? 'Marcado como abordagem feita' : 'Marcado como descartado') + ' (linha ' + d.linha + ').');

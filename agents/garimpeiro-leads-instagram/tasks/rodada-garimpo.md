@@ -136,7 +136,9 @@ Lista na aba "{aba}", cada lead já com a Copy. Abre o perfil uma vez: manda a C
 ```
 Na rodada seguinte, o `enviar` (ou `planilha.mjs sincronizar`) marca "aprovado" na revisão de toda linha cujo Status saiu de "Sem abordagem" (nunca por cima de "descartado") e põe a data do dia se a Data Última Interação estiver vazia. Resposta da lead → Vendedor Expert conduz.
 
-**Fila de abordagem (desde 10/11/2026):** pra Karol enviar, rodar `node agents/garimpeiro-leads-instagram/tools/fila-abordagem.mjs` (abre http://127.0.0.1:4317). Um lead por vez, por prioridade: "Copiar mensagem e abrir perfil" → ela clica em "Enviar mensagem", cola e envia → "Enviei" grava Status "Abordagem feita" + "aprovado" + data (e a Copy, se ela ajustou). "Descartar" grava "descartado". A página nunca envia nada sozinha. Aba Geral do Direct: só pelo app do celular (segurar a conversa → Mover para Geral); a versão web não tem a opção.
+**Painel Comercial (desde 11/11/2026, perfil karol):** o `enviar` grava os leads também no CRM do painel (Supabase `crm_leads`, origem `garimpo_instagram`, etapa "novo", dados do Garimpo em `garimpo`), precisa de `SUPABASE_ACCESS_TOKEN`. A Karol aborda pela aba **Abordar** do painel (membros.incubadoradeexpert.com.br/comercial.html?aba=abordar): mesma mecânica da fila, e "Enviei" muda a etapa pra Abordado no painel. A aba Garimpo da planilha virou arquivo (não recebe mais as marcações). A fila local abaixo ficou aposentada.
+
+**Fila de abordagem (10/11/2026, APOSENTADA em 11/11 — substituída pela aba Abordar do painel):** pra Karol enviar, rodar `node agents/garimpeiro-leads-instagram/tools/fila-abordagem.mjs` (abre http://127.0.0.1:4317). Um lead por vez, por prioridade: "Copiar mensagem e abrir perfil" → ela clica em "Enviar mensagem", cola e envia → "Enviei" grava Status "Abordagem feita" + "aprovado" + data (e a Copy, se ela ajustou). "Descartar" grava "descartado". A página nunca envia nada sozinha. Aba Geral do Direct: só pelo app do celular (segurar a conversa → Mover para Geral); a versão web não tem a opção.
 
 ### 8. Documentar
 - Mission Log: 1 linha.
