@@ -1289,3 +1289,20 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** opção A, envio assistido. Página local com a fila: copia a mensagem e abre o perfil, a Karol envia e clica "Enviei", e a planilha se atualiza sozinha.
 **Racional:** a API oficial não deixa puxar conversa fria, e um robô mandando mensagem na conta principal arrisca bloqueio.
 **Impacto:** Mover pra Geral fica no celular, porque a versão web do Instagram não tem a opção.
+
+## 2026-11-11 — Painel Comercial no lugar das planilhas
+**Contexto:** CRM (banco + planilha do closer) e Garimpo (planilha) separados, sem data de cada etapa.
+**Decisão:** painel na área de membros vira o lugar de trabalho (opção A); planilha do Garimpo vira arquivo; etapas mudam sozinhas por WhatsApp, diagnóstico, matrícula e venda Voomp; resposta no direct do Instagram é marcada à mão.
+**Racional:** medir abordagens → respostas → sessões → vendas e o tempo até virar aluno.
+**Impacto:** fila de abordagem passa a ser a aba Abordar do painel (qualquer aparelho).
+
+## 11/11/2026 — Painel Comercial: números clicáveis
+**Contexto:** Karol queria ver quem são as pessoas por trás de cada indicador.
+**Decisão:** todo número do painel abre a lista das pessoas (quem passou / quem ficou, data, etapa atual) e a ficha de cada uma. A Central perdeu o cartão da planilha CRM.
+**Racional:** o painel substitui a planilha; o número sozinho não diz em quem agir.
+**Impacto:** só tela, banco igual. Precisa publicar área de membros e Central.
+
+## 11/11/2026 — Cortes da sessão Juliana e Dr. Diogo
+**Contexto:** Karol pediu cortes da call de 29/10 com foco nas falas dela.
+**Decisão:** 6 cortes (notas 7,4 a 8,4). Ficaram fora o trecho sobre o slide do Método VIP (oferta + cita a Black) e o "MBA em vendas" (fala pode ser da Juliana). A tela compartilhada foi recortada para esconder o @ do Diogo e o faturamento.
+**Impacto:** cortes esperam o ok da Karol antes de ir pro Postador.

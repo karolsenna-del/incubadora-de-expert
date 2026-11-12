@@ -17,8 +17,11 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
-## Reels "Não crie conteúdo, venda" e "8 dos 13 anos" editados (11/11)
-Vídeo 1 pronto e conferido: Videos/edicao-euriliana/nao-crie-conteudo/saida/nao-crie-conteudo-final.mp4 (1min11). Vídeo 2 (cortado de 2min05 pra 1min42; "carga"→"cargo") renderizado, mas a conferência pegou 2 emendas coladas na fala; o roteiro já está corrigido e o refazer caiu por falta de memória. Falta rodar de novo (cortar → remapear → render → acelerar → conferir), quando a Karol mandar. Passo a passo em oito-de-treze/trabalho.md.
+## Lives 34 e 36 na Área de Membros (12/11, sync automático)
+Lives 34 (21/10) e 36 (04/11) publicadas: YouTube não listado + banco do site (missão #41 do course-publisher). Live 37 (11/11) está parada: a pasta nova do Meet não está compartilhada com karol.franzini@gmail.com (https://drive.google.com/drive/folders/1IFLBA2jEUHxclk1sd-9QyUlQX3YvxzJ5); compartilhando, a próxima rodada sobe sozinha (título já pronto).
+
+## Reels "Não crie conteúdo, venda" e "8 dos 13 anos" prontos (11/11)
+Os dois finais conferidos (volume, legenda, cortes) em Videos/edicao-euriliana/nao-crie-conteudo/saida/nao-crie-conteudo-final.mp4 (1min11) e oito-de-treze/saida/oito-de-treze-final.mp4 (1min42; "carga"→"cargo"). Falta só a Karol assistir e postar.
 
 ## Fila de abordagem dos leads do garimpo (10/11)
 Página local que mostra a fila (38 leads com mensagem pronta), copia a mensagem e abre o perfil; a Karol envia na mão e clica "Enviei" (marca Abordagem feita na aba Garimpo). Abrir: pedir "abre a fila de abordagem". Mover abordados pra aba Geral do Direct não dá pelo computador (o site não tem a opção): só no app do celular. Conferir a data na planilha depois do 1º envio real.
@@ -768,3 +771,11 @@ Retomar com: `/expert-companion`
 - 10/11: Folder da Live 11/11 (Expert360) animado com música (hip-hop da biblioteca, pasta confiante), saída em Downloads/Live_Expert360_11-11_animado.mp4. Feito com ffmpeg direto, sem squad (Karol sem acesso à Arcane; edições simples se fazem assim).
 
 - 11/11 — Gestor de Infra: Central da Incubadora (Comercial → CRM e leads) ganhou o botão "Fila de abordagem — Leads do Garimpo"; o clique liga a fila no PC da Karol (endereço fila-garimpo:// registrado no Windows). Publicado e testado (34 leads na fila).
+
+- 11/11 — Gestor de Infra: Painel Comercial montado (membros.incubadoradeexpert.com.br/comercial.html): indicadores do funil, quadro de leads e aba Abordar (substitui a fila local). Garimpo e CRM agora no banco, planilha vira arquivo (decisão da Karol, opção A). Falta: Karol publicar (deploy com !) e marcar como Aluno as vendas VIP/Sprint que não ligaram sozinhas. Doc: business/processos/painel-comercial.md
+
+- 11/11 — Painel Comercial: números clicáveis prontos e ensaiados; Central sem a planilha CRM. Esperando a Karol publicar os dois (vercel --prod). Pendente: marcar como Aluno os compradores VIP/Sprint antigos.
+
+## 11/11/2026 — Cortes da sessão Juliana e Dr. Diogo (29/10)
+- 6 cortes prontos em videos-editados/clip-expert/diogo-juliana-2026-10-29/ (+ legendas.md), aguardando aprovação da Karol. Nada na fila do Postador.
+- Pendente: Karol escolher Live 36 ou Live 34 para o próximo /clipExpert.
