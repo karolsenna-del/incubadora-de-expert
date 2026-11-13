@@ -783,3 +783,12 @@ Retomar com: `/expert-companion`
 - 6 cortes prontos em videos-editados/clip-expert/diogo-juliana-2026-10-29/ (+ legendas.md), aguardando aprovação da Karol. Nada na fila do Postador.
 - Pendente: Karol escolher Live 36 ou Live 34 para o próximo /clipExpert.
 - 12/11: os 7 cortes da sessão Juliana/Diogo (04 virou 04a e 04b) foram agendados 1 por dia às 13h, de 17 a 23/11 (workflows reel-sessao-2026-10-29-corte-*.yml). Só valem depois do push.
+
+- 13/11 — Central da Incubadora: "Apresentações de venda" ganhou Incubadora Express e Método VIP, depois Grupo e Individual (preço do Grupo corrigido de R$5.000 da Black pra R$7.500, igual à página) (VIP publicada em vendas.../metodo-vip/apresentacao/). As 4 publicadas (Karol) e conferidas no ar, Central incluída.
+
+### 13/11/2026 — Gestor de Infra: Hermes, números de WhatsApp e boas-vindas automática
+- Hermes voltou (login do Codex refeito). Reserva do OpenRouter segue fora (Karol decidiu: sem crédito).
+- Números: 4726 comercial → iPhone da Karol; 4690 suporte → celular do João; 3543 (API) manda a boas-vindas. Troca de aparelho é com a Karol.
+- Boas-vindas de compra NO AR (13/11): teste entregue no celular da Karol; 5/12 modelos aprovados, resto em análise na Meta.
+
+- 13/11 — Central: card da Individual em Páginas de venda trocado de R$10.000 pra R$15.000 (Karol confirmou o preço). Publicado e conferido.

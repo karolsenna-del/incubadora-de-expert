@@ -1306,3 +1306,15 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Contexto:** Karol pediu cortes da call de 29/10 com foco nas falas dela.
 **Decisão:** 6 cortes (notas 7,4 a 8,4). Ficaram fora o trecho sobre o slide do Método VIP (oferta + cita a Black) e o "MBA em vendas" (fala pode ser da Juliana). A tela compartilhada foi recortada para esconder o @ do Diogo e o faturamento.
 **Impacto:** cortes esperam o ok da Karol antes de ir pro Postador.
+
+## 2026-11-13 — Funções dos números de WhatsApp (troca de aparelho, não de número)
+**Contexto:** o 4690 (suporte, no iPhone da Karol) virou também o comercial na prática, e as mensagens que chegam no 99647-4726 (comercial das páginas, no celular do João) ficam sem resposta.
+**Decisão:** o 99647-4726 (comercial) vai para o iPhone da Karol no lugar do 4690. O 99232-4690 continua como suporte aos alunos e vai para o celular do João (Karol acompanha pelo WhatsApp Web). O 99884-3543 (API) manda a boas-vindas automática de compra. Nenhuma página muda.
+**Racional:** atender o comercial a qualquer hora, sem obrigação de suporte fora do horário comercial; leads e alunos continuam com os mesmos números.
+**Impacto:** a Karol troca os WhatsApps de aparelho. A boas-vindas aponta o suporte para o 4690. A resposta de um aluno direto ao 3543 cai no painel.
+
+## 13/11/2026 — Preço da Individual é R$15.000
+**Contexto:** Central mostrava R$10.000; página e apresentação, R$15.000 (12x R$1.500).
+**Decisão:** vale R$15.000 (Karol).
+**Racional:** alinhar tudo ao preço vigente.
+**Impacto:** card da Central corrigido.
