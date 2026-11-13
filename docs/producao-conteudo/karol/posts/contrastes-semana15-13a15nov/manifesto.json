@@ -2,37 +2,43 @@
   {
     "arquivo": "capa-sex-13-11.png",
     "headline": "QUEM ESPERA TER PÚBLICO X QUEM VENDE SEM AUDIÊNCIA",
-    "foto": "business/campanhas/lp-diagnostico-expert/karol.jpg",
-    "uso": "SEX 13/11 · 20H",
+    "conceito": "Auditório vazio versus conversa direta e acordo individual.",
     "apoio": "",
+    "uso": "SEX 13/11 · 20H",
     "dimensoes": [
       1080,
       1350
     ],
-    "modo": "RGB"
+    "modo": "RGB",
+    "area_visual_percentual": 51.1,
+    "fonte_visual": "Ilustração autoral desenhada no gerador; sem foto, rede ou API."
   },
   {
     "arquivo": "capa-sab-14-11.png",
     "headline": "SERVIDOR QUE ESPERA X SERVIDOR QUE CONSTRÓI",
-    "foto": "business/campanhas/lp-diagnostico-expert/karol.jpg",
-    "uso": "SÁB 14/11 · 20H",
+    "conceito": "Relógio e espera institucional versus maquete de projeto próprio.",
     "apoio": "",
+    "uso": "SÁB 14/11 · 20H",
     "dimensoes": [
       1080,
       1350
     ],
-    "modo": "RGB"
+    "modo": "RGB",
+    "area_visual_percentual": 51.1,
+    "fonte_visual": "Ilustração autoral desenhada no gerador; sem foto, rede ou API."
   },
   {
     "arquivo": "capa-dom-15-11.png",
     "headline": "QUEM ACUMULA CONTEÚDO X QUEM COLOCA EM ORDEM PARA VENDER",
-    "foto": "business/campanhas/lp-diagnostico-expert/karol.jpg",
-    "uso": "DOM 15/11 · 20H",
+    "conceito": "Pilhas de notas soltas versus sete etapas conectadas até a venda.",
     "apoio": "AS 7 LISTAS DA SEMANA",
+    "uso": "DOM 15/11 · 20H",
     "dimensoes": [
       1080,
       1350
     ],
-    "modo": "RGB"
+    "modo": "RGB",
+    "area_visual_percentual": 51.1,
+    "fonte_visual": "Ilustração autoral desenhada no gerador; sem foto, rede ou API."
   }
 ]
