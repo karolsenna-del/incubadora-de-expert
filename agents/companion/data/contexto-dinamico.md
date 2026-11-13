@@ -17,6 +17,9 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Reels "Iniciar errado" pronto (13/11)
+Final conferido (volume, legenda, cortes) em Videos/edicao-euriliana/iniciar-errado/saida/iniciar-errado-final.mp4 (58s, 1,05x). Tropeço "ou… e ou" cortado; headline no topo "Especialista indo pro digital: você está começando ERRADO"; 9 cenas com 3 imagens novas; trilha hip hop beat (confiante). Render em 4 partes por falta de RAM. Falta só a Karol assistir e postar.
+
 ## Lives 34 e 36 na Área de Membros (12/11, sync automático)
 Lives 34 (21/10) e 36 (04/11) publicadas: YouTube não listado + banco do site (missão #41 do course-publisher). Live 37 (11/11) está parada: a pasta nova do Meet não está compartilhada com karol.franzini@gmail.com (https://drive.google.com/drive/folders/1IFLBA2jEUHxclk1sd-9QyUlQX3YvxzJ5); compartilhando, a próxima rodada sobe sozinha (título já pronto).
 
@@ -779,3 +782,4 @@ Retomar com: `/expert-companion`
 ## 11/11/2026 — Cortes da sessão Juliana e Dr. Diogo (29/10)
 - 6 cortes prontos em videos-editados/clip-expert/diogo-juliana-2026-10-29/ (+ legendas.md), aguardando aprovação da Karol. Nada na fila do Postador.
 - Pendente: Karol escolher Live 36 ou Live 34 para o próximo /clipExpert.
+- 12/11: os 7 cortes da sessão Juliana/Diogo (04 virou 04a e 04b) foram agendados 1 por dia às 13h, de 17 a 23/11 (workflows reel-sessao-2026-10-29-corte-*.yml). Só valem depois do push.
