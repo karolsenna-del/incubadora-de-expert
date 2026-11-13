@@ -296,7 +296,20 @@ Parabéns pela decisão!
 
 ---
 
-## Estado da automação (14/09/2026)
+## Estado da automação (13/11/2026): automática pelo WhatsApp da API
+
+- Quando a Voomp avisa venda paga e a matrícula é nova, o `webhook-voomp.js` manda a mensagem do produto
+  pelo número da API **99884-3543**, com modelo aprovado pela Meta (`onboarding_{sprint|individual|grupo|express|vip|expert360}`
+  e versão `_sem_nome`). Texto = o desta página + "Olá {nome}", linha de suporte (4690, seg-sex 9h-18h) e "Karol Senna".
+- Telefone: vem do aviso da Voomp; se não vier, do que a pessoa deixou no painel (`crm_leads`) ou em `pessoas`.
+  Sem telefone, nada sai e o log da Vercel registra "boas-vindas SEM TELEFONE" (mandar à mão).
+- Liga/desliga: variável `ONBOARDING_WHATSAPP_ATIVO=1` no projeto `area-de-membros-incubadora`.
+- **Mudou o texto aqui? Precisa criar modelo novo na Meta** (o texto aprovado não muda sozinho).
+  Gerador: `business/campanhas/area-de-membros/modelos-onboarding-whatsapp.mjs`.
+- Fora da automação: Destrava Expert e Diagnóstico Ferramentas (sem mensagem), venda por pix direto/contrato
+  (não passa pela Voomp): seguem à mão.
+
+## Estado da automação (14/09/2026), histórico
 
 **Hoje é 100% manual.** Não existe nada ligando "pagamento confirmado" → "mensagem enviada":
 

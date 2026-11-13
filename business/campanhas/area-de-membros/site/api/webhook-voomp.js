@@ -112,6 +112,74 @@ async function matriculaJaExiste(email, produtoSlug, trilhaId) {
   return Array.isArray(rows) && rows.length > 0;
 }
 
+// ---------- Boas-vindas por WhatsApp (Karol, 13/11/2026) ----------
+// Sai pelo número da API 99884-3543 (WABA 1086482547720701), modelo aprovado pela Meta por produto
+// (texto = business/processos/onboarding-pos-compra.md). Só manda quando a matrícula é NOVA (a Voomp
+// reenviando o mesmo aviso não gera 2ª mensagem). Desligado até ONBOARDING_WHATSAPP_ATIVO=1.
+// Destrava e Diagnóstico Ferramentas ainda não têm mensagem: ficam sem envio.
+const MODELO_ONBOARDING = {
+  'sprint-do-metodo': 'onboarding_sprint', 'individual': 'onboarding_individual', 'grupo': 'onboarding_grupo',
+  'incubadora-express': 'onboarding_express', 'metodo-vip': 'onboarding_vip', 'expert360': 'onboarding_expert360'
+};
+const WHATSAPP_TOKEN = process.env.WHATSAPP_TOKEN;
+const WHATSAPP_PHONE_ID = process.env.WHATSAPP_PHONE_ID || '1289879864218064';
+
+// REGRA-013: só dígitos, com 55 na frente
+function normalizarTelefone(v) {
+  let d = String(v || '').replace(/\D/g, '');
+  if (d.length === 10 || d.length === 11) d = '55' + d;
+  return d.length === 12 || d.length === 13 ? d : null;
+}
+
+// Campos de telefone/nome do aviso da Voomp ainda não confirmados num payload real: o 1º que existir vale.
+// Sem telefone no aviso, usa o que a pessoa deixou antes (pré-checkout/painel em crm_leads, ou pessoas).
+async function contatoDoComprador(payload, email) {
+  let telefone = normalizarTelefone(pegar(payload, ['client.cellphone', 'client.phone', 'client.telefone', 'client.celular',
+    'client.mobile', 'client.phone_number', 'client.whatsapp', 'customer.cellphone', 'customer.phone']));
+  let nome = pegar(payload, ['client.name', 'client.nome', 'client.full_name', 'customer.name']);
+  let fonte = telefone ? 'aviso' : null;
+  if (!telefone || !nome) {
+    const h = { apikey: SERVICE_ROLE_KEY, Authorization: `Bearer ${SERVICE_ROLE_KEY}` };
+    const e = encodeURIComponent(email);
+    const consultas = [
+      `${SUPABASE_URL}/rest/v1/crm_leads?email=ilike.${e}&select=telefone,nome&order=updated_at.desc&limit=5`,
+      `${SUPABASE_URL}/rest/v1/pessoas?email=ilike.${e}&select=telefone,nome&limit=5`
+    ];
+    for (const url of consultas) {
+      try {
+        const rows = await (await fetch(url, { headers: h })).json();
+        for (const r of Array.isArray(rows) ? rows : []) {
+          if (!telefone && normalizarTelefone(r.telefone)) { telefone = normalizarTelefone(r.telefone); fonte = url.includes('crm_leads') ? 'crm_leads' : 'pessoas'; }
+          if (!nome && r.nome) nome = r.nome;
+        }
+      } catch (err) { console.error('[webhook-voomp] busca de contato falhou:', err.message); }
+    }
+  }
+  const primeiroNome = nome ? String(nome).trim().split(/\s+/)[0] : null;
+  return { telefone, fonte, primeiroNome: primeiroNome ? primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase() : null };
+}
+
+async function enviarBoasVindas(payload, email, produtoSlug) {
+  const modelo = MODELO_ONBOARDING[produtoSlug];
+  if (process.env.ONBOARDING_WHATSAPP_ATIVO !== '1' || !WHATSAPP_TOKEN || !modelo) {
+    console.log(`[webhook-voomp] boas-vindas não enviada (${!modelo ? 'produto sem mensagem' : 'envio desligado'}): ${produtoSlug}`);
+    return;
+  }
+  const { telefone, fonte, primeiroNome } = await contatoDoComprador(payload, email);
+  if (!telefone) { console.error(`[webhook-voomp] boas-vindas SEM TELEFONE: ${email} -> ${produtoSlug} (mandar à mão)`); return; }
+  const template = primeiroNome
+    ? { name: modelo, language: { code: 'pt_BR' }, components: [{ type: 'body', parameters: [{ type: 'text', text: primeiroNome }] }] }
+    : { name: modelo + '_sem_nome', language: { code: 'pt_BR' } };
+  const resp = await fetch(`https://graph.facebook.com/v21.0/${WHATSAPP_PHONE_ID}/messages`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${WHATSAPP_TOKEN}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ messaging_product: 'whatsapp', to: telefone, type: 'template', template })
+  });
+  const j = await resp.json().catch(() => ({}));
+  if (resp.ok) console.log(`[webhook-voomp] boas-vindas enviada: ${email} -> ${template.name} (telefone via ${fonte}) id=${j.messages && j.messages[0] && j.messages[0].id}`);
+  else console.error(`[webhook-voomp] boas-vindas FALHOU: ${email} -> ${template.name} (${resp.status}) ${JSON.stringify(j.error || j)}`);
+}
+
 async function inserirMatricula(email, produtoSlug, trilhaId) {
   const resp = await fetch(`${SUPABASE_URL}/rest/v1/matriculas`, {
     method: 'POST',
@@ -247,11 +315,18 @@ export default async function handler(req, res) {
 
   const trilhas = TRILHA_POR_OFERTA[produtoSlug] || [];
   try {
+    let matriculaNova = false;
     for (const trilhaId of trilhas) {
       const jaExiste = await matriculaJaExiste(email, produtoSlug, trilhaId);
-      if (!jaExiste) await inserirMatricula(email, produtoSlug, trilhaId);
+      if (!jaExiste) { await inserirMatricula(email, produtoSlug, trilhaId); matriculaNova = true; }
     }
     console.log(`[webhook-voomp] matricula gravada: ${email} -> ${produtoSlug} (trilhas: ${trilhas.join(', ') || 'nenhuma'})`);
+
+    // Boas-vindas só na 1ª vez (aviso repetido da Voomp não manda de novo). Nunca derruba a resposta.
+    if (matriculaNova) {
+      await enviarBoasVindas(payload, email, produtoSlug)
+        .catch(err => console.error('[webhook-voomp] boas-vindas erro:', err.message));
+    }
 
     // Evento de compra pro GA4 + Meta CAPI — best-effort, nunca bloqueia a resposta.
     // Valor/transaction_id da venda ainda nao foram confirmados no payload real da Voomp
