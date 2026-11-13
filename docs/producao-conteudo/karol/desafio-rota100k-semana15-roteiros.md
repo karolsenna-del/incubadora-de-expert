@@ -439,7 +439,7 @@ Você já lançou alguma coisa pra validar? Comenta "sim" ou "não".
 *(Ideia #23 / história #21: "lançamento é intenso e cansativo e pode acabar com a autoconfiança do expert"; Vendas Secretas nasceu da sessão 1:1. "Lançamento pra uma pessoa só" como comparação, não como nome.)*
 
 ### 20h · Carrossel · #2 Espera público x vende sem
-1. **Capa:** "Quem espera ter público x Quem vende sem audiência."
+1. **Capa:** "QUEM ESPERA TER PÚBLICO X QUEM VENDE SEM AUDIÊNCIA"
 2. **Planeja um lançamento x Valida com 3 conversas.** Três conversas mostram o que um lançamento leva meses pra mostrar.
 3. **Grava o curso antes de vender x Vende antes de gravar.** Quem já pagou te diz o que precisa entrar no curso.
 4. **Posta e torce pra alguém chamar x Chama quem tem o perfil do cliente.** Quem espera ser chamado espera muito.
@@ -526,7 +526,7 @@ Onde você aprende sobre o seu cliente? Comenta.
 *(⚠️ Não inventar fonte: Karol confirma ou troca.)*
 
 ### 20h · Carrossel · #4 Servidor que espera x servidor que constrói
-1. **Capa:** "Servidor público que espera x Servidor público que constrói."
+1. **Capa:** "SERVIDOR QUE ESPERA X SERVIDOR QUE CONSTRÓI"
 2. **"Começo quando me aposentar" x Começa em paralelo, sem queimar a ponte.** O tempo de construir é agora, com o salário entrando.
 3. **Acha que precisa pedir exoneração x Usa a estabilidade como base.** A estabilidade é o que te deixa construir sem desespero.
 4. **Faz mais um curso fora da área x Usa o que já sabe fazer no trabalho.** O que você faz todo dia já resolve o problema de alguém.
@@ -610,7 +610,7 @@ Uma prioridade. Uma frase. Confere na sexta.
 Qual é a sua prioridade da semana? Escreve aqui.
 
 ### 20h · Carrossel · As 7 listas da semana
-1. **Capa:** "As 7 listas da semana em um post. O item mais importante de cada uma."
+1. **Capa:** "QUEM ACUMULA CONTEÚDO X QUEM COLOCA EM ORDEM PARA VENDER — AS 7 LISTAS DA SEMANA"
 2. **Os 5 erros de quem cria curso · nº 1:** não ter um caminho com começo, meio e fim. 63% de quem compra curso online acha o conteúdo superficial (CNDL/SPC Brasil, 2024).
 3. **5 coisas que eu faria depois de 13 anos no serviço público · nº 1:** começar a construir antes de precisar sair.
 4. **Os 5 blocos antes de aparecer · nº 1:** a Persona Compradora. O mercado vende o quinto primeiro.

@@ -792,3 +792,6 @@ Retomar com: `/expert-companion`
 - Boas-vindas de compra NO AR (13/11): teste entregue no celular da Karol; 5/12 modelos aprovados, resto em análise na Meta.
 
 - 13/11 — Central: card da Individual em Páginas de venda trocado de R$10.000 pra R$15.000 (Karol confirmou o preço). Publicado e conferido.
+
+## 2026-11-13 — Capas de contraste semana 15
+Concluídas e verificadas nesta worktree: `docs/producao-conteudo/karol/posts/contrastes-semana15-13a15nov/README.md` reúne arquivos, fontes e QA. Somente três linhas Capa alteradas no roteiro. Sem commit/push; executor externo fará a integração.

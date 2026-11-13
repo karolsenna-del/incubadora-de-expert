@@ -1318,3 +1318,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** vale R$15.000 (Karol).
 **Racional:** alinhar tudo ao preço vigente.
 **Impacto:** card da Central corrigido.
+
+## 2026-11-13 — Foto das capas de contraste
+**Contexto:** duas imagens indicadas ausentes de origin/master; alternativas rastreadas duplicadas.
+**Decisão:** usar a foto autorizada existente em três composições e enquadramentos distintos.
+**Racional:** preservar foto real da Karol, reprodução local e escopo solicitado.
+**Impacto:** substituições e validação documentadas no README das capas; nenhum commit/push nesta execução.
