@@ -795,3 +795,6 @@ Retomar com: `/expert-companion`
 
 ## 2026-11-13 — Capas de contraste semana 15
 Concluídas e verificadas nesta worktree: `docs/producao-conteudo/karol/posts/contrastes-semana15-13a15nov/README.md` reúne arquivos, fontes e QA. Somente três linhas Capa alteradas no roteiro. Sem commit/push; executor externo fará a integração.
+
+## 2026-11-13 — Revisão fotográfica das capas de contraste
+Três capas refeitas com os seis JPEGs Pexels obrigatórios em `docs/producao-conteudo/karol/posts/contrastes-semana15-13a15nov/`. Preview, gerador, manifesto, README e créditos atualizados; dimensões/RGB, py_compile e miniaturas conferidos. Seis URLs confirmadas por hash idêntico. Roteiro preservado. Somente worktree isolada; sem commit/push, integração pelo executor.

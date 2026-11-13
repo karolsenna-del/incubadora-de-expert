@@ -2,7 +2,6 @@
   {
     "arquivo": "capa-sex-13-11.png",
     "headline": "QUEM ESPERA TER PÚBLICO X QUEM VENDE SEM AUDIÊNCIA",
-    "conceito": "Auditório vazio versus conversa direta e acordo individual.",
     "apoio": "",
     "uso": "SEX 13/11 · 20H",
     "dimensoes": [
@@ -10,13 +9,66 @@
       1350
     ],
     "modo": "RGB",
-    "area_visual_percentual": 51.1,
-    "fonte_visual": "Ilustração autoral desenhada no gerador; sem foto, rede ou API."
+    "area_paineis_fotograficos_percentual": 57.04,
+    "tratamento": "Fotos locais, sem distorção; retratos com corte mínimo; paisagens em quadrado com fundo da mesma foto desfocado e escurecido. Texto separado das fotos.",
+    "fotos": [
+      {
+        "pexels_id": 30143692,
+        "url": "https://www.pexels.com/photo/30143692/",
+        "credito": "Anna",
+        "descricao": "Mulher sozinha no auditório vazio.",
+        "licenca": "Pexels — https://www.pexels.com/license/",
+        "origem": "Arquivo local fornecido pela Karol; identificação visual confrontada com miniatura Pexels",
+        "url_imagem": "https://images.pexels.com/photos/30143692/pexels-photo-30143692.jpeg?auto=compress&cs=tinysrgb&w=1400",
+        "validacao_url": "Download público w=1400 comparado ao arquivo local: SHA-256 idêntico em 13/11/2026.",
+        "arquivo": "assets-fotos/01-espera-publico.jpg",
+        "lado": "esquerda",
+        "sha256": "c284c1c2b5e2a651333a11167abc1a3d0fb83edd231ce817ede30a7744045365"
+      },
+      {
+        "pexels_id": 7643738,
+        "url": "https://www.pexels.com/photo/7643738/",
+        "credito": "MART PRODUCTION",
+        "descricao": "Duas pessoas fechando uma conversa com aperto de mãos.",
+        "licenca": "Pexels — https://www.pexels.com/license/",
+        "origem": "Identificação visual confirmada com miniatura Pexels do mesmo quadro.",
+        "url_imagem": "https://images.pexels.com/photos/7643738/pexels-photo-7643738.jpeg?auto=compress&cs=tinysrgb&w=1400",
+        "validacao_url": "Download público w=1400 comparado ao arquivo local: SHA-256 idêntico em 13/11/2026.",
+        "arquivo": "assets-fotos/02-venda-direta.jpg",
+        "lado": "direita",
+        "sha256": "088b83eec55df6691f8973b56699c32bb0df90a6220104e559f74bc3e30da674"
+      }
+    ],
+    "caixas_headline": [
+      [
+        48,
+        162,
+        491,
+        211
+      ],
+      [
+        48,
+        235,
+        454,
+        287
+      ],
+      [
+        578,
+        162,
+        953,
+        206
+      ],
+      [
+        578,
+        235,
+        1024,
+        282
+      ]
+    ]
   },
   {
     "arquivo": "capa-sab-14-11.png",
     "headline": "SERVIDOR QUE ESPERA X SERVIDOR QUE CONSTRÓI",
-    "conceito": "Relógio e espera institucional versus maquete de projeto próprio.",
     "apoio": "",
     "uso": "SÁB 14/11 · 20H",
     "dimensoes": [
@@ -24,13 +76,66 @@
       1350
     ],
     "modo": "RGB",
-    "area_visual_percentual": 51.1,
-    "fonte_visual": "Ilustração autoral desenhada no gerador; sem foto, rede ou API."
+    "area_paineis_fotograficos_percentual": 57.04,
+    "tratamento": "Fotos locais, sem distorção; retratos com corte mínimo; paisagens em quadrado com fundo da mesma foto desfocado e escurecido. Texto separado das fotos.",
+    "fotos": [
+      {
+        "pexels_id": 9668811,
+        "url": "https://www.pexels.com/photo/9668811/",
+        "credito": "Livia Covaliov",
+        "descricao": "Pessoa sentada em postura de espera, diante de uma janela.",
+        "licenca": "Pexels — https://www.pexels.com/license/",
+        "origem": "Identificação visual confirmada com miniatura Pexels do mesmo quadro; crédito da série Pexels.",
+        "url_imagem": "https://images.pexels.com/photos/9668811/pexels-photo-9668811.jpeg?auto=compress&cs=tinysrgb&w=1400",
+        "validacao_url": "Download público w=1400 comparado ao arquivo local: SHA-256 idêntico em 13/11/2026.",
+        "arquivo": "assets-fotos/03-espera-rotina.jpg",
+        "lado": "esquerda",
+        "sha256": "2b474f78531ff60d30aa8a17a69cab31d9453b442664917e5c108c617631ad12"
+      },
+      {
+        "pexels_id": 3756681,
+        "url": "https://www.pexels.com/photo/3756681/",
+        "credito": "Andrea Piacquadio",
+        "descricao": "Mulher trabalhando em projeto no laptop.",
+        "licenca": "Pexels — https://www.pexels.com/license/",
+        "origem": "Arquivo local fornecido pela Karol; identificação visual confrontada com miniatura Pexels",
+        "url_imagem": "https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=1400",
+        "validacao_url": "Download público w=1400 comparado ao arquivo local: SHA-256 idêntico em 13/11/2026.",
+        "arquivo": "assets-fotos/04-construcao-propria.jpg",
+        "lado": "direita",
+        "sha256": "3f6c5b23b63990ebbe1e847257369d3e53ee7ba1d89ce0bb65a88f908498b4db"
+      }
+    ],
+    "caixas_headline": [
+      [
+        48,
+        162,
+        406,
+        209
+      ],
+      [
+        48,
+        235,
+        486,
+        290
+      ],
+      [
+        578,
+        162,
+        884,
+        203
+      ],
+      [
+        578,
+        235,
+        1029,
+        293
+      ]
+    ]
   },
   {
     "arquivo": "capa-dom-15-11.png",
     "headline": "QUEM ACUMULA CONTEÚDO X QUEM COLOCA EM ORDEM PARA VENDER",
-    "conceito": "Pilhas de notas soltas versus sete etapas conectadas até a venda.",
     "apoio": "AS 7 LISTAS DA SEMANA",
     "uso": "DOM 15/11 · 20H",
     "dimensoes": [
@@ -38,7 +143,67 @@
       1350
     ],
     "modo": "RGB",
-    "area_visual_percentual": 51.1,
-    "fonte_visual": "Ilustração autoral desenhada no gerador; sem foto, rede ou API."
+    "area_paineis_fotograficos_percentual": 57.04,
+    "tratamento": "Fotos locais, sem distorção; retratos com corte mínimo; paisagens em quadrado com fundo da mesma foto desfocado e escurecido. Texto separado das fotos.",
+    "fotos": [
+      {
+        "pexels_id": 5185086,
+        "url": "https://www.pexels.com/photo/5185086/",
+        "credito": "cottonbro studio",
+        "descricao": "Mãos de uma pessoa entre papéis e conteúdo acumulado; original sem rosto.",
+        "licenca": "Pexels — https://www.pexels.com/license/",
+        "origem": "Arquivo local fornecido pela Karol; identificação visual confrontada com miniatura Pexels",
+        "url_imagem": "https://images.pexels.com/photos/5185086/pexels-photo-5185086.jpeg?auto=compress&cs=tinysrgb&w=1400",
+        "validacao_url": "Download público w=1400 comparado ao arquivo local: SHA-256 idêntico em 13/11/2026.",
+        "arquivo": "assets-fotos/05-conteudo-caotico.jpg",
+        "lado": "esquerda",
+        "sha256": "a1d375c15af7c7141ee64daee937a83eed8801662339ffcae852a7e712d40457"
+      },
+      {
+        "pexels_id": 6592666,
+        "url": "https://www.pexels.com/photo/6592666/",
+        "credito": "Mikhail Nilov",
+        "descricao": "Mulher organizando post-its em um planejamento.",
+        "licenca": "Pexels — https://www.pexels.com/license/",
+        "origem": "Arquivo local fornecido pela Karol; identificação visual confrontada com miniatura Pexels",
+        "url_imagem": "https://images.pexels.com/photos/6592666/pexels-photo-6592666.jpeg?auto=compress&cs=tinysrgb&w=1400",
+        "validacao_url": "Download público w=1400 comparado ao arquivo local: SHA-256 idêntico em 13/11/2026.",
+        "arquivo": "assets-fotos/06-organizacao-venda.jpg",
+        "lado": "direita",
+        "sha256": "c9e355c94a1b03b00e464be24503ba196fc96c1ce7e0b9422c567b2e702dd020"
+      }
+    ],
+    "caixas_headline": [
+      [
+        48,
+        162,
+        491,
+        205
+      ],
+      [
+        48,
+        235,
+        349,
+        281
+      ],
+      [
+        578,
+        162,
+        1031,
+        211
+      ],
+      [
+        578,
+        235,
+        917,
+        277
+      ],
+      [
+        578,
+        308,
+        1012,
+        348
+      ]
+    ]
   }
 ]
