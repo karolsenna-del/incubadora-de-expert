@@ -25,7 +25,7 @@ jobs:
           BASE    = "https://graph.facebook.com/v21.0"
 
           SLIDES = [
-            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1794200745/instagram-carrosseis/rota100k-s15-dom-7-listas-da-semana/slide-01.png",
+            "https://res.cloudinary.com/drvy4cz5x/image/upload/v1794626862/instagram-carrosseis/rota100k-s15-dom-7-listas-da-semana/slide-01.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1794200746/instagram-carrosseis/rota100k-s15-dom-7-listas-da-semana/slide-02.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1794200748/instagram-carrosseis/rota100k-s15-dom-7-listas-da-semana/slide-03.png",
             "https://res.cloudinary.com/drvy4cz5x/image/upload/v1794200750/instagram-carrosseis/rota100k-s15-dom-7-listas-da-semana/slide-04.png",
