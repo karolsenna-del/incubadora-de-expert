@@ -1,0 +1,30 @@
+name: Substituir capas semana 15 (temporário)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: substituir-capas-semana15
+  cancel-in-progress: false
+jobs:
+  substituir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Testar operação sem API
+        run: |
+          python -m unittest discover -s .github/scripts/tests -p 'test_substituir_capas_semana15.py'
+          python -m py_compile .github/scripts/substituir_capas_semana15.py
+          git diff --check
+      - name: Substituir e verificar somente as capas aprovadas
+        env:
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+        run: python .github/scripts/substituir_capas_semana15.py
