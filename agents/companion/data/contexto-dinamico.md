@@ -798,3 +798,6 @@ Concluídas e verificadas nesta worktree: `docs/producao-conteudo/karol/posts/co
 
 ## 2026-11-13 — Revisão fotográfica das capas de contraste
 Três capas refeitas com os seis JPEGs Pexels obrigatórios em `docs/producao-conteudo/karol/posts/contrastes-semana15-13a15nov/`. Preview, gerador, manifesto, README e créditos atualizados; dimensões/RGB, py_compile e miniaturas conferidos. Seis URLs confirmadas por hash idêntico. Roteiro preservado. Somente worktree isolada; sem commit/push, integração pelo executor.
+
+## 15/11/2026 — Incidente técnico de Stories
+Pipeline corrigido em worktree isolada: reserva remota antes de publicar, persistência limitada e recibos de IDs. Testes Python verdes; execução histórica do slug de 29/10 recuperada (run 40925465617). Nenhuma chamada à Meta ou workflow disparado. Registro: docs/incidentes/2026-11-15-instagram-stories-pipeline.md.
