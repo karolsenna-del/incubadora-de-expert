@@ -1,0 +1,65 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s16-ter-armadilha-e-defesa",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "FÓRMULA PRONTA NUNCA COMBINOU COM VOCÊ?\n<strong>5 ARMADILHAS NA HORA DE ESCOLHER UM CURSO OU MENTORIA</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">E a pergunta que te protege de cada uma.</span>",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Nenhuma delas é golpe. <strong>É técnica de venda.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">E funciona justamente com quem está inseguro e com medo de ficar pra trás. Reconhecer essas frases não te deixa desconfiado de tudo. Te deixa escolhendo melhor.</span>",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>\"Você vai faturar R$10 mil em 30 dias.\"</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\"><b>Por que pega:</b> quem está começando quer um número pra se agarrar. <b>O problema:</b> o resultado depende do seu nicho, do seu tempo e de onde você está partindo, não só do curso. <b>Pergunta antes de comprar:</b> \"o que precisa acontecer do meu lado pra isso dar certo?\" Se a resposta for \"é só seguir o passo a passo\", desconfia.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>\"Só hoje. Amanhã o preço sobe.\"</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\"><b>Por que pega:</b> o medo de perder a chance fala mais alto que a dúvida. <b>O que fazer:</b> pede 24 horas pra pensar. Se a oferta for boa de verdade, ela continua boa amanhã. Se a pressão aumenta quando você pede tempo, a pressa era a técnica.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>A lista de bônus é maior que o curso.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\"><b>Por que pega:</b> a lista enorme dá a sensação de que você está levando muito. <b>O que fazer:</b> tira os bônus da conta e pergunta \"esse curso, sozinho, resolve o que eu preciso?\" Se a resposta for não, você está comprando volume, não solução.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>O depoimento só mostra o faturamento.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\"><b>Por que pega:</b> número alto impressiona. <b>O que falta:</b> de onde essa pessoa saiu. Quem já tinha muitos seguidores ou anos de mercado não começou do seu ponto. <b>Pede:</b> um caso de alguém que começou parecido com você, com rotina e público do seu tamanho.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "5",
+   "texto": "<strong>\"Funciona pra qualquer nicho.\"</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\"><b>Por que pega:</b> você não precisa pensar se serve pra você. <b>O problema:</b> o que funciona pra quem vende pra empresário pode não funcionar pra quem vende pra mãe de bebê. <b>Pergunta:</b> \"como isso se adapta a quem compra de mim?\" Se ninguém te perguntou nada sobre o seu cliente, a fórmula não foi feita pra você.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Se recusarem colocar por escrito o que te prometeram, <strong>você já tem a resposta.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Salva pra consultar antes de fechar. E manda pra quem está com o cartão na mão essa semana.</span>",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  }
+ ]
+}

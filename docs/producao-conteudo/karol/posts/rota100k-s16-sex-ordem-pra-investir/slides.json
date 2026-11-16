@@ -1,0 +1,50 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s16-sex-ordem-pra-investir",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "GASTOU E NÃO VENDEU?\n<strong>A ORDEM CERTA PRA INVESTIR NO COMEÇO DO DIGITAL</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Do essencial ao supérfluo.</span>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>Tempo pra conversar com quem pode comprar de você</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Vale todo. É daí que sai a primeira venda.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>Clareza de quem compra e do que você entrega</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Persona e promessa vêm antes de qualquer gasto.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Gravar o curso inteiro</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Depois de vender. Antes, não vale.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>Tráfego pago</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Depois de validar. Antes, você paga pra descobrir que não estava pronto.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "5",
+   "texto": "<strong>Câmera e equipamento</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">O celular grava. Fica pra depois.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "6",
+   "texto": "<strong>Logo e identidade visual</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Depois da primeira venda.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "",
+   "texto": "Se só puder fazer três, <strong>faz os três primeiros.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Salva e segue a ordem. Manda pra quem está montando o orçamento.</span>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  }
+ ]
+}

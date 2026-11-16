@@ -1,0 +1,50 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s16-dom-criterios-da-semana",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "\"QUERIA COMEÇAR COM SEGURANÇA.\"\n<strong>6 DECISÕES QUE VOCÊ VAI TOMAR ATÉ 31/12. E A PERGUNTA QUE TE PROTEGE EM CADA UMA.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Pra quem tem anos de experiência e não quer gastar de novo sem ver resultado.</span>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>Antes de comprar mais um curso na Black</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\"><b>Pergunta:</b> o que vai estar pronto no fim que hoje não está? Se a resposta é \"vou saber mais\", é o \"preciso estudar mais\" cobrando de novo. Não sabe responder? Não compra.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>Antes de fechar com uma mentoria</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\"><b>Pergunta:</b> o que você me prometeu, você coloca por escrito? Promessa falada some na hora que você trava. Hesitou pra escrever? Você já tem a resposta.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Antes de escolher entre duas propostas</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\"><b>Pergunta:</b> por quanto tempo alguém me acompanha, e quem? Acesso às aulas não é acompanhamento. A mais barata com você sozinho costuma sair mais cara.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>Antes de deixar pra janeiro</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\"><b>Pergunta:</b> o que eu faço em 1 hora nesta semana? \"Ainda não é o momento\" vira mais um ano. Exemplo de 1 hora: escrever em uma frase quem compra de você.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "5",
+   "texto": "<strong>Antes de gastar o primeiro real</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\"><b>Pergunta:</b> isso me deixa mais perto de conversar com quem pode comprar? Logo, câmera, tráfego e curso gravado antes da primeira venda é gasto. Conversa e clareza vêm primeiro.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "6",
+   "texto": "<strong>Antes de apagar o vídeo que achou amador</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\"><b>Pergunta:</b> a primeira frase fala com quem compra de você? Se fala, não está amador: publica. Se não fala, regrava só a primeira frase, não o vídeo inteiro.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "",
+   "texto": "Segurança não vem de saber mais.\n<strong>Vem de perguntar antes de decidir.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Salva e abre antes de cada decisão até o fim do ano. Manda pra quem está com uma delas na mão.</span>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  }
+ ]
+}

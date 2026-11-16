@@ -1,0 +1,64 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s16-qui-calendario-ate-31-12",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "VOCÊ ACHA QUE AINDA NÃO É O MOMENTO DE CRIAR O SEU MÉTODO?\n<strong>O PLANO PRA CRIAR E VENDER ATÉ 31/12</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Pra quem tem anos de experiência e pouco tempo livre. Uma tarefa por semana.</span>",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>Escreve em uma frase quem compra de você.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Semana de 23/11</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>Escreve em uma frase a transformação que você entrega.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Semana de 30/11</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Lista 10 pessoas que já te pediram ajuda no que você sabe.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Semana de 07/12</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>Conversa com 3 delas e pergunta o que mais trava.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Semana de 14/12</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "5",
+   "texto": "<strong>Escreve a sua oferta em uma frase: o que entrega, pra quem e por quanto.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Semana de 21/12</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "6",
+   "texto": "<strong>Oferece pra quem te contou essa trava na conversa.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Semana de 28/12</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Fecha o ano com <strong>a primeira venda do seu método.</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Salva e consulta toda segunda. Manda pra quem diz que ainda não é o momento.</span>",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  }
+ ]
+}
