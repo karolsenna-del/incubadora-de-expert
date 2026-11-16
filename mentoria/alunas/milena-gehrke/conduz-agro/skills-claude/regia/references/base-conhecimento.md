@@ -290,3 +290,85 @@ Não resolver na ordem em que as pendências aparecem nos documentos. Primeiro o
 Não existe regra fixa do tipo "titularidade sempre primeiro": existe lógica de dependência. Exemplo: matrícula com divergência → CCIR divergente → CAR sobreposto → produtor precisa de crédito: primeiro entender a origem da divergência na matrícula e no imóvel. Em outro caso, a pendência ambiental pode ser justamente o que impede o crédito e passa a ser a prioridade.
 
 Pergunta: **"Qual pendência, se eu não resolver agora, impede ou compromete a próxima etapa?"** Montar a **cadeia de dependências** (o que vem primeiro, o que depende disso, o que pode ficar para depois). O objetivo não é zerar pendências: é resolver na ordem certa para chegar ao objetivo do produtor sem retrabalho.
+
+---
+
+## 11. Leitura inteligente e interpretação de matrículas (função prioritária, pedido da Milena em nov/2026)
+
+> A Milena considera esta a função prioritária da REGIA: reduzir o tempo de leitura documental, organizar informação complexa e mostrar o que passaria despercebido. A leitura da matrícula nunca fica isolada: o que for extraído alimenta o cruzamento com CCIR, ITR, CAR e georreferenciamento e compõe o diagnóstico integrado do imóvel.
+
+### 11.1 Leitura e resumo da matrícula
+
+Ao receber uma matrícula digitalizada ou em PDF:
+- ler e interpretar o documento inteiro;
+- identificar número da matrícula, Registro de Imóveis, descrição e localização do imóvel;
+- identificar a área total registrada;
+- apresentar um resumo organizado do histórico registral;
+- listar registros (R.) e averbações (AV.) em ordem cronológica;
+- destacar alterações de titularidade, transmissões, desmembramentos, remembramentos e retificações.
+
+### 11.2 Proprietários e frações de área
+
+Identificar todos os proprietários que constam na matrícula e organizar:
+- nome completo de cada um;
+- percentual de participação;
+- fração ideal de cada titular;
+- área correspondente à participação, quando calculável;
+- existência de copropriedade ou condomínio;
+- usufruto e nua-propriedade;
+- alterações de titularidade por compra e venda, inventário, partilha ou doação.
+
+Apresentar um quadro-resumo:
+
+| Proprietário | Fração/participação | Área equivalente |
+|---|---|---|
+| Proprietário A | 50% | 25 ha |
+| Proprietário B | 30% | 15 ha |
+| Proprietário C | 20% | 10 ha |
+
+(Exemplo ilustrativo.)
+
+Distinguir fração ideal de parcela fisicamente individualizada: nunca atribuir localização específica a uma fração quando isso não estiver individualizado no registro (ver 10.8: ter 1/3 do imóvel não é ser dono de uma área física de 1/3).
+
+### 11.3 Penhoras, ônus e restrições
+
+Verificar e destacar: penhoras; hipotecas; alienação fiduciária; indisponibilidade de bens; arrestos e sequestros; usufruto; servidões; outros gravames, restrições e direitos registrados ou averbados.
+
+Para cada ocorrência, apresentar:
+- tipo de restrição;
+- número do registro ou averbação (R./AV.);
+- data do ato;
+- partes envolvidas, quando identificáveis;
+- objeto e alcance da restrição;
+- informação de cancelamento ou baixa, se houver.
+
+### 11.4 Pontos de atenção
+
+Sinalizar o que merece investigação:
+- matrícula com vários proprietários;
+- frações ideais que precisam ser compreendidas;
+- alterações de titularidade ainda não esclarecidas;
+- inventários ou partilhas;
+- divergência entre a área descrita e a área informada em outros documentos;
+- penhoras e outros gravames;
+- matrículas antigas com descrição insuficiente;
+- possíveis inconsistências na cadeia dominial.
+
+### 11.5 Resultado da análise (entrega, nesta ordem)
+
+1. Resumo geral da matrícula
+2. Identificação do imóvel e sua área
+3. Quadro de proprietários e participações
+4. Quadro de registros e averbações relevantes
+5. Penhoras, ônus e restrições identificadas
+6. Pontos de atenção e possíveis inconsistências
+7. Informações que precisam ser confirmadas
+8. Próximos passos recomendados para a investigação documental
+
+**Importante:** avisar quando não conseguir interpretar algum trecho, quando houver páginas ausentes ou ilegíveis e quando a informação depender de confirmação no Registro de Imóveis. Nunca presumir que não há ônus só porque nenhum apareceu no documento recebido.
+
+### 11.6 Perguntas frequentes desta função
+
+- "REGIA, leia esta matrícula e faça um resumo da situação registral do imóvel."
+- "Identifique todos os proprietários, suas frações ideais e a área equivalente de cada um."
+- "Verifique se existem penhoras, hipotecas, usufruto, indisponibilidades ou outros gravames nesta matrícula."

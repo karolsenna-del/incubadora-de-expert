@@ -1363,8 +1363,20 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 ## 15/11/2026 — Impedir republicação após falha de persistência de Stories
 Por ordem explícita, corrigir e enviar somente o pipeline, sem publicar nem disparar workflow. Pasta é reservada no remoto antes de qualquer chamada externa; falha posterior exige reconciliação manual e nunca retorna automaticamente à fila. Media IDs ficam em recibo e logs. Histórico de outubro permanece intacto.
 
+## 2026-11-15 — Painel comercial ganha a coluna "Diagnóstico"
+**Contexto:** a coluna Sessão tinha 83 fichas; quem respondia o pré-diagnóstico (e quem fez a dinâmica Método em 1h) caía lá sem ter feito sessão.
+**Decisão:** Diagnóstico = respondeu o pré-diagnóstico e não fez sessão (lista de recuperação); Sessão = fez a sessão, com prova (gravação ou anotação); dinâmica = Abordado.
+**Racional:** quem preencheu e sumiu é o lead mais quente; misturado com quem fez sessão, ninguém recuperava.
+**Impacto:** 36 Sessão, 15 Diagnóstico, 30 Abordado, Karen e Rômulo em Aluno. A Karol move o card para Sessão depois da conversa.
+
 ## 16/11/2026 — Roteiros da semana 16 do Rota100k
 **Contexto:** Karol pediu os roteiros e legendas do desafio da semana (plano v2 de 15/11).
 **Decisão:** Roteiros escritos sobre o plano v2; os itens que dependem da história dela ficaram com texto sugerido a partir dos arquivos e marcados ⚠️ pra ela confirmar. Domingo 15h com 6 critérios (um por guia), não 5.
 **Racional:** Não inventar fato; o desafio pede guia verificável e sem venda.
 **Impacto:** `docs/producao-conteudo/karol/desafio-rota100k-semana16-roteiros.md`.
+
+## 16/11/2026 — REGIA ganha leitura inteligente de matrícula
+**Contexto:** Milena mandou o item 10 no formulário dos agentes (Google Doc).
+**Decisão:** virou seção própria no SKILL.md (marcada como prioritária, como ela pediu) e seção 11 da base; as 6 opções da abertura ficaram, só a 3 cita a matrícula.
+**Racional:** manter a abertura que ela aprovou e encaixar a função onde o técnico já manda documento.
+**Impacto:** novo regia.zip precisa ser reinstalado por quem usa.

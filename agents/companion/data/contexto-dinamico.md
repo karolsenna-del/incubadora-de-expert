@@ -20,6 +20,9 @@ Variaveis:
 ## Roteiros e legendas da semana 16 do Rota100k prontos (16/11)
 Squad Conteúdo (Rico) escreveu os roteiros e legendas da semana: 42 posts do desafio + 7 legendas de foto (07h, 08h30, 09h, 12h, 15h guia, 17h, 22h; o carrossel das 20h já estava agendado): `docs/producao-conteudo/karol/desafio-rota100k-semana16-roteiros.md`, com cópia aberta no Bloco de Notas (`~/roteiros-semana16-rota100k.txt`). Revisado pelo Codex: 13 correções aplicadas (fatos sem fonte retirados, agência = proposta já existia ao sair, valores 497/50 mil como propostas diferentes). Esperando a Karol: as 7 fotos e os ⚠️ da lista final (ter 12h, qua 09h/12h, qui 12h, sex 07h/12h, sáb 07h/12h, dom 12h). Acesso ao vivo da Arcane encerrado: squad rodou pela versão local.
 
+## REGIA atualizada com a leitura de matrícula (16/11)
+Item 10 do formulário da Milena (leitura inteligente de matrícula: resumo, quadro de proprietários/frações/área, R./AV., ônus, pontos de atenção, entrega em 8 partes) entrou na REGIA: seção nova no SKILL.md (função prioritária) + seção 11 da base de conhecimento. Zip refeito em mentoria/alunas/milena-gehrke/conduz-agro/skills-claude/regia.zip (cópia em ~/Downloads/regia.zip) e substituído na pasta das skills no Drive em 16/11 (antigo na lixeira). Falta: cada uma reenviar a skill no Claude (Personalizar > Skills), substituindo a antiga.
+
 ## Cortes da Live 31 agendados no Opus Clip (15/11)
 18 cortes editados do projeto "Live 31" (https://clip.opus.pro/clip/P3111117WQKz) agendados pelo agendamento em massa do Opus Clip: 1 por dia às 10h (horário de Cuiabá), de 16/11 a 03/12, em YouTube, TikTok e Instagram, na ordem da nota do Opus, com a legenda gerada pelo próprio Opus (escolha da Karol). Conferido no calendário do Opus: 18 dias com as 3 redes. Os outros 16 cortes do projeto (não editados) ficaram de fora.
 
