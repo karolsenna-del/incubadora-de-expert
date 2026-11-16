@@ -62,6 +62,7 @@
 
 > Mais recente primeiro.
 
+- 15/11 — @companion: weekly — projeto PARADO (Karol): novembro é comercial, M3 A10-A13 sem prazo novo.
 - 01/11 — @companion: weekly — prazo de 06/11 das aulas M3 A10-A13 adiado (novembro = comercial primeiro); nova data: 15/11 (Karol, 01/11).
 - 30/10 — @companion: Karol prorrogou o prazo das aulas M3 A9-A13 (gravar, editar e publicar) de 31/10 pra sexta 06/11.
 - 30/10 — @companion: M4 ajustado à v2 do Agente da Autoridade Tríplice — roteiro A3/A4 (bullets e prosa, v3.1), M4.1 (relatório em 5 partes), M4.2 vira registro da frase-tese e da bio (sai o prompt das 5 opções), M4.5 Pinned 2, cabeçalho do prompt do M4.6, estrutura-modulos e descrições da A3/A4 (descricoes.md e descricoes-aulas.js, sem deploy). Espelhado no Drive (Materiais/M4 e Roteiros).

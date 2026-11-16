@@ -4,6 +4,12 @@
 
 <!-- Formato:
 
+## 15/11/2026 — Weekly: Expert360º parado e contrato do Sprint em R$5.000
+**Contexto:** weekly review atrasada 14 dias; prazo das aulas M3 A10-A13 vencia hoje.
+**Decisao:** Expert360º fica parado em novembro (sem prazo novo). Stories de 02/11 e 09/11 que não saíram foram descartadas. Contrato modelo do Sprint passa a R$5.000 (ou 12x R$500), 8 semanas, com funil.
+**Racional:** novembro é comercial; Stories atrasadas ficariam incoerentes; contrato estava com preço e prazo antigos.
+**Impacto:** cockpit e contrato atualizados; próximo review 22/11.
+
 ## 07/11/2026 — VIP da Juliana: persona = médicos integrativos (substitui "pediatra primeiro")
 **Contexto:** diagnóstico do VIP abriu a persona pra "médicos de diferentes especialidades"; a primeira versão do E1 recomendava pediatra primeiro.
 **Decisão:** Karol leva como sugestão pra discutir com a Juliana no E1 (não substitui as respostas dela): especificar médicos integrativos (de qualquer especialidade). O app deve mostrar: pedidos de exame, base hormonal, acompanhamento e ajuste de prescrição; leitura dos exames por parâmetros integrativos (diferentes das referências do laboratório); exames correlacionados por doença em gráfico; lembretes e facilidades pro paciente não desistir do tratamento.
