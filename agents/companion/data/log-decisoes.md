@@ -4,6 +4,24 @@
 
 <!-- Formato:
 
+## 16/11/2026 — Sprint promete 50 leads garimpados
+**Contexto:** apresentação do Sprint; persona da Iza (mães) não aparece em busca por bio.
+**Decisão:** o Sprint promete o Rastreador com os conhecidos + 50 leads garimpados. O garimpo começa depois da persona definida (Semana 2) e é entregue semanas depois. Os conhecidos continuam sendo a primeira leva de abordagem.
+**Racional:** entrega concreta que pesa na decisão; o garimpo só é melhorado (ler quem comenta) se a venda acontecer.
+**Impacto:** apresentação ajustada (Semana 2, funil passo 01, O que você recebe); pendência no backlog.
+
+## 16/11/2026 — Continuação do Sprint = posicionamento e conteúdo (não validação)
+**Contexto:** apresentação do Sprint dizia que validar vendas reais era a continuação.
+**Decisão:** o Sprint entrega o funil pra validar as vendas; a continuação é posicionamento de autoridade e ajuda com criação de conteúdo.
+**Racional:** o Funil de Vendas Secretas montado já é a ferramenta da validação.
+**Impacto:** apresentação do Sprint ajustada (slides 6 e 13). A página de vendas do Sprint ainda diz o contrário ("validar vendas reais... existe a continuação").
+
+## 16/11/2026 — Sessão da Iza Fachinelli: VIP ou Sprint pelo acesso à Arcane
+**Contexto:** Iza é aluna da Arcane; o acesso da Karol acabou na semana anterior e o dela pode estar no fim.
+**Decisão:** na sessão, perguntar até quando vai o acesso dela à Arcane. Acabando → Sprint do Método; ativo → Método VIP. Express fica fora pra ela.
+**Racional:** com a Arcane ativa ela tem ferramentas pra executar e precisa de direção (VIP); sem ela, precisa de alguém construindo (Sprint). A regra de qual oferta corresponde a cada resposta foi suposição do Claude, a confirmar.
+**Impacto:** roteiro `sessoes-estrategicas/izabella-fachinelli-sessao.md` ajustado.
+
 ## 15/11/2026 — Weekly: Expert360º parado e contrato do Sprint em R$5.000
 **Contexto:** weekly review atrasada 14 dias; prazo das aulas M3 A10-A13 vencia hoje.
 **Decisao:** Expert360º fica parado em novembro (sem prazo novo). Stories de 02/11 e 09/11 que não saíram foram descartadas. Contrato modelo do Sprint passa a R$5.000 (ou 12x R$500), 8 semanas, com funil.
@@ -1380,3 +1398,9 @@ Por ordem explícita, corrigir e enviar somente o pipeline, sem publicar nem dis
 **Decisão:** virou seção própria no SKILL.md (marcada como prioritária, como ela pediu) e seção 11 da base; as 6 opções da abertura ficaram, só a 3 cita a matrícula.
 **Racional:** manter a abertura que ela aprovou e encaixar a função onde o técnico já manda documento.
 **Impacto:** novo regia.zip precisa ser reinstalado por quem usa.
+
+## 16/11/2026 — Agentes da Expert-IAs se apresentam avisando que é só texto
+**Contexto:** os agentes saíram do Drive/ChatGPT pra Expert-IAs; o chat não lê imagem, não recebe arquivo e não abre link (nem do Instagram). Ia virar uma aula nova nas Orientações.
+**Decisão:** o aviso entra na instrução comum dos 10 agentes, na primeira mensagem (colar o texto; guardar o resultado no Drive porque a conversa fica só no navegador). Se funcionar, não grava aula nova.
+**Racional:** o aluno lê o aviso na hora que precisa, sem a Karol gravar.
+**Impacto:** `api/chat-agente.js` (NOTA_PLATAFORMA); roteiro "Seus agentes de IA" fica de reserva.

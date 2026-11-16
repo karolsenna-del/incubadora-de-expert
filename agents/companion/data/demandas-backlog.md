@@ -52,6 +52,8 @@
 
 ## Importante (proximo foco)
 
+- **Garimpeiro — modo "quem comenta nos posts do cliente" (só se a Karol vender o Sprint com os 50 leads, decisão 16/11).** Hoje o garimpo lê bio (busca) e lista de seguidores (300/dia); não lê comentários. Pra persona de mães (Iza Fachinelli, ~32 mil seguidores), o caminho é: últimos 20-30 posts → comentaristas únicos → filtro da persona → Rastreador como "Seguidores engajados". Começa depois da Semana 2 (persona pronta); 50 leads entregues semanas depois. Cuidado com o 429 do Instagram.
+
 - **Garimpeiro — testar o filtro "sem botão de mensagem" em 22/10 (combinado 21/10).** Perfil aberto com DM bloqueada não dá pra abordar e não aparece na página pública. Teste: abrir pela referenciasgpt (logado, só olhar, sem clicar) a @ppamelareisvargas (Karol vê os posts, mas não tem botão de mensagem) e um perfil que tem o botão. Se a referenciasgpt enxergar igual à Karol → ligar "sem botão de mensagem = descarte" na fase 3 do `logado.mjs aprofundar` e reconferir os 7 leads de 19/10 sem revisão. Em 21/10 a conta levou 429 → não testar antes de 22/10. Ver Mission Log do Garimpeiro #13.
 
 - **LEMBRAR APOS A BLACK EXPERT (15/10+): ligar a LP do grupo de lives ao CRM (achado 28/09, Gestor de Infra Arcane).** A LP `business/campanhas/lives-semanais/lp-grupo-live/` grava cadastros so na tabela `leads_live_expert360` (Supabase) — nunca entram em `crm_leads`. Em 28/09: 14 cadastros (9 nos ultimos 7 dias), 12 fora de qualquer tabela do CRM. Pra Black foram puxados manualmente pra lista de e-mail/WhatsApp. Fix: `api/lead.js` tambem cria/atualiza lead no CRM (`origem='lp_grupo_lives'`, dedup por e-mail/telefone). Karol pediu pro Companion relembrar depois do foco na Black.

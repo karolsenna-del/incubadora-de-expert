@@ -17,6 +17,9 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Sessão da Iza Fachinelli pronta (16/11)
+Pré-diagnóstico de 05/11 gravado no Diagnóstico do Expert (visabellafachinelli@gmail.com). Roteiro em `business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/izabella-fachinelli-sessao.md`, usando também a conversa de 29/07 (Meet): ela gravou curso/ebook em vez de abrir a comunidade recomendada e ainda não vendeu. Hipóteses: perfil Conectora com traço Diretivo, marido convidado pro fim. Oferta (Karol, 16/11): VIP ou Sprint, decidida pela pergunta do acesso à Arcane (acabando → Sprint; ativo → VIP); Express fora. Depois da sessão: mover a ficha no painel Comercial. Apresentação do Sprint criada (16/11): `business/campanhas/sprint-do-metodo/apresentacao-oferta-sprint.html`, 13 slides no visual da Express/VIP, com slide de ferramentas (direção, controle e organização pro mentor e aluno + 1 por módulo do método), quem sou (13 anos tradicional x 6 anos no digital) e o Funil de Vendas Secretas em 9 peças com onboarding; botão pro checkout da página (conferido 16/11: R$5.000 ou 12x R$500; o /16365 também). Card "Diagnóstico do Expert (Radar)" adicionado na Central (Comercial > CRM e leads); publicado pela Karol em 16/11 (dpl_HW1wg5ENVCbYv3W6ueSGmhbbcNw1) e conferido no ar.
+
 ## Roteiros e legendas da semana 16 do Rota100k prontos (16/11)
 Squad Conteúdo (Rico) escreveu os roteiros e legendas da semana: 42 posts do desafio + 7 legendas de foto (07h, 08h30, 09h, 12h, 15h guia, 17h, 22h; o carrossel das 20h já estava agendado): `docs/producao-conteudo/karol/desafio-rota100k-semana16-roteiros.md`, com cópia aberta no Bloco de Notas (`~/roteiros-semana16-rota100k.txt`). Revisado pelo Codex: 13 correções aplicadas (fatos sem fonte retirados, agência = proposta já existia ao sair, valores 497/50 mil como propostas diferentes). Esperando a Karol: as 7 fotos e os ⚠️ da lista final (ter 12h, qua 09h/12h, qui 12h, sex 07h/12h, sáb 07h/12h, dom 12h). Acesso ao vivo da Arcane encerrado: squad rodou pela versão local.
 
@@ -833,3 +836,8 @@ Três capas refeitas com os seis JPEGs Pexels obrigatórios em `docs/producao-co
 Pipeline corrigido em worktree isolada: reserva remota antes de publicar, persistência limitada e recibos de IDs. Testes Python verdes; execução histórica do slug de 29/10 recuperada (run 40925465617). Nenhuma chamada à Meta ou workflow disparado. Registro: docs/incidentes/2026-11-15-instagram-stories-pipeline.md.
 
 - 15/11/2026 — Painel comercial: coluna Diagnóstico criada e as 83 fichas de Sessão separadas com a Karol (36 Sessão, 15 Diagnóstico, 30 Abordado, 2 Aluno). Banco e painel no ar (publicado 15/11). Salvar e entregar no GitHub pendente de pedido.
+
+## 16/11/2026 — Expert360º: nova aula de orientações "Seus agentes de IA"
+- Roteiro escrito em business/campanhas/expert360-curso/roteiros/modulo-orientacoes-roteiros.md (3ª aula do Módulo de Orientações), aguardando aprovação da Karol. Motivo: agentes agora ficam na aba Expert-IAs da área de membros, não no Drive.
+- 16/11: em vez da aula, o aviso foi pra instrução dos agentes (testado). Falta a Karol publicar a área de membros (`! cd business/campanhas/area-de-membros/site && vercel deploy --prod --yes`) e conferir 1 conversa.
+- 16/11: Karol pediu aula substituindo a "Antes de Começar" gravada (falava da Biblioteca de IAs no Drive). Roteiro v3.0 escrito (grupo, pré-diagnóstico, Drive, Expert-IAs); a aula extra "Seus agentes de IA" saiu. Falta aprovação, regravar, trocar youtube_id e descrição na área de membros.
