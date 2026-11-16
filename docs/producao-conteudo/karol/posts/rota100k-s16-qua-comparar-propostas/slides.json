@@ -1,0 +1,52 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s16-qua-comparar-propostas",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "MEDO DE ESCOLHER ERRADO?\n<strong>5 PONTOS PRA COMPARAR EM QUALQUER PROPOSTA</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Compara isso, não o valor final.</span>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>O que fica pronto no fim</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Proposta A: ________<br>Proposta B: ________</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>Por quanto tempo você tem acompanhamento</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Acesso às aulas não é acompanhamento.<br>A: ________ · B: ________</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Quem te atende</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">A pessoa que vende ou outra equipe?<br>A: ________ · B: ________</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>O formato</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Ao vivo, gravado, individual ou em grupo?<br>A: ________ · B: ________</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "5",
+   "texto": "<strong>O que acontece se você atrasar</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Dá pra repor? Tem prazo?<br>A: ________ · B: ________</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "",
+   "texto": "Faltou um desses na proposta? <strong>Pede antes de decidir.</strong>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Salva e usa na próxima proposta. Manda pra quem está pedindo orçamento agora.",
+   "modifiers": [
+    "sem-numero"
+   ]
+  }
+ ]
+}

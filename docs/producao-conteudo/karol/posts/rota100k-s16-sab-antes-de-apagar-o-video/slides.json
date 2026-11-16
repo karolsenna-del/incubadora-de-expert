@@ -1,0 +1,65 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s16-sab-antes-de-apagar-o-video",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "ANTES DE APAGAR SEU VÍDEO ACHANDO QUE FICOU AMADOR\n<strong>O CHECKLIST</strong>",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>A primeira frase fala com quem compra de você</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">E não com todo mundo.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>Dá pra entender sem som</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">A frase principal está escrita na tela.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Tem uma ideia só</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Se tem três, são três vídeos.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>O final diz o que fazer</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Seguir, comentar ou salvar.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "5",
+   "texto": "<strong>Dá pra ver o seu rosto</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Luz de frente, não atrás de você.</span>",
+   "modifiers": [
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Passou nos 5? <strong>Não está amador. Publica.</strong>\n\nFalhou em um? Regrava só esse pedaço.",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Salva e confere antes do próximo vídeo. Manda pra quem grava e apaga.",
+   "modifiers": [
+    "sem-numero",
+    "bg-branco"
+   ]
+  }
+ ]
+}

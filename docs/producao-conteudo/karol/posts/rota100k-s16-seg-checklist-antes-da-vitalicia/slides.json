@@ -1,0 +1,52 @@
+{
+ "template": "diagnostico-tipografico",
+ "name": "rota100k-s16-seg-checklist-antes-da-vitalicia",
+ "slides": [
+  {
+   "numero": "",
+   "texto": "ANTES DE COMPRAR MAIS UMA VITALÍCIA NA BLACK\n<strong>O CHECKLIST</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">5 perguntas. Se falhar em duas, repensa.</span>",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "1",
+   "texto": "<strong>Quantos cursos desse tema você já comprou?</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Se já tem três sobre o mesmo assunto, o quarto não vai resolver o que os outros não resolveram.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "2",
+   "texto": "<strong>Você precisa desse curso agora, ou está comprando porque a oferta é boa?</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Desconto bom em curso que você não precisa continua sendo gasto.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "3",
+   "texto": "<strong>Quantos dos cursos que você já comprou você terminou?</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Vitalício não adianta nada se você nunca chega na última aula.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "4",
+   "texto": "<strong>Tem espaço na sua agenda pra fazer esse curso nos próximos 30 dias?</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Se não tem, ele vai pra gaveta junto com os outros.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "5",
+   "texto": "<strong>O que você vai fazer diferente depois de terminar?</strong>\n\n<span style=\"display:block;font-size:0.72em;line-height:1.4\">Se não sabe responder, você está comprando a sensação de estar se preparando.</span>",
+   "modifiers": []
+  },
+  {
+   "numero": "",
+   "texto": "Travou em duas? <strong>Não compra.</strong>\n\nVitalício também é o tempo que ele pode ficar parado.",
+   "modifiers": [
+    "sem-numero"
+   ]
+  },
+  {
+   "numero": "",
+   "texto": "Salva antes da próxima compra. E manda pra quem está com o carrinho cheio.",
+   "modifiers": [
+    "sem-numero"
+   ]
+  }
+ ]
+}
