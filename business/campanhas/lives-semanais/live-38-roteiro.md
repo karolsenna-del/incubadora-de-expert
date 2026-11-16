@@ -280,7 +280,7 @@ Nos dois casos, o primeiro passo é o mesmo: escreve **MENTORIA** aqui no chat q
 - [x] Revisão do quiz pelo Codex (15/11): aplicados nome do método, "atende ou orienta" (inclui CLT e servidor), "resolver o problema das pessoas" e o 3º nível como "quase pronta" (11 de 15 ainda pode ter um ponto zerado). Não aplicados: confirmação do envio à planilha e validação mais rígida do WhatsApp (mesmo modelo da Live 37, testado e em uso)
 - [x] Quiz NO AR (15/11, ordem da Karol): https://grupo.incubadoradeexpert.com.br/quiz-live-38.html (conferido)
 - [ ] Depois da live, mandar no grupo o link do quiz pra quem escrever MENTORIA
-- [ ] Deck (outro squad, @live-deck-builder)
+- [x] Deck montado (15/11, @live-deck-builder, 30 slides): https://claude.ai/artifact/8kYM3EL1xQY6w3ZnnN1v9V · local `live-38-apresentacao.html`. Aguardando aprovação da Karol
 - [ ] NÃO falar preço; bônus de 24h só no WhatsApp
 - [ ] NÃO citar a Black nem o caso agosto → setembro
 - [ ] Link do Meet no grupo das lives
@@ -307,3 +307,4 @@ Nos dois casos, o primeiro passo é o mesmo: escreve **MENTORIA** aqui no chat q
 - 15/11 — @expert-em-lives: v2 com as respostas da Karol: data 18/11 15h, CTA MENTORIA → quiz, 5 afirmações aprovadas, Google Forms completado (dava resultado; subiu por imagem/high ticket e porque IA tem que estar no método), Sessão 2 aprova o método e Sessão 3 monta a mentoria. Tema da LP do grupo no ar.
 - 15/11 — @expert-em-lives: quiz da Live 38 montado no modelo da 37 e testado no celular; tema novo da LP do grupo publicado e conferido no ar.
 - 15/11 — @expert-em-lives: quiz publicado e conferido no ar; LP do grupo com letra maior, botão verde mais escuro, contador com texto preto e respiro lateral (ordem da Karol).
+- 15/11 — @live-deck-builder: deck de 30 slides com o fio condutor das 3 perguntas, publicado pra aprovação.
