@@ -35,12 +35,33 @@ Juliana fechou o Método VIP (30/10). Sessão de venda: trecho de oferta/preço 
 - (fraco) 42:54-43:17 bônus físico vende na oferta
 - C 17:14-17:35 Auroq faz tudo, as pessoas travam, nada finaliza (curto; corta antes de apresentar o serviço)
 
+## Parte 2 (1:00-fim) e escolha final (11/11)
+- T 1:36:48-1:37:09 "grande erro de criar método é colocar tudo que você sabe; ninguém quer; a gente quer atalho; depende da persona" (Karol tela cheia → rosto). Corta antes de "tudo que a Juliana sabe".
+- P 1:21:57-1:22:23 "maior risco do empresário é ter IA e querer atender o mundo" + "erro primeiro pra vocês não errarem": nota 7.8, mas a tela é slide do Método VIP (oferta) e logo depois cita a Black → fora.
+- L (MBA em vendas): quadro mostra a Juliana falando em 46:35 → fala pode ser dela → fora.
+- Notas (score_clip): G 8.4, T 8.4, E 8.15, A 7.75, D 7.6, B 7.4 | fora: C 6.4, M 6.35.
+- Medium por corte: agents/clip-expert/data/transcripts/diogo-juliana-{G,T,E,A,D,B}-medium.txt (tempos absolutos → offset 0).
+- Cortes: G 1961.5-1979.9 | T 5807.9-5829.3 | E 1239.5-1289.5 | A 793.28-841.0 | D 1157.16-1209.5 | B 1111.54-1144.4
+
+- 11/11: medium da 1ª vez saiu lixo (bug: -to virava duração; corrigido pra -t). 2ª rodada: G, A, D ok; E veio sem o começo
+  (refazer); T alucinou (refazer, talvez sem VAD); B parado pelo sistema por falta de RAM (havia outro ffmpeg de ~780 MB rodando).
+  Não reiniciar sem ok da Karol.
+
 ## Checklist
 - [x] Baixar vídeo (raw.mp4)
 - [x] Mapear layout (quem está em tela, quando tem tela compartilhada)
-- [ ] Transcrever (faster-whisper small pra garimpar) → agents/clip-expert/data/transcripts/diogo-juliana-2026-10-29-small.txt
-- [ ] Pontuar trechos (nota mín 7.0, foco na fala da Karol)
-- [ ] Retranscrever os escolhidos com medium (legenda precisa)
-- [ ] Montar cortes (montar-corte-rosto.py; tela compartilhada com headline no centro)
-- [ ] Conferir frames
+- [x] Transcrever (faster-whisper small pra garimpar) → agents/clip-expert/data/transcripts/diogo-juliana-2026-10-29-small.txt
+  - parte 1 (0-1:00:46) ok; 1ª rodada morreu por falta de RAM. 11/11: Karol deu ok, ChatGPT/Edge fechados (5,9 GB livres),
+    parte 2 (3640s-fim) rodando → diogo-juliana-2026-10-29-small-p2.txt
+- [x] Pontuar trechos (nota mín 7.0, foco na fala da Karol)
+- [x] Retranscrever os escolhidos com medium (legenda precisa)
+- [x] Montar cortes (montar-corte-rosto.py; tela compartilhada com headline no centro)
+- [x] Conferir frames
 - [ ] Entregar pra revisão da Karol
+
+## Entrega (11/11)
+6 cortes nesta pasta + legendas.md. Tela recortada a partir de y=318 (tira o card com @ do Diogo e faturamento).
+Medium falhou em T e no começo de E/B → legenda desses veio do small, revisada à mão.
+Atenção: em alguns segundos a janelinha troca pro rosto da Juliana quando ela fala (ex.: corte-04 ~0:20).
+Aguardando aprovação da Karol. Nada na fila do Postador.
+- 12/11: Karol pediu pra separar o corte 04 em dois. 04a = personas (12:28-13:35 com jump cut, sem o início 11:59 porque a tela mostrava nome/e-mail); 04b = ser expert não é pra todo mundo (13:35-14:35). Antigo corte-04 movido pra mapa/.
