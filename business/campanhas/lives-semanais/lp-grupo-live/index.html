@@ -43,8 +43,8 @@
       --cinza-700: #3F3F46;
       --laranja: #FF6B1A;
       --laranja-escuro: #E85A0D;
-      --verde: #25D366;
-      --verde-escuro: #1DA851;
+      --verde: #117A3E;
+      --verde-escuro: #0D6633;
       --display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --texto: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
@@ -94,11 +94,11 @@
       cursor: pointer;
       width: 100%;
       transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+      box-shadow: 0 8px 24px rgba(17, 122, 62, 0.35);
     }
     .cta:hover { background: var(--verde-escuro); transform: translateY(-2px); }
     .cta:disabled { opacity: .7; cursor: wait; transform: none; }
-    .cta-micro { display: block; margin-top: 8px; font-size: 0.72rem; color: var(--cinza-500); text-align: center; }
+    .cta-micro { display: block; margin-top: 8px; font-size: 0.8rem; color: var(--cinza-500); text-align: center; }
 
     /* ===== HERO ===== */
     .hero { background: var(--preto); color: var(--branco); padding: 20px 0 24px; }
@@ -110,7 +110,7 @@
       align-items: center;
       gap: 6px;
       font-family: var(--display);
-      font-size: 0.62rem;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -149,7 +149,7 @@
       border-left: 3px solid var(--laranja);
       border-radius: 0 10px 10px 0;
       padding: 8px 12px;
-      font-size: 0.76rem;
+      font-size: 0.82rem;
       color: var(--cinza-300);
       margin-bottom: 14px;
     }
@@ -164,7 +164,7 @@
       box-shadow: 0 20px 50px rgba(0,0,0,0.35);
     }
     .form-card h3 { font-size: 0.92rem; margin-bottom: 2px; }
-    .form-card .form-sub { font-size: 0.76rem; color: var(--cinza-500); margin-bottom: 12px; }
+    .form-card .form-sub { font-size: 0.82rem; color: var(--cinza-500); margin-bottom: 12px; }
     .campo { margin-bottom: 8px; }
     .campo input {
       width: 100%;
@@ -207,14 +207,14 @@
     .vsl iframe, .vsl video { width: 100%; height: 100%; border: 0; }
 
     /* ===== CONTADOR ===== */
-    .barra-contador { background: var(--laranja); color: var(--branco); }
+    .barra-contador { background: var(--laranja); color: var(--preto); }
     .contador-wrap {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 24px;
       flex-wrap: wrap;
-      padding: 20px 0;
+      padding: 20px 16px;
       text-align: center;
     }
     .contador-label {
@@ -226,13 +226,13 @@
     }
     .contador-blocos { display: flex; gap: 12px; }
     .bloco-tempo {
-      background: rgba(0,0,0,0.15);
+      background: rgba(255,255,255,0.3);
       border-radius: 10px;
       padding: 8px 14px;
       min-width: 64px;
     }
     .bloco-tempo .num { font-family: var(--display); font-size: 1.4rem; font-weight: 800; display: block; }
-    .bloco-tempo .lbl { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; }
+    .bloco-tempo .lbl { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
 
     /* ===== O QUE É ===== */
     .oque-grid { display: grid; gap: 28px; align-items: center; }
@@ -266,9 +266,67 @@
     .sobre-texto strong { color: var(--branco); }
 
     /* ===== RODAPÉ ===== */
+    /* ===== MOVIMENTO LENTO (Karol, 15/11) ===== */
+    /* 1. Zoom lento nas imagens */
+    .laptop-mock { overflow: hidden; }
+    .laptop-mock img, .sobre-foto img { animation: zoomLento 18s ease-in-out infinite alternate; will-change: transform; }
+    @keyframes zoomLento { from { transform: scale(1); } to { transform: scale(1.08); } }
+
+    /* 2. Tema da semana surgindo palavra por palavra */
+    #temaSemana .palavra {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(10px);
+      filter: blur(4px);
+      animation: surgir .8s cubic-bezier(.2,.7,.2,1) forwards;
+    }
+    @keyframes surgir { to { opacity: 1; transform: none; filter: blur(0); } }
+
+    /* 3. Luz laranja passando devagar no fundo preto do topo */
+    .hero { position: relative; overflow: hidden; }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 70vmax; height: 70vmax;
+      left: -20vmax; top: -35vmax;
+      background: radial-gradient(circle, rgba(255,107,26,0.20) 0%, rgba(255,107,26,0) 60%);
+      animation: luzDeriva 22s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    .hero > .container { position: relative; z-index: 1; }
+    @keyframes luzDeriva {
+      0%   { transform: translate(0, 0); }
+      50%  { transform: translate(45vw, 18vmax); }
+      100% { transform: translate(10vw, 35vmax); }
+    }
+
+    /* 4. Reflexo de luz atravessando o botão de tempos em tempos */
+    .cta { position: relative; overflow: hidden; }
+    .cta::after {
+      content: "";
+      position: absolute;
+      top: 0; bottom: 0; left: -60%;
+      width: 40%;
+      background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 100%);
+      transform: skewX(-20deg);
+      animation: reflexo 5s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes reflexo { 0%, 70% { left: -60%; } 100% { left: 130%; } }
+    .cta:disabled::after { animation: none; }
+
+    /* 5. Números do contador virando com suavidade */
+    .bloco-tempo .num.vira { animation: virar .45s ease-out; }
+    @keyframes virar { from { opacity: 0; transform: translateY(-40%); } to { opacity: 1; transform: none; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .laptop-mock img, .sobre-foto img, .hero::before, .cta::after, .bloco-tempo .num.vira { animation: none; }
+      #temaSemana .palavra { animation: none; opacity: 1; transform: none; filter: none; }
+    }
+
     footer {
       background: var(--preto);
-      color: var(--cinza-500);
+      color: #A1A1AA;
       text-align: center;
       padding: 32px 24px;
       font-size: 0.78rem;
@@ -286,7 +344,7 @@
           <span class="kicker"><span class="dot"></span> Ao vivo · toda quarta-feira, às 15h (horário de Brasília)</span>
           <div class="logo-marca"><img src="logo-liveexpert360.png" alt="Live Expert360º" loading="lazy"></div>
 
-          <h1 class="reveal">Nesta quarta, às 15h de Brasília, aula ao vivo e gratuita: <span class="destaque" id="temaSemana">Dá tempo de fazer sua primeira venda ainda em 2026, mesmo que você não tenha nada estruturado hoje.</span></h1>
+          <h1 class="reveal">Nesta quarta, às 15h de Brasília, aula ao vivo e gratuita: <span class="destaque" id="temaSemana">Como transformar seu conhecimento em encontros de mentoria, mesmo que hoje esteja tudo na sua cabeça.</span></h1>
           <!-- Toda semana: trocar só o texto do span#temaSemana pelo título do roteiro mais recente (business/campanhas/lives-semanais/live-XX-roteiro.md) -->
           
 
@@ -414,11 +472,40 @@
       var horas = Math.floor(seg / 3600); seg -= horas * 3600;
       var min = Math.floor(seg / 60); seg -= min * 60;
 
-      document.getElementById('cDias').textContent = String(dias).padStart(2, '0');
-      document.getElementById('cHoras').textContent = String(horas).padStart(2, '0');
-      document.getElementById('cMin').textContent = String(min).padStart(2, '0');
-      document.getElementById('cSeg').textContent = String(seg).padStart(2, '0');
+      trocarNumero('cDias', dias);
+      trocarNumero('cHoras', horas);
+      trocarNumero('cMin', min);
+      trocarNumero('cSeg', seg);
     }
+
+    // Só anima o número que mudou
+    function trocarNumero(id, valor) {
+      var el = document.getElementById(id);
+      var novo = String(valor).padStart(2, '0');
+      if (el.textContent === novo) return;
+      el.textContent = novo;
+      el.classList.remove('vira');
+      void el.offsetWidth;
+      el.classList.add('vira');
+    }
+
+    // Tema da semana surgindo palavra por palavra (lê o texto do span, então a troca semanal continua igual)
+    (function () {
+      var tema = document.getElementById('temaSemana');
+      if (!tema) return;
+      var texto = tema.textContent.trim();
+      tema.setAttribute('aria-label', texto);
+      tema.textContent = '';
+      texto.split(/\s+/).forEach(function (p, i) {
+        var s = document.createElement('span');
+        s.className = 'palavra';
+        s.setAttribute('aria-hidden', 'true');
+        s.textContent = p;
+        s.style.animationDelay = (0.35 + i * 0.09) + 's';
+        tema.appendChild(s);
+        tema.appendChild(document.createTextNode(' '));
+      });
+    })();
     atualizarContador();
     setInterval(atualizarContador, 1000);
 

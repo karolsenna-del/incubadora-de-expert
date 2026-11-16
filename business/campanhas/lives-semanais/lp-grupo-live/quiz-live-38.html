@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Sua mentoria ainda está na sua cabeça? · Karol Senna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Layout: mesmo modelo dos quizzes das Lives 35, 36 e 37. Uma pergunta por vez num cartão central, barra de progresso
+     por ponto, resultado com termômetro e os 5 pontos da mentoria marcando onde trava. Visual da marca Incubadora (preto, branco,
+     cinza, laranja), look único e claro de propósito: as cores são definidas explicitamente e não seguem o tema do visitante. */
+  :root{
+    --laranja:#f85627;
+    --laranja-suave:#fde3da;
+    --preto:#090a0b;
+    --branco:#fcfcfc;
+    --cinza:#ddddde;
+    --cinza-texto:#5c5d60;
+    --display:'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box;}
+  html,body{min-height:100%;}
+  body{margin:0; background:var(--branco); color:var(--preto); font-family:var(--body); font-size:16px; line-height:1.55;
+       padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px));}
+  .wrap{max-width:680px; margin:0 auto; padding-block:40px 56px; display:flex; flex-direction:column; gap:28px;}
+  .brand{font-family:var(--display); font-weight:700; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--cinza-texto);}
+  .brand b{color:var(--laranja);}
+  h1{font-family:var(--display); font-weight:800; font-size:clamp(1.8rem,5.5vw,2.6rem); line-height:1.1; margin:0; text-wrap:balance;}
+  h1 em{font-style:normal; color:var(--laranja);}
+  h2{font-family:var(--display); font-weight:700; font-size:clamp(1.3rem,4vw,1.7rem); line-height:1.25; margin:0; text-wrap:balance;}
+  h3{font-family:var(--display); font-weight:700; font-size:1.05rem; line-height:1.3; margin:0;}
+  p{margin:0;}
+  .lead{font-size:1.06rem; color:var(--cinza-texto); max-width:58ch;}
+  .card{background:#fff; border:1px solid var(--cinza); border-radius:18px; padding:28px 24px; display:flex; flex-direction:column; gap:20px;}
+  .meta{display:flex; justify-content:space-between; align-items:baseline; gap:12px; font-size:.82rem; color:var(--cinza-texto); font-variant-numeric:tabular-nums;}
+  .chip{font-family:var(--display); font-weight:700; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--laranja);}
+  .bar{height:6px; background:var(--cinza); border-radius:6px; overflow:hidden;}
+  .bar span{display:block; height:100%; background:var(--laranja); width:0; transition:width .3s ease;}
+  .hint{font-size:.92rem; color:var(--cinza-texto);}
+  .opts{display:grid; grid-template-columns:repeat(3,1fr); gap:10px;}
+  .opt{font-family:var(--display); font-weight:700; font-size:1rem; padding:16px 10px; border-radius:12px; border:1.5px solid var(--preto); background:#fff; color:var(--preto); cursor:pointer; transition:background .15s, color .15s, border-color .15s;}
+  .opt:hover{background:var(--preto); color:#fff;}
+  .opt:focus-visible,.btn:focus-visible,.back:focus-visible{outline:3px solid var(--laranja); outline-offset:2px;}
+  .opt.sel{background:var(--laranja); border-color:var(--laranja); color:#fff;}
+  .back{align-self:flex-start; background:none; border:0; padding:4px 0; color:var(--cinza-texto); font-size:.9rem; cursor:pointer; font-family:var(--body);}
+  .back[disabled]{visibility:hidden;}
+  .btn{display:inline-flex; justify-content:center; align-items:center; gap:8px; font-family:var(--display); font-weight:700; font-size:1.02rem; padding:16px 22px; border-radius:12px; border:0; background:var(--laranja); color:#fff; cursor:pointer; text-decoration:none; text-align:center;}
+  .btn.ghost{background:transparent; color:#fff; border:1.5px solid #fff;}
+  /* régua dos 5 pontos na abertura */
+  .weeks{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:6px;}
+  .weeks div{border-top:4px solid var(--laranja); padding-top:6px; display:flex; flex-direction:column; gap:2px; min-width:0;}
+  .weeks b{font-family:var(--display); font-weight:800; font-size:1.1rem; line-height:1;}
+  .weeks span{font-size:.72rem; color:var(--cinza-texto); line-height:1.2; overflow-wrap:anywhere;}
+  /* resultado */
+  .gauge{display:grid; grid-template-columns:repeat(3,1fr); gap:6px;}
+  .gauge div{padding:12px 6px; border-radius:10px; background:var(--cinza); text-align:center; font-family:var(--display); font-weight:700; font-size:.9rem; color:var(--cinza-texto);}
+  .gauge div.on{background:var(--preto); color:#fff;}
+  .gauge div.on.top{background:var(--laranja);}
+  .score{font-family:var(--display); font-weight:800; font-size:clamp(2.6rem,9vw,3.6rem); line-height:1; color:var(--laranja); font-variant-numeric:tabular-nums;}
+  .score small{font-size:.4em; color:var(--cinza-texto); font-weight:600;}
+  .blocks{display:flex; flex-direction:column; gap:12px;}
+  .blk{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 12px; align-items:center;}
+  .blk .nm{font-size:.92rem; font-weight:600;}
+  .blk .vl{font-size:.85rem; color:var(--cinza-texto); font-variant-numeric:tabular-nums;}
+  .blk .bar{grid-column:1 / -1; height:5px;}
+  /* plano */
+  .plan{display:flex; flex-direction:column; gap:0;}
+  .wk{display:grid; grid-template-columns:44px minmax(0,1fr); gap:14px; padding:16px 0; border-top:1px solid var(--cinza);}
+  .wk:first-child{border-top:0; padding-top:4px;}
+  .wk .n{font-family:var(--display); font-weight:800; font-size:2rem; line-height:1; color:var(--laranja);}
+  .wk .when{font-size:.75rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--cinza-texto); font-variant-numeric:tabular-nums;}
+  .wk .tag{display:inline-block; margin-left:6px; padding:1px 8px; border-radius:999px; background:var(--laranja-suave); color:var(--laranja); font-size:.7rem; letter-spacing:.04em; vertical-align:1px;}
+  .wk p{font-size:.93rem; color:var(--cinza-texto); margin-top:4px;}
+  .wk p b{color:var(--preto); font-weight:600;}
+  .wk .ex{margin-top:8px; padding:10px 12px; background:var(--branco); border-radius:10px; font-size:.88rem;}
+  .wk .ex b{color:var(--laranja);}
+  .cta-box{background:var(--preto); color:#fff; border-radius:18px; padding:28px 24px; display:flex; flex-direction:column; gap:16px;}
+  .cta-box .lead{color:#c9cacc;}
+  .foot{font-size:.8rem; color:var(--cinza-texto); text-align:center;}
+  [hidden]{display:none !important;}
+  @media (max-width:420px){ .opts{grid-template-columns:1fr;} .card,.cta-box{padding:22px 18px;} .weeks span{display:none;} }
+  @media (prefers-reduced-motion:reduce){ .bar span,.opt{transition:none;} }
+  .field{display:flex; flex-direction:column; gap:6px;}
+  .field label{font-weight:600; font-size:.95rem;}
+  .field input{font:inherit; font-size:1.05rem; padding:14px 14px; border:1.5px solid var(--preto); border-radius:12px; background:#fff; color:var(--preto);}
+  .field input:focus-visible{outline:3px solid var(--laranja); outline-offset:1px;}
+  .err{color:#b3261e; font-size:.9rem;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="brand">Incubadora de Expert · <b>Expert360º</b></div>
+
+  <!-- INÍCIO -->
+  <section id="intro" class="card">
+    <span class="chip">Material da Live 38</span>
+    <h1>Sua mentoria ainda está <em>na sua cabeça</em>?</h1>
+    <p class="lead">Mentoria não é o seu conteúdo dividido em aulas. É uma transformação dividida em encontros. Responda 15 perguntas com sinceridade: sim, não ou não sei. No fim você vê em qual dos 5 pontos a sua mentoria trava hoje. Leva uns 3 minutos.</p>
+    <div class="weeks" aria-label="Os 5 pontos">
+      <div><b>1</b><span>Caminho</span></div>
+      <div><b>2</b><span>Ordem</span></div>
+      <div><b>3</b><span>Transformação</span></div>
+      <div><b>4</b><span>Entrega</span></div>
+      <div><b>5</b><span>Venda</span></div>
+    </div>
+    <button class="btn" id="start" type="button">Começar</button>
+  </section>
+
+  <!-- PERGUNTA -->
+  <section id="quiz" class="card" hidden>
+    <div class="meta"><span class="chip" id="qblock"></span><span id="qcount"></span></div>
+    <div class="bar" aria-hidden="true"><span id="qbar"></span></div>
+    <h2 id="qtext"></h2>
+    <p class="hint" id="qhint"></p>
+    <div class="opts" role="group" aria-label="Respostas">
+      <button class="opt" type="button" data-v="sim">Sim</button>
+      <button class="opt" type="button" data-v="nao">Não</button>
+      <button class="opt" type="button" data-v="naosei">Não sei</button>
+    </div>
+    <button class="back" id="back" type="button">← Voltar</button>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="lead" class="card" hidden>
+    <span class="chip">Último passo</span>
+    <h2>Deixa seu nome e WhatsApp pra ver o seu resultado</h2>
+    <p class="lead">O resultado aparece logo em seguida, aqui na tela. Eu posso te chamar no WhatsApp pra conversar sobre ele.</p>
+    <form id="leadform" novalidate style="display:flex; flex-direction:column; gap:16px;">
+      <div class="field"><label for="nome">Seu nome</label><input id="nome" name="nome" autocomplete="name" required></div>
+      <div class="field"><label for="whats">Seu WhatsApp com DDD</label><input id="whats" name="whats" type="tel" inputmode="tel" autocomplete="tel" placeholder="(65) 99999-9999" required></div>
+      <p class="err" id="leaderr" hidden></p>
+      <button class="btn" type="submit" id="leadbtn">Ver o meu resultado</button>
+      <p class="hint">Seus dados ficam só com a Karol e não são compartilhados com ninguém.</p>
+    </form>
+    <button class="back" id="back2" type="button">← Voltar pra última pergunta</button>
+  </section>
+
+  <!-- RESULTADO -->
+  <section id="result" hidden>
+    <div class="card">
+      <span class="chip">O seu resultado</span>
+      <div class="score" id="rscore"></div>
+      <div class="gauge" aria-hidden="true"><div id="g1">Na cabeça</div><div id="g2">Ganhando forma</div><div id="g3">Quase pronta</div></div>
+      <h2 id="rtitle"></h2>
+      <p class="lead" id="rtext"></p>
+      <div class="blocks" id="rblocks"></div>
+      <p class="hint" id="rweak"></p>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <span class="chip">Os 5 pontos da sua mentoria</span>
+      <h2>O que a sua mentoria precisa ter</h2>
+      <p class="hint">Os pontos marcados com "trava aqui" são os que você respondeu com não ou não sei.</p>
+      <div class="plan" id="rplan"></div>
+    </div>
+
+    <div class="cta-box" style="margin-top:20px;">
+      <h2>Quer tirar a sua mentoria da cabeça com alguém do seu lado?</h2>
+      <p class="lead">Na Incubadora Express o que você viveu vira um método com o seu nome, com os encontros desenhados, comigo e com uma IA em cada etapa, até a sua primeira Venda Secreta.</p>
+      <p class="lead">Responda o pré-diagnóstico. Com as suas respostas, eu te chamo pra uma sessão e a gente vê em qual ponto a sua mentoria trava e o que falta pra vender.</p>
+      <a class="btn" href="https://diagnostico.incubadoradeexpert.com.br" target="_blank" rel="noopener">Responder o pré-diagnóstico</a>
+      <button class="btn ghost" id="again" type="button">Refazer o quiz</button>
+    </div>
+  </section>
+
+  <p class="foot">Karol Senna · Incubadora de Expert</p>
+</div>
+
+<script>
+  // 5 pontos de uma mentoria que saiu da cabeça (Live 38). Mede o quanto a pessoa já tem; não ensina o como
+  // (regra da Karol, 10/11). Os exemplos (h) são do caso da própria Karol.
+  const P = [
+    {n:"O caminho", goal:"As etapas que levam a pessoa do problema ao resultado. O caminho que você já repete quando atende, com nome.",
+     deliver:"você lista as etapas sem improvisar.",
+     express:"o Agente do Processo Autoral monta o seu método com a sua história dentro, e eu aprovo com você na Revisão do Método."},
+    {n:"A ordem", goal:"Cada etapa no lugar certo, com uma razão. Quando a ordem tem lógica, a pessoa confia no caminho e você para de improvisar.",
+     deliver:"você sabe dizer por que cada encontro vem antes do próximo.",
+     express:"a ordem das etapas sai junto com o seu método e passa pela Revisão do Método comigo."},
+    {n:"A transformação", goal:"O que muda na pessoa em cada encontro. Não o que ela aprende: o que ela vira. É essa parte que ela compra.",
+     deliver:"você descreve onde a pessoa está no começo e onde ela chega no fim de cada etapa.",
+     express:"o seu método sai com o que a pessoa vira em cada etapa, pronto pra você usar na entrega e na venda."},
+    {n:"A entrega", goal:"Com o que a pessoa sai de cada encontro. O método é o mapa, as ferramentas são o equipamento: elas destravam o ponto em que o aluno ia parar.",
+     deliver:"cada encontro termina com algo concreto na mão.",
+     express:"o Agente do Portfólio Estratégico mapeia onde o seu aluno trava e qual ferramenta destrava cada ponto."},
+    {n:"A venda", goal:"Explicar a mentoria de um jeito que a pessoa se enxergue do outro lado, e oferecer antes de ter tudo pronto.",
+     deliver:"você responde \"como funciona a sua mentoria?\" com os encontros desenhados.",
+     express:"no Checkup da Oferta a gente monta a sua mentoria junto, e você sai da primeira sessão com a data da sua primeira Venda Secreta marcada."}
+  ];
+  const Q = [
+    {p:0, t:"Você consegue listar as etapas que levam o seu cliente do problema ao resultado?", h:"Ex.: no Expert360 são cinco: a história, a persona e a promessa, o método e as ferramentas, as primeiras vendas e o posicionamento."},
+    {p:0, t:"Você percebe que repete quase o mesmo caminho com cada pessoa que atende ou orienta?", h:"O caso muda. O caminho, não."},
+    {p:0, t:"O seu método já tem um nome próprio?", h:""},
+    {p:1, t:"Você sabe por que cada etapa vem antes da próxima?", h:"Ex.: não dá pra criar método sem saber pra quem. Não dá pra montar oferta sem método."},
+    {p:1, t:"Você sabe o que a pessoa precisa ter feito pra avançar pro próximo encontro?", h:""},
+    {p:1, t:"Se o cliente perguntar \"por que a gente está vendo isso agora?\", você tem a resposta?", h:""},
+    {p:2, t:"Você sabe dizer o que muda na pessoa ao fim de cada etapa: não o que ela aprende, mas o que ela vira?", h:"Ex.: do caos ao método. Da promessa à Venda Secreta."},
+    {p:2, t:"Você consegue descrever onde a pessoa está quando chega e onde está quando termina com você?", h:""},
+    {p:2, t:"Quando você fala da sua mentoria, fala mais da transformação do que do conteúdo?", h:"Conteúdo não vende. Transformação vende."},
+    {p:3, t:"Cada encontro termina com algo concreto na mão: um documento, uma decisão, um passo feito?", h:""},
+    {p:3, t:"Você sabe em que ponto os seus clientes costumam travar ou desistir?", h:""},
+    {p:3, t:"Você tem uma ferramenta pronta pra destravar esse ponto?", h:"Ex.: o método é o mapa, as ferramentas são o equipamento."},
+    {p:4, t:"Se alguém te perguntar hoje \"como funciona a sua mentoria?\", você responde sem improvisar?", h:"Ex.: um lead já me disse que o meu programa não tinha ficado claro. Depois que eu desenhei a jornada, ficou muito mais fácil de vender."},
+    {p:4, t:"Você sabe quantos encontros a sua mentoria tem, e por quê?", h:""},
+    {p:4, t:"Você já ofereceu a sua mentoria pra alguém, mesmo sem ter tudo pronto?", h:"Ex.: até agosto o meu diagnóstico era um Google Forms, e dava resultado."}
+  ];
+  const A = new Array(Q.length).fill(null);
+  let i = 0;
+  const $ = id => document.getElementById(id);
+
+  function show(id){ ['intro','quiz','lead','result'].forEach(s => $(s).hidden = (s !== id)); window.scrollTo(0,0); }
+
+  function render(){
+    const q = Q[i];
+    $('qblock').textContent = 'Ponto ' + (q.p + 1) + ' · ' + P[q.p].n;
+    $('qcount').textContent = (i+1) + ' de ' + Q.length;
+    $('qbar').style.width = Math.round((i / Q.length) * 100) + '%';
+    $('qtext').textContent = q.t;
+    $('qhint').textContent = q.h;
+    $('qhint').hidden = !q.h;
+    document.querySelectorAll('.opt').forEach(b => b.classList.toggle('sel', b.dataset.v === A[i]));
+    $('back').disabled = (i === 0);
+  }
+
+  function result(){
+    const total = A.filter(v => v === 'sim').length;
+    let lvl, title, text;
+    if (total <= 5){
+      lvl = 1; title = 'A sua mentoria ainda está na sua cabeça.';
+      text = 'Não é falta de conhecimento. Você sabe resolver o problema das pessoas. O que falta é desenhar o caminho que você já faz, e isso cabe numa folha. O resto se constrói com o primeiro aluno.';
+    } else if (total <= 10){
+      lvl = 2; title = 'A sua mentoria está ganhando forma.';
+      text = 'Você já tem parte do desenho. Os pontos marcados abaixo são onde a pessoa ainda não consegue se enxergar do outro lado.';
+    } else {
+      lvl = 3; title = 'A sua mentoria está quase pronta pra vender.';
+      text = 'A maior parte do caminho está desenhada. Olhe os pontos que ainda travam: é neles que a pessoa ainda não se enxerga do outro lado.';
+    }
+    $('rscore').innerHTML = total + ' <small>de ' + Q.length + ' com "sim"</small>';
+    ['g1','g2','g3'].forEach((g,k) => { $(g).classList.toggle('on', k+1 === lvl); $(g).classList.toggle('top', lvl === 3 && k === 2); });
+    $('rtitle').textContent = title;
+    $('rtext').textContent = text;
+
+    const box = $('rblocks'); box.innerHTML = '';
+    const plan = $('rplan'); plan.innerHTML = '';
+    const weak = [];
+    P.forEach((p, k) => {
+      const idx = Q.map((q,j) => q.p === k ? j : -1).filter(j => j >= 0);
+      const yes = idx.filter(j => A[j] === 'sim').length;
+      const stuck = yes < idx.length;
+      if (yes < 2) weak.push(p.n.toLowerCase());
+      const row = document.createElement('div'); row.className = 'blk';
+      row.innerHTML = '<span class="nm"></span><span class="vl"></span><div class="bar"><span></span></div>';
+      row.querySelector('.nm').textContent = (k+1) + '. ' + p.n;
+      row.querySelector('.vl').textContent = yes + ' de ' + idx.length;
+      row.querySelector('.bar span').style.width = Math.round(yes / idx.length * 100) + '%';
+      box.appendChild(row);
+
+      const wk = document.createElement('div'); wk.className = 'wk';
+      wk.innerHTML = '<div class="n">' + (k+1) + '</div><div>' +
+        '<div class="when">Ponto ' + (k+1) + (stuck ? '<span class="tag">trava aqui</span>' : '') + '</div>' +
+        '<h3>' + p.n + '</h3>' +
+        '<p>' + p.goal + '</p>' +
+        '<p><b>Está pronto quando</b> ' + p.deliver + '</p>' +
+        '<p class="ex"><b>Na Incubadora Express:</b> ' + p.express + '</p></div>';
+      plan.appendChild(wk);
+    });
+    $('rweak').textContent = weak.length ? 'Onde você mais trava: ' + weak.join(', ') + '.' : 'Nenhum ponto abaixo de 2 de 3. Agora é oferecer.';
+    show('result');
+  }
+
+  const WEBHOOK = "https://script.google.com/macros/s/AKfycbzB8nyZfjUx0vvJxutR8ihSA2MEAvhFI9FmTPiA43ly71p1TeWyMhDca73n74bzX4USUg/exec";
+  const ABA = "Live 38 - Mentoria";
+  const ROT = {sim:"Sim", nao:"Não", naosei:"Não sei"};
+  let enviado = false;
+
+  function campos(nome, whats){
+    const total = A.filter(v => v === "sim").length;
+    const nivel = total <= 5 ? "Na cabeça" : (total <= 10 ? "Ganhando forma" : "Quase pronta");
+    const c = {"Nome": nome, "WhatsApp": whats, "Origem": new URLSearchParams(location.search).get("o") || "link", "Resultado": total + " de " + Q.length, "Nível": nivel};
+    const trava = [];
+    P.forEach((p, k) => {
+      const idx = Q.map((q,j) => q.p === k ? j : -1).filter(j => j >= 0);
+      const yes = idx.filter(j => A[j] === "sim").length;
+      c["Ponto " + (k+1) + " · " + p.n] = yes + " de " + idx.length;
+      if (yes < idx.length) trava.push(k+1);
+    });
+    c["Trava nos pontos"] = trava.join(", ");
+    Q.forEach((q, j) => { c[(j+1) + ". " + q.t] = ROT[A[j]] || ""; });
+    return c;
+  }
+
+  $("leadform").addEventListener("submit", ev => {
+    ev.preventDefault();
+    const nome = $("nome").value.trim();
+    const whats = $("whats").value.trim();
+    const dig = whats.replace(/[^0-9]/g, "");
+    if (nome.length < 2){ $("leaderr").textContent = "Escreve o seu nome."; $("leaderr").hidden = false; return; }
+    if (dig.length < 10 || dig.length > 13){ $("leaderr").textContent = "Confere o WhatsApp: precisa do DDD e do número."; $("leaderr").hidden = false; return; }
+    $("leaderr").hidden = true;
+    if (!enviado && WEBHOOK.startsWith("https://")){
+      enviado = true;
+      try {
+        fetch(WEBHOOK, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify({aba: ABA, campos: campos(nome, whats)})}).catch(() => {});
+      } catch (e) {}
+    }
+    result();
+  });
+  $("back2").addEventListener("click", () => { i = Q.length - 1; show("quiz"); render(); });
+
+  document.querySelectorAll('.opt').forEach(b => b.addEventListener('click', () => {
+    A[i] = b.dataset.v;
+    if (i < Q.length - 1){ i++; render(); } else { show('lead'); }
+  }));
+  $('back').addEventListener('click', () => { if (i > 0){ i--; render(); } });
+  $('start').addEventListener('click', () => { i = 0; show('quiz'); render(); });
+  $('again').addEventListener('click', () => { A.fill(null); enviado = false; i = 0; show('quiz'); render(); });
+</script>
+</body>
+</html>

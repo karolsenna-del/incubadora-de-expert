@@ -1318,3 +1318,27 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** vale R$15.000 (Karol).
 **Racional:** alinhar tudo ao preço vigente.
 **Impacto:** card da Central corrigido.
+
+## 15/11/2026 — Rota100k S16: desafio inteiro + foto pessoal por dia
+**Contexto:** a análise da S15 mostrou que a foto com legenda pessoal (ISS, 971 views) rendeu quase 4 vezes os 6 carrosséis de contraste somados.
+**Decisão:** a Semana 16 segue os 49 posts do desafio e ganha 1 foto pessoal com legenda humanizada por dia (08h30, horário sugerido pela squad).
+**Racional:** cumprir o desafio e manter o formato pessoal que leva gente ao perfil.
+**Impacto:** 56 posts na semana; Karol escolhe as 7 fotos; carrossel volta a sair às 20h em ponto.
+
+## 15/11/2026 — Tema da Live 38
+**Contexto:** escolha do tema da live semanal depois da Live 37 (7 passos até a primeira venda).
+**Decisão:** Live 38 sobre a entrega da mentoria: "Como transformar seu conhecimento em encontros de mentoria, mesmo que hoje esteja tudo na sua cabeça".
+**Racional:** nenhuma live tratou da entrega; a trava "não sei o que fazer em cada encontro" faz a persona adiar a venda.
+**Impacto:** roteiro v1 pronto; CTA, material e 5 afirmações esperando a Karol.
+
+## 15/11/2026 — Carrossel de quinta (S16) promete criar e vender até 31/12
+**Contexto:** capa nova prometia venda, mas os passos terminavam em janeiro.
+**Decisão:** opção A: os passos terminam em oferecer pra quem contou a trava (semana de 28/12).
+**Racional:** a promessa da capa precisa ser cumprida dentro do carrossel.
+**Impacto:** fecho "Fecha o ano com a primeira venda do seu método."
+
+## 15/11/2026 — Capas de carrossel saem do modelo único
+**Contexto:** carrosséis com resultado ruim; todos usavam o mesmo modelo tipográfico.
+**Decisão:** a S16 alterna três capas: número gigante (stats-hero), logo + frase (capa-marca) e foto da Karol + frase (foto-frase). O miolo segue igual.
+**Racional:** pedido da Karol para variar, sem depender só do card estilo Twitter.
+**Impacto:** dá para comparar qual capa segura mais na análise da Aria da S16.

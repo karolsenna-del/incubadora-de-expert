@@ -213,6 +213,10 @@
 
 ## 13. Exonerada por telefone, de férias
 
+**Os 8 anos querendo sair (Karol, 15/11/2026):** 4 estudando pra outro concurso e 4 no digital errando muito, "nunca soltando a borda pra fazer dar certo" (liga com a #8, a missa). Nunca usar "eu achava que ainda não era o momento": ela estava sempre com um plano B, fazendo.
+
+**Frase que ela já ouviu (Karol, 15/11/2026):** "você deveria ensinar gestão".
+
 **Fatos (fonte: `Minhas histórias que convertem.md`):**
 - Já vinha conciliando havia anos a vontade de sair com a segurança do salário (ver #9)
 - **Estava de férias** quando recebeu um **telefonema da chefe avisando que seriam exoneradas**
@@ -241,6 +245,8 @@
 ---
 
 ## 15. A Faixa Preta avisou, e ela foi arrogante (ignorou o mentor)
+
+**Leitura da Karol (15/11/2026):** não teve resultado na mentoria de lançamento porque não estava pronta pra ser lançada e se lançou assim mesmo. É a atitude oposta de quem compra mil cursos pra se preparar (procrastinar por medo e trava). Deveria ter começado por outro caminho, com menos exposição.
 
 **Fatos (fonte: `Minhas histórias que convertem.md`, seção "Minha jornada no Digital"):**
 - 2021: entrou pro Insider do Érico Rocha com o irmão — **R$50k** (com desconto de R$57k), pagos com o valor de um terreno que o pai vendeu e doou
@@ -275,7 +281,8 @@
 - Como lançadora, fechou contrato com uma expert do nicho de doula/gestantes, **170 mil seguidores**, 5 lançamentos, **mais de R$200 mil faturados**
 - A expert morava na **Austrália** e veio de férias pro Brasil por **45 dias** — **simplesmente não postou quase nada** nesse período — **não venderam nada**
 - Reação da Karol: "fiquei muito brava com isso, entendi que meu negócio, meu faturamento estava na mão de outra pessoa. Eu não era mais concursada, não tinha outra renda"
-- Pouco depois, mesmo criando um novo curso (área perinatal) que vendeu bem, a expert **rescindiu o contrato do dia pra noite** — faturamento zerado outra vez
+- Pouco depois, mesmo criando um novo curso (área perinatal) que vendeu bem, a expert **rescindiu o contrato do dia pra noite**
+- **Correção da Karol (15/11/2026):** ela nunca ficou zerada com essa expert; os resultados foram diminuindo. Não usar "não vendemos nada" nem "faturamento zerado".
 
 **Leitura da squad:** prova concreta e datada da tese "depender do faturamento de outra pessoa é trocar um patrão por outro" — mais forte que a versão resumida porque tem o detalhe visceral (45 dias parados por causa da agenda de férias de outra pessoa).
 
@@ -539,7 +546,9 @@
 - Ela desenhou a jornada dentro da Incubadora, e "realmente ficou mais fácil de entender e vender".
 - Ela nunca se preocupou com julgamento de família ou conhecidos ao vender (não usar "medo do julgamento" como caso dela).
 
-**Status:** disponível. Detalhes ainda não confirmados (quando foi, como era a jornada antes e depois, venda que veio depois): perguntar antes de usar.
+- Ela desenhou a jornada **depois** desse lead (Karol, 15/11).
+
+**Status:** usada na Live 38 (15/11). Detalhes ainda não confirmados (quando foi, como era a jornada antes e depois, venda que veio depois): perguntar antes de usar.
 
 ---
 

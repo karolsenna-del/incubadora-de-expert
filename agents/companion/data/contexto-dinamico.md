@@ -17,6 +17,15 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Carrosséis das 20h da semana 16 prontos (15/11)
+Capas trocadas (15/11, resultado ruim de carrossel): seg e sex em stats-hero (número gigante), qua e sáb em capa-marca (logo + frase), ter/qui/dom em foto-frase (fotos Minhas fotos/2, Minhas-fotos-4/18, Minhas-fotos-5/1); script em docs/producao-conteudo/karol/posts/_capas-s16.mjs, capa.json em cada post. Capa de quinta refeita (15/11): "Você acha que ainda não é o momento de criar o seu método? O plano pra criar e vender até 31/12"; passos refeitos pra terminar na primeira venda (opção A). Domingo refeito: "Queria começar com segurança. 6 decisões até 31/12 e a pergunta que te protege em cada uma", com legenda nova. Os 7 em ~/Downloads/rota100k-s16-{dia}-* (8 slides cada, modelo diagnostico-tipografico, seg/qua/sex/dom preto e ter/qui/sáb branco), slides.json e legenda em docs/producao-conteudo/karol/posts/rota100k-s16-*. Sábado virou checklist do vídeo que a pessoa acha amador e apaga. Revisão pelo Codex não rodou: login do Codex expirou (Karol precisa entrar de novo). Falta a Karol conferir e programar às 20h.
+
+## Rota100k Semana 16 planejada (15/11)
+Plano v2 (ganchos refeitos pelas frases de empatia da Laura, pedido 15/11): `docs/producao-conteudo/karol/desafio-rota100k-semana16-plano.md`. 49 posts do desafio (tema: orientar a decisão; 15h vira guia de 5 critérios) + 1 foto pessoal com legenda humanizada por dia às 08h30 (pedido da Karol). 07h usa histórias reais (15, 10, 16, 13, 17, assinatura, fechamento). Esperando a Karol: escolher as 7 fotos e confirmar os itens marcados antes de gravar. Próximo passo da squad: roteiros dos falados e guias.
+
+## Análise da semana 15 do Rota100k pronta (15/11)
+Aria analisou 07/11 tarde a 14/11 (coleta de 15/11, lida do GitHub): `docs/producao-conteudo/karol/analises/2026-11-15/relatorio-semana15.md`. 34,9 mil views (2,2x a S14), 67% vindas do molde "eu + cena real + dilema" (Fia 1 venda, Me indicaram, QUASE promovida), mas seguidores −8. Carrosséis de contraste 6/6 abaixo de 60 views (postados depois das 23h); listas 8ª semana abaixo de 50% em 3s. Esperando a Karol: decidir carrossel 20h x foto com legenda pessoal; corrigir legendas "Fia"/"ía"/"Ía".
+
 ## Reels "Iniciar errado" pronto (13/11)
 Final conferido (volume, legenda, cortes) em Videos/edicao-euriliana/iniciar-errado/saida/iniciar-errado-final.mp4 (58s, 1,05x). Tropeço "ou… e ou" cortado; headline no topo "Especialista indo pro digital: você está começando ERRADO"; 9 cenas com 3 imagens novas; trilha hip hop beat (confiante). Render em 4 partes por falta de RAM. Falta só a Karol assistir e postar.
 
@@ -792,3 +801,11 @@ Retomar com: `/expert-companion`
 - Boas-vindas de compra NO AR (13/11): teste entregue no celular da Karol; 5/12 modelos aprovados, resto em análise na Meta.
 
 - 13/11 — Central: card da Individual em Páginas de venda trocado de R$10.000 pra R$15.000 (Karol confirmou o preço). Publicado e conferido.
+- Botão "Garimpar novos leads" na aba Abordar do painel: NO AR (13/11). Robô no PC confere pedidos a cada 15 min (tarefa "Garimpo - pedidos do painel"). Teste: 10 fonoaudiólogas na fila. Falta conferir o 1º pedido pelo agendador.
+
+## Live 38 — roteiro v1 (15/11/2026)
+- Tema escolhido pela Karol: entrega da mentoria. Título: "Como transformar seu conhecimento em encontros de mentoria, mesmo que hoje esteja tudo na sua cabeça". Roteiro v1 em `business/campanhas/lives-semanais/live-38-roteiro.md` (Expert em Lives). Supostos, a confirmar: qua 18/11 15h e Incubadora Express. Falta da Karol: palavra do CTA e material (sugestão MENTORIA → quiz de autoavaliação), aprovar as 5 afirmações e conferir as falas marcadas com ⚠️. Depois: LP do grupo com o tema, material e deck (outro squad).
+- 15/11 (2): Karol confirmou qua 18/11 15h, CTA MENTORIA → quiz, 5 afirmações, Express (Sessão 2 aprova o método, Sessão 3 monta a mentoria) e completou o Google Forms (dava resultado; subiu de nível por imagem/high ticket e porque IA tem que estar no método). LP do grupo com o tema da 38 NO AR (conferido). Quiz pronto em `lp-grupo-live/quiz-live-38.html`, testado, NÃO publicado: falta revisão de outra IA (Codex sem login) e OK da Karol. Falas ainda sem resposta: "toda semana" (Bloco 1), ordem da #27, "a primeira é individual" (Q&A). Deck: outro squad.
+- 15/11 (3): 3 falas confirmadas pela Karol (roteiro fechado). Quiz da 38 revisado pelo Codex e ajustado; pronto, NÃO publicado, esperando o OK da Karol. Correção visual da LP do grupo (letra miúda, contraste dos botões, contador colado na borda) proposta, esperando o sim dela.
+- 15/11 (4): quiz da Live 38 NO AR (https://grupo.incubadoradeexpert.com.br/quiz-live-38.html) e LP do grupo com visual corrigido (letra maior, botão verde #117A3E, contador com texto preto), ambos conferidos no celular. Live 38 pronta; falta só o deck (outro squad) e, depois da live, mandar o quiz pra quem escrever MENTORIA.
+- 15/11 (5): LP do grupo ganhou movimento lento (ordem da Karol, todos os 5): zoom lento nas imagens, tema da semana surgindo palavra por palavra (o JS lê o span#temaSemana, a troca semanal continua igual), luz laranja no fundo do topo, reflexo no botão, contador virando suave. Desliga pra quem pede menos animação no celular. No ar e conferido.

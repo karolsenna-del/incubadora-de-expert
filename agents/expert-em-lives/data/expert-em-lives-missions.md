@@ -60,3 +60,9 @@
 **Entregue em:** 25/10/2026 — `business/campanhas/lives-semanais/live-36-roteiro.md` (v1, aguardando revisão).
 **Executada em:** aguardando.
 **Aprendizado:** registrar depois da live.
+
+## Live 38 — Como transformar seu conhecimento em encontros de mentoria, mesmo que hoje esteja tudo na sua cabeça — 18/11/2026 (a confirmar)
+**Tema:** entrega da mentoria (primeira vez que uma live trata disso). Mentoria = transformação dividida em encontros; cada encontro responde o que muda na pessoa, por que vem nessa ordem e com o que ela sai na mão (3 jornadas do M2, sem os nomes). Âncoras: #27 (jornada desenhada depois do "não ficou claro"), #4 (Google Forms até agosto), Live 25 (vende antes, constrói junto).
+**Entregue em:** 15/11/2026 — `business/campanhas/lives-semanais/live-38-roteiro.md` (v1). Aguardando: 5 afirmações, CTA/material, data, Express e falas ⚠️.
+**Executada em:** aguardando.
+**Aprendizado:** a Karol pediu a trava "nas palavras da persona": o dossiê não tem fala sobre entrega; vale coletar falas reais das sessões.
