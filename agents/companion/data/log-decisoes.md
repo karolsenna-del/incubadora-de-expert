@@ -1362,3 +1362,9 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 
 ## 15/11/2026 — Impedir republicação após falha de persistência de Stories
 Por ordem explícita, corrigir e enviar somente o pipeline, sem publicar nem disparar workflow. Pasta é reservada no remoto antes de qualquer chamada externa; falha posterior exige reconciliação manual e nunca retorna automaticamente à fila. Media IDs ficam em recibo e logs. Histórico de outubro permanece intacto.
+
+## 16/11/2026 — Roteiros da semana 16 do Rota100k
+**Contexto:** Karol pediu os roteiros e legendas do desafio da semana (plano v2 de 15/11).
+**Decisão:** Roteiros escritos sobre o plano v2; os itens que dependem da história dela ficaram com texto sugerido a partir dos arquivos e marcados ⚠️ pra ela confirmar. Domingo 15h com 6 critérios (um por guia), não 5.
+**Racional:** Não inventar fato; o desafio pede guia verificável e sem venda.
+**Impacto:** `docs/producao-conteudo/karol/desafio-rota100k-semana16-roteiros.md`.
