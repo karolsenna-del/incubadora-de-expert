@@ -17,6 +17,9 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Cortes da Live 31 agendados no Opus Clip (15/11)
+18 cortes editados do projeto "Live 31" (https://clip.opus.pro/clip/P3111117WQKz) agendados pelo agendamento em massa do Opus Clip: 1 por dia às 10h (horário de Cuiabá), de 16/11 a 03/12, em YouTube, TikTok e Instagram, na ordem da nota do Opus, com a legenda gerada pelo próprio Opus (escolha da Karol). Conferido no calendário do Opus: 18 dias com as 3 redes. Os outros 16 cortes do projeto (não editados) ficaram de fora.
+
 ## Weekly review 15/11
 Expert360º PARADO (novembro é comercial, sem prazo novo pras A10-A13). Rota100k ok. Área de membros: ninguém usou ainda; Karol libera pra Milena em 16/11. Comercial: 3 sessões/semana mantidas, nenhuma venda nova ainda; tudo registrado no painel Comercial (planilha CRM aposentada). Stories de 02/11 e 09/11 que falharam (2 pastas no mesmo dia) apagadas da fila; o conserto do script segue aberto. Depois a Karol mandou apagar todas: as 23 pastas antigas que nunca saíram também foram apagadas e a fila ficou vazia. Contrato do Sprint atualizado (R$5.000, 8 semanas, funil). Senha da Hotmart tirada dos arquivos, mas ela continua no histórico do GitHub: Karol precisa trocar a senha. Codex logado de novo e pasta da Live 37 compartilhada (Karol). Próximo review: 22/11.
 
@@ -822,3 +825,5 @@ Três capas refeitas com os seis JPEGs Pexels obrigatórios em `docs/producao-co
 
 ## 15/11/2026 — Incidente técnico de Stories
 Pipeline corrigido em worktree isolada: reserva remota antes de publicar, persistência limitada e recibos de IDs. Testes Python verdes; execução histórica do slug de 29/10 recuperada (run 40925465617). Nenhuma chamada à Meta ou workflow disparado. Registro: docs/incidentes/2026-11-15-instagram-stories-pipeline.md.
+
+- 15/11/2026 — Painel comercial: coluna Diagnóstico criada e as 83 fichas de Sessão separadas com a Karol (36 Sessão, 15 Diagnóstico, 30 Abordado, 2 Aluno). Banco e painel no ar (publicado 15/11). Salvar e entregar no GitHub pendente de pedido.
