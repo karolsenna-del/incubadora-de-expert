@@ -813,3 +813,12 @@ Retomar com: `/expert-companion`
 - 15/11 (4): quiz da Live 38 NO AR (https://grupo.incubadoradeexpert.com.br/quiz-live-38.html) e LP do grupo com visual corrigido (letra maior, botão verde #117A3E, contador com texto preto), ambos conferidos no celular. Live 38 pronta; falta só o deck (outro squad) e, depois da live, mandar o quiz pra quem escrever MENTORIA.
 - 15/11 (5): LP do grupo ganhou movimento lento (ordem da Karol, todos os 5): zoom lento nas imagens, tema da semana surgindo palavra por palavra (o JS lê o span#temaSemana, a troca semanal continua igual), luz laranja no fundo do topo, reflexo no botão, contador virando suave. Desliga pra quem pede menos animação no celular. No ar e conferido.
 - 15/11 (6): deck da Live 38 montado (30 slides, fio condutor das 3 perguntas de cada encontro), publicado em https://claude.ai/artifact/8kYM3EL1xQY6w3ZnnN1v9V e salvo em `live-38-apresentacao.html`. Esperando a Karol aprovar.
+
+## 2026-11-13 — Capas de contraste semana 15
+Concluídas e verificadas nesta worktree: `docs/producao-conteudo/karol/posts/contrastes-semana15-13a15nov/README.md` reúne arquivos, fontes e QA. Somente três linhas Capa alteradas no roteiro. Sem commit/push; executor externo fará a integração.
+
+## 2026-11-13 — Revisão fotográfica das capas de contraste
+Três capas refeitas com os seis JPEGs Pexels obrigatórios em `docs/producao-conteudo/karol/posts/contrastes-semana15-13a15nov/`. Preview, gerador, manifesto, README e créditos atualizados; dimensões/RGB, py_compile e miniaturas conferidos. Seis URLs confirmadas por hash idêntico. Roteiro preservado. Somente worktree isolada; sem commit/push, integração pelo executor.
+
+## 15/11/2026 — Incidente técnico de Stories
+Pipeline corrigido em worktree isolada: reserva remota antes de publicar, persistência limitada e recibos de IDs. Testes Python verdes; execução histórica do slug de 29/10 recuperada (run 40925465617). Nenhuma chamada à Meta ou workflow disparado. Registro: docs/incidentes/2026-11-15-instagram-stories-pipeline.md.

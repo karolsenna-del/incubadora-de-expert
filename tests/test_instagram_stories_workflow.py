@@ -17,6 +17,13 @@ class InstagramStoriesWorkflowTests(unittest.TestCase):
         self.assertIn("cancel-in-progress: false", workflow)
         self.assertIn("ref: master", workflow)
         self.assertIn("STORY_SLUG:", workflow)
+        self.assertIn("fetch-depth: 0", workflow)
+        self.assertIn("${{ inputs.slug }}", workflow)
+        self.assertIn("required: false", workflow)
+        self.assertIn("if: always()", workflow)
+        self.assertIn("actions/upload-artifact@v4", workflow)
+        self.assertNotIn("workflow_run:", workflow)
+        self.assertNotIn("push:", workflow)
 
 
 if __name__ == "__main__":

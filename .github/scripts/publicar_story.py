@@ -15,8 +15,10 @@ Diferente do publicar.py (carrossel):
 Credenciais vem de GitHub Secrets (env vars) — mesmas do publicar.py.
 """
 import hashlib
+import json
 import os
 import shutil
+import subprocess
 import sys
 import time
 from datetime import datetime
@@ -40,6 +42,8 @@ FILA_DIR = "business/instagram/stories/fila"
 AGENDADOS_DIR = "business/instagram/stories/agendados"
 LOG_FILE = "business/instagram/stories/agendamentos-stories.md"
 STATE_FILE = "business/instagram/stories/ultima-story-media-id.txt"
+PROCESSING_DIR = "business/instagram/stories/em-processamento"
+RECEIPT_FILE = "story-publication-receipt.json"
 TIMEZONE = ZoneInfo("America/Cuiaba")
 
 
@@ -93,6 +97,52 @@ def select_story_slug(fila_dir, requested_slug=None, current_date=None):
             "Informe STORY_SLUG explicitamente; nada foi publicado."
         )
     return candidates[0]
+
+
+def sync_master():
+    """Only retry Git persistence; never repeat any publication call."""
+    for attempt in range(1, 4):
+        print(f"Persistencia: tentativa {attempt}/3", flush=True)
+        if subprocess.run(["git", "fetch", "origin", "master"]).returncode:
+            continue
+        if subprocess.run(["git", "rebase", "origin/master"]).returncode:
+            subprocess.run(["git", "rebase", "--abort"])
+            raise RuntimeError("Falha no rebase; reconciliacao manual necessaria")
+        if subprocess.run(["git", "push", "origin", "HEAD:master"]).returncode == 0:
+            return
+    raise RuntimeError("Persistencia falhou apos 3 tentativas; nao republicar")
+
+
+def persist_changes(message):
+    subprocess.run(["git", "add", "-f", "--", "business/instagram/stories/"], check=True)
+    if subprocess.run(["git", "diff", "--staged", "--quiet"]).returncode == 0:
+        return
+    subprocess.run(["git", "commit", "-m", message], check=True)
+    sync_master()
+
+
+def reserve_story(slug):
+    # A durable removal from fila precedes ALL external side effects. A failed
+    # run remains in em-processamento for manual reconciliation, never retried
+    # automatically, including when publication succeeded but its final push failed.
+    target = Path(PROCESSING_DIR) / slug
+    if target.exists():
+        raise RuntimeError("Story ja reservada; reconciliacao manual necessaria")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    shutil.move(str(Path(FILA_DIR) / slug), str(target))
+    persist_changes(f"processo: reserva Story {slug} antes de publicar")
+    return str(target)
+
+
+def record_receipt(slug, media_ids):
+    payload = {"slug": slug, "media_ids": media_ids}
+    print("RECIBO: " + json.dumps(payload), flush=True)
+    temporary = str(RECEIPT_FILE) + ".tmp"
+    with open(temporary, "w", encoding="utf-8") as handle:
+        json.dump(payload, handle)
+        handle.flush()
+        os.fsync(handle.fileno())
+    os.replace(temporary, RECEIPT_FILE)
 
 
 def require_credentials():
@@ -214,6 +264,8 @@ def main():
         return 1
 
     print(f"Slug: {slug} — {len(imagens)} Story(s) na sequencia")
+    pasta = reserve_story(slug)
+    record_receipt(slug, [])
     deletar_story_anterior()
 
     media_ids = []
@@ -236,6 +288,7 @@ def main():
         print("  Publicando ...", end=" ", flush=True)
         media_id = meta_post("media_publish", {"creation_id": container_id})
         media_ids.append(media_id)
+        record_receipt(slug, media_ids)
         print(f"ok ({media_id})")
 
     os.makedirs(os.path.dirname(STATE_FILE), exist_ok=True)
@@ -270,6 +323,7 @@ def main():
     print(f"  Slug:      {slug}")
     print(f"  Stories:   {len(media_ids)}")
     print(f"  Media IDs: {media_ids}")
+    persist_changes("campanha: story publicada automaticamente pelo insta-scheduler")
     return 0
 
 

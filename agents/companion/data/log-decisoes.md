@@ -1348,3 +1348,17 @@ cron estiver configurado, a maioria dos dias deve sair sem ela precisar abrir o 
 **Decisão:** a S16 alterna três capas: número gigante (stats-hero), logo + frase (capa-marca) e foto da Karol + frase (foto-frase). O miolo segue igual.
 **Racional:** pedido da Karol para variar, sem depender só do card estilo Twitter.
 **Impacto:** dá para comparar qual capa segura mais na análise da Aria da S16.
+## 2026-11-13 — Foto das capas de contraste
+**Contexto:** duas imagens indicadas ausentes de origin/master; alternativas rastreadas duplicadas.
+**Decisão:** usar a foto autorizada existente em três composições e enquadramentos distintos.
+**Racional:** preservar foto real da Karol, reprodução local e escopo solicitado.
+**Impacto:** substituições e validação documentadas no README das capas; nenhum commit/push nesta execução.
+
+## 2026-11-13 — Capas mais humanizadas, com fotos reais
+**Contexto:** correção explícita da Karol nesta revisão das capas de 13 a 15/11.
+**Decisão:** substituir as ilustrações principais pelos pares Pexels 01/02, 03/04 e 05/06, sem repetir foto da Karol; títulos separados dos rostos.
+**Racional:** Karol pediu pessoas reais relacionadas a cada tema. A imagem 05 é mantida conforme ordem, mostrando mãos entre papéis, sem rosto no original.
+**Impacto:** três capas e preview regenerados; fontes documentadas e QA concluído, roteiro preservado; sem commit/push.
+
+## 15/11/2026 — Impedir republicação após falha de persistência de Stories
+Por ordem explícita, corrigir e enviar somente o pipeline, sem publicar nem disparar workflow. Pasta é reservada no remoto antes de qualquer chamada externa; falha posterior exige reconciliação manual e nunca retorna automaticamente à fila. Media IDs ficam em recibo e logs. Histórico de outubro permanece intacto.
