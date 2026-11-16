@@ -226,7 +226,8 @@
     "path": "business/campanhas/expert360-curso/roteiros/modulo-orientacoes-roteiros.md",
     "aulas": [
       "Boas-vindas",
-      "Antes de começar"
+      "Antes de começar",
+      "Antes de começar v3.0 (16/11/2026) — SUBSTITUI a gravada (Gcz0wrqSqEo): 4 passos (grupo, pré-diagnóstico, Drive, Expert-IAs); Biblioteca de IAs no Drive aposentada; APROVADA 16/11 (QG-CC-006 PASS), Drive espelhado; falta gravar, trocar youtube_id e descrição na área de membros. Agentes avisam sozinhos que é só texto (NOTA_PLATAFORMA 16/11)"
     ],
     "formato": "texto corrido sem rótulos de bloco visíveis + ESTRUTURA ao final",
     "decisao_pre_diagnostico": "Questionário nativo do Hotmart (não Google Forms) — configurado como requisito de avanço antes do M0. Gera relatório de respostas por aluna exportável.",

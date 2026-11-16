@@ -2,7 +2,7 @@
 Versão: 2.0 (teleprompter de fala livre) | Base: v1.0 aprovada (QG-CC-006) | Data: 09/07/2026
 Status: bullets pra gravar falando livre — o script em prosa completo foi movido pro fim do arquivo (SCRIPTS DE REFERÊNCIA), só como consulta.
 
-**Aulas:** 2 (Boas-vindas + Antes de começar)
+**Aulas:** 2 (Boas-vindas + Antes de começar). Antes de começar v3.0 (16/11/2026) substitui a gravada: agentes saíram do arquivo Biblioteca de IAs no Drive e foram pra aba Expert-IAs da área de membros. O script em prosa ao fim é da versão antiga (v1.0).
 
 ## COMO LER OS BULLETS
 - **⚓ = fala EXATO** — número, nome de framework ou frase de impacto que não pode sair errada.
@@ -47,27 +47,34 @@ Status: bullets pra gravar falando livre — o script em prosa completo foi movi
 ---
 
 ## AULA ANTES DE COMEÇAR — MÓDULO DE ORIENTAÇÕES
-*Estimativa: 3–5 minutos*
+*Estimativa: 5–7 minutos · v3.0 (16/11/2026) — SUBSTITUI a aula gravada (Gcz0wrqSqEo), que mandava usar os agentes pelo arquivo Biblioteca de IAs no Drive. Aprovada 16/11/2026 (QG-CC-006 PASS), espelhada no Drive. Gravar com a área de membros compartilhada na tela.*
 
 **ABERTURA**
-- Antes de entrar no M0, um setup inicial de menos de dez minutos. Não é burocracia — são três passos que colocam tudo no lugar e evitam você procurar "onde estava aquele arquivo?" no meio do curso.
+- Antes de entrar no M0, um setup de menos de dez minutos. São quatro passos que deixam tudo no lugar, pra você não parar no meio do curso perguntando "onde estava aquilo mesmo?".
 
 **O QUE E POR QUÊ**
-- Três passos: entrar no grupo, responder o pré-diagnóstico e baixar o Drive.
-- O grupo é onde você tira dúvidas, compartilha progresso e se conecta com outras alunas; o pré-diagnóstico captura onde você está começando e dá clareza de prioridades; o Drive é onde estão todos os materiais, organizados por módulo.
-- Por que agora: quando a A2 do M0 disser "abra o arquivo Minha História Real no seu Drive", você quer saber exatamente onde está, sem fricção.
+- Quatro passos: entrar no grupo, responder o pré-diagnóstico, copiar o Drive e conhecer a Expert-IAs, onde ficam os seus agentes de IA.
+- O grupo é onde você tira dúvida e acompanha quem está no mesmo processo. O pré-diagnóstico mostra de onde você está começando. O Drive guarda os seus arquivos. A Expert-IAs é onde você conversa com os agentes.
+   ⚓ O Drive guarda os seus arquivos. A Expert-IAs é onde você conversa com os agentes.
 
 **COMO**
-▸ Os 3 passos
-   - Grupo: o link do WhatsApp está na descrição desta aula — entra e se apresenta quando quiser (nome e área). Não é obrigatório, mas quem mais avança usa o grupo pra registrar progresso, não só pra tirar dúvida.
-   - Pré-diagnóstico: o questionário está disponível nesta aula e precisa ser respondido antes de avançar pro M0 — perguntas sobre onde você está hoje (área, histórico no digital, o que já tentou). Não tem resposta certa; quanto mais honesta, mais útil.
-   - Drive: o link está na descrição — faça uma cópia da pasta completa pro seu Google Drive pessoal (você vai editar os arquivos ao longo do curso). A instrução de como copiar está no primeiro arquivo da pasta.
+▸ Grupo
+   - O link do WhatsApp está na descrição desta aula. Entra e se apresenta quando quiser: nome e área.
+▸ Pré-diagnóstico
+   - Perguntas sobre onde você está hoje: área, histórico no digital, o que já tentou. Não tem resposta certa; quanto mais honesta, mais útil.
+▸ Drive
+   - O link também está na descrição. Faz uma cópia da pasta completa pro seu Google Drive: você vai preencher esses arquivos ao longo do curso, organizados por módulo.
+▸ Expert-IAs *(mostrar na tela)*
+   - No menu de cima, aba Expert-IAs. São 10 agentes: os seis que constroem os seus Ps (Persona Compradora, Promessa Transformadora, Processo Autoral, Portfólio Estratégico, Proposta Validada e Autoridade Tríplice), o Vendedor Secreto do M3 e três de conteúdo (Live Expert, Expert Viral e Stories Expert).
+   - Clica no card, em "Conversar", e o agente puxa a conversa. Logo na primeira mensagem ele explica como funciona: é tudo por texto, então você copia do seu Drive e cola na conversa.
+   - Quando terminar, clica em "Copiar" ou "Baixar resultado" e guarda no arquivo daquela etapa no seu Drive. É dali que o próximo agente vai ler.
+      ⚓ A conversa fica salva só neste navegador. O resultado só está seguro quando está no seu Drive.
 
 **ONDE E QUANDO**
-- Links do grupo e do Drive na descrição desta aula; questionário aqui na página. Faça os três agora, antes de avançar — leva menos de dez minutos.
+- Grupo e Drive: links na descrição desta aula. Expert-IAs: no menu da área de membros. Cada aula de exercício diz qual agente abrir; o primeiro é o da Persona Compradora, no M1.
 
 **TRANSIÇÃO**
-- Setup feito: grupo, diagnóstico, Drive. O M0 começa agora — e começa por onde a maioria dos cursos não começa: pela sua história.
+- Setup feito: grupo, diagnóstico, Drive e Expert-IAs. O M0 começa agora, pela sua história.
 
 ---
 ---

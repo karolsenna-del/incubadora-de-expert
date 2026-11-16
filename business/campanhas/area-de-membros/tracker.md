@@ -98,6 +98,8 @@ Ver [briefing.md](briefing.md) pro desenho completo (publico, telas, vitrine, de
 ## LOG
 
 > Mais recente primeiro.
+- 16/11 — @course-chief: aviso "só texto" dos agentes NO AR (deploy da Karol, dpl_55qZ4yAeRaeBDndBbeux41TzffjF, alias membros.incubadoradeexpert.com.br); endpoint respondendo. Falta 1 conversa logada pra ver o aviso.
+- 16/11 — @course-chief: aviso de plataforma dos 10 agentes da Expert-IAs (`NOTA_PLATAFORMA` em `api/chat-agente.js`): na 1ª mensagem o agente avisa que é só texto (não lê imagem/print, não recebe anexo, não abre link nem do Instagram — colar legenda/slides/fala), que a conversa fica só no navegador (Copiar/Baixar resultado → Drive); link colado → pede o texto e não inventa. Testado na API (Persona Compradora e Expert Viral + link de reel): OK. Publicação barrada pro agente → deploy da Karol via `!`. Substitui gravar aula nova de orientações (decisão da Karol).
 - 01/11 — @companion: contagem de uso testada logada — mensagens da Karol no Expert Viral entraram em `uso_agentes` (plano mentoria). Relatório em 01/12.
 - 01/11 — @companion: contagem de uso NO AR — banco aplicado e servidor publicado pela Karol (dpl_CkWZrA9Vw3rZQtQqEjjATSJH8T9K); conferido sem login (chat 403, função recusa anônimo). Falta teste logado.
 - 01/11 — @companion: contagem de uso da Expert-IAs preparada (Karol: medir 1 mês, mentoria com o dobro) — `sql/uso-agentes.sql` + `api/chat-agente.js`; banco e publicação dependem da Karol (classificador barrou produção). Relatório em 01/12: `sql/relatorio-uso-agentes.sql`.

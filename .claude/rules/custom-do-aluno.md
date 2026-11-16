@@ -79,6 +79,8 @@ outras rules. Exemplos:
 
 - Orientação da Karol pra cliente entra no material como "minha sugestão pra conversarmos", ao lado da resposta da cliente, nunca no lugar dela: a decisão sai da reunião (Karol, 07/11, E1 da Juliana).
 
+- Aula que substitui outra fala só do jeito atual, sem "não é mais assim" nem citar a versão antiga: o aluno nunca viu a anterior (Karol, 16/11, Antes de Começar v3).
+
 ### Capas humanizadas de contraste
 
 - Em capas de contraste, usar fotos reais de pessoas relacionadas a cada tema como imagem principal; não substituir por ilustrações vetoriais nem repetir a foto da Karol, pois ela pediu capas mais humanizadas (Karol, 13/11/2026).

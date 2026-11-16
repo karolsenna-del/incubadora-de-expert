@@ -841,3 +841,5 @@ Pipeline corrigido em worktree isolada: reserva remota antes de publicar, persis
 - Roteiro escrito em business/campanhas/expert360-curso/roteiros/modulo-orientacoes-roteiros.md (3ª aula do Módulo de Orientações), aguardando aprovação da Karol. Motivo: agentes agora ficam na aba Expert-IAs da área de membros, não no Drive.
 - 16/11: em vez da aula, o aviso foi pra instrução dos agentes (testado). Falta a Karol publicar a área de membros (`! cd business/campanhas/area-de-membros/site && vercel deploy --prod --yes`) e conferir 1 conversa.
 - 16/11: Karol pediu aula substituindo a "Antes de Começar" gravada (falava da Biblioteca de IAs no Drive). Roteiro v3.0 escrito (grupo, pré-diagnóstico, Drive, Expert-IAs); a aula extra "Seus agentes de IA" saiu. Falta aprovação, regravar, trocar youtube_id e descrição na área de membros.
+- 16/11: Antes de Começar v3 APROVADA e no Drive (Roteiros). Falta gravar; depois trocar youtube_id (data.js/config.yaml) e descrição (descricoes-aulas.js).
+- 16/11: aviso dos agentes publicado pela Karol (dpl_55qZ4yAeRaeBDndBbeux41TzffjF).

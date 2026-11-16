@@ -1404,3 +1404,7 @@ Por ordem explícita, corrigir e enviar somente o pipeline, sem publicar nem dis
 **Decisão:** o aviso entra na instrução comum dos 10 agentes, na primeira mensagem (colar o texto; guardar o resultado no Drive porque a conversa fica só no navegador). Se funcionar, não grava aula nova.
 **Racional:** o aluno lê o aviso na hora que precisa, sem a Karol gravar.
 **Impacto:** `api/chat-agente.js` (NOTA_PLATAFORMA); roteiro "Seus agentes de IA" fica de reserva.
+
+## 16/11/2026 — Antes de Começar v3 substitui a aula gravada
+**Decisão:** a aula de orientações passa a ter 4 passos (grupo, pré-diagnóstico, Drive, Expert-IAs) e ensina os agentes na área de membros, sem citar a Biblioteca de IAs antiga.
+**Impacto:** regravar a aula; trocar vídeo e descrição na área de membros.
