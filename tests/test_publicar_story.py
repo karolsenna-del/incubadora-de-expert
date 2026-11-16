@@ -2,6 +2,7 @@ import importlib.util
 import os
 import tempfile
 import unittest
+from unittest.mock import patch
 from datetime import date
 from pathlib import Path
 
@@ -97,6 +98,29 @@ class SelectStorySlugTests(unittest.TestCase):
             r"Mais de uma Story para 2026-10-29: alfa-2026-10-29, zeta-2026-10-29",
         ):
             publicar_story.select_story_slug(self.queue, None, self.today)
+
+    def test_schedule_ignores_symlinks_and_files_for_today(self):
+        outside = Path(self.temp_dir.name) / "outside"
+        outside.mkdir()
+        os.symlink(outside, self.queue / "link-2026-10-29")
+        (self.queue / "file-2026-10-29").write_text("file")
+        self.assertIsNone(publicar_story.select_story_slug(self.queue, None, self.today))
+
+    def test_empty_queue_exits_without_credentials_or_external_calls(self):
+        with patch.object(publicar_story, "FILA_DIR", self.queue), patch.dict(os.environ, {"STORY_SLUG": ""}), patch.object(publicar_story, "require_credentials") as credentials, patch.object(publicar_story.requests, "post") as post:
+            self.assertEqual(publicar_story.main(), 0)
+            credentials.assert_not_called()
+            post.assert_not_called()
+
+    def test_failed_reservation_never_calls_meta(self):
+        slug = "story-2026-10-29"
+        folder = self.add_story(slug)
+        (folder / "story-00.png").write_bytes(b"test")
+        with patch.object(publicar_story, "FILA_DIR", str(self.queue)), patch.dict(os.environ, {"STORY_SLUG": slug}), patch.object(publicar_story, "require_credentials"), patch.object(publicar_story, "reserve_story", side_effect=RuntimeError("push failed")), patch.object(publicar_story.requests, "post") as post, patch.object(publicar_story.requests, "delete") as delete:
+            with self.assertRaisesRegex(RuntimeError, "push failed"):
+                publicar_story.main()
+            post.assert_not_called()
+            delete.assert_not_called()
 
 
 if __name__ == "__main__":
