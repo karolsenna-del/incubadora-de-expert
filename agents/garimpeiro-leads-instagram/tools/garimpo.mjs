@@ -122,13 +122,22 @@ async function apify(caminho, { metodo = 'GET', corpo } = {}) {
   return JSON.parse(txt);
 }
 
-async function rodarAtor(ator, input) {
-  const run = (await apify(`/acts/${ator}/runs`, { metodo: 'POST', corpo: input })).data;
+async function rodarAtor(ator, input, runExistente) {
+  // runExistente: retoma um run já pago (ex.: a consulta de status caiu com 502) em vez de pagar de novo
+  const run = runExistente ? { id: runExistente, status: 'RUNNING' } : (await apify(`/acts/${ator}/runs`, { metodo: 'POST', corpo: input })).data;
   let estado = run;
   const inicio = Date.now();
+  let falhas = 0;
   while (!['SUCCEEDED', 'FAILED', 'ABORTED', 'TIMED-OUT'].includes(estado.status)) {
     if (Date.now() - inicio > 15 * 60 * 1000) throw new Error(`Run ${run.id} passou de 15 min — conferir no painel, não rodar de novo`);
-    estado = (await apify(`/actor-runs/${run.id}?waitForFinish=60`)).data;
+    try {
+      estado = (await apify(`/actor-runs/${run.id}?waitForFinish=60`)).data;
+      falhas = 0;
+    } catch (e) {
+      // 5xx/rede na consulta de status não derruba o run (16/11/2026: 502 passageiro perdeu a leitura dos posts)
+      if (++falhas > 5 || /Apify 4\d\d/.test(e.message)) throw new Error(`${e.message} (run ${run.id}: retomar com --run ${run.id})`);
+      await new Promise((r) => setTimeout(r, 10000));
+    }
   }
   if (estado.status !== 'SUCCEEDED') throw new Error(`Run ${run.id} terminou ${estado.status}`);
   const itens = await apify(`/datasets/${estado.defaultDatasetId}/items?clean=true&format=json`);
@@ -316,7 +325,7 @@ async function posts(o) {
   const rodada = JSON.parse(readFileSync(arq, 'utf8'));
   const fila = (rodada.para_classificar || []).filter((p) => p.aderencia !== 'descarte' && p.fase !== 3);
   if (!fila.length) return console.log('Nada pra ler (todo mundo já tem posts ou foi descartado).');
-  const { itens, custo } = await rodarAtor('apify~instagram-post-scraper', { username: fila.map((p) => p['@']), resultsLimit: 6 });
+  const { itens, custo } = await rodarAtor('apify~instagram-post-scraper', { username: fila.map((p) => p['@']), resultsLimit: 6 }, typeof o.run === 'string' ? o.run : undefined);
   const porDono = new Map();
   for (const x of itens) {
     // post em parceria aparece no perfil dos dois: vale pra quem foi pedido (inputUrl/ownerUsername)

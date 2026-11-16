@@ -370,7 +370,7 @@ function blocoRastreador(p) {
   return RASTREADOR.map((c) => v[c] ?? '');
 }
 
-async function enviar(caminhoRodada) {
+async function enviar(caminhoRodada, max = MAX_POR_RODADA) {
   const rodada = JSON.parse(readFileSync(resolve(caminhoRodada), 'utf8'));
   const perfil = lerPerfil(rodada.perfil);
   const classificados = (rodada.para_classificar || []).filter((p) => p.aderencia && p.aderencia !== 'descarte');
@@ -385,7 +385,7 @@ async function enviar(caminhoRodada) {
   const ordem = { Alta: 0, Média: 1, Baixa: 2 };
   const recente = (p) => (postouRecente(p, rodada.data) === 'Sim' ? 0 : 1);
   classificados.sort((a, b) => (ordem[prioridadeAbordagem(a)] - ordem[prioridadeAbordagem(b)]) || (recente(a) - recente(b)));
-  const lote = classificados.slice(0, MAX_POR_RODADA);
+  const lote = classificados.slice(0, Math.min(max, MAX_POR_RODADA));
 
   const jaNaAba = new Set((await listarAba(perfil.destino)).map((l) => String(l['@']).toLowerCase()));
   const linhas = lote.filter((p) => !jaNaAba.has(p['@'])).map((p) => [
@@ -544,7 +544,7 @@ const opt = Object.fromEntries(resto.reduce((acc, v, i, a) => (v.startsWith('--'
 if (process.argv[1]?.endsWith('planilha.mjs')) {
   try {
     const perfil = () => lerPerfil(opt.perfil || 'karol');
-    if (cmd === 'enviar') await enviar(opt.rodada);
+    if (cmd === 'enviar') await enviar(opt.rodada, Number(opt.max) > 0 ? Number(opt.max) : MAX_POR_RODADA); // --max N: pedido do botão do painel
     else if (cmd === 'listar') console.log(JSON.stringify(await listarAba(perfil().destino), null, 2));
     else if (cmd === 'preparar') await preparar(perfil().destino);
     else if (cmd === 'migrar') await migrar(perfil());

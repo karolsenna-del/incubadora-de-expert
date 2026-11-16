@@ -9,12 +9,13 @@ const COM_ETAPAS = [
   { id: 'novo', nome: 'Novo' },
   { id: 'abordado', nome: 'Abordado' },
   { id: 'respondeu', nome: 'Em conversa' },
+  { id: 'diagnostico', nome: 'Diagnóstico' }, // respondeu o pré-diagnóstico e ainda não fez a sessão (15/11/2026)
   { id: 'sessao', nome: 'Sessão' },
   { id: 'proposta', nome: 'Proposta' },
   { id: 'aluno', nome: 'Aluno' },
   { id: 'perdido', nome: 'Perdido' },
 ];
-const COM_RANK = { novo: 0, abordado: 1, respondeu: 2, sessao: 3, proposta: 4, aluno: 5 };
+const COM_RANK = { novo: 0, abordado: 1, respondeu: 2, diagnostico: 2.5, sessao: 3, proposta: 4, aluno: 5 };
 const COM_NOME_ETAPA = Object.fromEntries(COM_ETAPAS.map((e) => [e.id, e.nome]).concat([['descartado', 'Descartado']]));
 
 const COM_ORIGENS = {
@@ -307,7 +308,7 @@ if (typeof window !== 'undefined') {
         '<div class="com-cartoes">' +
         cartao('Abordagens', ind.abordagens, 'mensagens que você mandou', false, ind.abordagens && 'abordagens') +
         cartao('Respostas', ind.respostas, p.resposta ? comPct(p.resposta.taxa) + ' dos abordados responderam' : 'de quem você abordou', false, ind.respostas && 'respostas') +
-        cartao('Sessões', ind.sessoes, p.sessao ? comPct(p.sessao.taxa) + ' das conversas viraram sessão' : 'pré-diagnóstico / sessão', false, ind.sessoes && 'sessoes') +
+        cartao('Sessões', ind.sessoes, p.sessao ? comPct(p.sessao.taxa) + ' das conversas viraram sessão' : 'fizeram a sessão', false, ind.sessoes && 'sessoes') +
         cartao('Vendas', ind.vendas, p.venda ? comPct(p.venda.taxa) + ' das sessões viraram venda' : 'viraram aluno', true, ind.vendas && 'vendas') +
         cartao('Do lead ao aluno', comPct(ind.conversaoLead), ind.novos ? 'de ' + ind.novos + ' leads que entraram no período' : 'nenhum lead novo no período', false, ind.novos && 'leadAluno') +
         cartao('Tempo até virar aluno', comDias(ind.tempoAluno.media), ind.tempoAluno.n ? 'média de ' + ind.tempoAluno.n + (ind.tempoAluno.n === 1 ? ' venda' : ' vendas') + (ind.tempoAluno.n > 2 ? ' · mediana ' + comDias(ind.tempoAluno.mediana) : '') : 'conta a partir das próximas vendas', false, ind.tempoAluno.n && 'tempoAluno') +
@@ -521,13 +522,84 @@ if (typeof window !== 'undefined') {
         : '<p class="com-nota">Nenhuma anotação ainda.</p>';
     }
 
+    // ---------- Garimpar novos leads (pedido pro robô do computador, 13/11/2026) ----------
+    // O botão grava em garimpo_pedidos; o robô (agents/garimpeiro-leads-instagram/tools/pedidos.mjs)
+    // confere a cada 15 min, roda o Garimpeiro e marca feito/erro. Termos vêm do último pedido.
+    let pedidos = [], garimpoRascunho = null, garimpoAberto = false, garimpoTimer = null;
+    async function carregarPedidos() {
+      const { data, error } = await sb.from('garimpo_pedidos').select('*').order('criado_em', { ascending: false }).limit(5);
+      if (!error) pedidos = data || [];
+    }
+    const quando = (iso) => { const d = new Date(iso); return d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' }) + ' às ' + d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }); };
+    function garimpoHtml() {
+      const ult = pedidos[0];
+      if (ult && (ult.status === 'pendente' || ult.status === 'rodando')) {
+        const txt = ult.status === 'pendente'
+          ? 'Pedido feito ' + quando(ult.criado_em) + '. Seu computador começa em até 15 minutos (ele precisa estar ligado).'
+          : 'O Garimpeiro está trabalhando desde ' + quando(ult.iniciado_em) + '. Leva em torno de 1 hora; os leads novos entram aqui na fila sozinhos.';
+        return '<div class="com-garimpo com-garimpo-andando"><b>' + (ult.status === 'pendente' ? 'Garimpo na fila' : 'Garimpando agora') + '</b><p>' + esc(txt) + '</p><p class="com-nota">Termos: ' + esc(ult.termos.join(', ')) + '</p>' +
+          (ult.status === 'pendente' ? '<button type="button" class="com-btn" id="garimpo-cancelar">Cancelar pedido</button>' : '') + '</div>';
+      }
+      const base = ult ? ult.termos.join('\n') : '';
+      const ultimoFeito = pedidos.find((p) => p.status === 'feito' || p.status === 'erro');
+      const resultado = ultimoFeito
+        ? '<p class="com-nota">Último garimpo: ' + quando(ultimoFeito.concluido_em || ultimoFeito.criado_em) + (ultimoFeito.status === 'erro' ? ' · não terminou' : (ultimoFeito.novos != null ? ' · ' + ultimoFeito.novos + ' leads novos' : '')) + (ultimoFeito.resumo ? ' · ' + esc(ultimoFeito.resumo) : '') + '</p>' : '';
+      const qtd = ult ? ult.quantidade : 50;
+      return '<details class="com-garimpo"' + (garimpoAberto ? ' open' : '') + '><summary>Garimpar novos leads</summary>' + resultado +
+        '<label class="com-campo">Termos (um por linha: profissão, cargo ou tema)<textarea id="garimpo-termos" rows="6">' + esc(garimpoRascunho != null ? garimpoRascunho : base) + '</textarea></label>' +
+        '<label class="com-campo com-garimpo-qtd">Quantos leads no máximo<select id="garimpo-qtd">' + [10, 20, 30, 50].map((n) => '<option' + (n === qtd ? ' selected' : '') + '>' + n + '</option>').join('') + '</select></label>' +
+        '<button type="button" class="com-btn com-btn-primario" id="garimpo-pedir">Pedir garimpo</button>' +
+        '<p class="com-nota">Seu computador roda o garimpo sozinho (precisa estar ligado). Os leads chegam nesta fila com a mensagem pronta.</p></details>';
+    }
+    function ligarGarimpo(el) {
+      const det = el.querySelector('details.com-garimpo');
+      if (det) det.ontoggle = () => (garimpoAberto = det.open);
+      const t = el.querySelector('#garimpo-termos');
+      if (t) t.oninput = () => (garimpoRascunho = t.value);
+      const pedir = el.querySelector('#garimpo-pedir');
+      if (pedir) pedir.onclick = async () => {
+        const termos = [...new Set(t.value.split('\n').map((s) => s.trim()).filter(Boolean))];
+        if (!termos.length) { aviso('Escreva pelo menos um termo', true); return; }
+        if (termos.length > 30) { aviso('No máximo 30 termos por garimpo', true); return; }
+        pedir.disabled = true;
+        const { error } = await sb.from('garimpo_pedidos').insert({ termos, quantidade: Number(el.querySelector('#garimpo-qtd').value) });
+        pedir.disabled = false;
+        if (error) { aviso('Não consegui pedir: ' + error.message, true); return; }
+        garimpoRascunho = null; garimpoAberto = false;
+        await carregarPedidos(); aviso('Garimpo pedido'); renderAbordar(); vigiarGarimpo();
+      };
+      const cancelar = el.querySelector('#garimpo-cancelar');
+      if (cancelar) cancelar.onclick = async () => {
+        const { error } = await sb.from('garimpo_pedidos').update({ status: 'cancelado', concluido_em: new Date().toISOString() }).eq('id', pedidos[0].id).eq('status', 'pendente');
+        if (error) { aviso('Não consegui cancelar: ' + error.message, true); return; }
+        await carregarPedidos(); aviso('Pedido cancelado'); renderAbordar();
+      };
+    }
+    // Enquanto há pedido andando, confere a cada minuto; quando termina, recarrega os leads e a fila.
+    function vigiarGarimpo() {
+      clearInterval(garimpoTimer);
+      const andando = () => pedidos[0] && ['pendente', 'rodando'].includes(pedidos[0].status);
+      if (!andando()) return;
+      garimpoTimer = setInterval(async () => {
+        const antes = pedidos[0] && pedidos[0].status;
+        await carregarPedidos();
+        if (andando()) { if (pedidos[0].status !== antes && abaAtual === 'abordar') renderAbordar(); return; }
+        clearInterval(garimpoTimer);
+        try { await carregar(); } catch (e) { /* mantém o que já tinha */ }
+        fila = comFila(leads); filaPos = 0; atualizarPilula();
+        if (abaAtual === 'abordar') renderAbordar();
+        aviso(pedidos[0].status === 'feito' ? 'Garimpo terminou' + (pedidos[0].novos != null ? ': ' + pedidos[0].novos + ' leads novos' : '') : 'O garimpo não terminou', pedidos[0].status !== 'feito');
+      }, 60000);
+    }
+
     // ---------- Abordar (fila) ----------
     function renderAbordar() {
       const el = $('#aba-abordar');
       const restantes = Math.max(fila.length - filaPos, 0);
-      const topo = '<div class="com-fila-topo"><span>' + filaSessao.enviados + ' enviadas · ' + filaSessao.descartados + ' descartadas nesta sessão · <b>' + restantes + ' na fila</b></span></div>';
+      const topo = garimpoHtml() + '<div class="com-fila-topo"><span>' + filaSessao.enviados + ' enviadas · ' + filaSessao.descartados + ' descartadas nesta sessão · <b>' + restantes + ' na fila</b></span></div>';
       if (filaPos >= fila.length) {
-        el.innerHTML = topo + '<div class="com-fila-cartao com-fila-fim"><h2>Fila zerada</h2><p>Todo lead novo com mensagem pronta já foi abordado ou descartado. Quando o Garimpo trouxer mais, eles aparecem aqui.</p></div>';
+        el.innerHTML = topo + '<div class="com-fila-cartao com-fila-fim"><h2>Fila zerada</h2><p>Todo lead novo com mensagem pronta já foi abordado ou descartado. Use "Garimpar novos leads" acima pra buscar mais.</p></div>';
+        ligarGarimpo(el);
         return;
       }
       const l = fila[filaPos], g = l.garimpo || {};
@@ -544,6 +616,7 @@ if (typeof window !== 'undefined') {
         '<button type="button" class="com-btn" id="fila-descartar">Descartar</button>' +
         '<button type="button" class="com-btn" id="fila-pular">Pular por agora</button>' +
         '</div><p class="com-nota">No Instagram: "Enviar mensagem" → colar → enviar. Depois volte aqui e clique em "Enviei".</p></div>';
+      ligarGarimpo(el);
       const botoes = el.querySelectorAll('.com-fila-botoes button');
       const texto = el.querySelector('#fila-texto');
       el.querySelector('#fila-copiar').onclick = async () => {
@@ -590,8 +663,9 @@ if (typeof window !== 'undefined') {
       }
       $('#com-email').textContent = session.user.email;
       montar();
-      try { await carregar(); } catch (e) { raiz.insertAdjacentHTML('afterbegin', '<p class="com-erro">Não consegui carregar os leads: ' + esc(e.message || e) + '</p>'); return; }
+      try { await Promise.all([carregar(), carregarPedidos()]); } catch (e) { raiz.insertAdjacentHTML('afterbegin', '<p class="com-erro">Não consegui carregar os leads: ' + esc(e.message || e) + '</p>'); return; }
       abrirAba(abaAtual);
+      vigiarGarimpo();
     });
   })();
 }

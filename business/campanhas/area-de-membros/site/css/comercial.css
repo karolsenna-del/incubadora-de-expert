@@ -157,3 +157,15 @@
   .com-linha2 { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .com-funil-barra, .com-aviso, .com-coluna { transition: none; } }
+
+/* Garimpar novos leads (aba Abordar) */
+.com-garimpo { background: #fff; border: 1px solid var(--com-cinza-2); border-radius: 12px; padding: 12px 14px; margin-bottom: 14px; display: flex; flex-direction: column; gap: 10px; }
+.com-garimpo summary { font-weight: 700; cursor: pointer; list-style: none; display: flex; align-items: center; gap: 8px; }
+.com-garimpo summary::-webkit-details-marker { display: none; }
+.com-garimpo summary::before { content: '+'; display: inline-flex; width: 22px; height: 22px; border-radius: 999px; align-items: center; justify-content: center; background: var(--com-laranja); color: #fff; font-size: 16px; line-height: 1; }
+.com-garimpo[open] summary::before { content: '−'; }
+.com-garimpo[open] > *:not(summary) { margin-top: 10px; }
+.com-garimpo p { margin: 0; }
+.com-garimpo-qtd select { width: 120px; }
+.com-garimpo .com-btn { align-self: flex-start; }
+.com-garimpo-andando { border-color: var(--com-laranja); background: var(--com-laranja-claro); }

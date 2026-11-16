@@ -58,6 +58,8 @@ Ver `tasks/perfil-cliente.md`. Primeira vez: Gestor de Infra cria a planilha "Ga
 | 17/10/2026 | karol | #auditorafiscal | hashtag (20) | 12 | 2 (0 alta) | ~0,08 | teste · RUIM: cursinho, órgão, concurseira — não usar |
 | 17/10/2026 | karol | #enfermeiraconcursada | hashtag (20) | 1 | 0 | ~0,08 | teste · quase nada volta — não usar |
 | 25/10/2026 | karol | terapeuta/arquiteta/dentista/harmonização/esteticista + 51 antigos (busca web → Apify) | 116 → 62 classificados → 50 entregues | US$1,26 | 1ª rodada com Apify só pra leitura. Melhor rendimento: nutricionista, fisioterapeuta, advogada, fono (alta). Harmonização/estética: muito média. Dentista: muita clínica |
+| 13/11/2026 | karol | fonoaudióloga | busca web (6 consultas) → Apify | 32 → 11 classificados | 10 (alta 5, média 4, baixa 1) | ~0,30 | rodada do botão do painel (máx. 10). Bom rendimento: fono individual, muita especialista/mestre/doutora. Perdas: 4 privadas, 5 fora da faixa, 2 inativas |
+| 16/11/2026 | karol | advogada · dentista · contador · psiquiatra | busca web (14 consultas) → Apify | 112 → 39 classificados (advogada 33→17, dentista 27→4, contador 21→6, psiquiatra 31→12) | 30 (alta 16, média 14; advogada 14, psiquiatra 10, contador 4, dentista 2) | 1,38 | rodada do botão do painel (máx. 30), 9 fora do corte. MELHORES: advogada (previdenciária/trabalhista com anos na bio) e psiquiatra (CRM+RQE, posta conteúdo técnico). FRACOS: dentista (12 de 27 descartados: inativos, conteúdo pessoal, 1 já vende curso) e contador (muito escritório e perfil pessoal com CRC). 16 perfis não existem mais |
 
 ## Consultas que funcionam (busca web, fase 1)
 
@@ -73,6 +75,17 @@ Ver `tasks/perfil-cliente.md`. Primeira vez: Gestor de Infra cria a planilha "Ga
 | 25/10/2026 | karol | `"terapeuta holística"/"integrativa"` ou `"thetahealing"` | ~5/10 | vem perfil em espanhol/francês e escola de terapeuta |
 | 25/10/2026 | karol | `"dentista" "anos de experiência"`, `"arquiteta" + cidade/CAU` | ~2-4/10 | dentista traz quase só clínica (muitas de Portugal/Espanha); arquiteta rende pouco, melhor com "interiores" + cidade |
 | 25/10/2026 | karol | `"esteticista" "anos de experiência"` / `"há" anos "atendimento"` | 0 | vazio — usar "biomédica esteta"/"cosmetóloga" |
+| 13/11/2026 | karol | `"fonoaudióloga" "anos de experiência"` / `"fonoaudióloga há" anos` | ~7/10 | melhor par pra fono; vem 1-2 clínica e 1 em espanhol |
+| 13/11/2026 | karol | `"fonoaudióloga" "CRFa"` + cidade, `"fonoaudióloga" "linguagem infantil" "especialista"` | ~7-9/10 | bom volume individual; CRFa garante brasileira |
+| 13/11/2026 | karol | `"fonoaudióloga" "atendimento"` + BH/MG | ~4/10 | metade é clínica |
+| 13/11/2026 | karol | `"fonoaudióloga" "servidora pública" OR "concursada"` | 0/10 | NÃO USAR: o OR derruba o termo, só volta servidora de outra área |
+| 16/11/2026 | karol | `"advogada" "anos de experiência"` / `"advogada há" anos "atendimento"` | ~8/10 | ótimo: advogada individual com tempo de carreira na bio |
+| 16/11/2026 | karol | `"advogada" "OAB" "previdenciário" "especialista"` / `"OAB" "atendimento online"` | ~6/10 | bom volume; metade posta pouco ou só pessoal |
+| 16/11/2026 | karol | `"psiquiatra" "CRM" "RQE"` / `+ "atendimento online" "Dra."` / `+ "TDAH" "ansiedade"` | ~6/10 | bom: RQE garante especialista brasileiro; vem 1-2 inativos |
+| 16/11/2026 | karol | `"psiquiatra" "anos de experiência"` | ~3/10 | metade inativa, política ou já vende curso/programa |
+| 16/11/2026 | karol | `"dentista" "CRO" "anos de experiência"` / `"CRO" "especialista" "Dra."` / `"dentista há" anos` | ~2/10 | RUIM: muita conta inativa ou pessoal, clínica e quem já vende curso |
+| 16/11/2026 | karol | `"contador"/"contadora" "CRC"` (+ "anos de experiência", "dicas", "planejamento tributário", "Simples Nacional") | ~2/10 | RUIM: escritório ou perfil pessoal com CRC na bio; os bons vieram de "especialista em MEI e Simples" e "contador e advogado" |
+| 16/11/2026 | karol | `"dentista" "CRO" "consultório" "Dra."` | 0/10 | NÃO USAR: só clínica/consultório como empresa |
 
 ## Histórico de régua (perfil de busca)
 

@@ -45,4 +45,4 @@
 
 | # | O que aconteceu | Fix | Regra criada |
 |---|----------------|-----|-------------|
-| | (nenhum ainda) | | |
+| 1 | 16/11/2026: Apify deu 502 ao consultar o status do run de posts; o `posts` caiu e o resultado pago ficava perdido (rodar de novo = pagar de novo) | `rodarAtor` tenta de novo em 5xx/rede (até 5x) e `posts --run {id}` retoma um run já pago | Não (fix no script; nunca rodar o mesmo ator de novo sem antes tentar `--run`) |

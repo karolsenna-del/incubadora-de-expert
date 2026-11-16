@@ -50,3 +50,41 @@
 - [x] Central sem o cartão da planilha CRM (11/11, publicada e conferida)
 - [x] Números clicáveis (11/11): cartões, funil, "agora" e tabela por origem abrem a lista de quem compõe o número (com quem passou / ficou parado, data da etapa e etapa de hoje); clicar na pessoa abre a ficha. Ensaio: listas batem com o número no computador e no celular, sem erro. Publicado e conferido (11/11)
 - [ ] Marcar como Aluno as vendas que o painel não ligou: Método VIP 24/09, 27/10, 29/10 e Sprint 20/08, 14/09 (Voomp sem e-mail no CRM)
+
+## Botão "Garimpar novos leads" (pedido da Karol, 13/11/2026)
+
+Decisão: caminho A. O botão na aba Abordar grava um pedido. Um robô no computador da Karol confere os pedidos a cada
+15 minutos e roda o Garimpeiro sozinho. Os termos ficam editáveis e vêm preenchidos com os do último garimpo.
+
+- [x] Banco: tabela `garimpo_pedidos` (só a Karol lê e grava pelo painel) + semente com os termos da rodada 25/10
+- [x] Painel: bloco na aba Abordar (termos, quantidade, botão, status do último pedido)
+- [x] Robô: `agents/garimpeiro-leads-instagram/tools/pedidos.mjs` (pega o pedido, roda o Garimpeiro em modo automático, grava o resultado)
+- [x] Agendador do Windows a cada 15 min (tarefa "Garimpo - pedidos do painel" → `tools/pedidos-agendado.vbs`; testado: vê o pedido rodando e espera)
+- [x] Teste de ponta a ponta (13/11, pedido 2: fonoaudióloga, máx 10 → 10 leads novos no painel com mensagem, ~US$0,30)
+- [x] Publicado pela Karol (dpl_Cwp4aaTeDnRJhaxympLWWDBEv7Gs) e conferido no domínio
+- [ ] Conferir o 1º pedido que rodar pelo agendador (o teste rodou a partir da conversa; a chave do Apify vem do 1Password, que precisa estar desbloqueado)
+
+## Fichas duplicadas do WhatsApp (13/11/2026)
+
+- Causa: a mensagem do WhatsApp procurava a ficha pelo celular idêntico; com/sem o 9 (ou 55/00) criava ficha nova.
+- Feito: 52 fichas "WhatsApp (chegou sozinho)" juntadas na ficha antiga da pessoa (2 alunos, 10 em sessão, 13 compradores
+  de outro produto, 27 da lista da Black), mensagens levadas junto; Flávia Freitas (Garimpo + WhatsApp + pré-diagnóstico)
+  juntada à mão e posta em Sessão; Rodrigo Teixeira ganhou nome/e-mail do cadastro de compradores.
+- Correção no banco: `sql/whatsapp-sem-duplicar.sql` (compara DDD + 8 últimos dígitos; nome da agenda só entra em ficha sem nome).
+  Antes: `sql/backup-crm_ingest_whatsapp_event-2026-11-13.sql`. Ensaio com desfazer: mensagem do Luiz sem o 9 caiu na ficha dele.
+- Limite: lead do Garimpo só tem @, então quando ele chama no WhatsApp o sistema não tem como saber que é o mesmo (caso Flávia).
+  O pré-diagnóstico vai pra planilha, não pro CRM.
+
+## Coluna "Diagnóstico" (15/11/2026)
+
+- Antes: quem respondia o pré-diagnóstico caía direto em Sessão (83 fichas), misturando quem fez sessão com quem sumiu.
+- Agora: pré-diagnóstico → **Diagnóstico** (lista de recuperação). **Sessão** = fez a sessão (prova: gravação ou anotação
+  da Karol); a Karol move o card depois da conversa. A dinâmica "Crie seu método em 1 hora" não conta como pré-diagnóstico.
+- Separação feita com a Karol pelas gravações do Drive (pasta Meet Recordings + gravações por nome): 36 ficaram em Sessão,
+  15 foram para Diagnóstico, 30 da dinâmica para Abordado (sessão oferecida e não aceita), Karen Altafini (VIP) e
+  Rômulo Toledo (consultoria) para Aluno. 8 gravações achadas no Drive viraram o link da ficha.
+- Banco: `sql/crm-etapa-diagnostico.sql` (etapa nova, gatilho do pré-diagnóstico, reclassificação com histórico corrigido).
+  Ensaio com desfazer antes; teste: pré-diagnóstico novo → Diagnóstico, dinâmica → Novo.
+- Cuidado aprendido: ligar gravação a ficha só pelo primeiro nome erra (Luciano da agência ≠ Luciano da Maxichip; Iza
+  tinha gravação de outro encontro). Na dúvida, perguntar à Karol.
+- [x] Publicado pela Karol (dpl_7f9BjUfyMd7YJQ6PtkNJU75jD57U) e conferido no domínio
