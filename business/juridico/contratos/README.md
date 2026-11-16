@@ -16,6 +16,7 @@ Estes documentos foram redigidos por IA como **ponto de partida estruturado**, n
   1. **Uso de imagem/case (Cl. 7):** assinar o contrato já autoriza usar nome, imagem, voz, depoimento e resultados como case/prova/conteúdo, sem autorização por peça (8.1 e 8.2 ajustadas pra não conflitar).
   2. **Agente de IA do método do cliente (Cl. 6.4):** é propriedade do cliente, uso livre e sem restrição (pode dar pros alunos dele). Os agentes próprios da Karol (ex.: 6 agentes do Grupo, agentes do Expert360º) continuam dela.
   3. **Natureza do serviço (Cl. 3.1):** mentoria/consultoria por padrão; **Sprint do Método é serviço de execução** (Karol faz, cliente aprova). Nenhum serviço garante resultado financeiro.
+- **16/11/2026 (decisão Karol):** saiu da Cl. 5.4 dos Termos Gerais a proibição de repassar a terceiros o acesso aos agentes de IA da CONTRATADA: os agentes agora ficam dentro da Área de Membros, sem link pra compartilhar. A propriedade dos agentes (Cl. 6.1) continua da Karol.
 - **Contratos preenchidos por cliente** (com CPF/endereço) ficam em `business/juridico/contratos-clientes/{ano}/`, fora do git (`.gitignore`). Dados do cliente em texto corrido no preâmbulo, igual ao da CONTRATADA.
 
 ## Estrutura

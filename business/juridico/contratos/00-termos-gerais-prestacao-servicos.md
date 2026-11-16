@@ -52,7 +52,7 @@
 
 5.3. Efetuar o pagamento na forma e nos prazos definidos no Instrumento Particular.
 
-5.4. Não reproduzir, revender, redistribuir ou repassar a terceiros os materiais, roteiros, ferramentas e/ou acesso a agentes de IA de propriedade da CONTRATADA, nos termos da Cláusula 6 — o que não se aplica ao agente de IA do método do CONTRATANTE (Cláusula 6.4).
+5.4. Não reproduzir, revender, redistribuir ou repassar a terceiros os materiais, roteiros e ferramentas de propriedade da CONTRATADA, nos termos da Cláusula 6 — o que não se aplica ao agente de IA do método do CONTRATANTE (Cláusula 6.4).
 
 ---
 

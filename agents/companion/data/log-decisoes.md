@@ -4,6 +4,12 @@
 
 <!-- Formato:
 
+## 16/11/2026 — Contratos: sai a proibição de repassar acesso aos agentes de IA
+**Contexto:** os agentes de IA da Karol saíram dos links do ChatGPT e foram pra dentro da Área de Membros, então não há mais link pra compartilhar.
+**Decisão:** a Cl. 5.4 dos Termos Gerais deixa de proibir o repasse do acesso aos agentes; continua proibido repassar materiais, roteiros e ferramentas. A propriedade dos agentes (Cl. 6.1) não muda. Vale a partir de agora, pra todos os contratos.
+**Racional:** pedido da Karol; a cláusula não tem mais o que proteger.
+**Impacto:** Termos Gerais, README e os 10 PDFs dos modelos atualizados; contratos VIP da Sandra e da Juliana já saem com a versão nova.
+
 ## 16/11/2026 — Sprint promete 50 leads garimpados
 **Contexto:** apresentação do Sprint; persona da Iza (mães) não aparece em busca por bio.
 **Decisão:** o Sprint promete o Rastreador com os conhecidos + 50 leads garimpados. O garimpo começa depois da persona definida (Semana 2) e é entregue semanas depois. Os conhecidos continuam sendo a primeira leva de abordagem.

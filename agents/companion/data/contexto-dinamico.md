@@ -17,7 +17,11 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Contratos do Método VIP da Sandra e da Juliana (16/11)
+PDFs em `business/juridico/contratos-clientes/2026/` (fora do git): `sandra-almeida-metodo-vip.pdf` e `juliana-pasqual-metodo-vip.pdf`, prontos pro ZapSign. A Juliana vai só com RG, sem CPF e sem e-mail (Karol, 16/11). Pagamento (4.2) preenchido como quitado pela Voomp em 27/10 (Sandra) e 29/10 (Juliana), confirmado pela Karol (16/11). Termos Gerais 5.4 sem a proibição de repassar o acesso aos agentes de IA (agora ficam na área de membros); os 10 PDFs dos modelos foram gerados de novo.
+
 ## Sessão da Iza Fachinelli pronta (16/11)
+**16/11: Iza faltou à sessão** (já tinha remarcado antes, com aviso; Karol não contou essa). Remarcação dada como a última: Karol ofereceu 17/11 16h30 ou 19/11 16h30; próxima mudança = sessão paga R$97. Esperando ela escolher.
 Pré-diagnóstico de 05/11 gravado no Diagnóstico do Expert (visabellafachinelli@gmail.com). Roteiro em `business/campanhas/incubadora-de-expert-individual/sessoes-estrategicas/izabella-fachinelli-sessao.md`, usando também a conversa de 29/07 (Meet): ela gravou curso/ebook em vez de abrir a comunidade recomendada e ainda não vendeu. Hipóteses: perfil Conectora com traço Diretivo, marido convidado pro fim. Oferta (Karol, 16/11): VIP ou Sprint, decidida pela pergunta do acesso à Arcane (acabando → Sprint; ativo → VIP); Express fora. Depois da sessão: mover a ficha no painel Comercial. Apresentação do Sprint criada (16/11): `business/campanhas/sprint-do-metodo/apresentacao-oferta-sprint.html`, 13 slides no visual da Express/VIP, com slide de ferramentas (direção, controle e organização pro mentor e aluno + 1 por módulo do método), quem sou (13 anos tradicional x 6 anos no digital) e o Funil de Vendas Secretas em 9 peças com onboarding; botão pro checkout da página (conferido 16/11: R$5.000 ou 12x R$500; o /16365 também). Card "Diagnóstico do Expert (Radar)" adicionado na Central (Comercial > CRM e leads); publicado pela Karol em 16/11 (dpl_HW1wg5ENVCbYv3W6ueSGmhbbcNw1) e conferido no ar.
 
 ## Roteiros e legendas da semana 16 do Rota100k prontos (16/11)
