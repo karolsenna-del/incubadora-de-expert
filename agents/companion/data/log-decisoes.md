@@ -1414,3 +1414,33 @@ Por ordem explícita, corrigir e enviar somente o pipeline, sem publicar nem dis
 ## 16/11/2026 — Antes de Começar v3 substitui a aula gravada
 **Decisão:** a aula de orientações passa a ter 4 passos (grupo, pré-diagnóstico, Drive, Expert-IAs) e ensina os agentes na área de membros, sem citar a Biblioteca de IAs antiga.
 **Impacto:** regravar a aula; trocar vídeo e descrição na área de membros.
+
+## 16/11/2026 — Expert Plan vira aba "Plano" no Painel Comercial
+**Contexto:** a Karol quis o Expert Plan (estratégico, tático, operacional) dentro do comercial/financeiro.
+**Decisão:** opção B (primeiro plano montado pelas vendas reais, ela ajusta no painel); plano começa em dez/2026 (12 meses); tabela nova `plano_expert` aprovada. Tudo numa aba "Plano" do Comercial, com o caixa do financeiro como realizado.
+**Racional:** o realizado já existe no CRM e no financeiro; só faltava guardar o plano e comparar, sem digitar rastreador.
+**Impacto:** `site/js/plano.js`, aba Abordar mostra a meta da semana; taxas de Vendas Secretas começam pelas reais (resposta 5%, fechamento 20%).
+
+## 17/11/2026 — Paty sem reserva: esperar a cota voltar
+**Contexto:** Hermes (Paty) parou por cota semanal do Codex; fallback OpenRouter quebrado (modelo descontinuado, sem crédito).
+**Decisão:** não recarregar o OpenRouter agora; esperar a cota voltar (~7h de 18/11).
+**Racional:** sem gasto; a parada é temporária.
+**Impacto:** a Paty segue sem reserva e fica muda sempre que a cota estourar (~1x/semana).
+
+## 17/11/2026 — Expert Plan: Garimpo vira funil frio à parte
+**Contexto:** o plano pedia 200 abordagens por semana porque usou a resposta do Garimpo (4,3%, frio) em Vendas Secretas (quente).
+**Decisão:** Garimpo entra como funil de abordagem fria, ao lado dos outros, contado pela capacidade (8 por dia útil) e pela conta da Karol (45 frias → 1 sessão marcada); as vendas dele são extra. Vendas Secretas volta a 50% de resposta.
+**Racional:** "quem tem 2000 pessoas pra abordar? 40 frias por dia é fora da realidade" (Karol).
+**Impacto:** dez/26 pede 20 quentes + 40 frias por semana e 6 sessões.
+
+## 17/11/2026 — Agente Carrossel Expert: próprio, não alteração da squad Arcane
+**Contexto:** Karol quer replicar o GPT "@vinigrevy | Carrossel de Eventos" (dores → motivos pra comprar, 8 blocos).
+**Decisão:** agente próprio (não mexer na squad de carrossel da Arcane), gancho de quebra de crença igual ao do Vini, versão dela (Laura) + versão dos alunos na Expert-IAs com a persona de cada um.
+**Racional:** a squad da Arcane é sobrescrita nas atualizações; a estrutura do Vini é o que funcionou na conversa dela.
+**Impacto:** /carrossel-expert disponível aqui; agente 11 da Expert-IAs pronto pra publicar.
+
+## 17/11 — Iza paga R$97 pela sessão remarcada pela 3ª vez
+**Contexto:** Iza faltou em 16/11, remarcou p/ 17/11 17h e mudou de novo p/ quinta 19/11 16h (Brasília). Ela mesma disse "eu te pago, não tem problema"; Karol agendou sem tocar no assunto.
+**Decisão:** aceitar a oferta dela: sessão R$97 via Pix, abatido do investimento se ela fechar VIP ou Sprint.
+**Racional:** a regra (1 remarcação, depois paga) já tinha sido avisada; cobrar com desconto mantém o combinado sem atrapalhar a venda.
+**Impacto:** mensagem pronta pra Karol enviar; sessão de quinta garantida com o comprovante.

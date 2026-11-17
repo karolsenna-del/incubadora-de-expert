@@ -2,7 +2,7 @@
 // Site estático: HTML + JS puro + Supabase JS. Tabelas: fin_lancamentos, fin_regras, fin_config.
 
 const FIN_EMAIL = 'karolsenna@incubadoradeexpert.com.br';
-const FIN_CATEGORIAS = ['Ferramentas e software', 'Tráfego e anúncios', 'Equipe e serviços', 'Taxas e tarifas', 'Impostos (DAS)', 'Educação', 'Juros e encargos', 'Outros PJ'];
+const FIN_CATEGORIAS = ['Ferramentas e software', 'Tráfego e anúncios', 'Equipe e serviços', 'Comissões de indicação', 'Taxas e tarifas', 'Impostos (DAS)', 'Educação', 'Juros e encargos', 'Outros PJ'];
 // Categorias da vida pessoal (aba Pessoal, Karol 03/11)
 const FIN_CATEGORIAS_PF = ['Mercado', 'Alimentação', 'Casa e contas', 'Saúde', 'Beleza e cuidados', 'Filhos', 'Roupas e compras', 'Transporte', 'Viagens', 'Assinaturas', 'Educação', 'Presentes', 'Juros e tarifas', 'Outros PF'];
 const FIN_PRODUTOS = ['Método VIP', 'Sprint do Método', 'Incubadora Express', 'Grupo', 'Individual', 'Expert360º', 'Diagnóstico Ferramentas', 'Método Express/Destrava Expert', 'Comissões de afiliada', 'Outros'];

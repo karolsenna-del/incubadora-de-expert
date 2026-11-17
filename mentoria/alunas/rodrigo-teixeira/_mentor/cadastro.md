@@ -24,7 +24,7 @@
 - **ID / Número do pedido na plataforma:** HP2335209848
 - **Data de início:** 05/07/2025
 - **Acesso até:** (verificar — boleto vencia 18/07/2025)
-- **Como chegou até a Karol:** (a preencher)
+- **Como chegou até a Karol:** comprou o Workshop e depois entrou na Incubadora em Grupo (Karol, 16/11/2026)
 
 ---
 

@@ -169,3 +169,34 @@
 .com-garimpo-qtd select { width: 120px; }
 .com-garimpo .com-btn { align-self: flex-start; }
 .com-garimpo-andando { border-color: var(--com-laranja); background: var(--com-laranja-claro); }
+
+/* ---------- Plano (Expert Plan) ---------- */
+.pl-barra { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--com-cinza-1); padding: 8px 0 12px; }
+.pl-barra span { font-size: 13px; color: var(--com-texto-2); font-weight: 600; }
+.pl-barra .com-btn:disabled { opacity: .45; cursor: default; }
+.pl-tabela th, .pl-tabela td { white-space: nowrap; text-align: right; vertical-align: top; }
+.pl-tabela th:first-child, .pl-tabela td:first-child { text-align: left; white-space: normal; min-width: 210px; position: sticky; left: 0; background: #fff; z-index: 1; }
+.pl-tabela th.pl-agora { color: var(--com-laranja); }
+.pl-tabela .pl-total td { font-weight: 700; border-top: 1px solid var(--com-cinza-3); }
+.pl-tabela .pl-realizado td { color: var(--com-laranja); font-weight: 700; }
+.pl-in { font: inherit; font-size: 14px; border: 1px solid var(--com-cinza-3); border-radius: 8px; padding: 6px 8px; background: #fff; color: var(--com-preto); min-height: 34px; }
+.pl-in:focus { outline: 2px solid var(--com-laranja); outline-offset: 1px; border-color: var(--com-laranja); }
+.pl-n { width: 64px; text-align: right; }
+.pl-nome { width: 100%; font-weight: 700; }
+.pl-prod-linha { display: flex; gap: 6px; margin-top: 6px; align-items: center; }
+.pl-preco { width: 92px; text-align: right; }
+.pl-tirar { font: inherit; font-size: 13px; border: 0; background: none; color: var(--com-texto-2); cursor: pointer; padding: 6px 8px; min-height: 34px; }
+.pl-tirar:hover { color: var(--com-laranja); }
+.pl-real { display: block; font-size: 12px; color: var(--com-texto-2); margin-top: 2px; }
+.pl-ok { font-weight: 700; color: var(--com-preto); }
+.pl-ruim { font-weight: 700; color: #B42318; }
+#pl-add { margin-top: 10px; }
+.pl-taxas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.pl-taxa-grupo { border: 1px solid var(--com-cinza-2); border-radius: 12px; padding: 12px; background: #fff; }
+.pl-taxa-grupo h4 { margin: 0 0 8px; font-size: 14px; }
+.pl-taxa { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; align-items: center; font-size: 13px; padding: 4px 0; }
+.pl-taxa small { grid-column: 1 / -1; color: var(--com-texto-2); font-size: 12px; }
+.pl-taxa-in { display: inline-flex; align-items: center; gap: 4px; }
+.pl-taxa-nota { display: block; color: var(--com-texto-2); font-size: 12px; margin-top: 6px; }
+.pl-semana-linha { background: var(--com-preto); color: #fff; border-radius: 12px; padding: 10px 14px; font-size: 14px; margin-bottom: 10px; }
+.pl-semana-linha b { color: var(--com-laranja); }

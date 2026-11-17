@@ -185,6 +185,7 @@ if (typeof window !== 'undefined') {
         lerTudo('crm_etapas', 'lead_id,etapa,em,fonte,aproximada', 'em'),
       ]);
       porLead = comAgruparHistorico(historico);
+      try { if (window.Plano) await window.Plano.carregar(sb); } catch (e) { console.error('Plano', e); }
     }
 
     const leadsFiltrados = () => leads.filter((l) => !filtroOrigem || l.origem === filtroOrigem);
@@ -197,14 +198,16 @@ if (typeof window !== 'undefined') {
         '<button class="com-aba ativa" data-aba="indicadores" type="button">Indicadores</button>' +
         '<button class="com-aba" data-aba="leads" type="button">Leads</button>' +
         '<button class="com-aba" data-aba="abordar" type="button">Abordar <span id="com-fila-n" class="com-pilula"></span></button>' +
+        '<button class="com-aba" data-aba="plano" type="button">Plano</button>' +
         '</nav>' +
         '<section id="aba-indicadores" class="com-painel"></section>' +
         '<section id="aba-leads" class="com-painel" hidden></section>' +
         '<section id="aba-abordar" class="com-painel" hidden></section>' +
+        '<section id="aba-plano" class="com-painel" hidden></section>' +
         '<div id="com-aviso" class="com-aviso" role="status" aria-live="polite"></div>';
       document.querySelectorAll('.com-aba').forEach((b) => (b.onclick = () => abrirAba(b.dataset.aba)));
       const pedida = new URLSearchParams(location.search).get('aba');
-      if (['indicadores', 'leads', 'abordar'].includes(pedida)) abaAtual = pedida;
+      if (['indicadores', 'leads', 'abordar', 'plano'].includes(pedida)) abaAtual = pedida;
     }
 
     function abrirAba(aba) {
@@ -596,7 +599,7 @@ if (typeof window !== 'undefined') {
     function renderAbordar() {
       const el = $('#aba-abordar');
       const restantes = Math.max(fila.length - filaPos, 0);
-      const topo = garimpoHtml() + '<div class="com-fila-topo"><span>' + filaSessao.enviados + ' enviadas · ' + filaSessao.descartados + ' descartadas nesta sessão · <b>' + restantes + ' na fila</b></span></div>';
+      const topo = garimpoHtml() + (window.Plano ? window.Plano.semanaHtml(historico, leads) : '') + '<div class="com-fila-topo"><span>' + filaSessao.enviados + ' enviadas · ' + filaSessao.descartados + ' descartadas nesta sessão · <b>' + restantes + ' na fila</b></span></div>';
       if (filaPos >= fila.length) {
         el.innerHTML = topo + '<div class="com-fila-cartao com-fila-fim"><h2>Fila zerada</h2><p>Todo lead novo com mensagem pronta já foi abordado ou descartado. Use "Garimpar novos leads" acima pra buscar mais.</p></div>';
         ligarGarimpo(el);
@@ -649,6 +652,7 @@ if (typeof window !== 'undefined') {
       atualizarPilula();
       if (abaAtual === 'indicadores') renderIndicadores();
       else if (abaAtual === 'leads') renderQuadro(false);
+      else if (abaAtual === 'plano') { if (window.Plano) window.Plano.render($('#aba-plano'), { leads, historico, porLead, aviso }); }
       else renderAbordar();
     }
 

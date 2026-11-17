@@ -88,3 +88,25 @@ Decisão: caminho A. O botão na aba Abordar grava um pedido. Um robô no comput
 - Cuidado aprendido: ligar gravação a ficha só pelo primeiro nome erra (Luciano da agência ≠ Luciano da Maxichip; Iza
   tinha gravação de outro encontro). Na dúvida, perguntar à Karol.
 - [x] Publicado pela Karol (dpl_7f9BjUfyMd7YJQ6PtkNJU75jD57U) e conferido no domínio
+
+## Expert Plan no painel (16/11/2026)
+
+- Pedido: levar o Expert Plan (estratégico → tático → operacional) pro comercial/financeiro.
+- Decisões da Karol: (B) primeiro plano montado pelo agente a partir das vendas reais, ela ajusta no painel;
+  plano começa em dez/2026 (12 meses: dez/26 a nov/27); pode criar o lugar novo no banco.
+- Contas iguais às da planilha M5.1 (`_gerar-expert-plan.py`): distribuição por estágio, conta de trás pra frente com ROUNDUP,
+  1 sessão por venda, follow-up = sessões realizadas − vendas, capacidade de 6 sessões/semana.
+- Realizado: vendas = CRM (etapa Aluno, produto da ficha); faturamento = financeiro (receitas no caixa − estornos);
+  abordagens/sessões = histórico de etapas; follow-ups = anotações do CRM.
+- [x] Banco: tabela `plano_expert` (1 linha, plano em JSON, só a Karol) — `sql/plano-expert.sql`
+- [x] Primeiro plano gravado (VIP 2/mês, Express 1/mês, Sprint em meses alternados; estágio 2; meta 12 meses R$96.000)
+- [x] Aba "Plano" no Comercial (`js/plano.js`): painel do mês, estratégico, tático, operacional, taxas reais x plano
+- [x] Meta da semana no topo da aba Abordar
+- [x] Teste local das contas (Node, dados reais: dez = 200 abordagens e 5 sessões por semana; salvar grava)
+- [x] Publicado pela Karol (dpl_6WPkcfuJPWGzW7w6USMVbfX8pX1z) e conferido no domínio (arquivos novos no ar)
+- Achado: a resposta real à abordagem é 4,3% (6 de 140) e conversa→sessão 9,1%; a planilha supõe 50% e 24%. Por isso o plano pede 200 abordagens/semana.
+- 17/11 ajuste (Karol: "40 abordagens frias por dia é fora da realidade"): o 4,3% era do Garimpo (frio) e foi usado em Vendas Secretas (quente).
+  Agora: Vendas Secretas = quente, resposta 50% (planilha) e fechamento 20% (real); Garimpo = funil frio à parte, conta de frente pra trás
+  pela capacidade (8/dia útil, ritmo real de ~40/semana) e taxa da Karol (45 frias → 1 sessão marcada); vendas do Garimpo são extra, por cima da meta.
+  Dez: 20 quentes + 40 frias por semana, 6 sessões (cabe); nos meses com Sprint dá 7 sessões (passou).
+- [x] Ajuste publicado pela Karol (dpl_2LEYgzudUbX1pwp88A1X55azc9Lj) e conferido no domínio
