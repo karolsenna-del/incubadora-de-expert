@@ -111,14 +111,39 @@
   <div class="modal-overlay" id="modal-chat-agente">
     <div class="modal-card chat-card">
       <span class="eyebrow" id="chat-agente-titulo">Agente</span>
+      <div class="chat-lista" id="chat-lista" hidden></div>
       <div class="chat-mensagens" id="chat-mensagens"></div>
+      <div class="chat-aviso-longa" id="chat-aviso-longa" hidden>
+        <p>Esta conversa ficou longa. As respostas saem melhores numa conversa nova: o agente leva um resumo do que vocês já fizeram e esta fica guardada em "Conversas".</p>
+        <div><button class="btn-concluir" id="btn-chat-continuar" type="button">Continuar numa conversa nova</button><button class="btn-secundario" id="btn-chat-agora-nao" type="button">Agora não</button></div>
+      </div>
+      <div class="chat-anexos" id="chat-anexos" hidden></div>
       <div class="chat-input-linha">
-        <textarea id="chat-input" placeholder="Escreve sua mensagem..." rows="2"></textarea>
+        <button class="chat-anexar" id="btn-chat-anexar" type="button" aria-label="Anexar imagem ou arquivo" title="Anexar imagem, PDF, Word ou texto">+</button>
+        <input type="file" id="chat-arquivo" multiple accept="image/*,.pdf,.docx,.txt,.md,.csv" hidden>
+        <textarea id="chat-input" placeholder="Escreve sua mensagem... (dá pra colar print aqui)" rows="2"></textarea>
         <button class="btn-concluir" id="btn-chat-enviar">Enviar</button>
       </div>
-      <div class="modal-acoes">
+      <div class="modal-acoes chat-rodape">
+        <button class="btn-secundario" id="btn-chat-conversas" type="button">Conversas</button>
+        <button class="btn-secundario" id="btn-chat-contexto" type="button">Meu contexto</button>
         <button class="btn-secundario" id="btn-chat-nova">Nova conversa</button>
         <button class="btn-secundario" id="btn-chat-fechar">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEU CONTEXTO (Expert-IAs) -->
+  <div class="modal-overlay" id="modal-meu-contexto">
+    <div class="modal-card contexto-card">
+      <span class="eyebrow">Expert-IAs</span>
+      <h2>Meu contexto</h2>
+      <p class="modal-texto">O que você salvar aqui vai junto pra todo agente, em toda conversa. Preencha o que já tiver; dá pra completar depois.</p>
+      <div id="contexto-campos"></div>
+      <p class="contexto-status" id="contexto-status" role="status"></p>
+      <div class="modal-acoes">
+        <button class="btn-secundario" id="btn-contexto-fechar" type="button">Fechar</button>
+        <button class="btn-concluir" id="btn-contexto-salvar" type="button">Salvar</button>
       </div>
     </div>
   </div>
@@ -145,5 +170,6 @@
   <script src="js/descricoes-aulas.js"></script>
   <script src="js/covers.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/chat-ias.js"></script>
 </body>
 </html>

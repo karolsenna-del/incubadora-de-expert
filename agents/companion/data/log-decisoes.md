@@ -1444,3 +1444,15 @@ Por ordem explícita, corrigir e enviar somente o pipeline, sem publicar nem dis
 **Decisão:** aceitar a oferta dela: sessão R$97 via Pix, abatido do investimento se ela fechar VIP ou Sprint.
 **Racional:** a regra (1 remarcação, depois paga) já tinha sido avisada; cobrar com desconto mantém o combinado sem atrapalhar a venda.
 **Impacto:** mensagem pronta pra Karol enviar; sessão de quinta garantida com o comprovante.
+
+## 17/11/2026 — Carrosséis: venda e alcance em agentes separados
+**Contexto:** segundo modelo de carrossel (cases de empresas, GPT Vini Viral).
+**Decisão:** um agente só pra Karol que pergunta venda ou alcance (ela corrigiu no mesmo dia: eu tinha separado em dois); os alunos só com o de venda. Alcance sempre fecha com o convite da Live Expert360 e CTA "Comente LIVE".
+**Racional:** escolha da Karol; o de alcance depende de pesquisa de números reais, que o agente da área de membros não faz.
+**Impacto:** modo alcance dentro do /carrossel-expert; convites da live refeitos com LIVE.
+
+## 17/11/2026 — Expert-IAs: anexos, Meu contexto e conversas no banco
+**Contexto:** agentes de conteúdo não liam imagem nem link; o aluno colava dossiê/posicionamento/método a cada conversa; conversa longa perde qualidade.
+**Decisão:** imagem vai direto pro agente (não fica guardada), PDF/Word/texto viram texto; link segue sem abrir. "Meu contexto" salvo uma vez e enviado a todo agente. Conversas no banco (várias por agente). Aviso a partir de 30 mensagens com "continuar numa conversa nova" com resumo.
+**Racional:** Karol: "isso dificulta muito a utilização de agentes de criação de conteúdo"; conversas no banco valem em qualquer aparelho e a Karol consegue ler pra melhorar os agentes.
+**Impacto:** tabelas `ia_conversas` e `ia_contexto`; `js/chat-ias.js`; banco gratuito com folga (17 MB de 500 MB).
