@@ -242,18 +242,18 @@ Já escolheu alguma coisa só pelo valor? Comenta.
 
 *(Os dois valores são da história 15: a mentoria da tia, R$497, e o programa de 2021, R$50 mil. ⚠️ Karol confirma se quer citar. Regra "nenhum preço" é das ofertas atuais; aqui são valores do passado.)*
 
-### 12h · Falado · Como eu formo o meu preço ⚠️
-**Abre (0-3s):** "Você cobra pouco com medo de parecer amador? Vou abrir como eu chego no meu preço."
-**Contexto:** Quase todo mundo forma preço olhando a tabela do concorrente ou chutando o que acha que o cliente pode pagar.
-**Virada:** Eu já cobrei de um jeito que confundia: um valor pela mentoria e as ferramentas e a parte técnica cobradas à parte. Parecia mais barato e confundia o cliente. Hoje eu coloco no preço tudo o que eu entrego de verdade, num valor só. E o que é limitado não é o desconto: é a minha agenda, porque eu participo diretamente de cada projeto. E o preço eu não decido sozinha na mesa: eu testo em cada conversa de venda.
-**Fecha (CTA falado):** "Se você entender isso, negocia melhor dos dois lados. Me segue."
+### 12h · Falado · Bastidor de sessão: o app que só fazia lista de compras (troca de 17/11)
+**Abre (0-3s):** "'Eu sei muito, mas não sei estruturar.' Uma mentorada minha sabia organizar qualquer despensa. E o app dela só fazia lista de compras."
+**Contexto:** Ela é personal organizer. Criou um aplicativo com um nome que prometia acabar com a bagunça. Só que dentro dele tinha uma lista de compras, e mais nada. O método de organizar a despensa ela vendia à parte, num guia em PDF. Tentava vender e não conseguia.
+**Virada:** Quando não vende, a primeira suspeita é o preço. Eu olhei pra outra coisa e falei pra ela: você não está entregando o que promete. O nome promete o fim da bagunça, e o app entrega uma lista. O conselho foi colocar o método dentro do app e deixar a lista de compras como uma função. A última, aliás. Primeiro organiza a despensa. Depois compra mais. Não antes.
+**Fecha (CTA falado):** "Antes de mexer no preço, confere se o que você entrega cumpre o que você promete. Me segue."
 
 **Legenda:**
-Meu preço não vem da tabela do concorrente.
-Vem do que eu entrego inteiro, do tempo que eu dedico e do que eu testo em cada conversa.
-Como você chega no seu preço hoje? Comenta: chute, concorrente ou conta?
+Quando ninguém compra, a primeira suspeita é o preço.
+Às vezes o problema é outro: o nome promete uma coisa e o produto entrega outra.
+O que você promete hoje e ainda não entrega? Comenta.
 
-*(Log de decisões 16/09: preço composto com add-ons virou preço único com ferramentas, agente e parte técnica inclusos; "o que é limitado é a minha agenda, porque durante 12 meses eu participo diretamente da construção do projeto". História 21: "testando preço, oferta, método… em cada sessão". Sem valor, regra da semana. ⚠️ Karol confirma se conta assim.)*
+*(Banco de mentorados, caso 24, Karol 17/11. Anônima e sem o nome do app, pra não expor a mentorada. Entrou no lugar de "Como eu formo o meu preço", que fica guardado pra outra semana.)*
 
 ### 15h · Guia · Como comparar 2 propostas
 **Situação (0-3s):** "Duas propostas na mão e medo de escolher errado?"
@@ -330,20 +330,18 @@ Eu nem imaginava que a decisão que eu adiava há anos ia chegar por uma ligaç�
 Janeiro não é começo. É quando você executa o que decidiu em novembro.
 Há quantos janeiros você diz "esse ano eu começo"? Comenta o número.
 
-### 12h · Falado · O que eu já organizo agora ⚠️
-**Abre (0-3s):** "Se sente atrasado em relação a todo mundo? Vou mostrar o que eu já organizo agora."
-**Contexto:** Eu também já vivi no modo apagar incêndio: tudo pra amanhã, nada com data.
-**Virada:** Hoje eu tenho três coisas fixas. Os vídeos já estão programados até o começo de dezembro. Tenho a revisão da semana marcada no domingo: o que andou, o que travou e o que vem. E a prospecção tem horário, às 14h, a primeira coisa do meu expediente. Não é disciplina de ferro. É tirar da cabeça o que pode estar no calendário, pra sobrar energia pro que só eu posso fazer.
-**Fecha (CTA falado):** "Planejar antes é o que me deixa descansar depois. Me segue."
+### 12h · Falado · Bastidor de sessão: 20 anos depois, travada entre duas ideias (troca de 17/11)
+**Abre (0-3s):** "'Ainda não é o momento.' Ela repetiu isso por 20 anos. Quando finalmente decidiu, travou entre duas ideias."
+**Contexto:** Foram 20 anos vendendo empréstimo consignado em banco, e outros produtos que ela não acreditava serem a melhor opção pra quem comprava. Pediu demissão. Chegou na sessão com duas ideias: um aplicativo de organização financeira pra microempresário, ou ajudar mulheres que se divorciaram, vivem da pensão e precisam se reorganizar e voltar ao mercado de trabalho.
+**Virada:** Eu disse: foca mil por cento na segunda. É mais específica, é diferente, tem propósito e vira comunidade. Ficar entre duas ideias boas também é um jeito de adiar. Quem quer começar em janeiro escolhe agora com quem vai falar.
+**Fecha (CTA falado):** "Às 15h tem as 5 coisas pra resolver antes de dezembro. A primeira é exatamente essa. Me segue."
 
 **Legenda:**
-3 coisas que eu tiro da cabeça e coloco no calendário:
-1. Conteúdo programado com semanas de antecedência.
-2. Revisão da semana marcada no domingo.
-3. Prospecção com horário fixo.
-Qual dessas você já faz? Comenta o número.
+Duas ideias boas na mão também é um jeito de não começar.
+Escolher uma não é perder a outra. É dar chance pra uma dar certo.
+Você está dividido entre quais ideias? Comenta as duas.
 
-*(Fatos: 18 cortes agendados de 16/11 a 03/12 (15/11); weekly review aos domingos (15/11, próximo 22/11); prospecção às 14h, primeira atividade do expediente (história 19). ⚠️ Karol confirma ou troca pelo que organiza de fim de ano.)*
+*(Banco de mentorados, caso 25, Karol 17/11. Anônima. Entrou no lugar de "O que eu já organizo agora". O guia das 15h abre com "escreve em uma frase quem compra de você".)*
 
 ### 15h · Guia · 5 coisas pra resolver antes de dezembro
 **Situação (0-3s):** "Se sente atrasado? Resolve isso antes de dezembro."
@@ -418,17 +416,18 @@ Quanto tempo por semana você conversa com quem pode comprar de você? Comenta.
 
 *(História 19: tarde da tempestade, 14 pessoas, 6 sessões, 1 venda.)*
 
-### 12h · Falado · O que eu recomendaria pra minha família ⚠️
-**Abre (0-3s):** "'Você deveria ensinar gestão.' Já me falaram isso. Se alguém da minha família ouvisse essa frase, eu diria uma coisa."
-**Contexto:** Quando alguém fala "você deveria ensinar isso", a vontade é sair largando tudo, ou então não fazer nada, porque parece grande demais.
-**Virada:** Eu diria: não larga o emprego. Começa no paralelo, com uma hora fixa por semana. E antes de gravar qualquer coisa, conversa com 3 pessoas que já te pediram ajuda e pergunta o que mais trava elas. É o conselho que eu daria pra alguém que eu amo.
-**Fecha (CTA falado):** "Recomendo o que eu usaria. Me segue."
+### 12h · Falado · Bastidor de sessão: a promessa mudou quando ela contou a própria história (troca de 17/11)
+**Abre (0-3s):** "'Já tem muita gente fazendo.' Ela ia ser mais uma falando de ansiedade. Até contar a própria história."
+**Contexto:** Numa primeira sessão, a gente tinha fechado que ela ia falar da ansiedade de mulheres cristãs. Aí ela me contou a vida dela: perdas, lutos e divórcios, um atrás do outro. Foi isso que desencadeou a crise de ansiedade. Hoje ela convive com isso e saiu fortalecida até da perda mais recente.
+**Virada:** A gente mudou a persona e a promessa: pessoas que perderam a fé e entraram em crise de ansiedade depois de um trauma. Porque resolver isso é urgente. Aprender a conviver com a ansiedade é importante, mas é o tipo de problema que a pessoa empurra pra depois. E o que a pessoa empurra, ela não compra agora.
+**Fecha (CTA falado):** "O valor do que você ensina está na urgência de quem precisa. Me segue."
 
 **Legenda:**
-Se fosse alguém da minha família: não larga o emprego, protege 1 hora por semana e conversa com 3 pessoas antes de gravar qualquer coisa.
-Alguém já te disse "você deveria ensinar isso"? Comenta o que você ensinaria.
+Problema importante a pessoa deixa pra depois.
+Problema urgente ela resolve agora.
+O que você ensina resolve qual dos dois? Comenta.
 
-*(Frase "você deveria ensinar gestão": Karol, 15/11. Direção do plano: paralelo é execução. ⚠️ Karol fala do jeito dela.)*
+*(Banco de mentorados, caso 22 (atualização de 17/11), Karol. Anônima e sem dizer quem morreu, porque são lutos da mentorada. Entrou no lugar de "O que eu recomendaria pra minha família".)*
 
 ### 15h · Guia · Onde vale e onde não vale gastar no começo
 **Situação (0-3s):** "Investiu em tráfego e não vendeu? Antes do próximo gasto, olha isso."
@@ -652,9 +651,9 @@ Qual é a sua? Comenta.
 
 - **Hoje (seg):** foto de 2021 · 09h "70, 80% de desconto" ok?
 - **Ter 12h:** a lista do que você nunca promete (está: número com prazo, que é fácil, que é pra todo mundo).
-- **Qua 09h:** citar os valores 500 e 50 mil · **Qua 12h:** contar a mudança pro preço único e a agenda como limite (sem valor).
-- **Qui 08h30:** existe foto das férias? · **Qui 12h:** conteúdo programado, revisão de domingo e prospecção às 14h.
-- **Sex 07h:** manter "não tinha outra renda" (em 2024 você estava na agência) · **Sex 12h:** o conselho pra família, do seu jeito · **Sex 08h30:** legenda da foto do feriado.
+- **Qua 09h:** citar os valores 500 e 50 mil. (Qua 12h saiu da lista: virou o caso da personal organizer.)
+- **Qui 08h30:** existe foto das férias? (Qui 12h saiu da lista: virou o caso das duas ideias.)
+- **Sex 07h:** manter "não tinha outra renda" (em 2024 você estava na agência) · **Sex 08h30:** legenda da foto do feriado. (Sex 12h saiu da lista: virou o caso da promessa que mudou.)
 - **Sáb 07h:** usar a assinatura (e tirar o repost de 27/11) · **Sáb 12h:** contar a legenda errada da semana 15 ou outro erro seu.
 - **Dom 12h:** citar agosto R$1.500 e setembro R$10 mil.
 - As 7 fotos.

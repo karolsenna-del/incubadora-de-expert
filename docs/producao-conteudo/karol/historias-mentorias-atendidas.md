@@ -28,8 +28,10 @@
 - [19. Jucinara — quiosques na praia: o sistema que ela já tem é o produto](#19-jucinara--quiosques-na-praia-o-sistema-que-ela-já-tem-é-o-produto) — 📝 roteirizada (Rota100k S13, Qua 28/10 17h, com nome)
 - [20. Juliana Pasqual — app do marido médico integrativo: método dentro do app](#20-juliana-pasqual--app-do-marido-médico-integrativo-método-dentro-do-app) — 📝 roteirizada (Rota100k S13, Qua 28/10 20h slide 5, anônima)
 - [21. Mariana Diniz — "Diretora Compartilhada" que não escala](#21-mariana-diniz--diretora-compartilhada-que-não-escala) — disponível 🆕 26/10
-- [22. Rosemary — ansiedade da mulher cristã: "tempo de Deus"](#22-rosemary--ansiedade-da-mulher-cristã-tempo-de-deus) — 📝 roteirizada (Rota100k S13, Sáb 31/10 17h, anônima)
+- [22. Rosemary — ansiedade da mulher cristã: "tempo de Deus"](#22-rosemary--ansiedade-da-mulher-cristã-tempo-de-deus) — 📝 roteirizada (Rota100k S13, Sáb 31/10 17h, anônima) · 📝 nova virada (17/11, fé perdida após trauma) roteirizada (Rota100k S16, Sex 20/11 12h, anônima)
 - [23. Ludmila — pré-diagnóstico antes da 1ª consulta: promessa que ninguém deseja](#23-ludmila--pré-diagnóstico-antes-da-1ª-consulta-promessa-que-ninguém-deseja) — 📝 roteirizada (Rota100k S13, Dom 01/11 20h slide 2, com nome)
+- [24. Maria Luiza — personal organizer, app "Tchau, Bagunça" que era só lista de compras](#24-maria-luiza--personal-organizer-app-tchau-bagunça-que-era-só-lista-de-compras) — 📝 roteirizada (Rota100k S16, Qua 18/11 12h, anônima)
+- [25. Eliasa — 20 anos vendendo consignado, escolha entre duas personas](#25-eliasa--20-anos-vendendo-consignado-escolha-entre-duas-personas) — 📝 roteirizada (Rota100k S16, Qui 19/11 12h, anônima)
 
 ---
 
@@ -421,7 +423,18 @@
 
 **Leitura da squad:** exemplo perfeito de "a palavra da persona vale mais que a palavra técnica" (a persona fala "tempo de Deus", o mercado fala "ansiedade"). A palavra mágica apareceu numa frase solta da própria expert.
 
-**Status:** matéria-prima, ainda não usada em roteiro
+**Status:** 📝 roteirizada (Rota100k S13, Sáb 31/10 17h, anônima)
+
+**ATUALIZAÇÃO (Karol, 17/11/2026) — nova sessão, persona e promessa mudaram:**
+- Na sessão anterior tinham fechado que ela falaria da ansiedade de mulheres cristãs por não esperarem o tempo de Deus
+- Ao conhecer a história dela, a Karol viu que ela passou por muitos traumas: **2 divórcios e a morte do pai, do irmão e do tio**. Foi isso que desencadeou a crise de ansiedade
+- Hoje ela sabe conviver com a ansiedade e saiu **fortalecida depois do falecimento da mãe**
+- **Nova persona e promessa:** pessoas que **perderam a fé e tiveram uma crise de ansiedade depois de sofrer um trauma**
+- Racional da Karol: resolver isso é **muito mais urgente** do que aprender a viver com a ansiedade, que é o tipo de problema que as pessoas procrastinam
+
+**Leitura da squad:** caso de "a história da expert revela a persona certa": a primeira versão ("tempo de Deus") era uma dor real, mas a dor urgente estava na própria trajetória dela. Bom par com o caso da Analia (#7). Também ilustra urgência x importância na promessa. ⚠️ Envolve lutos e divórcios da expert: usar anônima, sem detalhar quem morreu, salvo ok da Karol.
+
+**Status da atualização:** matéria-prima, ainda não usada em roteiro
 
 ---
 
@@ -437,6 +450,45 @@
 - Isso é o caminho, e ninguém deseja o caminho. Todo dentista deseja vender mais e fidelizar já na primeira consulta: isso sim é poderoso
 
 **Leitura da squad:** caso didático de "promessa = resultado desejado, não o mecanismo". O mecanismo (pré-diagnóstico) vira prova de como o resultado acontece.
+
+**Status:** matéria-prima, ainda não usada em roteiro
+
+---
+
+## 24. Maria Luiza — personal organizer, app "Tchau, Bagunça" que era só lista de compras
+
+**Contexto (Karol, 17/11/2026):**
+- Mentorada, personal organizer
+- Está criando um aplicativo de lista de compras chamado **"Tchau, Bagunça"**
+- O app não tinha nenhuma função específica nem método que ensinasse ou ajudasse a pessoa a organizar a bagunça da despensa: era **só uma lista de compras**
+- Vendia à parte um **guia em PDF de como organizar a despensa**, tentava vender e não conseguia
+
+**Diagnóstico feito na sessão:**
+- A Karol disse que ela **não estava entregando o que prometia**: o nome promete dar tchau pra bagunça, e o app só ajudava a comprar
+
+**Orientação dada pela Karol:**
+- Colocar o **método dentro do app**, e a lista de compras ser **uma** função, aliás **a última**
+- Frase da Karol: "depois de organizar a despensa, aí a gente compra mais, não antes"
+
+**Leitura da squad:** promessa x entrega (o nome promete uma transformação, o produto entrega uma ferramenta genérica). Par direto com a Juliana Pasqual (#20): ferramenta sem método vira commodity; com o método dentro, vira posicionamento. A ordem das funções do app conta o próprio método (organiza primeiro, compra depois).
+
+**Status:** matéria-prima, ainda não usada em roteiro
+
+---
+
+## 25. Eliasa — 20 anos vendendo consignado, escolha entre duas personas
+
+**Contexto (Karol, 17/11/2026):**
+- Trabalhou **20 anos com venda de empréstimo consignado** em bancos e outros produtos em que ela **não acredita serem a melhor opção** pro cliente
+- Pediu demissão
+- Estava em dúvida entre duas personas:
+  1. Criou um **app de organização financeira para microempresários**
+  2. Pensava em ajudar **mulheres que se divorciaram, vivem da pensão do ex-marido e precisam se reorganizar e voltar ao mercado de trabalho**
+
+**Orientação dada pela Karol:**
+- Focar **"1000%" na segunda persona**: mais específica, diferenciada, com propósito, e que **vira comunidade**
+
+**Leitura da squad:** escolha de persona por especificidade e propósito, não pelo que já está pronto (o app). A virada de carreira dela (sair de vender o que não acredita) conversa com a persona dos sonhos da Karol (quem está presa a um trabalho/estabilidade). Não confundir com o caso Rosemary (#22), que também envolve divórcio.
 
 **Status:** matéria-prima, ainda não usada em roteiro
 

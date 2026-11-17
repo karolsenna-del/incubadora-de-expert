@@ -132,7 +132,7 @@ Masculino genérico · nada sobre a Black · nenhum preço das suas ofertas · p
   Demorei pra enxergar isso.
   ```
 - **09h · Por que o mesmo serviço tem preços tão diferentes:** gancho **"'Tenho medo de investir.' Então entende por que tem mentoria de 500 e de 50 mil."** (os dois valores são da sua história: a da tia e a de 2021; ⚠️ Karol confirma se quer citar). Virada: a diferença raramente está no que você vê: quem te atende, por quanto tempo, o que fica pronto. Pergunta qual é a diferença.
-- **12h · Como eu formo o meu preço:** gancho **"Você cobra pouco com medo de parecer amador? Vou abrir como eu chego no meu preço."** ⚠️ Karol conta do jeito dela, sem dizer valor (regra: nenhum preço). Fecha: "Se você entender isso, negocia melhor."
+- **12h · Bastidor de sessão: o app que só fazia lista de compras (troca de 17/11):** gancho **"'Eu sei muito, mas não sei estruturar.' Uma mentorada minha sabia organizar qualquer despensa. E o app dela só fazia lista de compras."** Caso 24 do banco de mentorados, anônima. Antes de mexer no preço, confere se o que você entrega cumpre o que promete. ("Como eu formo o meu preço" fica pra outra semana.)
 - **15h · Guia · como comparar 2 propostas de mentoria ou curso:**
   - Gancho: **"Duas propostas na mão e medo de escolher errado?"** Número no segundo 3: "Compara esses 5 pontos, não o valor final."
   1. **O que fica pronto no fim** (entregável que dá pra ver).
@@ -166,7 +166,7 @@ Masculino genérico · nada sobre a Black · nenhum preço das suas ofertas · p
   Eu nem imaginava que a decisão que eu adiava há anos ia chegar por uma ligação.
   ```
 - **09h · Por que novembro é o mês certo:** gancho **"'Ano que vem eu começo.' Você disse isso em janeiro também?"** Virada: em dezembro todo mundo some; quem resolve agora entra em janeiro limpo. Opinião: quem quer vender o que sabe em 2027 decide a persona agora, não no dia 2 de janeiro.
-- **12h · O que eu já organizo agora:** gancho **"Se sente atrasado em relação a todo mundo? Vou mostrar o que eu já organizo agora."** ⚠️ Karol mostra o que organiza de verdade (não inventar).
+- **12h · Bastidor de sessão: 20 anos depois, travada entre duas ideias (troca de 17/11):** gancho **"'Ainda não é o momento.' Ela repetiu isso por 20 anos. Quando finalmente decidiu, travou entre duas ideias."** Caso 25 do banco de mentorados, anônima. Ficar entre duas ideias também é adiar; puxa pro guia das 15h.
 - **15h · Guia · 5 coisas pra resolver antes de dezembro se você quer vender o que sabe em 2027:**
   - Gancho: **"Se sente atrasado? Resolve isso antes de dezembro."** Número no segundo 3: "São 5, nenhuma leva mais de uma hora."
   1. **Escreve em uma frase quem compra de você.**
@@ -198,7 +198,7 @@ Masculino genérico · nada sobre a Black · nenhum preço das suas ofertas · p
   ```
 - **08h30 · foto:** foto do feriado com a família, tirada no dia. ⚠️ Karol escolhe. Legenda curta e pessoal, sem tese (como a do feriado da S14, que teve 32 interações). Ex.: "Feriado é isso aqui. ❤️" — Karol escreve do jeito dela.
 - **09h · Onde economizar é prejuízo:** gancho **"Vê gente menos experiente crescendo? A diferença não é dinheiro. É onde ela não economiza."** Opinião: no começo, o que não dá pra cortar é o tempo de conversa com quem pode comprar de você (19: a tarde sem wifi, 14 conversas, 6 sessões, 1 venda).
-- **12h · O que eu recomendaria pra minha família:** gancho **"'Você deveria ensinar gestão.' Já me falaram isso. Se alguém da minha família ouvisse essa frase, eu diria uma coisa."** ⚠️ Karol fala do jeito dela. Direção: começar sem largar o emprego, pela conversa com 3 pessoas (paralelo é execução).
+- **12h · Bastidor de sessão: a promessa mudou quando ela contou a própria história (troca de 17/11):** gancho **"'Já tem muita gente fazendo.' Ela ia ser mais uma falando de ansiedade. Até contar a própria história."** Caso 22 do banco de mentorados (atualização de 17/11), anônima e sem detalhar os lutos. O valor está na urgência: problema urgente se resolve agora, importante se empurra.
 - **15h · Guia · onde vale e onde não vale gastar quando você está começando a vender o que sabe:**
   - Gancho: **"Investiu em tráfego e não vendeu? Antes do próximo gasto, olha isso."** Número no segundo 3: "5 decisões, com o veredito de cada uma."
   1. **Câmera e equipamento caro:** não vale agora. O celular grava.
@@ -277,9 +277,7 @@ Masculino genérico · nada sobre a Black · nenhum preço das suas ofertas · p
 - As 7 fotos (qual foto de cada momento; se não existir foto das férias de quinta, trocar).
 - Seg 07h: citar "R$2 milhões" da mentora e "mentoria de 50 mil" no gancho.
 - Ter 12h: a sua lista do que nunca promete.
-- Qua 09h: citar os dois valores de mentoria (500 e 50 mil) · Qua 12h: como você forma preço (sem dizer valor).
-- Qui 12h: o que você organiza de verdade no fim de ano.
-- Sex 12h: o que você diria pra alguém da família.
+- Qua 09h: citar os dois valores de mentoria (500 e 50 mil). (Qua, Qui e Sex 12h viraram casos de mentorados em 17/11: nada a confirmar.)
 - Sáb 07h: usar a assinatura aqui (e tirar o repost de 27/11) · Sáb 12h: erro real que passou por você.
 - Dom 12h: citar agosto R$1.500 e setembro R$10 mil.
 
