@@ -87,3 +87,4 @@
 | 15/11/2026 | individual-domingo-2026-11-15 | 1 | 17909448135656721 | sim (ver log de execucao) |
 | 16/11/2026 | chamada-grupo-lives-segunda-2026-11-16 | 6 | 17919004509539117, 17868913989676372, 18194670295408881, 18149481967600825, 18109589545972797, 18121165075968087 | sim (ver log de execucao) |
 | 16/11/2026 | dominando-mente-segunda-2026-11-16 | 1 | 18156645028532269 | sim (ver log de execucao) |
+| 17/11/2026 | individual-terca-2026-11-17 | 1 | 18509289436097152 | sim (ver log de execucao) |
