@@ -1468,3 +1468,9 @@ Por ordem explícita, corrigir e enviar somente o pipeline, sem publicar nem dis
 **Decisão:** "seguro": toda pessoa que comenta num post recebe a 1ª mensagem sozinha pela resposta privada oficial do Instagram; curtidas e frios seguem na fila de um clique da aba Abordar. Sem robô na conta principal.
 **Racional:** robô na conta arrisca bloqueio da conta onde ela vende; a via oficial não tem esse risco.
 **Impacto:** webhook do Instagram aborda quem comenta (1 vez por pessoa, pula quem já está em conversa) e registra no painel como "Abordado", origem "Comentou no Instagram".
+
+## 18/11/2026 — Live 38: slide 3 refeito na ordem do roteiro
+**Contexto:** Karol achou o texto do slide 3 estranho e fora da ordem do roteiro.
+**Decisão:** slide segue a sequência da fala do Bloco 1 (responde de olho fechado → "por que você não faz uma mentoria?" e dá um branco → as 3 perguntas).
+**Racional:** o slide tem que acompanhar a ordem em que ela fala.
+**Impacto:** deck republicado no mesmo link, sem mexer nos outros slides.

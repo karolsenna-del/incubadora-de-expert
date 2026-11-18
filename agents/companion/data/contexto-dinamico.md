@@ -349,6 +349,7 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 - Criativos
 
 ## Onde Parou
+- 18/11 — Live 38: slide 3 refeito na ordem do roteiro (responde de olho fechado → "por que não faz uma mentoria?" e dá branco → 3 perguntas); deck republicado no mesmo link.
 
 **Sessao 26/10 — Coleta de métricas do Instagram religada (Gestor de Infra):**
 - Chave de métricas venceu 23/10; Karol gerou nova. 24-26/10 preenchidos; coleta rodou no GitHub com sucesso (27/10 03h UTC).
