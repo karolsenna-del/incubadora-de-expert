@@ -12,3 +12,7 @@
 - Apple, celular duo (segunda leva, no lugar do iPod).
 - Salesforce: vetado ("Laura não entende dessas ferramentas").
 - Cacau Show: vender antes de ter estrutura (12+ anos sem loja). 17/11, posts/alcance-cacau-show (teste do modo alcance).
+- Havaianas: o cliente mostrou o produto (sola virada → Havaianas Top, 1994). 17/11, posts/alcance-havaianas.
+- Nubank: começou com um produto só (cartão sem anuidade). 17/11, posts/alcance-nubank.
+- Bauducco: o óbvio pra você é raro pra quem compra (panetone no Brás). 17/11, posts/alcance-bauducco.
+- McDonald's / Ray Kroc: primeiro restaurante aos 52, experiência não é atraso. 17/11, posts/alcance-mcdonalds.

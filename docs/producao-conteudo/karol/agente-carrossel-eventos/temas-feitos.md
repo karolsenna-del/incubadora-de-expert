@@ -31,3 +31,7 @@
 21. Você tem medo de parecer inconveniente quando tenta vender. (pauta)
 22. Seu método está preso dentro da sua cabeça. (pauta)
 23. "Já tem muita gente fazendo" é a prova de que tem gente comprando (teste do agente, 17/11; posts/ja-tem-muita-gente-fazendo).
+24. Você está usando o estudo como desculpa para não vender (17/11; posts/estudo-desculpa-para-nao-vender) — era a pauta 16.
+25. Elogio não é intenção de compra (17/11; posts/elogio-nao-e-intencao-de-compra) — era a pauta 20.
+26. Medo de parecer inconveniente ao oferecer (17/11; posts/medo-de-parecer-inconveniente) — era a pauta 21.
+27. Seu método está preso na sua cabeça (17/11; posts/metodo-preso-na-cabeca) — era a pauta 22.
