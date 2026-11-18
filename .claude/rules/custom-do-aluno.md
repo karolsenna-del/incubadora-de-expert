@@ -88,4 +88,5 @@ outras rules. Exemplos:
 ### Ganchos
 
 - O gargalo do conteúdo é o gancho (poucos passam dos 3s): todo gancho abre com uma frase de empatia da persona (o que ela diz, ouve, pensa ou viveu, do dossiê em `docs/knowledge/expert-business/dossie-personas.md`), mesmo quando o desafio traz gancho pronto; o tema do desafio entra na virada (Karol, 15/11).
+- Exceção: no Carrossel Expert (carrossel de eventos) o gancho é de quebra de crença, como no GPT do Vinigrevy; a fala da persona vai pro slide da Ferida (Karol, 17/11).
 - Checklist e guia de decisão servem pra qualquer tema ou nicho de quem assiste: perguntas concretas que a pessoa responde sozinha (ex.: "quantos cursos desse tema você já comprou?", "precisa agora ou a oferta é que é boa?"), sem puxar tudo pra "criar método" nem perguntar o que tem resposta óbvia (Karol, 15/11: reprovou o carrossel da vitalícia).
