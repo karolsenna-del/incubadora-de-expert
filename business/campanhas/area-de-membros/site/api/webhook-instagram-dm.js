@@ -77,6 +77,48 @@ const IG_USER_ID = process.env.IG_USER_ID;
 const VERIFY_TOKEN = process.env.INSTAGRAM_WEBHOOK_VERIFY_TOKEN;
 const IG_BASE = 'https://graph.instagram.com/v21.0';
 
+// EXTENSAO 18/11/2026 — pedido da Karol ("seguro"): TODA pessoa que comentar num post recebe a
+// 1a mensagem sozinha, pela Private Reply oficial (1 por comentario, ate 7 dias). Uma vez por
+// pessoa: quem ja esta no CRM fora da etapa "novo" (ja abordado, conversando, aluno, descartado)
+// nao recebe. Quem recebe entra/move no painel como "abordado". Desligar: trocar pra false.
+const ABORDAR_QUEM_COMENTA = true;
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+function mensagemQuemComentou() {
+  return 'Oi! Vi seu comentário no meu post e quis passar aqui pra agradecer.\n\nFiquei curiosa: o que você faz hoje?';
+}
+
+async function sb(caminho, opcoes = {}) {
+  const resp = await fetch(`${SUPABASE_URL}/rest/v1/${caminho}`, {
+    ...opcoes,
+    headers: { apikey: SERVICE_ROLE_KEY, Authorization: `Bearer ${SERVICE_ROLE_KEY}`, 'Content-Type': 'application/json', Prefer: 'return=minimal', ...(opcoes.headers || {}) }
+  });
+  if (!resp.ok) throw new Error(`supabase ${caminho.split('?')[0]} ${resp.status}: ${await resp.text()}`);
+  return resp.status === 204 || resp.headers.get('content-length') === '0' ? null : resp.json().catch(() => null);
+}
+
+// Decide se aborda e ja reserva a pessoa no CRM (antes de enviar, pra 2 comentarios seguidos
+// nao gerarem 2 mensagens). Devolve uma funcao pra desfazer se o envio falhar.
+async function reservarAbordagem(username, textoComentario, mediaId) {
+  const insta = String(username).replace(/^@/, '').toLowerCase();
+  const achados = await sb(`crm_leads?instagram=ilike.${encodeURIComponent(insta)}&select=id,etapa,garimpo&limit=5`, { method: 'GET', headers: { Prefer: '' } });
+  const registro = { 'Abordagem automática': new Date().toISOString().slice(0, 10), 'Comentário': String(textoComentario).slice(0, 300), 'Post do comentário (id)': mediaId || '' };
+  if (achados && achados.length) {
+    const lead = achados[0];
+    if (lead.etapa !== 'novo' || (lead.garimpo && lead.garimpo['Abordagem automática'])) return null;
+    const garimpo = { ...(lead.garimpo || {}), ...registro };
+    await sb(`crm_leads?id=eq.${lead.id}`, { method: 'PATCH', body: JSON.stringify({ etapa: 'abordado', etapa_fonte: 'instagram_auto', garimpo }) });
+    return () => sb(`crm_leads?id=eq.${lead.id}`, { method: 'PATCH', body: JSON.stringify({ etapa: 'novo', etapa_fonte: 'instagram_auto', garimpo: lead.garimpo }) });
+  }
+  const novo = await sb('crm_leads?select=id', {
+    method: 'POST', headers: { Prefer: 'return=representation' },
+    body: JSON.stringify({ nome: null, instagram: insta, origem: 'comentario_instagram', origem_detalhe: 'Comentou num post — 1a mensagem automática', status: 'a_reativar', etapa: 'abordado', etapa_fonte: 'instagram_auto', garimpo: registro })
+  });
+  const id = novo && novo[0] && novo[0].id;
+  return () => (id ? sb(`crm_leads?id=eq.${id}`, { method: 'DELETE' }) : null);
+}
+
 function normalizar(texto) {
   return (texto || '')
     .normalize('NFD')
@@ -185,7 +227,25 @@ export default async function handler(req, res) {
         const match = mapaPalavras[textoNormalizado];
 
         if (!match) {
-          console.log(`[webhook-instagram-dm] sem match pra "${textoRecebido}" (comentario ${comentarioId}) — ignorado`);
+          const username = valor.from && valor.from.username;
+          // Resposta dentro de uma conversa de comentarios (parent_id) nao conta: a pessoa ja foi respondida ali.
+          if (!ABORDAR_QUEM_COMENTA || !username || valor.parent_id) {
+            console.log(`[webhook-instagram-dm] sem match pra comentario ${comentarioId} — ignorado`);
+            continue;
+          }
+          let desfazer = null;
+          try {
+            desfazer = await reservarAbordagem(username, textoRecebido, valor.media && valor.media.id);
+            if (!desfazer) {
+              console.log(`[webhook-instagram-dm] comentario ${comentarioId}: @${username} ja esta no CRM (abordado/em conversa) — sem mensagem`);
+              continue;
+            }
+            await enviarMensagem({ comment_id: comentarioId }, mensagemQuemComentou());
+            console.log(`[webhook-instagram-dm] 1a mensagem automatica enviada: comentario ${comentarioId} (@${username})`);
+          } catch (err) {
+            console.log(`[webhook-instagram-dm] abordagem automatica falhou no comentario ${comentarioId}: ${err.message}`);
+            if (desfazer) { try { await desfazer(); } catch (e) { console.log('[webhook-instagram-dm] desfazer falhou:', e.message); } }
+          }
           continue;
         }
 

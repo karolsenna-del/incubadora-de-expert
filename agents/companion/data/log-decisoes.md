@@ -1456,3 +1456,15 @@ Por ordem explícita, corrigir e enviar somente o pipeline, sem publicar nem dis
 **Decisão:** imagem vai direto pro agente (não fica guardada), PDF/Word/texto viram texto; link segue sem abrir. "Meu contexto" salvo uma vez e enviado a todo agente. Conversas no banco (várias por agente). Aviso a partir de 30 mensagens com "continuar numa conversa nova" com resumo.
 **Racional:** Karol: "isso dificulta muito a utilização de agentes de criação de conteúdo"; conversas no banco valem em qualquer aparelho e a Karol consegue ler pra melhorar os agentes.
 **Impacto:** tabelas `ia_conversas` e `ia_contexto`; `js/chat-ias.js`; banco gratuito com folga (17 MB de 500 MB).
+
+## 18/11/2026 — Engajamento no garimpo e Hunter
+**Contexto:** Karol quer abordar quem engaja no perfil e pesquisou o Hunter (serviço de abordagem automática) pra modelar.
+**Decisão:** trazer quem comentou E curtiu, com curtidas pelo Apify sempre dentro do crédito grátis de US$5/mês. Não contratar o Hunter.
+**Racional:** engajado já conhece o conteúdo dela (morno); custo cabe no grátis.
+**Impacto:** engajados entram no painel antes dos frios; automação do envio ainda em decisão.
+
+## 18/11/2026 — Abordagem automática só pela via oficial (quem comenta)
+**Contexto:** Karol pesquisou o Hunter (robô logado na conta) pra modelar a automação de abordagens.
+**Decisão:** "seguro": toda pessoa que comenta num post recebe a 1ª mensagem sozinha pela resposta privada oficial do Instagram; curtidas e frios seguem na fila de um clique da aba Abordar. Sem robô na conta principal.
+**Racional:** robô na conta arrisca bloqueio da conta onde ela vende; a via oficial não tem esse risco.
+**Impacto:** webhook do Instagram aborda quem comenta (1 vez por pessoa, pula quem já está em conversa) e registra no painel como "Abordado", origem "Comentou no Instagram".

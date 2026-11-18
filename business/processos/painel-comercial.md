@@ -110,3 +110,19 @@ Decisão: caminho A. O botão na aba Abordar grava um pedido. Um robô no comput
   pela capacidade (8/dia útil, ritmo real de ~40/semana) e taxa da Karol (45 frias → 1 sessão marcada); vendas do Garimpo são extra, por cima da meta.
   Dez: 20 quentes + 40 frias por semana, 6 sessões (cabe); nos meses com Sprint dá 7 sessões (passou).
 - [x] Ajuste publicado pela Karol (dpl_2LEYgzudUbX1pwp88A1X55azc9Lj) e conferido no domínio
+
+## Quem engajou com o perfil entra na fila (18/11/2026)
+
+- Pedido da Karol: trazer quem comentou e curtiu os posts dela, com o que falou, qual post e a mensagem pronta. Curtidas pelo Apify, sempre dentro do crédito grátis de US$5/mês.
+- Garimpeiro: `tools/engajamento.mjs` (passo 2c da rodada). Origem no painel: "Engajou no perfil — rodada {data} (comentou/curtiu)"; `garimpo` ganhou "Grupo" e "Post do engajamento".
+- Painel: cartão da aba Abordar mostra "Engajou com você" + link do post; quem engajou vem antes do frio na fila.
+- [x] 1ª rodada no painel: 14 leads (12 curtiram, 1 comentou, 1 comentou e curtiu), conferidos no banco com mensagem e post
+- [ ] Publicar o cartão novo (`comercial.js`): a trava automática barra o deploy, a Karol publica
+
+## 1ª mensagem automática pra quem comenta (18/11/2026)
+
+- Quem comenta num post (sem palavra-gatilho) recebe pela resposta privada oficial: "Oi! Vi seu comentário no meu post e quis passar aqui pra agradecer. Fiquei curiosa: o que você faz hoje?".
+- Uma vez por pessoa. Não recebe: quem já está no CRM fora de "novo", resposta dentro de conversa de comentários, a própria conta. Quem estava em "novo" (garimpo) passa a "abordado".
+- Entra no painel como "Abordado", origem "Comentou no Instagram", com o comentário guardado. A resposta da pessoa chega no Direct e a Karol segue a conversa à mão.
+- Desligar: `ABORDAR_QUEM_COMENTA = false` em `site/api/webhook-instagram-dm.js` e publicar.
+- Testado com 7 casos simulados e publicado em 18/11; falta conferir o 1º comentário real.

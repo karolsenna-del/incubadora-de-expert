@@ -417,8 +417,11 @@ async function enviarAoPainel(rodada, lote) {
       ...Object.fromEntries(FITS.map((f) => [f.coluna, p[f.campo] || ''])),
       'Score de Fit (0-4)': String(score), 'Prioridade de abordagem': prioridadeAbordagem(p), 'Perfil': p.perfil_leitura || '',
       'Observações': observacaoRevisao(p),
+      'Grupo': p.grupo || 'Conexões frias qualificadas',
+      ...(p.engajamento_post ? { 'Post do engajamento': p.engajamento_post } : {}),
     };
-    return { insta: String(p['@']).replace(/^@/, '').toLowerCase(), nome: p.nome || null, detalhe: `Garimpo — rodada ${rodada.data}${p.termo ? ' (' + p.termo + ')' : ''}`, garimpo };
+    const origemTexto = p.engajamento ? `Engajou no perfil — rodada ${rodada.data} (${[...new Set(p.engajamento.map((e) => e.tipo))].join(' + ')})` : null;
+    return { insta: String(p['@']).replace(/^@/, '').toLowerCase(), nome: p.nome || null, detalhe: origemTexto || `Garimpo — rodada ${rodada.data}${p.termo ? ' (' + p.termo + ')' : ''}`, garimpo };
   });
   const json = JSON.stringify(dados);
   if (json.includes('$gj$')) throw new Error('texto da rodada contém o marcador $gj$');

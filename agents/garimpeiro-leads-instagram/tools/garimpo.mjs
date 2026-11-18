@@ -122,7 +122,7 @@ async function apify(caminho, { metodo = 'GET', corpo } = {}) {
   return JSON.parse(txt);
 }
 
-async function rodarAtor(ator, input, runExistente) {
+export async function rodarAtor(ator, input, runExistente) {
   // runExistente: retoma um run já pago (ex.: a consulta de status caiu com 502) em vez de pagar de novo
   const run = runExistente ? { id: runExistente, status: 'RUNNING' } : (await apify(`/acts/${ator}/runs`, { metodo: 'POST', corpo: input })).data;
   let estado = run;
@@ -144,7 +144,7 @@ async function rodarAtor(ator, input, runExistente) {
   return { itens, custo: estado.usageTotalUsd ?? 0 };
 }
 
-async function saldoApify() {
+export async function saldoApify() {
   const d = (await apify('/users/me/limits')).data;
   const teto = d.limits?.maxMonthlyUsageUsd ?? 0;
   const usado = d.current?.monthlyUsageUsd ?? 0;

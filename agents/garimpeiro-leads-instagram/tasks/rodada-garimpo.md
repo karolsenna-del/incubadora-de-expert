@@ -54,6 +54,16 @@ Quando o cliente pede "garimpa meus seguidores" (precisa de `instagram_proprio` 
 - Daí em diante, fase 2 e 3 iguais. Grupo no rastreador = "Seguidor sem interação" (nunca "Seguidores engajados" — esse é de quem comenta/responde; a Karol muda à mão quando a pessoa interagir).
 - Lista de seguidores e fase 3 usam a mesma conta no mesmo dia: rodar a fase 3 com teto 15 depois da leitura da lista, não antes.
 
+### 2c. Fase 1 alternativa — Quem engajou com o perfil (comentou ou curtiu) — desde 18/11/2026
+Quando a Karol pede "traz quem engajou / curtiu / comentou":
+1. `node agents/garimpeiro-leads-instagram/tools/engajamento.mjs coletar [--teto-usd 1.5]`: lista de posts vem do robô diário das métricas (grátis); @ de quem comentou e de quem curtiu vem do Apify (comentário US$0,0005, curtida US$0,00155). Conta privada sai na hora. Teto: nunca passa do crédito grátis de US$5/mês (Karol, 18/11) e deixa US$1 de reserva pro garimpo normal. Post com menos de 2 dias espera; cada post é lido uma vez só (estado em `rodadas/engajamento-estado-karol.json`).
+2. `garimpo.mjs coletar --perfil karol --candidatos rodadas/candidatos-{data}-engajamento-karol.txt --fonte apify` (dedup + bio).
+3. `engajamento.mjs anexar --rodada {arquivo} --contexto rodadas/engajamento-{data}-karol.json` → cada perfil ganha o que fez, em qual post, e Grupo "Seguidores engajados".
+4. Peneira da bio, `posts`, classificação normal. Fato-gancho = o resumo do engajamento + 1 fato do perfil; fonte = link do post.
+5. Copy: abre citando o engajamento ("Vi que você curtiu meu vídeo sobre…" / "Obrigada pelo seu comentário no…"), depois o fato do perfil, depois a pergunta aberta de sempre. Sem pitch.
+6. `planilha.mjs enviar`: no painel, origem "Engajou no perfil", link "Ver o post" no cartão e esses leads vêm antes do frio na fila.
+Rendimento da 1ª rodada (18/11): 100 contas abertas engajadas (206 privadas puladas) → 58 no filtro → 19 na peneira da bio → 14 entregues (2 alta). Curtida de Reels traz muita conta pessoal: a peneira corta ~70%. Custo US$0,87.
+
 ### 3–4 (padrão desde 25/10/2026). Leitura pelo Apify
 A página pública e a conta logada são bloqueadas pelo Instagram depois de poucos perfis. Caminho padrão (REGRA-002):
 1. `node agents/garimpeiro-leads-instagram/tools/garimpo.mjs coletar --perfil {cliente} --candidatos {arquivo} --fonte apify` → dedup + bio/seguidores + filtro mecânico (privado já sai).

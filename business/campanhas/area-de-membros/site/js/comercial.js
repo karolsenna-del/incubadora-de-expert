@@ -20,6 +20,7 @@ const COM_NOME_ETAPA = Object.fromEntries(COM_ETAPAS.map((e) => [e.id, e.nome]).
 
 const COM_ORIGENS = {
   garimpo_instagram: 'Garimpo (Instagram)',
+  comentario_instagram: 'Comentou no Instagram',
   sessao_estrategica: 'Sessão estratégica',
   webinar_metodo_1h: 'Método em 1 hora',
   grupo_whatsapp: 'Grupo do WhatsApp',
@@ -127,7 +128,9 @@ function comIndicadores(leads, porLead, periodo) {
 function comFila(leads) {
   return leads
     .filter((l) => l.etapa === 'novo' && l.garimpo && String(l.garimpo.Copy || '').trim())
-    .sort((a, b) => (COM_PRIO[a.garimpo['Prioridade de abordagem']] || 9) - (COM_PRIO[b.garimpo['Prioridade de abordagem']] || 9)
+    // Quem engajou com o perfil da Karol (curtiu/comentou) vem antes do frio (18/11/2026): já conhece o conteúdo dela.
+    .sort((a, b) => (a.garimpo['Post do engajamento'] ? 0 : 1) - (b.garimpo['Post do engajamento'] ? 0 : 1)
+      || (COM_PRIO[a.garimpo['Prioridade de abordagem']] || 9) - (COM_PRIO[b.garimpo['Prioridade de abordagem']] || 9)
       || (Number(b.garimpo['Score de Fit (0-4)']) || 0) - (Number(a.garimpo['Score de Fit (0-4)']) || 0));
 }
 
@@ -611,7 +614,8 @@ if (typeof window !== 'undefined') {
       el.innerHTML = topo + '<div class="com-fila-cartao">' +
         '<div class="com-fila-quem"><div><h2>' + esc(l.nome || '@' + insta) + '</h2><small>@' + esc(insta) + '</small></div>' +
         (prio ? '<span class="com-tag prio-' + esc(prio === 'Média' ? 'media' : prio.toLowerCase()) + '">Prioridade ' + esc(prio) + '</span>' : '') + '</div>' +
-        (g['Fato-gancho'] ? '<p class="com-gancho">' + esc(g['Fato-gancho']) + '</p>' : '') +
+        (g['Fato-gancho'] ? '<p class="com-gancho">' + (g['Post do engajamento'] ? '<b>Engajou com você</b> · ' : '') + esc(g['Fato-gancho']) + '</p>' : '') +
+        (/^https:\/\/www\.instagram\.com\//.test(g['Post do engajamento'] || '') ? '<p class="com-nota"><a href="' + esc(g['Post do engajamento']) + '" target="_blank" rel="noopener">Ver o post em que a pessoa engajou</a></p>' : '') +
         '<label class="com-campo">Mensagem (pode ajustar antes de copiar)<textarea id="fila-texto" rows="8">' + esc(g.Copy) + '</textarea></label>' +
         '<div class="com-fila-botoes">' +
         '<button type="button" class="com-btn com-btn-primario" id="fila-copiar">1. Copiar e abrir perfil</button>' +
