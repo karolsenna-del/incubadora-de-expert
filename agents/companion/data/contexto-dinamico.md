@@ -17,6 +17,9 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Roteiro do Mini Treinamento para a Incubadora Express pronto (17/11, atualizado 18/11)
+Escrito pelo modelo da Alcateia Implementação (Vini Grevy: abertura + filtro, 4 pilares do Método AB, prova racional + caso Milena, pitch sem preço com fechamento "Decisão Mais Inteligente" e botão em delay pro WhatsApp) e revisado contra fatos, regras e contrato da Express: `business/campanhas/lp-minitreinamento/roteiro-minitreinamento-incubadora-express.md` (versão falada palavra por palavra + Mapa Enxuto de Tela estilo Notion, ~7m30s acelerado em 1,15x). Atualizado em 18/11: "6 agentes de IA" → "11 agentes de IA" com menção de que novos são adicionados constantemente. Falta a Karol ler, aprovar e gravar (e ajustar o delay do botão na página pro segundo exato da deixa).
+
 ## Banco de histórias de mentorados: +3 casos (17/11)
 Entraram em `docs/producao-conteudo/karol/historias-mentorias-atendidas.md`: #24 Maria Luiza (app "Tchau, Bagunça" era só lista de compras; método dentro do app, lista como última função), #25 Eliasa (20 anos de consignado; foco 1000% em mulheres divorciadas que vivem de pensão e precisam se reorganizar) e atualização da #22 Rosemary (persona virou quem perdeu a fé e teve crise de ansiedade após trauma). Encaixados na S16 no 12h (bastidor), anônimos: Qua 18/11 Maria Luiza, Qui 19/11 Eliasa, Sex 20/11 Rosemary. Substituíram "Como eu formo o meu preço", "O que eu já organizo agora" e "O que eu recomendaria pra minha família" (que esperavam confirmação dela).
 
