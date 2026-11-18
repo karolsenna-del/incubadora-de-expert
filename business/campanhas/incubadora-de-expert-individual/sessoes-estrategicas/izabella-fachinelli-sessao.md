@@ -6,6 +6,7 @@
 > Está no Diagnóstico do Expert: digite **visabellafachinelli@gmail.com** e o card aparece. **Com radar na tela.**
 > O que está marcado como HIPÓTESE é leitura minha. A sessão confirma ou derruba.
 > Oferta: **Método VIP ou Sprint do Método** (Karol, 16/11). Quem decide é a pergunta do acesso à Arcane (Etapa 2). Express fica fora.
+> **Sessão remarcada de novo: quinta 19/11, 16h de Brasília (15h Cuiabá).** Faltou em 16/11, marcou 17/11 17h e mudou outra vez. Pela regra combinada, essa já seria a sessão paga (R$97).
 
 ---
 
