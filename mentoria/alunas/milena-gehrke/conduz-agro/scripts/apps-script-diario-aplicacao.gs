@@ -1,11 +1,14 @@
 /**
  * Conduz Agro — Diário de Aplicação do aluno. Arquivo pessoal, 1 cópia por
  * aluno, onde ele marca e registra as atividades de 15 min do Plano de
- * Aplicação Diária (mesmas 24 semanas × 5 atividades de
+ * Aplicação Diária (mesmas 48 semanas × 5 atividades de
  * `apps-script-plano-aplicacao-diaria.gs` — texto das atividades idêntico).
+ * Sessões quinzenais: as semanas 2N-1 e 2N vêm DEPOIS da sessão N
+ * (corrigido 18/11/2026 — antes eram 24 semanas e a atividade do Simulador,
+ * da S6, caía na semana 6, antes da S6 acontecer).
  *
  * Gera 2 abas:
- *  · "Atividades" — as 120 atividades com quadradinho de ✓ e contador de
+ *  · "Atividades" — as 240 atividades com quadradinho de ✓ e contador de
  *    progresso no topo. Linha marcada fica riscada.
  *  · "Dia a dia" — 1 linha por atividade, agrupada por semana: data, a
  *    atividade, O QUE ANOTAR (cada atividade pede um registro diferente —
@@ -178,9 +181,167 @@ var SEMANAS = [
     ["🎧 Celebre — você chegou ao fim dos 12 meses, ouça algo especial","O que ouviu · Uma frase pra você sobre esses 12 meses"]]]
 ];
 
+// 2ª semana de cada quinzena, na ordem das sessões: [[atividade, o que anotar] × 5]
+var SEGUNDA_SEMANA = [
+  // S1
+  [["✍️ Liste as tarefas da sua semana e marque quais foram de executora e quais foram de condutora","Suas tarefas da semana · Executora (E) ou condutora (C) em cada uma"],
+   ["🎯 Em 1 atendimento, antes de responder a pergunta técnica, pergunte ao produtor qual é o objetivo dele com aquilo","Qual atendimento · O objetivo que o produtor contou"],
+   ["🪞 Diga em voz alta, pro espelho, como você se apresenta hoje e depois como quer se apresentar daqui a 12 meses","Sua apresentação de hoje · A de daqui a 12 meses"],
+   ["💭 Releia suas anotações da semana passada: qual momento de insegurança se repetiu?","O momento que se repetiu · O que ele tem em comum com os outros"],
+   ["🧪 De 0 a 10, quanto do seu trabalho hoje é execução e quanto é condução?","Execução: __/10 · Condução: __/10 · Por que deu esse número"]],
+  // S2
+  [["🎯 Faça hoje a 1ª ação da prioridade nº 1 do seu Plano Personalizado","A ação · O que aconteceu"],
+   ["💭 Releia a barreira previsível do seu Plano Personalizado: ela já apareceu? Como você respondeu?","A barreira · Apareceu? · Como você respondeu"],
+   ["👥 Conte pra alguém da sua casa a meta dos próximos meses e combine como essa pessoa pode te apoiar","Com quem falou · O apoio que vocês combinaram"],
+   ["🎯 Reserve na agenda os 15 min da trilha nos 5 dias da próxima semana, sempre no mesmo horário","Os dias e o horário reservados"],
+   ["🧪 Pegue o pilar com a nota mais baixa da sua autoavaliação e escreva 1 atitude pra subir 1 ponto","O pilar · A nota · A atitude"]],
+  // S3
+  [["✍️ Escreva o pior cenário de 1 situação que te dá medo no trabalho e o que você faria se ele acontecesse","A situação · O pior cenário · O que você faria"],
+   ["🎯 Num caso com cobrança do produtor, mostre a ele 1 coisa que não depende de você (banco, cartório, órgão) e qual é o seu próximo passo","Qual caso · O que estava fora do seu controle · O próximo passo que você comunicou"],
+   ["🪞 Antes de uma ligação difícil, ensaie no espelho a primeira frase com voz firme","A ligação · A primeira frase · Como ela saiu na hora"],
+   ["💭 Qual medo apareceu mais nessa quinzena? Ele virou realidade?","O medo · Virou realidade? Sim ou não · O que aconteceu de fato"],
+   ["👥 Pergunte a alguém de confiança em que situação ela te vê mais segura no trabalho","Quem · O que a pessoa disse"]],
+  // S4
+  [["🧪 Use a Leitura do Produtor em 2 clientes diferentes e compare os perfis","Cliente 1 e o perfil · Cliente 2 e o perfil · O que muda na abordagem"],
+   ["🎯 Abra 1 conversa com a frase de abertura sugerida pro perfil desse produtor","Qual produtor e perfil · A frase que usou · Como ele reagiu"],
+   ["✍️ Preencha a Parte 2 do Mapa do Caso (Plano de Condução) pro caso que você mapeou na semana passada","Qual caso · O próximo passo definido"],
+   ["🎭 Antes de 1 atendimento, ensaie as 3 perguntas que vai fazer pra entender a demanda real","As 3 perguntas · Qual delas revelou mais"],
+   ["💭 Qual erro comum de algum perfil de produtor você já cometeu sem perceber?","O perfil · O erro · O que você faria diferente"]],
+  // S5
+  [["🎯 Consulte o Roteiro de Condução antes de 1 conversa e faça a etapa de escuta sem pular","Qual conversa · O que você ouviu que antes não teria ouvido"],
+   ["🎯 Num atendimento, explique o risco que o produtor evita com o seu serviço antes de falar de prazo ou preço","Qual atendimento · O risco que você explicou · Como o produtor reagiu"],
+   ["✍️ Reescreva 1 mensagem de WhatsApp que você sempre manda, trocando o termo técnico pela explicação simples","A mensagem antiga · A mensagem nova"],
+   ["🎭 Grave um áudio explicando 1 serviço seu em até 1 minuto, ouça e regrave cortando o que for técnico demais","O serviço · O que você cortou na 2ª versão"],
+   ["💭 Em qual conversa da quinzena você falou mais do que ouviu?","Qual conversa · O que você deixou de perguntar"]],
+  // S6
+  [["🎭 Volte ao Simulador de Conversas e treine uma objeção diferente da semana passada","A objeção · A resposta que funcionou melhor"],
+   ["✍️ Liste as 3 objeções que você mais ouve e escreva sua resposta pra cada uma","1) objeção → resposta  2) …  3) …"],
+   ["🎯 Use sua resposta pronta pro \"vou pensar\" numa conversa real","Qual cliente · O que ele respondeu"],
+   ["🪞 Diga o valor de 1 serviço seu em voz alta, no espelho, sem desconto nem justificativa, 5 vezes seguidas","O valor · Em qual repetição saiu firme"],
+   ["👥 Pergunte a um colega qual objeção ele mais ouve e como responde. Compare com a sua","Quem · A objeção e a resposta dele · O que você aproveitaria"]],
+  // S7
+  [["✍️ Complete o Mapa de Posicionamento: Eu resolvo, Para quem, Como faço e Qual valor entrego","As 4 linhas preenchidas (pode ser rascunho)"],
+   ["🎯 Atualize a apresentação do seu WhatsApp ou Instagram com a frase do Mapa de Posicionamento","Apresentação antiga · Apresentação nova"],
+   ["🧪 Preencha o Mapa de Valor Percebido pra mais 1 serviço seu","O serviço · O valor que o produtor percebe nele"],
+   ["🪞 Apresente sua proposta reformulada em voz alta, pro espelho, como se fosse pro produtor","O trecho em que travou · Como ajustou"],
+   ["💭 Como o cliente reagiu à proposta nova? Algo precisa mudar no modelo?","A reação · O ajuste no modelo"]],
+  // S8
+  [["🎯 Aplique o método completo em mais 1 atendimento, num tipo de serviço diferente do da semana passada","Qual atendimento e serviço · O que funcionou · Onde travou"],
+   ["✍️ Anote os números da Etapa 1: quantas propostas enviou, quantas fechou e se cobrou mais","Propostas enviadas · Fechadas · Cobrou mais? Quanto"],
+   ["💭 Qual ferramenta da Etapa 1 você mais usou e qual deixou de lado? Por quê?","Mais usada · Deixada de lado · Por quê"],
+   ["🎯 Escolha 1 hábito da Etapa 1 pra manter toda semana daqui pra frente","O hábito · Em que dia e horário"],
+   ["🪞 Diga em voz alta, pro espelho, o que você conquistou na Etapa 1","A frase que você disse"]],
+  // S9
+  [["🧪 Registre 1 trava no Mapa Pessoal de Padrões: situação, efeito comercial e como você respondeu","A trava · A situação · O efeito comercial"],
+   ["💭 De onde vem a crença que você identificou na semana passada? Quem te ensinou isso?","A crença · De onde ela vem"],
+   ["✍️ Escreva o que você faria nos seus atendimentos se essa trava não existisse","O que faria diferente"],
+   ["🎯 Faça hoje a tarefa que você vem adiando por causa da trava","A tarefa · Como foi fazer"],
+   ["👥 Pergunte a alguém próximo se percebe essa trava em você, e em que situação","Quem · O que a pessoa percebeu"]],
+  // S10
+  [["💭 Releia 1 situação de pressão recente: o que você sentiu no corpo antes de reagir?","A situação · O que sentiu · Como reagiu"],
+   ["✍️ Escreva o que o produtor teria perdido em 1 caso se você não tivesse feito o seu trabalho","O caso · O que ele teria perdido (prazo, dinheiro, documento)"],
+   ["🎯 Numa conversa tensa, nomeie a emoção do produtor antes de responder (\"entendo que isso te preocupa\")","A conversa · A emoção que você nomeou · O que mudou depois"],
+   ["💭 Em que situação você ainda diminui o valor do que faz (\"é só um papel\", \"é rapidinho\")?","A situação · A frase que você usa"],
+   ["👥 Peça a 1 cliente satisfeito que conte o que mudou pra ele depois do seu trabalho","Quem · O que ele contou"]],
+  // S11
+  [["🧪 Leia o Roteiro de Mediação de Conflitos e marque a situação difícil que mais se parece com um caso seu","A situação do roteiro · O caso parecido"],
+   ["💭 Num caso com várias pessoas, quem decide de fato e quem só influencia?","Qual caso · Quem decide · Quem influencia"],
+   ["🎭 Ensaie a abertura de uma reunião com mais de 1 envolvido, usando o Roteiro de Mediação","A abertura ensaiada"],
+   ["✍️ Escreva os limites da sua atuação num caso com conflito familiar: o que é seu e o que é de advogado ou outro profissional","Qual caso · O que é seu · O que não é"],
+   ["💭 Que interesse escondido apareceu num caso nessa quinzena?","O caso · O interesse escondido"]],
+  // S12
+  [["✍️ Preencha a Parte 2 (Plano de Condução) do Mapa do Caso avançado que você fez na semana passada","Qual caso · O próximo passo e quem faz"],
+   ["💭 Releia seu Mapa Pessoal de Padrões: qual trava apareceu menos nessa sub-fase?","A trava · Por que você acha que diminuiu"],
+   ["🎯 Use o Círculo de Controle num caso complexo em andamento","Qual caso · O que estava no seu controle · O que não estava"],
+   ["🪞 Diga em voz alta, pro espelho, como você reage hoje a uma pressão que antes te travava","A pressão · Como você reage hoje"],
+   ["👥 Conte pra alguém de confiança 1 mudança emocional que você percebeu em si","Quem · A mudança"]],
+  // S13
+  [["🧪 Registre no Banco de Comunicação 2 argumentos de valor que funcionaram em casos reais","Argumento 1 · Argumento 2 · Em qual caso cada um funcionou"],
+   ["🎯 Comunique 1 risco real a um produtor usando a frase que você treinou no espelho","Qual produtor · A frase · Como ele reagiu"],
+   ["✍️ Reescreva 1 explicação sua pra 2 perfis diferentes de produtor","Os 2 perfis · O que muda em cada versão"],
+   ["💭 Em qual conversa da quinzena o produtor entendeu de primeira? O que você fez diferente?","A conversa · O que fez diferente"],
+   ["🎭 Explique 1 caso complexo em até 2 minutos pra alguém de fora do agro","Pra quem · Onde a pessoa se perdeu"]],
+  // S14
+  [["🎯 Use 1 pergunta nova do seu banco de escuta num atendimento real","A pergunta · O que o produtor revelou"],
+   ["🎭 Simule em voz alta o fechamento de um atendimento complexo: proposta, objeção e próximo passo","Qual caso · Onde a simulação travou"],
+   ["💭 Compare 1 atendimento de hoje com 1 do começo do programa: o que mudou no seu jeito de conduzir?","O que mudou"],
+   ["👥 Peça a alguém que faça o papel do produtor e simule 1 atendimento completo com você","Quem · O que a pessoa achou"],
+   ["✍️ Escreva o passo do Roteiro de Condução que você mais pula, e por quê","O passo · Por que você pula"]],
+  // S15
+  [["🎭 Treine no Simulador de Conversas uma situação de Conflito Familiar","A situação · A resposta que funcionou"],
+   ["✍️ Escreva o que você diria a um produtor que culpa você por um atraso do banco ou do cartório","A fala que você usaria"],
+   ["💭 Qual conversa difícil você evitou nessa quinzena? O que te fez evitar?","A conversa · O que te fez evitar"],
+   ["🎯 Tenha hoje a conversa difícil que você estava evitando","A conversa · Como foi"],
+   ["🪞 Treine no espelho como dizer \"isso não é comigo, mas te indico quem resolve\"","Como você disse · Como soou"]],
+  // S16
+  [["💭 Em qual caso a conversa travou sem próximo passo? O que faltou?","Qual caso · O que faltou"],
+   ["🎯 Mande hoje uma mensagem de próximo passo pra 1 caso parado","Qual caso · O que mandou · O que responderam"],
+   ["🧪 Atualize na Central de Condução o próximo checkpoint de todos os casos em andamento","Quantos casos atualizou · Qual estava mais atrasado"],
+   ["🪞 Treine no espelho como encerrar uma conversa com data e responsável definidos","A frase de encerramento"],
+   ["💭 Qual objeção ainda te tira do eixo? O que falta pra ela deixar de tirar?","A objeção · O que falta"]],
+  // S17
+  [["👥 Pergunte a 2 clientes por que eles te escolheram","Cliente 1 e o motivo · Cliente 2 e o motivo"],
+   ["✍️ Escreva como você quer ser lembrada pelos produtores da sua região","A frase"],
+   ["🎯 Num atendimento, recomende com firmeza o caminho que você acredita ser o certo, em vez de listar opções","Qual atendimento · O que recomendou · Como o produtor recebeu"],
+   ["💭 Que situação ainda te faz agir como executora em vez de condutora?","A situação · Por quê"],
+   ["🪞 Grave um vídeo curto se apresentando e assista: você passa autoridade?","O que passou bem · O que ajustaria"]],
+  // S18
+  [["✍️ Revise \"Para quem\" e \"Como faço\" na cópia nova do Mapa de Posicionamento","Nova linha \"Para quem\" · Nova linha \"Como faço\""],
+   ["🎯 Use a nova frase de \"Qual valor entrego\" numa conversa real","A conversa · Como o produtor reagiu"],
+   ["🎯 Atualize sua apresentação (WhatsApp, Instagram, mensagem de boas-vindas) com o posicionamento revisado","O que você atualizou"],
+   ["💭 Que tipo de cliente você não quer mais atender? Por quê?","O tipo de cliente · Por quê"],
+   ["🧪 Leia o Mapa revisado em voz alta: soa como você ou como um texto bonito?","O trecho que não soa como você · O ajuste"]],
+  // S19
+  [["✍️ Calcule quanto tempo leva 1 serviço seu do início ao fim e compare com o que você cobra","O serviço · Horas gastas · Valor cobrado · Quanto dá por hora"],
+   ["🎯 Envie a proposta reformulada de maior complexidade pro cliente","Pra quem · Como reagiu"],
+   ["🎭 Ensaie a resposta pra \"tá caro\" num caso de valor alto","A resposta"],
+   ["💭 Qual serviço seu está mais barato do que deveria? O que te impede de ajustar?","O serviço · O que te impede"],
+   ["👥 Pergunte a um colega quanto ele cobra por um serviço parecido com o seu","Quem · O valor · Como fica o seu em comparação"]],
+  // S20
+  [["🎯 Avise 1 cliente do seu horário de atendimento e do seu prazo de resposta","Qual cliente · Como ele reagiu"],
+   ["💭 Qual pedido fora do escopo você ainda aceita por medo de perder o cliente?","O pedido · O medo"],
+   ["✍️ Escreva a frase que você vai usar pra cobrar um serviço extra que antes fazia de graça","O serviço extra · A frase"],
+   ["🪞 Treine no espelho como dizer não sem pedir desculpas","A frase · Como soou"],
+   ["👥 Conte pra alguém da sua casa os limites de horário que você definiu e peça ajuda pra manter","Com quem · O combinado"]],
+  // S21
+  [["💭 Qual foi o momento mais difícil desses meses e o que te fez continuar?","O momento · O que te fez continuar"],
+   ["✍️ Escreva o que você diria pra você mesma no primeiro dia do programa","O recado pra você do primeiro dia"],
+   ["👥 Pergunte a alguém próximo que mudança percebeu em você desde o começo","Quem · O que a pessoa percebeu"],
+   ["🧪 Dê de novo uma nota de 1 a 5 pros 6 pilares e compare com a nota que você deu na S2","Nota de hoje em cada pilar · Quanto subiu desde a S2"],
+   ["🪞 Leia em voz alta, pro espelho, o seu relatório antes x depois","O trecho que mais te marcou"]],
+  // S22
+  [["🧪 Atualize o Mapa do Caso do caso final com o registro de como ele terminou","Qual caso · Como terminou"],
+   ["🎯 Feche o caso final com responsabilidades e próximo passo por escrito","Quem faz o quê · Próximo passo e data"],
+   ["💭 Qual foi o momento mais difícil do caso final e como você conduziu?","O momento · Como conduziu"],
+   ["👥 Peça ao produtor do caso final um retorno sobre como foi ser atendido por você","O que o produtor disse"],
+   ["✍️ Compare esse caso com o primeiro caso que você mapeou na S4","O que mudou na sua condução"]],
+  // S23
+  [["🎯 Use seu Protocolo Pessoal num atendimento real, do Abrir ao Acompanhar","Qual atendimento · O passo que funcionou melhor"],
+   ["✍️ Ajuste o passo do protocolo que não funcionou no atendimento","O passo · Como ficou depois do ajuste"],
+   ["💭 Qual passo do protocolo é mais seu, que ninguém te ensinou?","O passo · Por que ele é seu"],
+   ["👥 Mostre seu protocolo a alguém de confiança e peça 1 sugestão","Quem · A sugestão"],
+   ["🧪 Releia seu protocolo e marque o passo em que você ainda se sente mais fraca","O passo · O que você vai treinar nele"]],
+  // S24
+  [["🎯 Marque na agenda as datas de revisão do seu plano de continuidade","As datas marcadas"],
+   ["💭 Qual foi a maior virada desses 12 meses?","A virada · Quando ela aconteceu"],
+   ["✍️ Escreva uma carta pra você ler daqui a 1 ano","Escreveu? · Onde guardou"],
+   ["👥 Agradeça a quem te apoiou durante o programa e conte o que mudou","A quem agradeceu · O que contou"],
+   ["🪞 Diga em voz alta, pro espelho, quem você é como profissional hoje","A frase que você disse"]]
+];
+
+// Abre cada sessão em 2 semanas: [nº da semana, sessão, tema, atividades, nº da sessão, 1ª ou 2ª semana]
+function semanasDoAno_() {
+  var lista = [];
+  SEMANAS.forEach(function(w, i){
+    lista.push([2 * w[0] - 1, w[1], w[2], w[3], w[0], 1]);
+    lista.push([2 * w[0], w[1], w[2], SEGUNDA_SEMANA[i], w[0], 2]);
+  });
+  return lista;
+}
+
 function criarDiarioAplicacao() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
-  var total = SEMANAS.length * 5;
+  var total = semanasDoAno_().length * 5;
   criarAbaAtividades_(ss, total);
   criarAbaDiaADia_(ss);
   removerAbaPadraoVazia_(ss);
@@ -206,7 +367,7 @@ function criarAbaAtividades_(ss, total) {
     .setHorizontalAlignment("center").setVerticalAlignment("middle");
   sh.setRowHeight(1, 34);
 
-  sh.getRange("A2:F2").merge().setValue("15 minutos, 5 dias por semana, sempre ligados à sessão em curso. Fez a atividade? Marca o quadradinho. O que você descobriu nela vai na aba \"Dia a dia\".")
+  sh.getRange("A2:F2").merge().setValue("15 minutos, 5 dias por semana. Cada sessão abre 2 semanas de atividades sobre o tema dela: comece a semana só depois da sessão indicada. Fez a atividade? Marca o quadradinho. O que você descobriu nela vai na aba \"Dia a dia\".")
     .setBackground(COR_GOLD_TINT).setFontColor(COR_INK_SOFT).setFontStyle("italic").setFontSize(9.5)
     .setHorizontalAlignment("center").setVerticalAlignment("middle").setWrap(true);
   sh.setRowHeight(2, 36);
@@ -221,15 +382,16 @@ function criarAbaAtividades_(ss, total) {
     .setHorizontalAlignment("center").setVerticalAlignment("middle");
   sh.setRowHeight(3, 28);
 
-  sh.getRange("A4:F4").setValues([["Feito", "Sem.", "Sessão", "Tema da semana", "Dia", "Atividade (15 min)"]])
+  sh.getRange("A4:F4").setValues([["Feito", "Sem.", "Depois da", "Tema da quinzena", "Dia", "Atividade (15 min)"]])
     .setBackground(COR_OLIVE).setFontColor(COR_PAPER).setFontWeight("bold").setFontSize(10)
     .setHorizontalAlignment("center").setVerticalAlignment("middle");
   sh.getRange("D4").setHorizontalAlignment("left");
   sh.getRange("F4").setHorizontalAlignment("left");
   sh.setRowHeight(4, 26);
 
+  var semanas = semanasDoAno_();
   var linhas = [];
-  SEMANAS.forEach(function(w){
+  semanas.forEach(function(w){
     for (var d = 0; d < 5; d++) linhas.push([false, w[0], w[1], w[2], "Dia " + (d + 1), w[3][d][0]]);
   });
   var corpo = sh.getRange(primeira, 1, total, 6);
@@ -243,9 +405,9 @@ function criarAbaAtividades_(ss, total) {
   sh.getRange(primeira, 5, total, 1).setHorizontalAlignment("center").setFontColor(COR_INK_SOFT);
 
   // Fundo por etapa + linha grossa separando as semanas
-  for (var i = 0; i < SEMANAS.length; i++) {
+  for (var i = 0; i < semanas.length; i++) {
     var r = primeira + i * 5;
-    sh.getRange(r, 1, 5, 6).setBackground(SEMANAS[i][0] >= 9 ? COR_OLIVE_TINT : COR_WHITE);
+    sh.getRange(r, 1, 5, 6).setBackground(semanas[i][4] >= 9 ? COR_OLIVE_TINT : COR_WHITE);
     sh.getRange(r, 1, 1, 6).setBorder(true, null, null, null, null, null, COR_OLIVE, SpreadsheetApp.BorderStyle.SOLID_MEDIUM);
   }
   sh.setRowHeightsForced(primeira, total, 34);
@@ -291,10 +453,10 @@ function criarAbaDiaADia_(ss) {
   sh.setRowHeight(3, 26);
 
   var row = 4;
-  SEMANAS.forEach(function(w){
-    var isEtapa2 = w[0] >= 9;
+  semanasDoAno_().forEach(function(w){
+    var isEtapa2 = w[4] >= 9;
     sh.getRange(row, 1, 1, 5).merge()
-      .setValue("SEMANA " + w[0] + "  ·  " + w[1] + "  ·  " + w[2] + (isEtapa2 ? "   (Etapa 2)" : "   (Etapa 1)"))
+      .setValue("SEMANA " + w[0] + "  ·  depois da " + w[1] + " (" + w[5] + "ª semana)  ·  " + w[2] + (isEtapa2 ? "   (Etapa 2)" : "   (Etapa 1)"))
       .setBackground(isEtapa2 ? COR_OLIVE : COR_GOLD).setFontColor(COR_PAPER)
       .setFontWeight("bold").setFontSize(10.5).setVerticalAlignment("middle");
     sh.setRowHeight(row, 26);

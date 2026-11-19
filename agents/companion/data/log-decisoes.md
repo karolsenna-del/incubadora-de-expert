@@ -1474,3 +1474,26 @@ Por ordem explícita, corrigir e enviar somente o pipeline, sem publicar nem dis
 **Decisão:** slide segue a sequência da fala do Bloco 1 (responde de olho fechado → "por que você não faz uma mentoria?" e dá um branco → as 3 perguntas).
 **Racional:** o slide tem que acompanhar a ordem em que ela fala.
 **Impacto:** deck republicado no mesmo link, sem mexer nos outros slides.
+
+## 18/11/2026 — Meta de novembro e controle de sessões no comercial
+**Contexto:** Karol sentiu falta de meta x realizado; o plano só começa em dezembro e o painel não sabia se a sessão aconteceu.
+**Decisão:** meta de nov = 3 sessões realizadas por semana; cada sessão vira registro com Realizada / Faltou / Remarcar / Cancelar na ficha do lead.
+**Racional:** sessões contam pela data em que acontecem; remarcação não infla o número e falta vira tarefa de remarcar.
+**Impacto:** aba Plano ganha a tabela semana a semana desde nov; topo da aba Abordar lista sessões a confirmar e faltas a remarcar.
+
+## 18/11/2026 — Quem engajou com o perfil é abordagem quente
+**Decisão:** lead que curtiu ou comentou um post da Karol conta como quente no comercial, mesmo vindo do Garimpo.
+**Racional:** a pessoa deu o primeiro passo, mesmo que não seja a primeira conversa.
+**Impacto:** meta x realizado, taxas reais e funil das vendas separam esse grupo do frio puro.
+
+## 18/11/2026 — Sessões puxadas da Google Agenda
+**Contexto:** sessões só entravam no painel se a Karol registrasse na ficha.
+**Decisão:** ela cria o evento na agenda e convida a pessoa pelo e-mail do pré-diagnóstico; o painel lê a agenda (endereço secreto iCal, só leitura) e liga pelo e-mail.
+**Racional:** menos clique esquecido; meta x realizado mais fiel.
+**Impacto:** marcada/remarcada/cancelada automáticas; realizada/faltou seguem manuais.
+
+## 18/11/2026 — Conduz Agro: trilha diária com 2 semanas por sessão
+**Contexto:** Plano de Aplicação Diária tinha 24 semanas pra 24 sessões quinzenais; atividades caíam antes da sessão da ferramenta (Simulador na semana 6).
+**Decisão:** opção A — 48 semanas, cada sessão abre 2 semanas com 5 atividades novas cada (não repetir as mesmas).
+**Racional:** mantém o ritmo de 5x/semana prometido e cobre os 12 meses.
+**Impacto:** 120 atividades novas (rascunho, Milena valida); planilha modelo do aluno já atualizada.

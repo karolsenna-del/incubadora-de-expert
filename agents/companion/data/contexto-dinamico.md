@@ -17,6 +17,12 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Lives na Área de Membros: Live 37 publicada, Live 38 esperando acesso (19/11)
+Rodada semanal automática: Live 37 subiu (não listada, já no site). Live 38 (18/11) gravada numa pasta nova do Drive ainda não compartilhada com a conta karol.franzini: falta a Karol compartilhar a pasta (link no Mission Log #42 do course-publisher); a próxima rodada sobe sozinha.
+
+## Conduz Agro: Plano de Aplicação Diária refeito em 48 semanas (18/11)
+A trilha tinha 24 "semanas" (1 por sessão), mas as sessões são quinzenais: o aluno chegava em atividades antes da sessão que entrega a ferramenta (ex.: Simulador na semana 6, S6 só na semana 11) e a trilha acabava no mês 6. Agora cada sessão abre 2 semanas depois dela (48 semanas, 240 atividades; 120 novas escritas pra 2ª semana). Scripts do plano e do Diário do aluno, docs (estrutura, setup, checklist, áudios) atualizados e a planilha modelo do aluno (link /copy da Central) já rodada e conferida. Pendente: Milena validar as 120 atividades novas; alunos que já tiraram cópia ficam com a versão antiga.
+
 ## Roteiro do Mini Treinamento para a Incubadora Express pronto (17/11, atualizado 18/11)
 Escrito pelo modelo da Alcateia Implementação (Vini Grevy: abertura + filtro, 4 pilares do Método AB, prova racional + caso Milena, pitch sem preço com fechamento "Decisão Mais Inteligente" e botão em delay pro WhatsApp) e revisado contra fatos, regras e contrato da Express: `business/campanhas/lp-minitreinamento/roteiro-minitreinamento-incubadora-express.md` (versão falada palavra por palavra + Mapa Enxuto de Tela estilo Notion, ~7m30s acelerado em 1,15x). Atualizado em 18/11: "6 agentes de IA" → "11 agentes de IA" com menção de que novos são adicionados constantemente. Falta a Karol ler, aprovar e gravar (e ajustar o delay do botão na página pro segundo exato da deixa).
 
@@ -880,3 +886,6 @@ Pipeline corrigido em worktree isolada: reserva remota antes de publicar, persis
 
 ### Abordagem automática de quem comenta (18/11)
 - Karol escolheu a via segura (sem robô tipo Hunter). Webhook do Instagram pronto e testado com casos simulados: quem comenta recebe a 1ª mensagem e entra no painel como Abordado. Publicado em 18/11 (cartão novo da aba Abordar junto, conferido no ar). Falta conferir no 1º comentário real.
+
+### Meta x realizado no comercial (18/11)
+- Pronto e testado com dados reais: registro de sessões (realizada/faltou/remarcar), tabela semana a semana desde nov (meta 3 sessões/semana) e avisos no topo da aba Abordar. 5 sessões de nov recuperadas das anotações do Meet. Publicado e conferido em 18/11. Semana de 02/11 completa (5 realizadas + faltas de Benício e Alessandro); botão Anotar do painel consertado (nunca gravava). Ajuste do topo publicado. Falta a Karol dizer a 2ª sessão da semana de 09/11.
