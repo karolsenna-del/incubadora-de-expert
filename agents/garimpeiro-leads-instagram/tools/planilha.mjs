@@ -354,10 +354,13 @@ async function formatar(destino) {
   console.log(JSON.stringify({ linhas: total, colunas_visiveis: Object.keys(VISIVEIS).length, colunas_ocultas: TOTAL_COLUNAS - Object.keys(VISIVEIS).length, situacoes: situacoes().map((s) => s.nome) }));
 }
 
+// Grupo: o que o Garimpeiro gravou; senão, seguidor da Karol (termo "seguidor de @...") ou busca fria.
+const grupoDe = (p) => p.grupo || (/^seguidor de @/i.test(p.termo || '') ? 'Seguidor sem interação' : 'Conexões frias qualificadas');
+
 // Valores do rastreador pra um perfil classificado (sem o Score, que é fórmula).
 function blocoRastreador(p) {
   const v = {
-    'Grupo': p.grupo || 'Conexões frias qualificadas',
+    'Grupo': grupoDe(p),
     ...Object.fromEntries(FITS.map((f) => [f.coluna, p[f.campo] || ''])),
     'Score de Fit (0-4)': '',
     'Prioridade de abordagem': prioridadeAbordagem(p),
@@ -417,10 +420,11 @@ async function enviarAoPainel(rodada, lote) {
       ...Object.fromEntries(FITS.map((f) => [f.coluna, p[f.campo] || ''])),
       'Score de Fit (0-4)': String(score), 'Prioridade de abordagem': prioridadeAbordagem(p), 'Perfil': p.perfil_leitura || '',
       'Observações': observacaoRevisao(p),
-      'Grupo': p.grupo || 'Conexões frias qualificadas',
+      'Grupo': grupoDe(p),
       ...(p.engajamento_post ? { 'Post do engajamento': p.engajamento_post } : {}),
     };
-    const origemTexto = p.engajamento ? `Engajou no perfil — rodada ${rodada.data} (${[...new Set(p.engajamento.map((e) => e.tipo))].join(' + ')})` : null;
+    const origemTexto = p.engajamento ? `Engajou no perfil — rodada ${rodada.data} (${[...new Set(p.engajamento.map((e) => e.tipo))].join(' + ')})`
+      : grupoDe(p) === 'Seguidor sem interação' ? `Segue você — rodada ${rodada.data}` : null;
     return { insta: String(p['@']).replace(/^@/, '').toLowerCase(), nome: p.nome || null, detalhe: origemTexto || `Garimpo — rodada ${rodada.data}${p.termo ? ' (' + p.termo + ')' : ''}`, garimpo };
   });
   const json = JSON.stringify(dados);

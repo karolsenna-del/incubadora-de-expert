@@ -15,6 +15,11 @@ const PLANO_ORIGEM_FUNIL = {
 };
 const PLANO_MESES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
 
+// Frio = veio do Garimpo e nunca interagiu com a Karol. Quem curtiu ou comentou um post dela (Garimpo de
+// engajamento, tem "Post do engajamento") conta como QUENTE: deu o primeiro passo (Karol, 18/11/2026).
+// Seguidor da Karol garimpado (Grupo "Seguidor sem interação") também é QUENTE: escolheu seguir (Karol, 19/11/2026).
+function planoEhFrio(l) { const g = l.garimpo || {}; return l.origem === 'garimpo_instagram' && !g['Post do engajamento'] && g.Grupo !== 'Seguidor sem interação'; }
+
 // arredonda pra cima sem cair no erro de conta quebrada (1,8/0,2 = 9,000000000000002)
 function planoCeil(x) { return x > 0 && isFinite(x) ? Math.ceil(x - 1e-9) : 0; }
 function planoDiv(a, taxa) { return taxa > 0 ? planoCeil(a / taxa) : 0; }
@@ -104,7 +109,7 @@ function planoRealizado(p, leads, historico, lancamentos) {
     const nome = String(l.produto || '').toLowerCase();
     const pr = nome && p.produtos.find((q) => (q.chaves || [q.nome]).some((c) => nome.includes(String(c).toLowerCase())));
     if (pr) x.porProduto[pr.nome] = (x.porProduto[pr.nome] || 0) + 1; else x.outros++;
-    const f = PLANO_ORIGEM_FUNIL[l.origem];
+    const f = planoEhFrio(l) ? 5 : l.origem === 'garimpo_instagram' ? 0 : PLANO_ORIGEM_FUNIL[l.origem];
     if (f != null) x.porFunil[f]++;
   }
   for (const l of lancamentos) {
@@ -125,7 +130,7 @@ function planoInicioSemana(agora) {
 // leads (opcional): separa abordagem fria (Garimpo) da quente
 function planoSemanaFeita(historico, followups, agora, leads) {
   const ini = planoInicioSemana(agora);
-  const frio = new Set((leads || []).filter((l) => l.origem === 'garimpo_instagram').map((l) => l.id));
+  const frio = new Set((leads || []).filter(planoEhFrio).map((l) => l.id));
   const ids = (etapa) => new Set(historico.filter((h) => h.etapa === etapa && new Date(h.em).getTime() >= ini).map((h) => h.lead_id));
   const conta = (etapa) => ids(etapa).size;
   const abord = [...ids('abordado')];
@@ -137,8 +142,64 @@ function planoSemanaFeita(historico, followups, agora, leads) {
   };
 }
 
+// Meta x realizado semana a semana (18/11/2026) ------------------------------------------
+// Meta da semana de um mês: do plano ou avulsa (plano.metasAvulsas, pra meses fora do plano;
+// ex.: nov/26 = 3 sessões realizadas por semana, pedido da Karol). Quentes saem da mesma conta
+// do plano (comparece, aceita, responde), descontando as sessões que o Garimpo traz.
+function planoMetaSemana(p, chave) {
+  const T = p.taxas, F = planoFrio(p), sem = p.semanasMes || 4;
+  const m = planoCalcular(p).meses.find((x) => x.chave === chave);
+  if (m) {
+    const realizadas = m.vs.realizadas + m.lv.realizadas + m.mi.realizadas + m.fr.realizadas;
+    return { abordagens: m.semana.abordagens, frias: m.semana.frias, marcadas: m.semana.sessoes, realizadas: planoCeil(realizadas / sem), followups: m.semana.followups };
+  }
+  const av = (p.metasAvulsas || {})[chave];
+  if (!av) return null;
+  const realizadas = Number(av.realizadas) || 0;
+  const frias = av.frias != null ? Number(av.frias) : F.porDia * 5;
+  const quentes = av.abordagens != null ? Number(av.abordagens)
+    : planoDiv(planoDiv(Math.max(0, realizadas / T.vs.comparece - frias * F.sessao), T.vs.aceita), T.vs.responde);
+  return { abordagens: quentes, frias, marcadas: planoDiv(realizadas, T.vs.comparece), realizadas, followups: null };
+}
+
+// mês da semana = mês da quinta-feira dela (a semana que cruza o mês fica com quem tem mais dias)
+function planoChaveSemana(ini) {
+  const d = new Date(ini); d.setDate(d.getDate() + 3);
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0');
+}
+function planoMaisDias(t, dias) { const d = new Date(t); d.setDate(d.getDate() + dias); return d.getTime(); }
+
+// Segundas-feiras desde a 1ª semana do mês 'desde' (AAAA-MM) até a semana de 'agora'
+function planoSemanasDesde(desde, agora) {
+  let ini = planoInicioSemana(new Date(desde + '-01T12:00:00'));
+  if (planoChaveSemana(ini) < desde) ini = planoMaisDias(ini, 7);
+  const fim = planoInicioSemana(agora), out = [];
+  for (let t = ini; t <= fim; t = planoMaisDias(t, 7)) out.push(t);
+  return out;
+}
+
+// O que foi feito entre ini e fim: abordagens (histórico; sem as automáticas do Instagram),
+// sessões (crm_sessoes, pela data da sessão) e follow-ups (anotações)
+function planoFeitoEntre(historico, followups, sessoes, leads, ini, fim) {
+  const frio = new Set((leads || []).filter(planoEhFrio).map((l) => l.id));
+  const dentro = (iso) => { const t = new Date(iso).getTime(); return t >= ini && t < fim; };
+  const abord = [...new Set(historico.filter((h) => h.etapa === 'abordado' && h.fonte !== 'instagram_auto' && dentro(h.em)).map((h) => h.lead_id))];
+  const ss = (sessoes || []).filter((x) => dentro(x.quando));
+  return {
+    abordagens: abord.filter((id) => !frio.has(id)).length,
+    frias: abord.filter((id) => frio.has(id)).length,
+    realizadas: ss.filter((x) => x.status === 'realizada').length,
+    faltas: ss.filter((x) => x.status === 'faltou').length,
+    marcadas: ss.filter((x) => x.status === 'marcada').length,
+    followups: new Set((followups || []).filter((f) => dentro(f.created_at)).map((f) => f.lead_id)).size,
+  };
+}
+
+// primeiro mês que tem meta (avulsa ou do plano)
+function planoPrimeiroMes(p) { return [p.inicio].concat(Object.keys(p.metasAvulsas || {})).sort()[0]; }
+
 if (typeof module !== 'undefined') {
-  module.exports = { planoCalcular, planoRealizado, planoSemanaFeita, planoMesChave, planoInicioSemana, planoCeil };
+  module.exports = { planoCalcular, planoRealizado, planoSemanaFeita, planoMesChave, planoInicioSemana, planoCeil, planoMetaSemana, planoChaveSemana, planoSemanasDesde, planoFeitoEntre, planoPrimeiroMes, planoMaisDias, planoEhFrio };
 }
 
 // =====================================================================
@@ -147,7 +208,7 @@ if (typeof module !== 'undefined') {
 
 if (typeof window !== 'undefined') {
   window.Plano = (function () {
-    let sb = null, plano = null, salvo = '', lancamentos = [], followups = [], ctx = null, el = null;
+    let sb = null, plano = null, salvo = '', lancamentos = [], followups = [], sessoes = [], ctx = null, el = null;
     const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
     const brl = (n) => 'R$ ' + Math.round(Number(n) || 0).toLocaleString('pt-BR');
     const pct = (x) => (x == null ? '—' : (Math.round(x * 1000) / 10).toLocaleString('pt-BR') + '%');
@@ -160,15 +221,21 @@ if (typeof window !== 'undefined') {
       if (error) throw error;
       plano = data ? data.dados : null;
       salvo = JSON.stringify(plano);
-      const desde = [plano ? plano.inicio : '9999-12', mesAtual()].sort()[0] + '-01';
-      const umaSemana = new Date(planoInicioSemana(Date.now()) - 86400000).toISOString();
+      const desde = [plano ? planoPrimeiroMes(plano) : '9999-12', mesAtual()].sort()[0] + '-01';
+      const desdeSemana = new Date(planoInicioSemana(new Date(desde + 'T12:00:00')) - 86400000).toISOString();
       const [fin, fu] = await Promise.all([
         sb.from('fin_lancamentos').select('natureza,valor_bruto,data_caixa,data_competencia').in('natureza', ['receita', 'estorno']).gte('data_caixa', desde).limit(5000),
-        sb.from('crm_followups').select('lead_id,created_at').gte('created_at', umaSemana).limit(5000),
+        sb.from('crm_followups').select('lead_id,created_at').gte('created_at', desdeSemana).limit(5000),
       ]);
       if (fin.error) throw fin.error;
       lancamentos = fin.data || [];
       followups = fu.error ? [] : fu.data || [];
+      await carregarSessoes();
+    }
+
+    async function carregarSessoes() {
+      const { data, error } = await sb.from('crm_sessoes').select('id,lead_id,nome,quando,status,remarcada_de,fonte,obs,created_at,google_evento_id').order('quando').limit(5000);
+      sessoes = error ? [] : data || [];
     }
 
     const mudou = () => JSON.stringify(plano) !== salvo;
@@ -176,12 +243,14 @@ if (typeof window !== 'undefined') {
     // linha curta pra aba Abordar
     function semanaHtml(historico, leads) {
       if (!plano) return '';
-      const calc = planoCalcular(plano);
-      const m = calc.meses.find((x) => x.chave === mesAtual());
-      if (!m) return '';
-      const f = planoSemanaFeita(historico, followups, Date.now(), leads);
-      return '<div class="pl-semana-linha">Meta da semana: <b>' + f.abordagens + ' de ' + m.semana.abordagens + '</b> abordagens quentes · <b>' + f.frias + ' de ' + m.semana.frias + '</b> frias (Garimpo) · <b>' +
-        f.sessoes + ' de ' + m.semana.sessoes + '</b> sessões · <b>' + f.followups + ' de ' + m.semana.followups + '</b> follow-ups</div>';
+      const ini = planoInicioSemana(Date.now());
+      const meta = planoMetaSemana(plano, planoChaveSemana(ini));
+      if (!meta) return '';
+      const f = planoFeitoEntre(historico, followups, sessoes, leads, ini, planoMaisDias(ini, 7));
+      const item = (feito, alvo, nome) => '<b class="' + (alvo && feito >= alvo ? 'pl-ok' : '') + '">' + feito + ' de ' + alvo + '</b> ' + nome;
+      return '<div class="pl-semana-linha">Meta da semana: ' + item(f.realizadas, meta.realizadas, 'sessões realizadas') + (f.faltas ? ' (' + f.faltas + (f.faltas === 1 ? ' falta' : ' faltas') + ')' : '') +
+        ' · ' + item(f.abordagens, meta.abordagens, 'abordagens quentes') + ' · ' + item(f.frias, meta.frias, 'frias (Garimpo)') +
+        (meta.followups != null ? ' · ' + item(f.followups, meta.followups, 'follow-ups') : '') + '</div>';
     }
 
     function render(alvo, contexto) {
@@ -197,6 +266,7 @@ if (typeof window !== 'undefined') {
       el.innerHTML =
         '<div class="pl-barra"><span id="pl-estado">' + (mudou() ? 'Alterações não salvas' : 'Plano salvo') + '</span>' +
         '<button type="button" class="com-btn com-btn-primario" id="pl-salvar"' + (mudou() ? '' : ' disabled') + '>Salvar plano</button></div>' +
+        blocoSemanas() +
         blocoMes(calc, real, agoraMes) +
         blocoEstrategico(calc, real, cab, chaves, agoraMes, passou) +
         blocoTatico(calc, real, cab, chaves, passou) +
@@ -221,7 +291,7 @@ if (typeof window !== 'undefined') {
           card('Abordagens quentes por semana', sem.abordagens, sem.abordagensDia + ' por dia útil, pra quem já te conhece') +
           card('Abordagens frias por semana', sem.frias, sem.friasDia + ' por dia útil no Garimpo') +
           card('Sessões por semana', sem.sessoes, (sem.cabe ? 'cabe' : 'passou') + ' na sua agenda (' + plano.capacidade + ' por semana)') +
-          '</div><p class="com-nota">Esta semana até agora: ' + f.abordagens + ' abordagens quentes · ' + f.frias + ' frias · ' + f.sessoes + ' sessões · ' + f.followups + ' follow-ups.</p></section>';
+          '</div></section>';
       }
       const falta = Math.max(0, m.faturamento - r.caixa);
       const diasRest = diasMes - hoje.getDate() + 1, semRest = Math.max(1, Math.ceil(diasRest / 7));
@@ -239,6 +309,36 @@ if (typeof window !== 'undefined') {
         card('Follow-ups', f.followups + ' de ' + sem.followups, 'quem fez sessão e não fechou') +
         '</div></section>';
     }
+    // Meta x realizado, semana a semana, desde o 1º mês com meta (nov/26)
+    function blocoSemanas() {
+      const semanas = planoSemanasDesde(planoPrimeiroMes(plano), Date.now()).reverse();
+      if (!semanas.length) return '';
+      const cel = (feito, alvo) => alvo == null ? '<td>' + feito + '</td>'
+        : '<td class="' + (feito >= alvo ? 'pl-ok' : 'pl-ruim') + '"><b>' + feito + '</b> de ' + alvo + '</td>';
+      const tot = {};
+      const dm = (t) => { const d = new Date(t); return String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth() + 1).padStart(2, '0'); };
+      const linhas = semanas.map((ini, i) => {
+        const chave = planoChaveSemana(ini);
+        const meta = planoMetaSemana(plano, chave) || {};
+        const f = planoFeitoEntre(ctx.historico, followups, sessoes, ctx.leads, ini, planoMaisDias(ini, 7));
+        const t = (tot[chave] = tot[chave] || { realizadas: 0, faltas: 0, abordagens: 0, frias: 0, mr: 0, ma: 0, mf: 0 });
+        t.realizadas += f.realizadas; t.faltas += f.faltas; t.abordagens += f.abordagens; t.frias += f.frias;
+        t.mr += meta.realizadas || 0; t.ma += meta.abordagens || 0; t.mf += meta.frias || 0;
+        const nome = dm(ini) + ' a ' + dm(planoMaisDias(ini, 4)) + (i === 0 ? ' (esta)' : '');
+        return '<tr><td>' + nome + '</td>' + cel(f.realizadas, meta.realizadas) + '<td>' + (f.faltas || '—') + '</td>' + cel(f.abordagens, meta.abordagens) + cel(f.frias, meta.frias) + '<td>' + f.followups + '</td></tr>';
+      }).join('');
+      const meses = Object.keys(tot).sort().reverse().map((k) => {
+        const t = tot[k];
+        return '<tr class="pl-total"><td>Total de ' + planoMesNome(k) + '</td>' + cel(t.realizadas, t.mr) + '<td>' + (t.faltas || '—') + '</td>' + cel(t.abordagens, t.ma) + cel(t.frias, t.mf) + '<td></td></tr>';
+      }).join('');
+      const pend = sessoes.filter((x) => x.status === 'marcada' && new Date(x.quando).getTime() < Date.now()).length;
+      return '<section class="com-bloco"><h3>Meta x realizado, semana a semana</h3>' +
+        (pend ? '<p class="com-nota pl-ruim">' + pend + (pend === 1 ? ' sessão já passou' : ' sessões já passaram') + ' sem você marcar se aconteceu: confira no topo da aba Abordar.</p>' : '') +
+        '<div class="com-rolagem"><table class="com-tabela pl-tabela"><thead><tr><th>Semana</th><th>Sessões realizadas</th><th>Faltas</th><th>Abordagens quentes</th><th>Abordagens frias</th><th>Follow-ups</th></tr></thead><tbody>' +
+        linhas + meses + '</tbody></table></div>' +
+        '<p class="com-nota">Sessões contam pela data da sessão (na ficha do lead: Realizada, Faltou, Remarcar). Abordagens contam quando o lead vai pra Abordado; as automáticas de quem comenta não entram. Novembro: meta de 3 sessões realizadas por semana, e as abordagens saem da mesma conta do plano.</p></section>';
+    }
+
     function card(t, v, s, destaque) {
       return '<div class="com-cartao' + (destaque ? ' destaque' : '') + '"><small>' + esc(t) + '</small><b>' + esc(v) + '</b><span>' + esc(s) + '</span></div>';
     }
@@ -317,8 +417,8 @@ if (typeof window !== 'undefined') {
       let indF = null;
       try {
         const per = comPeriodo('90', Date.now());
-        ind = comIndicadores(ctx.leads.filter((l) => l.origem !== 'garimpo_instagram'), ctx.porLead, per);
-        indF = comIndicadores(ctx.leads.filter((l) => l.origem === 'garimpo_instagram'), ctx.porLead, per);
+        ind = comIndicadores(ctx.leads.filter((l) => !planoEhFrio(l)), ctx.porLead, per);
+        indF = comIndicadores(ctx.leads.filter(planoEhFrio), ctx.porLead, per);
       } catch (e) { /* sem indicadores */ }
       const ps = ind ? ind.passagens : {}, pf = indF ? indF.passagens : {};
       const real = (x) => (x ? pct(x.taxa) + ' <small>(' + x.foram + ' de ' + x.base + ')</small>' : '—');
@@ -393,6 +493,6 @@ if (typeof window !== 'undefined') {
 
     window.addEventListener('beforeunload', (e) => { if (plano && mudou()) { e.preventDefault(); e.returnValue = ''; } });
 
-    return { carregar, render, semanaHtml };
+    return { carregar, render, semanaHtml, carregarSessoes, sessoes: () => sessoes };
   })();
 }

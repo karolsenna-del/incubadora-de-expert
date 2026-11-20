@@ -212,7 +212,10 @@ export default async function handler(req, res) {
       // Comentario publico em post/Reels/carrossel (campo "comments", nao "messaging")
       const mudancas = entrada.changes || [];
       for (const mudanca of mudancas) {
-        if (mudanca.field !== 'comments') continue;
+        // 'live_comments' = comentario durante a live (18/11: quem comentava LIVE na live nao recebia).
+        // A Meta so aceita private reply de live ENQUANTO a live esta no ar.
+        if (mudanca.field !== 'comments' && mudanca.field !== 'live_comments') continue;
+        const ehLive = mudanca.field === 'live_comments';
         const valor = mudanca.value || {};
 
         const comentarioId = valor.id;
@@ -229,7 +232,7 @@ export default async function handler(req, res) {
         if (!match) {
           const username = valor.from && valor.from.username;
           // Resposta dentro de uma conversa de comentarios (parent_id) nao conta: a pessoa ja foi respondida ali.
-          if (!ABORDAR_QUEM_COMENTA || !username || valor.parent_id) {
+          if (!ABORDAR_QUEM_COMENTA || ehLive || !username || valor.parent_id) {
             console.log(`[webhook-instagram-dm] sem match pra comentario ${comentarioId} — ignorado`);
             continue;
           }

@@ -54,6 +54,8 @@ Quando o cliente pede "garimpa meus seguidores" (precisa de `instagram_proprio` 
 - Daí em diante, fase 2 e 3 iguais. Grupo no rastreador = "Seguidor sem interação" (nunca "Seguidores engajados" — esse é de quem comenta/responde; a Karol muda à mão quando a pessoa interagir).
 - Lista de seguidores e fase 3 usam a mesma conta no mesmo dia: rodar a fase 3 com teto 15 depois da leitura da lista, não antes.
 
+- **Desde 19/11/2026 roda sozinho todo dia** (`tools/seguidores-diario.mjs`, Agendador "Garimpo - seguidores diario"): ~50 por dia, só no crédito grátis do Apify, Grupo "Seguidor sem interação" (o `enviar` deduz pelo termo "seguidor de @"); no painel é abordagem quente.
+
 ### 2c. Fase 1 alternativa — Quem engajou com o perfil (comentou ou curtiu) — desde 18/11/2026
 Quando a Karol pede "traz quem engajou / curtiu / comentou":
 1. `node agents/garimpeiro-leads-instagram/tools/engajamento.mjs coletar [--teto-usd 1.5]`: lista de posts vem do robô diário das métricas (grátis); @ de quem comentou e de quem curtiu vem do Apify (comentário US$0,0005, curtida US$0,00155). Conta privada sai na hora. Teto: nunca passa do crédito grátis de US$5/mês (Karol, 18/11) e deixa US$1 de reserva pro garimpo normal. Post com menos de 2 dias espera; cada post é lido uma vez só (estado em `rodadas/engajamento-estado-karol.json`).

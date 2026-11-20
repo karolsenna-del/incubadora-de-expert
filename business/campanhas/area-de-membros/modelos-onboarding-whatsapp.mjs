@@ -4,7 +4,8 @@
 // Uso: node modelos-onboarding.mjs [--enviar]   (sem --enviar só mostra)
 const WABA = '1086482547720701';
 const TOKEN = process.env.WA_TOKEN;
-const SUPORTE = 'Dúvidas? Fala com o suporte no WhatsApp (67) 99232-4690, de segunda a sexta, das 9h às 18h.';
+// 19/11/2026 (Karol): a boas-vindas sai do 3543 (só API), então avisa que o contato daqui pra frente é pelo 4690.
+const SUPORTE = 'A partir de agora, o nosso contato será pelo WhatsApp (67) 99232-4690. Salva esse número nos seus contatos! É por ele que você fala com o suporte, de segunda a sexta, das 9h às 18h.';
 const ASSINA = 'Karol Senna';
 
 const corpos = {
@@ -81,8 +82,27 @@ for (const [prod, corpo] of Object.entries(corpos)) {
   }
 }
 
+// --editar: troca o texto dos modelos que já existem (mesmo nome; a Meta revisa de novo)
+const editar = process.argv.includes('--editar');
+const existentes = {};
+if (editar) {
+  const r = await fetch(`https://graph.facebook.com/v21.0/${WABA}/message_templates?fields=id,name,status&limit=200`, { headers: { Authorization: `Bearer ${TOKEN}` } });
+  for (const t of (await r.json()).data || []) existentes[t.name] = t;
+}
+
 for (const m of modelos) {
   const n = m.components[0].text.length;
+  if (editar) {
+    const t = existentes[m.name];
+    if (!t) { console.log(m.name, 'não existe na Meta'); continue; }
+    const r = await fetch(`https://graph.facebook.com/v21.0/${t.id}`, {
+      method: 'POST', headers: { Authorization: `Bearer ${TOKEN}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ components: m.components })
+    });
+    const j = await r.json();
+    console.log(m.name, n, r.status, j.success ? 'enviado pra revisão' : '', j.error ? j.error.error_user_msg || j.error.message : '');
+    continue;
+  }
   if (!process.argv.includes('--enviar')) { console.log(m.name, n, 'caracteres'); continue; }
   const r = await fetch(`https://graph.facebook.com/v21.0/${WABA}/message_templates`, {
     method: 'POST', headers: { Authorization: `Bearer ${TOKEN}`, 'Content-Type': 'application/json' },

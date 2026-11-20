@@ -99,6 +99,9 @@ async function ingestEvent(event) {
   return postRpc('crm_ingest_whatsapp_event', event);
 }
 
+// chip = qual número da empresa recebeu/mandou (painel comercial, aba Conversas; 19/11/2026)
+const chipDe = value => value && value.metadata && value.metadata.phone_number_id || null;
+
 function eventsFromMessages(value) {
   const names = new Map((value.contacts || []).map(contact => [
     contact.wa_id,
@@ -117,7 +120,7 @@ function eventsFromMessages(value) {
       p_occurred_at: isoFromUnix(message.timestamp),
       p_message_type: message.type || 'unknown',
       p_message_text: textFromMessage(message),
-      p_metadata: { source_field: 'messages' }
+      p_metadata: { source_field: 'messages', chip: chipDe(value) }
     }];
   });
 }
@@ -135,7 +138,7 @@ function eventsFromEchoes(value) {
       p_occurred_at: isoFromUnix(message.timestamp),
       p_message_type: message.type || 'unknown',
       p_message_text: textFromMessage(message),
-      p_metadata: { source_field: 'smb_message_echoes' }
+      p_metadata: { source_field: 'smb_message_echoes', chip: chipDe(value) }
     }];
   });
 }
@@ -177,7 +180,7 @@ function historyData(entryId, value) {
           p_occurred_at: isoFromUnix(message.timestamp),
           p_message_type: message.type || 'unknown',
           p_message_text: textFromMessage(message),
-          p_metadata: { source_field: 'history', phase, chunk_order: order }
+          p_metadata: { source_field: 'history', phase, chunk_order: order, chip: chipDe(value) }
         });
       }
     }

@@ -357,6 +357,12 @@ Setup completo do Meta Ads feito com o Trafego Arcane. Pronto pra rodar campanha
 - Criativos
 
 ## Onde Parou
+
+- 20/11 — Painel: corrigidas as vendas do Tasso (VIP 24/09, R$1.500) e Vagner (Sprint 14/09, R$3.000) com data certa; valor da Juliani (R$2.500) e Thalita (R$1.500) gravado. Ficha da Thalita juntada na antiga; próximas vendas da Voomp gravam o valor e acham a ficha antiga por e-mail/celular/nome (comercial-4.sql). Renata = R$97 (Seu método em 1h).
+
+- 19/11 — Seguidores na fila (caminho A, grátis, quente): robô diário e agendador prontos; painel com "Segue você" publicado. Teste parou porque a conta referenciasgpt está travada pelo Instagram (login incomum de Android em Volta Redonda, 17/11) — Karol precisa responder.
+
+- 19/11 — Painel comercial: "Lead desde" na ficha + vestígio automático; cartões "Tempo até virar aluno" (desde que virou lead) e "Da sessão à compra". Banco aplicado e site publicado (conferido). Karol precisa preencher o "Lead desde" da Sandra Mello (grupo de lives, começo do ano).
 - 18/11 — Live 38: slide 3 refeito na ordem do roteiro (responde de olho fechado → "por que não faz uma mentoria?" e dá branco → 3 perguntas); deck republicado no mesmo link.
 
 **Sessao 26/10 — Coleta de métricas do Instagram religada (Gestor de Infra):**

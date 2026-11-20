@@ -176,7 +176,18 @@ async function enviarBoasVindas(payload, email, produtoSlug) {
     body: JSON.stringify({ messaging_product: 'whatsapp', to: telefone, type: 'template', template })
   });
   const j = await resp.json().catch(() => ({}));
-  if (resp.ok) console.log(`[webhook-voomp] boas-vindas enviada: ${email} -> ${template.name} (telefone via ${fonte}) id=${j.messages && j.messages[0] && j.messages[0].id}`);
+  if (resp.ok) {
+    console.log(`[webhook-voomp] boas-vindas enviada: ${email} -> ${template.name} (telefone via ${fonte}) id=${j.messages && j.messages[0] && j.messages[0].id}`);
+    // aparece na aba Conversas do painel comercial (19/11/2026): a API não devolve eco do que ela mesma manda
+    try {
+      await fetch(`${SUPABASE_URL}/rest/v1/rpc/crm_ingest_whatsapp_event`, {
+        method: 'POST',
+        headers: { apikey: SERVICE_ROLE_KEY, Authorization: `Bearer ${SERVICE_ROLE_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ p_event_key: (j.messages && j.messages[0] && j.messages[0].id) || `boasvindas:${email}:${Date.now()}`, p_event_kind: 'message', p_phone_e164: '+' + telefone, p_contact_name: null,
+          p_direction: 'saida', p_occurred_at: new Date().toISOString(), p_message_type: 'template', p_message_text: `[Boas-vindas automática: ${template.name}]`, p_metadata: { source_field: 'api_envio', chip: WHATSAPP_PHONE_ID } })
+      });
+    } catch (err) { console.error('[webhook-voomp] não gravou a boas-vindas na conversa:', err.message); }
+  }
   else console.error(`[webhook-voomp] boas-vindas FALHOU: ${email} -> ${template.name} (${resp.status}) ${JSON.stringify(j.error || j)}`);
 }
 

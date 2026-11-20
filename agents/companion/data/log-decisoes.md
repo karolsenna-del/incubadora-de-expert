@@ -1497,3 +1497,26 @@ Por ordem explícita, corrigir e enviar somente o pipeline, sem publicar nem dis
 **Decisão:** opção A — 48 semanas, cada sessão abre 2 semanas com 5 atividades novas cada (não repetir as mesmas).
 **Racional:** mantém o ritmo de 5x/semana prometido e cobre os 12 meses.
 **Impacto:** 120 atividades novas (rascunho, Milena valida); planilha modelo do aluno já atualizada.
+
+## 19/11/2026 — Painel de conversas do WhatsApp
+**Contexto:** Karol quer ver a conversa de todos os chips num lugar só.
+**Decisão:** aba Conversas no painel comercial (só leitura) com os chips ligados à conta oficial (4690 e 3543 já ligados); 7681 pessoal fica de fora (ela vai direcionar os leads pro comercial); 4726 entra depois da troca de aparelhos; Paty/Hermes fora por enquanto.
+**Racional:** caminho oficial, sem risco de bloqueio; o 4690 já gravava tudo desde setembro.
+**Impacto:** conversas visíveis por lead e por chip.
+
+## 19/11/2026 — Tempos do painel comercial medem desde que virou lead
+**Contexto:** "tempo até virar aluno" contava do 1º registro no painel, que pra 12 de 18 alunos era o dia da sessão/compra (ex.: Sandra Mello, lead desde o grupo de lives no começo do ano).
+**Decisão:** opção A — campo "Lead desde" na ficha (editável) com preenchimento automático pelo vestígio mais antigo do banco; dois tempos: desde que virou lead e da sessão à compra.
+**Racional:** separar o ciclo longo de nutrição do fechamento depois da sessão.
+**Impacto:** a Karol ajusta à mão a data dos alunos que a conhecem de antes.
+
+## 19/11/2026 — Seguidores garimpados entram na fila como abordagem quente
+**Contexto:** Karol quis os seguidores dela na fila de abordagem, depois da qualificação. Ler a bio custa US$0,0026/perfil no Apify; a lista inteira (~6.800) daria ~US$20, fora do grátis.
+**Decisão:** caminho A — robô diário só no crédito grátis (~50 seguidores lidos/dia, 1-2 aprovados/dia); seguidor conta como quente.
+**Racional:** começar sem gastar; acelerar (plano pago, ~3 semanas) fica pra depois, se render.
+**Impacto:** fila ganha "Segue você" entre quem engajou e o frio; meta de quentes inclui seguidores.
+
+## 20/11/2026 — Valor das vendas no painel vem da Voomp; compra procura a ficha antiga
+**Contexto:** filtro de 90 dias mostrava R$3.000 vendidos (só fichas com valor digitado), Tasso fora do período (data aproximada de 30/06) e a compra da Thalita criou ficha duplicada (a da prospecção não tinha e-mail).
+**Decisão:** opção A — valor da venda gravado sozinho a partir do aviso da Voomp; ligação da compra por e-mail, celular e nome; dados do Tasso (VIP 24/09) e Vagner (Sprint 14/09) corrigidos pela Karol.
+**Impacto:** "vendidos" e "tempo até virar aluno" passam a contar todas as vendas com data certa.

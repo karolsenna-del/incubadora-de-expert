@@ -300,7 +300,7 @@ Parabéns pela decisão!
 
 - Quando a Voomp avisa venda paga e a matrícula é nova, o `webhook-voomp.js` manda a mensagem do produto
   pelo número da API **99884-3543**, com modelo aprovado pela Meta (`onboarding_{sprint|individual|grupo|express|vip|expert360}`
-  e versão `_sem_nome`). Texto = o desta página + "Olá {nome}", linha de suporte (4690, seg-sex 9h-18h) e "Karol Senna".
+  e versão `_sem_nome`). Texto = o desta página + "Olá {nome}", linha de contato e "Karol Senna". Linha de contato (19/11/2026, Karol): "A partir de agora, o nosso contato será pelo WhatsApp (67) 99232-4690. Salva esse número nos seus contatos! É por ele que você fala com o suporte, de segunda a sexta, das 9h às 18h." Os 12 modelos foram editados na Meta no mesmo dia (`node modelos-onboarding-whatsapp.mjs --editar`).
 - Telefone: vem do aviso da Voomp; se não vier, do que a pessoa deixou no painel (`crm_leads`) ou em `pessoas`.
   Sem telefone, nada sai e o log da Vercel registra "boas-vindas SEM TELEFONE" (mandar à mão).
 - Liga/desliga: variável `ONBOARDING_WHATSAPP_ATIVO=1` no projeto `area-de-membros-incubadora`.

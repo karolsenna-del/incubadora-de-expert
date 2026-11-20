@@ -126,3 +126,73 @@ Decisão: caminho A. O botão na aba Abordar grava um pedido. Um robô no comput
 - Entra no painel como "Abordado", origem "Comentou no Instagram", com o comentário guardado. A resposta da pessoa chega no Direct e a Karol segue a conversa à mão.
 - Desligar: `ABORDAR_QUEM_COMENTA = false` em `site/api/webhook-instagram-dm.js` e publicar.
 - Testado com 7 casos simulados e publicado em 18/11; falta conferir o 1º comentário real.
+
+## Palavra LIVE dentro da live (18/11/2026)
+
+- Comentário feito durante a live chega pelo campo `live_comments` do webhook, que o código ignorava: quem comentava LIVE na live não recebia o link. Corrigido em `webhook-instagram-dm.js` (só palavra-gatilho; comentário sem palavra na live não gera abordagem). A Meta só aceita a resposta privada enquanto a live está no ar.
+- `live_comments` já estava assinado no painel da Meta (app "api" 1425049681635685 > Casos de uso > API do Instagram > Configuração da API com login do Instagram; conferido 18/11). Correção publicada em 18/11; prova real na próxima live.
+
+## Meta x realizado semana a semana + sessões (18/11/2026)
+
+- Pedido da Karol: meta x realizado desde novembro (meta de nov = 3 sessões realizadas por semana) e um jeito de lidar com remarcação e falta.
+- Banco: `crm_sessoes` (`sql/crm-sessoes.sql`): cada horário é uma linha (marcada, realizada, faltou, remarcada, cancelada). Remarcar = a velha vira remarcada e nasce outra marcada (`remarcada_de`).
+- Plano: `metasAvulsas` no JSON do plano (`{"2026-11": {"realizadas": 3}}`); quentes saem da mesma conta do plano (dá 20/semana), frias = capacidade do Garimpo (40/semana).
+- Ficha do lead: seção Sessões (marcar, Realizada, Faltou, Remarcar, Cancelar). Faltou cria anotação "remarcar" pra amanhã e o cartão do quadro mostra "Faltou: remarcar".
+- Aba Abordar: no topo, sessões que já passaram sem marcar, faltas sem remarcar e próximas sessões. Linha da meta conta sessões realizadas.
+- Aba Plano: tabela "Meta x realizado, semana a semana" desde nov, com total do mês.
+- Retroativo: 5 sessões de nov achadas nas anotações do Meet (Gemini) gravadas como realizadas (semana de 02/11). Faltam as que não tiveram anotação (Karol conta 7 nessa semana e 2 na de 09/11).
+- Abordagem quente só conta se o lead passar por Abordado no painel; as feitas fora dele não aparecem.
+- Testado com dados reais (contas e tela da aba Plano). [x] Publicado pela Karol (dpl_5fvHnn9y9a3ogJ4py1Kmwtm4wbM1) e conferido no domínio.
+- 18/11 (Karol): quem engajou com o perfil (curtiu ou comentou) conta como abordagem QUENTE, porque deu o primeiro passo. Regra em `planoEhFrio` (plano.js): frio = Garimpo sem "Post do engajamento". Vale pra meta da semana, taxas reais e funil das vendas. Testado: semana de 16/11 passou a 3 quentes e 20 frias.
+- 18/11 retroativo completo da semana de 02/11 (Karol): 5 realizadas + faltas do Benício (04 e 06/11) e do Alessandro (06/11 e 13/11, horário aproximado). Ronaldo, Dianessa e Bianca passaram de Sessão pra Proposta (sessão feita, Express apresentada). Notas novas da Karol na ficha de Fernanda, Juliani, Benício e Alessandro.
+- Defeito achado e corrigido (banco, já valendo): o botão "Anotar" do painel nunca gravava — o check de `crm_followups.origem_registro` só aceitava closer/backfill_planilha. `sql/crm-followups-painel.sql` libera 'painel_comercial'.
+- Topo da aba Abordar: "Faltou, falta remarcar" só lista lead que ainda não andou (até Sessão). [x] Publicado 18/11 e conferido no domínio.
+- 18/11 limpeza dos Indicadores (Karol: "pode fazer a limpeza assim"): topo só com o que o funil não mostra (Vendas com R$, Do lead ao aluno, Tempo até virar aluno, Tempo até responder); funil com "Sessões feitas" = realizadas do registro de sessões (igual à aba Plano) e lista de faltas; nota embaixo separa quentes x frias com a taxa de resposta de cada uma; abordagem automática de quem comenta fora da conta. Teste 30 dias: 3 quentes (33% responderam), 149 frias (6%), 5 sessões feitas, 4 faltas. [ ] Publicar (Karol).
+
+## Google Agenda → sessões (18/11/2026)
+- Evento da agenda com convidado cujo e-mail é de um lead (o mesmo do pré-diagnóstico) vira sessão marcada sozinho, ao abrir o painel; o lead vai pra Sessão se estava antes disso.
+- Mudou o horário na agenda → remarcada + nova marcada. Cancelou/apagou o evento (futuro) → cancelada. Realizada e Faltou continuam no clique da Karol.
+- Sessão já registrada à mão no mesmo dia: liga ao evento e acerta o horário pelo da agenda (não duplica). Ignora: eventos antes de 01/11/2026, eventos de quem já era aluno no dia (mentoria) e eventos sem e-mail de lead. Janela: 60 dias pra trás e pra frente.
+- Teste com a agenda real (19/11): 18 de 30 eventos com convidado batem com leads; de nov, entram as 6 sessões já registradas (horário acertado) e a da Flávia Freitas em 25/11.
+- Peças: sql/crm-sessoes-agenda.sql (aplicado), api/agenda-sessoes.js, sincronizarAgenda() em js/comercial.js, env GOOGLE_AGENDA_ICAL na Vercel (business/vault/google-agenda.md).
+- [x] Endereço secreto gravado na Vercel (19/11)
+- [x] Publicado e conferido (19/11): 6 sessões de nov ligadas à agenda com horário acertado; Flávia 25/11 15:30 entrou sozinha
+
+- 19/11: topo da aba Abordar se redesenha quando a etapa muda pela ficha (Benício virou Perdido e continuava em "falta remarcar" até recarregar). [ ] Publicar (Karol)
+
+## Aba Conversas — WhatsApp de todos os chips (19/11/2026)
+- Só leitura: lista de conversas (mais recente primeiro, filtro por chip, busca por nome/telefone/palavra), fio da conversa e "Abrir ficha". Faixa laranja = a última mensagem é da pessoa.
+- Fonte: crm_whatsapp_events (recebedor em vendas.incubadoradeexpert.com.br/api/whatsapp-webhook). Chips ligados: 4690 (coexistência desde set/26, histórico desde abr/26) e 3543 (API). 7681 (pessoal) fica fora por decisão da Karol; 5536 (Paty/Hermes) fora por enquanto.
+- Chip anotado no metadata (phone_number_id) a partir de 19/11; antes disso, até 19/10 = 4690, depois = "não identificado".
+- Boas-vindas automática do 3543 passa a entrar na conversa (webhook-voomp grava o envio; a da Juliani de 19/11 foi lançada à mão).
+- [x] Publicado e conferido no ar (19/11); ecos = 4690, reações fora da lista
+- [ ] 4726 (comercial): trocar os aparelhos (decisão de 19/10) e depois ligar numa 3ª conta oficial
+
+## Tempos de venda: "lead desde" (19/11/2026)
+
+- **Tempo até virar aluno** agora conta desde que a pessoa virou lead de verdade, não desde que apareceu no painel.
+  O início é a data **Lead desde** da ficha (a Karol preenche quando sabe, ex.: entrou no grupo de lives); sem ela,
+  o registro mais antigo que o banco acha (função `crm_lead_vestigios()`: 1ª mensagem no WhatsApp, lista da live,
+  captura de página, pré-diagnóstico, 1ª etapa, entrada no painel).
+- Cartão novo **Da sessão à compra**: dias entre a etapa Sessão e a compra.
+- Banco: coluna `crm_leads.lead_desde` + função `crm_lead_vestigios()` (só responde pra Karol), em `sql/crm-lead-desde.sql` (aplicado).
+- Motivo: Sandra Mello é lead desde o começo do ano (grupo de lives), mas o painel só a conhecia desde o diagnóstico de 27/10; 12 dos 18 alunos tinham o 1º registro no dia da compra.
+
+## Seguidores da Karol na fila (19/11/2026)
+
+- Decisão da Karol: caminho A, só no crédito grátis do Apify. Seguidor conta como abordagem QUENTE (escolheu seguir).
+- Robô: `agents/garimpeiro-leads-instagram/tools/seguidores-diario.mjs`. Agendador do Windows "Garimpo - seguidores diario",
+  10h, roda assim que o PC ligar se perdeu o horário, 1x por dia. Lê ~50 seguidores pela referenciasgpt (continua de onde parou),
+  qualifica pelo Garimpeiro (claude -p), escreve a mensagem e manda pro painel. Pula o dia se o Apify passou de US$3,50 no ciclo
+  (deixa US$1,50 pro botão e pro garimpo de quem engajou) ou se tem garimpo do botão rodando. Log: `rodadas/seguidores-diario.log`.
+- Painel: Grupo "Seguidor sem interação", origem "Segue você — rodada {data}", cartão com "Segue você"; fila = engajou → seguidor → frio;
+  `planoEhFrio` não conta seguidor como frio.
+- [x] Robô, `planilha.mjs` (grupo/origem do seguidor) e agendador criados
+- [x] Publicado e conferido no domínio (19/11)
+- [ ] 1º teste parou: a conta referenciasgpt está travada pelo Instagram ("tentativa de login incomum", Android, Volta Redonda, 17/11 04:05). A Karol precisa responder na conta; depois, rodar o robô de novo e conferir a 1ª leva na fila.
+
+## Vendas da Voomp com valor e sem ficha duplicada (20/11/2026)
+
+- A venda paga agora grava o valor (sale.amount) na ficha e procura a ficha antiga por e-mail → celular → nome (ficha sem e-mail, nome dela no começo do nome do comprador, só se for única); completa e-mail e celular. SQL: `sql/comercial-4.sql` (aplicado).
+- Corrigido à mão (Karol confirmou): Tasso = Método VIP 24/09 R$1.500; Vagner = Sprint 14/09 R$3.000 (datas certas, não mais aproximadas); Juliani R$2.500; Thalita R$1.500 e a ficha da compra juntada na da prospecção de 21/09.
+- Renata = "Seu método em 1h", R$97 (22/09), confirmado pela Karol. Pix de R$97 da Iza pela sessão fica só no financeiro (PJ, Outros); no painel ela segue como lead.
