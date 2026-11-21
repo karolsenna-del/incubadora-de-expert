@@ -91,3 +91,4 @@
 | 18/11/2026 | chamada-grupo-lives-quarta-2026-11-18 | 6 | 18101190194400067, 18099589865462008, 18131797924872234, 17943271143392558, 18184509256431779, 18094396538234218 | sim (ver log de execucao) |
 | 18/11/2026 | live-38-resumo-mentoria-2026-11-18 | 2 | 18034398782888460, 18649373905044744 | sim (ver log de execucao) |
 | 19/11/2026 | individual-quinta-2026-11-19 | 1 | 18221626279357204 | sim (ver log de execucao) |
+| 20/11/2026 | enquete-positiva-travas-2026-11-20 | 1 | 18107239811454383 | sim (ver log de execucao) |
