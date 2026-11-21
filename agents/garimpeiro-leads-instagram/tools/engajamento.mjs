@@ -32,7 +32,7 @@ const ATOR_COMENTARIOS = 'apidojo~instagram-comments-scraper';
 const PRECO_CURTIDA = 0.00155;
 // Custo estimado de cada curtida até virar lead: a curtida + ler o perfil (US$0,0013) + posts de ~30% que passam (US$0,016).
 const CUSTO_POR_CURTIDA_TOTAL = PRECO_CURTIDA + 0.0013 + 0.3 * 0.016;
-const RESERVA_USD = 1.0; // sobra do mês pro garimpo normal (REGRA-002 do Garimpeiro: saldo abaixo de US$1 = avisar)
+const RESERVA_USD = Number(process.env.RESERVA_APIFY_USD ?? 1.0); // sobra do mês pro garimpo normal (REGRA-002 do Garimpeiro: saldo abaixo de US$1 = avisar)
 const DIAS_PRA_CURTIDA_ASSENTAR = 2; // post muito novo ainda está recebendo curtida: lê depois, uma vez só
 
 function args() {

@@ -11,7 +11,7 @@ const PLANO_DIST_GRAVADO = [0, 0, 0, 0.7, 0.3]; // só no estágio 5
 // Origem do lead no CRM -> funil do plano (pra contar as vendas reais por funil)
 const PLANO_ORIGEM_FUNIL = {
   sessao_estrategica: 0, garimpo_instagram: 5, prospeccao_ativa: 0, black_expert_manual: 0,
-  grupo_whatsapp: 1, webinar_metodo_1h: 2, comprador_outro_produto: 3, compra_direta: 3, dualhook_whatsapp: 4,
+  grupo_whatsapp: 1, grupo_lives: 1, webinar_metodo_1h: 2, comprador_outro_produto: 3, compra_direta: 3, dualhook_whatsapp: 4,
 };
 const PLANO_MESES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
 
@@ -138,7 +138,7 @@ function planoSemanaFeita(historico, followups, agora, leads) {
     abordagens: abord.filter((id) => !frio.has(id)).length,
     frias: abord.filter((id) => frio.has(id)).length,
     sessoes: conta('sessao'),
-    followups: new Set(followups.filter((f) => new Date(f.created_at).getTime() >= ini).map((f) => f.lead_id)).size,
+    followups: followups.filter((f) => f.tipo === 'followup' && new Date(f.created_at).getTime() >= ini).length,
   };
 }
 
@@ -159,8 +159,11 @@ function planoMetaSemana(p, chave) {
   const frias = av.frias != null ? Number(av.frias) : F.porDia * 5;
   const quentes = av.abordagens != null ? Number(av.abordagens)
     : planoDiv(planoDiv(Math.max(0, realizadas / T.vs.comparece - frias * F.sessao), T.vs.aceita), T.vs.responde);
-  return { abordagens: quentes, frias, marcadas: planoDiv(realizadas, T.vs.comparece), realizadas, followups: null };
+  return { abordagens: quentes, frias, marcadas: planoDiv(realizadas, T.vs.comparece), realizadas, followups: planoMetaFollowupDia(p) * 5 };
 }
+
+// Meta diária de follow-up (21/11/2026): plano.metaFollowupDia, padrão 10 (Karol: "é onde a gente perde muito dinheiro")
+function planoMetaFollowupDia(p) { return Number(p && p.metaFollowupDia) > 0 ? Number(p.metaFollowupDia) : 10; }
 
 // mês da semana = mês da quinta-feira dela (a semana que cruza o mês fica com quem tem mais dias)
 function planoChaveSemana(ini) {
@@ -191,7 +194,7 @@ function planoFeitoEntre(historico, followups, sessoes, leads, ini, fim) {
     realizadas: ss.filter((x) => x.status === 'realizada').length,
     faltas: ss.filter((x) => x.status === 'faltou').length,
     marcadas: ss.filter((x) => x.status === 'marcada').length,
-    followups: new Set((followups || []).filter((f) => dentro(f.created_at)).map((f) => f.lead_id)).size,
+    followups: (followups || []).filter((f) => f.tipo === 'followup' && dentro(f.created_at)).length,
   };
 }
 
@@ -199,7 +202,7 @@ function planoFeitoEntre(historico, followups, sessoes, leads, ini, fim) {
 function planoPrimeiroMes(p) { return [p.inicio].concat(Object.keys(p.metasAvulsas || {})).sort()[0]; }
 
 if (typeof module !== 'undefined') {
-  module.exports = { planoCalcular, planoRealizado, planoSemanaFeita, planoMesChave, planoInicioSemana, planoCeil, planoMetaSemana, planoChaveSemana, planoSemanasDesde, planoFeitoEntre, planoPrimeiroMes, planoMaisDias, planoEhFrio };
+  module.exports = { planoCalcular, planoRealizado, planoSemanaFeita, planoMesChave, planoInicioSemana, planoCeil, planoMetaSemana, planoChaveSemana, planoSemanasDesde, planoFeitoEntre, planoPrimeiroMes, planoMaisDias, planoEhFrio, planoMetaFollowupDia };
 }
 
 // =====================================================================
@@ -225,7 +228,7 @@ if (typeof window !== 'undefined') {
       const desdeSemana = new Date(planoInicioSemana(new Date(desde + 'T12:00:00')) - 86400000).toISOString();
       const [fin, fu] = await Promise.all([
         sb.from('fin_lancamentos').select('natureza,valor_bruto,data_caixa,data_competencia').in('natureza', ['receita', 'estorno']).gte('data_caixa', desde).limit(5000),
-        sb.from('crm_followups').select('lead_id,created_at').gte('created_at', desdeSemana).limit(5000),
+        sb.from('crm_followups').select('lead_id,created_at,tipo').gte('created_at', desdeSemana).limit(5000),
       ]);
       if (fin.error) throw fin.error;
       lancamentos = fin.data || [];
@@ -493,6 +496,19 @@ if (typeof window !== 'undefined') {
 
     window.addEventListener('beforeunload', (e) => { if (plano && mudou()) { e.preventDefault(); e.returnValue = ''; } });
 
-    return { carregar, render, semanaHtml, carregarSessoes, sessoes: () => sessoes };
+    // Follow-up (21/11/2026): a aba Abordar lê a meta, muda a meta e avisa quando um follow-up é feito
+    const metaFollowupDia = () => planoMetaFollowupDia(plano);
+    async function definirMetaFollowup(n) {
+      if (!plano) return 'Grave um plano antes de mudar a meta';
+      const antes = plano.metaFollowupDia;
+      plano.metaFollowupDia = n;
+      const { error } = await sb.from('plano_expert').upsert({ id: 'atual', dados: plano, atualizado_em: new Date().toISOString() });
+      if (error) { plano.metaFollowupDia = antes; return error.message; }
+      salvo = JSON.stringify(plano);
+      return null;
+    }
+    const registrarFollowup = (f) => followups.push(f);
+
+    return { carregar, render, semanaHtml, carregarSessoes, sessoes: () => sessoes, metaFollowupDia, definirMetaFollowup, registrarFollowup };
   })();
 }

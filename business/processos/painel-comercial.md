@@ -196,3 +196,22 @@ Decisão: caminho A. O botão na aba Abordar grava um pedido. Um robô no comput
 - A venda paga agora grava o valor (sale.amount) na ficha e procura a ficha antiga por e-mail → celular → nome (ficha sem e-mail, nome dela no começo do nome do comprador, só se for única); completa e-mail e celular. SQL: `sql/comercial-4.sql` (aplicado).
 - Corrigido à mão (Karol confirmou): Tasso = Método VIP 24/09 R$1.500; Vagner = Sprint 14/09 R$3.000 (datas certas, não mais aproximadas); Juliani R$2.500; Thalita R$1.500 e a ficha da compra juntada na da prospecção de 21/09.
 - Renata = "Seu método em 1h", R$97 (22/09), confirmado pela Karol. Pix de R$97 da Iza pela sessão fica só no financeiro (PJ, Outros); no painel ela segue como lead.
+
+## Leads quentes do WhatsApp na fila (21/11/2026)
+
+- A fila "Abordar" mostra também leads com `garimpo.Canal = "WhatsApp"`: o botão "1. Abrir no WhatsApp" abre `wa.me` com a mensagem escrita (e copiada) no WhatsApp do aparelho. A Karol confere se é o número comercial antes de enviar.
+- Ordem: `garimpo.Calor` manda quando existe (0 = grupo das lives ou já conversou; 1 = comprou o workshop / lista da Black), senão engajou 0, seguidor 1, frio 2.
+- Quem se inscreve na página do grupo das lives (`leads_live_expert360`) vira lead sozinho, origem `grupo_lives`, "lead desde" = dia da inscrição (gatilho `crm_lead_da_live`, `sql/comercial-5.sql`). Já tinha ficha (e-mail ou celular) → não duplica.
+- `crm_preparar_quentes_whatsapp()` escreve a 1ª mensagem dos Novos sem mensagem que têm nome e celular (lives, compradores do workshop, lista da Black), pelo Vendedor Expert §6: sem oferta, sem link, gênero neutro. Rodar de novo quando entrarem leads assim (só pela gestão; não é exposta ao painel).
+- Fora da fila de propósito: os números sem nome do grupo antigo (`grupo_whatsapp`) e do WhatsApp (`dualhook_whatsapp`): sem nome nem conversa, não dá pra personalizar; vários são teste, fornecedor ou erro.
+- WhatsApp sem opt-in comercial bloqueia conta: uns 15 por dia, parar ao primeiro sinal negativo (Vendedor Expert R-006).
+
+## Follow-up (21/11/2026)
+
+- Aba Abordar tem 2 modos (teste da Karol): **Follow-ups de hoje** e **Abordar novos**. Abre em follow-up quando tem algum vencido. A pílula da aba soma os dois.
+- Devido hoje (`comFollowupsHoje`): a última anotação do lead tem "próximo contato" até hoje; ou, sem anotação desde a etapa atual, passou o prazo: abordado 3 dias (até 30 dias; frio do Garimpo até 14), respondeu e proposta 2 dias (até 60), sessão 2 dias depois da sessão realizada (sessão marcada pra frente não entra). Anotação sem próximo contato = encerrado.
+- Ordem: proposta → sessão → respondeu → abordado; quente antes do frio; mais atrasado primeiro.
+- Cartão: abrir WhatsApp/Instagram, "Fiz follow-up" (grava `crm_followups.tipo = 'followup'` + próxima data pela cadência: 1º +4 dias, 2º +8, 3º em diante +30), "Só remarcar" (tipo nota, não conta), abrir ficha, pular.
+- Meta diária: `plano_expert.dados.metaFollowupDia` (padrão 10), editável no topo do modo follow-up; na meta da semana vale 5× a diária nos meses sem plano.
+- Indicadores: "Follow-ups até a compra" = dias com contato antes da compra (botão "Fiz follow-up" + mensagens enviadas pelos chips ligados ao painel, `crm_contatos_whatsapp()`), sem contar a abordagem; "Follow-ups feitos" no período. Não conta Direct nem celular pessoal.
+- SQL: `sql/comercial-6.sql`.

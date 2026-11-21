@@ -24,6 +24,7 @@ const COM_ORIGENS = {
   sessao_estrategica: 'Sessão estratégica',
   webinar_metodo_1h: 'Método em 1 hora',
   grupo_whatsapp: 'Grupo do WhatsApp',
+  grupo_lives: 'Grupo das lives (página)',
   dualhook_whatsapp: 'WhatsApp (chegou sozinho)',
   black_expert_manual: 'Black Expert',
   comprador_outro_produto: 'Comprou outro produto',
@@ -131,7 +132,8 @@ function comIndicadores(leads, porLead, periodo, inicio) {
 }
 
 // Fila de abordagem: leads Novos com mensagem pronta, por prioridade e score
-const comCalor = (l) => (l.garimpo['Post do engajamento'] ? 0 : l.garimpo.Grupo === 'Seguidor sem interação' ? 1 : 2);
+// Leads do WhatsApp (21/11/2026) trazem o próprio Calor: 0 = grupo das lives ou já conversou; 1 = comprador do workshop / lista da Black.
+const comCalor = (l) => (l.garimpo.Calor != null ? Number(l.garimpo.Calor) : l.garimpo['Post do engajamento'] ? 0 : l.garimpo.Grupo === 'Seguidor sem interação' ? 1 : 2);
 function comFila(leads) {
   return leads
     .filter((l) => l.etapa === 'novo' && l.garimpo && String(l.garimpo.Copy || '').trim())
@@ -140,6 +142,81 @@ function comFila(leads) {
     .sort((a, b) => comCalor(a) - comCalor(b)
       || (COM_PRIO[a.garimpo['Prioridade de abordagem']] || 9) - (COM_PRIO[b.garimpo['Prioridade de abordagem']] || 9)
       || (Number(b.garimpo['Score de Fit (0-4)']) || 0) - (Number(a.garimpo['Score de Fit (0-4)']) || 0));
+}
+
+// Follow-up (21/11/2026) — volta o alerta da planilha. Devido hoje:
+//  1. a última anotação do lead tem "próximo contato" até hoje; ou
+//  2. não há anotação desde que ele entrou na etapa atual e já passou o prazo dela (lembrete automático):
+//     abordado 3 dias (até 30 dias atrás; frio do Garimpo só até 14), respondeu / proposta 2 dias (até 60 dias atrás),
+//     sessão 2 dias depois da sessão REALIZADA (sessão marcada pra frente não pede follow-up; lead antigo sem registro
+//     de sessão usa a data da etapa).
+// Anotação sem próximo contato depois da etapa = encerrado (sem lembrete automático).
+const COM_FU_AUTO = {
+  abordado: { dias: 3, janela: 30, txt: 'Abordado há {d} dias e não respondeu' },
+  respondeu: { dias: 2, janela: 60, txt: 'Respondeu e a conversa parou há {d} dias' },
+  sessao: { dias: 2, janela: 60, txt: 'Fez sessão há {d} dias e não fechou' },
+  proposta: { dias: 2, janela: 60, txt: 'Recebeu proposta há {d} dias' },
+};
+const COM_FU_ORDEM = { proposta: 0, sessao: 1, respondeu: 2, diagnostico: 2, abordado: 3 };
+function comFollowupsHoje(leads, notas, agora, ehFrio, sessoes) {
+  const fimHoje = new Date(agora); fimHoje.setHours(23, 59, 59, 999);
+  const porLeadN = new Map();
+  for (const n of notas) { if (!porLeadN.has(n.lead_id)) porLeadN.set(n.lead_id, []); porLeadN.get(n.lead_id).push(n); }
+  const ssPorLead = new Map();
+  for (const x of sessoes || []) { if (!ssPorLead.has(x.lead_id)) ssPorLead.set(x.lead_id, []); ssPorLead.get(x.lead_id).push(x); }
+  const out = [];
+  for (const l of leads) {
+    if (['novo', 'aluno', 'perdido', 'descartado'].includes(l.etapa)) continue;
+    const frio = ehFrio ? ehFrio(l) : false;
+    const ns = (porLeadN.get(l.id) || []).slice().sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+    const ult = ns[ns.length - 1];
+    let desdeEtapa = new Date(l.etapa_em || l.created_at).getTime();
+    if (l.etapa === 'sessao') {
+      const ss = ssPorLead.get(l.id) || [];
+      if (ss.some((x) => x.status === 'marcada' && new Date(x.quando).getTime() >= agora - DIA)) continue; // sessão marcada: o aviso de sessões cuida
+      const real = ss.filter((x) => x.status === 'realizada').map((x) => new Date(x.quando).getTime()).sort((a, b) => b - a)[0];
+      if (real) desdeEtapa = Math.max(desdeEtapa, real);
+      else if (ss.length) continue; // só falta/cancelada: o aviso de sessões cuida
+    }
+    const depois = ns.filter((n) => new Date(n.created_at).getTime() >= desdeEtapa);
+    const feitos = depois.filter((n) => n.tipo === 'followup').length;
+    let quando = null, motivo = '';
+    if (ult && ult.proximo_contato_em) {
+      quando = new Date(ult.proximo_contato_em).getTime();
+      motivo = ult.observacao ? 'Anotado: ' + ult.observacao : 'Você marcou esse dia pra falar de novo';
+    } else if (!depois.length) {
+      const r = COM_FU_AUTO[l.etapa];
+      if (!r) continue;
+      const dias = (agora - desdeEtapa) / DIA;
+      if (dias > (frio && l.etapa === 'abordado' ? 14 : r.janela)) continue;
+      quando = desdeEtapa + r.dias * DIA;
+      motivo = r.txt.replace('{d}', Math.floor(dias));
+    }
+    if (quando == null || quando > fimHoje.getTime()) continue;
+    out.push({ l, quando, motivo, feitos, auto: !(ult && ult.proximo_contato_em), frio });
+  }
+  return out.sort((a, b) => (COM_FU_ORDEM[a.l.etapa] ?? 9) - (COM_FU_ORDEM[b.l.etapa] ?? 9) || (a.frio - b.frio) || a.quando - b.quando);
+}
+// Próxima data pela cadência (Vendedor Expert): 1º follow-up +4 dias, 2º +8, do 3º em diante +30 (reativar)
+function comFuProximoDias(feitosAntes) { return feitosAntes === 0 ? 4 : feitosAntes === 1 ? 8 : 30; }
+// Follow-ups até a compra: dias com contato registrado (botão "Fiz follow-up" ou mensagem enviada pelo WhatsApp oficial)
+// antes da compra, tirando o primeiro contato (a abordagem).
+function comFollowupsAteCompra(alunoIds, porLead, notas, contatosWa) {
+  const diaDe = (t) => new Date(t).toLocaleDateString('en-CA', { timeZone: 'America/Cuiaba' });
+  const lista = [];
+  for (const id of alunoIds) {
+    const hist = porLead.get(id) || [];
+    const aluno = hist.find((h) => h.etapa === 'aluno');
+    if (!aluno) continue;
+    const diaCompra = diaDe(aluno.t);
+    const dias = new Set([...(contatosWa.get(id) || [])].filter((d) => d < diaCompra));
+    for (const n of notas) if (n.lead_id === id && n.tipo === 'followup' && diaDe(n.created_at) < diaCompra) dias.add(diaDe(n.created_at));
+    const abord = hist.find((h) => h.etapa === 'abordado');
+    const ordenados = [...dias].sort();
+    const primeiro = [abord ? diaDe(abord.t) : null, ordenados[0]].filter(Boolean).sort()[0];
+    lista.push({ id, n: ordenados.filter((d) => d > primeiro).length });
+  }
+  return { media: lista.length ? lista.reduce((a, x) => a + x.n, 0) / lista.length : null, n: lista.length, lista };
 }
 
 function comPct(x) { return x == null ? '—' : Math.round(x * 100) + '%'; }
@@ -160,7 +237,7 @@ function comFoneBonito(s) {
 function comFone(s) { const d = String(s || '').replace(/\D/g, ''); return d.length >= 10 ? (d.length <= 11 ? '55' + d : d) : ''; }
 
 if (typeof module !== 'undefined') {
-  module.exports = { COM_RANK, comPeriodo, comAgruparHistorico, comIndicadores, comFila, comMediana, comPct, comDias, comInsta, comFone };
+  module.exports = { COM_RANK, comPeriodo, comAgruparHistorico, comIndicadores, comFila, comMediana, comPct, comDias, comInsta, comFone, comFollowupsHoje, comFollowupsAteCompra, comFuProximoDias };
 }
 
 // =====================================================================
@@ -174,6 +251,7 @@ if (typeof window !== 'undefined') {
     let filtroPeriodo = '30', filtroOrigem = '', busca = '', abaAtual = 'indicadores';
     const limitePorColuna = {};
     let fila = [], filaPos = 0, filaSessao = { enviados: 0, descartados: 0 };
+    let notas = [], contatosWa = new Map(), modoAbordar = null, fuPulados = new Set();
     let arrastando = null;
     let detalhes = {};
 
@@ -201,8 +279,17 @@ if (typeof window !== 'undefined') {
         if (error) throw error;
         vestigios = new Map(data.map((v) => [v.lead_id, { t: new Date(v.desde).getTime(), em: v.desde, fonte: v.fonte }]));
       } catch (e) { console.error('vestígios', e); vestigios = new Map(); }
+      try { notas = await lerTudo('crm_followups', 'id,lead_id,created_at,proximo_contato_em,tipo,observacao', 'created_at'); } catch (e) { console.error('notas', e); notas = []; }
+      try {
+        const { data, error } = await sb.rpc('crm_contatos_whatsapp');
+        if (error) throw error;
+        contatosWa = new Map();
+        for (const r of data) { if (!contatosWa.has(r.lead_id)) contatosWa.set(r.lead_id, new Set()); contatosWa.get(r.lead_id).add(r.dia); }
+      } catch (e) { console.error('contatos WhatsApp', e); contatosWa = new Map(); }
       try { if (window.Plano) await window.Plano.carregar(sb); } catch (e) { console.error('Plano', e); }
     }
+    const ehFrioLead = (l) => (typeof planoEhFrio === 'function' ? planoEhFrio(l) : l.origem === 'garimpo_instagram');
+    const followupsHoje = () => comFollowupsHoje(leads, notas, Date.now(), ehFrioLead, todasSessoes());
 
     // quando a pessoa virou lead: a data da ficha manda; senão, o vestígio mais antigo que o banco conhece
     const inicioLead = (id) => {
@@ -326,6 +413,8 @@ if (typeof window !== 'undefined') {
         : [{ nome: '', itens: itens(ind.ids[etapa], etapa) }];
       const venda = (id) => { const l = leads.find((x) => x.id === id) || {}; return [l.produto, l.valor_venda != null ? 'R$ ' + Number(l.valor_venda).toLocaleString('pt-BR', { minimumFractionDigits: 2 }) : ''].filter(Boolean).join(' · '); };
       const novosNao = ind.novosIds.filter((id) => !ind.novosAlunoIds.includes(id));
+      const fuCompra = comFollowupsAteCompra(ind.ids.aluno, porLead, notas, contatosWa);
+      const fuFeitos = notas.filter((n) => n.tipo === 'followup' && idsBase.has(n.lead_id) && new Date(n.created_at).getTime() >= pIni && new Date(n.created_at).getTime() < pFim);
       detalhes = {
         abordagens: { titulo: 'Abordagens', sub: 'Quem você abordou ' + nomePeriodo + '. Data = dia da abordagem.', grupos: passagemGrupos('abordado', p.resposta, 'Responderam', 'Ainda não responderam') },
         respostas: { titulo: 'Respostas', sub: 'Quem entrou em conversa ' + nomePeriodo + '. Data = dia da resposta.', grupos: passagemGrupos('respondeu', p.sessao, 'Foram pra sessão', 'Ainda não foram pra sessão') },
@@ -340,6 +429,8 @@ if (typeof window !== 'undefined') {
         leadAluno: { titulo: 'Do lead ao aluno', sub: 'Leads que entraram ' + nomePeriodo + '. Data = dia em que o lead entrou.', grupos: [{ nome: 'Viraram aluno', itens: itens(ind.novosAlunoIds, null) }, { nome: 'Ainda não viraram aluno', itens: itens(novosNao, null) }] },
         tempoAluno: { titulo: 'Tempo até virar aluno', sub: 'Vendas ' + nomePeriodo + '. Ao lado, os dias desde que a pessoa virou lead (a data "Lead desde" da ficha; sem ela, o registro mais antigo que o painel achou) até comprar.', grupos: [{ nome: '', itens: ind.tempoAluno.lista.map((x) => item(x.id, 'aluno', comDias(x.dias) + ' · lead desde ' + comDataBR(new Date(x.desde).toISOString()))) }] },
         tempoSessao: { titulo: 'Da sessão à compra', sub: 'Vendas ' + nomePeriodo + ' de quem passou por sessão. Ao lado, os dias entre a sessão e a compra.', grupos: [{ nome: '', itens: ind.tempoSessao.lista.map((x) => item(x.id, 'aluno', comDias(x.dias))) }] },
+        fuCompra: { titulo: 'Follow-ups até a compra', sub: 'Vendas ' + nomePeriodo + '. Ao lado, quantos dias você voltou a falar com a pessoa antes de ela comprar, sem contar a abordagem. Conta o botão "Fiz follow-up" e as mensagens enviadas pelos números ligados ao painel (não conta Direct nem celular pessoal).', grupos: [{ nome: '', itens: fuCompra.lista.map((x) => item(x.id, 'aluno', x.n + (x.n === 1 ? ' follow-up' : ' follow-ups'))) }] },
+        fuFeitos: { titulo: 'Follow-ups feitos', sub: 'Cada clique em "Fiz follow-up" ' + nomePeriodo + '.', grupos: [{ nome: '', itens: fuFeitos.map((n) => ({ id: n.lead_id, t: new Date(n.created_at).getTime(), quando: comDataBR(n.created_at), extra: n.observacao || '' })) }] },
         tempoResposta: { titulo: 'Tempo até responder', sub: 'Respostas ' + nomePeriodo + ' com data certa. Ao lado, os dias entre a abordagem e a resposta.', grupos: [{ nome: '', itens: ind.tempoResposta.lista.map((x) => item(x.id, 'respondeu', comDias(x.dias))) }] },
       };
       for (const e of agoraPorEtapa) {
@@ -360,6 +451,8 @@ if (typeof window !== 'undefined') {
         cartao('Do lead ao aluno', comPct(ind.conversaoLead), ind.novos ? 'de ' + ind.novos + ' leads que entraram no período' : 'nenhum lead novo no período', false, ind.novos && 'leadAluno') +
         cartao('Tempo até virar aluno', comDias(ind.tempoAluno.media), ind.tempoAluno.n ? 'desde que virou lead · ' + ind.tempoAluno.n + (ind.tempoAluno.n === 1 ? ' venda' : ' vendas') + (ind.tempoAluno.n > 2 ? ' · mediana ' + comDias(ind.tempoAluno.mediana) : '') : 'conta a partir das próximas vendas', false, ind.tempoAluno.n && 'tempoAluno') +
         cartao('Da sessão à compra', comDias(ind.tempoSessao.media), ind.tempoSessao.n ? ind.tempoSessao.n + (ind.tempoSessao.n === 1 ? ' venda' : ' vendas') + ' com sessão' + (ind.tempoSessao.n > 2 ? ' · mediana ' + comDias(ind.tempoSessao.mediana) : '') : 'sem vendas com sessão no período', false, ind.tempoSessao.n && 'tempoSessao') +
+        cartao('Follow-ups até a compra', fuCompra.media == null ? '—' : (Math.round(fuCompra.media * 10) / 10).toLocaleString('pt-BR'), fuCompra.n ? 'média de ' + fuCompra.n + (fuCompra.n === 1 ? ' venda' : ' vendas') + ' · contatos registrados' : 'sem vendas no período', false, fuCompra.n && 'fuCompra') +
+        cartao('Follow-ups feitos', fuFeitos.length, 'no período · meta ' + (window.Plano && window.Plano.metaFollowupDia ? window.Plano.metaFollowupDia() : 10) + ' por dia', false, fuFeitos.length && 'fuFeitos') +
         cartao('Tempo até responder', comDias(ind.tempoResposta.media), ind.tempoResposta.n ? 'média de ' + ind.tempoResposta.n + ' respostas, depois da abordagem' : 'sem respostas com data certa no período', false, ind.tempoResposta.n && 'tempoResposta') +
         '</div>' +
         '<section class="com-bloco"><h3>Funil do período</h3><div class="com-funil">' +
@@ -573,8 +666,10 @@ if (typeof window !== 'undefined') {
         const txt = fundo.querySelector('#m-nota').value.trim();
         const prox = fundo.querySelector('#m-prox').value;
         if (!txt && !prox) return;
-        const { error } = await sb.from('crm_followups').insert({ lead_id: id, autor: 'Karol', observacao: txt || null, proximo_contato_em: prox ? prox + 'T12:00:00-04:00' : null, origem_registro: 'painel_comercial' });
+        const { data: nova, error } = await sb.from('crm_followups').insert({ lead_id: id, autor: 'Karol', observacao: txt || null, proximo_contato_em: prox ? prox + 'T12:00:00-04:00' : null, origem_registro: 'painel_comercial' }).select('id,lead_id,created_at,proximo_contato_em,tipo,observacao').single();
         if (error) return aviso('Não anotou: ' + error.message, true);
+        if (nova) notas.push(nova);
+        atualizarPilula();
         fundo.querySelector('#m-nota').value = ''; fundo.querySelector('#m-prox').value = '';
         aviso('Anotado'); carregarNotas(id, fundo);
       };
@@ -805,36 +900,127 @@ if (typeof window !== 'undefined') {
     }
 
     // ---------- Abordar (fila) ----------
+    // Abordar tem 2 modos (21/11/2026, teste da Karol): follow-ups de hoje e novos
+    function modosHtml() {
+      const fu = followupsHoje().length, nov = Math.max(fila.length - filaPos, 0);
+      const b = (m, t) => '<button type="button" class="com-modo' + (modoAbordar === m ? ' ativo' : '') + '" data-modo="' + m + '">' + t + '</button>';
+      return '<div class="com-modos">' + b('followup', 'Follow-ups de hoje (' + fu + ')') + b('novos', 'Abordar novos (' + nov + ')') + '</div>';
+    }
+    function ligarModos(el) { el.querySelectorAll('[data-modo]').forEach((b) => (b.onclick = () => { modoAbordar = b.dataset.modo; renderAbordar(); })); }
+    function fuMetaHtml() {
+      const meta = window.Plano && window.Plano.metaFollowupDia ? window.Plano.metaFollowupDia() : 10;
+      const hoje = new Date().toDateString();
+      const feitos = notas.filter((n) => n.tipo === 'followup' && new Date(n.created_at).toDateString() === hoje).length;
+      return '<div class="com-fu-meta">Hoje: <b class="' + (feitos >= meta ? 'pl-ok' : '') + '">' + feitos + ' de ' + meta + '</b> follow-ups · meta por dia <input id="fu-meta" type="number" min="1" max="99" value="' + meta + '" aria-label="Meta de follow-ups por dia"></div>';
+    }
+    function renderFollowup(el) {
+      const lista = followupsHoje().filter((x) => !fuPulados.has(x.l.id));
+      const topo = garimpoHtml() + (window.Plano ? window.Plano.semanaHtml(historico, leads) : '') + sessoesTopoHtml() + modosHtml() + fuMetaHtml();
+      const ligar = () => {
+        ligarGarimpo(el); ligarSessoesTopo(el); ligarModos(el);
+        const m = el.querySelector('#fu-meta');
+        m.onchange = async () => {
+          const n = Math.round(Number(m.value));
+          if (!(n >= 1 && n <= 99)) return aviso('Meta inválida', true);
+          const erro = window.Plano && window.Plano.definirMetaFollowup ? await window.Plano.definirMetaFollowup(n) : 'plano não carregou';
+          if (erro) return aviso('Não salvou a meta: ' + erro, true);
+          aviso('Meta: ' + n + ' follow-ups por dia'); renderAbordar();
+        };
+      };
+      if (!lista.length) {
+        el.innerHTML = topo + '<div class="com-fila-cartao com-fila-fim"><h2>Nenhum follow-up pra hoje</h2><p>' + (fuPulados.size ? 'Os que você pulou voltam quando recarregar a página.' : 'Quando passar o prazo de alguém (abordado sem resposta, sessão sem fechar, proposta parada) ou chegar a data que você marcou, a pessoa aparece aqui.') + '</p></div>';
+        return ligar();
+      }
+      const x = lista[0], l = x.l, g = l.garimpo || {};
+      const insta = comInsta(l.instagram || g['@']);
+      const fone = (() => { const d = String(l.telefone || '').replace(/\D/g, ''); return /^\d{10,11}$/.test(d) ? '55' + d : d; })();
+      const canal = fone.length >= 12 ? 'whatsapp' : insta ? 'instagram' : '';
+      const atraso = Math.floor((Date.now() - x.quando) / DIA);
+      const proxData = new Date(Date.now() + comFuProximoDias(x.feitos) * DIA).toLocaleDateString('en-CA', { timeZone: 'America/Cuiaba' });
+      const ultNota = notas.filter((n) => n.lead_id === l.id && n.observacao).sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0];
+      el.innerHTML = topo + '<div class="com-fila-topo"><span><b>' + lista.length + '</b> pra hoje</span></div>' +
+        '<div class="com-fila-cartao">' +
+        '<div class="com-fila-quem"><div><h2>' + esc(nomeLead(l)) + '</h2><small>' + esc(COM_NOME_ETAPA[l.etapa] || l.etapa) + ' · ' + esc(comOrigemNome(l.origem)) +
+        (canal === 'whatsapp' ? ' · WhatsApp ' + esc(comFoneBonito(l.telefone)) : canal === 'instagram' ? ' · @' + esc(insta) : '') + '</small></div>' +
+        '<span class="com-tag">' + (x.feitos + 1) + 'º follow-up</span></div>' +
+        '<p class="com-gancho">' + esc(x.motivo) + (atraso > 0 ? ' · <b>venceu há ' + atraso + (atraso === 1 ? ' dia' : ' dias') + '</b>' : '') + '</p>' +
+        (ultNota && !x.motivo.includes(ultNota.observacao) ? '<p class="com-nota">Última anotação (' + comDataBR(ultNota.created_at) + '): ' + esc(ultNota.observacao) + '</p>' : '') +
+        (g.Copy ? '<p class="com-nota">Primeira mensagem: ' + esc(String(g.Copy).slice(0, 220)) + (String(g.Copy).length > 220 ? '…' : '') + '</p>' : '') +
+        '<label class="com-campo">O que você falou (opcional, fica na ficha)<textarea id="fu-texto" rows="3"></textarea></label>' +
+        '<div class="com-fu-linha"><label class="com-campo">Próximo contato<input id="fu-prox" type="date" value="' + proxData + '"></label>' +
+        '<label class="com-check"><input id="fu-fim" type="checkbox"> Sem próximo contato</label></div>' +
+        (x.feitos >= 2 ? '<p class="com-nota">3ª tentativa sem resposta: a próxima fica pra daqui a 30 dias (reativar). Se não quiser mais, mova pra Perdido na ficha.</p>' : '') +
+        '<div class="com-fila-botoes">' +
+        (canal ? '<button type="button" class="com-btn com-btn-primario" id="fu-abrir">1. Abrir ' + (canal === 'whatsapp' ? 'WhatsApp' : 'Instagram') + '</button>' : '') +
+        '<button type="button" class="com-btn com-btn-escuro" id="fu-feito">' + (canal ? '2. ' : '') + 'Fiz follow-up</button>' +
+        '<button type="button" class="com-btn" id="fu-remarcar">Só remarcar</button>' +
+        '<button type="button" class="com-btn" id="fu-ficha">Abrir ficha</button>' +
+        '<button type="button" class="com-btn" id="fu-pular">Pular por agora</button>' +
+        '</div><p class="com-nota">"Fiz follow-up" conta na meta e guarda a próxima data. "Só remarcar" muda a data sem contar. Se a pessoa respondeu, mude a etapa na ficha.</p></div>';
+      ligar();
+      const ab = el.querySelector('#fu-abrir');
+      if (ab) ab.onclick = () => window.open(canal === 'whatsapp' ? 'https://wa.me/' + fone : 'https://www.instagram.com/' + insta + '/', canal);
+      el.querySelector('#fu-fim').onchange = (e) => { el.querySelector('#fu-prox').disabled = e.target.checked; };
+      el.querySelector('#fu-ficha').onclick = () => abrirLead(l.id);
+      el.querySelector('#fu-pular').onclick = () => { fuPulados.add(l.id); renderAbordar(); };
+      const gravar = async (tipo) => {
+        const fim = el.querySelector('#fu-fim').checked;
+        const prox = fim ? null : el.querySelector('#fu-prox').value;
+        if (!fim && !prox) return aviso('Escolha a data do próximo contato ou marque "Sem próximo contato"', true);
+        if (tipo === 'nota' && !prox) return aviso('Pra remarcar, escolha a data', true);
+        const txt = el.querySelector('#fu-texto').value.trim();
+        const obs = txt || (tipo === 'followup' ? 'Follow-up feito' : (!x.auto && ultNota ? ultNota.observacao : null));
+        el.querySelectorAll('.com-fila-botoes button').forEach((b) => (b.disabled = true));
+        const { data: nova, error } = await sb.from('crm_followups').insert({ lead_id: l.id, autor: 'Karol', observacao: obs, proximo_contato_em: prox ? prox + 'T12:00:00-04:00' : null, origem_registro: 'painel_comercial', tipo }).select('id,lead_id,created_at,proximo_contato_em,tipo,observacao').single();
+        el.querySelectorAll('.com-fila-botoes button').forEach((b) => (b.disabled = false));
+        if (error) return aviso('Não gravou: ' + error.message, true);
+        notas.push(nova);
+        if (tipo === 'followup' && window.Plano && window.Plano.registrarFollowup) window.Plano.registrarFollowup(nova);
+        aviso((tipo === 'followup' ? 'Follow-up feito: ' : 'Remarcado: ') + nomeLead(l) + (prox ? ' · volta em ' + comDataBR(prox + 'T12:00:00-04:00') : ''));
+        atualizarPilula(); renderAbordar();
+      };
+      el.querySelector('#fu-feito').onclick = () => gravar('followup');
+      el.querySelector('#fu-remarcar').onclick = () => gravar('nota');
+    }
+
     function renderAbordar() {
       const el = $('#aba-abordar');
+      if (modoAbordar == null) modoAbordar = followupsHoje().length ? 'followup' : 'novos';
+      if (modoAbordar === 'followup') return renderFollowup(el);
       const restantes = Math.max(fila.length - filaPos, 0);
-      const topo = garimpoHtml() + (window.Plano ? window.Plano.semanaHtml(historico, leads) : '') + sessoesTopoHtml() + '<div class="com-fila-topo"><span>' + filaSessao.enviados + ' enviadas · ' + filaSessao.descartados + ' descartadas nesta sessão · <b>' + restantes + ' na fila</b></span></div>';
+      const topo = garimpoHtml() + (window.Plano ? window.Plano.semanaHtml(historico, leads) : '') + sessoesTopoHtml() + modosHtml() + '<div class="com-fila-topo"><span>' + filaSessao.enviados + ' enviadas · ' + filaSessao.descartados + ' descartadas nesta sessão · <b>' + restantes + ' na fila</b></span></div>';
       if (filaPos >= fila.length) {
         el.innerHTML = topo + '<div class="com-fila-cartao com-fila-fim"><h2>Fila zerada</h2><p>Todo lead novo com mensagem pronta já foi abordado ou descartado. Use "Garimpar novos leads" acima pra buscar mais.</p></div>';
-        ligarGarimpo(el); ligarSessoesTopo(el);
+        ligarGarimpo(el); ligarSessoesTopo(el); ligarModos(el);
         return;
       }
       const l = fila[filaPos], g = l.garimpo || {};
       const insta = comInsta(l.instagram || g['@']);
       const prio = g['Prioridade de abordagem'];
+      // Canal WhatsApp (21/11/2026): abre a conversa com a mensagem escrita, no WhatsApp que estiver neste aparelho
+      const ehWa = g.Canal === 'WhatsApp';
+      const foneWa = (() => { const d = String(l.telefone || '').replace(/\D/g, ''); return /^\d{10,11}$/.test(d) ? '55' + d : d; })();
       el.innerHTML = topo + '<div class="com-fila-cartao">' +
-        '<div class="com-fila-quem"><div><h2>' + esc(l.nome || '@' + insta) + '</h2><small>@' + esc(insta) + '</small></div>' +
+        '<div class="com-fila-quem"><div><h2>' + esc(l.nome || '@' + insta) + '</h2><small>' + (ehWa ? 'WhatsApp ' + esc(comFoneBonito(l.telefone)) + ' · ' + esc(g.Grupo || '') : '@' + esc(insta)) + '</small></div>' +
         (prio ? '<span class="com-tag prio-' + esc(prio === 'Média' ? 'media' : prio.toLowerCase()) + '">Prioridade ' + esc(prio) + '</span>' : '') + '</div>' +
         (g['Fato-gancho'] ? '<p class="com-gancho">' + (g['Post do engajamento'] ? '<b>Engajou com você</b> · ' : g.Grupo === 'Seguidor sem interação' ? '<b>Segue você</b> · ' : '') + esc(g['Fato-gancho']) + '</p>' : '') +
         (/^https:\/\/www\.instagram\.com\//.test(g['Post do engajamento'] || '') ? '<p class="com-nota"><a href="' + esc(g['Post do engajamento']) + '" target="_blank" rel="noopener">Ver o post em que a pessoa engajou</a></p>' : '') +
         '<label class="com-campo">Mensagem (pode ajustar antes de copiar)<textarea id="fila-texto" rows="8">' + esc(g.Copy) + '</textarea></label>' +
         '<div class="com-fila-botoes">' +
-        '<button type="button" class="com-btn com-btn-primario" id="fila-copiar">1. Copiar e abrir perfil</button>' +
+        '<button type="button" class="com-btn com-btn-primario" id="fila-copiar">' + (ehWa ? '1. Abrir no WhatsApp' : '1. Copiar e abrir perfil') + '</button>' +
         '<button type="button" class="com-btn com-btn-escuro" id="fila-enviei">2. Enviei</button>' +
         '<button type="button" class="com-btn" id="fila-descartar">Descartar</button>' +
         '<button type="button" class="com-btn" id="fila-pular">Pular por agora</button>' +
-        '</div><p class="com-nota">No Instagram: "Enviar mensagem" → colar → enviar. Depois volte aqui e clique em "Enviei".</p></div>';
-      ligarGarimpo(el); ligarSessoesTopo(el);
+        '</div><p class="com-nota">' + (ehWa
+          ? 'Abre o WhatsApp com a mensagem já escrita (e copiada). Confira se é o número comercial antes de enviar. Depois volte aqui e clique em "Enviei". No WhatsApp, vá com calma: uns 15 por dia, e pare se alguém reclamar.'
+          : 'No Instagram: "Enviar mensagem" → colar → enviar. Depois volte aqui e clique em "Enviei".') + '</p></div>';
+      ligarGarimpo(el); ligarSessoesTopo(el); ligarModos(el);
       const botoes = el.querySelectorAll('.com-fila-botoes button');
       const texto = el.querySelector('#fila-texto');
       el.querySelector('#fila-copiar').onclick = async () => {
         try { await navigator.clipboard.writeText(texto.value); } catch (e) { texto.select(); document.execCommand('copy'); }
-        window.open('https://www.instagram.com/' + insta + '/', 'instagram');
+        if (ehWa) window.open('https://wa.me/' + foneWa + '?text=' + encodeURIComponent(texto.value), 'whatsapp');
+        else window.open('https://www.instagram.com/' + insta + '/', 'instagram');
         aviso('Mensagem copiada');
       };
       const gravar = async (etapa) => {
@@ -845,7 +1031,7 @@ if (typeof window !== 'undefined') {
         botoes.forEach((b) => (b.disabled = false));
         if (!ok) return;
         if (etapa === 'abordado') filaSessao.enviados++; else filaSessao.descartados++;
-        aviso((etapa === 'abordado' ? 'Abordado: ' : 'Descartado: ') + (l.nome || '@' + insta));
+        aviso((etapa === 'abordado' ? 'Abordado: ' : 'Descartado: ') + (l.nome || (ehWa ? comFoneBonito(l.telefone) : '@' + insta)));
         filaPos++; atualizarPilula(); renderAbordar();
       };
       el.querySelector('#fila-enviei').onclick = () => gravar('abordado');
@@ -853,7 +1039,7 @@ if (typeof window !== 'undefined') {
       el.querySelector('#fila-pular').onclick = () => { fila.push(fila.splice(filaPos, 1)[0]); renderAbordar(); };
     }
     function atualizarPilula() {
-      const n = comFila(leads).length;
+      const n = comFila(leads).length + followupsHoje().length;
       const p = $('#com-fila-n');
       if (p) p.textContent = n ? String(n) : '';
     }

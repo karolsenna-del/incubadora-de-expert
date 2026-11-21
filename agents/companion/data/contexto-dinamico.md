@@ -17,6 +17,9 @@ Variaveis:
 - IA: 3.25 (Mediano)
 - Performance: 3.33 (Mediano)
 
+## Painel comercial: quentes do WhatsApp na fila + follow-up com meta (21/11)
+Fila Abordar ganhou 101 quentes do WhatsApp (grupo das lives, compradores do workshop, lista da Black, Nayara e Robson) com 1ª mensagem e botão que abre o WhatsApp; inscritos da página das lives viram lead sozinhos. Leitura de quem engajou trouxe 3 leads (US$0,66 livres no Apify até 26/11). Follow-up voltou: modo "Follow-ups de hoje" (103 no 1º dia, Laís primeiro), "Fiz follow-up" com cadência 4/8/30, meta 10/dia, "follow-ups até a compra" nos Indicadores. Falta publicar (Karol manda `vercel --prod --yes`). Laís: oferecer Incubadora Express (R$2.500 ou 12x R$250). KB do Vendedor Expert ainda chama a sessão de R$300 de "Express" (desatualizada).
+
 ## Lives na Área de Membros: Live 37 publicada, Live 38 esperando acesso (19/11)
 Rodada semanal automática: Live 37 subiu (não listada, já no site). Live 38 (18/11) gravada numa pasta nova do Drive ainda não compartilhada com a conta karol.franzini: falta a Karol compartilhar a pasta (link no Mission Log #42 do course-publisher); a próxima rodada sobe sozinha.
 

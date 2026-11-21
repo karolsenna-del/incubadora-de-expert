@@ -1520,3 +1520,15 @@ Por ordem explícita, corrigir e enviar somente o pipeline, sem publicar nem dis
 **Contexto:** filtro de 90 dias mostrava R$3.000 vendidos (só fichas com valor digitado), Tasso fora do período (data aproximada de 30/06) e a compra da Thalita criou ficha duplicada (a da prospecção não tinha e-mail).
 **Decisão:** opção A — valor da venda gravado sozinho a partir do aviso da Voomp; ligação da compra por e-mail, celular e nome; dados do Tasso (VIP 24/09) e Vagner (Sprint 14/09) corrigidos pela Karol.
 **Impacto:** "vendidos" e "tempo até virar aluno" passam a contar todas as vendas com data certa.
+
+## 21/11/2026 — Quentes do WhatsApp na fila de abordagem + nova leitura de quem engajou
+**Contexto:** a fila "Abordar" só tinha leads frios do garimpo; os quentes (grupo das lives, compradores do workshop, lista da Black) estavam no funil sem mensagem, e 31 inscritos na página do grupo das lives nem estavam no painel.
+**Decisão:** Karol escolheu "os dois": (A) quentes do WhatsApp entram na fila com a 1ª mensagem pronta e botão que abre o WhatsApp; inscritos das lives viram lead sozinhos; (B) nova leitura de quem curtiu/comentou com o resto do crédito grátis do Apify (robô dos seguidores fica parado até o ciclo renovar em 26/11).
+**Racional:** quem já conhece a Karol responde mais que o frio; a abordagem dessas pessoas é pelo WhatsApp, não pelo Instagram.
+**Impacto:** ~100 leads quentes na fila antes dos frios; números sem nome ficam fora; ritmo de ~15 WhatsApp por dia.
+
+## 21/11/2026 — Follow-up volta pro painel, com meta diária
+**Contexto:** na planilha havia alerta de follow-up; no painel não. Karol: é onde se perde muito dinheiro, e quer contar follow-ups até a compra.
+**Decisão:** opção A completa: lembretes de follow-up (data marcada + automáticos por etapa), botão "Fiz follow-up" com cadência 4/8/30 dias, meta de 10 por dia (ajustável), "Follow-ups até a compra" e "Follow-ups feitos" nos Indicadores. Follow-up e abordagem ficam em 2 modos da mesma aba, em teste (Karol não sabe se é melhor separar).
+**Racional:** lead que não fecha na hora some sem lembrete; contar follow-ups mostra quantas voltas uma venda pede.
+**Impacto:** abriu com 103 follow-ups pra hoje (82 frios do Garimpo); a contagem até a compra só enxerga o que foi registrado (botão ou WhatsApp oficial).

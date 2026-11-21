@@ -251,3 +251,14 @@ td.pl-ok b { color: var(--com-preto); } td.pl-ruim b { color: #B42318; }
   .cv-grade.cv-com-fio .cv-fio { display: flex; height: 75vh; }
   .cv-voltar { display: inline-block; }
 }
+
+/* Follow-up (21/11/2026) */
+.com-modos { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.com-modo { font: inherit; font-size: 14px; border: 1px solid var(--com-cinza-3); background: #fff; color: var(--com-preto); border-radius: 999px; padding: 8px 14px; cursor: pointer; }
+.com-modo.ativo { background: var(--com-laranja); border-color: var(--com-laranja); color: #fff; }
+.com-fu-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 14px; margin-bottom: 10px; }
+.com-fu-meta input { width: 64px; font: inherit; padding: 4px 6px; border: 1px solid var(--com-cinza-3); border-radius: 6px; }
+.com-fu-meta .pl-ok { color: var(--com-laranja); }
+.com-fu-linha { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+.com-fu-linha .com-campo { flex: 1 1 180px; }
+.com-check { display: flex; align-items: center; gap: 6px; font-size: 14px; }
